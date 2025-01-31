@@ -1,10 +1,6 @@
 n.d(t, {
-    N: function () {
-        return l;
-    },
-    n: function () {
-        return r;
-    }
+    N: () => r,
+    n: () => l
 });
 let i = (0, n(818083).B)({
         kind: 'user',
@@ -27,5 +23,5 @@ let i = (0, n(818083).B)({
             }
         ]
     }),
-    r = (e) => i.useExperiment({ location: e }).enabled,
-    l = (e) => i.useExperiment({ location: e }).includePopularPicks;
+    l = (e) => i.useExperiment({ location: e }).enabled,
+    r = (e) => i.useExperiment({ location: e }).includePopularPicks;

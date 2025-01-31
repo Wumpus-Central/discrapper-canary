@@ -109,17 +109,18 @@ var l = {
                 {
                     key: 'copyInputStyles',
                     value: function () {
-                        if (!this.mounted || !window.getComputedStyle) return;
-                        var e = this.input && window.getComputedStyle(this.input);
-                        if (!!e) p(e, this.sizer), this.placeHolderSizer && p(e, this.placeHolderSizer);
+                        if (this.mounted && window.getComputedStyle) {
+                            var e = this.input && window.getComputedStyle(this.input);
+                            e && (p(e, this.sizer), this.placeHolderSizer && p(e, this.placeHolderSizer));
+                        }
                     }
                 },
                 {
                     key: 'updateInputWidth',
                     value: function () {
-                        if (!!this.mounted && !!this.sizer && void 0 !== this.sizer.scrollWidth) {
+                        if (this.mounted && this.sizer && void 0 !== this.sizer.scrollWidth) {
                             var e = void 0;
-                            (e = this.props.placeholder && (!this.props.value || (this.props.value && this.props.placeholderIsMinWidth)) ? Math.max(this.sizer.scrollWidth, this.placeHolderSizer.scrollWidth) + 2 : this.sizer.scrollWidth + 2), (e += 'number' === this.props.type && void 0 === this.props.extraWidth ? 16 : parseInt(this.props.extraWidth) || 0) < this.props.minWidth && (e = this.props.minWidth), e !== this.state.inputWidth && this.setState({ inputWidth: e });
+                            (e = (this.props.placeholder && (!this.props.value || (this.props.value && this.props.placeholderIsMinWidth)) ? Math.max(this.sizer.scrollWidth, this.placeHolderSizer.scrollWidth) + 2 : this.sizer.scrollWidth + 2) + ('number' === this.props.type && void 0 === this.props.extraWidth ? 16 : parseInt(this.props.extraWidth) || 0)) < this.props.minWidth && (e = this.props.minWidth), e !== this.state.inputWidth && this.setState({ inputWidth: e });
                         }
                     }
                 },
@@ -157,49 +158,45 @@ var l = {
                 {
                     key: 'render',
                     value: function () {
-                        var e,
-                            t = [this.props.defaultValue, this.props.value, ''].reduce(function (e, t) {
+                        var e = [this.props.defaultValue, this.props.value, ''].reduce(function (e, t) {
                                 return null != e ? e : t;
                             }),
-                            n = o({}, this.props.style);
-                        !n.display && (n.display = 'inline-block');
-                        var r = o(
+                            t = o({}, this.props.style);
+                        t.display || (t.display = 'inline-block');
+                        var n = o(
                                 {
                                     boxSizing: 'content-box',
                                     width: this.state.inputWidth + 'px'
                                 },
                                 this.props.inputStyle
                             ),
-                            i = (function (e, t) {
+                            r = (function (e, t) {
                                 var n = {};
-                                for (var o in e) {
-                                    if (!(t.indexOf(o) >= 0)) Object.prototype.hasOwnProperty.call(e, o) && (n[o] = e[o]);
-                                }
+                                for (var o in e) !(t.indexOf(o) >= 0) && Object.prototype.hasOwnProperty.call(e, o) && (n[o] = e[o]);
                                 return n;
                             })(this.props, []);
                         return (
-                            (e = i),
-                            c.forEach(function (t) {
-                                return delete e[t];
+                            c.forEach(function (e) {
+                                return delete r[e];
                             }),
-                            (i.className = this.props.inputClassName),
-                            (i.id = this.state.inputId),
-                            (i.style = r),
+                            (r.className = this.props.inputClassName),
+                            (r.id = this.state.inputId),
+                            (r.style = n),
                             a.default.createElement(
                                 'div',
                                 {
                                     className: this.props.className,
-                                    style: n
+                                    style: t
                                 },
                                 this.renderStyles(),
-                                a.default.createElement('input', o({}, i, { ref: this.inputRef })),
+                                a.default.createElement('input', o({}, r, { ref: this.inputRef })),
                                 a.default.createElement(
                                     'div',
                                     {
                                         ref: this.sizerRef,
                                         style: l
                                     },
-                                    t
+                                    e
                                 ),
                                 this.props.placeholder
                                     ? a.default.createElement(

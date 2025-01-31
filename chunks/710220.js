@@ -1,22 +1,18 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-});
+n.d(t, { Z: () => d });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    s = n(518950),
-    a = n(182294),
-    l = n(388032),
+var s = n(481060),
+    r = n(518950),
+    l = n(182294),
+    a = n(388032),
     o = n(818826),
     c = n(144343);
 function d(e) {
     let { referrer: t, isMarketingPageV2Enabled: n } = e,
         d = (e) => (null != e.globalName ? e.globalName : e.username),
-        { avatarSrc: u, eventHandlers: m } = (0, s.Z)({
+        { avatarSrc: u, eventHandlers: m } = (0, r.Z)({
             user: t,
-            size: a.EF.SIZE_32,
+            size: l.EF.SIZE_32,
             animateOnHover: !0
         });
     return (0, i.jsx)('div', {
@@ -26,24 +22,24 @@ function d(e) {
             children: [
                 (0, i.jsx)('div', {
                     className: n ? o.iconContainerV2 : o.iconContainer,
-                    children: (0, i.jsx)(r.Avatar, {
+                    children: (0, i.jsx)(s.qEK, {
                         className: o.icon,
                         src: u,
                         'aria-label': t.username,
-                        size: a.EF.SIZE_32,
+                        size: l.EF.SIZE_32,
                         ...m
                     })
                 }),
                 n
-                    ? (0, i.jsx)(r.Heading, {
+                    ? (0, i.jsx)(s.X6q, {
                           variant: 'heading-lg/medium',
                           className: o.textContainer,
-                          children: l.intl.format(l.t.IqxblZ, { username: d(t) })
+                          children: a.intl.format(a.t.IqxblZ, { username: d(t) })
                       })
-                    : (0, i.jsx)(r.Text, {
+                    : (0, i.jsx)(s.Text, {
                           variant: 'text-sm/normal',
                           className: o.textContainer,
-                          children: l.intl.format(l.t.IqxblZ, { username: d(t) })
+                          children: a.intl.format(a.t.IqxblZ, { username: d(t) })
                       }),
                 !n &&
                     (0, i.jsx)('img', {

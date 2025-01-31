@@ -1,5 +1,6 @@
-e.exports = {
-    body: 'body_edd4d7',
-    nonTopInputWrapper: 'nonTopInputWrapper_edd4d7',
-    bankSelectionStub: 'bankSelectionStub_edd4d7'
+var i = {
+    body: 'body_d31d57',
+    nonTopInputWrapper: 'nonTopInputWrapper_d31d57',
+    bankSelectionStub: 'bankSelectionStub_d31d57'
 };
+e.exports = i;

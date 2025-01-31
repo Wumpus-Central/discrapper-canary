@@ -1,43 +1,34 @@
-r.d(n, {
-    Z: function () {
-        return c;
-    }
-});
-var i,
-    a = r(47120);
-var o = r(192379),
-    s = r(981631);
-function l(e, n, r) {
+n.d(t, { Z: () => o }), n(47120);
+var i = n(192379),
+    r = n(981631);
+function a(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-function u(e) {
+function s(e) {
     switch (e) {
-        case s.yXg.ARROW_DOWN:
+        case r.yXg.ARROW_DOWN:
             return 'ARROW_DOWN';
-        case s.yXg.ARROW_UP:
+        case r.yXg.ARROW_UP:
             return 'ARROW_UP';
-        case s.yXg.ARROW_LEFT:
+        case r.yXg.ARROW_LEFT:
             return 'ARROW_LEFT';
-        case s.yXg.ARROW_RIGHT:
+        case r.yXg.ARROW_RIGHT:
             return 'ARROW_RIGHT';
         default:
             return null;
     }
 }
-!(function (e) {
-    (e.ARROW_UP = 'ARROW_UP'), (e.ARROW_DOWN = 'ARROW_DOWN'), (e.ARROW_LEFT = 'ARROW_LEFT'), (e.ARROW_RIGHT = 'ARROW_RIGHT');
-})(i || (i = {}));
-class c extends o.Component {
+class o extends i.Component {
     componentDidMount() {
         document.addEventListener('keydown', this.handleKeyDown, !0);
     }
@@ -45,12 +36,12 @@ class c extends o.Component {
         document.removeEventListener('keydown', this.handleKeyDown, !0);
     }
     focusNext(e) {
-        let { getItemGrid: n, onFocus: r } = this.props,
-            { focusedColumn: i, focusedRow: a } = this.state;
+        let { getItemGrid: t, onFocus: n } = this.props,
+            { focusedColumn: i, focusedRow: r } = this.state;
         if (null == e) return;
-        let o = n();
-        if (null == o) return;
-        let s = this.getNext(o, i, a, e);
+        let a = t();
+        if (null == a) return;
+        let s = this.getNext(a, i, r, e);
         this.setState(
             {
                 focusedColumn: s.column,
@@ -58,111 +49,111 @@ class c extends o.Component {
             },
             () => {
                 let e = this.calculateFocusedItem();
-                null != e && null != r && r(e);
+                null != e && null != n && n(e);
             }
         );
     }
-    getNext(e, n, r, i) {
-        let a, o, s, l;
-        if (null == n || null == r)
-            (o = 0),
+    getNext(e, t, n, i) {
+        let r, a, s, o;
+        if (null == t || null == n)
+            (a = 0),
                 (s = 0),
-                (a = {
+                (r = {
                     column: 0,
                     row: 0
                 });
         else
-            switch (((o = n), (s = r), i)) {
+            switch (((a = t), (s = n), i)) {
                 case 'ARROW_UP':
-                    a = {
-                        column: o,
+                    r = {
+                        column: a,
                         row: Math.max(s - 1, 0)
                     };
                     break;
                 case 'ARROW_DOWN':
-                    a = {
-                        column: o,
-                        row: Math.min(s + 1, e[o].length - 1)
+                    r = {
+                        column: a,
+                        row: Math.min(s + 1, e[a].length - 1)
                     };
                     break;
                 case 'ARROW_LEFT':
-                    a = this.wrapPosition(e, o, s, -1);
+                    r = this.wrapPosition(e, a, s, -1);
                     break;
                 case 'ARROW_RIGHT':
-                    a = this.wrapPosition(e, o, s, 1);
+                    r = this.wrapPosition(e, a, s, 1);
             }
         return (
-            null != a && (l = e[a.column][a.row]),
-            (null == l || null == a) &&
-                (l =
+            null != r && (o = e[r.column][r.row]),
+            (null == o || null == r) &&
+                (o =
                     e[
-                        (a = {
-                            column: o,
+                        (r = {
+                            column: a,
                             row: s
                         }).column
-                    ][a.row]),
+                    ][r.row]),
             {
-                column: a.column,
-                row: a.row,
-                id: l
+                column: r.column,
+                row: r.row,
+                id: o
             }
         );
     }
-    calculateClosest(e, n) {
-        let r;
+    calculateClosest(e, t) {
+        let n;
         let i = this.props.getCoordsMap()[e];
         if (null == i) return;
-        let a = Number.MAX_SAFE_INTEGER;
-        for (let e = 0; e < n.length; e++) {
-            let o = this.props.getCoordsMap()[n[e]];
-            if (null == o) continue;
-            let s = Math.abs(o.top - i.top);
-            if (s < a) (a = s), (r = e);
+        let r = Number.MAX_SAFE_INTEGER;
+        for (let e = 0; e < t.length; e++) {
+            let a = this.props.getCoordsMap()[t[e]];
+            if (null == a) continue;
+            let s = Math.abs(a.top - i.top);
+            if (s < r) (r = s), (n = e);
             else break;
         }
-        return r;
+        return n;
     }
     calculateFocusedItem() {
         let { getItemGrid: e } = this.props,
-            { focusedRow: n, focusedColumn: r } = this.state,
+            { focusedRow: t, focusedColumn: n } = this.state,
             i = e();
-        return null == i || null == r || null == n || null == i[r] || null == i[r][n] ? null : i[r][n];
+        return null == i || null == n || null == t || null == i[n] || null == i[n][t] ? null : i[n][t];
     }
     render() {
         return this.props.children;
     }
     constructor(...e) {
         super(...e),
-            l(this, 'state', {
+            a(this, 'state', {
                 focusedColumn: null,
                 focusedRow: null
             }),
-            l(this, 'handleKeyDown', (e) => {
-                let { onSelect: n } = this.props;
+            a(this, 'handleKeyDown', (e) => {
+                let { onSelect: t } = this.props;
                 switch (e.keyCode) {
-                    case s.yXg.ARROW_DOWN:
-                    case s.yXg.ARROW_UP:
-                    case s.yXg.ARROW_LEFT:
-                    case s.yXg.ARROW_RIGHT:
-                        this.focusNext(u(e.keyCode));
+                    case r.yXg.ARROW_DOWN:
+                    case r.yXg.ARROW_UP:
+                    case r.yXg.ARROW_LEFT:
+                    case r.yXg.ARROW_RIGHT:
+                        this.focusNext(s(e.keyCode));
                         break;
-                    case s.yXg.ENTER:
-                        let r = this.calculateFocusedItem();
-                        null != r && null != n && (e.preventDefault(), e.stopPropagation(), n(r));
+                    case r.yXg.ENTER:
+                        let n = this.calculateFocusedItem();
+                        null != n && null != t && (e.preventDefault(), e.stopPropagation(), t(n));
                 }
             }),
-            l(this, 'wrapPosition', (e, n, r, i) => {
-                var a;
-                let o = e.length,
-                    s = Math.max(r * o + n + i, 0) % o,
-                    l = null !== (a = this.calculateClosest(e[n][r], e[s])) && void 0 !== a ? a : r,
-                    u = 0;
+            a(this, 'wrapPosition', (e, t, n, i) => {
+                var r;
+                let a = e.length,
+                    s = Math.max(n * a + t + i, 0) % a,
+                    o = null !== (r = this.calculateClosest(e[t][n], e[s])) && void 0 !== r ? r : n,
+                    l = 0;
                 return (
-                    i < 0 && s > n && (u = -1),
-                    i > 0 && s < n && (u = 1),
+                    i < 0 && s > t && (l = -1),
+                    i > 0 && s < t && (l = 1),
                     {
                         column: s,
-                        row: l + u
+                        row: o + l
                     }
                 );
             });

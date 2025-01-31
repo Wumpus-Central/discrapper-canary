@@ -1,4 +1,5 @@
-var t = {
+t.d(a, { Z: () => n });
+var i = {
     lastWeek: function (e) {
         var a = e.getUTCDay();
         return "'" + (0 === a || 6 === a ? 'último' : 'última') + "' eeee 'às' p";
@@ -9,7 +10,7 @@ var t = {
     nextWeek: "eeee 'às' p",
     other: 'P'
 };
-a.Z = function (e, a, i, n) {
-    var o = t[e];
+let n = function (e, a, t, n) {
+    var o = i[e];
     return 'function' == typeof o ? o(a) : o;
 };

@@ -1,123 +1,119 @@
 e.d(n, {
-    Z: function () {
-        return E;
-    },
-    v: function () {
-        return T;
-    }
+    Z: () => T,
+    v: () => x
 });
 var i = e(200651);
 e(192379);
 var l = e(120356),
-    a = e.n(l),
-    s = e(481060),
+    s = e.n(l),
+    a = e(481060),
     r = e(600164),
     d = e(540059),
     o = e(626135),
     c = e(109983),
-    u = e(675999),
-    C = e(981631),
-    m = e(388032),
-    p = e(884017),
+    C = e(675999),
+    m = e(981631),
+    p = e(388032),
+    u = e(884017),
     L = e(43236),
-    g = e(142390);
-let _ = 0.5 > Math.random();
-function T(t) {
-    let { onClose: n, onBack: e, onCreationIntentChosen: l, hasFooter: T = !0 } = t,
-        E = (0, d.Q3)('CreationIntentSlide'),
-        I = (0, i.jsx)(i.Fragment, {
-            children: (0, i.jsx)(s.Button, {
-                className: p.backButton,
-                look: s.Button.Looks.BLANK,
-                size: s.Button.Sizes.MIN,
+    _ = e(142390);
+let g = 0.5 > Math.random();
+function x(t) {
+    let { onClose: n, onBack: e, onCreationIntentChosen: l, hasFooter: x = !0 } = t,
+        T = (0, d.Q3)('CreationIntentSlide'),
+        E = (0, i.jsx)(i.Fragment, {
+            children: (0, i.jsx)(a.zxk, {
+                className: u.backButton,
+                look: a.zxk.Looks.BLANK,
+                size: a.zxk.Sizes.MIN,
                 onClick: e,
-                children: m.intl.string(m.t['13/7kZ'])
+                children: p.intl.string(p.t['13/7kZ'])
             })
         });
-    function x(t) {
-        o.default.track(C.rMx.GUILD_CREATION_INTENT_SELECTED, {
+    function h(t) {
+        o.default.track(m.rMx.GUILD_CREATION_INTENT_SELECTED, {
             skipped: null == t,
-            is_community: t === u.lr.COMMUNITY
+            is_community: t === C.lr.COMMUNITY
         }),
             l(t);
     }
     return {
         content: (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsxs)(s.ModalHeader, {
+                (0, i.jsxs)(a.xBx, {
                     direction: r.Z.Direction.VERTICAL,
-                    className: p.header,
+                    className: u.header,
                     separator: !1,
                     children: [
-                        (0, i.jsx)(s.Heading, {
-                            className: a()(p.title),
+                        (0, i.jsx)(a.X6q, {
+                            className: s()(u.title),
                             variant: 'heading-xl/semibold',
-                            children: m.intl.string(m.t.f3MvGR)
+                            children: p.intl.string(p.t.f3MvGR)
                         }),
-                        (0, i.jsx)(s.Text, {
-                            className: p.subtitle,
+                        (0, i.jsx)(a.Text, {
+                            className: u.subtitle,
                             color: 'header-secondary',
                             variant: 'text-md/normal',
-                            children: m.intl.string(m.t['nOzc7+'])
+                            children: p.intl.string(p.t['nOzc7+'])
                         }),
                         null != n &&
-                            (0, i.jsx)(s.ModalCloseButton, {
-                                className: p.closeButton,
+                            (0, i.jsx)(a.olH, {
+                                className: u.closeButton,
                                 onClick: n
                             })
                     ]
                 }),
-                (0, i.jsxs)(s.ModalContent, {
-                    className: p.optionsList,
+                (0, i.jsxs)(a.hzk, {
+                    className: u.optionsList,
                     children: [
-                        _
+                        g
                             ? (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       (0, i.jsx)(c.Z, {
-                                          icon: E ? s.SofaIllocon : L,
-                                          message: m.intl.string(m.t.uE7zcn),
-                                          onClick: () => x(u.lr.FRIENDS)
+                                          icon: T ? a.Nye : L,
+                                          message: p.intl.string(p.t.uE7zcn),
+                                          onClick: () => h(C.lr.FRIENDS)
                                       }),
                                       (0, i.jsx)(c.Z, {
-                                          icon: E ? s.GlobeIllocon : g,
-                                          message: m.intl.string(m.t.h9Q1lJ),
-                                          onClick: () => x(u.lr.COMMUNITY)
+                                          icon: T ? a.q3d : _,
+                                          message: p.intl.string(p.t.h9Q1lJ),
+                                          onClick: () => h(C.lr.COMMUNITY)
                                       })
                                   ]
                               })
                             : (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       (0, i.jsx)(c.Z, {
-                                          icon: E ? s.GlobeIllocon : g,
-                                          message: m.intl.string(m.t.h9Q1lJ),
-                                          onClick: () => x(u.lr.COMMUNITY)
+                                          icon: T ? a.q3d : _,
+                                          message: p.intl.string(p.t.h9Q1lJ),
+                                          onClick: () => h(C.lr.COMMUNITY)
                                       }),
                                       (0, i.jsx)(c.Z, {
-                                          icon: E ? s.SofaIllocon : L,
-                                          message: m.intl.string(m.t.uE7zcn),
-                                          onClick: () => x(u.lr.FRIENDS)
+                                          icon: T ? a.Nye : L,
+                                          message: p.intl.string(p.t.uE7zcn),
+                                          onClick: () => h(C.lr.FRIENDS)
                                       })
                                   ]
                               }),
-                        (0, i.jsx)(s.Text, {
-                            className: p.skip,
+                        (0, i.jsx)(a.Text, {
+                            className: u.skip,
                             color: 'header-secondary',
                             variant: 'text-sm/normal',
-                            children: m.intl.format(m.t['SMc+Gx'], { onSkip: () => x(null) })
+                            children: p.intl.format(p.t['SMc+Gx'], { onSkip: () => h(null) })
                         })
                     ]
                 }),
-                T &&
-                    (0, i.jsx)(s.ModalFooter, {
+                x &&
+                    (0, i.jsx)(a.mzw, {
                         justify: r.Z.Justify.BETWEEN,
-                        children: I
+                        children: E
                     })
             ]
         }),
-        footer: I
+        footer: E
     };
 }
-function E(t) {
-    let { content: n } = T(t);
+function T(t) {
+    let { content: n } = x(t);
     return n;
 }

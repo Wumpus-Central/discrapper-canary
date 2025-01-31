@@ -167,9 +167,7 @@ function n(t, e) {
     (n.getRSBlocks = function (t, e) {
         var r = n.getRsBlockTable(t, e);
         if (void 0 == r) throw Error('bad rs block @ typeNumber:' + t + '/errorCorrectLevel:' + e);
-        for (var o = r.length / 3, i = [], a = 0; a < o; a++) {
-            for (var u = r[3 * a + 0], s = r[3 * a + 1], l = r[3 * a + 2], f = 0; f < u; f++) i.push(new n(s, l));
-        }
+        for (var o = r.length / 3, i = [], a = 0; a < o; a++) for (var u = r[3 * a + 0], s = r[3 * a + 1], l = r[3 * a + 2], f = 0; f < u; f++) i.push(new n(s, l));
         return i;
     }),
     (n.getRsBlockTable = function (t, e) {

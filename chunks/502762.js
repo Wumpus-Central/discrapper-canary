@@ -1,66 +1,70 @@
-var i = r(200651),
-    a = r(192379),
-    o = r(120356),
-    s = r.n(o),
-    l = r(481060),
-    u = r(576635),
-    c = r(213053),
-    d = r(652853),
-    f = r(228168),
-    p = r(287301);
-let h = a.forwardRef(function (e, n) {
-        let { user: r, displayProfile: a, profileType: o, className: h, pendingThemeColors: _, themeOverride: m, children: g, forceShowPremium: E = !1 } = e,
+n.d(t, { Z: () => _ });
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(481060),
+    l = n(576635),
+    u = n(213053),
+    c = n(652853),
+    d = n(228168),
+    f = n(287301);
+let _ = Object.assign(
+    r.forwardRef(function (e, t) {
+        let { user: n, displayProfile: r, profileType: a, className: _, pendingThemeColors: p, themeOverride: h, children: m, forceShowPremium: g = !1 } = e,
             {
-                theme: v,
-                primaryColor: y,
-                secondaryColor: b
-            } = (0, u.Z)({
-                user: r,
-                displayProfile: a,
-                pendingThemeColors: _,
-                isPreview: E
+                theme: E,
+                primaryColor: v,
+                secondaryColor: y
+            } = (0, l.Z)({
+                user: n,
+                displayProfile: r,
+                pendingThemeColors: p,
+                isPreview: g
             }),
-            { profileThemeStyle: I, profileThemeClassName: T } = (0, c.Z)({
-                theme: null != m ? m : v,
-                primaryColor: y,
-                secondaryColor: b
+            { profileThemeStyle: I, profileThemeClassName: b } = (0, u.Z)({
+                theme: null != h ? h : E,
+                primaryColor: v,
+                secondaryColor: y
             }),
-            S = {
-                [p.biteSize]: o === f.y0.BITE_SIZE,
-                [p.fullSize]: o === f.y0.FULL_SIZE,
-                [p.panel]: o === f.y0.PANEL
+            T = {
+                [f.biteSize]: a === d.y0.BITE_SIZE,
+                [f.fullSize]: a === d.y0.FULL_SIZE,
+                [f.panel]: a === d.y0.PANEL
             };
         return (0, i.jsx)('div', {
-            className: s()(p.outer, T, S, h),
+            className: s()(f.outer, b, T, _),
             style: I,
-            ref: n,
+            ref: t,
             children: (0, i.jsx)('div', {
-                className: s()(p.inner, S),
-                children: (0, i.jsx)(l.ThemeContextProvider, {
-                    theme: null != m ? m : v,
-                    children: (0, i.jsx)(d.X, {
-                        profileType: o,
-                        theme: null != m ? m : v,
-                        primaryColor: y,
-                        secondaryColor: b,
-                        children: g
+                className: s()(f.inner, T),
+                children: (0, i.jsx)(o.ze6, {
+                    theme: null != h ? h : E,
+                    children: (0, i.jsx)(c.X, {
+                        profileType: a,
+                        theme: null != h ? h : E,
+                        primaryColor: v,
+                        secondaryColor: y,
+                        children: m
                     })
                 })
             })
         });
     }),
-    _ = a.forwardRef(function (e, n) {
-        let { children: r, className: a } = e,
-            { profileType: o } = (0, d.z)(),
-            l = {
-                [p.biteSize]: o === f.y0.BITE_SIZE,
-                [p.fullSize]: o === f.y0.FULL_SIZE,
-                [p.panel]: o === f.y0.PANEL
-            };
-        return (0, i.jsx)('div', {
-            ref: n,
-            className: s()(p.overlay, l, a),
-            children: r
-        });
-    });
-n.Z = Object.assign(h, { Overlay: _ });
+    {
+        Overlay: r.forwardRef(function (e, t) {
+            let { children: n, className: r } = e,
+                { profileType: a } = (0, c.z)(),
+                o = {
+                    [f.biteSize]: a === d.y0.BITE_SIZE,
+                    [f.fullSize]: a === d.y0.FULL_SIZE,
+                    [f.panel]: a === d.y0.PANEL
+                };
+            return (0, i.jsx)('div', {
+                ref: t,
+                className: s()(f.overlay, o, r),
+                children: n
+            });
+        })
+    }
+);

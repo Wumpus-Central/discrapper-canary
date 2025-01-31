@@ -1,11 +1,7 @@
-r.d(n, {
-    _: function () {
-        return o;
-    }
-});
-var i = r(878854),
-    a = r(322568);
-function o(e, n, r) {
-    var o = (0, a.J)(e, n, 'set');
-    return (0, i.y)(e, o, r), r;
+r.d(e, { _: () => o });
+var n = r(878854),
+    i = r(322568);
+function o(t, e, r) {
+    var o = (0, i.J)(t, e, 'set');
+    return (0, n.y)(t, o, r), r;
 }

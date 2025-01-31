@@ -1,54 +1,50 @@
-r.d(n, {
-    s: function () {
-        return s;
-    }
-});
-var i = r(573654),
-    a = r(778010),
-    o = r(964742);
+n.d(t, { s: () => s });
+var i = n(573654),
+    r = n(778010),
+    a = n(964742);
 function s(e) {
-    return function (n) {
-        var r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            i = r.clientOffset;
-        l(n);
-        var a = n.slice(0),
+    return function (t) {
+        var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            i = n.clientOffset;
+        o(t);
+        var r = t.slice(0),
             s = e.getMonitor(),
-            f = e.getRegistry();
+            d = e.getRegistry();
         return (
-            u(a, s, f),
-            c(a, f, s.getItemType()),
-            d(a, s, f),
+            l(r, s, d),
+            u(r, d, s.getItemType()),
+            c(r, s, d),
             {
-                type: o.$T,
+                type: a.$T,
                 payload: {
-                    targetIds: a,
+                    targetIds: r,
                     clientOffset: i || null
                 }
             }
         );
     };
 }
-function l(e) {
+function o(e) {
     (0, i.k)(Array.isArray(e), 'Expected targetIds to be an array.');
 }
-function u(e, n, r) {
-    (0, i.k)(n.isDragging(), 'Cannot call hover while not dragging.'), (0, i.k)(!n.didDrop(), 'Cannot call hover after drop.');
-    for (var a = 0; a < e.length; a++) {
-        var o = e[a];
-        (0, i.k)(e.lastIndexOf(o) === a, 'Expected targetIds to be unique in the passed array.');
-        var s = r.getTarget(o);
+function l(e, t, n) {
+    (0, i.k)(t.isDragging(), 'Cannot call hover while not dragging.'), (0, i.k)(!t.didDrop(), 'Cannot call hover after drop.');
+    for (var r = 0; r < e.length; r++) {
+        var a = e[r];
+        (0, i.k)(e.lastIndexOf(a) === r, 'Expected targetIds to be unique in the passed array.');
+        var s = n.getTarget(a);
         (0, i.k)(s, 'Expected targetIds to be registered.');
     }
 }
-function c(e, n, r) {
+function u(e, t, n) {
     for (var i = e.length - 1; i >= 0; i--) {
-        var o = e[i],
-            s = n.getTargetType(o);
-        !(0, a.s)(s, r) && e.splice(i, 1);
+        var a = e[i],
+            s = t.getTargetType(a);
+        (0, r.s)(s, n) || e.splice(i, 1);
     }
 }
-function d(e, n, r) {
+function c(e, t, n) {
     e.forEach(function (e) {
-        r.getTarget(e).hover(n, e);
+        n.getTarget(e).hover(t, e);
     });
 }

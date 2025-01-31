@@ -1,1 +1,2 @@
-e.exports = { label: 'label_eb3c91' };
+var i = { label: 'label__202d8' };
+e.exports = i;

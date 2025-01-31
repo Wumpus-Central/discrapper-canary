@@ -1,43 +1,40 @@
+n.d(t, { Z: () => C });
 var i = n(200651);
 n(192379);
-var r = n(120356),
-    l = n.n(r),
+var l = n(120356),
+    r = n.n(l),
     a = n(981631),
     s = n(368043);
-let o = {
-        EVERYONE: '1',
-        EVERYONE_TEN_PLUS: '2',
-        TEEN: '3',
-        MATURE: '4',
-        ADULT: '5',
-        RATING_PENDING: '6'
-    },
-    c = {
-        THREE: '1',
-        SEVEN: '2',
-        TWELVE: '3',
-        SIXTEEN: '4',
-        EIGHTEEN: '5'
-    },
-    d = {
+let o = '1',
+    c = '2',
+    d = '3',
+    u = '4',
+    h = '5',
+    m = '6',
+    p = '1',
+    g = '2',
+    _ = '3',
+    f = '4',
+    E = '5',
+    I = {
         [a.aIt.ESRB]: {
-            [o.EVERYONE]: s.esrbEveryone,
-            [o.EVERYONE_TEN_PLUS]: s.esrbEveryoneTenPlus,
-            [o.TEEN]: s.esrbTeen,
-            [o.MATURE]: s.esrbMature,
-            [o.ADULT]: s.esrbAdult,
-            [o.RATING_PENDING]: s.esrbRatingPending
+            [o]: s.esrbEveryone,
+            [c]: s.esrbEveryoneTenPlus,
+            [d]: s.esrbTeen,
+            [u]: s.esrbMature,
+            [h]: s.esrbAdult,
+            [m]: s.esrbRatingPending
         },
         [a.aIt.PEGI]: {
-            [c.THREE]: s.pegiThree,
-            [c.SEVEN]: s.pegiSeven,
-            [c.TWELVE]: s.pegiTwelve,
-            [c.SIXTEEN]: s.pegiSixteen,
-            [c.EIGHTEEN]: s.pegiEighteen
+            [p]: s.pegiThree,
+            [g]: s.pegiSeven,
+            [_]: s.pegiTwelve,
+            [f]: s.pegiSixteen,
+            [E]: s.pegiEighteen
         }
+    },
+    C = (e) => {
+        let { agency: t, rating: n, className: l } = e,
+            a = I[t][n];
+        return null == a ? null : (0, i.jsx)('div', { className: r()(s.contentRating, a, l) });
     };
-t.Z = (e) => {
-    let { agency: t, rating: n, className: r } = e,
-        a = d[t][n];
-    return null == a ? null : (0, i.jsx)('div', { className: l()(s.contentRating, a, r) });
-};

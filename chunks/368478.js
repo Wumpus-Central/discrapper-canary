@@ -1,17 +1,13 @@
 n.d(t, {
-    J: function () {
-        return v;
-    },
-    Z: function () {
-        return x;
-    }
+    J: () => x,
+    Z: () => C
 }),
     n(47120),
     n(789020);
 var i = n(192379),
     l = n(442837),
-    r = n(774226),
-    a = n(317381),
+    a = n(774226),
+    r = n(317381),
     s = n(122613),
     o = n(16609),
     c = n(574952),
@@ -22,46 +18,52 @@ var i = n(192379),
     m = n(812236),
     f = n(630388),
     g = n(981631),
-    C = n(388032);
-function x(e) {
+    _ = n(388032);
+function C(e) {
     let { context: t, primaryEntryPointCommand: n, application: s, showAppLauncherPopup: c = !1 } = e,
-        [p, x] = i.useState(!1),
-        v = (0, l.e7)([a.ZP], () => a.ZP.getCurrentEmbeddedActivity()),
-        _ = (0, r.GK)(),
-        I = c ? C.t.cpT0Cg : C.t['0hKkS0'],
-        E = i.useMemo(() => (null != n ? (0, h.XZ)(n.displayName) : C.intl.string(C.t['3xjX0d'])), [n]),
+        [p, C] = i.useState(!1),
+        x = (0, l.e7)([r.ZP], () => r.ZP.getCurrentEmbeddedActivity()),
+        v = (0, a.GK)(),
+        E = c ? _.t.cpT0Cg : _.t['0hKkS0'],
+        I = i.useMemo(() => (null != n ? (0, h.XZ)(n.displayName) : _.intl.string(_.t['3xjX0d'])), [n]),
         b = void 0 !== s.flags && (0, f.yE)(s.flags, g.udG.EMBEDDED),
-        Z = null != v && v.applicationId === s.id && (_ || (0, o.p)(v.location) === t.channel.id),
+        Z = null != x && x.applicationId === s.id && (v || (0, o.p)(x.location) === t.channel.id),
         { analyticsLocations: N } = (0, u.ZP)(d.Z.APP_DMS_ENTRY_POINT_COMMAND_BUTTON),
-        S = null != t.channel.recipients ? t.channel.recipients[0] : void 0,
-        T = (0, m.ms)({
-            context: t,
-            applicationId: s.id,
-            botUserId: S
-        });
+        T = null != t.channel.recipients ? t.channel.recipients[0] : void 0;
     return {
         isExecutingLaunchInteraction: p,
-        buttonText: T && b ? (Z ? C.intl.string(C.t['Hi1/aW']) : null != E ? E : C.intl.string(C.t.zKX8Nj)) : C.intl.string(I),
+        buttonText:
+            (0, m.ms)({
+                context: t,
+                applicationId: s.id,
+                botUserId: T
+            }) && b
+                ? Z
+                    ? _.intl.string(_.t['Hi1/aW'])
+                    : null != I
+                      ? I
+                      : _.intl.string(_.t.zKX8Nj)
+                : _.intl.string(E),
         hasActiveMatchingEmbeddedActivity: Z,
         isEmbeddedApp: b,
-        currentEmbeddedActivity: v,
-        channelRecipientUserId: S,
-        setIsExecutingLaunchInteraction: x,
+        currentEmbeddedActivity: x,
+        channelRecipientUserId: T,
+        setIsExecutingLaunchInteraction: C,
         analyticsLocations: N
     };
 }
-function v(e) {
-    let { context: t, application: n, isEmbeddedApp: l, hasActiveMatchingEmbeddedActivity: r, currentEmbeddedActivity: a, onOpenButtonPress: o, channelRecipientUserId: d, setIsExecutingLaunchInteraction: u, analyticsLocations: h } = e,
+function x(e) {
+    let { context: t, application: n, isEmbeddedApp: l, hasActiveMatchingEmbeddedActivity: a, currentEmbeddedActivity: r, onOpenButtonPress: o, channelRecipientUserId: d, setIsExecutingLaunchInteraction: u, analyticsLocations: h } = e,
         f = (0, m.ms)({
             context: t,
             applicationId: n.id,
             botUserId: d
         }),
         g = i.useCallback(() => {
-            r && null != a
+            a && null != r
                 ? (0, c.Z)().leaveActivity({
-                      location: a.location,
-                      applicationId: a.applicationId
+                      location: r.location,
+                      applicationId: r.applicationId
                   })
                 : (u(!0),
                   (0, s.Z)({
@@ -73,6 +75,6 @@ function v(e) {
                       },
                       commandOrigin: p.bB.APP_DMS_ENTRY_POINT_COMMAND_BUTTON
                   }));
-        }, [r, t.channel.id, n.id, a, h, u]);
+        }, [a, t.channel.id, n.id, r, h, u]);
     return f && l ? g : o;
 }

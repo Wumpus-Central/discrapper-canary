@@ -1,9 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => u }), n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(481060),
@@ -15,14 +10,14 @@ var i = n(200651),
 function u(e) {
     let { rule: t, onChangeRule: n } = e,
         [u, m] = r.useState(t.name);
-    return (0, i.jsxs)(l.FormItem, {
+    return (0, i.jsxs)(l.xJW, {
         children: [
             (0, i.jsx)(l.Text, {
                 className: d.triggerHeader,
                 variant: 'text-sm/semibold',
                 children: o.intl.string(o.t.WVAHxM)
             }),
-            (0, i.jsx)(l.TextInput, {
+            (0, i.jsx)(l.oil, {
                 className: c.ruleNameInput,
                 onChange: (e) => {
                     m(e),

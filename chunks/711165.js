@@ -1,132 +1,124 @@
-n.d(t, {
-    _: function () {
-        return j;
-    }
-}),
-    n(724458),
-    n(47120);
+n.d(t, { _: () => L }), n(724458), n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(913527),
-    a = n.n(l),
-    o = n(91192),
-    s = n(442837),
-    c = n(524437),
-    u = n(481060),
-    d = n(724757),
-    m = n(294218),
-    h = n(703656),
-    f = n(45251),
-    p = n(156012),
-    _ = n(74365),
-    g = n(695346),
-    E = n(23750),
-    C = n(592125),
-    I = n(594174),
-    x = n(324081),
-    N = n(240126),
-    v = n(791914),
-    T = n(981631),
-    S = n(388032),
-    A = n(448532);
-let b = {
+    l = n(192379),
+    a = n(120356),
+    r = n.n(a),
+    s = n(913527),
+    o = n.n(s),
+    c = n(91192),
+    d = n(442837),
+    u = n(524437),
+    m = n(481060),
+    h = n(724757),
+    _ = n(294218),
+    p = n(703656),
+    g = n(45251),
+    f = n(156012),
+    x = n(74365),
+    E = n(618857),
+    C = n(695346),
+    v = n(23750),
+    I = n(592125),
+    N = n(594174),
+    S = n(823379),
+    T = n(324081),
+    b = n(240126),
+    A = n(791914),
+    j = n(981631),
+    y = n(388032),
+    Z = n(448532);
+let R = {
     offset: {
         left: 4,
         right: -12
     }
 };
-function j(e) {
+function L(e) {
     let { setTab: t, closePopout: n } = e;
     return (
-        r.useEffect(() => {
-            (0, f.kg)();
+        l.useEffect(() => {
+            (0, g.kg)();
         }, []),
         (0, i.jsxs)('div', {
-            className: A.container,
+            className: r()(Z.container, Z.widerInbox),
             children: [
-                (0, i.jsx)(v.Z, {
-                    tab: c.X.SCHEDULED,
+                (0, i.jsx)(A.Z, {
+                    tab: u.X.SCHEDULED,
                     setTab: t,
                     closePopout: n
                 }),
-                (0, i.jsx)(R, {})
+                (0, i.jsx)(P, {})
             ]
         })
     );
 }
-function R() {
-    let e = (0, s.e7)([p.Z], () => p.Z.getScheduledMessagesForInbox(), []),
-        t = r.useMemo(
-            () =>
-                Object.values(e)
-                    .filter((e) => e.state === _._.SCHEDULED)
-                    .sort((e, t) => (new Date(e.sendAtTimestamp) > new Date(t.sendAtTimestamp) ? -1 : 1)),
-            [e]
-        ),
-        n = (0, s.e7)([p.Z], () => p.Z.loading, []),
-        l = r.useRef(null),
-        a = (0, d.Z)('scheduled-messages', l);
+function P() {
+    let e = (0, d.e7)([f.Z], () => f.Z.getScheduledMessagesForInbox(), []),
+        t = l.useMemo(() => Object.values(e).sort((e, t) => (new Date(e.sendAtTimestamp) > new Date(t.sendAtTimestamp) ? -1 : 1)), [e]),
+        n = (0, d.e7)([f.Z], () => f.Z.loading, []),
+        a = l.useRef(null),
+        r = (0, h.Z)('scheduled-messages', a);
     return n
-        ? (0, i.jsx)(u.Spinner, { className: A.loadingPlaceholder })
+        ? (0, i.jsx)(m.$jN, { className: Z.loadingPlaceholder })
         : 0 === t.length
-          ? (0, i.jsx)(N.Z, {
-                Icon: u.ClockIcon,
-                header: S.intl.string(S.t.aJQZfX),
-                tip: S.intl.string(S.t.rCN4pK)
+          ? (0, i.jsx)(b.Z, {
+                Icon: m.T39,
+                header: y.intl.string(y.t.aJQZfX),
+                tip: y.intl.string(y.t.rCN4pK)
             })
-          : (0, i.jsx)(o.bG, {
-                navigator: a,
-                children: (0, i.jsx)(o.SJ, {
+          : (0, i.jsx)(c.bG, {
+                navigator: r,
+                children: (0, i.jsx)(c.SJ, {
                     children: (e) => {
-                        let { ref: n, ...r } = e;
-                        return (0, i.jsx)(u.AdvancedScroller, {
-                            className: A.container,
+                        let { ref: n, ...l } = e;
+                        return (0, i.jsx)(m.Den, {
                             ref: (e) => {
                                 var t;
-                                (l.current = e), (n.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
+                                (a.current = e), (n.current = null !== (t = null == e ? void 0 : e.getScrollerNode()) && void 0 !== t ? t : null);
                             },
-                            ...r,
-                            children: (0, i.jsx)(Z, { scheduledMessages: t })
+                            ...l,
+                            children: (0, i.jsx)(k, { scheduledMessages: t })
                         });
                     }
                 })
             });
 }
-function Z(e) {
+function k(e) {
     let { scheduledMessages: t } = e,
-        n = r.useMemo(
+        n = l.useMemo(
             () =>
                 t.reduce((e, t) => {
                     var n, i;
-                    let r = C.Z.getChannel(t.scheduledMessage.channelId);
-                    return null == r
-                        ? e
-                        : ((e[r.id] = {
-                              channel: r,
-                              scheduledMessages: [...(null !== (i = null === (n = e[r.id]) || void 0 === n ? void 0 : n.scheduledMessages) && void 0 !== i ? i : []), t]
-                          }),
-                          e);
+                    let l = I.Z.getChannel(t.scheduledMessage.channelId);
+                    return (
+                        null == l ||
+                            (e[l.id] = {
+                                channel: l,
+                                scheduledMessages: [...(null !== (i = null === (n = e[l.id]) || void 0 === n ? void 0 : n.scheduledMessages) && void 0 !== i ? i : []), t]
+                            }),
+                        e
+                    );
                 }, {}),
             [t]
         ),
-        l = (0, s.e7)([p.Z], () => p.Z.getMessagesPendingDeletion(), []);
+        a = (0, d.e7)([f.Z], () => f.Z.getMessagesPendingDeletion(), []);
     return (0, i.jsx)(i.Fragment, {
         children: Object.entries(n).map((e) => {
-            let [t, { channel: n, scheduledMessages: r }] = e;
+            let [t, { channel: n, scheduledMessages: l }] = e;
             return (0, i.jsxs)(
                 'div',
                 {
-                    className: A.channelRow,
+                    className: Z.channelRow,
                     children: [
-                        (0, i.jsx)(x.Z, {
+                        (0, i.jsx)(T.Z, {
                             channel: n,
-                            gotoChannel: () => (0, h.uL)(T.Z5c.CHANNEL(n.getGuildId(), n.id)),
+                            gotoChannel: () => (0, p.uL)(j.Z5c.CHANNEL(n.getGuildId(), n.id)),
                             children: null
                         }),
-                        r.map((e) => {
-                            let t = l.has(e.scheduledMessageId);
+                        l.map((e) => {
+                            let t = a.has(e.scheduledMessageId);
                             return (0, i.jsx)(
-                                P,
+                                M,
                                 {
                                     scheduledMessage: e,
                                     channel: n,
@@ -142,43 +134,102 @@ function Z(e) {
         })
     });
 }
-let P = r.memo(function (e) {
-    let { scheduledMessage: t, channel: n, isPendingDeletion: r } = e,
-        l = new E.ZP({
+let M = l.memo(function (e) {
+    let { scheduledMessage: t, channel: n, isPendingDeletion: a } = e,
+        s = new v.ZP({
             id: t.scheduledMessageId,
             content: t.scheduledMessage.content,
-            author: I.default.getUser(t.userId),
-            timestamp: a()(t.sendAtTimestamp).toDate(),
+            author: N.default.getUser(t.userId),
+            timestamp: o()(t.sendAtTimestamp).toDate(),
             channel_id: t.scheduledMessage.channelId
-        });
+        }),
+        { isError: c, stateMessage: d } = (function (e) {
+            switch (e) {
+                case x._.SCHEDULED:
+                    return {
+                        isError: !1,
+                        stateMessage: y.intl.string(y.t.Fn6Odn)
+                    };
+                case x._.ERROR_CHANNEL_NOT_FOUND:
+                    return {
+                        isError: !0,
+                        stateMessage: y.intl.string(y.t.v5O2dH)
+                    };
+                case x._.ERROR_USER_NOT_FOUND:
+                    return {
+                        isError: !0,
+                        stateMessage: y.intl.string(y.t.j8uIfH)
+                    };
+                case x._.ERROR_USER_CANNOT_USE_SCHEDULED_MESSAGES:
+                    return {
+                        isError: !0,
+                        stateMessage: y.intl.string(y.t.w6zHX1)
+                    };
+                case x._.ERROR_SEND_FAILED:
+                    return {
+                        isError: !0,
+                        stateMessage: y.intl.string(y.t['pflV7+'])
+                    };
+                case x._.ERROR_SCHEDULED_MESSAGES_DISABLED:
+                    return {
+                        isError: !0,
+                        stateMessage: y.intl.string(y.t.j8uIfH)
+                    };
+                default:
+                    (0, S.vE)(e);
+            }
+        })(t.state),
+        u = l.useCallback(() => {
+            (0, g.gD)(t.scheduledMessageId)
+                .then(() => {
+                    (0, E.C$)();
+                })
+                .catch((e) => {
+                    (0, E.wW)(e.message);
+                });
+        }, [t.scheduledMessageId]);
     return (0, i.jsx)(
         'div',
         {
-            className: A.messageContainer,
-            children: r
-                ? (0, i.jsx)(u.Spinner, {})
+            className: r()(Z.messageContainer, {
+                [Z.messageSendError]: c,
+                [Z.messageSendScheduled]: !c
+            }),
+            children: a
+                ? (0, i.jsx)(m.$jN, { className: Z.messageSpinner })
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, i.jsx)(
-                              m.Z,
-                              {
-                                  message: l,
-                                  channel: n,
-                                  className: A.message,
-                                  compact: g.jU.getSetting(),
-                                  animateAvatar: !1,
-                                  focusProps: b
-                              },
-                              l.id
-                          ),
-                          (0, i.jsx)(u.Clickable, {
-                              className: A.cancelMessageButton,
-                              onClick: () => (0, f.gD)(t.scheduledMessageId),
-                              children: (0, i.jsx)(u.CircleXIcon, {})
+                          (0, i.jsx)(m.Text, {
+                              variant: 'text-xs/semibold',
+                              color: c ? 'text-danger' : 'text-positive',
+                              className: Z.messageState,
+                              children: d
+                          }),
+                          (0, i.jsxs)('div', {
+                              className: Z.channelMessageAndCancelButton,
+                              children: [
+                                  (0, i.jsx)(
+                                      _.Z,
+                                      {
+                                          message: s,
+                                          channel: n,
+                                          className: Z.message,
+                                          compact: C.jU.getSetting(),
+                                          animateAvatar: !1,
+                                          focusProps: R
+                                      },
+                                      s.id
+                                  ),
+                                  (0, i.jsx)(m.P3F, {
+                                      className: Z.cancelMessageButton,
+                                      onClick: u,
+                                      children: (0, i.jsx)(m.k$p, {})
+                                  })
+                              ]
                           })
                       ]
                   })
         },
-        l.id
+        s.id
     );
 });

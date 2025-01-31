@@ -1,12 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-});
+n.d(t, { Z: () => d });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(230711),
+var l = n(481060),
+    r = n(230711),
     a = n(931547),
     s = n(981631),
     o = n(526761),
@@ -18,12 +14,12 @@ function d(e) {
         : t.status === s.O0b.PAST_DUE
           ? (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(r.Spacer, { size: 16 }),
+                    (0, i.jsx)(l.LZC, { size: 16 }),
                     (0, i.jsx)(a.Z, {
                         message: c.intl.string(c.t.eSuJEx),
                         ctaMessage: c.intl.string(c.t.RXsxqa),
                         onClick: () => {
-                            l.Z.open(s.oAB.SUBSCRIPTIONS, o.cP);
+                            r.Z.open(s.oAB.SUBSCRIPTIONS, o.cP);
                         }
                     })
                 ]

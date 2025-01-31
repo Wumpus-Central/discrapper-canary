@@ -1,9 +1,10 @@
-e.exports = {
-    container: 'container_fdeb78',
-    iconContainer: 'iconContainer_fdeb78',
-    giftBoxIcon: 'giftBoxIcon_fdeb78',
-    trinketsIcon: 'trinketsIcon_fdeb78',
-    trinketsDecoration: 'trinketsDecoration_fdeb78',
-    trinketsGlow: 'trinketsGlow_fdeb78',
-    trinketsGlowMask: 'trinketsGlowMask_fdeb78'
+var i = {
+    container: 'container_c0c49a',
+    iconContainer: 'iconContainer_c0c49a',
+    giftBoxIcon: 'giftBoxIcon_c0c49a',
+    trinketsIcon: 'trinketsIcon_c0c49a',
+    trinketsDecoration: 'trinketsDecoration_c0c49a',
+    trinketsGlow: 'trinketsGlow_c0c49a',
+    trinketsGlowMask: 'trinketsGlowMask_c0c49a'
 };
+e.exports = i;

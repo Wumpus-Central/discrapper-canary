@@ -1,26 +1,20 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-}),
-    n(47120),
-    n(773603);
+n.d(t, { Z: () => a }), n(47120), n(773603);
 var l = n(200651),
     i = n(192379),
-    r = n(481060),
-    s = n(507453),
+    s = n(481060),
+    r = n(507453),
     o = n(388032);
 function a(e) {
     let { mfaChallenge: t, finish: n, setSlide: a, onClose: d, isSlideReady: u } = e,
         [c, h] = i.useState(!1),
-        [f, m] = i.useState(null),
-        [g, S] = i.useState(''),
-        x = i.useRef(null);
+        [m, f] = i.useState(null),
+        [x, g] = i.useState(''),
+        S = i.useRef(null);
     return (
         i.useEffect(() => {
             if (u) {
                 var e;
-                null === (e = x.current) || void 0 === e || e.focus();
+                null === (e = S.current) || void 0 === e || e.focus();
             }
         }, [u]),
         (0, l.jsxs)('form', {
@@ -29,40 +23,40 @@ function a(e) {
                     h(!0),
                     n({
                         mfaType: 'password',
-                        data: g
+                        data: x
                     })
                         .catch((e) => {
                             var t, n;
-                            m(null !== (n = null === (t = e.body) || void 0 === t ? void 0 : t.message) && void 0 !== n ? n : e.message);
+                            f(null !== (n = null === (t = e.body) || void 0 === t ? void 0 : t.message) && void 0 !== n ? n : e.message);
                         })
                         .finally(() => {
                             h(!1);
                         });
             },
             children: [
-                (0, l.jsx)(s.Z.SlideHeader, { onClose: d }),
-                (0, l.jsx)(s.Z.SlideContent, {
-                    children: (0, l.jsxs)(r.FormItem, {
+                (0, l.jsx)(r.Z.SlideHeader, { onClose: d }),
+                (0, l.jsx)(r.Z.SlideContent, {
+                    children: (0, l.jsxs)(s.xJW, {
                         title: o.intl.string(o.t['CIGa+/']),
                         children: [
-                            (0, l.jsx)(r.TextInput, {
-                                inputRef: x,
-                                onChange: S,
-                                value: g,
+                            (0, l.jsx)(s.oil, {
+                                inputRef: S,
+                                onChange: g,
+                                value: x,
                                 type: 'password',
                                 autoComplete: 'password',
                                 spellCheck: 'false',
                                 disabled: c
                             }),
-                            (0, l.jsx)(s.Z.SlideError, { error: f })
+                            (0, l.jsx)(r.Z.SlideError, { error: m })
                         ]
                     })
                 }),
-                (0, l.jsx)(s.Z.SlideFooter, {
+                (0, l.jsx)(r.Z.SlideFooter, {
                     mfaChallenge: t,
                     setSlide: a,
                     showConfirm: !0,
-                    disabled: 0 === g.length,
+                    disabled: 0 === x.length,
                     submitting: c
                 })
             ]

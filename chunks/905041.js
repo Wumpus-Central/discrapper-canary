@@ -1,27 +1,23 @@
-e.d(t, {
-    Z: function () {
-        return p;
-    }
-});
-var l = e(200651);
-e(192379);
-var i = e(481060),
-    r = e(378409),
-    u = e(976853),
-    a = e(902676),
-    o = e(626135),
-    d = e(49012),
-    c = e(358085),
-    s = e(998502),
-    v = e(36998),
-    f = e(981631),
-    h = e(388032);
-function p(n, t, e, p) {
-    let _ = (0, u.Z)(null == e ? void 0 : e.getChannelId());
-    if (!c.isPlatformEmbedded || null == n || '' === n || _ || (null == p ? void 0 : p.shouldHideMediaOptions) === !0 || !(0, r.Jj)(n)) return null;
-    let C = (0, a.F)(n),
-        Z = (e) => {
-            o.default.track(f.rMx.CONTEXT_MENU_LINK_OPENED, {
+l.d(t, { Z: () => _ });
+var e = l(200651);
+l(192379);
+var i = l(481060),
+    a = l(378409),
+    r = l(976853),
+    o = l(902676),
+    u = l(626135),
+    d = l(49012),
+    s = l(358085),
+    c = l(998502),
+    v = l(36998),
+    h = l(981631),
+    p = l(388032);
+function _(n, t, l, _) {
+    let f = (0, r.Z)(null == l ? void 0 : l.getChannelId());
+    if (!s.isPlatformEmbedded || null == n || '' === n || f || (null == _ ? void 0 : _.shouldHideMediaOptions) === !0 || !(0, a.Jj)(n)) return null;
+    let C = (0, o.F)(n),
+        Z = (l) => {
+            u.default.track(h.rMx.CONTEXT_MENU_LINK_OPENED, {
                 hostname: C,
                 ...(0, v.v)()
             }),
@@ -31,31 +27,31 @@ function p(n, t, e, p) {
                         trusted: (0, d.r)(n, t),
                         shouldConfirm: !0
                     },
-                    e
+                    l
                 );
         };
     return [
-        (0, l.jsx)(
-            i.MenuItem,
+        (0, e.jsx)(
+            i.sNh,
             {
                 id: 'copy-native-link',
-                label: h.intl.string(h.t.WqhZsr),
+                label: p.intl.string(p.t.WqhZsr),
                 action: () => {
-                    o.default.track(f.rMx.CONTEXT_MENU_LINK_COPIED, {
+                    u.default.track(h.rMx.CONTEXT_MENU_LINK_COPIED, {
                         hostname: C,
                         ...(0, v.v)()
                     }),
-                        s.ZP.copy(n),
-                        (0, i.showToast)((0, i.createToast)(h.intl.string(h.t['L/PwZW']), i.ToastType.SUCCESS));
+                        c.ZP.copy(n),
+                        (0, i.showToast)((0, i.createToast)(p.intl.string(p.t['L/PwZW']), i.ToastType.SUCCESS));
                 }
             },
             'copy-native-link'
         ),
-        (0, l.jsx)(
-            i.MenuItem,
+        (0, e.jsx)(
+            i.sNh,
             {
                 id: 'open-native-link',
-                label: h.intl.string(h.t.wuRE8P),
+                label: p.intl.string(p.t.wuRE8P),
                 action: (n) => Z(n)
             },
             'open-native-link'

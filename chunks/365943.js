@@ -1,48 +1,42 @@
-r.d(n, {
-    z: function () {
-        return d;
-    }
-});
-var i = r(544891),
-    a = r(570140),
-    o = r(479531),
-    s = r(439170),
-    l = r(25251),
-    u = r(981631);
-let c = (e) => {
-        let { sku_id: n, ...r } = e;
+n.d(t, { z: () => c });
+var i = n(544891),
+    r = n(570140),
+    a = n(479531),
+    s = n(439170),
+    o = n(25251),
+    l = n(981631);
+let u = (e) => {
+        let { sku_id: t, ...n } = e;
         return {
-            id: r.id,
-            skuId: n,
+            id: n.id,
+            skuId: t,
             config: {
-                ...r,
-                skuId: n
+                ...n,
+                skuId: t
             }
         };
     },
-    d = async function () {
+    c = async function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        if (!(!e && l.Z.hasFetched()) && !l.Z.isFetching) {
-            if (l.Z.canFetch()) {
-                a.Z.dispatch({ type: 'USER_PROFILE_EFFECTS_FETCH' });
-                try {
-                    let { body: e } = await i.tn.get({
-                            url: u.ANM.USER_PROFILE_EFFECTS,
-                            rejectWithError: !1
-                        }),
-                        n = (null == e ? void 0 : e.profile_effect_configs).map(c);
-                    a.Z.dispatch({
-                        type: 'USER_PROFILE_EFFECTS_FETCH_SUCCESS',
-                        profileEffects: n
+        if (!(!e && o.Z.hasFetched()) && !o.Z.isFetching && o.Z.canFetch()) {
+            r.Z.dispatch({ type: 'USER_PROFILE_EFFECTS_FETCH' });
+            try {
+                let { body: e } = await i.tn.get({
+                        url: l.ANM.USER_PROFILE_EFFECTS,
+                        rejectWithError: !1
+                    }),
+                    t = (null == e ? void 0 : e.profile_effect_configs).map(u);
+                r.Z.dispatch({
+                    type: 'USER_PROFILE_EFFECTS_FETCH_SUCCESS',
+                    profileEffects: t
+                });
+            } catch (t) {
+                let e = new a.Z(t);
+                (0, s.G)(e),
+                    r.Z.dispatch({
+                        type: 'USER_PROFILE_EFFECTS_FETCH_FAILURE',
+                        error: e
                     });
-                } catch (n) {
-                    let e = new o.Z(n);
-                    (0, s.G)(e),
-                        a.Z.dispatch({
-                            type: 'USER_PROFILE_EFFECTS_FETCH_FAILURE',
-                            error: e
-                        });
-                }
             }
         }
     };

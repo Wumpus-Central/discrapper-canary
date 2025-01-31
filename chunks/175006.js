@@ -1,12 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-});
+n.d(t, { Z: () => r });
 var i = n(594174),
-    r = n(111361),
-    l = n(474936);
-function a() {
+    l = n(111361),
+    a = n(474936);
+function r() {
     let e = i.default.getCurrentUser();
-    return (0, r.I5)(e, l.p9.TIER_2);
+    return (0, l.I5)(e, a.p9.TIER_2);
 }

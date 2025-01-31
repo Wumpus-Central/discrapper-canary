@@ -1,11 +1,7 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-});
+n.d(t, { Z: () => _ });
 var i = n(200651),
-    r = n(192379),
-    l = n(442837),
+    l = n(192379),
+    r = n(442837),
     a = n(481060),
     s = n(287734),
     o = n(367907),
@@ -16,15 +12,15 @@ var i = n(200651),
     m = n(626135),
     p = n(981631),
     g = n(388032);
-function f(e) {
-    let t = r.useContext(m.AnalyticsContext),
+function _(e) {
+    let t = l.useContext(m.AnalyticsContext),
         n = e.voiceChannels[0],
-        f = (0, l.e7)([u.Z], () => null != n && u.Z.can(p.Plq.CONNECT, n.channel));
+        _ = (0, r.e7)([u.Z], () => null != n && u.Z.can(p.Plq.CONNECT, n.channel));
     return null == n
         ? null
         : [
               (0, i.jsx)(
-                  a.MenuItem,
+                  a.sNh,
                   {
                       id: 'join-voice',
                       action: function () {
@@ -41,12 +37,12 @@ function f(e) {
                               });
                       },
                       label: g.intl.string(g.t['8yOlh4']),
-                      disabled: !f
+                      disabled: !_
                   },
                   'join-voice'
               ),
               (0, i.jsx)(
-                  a.MenuItem,
+                  a.sNh,
                   {
                       id: 'goto-server',
                       action: function () {

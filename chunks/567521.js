@@ -1,35 +1,31 @@
-t.d(e, {
-    Z: function () {
-        return c;
-    }
-});
-var i = t(200651);
-t(192379);
-var l = t(442837),
-    r = t(481060),
-    u = t(471253),
-    o = t(146085),
-    a = t(496675),
-    d = t(388032);
-function c(n, e) {
-    let t = (0, l.e7)([a.Z], () => a.Z.can(o.yP, n), [n]);
-    return null != e && t
-        ? (0, i.jsx)(r.MenuItem, {
+i.d(t, { Z: () => o });
+var e = i(200651);
+i(192379);
+var l = i(442837),
+    a = i(481060),
+    r = i(471253),
+    d = i(146085),
+    s = i(496675),
+    c = i(388032);
+function o(n, t) {
+    let i = (0, l.e7)([s.Z], () => s.Z.can(d.yP, n), [n]);
+    return null != t && i
+        ? (0, e.jsx)(a.sNh, {
               id: 'end-stage',
-              label: d.intl.string(d.t.saZaRU),
+              label: c.intl.string(c.t.saZaRU),
               color: 'danger',
               action: function () {
-                  (0, r.openModal)((e) =>
-                      (0, i.jsx)(r.ConfirmModal, {
-                          ...e,
-                          header: d.intl.string(d.t.gW9je3),
-                          confirmText: d.intl.string(d.t.saZaRU),
-                          cancelText: d.intl.string(d.t['ETE/oK']),
-                          onConfirm: () => (0, u.NZ)(n),
-                          children: (0, i.jsx)(r.Text, {
+                  (0, a.h7j)((t) =>
+                      (0, e.jsx)(a.ConfirmModal, {
+                          ...t,
+                          header: c.intl.string(c.t.gW9je3),
+                          confirmText: c.intl.string(c.t.saZaRU),
+                          cancelText: c.intl.string(c.t['ETE/oK']),
+                          onConfirm: () => (0, r.NZ)(n),
+                          children: (0, e.jsx)(a.Text, {
                               variant: 'text-md/normal',
                               color: 'header-secondary',
-                              children: d.intl.string(d.t.mT7jwM)
+                              children: c.intl.string(c.t.mT7jwM)
                           })
                       })
                   );

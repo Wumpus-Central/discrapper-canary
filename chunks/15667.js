@@ -1,50 +1,49 @@
-var i = r(47120);
-var a = r(200651);
-r(192379);
-var o = r(392711);
-var s = r(481060),
-    l = r(388032),
-    u = r(136915);
-let c = (e) => {
-    let n = (0, o.flatMap)(e.history, (e) => {
-        var n;
+n.d(t, { Z: () => l }), n(47120);
+var i = n(200651);
+n(192379);
+var r = n(392711),
+    a = n(481060),
+    s = n(388032),
+    o = n(136915);
+let l = (e) => {
+    let t = (0, r.flatMap)(e.history, (e) => {
+        var t;
         let {
-                destination: [r],
+                destination: [n],
                 multiSelect: i
             } = e,
-            a = [null, null],
-            o = Object.values(null !== (n = null == i ? void 0 : i.state) && void 0 !== n ? n : {});
-        return o.length > 0 && (a[0] = o.join(', ')), '' !== r && (a[1] = r), a;
+            r = [null, null],
+            a = Object.values(null !== (t = null == i ? void 0 : i.state) && void 0 !== t ? t : {});
+        return a.length > 0 && (r[0] = a.join(', ')), '' !== n && (r[1] = n), r;
     }).filter((e) => null != e);
-    return 0 === n.length
+    return 0 === t.length
         ? null
-        : (0, a.jsxs)('div', {
-              className: u.container,
+        : (0, i.jsxs)('div', {
+              className: o.container,
               children: [
-                  (0, a.jsx)(s.Heading, {
-                      className: u.breadcrumbsHeader,
+                  (0, i.jsx)(a.X6q, {
+                      className: o.breadcrumbsHeader,
                       color: 'header-secondary',
                       variant: 'heading-sm/semibold',
-                      children: l.intl.string(l.t['+3V9Tk'])
+                      children: s.intl.string(s.t['+3V9Tk'])
                   }),
-                  n.map((e, n) =>
-                      (0, a.jsxs)(
+                  t.map((e, t) =>
+                      (0, i.jsxs)(
                           'div',
                           {
-                              className: u.breadcrumbContainer,
+                              className: o.breadcrumbContainer,
                               children: [
-                                  (0, a.jsx)('div', { className: u.breadcrumbDot }),
-                                  (0, a.jsx)(s.Text, {
+                                  (0, i.jsx)('div', { className: o.breadcrumbDot }),
+                                  (0, i.jsx)(a.Text, {
                                       variant: 'text-md/normal',
-                                      className: u.breadcrumbText,
+                                      className: o.breadcrumbText,
                                       children: e
                                   })
                               ]
                           },
-                          ''.concat(e, '+').concat(n)
+                          ''.concat(e, '+').concat(t)
                       )
                   )
               ]
           });
 };
-n.Z = c;

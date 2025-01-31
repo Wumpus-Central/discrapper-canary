@@ -1,13 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return C;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => E }), n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(442837),
     o = n(481060),
     c = n(2052),
@@ -19,20 +14,20 @@ var i = n(200651),
     h = n(835473),
     g = n(314897),
     v = n(592125),
-    S = n(594174),
-    I = n(849171),
-    x = n(388032),
-    _ = n(712434);
-function C(e) {
-    let { participant: t, width: n, channelId: r } = e,
-        { analyticsLocations: a } = (0, p.ZP)(f.Z.PRESENCE_ACTIVITY_TILE),
+    _ = n(594174),
+    S = n(849171),
+    I = n(388032),
+    x = n(712434);
+function E(e) {
+    let { participant: t, width: n, channelId: a } = e,
+        { analyticsLocations: r } = (0, p.ZP)(f.Z.PRESENCE_ACTIVITY_TILE),
         { activity: s } = t,
         o = s.application_id,
         [c] = (0, h.Z)([o]),
         { url: u } = (0, m.Z)({
             applicationId: o,
-            names: I.Ix,
-            size: I.bn
+            names: S.Ix,
+            size: S.bn
         }),
         d = l.useMemo(
             () => ({
@@ -42,22 +37,22 @@ function C(e) {
             [t]
         );
     return (0, i.jsx)(p.Gt, {
-        value: a,
+        value: r,
         children: (0, i.jsx)('div', {
-            className: _.container,
+            className: x.container,
             children: (0, i.jsxs)(i.Fragment, {
                 children: [
                     null != c && null != o && null != u && '' !== u
                         ? (0, i.jsx)('img', {
-                              className: _.splashImage,
+                              className: x.splashImage,
                               alt: c.name,
                               src: u
                           })
                         : null,
                     null != c && null != o
-                        ? (0, i.jsx)(b, {
+                        ? (0, i.jsx)(C, {
                               width: n,
-                              channelId: r,
+                              channelId: a,
                               participant: d,
                               applicationId: o
                           })
@@ -67,71 +62,73 @@ function C(e) {
         })
     });
 }
-function b(e) {
-    let { width: t, channelId: n, participant: r, applicationId: m } = e,
-        f = (0, I.V_)(t),
-        [C] = (0, I.Ym)(t),
-        b = (0, s.e7)([v.Z], () => v.Z.getChannel(n)),
-        E = (0, s.e7)([S.default, g.default], () => ((0, d.J)(r, g.default) ? null : S.default.getUser(r.userId))),
-        y = l.useMemo(() => (null != E ? [E] : []), [E]),
-        Z = (0, h.q)(m),
-        { analyticsLocations: T } = (0, p.ZP)(),
-        N = (0, c.O)(),
-        A = r.sessionId,
-        [j, w] = l.useState(!1),
-        P = null == E ? void 0 : E.id,
+function C(e) {
+    let { width: t, channelId: n, participant: a, applicationId: m } = e,
+        f = (0, S.V_)(t),
+        [E] = (0, S.Ym)(t),
+        C = (0, s.e7)([v.Z], () => v.Z.getChannel(n)),
+        Z = (0, s.e7)([_.default, g.default], () => ((0, d.J)(a, g.default) ? null : _.default.getUser(a.userId))),
+        y = l.useMemo(() => (null != Z ? [Z] : []), [Z]),
+        b = (0, h.q)(m),
+        { analyticsLocations: N } = (0, p.ZP)(),
+        T = (0, c.O)(),
+        A = a.sessionId,
+        [w, P] = l.useState(!1),
+        j = null == Z ? void 0 : Z.id,
         R = l.useCallback(
             async (e) => {
-                if ((e.stopPropagation(), null != m && null != P))
-                    w(!0),
+                e.stopPropagation(),
+                    null != m &&
+                        null != j &&
+                        (P(!0),
                         await (0, u.Z)({
                             applicationId: m,
                             activityChannelId: void 0,
-                            locationObject: N.location,
-                            analyticsLocations: T,
-                            joinUserId: P,
+                            locationObject: T.location,
+                            analyticsLocations: N,
+                            joinUserId: j,
                             joinSessionId: A
                         }),
-                        w(!1);
+                        P(!1));
             },
-            [m, P, N.location, T, A]
+            [m, j, T.location, N, A]
         );
-    return null == b || null == E || null == Z
+    return null == C || null == Z || null == b
         ? null
         : (0, i.jsxs)('div', {
-              className: _.splash,
+              className: x.splash,
               children: [
-                  (0, i.jsx)(I.OV, {
-                      avatarSize: C,
-                      guildId: b.guild_id,
-                      channelId: b.id,
+                  (0, i.jsx)(S.OV, {
+                      avatarSize: E,
+                      guildId: C.guild_id,
+                      channelId: C.id,
                       users: y
                   }),
                   (0, i.jsx)(o.Text, {
-                      className: a()(_.subheader, {
-                          [_.small]: f === I.nR.SMALL,
-                          [_.medium]: f === I.nR.MEDIUM
+                      className: r()(x.subheader, {
+                          [x.small]: f === S.nR.SMALL,
+                          [x.medium]: f === S.nR.MEDIUM
                       }),
                       variant: 'text-sm/normal',
-                      children: x.intl.formatToPlainString(x.t['7Uuia2'], { username: E.username })
+                      children: I.intl.formatToPlainString(I.t['7Uuia2'], { username: Z.username })
                   }),
                   (0, i.jsx)(o.Text, {
-                      className: a()(_.header, {
-                          [_.small]: f === I.nR.SMALL,
-                          [_.medium]: f === I.nR.MEDIUM
+                      className: r()(x.header, {
+                          [x.small]: f === S.nR.SMALL,
+                          [x.medium]: f === S.nR.MEDIUM
                       }),
                       variant: 'text-sm/normal',
-                      children: Z.name
+                      children: b.name
                   }),
                   (0, i.jsx)('div', {
-                      className: _.buttons,
-                      children: (0, i.jsx)(o.Button, {
+                      className: x.buttons,
+                      children: (0, i.jsx)(o.zxk, {
                           onClick: R,
-                          submitting: j,
-                          size: (0, I.ac)(f),
-                          className: _.button,
-                          color: o.Button.Colors.PRIMARY,
-                          children: x.intl.string(x.t['4i2vj4'])
+                          submitting: w,
+                          size: (0, S.ac)(f),
+                          className: x.button,
+                          color: o.zxk.Colors.PRIMARY,
+                          children: I.intl.string(I.t['4i2vj4'])
                       })
                   })
               ]

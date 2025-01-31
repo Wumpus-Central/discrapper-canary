@@ -5,8 +5,4 @@ function a(e) {
         alpha: e.alpha
     };
 }
-r.d(t, {
-    Z: function () {
-        return a;
-    }
-});
+r.d(t, { Z: () => a });

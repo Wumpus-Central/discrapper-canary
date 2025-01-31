@@ -1,31 +1,27 @@
-t.d(e, {
-    Z: function () {
-        return f;
-    }
-});
-var i = t(200651);
-t(192379);
-var r = t(442837),
-    l = t(481060),
-    u = t(455395),
-    a = t(750850),
-    o = t(581052),
-    d = t(875252),
-    s = t(583332),
-    c = t(594174);
-function f(n) {
-    let { channel: e } = n,
-        t = (0, r.e7)([c.default], () => c.default.getCurrentUser()),
-        f = (0, o.V)(e),
-        m = (0, u.i)(e),
-        I = (0, s.g)(e),
-        x = (0, d.H)(e),
-        h = (0, a.e)(e);
-    return (null == t ? void 0 : t.isStaff()) !== !0
+e.d(t, { Z: () => h });
+var i = e(200651);
+e(192379);
+var l = e(442837),
+    r = e(481060),
+    a = e(455395),
+    s = e(750850),
+    d = e(581052),
+    u = e(875252),
+    o = e(583332),
+    c = e(594174);
+function h(n) {
+    let { channel: t } = n,
+        e = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
+        h = (0, d.V)(t),
+        f = (0, a.i)(t),
+        x = (0, o.g)(t),
+        _ = (0, u.H)(t),
+        g = (0, s.e)(t);
+    return (null == e ? void 0 : e.isStaff()) !== !0
         ? null
-        : (0, i.jsxs)(l.MenuItem, {
+        : (0, i.jsxs)(r.sNh, {
               id: 'dev tools',
               label: 'Dev Tools',
-              children: [(0, i.jsx)(l.MenuGroup, { children: f }), (0, i.jsx)(l.MenuGroup, { children: x }), (0, i.jsx)(l.MenuGroup, { children: I }), (0, i.jsx)(l.MenuGroup, { children: m }), (0, i.jsx)(l.MenuGroup, { children: h })]
+              children: [(0, i.jsx)(r.kSQ, { children: h }), (0, i.jsx)(r.kSQ, { children: _ }), (0, i.jsx)(r.kSQ, { children: x }), (0, i.jsx)(r.kSQ, { children: f }), (0, i.jsx)(r.kSQ, { children: g })]
           });
 }

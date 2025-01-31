@@ -1,111 +1,103 @@
-r.d(n, {
-    KM: function () {
-        return d;
-    },
-    R2: function () {
-        return f;
-    },
-    TG: function () {
-        return p;
-    },
-    Zc: function () {
-        return c;
-    }
+n.d(t, {
+    KM: () => c,
+    R2: () => d,
+    TG: () => f,
+    Zc: () => u
 });
-var i = r(442837),
-    a = r(570140),
-    o = r(238514),
-    s = r(675478),
-    l = r(581883),
-    u = r(526761);
-function c(e, n, r, a) {
-    let o = () => {
+var i = n(442837),
+    r = n(570140),
+    a = n(238514),
+    s = n(675478),
+    o = n(581883),
+    l = n(526761);
+function u(e, t, n, r) {
+    let a = () => {
             var i;
-            return r(null === (i = l.Z.settings[e]) || void 0 === i ? void 0 : i[n]);
+            return n(null === (i = o.Z.settings[e]) || void 0 === i ? void 0 : i[t]);
         },
-        c = () => (0, i.e7)([l.Z], o);
+        u = () => (0, i.e7)([o.Z], a);
     return {
-        getSetting: o,
-        updateSetting: h(o, (r) =>
+        getSetting: a,
+        updateSetting: _(a, (n) =>
             s.hW.updateAsync(
                 e,
                 (e) => {
-                    e[n] = a(r, e[n]);
+                    e[t] = r(n, e[t]);
                 },
-                u.fy.INFREQUENT_USER_ACTION
+                l.fy.INFREQUENT_USER_ACTION
             )
         ),
-        useSetting: c
+        useSetting: u
     };
 }
-function d(e, n, r) {
+function c(e, t, n) {
     let s = () => {
         var i;
-        let a = o.Z.getState()[n];
-        return null !== (i = null == a ? void 0 : a.settings[r]) && void 0 !== i ? i : e.getSetting();
+        let r = a.Z.getState()[t];
+        return null !== (i = null == r ? void 0 : r.settings[n]) && void 0 !== i ? i : e.getSetting();
     };
     return {
         getSetting: s,
         useSetting: () => {
-            let a = e.useSetting(),
-                s = (0, i.e7)([o.Z], () => {
-                    let e = o.Z.getState()[n];
-                    return null == e ? void 0 : e.settings[r];
+            let r = e.useSetting(),
+                s = (0, i.e7)([a.Z], () => {
+                    let e = a.Z.getState()[t];
+                    return null == e ? void 0 : e.settings[n];
                 });
-            return null != s ? s : a;
+            return null != s ? s : r;
         },
-        updateSetting: h(s, (i) =>
-            o.Z.shouldSync(n)
+        updateSetting: _(s, (i) =>
+            a.Z.shouldSync(t)
                 ? e.updateSetting(i)
-                : (a.Z.dispatch({
+                : (r.Z.dispatch({
                       type: 'SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE',
-                      changes: { [n]: { settings: { [r]: i } } }
+                      changes: { [t]: { settings: { [n]: i } } }
                   }),
                   Promise.resolve())
         )
     };
 }
-function f(e, n, r, i) {
-    let o = () => {
-        var n;
-        return null !== (n = r()) && void 0 !== n ? n : e.getSetting();
+function d(e, t, n, i) {
+    let a = () => {
+        var t;
+        return null !== (t = n()) && void 0 !== t ? t : e.getSetting();
     };
     return {
-        getSetting: o,
+        getSetting: a,
         useSetting: () => {
-            let n = e.useSetting(),
-                r = i();
-            return null != r ? r : n;
+            let t = e.useSetting(),
+                n = i();
+            return null != n ? n : t;
         },
-        updateSetting: h(
-            o,
-            (r) => (
-                a.Z.dispatch({
+        updateSetting: _(
+            a,
+            (n) => (
+                r.Z.dispatch({
                     type: 'USER_SETTINGS_OVERRIDE_CLEAR',
-                    settings: [n]
+                    settings: [t]
                 }),
-                e.updateSetting(r)
+                e.updateSetting(n)
             )
         )
     };
 }
-function p(e) {
-    let { baseSetting: n, isEligible: r, useIsEligible: i, eligibleDefault: a, ineligibleDefault: o } = e;
+function f(e) {
+    let { baseSetting: t, isEligible: n, useIsEligible: i, eligibleDefault: r, ineligibleDefault: a } = e;
     return {
         getSetting: () => {
-            let e = n.getSetting();
-            return null != e ? e : r() ? a() : o;
+            let e = t.getSetting();
+            return null != e ? e : n() ? r() : a;
         },
         useSetting: () => {
-            let e = n.useSetting(),
-                r = i();
-            return null != e ? e : r ? a() : o;
+            let e = t.useSetting(),
+                n = i();
+            return null != e ? e : n ? r() : a;
         },
-        updateSetting: (e) => n.updateSetting(e)
+        updateSetting: (e) => t.updateSetting(e)
     };
 }
-function h(e, n) {
-    return function (r) {
-        return 'function' == typeof r ? n(r(e())) : n(r);
+function _(e, t) {
+    return function (n) {
+        return 'function' == typeof n ? t(n(e())) : t(n);
     };
 }

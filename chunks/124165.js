@@ -1,53 +1,44 @@
-r.d(n, {
-    KX: function () {
-        return i;
-    },
-    X2: function () {
-        return f;
-    },
-    cg: function () {
-        return h;
-    },
-    pF: function () {
-        return p;
-    }
+n.d(t, {
+    KX: () => d,
+    X2: () => c,
+    cg: () => _,
+    pF: () => f
 });
-var i,
-    a = r(314897),
-    o = r(924301),
-    s = r(894017),
-    l = r(79874),
-    u = r(854698),
-    c = r(765305),
-    d = r(388032);
-function f(e, n) {
-    let r = a.default.getId();
-    return o.ZP.getRsvp(e, n, r);
+var i = n(314897),
+    r = n(924301),
+    a = n(894017),
+    s = n(79874),
+    o = n(854698),
+    l = n(765305),
+    u = n(388032);
+function c(e, t) {
+    let n = i.default.getId();
+    return r.ZP.getRsvp(e, t, n);
 }
-function p() {
+var d = (function (e) {
+    return (e[(e.SERIES = 0)] = 'SERIES'), (e[(e.RECURRENCE = 1)] = 'RECURRENCE'), e;
+})({});
+function f() {
     return [
         {
-            name: d.intl.string(d.t.uoorxs),
+            name: u.intl.string(u.t.uoorxs),
             value: 0
         },
         {
-            name: d.intl.string(d.t.lwZCFR),
+            name: u.intl.string(u.t.lwZCFR),
             value: 1
         }
     ];
 }
-function h(e) {
-    let { eventId: n, recurrenceId: r, guildId: i, updateRsvp: a, openRsvpPicker: d, onRsvp: p } = e,
-        h = o.ZP.getGuildScheduledEvent(n);
-    if (null == h) return;
-    let _ = (0, s.c)(r, n),
-        { startTime: m } = (0, l.Kq)(h, r),
-        g = (null == h ? void 0 : h.scheduled_start_time) != null ? (0, u.lh)(_, m, new Date(null == h ? void 0 : h.scheduled_start_time)) : null,
-        E = null != g && c.$I.has(g) ? null : null != r ? r : (0, u.DK)(h),
-        v = f(h.id),
-        y = f(h.id, E);
-    null == E ? (a(n, null, i, null != v ? c.gv.UNINTERESTED : c.gv.INTERESTED), null == p || p()) : null != y ? (a(n, E, i, null != v ? c.gv.INTERESTED : c.gv.UNINTERESTED), null == p || p()) : d(h, E);
+function _(e) {
+    let { eventId: t, recurrenceId: n, guildId: i, updateRsvp: u, openRsvpPicker: d, onRsvp: f } = e,
+        _ = r.ZP.getGuildScheduledEvent(t);
+    if (null == _) return;
+    let p = (0, a.c)(n, t),
+        { startTime: h } = (0, s.Kq)(_, n),
+        m = (null == _ ? void 0 : _.scheduled_start_time) != null ? (0, o.lh)(p, h, new Date(null == _ ? void 0 : _.scheduled_start_time)) : null,
+        g = null != m && l.$I.has(m) ? null : null != n ? n : (0, o.DK)(_),
+        E = c(_.id),
+        v = c(_.id, g);
+    null == g ? (u(t, null, i, null != E ? l.gv.UNINTERESTED : l.gv.INTERESTED), null == f || f()) : null != v ? (u(t, g, i, null != E ? l.gv.INTERESTED : l.gv.UNINTERESTED), null == f || f()) : d(_, g);
 }
-!(function (e) {
-    (e[(e.SERIES = 0)] = 'SERIES'), (e[(e.RECURRENCE = 1)] = 'RECURRENCE');
-})(i || (i = {}));

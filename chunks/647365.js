@@ -1,13 +1,14 @@
-var o = n(200651);
+n.d(t, { Z: () => i });
+var s = n(200651);
 n(192379);
 var r = n(453217),
-    s = n(578080),
-    a = n(633796);
-t.Z = function (e) {
+    a = n(578080),
+    o = n(633796);
+let i = function (e) {
     let { collapsedHeight: t, expandedContentRef: n, expansionSpring: i, isExpanded: l, isExpansionAnimationComplete: c, onCtxMenuOpened: d, onCtxMenuClosed: u, onCtxMenuSelection: p, quest: m, useReducedMotion: x } = e;
-    return (0, o.jsx)(s.Z, {
+    return (0, s.jsx)(a.Z, {
         expansionSpring: i,
-        className: a.content,
+        className: o.content,
         collapsedHeight: t,
         onCtxMenuOpen: d,
         onCtxMenuClose: u,
@@ -17,8 +18,8 @@ t.Z = function (e) {
         quest: m,
         useReducedMotion: x,
         ref: n,
-        children: (0, o.jsx)(r.Z, {
-            className: a.content,
+        children: (0, s.jsx)(r.Z, {
+            className: o.content,
             expansionSpring: i,
             isExpanded: l,
             isExpansionAnimationComplete: c,

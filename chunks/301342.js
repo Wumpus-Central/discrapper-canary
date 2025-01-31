@@ -1,16 +1,9 @@
 n.d(t, {
-    P: function () {
-        return y;
-    },
-    Qo: function () {
-        return j;
-    },
-    kw: function () {
-        return A;
-    },
-    rj: function () {
-        return T;
-    }
+    P: () => y,
+    Qo: () => P,
+    ZP: () => j,
+    kw: () => T,
+    rj: () => A
 });
 var i = n(200651),
     l = n(192379),
@@ -19,173 +12,173 @@ var i = n(200651),
     o = n(91192),
     s = n(442837),
     c = n(481060),
-    u = n(211739),
-    d = n(239091),
+    d = n(211739),
+    u = n(239091),
     h = n(146773),
     p = n(82295),
     m = n(111028),
-    f = n(540059),
-    g = n(680089),
-    v = n(430824),
-    C = n(496675),
+    g = n(540059),
+    f = n(680089),
+    _ = n(430824),
+    v = n(496675),
     x = n(9156),
-    I = n(203818),
-    _ = n(438144),
-    Z = n(981631),
+    C = n(203818),
+    Z = n(438144),
+    I = n(981631),
     b = n(388032),
     S = n(147903);
 function N(e) {
     e.stopPropagation();
 }
 let E = l.memo(function (e) {
-    let t,
-        { channel: r, connectChannelDragSource: h, connectChannelDropTarget: I, disableManageChannels: _, position: E, sortingPosition: y, hideIcon: j, children: T } = e,
-        A = (0, f.Q3)('CategoryChannel'),
-        P = (0, s.e7)([x.ZP], () => x.ZP.isChannelMuted(r.getGuildId(), r.id)),
-        w = (0, s.e7)([g.Z], () => g.Z.isCollapsed(r.id)),
-        M = (0, s.e7)([C.Z], () => C.Z.can(Z.Plq.MANAGE_CHANNELS, r));
-    t = null != y ? (E > y ? S.containerDragAfter : S.containerDragBefore) : S.containerDefault;
-    let L = l.useCallback(() => {
-            w ? (0, u.mJ)(r.id) : (0, u.c4)(r.id);
-        }, [r.id, w]),
-        R = l.useCallback(
-            (e) => {
-                if ('null' !== r.id) {
-                    let t = v.Z.getGuild(r.getGuildId());
-                    null != t &&
-                        (0, d.jW)(e, async () => {
-                            let { default: e } = await Promise.all([n.e('8965'), n.e('14280')]).then(n.bind(n, 139035));
-                            return (n) =>
-                                (0, i.jsx)(e, {
-                                    ...n,
-                                    channel: r,
-                                    guild: t
-                                });
-                        });
-                }
-            },
-            [r]
-        ),
-        D = l.useCallback(() => {
-            let e = r.type === Z.d4z.GUILD_CATEGORY ? null : r.type,
-                t = r.getGuildId();
-            null != t &&
-                (0, c.openModalLazy)(async () => {
-                    let { default: l } = await Promise.all([n.e('45094'), n.e('5506')]).then(n.bind(n, 218613));
-                    return (n) =>
-                        (0, i.jsx)(l, {
-                            ...n,
-                            channelType: e,
-                            guildId: t,
-                            categoryId: 'null' !== r.id ? r.id : null
-                        });
-                });
-        }, [r]),
-        { role: G, tabIndex: k, ...B } = (0, o.JA)(r.id),
-        U = l.useRef(null),
-        O = l.useRef(null),
-        V = (0, i.jsxs)('li', {
-            className: t,
-            'data-dnd-name': r.name,
-            children: [
-                (0, i.jsx)(c.FocusRing, {
-                    focusTarget: U,
-                    ringTarget: O,
-                    offset: {
-                        left: 4,
-                        right: 4
-                    },
-                    children: (0, i.jsxs)('div', {
-                        ref: O,
-                        className: a()(S.iconVisibility, S.wrapper, {
-                            [S.collapsed]: w,
-                            [S.muted]: P,
-                            [S.clickable]: !0
-                        }),
-                        onContextMenu: R,
-                        children: [
-                            (0, i.jsxs)(c.Clickable, {
-                                innerRef: U,
-                                className: S.mainContent,
-                                tabIndex: k,
-                                ...B,
-                                onClick: L,
-                                'aria-label': b.intl.formatToPlainString(b.t.y5l3Jy, { categoryName: r.name }),
-                                'aria-expanded': !w,
-                                focusProps: { enabled: !1 },
-                                children: [
-                                    A || j
-                                        ? null
-                                        : (0, i.jsx)(c.ChevronSmallDownIcon, {
-                                              size: 'md',
-                                              color: 'currentColor',
-                                              className: S.icon
-                                          }),
-                                    (0, i.jsx)(p.Z, {
-                                        className: S.name,
-                                        children: (0, i.jsx)(m.Z, { children: r.name })
-                                    }),
-                                    A && !j
-                                        ? (0, i.jsx)(c.ChevronSmallDownIcon, {
-                                              size: 'md',
-                                              color: 'currentColor',
-                                              className: S.icon
-                                          })
-                                        : null
-                                ]
+        let t,
+            { channel: r, connectChannelDragSource: h, connectChannelDropTarget: C, disableManageChannels: Z, position: E, sortingPosition: j, hideIcon: y, children: P } = e,
+            A = (0, g.Q3)('CategoryChannel'),
+            T = (0, s.e7)([x.ZP], () => x.ZP.isChannelMuted(r.getGuildId(), r.id)),
+            w = (0, s.e7)([f.Z], () => f.Z.isCollapsed(r.id)),
+            R = (0, s.e7)([v.Z], () => v.Z.can(I.Plq.MANAGE_CHANNELS, r));
+        t = null != j ? (E > j ? S.containerDragAfter : S.containerDragBefore) : S.containerDefault;
+        let L = l.useCallback(() => {
+                w ? (0, d.mJ)(r.id) : (0, d.c4)(r.id);
+            }, [r.id, w]),
+            M = l.useCallback(
+                (e) => {
+                    if ('null' !== r.id) {
+                        let t = _.Z.getGuild(r.getGuildId());
+                        null != t &&
+                            (0, u.jW)(e, async () => {
+                                let { default: e } = await Promise.all([n.e('8965'), n.e('14280')]).then(n.bind(n, 139035));
+                                return (n) =>
+                                    (0, i.jsx)(e, {
+                                        ...n,
+                                        channel: r,
+                                        guild: t
+                                    });
+                            });
+                    }
+                },
+                [r]
+            ),
+            D = l.useCallback(() => {
+                let e = r.type === I.d4z.GUILD_CATEGORY ? null : r.type,
+                    t = r.getGuildId();
+                null != t &&
+                    (0, c.ZDy)(async () => {
+                        let { default: l } = await Promise.all([n.e('45094'), n.e('5506')]).then(n.bind(n, 218613));
+                        return (n) =>
+                            (0, i.jsx)(l, {
+                                ...n,
+                                channelType: e,
+                                guildId: t,
+                                categoryId: 'null' !== r.id ? r.id : null
+                            });
+                    });
+            }, [r]),
+            { role: G, tabIndex: k, ...B } = (0, o.JA)(r.id),
+            O = l.useRef(null),
+            U = l.useRef(null),
+            V = (0, i.jsxs)('li', {
+                className: t,
+                'data-dnd-name': r.name,
+                children: [
+                    (0, i.jsx)(c.tEY, {
+                        focusTarget: O,
+                        ringTarget: U,
+                        offset: {
+                            left: 4,
+                            right: 4
+                        },
+                        children: (0, i.jsxs)('div', {
+                            ref: U,
+                            className: a()(S.iconVisibility, S.wrapper, {
+                                [S.collapsed]: w,
+                                [S.muted]: T,
+                                [S.clickable]: !0
                             }),
-                            (0, i.jsx)('div', {
-                                onClick: N,
-                                className: S.children,
-                                children:
-                                    M && !_
-                                        ? (0, i.jsx)(c.Tooltip, {
-                                              text: b.intl.string(b.t['fUYU+v']),
-                                              children: (e) => {
-                                                  let { onMouseEnter: t, onMouseLeave: n } = e;
-                                                  return (0, i.jsx)(c.Button, {
-                                                      'aria-label': b.intl.string(b.t['fUYU+v']),
-                                                      look: c.Button.Looks.BLANK,
-                                                      size: c.Button.Sizes.NONE,
-                                                      className: a()(S.addButton, S.forceVisible),
-                                                      onClick: D,
-                                                      onMouseEnter: t,
-                                                      onMouseLeave: n,
-                                                      tabIndex: k,
-                                                      focusProps: {
-                                                          offset: {
-                                                              top: -3,
-                                                              right: -4,
-                                                              bottom: -3,
-                                                              left: -4
-                                                          }
-                                                      },
-                                                      children: A
-                                                          ? (0, i.jsx)(c.PlusMediumIcon, {
-                                                                size: 'xs',
-                                                                color: 'currentColor',
-                                                                className: S.addButtonIcon
-                                                            })
-                                                          : (0, i.jsx)(c.PlusSmallIcon, {
-                                                                size: 'sm',
-                                                                color: 'currentColor',
-                                                                className: S.addButtonIcon
-                                                            })
-                                                  });
-                                              }
-                                          })
-                                        : null
-                            })
-                        ]
-                    })
-                }),
-                T
-            ]
-        });
-    return null != I && null != h ? I(h(V)) : V;
-});
-t.ZP = (0, h.B)(E);
-let y = l.memo(function (e) {
+                            onContextMenu: M,
+                            children: [
+                                (0, i.jsxs)(c.P3F, {
+                                    innerRef: O,
+                                    className: S.mainContent,
+                                    tabIndex: k,
+                                    ...B,
+                                    onClick: L,
+                                    'aria-label': b.intl.formatToPlainString(b.t.y5l3Jy, { categoryName: r.name }),
+                                    'aria-expanded': !w,
+                                    focusProps: { enabled: !1 },
+                                    children: [
+                                        A || y
+                                            ? null
+                                            : (0, i.jsx)(c.CJ0, {
+                                                  size: 'md',
+                                                  color: 'currentColor',
+                                                  className: S.icon
+                                              }),
+                                        (0, i.jsx)(p.Z, {
+                                            className: S.name,
+                                            children: (0, i.jsx)(m.Z, { children: r.name })
+                                        }),
+                                        A && !y
+                                            ? (0, i.jsx)(c.CJ0, {
+                                                  size: 'md',
+                                                  color: 'currentColor',
+                                                  className: S.icon
+                                              })
+                                            : null
+                                    ]
+                                }),
+                                (0, i.jsx)('div', {
+                                    onClick: N,
+                                    className: S.children,
+                                    children:
+                                        R && !Z
+                                            ? (0, i.jsx)(c.ua7, {
+                                                  text: b.intl.string(b.t['fUYU+v']),
+                                                  children: (e) => {
+                                                      let { onMouseEnter: t, onMouseLeave: n } = e;
+                                                      return (0, i.jsx)(c.zxk, {
+                                                          'aria-label': b.intl.string(b.t['fUYU+v']),
+                                                          look: c.zxk.Looks.BLANK,
+                                                          size: c.zxk.Sizes.NONE,
+                                                          className: a()(S.addButton, S.forceVisible),
+                                                          onClick: D,
+                                                          onMouseEnter: t,
+                                                          onMouseLeave: n,
+                                                          tabIndex: k,
+                                                          focusProps: {
+                                                              offset: {
+                                                                  top: -3,
+                                                                  right: -4,
+                                                                  bottom: -3,
+                                                                  left: -4
+                                                              }
+                                                          },
+                                                          children: A
+                                                              ? (0, i.jsx)(c.BRu, {
+                                                                    size: 'xs',
+                                                                    color: 'currentColor',
+                                                                    className: S.addButtonIcon
+                                                                })
+                                                              : (0, i.jsx)(c.qJs, {
+                                                                    size: 'sm',
+                                                                    color: 'currentColor',
+                                                                    className: S.addButtonIcon
+                                                                })
+                                                      });
+                                                  }
+                                              })
+                                            : null
+                                })
+                            ]
+                        })
+                    }),
+                    P
+                ]
+            });
+        return null != C && null != h ? C(h(V)) : V;
+    }),
+    j = (0, h.B)(E),
+    y = l.memo(function (e) {
         let { name: t, onDismiss: n, className: l } = e;
         return (0, i.jsx)('li', {
             className: a()(l, S.containerDefault),
@@ -200,13 +193,13 @@ let y = l.memo(function (e) {
                         })
                     }),
                     null != n
-                        ? (0, i.jsx)(c.TooltipContainer, {
+                        ? (0, i.jsx)(c.DY3, {
                               text: b.intl.string(b.t['5qNmsb']),
                               className: S.dismissWrapper,
-                              children: (0, i.jsx)(c.Clickable, {
+                              children: (0, i.jsx)(c.P3F, {
                                   className: S.dismissButton,
                                   onClick: n,
-                                  children: (0, i.jsx)(c.CircleXIcon, {
+                                  children: (0, i.jsx)(c.k$p, {
                                       size: 'md',
                                       color: 'currentColor',
                                       className: S.dismiss
@@ -218,22 +211,22 @@ let y = l.memo(function (e) {
             })
         });
     }),
-    j = l.memo(function (e) {
+    P = l.memo(function (e) {
         let { category: t } = e,
-            n = (0, s.e7)([I.Z], () => I.Z.isVoiceCategoryCollapsed(t.guild.id)),
-            r = (0, f.Q3)('VoiceChannelCategoryButton'),
+            n = (0, s.e7)([C.Z], () => C.Z.isVoiceCategoryCollapsed(t.guild.id)),
+            r = (0, g.Q3)('VoiceChannelCategoryButton'),
             a = l.useCallback(() => {
-                n ? (0, _.s)(t.guild.id) : (0, _.M)(t.guild.id);
+                n ? (0, Z.s)(t.guild.id) : (0, Z.M)(t.guild.id);
             }, [t.guild.id, n]);
         return r
-            ? (0, i.jsxs)(c.Button, {
-                  look: c.Button.Looks.FILLED,
-                  color: c.Button.Colors.PRIMARY,
+            ? (0, i.jsxs)(c.zxk, {
+                  look: c.zxk.Looks.FILLED,
+                  color: c.zxk.Colors.PRIMARY,
                   className: S.refreshVoiceChannelsButton,
                   innerClassName: S.refreshVoiceChannelsButtonInner,
                   onClick: a,
                   children: [
-                      (0, i.jsx)(c.VoiceNormalIcon, {
+                      (0, i.jsx)(c.gj8, {
                           size: 'xs',
                           color: 'currentColor',
                           className: S.voiceChannelsToggleIcon
@@ -244,11 +237,11 @@ let y = l.memo(function (e) {
                       })
                   ]
               })
-            : (0, i.jsxs)(c.Clickable, {
+            : (0, i.jsxs)(c.P3F, {
                   className: S.voiceChannelsButton,
                   onClick: a,
                   children: [
-                      (0, i.jsx)(c.VoiceNormalIcon, {
+                      (0, i.jsx)(c.gj8, {
                           size: 'xs',
                           color: 'currentColor',
                           className: S.voiceChannelsToggleIcon
@@ -260,10 +253,10 @@ let y = l.memo(function (e) {
                   ]
               });
     }),
-    T = l.memo(function (e) {
+    A = l.memo(function (e) {
         let { category: t, channel: n } = e,
-            l = (0, s.e7)([I.Z], () => I.Z.isVoiceCategoryCollapsed(t.guild.id));
-        return l || null == n || n.record.type === Z.d4z.GUILD_CATEGORY
+            l = (0, s.e7)([C.Z], () => C.Z.isVoiceCategoryCollapsed(t.guild.id));
+        return l || null == n || n.record.type === I.d4z.GUILD_CATEGORY
             ? l
                 ? (0, i.jsx)('li', {
                       className: a()(S.containerDefault),
@@ -278,7 +271,7 @@ let y = l.memo(function (e) {
                 : null
             : (0, i.jsx)('div', { style: { height: 16 } });
     }),
-    A = l.memo(function (e) {
+    T = l.memo(function (e) {
         let { channel: t } = e;
         return (0, i.jsx)('li', {
             className: a()(S.containerDefault),

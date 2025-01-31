@@ -1,6 +1,2 @@
-r.d(t, {
-    J: function () {
-        return a;
-    }
-});
-let a = 'production';
+a.d(e, { J: () => r });
+let r = 'production';

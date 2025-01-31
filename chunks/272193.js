@@ -1,20 +1,16 @@
-n.d(t, {
-    Z: function () {
-        return m;
-    }
-});
+n.d(t, { Z: () => h });
 var a = n(200651);
 n(192379);
-var r = n(120356),
-    l = n.n(r),
+var l = n(120356),
+    r = n.n(l),
     i = n(442837),
     o = n(481060),
     s = n(570140),
     c = n(441623),
     d = n(246992),
     u = n(562708),
-    h = n(941469);
-function m() {
+    m = n(941469);
+function h() {
     let e = (0, i.e7)([c.Z], () => c.Z.getDevToolTotalFriendAnniversaries()),
         t = (e) => {
             s.Z.dispatch({
@@ -22,8 +18,8 @@ function m() {
                 total: e
             });
         };
-    return (0, a.jsx)(o.ScrollerThin, {
-        className: l()(h.panel),
+    return (0, a.jsx)(o.zJl, {
+        className: r()(m.panel),
         children: (0, a.jsxs)('div', {
             className: u.panelInner,
             children: [
@@ -39,8 +35,8 @@ function m() {
                             variant: 'text-md/normal',
                             children: 'Reset gift message cooldown'
                         }),
-                        (0, a.jsx)(o.Button, {
-                            size: o.Button.Sizes.SMALL,
+                        (0, a.jsx)(o.zxk, {
+                            size: o.zxk.Sizes.SMALL,
                             onClick: () => {
                                 s.Z.dispatch({ type: 'DEV_TOOLS_GIFT_MESSAGE_COOLDOWN_RESET' });
                             },
@@ -55,8 +51,8 @@ function m() {
                             variant: 'text-md/normal',
                             children: 'Reset badge cooldown'
                         }),
-                        (0, a.jsx)(o.Button, {
-                            size: o.Button.Sizes.SMALL,
+                        (0, a.jsx)(o.zxk, {
+                            size: o.zxk.Sizes.SMALL,
                             onClick: () => {
                                 s.Z.dispatch({ type: 'DEV_TOOLS_FRIENDS_TAB_BADGE_COOLDOWN_RESET' });
                             },
@@ -71,8 +67,8 @@ function m() {
                             variant: 'text-md/normal',
                             children: 'Clear last seen friend anniversaries in All Friends'
                         }),
-                        (0, a.jsx)(o.Button, {
-                            size: o.Button.Sizes.SMALL,
+                        (0, a.jsx)(o.zxk, {
+                            size: o.zxk.Sizes.SMALL,
                             onClick: () => {
                                 s.Z.dispatch({ type: 'DEV_TOOLS_FRIENDS_LIST_GIFT_INTENTS_SHOWN_RESET' });
                             },
@@ -87,7 +83,7 @@ function m() {
                             variant: 'text-md/normal',
                             children: 'Select number of friend anniversaries to generate'
                         }),
-                        (0, a.jsx)(o.SingleSelect, {
+                        (0, a.jsx)(o.q4e, {
                             className: u.anniversaryCountSelect,
                             options: [
                                 {
@@ -129,8 +125,8 @@ function m() {
                             },
                             popoutLayerContext: d.O$
                         }),
-                        (0, a.jsx)(o.Button, {
-                            look: o.Button.Looks.LINK,
+                        (0, a.jsx)(o.zxk, {
+                            look: o.zxk.Looks.LINK,
                             className: u.anniversaryCountResetButton,
                             onClick: () => {
                                 t(null);

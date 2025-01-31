@@ -1,29 +1,23 @@
-r.d(n, {
-    r: function () {
-        return u;
-    }
-});
-var i = r(411104);
-var a = r(47120);
-var o = r(319245),
-    s = r(918701);
-function l(e, n, r) {
+n.d(t, { r: () => s }), n(411104), n(47120);
+var i = n(319245),
+    r = n(918701);
+function a(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class u {
+class s {
     static build(e) {
         if (2 !== e.configVersion) throw Error('Cannot build SharedQuestFields when [configVersion !== 2]');
-        return new u(e);
+        return new s(e);
     }
     get features() {
         return new Set(this.quest.features);
@@ -53,9 +47,9 @@ class u {
         return this.quest.rewardsConfig.platforms;
     }
     get questType() {
-        return (0, s.q8)({ config: this.quest }) ? o.W.VIDEO : o.W.GAMEPLAY;
+        return (0, r.q8)({ config: this.quest }) ? i.W.VIDEO : i.W.GAMEPLAY;
     }
     constructor(e) {
-        l(this, 'quest', void 0), (this.quest = e);
+        a(this, 'quest', void 0), (this.quest = e);
     }
 }

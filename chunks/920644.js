@@ -1,12 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return p;
-    }
-});
+n.d(t, { Z: () => p });
 var i = n(200651);
 n(192379);
-var r = n(990547),
-    l = n(481060),
+var l = n(990547),
+    r = n(481060),
     a = n(313201),
     s = n(703656),
     o = n(63063),
@@ -20,16 +16,16 @@ function m() {
 function p(e) {
     let { underageMessage: t, transitionState: s } = e,
         c = (0, a.Dt)();
-    return (0, i.jsxs)(l.ModalRoot, {
+    return (0, i.jsxs)(r.Y0X, {
         transitionState: s,
-        size: l.ModalSize.SMALL,
+        size: r.CgR.SMALL,
         'aria-labelledby': c,
         impression: {
-            impressionName: r.ImpressionNames.USER_AGE_GATE_UNDERAGE,
+            impressionName: l.ImpressionNames.USER_AGE_GATE_UNDERAGE,
             impressionProperties: { existing_user: !0 }
         },
         children: [
-            (0, i.jsx)(l.ModalContent, {
+            (0, i.jsx)(r.hzk, {
                 children: (0, i.jsxs)('div', {
                     className: h.container,
                     children: [
@@ -38,13 +34,13 @@ function p(e) {
                             src: n(231443),
                             className: h.img
                         }),
-                        (0, i.jsx)(l.Heading, {
+                        (0, i.jsx)(r.X6q, {
                             variant: 'heading-xl/semibold',
                             className: h.title,
                             id: c,
                             children: u.intl.string(u.t['NR/zrK'])
                         }),
-                        (0, i.jsx)(l.Text, {
+                        (0, i.jsx)(r.Text, {
                             color: 'header-secondary',
                             className: h.subtitle,
                             variant: 'text-sm/normal',
@@ -53,7 +49,7 @@ function p(e) {
                                 helpURL: o.Z.getArticleURL(d.BhN.AGE_GATE)
                             })
                         }),
-                        (0, i.jsx)(l.Text, {
+                        (0, i.jsx)(r.Text, {
                             color: 'header-secondary',
                             className: h.subtitle,
                             variant: 'text-sm/normal',
@@ -62,9 +58,9 @@ function p(e) {
                     ]
                 })
             }),
-            (0, i.jsx)(l.ModalFooter, {
-                children: (0, i.jsx)(l.Button, {
-                    size: l.ButtonSizes.SMALL,
+            (0, i.jsx)(r.mzw, {
+                children: (0, i.jsx)(r.zxk, {
+                    size: r.PhG.SMALL,
                     fullWidth: !0,
                     onClick: m,
                     children: u.intl.string(u.t.szzQ6O)

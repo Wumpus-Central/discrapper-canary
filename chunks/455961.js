@@ -1,14 +1,8 @@
-n.d(t, {
-    b: function () {
-        return M;
-    }
-}),
-    n(47120),
-    n(773603);
+n.d(t, { b: () => R }), n(47120), n(773603);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(848246),
     o = n(793030),
     c = n(442837),
@@ -19,27 +13,27 @@ var i = n(200651),
     m = n(361291),
     f = n(131951),
     g = n(626135),
-    C = n(120522),
-    x = n(386542),
-    v = n(933843),
-    _ = n(746599),
-    I = n(1163),
-    E = n(738672),
+    _ = n(120522),
+    C = n(386542),
+    x = n(933843),
+    v = n(746599),
+    E = n(1163),
+    I = n(738672),
     b = n(981631),
     Z = n(37113),
     N = n(388032),
-    S = n(235726);
-function T(e) {
+    T = n(235726);
+function S(e) {
     let { className: t, onDismiss: n } = e;
-    return (0, i.jsx)(u.Button, {
+    return (0, i.jsx)(u.zxk, {
         className: t,
         'aria-label': N.intl.string(N.t.cpT0Cg),
-        look: u.Button.Looks.BLANK,
-        size: u.Button.Sizes.NONE,
+        look: u.zxk.Looks.BLANK,
+        size: u.zxk.Sizes.NONE,
         onClick: n,
-        children: (0, i.jsx)(u.XSmallIcon, {
+        children: (0, i.jsx)(u.Dio, {
             size: 'xs',
-            className: S.closeIcon,
+            className: T.closeIcon,
             color: 'white'
         })
     });
@@ -49,16 +43,16 @@ let j = Z.LY.RESOLUTION_1440,
 function y(e) {
     let { channel: t } = e,
         n = (0, c.e7)([p.Z], () => p.Z.useReducedMotion),
-        [r, a] = l.useState(!1),
+        [a, r] = l.useState(!1),
         { preset: o } = (0, c.cj)([m.Z], () => m.Z.getState()),
-        x = (0, c.e7)([f.Z], () => f.Z.getGoLiveSource()),
-        I = l.useCallback(() => {
-            a(!0),
-                (0, C.S)(s.q.STREAM_HIGH_QUALITY)
+        C = (0, c.e7)([f.Z], () => f.Z.getGoLiveSource()),
+        E = l.useCallback(() => {
+            r(!0),
+                (0, _.S)(s.q.STREAM_HIGH_QUALITY)
                     .then((e) => {
                         if (e) {
                             if (
-                                ((0, _.J1)(!(0, v.mc)(j, A)),
+                                ((0, v.J1)(!(0, x.mc)(j, A)),
                                 g.default.track(b.rMx.PERK_DEMO_OFFER_ACCEPTED, {
                                     guild_id: t.guild_id,
                                     channel_id: t.id,
@@ -66,8 +60,8 @@ function y(e) {
                                     resolution: j,
                                     max_fps: A
                                 }),
-                                (0, _.cD)(!1),
-                                null == x)
+                                (0, v.cD)(!1),
+                                null == C)
                             )
                                 return;
                             let e = {
@@ -78,59 +72,59 @@ function y(e) {
                                 },
                                 context: d.Yn.STREAM
                             };
-                            null != x.desktopSource
+                            null != C.desktopSource
                                 ? (e.desktopSettings = {
-                                      sourceId: x.desktopSource.id,
+                                      sourceId: C.desktopSource.id,
                                       sound: !0
                                   })
-                                : null != x.cameraSource &&
+                                : null != C.cameraSource &&
                                   (e.cameraSettings = {
-                                      videoDeviceGuid: x.cameraSource.videoDeviceGuid,
-                                      audioDeviceGuid: x.cameraSource.audioDeviceGuid
+                                      videoDeviceGuid: C.cameraSource.videoDeviceGuid,
+                                      audioDeviceGuid: C.cameraSource.audioDeviceGuid
                                   }),
                                 h.Z.setGoLiveSource(e);
                         }
                     })
                     .catch(() => {})
                     .finally(() => {
-                        a(!1);
+                        r(!1);
                     });
-        }, [o, t, x]);
-    return (0, i.jsx)(u.ShinyButton, {
+        }, [o, t, C]);
+    return (0, i.jsx)(u.gtL, {
         fullWidth: !0,
         pauseAnimation: n,
-        color: u.Button.Colors.GREEN,
-        size: u.Button.Sizes.SMALL,
-        className: S.optInButton,
-        onClick: I,
-        submitting: r,
+        color: u.zxk.Colors.GREEN,
+        size: u.zxk.Sizes.SMALL,
+        className: T.optInButton,
+        onClick: E,
+        submitting: a,
         children: N.intl.string(N.t['Rpn/09'])
     });
 }
 function P(e) {
     let { channel: t, hidden: n, onDismiss: l } = e,
-        r = I.Z.useExperiment({ location: 'StreamButtonDemoOptInPopoutContent' }, { autoTrackExposure: !1 }).extendedDemoDuration;
+        a = E.Z.useExperiment({ location: 'StreamButtonDemoOptInPopoutContent' }, { autoTrackExposure: !1 }).extendedDemoDuration;
     return (0, i.jsxs)('div', {
-        className: a()(S.optInPopout, S.variant2OptInPopout, { [S.hidden]: n }),
+        className: r()(T.optInPopout, T.variant2OptInPopout, { [T.hidden]: n }),
         children: [
             (0, i.jsx)('img', {
-                className: S.image,
+                className: T.image,
                 src: 'https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png',
                 alt: 'HD Streaming Nitro Perk'
             }),
-            (0, i.jsx)(T, {
-                className: S.variant2CloseButton,
+            (0, i.jsx)(S, {
+                className: T.variant2CloseButton,
                 onDismiss: l
             }),
             (0, i.jsx)('div', {
-                className: S.variant2InfoContainerParent,
+                className: T.variant2InfoContainerParent,
                 children: (0, i.jsxs)('div', {
-                    className: S.variant2InfoContainer,
+                    className: T.variant2InfoContainer,
                     children: [
                         (0, i.jsx)(o.xv, {
-                            className: S.variant2Text,
+                            className: T.variant2Text,
                             variant: 'text-sm/medium',
-                            children: r ? N.intl.string(N.t.ZYQ2zc) : N.intl.string(N.t.kr8AEx)
+                            children: a ? N.intl.string(N.t.ZYQ2zc) : N.intl.string(N.t.kr8AEx)
                         }),
                         (0, i.jsx)(y, { channel: t })
                     ]
@@ -139,20 +133,20 @@ function P(e) {
         ]
     });
 }
-function M(e) {
+function R(e) {
     let { channel: t, ...n } = e,
-        { shouldShowOptInPopout: r } = (0, x.k)(s.q.STREAM_HIGH_QUALITY),
-        { enabled: a } = I.Z.useExperiment(
+        { shouldShowOptInPopout: a } = (0, C.k)(s.q.STREAM_HIGH_QUALITY),
+        { enabled: r } = E.Z.useExperiment(
             { location: 'StreamButtonDemoOptInPopout' },
             {
                 autoTrackExposure: !1,
-                disable: !r
+                disable: !a
             }
         ),
         o = l.useRef(!1);
     return (l.useEffect(() => {
-        r &&
-            a &&
+        a &&
+            r &&
             !o.current &&
             ((o.current = !0),
             g.default.track(b.rMx.PERK_DEMO_OFFER_VIEWED, {
@@ -160,9 +154,9 @@ function M(e) {
                 channel_id: t.id,
                 perk_type: s.q.STREAM_HIGH_QUALITY
             }));
-    }, [r, a, t]),
-    r && a)
-        ? (0, i.jsx)(E.h, {
+    }, [a, r, t]),
+    a && r)
+        ? (0, i.jsx)(I.h, {
               ...n,
               renderComponent: (e) =>
                   (0, i.jsx)(P, {

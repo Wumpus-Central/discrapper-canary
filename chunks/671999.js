@@ -1,24 +1,20 @@
-r.d(n, {
-    B: function () {
-        return a;
-    },
-    J: function () {
-        return o;
-    }
-});
-var i = r(411104);
-function a(e, n, r) {
+function i(e, t, n) {
     return new MouseEvent(e, {
-        screenX: n,
-        screenY: r,
-        clientX: n,
-        clientY: r,
+        screenX: t,
+        screenY: n,
+        clientX: t,
+        clientY: n,
         bubbles: !0,
         view: window
     });
 }
-function o(e, n, r) {
-    let i = document.elementFromPoint(n, r);
+function r(e, t, n) {
+    let i = document.elementFromPoint(t, n);
     if (null == i) throw Error();
     i.dispatchEvent(e);
 }
+n.d(t, {
+    B: () => i,
+    J: () => r
+}),
+    n(411104);

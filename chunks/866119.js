@@ -1,11 +1,7 @@
-function i(e, n) {
-    let r = 0,
-        i = Math.min(e.length, n.length);
-    for (let a = 0; a < i; a++) r |= e.charCodeAt(a) ^ n.charCodeAt(a);
-    return 0 === r && e.length === n.length;
+function i(e, t) {
+    let n = 0,
+        i = Math.min(e.length, t.length);
+    for (let r = 0; r < i; r++) n |= e.charCodeAt(r) ^ t.charCodeAt(r);
+    return 0 === n && e.length === t.length;
 }
-r.d(n, {
-    y: function () {
-        return i;
-    }
-});
+n.d(t, { y: () => i });

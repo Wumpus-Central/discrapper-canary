@@ -1,76 +1,72 @@
-r.d(n, {
-    Z: function () {
-        return p;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(481060),
-    o = r(726542),
-    s = r(842146),
-    l = r(293177),
-    u = r(349407),
-    c = r(49012),
-    d = r(202120),
-    f = r(981631);
-function p(e) {
-    var n;
-    let { platformType: p, location: h, overrideUrl: _, successRedirect: m } = e;
-    if ((p === f.ABu.LEAGUE_OF_LEGENDS && (p = f.ABu.RIOT_GAMES), p === f.ABu.CRUNCHYROLL)) {
-        s.K([null != h ? h : 'unknown']);
+n.d(t, { Z: () => f });
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(726542),
+    s = n(842146),
+    o = n(293177),
+    l = n(349407),
+    u = n(49012),
+    c = n(202120),
+    d = n(981631);
+function f(e) {
+    var t;
+    let { platformType: f, location: _, overrideUrl: p, successRedirect: h } = e;
+    if ((f === d.ABu.LEAGUE_OF_LEGENDS && (f = d.ABu.RIOT_GAMES), f === d.ABu.CRUNCHYROLL)) {
+        s.K([null != _ ? _ : 'unknown']);
         return;
     }
-    if (p === f.ABu.XBOX) {
-        u.K([null != h ? h : 'unknown']);
+    if (f === d.ABu.XBOX) {
+        l.K([null != _ ? _ : 'unknown']);
         return;
     }
-    if (p === f.ABu.PLAYSTATION || p === f.ABu.PLAYSTATION_STAGING) {
-        l.K([null != h ? h : 'unknown'], p);
+    if (f === d.ABu.PLAYSTATION || f === d.ABu.PLAYSTATION_STAGING) {
+        o.K([null != _ ? _ : 'unknown'], f);
         return;
     }
-    if (p === f.ABu.DOMAIN) {
-        (0, a.openModalLazy)(async () => {
-            let { default: e } = await r.e('64941').then(r.bind(r, 907053));
-            return (n) =>
+    if (f === d.ABu.DOMAIN) {
+        (0, r.ZDy)(async () => {
+            let { default: e } = await n.e('64941').then(n.bind(n, 907053));
+            return (t) =>
                 (0, i.jsx)(e, {
-                    analyticsLocation: [null != h ? h : 'unknown'],
-                    ...n
+                    analyticsLocation: [null != _ ? _ : 'unknown'],
+                    ...t
                 });
         });
         return;
     }
-    if ((null === (n = o.Z.get(p)) || void 0 === n ? void 0 : n.isFederated) === !0) {
-        (0, a.openModalLazy)(async () => {
-            let { default: e } = await r.e('54934').then(r.bind(r, 701460));
-            return (n) =>
+    if ((null === (t = a.Z.get(f)) || void 0 === t ? void 0 : t.isFederated) === !0) {
+        (0, r.ZDy)(async () => {
+            let { default: e } = await n.e('54934').then(n.bind(n, 701460));
+            return (t) =>
                 (0, i.jsx)(e, {
-                    platformType: p,
-                    location: h,
-                    successRedirect: m,
-                    ...n
+                    platformType: f,
+                    location: _,
+                    successRedirect: h,
+                    ...t
                 });
         });
         return;
     }
-    if (null != _) {
-        (0, c.q)({
+    if (null != p) {
+        (0, u.q)({
             shouldConfirm: !0,
-            href: _,
+            href: p,
             onConfirm: () => {
-                (0, d.H)(
-                    p,
+                (0, c.H)(
+                    f,
                     {
-                        location: h,
-                        successRedirect: m
+                        location: _,
+                        successRedirect: h
                     },
-                    _
+                    p
                 );
             }
         });
         return;
     }
-    (0, d.H)(p, {
-        location: h,
-        successRedirect: m
+    (0, c.H)(f, {
+        location: _,
+        successRedirect: h
     });
 }

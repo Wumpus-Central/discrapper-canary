@@ -1,10 +1,4 @@
-r.d(n, {
-    c: function () {
-        return i;
-    }
-});
-var i,
-    a = r(47120);
-!(function (e) {
-    (e.FATAL = 'fatal'), (e.ERROR = 'error'), (e.WARNING = 'warning'), (e.LOG = 'log'), (e.INFO = 'info'), (e.DEBUG = 'debug');
-})(i || (i = {}));
+n.d(t, { c: () => i }), n(47120);
+var i = (function (e) {
+    return (e.FATAL = 'fatal'), (e.ERROR = 'error'), (e.WARNING = 'warning'), (e.LOG = 'log'), (e.INFO = 'info'), (e.DEBUG = 'debug'), e;
+})({});

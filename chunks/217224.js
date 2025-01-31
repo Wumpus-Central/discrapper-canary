@@ -1,10 +1,6 @@
 function i(e) {
     if (null === e || !0 === e || !1 === e) return NaN;
-    var n = Number(e);
-    return isNaN(n) ? n : n < 0 ? Math.ceil(n) : Math.floor(n);
+    var t = Number(e);
+    return isNaN(t) ? t : t < 0 ? Math.ceil(t) : Math.floor(t);
 }
-r.d(n, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });

@@ -1,7 +1,8 @@
+n.d(t, { Z: () => f });
 var i = n(200651),
-    r = n(192379),
-    l = n(392711),
-    a = n.n(l),
+    l = n(192379),
+    r = n(392711),
+    a = n.n(r),
     s = n(481060),
     o = n(367907),
     c = n(626135),
@@ -11,9 +12,9 @@ var i = n(200651),
     m = n(388032),
     p = n(3030);
 let g = a().debounce(o.ZP.trackWithMetadata, 500),
-    f = (e) => {
-        let { guild: t, title: n, message: l, image: a, type: d, imageMarginX: u, imageMarginTop: f, trackingSource: _, undismissable: E, onDismissed: I, onClick: C, cta: v, ctaColor: N } = e;
-        r.useEffect(() => {
+    _ = (e) => {
+        let { guild: t, title: n, message: r, image: a, type: d, imageMarginX: u, imageMarginTop: _, trackingSource: f, undismissable: E, onDismissed: I, onClick: C, cta: v, ctaColor: N } = e;
+        l.useEffect(() => {
             g(h.rMx.CHANNEL_NOTICE_VIEWED, {
                 notice_type: d,
                 guild_id: t.id
@@ -23,13 +24,13 @@ let g = a().debounce(o.ZP.trackWithMetadata, 500),
         'function' == typeof v
             ? (T = v())
             : null != v &&
-              (T = (0, i.jsx)(s.Button, {
+              (T = (0, i.jsx)(s.zxk, {
                   className: p.btn,
-                  size: s.Button.Sizes.SMALL,
+                  size: s.zxk.Sizes.SMALL,
                   onClick: () => {
                       null != d &&
                           c.default.track(h.rMx.CHANNEL_NOTICE_CTA_CLICKED, {
-                              source: _,
+                              source: f,
                               guild_id: t.id,
                               notice_type: d
                           }),
@@ -45,13 +46,13 @@ let g = a().debounce(o.ZP.trackWithMetadata, 500),
             children: [
                 !0 === E
                     ? null
-                    : (0, i.jsx)(s.Clickable, {
+                    : (0, i.jsx)(s.P3F, {
                           onClick: () => {
                               o.ZP.trackWithMetadata(h.rMx.CHANNEL_NOTICE_CLOSED, { notice_type: d }), null == I || I();
                           },
                           className: p.close,
                           'aria-label': m.intl.string(m.t.WAI6xs),
-                          children: (0, i.jsx)(s.XSmallIcon, {
+                          children: (0, i.jsx)(s.Dio, {
                               size: 'md',
                               color: 'currentColor',
                               className: p.closeIcon
@@ -60,7 +61,7 @@ let g = a().debounce(o.ZP.trackWithMetadata, 500),
                 (0, i.jsx)('div', {
                     className: p.imageContainer,
                     style: {
-                        marginTop: ''.concat(f, 'px'),
+                        marginTop: ''.concat(_, 'px'),
                         marginLeft: S,
                         marginRight: S
                     },
@@ -74,7 +75,7 @@ let g = a().debounce(o.ZP.trackWithMetadata, 500),
                     className: p.message,
                     children: [
                         null != n
-                            ? (0, i.jsx)(s.Heading, {
+                            ? (0, i.jsx)(s.X6q, {
                                   variant: 'heading-md/semibold',
                                   className: p.title,
                                   children: n
@@ -82,15 +83,15 @@ let g = a().debounce(o.ZP.trackWithMetadata, 500),
                             : null,
                         (0, i.jsx)(s.Text, {
                             variant: 'text-sm/normal',
-                            children: l
+                            children: r
                         }),
                         T
                     ]
                 })
             ]
         });
+    },
+    f = function (e) {
+        let { showRedesignedChannelNotice: t } = (0, d.o)(!0);
+        return t ? (0, i.jsx)(u.Z, { ...e }) : (0, i.jsx)(_, { ...e });
     };
-t.Z = function (e) {
-    let { showRedesignedChannelNotice: t } = (0, d.o)(!0);
-    return t ? (0, i.jsx)(u.Z, { ...e }) : (0, i.jsx)(f, { ...e });
-};

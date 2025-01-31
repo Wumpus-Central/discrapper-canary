@@ -1,13 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return N;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => N }), n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(704215),
-    a = n(779618),
+    a = n(704215),
+    r = n(779618),
     s = n(243778),
     o = n(446226),
     c = n(441167),
@@ -18,17 +13,17 @@ var i = n(200651),
     m = n(861254),
     f = n(983131),
     g = n(131951),
-    C = n(213652),
-    x = n(320427),
-    v = n(145010),
-    _ = n(933686),
-    I = n(361057),
-    E = n(997614),
+    _ = n(213652),
+    C = n(320427),
+    x = n(145010),
+    v = n(933686),
+    E = n(361057),
+    I = n(997614),
     b = n(159909),
     Z = n(637335);
 function N(e) {
-    let { channel: t, hasActiveStream: n, showRightDivider: N, themeable: S = !1 } = e,
-        { groupedButtons: T } = (0, m.ZP)({ location: 'VoiceEffectsActionBar' }),
+    let { channel: t, hasActiveStream: n, showRightDivider: N, themeable: T = !1 } = e,
+        { groupedButtons: S } = (0, m.ZP)({ location: 'VoiceEffectsActionBar' }),
         j = (0, u.Ou)(t),
         A = l.useRef(null),
         y = (0, o.Z)(),
@@ -36,30 +31,30 @@ function N(e) {
             guildId: null == t ? void 0 : t.guild_id,
             location: 'b7309a_1'
         }),
-        { enableViewerClipping: M } = c.Z.useExperiment({ location: 'VoiceEffectsActionBar' }, { autoTrackExposure: !1 }),
-        R = (0, a.Z)(g.Z),
-        L = (0, u.Zm)(t, 'VoiceEffectsActionBar') ? [r.z.CONSUMABLE_HD_POTION_UPSELL] : [],
+        { enableViewerClipping: R } = c.Z.useExperiment({ location: 'VoiceEffectsActionBar' }, { autoTrackExposure: !1 }),
+        M = (0, r.Z)(g.Z),
+        L = (0, u.Zm)(t, 'VoiceEffectsActionBar') ? [a.z.CONSUMABLE_HD_POTION_UPSELL] : [],
         [k, O] = (0, s.US)(L, void 0, !0),
-        D = k === r.z.CONSUMABLE_HD_POTION_UPSELL,
+        D = k === a.z.CONSUMABLE_HD_POTION_UPSELL,
         w = (0, f.Z)(t);
     if (null == t || null != y) return null;
-    let B = (0, p.Z)(t),
-        U = !T && B,
-        H = !T && w,
-        G = M && R,
-        F = P && n;
+    let U = (0, p.Z)(t),
+        B = !S && U,
+        F = !S && w,
+        H = R && M,
+        G = P && n;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
                 className: Z.voiceEffectsActionBar,
                 children: [
-                    U &&
-                        (0, i.jsx)(E.Z, {
+                    B &&
+                        (0, i.jsx)(I.Z, {
                             channel: t,
-                            themeable: S
+                            themeable: T
                         }),
+                    F && (0, i.jsx)(v.Z, { channel: t }),
                     H && (0, i.jsx)(_.Z, { channel: t }),
-                    G && (0, i.jsx)(C.Z, { channel: t }),
                     D &&
                         (0, i.jsx)(d.t, {
                             potionRef: A,
@@ -67,17 +62,17 @@ function N(e) {
                             markAsDismissed: O
                         }),
                     j &&
-                        (0, i.jsx)(I.Z, {
+                        (0, i.jsx)(E.Z, {
                             ref: A,
                             channel: t,
                             glow: D
                         }),
-                    F && (0, i.jsx)(x.Z, {}),
-                    F && (0, i.jsx)(v.Z, { channel: t }),
-                    F && (0, i.jsx)(b.Z, {})
+                    G && (0, i.jsx)(C.Z, {}),
+                    G && (0, i.jsx)(x.Z, { channel: t }),
+                    G && (0, i.jsx)(b.Z, {})
                 ]
             }),
-            N && (U || H || G || D || j || F) && (0, i.jsx)('div', { className: Z.divider })
+            N && (B || F || H || D || j || G) && (0, i.jsx)('div', { className: Z.divider })
         ]
     });
 }

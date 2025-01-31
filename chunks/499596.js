@@ -1,26 +1,22 @@
-t.d(n, {
-    Z: function () {
-        return g;
-    }
-});
+t.d(n, { Z: () => x });
 var l = t(200651);
 t(192379);
 var i = t(120356),
     s = t.n(i),
-    r = t(481060),
-    a = t(884338),
+    a = t(481060),
+    r = t(884338),
     o = t(933557),
     u = t(471445),
     c = t(5192),
     d = t(388032),
     m = t(381515);
-function g(e) {
+function x(e) {
     let { channel: n, users: t, selected: i = !1 } = e,
-        g = (0, o.ZP)(n),
-        h = null;
+        x = (0, o.ZP)(n),
+        g = null;
     null != t &&
         t.length > 0 &&
-        (h = (0, l.jsx)(a.Z, {
+        (g = (0, l.jsx)(r.Z, {
             guildId: n.guild_id,
             className: m.voiceUserList,
             users: t,
@@ -28,7 +24,7 @@ function g(e) {
                 if (null == e) return null;
                 let t = c.ZP.getName(n.guild_id, n.id, e),
                     i = e.getAvatarURL(n.guild_id, 24);
-                return (0, l.jsx)(r.TooltipContainer, {
+                return (0, l.jsx)(a.DY3, {
                     text: t,
                     children: (0, l.jsx)('img', {
                         src: null != i ? i : void 0,
@@ -62,7 +58,7 @@ function g(e) {
                               });
                 })(t.slice(4), n);
                 return (0, l.jsx)('div', {
-                    children: (0, l.jsx)(r.TooltipContainer, {
+                    children: (0, l.jsx)(a.DY3, {
                         text: i,
                         children: (0, l.jsx)('div', {
                             className: m.userListOverflow,
@@ -74,16 +70,16 @@ function g(e) {
             max: 5,
             showUserPopout: !1
         }));
-    let x = (0, u.KS)(n);
+    let h = (0, u.KS)(n);
     return (0, l.jsxs)('div', {
         className: s()(m.channelInfo, { [m.selected]: i }),
         children: [
-            (0, l.jsx)(x, { className: m.channelIcon }),
+            (0, l.jsx)(h, { className: m.channelIcon }),
             (0, l.jsx)('div', {
                 className: m.channelName,
-                children: g
+                children: x
             }),
-            h
+            g
         ]
     });
 }

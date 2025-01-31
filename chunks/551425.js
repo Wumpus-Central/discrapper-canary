@@ -1,3 +1,4 @@
+i.d(e, { Z: () => Z });
 var s = i(200651);
 i(192379);
 var n = i(979554),
@@ -9,7 +10,7 @@ var n = i(979554),
     u = i(594174),
     c = i(597688),
     h = i(314295);
-let p = a.AvatarSizes.SIZE_152,
+let p = a.EFr.SIZE_152,
     f = (0, r.y9)(p),
     m = (t) => {
         let { item: e } = t,
@@ -25,7 +26,7 @@ let p = a.AvatarSizes.SIZE_152,
             });
         return (0, s.jsx)('div', {
             className: h.avatarDecorationPreview,
-            children: (0, s.jsx)(a.Avatar, {
+            children: (0, s.jsx)(a.qEK, {
                 ...d,
                 'aria-label': e.label,
                 src: r,
@@ -43,12 +44,12 @@ let p = a.AvatarSizes.SIZE_152,
                 profileEffectId: null == e ? void 0 : e.id
             })
         });
+    },
+    Z = (t) => {
+        let { giftCode: e } = t,
+            i = (0, l.e7)([c.Z], () => c.Z.getProduct(e.skuId)),
+            a = null == i ? void 0 : i.items[0];
+        return (0, s.jsxs)(s.Fragment, {
+            children: [(null == a ? void 0 : a.type) === n.Z.AVATAR_DECORATION && (0, s.jsx)(m, { item: a }), (null == a ? void 0 : a.type) === n.Z.PROFILE_EFFECT && (0, s.jsx)(g, { item: a })]
+        });
     };
-e.Z = (t) => {
-    let { giftCode: e } = t,
-        i = (0, l.e7)([c.Z], () => c.Z.getProduct(e.skuId)),
-        a = null == i ? void 0 : i.items[0];
-    return (0, s.jsxs)(s.Fragment, {
-        children: [(null == a ? void 0 : a.type) === n.Z.AVATAR_DECORATION && (0, s.jsx)(m, { item: a }), (null == a ? void 0 : a.type) === n.Z.PROFILE_EFFECT && (0, s.jsx)(g, { item: a })]
-    });
-};

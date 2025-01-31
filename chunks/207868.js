@@ -1,7 +1,8 @@
+n.d(t, { Z: () => x });
 var i = n(200651),
     l = n(192379),
-    r = n(392711),
-    a = n.n(r),
+    a = n(392711),
+    r = n.n(a),
     s = n(442837),
     o = n(481060),
     c = n(557135),
@@ -12,29 +13,29 @@ var i = n(200651),
     m = n(979651),
     f = n(585483),
     g = n(665149),
-    C = n(981631),
-    x = n(388032);
-t.Z = l.memo(function (e) {
+    _ = n(981631),
+    C = n(388032);
+let x = l.memo(function (e) {
     let { channel: t } = e,
         n = (0, d.Z)(),
-        r = (0, s.e7)([m.Z], () => m.Z.isInChannel(t.id)),
-        v = (0, s.e7)([m.Z], () => !a().isEmpty(m.Z.getVoiceStatesForChannel(t.id))),
-        _ = (0, s.e7)([p.Z], () => p.Z.can(C.Plq.CONNECT, t)),
-        { needSubscriptionToAccess: I } = (0, u.Z)(t.id),
-        E = (0, h.$R)(t),
+        a = (0, s.e7)([m.Z], () => m.Z.isInChannel(t.id)),
+        x = (0, s.e7)([m.Z], () => !r().isEmpty(m.Z.getVoiceStatesForChannel(t.id))),
+        v = (0, s.e7)([p.Z], () => p.Z.can(_.Plq.CONNECT, t)),
+        { needSubscriptionToAccess: E } = (0, u.Z)(t.id),
+        I = (0, h.$R)(t),
         b = l.useCallback(() => {
             c.Z.handleVoiceConnect({
                 channel: t,
-                connected: r,
-                needSubscriptionToAccess: I,
+                connected: a,
+                needSubscriptionToAccess: E,
                 locked: !1
             });
-        }, [t, r, I]);
+        }, [t, a, E]);
     return (l.useEffect(
         () => (
-            f.S.subscribe(C.CkL.CALL_START, b),
+            f.S.subscribe(_.CkL.CALL_START, b),
             () => {
-                f.S.unsubscribe(C.CkL.CALL_START, b);
+                f.S.unsubscribe(_.CkL.CALL_START, b);
             }
         ),
         [b]
@@ -47,14 +48,14 @@ t.Z = l.memo(function (e) {
         { autoTrackExposure: !1 }
     ).enabled &&
         !n &&
-        !r &&
-        _ &&
-        E &&
+        !a &&
+        v &&
+        I &&
         t.isVocalThread())
         ? (0, i.jsx)(g.ZP.Icon, {
-              icon: o.PhoneCallIcon,
+              icon: o.Csw,
               onClick: b,
-              tooltip: v ? x.intl.string(x.t.fdEeb2) : x.intl.string(x.t.focH1t)
+              tooltip: x ? C.intl.string(C.t.fdEeb2) : C.intl.string(C.t.focH1t)
           })
         : null;
 });

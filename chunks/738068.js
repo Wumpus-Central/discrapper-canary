@@ -1,5 +1,6 @@
-e.exports = {
-    notification: 'notification_b45ae8',
-    icon: 'icon_b45ae8',
-    text: 'text_b45ae8'
+var i = {
+    notification: 'notification_e1e832',
+    icon: 'icon_e1e832',
+    text: 'text_e1e832'
 };
+e.exports = i;

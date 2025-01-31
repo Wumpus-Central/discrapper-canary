@@ -1,12 +1,6 @@
-i.r(e),
-    i.d(e, {
-        default: function () {
-            return o;
-        }
-    }),
-    i(312677);
-var n = i(512722),
-    r = i.n(n),
+i.d(e, { default: () => u }), i(312677);
+var r = i(512722),
+    n = i.n(r),
     a = i(839766);
 function s(t, e, i) {
     return (
@@ -21,10 +15,10 @@ function s(t, e, i) {
         t
     );
 }
-let h = 'undefined' != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope;
-class o {
+let o = 'undefined' != typeof WorkerGlobalScope && self instanceof WorkerGlobalScope;
+class u {
     setState(t, e) {
-        null != e && (!t && e !== this.currentFrame && this.draw(e), (this.currentFrame = e)), t && !this.animate && this.resumeAnimation(), (this.animate = t), this.scheduleOrCancelTick();
+        null != e && (t || e === this.currentFrame || this.draw(e), (this.currentFrame = e)), t && !this.animate && this.resumeAnimation(), (this.animate = t), this.scheduleOrCancelTick();
     }
     setVisibility(t) {
         let e = this.visible;
@@ -43,12 +37,12 @@ class o {
         (this.animate = !1), this.scheduleOrCancelTick(), a.Z.drop(this.key), (this.animation = null), (this.dropped = !0);
     }
     scheduleOrCancelTick() {
-        !this.dropped && (this.hasInitialFrame ? this.requestAnimationFrame(this.animate && this.visible ? this.onAnimationTick : null) : this.requestAnimationFrame(this.onInitialAnimationTick));
+        this.dropped || (this.hasInitialFrame ? this.requestAnimationFrame(this.animate && this.visible ? this.onAnimationTick : null) : this.requestAnimationFrame(this.onInitialAnimationTick));
     }
     requestAnimationFrame(t) {
         null != t && null == this.requestAnimationFrameId && (this.requestAnimationFrameId = requestAnimationFrame(t)), null != t && null != this.requestAnimationFrameId && (cancelAnimationFrame(this.requestAnimationFrameId), (this.requestAnimationFrameId = requestAnimationFrame(t))), null == t && null != this.requestAnimationFrameId && (cancelAnimationFrame(this.requestAnimationFrameId), (this.requestAnimationFrameId = null));
     }
-    constructor({ canvas: t, id: e, assetUrl: i, assetData: n, isVisible: o, shouldAnimate: l, onInitialDraw: c, onError: u }) {
+    constructor({ canvas: t, id: e, assetUrl: i, assetData: r, isVisible: u, shouldAnimate: c, onInitialDraw: h, onError: l }) {
         s(this, 'canvas', void 0),
             s(this, 'canvasContext', void 0),
             s(this, 'animation', null),
@@ -64,42 +58,40 @@ class o {
             s(this, 'onInitialDraw', void 0),
             s(this, 'onError', void 0),
             s(this, 'onInitialAnimationTick', (t) => {
-                this.requestAnimationFrameId = null;
-                let e = performance.now();
-                if ((e - t < 30 || h) && this.draw(0)) {
-                    var i;
-                    this.resumeAnimation(), null === (i = this.onInitialDraw) || void 0 === i || i.call(this), (this.hasInitialFrame = !0);
+                if (((this.requestAnimationFrameId = null), (performance.now() - t < 30 || o) && this.draw(0))) {
+                    var e;
+                    this.resumeAnimation(), null === (e = this.onInitialDraw) || void 0 === e || e.call(this), (this.hasInitialFrame = !0);
                 }
                 this.scheduleOrCancelTick();
             }),
             s(this, 'onAnimationTick', (t) => {
                 this.requestAnimationFrameId = null;
                 let e = performance.now(),
-                    i = Math.floor(((h ? e : t) - this.currentFrameTime) / this.frameDuration);
-                i > 0 && ((e - t < 12 || h) && (this.draw(this.currentFrame), (this.currentFrame += i)), (this.currentFrameTime += i * this.frameDuration)), this.scheduleOrCancelTick();
+                    i = Math.floor(((o ? e : t) - this.currentFrameTime) / this.frameDuration);
+                i > 0 && ((e - t < 12 || o) && (this.draw(this.currentFrame), (this.currentFrame += i)), (this.currentFrameTime += i * this.frameDuration)), this.scheduleOrCancelTick();
             });
-        let m = t.getContext('2d');
-        r()(null != m, "couldn't get canvas 2d context."),
+        let f = t.getContext('2d');
+        n()(null != f, "couldn't get canvas 2d context."),
             (this.canvas = t),
-            (this.canvasContext = m),
+            (this.canvasContext = f),
             (this.animation = null),
             (this.dropped = !1),
             (this.currentFrame = 0),
             (this.currentFrameTime = 0),
             (this.frameDuration = 1000),
-            (this.animate = l),
-            (this.visible = o),
+            (this.animate = c),
+            (this.visible = u),
             (this.requestAnimationFrameId = null),
             (this.hasInitialFrame = !1),
-            (this.onInitialDraw = c),
-            (this.onError = u),
+            (this.onInitialDraw = h),
+            (this.onError = l),
             (this.key = ''.concat(e, ':').concat(t.width, ':').concat(t.height)),
-            a.Z.create(this.key, t.width, t.height, i, n)
+            a.Z.create(this.key, t.width, t.height, i, r)
                 .then((t) => {
                     null != t && (this.dropped ? a.Z.drop(this.key) : ((this.animation = t), (this.frameDuration = 1000 / t.frameRate), this.scheduleOrCancelTick()));
                 })
                 .catch((t) => {
-                    null == u || u();
+                    null == l || l();
                 });
     }
 }

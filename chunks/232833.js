@@ -1,1 +1,2 @@
-e.exports = { loading: 'loading_f3e233' };
+var i = { loading: 'loading__6ef4d' };
+e.exports = i;

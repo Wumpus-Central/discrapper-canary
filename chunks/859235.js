@@ -1,72 +1,73 @@
-r.d(n, {
-    q: function () {
-        return i;
-    }
+n.d(t, {
+    Z: () => v,
+    q: () => m
 });
-var i,
-    a = r(200651),
-    o = r(192379),
-    s = r(120356),
-    l = r.n(s),
-    u = r(91192),
-    c = r(481060),
-    d = r(166459),
-    f = r(951394),
-    p = r(585483),
-    h = r(43085),
-    _ = r(981631),
-    m = r(388032),
-    g = r(728094);
-function E(e) {
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(91192),
+    l = n(481060),
+    u = n(166459),
+    c = n(951394),
+    d = n(585483),
+    f = n(43085),
+    _ = n(981631),
+    p = n(388032),
+    h = n(728094),
+    m = (function (e) {
+        return (e[(e.SMALL = 0)] = 'SMALL'), (e[(e.MEDIUM = 1)] = 'MEDIUM'), (e[(e.CLIP = 2)] = 'CLIP'), e;
+    })({});
+function g(e) {
     e.stopPropagation();
 }
-function v(e, n) {
-    let { id: r, channelId: i, className: o, children: s, actions: v, handleEditModal: y, keyboardModeEnabled: b, onKeyDown: I, draftType: T, size: S = 1 } = e,
-        { onFocus: A, ...C } = (0, u.JA)(r),
-        { handleFocus: N, handleBlur: R } = (0, h.b)(A),
-        O = 0 === S,
-        D = null != v,
-        L = (e) => {
-            if (!!b) {
+function E(e, t) {
+    let { id: n, channelId: r, className: a, children: m, actions: E, handleEditModal: v, keyboardModeEnabled: y, onKeyDown: I, draftType: b, size: T = 1 } = e,
+        { onFocus: S, ...A } = (0, o.JA)(n),
+        { handleFocus: N, handleBlur: C } = (0, f.b)(S),
+        R = 0 === T,
+        O = null != E,
+        D = (e) => {
+            if (y) {
                 switch (e.which) {
                     case _.yXg.D:
-                        e.preventDefault(), d.Z.remove(i, r, T);
+                        e.preventDefault(), u.Z.remove(r, n, b);
                         return;
                     case _.yXg.E:
-                        null != y && (e.preventDefault(), y(e));
+                        null != v && (e.preventDefault(), v(e));
                         return;
                     case _.yXg.BACKSPACE:
-                        e.ctrlKey ? (e.preventDefault(), d.Z.clearAll(i, T)) : (e.preventDefault(), d.Z.remove(i, r, T));
+                        e.ctrlKey ? (e.preventDefault(), u.Z.clearAll(r, b)) : (e.preventDefault(), u.Z.remove(r, n, b));
                         return;
                     case _.yXg.ARROW_UP:
                         if (e.shiftKey || e.altKey || e.ctrlKey || e.metaKey) return;
-                        e.preventDefault(), p.S.dispatchToLastSubscribed(_.CkL.FOCUS_MESSAGES, { atEnd: !0 });
+                        e.preventDefault(), d.S.dispatchToLastSubscribed(_.CkL.FOCUS_MESSAGES, { atEnd: !0 });
                 }
                 null == I || I(e);
             }
         };
-    return (0, a.jsx)(c.FocusRing, {
-        children: (0, a.jsx)('li', {
-            ...C,
+    return (0, i.jsx)(l.tEY, {
+        children: (0, i.jsx)('li', {
+            ...A,
             onFocus: N,
-            onBlur: R,
-            onKeyDown: L,
-            className: l()(g.upload, o, { [g.sizeClip]: 2 === S }),
-            ref: n,
-            children: (0, a.jsxs)('div', {
-                className: g.uploadContainer,
+            onBlur: C,
+            onKeyDown: D,
+            className: s()(h.upload, a, { [h.sizeClip]: 2 === T }),
+            ref: t,
+            children: (0, i.jsxs)('div', {
+                className: h.uploadContainer,
                 children: [
-                    s,
-                    D
-                        ? (0, a.jsx)('div', {
-                              className: g.actionBarContainer,
-                              children: (0, a.jsx)('div', {
-                                  className: l()(g.actionBar, { [g.smallActionBar]: O }),
-                                  onContextMenu: E,
-                                  'aria-label': m.intl.string(m.t['8Lu3Dg']),
-                                  children: (0, a.jsx)(f.ZP, {
-                                      className: l()({ [g.miniPopover]: O }),
-                                      children: v
+                    m,
+                    O
+                        ? (0, i.jsx)('div', {
+                              className: h.actionBarContainer,
+                              children: (0, i.jsx)('div', {
+                                  className: s()(h.actionBar, { [h.smallActionBar]: R }),
+                                  onContextMenu: g,
+                                  'aria-label': p.intl.string(p.t['8Lu3Dg']),
+                                  children: (0, i.jsx)(c.ZP, {
+                                      className: s()({ [h.miniPopover]: R }),
+                                      children: E
                                   })
                               })
                           })
@@ -76,7 +77,4 @@ function v(e, n) {
         })
     });
 }
-!(function (e) {
-    (e[(e.SMALL = 0)] = 'SMALL'), (e[(e.MEDIUM = 1)] = 'MEDIUM'), (e[(e.CLIP = 2)] = 'CLIP');
-})(i || (i = {})),
-    (n.Z = o.forwardRef(v));
+let v = r.forwardRef(E);

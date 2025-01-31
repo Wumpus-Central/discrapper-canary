@@ -1,29 +1,25 @@
-e.d(t, {
-    Z: function () {
-        return s;
-    }
-});
-var l = e(200651);
-e(192379);
-var r = e(481060),
-    u = e(36703),
-    i = e(208049),
-    a = e(242291),
-    o = e(388032);
-function s() {
-    let n = (0, a.pI)();
-    return (0, l.jsx)(r.MenuControlItem, {
+l.d(t, { Z: () => o });
+var e = l(200651);
+l(192379);
+var i = l(481060),
+    a = l(36703),
+    r = l(208049),
+    s = l(242291),
+    u = l(388032);
+function o() {
+    let n = (0, s.pI)();
+    return (0, e.jsx)(i.II_, {
         id: 'user-volume',
         'aria-haspopup': !0,
-        label: o.intl.string(o.t.kbFsAA),
-        control: (t, e) =>
-            (0, l.jsx)(r.MenuSliderControl, {
+        label: u.intl.string(u.t.kbFsAA),
+        control: (t, l) =>
+            (0, e.jsx)(i._wy, {
                 ...t,
-                ref: e,
-                value: (0, u.P)(n),
+                ref: l,
+                value: (0, a.P)(n),
                 maxValue: 100,
-                onChange: (n) => (0, i.xz)((0, u.A)(n)),
-                'aria-label': o.intl.string(o.t.kbFsAA)
+                onChange: (n) => (0, r.xz)((0, a.A)(n)),
+                'aria-label': u.intl.string(u.t.kbFsAA)
             })
     });
 }

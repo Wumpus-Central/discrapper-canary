@@ -1,59 +1,54 @@
-r.d(n, {
-    f: function () {
-        return h;
-    }
-});
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(120356),
-    l = r.n(s),
-    u = r(780384),
-    c = r(481060),
-    d = r(410030),
-    f = r(388032),
-    p = r(959453);
-function h(e) {
-    let { src: n, size: r, constrain: i = 'height', className: s, alt: h, fallbackSrc: _, 'aria-hidden': m, showTooltip: g = !1 } = e,
-        E = (0, d.ZP)(),
-        v = ''.concat(r, 'px'),
-        [y, b] = o.useState(!1),
-        [I, T] = o.useState(!1),
-        S = null == _ || I;
-    if (null == n || (y && S))
-        return (0, a.jsx)(c.UnknownGameIcon, {
+n.d(t, { f: () => f }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(780384),
+    l = n(481060),
+    u = n(410030),
+    c = n(388032),
+    d = n(959453);
+function f(e) {
+    let { src: t, size: n, constrain: a = 'height', className: f, alt: _, fallbackSrc: p, 'aria-hidden': h, showTooltip: m = !1 } = e,
+        g = (0, u.ZP)(),
+        E = ''.concat(n, 'px'),
+        [v, y] = r.useState(!1),
+        [I, b] = r.useState(!1),
+        T = null == p || I;
+    if (null == t || (v && T))
+        return (0, i.jsx)(l.IMN, {
             size: 'custom',
             width: '100%',
             height: '100%',
-            color: (0, u.wj)(E) ? c.tokens.colors.WHITE : c.tokens.colors.BLACK,
-            style: { maxWidth: v },
-            className: l()(p.contentImage, s)
+            color: (0, o.wj)(g) ? l.TVs.colors.WHITE : l.TVs.colors.BLACK,
+            style: { maxWidth: E },
+            className: s()(d.contentImage, f)
         });
-    let A =
-        'height' === i
+    let S =
+        'height' === a
             ? {
-                  maxWidth: v,
-                  height: v
+                  maxWidth: E,
+                  height: E
               }
             : {
-                  maxWidth: v,
-                  minHeight: v
+                  maxWidth: E,
+                  minHeight: E
               };
-    return (0, a.jsx)(
-        c.Tooltip,
+    return (0, i.jsx)(
+        l.ua7,
         {
-            'aria-label': h,
-            text: h,
-            shouldShow: g,
+            'aria-label': _,
+            text: _,
+            shouldShow: m,
             children: (e) =>
-                (0, a.jsx)('img', {
+                (0, i.jsx)('img', {
                     ...e,
-                    style: A,
-                    className: l()(p.contentImage, s),
-                    src: y && null != _ ? _ : n,
-                    'aria-hidden': m,
-                    alt: null != h ? h : m ? void 0 : f.intl.string(f.t['2B/phI']),
-                    onError: (e) => (y ? T(!0) : b(!0))
+                    style: S,
+                    className: s()(d.contentImage, f),
+                    src: v && null != p ? p : t,
+                    'aria-hidden': h,
+                    alt: null != _ ? _ : h ? void 0 : c.intl.string(c.t['2B/phI']),
+                    onError: (e) => (v ? b(!0) : y(!0))
                 })
         },
         'content-image'

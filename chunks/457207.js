@@ -1,6 +1,7 @@
-e.exports = {
-    headerContainer: 'headerContainer_bab8b6',
-    closeButton: 'closeButton_bab8b6',
-    headerImageContainer: 'headerImageContainer_bab8b6',
-    headerImage: 'headerImage_bab8b6'
+var i = {
+    headerContainer: 'headerContainer__9abb9',
+    closeButton: 'closeButton__9abb9',
+    headerImage: 'headerImage__9abb9',
+    headerImageContainer: 'headerImageContainer__9abb9'
 };
+e.exports = i;

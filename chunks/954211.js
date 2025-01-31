@@ -1,9 +1,5 @@
-r.d(t, {
-    V: function () {
-        return n;
-    }
-});
-let a = ['fatal', 'error', 'warning', 'log', 'info', 'debug'];
-function n(e) {
-    return 'warn' === e ? 'warning' : a.includes(e) ? e : 'log';
+a.d(e, { V: () => n });
+let r = ['fatal', 'error', 'warning', 'log', 'info', 'debug'];
+function n(t) {
+    return 'warn' === t ? 'warning' : r.includes(t) ? t : 'log';
 }

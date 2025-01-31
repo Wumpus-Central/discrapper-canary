@@ -1,8 +1,4 @@
-t.d(n, {
-    x: function () {
-        return i;
-    }
-});
+n.d(l, { x: () => i });
 function i(e) {
     return {
         id: e.id,

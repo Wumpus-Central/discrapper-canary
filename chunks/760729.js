@@ -1,39 +1,35 @@
-r.d(n, {
-    $: function () {
-        return s;
-    }
-});
-var i = r(381129),
-    a = r(981631),
-    o = r(388032);
+n.d(t, { $: () => s });
+var i = n(381129),
+    r = n(981631),
+    a = n(388032);
 let s = [
     {
-        check(e, n, r) {
-            if (!r || null == n.getGuildId()) return !1;
-            let a = i.Z.extractEveryoneRole(e, n);
-            if (null == a || !i.Z.shouldShowEveryoneGuard(a, n)) return !1;
-            let s = i.Z.everyoneMemberCount(a, n),
-                l = Math.pow(10, Math.floor(Math.log10(s))),
-                u = o.t['47E5R0'];
+        check(e, t, n) {
+            if (!n || null == t.getGuildId()) return !1;
+            let r = i.Z.extractEveryoneRole(e, t);
+            if (null == r || !i.Z.shouldShowEveryoneGuard(r, t)) return !1;
+            let s = i.Z.everyoneMemberCount(r, t),
+                o = Math.pow(10, Math.floor(Math.log10(s))),
+                l = a.t['47E5R0'];
             return (
-                n.isForumPost() ? (u = o.t.sYW2c3) : n.isThread() && (u = o.t['2YaiQ0']),
+                t.isForumPost() ? (l = a.t.sYW2c3) : t.isThread() && (l = a.t['2YaiQ0']),
                 {
-                    body: o.intl.formatToPlainString(u, {
-                        role: a,
-                        count: (Math.trunc(s / l) * l).toLocaleString()
+                    body: a.intl.formatToPlainString(l, {
+                        role: r,
+                        count: (Math.trunc(s / o) * o).toLocaleString()
                     }),
-                    footer: o.intl.string(o.t.mVyrtr)
+                    footer: a.intl.string(a.t.mVyrtr)
                 }
             );
         },
         analyticsType: '@Everyone Warning',
         animation: {
-            dark: () => r.e('83323').then(r.t.bind(r, 510465, 19)),
-            light: () => r.e('36052').then(r.t.bind(r, 570227, 19))
+            dark: () => n.e('83323').then(n.t.bind(n, 510465, 19)),
+            light: () => n.e('36052').then(n.t.bind(n, 570227, 19))
         }
     },
     {
-        check: (e) => !!a.Jn9.test(e) && { body: o.intl.string(o.t.sTwS1d) },
+        check: (e) => !!r.Jn9.test(e) && { body: a.intl.string(a.t.sTwS1d) },
         analyticsType: 'API Token Warning'
     }
 ];

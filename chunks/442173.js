@@ -1,61 +1,55 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return h;
-        }
-    });
+n.d(t, { default: () => f });
 var l = n(200651),
     a = n(192379),
-    o = n(481060),
-    r = n(144535),
-    i = n(332664),
-    s = n(142497),
-    c = n(626135),
-    u = n(798733),
-    d = n(559187),
-    b = n(981631),
-    f = n(190378),
-    m = n(388032);
-function h(e) {
-    let { reportId: t, reportType: h, ...x } = e;
+    r = n(481060),
+    i = n(144535),
+    s = n(332664),
+    c = n(142497),
+    o = n(626135),
+    d = n(798733),
+    u = n(559187),
+    m = n(981631),
+    _ = n(190378),
+    x = n(388032);
+function f(e) {
+    let { reportId: t, reportType: f, ...h } = e;
     a.useEffect(() => {
-        c.default.track(b.rMx.IAR_FEEDBACK_MODAL_VIEWED, {
+        o.default.track(m.rMx.IAR_FEEDBACK_MODAL_VIEWED, {
             report_id: t,
-            report_type: h
+            report_type: f
         });
-    }, [t, h]);
-    let g = (0, r.I)('CALL_FEEDBACK_OPTION_OTHER');
-    return (0, l.jsx)(i.Z, {
+    }, [t, f]);
+    let p = (0, i.I)('CALL_FEEDBACK_OPTION_OTHER');
+    return (0, l.jsx)(s.Z, {
         modalType: 'in_app_report',
-        header: m.intl.string(m.t.MP5lDg),
-        body: m.intl.string(m.t['7Ct0Dg']),
-        problemTitle: m.intl.string(m.t.FJmoxM),
-        problems: (0, u.Z)(),
-        feedbackProblems: [g],
+        header: x.intl.string(x.t.MP5lDg),
+        body: x.intl.string(x.t['7Ct0Dg']),
+        problemTitle: x.intl.string(x.t.FJmoxM),
+        problems: (0, d.Z)(),
+        feedbackProblems: [p],
         onSubmit: function (e) {
-            let { rating: a, problem: r, dontShowAgain: i, feedback: c } = e;
-            if (
-                (i && (0, s.Kw)(f.v.IN_APP_REPORTS_FEEDBACK),
-                (0, d.Z)({
+            let { rating: a, problem: i, dontShowAgain: s, feedback: o } = e;
+            s && (0, c.Kw)(_.v.IN_APP_REPORTS_FEEDBACK),
+                (0, u.Z)({
                     rating: a,
-                    problem: r,
-                    feedback: c,
+                    problem: i,
+                    feedback: o,
                     reportId: t,
-                    reportType: h,
-                    dontShowAgain: i
+                    reportType: f,
+                    dontShowAgain: s
                 }),
-                null != a && null != r)
-            )
-                (0, o.openModalLazy)(async () => {
-                    let { default: e } = await n.e('14466').then(n.bind(n, 729328));
-                    return (t) =>
-                        (0, l.jsx)(e, {
-                            body: m.intl.string(m.t['d9+vQ0']),
-                            ...t
-                        });
-                });
+                null != a &&
+                    null != i &&
+                    (0, r.ZDy)(async () => {
+                        let { default: e } = await n.e('14466').then(n.bind(n, 729328));
+                        return (t) =>
+                            (0, l.jsx)(e, {
+                                body: x.intl.string(x.t['d9+vQ0']),
+                                ...t
+                            });
+                    });
         },
-        otherKey: g,
-        ...x
+        otherKey: p,
+        ...h
     });
 }

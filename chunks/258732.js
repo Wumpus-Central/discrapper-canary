@@ -1,8 +1,9 @@
-var i = n(544891),
+n.d(t, { Z: () => r });
+var a = n(544891),
     l = n(981631);
-t.Z = {
+let r = {
     updatePrivateChannelRecipientFlags: (e, t) =>
-        i.tn.patch({
+        a.tn.patch({
             url: l.ANM.CHANNEL_RECIPIENT_ME(e),
             body: { flags: t },
             rejectWithError: !1

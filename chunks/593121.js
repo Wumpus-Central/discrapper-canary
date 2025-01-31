@@ -9,7 +9,6 @@ function l(t) {
     return (a && t.altKey) || c(t);
 }
 t.exports = function (t) {
-    var e, r, n;
     switch (t.keyCode) {
         case 66:
             return s(t) ? 'bold' : null;
@@ -36,13 +35,13 @@ t.exports = function (t) {
             if (c(t)) return a ? 'secondary-paste' : 'redo';
             return null;
         case 90:
-            return (s((e = t)) ? (e.shiftKey ? 'redo' : 'undo') : null) || null;
+            return (s(t) ? (t.shiftKey ? 'redo' : 'undo') : null) || null;
         case i.RETURN:
             return 'split-block';
         case i.DELETE:
-            return (r = t), !a && r.shiftKey ? null : l(r) ? 'delete-word' : 'delete';
+            return !a && t.shiftKey ? null : l(t) ? 'delete-word' : 'delete';
         case i.BACKSPACE:
-            return s((n = t)) && a ? 'backspace-to-start-of-line' : l(n) ? 'backspace-word' : 'backspace';
+            return s(t) && a ? 'backspace-to-start-of-line' : l(t) ? 'backspace-word' : 'backspace';
         case i.LEFT:
             return u && s(t) ? 'move-selection-to-start-of-block' : null;
         case i.RIGHT:

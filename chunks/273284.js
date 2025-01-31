@@ -1,28 +1,24 @@
-r.d(n, {
-    Z: function () {
-        return s;
-    }
-});
-var i = r(833858),
-    a = r(981631),
-    o = r(388032);
-function s(e) {
+n.d(t, { Z: () => a });
+var i = n(981631),
+    r = n(388032);
+function a(e) {
     switch (e.type) {
-        case a.IIU.STREAMING:
+        case i.IIU.STREAMING:
+            let t = null != e.details && '' !== e.details ? e.details : e.name;
+            return null != t ? r.intl.formatToPlainString(r.t['0wJXSk'], { name: t }) : null;
+        case i.IIU.LISTENING:
             let n = null != e.details && '' !== e.details ? e.details : e.name;
-            return null != n ? o.intl.formatToPlainString(o.t['0wJXSk'], { name: n }) : null;
-        case a.IIU.LISTENING:
-            let r = null != e.details && '' !== e.details ? e.details : e.name;
-            return null != r ? o.intl.formatToPlainString(o.t.Vnuxub, { name: r }) : null;
-        case a.IIU.WATCHING:
-            let s = null != e.details && '' !== e.details ? e.details : e.name;
-            return null != s ? o.intl.formatToPlainString(o.t.pW3Ip6, { name: s }) : null;
-        case a.IIU.COMPETING:
-            return null != e.name ? o.intl.formatToPlainString(o.t.QQ2wVF, { name: e.name }) : null;
-        case a.IIU.HANG_STATUS:
-            return (0, i.O8)(e);
-        case a.IIU.PLAYING:
+            return null != n ? r.intl.formatToPlainString(r.t.Vnuxub, { name: n }) : null;
+        case i.IIU.WATCHING:
+            let a = null != e.details && '' !== e.details ? e.details : e.name;
+            return null != a ? r.intl.formatToPlainString(r.t.pW3Ip6, { name: a }) : null;
+        case i.IIU.COMPETING:
+            return null != e.name ? r.intl.formatToPlainString(r.t.QQ2wVF, { name: e.name }) : null;
+        case i.IIU.CUSTOM_STATUS:
+        case i.IIU.HANG_STATUS:
+            return null;
+        case i.IIU.PLAYING:
         default:
-            return null != e.name ? o.intl.formatToPlainString(o.t.lFApm5, { game: e.name }) : null;
+            return null != e.name ? r.intl.formatToPlainString(r.t.lFApm5, { game: e.name }) : null;
     }
 }

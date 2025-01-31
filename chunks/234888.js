@@ -1,6 +1,2 @@
-c.d(t, {
-    i: function () {
-        return r;
-    }
-});
-let r = 30000;
+a.d(t, { i: () => c });
+let c = 30000;

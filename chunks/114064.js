@@ -1,119 +1,120 @@
 let i;
-var a,
-    o = r(848246),
-    s = r(442837),
-    l = r(570140),
-    u = r(168232),
-    c = r(933843),
-    d = r(746599),
-    f = r(1163);
-function p(e, n, r) {
+n.d(t, { Z: () => C });
+var r,
+    a = n(848246),
+    s = n(442837),
+    o = n(570140),
+    l = n(168232),
+    u = n(933843),
+    c = n(746599),
+    d = n(1163);
+function f(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let h = 86400000,
-    _ = {
+let _ = 86400000,
+    p = {
         available: {},
         activated: {},
         lastFetched: null,
         overrides: {}
     },
-    m = _;
-function g() {
-    m = _;
+    h = p;
+function m() {
+    h = p;
 }
-function E(e) {
+function g(e) {
     let {
-        demos: { available: n, activated: r }
+        demos: { available: t, activated: n }
     } = e;
-    (m.available = null != n ? n : {}), (m.activated = null != r ? r : {}), (m.lastFetched = Date.now());
+    (h.available = null != t ? t : {}), (h.activated = null != n ? n : {}), (h.lastFetched = Date.now());
 }
-function v() {
-    (m.available = _.available), (m.lastFetched = null);
+function E() {
+    (h.available = p.available), (h.lastFetched = null);
+}
+function v(e) {
+    let { perkType: t, activatedDuration: n } = e;
+    h.activated[t] = n;
 }
 function y(e) {
-    let { perkType: n, activatedDuration: r } = e;
-    m.activated[n] = r;
-}
-function b(e) {
-    let { perkType: n } = e;
-    delete m.activated[n];
+    let { perkType: t } = e;
+    delete h.activated[t];
 }
 function I(e) {
-    let { perkType: n } = e;
-    if (((m.available[n] = !1), (null == i ? void 0 : i.extendedDemoDuration) !== !0)) delete m.activated[n];
+    let { perkType: t } = e;
+    (h.available[t] = !1), (null == i ? void 0 : i.extendedDemoDuration) !== !0 && delete h.activated[t];
 }
-function T(e) {
-    let { user: n, perkType: r, available: i, activateSuccess: a, demoDuration: o } = e;
-    void 0 !== n &&
-        (0, u.QI)(n) &&
-        ((m.overrides[r] = {
+function b(e) {
+    let { user: t, perkType: n, available: i, activateSuccess: r, demoDuration: a } = e;
+    void 0 !== t &&
+        (0, l.QI)(t) &&
+        ((h.overrides[n] = {
             available: i,
-            activateSuccess: a,
-            demoDuration: o
+            activateSuccess: r,
+            demoDuration: a
         }),
-        null == m.available && (m.available = {}),
-        (m.available[r] = i || !1),
-        delete m.activated[r],
-        (m.lastFetched = null));
+        null == h.available && (h.available = {}),
+        (h.available[n] = i || !1),
+        delete h.activated[n],
+        (h.lastFetched = null));
+}
+function T() {
+    (0, u.vw)(a.q.STREAM_HIGH_QUALITY) && (0, c.cD)(!0);
 }
 function S() {
-    if (!!(0, c.vw)(o.q.STREAM_HIGH_QUALITY)) (0, d.cD)(!0);
+    (0, c.cD)(!1);
 }
 function A() {
-    (0, d.cD)(!1);
+    i = d.Z.getCurrentConfig({ location: 'PerksDemosStore' }, { autoTrackExposure: !1 });
 }
-function C() {
-    i = f.Z.getCurrentConfig({ location: 'PerksDemosStore' }, { autoTrackExposure: !1 });
-}
-class N extends (a = s.ZP.Store) {
+class N extends (r = s.ZP.Store) {
     isAvailable(e) {
-        var n;
-        return null !== (n = m.available[e]) && void 0 !== n && n;
+        var t;
+        return null !== (t = h.available[e]) && void 0 !== t && t;
     }
     hasActiveDemo(e) {
-        let n = m.activated[e];
-        return null != n && null != i && ((i.enabled && !i.extendedDemoDuration) || (i.extendedDemoDuration && new Date() <= new Date(n.end_time)));
+        let t = h.activated[e];
+        return null != t && null != i && ((i.enabled && !i.extendedDemoDuration) || (i.extendedDemoDuration && new Date() <= new Date(t.end_time)));
     }
     hasActivated(e) {
-        return null != m.activated[e];
+        return null != h.activated[e];
     }
     shouldFetch() {
-        return null == m.lastFetched || Date.now() > m.lastFetched + h;
+        return null == h.lastFetched || Date.now() > h.lastFetched + _;
     }
     shouldActivate(e) {
-        var n;
-        return null !== (n = m.available[e]) && void 0 !== n && n && null == m.activated[e];
+        var t;
+        return null !== (t = h.available[e]) && void 0 !== t && t && null == h.activated[e];
     }
     overrides() {
-        return m.overrides;
+        return h.overrides;
     }
     activatedEndTime(e) {
-        var n;
-        return null === (n = m.activated[e]) || void 0 === n ? void 0 : n.end_time;
+        var t;
+        return null === (t = h.activated[e]) || void 0 === t ? void 0 : t.end_time;
     }
 }
-p(N, 'displayName', 'PerksDemosStore'),
-    (n.Z = new N(l.Z, {
-        PREMIUM_PERKS_DEMOS_FETCH_SUCCESS: E,
-        PREMIUM_PERKS_DEMOS_FETCH_FAILURE: v,
-        PREMIUM_PERKS_DEMO_ACTIVATE_SUCCESS: y,
-        PREMIUM_PERKS_DEMO_ACTIVATE_FAILURE: b,
-        PREMIUM_PERKS_DEMO_COMPLETE: I,
-        LOGOUT: g,
-        PREMIUM_PERKS_DEMO_OVERRIDE: T,
-        STREAM_START: S,
-        STREAM_STOP: A,
-        CONNECTION_OPEN: C,
-        EXPERIMENTS_FETCH_SUCCESS: C,
-        EXPERIMENT_OVERRIDE_BUCKET: C
-    }));
+f(N, 'displayName', 'PerksDemosStore');
+let C = new N(o.Z, {
+    PREMIUM_PERKS_DEMOS_FETCH_SUCCESS: g,
+    PREMIUM_PERKS_DEMOS_FETCH_FAILURE: E,
+    PREMIUM_PERKS_DEMO_ACTIVATE_SUCCESS: v,
+    PREMIUM_PERKS_DEMO_ACTIVATE_FAILURE: y,
+    PREMIUM_PERKS_DEMO_COMPLETE: I,
+    LOGOUT: m,
+    PREMIUM_PERKS_DEMO_OVERRIDE: b,
+    STREAM_START: T,
+    STREAM_STOP: S,
+    CONNECTION_OPEN: A,
+    EXPERIMENTS_FETCH_SUCCESS: A,
+    EXPERIMENT_OVERRIDE_BUCKET: A
+});

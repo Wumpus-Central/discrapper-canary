@@ -1,63 +1,57 @@
 n.d(t, {
-    Kp: function () {
-        return v;
-    },
-    u9: function () {
-        return b;
-    },
-    xV: function () {
-        return _;
-    }
+    Kp: () => v,
+    u9: () => x,
+    xV: () => b
 }),
     n(757143),
     n(653041),
     n(47120);
 var r = n(192379),
-    i = n(512969),
-    l = n(442837),
-    a = n(493773),
-    s = n(607070),
+    l = n(512969),
+    i = n(442837),
+    s = n(493773),
+    a = n(607070),
     o = n(100527),
-    c = n(906732),
-    d = n(597688),
+    d = n(906732),
+    c = n(597688),
     u = n(328347),
     C = n(429368),
     h = n(237031),
     p = n(981631);
-let f = ''.concat('#').concat('itemSkuId', '='),
-    m = new RegExp('^'.concat(f, '(\\d+)$')),
+let m = ''.concat('#').concat('itemSkuId', '='),
+    f = new RegExp('^'.concat(m, '(\\d+)$')),
     g = [p.Z5c.COLLECTIBLES_SHOP, p.Z5c.COLLECTIBLES_SHOP_FULLSCREEN],
-    b = (e) => {
-        let t = (0, i.TH)();
+    x = (e) => {
+        let t = (0, l.TH)();
         r.useEffect(() => {
             if (null != e && g.includes(t.pathname))
                 return (
-                    window.location.replace(''.concat(f).concat(e)),
+                    window.location.replace(''.concat(m).concat(e)),
                     () => {
-                        window.location.hash.startsWith(f) && window.location.replace('#');
+                        window.location.hash.startsWith(m) && window.location.replace('#');
                     }
                 );
         }, [e, t.pathname]);
     },
-    x = (e) => {
-        let { productSkuId: t, analyticsLocations: n, analyticsSource: r, initialItemCardRef: i, reducedMotion: l = !1 } = e,
-            a = d.Z.getProduct(t),
-            s = d.Z.getCategoryForProduct(t);
-        if (null != a && null != s) {
+    _ = (e) => {
+        let { productSkuId: t, analyticsLocations: n, analyticsSource: r, initialItemCardRef: l, reducedMotion: i = !1 } = e,
+            s = c.Z.getProduct(t),
+            a = c.Z.getCategoryForProduct(t);
+        if (null != s && null != a) {
             var o;
-            null === (o = i.current) ||
+            null === (o = l.current) ||
                 void 0 === o ||
                 o.scrollIntoView({
-                    behavior: l ? 'instant' : 'smooth',
+                    behavior: i ? 'instant' : 'smooth',
                     block: 'center',
                     inline: 'center'
                 });
-            let e = a,
-                c = setTimeout(
+            let e = s,
+                d = setTimeout(
                     () => {
-                        let l = document.getElementById('shop-item-'.concat(e.skuId));
-                        if ((l !== document.activeElement && (null == l || l.focus()), null != a.variantGroupStoreListingId)) {
-                            let n = d.Z.getProductByStoreListingId(a.variantGroupStoreListingId);
+                        let i = document.getElementById('shop-item-'.concat(e.skuId));
+                        if ((i !== document.activeElement && (null == i || i.focus()), null != s.variantGroupStoreListingId)) {
+                            let n = c.Z.getProductByStoreListingId(s.variantGroupStoreListingId);
                             if (null != n) {
                                 var o;
                                 e = n;
@@ -67,45 +61,45 @@ let f = ''.concat('#').concat('itemSkuId', '='),
                         }
                         (0, h.T)({
                             product: e,
-                            category: s,
+                            category: a,
                             analyticsSource: r,
                             analyticsLocations: n,
-                            returnRef: i
+                            returnRef: l
                         });
                     },
-                    null != i.current ? 750 : 0
+                    null != l.current ? 750 : 0
                 );
-            return () => clearTimeout(c);
+            return () => clearTimeout(d);
         }
         return () => {};
     },
     v = (e) => {
-        let { isFetchingCategories: t, isLayer: n, initialItemCardRef: d } = e,
-            C = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
+        let { isFetchingCategories: t, isLayer: n, initialItemCardRef: c } = e,
+            C = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
             h = r.useRef(null),
-            f = (0, i.TH)(),
-            g = f.pathname === p.Z5c.COLLECTIBLES_SHOP ? o.Z.HOME_PAGE_SHOP_TAB : f.pathname === p.Z5c.COLLECTIBLES_SHOP_FULLSCREEN ? o.Z.COLLECTIBLES_SHOP_FULLSCREEN : o.Z.COLLECTIBLES_SHOP,
-            { analyticsLocations: b } = (0, c.ZP)(g);
-        (0, a.Z)(() => {
+            m = (0, l.TH)(),
+            g = m.pathname === p.Z5c.COLLECTIBLES_SHOP ? o.Z.HOME_PAGE_SHOP_TAB : m.pathname === p.Z5c.COLLECTIBLES_SHOP_FULLSCREEN ? o.Z.COLLECTIBLES_SHOP_FULLSCREEN : o.Z.COLLECTIBLES_SHOP,
+            { analyticsLocations: x } = (0, d.ZP)(g);
+        (0, s.Z)(() => {
             if (n) return;
-            let e = m.exec(f.hash);
+            let e = f.exec(m.hash);
             if (null != e) {
                 let t = e[1];
                 h.current = t;
             }
         });
-        let v = (0, l.e7)([u.Z], () => u.Z.initialProductSkuId);
+        let v = (0, i.e7)([u.Z], () => u.Z.initialProductSkuId);
         r.useEffect(() => {
             if (t) return;
             let e = null;
-            if ((n && null != v && (e = v), !n && null != h.current && (e = h.current), null != e)) {
+            if ((n && null != v && (e = v), n || null == h.current || (e = h.current), null != e)) {
                 let t = [],
                     n = setTimeout(() => {
-                        let n = x({
+                        let n = _({
                             productSkuId: e,
-                            analyticsLocations: b,
+                            analyticsLocations: x,
                             analyticsSource: g,
-                            initialItemCardRef: d,
+                            initialItemCardRef: c,
                             reducedMotion: C
                         });
                         t.push(n);
@@ -117,39 +111,39 @@ let f = ''.concat('#').concat('itemSkuId', '='),
                     }
                 );
             }
-        }, [n, b, g, t, v, d, C]);
+        }, [n, x, g, t, v, c, C]);
     },
-    _ = (e) => {
+    b = (e) => {
         let t = r.useRef({}),
-            n = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
-            i = (0, l.e7)([d.Z], () => d.Z.isFetchingCategories),
-            [a, o] = r.useState(null),
-            c = r.useCallback((e, n) => {
+            n = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
+            l = (0, i.e7)([c.Z], () => c.Z.isFetchingCategories),
+            [s, o] = r.useState(null),
+            d = r.useCallback((e, n) => {
                 t.current[e] = n;
             }, []),
             u = r.useCallback(
                 (r) => {
-                    if (i) o(r);
+                    if (l) o(r);
                     else {
-                        let i = t.current[r];
-                        null != i &&
+                        let l = t.current[r];
+                        null != l &&
                             (null == e ||
                                 e.scrollIntoViewNode({
-                                    node: i,
+                                    node: l,
                                     padding: 12,
                                     animate: !n,
                                     shouldScrollToStart: !0
                                 }));
                     }
                 },
-                [e, n, i, o]
+                [e, n, l, o]
             );
         return (
             r.useEffect(() => {
-                !i && null != a && (u(a), o(null));
-            }, [i, u, a, o]),
+                l || null == s || (u(s), o(null));
+            }, [l, u, s, o]),
             {
-                setCategoryRef: c,
+                setCategoryRef: d,
                 handleScrollToCategory: u
             }
         );

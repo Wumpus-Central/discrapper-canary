@@ -1,67 +1,63 @@
-r.d(n, {
-    Z: function () {
-        return y;
-    },
-    m: function () {
-        return b;
-    }
-});
-var i = r(47120);
-var a = r(653041);
-var o = r(192379),
-    s = r(954955),
-    l = r.n(s),
-    u = r(442837),
-    c = r(285651),
-    d = r(268350),
-    f = r(453070),
-    p = r(926491),
-    h = r(594174),
-    _ = r(483360),
-    m = r(251625),
-    g = r(606301),
-    E = r(549058);
-let v = (0, m.ad)(d.$p, E.J7),
-    y = (e, n, r) => {
-        let i = (0, f.fQ)(r),
-            a = (0, u.e7)([h.default], () => h.default.getCurrentUser());
-        return o.useMemo(() => {
-            let o = (0, g.wN)(e);
-            if (n || null == e || '' === e || o.length > E.t7 || !i) return [];
+n.d(t, {
+    Z: () => g,
+    m: () => E
+}),
+    n(47120),
+    n(653041);
+var i = n(192379),
+    r = n(954955),
+    a = n.n(r),
+    s = n(442837),
+    o = n(285651),
+    l = n(268350),
+    u = n(453070),
+    c = n(926491),
+    d = n(594174),
+    f = n(483360),
+    _ = n(251625),
+    p = n(606301),
+    h = n(549058);
+let m = (0, _.ad)(l.$p, h.J7),
+    g = (e, t, n) => {
+        let r = (0, u.fQ)(n),
+            a = (0, s.e7)([d.default], () => d.default.getCurrentUser());
+        return i.useMemo(() => {
+            let i = (0, p.wN)(e);
+            if (t || null == e || '' === e || i.length > h.t7 || !r) return [];
             let s = [],
                 l = [],
-                u = (0, g.kT)(e),
-                d = u === o[0] ? o : [u, ...o];
-            _.ZP.queryStickers(d, !1).forEach((e) => {
-                let { sticker: n } = e,
-                    i = (0, c.cO)(n, a, r),
-                    o = {
-                        sticker: n,
+                u = (0, p.kT)(e),
+                c = u === i[0] ? i : [u, ...i];
+            f.ZP.queryStickers(c, !1).forEach((e) => {
+                let { sticker: t } = e,
+                    i = (0, o.cO)(t, a, n),
+                    r = {
+                        sticker: t,
                         sendability: i
                     };
-                i === c.eb.SENDABLE ? s.push(o) : i === c.eb.SENDABLE_WITH_PREMIUM && l.push(o);
+                i === o.eb.SENDABLE ? s.push(r) : i === o.eb.SENDABLE_WITH_PREMIUM && l.push(r);
             });
-            let f = [];
-            return s.length > 0 && ((f = s.slice(0, E.qm)), 0 !== l.length && (f.length === E.qm && f.pop(), f.push(l[0]))), f;
-        }, [e, r, i, n, a]);
+            let d = [];
+            return s.length > 0 && ((d = s.slice(0, h.qm)), 0 !== l.length && (d.length === h.qm && d.pop(), d.push(l[0]))), d;
+        }, [e, n, r, t, a]);
     },
-    b = (e) => {
-        let { setTextInputValue: n, setHasDismissed: r, setHasSelection: i, setFocusedSuggestionType: a, delayBeforeSuggestions: s } = e,
-            u = o.useRef(null),
-            c = o.useRef(!1),
-            d = o.useRef(!1),
-            f = o.useMemo(() => l()(n, null != s ? s : E.gf), [n, s]);
+    E = (e) => {
+        let { setTextInputValue: t, setHasDismissed: n, setHasSelection: r, setFocusedSuggestionType: s, delayBeforeSuggestions: o } = e,
+            l = i.useRef(null),
+            u = i.useRef(!1),
+            d = i.useRef(!1),
+            f = i.useMemo(() => a()(t, null != o ? o : h.gf), [t, o]);
         return {
             handleTextChange: async (e) => {
-                var o;
-                if (null == e || '' === e) f.cancel(), null == n || n(''), null == r || r(!1), null == i || i(!1), null == a || a(null), (u.current = null), (c.current = !1);
-                else if (!c.current && e.trim() !== (null === (o = u.current) || void 0 === o ? void 0 : o.trim())) {
-                    if (((u.current = e), (0, g.wN)(e).length > E.t7)) {
-                        (c.current = !0), f.cancel(), n('');
+                var i;
+                if (null == e || '' === e) f.cancel(), null == t || t(''), null == n || n(!1), null == r || r(!1), null == s || s(null), (l.current = null), (u.current = !1);
+                else if (!u.current && e.trim() !== (null === (i = l.current) || void 0 === i ? void 0 : i.trim())) {
+                    if (((l.current = e), (0, p.wN)(e).length > h.t7)) {
+                        (u.current = !0), f.cancel(), t('');
                         return;
                     }
                     if (!0 === d.current) return;
-                    !p.Z.hasLoadedStickerPacks && ((d.current = !0), await v(), (d.current = !1)), f(u.current);
+                    c.Z.hasLoadedStickerPacks || ((d.current = !0), await m(), (d.current = !1)), f(l.current);
                 }
             },
             debouncedSetTextInputValue: f

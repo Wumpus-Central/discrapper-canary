@@ -1,39 +1,35 @@
-r.d(t, {
-    m: function () {
-        return s;
-    }
-});
-var a = r(140955),
-    n = r(596308),
-    _ = r(622574),
-    o = r(433691),
-    E = r(135813),
-    i = r(825321);
-let c = [0.1, 0.25],
-    s = (e, t = {}) => {
-        (0, i.a)(
-            (0, E.R)(() => {
-                let r;
-                let E = (0, n.I)('CLS', 0),
-                    i = 0,
-                    s = [],
-                    l = (e) => {
-                        e.forEach((e) => {
-                            if (!e.hadRecentInput) {
-                                let t = s[0],
-                                    r = s[s.length - 1];
-                                i && t && r && e.startTime - r.startTime < 1000 && e.startTime - t.startTime < 5000 ? ((i += e.value), s.push(e)) : ((i = e.value), (s = [e]));
+a.d(e, { m: () => E });
+var r = a(140955),
+    n = a(596308),
+    o = a(622574),
+    _ = a(433691),
+    i = a(135813),
+    c = a(825321);
+let s = [0.1, 0.25],
+    E = (t, e = {}) => {
+        (0, c.a)(
+            (0, i.R)(() => {
+                let a;
+                let i = (0, n.I)('CLS', 0),
+                    c = 0,
+                    E = [],
+                    l = (t) => {
+                        t.forEach((t) => {
+                            if (!t.hadRecentInput) {
+                                let e = E[0],
+                                    a = E[E.length - 1];
+                                c && e && a && t.startTime - a.startTime < 1000 && t.startTime - e.startTime < 5000 ? ((c += t.value), E.push(t)) : ((c = t.value), (E = [t]));
                             }
                         }),
-                            i > E.value && ((E.value = i), (E.entries = s), r());
+                            c > i.value && ((i.value = c), (i.entries = E), a());
                     },
-                    I = (0, _.N)('layout-shift', l);
-                I &&
-                    ((r = (0, a._)(e, E, c, t.reportAllChanges)),
-                    (0, o.u)(() => {
-                        l(I.takeRecords()), r(!0);
+                    u = (0, o.N)('layout-shift', l);
+                u &&
+                    ((a = (0, r._)(t, i, s, e.reportAllChanges)),
+                    (0, _.u)(() => {
+                        l(u.takeRecords()), a(!0);
                     }),
-                    setTimeout(r, 0));
+                    setTimeout(a, 0));
             })
         );
     };

@@ -1,9 +1,4 @@
-t.d(n, {
-    Z: function () {
-        return i;
-    }
-}),
-    t(47120);
+t.d(n, { Z: () => i }), t(47120);
 var l = t(131951);
 function i() {
     return Object.entries(l.Z.getVideoDevices()).map((e) => {

@@ -1,20 +1,19 @@
 n.d(t, {
-    E: function () {
-        return f;
-    }
+    E: () => I,
+    Z: () => N
 }),
     n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(442837),
+    l = n(192379),
+    r = n(442837),
     a = n(481060),
-    o = n(239091),
-    s = n(585237),
+    s = n(239091),
+    o = n(585237),
     c = n(812206),
     u = n(55563),
-    d = n(73346),
-    m = n(388032);
-function h(e, t, n) {
+    E = n(73346),
+    d = n(388032);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,16 +26,16 @@ function h(e, t, n) {
         e
     );
 }
-let f = {
-    DropdownSizes: s.Z.DropdownSizes,
-    Sizes: s.Z.Sizes,
-    Colors: s.Z.Colors,
-    Looks: s.Z.Looks
+let I = {
+    DropdownSizes: o.Z.DropdownSizes,
+    Sizes: o.Z.Sizes,
+    Colors: o.Z.Colors,
+    Looks: o.Z.Looks
 };
-class p extends r.PureComponent {
+class T extends l.PureComponent {
     render() {
-        let { skus: e, children: t, applicationId: n, primarySKU: r, onSKUSelect: l, ...a } = this.props;
-        return (0, i.jsx)(s.Z, {
+        let { skus: e, children: t, applicationId: n, primarySKU: l, onSKUSelect: r, ...a } = this.props;
+        return (0, i.jsx)(o.Z, {
             onClick: this.handleClick,
             onDropdownClick: e.length > 0 ? this.handleContextMenu : null,
             onContextMenu: e.length > 0 ? this.handleContextMenu : void 0,
@@ -46,16 +45,16 @@ class p extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            h(this, 'renderContextMenu', () => {
+            _(this, 'renderContextMenu', () => {
                 let { skus: e, onSKUSelect: t, onMenuSelect: n } = this.props;
-                return (0, i.jsx)(a.Menu, {
+                return (0, i.jsx)(a.v2r, {
                     onSelect: n,
                     navId: 'test-skus',
-                    'aria-label': m.intl.string(m.t.ogxXGh),
-                    onClose: o.Zy,
+                    'aria-label': d.intl.string(d.t.ogxXGh),
+                    onClose: s.Zy,
                     children: e.map((e) =>
                         (0, i.jsx)(
-                            a.MenuItem,
+                            a.sNh,
                             {
                                 id: ''.concat(e.id),
                                 label: e.name,
@@ -68,21 +67,21 @@ class p extends r.PureComponent {
                     )
                 });
             }),
-            h(this, 'handleContextMenu', (e) => {
-                e.stopPropagation(), o.vq(e, this.renderContextMenu);
+            _(this, 'handleContextMenu', (e) => {
+                e.stopPropagation(), s.vq(e, this.renderContextMenu);
             }),
-            h(this, 'handleClick', () => {
+            _(this, 'handleClick', () => {
                 let { onSKUSelect: e, primarySKU: t } = this.props;
                 null != t && (null == e || e(t));
             });
     }
 }
-t.Z = l.ZP.connectStores([u.Z, c.Z], (e) => {
+let N = r.ZP.connectStores([u.Z, c.Z], (e) => {
     var t;
     let { applicationId: n } = e,
-        i = (0, d.uF)(n, c.Z, u.Z);
+        i = (0, E.uF)(n, c.Z, u.Z);
     return {
         skus: (null !== (t = u.Z.getForApplication(n)) && void 0 !== t ? t : []).sort((e, t) => (null != i && e.id === i.id ? -1 : null != i && t.id === i.id ? 1 : e.name >= t.name ? -1 : 1)),
         primarySKU: i
     };
-})(p);
+})(T);

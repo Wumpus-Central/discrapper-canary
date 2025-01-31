@@ -1,86 +1,79 @@
-e.d(n, {
-    Z: function () {
-        return p;
-    }
-});
-var i = e(200651);
-e(192379);
-var l = e(399606),
-    r = e(481060),
-    d = e(231757),
-    a = e(397639),
-    u = e(19780),
-    s = e(979651),
-    o = e(951206),
-    _ = e(446226),
-    c = e(937393),
-    E = e(721351),
-    I = e(981631),
-    g = e(388032);
-function p(t) {
-    let n = (0, l.e7)([u.Z], () => u.Z.getChannelId() === t.id),
-        p = (0, _.Z)(),
-        T = (null == p ? void 0 : p.channelId) === t.id,
-        m = (0, a.V)(t) && !t.isPrivate(),
-        C = (0, a.Z)(t),
-        f = (!(0, l.e7)([s.Z], () => s.Z.isInChannel(t.id)) && C) || m,
-        L = (0, c.Z)();
-    if (!T && 0 === L.length) return null;
-    let U = (n) => {
-        if (!n.twoWayLink || n.revoked) {
-            (0, d.Z)({
-                platformType: n.type,
+n.d(e, { Z: () => T });
+var i = n(200651);
+n(192379);
+var l = n(399606),
+    r = n(481060),
+    a = n(231757),
+    d = n(397639),
+    s = n(19780),
+    u = n(979651),
+    _ = n(951206),
+    o = n(446226),
+    E = n(937393),
+    c = n(721351),
+    g = n(981631),
+    I = n(388032);
+function T(t) {
+    let e = (0, l.e7)([s.Z], () => s.Z.getChannelId() === t.id),
+        T = (0, o.Z)(),
+        p = (null == T ? void 0 : T.channelId) === t.id,
+        m = (0, d.V)(t) && !t.isPrivate(),
+        C = (0, d.Z)(t),
+        L = (!(0, l.e7)([u.Z], () => u.Z.isInChannel(t.id)) && C) || m,
+        S = (0, E.Z)();
+    if (!p && 0 === S.length) return null;
+    let U = (e) => {
+        if (!e.twoWayLink || e.revoked) {
+            (0, a.Z)({
+                platformType: e.type,
                 location: 'Console Transfer Item'
             });
             return;
         }
-        n.type === I.ABu.XBOX
-            ? (0, r.openModalLazy)(async () => {
-                  let { default: n } = await Promise.all([e.e('62729'), e.e('522')]).then(e.bind(e, 200623));
-                  return (e) =>
-                      (0, i.jsx)(n, {
-                          ...e,
+        e.type === g.ABu.XBOX
+            ? (0, r.ZDy)(async () => {
+                  let { default: e } = await Promise.all([n.e('62729'), n.e('522')]).then(n.bind(n, 200623));
+                  return (n) =>
+                      (0, i.jsx)(e, {
+                          ...n,
                           channel: t
                       });
               })
-            : (n.type === I.ABu.PLAYSTATION || n.type === I.ABu.PLAYSTATION_STAGING) &&
-              (0, r.openModalLazy)(async () => {
-                  let { default: l } = await e.e('638').then(e.bind(e, 543974));
-                  return (e) =>
+            : (e.type === g.ABu.PLAYSTATION || e.type === g.ABu.PLAYSTATION_STAGING) &&
+              (0, r.ZDy)(async () => {
+                  let { default: l } = await n.e('638').then(n.bind(n, 543974));
+                  return (n) =>
                       (0, i.jsx)(l, {
-                          ...e,
-                          platform: n.type,
+                          ...n,
+                          platform: e.type,
                           channel: t
                       });
               });
     };
     return (0, i.jsx)(i.Fragment, {
-        children: T
-            ? (0, i.jsx)(r.MenuItem, {
-                  label: g.intl.string(g.t.PlwgdX),
+        children: p
+            ? (0, i.jsx)(r.sNh, {
+                  label: I.intl.string(I.t.PlwgdX),
                   id: 'handoff',
                   action: () => {
-                      (0, o.F)(p);
+                      (0, _.F)(T);
                   },
-                  icon: (0, E.Z)(void 0),
-                  disabled: f
+                  icon: (0, c.Z)(void 0),
+                  disabled: L
               })
-            : L.map((t) =>
-                  (0, i.jsx)(
-                      r.MenuItem,
+            : S.map((t) => {
+                  var n, l;
+                  return (0, i.jsx)(
+                      r.sNh,
                       {
                           id: 'transfer-'.concat(t.type, '-').concat(t.id),
-                          label: (function (t, n) {
-                              if (t === I.ABu.XBOX) return n ? g.intl.string(g.t['f+Aijo']) : g.intl.string(g.t.E8euSk);
-                              if (t === I.ABu.PLAYSTATION) return n ? g.intl.string(g.t.vzfxmZ) : g.intl.string(g.t.QxEYDg);
-                              if (t === I.ABu.PLAYSTATION_STAGING) return n ? g.intl.string(g.t.BDiXtb) : g.intl.string(g.t['bhdB9/']);
-                          })(t.type, n),
+                          label: ((n = t.type), (l = e), n === g.ABu.XBOX ? (l ? I.intl.string(I.t['f+Aijo']) : I.intl.string(I.t.E8euSk)) : n === g.ABu.PLAYSTATION ? (l ? I.intl.string(I.t.vzfxmZ) : I.intl.string(I.t.QxEYDg)) : n === g.ABu.PLAYSTATION_STAGING ? (l ? I.intl.string(I.t.BDiXtb) : I.intl.string(I.t['bhdB9/'])) : void 0),
                           action: () => U(t),
-                          icon: (0, E.Z)(t.type),
-                          disabled: f
+                          icon: (0, c.Z)(t.type),
+                          disabled: L
                       },
                       t.id
-                  )
-              )
+                  );
+              })
     });
 }

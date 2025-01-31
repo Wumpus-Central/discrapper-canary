@@ -1,70 +1,63 @@
-r.d(n, {
-    Z: function () {
-        return f;
-    }
-});
-var i = r(653041);
-var a = r(411104);
-var o = r(47120);
-var s = r(836560);
-var l = r(264344),
-    u = r.n(l),
-    c = r(649318);
-function d(e, n, r) {
+n.d(t, { Z: () => l }), n(653041), n(411104), n(47120);
+var i = n(836560),
+    r = n(264344),
+    a = n.n(r),
+    s = n(649318);
+function o(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class f extends s.EventEmitter {
-    addStream(e, n, r) {
+class l extends i.EventEmitter {
+    addStream(e, t, n) {
         let i = !1;
-        !this.streams.some((e) => e.ssrc === n) &&
+        this.streams.some((e) => e.ssrc === t) ||
             this.streams.push({
-                ssrc: n,
+                ssrc: t,
                 cname: e,
                 type: 'audio'
             }),
-            this.activeAudioSSRCs[e] !== n &&
+            this.activeAudioSSRCs[e] !== t &&
                 ((this.activeAudioSSRCs = {
                     ...this.activeAudioSSRCs,
-                    [e]: n
+                    [e]: t
                 }),
                 (i = !0)),
-            null != r &&
-                (r > 0
-                    ? (!this.streams.some((e) => e.ssrc === r) &&
+            null != n &&
+                (n > 0
+                    ? (this.streams.some((e) => e.ssrc === n) ||
                           this.streams.push({
-                              ssrc: r,
+                              ssrc: n,
                               cname: e,
                               type: 'video'
                           }),
-                      this.activeVideoSSRCs[e] !== r &&
+                      this.activeVideoSSRCs[e] !== n &&
                           ((this.activeVideoSSRCs = {
                               ...this.activeVideoSSRCs,
-                              [e]: r
+                              [e]: n
                           }),
                           (i = !0)))
                     : null != this.activeVideoSSRCs[e] && ((i = !0), (this.activeVideoSSRCs = { ...this.activeVideoSSRCs }), delete this.activeVideoSSRCs[e])),
             i && this.negotiationNeeded();
     }
     removeStream(e) {
-        let n = !1;
-        null != this.activeAudioSSRCs[e] && ((n = !0), (this.activeAudioSSRCs = { ...this.activeAudioSSRCs }), delete this.activeAudioSSRCs[e]), null != this.activeVideoSSRCs[e] && ((n = !0), (this.activeVideoSSRCs = { ...this.activeVideoSSRCs }), delete this.activeVideoSSRCs[e]), n && this.negotiationNeeded();
+        let t = !1;
+        null != this.activeAudioSSRCs[e] && ((t = !0), (this.activeAudioSSRCs = { ...this.activeAudioSSRCs }), delete this.activeAudioSSRCs[e]), null != this.activeVideoSSRCs[e] && ((t = !0), (this.activeVideoSSRCs = { ...this.activeVideoSSRCs }), delete this.activeVideoSSRCs[e]), t && this.negotiationNeeded();
     }
     get sdp() {
         if (null == this._sdp) throw Error('sdp is not set');
         return this._sdp;
     }
     set sdp(e) {
-        if (!(0, c.$6)(e)) throw Error('Incorrect SDP received from rtc-worker: '.concat(e));
+        if (!(0, s.$6)(e)) throw Error('Incorrect SDP received from rtc-worker: '.concat(e));
         (this._sdp = e), this.createAnswer(), (this.connected = !0), this._negotiationNeeded && this.negotiationNeeded();
     }
     negotiationNeeded() {
@@ -81,62 +74,62 @@ class f extends s.EventEmitter {
         return this.generateSessionDescription('answer');
     }
     getSSRCs(e) {
-        let n = this.streams.map((e, n) => {
-            let { cname: r, ssrc: i, type: a } = e,
-                o = this.activeAudioSSRCs[r],
-                s = this.activeVideoSSRCs[r],
-                l = ''.concat(a, '_inbound_').concat(n);
-            return [i, r, a, o === i || s === i ? this.direction : c.Ns.INACTIVE, l];
+        let t = this.streams.map((e, t) => {
+            let { cname: n, ssrc: i, type: r } = e,
+                a = this.activeAudioSSRCs[n],
+                o = this.activeVideoSSRCs[n],
+                l = ''.concat(r, '_inbound_').concat(t);
+            return [i, n, r, a === i || o === i ? this.direction : s.Ns.INACTIVE, l];
         });
-        if ('Firefox' !== u().name) return this.connected ? n : [];
-        let r = this.outboundStreams.map((e, n) => [0, 'outbound', e.type, (0, c.Mg)(e.direction), ''.concat(e.type, '_outbound_').concat(n)]);
-        if ('answer' !== e) return r.concat(n);
+        if ('Firefox' !== a().name) return this.connected ? t : [];
+        let n = this.outboundStreams.map((e, t) => [0, 'outbound', e.type, (0, s.Mg)(e.direction), ''.concat(e.type, '_outbound_').concat(t)]);
+        if ('answer' !== e) return n.concat(t);
         {
-            let e = r.length - n.length;
-            return r
+            let e = n.length - t.length;
+            return n
                 .slice(0, e)
-                .concat(n)
-                .slice(0, r.length)
-                .map((e, n) => {
-                    let [r, i, a, o, s] = e;
-                    return [r, i, a, (0, c.Mg)(this.outboundStreams[n].direction), this.outboundStreams[n].mid];
+                .concat(t)
+                .slice(0, n.length)
+                .map((e, t) => {
+                    let [n, i, r, a, o] = e;
+                    return [n, i, r, (0, s.Mg)(this.outboundStreams[t].direction), this.outboundStreams[t].mid];
                 });
         }
     }
     generateSessionDescription(e) {
-        let n = this.audioCodec,
-            r = this.audioPayloadType,
+        let t = this.audioCodec,
+            n = this.audioPayloadType,
             i = this.videoCodec,
-            a = this.videoPayloadType,
-            o = this.rtxPayloadType,
-            s = this.sdp;
-        if (null == n || null == r || null == i || null == a || null == o || null == s || null == this.direction)
+            r = this.videoPayloadType,
+            a = this.rtxPayloadType,
+            o = this.sdp;
+        if (null == t || null == n || null == i || null == r || null == a || null == o || null == this.direction)
             throw Error(
                 'Invalid payload: audioCodec: '
-                    .concat(n, ', audioPayloadType: ')
-                    .concat(null == r ? 'null' : r, ', videoCodec: ')
+                    .concat(t, ', audioPayloadType: ')
+                    .concat(null == n ? 'null' : n, ', videoCodec: ')
                     .concat(i, ', videoCodecPayloadType: ')
-                    .concat(null == a ? 'null' : a, ', rtxPayloadType: ')
-                    .concat(null == o ? 'null' : o, ', sdp: ')
-                    .concat(s)
+                    .concat(null == r ? 'null' : r, ', rtxPayloadType: ')
+                    .concat(null == a ? 'null' : a, ', sdp: ')
+                    .concat(o)
             );
-        let l = (0, c.MP)({
+        let l = (0, s.MP)({
             type: e,
-            baseSDP: s,
+            baseSDP: o,
             direction: this.direction,
-            audioCodec: n,
-            audioPayloadType: r,
+            audioCodec: t,
+            audioPayloadType: n,
             audioBitRate: 40,
             videoCodec: i,
-            videoPayloadType: a,
+            videoPayloadType: r,
             videoBitRate: 2500,
-            rtxPayloadType: o,
+            rtxPayloadType: a,
             ssrcs: this.getSSRCs(e),
             extensions: this.extensions
         });
         return this.emit(e, l), Promise.resolve(l);
     }
     constructor(...e) {
-        super(...e), d(this, 'audioCodec', null), d(this, 'audioPayloadType', null), d(this, 'videoCodec', null), d(this, 'videoPayloadType', null), d(this, 'rtxPayloadType', null), d(this, 'direction', null), d(this, 'outboundStreams', []), d(this, 'extensions', []), d(this, 'streams', []), d(this, 'activeAudioSSRCs', {}), d(this, 'activeVideoSSRCs', {}), d(this, '_sdp', null), d(this, 'connected', !1), d(this, 'negotiating', !1), d(this, '_negotiationNeeded', !1);
+        super(...e), o(this, 'audioCodec', null), o(this, 'audioPayloadType', null), o(this, 'videoCodec', null), o(this, 'videoPayloadType', null), o(this, 'rtxPayloadType', null), o(this, 'direction', null), o(this, 'outboundStreams', []), o(this, 'extensions', []), o(this, 'streams', []), o(this, 'activeAudioSSRCs', {}), o(this, 'activeVideoSSRCs', {}), o(this, '_sdp', null), o(this, 'connected', !1), o(this, 'negotiating', !1), o(this, '_negotiationNeeded', !1);
     }
 }

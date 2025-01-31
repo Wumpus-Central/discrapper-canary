@@ -1,4 +1,5 @@
 e.exports = {
-    auto: 'auto_ad8998 scrollerBase_ad8998',
-    fade: 'fade_ad8998'
+    scrollerBase: 'scrollerBase_c8b5c7',
+    auto: 'auto_c8b5c7 scrollerBase_c8b5c7',
+    fade: 'fade_c8b5c7'
 };

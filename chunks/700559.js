@@ -1,1 +1,1 @@
-e.exports = { entryPointAppCommandButton: 'entryPointAppCommandButton_d1f06a' };
+e.exports = { entryPointAppCommandButton: 'entryPointAppCommandButton_a83188' };

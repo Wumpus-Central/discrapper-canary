@@ -1,5 +1,6 @@
-e.exports = {
-    icon: 'icon_bf515c',
-    name: 'name_bf515c',
-    iconMentionText: 'iconMentionText_bf515c'
+var i = {
+    icon: 'icon_b75563',
+    name: 'name_b75563',
+    iconMentionText: 'iconMentionText_b75563'
 };
+e.exports = i;

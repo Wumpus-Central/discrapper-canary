@@ -1,6 +1,7 @@
-var i = n(913527),
-    s = n.n(i),
-    l = n(704215),
+n.d(t, { Z: () => N });
+var l = n(913527),
+    i = n.n(l),
+    s = n(704215),
     a = n(951716),
     r = n(605236),
     o = n(972830),
@@ -10,21 +11,21 @@ var i = n(913527),
     m = n(709054),
     x = n(645792),
     h = n(981631),
-    g = n(921944);
-t.Z = {
+    v = n(921944);
+let N = {
     init(e) {
         let { hasModalOpen: t, openModal: n } = e;
-        if (!u.s.isDisallowPopupsSet())
+        !u.s.isDisallowPopupsSet() &&
             (0, o.h)(() => {
                 if ((0, a.Z)()) return;
                 let e = d.default.getCurrentUser(),
-                    i = null != e && 7 > s()().diff(s()(m.default.extractTimestamp(e.id)), 'days'),
+                    l = null != e && 7 > i()().diff(i()(m.default.extractTimestamp(e.id)), 'days'),
                     o = null != Object.values(c.Z.getGuilds()).find((e) => e.hasFeature(h.oNc.HUB)),
-                    u = !(0, r.un)(l.z.HUB_BACK_TO_SCHOOL_UPSELL);
-                !(i || t() || o || !u) && (0, x.b)() && (x.Z.trackExposure({ location: '8b792a_1' }), n(), (0, r.kk)(l.z.HUB_BACK_TO_SCHOOL_UPSELL));
+                    u = !(0, r.un)(s.z.HUB_BACK_TO_SCHOOL_UPSELL);
+                !(l || t() || o || !u) && (0, x.b)() && (x.Z.trackExposure({ location: '8b792a_1' }), n(), (0, r.kk)(s.z.HUB_BACK_TO_SCHOOL_UPSELL));
             });
     },
     hideHubUpsell() {
-        (0, r.EW)(l.z.HUB_BACK_TO_SCHOOL_UPSELL, { dismissAction: g.L.AUTO });
+        (0, r.EW)(s.z.HUB_BACK_TO_SCHOOL_UPSELL, { dismissAction: v.L.AUTO });
     }
 };

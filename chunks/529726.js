@@ -1,48 +1,47 @@
-var i = r(47120);
-var a = r(653041);
-var o = r(31775),
-    s = r.n(o),
-    l = r(147913),
-    u = r(626135),
-    c = r(709054),
-    d = r(981631);
-function f(e, n, r) {
+n.d(t, { Z: () => m }), n(47120), n(653041);
+var i = n(31775),
+    r = n.n(i),
+    a = n(147913),
+    s = n(626135),
+    o = n(709054),
+    l = n(981631);
+function u(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let p = 60000,
-    h = 1000,
-    _ = 10,
-    m = 2000,
-    g = 500;
-class E extends l.Z {
+let c = 60000,
+    d = 1000,
+    f = 10,
+    _ = 2000,
+    p = 500;
+class h extends a.Z {
     handleMessageBecameVisible(e) {
-        let { messageId: n } = e;
-        if (null != this.currentlyVisibleMessageTimers[n] || this.viewsInCurrentChannel.has(n)) return;
-        let r = this.recentViewTimes.get(n);
-        if (null != r && Date.now() - r < p) return;
+        let { messageId: t } = e;
+        if (null != this.currentlyVisibleMessageTimers[t] || this.viewsInCurrentChannel.has(t)) return;
+        let n = this.recentViewTimes.get(t);
+        if (null != n && Date.now() - n < c) return;
         let i = setTimeout(() => {
-            delete this.currentlyVisibleMessageTimers[n], this.viewsInCurrentChannel.add(n), this.recentViewTimes.set(n, Date.now()), this.bufferViewTrack(e);
-        }, h);
-        this.currentlyVisibleMessageTimers[n] = i;
+            delete this.currentlyVisibleMessageTimers[t], this.viewsInCurrentChannel.add(t), this.recentViewTimes.set(t, Date.now()), this.bufferViewTrack(e);
+        }, d);
+        this.currentlyVisibleMessageTimers[t] = i;
     }
     handleMessageLostVisibility(e) {
-        let n = this.currentlyVisibleMessageTimers[e];
-        null != n && (clearTimeout(n), delete this.currentlyVisibleMessageTimers[e]);
+        let t = this.currentlyVisibleMessageTimers[e];
+        null != t && (clearTimeout(t), delete this.currentlyVisibleMessageTimers[e]);
     }
     handleMessageListVisibilityChange(e) {
-        for (let n of e) this.handleMessageBecameVisible(n);
-        let n = new Set(e.map((e) => e.messageId));
-        for (let e of c.default.keys(this.currentlyVisibleMessageTimers)) !n.has(e) && this.handleMessageLostVisibility(e);
+        for (let t of e) this.handleMessageBecameVisible(t);
+        let t = new Set(e.map((e) => e.messageId));
+        for (let e of o.default.keys(this.currentlyVisibleMessageTimers)) t.has(e) || this.handleMessageLostVisibility(e);
     }
     handleChannelSelect() {
         for (let e of Object.values(this.currentlyVisibleMessageTimers)) clearTimeout(e);
@@ -50,7 +49,7 @@ class E extends l.Z {
     }
     drainBuffer() {
         for (let e of this.batchBuffer)
-            u.default.track(d.rMx.ANNOUNCEMENT_MESSAGE_VIEWED, {
+            s.default.track(l.rMx.ANNOUNCEMENT_MESSAGE_VIEWED, {
                 message_id: e.messageId,
                 channel_id: e.channelId,
                 guild_id: e.guildId,
@@ -60,23 +59,23 @@ class E extends l.Z {
         (this.batchBuffer = []), null != this.batchTimerId && (clearTimeout(this.batchTimerId), (this.batchTimerId = null));
     }
     bufferViewTrack(e) {
-        this.batchBuffer.length >= _ && this.drainBuffer(), this.batchBuffer.push(e), null == this.batchTimerId && (this.batchTimerId = setTimeout(() => this.drainBuffer(), m));
+        this.batchBuffer.length >= f && this.drainBuffer(), this.batchBuffer.push(e), null == this.batchTimerId && (this.batchTimerId = setTimeout(() => this.drainBuffer(), _));
     }
     constructor(...e) {
         super(...e),
-            f(this, 'currentlyVisibleMessageTimers', {}),
-            f(this, 'viewsInCurrentChannel', new Set()),
-            f(
+            u(this, 'currentlyVisibleMessageTimers', {}),
+            u(this, 'viewsInCurrentChannel', new Set()),
+            u(
                 this,
                 'recentViewTimes',
-                new (s())({
-                    max: g,
-                    maxAge: p
+                new (r())({
+                    max: p,
+                    maxAge: c
                 })
             ),
-            f(this, 'batchBuffer', []),
-            f(this, 'batchTimerId', null),
-            f(this, 'actions', { CHANNEL_SELECT: () => this.handleChannelSelect() });
+            u(this, 'batchBuffer', []),
+            u(this, 'batchTimerId', null),
+            u(this, 'actions', { CHANNEL_SELECT: () => this.handleChannelSelect() });
     }
 }
-n.Z = new E();
+let m = new h();

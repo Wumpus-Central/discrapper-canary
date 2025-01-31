@@ -1,91 +1,87 @@
-r.d(n, {
-    F: function () {
-        return h;
-    },
-    Y: function () {
-        return p;
-    }
+n.d(t, {
+    F: () => _,
+    Y: () => f
 });
-var i = r(200651),
-    a = r(192379),
-    o = r(772848),
-    s = r(993365),
-    l = r(481060),
-    u = r(245216),
-    c = r(561466),
-    d = r(24343);
-function f(e) {
+var i = n(200651),
+    r = n(192379),
+    a = n(772848),
+    s = n(993365),
+    o = n(481060),
+    l = n(245216),
+    u = n(561466),
+    c = n(24343);
+function d(e) {
     switch (e) {
-        case c.pC.SUCCESS:
-            return (0, i.jsx)(l.CheckmarkLargeIcon, {
+        case u.pC.SUCCESS:
+            return (0, i.jsx)(o.dz2, {
                 size: 'md',
-                className: d.icon,
-                color: l.tokens.colors.STATUS_POSITIVE.css
+                className: c.icon,
+                color: o.TVs.colors.STATUS_POSITIVE.css
             });
-        case c.pC.FAILURE:
-            return (0, i.jsx)(l.XLargeIcon, {
+        case u.pC.FAILURE:
+            return (0, i.jsx)(o.Uz9, {
                 size: 'md',
-                className: d.icon,
-                color: l.tokens.colors.STATUS_DANGER.css
+                className: c.icon,
+                color: o.TVs.colors.STATUS_DANGER.css
             });
-        case c.pC.CLIP:
-            return (0, i.jsx)(l.ClipsIcon, {
+        case u.pC.CLIP:
+            return (0, i.jsx)(o.AlX, {
                 size: 'xs',
-                className: d.clipIcon,
-                color: l.tokens.colors.HEADER_PRIMARY.css
+                className: c.clipIcon,
+                color: o.TVs.colors.HEADER_PRIMARY.css
             });
-        case c.pC.LINK:
-            return (0, i.jsx)(l.LinkIcon, {
-                className: d.icon,
-                color: l.tokens.colors.HEADER_PRIMARY.css
+        case u.pC.LINK:
+            return (0, i.jsx)(o.xPt, {
+                className: c.icon,
+                color: o.TVs.colors.HEADER_PRIMARY.css
             });
-        case c.pC.FORWARD:
-            return (0, i.jsx)(u.Z, {
-                className: d.icon,
-                color: l.tokens.colors.STATUS_POSITIVE.css
+        case u.pC.FORWARD:
+            return (0, i.jsx)(l.Z, {
+                className: c.icon,
+                color: o.TVs.colors.STATUS_POSITIVE.css
             });
-        case c.pC.BOOKMARK:
-            return (0, i.jsx)(l.BookmarkIcon, {
-                className: d.icon,
-                color: l.tokens.colors.HEADER_PRIMARY.css
+        case u.pC.BOOKMARK:
+            return (0, i.jsx)(o.plf, {
+                className: c.icon,
+                color: o.TVs.colors.HEADER_PRIMARY.css
             });
-        case c.pC.CLOCK:
-            return (0, i.jsx)(l.ClockIcon, {
-                className: d.icon,
-                color: l.tokens.colors.HEADER_PRIMARY.css
+        case u.pC.CLOCK:
+            return (0, i.jsx)(o.T39, {
+                className: c.icon,
+                color: o.TVs.colors.HEADER_PRIMARY.css
             });
         default:
             return null;
     }
 }
-function p(e, n) {
-    let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.si,
-        { position: i = c.si.position, component: a = c.si.component, duration: s = c.si.duration } = r;
+function f(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.si,
+        { position: i = u.si.position, component: r = u.si.component, duration: s = u.si.duration } = n;
     return {
         message: e,
-        id: (0, o.Z)(),
-        type: n,
+        id: (0, a.Z)(),
+        type: t,
         options: {
             position: i,
-            component: a,
+            component: r,
             duration: s
         }
     };
 }
-let h = a.memo(function (e) {
-    let { message: n, type: r, id: a, options: { component: o = c.si.component } = c.si } = e;
-    return null != o
-        ? (0, i.jsx)(i.Fragment, { children: o })
+let _ = r.memo(function (e) {
+    let { message: t, type: n, id: r, options: { component: a = u.si.component } = u.si } = e;
+    return null != a
+        ? (0, i.jsx)(i.Fragment, { children: a })
         : (0, i.jsxs)('div', {
-              id: a,
-              className: d.toast,
+              id: r,
+              className: c.toast,
+              'data-type': n,
               children: [
-                  f(r),
+                  d(n),
                   (0, i.jsx)(s.x, {
-                      className: d.__invalid_content,
-                      color: 'header-primary',
+                      className: c.content,
                       variant: 'text-md/normal',
-                      children: n
+                      children: t
                   })
               ]
           });

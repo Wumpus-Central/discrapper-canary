@@ -1,13 +1,7 @@
 n.d(t, {
-    O4: function () {
-        return x;
-    },
-    OA: function () {
-        return g;
-    },
-    Wu: function () {
-        return p;
-    }
+    O4: () => x,
+    OA: () => g,
+    Wu: () => p
 }),
     n(47120);
 var i = n(200651),
@@ -40,12 +34,12 @@ function p(e) {
         g = r.useCallback(() => {
             let e = u ? m.Un.ONBOARDING_DEFAULT : m.Un.ONBOARDING_ADVANCED;
             u
-                ? (0, s.openModal)((n) =>
+                ? (0, s.h7j)((n) =>
                       (0, i.jsx)(s.ConfirmModal, {
                           header: h.intl.string(h.t['49+ONj']),
                           confirmText: h.intl.string(h.t.R9GHyc),
                           cancelText: h.intl.string(h.t['ETE/oK']),
-                          confirmButtonColor: s.Button.Colors.BRAND,
+                          confirmButtonColor: s.zxk.Colors.BRAND,
                           onConfirm: () => (0, d.Ts)(t, e),
                           ...n,
                           children: (0, i.jsx)(s.Text, {
@@ -54,12 +48,12 @@ function p(e) {
                           })
                       })
                   )
-                : (0, s.openModal)((n) =>
+                : (0, s.h7j)((n) =>
                       (0, i.jsx)(s.ConfirmModal, {
                           header: h.intl.string(h.t.YB9xUF),
                           confirmText: h.intl.string(h.t.ts6u6u),
                           cancelText: h.intl.string(h.t['ETE/oK']),
-                          confirmButtonColor: s.Button.Colors.BRAND,
+                          confirmButtonColor: s.zxk.Colors.BRAND,
                           onConfirm: () => (0, d.Ts)(t, e),
                           ...n,
                           children: (0, i.jsx)(s.Text, {
@@ -72,7 +66,7 @@ function p(e) {
     return c
         ? (0, i.jsx)('div', {
               className: n,
-              children: (0, i.jsx)(s.Anchor, {
+              children: (0, i.jsx)(s.eee, {
                   onClick: g,
                   children: (0, i.jsx)(s.Text, {
                       variant: 'text-sm/medium',

@@ -1,8 +1,9 @@
 e.exports = {
-    updateIconForeground: 'updateIconForeground_ff5f90',
-    search: 'search_ff5f90',
-    downloadArrow: 'downloadArrow_ff5f90',
-    forumOrHome: 'forumOrHome_ff5f90',
-    cloud: 'cloud_ff5f90',
-    controlButtonWrapper: 'controlButtonWrapper_ff5f90'
+    arrowBounce: 'arrowBounce__49676',
+    updateIconForeground: 'updateIconForeground__49676',
+    search: 'search__49676',
+    downloadArrow: 'downloadArrow__49676',
+    forumOrHome: 'forumOrHome__49676',
+    cloud: 'cloud__49676',
+    controlButtonWrapper: 'controlButtonWrapper__49676'
 };

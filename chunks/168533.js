@@ -1,23 +1,22 @@
-let i = r(40231),
-    a = r(889658),
-    o = r(393808),
-    s = (e, n) => {
-        e = new a(e, n);
-        let r = new i('0.0.0');
-        if (e.test(r)) return r;
-        if (((r = new i('0.0.0-0')), e.test(r))) return r;
-        r = null;
-        for (let n = 0; n < e.set.length; ++n) {
-            let a = e.set[n],
+let i = n(40231),
+    r = n(889658),
+    a = n(393808),
+    s = (e, t) => {
+        e = new r(e, t);
+        let n = new i('0.0.0');
+        if (e.test(n) || ((n = new i('0.0.0-0')), e.test(n))) return n;
+        n = null;
+        for (let t = 0; t < e.set.length; ++t) {
+            let r = e.set[t],
                 s = null;
-            a.forEach((e) => {
-                let n = new i(e.semver.version);
+            r.forEach((e) => {
+                let t = new i(e.semver.version);
                 switch (e.operator) {
                     case '>':
-                        0 === n.prerelease.length ? n.patch++ : n.prerelease.push(0), (n.raw = n.format());
+                        0 === t.prerelease.length ? t.patch++ : t.prerelease.push(0), (t.raw = t.format());
                     case '':
                     case '>=':
-                        (!s || o(n, s)) && (s = n);
+                        (!s || a(t, s)) && (s = t);
                         break;
                     case '<':
                     case '<=':
@@ -26,8 +25,8 @@ let i = r(40231),
                         throw Error(`Unexpected operation: ${e.operator}`);
                 }
             }),
-                s && (!r || o(r, s)) && (r = s);
+                s && (!n || a(n, s)) && (n = s);
         }
-        return r && e.test(r) ? r : null;
+        return n && e.test(n) ? n : null;
     };
 e.exports = s;

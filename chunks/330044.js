@@ -1,13 +1,9 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(913527),
-    a = r.n(i);
-function o(e) {
+n.d(t, { Z: () => a });
+var i = n(913527),
+    r = n.n(i);
+function a(e) {
     return {
         ...e,
-        expiry: a()(e.expiry)
+        expiry: r()(e.expiry)
     };
 }

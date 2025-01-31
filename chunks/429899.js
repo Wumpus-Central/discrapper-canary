@@ -1,44 +1,41 @@
-n(47120);
+n.d(t, { Z: () => o }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(558381),
+    l = n(192379),
+    r = n(558381),
     a = n(613311);
-class s extends r.Component {
+class s extends l.Component {
     componentDidMount() {
         this.fetchStoreListing();
     }
     render() {
-        let { skuId: e, applicationId: t, slug: n, storeListingId: r, pageSize: l, location: s } = this.props;
+        let { skuId: e, applicationId: t, slug: n, storeListingId: l, pageSize: r, location: s } = this.props;
         return (0, i.jsx)(a.Z, {
             inputSkuId: e,
             applicationId: t,
             fetchStoreListing: this.fetchStoreListing,
             slug: n,
-            storeListingId: r,
+            storeListingId: l,
             location: s,
-            pageSize: l
+            pageSize: r
         });
     }
     constructor(...e) {
-        var t, n, i;
+        var t, n;
         super(...e),
-            (t = this),
-            (n = 'fetchStoreListing'),
-            (i = (e) => {
+            (t = 'fetchStoreListing'),
+            (n = (e) => {
                 let { storeListingId: t, skuId: n, applicationId: i } = this.props,
-                    r = null != e ? e : n;
-                if (null != t) return (0, l.rV)(t);
-                if (null != r) return (0, l.km)(r);
-                if (null != i) return (0, l.Hq)(i);
+                    l = null != e ? e : n;
+                return null != t ? (0, r.rV)(t) : null != l ? (0, r.km)(l) : null != i ? (0, r.Hq)(i) : void 0;
             }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: i,
+            t in this
+                ? Object.defineProperty(this, t, {
+                      value: n,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (t[n] = i);
+                : (this[t] = n);
     }
 }
-t.Z = s;
+let o = s;

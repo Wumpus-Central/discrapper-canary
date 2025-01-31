@@ -1,7 +1,7 @@
-n(47120);
+n.d(t, { Z: () => E }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(442837),
+    l = n(192379),
+    r = n(442837),
     a = n(846519),
     s = n(481060),
     o = n(293245),
@@ -9,19 +9,19 @@ var i = n(200651),
     d = n(563593),
     u = n(981631),
     h = n(388032);
-let m = (0, s.makeIconCompat)(c.Z),
-    p = (0, s.makeIconCompat)(d.Z),
+let m = (0, s.GSL)(c.Z),
+    p = (0, s.GSL)(d.Z),
     g = new Set([u.TzF.PUSHING, u.TzF.PULLING]),
-    f = Object.freeze({
+    _ = Object.freeze({
         [u.TzF.DONE]: m,
         [u.TzF.PLANNING]: m,
         [u.TzF.PREPARING]: m,
-        [u.TzF.PUSHING]: s.UploadIcon,
-        [u.TzF.PULLING]: s.DownloadIcon,
+        [u.TzF.PUSHING]: s.rG2,
+        [u.TzF.PULLING]: s._8t,
         [u.TzF.CONFLICT]: m,
         [u.TzF.ERROR]: m
     });
-class _ extends r.PureComponent {
+class f extends l.PureComponent {
     componentDidMount() {
         this.getIsRecentlySynced() && this.setRecentlySyncedTimeout();
     }
@@ -72,19 +72,19 @@ class _ extends r.PureComponent {
     }
     render() {
         let { cloudSyncState: e, libraryApplication: t, className: n } = this.props,
-            r = null == e ? { type: u.TzF.DONE } : e,
-            l = this.getIsRecentlySynced(),
+            l = null == e ? { type: u.TzF.DONE } : e,
+            r = this.getIsRecentlySynced(),
             a = {};
-        (g.has(r.type) || l) &&
+        (g.has(l.type) || r) &&
             (a.gradientConfig = {
                 id: t.id,
                 startColor: 'rgba(199, 208, 240, 1)',
                 stopColor: 'rgba(114, 137, 218, 1)',
-                stop: this.getStop(r, l)
+                stop: this.getStop(l, r)
             });
-        let o = l ? p : f[r.type];
-        return (0, i.jsx)(s.Tooltip, {
-            text: this.getTooltip(r, l),
+        let o = r ? p : _[l.type];
+        return (0, i.jsx)(s.ua7, {
+            text: this.getTooltip(l, r),
             children: (e) =>
                 (0, i.jsx)(o, {
                     className: n,
@@ -94,22 +94,21 @@ class _ extends r.PureComponent {
         });
     }
     constructor(...e) {
-        var t, n, i;
+        var t, n;
         super(...e),
-            (t = this),
-            (n = '_doneTimer'),
-            (i = new a.V7()),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: i,
+            (t = '_doneTimer'),
+            (n = new a.V7()),
+            t in this
+                ? Object.defineProperty(this, t, {
+                      value: n,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (t[n] = i);
+                : (this[t] = n);
     }
 }
-t.Z = l.ZP.connectStores([o.Z], (e) => {
+let E = r.ZP.connectStores([o.Z], (e) => {
     let { libraryApplication: t } = e;
     return { cloudSyncState: o.Z.getState(t.id, t.branchId) };
-})(_);
+})(f);

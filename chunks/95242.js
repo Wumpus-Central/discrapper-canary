@@ -1,9 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => r }), n(47120);
 var i = n(192379);
 function r(e) {
     var t;

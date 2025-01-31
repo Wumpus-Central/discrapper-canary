@@ -1,16 +1,16 @@
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(119617),
-    l = r(675654);
-let u = 50,
-    c = 10,
-    d = 100;
-function f(e, n) {
+n.d(t, { Z: () => d }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(119617),
+    s = n(675654);
+let o = 50,
+    l = 10,
+    u = 100;
+function c(e, t) {
     return (
-        (n = null != n ? n : 1),
+        (t = null != t ? t : 1),
         {
-            ...l.We,
+            ...s.We,
             position: {
                 type: 'static-random',
                 minValue: {
@@ -25,12 +25,12 @@ function f(e, n) {
             velocity: {
                 type: 'static-random',
                 minValue: {
-                    x: -100 * n,
-                    y: -50 * n
+                    x: -100 * t,
+                    y: -50 * t
                 },
                 maxValue: {
-                    x: 100 * n,
-                    y: -300 * n
+                    x: 100 * t,
+                    y: -300 * t
                 }
             },
             dragCoefficient: {
@@ -40,35 +40,34 @@ function f(e, n) {
         }
     );
 }
-function p(e) {
-    let { confettiTarget: n, confettiCanvas: r, confettiVelocityMultiplier: i, sprites: p, colors: h } = e,
-        [_, m] = o.useState(null),
-        g = (0, s.uR)(r, _),
-        [E, v] = o.useState(!1);
+let d = function (e) {
+    let { confettiTarget: t, confettiCanvas: n, confettiVelocityMultiplier: d, sprites: f, colors: _ } = e,
+        [p, h] = r.useState(null),
+        m = (0, a.uR)(n, p),
+        [g, E] = r.useState(!1);
     return (
-        o.useEffect(() => {
-            let e = Array(c).fill(0);
+        r.useEffect(() => {
+            let e = Array(l).fill(0);
             return (
-                null != n &&
-                    g.isReady &&
-                    !E &&
-                    (e = e.map((r, a) =>
+                null != t &&
+                    m.isReady &&
+                    !g &&
+                    (e = e.map((n, i) =>
                         setTimeout(() => {
-                            a === e.length - 1 && v(!0), g.createMultipleConfetti(f(n.getBoundingClientRect(), i), u);
-                        }, a * d)
+                            i === e.length - 1 && E(!0), m.createMultipleConfetti(c(t.getBoundingClientRect(), d), o);
+                        }, i * u)
                     )),
                 () => {
-                    for (let n of e) clearTimeout(n);
+                    for (let t of e) clearTimeout(t);
                 }
             );
-        }, [g, n, E, i]),
-        (0, a.jsx)(s.Ji, {
-            ref: m,
-            sprites: null != p ? p : l.CA,
-            colors: null != h ? h : l.Br,
-            spriteWidth: l.Ko,
-            spriteHeight: l.Ko
+        }, [m, t, g, d]),
+        (0, i.jsx)(a.Ji, {
+            ref: h,
+            sprites: null != f ? f : s.CA,
+            colors: null != _ ? _ : s.Br,
+            spriteWidth: s.Ko,
+            spriteHeight: s.Ko
         })
     );
-}
-n.Z = p;
+};

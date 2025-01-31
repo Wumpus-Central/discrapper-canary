@@ -1,15 +1,16 @@
-var i = r(317770),
-    a = r(626135),
-    o = r(358085),
-    s = r(998502),
-    l = r(981631);
-class u extends i.Z {
+n.d(t, { Z: () => u });
+var i = n(317770),
+    r = n(626135),
+    a = n(358085),
+    s = n(998502),
+    o = n(981631);
+class l extends i.Z {
     _initialize() {
-        if (!!o.isPlatformEmbedded)
-            s.ZP.on('APP_PUSH_ANALYTICS', (e, n) => {
-                this._handleEventResponse(n);
+        a.isPlatformEmbedded &&
+            (s.ZP.on('APP_PUSH_ANALYTICS', (e, t) => {
+                this._handleEventResponse(t);
             }),
-                this.processModuleEvents();
+            this.processModuleEvents());
     }
     _terminate() {}
     processModuleEvents() {
@@ -20,10 +21,10 @@ class u extends i.Z {
         }
     }
     _handleEventResponse(e) {
-        if (null != e)
+        null != e &&
             e.forEach((e) => {
-                'cdm' === e.type ? (e.name === l.rMx.CDM_LOAD_STATUS || e.name === l.rMx.CDM_READY_COMPLETE ? a.default.track(e.name, e.data) : console.log('[analytics] received unknown cdm analytic event '.concat(e.name))) : 'desktop_tti' === e.type && (e.name === l.rMx.DESKTOP_TTI ? a.default.track(e.name, e.data) : console.log('[analytics] received unknown desktop_tti analytic event '.concat(e.name)));
+                'cdm' === e.type ? (e.name === o.rMx.CDM_LOAD_STATUS || e.name === o.rMx.CDM_READY_COMPLETE ? r.default.track(e.name, e.data) : console.log('[analytics] received unknown cdm analytic event '.concat(e.name))) : 'desktop_tti' === e.type && (e.name === o.rMx.DESKTOP_TTI ? r.default.track(e.name, e.data) : console.log('[analytics] received unknown desktop_tti analytic event '.concat(e.name)));
             });
     }
 }
-n.Z = new u();
+let u = new l();

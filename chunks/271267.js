@@ -1,10 +1,6 @@
 n.d(t, {
-    Q: function () {
-        return m;
-    },
-    Z: function () {
-        return p;
-    }
+    Q: () => m,
+    Z: () => p
 }),
     n(47120);
 var i = n(200651),
@@ -19,13 +15,13 @@ var i = n(200651),
 let m = 'role_subscriptions_eligibility_modal';
 function h(e) {
     let { guild: t, eligibility: r, eligibilityLoading: s, eligibilityError: a, refreshEligibility: o } = e;
-    return (0, i.jsxs)(l.Button, {
-        color: l.ButtonColors.CUSTOM,
+    return (0, i.jsxs)(l.zxk, {
+        color: l.Ttl.CUSTOM,
         className: d.ineligibleButton,
         innerClassName: d.ineligibleButtonContent,
         grow: !0,
         onClick: function () {
-            (0, l.openModalLazy)(
+            (0, l.ZDy)(
                 async () => {
                     let { default: e } = await n.e('21863').then(n.bind(n, 466501));
                     return (n) =>
@@ -41,9 +37,9 @@ function h(e) {
                 { modalKey: m }
             );
         },
-        size: l.Button.Sizes.LARGE,
+        size: l.zxk.Sizes.LARGE,
         children: [
-            (0, i.jsx)(l.CircleWarningIcon, {
+            (0, i.jsx)(l.P4T, {
                 size: 'xs',
                 color: 'currentColor'
             }),
@@ -57,12 +53,12 @@ function g(e) {
         [g, x] = r.useState(!1);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(l.Checkbox, {
+            (0, i.jsx)(l.XZJ, {
                 onChange: function () {
                     x((e) => !e);
                 },
                 size: 20,
-                type: l.Checkbox.Types.INVERTED,
+                type: l.XZJ.Types.INVERTED,
                 value: g,
                 children: (0, i.jsx)(l.Text, {
                     variant: 'text-sm/normal',
@@ -70,19 +66,19 @@ function g(e) {
                     children: n
                 })
             }),
-            (0, i.jsx)(l.Spacer, { size: 24 }),
-            (0, i.jsx)(l.Button, {
+            (0, i.jsx)(l.LZC, { size: 24 }),
+            (0, i.jsx)(l.zxk, {
                 className: d.ctaButton,
                 disabled: !g || !o,
                 grow: !0,
                 onClick: h,
-                size: l.Button.Sizes.LARGE,
+                size: l.zxk.Sizes.LARGE,
                 submitting: m,
                 children: c.intl.string(c.t.NL5ZNT)
             }),
             null != u &&
                 (0, i.jsxs)(i.Fragment, {
-                    children: [(0, i.jsx)(l.Spacer, { size: 24 }), (0, i.jsx)(a.Z, { children: u.getAnyErrorMessage() })]
+                    children: [(0, i.jsx)(l.LZC, { size: 24 }), (0, i.jsx)(a.Z, { children: u.getAnyErrorMessage() })]
                 })
         ]
     });
@@ -118,18 +114,18 @@ function p(e) {
             (0, i.jsxs)('div', {
                 className: d.ctaContent,
                 children: [
-                    (0, i.jsx)(l.Heading, {
+                    (0, i.jsx)(l.X6q, {
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
                         children: c.intl.string(c.t.PqYfh4)
                     }),
-                    (0, i.jsx)(l.Spacer, { size: 12 }),
+                    (0, i.jsx)(l.LZC, { size: 12 }),
                     (0, i.jsx)(l.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
                         children: c.intl.string(c.t['41wkMT'])
                     }),
-                    (0, i.jsx)(l.Spacer, { size: 24 }),
+                    (0, i.jsx)(l.LZC, { size: 24 }),
                     (0, i.jsx)(x, {
                         guild: t,
                         monetizationEligibility: n

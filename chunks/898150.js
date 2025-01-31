@@ -1,78 +1,73 @@
-n.r(t),
-    n.d(t, {
-        MessageReminderEditMenu: function () {
-            return o;
-        },
-        useMessageReminderDurationSuggestions: function () {
-            return c;
-        }
-    }),
-    n(653041);
-var a = n(200651),
-    r = n(192379),
-    i = n(481060),
-    u = n(239091),
-    d = n(324701),
-    s = n(550727),
-    l = n(388032);
+a.d(t, {
+    MessageReminderEditMenu: () => o,
+    r: () => c
+}),
+    a(653041);
+var n = a(200651),
+    r = a(192379),
+    i = a(481060),
+    d = a(239091),
+    s = a(324701),
+    l = a(550727),
+    u = a(388032);
 function c(e) {
     let { createReminder: t } = e,
-        u = r.useCallback(() => {
-            (0, i.openModalLazy)(async () => {
-                let { default: e } = await n.e('43866').then(n.bind(n, 423639));
-                return (n) =>
-                    (0, a.jsx)(e, {
-                        ...n,
+        d = r.useCallback(() => {
+            (0, i.ZDy)(async () => {
+                let { default: e } = await a.e('43866').then(a.bind(a, 423639));
+                return (a) =>
+                    (0, n.jsx)(e, {
+                        ...a,
                         createReminder: t
                     });
             });
         }, [t]);
     return r.useMemo(() => {
-        let e = s.B.map((e) => {
-            let { getDueAt: n, getLabel: r } = e;
-            return (0, a.jsx)(
-                i.MenuItem,
+        let e = l.B.map((e) => {
+            let { getDueAt: a, getLabel: r } = e;
+            return (0, n.jsx)(
+                i.sNh,
                 {
                     id: 'create-reminder-'.concat(r()),
                     label: r(),
-                    action: () => t(n())
+                    action: () => t(a())
                 },
                 'create-reminder-'.concat(r())
             );
         });
         return (
             e.push(
-                (0, a.jsx)(
-                    i.MenuItem,
+                (0, n.jsx)(
+                    i.sNh,
                     {
                         id: 'create-reminder-custom',
-                        label: l.intl.string(l.t.OLA8Zm),
-                        action: u
+                        label: u.intl.string(u.t.OLA8Zm),
+                        action: d
                     },
                     'custom'
                 )
             ),
             e
         );
-    }, [t, u]);
+    }, [t, d]);
 }
 function o(e) {
-    let { message: t, label: n } = e,
+    let { message: t, label: a } = e,
         r = c({
             createReminder: (e) =>
-                (0, d.z)({
+                (0, s.z)({
                     channelId: t.channel_id,
                     messageId: t.id,
                     dueAt: e
                 })
         });
-    return (0, a.jsx)(i.Menu, {
+    return (0, n.jsx)(i.v2r, {
         navId: 'message-reminder-create',
-        onClose: u.Zy,
-        'aria-label': l.intl.string(l.t.mJ3P0N),
+        onClose: d.Zy,
+        'aria-label': u.intl.string(u.t.mJ3P0N),
         onSelect: () => null,
-        children: (0, a.jsx)(i.MenuGroup, {
-            label: n,
+        children: (0, n.jsx)(i.kSQ, {
+            label: a,
             children: r
         })
     });

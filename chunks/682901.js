@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return l;
-    }
-});
+n.d(t, { Z: () => l });
 let i = (0, n(818083).B)({
     kind: 'user',
     id: '2025-1_call_settings',

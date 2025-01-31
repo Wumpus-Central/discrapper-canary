@@ -1,24 +1,18 @@
 n.d(t, {
-    E: function () {
-        return s;
-    },
-    Z9: function () {
-        return c;
-    },
-    wl: function () {
-        return d;
-    }
+    E: () => s,
+    Z9: () => c,
+    wl: () => d
 });
 var a = n(200651);
 n(192379);
-var r = n(120356),
-    l = n.n(r),
+var l = n(120356),
+    r = n.n(l),
     i = n(481060),
     o = n(941469);
 function s(e) {
     let { className: t, children: n } = e;
     return (0, a.jsx)('dl', {
-        className: l()(o.properties, t),
+        className: r()(o.properties, t),
         children: n
     });
 }
@@ -36,10 +30,10 @@ function c(e) {
 }
 function d(e) {
     let { value: t } = e;
-    return (0, a.jsx)(i.Checkbox, {
+    return (0, a.jsx)(i.XZJ, {
         size: 16,
         value: t,
-        shape: i.Checkbox.Shapes.SMALL_BOX,
+        shape: i.XZJ.Shapes.SMALL_BOX,
         displayOnly: !0
     });
 }

@@ -1,201 +1,196 @@
-t.r(n),
-    t.d(n, {
-        default: function () {
-            return N;
-        }
-    });
+t.d(n, { default: () => U });
 var l = t(200651);
 t(192379);
-var r = t(442837),
-    i = t(481060),
-    o = t(846027),
-    a = t(239091),
-    u = t(287734),
-    c = t(872810),
-    s = t(410575),
+var i = t(442837),
+    r = t(481060),
+    a = t(846027),
+    o = t(239091),
+    s = t(287734),
+    u = t(872810),
+    c = t(410575),
     d = t(418469),
     g = t(701098),
-    m = t(607783),
-    f = t(435064),
-    h = t(779618),
-    C = t(39604),
+    f = t(607783),
+    h = t(435064),
+    m = t(779618),
+    Z = t(39604),
     I = t(258609),
-    Z = t(569545),
+    S = t(569545),
     x = t(352978),
-    p = t(111672),
-    M = t(441167),
-    S = t(700994),
-    b = t(199902),
+    C = t(111672),
+    p = t(441167),
+    b = t(700994),
+    v = t(199902),
     j = t(314897),
-    v = t(592125),
+    w = t(592125),
     E = t(131951),
     V = t(594174),
     k = t(358085),
-    w = t(1226),
-    A = t(981631),
-    T = t(65154),
-    G = t(388032);
+    A = t(1226),
+    M = t(981631),
+    N = t(65154),
+    T = t(388032);
 function L(e) {
-    return (0, r.e7)([b.Z], () => {
-        let n = b.Z.getActiveStreamForApplicationStream(e);
-        return null != n && (0, Z.V9)(n) === (0, Z.V9)(e);
+    return (0, i.e7)([v.Z], () => {
+        let n = v.Z.getActiveStreamForApplicationStream(e);
+        return null != n && (0, S.V9)(n) === (0, S.V9)(e);
     });
 }
-function N(e) {
-    let { stream: n, analyticsContext: t, appContext: b, exitFullscreen: N, onSelect: U } = e,
+function U(e) {
+    let { stream: n, analyticsContext: t, appContext: v, exitFullscreen: U, onSelect: _ } = e,
         J = (function (e) {
             let n = L(e),
-                t = (0, h.Z)(E.Z),
-                o = f.Z.getSettings().clipsEnabled,
-                a = e.ownerId === j.default.getId(),
-                { enableViewerClipping: u, ignoreSenderPreference: c } = M.Z.useExperiment({ location: 'StreamContextMenu' }, { autoTrackExposure: !1 }),
-                s = (0, r.e7)([f.Z], () => f.Z.getIsAtMaxSaveClipOperations()),
-                d = (0, r.e7)([f.Z], () => f.Z.isViewerClippingAllowedForUser(e.ownerId)) || c;
-            return t && u && n
-                ? (0, l.jsx)(i.MenuItem, {
+                t = (0, m.Z)(E.Z),
+                a = h.Z.getSettings().clipsEnabled,
+                o = e.ownerId === j.default.getId(),
+                { enableViewerClipping: s, ignoreSenderPreference: u } = p.Z.useExperiment({ location: 'StreamContextMenu' }, { autoTrackExposure: !1 }),
+                c = (0, i.e7)([h.Z], () => h.Z.getIsAtMaxSaveClipOperations()),
+                d = (0, i.e7)([h.Z], () => h.Z.isViewerClippingAllowedForUser(e.ownerId)) || u;
+            return t && s && n
+                ? (0, l.jsx)(r.sNh, {
                       id: 'clip-stream',
-                      disabled: !o || !(a || d) || s,
-                      label: G.intl.string(G.t.U4URzM),
-                      action: () => (a ? (0, C.C1)() : (0, C.C1)((0, Z.V9)(e)))
+                      disabled: !a || !(o || d) || c,
+                      label: T.intl.string(T.t.U4URzM),
+                      action: () => (o ? (0, Z.C1)() : (0, Z.C1)((0, S.V9)(e)))
                   })
                 : null;
         })(n),
         O = L(n),
         R = (function (e) {
             let n = L(e),
-                t = (0, S.Z)(e.ownerId, T.Yn.STREAM);
+                t = (0, b.Z)(e.ownerId, N.Yn.STREAM);
             return n ? t : null;
         })(n),
-        B = (function (e) {
+        y = (function (e) {
             let n;
-            let t = (0, r.e7)([I.Z], () => null != I.Z.getRemoteSessionId()),
-                o = (0, r.e7)([v.Z], () => v.Z.getChannel(e.channelId), [e.channelId]),
-                a = L(e),
-                s = V.default.getCurrentUser(),
-                d = null != s && e.ownerId === s.id;
-            return ((n = d ? G.intl.string(G.t.S5anIS) : a ? G.intl.string(G.t.q3O3Jy) : G.intl.string(G.t['7Xq/nZ'])), t || (!d && a && (null == o ? void 0 : o.isGuildStageVoice())))
+            let t = (0, i.e7)([I.Z], () => null != I.Z.getRemoteSessionId()),
+                a = (0, i.e7)([w.Z], () => w.Z.getChannel(e.channelId), [e.channelId]),
+                o = L(e),
+                c = V.default.getCurrentUser(),
+                d = null != c && e.ownerId === c.id;
+            return ((n = d ? T.intl.string(T.t.S5anIS) : o ? T.intl.string(T.t.q3O3Jy) : T.intl.string(T.t['7Xq/nZ'])), t || (!d && o && (null == a ? void 0 : a.isGuildStageVoice())))
                 ? null
-                : (0, l.jsx)(i.MenuItem, {
+                : (0, l.jsx)(r.sNh, {
                       id: 'watch',
                       label: n,
-                      action: a
+                      action: o
                           ? function () {
-                                (0, c.g)((0, Z.V9)(e));
+                                (0, u.g)((0, S.V9)(e));
                             }
                           : function () {
-                                u.default.selectVoiceChannel(e.channelId), (0, c.rn)(e);
+                                s.default.selectVoiceChannel(e.channelId), (0, u.rn)(e);
                             }
                   });
         })(n),
-        F = (function (e) {
+        B = (function (e) {
             let n = L(e),
-                t = (0, r.e7)([E.Z], () => E.Z.isLocalMute(e.ownerId, T.Yn.STREAM)),
-                a = V.default.getCurrentUser(),
-                u = null != a && e.ownerId === a.id;
-            return !n || u
+                t = (0, i.e7)([E.Z], () => E.Z.isLocalMute(e.ownerId, N.Yn.STREAM)),
+                o = V.default.getCurrentUser(),
+                s = null != o && e.ownerId === o.id;
+            return !n || s
                 ? null
-                : (0, l.jsx)(i.MenuCheckboxItem, {
+                : (0, l.jsx)(r.S89, {
                       id: 'mute',
-                      label: G.intl.string(G.t.sWmtIy),
+                      label: T.intl.string(T.t.sWmtIy),
                       action: function () {
-                          o.Z.toggleLocalMute(e.ownerId, T.Yn.STREAM);
+                          a.Z.toggleLocalMute(e.ownerId, N.Yn.STREAM);
                       },
                       checked: t
                   });
         })(n),
-        Y = (function (e) {
+        F = (function (e) {
             let n = L(e),
                 t = e.ownerId === j.default.getId(),
-                { sidechainAvailable: a } = p.Z.getCurrentConfig({ location: 'StreamContextMenu' }),
-                u = (0, r.e7)([E.Z], () => E.Z.getSidechainCompression()),
-                c = (0, r.e7)([E.Z], () => E.Z.getSidechainCompressionStrength());
-            return t || !n || !a || (0, k.isWeb)()
+                { sidechainAvailable: o } = C.Z.getCurrentConfig({ location: 'StreamContextMenu' }),
+                s = (0, i.e7)([E.Z], () => E.Z.getSidechainCompression()),
+                u = (0, i.e7)([E.Z], () => E.Z.getSidechainCompressionStrength());
+            return t || !n || !o || (0, k.isWeb)()
                 ? null
-                : (0, l.jsxs)(i.MenuGroup, {
+                : (0, l.jsxs)(r.kSQ, {
                       children: [
-                          (0, l.jsx)(i.MenuCheckboxItem, {
+                          (0, l.jsx)(r.S89, {
                               id: 'sidechain-compression',
-                              label: G.intl.string(G.t['/jwMtr']),
-                              action: () => o.Z.setSidechainCompression(!u),
-                              checked: u
+                              label: T.intl.string(T.t['/jwMtr']),
+                              action: () => a.Z.setSidechainCompression(!s),
+                              checked: s
                           }),
-                          (0, l.jsx)(i.MenuControlItem, {
+                          (0, l.jsx)(r.II_, {
                               id: 'sidechain-parameters',
-                              label: G.intl.string(G.t.fhEzfn),
+                              label: T.intl.string(T.t.fhEzfn),
                               control: (e, n) =>
-                                  (0, l.jsx)(i.MenuSliderControl, {
+                                  (0, l.jsx)(r._wy, {
                                       ...e,
                                       ref: n,
-                                      value: c,
+                                      value: u,
                                       maxValue: 100,
-                                      onChange: (e) => o.Z.setSidechainCompressionStrength(e),
-                                      'aria-label': G.intl.string(G.t.fhEzfn)
+                                      onChange: (e) => a.Z.setSidechainCompressionStrength(e),
+                                      'aria-label': T.intl.string(T.t.fhEzfn)
                                   })
                           })
                       ]
                   });
         })(n),
-        z = (0, d.Z)(n, b, N),
-        q = (0, g.G)({
+        Q = (0, d.Z)(n, v, U),
+        Y = (0, g.G)({
             stream: n,
             channelId: n.channelId,
             location: 'StreamContextMenu'
         }),
-        y = (0, m.B)({
+        z = (0, f.B)({
             userId: n.ownerId,
             channelId: n.channelId,
             guildId: n.guildId,
             location: 'StreamContextMenu'
         }),
-        D = (function (e) {
+        q = (function (e) {
             let n = (n) => {
-                    (0, w.cq)(e, n);
+                    (0, A.cq)(e, n);
                 },
-                t = (0, w.BO)(e);
-            return (0, l.jsx)(i.MenuControlItem, {
+                t = (0, A.BO)(e);
+            return (0, l.jsx)(r.II_, {
                 id: 'stream-zoom',
-                label: G.intl.string(G.t.B3kEDg),
-                control: (e, r) =>
-                    (0, l.jsx)(i.MenuSliderControl, {
+                label: T.intl.string(T.t.B3kEDg),
+                control: (e, i) =>
+                    (0, l.jsx)(r._wy, {
                         ...e,
-                        ref: r,
+                        ref: i,
                         value: t,
                         maxValue: 300,
                         onChange: n,
                         minValue: 100,
-                        'aria-label': G.intl.string(G.t.B3kEDg)
+                        'aria-label': T.intl.string(T.t.B3kEDg)
                     })
             });
         })(n),
-        W = (function (e) {
-            let n = (0, w.xN)(e);
-            return (0, l.jsx)(i.MenuCheckboxItem, {
+        G = (function (e) {
+            let n = (0, A.xN)(e);
+            return (0, l.jsx)(r.S89, {
                 id: 'fit',
-                label: G.intl.string(G.t.mpnvra),
+                label: T.intl.string(T.t.mpnvra),
                 action: () => {
-                    (0, w.gI)(e, n === x.L.CONTAIN ? x.L.COVER : x.L.CONTAIN);
+                    (0, A.gI)(e, n === x.L.CONTAIN ? x.L.COVER : x.L.CONTAIN);
                 },
                 checked: n === x.L.COVER
             });
         })(n);
-    return (0, l.jsx)(s.Z, {
+    return (0, l.jsx)(c.Z, {
         context: t,
-        object: A.qAy.CONTEXT_MENU,
-        children: (0, l.jsxs)(i.Menu, {
+        object: M.qAy.CONTEXT_MENU,
+        children: (0, l.jsxs)(r.v2r, {
             navId: 'stream-context',
-            onClose: a.Zy,
-            'aria-label': G.intl.string(G.t.Gl3Q39),
-            onSelect: U,
+            onClose: o.Zy,
+            'aria-label': T.intl.string(T.t.Gl3Q39),
+            onSelect: _,
             children: [
-                (0, l.jsxs)(i.MenuGroup, {
-                    children: [B, J, F, q, y]
+                (0, l.jsxs)(r.kSQ, {
+                    children: [y, J, B, Y, z]
                 }),
-                (0, l.jsx)(i.MenuGroup, { children: R }),
-                (0, l.jsxs)(i.MenuGroup, {
-                    children: [D, W]
+                (0, l.jsx)(r.kSQ, { children: R }),
+                (0, l.jsxs)(r.kSQ, {
+                    children: [q, G]
                 }),
-                Y,
-                (0, l.jsx)(i.MenuGroup, { children: O && z })
+                F,
+                (0, l.jsx)(r.kSQ, { children: O && Q })
             ]
         })
     });

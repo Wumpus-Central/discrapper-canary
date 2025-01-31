@@ -1,58 +1,54 @@
-n.d(t, {
-    Z: function () {
-        return _;
-    }
-});
+n.d(t, { Z: () => v });
 var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    o = n.n(l),
-    s = n(442837),
-    a = n(481060),
-    u = n(518738),
-    d = n(786761),
+    l = n(192379),
+    r = n(120356),
+    s = n.n(r),
+    a = n(442837),
+    o = n(481060),
+    d = n(518738),
+    u = n(786761),
     c = n(3148),
     h = n(753206),
-    f = n(594174),
-    g = n(5192),
-    C = n(981631),
+    g = n(594174),
+    C = n(5192),
+    f = n(981631),
     p = n(388032),
     E = n(674055);
-function _(e) {
+function v(e) {
     var t;
-    let { guildId: n, role: l, theme: _, content: I = p.intl.string(p.t['6OSasb']), className: S } = e,
-        v = (0, s.e7)([f.default], () => f.default.getCurrentUser()),
-        m = g.ZP.useName(n, null, v),
-        T = (0, u.Kz)(l),
-        N = r.useMemo(
+    let { guildId: n, role: r, theme: v, content: _ = p.intl.string(p.t['6OSasb']), className: I } = e,
+        S = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
+        m = C.ZP.useName(n, null, S),
+        T = (0, d.Kz)(r),
+        N = l.useMemo(
             () =>
-                (0, d.e5)({
+                (0, u.e5)({
                     ...(0, c.ZP)({
                         channelId: '0',
-                        content: I,
+                        content: _,
                         tts: void 0,
                         type: void 0,
                         messageReference: void 0,
                         allowedMentions: void 0,
-                        author: v
+                        author: S
                     }),
-                    state: C.yb.SENT,
+                    state: f.yb.SENT,
                     id: '0'
                 }),
-            [v, I]
+            [S, _]
         ),
-        A = {
+        O = {
             nick: m,
-            colorString: null !== (t = l.colorString) && void 0 !== t ? t : void 0
+            colorString: null !== (t = r.colorString) && void 0 !== t ? t : void 0
         };
-    return (0, i.jsx)(a.ThemeProvider, {
-        theme: _,
+    return (0, i.jsx)(o.f6W, {
+        theme: v,
         children: (e) =>
             (0, i.jsx)('div', {
-                className: o()(e, E.container, S),
+                className: s()(e, E.container, I),
                 children: (0, i.jsx)(h.Z, {
                     hideTimestamp: !0,
-                    author: A,
+                    author: O,
                     roleIcon: T,
                     message: N,
                     isGroupStart: !0,

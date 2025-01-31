@@ -1,10 +1,6 @@
 n.d(t, {
-    Z: function () {
-        return d;
-    },
-    r: function () {
-        return c;
-    }
+    Z: () => d,
+    r: () => c
 }),
     n(47120),
     n(653041),
@@ -38,8 +34,8 @@ function c(e, t) {
                 }),
                 c.forEach((e) => {
                     let { channel: r, comparator: s } = e;
-                    if (!(r.isThread() || t.has(r.id) || (r.isGuildStageVoice() && !i) || (!n && (0, l.Z)(r))))
-                        null == r.parent_id
+                    !(r.isThread() || t.has(r.id) || (r.isGuildStageVoice() && !i) || (!n && (0, l.Z)(r))) &&
+                        (null == r.parent_id
                             ? d.push({
                                   channel: r,
                                   comparator: s
@@ -48,7 +44,7 @@ function c(e, t) {
                               u[r.parent_id].push({
                                   channel: r,
                                   comparator: s
-                              }));
+                              })));
                 }),
                 d
                     .sort((e, t) => {

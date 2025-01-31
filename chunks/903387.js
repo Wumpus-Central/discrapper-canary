@@ -1,9 +1,10 @@
-var i = r(58406);
-class a extends i.g {
-    requestPermissionCore(e, n) {
+n.d(t, { Z: () => a });
+var i = n(58406);
+class r extends i.g {
+    requestPermissionCore(e, t) {
         return Promise.resolve(!0);
     }
-    hasPermissionCore(e, n) {
+    hasPermissionCore(e, t) {
         return Promise.resolve(!0);
     }
     openSettings(e) {}
@@ -12,4 +13,4 @@ class a extends i.g {
     }
     openAlertModal(e) {}
 }
-n.Z = new a();
+let a = new r();

@@ -1,16 +1,12 @@
-r.d(n, {
-    Z: function () {
-        return s;
-    }
-});
-var i = r(335832),
-    a = r(665336);
-function o(e, n) {
-    for (var r = 0; r < n.length; r++) {
-        var o = n[r];
-        (o.enumerable = o.enumerable || !1), (o.configurable = !0), 'value' in o && (o.writable = !0), i(e, (0, a.Z)(o.key), o);
+n.d(t, { Z: () => s });
+var i = n(335832),
+    r = n(665336);
+function a(e, t) {
+    for (var n = 0; n < t.length; n++) {
+        var a = t[n];
+        (a.enumerable = a.enumerable || !1), (a.configurable = !0), 'value' in a && (a.writable = !0), i(e, (0, r.Z)(a.key), a);
     }
 }
-function s(e, n, r) {
-    return n && o(e.prototype, n), r && o(e, r), i(e, 'prototype', { writable: !1 }), e;
+function s(e, t, n) {
+    return t && a(e.prototype, t), n && a(e, n), i(e, 'prototype', { writable: !1 }), e;
 }

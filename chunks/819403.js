@@ -1,47 +1,43 @@
-t.d(n, {
-    Z: function () {
-        return g;
-    }
-});
-var l = t(200651);
-t(192379);
-var i = t(442837),
-    r = t(481060),
-    a = t(430824),
-    u = t(594174),
-    o = t(979651),
-    d = t(471253),
-    s = t(200498),
-    c = t(88751),
-    Z = t(267980),
-    f = t(623633),
-    m = t(388032);
-function g(e) {
-    var n;
-    let t = (0, f.Z)(),
-        g = null == t ? void 0 : t.id,
-        M = null == t ? void 0 : t.guild_id,
-        x = (0, i.e7)([a.Z], () => a.Z.getGuild(M), [M]),
-        h = (0, i.e7)([o.Z], () => (null != g ? o.Z.getVoiceStateForChannel(g, e.id) : null), [g, e.id]),
-        v = (null === (n = u.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) === e.id,
-        p = (0, Z.Z)(),
-        b = (0, i.e7)([c.ZP], () => c.ZP.getPermissionsForUser(e.id, g), [g, e.id]),
-        I = (0, s.B)(g);
-    if (null == t || null == x || null == h || b.speaker) return null;
-    let C = () => {
-        v ? (0, d.RK)(t, !1) : (0, d._0)(t, e.id);
+n.d(e, { Z: () => v });
+var i = n(200651);
+n(192379);
+var l = n(442837),
+    a = n(481060),
+    d = n(430824),
+    r = n(594174),
+    o = n(979651),
+    s = n(471253),
+    u = n(200498),
+    c = n(88751),
+    g = n(267980),
+    Z = n(623633),
+    f = n(388032);
+function v(t) {
+    var e;
+    let n = (0, Z.Z)(),
+        v = null == n ? void 0 : n.id,
+        b = null == n ? void 0 : n.guild_id,
+        h = (0, l.e7)([d.Z], () => d.Z.getGuild(b), [b]),
+        m = (0, l.e7)([o.Z], () => (null != v ? o.Z.getVoiceStateForChannel(v, t.id) : null), [v, t.id]),
+        x = (null === (e = r.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === t.id,
+        I = (0, g.Z)(),
+        U = (0, l.e7)([c.ZP], () => c.ZP.getPermissionsForUser(t.id, v), [v, t.id]),
+        _ = (0, u.B)(v);
+    if (null == n || null == h || null == m || U.speaker) return null;
+    let p = () => {
+        x ? (0, s.RK)(n, !1) : (0, s._0)(n, t.id);
     };
-    return I
-        ? (0, l.jsx)(r.MenuItem, {
+    return _
+        ? (0, i.jsx)(a.sNh, {
               id: 'invite-speaker',
-              label: v ? m.intl.string(m.t['W6c/VV']) : m.intl.string(m.t.VUCWcH),
-              action: C
+              label: x ? f.intl.string(f.t['W6c/VV']) : f.intl.string(f.t.VUCWcH),
+              action: p
           })
-        : p && v
-          ? (0, l.jsx)(r.MenuItem, {
+        : I && x
+          ? (0, i.jsx)(a.sNh, {
                 id: 'invite-speaker',
-                label: m.intl.string(m.t['W6c/VV']),
-                action: C
+                label: f.intl.string(f.t['W6c/VV']),
+                action: p
             })
           : null;
 }

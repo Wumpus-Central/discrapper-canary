@@ -1,29 +1,25 @@
-r.d(n, {
-    Z: function () {
-        return l;
-    }
-});
-var i = r(49691),
-    a = r(285363),
-    o = r(977489),
-    s = r(436857);
-function l(e, n) {
-    var r = (0, i.Z)(e),
-        l = (0, a.Z)(e),
-        u = r.visualViewport,
-        c = l.clientWidth,
-        d = l.clientHeight,
-        f = 0,
-        p = 0;
-    if (u) {
-        (c = u.width), (d = u.height);
-        var h = (0, s.Z)();
-        (h || (!h && 'fixed' === n)) && ((f = u.offsetLeft), (p = u.offsetTop));
+n.d(t, { Z: () => o });
+var i = n(49691),
+    r = n(285363),
+    a = n(977489),
+    s = n(436857);
+function o(e, t) {
+    var n = (0, i.Z)(e),
+        o = (0, r.Z)(e),
+        l = n.visualViewport,
+        u = o.clientWidth,
+        c = o.clientHeight,
+        d = 0,
+        f = 0;
+    if (l) {
+        (u = l.width), (c = l.height);
+        var _ = (0, s.Z)();
+        (_ || (!_ && 'fixed' === t)) && ((d = l.offsetLeft), (f = l.offsetTop));
     }
     return {
-        width: c,
-        height: d,
-        x: f + (0, o.Z)(e),
-        y: p
+        width: u,
+        height: c,
+        x: d + (0, a.Z)(e),
+        y: f
     };
 }

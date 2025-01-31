@@ -1,28 +1,23 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => d }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    s = n(969090),
-    a = n(481060),
-    l = n(619236),
-    o = n(992167),
+    s = n(192379),
+    r = n(914552),
+    l = n(481060),
+    a = n(554593),
+    o = n(780567),
     c = n(388032);
 function d() {
-    r.useSyncExternalStore(c.intl.onLocaleChange, () => c.intl.currentLocale);
-    let [, e] = r.useState({});
+    s.useSyncExternalStore(c.intl.onLocaleChange, () => c.intl.currentLocale);
+    let [, e] = s.useState({});
     return (
-        r.useEffect(() => {
-            (0, s.waitForAllDefaultIntlMessagesLoaded)().then(() => {
+        s.useEffect(() => {
+            (0, r.waitForAllDefaultIntlMessagesLoaded)().then(() => {
                 e({});
             });
         }, []),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(a.Select, {
+                (0, i.jsx)(l.PhF, {
                     options: [
                         {
                             value: 'en-US',
@@ -37,41 +32,41 @@ function d() {
                     select: (e) => c.intl.setLocale(e),
                     serialize: (e) => e
                 }),
-                (0, i.jsx)(a.Spacer, { size: 32 }),
-                (0, i.jsxs)(a.FormSection, {
-                    tag: a.FormTitleTags.H1,
+                (0, i.jsx)(l.LZC, { size: 32 }),
+                (0, i.jsxs)(l.hjN, {
+                    tag: l.RB0.H1,
                     children: [
-                        (0, i.jsx)(a.Text, {
+                        (0, i.jsx)(l.Text, {
                             tag: 'div',
                             variant: 'heading-lg/bold',
                             children: c.intl.format(o.Z.JJ0wpK, {})
                         }),
-                        (0, i.jsx)(a.Text, {
+                        (0, i.jsx)(l.Text, {
                             tag: 'div',
                             variant: 'text-md/normal',
-                            children: c.intl.format(l.Z.swfLzc, {})
+                            children: c.intl.format(a.Z.swfLzc, {})
                         }),
-                        (0, i.jsx)(a.Text, {
+                        (0, i.jsx)(l.Text, {
                             tag: 'div',
                             variant: 'text-md/normal',
                             children: c.intl.format(o.Z['rmps8/'], {})
                         }),
-                        (0, i.jsx)(a.Text, {
+                        (0, i.jsx)(l.Text, {
                             tag: 'div',
                             variant: 'text-md/normal',
                             children: c.intl.format(o.Z.uczI4u, { linkTarget: console.log })
                         }),
-                        (0, i.jsx)(a.Text, {
+                        (0, i.jsx)(l.Text, {
                             tag: 'div',
                             variant: 'text-md/normal',
                             children: c.intl.format(o.Z.rdfRys, {})
                         }),
-                        (0, i.jsx)(a.Text, {
+                        (0, i.jsx)(l.Text, {
                             tag: 'div',
                             variant: 'text-md/normal',
                             children: c.intl.format(o.Z['Q+eyqq'], { count: 1 })
                         }),
-                        (0, i.jsx)(a.Text, {
+                        (0, i.jsx)(l.Text, {
                             tag: 'div',
                             variant: 'text-md/normal',
                             children: c.intl.format(o.Z.XOdbAw, {

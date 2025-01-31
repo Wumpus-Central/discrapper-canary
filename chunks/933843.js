@@ -1,54 +1,46 @@
-r.d(n, {
-    F4: function () {
-        return E;
-    },
-    So: function () {
-        return b;
-    },
-    mc: function () {
-        return y;
-    },
-    vw: function () {
-        return v;
-    }
+n.d(t, {
+    F4: () => g,
+    So: () => y,
+    mc: () => v,
+    vw: () => E
 });
-var i = r(314897),
-    a = r(592125),
-    o = r(430824),
-    s = r(594174),
-    l = r(979651),
-    u = r(111361),
-    c = r(386542),
-    d = r(114064),
-    f = r(1163),
-    p = r(474936),
-    h = r(981631),
-    _ = r(37113);
-function m() {
+var i = n(314897),
+    r = n(592125),
+    a = n(430824),
+    s = n(594174),
+    o = n(979651),
+    l = n(111361),
+    u = n(386542),
+    c = n(114064),
+    d = n(1163),
+    f = n(474936),
+    _ = n(981631),
+    p = n(37113);
+function h() {
     let e = s.default.getCurrentUser();
-    return null != e && !(0, u.I5)(e, p.p9.TIER_1);
+    return null != e && !(0, l.I5)(e, f.p9.TIER_1);
+}
+function m() {
+    var e;
+    let t = null === (e = o.Z.getVoiceStateForUser(i.default.getId())) || void 0 === e ? void 0 : e.channelId;
+    if (null == t) return !1;
+    let n = r.Z.getChannel(t);
+    if (null == n) return !1;
+    let s = a.Z.getGuild(n.guild_id);
+    return null != s && s.premiumTier >= _.Eu4.TIER_2;
 }
 function g() {
-    var e;
-    let n = null === (e = l.Z.getVoiceStateForUser(i.default.getId())) || void 0 === e ? void 0 : e.channelId;
-    if (null == n) return !1;
-    let r = a.Z.getChannel(n);
-    if (null == r) return !1;
-    let s = o.Z.getGuild(r.guild_id);
-    return null != s && s.premiumTier >= h.Eu4.TIER_2;
+    let { enabled: e } = d.Z.getCurrentConfig({ location: 'shouldFetchPerksDemos' }, { autoTrackExposure: !1 });
+    return e && c.Z.shouldFetch() && h() && !m();
 }
-function E() {
-    let { enabled: e } = f.Z.getCurrentConfig({ location: 'shouldFetchPerksDemos' }, { autoTrackExposure: !1 });
-    return e && d.Z.shouldFetch() && m() && !g();
+function E(e) {
+    let { enabled: t } = d.Z.getCurrentConfig({ location: 'shouldFetchPerksDemos' }, { autoTrackExposure: !1 });
+    return t && c.Z.shouldActivate(e) && h() && !m();
 }
-function v(e) {
-    let { enabled: n } = f.Z.getCurrentConfig({ location: 'shouldFetchPerksDemos' }, { autoTrackExposure: !1 });
-    return n && d.Z.shouldActivate(e) && m() && !g();
+function v(e, t) {
+    return e === p.LY.RESOLUTION_720 && t !== p.ws.FPS_60;
 }
-function y(e, n) {
-    return e === _.LY.RESOLUTION_720 && n !== _.ws.FPS_60;
-}
-function b(e) {
-    let { activated: n } = (0, c.k)(e);
-    return n;
+function y(e) {
+    let { activated: t } = (0, u.k)(e);
+    return t;
 }

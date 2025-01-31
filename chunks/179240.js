@@ -1,39 +1,35 @@
 let i;
-r.d(n, {
-    l: function () {
-        return m;
-    }
-});
-var a,
-    o = r(200651),
-    s = r(192379),
-    l = r(120356),
-    u = r.n(l),
-    c = r(58654),
-    d = r(84735),
-    f = r(763971);
-function p(e, n, r) {
+n.d(t, { l: () => h });
+var r,
+    a = n(200651),
+    s = n(192379),
+    o = n(120356),
+    l = n.n(o),
+    u = n(58654),
+    c = n(84735),
+    d = n(763971);
+function f(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let h = '\n  visibility:hidden;\n  overflow:hidden;\n  position:absolute;\n  z-index:-1000;\n  top:0;\n  right:0;\n',
-    _ = ['letter-spacing', 'line-height', 'padding-top', 'padding-bottom', 'font-family', 'font-weight', 'font-size', 'text-transform', 'width', 'padding-left', 'padding-right', 'border-width', 'box-sizing'];
-class m extends (a = s.PureComponent) {
+let _ = '\n  visibility:hidden;\n  overflow:hidden;\n  position:absolute;\n  z-index:-1000;\n  top:0;\n  right:0;\n',
+    p = ['letter-spacing', 'line-height', 'padding-top', 'padding-bottom', 'font-family', 'font-weight', 'font-size', 'text-transform', 'width', 'padding-left', 'padding-right', 'border-width', 'box-sizing'];
+class h extends (r = s.PureComponent) {
     componentDidMount() {
-        var e, n;
-        null === (e = (n = this.props).onResize) || void 0 === e || e.call(n, void 0), Promise.resolve().then(() => this.calculateSize());
+        var e, t;
+        null === (e = (t = this.props).onResize) || void 0 === e || e.call(t, void 0), Promise.resolve().then(() => this.calculateSize());
     }
-    componentDidUpdate(e, n) {
-        if (this.state.height !== n.height) {
+    componentDidUpdate(e, t) {
+        if (this.state.height !== t.height) {
             let { onResize: e } = this.props;
             null == e || e(this.state.height);
         }
@@ -41,30 +37,30 @@ class m extends (a = s.PureComponent) {
     }
     calculateSize() {
         var e;
-        let n = this._textArea;
-        if (null == n) return;
-        let { fontWidthEstimate: r, rows: a } = this.props,
-            o = null !== (e = this.props.value) && void 0 !== e ? e : n.value;
-        if (null != r && -1 === o.indexOf('\n') && o.length * r < 0.8 * n.offsetWidth) {
+        let t = this._textArea;
+        if (null == t) return;
+        let { fontWidthEstimate: n, rows: r } = this.props,
+            a = null !== (e = this.props.value) && void 0 !== e ? e : t.value;
+        if (null != n && -1 === a.indexOf('\n') && a.length * n < 0.8 * t.offsetWidth) {
             this.setState({ height: void 0 });
             return;
         }
         null == i && null != document.body && ((i = document.createElement('textarea')), document.body.appendChild(i));
-        let { paddingSize: s, borderSize: l, boxSizing: u, sizingStyle: c } = this.calculateNodeStyling(n);
-        i.setAttribute('style', c + ';' + h), (i.value = o), null != a ? i.setAttribute('rows', ''.concat(a)) : i.removeAttribute('rows');
-        let d = i.scrollHeight;
-        'border-box' === u ? (d += l) : 'content-box' === u && (d -= s), this.setState({ height: d });
+        let { paddingSize: s, borderSize: o, boxSizing: l, sizingStyle: u } = this.calculateNodeStyling(t);
+        i.setAttribute('style', u + ';' + _), (i.value = a), null != r ? i.setAttribute('rows', ''.concat(r)) : i.removeAttribute('rows');
+        let c = i.scrollHeight;
+        'border-box' === l ? (c += o) : 'content-box' === l && (c -= s), this.setState({ height: c });
     }
     calculateNodeStyling(e) {
-        let n = window.getComputedStyle(e),
-            r = (0, c.L)(n.getPropertyValue('box-sizing'), n.getPropertyValue('-moz-box-sizing'), n.getPropertyValue('-webkit-box-sizing')),
-            i = parseFloat(n.getPropertyValue('padding-bottom')) + parseFloat(n.getPropertyValue('padding-top')),
-            a = parseFloat(n.getPropertyValue('border-bottom-width')) + parseFloat(n.getPropertyValue('border-top-width'));
+        let t = window.getComputedStyle(e),
+            n = (0, u.L)(t.getPropertyValue('box-sizing'), t.getPropertyValue('-moz-box-sizing'), t.getPropertyValue('-webkit-box-sizing')),
+            i = parseFloat(t.getPropertyValue('padding-bottom')) + parseFloat(t.getPropertyValue('padding-top')),
+            r = parseFloat(t.getPropertyValue('border-bottom-width')) + parseFloat(t.getPropertyValue('border-top-width'));
         return {
-            sizingStyle: _.map((e) => ''.concat(e, ':').concat(n.getPropertyValue(e))).join(';'),
+            sizingStyle: p.map((e) => ''.concat(e, ':').concat(t.getPropertyValue(e))).join(';'),
             paddingSize: i,
-            borderSize: a,
-            boxSizing: r
+            borderSize: r,
+            boxSizing: n
         };
     }
     clear() {
@@ -78,52 +74,52 @@ class m extends (a = s.PureComponent) {
         let { _textArea: e } = this;
         null != e && e.focus();
     }
-    setSelection(e, n) {
-        null != this._textArea && ((this._textArea.selectionStart = e), (this._textArea.selectionEnd = n));
+    setSelection(e, t) {
+        null != this._textArea && ((this._textArea.selectionStart = e), (this._textArea.selectionEnd = t));
     }
     get selectionStart() {
-        var e, n;
-        return null !== (n = null === (e = this._textArea) || void 0 === e ? void 0 : e.selectionStart) && void 0 !== n ? n : 0;
+        var e, t;
+        return null !== (t = null === (e = this._textArea) || void 0 === e ? void 0 : e.selectionStart) && void 0 !== t ? t : 0;
     }
     get selectionEnd() {
-        var e, n;
-        return null !== (n = null === (e = this._textArea) || void 0 === e ? void 0 : e.selectionEnd) && void 0 !== n ? n : 0;
+        var e, t;
+        return null !== (t = null === (e = this._textArea) || void 0 === e ? void 0 : e.selectionEnd) && void 0 !== t ? t : 0;
     }
     get value() {
-        var e, n;
-        return null !== (n = null === (e = this._textArea) || void 0 === e ? void 0 : e.value) && void 0 !== n ? n : '';
+        var e, t;
+        return null !== (t = null === (e = this._textArea) || void 0 === e ? void 0 : e.value) && void 0 !== t ? t : '';
     }
     render() {
-        let { style: e, className: n, onResize: r, ...i } = this.props;
+        let { style: e, className: t, onResize: n, ...i } = this.props;
         delete i.fontWidthEstimate;
-        let a = {
+        let r = {
             ...this.state,
             ...e
         };
-        return (0, o.jsx)(d.t, {
-            children: (0, o.jsx)('textarea', {
+        return (0, a.jsx)(c.t, {
+            children: (0, a.jsx)('textarea', {
                 ...i,
-                className: u()(n, f.scrollbarGhostHairline),
+                className: l()(t, d.scrollbarGhostHairline),
                 ref: this.handleSetRef,
-                style: a,
+                style: r,
                 onChange: this.handleChange
             })
         });
     }
     constructor(e) {
         super(e),
-            p(this, '_textArea', void 0),
-            p(this, 'handleSetRef', (e) => {
+            f(this, '_textArea', void 0),
+            f(this, 'handleSetRef', (e) => {
                 this._textArea = e;
             }),
-            p(this, 'handleChange', (e) => {
-                let { onChange: n } = this.props;
-                null == n || n(e), this.calculateSize();
+            f(this, 'handleChange', (e) => {
+                let { onChange: t } = this.props;
+                null == t || t(e), this.calculateSize();
             }),
             (this.state = { height: void 0 });
     }
 }
-p(m, 'defaultProps', {
+f(h, 'defaultProps', {
     autoFocus: !1,
     disabled: !1,
     autoCorrect: 'off'

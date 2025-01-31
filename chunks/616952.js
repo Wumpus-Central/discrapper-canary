@@ -1,20 +1,16 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-});
+n.d(t, { Z: () => s });
 var i = n(200651);
 n(192379);
 var r = n(882037),
-    s = n(853268),
-    l = n(388032),
+    l = n(853268),
+    a = n(388032),
     o = n(232186);
-function a() {
+function s() {
     let { required: e, checked: t } = (0, r.MD)();
     return e
-        ? (0, i.jsx)(s.Z, {
+        ? (0, i.jsx)(l.Z, {
               value: t,
-              subText: l.intl.string(l.t['0p3R09']),
+              subText: a.intl.string(a.t['0p3R09']),
               onChange: r.ZJ,
               marginTopStyle: o.marginTop8,
               muted: !0

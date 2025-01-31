@@ -1,68 +1,59 @@
 n.d(t, {
-    CE: function () {
-        return c;
-    },
-    F5: function () {
-        return r;
-    },
-    TL: function () {
-        return s;
-    },
-    YA: function () {
-        return i;
-    }
+    CE: () => c,
+    F5: () => o,
+    TL: () => r,
+    YA: () => s
 });
 var l,
     a,
-    i,
-    r,
-    o = n(388032);
-function s() {
+    i = n(388032),
+    s = (((l = {}).TOO_MANY_NOTIFICATIONS = 'too_many_notifications'), (l.TEMPORARY_BREAK = 'temporary_break'), (l.ANNOYING = 'annoying'), (l.UNSAFE = 'unsafe'), (l.SPAM = 'spam'), (l.OTHER = 'other'), l);
+function r() {
     return [
         {
             value: 'too_many_notifications',
-            label: o.intl.string(o.t.bQHhT0)
+            label: i.intl.string(i.t.bQHhT0)
         },
         {
             value: 'temporary_break',
-            label: o.intl.string(o.t.OuPkvL)
+            label: i.intl.string(i.t.OuPkvL)
         },
         {
             value: 'annoying',
-            label: o.intl.string(o.t['3kmAMD'])
+            label: i.intl.string(i.t['3kmAMD'])
         },
         {
             value: 'unsafe',
-            label: o.intl.string(o.t.nmW7jI)
+            label: i.intl.string(i.t.nmW7jI)
         },
         {
             value: 'spam',
-            label: o.intl.string(o.t.cCPYjo)
+            label: i.intl.string(i.t.cCPYjo)
         },
         {
             value: 'other',
-            label: o.intl.string(o.t['7ZIIJy'])
+            label: i.intl.string(i.t['7ZIIJy'])
         }
     ];
 }
+var o = (((a = {}).CONFUSION = 'confusion'), (a.DOES_NOT_ACHIEVE_WANTS = 'does_not_achieve_wants'), (a.HARD_TO_ACCESS = 'hard_to_access'), (a.SOMETHING_ELSE = 'something_else'), a);
 function c() {
     return [
         {
             value: 'confusion',
-            label: o.intl.string(o.t['64Oph4'])
+            label: i.intl.string(i.t['64Oph4'])
         },
         {
             value: 'does_not_achieve_wants',
-            label: o.intl.string(o.t['wH5R/v'])
+            label: i.intl.string(i.t['wH5R/v'])
         },
         {
             value: 'hard_to_access',
-            label: o.intl.string(o.t['4uZBRk'])
+            label: i.intl.string(i.t['4uZBRk'])
         },
         {
             value: 'something_else',
-            label: o.intl.string(o.t.YicFbG)
+            label: i.intl.string(i.t.YicFbG)
         }
     ];
 }
-((l = i || (i = {})).TOO_MANY_NOTIFICATIONS = 'too_many_notifications'), (l.TEMPORARY_BREAK = 'temporary_break'), (l.ANNOYING = 'annoying'), (l.UNSAFE = 'unsafe'), (l.SPAM = 'spam'), (l.OTHER = 'other'), ((a = r || (r = {})).CONFUSION = 'confusion'), (a.DOES_NOT_ACHIEVE_WANTS = 'does_not_achieve_wants'), (a.HARD_TO_ACCESS = 'hard_to_access'), (a.SOMETHING_ELSE = 'something_else');

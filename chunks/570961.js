@@ -1,49 +1,33 @@
 t.d(n, {
-    $y: function () {
-        return E;
-    },
-    Kk: function () {
-        return T;
-    },
-    NB: function () {
-        return g;
-    },
-    en: function () {
-        return p;
-    },
-    fi: function () {
-        return f;
-    },
-    n_: function () {
-        return _;
-    },
-    rS: function () {
-        return x;
-    },
-    tS: function () {
-        return S;
-    }
+    $y: () => _,
+    Kk: () => x,
+    NB: () => g,
+    en: () => v,
+    fi: () => E,
+    n_: () => f,
+    rS: () => S,
+    tS: () => T
 }),
     t(411104),
     t(47120);
-var i = t(544891),
-    l = t(570140),
-    r = t(668781),
-    s = t(881052),
+var l = t(544891),
+    i = t(570140),
+    s = t(668781),
+    r = t(881052),
     a = t(339085),
     o = t(107862),
-    c = t(592125),
-    d = t(430824),
+    d = t(592125),
+    c = t(430824),
     u = t(823379),
     m = t(208665),
     I = t(981631),
     h = t(290511),
     N = t(388032);
 function g() {
-    l.Z.dispatch({ type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_RESET' });
+    i.Z.dispatch({ type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_RESET' });
 }
-function T(e, n, t) {
-    S(
+function x(e, n, t) {
+    T(
         e,
         m.Z.editedOnboardingPrompts.map((e) =>
             e.id === n
@@ -55,139 +39,139 @@ function T(e, n, t) {
         )
     );
 }
-function f(e, n) {
-    S(
+function E(e, n) {
+    T(
         e,
         m.Z.editedOnboardingPrompts.filter((e) => e.id !== n)
     );
 }
-function S(e, n) {
+function T(e, n) {
     let t = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
     if (
-        (l.Z.dispatch({
+        (i.Z.dispatch({
             type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_EDIT',
             prompts: n
         }),
         t)
     ) {
-        let t = n.map((t) => v(e, n, t));
-        l.Z.dispatch({
+        let t = n.map((t) => p(e, n, t));
+        i.Z.dispatch({
             type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_ERRORS',
             errors: t
         });
     }
 }
-async function x(e, n) {
+async function S(e, n) {
     let { dropdownsAllowed: t } = (0, o.RM)(e.id);
     if (!m.Z.hasChanges()) return;
-    let i = m.Z.editedOnboardingPrompts;
-    null != n && n.ignoreDefaultPrompt && 1 === i.length && (0, h.RF)(i[0]) && (i = []);
-    let I = i.map((n) => {
-            let i = n.options.map((n) => {
-                let t = null == n.roleIds ? n.roleIds : n.roleIds.filter((n) => null != d.Z.getRole(e.id, n)),
-                    i = null == n.channelIds ? n.channelIds : n.channelIds.filter((e) => null != c.Z.getChannel(e));
+    let l = m.Z.editedOnboardingPrompts;
+    null != n && n.ignoreDefaultPrompt && 1 === l.length && (0, h.RF)(l[0]) && (l = []);
+    let I = l.map((n) => {
+            let l = n.options.map((n) => {
+                let t = null == n.roleIds ? n.roleIds : n.roleIds.filter((n) => null != c.Z.getRole(e.id, n)),
+                    l = null == n.channelIds ? n.channelIds : n.channelIds.filter((e) => null != d.Z.getChannel(e));
                 return {
                     ...n,
                     roleIds: t,
-                    channelIds: i,
+                    channelIds: l,
                     emoji: (function (e) {
                         var n;
-                        if (null == e) return;
-                        if ((null === (n = e.emoji) || void 0 === n ? void 0 : n.id) == null) return e.emoji;
-                        if (null != a.ZP.getCustomEmojiById(e.emoji.id)) return e.emoji;
+                        if (null != e) {
+                            if ((null === (n = e.emoji) || void 0 === n ? void 0 : n.id) == null || null != a.ZP.getCustomEmojiById(e.emoji.id)) return e.emoji;
+                        }
                     })(n)
                 };
             });
             return {
                 ...n,
-                options: i,
-                type: i.length >= h.fY && t ? h.FN.DROPDOWN : h.FN.MULTIPLE_CHOICE
+                options: l,
+                type: l.length >= h.fY && t ? h.FN.DROPDOWN : h.FN.MULTIPLE_CHOICE
             };
         }),
         g = I.filter((e) => e.inOnboarding),
-        T = I.filter((e) => !0 !== e.inOnboarding),
-        f = I.map((n) => v(e, I, n));
-    if (f.filter(u.lm).length > 0)
+        x = I.filter((e) => !0 !== e.inOnboarding),
+        E = I.map((n) => p(e, I, n));
+    if (E.filter(u.lm).length > 0)
         throw (
-            (l.Z.dispatch({
+            (i.Z.dispatch({
                 type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED',
-                errors: f
+                errors: E
             }),
             Error('failed to locally validate prompts'))
         );
     if (g.length > h.b3)
         throw (
-            (r.Z.show({
+            (s.Z.show({
                 title: N.intl.string(N.t.iLdiqa),
                 body: N.intl.formatToPlainString(N.t['cTb/rq'], { numQuestions: h.b3 })
             }),
-            l.Z.dispatch({
+            i.Z.dispatch({
                 type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED',
-                errors: f
+                errors: E
             }),
             Error('too many prompts in onboarding'))
         );
-    let S = [...g, ...T];
-    l.Z.dispatch({ type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT' });
+    let T = [...g, ...x];
+    i.Z.dispatch({ type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT' });
     try {
-        await _(e.id, { prompts: S.map(h.dr) }),
-            l.Z.dispatch({
+        await f(e.id, { prompts: T.map(h.dr) }),
+            i.Z.dispatch({
                 type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS',
                 guildId: e.id,
-                updates: { prompts: S }
+                updates: { prompts: T }
             });
     } catch (t) {
-        var x;
-        let { fieldName: e, error: n } = null !== (x = new s.Hx(t).getAnyErrorMessageAndField()) && void 0 !== x ? x : {};
+        var S;
+        let { fieldName: e, error: n } = null !== (S = new r.Hx(t).getAnyErrorMessageAndField()) && void 0 !== S ? S : {};
         throw (
-            (r.Z.show({
+            (s.Z.show({
                 title: N.intl.string(N.t.iLdiqa),
                 body: [e, n].filter(u.lm).join(': ')
             }),
-            l.Z.dispatch({ type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED' }),
+            i.Z.dispatch({ type: 'GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED' }),
             Error('failed to save prompts'))
         );
     }
 }
-async function E(e, n) {
-    l.Z.dispatch({
+async function _(e, n) {
+    i.Z.dispatch({
         type: 'GUILD_ONBOARDING_PROMPTS_LOCAL_UPDATE',
         guildId: e,
         updates: { enabled: n }
     });
     try {
-        await _(e, { enabled: n });
-    } catch (i) {
+        await f(e, { enabled: n });
+    } catch (l) {
         var t;
-        let { fieldName: e, error: n } = null !== (t = new s.Hx(i).getAnyErrorMessageAndField()) && void 0 !== t ? t : {};
-        r.Z.show({
+        let { fieldName: e, error: n } = null !== (t = new r.Hx(l).getAnyErrorMessageAndField()) && void 0 !== t ? t : {};
+        s.Z.show({
             title: N.intl.string(N.t.iLdiqa),
             body: [e, n].filter(u.lm).join(': ')
         });
     }
 }
-async function _(e, n) {
-    await i.tn.put({
+async function f(e, n) {
+    await l.tn.put({
         url: I.ANM.GUILD_ONBOARDING(e),
         body: n,
         rejectWithError: !1
     });
 }
-function v(e, n, t) {
-    let i = { optionErrors: [] },
-        l = !1;
-    return t.title.length <= 0 && ((i.title = N.intl.string(N.t.h8Hg1d)), (l = !0)), t.options.length <= 0 && ((i.options = N.intl.string(N.t['64tF+f'])), (l = !0)), t.inOnboarding && n.filter((e) => e.inOnboarding).length > h.b3 && ((i.config = N.intl.formatToPlainString(N.t['cTb/rq'], { numQuestions: h.b3 })), (l = !0)), (i.optionErrors = t.options.map((i) => p(e, n, t, i))), (l = l || i.optionErrors.some((e) => null != e)) ? i : null;
+function p(e, n, t) {
+    let l = { optionErrors: [] },
+        i = !1;
+    return t.title.length <= 0 && ((l.title = N.intl.string(N.t.h8Hg1d)), (i = !0)), t.options.length <= 0 && ((l.options = N.intl.string(N.t['64tF+f'])), (i = !0)), t.inOnboarding && n.filter((e) => e.inOnboarding).length > h.b3 && ((l.config = N.intl.formatToPlainString(N.t['cTb/rq'], { numQuestions: h.b3 })), (i = !0)), (l.optionErrors = t.options.map((l) => v(e, n, t, l))), (i = i || l.optionErrors.some((e) => null != e)) ? l : null;
 }
-function p(e, n, t, i) {
-    var l, r, s;
+function v(e, n, t, l) {
+    var i, s, r;
     if (t.singleSelect) {
-        let e = new Set(null !== (l = i.roleIds) && void 0 !== l ? l : []);
-        for (let i of n)
-            if (i.id !== t.id) {
-                for (let n of i.options) if (null != n.roleIds && n.roleIds.some((n) => e.has(n))) return N.intl.string(N.t.rKxyvb);
+        let e = new Set(null !== (i = l.roleIds) && void 0 !== i ? i : []);
+        for (let l of n)
+            if (l.id !== t.id) {
+                for (let n of l.options) if (null != n.roleIds && n.roleIds.some((n) => e.has(n))) return N.intl.string(N.t.rKxyvb);
             }
     }
-    let a = (null !== (r = i.roleIds) && void 0 !== r ? r : []).filter((n) => null != d.Z.getRole(e.id, n)),
-        o = (null !== (s = i.channelIds) && void 0 !== s ? s : []).filter((e) => null != c.Z.getChannel(e));
+    let a = (null !== (s = l.roleIds) && void 0 !== s ? s : []).filter((n) => null != c.Z.getRole(e.id, n)),
+        o = (null !== (r = l.channelIds) && void 0 !== r ? r : []).filter((e) => null != d.Z.getChannel(e));
     return 0 === a.length && 0 === o.length ? N.intl.string(N.t.F6SUWF) : null;
 }

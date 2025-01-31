@@ -37,21 +37,19 @@ var f = (function (e) {
             a = i && !i.isMounting ? t.enter : t.appear;
         return (o.appearStatus = null), t.in ? (a ? ((r = l), (o.appearStatus = c)) : (r = p)) : (r = t.unmountOnExit || t.mountOnEnter ? s : l), (o.state = { status: r }), (o.nextCallback = null), o;
     }
-    (n = t), (o = e), (n.prototype = Object.create(o.prototype)), (n.prototype.constructor = n), (n.__proto__ = o);
-    var n,
-        o,
-        a = t.prototype;
+    (t.prototype = Object.create(e.prototype)), (t.prototype.constructor = t), (t.__proto__ = e);
+    var n = t.prototype;
     return (
-        (a.getChildContext = function () {
+        (n.getChildContext = function () {
             return { transitionGroup: null };
         }),
         (t.getDerivedStateFromProps = function (e, t) {
             return e.in && t.status === s ? { status: l } : null;
         }),
-        (a.componentDidMount = function () {
+        (n.componentDidMount = function () {
             this.updateStatus(!0, this.appearStatus);
         }),
-        (a.componentDidUpdate = function (e) {
+        (n.componentDidUpdate = function (e) {
             var t = null;
             if (e !== this.props) {
                 var n = this.state.status;
@@ -59,10 +57,10 @@ var f = (function (e) {
             }
             this.updateStatus(!1, t);
         }),
-        (a.componentWillUnmount = function () {
+        (n.componentWillUnmount = function () {
             this.cancelNextCallback();
         }),
-        (a.getTimeouts = function () {
+        (n.getTimeouts = function () {
             var e,
                 t,
                 n,
@@ -77,14 +75,14 @@ var f = (function (e) {
                 }
             );
         }),
-        (a.updateStatus = function (e, t) {
+        (n.updateStatus = function (e, t) {
             if ((void 0 === e && (e = !1), null !== t)) {
                 this.cancelNextCallback();
                 var n = i.default.findDOMNode(this);
                 t === c ? this.performEnter(n, e) : this.performExit(n);
             } else this.props.unmountOnExit && this.state.status === l && this.setState({ status: s });
         }),
-        (a.performEnter = function (e, t) {
+        (n.performEnter = function (e, t) {
             var n = this,
                 o = this.props.enter,
                 r = this.context.transitionGroup ? this.context.transitionGroup.isMounting : t,
@@ -106,7 +104,7 @@ var f = (function (e) {
                         });
                 });
         }),
-        (a.performExit = function (e) {
+        (n.performExit = function (e) {
             var t = this,
                 n = this.props.exit,
                 o = this.getTimeouts();
@@ -126,13 +124,13 @@ var f = (function (e) {
                         });
                 });
         }),
-        (a.cancelNextCallback = function () {
+        (n.cancelNextCallback = function () {
             null !== this.nextCallback && (this.nextCallback.cancel(), (this.nextCallback = null));
         }),
-        (a.safeSetState = function (e, t) {
+        (n.safeSetState = function (e, t) {
             (t = this.setNextCallback(t)), this.setState(e, t);
         }),
-        (a.setNextCallback = function (e) {
+        (n.setNextCallback = function (e) {
             var t = this,
                 n = !0;
             return (
@@ -145,7 +143,7 @@ var f = (function (e) {
                 this.nextCallback
             );
         }),
-        (a.onTransitionEnd = function (e, t, n) {
+        (n.onTransitionEnd = function (e, t, n) {
             this.setNextCallback(n);
             var o = null == t && !this.props.addEndListener;
             if (!e || o) {
@@ -154,7 +152,7 @@ var f = (function (e) {
             }
             this.props.addEndListener && this.props.addEndListener(e, this.nextCallback), null != t && setTimeout(this.nextCallback, t);
         }),
-        (a.render = function () {
+        (n.render = function () {
             var e = this.state.status;
             if (e === s) return null;
             var t = this.props,
@@ -165,7 +163,7 @@ var f = (function (e) {
                         o,
                         r = {},
                         i = Object.keys(e);
-                    for (o = 0; o < i.length; o++) (n = i[o]), !(t.indexOf(n) >= 0) && (r[n] = e[n]);
+                    for (o = 0; o < i.length; o++) t.indexOf((n = i[o])) >= 0 || (r[n] = e[n]);
                     return r;
                 })(t, ['children']);
             if ((delete o.in, delete o.mountOnEnter, delete o.unmountOnExit, delete o.appear, delete o.enter, delete o.exit, delete o.timeout, delete o.addEndListener, delete o.onEnter, delete o.onEntering, delete o.onEntered, delete o.onExit, delete o.onExiting, delete o.onExited, 'function' == typeof n)) return n(e, o);

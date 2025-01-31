@@ -1,92 +1,93 @@
+n.d(t, { Z: () => E });
 var i,
-    a = r(442837),
-    o = r(902704),
-    s = r(570140);
-function l(e, n, r) {
+    r = n(442837),
+    a = n(902704),
+    s = n(570140);
+function o(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let u = {},
-    c = {},
-    d = { scrollTop: 0 };
-function f(e) {
+let l = {},
+    u = {},
+    c = { scrollTop: 0 };
+function d(e) {
     return {
         guildId: e,
         scrollTop: null,
         scrollTo: null
     };
 }
-function p(e) {
-    let { channelId: n, scrollTop: r, scrollHeight: i, offsetHeight: a } = e,
-        s = u[n];
-    if (null == r || null == i || null == a) {
+function f(e) {
+    let { channelId: t, scrollTop: n, scrollHeight: i, offsetHeight: r } = e,
+        s = l[t];
+    if (null == n || null == i || null == r) {
         if (null == s) return !1;
-        delete u[n];
+        delete l[t];
     } else {
         let e = {
-            channelId: n,
-            scrollTop: r,
+            channelId: t,
+            scrollTop: n,
             scrollHeight: i,
-            offsetHeight: a
+            offsetHeight: r
         };
-        if (null != s && (0, o.Z)(s, e)) return !1;
-        u[n] = e;
+        if (null != s && (0, a.Z)(s, e)) return !1;
+        l[t] = e;
     }
 }
-function h(e) {
-    let { scrollTop: n } = e;
-    d.scrollTop = n;
-}
 function _(e) {
-    let { channelId: n } = e;
-    m(n) && delete u[n];
+    let { scrollTop: t } = e;
+    c.scrollTop = t;
+}
+function p(e) {
+    let { channelId: t } = e;
+    h(t) && delete l[t];
+}
+function h(e) {
+    if (null == l[e]) return;
+    let { scrollTop: t, scrollHeight: n, offsetHeight: i } = l[e];
+    return t === n - i;
 }
 function m(e) {
-    if (null == u[e]) return;
-    let { scrollTop: n, scrollHeight: r, offsetHeight: i } = u[e];
-    return n === r - i;
+    let { guildId: t, scrollTop: n, scrollTo: i } = e;
+    null == u[t] && (u[t] = d(t)), void 0 !== n && (u[t].scrollTop = n);
+    let r = !1;
+    return void 0 !== i && ((r = u[t].scrollTo !== i), (u[t].scrollTo = i)), null != i || r;
 }
-function g(e) {
-    let { guildId: n, scrollTop: r, scrollTo: i } = e;
-    null == c[n] && (c[n] = f(n)), void 0 !== r && (c[n].scrollTop = r);
-    let a = !1;
-    return void 0 !== i && ((a = c[n].scrollTo !== i), (c[n].scrollTo = i)), null != i || a;
-}
-class E extends (i = a.ZP.Store) {
+class g extends (i = r.ZP.Store) {
     percentageScrolled(e) {
-        if (null != u[e]) {
-            let { scrollTop: n, scrollHeight: r } = u[e];
-            return n / r;
+        if (null != l[e]) {
+            let { scrollTop: t, scrollHeight: n } = l[e];
+            return t / n;
         }
         return 1;
     }
     getChannelDimensions(e) {
-        return u[e];
+        return l[e];
     }
     getGuildDimensions(e) {
-        var n;
-        return null !== (n = c[e]) && void 0 !== n ? n : f(e);
+        var t;
+        return null !== (t = u[e]) && void 0 !== t ? t : d(e);
     }
     getGuildListDimensions() {
-        return d;
+        return c;
     }
     isAtBottom(e) {
-        return m(e);
+        return h(e);
     }
 }
-l(E, 'displayName', 'DimensionStore'),
-    (n.Z = new E(s.Z, {
-        UPDATE_CHANNEL_DIMENSIONS: p,
-        UPDATE_CHANNEL_LIST_DIMENSIONS: g,
-        UPDATE_GUILD_LIST_DIMENSIONS: h,
-        CALL_CREATE: _
-    }));
+o(g, 'displayName', 'DimensionStore');
+let E = new g(s.Z, {
+    UPDATE_CHANNEL_DIMENSIONS: f,
+    UPDATE_CHANNEL_LIST_DIMENSIONS: m,
+    UPDATE_GUILD_LIST_DIMENSIONS: _,
+    CALL_CREATE: p
+});

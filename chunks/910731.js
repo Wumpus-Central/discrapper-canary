@@ -1,30 +1,26 @@
-r.d(t, {
-    e: function () {
-        return E;
-    }
-});
-var a = r(622916),
-    n = r(370336),
-    _ = r(899517),
-    o = r(578346);
-function E(e) {
-    let t = 'console';
-    (0, o.Hj)(t, e), (0, o.D2)(t, i);
+a.d(e, { e: () => i });
+var r = a(622916),
+    n = a(370336),
+    o = a(899517),
+    _ = a(578346);
+function i(t) {
+    let e = 'console';
+    (0, _.Hj)(e, t), (0, _.D2)(e, c);
 }
-function i() {
-    if ('console' in _.n)
-        a.RU.forEach(function (e) {
-            if (e in _.n.console)
-                (0, n.hl)(_.n.console, e, function (t) {
+function c() {
+    'console' in o.n &&
+        r.RU.forEach(function (t) {
+            t in o.n.console &&
+                (0, n.hl)(o.n.console, t, function (e) {
                     return (
-                        (a.LD[e] = t),
-                        function (...t) {
-                            (0, o.rK)('console', {
-                                args: t,
-                                level: e
+                        (r.LD[t] = e),
+                        function (...e) {
+                            (0, _.rK)('console', {
+                                args: e,
+                                level: t
                             });
-                            let r = a.LD[e];
-                            r && r.apply(_.n.console, t);
+                            let a = r.LD[t];
+                            a && a.apply(o.n.console, e);
                         }
                     );
                 });

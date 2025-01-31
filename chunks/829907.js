@@ -1,108 +1,98 @@
-r.d(n, {
-    DH: function () {
-        return y;
-    },
-    PD: function () {
-        return b;
-    },
-    P_: function () {
-        return _;
-    },
-    hj: function () {
-        return v;
-    },
-    sS: function () {
-        return h;
-    }
-});
-var i = r(47120);
-var a = r(615287),
-    o = r(593472),
-    s = r(710845),
-    l = r(594190),
-    u = r(77498),
-    c = r(998502);
-let d = new s.Z('OverlayRenderUtils');
-function f(e) {
-    let [n] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [l.ZP],
-        r = n.getGameForPID(e);
+n.d(t, {
+    DH: () => E,
+    PD: () => v,
+    P_: () => _,
+    hj: () => g,
+    sS: () => f
+}),
+    n(47120);
+var i = n(615287),
+    r = n(593472),
+    a = n(710845),
+    s = n(594190),
+    o = n(77498),
+    l = n(998502);
+let u = new a.Z('OverlayRenderUtils');
+function c(e) {
+    let [t] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [s.ZP],
+        n = t.getGameForPID(e);
     try {
-        return null == r ? c.ZP.GetWindowFullscreenTypeByPid(e) : c.ZP.GetWindowFullscreenTypeByPid(r.pid, r.name, r.fullscreenType);
-    } catch (n) {
+        return null == n ? l.ZP.GetWindowFullscreenTypeByPid(e) : l.ZP.GetWindowFullscreenTypeByPid(n.pid, n.name, n.fullscreenType);
+    } catch (t) {
         var i;
-        return d.error('Error getting overlay fullscreen type for pid '.concat(e, ': ').concat(n)), null !== (i = null == r ? void 0 : r.fullscreenType) && void 0 !== i ? i : o.Jx.UNKNOWN;
+        return u.error('Error getting overlay fullscreen type for pid '.concat(e, ': ').concat(t)), null !== (i = null == n ? void 0 : n.fullscreenType) && void 0 !== i ? i : r.Jx.UNKNOWN;
     }
 }
-function p(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10000,
-        [r] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [l.ZP];
+function d(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10000,
+        [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [s.ZP];
     return new Promise((i) => {
         setTimeout(() => {
-            i(f(e, [r]));
-        }, n);
+            i(c(e, [n]));
+        }, t);
     });
 }
-function h(e) {
+function f(e) {
     switch (e) {
-        case o.Jx.BORDERLESS_FULLSCREEN:
+        case r.Jx.BORDERLESS_FULLSCREEN:
             return 'Borderless Fullscreen';
-        case o.Jx.FULLSCREEN:
+        case r.Jx.FULLSCREEN:
             return 'Fullscreen';
-        case o.Jx.WINDOWED:
+        case r.Jx.WINDOWED:
             return 'Windowed';
-        case o.Jx.MINIMIZED:
+        case r.Jx.MINIMIZED:
             return 'Minimized';
-        case o.Jx.MAXIMIZED:
+        case r.Jx.MAXIMIZED:
             return 'Maximized';
-        case o.Jx.UNKNOWN:
+        case r.Jx.UNKNOWN:
             return 'Unknown';
     }
 }
 function _(e) {
     switch (e) {
-        case a.gl.OutOfProcess:
+        case i.gl.OutOfProcess:
             return 'Out of Process';
-        case a.gl.Hook:
+        case i.gl.Hook:
             return 'Hook';
-        case a.gl.Disabled:
+        case i.gl.Disabled:
             return 'Disabled';
     }
 }
-function m(e, n) {
-    let { quns: r } = c.ZP.GetWindowFullscreenTypeExtraByPid(e, n.name);
-    return d.info('QUNS for '.concat(n.name, ': ').concat(r)), r === o.Ng.QUNS_RUNNING_D3D_FULL_SCREEN;
+function p(e, t) {
+    let { quns: n } = l.ZP.GetWindowFullscreenTypeExtraByPid(e, t.name);
+    return u.info('QUNS for '.concat(t.name, ': ').concat(n)), n === r.Ng.QUNS_RUNNING_D3D_FULL_SCREEN;
 }
-let g = {
-        '762434991303950386': (e, n, r) => o.Jx.FULLSCREEN,
-        '1314682894106497096': (e, n, r) => (m(e, n) ? o.Jx.FULLSCREEN : r)
+let h = {
+        '762434991303950386': (e, t, n) => r.Jx.FULLSCREEN,
+        '1314682894106497096': (e, t, n) => (p(e, t) ? r.Jx.FULLSCREEN : n)
     },
-    E = 100;
-async function v(e) {
-    var n;
-    let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : E,
-        i = await p(e, r),
-        a = l.ZP.getGameForPID(e);
-    if (null == a || null == a.name) return i;
-    let o = null === (n = u.Z.getGameByName(a.name)) || void 0 === n ? void 0 : n.id;
-    if (null == o) return i;
-    let s = g[o];
-    return null != s ? s(e, a, i) : i;
+    m = 100;
+async function g(e) {
+    var t;
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : m,
+        i = await d(e, n),
+        r = s.ZP.getGameForPID(e);
+    if (null == r || null == r.name) return i;
+    let a = null === (t = o.Z.getGameByName(r.name)) || void 0 === t ? void 0 : t.id;
+    if (null == a) return i;
+    let l = h[a];
+    return null != l ? l(e, r, i) : i;
 }
-function y(e, n) {
-    if (e.overlayMethod !== a.gl.OutOfProcess) return !1;
-    switch (n) {
-        case o.Jx.UNKNOWN:
-        case o.Jx.FULLSCREEN:
+function E(e, t) {
+    if (e.overlayMethod !== i.gl.OutOfProcess) return !1;
+    switch (t) {
+        case r.Jx.UNKNOWN:
+        case r.Jx.FULLSCREEN:
             return !0;
     }
     return !1;
 }
-function b(e, n) {
-    if (e.overlayMethod !== a.gl.Hook) return !1;
-    switch (n) {
-        case o.Jx.UNKNOWN:
-        case o.Jx.MINIMIZED:
-        case o.Jx.FULLSCREEN:
+function v(e, t) {
+    if (e.overlayMethod !== i.gl.Hook) return !1;
+    switch (t) {
+        case r.Jx.UNKNOWN:
+        case r.Jx.MINIMIZED:
+        case r.Jx.FULLSCREEN:
             return !1;
     }
     return !0;

@@ -11,8 +11,4 @@ function r(e) {
 function i(e) {
     return null !== e && 'object' === r(e) && Object.prototype.hasOwnProperty.call(e, 'current');
 }
-n.d(t, {
-    d: function () {
-        return i;
-    }
-});
+n.d(t, { d: () => i });

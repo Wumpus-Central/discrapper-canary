@@ -1,43 +1,44 @@
+i.d(t, { Z: () => u });
 var s = i(200651),
-    n = i(192379),
-    r = i(120356),
-    a = i.n(r),
+    a = i(192379),
+    n = i(120356),
+    r = i.n(n),
     l = i(481060),
-    o = i(450269),
+    c = i(450269),
     d = i(388032),
-    c = i(89388);
-t.Z = (e) => {
-    let { headerId: t, guild: i, onAgreedChange: r } = e,
-        { rules: u, rulesAccepted: m } = (0, o.V)(i.id);
+    o = i(89388);
+let u = (e) => {
+    let { headerId: t, guild: i, onAgreedChange: n } = e,
+        { rules: u, rulesAccepted: m } = (0, c.V)(i.id);
     return (
-        n.useEffect(() => {
-            r(m);
-        }, [r, m]),
+        a.useEffect(() => {
+            n(m);
+        }, [n, m]),
         (0, s.jsxs)('div', {
-            className: c.container,
+            className: o.container,
             children: [
                 (0, s.jsxs)('div', {
-                    className: c.content,
+                    className: o.content,
                     children: [
-                        (0, s.jsx)('div', { className: a()(c.stepImage, c.checkImage) }),
-                        (0, s.jsx)(l.Heading, {
+                        (0, s.jsx)('div', { className: r()(o.stepImage, o.checkImage) }),
+                        (0, s.jsx)(l.X6q, {
                             variant: 'heading-xl/semibold',
-                            className: c.header,
+                            className: o.header,
                             id: t,
                             children: d.intl.string(d.t.Q8OFNz)
                         }),
                         (0, s.jsx)(l.Text, {
                             color: 'none',
                             variant: 'text-md/normal',
-                            className: c.headerCaption,
+                            className: o.headerCaption,
                             children: d.intl.string(d.t['20piMT'])
                         })
                     ]
                 }),
                 (0, s.jsxs)('div', {
-                    className: c.form,
+                    className: o.form,
                     children: [
-                        (0, s.jsx)(l.FormTitle, {
+                        (0, s.jsx)(l.vwX, {
                             required: !0,
                             children: d.intl.string(d.t.HsM7a2)
                         }),
@@ -45,16 +46,16 @@ t.Z = (e) => {
                             (0, s.jsx)(
                                 'div',
                                 {
-                                    className: c.checkboxWrapper,
-                                    children: (0, s.jsxs)(l.Checkbox, {
-                                        type: l.Checkbox.Types.ROW,
+                                    className: o.checkboxWrapper,
+                                    children: (0, s.jsxs)(l.XZJ, {
+                                        type: l.XZJ.Types.ROW,
                                         value: e.checked,
-                                        align: l.Checkbox.Aligns.TOP,
+                                        align: l.XZJ.Aligns.TOP,
                                         onChange: e.onCheck,
                                         children: [
                                             (0, s.jsx)(l.Text, {
                                                 variant: 'text-md/semibold',
-                                                className: c.checkboxTitle,
+                                                className: o.checkboxTitle,
                                                 children: e.title
                                             }),
                                             (0, s.jsx)(l.Text, {

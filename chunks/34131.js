@@ -1,12 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-});
+n.d(t, { Z: () => d });
 var i = n(200651);
 n(192379);
-var r = n(70097),
-    l = n(434404),
+var l = n(70097),
+    r = n(434404),
     a = n(970731),
     s = n(981631),
     o = n(388032),
@@ -18,7 +14,7 @@ function d(e) {
         children: (0, i.jsx)(a.ZP, {
             header: o.intl.string(o.t.gCgirq),
             content: o.intl.string(o.t.fLMZFx),
-            asset: (0, i.jsx)(r.Z, {
+            asset: (0, i.jsx)(l.Z, {
                 className: c.video,
                 src: 'https://cdn.discordapp.com/assets/server-subscription-tier-template/upsell.mov',
                 autoPlay: !0,
@@ -26,7 +22,7 @@ function d(e) {
             }),
             buttonCTA: o.intl.string(o.t.BQq86u),
             onClick: () => {
-                l.Z.open(t, s.pNK.ROLE_SUBSCRIPTIONS, void 0, s.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE);
+                r.Z.open(t, s.pNK.ROLE_SUBSCRIPTIONS, void 0, s.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE);
             },
             secondaryButtonCTA: o.intl.string(o.t.WAI6xs),
             markAsDismissed: n

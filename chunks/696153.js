@@ -1,6 +1,7 @@
-e.exports = {
-    icon: 'icon_be2720',
-    textIcon: 'textIcon_be2720',
-    imageIcon: 'imageIcon_be2720',
-    name: 'name_be2720'
+var i = {
+    icon: 'icon_d2d51d',
+    textIcon: 'textIcon_d2d51d',
+    imageIcon: 'imageIcon_d2d51d',
+    name: 'name_d2d51d'
 };
+e.exports = i;

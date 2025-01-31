@@ -1,36 +1,32 @@
-t.d(n, {
-    Z: function () {
-        return p;
-    }
-});
-var l = t(200651),
-    i = t(192379),
-    r = t(481060),
-    a = t(471445),
-    o = t(592125),
-    s = t(430824),
-    c = t(970184),
-    u = t(811654),
-    d = t(344991),
-    m = t(981631),
-    f = t(826987);
+l.d(n, { Z: () => p });
+var t = l(200651),
+    i = l(192379),
+    r = l(481060),
+    a = l(471445),
+    s = l(592125),
+    o = l(430824),
+    u = l(970184),
+    c = l(811654),
+    d = l(344991),
+    m = l(981631),
+    h = l(826987);
 function p(e) {
     var n;
-    let { channelTypes: t } = e,
-        p = (0, c.CJ)(),
-        h = null == p ? void 0 : null === (n = p.message) || void 0 === n ? void 0 : n.getChannelId(),
-        x = o.Z.getChannel(h),
-        v = s.Z.getGuild(null == x ? void 0 : x.getGuildId()),
-        C = i.useMemo(() => (0, u.tx)(e.defaultValues, null == v ? void 0 : v.id, t), [e.defaultValues, v, t]);
-    return (0, l.jsx)(d.ZP, {
+    let { channelTypes: l } = e,
+        p = (0, u.CJ)(),
+        x = null == p ? void 0 : null === (n = p.message) || void 0 === n ? void 0 : n.getChannelId(),
+        v = s.Z.getChannel(x),
+        f = o.Z.getGuild(null == v ? void 0 : v.getGuildId()),
+        C = i.useMemo(() => (0, c.tx)(e.defaultValues, null == f ? void 0 : f.id, l), [e.defaultValues, f, l]);
+    return (0, t.jsx)(d.ZP, {
         selectActionComponent: e,
-        queryOptions: (e) => (0, u.af)(e, h, t),
+        queryOptions: (e) => (0, c.af)(e, x, l),
         renderIcon: (e, n) => {
-            let t = o.Z.getChannel(null == e ? void 0 : e.value);
-            if (null == t) return null;
-            let i = t.type === m.d4z.GUILD_CATEGORY ? r.FolderIcon : (0, a.KS)(t);
+            let l = s.Z.getChannel(null == e ? void 0 : e.value);
+            if (null == l) return null;
+            let i = l.type === m.d4z.GUILD_CATEGORY ? r.ROc : (0, a.KS)(l);
             return null != i
-                ? (0, l.jsx)(i, {
+                ? (0, t.jsx)(i, {
                       size: 'custom',
                       color: 'currentColor',
                       width: n,
@@ -39,8 +35,8 @@ function p(e) {
                 : null;
         },
         renderOptionLabel: (e) =>
-            (0, l.jsx)('span', {
-                className: f.label,
+            (0, t.jsx)('span', {
+                className: h.label,
                 children: e.label
             }),
         defaultValues: C

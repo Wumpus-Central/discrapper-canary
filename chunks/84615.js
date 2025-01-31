@@ -1,162 +1,150 @@
-r.d(n, {
-    Ox: function () {
-        return C;
-    },
-    QP: function () {
-        return I;
-    },
-    ob: function () {
-        return R;
-    },
-    q4: function () {
-        return N;
-    }
-});
-var i,
-    a = r(47120);
-var o = r(200651),
-    s = r(192379),
-    l = r(97613),
-    u = r.n(l),
-    c = r(858863),
-    d = r(5188),
-    f = r(15729),
-    p = r(731965),
-    h = r(477690),
-    _ = r(481060),
-    m = r(714338),
-    g = r(624138),
-    E = r(314910),
-    v = r(308569),
-    y = r(819312);
-let b = (0, g.Mg)(h.Z.FULL_SCREEN_LAYER_ANIMATION_DURATION);
-!(function (e) {
-    (e[(e.ENTERING = 1)] = 'ENTERING'), (e[(e.ENTERED = 2)] = 'ENTERED'), (e[(e.EXITING = 3)] = 'EXITING'), (e[(e.EXITED = 4)] = 'EXITED');
-})(i || (i = {}));
-let I = (0, f.U)((e) => ({
-    fullScreenLayers: [],
-    addLayer: (n) =>
-        (0, p.j)(() => {
-            e((e) => {
-                let { fullScreenLayers: r } = e;
-                return {
-                    fullScreenLayers: [...r, n]
-                };
-            });
-        })
-}));
-function T(e) {
-    let { item: n } = e,
-        r = s.useRef(null);
+n.d(t, {
+    Ox: () => T,
+    QP: () => v,
+    ob: () => A,
+    q4: () => S
+}),
+    n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(97613),
+    s = n.n(a),
+    o = n(858863),
+    l = n(5188),
+    u = n(15729),
+    c = n(731965),
+    d = n(477690),
+    f = n(481060),
+    _ = n(714338),
+    p = n(624138),
+    h = n(314910),
+    m = n(308569),
+    g = n(819312);
+let E = (0, p.Mg)(d.Z.FULL_SCREEN_LAYER_ANIMATION_DURATION),
+    v = (0, u.U)((e) => ({
+        fullScreenLayers: [],
+        addLayer: (t) =>
+            (0, c.j)(() => {
+                e((e) => {
+                    let { fullScreenLayers: n } = e;
+                    return {
+                        fullScreenLayers: [...n, t]
+                    };
+                });
+            })
+    }));
+function y(e) {
+    let { item: t } = e,
+        n = r.useRef(null);
     return (
-        (0, _.useFocusLock)(r),
-        s.useEffect(
+        (0, f.Tbt)(n),
+        r.useEffect(
             () => (
-                m.Z.disable(),
-                n.key !== v.CV && m.Z.enableTemp(O(n.key)),
+                _.Z.disable(),
+                t.key !== m.CV && _.Z.enableTemp(N(t.key)),
                 () => {
-                    m.Z.disableTemp();
+                    _.Z.disableTemp();
                 }
             ),
-            [n.key]
+            [t.key]
         ),
-        (0, o.jsx)(n.LayerComponent, {
-            children: (0, o.jsxs)('div', {
-                className: y.root,
-                ref: r,
+        (0, i.jsx)(t.LayerComponent, {
+            children: (0, i.jsxs)('div', {
+                className: g.root,
+                ref: n,
                 children: [
-                    (0, o.jsx)('div', { className: y.drag }),
-                    n.render({
-                        transitionState: null != n ? n.transitionState : 3,
-                        closeLayer: () => R(n.key)
+                    (0, i.jsx)('div', { className: g.drag }),
+                    t.render({
+                        transitionState: null != t ? t.transitionState : 3,
+                        closeLayer: () => A(t.key)
                     })
                 ]
             })
         })
     );
 }
-let S = {
-        enter: y.enter,
-        enterActive: y.enterActive,
-        enterDone: y.enterDone,
-        exit: y.exit,
-        exitActive: y.exitActive,
-        exitDone: y.exitDone
+let I = {
+        enter: g.enter,
+        enterActive: g.enterActive,
+        enterDone: g.enterDone,
+        exit: g.exit,
+        exitActive: g.exitActive,
+        exitDone: g.exitDone
     },
-    A = {
-        enter: y.enterReducedMotion,
-        enterActive: y.enterActiveReducedMotion,
-        enterDone: y.enterDoneReducedMotion,
-        exit: y.exitReducedMotion,
-        exitActive: y.exitActiveReducedMotion,
-        exitDone: y.exitDoneReducedMotion
+    b = {
+        enter: g.enterReducedMotion,
+        enterActive: g.enterActiveReducedMotion,
+        enterDone: g.enterDoneReducedMotion,
+        exit: g.exitReducedMotion,
+        exitActive: g.exitActiveReducedMotion,
+        exitDone: g.exitDoneReducedMotion
     };
-function C() {
-    let { reducedMotion: e } = s.useContext(_.AccessibilityPreferencesContext),
-        n = e.enabled ? A : S,
-        r = I((e) => e.fullScreenLayers);
-    return (0, o.jsx)(c.Z, {
-        children: r.map((e) =>
-            (0, o.jsx)(
-                d.Z,
+function T() {
+    let { reducedMotion: e } = r.useContext(f.Sfi),
+        t = e.enabled ? b : I,
+        n = v((e) => e.fullScreenLayers);
+    return (0, i.jsx)(o.Z, {
+        children: n.map((e) =>
+            (0, i.jsx)(
+                l.Z,
                 {
-                    classNames: n,
-                    timeout: b,
+                    classNames: t,
+                    timeout: E,
                     onEntered: () => {
-                        (0, p.j)(() => {
-                            I.setState({
-                                fullScreenLayers: r.map((n) =>
-                                    n.key === e.key
+                        (0, c.j)(() => {
+                            v.setState({
+                                fullScreenLayers: n.map((t) =>
+                                    t.key === e.key
                                         ? {
-                                              ...n,
+                                              ...t,
                                               transitionState: 2
                                           }
-                                        : n
+                                        : t
                                 )
                             });
                         });
                     },
                     unmountOnExit: !0,
-                    children: (0, o.jsx)(T, { item: e })
+                    children: (0, i.jsx)(y, { item: e })
                 },
                 e.key
             )
         )
     });
 }
-function N(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.freeze({}),
-        { layerKey: r, Layer: i } = n,
-        a = null != r ? r : u()();
+function S(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.freeze({}),
+        { layerKey: n, Layer: i } = t,
+        r = null != n ? n : s()();
     return (
-        (0, p.j)(() => {
-            I.setState((n) => ({
+        (0, c.j)(() => {
+            v.setState((t) => ({
                 fullScreenLayers: [
-                    ...n.fullScreenLayers,
+                    ...t.fullScreenLayers,
                     {
-                        key: a,
+                        key: r,
                         transitionState: 1,
-                        LayerComponent: null != i ? i : E.ZP,
+                        LayerComponent: null != i ? i : h.ZP,
                         render: e
                     }
                 ]
             }));
         }),
-        a
+        r
     );
 }
-function R(e) {
-    (0, p.j)(() => {
-        I.setState((n) => ({ fullScreenLayers: n.fullScreenLayers.filter((n) => n.key !== e) }));
+function A(e) {
+    (0, c.j)(() => {
+        v.setState((t) => ({ fullScreenLayers: t.fullScreenLayers.filter((t) => t.key !== e) }));
     });
 }
-function O(e) {
+function N(e) {
     return {
         POP_LAYER: {
             binds: ['esc'],
             comboKeysBindGlobal: !0,
             action() {
-                R(e);
+                A(e);
             }
         }
     };

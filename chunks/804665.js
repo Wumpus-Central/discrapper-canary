@@ -1,8 +1,9 @@
-e.exports = {
-    divider: 'divider_ad3550',
-    updateMessage: 'updateMessage_ad3550',
-    infoMessageIcon: 'infoMessageIcon_ad3550',
-    joinLeaderboardButton: 'joinLeaderboardButton_ad3550',
-    joinLeaderboardButtonInner: 'joinLeaderboardButtonInner_ad3550',
-    riotIcon: 'riotIcon_ad3550'
+var i = {
+    divider: 'divider__5e421',
+    updateMessage: 'updateMessage__5e421',
+    infoMessageIcon: 'infoMessageIcon__5e421',
+    joinLeaderboardButton: 'joinLeaderboardButton__5e421',
+    joinLeaderboardButtonInner: 'joinLeaderboardButtonInner__5e421',
+    riotIcon: 'riotIcon__5e421'
 };
+e.exports = i;

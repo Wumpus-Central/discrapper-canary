@@ -1,247 +1,222 @@
-r.d(n, {
-    Dk: function () {
-        return N;
-    },
-    P5: function () {
-        return D;
-    },
-    QF: function () {
-        return S;
-    },
-    Sk: function () {
-        return _.Skl;
-    },
-    W5: function () {
-        return x;
-    },
-    lm: function () {
-        return T;
-    },
-    qb: function () {
-        return w;
-    },
-    rs: function () {
-        return L;
-    },
-    vP: function () {
-        return O;
-    },
-    vj: function () {
-        return I;
-    }
-});
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(120356),
-    l = r.n(s),
-    u = r(642128),
-    c = r(780384),
-    d = r(481060),
-    f = r(44315),
-    p = r(686546),
-    h = r(540059),
-    _ = r(981631),
-    m = r(182294),
-    g = r(131004);
-let E = 8,
-    v = {
-        tension: 600,
-        friction: 70
-    };
-function y(e) {
+n.d(t, {
+    Dk: () => b,
+    QF: () => v,
+    Sk: () => d.Skl,
+    W5: () => N,
+    lm: () => E,
+    qb: () => C,
+    rs: () => A,
+    vP: () => S,
+    vj: () => g
+}),
+    n(47120);
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(642128),
+    o = n(780384);
+n(481060);
+var l = n(44315),
+    u = n(686546),
+    c = n(540059),
+    d = n(981631),
+    f = n(182294),
+    _ = n(131004);
+let p = 8;
+function h(e) {
     switch (e) {
-        case _.Skl.ONLINE:
-            return _.Ilk.GREEN_360;
-        case _.Skl.IDLE:
-            return _.Ilk.YELLOW_300;
-        case _.Skl.DND:
-            return _.Ilk.RED_400;
-        case _.Skl.STREAMING:
-            return _.Ilk.TWITCH;
-        case _.Skl.INVISIBLE:
-        case _.Skl.UNKNOWN:
-        case _.Skl.OFFLINE:
+        case d.Skl.ONLINE:
+            return d.Ilk.GREEN_360;
+        case d.Skl.IDLE:
+            return d.Ilk.YELLOW_300;
+        case d.Skl.DND:
+            return d.Ilk.RED_400;
+        case d.Skl.STREAMING:
+            return d.Ilk.TWITCH;
+        case d.Skl.INVISIBLE:
+        case d.Skl.UNKNOWN:
+        case d.Skl.OFFLINE:
         default:
-            return _.Ilk.PRIMARY_400;
+            return d.Ilk.PRIMARY_400;
     }
+}
+function m(e) {
+    switch (e) {
+        case d.Skl.ONLINE:
+            return d.Ilk.GREEN_NEW_38;
+        case d.Skl.IDLE:
+            return d.Ilk.YELLOW_NEW_30;
+        case d.Skl.DND:
+            return d.Ilk.RED_NEW_46;
+        case d.Skl.STREAMING:
+            return d.Ilk.TWITCH;
+        case d.Skl.INVISIBLE:
+        case d.Skl.UNKNOWN:
+        case d.Skl.OFFLINE:
+        default:
+            return d.Ilk.NEUTRAL_34;
+    }
+}
+function g(e, t) {
+    let n = (0, c.Q3)('useStatusFillColor'),
+        i = (0, l.Sl)(n ? m(e) : h(e)).hex,
+        r = null != t ? t : i,
+        a = (0, l.K3)(r);
+    return null != a ? a : void 0;
+}
+function E(e, t) {
+    return t === f.VZ.WHITE && e === d.Skl.IDLE ? f.d_.HIGH : f.d_.LOW;
+}
+function v(e) {
+    return (0, o.wj)(e) ? f.VZ.BLACK : f.VZ.WHITE;
+}
+function y(e, t, n, i) {
+    return 'scale('
+        .concat(t, ') translate(')
+        .concat(0.5625 * e + i, ' ')
+        .concat(0.75 * e + n, ')');
+}
+function I(e, t, n) {
+    return ''.concat(0.5625 * e + n, 'px ').concat(0.75 * e + t, 'px');
 }
 function b(e) {
-    switch (e) {
-        case _.Skl.ONLINE:
-            return _.Ilk.GREEN_NEW_38;
-        case _.Skl.IDLE:
-            return _.Ilk.YELLOW_NEW_30;
-        case _.Skl.DND:
-            return _.Ilk.RED_NEW_46;
-        case _.Skl.STREAMING:
-            return _.Ilk.TWITCH;
-        case _.Skl.INVISIBLE:
-        case _.Skl.UNKNOWN:
-        case _.Skl.OFFLINE:
-        default:
-            return _.Ilk.NEUTRAL_34;
-    }
-}
-function I(e, n) {
-    let r = (0, h.Q3)('useStatusFillColor'),
-        i = (0, f.Sl)(r ? b(e) : y(e)).hex,
-        a = null != n ? n : i,
-        o = (0, f.K3)(a);
-    return null != o ? o : void 0;
-}
-function T(e, n) {
-    return n === m.VZ.WHITE && e === _.Skl.IDLE ? m.d_.HIGH : m.d_.LOW;
-}
-function S(e) {
-    return (0, c.wj)(e) ? m.VZ.BLACK : m.VZ.WHITE;
-}
-function A(e, n, r, i) {
-    return 'scale('
-        .concat(n, ') translate(')
-        .concat(0.5625 * e + i, ' ')
-        .concat(0.75 * e + r, ')');
-}
-function C(e, n, r) {
-    return ''.concat(0.5625 * e + r, 'px ').concat(0.75 * e + n, 'px');
-}
-function N(e) {
-    let { size: n, status: r, isMobile: i, isTyping: a, topOffset: o = 0, leftOffset: s = 0 } = e,
-        l = (o / E) * n,
-        u = (s / E) * n;
-    if (a)
+    let { size: t, status: n, isMobile: i, isTyping: r, topOffset: a = 0, leftOffset: s = 0 } = e,
+        o = (a / p) * t,
+        l = (s / p) * t;
+    if (r)
         return {
-            bgRadius: 0.5 * n,
-            bgY: 0.25 * n + l,
+            bgRadius: 0.5 * t,
+            bgY: 0.25 * t + o,
             bgX: 0,
-            bgHeight: n,
-            bgWidth: n * m.D6,
-            cutoutX: 0.5 * n + u,
-            cutoutY: 0.75 * n + l,
+            bgHeight: t,
+            bgWidth: t * f.D6,
+            cutoutX: 0.5 * t + l,
+            cutoutY: 0.75 * t + o,
             cutoutWidth: 0,
             cutoutHeight: 0,
             cutoutRadius: 0,
-            polygonScale: A(n, 0, l, u),
-            polygonOrigin: C(n, l, u),
-            dotY: 0.75 * n + l,
-            dotX: 0.5 * n + u,
+            polygonScale: y(t, 0, o, l),
+            polygonOrigin: I(t, o, l),
+            dotY: 0.75 * t + o,
+            dotX: 0.5 * t + l,
             dotRadius: 0
         };
-    switch (r) {
-        case _.Skl.ONLINE:
+    switch (n) {
+        case d.Skl.ONLINE:
             if (i)
                 return {
-                    bgRadius: n * m.EW * m.e7,
+                    bgRadius: t * f.EW * f.e7,
                     bgY: 0,
-                    bgX: u,
-                    bgHeight: n * m.EW,
-                    bgWidth: n,
-                    cutoutX: 0.125 * n + u,
-                    cutoutY: 0.25 * n,
-                    cutoutWidth: 0.75 * n,
-                    cutoutHeight: 0.75 * n,
+                    bgX: l,
+                    bgHeight: t * f.EW,
+                    bgWidth: t,
+                    cutoutX: 0.125 * t + l,
+                    cutoutY: 0.25 * t,
+                    cutoutWidth: 0.75 * t,
+                    cutoutHeight: 0.75 * t,
                     cutoutRadius: 0,
-                    polygonScale: A(n, 0, l, u),
-                    polygonOrigin: C(n, l, u),
-                    dotY: 1.25 * n,
-                    dotX: 0.5 * n + u,
-                    dotRadius: 0.125 * n
+                    polygonScale: y(t, 0, o, l),
+                    polygonOrigin: I(t, o, l),
+                    dotY: 1.25 * t,
+                    dotX: 0.5 * t + l,
+                    dotRadius: 0.125 * t
                 };
             return {
-                bgRadius: 0.5 * n,
-                bgY: 0.25 * n + l,
-                bgX: u,
-                bgHeight: n,
-                bgWidth: n,
-                cutoutX: 0.5 * n + u,
-                cutoutY: 0.75 * n + l,
+                bgRadius: 0.5 * t,
+                bgY: 0.25 * t + o,
+                bgX: l,
+                bgHeight: t,
+                bgWidth: t,
+                cutoutX: 0.5 * t + l,
+                cutoutY: 0.75 * t + o,
                 cutoutWidth: 0,
                 cutoutHeight: 0,
                 cutoutRadius: 0,
-                polygonScale: A(n, 0, l, u),
-                polygonOrigin: C(n, l, u),
-                dotY: 0.75 * n + l,
-                dotX: 0.5 * n + u,
+                polygonScale: y(t, 0, o, l),
+                polygonOrigin: I(t, o, l),
+                dotY: 0.75 * t + o,
+                dotX: 0.5 * t + l,
                 dotRadius: 0
             };
-        case _.Skl.IDLE:
+        case d.Skl.IDLE:
             return {
-                bgRadius: 0.5 * n,
-                bgY: 0.25 * n + l,
-                bgX: u,
-                bgHeight: n,
-                bgWidth: n,
-                cutoutX: -(0.125 * n) + u,
-                cutoutY: 0.125 * n + l,
-                cutoutWidth: 0.75 * n,
-                cutoutHeight: 0.75 * n,
-                cutoutRadius: 0.375 * n,
-                polygonScale: A(n, 0, l, u),
-                polygonOrigin: C(n, l, u),
-                dotY: 0.75 * n + l,
-                dotX: 0.5 * n + u,
+                bgRadius: 0.5 * t,
+                bgY: 0.25 * t + o,
+                bgX: l,
+                bgHeight: t,
+                bgWidth: t,
+                cutoutX: -(0.125 * t) + l,
+                cutoutY: 0.125 * t + o,
+                cutoutWidth: 0.75 * t,
+                cutoutHeight: 0.75 * t,
+                cutoutRadius: 0.375 * t,
+                polygonScale: y(t, 0, o, l),
+                polygonOrigin: I(t, o, l),
+                dotY: 0.75 * t + o,
+                dotX: 0.5 * t + l,
                 dotRadius: 0
             };
-        case _.Skl.DND:
+        case d.Skl.DND:
             return {
-                bgRadius: 0.5 * n,
-                bgY: 0.25 * n + l,
-                bgX: u,
-                bgHeight: n,
-                bgWidth: n,
-                cutoutX: 0.125 * n + u,
-                cutoutY: 0.625 * n + l,
-                cutoutWidth: 0.75 * n,
-                cutoutHeight: 0.25 * n,
-                cutoutRadius: 0.125 * n,
-                polygonScale: A(n, 0, l, u),
-                polygonOrigin: C(n, l, u),
-                dotY: 0.75 * n + l,
-                dotX: 0.5 * n + u,
+                bgRadius: 0.5 * t,
+                bgY: 0.25 * t + o,
+                bgX: l,
+                bgHeight: t,
+                bgWidth: t,
+                cutoutX: 0.125 * t + l,
+                cutoutY: 0.625 * t + o,
+                cutoutWidth: 0.75 * t,
+                cutoutHeight: 0.25 * t,
+                cutoutRadius: 0.125 * t,
+                polygonScale: y(t, 0, o, l),
+                polygonOrigin: I(t, o, l),
+                dotY: 0.75 * t + o,
+                dotX: 0.5 * t + l,
                 dotRadius: 0
             };
-        case _.Skl.STREAMING:
+        case d.Skl.STREAMING:
             return {
-                bgRadius: 0.5 * n,
-                bgY: 0.25 * n + l,
-                bgX: u,
-                bgHeight: n,
-                bgWidth: n,
-                cutoutX: 0.5 * n + u,
-                cutoutY: 0.75 * n + l,
+                bgRadius: 0.5 * t,
+                bgY: 0.25 * t + o,
+                bgX: l,
+                bgHeight: t,
+                bgWidth: t,
+                cutoutX: 0.5 * t + l,
+                cutoutY: 0.75 * t + o,
                 cutoutWidth: 0,
                 cutoutHeight: 0,
-                cutoutRadius: 0.25 * n,
-                polygonScale: A(n, 1, l, u),
-                polygonOrigin: C(n, l, u),
-                dotY: 0.75 * n + l,
-                dotX: 0.5 * n + u,
+                cutoutRadius: 0.25 * t,
+                polygonScale: y(t, 1, o, l),
+                polygonOrigin: I(t, o, l),
+                dotY: 0.75 * t + o,
+                dotX: 0.5 * t + l,
                 dotRadius: 0
             };
-        case _.Skl.INVISIBLE:
-        case _.Skl.UNKNOWN:
-        case _.Skl.OFFLINE:
+        case d.Skl.INVISIBLE:
+        case d.Skl.UNKNOWN:
+        case d.Skl.OFFLINE:
         default:
             return {
-                bgRadius: 0.5 * n,
-                bgY: 0.25 * n + l,
-                bgX: u,
-                bgHeight: n,
-                bgWidth: n,
-                cutoutX: 0.25 * n + u,
-                cutoutY: 0.5 * n + l,
-                cutoutWidth: 0.5 * n,
-                cutoutHeight: 0.5 * n,
-                cutoutRadius: 0.25 * n,
-                polygonScale: A(n, 0, l, u),
-                polygonOrigin: C(n, l, u),
-                dotY: 0.75 * n + l,
-                dotX: 0.5 * n + u,
+                bgRadius: 0.5 * t,
+                bgY: 0.25 * t + o,
+                bgX: l,
+                bgHeight: t,
+                bgWidth: t,
+                cutoutX: 0.25 * t + l,
+                cutoutY: 0.5 * t + o,
+                cutoutWidth: 0.5 * t,
+                cutoutHeight: 0.5 * t,
+                cutoutRadius: 0.25 * t,
+                polygonScale: y(t, 0, o, l),
+                polygonOrigin: I(t, o, l),
+                dotY: 0.75 * t + o,
+                dotX: 0.5 * t + l,
                 dotRadius: 0
             };
     }
 }
-function R(e) {
+function T(e) {
     return '-'
         .concat(0.216506 * e, ',-')
         .concat(0.25 * e, ' ')
@@ -249,138 +224,88 @@ function R(e) {
         .concat(0.216506 * e, ',')
         .concat(0.25 * e);
 }
-function O(e, n, r) {
-    let { bgRadius: i, bgY: o, bgX: s, bgHeight: l, bgWidth: c, cutoutX: d, cutoutY: f, cutoutWidth: p, cutoutHeight: h, cutoutRadius: _, polygonScale: m, polygonOrigin: g, dotY: E, dotX: v, dotRadius: y } = e;
-    return (0, a.jsxs)('mask', {
-        id: r,
+function S(e, t, n) {
+    let { bgRadius: r, bgY: a, bgX: o, bgHeight: l, bgWidth: u, cutoutX: c, cutoutY: d, cutoutWidth: f, cutoutHeight: _, cutoutRadius: p, polygonScale: h, polygonOrigin: m, dotY: g, dotX: E, dotRadius: v } = e;
+    return (0, i.jsxs)('mask', {
+        id: n,
         children: [
-            (0, a.jsx)(u.animated.rect, {
-                x: s,
-                y: o,
-                width: c,
+            (0, i.jsx)(s.animated.rect, {
+                x: o,
+                y: a,
+                width: u,
                 height: l,
-                rx: i,
-                ry: i,
+                rx: r,
+                ry: r,
                 fill: 'white'
             }),
-            (0, a.jsx)(u.animated.rect, {
-                x: d,
-                y: f,
-                width: p,
-                height: h,
-                rx: _,
-                ry: _,
+            (0, i.jsx)(s.animated.rect, {
+                x: c,
+                y: d,
+                width: f,
+                height: _,
+                rx: p,
+                ry: p,
                 fill: 'black'
             }),
-            (0, a.jsx)(u.animated.polygon, {
-                points: R(n),
+            (0, i.jsx)(s.animated.polygon, {
+                points: T(t),
                 fill: 'black',
-                transform: m,
-                style: { transformOrigin: g }
+                transform: h,
+                style: { transformOrigin: m }
             }),
-            (0, a.jsx)(u.animated.circle, {
+            (0, i.jsx)(s.animated.circle, {
                 fill: 'black',
-                cx: v,
-                cy: E,
-                r: y
+                cx: E,
+                cy: g,
+                r: v
             })
         ]
     });
 }
-function D(e) {
-    let { status: n, isMobile: r = !1, size: i = E, color: s, className: c, style: f } = e,
-        p = o.useId(),
-        h = n === _.Skl.ONLINE && r,
-        y = o.useMemo(
-            () =>
-                N({
-                    size: i,
-                    status: n,
-                    isMobile: h
-                }),
-            [i, n, h]
-        ),
-        b = (0, d.useSpring)(
-            {
-                config: v,
-                to: y
-            },
-            'animate-always'
-        ),
-        T = I(n, s),
-        [{ fill: S }] = (0, d.useSpring)(
-            {
-                config: v,
-                fill: T
-            },
-            'animate-always',
-            [T]
-        ),
-        A = i,
-        C = Math.ceil(i * m.EW);
-    return (0, a.jsxs)('svg', {
-        width: A,
-        height: C,
-        viewBox: '0 0 '.concat(A, ' ').concat(C),
-        className: l()(g.mask, c),
-        style: f,
-        children: [
-            O(b, i, p),
-            (0, a.jsx)(u.animated.rect, {
-                x: 0,
-                y: 0,
-                width: A,
-                height: C,
-                fill: S,
-                mask: 'url(#'.concat(p, ')')
-            })
-        ]
-    });
-}
-function L(e, n) {
-    let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    if (r) return p.ZP.Masks.STATUS_TYPING;
+function A(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+    if (n) return u.ZP.Masks.STATUS_TYPING;
     switch (e) {
-        case _.Skl.IDLE:
-            return p.ZP.Masks.STATUS_IDLE;
-        case _.Skl.DND:
-            return p.ZP.Masks.STATUS_DND;
-        case _.Skl.STREAMING:
-            return p.ZP.Masks.STATUS_STREAMING;
-        case _.Skl.INVISIBLE:
-        case _.Skl.UNKNOWN:
-        case _.Skl.OFFLINE:
-            return p.ZP.Masks.STATUS_OFFLINE;
-        case _.Skl.ONLINE:
+        case d.Skl.IDLE:
+            return u.ZP.Masks.STATUS_IDLE;
+        case d.Skl.DND:
+            return u.ZP.Masks.STATUS_DND;
+        case d.Skl.STREAMING:
+            return u.ZP.Masks.STATUS_STREAMING;
+        case d.Skl.INVISIBLE:
+        case d.Skl.UNKNOWN:
+        case d.Skl.OFFLINE:
+            return u.ZP.Masks.STATUS_OFFLINE;
+        case d.Skl.ONLINE:
         default:
-            if (n) return p.ZP.Masks.STATUS_ONLINE_MOBILE;
-            return p.ZP.Masks.STATUS_ONLINE;
+            if (t) return u.ZP.Masks.STATUS_ONLINE_MOBILE;
+            return u.ZP.Masks.STATUS_ONLINE;
     }
 }
-function x(e, n, r) {
+function N(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-    return n === _.Skl.ONLINE && r && !i
+    return t === d.Skl.ONLINE && n && !i
         ? {
               width: e,
-              height: e * m.EW
+              height: e * f.EW
           }
         : {
-              width: i ? e * m.D6 : e,
+              width: i ? e * f.D6 : e,
               height: e
           };
 }
-function w(e) {
-    let { status: n, isMobile: r = !1, size: i = E, className: o, style: s, color: u } = e,
-        c = n === _.Skl.ONLINE && r,
-        d = I(n, u);
-    return (0, a.jsx)(p.ZP, {
-        mask: L(n, c),
-        className: l()(g.mask, o),
-        style: s,
-        ...x(i, n, c),
-        children: (0, a.jsx)('div', {
-            style: { backgroundColor: d },
-            className: g.status
+function C(e) {
+    let { status: t, isMobile: n = !1, size: r = p, className: s, style: o, color: l } = e,
+        c = t === d.Skl.ONLINE && n,
+        f = g(t, l);
+    return (0, i.jsx)(u.ZP, {
+        mask: A(t, c),
+        className: a()(_.mask, s),
+        style: o,
+        ...N(r, t, c),
+        children: (0, i.jsx)('div', {
+            style: { backgroundColor: f },
+            className: _.status
         })
     });
 }

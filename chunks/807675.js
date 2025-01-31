@@ -1,46 +1,42 @@
-r.d(n, {
-    K: function () {
-        return f;
-    },
-    y: function () {
-        return p;
-    }
-});
-var i = r(653041);
-var a = r(593473),
-    o = r(243814),
-    s = r(149765),
-    l = r(592125),
-    u = r(914010),
-    c = r(700785),
-    d = r(713938);
-function f(e) {
-    let n = e.filter((e) => !d.up.includes(e));
-    return n.includes(o.x.BOT) && !n.includes(o.x.APPLICATIONS_COMMANDS) && n.push(o.x.APPLICATIONS_COMMANDS), n;
+n.d(t, {
+    K: () => c,
+    y: () => d
+}),
+    n(653041);
+var i = n(593473),
+    r = n(243814),
+    a = n(149765),
+    s = n(592125),
+    o = n(914010),
+    l = n(700785),
+    u = n(713938);
+function c(e) {
+    let t = e.filter((e) => !u.up.includes(e));
+    return t.includes(r.x.BOT) && !t.includes(r.x.APPLICATIONS_COMMANDS) && t.push(r.x.APPLICATIONS_COMMANDS), t;
 }
-function p(e) {
-    var n, r, i, o, d, f;
-    let p = (0, a.parse)(e, { arrayFormat: 'bracket' }),
-        h = c.Hn;
+function d(e) {
+    var t, n, r, u, c, d;
+    let f = (0, i.parse)(e, { arrayFormat: 'bracket' }),
+        _ = l.Hn;
     try {
-        h = s.vB(null != p.permissions && '' !== p.permissions ? p.permissions : '0');
+        _ = a.vB(null != f.permissions && '' !== f.permissions ? f.permissions : '0');
     } catch (e) {}
-    let _ = p.channel_id,
-        m = null !== (o = null !== (i = null !== (r = p.guild_id) && void 0 !== r ? r : null === (n = l.Z.getChannel(_)) || void 0 === n ? void 0 : n.guild_id) && void 0 !== i ? i : u.Z.getGuildId()) && void 0 !== o ? o : void 0;
+    let p = f.channel_id,
+        h = null !== (u = null !== (r = null !== (n = f.guild_id) && void 0 !== n ? n : null === (t = s.Z.getChannel(p)) || void 0 === t ? void 0 : t.guild_id) && void 0 !== r ? r : o.Z.getGuildId()) && void 0 !== u ? u : void 0;
     return {
-        clientId: null !== (d = p.client_id) && void 0 !== d ? d : '',
-        scopes: (null !== (f = p.scope) && void 0 !== f ? f : '').split(' ').filter((e) => e.length > 0),
-        responseType: p.response_type,
-        redirectUri: p.redirect_uri,
-        codeChallenge: p.code_challenge,
-        codeChallengeMethod: p.code_challenge_method,
-        state: p.state,
-        permissions: h,
-        channelId: _,
-        guildId: m,
-        prompt: p.prompt,
-        disableGuildSelect: 'true' === p.disable_guild_select,
-        integrationType: null == p.integration_type ? void 0 : Number(p.integration_type),
-        nonce: p.nonce
+        clientId: null !== (c = f.client_id) && void 0 !== c ? c : '',
+        scopes: (null !== (d = f.scope) && void 0 !== d ? d : '').split(' ').filter((e) => e.length > 0),
+        responseType: f.response_type,
+        redirectUri: f.redirect_uri,
+        codeChallenge: f.code_challenge,
+        codeChallengeMethod: f.code_challenge_method,
+        state: f.state,
+        permissions: _,
+        channelId: p,
+        guildId: h,
+        prompt: f.prompt,
+        disableGuildSelect: 'true' === f.disable_guild_select,
+        integrationType: null == f.integration_type ? void 0 : Number(f.integration_type),
+        nonce: f.nonce
     };
 }

@@ -1,5 +1,6 @@
-e.exports = {
-    spacing: 'spacing_f615b3',
-    error: 'error_f615b3',
-    card: 'card_f615b3 spacing_f615b3'
+var i = {
+    spacing: 'spacing_f0f2d9',
+    error: 'error_f0f2d9',
+    card: 'card_f0f2d9 spacing_f0f2d9'
 };
+e.exports = i;

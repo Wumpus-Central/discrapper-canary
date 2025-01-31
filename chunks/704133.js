@@ -1,27 +1,28 @@
-var i = r(200651);
-r(192379);
-var a = r(433517),
-    o = r(481060),
-    s = r(358085);
-n.Z = {
+n.d(t, { Z: () => o });
+var i = n(200651);
+n(192379);
+var r = n(433517),
+    a = n(481060),
+    s = n(358085);
+let o = {
     show(e) {
-        (0, o.openModalLazy)(async () => {
-            let { default: n } = await r.e('2435').then(r.bind(r, 821606));
-            return (r) =>
-                (0, i.jsx)(n, {
-                    ...r,
+        (0, a.ZDy)(async () => {
+            let { default: t } = await n.e('2435').then(n.bind(n, 821606));
+            return (n) =>
+                (0, i.jsx)(t, {
+                    ...n,
                     url: e
                 });
         });
     },
     getBlockedDomains() {
         if ((0, s.isDesktop)()) {
-            let e = a.K.get('BlockedDomainsV2');
+            let e = r.K.get('BlockedDomainsV2');
             return Promise.resolve(null == e ? [] : e.split('\n'));
         }
         return Promise.resolve([]);
     },
     saveBlockedDomains(e) {
-        (0, s.isDesktop)() && a.K.set('BlockedDomainsV2', e.join('\n'));
+        (0, s.isDesktop)() && r.K.set('BlockedDomainsV2', e.join('\n'));
     }
 };

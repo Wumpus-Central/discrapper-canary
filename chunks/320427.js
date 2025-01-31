@@ -1,13 +1,9 @@
-n.d(t, {
-    Z: function () {
-        return h;
-    }
-});
+n.d(t, { Z: () => h });
 var i = n(200651);
 n(192379);
 var l = n(399606),
-    r = n(481060),
-    a = n(125268),
+    a = n(481060),
+    r = n(125268),
     s = n(673125),
     o = n(984063),
     c = n(871499),
@@ -17,7 +13,7 @@ function h() {
     let e = (0, l.e7)([s.Z], () => s.Z.getDrawMode()),
         t = (null == e ? void 0 : e.type) === o.W.LINE,
         n = () => {
-            t ? (0, a.Bo)(null) : (0, a.Bo)({ type: o.W.LINE });
+            t ? (0, r.Bo)(null) : (0, r.Bo)({ type: o.W.LINE });
         };
     return (0, i.jsx)(d.Z, {
         renderPopout: () => null,
@@ -27,7 +23,7 @@ function h() {
                 ...l,
                 label: u.intl.string(u.t.ZQCf9f),
                 isActive: t,
-                iconComponent: r.PencilIcon,
+                iconComponent: a.vdY,
                 onClick: n
             });
         }

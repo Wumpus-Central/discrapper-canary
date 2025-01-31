@@ -1,20 +1,16 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(192379),
-    a = r(570140);
-function o(e) {
-    let { userActivity: n } = e,
-        r = null == n ? void 0 : n.applicationId;
+n.d(t, { Z: () => a });
+var i = n(192379),
+    r = n(570140);
+function a(e) {
+    let { userActivity: t } = e,
+        n = null == t ? void 0 : t.applicationId;
     i.useEffect(() => {
-        null != n &&
-            null != r &&
-            a.Z.dispatch({
+        null != t &&
+            null != n &&
+            r.Z.dispatch({
                 type: 'EMBEDDED_ACTIVITY_OPEN',
-                location: n.location,
-                applicationId: r
+                location: t.location,
+                applicationId: n
             });
-    }, [r, n]);
+    }, [n, t]);
 }

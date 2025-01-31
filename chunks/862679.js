@@ -1,16 +1,17 @@
+n.d(t, { Z: () => u });
 var i = n(200651),
     l = n(192379),
-    r = n(873546),
-    a = n(442837),
+    a = n(873546),
+    r = n(442837),
     s = n(481060),
     o = n(346486),
     c = n(433355),
     d = n(33293);
-t.Z = l.memo(function (e) {
-    let { message: t, subtitle: n, countdown: u, buttonText: h, buttonColor: p, buttonSubmitting: m, onButtonClick: f, imageSrc: g, animationSrc: C, secondaryButtonText: x, onSecondaryButtonClick: v, children: _, useReducedMotion: I = !1 } = e,
-        E = (0, a.e7)([c.ZP], () => c.ZP.getState().isMembersOpen);
-    if (r.tq && E) return null;
-    if (null == t) return (0, i.jsx)(i.Fragment, { children: l.Children.only(_) });
+let u = l.memo(function (e) {
+    let { message: t, subtitle: n, countdown: u, buttonText: h, buttonColor: p, buttonSubmitting: m, onButtonClick: f, imageSrc: g, animationSrc: _, secondaryButtonText: C, onSecondaryButtonClick: x, children: v, useReducedMotion: E = !1 } = e,
+        I = (0, r.e7)([c.ZP], () => c.ZP.getState().isMembersOpen);
+    if (a.tq && I) return null;
+    if (null == t) return (0, i.jsx)(i.Fragment, { children: l.Children.only(v) });
     let b = null;
     return (
         null != g
@@ -19,10 +20,10 @@ t.Z = l.memo(function (e) {
                   src: g,
                   className: d.image
               }))
-            : null != C &&
-              (b = (0, i.jsx)(s.LottieAnimation, {
-                  importData: C,
-                  shouldAnimate: !I,
+            : null != _ &&
+              (b = (0, i.jsx)(s.Fmz, {
+                  importData: _,
+                  shouldAnimate: !E,
                   className: d.animation
               })),
         (0, i.jsxs)('div', {
@@ -35,7 +36,7 @@ t.Z = l.memo(function (e) {
                         (0, i.jsxs)('div', {
                             className: d.text,
                             children: [
-                                (0, i.jsx)(s.Heading, {
+                                (0, i.jsx)(s.X6q, {
                                     variant: 'heading-md/semibold',
                                     className: d.title,
                                     children: t
@@ -53,24 +54,24 @@ t.Z = l.memo(function (e) {
                 (0, i.jsxs)('div', {
                     className: d.buttonContainer,
                     children: [
-                        null != x &&
-                            (0, i.jsx)(s.Button, {
+                        null != C &&
+                            (0, i.jsx)(s.zxk, {
                                 className: d.button,
-                                size: s.Button.Sizes.SMALL,
-                                onClick: v,
-                                look: s.Button.Looks.LINK,
-                                color: s.Button.Colors.PRIMARY,
+                                size: s.zxk.Sizes.SMALL,
+                                onClick: x,
+                                look: s.zxk.Looks.LINK,
+                                color: s.zxk.Colors.PRIMARY,
                                 submitting: m,
-                                children: x
+                                children: C
                             }),
                         null != h &&
-                            (0, i.jsx)(s.Button, {
+                            (0, i.jsx)(s.zxk, {
                                 className: d.button,
                                 innerClassName: d.innerButton,
-                                size: s.Button.Sizes.SMALL,
+                                size: s.zxk.Sizes.SMALL,
                                 onClick: f,
                                 submitting: m,
-                                color: null != p ? p : s.Button.Colors.PRIMARY,
+                                color: null != p ? p : s.zxk.Colors.PRIMARY,
                                 children: h
                             })
                     ]

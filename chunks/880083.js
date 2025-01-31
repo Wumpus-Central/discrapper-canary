@@ -1,10 +1,11 @@
-e.exports = {
-    container: 'container_d7123a',
-    close: 'close_d7123a',
-    iconContainer: 'iconContainer_d7123a',
-    icon: 'icon_d7123a',
-    header: 'header_d7123a text_d7123a',
-    body: 'body_d7123a text_d7123a',
-    invite: 'invite_d7123a',
-    inviteDetail: 'inviteDetail_d7123a'
+n.exports = {
+    container: 'container_a2844c',
+    close: 'close_a2844c',
+    iconContainer: 'iconContainer_a2844c',
+    icon: 'icon_a2844c',
+    text: 'text_a2844c',
+    header: 'header_a2844c text_a2844c',
+    body: 'body_a2844c text_a2844c',
+    invite: 'invite_a2844c',
+    inviteDetail: 'inviteDetail_a2844c'
 };

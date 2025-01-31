@@ -1,72 +1,71 @@
+n.d(t, { Z: () => g }), n(724458);
 var i,
-    a = r(724458);
-var o = r(442837),
-    s = r(570140);
-function l(e, n, r) {
+    r = n(442837),
+    a = n(570140);
+function s(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let u = {},
-    c = null,
-    d = null;
-function f(e, n) {
-    null == n ? e in u && delete u[e] : null != e && (u[e] = n);
+let o = {},
+    l = null,
+    u = null;
+function c(e, t) {
+    null == t ? e in o && delete o[e] : null != e && (o[e] = t);
 }
-function p(e) {
-    let { required_actions: n, user_id: r } = e;
-    f((c = r), n);
+function d(e) {
+    let { required_actions: t, user_id: n } = e;
+    c((l = n), t);
 }
-function h(e) {
-    let { user: n } = e;
-    d = n.id;
+function f(e) {
+    let { user: t } = e;
+    u = t.id;
 }
 function _(e) {
-    let { userId: n } = e;
-    f(n, null);
+    let { userId: t } = e;
+    c(t, null);
 }
-function m(e) {
-    let { isSwitchingAccount: n } = e;
-    !n && null != d && f(d, null);
+function p(e) {
+    let { isSwitchingAccount: t } = e;
+    t || null == u || c(u, null);
 }
-function g(e) {
-    let { userId: n } = e;
-    f(n, null);
+function h(e) {
+    let { userId: t } = e;
+    c(t, null);
 }
-class E extends (i = o.ZP.PersistedStore) {
+class m extends (i = r.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (u = e);
+        null != e && (o = e);
     }
     requiredActions(e) {
-        var n;
-        return null !== (n = u[e]) && void 0 !== n ? n : null;
+        var t;
+        return null !== (t = o[e]) && void 0 !== t ? t : null;
     }
-    requiredActionsIncludes(e, n) {
-        let r = this.requiredActions(e);
-        return null != r && n.reduce((e, n) => e || r.includes(n), !1);
+    requiredActionsIncludes(e, t) {
+        let n = this.requiredActions(e);
+        return null != n && t.reduce((e, t) => e || n.includes(t), !1);
     }
     wasLoginAttemptedInSession(e) {
-        return c === e;
+        return l === e;
     }
     getState() {
-        return u;
+        return o;
     }
 }
-l(E, 'displayName', 'LoginRequiredActionStore'),
-    l(E, 'persistKey', 'LoginRequiredActionStore'),
-    (n.Z = new E(s.Z, {
-        LOGIN_ATTEMPTED: p,
-        CONNECTION_OPEN: h,
-        CURRENT_USER_UPDATE: h,
-        LOGOUT: m,
-        PASSWORD_UPDATED: _,
-        MULTI_ACCOUNT_REMOVE_ACCOUNT: g
-    }));
+s(m, 'displayName', 'LoginRequiredActionStore'), s(m, 'persistKey', 'LoginRequiredActionStore');
+let g = new m(a.Z, {
+    LOGIN_ATTEMPTED: d,
+    CONNECTION_OPEN: f,
+    CURRENT_USER_UPDATE: f,
+    LOGOUT: p,
+    PASSWORD_UPDATED: _,
+    MULTI_ACCOUNT_REMOVE_ACCOUNT: h
+});

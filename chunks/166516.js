@@ -37,10 +37,10 @@
             (s = !0), x.reset(), d();
         }),
             (x.reset = function () {
-                if (!!s) (m = []), (l = !1), (p = !1), a.clearRect(0, 0, o, r), a.drawImage(c, 0, 0, o, r), C.setIcon(i), window.clearTimeout(f), window.clearTimeout(y);
+                s && ((m = []), (l = !1), (p = !1), a.clearRect(0, 0, o, r), a.drawImage(c, 0, 0, o, r), C.setIcon(i), window.clearTimeout(f), window.clearTimeout(y));
             }),
             (x.start = function () {
-                if (!!s && !p) {
+                if (s && !p) {
                     var e = function () {
                         (l = m[0]), (p = !1), m.length > 0 && (m.shift(), x.start());
                     };
@@ -74,16 +74,6 @@
             v = function (e) {
                 return (e.n = 'number' == typeof e.n ? Math.abs(0 | e.n) : e.n), (e.x = o * e.x), (e.y = r * e.y), (e.w = o * e.w), (e.h = r * e.h), (e.len = ('' + e.n).length), e;
             };
-        (b.circle = function (e) {
-            e = v(e);
-            var n = !1;
-            2 === e.len ? ((e.x = e.x - 0.4 * e.w), (e.w = 1.4 * e.w), (n = !0)) : e.len >= 3 && ((e.x = e.x - 0.65 * e.w), (e.w = 1.65 * e.w), (n = !0)), a.clearRect(0, 0, o, r), a.drawImage(c, 0, 0, o, r), a.beginPath(), (a.font = t.fontStyle + ' ' + Math.floor(e.h * (e.n > 99 ? 0.85 : 1)) + 'px ' + t.fontFamily), (a.textAlign = 'center'), n ? (a.moveTo(e.x + e.w / 2, e.y), a.lineTo(e.x + e.w - e.h / 2, e.y), a.quadraticCurveTo(e.x + e.w, e.y, e.x + e.w, e.y + e.h / 2), a.lineTo(e.x + e.w, e.y + e.h - e.h / 2), a.quadraticCurveTo(e.x + e.w, e.y + e.h, e.x + e.w - e.h / 2, e.y + e.h), a.lineTo(e.x + e.h / 2, e.y + e.h), a.quadraticCurveTo(e.x, e.y + e.h, e.x, e.y + e.h - e.h / 2), a.lineTo(e.x, e.y + e.h / 2), a.quadraticCurveTo(e.x, e.y, e.x + e.h / 2, e.y)) : a.arc(e.x + e.w / 2, e.y + e.h / 2, e.h / 2, 0, 2 * Math.PI), (a.fillStyle = 'rgba(' + t.bgColor.r + ',' + t.bgColor.g + ',' + t.bgColor.b + ',' + e.o + ')'), a.fill(), a.closePath(), a.beginPath(), a.stroke(), (a.fillStyle = 'rgba(' + t.textColor.r + ',' + t.textColor.g + ',' + t.textColor.b + ',' + e.o + ')'), 'number' == typeof e.n && e.n > 999 ? a.fillText((e.n > 9999 ? 9 : Math.floor(e.n / 1000)) + 'k+', Math.floor(e.x + e.w / 2), Math.floor(e.y + e.h - 0.2 * e.h)) : a.fillText(e.n, Math.floor(e.x + e.w / 2), Math.floor(e.y + e.h - 0.15 * e.h)), a.closePath();
-        }),
-            (b.rectangle = function (e) {
-                e = v(e);
-                var n = !1;
-                2 === e.len ? ((e.x = e.x - 0.4 * e.w), (e.w = 1.4 * e.w)) : e.len >= 3 && ((e.x = e.x - 0.65 * e.w), (e.w = 1.65 * e.w)), a.clearRect(0, 0, o, r), a.drawImage(c, 0, 0, o, r), a.beginPath(), (a.font = t.fontStyle + ' ' + Math.floor(e.h * (e.n > 99 ? 0.9 : 1)) + 'px ' + t.fontFamily), (a.textAlign = 'center'), (a.fillStyle = 'rgba(' + t.bgColor.r + ',' + t.bgColor.g + ',' + t.bgColor.b + ',' + e.o + ')'), a.fillRect(e.x, e.y, e.w, e.h), (a.fillStyle = 'rgba(' + t.textColor.r + ',' + t.textColor.g + ',' + t.textColor.b + ',' + e.o + ')'), 'number' == typeof e.n && e.n > 999 ? a.fillText((e.n > 9999 ? 9 : Math.floor(e.n / 1000)) + 'k+', Math.floor(e.x + e.w / 2), Math.floor(e.y + e.h - 0.2 * e.h)) : a.fillText(e.n, Math.floor(e.x + e.w / 2), Math.floor(e.y + e.h - 0.15 * e.h)), a.closePath();
-            });
         function E(e) {
             if (e.paused || e.ended || u) return !1;
             try {
@@ -94,6 +84,15 @@
             }, _.duration)),
                 C.setIcon(i);
         }
+        (b.circle = function (e) {
+            e = v(e);
+            var n = !1;
+            2 === e.len ? ((e.x = e.x - 0.4 * e.w), (e.w = 1.4 * e.w), (n = !0)) : e.len >= 3 && ((e.x = e.x - 0.65 * e.w), (e.w = 1.65 * e.w), (n = !0)), a.clearRect(0, 0, o, r), a.drawImage(c, 0, 0, o, r), a.beginPath(), (a.font = t.fontStyle + ' ' + Math.floor(e.h * (e.n > 99 ? 0.85 : 1)) + 'px ' + t.fontFamily), (a.textAlign = 'center'), n ? (a.moveTo(e.x + e.w / 2, e.y), a.lineTo(e.x + e.w - e.h / 2, e.y), a.quadraticCurveTo(e.x + e.w, e.y, e.x + e.w, e.y + e.h / 2), a.lineTo(e.x + e.w, e.y + e.h - e.h / 2), a.quadraticCurveTo(e.x + e.w, e.y + e.h, e.x + e.w - e.h / 2, e.y + e.h), a.lineTo(e.x + e.h / 2, e.y + e.h), a.quadraticCurveTo(e.x, e.y + e.h, e.x, e.y + e.h - e.h / 2), a.lineTo(e.x, e.y + e.h / 2), a.quadraticCurveTo(e.x, e.y, e.x + e.h / 2, e.y)) : a.arc(e.x + e.w / 2, e.y + e.h / 2, e.h / 2, 0, 2 * Math.PI), (a.fillStyle = 'rgba(' + t.bgColor.r + ',' + t.bgColor.g + ',' + t.bgColor.b + ',' + e.o + ')'), a.fill(), a.closePath(), a.beginPath(), a.stroke(), (a.fillStyle = 'rgba(' + t.textColor.r + ',' + t.textColor.g + ',' + t.textColor.b + ',' + e.o + ')'), 'number' == typeof e.n && e.n > 999 ? a.fillText((e.n > 9999 ? 9 : Math.floor(e.n / 1000)) + 'k+', Math.floor(e.x + e.w / 2), Math.floor(e.y + e.h - 0.2 * e.h)) : a.fillText(e.n, Math.floor(e.x + e.w / 2), Math.floor(e.y + e.h - 0.15 * e.h)), a.closePath();
+        }),
+            (b.rectangle = function (e) {
+                e = v(e);
+                2 === e.len ? ((e.x = e.x - 0.4 * e.w), (e.w = 1.4 * e.w)) : e.len >= 3 && ((e.x = e.x - 0.65 * e.w), (e.w = 1.65 * e.w)), a.clearRect(0, 0, o, r), a.drawImage(c, 0, 0, o, r), a.beginPath(), (a.font = t.fontStyle + ' ' + Math.floor(e.h * (e.n > 99 ? 0.9 : 1)) + 'px ' + t.fontFamily), (a.textAlign = 'center'), (a.fillStyle = 'rgba(' + t.bgColor.r + ',' + t.bgColor.g + ',' + t.bgColor.b + ',' + e.o + ')'), a.fillRect(e.x, e.y, e.w, e.h), (a.fillStyle = 'rgba(' + t.textColor.r + ',' + t.textColor.g + ',' + t.textColor.b + ',' + e.o + ')'), 'number' == typeof e.n && e.n > 999 ? a.fillText((e.n > 9999 ? 9 : Math.floor(e.n / 1000)) + 'k+', Math.floor(e.x + e.w / 2), Math.floor(e.y + e.h - 0.2 * e.h)) : a.fillText(e.n, Math.floor(e.x + e.w / 2), Math.floor(e.y + e.h - 0.15 * e.h)), a.closePath();
+            });
         var C = {};
         function R(e) {
             e = e.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i, function (e, t, n, r) {
@@ -504,7 +503,7 @@
                 },
                 webcam: function (e) {
                     if (
-                        ((!window.URL || !window.URL.createObjectURL) &&
+                        ((window.URL && window.URL.createObjectURL) ||
                             ((window.URL = window.URL || {}),
                             (window.URL.createObjectURL = function (e) {
                                 return e;

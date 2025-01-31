@@ -1,13 +1,7 @@
 n.d(t, {
-    Fd: function () {
-        return h;
-    },
-    GN: function () {
-        return g;
-    },
-    rM: function () {
-        return m;
-    }
+    Fd: () => h,
+    GN: () => g,
+    rM: () => m
 }),
     n(47120),
     n(653041);
@@ -32,8 +26,7 @@ function m(e, t) {
                 },
                 render(t, n, i) {
                     var r, l;
-                    if (t.isExpandedItem) return 'renderExpandedContent' in e ? e.renderExpandedContent(t.item, n) : null;
-                    return null !== (l = null === (r = e.render) || void 0 === r ? void 0 : r.call(e, t.item, n, i)) && void 0 !== l ? l : null;
+                    return t.isExpandedItem ? ('renderExpandedContent' in e ? e.renderExpandedContent(t.item, n) : null) : null !== (l = null === (r = e.render) || void 0 === r ? void 0 : r.call(e, t.item, n, i)) && void 0 !== l ? l : null;
                 }
             }))
         );
@@ -48,11 +41,11 @@ function m(e, t) {
                     if ((o()(null != t, 'Cell props missing; did you use the hook?'), e.isExpandedItem)) return null;
                     let { expandedRows: n, onToggleExpandRow: r } = t,
                         l = n.has(e.key);
-                    return (0, i.jsx)(c.Clickable, {
+                    return (0, i.jsx)(c.P3F, {
                         className: u.toggleExpandCell,
                         onClick: () => r(e.key),
                         children: (0, i.jsx)(d.bL, {
-                            children: (0, i.jsx)(c.ChevronSmallRightIcon, {
+                            children: (0, i.jsx)(c.Fbu, {
                                 size: 'md',
                                 color: 'currentColor',
                                 className: s()(u.caretIcon, { [u.caretDownIcon]: l })

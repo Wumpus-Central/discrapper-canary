@@ -1,70 +1,69 @@
-var r = {
-        lessThanXSeconds: {
-            one: 'less than a second',
-            other: 'less than {{count}} seconds'
-        },
-        xSeconds: {
-            one: '1 second',
-            other: '{{count}} seconds'
-        },
-        halfAMinute: 'half a minute',
-        lessThanXMinutes: {
-            one: 'less than a minute',
-            other: 'less than {{count}} minutes'
-        },
-        xMinutes: {
-            one: '1 minute',
-            other: '{{count}} minutes'
-        },
-        aboutXHours: {
-            one: 'about 1 hour',
-            other: 'about {{count}} hours'
-        },
-        xHours: {
-            one: '1 hour',
-            other: '{{count}} hours'
-        },
-        xDays: {
-            one: '1 day',
-            other: '{{count}} days'
-        },
-        aboutXWeeks: {
-            one: 'about 1 week',
-            other: 'about {{count}} weeks'
-        },
-        xWeeks: {
-            one: '1 week',
-            other: '{{count}} weeks'
-        },
-        aboutXMonths: {
-            one: 'about 1 month',
-            other: 'about {{count}} months'
-        },
-        xMonths: {
-            one: '1 month',
-            other: '{{count}} months'
-        },
-        aboutXYears: {
-            one: 'about 1 year',
-            other: 'about {{count}} years'
-        },
-        xYears: {
-            one: '1 year',
-            other: '{{count}} years'
-        },
-        overXYears: {
-            one: 'over 1 year',
-            other: 'over {{count}} years'
-        },
-        almostXYears: {
-            one: 'almost 1 year',
-            other: 'almost {{count}} years'
-        }
+n.d(t, { Z: () => r });
+var i = {
+    lessThanXSeconds: {
+        one: 'less than a second',
+        other: 'less than {{count}} seconds'
     },
-    i = function (e, n, i) {
-        var a,
-            o = r[e];
-        if (((a = 'string' == typeof o ? o : 1 === n ? o.one : o.other.replace('{{count}}', n.toString())), null != i && i.addSuffix)) return i.comparison && i.comparison > 0 ? 'in ' + a : a + ' ago';
-        return a;
-    };
-n.Z = i;
+    xSeconds: {
+        one: '1 second',
+        other: '{{count}} seconds'
+    },
+    halfAMinute: 'half a minute',
+    lessThanXMinutes: {
+        one: 'less than a minute',
+        other: 'less than {{count}} minutes'
+    },
+    xMinutes: {
+        one: '1 minute',
+        other: '{{count}} minutes'
+    },
+    aboutXHours: {
+        one: 'about 1 hour',
+        other: 'about {{count}} hours'
+    },
+    xHours: {
+        one: '1 hour',
+        other: '{{count}} hours'
+    },
+    xDays: {
+        one: '1 day',
+        other: '{{count}} days'
+    },
+    aboutXWeeks: {
+        one: 'about 1 week',
+        other: 'about {{count}} weeks'
+    },
+    xWeeks: {
+        one: '1 week',
+        other: '{{count}} weeks'
+    },
+    aboutXMonths: {
+        one: 'about 1 month',
+        other: 'about {{count}} months'
+    },
+    xMonths: {
+        one: '1 month',
+        other: '{{count}} months'
+    },
+    aboutXYears: {
+        one: 'about 1 year',
+        other: 'about {{count}} years'
+    },
+    xYears: {
+        one: '1 year',
+        other: '{{count}} years'
+    },
+    overXYears: {
+        one: 'over 1 year',
+        other: 'over {{count}} years'
+    },
+    almostXYears: {
+        one: 'almost 1 year',
+        other: 'almost {{count}} years'
+    }
+};
+let r = function (e, t, n) {
+    var r,
+        a = i[e];
+    return ((r = 'string' == typeof a ? a : 1 === t ? a.one : a.other.replace('{{count}}', t.toString())), null != n && n.addSuffix) ? (n.comparison && n.comparison > 0 ? 'in ' + r : r + ' ago') : r;
+};

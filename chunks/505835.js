@@ -1,45 +1,41 @@
-n.d(t, {
-    Y: function () {
-        return a;
-    }
-});
+n.d(t, { Y: () => u });
 var r = n(192379),
     i = n(148843),
     o = n(181034),
-    u = n(89540);
-function a(e, t) {
+    a = n(89540);
+function u(e, t) {
     var n = (0, o.N)(),
-        a = (0, r.useMemo)(
+        u = (0, r.useMemo)(
             function () {
                 return new i.x(n.getBackend());
             },
             [n]
         );
     return (
-        (0, u.L)(
+        (0, a.L)(
             function () {
                 return (
-                    (a.dragSourceOptions = e || null),
-                    a.reconnect(),
+                    (u.dragSourceOptions = e || null),
+                    u.reconnect(),
                     function () {
-                        return a.disconnectDragSource();
+                        return u.disconnectDragSource();
                     }
                 );
             },
-            [a, e]
+            [u, e]
         ),
-        (0, u.L)(
+        (0, a.L)(
             function () {
                 return (
-                    (a.dragPreviewOptions = t || null),
-                    a.reconnect(),
+                    (u.dragPreviewOptions = t || null),
+                    u.reconnect(),
                     function () {
-                        return a.disconnectDragPreview();
+                        return u.disconnectDragPreview();
                     }
                 );
             },
-            [a, t]
+            [u, t]
         ),
-        a
+        u
     );
 }

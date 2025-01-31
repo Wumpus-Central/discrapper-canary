@@ -1,5 +1,5 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
     return e.defineLocale('ms-my', {
         months: 'Januari_Februari_Mac_April_Mei_Jun_Julai_Ogos_September_Oktober_November_Disember'.split('_'),
@@ -16,16 +16,11 @@
             LLLL: 'dddd, D MMMM YYYY [pukul] HH.mm'
         },
         meridiemParse: /pagi|tengahari|petang|malam/,
-        meridiemHour: function (e, n) {
-            if ((12 === e && (e = 0), 'pagi' === n)) return e;
-            if ('tengahari' === n) return e >= 11 ? e : e + 12;
-            if ('petang' === n || 'malam' === n) return e + 12;
+        meridiemHour: function (e, t) {
+            return (12 === e && (e = 0), 'pagi' === t) ? e : 'tengahari' === t ? (e >= 11 ? e : e + 12) : 'petang' === t || 'malam' === t ? e + 12 : void 0;
         },
-        meridiem: function (e, n, r) {
-            if (e < 11) return 'pagi';
-            if (e < 15) return 'tengahari';
-            if (e < 19) return 'petang';
-            else return 'malam';
+        meridiem: function (e, t, n) {
+            return e < 11 ? 'pagi' : e < 15 ? 'tengahari' : e < 19 ? 'petang' : 'malam';
         },
         calendar: {
             sameDay: '[Hari ini pukul] LT',

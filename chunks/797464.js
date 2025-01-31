@@ -1,94 +1,88 @@
-n.r(o),
-    n.d(o, {
-        default: function () {
-            return u;
-        }
-    }),
-    n(47120);
-var e = n(200651),
-    l = n(192379),
-    a = n(120356),
-    s = n.n(a),
-    i = n(481060),
-    r = n(313201),
-    c = n(388032),
-    d = n(821643);
+e.d(n, { default: () => u }), e(47120);
+var a = e(200651),
+    l = e(192379),
+    o = e(120356),
+    s = e.n(o),
+    i = e(481060),
+    r = e(313201),
+    d = e(388032),
+    c = e(821643);
 function u(t) {
-    let { transitionState: o, onConfirm: n, onClose: a, onDismiss: u } = t,
-        [h, m] = l.useState(!1),
+    let { transitionState: n, onConfirm: e, onClose: o, onDismiss: u } = t,
+        [m, h] = l.useState(!1),
         [g, x] = l.useState(!0),
-        [B, C] = l.useState(!0),
-        f = (0, r.Dt)(),
-        p = () => {
-            u(), a();
+        [b, p] = l.useState(!0),
+        C = (0, r.Dt)(),
+        k = () => {
+            u(), o();
         };
-    return (0, e.jsxs)(i.ModalRoot, {
-        transitionState: o,
-        'aria-labelledby': f,
-        size: i.ModalSize.SMALL,
+    return (0, a.jsxs)(i.Y0X, {
+        transitionState: n,
+        'aria-labelledby': C,
+        size: i.CgR.SMALL,
         children: [
-            (0, e.jsxs)(i.ModalContent, {
-                className: d.modalContent,
+            (0, a.jsxs)(i.hzk, {
+                className: c.modalContent,
                 children: [
-                    (0, e.jsx)(i.ModalCloseButton, {
-                        onClick: p,
-                        className: d.closeButton
+                    (0, a.jsx)(i.olH, {
+                        onClick: k,
+                        className: c.closeButton
                     }),
-                    (0, e.jsx)(i.Heading, {
-                        id: f,
+                    (0, a.jsx)(i.X6q, {
+                        id: C,
                         variant: 'heading-lg/extrabold',
                         color: 'header-primary',
-                        className: d.__invalid_modalTitle,
-                        children: c.intl.string(c.t['6rP+BQ'])
+                        className: c.__invalid_modalTitle,
+                        children: d.intl.string(d.t['6rP+BQ'])
                     }),
-                    (0, e.jsx)(i.Text, {
+                    (0, a.jsx)(i.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        className: d.modalBody,
-                        children: c.intl.string(c.t['1LuCnZ'])
+                        className: c.modalBody,
+                        children: d.intl.string(d.t['1LuCnZ'])
                     }),
-                    (0, e.jsx)(i.FormSwitch, {
+                    (0, a.jsx)(i.j7V, {
                         hideBorder: !0,
                         onChange: (t) => {
                             x(t);
                         },
-                        className: s()(d.modalBody, d.toggle),
+                        className: s()(c.modalBody, c.toggle),
                         value: g,
-                        children: c.intl.string(c.t['zLb+u7'])
+                        children: d.intl.string(d.t['zLb+u7'])
                     })
                 ]
             }),
-            (0, e.jsxs)(i.ModalFooter, {
+            (0, a.jsxs)(i.mzw, {
                 children: [
-                    (0, e.jsx)(i.Button, {
+                    (0, a.jsx)(i.zxk, {
                         type: 'submit',
-                        color: i.Button.Colors.BRAND,
+                        color: i.zxk.Colors.BRAND,
                         onClick: () => {
-                            if (!h) m(!0), n(g, B), m(!1), a();
+                            !m && (h(!0), e(g, b), h(!1), o());
                         },
-                        submitting: h,
-                        children: c.intl.string(c.t['cY+Ooa'])
+                        submitting: m,
+                        children: d.intl.string(d.t['cY+Ooa'])
                     }),
-                    (0, e.jsx)(i.Button, {
+                    (0, a.jsx)(i.zxk, {
                         type: 'submit',
-                        color: i.Button.Colors.TRANSPARENT,
+                        color: i.zxk.Colors.TRANSPARENT,
                         grow: !0,
-                        look: i.ButtonLooks.LINK,
-                        onClick: p,
-                        submitting: h,
-                        className: d.cancelButton,
-                        children: c.intl.string(c.t['ETE/oK'])
+                        look: i.iLD.LINK,
+                        onClick: k,
+                        submitting: m,
+                        className: c.cancelButton,
+                        children: d.intl.string(d.t['ETE/oK'])
                     }),
-                    (0, e.jsx)(i.Checkbox, {
-                        value: B,
-                        type: i.Checkbox.Types.INVERTED,
-                        onChange: (t, o) => {
-                            C(o);
+                    (0, a.jsx)(i.XZJ, {
+                        value: b,
+                        type: i.XZJ.Types.INVERTED,
+                        onChange: (t, n) => {
+                            p(n);
                         },
-                        children: (0, e.jsx)(i.Text, {
+                        children: (0, a.jsx)(i.Text, {
                             tag: 'span',
                             variant: 'text-sm/normal',
-                            children: c.intl.string(c.t.KX8WJi)
+                            children: d.intl.string(d.t.KX8WJi)
                         })
                     })
                 ]

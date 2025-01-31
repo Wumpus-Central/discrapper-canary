@@ -1,7 +1,7 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    var n = {
+    var t = {
             1: '༡',
             2: '༢',
             3: '༣',
@@ -13,7 +13,7 @@
             9: '༩',
             0: '༠'
         },
-        r = {
+        n = {
             '༡': '1',
             '༢': '2',
             '༣': '3',
@@ -65,24 +65,20 @@
         },
         preparse: function (e) {
             return e.replace(/[༡༢༣༤༥༦༧༨༩༠]/g, function (e) {
-                return r[e];
+                return n[e];
             });
         },
         postformat: function (e) {
             return e.replace(/\d/g, function (e) {
-                return n[e];
+                return t[e];
             });
         },
         meridiemParse: /མཚན་མོ|ཞོགས་ཀས|ཉིན་གུང|དགོང་དག|མཚན་མོ/,
-        meridiemHour: function (e, n) {
-            return (12 === e && (e = 0), ('མཚན\u0F0Bམོ' === n && e >= 4) || ('ཉིན\u0F0Bགུང' === n && e < 5) || 'དགོང\u0F0Bདག' === n) ? e + 12 : e;
+        meridiemHour: function (e, t) {
+            return (12 === e && (e = 0), ('མཚན\u0F0Bམོ' === t && e >= 4) || ('ཉིན\u0F0Bགུང' === t && e < 5) || 'དགོང\u0F0Bདག' === t) ? e + 12 : e;
         },
-        meridiem: function (e, n, r) {
-            if (e < 4) return 'མཚན\u0F0Bམོ';
-            if (e < 10) return 'ཞོགས\u0F0Bཀས';
-            if (e < 17) return 'ཉིན\u0F0Bགུང';
-            else if (e < 20) return 'དགོང\u0F0Bདག';
-            else return 'མཚན\u0F0Bམོ';
+        meridiem: function (e, t, n) {
+            return e < 4 ? 'མཚན\u0F0Bམོ' : e < 10 ? 'ཞོགས\u0F0Bཀས' : e < 17 ? 'ཉིན\u0F0Bགུང' : e < 20 ? 'དགོང\u0F0Bདག' : 'མཚན\u0F0Bམོ';
         },
         week: {
             dow: 0,

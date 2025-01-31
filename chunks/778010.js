@@ -1,14 +1,10 @@
-function i(e, n) {
-    return null === n
+function i(e, t) {
+    return null === t
         ? null === e
         : Array.isArray(e)
           ? e.some(function (e) {
-                return e === n;
+                return e === t;
             })
-          : e === n;
+          : e === t;
 }
-r.d(n, {
-    s: function () {
-        return i;
-    }
-});
+n.d(t, { s: () => i });

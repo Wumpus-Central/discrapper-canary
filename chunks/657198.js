@@ -1,123 +1,118 @@
-r.d(n, {
-    Z: function () {
-        return y;
-    }
-});
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(120356),
-    l = r.n(s),
-    u = r(270445),
-    c = r(442837),
-    d = r(911969),
-    f = r(998698),
-    p = r(703558),
-    h = r(117530),
-    _ = r(91313),
-    m = r(436660),
-    g = r(887490),
-    E = r(388032),
-    v = r(223979);
-function y(e, n, r) {
-    let { attributes: i, children: o, element: s } = n;
+n.d(t, { Z: () => E }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(270445),
+    l = n(442837),
+    u = n(911969),
+    c = n(998698),
+    d = n(703558),
+    f = n(117530),
+    _ = n(91313),
+    p = n(436660),
+    h = n(887490),
+    m = n(388032),
+    g = n(223979);
+function E(e, t, n) {
+    let { attributes: r, children: a, element: s } = t;
     switch (s.type) {
         case 'applicationCommand':
-            let l = f.Z.getActiveCommand(r),
-                u = 0,
-                c = 0;
-            if (null != l && l.id === s.command.id) {
+            let o = c.Z.getActiveCommand(n),
+                l = 0,
+                u = 0;
+            if (null != o && o.id === s.command.id) {
                 var d;
-                let n = _.cu(e);
-                for (let e of null !== (d = l.options) && void 0 !== d ? d : []) n.includes(e.name) ? c++ : u++;
+                let t = _.cu(e);
+                for (let e of null !== (d = o.options) && void 0 !== d ? d : []) t.includes(e.name) ? u++ : l++;
             }
-            let p = {};
-            if (u > 0) {
+            let f = {};
+            if (l > 0) {
                 let e;
-                (e = c > 0 ? E.intl.formatToPlainString(E.t.BP8N0N, { count: u }) : E.intl.formatToPlainString(E.t.lziVCw, { count: u })), (p['data-trailing-placeholder'] = e);
+                (e = u > 0 ? m.intl.formatToPlainString(m.t.BP8N0N, { count: l }) : m.intl.formatToPlainString(m.t.lziVCw, { count: l })), (f['data-trailing-placeholder'] = e);
             }
-            return (0, a.jsx)('div', {
-                className: v.applicationCommand,
-                ...i,
-                ...p,
-                children: o
+            return (0, i.jsx)('div', {
+                className: g.applicationCommand,
+                ...r,
+                ...f,
+                children: a
             });
         case 'applicationCommandOption':
-            return (0, a.jsx)(b, {
-                attributes: i,
-                channelId: r,
+            return (0, i.jsx)(v, {
+                attributes: r,
+                channelId: n,
                 element: s,
-                children: o
+                children: a
             });
         default:
             return null;
     }
 }
-let b = (e) => {
-    let n,
-        { channelId: r, element: i, attributes: s, children: _ } = e,
-        y = (0, u.vt)(),
-        b = (0, u.UE)(),
-        I = (0, u._7)(),
-        { optionType: T, errored: S } = (0, c.cj)(
-            [f.Z],
+let v = (e) => {
+    let t,
+        { channelId: n, element: a, attributes: _, children: E } = e,
+        v = (0, o.vt)(),
+        y = (0, o.UE)(),
+        I = (0, o._7)(),
+        { optionType: b, errored: T } = (0, l.cj)(
+            [c.Z],
             () => {
-                var e, n, a;
+                var e, t, i;
                 return {
-                    optionType: null === (e = f.Z.getOption(r, i.optionName)) || void 0 === e ? void 0 : e.type,
-                    errored: (null === (a = f.Z.getOptionState(r, i.optionName)) || void 0 === a ? void 0 : null === (n = a.lastValidationResult) || void 0 === n ? void 0 : n.success) !== !0
+                    optionType: null === (e = c.Z.getOption(n, a.optionName)) || void 0 === e ? void 0 : e.type,
+                    errored: (null === (i = c.Z.getOptionState(n, a.optionName)) || void 0 === i ? void 0 : null === (t = i.lastValidationResult) || void 0 === t ? void 0 : t.success) !== !0
                 };
             },
-            [r, i.optionName]
+            [n, a.optionName]
         ),
-        A = (0, c.e7)([h.Z], () => h.Z.getUpload(r, i.optionName, p.d.SlashCommand), [r, i.optionName]),
-        C = i.children[i.children.length - 1],
-        N = null != C && g.LC.isText(C) && C.text.endsWith('\n'),
-        R = l()(v.inlineElement, v.optionPill, {
-            [v.selectedPill]: b && y,
-            [v.erroredPill]: (!b || !y) && S
+        S = (0, l.e7)([f.Z], () => f.Z.getUpload(n, a.optionName, d.d.SlashCommand), [n, a.optionName]),
+        A = a.children[a.children.length - 1],
+        N = null != A && h.LC.isText(A) && A.text.endsWith('\n'),
+        C = s()(g.inlineElement, g.optionPill, {
+            [g.selectedPill]: y && v,
+            [g.erroredPill]: (!y || !v) && T
         }),
-        O = o.useCallback(() => {
-            !g.bN.isVoid(I, i) && m.Q.selectCommandOption(I, i.optionName, !0);
-        }, [I, i]);
+        R = r.useCallback(() => {
+            h.bN.isVoid(I, a) || p.Q.selectCommandOption(I, a.optionName, !0);
+        }, [I, a]);
     return (
-        (n =
-            T === d.jw.ATTACHMENT
-                ? (null == A ? void 0 : A.filename) != null
-                    ? (0, a.jsxs)('span', {
-                          className: l()(v.optionPillValue, v.attachmentFilename),
+        (t =
+            b === u.jw.ATTACHMENT
+                ? (null == S ? void 0 : S.filename) != null
+                    ? (0, i.jsxs)('span', {
+                          className: s()(g.optionPillValue, g.attachmentFilename),
                           contentEditable: !1,
-                          children: [A.filename, _]
+                          children: [S.filename, E]
                       })
-                    : (0, a.jsxs)('span', {
-                          className: l()(v.optionPillValue, v.readonlyPillValue),
+                    : (0, i.jsxs)('span', {
+                          className: s()(g.optionPillValue, g.readonlyPillValue),
                           contentEditable: !1,
-                          children: [E.intl.string(E.t.GRdFnp), _]
+                          children: [m.intl.string(m.t.GRdFnp), E]
                       })
-                : (0, a.jsxs)('span', {
-                      className: v.optionPillValue,
+                : (0, i.jsxs)('span', {
+                      className: g.optionPillValue,
                       children: [
-                          _,
+                          E,
                           N
-                              ? (0, a.jsx)('span', {
-                                    className: v.newLine,
+                              ? (0, i.jsx)('span', {
+                                    className: g.newLine,
                                     contentEditable: !1
                                 })
                               : null
                       ]
                   })),
-        (0, a.jsxs)('span', {
-            ...s,
-            className: R,
+        (0, i.jsxs)('span', {
+            ..._,
+            className: C,
             children: [
-                (0, a.jsxs)('span', {
-                    className: v.optionPillKey,
+                (0, i.jsxs)('span', {
+                    className: g.optionPillKey,
                     contentEditable: !1,
-                    onClick: O,
-                    children: [i.optionDisplayName, '\u200B']
+                    onClick: R,
+                    children: [a.optionDisplayName, '\u200B']
                 }),
-                n,
-                (0, a.jsx)('span', {
+                t,
+                (0, i.jsx)('span', {
                     contentEditable: !1,
                     children: '\u200B'
                 })

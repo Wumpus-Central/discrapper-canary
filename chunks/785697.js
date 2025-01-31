@@ -1,10 +1,6 @@
 i.d(t, {
-    D2: function () {
-        return o;
-    },
-    SE: function () {
-        return c;
-    }
+    D2: () => o,
+    SE: () => c
 });
 var s = i(442837),
     l = i(818083),

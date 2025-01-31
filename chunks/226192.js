@@ -1,117 +1,109 @@
-n.d(t, {
-    UV: function () {
-        return d;
-    },
-    _s: function () {
-        return a;
-    },
-    kW: function () {
-        return u;
-    },
-    km: function () {
-        return s;
-    }
+n.d(e, {
+    UV: () => d,
+    _s: () => s,
+    kW: () => o,
+    km: () => u
 });
 var i = n(200651);
 n(192379);
 var r = n(481060),
     l = n(273504),
-    o = n(388032);
-function s(e) {
+    a = n(388032);
+function u(t) {
     return {
-        [l.jj.BLOCK_MESSAGE]: (e, t) =>
-            new Promise((e) => {
-                (0, r.openModalLazy)(async () => {
+        [l.jj.BLOCK_MESSAGE]: (t, e) =>
+            new Promise((t) => {
+                (0, r.ZDy)(async () => {
                     let { default: r } = await n.e('94005').then(n.bind(n, 144462));
                     return (n) => {
                         var l;
                         return (0, i.jsx)(r, {
-                            initialCustomMessage: null !== (l = t.metadata.customMessage) && void 0 !== l ? l : '',
+                            initialCustomMessage: null !== (l = e.metadata.customMessage) && void 0 !== l ? l : '',
                             onSubmit: (i) => {
-                                (t.metadata.customMessage = i), e(t), n.onClose();
+                                (e.metadata.customMessage = i), t(e), n.onClose();
                             },
                             ...n,
-                            onClose: () => (e(null), n.onClose())
+                            onClose: () => (t(null), n.onClose())
                         });
                     };
                 });
             }),
-        [l.jj.FLAG_TO_CHANNEL]: (t, o) =>
-            new Promise((s) => {
-                (0, r.openModalLazy)(async () => {
+        [l.jj.FLAG_TO_CHANNEL]: (e, a) =>
+            new Promise((u) => {
+                (0, r.ZDy)(async () => {
                     let { default: r } = await n.e('74543').then(n.bind(n, 643611)),
-                        a = t.actions.find((e) => e.type === l.jj.FLAG_TO_CHANNEL);
+                        s = e.actions.find((t) => t.type === l.jj.FLAG_TO_CHANNEL);
                     return (n) =>
                         (0, i.jsx)(r, {
-                            action: o,
-                            isEdit: null != a,
-                            triggerType: t.triggerType,
-                            guildId: e,
-                            onEditChannel: (e) => {
-                                (o.metadata.channelId = e), t.exemptChannels.add(e), s(o), n.onClose();
+                            action: a,
+                            isEdit: null != s,
+                            triggerType: e.triggerType,
+                            guildId: t,
+                            onEditChannel: (t) => {
+                                (a.metadata.channelId = t), e.exemptChannels.add(t), u(a), n.onClose();
                             },
                             ...n,
-                            onClose: () => (s(null), n.onClose())
+                            onClose: () => (u(null), n.onClose())
                         });
                 });
             }),
-        [l.jj.USER_COMMUNICATION_DISABLED]: (e, t) =>
-            new Promise((o) => {
-                (0, r.openModalLazy)(async () => {
+        [l.jj.USER_COMMUNICATION_DISABLED]: (t, e) =>
+            new Promise((a) => {
+                (0, r.ZDy)(async () => {
                     let { default: r } = await n.e('78273').then(n.bind(n, 41767)),
-                        s = e.actions.find((e) => e.type === l.jj.USER_COMMUNICATION_DISABLED);
+                        u = t.actions.find((t) => t.type === l.jj.USER_COMMUNICATION_DISABLED);
                     return (n) =>
                         (0, i.jsx)(r, {
-                            action: t,
-                            isEdit: null != s,
-                            triggerType: e.triggerType,
-                            onUpdateDuration: (e) => {
-                                null != e && (t.metadata.durationSeconds = e), o(t), n.onClose();
+                            action: e,
+                            isEdit: null != u,
+                            triggerType: t.triggerType,
+                            onUpdateDuration: (t) => {
+                                null != t && (e.metadata.durationSeconds = t), a(e), n.onClose();
                             },
                             ...n,
-                            onClose: () => (o(null), n.onClose())
+                            onClose: () => (a(null), n.onClose())
                         });
                 });
             })
     };
 }
-function a(e, t, l, o) {
-    (0, r.openModalLazy)(async () => {
+function s(t, e, l, a) {
+    (0, r.ZDy)(async () => {
         let { default: r } = await n.e('37483').then(n.bind(n, 241046));
         return (n) =>
             (0, i.jsx)(r, {
                 ...n,
                 automodDecision: {
-                    messageId: e,
-                    messageContent: t,
+                    messageId: t,
+                    messageContent: e,
                     decisionId: l,
-                    channel: o
+                    channel: a
                 }
             });
     });
 }
-function u(e, t) {
-    (0, r.openModalLazy)(async () => {
+function o(t, e) {
+    (0, r.ZDy)(async () => {
         let { default: r } = await n.e('28382').then(n.bind(n, 537623));
         return (n) =>
             (0, i.jsx)(r, {
                 ...n,
-                messageId: e,
-                guildId: t
+                messageId: t,
+                guildId: e
             });
     });
 }
-function d(e) {
-    (0, r.openModal)((t) =>
+function d(t) {
+    (0, r.h7j)((e) =>
         (0, i.jsx)(r.ConfirmModal, {
-            header: o.intl.string(o.t.wLGrjI),
-            confirmText: o.intl.string(o.t['cY+Ooa']),
-            onConfirm: e,
-            cancelText: o.intl.string(o.t['ETE/oK']),
-            ...t,
+            header: a.intl.string(a.t.wLGrjI),
+            confirmText: a.intl.string(a.t['cY+Ooa']),
+            onConfirm: t,
+            cancelText: a.intl.string(a.t['ETE/oK']),
+            ...e,
             children: (0, i.jsx)(r.Text, {
                 variant: 'text-md/normal',
-                children: o.intl.string(o.t.arYQ2d)
+                children: a.intl.string(a.t.arYQ2d)
             })
         })
     );

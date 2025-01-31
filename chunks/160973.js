@@ -1,45 +1,41 @@
-t.d(n, {
-    Z: function () {
-        return p;
-    }
-});
-var i = t(442837),
-    l = t(595519),
-    a = t(374065),
-    o = t(761122),
-    r = t(542094),
-    s = t(973616),
-    c = t(496675),
-    d = t(358085),
-    u = t(231338),
-    m = t(388032);
+n.d(t, { Z: () => p });
+var i = n(442837),
+    l = n(595519),
+    a = n(374065),
+    o = n(761122),
+    s = n(542094),
+    r = n(973616),
+    c = n(496675),
+    d = n(358085),
+    u = n(231338),
+    m = n(388032);
 function p(e) {
-    let n,
-        { context: t, application: p, activityAction: h } = e,
-        f = 'channel' === t.type ? t.channel : void 0,
-        C = (0, i.e7)([c.Z], () => c.Z.can(u.Pl.USE_EMBEDDED_ACTIVITIES, f)),
-        v = (0, a.KF)(null == f ? void 0 : f.id),
-        x = !1;
+    let t,
+        { context: n, application: p, activityAction: h } = e,
+        v = 'channel' === n.type ? n.channel : void 0,
+        x = (0, i.e7)([c.Z], () => c.Z.can(u.Pl.USE_EMBEDDED_ACTIVITIES, v)),
+        f = (0, a.KF)(null == v ? void 0 : v.id),
+        N = !1;
     switch (h) {
-        case r.JS.LEAVE:
-            x = !1;
+        case s.JS.LEAVE:
+            N = !1;
             break;
-        case r.JS.START:
-            null == f ? (x = !1) : (null == f ? void 0 : f.isGuildVoice()) ? v !== a.jy.CAN_LAUNCH && (x = !0) : !(0, l.WS)(f) && (x = !0);
+        case s.JS.START:
+            null == v ? (N = !1) : (null == v ? void 0 : v.isGuildVoice()) ? f !== a.jy.CAN_LAUNCH && (N = !0) : (0, l.WS)(v) || (N = !0);
             break;
-        case r.JS.JOIN:
-            (null == f ? void 0 : f.isGuildVoice()) ? (x = !C) : !(0, l.WS)(f) && (x = !0);
+        case s.JS.JOIN:
+            (null == v ? void 0 : v.isGuildVoice()) ? (N = !x) : (0, l.WS)(v) || (N = !0);
     }
-    if (h !== r.JS.LEAVE) {
-        let e = p instanceof s.ZP ? p.embeddedActivityConfig : p.embedded_activity_config,
-            t = (0, o.Z)((0, d.getOS)());
-        null == e || e.supported_platforms.includes(t) ? (null == f ? void 0 : f.isThread()) && ((x = !0), (n = m.intl.string(m.t.ddSR3t))) : ((x = !1), (n = m.intl.string(m.t.z2YTgI)));
+    if (h !== s.JS.LEAVE) {
+        let e = p instanceof r.ZP ? p.embeddedActivityConfig : p.embedded_activity_config,
+            n = (0, o.Z)((0, d.getOS)());
+        null == e || e.supported_platforms.includes(n) ? (null == v ? void 0 : v.isThread()) && ((N = !0), (t = m.intl.string(m.t.ddSR3t))) : ((N = !1), (t = m.intl.string(m.t.z2YTgI)));
     }
     return (
-        x && null == n && (n = m.intl.string(m.t.f41E1t)),
+        N && null == t && (t = m.intl.string(m.t.f41E1t)),
         {
-            disabled: x,
-            reason: n
+            disabled: N,
+            reason: t
         }
     );
 }

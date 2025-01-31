@@ -1,7 +1,7 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    var n = {
+    var t = {
         1: '-inci',
         5: '-inci',
         8: '-inci',
@@ -64,19 +64,16 @@
         isPM: function (e) {
             return /^(gündüz|axşam)$/.test(e);
         },
-        meridiem: function (e, n, r) {
-            if (e < 4) return 'gecə';
-            if (e < 12) return 'səhər';
-            if (e < 17) return 'gündüz';
-            else return 'axşam';
+        meridiem: function (e, t, n) {
+            return e < 4 ? 'gecə' : e < 12 ? 'səhər' : e < 17 ? 'gündüz' : 'axşam';
         },
         dayOfMonthOrdinalParse: /\d{1,2}-(ıncı|inci|nci|üncü|ncı|uncu)/,
         ordinal: function (e) {
             if (0 === e) return e + '-ıncı';
-            var r = e % 10,
-                i = (e % 100) - r,
-                a = e >= 100 ? 100 : null;
-            return e + (n[r] || n[i] || n[a]);
+            var n = e % 10,
+                i = (e % 100) - n,
+                r = e >= 100 ? 100 : null;
+            return e + (t[n] || t[i] || t[r]);
         },
         week: {
             dow: 1,

@@ -1,30 +1,25 @@
-r.d(n, {
-    Z: function () {
-        return g;
-    }
-});
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(665443),
-    l = r.n(s),
-    u = r(259443),
-    c = r(992774);
-function d(e, n, r) {
+n.d(t, { Z: () => h }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(665443),
+    s = n.n(a),
+    o = n(259443),
+    l = n(992774);
+function u(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let f = new u.Yd('DirectVideo');
-class p {
+let c = new o.Yd('DirectVideo');
+class d {
     addref() {
         this.refcount++;
     }
@@ -32,95 +27,95 @@ class p {
         return this.refcount--, 0 === this.refcount;
     }
     constructor(e) {
-        d(this, 'refcount', void 0), d(this, 'stream', void 0), (this.refcount = 1), (this.stream = window.createDiscordStream(e));
+        u(this, 'refcount', void 0), u(this, 'stream', void 0), (this.refcount = 1), (this.stream = window.createDiscordStream(e));
     }
 }
-let h = new Map();
+let f = new Map();
 function _(e) {
-    let n = h.get(e);
-    return null == n ? ((n = new p(e)), (0, c.zS)().addDirectVideoOutputSink(e), h.set(e, n)) : n.addref(), n.stream;
+    let t = f.get(e);
+    return null == t ? ((t = new d(e)), (0, l.zS)().addDirectVideoOutputSink(e), f.set(e, t)) : t.addref(), t.stream;
 }
-function m(e) {
-    let n = h.get(e);
-    null != n && n.release() && ((0, c.zS)().removeDirectVideoOutputSink(e), h.delete(e));
+function p(e) {
+    let t = f.get(e);
+    null != t && t.release() && ((0, l.zS)().removeDirectVideoOutputSink(e), f.delete(e));
 }
-function g(e, n) {
-    let { streamId: r, paused: i, onReady: s, onResize: u, className: c, ...d } = e,
-        p = o.useRef(null),
-        h = o.useRef(null),
-        g = o.useRef({
+function h(e, t) {
+    let { streamId: n, paused: a, onReady: o, onResize: l, className: u, ...d } = e,
+        f = r.useRef(null),
+        h = r.useRef(null),
+        m = r.useRef({
             width: 0,
             height: 0
         }),
-        E = o.useRef({
-            streamId: r,
-            paused: i,
-            onReady: s,
-            onResize: u,
-            onContainerResized: n
+        g = r.useRef({
+            streamId: n,
+            paused: a,
+            onReady: o,
+            onResize: l,
+            onContainerResized: t
         });
     return (
-        o.useLayoutEffect(() => {
-            let { current: e } = p;
-            function n() {
-                var e, n, r, i, a, o;
-                let { width: s, height: l } = g.current,
-                    u = null !== (r = null === (e = h.current) || void 0 === e ? void 0 : e.videoWidth) && void 0 !== r ? r : 0,
-                    c = null !== (i = null === (n = h.current) || void 0 === n ? void 0 : n.videoHeight) && void 0 !== i ? i : 0;
-                if (s !== u || l !== c) {
+        r.useLayoutEffect(() => {
+            let { current: e } = f;
+            function t() {
+                var e, t, n, i, r, a;
+                let { width: s, height: o } = m.current,
+                    l = null !== (n = null === (e = h.current) || void 0 === e ? void 0 : e.videoWidth) && void 0 !== n ? n : 0,
+                    u = null !== (i = null === (t = h.current) || void 0 === t ? void 0 : t.videoHeight) && void 0 !== i ? i : 0;
+                if (s !== l || o !== u) {
                     let e = {
-                        width: u,
-                        height: c
+                        width: l,
+                        height: u
                     };
-                    null === (a = (o = E.current).onResize) || void 0 === a || a.call(o, e), (g.current = e);
+                    null === (r = (a = g.current).onResize) || void 0 === r || r.call(a, e), (m.current = e);
                 }
             }
-            function r() {
-                var e, n;
-                f.info('handleReady for '.concat(E.current.streamId, ', have onReady callback = ').concat(null != E.current.onReady)), null === (e = (n = E.current).onReady) || void 0 === e || e.call(n);
+            function n() {
+                var e, t;
+                c.info('handleReady for '.concat(g.current.streamId, ', have onReady callback = ').concat(null != g.current.onReady)), null === (e = (t = g.current).onReady) || void 0 === e || e.call(t);
             }
             function i() {
-                if (!E.current.paused) {
+                if (!g.current.paused) {
                     var e;
                     null === (e = h.current) || void 0 === e || e.play();
                 }
             }
-            let a = new ResizeObserver((e) => {
+            let r = new ResizeObserver((e) => {
                 for (let i of e) {
-                    var n, r;
+                    var t, n;
                     if (i.target !== h.current) continue;
                     let e = window.devicePixelRatio * i.target.clientWidth,
-                        a = window.devicePixelRatio * i.target.clientHeight;
-                    null === (n = (r = E.current).onContainerResized) || void 0 === n || n.call(r, E.current.streamId, e, a);
+                        r = window.devicePixelRatio * i.target.clientHeight;
+                    null === (t = (n = g.current).onContainerResized) || void 0 === t || t.call(n, g.current.streamId, e, r);
                 }
             });
             if (null != e) {
-                let o = document.createElement('video');
-                (o.style.display = 'block'), (o.style.width = '100%'), (o.style.height = '100%'), (o.autoplay = !0), (o.muted = !0), o.addEventListener('pause', i), o.addEventListener('resize', n), o.addEventListener('canplaythrough', r), f.info('create video element for '.concat(E.current.streamId, ', readyState=').concat(o.readyState)), o.readyState > 3 && f.error('video element for '.concat(E.current.streamId, ' was ready before attached')), e.appendChild(o), a.disconnect(), a.observe(o), (h.current = o);
+                let a = document.createElement('video');
+                (a.style.display = 'block'), (a.style.width = '100%'), (a.style.height = '100%'), (a.autoplay = !0), (a.muted = !0), a.addEventListener('pause', i), a.addEventListener('resize', t), a.addEventListener('canplaythrough', n), c.info('create video element for '.concat(g.current.streamId, ', readyState=').concat(a.readyState)), a.readyState > 3 && c.error('video element for '.concat(g.current.streamId, ' was ready before attached')), e.appendChild(a), r.disconnect(), r.observe(a), (h.current = a);
             }
         }, []),
-        o.useEffect(() => {
-            (E.current.streamId = r), (E.current.paused = i), (E.current.onReady = s), (E.current.onResize = u);
+        r.useEffect(() => {
+            (g.current.streamId = n), (g.current.paused = a), (g.current.onReady = o), (g.current.onResize = l);
         }),
-        o.useEffect(() => {
+        r.useEffect(() => {
             let e = h.current;
             if (null != e) {
-                if (!i)
+                if (!a)
                     return (
-                        f.info('attaching srcObject for '.concat(r)),
-                        (e.srcObject = _(r)),
+                        c.info('attaching srcObject for '.concat(n)),
+                        (e.srcObject = _(n)),
                         () => {
-                            m(r), (e.srcObject = null);
+                            p(n), (e.srcObject = null);
                         }
                     );
-                null != e.srcObject && ((e.srcObject = null), m(r));
+                null != e.srcObject && ((e.srcObject = null), p(n));
             }
-        }, [i, r]),
-        (0, a.jsx)('div', {
-            className: l()('media-engine-video', c),
-            ref: p,
+        }, [a, n]),
+        (0, i.jsx)('div', {
+            className: s()('media-engine-video', u),
+            ref: f,
             ...d
         })
     );
 }
-g.defaultProps = { paused: !1 };
+h.defaultProps = { paused: !1 };

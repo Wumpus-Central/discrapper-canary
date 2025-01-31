@@ -1,3 +1,4 @@
+n.d(t, { Z: () => I });
 var i = n(200651);
 n(192379);
 var l = n(399606),
@@ -6,97 +7,97 @@ var l = n(399606),
     o = n(239091),
     s = n(765585),
     c = n(870569),
-    u = n(819640),
-    d = n(556296),
+    d = n(819640),
+    u = n(556296),
     h = n(13140),
     p = n(924557),
     m = n(435064),
-    f = n(39604),
-    g = n(981631),
-    v = n(388032),
-    C = n(703757);
+    g = n(39604),
+    f = n(981631),
+    _ = n(388032),
+    v = n(703757);
 function x(e) {
     (0, o.jW)(e, async () => {
         let { default: e } = await n.e('21960').then(n.bind(n, 999466));
         return (t) => (0, i.jsx)(e, { ...t });
     });
 }
-function I() {
-    (0, f.C1)();
+function C() {
+    (0, g.C1)();
 }
-let _ = (e) => {
-    let { keybindString: t, children: n } = e,
-        l = (e, t) => {
-            e.stopPropagation(), e.preventDefault(), null == t || t();
-        };
-    return (0, i.jsx)(a.Popout, {
-        shouldShow: !1,
-        position: 'top',
-        align: 'center',
-        renderPopout: (e) => {
-            let { closePopout: n } = e;
-            return (0, i.jsx)(s.Z, {
-                dismissibleContent: r.z.CLIPS_ONBOARDING_CLIP_BUTTON_COACHMARK,
-                shouldUseHorizontalButtons: !0,
-                inlineArt: !0,
-                artClassName: C.clipsEducationArt,
-                position: 'top',
-                header: (0, i.jsx)('div', {
-                    className: C.header,
-                    children: v.intl.format(v.t['o+srEx'], {
-                        keybind: t,
-                        keybindHook: () =>
-                            (0, i.jsx)('span', {
-                                className: C.keybindHintKeys,
-                                children: (0, i.jsx)(a.KeyCombo, {
-                                    className: C.keybindShortcut,
-                                    shortcut: t
-                                })
-                            })
-                    })
-                }),
-                headerClassName: C.clipsEducationHeader,
-                body: (0, i.jsx)(i.Fragment, {
-                    children: (0, i.jsx)(a.Text, {
-                        variant: 'text-sm/normal',
-                        color: 'always-white',
-                        className: C.bodyText,
-                        children: v.intl.format(v.t.DWeRm5, {
+let Z = (e) => {
+        let { keybindString: t, children: n } = e,
+            l = (e, t) => {
+                e.stopPropagation(), e.preventDefault(), null == t || t();
+            };
+        return (0, i.jsx)(a.yRy, {
+            shouldShow: !1,
+            position: 'top',
+            align: 'center',
+            renderPopout: (e) => {
+                let { closePopout: n } = e;
+                return (0, i.jsx)(s.Z, {
+                    dismissibleContent: r.z.CLIPS_ONBOARDING_CLIP_BUTTON_COACHMARK,
+                    shouldUseHorizontalButtons: !0,
+                    inlineArt: !0,
+                    artClassName: v.clipsEducationArt,
+                    position: 'top',
+                    header: (0, i.jsx)('div', {
+                        className: v.header,
+                        children: _.intl.format(_.t['o+srEx'], {
+                            keybind: t,
                             keybindHook: () =>
-                                (0, i.jsx)('div', {
-                                    className: C.keyCombo,
-                                    children: t
-                                }),
-                            keybind: t
+                                (0, i.jsx)('span', {
+                                    className: v.keybindHintKeys,
+                                    children: (0, i.jsx)(a.M2$, {
+                                        className: v.keybindShortcut,
+                                        shortcut: t
+                                    })
+                                })
                         })
-                    })
-                }),
-                onClose: (e) => {
-                    l(e, n);
-                }
-            });
-        },
-        children: () => n
-    });
-};
-t.Z = () => {
-    let e = (0, l.e7)([u.Z], () => u.Z.hasLayers()),
-        t = (0, p.Go)(),
-        { clipsEnabled: n, isAtMaxSavingClipsOperations: r } = (0, l.cj)([m.Z], () => ({
-            clipsEnabled: m.Z.getSettings().clipsEnabled,
-            isAtMaxSavingClipsOperations: m.Z.getIsAtMaxSaveClipOperations()
-        })),
-        o = (0, l.e7)([d.Z], () => d.Z.getKeybindForAction(g.kg4.SAVE_CLIP));
-    if (!(t && n) || null == o || e) return null;
-    let s = h.BB(o.shortcut, !0);
-    return (0, i.jsx)(_, {
-        keybindString: s,
-        children: (0, i.jsx)(c.Z, {
-            disabled: r,
-            tooltipText: null != o ? v.intl.formatToPlainString(v.t.HIMcv7, { hotkey: h.BB(null == o ? void 0 : o.shortcut, !0) }) : v.intl.string(v.t.s52pjo),
-            onClick: I,
-            onContextMenu: x,
-            icon: a.ClipsIcon
-        })
-    });
-};
+                    }),
+                    headerClassName: v.clipsEducationHeader,
+                    body: (0, i.jsx)(i.Fragment, {
+                        children: (0, i.jsx)(a.Text, {
+                            variant: 'text-sm/normal',
+                            color: 'always-white',
+                            className: v.bodyText,
+                            children: _.intl.format(_.t.DWeRm5, {
+                                keybindHook: () =>
+                                    (0, i.jsx)('div', {
+                                        className: v.keyCombo,
+                                        children: t
+                                    }),
+                                keybind: t
+                            })
+                        })
+                    }),
+                    onClose: (e) => {
+                        l(e, n);
+                    }
+                });
+            },
+            children: () => n
+        });
+    },
+    I = () => {
+        let e = (0, l.e7)([d.Z], () => d.Z.hasLayers()),
+            t = (0, p.Go)(),
+            { clipsEnabled: n, isAtMaxSavingClipsOperations: r } = (0, l.cj)([m.Z], () => ({
+                clipsEnabled: m.Z.getSettings().clipsEnabled,
+                isAtMaxSavingClipsOperations: m.Z.getIsAtMaxSaveClipOperations()
+            })),
+            o = (0, l.e7)([u.Z], () => u.Z.getKeybindForAction(f.kg4.SAVE_CLIP));
+        if (!(t && n) || null == o || e) return null;
+        let s = h.BB(o.shortcut, !0);
+        return (0, i.jsx)(Z, {
+            keybindString: s,
+            children: (0, i.jsx)(c.Z, {
+                disabled: r,
+                tooltipText: null != o ? _.intl.formatToPlainString(_.t.HIMcv7, { hotkey: h.BB(null == o ? void 0 : o.shortcut, !0) }) : _.intl.string(_.t.s52pjo),
+                onClick: C,
+                onContextMenu: x,
+                icon: a.AlX
+            })
+        });
+    };

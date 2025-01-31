@@ -1,9 +1,4 @@
-n.d(t, {
-    t: function () {
-        return o;
-    }
-}),
-    n(411104);
+n.d(t, { t: () => o }), n(411104);
 var i = n(120356),
     r = n.n(i),
     l = n(481060),
@@ -12,63 +7,63 @@ var i = n(120356),
 function o(e, t) {
     if (t)
         return {
-            icon: l.CheckmarkLargeIcon,
+            icon: l.dz2,
             className: a.unlocked
         };
     switch (e) {
         case s.Ro.EMOJI:
             return {
-                icon: l.ReactionIcon,
+                icon: l.EO4,
                 className: r()(a.icon, a.emoji)
             };
         case s.Ro.AUDIO:
             return {
-                icon: l.HeadphonesIcon,
+                icon: l.VWR,
                 className: r()(a.icon, a.audio)
             };
         case s.Ro.ANIMATED:
             return {
-                icon: l.GifIcon,
+                icon: l.OUq,
                 className: r()(a.icon, a.animated)
             };
         case s.Ro.CUSTOMIZATION:
             return {
-                icon: l.ImagesIcon,
+                icon: l.Ka2,
                 className: r()(a.icon, a.customization)
             };
         case s.Ro.UPLOAD:
             return {
-                icon: l.UploadIcon,
+                icon: l.rG2,
                 className: r()(a.icon, a.upload)
             };
         case s.Ro.VANITY:
             return {
-                icon: l.StarIcon,
+                icon: l.r7p,
                 className: r()(a.icon, a.vanity)
             };
         case s.Ro.STREAM:
             return {
-                icon: l.ScreenArrowIcon,
+                icon: l.hGI,
                 className: r()(a.icon, a.stream)
             };
         case s.Ro.STICKER:
             return {
-                icon: l.StickerIcon,
+                icon: l.SlE,
                 className: r()(a.icon, a.sticker)
             };
         case s.Ro.CUSTOM_ROLE_ICON:
             return {
-                icon: l.ShieldUserIcon,
+                icon: l.lZ8,
                 className: r()(a.icon, a.customRoleIcon)
             };
         case s.Ro.STAGE_VIDEO:
             return {
-                icon: l.StageIcon,
+                icon: l.ewx,
                 className: r()(a.icon, a.stage)
             };
         case s.Ro.SOUNDBOARD:
             return {
-                icon: l.SoundboardIcon,
+                icon: l.KY1,
                 className: r()(a.icon, a.soundboard)
             };
     }

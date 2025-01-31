@@ -1,5 +1,6 @@
-e.exports = {
-    tag: 'tag_e78ba3',
-    inheritBackgroundColor: 'inheritBackgroundColor_e78ba3',
-    inheritTextColor: 'inheritTextColor_e78ba3'
+var i = {
+    tag: 'tag_fe5e5d',
+    inheritBackgroundColor: 'inheritBackgroundColor_fe5e5d',
+    inheritTextColor: 'inheritTextColor_fe5e5d'
 };
+e.exports = i;

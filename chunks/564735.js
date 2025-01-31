@@ -1,15 +1,11 @@
-n.d(t, {
-    Z: function () {
-        return s;
-    }
-});
+n.d(t, { Z: () => s });
 var i = n(200651);
 n(192379);
-var l = n(331595);
+var l = n(325767);
 function s(e) {
-    let { color: t = 'currentColor', foreground: n, backgroundColor: s = 'none', ...r } = e;
+    let { color: t = 'currentColor', foreground: n, backgroundColor: s = 'none', ...a } = e;
     return (0, i.jsxs)('svg', {
-        ...(0, l.Z)(r),
+        ...(0, l.Z)(a),
         width: '272',
         height: '143',
         viewBox: '0 0 272 143',

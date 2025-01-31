@@ -1,78 +1,74 @@
-r.d(n, {
-    p: function () {
-        return f;
-    }
-});
-var i = r(146150),
-    a = r(812975),
-    o = r(695170),
-    s = r(686942),
-    l = r(809111),
-    u = r(805802),
-    c = r(981196);
-function d(e) {
-    var n = this;
-    return function (r) {
-        if ((void 0 !== r && (n['_'.concat(e)] = r), void 0 !== n['_'.concat(e)])) return n['_'.concat(e)];
-        for (var i = 0; i < n._rrule.length; i++) {
-            var a = n._rrule[i].origOptions[e];
-            if (a) return a;
+n.d(t, { p: () => d });
+var i = n(146150),
+    r = n(812975),
+    a = n(695170),
+    s = n(686942),
+    o = n(809111),
+    l = n(805802),
+    u = n(981196);
+function c(e) {
+    var t = this;
+    return function (n) {
+        if ((void 0 !== n && (t['_'.concat(e)] = n), void 0 !== t['_'.concat(e)])) return t['_'.concat(e)];
+        for (var i = 0; i < t._rrule.length; i++) {
+            var r = t._rrule[i].origOptions[e];
+            if (r) return r;
         }
     };
 }
-var f = (function (e) {
-    function n(n) {
-        void 0 === n && (n = !1);
-        var r = e.call(this, {}, n) || this;
-        return (r.dtstart = d.apply(r, ['dtstart'])), (r.tzid = d.apply(r, ['tzid'])), (r._rrule = []), (r._rdate = []), (r._exrule = []), (r._exdate = []), r;
+var d = (function (e) {
+    function t(t) {
+        void 0 === t && (t = !1);
+        var n = e.call(this, {}, t) || this;
+        return (n.dtstart = c.apply(n, ['dtstart'])), (n.tzid = c.apply(n, ['tzid'])), (n._rrule = []), (n._rdate = []), (n._exrule = []), (n._exdate = []), n;
     }
     return (
-        (0, i.ZT)(n, e),
-        (n.prototype._iter = function (e) {
-            return (0, l.X)(e, this._rrule, this._exrule, this._rdate, this._exdate, this.tzid());
+        (0, i.ZT)(t, e),
+        (t.prototype._iter = function (e) {
+            return (0, o.X)(e, this._rrule, this._exrule, this._rdate, this._exdate, this.tzid());
         }),
-        (n.prototype.rrule = function (e) {
-            p(e, this._rrule);
+        (t.prototype.rrule = function (e) {
+            f(e, this._rrule);
         }),
-        (n.prototype.exrule = function (e) {
-            p(e, this._exrule);
+        (t.prototype.exrule = function (e) {
+            f(e, this._exrule);
         }),
-        (n.prototype.rdate = function (e) {
-            h(e, this._rdate);
+        (t.prototype.rdate = function (e) {
+            _(e, this._rdate);
         }),
-        (n.prototype.exdate = function (e) {
-            h(e, this._exdate);
+        (t.prototype.exdate = function (e) {
+            _(e, this._exdate);
         }),
-        (n.prototype.rrules = function () {
+        (t.prototype.rrules = function () {
             return this._rrule.map(function (e) {
-                return (0, u.S)(e.toString());
+                return (0, l.S)(e.toString());
             });
         }),
-        (n.prototype.exrules = function () {
+        (t.prototype.exrules = function () {
             return this._exrule.map(function (e) {
-                return (0, u.S)(e.toString());
+                return (0, l.S)(e.toString());
             });
         }),
-        (n.prototype.rdates = function () {
+        (t.prototype.rdates = function () {
             return this._rdate.map(function (e) {
                 return new Date(e.getTime());
             });
         }),
-        (n.prototype.exdates = function () {
+        (t.prototype.exdates = function () {
             return this._exdate.map(function (e) {
                 return new Date(e.getTime());
             });
         }),
-        (n.prototype.valueOf = function () {
+        (t.prototype.valueOf = function () {
             var e = [];
             return (
-                !this._rrule.length && this._dtstart && (e = e.concat((0, c.N)({ dtstart: this._dtstart }))),
-                this._rrule.forEach(function (n) {
-                    e = e.concat(n.toString().split('\n'));
+                !this._rrule.length && this._dtstart && (e = e.concat((0, u.N)({ dtstart: this._dtstart }))),
+                this._rrule.forEach(function (t) {
+                    e = e.concat(t.toString().split('\n'));
                 }),
-                this._exrule.forEach(function (n) {
+                this._exrule.forEach(function (t) {
                     e = e.concat(
-                        n
+                        t
                             .toString()
                             .split('\n')
                             .map(function (e) {
@@ -83,50 +79,50 @@ var f = (function (e) {
                             })
                     );
                 }),
-                this._rdate.length && e.push(_('RDATE', this._rdate, this.tzid())),
-                this._exdate.length && e.push(_('EXDATE', this._exdate, this.tzid())),
+                this._rdate.length && e.push(p('RDATE', this._rdate, this.tzid())),
+                this._exdate.length && e.push(p('EXDATE', this._exdate, this.tzid())),
                 e
             );
         }),
-        (n.prototype.toString = function () {
+        (t.prototype.toString = function () {
             return this.valueOf().join('\n');
         }),
-        (n.prototype.clone = function () {
-            var e = new n(!!this._cache);
+        (t.prototype.clone = function () {
+            var e = new t(!!this._cache);
             return (
-                this._rrule.forEach(function (n) {
-                    return e.rrule(n.clone());
+                this._rrule.forEach(function (t) {
+                    return e.rrule(t.clone());
                 }),
-                this._exrule.forEach(function (n) {
-                    return e.exrule(n.clone());
+                this._exrule.forEach(function (t) {
+                    return e.exrule(t.clone());
                 }),
-                this._rdate.forEach(function (n) {
-                    return e.rdate(new Date(n.getTime()));
+                this._rdate.forEach(function (t) {
+                    return e.rdate(new Date(t.getTime()));
                 }),
-                this._exdate.forEach(function (n) {
-                    return e.exdate(new Date(n.getTime()));
+                this._exdate.forEach(function (t) {
+                    return e.exdate(new Date(t.getTime()));
                 }),
                 e
             );
         }),
-        n
+        t
     );
-})(a.Ci);
-function p(e, n) {
-    if (!(e instanceof a.Ci)) throw TypeError(String(e) + ' is not RRule instance');
-    !(0, s.q9)(n.map(String), String(e)) && n.push(e);
+})(r.Ci);
+function f(e, t) {
+    if (!(e instanceof r.Ci)) throw TypeError(String(e) + ' is not RRule instance');
+    (0, s.q9)(t.map(String), String(e)) || t.push(e);
 }
-function h(e, n) {
+function _(e, t) {
     if (!(e instanceof Date)) throw TypeError(String(e) + ' is not Date instance');
-    !(0, s.q9)(n.map(Number), Number(e)) && (n.push(e), (0, o.DY)(n));
+    (0, s.q9)(t.map(Number), Number(e)) || (t.push(e), (0, a.DY)(t));
 }
-function _(e, n, r) {
-    var i = !r || 'UTC' === r.toUpperCase(),
-        a = i ? ''.concat(e, ':') : ''.concat(e, ';TZID=').concat(r, ':'),
-        s = n
+function p(e, t, n) {
+    var i = !n || 'UTC' === n.toUpperCase(),
+        r = i ? ''.concat(e, ':') : ''.concat(e, ';TZID=').concat(n, ':'),
+        s = t
             .map(function (e) {
-                return (0, o.Od)(e.valueOf(), i);
+                return (0, a.Od)(e.valueOf(), i);
             })
             .join(',');
-    return ''.concat(a).concat(s);
+    return ''.concat(r).concat(s);
 }

@@ -1,42 +1,40 @@
-r.d(n, {
-    J: function () {
-        return l.Hb;
-    }
+n.d(t, {
+    J: () => o.Hb,
+    Z: () => u
 });
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(385499),
-    l = r(674563),
-    u = r(485453);
-let c = (e) => {
-    let { name: n, discriminator: r, invertBotTagColor: a, nameColor: l, className: c, botType: d, usernameClass: f, discriminatorClass: p, botClass: h, botVerified: _ = !1, style: m, useRemSizes: g = !1, usernameIcon: E } = e;
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(385499),
+    o = n(674563),
+    l = n(485453);
+let u = (e) => {
+    let { name: t, discriminator: n, invertBotTagColor: r, nameColor: o, className: u, botType: c, usernameClass: d, discriminatorClass: f, botClass: _, botVerified: p = !1, style: h, useRemSizes: m = !1, usernameIcon: g } = e;
     return (0, i.jsxs)('div', {
-        className: o()(c, u.nameTag),
-        style: m,
+        className: a()(u, l.nameTag),
+        style: h,
         children: [
             (0, i.jsxs)('span', {
-                className: o()(u.username, f),
-                style: null != l ? { color: l } : void 0,
-                children: [E, n]
+                className: a()(l.username, d),
+                style: null != o ? { color: o } : void 0,
+                children: [g, t]
             }),
-            null != r
+            null != n
                 ? (0, i.jsxs)('span', {
-                      className: null != p ? p : void 0,
-                      children: ['#', r]
+                      className: null != f ? f : void 0,
+                      children: ['#', n]
                   })
                 : null,
-            null != d
+            null != c
                 ? (0, i.jsx)(s.Z, {
-                      type: d,
-                      invertColor: a,
-                      className: o()(h, u.bot),
-                      verified: _,
-                      useRemSizes: g
+                      type: c,
+                      invertColor: r,
+                      className: a()(_, l.bot),
+                      verified: p,
+                      useRemSizes: m
                   })
                 : null
         ]
     });
 };
-n.Z = c;

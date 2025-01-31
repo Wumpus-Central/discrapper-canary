@@ -1,32 +1,34 @@
+n.d(t, { Z: () => h });
 var i,
-    r,
     l = n(200651);
 n(192379);
-var a = n(120356),
-    s = n.n(a),
-    o = n(873546),
-    c = n(481060),
-    d = n(423360);
+var r = n(120356),
+    a = n.n(r),
+    s = n(873546),
+    o = n(481060),
+    c = n(423360),
+    d = (((i = d || {})[(i.ACCEPT = 0)] = 'ACCEPT'), (i[(i.DENY = 1)] = 'DENY'), (i[(i.DEFAULT = 2)] = 'DEFAULT'), i);
 function u(e) {
-    let { icon: t, tooltip: n, onClick: i, actionType: r = 2, shouldHighlight: a } = e;
-    return (0, l.jsx)(c.Tooltip, {
+    let { icon: t, tooltip: n, onClick: i, actionType: r = 2, shouldHighlight: d } = e;
+    return (0, l.jsx)(o.ua7, {
         text: n,
         children: (e) =>
-            (0, l.jsx)(c.Clickable, {
+            (0, l.jsx)(o.P3F, {
                 ...e,
                 'aria-label': n,
                 onClick: i,
-                className: s()(d.actionButton, {
-                    [d.actionAccept]: 0 === r,
-                    [d.actionDeny]: 1 === r,
-                    [d.highlight]: a,
-                    [d.actionButtonMobile]: o.tq
+                className: a()(c.actionButton, {
+                    [c.actionAccept]: 0 === r,
+                    [c.actionDeny]: 1 === r,
+                    [c.highlight]: d,
+                    [c.actionButtonMobile]: s.tq
                 }),
                 children: (0, l.jsx)(t, {
-                    className: d.icon,
+                    className: c.icon,
                     color: 'currentColor'
                 })
             })
     });
 }
-((i = r || (r = {}))[(i.ACCEPT = 0)] = 'ACCEPT'), (i[(i.DENY = 1)] = 'DENY'), (i[(i.DEFAULT = 2)] = 'DEFAULT'), (u.ActionTypes = r), (t.Z = u);
+u.ActionTypes = d;
+let h = u;

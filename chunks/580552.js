@@ -1,9 +1,5 @@
-r.d(n, {
-    Z: function () {
-        return a;
-    }
-});
-var i = r(596401);
-function a(e) {
+n.d(t, { Z: () => r });
+var i = n(596401);
+function r(e) {
     return null != e && e === i.sP;
 }

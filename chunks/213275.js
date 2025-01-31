@@ -1,5 +1,6 @@
-e.exports = {
-    roleDotRight: 'roleDotRight_de3235',
-    roleDotLeft: 'roleDotLeft_de3235',
-    username: 'username_de3235 ' + r('864435').desaturateUserColors
+var i = {
+    roleDotRight: 'roleDotRight__703b9',
+    roleDotLeft: 'roleDotLeft__703b9',
+    username: 'username__703b9 ' + n(864435).desaturateUserColors
 };
+e.exports = i;

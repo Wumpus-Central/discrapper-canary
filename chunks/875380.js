@@ -1,34 +1,26 @@
-function t(e, r) {
-    for (var t = 0; t < r.length; t++) {
-        var a = r[t];
-        (a.enumerable = a.enumerable || !1), (a.configurable = !0), 'value' in a && (a.writable = !0), Object.defineProperty(e, a.key, a);
-    }
-}
+t.d(r, { Z: () => o });
 var a = (function () {
-    var e, r, a;
-    function o() {
+    var e;
+    function r() {
         var e,
-            r,
             t,
             a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
         !(function (e, r) {
             if (!(e instanceof r)) throw TypeError('Cannot call a class as a function');
-        })(this, o),
-            (e = this),
+        })(this, r),
             (t = void 0),
-            (r = 'items') in e
-                ? Object.defineProperty(e, r, {
+            (e = 'items') in this
+                ? Object.defineProperty(this, e, {
                       value: t,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (e[r] = t),
+                : (this[e] = t),
             (this.items = a);
     }
     return (
-        (e = o),
-        (r = [
+        (e = [
             {
                 key: 'add',
                 value: function (e) {
@@ -75,8 +67,13 @@ var a = (function () {
                 }
             }
         ]),
-        t(e.prototype, r),
-        o
+        (function (e, r) {
+            for (var t = 0; t < r.length; t++) {
+                var a = r[t];
+                (a.enumerable = a.enumerable || !1), (a.configurable = !0), 'value' in a && (a.writable = !0), Object.defineProperty(e, a.key, a);
+            }
+        })(r.prototype, e),
+        r
     );
 })();
-r.Z = 'undefined' == typeof Set ? Set : a;
+let o = 'undefined' == typeof Set ? Set : a;

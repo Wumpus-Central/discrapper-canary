@@ -1,9 +1,4 @@
-a.r(r),
-    a.d(r, {
-        default: function () {
-            return t;
-        }
-    });
+a.r(r), a.d(r, { default: () => t });
 var t = {
     payButton: '결제',
     'payButton.redirecting': '리디렉션 중...',

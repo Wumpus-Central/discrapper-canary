@@ -1,4 +1,5 @@
-e.exports = {
-    dots: 'dots_ce0450',
-    themed: 'themed_ce0450'
+var i = {
+    dots: 'dots__5ad89',
+    themed: 'themed__5ad89'
 };
+e.exports = i;

@@ -1,93 +1,89 @@
-n.d(t, {
-    Z: function () {
-        return g;
-    }
-});
-var l = n(200651),
-    o = n(192379),
-    i = n(120356),
-    a = n.n(i),
-    r = n(913527),
-    s = n.n(r),
-    c = n(399606),
-    C = n(481060),
-    d = n(740900),
-    u = n(241559),
-    m = n(893966),
-    h = n(527379),
-    x = n(388032),
-    b = n(216412),
-    f = n(115251);
-function g(e) {
+l.d(t, { Z: () => b });
+var n = l(200651),
+    a = l(192379),
+    i = l(120356),
+    o = l.n(i),
+    s = l(913527),
+    r = l.n(s),
+    c = l(399606),
+    C = l(481060),
+    d = l(740900),
+    u = l(241559),
+    m = l(893966),
+    h = l(527379),
+    x = l(388032),
+    g = l(216412),
+    H = l(115251);
+function b(e) {
     let { guild: t, onSubmit: i } = e,
-        r = (0, c.e7)([m.Z], () => m.Z.getMembersCountByGuildId(t.id, d.R_.NEW_GUILD_MEMBER), [t.id]),
-        g = (0, c.e7)(
+        s = (0, c.e7)([m.Z], () => m.Z.getMembersCountByGuildId(t.id, d.R_.NEW_GUILD_MEMBER), [t.id]),
+        b = (0, c.e7)(
             [m.Z],
             () => {
                 let e = m.Z.getNewMemberTimestamp(t.id);
-                return s()(e).format('h:mm A');
+                return r()(e).format('h:mm A');
             },
             [t.id]
         ),
         p = (0, c.e7)([m.Z], () => m.Z.hasDefaultSearchStateByGuildId(t.id), [t.id]),
-        H = o.useCallback(() => {
+        _ = a.useCallback(() => {
             (0, h.YO)(t.id), null == i || i();
         }, [t.id, i]),
-        j = o.useCallback(() => {
+        j = a.useCallback(() => {
             p
-                ? H()
-                : (0, C.openModalLazy)(async () => {
-                      let { default: e } = await n.e('24478').then(n.bind(n, 319481));
+                ? _()
+                : (0, C.ZDy)(async () => {
+                      let { default: e } = await l.e('24478').then(l.bind(l, 319481));
                       return (t) =>
-                          (0, l.jsx)(e, {
+                          (0, n.jsx)(e, {
                               ...t,
-                              onConfirm: H
+                              onConfirm: _
                           });
                   });
-        }, [H, p]),
-        v = new Intl.NumberFormat(x.intl.currentLocale).format(r),
-        N = (0, u.nX)(t.id),
-        L = (0, u.xC)(t.id),
-        I = o.useMemo(() => 1 + (N ? 1 : 0) + (L ? 1 : 0), [N, L]);
-    return 0 === r
+        }, [_, p]),
+        f = new Intl.NumberFormat(x.intl.currentLocale).format(s),
+        v = (0, u.nX)(t.id),
+        N = (0, u.xC)(t.id),
+        Z = a.useMemo(() => 1 + (v ? 1 : 0) + (N ? 1 : 0), [v, N]);
+    return 0 === s
         ? null
-        : (0, l.jsxs)('tr', {
-              className: a()(f.newMembersNotice),
+        : (0, n.jsxs)('tr', {
+              className: o()(H.newMembersNotice),
               onClick: j,
               children: [
-                  (0, l.jsx)('td', {
+                  (0, n.jsx)('td', {
                       colSpan: 3,
-                      children: (0, l.jsx)(C.Text, {
+                      children: (0, n.jsx)(C.Text, {
                           variant: 'text-sm/normal',
                           color: 'always-white',
                           children: x.intl.format(x.t['/i5uJy'], {
-                              count: v,
-                              date: g
+                              count: f,
+                              date: b
                           })
                       })
                   }),
-                  (0, l.jsx)('td', { colSpan: I }),
-                  (0, l.jsx)('td', {
+                  (0, n.jsx)('td', { colSpan: Z }),
+                  (0, n.jsx)('td', {
                       colSpan: 2,
-                      children: (0, l.jsx)('div', {
-                          className: a()(b.actionCell),
-                          children: (0, l.jsx)(C.Button, {
-                              size: C.Button.Sizes.SMALL,
-                              color: C.Button.Colors.TRANSPARENT,
-                              look: C.Button.Looks.LINK,
-                              className: a()(f.memberNoticeActionButton),
-                              children: (0, l.jsxs)(C.Text, {
+                      children: (0, n.jsx)('div', {
+                          className: o()(g.actionCell),
+                          children: (0, n.jsx)(C.zxk, {
+                              size: C.zxk.Sizes.SMALL,
+                              color: C.zxk.Colors.TRANSPARENT,
+                              look: C.zxk.Looks.LINK,
+                              className: o()(H.memberNoticeActionButton),
+                              children: (0, n.jsxs)(C.Text, {
                                   variant: 'text-sm/normal',
                                   color: 'always-white',
-                                  className: a()(f.memberNoticeAction),
+                                  className: o()(H.memberNoticeAction),
                                   children: [
-                                      (0, l.jsx)('div', { children: x.intl.string(x.t.rkyOzM) }),
-                                      (0, l.jsx)(C.UserIcon, {
+                                      (0, n.jsx)('div', { children: x.intl.string(x.t.rkyOzM) }),
+                                      (0, n.jsx)(C.tBG, {
                                           size: 'custom',
                                           color: 'currentColor',
                                           width: 20,
                                           height: 20,
-                                          className: a()(f.memberNoticeActionIcon)
+                                          className: o()(H.memberNoticeActionIcon)
                                       })
                                   ]
                               })

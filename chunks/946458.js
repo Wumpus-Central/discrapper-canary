@@ -1,18 +1,14 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-});
+n.d(t, { Z: () => d });
 var i = n(200651);
 n(192379);
 var l = n(442837),
     s = n(481060),
-    r = n(596454),
-    a = n(339085),
+    a = n(596454),
+    r = n(339085),
     o = n(501915);
 function d(e) {
     let { reactionEmoji: t } = e,
-        n = (0, l.e7)([a.ZP], () => ((null == t ? void 0 : t.emojiId) != null ? a.ZP.getUsableCustomEmojiById(t.emojiId) : null));
+        n = (0, l.e7)([r.ZP], () => ((null == t ? void 0 : t.emojiId) != null ? r.ZP.getUsableCustomEmojiById(t.emojiId) : null));
     return (0, i.jsxs)('div', {
         className: o.container,
         children: [
@@ -50,13 +46,13 @@ function d(e) {
                         className: o.reaction,
                         children: [
                             null != t
-                                ? (0, i.jsx)(r.Z, {
+                                ? (0, i.jsx)(a.Z, {
                                       className: o.reactionEmote,
                                       emojiId: t.emojiId,
                                       emojiName: t.emojiName,
                                       animated: !!(null == n ? void 0 : n.animated)
                                   })
-                                : (0, i.jsx)(s.ReactionIcon, {
+                                : (0, i.jsx)(s.EO4, {
                                       size: 'sm',
                                       color: 'currentColor',
                                       className: o.reactionEmote

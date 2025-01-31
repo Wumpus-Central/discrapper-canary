@@ -1,51 +1,45 @@
-r.d(n, {
-    Z: function () {
-        return l;
-    }
-});
-var i = r(47120);
-var a = r(653041);
-var o = r(570140);
-function s(e, n, r) {
+n.d(t, { Z: () => a }), n(47120), n(653041);
+var i = n(570140);
+function r(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class l {
-    static flush(e, n) {
-        for (let r of l.batchers) null != r.action && (null == e || r.shouldFlush(e, n)) && r.flush();
+class a {
+    static flush(e, t) {
+        for (let n of a.batchers) null != n.action && (null == e || n.shouldFlush(e, t)) && n.flush();
     }
     flush() {
         let { action: e } = this;
         (this.action = null),
             null != e &&
-                o.Z.dispatch(e).catch((n) =>
+                i.Z.dispatch(e).catch((t) =>
                     this.socket.resetSocketOnError({
-                        error: n,
+                        error: t,
                         action: e.type
                     })
                 );
     }
-    constructor(e, n, r) {
-        s(this, 'socket', void 0),
-            s(this, 'action', void 0),
-            s(this, 'add', void 0),
-            s(this, 'shouldFlush', void 0),
+    constructor(e, t, n) {
+        r(this, 'socket', void 0),
+            r(this, 'action', void 0),
+            r(this, 'add', void 0),
+            r(this, 'shouldFlush', void 0),
             (this.socket = e),
             (this.action = null),
-            (this.shouldFlush = r),
+            (this.shouldFlush = n),
             (this.add = (e) => {
-                this.action = n(this.action, e);
+                this.action = t(this.action, e);
             }),
-            l.batchers.push(this);
+            a.batchers.push(this);
     }
 }
-s(l, 'batchers', []);
+r(a, 'batchers', []);

@@ -1,11 +1,7 @@
-r.d(n, {
-    D: function () {
-        return a;
-    }
-});
-var i = r(383466),
-    a = function (e) {
+n.d(t, { D: () => r });
+var i = n(383466),
+    r = function (e) {
         if ((0, i.xj)(e)) return 1 / 0;
-        for (var n = 0, r = e.parentNode; r; ) (n += 1), (r = r.parentNode);
-        return n;
+        for (var t = 0, n = e.parentNode; n; ) (t += 1), (n = n.parentNode);
+        return t;
     };

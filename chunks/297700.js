@@ -1,34 +1,30 @@
-r.d(n, {
-    Z: function () {
-        return d;
-    }
-});
-var i = r(200651),
-    a = r(192379),
-    o = r(120356),
-    s = r.n(o),
-    l = r(481060),
-    u = r(189798),
-    c = r(878678);
-function d(e) {
-    let { children: n, size: r = 16, className: o, flowerStarClassName: d, ...f } = e,
-        p = a.Children.only(n),
-        h = {
-            width: r,
-            height: r
+n.d(t, { Z: () => c });
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(481060),
+    l = n(189798),
+    u = n(878678);
+function c(e) {
+    let { children: t, size: n = 16, className: a, flowerStarClassName: c, ...d } = e,
+        f = r.Children.only(t),
+        _ = {
+            width: n,
+            height: n
         },
-        _ = (0, l.useRedesignIconContext)().enabled && !e.allowFullSizedIcon;
+        p = (0, o.bWb)().enabled && !e.allowFullSizedIcon;
     return (0, i.jsxs)('div', {
-        className: s()(c.flowerStarContainer, o),
-        style: h,
+        className: s()(u.flowerStarContainer, a),
+        style: _,
         children: [
-            (0, i.jsx)(u.Z, {
-                ...f,
-                className: s()(d, c.flowerStar)
+            (0, i.jsx)(l.Z, {
+                ...d,
+                className: s()(c, u.flowerStar)
             }),
             (0, i.jsx)('div', {
-                className: s()(c.childContainer, { [c.redesignIconChildContainer]: _ }),
-                children: p
+                className: s()(u.childContainer, { [u.redesignIconChildContainer]: p }),
+                children: f
             })
         ]
     });

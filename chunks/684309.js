@@ -1,6 +1,1 @@
-n.r(
-    (e.exports = {
-        card: 'card_ffe375',
-        active: 'active_ffe375'
-    })
-);
+e.exports = { card: 'card_b846e5' };

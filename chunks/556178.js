@@ -1,9 +1,5 @@
-r.d(n, {
-    g: function () {
-        return i;
-    }
-});
-let i = (0, r(818083).B)({
+n.d(t, { g: () => i });
+let i = (0, n(818083).B)({
     kind: 'guild',
     id: '2023-09_gaming_stats_setup',
     label: 'Gaming stats exposure setup',

@@ -1,6 +1,7 @@
-e.exports = {
-    emojiSpriteImage: 'emojiSpriteImage_bcf389',
-    emojiLockIconContainer: 'emojiLockIconContainer_bcf389',
-    emojiLockIcon: 'emojiLockIcon_bcf389',
-    lockedEmoji: 'lockedEmoji_bcf389'
+var i = {
+    emojiSpriteImage: 'emojiSpriteImage_d982c2',
+    emojiLockIconContainer: 'emojiLockIconContainer_d982c2',
+    emojiLockIcon: 'emojiLockIcon_d982c2',
+    lockedEmoji: 'lockedEmoji_d982c2'
 };
+e.exports = i;

@@ -1,17 +1,13 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-});
+n.d(t, { Z: () => o });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(970731),
+var l = n(481060),
+    r = n(970731),
     a = n(388032),
     s = n(733926);
 function o(e) {
     let { guildId: t, markAsDismissed: o } = e;
-    return (0, i.jsx)(l.ZP, {
+    return (0, i.jsx)(r.ZP, {
         className: s.container,
         asset: (0, i.jsx)('img', {
             className: s.image,
@@ -23,11 +19,11 @@ function o(e) {
         content: a.intl.string(a.t.gdqdND),
         buttonCTA: a.intl.string(a.t.RzWDqa),
         buttonProps: {
-            color: r.ButtonColors.WHITE,
+            color: l.Ttl.WHITE,
             innerClassName: s.primaryButton
         },
         onClick: () => {
-            (0, r.openModalLazy)(async () => {
+            (0, l.ZDy)(async () => {
                 let { default: e } = await Promise.all([n.e('5863'), n.e('48406')]).then(n.bind(n, 751212));
                 return (n) =>
                     (0, i.jsx)(e, {
@@ -38,8 +34,8 @@ function o(e) {
         },
         secondaryButtonCTA: a.intl.string(a.t.TulDPj),
         secondaryButtonProps: {
-            look: r.ButtonLooks.LINK,
-            color: r.ButtonColors.WHITE
+            look: l.iLD.LINK,
+            color: l.Ttl.WHITE
         },
         markAsDismissed: o
     });

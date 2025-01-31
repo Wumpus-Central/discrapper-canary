@@ -1,8 +1,4 @@
-n.d(t, {
-    r: function () {
-        return g;
-    }
-});
+n.d(t, { r: () => g });
 var i = n(200651),
     r = n(192379),
     l = n(793030),
@@ -19,11 +15,11 @@ function g(e) {
         n = (0, s.e7)([d.Z], () => d.Z.getProps().guild),
         g = null == n ? void 0 : n.id,
         x = r.useCallback(() => {
-            if (null != g) c.Z.openMemberVerificationPreviewModal(g);
+            null != g && c.Z.openMemberVerificationPreviewModal(g);
         }, [g]),
         p = (0, s.e7)([o.Z], () => o.Z.get(g));
     if (null == n) return null;
-    let f = null != t ? t : null == p ? void 0 : p.formFields;
+    let _ = null != t ? t : null == p ? void 0 : p.formFields;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(l.X6, {
@@ -38,21 +34,21 @@ function g(e) {
                 className: h.applicationBody,
                 children: m.intl.string(m.t.Z7TCtb)
             }),
-            (0, i.jsx)(a.LinkButton, {
+            (0, i.jsx)(a.Qjf, {
                 text: m.intl.string(m.t.SKNnqq),
-                icon: a.WindowLaunchIcon,
+                icon: a.rgF,
                 variant: 'primary',
                 onClick: x
             }),
             (0, i.jsx)('div', {
                 className: h.form,
                 children:
-                    null != f
+                    null != _
                         ? (0, i.jsx)(u.y, {
                               guild: n,
-                              formFields: f
+                              formFields: _
                           })
-                        : (0, i.jsx)(a.Spinner, {})
+                        : (0, i.jsx)(a.$jN, {})
             })
         ]
     });

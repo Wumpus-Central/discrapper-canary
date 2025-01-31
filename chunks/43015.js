@@ -1,35 +1,29 @@
 n.d(t, {
-    $Z: function () {
-        return l;
-    },
-    L$: function () {
-        return o;
-    },
-    fw: function () {
-        return a;
-    }
+    $Z: () => a,
+    L$: () => o,
+    fw: () => l
 });
 var i = n(544891),
-    r = n(570140),
-    s = n(981631);
-async function a() {
+    s = n(570140),
+    r = n(981631);
+async function l() {
     var e;
     let t = await i.tn.get({
-        url: s.ANM.AUTH_SESSIONS,
+        url: r.ANM.AUTH_SESSIONS,
         rejectWithError: !1
     });
     return (
         (null == t ? void 0 : t.ok) &&
             (null === (e = t.body) || void 0 === e ? void 0 : e.user_sessions) != null &&
-            r.Z.dispatch({
+            s.Z.dispatch({
                 type: 'FETCH_AUTH_SESSIONS_SUCCESS',
                 sessions: t.body.user_sessions
             }),
         t
     );
 }
-function l() {
-    r.Z.dispatch({
+function a() {
+    s.Z.dispatch({
         type: 'FETCH_AUTH_SESSIONS_SUCCESS',
         sessions: []
     });
@@ -39,13 +33,13 @@ async function o(e) {
         if (0 === e.length) return;
     } else e = [e];
     let t = await i.tn.post({
-        url: s.ANM.AUTH_SESSIONS_LOGOUT,
+        url: r.ANM.AUTH_SESSIONS_LOGOUT,
         body: { session_id_hashes: e },
         rejectWithError: !1
     });
     return (
         (null == t ? void 0 : t.ok) &&
-            r.Z.dispatch({
+            s.Z.dispatch({
                 type: 'LOGOUT_AUTH_SESSIONS_SUCCESS',
                 sessionIdHashes: e
             }),

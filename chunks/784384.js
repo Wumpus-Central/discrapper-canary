@@ -1,37 +1,29 @@
 n.d(t, {
-    HY: function () {
-        return S;
-    },
-    nm: function () {
-        return p;
-    },
-    pU: function () {
-        return A;
-    },
-    y: function () {
-        return C;
-    }
+    HY: () => A,
+    nm: () => I,
+    pU: () => S,
+    y: () => C
 }),
     n(47120),
     n(390547);
 var l = n(192379),
     i = n(106351),
     a = n(442837),
-    r = n(933557),
-    s = n(987509),
+    s = n(933557),
+    r = n(987509),
     o = n(926491),
     c = n(378233),
     u = n(131704),
     d = n(592125),
-    h = n(496675),
-    f = n(699516),
-    _ = n(594174),
+    _ = n(496675),
+    h = n(699516),
+    f = n(594174),
     g = n(408433),
     m = n(823379),
     E = n(981631),
-    I = n(388032);
-function p(e) {
-    let t = e.map(s.hl).find(m.lm),
+    p = n(388032);
+function I(e) {
+    let t = e.map(r.hl).find(m.lm),
         n = (0, a.e7)([d.Z], () => d.Z.getChannel(t), [t]);
     return l.useMemo(
         () =>
@@ -44,12 +36,12 @@ function p(e) {
         [n]
     );
 }
-function S(e, t, n) {
+function A(e, t, n) {
     let l = n instanceof u.Sf;
-    if (t.isNSFW() && !(l && n.isNSFW())) return { label: I.intl.string(I.t.KgPx1N) };
+    if (t.isNSFW() && !(l && n.isNSFW())) return { label: p.intl.string(p.t.KgPx1N) };
     if (l && (0, u.Km)(n.type)) {
-        if ((e.attachments.length > 0 || e.messageSnapshots.some((e) => e.message.attachments.length > 0)) && !h.Z.can(E.Plq.ATTACH_FILES, n)) return { label: I.intl.string(I.t.P7yvbm) };
-        if ((e.embeds.length > 0 || e.messageSnapshots.some((e) => e.message.embeds.length > 0)) && !(0, g.eC)(n, h.Z) && !(0, g.En)(e)) return { label: I.intl.string(I.t.Wr4RIS) };
+        if ((e.attachments.length > 0 || e.messageSnapshots.some((e) => e.message.attachments.length > 0)) && !_.Z.can(E.Plq.ATTACH_FILES, n)) return { label: p.intl.string(p.t.P7yvbm) };
+        if ((e.embeds.length > 0 || e.messageSnapshots.some((e) => e.message.embeds.length > 0)) && !(0, g.eC)(n, _.Z) && !(0, g.En)(e)) return { label: p.intl.string(p.t.Wr4RIS) };
         let t = [
             ...(0, c.cv)(e),
             ...e.messageSnapshots.flatMap((e) => {
@@ -59,7 +51,7 @@ function S(e, t, n) {
         ];
         if (
             t.length > 0 &&
-            !h.Z.can(E.Plq.USE_EXTERNAL_STICKERS, n) &&
+            !_.Z.can(E.Plq.USE_EXTERNAL_STICKERS, n) &&
             t.some((e) =>
                 (function (e, t) {
                     let n = o.Z.getStickerById(e.id);
@@ -67,16 +59,16 @@ function S(e, t, n) {
                 })(e, n)
             )
         )
-            return { label: I.intl.string(I.t['0Yyrub']) };
-        if ((e.hasFlag(E.iLy.IS_VOICE_MESSAGE) || e.messageSnapshots.some((e) => e.message.hasFlag(E.iLy.IS_VOICE_MESSAGE))) && !h.Z.can(E.Plq.SEND_VOICE_MESSAGES, n)) return { label: I.intl.string(I.t.quj4DQ) };
+            return { label: p.intl.string(p.t['0Yyrub']) };
+        if ((e.hasFlag(E.iLy.IS_VOICE_MESSAGE) || e.messageSnapshots.some((e) => e.message.hasFlag(E.iLy.IS_VOICE_MESSAGE))) && !_.Z.can(E.Plq.SEND_VOICE_MESSAGES, n)) return { label: p.intl.string(p.t.quj4DQ) };
     }
 }
-function A(e, t) {
-    return null != e.rateLimitPerUser && !!(e.rateLimitPerUser > 0) && !(t.can(E.Plq.MANAGE_CHANNELS, e) || t.can(E.Plq.MANAGE_MESSAGES, e));
+function S(e, t) {
+    return null != e.rateLimitPerUser && e.rateLimitPerUser > 0 && !(t.can(E.Plq.MANAGE_CHANNELS, e) || t.can(E.Plq.MANAGE_MESSAGES, e));
 }
 function C(e) {
     let t = (0, a.Wu)(
-        [d.Z, h.Z],
+        [d.Z, _.Z],
         () =>
             e
                 .map((e) => {
@@ -84,8 +76,8 @@ function C(e) {
                     return 'channel' === t ? d.Z.getChannel(n) : null;
                 })
                 .filter(m.lm)
-                .filter((e) => A(e, h.Z)),
+                .filter((e) => S(e, _.Z)),
         [e]
     );
-    return (0, a.Wu)([_.default, f.Z], () => t.map((e) => (0, r.F6)(e, _.default, f.Z, !0)), [t]);
+    return (0, a.Wu)([f.default, h.Z], () => t.map((e) => (0, s.F6)(e, f.default, h.Z, !0)), [t]);
 }

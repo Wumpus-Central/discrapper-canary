@@ -1,10 +1,6 @@
-r.d(n, {
-    K: function () {
-        return a;
-    }
-});
-var i = r(470167);
-let a = (e) => {
-    let { type: n } = e;
-    return n !== i.h.AUTO_MODERATION_MESSAGE && n !== i.h.AUTO_MODERATION_NOTIFICATION;
+n.d(t, { K: () => r });
+var i = n(470167);
+let r = (e) => {
+    let { type: t } = e;
+    return t !== i.h.AUTO_MODERATION_MESSAGE && t !== i.h.AUTO_MODERATION_NOTIFICATION;
 };

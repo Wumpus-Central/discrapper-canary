@@ -1,18 +1,14 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-});
+n.d(t, { Z: () => o });
 var i = n(200651);
 n(192379);
 var l = n(873546),
-    r = n(481060),
-    a = n(373662),
+    a = n(481060),
+    r = n(373662),
     s = n(388032);
 function o(e) {
     let { channel: t, message: n, togglePopout: o, renderEmojiPicker: c, shouldShow: d } = e;
-    return (0, i.jsx)(r.Popout, {
-        animation: r.Popout.Animation.FADE,
+    return (0, i.jsx)(a.yRy, {
+        animation: a.yRy.Animation.FADE,
         renderPopout: (e) => {
             let { closePopout: i } = e;
             return c(t, n, i, !1);
@@ -24,10 +20,10 @@ function o(e) {
         clickTrap: !0,
         children: () =>
             (0, i.jsx)(
-                a.sF,
+                r.sF,
                 {
                     label: s.intl.string(s.t.lfIHs7),
-                    icon: r.ReactionIcon,
+                    icon: a.EO4,
                     onClick: o
                 },
                 'add-reaction'

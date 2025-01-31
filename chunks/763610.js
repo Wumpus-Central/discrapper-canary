@@ -1,35 +1,31 @@
-t.d(l, {
-    Z: function () {
-        return d;
-    }
-});
-var n = t(200651),
-    i = t(192379),
-    s = t(120356),
-    a = t.n(s),
-    o = t(481060),
-    r = t(53281),
-    u = t(14943);
-function d(e) {
-    let { filename: l, className: t, filters: s, buttonText: d, placeholder: c, onFileSelect: m } = e,
-        f = i.useRef(null);
-    return (0, n.jsxs)('div', {
-        className: a()(t, u.fileUpload),
+i.d(l, { Z: () => u });
+var t = i(200651),
+    n = i(192379),
+    s = i(120356),
+    a = i.n(s),
+    o = i(481060),
+    r = i(53281),
+    d = i(14943);
+function u(e) {
+    let { filename: l, className: i, filters: s, buttonText: u, placeholder: c, onFileSelect: m } = e,
+        f = n.useRef(null);
+    return (0, t.jsxs)('div', {
+        className: a()(i, d.fileUpload),
         children: [
-            (0, n.jsx)('input', {
-                className: u.fileUploadInput,
+            (0, t.jsx)('input', {
+                className: d.fileUploadInput,
                 tabIndex: -1,
                 readOnly: !0,
                 placeholder: c,
                 type: 'text',
                 value: l
             }),
-            (0, n.jsxs)(o.Button, {
-                size: o.Button.Sizes.MIN,
-                className: u.fileUploadButton,
+            (0, t.jsxs)(o.zxk, {
+                size: o.zxk.Sizes.MIN,
+                className: d.fileUploadButton,
                 children: [
-                    d,
-                    (0, n.jsx)(r.Z, {
+                    u,
+                    (0, t.jsx)(r.Z, {
                         ref: f,
                         tabIndex: -1,
                         onChange: (e) => {

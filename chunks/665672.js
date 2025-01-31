@@ -1,11 +1,7 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-});
-var r = n(512722),
-    i = n.n(r);
-function l(e, t, n) {
+n.d(t, { Z: () => a });
+var l = n(512722),
+    i = n.n(l);
+function r(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +14,7 @@ function l(e, t, n) {
         e
     );
 }
-class o {
+class a {
     setExporter(e) {
         this.exporter = e;
     }
@@ -28,6 +24,6 @@ class o {
         return i()(null != t, "DiscordCanvas: Couldn't get a canvas for export."), this.exporter.exportCanvas(t, e);
     }
     constructor(e, t) {
-        l(this, 'canvas', void 0), l(this, 'exporter', void 0), (this.canvas = e), (this.exporter = t);
+        r(this, 'canvas', void 0), r(this, 'exporter', void 0), (this.canvas = e), (this.exporter = t);
     }
 }

@@ -1,5 +1,6 @@
 e.exports = {
-    container: 'container_a7d4dd',
-    upsell: 'upsell_a7d4dd',
-    hidden: 'hidden_a7d4dd'
+    container: 'container__251d4',
+    fadeOut: 'fadeOut__251d4',
+    upsell: 'upsell__251d4',
+    hidden: 'hidden__251d4'
 };

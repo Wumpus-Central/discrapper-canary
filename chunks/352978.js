@@ -1,64 +1,61 @@
 n.d(t, {
-    L: function () {
-        return i;
-    }
+    L: () => m,
+    Z: () => f
 }),
     n(47120);
 var i,
-    l,
-    r = n(200651),
+    l = n(200651),
     a = n(192379),
-    s = n(120356),
-    o = n.n(s),
-    c = n(481060),
-    u = n(763520),
-    d = n(153066),
-    m = n(435315);
-((l = i || (i = {})).CONTAIN = 'contain'), (l.COVER = 'cover');
+    r = n(120356),
+    s = n.n(r),
+    o = n(481060),
+    c = n(763520),
+    u = n(153066),
+    d = n(435315),
+    m = (((i = {}).CONTAIN = 'contain'), (i.COVER = 'cover'), i);
 let f = a.memo(function (e) {
-    let { streamId: t, onResize: n, wrapperClassName: i, videoComponent: l, className: s, fit: f = 'contain', mirror: p = !1, paused: h = !1, streamPreviewURL: g, videoSpinnerContext: v, userId: S } = e,
-        [I, x] = a.useState(!0),
-        [_] = a.useState(() => new u.o('VideoStream'));
+    let { streamId: t, onResize: n, wrapperClassName: i, videoComponent: r, className: m, fit: f = 'contain', mirror: p = !1, paused: h = !1, streamPreviewURL: g, videoSpinnerContext: v, userId: _ } = e,
+        [S, I] = a.useState(!0),
+        [x] = a.useState(() => new c.o('VideoStream'));
     a.useEffect(() => {
-        !h && (I ? _.onSpinnerStarted() : null != t && _.trackSpinnerDuration(v, S, t));
-    }, [I, h, t, _, v, S]);
-    let C = a.useCallback(() => {
-        x(!1);
+        h || (S ? x.onSpinnerStarted() : null != t && x.trackSpinnerDuration(v, _, t));
+    }, [S, h, t, x, v, _]);
+    let E = a.useCallback(() => {
+        I(!1);
     }, []);
-    return (0, r.jsxs)('div', {
-        className: o()(m.wrapper, i),
+    return (0, l.jsxs)('div', {
+        className: s()(d.wrapper, i),
         children: [
             null != t &&
-                (0, r.jsx)(l, {
-                    className: o()(m.video, (0, d.l)(m, 'video', f), { [m.mirror]: p }, s),
+                (0, l.jsx)(r, {
+                    className: s()(d.video, (0, u.l)(d, 'video', f), { [d.mirror]: p }, m),
                     streamId: t,
                     onResize: n,
-                    onReady: C,
+                    onReady: E,
                     paused: h
                 }),
             h
                 ? null
-                : (0, r.jsx)('div', {
-                      className: o()(m.previewWrapper, { [m.loading]: I }),
+                : (0, l.jsx)('div', {
+                      className: s()(d.previewWrapper, { [d.loading]: S }),
                       children:
-                          I &&
-                          (0, r.jsxs)(a.Fragment, {
+                          S &&
+                          (0, l.jsxs)(a.Fragment, {
                               children: [
                                   null != g
-                                      ? (0, r.jsx)('img', {
+                                      ? (0, l.jsx)('img', {
                                             src: g,
                                             alt: '',
-                                            className: m.previewImage
+                                            className: d.previewImage
                                         })
-                                      : (0, r.jsx)('div', {
-                                            className: m.emptyPreviewWrapper,
-                                            children: (0, r.jsx)('div', { className: m.emptyPreview })
+                                      : (0, l.jsx)('div', {
+                                            className: d.emptyPreviewWrapper,
+                                            children: (0, l.jsx)('div', { className: d.emptyPreview })
                                         }),
-                                  (0, r.jsx)(c.Spinner, { className: m.spinner })
+                                  (0, l.jsx)(o.$jN, { className: d.spinner })
                               ]
                           })
                   })
         ]
     });
 });
-t.Z = f;

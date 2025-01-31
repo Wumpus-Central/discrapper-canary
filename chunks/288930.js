@@ -1,6 +1,2 @@
-r.d(n, {
-    C: function () {
-        return i;
-    }
-});
+n.d(t, { C: () => i });
 var i = 'undefined' != typeof window ? window : {};

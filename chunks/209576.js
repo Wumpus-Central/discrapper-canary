@@ -1,19 +1,20 @@
-var a = ['vasárnap', 'hétfőn', 'kedden', 'szerdán', 'csütörtökön', 'pénteken', 'szombaton'];
-function i(e) {
+a.d(t, { Z: () => s });
+var i = ['vasárnap', 'hétfőn', 'kedden', 'szerdán', 'csütörtökön', 'pénteken', 'szombaton'];
+function n(e) {
     return function (t) {
-        var i = a[t.getUTCDay()];
-        return ''.concat(e ? '' : "'múlt' ", "'").concat(i, "' p'-kor'");
+        var a = i[t.getUTCDay()];
+        return ''.concat(e ? '' : "'múlt' ", "'").concat(a, "' p'-kor'");
     };
 }
-var n = {
-    lastWeek: i(!1),
+var r = {
+    lastWeek: n(!1),
     yesterday: "'tegnap' p'-kor'",
     today: "'ma' p'-kor'",
     tomorrow: "'holnap' p'-kor'",
-    nextWeek: i(!0),
+    nextWeek: n(!0),
     other: 'P'
 };
-t.Z = function (e, t) {
-    var a = n[e];
+let s = function (e, t) {
+    var a = r[e];
     return 'function' == typeof a ? a(t) : a;
 };

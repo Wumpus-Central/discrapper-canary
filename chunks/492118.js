@@ -1,38 +1,34 @@
-r.d(n, {
-    C: function () {
-        return l;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(692547),
-    o = r(331595),
-    s = r(267843);
-let l = (e) => {
-    var n, r;
-    let { size: l = 'md', width: u, height: c, color: d = a.Z.colors.INTERACTIVE_NORMAL, colorClass: f = '', ...p } = e,
-        h = (0, s.m)(l),
-        _ = null !== (n = null == h ? void 0 : h.width) && void 0 !== n ? n : u,
-        m = null !== (r = null == h ? void 0 : h.height) && void 0 !== r ? r : c;
+n.d(t, { C: () => o });
+var i = n(200651);
+n(192379);
+var r = n(692547),
+    a = n(331595),
+    s = n(267843);
+let o = (e) => {
+    var t, n;
+    let { size: o = 'md', width: l, height: u, color: c = r.Z.colors.INTERACTIVE_NORMAL, colorClass: d = '', ...f } = e,
+        _ = (0, s.m)(o),
+        p = null !== (t = null == _ ? void 0 : _.width) && void 0 !== t ? t : l,
+        h = null !== (n = null == _ ? void 0 : _.height) && void 0 !== n ? n : u;
     return (0, i.jsxs)('svg', {
-        ...(0, o.Z)(p),
+        ...(0, a.Z)(f),
         xmlns: 'http://www.w3.org/2000/svg',
-        width: _,
-        height: m,
+        width: p,
+        height: h,
         fill: 'none',
         viewBox: '0 0 24 24',
         children: [
             (0, i.jsx)('path', {
-                fill: 'string' == typeof d ? d : d.css,
+                fill: 'string' == typeof c ? c : c.css,
                 d: 'M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z',
-                className: f
+                className: d
             }),
             (0, i.jsx)('path', {
-                fill: 'string' == typeof d ? d : d.css,
+                fill: 'string' == typeof c ? c : c.css,
                 fillRule: 'evenodd',
                 d: 'M19.5 15.46a13.2 13.2 0 0 0-.72-1.62 25.3 25.3 0 0 1-2.3 2.64 21.05 21.05 0 0 1-7.24 4.9c-2.24.83-4.63.98-6.12-.5-1.48-1.49-1.33-3.88-.5-6.12.33-.89.78-1.82 1.35-2.76a16.28 16.28 0 0 1-1.35-2.76c-.83-2.24-.98-4.63.5-6.12C4.61 1.64 7 1.8 9.24 2.62c.89.33 1.82.78 2.76 1.35a13.7 13.7 0 0 1 4.62-1.86c1.58-.27 3.17-.07 4.26 1.01 1.48 1.49 1.33 3.88.5 6.12-.33.89-.78 1.82-1.35 2.76.57.94 1.02 1.87 1.35 2.76.83 2.24.98 4.63-.5 6.12-1.1 1.09-2.68 1.29-4.3 1a1.5 1.5 0 0 1-2.08-1.38 1.5 1.5 0 0 1 2.9-.52c1.01.1 1.68-.14 2.06-.52.6-.6.81-1.92.04-4ZM8.54 4.5c2 .73 4.35 2.26 6.52 4.44 1 1 1.87 2.04 2.58 3.06A22.82 22.82 0 0 1 12 17.64 22.82 22.82 0 0 1 6.36 12a22.6 22.6 0 0 1 2.27-2.76 1.5 1.5 0 1 0-1.6-1.2 25 25 0 0 0-1.8 2.12c-.3-.56-.54-1.1-.73-1.62-.77-2.08-.56-3.4.04-4 .6-.6 1.92-.81 4-.04ZM4.5 15.46c.19-.52.43-1.06.72-1.62a25.3 25.3 0 0 0 4.94 4.94c-.56.29-1.1.53-1.62.72-2.08.77-3.4.56-4-.04-.6-.6-.81-1.92-.04-4ZM16.96 4.08c-.91.16-1.98.54-3.12 1.14a25.31 25.31 0 0 1 4.94 4.94c.3-.56.53-1.1.72-1.62.77-2.08.56-3.4-.04-4-.43-.43-1.23-.68-2.5-.46Z',
                 clipRule: 'evenodd',
-                className: f
+                className: d
             })
         ]
     });

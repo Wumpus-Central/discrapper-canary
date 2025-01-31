@@ -1,136 +1,72 @@
-r.d(n, {
-    A5: function () {
-        return M;
-    },
-    Bg: function () {
-        return h;
-    },
-    D5: function () {
-        return s;
-    },
-    D_: function () {
-        return c;
-    },
-    EF: function () {
-        return p;
-    },
-    G$: function () {
-        return d;
-    },
-    HW: function () {
-        return v;
-    },
-    Hp: function () {
-        return E;
-    },
-    JO: function () {
-        return C;
-    },
-    Kw: function () {
-        return R;
-    },
-    MG: function () {
-        return b;
-    },
-    OT: function () {
-        return i;
-    },
-    Qr: function () {
-        return T;
-    },
-    Ut: function () {
-        return I;
-    },
-    WM: function () {
-        return _;
-    },
-    X9: function () {
-        return o;
-    },
-    XH: function () {
-        return y;
-    },
-    _U: function () {
-        return w;
-    },
-    dJ: function () {
-        return a;
-    },
-    f_: function () {
-        return S;
-    },
-    i$: function () {
-        return L;
-    },
-    jF: function () {
-        return f;
-    },
-    ji: function () {
-        return D;
-    },
-    jp: function () {
-        return O;
-    },
-    mg: function () {
-        return g;
-    },
-    nU: function () {
-        return m;
-    },
-    wD: function () {
-        return A;
-    },
-    xd: function () {
-        return P;
-    },
-    xx: function () {
-        return x;
-    },
-    yl: function () {
-        return N;
-    }
+n.d(t, {
+    A5: () => w,
+    Bg: () => _,
+    D5: () => l,
+    D_: () => u,
+    EF: () => f,
+    G$: () => c,
+    HW: () => E,
+    Hp: () => g,
+    JO: () => A,
+    Kw: () => C,
+    MG: () => y,
+    OT: () => a,
+    Qr: () => b,
+    Ut: () => I,
+    WM: () => p,
+    X9: () => o,
+    XH: () => v,
+    _U: () => L,
+    dJ: () => s,
+    f_: () => T,
+    i$: () => D,
+    jF: () => d,
+    ji: () => O,
+    jp: () => R,
+    mg: () => m,
+    nU: () => h,
+    wD: () => S,
+    xd: () => P,
+    xx: () => x,
+    yl: () => N
 });
-var i,
-    a,
-    o,
-    s,
-    l = r(710845),
-    u = r(70956);
-!(function (e) {
-    (e[(e.SECONDS_30 = 30 * u.Z.Millis.SECOND)] = 'SECONDS_30'), (e[(e.MINUTES_1 = u.Z.Millis.MINUTE)] = 'MINUTES_1'), (e[(e.MINUTES_2 = 2 * u.Z.Millis.MINUTE)] = 'MINUTES_2');
-})(i || (i = {})),
-    !(function (e) {
-        (e[(e.ALL = 0)] = 'ALL'), (e[(e.FRIENDS = 1)] = 'FRIENDS');
-    })(a || (a = {})),
-    !(function (e) {
-        (e.DECOUPLED = 'decoupled'), (e.VIEWER = 'viewer'), (e.STREAMER = 'streamer');
-    })(o || (o = {})),
-    !(function (e) {
-        (e[(e.Error = 0)] = 'Error'), (e[(e.Disabled = 1)] = 'Disabled'), (e[(e.Enabled = 2)] = 'Enabled');
-    })(s || (s = {}));
-let c = 'alt+c',
-    d = 6 * u.Z.Millis.SECOND,
-    f = new l.Z('Clips'),
-    p = (e) => 'Discord_Clip_'.concat(e, '.mp4'),
-    h = 3,
-    _ = 1,
-    m = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
-    g = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
-    E = 0.1,
-    v = 25,
-    y = 0,
-    b = 200,
+var i = n(710845),
+    r = n(70956),
+    a = (function (e) {
+        return (e[(e.SECONDS_30 = 30 * r.Z.Millis.SECOND)] = 'SECONDS_30'), (e[(e.MINUTES_1 = r.Z.Millis.MINUTE)] = 'MINUTES_1'), (e[(e.MINUTES_2 = 2 * r.Z.Millis.MINUTE)] = 'MINUTES_2'), e;
+    })({}),
+    s = (function (e) {
+        return (e[(e.ALL = 0)] = 'ALL'), (e[(e.FRIENDS = 1)] = 'FRIENDS'), e;
+    })({}),
+    o = (function (e) {
+        return (e.DECOUPLED = 'decoupled'), (e.VIEWER = 'viewer'), (e.STREAMER = 'streamer'), e;
+    })({}),
+    l = (function (e) {
+        return (e[(e.Error = 0)] = 'Error'), (e[(e.Disabled = 1)] = 'Disabled'), (e[(e.Enabled = 2)] = 'Enabled'), e;
+    })({});
+let u = 'alt+c',
+    c = 6 * r.Z.Millis.SECOND,
+    d = new i.Z('Clips'),
+    f = (e) => 'Discord_Clip_'.concat(e, '.mp4'),
+    _ = 3,
+    p = 1,
+    h = /(NVIDIA GeForce GTX (98|10|16).*|Radeon RX 5(500|600|).*|Radeon RX5.*)/,
+    m = /(NVIDIA GeForce (RTX (20|30|40).*))|(.*Radeon RX (57|58|59|6|7).*)/,
+    g = 0.1,
+    E = 25,
+    v = 0,
+    y = 200,
     I = 'clips-edit',
-    T = 'clips-gallery',
-    S = 640,
-    A = 360,
-    C = 100,
+    b = 'clips-gallery',
+    T = 640,
+    S = 360,
+    A = 100,
     N = (e) => 'Clip - '.concat(new Date(e).toLocaleString()),
-    R = 15,
-    O = 30000,
-    D = 30,
-    L = 10,
-    x = 14 * u.Z.Millis.DAY,
-    w = 5,
+    C = 15,
+    R = 30000,
+    O = 30,
+    D = 10,
+    x = 14 * r.Z.Millis.DAY,
+    L = 5,
     P = 5,
-    M = 1;
+    w = 1;

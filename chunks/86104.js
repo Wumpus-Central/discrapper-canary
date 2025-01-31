@@ -1,11 +1,7 @@
-let n, r, a, s, h, o, l, c, u;
+let r, n, a, s, o, u, c, h, l;
 i.d(e, {
-    Z: function () {
-        return g;
-    },
-    j: function () {
-        return p;
-    }
+    Z: () => p,
+    j: () => m
 }),
     i(66153),
     i(970173),
@@ -18,47 +14,44 @@ i.d(e, {
     i(492257),
     i(873817),
     i(411104);
-var m = i(512722),
-    d = i.n(m),
-    f = i(170830);
-let v = 409600,
-    p = (0, f.G)(async () => {
-        let t = await Promise.all([i.e('91789'), i.e('43903')]).then(i.bind(i, 241441)),
-            e = await t.default();
-        (a = e.cwrap('lottie_create', 'number', ['string'])), (s = e._lottie_destroy), (h = e._lottie_draw_into_bgra), (o = e._lottie_draw_into_rgba), (l = e._lottie_frame_count), (c = e._lottie_frame_rate), (u = e._memory_create), (n = e), (r = u(v));
-    });
-function w(t, e) {
-    return new Uint8ClampedArray(n.HEAPU8.buffer, r, t * e * 4);
+var f = i(512722),
+    d = i.n(f);
+let m = (0, i(170830).G)(async () => {
+    let t = await Promise.all([i.e('91789'), i.e('43903')]).then(i.bind(i, 241441)),
+        e = await t.default();
+    (a = e.cwrap('lottie_create', 'number', ['string'])), (s = e._lottie_destroy), (o = e._lottie_draw_into_bgra), (u = e._lottie_draw_into_rgba), (c = e._lottie_frame_count), (h = e._lottie_frame_rate), (l = e._memory_create), (r = e), (n = l(409600));
+});
+function v(t, e) {
+    return new Uint8ClampedArray(r.HEAPU8.buffer, n, t * e * 4);
 }
-class g {
+class p {
     get fps() {
-        return c(this.native);
+        return h(this.native);
     }
     get frames() {
-        return l(this.native);
+        return c(this.native);
     }
     get_bgra(t, e, i) {
-        return d()(e <= 320, 'width exceeds static allocation.'), d()(i <= 320, 'height exceeds static allocation.'), h(this.native, r, t, e, i), w(e, i);
+        return d()(e <= 320, 'width exceeds static allocation.'), d()(i <= 320, 'height exceeds static allocation.'), o(this.native, n, t, e, i), v(e, i);
     }
     get_rgba(t, e, i) {
-        return d()(e <= 320, 'width exceeds static allocation.'), d()(i <= 320, 'height exceeds static allocation.'), o(this.native, r, t, e, i), w(e, i);
+        return d()(e <= 320, 'width exceeds static allocation.'), d()(i <= 320, 'height exceeds static allocation.'), u(this.native, n, t, e, i), v(e, i);
     }
     drop() {
         s(this.native);
     }
     constructor(t) {
-        var e, i, n;
+        var e, i;
         if (
-            ((e = this),
-            (n = void 0),
-            (i = 'native') in e
-                ? Object.defineProperty(e, i, {
-                      value: n,
+            ((i = void 0),
+            (e = 'native') in this
+                ? Object.defineProperty(this, e, {
+                      value: i,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (e[i] = n),
+                : (this[e] = i),
             (this.native = a(t)),
             0 === this.native)
         )

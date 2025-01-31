@@ -1,16 +1,11 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => o }), n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(329683);
 function o(e) {
-    let { children: t, className: n, flashKey: r } = e,
+    let { children: t, className: n, flashKey: a } = e,
         [o, c] = l.useState(!1),
         d = l.useRef(null);
     return (
@@ -24,11 +19,11 @@ function o(e) {
                     null != d.current && clearTimeout(d.current);
                 }
             ),
-            [r]
+            [a]
         ),
         (0, i.jsx)('div', {
             'data-flash': o,
-            className: a()(s.flash, n),
+            className: r()(s.flash, n),
             children: t
         })
     );

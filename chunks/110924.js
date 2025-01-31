@@ -1,15 +1,11 @@
-r.d(n, {
-    Z: function () {
-        return a;
-    }
-});
-var i = r(192379);
-function a(e) {
-    let n = (0, i.useRef)();
+n.d(t, { Z: () => r });
+var i = n(192379);
+function r(e) {
+    let t = (0, i.useRef)();
     return (
         (0, i.useEffect)(() => {
-            n.current = e;
+            t.current = e;
         }, [e]),
-        n.current
+        t.current
     );
 }

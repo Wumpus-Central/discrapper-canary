@@ -1,9 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return g;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => g }), n(47120);
 var i = n(200651);
 n(192379);
 var r = n(442837),
@@ -20,27 +15,27 @@ function g(e) {
     let { guildId: t, scrollToQuestions: n } = e,
         g = (0, r.e7)([a.Z], () => a.Z.isAdvancedMode(t)),
         x = (0, r.e7)([c.Z], () => c.Z.editedDefaultChannelIds),
-        [p, f] = (0, o.VF)(t, x),
-        [C, v] = (0, d.OA)(t, [...x]),
-        I = g ? v.length : f.length,
+        [p, _] = (0, o.VF)(t, x),
+        [C, f] = (0, d.OA)(t, [...x]),
+        v = g ? f.length : _.length,
         N = g ? C.length : p.length,
-        _ = I < u.md,
-        T = N >= u.X,
-        j = v.length - f.length,
-        b = (0, i.jsx)(s.CircleCheckIcon, {
+        j = v < u.md,
+        I = N >= u.X,
+        E = f.length - _.length,
+        b = (0, i.jsx)(s.owK, {
             size: 'sm',
             color: l.Z.unsafe_rawColors.BRAND_500.css,
             secondaryColor: l.Z.unsafe_rawColors.WHITE_100.css,
             className: h.icon
         }),
-        E = (0, i.jsx)(s.CircleXIcon, {
+        T = (0, i.jsx)(s.k$p, {
             size: 'sm',
             className: h.icon,
             color: l.Z.colors.WHITE.css,
             secondaryColor: l.Z.colors.BACKGROUND_ACCENT.css
         }),
-        S = [(Math.min(u.X, N) / u.md) * 100, (Math.min(u.md, I) / u.md) * 100],
-        R = !_ && T ? [l.Z.colors.TEXT_POSITIVE.css, l.Z.colors.TEXT_POSITIVE.css] : [l.Z.colors.TEXT_BRAND.css, l.Z.colors.TEXT_MUTED.css];
+        S = [(Math.min(u.X, N) / u.md) * 100, (Math.min(u.md, v) / u.md) * 100],
+        R = !j && I ? [l.Z.colors.TEXT_POSITIVE.css, l.Z.colors.TEXT_POSITIVE.css] : [l.Z.colors.TEXT_BRAND.css, l.Z.colors.TEXT_MUTED.css];
     return (0, i.jsxs)('div', {
         className: h.container,
         children: [
@@ -55,19 +50,19 @@ function g(e) {
                     (0, i.jsx)(s.Text, {
                         variant: 'text-xs/bold',
                         color: 'text-muted',
-                        children: m.intl.format(m.t['0MjxJy'], { count: I })
+                        children: m.intl.format(m.t['0MjxJy'], { count: v })
                     })
                 ]
             }),
-            (0, i.jsx)(s.StackedProgress, {
+            (0, i.jsx)(s.yGy, {
                 foregroundColors: R,
                 percents: S,
-                size: s.StackedProgress.Sizes.XSMALL
+                size: s.yGy.Sizes.XSMALL
             }),
             (0, i.jsxs)('div', {
                 className: h.requiredItem,
                 children: [
-                    _ ? E : b,
+                    j ? T : b,
                     (0, i.jsx)(s.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-muted',
@@ -78,7 +73,7 @@ function g(e) {
             (0, i.jsxs)('div', {
                 className: h.requiredItem,
                 children: [
-                    T ? b : E,
+                    I ? b : T,
                     (0, i.jsx)(s.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-muted',
@@ -92,7 +87,7 @@ function g(e) {
                         (0, i.jsxs)('div', {
                             className: h.requiredItem,
                             children: [
-                                (0, i.jsx)(s.CircleInformationIcon, {
+                                (0, i.jsx)(s.d3s, {
                                     size: 'sm',
                                     color: l.Z.colors.WHITE.css,
                                     secondaryColor: l.Z.colors.BACKGROUND_ACCENT.css,
@@ -108,7 +103,7 @@ function g(e) {
                         (0, i.jsxs)('div', {
                             className: h.requiredItem,
                             children: [
-                                (0, i.jsx)(s.CircleInformationIcon, {
+                                (0, i.jsx)(s.d3s, {
                                     size: 'sm',
                                     color: l.Z.colors.WHITE.css,
                                     secondaryColor: l.Z.colors.BACKGROUND_ACCENT.css,
@@ -118,9 +113,9 @@ function g(e) {
                                     variant: 'text-xs/normal',
                                     color: 'text-muted',
                                     children: m.intl.format(m.t['8Geut7'], {
-                                        count: j,
+                                        count: E,
                                         prejoinHook: (e) =>
-                                            (0, i.jsx)(s.Anchor, {
+                                            (0, i.jsx)(s.eee, {
                                                 onClick: n,
                                                 children: (0, i.jsx)(s.Text, {
                                                     tag: 'span',

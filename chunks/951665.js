@@ -1,9 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => d }), n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(481060),
@@ -31,7 +26,7 @@ function d(e) {
             [d, n]
         );
     return (0, s.S)(n.triggerType)
-        ? (0, i.jsx)(l.Collapsible, {
+        ? (0, i.jsx)(l.zF9, {
               isExpanded: m,
               collapsibleContent: (0, i.jsx)(a.Z, {
                   rule: n,
@@ -42,24 +37,24 @@ function d(e) {
               className: c.collapseable,
               children: (e) => {
                   let { onClick: t } = e;
-                  return (0, i.jsx)(l.Clickable, {
+                  return (0, i.jsx)(l.P3F, {
                       onClick: (e) => {
                           g(), t(e);
                       },
                       children: (0, i.jsxs)('div', {
                           className: c.header,
                           children: [
-                              (0, i.jsx)(l.Heading, {
+                              (0, i.jsx)(l.X6q, {
                                   variant: 'text-sm/medium',
                                   children: o.intl.string(o.t.dnunm5)
                               }),
                               m
-                                  ? (0, i.jsx)(l.ChevronSmallUpIcon, {
+                                  ? (0, i.jsx)(l.u04, {
                                         size: 'md',
                                         color: 'currentColor',
                                         className: c.arrow
                                     })
-                                  : (0, i.jsx)(l.ChevronSmallDownIcon, {
+                                  : (0, i.jsx)(l.CJ0, {
                                         size: 'md',
                                         color: 'currentColor',
                                         className: c.arrow

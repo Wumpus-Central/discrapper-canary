@@ -1,10 +1,6 @@
-r.d(n, {
-    V: function () {
-        return a;
-    }
-});
-var i = r(594190);
-function a() {
+n.d(t, { V: () => r });
+var i = n(594190);
+function r() {
     let e = i.ZP.getCurrentGameForAnalytics();
     return {
         game_name: null != e ? e.name : null,

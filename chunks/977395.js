@@ -1,11 +1,7 @@
-n.d(t, {
-    f: function () {
-        return o;
-    }
-});
+n.d(t, { f: () => o });
 var r = n(909688),
-    i = n(228624),
-    l = n(91641),
-    a = n(166350),
-    s = n(987338);
-let o = new l.E([a.NR, a.ZI, a.Ob, a.uc, a.m1, i.k, r.j], s.$P.COLLECTIBLES_SHOP_OPEN, { location: 'collectibles shop open' });
+    l = n(228624),
+    i = n(91641),
+    s = n(166350),
+    a = n(987338);
+let o = new i.E([s.NR, s.ZI, s.Ob, s.uc, s.m1, l.k, r.j], a.$P.COLLECTIBLES_SHOP_OPEN, { location: 'collectibles shop open' });

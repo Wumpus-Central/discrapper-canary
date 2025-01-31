@@ -1,10 +1,10 @@
-function n(e) {
-    let n = {
+function t(e) {
+    let t = {
             keyword: 'actor addressof and as be break class compile_error compile_intrinsic consume continue delegate digestof do else elseif embed end error for fun if ifdef in interface is isnt lambda let match new not object or primitive recover repeat return struct then trait try type until use var where while with xor',
             meta: 'iso val tag trn box ref',
             literal: 'this false true'
         },
-        r = {
+        n = {
             className: 'string',
             begin: '"""',
             end: '"""',
@@ -16,31 +16,29 @@ function n(e) {
             end: '"',
             contains: [e.BACKSLASH_ESCAPE]
         },
-        a = {
+        r = {
             className: 'string',
             begin: "'",
             end: "'",
             contains: [e.BACKSLASH_ESCAPE],
             relevance: 0
-        },
-        o = {
-            className: 'type',
-            begin: '\\b_?[A-Z][\\w]*',
-            relevance: 0
-        },
-        s = {
-            begin: e.IDENT_RE + "'",
-            relevance: 0
         };
     return {
         name: 'Pony',
-        keywords: n,
+        keywords: t,
         contains: [
-            o,
-            r,
+            {
+                className: 'type',
+                begin: '\\b_?[A-Z][\\w]*',
+                relevance: 0
+            },
+            n,
             i,
-            a,
-            s,
+            r,
+            {
+                begin: e.IDENT_RE + "'",
+                relevance: 0
+            },
             {
                 className: 'number',
                 begin: '(-?)(\\b0[xX][a-fA-F0-9]+|\\b0[bB][01]+|(\\b\\d+(_\\d+)?(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)',
@@ -51,4 +49,4 @@ function n(e) {
         ]
     };
 }
-e.exports = n;
+e.exports = t;

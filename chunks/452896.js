@@ -1,6 +1,2 @@
-n.d(e, {
-    J: function () {
-        return r;
-    }
-});
-let r = '8.22.0';
+s.d(e, { J: () => n });
+let n = '8.22.0';

@@ -1,8 +1,8 @@
-n(411104), n(47120), n(724458), n(653041);
+n.d(t, { Z: () => $ }), n(411104), n(47120), n(724458), n(653041);
 var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
     s = n(392711),
     o = n.n(s),
     c = n(442837),
@@ -12,8 +12,8 @@ var i = n(200651),
     m = n(570140),
     p = n(239091),
     g = n(51025),
-    f = n(785547),
-    _ = n(730749),
+    _ = n(785547),
+    f = n(730749),
     E = n(112724),
     I = n(812206),
     C = n(44315),
@@ -21,10 +21,10 @@ var i = n(200651),
     N = n(167533),
     T = n(925329),
     S = n(707409),
-    b = n(210887),
-    A = n(283595),
-    Z = n(417363),
-    x = n(941128),
+    Z = n(210887),
+    x = n(283595),
+    A = n(417363),
+    b = n(941128),
     L = n(451478),
     y = n(424218),
     P = n(780570),
@@ -32,8 +32,8 @@ var i = n(200651),
     R = n(86826),
     j = n(981631),
     D = n(388032),
-    M = n(96852);
-function w(e, t, n) {
+    w = n(96852);
+function M(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -47,30 +47,30 @@ function w(e, t, n) {
     );
 }
 let k = (e) => {
-        let { className: t, children: n, onContextMenu: r, item: l } = e;
+        let { className: t, children: n, onContextMenu: l, item: r } = e;
         return (0, i.jsx)('div', {
             className: t,
-            onContextMenu: (e) => r(e, l),
+            onContextMenu: (e) => l(e, r),
             children: n
         });
     },
     U = [d.Z.unsafe_rawColors.BLUE_345.css, d.Z.colors.INTERACTIVE_NORMAL.css],
     G = (e) => {
-        let { tooltip: t, onClick: n, icon: r } = e;
-        return (0, i.jsx)(h.Tooltip, {
+        let { tooltip: t, onClick: n, icon: l } = e;
+        return (0, i.jsx)(h.ua7, {
             text: t,
             children: (e) => {
-                let { onMouseEnter: l, onMouseLeave: a } = e;
-                return (0, i.jsx)(h.Button, {
+                let { onMouseEnter: r, onMouseLeave: a } = e;
+                return (0, i.jsx)(h.zxk, {
                     'aria-label': t,
-                    className: M.actionButton,
-                    innerClassName: M.actionButtonContents,
-                    color: h.Button.Colors.PRIMARY,
-                    size: h.Button.Sizes.ICON,
+                    className: w.actionButton,
+                    innerClassName: w.actionButtonContents,
+                    color: h.zxk.Colors.PRIMARY,
+                    size: h.zxk.Sizes.ICON,
                     onClick: n,
-                    onMouseEnter: l,
+                    onMouseEnter: r,
                     onMouseLeave: a,
-                    children: (0, i.jsx)(r, { className: M.actionIcon })
+                    children: (0, i.jsx)(l, { className: w.actionIcon })
                 });
             }
         });
@@ -175,23 +175,23 @@ let V = {
             })
     }
 };
-function H(e, t, n, i, r) {
-    let l = V[t],
-        a = null != l ? Object.keys(l) : [],
+function H(e, t, n, i, l) {
+    let r = V[t],
+        a = null != r ? Object.keys(r) : [],
         { unit: s, time: o } = (0, S.CI)(null != e ? e / 60 : null, a);
-    if (null != l && null != s) {
-        let e = l[s];
-        return null != e ? e(n, i, r, o) : null;
+    if (null != r && null != s) {
+        let e = r[s];
+        return null != e ? e(n, i, l, o) : null;
     }
     return null;
 }
 function F(e) {
-    let { type: t, stage: n, percent: i, progress: r, total: l, secondsRemaining: a } = e,
-        s = B(l, n),
-        o = B(r, n);
+    let { type: t, stage: n, percent: i, progress: l, total: r, secondsRemaining: a } = e,
+        s = B(r, n),
+        o = B(l, n);
     switch (n) {
         case j.f07.QUEUED:
-            if (0 === r) return D.intl.string(D.t.RpfBqa);
+            if (0 === l) return D.intl.string(D.t.RpfBqa);
             return D.intl.formatToPlainString(D.t.uNjCXV, {
                 percent: i,
                 progress: o,
@@ -233,29 +233,26 @@ function F(e) {
     }
     throw Error('Invalid Dispatch stage');
 }
-let z = 'name',
-    W = 'progress',
-    Y = 'actions';
-class K extends r.PureComponent {
+class z extends l.PureComponent {
     get isFocused() {
         let { cellProps: e } = this.props;
         return null != e && e.isFocused;
     }
     renderBody(e) {
-        let { percent: t, foregroundColor: n, foregroundGradientColor: r, message: l } = e;
+        let { percent: t, foregroundColor: n, foregroundGradientColor: l, message: r } = e;
         return (0, i.jsxs)(v.Z, {
             direction: v.Z.Direction.VERTICAL,
             children: [
-                (0, i.jsx)(h.Progress, {
+                (0, i.jsx)(h.Exd, {
                     percent: t,
-                    size: h.Progress.Sizes.SMALL,
+                    size: h.Exd.Sizes.SMALL,
                     foregroundColor: (0, C.Lq)(n),
-                    foregroundGradientColor: null != r ? [(0, C.Lq)(r[0]), (0, C.Lq)(r[1])] : void 0,
+                    foregroundGradientColor: null != l ? [(0, C.Lq)(l[0]), (0, C.Lq)(l[1])] : void 0,
                     animate: this.isFocused
                 }),
                 (0, i.jsx)('div', {
-                    className: M.progressCellText,
-                    children: null != l ? l : ''
+                    className: w.progressCellText,
+                    children: null != r ? r : ''
                 })
             ]
         });
@@ -265,14 +262,14 @@ class K extends r.PureComponent {
         return (0, i.jsxs)(v.Z, {
             direction: v.Z.Direction.VERTICAL,
             children: [
-                (0, i.jsx)(h.StackedProgress, {
+                (0, i.jsx)(h.yGy, {
                     percents: t,
-                    size: h.StackedProgress.Sizes.SMALL,
+                    size: h.yGy.Sizes.SMALL,
                     foregroundColors: U,
                     animate: this.isFocused
                 }),
                 (0, i.jsx)('div', {
-                    className: M.progressCellText,
+                    className: w.progressCellText,
                     children: null != n ? n : ''
                 })
             ]
@@ -292,13 +289,13 @@ class K extends r.PureComponent {
             item: { state: n, theme: i }
         } = this.props;
         if (null != n) {
-            let { progress: i, total: r, stage: l } = n;
-            if (null != i && null != r) {
-                let n = B(r, l),
-                    a = B(i, l),
-                    s = Math.floor((t = P.xI(i, r)));
+            let { progress: i, total: l, stage: r } = n;
+            if (null != i && null != l) {
+                let n = B(l, r),
+                    a = B(i, r),
+                    s = Math.floor((t = P.xI(i, l)));
                 e =
-                    l === j.f07.PAUSING
+                    r === j.f07.PAUSING
                         ? D.intl.formatToPlainString(D.t.vjxhWl, {
                               percent: s,
                               progress: a,
@@ -327,25 +324,25 @@ class K extends r.PureComponent {
         if (null == e) return null;
         let { progress: n, total: i } = e;
         if (null == n || null == i) return null;
-        let r = P.xI(n, i),
-            l = Math.floor(r),
+        let l = P.xI(n, i),
+            r = Math.floor(l),
             a =
                 0 === n && 1 === i
                     ? D.intl.string(D.t['+pfsFR'])
                     : D.intl.formatToPlainString(D.t['+feX8f'], {
-                          percent: l,
+                          percent: r,
                           progress: (0, y.BU)(n),
                           total: (0, y.BU)(i)
                       });
         return this.renderBody({
             message: a,
             foregroundColor: (0, u.ap)(t) ? j.Ilk.PRIMARY_300 : j.Ilk.PRIMARY_500,
-            percent: r
+            percent: l
         });
     }
     renderProgressPatching() {
         return (0, i.jsx)(O.Z, {
-            getHistoricalTotalBytes: Z.Z.getHistoricalTotalBytesWritten,
+            getHistoricalTotalBytes: A.Z.getHistoricalTotalBytesWritten,
             updateInterval: 5000,
             children: this.renderProgressPatchingBody
         });
@@ -353,14 +350,14 @@ class K extends r.PureComponent {
     renderProgressDefault() {
         let { state: e } = this.props.item;
         if (null == e) return null;
-        let { total: t, progress: n, stage: i, type: r } = e;
+        let { total: t, progress: n, stage: i, type: l } = e;
         if (null == t || null == n || null == i) return null;
-        let l = P.xI(n, t),
-            a = Math.floor(l);
+        let r = P.xI(n, t),
+            a = Math.floor(r);
         return this.renderBody({
-            percent: l,
+            percent: r,
             message: F({
-                type: r,
+                type: l,
                 stage: i,
                 percent: a,
                 progress: n,
@@ -381,30 +378,27 @@ class K extends r.PureComponent {
     }
     render() {
         let { item: e, cellProps: t } = this.props;
-        if (e.finished) return this.renderFinished();
-        if (e.index > 0) return this.renderQueued();
-        if (null != e.state && (e.state.type === j.vxO.UPDATING || e.state.type === j.vxO.REPAIRING || e.state.type === j.vxO.INSTALLING)) return null != t && t.paused ? this.renderPaused() : this.renderProgress();
-        return null;
+        return e.finished ? this.renderFinished() : e.index > 0 ? this.renderQueued() : null != e.state && (e.state.type === j.vxO.UPDATING || e.state.type === j.vxO.REPAIRING || e.state.type === j.vxO.INSTALLING) ? (null != t && t.paused ? this.renderPaused() : this.renderProgress()) : null;
     }
     constructor(...e) {
         super(...e),
-            w(this, 'renderProgressPatchingBody', (e, t) => {
+            M(this, 'renderProgressPatchingBody', (e, t) => {
                 let {
                     item: { state: n }
                 } = this.props;
                 if (null == n) return null;
-                let { stage: i, progress: r, total: l, type: a, readerProgress: s } = n;
-                if (null == r || null == l || null == i) return null;
-                let o = P.xI(r, l),
-                    c = P.xI(null != s ? s : 0, l),
+                let { stage: i, progress: l, total: r, type: a, readerProgress: s } = n;
+                if (null == l || null == r || null == i) return null;
+                let o = P.xI(l, r),
+                    c = P.xI(null != s ? s : 0, r),
                     d = (e[e.length - 1] / t) * 1000,
-                    u = l - r,
+                    u = r - l,
                     h = F({
                         type: a,
                         stage: i,
                         percent: Math.floor(o),
-                        progress: r,
-                        total: l,
+                        progress: l,
+                        total: r,
                         secondsRemaining: 0 !== d ? Math.max(1, u / d) : null
                     });
                 return this.renderStackedProgress({
@@ -414,93 +408,93 @@ class K extends r.PureComponent {
             });
     }
 }
-let q = () =>
+let W = () =>
         (0, i.jsx)(G, {
-            icon: h.PlayIcon,
+            icon: h.o1U,
             tooltip: D.intl.string(D.t.YGm6SU),
             onClick: () => g.v4()
         }),
-    X = () =>
+    Y = () =>
         (0, i.jsx)(G, {
-            icon: h.PauseIcon,
+            icon: h.fpf,
             tooltip: D.intl.string(D.t.TVAd5O),
             onClick: () => g.wO()
         }),
-    Q = (e) => {
+    K = (e) => {
         let { item: t } = e;
         return (0, i.jsx)(G, {
-            icon: h.ArrowSmallUpIcon,
+            icon: h.wj7,
             tooltip: D.intl.string(D.t['Eqb+LC']),
             onClick: () => g.A1(t.applicationId, t.branchId)
         });
     },
-    J = (e) => {
+    q = (e) => {
         let { item: t } = e;
         return (0, i.jsx)(G, {
-            icon: h.XSmallIcon,
+            icon: h.Dio,
             tooltip: D.intl.string(D.t['0lFmCw']),
             onClick: () => g.al(t.applicationId, t.branchId)
         });
     },
-    $ = [
+    X = [
         {
-            key: z,
-            cellClassName: M.nameCell,
+            key: 'name',
+            cellClassName: w.nameCell,
             render: (e) =>
                 (0, i.jsxs)(v.Z, {
                     align: v.Z.Align.CENTER,
                     children: [
                         (0, i.jsx)(T.Z, {
                             game: e.application,
-                            className: M.__invalid_gameIcon,
+                            className: w.__invalid_gameIcon,
                             size: T.Z.Sizes.SMALL
                         }),
                         (0, i.jsx)('div', {
-                            className: M.nameCellText,
+                            className: w.nameCellText,
                             children: e.application.name
                         })
                     ]
                 })
         },
         {
-            key: W,
-            cellClassName: M.progressCell,
-            headerCellClassName: M.progressCellHeader,
-            bodyCellClassName: M.progressCellBody,
+            key: 'progress',
+            cellClassName: w.progressCell,
+            headerCellClassName: w.progressCellHeader,
+            bodyCellClassName: w.progressCellBody,
             render: (e, t) =>
-                (0, i.jsx)(K, {
+                (0, i.jsx)(z, {
                     item: e,
                     cellProps: t
                 })
         },
         {
-            key: Y,
-            cellClassName: M.actionsCell,
+            key: 'actions',
+            cellClassName: w.actionsCell,
             render(e, t) {
-                let n, r;
+                let n, l;
                 return (
                     e.finished
                         ? (n =
                               null != e.libraryApplication
-                                  ? (0, i.jsx)(f.Z, {
+                                  ? (0, i.jsx)(_.Z, {
                                         libraryApplication: e.libraryApplication,
-                                        size: h.Button.Sizes.SMALL,
-                                        className: M.gameActionButton,
+                                        size: h.zxk.Sizes.SMALL,
+                                        className: w.gameActionButton,
                                         source: j.Sbl.APPLICATION_LIBRARY_UPDATES
                                     })
                                   : null)
                         : null != e.state
-                          ? e.state.type !== j.vxO.UP_TO_DATE && ((n = e.index > 0 ? (0, i.jsx)(Q, { item: e }) : null != t && t.paused ? (0, i.jsx)(q, {}) : (0, i.jsx)(X, { item: e })), (r = (0, i.jsx)(J, { item: e })))
-                          : (r = (0, i.jsx)(J, { item: e })),
+                          ? e.state.type !== j.vxO.UP_TO_DATE && ((n = e.index > 0 ? (0, i.jsx)(K, { item: e }) : null != t && t.paused ? (0, i.jsx)(W, {}) : (0, i.jsx)(Y, { item: e })), (l = (0, i.jsx)(q, { item: e })))
+                          : (l = (0, i.jsx)(q, { item: e })),
                     (0, i.jsxs)(v.Z, {
                         justify: v.Z.Justify.END,
-                        children: [n, r]
+                        children: [n, l]
                     })
                 );
             }
         }
     ];
-class ee extends r.PureComponent {
+class Q extends l.PureComponent {
     componentDidMount() {
         window.addEventListener('resize', this.throttledUpdateHeight);
     }
@@ -519,73 +513,67 @@ class ee extends r.PureComponent {
             (this.isUnmounted = !0);
     }
     render() {
-        let { applications: e, paused: t, isFocused: r, theme: l, analyticsContext: s } = this.props;
+        let { applications: e, paused: t, isFocused: l, theme: r, analyticsContext: s } = this.props;
         return 0 === e.length
             ? null
             : (0, i.jsxs)('div', {
-                  className: M.gameUpdates,
+                  className: w.gameUpdates,
                   children: [
                       (0, i.jsxs)('div', {
-                          className: M.headerRow,
+                          className: w.headerRow,
                           children: [
                               (0, i.jsx)(R.Z, {
-                                  className: a()(M.headerCell, M.networkProgress),
+                                  className: a()(w.headerCell, w.networkProgress),
                                   title: D.intl.string(D.t.ytoXKi),
-                                  getHistoricalTotalBytes: Z.Z.getHistoricalTotalBytesDownloaded,
+                                  getHistoricalTotalBytes: A.Z.getHistoricalTotalBytesDownloaded,
                                   color: j.Ilk.GREEN_360,
-                                  animate: r
+                                  animate: l
                               }),
                               (0, i.jsx)(R.Z, {
-                                  className: a()(M.headerCell, M.diskProgress),
+                                  className: a()(w.headerCell, w.diskProgress),
                                   title: D.intl.string(D.t.SjohhI),
-                                  getHistoricalTotalBytes: Z.Z.getHistoricalTotalBytesWritten,
+                                  getHistoricalTotalBytes: A.Z.getHistoricalTotalBytesWritten,
                                   color: j.Ilk.BLUE_345,
-                                  animate: r
+                                  animate: l
                               })
                           ]
                       }),
                       (0, i.jsx)(N.Z, {
                           hasHeader: !1,
-                          columns: $,
+                          columns: X,
                           data: e,
-                          className: M.table,
-                          rowClassName: M.row,
+                          className: w.table,
+                          rowClassName: w.row,
                           rowComponent: k,
                           cellProps: {
                               paused: t,
-                              isFocused: r,
-                              theme: l
+                              isFocused: l,
+                              theme: r
                           },
                           rowProps: {
                               onContextMenu: (e, t) => {
-                                  var r, l, a;
-                                  return (
-                                      (r = e),
-                                      (l = t),
-                                      (a = s),
-                                      void p.jW(r, async () => {
-                                          let { default: e } = await n.e('98335').then(n.bind(n, 485292));
-                                          return (t) =>
-                                              (0, i.jsx)(e, {
-                                                  ...t,
-                                                  applicationId: l.applicationId,
-                                                  branchId: l.branchId,
-                                                  analyticsContext: a
-                                              });
-                                      })
-                                  );
+                                  p.jW(e, async () => {
+                                      let { default: e } = await n.e('98335').then(n.bind(n, 485292));
+                                      return (n) =>
+                                          (0, i.jsx)(e, {
+                                              ...n,
+                                              applicationId: t.applicationId,
+                                              branchId: t.branchId,
+                                              analyticsContext: s
+                                          });
+                                  });
                               }
                           },
-                          bodyCellClassName: M.cell
+                          bodyCellClassName: w.cell
                       })
                   ]
               });
     }
     constructor(...e) {
         super(...e),
-            w(this, 'isUnmounted', !1),
-            w(this, 'isTallerThanHalfViewport', !1),
-            w(
+            M(this, 'isUnmounted', !1),
+            M(this, 'isTallerThanHalfViewport', !1),
+            M(
                 this,
                 'throttledUpdateHeight',
                 o().throttle(() => {
@@ -597,9 +585,9 @@ class ee extends r.PureComponent {
             );
     }
 }
-function et(e, t, n, i) {
-    return e.reduce((e, r, l) => {
-        let { applicationId: a, branchId: s } = r,
+function J(e, t, n, i) {
+    return e.reduce((e, l, r) => {
+        let { applicationId: a, branchId: s } = l,
             o = n.getApplication(a),
             c = i.getState(a, s);
         return (
@@ -610,22 +598,19 @@ function et(e, t, n, i) {
                     branchId: s,
                     state: c,
                     application: o,
-                    libraryApplication: A.Z.getLibraryApplication(a, s),
+                    libraryApplication: x.Z.getLibraryApplication(a, s),
                     finished: t,
-                    index: l
+                    index: r
                 }),
             e
         );
     }, []);
 }
-t.Z = (0, E.Z)(
-    c.ZP.connectStores([I.Z, Z.Z, x.Z, b.Z, L.Z], () => {
-        let e = et(x.Z.activeItems, !1, I.Z, Z.Z);
-        return {
-            applications: [...e, ...et(x.Z.finishedItems, !0, I.Z, Z.Z)],
-            paused: x.Z.paused,
-            isFocused: L.Z.isFocused(),
-            theme: b.Z.theme
-        };
-    })((0, _.Z)(ee))
+let $ = (0, E.Z)(
+    c.ZP.connectStores([I.Z, A.Z, b.Z, Z.Z, L.Z], () => ({
+        applications: [...J(b.Z.activeItems, !1, I.Z, A.Z), ...J(b.Z.finishedItems, !0, I.Z, A.Z)],
+        paused: b.Z.paused,
+        isFocused: L.Z.isFocused(),
+        theme: Z.Z.theme
+    }))((0, f.Z)(Q))
 );

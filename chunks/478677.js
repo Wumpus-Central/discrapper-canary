@@ -1,11 +1,3 @@
-var r, c;
-t.d(n, {
-    g: function () {
-        return r;
-    }
-}),
-    t(47120),
-    ((c = r || (r = {})).MOBILE = 'mobile'),
-    (c.DESKTOP = 'desktop'),
-    (c.WEB = 'web'),
-    (c.DEVICE_CODE = 'device_code');
+n.d(t, { g: () => r }), n(47120);
+var a,
+    r = (((a = {}).MOBILE = 'mobile'), (a.DESKTOP = 'desktop'), (a.WEB = 'web'), (a.DEVICE_CODE = 'device_code'), a);

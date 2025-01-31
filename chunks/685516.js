@@ -1,47 +1,43 @@
-r.d(n, {
-    Z: function () {
-        return b;
-    }
-});
-var i = r(740078),
-    a = r(365100),
-    o = r(558376),
-    s = r(620720),
-    l = r(343713),
-    u = r(285363),
-    c = r(874900),
-    d = r(882159),
-    f = r(175922),
-    p = r(660027),
-    h = r(67966),
-    _ = r(316138),
-    m = r(6138),
-    g = r(894417);
-function E(e, n) {
-    var r = (0, f.Z)(e, !1, 'fixed' === n);
-    return (r.top = r.top + e.clientTop), (r.left = r.left + e.clientLeft), (r.bottom = r.top + e.clientHeight), (r.right = r.left + e.clientWidth), (r.width = e.clientWidth), (r.height = e.clientHeight), (r.x = r.left), (r.y = r.top), r;
+n.d(t, { Z: () => y });
+var i = n(740078),
+    r = n(365100),
+    a = n(558376),
+    s = n(620720),
+    o = n(343713),
+    l = n(285363),
+    u = n(874900),
+    c = n(882159),
+    d = n(175922),
+    f = n(660027),
+    _ = n(67966),
+    p = n(316138),
+    h = n(6138),
+    m = n(894417);
+function g(e, t) {
+    var n = (0, d.Z)(e, !1, 'fixed' === t);
+    return (n.top = n.top + e.clientTop), (n.left = n.left + e.clientLeft), (n.bottom = n.top + e.clientHeight), (n.right = n.left + e.clientWidth), (n.width = e.clientWidth), (n.height = e.clientHeight), (n.x = n.left), (n.y = n.top), n;
 }
-function v(e, n, r) {
-    return n === i.Pj ? (0, m.Z)((0, a.Z)(e, r)) : (0, d.kK)(n) ? E(n, r) : (0, m.Z)((0, o.Z)((0, u.Z)(e)));
+function E(e, t, n) {
+    return t === i.Pj ? (0, h.Z)((0, r.Z)(e, n)) : (0, c.kK)(t) ? g(t, n) : (0, h.Z)((0, a.Z)((0, l.Z)(e)));
 }
-function y(e) {
-    var n = (0, s.Z)((0, p.Z)(e)),
-        r = ['absolute', 'fixed'].indexOf((0, c.Z)(e).position) >= 0 && (0, d.Re)(e) ? (0, l.Z)(e) : e;
-    return (0, d.kK)(r)
-        ? n.filter(function (e) {
-              return (0, d.kK)(e) && (0, h.Z)(e, r) && 'body' !== (0, _.Z)(e);
+function v(e) {
+    var t = (0, s.Z)((0, f.Z)(e)),
+        n = ['absolute', 'fixed'].indexOf((0, u.Z)(e).position) >= 0 && (0, c.Re)(e) ? (0, o.Z)(e) : e;
+    return (0, c.kK)(n)
+        ? t.filter(function (e) {
+              return (0, c.kK)(e) && (0, _.Z)(e, n) && 'body' !== (0, p.Z)(e);
           })
         : [];
 }
-function b(e, n, r, i) {
-    var a = [].concat('clippingParents' === n ? y(e) : [].concat(n), [r]),
-        o = a[0],
-        s = a.reduce(
-            function (n, r) {
-                var a = v(e, r, i);
-                return (n.top = (0, g.Fp)(a.top, n.top)), (n.right = (0, g.VV)(a.right, n.right)), (n.bottom = (0, g.VV)(a.bottom, n.bottom)), (n.left = (0, g.Fp)(a.left, n.left)), n;
+function y(e, t, n, i) {
+    var r = [].concat('clippingParents' === t ? v(e) : [].concat(t), [n]),
+        a = r[0],
+        s = r.reduce(
+            function (t, n) {
+                var r = E(e, n, i);
+                return (t.top = (0, m.Fp)(r.top, t.top)), (t.right = (0, m.VV)(r.right, t.right)), (t.bottom = (0, m.VV)(r.bottom, t.bottom)), (t.left = (0, m.Fp)(r.left, t.left)), t;
             },
-            v(e, o, i)
+            E(e, a, i)
         );
     return (s.width = s.right - s.left), (s.height = s.bottom - s.top), (s.x = s.left), (s.y = s.top), s;
 }

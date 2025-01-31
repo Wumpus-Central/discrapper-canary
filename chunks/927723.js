@@ -1,81 +1,70 @@
-r.d(n, {
-    Ib: function () {
-        return c;
-    },
-    M9: function () {
-        return p;
-    },
-    g0: function () {
-        return h;
-    },
-    gJ: function () {
-        return f;
-    }
+n.d(t, {
+    Ib: () => u,
+    M9: () => f,
+    g0: () => _,
+    gJ: () => d
 }),
-    r(192379),
-    r(442837);
-var i = r(430824),
-    a = r(496675),
-    o = r(266090),
-    s = r(981631),
-    l = r(176505);
-function u(e) {
-    var n;
-    let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+    n(192379),
+    n(442837);
+var i = n(430824),
+    r = n(496675),
+    a = n(266090),
+    s = n(981631),
+    o = n(176505);
+function l(e) {
+    var t;
+    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : '1e9ccc_1',
-        a = null !== (n = null == e ? void 0 : e.id) && void 0 !== n ? n : s.lds;
-    return o.Z.useExperiment(
+        r = null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : s.lds;
+    return a.Z.useExperiment(
         {
-            guildId: a,
+            guildId: r,
             location: i
         },
-        { autoTrackExposure: r }
+        { autoTrackExposure: n }
     ).experimentState;
 }
-function c(e, n) {
-    let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    return d(u(e, r), e, n);
+function u(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+    return c(l(e, n), e, t);
 }
-function d(e, n, r) {
-    if (null == n) {
-        if (null != r && r.isPrivate()) return !!r.hasFlag(l.zZ.CLYDE_AI) || i.Z.getGuildIds().some((e) => p(i.Z.getGuild(e)));
-        return !1;
-    }
-    return null != e && e !== o.P.None && a.Z.can(s.Plq.USE_CLYDE_AI, r);
+function c(e, t, n) {
+    if (null == t) return !!(null != n && n.isPrivate()) && (!!n.hasFlag(o.zZ.CLYDE_AI) || i.Z.getGuildIds().some((e) => f(i.Z.getGuild(e))));
+    return null != e && e !== a.P.None && r.Z.can(s.Plq.USE_CLYDE_AI, n);
 }
-function f(e, n) {
-    var r;
+function d(e, t) {
+    var n;
     let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        a = null !== (r = null == e ? void 0 : e.id) && void 0 !== r ? r : s.lds;
-    return d(
-        o.Z.getCurrentConfig(
+        r = null !== (n = null == e ? void 0 : e.id) && void 0 !== n ? n : s.lds;
+    return c(
+        a.Z.getCurrentConfig(
             {
-                guildId: a,
+                guildId: r,
                 location: '1e9ccc_2'
             },
             { autoTrackExposure: i }
         ).experimentState,
         e,
-        n
+        t
     );
 }
-function p(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return _(e, n) !== o.P.None;
-}
-function h(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return _(e, n) === o.P.ClydeProfiles;
+function f(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    return p(e, t) !== a.P.None;
 }
 function _(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    return p(e, t) === a.P.ClydeProfiles;
+}
+function p(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (null == e) return !1;
-    let r = e.id;
-    return o.Z.getCurrentConfig(
+    let n = e.id;
+    return a.Z.getCurrentConfig(
         {
-            guildId: r,
+            guildId: n,
             location: '1e9ccc_4'
         },
-        { autoTrackExposure: n }
+        { autoTrackExposure: t }
     ).experimentState;
 }

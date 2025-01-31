@@ -1,44 +1,40 @@
-e.d(t, {
-    B: function () {
-        return g;
-    }
-});
-var i = e(200651),
-    l = e(192379),
-    r = e(442837),
-    o = e(481060),
-    u = e(40851),
-    a = e(352954),
-    d = e(630759),
-    s = e(441894),
-    c = e(314897),
-    f = e(388032);
-function g(n) {
-    let { userId: t, channelId: e, guildId: g, location: Z } = n,
-        m = (0, s.J)({
-            channelId: e,
-            location: Z
+n.d(e, { B: () => Z });
+var i = n(200651),
+    l = n(192379),
+    a = n(442837),
+    d = n(481060),
+    r = n(40851),
+    o = n(352954),
+    s = n(630759),
+    u = n(441894),
+    c = n(314897),
+    g = n(388032);
+function Z(t) {
+    let { userId: e, channelId: n, guildId: Z, location: f } = t,
+        v = (0, u.J)({
+            channelId: n,
+            location: f
         }),
-        v = (0, r.e7)([c.default], () => c.default.getId() === t),
-        b = (0, u.bp)(),
-        x = l.useCallback(() => {
-            a.Z.openSecureFramesUserVerificationModal(
-                t,
+        b = (0, a.e7)([c.default], () => c.default.getId() === e),
+        h = (0, r.bp)(),
+        m = l.useCallback(() => {
+            o.Z.openSecureFramesUserVerificationModal(
                 e,
+                n,
                 () =>
-                    (0, d.fz)({
-                        userId: t,
-                        channelId: e,
-                        guildId: g
+                    (0, s.fz)({
+                        userId: e,
+                        channelId: n,
+                        guildId: Z
                     }),
-                b
+                h
             );
-        }, [b, e, g, t]);
-    return !m || v
+        }, [h, n, Z, e]);
+    return !v || b
         ? null
-        : (0, i.jsx)(o.MenuItem, {
+        : (0, i.jsx)(d.sNh, {
               id: 'secure-frames-user-verification',
-              label: f.intl.string(f.t['8ErYvb']),
-              action: x
+              label: g.intl.string(g.t['8ErYvb']),
+              action: m
           });
 }

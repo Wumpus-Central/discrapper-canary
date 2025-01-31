@@ -1,24 +1,20 @@
-r.d(n, {
-    p: function () {
-        return s;
-    },
-    y: function () {
-        return o;
-    }
+n.d(t, {
+    p: () => s,
+    y: () => a
 });
-var i = r(482833),
-    a = r(981631);
-function o(e, n) {
-    let { enabled: r } = i.c.useExperiment({
-        guildId: null != e ? e : a.lds,
-        location: n
+var i = n(482833),
+    r = n(981631);
+function a(e, t) {
+    let { enabled: n } = i.c.useExperiment({
+        guildId: null != e ? e : r.lds,
+        location: t
     });
-    return r;
+    return n;
 }
-function s(e, n) {
-    let { enabled: r } = i.c.getCurrentConfig({
-        guildId: null != e ? e : a.lds,
-        location: n
+function s(e, t) {
+    let { enabled: n } = i.c.getCurrentConfig({
+        guildId: null != e ? e : r.lds,
+        location: t
     });
-    return r;
+    return n;
 }

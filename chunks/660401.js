@@ -1,31 +1,32 @@
-var i = r(176338),
-    a = r(725180),
-    o = r(370873),
+n.d(t, { Z: () => D });
+var i = n(176338),
+    r = n(725180),
+    a = n(370873),
     s = '[object Arguments]',
-    l = '[object Array]',
-    u = '[object Boolean]',
-    c = '[object Date]',
-    d = '[object Error]',
-    f = '[object Function]',
-    p = '[object Map]',
-    h = '[object Number]',
-    _ = '[object Object]',
-    m = '[object RegExp]',
-    g = '[object Set]',
-    E = '[object String]',
-    v = '[object WeakMap]',
-    y = '[object ArrayBuffer]',
-    b = '[object DataView]',
+    o = '[object Array]',
+    l = '[object Boolean]',
+    u = '[object Date]',
+    c = '[object Error]',
+    d = '[object Function]',
+    f = '[object Map]',
+    _ = '[object Number]',
+    p = '[object Object]',
+    h = '[object RegExp]',
+    m = '[object Set]',
+    g = '[object String]',
+    E = '[object WeakMap]',
+    v = '[object ArrayBuffer]',
+    y = '[object DataView]',
     I = '[object Float64Array]',
-    T = '[object Int8Array]',
-    S = '[object Int16Array]',
-    A = '[object Int32Array]',
-    C = '[object Uint8Array]',
+    b = '[object Int8Array]',
+    T = '[object Int16Array]',
+    S = '[object Int32Array]',
+    A = '[object Uint8Array]',
     N = '[object Uint8ClampedArray]',
-    R = '[object Uint16Array]',
-    O = '[object Uint32Array]',
-    D = {};
-function L(e) {
-    return (0, o.Z)(e) && (0, a.Z)(e.length) && !!D[(0, i.Z)(e)];
-}
-(D['[object Float32Array]'] = D[I] = D[T] = D[S] = D[A] = D[C] = D[N] = D[R] = D[O] = !0), (D[s] = D[l] = D[y] = D[u] = D[b] = D[c] = D[d] = D[f] = D[p] = D[h] = D[_] = D[m] = D[g] = D[E] = D[v] = !1), (n.Z = L);
+    C = '[object Uint16Array]',
+    R = '[object Uint32Array]',
+    O = {};
+(O['[object Float32Array]'] = O[I] = O[b] = O[T] = O[S] = O[A] = O[N] = O[C] = O[R] = !0), (O[s] = O[o] = O[v] = O[l] = O[y] = O[u] = O[c] = O[d] = O[f] = O[_] = O[p] = O[h] = O[m] = O[g] = O[E] = !1);
+let D = function (e) {
+    return (0, a.Z)(e) && (0, r.Z)(e.length) && !!O[(0, i.Z)(e)];
+};

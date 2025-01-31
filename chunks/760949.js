@@ -1,31 +1,25 @@
-e.r(n),
-    e.d(n, {
-        default: function () {
-            return g;
-        }
-    }),
-    e(47120);
-var a = e(200651),
-    o = e(192379),
-    r = e(120356),
-    i = e.n(r),
-    s = e(481060),
-    l = e(37234),
-    c = e(479531),
-    d = e(703656),
-    u = e(695346),
-    h = e(981631),
-    x = e(388032),
-    b = e(733098),
-    m = e(232186);
+n.d(e, { default: () => g }), n(47120);
+var i = n(200651),
+    s = n(192379),
+    r = n(120356),
+    a = n.n(r),
+    l = n(481060),
+    o = n(37234),
+    c = n(479531),
+    d = n(703656),
+    x = n(695346),
+    u = n(981631),
+    h = n(388032),
+    b = n(733098),
+    m = n(232186);
 function g(t) {
-    let { transitionState: n, onClose: e } = t,
-        [r, g] = o.useState(!1),
-        [f, p] = o.useState(null),
+    let { transitionState: e, onClose: n } = t,
+        [r, g] = s.useState(!1),
+        [k, p] = s.useState(null),
         C = async () => {
             p(null), g(!0);
             try {
-                await u.Ex.updateSetting(!1), (0, d.uL)(h.Z5c.FRIENDS), (0, l.xf)(), e();
+                await x.Ex.updateSetting(!1), (0, d.uL)(u.Z5c.FRIENDS), (0, o.xf)(), n();
             } catch (t) {
                 p(new c.Z(t).getAnyErrorMessage());
             } finally {
@@ -33,64 +27,64 @@ function g(t) {
             }
         },
         j = () => {
-            (0, d.uL)(h.Z5c.SETTINGS('family-center')), e();
+            (0, d.uL)(u.Z5c.SETTINGS('family-center')), n();
         };
-    return (0, a.jsxs)(s.ModalRoot, {
+    return (0, i.jsxs)(l.Y0X, {
         className: b.root,
-        transitionState: n,
+        transitionState: e,
         children: [
-            (0, a.jsxs)(s.ModalHeader, {
+            (0, i.jsxs)(l.xBx, {
                 separator: !1,
                 className: b.header,
                 children: [
-                    (0, a.jsx)(s.Heading, {
+                    (0, i.jsx)(l.X6q, {
                         variant: 'heading-lg/semibold',
                         className: b.title,
-                        children: x.intl.string(x.t.VGB30N)
+                        children: h.intl.string(h.t.VGB30N)
                     }),
-                    (0, a.jsx)(s.Text, {
+                    (0, i.jsx)(l.Text, {
                         variant: 'text-sm/normal',
                         className: b.subtitle,
-                        children: x.intl.format(x.t['CrZZ+v'], {
-                            openSettingsHook: (t, n) =>
-                                (0, a.jsx)(
-                                    s.Anchor,
+                        children: h.intl.format(h.t['CrZZ+v'], {
+                            openSettingsHook: (t, e) =>
+                                (0, i.jsx)(
+                                    l.eee,
                                     {
                                         onClick: j,
                                         children: t
                                     },
-                                    n
+                                    e
                                 )
                         })
                     })
                 ]
             }),
-            (0, a.jsxs)(s.ModalContent, {
+            (0, i.jsxs)(l.hzk, {
                 children: [
-                    (0, a.jsxs)('div', {
-                        className: i()(b.buttonContainer, m.marginTop20),
+                    (0, i.jsxs)('div', {
+                        className: a()(b.buttonContainer, m.marginTop20),
                         children: [
-                            (0, a.jsx)(s.Button, {
+                            (0, i.jsx)(l.zxk, {
                                 type: 'submit',
                                 className: m.marginBottom8,
                                 grow: !0,
-                                color: s.Button.Colors.RED,
+                                color: l.zxk.Colors.RED,
                                 onClick: C,
                                 submitting: r,
-                                children: x.intl.string(x.t.cSb7U1)
+                                children: h.intl.string(h.t.cSb7U1)
                             }),
-                            (0, a.jsx)(s.Button, {
+                            (0, i.jsx)(l.zxk, {
                                 grow: !0,
-                                color: s.Button.Colors.PRIMARY,
-                                onClick: e,
-                                children: x.intl.string(x.t['ETE/oK'])
+                                color: l.zxk.Colors.PRIMARY,
+                                onClick: n,
+                                children: h.intl.string(h.t['ETE/oK'])
                             })
                         ]
                     }),
-                    (0, a.jsx)(s.Text, {
+                    (0, i.jsx)(l.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-danger',
-                        children: f
+                        children: k
                     })
                 ]
             })

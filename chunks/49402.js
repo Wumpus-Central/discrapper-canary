@@ -1,68 +1,64 @@
-r.d(n, {
-    I: function () {
-        return d;
-    }
-});
-var i = r(200651),
-    a = r(192379),
-    o = r(803997),
-    s = r.n(o),
-    l = r(489948),
-    u = r(821541),
-    c = r(780900);
-function d(e, n, r) {
-    let o = (0, c.G6)(e);
-    return a.forwardRef(function (d, f) {
-        let { children: p, className: h, dir: _ = 'ltr', orientation: m = 'vertical', fade: g = !1, customTheme: E = !1, paddingFix: v = !0, style: y, gap: b, experimental_useStack: I, ...T } = d,
-            { scrollerRef: S, getScrollerState: A } = (0, c.Ke)(),
-            C = (0, c.t2)(S, m);
-        a.useImperativeHandle(
-            f,
+n.d(t, { I: () => c });
+var i = n(200651),
+    r = n(192379),
+    a = n(803997),
+    s = n.n(a),
+    o = n(489948),
+    l = n(821541),
+    u = n(780900);
+function c(e, t, n) {
+    let a = (0, u.G6)(e);
+    return r.forwardRef(function (c, d) {
+        let { children: f, className: _, dir: p = 'ltr', orientation: h = 'vertical', fade: m = !1, customTheme: g = !1, paddingFix: E = !0, style: v, gap: y, experimental_useStack: I, ...b } = c,
+            { scrollerRef: T, getScrollerState: S } = (0, u.Ke)(),
+            A = (0, u.t2)(T, h);
+        r.useImperativeHandle(
+            d,
             () => ({
-                getScrollerNode: () => S.current,
-                getScrollerState: A,
-                ...(0, c.Ue)(S, A, C, m)
+                getScrollerNode: () => T.current,
+                getScrollerState: S,
+                ...(0, u.Ue)(T, S, A, h)
             }),
-            [S, A, m, C]
+            [T, S, h, A]
         );
-        let N = (0, c.tT)({
-            paddingFix: v,
-            orientation: m,
-            dir: _,
-            className: h,
-            scrollerRef: S,
-            specs: o
+        let N = (0, u.tT)({
+            paddingFix: E,
+            orientation: h,
+            dir: p,
+            className: _,
+            scrollerRef: T,
+            specs: a
         });
         return I
-            ? (0, i.jsx)(u.K, {
-                  gap: b,
-                  ref: S,
-                  className: s()(h, {
+            ? (0, i.jsx)(l.K, {
+                  gap: y,
+                  ref: T,
+                  className: s()(_, {
                       [e]: !0,
-                      [n]: g,
-                      [r]: E
+                      [t]: m,
+                      [n]: g
                   }),
-                  style: (0, c.uT)(y, m),
-                  dir: _,
-                  ...T,
-                  children: (0, i.jsxs)(l.Jc, {
-                      containerRef: S,
-                      children: [p, N]
+                  style: (0, u.uT)(v, h),
+                  dir: p,
+                  ...b,
+                  children: (0, i.jsxs)(o.Jc, {
+                      containerRef: T,
+                      children: [f, N]
                   })
               })
             : (0, i.jsx)('div', {
-                  ref: S,
-                  className: s()(h, {
+                  ref: T,
+                  className: s()(_, {
                       [e]: !0,
-                      [n]: g,
-                      [r]: E
+                      [t]: m,
+                      [n]: g
                   }),
-                  style: (0, c.uT)(y, m),
-                  dir: _,
-                  ...T,
-                  children: (0, i.jsxs)(l.Jc, {
-                      containerRef: S,
-                      children: [p, N]
+                  style: (0, u.uT)(v, h),
+                  dir: p,
+                  ...b,
+                  children: (0, i.jsxs)(o.Jc, {
+                      containerRef: T,
+                      children: [f, N]
                   })
               });
     });

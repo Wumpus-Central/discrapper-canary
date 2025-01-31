@@ -1,13 +1,14 @@
-e.exports = {
-    banner: 'banner_c43059',
-    hasTrialOffer: 'hasTrialOffer_c43059',
-    wrapper: 'wrapper_c43059',
-    closeButton: 'closeButton_c43059',
-    contentFill: 'contentFill_c43059',
-    nitroWheel: 'nitroWheel_c43059',
-    content: 'content_c43059',
-    header: 'header_c43059',
-    headerText: 'headerText_c43059',
-    subheaderText: 'subheaderText_c43059',
-    ctaActionWrapper: 'ctaActionWrapper_c43059'
+var i = {
+    banner: 'banner__97f37',
+    hasTrialOffer: 'hasTrialOffer__97f37',
+    wrapper: 'wrapper__97f37',
+    closeButton: 'closeButton__97f37',
+    contentFill: 'contentFill__97f37',
+    nitroWheel: 'nitroWheel__97f37',
+    content: 'content__97f37',
+    header: 'header__97f37',
+    headerText: 'headerText__97f37',
+    subheaderText: 'subheaderText__97f37',
+    ctaActionWrapper: 'ctaActionWrapper__97f37'
 };
+e.exports = i;

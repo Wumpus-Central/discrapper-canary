@@ -1,14 +1,9 @@
-n.d(t, {
-    Z: function () {
-        return g;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => g }), n(47120);
 var i = n(200651),
     l = n(192379),
     s = n(748780),
-    r = n(442837),
-    a = n(481060),
+    a = n(442837),
+    r = n(481060),
     o = n(741361),
     d = n(856606),
     c = n(277053),
@@ -16,15 +11,15 @@ var i = n(200651),
     h = n(388032),
     m = n(275592);
 function g() {
-    let e = (0, r.e7)([c.Z], () => c.Z.advancedMode),
+    let e = (0, a.e7)([c.Z], () => c.Z.advancedMode),
         [t] = l.useState(new s.Z.Value(e ? 1 : 0));
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(a.FormDivider, { className: m.advancedModeDivider }),
-            (0, i.jsx)(a.HeadingLevel, {
-                component: (0, i.jsx)(a.Button, {
-                    look: a.Button.Looks.BLANK,
-                    color: a.Button.Colors.TRANSPARENT,
+            (0, i.jsx)(r.$i$, { className: m.advancedModeDivider }),
+            (0, i.jsx)(r.y5t, {
+                component: (0, i.jsx)(r.zxk, {
+                    look: r.zxk.Looks.BLANK,
+                    color: r.zxk.Colors.TRANSPARENT,
                     onClick: function () {
                         e
                             ? s.Z.timing(t, {
@@ -39,7 +34,7 @@ function g() {
                                   duration: 250
                               }).start());
                     },
-                    children: (0, i.jsxs)(a.FormTitle, {
+                    children: (0, i.jsxs)(r.vwX, {
                         tag: 'h1',
                         className: m.advancedTitle,
                         children: [

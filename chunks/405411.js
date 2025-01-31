@@ -1,14 +1,10 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-});
+n.d(t, { Z: () => d });
 var i = n(200651),
     a = n(192379),
     r = n(481060),
     l = n(581364),
-    o = n(665692),
-    s = n(388032),
+    s = n(665692),
+    o = n(388032),
     c = n(765853);
 function d(e) {
     let { application: t } = e,
@@ -30,10 +26,10 @@ function d(e) {
         : (0, i.jsxs)('div', {
               className: c.sectionContainer,
               children: [
-                  (0, i.jsx)(r.Heading, {
+                  (0, i.jsx)(r.X6q, {
                       variant: 'heading-lg/semibold',
                       color: 'header-primary',
-                      children: s.intl.string(s.t.swIgTE)
+                      children: o.intl.string(o.t.swIgTE)
                   }),
                   (0, i.jsx)('div', {
                       className: c.contentContainer,
@@ -47,7 +43,7 @@ function d(e) {
                                           className: c.commandName,
                                           variant: 'code',
                                           color: 'header-primary',
-                                          children: [o.GI, e.displayName]
+                                          children: [s.GI, e.displayName]
                                       }),
                                       (0, i.jsx)(r.Text, {
                                           variant: 'text-md/normal',

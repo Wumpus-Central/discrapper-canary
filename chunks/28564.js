@@ -1,44 +1,39 @@
-o.r(n),
-    o.d(n, {
-        default: function () {
-            return e;
-        }
-    });
-var r = o(200651);
-o(192379);
-var i = o(481060),
-    l = o(388032);
-function e(t) {
-    let { onClose: n, onConfirmDelete: o, transitionState: e } = t;
-    return (0, r.jsxs)(i.ModalRoot, {
-        transitionState: e,
+t.d(r, { default: () => o });
+var n = t(200651);
+t(192379);
+var s = t(481060),
+    l = t(388032);
+function o(i) {
+    let { onClose: r, onConfirmDelete: t, transitionState: o } = i;
+    return (0, n.jsxs)(s.Y0X, {
+        transitionState: o,
         'aria-label': l.intl.string(l.t['u/2TkZ']),
         children: [
-            (0, r.jsx)(i.ModalHeader, {
+            (0, n.jsx)(s.xBx, {
                 separator: !1,
-                children: (0, r.jsx)(i.Heading, {
+                children: (0, n.jsx)(s.X6q, {
                     variant: 'heading-lg/semibold',
                     children: l.intl.string(l.t['u/2TkZ'])
                 })
             }),
-            (0, r.jsx)(i.ModalContent, {
-                children: (0, r.jsx)(i.Text, {
+            (0, n.jsx)(s.hzk, {
+                children: (0, n.jsx)(s.Text, {
                     variant: 'text-md/normal',
                     color: 'header-primary',
                     children: l.intl.string(l.t['9sgGbG'])
                 })
             }),
-            (0, r.jsxs)(i.ModalFooter, {
+            (0, n.jsxs)(s.mzw, {
                 children: [
-                    (0, r.jsx)(i.Button, {
-                        onClick: o,
-                        color: i.Button.Colors.RED,
+                    (0, n.jsx)(s.zxk, {
+                        onClick: t,
+                        color: s.zxk.Colors.RED,
                         children: l.intl.string(l.t.dO8DLC)
                     }),
-                    (0, r.jsx)(i.Button, {
-                        onClick: n,
-                        look: i.Button.Looks.LINK,
-                        color: i.Button.Colors.PRIMARY,
+                    (0, n.jsx)(s.zxk, {
+                        onClick: r,
+                        look: s.zxk.Looks.LINK,
+                        color: s.zxk.Colors.PRIMARY,
                         children: l.intl.string(l.t['ETE/oK'])
                     })
                 ]

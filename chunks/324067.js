@@ -1,165 +1,163 @@
+n.d(t, { Z: () => k }), n(653041), n(47120), n(724458);
 var i,
-    a = r(653041);
-var o = r(47120);
-var s = r(724458);
-var l = r(442837),
-    u = r(570140),
-    c = r(740504),
-    d = r(853856),
-    f = r(314897),
-    p = r(592125),
-    h = r(984933),
-    _ = r(430824),
-    m = r(981631);
-function g(e, n, r) {
+    r = n(442837),
+    a = n(570140),
+    s = n(740504),
+    o = n(853856),
+    l = n(314897),
+    u = n(592125),
+    c = n(984933),
+    d = n(430824),
+    f = n(981631);
+function _(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let E = null,
-    v = {},
-    y = null;
-function b() {
+let p = null,
+    h = {},
+    m = null;
+function g() {
     return {
         _categories: [],
         null: []
     };
 }
-let I = b();
-function T(e, n) {
-    e.index = n;
+let E = g();
+function v(e, t) {
+    e.index = t;
 }
-function S(e) {
-    let n = h.ZP.getChannels(e),
-        r = b(),
+function y(e) {
+    let t = c.ZP.getChannels(e),
+        n = g(),
         i = (e) => {
-            var n;
+            var t;
             let { channel: i } = e;
-            (null !== (n = r[null != i.parent_id ? i.parent_id : 'null']) && void 0 !== n ? n : r.null).push({
+            (null !== (t = n[null != i.parent_id ? i.parent_id : 'null']) && void 0 !== t ? t : n.null).push({
                 channel: i,
                 index: -1
             });
         };
     return (
-        n[m.d4z.GUILD_CATEGORY].forEach((e) => {
-            let { channel: n } = e;
-            r._categories.push({
-                channel: n,
+        t[f.d4z.GUILD_CATEGORY].forEach((e) => {
+            let { channel: t } = e;
+            n._categories.push({
+                channel: t,
                 index: -1
             }),
-                (r[n.id] = []);
+                (n[t.id] = []);
         }),
-        n[h.sH].forEach(i),
-        n[h.Zb].forEach(i),
-        (0, c.Z)(r._categories, r).forEach(T),
-        (v[e] = r),
-        r
+        t[c.sH].forEach(i),
+        t[c.Zb].forEach(i),
+        (0, s.Z)(n._categories, n).forEach(v),
+        (h[e] = n),
+        n
     );
 }
-function A() {
-    (v = {}), null != E && S(E);
+function I() {
+    (h = {}), null != p && y(p);
 }
-function C(e) {
+function b(e) {
     let {
-        guild: { id: n }
+        guild: { id: t }
     } = e;
-    (v[n] = void 0), E === n && S(n);
+    (h[t] = void 0), p === t && y(t);
+}
+function T(e) {
+    let {
+        guild: { id: t }
+    } = e;
+    delete h[t];
+}
+function S(e) {
+    let {
+        channel: { guild_id: t }
+    } = e;
+    if (null == t) return !1;
+    (h[t] = void 0), p === t && y(t);
+}
+function A(e) {
+    let { channels: t } = e,
+        n = !1;
+    for (let { guild_id: e } of t) null != e && ((h[e] = void 0), (n = !0), p === e && y(e));
+    return n;
 }
 function N(e) {
-    let {
-        guild: { id: n }
-    } = e;
-    delete v[n];
+    let { guildId: t, user: n } = e;
+    if (l.default.getId() !== n.id) return !1;
+    (h[t] = void 0), t === p && y(t);
+}
+function C() {
+    if (null == p) return !1;
+    y(p);
 }
 function R(e) {
-    let {
-        channel: { guild_id: n }
-    } = e;
-    if (null == n) return !1;
-    (v[n] = void 0), E === n && S(n);
+    let { guildId: t } = e;
+    (h[t] = void 0), t === p && y(t);
 }
-function O(e) {
-    let { channels: n } = e,
-        r = !1;
-    for (let { guild_id: e } of n) null != e && ((v[e] = void 0), (r = !0), E === e && S(e));
-    return r;
+function O(e, t) {
+    if (((m = t), null == e || null == e.getGuildId())) return !1;
+    let n = e.getGuildId();
+    return null != n && ((h[n] = void 0), n === p && y(n), !0);
 }
 function D(e) {
-    let { guildId: n, user: r } = e;
-    if (f.default.getId() !== r.id) return !1;
-    (v[n] = void 0), n === E && S(n);
-}
-function L() {
-    if (null == E) return !1;
-    S(E);
+    let { channelId: t } = e;
+    return null == t && null != m ? O(u.Z.getChannel(m), null) : O(u.Z.getChannel(t), t);
 }
 function x(e) {
-    let { guildId: n } = e;
-    (v[n] = void 0), n === E && S(n);
-}
-function w(e, n) {
-    if (((y = n), null == e || null == e.getGuildId())) return !1;
-    let r = e.getGuildId();
-    return null != r && ((v[r] = void 0), r === E && S(r), !0);
-}
-function P(e) {
-    let { channelId: n } = e;
-    return null == n && null != y ? w(p.Z.getChannel(y), null) : w(p.Z.getChannel(n), n);
-}
-function M(e) {
-    let { voiceStates: n } = e;
-    return n.reduce((e, n) => {
-        let { channelId: r, sessionId: i } = n;
-        return f.default.getSessionId() !== i ? e : w(p.Z.getChannel(r), r) || e;
+    let { voiceStates: t } = e;
+    return t.reduce((e, t) => {
+        let { channelId: n, sessionId: i } = t;
+        return l.default.getSessionId() !== i ? e : O(u.Z.getChannel(n), n) || e;
     }, !1);
 }
-function k(e) {
-    let { guildId: n } = e;
-    if (((E = null != n ? n : null), null == n || null != v[n])) return !1;
-    S(n);
+function L(e) {
+    let { guildId: t } = e;
+    if (((p = null != t ? t : null), null == t || null != h[t])) return !1;
+    y(t);
 }
-function U() {
-    S(m.I_8);
+function P() {
+    y(f.I_8);
 }
-function B(e) {
-    let n = v[e];
-    return null != n ? n : S(e);
+function w(e) {
+    let t = h[e];
+    return null != t ? t : y(e);
 }
-class G extends (i = l.ZP.Store) {
+class M extends (i = r.ZP.Store) {
     initialize() {
-        this.waitFor(h.ZP, _.Z, f.default, p.Z, d.Z), this.syncWith([d.Z], U);
+        this.waitFor(c.ZP, d.Z, l.default, u.Z, o.Z), this.syncWith([o.Z], P);
     }
     getCategories(e) {
-        return null != e ? B(e) : I;
+        return null != e ? w(e) : E;
     }
 }
-g(G, 'displayName', 'GuildCategoryStore'),
-    (n.Z = new G(u.Z, {
-        CHANNEL_SELECT: k,
-        CONNECTION_OPEN: A,
-        OVERLAY_INITIALIZE: A,
-        CACHE_LOADED_LAZY: A,
-        GUILD_CREATE: C,
-        GUILD_UPDATE: C,
-        GUILD_DELETE: N,
-        CHANNEL_CREATE: R,
-        CHANNEL_DELETE: R,
-        CHANNEL_UPDATES: O,
-        GUILD_MEMBER_UPDATE: D,
-        CURRENT_USER_UPDATE: L,
-        GUILD_ROLE_CREATE: x,
-        GUILD_ROLE_UPDATE: x,
-        GUILD_ROLE_DELETE: x,
-        IMPERSONATE_UPDATE: x,
-        IMPERSONATE_STOP: x,
-        VOICE_CHANNEL_SELECT: P,
-        VOICE_STATE_UPDATES: M
-    }));
+_(M, 'displayName', 'GuildCategoryStore');
+let k = new M(a.Z, {
+    CHANNEL_SELECT: L,
+    CONNECTION_OPEN: I,
+    OVERLAY_INITIALIZE: I,
+    CACHE_LOADED_LAZY: I,
+    GUILD_CREATE: b,
+    GUILD_UPDATE: b,
+    GUILD_DELETE: T,
+    CHANNEL_CREATE: S,
+    CHANNEL_DELETE: S,
+    CHANNEL_UPDATES: A,
+    GUILD_MEMBER_UPDATE: N,
+    CURRENT_USER_UPDATE: C,
+    GUILD_ROLE_CREATE: R,
+    GUILD_ROLE_UPDATE: R,
+    GUILD_ROLE_DELETE: R,
+    IMPERSONATE_UPDATE: R,
+    IMPERSONATE_STOP: R,
+    VOICE_CHANNEL_SELECT: D,
+    VOICE_STATE_UPDATES: x
+});

@@ -1,36 +1,31 @@
-r.d(n, {
-    Z: function () {
-        return v;
-    }
-});
-var i = r(789020);
-var a = r(928801),
-    o = r(924557),
-    s = r(435064),
-    l = r(779618),
-    u = r(594190),
-    c = r(441167),
-    d = r(695346),
-    f = r(199902),
-    p = r(592125),
-    h = r(131951),
-    _ = r(936349),
-    m = r(630388),
-    g = r(981631);
-function E(e, n, r) {
+n.d(t, { Z: () => g }), n(789020);
+var i = n(928801),
+    r = n(924557),
+    a = n(435064),
+    s = n(779618),
+    o = n(594190),
+    l = n(441167),
+    u = n(695346),
+    c = n(199902),
+    d = n(592125),
+    f = n(131951),
+    _ = n(936349),
+    p = n(630388),
+    h = n(981631);
+function m(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class v extends a.Z {
+class g extends i.Z {
     get guildId() {
         return this.getState().guildId;
     }
@@ -38,26 +33,26 @@ class v extends a.Z {
         return this.getState().channelId;
     }
     computeVoiceFlags() {
-        var e, n, r;
+        var e, t, n;
         let i = 0,
-            a = d.tU.getSetting();
-        i = (0, m.mB)(i, g.BVn.ALLOW_VOICE_RECORDING, a);
-        let p = (0, l.Z)(h.Z),
-            _ = (0, o.ln)() && s.Z.getSettings().clipsEnabled && ((null === (e = f.Z.getCurrentUserActiveStream()) || void 0 === e ? void 0 : e.state) === g.jm8.ACTIVE || (null === (n = f.Z.getCurrentUserActiveStream()) || void 0 === n ? void 0 : n.state) === g.jm8.PAUSED),
-            E = s.Z.isDecoupledGameClippingEnabled(),
-            v = p && s.Z.getSettings().decoupledClipsEnabled && (null === (r = u.ZP.getVisibleGame()) || void 0 === r ? void 0 : r.windowHandle) != null && E;
-        i = (0, m.mB)(i, g.BVn.CLIPS_ENABLED, _ || v);
-        let { enableViewerClipping: y } = c.Z.getCurrentConfig({ location: 'computeVoiceFlags' }, { autoTrackExposure: !1 }),
-            b = y && p && s.Z.getSettings().viewerClipsEnabled;
-        return (i = (0, m.mB)(i, g.BVn.ALLOW_ANY_VIEWER_CLIPS, b));
+            d = u.tU.getSetting();
+        i = (0, p.mB)(i, h.BVn.ALLOW_VOICE_RECORDING, d);
+        let _ = (0, s.Z)(f.Z),
+            m = (0, r.ln)() && a.Z.getSettings().clipsEnabled && ((null === (e = c.Z.getCurrentUserActiveStream()) || void 0 === e ? void 0 : e.state) === h.jm8.ACTIVE || (null === (t = c.Z.getCurrentUserActiveStream()) || void 0 === t ? void 0 : t.state) === h.jm8.PAUSED),
+            g = a.Z.isDecoupledGameClippingEnabled(),
+            E = _ && a.Z.getSettings().decoupledClipsEnabled && (null === (n = o.ZP.getVisibleGame()) || void 0 === n ? void 0 : n.windowHandle) != null && g;
+        i = (0, p.mB)(i, h.BVn.CLIPS_ENABLED, m || E);
+        let { enableViewerClipping: v } = l.Z.getCurrentConfig({ location: 'computeVoiceFlags' }, { autoTrackExposure: !1 }),
+            y = v && _ && a.Z.getSettings().viewerClipsEnabled;
+        return (0, p.mB)(i, h.BVn.ALLOW_ANY_VIEWER_CLIPS, y);
     }
     getInitialState() {
         return {
             guildId: null,
             channelId: null,
-            selfMute: h.Z.isSelfMute(),
-            selfDeaf: h.Z.isSelfDeaf(),
-            selfVideo: h.Z.isVideoEnabled(),
+            selfMute: f.Z.isSelfMute(),
+            selfDeaf: f.Z.isSelfDeaf(),
+            selfVideo: f.Z.isVideoEnabled(),
             preferredRegion: null,
             preferredRegions: null,
             videoStreamParameters: null,
@@ -65,16 +60,16 @@ class v extends a.Z {
         };
     }
     getNextState(e) {
-        let { guildId: n, channelId: r } = e;
+        let { guildId: t, channelId: n } = e;
         return {
-            guildId: n,
-            channelId: r,
-            selfMute: h.Z.isSelfMute(),
-            selfDeaf: h.Z.isSelfDeaf(),
-            selfVideo: h.Z.isVideoEnabled(),
+            guildId: t,
+            channelId: n,
+            selfMute: f.Z.isSelfMute(),
+            selfDeaf: f.Z.isSelfDeaf(),
+            selfVideo: f.Z.isVideoEnabled(),
             preferredRegion: _.Z.getPreferredRegion(),
             preferredRegions: _.Z.getPreferredRegions(),
-            videoStreamParameters: h.Z.getVideoStreamParameters(),
+            videoStreamParameters: f.Z.getVideoStreamParameters(),
             flags: this.computeVoiceFlags()
         };
     }
@@ -82,32 +77,32 @@ class v extends a.Z {
         return this.socket.isSessionEstablished();
     }
     didCommit(e) {
-        var n;
-        let { guildId: r, channelId: i, selfMute: a, selfDeaf: o, selfVideo: s, preferredRegion: l, preferredRegions: u, videoStreamParameters: c, flags: d = 0 } = e;
-        s && (null === (n = p.Z.getChannel(i)) || void 0 === n ? void 0 : n.type) === g.d4z.GUILD_STAGE_VOICE
+        var t;
+        let { guildId: n, channelId: i, selfMute: r, selfDeaf: a, selfVideo: s, preferredRegion: o, preferredRegions: l, videoStreamParameters: u, flags: c = 0 } = e;
+        s && (null === (t = d.Z.getChannel(i)) || void 0 === t ? void 0 : t.type) === h.d4z.GUILD_STAGE_VOICE
             ? this.socket.voiceStateUpdate({
-                  guildId: r,
+                  guildId: n,
                   channelId: i,
-                  selfMute: a,
-                  selfDeaf: o,
+                  selfMute: r,
+                  selfDeaf: a,
                   selfVideo: s,
-                  preferredRegion: l,
-                  preferredRegions: u,
-                  videoStreamParameters: c,
-                  flags: d
+                  preferredRegion: o,
+                  preferredRegions: l,
+                  videoStreamParameters: u,
+                  flags: c
               })
             : this.socket.voiceStateUpdate({
-                  guildId: r,
+                  guildId: n,
                   channelId: i,
-                  selfMute: a,
-                  selfDeaf: o,
+                  selfMute: r,
+                  selfDeaf: a,
                   selfVideo: s,
-                  preferredRegion: l,
-                  preferredRegions: u,
-                  flags: d
+                  preferredRegion: o,
+                  preferredRegions: l,
+                  flags: c
               });
     }
     constructor(e) {
-        super(), E(this, 'socket', void 0), (this.socket = e);
+        super(), m(this, 'socket', void 0), (this.socket = e);
     }
 }

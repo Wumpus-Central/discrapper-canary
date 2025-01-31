@@ -1,4 +1,5 @@
-var a = {
+a.d(e, { Z: () => p });
+var t = {
         xseconds_other: 'sekundė_sekundžių_sekundes',
         xminutes_one: 'minutė_minutės_minutę',
         xminutes_other: 'minutės_minučių_minutes',
@@ -17,93 +18,90 @@ var a = {
         almost: 'beveik',
         lessthan: 'mažiau nei'
     },
-    t = function (i, e, a, t) {
+    r = function (i, e, a, t) {
         return e ? (t ? 'kelių sekundžių' : 'kelias sekundes') : 'kelios sekundės';
     },
-    r = function (i, e, a, t) {
-        return e ? (t ? o(a)[1] : o(a)[2]) : o(a)[0];
-    },
     n = function (i, e, a, t) {
-        var n = i + ' ';
-        if (1 === i) return n + r(i, e, a, t);
-        if (!e) return n + (s(i) ? o(a)[1] : o(a)[0]);
-        return t ? n + o(a)[1] : n + (s(i) ? o(a)[1] : o(a)[2]);
+        return e ? (t ? d(a)[1] : d(a)[2]) : d(a)[0];
+    },
+    s = function (i, e, a, t) {
+        var r = i + ' ';
+        return 1 === i ? r + n(i, e, a, t) : e ? (t ? r + d(a)[1] : r + (o(i) ? d(a)[1] : d(a)[2])) : r + (o(i) ? d(a)[1] : d(a)[0]);
     };
-function s(i) {
+function o(i) {
     return i % 10 == 0 || (i > 10 && i < 20);
 }
-function o(i) {
-    return a[i].split('_');
+function d(i) {
+    return t[i].split('_');
 }
-var d = {
+var u = {
     lessThanXSeconds: {
-        one: t,
-        other: n
+        one: r,
+        other: s
     },
     xSeconds: {
-        one: t,
-        other: n
+        one: r,
+        other: s
     },
     halfAMinute: 'pusė minutės',
     lessThanXMinutes: {
-        one: r,
-        other: n
+        one: n,
+        other: s
     },
     xMinutes: {
-        one: r,
-        other: n
+        one: n,
+        other: s
     },
     aboutXHours: {
-        one: r,
-        other: n
+        one: n,
+        other: s
     },
     xHours: {
-        one: r,
-        other: n
+        one: n,
+        other: s
     },
     xDays: {
-        one: r,
-        other: n
+        one: n,
+        other: s
     },
     aboutXWeeks: {
-        one: r,
-        other: n
+        one: n,
+        other: s
     },
     xWeeks: {
-        one: r,
-        other: n
+        one: n,
+        other: s
     },
     aboutXMonths: {
-        one: r,
-        other: n
+        one: n,
+        other: s
     },
     xMonths: {
-        one: r,
-        other: n
+        one: n,
+        other: s
     },
     aboutXYears: {
-        one: r,
-        other: n
+        one: n,
+        other: s
     },
     xYears: {
-        one: r,
-        other: n
+        one: n,
+        other: s
     },
     overXYears: {
-        one: r,
-        other: n
+        one: n,
+        other: s
     },
     almostXYears: {
-        one: r,
-        other: n
+        one: n,
+        other: s
     }
 };
-e.Z = function (i, e, t) {
+let p = function (i, e, a) {
     var r,
         n = i.match(/about|over|almost|lessthan/i),
         s = n ? i.replace(n[0], '') : i,
-        o = (null == t ? void 0 : t.comparison) !== void 0 && t.comparison > 0,
-        u = d[i];
-    if (((r = 'string' == typeof u ? u : 1 === e ? u.one(e, (null == t ? void 0 : t.addSuffix) === !0, s.toLowerCase() + '_one', o) : u.other(e, (null == t ? void 0 : t.addSuffix) === !0, s.toLowerCase() + '_other', o)), n && (r = a[n[0].toLowerCase()] + ' ' + r), null != t && t.addSuffix)) return t.comparison && t.comparison > 0 ? 'po ' + r : 'prieš ' + r;
-    return r;
+        o = (null == a ? void 0 : a.comparison) !== void 0 && a.comparison > 0,
+        d = u[i];
+    return ((r = 'string' == typeof d ? d : 1 === e ? d.one(e, (null == a ? void 0 : a.addSuffix) === !0, s.toLowerCase() + '_one', o) : d.other(e, (null == a ? void 0 : a.addSuffix) === !0, s.toLowerCase() + '_other', o)), n && (r = t[n[0].toLowerCase()] + ' ' + r), null != a && a.addSuffix) ? (a.comparison && a.comparison > 0 ? 'po ' + r : 'prieš ' + r) : r;
 };

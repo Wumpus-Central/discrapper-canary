@@ -1,5 +1,6 @@
+n.d(t, { Z: () => s });
 var i = n(570140);
-t.Z = {
+let s = {
     addKeybind(e) {
         i.Z.dispatch({
             type: 'KEYBINDS_ADD_KEYBIND',

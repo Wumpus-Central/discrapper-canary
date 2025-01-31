@@ -1,13 +1,9 @@
-r.d(n, {
-    Yd: function () {
-        return l;
-    },
-    o0: function () {
-        return s;
-    }
+n.d(t, {
+    Yd: () => o,
+    o0: () => s
 });
-var i = r(818083);
-let a = (0, i.B)({
+var i = n(818083);
+let r = (0, i.B)({
         kind: 'user',
         id: '2025-01_default_activity_status',
         label: 'Guild activity status defaults',
@@ -20,7 +16,7 @@ let a = (0, i.B)({
             }
         ]
     }),
-    o = (0, i.B)({
+    a = (0, i.B)({
         kind: 'user',
         id: '2025-01_default_activity_status_new_users',
         label: 'Guild activity status defaults',
@@ -33,9 +29,9 @@ let a = (0, i.B)({
             }
         ]
     }),
-    s = (e) => a.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).enabled || o.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).enabled,
-    l = (e) => {
-        let n = a.useExperiment({ location: e }, { autoTrackExposure: !1 }).enabled,
-            r = o.useExperiment({ location: e }, { autoTrackExposure: !1 }).enabled;
-        return n || r;
+    s = (e) => r.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).enabled || a.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).enabled,
+    o = (e) => {
+        let t = r.useExperiment({ location: e }, { autoTrackExposure: !1 }).enabled,
+            n = a.useExperiment({ location: e }, { autoTrackExposure: !1 }).enabled;
+        return t || n;
     };

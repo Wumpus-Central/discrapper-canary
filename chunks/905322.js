@@ -1,14 +1,10 @@
-e.d(i, {
-    j: function () {
-        return d;
-    }
-});
-var l = e(200651),
-    t = e(192379),
-    r = e(777207),
-    s = e(422235);
+l.d(i, { j: () => d });
+var e = l(200651),
+    t = l(192379),
+    r = l(777207),
+    s = l(422235);
 function d(n) {
-    let { title: i, subtitle: e, iconSrc: d, backgroundSrc: a, animatedBackgroundSrc: u, prefersReducedMotion: o = !0 } = n,
+    let { title: i, subtitle: l, iconSrc: d, backgroundSrc: a, animatedBackgroundSrc: u, prefersReducedMotion: o = !0 } = n,
         c = t.useMemo(() => {
             let n = null != a ? a : d;
             if (null != n) return { '--custom-background-url': 'url('.concat(n.toString(), ')') };
@@ -16,44 +12,44 @@ function d(n) {
         m = t.useMemo(() => {
             if (null == a) return;
             let n = { '--custom-background-static': 'url('.concat(a.toString()) };
-            return !o && null != u && (n['--custom-background-animated'] = 'url('.concat(u.toString(), ')')), n;
+            return o || null == u || (n['--custom-background-animated'] = 'url('.concat(u.toString(), ')')), n;
         }, [u, a, o]);
-    return (0, l.jsxs)('div', {
+    return (0, e.jsxs)('div', {
         className: s.wrapper,
         children: [
-            (0, l.jsx)('div', {
+            (0, e.jsx)('div', {
                 className: s.background,
                 style: c
             }),
-            (0, l.jsxs)('div', {
+            (0, e.jsxs)('div', {
                 className: s.content,
                 children: [
                     null != d &&
-                        (0, l.jsx)('div', {
+                        (0, e.jsx)('div', {
                             className: s.icon,
-                            children: (0, l.jsx)('img', {
+                            children: (0, e.jsx)('img', {
                                 src: d.toString(),
                                 alt: ''
                             })
                         }),
-                    (0, l.jsxs)('div', {
+                    (0, e.jsxs)('div', {
                         children: [
-                            (0, l.jsx)(r.x, {
+                            (0, e.jsx)(r.x, {
                                 variant: 'heading-xl/bold',
                                 tag: 'div',
                                 children: i
                             }),
-                            null != e &&
-                                (0, l.jsxs)(r.x, {
+                            null != l &&
+                                (0, e.jsxs)(r.x, {
                                     variant: 'text-sm/normal',
-                                    children: ['\u201C', e, '\u201D']
+                                    children: ['\u201C', l, '\u201D']
                                 })
                         ]
                     })
                 ]
             }),
             null != a
-                ? (0, l.jsx)('div', {
+                ? (0, e.jsx)('div', {
                       className: s.image,
                       style: m
                   })

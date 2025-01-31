@@ -1,96 +1,90 @@
-let i, a;
-r.d(n, {
-    FC: function () {
-        return v;
-    },
-    _H: function () {
-        return _;
-    },
-    yR: function () {
-        return E;
-    }
-});
-var o = r(47120);
-var s = r(757143);
-var l = r(400053),
-    u = r.n(l),
-    c = r(477660),
-    d = r.n(c),
-    f = r(20970),
-    p = r(959525);
-function h(e, n, r) {
+let i, r;
+n.d(t, {
+    FC: () => m,
+    _H: () => f,
+    yR: () => h
+}),
+    n(47120),
+    n(757143);
+var a = n(400053),
+    s = n.n(a),
+    o = n(477660),
+    l = n.n(o),
+    u = n(20970),
+    c = n(959525);
+function d(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class _ {
+class f {
     format(e) {
         if (!this.hasMarkdown) return this.intlMessage.format(e);
-        let [n, r] = this.getContext(e);
-        return i(this.intlMessage.format(n), n, r);
+        let [t, n] = this.getContext(e);
+        return i(this.intlMessage.format(t), t, n);
     }
     astFormat(e) {
-        let [n, r] = this.getContext(e);
-        return a(this.intlMessage.format(n), n, r);
+        let [t, n] = this.getContext(e);
+        return r(this.intlMessage.format(t), t, n);
     }
     plainFormat(e) {
         return this.intlMessage.format(e);
     }
     getContext(e) {
-        let n = e,
-            r = p.yF.test(this.message),
+        let t = e,
+            n = c.yF.test(this.message),
             i = {};
-        if (r) {
+        if (n) {
             let e = 0;
-            for (let [r, a] of Object.entries(n)) this.message.includes('!!{'.concat(r, '}!!')) && ((i[++e] = a), (n[r] = e));
+            for (let [n, r] of Object.entries(t)) this.message.includes('!!{'.concat(n, '}!!')) && ((i[++e] = r), (t[n] = e));
         }
-        return [n, i];
+        return [t, i];
     }
-    constructor(e, n, r) {
-        h(this, 'message', void 0), h(this, 'hasMarkdown', void 0), h(this, 'intlMessage', void 0), (this.message = r ? e : e.replace(p.hN, '')), (this.hasMarkdown = r), (this.intlMessage = new (u())(this.message, n));
+    constructor(e, t, n) {
+        d(this, 'message', void 0), d(this, 'hasMarkdown', void 0), d(this, 'intlMessage', void 0), (this.message = n ? e : e.replace(c.hN, '')), (this.hasMarkdown = n), (this.intlMessage = new (s())(this.message, t));
     }
 }
-function m(e, n) {
-    let r = d().parserFor(n(e)),
-        i = d().reactFor(d().ruleOutput(e, 'react'));
-    return (e, n, a) => {
-        let o = !e.includes('\n\n');
+function _(e, t) {
+    let n = l().parserFor(t(e)),
+        i = l().reactFor(l().ruleOutput(e, 'react'));
+    return (e, t, r) => {
+        let a = !e.includes('\n\n');
         return (
-            !o && (e += '\n\n'),
+            a || (e += '\n\n'),
             i(
-                r(e, {
-                    inline: o,
-                    context: n,
-                    unsafeContext: a
+                n(e, {
+                    inline: a,
+                    context: t,
+                    unsafeContext: r
                 })
             )
         );
     };
 }
-function g(e) {
-    let n = d().parserFor(e);
-    return (e, r, i) =>
-        n(e + '\n\n', {
+function p(e) {
+    let t = l().parserFor(e);
+    return (e, n, i) =>
+        t(e + '\n\n', {
             inline: !1,
-            context: r,
+            context: n,
             unsafeContext: i
         });
 }
-function E(e) {
-    (i = m(f.j, e)), (a = g(f.j));
+function h(e) {
+    (i = _(u.j, e)), (r = p(u.j));
 }
-function v(e, n) {
+function m(e, t) {
     if (null == e) return '';
-    null == i && E(r(281071).Z), (e = e.replace(/^\n+|\n+$/g, ''));
-    let a = p.aT.test(e),
-        o = p.b9.test(e);
-    return a || o ? new _(e, n, o) : e;
+    null == i && h(n(281071).Z), (e = e.replace(/^\n+|\n+$/g, ''));
+    let r = c.aT.test(e),
+        a = c.b9.test(e);
+    return r || a ? new f(e, t, a) : e;
 }

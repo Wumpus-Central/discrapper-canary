@@ -1,72 +1,71 @@
-r.d(n, {
-    B: function () {
-        return v;
-    }
-});
-var i = r(47120);
-var a = r(147913),
-    o = r(592125),
-    s = r(19780),
-    l = r(699516),
-    u = r(70956),
-    c = r(33194);
-r(452369);
-var d = r(807031),
-    f = r(189275),
-    p = r(451092);
-function h(e, n, r) {
+n.d(t, {
+    B: () => g,
+    Z: () => y
+}),
+    n(47120);
+var i = n(147913),
+    r = n(592125),
+    a = n(19780),
+    s = n(699516),
+    o = n(70956),
+    l = n(33194);
+n(452369);
+var u = n(807031),
+    c = n(189275),
+    d = n(451092);
+function f(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-r(334431);
-let _ = 1 * u.Z.Millis.HOUR,
-    m = 3 * u.Z.Millis.DAY;
-function g(e) {
-    let { channelId: n } = e;
-    if (null == n) return;
-    let r = o.Z.getChannel(n);
-    if (null != r && r.isGroupDM()) {
-        let e = r.recipients.filter((e) => l.Z.isBlocked(e)),
-            i = r.recipients.filter((e) => l.Z.isIgnored(e));
+n(334431);
+let _ = 1 * o.Z.Millis.HOUR,
+    p = 3 * o.Z.Millis.DAY;
+function h(e) {
+    let { channelId: t } = e;
+    if (null == t) return;
+    let n = r.Z.getChannel(t);
+    if (null != n && n.isGroupDM()) {
+        let e = n.recipients.filter((e) => s.Z.isBlocked(e)),
+            i = n.recipients.filter((e) => s.Z.isIgnored(e));
         (e.length > 0 || i.length > 0) &&
-            !r.blockedUserWarningDismissed &&
-            !y(n) &&
-            (0, f.O)({
-                channelId: n,
+            !n.blockedUserWarningDismissed &&
+            !E(t) &&
+            (0, c.O)({
+                channelId: t,
                 blockedUserIds: e,
                 ignoredUserIds: i
             });
     }
 }
+function m(e) {
+    let { state: t } = e;
+}
+function g(e) {
+    return (0, l.Iu)(e) > Date.now() - _;
+}
 function E(e) {
-    let { state: n } = e;
+    return (0, l.Iu)(e) > Date.now() - p;
 }
-function v(e) {
-    return (0, c.Iu)(e) > Date.now() - _;
-}
-function y(e) {
-    return (0, c.Iu)(e) > Date.now() - m;
-}
-class b extends a.Z {
-    handleBlockedOrIgnoredUserVoiceChannelJoin(e, n) {
-        let r = s.Z.getChannelId();
-        if (e === r && null != o.Z.getChannel(e)) (0, d.wC)({ location: 'warning_manager' }) && !v(e) && (0, p.H)(r, n);
+class v extends i.Z {
+    handleBlockedOrIgnoredUserVoiceChannelJoin(e, t) {
+        let n = a.Z.getChannelId();
+        e === n && null != r.Z.getChannel(e) && (0, u.wC)({ location: 'warning_manager' }) && !g(e) && (0, d.H)(n, t);
     }
     constructor(...e) {
         super(...e),
-            h(this, 'actions', {
-                CHANNEL_SELECT: g,
-                APP_STATE_UPDATE: E
+            f(this, 'actions', {
+                CHANNEL_SELECT: h,
+                APP_STATE_UPDATE: m
             });
     }
 }
-n.Z = new b();
+let y = new v();

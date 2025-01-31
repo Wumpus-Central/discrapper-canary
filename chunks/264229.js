@@ -1,52 +1,44 @@
-r.d(n, {
-    fU: function () {
-        return d;
-    },
-    jX: function () {
-        return f;
-    },
-    mb: function () {
-        return l;
-    },
-    tV: function () {
-        return c;
-    }
-});
-var i = r(47120);
-var a = r(664751),
-    o = r(898450);
-let s = 'event';
-function l(e, n) {
-    return null == n
+n.d(t, {
+    fU: () => u,
+    jX: () => c,
+    mb: () => s,
+    tV: () => l
+}),
+    n(47120);
+var i = n(664751),
+    r = n(898450);
+let a = 'event';
+function s(e, t) {
+    return null == t
         ? e
-        : c({
+        : l({
               baseCode: e,
-              guildScheduledEventId: u(n)
+              guildScheduledEventId: o(t)
           });
 }
-function u(e) {
-    let n = '?' === e.charAt(0) ? e.substring(1) : e;
+function o(e) {
+    let t = '?' === e.charAt(0) ? e.substring(1) : e;
     try {
-        let e = a.parse(n);
-        return (0, o.d)(e[s]);
+        let e = i.parse(t);
+        return (0, r.d)(e[a]);
     } catch (e) {
         return;
     }
 }
-function c(e) {
-    let { baseCode: n, guildScheduledEventId: r } = e;
-    return null == r ? n : ''.concat(n, '?').concat(s, '=').concat(r);
+function l(e) {
+    let { baseCode: t, guildScheduledEventId: n } = e;
+    return null == n ? t : ''.concat(t, '?').concat(a, '=').concat(n);
 }
-function d(e) {
-    let [n, r] = e.split('?');
-    if (null == r) return { baseCode: n };
-    let i = a.parse(r);
+function u(e) {
+    let [t, n] = e.split('?');
+    if (null == n) return { baseCode: t };
+    let s = i.parse(n);
     return {
-        baseCode: n,
-        guildScheduledEventId: (0, o.d)(i[s])
+        baseCode: t,
+        guildScheduledEventId: (0, r.d)(s[a])
     };
 }
-function f(e) {
-    let [n] = e.split('?');
-    return n;
+function c(e) {
+    let [t] = e.split('?');
+    return t;
 }

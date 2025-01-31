@@ -10,8 +10,4 @@ function i(e) {
             return !1;
     }
 }
-r.d(n, {
-    Li: function () {
-        return i;
-    }
-});
+n.d(t, { Li: () => i });

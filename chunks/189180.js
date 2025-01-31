@@ -1,6 +1,7 @@
-e.exports = {
-    flex: 'flex_dc333f',
-    horizontal: 'horizontal_dc333f',
-    horizontalReverse: 'horizontalReverse_dc333f',
-    flexChild: 'flexChild_dc333f'
+var i = {
+    flex: 'flex__7c0ba',
+    horizontal: 'horizontal__7c0ba',
+    horizontalReverse: 'horizontalReverse__7c0ba',
+    flexChild: 'flexChild__7c0ba'
 };
+e.exports = i;

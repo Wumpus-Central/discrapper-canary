@@ -1,11 +1,7 @@
-r.d(n, {
-    Z: function () {
-        return s;
-    }
-});
-var i = r(175922),
-    a = r(285363),
-    o = r(636226);
+n.d(t, { Z: () => s });
+var i = n(175922),
+    r = n(285363),
+    a = n(636226);
 function s(e) {
-    return (0, i.Z)((0, a.Z)(e)).left + (0, o.Z)(e).scrollLeft;
+    return (0, i.Z)((0, r.Z)(e)).left + (0, a.Z)(e).scrollLeft;
 }

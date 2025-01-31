@@ -1,9 +1,9 @@
-function n(e) {
-    let n = '(_?[ui](8|16|32|64|128))?',
-        r = '(_?f(32|64))?',
+function t(e) {
+    let t = '(_?[ui](8|16|32|64|128))?',
+        n = '(_?f(32|64))?',
         i = '[a-zA-Z_]\\w*[!?=]?|[-+~]@|<<|>>|[=!]~|===?|<=>|[<>]=?|\\*\\*|[-/+%^&*~|]|//|//=|&[-+*]=?|&\\*\\*|\\[\\][=?]?',
-        a = '[A-Za-z_]\\w*(::\\w+)*(\\?|!)?',
-        o = {
+        r = '[A-Za-z_]\\w*(::\\w+)*(\\?|!)?',
+        a = {
             $pattern: '[a-zA-Z_]\\w*[!?=]?',
             keyword: 'abstract alias annotation as as? asm begin break case class def do else elsif end ensure enum extend for fun if include instance_sizeof is_a? lib macro module next nil? of out pointerof private protected rescue responds_to? return require select self sizeof struct super then type typeof union uninitialized unless until verbatim when while with yield __DIR__ __END_LINE__ __FILE__ __LINE__',
             literal: 'false nil true'
@@ -12,13 +12,13 @@ function n(e) {
             className: 'subst',
             begin: /#\{/,
             end: /\}/,
-            keywords: o
+            keywords: a
         },
-        l = {
+        o = {
             className: 'variable',
             begin: "(\\$\\W)|((\\$|@@?)(\\w+))(?=[^@$?])(?![A-Za-z])(?![@$?'])"
         },
-        u = {
+        l = {
             className: 'template-variable',
             variants: [
                 {
@@ -30,18 +30,18 @@ function n(e) {
                     end: '%\\}'
                 }
             ],
-            keywords: o
+            keywords: a
         };
-    function c(e, n) {
-        let r = [
+    function u(e, t) {
+        let n = [
             {
                 begin: e,
-                end: n
+                end: t
             }
         ];
-        return (r[0].contains = r), r;
+        return (n[0].contains = n), n;
     }
-    let d = {
+    let c = {
             className: 'string',
             contains: [e.BACKSLASH_ESCAPE, s],
             variants: [
@@ -60,22 +60,22 @@ function n(e) {
                 {
                     begin: '%[Qwi]?\\(',
                     end: '\\)',
-                    contains: c('\\(', '\\)')
+                    contains: u('\\(', '\\)')
                 },
                 {
                     begin: '%[Qwi]?\\[',
                     end: '\\]',
-                    contains: c('\\[', '\\]')
+                    contains: u('\\[', '\\]')
                 },
                 {
                     begin: '%[Qwi]?\\{',
                     end: /\}/,
-                    contains: c(/\{/, /\}/)
+                    contains: u(/\{/, /\}/)
                 },
                 {
                     begin: '%[Qwi]?<',
                     end: '>',
-                    contains: c('<', '>')
+                    contains: u('<', '>')
                 },
                 {
                     begin: '%[Qwi]?\\|',
@@ -88,28 +88,28 @@ function n(e) {
             ],
             relevance: 0
         },
-        f = {
+        d = {
             className: 'string',
             variants: [
                 {
                     begin: '%q\\(',
                     end: '\\)',
-                    contains: c('\\(', '\\)')
+                    contains: u('\\(', '\\)')
                 },
                 {
                     begin: '%q\\[',
                     end: '\\]',
-                    contains: c('\\[', '\\]')
+                    contains: u('\\[', '\\]')
                 },
                 {
                     begin: '%q\\{',
                     end: /\}/,
-                    contains: c(/\{/, /\}/)
+                    contains: u(/\{/, /\}/)
                 },
                 {
                     begin: '%q<',
                     end: '>',
-                    contains: c('<', '>')
+                    contains: u('<', '>')
                 },
                 {
                     begin: '%q\\|',
@@ -122,7 +122,7 @@ function n(e) {
             ],
             relevance: 0
         },
-        p = {
+        f = {
             begin: '(?!%\\})(' + e.RE_STARTERS_RE + '|\\n|\\b(case|if|select|unless|until|when|while)\\b)\\s*',
             keywords: 'case if select unless until when while',
             contains: [
@@ -143,70 +143,69 @@ function n(e) {
             ],
             relevance: 0
         },
-        h = {
-            className: 'regexp',
-            contains: [e.BACKSLASH_ESCAPE, s],
-            variants: [
-                {
-                    begin: '%r\\(',
-                    end: '\\)',
-                    contains: c('\\(', '\\)')
-                },
-                {
-                    begin: '%r\\[',
-                    end: '\\]',
-                    contains: c('\\[', '\\]')
-                },
-                {
-                    begin: '%r\\{',
-                    end: /\}/,
-                    contains: c(/\{/, /\}/)
-                },
-                {
-                    begin: '%r<',
-                    end: '>',
-                    contains: c('<', '>')
-                },
-                {
-                    begin: '%r\\|',
-                    end: '\\|'
-                }
-            ],
-            relevance: 0
-        },
         _ = [
-            u,
+            l,
+            c,
             d,
+            {
+                className: 'regexp',
+                contains: [e.BACKSLASH_ESCAPE, s],
+                variants: [
+                    {
+                        begin: '%r\\(',
+                        end: '\\)',
+                        contains: u('\\(', '\\)')
+                    },
+                    {
+                        begin: '%r\\[',
+                        end: '\\]',
+                        contains: u('\\[', '\\]')
+                    },
+                    {
+                        begin: '%r\\{',
+                        end: /\}/,
+                        contains: u(/\{/, /\}/)
+                    },
+                    {
+                        begin: '%r<',
+                        end: '>',
+                        contains: u('<', '>')
+                    },
+                    {
+                        begin: '%r\\|',
+                        end: '\\|'
+                    }
+                ],
+                relevance: 0
+            },
             f,
-            h,
-            p,
             {
                 className: 'meta',
                 begin: '@\\[',
                 end: '\\]',
                 contains: [e.inherit(e.QUOTE_STRING_MODE, { className: 'string' })]
             },
-            l,
+            o,
             e.HASH_COMMENT_MODE,
             {
                 className: 'class',
                 beginKeywords: 'class module struct',
                 end: '$|;',
                 illegal: /=/,
-                contains: [e.HASH_COMMENT_MODE, e.inherit(e.TITLE_MODE, { begin: a }), { begin: '<' }]
+                contains: [e.HASH_COMMENT_MODE, e.inherit(e.TITLE_MODE, { begin: r }), { begin: '<' }]
             },
             {
                 className: 'class',
                 beginKeywords: 'lib enum union',
                 end: '$|;',
                 illegal: /=/,
-                contains: [e.HASH_COMMENT_MODE, e.inherit(e.TITLE_MODE, { begin: a })]
+                contains: [e.HASH_COMMENT_MODE, e.inherit(e.TITLE_MODE, { begin: r })]
             },
             {
                 beginKeywords: 'annotation',
                 end: '$|;',
                 illegal: /=/,
-                contains: [e.HASH_COMMENT_MODE, e.inherit(e.TITLE_MODE, { begin: a })],
+                contains: [e.HASH_COMMENT_MODE, e.inherit(e.TITLE_MODE, { begin: r })],
                 relevance: 2
             },
             {
@@ -240,24 +239,24 @@ function n(e) {
             {
                 className: 'symbol',
                 begin: ':',
-                contains: [d, { begin: i }],
+                contains: [c, { begin: i }],
                 relevance: 0
             },
             {
                 className: 'number',
-                variants: [{ begin: '\\b0b([01_]+)' + n }, { begin: '\\b0o([0-7_]+)' + n }, { begin: '\\b0x([A-Fa-f0-9_]+)' + n }, { begin: '\\b([1-9][0-9_]*[0-9]|[0-9])(\\.[0-9][0-9_]*)?([eE]_?[-+]?[0-9_]*)?' + r + '(?!_)' }, { begin: '\\b([1-9][0-9_]*|0)' + n }],
+                variants: [{ begin: '\\b0b([01_]+)' + t }, { begin: '\\b0o([0-7_]+)' + t }, { begin: '\\b0x([A-Fa-f0-9_]+)' + t }, { begin: '\\b([1-9][0-9_]*[0-9]|[0-9])(\\.[0-9][0-9_]*)?([eE]_?[-+]?[0-9_]*)?' + n + '(?!_)' }, { begin: '\\b([1-9][0-9_]*|0)' + t }],
                 relevance: 0
             }
         ];
     return (
         (s.contains = _),
-        (u.contains = _.slice(1)),
+        (l.contains = _.slice(1)),
         {
             name: 'Crystal',
             aliases: ['cr'],
-            keywords: o,
+            keywords: a,
             contains: _
         }
     );
 }
-e.exports = n;
+e.exports = t;

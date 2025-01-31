@@ -1,6 +1,7 @@
 e.exports = {
-    container: 'container_e632bb',
-    containerHide: 'containerHide_e632bb',
-    notice: 'notice_e632bb',
-    noticeArrow: 'noticeArrow_e632bb'
+    horizontalBounce: 'horizontalBounce__3e795',
+    container: 'container__3e795',
+    containerHide: 'containerHide__3e795',
+    notice: 'notice__3e795',
+    noticeArrow: 'noticeArrow__3e795'
 };

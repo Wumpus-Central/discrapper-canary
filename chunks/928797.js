@@ -1,5 +1,6 @@
-e.exports = {
-    small: 'small_b37d25',
-    medium: 'medium_b37d25',
-    large: 'large_b37d25'
+var i = {
+    small: 'small__258ba',
+    medium: 'medium__258ba',
+    large: 'large__258ba'
 };
+e.exports = i;

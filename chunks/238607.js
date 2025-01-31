@@ -1,51 +1,47 @@
-r.d(n, {
-    Z: function () {
-        return l;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(481060),
-    o = r(103450),
-    s = r(475413);
-function l(e) {
-    let { user: n, activity: r, onAction: l, onClose: u } = e,
-        c = (0, o.e)({
-            activity: null != r ? r : void 0,
+n.d(t, { Z: () => o });
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(103450),
+    s = n(475413);
+function o(e) {
+    let { user: t, activity: n, onAction: o, onClose: l } = e,
+        u = (0, a.e)({
+            activity: null != n ? n : void 0,
             embeddedActivity: void 0,
-            user: n,
-            onClose: u
+            user: t,
+            onClose: l
         });
-    if (null == c) return null;
-    let { isJoining: d, handleJoinRequest: f, buttonCTA: p, tooltip: h, isEnabled: _, isEmbedded: m } = c;
-    return m
-        ? (0, i.jsx)(a.Tooltip, {
-              text: h,
+    if (null == u) return null;
+    let { isJoining: c, handleJoinRequest: d, buttonCTA: f, tooltip: _, isEnabled: p, isEmbedded: h } = u;
+    return h
+        ? (0, i.jsx)(r.ua7, {
+              text: _,
               children: (e) =>
                   (0, i.jsx)(s.tG, {
                       ...e,
-                      icon: a.DoorEnterIcon,
-                      text: p,
-                      disabled: !_,
-                      submitting: d,
+                      icon: r.YVR,
+                      text: f,
+                      disabled: !p,
+                      submitting: c,
                       fullWidth: !0,
                       onClick: (e) => {
-                          e.stopPropagation(), null == l || l({ action: 'PRESS_JOIN_BUTTON' }), f();
+                          e.stopPropagation(), null == o || o({ action: 'PRESS_JOIN_BUTTON' }), d();
                       }
                   })
           })
-        : (0, i.jsx)(a.Tooltip, {
-              text: h,
+        : (0, i.jsx)(r.ua7, {
+              text: _,
               children: (e) =>
                   (0, i.jsx)(s.tG, {
                       ...e,
-                      icon: a.GameControllerIcon,
-                      text: p,
-                      disabled: !_,
-                      submitting: d,
+                      icon: r.iWm,
+                      text: f,
+                      disabled: !p,
+                      submitting: c,
                       fullWidth: !0,
                       onClick: (e) => {
-                          e.stopPropagation(), null == l || l({ action: 'PRESS_ASK_TO_JOIN_BUTTON' }), f();
+                          e.stopPropagation(), null == o || o({ action: 'PRESS_ASK_TO_JOIN_BUTTON' }), d();
                       }
                   })
           });

@@ -1,13 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return h;
-    }
-}),
-    n(47120);
-var o = n(200651),
+n.d(t, { Z: () => g }), n(47120);
+var s = n(200651),
     r = n(192379),
-    s = n(120356),
-    a = n.n(s),
+    a = n(120356),
+    o = n.n(a),
     i = n(617136),
     l = n(113434),
     c = n(497505),
@@ -16,63 +11,63 @@ var o = n(200651),
     p = n(43779),
     m = n(981631),
     x = n(263740);
-function g(e) {
-    let { quest: t, className: n, questContent: s, contentPosition: c, rowIndex: d, impressionRef: g } = e,
-        [h, f] = r.useState(!1),
-        [v, C] = r.useState([]),
-        j = (0, l.qb)(t),
-        _ = (0, i._F)(),
-        T = r.useCallback(() => {
+function h(e) {
+    let { quest: t, className: n, questContent: a, contentPosition: c, rowIndex: d, impressionRef: h } = e,
+        [g, f] = r.useState(!1),
+        [v, _] = r.useState([]),
+        C = (0, l.qb)(t),
+        j = (0, i._F)(),
+        b = r.useCallback(() => {
             f(!0),
-                _({
+                j({
                     questId: t.id,
                     event: m.rMx.QUEST_HOVER,
-                    properties: (0, i.mH)(s)
+                    properties: (0, i.mH)(a)
                 });
-        }, [_, t.id, s]),
-        E = r.useCallback(() => {
+        }, [j, t.id, a]),
+        T = r.useCallback(() => {
             f(!1),
-                _({
+                j({
                     questId: t.id,
                     event: m.rMx.QUEST_HOVER_OFF,
-                    properties: (0, i.mH)(s)
+                    properties: (0, i.mH)(a)
                 });
-        }, [_, t.id, s]);
-    return (0, o.jsxs)('div', {
+        }, [j, t.id, a]);
+    return (0, s.jsxs)('div', {
         id: 'quest-tile-'.concat(t.id),
         ref: (e) => {
-            g.current = e;
+            h.current = e;
         },
-        className: a()(x.container, n),
-        onMouseEnter: T,
-        onMouseLeave: E,
+        className: o()(x.container, n),
+        onMouseEnter: b,
+        onMouseLeave: T,
         children: [
-            (0, o.jsx)(u.Z, {
+            (0, s.jsx)(u.Z, {
                 quest: t,
-                isHovering: h,
+                isHovering: g,
                 errorHints: v,
-                warningHints: j
+                warningHints: C
             }),
-            (0, o.jsx)(p.Z, {
+            (0, s.jsx)(p.Z, {
                 quest: t,
-                questContent: s,
-                isHovering: h,
+                questContent: a,
+                isHovering: g,
                 contentPosition: c,
                 rowIndex: d,
-                onReceiveErrorHints: C
+                onReceiveErrorHints: _
             })
         ]
     });
 }
-function h(e) {
-    return (0, o.jsx)(d.A, {
+function g(e) {
+    return (0, s.jsx)(d.A, {
         questOrQuests: e.quest,
         questContent: e.questContent,
         questContentPosition: e.contentPosition,
         questContentRowIndex: e.rowIndex,
         trackGuildAndChannelMetadata: e.questContent === c.jn.QUESTS_EMBED,
         children: (t) =>
-            (0, o.jsx)(g, {
+            (0, s.jsx)(h, {
                 ...e,
                 impressionRef: t
             })

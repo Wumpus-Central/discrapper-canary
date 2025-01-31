@@ -1,1 +1,1 @@
-e.exports = r(532655);
+e.exports = n(532655);

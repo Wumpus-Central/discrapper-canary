@@ -1,11 +1,8 @@
-n.d(t, {
-    V: function () {
-        return o;
-    }
-});
+n.d(t, { V: () => o });
 var i = n(317381),
-    r = n(176787),
-    l = n(238679),
+    l = n(176787);
+n(817938);
+var r = n(238679),
     a = n(981631),
     s = n(701488);
 function o(e, t, n) {
@@ -22,14 +19,14 @@ function o(e, t, n) {
             return null != n ? { layout_mode: n } : null;
         }
         case a.zMe.THERMAL_STATE_UPDATE: {
-            let e = (0, r.bY)();
-            if (e === r.bG.UNHANDLED) return null;
+            let e = (0, l.bY)();
+            if (e === l.bG.UNHANDLED) return null;
             return { thermal_state: e };
         }
         case a.zMe.ORIENTATION_UPDATE:
             return null;
         case a.zMe.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE:
-            return (0, l.dO)();
+            return (0, r.dO)();
         default:
             return null;
     }

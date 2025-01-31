@@ -1,76 +1,81 @@
-r.d(n, {
-    v: function () {
-        return u;
+n.d(t, { v: () => o }), n(47120);
+var i = n(887003),
+    r = n(497505);
+function a(e) {
+    let t = {};
+    for (let n of Object.keys(e)) {
+        let i = parseInt(n);
+        r.xw.has(i) && (t[i] = e[n]);
     }
-});
-var i = r(47120);
-var a = r(887003),
-    o = r(497505);
-function s(e) {
-    let n = {};
-    for (let r of Object.keys(e)) {
-        let i = parseInt(r);
-        o.xw.has(i) && (n[i] = e[r]);
-    }
-    return n;
+    return t;
 }
-let l = (e) => {
-        let n = {
+let s = (e) => {
+        let t = {
             skuId: e.sku_id,
             asset: e.asset,
             assetVideo: e.asset_video
         };
         switch (e.type) {
-            case a.w.REWARD_CODE:
+            case i.w.REWARD_CODE:
                 return {
-                    type: a.w.REWARD_CODE,
+                    type: i.w.REWARD_CODE,
                     messages: {
-                        redemptionInstructionsByPlatform: s(e.messages.redemption_instructions_by_platform),
+                        redemptionInstructionsByPlatform: a(e.messages.redemption_instructions_by_platform),
                         name: e.messages.name,
                         nameWithArticle: e.messages.name_with_article
                     },
                     approximateCount: e.approximate_count,
-                    ...n
+                    ...t
                 };
-            case a.w.COLLECTIBLE:
+            case i.w.COLLECTIBLE:
                 return {
-                    type: a.w.COLLECTIBLE,
+                    type: i.w.COLLECTIBLE,
                     messages: {
-                        redemptionInstructionsByPlatform: s(e.messages.redemption_instructions_by_platform),
+                        redemptionInstructionsByPlatform: a(e.messages.redemption_instructions_by_platform),
                         name: e.messages.name,
                         nameWithArticle: e.messages.name_with_article
                     },
                     expiresAt: e.expires_at,
                     expirationMode: e.expiration_mode,
                     expiresAtPremium: e.expires_at_premium,
-                    ...n
+                    ...t
                 };
-            case a.w.FRACTIONAL_PREMIUM:
+            case i.w.VIRTUAL_CURRENCY:
                 return {
-                    type: a.w.FRACTIONAL_PREMIUM,
+                    type: i.w.VIRTUAL_CURRENCY,
+                    messages: {
+                        redemptionInstructionsByPlatform: a(e.messages.redemption_instructions_by_platform),
+                        name: e.messages.name,
+                        nameWithArticle: e.messages.name_with_article
+                    },
+                    ...t
+                };
+            case i.w.FRACTIONAL_PREMIUM:
+                return {
+                    type: i.w.FRACTIONAL_PREMIUM,
                     quantity: e.quantity,
                     messages: {
-                        redemptionInstructionsByPlatform: s(e.messages.redemption_instructions_by_platform),
+                        redemptionInstructionsByPlatform: a(e.messages.redemption_instructions_by_platform),
                         name: e.messages.name,
                         nameWithArticle: e.messages.name_with_article
                     },
-                    ...n
+                    ...t
                 };
-            case a.w.IN_GAME:
+            case i.w.IN_GAME:
                 return {
-                    type: a.w.IN_GAME,
+                    type: i.w.IN_GAME,
                     messages: {
-                        redemptionInstructionsByPlatform: s(e.messages.redemption_instructions_by_platform),
+                        redemptionInstructionsByPlatform: a(e.messages.redemption_instructions_by_platform),
                         name: e.messages.name,
                         nameWithArticle: e.messages.name_with_article
                     },
-                    ...n
+                    ...t
                 };
         }
     },
-    u = (e) => ({
+    o = (e) => ({
         assignmentMethod: e.assignment_method,
-        rewards: e.rewards.map(l),
+        rewards: e.rewards.map(s),
         rewardsExpireAt: e.rewards_expire_at,
         platforms: e.platforms
     });

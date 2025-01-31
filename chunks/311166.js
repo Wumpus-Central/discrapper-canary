@@ -1,36 +1,32 @@
-t.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var l = t(200651);
-t(192379);
-var i = t(481060),
-    r = t(195367),
-    a = t(388032),
-    s = t(115672);
+l.d(n, { Z: () => o });
+var t = l(200651);
+l(192379);
+var i = l(481060),
+    a = l(195367),
+    r = l(388032),
+    s = l(115672);
 function o(e) {
-    let { isSlideReady: n, ...t } = e;
-    return (0, l.jsxs)('div', {
+    let { isSlideReady: n, ...l } = e;
+    return (0, t.jsxs)('div', {
         className: s.__invalid_slideContainer,
         children: [
-            (0, l.jsxs)('div', {
+            (0, t.jsxs)('div', {
                 className: s.header,
                 children: [
-                    (0, l.jsx)(i.Heading, {
+                    (0, t.jsx)(i.X6q, {
                         variant: 'heading-xl/semibold',
-                        children: a.intl.string(a.t.GG6vbm)
+                        children: r.intl.string(r.t.GG6vbm)
                     }),
-                    (0, l.jsx)(i.Text, {
+                    (0, t.jsx)(i.Text, {
                         color: 'header-secondary',
                         className: s.text,
                         variant: 'text-sm/normal',
-                        children: a.intl.string(a.t.q5lgwc)
+                        children: r.intl.string(r.t.q5lgwc)
                     })
                 ]
             }),
-            (0, l.jsx)(r.Z, {
-                ...t,
+            (0, t.jsx)(a.Z, {
+                ...l,
                 canSetFocus: n
             })
         ]

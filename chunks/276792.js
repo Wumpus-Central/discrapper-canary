@@ -1,12 +1,8 @@
-n.d(t, {
-    N: function () {
-        return _;
-    }
-});
+n.d(t, { N: () => f });
 var i = n(200651);
 n(192379);
-var r = n(704215),
-    l = n(740111),
+var l = n(704215),
+    r = n(740111),
     a = n(481060),
     s = n(963249),
     o = n(703656),
@@ -17,16 +13,16 @@ var r = n(704215),
     m = n(981631),
     p = n(388032),
     g = n(204586),
-    f = n(74316);
-function _(e) {
+    _ = n(74316);
+function f(e) {
     var t, n;
-    let { content: _, renderModalProps: E, analyticsLocations: I, analyticsLocation: C, isLightTheme: v } = e,
-        N = 'AnnouncementModalVariant1_'.concat(r.z[Number(_.dismissKey)]),
+    let { content: f, renderModalProps: E, analyticsLocations: I, analyticsLocation: C, isLightTheme: v } = e,
+        N = 'AnnouncementModalVariant1_'.concat(l.z[Number(f.dismissKey)]),
         { onClose: T } = E,
-        S = null != _.button && '' !== _.button.copy ? _.button.copy : p.intl.string(p.t.YScQSE),
-        b = (null === (t = _.button) || void 0 === t ? void 0 : t.buttonAction) === l.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button',
-        A =
-            (null === (n = _.button) || void 0 === n ? void 0 : n.buttonAction) === l.Wc.OPEN_MARKETING_PAGE
+        S = null != f.button && '' !== f.button.copy ? f.button.copy : p.intl.string(p.t.YScQSE),
+        Z = (null === (t = f.button) || void 0 === t ? void 0 : t.buttonAction) === r.Wc.OPEN_MARKETING_PAGE ? 'jump_to_mkt_button' : 'get_nitro_button',
+        x =
+            (null === (n = f.button) || void 0 === n ? void 0 : n.buttonAction) === r.Wc.OPEN_MARKETING_PAGE
                 ? () => {
                       (0, o.uL)(m.Z5c.APPLICATION_STORE), T();
                   }
@@ -43,54 +39,54 @@ function _(e) {
                               e && T();
                           }
                       }),
-        Z =
-            '' !== _.helpArticleId
+        A =
+            '' !== f.helpArticleId
                 ? () =>
                       (0, i.jsxs)(i.Fragment, {
                           children: [
                               '\xA0',
-                              (0, i.jsx)(a.Anchor, {
+                              (0, i.jsx)(a.eee, {
                                   className: g.termsApplyAnchor,
-                                  href: d.Z.getArticleURL(_.helpArticleId),
+                                  href: d.Z.getArticleURL(f.helpArticleId),
                                   children: p.intl.string(p.t['sBp+u7'])
                               })
                           ]
                       })
                 : void 0,
-        x = {
+        b = {
             type: 'video',
-            src: v ? _.heroArtVideoLinkLightTheme : _.videoLink
+            src: v ? f.heroArtVideoLinkLightTheme : f.videoLink
         };
-    null != _.heroArtVideoSubtitles &&
-        (x.subtitles = _.heroArtVideoSubtitles.map((e) => ({
+    null != f.heroArtVideoSubtitles &&
+        (b.subtitles = f.heroArtVideoSubtitles.map((e) => ({
             locale: e.locale,
             src: e.link,
             isDefault: !1
         }))),
-        ('' !== _.heroArtImageLinkDarkTheme || '' !== _.heroArtImageLinkLightTheme) &&
-            (x = {
+        ('' !== f.heroArtImageLinkDarkTheme || '' !== f.heroArtImageLinkLightTheme) &&
+            (b = {
                 type: 'image',
-                src: v ? _.heroArtImageLinkLightTheme : _.heroArtImageLinkDarkTheme
+                src: v ? f.heroArtImageLinkLightTheme : f.heroArtImageLinkDarkTheme
             });
     let L = v ? u.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL : u.VE.PREMIUM_TIER_2_WHITE_FILL,
         y =
-            '' !== _.modalTopPill
+            '' !== f.modalTopPill
                 ? () =>
                       (0, i.jsx)(u.Cy, {
-                          text: _.modalTopPill,
+                          text: f.modalTopPill,
                           className: g.modalTopPill,
                           colorOptions: L
                       })
                 : void 0;
     return {
         renderModalProps: E,
-        header: _.header,
+        header: f.header,
         modalTopExtra: y,
-        subHeader: _.subheader,
-        subHeaderExtra: Z,
-        body: _.body,
-        heroArt: x,
-        featureCards: _.featureCards.map((e) => ({
+        subHeader: f.subheader,
+        subHeaderExtra: A,
+        body: f.body,
+        heroArt: b,
+        featureCards: f.featureCards.map((e) => ({
             header: e.header,
             subHeader: e.body,
             imageSrc: v ? e.imageLinkLightTheme : e.imageLink,
@@ -99,30 +95,30 @@ function _(e) {
         changeLogId: N,
         button: () => {
             let e = Date.now();
-            return (0, i.jsxs)(a.ShinyButton, {
+            return (0, i.jsxs)(a.gtL, {
                 className: g.buttonWide,
                 innerClassName: g.innerButton,
                 wrapperClassName: g.tier2Gradient,
-                size: a.Button.Sizes.SMALL,
+                size: a.zxk.Sizes.SMALL,
                 onClick: () => {
                     c.default.track(m.rMx.CHANGE_LOG_CTA_CLICKED, {
                         change_log_id: N,
-                        cta_type: b,
+                        cta_type: Z,
                         seconds_open: Math.round((Date.now() - e) / 1000),
                         target: N
                     }),
-                        A();
+                        x();
                 },
                 children: [
                     (0, i.jsx)('img', {
                         alt: '',
                         className: g.nitroIconSubHeader,
-                        src: f
+                        src: _
                     }),
                     S
                 ]
             });
         },
-        modalDismissibleContent: '' !== _.dismissKey ? Number(_.dismissKey) : void 0
+        modalDismissibleContent: '' !== f.dismissKey ? Number(f.dismissKey) : void 0
     };
 }

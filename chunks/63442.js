@@ -1,11 +1,13 @@
-e.exports = {
-    px: 'px_a9e77f',
-    rem: 'rem_a9e77f',
-    botTagOP: 'botTagOP_a9e77f botTag_a9e77f',
-    botTagRegular: 'botTagRegular_a9e77f botTag_a9e77f',
-    botTagInvert: 'botTagInvert_a9e77f botTag_a9e77f',
-    botTagAI: 'botTagAI_a9e77f botTag_a9e77f',
-    botTagRemix: 'botTagRemix_a9e77f',
-    botTagVerified: 'botTagVerified_a9e77f',
-    botText: 'botText_a9e77f'
+var i = {
+    botTag: 'botTag__82f07',
+    px: 'px__82f07',
+    rem: 'rem__82f07',
+    botTagOP: 'botTagOP__82f07 botTag__82f07',
+    botTagRegular: 'botTagRegular__82f07 botTag__82f07',
+    botTagInvert: 'botTagInvert__82f07 botTag__82f07',
+    botTagAI: 'botTagAI__82f07 botTag__82f07',
+    botTagRemix: 'botTagRemix__82f07',
+    botTagVerified: 'botTagVerified__82f07',
+    botText: 'botText__82f07'
 };
+e.exports = i;

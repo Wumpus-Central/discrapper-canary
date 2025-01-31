@@ -1,20 +1,16 @@
-n.d(t, {
-    _: function () {
-        return c;
-    }
-});
+n.d(t, { _: () => c });
 var l = n(192379),
     i = n(442837),
     a = n(594174),
-    r = n(823379),
-    s = n(51144),
+    s = n(823379),
+    r = n(51144),
     o = n(388032);
 function c(e) {
     let t = (0, i.Wu)([a.default], () =>
         e.recipients
             .map((e) => a.default.getUser(e))
-            .filter(r.lm)
-            .map((e) => s.ZP.getName(e))
+            .filter(s.lm)
+            .map((e) => r.ZP.getName(e))
     );
     return l.useMemo(
         () =>

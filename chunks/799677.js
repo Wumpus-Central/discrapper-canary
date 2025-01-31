@@ -1,54 +1,49 @@
-e.r(n),
-    e.d(n, {
-        default: function () {
-            return c;
-        }
-    });
-var a = e(200651);
+e.d(i, { default: () => c });
+var n = e(200651);
 e(192379);
-var i = e(481060),
+var a = e(481060),
     l = e(626135),
-    o = e(39604),
+    s = e(39604),
     r = e(981631),
-    s = e(388032),
-    d = e(233850);
+    d = e(388032),
+    o = e(233850);
 function c(t) {
-    let { transitionState: n, onClose: e, onBeforeDelete: c, onAfterDelete: u, clip: h } = t;
-    return (0, a.jsxs)(i.ModalRoot, {
-        size: i.ModalSize.SMALL,
-        transitionState: n,
-        className: d.__invalid_modal,
+    let { transitionState: i, onClose: e, onBeforeDelete: c, onAfterDelete: h, clip: m } = t;
+    return (0, n.jsxs)(a.Y0X, {
+        size: a.CgR.SMALL,
+        transitionState: i,
+        className: o.__invalid_modal,
         children: [
-            (0, a.jsxs)(i.ModalContent, {
-                className: d.modalContent,
+            (0, n.jsxs)(a.hzk, {
+                className: o.modalContent,
                 children: [
-                    (0, a.jsxs)('div', {
-                        className: d.header,
+                    (0, n.jsxs)('div', {
+                        className: o.header,
                         children: [
-                            (0, a.jsx)(i.Heading, {
-                                className: d.__invalid_title,
+                            (0, n.jsx)(a.X6q, {
+                                className: o.__invalid_title,
                                 variant: 'text-md/semibold',
                                 color: 'header-primary',
-                                children: s.intl.string(s.t.Lzhui4)
+                                children: d.intl.string(d.t.Lzhui4)
                             }),
-                            (0, a.jsx)(i.ModalCloseButton, { onClick: e })
+                            (0, n.jsx)(a.olH, { onClick: e })
                         ]
                     }),
-                    (0, a.jsx)(i.Text, {
+                    (0, n.jsx)(a.Text, {
                         variant: 'text-md/medium',
                         color: 'text-normal',
-                        className: d.__invalid_body,
-                        children: s.intl.string(s.t.yxCBqq)
+                        className: o.__invalid_body,
+                        children: d.intl.string(d.t.yxCBqq)
                     })
                 ]
             }),
-            (0, a.jsx)(i.ModalFooter, {
-                children: (0, a.jsx)(i.Button, {
-                    color: i.Button.Colors.RED,
+            (0, n.jsx)(a.mzw, {
+                children: (0, n.jsx)(a.zxk, {
+                    color: a.zxk.Colors.RED,
                     onClick: function () {
-                        null == c || c(), o.sS(h.filepath), u(), l.default.track(r.rMx.CLIP_DELETED);
+                        null == c || c(), s.sS(m.filepath), h(), l.default.track(r.rMx.CLIP_DELETED);
                     },
-                    children: s.intl.string(s.t.VRWPDg)
+                    children: d.intl.string(d.t.VRWPDg)
                 })
             })
         ]

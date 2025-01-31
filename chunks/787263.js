@@ -1,21 +1,17 @@
-e.d(t, {
-    w: function () {
-        return r;
-    }
-});
-var i = e(200651);
-e(192379);
-var a = e(481060);
-function r(n, t) {
-    return (0, a.openModalLazy)(async () => {
-        let { default: a } = await e.e('79521').then(e.bind(e, 207540));
-        return (e) =>
+n.d(e, { w: () => l });
+var i = n(200651);
+n(192379);
+var a = n(481060);
+function l(t, e) {
+    return (0, a.ZDy)(async () => {
+        let { default: a } = await n.e('79521').then(n.bind(n, 207540));
+        return (n) =>
             (0, i.jsx)(a, {
-                ...e,
+                ...n,
                 onConfirm: () => {
-                    e.onClose(), t();
+                    n.onClose(), e();
                 },
-                channel: n
+                channel: t
             });
     });
 }

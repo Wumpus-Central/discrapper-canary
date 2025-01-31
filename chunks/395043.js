@@ -1,4 +1,5 @@
-t.Z = {
+r.d(t, { Z: () => a });
+let a = {
     scheme: 'solarized',
     author: 'ethan schoonover (http://ethanschoonover.com/solarized)',
     base00: '#002b36',

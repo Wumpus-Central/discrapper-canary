@@ -1,31 +1,27 @@
-n.d(t, {
-    Z: function () {
-        return h;
-    }
-});
+n.d(t, { Z: () => h });
 var i = n(200651);
 n(192379);
-var r = n(442837),
-    l = n(481060),
-    a = n(776568),
-    o = n(218035),
-    s = n(775666),
+var l = n(442837),
+    a = n(481060),
+    r = n(776568),
+    s = n(218035),
+    o = n(775666),
     c = n(858822),
-    u = n(423589),
-    d = n(131704),
+    d = n(423589),
+    u = n(131704),
     m = n(430824);
 function h(e) {
-    let { channel: t, closePopout: n, onSelect: h, navId: f, label: p, location: _, includeGuildMute: g } = e,
-        E = (0, o.c)(t),
-        C = (0, s.EQ)(t),
-        I = (0, r.e7)([m.Z], () => m.Z.getGuild(t.guild_id)),
-        x = (0, c.Z)(I),
-        N = (0, u.Mn)('ChannelNotificationSettingsPopoutMenu') && d.$N.has(t.type);
-    return (0, i.jsxs)(l.Menu, {
-        navId: f,
+    let { channel: t, closePopout: n, onSelect: h, navId: _, label: p, location: g, includeGuildMute: f } = e,
+        x = (0, s.c)(t),
+        E = (0, o.EQ)(t),
+        C = (0, l.e7)([m.Z], () => m.Z.getGuild(t.guild_id)),
+        v = (0, c.Z)(C),
+        I = (0, d.Mn)('ChannelNotificationSettingsPopoutMenu') && u.$N.has(t.type);
+    return (0, i.jsxs)(a.v2r, {
+        navId: _,
         onClose: n,
         'aria-label': p,
         onSelect: h,
-        children: [(0, i.jsx)(l.MenuGroup, { children: (0, a.ZP)(t, _) }), g ? (0, i.jsx)(l.MenuGroup, { children: x }) : null, N ? C : (0, i.jsx)(l.MenuGroup, { children: E })]
+        children: [(0, i.jsx)(a.kSQ, { children: (0, r.ZP)(t, g) }), f ? (0, i.jsx)(a.kSQ, { children: v }) : null, I ? E : (0, i.jsx)(a.kSQ, { children: x })]
     });
 }

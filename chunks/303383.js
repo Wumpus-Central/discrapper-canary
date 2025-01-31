@@ -1,106 +1,104 @@
-r.d(n, {
-    M: function () {
-        return i;
-    }
+n.d(t, {
+    M: () => c,
+    Z: () => E
 });
 var i,
-    a,
-    o = r(31775),
-    s = r.n(o),
-    l = r(442837),
-    u = r(570140);
-function c(e, n, r) {
+    r = n(31775),
+    a = n.n(r),
+    s = n(442837),
+    o = n(570140);
+function l(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let d = 20;
-function f(e) {
-    let { applicationId: n, guildId: r, page: i } = e;
-    return 'applicationId:'.concat(n, ' guildId:').concat(r, ' page:').concat(i);
+let u = 20;
+var c = (function (e) {
+    return (e[(e.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (e[(e.FETCHING = 1)] = 'FETCHING'), (e[(e.FETCHED = 2)] = 'FETCHED'), (e[(e.ERROR = 3)] = 'ERROR'), e;
+})({});
+function d(e) {
+    let { applicationId: t, guildId: n, page: i } = e;
+    return 'applicationId:'.concat(t, ' guildId:').concat(n, ' page:').concat(i);
 }
-!(function (e) {
-    (e[(e.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (e[(e.FETCHING = 1)] = 'FETCHING'), (e[(e.FETCHED = 2)] = 'FETCHED'), (e[(e.ERROR = 3)] = 'ERROR');
-})(i || (i = {}));
-let p = new (s())({ max: d }),
-    h = {};
-function _(e) {
-    let { applicationId: n, guildId: r, page: i } = e,
-        a = f({
-            applicationId: n,
-            guildId: r,
+let f = new (a())({ max: u }),
+    _ = {};
+function p(e) {
+    let { applicationId: t, guildId: n, page: i } = e,
+        r = d({
+            applicationId: t,
+            guildId: n,
             page: i
         });
-    h = {
-        ...h,
-        [a]: 1
+    _ = {
+        ..._,
+        [r]: 1
     };
 }
-function m(e) {
-    let { applicationId: n, guildId: r, similarApplications: i, loadId: a, page: o, totalPages: s } = e,
-        l = f({
-            applicationId: n,
-            guildId: r,
-            page: o
+function h(e) {
+    let { applicationId: t, guildId: n, similarApplications: i, loadId: r, page: a, totalPages: s } = e,
+        o = d({
+            applicationId: t,
+            guildId: n,
+            page: a
         });
-    p.set(l, {
+    f.set(o, {
         lastFetchTimeMs: Date.now(),
         applications: i,
-        loadId: a,
-        page: o,
+        loadId: r,
+        page: a,
         totalPages: s
     }),
-        (h = {
-            ...h,
-            [l]: 2
+        (_ = {
+            ..._,
+            [o]: 2
         });
 }
-function g(e) {
-    let { applicationId: n, guildId: r, page: i } = e,
-        a = f({
-            applicationId: n,
-            guildId: r,
+function m(e) {
+    let { applicationId: t, guildId: n, page: i } = e,
+        r = d({
+            applicationId: t,
+            guildId: n,
             page: i
         });
-    h = {
-        ...h,
-        [a]: 3
+    _ = {
+        ..._,
+        [r]: 3
     };
 }
-class E extends (a = l.ZP.Store) {
+class g extends (i = s.ZP.Store) {
     getSimilarApplications(e) {
-        let { applicationId: n, guildId: r, page: i } = e;
-        if (null == n) return;
-        let a = f({
-            applicationId: n,
-            guildId: r,
+        let { applicationId: t, guildId: n, page: i } = e;
+        if (null == t) return;
+        let r = d({
+            applicationId: t,
+            guildId: n,
             page: i
         });
-        return p.get(a);
+        return f.get(r);
     }
     getFetchState(e) {
-        let { applicationId: n, guildId: r, page: i } = e;
-        if (null != n)
-            return h[
-                f({
-                    applicationId: n,
-                    guildId: r,
+        let { applicationId: t, guildId: n, page: i } = e;
+        if (null != t)
+            return _[
+                d({
+                    applicationId: t,
+                    guildId: n,
                     page: i
                 })
             ];
     }
 }
-c(E, 'displayName', 'ApplicationDirectorySimilarApplicationsStore'),
-    (n.Z = new E(u.Z, {
-        APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS: _,
-        APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_SUCCESS: m,
-        APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_FAILURE: g
-    }));
+l(g, 'displayName', 'ApplicationDirectorySimilarApplicationsStore');
+let E = new g(o.Z, {
+    APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS: p,
+    APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_SUCCESS: h,
+    APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_FAILURE: m
+});

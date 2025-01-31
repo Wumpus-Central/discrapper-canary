@@ -1,81 +1,71 @@
-r.d(n, {
-    F9: function () {
-        return b;
-    },
-    Zb: function () {
-        return E;
-    },
-    cA: function () {
-        return g;
-    },
-    e$: function () {
-        return v;
-    },
-    ll: function () {
-        return I;
-    }
+n.d(t, {
+    F9: () => y,
+    Zb: () => g,
+    cA: () => m,
+    e$: () => E,
+    ll: () => I
 });
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(442837),
-    l = r(481060),
-    u = r(686546),
-    c = r(271383),
-    d = r(430824),
-    f = r(594174),
-    p = r(5192),
-    h = r(192918),
-    _ = r(388032),
-    m = r(830677);
-function g() {
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(442837),
+    o = n(481060),
+    l = n(686546),
+    u = n(271383),
+    c = n(430824),
+    d = n(594174),
+    f = n(5192),
+    _ = n(192918),
+    p = n(388032),
+    h = n(830677);
+function m() {
     return (0, i.jsx)('div', {
-        className: m.container,
+        className: h.container,
         'aria-hidden': !0
     });
 }
-function E(e) {
-    let { children: n, selected: r } = e;
+function g(e) {
+    let { children: t, selected: n } = e;
     return (0, i.jsx)('div', {
-        className: o()(m.container, m.openOnHover, { [m.selected]: r }),
-        children: n
+        className: a()(h.container, h.openOnHover, { [h.selected]: n }),
+        children: t
+    });
+}
+function E(e) {
+    let { children: t } = e;
+    return (0, i.jsx)('div', {
+        className: h.infoSection,
+        children: t
     });
 }
 function v(e) {
-    let { children: n } = e;
+    let { users: t, guildId: n, 'aria-hidden': r } = e;
     return (0, i.jsx)('div', {
-        className: m.infoSection,
-        children: n
-    });
-}
-function y(e) {
-    let { users: n, guildId: r, 'aria-hidden': a } = e;
-    return (0, i.jsx)('div', {
-        className: m.facePile,
-        children: n.map((e, o) => {
-            let s = (0, i.jsx)(l.Avatar, {
-                src: e.getAvatarURL(r, 80),
-                size: l.AvatarSizes.SIZE_16,
-                'aria-label': a ? void 0 : e.username,
-                'aria-hidden': a
+        className: h.facePile,
+        children: t.map((e, a) => {
+            let s = (0, i.jsx)(o.qEK, {
+                src: e.getAvatarURL(n, 80),
+                size: o.EFr.SIZE_16,
+                'aria-label': r ? void 0 : e.username,
+                'aria-hidden': r
             });
-            return o === n.length - 1
+            return a === t.length - 1
                 ? (0, i.jsx)(
                       'div',
                       {
-                          className: m.facePileItem,
+                          className: h.facePileItem,
                           children: s
                       },
                       e.id
                   )
                 : (0, i.jsx)(
-                      u.ZP,
+                      l.ZP,
                       {
                           width: 16,
                           height: 16,
-                          className: m.facePileItem,
-                          mask: u.ZP.Masks.CONTENT_INVENTORY_CARD_FACE_PILE_AVATAR,
+                          className: h.facePileItem,
+                          mask: l.ZP.Masks.CONTENT_INVENTORY_CARD_FACE_PILE_AVATAR,
                           children: s
                       },
                       e.id
@@ -83,70 +73,70 @@ function y(e) {
         })
     });
 }
-function b(e) {
-    let { guildId: n, channelId: r, entry: a, maxAvatars: o = 3 } = e,
-        u = a.author_id,
-        g = (0, s.e7)([f.default], () => f.default.getUser(u)),
-        { displayParticipants: E, participant1: v, participant2: b, numOtherParticipants: I } = (0, h.Z)(a, o),
-        T = (0, s.e7)([c.ZP], () => c.ZP.getMember(n, u)),
-        S = (0, s.e7)(
-            [d.Z],
+function y(e) {
+    let { guildId: t, channelId: n, entry: r, maxAvatars: a = 3 } = e,
+        l = r.author_id,
+        m = (0, s.e7)([d.default], () => d.default.getUser(l)),
+        { displayParticipants: g, participant1: E, participant2: y, numOtherParticipants: I } = (0, _.Z)(r, a),
+        b = (0, s.e7)([u.ZP], () => u.ZP.getMember(t, l)),
+        T = (0, s.e7)(
+            [c.Z],
             () => {
                 var e;
-                return (null == T ? void 0 : T.colorRoleId) != null ? (null === (e = d.Z.getRole(n, T.colorRoleId)) || void 0 === e ? void 0 : e.name) : void 0;
+                return (null == b ? void 0 : b.colorRoleId) != null ? (null === (e = c.Z.getRole(t, b.colorRoleId)) || void 0 === e ? void 0 : e.name) : void 0;
             },
-            [n, T]
+            [t, b]
         );
-    if (null == g) return null;
-    let A = null == T ? void 0 : T.colorString,
-        C = p.ZP.getName(n, r, g);
+    if (null == m) return null;
+    let S = null == b ? void 0 : b.colorString,
+        A = f.ZP.getName(t, n, m);
     return (0, i.jsxs)('div', {
-        className: m.userSection,
+        className: h.userSection,
         children: [
-            (0, i.jsx)(y, {
-                users: E,
-                guildId: n,
+            (0, i.jsx)(v, {
+                users: g,
+                guildId: t,
                 'aria-hidden': !0
             }),
-            (0, i.jsx)(l.NameWithRole, {
-                color: null != A ? A : void 0,
-                roleName: S,
-                name: C,
-                className: m.userName,
+            (0, i.jsx)(o.PUh, {
+                color: null != S ? S : void 0,
+                roleName: T,
+                name: A,
+                className: h.userName,
                 'aria-hidden': !0
             }),
             I > 0
                 ? (0, i.jsx)('div', {
-                      className: m.additionalParticipantBadge,
+                      className: h.additionalParticipantBadge,
                       'aria-hidden': !0,
-                      children: (0, i.jsxs)(l.Text, {
+                      children: (0, i.jsxs)(o.Text, {
                           variant: 'text-xxs/medium',
                           color: 'text-normal',
-                          className: m.additionalParticipantBadgeText,
+                          className: h.additionalParticipantBadgeText,
                           children: ['+', I]
                       })
                   })
                 : null,
-            (0, i.jsx)(l.HiddenVisually, {
-                children: _.intl.format(_.t.rH95Gh, {
-                    user0: p.ZP.getName(n, r, v),
-                    user1: p.ZP.getName(n, r, b),
+            (0, i.jsx)(o.nn4, {
+                children: p.intl.format(p.t.rH95Gh, {
+                    user0: f.ZP.getName(t, n, E),
+                    user1: f.ZP.getName(t, n, y),
                     countOthers: I,
-                    name0Hook: (e, n) => (0, i.jsx)('span', { children: e }, n),
-                    name1Hook: (e, n) => (0, i.jsx)('span', { children: e }, n),
-                    countOthersHook: (e, n) => (0, i.jsx)('span', { children: e }, n)
+                    name0Hook: (e, t) => (0, i.jsx)('span', { children: e }, t),
+                    name1Hook: (e, t) => (0, i.jsx)('span', { children: e }, t),
+                    countOthersHook: (e, t) => (0, i.jsx)('span', { children: e }, t)
                 })
             })
         ]
     });
 }
 function I(e) {
-    let { children: n } = e;
-    return (0, i.jsx)(l.Heading, {
+    let { children: t } = e;
+    return (0, i.jsx)(o.X6q, {
         color: 'text-normal',
         variant: 'heading-sm/medium',
-        className: m.contentTitle,
+        className: h.contentTitle,
         lineClamp: 1,
-        children: n
+        children: t
     });
 }

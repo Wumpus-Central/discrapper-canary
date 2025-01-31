@@ -1,42 +1,37 @@
-r.d(n, {
-    Z: function () {
-        return h;
-    }
-});
-var i = r(411104);
-var a = r(430198),
-    o = r(557135),
-    s = r(66999),
-    l = r(592125),
-    u = r(496675),
-    c = r(944486),
-    d = r(979651);
-let f = 10000;
-class p extends Error {}
-async function h(e) {
-    let { channelId: n, timeoutMs: r = f, bypassChangeModal: i = !1 } = e,
-        h = l.Z.getChannel(n);
+n.d(t, { Z: () => f }), n(411104);
+var i = n(430198),
+    r = n(557135),
+    a = n(66999),
+    s = n(592125),
+    o = n(496675),
+    l = n(944486),
+    u = n(979651);
+let c = 10000;
+class d extends Error {}
+async function f(e) {
+    let { channelId: t, timeoutMs: n = c, bypassChangeModal: f = !1 } = e,
+        _ = s.Z.getChannel(t);
     if (
-        null == h ||
-        !(await o.Z.handleVoiceConnect({
+        null == _ ||
+        !(await r.Z.handleVoiceConnect({
             bypassGuildIdCheck: !0,
-            bypassChangeModal: i,
-            channel: h,
-            connected: d.Z.isInChannel(n),
-            needSubscriptionToAccess: (0, s.$)(n, l.Z, a.Z, u.Z).needSubscriptionToAccess
+            bypassChangeModal: f,
+            channel: _,
+            connected: u.Z.isInChannel(t),
+            needSubscriptionToAccess: (0, a.$)(t, s.Z, i.Z, o.Z).needSubscriptionToAccess
         }))
     )
         return !1;
-    let _ = new Promise((e, i) => {
-        let a = setTimeout(() => {
-            i(new p('Joining voice channel has timed out.'));
-        }, r);
-        c.Z.addConditionalChangeListener(() => c.Z.getVoiceChannelId() !== n || (clearTimeout(a), e(), !1));
+    let p = new Promise((e, i) => {
+        let r = setTimeout(() => {
+            i(new d('Joining voice channel has timed out.'));
+        }, n);
+        l.Z.addConditionalChangeListener(() => l.Z.getVoiceChannelId() !== t || (clearTimeout(r), e(), !1));
     });
     try {
-        await _;
+        await p;
     } catch (e) {
-        if (e instanceof p) return !1;
+        if (e instanceof d) return !1;
         throw e;
     }
     return !0;

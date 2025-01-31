@@ -1,10 +1,5 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(757143);
-let a = /\\/g;
-function o(e) {
-    return e.replace(a, '/');
+n.d(t, { Z: () => r }), n(757143);
+let i = /\\/g;
+function r(e) {
+    return e.replace(i, '/');
 }

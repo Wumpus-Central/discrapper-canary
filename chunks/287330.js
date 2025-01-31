@@ -1,4 +1,5 @@
-e.exports = {
-    anchor: 'anchor_af404b',
-    anchorUnderlineOnHover: 'anchorUnderlineOnHover_af404b'
+var i = {
+    anchor: 'anchor_edefb8',
+    anchorUnderlineOnHover: 'anchorUnderlineOnHover_edefb8'
 };
+e.exports = i;

@@ -1,23 +1,19 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-});
+n.d(t, { Z: () => d });
 var i = n(200651),
     a = n(192379),
     r = n(120356),
     l = n.n(r),
-    o = n(481060),
-    s = n(49898),
+    s = n(481060),
+    o = n(49898),
     c = n(149025);
 function d(e) {
-    let { state: t, query: n, placeholder: r, onTextChange: d, onCollapsedClick: u, onClear: m, onBlur: p, onSubmit: h } = e,
+    let { state: t, query: n, placeholder: r, onTextChange: d, onCollapsedClick: u, onClear: m, onBlur: h, onSubmit: p } = e,
         g = a.useRef(null),
-        C = a.useCallback(
+        _ = a.useCallback(
             (e) => {
-                'Enter' === e.key && h();
+                'Enter' === e.key && p();
             },
-            [h]
+            [p]
         ),
         x = a.useCallback(() => {
             u(),
@@ -26,24 +22,24 @@ function d(e) {
                     return null === (e = g.current) || void 0 === e ? void 0 : e.focus();
                 });
         }, [u]);
-    return t === s.GlobalDiscoverySearchBarState.COLLAPSED
-        ? (0, i.jsx)(o.Clickable, {
+    return t === o.GlobalDiscoverySearchBarState.COLLAPSED
+        ? (0, i.jsx)(s.P3F, {
               className: c.searchIcon,
               onClick: x,
-              children: (0, i.jsx)(o.MagnifyingGlassIcon, {
+              children: (0, i.jsx)(s._Ve, {
                   size: 'md',
-                  color: o.tokens.colors.INTERACTIVE_NORMAL
+                  color: s.TVs.colors.INTERACTIVE_NORMAL
               })
           })
-        : (0, i.jsx)(o.SearchBar, {
+        : (0, i.jsx)(s.E1j, {
               ref: g,
-              className: l()(c.searchBar, { [c.searchFloating]: t === s.GlobalDiscoverySearchBarState.FLOATING }),
-              size: o.SearchBar.Sizes.MEDIUM,
+              className: l()(c.searchBar, { [c.searchFloating]: t === o.GlobalDiscoverySearchBarState.FLOATING }),
+              size: s.E1j.Sizes.MEDIUM,
               query: n,
               placeholder: r,
               onChange: d,
               onClear: m,
-              onKeyDown: C,
-              onBlur: p
+              onKeyDown: _,
+              onBlur: h
           });
 }

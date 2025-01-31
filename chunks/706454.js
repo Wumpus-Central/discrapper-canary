@@ -1,46 +1,44 @@
-r.r(n);
+n.r(t), n.d(t, { default: () => _ });
 var i,
-    a = r(442837),
-    o = r(570140),
-    s = r(241601),
-    l = r(424395),
-    u = r(581883),
-    c = r(388032);
-function d(e, n, r) {
+    r = n(442837),
+    a = n(570140),
+    s = n(241601),
+    o = n(581883);
+function l(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let f = l.vJ ? c.intl.currentLocale : c.intl.defaultLocale;
-function p() {
-    var e, n;
-    let r = null === (n = u.Z.settings.localization) || void 0 === n ? void 0 : null === (e = n.locale) || void 0 === e ? void 0 : e.value;
-    return null != r && '' !== r && r !== f && ((f = r), (0, s._2)(f), !0);
+let u = n(388032).intl.currentLocale;
+function c() {
+    var e, t;
+    let n = null === (t = o.Z.settings.localization) || void 0 === t ? void 0 : null === (e = t.locale) || void 0 === e ? void 0 : e.value;
+    return null != n && '' !== n && n !== u && ((u = n), (0, s._2)(u), !0);
 }
-function h(e) {
-    (f = e.locale), (0, s._2)(f);
+function d(e) {
+    (u = e.locale), (0, s._2)(u);
 }
-class _ extends (i = a.ZP.Store) {
+class f extends (i = r.ZP.Store) {
     initialize() {
-        this.waitFor(u.Z), p(), (0, s._2)(f);
+        this.waitFor(o.Z), c(), (0, s._2)(u);
     }
     get locale() {
-        return f;
+        return u;
     }
 }
-d(_, 'displayName', 'LocaleStore'),
-    (n.default = new _(o.Z, {
-        OVERLAY_INITIALIZE: p,
-        CACHE_LOADED: p,
-        CONNECTION_OPEN: p,
-        USER_SETTINGS_PROTO_UPDATE: p,
-        USER_SETTINGS_LOCALE_OVERRIDE: h
-    }));
+l(f, 'displayName', 'LocaleStore');
+let _ = new f(a.Z, {
+    OVERLAY_INITIALIZE: c,
+    CACHE_LOADED: c,
+    CONNECTION_OPEN: c,
+    USER_SETTINGS_PROTO_UPDATE: c,
+    USER_SETTINGS_LOCALE_OVERRIDE: d
+});

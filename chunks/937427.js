@@ -1,27 +1,20 @@
-n.d(t, {
-    w: function () {
-        return c;
-    }
-}),
-    n(47120),
-    n(653041),
-    n(733860);
+n.d(t, { w: () => c }), n(47120), n(653041), n(733860);
 var i = n(192379),
     l = n(581364),
-    r = n(984933),
-    a = n(496675),
-    o = n(282923),
-    s = n(981631),
+    a = n(984933),
+    r = n(496675),
+    s = n(282923),
+    o = n(981631),
     d = n(388032);
 function c(e) {
     let t = i.useMemo(() => {
-            let t = r.ZP.getChannels(e),
-                n = [...t[r.sH]];
-            n.push(...t[r.Zb].filter((e) => e.channel.isGuildVocal()));
+            let t = a.ZP.getChannels(e),
+                n = [...t[a.sH]];
+            n.push(...t[a.Zb].filter((e) => e.channel.isGuildVocal()));
             let i = n.map((e) => ({
                 id: e.channel.id,
                 name: e.channel.name,
-                canManage: a.Z.can(s.Plq.MANAGE_ROLES, e.channel)
+                canManage: r.Z.can(o.Plq.MANAGE_ROLES, e.channel)
             }));
             return (
                 i.unshift({
@@ -34,10 +27,9 @@ function c(e) {
         }, [e]),
         [n, c] = i.useState(''),
         m = i.useMemo(() => {
-            let e = (function (e) {
-                return e.startsWith('#') ? e.substr(1) : e;
-            })(n);
-            return (0, o.B)(t, u, e);
+            var e;
+            let i = (e = n).startsWith('#') ? e.substr(1) : e;
+            return (0, s.B)(t, u, i);
         }, [t, n]);
     return {
         query: n,

@@ -42,7 +42,7 @@ var l = s.prototype;
         this.setupPositionProbePattern(0, 0), this.setupPositionProbePattern(this.moduleCount - 7, 0), this.setupPositionProbePattern(0, this.moduleCount - 7), this.setupPositionAdjustPattern(), this.setupTimingPattern(), this.setupTypeInfo(t, e), this.typeNumber >= 7 && this.setupTypeNumber(t), null == this.dataCache && (this.dataCache = s.createData(this.typeNumber, this.errorCorrectLevel, this.dataList)), this.mapData(this.dataCache, e);
     }),
     (l.setupPositionProbePattern = function (t, e) {
-        for (var r = -1; r <= 7; r++) if (!(t + r <= -1) && !(this.moduleCount <= t + r)) for (var o = -1; o <= 7; o++) !(e + o <= -1) && !(this.moduleCount <= e + o) && ((0 <= r && r <= 6 && (0 == o || 6 == o)) || (0 <= o && o <= 6 && (0 == r || 6 == r)) || (2 <= r && r <= 4 && 2 <= o && o <= 4) ? (this.modules[t + r][e + o] = !0) : (this.modules[t + r][e + o] = !1));
+        for (var r = -1; r <= 7; r++) if (!(t + r <= -1) && !(this.moduleCount <= t + r)) for (var o = -1; o <= 7; o++) e + o <= -1 || this.moduleCount <= e + o || ((0 <= r && r <= 6 && (0 == o || 6 == o)) || (0 <= o && o <= 6 && (0 == r || 6 == r)) || (2 <= r && r <= 4 && 2 <= o && o <= 4) ? (this.modules[t + r][e + o] = !0) : (this.modules[t + r][e + o] = !1));
     }),
     (l.getBestMaskPattern = function () {
         for (var t = 0, e = 0, r = 0; r < 8; r++) {
@@ -55,21 +55,16 @@ var l = s.prototype;
     (l.createMovieClip = function (t, e, r) {
         var o = t.createEmptyMovieClip(e, r);
         this.make();
-        for (var n = 0; n < this.modules.length; n++) {
+        for (var n = 0; n < this.modules.length; n++)
             for (var i = 1 * n, a = 0; a < this.modules[n].length; a++) {
                 var u = 1 * a;
                 this.modules[n][a] && (o.beginFill(0, 100), o.moveTo(u, i), o.lineTo(u + 1, i), o.lineTo(u + 1, i + 1), o.lineTo(u, i + 1), o.endFill());
             }
-        }
         return o;
     }),
     (l.setupTimingPattern = function () {
-        for (var t = 8; t < this.moduleCount - 8; t++) {
-            if (null == this.modules[t][6]) this.modules[t][6] = t % 2 == 0;
-        }
-        for (var e = 8; e < this.moduleCount - 8; e++) {
-            if (null == this.modules[6][e]) this.modules[6][e] = e % 2 == 0;
-        }
+        for (var t = 8; t < this.moduleCount - 8; t++) null == this.modules[t][6] && (this.modules[t][6] = t % 2 == 0);
+        for (var e = 8; e < this.moduleCount - 8; e++) null == this.modules[6][e] && (this.modules[6][e] = e % 2 == 0);
     }),
     (l.setupPositionAdjustPattern = function () {
         for (var t = a.getPatternPosition(this.typeNumber), e = 0; e < t.length; e++)
@@ -124,8 +119,7 @@ var l = s.prototype;
         for (var h = 0, l = 0; l < o.length; l++) h += o[l].dataCount;
         if (u.getLengthInBits() > 8 * h) throw Error('code length overflow. (' + u.getLengthInBits() + '>' + 8 * h + ')');
         for (u.getLengthInBits() + 4 <= 8 * h && u.put(0, 4); u.getLengthInBits() % 8 != 0; ) u.putBit(!1);
-        for (; !(u.getLengthInBits() >= 8 * h); ) {
-            if ((u.put(s.PAD0, 8), u.getLengthInBits() >= 8 * h)) break;
+        for (; !(u.getLengthInBits() >= 8 * h) && (u.put(s.PAD0, 8), !(u.getLengthInBits() >= 8 * h)); ) {
             u.put(s.PAD1, 8);
         }
         return s.createBytes(u, o);

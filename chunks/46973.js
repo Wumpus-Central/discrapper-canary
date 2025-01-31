@@ -1,59 +1,40 @@
-r.d(n, {
-    Mt: function () {
-        return f;
-    },
-    Sh: function () {
-        return s.S;
-    },
-    TO: function () {
-        return o;
-    },
-    W$: function () {
-        return i;
-    },
-    Yn: function () {
-        return u.Yn;
-    },
-    aB: function () {
-        return l.a;
-    },
-    jj: function () {
-        return d;
-    },
-    zZ: function () {
-        return a;
-    }
+n.d(t, {
+    Mt: () => d,
+    Sh: () => i.S,
+    TO: () => l,
+    W$: () => s,
+    Yn: () => a.Yn,
+    aB: () => r.a,
+    jj: () => c,
+    zZ: () => o
 });
-var i,
-    a,
-    o,
-    s = r(839548),
-    l = r(946695),
-    u = r(65154);
-function c(e) {
+var i = n(839548),
+    r = n(946695),
+    a = n(65154),
+    s = (function (e) {
+        return (e.INPUT_DEVICE = 'input_device'), (e.STREAM = 'stream'), e;
+    })({}),
+    o = (function (e) {
+        return (e.NONE = ''), (e.BACKGROUND_BLUR = 'background_blur'), (e.BACKGROUND_REPLACEMENT = 'background_replacement'), e;
+    })({}),
+    l = (function (e) {
+        return (e.CAMERA_BACKGROUND_PREVIEW = 'cameraBackgroundPreview'), (e.CAMERA_BACKGROUND_LIVE = 'cameraBackgroundLive'), e;
+    })({});
+function u(e) {
     switch (e) {
-        case u.AS.NATIVE:
-            return r(743426).Z;
-        case u.AS.WEBRTC:
-            return r(959856).Z;
-        case u.AS.DUMMY:
+        case a.AS.NATIVE:
+            return n(743426).Z;
+        case a.AS.WEBRTC:
+            return n(959856).Z;
+        case a.AS.DUMMY:
         default:
-            return r(135670).Z;
+            return n(135670).Z;
     }
 }
-function d() {
+function c() {
     var e;
-    return null !== (e = [u.AS.NATIVE, u.AS.WEBRTC].find((e) => c(e).supported())) && void 0 !== e ? e : u.AS.DUMMY;
+    return null !== (e = [a.AS.NATIVE, a.AS.WEBRTC].find((e) => u(e).supported())) && void 0 !== e ? e : a.AS.DUMMY;
 }
-function f(e) {
-    return new (c(e))();
+function d(e) {
+    return new (u(e))();
 }
-!(function (e) {
-    (e.INPUT_DEVICE = 'input_device'), (e.STREAM = 'stream');
-})(i || (i = {})),
-    !(function (e) {
-        (e.NONE = ''), (e.BACKGROUND_BLUR = 'background_blur'), (e.BACKGROUND_REPLACEMENT = 'background_replacement');
-    })(a || (a = {})),
-    !(function (e) {
-        (e.CAMERA_BACKGROUND_PREVIEW = 'cameraBackgroundPreview'), (e.CAMERA_BACKGROUND_LIVE = 'cameraBackgroundLive');
-    })(o || (o = {}));

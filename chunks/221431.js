@@ -1,119 +1,115 @@
-var i = r(192379),
-    a = r(190031),
-    o = r(476400),
-    s = r.n(o),
-    l = 1073741823,
-    u = 'undefined' != typeof globalThis ? globalThis : 'undefined' != typeof window ? window : void 0 !== r.g ? r.g : {};
-function c() {
+n.d(t, { Z: () => p });
+var i = n(192379),
+    r = n(190031),
+    a = n(476400),
+    s = n.n(a),
+    o = 1073741823,
+    l = 'undefined' != typeof globalThis ? globalThis : 'undefined' != typeof window ? window : void 0 !== n.g ? n.g : {};
+function u() {
     var e = '__global_unique_id__';
-    return (u[e] = (u[e] || 0) + 1);
+    return (l[e] = (l[e] || 0) + 1);
 }
-function d(e, n) {
-    return e === n ? 0 !== e || 1 / e == 1 / n : e != e && n != n;
+function c(e, t) {
+    return e === t ? 0 !== e || 1 / e == 1 / t : e != e && t != t;
 }
-function f(e) {
-    var n = [];
+function d(e) {
+    var t = [];
     return {
         on: function (e) {
-            n.push(e);
+            t.push(e);
         },
         off: function (e) {
-            n = n.filter(function (n) {
-                return n !== e;
+            t = t.filter(function (t) {
+                return t !== e;
             });
         },
         get: function () {
             return e;
         },
-        set: function (r, i) {
-            (e = r),
-                n.forEach(function (n) {
-                    return n(e, i);
+        set: function (n, i) {
+            (e = n),
+                t.forEach(function (t) {
+                    return t(e, i);
                 });
         }
     };
 }
-function p(e) {
+function f(e) {
     return Array.isArray(e) ? e[0] : e;
 }
-function h(e, n) {
-    var r,
-        o,
-        u = '__create-react-context-' + c() + '__',
-        h = (function (e) {
-            function r() {
-                var n;
-                return (n = e.apply(this, arguments) || this), (n.emitter = f(n.props.value)), n;
+function _(e, t) {
+    var n,
+        a,
+        l = '__create-react-context-' + u() + '__',
+        _ = (function (e) {
+            function n() {
+                var t;
+                return (t = e.apply(this, arguments) || this), (t.emitter = d(t.props.value)), t;
             }
-            (0, a.Z)(r, e);
-            var i = r.prototype;
+            (0, r.Z)(n, e);
+            var i = n.prototype;
             return (
                 (i.getChildContext = function () {
                     var e;
-                    return ((e = {})[u] = this.emitter), e;
+                    return ((e = {})[l] = this.emitter), e;
                 }),
                 (i.componentWillReceiveProps = function (e) {
                     if (this.props.value !== e.value) {
-                        var r,
+                        var n,
                             i = this.props.value,
-                            a = e.value;
-                        if (d(i, a)) r = 0;
-                        else {
-                            r = 'function' == typeof n ? n(i, a) : l;
-                            0 != (r |= 0) && this.emitter.set(e.value, r);
-                        }
+                            r = e.value;
+                        c(i, r) ? (n = 0) : 0 != (n = ('function' == typeof t ? t(i, r) : o) | 0) && this.emitter.set(e.value, n);
                     }
                 }),
                 (i.render = function () {
                     return this.props.children;
                 }),
-                r
+                n
             );
         })(i.Component);
-    h.childContextTypes = (((r = {})[u] = s().object.isRequired), r);
-    var _ = (function (n) {
-        function r() {
+    _.childContextTypes = (((n = {})[l] = s().object.isRequired), n);
+    var p = (function (t) {
+        function n() {
             var e;
             return (
-                (e = n.apply(this, arguments) || this),
+                (e = t.apply(this, arguments) || this),
                 (e.state = { value: e.getValue() }),
-                (e.onUpdate = function (n, r) {
-                    ((0 | e.observedBits) & r) != 0 && e.setState({ value: e.getValue() });
+                (e.onUpdate = function (t, n) {
+                    ((0 | e.observedBits) & n) != 0 && e.setState({ value: e.getValue() });
                 }),
                 e
             );
         }
-        (0, a.Z)(r, n);
-        var i = r.prototype;
+        (0, r.Z)(n, t);
+        var i = n.prototype;
         return (
             (i.componentWillReceiveProps = function (e) {
-                var n = e.observedBits;
-                this.observedBits = null == n ? l : n;
+                var t = e.observedBits;
+                this.observedBits = null == t ? o : t;
             }),
             (i.componentDidMount = function () {
-                this.context[u] && this.context[u].on(this.onUpdate);
+                this.context[l] && this.context[l].on(this.onUpdate);
                 var e = this.props.observedBits;
-                this.observedBits = null == e ? l : e;
+                this.observedBits = null == e ? o : e;
             }),
             (i.componentWillUnmount = function () {
-                this.context[u] && this.context[u].off(this.onUpdate);
+                this.context[l] && this.context[l].off(this.onUpdate);
             }),
             (i.getValue = function () {
-                return this.context[u] ? this.context[u].get() : e;
+                return this.context[l] ? this.context[l].get() : e;
             }),
             (i.render = function () {
-                return p(this.props.children)(this.state.value);
+                return f(this.props.children)(this.state.value);
             }),
-            r
+            n
         );
     })(i.Component);
     return (
-        (_.contextTypes = (((o = {})[u] = s().object), o)),
+        (p.contextTypes = (((a = {})[l] = s().object), a)),
         {
-            Provider: h,
-            Consumer: _
+            Provider: _,
+            Consumer: p
         }
     );
 }
-var _ = i.createContext || h;
-n.Z = _;
+let p = i.createContext || _;

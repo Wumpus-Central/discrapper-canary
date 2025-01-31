@@ -1,36 +1,26 @@
-r.d(n, {
-    YS: function () {
-        return c;
-    },
-    bA: function () {
-        return o;
-    },
-    hP: function () {
-        return s;
-    },
-    hY: function () {
-        return u;
-    },
-    xv: function () {
-        return l;
-    }
+n.d(t, {
+    YS: () => u,
+    bA: () => a,
+    hP: () => s,
+    hY: () => l,
+    xv: () => o
 });
-var i = r(570140);
-let a = {
+var i = n(570140);
+let r = {
     menubar: !1,
     toolbar: !1,
     location: !1,
     directories: !1
 };
-function o(e, n, r) {
+function a(e, t, n) {
     return i.Z.dispatch({
         type: 'POPOUT_WINDOW_OPEN',
         key: e,
         features: {
-            ...a,
-            ...r
+            ...r,
+            ...n
         },
-        render: n
+        render: t
     });
 }
 function s(e) {
@@ -39,23 +29,23 @@ function s(e) {
         channel: e
     });
 }
-function l(e) {
+function o(e) {
     return i.Z.dispatch({
         type: 'POPOUT_WINDOW_CLOSE',
         key: e
     });
 }
-function u(e, n) {
+function l(e, t) {
     return i.Z.dispatch({
         type: 'POPOUT_WINDOW_SET_ALWAYS_ON_TOP',
-        alwaysOnTop: n,
+        alwaysOnTop: t,
         key: e
     });
 }
-function c(e, n) {
+function u(e, t) {
     return i.Z.dispatch({
         type: 'POPOUT_WINDOW_ADD_STYLESHEET',
         url: e,
-        integrity: n
+        integrity: t
     });
 }

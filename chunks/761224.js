@@ -1,8 +1,4 @@
-function i(e, n) {
-    return 'function' == typeof e ? e(n) : e;
+function i(e, t) {
+    return 'function' == typeof e ? e(t) : e;
 }
-r.d(n, {
-    I: function () {
-        return i;
-    }
-});
+n.d(t, { I: () => i });

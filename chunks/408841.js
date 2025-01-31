@@ -1,12 +1,8 @@
-n.d(t, {
-    n: function () {
-        return l;
-    }
-});
+n.d(t, { n: () => r });
 var i = n(996106),
-    r = n(981631);
-let l = {
+    l = n(981631);
+let r = {
     handler(e) {
-        throw new i.Z({ errorCode: r.lTL.INVALID_COMMAND }, 'Deprecated command: '.concat(e.cmd));
+        throw new i.Z({ errorCode: l.lTL.INVALID_COMMAND }, 'Deprecated command: '.concat(e.cmd));
     }
 };

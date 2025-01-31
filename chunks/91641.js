@@ -1,41 +1,33 @@
-r.d(n, {
-    E: function () {
-        return l;
-    }
-});
-var i = r(411104);
-var a = r(47120);
-function o(e, n, r) {
+function i(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-function s(e, n, r) {
-    n.forEach((e) => {
-        e.trackExposure(r);
+function r(e, t, n) {
+    t.forEach((e) => {
+        e.trackExposure(n);
     });
 }
-r(987338);
-class l {
+n.d(t, { E: () => a }), n(411104), n(47120), n(987338);
+class a {
     registeredExperimentIds() {
         return this.experiments.map((e) => e.definition.id);
     }
     trigger() {
-        s(this.triggerPoint, this.experiments, this.params);
+        r(this.triggerPoint, this.experiments, this.params);
     }
     getExperiments() {
         return this.experiments;
     }
-    constructor(e, n, r) {
-        o(this, 'experiments', void 0), o(this, 'triggerPoint', void 0), o(this, 'params', void 0);
-        (this.experiments = e), (this.triggerPoint = n), (this.params = r);
+    constructor(e, t, n) {
+        i(this, 'experiments', void 0), i(this, 'triggerPoint', void 0), i(this, 'params', void 0), (this.experiments = e), (this.triggerPoint = t), (this.params = n);
     }
 }

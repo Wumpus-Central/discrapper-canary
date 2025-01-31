@@ -1,59 +1,55 @@
-r.d(n, {
-    h: function () {
-        return g;
-    }
-});
-var i = r(952265),
-    a = r(570140),
-    o = r(281956),
-    s = r(200498),
-    l = r(368442),
-    u = r(672339),
-    c = r(653175),
-    d = r(592125),
-    f = r(430824),
-    p = r(607744),
-    h = r(944486),
-    _ = r(979651),
-    m = r(934415);
-let g = function (e, n) {
-    let g = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        E = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        v = d.Z.getChannel(e),
-        y = _.Z.getCurrentClientVoiceChannelId(null != n ? n : null) === e,
-        b = null != v ? p.Z.getCheck(v.guild_id) : null;
-    if (!(null != n && (0, o.n)(n)) && (null == b || !!b.canChat || !!(0, s.jU)(v))) {
-        if (null != v && !y) {
-            let e = (0, m.rY)(v, _.Z, f.Z);
-            if (e && v.isGuildStageVoice() && (0, l.xJ)(v.id)) {
+n.d(t, { h: () => m });
+var i = n(952265),
+    r = n(570140),
+    a = n(281956),
+    s = n(200498),
+    o = n(368442),
+    l = n(672339),
+    u = n(653175),
+    c = n(592125),
+    d = n(430824),
+    f = n(607744),
+    _ = n(944486),
+    p = n(979651),
+    h = n(934415);
+let m = function (e, t) {
+    let m = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        g = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        E = c.Z.getChannel(e),
+        v = p.Z.getCurrentClientVoiceChannelId(null != t ? t : null) === e,
+        y = null != E ? f.Z.getCheck(E.guild_id) : null;
+    if (!(null != t && (0, a.n)(t)) && (null == y || y.canChat || (0, s.jU)(E))) {
+        if (null != E && !v) {
+            let e = (0, h.rY)(E, p.Z, d.Z);
+            if (e && E.isGuildStageVoice() && (0, o.xJ)(E.id)) {
                 (0, i.ZD)(async () => {
-                    let { default: e } = await r.e('46398').then(r.bind(r, 523794));
-                    return (n) =>
+                    let { default: e } = await n.e('46398').then(n.bind(n, 523794));
+                    return (t) =>
                         e({
-                            channel: v,
-                            ...n
+                            channel: E,
+                            ...t
                         });
                 });
                 return;
             }
             if (e) {
                 (0, i.ZD)(async () => {
-                    let { default: e } = await r.e('86465').then(r.bind(r, 997308));
-                    return (n) => e(n);
+                    let { default: e } = await n.e('86465').then(n.bind(n, 997308));
+                    return (t) => e(t);
                 });
                 return;
             }
         }
-        g && (0, u.eH)(), (0, c.Z)(I, e, E, g);
+        m && (0, l.eH)(), (0, u.Z)(I, e, g, m);
     }
     function I() {
-        a.Z.dispatch({
+        r.Z.dispatch({
             type: 'VOICE_CHANNEL_SELECT',
-            guildId: n,
+            guildId: t,
             channelId: e,
-            currentVoiceChannelId: h.Z.getVoiceChannelId(),
-            video: g,
-            stream: E
+            currentVoiceChannelId: _.Z.getVoiceChannelId(),
+            video: m,
+            stream: g
         });
     }
 };

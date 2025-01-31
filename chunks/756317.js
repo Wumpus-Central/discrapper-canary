@@ -1,13 +1,15 @@
-e.exports = {
-    role: 'role_f9575e pill_f9575e',
-    roleFlowerStar: 'roleFlowerStar_f9575e',
-    roleDot: 'roleDot_f9575e',
-    roleRemoveButtonCanRemove: 'roleRemoveButtonCanRemove_f9575e',
-    roleRemoveButton: 'roleRemoveButton_f9575e',
-    roleIcon: 'roleIcon_f9575e',
-    roleName: 'roleName_f9575e',
-    roleRemoveIcon: 'roleRemoveIcon_f9575e',
-    roleRemoveIconFocused: 'roleRemoveIconFocused_f9575e',
-    roleVerifiedIcon: 'roleVerifiedIcon_f9575e',
-    roleCircle: 'roleCircle_f9575e'
+var i = {
+    pill: 'pill_dfa8b6',
+    role: 'role_dfa8b6 pill_dfa8b6',
+    roleFlowerStar: 'roleFlowerStar_dfa8b6',
+    roleDot: 'roleDot_dfa8b6',
+    roleRemoveButtonCanRemove: 'roleRemoveButtonCanRemove_dfa8b6',
+    roleRemoveButton: 'roleRemoveButton_dfa8b6',
+    roleIcon: 'roleIcon_dfa8b6',
+    roleName: 'roleName_dfa8b6',
+    roleRemoveIcon: 'roleRemoveIcon_dfa8b6',
+    roleRemoveIconFocused: 'roleRemoveIconFocused_dfa8b6',
+    roleVerifiedIcon: 'roleVerifiedIcon_dfa8b6',
+    roleCircle: 'roleCircle_dfa8b6'
 };
+e.exports = i;

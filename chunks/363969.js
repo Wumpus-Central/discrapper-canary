@@ -1,5 +1,6 @@
-e.exports = {
-    button: 'button_a79c58',
-    open: 'open_a79c58',
-    withHighlight: 'withHighlight_a79c58'
+var i = {
+    button: 'button__353c4',
+    open: 'open__353c4',
+    withHighlight: 'withHighlight__353c4'
 };
+e.exports = i;

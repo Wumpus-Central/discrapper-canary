@@ -1,4 +1,5 @@
-e.exports = {
-    paymentModalLockIcon: 'paymentModalLockIcon_f6be15',
-    lockIcon: 'lockIcon_f6be15'
+var i = {
+    paymentModalLockIcon: 'paymentModalLockIcon__9a648',
+    lockIcon: 'lockIcon__9a648'
 };
+e.exports = i;

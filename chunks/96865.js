@@ -1,6 +1,7 @@
-e.exports = {
-    errorContainer: 'errorContainer_f89360',
-    errorIcon: 'errorIcon_f89360',
-    closeIcon: 'closeIcon_f89360',
-    errorText: 'errorText_f89360'
+var i = {
+    errorContainer: 'errorContainer__07ded',
+    errorIcon: 'errorIcon__07ded',
+    closeIcon: 'closeIcon__07ded',
+    errorText: 'errorText__07ded'
 };
+e.exports = i;

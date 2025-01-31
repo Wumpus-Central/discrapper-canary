@@ -1,54 +1,50 @@
-t.d(n, {
-    jn: function () {
-        return f;
-    },
-    lX: function () {
-        return m;
-    }
+n.d(t, {
+    jn: () => m,
+    lX: () => x
 });
-var i = t(200651);
-t(192379);
-var r = t(120356),
-    l = t.n(r),
-    s = t(481060),
-    o = t(476770),
-    u = t(592286),
-    a = t(388032),
-    c = t(484979);
+var i = n(200651);
+n(192379);
+var l = n(120356),
+    r = n.n(l),
+    s = n(481060),
+    o = n(476770),
+    a = n(592286),
+    u = n(388032),
+    c = n(484979);
 function d(e) {
-    let { value: n, placeholder: t, onChange: r, disabled: o, className: a, autofocus: d } = e;
-    return (0, i.jsx)(s.TextArea, {
-        className: l()(c.paragraphFieldBody, a),
-        maxLength: u.RS,
-        value: null != n ? n : '',
-        placeholder: null != t ? t : '',
-        onChange: r,
+    let { value: t, placeholder: n, onChange: l, disabled: o, className: u, autofocus: d } = e;
+    return (0, i.jsx)(s.Kx8, {
+        className: r()(c.paragraphFieldBody, u),
+        maxLength: a.RS,
+        value: null != t ? t : '',
+        placeholder: null != n ? n : '',
+        onChange: l,
         disabled: o,
         autoFocus: d,
         autosize: !0,
         showRemainingCharacterCount: !o
     });
 }
-function f(e) {
-    let { formField: n } = e;
+function m(e) {
+    let { formField: t } = e;
     return (0, i.jsx)(o.CA, {
-        title: n.label,
+        title: t.label,
         children: (0, i.jsx)(d, {
             className: c.disabledFieldBackground,
-            value: n.response,
+            value: t.response,
             disabled: !0
         })
     });
 }
-function m(e) {
-    let { formField: n, autofocus: t, onChange: r } = e;
+function x(e) {
+    let { formField: t, autofocus: n, onChange: l } = e;
     return (0, i.jsx)(o.hK, {
-        title: n.label,
+        title: t.label,
         children: (0, i.jsx)(d, {
-            value: n.response,
-            onChange: r,
-            autofocus: t,
-            placeholder: a.intl.string(a.t['Sqn+Wl'])
+            value: t.response,
+            onChange: l,
+            autofocus: n,
+            placeholder: u.intl.string(u.t['Sqn+Wl'])
         })
     });
 }

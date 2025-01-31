@@ -1,9 +1,3 @@
-var i, l;
-n.d(t, {
-    D: function () {
-        return i;
-    }
-}),
-    ((l = i || (i = {})).ACTIVITY = 'ACTIVITY'),
-    (l.SOUNDBOARD = 'SOUNDBOARD'),
-    (l.EMOJI = 'EMOJI');
+n.d(t, { D: () => l });
+var i,
+    l = (((i = {}).ACTIVITY = 'ACTIVITY'), (i.SOUNDBOARD = 'SOUNDBOARD'), (i.EMOJI = 'EMOJI'), i);

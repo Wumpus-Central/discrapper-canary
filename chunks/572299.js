@@ -1,21 +1,17 @@
-n.d(e, {
-    n: function () {
-        return o;
-    }
-});
-var r = n(101284),
-    i = n(622916),
-    s = n(263449);
+s.d(e, { n: () => o });
+var n = s(101284),
+    i = s(622916),
+    r = s(263449);
 function o(t, e) {
-    let n = (0, s.s3)(),
-        o = (0, s.aF)();
-    if (!n) return;
-    let { beforeBreadcrumb: u = null, maxBreadcrumbs: c = 100 } = n.getOptions();
+    let s = (0, r.s3)(),
+        o = (0, r.aF)();
+    if (!s) return;
+    let { beforeBreadcrumb: a = null, maxBreadcrumbs: c = 100 } = s.getOptions();
     if (c <= 0) return;
-    let a = {
-            timestamp: (0, r.yW)(),
+    let h = {
+            timestamp: (0, n.yW)(),
             ...t
         },
-        h = u ? (0, i.Cf)(() => u(a, e)) : a;
-    null !== h && (n.emit && n.emit('beforeAddBreadcrumb', h, e), o.addBreadcrumb(h, c));
+        u = a ? (0, i.Cf)(() => a(h, e)) : h;
+    null !== u && (s.emit && s.emit('beforeAddBreadcrumb', u, e), o.addBreadcrumb(u, c));
 }

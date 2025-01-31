@@ -1,58 +1,54 @@
-r.d(t, {
-    q: function () {
-        return s;
-    }
-});
-var a = r(598470),
-    n = r(617726),
-    _ = r(14588),
-    o = r(928541),
-    E = r(622916),
-    i = r(116698),
-    c = r(255768);
-function s(e, t, r = (0, a.x)(e.bufferSize || 64)) {
-    let s = {};
+a.d(e, { q: () => E });
+var r = a(598470),
+    n = a(617726),
+    o = a(14588),
+    _ = a(928541),
+    i = a(622916),
+    c = a(116698),
+    s = a(255768);
+function E(t, e, a = (0, r.x)(t.bufferSize || 64)) {
+    let u = {};
     return {
-        send: function (a) {
-            let I = [];
+        send: function (r) {
+            let E = [];
             if (
-                ((0, n.gv)(a, (t, r) => {
-                    let a = (0, n.mL)(r);
-                    if ((0, _.Q)(s, a)) {
-                        let n = l(t, r);
-                        e.recordDroppedEvent('ratelimit_backoff', a, n);
-                    } else I.push(t);
+                ((0, n.gv)(r, (e, a) => {
+                    let r = (0, n.mL)(a);
+                    if ((0, o.Q)(u, r)) {
+                        let n = l(e, a);
+                        t.recordDroppedEvent('ratelimit_backoff', r, n);
+                    } else E.push(e);
                 }),
-                0 === I.length)
+                0 === E.length)
             )
-                return (0, o.WD)({});
-            let u = (0, n.Jd)(a[0], I),
-                R = (t) => {
-                    (0, n.gv)(u, (r, a) => {
-                        let _ = l(r, a);
-                        e.recordDroppedEvent(t, (0, n.mL)(a), _);
+                return (0, _.WD)({});
+            let I = (0, n.Jd)(r[0], E),
+                R = (e) => {
+                    (0, n.gv)(I, (a, r) => {
+                        let o = l(a, r);
+                        t.recordDroppedEvent(e, (0, n.mL)(r), o);
                     });
                 };
-            return r
+            return a
                 .add(() =>
-                    t({ body: (0, n.V$)(u) }).then(
-                        (e) => (void 0 !== e.statusCode && (e.statusCode < 200 || e.statusCode >= 300) && c.X && E.kg.warn(`Sentry responded with status code ${e.statusCode} to sent event.`), (s = (0, _.WG)(s, e)), e),
-                        (e) => {
-                            throw (R('network_error'), e);
+                    e({ body: (0, n.V$)(I) }).then(
+                        (t) => (void 0 !== t.statusCode && (t.statusCode < 200 || t.statusCode >= 300) && s.X && i.kg.warn(`Sentry responded with status code ${t.statusCode} to sent event.`), (u = (0, o.WG)(u, t)), t),
+                        (t) => {
+                            throw (R('network_error'), t);
                         }
                     )
                 )
                 .then(
-                    (e) => e,
-                    (e) => {
-                        if (e instanceof i.b) return c.X && E.kg.error('Skipped sending event because buffer is full.'), R('queue_overflow'), (0, o.WD)({});
-                        throw e;
+                    (t) => t,
+                    (t) => {
+                        if (t instanceof c.b) return s.X && i.kg.error('Skipped sending event because buffer is full.'), R('queue_overflow'), (0, _.WD)({});
+                        throw t;
                     }
                 );
         },
-        flush: (e) => r.drain(e)
+        flush: (t) => a.drain(t)
     };
 }
-function l(e, t) {
-    if ('event' === t || 'transaction' === t) return Array.isArray(e) ? e[1] : void 0;
+function l(t, e) {
+    if ('event' === e || 'transaction' === e) return Array.isArray(t) ? t[1] : void 0;
 }

@@ -1,10 +1,6 @@
 i.d(o, {
-    Rl: function () {
-        return n;
-    },
-    rk: function () {
-        return s;
-    }
+    Rl: () => n,
+    rk: () => s
 });
 let n = async (e) =>
         window.Meticulous?.isRunningAsTest
@@ -20,7 +16,7 @@ let n = async (e) =>
                       }
                   )
               ),
-    t = ({ projectId: e, recordingToken: o, uploadIntervalMs: i, snapshotLinkedStylesheets: n, commitHash: t, maxMsToBlockFor: s, snippetsBaseUrl: r, forceRecording: c, middleware: d, responseSanitizers: u, isProduction: l }) => {
+    t = ({ projectId: e, recordingToken: o, uploadIntervalMs: i, snapshotLinkedStylesheets: n, commitHash: t, maxMsToBlockFor: s, snippetsBaseUrl: r, forceRecording: c, middleware: d, responseSanitizers: l, isProduction: u }) => {
         let a = !1;
         return new Promise((_, E) => {
             let w = s ?? 2000;
@@ -32,16 +28,15 @@ let n = async (e) =>
                         });
                 }, w);
             let p = document.createElement('script');
-            p.type = 'text/javascript';
-            p.src = new URL('v1/meticulous-manual-init.js', r || 'https://snippet.meticulous.ai').href;
+            (p.type = 'text/javascript'), (p.src = new URL('v1/meticulous-manual-init.js', r || 'https://snippet.meticulous.ai').href);
             let S = window;
             (S.METICULOUS_RECORDING_TOKEN = o ?? e),
                 void 0 !== i && (S.METICULOUS_UPLOAD_INTERVAL_MS = i),
                 void 0 !== t && (S.METICULOUS_APP_COMMIT_HASH = t),
                 void 0 !== n && (S.METICULOUS_SNAPSHOT_LINKED_STYLESHEETS = n),
                 void 0 !== c && (S.METICULOUS_FORCE_RECORDING = c),
-                void 0 !== l && (S.METICULOUS_IS_PRODUCTION_ENVIRONMENT = l),
-                null != u && u.length > 0 && (S.METICULOUS_NETWORK_RESPONSE_SANITIZERS = u),
+                void 0 !== u && (S.METICULOUS_IS_PRODUCTION_ENVIRONMENT = u),
+                null != l && l.length > 0 && (S.METICULOUS_NETWORK_RESPONSE_SANITIZERS = l),
                 null != d && d.length > 0 && (S.METICULOUS_RECORDER_MIDDLEWARE_V1 = d),
                 (p.onload = function () {
                     if (a) {

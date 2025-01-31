@@ -1,6 +1,7 @@
+r.d(t, { Z: () => s });
 var a = r(665352),
     n = r(855930);
-t.Z = new a.Z({
+let s = new a.Z({
     id: 'hsv',
     name: 'HSV',
     coords: {

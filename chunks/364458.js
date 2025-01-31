@@ -1,18 +1,13 @@
-r.d(n, {
-    Z: function () {
-        return a;
-    }
-});
-var i = r(47120);
-function a(e) {
-    let n = {};
-    for (let r of e)
-        for (let e in r)
-            e in n
-                ? (n[e] = {
-                      ...n[e],
-                      ...r[e]
+function i(e) {
+    let t = {};
+    for (let n of e)
+        for (let e in n)
+            e in t
+                ? (t[e] = {
+                      ...t[e],
+                      ...n[e]
                   })
-                : (n[e] = { ...r[e] });
-    return n;
+                : (t[e] = { ...n[e] });
+    return t;
 }
+n.d(t, { Z: () => i }), n(47120);

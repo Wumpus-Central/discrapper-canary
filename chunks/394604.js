@@ -1,9 +1,10 @@
-e.exports = {
-    textArea: 'textArea_a2b402',
-    resizeable: 'resizeable_a2b402',
-    inputMaxLength: 'inputMaxLength_a2b402',
-    flex: 'flex_a2b402',
-    maxLength: 'maxLength_a2b402',
-    errorOverflow: 'errorOverflow_a2b402',
-    errorMessage: 'errorMessage_a2b402'
+var i = {
+    textArea: 'textArea__7aff3',
+    resizeable: 'resizeable__7aff3',
+    inputMaxLength: 'inputMaxLength__7aff3',
+    flex: 'flex__7aff3',
+    maxLength: 'maxLength__7aff3',
+    errorOverflow: 'errorOverflow__7aff3',
+    errorMessage: 'errorMessage__7aff3'
 };
+e.exports = i;

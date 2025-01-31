@@ -1,151 +1,146 @@
-r.d(n, {
-    Z: function () {
-        return I;
-    }
-});
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(990547),
-    l = r(442837),
-    u = r(481060),
-    c = r(239091),
-    d = r(40851),
-    f = r(213609),
-    p = r(314910),
-    h = r(210887),
-    _ = r(574254),
-    m = r(585483),
-    g = r(981631);
-function E(e, n, r) {
+n.d(t, { Z: () => y }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(990547),
+    s = n(442837),
+    o = n(481060),
+    l = n(239091),
+    u = n(40851),
+    c = n(213609),
+    d = n(314910),
+    f = n(210887),
+    _ = n(574254),
+    p = n(585483),
+    h = n(981631);
+function m(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-function v() {
+function g() {
     window.getSelection().removeAllRanges();
 }
-let y = (e) => {
-    let { children: n, close: r, onUnmount: i, target: l, rect: c, position: h, align: _, impressionName: m, impressionProperties: E, disableClickTrap: y = !1 } = e,
-        b = o.useRef(null),
-        I = o.useMemo(() => ({ current: l }), [l]),
-        T = o.useRef(r);
-    o.useEffect(() => {
-        T.current = r;
+let E = (e) => {
+    let { children: t, close: n, onUnmount: s, target: l, rect: f, position: _, align: p, impressionName: m, impressionProperties: E, disableClickTrap: v = !1 } = e,
+        y = r.useRef(null),
+        I = r.useMemo(() => ({ current: l }), [l]),
+        b = r.useRef(n);
+    r.useEffect(() => {
+        b.current = n;
     }),
-        o.useEffect(() => {
-            var e, n, r;
-            let i = null === (e = b.current) || void 0 === e ? void 0 : e.elementRef.current;
+        r.useEffect(() => {
+            var e, t, n;
+            let i = null === (e = y.current) || void 0 === e ? void 0 : e.elementRef.current;
             if (null == i) return;
-            let a = (e) => {
-                var n;
-                let r = e.target,
-                    i = null === (n = b.current) || void 0 === n ? void 0 : n.elementRef.current;
-                if (!(null != i && (0, u.referencePortalAwareContains)(i, r))) v(), T.current();
+            let r = (e) => {
+                var t;
+                let n = e.target,
+                    i = null === (t = y.current) || void 0 === t ? void 0 : t.elementRef.current;
+                !(null != i && (0, o.ty$)(i, n)) && (g(), b.current());
             };
             return (
-                null === (n = i.ownerDocument) || void 0 === n || n.addEventListener('click', a, !0),
-                null === (r = i.ownerDocument) || void 0 === r || r.addEventListener('contextmenu', a, !0),
+                null === (t = i.ownerDocument) || void 0 === t || t.addEventListener('click', r, !0),
+                null === (n = i.ownerDocument) || void 0 === n || n.addEventListener('contextmenu', r, !0),
                 () => {
-                    var e, n;
-                    null === (e = i.ownerDocument) || void 0 === e || e.removeEventListener('click', a, !0), null === (n = i.ownerDocument) || void 0 === n || n.removeEventListener('contextmenu', a, !0);
+                    var e, t;
+                    null === (e = i.ownerDocument) || void 0 === e || e.removeEventListener('click', r, !0), null === (t = i.ownerDocument) || void 0 === t || t.removeEventListener('contextmenu', r, !0);
                 }
             );
         }, []);
-    let S = o.useRef(i);
-    o.useEffect(() => void (S.current = i)),
-        o.useEffect(
+    let T = r.useRef(s);
+    r.useEffect(() => void (T.current = s)),
+        r.useEffect(
             () => () => {
                 var e;
-                return null === (e = S.current) || void 0 === e ? void 0 : e.call(S);
+                return null === (e = T.current) || void 0 === e ? void 0 : e.call(T);
             },
             []
         ),
-        o.useLayoutEffect(() => {
+        r.useLayoutEffect(() => {
             var e;
-            null === (e = b.current) || void 0 === e || e.updatePosition();
+            null === (e = y.current) || void 0 === e || e.updatePosition();
         }),
-        (0, f.Z)({
-            type: s.ImpressionTypes.MENU,
+        (0, c.Z)({
+            type: a.ImpressionTypes.MENU,
             name: m,
             properties: E
         });
-    let A = (0, d.Aq)(),
-        C = o.useCallback(() => {
-            A.dispatch(g.CkL.POPOUT_SHOW);
-        }, [A]),
-        N = o.useCallback(() => {
-            A.dispatch(g.CkL.POPOUT_HIDE);
-        }, [A]);
-    return (0, a.jsx)(p.W5, {
-        onMount: C,
+    let S = (0, u.Aq)(),
+        A = r.useCallback(() => {
+            S.dispatch(h.CkL.POPOUT_SHOW);
+        }, [S]),
+        N = r.useCallback(() => {
+            S.dispatch(h.CkL.POPOUT_HIDE);
+        }, [S]);
+    return (0, i.jsx)(d.W5, {
+        onMount: A,
         onUnmount: N,
         targetRef: I,
-        overrideTargetRect: c,
-        position: null != h ? h : 'right',
-        align: null != _ ? _ : 'top',
+        overrideTargetRect: f,
+        position: null != _ ? _ : 'right',
+        align: null != p ? p : 'top',
         autoInvert: !0,
-        ref: b,
+        ref: y,
         nudgeAlignIntoViewport: !0,
-        clickTrap: !y,
-        children: n
+        clickTrap: !v,
+        children: t
     });
 };
-class b extends o.PureComponent {
+class v extends r.PureComponent {
     componentDidMount() {
-        let { renderLazy: e, renderWindow: n } = this.props;
-        if ((n.addEventListener('resize', this.closeResize, !0), m.S.subscribe(g.CkL.CONTEXT_MENU_CLOSE, this.props.closeContextMenu), null != e)) {
-            let n = setTimeout(() => {
-                this.setState({ render: () => (0, a.jsx)(u.MenuSpinner, {}) });
+        let { renderLazy: e, renderWindow: t } = this.props;
+        if ((t.addEventListener('resize', this.closeResize, !0), p.S.subscribe(h.CkL.CONTEXT_MENU_CLOSE, this.props.closeContextMenu), null != e)) {
+            let t = setTimeout(() => {
+                this.setState({ render: () => (0, i.jsx)(o.TlX, {}) });
             }, 300);
             e().then((e) => {
-                this.setState({ render: e }), clearTimeout(n);
+                this.setState({ render: e }), clearTimeout(t);
             });
         }
     }
     componentDidUpdate(e) {
-        let { isOpen: n } = this.props;
-        if (!n && e.isOpen) {
-            var r, i;
-            null === (i = e.config) || void 0 === i || null === (r = i.onClose) || void 0 === r || r.call(i);
+        let { isOpen: t } = this.props;
+        if (!t && e.isOpen) {
+            var n, i;
+            null === (i = e.config) || void 0 === i || null === (n = i.onClose) || void 0 === n || n.call(i);
         }
     }
     componentWillUnmount() {
         let { renderWindow: e } = this.props;
-        e.removeEventListener('resize', this.closeResize, !0), m.S.unsubscribe(g.CkL.CONTEXT_MENU_CLOSE, this.props.closeContextMenu);
+        e.removeEventListener('resize', this.closeResize, !0), p.S.unsubscribe(h.CkL.CONTEXT_MENU_CLOSE, this.props.closeContextMenu);
     }
     render() {
-        var e, n;
-        let { appContext: r, target: i, isOpen: o, theme: s, config: l, rect: u } = this.props,
-            c = null !== (e = this.state.render) && void 0 !== e ? e : this.props.render;
-        return o && null != u && null != l && null != i && null != c && l.context === r
-            ? (0, a.jsx)(y, {
-                  target: i,
-                  rect: u,
+        var e, t;
+        let { appContext: n, target: r, isOpen: a, theme: s, config: o, rect: l } = this.props,
+            u = null !== (e = this.state.render) && void 0 !== e ? e : this.props.render;
+        return a && null != l && null != o && null != r && null != u && o.context === n
+            ? (0, i.jsx)(E, {
+                  target: r,
+                  rect: l,
                   close: this.close,
-                  onUnmount: l.onClose,
-                  align: l.align,
-                  position: l.position,
-                  impressionName: l.impressionName,
-                  impressionProperties: l.impressionProperties,
-                  disableClickTrap: null !== (n = l.disableClickTrap) && void 0 !== n && n,
-                  children: (e, n) => {
-                      let { position: a } = e;
-                      return c({
-                          position: a,
+                  onUnmount: o.onClose,
+                  align: o.align,
+                  position: o.position,
+                  impressionName: o.impressionName,
+                  impressionProperties: o.impressionProperties,
+                  disableClickTrap: null !== (t = o.disableClickTrap) && void 0 !== t && t,
+                  children: (e, t) => {
+                      let { position: i } = e;
+                      return u({
+                          position: i,
                           theme: s,
-                          onHeightUpdate: n,
-                          config: l,
-                          target: i,
-                          context: r
+                          onHeightUpdate: t,
+                          config: o,
+                          target: r,
+                          context: n
                       });
                   }
               })
@@ -153,39 +148,39 @@ class b extends o.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            E(this, 'state', { render: void 0 }),
-            E(this, 'closeResize', (e) => {
-                let { renderWindow: n } = this.props;
-                if (e.target === n) this.close();
+            m(this, 'state', { render: void 0 }),
+            m(this, 'closeResize', (e) => {
+                let { renderWindow: t } = this.props;
+                e.target === t && this.close();
             }),
-            E(this, 'close', () => {
-                let { isOpen: e, closeContextMenu: n } = this.props;
-                e && n();
+            m(this, 'close', () => {
+                let { isOpen: e, closeContextMenu: t } = this.props;
+                e && t();
             });
     }
 }
-function I() {
+function y() {
     let {
             contextMenu: e,
-            version: n,
-            isOpen: r
-        } = (0, l.cj)([_.Z], () => ({
+            version: t,
+            isOpen: n
+        } = (0, s.cj)([_.Z], () => ({
             contextMenu: _.Z.getContextMenu(),
             version: _.Z.version,
             isOpen: _.Z.isOpen()
         })),
-        i = (0, l.e7)([h.Z], () => h.Z.theme),
-        { appContext: s, renderWindow: u } = o.useContext(d.ZP);
-    return (0, a.jsx)(
-        b,
+        a = (0, s.e7)([f.Z], () => f.Z.theme),
+        { appContext: o, renderWindow: c } = r.useContext(u.ZP);
+    return (0, i.jsx)(
+        v,
         {
-            appContext: s,
-            renderWindow: u,
+            appContext: o,
+            renderWindow: c,
             ...e,
-            isOpen: r,
-            theme: i,
-            closeContextMenu: c.Zy
+            isOpen: n,
+            theme: a,
+            closeContextMenu: l.Zy
         },
-        n
+        t
     );
 }

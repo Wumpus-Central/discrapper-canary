@@ -1,53 +1,45 @@
-r.d(n, {
-    Dc: function () {
-        return f;
-    },
-    OA: function () {
-        return u;
-    },
-    _C: function () {
-        return d;
-    },
-    kT: function () {
-        return c;
-    }
+n.d(t, {
+    Dc: () => d,
+    OA: () => l,
+    _C: () => c,
+    kT: () => u
 });
-var i = r(823379),
-    a = r(63568),
-    o = r(246364),
-    s = r(592286),
-    l = r(981631);
-let u = (e) => {
-    let { required: n, response: r, field_type: a } = e;
-    if (!n) return !0;
-    if (null == r) return !1;
-    switch (a) {
-        case o.QJ.TERMS:
-        case o.QJ.VERIFICATION:
-            return !!r;
-        case o.QJ.TEXT_INPUT:
-        case o.QJ.PARAGRAPH:
-            return 'string' == typeof r && '' !== r.trim();
-        case o.QJ.MULTIPLE_CHOICE:
-            return 'number' == typeof r;
+var i = n(823379),
+    r = n(63568),
+    a = n(246364),
+    s = n(592286),
+    o = n(981631);
+let l = (e) => {
+    let { required: t, response: n, field_type: r } = e;
+    if (!t) return !0;
+    if (null == n) return !1;
+    switch (r) {
+        case a.QJ.TERMS:
+        case a.QJ.VERIFICATION:
+            return !!n;
+        case a.QJ.TEXT_INPUT:
+        case a.QJ.PARAGRAPH:
+            return 'string' == typeof n && '' !== n.trim();
+        case a.QJ.MULTIPLE_CHOICE:
+            return 'number' == typeof n;
         default:
-            return (0, i.vE)(a);
+            return (0, i.vE)(r);
     }
 };
-function c(e) {
+function u(e) {
     return s.lI.has(null == e ? void 0 : e.field_type);
 }
-function d(e) {
+function c(e) {
     return s.hZ.has(null == e ? void 0 : e.field_type);
 }
-function f(e) {
+function d(e) {
     if (null == e) return !1;
-    let { enabled: n } = a.tW.getCurrentConfig(
+    let { enabled: t } = r.tW.getCurrentConfig(
         {
             guildId: e.id,
             location: 'GuildRecord'
         },
         { autoTrackExposure: !1 }
     );
-    return n ? e.hasFeature(l.oNc.MEMBER_VERIFICATION_GATE_ENABLED) : e.hasVerificationGate();
+    return t ? e.hasFeature(o.oNc.MEMBER_VERIFICATION_GATE_ENABLED) : e.hasVerificationGate();
 }

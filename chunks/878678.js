@@ -1,6 +1,7 @@
-e.exports = {
-    flowerStarContainer: 'flowerStarContainer_c91f7d',
-    flowerStar: 'flowerStar_c91f7d',
-    childContainer: 'childContainer_c91f7d',
-    redesignIconChildContainer: 'redesignIconChildContainer_c91f7d'
+var i = {
+    flowerStarContainer: 'flowerStarContainer__3e3b0',
+    flowerStar: 'flowerStar__3e3b0',
+    childContainer: 'childContainer__3e3b0',
+    redesignIconChildContainer: 'redesignIconChildContainer__3e3b0'
 };
+e.exports = i;

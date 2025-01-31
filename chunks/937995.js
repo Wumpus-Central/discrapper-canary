@@ -1,83 +1,77 @@
-r.d(n, {
-    ZP: function () {
-        return c;
-    },
-    h9: function () {
-        return u;
-    },
-    nM: function () {
-        return l;
-    }
-});
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(846519);
-let l = o.createContext({
+n.d(t, {
+    ZP: () => l,
+    h9: () => o,
+    nM: () => s
+}),
+    n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(846519);
+let s = r.createContext({
         onPreventIdle: () => null,
         onAllowIdle: () => null,
         onForceIdle: () => null,
         onActive: () => null
     }),
-    u = o.createContext(!1);
-function c(e) {
-    let { children: n, timeout: r } = e,
-        [i, c] = o.useState(!1),
-        d = o.useRef(new Set()),
-        f = o.useRef(null);
-    o.useEffect(
+    o = r.createContext(!1);
+function l(e) {
+    let { children: t, timeout: n } = e,
+        [l, u] = r.useState(!1),
+        c = r.useRef(new Set()),
+        d = r.useRef(null);
+    r.useEffect(
         () => (
-            (f.current = new s.sW(r, () => c(!0))),
-            f.current.delay(),
+            (d.current = new a.sW(n, () => u(!0))),
+            d.current.delay(),
             () => {
                 var e;
-                null === (e = f.current) || void 0 === e || e.cancel(), (f.current = null);
+                null === (e = d.current) || void 0 === e || e.cancel(), (d.current = null);
             }
         ),
-        [r]
+        [n]
     );
-    let p = o.useCallback(
+    let f = r.useCallback(
             (e) => {
-                var n;
-                c(!1), d.current.add(e), null === (n = f.current) || void 0 === n || n.cancel();
+                var t;
+                u(!1), c.current.add(e), null === (t = d.current) || void 0 === t || t.cancel();
             },
-            [d, f, c]
+            [c, d, u]
         ),
-        h = o.useCallback(
+        _ = r.useCallback(
             (e) => {
-                if ((d.current.delete(e), 0 === d.current.size)) {
-                    var n;
-                    null === (n = f.current) || void 0 === n || n.delay();
+                if ((c.current.delete(e), 0 === c.current.size)) {
+                    var t;
+                    null === (t = d.current) || void 0 === t || t.delay();
                 }
             },
-            [d, f]
+            [c, d]
         ),
-        _ = o.useCallback(() => {
-            if ((c(!1), 0 === d.current.size)) {
+        p = r.useCallback(() => {
+            if ((u(!1), 0 === c.current.size)) {
                 var e;
-                null === (e = f.current) || void 0 === e || e.delay();
+                null === (e = d.current) || void 0 === e || e.delay();
             }
-        }, [d, f, c]),
-        m = o.useCallback(() => {
+        }, [c, d, u]),
+        h = r.useCallback(() => {
             var e;
-            if (!(d.current.size > 0)) null === (e = f.current) || void 0 === e || e.cancel(), c(!0);
-        }, [f, c]),
-        g = o.useMemo(
+            !(c.current.size > 0) && (null === (e = d.current) || void 0 === e || e.cancel(), u(!0));
+        }, [d, u]),
+        m = r.useMemo(
             () => ({
-                onAllowIdle: h,
-                onPreventIdle: p,
-                onActive: _,
-                onForceIdle: m
+                onAllowIdle: _,
+                onPreventIdle: f,
+                onActive: p,
+                onForceIdle: h
             }),
-            [h, p, _, m]
+            [_, f, p, h]
         );
-    return (0, a.jsx)(u.Provider, {
-        value: i,
-        children: (0, a.jsx)(l.Provider, {
-            value: g,
-            children: n({
-                idle: i,
-                ...g
+    return (0, i.jsx)(o.Provider, {
+        value: l,
+        children: (0, i.jsx)(s.Provider, {
+            value: m,
+            children: t({
+                idle: l,
+                ...m
             })
         })
     });

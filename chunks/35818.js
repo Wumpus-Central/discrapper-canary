@@ -1,9 +1,5 @@
-n.d(t, {
-    Q: function () {
-        return r;
-    }
-});
+n.d(t, { Q: () => l });
 let i = new (n(107965).Z)();
-function r() {
+function l() {
     i.quitAndInstall();
 }

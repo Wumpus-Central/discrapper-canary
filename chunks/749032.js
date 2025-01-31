@@ -1,4 +1,5 @@
-e.exports = {
-    confettiTriggerWrapper: 'confettiTriggerWrapper_a53050',
-    confettiTrigger: 'confettiTrigger_a53050'
+var i = {
+    confettiTriggerWrapper: 'confettiTriggerWrapper_d00019',
+    confettiTrigger: 'confettiTrigger_d00019'
 };
+e.exports = i;

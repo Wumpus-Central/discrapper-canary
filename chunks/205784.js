@@ -1,68 +1,63 @@
-l.r(t),
-    l.d(t, {
-        default: function () {
-            return p;
-        }
-    });
-var n = l(200651);
-l(192379);
-var i = l(442837),
-    d = l(481060),
-    u = l(239091),
-    r = l(749210),
-    a = l(664915),
-    o = l(771845),
-    s = l(181945),
-    c = l(945983),
-    f = l(981631),
-    m = l(388032);
-function p(e) {
-    var t;
-    let { folderId: p, folderName: b, folderColor: g, unread: j, onSelect: x } = e,
-        Z = (0, i.e7)([o.ZP], () => o.ZP.getGuildFolderById(p), [p]),
-        k = (0, c.Z)(null !== (t = null == Z ? void 0 : Z.guildIds) && void 0 !== t ? t : []),
-        M = (0, i.e7)([a.Z], () => a.Z.getExpandedFolders().size > 0);
-    return (0, n.jsxs)(d.Menu, {
+t.d(l, { default: () => b });
+var i = t(200651);
+t(192379);
+var n = t(442837),
+    d = t(481060),
+    r = t(239091),
+    a = t(749210),
+    s = t(664915),
+    o = t(771845),
+    u = t(181945),
+    c = t(945983),
+    f = t(981631),
+    m = t(388032);
+function b(e) {
+    var l;
+    let { folderId: b, folderName: g, folderColor: h, unread: p, onSelect: k } = e,
+        Z = (0, n.e7)([o.ZP], () => o.ZP.getGuildFolderById(b), [b]),
+        j = (0, c.Z)(null !== (l = null == Z ? void 0 : Z.guildIds) && void 0 !== l ? l : []),
+        x = (0, n.e7)([s.Z], () => s.Z.getExpandedFolders().size > 0);
+    return (0, i.jsxs)(d.v2r, {
         navId: 'guild-context',
         'aria-label': m.intl.string(m.t.HpQykZ),
-        onClose: u.Zy,
-        onSelect: x,
+        onClose: r.Zy,
+        onSelect: k,
         children: [
-            (0, n.jsx)(d.MenuGroup, {
-                children: (0, n.jsx)(d.MenuItem, {
+            (0, i.jsx)(d.kSQ, {
+                children: (0, i.jsx)(d.sNh, {
                     id: 'mark-folder-read',
                     label: m.intl.string(m.t.thzRJC),
                     action: function () {
                         if (null == Z) return;
                         let { guildIds: e } = Z;
-                        (0, s.Z)(e, f.jXE.GUILD_LIST);
+                        (0, u.Z)(e, f.jXE.GUILD_LIST);
                     },
-                    disabled: !j
+                    disabled: !p
                 })
             }),
-            null != k ? (0, n.jsx)(d.MenuGroup, { children: k }) : null,
-            (0, n.jsxs)(d.MenuGroup, {
+            null != j ? (0, i.jsx)(d.kSQ, { children: j }) : null,
+            (0, i.jsxs)(d.kSQ, {
                 children: [
-                    (0, n.jsx)(d.MenuItem, {
+                    (0, i.jsx)(d.sNh, {
                         id: 'folder-settings',
                         label: m.intl.string(m.t.Dx7im5),
                         action: () =>
-                            (0, d.openModalLazy)(async () => {
-                                let { default: e } = await l.e('66915').then(l.bind(l, 662708));
-                                return (t) =>
-                                    (0, n.jsx)(e, {
-                                        ...t,
-                                        folderId: p,
-                                        folderName: b,
-                                        folderColor: g
+                            (0, d.ZDy)(async () => {
+                                let { default: e } = await t.e('66915').then(t.bind(t, 662708));
+                                return (l) =>
+                                    (0, i.jsx)(e, {
+                                        ...l,
+                                        folderId: b,
+                                        folderName: g,
+                                        folderColor: h
                                     });
                             })
                     }),
-                    M &&
-                        (0, n.jsx)(d.MenuItem, {
+                    x &&
+                        (0, i.jsx)(d.sNh, {
                             id: 'folder-collapse',
                             label: m.intl.string(m.t.rCPsbm),
-                            action: () => r.Z.collapseAllFolders()
+                            action: () => a.Z.collapseAllFolders()
                         })
                 ]
             })

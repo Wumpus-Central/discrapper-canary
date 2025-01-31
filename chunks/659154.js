@@ -1,15 +1,11 @@
-n.d(t, {
-    c: function () {
-        return c;
-    }
-});
+n.d(t, { c: () => s });
 var a = n(200651);
 n(192379);
 var r = n(481060),
     o = n(388032),
     i = n(577125),
     l = n(387852);
-let c = (e) => {
+let s = (e) => {
     let { onTryAgain: t } = e;
     return (0, a.jsxs)('div', {
         className: i.content,
@@ -23,7 +19,7 @@ let c = (e) => {
             (0, a.jsxs)('div', {
                 className: i.innerContent,
                 children: [
-                    (0, a.jsx)(r.Heading, {
+                    (0, a.jsx)(r.X6q, {
                         variant: 'heading-xl/extrabold',
                         children: o.intl.string(o.t['3dgwPD'])
                     }),
@@ -34,9 +30,9 @@ let c = (e) => {
                     })
                 ]
             }),
-            (0, a.jsx)(r.Button, {
+            (0, a.jsx)(r.zxk, {
                 className: i.footerButton,
-                color: r.Button.Colors.BRAND,
+                color: r.zxk.Colors.BRAND,
                 onClick: t,
                 children: o.intl.string(o.t['7NqTJi'])
             })

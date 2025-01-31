@@ -1,14 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return N;
-    }
-}),
-    n(653041),
-    n(47120);
+n.d(t, { Z: () => b }), n(653041), n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(748780),
     o = n(442837),
     c = n(215569),
@@ -19,9 +13,9 @@ var i = n(200651),
     m = n(584511),
     f = n(354459),
     g = n(397109),
-    C = n(652849),
-    x = n(73004);
-function v(e, t, n) {
+    _ = n(652849),
+    C = n(73004);
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,22 +28,20 @@ function v(e, t, n) {
         e
     );
 }
-let _ = {
+let v = {
         STEPS: 23,
         FRAME_DURATION: 17,
         FRAME_SIZE: 26
     },
-    I = {
+    E = {
         SCALE_MIN: 0.7,
         SCALE_MAX: 1,
         DURATION_IN: 300,
         DURATION_OUT: 170,
         EASING_IN: s.Z.Easing.inOut(s.Z.Easing.back()),
         EASING_OUT: s.Z.Easing.quad
-    },
-    E = 200,
-    b = 125;
-class Z extends l.PureComponent {
+    };
+class I extends l.PureComponent {
     componentDidMount() {
         this.componentDidAppear();
     }
@@ -64,36 +56,36 @@ class Z extends l.PureComponent {
             s.Z.parallel([
                 s.Z.timing(t, {
                     toValue: 1,
-                    duration: I.DURATION_IN,
-                    easing: I.EASING_IN
+                    duration: E.DURATION_IN,
+                    easing: E.EASING_IN
                 }),
                 s.Z.timing(n, {
                     toValue: 1,
-                    duration: E
+                    duration: 200
                 })
             ]).start(e);
     }
     componentWillLeave(e) {
         let { scaleAnimation: t, spriteAnimation: n, spriteOpacity: i, widthAnimation: l } = this;
         i.setValue(1), n.setValue(0);
-        let r = [];
-        for (let e = 0; e < _.STEPS; e++)
-            r.push(
+        let a = [];
+        for (let e = 0; e < v.STEPS; e++)
+            a.push(
                 s.Z.timing(n, {
-                    toValue: -_.FRAME_SIZE * e,
-                    duration: _.FRAME_DURATION
+                    toValue: -v.FRAME_SIZE * e,
+                    duration: v.FRAME_DURATION
                 })
             );
         s.Z.sequence([
             s.Z.timing(t, {
                 toValue: 0,
-                duration: I.DURATION_OUT,
-                easing: I.EASING_OUT
+                duration: E.DURATION_OUT,
+                easing: E.EASING_OUT
             }),
-            s.Z.sequence(r),
+            s.Z.sequence(a),
             s.Z.timing(l, {
                 toValue: 0,
-                duration: b
+                duration: 125
             })
         ]).start(e);
     }
@@ -104,7 +96,7 @@ class Z extends l.PureComponent {
                 {
                     scale: e.interpolate({
                         inputRange: [0, 1],
-                        outputRange: [I.SCALE_MIN, I.SCALE_MAX]
+                        outputRange: [E.SCALE_MIN, E.SCALE_MAX]
                     })
                 }
             ],
@@ -129,18 +121,18 @@ class Z extends l.PureComponent {
     render() {
         let { theme: e, children: t, className: n } = this.props,
             l = (0, d.wj)(e),
-            r = a()(g.sprite, {
-                [x.crossWhite]: l,
-                [x.crossGrey]: !l
+            a = r()(g.sprite, {
+                [C.crossWhite]: l,
+                [C.crossGrey]: !l
             });
         return (0, i.jsxs)(s.Z.div, {
-            className: a()(g.transition, n),
+            className: r()(g.transition, n),
             style: this.getWidthStyle(),
             children: [
                 (0, i.jsx)('div', {
-                    className: a()(g.spriteWrapper, C.horizontal, C.justifyCenter, C.alignCenter),
+                    className: r()(g.spriteWrapper, _.horizontal, _.justifyCenter, _.alignCenter),
                     children: (0, i.jsx)(s.Z.div, {
-                        className: r,
+                        className: a,
                         style: this.getSpriteStyle()
                     })
                 }),
@@ -152,46 +144,46 @@ class Z extends l.PureComponent {
         });
     }
     constructor(...e) {
-        super(...e), v(this, 'scaleAnimation', new s.Z.Value(0)), v(this, 'spriteAnimation', new s.Z.Value(0)), v(this, 'spriteOpacity', new s.Z.Value(0)), v(this, 'widthAnimation', new s.Z.Value(0));
+        super(...e), x(this, 'scaleAnimation', new s.Z.Value(0)), x(this, 'spriteAnimation', new s.Z.Value(0)), x(this, 'spriteOpacity', new s.Z.Value(0)), x(this, 'widthAnimation', new s.Z.Value(0));
     }
 }
-function N(e) {
-    var t, n;
-    let { participants: l, onContextMenu: r, className: s, onClick: d, width: C, guildId: x } = e,
-        v = (0, h.ZP)();
-    let _ = ((t = C), (n = l.length), ((0, u.getAvatarSize)(u.AvatarSizes.SIZE_80) + 16) * n > t ? u.AvatarSizes.SIZE_40 : u.AvatarSizes.SIZE_80),
-        I = (0, o.e7)([p.Z], () => p.Z.isFocused()),
-        E = l.map((e) => {
+function b(e) {
+    var t;
+    let { participants: n, onContextMenu: l, className: a, onClick: s, width: d, guildId: _ } = e,
+        C = (0, h.ZP)(),
+        x = ((t = n.length), ((0, u.pxk)(u.EFr.SIZE_80) + 16) * t > d ? u.EFr.SIZE_40 : u.EFr.SIZE_80),
+        v = (0, o.e7)([p.Z], () => p.Z.isFocused()),
+        E = n.map((e) => {
             var t, n;
             if (e.type !== f.fO.USER) return null;
-            let { user: l, voiceState: a, speaking: s, ringing: o } = e;
+            let { user: a, voiceState: r, speaking: o, ringing: c } = e;
             return (0, i.jsx)(
-                Z,
+                I,
                 {
                     className: g.participant,
-                    width: (0, u.getAvatarSize)(_),
-                    theme: v,
+                    width: (0, u.pxk)(x),
+                    theme: C,
                     children: (0, i.jsx)(
                         m.Z,
                         {
-                            src: l.getAvatarURL(x, (0, u.getAvatarSize)(_), s && I),
-                            size: _,
-                            muted: null !== (t = null == a ? void 0 : a.isVoiceMuted()) && void 0 !== t && t,
-                            deafen: null !== (n = null == a ? void 0 : a.isVoiceDeafened()) && void 0 !== n && n,
-                            speaking: s,
-                            ringing: o,
-                            onClick: (t) => (null == d ? void 0 : d(e, t)),
-                            onContextMenu: (t) => (null == r ? void 0 : r(e, t))
+                            src: a.getAvatarURL(_, (0, u.pxk)(x), o && v),
+                            size: x,
+                            muted: null !== (t = null == r ? void 0 : r.isVoiceMuted()) && void 0 !== t && t,
+                            deafen: null !== (n = null == r ? void 0 : r.isVoiceDeafened()) && void 0 !== n && n,
+                            speaking: o,
+                            ringing: c,
+                            onClick: (t) => (null == s ? void 0 : s(e, t)),
+                            onContextMenu: (t) => (null == l ? void 0 : l(e, t))
                         },
                         e.id
                     )
                 },
-                l.id
+                a.id
             );
         });
     return (0, i.jsx)(c.W, {
         component: 'div',
-        className: a()(g.root, s),
+        className: r()(g.root, a),
         children: E
     });
 }

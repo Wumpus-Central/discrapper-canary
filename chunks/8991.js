@@ -1,56 +1,47 @@
-I.d(t, {
-    E: function () {
-        return E;
-    }
-}),
-    I(610138),
-    I(216116),
-    I(78328),
-    I(815648),
-    I(47120);
-var _ = I(200651);
-I(192379);
-var a = I(512969),
-    O = I(979007),
-    R = I(981631),
-    n = I(272242);
-function E() {
+_.d(I, { E: () => P }), _(610138), _(216116), _(78328), _(815648), _(47120);
+var a = _(200651);
+_(192379);
+var t = _(512969),
+    O = _(979007),
+    R = _(981631),
+    E = _(272242);
+function P() {
     let c = new URLSearchParams(location.search),
-        t = c.get('q'),
-        I = c.get('category_id');
+        I = c.get('q'),
+        _ = c.get('category_id');
     return (
         c.delete('page'),
-        (0, _.jsxs)(a.rs, {
+        (0, a.jsxs)(t.rs, {
             children: [
-                null != I && null == t
-                    ? (0, _.jsx)(a.l_, {
+                null != _ && null == I
+                    ? (0, a.jsx)(t.l_, {
                           path: R.Z5c.APPLICATION_DIRECTORY_SEARCH,
-                          to: ''.concat(R.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(''.concat(I)))
+                          to: ''.concat(R.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(''.concat(_)))
                       })
-                    : (0, _.jsx)(a.l_, {
+                    : (0, a.jsx)(t.l_, {
                           path: R.Z5c.APPLICATION_DIRECTORY_SEARCH,
                           to: ''.concat(R.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH, '?').concat(c.toString())
                       }),
-                (0, _.jsx)(a.l_, {
+                (0, a.jsx)(t.l_, {
                     path: R.Z5c.APPLICATION_DIRECTORY_PROFILE_STORE_SKU(':applicationId', ':skuId'),
                     to: R.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(':applicationId', ':skuId')
                 }),
-                (0, _.jsx)(a.l_, {
-                    path: R.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(':applicationId', n.c.STORE),
+                (0, a.jsx)(t.l_, {
+                    path: R.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(':applicationId', E.c.STORE),
                     to: R.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(':applicationId', O.GlobalDiscoveryAppsSections.STORE)
                 }),
-                (0, _.jsx)(a.l_, {
-                    path: R.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(':applicationId', n.c.PREMIUM_DEPRECATED),
+                (0, a.jsx)(t.l_, {
+                    path: R.Z5c.APPLICATION_DIRECTORY_PROFILE_SECTION(':applicationId', E.c.PREMIUM_DEPRECATED),
                     to: R.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(':applicationId', O.GlobalDiscoveryAppsSections.STORE)
                 }),
-                (0, _.jsx)(a.l_, {
+                (0, a.jsx)(t.l_, {
                     path: R.Z5c.APPLICATION_DIRECTORY_PROFILE(':applicationId'),
                     to: {
                         pathname: R.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE(':applicationId'),
                         search: location.search
                     }
                 }),
-                (0, _.jsx)(a.l_, {
+                (0, a.jsx)(t.l_, {
                     path: R.Z5c.APPLICATION_DIRECTORY,
                     to: R.Z5c.GLOBAL_DISCOVERY_APPS
                 })

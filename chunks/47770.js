@@ -1,54 +1,49 @@
-r.d(n, {
-    Z: function () {
-        return s;
-    }
-});
-var i = r(47120);
-var a = r(836560);
-function o(e, n, r) {
+n.d(t, { Z: () => a }), n(47120);
+var i = n(836560);
+function r(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class s {
-    on(e, n) {
-        this.emitter.on(e, n);
+class a {
+    on(e, t) {
+        this.emitter.on(e, t);
     }
-    off(e, n) {
-        this.emitter.off(e, n);
+    off(e, t) {
+        this.emitter.off(e, t);
     }
-    once(e, n) {
-        this.emitter.once(e, n);
+    once(e, t) {
+        this.emitter.once(e, t);
     }
-    addListener(e, n) {
-        this.emitter.addListener(e, n);
+    addListener(e, t) {
+        this.emitter.addListener(e, t);
     }
-    removeListener(e, n) {
-        this.emitter.removeListener(e, n);
+    removeListener(e, t) {
+        this.emitter.removeListener(e, t);
     }
     removeAllListeners() {
         this.emitter.removeAllListeners();
     }
     emit(e) {
-        for (var n = arguments.length, r = Array(n > 1 ? n - 1 : 0), i = 1; i < n; i++) r[i - 1] = arguments[i];
-        this.emitter.emit(e, ...r);
+        for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];
+        this.emitter.emit(e, ...n);
     }
     emitUnsafe(e) {
-        for (var n = arguments.length, r = Array(n > 1 ? n - 1 : 0), i = 1; i < n; i++) r[i - 1] = arguments[i];
-        this.emitter.emit(e, ...r);
+        for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];
+        this.emitter.emit(e, ...n);
     }
     listenerCount(e) {
         return this.emitter.listenerCount(e);
     }
     constructor() {
-        o(this, 'emitter', new a.EventEmitter());
+        r(this, 'emitter', new i.EventEmitter());
     }
 }

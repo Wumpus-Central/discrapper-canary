@@ -1,50 +1,44 @@
-n.r(a),
-    n.d(a, {
-        default: function () {
-            return m;
-        }
-    }),
-    n(47120);
-var e = n(200651),
-    o = n(192379),
-    r = n(481060),
-    i = n(881052),
+n.d(e, { default: () => b }), n(47120);
+var a = n(200651),
+    r = n(192379),
+    i = n(481060),
+    o = n(881052),
     l = n(434404),
-    d = n(78451),
-    s = n(915509),
+    s = n(78451),
+    d = n(915509),
     c = n(981631),
     u = n(388032),
-    f = n(232186);
-function m(t) {
-    let { guild: a, onClose: n, hideColors: m } = t,
-        [p, x] = o.useState(a.verificationLevel),
-        [g, C] = o.useState(null),
-        h = a.hasFeature(c.oNc.COMMUNITY),
-        _ = (0, d.IF)(h, m).filter((t) => !t.disabled),
-        I = o.useCallback(async () => {
-            null != g && C(null);
+    _ = n(232186);
+function b(t) {
+    let { guild: e, onClose: n, hideColors: b } = t,
+        [m, x] = r.useState(e.verificationLevel),
+        [p, h] = r.useState(null),
+        g = e.hasFeature(c.oNc.COMMUNITY),
+        C = (0, s.IF)(g, b).filter((t) => !t.disabled),
+        I = r.useCallback(async () => {
+            null != p && h(null);
             try {
-                await l.Z.saveGuild(a.id, { verificationLevel: p }), l.Z.updateGuild({ verificationLevel: p }), n();
+                await l.Z.saveGuild(e.id, { verificationLevel: m }), l.Z.updateGuild({ verificationLevel: m }), n();
             } catch (t) {
-                C(new i.Hx(t).getAnyErrorMessage());
+                h(new o.Hx(t).getAnyErrorMessage());
             }
-        }, [g, a.id, p, n]);
-    return (0, e.jsx)(s.Z, {
+        }, [p, e.id, m, n]);
+    return (0, a.jsx)(d.Z, {
         ...t,
         title: u.intl.string(u.t.DpRdYG),
-        errorText: g,
+        errorText: p,
         onConfirm: I,
         onCancel: n,
-        children: (0, e.jsxs)(r.FormSection, {
+        children: (0, a.jsxs)(i.hjN, {
             children: [
-                (0, e.jsx)(r.FormText, {
-                    type: r.FormText.Types.DESCRIPTION,
-                    className: f.marginBottom20,
+                (0, a.jsx)(i.R94, {
+                    type: i.R94.Types.DESCRIPTION,
+                    className: _.marginBottom20,
                     children: u.intl.format(u.t.iuRk2t, {})
                 }),
-                (0, e.jsx)(r.RadioGroup, {
-                    value: p,
-                    options: _,
+                (0, a.jsx)(i.FXm, {
+                    value: m,
+                    options: C,
                     onChange: (t) => x(t.value)
                 })
             ]

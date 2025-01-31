@@ -1,9 +1,5 @@
-r.d(n, {
-    O: function () {
-        return i;
-    }
-});
-let i = (0, r(818083).B)({
+n.d(t, { O: () => i });
+let i = (0, n(818083).B)({
     kind: 'user',
     id: '2024-08_new_gateway_dispatcher',
     label: 'New Gateway Dispatcher',

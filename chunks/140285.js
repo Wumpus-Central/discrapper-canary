@@ -1,9 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return m;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => m }), n(47120);
 var i = n(200651);
 n(192379);
 var r = n(481060),
@@ -18,11 +13,11 @@ function m(e) {
     let { 'aria-labelledby': t, disabled: n = !1 } = e,
         { editStateId: m, guildId: h } = (0, l.N)(),
         [g, x] = a.GP(m, h);
-    return (0, i.jsx)(r.RadioGroup, {
+    return (0, i.jsx)(r.FXm, {
         className: u.__invalid_channelAccessSelect,
         radioItemClassName: u.__invalid_channelAccessSelectRadioButton,
         withTransparentBackground: !0,
-        size: r.RadioGroup.Sizes.NOT_SET,
+        size: r.FXm.Sizes.NOT_SET,
         onChange: (e) => {
             let { value: t } = e;
             return x(t);
@@ -31,13 +26,13 @@ function m(e) {
             {
                 name: d.intl.string(d.t['vs2T+P']),
                 value: s.I.SOME_CHANNELS_ACCESS,
-                icon: (0, r.makeIconCompat)(c.Z),
+                icon: (0, r.GSL)(c.Z),
                 radioBarClassName: u.__invalid_channelAccessSelectRadioBar
             },
             {
                 name: d.intl.string(d.t.l4Tr7e),
                 value: s.I.ALL_CHANNELS_ACCESS,
-                icon: (0, r.makeIconCompat)(o.Z),
+                icon: (0, r.GSL)(o.Z),
                 radioBarClassName: u.__invalid_channelAccessSelectRadioBar
             }
         ],

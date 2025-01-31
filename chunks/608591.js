@@ -19,8 +19,4 @@ function i(e) {
             }
         };
 }
-r.d(n, {
-    F: function () {
-        return i;
-    }
-});
+n.d(t, { F: () => i });

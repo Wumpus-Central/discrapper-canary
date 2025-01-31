@@ -1,74 +1,69 @@
-r.d(n, {
-    i: function () {
-        return p;
-    }
-});
-var i = r(47120);
-var a = r(192379),
-    o = r(399606),
-    s = r(430824),
-    l = r(339085),
-    u = r(906411),
-    c = r(231053),
-    d = r(981631);
-let f = (e, n, r) => {
-        let i = null != r ? e.getCustomEmojiById(r) : null;
-        if ((null == i ? void 0 : i.type) === u.B.GUILD)
-            return {
-                emoji: i,
-                joinedEmojiSourceGuildRecord: n.getGuild(null == i ? void 0 : i.guildId)
-            };
-        return {
-            emoji: null,
-            joinedEmojiSourceGuildRecord: null
-        };
+n.d(t, { i: () => d }), n(47120);
+var i = n(192379),
+    r = n(399606),
+    a = n(430824),
+    s = n(339085),
+    o = n(906411),
+    l = n(231053),
+    u = n(981631);
+let c = (e, t, n) => {
+        let i = null != n ? e.getCustomEmojiById(n) : null;
+        return (null == i ? void 0 : i.type) === o.B.GUILD
+            ? {
+                  emoji: i,
+                  joinedEmojiSourceGuildRecord: t.getGuild(null == i ? void 0 : i.guildId)
+              }
+            : {
+                  emoji: null,
+                  joinedEmojiSourceGuildRecord: null
+              };
     },
-    p = (e) => {
-        let { emojiId: n, refreshPositionKey: r } = e,
-            { joinedEmojiSourceGuildRecord: i, emoji: u } = (0, o.cj)([l.ZP, s.Z], () => f(l.ZP, s.Z, n)),
-            p = null != i,
-            h = null != i && i.hasFeature(d.oNc.DISCOVERABLE),
-            _ = (!p || h) && null != n,
-            [m, g] = a.useState(_),
-            [E, v] = a.useState(null),
-            y = null != i ? c.JO.createFromGuildRecord(i) : null,
-            [b, I] = a.useState(y),
-            [T, S] = a.useState(null),
-            A = a.useRef(r);
+    d = (e) => {
+        let { emojiId: t, refreshPositionKey: n } = e,
+            { joinedEmojiSourceGuildRecord: o, emoji: d } = (0, r.cj)([s.ZP, a.Z], () => c(s.ZP, a.Z, t)),
+            f = null != o,
+            _ = null != o && o.hasFeature(u.oNc.DISCOVERABLE),
+            p = (!f || _) && null != t,
+            [h, m] = i.useState(p),
+            [g, E] = i.useState(null),
+            v = null != o ? l.JO.createFromGuildRecord(o) : null,
+            [y, I] = i.useState(v),
+            [b, T] = i.useState(null),
+            S = i.useRef(n);
         return (
-            a.useEffect(() => {
-                A.current = r;
+            i.useEffect(() => {
+                S.current = n;
             }),
-            a.useEffect(() => {
-                var e, r;
-                null === (e = A.current) || void 0 === e || e.call(A);
+            i.useEffect(() => {
+                var e, n;
+                null === (e = S.current) || void 0 === e || e.call(S);
                 let i = async () => {
                     var e;
-                    let r = null != n ? await (0, c.Fi)(n) : null;
-                    if (null != r)
-                        switch ((v(r.type), r.type)) {
-                            case c.w6.APPLICATION:
-                                S(r.application);
+                    let n = null != t ? await (0, l.Fi)(t) : null;
+                    if (null != n)
+                        switch ((E(n.type), n.type)) {
+                            case l.w6.APPLICATION:
+                                T(n.application);
                                 break;
-                            case c.w6.GUILD:
-                                I(r.guild);
+                            case l.w6.GUILD:
+                                I(n.guild);
                         }
-                    g(!1), null === (e = A.current) || void 0 === e || e.call(A);
+                    m(!1), null === (e = S.current) || void 0 === e || e.call(S);
                 };
-                if (_) {
+                if (p) {
                     i();
                     return;
                 }
-                null === (r = A.current) || void 0 === r || r.call(A);
-            }, [n, _]),
+                null === (n = S.current) || void 0 === n || n.call(S);
+            }, [t, p]),
             {
-                expressionSourceGuild: b,
-                expressionSourceApplication: T,
-                sourceType: E,
-                joinedEmojiSourceGuildRecord: i,
-                hasJoinedEmojiSourceGuild: p,
-                emoji: u,
-                isFetching: m
+                expressionSourceGuild: y,
+                expressionSourceApplication: b,
+                sourceType: g,
+                joinedEmojiSourceGuildRecord: o,
+                hasJoinedEmojiSourceGuild: f,
+                emoji: d,
+                isFetching: h
             }
         );
     };

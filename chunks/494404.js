@@ -1,43 +1,37 @@
 n.d(t, {
-    ZP: function () {
-        return k;
-    },
-    h4: function () {
-        return L;
-    },
-    nH: function () {
-        return y;
-    }
+    ZP: () => D,
+    h4: () => L,
+    nH: () => P
 }),
     n(47120),
     n(653041);
 var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    a = n.n(l),
-    o = n(392711),
-    s = n.n(o),
+    l = n(192379),
+    a = n(120356),
+    r = n.n(a),
+    s = n(392711),
+    o = n.n(s),
     c = n(91192),
-    u = n(442837),
-    d = n(481060),
+    d = n(442837),
+    u = n(481060),
     m = n(668781),
     h = n(904245),
-    f = n(724757),
+    _ = n(724757),
     p = n(576855),
-    _ = n(540059),
-    g = n(294218),
-    E = n(703656),
-    C = n(210887),
-    I = n(592125),
-    x = n(375954),
-    N = n(496675),
-    v = n(933429),
-    T = n(451478),
-    S = n(626135),
-    A = n(585483),
-    b = n(981631),
+    g = n(540059),
+    f = n(294218),
+    x = n(703656),
+    E = n(210887),
+    C = n(592125),
+    v = n(375954),
+    I = n(496675),
+    N = n(933429),
+    S = n(451478),
+    T = n(626135),
+    b = n(585483),
+    A = n(981631),
     j = n(388032),
-    R = n(312422);
+    y = n(312422);
 function Z(e, t, n) {
     return (
         t in e
@@ -51,83 +45,83 @@ function Z(e, t, n) {
         e
     );
 }
-function P(e) {
+function R(e) {
     e.stopPropagation();
 }
 let L = (e) => {
-        let { title: t, icon: n, children: r, className: l } = e;
+        let { title: t, icon: n, children: l, className: a } = e;
         return (0, i.jsxs)('div', {
-            className: a()(l, R.header),
+            className: r()(a, y.header),
             children: [
                 (0, i.jsxs)('div', {
-                    className: R.titleContainer,
+                    className: y.titleContainer,
                     children: [
-                        null != n ? (0, i.jsx)(n, { color: d.tokens.colors.INTERACTIVE_NORMAL }) : null,
+                        null != n ? (0, i.jsx)(n, { color: u.TVs.colors.INTERACTIVE_NORMAL }) : null,
                         null == t
                             ? null
-                            : (0, i.jsx)(d.Text, {
+                            : (0, i.jsx)(u.Text, {
                                   variant: 'text-lg/semibold',
                                   color: 'interactive-active',
                                   children: t
                               })
                     ]
                 }),
-                r
+                l
             ]
         });
     },
-    y = (e) => {
+    P = (e) => {
         let { msg: t, image: n } = e;
         return (0, i.jsxs)('div', {
-            className: R.emptyPlaceholder,
+            className: y.emptyPlaceholder,
             children: [
                 (0, i.jsx)('div', {
-                    className: R.image,
+                    className: y.image,
                     style: { backgroundImage: 'url('.concat(n, ')') }
                 }),
                 (0, i.jsx)('div', {
-                    className: R.body,
+                    className: y.body,
                     children: t
                 })
             ]
         });
     };
-class O extends r.PureComponent {
+class k extends l.PureComponent {
     renderJumpButton() {
         let { jumping: e } = this.props;
-        return (0, i.jsxs)(d.Clickable, {
-            className: R.jumpButton,
+        return (0, i.jsxs)(u.P3F, {
+            className: y.jumpButton,
             onClick: this.handleClickJump,
             children: [
                 (0, i.jsx)('div', {
-                    className: a()(R.__invalid_text, { hidden: e }),
+                    className: r()(y.__invalid_text, { hidden: e }),
                     children: j.intl.string(j.t.k5WiPT)
                 }),
-                (0, i.jsx)(d.Spinner, {
-                    type: d.Spinner.Type.PULSING_ELLIPSIS,
-                    className: a()(R.loading, { [R.visible]: e })
+                (0, i.jsx)(u.$jN, {
+                    type: u.$jN.Type.PULSING_ELLIPSIS,
+                    className: r()(y.loading, { [y.visible]: e })
                 })
             ]
         });
     }
     renderCloseButton() {
-        let { onCloseMessage: e, canCloseAllMessages: t, canManageMessages: n, channel: r } = this.props;
-        return null != e && (t || n || (null != r && r.isPrivate()))
-            ? (0, i.jsx)(d.Button, {
-                  look: d.Button.Looks.BLANK,
-                  size: d.Button.Sizes.NONE,
+        let { onCloseMessage: e, canCloseAllMessages: t, canManageMessages: n, channel: l } = this.props;
+        return null != e && (t || n || (null != l && l.isPrivate()))
+            ? (0, i.jsx)(u.zxk, {
+                  look: u.zxk.Looks.BLANK,
+                  size: u.zxk.Sizes.NONE,
                   onClick: this.handleClickClose,
-                  children: (0, i.jsx)(d.XSmallIcon, {
+                  children: (0, i.jsx)(u.Dio, {
                       size: 'md',
                       color: 'currentColor',
-                      className: R.closeIcon
+                      className: y.closeIcon
                   })
               })
             : null;
     }
     render() {
         return (0, i.jsxs)('div', {
-            className: R.actionButtons,
+            className: y.actionButtons,
             children: [this.renderJumpButton(), this.renderCloseButton()]
         });
     }
@@ -143,21 +137,21 @@ class O extends r.PureComponent {
             });
     }
 }
-let M = u.ZP.connectStores([N.Z], (e) => {
+let M = d.ZP.connectStores([I.Z], (e) => {
     let { channel: t } = e;
-    return { canManageMessages: null != t && N.Z.can(b.Plq.MANAGE_MESSAGES, t) };
-})(O);
-function D(e) {
-    let { analyticsName: t, items: n, hasMore: l, loading: o, loadMore: m, renderHeader: h, renderEmptyState: g, renderItem: E, getProTip: I, scrollerClassName: x, className: N, listName: Z } = e,
-        L = r.useRef(null),
-        y = (0, f.Z)(Z, L),
-        O = (0, u.e7)([v.ZP], () => v.ZP.hasNotice()),
-        M = (0, u.e7)([T.Z], () => T.Z.windowSize()),
-        D = (0, _.Q3)('ItemsPopout');
-    r.useEffect(() => {
-        S.default.track(b.rMx.OPEN_POPOUT, { type: t });
+    return { canManageMessages: null != t && I.Z.can(A.Plq.MANAGE_MESSAGES, t) };
+})(k);
+function O(e) {
+    let { analyticsName: t, items: n, hasMore: a, loading: s, loadMore: m, renderHeader: h, renderEmptyState: f, renderItem: x, getProTip: C, scrollerClassName: v, className: I, listName: Z } = e,
+        L = l.useRef(null),
+        P = (0, _.Z)(Z, L),
+        k = (0, d.e7)([N.ZP], () => N.ZP.hasNotice()),
+        M = (0, d.e7)([S.Z], () => S.Z.windowSize()),
+        O = (0, g.Q3)('ItemsPopout');
+    l.useEffect(() => {
+        T.default.track(A.rMx.OPEN_POPOUT, { type: t });
     }, [t]),
-        r.useEffect(() => {
+        l.useEffect(() => {
             function e() {
                 var e;
                 null === (e = L.current) || void 0 === e || e.scrollPageUp({ animate: !0 });
@@ -167,112 +161,112 @@ function D(e) {
                 null === (e = L.current) || void 0 === e || e.scrollPageDown({ animate: !0 });
             }
             return (
-                A.S.subscribe(b.CkL.SCROLL_PAGE_DOWN, t),
-                A.S.subscribe(b.CkL.SCROLL_PAGE_UP, e),
+                b.S.subscribe(A.CkL.SCROLL_PAGE_DOWN, t),
+                b.S.subscribe(A.CkL.SCROLL_PAGE_UP, e),
                 () => {
-                    A.S.unsubscribe(b.CkL.SCROLL_PAGE_DOWN, t), A.S.unsubscribe(b.CkL.SCROLL_PAGE_UP, e);
+                    b.S.unsubscribe(A.CkL.SCROLL_PAGE_DOWN, t), b.S.unsubscribe(A.CkL.SCROLL_PAGE_UP, e);
                 }
             );
         }, []);
-    let k = r.useCallback(() => {
+    let D = l.useCallback(() => {
             var e;
             let t = null === (e = L.current) || void 0 === e ? void 0 : e.getScrollerState();
-            null != t && t.scrollHeight === t.scrollTop + t.offsetHeight && l && !o && (null == m || m());
-        }, [l, m, o]),
-        U = [],
-        B = !0;
+            null != t && t.scrollHeight === t.scrollTop + t.offsetHeight && a && !s && (null == m || m());
+        }, [a, m, s]),
+        w = [],
+        F = !0;
     null == n
-        ? (U = [
+        ? (w = [
               (0, i.jsx)(
                   'div',
                   {
-                      className: a()(R.emptyPlaceholder, R.loadingPlaceholder),
-                      children: (0, i.jsx)(d.Spinner, {})
+                      className: r()(y.emptyPlaceholder, y.loadingPlaceholder),
+                      children: (0, i.jsx)(u.$jN, {})
                   },
                   'spinner'
               )
           ])
         : 0 === n.length
-          ? U.push((0, i.jsx)(r.Fragment, { children: g(C.Z.theme) }, 'empty-state'))
-          : ((B = !1),
-            (U = []),
-            s().each(n, (e) => {
-                U.push(...E(e));
+          ? w.push((0, i.jsx)(l.Fragment, { children: f(E.Z.theme) }, 'empty-state'))
+          : ((F = !1),
+            (w = []),
+            o().each(n, (e) => {
+                w.push(...x(e));
             }));
-    let w = null;
+    let U = null;
     null != n &&
         n.length > 0 &&
         null != m &&
-        (w = o
+        (U = s
             ? (0, i.jsx)(
                   'div',
                   {
-                      className: R.loadingMore,
-                      children: (0, i.jsx)(d.Spinner, {})
+                      className: y.loadingMore,
+                      children: (0, i.jsx)(u.$jN, {})
                   },
                   'loading-more-after'
               )
-            : l
+            : a
               ? (0, i.jsx)('div', {
-                    className: R.hasMore,
-                    children: (0, i.jsx)(d.Button, {
-                        look: d.Button.Looks.FILLED,
-                        color: d.Button.Colors.PRIMARY,
-                        size: d.Button.Sizes.MAX,
+                    className: y.hasMore,
+                    children: (0, i.jsx)(u.zxk, {
+                        look: u.zxk.Looks.FILLED,
+                        color: u.zxk.Colors.PRIMARY,
+                        size: u.zxk.Sizes.MAX,
                         onClick: m,
                         children: j.intl.string(j.t.XBlaiI)
                     })
                 })
               : (0, i.jsx)('div', {
-                    className: R.scrollingFooterWrap,
-                    children: g(C.Z.theme)
+                    className: y.scrollingFooterWrap,
+                    children: f(E.Z.theme)
                 }));
-    let F = null == I ? void 0 : I(),
+    let B = null == C ? void 0 : C(),
         G =
-            B && null != F
+            F && null != B
                 ? (0, i.jsx)('div', {
-                      className: R.footer,
+                      className: y.footer,
                       children: (0, i.jsx)(p.Z, {
                           style: {
                               width: '100%',
                               paddingTop: 10,
                               paddingBottom: 10
                           },
-                          children: F
+                          children: B
                       })
                   })
                 : null,
-        V = { maxHeight: M.height - 43 - 25 };
-    O && (V.maxHeight -= 40), D && (V.maxHeight -= 48);
-    let H = null != m && l;
+        H = { maxHeight: M.height - 43 - 25 };
+    k && (H.maxHeight -= 40), O && (H.maxHeight -= 48);
+    let V = null != m && a;
     return (0, i.jsx)('div', {
-        className: a()(N, R.messagesPopoutWrap),
-        style: V,
-        onClick: P,
-        onDoubleClick: P,
+        className: r()(I, y.messagesPopoutWrap),
+        style: H,
+        onClick: R,
+        onDoubleClick: R,
         'aria-label': e['aria-label'],
-        children: (0, i.jsxs)(d.HeadingLevel, {
+        children: (0, i.jsxs)(u.y5t, {
             component: h(),
             children: [
-                (0, i.jsxs)(d.AdvancedScroller, {
-                    className: a()(R.messagesPopout, x),
-                    onScroll: H ? k : void 0,
+                (0, i.jsxs)(u.Den, {
+                    className: r()(y.messagesPopout, v),
+                    onScroll: V ? D : void 0,
                     ref: L,
                     children: [
                         (0, i.jsx)(c.bG, {
-                            navigator: y,
+                            navigator: P,
                             children: (0, i.jsx)(c.SJ, {
                                 children: (e) => {
                                     let { ref: t, ...n } = e;
                                     return (0, i.jsx)('div', {
                                         ref: t,
                                         ...n,
-                                        children: U
+                                        children: w
                                     });
                                 }
                             })
                         }),
-                        w
+                        U
                     ]
                 }),
                 G
@@ -280,89 +274,89 @@ function D(e) {
         })
     });
 }
-function k(e) {
-    let { analyticsName: t, onFetch: n, channel: l, messages: a, hasMore: o, loading: s, loadMore: c, onJump: d, canCloseAllMessages: f = !1, renderHeader: p, renderEmptyState: _, renderMessage: C, getProTip: N, scrollerClassName: v, className: T, onCloseMessage: S, listName: A } = e,
-        Z = (0, u.e7)([x.Z], () => {
-            let e = null != l ? x.Z.getMessages(l.id) : null;
+function D(e) {
+    let { analyticsName: t, onFetch: n, channel: a, messages: r, hasMore: s, loading: o, loadMore: c, onJump: u, canCloseAllMessages: _ = !1, renderHeader: p, renderEmptyState: g, renderMessage: E, getProTip: I, scrollerClassName: N, className: S, onCloseMessage: T, listName: b } = e,
+        Z = (0, d.e7)([v.Z], () => {
+            let e = null != a ? v.Z.getMessages(a.id) : null;
             return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
         });
-    function P(e, n) {
-        let { id: i, blocked: r, ignored: l, author: a, channel_id: o } = e;
-        if (r)
+    function R(e, n) {
+        let { id: i, blocked: l, ignored: a, author: r, channel_id: s } = e;
+        if (l)
             m.Z.show({
                 title: j.intl.string(j.t['j7eA/v']),
-                body: j.intl.formatToPlainString(j.t.dTNNgo, { name: a.username }),
+                body: j.intl.formatToPlainString(j.t.dTNNgo, { name: r.username }),
                 confirmText: j.intl.string(j.t.BddRzc)
             });
-        else if (l)
+        else if (a)
             m.Z.show({
                 title: j.intl.string(j.t.XyWoKS),
-                body: j.intl.formatToPlainString(j.t['8t8doK'], { name: a.username }),
+                body: j.intl.formatToPlainString(j.t['8t8doK'], { name: r.username }),
                 confirmText: j.intl.string(j.t.BddRzc)
             });
         else if (!Z) {
-            let e = I.Z.getChannel(o);
-            null != e && (h.Z.trackJump(o, i, t), (0, E.uL)(b.Z5c.CHANNEL(e.getGuildId(), o, i))), null == d || d(n);
+            let e = C.Z.getChannel(s);
+            null != e && (h.Z.trackJump(s, i, t), (0, x.uL)(A.Z5c.CHANNEL(e.getGuildId(), s, i))), null == u || u(n);
         }
     }
-    r.useEffect(() => {
-        n(l);
-    }, [l, n]);
-    let L = r.useMemo(
+    l.useEffect(() => {
+        n(a);
+    }, [a, n]);
+    let L = l.useMemo(
         () =>
-            null == a
+            null == r
                 ? void 0
-                : a.map((e) => ({
+                : r.map((e) => ({
                       message: e,
-                      channel: l
+                      channel: a
                   })),
-        [a, l]
+        [r, a]
     );
-    return (0, i.jsx)(D, {
-        className: T,
-        scrollerClassName: v,
+    return (0, i.jsx)(O, {
+        className: S,
+        scrollerClassName: N,
         items: L,
-        loading: s,
+        loading: o,
         analyticsName: t,
-        renderEmptyState: _,
+        renderEmptyState: g,
         renderHeader: p,
-        hasMore: o,
+        hasMore: s,
         loadMore: c,
-        getProTip: N,
+        getProTip: I,
         renderItem: function (e) {
             let { message: t, channel: n } = e;
             if (null == t) return [];
-            if (null != C) return C(t, (e) => P(t, e));
-            let r = [];
+            if (null != E) return E(t, (e) => R(t, e));
+            let l = [];
             return null == n
                 ? []
-                : (r.push(
+                : (l.push(
                       (0, i.jsxs)(
                           'div',
                           {
-                              className: R.messageGroupWrapper,
+                              className: y.messageGroupWrapper,
                               children: [
-                                  (0, i.jsx)(g.Z, {
-                                      className: R.messageGroupCozy,
+                                  (0, i.jsx)(f.Z, {
+                                      className: y.messageGroupCozy,
                                       message: t,
                                       channel: n
                                   }),
                                   (0, i.jsx)(M, {
-                                      channel: l,
+                                      channel: a,
                                       message: t,
                                       jumping: Z,
-                                      canCloseAllMessages: f,
-                                      jumpTo: P,
-                                      onCloseMessage: S
+                                      canCloseAllMessages: _,
+                                      jumpTo: R,
+                                      onCloseMessage: T
                                   })
                               ]
                           },
                           t.id
                       )
                   ),
-                  r);
+                  l);
         },
-        listName: A,
+        listName: b,
         'aria-label': e['aria-label']
     });
 }

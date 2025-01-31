@@ -1,32 +1,28 @@
-n.d(t, {
-    Z: function () {
-        return s;
-    }
-});
+n.d(t, { Z: () => o });
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    r = n.n(l),
-    a = n(481060),
-    o = n(195356);
-function s(e) {
-    let { bar: t, children: n, className: l, inModal: s, title: d } = e;
-    return (0, i.jsxs)(a.Card, {
+    a = n.n(l),
+    r = n(481060),
+    s = n(195356);
+function o(e) {
+    let { bar: t, children: n, className: l, inModal: o, title: d } = e;
+    return (0, i.jsxs)(r.Zbd, {
         editable: !0,
-        className: r()(o.card, l, { [o.inModal]: s }),
+        className: a()(s.card, l, { [s.inModal]: o }),
         children: [
             (0, i.jsxs)('div', {
-                className: r()(o.cardHeader, { [o.inModal]: s }),
+                className: a()(s.cardHeader, { [s.inModal]: o }),
                 children: [
-                    (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(r.Text, {
                         variant: 'text-xs/semibold',
-                        className: o.title,
+                        className: s.title,
                         children: d
                     }),
                     (0, i.jsx)('div', { children: t })
                 ]
             }),
-            s ? (0, i.jsx)(a.FormDivider, {}) : null,
+            o ? (0, i.jsx)(r.$i$, {}) : null,
             n
         ]
     });

@@ -1,144 +1,139 @@
-t.d(n, {
-    Z: function () {
-        return y;
-    }
-}),
-    t(789020);
-var i = t(200651),
-    l = t(120356),
-    a = t.n(l),
-    o = t(442837),
-    r = t(481060),
-    s = t(367907),
-    c = t(895924),
-    d = t(311819),
-    u = t(299206),
-    m = t(726721),
-    p = t(726521),
-    h = t(973616),
-    f = t(594174),
-    C = t(626135),
-    v = t(572004),
-    x = t(630388),
-    _ = t(135431),
-    N = t(541099),
-    A = t(783097),
-    I = t(570949),
-    E = t(314734),
-    g = t(981631),
-    b = t(388032),
-    P = t(472033);
+n.d(t, { Z: () => y }), n(789020);
+var i = n(200651),
+    l = n(120356),
+    a = n.n(l),
+    o = n(442837),
+    s = n(481060),
+    r = n(367907),
+    c = n(895924),
+    d = n(311819),
+    u = n(299206),
+    m = n(726721),
+    p = n(726521),
+    h = n(973616),
+    v = n(594174),
+    x = n(626135),
+    f = n(572004),
+    N = n(630388),
+    C = n(135431),
+    E = n(541099),
+    A = n(783097),
+    I = n(570949),
+    g = n(314734),
+    _ = n(981631),
+    P = n(388032),
+    j = n(472033);
 function y(e) {
-    var n;
-    let { application: t, context: l, className: y, sectionName: S } = e,
-        j = (0, o.e7)([N.Z], () => N.Z.entrypoint()),
-        T = (0, A.L1)(t),
-        L = (0, _.Eb)(T),
+    var t;
+    let { application: n, context: l, className: y, sectionName: T } = e,
+        S = (0, o.e7)([E.Z], () => E.Z.entrypoint()),
+        b = (0, A.L1)(n),
+        L = (0, C.Eb)(b),
         R = {
             location: c.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU,
-            application_id: t.id,
-            section_name: S,
-            source: N.Z.lastShownEntrypoint()
+            application_id: n.id,
+            section_name: T,
+            source: E.Z.lastShownEntrypoint()
         },
-        M = f.default.getCurrentUser(),
+        M = v.default.getCurrentUser(),
         Z = m.Z.useExperiment({ location: c.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU }, { autoTrackExposure: !0 }).enabled,
-        k = (0, u.Z)({
-            id: t.id,
-            label: b.intl.string(b.t['+NP/b2'])
+        O = (0, u.Z)({
+            id: n.id,
+            label: P.intl.string(P.t['+NP/b2'])
         }),
-        O = (0, I.P)({ application: t }),
-        U = (0, x.yE)(null !== (n = t.flags) && void 0 !== n ? n : 0, g.udG.EMBEDDED),
-        B = 'channel' === l.type ? l.channel : void 0;
+        k = (0, I.P)({ application: n }),
+        U = (0, N.yE)(null !== (t = n.flags) && void 0 !== t ? t : 0, _.udG.EMBEDDED),
+        D = 'channel' === l.type ? l.channel : void 0;
     return (0, i.jsxs)('div', {
-        className: P.container,
+        className: j.container,
         children: [
-            (0, i.jsx)(r.Clickable, {
+            (0, i.jsx)(s.P3F, {
                 onClick: () => {
                     let e = U
                         ? (0, d.H)({
-                              applicationId: t.id,
+                              applicationId: n.id,
                               referrerId: null == M ? void 0 : M.id
                           })
                         : (0, d.J)({
-                              id: t.id,
-                              ...T
+                              id: n.id,
+                              ...b
                           });
-                    (0, v.JG)(e),
-                        C.default.track(g.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
-                            application_id: t.id,
-                            source: j
+                    (0, f.JG)(e),
+                        x.default.track(_.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
+                            application_id: n.id,
+                            source: S
                         }),
-                        (0, r.showToast)((0, r.createToast)(b.intl.string(b.t['L/PwZW']), r.ToastType.SUCCESS));
+                        (0, s.showToast)((0, s.createToast)(P.intl.string(P.t['L/PwZW']), s.ToastType.SUCCESS));
                 },
-                className: a()(P.clickable, y),
-                'aria-label': b.intl.string(b.t.WqhZsr),
-                children: (0, i.jsx)(r.LinkIcon, {
+                className: a()(j.clickable, y),
+                'aria-label': P.intl.string(P.t.WqhZsr),
+                children: (0, i.jsx)(s.xPt, {
                     size: 'sm',
-                    color: r.tokens.colors.INTERACTIVE_ACTIVE
+                    color: s.TVs.colors.INTERACTIVE_ACTIVE
                 })
             }),
-            (0, i.jsx)(r.Popout, {
+            (0, i.jsx)(s.yRy, {
                 renderPopout: (e) => {
-                    let { closePopout: n } = e;
-                    return (0, i.jsxs)(r.Menu, {
-                        className: E.NN,
+                    let { closePopout: t } = e;
+                    return (0, i.jsxs)(s.v2r, {
+                        className: g.NN,
                         navId: 'app-details-more-menu',
-                        onClose: n,
-                        'aria-label': b.intl.string(b.t.AXIHpa),
+                        onClose: t,
+                        'aria-label': P.intl.string(P.t.AXIHpa),
                         onSelect: void 0,
                         children: [
-                            (0, i.jsxs)(r.MenuGroup, {
+                            (0, i.jsxs)(s.kSQ, {
                                 children: [
                                     L
-                                        ? (0, i.jsx)(r.MenuItem, {
+                                        ? (0, i.jsx)(s.sNh, {
                                               id: 'add-app',
-                                              label: b.intl.string(b.t.NgXl3N),
+                                              label: P.intl.string(P.t.NgXl3N),
                                               action: () => {
-                                                  null == T.customInstallUrl && (0, s.yw)(g.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, R),
-                                                      (0, _.LO)({
-                                                          ...T,
+                                                  null == b.customInstallUrl && (0, r.yw)(_.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, R),
+                                                      (0, C.LO)({
+                                                          ...b,
                                                           oauth2Callback: (e) => {
-                                                              let { location: n } = e;
-                                                              null != n && (0, s.yw)(g.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, R);
+                                                              let { location: t } = e;
+                                                              null != t && (0, r.yw)(_.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, R);
                                                           },
                                                           source: 'app_launcher_app_details'
                                                       });
                                               }
                                           })
                                         : null,
-                                    Z && t instanceof h.ZP
-                                        ? (0, i.jsx)(r.MenuItem, {
+                                    Z && n instanceof h.ZP
+                                        ? (0, i.jsx)(s.sNh, {
                                               id: 'report-app',
                                               color: 'danger',
-                                              label: b.intl.string(b.t.jhJze3),
+                                              label: P.intl.string(P.t.jhJze3),
                                               action: () => {
                                                   var e;
                                                   (0, p.uu)({
-                                                      application: t,
+                                                      application: n,
                                                       entrypoint: 'app_launcher',
-                                                      contextualGuildId: null !== (e = null == B ? void 0 : B.getGuildId()) && void 0 !== e ? e : void 0,
-                                                      contextualChannelId: null == B ? void 0 : B.id
+                                                      contextualGuildId: null !== (e = null == D ? void 0 : D.getGuildId()) && void 0 !== e ? e : void 0,
+                                                      contextualChannelId: null == D ? void 0 : D.id
                                                   });
                                               }
                                           })
                                         : null,
-                                    O
+                                    k
                                 ]
                             }),
-                            (0, i.jsx)(r.MenuGroup, { children: k })
+                            (0, i.jsx)(s.kSQ, { children: O })
                         ]
                     });
                 },
                 align: 'right',
                 position: 'bottom',
                 children: (e) =>
-                    (0, i.jsx)(r.Clickable, {
+                    (0, i.jsx)(s.P3F, {
                         onClick: e.onClick,
-                        className: a()(P.clickable, y),
-                        'aria-label': b.intl.string(b.t.UKOtz8),
-                        children: (0, i.jsx)(r.MoreHorizontalIcon, {
+                        className: a()(j.clickable, y),
+                        'aria-label': P.intl.string(P.t.UKOtz8),
+                        children: (0, i.jsx)(s.xhG, {
                             size: 'sm',
-                            color: r.tokens.colors.INTERACTIVE_ACTIVE
+                            color: s.TVs.colors.INTERACTIVE_ACTIVE
                         })
                     })
             })

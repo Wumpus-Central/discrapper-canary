@@ -1,56 +1,51 @@
-t.d(n, {
-    Z: function () {
-        return h;
-    }
-}),
-    t(47120);
-var l = t(200651),
-    i = t(192379),
-    r = t(120356),
-    a = t.n(r),
-    o = t(442837),
-    s = t(40330),
-    c = t(95398),
-    u = t(169525),
-    d = t(546432),
-    m = t(944486),
-    f = t(388032),
-    p = t(116803);
-function h(e) {
-    let { file: n, name: t, size: r, spoiler: h } = e,
-        x = (0, o.e7)([m.Z], () => m.Z.getChannelId()),
-        v = i.useMemo(() => (null != n.contentType && -1 !== n.contentType.indexOf('/') ? n.contentType.split('/') : ['unknown', 'unknown']), [n.contentType]),
-        [C, g] = i.useState(h),
-        _ = i.useMemo(
+l.d(n, { Z: () => x }), l(47120);
+var t = l(200651),
+    i = l(192379),
+    r = l(120356),
+    a = l.n(r),
+    s = l(442837),
+    o = l(40330),
+    u = l(95398),
+    c = l(169525),
+    d = l(546432),
+    m = l(944486),
+    h = l(388032),
+    p = l(116803);
+function x(e) {
+    let { file: n, name: l, size: r, spoiler: x } = e,
+        v = (0, s.e7)([m.Z], () => m.Z.getChannelId()),
+        f = i.useMemo(() => (null != n.contentType && -1 !== n.contentType.indexOf('/') ? n.contentType.split('/') : ['unknown', 'unknown']), [n.contentType]),
+        [C, g] = i.useState(x),
+        j = i.useMemo(
             () => () =>
-                (0, l.jsx)(d.mz, {
-                    mimeType: v,
+                (0, t.jsx)(d.mz, {
+                    mimeType: f,
                     downloadURL: n.url,
                     showDownload: !0,
                     showImageAppPicker: !1,
                     isVisualMediaType: !1,
-                    channelId: x
+                    channelId: v
                 }),
-            [n, v, x]
+            [n, f, v]
         ),
-        b = (e) =>
-            (0, l.jsx)(s.Z, {
+        N = (e) =>
+            (0, t.jsx)(o.Z, {
                 className: a()({ [p.fileHidden]: e }),
                 url: n.url,
-                fileName: null != t ? t : f.intl.string(f.t.GnuJ5u),
+                fileName: null != l ? l : h.intl.string(h.t.GnuJ5u),
                 fileSize: null != r ? r : 0,
-                renderAdjacentContent: _
+                renderAdjacentContent: j
             });
-    return (0, l.jsx)('div', {
+    return (0, t.jsx)('div', {
         className: p.fileDisplayContainer,
-        children: h
-            ? (0, l.jsx)(c.Z, {
-                  type: c.Z.Types.ATTACHMENT,
-                  reason: u.wk.SPOILER,
+        children: x
+            ? (0, t.jsx)(u.Z, {
+                  type: u.Z.Types.ATTACHMENT,
+                  reason: c.wk.SPOILER,
                   obscured: C,
                   onToggleObscurity: () => g((e) => !e),
-                  children: (e) => b(e)
+                  children: (e) => N(e)
               })
-            : b(!1)
+            : N(!1)
     });
 }

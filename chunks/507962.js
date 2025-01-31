@@ -1,37 +1,33 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-});
+n.d(t, { Z: () => s });
 var i = n(200651);
 n(192379);
-var r = n(739566),
-    l = n(834129),
-    a = n(388032);
-function o(e) {
+var l = n(739566),
+    a = n(834129),
+    r = n(388032);
+function s(e) {
     let t,
-        { message: o, usernameHook: s, otherUser: c, otherUsernameHook: u, compact: d, channel: m } = e,
-        h = (0, r.ZP)(o),
-        f = h.nick,
-        p = s(h),
-        _ = (0, r.Sw)(c, m);
-    if (null != _ && null != u) {
-        let e = u(_);
-        t = a.intl.format(a.t.L2FyVl, {
-            username: f,
+        { message: s, usernameHook: o, otherUser: c, otherUsernameHook: d, compact: u, channel: m } = e,
+        h = (0, l.ZP)(s),
+        _ = h.nick,
+        p = o(h),
+        g = (0, l.Sw)(c, m);
+    if (null != g && null != d) {
+        let e = d(g);
+        t = r.intl.format(r.t.L2FyVl, {
+            username: _,
             usernameHook: p,
-            otherUsername: _.nick,
+            otherUsername: g.nick,
             otherUsernameHook: e
         });
     } else
-        t = a.intl.format(a.t['5v2xa2'], {
-            username: f,
+        t = r.intl.format(r.t['5v2xa2'], {
+            username: _,
             usernameHook: p
         });
-    return (0, i.jsx)(l.Z, {
+    return (0, i.jsx)(a.Z, {
         icon: n(474019),
-        timestamp: o.timestamp,
-        compact: d,
+        timestamp: s.timestamp,
+        compact: u,
         children: t
     });
 }

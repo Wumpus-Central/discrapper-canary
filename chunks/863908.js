@@ -1,31 +1,27 @@
-r.d(n, {
-    Z: function () {
-        return s;
-    }
-});
-var i = r(5192),
-    a = r(981631),
-    o = r(388032);
-function s(e, n, r, s) {
-    if (e.state === a.jm8.RECONNECTING)
-        return {
-            mainText: o.intl.string(o.t.pdFFKy),
-            supportingText: o.intl.string(o.t['+PuO2N'])
-        };
-    if (e.state === a.jm8.PAUSED)
-        return r
-            ? {
-                  mainText: o.intl.string(o.t['5q17w8']),
-                  supportingText: o.intl.string(o.t.LV1NSE)
-              }
-            : {
-                  mainText: o.intl.string(o.t['5q17w8']),
-                  supportingText: o.intl.formatToPlainString(o.t.meVVlZ, { username: i.ZP.getName(e.guildId, e.channelId, n) })
-              };
-    return s
+n.d(t, { Z: () => s });
+var i = n(5192),
+    r = n(981631),
+    a = n(388032);
+function s(e, t, n, s) {
+    return e.state === r.jm8.RECONNECTING
         ? {
-              mainText: o.intl.string(o.t.JmaKtL),
-              supportingText: o.intl.string(o.t['hC3+BA'])
+              mainText: a.intl.string(a.t.pdFFKy),
+              supportingText: a.intl.string(a.t['+PuO2N'])
           }
-        : null;
+        : e.state === r.jm8.PAUSED
+          ? n
+              ? {
+                    mainText: a.intl.string(a.t['5q17w8']),
+                    supportingText: a.intl.string(a.t.LV1NSE)
+                }
+              : {
+                    mainText: a.intl.string(a.t['5q17w8']),
+                    supportingText: a.intl.formatToPlainString(a.t.meVVlZ, { username: i.ZP.getName(e.guildId, e.channelId, t) })
+                }
+          : s
+            ? {
+                  mainText: a.intl.string(a.t.JmaKtL),
+                  supportingText: a.intl.string(a.t['hC3+BA'])
+              }
+            : null;
 }

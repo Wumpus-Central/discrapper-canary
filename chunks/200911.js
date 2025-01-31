@@ -1,5 +1,6 @@
-e.exports = {
-    premiumButtonNitroWheel: 'premiumButtonNitroWheel_b0a068',
-    premiumButtonInner: 'premiumButtonInner_b0a068',
-    premiumButton: 'premiumButton_b0a068'
+var i = {
+    premiumButtonNitroWheel: 'premiumButtonNitroWheel_b72efa',
+    premiumButtonInner: 'premiumButtonInner_b72efa',
+    premiumButton: 'premiumButton_b72efa'
 };
+e.exports = i;

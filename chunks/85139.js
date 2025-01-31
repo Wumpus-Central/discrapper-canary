@@ -1,8 +1,9 @@
-e.exports = {
-    headerImage: 'headerImage_da4ae3',
-    header: 'header_da4ae3',
-    title: 'title_da4ae3',
-    modalCloseButton: 'modalCloseButton_da4ae3',
-    content: 'content_da4ae3',
-    modalFooter: 'modalFooter_da4ae3'
+var i = {
+    headerImage: 'headerImage__802af',
+    header: 'header__802af',
+    title: 'title__802af',
+    modalCloseButton: 'modalCloseButton__802af',
+    content: 'content__802af',
+    modalFooter: 'modalFooter__802af'
 };
+e.exports = i;

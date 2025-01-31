@@ -1,164 +1,164 @@
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(120356),
-    l = r.n(s),
-    u = r(392711);
-var c = r(468194),
-    d = r(481060),
-    f = r(239091),
-    p = r(2052),
-    h = r(330726),
-    _ = r(691251),
-    m = r(626135),
-    g = r(285651),
-    E = r(373228),
-    v = r(378233),
-    y = r(419922),
-    b = r(490095),
-    I = r(981631),
-    T = r(388032),
-    S = r(834219);
-let A = (0, c.Mg)(S.__invalid_stickerPickerPreviewDimensions),
-    C = (0, c.Mg)(S.__invalid_stickerPickerPreviewPadding),
-    N = 250,
-    R = o.memo(function (e) {
-        let { isDisplayingIndividualStickers: n = !1, preferAnimation: i = !0, getStickerItemProps: s, getStickerRowProps: c, gutterWidth: R, inspectedStickerPosition: O, isScrolling: D, isUsingKeyboardNavigation: L, onInspect: x, onSelect: w, rowIndex: P, stickerClassName: M, stickerDescriptors: k, stickerPadding: U = C, stickerSize: B = A, ownedStickerPacks: G, enlargeOnInteraction: Z = !1, channel: F, currentUser: V, checkSendability: j = !0 } = e,
-            { location: H } = (0, p.O)(),
-            Y = B + 2 * U,
-            W = o.useMemo(
+n.d(t, { Z: () => N }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(392711),
+    l = n(468194),
+    u = n(481060),
+    c = n(239091),
+    d = n(2052),
+    f = n(330726),
+    _ = n(691251),
+    p = n(626135),
+    h = n(285651),
+    m = n(373228),
+    g = n(378233),
+    E = n(419922),
+    v = n(490095),
+    y = n(981631),
+    I = n(388032),
+    b = n(834219);
+let T = (0, l.Mg)(b.__invalid_stickerPickerPreviewDimensions),
+    S = (0, l.Mg)(b.__invalid_stickerPickerPreviewPadding),
+    A = 250,
+    N = r.memo(function (e) {
+        let { isDisplayingIndividualStickers: t = !1, preferAnimation: a = !0, getStickerItemProps: l, getStickerRowProps: N, gutterWidth: C, inspectedStickerPosition: R, isScrolling: O, isUsingKeyboardNavigation: D, onInspect: x, onSelect: L, rowIndex: P, stickerClassName: w, stickerDescriptors: M, stickerPadding: k = S, stickerSize: U = T, ownedStickerPacks: G, enlargeOnInteraction: B = !1, channel: Z, currentUser: F, checkSendability: V = !0 } = e,
+            { location: j } = (0, d.O)(),
+            H = U + 2 * k,
+            Y = r.useMemo(
                 () => ({
-                    gridColumnGap: R,
-                    gridTemplateColumns: 'repeat(auto-fill, '.concat(Y, 'px)'),
-                    height: Y,
-                    paddingRight: n ? void 0 : Y
+                    gridColumnGap: C,
+                    gridTemplateColumns: 'repeat(auto-fill, '.concat(H, 'px)'),
+                    height: H,
+                    paddingRight: t ? void 0 : H
                 }),
-                [n, R, Y]
+                [t, C, H]
             ),
-            K = o.useMemo(
+            W = r.useMemo(
                 () => ({
-                    width: B,
-                    height: B,
-                    padding: U
+                    width: U,
+                    height: U,
+                    padding: k
                 }),
-                [U, B]
+                [k, U]
             ),
-            [z, q] = (0, h.Z)(null, 300);
-        return (0, a.jsx)('div', {
-            className: S.row,
-            style: W,
-            ...(null == c ? void 0 : c(P)),
-            children: k.map((e) => {
-                var c;
-                let p = e.visibleRowIndex === (null == O ? void 0 : O.rowIndex) && e.columnIndex === (null == O ? void 0 : O.columnIndex),
-                    h = e.type === E.al.STICKER && Z && p,
-                    A = (n) => {
-                        if ((null == D ? void 0 : D.current) === !0 || (null == L ? void 0 : L.current) === !0) return;
-                        let r = n.altKey;
-                        r && e.type === E.al.STICKER && !(0, v.gM)(e.sticker.id) && q(e.sticker.id), null == w || w(e, r);
+            [K, z] = (0, f.Z)(null, 300);
+        return (0, i.jsx)('div', {
+            className: b.row,
+            style: Y,
+            ...(null == N ? void 0 : N(P)),
+            children: M.map((e) => {
+                var d;
+                let f = e.visibleRowIndex === (null == R ? void 0 : R.rowIndex) && e.columnIndex === (null == R ? void 0 : R.columnIndex),
+                    T = e.type === m.al.STICKER && B && f,
+                    S = (t) => {
+                        if ((null == O ? void 0 : O.current) === !0 || (null == D ? void 0 : D.current) === !0) return;
+                        let n = t.altKey;
+                        n && e.type === m.al.STICKER && !(0, g.gM)(e.sticker.id) && z(e.sticker.id), null == L || L(e, n);
                     },
-                    C = (0, u.throttle)(() => {
-                        (null == D ? void 0 : D.current) !== !0 && (null == L ? void 0 : L.current) !== !0 && !p && (null == x || x(e));
-                    }, N),
-                    R = () => {
-                        e.type === E.al.CREATE_STICKER &&
-                            (m.default.track(I.rMx.OPEN_MODAL, {
-                                type: I.jXE.CREATE_STICKER_MODAL,
-                                location: H
+                    N = (0, o.throttle)(() => {
+                        (null == O ? void 0 : O.current) === !0 || (null == D ? void 0 : D.current) === !0 || f || null == x || x(e);
+                    }, A),
+                    C = () => {
+                        e.type === m.al.CREATE_STICKER &&
+                            (p.default.track(y.rMx.OPEN_MODAL, {
+                                type: y.jXE.CREATE_STICKER_MODAL,
+                                location: j
                             }),
-                            (0, d.openModalLazy)(async () => {
-                                let { default: n } = await Promise.all([r.e('93626'), r.e('28189')]).then(r.bind(r, 136735));
-                                return (r) =>
-                                    (0, a.jsx)(n, {
+                            (0, u.ZDy)(async () => {
+                                let { default: t } = await Promise.all([n.e('93626'), n.e('28189')]).then(n.bind(n, 136735));
+                                return (n) =>
+                                    (0, i.jsx)(t, {
                                         guildId: e.guild_id,
-                                        ...r
+                                        ...n
                                     });
                             }));
                     },
-                    { ref: k, tabIndex: U, onFocus: Y, ...W } = null !== (c = null == s ? void 0 : s(e.columnIndex, P)) && void 0 !== c ? c : {};
+                    { ref: M, tabIndex: k, onFocus: H, ...Y } = null !== (d = null == l ? void 0 : l(e.columnIndex, P)) && void 0 !== d ? d : {};
                 switch (e.type) {
-                    case E.al.CREATE_STICKER:
-                        return (0, a.jsx)(
+                    case m.al.CREATE_STICKER:
+                        return (0, i.jsx)(
                             'div',
                             {
-                                ...W,
-                                children: (0, a.jsxs)(d.Clickable, {
+                                ...Y,
+                                children: (0, i.jsxs)(u.P3F, {
                                     'aria-label': e.name,
-                                    className: l()(S.createSticker, M, { [S.createInspected]: p }),
-                                    innerRef: k,
-                                    tabIndex: U,
-                                    onFocus: null != Y ? Y : C,
-                                    onMouseMove: C,
-                                    onClick: R,
-                                    style: K,
+                                    className: s()(b.createSticker, w, { [b.createInspected]: f }),
+                                    innerRef: M,
+                                    tabIndex: k,
+                                    onFocus: null != H ? H : N,
+                                    onMouseMove: N,
+                                    onClick: C,
+                                    style: W,
                                     children: [
-                                        !Z && (0, a.jsx)('div', { className: S.inspectedIndicator }),
-                                        (0, a.jsx)('div', {
-                                            className: S.iconWrapper,
-                                            children: (0, a.jsx)(d.PlusSmallIcon, {
+                                        !B && (0, i.jsx)('div', { className: b.inspectedIndicator }),
+                                        (0, i.jsx)('div', {
+                                            className: b.iconWrapper,
+                                            children: (0, i.jsx)(u.qJs, {
                                                 size: 'md',
                                                 color: 'currentColor',
-                                                className: S.icon
+                                                className: b.icon
                                             })
                                         }),
-                                        (0, a.jsx)(d.Text, {
+                                        (0, i.jsx)(u.Text, {
                                             color: 'interactive-active',
                                             variant: 'text-xs/normal',
-                                            children: T.intl.string(T.t['+nEuqq'])
+                                            children: I.intl.string(I.t['+nEuqq'])
                                         })
                                     ]
                                 })
                             },
                             e.guild_id
                         );
-                    case E.al.STICKER: {
-                        let s = n && null != G && (0, v.jl)(e.sticker) && !G.has(e.sticker.pack_id),
-                            u = (e) => {
-                                (0, f.jW)(e, async () => {
-                                    let { default: e } = await r.e('39010').then(r.bind(r, 269254));
-                                    return (n) => (0, a.jsx)(e, { ...n });
+                    case m.al.STICKER: {
+                        let o = t && null != G && (0, g.jl)(e.sticker) && !G.has(e.sticker.pack_id),
+                            l = (e) => {
+                                (0, c.jW)(e, async () => {
+                                    let { default: e } = await n.e('39010').then(n.bind(n, 269254));
+                                    return (t) => (0, i.jsx)(e, { ...t });
                                 });
                             };
-                        return (0, o.createElement)(
+                        return (0, r.createElement)(
                             'div',
                             {
-                                ...W,
+                                ...Y,
                                 key: e.sticker.id
                             },
-                            (0, a.jsxs)(d.Clickable, {
-                                className: l()(S.sticker, M, {
-                                    [S.stickerInspected]: p,
-                                    [S.showPulse]: z === e.sticker.id
+                            (0, i.jsxs)(u.P3F, {
+                                className: s()(b.sticker, w, {
+                                    [b.stickerInspected]: f,
+                                    [b.showPulse]: K === e.sticker.id
                                 }),
-                                innerRef: k,
-                                tabIndex: U,
-                                onFocus: null != Y ? Y : C,
-                                onMouseMove: C,
-                                onClick: A,
-                                onContextMenu: u,
-                                style: K,
+                                innerRef: M,
+                                tabIndex: k,
+                                onFocus: null != H ? H : N,
+                                onMouseMove: N,
+                                onClick: S,
+                                onContextMenu: l,
+                                style: W,
                                 'data-type': _.S.STICKER,
                                 'data-id': e.sticker.id,
                                 children: [
-                                    (0, a.jsx)(d.HiddenVisually, { children: (0, y.Co)(e.sticker) }),
-                                    (0, a.jsxs)('div', {
+                                    (0, i.jsx)(u.nn4, { children: (0, E.Co)(e.sticker) }),
+                                    (0, i.jsxs)('div', {
                                         'aria-hidden': !0,
                                         children: [
-                                            !Z && (0, a.jsx)('div', { className: S.inspectedIndicator }),
-                                            (0, a.jsx)(y.ZP, {
-                                                className: l()(S.stickerNode, {
-                                                    [S.stickerNodeDimmed]: Z && !p && null != O && -1 !== O.rowIndex && -1 !== O.columnIndex,
-                                                    [S.stickerNodeHidden]: h,
-                                                    [S.stickerUnsendable]: j && !(0, g.kl)(e.sticker, V, F)
+                                            !B && (0, i.jsx)('div', { className: b.inspectedIndicator }),
+                                            (0, i.jsx)(E.ZP, {
+                                                className: s()(b.stickerNode, {
+                                                    [b.stickerNodeDimmed]: B && !f && null != R && -1 !== R.rowIndex && -1 !== R.columnIndex,
+                                                    [b.stickerNodeHidden]: T,
+                                                    [b.stickerUnsendable]: V && !(0, h.kl)(e.sticker, F, Z)
                                                 }),
-                                                disableAnimation: !p && !i,
-                                                enlargeOnInteraction: Z,
-                                                isInteracting: p,
-                                                maskAsset: p,
+                                                disableAnimation: !f && !a,
+                                                enlargeOnInteraction: B,
+                                                isInteracting: f,
+                                                maskAsset: f,
                                                 sticker: e.sticker,
-                                                size: B
+                                                size: U
                                             }),
-                                            s ? (0, a.jsx)(b.Z, { size: 20 }) : null
+                                            o ? (0, i.jsx)(v.Z, { size: 20 }) : null
                                         ]
                                     })
                                 ]
@@ -169,4 +169,3 @@ let A = (0, c.Mg)(S.__invalid_stickerPickerPreviewDimensions),
             })
         });
     });
-n.Z = R;

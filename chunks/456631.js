@@ -1,90 +1,89 @@
 let i;
-r.d(n, {
-    H: function () {
-        return v;
-    }
-});
-var a,
-    o = r(47120);
-var s = r(733860);
-var l = r(392711);
-var u = r(442837),
-    c = r(780384),
-    d = r(570140),
-    f = r(70956),
-    p = r(963838),
-    h = r(354459);
-function _(e, n, r) {
+n.d(t, {
+    H: () => m,
+    Z: () => C
+}),
+    n(47120),
+    n(733860);
+var r,
+    a = n(392711),
+    s = n(442837),
+    o = n(780384),
+    l = n(570140),
+    u = n(70956),
+    c = n(963838),
+    d = n(354459);
+function f(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let m = [],
-    g = {},
-    E = [],
-    v = (e) => {
+let _ = [],
+    p = {},
+    h = [],
+    m = (e) => {
         null != e &&
-            d.Z.dispatch({
+            l.Z.dispatch({
                 type: 'VOICE_CHANNEL_EFFECT_CLEAR',
                 userId: e
             });
     },
-    y = [],
-    b = 20,
-    I = 10 * f.Z.Millis.SECOND,
-    T = () => {
+    g = [],
+    E = 20,
+    v = 10 * u.Z.Millis.SECOND,
+    y = () => {
         let e = new Date();
-        if ((y = [e, ...y].slice(0, b)).length >= b) {
-            let n = y[y.length - 1],
-                r = e.getTime() - n.getTime();
-            r < I && (i = new Date(e.getTime() + I - r));
+        if ((g = [e, ...g].slice(0, E)).length >= E) {
+            let t = g[g.length - 1],
+                n = e.getTime() - t.getTime();
+            n < v && (i = new Date(e.getTime() + v - n));
         }
     },
-    S = (e) => {
-        let { cooldownEndsAtMs: n } = e;
-        i = new Date(Date.now() + n);
+    I = (e) => {
+        let { cooldownEndsAtMs: t } = e;
+        i = new Date(Date.now() + t);
     },
-    A = (0, l.debounce)(() => {
-        let e = (0, p.cX)(E);
-        c.uv.announce(e, 'polite'), (E = []);
+    b = (0, a.debounce)(() => {
+        let e = (0, c.cX)(h);
+        o.uv.announce(e, 'polite'), (h = []);
     }, 500),
-    C = (e) => {
-        let { emoji: n, userId: r, animationType: i } = e;
-        null != n &&
+    T = (e) => {
+        let { emoji: t, userId: n, animationType: i } = e;
+        null != t &&
             null != i &&
-            ((g[r] = {
-                emoji: n,
+            ((p[n] = {
+                emoji: t,
                 sentAt: Date.now(),
                 animationType: i
             }),
-            (E = [
-                ...E,
+            (h = [
+                ...h,
                 {
-                    emojiName: n.name,
-                    userId: r
+                    emojiName: t.name,
+                    userId: n
                 }
             ]),
-            A());
+            b());
     },
-    N = (e) => {
-        let { emoji: n } = e;
-        if (null != n) m.unshift(n), (m = (0, l.uniqBy)(m, 'name')).length > h.e5 + 1 && m.pop();
+    S = (e) => {
+        let { emoji: t } = e;
+        null != t && (_.unshift(t), (_ = (0, a.uniqBy)(_, 'name')).length > d.e5 + 1 && _.pop());
     },
-    R = (e) => {
-        let { userId: n } = e;
-        null != g[n] && delete g[n];
+    A = (e) => {
+        let { userId: t } = e;
+        null != p[t] && delete p[t];
     };
-class O extends (a = u.ZP.Store) {
+class N extends (r = s.ZP.Store) {
     get recentlyUsedEmojis() {
-        return m;
+        return _;
     }
     get isOnCooldown() {
         return null != i && new Date() < i;
@@ -93,14 +92,14 @@ class O extends (a = u.ZP.Store) {
         return i;
     }
     getEffectForUserId(e) {
-        return g[e];
+        return p[e];
     }
 }
-_(O, 'displayName', 'VoiceChannelEffectsStore'),
-    (n.Z = new O(d.Z, {
-        VOICE_CHANNEL_EFFECT_CLEAR: R,
-        VOICE_CHANNEL_EFFECT_RECENT_EMOJI: N,
-        VOICE_CHANNEL_EFFECT_SEND: C,
-        VOICE_CHANNEL_EFFECT_SENT_LOCAL: T,
-        VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP: S
-    }));
+f(N, 'displayName', 'VoiceChannelEffectsStore');
+let C = new N(l.Z, {
+    VOICE_CHANNEL_EFFECT_CLEAR: A,
+    VOICE_CHANNEL_EFFECT_RECENT_EMOJI: S,
+    VOICE_CHANNEL_EFFECT_SEND: T,
+    VOICE_CHANNEL_EFFECT_SENT_LOCAL: y,
+    VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP: I
+});

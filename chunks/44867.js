@@ -1,8 +1,4 @@
-n.d(t, {
-    c: function () {
-        return h;
-    }
-});
+n.d(t, { c: () => h });
 var i = n(200651),
     r = n(192379),
     l = n(442837),
@@ -18,7 +14,7 @@ function h(e) {
         x = (0, l.e7)([a.Z], () => a.Z.getProps().guild);
     if (
         (r.useEffect(() => {
-            if (null != x) t(x.id);
+            null != x && t(x.id);
         }, [t, x]),
         null == x)
     )
@@ -30,7 +26,7 @@ function h(e) {
                 guildId: x.id,
                 headerContent: (0, i.jsxs)('div', {
                     children: [
-                        (0, i.jsx)(s.Heading, {
+                        (0, i.jsx)(s.X6q, {
                             variant: 'text-md/semibold',
                             color: 'header-primary',
                             className: m.header,
@@ -65,7 +61,7 @@ function h(e) {
             return (0, i.jsx)(o.Z, {
                 guild: x,
                 guildId: x.id,
-                headerContent: (0, i.jsx)(s.Heading, {
+                headerContent: (0, i.jsx)(s.X6q, {
                     variant: 'heading-md/semibold',
                     children: u.intl.format(u.t['+6Hylp'], {
                         doesNotHook: (e, t) =>
@@ -81,6 +77,6 @@ function h(e) {
                 })
             });
         default:
-            return (0, i.jsx)(s.Spinner, {});
+            return (0, i.jsx)(s.$jN, {});
     }
 }

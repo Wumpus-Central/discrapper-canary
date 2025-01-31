@@ -1,30 +1,24 @@
-n.d(t, {
-    B: function () {
-        return l;
-    }
-}),
-    n(47120);
+n.d(t, { B: () => i }), n(47120);
 var r = n(192379),
-    i = n(215023);
-let l = (e, t) => {
-    let [n, l] = r.useState(i.f7.HIDDEN),
-        [a, s] = r.useState(i.f7.HIDDEN);
+    l = n(215023);
+let i = (e, t) => {
+    let [n, i] = r.useState(l.f7.HIDDEN),
+        [s, a] = r.useState(l.f7.HIDDEN);
     r.useEffect(() => {
-        l(e ? i.f7.VISIBLE : i.f7.HIDDEN), s(e ? i.f7.HIDDEN : i.f7.VISIBLE);
+        i(e ? l.f7.VISIBLE : l.f7.HIDDEN), a(e ? l.f7.HIDDEN : l.f7.VISIBLE);
     }, [e]);
-    let o = (e) => new Promise((t) => setTimeout(t, e)),
-        c = r.useCallback(
-            async (e) => {
-                e && (l(i.f7.OUT), await o(1.1 * i.lb)), e && s(i.f7.IN), l(i.f7.HIDDEN), null != t.current && t.current.scrollTo({ to: 0 }), s(i.f7.VISIBLE);
-            },
-            [t]
-        );
+    let o = (e) => new Promise((t) => setTimeout(t, e));
     return {
         feedState: n,
-        catalogState: a,
-        transitionToCatalog: c,
+        catalogState: s,
+        transitionToCatalog: r.useCallback(
+            async (e) => {
+                e && (i(l.f7.OUT), await o(1.1 * l.lb)), e && a(l.f7.IN), i(l.f7.HIDDEN), null != t.current && t.current.scrollTo({ to: 0 }), a(l.f7.VISIBLE);
+            },
+            [t]
+        ),
         transitionToFeed: r.useCallback(() => {
-            null != t.current && t.current.scrollTo({ to: 0 }), s(i.f7.HIDDEN), l(i.f7.VISIBLE);
+            null != t.current && t.current.scrollTo({ to: 0 }), a(l.f7.HIDDEN), i(l.f7.VISIBLE);
         }, [t])
     };
 };

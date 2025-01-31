@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return h;
-    }
-});
+n.d(t, { Z: () => h });
 var i = n(200651);
 n(192379);
 var r = n(120356),
@@ -19,7 +15,7 @@ let m = (e) => {
             analyticsLocation: n,
             className: r,
             buttonProps: l = {
-                color: s.ButtonColors.BRAND_INVERTED,
+                color: s.Ttl.BRAND_INVERTED,
                 text: d.intl.string(d.t.oqweNz)
             }
         } = e,
@@ -36,9 +32,9 @@ let m = (e) => {
 };
 function h(e) {
     let { header: t, text: r, analyticsLocation: c, guild: d, className: h, textColor: g, headerColor: x, buttonProps: p } = e,
-        { analyticsLocations: f } = (0, o.ZP)(a.Z.GUILD_BOOSTING_UPSELL_BANNER);
+        { analyticsLocations: _ } = (0, o.ZP)(a.Z.GUILD_BOOSTING_UPSELL_BANNER);
     return (0, i.jsx)(o.Gt, {
-        value: f,
+        value: _,
         children: (0, i.jsxs)('div', {
             className: l()(u.banner, h),
             children: [

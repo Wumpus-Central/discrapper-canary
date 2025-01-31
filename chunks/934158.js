@@ -1,5 +1,6 @@
-e.exports = {
-    mirror: 'mirror_c11cdc',
-    video: 'video_c11cdc',
-    media: 'media_c11cdc'
+var i = {
+    mirror: 'mirror__948a4',
+    video: 'video__948a4',
+    media: 'media__948a4'
 };
+e.exports = i;

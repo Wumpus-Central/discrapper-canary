@@ -1,10 +1,6 @@
 n.d(t, {
-    $: function () {
-        return p;
-    },
-    Z: function () {
-        return f;
-    }
+    $: () => p,
+    Z: () => _
 });
 var i = n(200651);
 n(192379);
@@ -26,15 +22,15 @@ function p() {
         r = null !== (e = null == n ? void 0 : n.isCommunity()) && void 0 !== e && e,
         o = (0, a.K2)(null !== (t = null == n ? void 0 : n.id) && void 0 !== t ? t : h.lds, 'GuildSettingsMembersRow') && (null == n ? void 0 : n.hasFeature(h.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)),
         d = r || o;
-    return (0, i.jsxs)(s.Clickable, {
+    return (0, i.jsxs)(s.P3F, {
         onClick: (e) => {
-            if (null != n) d ? (e.preventDefault(), u.Z.close(), (0, c._X)(n.id)) : u.Z.open(n.id, h.pNK.MEMBERS);
+            null != n && (d ? (e.preventDefault(), u.Z.close(), (0, c._X)(n.id)) : u.Z.open(n.id, h.pNK.MEMBERS));
         },
         className: x.rowContainer,
         children: [
             (0, i.jsx)('div', { children: g.intl.string(g.t['9Oq93t']) }),
             d &&
-                (0, i.jsx)(s.WindowLaunchIcon, {
+                (0, i.jsx)(s.rgF, {
                     size: 'custom',
                     color: 'currentColor',
                     className: x.linkIcon,
@@ -44,7 +40,7 @@ function p() {
         ]
     });
 }
-function f() {
+function _() {
     var e;
     let { guild: t } = (0, l.e7)([m.Z], () => m.Z.getProps(), [], r.isEqual),
         n = null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : h.lds;

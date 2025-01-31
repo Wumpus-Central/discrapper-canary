@@ -1,35 +1,29 @@
-r.d(n, {
-    Pv: function () {
-        return s;
-    },
-    dI: function () {
-        return o;
-    },
-    gs: function () {
-        return l;
-    }
+n.d(t, {
+    Pv: () => s,
+    dI: () => a,
+    gs: () => o
 });
-var i = r(570140);
-let a = new (r(710845).Z)('TryLoad');
-async function o(e) {
+var i = n(570140);
+let r = new (n(710845).Z)('TryLoad');
+async function a(e) {
     try {
         return await e();
     } catch (e) {
-        return a.log('database load failed.', e), null;
+        return r.log('database load failed.', e), null;
     }
 }
-function s(e, n, r) {
+function s(e, t, n) {
     try {
-        return n();
-    } catch (n) {
+        return t();
+    } catch (t) {
         return (
-            a.log(''.concat(e, ': exception thrown, resetting socket.'), n, n.stack),
+            r.log(''.concat(e, ': exception thrown, resetting socket.'), t, t.stack),
             i.Z.dispatch({
                 type: 'RESET_SOCKET',
                 args: {
-                    error: n,
+                    error: t,
                     action: 'tryLoadOrResetCacheGateway ('.concat(e, ')'),
-                    metricAction: 'tryLoadOrResetCacheGateway ('.concat(null != r ? r : e, ')'),
+                    metricAction: 'tryLoadOrResetCacheGateway ('.concat(null != n ? n : e, ')'),
                     clearCache: !0
                 }
             }),
@@ -37,18 +31,18 @@ function s(e, n, r) {
         );
     }
 }
-async function l(e, n, r) {
+async function o(e, t, n) {
     try {
-        return await n();
-    } catch (n) {
+        return await t();
+    } catch (t) {
         return (
-            a.log(''.concat(e, ': exception thrown, resetting socket.'), n, n.stack),
+            r.log(''.concat(e, ': exception thrown, resetting socket.'), t, t.stack),
             i.Z.dispatch({
                 type: 'RESET_SOCKET',
                 args: {
-                    error: n,
+                    error: t,
                     action: 'tryLoadOrResetCacheGatewayAsync ('.concat(e, ')'),
-                    metricAction: 'tryLoadOrResetCacheGatewayAsync ('.concat(null != r ? r : e, ')'),
+                    metricAction: 'tryLoadOrResetCacheGatewayAsync ('.concat(null != n ? n : e, ')'),
                     clearCache: !0
                 }
             }),

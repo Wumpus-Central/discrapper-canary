@@ -1,86 +1,66 @@
-r.r(n),
-    r.d(n, {
-        assign: function () {
-            return _;
-        },
-        batchedUpdates: function () {
-            return p;
-        },
-        colorNames: function () {
-            return c;
-        },
-        createStringInterpolator: function () {
-            return i;
-        },
-        frameLoop: function () {
-            return l;
-        },
-        now: function () {
-            return u;
-        },
-        requestAnimationFrame: function () {
-            return f;
-        },
-        skipAnimation: function () {
-            return d;
-        },
-        to: function () {
-            return a;
-        },
-        willAdvance: function () {
-            return h;
-        }
+n.r(t),
+    n.d(t, {
+        assign: () => p,
+        batchedUpdates: () => f,
+        colorNames: () => u,
+        createStringInterpolator: () => i,
+        frameLoop: () => o,
+        now: () => l,
+        requestAnimationFrame: () => d,
+        skipAnimation: () => c,
+        to: () => r,
+        willAdvance: () => _
     });
 var i,
-    a,
-    o = r(19784),
-    s = r(217348),
-    l = new o.V(),
-    u = function () {
+    r,
+    a = n(19784),
+    s = n(217348),
+    o = new a.V(),
+    l = function () {
         return performance.now();
     },
-    c = null,
-    d = !1,
-    f =
+    u = null,
+    c = !1,
+    d =
         'undefined' != typeof window
             ? window.requestAnimationFrame
             : function () {
                   return -1;
               },
-    p = function (e) {
+    f = function (e) {
         return e();
     },
-    h = s.ZT,
-    _ = function (e) {
-        var n;
+    _ = s.ZT,
+    p = function (e) {
+        var t;
         return (
-            (a = (n = Object.assign(
+            (r = (t = Object.assign(
                 {
-                    to: a,
-                    now: u,
-                    frameLoop: l,
-                    colorNames: c,
-                    skipAnimation: d,
+                    to: r,
+                    now: l,
+                    frameLoop: o,
+                    colorNames: u,
+                    skipAnimation: c,
                     createStringInterpolator: i,
-                    requestAnimationFrame: f,
-                    batchedUpdates: p,
-                    willAdvance: h
+                    requestAnimationFrame: d,
+                    batchedUpdates: f,
+                    willAdvance: _
                 },
-                m(e)
+                h(e)
             )).to),
-            (u = n.now),
-            (l = n.frameLoop),
-            (c = n.colorNames),
-            (d = n.skipAnimation),
-            (i = n.createStringInterpolator),
-            (f = n.requestAnimationFrame),
-            (p = n.batchedUpdates),
-            (h = n.willAdvance),
-            n
+            (l = t.now),
+            (o = t.frameLoop),
+            (u = t.colorNames),
+            (c = t.skipAnimation),
+            (i = t.createStringInterpolator),
+            (d = t.requestAnimationFrame),
+            (f = t.batchedUpdates),
+            (_ = t.willAdvance),
+            t
         );
     };
-function m(e) {
-    var n = {};
-    for (var r in e) void 0 !== e[r] && (n[r] = e[r]);
-    return n;
+function h(e) {
+    var t = {};
+    for (var n in e) void 0 !== e[n] && (t[n] = e[n]);
+    return t;
 }

@@ -1,13 +1,9 @@
-t.d(n, {
-    p: function () {
-        return o;
-    }
-});
+t.d(n, { p: () => o });
 var l = t(232713),
     a = t(65400),
     i = t(731965),
-    r = t(174727);
-let s = (0, a.F)((e) => ({
+    s = t(174727);
+let r = (0, a.F)((e) => ({
     audio: null,
     file: null,
     loading: !1,
@@ -23,7 +19,7 @@ let s = (0, a.F)((e) => ({
             null == n)
         )
             return;
-        let t = await (0, r.lj)(n);
+        let t = await (0, s.lj)(n);
         null != t &&
             (0, i.j)(() =>
                 e({
@@ -38,7 +34,7 @@ let s = (0, a.F)((e) => ({
     }
 }));
 function o() {
-    return s(
+    return r(
         (e) => ({
             audio: e.audio,
             file: e.file,

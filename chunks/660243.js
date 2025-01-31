@@ -1,155 +1,103 @@
-n.d(t, {
-    re: function () {
-        return S;
-    }
-});
+n.d(t, { r: () => x });
 var i = n(200651);
 n(192379);
-var r = n(793030),
-    s = n(442837),
-    a = n(780384),
-    l = n(481060),
-    o = n(230711),
-    c = n(410030),
-    d = n(726542),
-    u = n(835473),
-    m = n(594190),
-    g = n(553795),
-    h = n(823379),
-    p = n(981631),
-    x = n(701488),
-    f = n(388032),
-    E = n(707288),
-    _ = n(146036),
-    C = n(510176);
-function T(e) {
-    let { headerAssetSrc: t, headerText: n, description: s, assets: a = [], assetCount: o = 0, onClick: c } = e;
+var s = n(793030),
+    r = n(481060),
+    l = n(230711),
+    a = n(695346),
+    o = n(903002),
+    c = n(214492),
+    d = n(981631),
+    u = n(388032),
+    m = n(707288),
+    h = n(146036),
+    g = n(510176);
+function _(e) {
+    let { headerAssetSrc: t, headerText: n, description: l, assets: a = [], assetCount: c = 0, disabled: d = !1, onClick: h } = e;
     return (0, i.jsxs)('div', {
-        className: E.container,
+        className: m.container,
         children: [
             (0, i.jsxs)('div', {
-                className: E.headerContainer,
+                className: m.headerContainer,
                 children: [
                     (0, i.jsx)('img', {
                         src: t,
                         alt: '',
-                        className: E.headerAsset
+                        className: m.headerAsset
                     }),
-                    (0, i.jsx)(r.X6, {
+                    (0, i.jsx)(s.X6, {
                         variant: 'heading-lg/normal',
                         color: 'header-primary',
                         children: n
                     }),
-                    (0, i.jsx)(r.xv, {
+                    (0, i.jsx)(s.xv, {
                         variant: 'text-sm/normal',
                         color: 'text-muted',
-                        children: s
+                        children: l
                     })
                 ]
             }),
-            (0, i.jsxs)('div', {
-                className: E.sharingContainer,
-                children: [
-                    (0, i.jsx)('div', {
-                        className: E.sharingTitleSpacer,
-                        children:
-                            o > 0 &&
-                            (0, i.jsx)(r.xv, {
-                                variant: 'text-sm/semibold',
-                                children: f.intl.string(f.t['9b/+6e'])
-                            })
-                    }),
-                    (0, i.jsxs)('div', {
-                        className: E.manageContainer,
-                        children: [
-                            (0, i.jsxs)('div', {
-                                className: E.iconRow,
-                                children: [
-                                    a.map((e, t) => {
-                                        let { src: n, alt: r } = e;
-                                        return (0, i.jsx)(
-                                            'img',
-                                            {
-                                                src: n,
-                                                alt: r,
-                                                className: E.icon
-                                            },
-                                            t
-                                        );
-                                    }),
-                                    o > 4 &&
-                                        (0, i.jsx)('div', {
-                                            className: E.overflow,
-                                            children: (0, i.jsx)(r.xv, {
-                                                variant: 'text-sm/normal',
-                                                children: '+'.concat(o - 3)
-                                            })
-                                        })
-                                ]
-                            }),
-                            (0, i.jsx)(l.Button, {
-                                onClick: c,
-                                color: l.Button.Colors.PRIMARY,
-                                children: 'Manage'
-                            })
-                        ]
-                    })
-                ]
-            })
+            d
+                ? (0, i.jsx)(s.xv, {
+                      variant: 'text-sm/semibold',
+                      color: 'text-muted',
+                      children: u.intl.string(u.t.jfrLLS)
+                  })
+                : (0, i.jsxs)('div', {
+                      className: m.sharingContainer,
+                      children: [
+                          (0, i.jsx)('div', {
+                              className: m.sharingTitleSpacer,
+                              children:
+                                  c > 0 &&
+                                  (0, i.jsx)(s.xv, {
+                                      variant: 'text-sm/semibold',
+                                      children: u.intl.string(u.t['9b/+6e'])
+                                  })
+                          }),
+                          (0, i.jsxs)('div', {
+                              className: m.manageContainer,
+                              children: [
+                                  (0, i.jsx)(o.D, {
+                                      assets: a,
+                                      assetCount: c
+                                  }),
+                                  (0, i.jsx)(r.zxk, {
+                                      onClick: h,
+                                      color: r.zxk.Colors.PRIMARY,
+                                      children: 'Manage'
+                                  })
+                              ]
+                          })
+                      ]
+                  })
         ]
     });
 }
-function S() {
-    let { assets: e, count: t } = (function () {
-            let e = (0, s.Wu)([m.ZP], () => m.ZP.getGamesSeen(!1).map((e) => e.id)),
-                t = e.length,
-                n = e.filter(h.lm).slice(0, t > 4 ? 3 : 4);
-            return {
-                assets: (0, u.Z)(n)
-                    .filter(h.lm)
-                    .map((e) => {
-                        var t;
-                        return {
-                            src: null !== (t = e.getIconURL(x.Si.LARGE)) && void 0 !== t ? t : '',
-                            alt: e.name
-                        };
-                    }),
-                count: t
-            };
-        })(),
-        { assets: n, count: r } = (function () {
-            let e = (0, s.e7)([g.Z], () => g.Z.getAccounts()),
-                t = (0, c.ZP)(),
-                n = e.length;
-            return {
-                assets: e.slice(0, n > 4 ? 3 : 4).map((e) => {
-                    let n = d.Z.get(e.type);
-                    return {
-                        src: (0, a.wj)(t) ? n.icon.darkSVG : n.icon.lightSVG,
-                        alt: n.name
-                    };
-                }),
-                count: n
-            };
-        })();
+function x() {
+    let e = !a.G6.useSetting(),
+        { assets: t, count: n } = (0, c.oF)(),
+        { assets: s, count: r } = (0, c.hs)();
     return (0, i.jsxs)('div', {
-        className: E.cardsContainer,
+        className: m.cardsContainer,
         children: [
-            (0, i.jsx)(T, {
-                headerAssetSrc: _,
-                headerText: f.intl.string(f.t.URyqtL),
-                description: f.intl.string(f.t['3uTjaG']),
-                assets: e,
-                assetCount: t,
-                onClick: () => o.Z.open(p.oAB.REGISTERED_GAMES)
+            (0, i.jsx)(_, {
+                headerAssetSrc: h,
+                headerText: u.intl.string(u.t.URyqtL),
+                description: u.intl.string(u.t['3uTjaG']),
+                assets: t,
+                assetCount: n,
+                onClick: () => l.Z.open(d.oAB.REGISTERED_GAMES),
+                disabled: e
             }),
-            (0, i.jsx)(T, {
-                headerAssetSrc: C,
-                headerText: f.intl.string(f.t['3fe7U1']),
-                description: f.intl.string(f.t.IoN1am),
-                assets: n,
+            (0, i.jsx)(_, {
+                headerAssetSrc: g,
+                headerText: u.intl.string(u.t['3fe7U1']),
+                description: u.intl.string(u.t.IoN1am),
+                assets: s,
                 assetCount: r,
-                onClick: () => o.Z.open(p.oAB.CONNECTIONS)
+                onClick: () => l.Z.open(d.oAB.CONNECTIONS),
+                disabled: e
             })
         ]
     });

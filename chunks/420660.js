@@ -1,13 +1,9 @@
-r.d(n, {
-    Z: function () {
-        return s;
-    }
-});
-var i = r(701488),
-    a = r(981631);
-function o(e) {
-    return e.type === a.IIU.STREAMING && null != e.url && i.d.test(e.url);
+n.d(t, { Z: () => s });
+var i = n(701488),
+    r = n(981631);
+function a(e) {
+    return e.type === r.IIU.STREAMING && null != e.url && i.d.test(e.url);
 }
 function s(e) {
-    return null != e && (Array.isArray(e) ? e.some(o) : o(e));
+    return null != e && (Array.isArray(e) ? e.some(a) : a(e));
 }

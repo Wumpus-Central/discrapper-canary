@@ -2,15 +2,11 @@ function i() {
     return (i = Object.assign
         ? Object.assign.bind()
         : function (e) {
-              for (var n = 1; n < arguments.length; n++) {
-                  var r = arguments[n];
-                  for (var i in r) Object.prototype.hasOwnProperty.call(r, i) && (e[i] = r[i]);
+              for (var t = 1; t < arguments.length; t++) {
+                  var n = arguments[t];
+                  for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
               }
               return e;
           }).apply(this, arguments);
 }
-r.d(n, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });

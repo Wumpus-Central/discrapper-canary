@@ -1,51 +1,47 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
+n.d(t, { Z: () => d });
 var i = n(200651),
-    r = n(192379),
-    l = n(481060),
-    a = n(283836),
-    o = n(728345),
-    s = n(388032),
+    l = n(192379),
+    a = n(481060),
+    r = n(283836),
+    s = n(728345),
+    o = n(388032),
     c = n(22650);
-function u(e) {
+function d(e) {
     let { applicationId: t, guildId: n } = e,
-        { data: r } = (0, o.IX)(t);
-    return null == r
+        { data: l } = (0, s.IX)(t);
+    return null == l
         ? null
-        : (0, i.jsx)(d, {
-              app: r,
+        : (0, i.jsx)(u, {
+              app: l,
               guildId: n
           });
 }
-function d(e) {
-    let { app: t, guildId: o } = e;
-    (0, a.q)(t.id);
-    let u = r.useCallback(() => {
-        (0, l.openModalLazy)(async () => {
+function u(e) {
+    let { app: t, guildId: s } = e;
+    (0, r.q)(t.id);
+    let d = l.useCallback(() => {
+        (0, a.ZDy)(async () => {
             let { default: e } = await Promise.all([n.e('77803'), n.e('7657')]).then(n.bind(n, 7225));
             return (n) =>
                 (0, i.jsx)(e, {
                     appId: t.id,
-                    guildId: o,
+                    guildId: s,
                     ...n
                 });
         });
-    }, [t, o]);
-    return (0, i.jsx)(l.Button, {
-        color: l.Button.Colors.BRAND,
-        size: l.Button.Sizes.SMALL,
-        onClick: u,
+    }, [t, s]);
+    return (0, i.jsx)(a.zxk, {
+        color: a.zxk.Colors.BRAND,
+        size: a.zxk.Sizes.SMALL,
+        onClick: d,
         children: (0, i.jsxs)('div', {
             className: c.button,
             children: [
-                (0, i.jsx)(l.ShopSparkleIcon, {
+                (0, i.jsx)(a.QJP, {
                     size: 'xs',
                     color: 'white'
                 }),
-                s.intl.format(s.t.XDRjs7, { appName: t.name })
+                o.intl.format(o.t.XDRjs7, { appName: t.name })
             ]
         })
     });

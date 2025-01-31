@@ -1,43 +1,39 @@
-r.d(n, {
-    Z: function () {
-        return p;
-    }
-});
-var i = r(175922),
-    a = r(759202),
-    o = r(316138),
-    s = r(882159),
-    l = r(977489),
-    u = r(285363),
-    c = r(538018),
-    d = r(894417);
-function f(e) {
-    var n = e.getBoundingClientRect(),
-        r = (0, d.NM)(n.width) / e.offsetWidth || 1,
-        i = (0, d.NM)(n.height) / e.offsetHeight || 1;
-    return 1 !== r || 1 !== i;
+n.d(t, { Z: () => f });
+var i = n(175922),
+    r = n(759202),
+    a = n(316138),
+    s = n(882159),
+    o = n(977489),
+    l = n(285363),
+    u = n(538018),
+    c = n(894417);
+function d(e) {
+    var t = e.getBoundingClientRect(),
+        n = (0, c.NM)(t.width) / e.offsetWidth || 1,
+        i = (0, c.NM)(t.height) / e.offsetHeight || 1;
+    return 1 !== n || 1 !== i;
 }
-function p(e, n, r) {
-    void 0 === r && (r = !1);
-    var d = (0, s.Re)(n),
-        p = (0, s.Re)(n) && f(n),
-        h = (0, u.Z)(n),
-        _ = (0, i.Z)(e, p, r),
-        m = {
+function f(e, t, n) {
+    void 0 === n && (n = !1);
+    var c = (0, s.Re)(t),
+        f = (0, s.Re)(t) && d(t),
+        _ = (0, l.Z)(t),
+        p = (0, i.Z)(e, f, n),
+        h = {
             scrollLeft: 0,
             scrollTop: 0
         },
-        g = {
+        m = {
             x: 0,
             y: 0
         };
     return (
-        (d || (!d && !r)) && (('body' !== (0, o.Z)(n) || (0, c.Z)(h)) && (m = (0, a.Z)(n)), (0, s.Re)(n) ? ((g = (0, i.Z)(n, !0)), (g.x += n.clientLeft), (g.y += n.clientTop)) : h && (g.x = (0, l.Z)(h))),
+        (c || (!c && !n)) && (('body' !== (0, a.Z)(t) || (0, u.Z)(_)) && (h = (0, r.Z)(t)), (0, s.Re)(t) ? ((m = (0, i.Z)(t, !0)), (m.x += t.clientLeft), (m.y += t.clientTop)) : _ && (m.x = (0, o.Z)(_))),
         {
-            x: _.left + m.scrollLeft - g.x,
-            y: _.top + m.scrollTop - g.y,
-            width: _.width,
-            height: _.height
+            x: p.left + h.scrollLeft - m.x,
+            y: p.top + h.scrollTop - m.y,
+            width: p.width,
+            height: p.height
         }
     );
 }

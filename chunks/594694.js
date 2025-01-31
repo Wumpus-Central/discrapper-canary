@@ -1,7 +1,7 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    var n = {
+    var t = {
         0: '-ум',
         1: '-ум',
         2: '-юм',
@@ -63,24 +63,17 @@
             yy: '%d сол'
         },
         meridiemParse: /шаб|субҳ|рӯз|бегоҳ/,
-        meridiemHour: function (e, n) {
-            if ((12 === e && (e = 0), 'шаб' === n)) return e < 4 ? e : e + 12;
-            if ('субҳ' === n) return e;
-            if ('рӯз' === n) return e >= 11 ? e : e + 12;
-            else if ('бегоҳ' === n) return e + 12;
+        meridiemHour: function (e, t) {
+            return (12 === e && (e = 0), 'шаб' === t) ? (e < 4 ? e : e + 12) : 'субҳ' === t ? e : 'рӯз' === t ? (e >= 11 ? e : e + 12) : 'бегоҳ' === t ? e + 12 : void 0;
         },
-        meridiem: function (e, n, r) {
-            if (e < 4) return 'шаб';
-            if (e < 11) return 'субҳ';
-            if (e < 16) return 'рӯз';
-            else if (e < 19) return 'бегоҳ';
-            else return 'шаб';
+        meridiem: function (e, t, n) {
+            return e < 4 ? 'шаб' : e < 11 ? 'субҳ' : e < 16 ? 'рӯз' : e < 19 ? 'бегоҳ' : 'шаб';
         },
         dayOfMonthOrdinalParse: /\d{1,2}-(ум|юм)/,
         ordinal: function (e) {
-            var r = e % 10,
+            var n = e % 10,
                 i = e >= 100 ? 100 : null;
-            return e + (n[e] || n[r] || n[i]);
+            return e + (t[e] || t[n] || t[i]);
         },
         week: {
             dow: 1,

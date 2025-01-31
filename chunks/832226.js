@@ -1,5 +1,6 @@
-e.exports = {
-    userTooltip: 'userTooltip_a0bdd1',
-    avatar: 'avatar_a0bdd1',
-    discriminator: 'discriminator_a0bdd1'
+var i = {
+    userTooltip: 'userTooltip__6b453',
+    avatar: 'avatar__6b453',
+    discriminator: 'discriminator__6b453'
 };
+e.exports = i;

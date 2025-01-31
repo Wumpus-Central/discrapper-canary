@@ -1,13 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return p;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => p }), n(47120);
 var i = n(192379),
     l = n(876215),
-    r = n(442837),
-    a = n(676316),
+    a = n(442837),
+    r = n(676316),
     s = n(146282),
     o = n(442853),
     c = n(520951),
@@ -23,14 +18,14 @@ function p(e) {
         (t = i.useMemo(() => (null == t ? void 0 : t.filter((e) => h.has(e.content_type))), [t]));
     let { entries: n, filteredIds: l } = (0, c.Z)(t);
     t = n;
-    let { entriesWithLeaderboard: p, hasLeaderboardEntry: m } = (0, a.Z)({
+    let { entriesWithLeaderboard: p, hasLeaderboardEntry: m } = (0, r.Z)({
         entries: t,
         channelId: e
     });
     return (
         (t = p),
         {
-            requestId: (0, r.e7)([s.Z], () => s.Z.getFeedRequestId(u.YN.GLOBAL_FEED)),
+            requestId: (0, a.e7)([s.Z], () => s.Z.getFeedRequestId(u.YN.GLOBAL_FEED)),
             entries: t,
             impressionCappedEntryIds: l,
             hasLeaderboardEntry: m

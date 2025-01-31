@@ -1,54 +1,47 @@
-r.d(t, {
-    Mq: function () {
-        return i;
-    },
-    Q3: function () {
-        return E;
-    },
-    uE: function () {
-        return c;
-    }
+a.d(e, {
+    Mq: () => c,
+    Q3: () => i,
+    uE: () => s
 });
-var a = r(617726),
-    n = r(967752),
-    _ = r(305625),
-    o = r(696486);
-function E(e, t, r, _) {
-    let o = (0, a.HY)(r),
-        E = {
+var r = a(617726),
+    n = a(967752),
+    o = a(305625),
+    _ = a(696486);
+function i(t, e, a, o) {
+    let _ = (0, r.HY)(a),
+        i = {
             sent_at: new Date().toISOString(),
-            ...(o && { sdk: o }),
-            ...(!!_ && t && { dsn: (0, n.RA)(t) })
+            ...(_ && { sdk: _ }),
+            ...(!!o && e && { dsn: (0, n.RA)(e) })
         },
-        i = 'aggregates' in e ? [{ type: 'sessions' }, e] : [{ type: 'session' }, e.toJSON()];
-    return (0, a.Jd)(E, [i]);
+        c = 'aggregates' in t ? [{ type: 'sessions' }, t] : [{ type: 'session' }, t.toJSON()];
+    return (0, r.Jd)(i, [c]);
 }
-function i(e, t, r, n) {
-    var _, o;
-    let E = (0, a.HY)(r),
-        i = e.type && 'replay_event' !== e.type ? e.type : 'event';
-    (_ = e), !(o = r && r.sdk) || ((_.sdk = _.sdk || {}), (_.sdk.name = _.sdk.name || o.name), (_.sdk.version = _.sdk.version || o.version), (_.sdk.integrations = [...(_.sdk.integrations || []), ...(o.integrations || [])]), (_.sdk.packages = [...(_.sdk.packages || []), ...(o.packages || [])]));
-    let c = (0, a.Cd)(e, E, n, t);
-    delete e.sdkProcessingMetadata;
-    let s = [{ type: i }, e];
-    return (0, a.Jd)(c, [s]);
+function c(t, e, a, n) {
+    var o;
+    let _ = (0, r.HY)(a),
+        i = t.type && 'replay_event' !== t.type ? t.type : 'event';
+    (o = a && a.sdk) && ((t.sdk = t.sdk || {}), (t.sdk.name = t.sdk.name || o.name), (t.sdk.version = t.sdk.version || o.version), (t.sdk.integrations = [...(t.sdk.integrations || []), ...(o.integrations || [])]), (t.sdk.packages = [...(t.sdk.packages || []), ...(o.packages || [])]));
+    let c = (0, r.Cd)(t, _, n, e);
+    delete t.sdkProcessingMetadata;
+    let s = [{ type: i }, t];
+    return (0, r.Jd)(c, [s]);
 }
-function c(e, t) {
-    var r;
-    let E = (0, _.jC)(e[0]),
-        i = t && t.getDsn(),
-        c = t && t.getOptions().tunnel;
-    let s = {
+function s(t, e) {
+    let a = (0, o.jC)(t[0]),
+        i = e && e.getDsn(),
+        c = e && e.getOptions().tunnel,
+        s = {
             sent_at: new Date().toISOString(),
-            ...(!!(r = E).trace_id && !!r.public_key && { trace: E }),
+            ...(!!a.trace_id && !!a.public_key && { trace: a }),
             ...(!!c && i && { dsn: (0, n.RA)(i) })
         },
-        l = t && t.getOptions().beforeSendSpan,
-        I = l ? (e) => l((0, o.XU)(e)) : (e) => (0, o.XU)(e),
+        E = e && e.getOptions().beforeSendSpan,
+        l = E ? (t) => E((0, _.XU)(t)) : (t) => (0, _.XU)(t),
         u = [];
-    for (let t of e) {
-        let e = I(t);
-        e && u.push((0, a.KQ)(e));
+    for (let e of t) {
+        let t = l(e);
+        t && u.push((0, r.KQ)(t));
     }
-    return (0, a.Jd)(s, u);
+    return (0, r.Jd)(s, u);
 }

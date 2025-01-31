@@ -1,27 +1,23 @@
-function i(e, n, r) {
+function i(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-r.d(n, {
-    I: function () {
-        return a;
-    }
-});
-class a {
-    schedule(e, n) {
+n.d(t, { I: () => r });
+class r {
+    schedule(e, t) {
         this.unschedule(),
             (this.timeoutId = setTimeout(() => {
                 (this.timeoutId = null), e();
-            }, n));
+            }, t));
     }
     unschedule() {
         this.scheduled() && (clearTimeout(this.timeoutId), (this.timeoutId = null));

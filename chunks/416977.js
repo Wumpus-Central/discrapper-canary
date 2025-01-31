@@ -1,24 +1,20 @@
-t.d(n, {
-    Z: function () {
-        return l;
-    }
-});
-var u = t(200651);
-t(192379);
-var i = t(442837),
-    r = t(481060),
-    c = t(45114),
-    s = t(306680),
-    d = t(490897),
-    a = t(388032);
+n.d(t, { Z: () => l });
+var i = n(200651);
+n(192379);
+var s = n(442837),
+    d = n(481060),
+    r = n(45114),
+    c = n(306680),
+    a = n(490897),
+    u = n(388032);
 function l(e) {
-    let n = (0, i.e7)([s.ZP], () => s.ZP.hasUnread(e, d.W.GUILD_EVENT), [e]);
-    return (0, u.jsx)(r.MenuItem, {
+    let t = (0, s.e7)([c.ZP], () => c.ZP.hasUnread(e, a.W.GUILD_EVENT), [e]);
+    return (0, i.jsx)(d.sNh, {
         id: 'mark-events-read',
-        label: a.intl.string(a.t.e6RscX),
+        label: u.intl.string(u.t.e6RscX),
         action: function () {
-            (0, c.Ju)(e, d.W.GUILD_EVENT);
+            (0, r.Ju)(e, a.W.GUILD_EVENT);
         },
-        disabled: !n
+        disabled: !t
     });
 }

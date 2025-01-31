@@ -1,11 +1,12 @@
-e.exports = {
-    disabled: 'disabled_a06035',
-    container: 'container_a06035',
-    separator: 'separator_a06035',
-    buttonContainer: 'buttonContainer_a06035',
-    sendIcon: 'sendIcon_a06035',
-    innerButton: 'innerButton_a06035',
-    button: 'button_a06035',
-    buttonChild: 'buttonChild_a06035',
-    activeButtonChild: 'activeButtonChild_a06035'
+var i = {
+    disabled: 'disabled_aa63ab',
+    container: 'container_aa63ab',
+    separator: 'separator_aa63ab',
+    buttonContainer: 'buttonContainer_aa63ab',
+    sendIcon: 'sendIcon_aa63ab',
+    innerButton: 'innerButton_aa63ab',
+    button: 'button_aa63ab',
+    buttonChild: 'buttonChild_aa63ab',
+    activeButtonChild: 'activeButtonChild_aa63ab'
 };
+e.exports = i;

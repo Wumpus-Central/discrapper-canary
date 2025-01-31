@@ -1,39 +1,35 @@
-r.d(n, {
-    I: function () {
-        return c;
-    }
-});
-var i = r(192379),
-    a =
+n.d(t, { I: () => u });
+var i = n(192379),
+    r =
         Object.assign ||
         function (e) {
-            for (var n = 1; n < arguments.length; n++) {
-                var r = arguments[n];
-                for (var i in r) Object.prototype.hasOwnProperty.call(r, i) && (e[i] = r[i]);
+            for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
             }
             return e;
         },
-    o = (function () {
-        function e(e, n) {
-            for (var r = 0; r < n.length; r++) {
-                var i = n[r];
+    a = (function () {
+        function e(e, t) {
+            for (var n = 0; n < t.length; n++) {
+                var i = t[n];
                 (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
             }
         }
-        return function (n, r, i) {
-            return r && e(n.prototype, r), i && e(n, i), n;
+        return function (t, n, i) {
+            return n && e(t.prototype, n), i && e(t, i), t;
         };
     })();
-function s(e, n) {
-    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
+function s(e, t) {
+    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function l(e, n) {
+function o(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-    return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
+    return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-function u(e, n) {
-    if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function, not ' + typeof n);
-    (e.prototype = Object.create(n && n.prototype, {
+function l(e, t) {
+    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+    (e.prototype = Object.create(t && t.prototype, {
         constructor: {
             value: e,
             enumerable: !1,
@@ -41,44 +37,44 @@ function u(e, n) {
             configurable: !0
         }
     })),
-        n && (Object.setPrototypeOf ? Object.setPrototypeOf(e, n) : (e.__proto__ = n));
+        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
-var c = function (e) {
-    var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'span';
-    return (function (r) {
-        function c() {
-            s(this, c);
-            for (var e, n, r, i = arguments.length, a = Array(i), o = 0; o < i; o++) a[o] = arguments[o];
+var u = function (e) {
+    var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'span';
+    return (function (n) {
+        function u() {
+            s(this, u);
+            for (var e, t, n, i = arguments.length, r = Array(i), a = 0; a < i; a++) r[a] = arguments[a];
             return (
-                (n = r = l(this, (e = c.__proto__ || Object.getPrototypeOf(c)).call.apply(e, [this].concat(a)))),
-                (r.state = { focus: !1 }),
-                (r.handleFocus = function () {
-                    return r.setState({ focus: !0 });
+                (t = n = o(this, (e = u.__proto__ || Object.getPrototypeOf(u)).call.apply(e, [this].concat(r)))),
+                (n.state = { focus: !1 }),
+                (n.handleFocus = function () {
+                    return n.setState({ focus: !0 });
                 }),
-                (r.handleBlur = function () {
-                    return r.setState({ focus: !1 });
+                (n.handleBlur = function () {
+                    return n.setState({ focus: !1 });
                 }),
-                l(r, n)
+                o(n, t)
             );
         }
         return (
-            u(c, r),
-            o(c, [
+            l(u, n),
+            a(u, [
                 {
                     key: 'render',
                     value: function () {
                         return i.createElement(
-                            n,
+                            t,
                             {
                                 onFocus: this.handleFocus,
                                 onBlur: this.handleBlur
                             },
-                            i.createElement(e, a({}, this.props, this.state))
+                            i.createElement(e, r({}, this.props, this.state))
                         );
                     }
                 }
             ]),
-            c
+            u
         );
     })(i.Component);
 };

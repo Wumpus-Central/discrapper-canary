@@ -1,12 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
+n.d(t, { Z: () => u });
 var a = n(200651);
 n(192379);
-var r = n(442837),
-    l = n(814443),
+var l = n(442837),
+    r = n(814443),
     i = n(594174),
     o = n(681619),
     s = n(299205),
@@ -31,8 +27,8 @@ let d = [
     }
 ];
 function u() {
-    let e = (0, r.Wu)([l.Z, i.default], () =>
-        l.Z.getUserAffinities().map((e) => {
+    let e = (0, l.Wu)([r.Z, i.default], () =>
+        r.Z.getUserAffinities().map((e) => {
             let { user_id: t, affinity: n } = e;
             return {
                 user: i.default.getUser(t),

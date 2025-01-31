@@ -1,16 +1,17 @@
-var o = n(200651);
+n.d(t, { Z: () => l });
+var s = n(200651);
 n(192379);
 var r = n(120356),
-    s = n.n(r),
-    a = n(481060),
+    a = n.n(r),
+    o = n(481060),
     i = n(102787);
-t.Z = function (e) {
+let l = function (e) {
     let { allowClicks: t = !1, children: n, withBorder: r = !1 } = e;
-    return (0, o.jsx)(a.FocusBlock, {
-        children: (0, o.jsx)(a.Card, {
-            className: s()(i.componentPreviewWrapper, { [i.componentPreviewWrapperBordered]: r }),
+    return (0, s.jsx)(o.Rny, {
+        children: (0, s.jsx)(o.Zbd, {
+            className: a()(i.componentPreviewWrapper, { [i.componentPreviewWrapperBordered]: r }),
             outline: r,
-            children: (0, o.jsx)('div', {
+            children: (0, s.jsx)('div', {
                 className: i.componentPreview,
                 onClickCapture: t
                     ? void 0

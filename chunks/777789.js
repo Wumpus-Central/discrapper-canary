@@ -1,17 +1,13 @@
-n.d(l, {
-    Z: function () {
-        return h;
-    }
-});
+n.d(l, { Z: () => C });
 var t = n(200651),
     s = n(192379),
-    r = n(120356),
-    i = n.n(r),
-    o = n(565138),
-    a = n(297700),
+    i = n(120356),
+    r = n.n(i),
+    a = n(565138),
+    o = n(297700),
     d = n(471885),
-    u = n(424625),
-    c = n(267642),
+    c = n(424625),
+    u = n(267642),
     m = n(701519);
 class x extends s.PureComponent {
     render() {
@@ -19,39 +15,39 @@ class x extends s.PureComponent {
         return (0, t.jsxs)('div', {
             className: m.tierPill,
             children: [
-                (0, t.jsx)(a.Z, {
+                (0, t.jsx)(o.Z, {
                     className: m.tierPillStar,
                     children: (0, t.jsx)(d.Z, {
                         tier: e,
                         className: m.tierPillGem
                     })
                 }),
-                (0, c.nW)(e)
+                (0, u.nW)(e)
             ]
         });
     }
 }
-let C = (e) => {
+let h = (e) => {
     let { subscriptionChange: l, guild: n } = e;
     if (0 === l) return null;
     let s = Math.max(n.premiumSubscriberCount + l, 0),
-        r = (0, c.rF)(s, n.id),
-        i = r - (0, c.rF)(n.premiumSubscriberCount, n.id);
-    return 0 === i
+        i = (0, u.rF)(s, n.id),
+        r = i - (0, u.rF)(n.premiumSubscriberCount, n.id);
+    return 0 === r
         ? null
         : (0, t.jsxs)(t.Fragment, {
-              children: [(0, t.jsx)(u.Z, { className: i > 0 ? m.levelUpIcon : m.levelDownIcon }), (0, t.jsx)(x, { tier: r })]
+              children: [(0, t.jsx)(c.Z, { className: r > 0 ? m.levelUpIcon : m.levelDownIcon }), (0, t.jsx)(x, { tier: i })]
           });
 };
-class h extends s.PureComponent {
+class C extends s.PureComponent {
     render() {
         let { guild: e, className: l, subscriptionChange: n } = this.props;
         return (0, t.jsxs)('div', {
-            className: i()(m.subscription, l),
+            className: r()(m.subscription, l),
             children: [
-                (0, t.jsx)(o.Z, {
+                (0, t.jsx)(a.Z, {
                     guild: e,
-                    size: o.Z.Sizes.LARGE
+                    size: a.Z.Sizes.LARGE
                 }),
                 (0, t.jsxs)('div', {
                     className: m.subscriptionInfo,
@@ -64,7 +60,7 @@ class h extends s.PureComponent {
                             className: m.tierInfo,
                             children: [
                                 (0, t.jsx)(x, { tier: e.premiumTier }),
-                                (0, t.jsx)(C, {
+                                (0, t.jsx)(h, {
                                     guild: e,
                                     subscriptionChange: null != n ? n : 0
                                 })

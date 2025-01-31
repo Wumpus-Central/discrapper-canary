@@ -1,8 +1,9 @@
+n.d(t, { Z: () => g });
 var i = n(200651),
-    r = n(192379),
-    s = n(120356),
-    a = n.n(s),
-    l = n(481060),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(481060),
     o = n(358085),
     c = n(998502),
     d = n(388032),
@@ -20,7 +21,7 @@ function m(e, t, n) {
         e
     );
 }
-class g extends r.PureComponent {
+class h extends s.PureComponent {
     async componentDidMount() {
         this.setState({
             openOnStartup: await c.ZP.getSetting('OPEN_ON_STARTUP', !0),
@@ -30,13 +31,13 @@ class g extends r.PureComponent {
     }
     render() {
         let { openOnStartup: e, startMinimized: t, minimizeToTray: n } = this.state,
-            r = (0, o.isLinux)() ? d.intl.string(d.t['7pPjTU']) : d.intl.string(d.t.ZkDZoq);
-        return (0, i.jsxs)(l.FormSection, {
-            tag: l.FormTitleTags.H1,
-            title: r,
+            s = (0, o.isLinux)() ? d.intl.string(d.t['7pPjTU']) : d.intl.string(d.t.ZkDZoq);
+        return (0, i.jsxs)(a.hjN, {
+            tag: a.RB0.H1,
+            title: s,
             children: [
-                (0, i.jsx)(l.FormTitle, { children: d.intl.string(d.t['w/vU5u']) }),
-                (0, i.jsx)(l.FormSwitch, {
+                (0, i.jsx)(a.vwX, { children: d.intl.string(d.t['w/vU5u']) }),
+                (0, i.jsx)(a.j7V, {
                     className: u.marginBottom20,
                     value: e,
                     note: d.intl.string(d.t['s/cQra']),
@@ -44,20 +45,20 @@ class g extends r.PureComponent {
                     children: d.intl.string(d.t.WQm4p6)
                 }),
                 (0, o.isWindows)()
-                    ? (0, i.jsx)(l.FormSwitch, {
+                    ? (0, i.jsx)(a.j7V, {
                           disabled: !e,
-                          className: a()(u.marginTop8, u.marginBottom20),
+                          className: l()(u.marginTop8, u.marginBottom20),
                           value: !!e && t,
                           note: d.intl.string(d.t.o2FSjI),
                           onChange: this.handleToggleStartMinimized,
                           children: d.intl.string(d.t.n7Yjen)
                       })
                     : null,
-                (0, i.jsx)(l.FormTitle, {
-                    className: a()(u.marginTop20, u.marginBottom8),
+                (0, i.jsx)(a.vwX, {
+                    className: l()(u.marginTop20, u.marginBottom8),
                     children: d.intl.string(d.t.h0hFx8)
                 }),
-                (0, i.jsx)(l.FormSwitch, {
+                (0, i.jsx)(a.j7V, {
                     className: u.marginBottom20,
                     value: n,
                     note: d.intl.string(d.t['mVuX+v']),
@@ -88,4 +89,4 @@ class g extends r.PureComponent {
             });
     }
 }
-t.Z = g;
+let g = h;

@@ -1,102 +1,98 @@
-t.d(n, {
-    Z: function () {
-        return x;
-    }
-});
-var l = t(200651);
-t(192379);
-var i = t(442837),
-    r = t(481060),
-    a = t(536442),
-    s = t(142497),
-    o = t(388032),
-    c = t(142863),
-    d = t(137707);
+l.d(n, { Z: () => x });
+var t = l(200651);
+l(192379);
+var i = l(442837),
+    a = l(481060),
+    r = l(536442),
+    s = l(142497),
+    o = l(388032),
+    d = l(142863),
+    c = l(137707);
 let u = () =>
-    (0, l.jsxs)(l.Fragment, {
+    (0, t.jsxs)(t.Fragment, {
         children: [
-            (0, l.jsx)(r.Text, {
+            (0, t.jsx)(a.Text, {
                 color: 'header-primary',
                 variant: 'text-xs/normal',
-                className: c.inlineText,
+                className: d.inlineText,
                 children: o.intl.string(o.t.GcZzp6)
             }),
-            (0, l.jsx)(r.Text, {
+            (0, t.jsx)(a.Text, {
                 color: 'header-primary',
                 variant: 'text-xs/normal',
-                className: c.inlineText,
+                className: d.inlineText,
                 children: o.intl.string(o.t['/NEGrK'])
             }),
-            (0, l.jsx)(r.Text, {
+            (0, t.jsx)(a.Text, {
                 color: 'header-primary',
                 variant: 'text-xs/normal',
-                className: c.inlineText,
+                className: d.inlineText,
                 children: o.intl.string(o.t.eUbuHB)
             }),
-            (0, l.jsx)(r.Text, {
+            (0, t.jsx)(a.Text, {
                 color: 'header-primary',
                 variant: 'text-xs/normal',
-                className: c.inlineText,
+                className: d.inlineText,
                 children: o.intl.string(o.t.sCAZeH)
             })
         ]
     });
 function x(e) {
     let { onClick: n } = e;
-    return (0, i.e7)([a.qc], () => !a.qc.hasHotspot(a.v6.STAGE_CHANNEL_UPSELL))
+    return (0, i.e7)([r.qc], () => !r.qc.hasHotspot(r.v6.STAGE_CHANNEL_UPSELL))
         ? null
-        : (0, l.jsxs)('div', {
-              className: c.container,
+        : (0, t.jsxs)('div', {
+              className: d.container,
               children: [
-                  (0, l.jsxs)('div', {
-                      className: c.content,
+                  (0, t.jsxs)('div', {
+                      className: d.content,
                       children: [
-                          (0, l.jsxs)('div', {
-                              className: c.textContainer,
+                          (0, t.jsxs)('div', {
+                              className: d.textContainer,
                               children: [
-                                  (0, l.jsx)(r.Heading, {
+                                  (0, t.jsx)(a.X6q, {
                                       variant: 'heading-md/semibold',
                                       children: o.intl.string(o.t.Sx8Ezs)
                                   }),
-                                  (0, l.jsx)(r.Text, {
+                                  (0, t.jsx)(a.Text, {
                                       color: 'header-secondary',
                                       variant: 'text-xs/normal',
-                                      className: c.descriptionText,
+                                      className: d.descriptionText,
                                       children: o.intl.string(o.t.JUzPho)
                                   }),
-                                  (0, l.jsx)(r.Text, {
+                                  (0, t.jsx)(a.Text, {
                                       color: 'header-secondary',
                                       variant: 'text-xs/normal',
                                       children: o.intl.format(o.t.Vh7rPz, { suggestionsHook: u })
                                   })
                               ]
                           }),
-                          (0, l.jsx)('div', {
-                              className: c.image,
-                              children: (0, l.jsx)('img', {
-                                  src: d,
+                          (0, t.jsx)('div', {
+                              className: d.image,
+                              children: (0, t.jsx)('img', {
+                                  src: c,
                                   alt: o.intl.string(o.t['uIm/n5'])
                               })
                           })
                       ]
                   }),
-                  (0, l.jsxs)('div', {
-                      className: c.footer,
+                  (0, t.jsxs)('div', {
+                      className: d.footer,
                       children: [
-                          (0, l.jsx)(r.Button, {
+                          (0, t.jsx)(a.zxk, {
                               onClick: n,
-                              color: r.Button.Colors.PRIMARY,
-                              size: r.Button.Sizes.SMALL,
-                              className: c.button,
+                              color: a.zxk.Colors.PRIMARY,
+                              size: a.zxk.Sizes.SMALL,
+                              className: d.button,
                               children: o.intl.string(o.t['X/3SyM'])
                           }),
-                          (0, l.jsx)(r.Button, {
+                          (0, t.jsx)(a.zxk, {
                               onClick: () => {
-                                  s.Kw(a.v6.STAGE_CHANNEL_UPSELL);
+                                  s.Kw(r.v6.STAGE_CHANNEL_UPSELL);
                               },
-                              color: r.Button.Colors.TRANSPARENT,
-                              size: r.Button.Sizes.SMALL,
-                              look: r.ButtonLooks.LINK,
+                              color: a.zxk.Colors.TRANSPARENT,
+                              size: a.zxk.Sizes.SMALL,
+                              look: a.iLD.LINK,
                               children: o.intl.string(o.t['5E9SBw'])
                           })
                       ]

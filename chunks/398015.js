@@ -1,4 +1,5 @@
-e.exports = {
-    hiddenVisually: 'hiddenVisually_a98a7c',
-    showOnFocus: 'showOnFocus_a98a7c'
+var i = {
+    hiddenVisually: 'hiddenVisually__27f77',
+    showOnFocus: 'showOnFocus__27f77'
 };
+e.exports = i;

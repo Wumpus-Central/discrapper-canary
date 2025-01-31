@@ -1,23 +1,19 @@
-n.d(t, {
-    W: function () {
-        return o;
-    }
-});
+n.d(t, { W: () => o });
 var i = n(200651),
     l = n(442837),
-    r = n(481060),
-    a = n(9156),
+    a = n(481060),
+    r = n(9156),
     s = n(388032);
 let o = (e) => {
     let { className: t, channel: o, user: c } = e,
-        d = (0, l.e7)([a.ZP], () => a.ZP.isChannelMuted(null, o.id));
+        d = (0, l.e7)([r.ZP], () => r.ZP.isChannelMuted(null, o.id));
     return c.bot
-        ? (0, i.jsx)(r.Button, {
+        ? (0, i.jsx)(a.zxk, {
               className: t,
-              size: r.ButtonSizes.SMALL,
-              color: d ? r.Button.Colors.PRIMARY : r.Button.Colors.RED,
+              size: a.PhG.SMALL,
+              color: d ? a.zxk.Colors.PRIMARY : a.zxk.Colors.RED,
               onClick: function () {
-                  (0, r.openModalLazy)(async () => {
+                  (0, a.ZDy)(async () => {
                       let { default: e } = await n.e('83545').then(n.bind(n, 53149));
                       return (t) =>
                           (0, i.jsx)(e, {

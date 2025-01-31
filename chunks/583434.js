@@ -1,28 +1,23 @@
-r.d(n, {
-    T: function () {
-        return f;
-    }
-});
-var i = r(47120);
-var a = r(192379),
-    o = r(399606),
-    s = r(55563),
-    l = r(335131),
-    u = r(597688),
-    c = r(981631);
-let d = 3600000;
-function f(e) {
-    let n = (0, o.e7)([s.Z], () => (null != e ? s.Z.get(e) : null)),
-        r = null != n && n.productLine !== c.POd.COLLECTIBLES,
-        [i, f, p, h] = (0, o.Wu)([u.Z], () => [u.Z.isFetchingProduct(e), u.Z.getProduct(e), u.Z.getProductFetchError(e), u.Z.getProductFetchErrorTimestamp(e)]),
-        _ = null != p && null != h && Date.now() - h < d;
+n.d(t, { T: () => c }), n(47120);
+var i = n(192379),
+    r = n(399606),
+    a = n(55563),
+    s = n(335131),
+    o = n(597688),
+    l = n(981631);
+let u = 3600000;
+function c(e) {
+    let t = (0, r.e7)([a.Z], () => (null != e ? a.Z.get(e) : null)),
+        n = null != t && t.productLine !== l.POd.COLLECTIBLES,
+        [c, d, f, _] = (0, r.Wu)([o.Z], () => [o.Z.isFetchingProduct(e), o.Z.getProduct(e), o.Z.getProductFetchError(e), o.Z.getProductFetchErrorTimestamp(e)]),
+        p = null != f && null != _ && Date.now() - _ < u;
     return (
-        (0, a.useEffect)(() => {
-            if (null != e && null == f && !r && !i && !_) (0, l.jr)(e);
-        }, [e, f, r, i, _]),
+        (0, i.useEffect)(() => {
+            null != e && null == d && !n && !c && !p && (0, s.jr)(e);
+        }, [e, d, n, c, p]),
         {
-            product: f,
-            isFetching: i
+            product: d,
+            isFetching: c
         }
     );
 }

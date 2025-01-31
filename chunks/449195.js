@@ -1,18 +1,19 @@
-var i = r(200651);
-r(192379);
-var a = r(481060),
-    o = r(307876),
-    s = r(894257),
-    l = r(981631);
-n.Z = new o.Z(() =>
-    (0, a.openModalLazy)(
+n.d(t, { Z: () => l });
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(307876),
+    s = n(894257),
+    o = n(981631);
+let l = new a.Z(() =>
+    (0, r.ZDy)(
         async () => {
-            let { default: e } = await r.e('96075').then(r.bind(r, 520615));
-            return (n) => (0, i.jsx)(e, { ...n });
+            let { default: e } = await n.e('96075').then(n.bind(n, 520615));
+            return (t) => (0, i.jsx)(e, { ...t });
         },
         {
             modalKey: s._,
-            onCloseRequest: l.VqG
+            onCloseRequest: o.VqG
         }
     )
 );

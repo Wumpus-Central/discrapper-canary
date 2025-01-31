@@ -1,7 +1,8 @@
-e.exports = {
-    mask: 'mask_a69fe5',
-    icon: 'icon_a69fe5',
-    wrapper: 'wrapper_a69fe5',
-    selectable: 'selectable_a69fe5',
-    selected: 'selected_a69fe5'
+var i = {
+    mask: 'mask_ca5f52',
+    icon: 'icon_ca5f52',
+    wrapper: 'wrapper_ca5f52',
+    selectable: 'selectable_ca5f52',
+    selected: 'selected_ca5f52'
 };
+e.exports = i;

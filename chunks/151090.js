@@ -1,54 +1,49 @@
-t.r(e),
-    t.d(e, {
-        default: function () {
-            return b;
-        }
-    });
-var i = t(200651);
-t(192379);
-var l = t(442837),
-    o = t(481060),
-    s = t(239091),
-    r = t(357156),
-    a = t(430824),
-    c = t(496675),
-    d = t(771845),
-    u = t(594174),
-    p = t(388032);
-function b(n) {
-    let { onExportToFile: e, onExportToSoundboard: t, onDelete: b } = n,
-        I = (0, l.e7)([d.ZP, c.Z, u.default, a.Z], () =>
-            d.ZP.getFlattenedGuildIds().some((n) => {
-                let e = a.Z.getGuild(n);
-                return null != e && (0, r.Gw)(e, c.Z, u.default).canCreateExpressions;
+i.d(e, { default: () => h });
+var l = i(200651);
+i(192379);
+var n = i(442837),
+    s = i(481060),
+    o = i(239091),
+    a = i(357156),
+    r = i(430824),
+    d = i(496675),
+    c = i(771845),
+    p = i(594174),
+    u = i(388032);
+function h(t) {
+    let { onExportToFile: e, onExportToSoundboard: i, onDelete: h } = t,
+        Z = (0, n.e7)([c.ZP, d.Z, p.default, r.Z], () =>
+            c.ZP.getFlattenedGuildIds().some((t) => {
+                let e = r.Z.getGuild(t);
+                return null != e && (0, a.Gw)(e, d.Z, p.default).canCreateExpressions;
             })
         );
-    return (0, i.jsxs)(o.Menu, {
+    return (0, l.jsxs)(s.v2r, {
         navId: 'clips-more-options',
-        'aria-label': p.intl.string(p.t.PdRCRk),
-        onClose: s.Zy,
-        onSelect: s.Zy,
+        'aria-label': u.intl.string(u.t.PdRCRk),
+        onClose: o.Zy,
+        onSelect: o.Zy,
         children: [
-            I
-                ? (0, i.jsx)(o.MenuItem, {
-                      icon: o.SoundboardIcon,
+            Z
+                ? (0, l.jsx)(s.sNh, {
+                      icon: s.KY1,
                       id: 'clips-export-soundboard',
-                      label: p.intl.string(p.t.HH4Tjo),
-                      action: t
+                      label: u.intl.string(u.t.HH4Tjo),
+                      action: i
                   })
                 : null,
-            (0, i.jsx)(o.MenuItem, {
-                icon: o.DownloadIcon,
+            (0, l.jsx)(s.sNh, {
+                icon: s._8t,
                 id: 'clips-export-file',
-                label: p.intl.string(p.t.l9qpzs),
+                label: u.intl.string(u.t.l9qpzs),
                 action: e
             }),
-            (0, i.jsx)(o.MenuItem, {
-                icon: o.TrashIcon,
+            (0, l.jsx)(s.sNh, {
+                icon: s.XHJ,
                 id: 'clips-delete',
-                label: p.intl.string(p.t.oyYWHB),
+                label: u.intl.string(u.t.oyYWHB),
                 color: 'danger',
-                action: b
+                action: h
             })
         ]
     });

@@ -1,26 +1,22 @@
-t.d(n, {
-    Z: function () {
-        return d;
-    }
-});
-var i = t(200651);
-t(192379);
-var l = t(481060),
-    r = t(346610),
-    a = t(868643),
-    o = t(245216),
-    s = t(996861),
-    u = t(388032);
-function d(e, n) {
-    let t = (0, a.a)(e),
-        { canForwardMessages: d } = (0, r.yk)({ location: 'MessageActionsMenu' }, { autoTrackExposure: !1 });
-    return t && d
-        ? (0, i.jsx)(l.MenuItem, {
+n.d(t, { Z: () => c });
+var i = n(200651);
+n(192379);
+var l = n(481060),
+    a = n(346610),
+    s = n(868643),
+    r = n(245216),
+    o = n(996861),
+    d = n(388032);
+function c(e, t) {
+    let n = (0, s.a)(e),
+        { canForwardMessages: c } = (0, a.yk)({ location: 'MessageActionsMenu' }, { autoTrackExposure: !1 });
+    return n && c
+        ? (0, i.jsx)(l.sNh, {
               id: 'forward',
-              label: u.intl.string(u.t.I3ltXF),
-              icon: o.Z,
+              label: d.intl.string(d.t.I3ltXF),
+              icon: r.Z,
               action: () => {
-                  (0, s.ts)(n, e);
+                  (0, o.ts)(t, e);
               }
           })
         : null;

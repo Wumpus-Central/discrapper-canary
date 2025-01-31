@@ -1,5 +1,6 @@
-e.exports = {
-    emoji: 'emoji_f48b14',
-    glyphEmoji: 'glyphEmoji_f48b14 emoji_f48b14',
-    icon: 'icon_f48b14'
+var i = {
+    emoji: 'emoji__045fa',
+    glyphEmoji: 'glyphEmoji__045fa emoji__045fa',
+    icon: 'icon__045fa'
 };
+e.exports = i;

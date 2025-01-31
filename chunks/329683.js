@@ -1,1 +1,1 @@
-e.exports = { flash: 'flash_b15a6f' };
+e.exports = { flash: 'flash__03436' };

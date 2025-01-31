@@ -1,30 +1,26 @@
-r.d(n, {
-    S: function () {
-        return l;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(692547),
-    o = r(331595),
-    s = r(267843);
-let l = (e) => {
-    var n, r;
-    let { size: l = 'md', width: u, height: c, color: d = a.Z.colors.INTERACTIVE_NORMAL, colorClass: f = '', ...p } = e,
-        h = (0, s.m)(l),
-        _ = null !== (n = null == h ? void 0 : h.width) && void 0 !== n ? n : u,
-        m = null !== (r = null == h ? void 0 : h.height) && void 0 !== r ? r : c;
+n.d(t, { S: () => o });
+var i = n(200651);
+n(192379);
+var r = n(692547),
+    a = n(331595),
+    s = n(267843);
+let o = (e) => {
+    var t, n;
+    let { size: o = 'md', width: l, height: u, color: c = r.Z.colors.INTERACTIVE_NORMAL, colorClass: d = '', ...f } = e,
+        _ = (0, s.m)(o),
+        p = null !== (t = null == _ ? void 0 : _.width) && void 0 !== t ? t : l,
+        h = null !== (n = null == _ ? void 0 : _.height) && void 0 !== n ? n : u;
     return (0, i.jsx)('svg', {
-        ...(0, o.Z)(p),
+        ...(0, a.Z)(f),
         xmlns: 'http://www.w3.org/2000/svg',
-        width: _,
-        height: m,
+        width: p,
+        height: h,
         fill: 'none',
         viewBox: '0 0 24 24',
         children: (0, i.jsx)('path', {
-            fill: 'string' == typeof d ? d : d.css,
+            fill: 'string' == typeof c ? c : c.css,
             d: 'M6.3 2.55a.85.85 0 0 0-1.6 0l-.35.97a1.4 1.4 0 0 1-.83.83l-.97.35a.85.85 0 0 0 0 1.6l.97.35c.38.15.68.45.83.83l.35.97a.85.85 0 0 0 1.6 0l.35-.97c.15-.38.45-.68.83-.83l.97-.35a.85.85 0 0 0 0-1.6l-.97-.35a1.4 1.4 0 0 1-.83-.83l-.35-.97ZM13.96 5.46l4.58 4.58a1 1 0 0 0 1.42 0l1.38-1.38a2 2 0 0 0 0-2.82l-3.18-3.18a2 2 0 0 0-2.82 0l-1.38 1.38a1 1 0 0 0 0 1.42ZM2.11 20.16l.73-4.22a3 3 0 0 1 .83-1.61l7.87-7.87a1 1 0 0 1 1.42 0l4.58 4.58a1 1 0 0 1 0 1.42l-7.87 7.87a3 3 0 0 1-1.6.83l-4.23.73a1.5 1.5 0 0 1-1.73-1.73ZM18.48 15.71a1.1 1.1 0 0 1 2.04 0l.46 1.24c.19.5.57.88 1.07 1.07l1.24.46c.95.35.95 1.7 0 2.04l-1.24.46c-.5.19-.88.57-1.07 1.07l-.46 1.24a1.1 1.1 0 0 1-2.04 0l-.46-1.24a1.8 1.8 0 0 0-1.07-1.07l-1.24-.46a1.1 1.1 0 0 1 0-2.04l1.24-.46c.5-.19.88-.57 1.07-1.07l.46-1.24Z',
-            className: f
+            className: d
         })
     });
 };

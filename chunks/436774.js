@@ -1,32 +1,29 @@
-r.d(n, {
-    JX: function () {
-        return u;
-    },
-    Rj: function () {
-        return l;
-    }
+n.d(t, {
+    JX: () => l,
+    Rj: () => o,
+    ZP: () => p
 });
-var i = r(200651),
-    a = r(192379),
-    o = r(772848),
-    s = r(692547);
-let l = Object.freeze({
-        PREMIUM_TIER_0: (0, o.Z)(),
-        PREMIUM_TIER_1: (0, o.Z)(),
-        PREMIUM_TIER_2: (0, o.Z)(),
-        PREMIUM_GUILD: (0, o.Z)(),
-        PREMIUM_GUILD_BADGE_V2_BACKGROUND: (0, o.Z)()
+var i = n(200651),
+    r = n(192379),
+    a = n(772848),
+    s = n(692547);
+let o = Object.freeze({
+        PREMIUM_TIER_0: (0, a.Z)(),
+        PREMIUM_TIER_1: (0, a.Z)(),
+        PREMIUM_TIER_2: (0, a.Z)(),
+        PREMIUM_GUILD: (0, a.Z)(),
+        PREMIUM_GUILD_BADGE_V2_BACKGROUND: (0, a.Z)()
     }),
-    u = {
-        PREMIUM_TIER_0: 'url(#'.concat(l.PREMIUM_TIER_0, ')'),
-        PREMIUM_TIER_1: 'url(#'.concat(l.PREMIUM_TIER_1, ')'),
-        PREMIUM_TIER_2: 'url(#'.concat(l.PREMIUM_TIER_2, ')'),
-        PREMIUM_GUILD: 'url(#'.concat(l.PREMIUM_GUILD, ')'),
-        PREMIUM_GUILD_BADGE_V2_BACKGROUND: 'url(#'.concat(l.PREMIUM_GUILD_BADGE_V2_BACKGROUND, ')')
+    l = {
+        PREMIUM_TIER_0: 'url(#'.concat(o.PREMIUM_TIER_0, ')'),
+        PREMIUM_TIER_1: 'url(#'.concat(o.PREMIUM_TIER_1, ')'),
+        PREMIUM_TIER_2: 'url(#'.concat(o.PREMIUM_TIER_2, ')'),
+        PREMIUM_GUILD: 'url(#'.concat(o.PREMIUM_GUILD, ')'),
+        PREMIUM_GUILD_BADGE_V2_BACKGROUND: 'url(#'.concat(o.PREMIUM_GUILD_BADGE_V2_BACKGROUND, ')')
     },
-    c = () =>
+    u = () =>
         (0, i.jsxs)('linearGradient', {
-            id: l.PREMIUM_TIER_0,
+            id: o.PREMIUM_TIER_0,
             children: [
                 (0, i.jsx)('stop', {
                     offset: '.1762',
@@ -42,9 +39,9 @@ let l = Object.freeze({
                 })
             ]
         }),
-    d = () =>
+    c = () =>
         (0, i.jsxs)('linearGradient', {
-            id: l.PREMIUM_TIER_1,
+            id: o.PREMIUM_TIER_1,
             children: [
                 (0, i.jsx)('stop', { stopColor: s.Z.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css }),
                 (0, i.jsx)('stop', {
@@ -53,9 +50,9 @@ let l = Object.freeze({
                 })
             ]
         }),
-    f = () =>
+    d = () =>
         (0, i.jsxs)('linearGradient', {
-            id: l.PREMIUM_TIER_2,
+            id: o.PREMIUM_TIER_2,
             children: [
                 (0, i.jsx)('stop', { stopColor: s.Z.unsafe_rawColors.PREMIUM_TIER_2_PURPLE_FOR_GRADIENTS.css }),
                 (0, i.jsx)('stop', {
@@ -68,9 +65,9 @@ let l = Object.freeze({
                 })
             ]
         }),
-    p = () =>
+    f = () =>
         (0, i.jsxs)('linearGradient', {
-            id: l.PREMIUM_GUILD,
+            id: o.PREMIUM_GUILD,
             children: [
                 (0, i.jsx)('stop', { stopColor: s.Z.unsafe_rawColors.GUILD_BOOSTING_BLUE.css }),
                 (0, i.jsx)('stop', {
@@ -79,9 +76,9 @@ let l = Object.freeze({
                 })
             ]
         }),
-    h = () =>
+    _ = () =>
         (0, i.jsxs)('linearGradient', {
-            id: l.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
+            id: o.PREMIUM_GUILD_BADGE_V2_BACKGROUND,
             gradientTransform: 'rotate(45)',
             children: [
                 (0, i.jsx)('stop', {
@@ -94,7 +91,7 @@ let l = Object.freeze({
                 })
             ]
         }),
-    _ = a.memo(
+    p = r.memo(
         function () {
             return (0, i.jsxs)('svg', {
                 viewBox: '0 0 1 1',
@@ -107,9 +104,8 @@ let l = Object.freeze({
                     height: 1
                 },
                 'aria-hidden': !0,
-                children: [c(), d(), f(), p(), h()]
+                children: [u(), c(), d(), f(), _()]
             });
         },
         () => !0
     );
-n.ZP = _;

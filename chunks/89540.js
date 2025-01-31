@@ -1,7 +1,3 @@
-r.d(n, {
-    L: function () {
-        return a;
-    }
-});
-var i = r(192379),
-    a = 'undefined' != typeof window ? i.useLayoutEffect : i.useEffect;
+n.d(t, { L: () => r });
+var i = n(192379),
+    r = 'undefined' != typeof window ? i.useLayoutEffect : i.useEffect;

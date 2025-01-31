@@ -1,11 +1,7 @@
 n.r(t),
     n.d(t, {
-        openCreateGuildModal: function () {
-            return _;
-        },
-        updateCreateGuildModal: function () {
-            return m;
-        }
+        openCreateGuildModal: () => d,
+        updateCreateGuildModal: () => m
     });
 var i = n(200651);
 n(192379);
@@ -16,7 +12,7 @@ var l = n(481060),
     s = n(675999),
     c = n(981631),
     u = n(630724);
-function d(e, t, n, l) {
+function _(e, t, n, l) {
     return (0, i.jsx)(a.Z, {
         onSuccess: (t) => {
             r.Z.flowStep(u.MK.CREATE_GUILD, u.X2.SUCCESS), e.onClose(), null == l || l(t);
@@ -57,11 +53,11 @@ function d(e, t, n, l) {
         ...e
     });
 }
-let _ = (e) => {
+let d = (e) => {
         let { initialSlide: t, location: n, onSuccess: i } = e;
-        (0, l.openModal)((e) => d(e, t, n, i), { modalKey: s.PU });
+        (0, l.h7j)((e) => _(e, t, n, i), { modalKey: s.PU });
     },
     m = (e) => {
         let { slide: t, location: n } = e;
-        (0, l.updateModal)(s.PU, (e) => d(e, t, n));
+        (0, l.oav)(s.PU, (e) => _(e, t, n));
     };

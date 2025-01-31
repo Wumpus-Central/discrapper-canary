@@ -1,10 +1,4 @@
-a.r(t),
-    a.d(t, {
-        default: function () {
-            return I;
-        }
-    }),
-    a(47120);
+a.r(t), a.d(t, { default: () => A }), a(47120);
 var n = a(200651),
     s = a(192379),
     i = a(873546),
@@ -14,28 +8,28 @@ var n = a(200651),
     d = a(388905),
     o = a(625128),
     g = a(362762),
-    u = a(703656),
+    _ = a(703656),
     m = a(617136),
-    p = a(272008),
-    E = a(341907),
-    h = a(46140),
+    u = a(272008),
+    p = a(341907),
+    E = a(46140),
     x = a(981631),
-    N = a(186901),
-    _ = a(388032),
-    f = a(574714),
-    T = a(74830),
+    h = a(186901),
+    N = a(388032),
+    T = a(574714),
+    f = a(74830),
     j = a(13299);
 c.ZP.initialize();
-let A = i.tq || i.Em;
-function I(e) {
+let k = i.tq || i.Em;
+function A(e) {
     let { match: t } = e,
         a = (0, c.e7)([g.Z], () => g.Z.getState('quests')),
         i = t.params.questId,
-        I = (function (e) {
+        A = (function (e) {
             let [t, a] = s.useState(null);
             return (
                 s.useEffect(() => {
-                    (0, p.gU)(e)
+                    (0, u.gU)(e)
                         .then((e) =>
                             a({
                                 status: 'ok',
@@ -48,71 +42,71 @@ function I(e) {
             );
         })(i);
     s.useEffect(() => {
-        if (!A)
-            null == a
+        !k &&
+            (null == a
                 ? ((0, m.dA)({
                       questId: i,
                       event: x.rMx.QUEST_SHARE_LINK_DEEP_LINKED_INTO_DESKTOP_CLIENT
                   }),
                   o.Z.openNativeAppModal('quests', x.Etm.DEEP_LINK, {
-                      type: N.jE.QUEST_HOME,
+                      type: h.jE.QUEST_HOME,
                       params: { questId: i }
                   }))
                 : a === x.kEZ.OPEN_FAIL &&
-                  (0, u.dL)({
+                  (0, _.dL)({
                       pathname: x.Z5c.QUEST_HOME,
                       hash: i
-                  });
+                  }));
     }, [a, i]);
-    let k = s.useCallback(() => (0, E.openAppWithQuest)(i), [i]);
-    if (A)
+    let I = s.useCallback(() => (0, p.openAppWithQuest)(i), [i]);
+    if (k)
         return (0, n.jsxs)('div', {
-            className: f.page,
+            className: T.page,
             children: [
                 (0, n.jsx)('img', {
-                    className: f.bgImg,
+                    className: T.bgImg,
                     src: j.Z,
                     alt: ''
                 }),
                 (0, n.jsx)('div', {
-                    className: f.logoContainer,
+                    className: T.logoContainer,
                     children: (0, n.jsx)('img', {
-                        src: T,
+                        src: f,
                         alt: ''
                     })
                 }),
-                null != I &&
+                null != A &&
                     (0, n.jsxs)('div', {
-                        className: f.card,
+                        className: T.card,
                         children: [
-                            'ok' === I.status &&
+                            'ok' === A.status &&
                                 (0, n.jsxs)(n.Fragment, {
                                     children: [
                                         (0, n.jsx)('div', {
-                                            className: f.gameTile,
+                                            className: T.gameTile,
                                             children: (0, n.jsx)('img', {
-                                                src: ''.concat(h.tD).concat(i, '/dark/').concat(I.value.assets.gameTile),
+                                                src: ''.concat(E.tD).concat(i, '/dark/').concat(A.value.assets.gameTile),
                                                 alt: '',
-                                                className: f.gameTileImg
+                                                className: T.gameTileImg
                                             })
                                         }),
-                                        (0, n.jsx)(l.Heading, {
+                                        (0, n.jsx)(l.X6q, {
                                             variant: 'heading-lg/semibold',
                                             color: 'text-normal',
-                                            className: f.headingText,
-                                            children: I.value.messages.questName
+                                            className: T.headingText,
+                                            children: A.value.messages.questName
                                         })
                                     ]
                                 }),
                             (0, n.jsx)(l.Text, {
                                 variant: 'text-md/normal',
-                                className: f.bodyText,
-                                children: _.intl.string(_.t.NweJIy)
+                                className: T.bodyText,
+                                children: N.intl.string(N.t.NweJIy)
                             }),
-                            (0, n.jsx)(l.Button, {
+                            (0, n.jsx)(l.zxk, {
                                 fullWidth: !0,
-                                onClick: k,
-                                children: _.intl.string(_.t.UQvCf3)
+                                onClick: I,
+                                children: N.intl.string(N.t.UQvCf3)
                             })
                         ]
                     })
@@ -122,23 +116,23 @@ function I(e) {
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsx)(r.Z, {
-                className: f.backgroundArtwork,
+                className: T.backgroundArtwork,
                 preserveAspectRatio: 'xMinYMin slice'
             }),
             (0, n.jsx)('div', {
-                className: f.container,
+                className: T.container,
                 children: (0, n.jsx)(d.ZP, {
                     children: P
                         ? (0, n.jsxs)(n.Fragment, {
-                              children: [(0, n.jsx)(d.Dx, { children: _.intl.string(_.t['Z+hCVV']) }), (0, n.jsx)(d.Hh, {})]
+                              children: [(0, n.jsx)(d.Dx, { children: N.intl.string(N.t['Z+hCVV']) }), (0, n.jsx)(d.Hh, {})]
                           })
                         : (0, n.jsxs)(n.Fragment, {
                               children: [
                                   (0, n.jsx)(d.Dx, {
-                                      className: f.appOpenedTitle,
-                                      children: _.intl.string(_.t.csrAMD)
+                                      className: T.appOpenedTitle,
+                                      children: N.intl.string(N.t.csrAMD)
                                   }),
-                                  (0, n.jsx)(d.DK, { children: _.intl.string(_.t.ghBJz8) })
+                                  (0, n.jsx)(d.DK, { children: N.intl.string(N.t.ghBJz8) })
                               ]
                           })
                 })

@@ -1,94 +1,88 @@
-n.r(e),
-    n.d(e, {
-        default: function () {
-            return h;
-        }
-    }),
-    n(47120);
-var l = n(200651),
-    o = n(192379),
-    s = n(990547),
-    i = n(481060),
-    r = n(479531),
-    a = n(213609),
-    u = n(388032),
-    d = n(846370);
-let c = RegExp('(^[-!#$%&\'*+/=?^_`{}|~0-9A-Z]+(\\.[-!#$%&\'*+/=?^_`{}|~0-9A-Z]+)*|^"([\\001-\\010\\013\\014\\016-\\037!#-\\[\\]-\\177]|\\\\[\\001-011\\013\\014\\016-\\177])*")@(?:[A-Z0-9](?:[A-Z0-9-]{0,2000}[A-Z0-9])?\\.)+[A-Z]{2,63}\\.?$', 'i');
-function h(t) {
-    let { transitionState: e, onFormSubmit: n, onSuccess: h, onClose: p, headerText: m, confirmButtonText: f, confirmButtonColor: x, impressionName: C } = t,
-        [g, j] = o.useState(!1),
-        [B, M] = o.useState(''),
-        [A, k] = o.useState(null),
-        Z = o.useRef(null);
+l.d(t, { default: () => h }), l(47120);
+var s = l(200651),
+    n = l(192379),
+    i = l(990547),
+    o = l(481060),
+    r = l(479531),
+    a = l(213609),
+    u = l(388032),
+    c = l(846370);
+let d = RegExp('(^[-!#$%&\'*+/=?^_`{}|~0-9A-Z]+(\\.[-!#$%&\'*+/=?^_`{}|~0-9A-Z]+)*|^"([\\001-\\010\\013\\014\\016-\\037!#-\\[\\]-\\177]|\\\\[\\001-011\\013\\014\\016-\\177])*")@(?:[A-Z0-9](?:[A-Z0-9-]{0,2000}[A-Z0-9])?\\.)+[A-Z]{2,63}\\.?$', 'i');
+function h(e) {
+    let { transitionState: t, onFormSubmit: l, onSuccess: h, onClose: x, headerText: p, confirmButtonText: k, confirmButtonColor: m, impressionName: f } = e,
+        [j, g] = n.useState(!1),
+        [z, A] = n.useState(''),
+        [C, _] = n.useState(null),
+        Z = n.useRef(null);
     (0, a.Z)({
-        type: s.ImpressionTypes.MODAL,
-        name: C
+        type: i.ImpressionTypes.MODAL,
+        name: f
     });
-    let y = async (t) => {
-        if ((t.preventDefault(), k(null), j(!0), !1 === c.test(B))) {
-            k(u.intl.string(u.t.hML7Gx)), j(!1);
+    let y = async (e) => {
+        if ((e.preventDefault(), _(null), g(!0), !1 === d.test(z))) {
+            _(u.intl.string(u.t.hML7Gx)), g(!1);
             return;
         }
         try {
-            let t = null != n ? await n(B) : void 0;
+            let e = null != l ? await l(z) : void 0;
             null != h &&
-                (null != t
+                (null != e
                     ? h({
-                          response: t,
-                          email: B
+                          response: e,
+                          email: z
                       })
-                    : h(B)),
-                p();
-        } catch (t) {
-            k(new r.Z(t).getAnyErrorMessage());
+                    : h(z)),
+                x();
+        } catch (e) {
+            _(new r.Z(e).getAnyErrorMessage());
         } finally {
-            j(!1);
+            g(!1);
         }
     };
-    return (0, l.jsx)(i.ModalRoot, {
-        transitionState: e,
-        children: (0, l.jsxs)('form', {
+    return (0, s.jsx)(o.Y0X, {
+        transitionState: t,
+        children: (0, s.jsxs)('form', {
             onSubmit: y,
             children: [
-                (0, l.jsxs)(i.ModalHeader, {
+                (0, s.jsxs)(o.xBx, {
                     separator: !1,
-                    className: d.header,
+                    className: c.header,
                     children: [
-                        (0, l.jsx)(i.Heading, {
+                        (0, s.jsx)(o.X6q, {
                             variant: 'heading-lg/semibold',
-                            className: d.title,
-                            children: m
+                            className: c.title,
+                            children: p
                         }),
-                        (0, l.jsx)(i.ModalCloseButton, {
-                            onClick: p,
-                            className: d.modalCloseButton
+                        (0, s.jsx)(o.olH, {
+                            onClick: x,
+                            className: c.modalCloseButton
                         })
                     ]
                 }),
-                (0, l.jsx)(i.ModalContent, {
-                    children: (0, l.jsx)(i.FormItem, {
+                (0, s.jsx)(o.hzk, {
+                    children: (0, s.jsx)(o.xJW, {
                         title: u.intl.string(u.t.hvOfmJ),
-                        error: A,
-                        children: (0, l.jsx)(i.TextInput, {
-                            value: B,
-                            onChange: M,
+                        error: C,
+                        children: (0, s.jsx)(o.oil, {
+                            value: z,
+                            onChange: A,
                             inputRef: Z
                         })
                     })
                 }),
-                (0, l.jsxs)(i.ModalFooter, {
+                (0, s.jsxs)(o.mzw, {
                     children: [
-                        (0, l.jsx)(i.Button, {
+                        (0, s.jsx)(o.zxk, {
                             type: 'submit',
-                            color: null != x ? x : i.Button.Colors.BRAND,
-                            size: i.Button.Sizes.MEDIUM,
-                            submitting: g,
-                            children: f
+                            color: null != m ? m : o.zxk.Colors.BRAND,
+                            size: o.zxk.Sizes.MEDIUM,
+                            submitting: j,
+                            children: k
                         }),
-                        (0, l.jsx)(i.Button, {
-                            look: i.Button.Looks.LINK,
-                            color: i.Button.Colors.PRIMARY,
-                            onClick: p,
+                        (0, s.jsx)(o.zxk, {
+                            look: o.zxk.Looks.LINK,
+                            color: o.zxk.Colors.PRIMARY,
+                            onClick: x,
                             children: u.intl.string(u.t['ETE/oK'])
                         })
                     ]

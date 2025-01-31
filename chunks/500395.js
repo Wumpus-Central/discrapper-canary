@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return x;
-    }
-});
+n.d(t, { Z: () => x });
 var i = n(200651);
 n(192379);
 var r = n(990547),
@@ -29,18 +25,18 @@ function g(e) {
             (0, i.jsxs)('div', {
                 className: m.__invalid_ctaContent,
                 children: [
-                    (0, i.jsx)(l.Heading, {
+                    (0, i.jsx)(l.X6q, {
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
                         children: u.intl.string(u.t.PqYfh4)
                     }),
-                    (0, i.jsx)(l.Spacer, { size: 12 }),
+                    (0, i.jsx)(l.LZC, { size: 12 }),
                     (0, i.jsx)(l.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
                         children: u.intl.string(u.t['41wkMT'])
                     }),
-                    (0, i.jsx)(l.Spacer, { size: 24 }),
+                    (0, i.jsx)(l.LZC, { size: 24 }),
                     (0, i.jsx)(c.Z, {
                         className: m.waitlist,
                         color: o.W.BROWN,
@@ -65,7 +61,7 @@ function x(e) {
         properties: { guild_id: t.id }
     }),
     o)
-        ? (0, i.jsx)(l.Spinner, {})
+        ? (0, i.jsx)(l.$jN, {})
         : (0, i.jsxs)('div', {
               className: m.__invalid_container,
               children: [

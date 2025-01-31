@@ -1,6 +1,2 @@
-r.d(n, {
-    F: function () {
-        return i;
-    }
-});
+n.d(t, { F: () => i });
 let i = { immediate: !0 };

@@ -1,29 +1,24 @@
-e.r(n),
-    e.d(n, {
-        default: function () {
-            return s;
-        }
-    });
+e.d(n, { default: () => u });
 var i = e(200651),
     o = e(192379),
     r = e(481060),
-    l = e(239091),
-    a = e(167675),
-    u = e(249453),
-    d = e(991249),
+    a = e(239091),
+    l = e(167675),
+    d = e(249453),
+    s = e(991249),
     c = e(388032);
-function s(t) {
-    let { onSelect: n, onClose: e, widget: s } = t,
-        f = (0, a.Z)(),
-        Z = (0, u.Z)(s),
-        p = o.useRef(e),
-        g = (0, d.Z)(s.id, 'boolean' != typeof s.meta.horizontal || s.meta.horizontal);
+function u(t) {
+    let { onSelect: n, onClose: e, widget: u } = t,
+        f = (0, l.Z)(),
+        Z = (0, d.Z)(u),
+        v = o.useRef(e),
+        g = (0, s.Z)(u.id, 'boolean' != typeof u.meta.horizontal || u.meta.horizontal);
     return (
-        o.useEffect(() => void (p.current = e)),
-        o.useEffect(() => () => p.current(), []),
-        (0, i.jsxs)(r.Menu, {
+        o.useEffect(() => void (v.current = e)),
+        o.useEffect(() => () => v.current(), []),
+        (0, i.jsxs)(r.v2r, {
             navId: 'overlay-video-widget-context-menu',
-            onClose: l.Zy,
+            onClose: a.Zy,
             'aria-label': c.intl.string(c.t.tPfVWl),
             onSelect: n,
             children: [f, g, Z]

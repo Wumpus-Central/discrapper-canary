@@ -1,16 +1,10 @@
-r.d(n, {
-    ad: function () {
-        return s;
-    },
-    fs: function () {
-        return o;
-    },
-    xT: function () {
-        return a;
-    }
+n.d(t, {
+    ad: () => s,
+    fs: () => a,
+    xT: () => r
 });
-var i = r(818083);
-let a = (0, i.B)({
+var i = n(818083);
+let r = (0, i.B)({
         kind: 'user',
         id: '2023-11_totally_benign_and_non_controversial_notification_tweaks',
         label: 'Notification Changes',
@@ -23,7 +17,7 @@ let a = (0, i.B)({
             }
         ]
     }),
-    o = (0, i.B)({
+    a = (0, i.B)({
         kind: 'user',
         id: '2024-01_unreads',
         label: 'Unreads Experiment (grey-dot mode)',

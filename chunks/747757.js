@@ -1,4 +1,6 @@
-e.exports = {
-    demoEffectOverlay: 'demoEffectOverlay_c55fec',
-    demoEffectImg: 'demoEffectImg_c55fec'
+var i = {
+    demoEffect: 'demoEffect_a8418b',
+    demoEffectOverlay: 'demoEffectOverlay_a8418b',
+    demoEffectImg: 'demoEffectImg_a8418b'
 };
+e.exports = i;

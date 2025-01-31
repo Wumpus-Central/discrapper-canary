@@ -1,6 +1,7 @@
-e.exports = {
-    icon: 'icon_c9d951',
-    wrapper: 'wrapper_c9d951',
-    selectable: 'selectable_c9d951',
-    selected: 'selected_c9d951'
+var i = {
+    icon: 'icon__1a58a',
+    wrapper: 'wrapper__1a58a',
+    selectable: 'selectable__1a58a',
+    selected: 'selected__1a58a'
 };
+e.exports = i;

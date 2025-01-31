@@ -1,37 +1,33 @@
-r.d(t, {
-    l: function () {
-        return o;
-    },
-    o: function () {
-        return _;
-    }
+a.d(e, {
+    l: () => _,
+    o: () => o
 });
-var a = r(988097),
-    n = r(696486);
-function _(e, t, r) {
-    let _ = (0, n.HN)(),
-        o = _ && (0, n.Gx)(_);
-    o &&
-        o.addEvent(e, {
-            [a.Wb]: t,
-            [a.E1]: r
+var r = a(988097),
+    n = a(696486);
+function o(t, e, a) {
+    let o = (0, n.HN)(),
+        _ = o && (0, n.Gx)(o);
+    _ &&
+        _.addEvent(t, {
+            [r.Wb]: e,
+            [r.E1]: a
         });
 }
-function o(e) {
-    if (!e || 0 === e.length) return;
-    let t = {};
+function _(t) {
+    if (!t || 0 === t.length) return;
+    let e = {};
     return (
-        e.forEach((e) => {
-            let r = e.attributes || {},
-                n = r[a.E1],
-                _ = r[a.Wb];
+        t.forEach((t) => {
+            let a = t.attributes || {},
+                n = a[r.E1],
+                o = a[r.Wb];
             'string' == typeof n &&
-                'number' == typeof _ &&
-                (t[e.name] = {
-                    value: _,
+                'number' == typeof o &&
+                (e[t.name] = {
+                    value: o,
                     unit: n
                 });
         }),
-        t
+        e
     );
 }

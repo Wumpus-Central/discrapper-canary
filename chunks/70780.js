@@ -1,24 +1,20 @@
-r.d(n, {
-    J: function () {
-        return o;
-    },
-    o: function () {
-        return s;
-    }
+n.d(t, {
+    J: () => a,
+    o: () => s
 });
-var i = r(544891),
-    a = r(570140);
-function o() {
+var i = n(544891),
+    r = n(570140);
+function a() {
     var e;
     return i.tn.get({
         url: ''.concat(((e = 'https:'), 'https:')).concat(window.GLOBAL_ENV.RTC_LATENCY_ENDPOINT),
         rejectWithError: !1
     });
 }
-function s(e, n) {
-    a.Z.dispatch({
+function s(e, t) {
+    r.Z.dispatch({
         type: 'RTC_LATENCY_TEST_COMPLETE',
         latencyRankedRegions: e,
-        geoRankedRegions: n
+        geoRankedRegions: t
     });
 }

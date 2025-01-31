@@ -1,145 +1,143 @@
-n.r(e), n(47120), n(411104);
+n.d(t, { default: () => x }), n(47120), n(411104);
 var r = n(200651),
     i = n(192379),
     a = n(392711),
-    l = n(36793),
-    s = n(481060),
-    u = n(100527),
-    o = n(906732),
-    c = n(540059),
+    s = n(36793),
+    l = n(481060),
+    c = n(100527),
+    u = n(906732),
+    o = n(540059),
     h = n(488499),
     d = n(222062),
     p = n(530329),
-    g = n(626135),
-    A = n(197712),
-    E = n(511004),
-    C = n(486324),
+    A = n(626135),
+    E = n(197712),
+    C = n(511004),
+    g = n(486324),
     m = n(981631),
     w = n(678916),
-    f = n(388032),
-    R = n(63059);
-e.default = (t) => {
-    let { file: e, imgURI: n, transitionState: M, allowSkip: N = !1, onCrop: x, onClose: _, uploadType: v = C.pC.AVATAR, showUpsellHeader: y = !1, analyticsPage: I } = t,
+    R = n(388032),
+    f = n(63059);
+let x = (e) => {
+    let { file: t, imgURI: n, transitionState: x, allowSkip: N = !1, onCrop: M, onClose: _, uploadType: v = g.pC.AVATAR, showUpsellHeader: y = !1, analyticsPage: k } = e,
         [D, L] = i.useState({
             width: 0,
             height: 0
         }),
-        [B, S] = i.useState({
+        [I, O] = i.useState({
             top: 0,
             bottom: 0,
             left: 0,
             right: 0
         }),
-        [O, b] = i.useState(!1),
-        [T, j] = i.useState(1),
-        [G, k] = i.useState({
+        [b, G] = i.useState(!1),
+        [j, S] = i.useState(1),
+        [B, T] = i.useState({
             x: 0,
             y: 0
         }),
-        [U, V] = i.useState(null),
-        [P, H] = i.useState(!1),
-        { analyticsLocations: F } = (0, o.ZP)(u.Z.IMAGE_CROPPING_MODAL),
-        z = (0, c.Q3)('ImageCroppingNModal'),
-        Y = i.useRef({
+        [P, U] = i.useState(null),
+        [V, z] = i.useState(!1),
+        { analyticsLocations: H } = (0, u.ZP)(c.Z.IMAGE_CROPPING_MODAL),
+        F = (0, o.Q3)('ImageCroppingNModal'),
+        X = i.useRef({
             x: 0,
             y: 0
         }),
+        Y = i.useRef(null),
         K = i.useRef(null),
-        X = i.useRef(null),
-        Z = 'image/gif' === e.type;
+        Z = 'image/gif' === t.type;
     i.useEffect(() => {
-        (0, E.Z)();
+        (0, C.Z)();
     }, []),
         i.useEffect(() => {
             Z &&
                 y &&
-                g.default.track(m.rMx.OPEN_MODAL, {
+                A.default.track(m.rMx.OPEN_MODAL, {
                     type: m.jXE.CROP_GIF_MODAL,
-                    location: { page: I }
+                    location: { page: k }
                 });
-        }, [y, I, Z]);
+        }, [y, k, Z]);
     let W = () => {
             switch (v) {
-                case C.pC.BANNER:
+                case g.pC.BANNER:
                     return {
-                        height: C.f,
-                        width: C.L0
+                        height: g.f,
+                        width: g.L0
                     };
-                case C.pC.VIDEO_BACKGROUND:
+                case g.pC.VIDEO_BACKGROUND:
                     return w.HE;
-                case C.pC.AVATAR:
-                case C.pC.AVATAR_DECORATION:
+                case g.pC.AVATAR:
+                case g.pC.AVATAR_DECORATION:
                     return {
                         height: m.dGM,
                         width: m.dGM
                     };
-                case C.pC.GUILD_BANNER:
+                case g.pC.GUILD_BANNER:
                     return {
-                        height: C._T,
-                        width: C.X_
+                        height: g._T,
+                        width: g.X_
                     };
-                case C.pC.SCHEDULED_EVENT_IMAGE:
+                case g.pC.SCHEDULED_EVENT_IMAGE:
                     return {
-                        height: C.xT,
-                        width: C.d6
+                        height: g.xT,
+                        width: g.d6
                     };
-                case C.pC.HOME_HEADER:
+                case g.pC.HOME_HEADER:
                     return {
-                        height: C.Uo,
-                        width: C.N8
+                        height: g.Uo,
+                        width: g.N8
                     };
             }
         },
         $ = i.useCallback(
-            (t, e, n) => {
-                (Y.current = (0, A.U$)(t, e, n)), null != K.current && (K.current.style.transform = 'translate3d('.concat(Y.current.x, 'px, ').concat(Y.current.y, 'px, 0)'));
+            (e, t, n) => {
+                (X.current = (0, E.U$)(e, t, n)), null != Y.current && (Y.current.style.transform = 'translate3d('.concat(X.current.x, 'px, ').concat(X.current.y, 'px, 0)'));
             },
-            [K]
+            [Y]
         ),
         q = i.useCallback(() => {
-            if (null == K.current || T > 1) return;
-            let { width: t, height: e } = K.current.getBoundingClientRect(),
-                { width: n, height: r } = (0, A.Es)(v, t, e, z),
-                i = (0, A.AK)(v, n, r, e, z);
-            V({
+            if (null == Y.current || j > 1) return;
+            let { width: e, height: t } = Y.current.getBoundingClientRect(),
+                { width: n, height: r } = (0, E.Es)(v, e, t, F),
+                i = (0, E.AK)(v, n, r, t, F);
+            U({
                 width: n,
                 height: r
             }),
                 L(i),
-                S((0, A.kH)(n, r, i));
-        }, [z, v, T]),
+                O((0, E.kH)(n, r, i));
+        }, [F, v, j]),
         J = i.useCallback(
-            (t) => {
-                let { x: e, y: n } = Y.current;
-                if (!O || (t.clientX === e && t.clientY === n)) return;
-                let r = t.clientX - G.x;
-                $(r, t.clientY - G.y, B);
+            (e) => {
+                let { x: t, y: n } = X.current;
+                if (b && (e.clientX !== t || e.clientY !== n)) $(e.clientX - B.x, e.clientY - B.y, I);
             },
-            [B, O, G, $]
+            [I, b, B, $]
         ),
         Q = () => {
-            b(!1);
+            G(!1);
         },
-        tt = () => {
-            let t = W();
-            return t.width !== t.height;
+        ee = () => {
+            let e = W();
+            return e.width !== e.height;
         },
-        te = async () => {
-            let t;
-            if (null == K.current) return;
-            H(!0);
-            let n = K.current,
+        et = async () => {
+            let e;
+            if (null == Y.current) return;
+            z(!0);
+            let n = Y.current,
                 r = W();
             if (Z)
                 try {
-                    let { result: i, cancelFn: a } = await (0, A.$p)(e, n, D, Y.current, r);
-                    (X.current = a), (t = await i), (X.current = null);
-                } catch (t) {
+                    let { result: i, cancelFn: a } = await (0, E.$p)(t, n, D, X.current, r);
+                    (K.current = a), (e = await i), (K.current = null);
+                } catch (e) {
                     var i;
-                    throw (null === (i = X.current) || void 0 === i || i.call(X), (X.current = null), Error('Error cropping GIF'));
+                    throw (null === (i = K.current) || void 0 === i || i.call(K), (K.current = null), Error('Error cropping GIF'));
                 }
-            else t = (0, l.PT)(n, D, Y.current, r);
-            await x(t, e), H(!1), _();
+            else e = (0, s.PT)(n, D, X.current, r);
+            await M(e, t), z(!1), _();
         };
     i.useEffect(
         () => (
@@ -153,78 +151,77 @@ e.default = (t) => {
     ),
         i.useEffect(
             () => () => {
-                null != X.current && X.current();
+                null != K.current && K.current();
             },
             []
         ),
         i.useEffect(() => {
-            if (O) return window.addEventListener('mousemove', J), () => window.removeEventListener('mousemove', J);
-        }, [J, O]);
-    let tn = v === C.pC.AVATAR || v === C.pC.BANNER,
-        tr = (0, d.M)(!tn);
-    return (0, r.jsx)(o.Gt, {
-        value: F,
-        children: (0, r.jsxs)(s.ModalRoot, {
+            if (b) return window.addEventListener('mousemove', J), () => window.removeEventListener('mousemove', J);
+        }, [J, b]);
+    let en = v === g.pC.AVATAR || v === g.pC.BANNER,
+        er = (0, d.M)(!en);
+    return (0, r.jsx)(u.Gt, {
+        value: H,
+        children: (0, r.jsxs)(l.Y0X, {
             onAnimationEnd: q,
-            transitionState: M,
-            size: s.ModalSize.MEDIUM,
+            transitionState: x,
+            size: l.CgR.MEDIUM,
             children: [
                 y &&
-                    !tr &&
+                    !er &&
                     (0, r.jsx)(h.Z, {
                         type: v,
-                        analyticsPage: I,
+                        analyticsPage: k,
                         analyticsSection: m.jXE.CROP_GIF_MODAL,
                         isGIF: Z,
                         banner: n
                     }),
-                (0, r.jsx)(s.ModalHeader, {
+                (0, r.jsx)(l.xBx, {
                     separator: !1,
-                    children: (0, r.jsx)(s.FormTitle, {
-                        className: R.titleCase,
-                        tag: s.FormTitleTags.H1,
-                        children: f.intl.string(f.t.DxAYCA)
+                    children: (0, r.jsx)(l.vwX, {
+                        className: f.titleCase,
+                        tag: l.RB0.H1,
+                        children: R.intl.string(R.t.DxAYCA)
                     })
                 }),
-                (0, r.jsxs)(s.ModalContent, {
-                    className: R.modalContent,
+                (0, r.jsxs)(l.hzk, {
+                    className: f.modalContent,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: R.editingContainer,
+                            className: f.editingContainer,
                             children: [
                                 (0, r.jsx)('img', {
                                     style: {
-                                        opacity: null == U ? 0 : 1,
-                                        transform: 'translate3d('.concat(Y.current.x, 'px, ').concat(Y.current.y, 'px, 0px)'),
+                                        opacity: null == P ? 0 : 1,
+                                        transform: 'translate3d('.concat(X.current.x, 'px, ').concat(X.current.y, 'px, 0px)'),
                                         ...(() => {
-                                            if (null == U) return {};
-                                            let t = U.width / U.height,
-                                                e = tt() && t > C.MY ? D.height / U.height : 1;
+                                            if (null == P) return {};
+                                            let e = P.width / P.height,
+                                                t = ee() && e > g.MY ? D.height / P.height : 1;
                                             return {
-                                                width: U.width * T * e,
-                                                minWidth: U.width * T * e,
-                                                height: U.height * T * e
+                                                width: P.width * j * t,
+                                                minWidth: P.width * j * t,
+                                                height: P.height * j * t
                                             };
                                         })()
                                     },
-                                    className: P ? R.imageDisabled : R.imageEnabled,
+                                    className: V ? f.imageDisabled : f.imageEnabled,
                                     src: n,
                                     alt: 'avatar',
-                                    ref: K,
-                                    onMouseDown: (t) => {
-                                        let e = t.clientX - Y.current.x;
-                                        k({
-                                            x: e,
-                                            y: t.clientY - Y.current.y
+                                    ref: Y,
+                                    onMouseDown: (e) => {
+                                        T({
+                                            x: e.clientX - X.current.x,
+                                            y: e.clientY - X.current.y
                                         }),
-                                            b(!0);
+                                            G(!0);
                                     },
                                     draggable: !1
                                 }),
                                 (0, r.jsx)('div', {
-                                    className: v === C.pC.AVATAR ? R.overlayAvatar : R.overlayBanner,
+                                    className: v === g.pC.AVATAR ? f.overlayAvatar : f.overlayBanner,
                                     style: {
-                                        opacity: null == U ? 0 : 1,
+                                        opacity: null == P ? 0 : 1,
                                         width: D.width,
                                         height: D.height
                                     }
@@ -232,89 +229,89 @@ e.default = (t) => {
                             ]
                         }),
                         (0, r.jsxs)('div', {
-                            className: R.sliderContainer,
+                            className: f.sliderContainer,
                             children: [
-                                (0, r.jsx)(s.ImageIcon, {
+                                (0, r.jsx)(l.XBm, {
                                     size: 'md',
                                     color: 'currentColor',
-                                    className: R.icon
+                                    className: f.icon
                                 }),
-                                (0, r.jsx)(s.Slider, {
+                                (0, r.jsx)(l.iRW, {
                                     initialValue: 1,
                                     minValue: 1,
                                     maxValue: 2,
                                     keyboardStep: 0.025,
-                                    asValueChanges: (t) => {
-                                        if (null == U) return;
-                                        let { width: e, height: n } = U,
-                                            r = (0, A.kH)(e * t, n * t, D),
-                                            { x: i, y: l } = Y.current;
-                                        (!(0, a.inRange)(i, r.right, r.left) || !(0, a.inRange)(l, r.top, r.bottom)) && $(i, l, r), j(t), S(r);
+                                    asValueChanges: (e) => {
+                                        if (null == P) return;
+                                        let { width: t, height: n } = P,
+                                            r = (0, E.kH)(t * e, n * e, D),
+                                            { x: i, y: s } = X.current;
+                                        ((0, a.inRange)(i, r.right, r.left) && (0, a.inRange)(s, r.top, r.bottom)) || $(i, s, r), S(e), O(r);
                                     },
-                                    disabled: P,
+                                    disabled: V,
                                     equidistant: !0,
                                     hideBubble: !0,
-                                    'aria-label': f.intl.string(f.t.dnvZSk)
+                                    'aria-label': R.intl.string(R.t.dnvZSk)
                                 }),
-                                (0, r.jsx)(s.ImageIcon, {
+                                (0, r.jsx)(l.XBm, {
                                     size: 'custom',
                                     color: 'currentColor',
-                                    className: R.icon,
+                                    className: f.icon,
                                     width: 48,
                                     height: 48
                                 })
                             ]
                         }),
                         y &&
-                            tr &&
+                            er &&
                             (0, r.jsx)('div', {
                                 children: (0, r.jsx)(p.Z, {
                                     uploadType: v,
                                     showUpsell: !0,
                                     position: 'inline',
-                                    className: R.nitroUpsell,
+                                    className: f.nitroUpsell,
                                     showShadow: !1
                                 })
                             })
                     ]
                 }),
-                (0, r.jsxs)(s.ModalFooter, {
-                    className: R.modalFooter,
+                (0, r.jsxs)(l.mzw, {
+                    className: f.modalFooter,
                     children: [
                         N
-                            ? (0, r.jsx)(s.Button, {
-                                  className: R.cancelButton,
-                                  look: s.Button.Looks.LINK,
-                                  color: s.Button.Colors.PRIMARY,
-                                  size: s.ButtonSizes.SMALL,
+                            ? (0, r.jsx)(l.zxk, {
+                                  className: f.cancelButton,
+                                  look: l.zxk.Looks.LINK,
+                                  color: l.zxk.Colors.PRIMARY,
+                                  size: l.PhG.SMALL,
                                   onClick: () => {
-                                      N && (x(n, e), _());
+                                      N && (M(n, t), _());
                                   },
-                                  children: f.intl.string(f.t.B944ys)
+                                  children: R.intl.string(R.t.B944ys)
                               })
                             : null,
                         (0, r.jsxs)('div', {
-                            className: R.buttonsRight,
+                            className: f.buttonsRight,
                             children: [
-                                (0, r.jsx)(s.Button, {
-                                    className: R.cancelButton,
-                                    look: s.Button.Looks.LINK,
-                                    color: s.Button.Colors.PRIMARY,
-                                    size: s.ButtonSizes.SMALL,
+                                (0, r.jsx)(l.zxk, {
+                                    className: f.cancelButton,
+                                    look: l.zxk.Looks.LINK,
+                                    color: l.zxk.Colors.PRIMARY,
+                                    size: l.PhG.SMALL,
                                     onClick: () => {
-                                        if (null != X.current) {
-                                            X.current(), (X.current = null), H(!1);
+                                        if (null != K.current) {
+                                            K.current(), (K.current = null), z(!1);
                                             return;
                                         }
                                         _();
                                     },
-                                    children: f.intl.string(f.t['9TG40t'])
+                                    children: R.intl.string(R.t['9TG40t'])
                                 }),
-                                (0, r.jsx)(s.Button, {
-                                    submitting: P,
-                                    size: s.ButtonSizes.SMALL,
-                                    onClick: te,
-                                    children: f.intl.string(f.t.ZSHmKC)
+                                (0, r.jsx)(l.zxk, {
+                                    submitting: V,
+                                    size: l.PhG.SMALL,
+                                    onClick: et,
+                                    children: R.intl.string(R.t.ZSHmKC)
                                 })
                             ]
                         })

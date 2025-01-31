@@ -1,13 +1,8 @@
-var i;
-r.d(n, {
-    q: function () {
-        return i;
-    },
-    v: function () {
-        return a;
-    }
-}),
-    !(function (e) {
-        (e[(e.PREMIUM = 0)] = 'PREMIUM'), (e[(e.BASIC = 1)] = 'BASIC');
-    })(i || (i = {}));
-let a = 32;
+n.d(t, {
+    q: () => i,
+    v: () => r
+});
+var i = (function (e) {
+    return (e[(e.PREMIUM = 0)] = 'PREMIUM'), (e[(e.BASIC = 1)] = 'BASIC'), e;
+})({});
+let r = 32;

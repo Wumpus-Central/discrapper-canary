@@ -1,9 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return p;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => p }), n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
@@ -38,11 +33,11 @@ function x(e) {
 }
 function p(e) {
     var t;
-    let { guildId: n, progress: l, traitsToHighlight: u, maskDescription: p, maskTraits: f, onTraitClick: C } = e,
-        v = (0, a.e7)([c.Z], () => c.Z.getGuild(n)),
-        { interests: I, description: N, playstyle: _, wildcardDescriptors: T, brandPrimaryColor: j } = l,
-        b = (0, o.useToken)(o.tokens.colors.TEXT_BRAND),
-        E = Array.from(I),
+    let { guildId: n, progress: l, traitsToHighlight: u, maskDescription: p, maskTraits: _, onTraitClick: C } = e,
+        f = (0, a.e7)([c.Z], () => c.Z.getGuild(n)),
+        { interests: v, description: N, playstyle: j, wildcardDescriptors: I, brandPrimaryColor: E } = l,
+        b = (0, o.dQu)(o.TVs.colors.TEXT_BRAND),
+        T = Array.from(v),
         S = r.useMemo(() => (null != u ? new Set(u) : new Set()), [u]);
     return (0, i.jsxs)('div', {
         children: [
@@ -50,11 +45,11 @@ function p(e) {
                 className: s()(g.description, p ? g.descriptionBorderMask : void 0),
                 children: [
                     (0, i.jsx)('div', { className: p ? g.descriptionMask : void 0 }),
-                    (0, i.jsx)(o.Heading, {
+                    (0, i.jsx)(o.X6q, {
                         variant: 'heading-md/medium',
                         color: 'header-primary',
                         lineClamp: 1,
-                        children: null == v ? void 0 : v.name
+                        children: null == f ? void 0 : f.name
                     }),
                     (0, i.jsxs)('div', {
                         className: g.clanInfoRow,
@@ -72,12 +67,12 @@ function p(e) {
                                 variant: 'text-xs/normal',
                                 color: 'text-secondary',
                                 className: g.clanInfoItem,
-                                children: null !== (t = (0, m.mv)(_)) && void 0 !== t ? t : h.intl.string(h.t.JijC4O)
+                                children: null !== (t = (0, m.mv)(j)) && void 0 !== t ? t : h.intl.string(h.t.JijC4O)
                             }),
-                            null != v &&
-                                (0, i.jsx)(d.cS, {
-                                    wildcardDescriptors: T,
-                                    primaryColor: null != j ? j : b.hex()
+                            null != f &&
+                                (0, i.jsx)(d.c, {
+                                    wildcardDescriptors: I,
+                                    primaryColor: null != E ? E : b.hex()
                                 })
                         ]
                     }),
@@ -90,26 +85,26 @@ function p(e) {
                 ]
             }),
             (0, i.jsxs)('div', {
-                className: s()(g.tagsContainer, f ? g.traitsBorderMask : void 0),
+                className: s()(g.tagsContainer, _ ? g.traitsBorderMask : void 0),
                 children: [
-                    (0, i.jsx)('div', { className: f ? g.traitsMask : void 0 }),
+                    (0, i.jsx)('div', { className: _ ? g.traitsMask : void 0 }),
                     (0, i.jsxs)('div', {
                         className: g.tagsCount,
                         children: [
-                            (0, i.jsx)(o.TagsIcon, {
+                            (0, i.jsx)(o.DgT, {
                                 size: 'xxs',
                                 className: g.tags
                             }),
                             (0, i.jsx)(o.Text, {
                                 variant: 'text-xs/semibold',
                                 color: 'text-muted',
-                                children: h.intl.format(h.t['3vJqtr'], { n: E.length })
+                                children: h.intl.format(h.t['3vJqtr'], { n: T.length })
                             })
                         ]
                     }),
                     (0, i.jsx)('div', {
                         className: g.traits,
-                        children: E.map((e) =>
+                        children: T.map((e) =>
                             (0, i.jsx)(
                                 x,
                                 {

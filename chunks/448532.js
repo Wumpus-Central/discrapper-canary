@@ -1,8 +1,15 @@
-e.exports = {
-    messageContainer: 'messageContainer_a739b2',
-    cancelMessageButton: 'cancelMessageButton_a739b2',
-    message: 'message_a739b2',
-    container: 'container_a739b2 ' + n('227040').recentMentionsPopout,
-    channelRow: 'channelRow_a739b2',
-    loadingPlaceholder: 'loadingPlaceholder_a739b2'
+var i = {
+    messageContainer: 'messageContainer_f6bd5f',
+    messageSpinner: 'messageSpinner_f6bd5f',
+    channelMessageAndCancelButton: 'channelMessageAndCancelButton_f6bd5f',
+    messageSendScheduled: 'messageSendScheduled_f6bd5f',
+    messageSendError: 'messageSendError_f6bd5f',
+    messageState: 'messageState_f6bd5f',
+    cancelMessageButton: 'cancelMessageButton_f6bd5f',
+    message: 'message_f6bd5f',
+    container: 'container_f6bd5f ' + n(227040).recentMentionsPopout,
+    widerInbox: 'widerInbox_f6bd5f ' + n(227040).widerInbox,
+    channelRow: 'channelRow_f6bd5f',
+    loadingPlaceholder: 'loadingPlaceholder_f6bd5f'
 };
+e.exports = i;

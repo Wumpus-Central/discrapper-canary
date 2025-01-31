@@ -1,59 +1,55 @@
-e.d(t, {
-    Z: function () {
-        return c;
-    }
-});
-var i = e(200651);
+e.d(t, { Z: () => d });
+var l = e(200651);
 e(192379);
-var l = e(772848),
-    r = e(481060),
-    u = e(159351),
-    a = e(667),
-    o = e(626135),
-    s = e(981631);
-function c(n) {
-    let { applicationId: t, skuId: c, onClose: d, onComplete: f, analyticsLocations: p, analyticsLocationObject: m, contextKey: v } = n,
-        S = !1,
-        I = (0, l.Z)();
-    (0, r.openModalLazy)(
+var i = e(772848),
+    a = e(481060),
+    r = e(159351),
+    s = e(667),
+    u = e(626135),
+    o = e(981631);
+function d(n) {
+    let { applicationId: t, skuId: d, onClose: c, onComplete: p, analyticsLocations: f, analyticsLocationObject: v, contextKey: m } = n,
+        I = !1,
+        h = (0, i.Z)();
+    (0, a.ZDy)(
         async () => {
             let { default: n } = await e.e('61670').then(e.bind(e, 409600));
             return (e) => {
-                let { onClose: l, ...r } = e;
-                return (0, i.jsx)(n, {
-                    ...r,
-                    loadId: I,
+                let { onClose: i, ...a } = e;
+                return (0, l.jsx)(n, {
+                    ...a,
+                    loadId: h,
                     applicationId: t,
-                    skuId: c,
-                    analyticsLocations: p,
-                    analyticsLocationObject: m,
+                    skuId: d,
+                    analyticsLocations: f,
+                    analyticsLocationObject: v,
                     onClose: (n) => {
-                        l(), null == d || d(n);
+                        i(), null == c || c(n);
                     },
                     onComplete: (n) => {
-                        (S = !0), null == f || f(n);
+                        (I = !0), null == p || p(n);
                     }
                 });
             };
         },
         {
-            contextKey: v,
+            contextKey: m,
             onCloseCallback: () => {
-                !S &&
-                    o.default.track(s.rMx.PAYMENT_FLOW_CANCELED, {
-                        load_id: I,
-                        payment_type: s.Zuq[s.GZQ.ONE_TIME],
-                        location: m,
+                I ||
+                    u.default.track(o.rMx.PAYMENT_FLOW_CANCELED, {
+                        load_id: h,
+                        payment_type: o.Zuq[o.GZQ.ONE_TIME],
+                        location: v,
                         is_gift: !1,
-                        sku_id: c,
+                        sku_id: d,
                         application_id: t,
-                        location_stack: p
+                        location_stack: f
                     }),
-                    (0, u.fw)(),
-                    (0, a.p)(),
-                    null == d || d(S);
+                    (0, r.fw)(),
+                    (0, s.p)(),
+                    null == c || c(I);
             },
-            onCloseRequest: s.dG4
+            onCloseRequest: o.dG4
         }
     );
 }

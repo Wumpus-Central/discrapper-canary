@@ -1,9 +1,3 @@
-var i, r;
-n.d(t, {
-    b: function () {
-        return i;
-    }
-}),
-    ((r = i || (i = {})).DEFAULT = 'DEFAULT'),
-    (r.HIGHLIGHTED = 'HIGHLIGHTED'),
-    (r.SELECTED = 'SELECTED');
+n.d(t, { b: () => s });
+var i,
+    s = (((i = {}).DEFAULT = 'DEFAULT'), (i.HIGHLIGHTED = 'HIGHLIGHTED'), (i.SELECTED = 'SELECTED'), i);

@@ -1,59 +1,55 @@
-r.d(n, {
-    Z: function () {
-        return u;
-    }
-});
-var i = r(192379),
-    a = r(924826),
-    o = r(536895),
-    s = r(40851),
-    l = r(590921);
-function u(e) {
-    var n, r, u;
-    let { navId: c, scrollerRef: d, state: f, onFocus: p } = e,
-        { renderWindow: h } = i.useContext(s.ZP),
-        _ = (e, n) => {
-            let r = h.document.querySelector(e);
-            if (null != r) {
+n.d(t, { Z: () => l });
+var i = n(192379),
+    r = n(924826),
+    a = n(536895),
+    s = n(40851),
+    o = n(590921);
+function l(e) {
+    var t, n, l;
+    let { navId: u, scrollerRef: c, state: d, onFocus: f } = e,
+        { renderWindow: _ } = i.useContext(s.ZP),
+        p = (e, t) => {
+            let n = _.document.querySelector(e);
+            if (null != n) {
                 var i;
-                null === (i = d.current) || void 0 === i || i.scrollIntoViewNode({ node: r });
+                null === (i = c.current) || void 0 === i || i.scrollIntoViewNode({ node: n });
             }
-            null == p || p(+n);
+            null == f || f(+t);
         },
-        m = (e, n) => {
-            var r;
-            if ((null === (r = d.current) || void 0 === r || r.scrollToTop(), e && null != f.query)) {
-                let e = f.query.typeInfo.focusMode,
-                    r = !(e === l.QZ.MANUAL || (e === l.QZ.AUTO_WHEN_FILTERED && 0 === f.query.queryText.length));
-                f.isVisible && (!0 !== n || !1 !== r) ? (E.setFocus('0'), null == p || p(0)) : (E.setFocus(null), null == p || p(null));
-            }
-        },
-        g = (e) => {
+        h = (e, t) => {
             var n;
-            if ((null === (n = d.current) || void 0 === n || n.scrollToBottom(), e && null != f.query && f.query.resultCount > 0)) {
-                let e = f.query.resultCount - 1;
-                E.setFocus(e.toString()), null == p || p(e);
+            if ((null === (n = c.current) || void 0 === n || n.scrollToTop(), e && null != d.query)) {
+                let e = d.query.typeInfo.focusMode,
+                    n = !(e === o.QZ.MANUAL || (e === o.QZ.AUTO_WHEN_FILTERED && 0 === d.query.queryText.length));
+                d.isVisible && (!0 !== t || !1 !== n) ? (g.setFocus('0'), null == f || f(0)) : (g.setFocus(null), null == f || f(null));
             }
         },
-        E = (0, a.ZP)({
-            id: c,
-            isEnabled: f.isVisible,
-            orientation: o.hy.VERTICAL,
+        m = (e) => {
+            var t;
+            if ((null === (t = c.current) || void 0 === t || t.scrollToBottom(), e && null != d.query && d.query.resultCount > 0)) {
+                let e = d.query.resultCount - 1;
+                g.setFocus(e.toString()), null == f || f(e);
+            }
+        },
+        g = (0, r.ZP)({
+            id: u,
+            isEnabled: d.isVisible,
+            orientation: a.hy.VERTICAL,
             useVirtualFocus: !0,
-            setFocus: _,
-            onNavigateNextAtEnd: () => m(!0),
-            onNavigatePreviousAtStart: () => g(!0),
-            scrollToStart: () => (m(!1, !1), Promise.resolve()),
-            scrollToEnd: () => (g(!1), Promise.resolve())
+            setFocus: p,
+            onNavigateNextAtEnd: () => h(!0),
+            onNavigatePreviousAtStart: () => m(!0),
+            scrollToStart: () => (h(!1, !1), Promise.resolve()),
+            scrollToEnd: () => (m(!1), Promise.resolve())
         }),
-        v = i.useRef(m);
+        E = i.useRef(h);
     return (
         i.useEffect(() => {
-            v.current = m;
+            E.current = h;
         }),
         i.useEffect(() => {
-            v.current(!0, !0);
-        }, [null === (n = f.query) || void 0 === n ? void 0 : n.type, null === (r = f.query) || void 0 === r ? void 0 : r.queryText, null === (u = f.query) || void 0 === u ? void 0 : u.isLoading, f.isVisible]),
-        E
+            E.current(!0, !0);
+        }, [null === (t = d.query) || void 0 === t ? void 0 : t.type, null === (n = d.query) || void 0 === n ? void 0 : n.queryText, null === (l = d.query) || void 0 === l ? void 0 : l.isLoading, d.isVisible]),
+        g
     );
 }

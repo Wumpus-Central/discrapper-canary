@@ -1,25 +1,13 @@
 n.d(t, {
-    I8: function () {
-        return s;
-    },
-    KW: function () {
-        return m;
-    },
-    LT: function () {
-        return u;
-    },
-    Me: function () {
-        return o;
-    },
-    eU: function () {
-        return c;
-    },
-    rI: function () {
-        return d;
-    }
+    I8: () => s,
+    KW: () => m,
+    LT: () => u,
+    Me: () => o,
+    eU: () => c,
+    rI: () => d
 });
-var a = n(512722),
-    i = n.n(a);
+var i = n(512722),
+    l = n.n(i);
 function r(e, t, n) {
     return (
         t in e
@@ -33,7 +21,7 @@ function r(e, t, n) {
         e
     );
 }
-let l = 2 / 3,
+let a = 2 / 3,
     s = 12;
 class o {
     getWidth(e) {
@@ -47,14 +35,14 @@ class o {
             };
         let t = e / this.maxWidth,
             n = Math.max(Math.floor(t + (e / this.minWidth - t) / 2), 1),
-            a = this.gap * (n - 1);
+            i = this.gap * (n - 1);
         return {
             columns: n,
-            columnWidth: (e - a) / n
+            columnWidth: (e - i) / n
         };
     }
     constructor({ minWidth: e, maxWidth: t, gap: n }) {
-        r(this, 'minWidth', void 0), r(this, 'maxWidth', void 0), r(this, 'gap', void 0), i()(e < t, 'minWidth needs to be smaller than maxWidth'), (this.minWidth = e), (this.maxWidth = t), (this.gap = n);
+        r(this, 'minWidth', void 0), r(this, 'maxWidth', void 0), r(this, 'gap', void 0), l()(e < t, 'minWidth needs to be smaller than maxWidth'), (this.minWidth = e), (this.maxWidth = t), (this.gap = n);
     }
 }
 let c = {
@@ -63,7 +51,7 @@ let c = {
     },
     d = (e) => {
         let t = e - 2,
-            n = Math.ceil(t * l);
+            n = Math.ceil(t * a);
         return [t, n];
     },
     u = 12,

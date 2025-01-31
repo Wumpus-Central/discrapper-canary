@@ -1,63 +1,57 @@
-r.d(n, {
-    Zy: function () {
-        return d;
-    },
-    jW: function () {
-        return p;
-    },
-    vq: function () {
-        return f;
-    }
-});
-var i = r(773603);
-var a = r(570140),
-    o = r(40851),
-    s = r(358085),
-    l = r(601993),
-    u = r(981631);
-function c(e) {
-    a.Z.dispatch({
+n.d(t, {
+    Zy: () => u,
+    jW: () => d,
+    vq: () => c
+}),
+    n(773603);
+var i = n(570140),
+    r = n(40851),
+    a = n(358085),
+    s = n(601993),
+    o = n(981631);
+function l(e) {
+    i.Z.dispatch({
         type: 'CONTEXT_MENU_OPEN',
         contextMenu: e
     });
 }
-function d(e) {
+function u(e) {
     {
-        let { flushSync: n } = r(995295);
-        n(() => {
-            a.Z.wait(() => {
-                a.Z.dispatch({ type: 'CONTEXT_MENU_CLOSE' }).finally(e);
+        let { flushSync: t } = n(995295);
+        t(() => {
+            i.Z.wait(() => {
+                i.Z.dispatch({ type: 'CONTEXT_MENU_CLOSE' }).finally(e);
             });
         });
     }
 }
-function f(e, n, r, i) {
-    var a, d, f;
+function c(e, t, n, i) {
+    var u, c, d;
     if ((e.stopPropagation(), null != e.currentTarget.contains && !e.currentTarget.contains(e.target))) return;
-    let p = 0,
-        h = 0;
-    if (('pageX' in e && ((p = e.pageX), (h = e.pageY)), 0 === p && 0 === h)) {
-        let n = null === (a = e.target) || void 0 === a ? void 0 : a.getBoundingClientRect(),
-            { left: r = 0, top: i = 0, width: o = 0, height: s = 0 } = null != n ? n : {};
-        (p = r + o / 2), (h = i + s / 2);
+    let f = 0,
+        _ = 0;
+    if (('pageX' in e && ((f = e.pageX), (_ = e.pageY)), 0 === f && 0 === _)) {
+        let t = null === (u = e.target) || void 0 === u ? void 0 : u.getBoundingClientRect(),
+            { left: n = 0, top: i = 0, width: r = 0, height: a = 0 } = null != t ? t : {};
+        (f = n + r / 2), (_ = i + a / 2);
     }
-    let _ = {
-        render: n,
+    let p = {
+        render: t,
         renderLazy: i,
-        target: null !== (d = e.target) && void 0 !== d ? d : e.currentTarget,
-        rect: new DOMRect(p, h, 0, 0),
+        target: null !== (c = e.target) && void 0 !== c ? c : e.currentTarget,
+        rect: new DOMRect(f, _, 0, 0),
         config: {
-            context: __OVERLAY__ ? u.IlC.OVERLAY : null !== (f = (0, o.GB)()) && void 0 !== f ? f : u.IlC.APP,
-            ...r
+            context: __OVERLAY__ ? o.IlC.OVERLAY : null !== (d = (0, r.GB)()) && void 0 !== d ? d : o.IlC.APP,
+            ...n
         }
     };
-    if ((null == r ? void 0 : r.enableSpellCheck) && (0, s.isDesktop)()) {
+    if ((null == n ? void 0 : n.enableSpellCheck) && (0, a.isDesktop)()) {
         let e = () => {
-                n(), c(_);
+                t(), l(p);
             },
-            n = (0, l.RD)(e);
-    } else e.preventDefault(), c(_);
+            t = (0, s.RD)(e);
+    } else e.preventDefault(), l(p);
 }
-function p(e, n, r) {
-    f(e, void 0, r, n);
+function d(e, t, n) {
+    c(e, void 0, n, t);
 }

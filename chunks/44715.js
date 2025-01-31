@@ -1,31 +1,27 @@
-r.d(n, {
-    Qu: function () {
-        return s;
-    },
-    W2: function () {
-        return o;
-    }
+n.d(t, {
+    Qu: () => s,
+    W2: () => a
 });
-var i = r(327999);
-let a = {};
-function o(e) {
-    return null == a[e] && (a[e] = {}), a[e];
+var i = n(327999);
+let r = {};
+function a(e) {
+    return null == r[e] && (r[e] = {}), r[e];
 }
-function s(e, n) {
-    if (0 === n.length) return !1;
-    let r = o(e);
+function s(e, t) {
+    if (0 === t.length) return !1;
+    let n = a(e);
     return (
-        n.forEach((e) => {
-            var n, a, o, s, l, u, c, d;
-            let f = r[e.userId],
-                p = null !== (a = null !== (n = e.joinSourceType) && void 0 !== n ? n : null == f ? void 0 : f.joinSourceType) && void 0 !== a ? a : null;
-            (null == p || p === i.gq.UNSPECIFIED) && null != e.sourceInviteCode && (p = i.gq.INVITE),
-                (r[e.userId] = {
+        t.forEach((e) => {
+            var t, r, a, s, o, l, u, c;
+            let d = n[e.userId],
+                f = null !== (r = null !== (t = e.joinSourceType) && void 0 !== t ? t : null == d ? void 0 : d.joinSourceType) && void 0 !== r ? r : null;
+            (null == f || f === i.gq.UNSPECIFIED) && null != e.sourceInviteCode && (f = i.gq.INVITE),
+                (n[e.userId] = {
                     userId: e.userId,
-                    sourceInviteCode: null !== (s = null !== (o = e.sourceInviteCode) && void 0 !== o ? o : null == f ? void 0 : f.sourceInviteCode) && void 0 !== s ? s : null,
-                    joinSourceType: p,
-                    inviterId: null !== (u = null !== (l = e.inviterId) && void 0 !== l ? l : null == f ? void 0 : f.inviterId) && void 0 !== u ? u : null,
-                    integrationType: null !== (d = null !== (c = e.integrationType) && void 0 !== c ? c : null == f ? void 0 : f.integrationType) && void 0 !== d ? d : null
+                    sourceInviteCode: null !== (s = null !== (a = e.sourceInviteCode) && void 0 !== a ? a : null == d ? void 0 : d.sourceInviteCode) && void 0 !== s ? s : null,
+                    joinSourceType: f,
+                    inviterId: null !== (l = null !== (o = e.inviterId) && void 0 !== o ? o : null == d ? void 0 : d.inviterId) && void 0 !== l ? l : null,
+                    integrationType: null !== (c = null !== (u = e.integrationType) && void 0 !== u ? u : null == d ? void 0 : d.integrationType) && void 0 !== c ? c : null
                 });
         }),
         !0

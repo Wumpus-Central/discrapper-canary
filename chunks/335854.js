@@ -1,15 +1,11 @@
-r.d(n, {
-    E: function () {
-        return a;
-    },
-    X: function () {
-        return i;
-    }
+n.d(t, {
+    E: () => r,
+    X: () => i
 });
 let i = {
     getDefaultLinkInterceptor: () => void 0,
     useTrackNavigatorScreenImpression: () => void 0
 };
-function a(e) {
+function r(e) {
     Object.assign(i, e);
 }

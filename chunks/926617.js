@@ -1,1 +1,2 @@
-e.exports = { paymentNote: 'paymentNote_d791fd' };
+var i = { paymentNote: 'paymentNote__56a21' };
+e.exports = i;

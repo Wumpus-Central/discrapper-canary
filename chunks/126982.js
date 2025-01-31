@@ -1,39 +1,35 @@
-r.d(n, {
-    Z: function () {
-        return d;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(481060),
-    o = r(131388),
-    s = r(409813),
-    l = r(750143),
-    u = r(457207),
-    c = r(60314);
-function d(e) {
-    let { step: n, onClose: r } = e,
-        d = (0, o.Z)(l.X);
-    return n === s.h8.BENEFITS || n === s.h8.CONFIRM
+n.d(t, { Z: () => c });
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(131388),
+    s = n(409813),
+    o = n(750143),
+    l = n(457207),
+    u = n(60314);
+function c(e) {
+    let { step: t, onClose: n } = e,
+        c = (0, a.Z)(o.X);
+    return t === s.h8.BENEFITS || t === s.h8.CONFIRM
         ? null
         : (0, i.jsxs)('div', {
-              className: u.headerContainer,
+              className: l.headerContainer,
               children: [
-                  !d &&
+                  !c &&
                       (0, i.jsx)('div', {
-                          className: u.headerImageContainer,
+                          className: l.headerImageContainer,
                           'aria-hidden': 'true',
                           'data-accessibility': 'desaturate',
                           children: (0, i.jsx)('img', {
-                              src: c,
+                              src: u,
                               alt: '',
-                              className: u.headerImage
+                              className: l.headerImage
                           })
                       }),
-                  (0, i.jsx)(a.ModalCloseButton, {
+                  (0, i.jsx)(r.olH, {
                       withCircleBackground: !0,
-                      className: u.closeButton,
-                      onClick: r
+                      className: l.closeButton,
+                      onClick: n
                   })
               ]
           });

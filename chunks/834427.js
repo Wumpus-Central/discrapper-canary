@@ -1,27 +1,22 @@
-r.d(n, {
-    S: function () {
-        return d;
-    }
-});
+n.d(t, { S: () => u }), n(47120);
 var i,
-    a = r(47120);
-var o = r(200651),
-    s = r(192379);
-function l(e, n, r) {
+    r = n(200651),
+    a = n(192379);
+function s(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let u = 'file-input',
-    c = (e) => ({
+let o = 'file-input',
+    l = (e) => ({
         position: 'absolute',
         top: 0,
         left: 0,
@@ -31,15 +26,15 @@ let u = 'file-input',
         cursor: e ? 'not-allowed' : 'pointer',
         fontSize: 0
     });
-class d extends (i = s.Component) {
+class u extends (i = a.Component) {
     render() {
-        let { disabled: e, tabIndex: n, className: r, name: i, 'aria-label': a, 'aria-hidden': s, id: l } = this.props;
+        let { disabled: e, tabIndex: t, className: n, name: i, 'aria-label': a, 'aria-hidden': s, id: u } = this.props;
         if (this.props.embedded)
-            return (0, o.jsx)('div', {
+            return (0, r.jsx)('div', {
                 role: 'button',
-                style: c(e),
-                className: r || u,
-                tabIndex: n,
+                style: l(e),
+                className: n || o,
+                tabIndex: t,
                 onKeyDown: e ? void 0 : this.handleNativeKeyDown,
                 onClick: e ? void 0 : this.handleNativeClick,
                 'aria-disabled': e,
@@ -47,20 +42,20 @@ class d extends (i = s.Component) {
                 'aria-hidden': s || void 0
             });
         {
-            let d = '';
+            let c = '';
             return (
-                this.props.filters && (d = this.props.filters.map((e) => e.extensions.map((e) => '.'.concat(e)).join(',')).join(',')),
-                (0, o.jsx)('input', {
-                    id: l,
-                    style: c(e),
-                    className: r || u,
+                this.props.filters && (c = this.props.filters.map((e) => e.extensions.map((e) => '.'.concat(e)).join(',')).join(',')),
+                (0, r.jsx)('input', {
+                    id: u,
+                    style: l(e),
+                    className: n || o,
                     disabled: e,
                     type: 'file',
-                    tabIndex: n,
+                    tabIndex: t,
                     onMouseDown: this.handleBrowserInputMouseDown,
                     onChange: this.props.onChange,
                     multiple: this.props.multiple,
-                    accept: d,
+                    accept: c,
                     name: i,
                     'aria-label': a,
                     'aria-hidden': s || void 0,
@@ -71,22 +66,22 @@ class d extends (i = s.Component) {
     }
     constructor(...e) {
         super(...e),
-            l(this, '_input', null),
-            l(this, 'activateUploadDialogue', () => {
+            s(this, '_input', null),
+            s(this, 'activateUploadDialogue', () => {
                 this.props.embedded ? this.handleNativeClick() : this._input && this._input.click();
             }),
-            l(this, 'handleNativeClick', () => {
+            s(this, 'handleNativeClick', () => {
                 this.props.handleNativeClick && this.props.handleNativeClick(this.props);
             }),
-            l(this, 'handleNativeKeyDown', (e) => {
+            s(this, 'handleNativeKeyDown', (e) => {
                 (' ' === e.key || 'Enter' === e.key) && this.handleNativeClick();
             }),
-            l(this, 'handleBrowserInputMouseDown', (e) => {
+            s(this, 'handleBrowserInputMouseDown', (e) => {
                 e.currentTarget.value = null;
             });
     }
 }
-l(d, 'defaultProps', {
+s(u, 'defaultProps', {
     multiple: !1,
     disabled: !1,
     tabIndex: 0

@@ -1,9 +1,4 @@
-e.r(t),
-    e.d(t, {
-        default: function () {
-            return _;
-        }
-    });
+e.d(t, { default: () => _ });
 var o = e(200651);
 e(192379);
 var a = e(990547),
@@ -13,18 +8,18 @@ var a = e(990547),
     s = e(1596),
     c = e(922611),
     m = e(478923),
-    u = e(594174),
-    d = e(626135),
+    d = e(594174),
+    u = e(626135),
     f = e(51144),
     C = e(981631),
     p = e(388032);
 function _(n) {
     let { transitionState: t, onClose: e, userId: _, onCancel: x, confirmBlock: h } = n,
-        k = (0, i.e7)([u.default], () => u.default.getUser(_)),
+        k = (0, i.e7)([d.default], () => d.default.getUser(_)),
         E = f.ZP.useName(k),
         N = (0, c.Do)({ location: 'confirm_block_user_modal' }),
         O = () => {
-            h(), d.default.track(C.rMx.BLOCK_USER_CONFIRMED);
+            h(), u.default.track(C.rMx.BLOCK_USER_CONFIRMED);
         };
     if (null != k)
         return N

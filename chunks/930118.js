@@ -1,10 +1,6 @@
-n.d(t, {
-    Y: function () {
-        return r;
-    }
-});
+n.d(t, { Y: () => l });
 var i = n(570140);
-function r(e) {
+function l(e) {
     i.Z.wait(() =>
         i.Z.dispatch({
             type: 'APPLICATION_STORE_LOCATION_CHANGE',

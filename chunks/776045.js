@@ -1,96 +1,90 @@
-A.r(t),
-    A.d(t, {
-        IconVariant: function () {
-            return n;
-        },
-        default: function () {
-            return d;
-        }
-    }),
-    A(47120);
+t.d(e, {
+    A: () => s,
+    default: () => d
+}),
+    t(47120);
 var n,
-    r,
-    a = A(200651),
-    i = A(192379),
-    l = A(481060),
-    o = A(388032),
-    s = A(764162);
-((r = n || (n = {})).DANGER = 'danger'), (r.WARNING = 'warning');
-function d(e) {
-    let { transitionState: t, onClose: A, title: n, body: r, cta: d, closeLabel: c, onConfirm: u, iconVariant: g = 'warning' } = e,
-        [h, p] = i.useState(!1),
-        m = async () => {
-            p(!0);
+    a = t(200651),
+    l = t(192379),
+    r = t(481060),
+    i = t(388032),
+    o = t(764162),
+    s = (((n = {}).DANGER = 'danger'), (n.WARNING = 'warning'), n);
+function d(A) {
+    let { transitionState: e, onClose: t, title: n, body: s, cta: d, closeLabel: c, onConfirm: u, iconVariant: g = 'warning' } = A,
+        [m, h] = l.useState(!1),
+        f = async () => {
+            h(!0);
             try {
-                await u(), A();
+                await u(), t();
             } finally {
-                p(!1);
+                h(!1);
             }
         },
-        f = null != n ? n : o.intl.string(o.t.D94rwc);
-    return (0, a.jsxs)(l.ModalRoot, {
-        className: s.__invalid_container,
-        size: l.ModalSize.DYNAMIC,
-        transitionState: t,
-        'aria-label': f,
+        C = null != n ? n : i.intl.string(i.t.D94rwc);
+    return (0, a.jsxs)(r.Y0X, {
+        className: o.__invalid_container,
+        size: r.CgR.DYNAMIC,
+        transitionState: e,
+        'aria-label': C,
         children: [
-            (0, a.jsxs)(l.ModalContent, {
-                className: s.content,
+            (0, a.jsxs)(r.hzk, {
+                className: o.content,
                 children: [
                     (0, a.jsxs)('div', {
-                        className: s.header,
+                        className: o.header,
                         children: [
-                            (0, a.jsx)(l.CircleWarningIcon, {
+                            (0, a.jsx)(r.P4T, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 20,
                                 height: 20,
-                                className: (function (e) {
-                                    switch (e) {
+                                className: (function (A) {
+                                    switch (A) {
                                         case 'danger':
-                                            return s.dangerIcon;
+                                            return o.dangerIcon;
                                         case 'warning':
-                                            return s.warningIcon;
+                                            return o.warningIcon;
                                     }
                                 })(g)
                             }),
-                            (0, a.jsx)(l.Spacer, {
+                            (0, a.jsx)(r.LZC, {
                                 size: 8,
                                 horizontal: !0
                             }),
-                            (0, a.jsx)(l.Heading, {
+                            (0, a.jsx)(r.X6q, {
                                 variant: 'heading-xl/semibold',
                                 color: 'header-primary',
-                                children: f
+                                children: C
                             })
                         ]
                     }),
-                    (0, a.jsx)(l.Spacer, { size: 12 }),
-                    (0, a.jsx)(l.Text, {
+                    (0, a.jsx)(r.LZC, { size: 12 }),
+                    (0, a.jsx)(r.Text, {
                         variant: 'text-md/normal',
                         color: 'text-muted',
-                        className: s.__invalid_body,
-                        children: r
+                        className: o.__invalid_body,
+                        children: s
                     })
                 ]
             }),
-            (0, a.jsxs)(l.ModalFooter, {
+            (0, a.jsxs)(r.mzw, {
                 children: [
-                    (0, a.jsx)(l.Button, {
-                        color: l.Button.Colors.BRAND,
-                        onClick: m,
-                        submitting: h,
+                    (0, a.jsx)(r.zxk, {
+                        color: r.zxk.Colors.BRAND,
+                        onClick: f,
+                        submitting: m,
                         children: d
                     }),
-                    (0, a.jsx)(l.Spacer, {
+                    (0, a.jsx)(r.LZC, {
                         size: 12,
                         horizontal: !0
                     }),
                     null != c &&
-                        (0, a.jsx)(l.Button, {
-                            color: l.Button.Colors.PRIMARY,
-                            look: l.Button.Looks.OUTLINED,
-                            onClick: A,
+                        (0, a.jsx)(r.zxk, {
+                            color: r.zxk.Colors.PRIMARY,
+                            look: r.zxk.Looks.OUTLINED,
+                            onClick: t,
                             children: c
                         })
                 ]

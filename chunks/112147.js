@@ -1,10 +1,11 @@
-var a = {
+a.d(t, { Z: () => s });
+var i = {
         about: 'körülbelül',
         over: 'több mint',
         almost: 'majdnem',
         lessthan: 'kevesebb mint'
     },
-    i = {
+    n = {
         xseconds: ' másodperc',
         halfaminute: 'fél perc',
         xminutes: ' perc',
@@ -14,7 +15,7 @@ var a = {
         xmonths: ' hónap',
         xyears: ' év'
     },
-    n = {
+    r = {
         xseconds: {
             '-1': ' másodperccel ezelőtt',
             1: ' másodperc múlva',
@@ -56,13 +57,13 @@ var a = {
             0: ' éve'
         }
     };
-t.Z = function (e, t, r) {
+let s = function (e, t, a) {
     var s = e.match(/about|over|almost|lessthan/i),
         d = s ? e.replace(s[0], '') : e,
-        o = (null == r ? void 0 : r.addSuffix) === !0,
-        l = d.toLowerCase(),
-        u = (null == r ? void 0 : r.comparison) || 0,
-        m = o ? n[l][u] : i[l],
-        c = 'halfaminute' === l ? m : t + m;
-    return s && (c = a[s[0].toLowerCase()] + ' ' + c), c;
+        l = (null == a ? void 0 : a.addSuffix) === !0,
+        o = d.toLowerCase(),
+        u = (null == a ? void 0 : a.comparison) || 0,
+        m = l ? r[o][u] : n[o],
+        c = 'halfaminute' === o ? m : t + m;
+    return s && (c = i[s[0].toLowerCase()] + ' ' + c), c;
 };

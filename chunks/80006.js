@@ -1,41 +1,37 @@
-r.d(n, {
-    I: function () {
-        return c;
-    }
-});
-var i = r(120356),
-    a = r.n(i),
-    o = r(442837),
-    s = r(481060),
-    l = r(607070);
-function u() {
-    return (0, o.cj)([l.Z], () => {
-        let { fontScale: e, fontScaleClass: n, keyboardModeEnabled: r, saturation: i, desaturateUserColors: a, useForcedColors: o, systemForcedColors: s, useReducedMotion: u, alwaysShowLinkDecorations: c } = l.Z;
+n.d(t, { I: () => u });
+var i = n(120356),
+    r = n.n(i),
+    a = n(442837),
+    s = n(481060),
+    o = n(607070);
+function l() {
+    return (0, a.cj)([o.Z], () => {
+        let { fontScale: e, fontScaleClass: t, keyboardModeEnabled: n, saturation: i, desaturateUserColors: r, useForcedColors: a, systemForcedColors: s, useReducedMotion: l, alwaysShowLinkDecorations: u } = o.Z;
         return {
             fontScale: e,
-            fontScaleClass: n,
-            keyboardModeEnabled: r,
+            fontScaleClass: t,
+            keyboardModeEnabled: n,
             saturation: i,
-            desaturateUserColors: a,
-            useForcedColors: o,
+            desaturateUserColors: r,
+            useForcedColors: a,
             systemForcedColors: s,
-            useReducedMotion: u,
-            alwaysShowLinkDecorations: c
+            useReducedMotion: l,
+            alwaysShowLinkDecorations: u
         };
     });
 }
-function c() {
-    let e = u(),
-        n = window.CSS.supports('selector(::-webkit-scrollbar)'),
-        r = a()({
-            'low-saturation': e.saturation <= s.LOW_SATURATION_THRESHOLD,
+function u() {
+    let e = l(),
+        t = window.CSS.supports('selector(::-webkit-scrollbar)'),
+        n = r()({
+            'low-saturation': e.saturation <= s.AEw,
             'keyboard-mode': e.keyboardModeEnabled,
             'decorate-links': e.alwaysShowLinkDecorations,
-            'no-webkit-scrollbar': !n,
-            'has-webkit-scrollbar': n
+            'no-webkit-scrollbar': !t,
+            'has-webkit-scrollbar': t
         });
     return {
         accessibilitySettings: e,
-        appWrapperClassName: r
+        appWrapperClassName: n
     };
 }

@@ -1,8 +1,4 @@
-n.d(t, {
-    b: function () {
-        return a;
-    }
-});
+n.d(t, { b: () => a });
 let a = {
     'red.100': { hex: '#fef8f9' },
     'red.130': { hex: '#fef4f4' },

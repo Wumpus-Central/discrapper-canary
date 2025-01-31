@@ -1,9 +1,4 @@
-var i;
-r.d(n, {
-    y: function () {
-        return i;
-    }
-}),
-    !(function (e) {
-        e.MODAL = 'MODAL';
-    })(i || (i = {}));
+n.d(t, { y: () => i });
+var i = (function (e) {
+    return (e.MODAL = 'MODAL'), e;
+})({});

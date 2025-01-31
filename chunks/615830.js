@@ -1,60 +1,58 @@
+n.d(t, { Z: () => p }), n(653041), n(47120);
 var i,
-    a = r(653041);
-var o = r(47120);
-var s = r(442837),
-    l = r(570140);
-function u(e, n, r) {
+    r = n(442837),
+    a = n(570140);
+function s(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let c = [],
-    d = !1,
-    f = c;
-function p(e) {
-    d = e.persistentCodesEnabled;
+let o = [],
+    l = !1,
+    u = o;
+function c(e) {
+    l = e.persistentCodesEnabled;
 }
-function h(e) {
-    let n = [];
-    for (let r of f) {
-        if (r === e.keyVersion) return;
-        n.push(r);
+function d(e) {
+    let t = [];
+    for (let n of u) {
+        if (n === e.keyVersion) return;
+        t.push(n);
     }
-    n.push(e.keyVersion), (f = n);
+    t.push(e.keyVersion), (u = t);
 }
-function _() {
-    f = c;
+function f() {
+    u = o;
 }
-class m extends (i = s.ZP.PersistedStore) {
+class _ extends (i = r.ZP.PersistedStore) {
     initialize(e) {
-        var n, r;
-        (d = null !== (n = null == e ? void 0 : e.persistentCodesEnabled) && void 0 !== n && n), (f = null !== (r = null == e ? void 0 : e.uploadedKeyVersions) && void 0 !== r ? r : c);
+        var t, n;
+        (l = null !== (t = null == e ? void 0 : e.persistentCodesEnabled) && void 0 !== t && t), (u = null !== (n = null == e ? void 0 : e.uploadedKeyVersions) && void 0 !== n ? n : o);
     }
     getState() {
         return {
-            persistentCodesEnabled: d,
-            uploadedKeyVersions: f
+            persistentCodesEnabled: l,
+            uploadedKeyVersions: u
         };
     }
     getPersistentCodesEnabled() {
-        return d;
+        return l;
     }
     getUploadedKeyVersionsCached() {
-        return f;
+        return u;
     }
 }
-u(m, 'displayName', 'SecureFramesPersistedStore'),
-    u(m, 'persistKey', 'SecureFramesPersistedStore'),
-    (n.Z = new m(l.Z, {
-        SECURE_FRAMES_SETTINGS_UPDATE: p,
-        SECURE_FRAMES_UPLOADED_KEY_VERSION_ADD: h,
-        SECURE_FRAMES_UPLOADED_KEY_VERSION_CLEAR: _
-    }));
+s(_, 'displayName', 'SecureFramesPersistedStore'), s(_, 'persistKey', 'SecureFramesPersistedStore');
+let p = new _(a.Z, {
+    SECURE_FRAMES_SETTINGS_UPDATE: c,
+    SECURE_FRAMES_UPLOADED_KEY_VERSION_ADD: d,
+    SECURE_FRAMES_UPLOADED_KEY_VERSION_CLEAR: f
+});

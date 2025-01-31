@@ -1,9 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return l;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => l }), n(47120);
 var i = n(192379);
 function l() {
     let [e, t] = i.useState(window.innerWidth < 1132);

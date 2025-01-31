@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return g;
-    }
-});
+n.d(t, { Z: () => f });
 var i = n(200651);
 n(192379);
 var l = n(442837),
@@ -11,25 +7,25 @@ var l = n(442837),
     o = n(239091),
     s = n(605236),
     c = n(554747),
-    u = n(306680),
-    d = n(9156),
+    d = n(306680),
+    u = n(9156),
     h = n(434479),
     p = n(490897),
     m = n(388032),
-    f = n(193877);
-function g(e) {
-    let { guild: t, selected: g } = e,
-        { hasUnread: v, mentionCount: C } = (0, l.cj)(
-            [u.ZP],
+    g = n(193877);
+function f(e) {
+    let { guild: t, selected: f } = e,
+        { hasUnread: _, mentionCount: v } = (0, l.cj)(
+            [d.ZP],
             () => ({
-                hasUnread: u.ZP.hasUnread(t.id, p.W.GUILD_EVENT),
-                mentionCount: u.ZP.getMentionCount(t.id, p.W.GUILD_EVENT)
+                hasUnread: d.ZP.hasUnread(t.id, p.W.GUILD_EVENT),
+                mentionCount: d.ZP.getMentionCount(t.id, p.W.GUILD_EVENT)
             }),
             [t.id]
         ),
-        x = (0, l.e7)([d.ZP], () => d.ZP.isMuteScheduledEventsEnabled(t.id));
-    async function I() {
-        await (0, a.openModalLazy)(async () => {
+        x = (0, l.e7)([u.ZP], () => u.ZP.isMuteScheduledEventsEnabled(t.id));
+    async function C() {
+        await (0, a.ZDy)(async () => {
             let { default: e } = await Promise.all([n.e('22347'), n.e('56236'), n.e('22506')]).then(n.bind(n, 17671));
             return (n) =>
                 (0, i.jsx)(e, {
@@ -39,19 +35,19 @@ function g(e) {
         }),
             (0, s.EW)(r.z.GUILD_HEADER_EVENT_UPSELL);
     }
-    let _ = (0, c.ZP)(t.id),
-        Z = _.length > 0 ? m.intl.formatToPlainString(m.t.IBdqSk, { number: _.length }) : m.intl.string(m.t.tlopTE);
+    let Z = (0, c.ZP)(t.id),
+        I = Z.length > 0 ? m.intl.formatToPlainString(m.t.IBdqSk, { number: Z.length }) : m.intl.string(m.t.tlopTE);
     return (0, i.jsx)(h.m, {
         id: 'upcoming-events-'.concat(t.id),
         renderIcon: (e) =>
-            (0, i.jsx)(a.CalendarIcon, {
+            (0, i.jsx)(a.Que, {
                 size: 'md',
                 color: 'currentColor',
                 className: e
             }),
-        text: Z,
-        selected: g,
-        onClick: I,
+        text: I,
+        selected: f,
+        onClick: C,
         onContextMenu: (e) => {
             (0, o.jW)(e, async () => {
                 let { default: e } = await n.e('95307').then(n.bind(n, 867757));
@@ -62,13 +58,13 @@ function g(e) {
                     });
             });
         },
-        showUnread: v && !x,
+        showUnread: _ && !x,
         trailing:
-            !x && C > 0
-                ? (0, i.jsx)(a.NumberBadge, {
-                      className: f.numberBadge,
+            !x && v > 0
+                ? (0, i.jsx)(a.mAB, {
+                      className: g.numberBadge,
                       disableColor: !0,
-                      count: C
+                      count: v
                   })
                 : null
     });

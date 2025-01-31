@@ -1,8 +1,9 @@
+n.d(t, { Z: () => m });
 var i = n(200651),
-    r = n(192379),
-    s = n(481060),
-    a = n(707558),
-    l = n(577720),
+    s = n(192379),
+    r = n(481060),
+    l = n(707558),
+    a = n(577720),
     o = n(388032),
     c = n(57916);
 let d = () => [
@@ -22,23 +23,23 @@ let d = () => [
         description: o.intl.string(o.t.noChoK)
     }
 ];
-class u extends r.Component {
+class u extends s.Component {
     render() {
         return (0, i.jsxs)('div', {
             className: c.features,
             children: [
-                (0, i.jsx)(l.Z, {
+                (0, i.jsx)(a.Z, {
                     className: c.video,
                     videoID: 'SWzB1mx2o5k'
                 }),
-                (0, i.jsx)(s.Heading, {
+                (0, i.jsx)(r.X6q, {
                     className: c.perksHeading,
                     variant: 'heading-sm/semibold',
                     children: o.intl.string(o.t['ITh5+/'])
                 }),
-                (0, i.jsx)(a.Z, { features: d() })
+                (0, i.jsx)(l.Z, { features: d() })
             ]
         });
     }
 }
-t.Z = u;
+let m = u;

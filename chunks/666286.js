@@ -1,35 +1,41 @@
+n.d(t, { Z: () => g });
 var i = n(200651),
-    r = n(192379),
-    l = n(481060),
+    l = n(192379),
+    r = n(481060),
     a = n(115849),
-    s = n(645792),
-    o = n(787642),
-    c = n(437314),
-    d = n(981631),
-    u = n(388032),
-    h = n(950834);
-function m() {
+    s = n(540059),
+    o = n(645792),
+    c = n(787642),
+    d = n(437314),
+    u = n(981631),
+    h = n(388032),
+    m = n(950834);
+function p() {
+    let e = (0, s.Q3)('AddFriendHeader');
     return (0, i.jsxs)('header', {
-        className: h.header,
+        className: m.header,
         children: [
-            (0, i.jsx)(l.FormTitle, {
-                tag: 'h2',
-                className: h.title,
-                children: u.intl.string(u.t.w5uwoK)
+            (0, i.jsx)(r.vwX, {
+                tag: e ? 'h1' : 'h2',
+                className: m.title,
+                children: h.intl.string(h.t.w5uwoK)
             }),
             (0, i.jsx)(a.Z, {})
         ]
     });
 }
-t.Z = function () {
-    return (0, i.jsxs)(r.Fragment, {
+let g = function () {
+    let e = (0, s.Q3)('AddFriend');
+    return (0, i.jsxs)(l.Fragment, {
         children: [
-            (0, i.jsx)(m, {}),
-            (0, s.b)() && (0, i.jsx)(o.Z, {}),
-            (0, i.jsx)('div', {
-                className: h.emptyState,
-                children: (0, i.jsx)(c.Z, { type: d.pJs.ADD_FRIEND })
-            })
+            (0, i.jsx)(p, {}),
+            (0, o.b)() && (0, i.jsx)(c.Z, {}),
+            e
+                ? null
+                : (0, i.jsx)('div', {
+                      className: m.emptyState,
+                      children: (0, i.jsx)(d.Z, { type: u.pJs.ADD_FRIEND })
+                  })
         ]
     });
 };

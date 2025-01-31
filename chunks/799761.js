@@ -1,20 +1,16 @@
 function i(e) {
-    return function (n, r) {
+    return function (t, n) {
         var i;
-        if ('formatting' === (null != r && r.context ? String(r.context) : 'standalone') && e.formattingValues) {
-            var a = e.defaultFormattingWidth || e.defaultWidth,
-                o = null != r && r.width ? String(r.width) : a;
-            i = e.formattingValues[o] || e.formattingValues[a];
+        if ('formatting' === (null != n && n.context ? String(n.context) : 'standalone') && e.formattingValues) {
+            var r = e.defaultFormattingWidth || e.defaultWidth,
+                a = null != n && n.width ? String(n.width) : r;
+            i = e.formattingValues[a] || e.formattingValues[r];
         } else {
             var s = e.defaultWidth,
-                l = null != r && r.width ? String(r.width) : e.defaultWidth;
-            i = e.values[l] || e.values[s];
+                o = null != n && n.width ? String(n.width) : e.defaultWidth;
+            i = e.values[o] || e.values[s];
         }
-        return i[e.argumentCallback ? e.argumentCallback(n) : n];
+        return i[e.argumentCallback ? e.argumentCallback(t) : t];
     };
 }
-r.d(n, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });

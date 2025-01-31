@@ -1,24 +1,25 @@
+n.d(t, { Z: () => h });
 var i = n(200651);
 n(192379);
-var r = n(120356),
-    l = n.n(r),
+var l = n(120356),
+    r = n.n(l),
     a = n(44315),
     s = n(600164),
     o = n(120998),
     c = n(353042),
     d = n(388032),
     u = n(717242);
-t.Z = function (e) {
+let h = function (e) {
     var t;
-    let { title: n, className: r, color: h, animate: m, gradientStopColor: p, getHistoricalTotalBytes: g } = e,
-        f = (0, a.Sl)(h).hex,
-        _ = null === (t = (0, a.Sl)(p)) || void 0 === t ? void 0 : t.hex;
+    let { title: n, className: l, color: h, animate: m, gradientStopColor: p, getHistoricalTotalBytes: g } = e,
+        _ = (0, a.Sl)(h).hex,
+        f = null === (t = (0, a.Sl)(p)) || void 0 === t ? void 0 : t.hex;
     return (0, i.jsx)(c.Z, {
         getHistoricalTotalBytes: g,
         children: (e, t, a) => {
             var c;
             return (0, i.jsx)('div', {
-                className: l()(u.monitor, r),
+                className: r()(u.monitor, l),
                 children: (0, i.jsxs)(s.Z, {
                     align: s.Z.Align.CENTER,
                     children: [
@@ -43,8 +44,8 @@ t.Z = function (e) {
                                 maxValue: Math.max(Math.max.apply(null, e), 1000),
                                 className: u.sparkChart,
                                 updateInterval: t,
-                                color: f,
-                                gradientStopColor: _,
+                                color: _,
+                                gradientStopColor: f,
                                 numUpdatesToShow: a,
                                 animate: m,
                                 pixelWidth: 600,

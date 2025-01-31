@@ -1,23 +1,18 @@
-r.d(n, {
-    w: function () {
-        return o;
-    }
-});
-var i = r(653041);
-function a(e, n, r) {
+function i(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class o {
+n.d(t, { w: () => r }), n(653041);
+class r {
     getElement() {
         return 0 === this._elements.length ? this._createElement() : this._elements.pop();
     }
@@ -27,7 +22,7 @@ class o {
     clearPool() {
         this._elements.length = 0;
     }
-    constructor(e, n) {
-        a(this, '_elements', void 0), a(this, '_createElement', void 0), a(this, '_cleanElement', void 0), (this._elements = []), (this._createElement = e), (this._cleanElement = n);
+    constructor(e, t) {
+        i(this, '_elements', void 0), i(this, '_createElement', void 0), i(this, '_cleanElement', void 0), (this._elements = []), (this._createElement = e), (this._cleanElement = t);
     }
 }

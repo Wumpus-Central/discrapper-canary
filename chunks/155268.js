@@ -1,15 +1,11 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(695103),
-    a = r(115130);
-function o(e) {
-    let n = a.Z.getState();
-    return n.useActivityUrlOverride && null != n.activityUrlOverride && '' !== n.activityUrlOverride ? n.activityUrlOverride : i.Z.inTestModeForEmbeddedApplication(e) ? i.Z.testModeOriginURL : s(e);
+n.d(t, { Z: () => a });
+var i = n(695103),
+    r = n(115130);
+function a(e) {
+    let t = r.Z.getState();
+    return t.useActivityUrlOverride && null != t.activityUrlOverride && '' !== t.activityUrlOverride ? t.activityUrlOverride : i.Z.inTestModeForEmbeddedApplication(e) ? i.Z.testModeOriginURL : s(e);
 }
 function s(e) {
-    let n = window.GLOBAL_ENV.ACTIVITY_APPLICATION_HOST;
-    return null == n ? null : 'https://'.concat(e, '.').concat(n);
+    let t = window.GLOBAL_ENV.ACTIVITY_APPLICATION_HOST;
+    return null == t ? null : 'https://'.concat(e, '.').concat(t);
 }

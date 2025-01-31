@@ -1,10 +1,6 @@
 n.d(t, {
-    L: function () {
-        return s;
-    },
-    a: function () {
-        return c;
-    }
+    L: () => s,
+    a: () => c
 });
 var i = n(442837),
     l = n(480294),
@@ -12,20 +8,10 @@ var i = n(442837),
     a = n(817915),
     o = n(981631);
 function s() {
-    let e = (0, i.e7)([r.Z], () => r.Z.windowSize().width);
-    return (function (e, t) {
-        return e > a.t && t;
-    })(
-        e,
-        (0, i.e7)([l.Z], () => l.Z.hasConsented(o.pjP.PERSONALIZATION))
-    );
+    var e, t;
+    return (e = (0, i.e7)([r.Z], () => r.Z.windowSize().width)), (t = (0, i.e7)([l.Z], () => l.Z.hasConsented(o.pjP.PERSONALIZATION))), e > a.t && t;
 }
 function c() {
-    let e = r.Z.windowSize().width;
-    return (function (e, t) {
-        return e > a.t && t;
-    })(e, l.Z.hasConsented(o.pjP.PERSONALIZATION));
-}
-function u(e, t) {
-    return e > a.t && t;
+    var e, t;
+    return (e = r.Z.windowSize().width), (t = l.Z.hasConsented(o.pjP.PERSONALIZATION)), e > a.t && t;
 }

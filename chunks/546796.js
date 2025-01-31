@@ -1,88 +1,83 @@
-let i, a;
-r.d(n, {
-    Z: function () {
-        return _;
-    }
-});
-var o = r(411104);
-var s = r(594174),
-    l = r(195270);
-let u = () => {
+let i, r;
+n.d(t, { Z: () => _ }), n(411104);
+var a = n(594174),
+    s = n(195270);
+let o = () => {
     throw Error('updateModal has not been implemented.');
 };
 {
-    let e = r(169480);
-    (i = e.showModal), (u = e.updateModalProps), (a = r(952265).Mr);
+    let e = n(169480);
+    (i = e.showModal), (o = e.updateModalProps), (r = n(952265).Mr);
 }
-let c = 60008;
-function d() {
-    var e, n;
-    return null !== (n = null === (e = s.default.getCurrentUser()) || void 0 === e ? void 0 : e.mfaEnabled) && void 0 !== n && n;
+let l = 60008;
+function u() {
+    var e, t;
+    return null !== (t = null === (e = a.default.getCurrentUser()) || void 0 === e ? void 0 : e.mfaEnabled) && void 0 !== t && t;
 }
-function f(e, n) {
-    return (e.body && e.body.code === c) || (n && 429 === e.status);
+function c(e, t) {
+    return (e.body && e.body.code === l) || (t && 429 === e.status);
 }
-function p(e) {
-    let { promiseFn: n, resolve: r, reject: o, modalProps: s = {}, hooks: { onEarlyClose: l } = {} } = e;
+function d(e) {
+    let { promiseFn: t, resolve: n, reject: a, modalProps: s = {}, hooks: { onEarlyClose: l } = {} } = e;
     if (null == i) {
         null == l || l();
         return;
     }
-    let c = i(_, d, s);
-    function d() {
+    let u = i(p, c, s);
+    function c() {
         null == l || l();
     }
-    function f(e) {
-        a(c), r(e);
-    }
-    function p(e) {
-        a(c), o(e);
+    function d(e) {
+        r(u), n(e);
     }
     function _(e) {
+        r(u), a(e);
+    }
+    function p(e) {
         return (
-            u(c, _, d, {
+            o(u, p, c, {
                 ...s,
                 isLoading: !0
             }),
-            h({
-                promiseFn: n,
-                resolve: f,
-                reject: p,
+            f({
+                promiseFn: t,
+                resolve: d,
+                reject: _,
                 code: e,
-                mfaCodeHandler: m,
+                mfaCodeHandler: h,
                 isModalOpen: !0
             })
         );
     }
-    function m(e) {
-        let { res: n } = e;
-        u(c, _, d, {
+    function h(e) {
+        let { res: t } = e;
+        o(u, p, c, {
             ...s,
-            error: n.body.message
+            error: t.body.message
         });
     }
 }
-function h(e) {
-    let { promiseFn: n, resolve: r, reject: i, code: a, mfaCodeHandler: o = p, isModalOpen: s = !1, ...l } = e;
-    return n(null != a ? { code: a } : {}).then(r, (e) => {
-        if (f(e, s))
-            return o({
-                promiseFn: n,
-                resolve: r,
+function f(e) {
+    let { promiseFn: t, resolve: n, reject: i, code: r, mfaCodeHandler: a = d, isModalOpen: s = !1, ...o } = e;
+    return t(null != r ? { code: r } : {}).then(n, (e) => {
+        if (c(e, s))
+            return a({
+                promiseFn: t,
+                resolve: n,
                 reject: i,
                 res: e,
-                ...l
+                ...o
             });
         i(e);
     });
 }
-function _(e, n) {
-    let { checkEnabled: r = d(), ...i } = null != n ? n : {};
-    return new Promise((n, a) => {
-        ((0, l.d)(r) ? p : h)({
+function _(e, t) {
+    let { checkEnabled: n = u(), ...i } = null != t ? t : {};
+    return new Promise((t, r) => {
+        ((0, s.d)(n) ? d : f)({
             promiseFn: e,
-            resolve: n,
-            reject: a,
+            resolve: t,
+            reject: r,
             ...i
         });
     });

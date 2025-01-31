@@ -1,19 +1,9 @@
 n.d(t, {
-    Gp: function () {
-        return u;
-    },
-    O4: function () {
-        return s;
-    },
-    Yp: function () {
-        return o;
-    },
-    pR: function () {
-        return d;
-    },
-    ph: function () {
-        return c;
-    }
+    Gp: () => u,
+    O4: () => o,
+    Yp: () => s,
+    pR: () => d,
+    ph: () => c
 }),
     n(610138),
     n(216116),
@@ -24,11 +14,11 @@ var i = n(34674),
     a = n(703656),
     r = n(258971),
     l = n(981631);
-let o = () => {
+let s = () => {
         let e = { previousView: (0, r.Xh)() };
         (0, a.uL)(l.Z5c.GLOBAL_DISCOVERY_APPS, { state: e });
     },
-    s = (e) => {
+    o = (e) => {
         let { categoryId: t } = e,
             n = { previousView: (0, r.Xh)() };
         (0, a.uL)(l.Z5c.GLOBAL_DISCOVERY_APPS_CATEGORY(t), { state: n });
@@ -40,14 +30,14 @@ let o = () => {
     },
     d = function () {
         let { query: e, categoryId: t, page: n } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            o = { previousView: (0, r.Xh)() },
-            s = new URLSearchParams();
-        null != e && '' !== e && s.set('q', e),
-            null != t && t !== i.MU && s.set('category_id', t.toString()),
-            null != n && n > 1 && s.set('page', n.toString()),
+            s = { previousView: (0, r.Xh)() },
+            o = new URLSearchParams();
+        null != e && '' !== e && o.set('q', e),
+            null != t && t !== i.MU && o.set('category_id', t.toString()),
+            null != n && n > 1 && o.set('page', n.toString()),
             (0, a.uL)(l.Z5c.GLOBAL_DISCOVERY_APPS_SEARCH, {
-                state: o,
-                search: s.toString()
+                state: s,
+                search: o.toString()
             });
     },
     u = (e) => {

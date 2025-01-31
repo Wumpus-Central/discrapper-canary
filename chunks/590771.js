@@ -1,11 +1,7 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-});
+n.d(t, { Z: () => _ });
 var i = n(200651),
-    r = n(192379),
-    l = n(442837),
+    l = n(192379),
+    r = n(442837),
     a = n(571457),
     s = n(823379),
     o = n(275131),
@@ -16,16 +12,16 @@ var i = n(200651),
     m = n(128449);
 function p(e) {
     let { onScroll: t, onGuildCardSeen: n, onGuildCardClick: a } = e,
-        s = (0, l.e7)([c.Z], () => {
+        s = (0, r.e7)([c.Z], () => {
             var e;
             return null !== (e = c.Z.getGuildIds({ categoryId: m.Hk })) && void 0 !== e ? e : m.q5;
         }),
-        d = (0, l.e7)([c.Z], () => {
+        d = (0, r.e7)([c.Z], () => {
             var e;
             return null === (e = c.Z.getIsFetching({ categoryId: m.Hk })) || void 0 === e || e;
         });
     return (
-        r.useEffect(() => {
+        l.useEffect(() => {
             o.Z.fetchFeaturedGuilds();
         }, []),
         (0, i.jsx)(u.Z, {
@@ -41,16 +37,16 @@ function p(e) {
 function g(e) {
     let { tab: t, onScroll: n, onGuildCardSeen: a, onGuildCardClick: s } = e,
         h = (0, d.lg)(t),
-        p = (0, l.e7)([c.Z], () => {
+        p = (0, r.e7)([c.Z], () => {
             var e;
             return null !== (e = c.Z.getGuildIds({ categoryId: h })) && void 0 !== e ? e : m.q5;
         }),
-        g = (0, l.e7)([c.Z], () => {
+        g = (0, r.e7)([c.Z], () => {
             var e;
             return null === (e = c.Z.getIsFetching({ categoryId: h })) || void 0 === e || e;
         });
     return (
-        r.useEffect(() => {
+        l.useEffect(() => {
             o.Z.fetchCategoryFeaturedGuilds({ categoryId: h });
         }, [h]),
         (0, i.jsx)(u.Z, {
@@ -63,10 +59,10 @@ function g(e) {
         })
     );
 }
-function f(e) {
-    let { selectedTab: t, onScroll: n, onGuildCardSeen: l, onGuildCardClick: o } = e;
+function _(e) {
+    let { selectedTab: t, onScroll: n, onGuildCardSeen: r, onGuildCardClick: o } = e;
     switch (
-        (r.useEffect(() => {
+        (l.useEffect(() => {
             let e = (0, d.lg)(t);
             (0, a.kR)({ selectedCategoryId: e });
         }, [t]),
@@ -77,7 +73,7 @@ function f(e) {
                 tab: t,
                 onScroll: n,
                 onGuildCardClick: o,
-                onGuildCardSeen: l
+                onGuildCardSeen: r
             });
         case m.vf.GAMING:
         case m.vf.MUSIC:
@@ -90,7 +86,7 @@ function f(e) {
                     tab: t,
                     onScroll: n,
                     onGuildCardClick: o,
-                    onGuildCardSeen: l
+                    onGuildCardSeen: r
                 },
                 t
             );

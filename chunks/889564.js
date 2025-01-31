@@ -1,32 +1,26 @@
-r.d(n, {
-    Fv: function () {
-        return s;
-    },
-    Kt: function () {
-        return a;
-    },
-    yH: function () {
-        return o;
-    }
+n.d(t, {
+    Fv: () => s,
+    Kt: () => r,
+    yH: () => a
 });
-var i = r(687476);
-function a(e, n) {
-    if ((null == e ? void 0 : e.roles) == null || 0 === e.roles.length || null == n) return !1;
-    let r = i.Z.getSubscriptionRoles(n);
-    return e.roles.some((e) => r.has(e));
-}
-function o(e) {
-    if ((null == e ? void 0 : e.roles) == null || 0 === e.roles.length || null == e.guildId) return !1;
-    let n = i.Z.getPurchasableSubscriptionRoles(e.guildId);
+var i = n(687476);
+function r(e, t) {
+    if ((null == e ? void 0 : e.roles) == null || 0 === e.roles.length || null == t) return !1;
+    let n = i.Z.getSubscriptionRoles(t);
     return e.roles.some((e) => n.has(e));
 }
-function s(e, n) {
+function a(e) {
     if ((null == e ? void 0 : e.roles) == null || 0 === e.roles.length || null == e.guildId) return !1;
-    if (o(e)) {
-        let r = i.Z.getUserSubscriptionRoles(e.guildId),
-            a = e.roles.some((e) => r.has(e)),
-            o = n === e.guildId && i.Z.getUserIsAdmin(e.guildId);
-        if (!(a || o)) return !0;
+    let t = i.Z.getPurchasableSubscriptionRoles(e.guildId);
+    return e.roles.some((e) => t.has(e));
+}
+function s(e, t) {
+    if ((null == e ? void 0 : e.roles) == null || 0 === e.roles.length || null == e.guildId) return !1;
+    if (a(e)) {
+        let n = i.Z.getUserSubscriptionRoles(e.guildId),
+            r = e.roles.some((e) => n.has(e)),
+            a = t === e.guildId && i.Z.getUserIsAdmin(e.guildId);
+        if (!(r || a)) return !0;
     }
     return !1;
 }

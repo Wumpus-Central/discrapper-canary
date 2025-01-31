@@ -1,52 +1,47 @@
-n.d(t, {
-    Z: function () {
-        return E;
-    }
-}),
-    n(627341);
+n.d(t, { Z: () => E }), n(627341);
 var i = n(200651);
 n(192379);
 var s = n(120356),
-    r = n.n(s),
-    a = n(278074),
-    l = n(692547),
+    a = n.n(s),
+    l = n(278074),
+    r = n(692547),
     o = n(481060),
     u = n(551556),
-    c = n(579532);
-let d = () =>
+    d = n(579532);
+let c = () =>
         (0, i.jsx)(u.Z, {
             width: 13,
             height: 13,
-            backgroundColor: l.Z.colors.TEXT_POSITIVE.css
+            backgroundColor: r.Z.colors.TEXT_POSITIVE.css
         }),
     m = () =>
-        (0, i.jsx)(o.CircleXIcon, {
+        (0, i.jsx)(o.k$p, {
             size: 'custom',
             width: 13,
             height: 13,
-            color: l.Z.colors.TEXT_DANGER.css
+            color: r.Z.colors.TEXT_DANGER.css
         }),
     g = () =>
-        (0, i.jsx)(o.CircleXIcon, {
+        (0, i.jsx)(o.k$p, {
             size: 'custom',
             width: 13,
             height: 13,
-            color: l.Z.colors.TEXT_WARNING.css
+            color: r.Z.colors.TEXT_WARNING.css
         });
 function E(e) {
-    let t = (0, a.EQ)(e.type)
+    let t = (0, l.EQ)(e.type)
         .with('info', () => (0, i.jsx)(g, {}))
         .with('error', () => (0, i.jsx)(m, {}))
-        .with('success', () => (0, i.jsx)(d, {}))
+        .with('success', () => (0, i.jsx)(c, {}))
         .otherwise(() => null);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             t,
             (0, i.jsx)(o.Text, {
                 variant: 'text-sm/medium',
-                className: r()(c.formMessage, {
-                    [c.formMessageNegative]: 'error' === e.type,
-                    [c.formMessagePositive]: 'success' === e.type
+                className: a()(d.formMessage, {
+                    [d.formMessageNegative]: 'error' === e.type,
+                    [d.formMessagePositive]: 'success' === e.type
                 }),
                 children: e.children
             })

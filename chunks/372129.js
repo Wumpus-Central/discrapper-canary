@@ -1,7 +1,6 @@
 n.d(t, {
-    _: function () {
-        return u;
-    }
+    Z: () => h,
+    _: () => u
 }),
     n(411104),
     n(653041),
@@ -15,25 +14,23 @@ var i = n(200651),
     c = n(869783);
 async function d(e) {
     try {
-        var t;
-        let n = await ((t = e),
-            new Promise((e, n) => {
-                if (null != t) {
+        let t = await new Promise((t, n) => {
+                if (null != e) {
                     let i = new FileReader();
-                    (i.onload = (t) => {
+                    (i.onload = (e) => {
                         var i;
-                        'string' == typeof (null === (i = t.target) || void 0 === i ? void 0 : i.result) ? e(t.target.result) : n(Error('Failed to read file'));
+                        'string' == typeof (null === (i = e.target) || void 0 === i ? void 0 : i.result) ? t(e.target.result) : n(Error('Failed to read file'));
                     }),
-                        i.readAsDataURL(t);
+                        i.readAsDataURL(e);
                 }
-            })),
-            i = new Image();
+            }),
+            n = new Image();
         return (
-            (i.src = n),
-            await i.decode(),
+            (n.src = t),
+            await n.decode(),
             {
-                image: i,
-                dataURI: n
+                image: n,
+                dataURI: t
             }
         );
     } catch {
@@ -62,50 +59,50 @@ async function u(e, t) {
     n.length > 0 && m(n);
 }
 let m = (e) => {
-    (0, l.openModalLazy)(async () => {
-        let { default: t } = await n.e('68720').then(n.bind(n, 70846));
-        return (n) =>
-            (0, i.jsx)(t, {
-                errors: e,
-                ...n
-            });
-    });
-};
-t.Z = (e) => {
-    let { onChange: t, multiple: o = !0, disabled: c, className: d, tabIndex: m = -1, 'aria-label': h, filters: g, setLoading: x } = e,
-        p = r.createRef(),
-        f = r.useRef(null),
-        [C, v] = r.useState(!1);
-    r.useEffect(() => {
-        C && I();
-    }, [C]);
-    let I = () => {
-            null !== f.current && ((0, l.closeModal)(f.current), (f.current = null));
-        },
-        N = async (e) => {
-            null == x || x(!0), await u(e, t), v(!0), null == x || x(!1);
-        },
-        _ = async (e) => {
-            var t, r, s;
-            if ((e.stopPropagation(), e.preventDefault(), (null === (t = e.currentTarget) || void 0 === t ? void 0 : t.files) == null || (null === (s = e.currentTarget) || void 0 === s ? void 0 : null === (r = s.files) || void 0 === r ? void 0 : r.length) === 0)) return;
-            let a = e.currentTarget.files;
-            f.current = await (0, l.openModalLazy)(async () => {
-                let { default: e } = await n.e('16169').then(n.bind(n, 935333));
-                return (t) =>
-                    (0, i.jsx)(e, {
-                        processFiles: () => N(a),
-                        ...t
-                    });
-            });
-        };
-    return (0, i.jsx)(s.Z, {
-        onChange: _,
-        filters: null != g ? g : (0, a.Zj)(),
-        multiple: o,
-        disabled: c,
-        className: d,
-        tabIndex: m,
-        'aria-label': h,
-        ref: p
-    });
-};
+        (0, l.ZDy)(async () => {
+            let { default: t } = await n.e('68720').then(n.bind(n, 70846));
+            return (n) =>
+                (0, i.jsx)(t, {
+                    errors: e,
+                    ...n
+                });
+        });
+    },
+    h = (e) => {
+        let { onChange: t, multiple: o = !0, disabled: c, className: d, tabIndex: m = -1, 'aria-label': h, filters: g, setLoading: x } = e,
+            p = r.createRef(),
+            _ = r.useRef(null),
+            [C, f] = r.useState(!1);
+        r.useEffect(() => {
+            C && v();
+        }, [C]);
+        let v = () => {
+                null !== _.current && ((0, l.Mr3)(_.current), (_.current = null));
+            },
+            N = async (e) => {
+                null == x || x(!0), await u(e, t), f(!0), null == x || x(!1);
+            },
+            j = async (e) => {
+                var t, r, s;
+                if ((e.stopPropagation(), e.preventDefault(), (null === (t = e.currentTarget) || void 0 === t ? void 0 : t.files) == null || (null === (s = e.currentTarget) || void 0 === s ? void 0 : null === (r = s.files) || void 0 === r ? void 0 : r.length) === 0)) return;
+                let a = e.currentTarget.files;
+                _.current = await (0, l.ZDy)(async () => {
+                    let { default: e } = await n.e('16169').then(n.bind(n, 935333));
+                    return (t) =>
+                        (0, i.jsx)(e, {
+                            processFiles: () => N(a),
+                            ...t
+                        });
+                });
+            };
+        return (0, i.jsx)(s.Z, {
+            onChange: j,
+            filters: null != g ? g : (0, a.Zj)(),
+            multiple: o,
+            disabled: c,
+            className: d,
+            tabIndex: m,
+            'aria-label': h,
+            ref: p
+        });
+    };

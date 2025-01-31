@@ -1,76 +1,71 @@
-r.d(n, {
-    Z: function () {
-        return v;
-    }
-});
-var i = r(47120);
-var a = r(200651);
-r(192379);
-var o = r(120356),
-    s = r.n(o),
-    l = r(442837),
-    u = r(481060),
-    c = r(607070),
-    d = r(906732),
-    f = r(951394),
-    p = r(695346),
-    h = r(785717),
-    _ = r(388032),
-    m = r(119231);
-let g = 300,
-    E = (e) =>
-        (0, u.openModalLazy)(async () => {
-            let { default: n } = await r.e('51714').then(r.bind(r, 211065));
-            return (r) =>
-                (0, a.jsx)(n, {
-                    ...r,
+n.d(t, { Z: () => g }), n(47120);
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(442837),
+    o = n(481060),
+    l = n(607070),
+    u = n(906732),
+    c = n(951394),
+    d = n(695346),
+    f = n(785717),
+    _ = n(388032),
+    p = n(119231);
+let h = 300,
+    m = (e) =>
+        (0, o.ZDy)(async () => {
+            let { default: t } = await n.e('51714').then(n.bind(n, 211065));
+            return (n) =>
+                (0, i.jsx)(t, {
+                    ...n,
                     sourceAnalyticsLocations: e
                 });
         });
-function v(e) {
-    let { isVisible: n, isExpandable: r, onCloseProfile: i } = e,
-        { analyticsLocations: o } = (0, d.ZP)(),
-        { trackUserProfileAction: v } = (0, h.KZ)(),
-        [y, b] = (0, l.Wu)([c.Z], () => [c.Z.useReducedMotion, c.Z.keyboardModeEnabled]),
-        I = !r || y || b ? 0 : g,
-        T = () => {
-            v({ action: 'PRESS_EDIT_CUSTOM_STATUS' }), E(o), null == i || i();
+function g(e) {
+    let { isVisible: t, isExpandable: n, onCloseProfile: r } = e,
+        { analyticsLocations: g } = (0, u.ZP)(),
+        { trackUserProfileAction: E } = (0, f.KZ)(),
+        [v, y] = (0, s.Wu)([l.Z], () => [l.Z.useReducedMotion, l.Z.keyboardModeEnabled]),
+        I = !n || v || y ? 0 : h,
+        b = () => {
+            E({ action: 'PRESS_EDIT_CUSTOM_STATUS' }), m(g), null == r || r();
         },
-        S = () => {
-            v({ action: 'PRESS_CLEAR_CUSTOM_STATUS' }), p.Ok.updateSetting(void 0);
+        T = () => {
+            E({ action: 'PRESS_CLEAR_CUSTOM_STATUS' }), d.Ok.updateSetting(void 0);
         };
-    return (0, a.jsxs)(f.ZP, {
-        className: s()(m.popover, {
-            [m.visible]: n,
-            [m.expandable]: r
+    return (0, i.jsxs)(c.ZP, {
+        className: a()(p.popover, {
+            [p.visible]: t,
+            [p.expandable]: n
         }),
         children: [
-            (0, a.jsx)(u.TooltipContainer, {
+            (0, i.jsx)(o.DY3, {
                 text: _.intl.string(_.t.bt75u7),
                 delay: I,
                 'aria-label': !1,
-                children: (0, a.jsx)(f.zx, {
-                    className: s()(m.button, m.left),
+                children: (0, i.jsx)(c.zx, {
+                    className: a()(p.button, p.left),
                     'aria-label': _.intl.string(_.t.QdHxoq),
                     'aria-haspopup': 'dialog',
-                    onClick: T,
-                    children: (0, a.jsx)(u.PencilIcon, {
+                    onClick: b,
+                    children: (0, i.jsx)(o.vdY, {
                         size: 'xs',
-                        colorClass: m.icon
+                        colorClass: p.icon
                     })
                 })
             }),
-            (0, a.jsx)(u.TooltipContainer, {
+            (0, i.jsx)(o.DY3, {
                 text: _.intl.string(_.t.VkKicX),
                 delay: I,
                 'aria-label': !1,
-                children: (0, a.jsx)(f.zx, {
-                    className: s()(m.button, m.right),
+                children: (0, i.jsx)(c.zx, {
+                    className: a()(p.button, p.right),
                     'aria-label': _.intl.string(_.t.wfYTHR),
-                    onClick: S,
-                    children: (0, a.jsx)(u.TrashIcon, {
+                    onClick: T,
+                    children: (0, i.jsx)(o.XHJ, {
                         size: 'xs',
-                        colorClass: m.icon
+                        colorClass: p.icon
                     })
                 })
             })

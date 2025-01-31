@@ -1,6 +1,7 @@
-e.exports = {
-    body: 'body_bb2fc6',
-    infoNotice: 'infoNotice_bb2fc6',
-    paymentModalBreadcrumbs: 'paymentModalBreadcrumbs_bb2fc6',
-    paymentModalError: 'paymentModalError_bb2fc6'
+var i = {
+    body: 'body_b25217',
+    infoNotice: 'infoNotice_b25217',
+    paymentModalBreadcrumbs: 'paymentModalBreadcrumbs_b25217',
+    paymentModalError: 'paymentModalError_b25217'
 };
+e.exports = i;

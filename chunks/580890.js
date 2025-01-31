@@ -1,4 +1,5 @@
-var n = {
+n.d(t, { Z: () => i });
+var a = {
     lastWeek: "'지난' eeee p",
     yesterday: "'어제' p",
     today: "'오늘' p",
@@ -6,6 +7,6 @@ var n = {
     nextWeek: "'다음' eeee p",
     other: 'P'
 };
-t.Z = function (e, t, a, i) {
-    return n[e];
+let i = function (e, t, n, i) {
+    return a[e];
 };

@@ -1,125 +1,109 @@
-r.d(n, {
-    CZ: function () {
-        return v;
-    },
-    FT: function () {
-        return I;
-    },
-    In: function () {
-        return h;
-    },
-    Ju: function () {
-        return b;
-    },
-    U6: function () {
-        return m;
-    },
-    iV: function () {
-        return E;
-    },
-    jT: function () {
-        return y;
-    },
-    y5: function () {
-        return g;
-    }
-});
-var i = r(47120);
-var a = r(653041);
-var o = r(570140),
-    s = r(601070),
-    l = r(131704),
-    u = r(592125),
-    c = r(324067),
-    d = r(594174),
-    f = r(709054),
-    p = r(981631);
-function h(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        i = arguments.length > 3 ? arguments[3] : void 0,
+n.d(t, {
+    CZ: () => m,
+    FT: () => v,
+    In: () => d,
+    Ju: () => E,
+    U6: () => _,
+    iV: () => h,
+    jT: () => g,
+    y5: () => p
+}),
+    n(47120),
+    n(653041);
+var i = n(570140),
+    r = n(601070),
+    a = n(131704),
+    s = n(592125),
+    o = n(324067),
+    l = n(594174),
+    u = n(709054),
+    c = n(981631);
+function d(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        r = arguments.length > 3 ? arguments[3] : void 0,
         a = arguments.length > 4 ? arguments[4] : void 0;
-    o.Z.dispatch({
+    i.Z.dispatch({
         type: 'CHANNEL_ACK',
         channelId: e,
-        messageId: i,
-        immediate: n,
-        force: r,
-        context: p.e3s,
+        messageId: r,
+        immediate: t,
+        force: n,
+        context: c.e3s,
         location: a
     });
 }
-function _(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        i = u.Z.getChannel(e);
+function f(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        i = s.Z.getChannel(e);
     if (null == i || null == i.guild_id) return;
-    let a = c.Z.getCategories(i.guild_id);
-    if (null == a[e]) return;
-    let o = a[e]
+    let l = o.Z.getCategories(i.guild_id);
+    if (null == l[e]) return;
+    let u = l[e]
             .filter((e) => {
-                let { channel: n } = e;
-                return (0, l.Em)(n.type);
+                let { channel: t } = e;
+                return (0, a.Em)(t.type);
             })
             .map((e) => {
-                let { channel: n } = e;
-                return n.id;
+                let { channel: t } = e;
+                return t.id;
             }),
-        d = [...o];
-    for (let e of (o.forEach((e) => {
-        let n = s.Z.getActiveJoinedThreadsForParent(i.guild_id, e);
-        for (let e in n) d.push(e);
+        c = [...u];
+    for (let e of (u.forEach((e) => {
+        let t = r.Z.getActiveJoinedThreadsForParent(i.guild_id, e);
+        for (let e in t) c.push(e);
     }),
-    d))
-        h(e, n, r);
+    c))
+        d(e, t, n);
 }
-function m(e) {
-    e.isCategory() ? _(e.id, !0, !0) : e.isForumLikeChannel() ? h(e.id, !0, !0, f.default.fromTimestamp(Date.now())) : h(e.id, !0, !0);
+function _(e) {
+    e.isCategory() ? f(e.id, !0, !0) : e.isForumLikeChannel() ? d(e.id, !0, !0, u.default.fromTimestamp(Date.now())) : d(e.id, !0, !0);
 }
-function g(e, n) {
-    o.Z.dispatch({
+function p(e, t) {
+    i.Z.dispatch({
         type: 'BULK_ACK',
         channels: e,
-        context: p.e3s,
-        onFinished: n
+        context: c.e3s,
+        onFinished: t
     });
 }
-function E(e) {
-    o.Z.dispatch({
+function h(e) {
+    i.Z.dispatch({
         type: 'CHANNEL_LOCAL_ACK',
         channelId: e
     });
 }
-function v(e, n) {
-    o.Z.dispatch({
+function m(e, t) {
+    i.Z.dispatch({
         type: 'ENABLE_AUTOMATIC_ACK',
         channelId: e,
-        windowId: n
+        windowId: t
     });
 }
-function y(e, n) {
-    o.Z.dispatch({
+function g(e, t) {
+    i.Z.dispatch({
         type: 'DISABLE_AUTOMATIC_ACK',
         channelId: e,
-        windowId: n
+        windowId: t
     });
 }
-function b(e, n, r) {
-    o.Z.dispatch({
+function E(e, t, n) {
+    i.Z.dispatch({
         type: 'GUILD_FEATURE_ACK',
         id: e,
-        ackType: n,
-        ackedId: r,
+        ackType: t,
+        ackedId: n,
         local: !1
     });
 }
-function I(e, n) {
-    var r;
-    if (null != (null === (r = d.default.getCurrentUser()) || void 0 === r ? void 0 : r.id))
-        o.Z.dispatch({
+function v(e, t) {
+    var n;
+    null != (null === (n = l.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) &&
+        i.Z.dispatch({
             type: 'USER_NON_CHANNEL_ACK',
             ackType: e,
-            ackedId: n,
+            ackedId: t,
             local: !1
         });
 }

@@ -1,9 +1,10 @@
 e.exports = {
-    previewContainer: 'previewContainer_a9d381',
-    effectDescriptionBorderWithGradient: 'effectDescriptionBorderWithGradient_a9d381 effectDescriptionBorder_a9d381',
-    effectDescriptionNoGradient: 'effectDescriptionNoGradient_a9d381 effectDescriptionBorder_a9d381',
-    effectDescriptionContainer: 'effectDescriptionContainer_a9d381',
-    effectDescription: 'effectDescription_a9d381',
-    effectName: 'effectName_a9d381',
-    effectPurchasedAt: 'effectPurchasedAt_a9d381'
+    previewContainer: 'previewContainer__92e52',
+    effectDescriptionBorder: 'effectDescriptionBorder__92e52',
+    effectDescriptionBorderWithGradient: 'effectDescriptionBorderWithGradient__92e52 effectDescriptionBorder__92e52',
+    effectDescriptionNoGradient: 'effectDescriptionNoGradient__92e52 effectDescriptionBorder__92e52',
+    effectDescriptionContainer: 'effectDescriptionContainer__92e52',
+    effectDescription: 'effectDescription__92e52',
+    effectName: 'effectName__92e52',
+    effectPurchasedAt: 'effectPurchasedAt__92e52'
 };

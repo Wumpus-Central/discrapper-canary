@@ -1,17 +1,13 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-});
+n.d(t, { Z: () => r });
 var i = n(200651);
 n(192379);
 var l = n(481060),
     s = n(600164),
-    r = n(72524);
-function a(e) {
-    let { description: t, icon: n, id: a, label: o, onChange: d, value: c } = e;
+    a = n(72524);
+function r(e) {
+    let { description: t, icon: n, id: r, label: o, onChange: d, value: c } = e;
     return (0, i.jsxs)('div', {
-        className: r.cardContent,
+        className: a.cardContent,
         children: [
             (0, i.jsxs)(s.Z, {
                 justify: s.Z.Justify.BETWEEN,
@@ -27,8 +23,8 @@ function a(e) {
                     }),
                     null != d &&
                         null != c &&
-                        (0, i.jsx)(l.Switch, {
-                            id: a,
+                        (0, i.jsx)(l.rsf, {
+                            id: r,
                             checked: c,
                             onChange: d
                         })
@@ -37,7 +33,7 @@ function a(e) {
             (0, i.jsx)(l.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-normal',
-                className: r.cardDescription,
+                className: a.cardDescription,
                 children: t
             })
         ]

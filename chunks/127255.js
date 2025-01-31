@@ -1,29 +1,23 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-}),
-    n(47120),
-    n(653041);
-var i = n(192379),
-    l = n(442837),
-    r = n(115130),
-    o = n(694312),
-    a = n(405625),
-    u = n(664097);
-function c(e) {
-    let { guildId: t, enableFilter: n = !1 } = e,
-        { filter: c } = (0, l.cj)([r.Z], () => ({ filter: r.Z.getFilter() })),
-        d = (0, o.E)(t),
-        f = (0, a.Z)(d),
-        s = (0, u.o)();
-    return i.useMemo(() => {
+i.d(t, { Z: () => u }), i(47120), i(653041);
+var l = i(192379),
+    n = i(442837),
+    a = i(115130),
+    r = i(694312),
+    d = i(405625),
+    o = i(664097);
+function u(e) {
+    let { guildId: t, enableFilter: i = !1 } = e,
+        { filter: u } = (0, n.cj)([a.Z], () => ({ filter: a.Z.getFilter() })),
+        c = (0, r.E)(t),
+        s = (0, d.Z)(c),
+        p = (0, o.o)();
+    return l.useMemo(() => {
         function e(e) {
-            return !!(!n || '' === c || e.application.name.toLowerCase().includes(c.toLowerCase())) || !1;
+            return !!(!i || '' === u || e.application.name.toLowerCase().includes(u.toLowerCase()));
         }
-        let t = [...s].filter(e),
-            i = new Set(t.map((e) => e.application.id));
-        for (let n of f) !i.has(n.application.id) && e(n) && t.push(n);
+        let t = [...p].filter(e),
+            l = new Set(t.map((e) => e.application.id));
+        for (let i of s) !l.has(i.application.id) && e(i) && t.push(i);
         return t;
-    }, [s, n, c, f]);
+    }, [p, i, u, s]);
 }

@@ -1,15 +1,16 @@
-var i = r(200651),
-    a = r(192379),
-    o = r(120356),
-    s = r.n(o),
-    l = r(554045);
-n.Z = a.forwardRef(function (e, n) {
-    let { children: r, className: a, style: o, noBorder: u = !1, participantUserId: c } = e;
+n.d(t, { Z: () => l });
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(554045);
+let l = r.forwardRef(function (e, t) {
+    let { children: n, className: r, style: a, noBorder: l = !1, participantUserId: u } = e;
     return (0, i.jsx)('div', {
-        className: s()(a, l.tile, { [l.noBorder]: u }),
-        style: o,
-        ref: n,
-        'data-selenium-video-tile': c,
-        children: r
+        className: s()(r, o.tile, { [o.noBorder]: l }),
+        style: a,
+        ref: t,
+        'data-selenium-video-tile': u,
+        children: n
     });
 });

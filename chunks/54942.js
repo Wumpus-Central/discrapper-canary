@@ -1,11 +1,7 @@
-n.d(t, {
-    Z: function () {
-        return s;
-    }
-});
+n.d(t, { Z: () => r });
 var i = n(200651);
 n(192379);
-var r = n(106939);
-function s() {
-    return (0, i.jsx)(r.M, {});
+var s = n(106939);
+function r() {
+    return (0, i.jsx)(s.M, {});
 }

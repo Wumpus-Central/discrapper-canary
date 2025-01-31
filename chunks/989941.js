@@ -1,9 +1,5 @@
 let l;
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-});
+n.d(t, { Z: () => r });
 var s = n(145597);
 function r(e, t) {
     if (__OVERLAY__) {

@@ -1,18 +1,13 @@
-r.d(n, {
-    Z: function () {
-        return u;
-    }
-});
-var i = r(47120);
-var a = r(442837),
-    o = r(176919),
-    s = r(975060),
-    l = r(505649);
-function u() {
-    let e = (0, a.e7)([s.Z], () => s.Z.error),
-        [n, r] = (0, a.Wu)([l.Z], () => [l.Z.error, l.Z.isAwaitingAuthentication]);
+n.d(t, { Z: () => o }), n(47120);
+var i = n(442837),
+    r = n(176919),
+    a = n(975060),
+    s = n(505649);
+function o() {
+    let e = (0, i.e7)([a.Z], () => a.Z.error),
+        [t, n] = (0, i.Wu)([s.Z], () => [s.Z.error, s.Z.isAwaitingAuthentication]);
     return {
-        paymentError: null != n ? n : e,
-        paymentAuthenticationState: r ? o.wr.PENDING : null != n ? o.wr.ERROR : o.wr.NONE
+        paymentError: null != t ? t : e,
+        paymentAuthenticationState: n ? r.wr.PENDING : null != t ? r.wr.ERROR : r.wr.NONE
     };
 }

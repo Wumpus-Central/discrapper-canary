@@ -1,49 +1,42 @@
-s.r(t),
-    s.d(t, {
-        default: function () {
-            return c;
-        }
-    }),
-    s(653041),
-    s(47120);
-var i = s(200651);
-s(192379);
-var r = s(149765),
-    n = s(481060),
-    o = s(995648),
-    a = s(422559),
-    d = s(388032),
-    l = s(138557);
-function c(e) {
-    let { defaultMemberPermissions: t, onClose: s, transitionState: c } = e,
-        h = [];
-    for (let e of a.VY) r.e$(t, e) && h.push(e);
-    return (0, i.jsxs)(n.ModalRoot, {
-        size: n.ModalSize.DYNAMIC,
-        'aria-label': d.intl.string(d.t.vusPtr),
-        transitionState: c,
+e.d(i, { default: () => d }), e(653041), e(47120);
+var r = e(200651);
+e(192379);
+var t = e(149765),
+    n = e(481060),
+    a = e(995648),
+    o = e(422559),
+    l = e(388032),
+    c = e(138557);
+function d(s) {
+    let { defaultMemberPermissions: i, onClose: e, transitionState: d } = s,
+        f = [];
+    for (let s of o.VY) t.e$(i, s) && f.push(s);
+    return (0, r.jsxs)(n.Y0X, {
+        size: n.CgR.DYNAMIC,
+        'aria-label': l.intl.string(l.t.vusPtr),
+        transitionState: d,
         children: [
-            (0, i.jsx)(n.ModalHeader, {
+            (0, r.jsx)(n.xBx, {
                 separator: !1,
-                children: (0, i.jsx)(n.Heading, {
-                    className: l.header,
+                children: (0, r.jsx)(n.X6q, {
+                    className: c.header,
                     variant: 'heading-xl/semibold',
-                    children: d.intl.string(d.t['4gMlpa'])
+                    children: l.intl.string(l.t['4gMlpa'])
                 })
             }),
-            (0, i.jsx)(n.ModalContent, {
-                children: (0, i.jsx)(o.Z, {
-                    className: l.permissionList,
-                    grantedPermissions: h
+            (0, r.jsx)(n.hzk, {
+                children: (0, r.jsx)(a.Z, {
+                    className: c.permissionList,
+                    grantedPermissions: f
                 })
             }),
-            (0, i.jsx)(n.ModalFooter, {
-                className: l.footer,
-                children: (0, i.jsx)(n.Button, {
-                    size: n.ButtonSizes.MEDIUM,
-                    onClick: s,
-                    color: n.ButtonColors.BRAND,
-                    children: d.intl.string(d.t.i4jeWV)
+            (0, r.jsx)(n.mzw, {
+                className: c.footer,
+                children: (0, r.jsx)(n.zxk, {
+                    size: n.PhG.MEDIUM,
+                    onClick: e,
+                    color: n.Ttl.BRAND,
+                    children: l.intl.string(l.t.i4jeWV)
                 })
             })
         ]

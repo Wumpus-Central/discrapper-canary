@@ -1,22 +1,18 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(861990),
-    a = r(981631);
-class o {
+n.d(t, { Z: () => a });
+var i = n(861990),
+    r = n(981631);
+class a {
     getCreateAttachmentURL(e) {
-        return a.ANM.GRAVITY_ATTACHMENTS;
+        return r.ANM.GRAVITY_ATTACHMENTS;
     }
     getDeleteUploadURL(e) {
-        return a.ANM.MESSAGE_DELETE_UPLOAD(e);
+        return r.ANM.MESSAGE_DELETE_UPLOAD(e);
     }
     getMaxFileSize(e) {
-        return a.mBz;
+        return r.mBz;
     }
     getMaxAttachmentsCount() {
-        return a.dN1;
+        return r.dN1;
     }
     getMaxTotalAttachmentSize() {
         return i.zz;

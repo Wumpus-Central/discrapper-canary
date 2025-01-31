@@ -1,47 +1,41 @@
-r.d(n, {
-    DC: function () {
-        return c;
-    },
-    Js: function () {
-        return d;
-    },
-    ZR: function () {
-        return f;
-    }
+n.d(t, {
+    DC: () => u,
+    Js: () => c,
+    ZR: () => d
 });
-var i = r(200651);
-r(192379);
-var a = r(657707),
-    o = r(297781),
-    s = r(709054),
-    l = r(528567);
-r(814059);
-var u = r(388032);
-function c(e) {
-    let { value: n, statisticId: r } = e,
-        a = u.intl.formatToPlainString(u.t.yhdo8v, {
-            value: n,
-            statisticName: (0, l.C)(r)
+var i = n(200651);
+n(192379);
+var r = n(657707),
+    a = n(297781),
+    s = n(709054),
+    o = n(528567);
+n(814059);
+var l = n(388032);
+function u(e) {
+    let { value: t, statisticId: n } = e,
+        r = l.intl.formatToPlainString(l.t.yhdo8v, {
+            value: t,
+            statisticName: (0, o.C)(n)
         });
-    return (0, i.jsx)(f, { text: a });
+    return (0, i.jsx)(d, { text: r });
 }
-function d(e) {
-    let { intervalStart: n, intervalEnd: r } = e,
-        l = new Date(s.default.extractTimestamp(n)),
-        c = new Date(s.default.extractTimestamp(r)),
-        d = new Intl.DateTimeFormat(u.intl.currentLocale, {
+function c(e) {
+    let { intervalStart: t, intervalEnd: n } = e,
+        o = new Date(s.default.extractTimestamp(t)),
+        u = new Date(s.default.extractTimestamp(n)),
+        c = new Intl.DateTimeFormat(l.intl.currentLocale, {
             month: 'numeric',
             day: 'numeric'
-        }).formatRange(l, c);
-    return (0, i.jsx)(o.ej, {
-        Icon: a.Que,
-        text: d
+        }).formatRange(o, u);
+    return (0, i.jsx)(a.ej, {
+        Icon: r.Que,
+        text: c
     });
 }
-function f(e) {
-    let { text: n } = e;
-    return (0, i.jsx)(o.ej, {
-        Icon: a.hAD,
-        text: n
+function d(e) {
+    let { text: t } = e;
+    return (0, i.jsx)(a.ej, {
+        Icon: r.hAD,
+        text: t
     });
 }

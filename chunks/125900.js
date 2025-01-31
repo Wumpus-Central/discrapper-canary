@@ -1,20 +1,12 @@
-r.d(n, {
-    J2: function () {
-        return o;
-    },
-    V2: function () {
-        return l;
-    },
-    dX: function () {
-        return s;
-    },
-    g2: function () {
-        return u;
-    }
+n.d(t, {
+    J2: () => a,
+    V2: () => o,
+    dX: () => s,
+    g2: () => l
 });
-var i = r(818083),
-    a = r(987338);
-let o = (0, i.B)({
+var i = n(818083),
+    r = n(987338);
+let a = (0, i.B)({
     id: '2024-11_soundmoji_sending',
     label: 'Send soundmojis',
     kind: 'user',
@@ -22,7 +14,7 @@ let o = (0, i.B)({
         enabled: !1,
         showSoundmojiInEmojiPicker: !1
     },
-    commonTriggerPoint: a.$P.CONNECTION_OPEN,
+    commonTriggerPoint: r.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 1,
@@ -43,14 +35,14 @@ let o = (0, i.B)({
     ]
 });
 function s(e) {
-    let { location: n } = e;
-    return o.getCurrentConfig({ location: n }, { autoTrackExposure: !1 }).enabled;
+    let { location: t } = e;
+    return a.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
+}
+function o(e) {
+    let { location: t } = e;
+    return a.useExperiment({ location: t }, { autoTrackExposure: !1 }).enabled;
 }
 function l(e) {
-    let { location: n } = e;
-    return o.useExperiment({ location: n }, { autoTrackExposure: !1 }).enabled;
-}
-function u(e) {
-    let { location: n } = e;
-    return o.useExperiment({ location: n }, { autoTrackExposure: !1 }).showSoundmojiInEmojiPicker;
+    let { location: t } = e;
+    return a.useExperiment({ location: t }, { autoTrackExposure: !1 }).showSoundmojiInEmojiPicker;
 }

@@ -1,28 +1,24 @@
-r.d(n, {
-    Z: function () {
-        return d;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(481060),
-    l = r(388032),
-    u = r(221309),
-    c = r(652849);
-function d() {
+n.d(t, { Z: () => c });
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(481060),
+    o = n(388032),
+    l = n(221309),
+    u = n(652849);
+function c() {
     return (0, i.jsxs)('div', {
-        className: o()(u.paymentModalLockIcon, c.flex, c.alignCenter),
+        className: a()(l.paymentModalLockIcon, u.flex, u.alignCenter),
         children: [
-            (0, i.jsx)(s.LockIcon, {
+            (0, i.jsx)(s.mBM, {
                 size: 'sm',
                 color: 'currentColor',
-                className: u.lockIcon
+                className: l.lockIcon
             }),
             (0, i.jsx)(s.Text, {
                 variant: 'text-sm/medium',
-                children: l.intl.string(l.t.Kv6Z4O)
+                children: o.intl.string(o.t.Kv6Z4O)
             })
         ]
     });

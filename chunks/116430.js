@@ -1,59 +1,55 @@
-r.d(t, {
-    X: function () {
-        return I;
-    }
-});
-var a = r(622916),
-    n = r(899517),
-    _ = r(910731),
-    o = r(954211),
-    E = r(394798),
-    i = r(886115),
-    c = r(263449),
-    s = r(233517),
-    l = r(151122);
-let I = (0, l._I)((e = {}) => {
-    let t = e.levels || a.RU;
+a.d(e, { X: () => l });
+var r = a(622916),
+    n = a(899517),
+    o = a(910731),
+    _ = a(954211),
+    i = a(394798),
+    c = a(886115),
+    s = a(263449),
+    E = a(233517);
+let l = (0, a(151122)._I)((t = {}) => {
+    let e = t.levels || r.RU;
     return {
         name: 'CaptureConsole',
-        setup(e) {
-            if ('console' in n.n)
-                (0, _.e)(({ args: r, level: a }) => {
-                    if ((0, c.s3)() === e && !!t.includes(a))
-                        (function (e, t) {
-                            let r = {
-                                level: (0, o.V)(t),
-                                extra: { arguments: e }
+        setup(t) {
+            'console' in n.n &&
+                (0, o.e)(({ args: a, level: r }) => {
+                    (0, s.s3)() === t &&
+                        e.includes(r) &&
+                        !(function (t, e) {
+                            let a = {
+                                level: (0, _.V)(e),
+                                extra: { arguments: t }
                             };
-                            (0, c.$e)((a) => {
+                            (0, s.$e)((r) => {
                                 if (
-                                    (a.addEventProcessor(
-                                        (e) => (
-                                            (e.logger = 'console'),
-                                            (0, E.EG)(e, {
+                                    (r.addEventProcessor(
+                                        (t) => (
+                                            (t.logger = 'console'),
+                                            (0, i.EG)(t, {
                                                 handled: !1,
                                                 type: 'console'
                                             }),
-                                            e
+                                            t
                                         )
                                     ),
-                                    'assert' === t)
+                                    'assert' === e)
                                 ) {
-                                    if (!e[0]) {
-                                        let t = `Assertion failed: ${(0, i.nK)(e.slice(1), ' ') || 'console.assert'}`;
-                                        a.setExtra('arguments', e.slice(1)), (0, s.uT)(t, r);
+                                    if (!t[0]) {
+                                        let e = `Assertion failed: ${(0, c.nK)(t.slice(1), ' ') || 'console.assert'}`;
+                                        r.setExtra('arguments', t.slice(1)), (0, E.uT)(e, a);
                                     }
                                     return;
                                 }
-                                let n = e.find((e) => e instanceof Error);
+                                let n = t.find((t) => t instanceof Error);
                                 if (n) {
-                                    (0, s.Tb)(n, r);
+                                    (0, E.Tb)(n, a);
                                     return;
                                 }
-                                let _ = (0, i.nK)(e, ' ');
-                                (0, s.uT)(_, r);
+                                let o = (0, c.nK)(t, ' ');
+                                (0, E.uT)(o, a);
                             });
-                        })(r, a);
+                        })(a, r);
                 });
         }
     };

@@ -1,26 +1,20 @@
-c.d(t, {
-    Zq: function () {
-        return p;
-    },
-    _8: function () {
-        return i;
-    },
-    s$: function () {
-        return s;
-    }
+a.d(t, {
+    Zq: () => p,
+    _8: () => u,
+    s$: () => s
 }),
-    c(47120);
-var r = c(15729),
-    n = c(286379),
-    a = c(731965),
-    o = c(797614);
-let u = (0, r.U)((e) => ({ captchaServeVolume: {} }));
-function i() {
-    return 0 === Object.keys(u.getState().captchaServeVolume).length;
+    a(47120);
+var c = a(15729),
+    r = a(286379),
+    o = a(731965),
+    i = a(797614);
+let n = (0, c.U)((e) => ({ captchaServeVolume: {} }));
+function u() {
+    return 0 === Object.keys(n.getState().captchaServeVolume).length;
 }
 function s(e) {
-    (0, a.j)(() => {
-        u.setState((t) =>
+    (0, o.j)(() => {
+        n.setState((t) =>
             null == e
                 ? t
                 : e in t.captchaServeVolume
@@ -40,14 +34,14 @@ function s(e) {
     });
 }
 function p() {
-    for (let [e, t] of Object.entries(u.getState().captchaServeVolume))
-        o.Z.distribution(
+    for (let [e, t] of Object.entries(n.getState().captchaServeVolume))
+        i.Z.distribution(
             {
-                name: n.V.CAPTCHA_SERVE_VOLUME_DISTRIBUTION,
+                name: r.V.CAPTCHA_SERVE_VOLUME_DISTRIBUTION,
                 tags: ['user_flow:'.concat(e)]
             },
             t,
             !0
         );
-    (0, a.j)(() => u.setState({ captchaServeVolume: {} }));
+    (0, o.j)(() => n.setState({ captchaServeVolume: {} }));
 }

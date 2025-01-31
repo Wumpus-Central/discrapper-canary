@@ -1,33 +1,28 @@
-t.r(e),
-    t.d(e, {
-        default: function () {
-            return s;
-        }
-    });
-var l = t(200651);
-t(192379);
-var o = t(481060),
-    r = t(239091),
-    u = t(358085),
-    c = t(998502),
-    i = t(89013),
-    a = t(388032);
-function s(n) {
-    let { text: e, onSelect: t } = n,
-        s = (0, i.Z)(e);
-    return u.isPlatformEmbedded
-        ? (0, l.jsxs)(o.Menu, {
+l.d(t, { default: () => d });
+var e = l(200651);
+l(192379);
+var o = l(481060),
+    a = l(239091),
+    c = l(358085),
+    i = l(998502),
+    s = l(89013),
+    r = l(388032);
+function d(n) {
+    let { text: t, onSelect: l } = n,
+        d = (0, s.Z)(t);
+    return c.isPlatformEmbedded
+        ? (0, e.jsxs)(o.v2r, {
               navId: 'text-context',
-              onClose: r.Zy,
-              'aria-label': a.intl.string(a.t.s285pq),
-              onSelect: t,
+              onClose: a.Zy,
+              'aria-label': r.intl.string(r.t.s285pq),
+              onSelect: l,
               children: [
-                  (0, l.jsx)(o.MenuGroup, { children: s }),
-                  (0, l.jsx)(o.MenuGroup, {
-                      children: (0, l.jsx)(o.MenuItem, {
+                  (0, e.jsx)(o.kSQ, { children: d }),
+                  (0, e.jsx)(o.kSQ, {
+                      children: (0, e.jsx)(o.sNh, {
                           id: 'copy',
-                          label: a.intl.string(a.t.OpuAlJ),
-                          action: () => c.ZP.copy(e)
+                          label: r.intl.string(r.t.OpuAlJ),
+                          action: () => i.ZP.copy(t)
                       })
                   })
               ]

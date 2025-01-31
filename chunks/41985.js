@@ -1,7 +1,7 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    var n = {
+    var t = {
             1: '१',
             2: '२',
             3: '३',
@@ -13,7 +13,7 @@
             9: '९',
             0: '०'
         },
-        r = {
+        n = {
             '१': '1',
             '२': '2',
             '३': '3',
@@ -25,85 +25,85 @@
             '९': '9',
             '०': '0'
         };
-    function i(e, n, r, i) {
-        var a = '';
-        if (n)
-            switch (r) {
+    function i(e, t, n, i) {
+        var r = '';
+        if (t)
+            switch (n) {
                 case 's':
-                    a = 'काही सेकंद';
+                    r = 'काही सेकंद';
                     break;
                 case 'ss':
-                    a = '%d सेकंद';
+                    r = '%d सेकंद';
                     break;
                 case 'm':
-                    a = 'एक मिनिट';
+                    r = 'एक मिनिट';
                     break;
                 case 'mm':
-                    a = '%d मिनिटे';
+                    r = '%d मिनिटे';
                     break;
                 case 'h':
-                    a = 'एक तास';
+                    r = 'एक तास';
                     break;
                 case 'hh':
-                    a = '%d तास';
+                    r = '%d तास';
                     break;
                 case 'd':
-                    a = 'एक दिवस';
+                    r = 'एक दिवस';
                     break;
                 case 'dd':
-                    a = '%d दिवस';
+                    r = '%d दिवस';
                     break;
                 case 'M':
-                    a = 'एक महिना';
+                    r = 'एक महिना';
                     break;
                 case 'MM':
-                    a = '%d महिने';
+                    r = '%d महिने';
                     break;
                 case 'y':
-                    a = 'एक वर्ष';
+                    r = 'एक वर्ष';
                     break;
                 case 'yy':
-                    a = '%d वर्षे';
+                    r = '%d वर्षे';
             }
         else
-            switch (r) {
+            switch (n) {
                 case 's':
-                    a = 'काही सेकंदां';
+                    r = 'काही सेकंदां';
                     break;
                 case 'ss':
-                    a = '%d सेकंदां';
+                    r = '%d सेकंदां';
                     break;
                 case 'm':
-                    a = 'एका मिनिटा';
+                    r = 'एका मिनिटा';
                     break;
                 case 'mm':
-                    a = '%d मिनिटां';
+                    r = '%d मिनिटां';
                     break;
                 case 'h':
-                    a = 'एका तासा';
+                    r = 'एका तासा';
                     break;
                 case 'hh':
-                    a = '%d तासां';
+                    r = '%d तासां';
                     break;
                 case 'd':
-                    a = 'एका दिवसा';
+                    r = 'एका दिवसा';
                     break;
                 case 'dd':
-                    a = '%d दिवसां';
+                    r = '%d दिवसां';
                     break;
                 case 'M':
-                    a = 'एका महिन्या';
+                    r = 'एका महिन्या';
                     break;
                 case 'MM':
-                    a = '%d महिन्यां';
+                    r = '%d महिन्यां';
                     break;
                 case 'y':
-                    a = 'एका वर्षा';
+                    r = 'एका वर्षा';
                     break;
                 case 'yy':
-                    a = '%d वर्षां';
+                    r = '%d वर्षां';
             }
-        return a.replace(/%d/i, e);
+        return r.replace(/%d/i, e);
     }
     return e.defineLocale('mr', {
         months: 'जानेवारी_फेब्रुवारी_मार्च_एप्रिल_मे_जून_जुलै_ऑगस्ट_सप्टेंबर_ऑक्टोबर_नोव्हेंबर_डिसेंबर'.split('_'),
@@ -146,27 +146,20 @@
         },
         preparse: function (e) {
             return e.replace(/[१२३४५६७८९०]/g, function (e) {
-                return r[e];
+                return n[e];
             });
         },
         postformat: function (e) {
             return e.replace(/\d/g, function (e) {
-                return n[e];
+                return t[e];
             });
         },
         meridiemParse: /रात्री|सकाळी|दुपारी|सायंकाळी/,
-        meridiemHour: function (e, n) {
-            if ((12 === e && (e = 0), 'रात्री' === n)) return e < 4 ? e : e + 12;
-            if ('सकाळी' === n) return e;
-            if ('दुपारी' === n) return e >= 10 ? e : e + 12;
-            else if ('सायंकाळी' === n) return e + 12;
+        meridiemHour: function (e, t) {
+            return (12 === e && (e = 0), 'रात्री' === t) ? (e < 4 ? e : e + 12) : 'सकाळी' === t ? e : 'दुपारी' === t ? (e >= 10 ? e : e + 12) : 'सायंकाळी' === t ? e + 12 : void 0;
         },
-        meridiem: function (e, n, r) {
-            if (e < 4) return 'रात्री';
-            if (e < 10) return 'सकाळी';
-            if (e < 17) return 'दुपारी';
-            else if (e < 20) return 'सायंकाळी';
-            else return 'रात्री';
+        meridiem: function (e, t, n) {
+            return e < 4 ? 'रात्री' : e < 10 ? 'सकाळी' : e < 17 ? 'दुपारी' : e < 20 ? 'सायंकाळी' : 'रात्री';
         },
         week: {
             dow: 0,

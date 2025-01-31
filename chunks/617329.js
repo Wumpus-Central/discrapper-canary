@@ -1,77 +1,73 @@
-r.d(n, {
-    R: function () {
-        return f;
-    }
-});
-var i = r(192379),
-    a = r(348288);
-function o(e, n) {
-    return d(e) || c(e, n) || l(e, n) || s();
+n.d(t, { R: () => d });
+var i = n(192379),
+    r = n(348288);
+function a(e, t) {
+    return c(e) || u(e, t) || o(e, t) || s();
 }
 function s() {
     throw TypeError('Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
 }
-function l(e, n) {
+function o(e, t) {
     if (e) {
-        if ('string' == typeof e) return u(e, n);
-        var r = Object.prototype.toString.call(e).slice(8, -1);
-        if (('Object' === r && e.constructor && (r = e.constructor.name), 'Map' === r || 'Set' === r)) return Array.from(e);
-        if ('Arguments' === r || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)) return u(e, n);
+        if ('string' == typeof e) return l(e, t);
+        var n = Object.prototype.toString.call(e).slice(8, -1);
+        if (('Object' === n && e.constructor && (n = e.constructor.name), 'Map' === n || 'Set' === n)) return Array.from(e);
+        if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return l(e, t);
     }
 }
-function u(e, n) {
-    (null == n || n > e.length) && (n = e.length);
-    for (var r = 0, i = Array(n); r < n; r++) i[r] = e[r];
+function l(e, t) {
+    (null == t || t > e.length) && (t = e.length);
+    for (var n = 0, i = Array(t); n < t; n++) i[n] = e[n];
     return i;
 }
-function c(e, n) {
+function u(e, t) {
     if ('undefined' != typeof Symbol && Symbol.iterator in Object(e)) {
-        var r = [],
+        var n = [],
             i = !0,
-            a = !1,
-            o = void 0;
+            r = !1,
+            a = void 0;
         try {
-            for (var s, l = e[Symbol.iterator](); !(i = (s = l.next()).done) && (r.push(s.value), !n || r.length !== n); i = !0);
+            for (var s, o = e[Symbol.iterator](); !(i = (s = o.next()).done) && (n.push(s.value), !t || n.length !== t); i = !0);
         } catch (e) {
-            (a = !0), (o = e);
+            (r = !0), (a = e);
         } finally {
             try {
-                !i && null != l.return && l.return();
+                i || null == o.return || o.return();
             } finally {
-                if (a) throw o;
+                if (r) throw a;
             }
         }
-        return r;
+        return n;
     }
 }
-function d(e) {
+function c(e) {
     if (Array.isArray(e)) return e;
 }
-var f = function () {
-    var e = o((0, i.useState)(!1), 2),
-        n = e[0],
-        r = e[1],
-        s = (0, i.useContext)(a.L);
+var d = function () {
+    var e = a((0, i.useState)(!1), 2),
+        t = e[0],
+        n = e[1],
+        s = (0, i.useContext)(r.L);
     return (
         (0, i.useEffect)(
             function () {
                 var e,
-                    n = null == s ? void 0 : null === (e = s.dragDropManager) || void 0 === e ? void 0 : e.getBackend(),
+                    t = null == s ? void 0 : null === (e = s.dragDropManager) || void 0 === e ? void 0 : e.getBackend(),
                     i = {
                         backendChanged: function (e) {
-                            r(e.previewEnabled());
+                            n(e.previewEnabled());
                         }
                     };
                 return (
-                    r(n.previewEnabled()),
-                    n.previewsList().register(i),
+                    n(t.previewEnabled()),
+                    t.previewsList().register(i),
                     function () {
-                        n.previewsList().unregister(i);
+                        t.previewsList().unregister(i);
                     }
                 );
             },
             [s, s.dragDropManager]
         ),
-        n
+        t
     );
 };

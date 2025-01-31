@@ -1,19 +1,20 @@
+n.d(t, { Z: () => c });
 var i = n(200651);
 n(192379);
-var r = n(120356),
-    s = n.n(r),
-    a = n(481060),
-    l = n(441685),
+var s = n(120356),
+    r = n.n(s),
+    l = n(481060),
+    a = n(441685),
     o = n(297247);
-t.Z = (e) => {
-    let { icon: t, iconClassName: n, header: r, description: c } = e;
+let c = (e) => {
+    let { icon: t, iconClassName: n, header: s, description: c } = e;
     return (0, i.jsxs)('div', {
-        className: s()(o.container, l.box),
+        className: r()(o.container, a.box),
         children: [
             (0, i.jsx)('div', {
                 className: o.circle,
                 children: (0, i.jsx)(t, {
-                    className: s()(o.icon, n),
+                    className: r()(o.icon, n),
                     size: 'custom',
                     width: 20,
                     height: 20,
@@ -22,12 +23,12 @@ t.Z = (e) => {
             }),
             (0, i.jsxs)('div', {
                 children: [
-                    (0, i.jsx)(a.Heading, {
+                    (0, i.jsx)(l.X6q, {
                         variant: 'heading-md/bold',
                         className: o.header,
-                        children: (0, i.jsx)(a.HeadingLevel, { children: r })
+                        children: (0, i.jsx)(l.y5t, { children: s })
                     }),
-                    (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(l.Text, {
                         variant: 'text-sm/medium',
                         color: 'text-muted',
                         children: c

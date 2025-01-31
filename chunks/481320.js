@@ -1,7 +1,8 @@
-e.exports = {
-    positioner: 'positioner_ed0148',
-    container: 'container_ed0148',
-    bindName: 'bindName_ed0148',
-    shortcut: 'shortcut_ed0148',
-    separator: 'separator_ed0148'
+var i = {
+    positioner: 'positioner_a516b9',
+    container: 'container_a516b9',
+    bindName: 'bindName_a516b9',
+    shortcut: 'shortcut_a516b9',
+    separator: 'separator_a516b9'
 };
+e.exports = i;

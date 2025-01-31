@@ -1,12 +1,8 @@
-function i(e, n) {
+function i(e, t) {
     return (i = Object.setPrototypeOf
         ? Object.setPrototypeOf.bind()
-        : function (e, n) {
-              return (e.__proto__ = n), e;
-          })(e, n);
+        : function (e, t) {
+              return (e.__proto__ = t), e;
+          })(e, t);
 }
-r.d(n, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });

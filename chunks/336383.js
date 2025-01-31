@@ -1,48 +1,49 @@
-var i = r(200651),
-    a = r(192379),
-    o = r(120356),
-    s = r.n(o),
-    l = r(481060),
-    u = r(906732),
-    c = r(785717),
-    d = r(456644),
-    f = r(502762),
-    p = r(652853),
-    h = r(171368),
-    _ = r(228168),
-    m = r(388032),
-    g = r(249942);
-n.Z = a.forwardRef(function (e, n) {
-    let { children: r, className: a, subsection: o, onAction: E, onClose: v, ...y } = e,
-        { profileType: b } = (0, p.z)(),
-        { analyticsLocations: I } = (0, u.ZP)(),
-        { context: T } = (0, c.KZ)(),
-        { recentActivityEnabled: S } = (0, d.i)({ location: 'UserProfileActivityCardContainer' });
-    return b !== _.y0.FULL_SIZE && (null == T ? void 0 : T.userId) != null && S
-        ? (0, i.jsx)(l.Clickable, {
-              className: g.clickableContainer,
-              'aria-label': m.intl.string(m.t.pD1L1t),
+n.d(t, { Z: () => g });
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(481060),
+    l = n(906732),
+    u = n(785717),
+    c = n(456644),
+    d = n(502762),
+    f = n(652853),
+    _ = n(171368),
+    p = n(228168),
+    h = n(388032),
+    m = n(249942);
+let g = r.forwardRef(function (e, t) {
+    let { children: n, className: r, subsection: a, onAction: g, onClose: E, ...v } = e,
+        { profileType: y } = (0, f.z)(),
+        { analyticsLocations: I } = (0, l.ZP)(),
+        { context: b } = (0, u.KZ)(),
+        { recentActivityEnabled: T } = (0, c.i)({ location: 'UserProfileActivityCardContainer' });
+    return y !== p.y0.FULL_SIZE && (null == b ? void 0 : b.userId) != null && T
+        ? (0, i.jsx)(o.P3F, {
+              className: m.clickableContainer,
+              'aria-label': h.intl.string(h.t.pD1L1t),
               onClick: () => {
-                  null == E || E({ action: 'PRESS_CARD' }),
-                      (0, h.openUserProfileModal)({
-                          section: _.oh.ACTIVITY,
+                  null == g || g({ action: 'PRESS_CARD' }),
+                      (0, _.openUserProfileModal)({
+                          section: p.oh.ACTIVITY,
                           sourceAnalyticsLocations: I,
-                          subsection: o,
-                          ...T
+                          subsection: a,
+                          ...b
                       }),
-                      null == v || v();
+                      null == E || E();
               },
-              children: (0, i.jsx)(f.Z.Overlay, {
-                  ref: n,
-                  className: s()(g.card, a),
-                  ...y,
-                  children: r
+              children: (0, i.jsx)(d.Z.Overlay, {
+                  ref: t,
+                  className: s()(m.card, r),
+                  ...v,
+                  children: n
               })
           })
-        : (0, i.jsx)(f.Z.Overlay, {
-              ref: n,
-              className: s()(g.card, a),
-              ...y,
-              children: r
+        : (0, i.jsx)(d.Z.Overlay, {
+              ref: t,
+              className: s()(m.card, r),
+              ...v,
+              children: n
           });
 });

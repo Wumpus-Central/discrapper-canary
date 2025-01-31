@@ -1,12 +1,8 @@
-n.d(t, {
-    n: function () {
-        return p;
-    }
-});
+n.d(t, { n: () => p });
 var i = n(200651),
     l = n(442837),
-    r = n(481060),
-    a = n(384275),
+    a = n(481060),
+    r = n(384275),
     s = n(468026),
     o = n(317381),
     c = n(513202),
@@ -17,8 +13,8 @@ let p = (e) => {
     let { className: t, channel: n, user: p, application: m, oauth2Token: f } = e,
         g = (0, l.e7)([o.ZP], () => o.ZP.getSelfEmbeddedActivities());
     if (!p.bot || null == m) return null;
-    function C() {
-        a.Z.delete(f.id);
+    function _() {
+        r.Z.delete(f.id);
         let e = g.get(m.id);
         null != e &&
             c.Z.leaveActivity({
@@ -26,14 +22,14 @@ let p = (e) => {
                 applicationId: m.id
             });
     }
-    return (0, i.jsx)(r.Button, {
+    return (0, i.jsx)(a.zxk, {
         className: t,
-        size: r.ButtonSizes.SMALL,
-        color: r.Button.Colors.PRIMARY,
+        size: a.PhG.SMALL,
+        color: a.zxk.Colors.PRIMARY,
         onClick: () =>
             (function (e, t, n) {
                 let l = h.intl.formatToPlainString(h.t.QWGvxM, { applicationName: e.name });
-                (0, r.openModal)((e) =>
+                (0, a.h7j)((e) =>
                     (0, i.jsx)(s.default, {
                         title: h.intl.string(h.t.DT39Aw),
                         body: l,
@@ -48,7 +44,7 @@ let p = (e) => {
                         channel_id: n.id,
                         channel_type: n.type
                     });
-            })(m, C, n),
+            })(m, _, n),
         children: h.intl.string(h.t['5S3sQE'])
     });
 };

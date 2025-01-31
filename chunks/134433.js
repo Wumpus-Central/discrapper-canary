@@ -1,44 +1,39 @@
-r.d(n, {
-    Z: function () {
-        return h;
-    }
-});
-var i = r(47120);
-var a = r(200651);
-r(192379);
-var o = r(120356),
-    s = r.n(o),
-    l = r(866442),
-    u = r(442837),
-    c = r(692547),
-    d = r(481060),
-    f = r(607070),
-    p = r(932504);
-function h(e) {
-    let n,
-        { color: r, size: i, forcedIconColor: o, className: h, iconClassName: _ } = e,
-        [m, g] = (0, u.Wu)([f.Z], () => [f.Z.desaturateUserColors, f.Z.saturation]),
-        E = (0, d.useToken)(c.Z.unsafe_rawColors.PRIMARY_300).hex(),
-        v = (0, l._i)(null != r ? r : E),
-        y = (0, l.ho)(v, !1, m ? g : null);
-    n = null != o ? o : 0.3 > (0, l.Bd)(v) ? c.Z.unsafe_rawColors.PRIMARY_630.css : c.Z.unsafe_rawColors.WHITE_500.css;
-    let b = i / 8;
-    return (0, a.jsx)('div', {
+n.d(t, { Z: () => f }), n(47120);
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(866442),
+    o = n(442837),
+    l = n(692547),
+    u = n(481060),
+    c = n(607070),
+    d = n(932504);
+function f(e) {
+    let t,
+        { color: n, size: r, forcedIconColor: f, className: _, iconClassName: p } = e,
+        [h, m] = (0, o.Wu)([c.Z], () => [c.Z.desaturateUserColors, c.Z.saturation]),
+        g = (0, u.dQu)(l.Z.unsafe_rawColors.PRIMARY_300).hex(),
+        E = (0, s._i)(null != n ? n : g),
+        v = (0, s.ho)(E, !1, h ? m : null);
+    t = null != f ? f : 0.3 > (0, s.Bd)(E) ? l.Z.unsafe_rawColors.PRIMARY_630.css : l.Z.unsafe_rawColors.WHITE_500.css;
+    let y = r / 8;
+    return (0, i.jsx)('div', {
         style: {
-            background: y,
-            width: i,
-            height: i,
-            borderRadius: i,
-            lineHeight: ''.concat(i, 'px')
+            background: v,
+            width: r,
+            height: r,
+            borderRadius: r,
+            lineHeight: ''.concat(r, 'px')
         },
-        className: h,
-        children: (0, a.jsx)(d.LinkIcon, {
+        className: _,
+        children: (0, i.jsx)(u.xPt, {
             size: 'custom',
-            color: n,
-            className: s()(p.linkIcon, _),
-            width: i - 2 * b,
-            height: i - 2 * b,
-            style: { margin: b }
+            color: t,
+            className: a()(d.linkIcon, p),
+            width: r - 2 * y,
+            height: r - 2 * y,
+            style: { margin: y }
         })
     });
 }

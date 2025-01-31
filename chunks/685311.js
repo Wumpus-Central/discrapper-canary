@@ -1,81 +1,78 @@
-n(47120);
-var i,
-    r,
-    s = n(200651),
-    l = n(192379),
-    o = n(120356),
-    a = n.n(o),
-    c = n(536285),
-    d = n(857458),
-    u = n(388905),
-    h = n(703656),
-    g = n(388032),
-    f = n(232186);
-((r = i || (i = {}))[(r.INITIAL = 0)] = 'INITIAL'), (r[(r.RPC_CONNECTED = 1)] = 'RPC_CONNECTED'), (r[(r.APP_OPENING = 2)] = 'APP_OPENING'), (r[(r.APP_OPENED = 3)] = 'APP_OPENED');
-t.Z = function (e) {
-    let { match: t, location: n, attemptDeepLink: i } = e,
-        [r, o] = l.useState(0);
-    l.useEffect(() => {
-        c.default.once('connected', () => {
-            o(1);
+n.d(t, { Z: () => _ }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    l = n(120356),
+    a = n.n(l),
+    o = n(536285),
+    s = n(857458),
+    c = n(388905),
+    d = n(703656),
+    u = n(388032),
+    h = n(232186);
+let _ = function (e) {
+    let { match: t, location: n, attemptDeepLink: l } = e,
+        [_, g] = r.useState(0);
+    r.useEffect(() => {
+        o.default.once('connected', () => {
+            g(1);
         }),
-            c.default.once('disconnected', () => {
-                (0, h.uL)((0, d.M)());
+            o.default.once('disconnected', () => {
+                (0, d.uL)((0, s.M)());
             }),
-            c.default.connect();
+            o.default.connect();
     }, []),
-        l.useEffect(() => {
-            if (0 !== r) return;
-            let e = setTimeout(() => (0, h.uL)((0, d.M)()), 3000);
+        r.useEffect(() => {
+            if (0 !== _) return;
+            let e = setTimeout(() => (0, d.uL)((0, s.M)()), 3000);
             return () => clearTimeout(e);
-        }, [r]);
-    let m = l.useCallback(
+        }, [_]);
+    let p = r.useCallback(
         async (e, t) => {
             try {
-                o(2), await i(e, t), o(3);
+                g(2), await l(e, t), g(3);
             } catch (e) {
                 console.error('Error opening deeplink', e);
             }
         },
-        [i]
+        [l]
     );
-    if ((0, h.DB)()) return null;
-    switch (r) {
+    if ((0, d.DB)()) return null;
+    switch (_) {
         case 1:
-            return (0, s.jsxs)(u.ZP, {
+            return (0, i.jsxs)(c.ZP, {
                 children: [
-                    (0, s.jsx)(u.Dx, {
-                        className: f.marginBottom8,
-                        children: g.intl.string(g.t.qllnGh)
+                    (0, i.jsx)(c.Dx, {
+                        className: h.marginBottom8,
+                        children: u.intl.string(u.t.qllnGh)
                     }),
-                    (0, s.jsx)(u.DK, { children: g.intl.string(g.t.SXCxyc) }),
-                    (0, s.jsx)(u.zx, {
-                        className: f.marginTop40,
-                        onClick: () => m(t, n),
-                        children: g.intl.string(g.t.UQvCf3)
+                    (0, i.jsx)(c.DK, { children: u.intl.string(u.t.SXCxyc) }),
+                    (0, i.jsx)(c.zx, {
+                        className: h.marginTop40,
+                        onClick: () => p(t, n),
+                        children: u.intl.string(u.t.UQvCf3)
                     }),
-                    (0, s.jsx)(u.zx, {
-                        className: a()(f.marginTop8, f.marginCenterHorz),
-                        color: u.zx.Colors.LINK,
-                        look: u.zx.Looks.LINK,
-                        onClick: () => (0, h.uL)((0, d.M)()),
-                        children: g.intl.string(g.t['2ixEBg'])
+                    (0, i.jsx)(c.zx, {
+                        className: a()(h.marginTop8, h.marginCenterHorz),
+                        color: c.zx.Colors.LINK,
+                        look: c.zx.Looks.LINK,
+                        onClick: () => (0, d.uL)((0, s.M)()),
+                        children: u.intl.string(u.t['2ixEBg'])
                     })
                 ]
             });
         case 0:
         case 2:
-            return (0, s.jsxs)(u.ZP, {
-                children: [(0, s.jsx)(u.Dx, { children: g.intl.string(g.t['Z+hCVV']) }), (0, s.jsx)(u.Hh, {})]
+            return (0, i.jsxs)(c.ZP, {
+                children: [(0, i.jsx)(c.Dx, { children: u.intl.string(u.t['Z+hCVV']) }), (0, i.jsx)(c.Hh, {})]
             });
         case 3:
-            return (0, s.jsxs)(u.ZP, {
+            return (0, i.jsxs)(c.ZP, {
                 children: [
-                    (0, s.jsx)(u.Dx, {
-                        className: f.marginBottom8,
-                        children: g.intl.string(g.t.csrAMD)
+                    (0, i.jsx)(c.Dx, {
+                        className: h.marginBottom8,
+                        children: u.intl.string(u.t.csrAMD)
                     }),
-                    (0, s.jsx)(u.DK, { children: g.intl.string(g.t.ghBJz8) })
+                    (0, i.jsx)(c.DK, { children: u.intl.string(u.t.ghBJz8) })
                 ]
             });
     }

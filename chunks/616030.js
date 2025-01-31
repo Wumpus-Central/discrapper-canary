@@ -1,70 +1,64 @@
-r.d(n, {
-    Bk: function () {
-        return c;
-    },
-    tK: function () {
-        return u;
-    },
-    zC: function () {
-        return l;
-    }
-});
-var i = r(47120);
-var a = r(200651);
-r(192379);
-var o = r(122890),
-    s = r(110818);
+n.d(t, {
+    Bk: () => l,
+    tK: () => o,
+    zC: () => s
+}),
+    n(47120);
+var i = n(200651);
+n(192379);
+var r = n(122890),
+    a = n(110818);
+function s(e) {
+    let { currentStep: t, purchaseState: n, className: s, pause: o } = e,
+        [l, u] = (0, r.z)({
+            purchaseState: n,
+            currentStep: t,
+            initialScene: a.NQ.Scenes.NORMAL,
+            purchaseScene: a.NQ.Scenes.SPEED_START,
+            errorScene: a.NQ.Scenes.NORMAL,
+            successScene: a.NQ.Scenes.FINISH
+        });
+    return (0, i.jsx)(a.NQ, {
+        className: s,
+        nextScene: l,
+        onScenePlay: (e) => u(a.NQ.getNextScene(e)),
+        pauseWhileUnfocused: !1,
+        pause: o
+    });
+}
+function o(e) {
+    let { currentStep: t, purchaseState: n, className: s, pause: o } = e,
+        [l, u] = (0, r.z)({
+            purchaseState: n,
+            currentStep: t,
+            initialScene: a.HC.Scenes.NORMAL,
+            purchaseScene: a.HC.Scenes.SPEED_START,
+            errorScene: a.HC.Scenes.NORMAL,
+            successScene: a.HC.Scenes.FINISH
+        });
+    return (0, i.jsx)(a.HC, {
+        className: s,
+        nextScene: l,
+        onScenePlay: (e) => u(a.HC.getNextScene(e)),
+        pauseWhileUnfocused: !1,
+        pause: o
+    });
+}
 function l(e) {
-    let { currentStep: n, purchaseState: r, className: i, pause: l } = e,
-        [u, c] = (0, o.z)({
-            purchaseState: r,
-            currentStep: n,
-            initialScene: s.NQ.Scenes.NORMAL,
-            purchaseScene: s.NQ.Scenes.SPEED_START,
-            errorScene: s.NQ.Scenes.NORMAL,
-            successScene: s.NQ.Scenes.FINISH
+    let { currentStep: t, purchaseState: n, className: s, pause: o } = e,
+        [l, u] = (0, r.z)({
+            purchaseState: n,
+            currentStep: t,
+            initialScene: a.Db.Scenes.IDLE_ENTRY,
+            purchaseScene: a.Db.Scenes.BOOST_START,
+            errorScene: a.Db.Scenes.ERROR,
+            successScene: a.Db.Scenes.BOOST_END
         });
-    return (0, a.jsx)(s.NQ, {
-        className: i,
-        nextScene: u,
-        onScenePlay: (e) => c(s.NQ.getNextScene(e)),
+    return (0, i.jsx)(a.Db, {
+        className: s,
+        nextScene: l,
+        onScenePlay: (e) => u(a.Db.getNextScene(e)),
         pauseWhileUnfocused: !1,
-        pause: l
-    });
-}
-function u(e) {
-    let { currentStep: n, purchaseState: r, className: i, pause: l } = e,
-        [u, c] = (0, o.z)({
-            purchaseState: r,
-            currentStep: n,
-            initialScene: s.HC.Scenes.NORMAL,
-            purchaseScene: s.HC.Scenes.SPEED_START,
-            errorScene: s.HC.Scenes.NORMAL,
-            successScene: s.HC.Scenes.FINISH
-        });
-    return (0, a.jsx)(s.HC, {
-        className: i,
-        nextScene: u,
-        onScenePlay: (e) => c(s.HC.getNextScene(e)),
-        pauseWhileUnfocused: !1,
-        pause: l
-    });
-}
-function c(e) {
-    let { currentStep: n, purchaseState: r, className: i, pause: l } = e,
-        [u, c] = (0, o.z)({
-            purchaseState: r,
-            currentStep: n,
-            initialScene: s.Db.Scenes.IDLE_ENTRY,
-            purchaseScene: s.Db.Scenes.BOOST_START,
-            errorScene: s.Db.Scenes.ERROR,
-            successScene: s.Db.Scenes.BOOST_END
-        });
-    return (0, a.jsx)(s.Db, {
-        className: i,
-        nextScene: u,
-        onScenePlay: (e) => c(s.Db.getNextScene(e)),
-        pauseWhileUnfocused: !1,
-        pause: l
+        pause: o
     });
 }

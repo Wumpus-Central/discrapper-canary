@@ -1,342 +1,338 @@
-r.d(n, {
-    _: function () {
-        return o;
-    }
-});
-var i = r(479446),
-    a = r(474936);
-let o = (e, n) => {
-    let o;
+n.d(t, { _: () => a });
+var i = n(479446),
+    r = n(474936);
+let a = (e, t) => {
+    let a;
     switch (e) {
-        case a.Cj.SNOWGLOBE:
-            o = () =>
-                r
+        case r.Cj.SNOWGLOBE:
+            a = () =>
+                n
                     .e('20268')
-                    .then(r.t.bind(r, 22952, 19))
+                    .then(n.t.bind(n, 22952, 19))
                     .then((e) => {
-                        let { default: n } = e;
-                        return n;
+                        let { default: t } = e;
+                        return t;
                     });
             break;
-        case a.Cj.BOX:
-            o = () =>
-                r
+        case r.Cj.BOX:
+            a = () =>
+                n
                     .e('37372')
-                    .then(r.t.bind(r, 459274, 19))
+                    .then(n.t.bind(n, 459274, 19))
                     .then((e) => {
-                        let { default: n } = e;
-                        return n;
+                        let { default: t } = e;
+                        return t;
                     });
             break;
-        case a.Cj.CUP:
-            o = () =>
-                r
+        case r.Cj.CUP:
+            a = () =>
+                n
                     .e('37066')
-                    .then(r.t.bind(r, 990632, 19))
+                    .then(n.t.bind(n, 990632, 19))
                     .then((e) => {
-                        let { default: n } = e;
-                        return n;
+                        let { default: t } = e;
+                        return t;
                     });
             break;
-        case a.Cj.STANDARD_BOX:
-            switch (n) {
+        case r.Cj.STANDARD_BOX:
+            switch (t) {
                 case i.SR.IDLE:
-                    o = () =>
-                        r
+                    a = () =>
+                        n
                             .e('60592')
-                            .then(r.t.bind(r, 433166, 19))
+                            .then(n.t.bind(n, 433166, 19))
                             .then((e) => {
-                                let { default: n } = e;
-                                return n;
+                                let { default: t } = e;
+                                return t;
                             });
                     break;
                 case i.SR.LOOP:
-                    o = () =>
-                        r
+                    a = () =>
+                        n
                             .e('81358')
-                            .then(r.t.bind(r, 145894, 19))
+                            .then(n.t.bind(n, 145894, 19))
                             .then((e) => {
-                                let { default: n } = e;
-                                return n;
+                                let { default: t } = e;
+                                return t;
                             });
                     break;
                 default:
-                    o = () =>
-                        r
+                    a = () =>
+                        n
                             .e('46468')
-                            .then(r.t.bind(r, 70303, 19))
+                            .then(n.t.bind(n, 70303, 19))
                             .then((e) => {
-                                let { default: n } = e;
-                                return n;
+                                let { default: t } = e;
+                                return t;
                             });
             }
             break;
-        case a.Cj.CAKE:
-            switch (n) {
+        case r.Cj.CAKE:
+            switch (t) {
                 case i.SR.IDLE:
-                    o = () =>
-                        r
+                    a = () =>
+                        n
                             .e('5996')
-                            .then(r.t.bind(r, 889601, 19))
+                            .then(n.t.bind(n, 889601, 19))
                             .then((e) => {
-                                let { default: n } = e;
-                                return n;
+                                let { default: t } = e;
+                                return t;
                             });
                     break;
                 case i.SR.LOOP:
-                    o = () =>
-                        r
+                    a = () =>
+                        n
                             .e('71378')
-                            .then(r.t.bind(r, 445637, 19))
+                            .then(n.t.bind(n, 445637, 19))
                             .then((e) => {
-                                let { default: n } = e;
-                                return n;
+                                let { default: t } = e;
+                                return t;
                             });
                     break;
                 default:
-                    o = () =>
-                        r
+                    a = () =>
+                        n
                             .e('69806')
-                            .then(r.t.bind(r, 549883, 19))
+                            .then(n.t.bind(n, 549883, 19))
                             .then((e) => {
-                                let { default: n } = e;
-                                return n;
+                                let { default: t } = e;
+                                return t;
                             });
             }
             break;
-        case a.Cj.CHEST:
-            switch (n) {
+        case r.Cj.CHEST:
+            switch (t) {
                 case i.SR.IDLE:
-                    o = () =>
-                        r
+                    a = () =>
+                        n
                             .e('38506')
-                            .then(r.t.bind(r, 449445, 19))
+                            .then(n.t.bind(n, 449445, 19))
                             .then((e) => {
-                                let { default: n } = e;
-                                return n;
+                                let { default: t } = e;
+                                return t;
                             });
                     break;
                 case i.SR.LOOP:
-                    o = () =>
-                        r
+                    a = () =>
+                        n
                             .e('31085')
-                            .then(r.t.bind(r, 837312, 19))
+                            .then(n.t.bind(n, 837312, 19))
                             .then((e) => {
-                                let { default: n } = e;
-                                return n;
+                                let { default: t } = e;
+                                return t;
                             });
                     break;
                 default:
-                    o = () =>
-                        r
+                    a = () =>
+                        n
                             .e('40331')
-                            .then(r.t.bind(r, 669711, 19))
+                            .then(n.t.bind(n, 669711, 19))
                             .then((e) => {
-                                let { default: n } = e;
-                                return n;
+                                let { default: t } = e;
+                                return t;
                             });
             }
             break;
-        case a.Cj.COFFEE:
-            switch (n) {
+        case r.Cj.COFFEE:
+            switch (t) {
                 case i.SR.IDLE:
-                    o = () =>
-                        r
+                    a = () =>
+                        n
                             .e('23847')
-                            .then(r.t.bind(r, 482293, 19))
+                            .then(n.t.bind(n, 482293, 19))
                             .then((e) => {
-                                let { default: n } = e;
-                                return n;
+                                let { default: t } = e;
+                                return t;
                             });
                     break;
                 case i.SR.LOOP:
-                    o = () =>
-                        r
+                    a = () =>
+                        n
                             .e('93554')
-                            .then(r.t.bind(r, 732573, 19))
+                            .then(n.t.bind(n, 732573, 19))
                             .then((e) => {
-                                let { default: n } = e;
-                                return n;
+                                let { default: t } = e;
+                                return t;
                             });
                     break;
                 default:
-                    o = () =>
-                        r
+                    a = () =>
+                        n
                             .e('71244')
-                            .then(r.t.bind(r, 398161, 19))
+                            .then(n.t.bind(n, 398161, 19))
                             .then((e) => {
-                                let { default: n } = e;
-                                return n;
+                                let { default: t } = e;
+                                return t;
                             });
             }
             break;
-        case a.Cj.SEASONAL_STANDARD_BOX:
-            switch (n) {
+        case r.Cj.SEASONAL_STANDARD_BOX:
+            switch (t) {
                 case i.SR.IDLE:
-                    o = () =>
-                        r
+                    a = () =>
+                        n
                             .e('20196')
-                            .then(r.t.bind(r, 862977, 19))
+                            .then(n.t.bind(n, 862977, 19))
                             .then((e) => {
-                                let { default: n } = e;
-                                return n;
+                                let { default: t } = e;
+                                return t;
                             });
                     break;
                 case i.SR.LOOP:
-                    o = () =>
-                        r
+                    a = () =>
+                        n
                             .e('58903')
-                            .then(r.t.bind(r, 883984, 19))
+                            .then(n.t.bind(n, 883984, 19))
                             .then((e) => {
-                                let { default: n } = e;
-                                return n;
+                                let { default: t } = e;
+                                return t;
                             });
                     break;
                 default:
-                    o = () =>
-                        r
+                    a = () =>
+                        n
                             .e('62065')
-                            .then(r.t.bind(r, 402483, 19))
+                            .then(n.t.bind(n, 402483, 19))
                             .then((e) => {
-                                let { default: n } = e;
-                                return n;
+                                let { default: t } = e;
+                                return t;
                             });
             }
             break;
-        case a.Cj.SEASONAL_CAKE:
-            switch (n) {
+        case r.Cj.SEASONAL_CAKE:
+            switch (t) {
                 case i.SR.IDLE:
-                    o = () =>
-                        r
+                    a = () =>
+                        n
                             .e('22101')
-                            .then(r.t.bind(r, 953256, 19))
+                            .then(n.t.bind(n, 953256, 19))
                             .then((e) => {
-                                let { default: n } = e;
-                                return n;
+                                let { default: t } = e;
+                                return t;
                             });
                     break;
                 case i.SR.LOOP:
-                    o = () =>
-                        r
+                    a = () =>
+                        n
                             .e('63007')
-                            .then(r.t.bind(r, 320152, 19))
+                            .then(n.t.bind(n, 320152, 19))
                             .then((e) => {
-                                let { default: n } = e;
-                                return n;
+                                let { default: t } = e;
+                                return t;
                             });
                     break;
                 default:
-                    o = () =>
-                        r
+                    a = () =>
+                        n
                             .e('68822')
-                            .then(r.t.bind(r, 721670, 19))
+                            .then(n.t.bind(n, 721670, 19))
                             .then((e) => {
-                                let { default: n } = e;
-                                return n;
+                                let { default: t } = e;
+                                return t;
                             });
             }
             break;
-        case a.Cj.SEASONAL_CHEST:
-            switch (n) {
+        case r.Cj.SEASONAL_CHEST:
+            switch (t) {
                 case i.SR.IDLE:
-                    o = () =>
-                        r
+                    a = () =>
+                        n
                             .e('97674')
-                            .then(r.t.bind(r, 897198, 19))
+                            .then(n.t.bind(n, 897198, 19))
                             .then((e) => {
-                                let { default: n } = e;
-                                return n;
+                                let { default: t } = e;
+                                return t;
                             });
                     break;
                 case i.SR.LOOP:
-                    o = () =>
-                        r
+                    a = () =>
+                        n
                             .e('37357')
-                            .then(r.t.bind(r, 967705, 19))
+                            .then(n.t.bind(n, 967705, 19))
                             .then((e) => {
-                                let { default: n } = e;
-                                return n;
+                                let { default: t } = e;
+                                return t;
                             });
                     break;
                 default:
-                    o = () =>
-                        r
+                    a = () =>
+                        n
                             .e('72637')
-                            .then(r.t.bind(r, 209128, 19))
+                            .then(n.t.bind(n, 209128, 19))
                             .then((e) => {
-                                let { default: n } = e;
-                                return n;
+                                let { default: t } = e;
+                                return t;
                             });
             }
             break;
-        case a.Cj.SEASONAL_COFFEE:
-            switch (n) {
+        case r.Cj.SEASONAL_COFFEE:
+            switch (t) {
                 case i.SR.IDLE:
-                    o = () =>
-                        r
+                    a = () =>
+                        n
                             .e('83646')
-                            .then(r.t.bind(r, 804732, 19))
+                            .then(n.t.bind(n, 804732, 19))
                             .then((e) => {
-                                let { default: n } = e;
-                                return n;
+                                let { default: t } = e;
+                                return t;
                             });
                     break;
                 case i.SR.LOOP:
-                    o = () =>
-                        r
+                    a = () =>
+                        n
                             .e('92695')
-                            .then(r.t.bind(r, 702411, 19))
+                            .then(n.t.bind(n, 702411, 19))
                             .then((e) => {
-                                let { default: n } = e;
-                                return n;
+                                let { default: t } = e;
+                                return t;
                             });
                     break;
                 default:
-                    o = () =>
-                        r
+                    a = () =>
+                        n
                             .e('12112')
-                            .then(r.t.bind(r, 335878, 19))
+                            .then(n.t.bind(n, 335878, 19))
                             .then((e) => {
-                                let { default: n } = e;
-                                return n;
+                                let { default: t } = e;
+                                return t;
                             });
             }
             break;
-        case a.Cj.NITROWEEN_STANDARD:
-            switch (n) {
+        case r.Cj.NITROWEEN_STANDARD:
+            switch (t) {
                 case i.SR.IDLE:
-                    o = () =>
-                        r
+                    a = () =>
+                        n
                             .e('63401')
-                            .then(r.t.bind(r, 972224, 19))
+                            .then(n.t.bind(n, 972224, 19))
                             .then((e) => {
-                                let { default: n } = e;
-                                return n;
+                                let { default: t } = e;
+                                return t;
                             });
                     break;
                 case i.SR.LOOP:
-                    o = () =>
-                        r
+                    a = () =>
+                        n
                             .e('63401')
-                            .then(r.t.bind(r, 972224, 19))
+                            .then(n.t.bind(n, 972224, 19))
                             .then((e) => {
-                                let { default: n } = e;
-                                return n;
+                                let { default: t } = e;
+                                return t;
                             });
                     break;
                 default:
-                    o = () =>
-                        r
+                    a = () =>
+                        n
                             .e('61365')
-                            .then(r.t.bind(r, 279858, 19))
+                            .then(n.t.bind(n, 279858, 19))
                             .then((e) => {
-                                let { default: n } = e;
-                                return n;
+                                let { default: t } = e;
+                                return t;
                             });
             }
             break;
         default:
-            o = () => Promise.resolve('Error: Invalid giftStyle');
+            a = () => Promise.resolve('Error: Invalid giftStyle');
     }
-    return o;
+    return a;
 };

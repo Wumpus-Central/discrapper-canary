@@ -1,26 +1,14 @@
-r.d(n, {
-    T: function () {
-        return o;
-    },
-    _f: function () {
-        return c;
-    },
-    aq: function () {
-        return u;
-    },
-    m1: function () {
-        return s;
-    },
-    nS: function () {
-        return l;
-    },
-    xN: function () {
-        return d;
-    }
+n.d(t, {
+    T: () => a,
+    _f: () => u,
+    aq: () => l,
+    m1: () => s,
+    nS: () => o,
+    xN: () => c
 });
-var i = r(818083),
-    a = r(987338);
-let o = (0, i.B)({
+var i = n(818083),
+    r = n(987338);
+let a = (0, i.B)({
         kind: 'user',
         id: '2023-11_app_launcher_desktop',
         label: 'App Launcher - Desktop',
@@ -60,7 +48,7 @@ let o = (0, i.B)({
             }
         ]
     }),
-    l = (0, i.B)({
+    o = (0, i.B)({
         kind: 'user',
         id: '2024-07_open_platform_app_launcher',
         label: 'Open Platform App Launcher',
@@ -73,11 +61,11 @@ let o = (0, i.B)({
             }
         ]
     }),
-    u = (0, i.B)({
+    l = (0, i.B)({
         kind: 'user',
         id: '2024-08_open_platform_app_launcher_holdout',
         label: 'Open Platform App Launcher Holdout',
-        commonTriggerPoint: a.$P.VOICE_CALL,
+        commonTriggerPoint: r.$P.VOICE_CALL,
         defaultConfig: { clickOnHomeActivityOpensAppDetail: !0 },
         treatments: [
             {
@@ -92,7 +80,7 @@ let o = (0, i.B)({
             }
         ]
     }),
-    c = (0, i.B)({
+    u = (0, i.B)({
         kind: 'user',
         id: '2024-09_user_app_install_education',
         label: 'User App Install Education Experiment',
@@ -100,7 +88,7 @@ let o = (0, i.B)({
             enabled: !1,
             showsTooltip: !1
         },
-        commonTriggerPoint: a.$P.CONNECTION_OPEN,
+        commonTriggerPoint: r.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,
@@ -120,12 +108,12 @@ let o = (0, i.B)({
             }
         ]
     }),
-    d = (0, i.B)({
+    c = (0, i.B)({
         kind: 'user',
         id: '2024-10_weighted_sample_activity_shelf',
         label: 'Weighted Sample Activity Shelf',
         defaultConfig: { enabled: !1 },
-        commonTriggerPoint: a.$P.VOICE_CALL,
+        commonTriggerPoint: r.$P.VOICE_CALL,
         treatments: [
             {
                 id: 1,

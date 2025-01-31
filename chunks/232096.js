@@ -1,10 +1,5 @@
-r.d(n, {
-    Z: function () {
-        return s;
-    }
-});
-var i = r(47120);
-let a = [
+n.d(t, { Z: () => a }), n(47120);
+let i = [
         ['position', 'absolute'],
         ['top', '-100px'],
         ['left', '-100px'],
@@ -12,20 +7,20 @@ let a = [
         ['height', '100px'],
         ['overflow', 'scroll']
     ],
-    o = [
+    r = [
         ['width', '200px'],
         ['height', '200px']
     ];
-function s() {
+function a() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : '',
-        n = document.createElement('div'),
-        r = document.createElement('div');
-    for (let [e, r] of a) n.style[e] = r;
-    for (let [e, n] of o) r.style[e] = n;
-    n.appendChild(r), document.body.appendChild(n), (n.className = e);
-    let i = {
-        width: n.offsetWidth - n.clientWidth,
-        height: n.offsetHeight - n.clientHeight
+        t = document.createElement('div'),
+        n = document.createElement('div');
+    for (let [e, n] of i) t.style[e] = n;
+    for (let [e, t] of r) n.style[e] = t;
+    t.appendChild(n), document.body.appendChild(t), (t.className = e);
+    let a = {
+        width: t.offsetWidth - t.clientWidth,
+        height: t.offsetHeight - t.clientHeight
     };
-    return document.body.removeChild(n), i;
+    return document.body.removeChild(t), a;
 }

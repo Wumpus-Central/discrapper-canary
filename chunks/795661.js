@@ -1,14 +1,15 @@
-e.exports = {
-    container: 'container_d03bba',
-    icon: 'icon_d03bba',
-    size56: 'size56_d03bba',
-    avatarContainer: 'avatarContainer_d03bba',
-    avatarContainerMasked: 'avatarContainerMasked_d03bba',
-    clickableAvatar: 'clickableAvatar_d03bba',
-    emptyUser: 'emptyUser_d03bba',
-    size32: 'size32_d03bba',
-    size24: 'size24_d03bba',
-    size16: 'size16_d03bba',
-    avatar: 'avatar_d03bba',
-    moreUsers: 'moreUsers_d03bba'
+var i = {
+    container: 'container__183c2',
+    icon: 'icon__183c2',
+    size56: 'size56__183c2',
+    avatarContainer: 'avatarContainer__183c2',
+    avatarContainerMasked: 'avatarContainerMasked__183c2',
+    clickableAvatar: 'clickableAvatar__183c2',
+    emptyUser: 'emptyUser__183c2',
+    size32: 'size32__183c2',
+    size24: 'size24__183c2',
+    size16: 'size16__183c2',
+    avatar: 'avatar__183c2',
+    moreUsers: 'moreUsers__183c2'
 };
+e.exports = i;

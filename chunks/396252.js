@@ -1,73 +1,69 @@
-n.d(t, {
-    Z: function () {
-        return g;
-    }
-});
+n.d(t, { Z: () => f });
 var i = n(200651);
 n(192379);
-var r = n(120356),
-    l = n.n(r),
-    a = n(442837),
-    o = n(481060),
-    s = n(385499),
+var l = n(120356),
+    a = n.n(l),
+    r = n(442837),
+    s = n(481060),
+    o = n(385499),
     c = n(430824),
-    u = n(739566),
-    d = n(464891),
+    d = n(739566),
+    u = n(464891),
     m = n(83561),
     h = n(834129),
-    f = n(674563),
+    _ = n(674563),
     p = n(388032),
-    _ = n(403498);
-function g(e) {
+    g = n(403498);
+function f(e) {
     var t;
-    let { message: n, compact: r, usernameHook: g, channel: E } = e,
-        C = (0, a.e7)([c.Z], () => c.Z.getGuild(E.guild_id)),
-        I = (0, u.ZP)(n),
-        x = g(I),
+    let { message: n, compact: l, usernameHook: f, channel: x } = e,
+        E = (0, r.e7)([c.Z], () => c.Z.getGuild(x.guild_id)),
+        C = (0, d.ZP)(n),
+        v = f(C),
         {
-            avatarSrc: N,
-            eventHandlers: { onMouseEnter: v, onMouseLeave: T }
+            avatarSrc: I,
+            eventHandlers: { onMouseEnter: N, onMouseLeave: S }
         } = (0, m.m)(!0);
     return (0, i.jsx)('div', {
-        onMouseEnter: v,
-        onMouseLeave: T,
+        onMouseEnter: N,
+        onMouseLeave: S,
         children: (0, i.jsx)(h.Z, {
-            className: l()(_.mainContainer, { [_.compact]: r }),
-            iconNode: r ? null : (0, i.jsx)(m.S, { src: N }),
-            iconContainerClassName: _.iconContainer,
-            compact: r,
+            className: a()(g.mainContainer, { [g.compact]: l }),
+            iconNode: l ? null : (0, i.jsx)(m.S, { src: I }),
+            iconContainerClassName: g.iconContainer,
+            compact: l,
             children: (0, i.jsxs)('div', {
-                className: l()(_.content, { [_.compact]: r }),
+                className: a()(g.content, { [g.compact]: l }),
                 children: [
-                    (0, i.jsx)(d.nD, {
+                    (0, i.jsx)(u.nD, {
                         message: n,
-                        messageClassname: _.spanCorrection,
-                        className: l()(_.usernameContainer, _.spanCorrection, { [_.compact]: r }),
+                        messageClassname: g.spanCorrection,
+                        className: a()(g.usernameContainer, g.spanCorrection, { [g.compact]: l }),
                         username: (0, i.jsxs)('div', {
-                            className: _.spanCorrection,
+                            className: g.spanCorrection,
                             children: [
-                                (0, i.jsx)(o.Text, {
+                                (0, i.jsx)(s.Text, {
                                     variant: 'text-md/normal',
                                     color: 'text-brand',
                                     tag: 'span',
-                                    className: _.username,
+                                    className: g.username,
                                     children: p.intl.string(p.t.hG1StL)
                                 }),
-                                (0, i.jsx)(s.Z, {
-                                    type: f.Hb.SYSTEM_DM,
-                                    className: _.systemTag
+                                (0, i.jsx)(o.Z, {
+                                    type: _.Hb.SYSTEM_DM,
+                                    className: g.systemTag
                                 })
                             ]
                         }),
-                        compact: r,
+                        compact: l,
                         showTimestamp: !0
                     }),
                     (0, i.jsx)('div', {
-                        className: l()(_.__invalid_messageContent, { [_.compact]: r }),
+                        className: a()(g.__invalid_messageContent, { [g.compact]: l }),
                         children: p.intl.format(p.t.W0UBIy, {
-                            username: I.nick,
-                            usernameHook: x,
-                            guildName: null !== (t = null == C ? void 0 : C.name) && void 0 !== t ? t : ''
+                            username: C.nick,
+                            usernameHook: v,
+                            guildName: null !== (t = null == E ? void 0 : E.name) && void 0 !== t ? t : ''
                         })
                     })
                 ]

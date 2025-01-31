@@ -1,109 +1,100 @@
-a.r(t),
-    a.d(t, {
-        DECO_SKU_ID: function () {
-            return h;
-        },
-        default: function () {
-            return D;
-        }
-    });
-var o = a(200651);
-a(192379);
-var r = a(990547),
-    n = a(442837),
-    s = a(481060),
-    i = a(37234),
-    d = a(100527),
-    c = a(906732),
-    l = a(213609),
-    u = a(204418),
-    m = a(1585),
-    v = a(223143),
-    _ = a(313201),
-    x = a(300284),
-    p = a(158776),
-    f = a(594174),
-    I = a(741245),
-    T = a(474936),
-    C = a(388032),
-    M = a(751664);
-let h = '1225876188074082374';
-function j(e) {
-    let { user: t, deco: a } = e,
-        r = (0, n.e7)([p.Z], () => p.Z.getStatus(t.id));
-    return (0, o.jsxs)('div', {
-        className: M.avatarBackground,
+e.d(t, { default: () => C });
+var r = e(200651);
+e(192379);
+var s = e(990547),
+    o = e(442837),
+    i = e(481060),
+    n = e(37234),
+    c = e(100527),
+    d = e(906732),
+    l = e(213609),
+    _ = e(204418),
+    u = e(1585),
+    m = e(223143),
+    v = e(313201),
+    x = e(300284),
+    p = e(158776),
+    T = e(594174),
+    f = e(741245),
+    I = e(474936),
+    k = e(388032),
+    h = e(751664);
+function j(a) {
+    let { user: t, deco: e } = a,
+        s = (0, o.e7)([p.Z], () => p.Z.getStatus(t.id));
+    return (0, r.jsxs)('div', {
+        className: h.avatarBackground,
         children: [
-            (0, o.jsx)(u.Z, {
+            (0, r.jsx)(_.Z, {
                 user: t,
                 guildId: void 0,
-                avatarDecorationOverride: a,
-                status: r,
-                className: M.avatar
+                avatarDecorationOverride: e,
+                status: s,
+                className: h.avatar
             }),
-            (0, o.jsx)('div', { className: M.rect }),
-            (0, o.jsx)('div', { className: M.rect }),
-            (0, o.jsx)('div', { className: M.bottomOverlay })
+            (0, r.jsx)('div', { className: h.rect }),
+            (0, r.jsx)('div', { className: h.rect }),
+            (0, r.jsx)('div', { className: h.bottomOverlay })
         ]
     });
 }
-function D(e) {
+function C(a) {
     var t;
-    let { transitionState: a, onClose: u } = e,
-        p = (0, _.Dt)(),
-        { theme: D } = (0, s.useThemeContext)(),
-        N = (0, n.e7)([f.default], () => f.default.getCurrentUser()),
-        { purchases: y } = (0, v.c7)(),
-        A = null === (t = y.get(h)) || void 0 === t ? void 0 : t.items,
-        k = void 0 !== A ? A[0] : void 0,
-        { analyticsLocations: E } = (0, c.ZP)(d.Z.PREMIUM_SUBSCRIPTION_APRIL_CAMPAIGN_MODAL),
-        b = (0, x.Z)({ analyticsLocations: E });
+    let { transitionState: e, onClose: _ } = a,
+        p = (0, v.Dt)(),
+        { theme: C } = (0, i.TCT)(),
+        N = (0, o.e7)([T.default], () => T.default.getCurrentUser()),
+        { purchases: y } = (0, m.c7)(),
+        A = null === (t = y.get('1225876188074082374')) || void 0 === t ? void 0 : t.items,
+        M = void 0 !== A ? A[0] : void 0,
+        { analyticsLocations: D } = (0, d.ZP)(c.Z.PREMIUM_SUBSCRIPTION_APRIL_CAMPAIGN_MODAL),
+        b = (0, x.Z)({ analyticsLocations: D });
     return (
         (0, l.Z)({
-            type: r.ImpressionTypes.MODAL,
-            name: r.ImpressionNames.APRIL_PREMIUM_MARKETING_DECO_CLAIMED_MODAL,
-            properties: { location_stack: E }
+            type: s.ImpressionTypes.MODAL,
+            name: s.ImpressionNames.APRIL_PREMIUM_MARKETING_DECO_CLAIMED_MODAL,
+            properties: { location_stack: D }
         }),
-        (0, o.jsxs)(s.ModalRoot, {
-            transitionState: a,
+        (0, r.jsxs)(i.Y0X, {
+            transitionState: e,
             'aria-labelledby': p,
-            className: M.container,
+            className: h.container,
             children: [
                 void 0 !== N &&
-                    (0, o.jsx)(j, {
+                    (0, r.jsx)(j, {
                         user: N,
-                        deco: k
+                        deco: M
                     }),
-                (0, o.jsxs)(s.ModalContent, {
-                    className: M.content,
+                (0, r.jsxs)(i.hzk, {
+                    className: h.content,
                     children: [
-                        (0, o.jsx)(I.C, {
-                            theme: D,
-                            premiumType: T.p9.TIER_2,
-                            type: I.C.Types.PREMIUM_ACTIVATED
+                        (0, r.jsx)(f.C, {
+                            theme: C,
+                            premiumType: I.p9.TIER_2,
+                            type: f.C.Types.PREMIUM_ACTIVATED
                         }),
-                        (0, o.jsx)(s.Text, {
+                        (0, r.jsx)(i.Text, {
                             variant: 'text-md/medium',
                             color: 'text-normal',
-                            className: M.bodyText,
-                            children: C.intl.format(C.t['9juoTE'], {})
+                            className: h.bodyText,
+                            children: k.intl.format(k.t['9juoTE'], {})
                         })
                     ]
                 }),
-                (0, o.jsx)(s.ModalFooter, {
-                    children: (0, o.jsx)(s.Button, {
-                        look: s.Button.Looks.FILLED,
-                        color: s.Button.Colors.BRAND,
+                (0, r.jsx)(i.mzw, {
+                    children: (0, r.jsx)(i.zxk, {
+                        look: i.zxk.Looks.FILLED,
+                        color: i.zxk.Colors.BRAND,
                         onClick: () => {
-                            u(),
-                                (0, i.xf)(),
+                            _(),
+                                (0, n.xf)(),
                                 b(),
-                                (0, m.ps)({
-                                    initialSelectedDecoration: k,
-                                    analyticsLocations: E
+                                (0, u.ps)({
+                                    initialSelectedDecoration: M,
+                                    analyticsLocations: D
                                 });
                         },
-                        children: C.intl.string(C.t['Tna/TU'])
+                        children: k.intl.string(k.t['Tna/TU'])
                     })
                 })
             ]

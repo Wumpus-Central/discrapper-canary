@@ -1,16 +1,8 @@
 n.d(t, {
-    GG: function () {
-        return a;
-    },
-    R2: function () {
-        return s;
-    },
-    h7: function () {
-        return l;
-    },
-    rh: function () {
-        return r;
-    }
+    GG: () => r,
+    R2: () => s,
+    h7: () => l,
+    rh: () => a
 });
 var i = n(570140);
 function l(e, t, n) {
@@ -26,13 +18,13 @@ function l(e, t, n) {
         }, 0);
     });
 }
-function r(e) {
+function a(e) {
     i.Z.dispatch({
         type: 'ACTIVITY_INVITE_MODAL_QUERY',
         query: e
     });
 }
-function a(e) {
+function r(e) {
     i.Z.dispatch({
         type: 'ACTIVITY_INVITE_MODAL_SEND',
         channelId: e

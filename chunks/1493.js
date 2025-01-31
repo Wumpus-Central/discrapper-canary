@@ -1,89 +1,83 @@
-n.r(e),
-    n.d(e, {
-        default: function () {
-            return i;
-        }
-    }),
-    n(47120);
-var r = n(200651),
-    o = n(192379),
-    a = n(481060),
-    l = n(388032),
-    s = n(485553);
-function i(t) {
-    let { onConfirm: e, onClose: n, validationText: i, errorText: c, header: u, className: d, cancelText: x, confirmText: h, instructionText: p, transitionState: m, children: g } = t,
-        [j, C] = o.useState(''),
-        [f, N] = o.useState(null),
-        k =
-            o.Children.count(g) > 0
-                ? (0, r.jsx)(a.Card, {
-                      type: a.Card.Types.WARNING,
-                      className: s.card,
-                      children: (0, r.jsx)(a.Text, {
-                          className: s.warning,
+r.d(n, { default: () => o }), r(47120);
+var t = r(200651),
+    a = r(192379),
+    s = r(481060),
+    l = r(388032),
+    i = r(485553);
+function o(e) {
+    let { onConfirm: n, onClose: r, validationText: o, errorText: c, header: x, className: d, cancelText: u, confirmText: h, instructionText: p, transitionState: m, children: g } = e,
+        [j, k] = a.useState(''),
+        [b, f] = a.useState(null),
+        C =
+            a.Children.count(g) > 0
+                ? (0, t.jsx)(s.Zbd, {
+                      type: s.Zbd.Types.WARNING,
+                      className: i.card,
+                      children: (0, t.jsx)(s.Text, {
+                          className: i.warning,
                           variant: 'text-md/normal',
                           children: g
                       })
                   })
                 : null;
-    return (0, r.jsx)(a.ModalRoot, {
+    return (0, t.jsx)(s.Y0X, {
         transitionState: m,
         className: d,
-        children: (0, r.jsxs)('form', {
-            onSubmit: function (t) {
-                if ((t.preventDefault(), j.toLowerCase() !== i.toLowerCase())) {
-                    N(c);
+        children: (0, t.jsxs)('form', {
+            onSubmit: function (e) {
+                if ((e.preventDefault(), j.toLowerCase() !== o.toLowerCase())) {
+                    f(c);
                     return;
                 }
-                null == e || e(), n();
+                null == n || n(), r();
             },
             children: [
-                (0, r.jsx)(a.ModalHeader, {
+                (0, t.jsx)(s.xBx, {
                     separator: !1,
-                    children: (0, r.jsx)(a.Heading, {
+                    children: (0, t.jsx)(s.X6q, {
                         variant: 'heading-lg/semibold',
-                        children: u
+                        children: x
                     })
                 }),
-                (0, r.jsxs)(a.ModalContent, {
+                (0, t.jsxs)(s.hzk, {
                     children: [
-                        k,
-                        (0, r.jsxs)(a.FormItem, {
+                        C,
+                        (0, t.jsxs)(s.xJW, {
                             title: p,
-                            className: s.spacing,
+                            className: i.spacing,
                             children: [
-                                (0, r.jsx)(a.TextInput, {
+                                (0, t.jsx)(s.oil, {
                                     id: 'text-entry-confirm',
                                     type: 'text',
                                     value: j,
                                     autoComplete: 'off',
-                                    onChange: C,
+                                    onChange: k,
                                     autoFocus: !0
                                 }),
-                                null != f && '' !== f
-                                    ? (0, r.jsx)(a.Text, {
+                                null != b && '' !== b
+                                    ? (0, t.jsx)(s.Text, {
                                           color: 'text-danger',
                                           variant: 'text-xs/normal',
-                                          className: s.error,
-                                          children: f
+                                          className: i.error,
+                                          children: b
                                       })
                                     : null
                             ]
                         })
                     ]
                 }),
-                (0, r.jsxs)(a.ModalFooter, {
+                (0, t.jsxs)(s.mzw, {
                     children: [
-                        (0, r.jsx)(a.Button, {
+                        (0, t.jsx)(s.zxk, {
                             type: 'submit',
-                            color: a.Button.Colors.RED,
+                            color: s.zxk.Colors.RED,
                             children: null != h ? h : l.intl.string(l.t['cY+Ooa'])
                         }),
-                        (0, r.jsx)(a.Button, {
-                            onClick: n,
-                            look: a.Button.Looks.LINK,
-                            color: a.Button.Colors.PRIMARY,
-                            children: null != x ? x : l.intl.string(l.t['ETE/oK'])
+                        (0, t.jsx)(s.zxk, {
+                            onClick: r,
+                            look: s.zxk.Looks.LINK,
+                            color: s.zxk.Colors.PRIMARY,
+                            children: null != u ? u : l.intl.string(l.t['ETE/oK'])
                         })
                     ]
                 })

@@ -1,120 +1,115 @@
-n.d(t, {
-    Z: function () {
-        return H;
-    }
-}),
-    n(47120);
-var l = n(200651),
-    o = n(192379),
-    i = n(692547),
-    a = n(215569),
-    r = n(180035),
-    s = n(481060),
-    c = n(749210),
-    C = n(852860),
-    d = n(367907),
-    u = n(314897),
-    m = n(626135),
-    h = n(910693),
-    x = n(241559),
-    b = n(256003),
-    f = n(981631),
-    g = n(388032),
-    p = n(553575);
-function H(e) {
+l.d(t, { Z: () => _ }), l(47120);
+var n = l(200651),
+    a = l(192379),
+    i = l(692547),
+    o = l(215569),
+    s = l(180035),
+    r = l(481060),
+    c = l(749210),
+    C = l(852860),
+    d = l(367907),
+    u = l(314897),
+    m = l(626135),
+    h = l(910693),
+    x = l(241559),
+    g = l(256003),
+    H = l(981631),
+    b = l(388032),
+    p = l(553575);
+function _(e) {
     let { guildId: t } = e,
-        H = (0, x.xC)(t),
-        { selectedUserIds: j, clearSelection: v } = (0, b.Z)(t),
-        N = j.size > 0,
-        L = async (e, t, n, l) => {
+        _ = (0, x.xC)(t),
+        { selectedUserIds: j, clearSelection: f } = (0, g.Z)(t),
+        v = j.size > 0,
+        N = async (e, t, l, n) => {
             try {
-                let o = await c.Z.banMultipleUsers(e, t, n, l);
-                (0, s.showToast)((0, s.createToast)(g.intl.string(g.t.AsCe5O), s.ToastType.SUCCESS)),
-                    m.default.track(f.rMx.BULK_MODERATION_ACTION_COMPLETED, {
+                let a = await c.Z.banMultipleUsers(e, t, l, n);
+                (0, r.showToast)((0, r.createToast)(b.intl.string(b.t.AsCe5O), r.ToastType.SUCCESS)),
+                    m.default.track(H.rMx.BULK_MODERATION_ACTION_COMPLETED, {
                         ...(0, d.hH)(e),
                         action_type: h.jQ.BAN,
                         target_user_ids: [...j],
                         mod_user_id: u.default.getId(),
-                        successful_user_ids: o.body.banned_users,
+                        successful_user_ids: a.body.banned_users,
                         location
                     });
             } catch (e) {
-                (0, s.showToast)((0, s.createToast)(g.intl.string(g.t.mICAWV), s.ToastType.FAILURE));
+                (0, r.showToast)((0, r.createToast)(b.intl.string(b.t.mICAWV), r.ToastType.FAILURE));
             }
-            v();
+            f();
         },
-        I = o.useCallback(() => {
-            v();
-        }, [v]),
-        _ = (0, l.jsxs)('span', {
+        Z = a.useCallback(() => {
+            f();
+        }, [f]),
+        L = (0, n.jsxs)('span', {
             className: p.messageContainer,
             children: [
-                (0, l.jsx)(s.UserIcon, {
+                (0, n.jsx)(r.tBG, {
                     size: 'custom',
                     width: 24,
                     height: 24,
-                    color: (0, r.d)(i.Z.unsafe_rawColors.PRIMARY_500).hex()
+                    color: (0, s.d)(i.Z.unsafe_rawColors.PRIMARY_500).hex()
                 }),
-                (0, l.jsx)(s.Text, {
+                (0, n.jsx)(r.Text, {
                     variant: 'heading-md/bold',
                     color: 'text-normal',
-                    children: g.intl.format(g.t.TstoSU, { count: j.size })
+                    children: b.intl.format(b.t.TstoSU, { count: j.size })
                 }),
-                (0, l.jsx)(s.Button, {
-                    color: s.Button.Colors.LINK,
-                    look: s.Button.Looks.LINK,
-                    onClick: I,
+                (0, n.jsx)(r.zxk, {
+                    color: r.zxk.Colors.LINK,
+                    look: r.zxk.Looks.LINK,
+                    onClick: Z,
                     className: p.clearButton,
-                    children: g.intl.string(g.t.yW6ZdH)
+                    children: b.intl.string(b.t.yW6ZdH)
                 })
             ]
         }),
-        M = (0, l.jsxs)('span', {
+        R = (0, n.jsxs)('span', {
             className: p.buttonContainer,
             children: [
-                (0, l.jsx)(s.HammerIcon, {
+                (0, n.jsx)(r.pgN, {
                     size: 'custom',
                     color: 'currentColor',
                     width: 20,
                     height: 20
                 }),
-                (0, l.jsx)(s.Text, {
+                (0, n.jsx)(r.Text, {
                     variant: 'text-sm/semibold',
-                    children: g.intl.string(g.t['2a50fH'])
+                    children: b.intl.string(b.t['2a50fH'])
                 })
             ]
         });
-    return H
-        ? (0, l.jsx)(a.W, {
+    return _
+        ? (0, n.jsx)(o.W, {
               component: 'div',
               className: p.saveNoticeContainer,
               children:
-                  N &&
-                  (0, l.jsx)(s.SlideIn, {
-                      children: (0, l.jsx)(C.Z, {
+                  v &&
+                  (0, n.jsx)(r.oXn, {
+                      children: (0, n.jsx)(C.Z, {
                           onSave: () => {
-                              m.default.track(f.rMx.BULK_MODERATION_ACTION_STARTED, {
+                              m.default.track(H.rMx.BULK_MODERATION_ACTION_STARTED, {
                                   ...(0, d.hH)(t),
                                   action_type: h.jQ.BAN,
                                   target_user_ids: [...j],
                                   mod_user_id: u.default.getId(),
                                   location
                               }),
-                                  (0, s.openModalLazy)(async () => {
-                                      let { default: e } = await n.e('43350').then(n.bind(n, 98746));
-                                      return (n) =>
-                                          (0, l.jsx)(e, {
-                                              ...n,
+                                  (0, r.ZDy)(async () => {
+                                      let { default: e } = await l.e('43350').then(l.bind(l, 98746));
+                                      return (l) =>
+                                          (0, n.jsx)(e, {
+                                              ...l,
                                               guildId: t,
-                                              canBulkBan: H,
+                                              canBulkBan: _,
                                               userIds: j,
-                                              onBanMultiple: L
+                                              onBanMultiple: N
                                           });
                                   });
                           },
-                          onSaveText: M,
-                          onSaveButtonColor: s.ButtonColors.RED,
-                          message: _
+                          onSaveText: R,
+                          onSaveButtonColor: r.Ttl.RED,
+                          message: L
                       })
                   })
           })

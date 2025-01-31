@@ -7,9 +7,4 @@ function a(e) {
     }
     return null;
 }
-l.d(n, {
-    Z: function () {
-        return a;
-    }
-}),
-    l(47120);
+l.d(n, { Z: () => a }), l(47120);

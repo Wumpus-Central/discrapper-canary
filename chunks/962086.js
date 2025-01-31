@@ -1,118 +1,106 @@
-r.d(n, {
-    Zm: function () {
-        return b;
-    },
-    aq: function () {
-        return N;
-    },
-    iD: function () {
-        return y;
-    },
-    mL: function () {
-        return I;
-    },
-    og: function () {
-        return C;
-    },
-    zS: function () {
-        return A;
-    }
-});
-var i = r(47120);
-var a = r(570140),
-    o = r(367907),
-    s = r(703656),
-    l = r(592125),
-    u = r(984933),
-    c = r(271383),
-    d = r(430824),
-    f = r(496675),
-    p = r(944486),
-    h = r(9156),
-    _ = r(626135),
-    m = r(160404),
-    g = r(225675),
-    E = r(981631),
-    v = r(176505);
-function y(e, n) {
-    _.default.track(E.rMx.VIEW_AS_ROLES_SELECTED, {
-        num_roles: Object.keys(n.roles).length,
-        ...(0, o.hH)(e),
-        is_viewing_as_member: n.type === g.z.NEW_MEMBER
+n.d(t, {
+    Zm: () => v,
+    aq: () => A,
+    iD: () => E,
+    mL: () => y,
+    og: () => S,
+    zS: () => T
+}),
+    n(47120);
+var i = n(570140),
+    r = n(367907),
+    a = n(703656),
+    s = n(592125),
+    o = n(984933),
+    l = n(271383),
+    u = n(430824),
+    c = n(496675),
+    d = n(944486),
+    f = n(9156),
+    _ = n(626135),
+    p = n(160404),
+    h = n(225675),
+    m = n(981631),
+    g = n(176505);
+function E(e, t) {
+    _.default.track(m.rMx.VIEW_AS_ROLES_SELECTED, {
+        num_roles: Object.keys(t.roles).length,
+        ...(0, r.hH)(e),
+        is_viewing_as_member: t.type === h.z.NEW_MEMBER
     }),
-        a.Z.dispatch({
+        i.Z.dispatch({
             type: 'IMPERSONATE_UPDATE',
             guildId: e,
-            data: n
+            data: t
         }),
-        T(e);
+        I(e);
 }
-function b(e, n) {
-    let r = m.Z.getData(e);
-    null != r &&
-        r.type === n.type &&
-        (_.default.track(E.rMx.VIEW_AS_ROLES_SELECTED, {
-            num_roles: Object.keys(r.roles).length,
-            ...(0, o.hH)(e),
-            is_viewing_as_member: r.type === g.z.NEW_MEMBER
+function v(e, t) {
+    let n = p.Z.getData(e);
+    null != n &&
+        n.type === t.type &&
+        (_.default.track(m.rMx.VIEW_AS_ROLES_SELECTED, {
+            num_roles: Object.keys(n.roles).length,
+            ...(0, r.hH)(e),
+            is_viewing_as_member: n.type === h.z.NEW_MEMBER
         }),
-        a.Z.dispatch({
+        i.Z.dispatch({
             type: 'IMPERSONATE_UPDATE',
             guildId: e,
             data: {
-                ...r,
-                ...n
+                ...n,
+                ...t
             }
         }),
-        T(e));
+        I(e));
 }
-function I(e) {
-    a.Z.dispatch({
+function y(e) {
+    i.Z.dispatch({
         type: 'IMPERSONATE_STOP',
         guildId: e
     });
 }
-function T(e) {
-    let n = p.Z.getChannelId(e),
-        r = l.Z.getChannel(n);
-    if (!(null != n && (0, v.AB)(n)) && !f.Z.can(E.Plq.VIEW_CHANNEL, r)) {
-        let n = u.ZP.getDefaultChannel(e);
-        null != n && (0, s.uL)(E.Z5c.CHANNEL(e, n.id));
+function I(e) {
+    let t = d.Z.getChannelId(e),
+        n = s.Z.getChannel(t);
+    if (!(null != t && (0, g.AB)(t)) && !c.Z.can(m.Plq.VIEW_CHANNEL, n)) {
+        let t = o.ZP.getDefaultChannel(e);
+        null != t && (0, a.uL)(m.Z5c.CHANNEL(e, t.id));
     }
 }
-function S(e, n) {
-    let r = [...u.ZP.getSelectableChannelIds(e), ...u.ZP.getVocalChannelIds(e)],
-        i = Array.from(n);
-    u.ZP.addConditionalChangeListener(() => {
-        let n = c.ZP.getSelfMember(e);
-        if (null == n) return !1;
-        if (i.some((e) => !n.roles.includes(e))) return !0;
-        let a = [...u.ZP.getSelectableChannelIds(e), ...u.ZP.getVocalChannelIds(e)].filter((e) => !r.includes(e));
-        return a.length > 0 && A(e, a, []), !1;
+function b(e, t) {
+    let n = [...o.ZP.getSelectableChannelIds(e), ...o.ZP.getVocalChannelIds(e)],
+        i = Array.from(t);
+    o.ZP.addConditionalChangeListener(() => {
+        let t = l.ZP.getSelfMember(e);
+        if (null == t) return !1;
+        if (i.some((e) => !t.roles.includes(e))) return !0;
+        let r = [...o.ZP.getSelectableChannelIds(e), ...o.ZP.getVocalChannelIds(e)].filter((e) => !n.includes(e));
+        return r.length > 0 && T(e, r, []), !1;
     });
 }
-function A(e, n, r) {
-    let i = new Set(h.ZP.getOptedInChannels(e));
-    n.forEach((e) => i.add(e)),
-        r.forEach((e) => i.delete(e)),
-        b(e, {
-            type: g.z.NEW_MEMBER,
+function T(e, t, n) {
+    let i = new Set(f.ZP.getOptedInChannels(e));
+    t.forEach((e) => i.add(e)),
+        n.forEach((e) => i.delete(e)),
+        v(e, {
+            type: h.z.NEW_MEMBER,
             optInChannels: i
         });
 }
-function C(e, n) {
-    let r = d.Z.getRoles(e);
-    S(e, n);
+function S(e, t) {
+    let n = u.Z.getRoles(e);
+    b(e, t);
     let i = {};
-    n.forEach((e) => (i[e] = r[e])),
-        b(e, {
-            type: g.z.NEW_MEMBER,
+    t.forEach((e) => (i[e] = n[e])),
+        v(e, {
+            type: h.z.NEW_MEMBER,
             roles: i
         });
 }
-function N(e, n) {
-    b(e, {
-        type: g.z.NEW_MEMBER,
-        ...n
+function A(e, t) {
+    v(e, {
+        type: h.z.NEW_MEMBER,
+        ...t
     });
 }

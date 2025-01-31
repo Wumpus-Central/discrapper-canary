@@ -1,5 +1,6 @@
-e.exports = {
-    container: 'container_eb992c',
-    profileEffectShopPreview: 'profileEffectShopPreview_eb992c',
-    avatarDecorationPreview: 'avatarDecorationPreview_eb992c'
+var i = {
+    container: 'container__6d099',
+    profileEffectShopPreview: 'profileEffectShopPreview__6d099',
+    avatarDecorationPreview: 'avatarDecorationPreview__6d099'
 };
+e.exports = i;

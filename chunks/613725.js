@@ -1,13 +1,9 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-});
+n.d(t, { Z: () => f });
 var i = n(200651);
 n(192379);
 var l = n(232713),
-    r = n(442837),
-    a = n(481060),
+    a = n(442837),
+    r = n(481060),
     s = n(43267),
     o = n(565138),
     c = n(905423),
@@ -24,40 +20,40 @@ function f() {
                 channelId: n
             };
         }, l.X),
-        n = (0, r.e7)([u.Z], () => u.Z.getGuild(e)),
-        f = (0, r.e7)([d.Z], () => (null == n ? d.Z.getChannel(t) : null)),
-        g = (0, r.e7)([h.default], () => h.default.getCurrentUser()),
-        C = null != f ? (0, s.x)(f) : null,
-        x = null != g ? g.getAvatarURL(e, 80) : p.pK['0'],
-        v = (0, i.jsx)(a.Avatar, {
-            src: x,
+        n = (0, a.e7)([u.Z], () => u.Z.getGuild(e)),
+        f = (0, a.e7)([d.Z], () => (null == n ? d.Z.getChannel(t) : null)),
+        g = (0, a.e7)([h.default], () => h.default.getCurrentUser()),
+        _ = null != f ? (0, s.x)(f) : null,
+        C = null != g ? g.getAvatarURL(e, 80) : p.pK['0'],
+        x = (0, i.jsx)(r.qEK, {
+            src: C,
             'aria-hidden': !0,
-            size: a.AvatarSizes.SIZE_80,
+            size: r.EFr.SIZE_80,
             className: m.avatarSizeOverride
         }),
-        _ = null;
+        v = null;
     return (
-        (_ =
+        (v =
             null != n
                 ? (0, i.jsx)(o.Z, { guild: n })
-                : null != C
-                  ? (0, i.jsx)(a.Avatar, {
+                : null != _
+                  ? (0, i.jsx)(r.qEK, {
                         'aria-hidden': !0,
-                        src: C,
-                        size: a.AvatarSizes.SIZE_80,
+                        src: _,
+                        size: r.EFr.SIZE_80,
                         className: m.avatarSizeOverride
                     })
-                  : v),
+                  : x),
         (0, i.jsxs)('div', {
             className: m.container,
             children: [
                 (0, i.jsx)('div', {
                     className: m.personAvatar,
-                    children: v
+                    children: x
                 }),
                 (0, i.jsx)('div', {
                     className: m.guildAvatar,
-                    children: _
+                    children: v
                 }),
                 (0, i.jsx)('svg', {
                     className: m.illustration,

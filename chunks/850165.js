@@ -1,42 +1,38 @@
-e.d(n, {
-    Z: function () {
-        return s;
-    }
-});
-var r = e(200651);
-e(192379);
-var o = e(481060),
-    i = e(461247);
-function s(t) {
-    let { heroImageSrc: n, heroImageAlt: e, children: s, header: a, description: c } = t;
-    return (0, r.jsxs)(r.Fragment, {
+n.d(e, { Z: () => o });
+var s = n(200651);
+n(192379);
+var i = n(481060),
+    r = n(461247);
+function o(t) {
+    let { heroImageSrc: e, heroImageAlt: n, children: o, header: a, description: c } = t;
+    return (0, s.jsxs)(s.Fragment, {
         children: [
-            (0, r.jsx)('img', {
-                src: n,
-                alt: e,
-                className: i.heroImage
+            (0, s.jsx)('img', {
+                src: e,
+                alt: n,
+                className: r.heroImage
             }),
-            (0, r.jsxs)(o.ModalContent, {
-                className: i.body,
+            (0, s.jsxs)(i.hzk, {
+                className: r.body,
                 children: [
-                    (0, r.jsxs)('div', {
-                        className: i.textContainer,
+                    (0, s.jsxs)('div', {
+                        className: r.textContainer,
                         children: [
-                            (0, r.jsx)(o.Heading, {
+                            (0, s.jsx)(i.X6q, {
                                 variant: 'heading-xl/semibold',
                                 color: 'header-primary',
                                 children: a
                             }),
                             null != c &&
-                                (0, r.jsx)(o.Text, {
+                                (0, s.jsx)(i.Text, {
                                     variant: 'text-md/medium',
                                     color: 'header-secondary',
-                                    className: i.description,
+                                    className: r.description,
                                     children: c
                                 })
                         ]
                     }),
-                    s
+                    o
                 ]
             })
         ]

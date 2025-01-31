@@ -1,11 +1,12 @@
 e.exports = {
-    container: 'container_cbd271',
-    membersWrap: 'membersWrap_cbd271',
-    members: 'members_cbd271',
-    member: 'member_cbd271',
-    membersGroup: 'membersGroup_cbd271',
-    hiddenMembers: 'hiddenMembers_cbd271',
-    memberGroupsPlaceholder: 'memberGroupsPlaceholder_cbd271',
-    roleIcon: 'roleIcon_cbd271',
-    fullWidth: 'fullWidth_cbd271'
+    placeholderPulse: 'placeholderPulse_c8ffbb',
+    container: 'container_c8ffbb',
+    membersWrap: 'membersWrap_c8ffbb',
+    members: 'members_c8ffbb',
+    member: 'member_c8ffbb',
+    membersGroup: 'membersGroup_c8ffbb',
+    hiddenMembers: 'hiddenMembers_c8ffbb',
+    memberGroupsPlaceholder: 'memberGroupsPlaceholder_c8ffbb',
+    roleIcon: 'roleIcon_c8ffbb',
+    fullWidth: 'fullWidth_c8ffbb'
 };

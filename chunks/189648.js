@@ -1,8 +1,4 @@
-r.d(t, {
-    Z: function () {
-        return d;
-    }
-});
+r.d(t, { Z: () => c });
 var n = r(200651);
 r(192379);
 var a = r(392711),
@@ -10,10 +6,10 @@ var a = r(392711),
     l = r(481060),
     s = r(481250),
     o = r(513547),
-    c = r(388032);
-function d(e) {
+    d = r(388032);
+function c(e) {
     let { camera: t } = e;
-    if (null == t) return (0, n.jsx)(l.Spinner, { type: l.Spinner.Type.SPINNING_CIRCLE });
+    if (null == t) return (0, n.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE });
     let r = i().map(t, (e, t) => {
         if (!(o.al[t] || void 0 === e))
             return (0, n.jsx)(
@@ -25,9 +21,9 @@ function d(e) {
                 t
             );
     });
-    return (0, n.jsx)(l.FormSection, {
-        tag: l.FormTitleTags.H2,
-        title: c.intl.string(c.t['2AGBWF']),
+    return (0, n.jsx)(l.hjN, {
+        tag: l.RB0.H2,
+        title: d.intl.string(d.t['2AGBWF']),
         children: (0, s.a)(r)
     });
 }

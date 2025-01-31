@@ -1,1 +1,2 @@
-e.exports = { menuIcon: 'menuIcon_cdae90' };
+var i = { menuIcon: 'menuIcon__10fcc' };
+e.exports = i;

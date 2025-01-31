@@ -1,73 +1,67 @@
-n.r(e),
-    n.d(e, {
-        default: function () {
-            return p;
-        }
-    }),
-    n(47120);
+n.d(e, { default: () => E }), n(47120);
 var l = n(200651),
     i = n(192379),
-    c = n(513431),
-    r = n(481060),
-    u = n(239091),
-    a = n(886036),
-    s = n(877794),
-    o = n(358085),
+    c = n(374470),
+    s = n(481060),
+    a = n(239091),
+    r = n(886036),
+    o = n(877794),
+    u = n(358085),
     d = n(998502),
-    f = n(388032);
-function p(t) {
-    let { text: e, target: n, onHeightUpdate: p, onSelect: E, isChannelTextArea: h = !1 } = t,
-        m = i.useCallback(() => {
-            (0, u.Zy)(), (0, c.k)(n, HTMLElement) && (n.focus(), setTimeout(() => n.focus(), 0));
+    h = n(388032);
+function E(t) {
+    let { text: e, target: n, onHeightUpdate: E, onSelect: p, isChannelTextArea: f = !1 } = t,
+        k = i.useCallback(() => {
+            (0, a.Zy)(), (0, c.k)(n, HTMLElement) && (n.focus(), setTimeout(() => n.focus(), 0));
         }, [n]),
-        [M, b] = (0, s.Z)({
+        [b, x] = (0, o.Z)({
             text: e,
             target: n,
-            onHeightUpdate: p
+            onHeightUpdate: E
         }),
-        x = (0, a.Z)();
-    if (!o.isPlatformEmbedded || !((0, c.k)(n, HTMLInputElement) || (0, c.k)(n, HTMLTextAreaElement))) return null;
-    let k =
+        C = (0, r.Z)();
+    if (!u.isPlatformEmbedded || !((0, c.k)(n, HTMLInputElement) || (0, c.k)(n, HTMLTextAreaElement))) return null;
+    let L =
         '' !== e
             ? [
                   (0, l.jsx)(
-                      r.MenuItem,
+                      s.sNh,
                       {
                           id: 'copy',
-                          label: f.intl.string(f.t.OpuAlJ),
-                          hint: (0, o.isMac)() ? '\u2318C' : 'Ctrl+C',
+                          label: h.intl.string(h.t.OpuAlJ),
+                          hint: (0, u.isMac)() ? '\u2318C' : 'Ctrl+C',
                           action: () => d.ZP.copy(e)
                       },
                       'copy'
                   ),
                   (0, l.jsx)(
-                      r.MenuItem,
+                      s.sNh,
                       {
                           id: 'cut',
-                          label: f.intl.string(f.t.pNPVhY),
-                          hint: (0, o.isMac)() ? '\u2318X' : 'Ctrl+X',
+                          label: h.intl.string(h.t.pNPVhY),
+                          hint: (0, u.isMac)() ? '\u2318X' : 'Ctrl+X',
                           action: () => setTimeout(() => d.ZP.cut(), 0)
                       },
                       'cut'
                   )
               ]
             : null;
-    return (0, l.jsxs)(r.Menu, {
+    return (0, l.jsxs)(s.v2r, {
         navId: 'textarea-context',
-        onClose: m,
-        'aria-label': f.intl.string(f.t.NWlDSE),
-        onSelect: E,
+        onClose: k,
+        'aria-label': h.intl.string(h.t.NWlDSE),
+        onSelect: p,
         children: [
-            h && (0, l.jsx)(r.MenuGroup, { children: x }),
-            (0, l.jsx)(r.MenuGroup, { children: M }),
-            (0, l.jsx)(r.MenuGroup, { children: b }),
-            (0, l.jsxs)(r.MenuGroup, {
+            f && (0, l.jsx)(s.kSQ, { children: C }),
+            (0, l.jsx)(s.kSQ, { children: b }),
+            (0, l.jsx)(s.kSQ, { children: x }),
+            (0, l.jsxs)(s.kSQ, {
                 children: [
-                    k,
-                    (0, l.jsx)(r.MenuItem, {
+                    L,
+                    (0, l.jsx)(s.sNh, {
                         id: 'paste',
-                        label: f.intl.string(f.t.lMUxVl),
-                        hint: (0, o.isMac)() ? '\u2318V' : 'Ctrl+V',
+                        label: h.intl.string(h.t.lMUxVl),
+                        hint: (0, u.isMac)() ? '\u2318V' : 'Ctrl+V',
                         action: () => setTimeout(() => d.ZP.paste(), 0)
                     })
                 ]

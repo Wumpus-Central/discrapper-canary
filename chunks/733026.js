@@ -1,18 +1,13 @@
-r.d(n, {
-    C: function () {
-        return o;
-    }
-});
-var i = r(653041);
-var a = r(581364);
-function o(e) {
-    let n = e.split(',').map((e) => e.trim()),
-        r = [],
-        i = [];
+n.d(t, { C: () => r }), n(653041);
+var i = n(581364);
+function r(e) {
+    let t = e.split(',').map((e) => e.trim()),
+        n = [],
+        r = [];
     return (
-        n.forEach((e) => {
-            (0, a.BH)(e) ? r.push(e) : i.push(e);
+        t.forEach((e) => {
+            (0, i.BH)(e) ? n.push(e) : r.push(e);
         }),
-        [i, r]
+        [r, n]
     );
 }

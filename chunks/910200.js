@@ -1,112 +1,108 @@
-t.d(n, {
-    Z: function () {
-        return v;
-    }
-});
-var i = t(200651),
-    l = t(442837),
-    r = t(692547),
-    a = t(481060),
-    s = t(410030),
-    c = t(220082),
-    o = t(114487),
-    u = t(686546),
-    d = t(706454),
-    h = t(768581),
-    m = t(709054),
-    f = t(997431),
-    x = t(686369),
-    g = t(388032),
-    j = t(950039);
-function v(e) {
-    let { profile: n } = e,
-        t = (0, s.ZP)(),
-        v = (function (e, n) {
-            let t = h.ZP.getGuildIconURL({
+n.d(l, { Z: () => g });
+var i = n(200651),
+    t = n(442837),
+    a = n(692547),
+    s = n(481060),
+    r = n(410030),
+    c = n(220082),
+    d = n(114487),
+    o = n(686546),
+    u = n(706454),
+    m = n(768581),
+    h = n(709054),
+    x = n(997431),
+    j = n(686369),
+    f = n(388032),
+    v = n(950039);
+function g(e) {
+    let { profile: l } = e,
+        n = (0, r.ZP)(),
+        g = (function (e, l) {
+            let n = m.ZP.getGuildIconURL({
                 id: e.id,
                 icon: e.icon,
                 size: 64
             });
-            return (0, c.ZP)(t, n);
-        })(n, (0, a.useToken)(r.Z.colors.BG_BASE_TERTIARY).hex()),
-        N = (0, l.e7)([d.default], () => d.default.locale),
-        _ = (0, x.d)(t, v),
-        p = (0, f.M)(m.default.extractTimestamp(n.id), N);
+            return (0, c.ZP)(n, l);
+        })(l, (0, s.dQu)(a.Z.colors.BG_BASE_TERTIARY).hex()),
+        N = (0, t.e7)([u.default], () => u.default.locale),
+        P = (0, j.d)(n, g),
+        p = (0, x.M)(h.default.extractTimestamp(l.id), N);
     return (0, i.jsxs)('div', {
-        className: j.container,
+        className: v.container,
         children: [
             (0, i.jsx)('div', {
-                className: j.banner,
-                style: { background: _ }
+                className: v.banner,
+                style: { background: P }
             }),
             (0, i.jsx)('div', {
-                className: j.avatarContainer,
-                children: (0, i.jsx)(u.ZP, {
-                    mask: u.QS.CLAN_ICON,
+                className: v.avatarContainer,
+                children: (0, i.jsx)(o.ZP, {
+                    mask: o.QS.CLAN_ICON,
                     width: 70,
                     height: 70,
                     children: (0, i.jsx)('div', {
-                        className: j.avatarWrapper,
-                        children: (0, i.jsx)(o.b, {
-                            guildId: n.id,
-                            guildName: n.name,
-                            guildIcon: n.icon,
+                        className: v.avatarWrapper,
+                        children: (0, i.jsx)(d.b, {
+                            guildId: l.id,
+                            guildName: l.name,
+                            guildIcon: l.icon,
                             iconSize: 64
                         })
                     })
                 })
             }),
             (0, i.jsxs)('div', {
-                className: j.header,
+                className: v.header,
                 children: [
-                    (0, i.jsx)(a.Heading, {
+                    (0, i.jsx)(s.X6q, {
                         variant: 'heading-lg/medium',
                         color: 'header-primary',
-                        children: n.name
+                        children: l.name
                     }),
                     (0, i.jsxs)('div', {
-                        className: j.members,
+                        className: v.members,
                         children: [
                             (0, i.jsxs)('div', {
-                                className: j.memberCount,
+                                className: v.memberCount,
                                 children: [
-                                    (0, i.jsx)('div', { className: j.dot }),
-                                    (0, i.jsx)(a.Text, {
+                                    (0, i.jsx)('div', { className: v.dot }),
+                                    (0, i.jsx)(s.Text, {
                                         variant: 'text-sm/normal',
                                         color: 'text-secondary',
-                                        children: g.intl.format(g.t.zRl6XV, { count: n.memberCount })
+                                        children: f.intl.format(f.t.zRl6XV, { count: l.memberCount })
                                     })
                                 ]
                             }),
                             (0, i.jsxs)('div', {
-                                className: j.memberCount,
+                                className: v.memberCount,
                                 children: [
-                                    (0, i.jsx)('div', { className: j.dotOnline }),
-                                    (0, i.jsx)(a.Text, {
+                                    (0, i.jsx)('div', { className: v.dotOnline }),
+                                    (0, i.jsx)(s.Text, {
                                         variant: 'text-sm/normal',
                                         color: 'text-secondary',
-                                        children: g.intl.format(g.t['LC+S+v'], { membersOnline: n.onlineCount })
+                                        children: f.intl.format(f.t['LC+S+v'], { membersOnline: l.onlineCount })
                                     })
                                 ]
                             })
                         ]
                     }),
                     (0, i.jsx)('div', {
-                        className: j.established,
-                        children: (0, i.jsx)(a.Text, {
+                        className: v.established,
+                        children: (0, i.jsx)(s.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-secondary',
-                            children: g.intl.format(g.t['zb2Q5+'], { createdAtDate: p })
+                            children: f.intl.format(f.t['zb2Q5+'], { createdAtDate: p })
                         })
                     })
                 ]
             }),
             (0, i.jsx)('div', {
-                className: j.body,
-                children: (0, i.jsx)(a.Text, {
+                className: v.body,
+                children: (0, i.jsx)(s.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-secondary',
-                    children: n.description
+                    children: l.description
                 })
             })
         ]

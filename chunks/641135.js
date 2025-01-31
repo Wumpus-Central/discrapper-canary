@@ -1,9 +1,10 @@
-e.exports = {
-    premiumSubscribeButton: 'premiumSubscribeButton_af971d',
-    premiumIcon: 'premiumIcon_af971d',
-    buttonText: 'buttonText_af971d',
-    giftButton: 'giftButton_af971d',
-    giftIcon: 'giftIcon_af971d',
-    tier1Gradient: 'tier1Gradient_af971d',
-    tier2Gradient: 'tier2Gradient_af971d'
+var i = {
+    premiumSubscribeButton: 'premiumSubscribeButton__29199',
+    premiumIcon: 'premiumIcon__29199',
+    buttonText: 'buttonText__29199',
+    giftButton: 'giftButton__29199',
+    giftIcon: 'giftIcon__29199',
+    tier1Gradient: 'tier1Gradient__29199',
+    tier2Gradient: 'tier2Gradient__29199'
 };
+e.exports = i;

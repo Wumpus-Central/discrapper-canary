@@ -1,6 +1,2 @@
-r.d(n, {
-    B: function () {
-        return i;
-    }
-});
+n.d(t, { B: () => i });
 let i = 10485760;

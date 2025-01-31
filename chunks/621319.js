@@ -1,16 +1,8 @@
 n.d(t, {
-    Gy: function () {
-        return o;
-    },
-    H7: function () {
-        return a;
-    },
-    en: function () {
-        return c;
-    },
-    xv: function () {
-        return s;
-    }
+    Gy: () => o,
+    H7: () => a,
+    en: () => c,
+    xv: () => s
 });
 var i = n(544891),
     r = n(570140),

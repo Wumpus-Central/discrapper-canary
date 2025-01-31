@@ -1,5 +1,5 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
     return e.defineLocale('hy-am', {
         months: {
@@ -51,14 +51,11 @@
             return /^(ցերեկվա|երեկոյան)$/.test(e);
         },
         meridiem: function (e) {
-            if (e < 4) return 'գիշերվա';
-            if (e < 12) return 'առավոտվա';
-            if (e < 17) return 'ցերեկվա';
-            else return 'երեկոյան';
+            return e < 4 ? 'գիշերվա' : e < 12 ? 'առավոտվա' : e < 17 ? 'ցերեկվա' : 'երեկոյան';
         },
         dayOfMonthOrdinalParse: /\d{1,2}|\d{1,2}-(ին|րդ)/,
-        ordinal: function (e, n) {
-            switch (n) {
+        ordinal: function (e, t) {
+            switch (t) {
                 case 'DDD':
                 case 'w':
                 case 'W':

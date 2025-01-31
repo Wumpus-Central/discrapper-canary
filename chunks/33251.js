@@ -1,38 +1,34 @@
-r.d(n, {
-    T: function () {
-        return u;
-    },
-    uf: function () {
-        return l;
-    }
+n.d(t, {
+    T: () => l,
+    uf: () => o
 });
-var i = r(548097),
-    a = r(52948),
-    o = ['style', 'currency', 'unit', 'unitDisplay', 'useGrouping', 'minimumIntegerDigits', 'minimumFractionDigits', 'maximumFractionDigits', 'minimumSignificantDigits', 'maximumSignificantDigits', 'compactDisplay', 'currencyDisplay', 'currencySign', 'notation', 'signDisplay', 'unit', 'unitDisplay', 'numberingSystem', 'trailingZeroDisplay', 'roundingPriority', 'roundingIncrement', 'roundingMode'];
-function s(e, n, r) {
+var i = n(548097),
+    r = n(52948),
+    a = ['style', 'currency', 'unit', 'unitDisplay', 'useGrouping', 'minimumIntegerDigits', 'minimumFractionDigits', 'maximumFractionDigits', 'minimumSignificantDigits', 'maximumSignificantDigits', 'compactDisplay', 'currencyDisplay', 'currencySign', 'notation', 'signDisplay', 'unit', 'unitDisplay', 'numberingSystem', 'trailingZeroDisplay', 'roundingPriority', 'roundingIncrement', 'roundingMode'];
+function s(e, t, n) {
     var i = e.locale,
         s = e.formats,
-        l = e.onError;
+        o = e.onError;
+    void 0 === n && (n = {});
+    var l = n.format,
+        u = (l && (0, r.TB)(s, 'number', l, o)) || {};
+    return t(i, (0, r.L6)(n, a, u));
+}
+function o(e, t, n, r) {
     void 0 === r && (r = {});
-    var u = r.format,
-        c = (u && (0, a.TB)(s, 'number', u, l)) || {};
-    return n(i, (0, a.L6)(r, o, c));
-}
-function l(e, n, r, a) {
-    void 0 === a && (a = {});
     try {
-        return s(e, n, a).format(r);
-    } catch (n) {
-        e.onError(new i.Qe('Error formatting number.', e.locale, n));
+        return s(e, t, r).format(n);
+    } catch (t) {
+        e.onError(new i.Qe('Error formatting number.', e.locale, t));
     }
-    return String(r);
+    return String(n);
 }
-function u(e, n, r, a) {
-    void 0 === a && (a = {});
+function l(e, t, n, r) {
+    void 0 === r && (r = {});
     try {
-        return s(e, n, a).formatToParts(r);
-    } catch (n) {
-        e.onError(new i.Qe('Error formatting number.', e.locale, n));
+        return s(e, t, r).formatToParts(n);
+    } catch (t) {
+        e.onError(new i.Qe('Error formatting number.', e.locale, t));
     }
     return [];
 }

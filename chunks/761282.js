@@ -1,13 +1,7 @@
 n.d(t, {
-    JE: function () {
-        return u;
-    },
-    ct: function () {
-        return c;
-    },
-    dc: function () {
-        return s;
-    }
+    JE: () => d,
+    ct: () => c,
+    dc: () => s
 });
 var i = n(200651);
 n(192379);
@@ -39,7 +33,7 @@ function c(e) {
         );
     }
 }
-function u(e) {
+function d(e) {
     var t;
     let n = e.application_id;
     if (null == n) return !0;

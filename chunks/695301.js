@@ -1,3 +1,4 @@
+n.d(t, { Z: () => _ });
 var i = n(200651),
     l = n(192379),
     r = n(442837),
@@ -5,59 +6,59 @@ var i = n(200651),
     o = n(746916),
     s = n(965638),
     c = n(905423),
-    u = n(486472),
-    d = n(888369),
+    d = n(486472),
+    u = n(888369),
     h = n(430824),
     p = n(451478),
     m = n(61634),
-    f = n(325257),
-    g = n(771557);
-t.Z = l.memo(function (e) {
+    g = n(325257),
+    f = n(771557);
+let _ = l.memo(function (e) {
     let { guildNode: t, lowerBadge: n } = e,
-        v = t.id,
-        C = (0, r.e7)([h.Z], () => h.Z.getGuild(v)),
-        x = (0, o.E)(C),
-        I = (0, r.e7)([p.Z], () => p.Z.isFocused()),
-        _ = (0, r.e7)([u.Z], () => u.Z.isUnavailable(v)),
-        Z = (0, c.Z)((e) => e.guildId),
-        b = (0, m.Z)(v),
+        _ = t.id,
+        v = (0, r.e7)([h.Z], () => h.Z.getGuild(_)),
+        x = (0, o.E)(v),
+        C = (0, r.e7)([p.Z], () => p.Z.isFocused()),
+        Z = (0, r.e7)([d.Z], () => d.Z.isUnavailable(_)),
+        I = (0, c.Z)((e) => e.guildId),
+        b = (0, m.Z)(_),
         {
             badge: S,
             unread: N,
             isMentionLowImportance: E
-        } = (0, r.cj)([d.default], () => ({
-            badge: d.default.getMentionCount(v),
-            isMentionLowImportance: d.default.getIsMentionLowImportance(v),
-            unread: d.default.hasUnread(v)
+        } = (0, r.cj)([u.default], () => ({
+            badge: u.default.getMentionCount(_),
+            isMentionLowImportance: u.default.getIsMentionLowImportance(_),
+            unread: u.default.hasUnread(_)
         })),
-        y = (0, s.I)(C) && 0 === S,
-        j = l.useMemo(
+        j = (0, s.I)(v) && 0 === S,
+        y = l.useMemo(
             () =>
                 null != n
                     ? n
-                    : y
+                    : j
                       ? (0, i.jsx)('div', {
-                            className: g.pauseBackground,
-                            children: (0, i.jsx)(a.PauseIcon, {
+                            className: f.pauseBackground,
+                            children: (0, i.jsx)(a.fpf, {
                                 size: 'custom',
                                 color: 'currentColor',
-                                className: g.pause,
+                                className: f.pause,
                                 width: 10,
                                 height: 10
                             })
                         })
                       : null,
-            [n, y]
+            [n, j]
         );
-    return (0, i.jsx)(f.Z, {
+    return (0, i.jsx)(g.Z, {
         ...e,
-        guild: C,
-        unavailable: _,
-        animatable: I,
-        selected: Z === v,
+        guild: v,
+        unavailable: Z,
+        animatable: C,
+        selected: I === _,
         badge: S,
         isMentionLowImportance: E,
-        lowerBadge: j,
+        lowerBadge: y,
         unread: N,
         mediaState: b,
         guildJoinRequestStatus: x

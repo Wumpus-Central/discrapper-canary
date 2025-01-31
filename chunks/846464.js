@@ -1,12 +1,8 @@
-n.d(t, {
-    q: function () {
-        return L;
-    }
-});
-var i = n(200651);
+n.d(t, { q: () => L });
+var l = n(200651);
 n(192379);
-var l = n(120356),
-    s = n.n(l),
+var i = n(120356),
+    s = n.n(i),
     r = n(481060),
     a = n(140465),
     o = n(639119),
@@ -22,20 +18,20 @@ var l = n(120356),
     j = n(388032),
     m = n(82227);
 function L(e) {
-    let { handleStepChange: t, handleClose: n, referralTrialOfferId: l } = e,
-        { setSelectedSkuId: s, activeSubscription: r, startedPaymentFlowWithPaymentSourcesRef: C, setSelectedPlanId: d, priceOptions: j } = (0, p.usePaymentContext)(),
+    let { handleStepChange: t, handleClose: n, referralTrialOfferId: i } = e,
+        { setSelectedSkuId: s, activeSubscription: r, startedPaymentFlowWithPaymentSourcesRef: C, setSelectedPlanId: d, priceOptions: j } = (0, p.JL)(),
         { isGift: m, claimableRewards: L } = (0, c.wD)(),
-        E = m && null != L && L.length > 0,
-        g = (0, o.N)(l),
+        g = m && null != L && L.length > 0,
+        S = (0, o.N)(i),
         I = (0, a.Nx)();
-    return (0, i.jsx)(S, {
+    return (0, l.jsx)(E, {
         selectSku: (e) =>
             (function (e) {
-                let { activeSubscription: t, newSkuId: n, setSelectedSkuId: i, handleStepChange: l, isGift: s, userTrialOffer: r, setSelectedPlanId: a, startedPaymentFlowWithPaymentSources: o } = e;
-                i(n);
+                let { activeSubscription: t, newSkuId: n, setSelectedSkuId: l, handleStepChange: i, isGift: s, userTrialOffer: r, setSelectedPlanId: a, startedPaymentFlowWithPaymentSources: o } = e;
+                l(n);
                 let C = x.h8.PLAN_SELECT,
                     d = (0, u.k5)(t);
-                (d === f.Si.TIER_1 || d === f.Si.TIER_2) && n === f.Si.TIER_0 && !s && (C = x.h8.WHAT_YOU_LOSE);
+                (d !== f.Si.TIER_1 && d !== f.Si.TIER_2) || n !== f.Si.TIER_0 || s || (C = x.h8.WHAT_YOU_LOSE);
                 let c = (0, _.T)({
                         userTrialOffer: r,
                         isGift: s,
@@ -47,14 +43,14 @@ function L(e) {
                         selectedSkuId: n,
                         startedPaymentFlowWithPaymentSources: o
                     });
-                C !== x.h8.WHAT_YOU_LOSE && p && ((C = x.h8.REVIEW), a((0, h.nA)(n, t))), l(C, { analyticsDataOverride: { sku_id: n } });
+                C !== x.h8.WHAT_YOU_LOSE && p && ((C = x.h8.REVIEW), a((0, h.nA)(n, t))), i(C, { analyticsDataOverride: { sku_id: n } });
             })({
                 activeSubscription: r,
                 newSkuId: e,
                 setSelectedSkuId: s,
                 handleStepChange: t,
                 isGift: m,
-                userTrialOffer: g,
+                userTrialOffer: S,
                 startedPaymentFlowWithPaymentSources: C.current,
                 setSelectedPlanId: d
             }),
@@ -62,38 +58,38 @@ function L(e) {
         isGift: m,
         inOfferExperience: I,
         priceOptions: j,
-        showPromotionalGiftBanner: E
+        showPromotionalGiftBanner: g
     });
 }
-function S(e) {
-    let { selectSku: t, onClose: n, isGift: l, inOfferExperience: a, priceOptions: o, showPromotionalGiftBanner: c } = e;
-    return (0, i.jsxs)(i.Fragment, {
+function E(e) {
+    let { selectSku: t, onClose: n, isGift: i, inOfferExperience: a, priceOptions: o, showPromotionalGiftBanner: c } = e;
+    return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, i.jsxs)(r.ModalHeader, {
+            (0, l.jsxs)(r.xBx, {
                 className: m.skuSelectModalHeader,
                 separator: !1,
                 children: [
-                    (0, i.jsx)(r.FormTitle, {
-                        tag: r.FormTitleTags.H4,
+                    (0, l.jsx)(r.vwX, {
+                        tag: r.RB0.H4,
                         children: j.intl.string(j.t['r+SebW'])
                     }),
-                    (0, i.jsx)(r.ModalCloseButton, {
+                    (0, l.jsx)(r.olH, {
                         className: m.close,
                         innerClassName: m.closeInner,
                         onClick: n
                     })
                 ]
             }),
-            (0, i.jsxs)(r.ModalContent, {
-                className: s()(m.skuSelectModalContent, { [m.modalPadding]: a }),
+            (0, l.jsxs)(r.hzk, {
+                className: s()(m.skuSelectModalContent, m.modalSize, { [m.modalPadding]: a }),
                 children: [
-                    (0, i.jsx)(C.Z, {
+                    (0, l.jsx)(C.Z, {
                         fromBoostCancelModal: !1,
                         className: m.legacyPricingNotice
                     }),
-                    (0, i.jsx)(d.Z, {
+                    (0, l.jsx)(d.Z, {
                         onSelectSku: (e) => t((0, u.Wz)(e)),
-                        isGift: l,
+                        isGift: i,
                         priceOptions: o,
                         showPromotionalGiftBanner: c
                     })

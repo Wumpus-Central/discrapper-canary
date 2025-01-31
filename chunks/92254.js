@@ -1,93 +1,87 @@
-i.r(t),
-    i.d(t, {
-        default: function () {
-            return x;
-        }
-    }),
-    i(47120);
-var a = i(200651),
-    o = i(192379),
-    n = i(120356),
-    s = i.n(n),
-    l = i(481060),
-    r = i(313201),
-    d = i(309081),
-    m = i(35463),
-    u = i(489887),
-    c = i(388032),
-    h = i(137104);
-let j = (0, r.hQ)();
-function x(e) {
-    var t;
-    let { channelId: i, answer: n, onSave: r, transitionState: x, onClose: g } = e,
+a.d(i, { default: () => j }), a(47120);
+var t = a(200651),
+    s = a(192379),
+    n = a(120356),
+    l = a.n(n),
+    o = a(481060),
+    r = a(313201),
+    m = a(309081),
+    d = a(35463),
+    c = a(489887),
+    h = a(388032),
+    u = a(137104);
+let x = (0, r.hQ)();
+function j(e) {
+    var i;
+    let { channelId: a, answer: n, onSave: r, transitionState: j, onClose: _ } = e,
         {
-            emoji: p,
-            hasUpload: b,
+            emoji: g,
+            hasUpload: p,
             upload: v,
-            mediaUrl: C,
-            mediaFilename: I
-        } = (0, m.Z)({
-            channelId: i,
+            mediaUrl: k,
+            mediaFilename: w
+        } = (0, d.Z)({
+            channelId: a,
             localCreationAnswerId: n.localCreationAnswerId,
             image: n.image
         }),
-        [k, w] = o.useState(null !== (t = null == v ? void 0 : v.description) && void 0 !== t ? t : '');
-    return (0, a.jsxs)(l.ModalRoot, {
-        size: l.ModalSize.DYNAMIC,
-        className: s()(h.modal, {
-            [h.hasImage]: b,
-            [h.hasEmoji]: null != p
+        [C, z] = s.useState(null !== (i = null == v ? void 0 : v.description) && void 0 !== i ? i : '');
+    return (0, t.jsxs)(o.Y0X, {
+        size: o.CgR.DYNAMIC,
+        className: l()(u.modal, {
+            [u.hasImage]: p,
+            [u.hasEmoji]: null != g
         }),
-        transitionState: x,
-        'aria-label': c.intl.string(c.t.QbhHBQ),
+        transitionState: j,
+        'aria-label': h.intl.string(h.t.QbhHBQ),
         children: [
-            (0, a.jsx)(d.I, {
-                hasUpload: b,
-                mediaUrl: C,
-                mediaFilename: I,
-                imageClassName: h.imagePreview,
-                emoji: p,
-                emojiClassName: h.emojiPreview
+            (0, t.jsx)(m.I, {
+                hasUpload: p,
+                mediaUrl: k,
+                mediaFilename: w,
+                imageClassName: u.imagePreview,
+                emoji: g,
+                emojiClassName: u.emojiPreview
             }),
-            (0, a.jsxs)(l.ModalContent, {
-                className: h.content,
+            (0, t.jsxs)(o.hzk, {
+                className: u.content,
                 children: [
-                    (0, a.jsx)(l.FormTitle, {
-                        tag: l.FormTitleTags.LABEL,
-                        htmlFor: j,
-                        children: c.intl.string(c.t['/2Gnoa'])
+                    (0, t.jsx)(o.vwX, {
+                        tag: o.RB0.LABEL,
+                        htmlFor: x,
+                        children: h.intl.string(h.t['/2Gnoa'])
                     }),
-                    (0, a.jsx)(l.TextInput, {
-                        id: j,
-                        value: k,
-                        inputClassName: h.input,
-                        onChange: w,
-                        maxLength: u.WA,
+                    (0, t.jsx)(o.oil, {
+                        id: x,
+                        value: C,
+                        inputClassName: u.input,
+                        onChange: z,
+                        maxLength: c.WA,
                         autoFocus: !0
                     })
                 ]
             }),
-            (0, a.jsxs)(l.ModalFooter, {
-                className: h.footer,
+            (0, t.jsxs)(o.mzw, {
+                className: u.footer,
                 children: [
-                    (0, a.jsx)(l.Button, {
-                        look: l.ButtonLooks.FILLED,
-                        size: l.Button.Sizes.MEDIUM,
+                    (0, t.jsx)(o.zxk, {
+                        look: o.iLD.FILLED,
+                        size: o.zxk.Sizes.MEDIUM,
                         onClick: () => {
-                            null != k && r(k), g();
+                            null != C && r(C), _();
                         },
-                        children: (0, a.jsx)(l.Text, {
+                        children: (0, t.jsx)(o.Text, {
                             variant: 'text-md/semibold',
-                            children: c.intl.string(c.t.R3BPHx)
+                            children: h.intl.string(h.t.R3BPHx)
                         })
                     }),
-                    (0, a.jsx)(l.Button, {
-                        look: l.ButtonLooks.LINK,
-                        size: l.Button.Sizes.MEDIUM,
-                        onClick: g,
-                        children: (0, a.jsx)(l.Text, {
+                    (0, t.jsx)(o.zxk, {
+                        look: o.iLD.LINK,
+                        size: o.zxk.Sizes.MEDIUM,
+                        onClick: _,
+                        children: (0, t.jsx)(o.Text, {
                             variant: 'text-md/semibold',
-                            children: c.intl.string(c.t['ETE/oK'])
+                            children: h.intl.string(h.t['ETE/oK'])
                         })
                     })
                 ]

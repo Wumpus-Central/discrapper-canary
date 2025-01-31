@@ -1,114 +1,110 @@
-r.d(n, {
-    Z: function () {
-        return E;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(442837),
-    o = r(481060),
-    s = r(100527),
-    l = r(906732),
-    u = r(14491),
-    c = r(299206),
-    d = r(389052),
-    f = r(158508),
-    p = r(622724),
-    h = r(785717),
-    _ = r(621853),
-    m = r(475413),
-    g = r(388032);
-function E(e) {
-    let { user: n, guildId: r, viewProfileItem: E } = e,
-        { trackUserProfileAction: v } = (0, h.KZ)(),
-        { analyticsLocations: y, newestAnalyticsLocation: b } = (0, l.ZP)(s.Z.USER_PROFILE_OVERFLOW_MENU),
-        I = (0, a.e7)([_.Z], () => _.Z.getUserProfile(n.id)),
-        T = null == I ? void 0 : I.application,
-        S = (0, d.Z)({
-            user: n,
-            guildId: r,
-            location: b,
+n.d(t, { Z: () => g });
+var i = n(200651);
+n(192379);
+var r = n(442837),
+    a = n(481060),
+    s = n(100527),
+    o = n(906732),
+    l = n(14491),
+    u = n(299206),
+    c = n(389052),
+    d = n(158508),
+    f = n(622724),
+    _ = n(785717),
+    p = n(621853),
+    h = n(475413),
+    m = n(388032);
+function g(e) {
+    let { user: t, guildId: n, viewProfileItem: g } = e,
+        { trackUserProfileAction: E } = (0, _.KZ)(),
+        { analyticsLocations: v, newestAnalyticsLocation: y } = (0, o.ZP)(s.Z.USER_PROFILE_OVERFLOW_MENU),
+        I = (0, r.e7)([p.Z], () => p.Z.getUserProfile(t.id)),
+        b = null == I ? void 0 : I.application,
+        T = (0, c.Z)({
+            user: t,
+            guildId: n,
+            location: y,
             color: 'danger',
             onBlock: () =>
-                v({
+                E({
                     action: 'BLOCK',
-                    analyticsLocations: y
+                    analyticsLocations: v
                 }),
             onUnblock: () =>
-                v({
+                E({
                     action: 'UNBLOCK',
-                    analyticsLocations: y
+                    analyticsLocations: v
+                })
+        }),
+        S = (0, d.Z)({
+            user: t,
+            guildId: n,
+            location: y,
+            onIgnore: () =>
+                E({
+                    action: 'IGNORE',
+                    analyticsLocations: v
+                }),
+            onUnignore: () =>
+                E({
+                    action: 'UNIGNORE',
+                    analyticsLocations: v
                 })
         }),
         A = (0, f.Z)({
-            user: n,
-            guildId: r,
-            location: b,
-            onIgnore: () =>
-                v({
-                    action: 'IGNORE',
-                    analyticsLocations: y
-                }),
-            onUnignore: () =>
-                v({
-                    action: 'UNIGNORE',
-                    analyticsLocations: y
-                })
-        }),
-        C = (0, p.Z)({
-            user: n,
-            guildId: r,
-            location: b,
+            user: t,
+            guildId: n,
+            location: y,
             color: 'danger',
             onAction: () =>
-                v({
+                E({
                     action: 'REPORT',
-                    analyticsLocations: y
+                    analyticsLocations: v
                 })
         }),
-        N = (0, c.Z)({
-            id: null == T ? void 0 : T.id,
-            label: g.intl.string(g.t['+NP/b2']),
+        N = (0, u.Z)({
+            id: null == b ? void 0 : b.id,
+            label: m.intl.string(m.t['+NP/b2']),
             onSuccess: () =>
-                v({
+                E({
                     action: 'COPY_APP_ID',
-                    analyticsLocations: y
+                    analyticsLocations: v
                 })
         }),
-        R = [
-            [E],
-            [A, S, C],
+        C = [
+            [g],
+            [S, T, A],
             [
-                (0, u.Z)({
-                    application: T,
-                    label: g.intl.string(g.t.WqhZsr),
+                (0, l.Z)({
+                    application: b,
+                    label: m.intl.string(m.t.WqhZsr),
                     onSuccess: () =>
-                        v({
+                        E({
                             action: 'COPY_APP_LINK',
-                            analyticsLocations: y
+                            analyticsLocations: v
                         })
                 }),
                 N
             ]
         ];
-    return R.every((e) => e.every((e) => null == e))
+    return C.every((e) => e.every((e) => null == e))
         ? null
-        : (0, i.jsx)(o.Popout, {
+        : (0, i.jsx)(a.yRy, {
               renderPopout: (e) => {
-                  let { closePopout: n } = e;
-                  return (0, i.jsx)(o.Menu, {
+                  let { closePopout: t } = e;
+                  return (0, i.jsx)(a.v2r, {
                       navId: 'user-bot-profile-overflow-menu',
                       onSelect: void 0,
-                      onClose: n,
-                      'aria-label': g.intl.string(g.t.AXIHpa),
-                      children: R.map((e, n) => (0, i.jsx)(o.MenuGroup, { children: e.map((e) => e) }, n))
+                      onClose: t,
+                      'aria-label': m.intl.string(m.t.AXIHpa),
+                      children: C.map((e, t) => (0, i.jsx)(a.kSQ, { children: e.map((e) => e) }, t))
                   });
               },
               children: (e) =>
-                  (0, i.jsx)(m.oY, {
+                  (0, i.jsx)(h.oY, {
                       action: 'PRESS_OPTIONS',
-                      icon: o.MoreHorizontalIcon,
-                      tooltipText: g.intl.string(g.t.UKOtz8),
+                      icon: a.xhG,
+                      tooltipText: m.intl.string(m.t.UKOtz8),
                       ...e
                   })
           });

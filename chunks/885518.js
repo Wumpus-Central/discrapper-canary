@@ -1,6 +1,2 @@
-r.d(n, {
-    A: function () {
-        return i;
-    }
-});
+n.d(t, { A: () => i });
 let i = 0.4;

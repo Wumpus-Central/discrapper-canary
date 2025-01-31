@@ -1,20 +1,16 @@
-n.d(t, {
-    S: function () {
-        return c;
-    }
-});
+n.d(t, { S: () => c });
 var i = n(200651);
 n(192379);
 var l = n(997638),
-    r = n(209073),
-    a = n(482641),
+    a = n(113570),
+    r = n(482641),
     s = n(613725);
 let o = Object.freeze({
         'voice-conversations': {
             popoutPosition: 'right',
             highPriority: !0,
             textAlign: l.iu.CENTER,
-            media: () => (0, i.jsx)(a.Z, {})
+            media: () => (0, i.jsx)(r.Z, {})
         },
         'writing-messages': {
             popoutPosition: 'top',
@@ -32,7 +28,7 @@ let o = Object.freeze({
             popoutPosition: 'right',
             textAlign: l.iu.CENTER,
             spacing: 8,
-            media: () => (0, i.jsx)(r.Z, {})
+            media: () => (0, i.jsx)(a.Z, {})
         },
         'instant-invite': {
             popoutPosition: 'right',

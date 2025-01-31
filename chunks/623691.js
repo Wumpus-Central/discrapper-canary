@@ -1,9 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return x;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => x }), n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
@@ -29,8 +24,8 @@ function x(e) {
     return (0, i.jsxs)('div', {
         ref: m,
         children: [
-            (0, i.jsx)(a.FormTitle, {
-                tag: a.FormTitleTags.H1,
+            (0, i.jsx)(a.vwX, {
+                tag: a.RB0.H1,
                 children: h.intl.string(h.t.LPJmLy)
             }),
             (0, i.jsx)(a.Text, {
@@ -58,7 +53,7 @@ function p(e) {
                 role: n,
                 onClick: u
             }),
-            (0, i.jsx)(f, {
+            (0, i.jsx)(_, {
                 guild: t,
                 query: l,
                 setQuery: o
@@ -92,7 +87,7 @@ function p(e) {
         ]
     });
 }
-function f(e) {
+function _(e) {
     let { guild: t, query: n, setQuery: l } = e,
         [s, c] = r.useState(!1),
         d = r.useCallback(
@@ -112,17 +107,17 @@ function f(e) {
         children: (0, i.jsxs)('div', {
             className: g.searchContainer,
             children: [
-                (0, i.jsx)(a.SearchBar, {
-                    size: a.SearchBar.Sizes.MEDIUM,
+                (0, i.jsx)(a.E1j, {
+                    size: a.E1j.Sizes.MEDIUM,
                     query: n,
                     onChange: d,
                     onClear: u,
                     placeholder: h.intl.string(h.t.Sojqsr),
                     'aria-label': h.intl.string(h.t.Sojqsr)
                 }),
-                (0, i.jsx)(a.Button, {
+                (0, i.jsx)(a.zxk, {
                     className: g.createButton,
-                    size: a.Button.Sizes.SMALL,
+                    size: a.zxk.Sizes.SMALL,
                     onClick: m,
                     submitting: s,
                     children: h.intl.string(h.t.JZZjQE)

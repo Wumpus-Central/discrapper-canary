@@ -1,66 +1,62 @@
-r.d(n, {
-    Z: function () {
-        return _;
-    }
-});
-var i = r(200651),
-    a = r(192379),
-    o = r(367907),
-    s = r(10718),
-    l = r(69626),
-    u = r(626135),
-    c = r(785717),
-    d = r(678738),
-    f = r(981631),
-    p = r(388032),
-    h = r(181396);
-function _(e) {
-    let { applicationId: n, commandIds: r, guildId: _, channel: m, onClick: g } = e,
-        { trackUserProfileAction: E } = (0, c.KZ)(),
-        v = a.useMemo(
+n.d(t, { Z: () => p });
+var i = n(200651),
+    r = n(192379),
+    a = n(367907),
+    s = n(10718),
+    o = n(69626),
+    l = n(626135),
+    u = n(785717),
+    c = n(678738),
+    d = n(981631),
+    f = n(388032),
+    _ = n(181396);
+function p(e) {
+    let { applicationId: t, commandIds: n, guildId: p, channel: h, onClick: m } = e,
+        { trackUserProfileAction: g } = (0, u.KZ)(),
+        E = r.useMemo(
             () => ({
-                channel: m,
+                channel: h,
                 type: 'channel'
             }),
-            [m]
+            [h]
         ),
-        { commands: y } = s.Qm(v, n, r),
-        b = a.useMemo(
+        { commands: v } = s.Qm(E, t, n),
+        y = r.useMemo(
             () =>
-                null == y
+                null == v
                     ? void 0
-                    : y.filter((e) => {
-                          let { nsfw: n } = e;
-                          return !0 !== n;
+                    : v.filter((e) => {
+                          let { nsfw: t } = e;
+                          return !0 !== t;
                       }),
-            [y]
+            [v]
         );
-    if (null == b || 0 === b.length) return null;
+    if (null == y || 0 === y.length) return null;
     let I = (e) => {
-        null == g || g(),
-            E({ action: 'PRESS_APP_COMMAND' }),
-            u.default.track(f.rMx.POPULAR_APPLICATION_COMMAND_CLICKED, {
-                application_id: n,
+        null == m || m(),
+            g({ action: 'PRESS_APP_COMMAND' }),
+            l.default.track(d.rMx.POPULAR_APPLICATION_COMMAND_CLICKED, {
+                application_id: t,
                 command_id: e,
-                guild_id: _,
-                ...(0, o.JS)(m.id)
+                guild_id: p,
+                ...(0, a.JS)(h.id)
             });
     };
-    return (0, i.jsx)(d.Z, {
-        heading: p.intl.string(p.t['0hKkS0']),
+    return (0, i.jsx)(c.Z, {
+        heading: f.intl.string(f.t['0hKkS0']),
         children: (0, i.jsx)('ul', {
-            className: h.list,
-            children: b.map((e) =>
+            className: _.list,
+            children: y.map((e) =>
                 (0, i.jsx)(
                     'li',
                     {
-                        children: (0, i.jsx)(l.wz, {
+                        children: (0, i.jsx)(o.wz, {
                             commandId: e.id,
                             commandName: e.displayName,
                             commandDescription: e.displayDescription,
                             onClick: I,
-                            guildId: _,
-                            channelId: m.id,
+                            guildId: p,
+                            channelId: h.id,
                             applicationId: e.applicationId
                         })
                     },

@@ -1,14 +1,10 @@
-r.d(n, {
-    m: function () {
-        return a;
-    }
-});
-var i = r(212605);
-function a(e) {
+n.d(t, { m: () => r });
+var i = n(212605);
+function r(e) {
     if ('custom' === e) return null;
-    let n = i.Z[e];
+    let t = i.Z[e];
     return {
-        width: n,
-        height: n
+        width: t,
+        height: t
     };
 }

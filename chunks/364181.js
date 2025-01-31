@@ -1,35 +1,34 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    function n(e, n, r, i) {
-        var a = {
+    function t(e, t, n, i) {
+        var r = {
             m: ['eng Minutt', 'enger Minutt'],
             h: ['eng Stonn', 'enger Stonn'],
             d: ['een Dag', 'engem Dag'],
             M: ['ee Mount', 'engem Mount'],
             y: ['ee Joer', 'engem Joer']
         };
-        return n ? a[r][0] : a[r][1];
+        return t ? r[n][0] : r[n][1];
     }
-    function r(e) {
-        return a(e.substr(0, e.indexOf(' '))) ? 'a ' + e : 'an ' + e;
+    function n(e) {
+        return r(e.substr(0, e.indexOf(' '))) ? 'a ' + e : 'an ' + e;
     }
     function i(e) {
-        return a(e.substr(0, e.indexOf(' '))) ? 'viru ' + e : 'virun ' + e;
+        return r(e.substr(0, e.indexOf(' '))) ? 'viru ' + e : 'virun ' + e;
     }
-    function a(e) {
+    function r(e) {
         if (isNaN((e = parseInt(e, 10)))) return !1;
         if (e < 0) return !0;
-        if (e < 10) return (!!(4 <= e) && !!(e <= 7)) || !1;
+        if (e < 10) return !!(4 <= e) && !!(e <= 7);
         if (e < 100) {
-            var n = e % 10,
-                r = e / 10;
-            return 0 === n ? a(r) : a(n);
-        } else {
-            if (!(e < 10000)) return a((e /= 1000));
-            for (; e >= 10; ) e /= 10;
-            return a(e);
+            var t = e % 10,
+                n = e / 10;
+            return 0 === t ? r(n) : r(t);
         }
+        if (!(e < 10000)) return r((e /= 1000));
+        for (; e >= 10; ) e /= 10;
+        return r(e);
     }
     return e.defineLocale('lb', {
         months: 'Januar_Februar_Mäerz_Abrëll_Mee_Juni_Juli_August_September_Oktober_November_Dezember'.split('_'),
@@ -64,19 +63,19 @@
             }
         },
         relativeTime: {
-            future: r,
+            future: n,
             past: i,
             s: 'e puer Sekonnen',
             ss: '%d Sekonnen',
-            m: n,
+            m: t,
             mm: '%d Minutten',
-            h: n,
+            h: t,
             hh: '%d Stonnen',
-            d: n,
+            d: t,
             dd: '%d Deeg',
-            M: n,
+            M: t,
             MM: '%d Méint',
-            y: n,
+            y: t,
             yy: '%d Joer'
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,

@@ -1,296 +1,246 @@
-r.d(n, {
-    B: function () {
-        return O;
-    },
-    B5: function () {
-        return C;
-    },
-    Do: function () {
-        return R;
-    },
-    GX: function () {
-        return w;
-    },
-    HR: function () {
-        return G;
-    },
-    Hr: function () {
-        return A;
-    },
-    Je: function () {
-        return T;
-    },
-    Js: function () {
-        return m;
-    },
-    KR: function () {
-        return N;
-    },
-    MO: function () {
-        return M;
-    },
-    N3: function () {
-        return P;
-    },
-    Oq: function () {
-        return I;
-    },
-    P_: function () {
-        return v;
-    },
-    Vn: function () {
-        return b;
-    },
-    ab: function () {
-        return S;
-    },
-    e5: function () {
-        return D;
-    },
-    e7: function () {
-        return E;
-    },
-    lN: function () {
-        return U;
-    },
-    nE: function () {
-        return k;
-    },
-    nH: function () {
-        return y;
-    },
-    qs: function () {
-        return _;
-    },
-    qz: function () {
-        return B;
-    },
-    ws: function () {
-        return L;
-    },
-    xI: function () {
-        return x;
-    },
-    zI: function () {
-        return g;
-    }
+n.d(t, {
+    B: () => R,
+    B5: () => A,
+    Do: () => C,
+    GX: () => L,
+    HR: () => G,
+    Hr: () => S,
+    Je: () => b,
+    Js: () => h,
+    KR: () => N,
+    MO: () => w,
+    N3: () => P,
+    Oq: () => I,
+    P_: () => E,
+    Vn: () => y,
+    ab: () => T,
+    e5: () => O,
+    e7: () => g,
+    lN: () => k,
+    nE: () => M,
+    nH: () => v,
+    qs: () => p,
+    qz: () => U,
+    ws: () => D,
+    xI: () => x,
+    zI: () => m
 });
-var i = r(367907),
-    a = r(731429),
-    o = r(188471),
-    s = r(592125),
-    l = r(703558),
-    u = r(626135),
-    c = r(358085),
-    d = r(660189),
-    f = r(208970),
-    p = r(6496),
-    h = r(981631);
-function _(e) {
-    let { guildId: n, channelId: r, sessionId: a, postIds: o, additionalTimes: s } = e;
-    i.ZP.trackWithMetadata(h.rMx.FORUM_CHANNEL_SEEN_BATCH, {
-        ...(0, p.xl)({
-            channelId: r,
-            sessionId: a
+var i = n(367907),
+    r = n(731429),
+    a = n(188471),
+    s = n(592125),
+    o = n(703558),
+    l = n(626135),
+    u = n(358085),
+    c = n(660189),
+    d = n(208970),
+    f = n(6496),
+    _ = n(981631);
+function p(e) {
+    let { guildId: t, channelId: n, sessionId: r, postIds: a, additionalTimes: s } = e;
+    i.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_SEEN_BATCH, {
+        ...(0, f.xl)({
+            channelId: n,
+            sessionId: r
         }),
-        guild_id: n,
-        channel_id: r,
-        post_ids: o,
+        guild_id: t,
+        channel_id: n,
+        post_ids: a,
         additional_seen_time_millis: s
     });
 }
+function h(e) {
+    let { guildId: t, channelId: n, numSearchResults: r } = e;
+    i.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_SEARCHED, {
+        ...(0, f.xl)({ channelId: n }),
+        guild_id: t,
+        channel_id: n,
+        num_search_results: r
+    });
+}
 function m(e) {
-    let { guildId: n, channelId: r, numSearchResults: a } = e;
-    i.ZP.trackWithMetadata(h.rMx.FORUM_CHANNEL_SEARCHED, {
-        ...(0, p.xl)({ channelId: r }),
-        guild_id: n,
-        channel_id: r,
-        num_search_results: a
+    let { guildId: t, channelId: n } = e;
+    i.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_SEARCH_CLEARED, {
+        ...(0, f.xl)({ channelId: n }),
+        guild_id: t,
+        channel_id: n
     });
 }
 function g(e) {
-    let { guildId: n, channelId: r } = e;
-    i.ZP.trackWithMetadata(h.rMx.FORUM_CHANNEL_SEARCH_CLEARED, {
-        ...(0, p.xl)({ channelId: r }),
-        guild_id: n,
-        channel_id: r
-    });
-}
-function E(e) {
-    let { guildId: n, channelId: r, tagId: a, filterTagIds: o, added: s, location: l } = e;
-    i.ZP.trackWithMetadata(h.rMx.FORUM_CHANNEL_TAG_FILTER_CLICKED, {
-        ...(0, p.xl)({ channelId: r }),
-        guild_id: n,
-        channel_id: r,
-        tag_id: a,
-        filter_tag_ids: o,
+    let { guildId: t, channelId: n, tagId: r, filterTagIds: a, added: s, location: o } = e;
+    i.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_TAG_FILTER_CLICKED, {
+        ...(0, f.xl)({ channelId: n }),
+        guild_id: t,
+        channel_id: n,
+        tag_id: r,
+        filter_tag_ids: a,
         added: s,
-        location: l
-    });
-}
-function v(e) {
-    let { guildId: n, channelId: r } = e;
-    i.ZP.trackWithMetadata(h.rMx.FORUM_CHANNEL_CREATE_NEW_POST_CLICKED, {
-        ...(0, p.xl)({ channelId: r }),
-        guild_id: n,
-        channel_id: r
-    });
-}
-function y(e) {
-    let { guildId: n, channelId: r } = e;
-    i.ZP.trackWithMetadata(h.rMx.FORUM_CHANNEL_CREATE_NEW_POST_KEYBIND_USED, {
-        ...(0, p.xl)({ channelId: r }),
-        guild_id: n,
-        channel_id: r
-    });
-}
-function b(e) {
-    var n, r, a, o;
-    let { guildId: u, channelId: c } = e,
-        d = s.Z.getChannel(c);
-    if (null == d) return;
-    let f = l.Z.getThreadSettings(c),
-        _ = null === (n = d.template) || void 0 === n ? void 0 : n.trim(),
-        m = l.Z.getDraft(c, l.d.FirstThreadMessage),
-        g = null == m || 0 === m.length || (null == m ? void 0 : m.trim()) === _,
-        E = (null == f ? void 0 : f.appliedTags) == null || (null == f ? void 0 : null === (r = f.appliedTags) || void 0 === r ? void 0 : r.size) === 0,
-        v = (null == f ? void 0 : f.name) == null || (null == f ? void 0 : null === (o = f.name) || void 0 === o ? void 0 : null === (a = o.trim()) || void 0 === a ? void 0 : a.length) === 0;
-    if (!g || !E || !v)
-        i.ZP.trackWithMetadata(h.rMx.FORUM_CHANNEL_NEW_POST_DRAFT_CREATED, {
-            ...(0, p.xl)({ channelId: c }),
-            guild_id: u,
-            channel_id: c,
-            applied_tag_ids: (0, p.q8)(c),
-            num_attachments: (0, p.RR)(c)
-        });
-}
-function I(e) {
-    let { guildId: n, channelId: r } = e;
-    i.ZP.trackWithMetadata(h.rMx.FORUM_CHANNEL_NEW_POST_DRAFT_CLEARED, {
-        ...(0, p.xl)({ channelId: r }),
-        guild_id: n,
-        channel_id: r
-    });
-}
-function T(e) {
-    let { guildId: n, channelId: r, postId: a } = e;
-    function o() {
-        i.ZP.trackWithMetadata(h.rMx.FORUM_CHANNEL_POST_CREATED, {
-            ...(0, p.n4)({ channelId: a }),
-            guild_id: n,
-            channel_id: r
-        });
-    }
-    d.Z.isLoading(a) ? d.Z.addConditionalChangeListener(() => !!d.Z.isLoading(a) || (o(), !1)) : o();
-}
-function S(e) {
-    let { guildId: n, channelId: r } = e;
-    i.ZP.trackWithMetadata(h.rMx.FORUM_CHANNEL_SCROLLED, {
-        ...(0, p.xl)({ channelId: r }),
-        guild_id: n,
-        channel_id: r
-    });
-}
-function A(e) {
-    let { guildId: n, channelId: r, numArchivedThreads: a, hasMoreThreads: o, filterTagIds: l, sortOrder: c } = e;
-    u.default.track(h.rMx.FORUM_CHANNEL_MORE_POSTS_LOADED, {
-        ...(0, i.hH)(n),
-        ...(0, i.v_)(s.Z.getChannel(r)),
-        ...(0, p.xl)({ channelId: r }),
-        guild_id: n,
-        channel_id: r,
-        num_archived_threads: a,
-        num_active_threads: (0, p.bE)(n, r),
-        has_more_threads: o,
-        filter_tag_ids: l,
-        sort_order: c
-    });
-}
-function C(e) {
-    let { guildId: n, channelId: r, postId: a, location: o } = e;
-    i.ZP.trackWithMetadata(h.rMx.FORUM_CHANNEL_POST_CLICKED, {
-        ...(0, p.n4)({ channelId: a }),
-        guild_id: n,
-        channel_id: r,
-        is_search_result: null != f.Z.getSearchResults(r),
         location: o
     });
 }
+function E(e) {
+    let { guildId: t, channelId: n } = e;
+    i.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_CREATE_NEW_POST_CLICKED, {
+        ...(0, f.xl)({ channelId: n }),
+        guild_id: t,
+        channel_id: n
+    });
+}
+function v(e) {
+    let { guildId: t, channelId: n } = e;
+    i.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_CREATE_NEW_POST_KEYBIND_USED, {
+        ...(0, f.xl)({ channelId: n }),
+        guild_id: t,
+        channel_id: n
+    });
+}
+function y(e) {
+    var t, n, r, a;
+    let { guildId: l, channelId: u } = e,
+        c = s.Z.getChannel(u);
+    if (null == c) return;
+    let d = o.Z.getThreadSettings(u),
+        p = null === (t = c.template) || void 0 === t ? void 0 : t.trim(),
+        h = o.Z.getDraft(u, o.d.FirstThreadMessage),
+        m = null == h || 0 === h.length || (null == h ? void 0 : h.trim()) === p,
+        g = (null == d ? void 0 : d.appliedTags) == null || (null == d ? void 0 : null === (n = d.appliedTags) || void 0 === n ? void 0 : n.size) === 0,
+        E = (null == d ? void 0 : d.name) == null || (null == d ? void 0 : null === (a = d.name) || void 0 === a ? void 0 : null === (r = a.trim()) || void 0 === r ? void 0 : r.length) === 0;
+    (!m || !g || !E) &&
+        i.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_NEW_POST_DRAFT_CREATED, {
+            ...(0, f.xl)({ channelId: u }),
+            guild_id: l,
+            channel_id: u,
+            applied_tag_ids: (0, f.q8)(u),
+            num_attachments: (0, f.RR)(u)
+        });
+}
+function I(e) {
+    let { guildId: t, channelId: n } = e;
+    i.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_NEW_POST_DRAFT_CLEARED, {
+        ...(0, f.xl)({ channelId: n }),
+        guild_id: t,
+        channel_id: n
+    });
+}
+function b(e) {
+    let { guildId: t, channelId: n, postId: r } = e;
+    function a() {
+        i.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_POST_CREATED, {
+            ...(0, f.n4)({ channelId: r }),
+            guild_id: t,
+            channel_id: n
+        });
+    }
+    c.Z.isLoading(r) ? c.Z.addConditionalChangeListener(() => !!c.Z.isLoading(r) || (a(), !1)) : a();
+}
+function T(e) {
+    let { guildId: t, channelId: n } = e;
+    i.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_SCROLLED, {
+        ...(0, f.xl)({ channelId: n }),
+        guild_id: t,
+        channel_id: n
+    });
+}
+function S(e) {
+    let { guildId: t, channelId: n, numArchivedThreads: r, hasMoreThreads: a, filterTagIds: o, sortOrder: u } = e;
+    l.default.track(_.rMx.FORUM_CHANNEL_MORE_POSTS_LOADED, {
+        ...(0, i.hH)(t),
+        ...(0, i.v_)(s.Z.getChannel(n)),
+        ...(0, f.xl)({ channelId: n }),
+        guild_id: t,
+        channel_id: n,
+        num_archived_threads: r,
+        num_active_threads: (0, f.bE)(t, n),
+        has_more_threads: a,
+        filter_tag_ids: o,
+        sort_order: u
+    });
+}
+function A(e) {
+    let { guildId: t, channelId: n, postId: r, location: a } = e;
+    i.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_POST_CLICKED, {
+        ...(0, f.n4)({ channelId: r }),
+        guild_id: t,
+        channel_id: n,
+        is_search_result: null != d.Z.getSearchResults(n),
+        location: a
+    });
+}
 function N(e) {
-    let { guildId: n, channelId: r, sortOrder: a } = e;
-    i.ZP.trackWithMetadata(h.rMx.FORUM_CHANNEL_POSTS_SORTED, {
-        ...(0, p.xl)({ channelId: r }),
-        guild_id: n,
-        channel_id: r,
-        sort_type: (0, p.t$)(a),
-        sort_order: a,
-        forum_channel_sort_order: a
+    let { guildId: t, channelId: n, sortOrder: r } = e;
+    i.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_POSTS_SORTED, {
+        ...(0, f.xl)({ channelId: n }),
+        guild_id: t,
+        channel_id: n,
+        sort_type: (0, f.t$)(r),
+        sort_order: r,
+        forum_channel_sort_order: r
+    });
+}
+function C(e) {
+    let { guildId: t, channelId: n, forumLayout: r } = e;
+    i.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_LAYOUT_UPDATED, {
+        ...(0, f.xl)({ channelId: n }),
+        guild_id: t,
+        channel_id: n,
+        forum_channel_layout: r
     });
 }
 function R(e) {
-    let { guildId: n, channelId: r, forumLayout: a } = e;
-    i.ZP.trackWithMetadata(h.rMx.FORUM_CHANNEL_LAYOUT_UPDATED, {
-        ...(0, p.xl)({ channelId: r }),
-        guild_id: n,
-        channel_id: r,
-        forum_channel_layout: a
+    let { postId: t, location: n } = e;
+    i.ZP.trackWithMetadata(_.rMx.FORUM_POST_LINK_COPIED, {
+        forum_post_id: t,
+        location: n
     });
 }
 function O(e) {
-    let { postId: n, location: r } = e;
-    i.ZP.trackWithMetadata(h.rMx.FORUM_POST_LINK_COPIED, {
-        forum_post_id: n,
-        location: r
-    });
+    let { onboardingCTA: t } = e;
+    i.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_ONBOARDING_CLICKED, { onboarding_cta_type: t });
 }
 function D(e) {
-    let { onboardingCTA: n } = e;
-    i.ZP.trackWithMetadata(h.rMx.FORUM_CHANNEL_ONBOARDING_CLICKED, { onboarding_cta_type: n });
-}
-function L(e) {
-    let { forumDemoId: n } = e;
-    i.ZP.trackWithMetadata(h.rMx.FORUM_UPSELL_MODAL_CLICKED, { forum_demo_id: n });
+    let { forumDemoId: t } = e;
+    i.ZP.trackWithMetadata(_.rMx.FORUM_UPSELL_MODAL_CLICKED, { forum_demo_id: t });
 }
 function x(e) {
-    let { added: n } = e;
-    i.ZP.trackWithMetadata(h.rMx.FORUM_ADD_MEDIA_TO_ORIGINAL_POST_CLICKED, { added: n });
+    let { added: t } = e;
+    i.ZP.trackWithMetadata(_.rMx.FORUM_ADD_MEDIA_TO_ORIGINAL_POST_CLICKED, { added: t });
 }
-function w(e) {
-    let { readGuideCta: n } = e;
-    i.ZP.trackWithMetadata(h.rMx.FORUM_CHANNEL_HELPER_CARD_CLICKED, { read_guide_cta: n });
+function L(e) {
+    let { readGuideCta: t } = e;
+    i.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_HELPER_CARD_CLICKED, { read_guide_cta: t });
 }
 function P(e) {
-    let { isMobile: n } = e;
-    i.ZP.trackWithMetadata(h.rMx.FORUM_CHANNEL_MEDIA_UPLOADER_CLICKED, { is_mobile: n });
+    let { isMobile: t } = e;
+    i.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_MEDIA_UPLOADER_CLICKED, { is_mobile: t });
+}
+function w() {
+    i.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_ENABLE_AUTOMOD_CLICKED);
 }
 function M() {
-    i.ZP.trackWithMetadata(h.rMx.FORUM_CHANNEL_ENABLE_AUTOMOD_CLICKED);
+    i.ZP.trackWithMetadata(_.rMx.FORUM_CHANNEL_ENABLE_PREVIEW_CLICKED);
 }
-function k() {
-    i.ZP.trackWithMetadata(h.rMx.FORUM_CHANNEL_ENABLE_PREVIEW_CLICKED);
-}
-function U(e) {
-    i.ZP.trackWithMetadata(h.rMx.CHANNEL_OPENED, {
+function k(e) {
+    i.ZP.trackWithMetadata(_.rMx.CHANNEL_OPENED, {
         ...(0, i.hH)(e.guild_id),
         ...(0, i.v_)(e),
-        ...(0, a.K)(e, !0),
+        ...(0, r.K)(e, !0),
         ...(0, i.$H)(e.id),
         channel_view: 'Split View',
-        platform: (0, c.getPlatform)()
+        platform: (0, u.getPlatform)()
     }),
-        (0, o.a)(h.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: e.id });
+        (0, a.a)(_.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: e.id });
 }
-function B() {
-    i.ZP.trackWithMetadata(h.rMx.OPEN_MODAL, {
+function U() {
+    i.ZP.trackWithMetadata(_.rMx.OPEN_MODAL, {
         type: 'Forum Channel Upsell Modal',
-        location: { section: h.jXE.CHANNEL_WELCOME_CTA }
+        location: { section: _.jXE.CHANNEL_WELCOME_CTA }
     });
 }
 function G(e) {
-    let { guildId: n, channelId: r } = e;
-    i.ZP.trackWithMetadata(h.rMx.THREAD_CREATION_STARTED, {
-        ...(0, a.K)(s.Z.getChannel(r)),
-        channel_id: r,
-        guild_id: n
+    let { guildId: t, channelId: n } = e;
+    i.ZP.trackWithMetadata(_.rMx.THREAD_CREATION_STARTED, {
+        ...(0, r.K)(s.Z.getChannel(n)),
+        channel_id: n,
+        guild_id: t
     });
 }

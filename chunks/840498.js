@@ -1,56 +1,50 @@
-r.d(n, {
-    RA: function () {
-        return u;
-    },
-    Rp: function () {
-        return c;
-    },
-    ge: function () {
-        return s;
-    }
-});
-var i = r(653041);
-function a(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-    return Array.isArray(e) ? e.forEach((e) => a(e, n)) : 'string' == typeof e.content ? n.push(e.content) : null != e.content && a(e.content, n), n;
+function i(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+    return Array.isArray(e) ? e.forEach((e) => i(e, t)) : 'string' == typeof e.content ? t.push(e.content) : null != e.content && i(e.content, t), t;
 }
-function o(e, n) {
-    if (Array.isArray(n)) {
-        let { length: r } = n;
-        for (let i = 0; i < r; i++) e.push(n[i]);
+function r(e, t) {
+    if (Array.isArray(t)) {
+        let { length: n } = t;
+        for (let i = 0; i < n; i++) e.push(t[i]);
         return;
     }
-    e.push(n);
+    e.push(t);
 }
-function s(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+function a(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
     if (Array.isArray(e)) {
-        let r = e.length,
+        let n = e.length,
             i = [];
-        for (let a = 0; a < r; a++) o(i, s(e[a], n));
+        for (let s = 0; s < n; s++) r(i, a(e[s], t));
         return i;
     }
-    return (null != e.content && (e.content = s(e.content, e)), 'inlineCode' === e.type && delete e.validationChildContent, 'list' === e.type && (e.items = e.items.map((e) => (Array.isArray(e) ? s(e, null) : e))), null != n && e.type === n.type) ? e.content : e;
+    return (null != e.content && (e.content = a(e.content, e)), 'inlineCode' === e.type && delete e.validationChildContent, 'list' === e.type && (e.items = e.items.map((e) => (Array.isArray(e) ? a(e, null) : e))), null != t && e.type === t.type) ? e.content : e;
 }
-let l = {};
-function u(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { limit: 200 };
+n.d(t, {
+    RA: () => o,
+    Rp: () => l,
+    ge: () => a
+}),
+    n(653041);
+let s = {};
+function o(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { limit: 200 };
     if (Array.isArray(e)) {
-        let r = e.length;
-        for (let i = 0; i < r; i++) {
-            let r = u(e[i], n);
-            if (r === l) {
+        let n = e.length;
+        for (let i = 0; i < n; i++) {
+            let n = o(e[i], t);
+            if (n === s) {
                 e.length = i;
                 break;
             }
-            e[i] = r;
+            e[i] = n;
         }
     } else if ('text' !== e.type) {
-        if (((n.limit -= 1), n.limit <= 0)) return l;
-        Array.isArray(e.content) && (e.content = u(e.content, n)), 'list' === e.type && (e.items = e.items.map((e) => u(e, n)));
+        if (((t.limit -= 1), t.limit <= 0)) return s;
+        Array.isArray(e.content) && (e.content = o(e.content, t)), 'list' === e.type && (e.items = e.items.map((e) => o(e, t)));
     }
     return e;
 }
-function c(e) {
-    return a(e).join('');
+function l(e) {
+    return i(e).join('');
 }

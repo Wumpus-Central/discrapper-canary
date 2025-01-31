@@ -1,28 +1,24 @@
-t.d(e, {
-    Z: function () {
-        return v;
-    }
-});
+t.d(n, { Z: () => v });
 var a = t(200651),
-    o = t(192379),
-    s = t(120356),
-    c = t.n(s),
-    l = t(481060),
-    i = t(446183),
+    s = t(192379),
+    o = t(120356),
+    c = t.n(o),
+    i = t(481060),
+    l = t(446183),
     r = t(677281),
     d = t(378298),
     u = t(359119),
-    m = t(473092),
+    _ = t(473092),
     x = t(388032),
-    b = t(445587),
-    _ = t(24343);
+    m = t(445587),
+    b = t(24343);
 function g() {
     return (0, a.jsxs)('div', {
-        className: c()(_.toast, b.toast),
+        className: c()(b.toast, m.toast),
         children: [
-            (0, a.jsx)(l.ShieldIcon, { color: l.tokens.colors.TEXT_BRAND }),
-            (0, a.jsx)(l.Text, {
-                className: _.__invalid_content,
+            (0, a.jsx)(i.b7C, { color: i.TVs.colors.TEXT_BRAND }),
+            (0, a.jsx)(i.Text, {
+                className: b.__invalid_content,
                 color: 'header-primary',
                 variant: 'text-md/normal',
                 children: x.intl.string(x.t['gd/Yqq'])
@@ -30,51 +26,51 @@ function g() {
         ]
     });
 }
-function v(n) {
-    let { channelId: e, warningId: t, senderId: s, safetyWarning: _ } = n,
-        v = o.useMemo(() => (null == _ ? void 0 : _.feedback_type) === u.ny.UPVOTE, [_]),
-        h = o.useMemo(() => (null == _ ? void 0 : _.feedback_type) === u.ny.DOWNVOTE, [_]),
-        k = o.useCallback(
-            (n, o) => {
-                (null == _ ? void 0 : _.feedback_type) !== n &&
-                    ((0, d.Ms)(e, t, n),
-                    (0, l.showToast)((0, l.createToast)(x.intl.string(x.t['gd/Yqq']), l.ToastType.CUSTOM, { component: (0, a.jsx)(g, {}) })),
-                    (0, m.qc)({
-                        channelId: e,
+function v(e) {
+    let { channelId: n, warningId: t, senderId: o, safetyWarning: b } = e,
+        v = s.useMemo(() => (null == b ? void 0 : b.feedback_type) === u.ny.UPVOTE, [b]),
+        h = s.useMemo(() => (null == b ? void 0 : b.feedback_type) === u.ny.DOWNVOTE, [b]),
+        k = s.useCallback(
+            (e, s) => {
+                (null == b ? void 0 : b.feedback_type) !== e &&
+                    ((0, d.Ms)(n, t, e),
+                    (0, i.showToast)((0, i.createToast)(x.intl.string(x.t['gd/Yqq']), i.ToastType.CUSTOM, { component: (0, a.jsx)(g, {}) })),
+                    (0, _.qc)({
+                        channelId: n,
                         warningId: t,
-                        senderId: s,
-                        warningType: null == _ ? void 0 : _.type,
-                        cta: o
+                        senderId: o,
+                        warningType: null == b ? void 0 : b.type,
+                        cta: s
                     }));
             },
-            [_, e, t, s]
+            [b, n, t, o]
         );
     return (0, a.jsxs)('div', {
-        className: b.feedback,
+        className: m.feedback,
         children: [
-            (0, a.jsx)(l.Text, {
+            (0, a.jsx)(i.Text, {
                 variant: 'text-sm/medium',
                 color: 'text-normal',
                 children: x.intl.string(x.t.L84yVl)
             }),
             (0, a.jsxs)('div', {
-                className: b.buttonsContainer,
+                className: m.buttonsContainer,
                 children: [
-                    (0, a.jsx)(l.Clickable, {
-                        className: c()([b.buttonsBackground, v ? b.buttonsBackgroundActive : b.buttonsBackgroundInactive, { [b.disabled]: v }]),
-                        onClick: () => k(u.ny.UPVOTE, m.NM.FEEDBACK_UPVOTE),
+                    (0, a.jsx)(i.P3F, {
+                        className: c()([m.buttonsBackground, v ? m.buttonsBackgroundActive : m.buttonsBackgroundInactive, { [m.disabled]: v }]),
+                        onClick: () => k(u.ny.UPVOTE, _.NM.FEEDBACK_UPVOTE),
                         'aria-label': x.intl.string(x.t['2GrOCA']),
                         children: (0, a.jsx)(r.Z, {
-                            className: b.__invalid_buttonIcon,
+                            className: m.__invalid_buttonIcon,
                             color: 'interactive-normal'
                         })
                     }),
-                    (0, a.jsx)(l.Clickable, {
-                        className: c()([b.buttonsBackground, h ? b.buttonsBackgroundActive : b.buttonsBackgroundInactive, { [b.disabled]: h }]),
-                        onClick: () => k(u.ny.DOWNVOTE, m.NM.FEEDBACK_DOWNVOTE),
+                    (0, a.jsx)(i.P3F, {
+                        className: c()([m.buttonsBackground, h ? m.buttonsBackgroundActive : m.buttonsBackgroundInactive, { [m.disabled]: h }]),
+                        onClick: () => k(u.ny.DOWNVOTE, _.NM.FEEDBACK_DOWNVOTE),
                         'aria-label': x.intl.string(x.t.COp9BA),
-                        children: (0, a.jsx)(i.Z, {
-                            className: b.__invalid_buttonIcon,
+                        children: (0, a.jsx)(l.Z, {
+                            className: m.__invalid_buttonIcon,
                             color: 'interactive-normal'
                         })
                     })

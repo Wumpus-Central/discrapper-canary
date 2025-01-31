@@ -1,75 +1,71 @@
-r.d(n, {
-    V: function () {
-        return T;
-    },
-    e: function () {
-        return b;
-    }
-});
+n.d(t, {
+    V: () => I,
+    e: () => v
+}),
+    n(47120);
 var i,
-    a = r(47120);
-var o = r(200651);
-r(192379);
-var s = r(442837),
-    l = r(481060),
-    u = r(570140),
-    c = r(962293),
-    d = r(592125),
-    f = r(271383),
-    p = r(944486),
-    h = r(594174),
-    _ = r(388032),
-    m = r(525680);
-function g(e, n, r) {
+    r = n(200651);
+n(192379);
+var a = n(442837),
+    s = n(481060),
+    o = n(570140),
+    l = n(962293),
+    u = n(592125),
+    c = n(271383),
+    d = n(944486),
+    f = n(594174),
+    _ = n(388032),
+    p = n(525680);
+function h(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let E = new Set();
-class v extends (i = s.ZP.PersistedStore) {
+let m = new Set();
+class g extends (i = a.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (E = new Set(e));
+        null != e && (m = new Set(e));
     }
     hasId(e) {
-        return E.has(e);
+        return m.has(e);
     }
     getState() {
-        return [...E];
+        return [...m];
     }
 }
-g(v, 'displayName', 'PTOStore'), g(v, 'persistKey', 'PTOStore');
-let y = new v(u.Z, {}),
-    b = (e) =>
-        (0, s.e7)([f.ZP, h.default, y], () => {
-            let n = h.default.getCurrentUser();
-            if (null == n || !n.isStaff() || !e.isDM()) return !1;
-            let r = h.default.getUser(e.getRecipientId());
-            if (!(null == r ? void 0 : r.isStaff())) return !1;
-            let i = f.ZP.getNicknames(r.id).some((e) => e.endsWith('[PTO]') || e.endsWith('[OOO]'));
-            return i ? !y.hasId(r.id) && i : (E.delete(r.id) && y.emitChange(), !1);
+h(g, 'displayName', 'PTOStore'), h(g, 'persistKey', 'PTOStore');
+let E = new g(o.Z, {}),
+    v = (e) =>
+        (0, a.e7)([c.ZP, f.default, E], () => {
+            let t = f.default.getCurrentUser();
+            if (null == t || !t.isStaff() || !e.isDM()) return !1;
+            let n = f.default.getUser(e.getRecipientId());
+            if (!(null == n ? void 0 : n.isStaff())) return !1;
+            let i = c.ZP.getNicknames(n.id).some((e) => e.endsWith('[PTO]') || e.endsWith('[OOO]'));
+            return i ? !E.hasId(n.id) && i : (m.delete(n.id) && E.emitChange(), !1);
         }),
-    I = () => {
-        let e = p.Z.getChannelId();
+    y = () => {
+        let e = d.Z.getChannelId();
         if (null == e) return;
-        let n = d.Z.getChannel(e);
-        null != n && n.isPrivate() && !E.has(n.getRecipientId()) && (E.add(n.getRecipientId()), y.emitChange());
+        let t = u.Z.getChannel(e);
+        null != t && t.isPrivate() && !m.has(t.getRecipientId()) && (m.add(t.getRecipientId()), E.emitChange());
     },
-    T = () =>
-        (0, o.jsxs)('div', {
-            className: m.bar,
+    I = () =>
+        (0, r.jsxs)('div', {
+            className: p.bar,
             children: [
-                (0, o.jsx)(l.Text, {
+                (0, r.jsx)(s.Text, {
                     variant: 'text-sm/medium',
                     children: _.intl.string(_.t['2UvR1N'])
                 }),
-                (0, o.jsx)(c.B, { onClick: I })
+                (0, r.jsx)(l.B, { onClick: y })
             ]
         });

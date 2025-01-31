@@ -1,8 +1,4 @@
-r.d(t, {
-    E: function () {
-        return d;
-    }
-});
+r.d(t, { E: () => d });
 var n = r(573654),
     o = r(556841),
     i = r(148843),

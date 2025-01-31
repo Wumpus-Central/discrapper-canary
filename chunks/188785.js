@@ -1,6 +1,2 @@
-r.d(t, {
-    a: function () {
-        return a;
-    }
-});
-let a = !1;
+a.d(e, { a: () => r });
+let r = !1;

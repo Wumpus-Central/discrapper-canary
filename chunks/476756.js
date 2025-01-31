@@ -1,23 +1,19 @@
-n.d(t, {
-    Z: function () {
-        return g;
-    }
-});
+n.d(t, { Z: () => h });
 var i = n(200651);
 n(192379);
-var r = n(512722),
-    s = n.n(r),
-    a = n(442837),
-    l = n(481060),
+var s = n(512722),
+    r = n.n(s),
+    l = n(442837),
+    a = n(481060),
     o = n(716364),
     c = n(474873),
     d = n(197344),
     u = n(871465),
     m = n(388032);
-function g() {
-    let e = (0, a.e7)([c.Z], () => c.Z.getSoundpack()),
+function h() {
+    let e = (0, l.e7)([c.Z], () => c.Z.getSoundpack()),
         t = d.Z.useHolidaySoundpack();
-    s()(null != t, 'should not render this without a holiday soundpack');
+    r()(null != t, 'should not render this without a holiday soundpack');
     let n = [
         {
             value: u.YC.CLASSIC,
@@ -28,7 +24,7 @@ function g() {
             label: m.intl.string(t.soundpackLabel)
         }
     ];
-    return (0, i.jsx)(l.SingleSelect, {
+    return (0, i.jsx)(a.q4e, {
         onChange: o.c,
         value: e,
         options: n,

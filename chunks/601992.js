@@ -1,74 +1,73 @@
-r.d(n, {
-    R: function () {
-        return u;
-    }
+n.d(t, {
+    R: () => l,
+    Z: () => y
 });
-var i = r(442837),
-    a = r(570140),
-    o = r(271383),
-    s = r(9156),
-    l = r(594174);
-function u(e, n) {
-    var r;
-    let i = null === (r = l.default.getCurrentUser()) || void 0 === r ? void 0 : r.id,
-        u = s.ZP.isSuppressEveryoneEnabled(n),
-        c = s.ZP.isSuppressRolesEnabled(n),
-        d = null != e.mentions && e.mentions.some((e) => e.id === i),
-        f = null == n || null == i ? null : o.ZP.getMember(n, i),
-        p = null != e.mention_roles && null != f && null != f.roles && e.mention_roles.some((e) => f.roles.includes(e));
-    a.Z.dispatch({
+var i = n(442837),
+    r = n(570140),
+    a = n(271383),
+    s = n(9156),
+    o = n(594174);
+function l(e, t) {
+    var n;
+    let i = null === (n = o.default.getCurrentUser()) || void 0 === n ? void 0 : n.id,
+        l = s.ZP.isSuppressEveryoneEnabled(t),
+        u = s.ZP.isSuppressRolesEnabled(t),
+        c = null != e.mentions && e.mentions.some((e) => e.id === i),
+        d = null == t || null == i ? null : a.ZP.getMember(t, i),
+        f = null != e.mention_roles && null != d && null != d.roles && e.mention_roles.some((e) => d.roles.includes(e));
+    r.Z.dispatch({
         type: 'MESSAGE_NOTIFICATION_SHOWN',
-        guildId: n,
-        mentioned: d,
-        roleMentioned: p && !c,
-        everyoneMentioned: !0 === e.mention_everyone && !u
+        guildId: t,
+        mentioned: c,
+        roleMentioned: f && !u,
+        everyoneMentioned: !0 === e.mention_everyone && !l
     });
 }
-let c = null,
+let u = null,
+    c = null,
     d = null,
     f = null,
-    p = null,
-    h = {},
     _ = {},
-    m = {},
-    g = {};
-function E() {
+    p = {},
+    h = {},
+    m = {};
+function g() {
     let e = (e) => null != e && Date.now() - e < 60000;
-    for (let n in (!e(c) && (c = null), !e(d) && (d = null), !e(f) && (f = null), !e(p) && (p = null), h)) !e(h[n]) && delete h[n];
-    for (let n in _) !e(_[n]) && delete _[n];
-    for (let n in g) !e(g[n]) && delete g[n];
-    for (let n in m) !e(m[n]) && delete m[n];
+    for (let t in (e(u) || (u = null), e(c) || (c = null), e(d) || (d = null), e(f) || (f = null), _)) e(_[t]) || delete _[t];
+    for (let t in p) e(p[t]) || delete p[t];
+    for (let t in m) e(m[t]) || delete m[t];
+    for (let t in h) e(h[t]) || delete h[t];
 }
-function v(e) {
-    let { guildId: n, mentioned: r, roleMentioned: i, everyoneMentioned: a } = e,
-        o = Date.now();
-    (c = o), null != n && (h[n] = o), r && ((d = o), null != n && (_[n] = o)), i && ((f = o), null != n && (g[n] = o)), a && ((p = o), null != n && (m[n] = o));
+function E(e) {
+    let { guildId: t, mentioned: n, roleMentioned: i, everyoneMentioned: r } = e,
+        a = Date.now();
+    (u = a), null != t && (_[t] = a), n && ((c = a), null != t && (p[t] = a)), i && ((d = a), null != t && (m[t] = a)), r && ((f = a), null != t && (h[t] = a));
 }
-class y extends i.ZP.Store {
+class v extends i.ZP.Store {
     getGlobalStats() {
         let e = (e) => (null == e ? null : Math.floor((Date.now() - e) / 1000));
         return {
-            approx_seconds_since_last_notification: e(c),
-            approx_seconds_since_last_mention: e(d),
-            approx_seconds_since_last_role_mention: e(f),
-            approx_seconds_since_last_everyone_mention: e(p)
+            approx_seconds_since_last_notification: e(u),
+            approx_seconds_since_last_mention: e(c),
+            approx_seconds_since_last_role_mention: e(d),
+            approx_seconds_since_last_everyone_mention: e(f)
         };
     }
     getStats(e) {
-        let n = (e) => (null == e ? null : Math.floor((Date.now() - e) / 1000));
+        let t = (e) => (null == e ? null : Math.floor((Date.now() - e) / 1000));
         return {
-            approx_seconds_since_last_notification: n(c),
-            approx_seconds_since_last_mention: n(d),
-            approx_seconds_since_last_role_mention: n(f),
-            approx_seconds_since_last_everyone_mention: n(p),
-            approx_seconds_since_last_guild_notification: null == e ? null : n(h[e]),
-            approx_seconds_since_last_guild_mention: null == e ? null : n(_[e]),
-            approx_seconds_since_last_guild_role_mention: null == e ? null : n(g[e]),
-            approx_seconds_since_last_guild_everyone_mention: null == e ? null : n(m[e])
+            approx_seconds_since_last_notification: t(u),
+            approx_seconds_since_last_mention: t(c),
+            approx_seconds_since_last_role_mention: t(d),
+            approx_seconds_since_last_everyone_mention: t(f),
+            approx_seconds_since_last_guild_notification: null == e ? null : t(_[e]),
+            approx_seconds_since_last_guild_mention: null == e ? null : t(p[e]),
+            approx_seconds_since_last_guild_role_mention: null == e ? null : t(m[e]),
+            approx_seconds_since_last_guild_everyone_mention: null == e ? null : t(h[e])
         };
     }
 }
-n.Z = new y(a.Z, {
-    CONNECTION_OPEN: E,
-    MESSAGE_NOTIFICATION_SHOWN: v
+let y = new v(r.Z, {
+    CONNECTION_OPEN: g,
+    MESSAGE_NOTIFICATION_SHOWN: E
 });

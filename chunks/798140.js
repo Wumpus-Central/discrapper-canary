@@ -1,49 +1,43 @@
-function i(e, n, r) {
+function i(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-function a(e) {
+function r(e) {
     return null == e || null == e.end_time || new Date(e.end_time) >= new Date();
 }
-function o(e) {
-    let { muted: n, mute_config: r } = e;
-    return !!n && a(r);
+function a(e) {
+    let { muted: t, mute_config: n } = e;
+    return !!t && r(n);
 }
 function s(e) {
-    let { muted: n, mute_config: r } = e;
-    return !!n && null != r && null != r.end_time && new Date(r.end_time) >= new Date();
+    let { muted: t, mute_config: n } = e;
+    return !!t && null != n && null != n.end_time && new Date(n.end_time) >= new Date();
 }
-function l(e) {
+function o(e) {
     return null == e.end_time ? null : new Date(e.end_time).getTime() - Date.now();
 }
-r.d(n, {
-    Cl: function () {
-        return s;
-    },
-    ZP: function () {
-        return u;
-    },
-    m$: function () {
-        return o;
-    }
+n.d(t, {
+    Cl: () => s,
+    ZP: () => l,
+    m$: () => a
 });
-class u {
+class l {
     reset() {
         Object.values(this.timers).forEach((e) => clearTimeout(e)), (this.timers = {});
     }
-    setTimer(e, n, r) {
-        if (null == e || null == n) return !1;
-        let i = l(n);
-        return null != i && (!!(i <= 0) || ((this.timers[e] = setTimeout(r, Math.max(0, i))), !1));
+    setTimer(e, t, n) {
+        if (null == e || null == t) return !1;
+        let i = o(t);
+        return null != i && (i <= 0 || ((this.timers[e] = setTimeout(n, Math.max(0, i))), !1));
     }
     clearTimer(e) {
         null != e && e in this.timers && (clearTimeout(this.timers[e]), delete this.timers[e]);

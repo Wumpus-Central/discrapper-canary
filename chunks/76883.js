@@ -24,39 +24,38 @@ var n = r(381538),
                 e
             );
         }
-        (r = e), (c = t), (r.prototype = Object.create(c.prototype)), (r.prototype.constructor = r), (r.__proto__ = c);
-        var r,
-            c,
-            l = e.prototype;
+        (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
+        var r = e.prototype;
         return (
-            (l._setSelection = function () {
+            (r._setSelection = function () {
                 var t,
                     e = this.props.selection;
-                if (null == e || !e.getHasFocus()) return;
-                var r = this.props,
-                    n = r.block,
-                    i = r.start,
-                    o = r.text,
-                    c = n.getKey(),
-                    l = i + o.length;
-                if (!!e.hasEdgeWithin(c, i, l)) {
-                    var f = this.leaf;
-                    f || a(!1);
-                    var p = f.firstChild;
-                    p || a(!1), p.nodeType === Node.TEXT_NODE ? (t = p) : u(p) ? (t = f) : (t = p.firstChild) || a(!1), s(e, t, c, i, l);
+                if (null != e && e.getHasFocus()) {
+                    var r = this.props,
+                        n = r.block,
+                        i = r.start,
+                        o = r.text,
+                        c = n.getKey(),
+                        l = i + o.length;
+                    if (e.hasEdgeWithin(c, i, l)) {
+                        var f = this.leaf;
+                        f || a(!1);
+                        var p = f.firstChild;
+                        p || a(!1), p.nodeType === Node.TEXT_NODE ? (t = p) : u(p) ? (t = f) : (t = p.firstChild) || a(!1), s(e, t, c, i, l);
+                    }
                 }
             }),
-            (l.shouldComponentUpdate = function (t) {
+            (r.shouldComponentUpdate = function (t) {
                 var e = this.leaf;
                 return e || a(!1), e.textContent !== t.text || t.styleSet !== this.props.styleSet || t.forceSelection;
             }),
-            (l.componentDidUpdate = function () {
+            (r.componentDidUpdate = function () {
                 this._setSelection();
             }),
-            (l.componentDidMount = function () {
+            (r.componentDidMount = function () {
                 this._setSelection();
             }),
-            (l.render = function () {
+            (r.render = function () {
                 var t = this,
                     e = this.props.block,
                     r = this.props.text;

@@ -1,37 +1,17 @@
 n.d(t, {
-    NQ: function () {
-        return g;
-    },
-    U1: function () {
-        return u;
-    },
-    XW: function () {
-        return l;
-    },
-    _J: function () {
-        return _;
-    },
-    aP: function () {
-        return o;
-    },
-    e7: function () {
-        return m;
-    },
-    h6: function () {
-        return d;
-    },
-    oE: function () {
-        return r;
-    },
-    y: function () {
-        return c;
-    },
-    yS: function () {
-        return s;
-    }
+    NQ: () => m,
+    U1: () => o,
+    XW: () => a,
+    _J: () => _,
+    aP: () => u,
+    e7: () => E,
+    h6: () => d,
+    oE: () => r,
+    y: () => s,
+    yS: () => c
 });
-var i = n(15729);
-let a = {
+var l = n(15729);
+let i = {
         nickname: void 0,
         dmsAllowed: !0,
         showActivity: !0,
@@ -39,8 +19,8 @@ let a = {
         inviteCode: void 0,
         guildId: void 0
     },
-    l = (0, i.U)((e) => ({
-        ...a,
+    a = (0, l.U)((e) => ({
+        ...i,
         touched: !1,
         setNickname: (t) =>
             e((e) => ({
@@ -74,21 +54,21 @@ let a = {
             })),
         reset: () =>
             e({
-                ...a,
+                ...i,
                 touched: !1
             })
     })),
     r = () => {
-        l.getState().reset();
+        a.getState().reset();
     },
-    o = () => {
-        let e = l.getState();
-        return e.nickname !== a.nickname || e.dmsAllowed !== a.dmsAllowed || e.showActivity !== a.showActivity || e.mutedServer !== a.mutedServer;
+    u = () => {
+        let e = a.getState();
+        return e.nickname !== i.nickname || e.dmsAllowed !== i.dmsAllowed || e.showActivity !== i.showActivity || e.mutedServer !== i.mutedServer;
     },
-    c = () => l.getState().nickname,
-    d = () => l.getState().dmsAllowed,
-    u = () => l.getState().showActivity,
-    s = () => l.getState().mutedServer,
-    m = () => l.getState().inviteCode,
-    _ = () => l.getState().guildId,
-    g = () => l.getState().touched;
+    s = () => a.getState().nickname,
+    d = () => a.getState().dmsAllowed,
+    o = () => a.getState().showActivity,
+    c = () => a.getState().mutedServer,
+    E = () => a.getState().inviteCode,
+    _ = () => a.getState().guildId,
+    m = () => a.getState().touched;

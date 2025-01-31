@@ -1,15 +1,10 @@
-r.r(n),
-    r.d(n, {
-        default: function () {
-            return o;
-        }
-    });
-var i = r(200651);
-r(192379);
-var a = r(952265);
-function o() {
-    (0, a.ZD)(async () => {
-        let { default: e } = await r.e('98137').then(r.bind(r, 397013));
-        return (n) => (0, i.jsx)(e, { ...n });
+n.r(t), n.d(t, { default: () => a });
+var i = n(200651);
+n(192379);
+var r = n(952265);
+function a() {
+    (0, r.ZD)(async () => {
+        let { default: e } = await n.e('98137').then(n.bind(n, 397013));
+        return (t) => (0, i.jsx)(e, { ...t });
     });
 }

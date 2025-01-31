@@ -1,23 +1,24 @@
-var i = r(200651);
-r(192379);
-var a = r(481060);
-n.Z = {
+n.d(t, { Z: () => a });
+var i = n(200651);
+n(192379);
+var r = n(481060);
+let a = {
     show(e) {
-        let { url: n, trustUrl: o, onConfirm: s, onCancel: l, isProtocol: u, contextKey: c } = e;
-        (0, a.openModalLazy)(
+        let { url: t, trustUrl: a, onConfirm: s, onCancel: o, isProtocol: l, contextKey: u } = e;
+        (0, r.ZDy)(
             async () => {
-                let { default: e } = await r.e('85668').then(r.bind(r, 720553));
-                return (r) =>
+                let { default: e } = await n.e('85668').then(n.bind(n, 720553));
+                return (n) =>
                     (0, i.jsx)(e, {
-                        ...r,
-                        url: n,
-                        isProtocol: u,
-                        trustUrl: o,
+                        ...n,
+                        url: t,
+                        isProtocol: l,
+                        trustUrl: a,
                         onConfirm: s,
-                        onCancel: l
+                        onCancel: o
                     });
             },
-            { contextKey: c }
+            { contextKey: u }
         );
     }
 };

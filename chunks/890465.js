@@ -1,8 +1,4 @@
-r.d(n, {
-    V: function () {
-        return i;
-    }
-});
+n.d(t, { V: () => i });
 class i {
     call() {
         try {
@@ -13,7 +9,7 @@ class i {
             (this.task = null), this.release(this);
         }
     }
-    constructor(e, n) {
-        (this.onError = e), (this.release = n), (this.task = null);
+    constructor(e, t) {
+        (this.onError = e), (this.release = t), (this.task = null);
     }
 }

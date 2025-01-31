@@ -1,11 +1,12 @@
+n.d(t, { Z: () => p });
 var i = n(200651),
     s = n(192379),
-    r = n(512969),
-    o = n(749210),
-    a = n(287734),
-    l = n(765717),
-    c = n(893607),
-    d = n(703656),
+    l = n(512969),
+    r = n(749210),
+    o = n(287734),
+    a = n(765717),
+    d = n(893607),
+    c = n(703656),
     u = n(981631);
 class h extends s.Component {
     componentDidUpdate(e) {
@@ -27,26 +28,26 @@ class h extends s.Component {
                 messageId: i
             };
         })(e);
-        (0, c.Ss)(t) && (0, c.cq)(n)
-            ? (o.Z.selectGuild(t),
-              a.default.selectChannel({
+        (0, d.Ss)(t) && (0, d.cq)(n)
+            ? (r.Z.selectGuild(t),
+              o.default.selectChannel({
                   guildId: t,
                   channelId: n,
                   messageId: i
               }))
-            : (0, d.dL)(u.Z5c.ME);
+            : (0, c.dL)(u.Z5c.ME);
     }
     render() {
         return null;
     }
 }
-t.Z = () =>
-    (0, i.jsxs)(r.rs, {
+let p = () =>
+    (0, i.jsxs)(l.rs, {
         children: [
-            (0, i.jsx)(l.Z, {
-                path: u.Z5c.CHANNEL(c.Hw.guildId(), c.Hw.channelId({ optional: !0 }), ':messageId?'),
+            (0, i.jsx)(a.Z, {
+                path: u.Z5c.CHANNEL(d.Hw.guildId(), d.Hw.channelId({ optional: !0 }), ':messageId?'),
                 component: h
             }),
-            (0, i.jsx)(l.Z, { component: h })
+            (0, i.jsx)(a.Z, { component: h })
         ]
     });

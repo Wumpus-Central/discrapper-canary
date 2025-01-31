@@ -1,50 +1,44 @@
-r.d(n, {
-    Z: function () {
-        return l;
-    }
-});
-var i = r(411104);
-var a = r(47120);
-var o = r(570140);
-function s(e, n, r) {
+n.d(t, { Z: () => a }), n(411104), n(47120), n(17089);
+var i = n(570140);
+function r(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class l {
+class a {
     initialize() {
         this.initializedCount++,
-            !(this.initializedCount > 1) &&
+            this.initializedCount > 1 ||
                 (this._initialize(),
                 Object.entries(this.actions).forEach((e) => {
-                    let [n, r] = e;
-                    o.Z.subscribe(n, 'function' == typeof r ? r : r.callback);
+                    let [t, n] = e;
+                    i.Z.subscribe(t, 'function' == typeof n ? n : n.callback);
                 }),
-                this.stores.forEach((e, n) => {
-                    n.addChangeListener(e), e();
+                this.stores.forEach((e, t) => {
+                    t.addChangeListener(e), e();
                 }));
     }
     terminate(e) {
-        !(this.initializedCount <= 0) &&
+        this.initializedCount <= 0 ||
             (e ? (this.initializedCount = 0) : this.initializedCount--,
             0 === this.initializedCount &&
                 (this._terminate(),
                 Object.entries(this.actions).forEach((e) => {
-                    let [n, r] = e;
-                    o.Z.unsubscribe(n, 'function' == typeof r ? r : r.callback);
+                    let [t, n] = e;
+                    i.Z.unsubscribe(t, 'function' == typeof n ? n : n.callback);
                 })));
     }
     _initialize() {}
     _terminate() {}
     constructor() {
-        s(this, 'initializedCount', 0), s(this, 'actions', {}), s(this, 'stores', new Map());
+        r(this, 'initializedCount', 0), r(this, 'actions', {}), r(this, 'stores', new Map());
     }
 }

@@ -1,9 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => c }), n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(481060),
@@ -13,7 +8,7 @@ var i = n(200651),
 function c(e) {
     let { onChange: t, initialValue: n, maxWordCount: c, collapsed: d = !1 } = e,
         [u, m] = r.useState(!d);
-    return (0, i.jsx)(l.Collapsible, {
+    return (0, i.jsx)(l.zF9, {
         isExpanded: u,
         collapsibleContent: (0, i.jsx)(s.Z, {
             onChangeText: t,
@@ -26,24 +21,24 @@ function c(e) {
         className: o.collapseable,
         children: (e) => {
             let { onClick: t } = e;
-            return (0, i.jsx)(l.Clickable, {
+            return (0, i.jsx)(l.P3F, {
                 onClick: (e) => {
                     m(!u), t(e);
                 },
                 children: (0, i.jsxs)('div', {
                     className: o.header,
                     children: [
-                        (0, i.jsx)(l.Heading, {
+                        (0, i.jsx)(l.X6q, {
                             variant: 'text-sm/medium',
                             children: a.intl.string(a.t.lbE2Nj)
                         }),
                         u
-                            ? (0, i.jsx)(l.ChevronSmallUpIcon, {
+                            ? (0, i.jsx)(l.u04, {
                                   size: 'md',
                                   color: 'currentColor',
                                   className: o.arrow
                               })
-                            : (0, i.jsx)(l.ChevronSmallDownIcon, {
+                            : (0, i.jsx)(l.CJ0, {
                                   size: 'md',
                                   color: 'currentColor',
                                   className: o.arrow

@@ -1,8 +1,4 @@
-n.d(t, {
-    j: function () {
-        return o;
-    }
-});
+n.d(t, { j: () => o });
 var i = n(200651);
 n(192379);
 var r = n(120356),
@@ -15,12 +11,12 @@ function o(e) {
         className: a.container,
         children: t.map((e) =>
             (0, i.jsx)(
-                s.Tooltip,
+                s.ua7,
                 {
                     text: e.tooltipText,
                     shouldShow: null != e.tooltipText,
                     children: (t) =>
-                        (0, i.jsx)(s.Clickable, {
+                        (0, i.jsx)(s.P3F, {
                             ...t,
                             className: l()(a.pill, { [a.disabled]: e.disabled }, n),
                             onClick: e.onClick,

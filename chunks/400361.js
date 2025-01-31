@@ -1,4 +1,5 @@
-t.Z = {
+n.d(t, { Z: () => o });
+let o = {
     animationIterationCount: 1,
     borderImageOutset: 1,
     borderImageSlice: 1,

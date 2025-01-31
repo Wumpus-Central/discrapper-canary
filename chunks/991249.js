@@ -1,23 +1,19 @@
-e.d(n, {
-    Z: function () {
-        return l;
-    }
-});
-var i = e(200651);
-e(192379);
-var o = e(481060),
-    r = e(239091),
-    a = e(765250),
-    u = e(388032);
-function l(t, n) {
+n.d(e, { Z: () => c });
+var i = n(200651);
+n(192379);
+var a = n(481060),
+    o = n(239091),
+    r = n(765250),
+    l = n(388032);
+function c(t, e) {
     return (0, i.jsx)(
-        o.MenuCheckboxItem,
+        a.S89,
         {
-            label: u.intl.string(u.t.XQQQFB),
-            checked: n,
+            label: l.intl.string(l.t.XQQQFB),
+            checked: e,
             id: 'widget-layout-type',
             action: () => {
-                (0, a.zG)(t, { horizontal: !n }), (0, r.Zy)();
+                (0, r.zG)(t, { horizontal: !e }), (0, o.Zy)();
             }
         },
         'widget-layout-type'

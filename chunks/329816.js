@@ -1,242 +1,240 @@
-var i = r(47120);
-var a = r(653041);
-var o = r(200651),
-    s = r(192379),
-    l = r(120356),
-    u = r.n(l),
-    c = r(610521),
-    d = r(512969),
-    f = r(873546),
-    p = r(442837),
-    h = r(704215),
-    _ = r(335854),
-    m = r(481060),
-    g = r(570140),
-    E = r(721037),
-    v = r(490173),
-    y = r(504626),
-    b = r(735246),
-    I = r(315263),
-    T = r(40851),
-    S = r(607070),
-    A = r(899663),
-    C = r(793903),
-    N = r(213609),
-    R = r(613413),
-    O = r(94795),
-    D = r(327943),
-    L = r(907459),
-    x = r(559407),
-    w = r(556766),
-    P = r(514361),
-    M = r(724145),
-    k = r(195302),
-    U = r(260035),
-    B = r(482215),
-    G = r(540059),
-    Z = r(947519),
-    F = r(243778),
-    V = r(314910),
-    j = r(84615),
-    H = r(429142),
-    Y = r(813744),
-    W = r(311476),
-    K = r(892254),
-    z = r(210887),
-    q = r(978781),
-    Q = r(314897),
-    X = r(819640),
-    J = r(594174),
-    $ = r(451478),
-    ee = r(358085),
-    et = r(74538),
-    en = r(663993),
-    er = r(823453),
-    ei = r(628123),
-    ea = r(436774),
-    eo = r(686546),
-    es = r(950796),
-    el = r(151851),
-    eu = r(981631),
-    ec = r(921944),
-    ed = r(999429);
-r(167666),
+n.d(t, { Z: () => ef }), n(47120), n(653041);
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(610521),
+    l = n(512969),
+    u = n(873546),
+    c = n(442837),
+    d = n(704215),
+    f = n(335854),
+    _ = n(481060),
+    p = n(570140),
+    h = n(721037),
+    m = n(490173),
+    g = n(504626),
+    E = n(735246),
+    v = n(315263),
+    y = n(40851),
+    I = n(607070),
+    b = n(899663),
+    T = n(793903),
+    S = n(213609),
+    A = n(613413),
+    N = n(94795),
+    C = n(327943),
+    R = n(907459),
+    O = n(559407),
+    D = n(556766),
+    x = n(514361),
+    L = n(724145),
+    P = n(195302),
+    w = n(260035),
+    M = n(482215),
+    k = n(540059),
+    U = n(947519),
+    G = n(243778),
+    B = n(314910),
+    Z = n(84615),
+    F = n(429142),
+    V = n(813744),
+    j = n(311476),
+    H = n(892254),
+    Y = n(210887),
+    W = n(978781),
+    K = n(314897),
+    z = n(819640),
+    q = n(594174),
+    Q = n(451478),
+    X = n(358085),
+    J = n(74538),
+    $ = n(663993),
+    ee = n(823453),
+    et = n(628123),
+    en = n(436774),
+    ei = n(686546),
+    er = n(950796),
+    ea = n(151851),
+    es = n(981631),
+    eo = n(921944),
+    el = n(999429);
+n(167666),
     Promise.resolve()
-        .then(r.bind(r, 62883))
+        .then(n.bind(n, 62883))
         .then((e) => {
-            ee.isPlatformEmbedded ? window.addEventListener('contextmenu', e.contextMenuCallbackNative, !1) : window.addEventListener('contextmenu', e.contextMenuCallbackWeb, !1);
+            X.isPlatformEmbedded ? window.addEventListener('contextmenu', e.contextMenuCallbackNative, !1) : window.addEventListener('contextmenu', e.contextMenuCallbackWeb, !1);
         }),
-    (0, _.E)({ getDefaultLinkInterceptor: I.default }),
-    (0, en.Un)({
-        createPromise: () => Promise.all([r.e('80451'), r.e('30634'), r.e('54343')]).then(r.bind(r, 849493)),
+    (0, f.E)({ getDefaultLinkInterceptor: v.default }),
+    (0, $.Un)({
+        createPromise: () => Promise.all([n.e('80451'), n.e('30634'), n.e('33551')]).then(n.bind(n, 849493)),
         webpackId: 849493
     }),
-    (0, en.Un)({
-        createPromise: () => Promise.all([r.e('80451'), r.e('30634'), r.e('81811')]).then(r.bind(r, 80753)),
+    (0, $.Un)({
+        createPromise: () => Promise.all([n.e('80451'), n.e('30634'), n.e('58493')]).then(n.bind(n, 80753)),
         webpackId: 80753
     });
-let ef = (0, en.Un)({
-        createPromise: () => r.e('46369').then(r.bind(r, 177741)),
+let eu = (0, $.Un)({
+        createPromise: () => n.e('67110').then(n.bind(n, 177741)),
         webpackId: 177741
     }),
-    ep = (0, en.Un)({
-        createPromise: () => Promise.all([r.e('78447'), r.e('81465')]).then(r.bind(r, 420541)),
+    ec = (0, $.Un)({
+        createPromise: () => Promise.all([n.e('78447'), n.e('13474')]).then(n.bind(n, 420541)),
         webpackId: 420541
     }),
-    eh = s.memo(function (e) {
-        let n = (0, p.e7)([$.Z], () => $.Z.isFocused()),
-            r = (0, p.e7)([X.Z], () => X.Z.hasLayers()),
-            i = (0, m.useModalsStore)(m.hasAnyModalOpen);
-        return (0, G.Q3)('ConnectedTitleBar')
-            ? (0, o.jsx)(es.D, {
+    ed = r.memo(function (e) {
+        let t = (0, c.e7)([Q.Z], () => Q.Z.isFocused()),
+            n = (0, c.e7)([z.Z], () => z.Z.hasLayers()),
+            r = (0, _.s9z)(_.$sL);
+        return (0, k.Q3)('ConnectedTitleBar')
+            ? (0, i.jsx)(er.D, {
                   fixed: !0,
-                  show: r || i || !Q.default.isAuthenticated()
+                  show: n || r || !K.default.isAuthenticated()
               })
-            : (0, o.jsx)(el.Z, {
+            : (0, i.jsx)(ea.Z, {
                   ...e,
-                  focused: n
+                  focused: t
               });
-    });
-function e_(e) {
-    let { children: n, skipsSettingDefaultPageTitle: r } = e,
-        { pathname: i } = (0, d.TH)(),
-        a = (0, ee.getPlatform)(),
-        l = f.tq || f.Em,
-        _ = (0, p.e7)([z.Z], () => (z.Z.darkSidebar ? eu.BRd.DARK : void 0)),
-        I = (0, G.Q3)('ChannelSidebar'),
-        Q = (0, p.e7)([S.Z], () => (S.Z.useForcedColors ? 'yes' : 'no')),
-        [$, en, es] = (0, p.Wu)([P.Z], () => [P.Z.isEditorOpen, P.Z.isCoachmark, P.Z.isPreview]),
-        [el, e_] = (0, p.Wu)([D.Z], () => [D.Z.isEditorOpen, D.Z.isUpsellPreview]),
-        em = (0, p.e7)([X.Z], () => X.Z.getLayers().includes(eu.S9g.USER_SETTINGS)),
-        eg = (0, p.e7)([J.default], () => et.ZP.canUseClientThemes(J.default.getCurrentUser())),
-        eE = $ && !em,
-        ev = el && !em,
-        ey = [];
-    eE && en && !eg && ey.push(h.z.CLIENT_THEMES_COACHMARK);
-    let [eb, eI] = (0, F.US)(ey, ec.R.SIDEBAR, !0);
-    ey.push(h.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
-    let eT = eb === h.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
-        eS = eb === h.z.CLIENT_THEMES_COACHMARK;
-    s.useEffect(() => {
-        null ==
-            (0, d.LX)(i, {
-                path: 'invite',
-                exact: !1,
-                strict: !1
-            }) &&
-            eT &&
-            !eS &&
-            ((0, O.nJ)(),
-            g.Z.dispatch({
-                type: 'APP_ICON_TRACK_IMPRESSION',
-                markAsDismissed: eI
-            }));
-    }, [eT, eS, eI, i]);
-    let eA = s.useRef(document.body),
-        eC = (eE && !en) || eS,
-        eN = ev && !eS,
-        eR = es || e_,
-        { enabled: eO } = W.Z.useExperiment(
-            { location: 'AppSkeleton' },
+    }),
+    ef = function (e) {
+        let { children: t, skipsSettingDefaultPageTitle: n } = e,
+            { pathname: a } = (0, l.TH)(),
+            f = (0, X.getPlatform)(),
+            v = u.tq || u.Em,
+            K = (0, c.e7)([Y.Z], () => (Y.Z.darkSidebar ? es.BRd.DARK : void 0)),
+            Q = (0, k.Q3)('ChannelSidebar'),
+            $ = (0, c.e7)([I.Z], () => (I.Z.useForcedColors ? 'yes' : 'no')),
+            [er, ea, ef] = (0, c.Wu)([x.Z], () => [x.Z.isEditorOpen, x.Z.isCoachmark, x.Z.isPreview]),
+            [e_, ep] = (0, c.Wu)([C.Z], () => [C.Z.isEditorOpen, C.Z.isUpsellPreview]),
+            eh = (0, c.e7)([z.Z], () => z.Z.getLayers().includes(es.S9g.USER_SETTINGS)),
+            em = (0, c.e7)([q.default], () => J.ZP.canUseClientThemes(q.default.getCurrentUser())),
+            eg = er && !eh,
+            eE = e_ && !eh,
+            ev = [];
+        eg && ea && !em && ev.push(d.z.CLIENT_THEMES_COACHMARK);
+        let [ey, eI] = (0, G.US)(ev, eo.R.SIDEBAR, !0);
+        ev.push(d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK);
+        let eb = ey === d.z.DEKSTOP_CUSTOM_APP_ICON_COACHMARK,
+            eT = ey === d.z.CLIENT_THEMES_COACHMARK;
+        r.useEffect(() => {
+            null ==
+                (0, l.LX)(a, {
+                    path: 'invite',
+                    exact: !1,
+                    strict: !1
+                }) &&
+                eb &&
+                !eT &&
+                ((0, N.nJ)(),
+                p.Z.dispatch({
+                    type: 'APP_ICON_TRACK_IMPRESSION',
+                    markAsDismissed: eI
+                }));
+        }, [eb, eT, eI, a]);
+        let eS = r.useRef(document.body),
+            eA = (eg && !ea) || eT,
+            eN = eE && !eT,
+            eC = ef || ep,
+            { enabled: eR } = j.Z.useExperiment(
+                { location: 'AppSkeleton' },
+                {
+                    autoTrackExposure: eC && (eA || eN),
+                    disable: !eC
+                }
+            ),
+            eO = ''.concat(Q ? 'enabled' : 'disabled').concat($);
+        return (0, i.jsx)(
+            H.Z,
             {
-                autoTrackExposure: eR && (eC || eN),
-                disable: !eR
-            }
-        ),
-        eD = ''.concat(I ? 'enabled' : 'disabled').concat(Q);
-    return (0, o.jsx)(
-        K.Z,
-        {
-            children: (0, o.jsx)(A.Z, {
-                children: (0, o.jsxs)(m.RedesignIconContextProvider, {
-                    children: [
-                        (0, o.jsx)(er.Z, { skipsSettingDefaultPageTitle: r }),
-                        (0, o.jsx)(b.T, {
-                            children: (0, o.jsx)(ei.Z, {
-                                children: (0, o.jsxs)(m.FocusRingScope, {
-                                    containerRef: eA,
-                                    children: [
-                                        (0, o.jsx)(eo.Co, {}),
-                                        (0, o.jsx)(ea.ZP, {}),
-                                        (0, o.jsx)(c.OU, {}),
-                                        (0, o.jsx)(T.Wu, {
-                                            appContext: eu.IlC.APP,
-                                            renderWindow: window,
-                                            children: (0, o.jsxs)(V.yP, {
-                                                children: [
-                                                    null != a
-                                                        ? (0, o.jsx)(eh, {
-                                                              type: a,
-                                                              themeOverride: _
-                                                          })
-                                                        : null,
-                                                    (0, o.jsxs)('div', {
-                                                        className: u()(ed.appAsidePanelWrapper, l && ed.mobileAppAsidePanelWrapper),
-                                                        children: [
-                                                            (0, o.jsx)(B.K, {}),
-                                                            (0, o.jsx)('div', {
-                                                                className: ed.notAppAsidePanel,
-                                                                'data-app-not-dev-tools': !0,
-                                                                children: (0, o.jsx)(U.m, {
-                                                                    children: (0, o.jsx)(H.OR, {
-                                                                        children: (0, o.jsx)(C.Z.Provider, {
-                                                                            value: N.Z,
-                                                                            children: (0, o.jsxs)(k.p, {
-                                                                                children: [
-                                                                                    (0, o.jsx)('div', {
-                                                                                        className: u()(l ? ed.mobileApp : ed.app),
-                                                                                        children: n
-                                                                                    }),
-                                                                                    (0, o.jsx)(x.Z, {}),
-                                                                                    (0, o.jsx)(v.Z, {}),
-                                                                                    (0, o.jsx)(m.Modals, {}),
-                                                                                    (0, o.jsx)(y.Z, {}),
-                                                                                    (0, o.jsx)(j.Ox, {}),
-                                                                                    (0, o.jsx)(V.Un, {}),
-                                                                                    (0, o.jsx)(H.ot, {}),
-                                                                                    (0, o.jsx)(m.ToastContainer, {}),
-                                                                                    (0, o.jsx)(R.Z, {}),
-                                                                                    (0, o.jsx)(Y.Z, {}),
-                                                                                    (0, o.jsx)(ef, {}),
-                                                                                    (0, o.jsx)(ep, {})
-                                                                                ]
+                children: (0, i.jsx)(b.Z, {
+                    children: (0, i.jsxs)(_.vWI, {
+                        children: [
+                            (0, i.jsx)(ee.Z, { skipsSettingDefaultPageTitle: n }),
+                            (0, i.jsx)(E.T, {
+                                children: (0, i.jsx)(et.Z, {
+                                    children: (0, i.jsxs)(_.JcV, {
+                                        containerRef: eS,
+                                        children: [
+                                            (0, i.jsx)(ei.Co, {}),
+                                            (0, i.jsx)(en.ZP, {}),
+                                            (0, i.jsx)(o.OU, {}),
+                                            (0, i.jsx)(y.Wu, {
+                                                appContext: es.IlC.APP,
+                                                renderWindow: window,
+                                                children: (0, i.jsxs)(B.yP, {
+                                                    children: [
+                                                        null != f
+                                                            ? (0, i.jsx)(ed, {
+                                                                  type: f,
+                                                                  themeOverride: K
+                                                              })
+                                                            : null,
+                                                        (0, i.jsxs)('div', {
+                                                            className: s()(el.appAsidePanelWrapper, v && el.mobileAppAsidePanelWrapper),
+                                                            children: [
+                                                                (0, i.jsx)(M.K, {}),
+                                                                (0, i.jsx)('div', {
+                                                                    className: el.notAppAsidePanel,
+                                                                    'data-app-not-dev-tools': !0,
+                                                                    children: (0, i.jsx)(w.m, {
+                                                                        children: (0, i.jsx)(F.OR, {
+                                                                            children: (0, i.jsx)(T.Z.Provider, {
+                                                                                value: S.Z,
+                                                                                children: (0, i.jsxs)(P.p, {
+                                                                                    children: [
+                                                                                        (0, i.jsx)('div', {
+                                                                                            className: s()(v ? el.mobileApp : el.app),
+                                                                                            children: t
+                                                                                        }),
+                                                                                        (0, i.jsx)(O.Z, {}),
+                                                                                        (0, i.jsx)(m.Z, {}),
+                                                                                        (0, i.jsx)(_.nKe, {}),
+                                                                                        (0, i.jsx)(g.Z, {}),
+                                                                                        (0, i.jsx)(Z.Ox, {}),
+                                                                                        (0, i.jsx)(B.Un, {}),
+                                                                                        (0, i.jsx)(F.ot, {}),
+                                                                                        (0, i.jsx)(_.Ixi, {}),
+                                                                                        (0, i.jsx)(A.Z, {}),
+                                                                                        (0, i.jsx)(V.Z, {}),
+                                                                                        (0, i.jsx)(eu, {}),
+                                                                                        (0, i.jsx)(ec, {})
+                                                                                    ]
+                                                                                })
                                                                             })
                                                                         })
                                                                     })
-                                                                })
-                                                            }),
-                                                            (0, o.jsx)(w.Z, {}),
-                                                            (0, o.jsx)(E.Z, {}),
-                                                            eC && !eO && (0, o.jsx)(M.Z, { markAsDismissed: eI }),
-                                                            eN &&
-                                                                !eO &&
-                                                                (0, o.jsx)(L.Z, {
-                                                                    isCoachmark: eT,
-                                                                    markAsDismissed: eI
                                                                 }),
-                                                            (eC || eN) &&
-                                                                eO &&
-                                                                (0, o.jsx)(q.Z, {
-                                                                    initialTab: eN ? q._.APP_ICONS : q._.CLIENT_THEMES,
-                                                                    markAsDismissed: eI
-                                                                }),
-                                                            (0, o.jsx)(Z.Z, { mobile: l })
-                                                        ]
-                                                    }),
-                                                    !1
-                                                ]
-                                            })
-                                        }),
-                                        (0, o.jsx)(c.OU, {})
-                                    ]
+                                                                (0, i.jsx)(D.Z, {}),
+                                                                (0, i.jsx)(h.Z, {}),
+                                                                eA && !eR && (0, i.jsx)(L.Z, { markAsDismissed: eI }),
+                                                                eN &&
+                                                                    !eR &&
+                                                                    (0, i.jsx)(R.Z, {
+                                                                        isCoachmark: eb,
+                                                                        markAsDismissed: eI
+                                                                    }),
+                                                                (eA || eN) &&
+                                                                    eR &&
+                                                                    (0, i.jsx)(W.Z, {
+                                                                        initialTab: eN ? W._.APP_ICONS : W._.CLIENT_THEMES,
+                                                                        markAsDismissed: eI
+                                                                    }),
+                                                                (0, i.jsx)(U.Z, { mobile: v })
+                                                            ]
+                                                        }),
+                                                        !1
+                                                    ]
+                                                })
+                                            }),
+                                            (0, i.jsx)(o.OU, {})
+                                        ]
+                                    })
                                 })
                             })
-                        })
-                    ]
+                        ]
+                    })
                 })
-            })
-        },
-        eD
-    );
-}
-n.Z = e_;
+            },
+            eO
+        );
+    };

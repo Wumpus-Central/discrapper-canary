@@ -1,49 +1,44 @@
-r.d(n, {
-    O: function () {
-        return f;
-    }
-});
-var i = r(47120);
-var a = r(192379),
-    o = r(237617),
-    s = r(266338);
-let l = {};
-function u(e, n) {
-    let r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        i = (0, a.useRef)(null),
-        u = (0, o.Z)(null != n ? n : l),
-        c = (0, a.useRef)(null);
+n.d(t, { O: () => c }), n(47120);
+var i = n(192379),
+    r = n(237617),
+    a = n(266338);
+let s = {};
+function o(e, t) {
+    let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+        o = (0, i.useRef)(null),
+        l = (0, r.Z)(null != t ? t : s),
+        u = (0, i.useRef)(null);
     return (
-        (0, a.useLayoutEffect)(() => {
-            if (!r) return;
-            null == c.current && (c.current = (0, s.c)(u.current));
-            let n = i.current,
-                a = c.current;
-            if (null != n && null != a) (0, s.YP)(a, n, e);
-        }, [r, e, u]),
-        (0, a.useEffect)(() => {
-            if (!r) return;
-            let e = i.current,
-                n = c.current;
-            if (null != e && null != n)
+        (0, i.useLayoutEffect)(() => {
+            if (!n) return;
+            null == u.current && (u.current = (0, a.c)(l.current));
+            let t = o.current,
+                i = u.current;
+            null != t && null != i && (0, a.YP)(i, t, e);
+        }, [n, e, l]),
+        (0, i.useEffect)(() => {
+            if (!n) return;
+            let e = o.current,
+                t = u.current;
+            if (null != e && null != t)
                 return () => {
-                    (0, s.UC)(n, e);
+                    (0, a.UC)(t, e);
                 };
-        }, [r, n]),
-        i
+        }, [n, t]),
+        o
     );
 }
-let c = new Map([[1, { threshold: 1 }]]);
-function d(e) {
-    let n = c.get(e);
-    return null != n ? n : ((n = { threshold: e }), c.set(e, n), n);
+let l = new Map([[1, { threshold: 1 }]]);
+function u(e) {
+    let t = l.get(e);
+    return null != t || ((t = { threshold: e }), l.set(e, t)), t;
 }
-function f(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-        r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        i = (0, o.Z)((n) => {
-            e(n.isIntersecting);
+function c(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+        n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+        a = (0, r.Z)((t) => {
+            e(t.isIntersecting);
         }),
-        s = (0, a.useMemo)(() => d(n), [n]);
-    return u(i.current, s, r);
+        s = (0, i.useMemo)(() => u(t), [t]);
+    return o(a.current, s, n);
 }

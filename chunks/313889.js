@@ -1,5 +1,11 @@
-var i;
-function a(e) {
+n.d(t, {
+    d: () => i,
+    t: () => a
+});
+var i = (function (e) {
+    return (e[(e.SET_COMPLETED = 1)] = 'SET_COMPLETED'), (e[(e.UNSET_COMPLETED = 2)] = 'UNSET_COMPLETED'), (e[(e.DELETE_USER_MESSAGE = 3)] = 'DELETE_USER_MESSAGE'), (e[(e.SUBMIT_FEEDBACK = 4)] = 'SUBMIT_FEEDBACK'), e;
+})({});
+function r(e) {
     if (null == e) return null;
     try {
         return JSON.parse(e);
@@ -7,24 +13,13 @@ function a(e) {
         return null;
     }
 }
-function o(e) {
+function a(e) {
     if (null == e) return null;
-    let n = a(e);
-    return null == n || null == n.actions
+    let t = r(e);
+    return null == t || null == t.actions
         ? null
-        : (Object.keys(n.actions).forEach((e) => {
-              n.actions[e].actionType = e;
+        : (Object.keys(t.actions).forEach((e) => {
+              t.actions[e].actionType = e;
           }),
-          n);
+          t);
 }
-r.d(n, {
-    d: function () {
-        return i;
-    },
-    t: function () {
-        return o;
-    }
-}),
-    !(function (e) {
-        (e[(e.SET_COMPLETED = 1)] = 'SET_COMPLETED'), (e[(e.UNSET_COMPLETED = 2)] = 'UNSET_COMPLETED'), (e[(e.DELETE_USER_MESSAGE = 3)] = 'DELETE_USER_MESSAGE'), (e[(e.SUBMIT_FEEDBACK = 4)] = 'SUBMIT_FEEDBACK');
-    })(i || (i = {}));

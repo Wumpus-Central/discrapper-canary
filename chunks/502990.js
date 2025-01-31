@@ -1,26 +1,22 @@
-let a;
-r.d(t, {
-    C: function () {
-        return i;
-    }
-});
-var n = r(370336),
-    _ = r(263449),
-    o = r(151122);
-let E = new WeakMap(),
-    i = (0, o._I)(() => ({
+let r;
+a.d(e, { C: () => c });
+var n = a(370336),
+    o = a(263449),
+    _ = a(151122);
+let i = new WeakMap(),
+    c = (0, _._I)(() => ({
         name: 'FunctionToString',
         setupOnce() {
-            a = Function.prototype.toString;
+            r = Function.prototype.toString;
             try {
-                Function.prototype.toString = function (...e) {
-                    let t = (0, n.HK)(this),
-                        r = E.has((0, _.s3)()) && void 0 !== t ? t : this;
-                    return a.apply(r, e);
+                Function.prototype.toString = function (...t) {
+                    let e = (0, n.HK)(this),
+                        a = i.has((0, o.s3)()) && void 0 !== e ? e : this;
+                    return r.apply(a, t);
                 };
-            } catch (e) {}
+            } catch (t) {}
         },
-        setup(e) {
-            E.set(e, !0);
+        setup(t) {
+            i.set(t, !0);
         }
     }));

@@ -1,225 +1,200 @@
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(481060),
-    l = r(442837),
-    u = r(100527),
-    c = r(906732),
-    d = r(216742),
-    f = r(246364),
-    p = r(937111),
-    h = r(741606),
-    _ = r(703656),
-    m = r(698305),
-    g = r(314897),
-    E = r(271383),
-    v = r(594174),
-    y = r(51144),
-    b = r(970606),
-    I = r(963202),
-    T = r(645896),
-    S = r(905362),
-    A = r(353093),
-    C = r(574410),
-    N = r(900681),
-    R = r(284019),
-    O = r(308083),
-    D = r(981631),
-    L = r(388032),
-    x = r(420930);
-function w(e) {
+n.d(t, { Z: () => D }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(481060),
+    s = n(442837),
+    o = n(100527),
+    l = n(906732),
+    u = n(246364),
+    c = n(937111),
+    d = n(741606),
+    f = n(703656),
+    _ = n(698305),
+    p = n(314897),
+    h = n(271383),
+    m = n(594174),
+    g = n(51144),
+    E = n(970606),
+    v = n(645896),
+    y = n(905362),
+    I = n(353093),
+    b = n(574410),
+    T = n(900681),
+    S = n(284019),
+    A = n(308083),
+    N = n(981631),
+    C = n(388032),
+    R = n(420930);
+function O(e) {
     e.stopPropagation();
 }
-n.Z = o.memo(function (e) {
-    var n, r;
-    let { clan: i, isLoading: P, onClose: M, profileViewedAnalytics: k, userId: U } = e,
-        B = null == i ? void 0 : i.identityGuildId,
-        G = (0, T.Cc)(null != B ? B : null),
-        Z = null == i ? void 0 : i.tag,
-        F = (0, I.i)('clan_guild_profile'),
-        { enabled: V } = (0, d.I)(),
-        { enabled: j } = C.w.useExperiment({ location: 'ClanGuildProfile' }, { autoTrackExposure: !1 }),
-        [H, Y] = o.useState(!1),
-        [W, K] = o.useState(''),
-        z = (0, l.e7)([v.default], () => v.default.getUser(U)),
-        { newestAnalyticsLocation: q } = (0, c.ZP)(),
-        Q = o.useMemo(
+let D = r.memo(function (e) {
+    var t, n;
+    let { clan: D, isLoading: x, onClose: L, profileViewedAnalytics: P, userId: w } = e,
+        M = null == D ? void 0 : D.identityGuildId,
+        k = (0, v.Cc)(null != M ? M : null),
+        U = null == D ? void 0 : D.tag,
+        { enabled: G } = b.w.useExperiment({ location: 'ClanGuildProfile' }, { autoTrackExposure: !1 }),
+        [B, Z] = r.useState(!1),
+        [F, V] = r.useState(''),
+        j = (0, s.e7)([m.default], () => m.default.getUser(w)),
+        { newestAnalyticsLocation: H } = (0, l.ZP)(),
+        Y = r.useMemo(
             () => ({
-                tagUserId: U,
-                source: q,
-                ...k
+                tagUserId: w,
+                source: H,
+                ...P
             }),
-            [U, q, k]
+            [w, H, P]
         ),
-        X = (0, l.e7)([g.default], () => g.default.getId()),
-        J = (0, l.e7)([E.ZP], () => (null != B ? E.ZP.getMember(B, X) : null), [B, X]),
-        $ = (0, l.e7)([p.Z], () => {
+        W = (0, s.e7)([p.default], () => p.default.getId()),
+        K = (0, s.e7)([h.ZP], () => (null != M ? h.ZP.getMember(M, W) : null), [M, W]),
+        z = (0, s.e7)([c.Z], () => {
             var e;
-            return (null == G ? void 0 : G.id) != null && (null === (e = p.Z.getRequest(G.id)) || void 0 === e ? void 0 : e.applicationStatus) === f.wB.SUBMITTED;
+            return (null == k ? void 0 : k.id) != null && (null === (e = c.Z.getRequest(k.id)) || void 0 === e ? void 0 : e.applicationStatus) === u.wB.SUBMITTED;
         }),
-        ee = null != G && G.memberCount >= O.Du,
-        et = (0, l.e7)([v.default], () => v.default.getUser(X), [X]),
-        en = (null == J ? void 0 : J.joinedAt) != null,
-        er = (0, A.Z4)(B, null == et ? void 0 : et.primaryGuild),
-        ei = null != (0, h.Z)(B),
-        ea = (0, I.i)('ClanGuildProfile');
-    o.useEffect(() => {
-        null != B &&
-            (0, b.u0)({
-                guildId: B,
-                hasJoinRequest: ei,
-                ...Q,
-                location: u.Z.CLAN_GUILD_PROFILE
+        q = null != k && k.memberCount >= A.Du,
+        Q = (0, s.e7)([m.default], () => m.default.getUser(W), [W]),
+        X = (null == K ? void 0 : K.joinedAt) != null,
+        J = (0, I.Z4)(M, null == Q ? void 0 : Q.primaryGuild),
+        $ = null != (0, d.Z)(M);
+    r.useEffect(() => {
+        null != M &&
+            (0, E.u0)({
+                guildId: M,
+                hasJoinRequest: $,
+                ...Y,
+                location: o.Z.CLAN_GUILD_PROFILE
             });
-    }, [B, ei, Q]);
-    let eo = o.useCallback(() => {
-            (0, b.hM)(B, b.UE.ASK_TO_JOIN), Y(!H);
-        }, [B, H]),
-        es = o.useCallback(async () => {
-            if (null != z)
+    }, [M, $, Y]);
+    let ee = r.useCallback(() => {
+            (0, E.hM)(M, E.UE.ASK_TO_JOIN), Z(!B);
+        }, [M, B]),
+        et = r.useCallback(async () => {
+            if (null != j)
                 try {
-                    await (0, m.Z)({
-                        userId: z.id,
-                        content: W,
+                    await (0, _.Z)({
+                        userId: j.id,
+                        content: F,
                         openChannel: !0,
                         location: 'guildProfilePopout'
                     });
                 } catch (e) {}
-        }, [z, W]),
-        el = o.useCallback(
+        }, [j, F]),
+        en = r.useCallback(
             (e) => {
-                if (null != B) e.stopPropagation(), e.preventDefault(), null == M || M(), (0, b.hM)(B, b.UE.TAG_ADOPTION), (0, S.SJ)(B);
+                null != M && (e.stopPropagation(), e.preventDefault(), null == L || L(), (0, E.hM)(M, E.UE.TAG_ADOPTION), (0, y.SJ)(M));
             },
-            [B, M]
+            [M, L]
         ),
-        eu = o.useCallback(
-            (e) => {
-                if (null == G || null == B) return;
-                if ((e.stopPropagation(), e.preventDefault(), null == M || M(), !ei))
-                    (0, b.hM)(B, b.UE.APPLY_FLOW),
-                        (0, S.qF)(B, G, {
-                            source: null == Q ? void 0 : Q.source,
-                            messageId: null == Q ? void 0 : Q.messageId,
-                            tagUserId: null == Q ? void 0 : Q.tagUserId,
-                            location: u.Z.CLAN_GUILD_PROFILE
-                        });
-            },
-            [G, B, ei, M, Q]
-        ),
-        ec = o.useCallback(() => {
-            if (null != B) (0, b.hM)(B, b.UE.APPLICATION), (0, _.uL)(D.Z5c.GUILD_MEMBER_VERIFICATION(B));
-        }, [B]),
-        ed = o.useCallback(() => {
-            if (null != B) (0, b.hM)(B, b.UE.GUILD), (0, _.XU)(B);
-        }, [B]),
-        ef = o.useMemo(() => {
-            var e, n;
+        ei = r.useCallback(() => {
+            null != M && ((0, E.hM)(M, E.UE.APPLICATION), (0, f.uL)(N.Z5c.GUILD_MEMBER_VERIFICATION(M)));
+        }, [M]),
+        er = r.useCallback(() => {
+            null != M && ((0, E.hM)(M, E.UE.GUILD), (0, f.XU)(M));
+        }, [M]),
+        ea = r.useMemo(() => {
+            var e, t;
             return {
-                color: s.Button.Colors.BRAND,
-                size: s.Button.Sizes.SMALL,
+                color: a.zxk.Colors.BRAND,
+                size: a.zxk.Sizes.SMALL,
                 fullWidth: !0,
-                className: x.button,
-                themeColor: null !== (n = null == G ? void 0 : null === (e = G.branding) || void 0 === e ? void 0 : e.primaryColor) && void 0 !== n ? n : null
+                className: R.button,
+                themeColor: null !== (t = null == k ? void 0 : null === (e = k.branding) || void 0 === e ? void 0 : e.primaryColor) && void 0 !== t ? t : null
             };
-        }, [null == G ? void 0 : null === (n = G.branding) || void 0 === n ? void 0 : n.primaryColor]),
-        ep = o.useMemo(() => {
+        }, [null == k ? void 0 : null === (t = k.branding) || void 0 === t ? void 0 : t.primaryColor]),
+        es = r.useMemo(() => {
             var e;
             switch (!0) {
-                case !en && ei:
-                    return (0, a.jsx)(R.Z, {
-                        onClick: ec,
-                        ...ef,
-                        children: L.intl.string(L.t.dXvKgY)
+                case !X && $:
+                    return (0, i.jsx)(S.Z, {
+                        onClick: ei,
+                        ...ea,
+                        children: C.intl.string(C.t.dXvKgY)
                     });
-                case !en && (null == G ? void 0 : null === (e = G.discoveryProfileFeatures) || void 0 === e ? void 0 : e.has(D.oNc.CLAN_DISCOVERY_DISABLED)):
+                case !X && (null == k ? void 0 : null === (e = k.discoveryProfileFeatures) || void 0 === e ? void 0 : e.has(N.oNc.CLAN_DISCOVERY_DISABLED)):
                     return null;
-                case !en && ea:
-                    return (0, a.jsx)(R.Z, {
-                        onClick: eu,
-                        ...ef,
-                        children: L.intl.string(L.t.YfkjGh)
+                case X && !J:
+                    return (0, i.jsx)(S.Z, {
+                        onClick: en,
+                        ...ea,
+                        children: C.intl.string(C.t['1keBy8'])
                     });
-                case en && !er:
-                    return (0, a.jsx)(R.Z, {
-                        onClick: el,
-                        ...ef,
-                        children: L.intl.string(L.t['1keBy8'])
-                    });
-                case en && er:
-                    return (0, a.jsx)(R.Z, {
-                        onClick: ed,
-                        ...ef,
-                        children: L.intl.string(L.t.muzrLS)
+                case X && J:
+                    return (0, i.jsx)(S.Z, {
+                        onClick: er,
+                        ...ea,
+                        children: C.intl.string(C.t.muzrLS)
                     });
                 default:
                     return null;
             }
-        }, [en, ei, null == G ? void 0 : G.discoveryProfileFeatures, ea, er, ec, ef, eu, el, ed]),
-        eh = o.useMemo(
+        }, [X, $, null == k ? void 0 : k.discoveryProfileFeatures, J, ei, ea, en, er]),
+        eo = r.useMemo(
             () => ({
-                className: x.container,
-                onClick: w
+                className: R.container,
+                onClick: O
             }),
             []
         );
-    if (null == Z || null == G || null == B || P)
-        return (0, a.jsx)('div', {
-            ...eh,
-            children: (0, a.jsx)(s.Spinner, {})
+    if (null == U || null == k || null == M || x)
+        return (0, i.jsx)('div', {
+            ...eo,
+            children: (0, i.jsx)(a.$jN, {})
         });
-    let e_ = !en && !F && null != z && !ei && j && !H,
-        em = null != ep || (F && V) || e_,
-        eg = null !== (r = y.ZP.getName(z)) && void 0 !== r ? r : '';
-    return (0, a.jsxs)(a.Fragment, {
+    let el = !X && null != j && !$ && G && !B,
+        eu = null != es || el,
+        ec = null !== (n = g.ZP.getName(j)) && void 0 !== n ? n : '';
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, a.jsxs)('div', {
-                ...eh,
+            (0, i.jsxs)('div', {
+                ...eo,
                 children: [
-                    (0, a.jsx)(N.xV, {
-                        clan: G,
-                        className: x.cardContainer,
-                        isMember: en,
-                        hasPendingJoinRequest: $,
-                        atMaxMemberCapacity: ee
+                    (0, i.jsx)(T.x, {
+                        clan: k,
+                        className: R.cardContainer,
+                        isMember: X,
+                        hasPendingJoinRequest: z,
+                        atMaxMemberCapacity: q
                     }),
-                    em &&
-                        (0, a.jsxs)('div', {
-                            className: x.buttonGroupContainer,
+                    eu &&
+                        (0, i.jsxs)('div', {
+                            className: R.buttonGroupContainer,
                             children: [
-                                null != ep && ep,
-                                e_ &&
-                                    (0, a.jsx)(R.Z, {
-                                        onClick: eo,
-                                        ...ef,
-                                        children: L.intl.string(L.t.HzLAb2)
+                                null != es && es,
+                                el &&
+                                    (0, i.jsx)(S.Z, {
+                                        onClick: ee,
+                                        ...ea,
+                                        children: C.intl.string(C.t.HzLAb2)
                                     })
                             ]
                         })
                 ]
             }),
-            H &&
-                (0, a.jsxs)(s.Dialog, {
-                    className: x.askToJoinInputWrapper,
+            B &&
+                (0, i.jsxs)(a.VqE, {
+                    className: R.askToJoinInputWrapper,
                     children: [
-                        (0, a.jsx)(s.Text, {
+                        (0, i.jsx)(a.Text, {
                             color: 'interactive-normal',
                             variant: 'text-xs/normal',
-                            children: L.intl.format(L.t.k5d4Wl, { username: eg })
+                            children: C.intl.format(C.t.k5d4Wl, { username: ec })
                         }),
-                        (0, a.jsxs)('div', {
-                            className: x.inputRow,
+                        (0, i.jsxs)('div', {
+                            className: R.inputRow,
                             children: [
-                                (0, a.jsx)(s.TextInput, {
-                                    inputClassName: x.input,
-                                    value: W,
-                                    onChange: K,
-                                    placeholder: L.intl.formatToPlainString(L.t['4c+CAw'], { channel: eg })
+                                (0, i.jsx)(a.oil, {
+                                    inputClassName: R.input,
+                                    value: F,
+                                    onChange: V,
+                                    placeholder: C.intl.formatToPlainString(C.t['4c+CAw'], { channel: ec })
                                 }),
-                                (0, a.jsx)(s.Button, {
-                                    className: x.sendButton,
-                                    color: s.Button.Colors.BRAND,
-                                    onClick: es,
-                                    children: L.intl.string(L.t.TXNS7e)
+                                (0, i.jsx)(a.zxk, {
+                                    className: R.sendButton,
+                                    color: a.zxk.Colors.BRAND,
+                                    onClick: et,
+                                    children: C.intl.string(C.t.TXNS7e)
                                 })
                             ]
                         })

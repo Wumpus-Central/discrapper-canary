@@ -1,200 +1,176 @@
-r.d(n, {
-    L6: function () {
-        return Z;
-    },
-    Rc: function () {
-        return B;
-    },
-    WH: function () {
-        return R;
-    },
-    aP: function () {
-        return M;
-    },
-    dV: function () {
-        return G;
-    },
-    g: function () {
-        return P;
-    },
-    iV: function () {
-        return w;
-    },
-    n9: function () {
-        return k;
-    },
-    pR: function () {
-        return x;
-    },
-    rn: function () {
-        return L;
-    },
-    tK: function () {
-        return O;
-    },
-    xc: function () {
-        return U;
-    }
+n.d(t, {
+    L6: () => B,
+    Rc: () => U,
+    WH: () => C,
+    aP: () => w,
+    dV: () => G,
+    g: () => P,
+    iV: () => L,
+    n9: () => M,
+    pR: () => x,
+    rn: () => D,
+    tK: () => R,
+    xc: () => k
 });
-var i = r(512722),
-    a = r.n(i),
-    o = r(990547),
-    s = r(544891),
-    l = r(570140),
-    u = r(258609),
-    c = r(569545),
-    d = r(525925),
-    f = r(522474),
-    p = r(543882),
-    h = r(199902),
-    _ = r(314897),
-    m = r(592125),
-    g = r(430824),
-    E = r(944486),
-    v = r(979651),
-    y = r(934415),
-    b = r(70956),
-    I = r(557457),
-    T = r(573261);
-r(26151), r(493683);
-var S = r(475179);
-r(287734);
-var A = r(981631),
-    C = r(70722);
+var i = n(512722),
+    r = n.n(i),
+    a = n(990547),
+    s = n(544891),
+    o = n(570140),
+    l = n(258609),
+    u = n(569545),
+    c = n(525925),
+    d = n(522474),
+    f = n(543882),
+    _ = n(199902),
+    p = n(314897),
+    h = n(592125),
+    m = n(430824),
+    g = n(944486),
+    E = n(979651),
+    v = n(934415),
+    y = n(70956),
+    I = n(557457),
+    b = n(573261);
+n(26151), n(493683);
+var T = n(475179);
+n(287734);
+var S = n(981631),
+    A = n(70722);
 let N = 2;
-function R(e, n, r) {
-    l.Z.dispatch({
+function C(e, t, n) {
+    o.Z.dispatch({
         type: 'STREAM_START',
-        streamType: null != e ? C.lo.GUILD : C.lo.CALL,
+        streamType: null != e ? A.lo.GUILD : A.lo.CALL,
         guildId: e,
-        channelId: n,
-        appContext: __OVERLAY__ ? A.IlC.OVERLAY : A.IlC.APP,
-        ...r
+        channelId: t,
+        appContext: __OVERLAY__ ? S.IlC.OVERLAY : S.IlC.APP,
+        ...n
     });
 }
-function O(e, n) {
-    let r = (0, c.V9)(e);
-    l.Z.dispatch({
+function R(e, t) {
+    let n = (0, u.V9)(e);
+    o.Z.dispatch({
         type: 'STREAM_SET_PAUSED',
-        streamKey: r,
-        paused: n
+        streamKey: n,
+        paused: t
     });
 }
-function D(e, n) {
-    let r = m.Z.getChannel(n);
-    return a()(null != r, 'Cannot join a null voice channel'), !v.Z.isInChannel(n) && (0, y.rY)(r, v.Z, g.Z);
+function O(e, t) {
+    let n = h.Z.getChannel(t);
+    return r()(null != n, 'Cannot join a null voice channel'), !E.Z.isInChannel(t) && (0, v.rY)(n, E.Z, m.Z);
 }
-function L(e, n) {
-    if (null != u.Z.getRemoteSessionId()) return;
-    let { guildId: r, channelId: i } = e;
-    if (null != r && D(r, i)) return;
-    let a = (0, c.V9)(e),
-        o =
-            (null == n ? void 0 : n.forceMultiple) ||
-            h.Z.getAllActiveStreamsForChannel(i).filter((e) => {
-                let { ownerId: n } = e;
-                return n !== _.default.getId();
+function D(e, t) {
+    if (null != l.Z.getRemoteSessionId()) return;
+    let { guildId: n, channelId: i } = e;
+    if (null != n && O(n, i)) return;
+    let r = (0, u.V9)(e),
+        a =
+            (null == t ? void 0 : t.forceMultiple) ||
+            _.Z.getAllActiveStreamsForChannel(i).filter((e) => {
+                let { ownerId: t } = e;
+                return t !== p.default.getId();
             }).length >= N;
-    l.Z.dispatch({
+    o.Z.dispatch({
         type: 'STREAM_WATCH',
-        streamKey: a,
-        allowMultiple: o
+        streamKey: r,
+        allowMultiple: a
     }),
-        !o && (null == n || !n.noFocus) && S.Z.selectParticipant(e.channelId, a);
+        a || (null != t && t.noFocus) || T.Z.selectParticipant(e.channelId, r);
 }
-function x(e, n) {
-    l.Z.dispatch({
+function x(e, t) {
+    o.Z.dispatch({
         type: 'STREAM_UPDATE_SELF_HIDDEN',
         channelId: e,
-        selfStreamHidden: n
+        selfStreamHidden: t
     });
 }
-function w(e, n) {
-    let { guildId: r, channelId: i } = e;
-    if (null != r && D(r, i)) return;
-    L(e, n);
-    let a = f.Z.getWindowOpen(A.KJ3.CHANNEL_CALL_POPOUT),
-        o = E.Z.getVoiceChannelId();
-    if (!a || o !== i) (0, d.Z)(e);
+function L(e, t) {
+    let { guildId: n, channelId: i } = e;
+    if (null != n && O(n, i)) return;
+    D(e, t);
+    let r = d.Z.getWindowOpen(S.KJ3.CHANNEL_CALL_POPOUT),
+        a = g.Z.getVoiceChannelId();
+    (!r || a !== i) && (0, c.Z)(e);
 }
 function P(e) {
-    let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    M(e, n),
-        l.Z.dispatch({
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+    w(e, t),
+        o.Z.dispatch({
             type: 'STREAM_STOP',
             streamKey: e,
-            appContext: __OVERLAY__ ? A.IlC.OVERLAY : A.IlC.APP
+            appContext: __OVERLAY__ ? S.IlC.OVERLAY : S.IlC.APP
         });
 }
-function M(e) {
-    let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    l.Z.dispatch({
+function w(e) {
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+    o.Z.dispatch({
         type: 'STREAM_CLOSE',
         streamKey: e,
-        canShowFeedback: n
+        canShowFeedback: t
     });
 }
-async function k(e, n, r) {
-    if (!p.Z.shouldFetchPreview(e, n, r)) return;
-    let i = (0, c.V9)({
-        streamType: null != e ? C.lo.GUILD : C.lo.CALL,
+async function M(e, t, n) {
+    if (!f.Z.shouldFetchPreview(e, t, n)) return;
+    let i = (0, u.V9)({
+        streamType: null != e ? A.lo.GUILD : A.lo.CALL,
         guildId: e,
-        channelId: n,
-        ownerId: r
+        channelId: t,
+        ownerId: n
     });
-    l.Z.dispatch({
+    o.Z.dispatch({
         type: 'STREAM_PREVIEW_FETCH_START',
         streamKey: i
     });
     try {
         let e = await s.tn.get({
-            url: A.ANM.STREAM_PREVIEW(i),
+            url: S.ANM.STREAM_PREVIEW(i),
             query: { version: Date.now() },
             oldFormErrors: !0,
             rejectWithError: !1
         });
-        l.Z.dispatch({
+        o.Z.dispatch({
             type: 'STREAM_PREVIEW_FETCH_SUCCESS',
             streamKey: i,
             previewURL: e.body.url
         });
-    } catch (n) {
+    } catch (t) {
         let e;
-        429 === n.status && (e = n.body.retry_after * b.Z.Millis.SECOND),
-            l.Z.dispatch({
+        429 === t.status && (e = t.body.retry_after * y.Z.Millis.SECOND),
+            o.Z.dispatch({
                 type: 'STREAM_PREVIEW_FETCH_FAIL',
                 streamKey: i,
                 retryAfter: e
             });
     }
 }
-async function U(e) {
+async function k(e) {
     try {
-        await T.Z.post({
-            url: A.ANM.STREAM_NOTIFY(e),
+        await b.Z.post({
+            url: S.ANM.STREAM_NOTIFY(e),
             oldFormErrors: !0,
-            trackedActionData: { event: o.NetworkActionNames.STREAM_NOTIFY },
+            trackedActionData: { event: a.NetworkActionNames.STREAM_NOTIFY },
             rejectWithError: !0
         });
     } catch (e) {}
 }
-function B(e) {
+function U(e) {
     (0, I.Ye)(e.preset, e.resolution, e.frameRate),
-        l.Z.dispatch({
+        o.Z.dispatch({
             type: 'STREAM_UPDATE_SETTINGS',
             ...e
         });
 }
-function G(e, n) {
+function G(e, t) {
     s.tn.patch({
-        url: A.ANM.STREAM(e),
-        body: { region: n },
+        url: S.ANM.STREAM(e),
+        body: { region: t },
         oldFormErrors: !0,
         rejectWithError: !0
     });
 }
-function Z() {
+function B() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-        n = h.Z.getCurrentUserActiveStream();
-    null != n && P((0, c.V9)(n), e);
+        t = _.Z.getCurrentUserActiveStream();
+    null != t && P((0, u.V9)(t), e);
 }

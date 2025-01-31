@@ -1,11 +1,7 @@
-n.d(t, {
-    Z: function () {
-        return _;
-    }
-});
+n.d(t, { Z: () => f });
 var i = n(200651),
-    r = n(192379),
-    l = n(481060),
+    l = n(192379),
+    r = n(481060),
     a = n(194359),
     s = n(906732),
     o = n(388380),
@@ -16,10 +12,10 @@ var i = n(200651),
     m = n(170245),
     p = n(981631),
     g = n(388032),
-    f = n(28504);
-function _(e) {
-    let { user: t, nickname: n, status: _, isFocused: E } = e,
-        I = r.useContext(d.AnalyticsContext),
+    _ = n(28504);
+function f(e) {
+    let { user: t, nickname: n, status: f, isFocused: E } = e,
+        I = l.useContext(d.AnalyticsContext),
         { analyticsLocations: C } = (0, s.ZP)(),
         v = (e) => {
             null == e || e.stopPropagation(),
@@ -34,7 +30,7 @@ function _(e) {
         N = (e) => {
             null == e || e.stopPropagation(), o.Z.ignore(t.id);
         },
-        T = _ === p.Skl.OFFLINE ? p.Skl.UNKNOWN : _;
+        T = f === p.Skl.OFFLINE ? p.Skl.UNKNOWN : f;
     return (0, i.jsx)(h.Z, {
         isFocused: E,
         user: t,
@@ -45,17 +41,17 @@ function _(e) {
                 analyticsLocation: I.location
             }),
         children: (e) => {
-            let r = (0, i.jsxs)(i.Fragment, {
+            let l = (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(u.Z, {
-                        icon: l.CheckmarkLargeIcon,
+                        icon: r.dz2,
                         actionType: u.Z.ActionTypes.ACCEPT,
                         tooltip: g.intl.string(g.t.ZcibdX),
                         onClick: v,
                         shouldHighlight: e
                     }),
                     (0, i.jsx)(u.Z, {
-                        icon: l.XSmallIcon,
+                        icon: r.Dio,
                         actionType: u.Z.ActionTypes.DENY,
                         tooltip: g.intl.string(g.t.xuio0N),
                         onClick: N,
@@ -64,18 +60,18 @@ function _(e) {
                 ]
             });
             return (0, i.jsxs)('div', {
-                className: f.listItemContents,
+                className: _.listItemContents,
                 children: [
                     (0, i.jsx)(m.Z, {
                         user: t,
                         hovered: e,
                         status: T,
                         subText: n,
-                        className: f.__invalid_userInfo
+                        className: _.__invalid_userInfo
                     }),
                     (0, i.jsx)('div', {
-                        className: f.actions,
-                        children: r
+                        className: _.actions,
+                        children: l
                     })
                 ]
             });

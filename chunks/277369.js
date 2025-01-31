@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-});
+n.d(t, { Z: () => d });
 var i = n(200651);
 n(192379);
 var r = n(399606),
@@ -20,28 +16,24 @@ function d(e) {
     let g = d.team;
     return (0, i.jsxs)('div', {
         children: [
-            (0, i.jsx)(l.FormText, {
-                type: l.FormText.Types.DESCRIPTION,
+            (0, i.jsx)(l.R94, {
+                type: l.R94.Types.DESCRIPTION,
                 disabled: h,
                 children: null != g ? c.intl.format(c.t.erxwWF, { teamName: g.name }) : c.intl.string(c.t.FGzLkJ)
             }),
-            (0, i.jsx)(l.Spacer, { size: 16 }),
-            (0, i.jsx)(l.Button, {
-                look: l.Button.Looks.FILLED,
-                color: null != g ? l.Button.Colors.PRIMARY : l.Button.Colors.BRAND,
+            (0, i.jsx)(l.LZC, { size: 16 }),
+            (0, i.jsx)(l.zxk, {
+                look: l.zxk.Looks.FILLED,
+                color: null != g ? l.zxk.Colors.PRIMARY : l.zxk.Colors.BRAND,
                 onClick: () => {
-                    var e;
-                    return (
-                        (e = d),
-                        void (0, l.openModalLazy)(async () => {
-                            let { default: t } = await n.e('83942').then(n.bind(n, 743582));
-                            return (n) =>
-                                (0, i.jsx)(t, {
-                                    ...n,
-                                    application: e
-                                });
-                        })
-                    );
+                    (0, l.ZDy)(async () => {
+                        let { default: e } = await n.e('83942').then(n.bind(n, 743582));
+                        return (t) =>
+                            (0, i.jsx)(e, {
+                                ...t,
+                                application: d
+                            });
+                    });
                 },
                 disabled: h,
                 children: null != g ? c.intl.string(c.t['/Fjq5O']) : c.intl.string(c.t['6ih+b2'])

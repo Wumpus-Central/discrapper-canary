@@ -1,16 +1,11 @@
 n.d(t, {
-    X9: function () {
-        return Z;
-    },
-    b8: function () {
-        return y;
-    },
-    hz: function () {
-        return L;
-    }
+    X9: () => Z,
+    b8: () => y,
+    hz: () => L
 }),
     n(47120),
     n(315314),
+    n(309749),
     n(610138),
     n(216116),
     n(78328),
@@ -18,8 +13,8 @@ n.d(t, {
 var l = n(192379),
     i = n(512722),
     u = n.n(i),
-    r = n(442837),
-    a = n(544891),
+    a = n(442837),
+    r = n(544891),
     o = n(570140),
     d = n(911969),
     c = n(211266),
@@ -27,10 +22,10 @@ var l = n(192379),
     E = n(155268),
     T = n(603721),
     I = n(314897),
-    f = n(592125),
-    p = n(271383),
-    m = n(914010),
-    S = n(768581),
+    p = n(592125),
+    m = n(271383),
+    S = n(914010),
+    f = n(768581),
     C = n(70956),
     _ = n(709054),
     g = n(970184),
@@ -42,7 +37,7 @@ let A = (e) => {
     let t = !0;
     return (
         e.forEach((e) => {
-            !e() && (t = !1);
+            e() || (t = !1);
         }),
         t
     );
@@ -55,40 +50,39 @@ function L(e) {
 }
 function R(e) {
     return l.useMemo(() => {
-        let t = m.Z.getGuildId(),
-            n = null != t && null != e.bot ? p.ZP.getMember(t, e.bot.id) : void 0,
-            l = S.ZP.getApplicationIconURL({
+        let t = S.Z.getGuildId(),
+            n = null != t && null != e.bot ? m.ZP.getMember(t, e.bot.id) : void 0,
+            l = f.ZP.getApplicationIconURL({
                 id: e.id,
                 icon: e.icon,
                 botIconFirst: !0,
                 bot: null != n ? e.bot : void 0
-            }),
-            i = null != n && null != e.bot ? e.bot.username : e.name;
+            });
         return {
             applicationIconURL: l,
-            applicationName: i,
+            applicationName: null != n && null != e.bot ? e.bot.username : e.name,
             applicationBaseUrl: (0, E.Z)(e.id)
         };
     }, [e.id, e.icon, e.name, e.bot]);
 }
 function Z(e, t) {
     let { application: n, customId: i, components: E } = e,
-        p = (0, s.Z)(),
-        [m, S] = l.useState(null),
+        m = (0, s.Z)(),
+        [S, f] = l.useState(null),
         [g, h] = l.useState(null),
-        L = (0, r.e7)([N.Z], () => N.Z.getModalState(g), [g]),
+        L = (0, a.e7)([N.Z], () => N.Z.getModalState(g), [g]),
         Z = (0, c.Z)(() => new Set()),
         y = l.useCallback(() => {
-            S(null),
+            f(null),
                 h(null),
                 A(Z) &&
                     h(
                         (function (e, t) {
                             let n = _.default.fromTimestamp(Date.now()),
                                 l = e.channelId,
-                                i = f.Z.getChannel(l);
+                                i = p.Z.getChannel(l);
                             u()(null != i, 'expected channel');
-                            let r = M(e.customId, e.components);
+                            let a = M(e.customId, e.components);
                             (0, T.kz)(n, {
                                 data: {
                                     interactionType: d.B8.MODAL_SUBMIT,
@@ -96,8 +90,8 @@ function Z(e, t) {
                                 }
                             });
                             let o = () => {
-                                (null == t || !t.aborted) &&
-                                    a.tn
+                                (null != t && t.aborted) ||
+                                    r.tn
                                         .post({
                                             url: v.ANM.INTERACTIONS,
                                             body: {
@@ -108,7 +102,7 @@ function Z(e, t) {
                                                 data: {
                                                     id: e.id,
                                                     custom_id: e.customId,
-                                                    components: r
+                                                    components: a
                                                 },
                                                 session_id: I.default.getSessionId(),
                                                 nonce: n
@@ -121,9 +115,9 @@ function Z(e, t) {
                                         });
                             };
                             return o(), n;
-                        })(e, p)
+                        })(e, m)
                     );
-        }, [p, e, Z]);
+        }, [m, e, Z]);
     l.useEffect(() => {
         L === N.i.SUCCEEDED &&
             (o.Z.dispatch({
@@ -131,7 +125,7 @@ function Z(e, t) {
                 customId: i
             }),
             t()),
-            L === N.i.ERRORED && S(O.intl.string(O.t.uJgdEh));
+            L === N.i.ERRORED && f(O.intl.string(O.t.uJgdEh));
     }, [g, L, t, i]);
     let { applicationIconURL: b, applicationName: D } = R(n);
     return {
@@ -139,29 +133,29 @@ function Z(e, t) {
         applicationIconURL: b,
         applicationName: D,
         submissionState: L,
-        error: m,
+        error: S,
         validators: Z,
         onSubmit: y
     };
 }
 function y(e) {
     let { application: t, customId: n } = e,
-        { applicationIconURL: l, applicationName: i, applicationBaseUrl: r } = R(t),
-        a = f.Z.getChannel(e.channelId);
-    u()(null != a, 'channel should not be null');
+        { applicationIconURL: l, applicationName: i, applicationBaseUrl: a } = R(t),
+        r = p.Z.getChannel(e.channelId);
+    u()(null != r, 'channel should not be null');
     let o = {
         instance_id: ''.concat(e.channelId, ':').concat(t.id, ':').concat(n),
         custom_id: n,
         channel_id: e.channelId
     };
-    null != a.guild_id && '' !== a.guild_id && (o.guild_id = a.guild_id);
-    let d = new URL(null != r ? r : '');
+    null != r.guild_id && '' !== r.guild_id && (o.guild_id = r.guild_id);
+    let d = new URL(null != a ? a : '');
     return (
         (d.pathname = e.iframePath),
         {
             applicationIconURL: l,
             applicationName: i,
-            applicationBaseUrl: r,
+            applicationBaseUrl: a,
             queryParams: o,
             iframeUrl: d.toString()
         }

@@ -1,12 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-});
+n.d(t, { Z: () => r });
 var i = n(442837),
     l = n(314897),
-    r = n(590415);
-function a(e) {
+    a = n(590415);
+function r(e) {
     let t = (0, i.e7)([l.default], () => l.default.getId());
-    return (0, r.ZP)(t, e) === r.xO.ON_STAGE;
+    return (0, a.ZP)(t, e) === a.xO.ON_STAGE;
 }

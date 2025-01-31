@@ -1,86 +1,82 @@
-n.d(t, {
-    Z: function () {
-        return I;
-    }
-});
+n.d(t, { Z: () => S });
 var i = n(200651),
-    r = n(192379),
-    s = n(442837),
-    a = n(704215),
-    l = n(481060),
+    s = n(192379),
+    r = n(442837),
+    l = n(704215),
+    a = n(481060),
     o = n(906732),
     c = n(605236),
     d = n(441167),
     u = n(695346),
     m = n(131951),
-    g = n(924557),
-    h = n(435064),
-    p = n(779618),
+    h = n(924557),
+    g = n(435064),
+    _ = n(779618),
     x = n(39604),
-    f = n(703288),
+    p = n(703288),
     E = n(491758),
-    _ = n(233685),
-    C = n(388032),
+    C = n(233685),
+    f = n(388032),
     T = n(644517),
-    S = n(277253),
-    b = n(232186);
-function I(e) {
+    N = n(277253),
+    I = n(232186);
+function S(e) {
     let { className: t, showHeader: n = !0 } = e,
-        I = u.tU.useSetting(),
-        { enableViewerClipping: N } = d.Z.useExperiment({ location: 'Clips Settings' }, { autoTrackExposure: !1 }),
+        S = u.tU.useSetting(),
+        { enableViewerClipping: b } = d.Z.useExperiment({ location: 'Clips Settings' }, { autoTrackExposure: !1 }),
         { analyticsLocations: v } = (0, o.ZP)(),
-        A = (0, g.Go)(),
-        { viewerClipsEnabled: j } = (0, s.cj)([h.Z], () => h.Z.getSettings()),
-        O = (0, p.Z)(m.Z);
+        j = (0, h.Go)(),
+        { viewerClipsEnabled: A } = (0, r.cj)([g.Z], () => g.Z.getSettings()),
+        O = (0, _.Z)(m.Z);
     return (
-        r.useEffect(() => {
-            (0, c.EW)(a.z.CLIPS_SETTINGS_BETA_TAG);
+        s.useEffect(() => {
+            (0, c.EW)(l.z.CLIPS_SETTINGS_BETA_TAG);
         }),
         (0, i.jsxs)(o.Gt, {
             value: v,
             children: [
-                (A || n) &&
-                    (0, i.jsx)(l.FormSection, {
+                (j || n) &&
+                    (0, i.jsx)(a.hjN, {
                         className: t,
-                        tag: l.FormTitleTags.H1,
+                        tag: a.RB0.H1,
                         title: n
                             ? (0, i.jsxs)('div', {
                                   className: T.headerContainer,
-                                  children: [C.intl.string(C.t.z2jK6e), (0, i.jsx)(f.Z, {})]
+                                  children: [f.intl.string(f.t.z2jK6e), (0, i.jsx)(p.Z, {})]
                               })
                             : null,
                         children:
-                            A &&
+                            j &&
                             (0, i.jsxs)('form', {
                                 onSubmit: (e) => e.preventDefault(),
-                                children: [(0, i.jsx)(E.Z, {}), (0, i.jsx)(_.Z, {})]
+                                children: [(0, i.jsx)(E.Z, {}), (0, i.jsx)(C.Z, {})]
                             })
                     }),
-                A && (0, i.jsx)(l.FormDivider, {}),
-                (0, i.jsxs)(l.FormSection, {
-                    className: n || A ? b.marginTop20 : t,
+                j && (0, i.jsx)(a.$i$, {}),
+                (0, i.jsxs)(a.hjN, {
+                    className: n || j ? I.marginTop20 : t,
                     children: [
-                        (0, i.jsx)(l.FormSwitch, {
+                        (0, i.jsx)(a.j7V, {
                             hideBorder: !0,
-                            className: S.formItem,
-                            value: I,
-                            note: C.intl.string(C.t['wW9/zc']),
+                            className: N.formItem,
+                            value: S,
+                            note: f.intl.string(f.t['wW9/zc']),
                             onChange: (e) => x.yg({ allowVoiceRecording: e }),
-                            children: C.intl.string(C.t.AGDDkJ)
+                            children: f.intl.string(f.t.AGDDkJ)
                         }),
-                        N &&
+                        b &&
                             O &&
-                            (0, i.jsx)(l.FormSwitch, {
+                            (0, i.jsx)(a.j7V, {
                                 hideBorder: !0,
-                                className: S.formItem,
-                                value: j,
-                                note: C.intl.string(C.t['0vjy8P']),
+                                className: N.formItem,
+                                value: A,
+                                note: f.intl.string(f.t['0vjy8P']),
                                 onChange: (e) =>
                                     x.yl({
                                         enabled: e,
                                         trackAnalytics: !0
                                     }),
-                                children: C.intl.string(C.t.NWw7kZ)
+                                children: f.intl.string(f.t.NWw7kZ)
                             })
                     ]
                 })

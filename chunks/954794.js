@@ -1,25 +1,21 @@
-n.d(t, {
-    Z: function () {
-        return p;
-    }
-});
+n.d(t, { Z: () => _ });
 var i = n(200651),
-    r = n(192379),
-    s = n(442837),
-    a = n(692547),
-    l = n(481060),
+    s = n(192379),
+    r = n(442837),
+    l = n(692547),
+    a = n(481060),
     o = n(768762),
     c = n(823379),
     d = n(882029),
     u = n(955204),
     m = n(248998),
-    g = n(388032),
-    h = n(986544);
-function p(e) {
+    h = n(388032),
+    g = n(986544);
+function _(e) {
     let { onBackClick: t } = e,
-        n = (0, s.e7)([d.Z], () => d.Z.getAllUnlockedAchievements()),
-        p = r.useMemo(() => Object.values(n).sort((e, t) => t.dateUnlocked - e.dateUnlocked), [n]),
-        x = r.useMemo(
+        n = (0, r.e7)([d.Z], () => d.Z.getAllUnlockedAchievements()),
+        _ = s.useMemo(() => Object.values(n).sort((e, t) => t.dateUnlocked - e.dateUnlocked), [n]),
+        x = s.useMemo(
             () =>
                 Object.values(u.LG)
                     .filter(c.lm)
@@ -29,58 +25,58 @@ function p(e) {
         );
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(l.FormSection, {
-                children: (0, i.jsxs)(l.Clickable, {
+            (0, i.jsx)(a.hjN, {
+                children: (0, i.jsxs)(a.P3F, {
                     onClick: t,
-                    className: h.backContainer,
+                    className: g.backContainer,
                     children: [
                         (0, i.jsx)(o.Z, {
                             direction: o.Z.Directions.LEFT,
-                            className: h.icon
+                            className: g.icon
                         }),
-                        (0, i.jsx)(l.Text, {
+                        (0, i.jsx)(a.Text, {
                             variant: 'text-lg/normal',
                             color: 'text-normal',
-                            children: g.intl.string(g.t['13/7kZ'])
+                            children: h.intl.string(h.t['13/7kZ'])
                         })
                     ]
                 })
             }),
             (0, i.jsxs)('div', {
-                className: h.headerContainer,
+                className: g.headerContainer,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: h.headerTextContainer,
+                        className: g.headerTextContainer,
                         children: [
-                            (0, i.jsx)(l.Heading, {
+                            (0, i.jsx)(a.X6q, {
                                 variant: 'heading-lg/extrabold',
                                 color: 'header-primary',
-                                children: g.intl.string(g.t['6jI0hY'])
+                                children: h.intl.string(h.t['6jI0hY'])
                             }),
-                            (0, i.jsx)(l.Text, {
+                            (0, i.jsx)(a.Text, {
                                 variant: 'text-md/normal',
                                 color: 'header-secondary',
-                                children: g.intl.string(g.t.GuUItb)
+                                children: h.intl.string(h.t.GuUItb)
                             })
                         ]
                     }),
                     (0, i.jsx)('div', {
-                        className: h.headerIcon,
-                        children: (0, i.jsx)(l.TrophyIcon, {
+                        className: g.headerIcon,
+                        children: (0, i.jsx)(a.rm8, {
                             size: 'custom',
-                            color: a.Z.unsafe_rawColors.ORANGE_345.css,
+                            color: l.Z.unsafe_rawColors.ORANGE_345.css,
                             width: 40,
                             height: 40
                         })
                     })
                 ]
             }),
-            p.length > 0 &&
-                (0, i.jsx)(l.FormSection, {
-                    className: h.divider,
+            _.length > 0 &&
+                (0, i.jsx)(a.hjN, {
+                    className: g.divider,
                     children: (0, i.jsx)('div', {
-                        className: h.achievementGrid,
-                        children: p.map((e) => {
+                        className: g.achievementGrid,
+                        children: _.map((e) => {
                             let { achievementId: t, dateUnlocked: n } = e;
                             return (0, i.jsx)(
                                 m.Z,
@@ -94,26 +90,26 @@ function p(e) {
                     })
                 }),
             x.length > 0 &&
-                (0, i.jsxs)(l.FormSection, {
-                    className: h.divider,
+                (0, i.jsxs)(a.hjN, {
+                    className: g.divider,
                     children: [
                         (0, i.jsx)('div', {
-                            className: h.headerTextContainer,
-                            children: (0, i.jsx)(l.Text, {
+                            className: g.headerTextContainer,
+                            children: (0, i.jsx)(a.Text, {
                                 variant: 'text-md/bold',
                                 color: 'header-secondary',
-                                children: g.intl.string(g.t.GFyMg4)
+                                children: h.intl.string(h.t.GFyMg4)
                             })
                         }),
                         (0, i.jsx)('div', {
-                            className: h.achievementGrid,
+                            className: g.achievementGrid,
                             children: x.map((e) => (0, i.jsx)(m.Z, { achievementId: e.id }, e.id))
                         })
                     ]
                 }),
-            (0, i.jsx)(l.FormSection, {
-                className: h.divider,
-                children: (0, i.jsx)('div', { className: h.bottomPadding })
+            (0, i.jsx)(a.hjN, {
+                className: g.divider,
+                children: (0, i.jsx)('div', { className: g.bottomPadding })
             })
         ]
     });

@@ -1,8 +1,4 @@
-r.d(n, {
-    N: function () {
-        return o;
-    }
-});
-var i = r(149765),
-    a = r(981631);
-let o = i.$e(a.Plq.ADMINISTRATOR, a.Plq.MANAGE_GUILD, a.Plq.BAN_MEMBERS, a.Plq.KICK_MEMBERS, a.Plq.MODERATE_MEMBERS, a.Plq.MANAGE_ROLES, a.Plq.MANAGE_NICKNAMES);
+n.d(t, { N: () => a });
+var i = n(149765),
+    r = n(981631);
+let a = i.$e(r.Plq.ADMINISTRATOR, r.Plq.MANAGE_GUILD, r.Plq.BAN_MEMBERS, r.Plq.KICK_MEMBERS, r.Plq.MODERATE_MEMBERS, r.Plq.MANAGE_ROLES, r.Plq.MANAGE_NICKNAMES);

@@ -1,21 +1,21 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    function n(e) {
+    function t(e) {
         return e instanceof Function || '[object Function]' === Object.prototype.toString.call(e);
     }
     return e.defineLocale('el', {
         monthsNominativeEl: 'Ιανουάριος_Φεβρουάριος_Μάρτιος_Απρίλιος_Μάιος_Ιούνιος_Ιούλιος_Αύγουστος_Σεπτέμβριος_Οκτώβριος_Νοέμβριος_Δεκέμβριος'.split('_'),
         monthsGenitiveEl: 'Ιανουαρίου_Φεβρουαρίου_Μαρτίου_Απριλίου_Μαΐου_Ιουνίου_Ιουλίου_Αυγούστου_Σεπτεμβρίου_Οκτωβρίου_Νοεμβρίου_Δεκεμβρίου'.split('_'),
-        months: function (e, n) {
-            return e ? ('string' == typeof n && /D/.test(n.substring(0, n.indexOf('MMMM'))) ? this._monthsGenitiveEl[e.month()] : this._monthsNominativeEl[e.month()]) : this._monthsNominativeEl;
+        months: function (e, t) {
+            return e ? ('string' == typeof t && /D/.test(t.substring(0, t.indexOf('MMMM'))) ? this._monthsGenitiveEl[e.month()] : this._monthsNominativeEl[e.month()]) : this._monthsNominativeEl;
         },
         monthsShort: 'Ιαν_Φεβ_Μαρ_Απρ_Μαϊ_Ιουν_Ιουλ_Αυγ_Σεπ_Οκτ_Νοε_Δεκ'.split('_'),
         weekdays: 'Κυριακή_Δευτέρα_Τρίτη_Τετάρτη_Πέμπτη_Παρασκευή_Σάββατο'.split('_'),
         weekdaysShort: 'Κυρ_Δευ_Τρι_Τετ_Πεμ_Παρ_Σαβ'.split('_'),
         weekdaysMin: 'Κυ_Δε_Τρ_Τε_Πε_Πα_Σα'.split('_'),
-        meridiem: function (e, n, r) {
-            return e > 11 ? (r ? 'μμ' : 'ΜΜ') : r ? 'πμ' : 'ΠΜ';
+        meridiem: function (e, t, n) {
+            return e > 11 ? (n ? 'μμ' : 'ΜΜ') : n ? 'πμ' : 'ΠΜ';
         },
         isPM: function (e) {
             return 'μ' === (e + '').toLowerCase()[0];
@@ -35,15 +35,14 @@
             nextWeek: 'dddd [{}] LT',
             lastDay: '[Χθες {}] LT',
             lastWeek: function () {
-                if (6 === this.day()) return '[το προηγούμενο] dddd [{}] LT';
-                return '[την προηγούμενη] dddd [{}] LT';
+                return 6 === this.day() ? '[το προηγούμενο] dddd [{}] LT' : '[την προηγούμενη] dddd [{}] LT';
             },
             sameElse: 'L'
         },
-        calendar: function (e, r) {
+        calendar: function (e, n) {
             var i = this._calendarEl[e],
-                a = r && r.hours();
-            return n(i) && (i = i.apply(r)), i.replace('{}', a % 12 == 1 ? 'στη' : 'στις');
+                r = n && n.hours();
+            return t(i) && (i = i.apply(n)), i.replace('{}', r % 12 == 1 ? 'στη' : 'στις');
         },
         relativeTime: {
             future: 'σε %s',

@@ -1,58 +1,54 @@
-n.d(e, {
-    n: function () {
-        return s;
-    }
-});
+n.d(e, { n: () => o });
 var r = n(180450),
     i = n(942351),
-    o = n(362133);
-function s(t, e, n, s) {
-    var h, u, f, l, a;
-    let c;
+    s = n(362133);
+function o(t, e, n, o) {
+    var h;
+    let a;
     let {
-            c: d,
-            dkLen: p,
-            DK: g,
-            PRF: y,
-            PRFSalt: b
-        } = (function (t, e, n, s) {
+            c: f,
+            dkLen: c,
+            DK: l,
+            PRF: u,
+            PRFSalt: d
+        } = (function (t, e, n, o) {
             (0, r.vp)(t);
             let {
                 c: h,
-                dkLen: u,
+                dkLen: a,
                 asyncTick: f
-            } = (0, o.U5)(
+            } = (0, s.U5)(
                 {
                     dkLen: 32,
                     asyncTick: 10
                 },
-                s
+                o
             );
-            if (((0, r.Rx)(h), (0, r.Rx)(u), (0, r.Rx)(f), h < 1)) throw Error('PBKDF2: iterations (c) should be >= 1');
-            let l = (0, o.O0)(e),
-                a = (0, o.O0)(n),
-                c = new Uint8Array(u),
-                d = i.b.create(t, l),
-                p = d._cloneInto().update(a);
+            if (((0, r.Rx)(h), (0, r.Rx)(a), (0, r.Rx)(f), h < 1)) throw Error('PBKDF2: iterations (c) should be >= 1');
+            let c = (0, s.O0)(e),
+                l = (0, s.O0)(n),
+                u = new Uint8Array(a),
+                d = i.b.create(t, c),
+                x = d._cloneInto().update(l);
             return {
                 c: h,
-                dkLen: u,
+                dkLen: a,
                 asyncTick: f,
-                DK: c,
+                DK: u,
                 PRF: d,
-                PRFSalt: p
+                PRFSalt: x
             };
-        })(t, e, n, s),
-        w = new Uint8Array(4),
-        G = (0, o.GL)(w),
-        L = new Uint8Array(y.outputLen);
-    for (let t = 1, e = 0; e < p; t++, e += y.outputLen) {
-        let n = g.subarray(e, e + y.outputLen);
-        G.setInt32(0, t, !1), (c = b._cloneInto(c)).update(w).digestInto(L), n.set(L.subarray(0, n.length));
-        for (let t = 1; t < d; t++) {
-            y._cloneInto(c).update(L).digestInto(L);
-            for (let t = 0; t < n.length; t++) n[t] ^= L[t];
+        })(t, e, n, o),
+        x = new Uint8Array(4),
+        p = (0, s.GL)(x),
+        b = new Uint8Array(u.outputLen);
+    for (let t = 1, e = 0; e < c; t++, e += u.outputLen) {
+        let n = l.subarray(e, e + u.outputLen);
+        p.setInt32(0, t, !1), (a = d._cloneInto(a)).update(x).digestInto(b), n.set(b.subarray(0, n.length));
+        for (let t = 1; t < f; t++) {
+            u._cloneInto(a).update(b).digestInto(b);
+            for (let t = 0; t < n.length; t++) n[t] ^= b[t];
         }
     }
-    return (h = y), (u = b), (f = g), (l = c), (a = L), h.destroy(), u.destroy(), l && l.destroy(), a.fill(0), f;
+    return (h = a), u.destroy(), d.destroy(), h && h.destroy(), b.fill(0), l;
 }

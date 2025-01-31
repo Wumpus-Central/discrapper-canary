@@ -1,9 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => d }), n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
@@ -17,7 +12,7 @@ function d(e) {
         x = (e) => {
             g(e), null == d || d(e);
         };
-    return (0, i.jsx)(a.Collapsible, {
+    return (0, i.jsx)(a.zF9, {
         className: s()(c.groupContainer, l),
         isExpanded: h,
         collapsibleContent: (0, i.jsxs)('div', {
@@ -29,7 +24,7 @@ function d(e) {
             return (0, i.jsx)(o.Z, {
                 ...m,
                 className: c.groupHeaderRow,
-                action: u ? (0, i.jsx)(a.Spinner, { type: a.Spinner.Type.PULSING_ELLIPSIS }) : t,
+                action: u ? (0, i.jsx)(a.$jN, { type: a.$jN.Type.PULSING_ELLIPSIS }) : t,
                 onClick: (e) => {
                     x(!h), n(e);
                 }

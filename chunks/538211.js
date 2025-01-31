@@ -1,43 +1,39 @@
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => a });
 var l = n(70722),
-    a = n(388032);
-function i(e, t) {
+    i = n(388032);
+function a(e, t) {
     return [
         {
             value: l.kr.BLACK_SCREEN,
-            label: t ? a.intl.string(a.t['0X5Zbm']) : a.intl.string(a.t.fxiRNj)
+            label: t ? i.intl.string(i.t['0X5Zbm']) : i.intl.string(i.t.fxiRNj)
         },
         {
             value: l.kr.BLURRY,
-            label: t ? a.intl.string(a.t.VVPQy8) : a.intl.string(a.t.E8jTMD)
+            label: t ? i.intl.string(i.t.VVPQy8) : i.intl.string(i.t.E8jTMD)
         },
         {
             value: l.kr.LAGGING,
-            label: t ? a.intl.string(a.t.ObEHd3) : a.intl.string(a.t.VoSJER)
+            label: t ? i.intl.string(i.t.ObEHd3) : i.intl.string(i.t.VoSJER)
         },
         {
             value: l.kr.OUT_OF_SYNC,
-            label: t ? a.intl.string(a.t.mYmwDw) : a.intl.string(a.t['+NluQk'])
+            label: t ? i.intl.string(i.t.mYmwDw) : i.intl.string(i.t['+NluQk'])
         },
         {
             value: l.kr.AUDIO_MISSING,
-            label: t ? a.intl.string(a.t.Xwv419) : a.intl.string(a.t.G2egzc)
+            label: t ? i.intl.string(i.t.Xwv419) : i.intl.string(i.t.G2egzc)
         },
         {
             value: l.kr.AUDIO_POOR,
-            label: t ? a.intl.string(a.t['fHey+f']) : a.intl.string(a.t.aHOfIi)
+            label: t ? i.intl.string(i.t['fHey+f']) : i.intl.string(i.t.aHOfIi)
         },
         {
             value: l.kr.STREAM_STOPPED,
-            label: a.intl.string(a.t.uEoqQk)
+            label: i.intl.string(i.t.uEoqQk)
         },
         {
             value: l.kr.OTHER,
-            label: a.intl.string(a.t['emlT9/'])
+            label: i.intl.string(i.t['emlT9/'])
         }
     ];
 }

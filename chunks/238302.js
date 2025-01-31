@@ -1,28 +1,18 @@
-r.d(n, {
-    Kq: function () {
-        return s;
-    },
-    Mo: function () {
-        return l;
-    },
-    kj: function () {
-        return u;
-    },
-    xs: function () {
-        return o;
-    },
-    zO: function () {
-        return a;
-    }
+n.d(t, {
+    Kq: () => s,
+    Mo: () => o,
+    kj: () => l,
+    xs: () => a,
+    zO: () => r
 });
-var i = r(570140);
-let a = (e) => {
+var i = n(570140);
+let r = (e) => {
         i.Z.dispatch({
             type: 'UPDATE_BACKGROUND_GRADIENT_PRESET',
             presetId: e
         });
     },
-    o = () => {
+    a = () => {
         i.Z.dispatch({
             type: 'UPDATE_BACKGROUND_GRADIENT_PRESET',
             presetId: null
@@ -31,9 +21,9 @@ let a = (e) => {
     s = () => {
         i.Z.dispatch({ type: 'CLIENT_THEMES_EDITOR_OPEN' });
     },
-    l = () => {
+    o = () => {
         i.Z.dispatch({ type: 'CLIENT_THEMES_EDITOR_CLOSE' });
     },
-    u = () => {
+    l = () => {
         i.Z.dispatch({ type: 'RESET_PREVIEW_CLIENT_THEME' });
     };

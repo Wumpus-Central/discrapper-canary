@@ -1,19 +1,13 @@
-r.d(n, {
-    Qe: function () {
-        return s;
-    },
-    ap: function () {
-        return a;
-    },
-    wj: function () {
-        return o;
-    }
+n.d(t, {
+    Qe: () => s,
+    ap: () => r,
+    wj: () => a
 });
-var i = r(231338);
-function a(e) {
+var i = n(231338);
+function r(e) {
     return e === i.BR.LIGHT;
 }
-function o(e) {
+function a(e) {
     switch (e) {
         case i.BR.DARK:
         case i.BR.MIDNIGHT:
@@ -25,6 +19,6 @@ function o(e) {
 }
 function s(e) {
     if (null == e) return;
-    let n = i.Al.get(e);
-    return null != n ? 'theme-'.concat(n, ' theme-').concat(e, ' images-').concat(n) : 'theme-'.concat(e, ' images-').concat(e);
+    let t = i.Al.get(e);
+    return null != t ? 'theme-'.concat(t, ' theme-').concat(e, ' images-').concat(t) : 'theme-'.concat(e, ' images-').concat(e);
 }

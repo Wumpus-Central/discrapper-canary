@@ -1,103 +1,97 @@
-r.r(n),
-    r.d(n, {
-        default: function () {
-            return S;
-        },
-        openQuestSurveyModal: function () {
-            return C;
-        }
-    });
-var i,
-    a = r(47120);
-var o = r(200651),
-    s = r(192379),
-    l = r(120356),
-    u = r.n(l),
-    c = r(642128),
-    d = r(481060),
-    f = r(493773),
-    p = r(600164),
-    h = r(626135),
-    _ = r(617136),
-    m = r(113434),
-    g = r(569984),
-    E = r(981631),
-    v = r(388032),
-    y = r(7302),
-    b = r(677486);
-let I = 2500,
-    T = 467;
-function S(e) {
-    let { questId: n, survey: r, transitionState: i, onClose: a, onSubmit: l } = e,
-        u = (0, m.B4)(n),
-        [_, g] = s.useState(0),
-        [S, C] = (0, d.useSpring)(() => ({
+n.d(t, {
+    C: () => T,
+    default: () => I
+}),
+    n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(642128),
+    l = n(481060),
+    u = n(493773),
+    c = n(600164),
+    d = n(626135),
+    f = n(617136),
+    _ = n(113434),
+    p = n(569984),
+    h = n(981631),
+    m = n(388032),
+    g = n(7302),
+    E = n(677486);
+let v = 2500,
+    y = 467;
+function I(e) {
+    let { questId: t, survey: n, transitionState: a, onClose: s, onSubmit: f } = e,
+        p = (0, _.B4)(t),
+        [I, T] = r.useState(0),
+        [A, N] = (0, l.q_F)(() => ({
             from: { width: '0%' },
-            config: { duration: I }
+            config: { duration: v }
         })),
-        R = (e) => {
-            l(),
-                g(1),
-                null != u &&
-                    h.default.track(E.rMx.QUEST_SURVEY_SUBMITTED, {
-                        ...N(u, r),
+        C = (e) => {
+            f(),
+                T(1),
+                null != p &&
+                    d.default.track(h.rMx.QUEST_SURVEY_SUBMITTED, {
+                        ...S(p, n),
                         choice: e.text,
                         choice_id: e.key
                     });
         },
-        O = async (e) => {
-            1 === e && (await C({ width: '100%' }), a());
+        R = async (e) => {
+            1 === e && (await N({ width: '100%' }), s());
         };
     return (
-        (0, f.Z)(() => {
-            null != u && h.default.track(E.rMx.QUEST_SURVEY_DISPLAYED, N(u, r));
+        (0, u.Z)(() => {
+            null != p && d.default.track(h.rMx.QUEST_SURVEY_DISPLAYED, S(p, n));
         }),
-        null == u && a(),
-        (0, o.jsx)(d.ModalRoot, {
-            transitionState: i,
-            size: d.ModalSize.DYNAMIC,
-            className: y.modalRoot,
-            children: (0, o.jsxs)(d.Slides, {
-                activeSlide: _,
-                width: T,
-                onSlideReady: O,
+        null == p && s(),
+        (0, i.jsx)(l.Y0X, {
+            transitionState: a,
+            size: l.CgR.DYNAMIC,
+            className: g.modalRoot,
+            children: (0, i.jsxs)(l.MyZ, {
+                activeSlide: I,
+                width: y,
+                onSlideReady: R,
                 children: [
-                    (0, o.jsxs)(d.Slide, {
+                    (0, i.jsxs)(l.Mi4, {
                         id: 0,
                         children: [
-                            (0, o.jsxs)(d.ModalHeader, {
-                                direction: p.Z.Direction.VERTICAL,
+                            (0, i.jsxs)(l.xBx, {
+                                direction: c.Z.Direction.VERTICAL,
                                 separator: !1,
-                                className: y.modalHeader,
+                                className: g.modalHeader,
                                 children: [
-                                    (0, o.jsx)(d.ModalCloseButton, {
-                                        className: y.closeBtn,
-                                        onClick: a
+                                    (0, i.jsx)(l.olH, {
+                                        className: g.closeBtn,
+                                        onClick: s
                                     }),
-                                    (0, o.jsx)('img', {
-                                        src: b,
+                                    (0, i.jsx)('img', {
+                                        src: E,
                                         alt: '',
-                                        className: y.asset
+                                        className: g.asset
                                     }),
-                                    (0, o.jsx)(d.Heading, {
+                                    (0, i.jsx)(l.X6q, {
                                         variant: 'heading-lg/semibold',
-                                        children: r.title
+                                        children: n.title
                                     }),
-                                    (0, o.jsx)(d.Text, {
+                                    (0, i.jsx)(l.Text, {
                                         variant: 'text-md/normal',
                                         color: 'text-muted',
-                                        children: r.subtitle
+                                        children: n.subtitle
                                     })
                                 ]
                             }),
-                            (0, o.jsx)(d.ModalContent, {
-                                className: y.modalContent,
-                                children: r.choices.map((e) =>
-                                    (0, o.jsx)(
-                                        A,
+                            (0, i.jsx)(l.hzk, {
+                                className: g.modalContent,
+                                children: n.choices.map((e) =>
+                                    (0, i.jsx)(
+                                        b,
                                         {
                                             choice: e,
-                                            onClick: R
+                                            onClick: C
                                         },
                                         e.key
                                     )
@@ -105,39 +99,39 @@ function S(e) {
                             })
                         ]
                     }),
-                    (0, o.jsxs)(d.Slide, {
+                    (0, i.jsxs)(l.Mi4, {
                         id: 1,
                         children: [
-                            (0, o.jsxs)(d.ModalContent, {
-                                className: y.completedModalContent,
+                            (0, i.jsxs)(l.hzk, {
+                                className: g.completedModalContent,
                                 children: [
-                                    (0, o.jsx)('img', {
-                                        src: b,
+                                    (0, i.jsx)('img', {
+                                        src: E,
                                         alt: '',
-                                        className: y.asset
+                                        className: g.asset
                                     }),
-                                    (0, o.jsx)(d.Heading, {
+                                    (0, i.jsx)(l.X6q, {
                                         variant: 'heading-lg/semibold',
-                                        children: v.intl.string(v.t.KTjjrK)
+                                        children: m.intl.string(m.t.KTjjrK)
                                     }),
-                                    (0, o.jsx)(d.Text, {
+                                    (0, i.jsx)(l.Text, {
                                         variant: 'text-md/normal',
                                         color: 'text-muted',
-                                        children: v.intl.string(v.t.AvbrEB)
+                                        children: m.intl.string(m.t.AvbrEB)
                                     })
                                 ]
                             }),
-                            (0, o.jsx)(d.ModalFooter, {
-                                children: (0, o.jsxs)('div', {
-                                    className: y.closeButtonContainer,
+                            (0, i.jsx)(l.mzw, {
+                                children: (0, i.jsxs)('div', {
+                                    className: g.closeButtonContainer,
                                     children: [
-                                        (0, o.jsx)(d.Button, {
-                                            onClick: a,
-                                            children: v.intl.string(v.t.cpT0Cg)
+                                        (0, i.jsx)(l.zxk, {
+                                            onClick: s,
+                                            children: m.intl.string(m.t.cpT0Cg)
                                         }),
-                                        (0, o.jsx)(c.animated.div, {
-                                            className: y.progressOverlay,
-                                            style: S
+                                        (0, i.jsx)(o.animated.div, {
+                                            className: g.progressOverlay,
+                                            style: A
                                         })
                                     ]
                                 })
@@ -149,56 +143,53 @@ function S(e) {
         })
     );
 }
-function A(e) {
-    let { className: n, choice: r, onClick: i } = e;
-    return (0, o.jsxs)(d.Clickable, {
-        className: u()(y.choiceContainer, n),
-        onClick: () => i(r),
+function b(e) {
+    let { className: t, choice: n, onClick: r } = e;
+    return (0, i.jsxs)(l.P3F, {
+        className: s()(g.choiceContainer, t),
+        onClick: () => r(n),
         children: [
-            (0, o.jsx)(d.Text, {
+            (0, i.jsx)(l.Text, {
                 variant: 'text-sm/semibold',
-                children: r.text
+                children: n.text
             }),
-            (0, o.jsx)(d.ChevronSmallRightIcon, {})
+            (0, i.jsx)(l.Fbu, {})
         ]
     });
 }
-function C(e) {
-    let n = !1;
-    (0, d.openModalLazy)(
+function T(e) {
+    let t = !1;
+    (0, l.ZDy)(
         async () => {
-            let { default: i } = await Promise.resolve().then(r.bind(r, 61115));
-            return (r) =>
-                (0, o.jsx)(i, {
-                    ...r,
+            let { default: r } = await Promise.resolve().then(n.bind(n, 61115));
+            return (n) =>
+                (0, i.jsx)(r, {
+                    ...n,
                     ...e,
                     onSubmit: () => {
-                        n = !0;
+                        t = !0;
                     }
                 });
         },
         {
             onCloseCallback: () => {
-                let r = g.Z.getQuest(e.questId);
-                null != r &&
-                    h.default.track(E.rMx.QUEST_SURVEY_DISMISSED, {
-                        ...N(r, e.survey),
-                        submitted: n
+                let n = p.Z.getQuest(e.questId);
+                null != n &&
+                    d.default.track(h.rMx.QUEST_SURVEY_DISMISSED, {
+                        ...S(n, e.survey),
+                        submitted: t
                     });
             }
         }
     );
 }
-function N(e, n) {
+function S(e, t) {
     return {
         quest_id: e.id,
-        quest_status: (0, _.uk)(e),
-        survey_id: n.id,
-        survey_title: n.title,
-        survey_subtitle: n.subtitle,
-        choices: n.choices.map((e) => e.text)
+        quest_status: (0, f.uk)(e),
+        survey_id: t.id,
+        survey_title: t.title,
+        survey_subtitle: t.subtitle,
+        choices: t.choices.map((e) => e.text)
     };
 }
-!(function (e) {
-    (e[(e.SURVEY = 0)] = 'SURVEY'), (e[(e.COMPLETE = 1)] = 'COMPLETE');
-})(i || (i = {}));

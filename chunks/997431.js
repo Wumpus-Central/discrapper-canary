@@ -1,14 +1,10 @@
-t.d(n, {
-    M: function () {
-        return i;
-    }
-});
-function i(e, n) {
+n.d(l, { M: () => i });
+function i(e, l) {
     if (null == e || '' === e) return null;
-    let t = new Date(e);
-    return !(t instanceof Date) || isNaN(t.getTime())
+    let n = new Date(e);
+    return !(n instanceof Date) || isNaN(n.getTime())
         ? null
-        : t.toLocaleDateString(n, {
+        : n.toLocaleDateString(l, {
               year: 'numeric',
               month: 'short'
           });

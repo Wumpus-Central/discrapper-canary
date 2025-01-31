@@ -1,15 +1,16 @@
-var i = n(200651);
+n.d(t, { Z: () => d });
+var l = n(200651);
 n(192379);
-var l = n(481060),
+var i = n(481060),
     s = n(823188),
     r = n(474936),
     a = n(101098);
 function o(e) {
     let { onClick: t, isGift: n, priceOptions: r, showPromotionalGiftBanner: o } = e;
-    return (0, i.jsx)(l.Clickable, {
+    return (0, l.jsx)(i.P3F, {
         onClick: t,
         style: { cursor: 'pointer' },
-        children: (0, i.jsx)(s.wp, {
+        children: (0, l.jsx)(s.wp, {
             className: a.tier2MarketingCard,
             ctaButton: null,
             showWumpus: !o,
@@ -23,10 +24,10 @@ function o(e) {
 }
 function C(e) {
     let { onClick: t, isGift: n, priceOptions: r } = e;
-    return (0, i.jsx)(l.Clickable, {
+    return (0, l.jsx)(i.P3F, {
         onClick: t,
         style: { cursor: 'pointer' },
-        children: (0, i.jsx)(s.Gq, {
+        children: (0, l.jsx)(s.Gq, {
             className: a.tier0MarketingCard,
             ctaButton: null,
             showWumpus: !0,
@@ -36,20 +37,20 @@ function C(e) {
         })
     });
 }
-t.Z = function (e) {
-    let { onSelectSku: t, isGift: n, priceOptions: l, showPromotionalGiftBanner: s } = e;
-    return (0, i.jsxs)(i.Fragment, {
+let d = function (e) {
+    let { onSelectSku: t, isGift: n, priceOptions: i, showPromotionalGiftBanner: s } = e;
+    return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, i.jsx)(o, {
+            (0, l.jsx)(o, {
                 onClick: () => t(r.Si.TIER_2),
                 isGift: n,
-                priceOptions: l,
+                priceOptions: i,
                 showPromotionalGiftBanner: s
             }),
-            (0, i.jsx)(C, {
+            (0, l.jsx)(C, {
                 onClick: () => t(r.Si.TIER_0),
                 isGift: n,
-                priceOptions: l
+                priceOptions: i
             })
         ]
     });

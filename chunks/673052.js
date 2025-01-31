@@ -1,53 +1,49 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-});
+n.d(t, { Z: () => u });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(835473),
-    a = n(739566),
-    o = n(942951),
-    s = n(834129),
+var l = n(481060),
+    a = n(835473),
+    r = n(739566),
+    s = n(942951),
+    o = n(834129),
     c = n(388032),
-    u = n(506287);
-function d(e) {
-    let { message: t, channel: n, compact: d } = e,
-        m = (0, a.ZP)(t),
-        h = (0, o.l)({
+    d = n(506287);
+function u(e) {
+    let { message: t, channel: n, compact: u } = e,
+        m = (0, r.ZP)(t),
+        h = (0, s.l)({
             user: t.author,
             channelId: n.id,
             guildId: n.guild_id,
             messageId: t.id
         })(m),
-        f = (0, l.q)(t.applicationId);
-    if (null == f) return null;
+        _ = (0, a.q)(t.applicationId);
+    if (null == _) return null;
     let p = c.intl.format(c.t.mAtJTE, {
         username: t.author.username,
         usernameHook: h,
-        applicationName: f.name,
+        applicationName: _.name,
         applicationNameHook: () =>
             (0, i.jsx)(
-                r.Text,
+                l.Text,
                 {
-                    className: u.applicationName,
+                    className: d.applicationName,
                     variant: 'text-md/semibold',
                     color: 'header-primary',
-                    children: f.name
+                    children: _.name
                 },
-                f.name
+                _.name
             ),
         helpdeskArticle: '#'
     });
-    return (0, i.jsx)(s.Z, {
-        iconNode: (0, i.jsx)(r.RefreshIcon, {
+    return (0, i.jsx)(o.Z, {
+        iconNode: (0, i.jsx)(l.DuK, {
             size: 'sm',
-            color: r.tokens.colors.STATUS_POSITIVE
+            color: l.TVs.colors.STATUS_POSITIVE
         }),
         timestamp: t.timestamp,
-        compact: d,
-        contentClassName: u.systemMessage,
+        compact: u,
+        contentClassName: d.systemMessage,
         children: p
     });
 }

@@ -1,18 +1,10 @@
 n.d(t, {
-    NV: function () {
-        return r;
-    },
-    aS: function () {
-        return l;
-    },
-    nG: function () {
-        return i;
-    },
-    yf: function () {
-        return a;
-    }
+    NV: () => l,
+    aS: () => r,
+    nG: () => i,
+    yf: () => a
 });
 let i = 64,
-    r = 62,
-    l = 50,
+    l = 62,
+    r = 50,
     a = 5;

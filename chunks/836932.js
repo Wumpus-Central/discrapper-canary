@@ -1,23 +1,19 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-});
+n.d(t, { Z: () => c });
 var i = n(224706),
     s = n(13245),
-    r = n(593481),
-    o = n(150097),
-    a = n(312839),
-    l = n(987650),
-    c = n(388032);
-function d(e, t, n, d, u) {
+    l = n(593481),
+    r = n(150097),
+    o = n(312839),
+    a = n(987650),
+    d = n(388032);
+function c(e, t, n, c, u) {
     if (null == t.activity) return null;
     let h = t.activity.type,
         p = u.session_id;
     if (null == p) return null;
-    let { icon: f, title: g, body: m } = (0, o.Xi)(e, t, n),
-        { trackView: v, trackClick: x } = (0, a.R)(l.n0.ActivityInvite, {
-            notif_type: l.n0.ActivityInvite,
+    let { icon: g, title: f, body: m } = (0, r.Xi)(e, t, n),
+        { trackView: x, trackClick: v } = (0, o.R)(a.n0.ActivityInvite, {
+            notif_type: a.n0.ActivityInvite,
             notif_user_id: n.id,
             message_id: t.id,
             message_type: t.type,
@@ -28,27 +24,27 @@ function d(e, t, n, d, u) {
             activity_name: u.name
         });
     return {
-        icon: f,
-        title: g,
+        icon: g,
+        title: f,
         body: m,
-        hint: (e) => (0, r.QR)(e, (0, a.P)(), c.t.aB5xLy),
+        hint: (e) => (0, l.QR)(e, (0, o.P)(), d.t.aB5xLy),
         onNotificationShow: () => {
-            v();
+            x();
         },
-        confirmText: c.intl.string(c.t.VJlc0d),
-        onConfirmClick: (r, o) => {
+        confirmText: d.intl.string(d.t.VJlc0d),
+        onConfirmClick: (l, r) => {
             i.Z.join({
                 userId: n.id,
                 sessionId: p,
-                applicationId: d.id,
+                applicationId: c.id,
                 channelId: e.id,
                 messageId: t.id
             }),
-                s.Z.updateNotificationStatus(o),
-                x('join');
+                s.Z.updateNotificationStatus(r),
+                v('join');
         },
         onDismissClick: () => {
-            x('dismiss');
+            v('dismiss');
         }
     };
 }

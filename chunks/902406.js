@@ -1,1 +1,2 @@
-e.exports = { title: 'title_a4cad7' };
+var i = { title: 'title__051e9' };
+e.exports = i;

@@ -1,58 +1,50 @@
-r.d(n, {
-    R: function () {
-        return f;
-    },
-    n: function () {
-        return d;
-    }
-});
-var i = r(47120);
-var a = r(200651),
-    o = r(192379);
-let s = 'data-focus-blocked',
-    l = 0;
-function u() {
-    return l++;
+n.d(t, { R: () => c }), n(47120);
+var i = n(200651),
+    r = n(192379);
+let a = 'data-focus-blocked',
+    s = 0;
+function o() {
+    return s++;
 }
-function c(e) {
+function l(e) {
     return document.createTreeWalker(e, NodeFilter.SHOW_ELEMENT, { acceptNode: (e) => (e.tabIndex >= 0 && !e.disabled ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_SKIP) });
 }
-function d(e, n) {
-    let [r] = o.useState(() => u()),
-        i = ''.concat(s, '-').concat(r);
-    o.useLayoutEffect(() => {
-        if (n) {
-            let n = e.current;
-            if (null != n) {
-                let e = c(n),
-                    r = e.currentNode;
-                for (; null !== r; ) {
-                    let n = r,
-                        a = n.tabIndex;
-                    (n.tabIndex = -1), n.setAttribute(i, String(a)), (r = e.nextNode());
+function u(e, t) {
+    let [n] = r.useState(() => o()),
+        i = ''.concat(a, '-').concat(n);
+    r.useLayoutEffect(() => {
+        if (t) {
+            let t = e.current;
+            if (null != t) {
+                let e = l(t),
+                    n = e.currentNode;
+                for (; null !== n; ) {
+                    let t = n,
+                        r = t.tabIndex;
+                    (t.tabIndex = -1), t.setAttribute(i, String(r)), (n = e.nextNode());
                 }
                 return () => {
-                    n.querySelectorAll('['.concat(i, ']')).forEach((e) => {
-                        let n = e.getAttribute(i);
-                        if (null != n) {
-                            let r = parseInt(n, 10);
-                            e.tabIndex = r;
+                    t.querySelectorAll('['.concat(i, ']')).forEach((e) => {
+                        let t = e.getAttribute(i);
+                        if (null != t) {
+                            let n = parseInt(t, 10);
+                            e.tabIndex = n;
                         }
                     });
                 };
             }
         }
-    }, [n, e, i]);
+    }, [t, e, i]);
 }
-function f(e) {
-    let { children: n, className: r, enabled: i = !0 } = e,
-        s = o.useRef(null);
+function c(e) {
+    let { children: t, className: n, enabled: a = !0 } = e,
+        s = r.useRef(null);
     return (
-        d(s, i),
-        (0, a.jsx)('div', {
+        u(s, a),
+        (0, i.jsx)('div', {
             ref: s,
-            className: r,
-            children: n
+            className: n,
+            children: t
         })
     );
 }

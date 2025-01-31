@@ -1,5 +1,6 @@
-e.exports = {
-    dimensionlessImage: 'dimensionlessImage_a4c000',
-    wrapper: 'wrapper_a4c000',
-    zoomed: 'zoomed_a4c000'
+var i = {
+    dimensionlessImage: 'dimensionlessImage_a22bfd',
+    wrapper: 'wrapper_a22bfd',
+    zoomed: 'zoomed_a22bfd'
 };
+e.exports = i;

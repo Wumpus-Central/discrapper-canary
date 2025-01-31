@@ -1,7 +1,7 @@
 var e = r(197187),
     i = r(926515),
-    u = r(581031),
-    o = r(527221),
+    o = r(581031),
+    u = r(527221),
     a = r(936940),
     c = r(24033),
     s = r(354848),
@@ -17,41 +17,38 @@ var e = r(197187),
     y = r(641236)('replace'),
     E = Math.max,
     b = Math.min,
-    R = u([].concat),
-    $ = u([].push),
-    A = u(''.indexOf),
-    k = u(''.slice),
+    R = o([].concat),
+    $ = o([].push),
+    A = o(''.indexOf),
+    k = o(''.slice),
     m = '$0' === 'a'.replace(/./, '$0'),
     C = !!/./[y] && '' === /./[y]('a', '$0');
-o(
+u(
     'replace',
     function (n, t, r) {
-        var u = C ? '$' : '$0';
+        var o = C ? '$' : '$0';
         return [
             function (n, r) {
                 var e = p(this),
-                    u = f(n) ? void 0 : x(n, y);
-                return u ? i(u, n, e, r) : i(t, v(e), n, r);
+                    o = f(n) ? void 0 : x(n, y);
+                return o ? i(o, n, e, r) : i(t, v(e), n, r);
             },
             function (n, i) {
-                var o = c(this),
+                var u = c(this),
                     a = v(n);
-                if ('string' == typeof i && -1 === A(i, u) && -1 === A(i, '$<')) {
-                    var f = r(t, o, a, i);
+                if ('string' == typeof i && -1 === A(i, o) && -1 === A(i, '$<')) {
+                    var f = r(t, u, a, i);
                     if (f.done) return f.value;
                 }
                 var p = s(i);
-                !p && (i = v(i));
-                var x = o.global;
-                x && ((T = o.unicode), (o.lastIndex = 0));
-                for (var y = []; null !== (O = I(o, a)); ) {
-                    if (($(y, O), !x)) break;
-                    '' === v(O[0]) && (o.lastIndex = d(a, h(o.lastIndex), T));
+                p || (i = v(i));
+                var x = u.global;
+                x && ((T = u.unicode), (u.lastIndex = 0));
+                for (var y = []; null !== (O = I(u, a)) && ($(y, O), x); ) {
+                    '' === v(O[0]) && (u.lastIndex = d(a, h(u.lastIndex), T));
                 }
                 for (var m = '', C = 0, S = 0; S < y.length; S++) {
-                    for (var w, T, O, _, U = v((O = y[S])[0]), M = E(b(l(O.index), a.length), 0), K = [], N = 1; N < O.length; N++) {
-                        $(K, void 0 === (w = O[N]) ? w : String(w));
-                    }
+                    for (var w, T, O, _, U = v((O = y[S])[0]), M = E(b(l(O.index), a.length), 0), K = [], N = 1; N < O.length; N++) $(K, void 0 === (w = O[N]) ? w : String(w));
                     var P = O.groups;
                     if (p) {
                         var B = R([U], K, M, a);

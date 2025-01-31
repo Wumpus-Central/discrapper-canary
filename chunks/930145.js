@@ -1,39 +1,35 @@
-r.d(n, {
-    A: function () {
-        return o;
-    }
-});
-var i = r(198584),
-    a = r(350167);
-class o {
-    static open(e, n) {
-        return a.r.executeAsync('database_open', (r) => {
-            var a;
-            return i.d.databaseOpen(r, {
+n.d(t, { A: () => a });
+var i = n(198584),
+    r = n(350167);
+class a {
+    static open(e, t) {
+        return r.r.executeAsync('database_open', (n) => {
+            var r;
+            return i.d.databaseOpen(n, {
                 database: e,
-                invalidateDisabledHandles: null !== (a = null == n ? void 0 : n.invalidateDisabledHandles) && void 0 !== a && a
+                invalidateDisabledHandles: null !== (r = null == t ? void 0 : t.invalidateDisabledHandles) && void 0 !== r && r
             });
         });
     }
-    static openSyncUnsafe(e, n) {
-        var r;
+    static openSyncUnsafe(e, t) {
+        var n;
         return i.d.databaseOpen(
             null,
             {
                 database: e,
-                invalidateDisabledHandles: null !== (r = null == n ? void 0 : n.invalidateDisabledHandles) && void 0 !== r && r
+                invalidateDisabledHandles: null !== (n = null == t ? void 0 : t.invalidateDisabledHandles) && void 0 !== n && n
             },
             { synchronous: !0 }
         );
     }
     static delete(e) {
-        return a.r.executeAsync('database_delete', (n) => i.d.databaseDelete(n, { database: e }));
+        return r.r.executeAsync('database_delete', (t) => i.d.databaseDelete(t, { database: e }));
     }
     static async list() {
-        return (await a.r.executeAsync('database_list', (e) => i.d.databaseList(e))).map((e) => e.data);
+        return (await r.r.executeAsync('database_list', (e) => i.d.databaseList(e))).map((e) => e.data);
     }
     static optimize(e) {
-        return a.r.executeAsync('database_optimize', (n) => i.d.databaseOptimize(n, { aggressive: e }));
+        return r.r.executeAsync('database_optimize', (t) => i.d.databaseOptimize(t, { aggressive: e }));
     }
     static raise(e) {
         i.d.raise(e);

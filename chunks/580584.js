@@ -1,43 +1,38 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return d;
-        }
-    });
+n.d(t, { default: () => d });
 var s = n(200651);
 n(192379);
 var a = n(332664),
-    o = n(814249),
+    i = n(814249),
     l = n(531578),
-    i = n(388032),
-    r = n(426598);
-let c = [
+    c = n(388032),
+    o = n(426598);
+let r = [
     {
-        className: r.emojiThumbsUp,
+        className: o.emojiThumbsUp,
         rating: l.aZ.GOOD,
-        classNameSelected: r.selected
+        classNameSelected: o.selected
     },
     {
-        className: r.emojiThumbsDown,
+        className: o.emojiThumbsDown,
         rating: l.aZ.BAD,
-        classNameSelected: r.selected
+        classNameSelected: o.selected
     }
 ];
 function d(e) {
     let { transitionState: t, startRating: n, onClose: l, onSubmit: d } = e;
     return (0, s.jsx)(a.Z, {
         modalType: 'summary',
-        header: i.intl.string(i.t.hghcMj),
-        body: i.intl.string(i.t['QFU78/']),
-        problemTitle: i.intl.string(i.t.CtiHPj),
+        header: c.intl.string(c.t.hghcMj),
+        body: c.intl.string(c.t['QFU78/']),
+        problemTitle: c.intl.string(c.t.CtiHPj),
         onSubmit: d,
         onClose: l,
-        ratingConfigs: c,
+        ratingConfigs: r,
         transitionState: t,
-        problems: (0, o.iq)(),
-        ratingsSelectorClassName: r.ratingsSelector,
-        feedbackProblems: [o.R7.OTHER],
-        otherKey: o.R7.OTHER,
+        problems: (0, i.iq)(),
+        ratingsSelectorClassName: o.ratingsSelector,
+        feedbackProblems: [i.R7.OTHER],
+        otherKey: i.R7.OTHER,
         startRating: n,
         hideDontShowCheckbox: !0
     });

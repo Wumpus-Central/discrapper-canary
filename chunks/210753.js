@@ -1,66 +1,60 @@
-r.d(n, {
-    $: function () {
-        return g;
-    }
-});
-var i = r(653041);
-var a = r(47120);
-var o = r(192379),
-    s = r(392711),
-    l = r.n(s),
-    u = r(442837),
-    c = r(846519),
-    d = r(224706),
-    f = r(669764);
-function p(e, n, r) {
+n.d(t, { $: () => p }), n(653041), n(47120);
+var i = n(192379),
+    r = n(392711),
+    a = n.n(r),
+    s = n(442837),
+    o = n(846519),
+    l = n(224706),
+    u = n(669764);
+function c(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let h = 20;
-class _ {
+let d = 20;
+class f {
     request(e) {
-        !(this._pending.has(e) || this._fetched.has(e)) && (this._pending.add(e), this._flushHandler.delay(!1));
+        this._pending.has(e) || this._fetched.has(e) || (this._pending.add(e), this._flushHandler.delay(!1));
     }
     _flush() {
         let e = [];
-        this._pending.forEach((n) => {
-            this._fetched.add(n), e.push(n);
+        this._pending.forEach((t) => {
+            this._fetched.add(t), e.push(t);
         }),
-            l()
-                .chunk(e, h)
+            a()
+                .chunk(e, d)
                 .forEach((e) => {
-                    d.Z.getDetectableGamesSupplemental(e);
+                    l.Z.getDetectableGamesSupplemental(e);
                 });
     }
     constructor() {
-        p(this, '_fetched', new Set()), p(this, '_pending', new Set()), p(this, '_flushHandler', new c.sW(0, () => this._flush()));
+        c(this, '_fetched', new Set()), c(this, '_pending', new Set()), c(this, '_flushHandler', new o.sW(0, () => this._flush()));
     }
 }
-let m = new _();
-function g(e, n) {
-    o.useEffect(() => {
-        null != e && m.request(e);
+let _ = new f();
+function p(e, t) {
+    i.useEffect(() => {
+        null != e && _.request(e);
     }, [e]);
-    let r = o.useMemo(
+    let n = i.useMemo(
         () =>
-            null != n
+            null != t
                 ? {
-                      width: n.coverImageWidth,
-                      height: n.coverImageHeight
+                      width: t.coverImageWidth,
+                      height: t.coverImageHeight
                   }
                 : void 0,
-        [n]
+        [t]
     );
-    return (0, u.cj)([f.Z], () =>
+    return (0, s.cj)([u.Z], () =>
         null == e
             ? {
                   isFetching: !1,
@@ -69,10 +63,10 @@ function g(e, n) {
                   coverImageUrl: void 0
               }
             : {
-                  isFetching: f.Z.isFetching(e),
-                  localizedName: f.Z.getLocalizedName(e),
-                  themes: f.Z.getThemes(e),
-                  coverImageUrl: f.Z.getCoverImageUrl(e, r)
+                  isFetching: u.Z.isFetching(e),
+                  localizedName: u.Z.getLocalizedName(e),
+                  themes: u.Z.getThemes(e),
+                  coverImageUrl: u.Z.getCoverImageUrl(e, n)
               }
     );
 }

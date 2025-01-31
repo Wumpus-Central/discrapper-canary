@@ -1,7 +1,7 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    var n = {
+    var t = {
             1: '૧',
             2: '૨',
             3: '૩',
@@ -13,7 +13,7 @@
             9: '૯',
             0: '૦'
         },
-        r = {
+        n = {
             '૧': '1',
             '૨': '2',
             '૩': '3',
@@ -66,27 +66,20 @@
         },
         preparse: function (e) {
             return e.replace(/[૧૨૩૪૫૬૭૮૯૦]/g, function (e) {
-                return r[e];
+                return n[e];
             });
         },
         postformat: function (e) {
             return e.replace(/\d/g, function (e) {
-                return n[e];
+                return t[e];
             });
         },
         meridiemParse: /રાત|બપોર|સવાર|સાંજ/,
-        meridiemHour: function (e, n) {
-            if ((12 === e && (e = 0), 'રાત' === n)) return e < 4 ? e : e + 12;
-            if ('સવાર' === n) return e;
-            if ('બપોર' === n) return e >= 10 ? e : e + 12;
-            else if ('સાંજ' === n) return e + 12;
+        meridiemHour: function (e, t) {
+            return (12 === e && (e = 0), 'રાત' === t) ? (e < 4 ? e : e + 12) : 'સવાર' === t ? e : 'બપોર' === t ? (e >= 10 ? e : e + 12) : 'સાંજ' === t ? e + 12 : void 0;
         },
-        meridiem: function (e, n, r) {
-            if (e < 4) return 'રાત';
-            if (e < 10) return 'સવાર';
-            if (e < 17) return 'બપોર';
-            else if (e < 20) return 'સાંજ';
-            else return 'રાત';
+        meridiem: function (e, t, n) {
+            return e < 4 ? 'રાત' : e < 10 ? 'સવાર' : e < 17 ? 'બપોર' : e < 20 ? 'સાંજ' : 'રાત';
         },
         week: {
             dow: 0,

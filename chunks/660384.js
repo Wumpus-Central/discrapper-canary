@@ -1,4 +1,5 @@
-e.exports = {
-    cta: 'cta_cdef0d',
-    buttonReset: 'buttonReset_cdef0d'
+var i = {
+    cta: 'cta_a3a802',
+    buttonReset: 'buttonReset_a3a802'
 };
+e.exports = i;

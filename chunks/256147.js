@@ -1,9 +1,5 @@
-n.d(e, {
-    M: function () {
-        return i;
-    }
-});
-var r = n(250683);
-function i(t) {
-    return r.fromByteArray(t);
+n.d(t, { M: () => l });
+var i = n(250683);
+function l(e) {
+    return i.fromByteArray(e);
 }

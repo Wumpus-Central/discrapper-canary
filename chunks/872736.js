@@ -1,20 +1,16 @@
-n.d(t, {
-    Z: function () {
-        return l;
-    }
-});
+n.d(t, { Z: () => a });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    s = n(695346),
-    a = n(388032);
-function l(e) {
-    let t = s.R_.useSetting();
-    return (0, i.jsx)(r.FormSwitch, {
+var s = n(481060),
+    r = n(695346),
+    l = n(388032);
+function a(e) {
+    let t = r.R_.useSetting();
+    return (0, i.jsx)(s.j7V, {
         hideBorder: !0,
         value: !t,
-        onChange: () => s.R_.updateSetting(!t),
-        note: t ? null : a.intl.formatToPlainString(a.t.aYhclZ, { username: e.legacyUsername }),
-        children: a.intl.string(a.t['3cWDuL'])
+        onChange: () => r.R_.updateSetting(!t),
+        note: t ? null : l.intl.formatToPlainString(l.t.aYhclZ, { username: e.legacyUsername }),
+        children: l.intl.string(l.t['3cWDuL'])
     });
 }

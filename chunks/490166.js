@@ -1,71 +1,66 @@
-e.r(n),
-    e.d(n, {
-        default: function () {
-            return r;
-        }
-    });
-var o = e(200651);
-e(192379);
-var i = e(481060),
-    s = e(536442),
-    l = e(13140),
-    a = e(487029),
-    d = e(388032),
-    c = e(167818);
-function r(t) {
-    let { guildId: n, channel: r, keybind: u, transitionState: h, onClose: k } = t;
-    function b() {
-        (0, s.Kw)(s.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL), k();
-    }
+t.d(n, { default: () => r });
+var i = t(200651);
+t(192379);
+var s = t(481060),
+    o = t(536442),
+    l = t(13140),
+    c = t(487029),
+    d = t(388032),
+    a = t(167818);
+function r(e) {
+    let { guildId: n, channel: r, keybind: h, transitionState: u, onClose: k } = e;
     function x() {
-        b(),
-            (0, i.openModalLazy)(async () => {
-                let { default: t } = await e.e('5551').then(e.bind(e, 355453));
-                return (n) => (0, o.jsx)(t, { ...n });
+        (0, o.Kw)(o.v6.SOUNDBOARD_WHEEL_EDUCATION_MODAL), k();
+    }
+    function _() {
+        x(),
+            (0, s.ZDy)(async () => {
+                let { default: e } = await t.e('5551').then(t.bind(t, 355453));
+                return (n) => (0, i.jsx)(e, { ...n });
             });
     }
-    return (0, o.jsxs)(i.ModalRoot, {
-        transitionState: h,
+    return (0, i.jsxs)(s.Y0X, {
+        transitionState: u,
         'aria-label': d.intl.string(d.t['yJeV5+']),
         children: [
-            (0, o.jsxs)(i.ModalContent, {
-                className: c.content,
+            (0, i.jsxs)(s.hzk, {
+                className: a.content,
                 children: [
-                    (0, o.jsx)(i.Heading, {
+                    (0, i.jsx)(s.X6q, {
                         variant: 'heading-xl/extrabold',
-                        className: c.header,
+                        className: a.header,
                         children: d.intl.string(d.t['yJeV5+'])
                     }),
-                    (0, o.jsx)(i.Text, {
+                    (0, i.jsx)(s.Text, {
                         variant: 'text-md/normal',
                         children: d.intl.format(d.t.fq3Sw8, {
-                            keybind: (0, l.BB)(u.shortcut, !0).split(' + '),
-                            keybindHook: (t, n) =>
-                                (0, o.jsx)(
+                            keybind: (0, l.BB)(h.shortcut, !0).split(' + '),
+                            keybindHook: (e, n) =>
+                                (0, i.jsx)(
                                     'span',
                                     {
-                                        className: c.keybindHintKeys,
-                                        children: (0, o.jsx)(i.KeyCombo, {
-                                            className: c.keybindShortcut,
-                                            shortcut: (0, l.BB)(u.shortcut, !1)
+                                        className: a.keybindHintKeys,
+                                        children: (0, i.jsx)(s.M2$, {
+                                            className: a.keybindShortcut,
+                                            shortcut: (0, l.BB)(h.shortcut, !1)
                                         })
                                     },
                                     n
                                 ),
-                            openSettingsHook: (t, n) =>
-                                (0, o.jsx)(
-                                    i.Anchor,
+                            openSettingsHook: (e, n) =>
+                                (0, i.jsx)(
+                                    s.eee,
                                     {
-                                        onClick: x,
-                                        children: t
+                                        onClick: _,
+                                        children: e
                                     },
                                     n
                                 )
                         })
                     }),
-                    (0, o.jsx)('div', {
-                        className: c.soundWheel,
-                        children: (0, o.jsx)(a.Z, {
+                    (0, i.jsx)('div', {
+                        className: a.soundWheel,
+                        children: (0, i.jsx)(c.Z, {
                             width: 372,
                             height: 316,
                             guildId: n,
@@ -78,23 +73,23 @@ function r(t) {
                     })
                 ]
             }),
-            (0, o.jsxs)(i.ModalFooter, {
+            (0, i.jsxs)(s.mzw, {
                 children: [
-                    (0, o.jsx)(i.Button, {
-                        onClick: b,
+                    (0, i.jsx)(s.zxk, {
+                        onClick: x,
                         children: d.intl.string(d.t.ZwRzIC)
                     }),
-                    (0, o.jsx)(i.Button, {
-                        look: i.Button.Looks.LINK,
-                        color: i.Button.Colors.PRIMARY,
-                        onClick: x,
+                    (0, i.jsx)(s.zxk, {
+                        look: s.zxk.Looks.LINK,
+                        color: s.zxk.Colors.PRIMARY,
+                        onClick: _,
                         children: d.intl.string(d.t['TJ0N9/'])
                     })
                 ]
             }),
-            (0, o.jsx)(i.ModalCloseButton, {
-                className: c.closeButton,
-                onClick: b
+            (0, i.jsx)(s.olH, {
+                className: a.closeButton,
+                onClick: x
             })
         ]
     });

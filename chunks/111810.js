@@ -1,24 +1,16 @@
-r.d(n, {
-    HZ: function () {
-        return o;
-    },
-    V1: function () {
-        return u;
-    },
-    kf: function () {
-        return s;
-    },
-    p7: function () {
-        return l;
-    }
+n.d(t, {
+    HZ: () => a,
+    V1: () => l,
+    kf: () => s,
+    p7: () => o
 });
-var i = r(818083),
-    a = r(987338);
-let o = (0, i.B)({
+var i = n(818083),
+    r = n(987338);
+let a = (0, i.B)({
         kind: 'user',
         id: '2024-12_confetti_potion',
         label: 'Confetti Potion Experiment',
-        commonTriggerPoint: a.$P.CONNECTION_OPEN,
+        commonTriggerPoint: r.$P.CONNECTION_OPEN,
         defaultConfig: {
             canPurchase: !1,
             canSeeConfetti: !1,
@@ -48,6 +40,6 @@ let o = (0, i.B)({
             }
         ]
     }),
-    s = (e) => o.useExperiment({ location: e }, { autoTrackExposure: !1 }).canSeeConfetti,
-    l = (e) => o.useExperiment({ location: e }, { autoTrackExposure: !0 }).canSeeConfetti,
-    u = (e) => o.useExperiment({ location: e }, { autoTrackExposure: !1 }).canPurchase;
+    s = (e) => a.useExperiment({ location: e }, { autoTrackExposure: !1 }).canSeeConfetti,
+    o = (e) => a.useExperiment({ location: e }, { autoTrackExposure: !0 }).canSeeConfetti,
+    l = (e) => a.useExperiment({ location: e }, { autoTrackExposure: !1 }).canPurchase;

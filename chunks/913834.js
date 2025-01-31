@@ -1,65 +1,60 @@
-r.d(n, {
-    Z: function () {
-        return h;
-    }
-});
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(481060),
-    l = r(100527),
-    u = r(873128),
-    c = r(704041),
-    d = r(986398),
-    f = r(463031),
-    p = r(414993);
-function h(e) {
-    let { guild: n, message: r } = e,
-        [i, h] = o.useState(!1),
-        _ = o.useRef(!1),
-        m = (0, u.Z)({
-            guildId: n.id,
-            leaderboardId: f.z,
+n.d(t, { Z: () => f }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(481060),
+    s = n(100527),
+    o = n(873128),
+    l = n(704041),
+    u = n(986398),
+    c = n(463031),
+    d = n(414993);
+function f(e) {
+    let { guild: t, message: n } = e,
+        [f, _] = r.useState(!1),
+        p = r.useRef(!1),
+        h = (0, o.Z)({
+            guildId: t.id,
+            leaderboardId: c.z,
             intervalOffset: 0
         }),
-        g = o.useMemo(() => {
+        m = r.useMemo(() => {
             var e;
-            if ((null == m ? void 0 : null === (e = m.guild_settings) || void 0 === e ? void 0 : e.show_winner_crown) !== !0) return !1;
-            let n = m.users[0];
-            return r.author.id === (null == n ? void 0 : n.user_id);
-        }, [m, r]);
-    if (null == m || !g) return null;
-    let E = () => {
-            (_.current = !0), h(!0);
+            if ((null == h ? void 0 : null === (e = h.guild_settings) || void 0 === e ? void 0 : e.show_winner_crown) !== !0) return !1;
+            let t = h.users[0];
+            return n.author.id === (null == t ? void 0 : t.user_id);
+        }, [h, n]);
+    if (null == h || !m) return null;
+    let g = () => {
+            (p.current = !0), _(!0);
         },
-        v = () => {
-            (_.current = !1),
+        E = () => {
+            (p.current = !1),
                 setTimeout(() => {
-                    !_.current && h(!1);
+                    p.current || _(!1);
                 }, 100);
         };
-    return (0, a.jsx)('div', {
-        className: p.badge,
-        onMouseEnter: E,
-        onMouseLeave: v,
-        children: (0, a.jsx)(s.Popout, {
-            animation: s.Popout.Animation.TRANSLATE,
+    return (0, i.jsx)('div', {
+        className: d.badge,
+        onMouseEnter: g,
+        onMouseLeave: E,
+        children: (0, i.jsx)(a.yRy, {
+            animation: a.yRy.Animation.TRANSLATE,
             align: 'center',
             autoInvert: !0,
             nudgeAlignIntoViewport: !0,
             position: 'top',
-            shouldShow: i,
+            shouldShow: f,
             renderPopout: () =>
-                (0, a.jsx)(c.Z, {
-                    guildId: n.id,
+                (0, i.jsx)(l.Z, {
+                    guildId: t.id,
                     previewMode: !0,
-                    source: l.Z.MEMBER_LIST,
-                    leaderboardId: m.leaderboard_id
+                    source: s.Z.MEMBER_LIST,
+                    leaderboardId: h.leaderboard_id
                 }),
             children: () =>
-                (0, a.jsx)(d.Z, {
-                    leaderboard: m,
-                    className: p.image
+                (0, i.jsx)(u.Z, {
+                    leaderboard: h,
+                    className: d.image
                 })
         })
     });

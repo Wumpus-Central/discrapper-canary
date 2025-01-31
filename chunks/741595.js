@@ -1,3 +1,4 @@
+n.d(t, { Z: () => u });
 var i = n(200651),
     r = n(192379),
     l = n(120356),
@@ -7,22 +8,22 @@ var i = n(200651),
     c = n(240938);
 function d(e) {
     let { playstyle: t, onUpdatePlaystyle: n } = e,
-        l = (0, a.useToken)(a.tokens.colors.WHITE),
+        l = (0, a.dQu)(a.TVs.colors.WHITE),
         d = r.useMemo(() => Object.values((0, o.f4)()), []);
     return (0, i.jsx)('div', {
         className: c.playstyleSelect,
         children: d.map((e) =>
             (0, i.jsxs)(
-                a.Clickable,
+                a.P3F,
                 {
                     className: s()(c.playstyleOption, c.selectableOption, { [c.selectedOption]: e.type === t }),
                     onClick: () => n(e.type),
                     children: [
-                        (0, i.jsx)(a.Heading, {
+                        (0, i.jsx)(a.X6q, {
                             variant: 'heading-xxl/medium',
                             children: e.emoji
                         }),
-                        (0, i.jsx)(a.Heading, {
+                        (0, i.jsx)(a.X6q, {
                             variant: 'heading-md/medium',
                             className: c.playstyleTitle,
                             children: e.title
@@ -33,7 +34,7 @@ function d(e) {
                             children: e.subtitle
                         }),
                         e.type === t &&
-                            (0, i.jsx)(a.CircleCheckIcon, {
+                            (0, i.jsx)(a.owK, {
                                 size: 'md',
                                 color: 'currentColor',
                                 secondaryColor: l.hex(),
@@ -46,12 +47,12 @@ function d(e) {
         )
     });
 }
-t.Z = (e) => {
+let u = (e) => {
     let { title: t, description: n, onUpdatePlaystyle: r, playstyle: l, error: s } = e;
     return (0, i.jsxs)('div', {
         className: c.slideContent,
         children: [
-            (0, i.jsx)(a.Heading, {
+            (0, i.jsx)(a.X6q, {
                 variant: 'heading-xxl/medium',
                 className: c.title,
                 children: t

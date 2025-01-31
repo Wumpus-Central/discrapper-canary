@@ -1,9 +1,10 @@
 e.exports = {
-    container: 'container_dc3fc4',
-    textContainer: 'textContainer_dc3fc4',
-    caret: 'caret_dc3fc4',
-    icon: 'icon_dc3fc4',
-    dot: 'dot_dc3fc4',
-    inline: 'inline_dc3fc4',
-    pulse: 'pulse_dc3fc4'
+    container: 'container__6b38f',
+    textContainer: 'textContainer__6b38f',
+    caret: 'caret__6b38f',
+    icon: 'icon__6b38f',
+    dot: 'dot__6b38f',
+    inline: 'inline__6b38f',
+    pulse: 'pulse__6b38f',
+    'pulse-animation': 'pulse-animation__6b38f'
 };

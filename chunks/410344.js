@@ -1,4 +1,5 @@
-e.exports = {
-    buttons: 'buttons_ce21cc',
-    button: 'button_ce21cc'
+var i = {
+    buttons: 'buttons_bc38cd',
+    button: 'button_bc38cd'
 };
+e.exports = i;

@@ -1,12 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return s;
-    }
-});
+n.d(t, { Z: () => s });
 var i = n(200651);
 n(192379);
-var r = n(886364),
-    l = n(331595);
+var l = n(886364),
+    r = n(325767);
 function a(e) {
     return 'CloudDone-'.concat(e);
 }
@@ -15,13 +11,13 @@ function s(e) {
         u = null;
     return (
         null != c &&
-            (u = (0, i.jsx)(r.Z, {
+            (u = (0, i.jsx)(l.Z, {
                 ...c,
                 color: s,
                 id: a(c.id)
             })),
         (0, i.jsxs)('svg', {
-            ...(0, l.Z)(d),
+            ...(0, r.Z)(d),
             width: t,
             height: n,
             viewBox: '0 0 24 24',

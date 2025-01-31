@@ -1,63 +1,43 @@
-r.d(n, {
-    Ng: function () {
-        return A;
-    },
-    OC: function () {
-        return D;
-    },
-    dg: function () {
-        return C;
-    },
-    dp: function () {
-        return b;
-    },
-    f3: function () {
-        return T;
-    },
-    iL: function () {
-        return L;
-    },
-    nA: function () {
-        return N;
-    },
-    qF: function () {
-        return y;
-    },
-    uV: function () {
-        return S;
-    },
-    vY: function () {
-        return O;
-    }
-});
-var i = r(47120);
-var a = r(757143);
-var o = r(200651),
-    s = r(112456),
-    l = r.n(s),
-    u = r(392711),
-    c = r.n(u),
-    d = r(430824),
-    f = r(594174),
-    p = r(424218),
-    h = r(74538),
-    _ = r(981631),
-    m = r(474936),
-    g = r(388032);
-let E = 524288000,
-    v = 524288000;
-function y(e, n) {
-    return e instanceof File ? e : b(e.data, e.filename, n);
+n.d(t, {
+    Ng: () => b,
+    OC: () => C,
+    dg: () => T,
+    dp: () => E,
+    f3: () => y,
+    iL: () => R,
+    nA: () => S,
+    qF: () => g,
+    uV: () => I,
+    vY: () => N
+}),
+    n(47120),
+    n(757143);
+var i = n(200651),
+    r = n(112456),
+    a = n.n(r),
+    s = n(392711),
+    o = n.n(s),
+    l = n(430824),
+    u = n(594174),
+    c = n(424218),
+    d = n(74538),
+    f = n(981631),
+    _ = n(474936),
+    p = n(388032);
+let h = 524288000,
+    m = 524288000;
+function g(e, t) {
+    return e instanceof File ? e : E(e.data, e.filename, t);
 }
-function b(e, n, i) {
-    let a = r(230318);
-    if (null == n && ((n = 'unknown'), 'type' in e)) {
-        let r = a.extension(e.type);
-        r && (n += '.'.concat(r));
+function E(e, t, i) {
+    let r = n(230318);
+    if (null == t && ((t = 'unknown'), 'type' in e)) {
+        let n = r.extension(e.type);
+        n && (t += '.'.concat(n));
     }
-    return null == i && ('type' in e && (i = e.type), (i = null != i ? i : a.lookup(n))), new File([e], n, { type: i });
+    return null == i && ('type' in e && (i = e.type), (i = null != i ? i : r.lookup(t))), new File([e], t, { type: i });
 }
-let I = [
+let v = [
     {
         reType: /^image\/vnd.adobe.photoshop/,
         klass: 'photoshop'
@@ -115,49 +95,49 @@ let I = [
         klass: 'audio'
     }
 ];
-function T(e) {
-    return S(e.name, e.type);
+function y(e) {
+    return I(e.name, e.type);
 }
-function S(e, n) {
-    var r;
-    e = null !== (r = null == e ? void 0 : e.toLowerCase()) && void 0 !== r ? r : '';
-    let i = c().find(I, (r) => (null != r.reType && null != n ? r.reType.test(n) : null != r.reName && '' !== e && r.reName.test(e)));
+function I(e, t) {
+    var n;
+    e = null !== (n = null == e ? void 0 : e.toLowerCase()) && void 0 !== n ? n : '';
+    let i = o().find(v, (n) => (null != n.reType && null != t ? n.reType.test(t) : null != n.reName && '' !== e && n.reName.test(e)));
     return null != i ? i.klass : 'unknown';
 }
+function b(e) {
+    return a().filesize(e);
+}
+function T(e) {
+    let t = u.default.getCurrentUser(),
+        n = d.ZP.getUserMaxFileSize(t);
+    if (null == e) return n;
+    let i = l.Z.getGuild(e);
+    return Math.max(null != i ? _.HO[i.premiumTier].limits.fileSize : f.mBz, n);
+}
+function S(e, t) {
+    let n = T(t);
+    return Array.from(e).some((e) => e.size > n);
+}
 function A(e) {
-    return l().filesize(e);
+    let t = 0;
+    for (let n of e) t += n.size;
+    return t;
 }
-function C(e) {
-    let n = f.default.getCurrentUser(),
-        r = h.ZP.getUserMaxFileSize(n);
-    if (null == e) return r;
-    let i = d.Z.getGuild(e);
-    return Math.max(null != i ? m.HO[i.premiumTier].limits.fileSize : _.mBz, r);
+function N(e) {
+    return A(e) > C();
 }
-function N(e, n) {
-    let r = C(n);
-    return Array.from(e).some((e) => e.size > r);
+function C() {
+    let e = u.default.getCurrentUser();
+    return null != e && e.isStaff() ? m : h;
 }
 function R(e) {
-    let n = 0;
-    for (let r of e) n += r.size;
-    return n;
-}
-function O(e) {
-    return R(e) > D();
-}
-function D() {
-    let e = f.default.getCurrentUser();
-    return null != e && e.isStaff() ? v : E;
-}
-function L(e) {
-    let { guildId: n, onClick: r } = e,
-        i = (0, p.BU)(C(n) / 1024, { useKibibytes: !0 }),
-        a = (0, p.BU)(m.Uq / 1024, { useKibibytes: !0 }),
-        s = g.intl.formatToPlainString(g.t.q5fTZm, { maxSize: i }),
-        l = g.intl.formatToPlainString(g.t.htbuIS, { premiumMaxSize: a }),
-        u = g.intl.format(g.t.fjSvsL, { onClick: r });
-    return (0, o.jsxs)(o.Fragment, {
-        children: [s, ' ', l.replace('\n', ' '), '. ', u]
+    let { guildId: t, onClick: n } = e,
+        r = (0, c.BU)(T(t) / 1024, { useKibibytes: !0 }),
+        a = (0, c.BU)(_.Uq / 1024, { useKibibytes: !0 }),
+        s = p.intl.formatToPlainString(p.t.q5fTZm, { maxSize: r }),
+        o = p.intl.formatToPlainString(p.t.htbuIS, { premiumMaxSize: a }),
+        l = p.intl.format(p.t.fjSvsL, { onClick: n });
+    return (0, i.jsxs)(i.Fragment, {
+        children: [s, ' ', o.replace('\n', ' '), '. ', l]
     });
 }

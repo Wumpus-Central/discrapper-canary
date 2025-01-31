@@ -1,34 +1,30 @@
-r.d(n, {
-    Z: function () {
-        return d;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(481060),
-    o = r(44315),
-    s = r(641033),
-    l = r(989830),
-    u = r(388032),
-    c = r(371611);
-function d(e) {
-    let { channelId: n } = e,
-        r = (0, l.Z)(n);
-    if (!(null != r && (r.value > 0 || (null == r ? void 0 : r.multiplier) > 1))) return null;
-    let { multiplier: d } = r,
-        { color: f } = (0, s.yz)(d);
+n.d(t, { Z: () => c });
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(44315),
+    s = n(641033),
+    o = n(989830),
+    l = n(388032),
+    u = n(371611);
+function c(e) {
+    let { channelId: t } = e,
+        n = (0, o.Z)(t);
+    if (!(null != n && (n.value > 0 || (null == n ? void 0 : n.multiplier) > 1))) return null;
+    let { multiplier: c } = n,
+        { color: d } = (0, s.yz)(c);
     return (0, i.jsxs)('div', {
-        className: c.container,
+        className: u.container,
         children: [
-            (0, i.jsx)(a.Text, {
+            (0, i.jsx)(r.Text, {
                 variant: 'text-xs/normal',
-                children: u.intl.string(u.t.Jr2519)
+                children: l.intl.string(l.t.Jr2519)
             }),
-            (0, i.jsx)(a.Progress, {
-                foregroundColor: (0, o.Lq)(f),
-                className: c.progress,
-                size: a.Progress.Sizes.LARGE,
-                percent: 100 * (0, s.nc)(r),
+            (0, i.jsx)(r.Exd, {
+                foregroundColor: (0, a.Lq)(d),
+                className: u.progress,
+                size: r.Exd.Sizes.LARGE,
+                percent: 100 * (0, s.nc)(n),
                 animate: !0
             })
         ]

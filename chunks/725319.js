@@ -1,16 +1,12 @@
-r.d(n, {
-    _E: function () {
-        return o;
-    },
-    nV: function () {
-        return a;
-    }
+n.d(t, {
+    _E: () => a,
+    nV: () => r
 });
-var i = r(944486);
-function a() {
+var i = n(944486);
+function r() {
     var e;
     return null !== (e = i.Z.getChannelId()) && void 0 !== e ? e : void 0;
 }
-function o() {
+function a() {
     return !0;
 }

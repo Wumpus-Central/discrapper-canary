@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return v;
-    }
-});
+n.d(t, { Z: () => f });
 var i = n(200651),
     r = n(192379),
     l = n(442837),
@@ -17,28 +13,28 @@ var i = n(200651),
     g = n(500395),
     x = n(975464),
     p = n(981631),
-    f = n(674563),
+    _ = n(674563),
     C = n(838581);
-function v() {
+function f() {
     let e;
     let t = (0, l.e7)([d.Z], () => d.Z.getGuild()),
-        { application: n, loading: v } = (0, o.Z)(null == t ? void 0 : t.id, f.wW.GUILD_ROLE_SUBSCRIPTIONS),
-        I = r.useRef(null),
+        { application: n, loading: f } = (0, o.Z)(null == t ? void 0 : t.id, _.wW.GUILD_ROLE_SUBSCRIPTIONS),
+        v = r.useRef(null),
         N = (0, u.Z)(null != t ? t : void 0);
     r.useEffect(() => {
         null != t && (0, m.sO)(t) && (0, c.EW)(s.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE);
     }, [t]);
-    let _ = (null == t ? void 0 : t.hasFeature(p.oNc.CREATOR_MONETIZABLE)) === !1 && (null == t ? void 0 : t.hasFeature(p.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) === !1;
+    let j = (null == t ? void 0 : t.hasFeature(p.oNc.CREATOR_MONETIZABLE)) === !1 && (null == t ? void 0 : t.hasFeature(p.oNc.CREATOR_MONETIZABLE_PROVISIONAL)) === !1;
     return (
         (e =
-            null == t || v
-                ? (0, i.jsx)(a.Spinner, {})
+            null == t || f
+                ? (0, i.jsx)(a.$jN, {})
                 : null != N
                   ? (0, i.jsx)(g.Z, {
                         guild: t,
                         config: N
                     })
-                  : _
+                  : j
                     ? (0, i.jsx)(x.Z, { guild: t })
                     : (0, i.jsx)(h.Z, {
                           guild: t,
@@ -48,13 +44,13 @@ function v() {
             className: C.settingsColumn,
             children: (0, i.jsx)('div', {
                 className: C.settingsContainer,
-                children: (0, i.jsx)(a.ScrollerAuto, {
+                children: (0, i.jsx)(a.w0Z, {
                     className: C.settingsScroller,
                     children: (0, i.jsx)('main', {
-                        ref: I,
+                        ref: v,
                         className: C.settingsContent,
-                        children: (0, i.jsx)(a.FocusRingScope, {
-                            containerRef: I,
+                        children: (0, i.jsx)(a.JcV, {
+                            containerRef: v,
                             children: e
                         })
                     })

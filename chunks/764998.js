@@ -1,24 +1,19 @@
-r.r(n),
-    r.d(n, {
-        default: function () {
-            return o;
-        }
-    });
-var a = r(200651);
-r(192379);
-var e = r(481060),
-    i = r(388032);
-function o(t) {
-    let { onConfirmUninstall: n, game: r, ...o } = t;
-    return (0, a.jsx)(e.ConfirmModal, {
-        header: i.intl.formatToPlainString(i.t['f/BAbG'], { gameName: r.name }),
-        confirmText: i.intl.string(i.t.RVy6Vl),
-        cancelText: i.intl.string(i.t['96dwMT']),
+a.d(n, { default: () => l });
+var e = a(200651);
+a(192379);
+var i = a(481060),
+    r = a(388032);
+function l(t) {
+    let { onConfirmUninstall: n, game: a, ...l } = t;
+    return (0, e.jsx)(i.ConfirmModal, {
+        header: r.intl.formatToPlainString(r.t['f/BAbG'], { gameName: a.name }),
+        confirmText: r.intl.string(r.t.RVy6Vl),
+        cancelText: r.intl.string(r.t['96dwMT']),
         onConfirm: n,
-        ...o,
-        children: (0, a.jsx)(e.Text, {
+        ...l,
+        children: (0, e.jsx)(i.Text, {
             variant: 'text-md/normal',
-            children: i.intl.format(i.t['FP+NKS'], { gameName: r.name })
+            children: r.intl.format(r.t['FP+NKS'], { gameName: a.name })
         })
     });
 }

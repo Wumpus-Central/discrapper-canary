@@ -1,27 +1,23 @@
-n.d(t, {
-    Z: function () {
-        return I;
-    }
-});
+n.d(t, { Z: () => x });
 var i = n(200651),
     r = n(192379),
-    s = n(442837),
-    l = n(481060),
+    l = n(442837),
+    a = n(481060),
     o = n(388905),
-    a = n(409059),
+    s = n(409059),
     c = n(962220),
     d = n(306453),
     u = n(108427),
     h = n(314897),
-    g = n(626135),
-    f = n(587444),
-    m = n(981631),
-    p = n(58346),
-    x = n(388032),
-    _ = n(232186);
-function E(e, t, n) {
+    _ = n(626135),
+    g = n(587444),
+    p = n(981631),
+    m = n(58346),
+    f = n(388032),
+    E = n(232186);
+function I(e, t, n) {
     e.preventDefault(),
-        g.default.track(m.rMx.GUILD_TEMPLATE_APP_OPENED, {
+        _.default.track(p.rMx.GUILD_TEMPLATE_APP_OPENED, {
             guild_template_code: t,
             guild_template_name: n.name,
             guild_template_description: n.description,
@@ -29,17 +25,17 @@ function E(e, t, n) {
         });
     let i = h.default.getFingerprint(),
         r = null != i ? i : h.default.getId();
-    c.Z.openMobileApp(n.state === p.Rj.RESOLVED ? t : void 0, r);
+    c.Z.openMobileApp(n.state === m.Rj.RESOLVED ? t : void 0, r);
 }
-function I(e) {
+function x(e) {
     let { code: t } = e,
-        n = (0, s.e7)([a.Z], () => a.Z.getGuildTemplate(t));
+        n = (0, l.e7)([s.Z], () => s.Z.getGuildTemplate(t));
     return (r.useEffect(() => {
         (0, u.e)('guild_template_mobile');
     }, []),
-    null == n || n.state === p.Rj.RESOLVING)
-        ? (0, i.jsx)(o.ZP, { children: (0, i.jsx)(l.Spinner, {}) })
-        : n.state === p.Rj.RESOLVED
+    null == n || n.state === m.Rj.RESOLVING)
+        ? (0, i.jsx)(o.ZP, { children: (0, i.jsx)(a.$jN, {}) })
+        : n.state === m.Rj.RESOLVED
           ? (0, i.jsxs)(o.ZP, {
                 children: [
                     (0, i.jsx)(d.Z, {
@@ -47,16 +43,16 @@ function I(e) {
                         tall: !0
                     }),
                     (0, i.jsx)(o.zx, {
-                        onClick: (e) => E(e, t, n),
-                        className: _.marginTop20,
-                        children: x.intl.string(x.t['a3Gl+f'])
+                        onClick: (e) => I(e, t, n),
+                        className: E.marginTop20,
+                        children: f.intl.string(f.t['a3Gl+f'])
                     })
                 ]
             })
-          : (0, i.jsx)(f.Z, {
-                text: x.intl.string(x.t['e/rZ2t']),
-                buttonCta: x.intl.string(x.t.HAvYn5),
-                onClick: (e) => E(e, t, n)
+          : (0, i.jsx)(g.Z, {
+                text: f.intl.string(f.t['e/rZ2t']),
+                buttonCta: f.intl.string(f.t.HAvYn5),
+                onClick: (e) => I(e, t, n)
             });
 }
-s.ZP.initialize();
+l.ZP.initialize();

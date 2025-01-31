@@ -1,1 +1,2 @@
-e.exports = { sparkles: 'sparkles_e64765' };
+var i = { sparkles: 'sparkles__64668' };
+e.exports = i;

@@ -1,26 +1,20 @@
-r.d(n, {
-    b: function () {
-        return o;
-    }
-});
-var i = r(47120);
-var a = r(192379);
-function o(e, n) {
-    let [r, i] = (0, a.useState)(!1),
-        o = (0, a.useCallback)(
-            (n) => {
-                (n.target === n.currentTarget || n.currentTarget.contains(document.activeElement)) && i(!0), null != e && e(n);
+n.d(t, { b: () => r }), n(47120);
+var i = n(192379);
+function r(e, t) {
+    let [n, r] = (0, i.useState)(!1);
+    return {
+        handleFocus: (0, i.useCallback)(
+            (t) => {
+                (t.target === t.currentTarget || t.currentTarget.contains(document.activeElement)) && r(!0), null != e && e(t);
             },
             [e]
-        );
-    return {
-        handleFocus: o,
-        handleBlur: (0, a.useCallback)(
-            (e) => {
-                (e.target === e.currentTarget || !e.currentTarget.contains(document.activeElement)) && i(!1), null != n && n(e);
-            },
-            [n]
         ),
-        isFocused: r
+        handleBlur: (0, i.useCallback)(
+            (e) => {
+                (e.target !== e.currentTarget && e.currentTarget.contains(document.activeElement)) || r(!1), null != t && t(e);
+            },
+            [t]
+        ),
+        isFocused: n
     };
 }

@@ -1,9 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return E;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => T }), n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
@@ -18,14 +13,14 @@ var i = n(200651),
     g = n(923726),
     x = n(584825),
     p = n(295141),
-    f = n(723047),
+    _ = n(723047),
     C = n(290348),
-    v = n(450215),
-    I = n(981631),
+    f = n(450215),
+    v = n(981631),
     N = n(388032),
-    _ = n(26405);
-let T = 'guild-role-subscription-tier-template-selector',
-    j = (e) => {
+    j = n(26405);
+let I = 'guild-role-subscription-tier-template-selector',
+    E = (e) => {
         let [t, n] = r.useState(!0),
             [i, l] = r.useState();
         return (
@@ -43,32 +38,32 @@ let T = 'guild-role-subscription-tier-template-selector',
     };
 function b(e) {
     let { guildId: t, priceTiers: l, groupListingId: p } = e,
-        j = (0, x._k)(p),
-        { editStateIds: b, addNewEditStateId: E, addNewEditStateFromTemplate: S, removeEditStateId: R } = C.B7(p, t, { includeSoftDeleted: !0 }),
-        [y, A] = r.useState({}),
-        Z = r.useMemo(() => {
+        E = (0, x._k)(p),
+        { editStateIds: b, addNewEditStateId: T, addNewEditStateFromTemplate: S, removeEditStateId: R } = C.B7(p, t, { includeSoftDeleted: !0 }),
+        [Z, y] = r.useState({}),
+        A = r.useMemo(() => {
             let e = b.map((e) => {
                 var t;
-                return null !== (t = y[e]) && void 0 !== t ? t : e;
+                return null !== (t = Z[e]) && void 0 !== t ? t : e;
             });
             return (0, a.uniq)(e);
-        }, [b, y]),
+        }, [b, Z]),
         L = (e, t) => {
-            A((n) => ({
+            y((n) => ({
                 ...n,
                 [e]: t
             }));
         },
         D = (0, g.ss)(t),
         O = (0, g.Gp)(),
-        M = r.useCallback(() => {
+        k = r.useCallback(() => {
             O &&
                 h.jJ.trackExposure({
                     guildId: t,
                     location: 'b2d9de_1'
                 }),
                 O && D
-                    ? (0, d.openModalLazy)(
+                    ? (0, d.ZDy)(
                           async () => {
                               let { default: e } = await n.e('9558').then(n.bind(n, 34460));
                               return (n) =>
@@ -76,40 +71,40 @@ function b(e) {
                                       ...n,
                                       guildId: t,
                                       addNewEditStateFromTemplate: S,
-                                      addNewEditStateFromScratch: E,
+                                      addNewEditStateFromScratch: T,
                                       priceTiers: l
                                   });
                           },
-                          { modalKey: T }
+                          { modalKey: I }
                       )
-                    : E();
-        }, [t, S, E, l, O, D]),
-        P = C.Lo(Z),
-        k = r.useCallback(() => Z.forEach(C.GM), [Z]),
-        w = (0, f.mY)(),
-        B = (0, o.e7)([m.Z], () => m.Z.getProps().subsection);
+                    : T();
+        }, [t, S, T, l, O, D]),
+        P = C.Lo(A),
+        w = r.useCallback(() => A.forEach(C.GM), [A]),
+        M = (0, _.mY)(),
+        U = (0, o.e7)([m.Z], () => m.Z.getProps().subsection);
     return (
         r.useEffect(
             () => (
-                B === I.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE && M(),
+                U === v.KsC.ROLE_SUBSCRIPTION_TIER_TEMPLATE && k(),
                 () => {
-                    (0, d.closeModal)(T);
+                    (0, d.Mr3)(I);
                 }
             ),
-            [B, M]
+            [U, k]
         ),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
-                    className: _.groupListings,
+                    className: j.groupListings,
                     children: [
-                        Z.map((e) =>
+                        A.map((e) =>
                             (0, i.jsx)(
-                                v.Z,
+                                f.Z,
                                 {
                                     guildId: t,
                                     initialEditStateId: e,
-                                    allSubscriptionListings: j,
+                                    allSubscriptionListings: E,
                                     priceTiers: l,
                                     groupListingId: p,
                                     onDeleteEditState: () => R(e),
@@ -119,15 +114,15 @@ function b(e) {
                                 e
                             )
                         ),
-                        (0, i.jsxs)(d.Clickable, {
-                            onClick: w ? void 0 : M,
-                            className: s()(_.createTierButton, { [_.disabled]: w }),
-                            'aria-disabled': w,
+                        (0, i.jsxs)(d.P3F, {
+                            onClick: M ? void 0 : k,
+                            className: s()(j.createTierButton, { [j.disabled]: M }),
+                            'aria-disabled': M,
                             children: [
-                                (0, i.jsx)(d.CirclePlusIcon, {
+                                (0, i.jsx)(d.oFk, {
                                     size: 'xs',
                                     color: 'currentColor',
-                                    className: _.createTierIcon
+                                    className: j.createTierIcon
                                 }),
                                 (0, i.jsx)(d.Text, {
                                     variant: 'text-md/normal',
@@ -140,28 +135,28 @@ function b(e) {
                 }),
                 (0, i.jsx)(c.W, {
                     component: 'div',
-                    className: _.contentRegion,
-                    children: P && (0, i.jsx)(d.SlideIn, { children: (0, i.jsx)(u.Z, { onReset: k }) })
+                    className: j.contentRegion,
+                    children: P && (0, i.jsx)(d.oXn, { children: (0, i.jsx)(u.Z, { onReset: w }) })
                 })
             ]
         })
     );
 }
-function E(e) {
+function T(e) {
     let { guildId: t } = e,
-        { priceTiers: n } = j(t),
+        { priceTiers: n } = E(t),
         r = (0, x.GG)(t),
         { maxTiers: l } = (0, g.s1)(t),
         s = r.map((e) => e.id);
-    return (0, i.jsxs)(d.FormSection, {
+    return (0, i.jsxs)(d.hjN, {
         title: N.intl.string(N.t['72+Soq']),
-        className: _.container,
+        className: j.container,
         children: [
-            (0, i.jsx)(d.FormText, {
-                type: d.FormText.Types.DESCRIPTION,
+            (0, i.jsx)(d.R94, {
+                type: d.R94.Types.DESCRIPTION,
                 children: N.intl.format(N.t.nHRSvL, { maxTiers: l })
             }),
-            (0, i.jsx)(d.Spacer, { size: 16 }),
+            (0, i.jsx)(d.LZC, { size: 16 }),
             (0, i.jsx)(b, {
                 priceTiers: n,
                 guildId: t,

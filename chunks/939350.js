@@ -1,10 +1,6 @@
-r.d(n, {
-    _: function () {
-        return a;
-    }
-});
-var i = r(450793);
-let a = {
+n.d(t, { _: () => r });
+var i = n(450793);
+let r = {
     default: i.colorDefault,
     brand: i.colorBrand,
     danger: i.colorDanger,

@@ -1,69 +1,64 @@
-n.d(t, {
-    Z: function () {
-        return s;
-    }
-}),
-    n(47120);
-var l = n(232713),
-    o = n(65400),
-    i = n(731965);
-let a = (0, o.F)((e, t) => ({
+l.d(t, { Z: () => r }), l(47120);
+var n = l(232713),
+    a = l(65400),
+    i = l(731965);
+let o = (0, a.F)((e, t) => ({
         selectedUserIds: {},
-        addUsers: (n, l) => {
-            var o;
-            let { selectedUserIds: a } = t(),
-                r = new Set([...(null !== (o = a[n]) && void 0 !== o ? o : new Set()), ...l]);
-            (0, i.j)(() => {
-                e({
-                    selectedUserIds: {
-                        ...a,
-                        [n]: r
-                    }
-                });
-            });
-        },
-        removeUser: (n, l) => {
+        addUsers: (l, n) => {
+            var a;
             let { selectedUserIds: o } = t(),
-                a = o[n];
-            if (null == a) return;
-            let r = [...a].filter((e) => e !== l);
+                s = new Set([...(null !== (a = o[l]) && void 0 !== a ? a : new Set()), ...n]);
             (0, i.j)(() => {
                 e({
                     selectedUserIds: {
                         ...o,
-                        [n]: new Set(r)
+                        [l]: s
                     }
                 });
             });
         },
-        clearSelection: (n) => {
-            let { selectedUserIds: l } = t();
-            null != l &&
+        removeUser: (l, n) => {
+            let { selectedUserIds: a } = t(),
+                o = a[l];
+            if (null == o) return;
+            let s = [...o].filter((e) => e !== n);
+            (0, i.j)(() => {
+                e({
+                    selectedUserIds: {
+                        ...a,
+                        [l]: new Set(s)
+                    }
+                });
+            });
+        },
+        clearSelection: (l) => {
+            let { selectedUserIds: n } = t();
+            null != n &&
                 (0, i.j)(() => {
                     e({
                         selectedUserIds: {
-                            ...l,
-                            [n]: new Set()
+                            ...n,
+                            [l]: new Set()
                         }
                     });
                 });
         }
     })),
-    r = new Set();
-function s(e) {
-    return a((t) => {
-        var n;
+    s = new Set();
+function r(e) {
+    return o((t) => {
+        var l;
         return {
-            selectedUserIds: null !== (n = t.selectedUserIds[e]) && void 0 !== n ? n : r,
-            addUsers: (n) => {
-                t.addUsers(e, n);
+            selectedUserIds: null !== (l = t.selectedUserIds[e]) && void 0 !== l ? l : s,
+            addUsers: (l) => {
+                t.addUsers(e, l);
             },
-            removeUser: (n) => {
-                t.removeUser(e, n);
+            removeUser: (l) => {
+                t.removeUser(e, l);
             },
             clearSelection: () => {
                 t.clearSelection(e);
             }
         };
-    }, l.X);
+    }, n.X);
 }

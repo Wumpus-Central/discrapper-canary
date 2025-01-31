@@ -1,13 +1,14 @@
-e.exports = {
-    rankContainer: 'rankContainer_e6eff2',
-    goldBorder: 'goldBorder_e6eff2',
-    silverBorder: 'silverBorder_e6eff2',
-    bronzeBorder: 'bronzeBorder_e6eff2',
-    defaultBorder: 'defaultBorder_e6eff2',
-    rank: 'rank_e6eff2',
-    rankWithBorder: 'rankWithBorder_e6eff2',
-    rankNoBorder: 'rankNoBorder_e6eff2',
-    goldText: 'goldText_e6eff2',
-    silverText: 'silverText_e6eff2',
-    bronzeText: 'bronzeText_e6eff2'
+var i = {
+    rankContainer: 'rankContainer__632c2',
+    goldBorder: 'goldBorder__632c2',
+    silverBorder: 'silverBorder__632c2',
+    bronzeBorder: 'bronzeBorder__632c2',
+    defaultBorder: 'defaultBorder__632c2',
+    rank: 'rank__632c2',
+    rankWithBorder: 'rankWithBorder__632c2',
+    rankNoBorder: 'rankNoBorder__632c2',
+    goldText: 'goldText__632c2',
+    silverText: 'silverText__632c2',
+    bronzeText: 'bronzeText__632c2'
 };
+e.exports = i;

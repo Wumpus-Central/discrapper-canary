@@ -1,19 +1,18 @@
-n(47120), n(724458), n(653041);
+n.d(t, { Z: () => o }), n(47120), n(724458), n(653041);
 var r = n(485589),
-    i = n(424706),
-    a = n(14160),
-    o = n(247123);
-let l = 'button, a, '.concat(
-    Array.from(r.roles.entries())
-        .reduce((e, t) => {
-            let [n, r] = t;
-            return !0 === r.childrenPresentational && e.push('[role="'.concat(n, '"]')), e;
-        }, [])
-        .join(', ')
-);
-t.Z = {
+    a = n(424706),
+    i = n(14160),
+    l = n(247123);
+let o = {
     id: 'nested-interactive',
-    selector: l,
+    selector: 'button, a, '.concat(
+        Array.from(r.roles.entries())
+            .reduce((e, t) => {
+                let [n, r] = t;
+                return !0 === r.childrenPresentational && e.push('[role="'.concat(n, '"]')), e;
+            }, [])
+            .join(', ')
+    ),
     tags: [],
     metadata: {
         description: 'Interactive controls must not be nested',
@@ -37,7 +36,7 @@ t.Z = {
                                 return 'hidden' !== e.getAttribute('type');
                         }
                         return (function (e) {
-                            switch ((0, i.cY)(e)) {
+                            switch ((0, a.cY)(e)) {
                                 case 'link':
                                     return e.hasAttribute('href');
                                 case 'audio':
@@ -56,8 +55,8 @@ t.Z = {
                 n = t.nextNode();
             }
             return !0;
-        })(e) && (0, a.p)(e)
+        })(e) && (0, i.p)(e)
             ? 'Nested interactive element'
-            : o.w;
+            : l.w;
     }
 };

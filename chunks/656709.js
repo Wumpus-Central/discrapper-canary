@@ -1,16 +1,12 @@
-r.d(n, {
-    p: function () {
-        return o;
-    }
-});
-var i = r(904245),
-    a = r(957730);
-function o(e) {
-    let { channel: n, content: r, entry: o, whenReady: s, doNotNotifyOnError: l } = e,
-        u = a.ZP.parse(n, r),
-        c = { unverified_content: o };
-    return i.Z.sendMessage(n.id, u, s, {
-        contentInventoryEntry: c,
-        doNotNotifyOnError: l
+n.d(t, { p: () => a });
+var i = n(904245),
+    r = n(957730);
+function a(e) {
+    let { channel: t, content: n, entry: a, whenReady: s, doNotNotifyOnError: o } = e,
+        l = r.ZP.parse(t, n),
+        u = { unverified_content: a };
+    return i.Z.sendMessage(t.id, l, s, {
+        contentInventoryEntry: u,
+        doNotNotifyOnError: o
     });
 }

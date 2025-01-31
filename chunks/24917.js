@@ -1,24 +1,19 @@
-r.d(n, {
-    O: function () {
-        return o;
-    }
-});
-var i = r(411104);
-function a(e, n, r) {
+function i(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class o extends Error {
-    constructor(e, n) {
-        super(n), a(this, 'errorCode', void 0), a(this, 'closeCode', void 0), a(this, 'code', void 0), a(this, 'message', void 0), a(this, 'name', void 0), 'closeCode' in e ? ((this.code = e.closeCode), (this.closeCode = e.closeCode)) : ((this.code = e.errorCode), (this.errorCode = e.errorCode)), (this.message = n), (this.name = 'RPCError');
+n.d(t, { O: () => r }), n(411104);
+class r extends Error {
+    constructor(e, t) {
+        super(t), i(this, 'errorCode', void 0), i(this, 'closeCode', void 0), i(this, 'code', void 0), i(this, 'message', void 0), i(this, 'name', void 0), 'closeCode' in e ? ((this.code = e.closeCode), (this.closeCode = e.closeCode)) : ((this.code = e.errorCode), (this.errorCode = e.errorCode)), (this.message = t), (this.name = 'RPCError');
     }
 }

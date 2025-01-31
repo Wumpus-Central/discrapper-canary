@@ -1,16 +1,17 @@
-e.exports = {
-    wrapper: 'wrapper_e18e73',
-    image: 'image_e18e73',
-    infoWrapper: 'infoWrapper_e18e73',
-    source: 'source_e18e73',
-    usageWrapper: 'usageWrapper_e18e73',
-    description: 'description_e18e73',
-    title: 'title_e18e73',
-    option: 'option_e18e73',
-    error: 'error_e18e73',
-    optionalHeader: 'optionalHeader_e18e73',
-    optionalCount: 'optionalCount_e18e73',
-    disabled: 'disabled_e18e73',
-    optionals: 'optionals_e18e73',
-    optionalNames: 'optionalNames_e18e73'
+var i = {
+    wrapper: 'wrapper__920ab',
+    image: 'image__920ab',
+    infoWrapper: 'infoWrapper__920ab',
+    source: 'source__920ab',
+    usageWrapper: 'usageWrapper__920ab',
+    description: 'description__920ab',
+    title: 'title__920ab',
+    option: 'option__920ab',
+    error: 'error__920ab',
+    optionalHeader: 'optionalHeader__920ab',
+    optionalCount: 'optionalCount__920ab',
+    disabled: 'disabled__920ab',
+    optionals: 'optionals__920ab',
+    optionalNames: 'optionalNames__920ab'
 };
+e.exports = i;

@@ -1,52 +1,40 @@
-r.d(n, {
-    B0: function () {
-        return c;
-    },
-    IP: function () {
-        return l;
-    },
-    Qb: function () {
-        return s;
-    },
-    UI: function () {
-        return u;
-    },
-    j$: function () {
-        return a;
-    },
-    je: function () {
-        return o;
-    }
+n.d(t, {
+    B0: () => u,
+    IP: () => o,
+    Qb: () => s,
+    UI: () => l,
+    j$: () => r,
+    je: () => a
 });
 var i = Symbol.for('FluidValue:config'),
-    a = function (e) {
+    r = function (e) {
         return !!s(e);
     };
-function o(e) {
-    var n = s(e);
-    return n ? n.get() : e;
+function a(e) {
+    var t = s(e);
+    return t ? t.get() : e;
 }
 function s(e) {
     if (e) return e[i];
 }
-function l(e, n) {
+function o(e, t) {
     Object.defineProperty(e, i, {
-        value: n,
+        value: t,
         configurable: !0
     });
 }
-function u(e, n) {
-    var r = s(e);
-    if (r)
+function l(e, t) {
+    var n = s(e);
+    if (n)
         return (
-            r.addChild(n),
+            n.addChild(t),
             function () {
-                return r.removeChild(n);
+                return n.removeChild(t);
             }
         );
 }
-var c = (function () {
-    return function e() {
-        l(this, this);
+var u = (function () {
+    return function () {
+        o(this, this);
     };
 })();

@@ -1,10 +1,6 @@
 n.d(t, {
-    M: function () {
-        return r;
-    },
-    s: function () {
-        return l;
-    }
+    M: () => r,
+    s: () => l
 });
 var i = n(570140);
 function l(e) {

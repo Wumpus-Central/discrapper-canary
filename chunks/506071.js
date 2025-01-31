@@ -1,13 +1,9 @@
-r.d(n, {
-    n: function () {
-        return l;
-    }
-});
-var i = r(192379),
-    a = r(442837),
-    o = r(40851),
-    s = r(451478);
-function l() {
-    let { windowId: e } = i.useContext(o.ZP);
-    return (0, a.e7)([s.Z], () => s.Z.isFocused(e), [e]);
+n.d(t, { n: () => o });
+var i = n(192379),
+    r = n(442837),
+    a = n(40851),
+    s = n(451478);
+function o() {
+    let { windowId: e } = i.useContext(a.ZP);
+    return (0, r.e7)([s.Z], () => s.Z.isFocused(e), [e]);
 }

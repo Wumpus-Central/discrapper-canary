@@ -1,10 +1,10 @@
 let i;
-function a() {
+function r() {
     return null != i
         ? i
         : (i = (async () => {
-              let { default: e } = await r.e('20353').then(r.t.bind(r, 62994, 23)),
-                  n = new e({
+              let { default: e } = await n.e('20353').then(n.t.bind(n, 62994, 23)),
+                  t = new e({
                       params: {
                           logProcessStats: !1,
                           useSharedArrayBuffer: !1,
@@ -17,11 +17,7 @@ function a() {
                           }
                       }
                   });
-              return await n.init(), n;
+              return await t.init(), t;
           })());
 }
-r.d(n, {
-    n: function () {
-        return a;
-    }
-});
+n.d(t, { n: () => r });

@@ -1,8 +1,4 @@
-n.d(t, {
-    C: function () {
-        return i;
-    }
-});
+n.d(t, { C: () => i });
 let i = (0, n(818083).B)({
     kind: 'user',
     id: '2023-11_cannibalization_model_data_collection',

@@ -1,42 +1,38 @@
-n.d(e, {
-    Z: function () {
-        return a;
-    }
-});
+n.d(e, { Z: () => a });
 var i = n(200651);
 n(192379);
 var s = n(120356),
-    o = n.n(s),
-    l = n(481060),
-    r = n(437323);
+    l = n.n(s),
+    r = n(481060),
+    o = n(437323);
 function a(t) {
     let { tips: e, className: n, headerText: s } = t;
     return (0, i.jsxs)('div', {
-        className: o()(r.tipsSection, n),
+        className: l()(o.tipsSection, n),
         children: [
             (0, i.jsx)('div', {
-                className: r.tipsHeader,
-                children: (0, i.jsx)(l.Heading, {
+                className: o.tipsHeader,
+                children: (0, i.jsx)(r.X6q, {
                     variant: 'heading-lg/bold',
-                    className: r.headerText,
+                    className: o.headerText,
                     children: s
                 })
             }),
             (0, i.jsx)('ul', {
-                className: r.tipsList,
+                className: o.tipsList,
                 children: e.map((t, e) =>
                     (0, i.jsxs)(
                         'li',
                         {
-                            className: r.tipRow,
+                            className: o.tipRow,
                             children: [
-                                (0, i.jsx)(l.Heading, {
+                                (0, i.jsx)(r.X6q, {
                                     variant: 'heading-md/semibold',
                                     color: 'text-brand',
-                                    className: r.tipNumber,
+                                    className: o.tipNumber,
                                     children: e + 1
                                 }),
-                                (0, i.jsx)(l.Text, {
+                                (0, i.jsx)(r.Text, {
                                     variant: 'text-sm/medium',
                                     children: t
                                 })

@@ -1,68 +1,67 @@
-r.r(n);
+n.r(t), n.d(t, { default: () => S }), n(789020);
 var i,
-    a = r(789020);
-var o = r(261470),
-    s = r(213919),
-    l = r(442837),
-    u = r(544891),
-    c = r(433517),
-    d = r(570140),
-    f = r(179658),
-    p = r(70956),
-    h = r(960048),
-    _ = r(981631);
-function m(e, n, r) {
+    r = n(261470),
+    a = n(213919),
+    s = n(442837),
+    o = n(544891),
+    l = n(433517),
+    u = n(570140),
+    c = n(179658),
+    d = n(70956),
+    f = n(960048),
+    _ = n(981631);
+function p(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let g = (() => {
+let h = (() => {
         let e = ''.concat(location.protocol, '//').concat(location.host, '/__development/source_maps'),
-            n = null,
-            r = new o.Z(5 * p.Z.Millis.SECOND, 1 * p.Z.Millis.MINUTE, !0),
+            t = null,
+            n = new r.Z(5 * d.Z.Millis.SECOND, 1 * d.Z.Millis.MINUTE, !0),
             i = () => {
-                u.tn
+                o.tn
                     .put({
                         url: e,
-                        headers: { Authorization: s.getToken() },
+                        headers: { Authorization: a.getToken() },
                         oldFormErrors: !0,
                         rejectWithError: !0
                     })
                     .then(
                         (e) => {
-                            401 === e.status || 403 === e.status ? ((n = null), (0, f.y)({ sourceMapsEnabled: !1 })) : 200 !== e.status ? (n = setTimeout(i, r.fail())) : (r.succeed(), (n = setTimeout(i, e.body.sourceMapCookieTTLSeconds * p.Z.Millis.SECOND * 0.75)));
+                            401 === e.status || 403 === e.status ? ((t = null), (0, c.y)({ sourceMapsEnabled: !1 })) : 200 !== e.status ? (t = setTimeout(i, n.fail())) : (n.succeed(), (t = setTimeout(i, e.body.sourceMapCookieTTLSeconds * d.Z.Millis.SECOND * 0.75)));
                         },
                         () => {
-                            n = setTimeout(i, r.fail());
+                            t = setTimeout(i, n.fail());
                         }
                     );
             };
         return {
-            set: (r) => {
-                if (r !== (null != n))
-                    r
-                        ? (n = setTimeout(i, 0))
-                        : (clearTimeout(n),
-                          (n = null),
-                          u.tn.del({
+            set: (n) => {
+                n !== (null != t) &&
+                    (n
+                        ? (t = setTimeout(i, 0))
+                        : (clearTimeout(t),
+                          (t = null),
+                          o.tn.del({
                               url: e,
-                              headers: { Authorization: s.getToken() },
+                              headers: { Authorization: a.getToken() },
                               oldFormErrors: !0,
                               rejectWithError: !0
-                          }));
+                          })));
             }
         };
     })(),
-    E = 'DeveloperOptionsStore',
-    v = {
+    m = 'DeveloperOptionsStore',
+    g = {
         trace: !1,
         canary: !1,
         logGatewayEvents: !1,
@@ -80,98 +79,98 @@ let g = (() => {
         isStreamInfoOverlayEnabled: !1,
         preventPopoutClose: !1
     },
-    y = { ...v };
-function b(e) {
-    (y = {
-        ...v,
-        ...y,
+    E = { ...g };
+function v(e) {
+    (E = {
+        ...g,
+        ...E,
         ...e
     }),
-        g.set(y.sourceMapsEnabled),
-        c.K.set(E, y);
+        h.set(E.sourceMapsEnabled),
+        l.K.set(m, E);
+}
+function y(e) {
+    let { settings: t } = e;
+    v(t);
 }
 function I(e) {
-    let { settings: n } = e;
-    b(n);
+    v(g);
 }
-function T(e) {
-    b(v);
+function b(e) {
+    var t;
+    let n = ((null !== (t = e.user.flags) && void 0 !== t ? t : 0) & _.xW$.STAFF) === _.xW$.STAFF,
+        i = n || null != e.user.personal_connection_id;
+    n && h.set(E.sourceMapsEnabled), f.Z.setTags({ isStaff: i.toString() });
 }
-function S(e) {
-    var n;
-    let r = ((null !== (n = e.user.flags) && void 0 !== n ? n : 0) & _.xW$.STAFF) === _.xW$.STAFF,
-        i = r || null != e.user.personal_connection_id;
-    r && g.set(y.sourceMapsEnabled), h.Z.setTags({ isStaff: i.toString() });
-}
-class A extends (i = l.ZP.Store) {
+class T extends (i = s.ZP.Store) {
     initialize() {
-        let e = c.K.get(E);
+        let e = l.K.get(m);
         null != e &&
-            (y = {
-                ...v,
+            (E = {
+                ...g,
                 ...e
             });
     }
     get isTracingRequests() {
-        return y.trace;
+        return E.trace;
     }
     get isForcedCanary() {
-        return y.canary;
+        return E.canary;
     }
     get isLoggingGatewayEvents() {
-        return y.logGatewayEvents;
+        return E.logGatewayEvents;
     }
     get isLoggingOverlayEvents() {
-        return y.logOverlayEvents;
+        return E.logOverlayEvents;
     }
     get isLoggingAnalyticsEvents() {
-        return y.logAnalyticsEvents;
+        return E.logAnalyticsEvents;
     }
     get isAxeEnabled() {
-        return y.axeEnabled;
+        return E.axeEnabled;
     }
     get cssDebuggingEnabled() {
-        return y.cssDebuggingEnabled;
+        return E.cssDebuggingEnabled;
     }
     get layoutDebuggingEnabled() {
-        return y.layoutDebuggingEnabled;
+        return E.layoutDebuggingEnabled;
     }
     get sourceMapsEnabled() {
-        return y.sourceMapsEnabled;
+        return E.sourceMapsEnabled;
     }
     get isAnalyticsDebuggerEnabled() {
-        return y.analyticsDebuggerEnabled;
+        return E.analyticsDebuggerEnabled;
     }
     get isBugReporterEnabled() {
-        return y.bugReporterEnabled;
+        return E.bugReporterEnabled;
     }
     get isIdleStatusIndicatorEnabled() {
-        return y.idleStatusIndicatorEnabled;
+        return E.idleStatusIndicatorEnabled;
     }
     get onlyShowPreviewAppCollections() {
-        return y.onlyShowPreviewAppCollections;
+        return E.onlyShowPreviewAppCollections;
     }
     get disableAppCollectionsCache() {
-        return y.disableAppCollectionsCache;
+        return E.disableAppCollectionsCache;
     }
     get isStreamInfoOverlayEnabled() {
-        return y.isStreamInfoOverlayEnabled;
+        return E.isStreamInfoOverlayEnabled;
     }
     get preventPopoutClose() {
-        return y.preventPopoutClose;
+        return E.preventPopoutClose;
     }
     getDebugOptionsHeaderValue() {
         return (
-            Object.keys(y).map((e) => y[e]),
-            Object.keys(y)
-                .filter((e) => y[e])
+            Object.keys(E).map((e) => E[e]),
+            Object.keys(E)
+                .filter((e) => E[e])
                 .join(',')
         );
     }
 }
-m(A, 'displayName', 'DeveloperOptionsStore'),
-    (n.default = new A(d.Z, {
-        LOGOUT: T,
-        CONNECTION_OPEN: S,
-        DEVELOPER_OPTIONS_UPDATE_SETTINGS: I
-    }));
+p(T, 'displayName', 'DeveloperOptionsStore');
+let S = new T(u.Z, {
+    LOGOUT: I,
+    CONNECTION_OPEN: b,
+    DEVELOPER_OPTIONS_UPDATE_SETTINGS: y
+});

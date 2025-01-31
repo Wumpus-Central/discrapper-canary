@@ -1,41 +1,37 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-});
+n.d(t, { Z: () => _ });
 var i = n(200651),
-    r = n(192379),
-    l = n(442837),
-    a = n(616780),
-    o = n(905405),
-    s = n(937889),
+    l = n(192379),
+    a = n(442837),
+    r = n(616780),
+    s = n(905405),
+    o = n(937889),
     c = n(267128),
-    u = n(123145),
-    d = n(699516),
+    d = n(123145),
+    u = n(699516),
     m = n(217702),
     h = n(507304);
-function f(e) {
+function _(e) {
     let { message: t, channel: n } = e,
-        { isBlocked: f, isIgnored: p } = (0, l.cj)(
-            [d.Z],
+        { isBlocked: _, isIgnored: p } = (0, a.cj)(
+            [u.Z],
             () => ({
-                isBlocked: d.Z.isBlockedForMessage(t),
-                isIgnored: d.Z.isIgnoredForMessage(t)
+                isBlocked: u.Z.isBlockedForMessage(t),
+                isIgnored: u.Z.isIgnoredForMessage(t)
             }),
             [t]
         ),
-        _ = (0, o.p)(),
-        g = r.useMemo(() => ({ [n.guild_id]: [t.author.id] }), [n.guild_id, t.author.id]);
-    (0, a.$)(g);
-    let E = r.useMemo(
+        g = (0, s.p)(),
+        f = l.useMemo(() => ({ [n.guild_id]: [t.author.id] }), [n.guild_id, t.author.id]);
+    (0, r.$)(f);
+    let x = l.useMemo(
         () =>
             null != t.content && '' !== t.content
-                ? (0, s.ZP)(t, {
+                ? (0, o.ZP)(t, {
                       formatInline: !0,
-                      shouldFilterKeywords: _
+                      shouldFilterKeywords: g
                   }).content
                 : null,
-        [t, _]
+        [t, g]
     );
     return (0, i.jsxs)('div', {
         className: h.threadMessageAccessory,
@@ -45,37 +41,37 @@ function f(e) {
                 src: t.author.getAvatarURL(n.guild_id, 16),
                 className: h.threadMessageAccessoryAvatar
             }),
-            (0, i.jsx)(u.Z, {
+            (0, i.jsx)(d.Z, {
                 message: t,
                 channel: n,
                 compact: !0
             }),
             (0, i.jsx)('div', {
                 className: h.threadMessageAccessoryPreview,
-                children: (function (e, t, n, r) {
+                children: (function (e, t, n, l) {
                     let {
-                        contentPlaceholder: l,
-                        renderedContent: a,
-                        leadingIcon: o,
-                        trailingIcon: s
-                    } = (0, c.f)(e, t, n, r, h.threadMessageAccessoryContent, {
+                        contentPlaceholder: a,
+                        renderedContent: r,
+                        leadingIcon: s,
+                        trailingIcon: o
+                    } = (0, c.f)(e, t, n, l, h.threadMessageAccessoryContent, {
                         trailingIconClass: h.threadMessageAccessoryContentTrailingIcon,
                         leadingIconClass: h.threadMessageAccessoryContentLeadingIcon,
                         iconSize: m.WW
                     });
                     return (0, i.jsxs)(i.Fragment, {
                         children: [
-                            o,
-                            null != a
-                                ? a
+                            s,
+                            null != r
+                                ? r
                                 : (0, i.jsx)('span', {
                                       className: h.threadMessageAccessoryPlaceholder,
-                                      children: l
+                                      children: a
                                   }),
-                            s
+                            o
                         ]
                     });
-                })(t, E, f, p)
+                })(t, x, _, p)
             })
         ]
     });

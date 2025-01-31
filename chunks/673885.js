@@ -1,27 +1,23 @@
-n.d(t, {
-    Z: function () {
-        return x;
-    }
-});
-var i = n(200651);
+n.d(t, { Z: () => x });
+var a = n(200651);
 n(192379);
-var r = n(120356),
-    a = n.n(r),
-    o = n(481060),
-    l = n(906732),
-    c = n(171368),
-    s = n(768581),
+var i = n(120356),
+    r = n.n(i),
+    l = n(481060),
+    o = n(906732),
+    s = n(171368),
+    c = n(768581),
     d = n(51144),
     u = n(981631),
     m = n(388032),
-    f = n(64371);
+    _ = n(64371);
 function x(e) {
-    let { user: t, joinRequestId: n, className: r } = e,
+    let { user: t, joinRequestId: n, className: i } = e,
         { username: x } = t,
-        b = s.ZP.getUserAvatarURL(t),
-        { analyticsLocations: h } = (0, l.ZP)(),
+        f = c.ZP.getUserAvatarURL(t),
+        { analyticsLocations: h } = (0, o.ZP)(),
         p = () => {
-            (0, c.openUserProfileModal)({
+            (0, s.openUserProfileModal)({
                 userId: t.id,
                 joinRequestId: n,
                 sourceAnalyticsLocations: h,
@@ -31,26 +27,26 @@ function x(e) {
                 }
             });
         };
-    return (0, i.jsxs)('div', {
-        className: a()(f.container, r),
+    return (0, a.jsxs)('div', {
+        className: r()(_.container, i),
         children: [
-            (0, i.jsx)(o.Anchor, {
+            (0, a.jsx)(l.eee, {
                 onClick: p,
-                children: (0, i.jsx)(o.Avatar, {
-                    src: b,
-                    size: o.AvatarSizes.SIZE_80,
+                children: (0, a.jsx)(l.qEK, {
+                    src: f,
+                    size: l.EFr.SIZE_80,
                     'aria-label': x,
-                    className: f.avatar
+                    className: _.avatar
                 })
             }),
-            (0, i.jsx)('div', {
-                className: f.username,
-                children: (0, i.jsx)(o.Heading, {
+            (0, a.jsx)('div', {
+                className: _.username,
+                children: (0, a.jsx)(l.X6q, {
                     variant: 'heading-lg/semibold',
                     children: d.ZP.getFormattedName(t)
                 })
             }),
-            (0, i.jsx)(o.Anchor, {
+            (0, a.jsx)(l.eee, {
                 onClick: p,
                 children: m.intl.string(m.t.iXAna2)
             })

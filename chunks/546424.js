@@ -1,59 +1,55 @@
-r.d(n, {
-    Z: function () {
-        return v;
-    }
-});
-var i = r(200651),
-    a = r(192379),
-    o = r(442837),
-    s = r(481060),
-    l = r(541716),
-    u = r(28546),
-    c = r(970731),
-    d = r(210887),
-    f = r(921944),
-    p = r(957825),
-    h = r(231338),
-    _ = r(388032),
-    m = r(551049),
-    g = r(512668),
-    E = r(179998);
-function v(e) {
-    let { markAsDismissed: n } = e,
-        r = (0, o.e7)([d.Z], () => d.Z.theme) === h.BR.LIGHT ? E.Z : g.Z,
-        v = a.useCallback(() => {
-            (0, u.RO)(p.X1.SOUNDBOARD, l.Ie.NORMAL);
+n.d(t, { Z: () => E });
+var i = n(200651),
+    r = n(192379),
+    a = n(442837),
+    s = n(481060),
+    o = n(541716),
+    l = n(28546),
+    u = n(970731),
+    c = n(210887),
+    d = n(921944),
+    f = n(957825),
+    _ = n(231338),
+    p = n(388032),
+    h = n(551049),
+    m = n(512668),
+    g = n(179998);
+function E(e) {
+    let { markAsDismissed: t } = e,
+        n = (0, a.e7)([c.Z], () => c.Z.theme) === _.BR.LIGHT ? g.Z : m.Z,
+        E = r.useCallback(() => {
+            (0, l.RO)(f.X1.SOUNDBOARD, o.Ie.NORMAL);
         }, []);
-    return (0, i.jsx)(c.ZP, {
-        className: m.container,
+    return (0, i.jsx)(u.ZP, {
+        className: h.container,
         asset: (0, i.jsxs)('div', {
-            className: m.headerContainer,
+            className: h.headerContainer,
             children: [
                 (0, i.jsx)('img', {
-                    className: m.asset,
-                    src: r,
+                    className: h.asset,
+                    src: n,
                     alt: ''
                 }),
-                (0, i.jsx)(s.Button, {
-                    className: m.close,
-                    'aria-label': _.intl.string(_.t.cpT0Cg),
-                    look: s.Button.Looks.BLANK,
-                    size: s.Button.Sizes.NONE,
-                    onClick: () => n(f.L.USER_DISMISS),
-                    children: (0, i.jsx)(s.XSmallIcon, {
+                (0, i.jsx)(s.zxk, {
+                    className: h.close,
+                    'aria-label': p.intl.string(p.t.cpT0Cg),
+                    look: s.zxk.Looks.BLANK,
+                    size: s.zxk.Sizes.NONE,
+                    onClick: () => t(d.L.USER_DISMISS),
+                    children: (0, i.jsx)(s.Dio, {
                         size: 'xs',
-                        className: m.closeIcon,
+                        className: h.closeIcon,
                         color: 'white'
                     })
                 })
             ]
         }),
-        header: _.intl.string(_.t.dDj3ER),
-        content: _.intl.string(_.t['0lZmoa']),
-        buttonCTA: _.intl.string(_.t.RzWDqa),
-        buttonProps: { color: s.ButtonColors.WHITE },
-        caretPosition: c.DF.BOTTOM_RIGHT,
-        onClick: v,
-        markAsDismissed: n
+        header: p.intl.string(p.t.dDj3ER),
+        content: p.intl.string(p.t['0lZmoa']),
+        buttonCTA: p.intl.string(p.t.RzWDqa),
+        buttonProps: { color: s.Ttl.WHITE },
+        caretPosition: u.DF.BOTTOM_RIGHT,
+        onClick: E,
+        markAsDismissed: t
     });
 }

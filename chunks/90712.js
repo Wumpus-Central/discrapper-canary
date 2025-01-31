@@ -1,24 +1,19 @@
-r.d(n, {
-    Z: function () {
-        return f;
-    }
-});
-var i = r(47120);
-var a = r(726542),
-    o = r(394821),
-    s = r(503438),
-    l = r(834353),
-    u = r(802856),
-    c = r(981631);
-let d = new Set([c.ABu.LEAGUE_OF_LEGENDS, c.ABu.ROBLOX, c.ABu.TWITCH, c.ABu.YOUTUBE]);
-function f(e) {
-    if ((0, s.Z)(e)) return a.Z.get(c.ABu.SPOTIFY);
-    if ((0, o.Z)(e)) return a.Z.get(c.ABu.CRUNCHYROLL);
-    if ((0, u.Z)(e)) return a.Z.get(c.ABu.XBOX);
-    if ((0, l.Z)(e)) return a.Z.get(c.ABu.PLAYSTATION);
-    let n = a.Z.find((n) => {
-        let { name: r } = n;
-        return r === e.name;
+n.d(t, { Z: () => c }), n(47120);
+var i = n(726542),
+    r = n(394821),
+    a = n(503438),
+    s = n(834353),
+    o = n(802856),
+    l = n(981631);
+let u = new Set([l.ABu.LEAGUE_OF_LEGENDS, l.ABu.ROBLOX, l.ABu.TWITCH, l.ABu.YOUTUBE]);
+function c(e) {
+    if ((0, a.Z)(e)) return i.Z.get(l.ABu.SPOTIFY);
+    if ((0, r.Z)(e)) return i.Z.get(l.ABu.CRUNCHYROLL);
+    if ((0, o.Z)(e)) return i.Z.get(l.ABu.XBOX);
+    if ((0, s.Z)(e)) return i.Z.get(l.ABu.PLAYSTATION);
+    let t = i.Z.find((t) => {
+        let { name: n } = t;
+        return n === e.name;
     });
-    return null != n && d.has(n.type) ? n : null;
+    return null != t && u.has(t.type) ? t : null;
 }

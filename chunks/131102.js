@@ -1,50 +1,45 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return h;
-        }
-    });
-var o = n(200651),
-    l = n(192379),
-    a = n(704215),
+n.d(t, { default: () => h });
+var l = n(200651),
+    a = n(192379),
+    o = n(704215),
     r = n(481060),
     i = n(211266),
     s = n(605236),
     c = n(624659),
-    u = n(626135),
-    d = n(263226),
-    b = n(225634),
-    m = n(981631),
-    f = n(388032);
+    d = n(626135),
+    u = n(263226),
+    m = n(225634),
+    x = n(981631),
+    _ = n(388032);
 function h(e) {
-    let { transitionState: t, onClose: h, guildId: x, guildName: C } = e,
-        E = (0, i.Z)(b.S);
+    let { transitionState: t, onClose: h, guildId: f, guildName: E } = e,
+        C = (0, i.Z)(m.S);
     return (
-        l.useEffect(() => {
-            u.default.track(m.rMx.OPEN_MODAL, { type: 'Guild Leave Report' });
+        a.useEffect(() => {
+            d.default.track(x.rMx.OPEN_MODAL, { type: 'Guild Leave Report' });
         }, []),
-        (0, o.jsx)(c.Z, {
-            header: f.intl.string(f.t.YT6YAA),
-            body: f.intl.formatToPlainString(f.t.xpn2vL, { server: C }),
-            problems: E,
+        (0, l.jsx)(c.Z, {
+            header: _.intl.string(_.t.YT6YAA),
+            body: _.intl.formatToPlainString(_.t.xpn2vL, { server: E }),
+            problems: C,
             onSubmit: function (e) {
-                let { problem: t, dontShowAgain: l, feedback: i } = e;
-                l && (0, s.EW)(a.z.GUILD_LEAVE_FEEDBACK);
+                let { problem: t, dontShowAgain: a, feedback: i } = e;
+                a && (0, s.EW)(o.z.GUILD_LEAVE_FEEDBACK);
                 let c = null == t;
-                (0, d.Z)(x, t, i, c),
-                    !c &&
-                        (0, r.openModalLazy)(async () => {
+                (0, u.Z)(f, t, i, c),
+                    c ||
+                        (0, r.ZDy)(async () => {
                             let { default: e } = await n.e('14466').then(n.bind(n, 729328));
                             return (t) =>
-                                (0, o.jsx)(e, {
-                                    body: f.intl.string(f.t.Gxbt29),
+                                (0, l.jsx)(e, {
+                                    body: _.intl.string(_.t.Gxbt29),
                                     ...t
                                 });
                         });
             },
             onClose: h,
             transitionState: t,
-            otherKey: b.G.OTHER,
+            otherKey: m.G.OTHER,
             hasCloseButton: !0
         })
     );

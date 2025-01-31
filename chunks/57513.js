@@ -1,76 +1,72 @@
-r.d(n, {
-    l: function () {
-        return E;
-    }
-});
-var i = r(544891),
-    a = r(379649),
-    o = r(846519),
-    s = r(570140),
-    l = r(706454),
-    u = r(283595),
-    c = r(129542),
-    d = r(70956),
-    f = r(981631);
-let p = 10 * d.Z.Millis.MINUTE,
-    h = 10 * d.Z.Millis.MINUTE,
-    _ = 1 * d.Z.Millis.MINUTE,
-    m = {};
-function g(e, n) {
-    null == m[n] && (m[n] = new o.V7()),
-        m[n].start(p + Math.random() * h, () => {
-            null != u.Z.getLibraryApplication(e, n) && E(e, n);
+n.d(t, { l: () => g });
+var i = n(544891),
+    r = n(379649),
+    a = n(846519),
+    s = n(570140),
+    o = n(706454),
+    l = n(283595),
+    u = n(129542),
+    c = n(70956),
+    d = n(981631);
+let f = 10 * c.Z.Millis.MINUTE,
+    _ = 10 * c.Z.Millis.MINUTE,
+    p = 1 * c.Z.Millis.MINUTE,
+    h = {};
+function m(e, t) {
+    null == h[t] && (h[t] = new a.V7()),
+        h[t].start(f + Math.random() * _, () => {
+            null != l.Z.getLibraryApplication(e, t) && g(e, t);
         });
 }
-async function E(e, n) {
-    let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        o = l.default.locale;
+async function g(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        a = o.default.locale;
     return (
         s.Z.dispatch({
             type: 'APPLICATION_BUILD_FETCH_START',
             applicationId: e,
-            branchId: n,
-            locale: o
+            branchId: t,
+            locale: a
         }),
-        r && (await (0, a._v)(Math.random() * _)),
+        n && (await (0, r._v)(Math.random() * p)),
         i.tn
             .get({
-                url: f.ANM.APPLICATION_LIVE_BUILD(e, n),
+                url: d.ANM.APPLICATION_LIVE_BUILD(e, t),
                 query: {
-                    platform: (0, c.D)(),
-                    locale: o
+                    platform: (0, u.D)(),
+                    locale: a
                 },
                 oldFormErrors: !0,
                 rejectWithError: !1
             })
             .then(
-                (r) => {
-                    let i = r.body;
+                (n) => {
+                    let i = n.body;
                     if (0 === i.manifests.length) {
                         s.Z.dispatch({
                             type: 'APPLICATION_BUILD_NOT_FOUND',
                             applicationId: e,
-                            branchId: n
+                            branchId: t
                         });
                         return;
                     }
                     s.Z.dispatch({
                         type: 'APPLICATION_BUILD_FETCH_SUCCESS',
                         applicationId: e,
-                        branchId: n,
-                        locale: o,
+                        branchId: t,
+                        locale: a,
                         build: i
                     });
                 },
-                (r) => {
-                    let { status: i } = r;
+                (n) => {
+                    let { status: i } = n;
                     404 === i
                         ? s.Z.dispatch({
                               type: 'APPLICATION_BUILD_NOT_FOUND',
                               applicationId: e,
-                              branchId: n
+                              branchId: t
                           })
-                        : g(e, n);
+                        : m(e, t);
                 }
             )
     );

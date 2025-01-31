@@ -1,50 +1,38 @@
-r.d(t, {
-    Bg: function () {
-        return s;
-    },
-    Ic: function () {
-        return n;
-    },
-    M: function () {
-        return _;
-    },
-    OC: function () {
-        return E;
-    },
-    s3: function () {
-        return i;
-    },
-    uv: function () {
-        return o;
-    }
+a.d(e, {
+    Bg: () => E,
+    Ic: () => n,
+    M: () => o,
+    OC: () => i,
+    s3: () => c,
+    uv: () => _
 });
-var a = r(370336);
-function n(e, t, r, n) {
-    let _ = Object.entries((0, a.Jr)(n)).sort((e, t) => e[0].localeCompare(t[0]));
-    return `${e}${t}${r}${_}`;
+var r = a(370336);
+function n(t, e, a, n) {
+    let o = Object.entries((0, r.Jr)(n)).sort((t, e) => t[0].localeCompare(e[0]));
+    return `${t}${e}${a}${o}`;
 }
-function _(e) {
-    let t = 0;
-    for (let r = 0; r < e.length; r++) (t = (t << 5) - t + e.charCodeAt(r)), (t &= t);
-    return t >>> 0;
+function o(t) {
+    let e = 0;
+    for (let a = 0; a < t.length; a++) (e = (e << 5) - e + t.charCodeAt(a)), (e &= e);
+    return e >>> 0;
 }
-function o(e) {
-    let t = '';
-    for (let r of e) {
-        let e = Object.entries(r.tags),
-            a = e.length > 0 ? `|#${e.map(([e, t]) => `${e}:${t}`).join(',')}` : '';
-        t += `${r.name}@${r.unit}:${r.metric}|${r.metricType}${a}|T${r.timestamp}
+function _(t) {
+    let e = '';
+    for (let a of t) {
+        let t = Object.entries(a.tags),
+            r = t.length > 0 ? `|#${t.map(([t, e]) => `${t}:${e}`).join(',')}` : '';
+        e += `${a.name}@${a.unit}:${a.metric}|${a.metricType}${r}|T${a.timestamp}
 `;
     }
-    return t;
+    return e;
 }
-function E(e) {
-    return e.replace(/[^\w]+/gi, '_');
+function i(t) {
+    return t.replace(/[^\w]+/gi, '_');
 }
-function i(e) {
-    return e.replace(/[^\w\-.]+/gi, '_');
+function c(t) {
+    return t.replace(/[^\w\-.]+/gi, '_');
 }
-let c = [
+let s = [
     ['\n', '\\n'],
     ['\r', '\\r'],
     ['\t', '\\t'],
@@ -52,18 +40,18 @@ let c = [
     ['|', '\\u{7c}'],
     [',', '\\u{2c}']
 ];
-function s(e) {
-    let t = {};
-    for (let r in e)
-        if (Object.prototype.hasOwnProperty.call(e, r))
-            t[r.replace(/[^\w\-./]+/gi, '')] = [...String(e[r])].reduce(
-                (e, t) =>
-                    e +
-                    (function (e) {
-                        for (let [t, r] of c) if (e === t) return r;
-                        return e;
-                    })(t),
+function E(t) {
+    let e = {};
+    for (let a in t)
+        Object.prototype.hasOwnProperty.call(t, a) &&
+            (e[a.replace(/[^\w\-./]+/gi, '')] = [...String(t[a])].reduce(
+                (t, e) =>
+                    t +
+                    (function (t) {
+                        for (let [e, a] of s) if (t === e) return a;
+                        return t;
+                    })(e),
                 ''
-            );
-    return t;
+            ));
+    return e;
 }

@@ -1,9 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return h;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => h }), n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(399606),
@@ -20,7 +15,7 @@ function h(e) {
         h = (0, l.e7)([o.Z], () => null != t && o.Z.can(d.Plq.MANAGE_GUILD, t), [t]),
         g = t.hasFeature(d.oNc.COMMUNITY),
         [x, p] = r.useState(t.hasFeature(d.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
-        f = r.useCallback(
+        _ = r.useCallback(
             async (e) => {
                 p(e), await (0, a.fp)(t, e);
             },
@@ -38,7 +33,7 @@ function h(e) {
                   (0, i.jsxs)('div', {
                       className: m.headingContainer,
                       children: [
-                          (0, i.jsx)(s.Heading, {
+                          (0, i.jsx)(s.X6q, {
                               variant: 'heading-lg/semibold',
                               color: 'always-white',
                               children: u.intl.string(u.t.jDarm5)
@@ -52,10 +47,10 @@ function h(e) {
                   }),
                   (0, i.jsx)('div', {
                       className: m.buttonContainer,
-                      children: (0, i.jsx)(s.Switch, {
+                      children: (0, i.jsx)(s.rsf, {
                           id: n,
                           checked: x,
-                          onChange: f,
+                          onChange: _,
                           disabled: !h
                       })
                   })

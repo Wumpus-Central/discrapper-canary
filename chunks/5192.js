@@ -1,35 +1,32 @@
-r.d(n, {
-    _T: function () {
-        return f;
-    },
-    y: function () {
-        return c;
-    }
+n.d(t, {
+    ZP: () => f,
+    _T: () => d,
+    y: () => u
 });
-var i = r(442837),
-    a = r(592125),
-    o = r(271383),
-    s = r(699516),
-    l = r(51144),
-    u = r(388032);
-function c(e, n, r) {
-    if (null == r) return null;
-    if (null != e) return o.ZP.getNick(e, r.id);
-    if (null != n) {
-        let e = a.Z.getChannel(n);
-        if (null == e ? void 0 : e.isPrivate()) return s.Z.getNickname(r.id);
+var i = n(442837),
+    r = n(592125),
+    a = n(271383),
+    s = n(699516),
+    o = n(51144),
+    l = n(388032);
+function u(e, t, n) {
+    if (null == n) return null;
+    if (null != e) return a.ZP.getNick(e, n.id);
+    if (null != t) {
+        let e = r.Z.getChannel(t);
+        if (null == e ? void 0 : e.isPrivate()) return s.Z.getNickname(n.id);
     }
     return null;
 }
-function d(e, n, r) {
+function c(e, t, n) {
     var i;
-    return null == r ? u.intl.string(u.t.sKdZ6e) : null !== (i = c(e, n, r)) && void 0 !== i ? i : l.ZP.getName(r);
+    return null == n ? l.intl.string(l.t.sKdZ6e) : null !== (i = u(e, t, n)) && void 0 !== i ? i : o.ZP.getName(n);
 }
-function f(e, n, r) {
-    return (0, i.e7)([o.ZP, a.Z, s.Z], () => d(e, n, r));
+function d(e, t, n) {
+    return (0, i.e7)([a.ZP, r.Z, s.Z], () => c(e, t, n));
 }
-n.ZP = {
-    getNickname: c,
-    getName: d,
-    useName: f
+let f = {
+    getNickname: u,
+    getName: c,
+    useName: d
 };

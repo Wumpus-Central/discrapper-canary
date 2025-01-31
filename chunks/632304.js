@@ -1,29 +1,25 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-});
+n.d(t, { Z: () => d });
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    r = n(481060),
-    a = n(846027),
+    a = n(481060),
+    r = n(846027),
     s = n(131951),
     o = n(36703),
     c = n(358085),
     u = n(388032);
 function d(e) {
     let t = (0, l.e7)([s.Z], () => (0, o.P)(s.Z.getOutputVolume()));
-    return (0, i.jsx)(r.MenuControlItem, {
+    return (0, i.jsx)(a.II_, {
         id: 'output',
         label: u.intl.string(u.t.eATD2N),
         control: (n, l) =>
-            (0, i.jsx)(r.MenuSliderControl, {
+            (0, i.jsx)(a._wy, {
                 ...n,
                 ref: l,
                 value: t,
                 maxValue: c.isPlatformEmbedded ? 200 : 100,
-                onChange: (t) => a.Z.setOutputVolume((0, o.A)(t), { analyticsLocations: e }),
+                onChange: (t) => r.Z.setOutputVolume((0, o.A)(t), { analyticsLocations: e }),
                 'aria-label': u.intl.string(u.t.eATD2N)
             })
     });

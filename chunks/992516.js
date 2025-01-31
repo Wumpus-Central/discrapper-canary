@@ -1,5 +1,6 @@
-e.exports = {
-    container: 'container_d9639c',
-    header: 'header_d9639c',
-    bodyText: 'bodyText_d9639c'
+var i = {
+    container: 'container__41dd9',
+    header: 'header__41dd9',
+    bodyText: 'bodyText__41dd9'
 };
+e.exports = i;

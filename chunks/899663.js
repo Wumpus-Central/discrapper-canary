@@ -1,57 +1,53 @@
-r.d(n, {
-    Z: function () {
-        return g;
-    }
-});
-var i = r(200651),
-    a = r(192379),
-    o = r(969090);
-var s = r(513431),
-    l = r(442837),
-    u = r(481060),
-    c = r(626135),
-    d = r(5967),
-    f = r(607070),
-    p = r(446108),
-    h = r(981631),
-    _ = r(388032);
-function m(e) {
-    var n;
-    if (e.ctrlKey || e.altKey || e.metaKey || e.keyCode !== h.yXg.TAB || null == e.target) return;
-    let { target: r } = e,
-        i = null === (n = (0, d.uB)(e)) || void 0 === n ? void 0 : n.activeElement;
-    (0, s.k)(r) &&
-        c.default.track(h.rMx.KEYBOARD_SHORTCUT_USED, {
+n.d(t, { Z: () => m });
+var i = n(200651),
+    r = n(192379),
+    a = n(914552),
+    s = n(374470),
+    o = n(442837),
+    l = n(481060),
+    u = n(626135),
+    c = n(5967),
+    d = n(607070),
+    f = n(446108),
+    _ = n(981631),
+    p = n(388032);
+function h(e) {
+    var t;
+    if (e.ctrlKey || e.altKey || e.metaKey || e.keyCode !== _.yXg.TAB || null == e.target) return;
+    let { target: n } = e,
+        i = null === (t = (0, c.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
+    (0, s.k)(n) &&
+        u.default.track(_.rMx.KEYBOARD_SHORTCUT_USED, {
             shortcut_name: 'tab_navigation',
             source_class_list: null != i ? Array.from(i.classList) : [],
-            location_object: r.tagName
+            location_object: n.tagName
         });
 }
-function g(e) {
-    let { children: n } = e,
-        r = (0, l.cj)([f.Z], () => ({
-            enabled: f.Z.useReducedMotion,
-            rawValue: f.Z.rawPrefersReducedMotion
+function m(e) {
+    let { children: t } = e,
+        n = (0, o.cj)([d.Z], () => ({
+            enabled: d.Z.useReducedMotion,
+            rawValue: d.Z.rawPrefersReducedMotion
         })),
-        s = (0, l.cj)([f.Z], () => ({
-            enabled: f.Z.useForcedColors,
-            rawValue: f.Z.systemForcedColors
+        s = (0, o.cj)([d.Z], () => ({
+            enabled: d.Z.useForcedColors,
+            rawValue: d.Z.systemForcedColors
         })),
-        c = (0, l.e7)([f.Z], () => f.Z.alwaysShowLinkDecorations),
-        d = a.useMemo(
+        u = (0, o.e7)([d.Z], () => d.Z.alwaysShowLinkDecorations),
+        c = r.useMemo(
             () => ({
-                reducedMotion: r,
+                reducedMotion: n,
                 prefersCrossfades: !1,
                 forcedColors: s,
-                alwaysShowLinkDecorations: c
+                alwaysShowLinkDecorations: u
             }),
-            [r, s, c]
+            [n, s, u]
         );
     return (
-        a.useEffect(() => ((0, o.waitForAllDefaultIntlMessagesLoaded)().then(() => (0, p.d1)()), _.intl.onLocaleChange(() => (0, p.d1)()), window.addEventListener('keydown', m), () => window.removeEventListener('keydown', m)), []),
-        (0, i.jsx)(u.AccessibilityPreferencesContext.Provider, {
-            value: d,
-            children: n
+        r.useEffect(() => ((0, a.waitForAllDefaultIntlMessagesLoaded)().then(() => (0, f.d1)()), p.intl.onLocaleChange(() => (0, f.d1)()), window.addEventListener('keydown', h), () => window.removeEventListener('keydown', h)), []),
+        (0, i.jsx)(l.Sfi.Provider, {
+            value: c,
+            children: t
         })
     );
 }

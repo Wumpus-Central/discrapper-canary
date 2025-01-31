@@ -1,24 +1,20 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
+n.d(t, { Z: () => c });
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    r = n.n(l),
-    a = n(481060),
+    a = n.n(l),
+    r = n(481060),
     s = n(618158),
     o = n(339445);
 function c(e) {
     let { errorMessage: t, className: n } = e;
-    return (0, i.jsx)(a.TooltipContainer, {
-        className: r()(n, o.root),
+    return (0, i.jsx)(r.DY3, {
+        className: a()(n, o.root),
         text: t,
         position: 'bottom',
-        color: a.TooltipColors.GREY,
+        color: r.FGA.GREY,
         children: (0, i.jsx)(s.Z, {
-            children: (0, i.jsx)(a.CircleWarningIcon, {
+            children: (0, i.jsx)(r.P4T, {
                 size: 'custom',
                 width: 20,
                 height: 20,

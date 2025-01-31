@@ -1,11 +1,7 @@
-n.d(t, {
-    Z: function () {
-        return s;
-    }
-});
+n.d(t, { Z: () => l });
 var a = n(626135),
-    o = n(981631);
-function s(e) {
+    s = n(981631);
+function l(e) {
     let { rating: t = null } = e;
-    a.default.track(o.rMx.SAFETY_USER_SENTIMENT_FEEDBACK_SUBMITTED, { rating: t });
+    a.default.track(s.rMx.SAFETY_USER_SENTIMENT_FEEDBACK_SUBMITTED, { rating: t });
 }

@@ -1,9 +1,4 @@
-var i;
-r.d(n, {
-    h: function () {
-        return i;
-    }
-}),
-    !(function (e) {
-        (e[(e.DESKTOP = 0)] = 'DESKTOP'), (e[(e.MOBILE = 1)] = 'MOBILE');
-    })(i || (i = {}));
+n.d(t, { h: () => i });
+var i = (function (e) {
+    return (e[(e.DESKTOP = 0)] = 'DESKTOP'), (e[(e.MOBILE = 1)] = 'MOBILE'), e;
+})({});

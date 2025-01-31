@@ -1,17 +1,13 @@
-r.d(n, {
-    N: function () {
-        return o;
-    },
-    Z: function () {
-        return a;
-    }
+n.d(t, {
+    N: () => a,
+    Z: () => r
 });
-var i = r(192379);
-function a(e) {
-    let n = i.useRef(e);
-    i.useEffect(() => n.current(), []);
+var i = n(192379);
+function r(e) {
+    let t = i.useRef(e);
+    i.useEffect(() => t.current(), []);
 }
-function o(e) {
-    let n = i.useRef(e);
-    i.useLayoutEffect(() => n.current(), []);
+function a(e) {
+    let t = i.useRef(e);
+    i.useLayoutEffect(() => t.current(), []);
 }

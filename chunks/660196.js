@@ -1,12 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return p;
-    }
-});
+n.d(t, { Z: () => p });
 var i = n(192379),
     l = n(442837),
-    r = n(367907),
-    a = n(906732),
+    a = n(367907),
+    r = n(906732),
     s = n(703656),
     o = n(626135),
     c = n(730647),
@@ -17,9 +13,9 @@ function p(e) {
     var t;
     let { guildId: n, groupListingId: p, location: m, relevantSubscriptionListingIds: f } = e,
         g = (0, c.f)('useTrackRoleSubscriptionUpsellAnalytics'),
-        { activeSubscription: C } = (0, u.Z)(p),
-        x = null != C,
-        v = (0, l.Wu)(
+        { activeSubscription: _ } = (0, u.Z)(p),
+        C = null != _,
+        x = (0, l.Wu)(
             [d.Z],
             () =>
                 (null != f ? f : []).filter((e) => {
@@ -28,21 +24,21 @@ function p(e) {
                 }),
             [f]
         ),
-        { analyticsLocations: _ } = (0, a.ZP)(null !== (t = (0, s.DR)()) && void 0 !== t ? t : []),
-        I = i.useRef(!1);
+        { analyticsLocations: v } = (0, r.ZP)(null !== (t = (0, s.DR)()) && void 0 !== t ? t : []),
+        E = i.useRef(!1);
     i.useEffect(() => {
         g &&
             null != p &&
-            null != v &&
-            !I.current &&
-            ((I.current = !0),
+            null != x &&
+            !E.current &&
+            ((E.current = !0),
             o.default.track(h.rMx.ROLE_SUBSCRIPTION_LISTING_UPSELL_PAGE_VIEWED, {
                 role_subscription_group_listing_id: p,
-                role_subscription_listing_ids: v,
-                is_premium_member: x,
-                location_stack: _,
+                role_subscription_listing_ids: x,
+                is_premium_member: C,
+                location_stack: v,
                 location: m,
-                ...(0, r.hH)(n)
+                ...(0, a.hH)(n)
             }));
-    }, [n, p, g, m, v, x, _]);
+    }, [n, p, g, m, x, C, v]);
 }

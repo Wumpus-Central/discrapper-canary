@@ -1,193 +1,175 @@
-r.d(n, {
-    Ai: function () {
-        return y;
-    },
-    PW: function () {
-        return b;
-    },
-    Tu: function () {
-        return A;
-    },
-    am: function () {
-        return v;
-    },
-    hP: function () {
-        return E;
-    },
-    hY: function () {
-        return I;
-    },
-    k1: function () {
-        return S;
-    },
-    rC: function () {
-        return g;
-    },
-    wO: function () {
-        return T;
-    }
-});
-var i = r(177593);
-var a = r(544891),
-    o = r(846519),
-    s = r(570140),
-    l = r(70956),
-    u = r(877481),
-    c = r(358085),
-    d = r(18323),
-    f = r(616922),
-    p = r(981631);
-let h = 5000,
+n.d(t, {
+    Ai: () => E,
+    PW: () => v,
+    Tu: () => T,
+    am: () => g,
+    hP: () => m,
+    hY: () => y,
+    k1: () => b,
+    rC: () => h,
+    wO: () => I
+}),
+    n(177593);
+var i = n(544891),
+    r = n(846519),
+    a = n(570140),
+    s = n(70956),
+    o = n(877481),
+    l = n(358085),
+    u = n(18323),
+    c = n(616922),
+    d = n(981631);
+let f = 5000,
     _ = 5000;
-function m(e, n, r, i) {
+function p(e, t, n, i) {
     let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 1;
     return e(
         (i = {
             ...i,
-            headers: { authorization: 'Bearer '.concat(r) }
+            headers: { authorization: 'Bearer '.concat(n) }
         })
     )
         .then((e) => (202 === e.status ? Promise.reject(e) : e))
-        .catch((r) => {
-            let s = !0 !== i.onlyRetryOnAuthorizationErrors && 202 === r.status;
-            return (401 === r.status || s) && a > 0
-                ? (202 === r.status ? (0, o.GR)(h) : Promise.resolve())
-                      .then(() => E(n))
-                      .then((r) => {
+        .catch((n) => {
+            let s = !0 !== i.onlyRetryOnAuthorizationErrors && 202 === n.status;
+            return (401 === n.status || s) && a > 0
+                ? (202 === n.status ? (0, r.GR)(f) : Promise.resolve())
+                      .then(() => m(t))
+                      .then((n) => {
                           let {
-                              body: { access_token: o }
-                          } = r;
-                          return m(e, n, o, i, a - 1);
+                              body: { access_token: r }
+                          } = n;
+                          return p(e, t, r, i, a - 1);
                       })
-                      .then((e) => new Promise((n) => setImmediate(() => n(e))))
-                : Promise.reject(r);
+                      .then((e) => new Promise((t) => setImmediate(() => t(e))))
+                : Promise.reject(n);
         });
 }
-let g = {
-    get: m.bind(null, a.tn.get),
-    put: m.bind(null, a.tn.put)
+let h = {
+    get: p.bind(null, i.tn.get),
+    put: p.bind(null, i.tn.put)
 };
-function E(e) {
-    return a.tn
+function m(e) {
+    return i.tn
         .get({
-            url: p.ANM.CONNECTION_ACCESS_TOKEN(p.ABu.SPOTIFY, e),
+            url: d.ANM.CONNECTION_ACCESS_TOKEN(d.ABu.SPOTIFY, e),
             oldFormErrors: !0,
             rejectWithError: !1
         })
-        .catch((n) => {
-            var r;
-            if ((null === (r = n.body) || void 0 === r ? void 0 : r.code) === p.evJ.CONNECTION_REVOKED)
-                s.Z.dispatch({
+        .catch((t) => {
+            var n;
+            if ((null === (n = t.body) || void 0 === n ? void 0 : n.code) === d.evJ.CONNECTION_REVOKED)
+                a.Z.dispatch({
                     type: 'SPOTIFY_ACCOUNT_ACCESS_TOKEN_REVOKE',
                     accountId: e
                 });
-            else if (429 === n.status) {
-                let r = n.headers['retry-after'] * l.Z.Millis.SECOND,
-                    i = isNaN(r) || 0 === r ? _ : r;
-                return (0, o.GR)(i).then(() => E(e));
+            else if (429 === t.status) {
+                let n = t.headers['retry-after'] * s.Z.Millis.SECOND,
+                    i = isNaN(n) || 0 === n ? _ : n;
+                return (0, r.GR)(i).then(() => m(e));
             }
-            return Promise.reject(n);
+            return Promise.reject(t);
         })
-        .then((n) => {
-            let { access_token: r } = n.body;
+        .then((t) => {
+            let { access_token: n } = t.body;
             return (
-                s.Z.dispatch({
+                a.Z.dispatch({
                     type: 'SPOTIFY_ACCOUNT_ACCESS_TOKEN',
                     accountId: e,
-                    accessToken: r
+                    accessToken: n
                 }),
-                n
+                t
             );
         });
 }
-function v(e, n, r) {
+function g(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 2;
-    return g
-        .put(e, n, {
-            url: f.C7.NOTIFICATIONS_PLAYER,
-            query: { connection_id: r }
+    return h
+        .put(e, t, {
+            url: c.C7.NOTIFICATIONS_PLAYER,
+            query: { connection_id: n }
         })
-        .catch((a) => (i <= 0 ? Promise.reject(a) : (0, o.GR)(h).then(() => v(e, n, r, i - 1))));
+        .catch((a) => (i <= 0 ? Promise.reject(a) : (0, r.GR)(f).then(() => g(e, t, n, i - 1))));
 }
-function y(e, n) {
-    return g.get(e, n, { url: f.C7.PROFILE }).then(
-        (n) => (
-            s.Z.dispatch({
+function E(e, t) {
+    return h.get(e, t, { url: c.C7.PROFILE }).then(
+        (t) => (
+            a.Z.dispatch({
                 type: 'SPOTIFY_PROFILE_UPDATE',
                 accountId: e,
-                isPremium: 'premium' === n.body.product
+                isPremium: 'premium' === t.body.product
             }),
-            n
+            t
         )
     );
 }
-function b(e, n) {
-    return g.get(e, n, { url: f.C7.PLAYER_DEVICES }).then(
-        (n) => (
-            n.body &&
-                s.Z.dispatch({
+function v(e, t) {
+    return h.get(e, t, { url: c.C7.PLAYER_DEVICES }).then(
+        (t) => (
+            t.body &&
+                a.Z.dispatch({
                     type: 'SPOTIFY_SET_DEVICES',
                     accountId: e,
-                    devices: n.body.devices
+                    devices: t.body.devices
                 }),
-            n
+            t
         )
     );
 }
-function I(e, n, r, i) {
-    let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
-        o = f.C7.PLAYER_OPEN(i, r, !1),
-        { deviceId: l, position: u, contextUri: c, repeat: d } = a;
-    return g
-        .put(e, n, {
-            url: f.C7.PLAYER_PLAY,
-            query: { device_id: l },
+function y(e, t, n, i) {
+    let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
+        s = c.C7.PLAYER_OPEN(i, n, !1),
+        { deviceId: o, position: l, contextUri: u, repeat: d } = r;
+    return h
+        .put(e, t, {
+            url: c.C7.PLAYER_PLAY,
+            query: { device_id: o },
             body: {
-                context_uri: null != c ? c : void 0,
-                uris: null == c ? [o] : void 0,
-                offset: null != c ? { uri: o } : void 0,
-                position_ms: null != u ? u : 0
+                context_uri: null != u ? u : void 0,
+                uris: null == u ? [s] : void 0,
+                offset: null != u ? { uri: s } : void 0,
+                position_ms: null != l ? l : 0
             }
         })
-        .then((r) =>
+        .then((n) =>
             null == d
-                ? r
-                : g.put(e, n, {
-                      url: f.C7.PLAYER_REPEAT,
+                ? n
+                : h.put(e, t, {
+                      url: c.C7.PLAYER_REPEAT,
                       query: {
-                          device_id: l,
+                          device_id: o,
                           state: d ? 'context' : 'off'
                       }
                   })
         )
         .then(
             (e) => (
-                s.Z.dispatch({
+                a.Z.dispatch({
                     type: 'SPOTIFY_PLAYER_PLAY',
-                    id: r,
-                    position: null != u ? u : 0
+                    id: n,
+                    position: null != l ? l : 0
                 }),
                 e
             )
         );
 }
-function T(e, n) {
-    return g.put(e, n, { url: f.C7.PLAYER_PAUSE }).then((e) => (s.Z.dispatch({ type: 'SPOTIFY_PLAYER_PAUSE' }), e));
+function I(e, t) {
+    return h.put(e, t, { url: c.C7.PLAYER_PAUSE }).then((e) => (a.Z.dispatch({ type: 'SPOTIFY_PLAYER_PAUSE' }), e));
 }
-function S() {
-    if (!d.Z.isProtocolRegistered())
-        (0, c.isDesktop)() &&
-            u.Z.isProtocolRegistered(f.M5).then((e) => {
-                s.Z.dispatch({
-                    type: 'SPOTIFY_SET_PROTOCOL_REGISTERED',
-                    isRegistered: e
-                });
+function b() {
+    !u.Z.isProtocolRegistered() &&
+        (0, l.isDesktop)() &&
+        o.Z.isProtocolRegistered(c.M5).then((e) => {
+            a.Z.dispatch({
+                type: 'SPOTIFY_SET_PROTOCOL_REGISTERED',
+                isRegistered: e
             });
+        });
 }
-function A(e, n) {
-    s.Z.dispatch({
+function T(e, t) {
+    a.Z.dispatch({
         type: 'SPOTIFY_SET_ACTIVE_DEVICE',
         accountId: e,
-        deviceId: n
+        deviceId: t
     });
 }

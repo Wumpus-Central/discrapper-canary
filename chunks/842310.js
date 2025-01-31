@@ -1,66 +1,62 @@
-t.d(n, {
-    l: function () {
-        return c;
-    },
-    v: function () {
-        return d;
-    }
+n.d(t, {
+    l: () => c,
+    v: () => d
 });
-var i = t(200651);
-t(192379);
-var r = t(481060),
-    l = t(144114),
-    s = t(476770),
-    o = t(815660),
-    u = t(388032),
-    a = t(484979);
+var i = n(200651);
+n(192379);
+var l = n(481060),
+    r = n(144114),
+    s = n(476770),
+    o = n(815660),
+    a = n(388032),
+    u = n(484979);
 function c() {
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsx)(s.PU, {
-            className: a.editableRequirementContainer,
-            icon: r.MobilePhoneIcon,
-            text: u.intl.string(u.t.woMjLS),
-            footnote: u.intl.string(u.t['jMh+TU']),
+            className: u.editableRequirementContainer,
+            icon: l.AtH,
+            text: a.intl.string(a.t.woMjLS),
+            footnote: a.intl.string(a.t['jMh+TU']),
             meetsRequirement: !1,
-            children: (0, i.jsx)(r.Tooltip, {
-                text: u.intl.string(u.t.mGlP39),
+            children: (0, i.jsx)(l.ua7, {
+                text: a.intl.string(a.t.mGlP39),
                 children: (e) =>
-                    (0, i.jsx)(r.Button, {
+                    (0, i.jsx)(l.zxk, {
                         ...e,
-                        size: r.Button.Sizes.SMALL,
+                        size: l.zxk.Sizes.SMALL,
                         disabled: !0,
-                        children: u.intl.string(u.t['13ofGh'])
+                        children: a.intl.string(a.t['13ofGh'])
                     })
             })
         })
     });
 }
 function d(e) {
-    let { isUserVerified: n } = e,
-        c = n ? u.intl.string(u.t.WWzQtb) : u.intl.string(u.t.woMjLS);
+    let { isUserVerified: t } = e,
+        c = t ? a.intl.string(a.t.WWzQtb) : a.intl.string(a.t.woMjLS);
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsx)(s.PU, {
-            className: a.editableRequirementContainer,
-            icon: r.MobilePhoneIcon,
+            className: u.editableRequirementContainer,
+            icon: l.AtH,
             text: c,
-            footnote: u.intl.string(u.t['jMh+TU']),
-            meetsRequirement: n,
-            children: (0, i.jsx)(r.Button, {
-                size: r.Button.Sizes.SMALL,
+            footnote: a.intl.string(a.t['jMh+TU']),
+            meetsRequirement: t,
+            children: (0, i.jsx)(l.zxk, {
+                size: l.zxk.Sizes.SMALL,
                 onClick: () => {
-                    (0, r.openModalLazy)(
+                    (0, l.ZDy)(
                         async () => {
-                            let { default: e } = await Promise.all([t.e('76540'), t.e('47528')]).then(t.bind(t, 607018));
-                            return (n) =>
+                            let { default: e } = await Promise.all([n.e('76540'), n.e('47528')]).then(n.bind(n, 607018));
+                            return (t) =>
                                 (0, i.jsx)(e, {
-                                    reason: l.L.GUILD_PHONE_REQUIRED,
-                                    ...n
+                                    reason: r.L.GUILD_PHONE_REQUIRED,
+                                    ...t
                                 });
                         },
                         { modalKey: o.M }
                     );
                 },
-                children: u.intl.string(u.t['13ofGh'])
+                children: a.intl.string(a.t['13ofGh'])
             })
         })
     });

@@ -1,7 +1,8 @@
+n.d(t, { Z: () => p });
 var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
     s = n(481060),
     o = n(442837),
     c = n(547280),
@@ -9,39 +10,39 @@ var i = n(200651),
     u = n(981631),
     h = n(388032),
     m = n(804648);
-t.Z = function (e) {
+let p = function (e) {
     let { guild: t } = e,
-        l = (0, o.e7)([d.Z], () => d.Z.getActiveGuildSignUp(t.id)),
-        p = r.useCallback(() => {
-            null != l &&
-                (0, s.openModalLazy)(async () => {
+        r = (0, o.e7)([d.Z], () => d.Z.getActiveGuildSignUp(t.id)),
+        p = l.useCallback(() => {
+            null != r &&
+                (0, s.ZDy)(async () => {
                     let { default: e } = await Promise.all([n.e('22862'), n.e('20965')]).then(n.bind(n, 646202));
                     return (n) =>
                         (0, i.jsx)(e, {
                             ...n,
-                            target: l,
+                            target: r,
                             guildId: t.id
                         });
                 });
-        }, [l, t.id]),
-        g = r.useCallback(() => {
-            null != l && (0, c.b)(l.key, l.dismissibleContent);
-        }, [l]);
-    if (null == l) return null;
-    let f = 'url('.concat(l.backgroundAssetUrl, ') black top / cover no-repeat');
-    return (0, i.jsx)(s.ThemeProvider, {
+        }, [r, t.id]),
+        g = l.useCallback(() => {
+            null != r && (0, c.b)(r.key, r.dismissibleContent);
+        }, [r]);
+    if (null == r) return null;
+    let _ = 'url('.concat(r.backgroundAssetUrl, ') black top / cover no-repeat');
+    return (0, i.jsx)(s.f6W, {
         theme: u.BRd.DARK,
         children: (e) =>
             (0, i.jsx)('div', {
                 className: a()(m.container, e),
                 children: (0, i.jsxs)('div', {
                     className: m.card,
-                    style: { background: f },
+                    style: { background: _ },
                     children: [
                         (0, i.jsxs)('div', {
                             className: m.eyebrow,
                             children: [
-                                (0, i.jsx)(s.EnvelopeIcon, {
+                                (0, i.jsx)(s._XJ, {
                                     size: 'xxs',
                                     color: 'currentColor'
                                 }),
@@ -52,11 +53,11 @@ t.Z = function (e) {
                                 })
                             ]
                         }),
-                        (0, i.jsx)(s.Heading, {
+                        (0, i.jsx)(s.X6q, {
                             variant: 'heading-sm/medium',
-                            children: l.noticeHeader
+                            children: r.noticeHeader
                         }),
-                        (0, i.jsx)(s.Button, {
+                        (0, i.jsx)(s.zxk, {
                             className: m.button,
                             color: 'none',
                             onClick: p,
@@ -68,10 +69,10 @@ t.Z = function (e) {
                         }),
                         (0, i.jsx)('div', {
                             className: m.dismiss,
-                            children: (0, i.jsx)(s.Clickable, {
+                            children: (0, i.jsx)(s.P3F, {
                                 onClick: g,
                                 'aria-label': h.intl.string(h.t.cpT0Cg),
-                                children: (0, i.jsx)(s.XSmallIcon, {
+                                children: (0, i.jsx)(s.Dio, {
                                     size: 'xs',
                                     color: 'currentColor'
                                 })

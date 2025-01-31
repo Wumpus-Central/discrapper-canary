@@ -1,28 +1,23 @@
-r.r(n),
-    r.d(n, {
-        default: function () {
-            return l;
-        }
-    });
-var i = r(528734),
-    a = r(217224),
-    o = r(951516),
-    s = r(633605);
-function l(e, n) {
-    (0, o.Z)(1, arguments);
-    var r,
+n.r(t), n.d(t, { default: () => o });
+var i = n(528734),
+    r = n(217224),
+    a = n(951516),
+    s = n(633605);
+function o(e, t) {
+    (0, a.Z)(1, arguments);
+    var n,
+        o,
         l,
         u,
         c,
         d,
         f,
-        p,
-        h,
-        _ = (0, s.j)(),
-        m = (0, a.Z)(null !== (r = null !== (l = null !== (u = null !== (c = null == n ? void 0 : n.weekStartsOn) && void 0 !== c ? c : null == n ? void 0 : null === (d = n.locale) || void 0 === d ? void 0 : null === (f = d.options) || void 0 === f ? void 0 : f.weekStartsOn) && void 0 !== u ? u : _.weekStartsOn) && void 0 !== l ? l : null === (p = _.locale) || void 0 === p ? void 0 : null === (h = p.options) || void 0 === h ? void 0 : h.weekStartsOn) && void 0 !== r ? r : 0);
-    if (!(m >= 0 && m <= 6)) throw RangeError('weekStartsOn must be between 0 and 6 inclusively');
-    var g = (0, i.default)(e),
-        E = g.getDay(),
-        v = (E < m ? 7 : 0) + E - m;
-    return g.setDate(g.getDate() - v), g.setHours(0, 0, 0, 0), g;
+        _,
+        p = (0, s.j)(),
+        h = (0, r.Z)(null !== (n = null !== (o = null !== (l = null !== (u = null == t ? void 0 : t.weekStartsOn) && void 0 !== u ? u : null == t ? void 0 : null === (c = t.locale) || void 0 === c ? void 0 : null === (d = c.options) || void 0 === d ? void 0 : d.weekStartsOn) && void 0 !== l ? l : p.weekStartsOn) && void 0 !== o ? o : null === (f = p.locale) || void 0 === f ? void 0 : null === (_ = f.options) || void 0 === _ ? void 0 : _.weekStartsOn) && void 0 !== n ? n : 0);
+    if (!(h >= 0 && h <= 6)) throw RangeError('weekStartsOn must be between 0 and 6 inclusively');
+    var m = (0, i.default)(e),
+        g = m.getDay(),
+        E = (g < h ? 7 : 0) + g - h;
+    return m.setDate(m.getDate() - E), m.setHours(0, 0, 0, 0), m;
 }

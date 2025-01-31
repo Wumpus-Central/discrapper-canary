@@ -1,3 +1,4 @@
+n.d(e, { Z: () => E });
 var r = (function () {
         if ('undefined' != typeof Map) return Map;
         function t(t, e) {
@@ -90,11 +91,11 @@ var r = (function () {
                         i = t;
                     }
                     return a;
-                })(this.refresh.bind(this), 20));
+                })(this.refresh.bind(this), 0));
         }
         return (
             (t.prototype.addObserver = function (t) {
-                !~this.observers_.indexOf(t) && this.observers_.push(t), !this.connected_ && this.connect_();
+                ~this.observers_.indexOf(t) || this.observers_.push(t), this.connected_ || this.connect_();
             }),
             (t.prototype.removeObserver = function (t) {
                 var e = this.observers_,
@@ -116,22 +117,23 @@ var r = (function () {
                 );
             }),
             (t.prototype.connect_ = function () {
-                if (!!i && !this.connected_)
-                    document.addEventListener('transitionend', this.onTransitionEnd_),
-                        window.addEventListener('resize', this.refresh),
-                        a
-                            ? ((this.mutationsObserver_ = new MutationObserver(this.refresh)),
-                              this.mutationsObserver_.observe(document, {
-                                  attributes: !0,
-                                  childList: !0,
-                                  characterData: !0,
-                                  subtree: !0
-                              }))
-                            : (document.addEventListener('DOMSubtreeModified', this.refresh), (this.mutationEventsAdded_ = !0)),
-                        (this.connected_ = !0);
+                i &&
+                    !this.connected_ &&
+                    (document.addEventListener('transitionend', this.onTransitionEnd_),
+                    window.addEventListener('resize', this.refresh),
+                    a
+                        ? ((this.mutationsObserver_ = new MutationObserver(this.refresh)),
+                          this.mutationsObserver_.observe(document, {
+                              attributes: !0,
+                              childList: !0,
+                              characterData: !0,
+                              subtree: !0
+                          }))
+                        : (document.addEventListener('DOMSubtreeModified', this.refresh), (this.mutationEventsAdded_ = !0)),
+                    (this.connected_ = !0));
             }),
             (t.prototype.disconnect_ = function () {
-                if (!!i && !!this.connected_) document.removeEventListener('transitionend', this.onTransitionEnd_), window.removeEventListener('resize', this.refresh), this.mutationsObserver_ && this.mutationsObserver_.disconnect(), this.mutationEventsAdded_ && document.removeEventListener('DOMSubtreeModified', this.refresh), (this.mutationsObserver_ = null), (this.mutationEventsAdded_ = !1), (this.connected_ = !1);
+                i && this.connected_ && (document.removeEventListener('transitionend', this.onTransitionEnd_), window.removeEventListener('resize', this.refresh), this.mutationsObserver_ && this.mutationsObserver_.disconnect(), this.mutationEventsAdded_ && document.removeEventListener('DOMSubtreeModified', this.refresh), (this.mutationsObserver_ = null), (this.mutationEventsAdded_ = !1), (this.connected_ = !1));
             }),
             (t.prototype.onTransitionEnd_ = function (t) {
                 var e = t.propertyName,
@@ -141,7 +143,7 @@ var r = (function () {
                 }) && this.refresh();
             }),
             (t.getInstance = function () {
-                return !this.instance_ && (this.instance_ = new t()), this.instance_;
+                return this.instance_ || (this.instance_ = new t()), this.instance_;
             }),
             (t.instance_ = null),
             t
@@ -201,33 +203,29 @@ var b = (function () {
                         return l(0, 0, (e = t.getBBox()).width, e.height);
                     }
                     return (function (t) {
-                        var e = t.clientWidth,
-                            n = t.clientHeight;
-                        if (!e && !n) return d;
-                        var r = f(t).getComputedStyle(t),
-                            i = (function (t) {
+                        var e,
+                            n = t.clientWidth,
+                            r = t.clientHeight;
+                        if (!n && !r) return d;
+                        var i = f(t).getComputedStyle(t),
+                            o = (function (t) {
                                 for (var e = {}, n = 0, r = ['top', 'right', 'bottom', 'left']; n < r.length; n++) {
                                     var i = r[n],
                                         o = t['padding-' + i];
                                     e[i] = p(o);
                                 }
                                 return e;
-                            })(r),
-                            o = i.left + i.right,
-                            s = i.top + i.bottom,
-                            c = p(r.width),
-                            a = p(r.height);
-                        if (
-                            ('border-box' === r.boxSizing && (Math.round(c + o) !== e && (c -= v(r, 'left', 'right') + o), Math.round(a + s) !== n && (a -= v(r, 'top', 'bottom') + s)),
-                            !(function (t) {
-                                return t === f(t).document.documentElement;
-                            })(t))
-                        ) {
-                            var h = Math.round(c + o) - e,
-                                u = Math.round(a + s) - n;
-                            1 !== Math.abs(h) && (c -= h), 1 !== Math.abs(u) && (a -= u);
+                            })(i),
+                            s = o.left + o.right,
+                            c = o.top + o.bottom,
+                            a = p(i.width),
+                            h = p(i.height);
+                        if (('border-box' === i.boxSizing && (Math.round(a + s) !== n && (a -= v(i, 'left', 'right') + s), Math.round(h + c) !== r && (h -= v(i, 'top', 'bottom') + c)), (e = t) !== f(e).document.documentElement)) {
+                            var u = Math.round(a + s) - n,
+                                _ = Math.round(h + c) - r;
+                            1 !== Math.abs(u) && (a -= u), 1 !== Math.abs(_) && (h -= _);
                         }
-                        return l(i.left, i.top, c, a);
+                        return l(o.left, o.top, a, h);
                     })(t);
                 })(this.target);
                 return (this.contentRect_ = t), t.width !== this.broadcastWidth || t.height !== this.broadcastHeight;
@@ -245,26 +243,25 @@ var b = (function () {
             i,
             o,
             s,
-            c,
-            a =
-                ((r = (n = e).x),
-                (i = n.y),
-                (o = n.width),
-                (s = n.height),
-                u((c = Object.create(('undefined' != typeof DOMRectReadOnly ? DOMRectReadOnly : Object).prototype)), {
-                    x: r,
-                    y: i,
-                    width: o,
-                    height: s,
-                    top: i,
-                    right: r + o,
-                    bottom: s + i,
-                    left: r
+            c =
+                ((n = e.x),
+                (r = e.y),
+                (i = e.width),
+                (o = e.height),
+                u((s = Object.create(('undefined' != typeof DOMRectReadOnly ? DOMRectReadOnly : Object).prototype)), {
+                    x: n,
+                    y: r,
+                    width: i,
+                    height: o,
+                    top: r,
+                    right: n + i,
+                    bottom: o + r,
+                    left: n
                 }),
-                c);
+                s);
         u(this, {
             target: t,
-            contentRect: a
+            contentRect: c
         });
     },
     y = (function () {
@@ -275,17 +272,19 @@ var b = (function () {
         return (
             (t.prototype.observe = function (t) {
                 if (!arguments.length) throw TypeError('1 argument required, but only 0 present.');
-                if ('undefined' == typeof Element || !(Element instanceof Object)) return;
-                if (!(t instanceof f(t).Element)) throw TypeError('parameter 1 is not of type "Element".');
-                var e = this.observations_;
-                if (!e.has(t)) e.set(t, new b(t)), this.controller_.addObserver(this), this.controller_.refresh();
+                if ('undefined' != typeof Element && Element instanceof Object) {
+                    if (!(t instanceof f(t).Element)) throw TypeError('parameter 1 is not of type "Element".');
+                    var e = this.observations_;
+                    !e.has(t) && (e.set(t, new b(t)), this.controller_.addObserver(this), this.controller_.refresh());
+                }
             }),
             (t.prototype.unobserve = function (t) {
                 if (!arguments.length) throw TypeError('1 argument required, but only 0 present.');
-                if ('undefined' == typeof Element || !(Element instanceof Object)) return;
-                if (!(t instanceof f(t).Element)) throw TypeError('parameter 1 is not of type "Element".');
-                var e = this.observations_;
-                if (!!e.has(t)) e.delete(t), !e.size && this.controller_.removeObserver(this);
+                if ('undefined' != typeof Element && Element instanceof Object) {
+                    if (!(t instanceof f(t).Element)) throw TypeError('parameter 1 is not of type "Element".');
+                    var e = this.observations_;
+                    e.has(t) && (e.delete(t), e.size || this.controller_.removeObserver(this));
+                }
             }),
             (t.prototype.disconnect = function () {
                 this.clearActive(), this.observations_.clear(), this.controller_.removeObserver(this);
@@ -298,7 +297,7 @@ var b = (function () {
                     });
             }),
             (t.prototype.broadcastActive = function () {
-                if (!!this.hasActive()) {
+                if (this.hasActive()) {
                     var t = this.callbackCtx_,
                         e = this.activeObservations_.map(function (t) {
                             return new m(t.target, t.broadcastRect());
@@ -328,5 +327,4 @@ var b = (function () {
         return (e = g.get(this))[t].apply(e, arguments);
     };
 });
-var E = void 0 !== o.ResizeObserver ? o.ResizeObserver : w;
-e.Z = E;
+let E = void 0 !== o.ResizeObserver ? o.ResizeObserver : w;

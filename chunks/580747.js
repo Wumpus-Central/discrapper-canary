@@ -1,10 +1,6 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(442837),
-    a = r(91311);
-function o(e) {
-    return (0, i.e7)([a.Z], () => a.Z.get(e), [e]);
+n.d(t, { Z: () => a });
+var i = n(442837),
+    r = n(91311);
+function a(e) {
+    return (0, i.e7)([r.Z], () => r.Z.get(e), [e]);
 }

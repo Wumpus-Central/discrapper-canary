@@ -1,16 +1,11 @@
-r.r(n),
-    r.d(n, {
-        default: function () {
-            return l;
-        }
-    });
-var i = r(923868),
-    a = r(424421),
-    o = r(951516),
+n.r(t), n.d(t, { default: () => o });
+var i = n(923868),
+    r = n(424421),
+    a = n(951516),
     s = 604800000;
-function l(e, n, r) {
-    (0, o.Z)(2, arguments);
-    var l = (0, i.default)(e, r),
-        u = (0, i.default)(n, r);
-    return Math.round((l.getTime() - (0, a.Z)(l) - (u.getTime() - (0, a.Z)(u))) / s);
+function o(e, t, n) {
+    (0, a.Z)(2, arguments);
+    var o = (0, i.default)(e, n),
+        l = (0, i.default)(t, n);
+    return Math.round((o.getTime() - (0, r.Z)(o) - (l.getTime() - (0, r.Z)(l))) / s);
 }

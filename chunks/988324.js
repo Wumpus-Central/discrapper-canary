@@ -1,33 +1,29 @@
 var i,
-    a = r(444675),
-    o = r(413135),
-    s = o.Buffer,
-    l = {};
-for (i in o) {
-    if (!!o.hasOwnProperty(i)) 'SlowBuffer' !== i && 'Buffer' !== i && (l[i] = o[i]);
-}
-var u = (l.Buffer = {});
-for (i in s) {
-    if (!!s.hasOwnProperty(i)) 'allocUnsafe' !== i && 'allocUnsafeSlow' !== i && (u[i] = s[i]);
-}
+    r = n(444675),
+    a = n(413135),
+    s = a.Buffer,
+    o = {};
+for (i in a) a.hasOwnProperty(i) && 'SlowBuffer' !== i && 'Buffer' !== i && (o[i] = a[i]);
+var l = (o.Buffer = {});
+for (i in s) s.hasOwnProperty(i) && 'allocUnsafe' !== i && 'allocUnsafeSlow' !== i && (l[i] = s[i]);
 if (
-    ((l.Buffer.prototype = s.prototype),
-    (!u.from || u.from === Uint8Array.from) &&
-        (u.from = function (e, n, r) {
+    ((o.Buffer.prototype = s.prototype),
+    (l.from && l.from !== Uint8Array.from) ||
+        (l.from = function (e, t, n) {
             if ('number' == typeof e) throw TypeError('The "value" argument must not be of type number. Received type ' + typeof e);
             if (e && void 0 === e.length) throw TypeError('The first argument must be one of type string, Buffer, ArrayBuffer, Array, or Array-like Object. Received type ' + typeof e);
-            return s(e, n, r);
+            return s(e, t, n);
         }),
-    !u.alloc &&
-        (u.alloc = function (e, n, r) {
+    l.alloc ||
+        (l.alloc = function (e, t, n) {
             if ('number' != typeof e) throw TypeError('The "size" argument must be of type number. Received type ' + typeof e);
             if (e < 0 || e >= 2 * 1073741824) throw RangeError('The value "' + e + '" is invalid for option "size"');
             var i = s(e);
-            return n && 0 !== n.length ? ('string' == typeof r ? i.fill(n, r) : i.fill(n)) : i.fill(0), i;
+            return t && 0 !== t.length ? ('string' == typeof n ? i.fill(t, n) : i.fill(t)) : i.fill(0), i;
         }),
-    !l.kStringMaxLength)
+    !o.kStringMaxLength)
 )
     try {
-        l.kStringMaxLength = a.binding('buffer').kStringMaxLength;
+        o.kStringMaxLength = r.binding('buffer').kStringMaxLength;
     } catch (e) {}
-!l.constants && ((l.constants = { MAX_LENGTH: l.kMaxLength }), l.kStringMaxLength && (l.constants.MAX_STRING_LENGTH = l.kStringMaxLength)), (e.exports = l);
+!o.constants && ((o.constants = { MAX_LENGTH: o.kMaxLength }), o.kStringMaxLength && (o.constants.MAX_STRING_LENGTH = o.kStringMaxLength)), (e.exports = o);

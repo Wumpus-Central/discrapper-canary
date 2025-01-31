@@ -1,14 +1,10 @@
-n.d(t, {
-    z: function () {
-        return a;
-    }
-});
+n.d(t, { z: () => l });
 var i = n(607070),
-    r = n(585483),
-    s = n(981631);
-let a = {
+    s = n(585483),
+    r = n(981631);
+let l = {
     binds: ['return'],
     action() {
-        if (!i.Z.keyboardModeEnabled && r.S.hasSubscribers(s.CkL.MODAL_SUBMIT)) return r.S.dispatch(s.CkL.MODAL_SUBMIT), !1;
+        if (!i.Z.keyboardModeEnabled && s.S.hasSubscribers(r.CkL.MODAL_SUBMIT)) return s.S.dispatch(r.CkL.MODAL_SUBMIT), !1;
     }
 };

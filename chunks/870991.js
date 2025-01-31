@@ -1,14 +1,10 @@
 n.d(t, {
-    D8: function () {
-        return l;
-    },
-    E4: function () {
-        return r;
-    }
+    D8: () => l,
+    E4: () => a
 });
 var i = n(388032);
 let l = 'https://discord.com/safety/understanding-and-avoiding-common-scams';
-function r() {
+function a() {
     return [
         {
             title: i.intl.string(i.t.wSZfJS),

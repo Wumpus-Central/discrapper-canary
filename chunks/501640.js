@@ -1,19 +1,15 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-});
+n.d(t, { Z: () => o });
 var i = n(149765),
-    r = n(442837),
-    l = n(984933),
+    l = n(442837),
+    r = n(984933),
     a = n(496675),
     s = n(981631);
 function o(e) {
-    let t = (0, r.e7)(
-        [l.ZP],
+    let t = (0, l.e7)(
+        [r.ZP],
         () => {
             var t;
-            return null !== (t = l.ZP.getChannels(e)[l.sH]) && void 0 !== t ? t : [];
+            return null !== (t = r.ZP.getChannels(e)[r.sH]) && void 0 !== t ? t : [];
         },
         [e]
     );

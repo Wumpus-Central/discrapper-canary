@@ -1,13 +1,7 @@
 n.d(e, {
-    D0: function () {
-        return c;
-    },
-    kY: function () {
-        return i;
-    },
-    lE: function () {
-        return r;
-    }
+    D0: () => c,
+    kY: () => i,
+    lE: () => s
 });
 var l = n(570140);
 function i() {
@@ -19,7 +13,7 @@ function c(t) {
         word: t
     });
 }
-function r(t) {
+function s(t) {
     l.Z.dispatch({
         type: 'SPELLCHECK_UNLEARN_WORD',
         word: t

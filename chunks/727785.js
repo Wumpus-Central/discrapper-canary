@@ -1,42 +1,33 @@
-var i, a, o;
-function s(e, n, r) {
+function i(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-r.d(n, {
-    X5: function () {
-        return l;
-    },
-    a8: function () {
-        return i;
-    },
-    h8: function () {
-        return a;
-    },
-    xQ: function () {
-        return o;
-    }
+n.d(t, {
+    X5: () => r,
+    a8: () => a,
+    h8: () => s,
+    xQ: () => o
 });
-class l {
+class r {
     constructor(e) {
-        s(this, 'id', void 0), s(this, 'text', void 0), (this.id = e), (this.text = e);
+        i(this, 'id', void 0), i(this, 'text', void 0), (this.id = e), (this.text = e);
     }
 }
-!(function (e) {
-    (e.UP = 'UP'), (e.DOWN = 'DOWN');
-})(i || (i = {})),
-    !(function (e) {
-        (e.GUILD = 'GUILD'), (e.TEXT_CHANNEL = 'TEXT_CHANNEL'), (e.GROUP_DM = 'GROUP_DM'), (e.VOICE_CHANNEL = 'VOICE_CHANNEL'), (e.USER = 'USER'), (e.HEADER = 'HEADER'), (e.APPLICATION = 'APPLICATION'), (e.SKU = 'SKU'), (e.LINK = 'LINK'), (e.IN_APP_NAVIGATION = 'IN_APP_NAVIGATION');
-    })(a || (a = {})),
-    !(function (e) {
-        (e.USER = '@'), (e.TEXT_CHANNEL = '#'), (e.VOICE_CHANNEL = '!'), (e.GUILD = '*'), (e.APPLICATION = '$');
-    })(o || (o = {}));
+var a = (function (e) {
+        return (e.UP = 'UP'), (e.DOWN = 'DOWN'), e;
+    })({}),
+    s = (function (e) {
+        return (e.GUILD = 'GUILD'), (e.TEXT_CHANNEL = 'TEXT_CHANNEL'), (e.GROUP_DM = 'GROUP_DM'), (e.VOICE_CHANNEL = 'VOICE_CHANNEL'), (e.USER = 'USER'), (e.HEADER = 'HEADER'), (e.APPLICATION = 'APPLICATION'), (e.SKU = 'SKU'), (e.LINK = 'LINK'), (e.IN_APP_NAVIGATION = 'IN_APP_NAVIGATION'), e;
+    })({}),
+    o = (function (e) {
+        return (e.USER = '@'), (e.TEXT_CHANNEL = '#'), (e.VOICE_CHANNEL = '!'), (e.GUILD = '*'), (e.APPLICATION = '$'), e;
+    })({});

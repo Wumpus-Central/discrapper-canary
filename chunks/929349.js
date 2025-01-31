@@ -1,4 +1,5 @@
-e.exports = {
-    secondarySection: 'secondarySection_f81d65',
-    divider: 'divider_f81d65'
+var i = {
+    secondarySection: 'secondarySection_ed47e5',
+    divider: 'divider_ed47e5'
 };
+e.exports = i;

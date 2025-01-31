@@ -1,49 +1,43 @@
-r.d(n, {
-    U: function () {
-        return I;
-    }
-});
-var i = r(47120);
-var a = r(653041);
-var o = r(411104);
-var s = r(500268),
-    l = r(512722),
-    u = r.n(l),
-    c = r(956067),
-    d = r(259443),
-    f = r(986529),
-    p = r(153102),
-    h = r(625306),
-    _ = r(420970);
-function m(e, n, r) {
+n.d(t, { U: () => E }), n(47120), n(653041), n(411104);
+var i = n(500268),
+    r = n(512722),
+    a = n.n(r),
+    s = n(956067);
+n(17089);
+var o = n(259443),
+    l = n(986529),
+    u = n(153102),
+    c = n(625306),
+    d = n(420970);
+function f(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let g = new Set(['APP_STATE_UPDATE', 'CLEAR_CACHES', 'CONNECTION_CLOSED', 'CONNECTION_OPEN', 'CONNECTION_RESUMED', 'LOGIN_SUCCESS', 'LOGIN', 'LOGOUT', 'MESSAGE_SEND_FAILED', 'PUSH_NOTIFICATION_CLICK', 'RESET_SOCKET', 'SESSION_START', 'UPLOAD_FAIL', 'WRITE_CACHES']),
-    E = new d.Yd('Flux'),
-    v = 100,
-    y = 10,
-    b = '__subscriptions';
-class I {
+let _ = new Set(['APP_STATE_UPDATE', 'CLEAR_CACHES', 'CONNECTION_CLOSED', 'CONNECTION_OPEN', 'CONNECTION_RESUMED', 'LOGIN_SUCCESS', 'LOGIN', 'LOGOUT', 'MESSAGE_SEND_FAILED', 'PUSH_NOTIFICATION_CLICK', 'RESET_SOCKET', 'SESSION_START', 'UPLOAD_FAIL', 'WRITE_CACHES']),
+    p = new o.Yd('Flux'),
+    h = 100,
+    m = 10,
+    g = '__subscriptions';
+class E {
     isDispatching() {
         return null != this._currentDispatchActionType;
     }
     dispatch(e) {
-        return new Promise((n, r) => {
+        return new Promise((t, n) => {
             this._waitQueue.push(() => {
                 try {
-                    null == this.functionCache[e.type] && ((this.functionCache[e.type] = (e) => this._dispatchWithDevtools(e)), S(this.functionCache[e.type], 'dispatch_' + e.type)), this.functionCache[e.type](e), n();
+                    null == this.functionCache[e.type] && ((this.functionCache[e.type] = (e) => this._dispatchWithDevtools(e)), y(this.functionCache[e.type], 'dispatch_' + e.type)), this.functionCache[e.type](e), t();
                 } catch (e) {
-                    r(e);
+                    n(e);
                 }
             }),
                 this.flushWaitQueue();
@@ -52,58 +46,58 @@ class I {
     flushWaitQueue() {
         if (!this._processingWaitQueue)
             try {
-                (this._processingWaitQueue = !0), (p.Z.isDispatching = !0);
-                let n = 0;
+                (this._processingWaitQueue = !0), (u.Z.isDispatching = !0);
+                let t = 0;
                 for (; this._waitQueue.length > 0; ) {
-                    if (++n > 100) {
+                    if (++t > 100) {
                         var e;
-                        let n = h.qC();
+                        let t = c.qC();
                         throw (
-                            (E.error('LastFewActions', n),
+                            (p.error('LastFewActions', t),
                             null === (e = this._sentryUtils) ||
                                 void 0 === e ||
                                 e.addBreadcrumb({
                                     message: 'Dispatcher: Dispatch loop detected',
-                                    data: { lastFewActions: n }
+                                    data: { lastFewActions: t }
                                 }),
                             Error('Dispatch loop detected, aborting'))
                         );
                     }
                     for (; this._waitQueue.length > 0; ) this._waitQueue.shift()();
-                    p.Z.emit();
+                    u.Z.emit();
                 }
             } finally {
-                (this._processingWaitQueue = !1), (p.Z.isDispatching = !1);
+                (this._processingWaitQueue = !1), (u.Z.isDispatching = !1);
             }
     }
     _dispatchWithDevtools(e) {
         this._dispatchWithLogging(e);
     }
     _dispatchWithLogging(e) {
-        u()(null == this._currentDispatchActionType, 'Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch. Action: '.concat(e.type, ' Already dispatching: ').concat(this._currentDispatchActionType)), u()(e.type, 'Dispatch.dispatch(...) called without an action type'), g.has(e.type) && E.log('Dispatching '.concat(e.type)), (0, f.B1)(e.type), h.IH(e.type);
-        let n = this.actionLogger.log(e, (n) => {
+        a()(null == this._currentDispatchActionType, 'Dispatch.dispatch(...): Cannot dispatch in the middle of a dispatch. Action: '.concat(e.type, ' Already dispatching: ').concat(this._currentDispatchActionType)), a()(e.type, 'Dispatch.dispatch(...) called without an action type'), _.has(e.type) && p.log('Dispatching '.concat(e.type)), (0, l.B1)(e.type), c.IH(e.type);
+        let t = this.actionLogger.log(e, (t) => {
             try {
-                (this._currentDispatchActionType = e.type), this._dispatch(e, n);
+                (this._currentDispatchActionType = e.type), this._dispatch(e, t);
             } finally {
                 this._currentDispatchActionType = null;
             }
         });
-        n.totalTime > v && E.verbose('Slow dispatch on '.concat(e.type, ': ').concat(n.totalTime, 'ms'));
+        t.totalTime > h && p.verbose('Slow dispatch on '.concat(e.type, ': ').concat(t.totalTime, 'ms'));
         try {
-            (0, f.L8)('DISPATCH['.concat(e.type, ']'), e.type);
+            (0, l.L8)('DISPATCH['.concat(e.type, ']'), e.type);
         } catch (e) {}
     }
-    _dispatch(e, n) {
-        for (let n of this._interceptors) if (n(e)) return !1;
-        let r = this._actionHandlers.getOrderedActionHandlers(e);
-        for (let i = 0, a = r.length; i < a; i++) {
-            let { name: a, actionHandler: o, storeDidChange: s } = r[i];
-            !1 !== n(a, () => o(e)) && s(e);
+    _dispatch(e, t) {
+        for (let t of this._interceptors) if (t(e)) return !1;
+        let n = this._actionHandlers.getOrderedActionHandlers(e);
+        for (let i = 0, r = n.length; i < r; i++) {
+            let { name: r, actionHandler: a, storeDidChange: s } = n[i];
+            !1 !== t(r, () => a(e)) && s(e);
         }
         let i = this._subscriptions[e.type];
         null != i &&
-            n(b, () => {
-                i.forEach((n) => n(e));
+            t(g, () => {
+                i.forEach((t) => t(e));
             });
     }
     addInterceptor(e) {
@@ -112,96 +106,95 @@ class I {
     wait(e) {
         this._waitQueue.push(e), this.flushWaitQueue();
     }
-    subscribe(e, n) {
-        let r = this._subscriptions[e];
-        null == r && (this._subscriptions[e] = r = new Set()), r.add(n);
+    subscribe(e, t) {
+        let n = this._subscriptions[e];
+        null == n && (this._subscriptions[e] = n = new Set()), n.add(t);
     }
-    unsubscribe(e, n) {
-        let r = this._subscriptions[e];
-        null != r && (r.delete(n), 0 === r.size && delete this._subscriptions[e]);
+    unsubscribe(e, t) {
+        let n = this._subscriptions[e];
+        null != n && (n.delete(t), 0 === n.size && delete this._subscriptions[e]);
     }
-    register(e, n, r, i, a) {
-        return this._actionHandlers.register(e, n, r, null != i ? i : this._defaultBand, a);
+    register(e, t, n, i, r) {
+        return this._actionHandlers.register(e, t, n, null != i ? i : this._defaultBand, r);
     }
     createToken() {
         return this._actionHandlers.createToken();
     }
-    addDependencies(e, n) {
-        this._actionHandlers.addDependencies(e, n);
+    addDependencies(e, t) {
+        this._actionHandlers.addDependencies(e, t);
     }
-    constructor(e = 0, n, r) {
-        if ((m(this, '_defaultBand', void 0), m(this, '_interceptors', []), m(this, '_subscriptions', {}), m(this, '_waitQueue', []), m(this, '_processingWaitQueue', !1), m(this, '_currentDispatchActionType', null), m(this, '_actionHandlers', new T()), m(this, '_sentryUtils', void 0), m(this, 'actionLogger', void 0), m(this, 'functionCache', {}), (this._defaultBand = e), (this._sentryUtils = r), null != n)) this.actionLogger = n;
-        else this.actionLogger = new _.Z();
-        this.actionLogger.on('trace', (e, n, r) => {
-            c.Z.isTracing && r >= y && c.Z.mark('\uD83E\uDDA5', n, r);
-        });
+    constructor(e = 0, t, n) {
+        (f(this, '_defaultBand', void 0), f(this, '_interceptors', []), f(this, '_subscriptions', {}), f(this, '_waitQueue', []), f(this, '_processingWaitQueue', !1), f(this, '_currentDispatchActionType', null), f(this, '_actionHandlers', new v()), f(this, '_sentryUtils', void 0), f(this, 'actionLogger', void 0), f(this, 'functionCache', {}), (this._defaultBand = e), (this._sentryUtils = n), null != t) ? (this.actionLogger = t) : (this.actionLogger = new d.Z()),
+            this.actionLogger.on('trace', (e, t, n) => {
+                s.Z.isTracing && n >= m && s.Z.mark('\uD83E\uDDA5', t, n);
+            });
     }
 }
-class T {
+class v {
     getOrderedActionHandlers(e) {
-        var n;
-        return null !== (n = this._orderedActionHandlers[e.type]) && void 0 !== n ? n : this._computeOrderedActionHandlers(e.type);
+        var t;
+        return null !== (t = this._orderedActionHandlers[e.type]) && void 0 !== t ? t : this._computeOrderedActionHandlers(e.type);
     }
-    register(e, n, r, i) {
-        let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : this.createToken();
-        u()(i >= 0 && Number.isInteger(i), 'band must be a non-negative integer.');
-        let o = {};
-        for (let r in n) {
-            let i = n[r],
-                a = (e) => i(e);
-            S(a, ''.concat(e, '_').concat(r)), (o[r] = a);
+    register(e, t, n, i) {
+        let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : this.createToken();
+        a()(i >= 0 && Number.isInteger(i), 'band must be a non-negative integer.');
+        let s = {};
+        for (let n in t) {
+            let i = t[n],
+                r = (e) => i(e);
+            y(r, ''.concat(e, '_').concat(n)), (s[n] = r);
         }
         return (
-            this._dependencyGraph.addNode(a, {
+            this._dependencyGraph.addNode(r, {
                 name: e,
                 band: i,
-                actionHandler: o,
-                storeDidChange: r
+                actionHandler: s,
+                storeDidChange: n
             }),
-            this._addToBand(a, i),
+            this._addToBand(r, i),
             this._invalidateCaches(),
-            a
+            r
         );
     }
     createToken() {
         return 'ID_'.concat(this._lastID++);
     }
-    addDependencies(e, n) {
-        for (let r of (this._validateDependencies(e, n), n)) this._dependencyGraph.addDependency(e, r);
+    addDependencies(e, t) {
+        for (let n of (this._validateDependencies(e, t), t)) this._dependencyGraph.addDependency(e, n);
         this._invalidateCaches();
     }
-    _validateDependencies(e, n) {}
+    _validateDependencies(e, t) {}
     _invalidateCaches() {
         (this._orderedCallbackTokens = null), (this._orderedActionHandlers = {});
     }
     _bandToken(e) {
-        let n = 'band.'.concat(e);
+        let t = 'band.'.concat(e);
         return (
-            !this._dependencyGraph.hasNode(n) &&
-                (this._dependencyGraph.addNode(n, {
-                    name: n,
+            !this._dependencyGraph.hasNode(t) &&
+                (this._dependencyGraph.addNode(t, {
+                    name: t,
                     band: e,
                     actionHandler: {},
                     storeDidChange: () => {}
                 }),
-                e > 0 && this._dependencyGraph.addDependency(n, this._bandToken(e - 1))),
-            n
+                e > 0 && this._dependencyGraph.addDependency(t, this._bandToken(e - 1))),
+            t
         );
     }
-    _addToBand(e, n) {
-        this._dependencyGraph.addDependency(this._bandToken(n), e), n > 0 && this._dependencyGraph.addDependency(e, this._bandToken(n - 1));
+    _addToBand(e, t) {
+        this._dependencyGraph.addDependency(this._bandToken(t), e), t > 0 && this._dependencyGraph.addDependency(e, this._bandToken(t - 1));
     }
     _computeOrderedActionHandlers(e) {
-        var n;
-        let r = null !== (n = this._orderedCallbackTokens) && void 0 !== n ? n : this._computeOrderedCallbackTokens(),
+        var t;
+        let n = null !== (t = this._orderedCallbackTokens) && void 0 !== t ? t : this._computeOrderedCallbackTokens(),
             i = [];
-        for (let n = 0, a = r.length; n < a; n++) {
-            let { name: a, actionHandler: o, storeDidChange: s } = this._dependencyGraph.getNodeData(r[n]),
-                l = o[e];
-            null != l &&
+        for (let t = 0, r = n.length; t < r; t++) {
+            let { name: r, actionHandler: a, storeDidChange: s } = this._dependencyGraph.getNodeData(n[t]),
+                o = a[e];
+            null != o &&
                 i.push({
-                    name: a,
-                    actionHandler: l,
+                    name: r,
+                    actionHandler: o,
                     storeDidChange: s
                 });
         }
@@ -213,16 +206,16 @@ class T {
             return (this._orderedCallbackTokens = e), e;
         } catch (e) {
             if (null != e.cyclePath) {
-                let n = e.cyclePath.map((e) => ''.concat(this._dependencyGraph.getNodeData(e).name, '(').concat(e, ')'));
-                throw Error('Dependency Cycle Found: '.concat(n.join(' -> ')));
+                let t = e.cyclePath.map((e) => ''.concat(this._dependencyGraph.getNodeData(e).name, '(').concat(e, ')'));
+                throw Error('Dependency Cycle Found: '.concat(t.join(' -> ')));
             }
             throw e;
         }
     }
     constructor() {
-        m(this, '_orderedActionHandlers', {}), m(this, '_orderedCallbackTokens', null), m(this, '_lastID', 1), m(this, '_dependencyGraph', new s.DepGraph());
+        f(this, '_orderedActionHandlers', {}), f(this, '_orderedCallbackTokens', null), f(this, '_lastID', 1), f(this, '_dependencyGraph', new i.DepGraph());
     }
 }
-function S(e, n) {
-    Object.defineProperty(e, 'name', { value: n });
+function y(e, t) {
+    Object.defineProperty(e, 'name', { value: t });
 }

@@ -1,36 +1,30 @@
-r.d(n, {
-    L: function () {
-        return d;
-    }
-});
-var i = r(47120);
-var a = r(411104);
-var o = r(230367),
-    s = r(320215),
-    l = r(240773),
-    u = r(495852);
-class c extends u.C {
+n.d(t, { L: () => l }), n(47120), n(411104);
+var i = n(230367),
+    r = n(320215),
+    a = n(240773),
+    s = n(495852);
+class o extends s.C {
     create(e) {
-        let n = {
+        let t = {
             clientVersion: 0,
             serverVersion: 0,
             dataVersion: 0
         };
         return (
-            globalThis.Object.defineProperty(n, l.C, {
+            globalThis.Object.defineProperty(t, a.C, {
                 enumerable: !1,
                 value: this
             }),
-            void 0 !== e && (0, s.l)(this, n, e),
-            n
+            void 0 !== e && (0, r.l)(this, t, e),
+            t
         );
     }
-    internalBinaryRead(e, n, r, i) {
-        let a = null != i ? i : this.create(),
-            s = e.pos + n;
+    internalBinaryRead(e, t, n, r) {
+        let a = null != r ? r : this.create(),
+            s = e.pos + t;
         for (; e.pos < s; ) {
-            let [n, i] = e.tag();
-            switch (n) {
+            let [t, r] = e.tag();
+            switch (t) {
                 case 1:
                     a.clientVersion = e.uint32();
                     break;
@@ -41,18 +35,18 @@ class c extends u.C {
                     a.dataVersion = e.uint32();
                     break;
                 default:
-                    let s = r.readUnknownField;
-                    if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(n, ' (wire type ').concat(i, ') for ').concat(this.typeName));
-                    let l = e.skip(i);
-                    !1 !== s && (!0 === s ? o.z.onRead : s)(this.typeName, a, n, i, l);
+                    let s = n.readUnknownField;
+                    if ('throw' === s) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(r, ') for ').concat(this.typeName));
+                    let o = e.skip(r);
+                    !1 !== s && (!0 === s ? i.z.onRead : s)(this.typeName, a, t, r, o);
             }
         }
         return a;
     }
-    internalBinaryWrite(e, n, r) {
-        0 !== e.clientVersion && n.tag(1, o.TD.Varint).uint32(e.clientVersion), 0 !== e.serverVersion && n.tag(2, o.TD.Varint).uint32(e.serverVersion), 0 !== e.dataVersion && n.tag(3, o.TD.Varint).uint32(e.dataVersion);
-        let i = r.writeUnknownFields;
-        return !1 !== i && (!0 == i ? o.z.onWrite : i)(this.typeName, e, n), n;
+    internalBinaryWrite(e, t, n) {
+        0 !== e.clientVersion && t.tag(1, i.TD.Varint).uint32(e.clientVersion), 0 !== e.serverVersion && t.tag(2, i.TD.Varint).uint32(e.serverVersion), 0 !== e.dataVersion && t.tag(3, i.TD.Varint).uint32(e.dataVersion);
+        let r = n.writeUnknownFields;
+        return !1 !== r && (!0 == r ? i.z.onWrite : r)(this.typeName, e, t), t;
     }
     constructor() {
         super('discord_protos.discord_users.v1.Versions', [
@@ -77,4 +71,4 @@ class c extends u.C {
         ]);
     }
 }
-let d = new c();
+let l = new o();

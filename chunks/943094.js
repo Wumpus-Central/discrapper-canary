@@ -1,20 +1,16 @@
-n.d(t, {
-    W: function () {
-        return s;
-    }
-});
+n.d(t, { W: () => s });
 var i = n(481060),
-    r = n(812206),
-    l = n(710845),
+    l = n(812206),
+    r = n(710845),
     a = n(51025);
 function s(e, t, s) {
     !(function (e, t) {
-        let a = r.Z.getApplication(e);
+        let a = l.Z.getApplication(e);
         if (null == a) {
-            new l.Z('DispatchUninstallActionCreators').log('Application not found for game '.concat(e));
+            new r.Z('DispatchUninstallActionCreators').log('Application not found for game '.concat(e));
             return;
         }
-        (0, i.openModalLazy)(async () => {
+        (0, i.ZDy)(async () => {
             let { default: e } = await n.e('70061').then(n.bind(n, 764998));
             return (n) =>
                 e({

@@ -1,16 +1,10 @@
-a.r(l),
-    a.d(l, {
-        default: function () {
-            return N;
-        }
-    }),
-    a(47120);
+a.d(l, { default: () => g }), a(47120);
 var t = a(200651),
     n = a(192379),
     s = a(392711),
     i = a.n(s),
-    o = a(442837),
-    r = a(481060),
+    r = a(442837),
+    o = a(481060),
     c = a(741361),
     d = a(596454),
     m = a(447003),
@@ -19,13 +13,13 @@ var t = a(200651),
     u = a(313201),
     j = a(633302),
     v = a(984933),
-    C = a(388032),
-    p = a(901701);
-function b(e) {
+    p = a(388032),
+    C = a(901701);
+function f(e) {
     var l, n, s;
-    let { onClose: i, handleReviewPermissions: o } = e,
+    let { onClose: i, handleReviewPermissions: r } = e,
         c = (e) =>
-            (0, t.jsx)(r.Text, {
+            (0, t.jsx)(o.Text, {
                 tag: 'span',
                 variant: 'text-md/medium',
                 color: 'header-primary',
@@ -33,66 +27,66 @@ function b(e) {
             });
     return (0, t.jsxs)(t.Fragment, {
         children: [
-            (0, t.jsxs)(r.ModalContent, {
-                className: p.infoContent,
+            (0, t.jsxs)(o.hzk, {
+                className: C.infoContent,
                 children: [
                     (0, t.jsxs)('div', {
-                        className: p.modalHeader,
+                        className: C.modalHeader,
                         children: [
                             (0, t.jsx)('img', {
-                                className: p.modalImage,
+                                className: C.modalImage,
                                 'data-accessibility': 'desaturate',
                                 alt: '',
                                 src: a(592614)
                             }),
-                            (0, t.jsx)(r.Heading, {
+                            (0, t.jsx)(o.X6q, {
                                 variant: 'heading-lg/semibold',
                                 color: 'header-primary',
-                                children: C.intl.string(C.t.PJOCLy)
+                                children: p.intl.string(p.t.PJOCLy)
                             })
                         ]
                     }),
                     (0, t.jsxs)('ul', {
                         children: [
                             (0, t.jsxs)('li', {
-                                className: p.infoListItem,
+                                className: C.infoListItem,
                                 children: [
                                     (0, t.jsx)('div', {
-                                        className: p.iconWrapper,
+                                        className: C.iconWrapper,
                                         children: (0, t.jsx)(d.Z, { emojiName: null === (l = j.ZP.getByName('eyes')) || void 0 === l ? void 0 : l.surrogates })
                                     }),
-                                    (0, t.jsx)(r.Text, {
+                                    (0, t.jsx)(o.Text, {
                                         variant: 'text-md/normal',
                                         color: 'text-muted',
-                                        children: C.intl.format(C.t['8JzOBg'], { emphasisHook: c })
+                                        children: p.intl.format(p.t['8JzOBg'], { emphasisHook: c })
                                     })
                                 ]
                             }),
                             (0, t.jsxs)('li', {
-                                className: p.infoListItem,
+                                className: C.infoListItem,
                                 children: [
                                     (0, t.jsx)('div', {
-                                        className: p.iconWrapper,
+                                        className: C.iconWrapper,
                                         children: (0, t.jsx)(d.Z, { emojiName: null === (n = j.ZP.getByName('star_struck')) || void 0 === n ? void 0 : n.surrogates })
                                     }),
-                                    (0, t.jsx)(r.Text, {
+                                    (0, t.jsx)(o.Text, {
                                         variant: 'text-md/normal',
                                         color: 'text-muted',
-                                        children: C.intl.format(C.t.UcGDkp, { emphasisHook: c })
+                                        children: p.intl.format(p.t.UcGDkp, { emphasisHook: c })
                                     })
                                 ]
                             }),
                             (0, t.jsxs)('li', {
-                                className: p.infoListItem,
+                                className: C.infoListItem,
                                 children: [
                                     (0, t.jsx)('div', {
-                                        className: p.iconWrapper,
+                                        className: C.iconWrapper,
                                         children: (0, t.jsx)(d.Z, { emojiName: null === (s = j.ZP.getByName('books')) || void 0 === s ? void 0 : s.surrogates })
                                     }),
-                                    (0, t.jsx)(r.Text, {
+                                    (0, t.jsx)(o.Text, {
                                         variant: 'text-md/normal',
                                         color: 'text-muted',
-                                        children: C.intl.format(C.t.kALJ5u, { emphasisHook: c })
+                                        children: p.intl.format(p.t.kALJ5u, { emphasisHook: c })
                                     })
                                 ]
                             })
@@ -100,24 +94,24 @@ function b(e) {
                     })
                 ]
             }),
-            (0, t.jsxs)(r.ModalFooter, {
+            (0, t.jsxs)(o.mzw, {
                 children: [
-                    (0, t.jsx)(r.Button, {
-                        onClick: o,
-                        children: (0, t.jsx)(r.Text, {
+                    (0, t.jsx)(o.zxk, {
+                        onClick: r,
+                        children: (0, t.jsx)(o.Text, {
                             variant: 'text-md/medium',
                             color: 'always-white',
-                            children: C.intl.string(C.t.bEnlen)
+                            children: p.intl.string(p.t.bEnlen)
                         })
                     }),
-                    (0, t.jsx)(r.Button, {
-                        className: p.__invalid_modalCancel,
-                        look: r.Button.Looks.LINK,
-                        color: r.Button.Colors.PRIMARY,
+                    (0, t.jsx)(o.zxk, {
+                        className: C.__invalid_modalCancel,
+                        look: o.zxk.Looks.LINK,
+                        color: o.zxk.Colors.PRIMARY,
                         onClick: i,
-                        children: (0, t.jsx)(r.Text, {
+                        children: (0, t.jsx)(o.Text, {
                             variant: 'text-md/medium',
-                            children: C.intl.string(C.t['ETE/oK'])
+                            children: p.intl.string(p.t['ETE/oK'])
                         })
                     })
                 ]
@@ -125,29 +119,29 @@ function b(e) {
         ]
     });
 }
-function g(e) {
+function b(e) {
     var l;
     let { channel: a, selected: s, onChange: i } = e,
-        o = null !== (l = (0, x.KS)(a)) && void 0 !== l ? l : r.TextIcon,
+        r = null !== (l = (0, x.KS)(a)) && void 0 !== l ? l : o.VL1,
         c = n.useCallback(() => {
             i(a);
         }, [a, i]);
-    return (0, t.jsxs)(r.Clickable, {
+    return (0, t.jsxs)(o.P3F, {
         'aria-label': a.name,
         'aria-checked': s,
-        className: p.selectableChannelRow,
+        className: C.selectableChannelRow,
         onClick: c,
         children: [
             (0, t.jsxs)('div', {
-                className: p.selectableChannelCellFirst,
+                className: C.selectableChannelCellFirst,
                 children: [
-                    (0, t.jsx)(o, {
-                        className: p.channelIcon,
+                    (0, t.jsx)(r, {
+                        className: C.channelIcon,
                         size: 'xs',
                         color: 'currentColor'
                     }),
-                    (0, t.jsx)(r.Text, {
-                        className: p.__invalid_channelName,
+                    (0, t.jsx)(o.Text, {
+                        className: C.__invalid_channelName,
                         variant: 'text-md/medium',
                         color: 'text-normal',
                         lineClamp: 1,
@@ -156,9 +150,9 @@ function g(e) {
                 ]
             }),
             (0, t.jsx)('div', {
-                className: p.selectableChannelCellSecond,
-                children: (0, t.jsx)(r.Checkbox, {
-                    type: r.Checkbox.Types.INVERTED,
+                className: C.selectableChannelCellSecond,
+                children: (0, t.jsx)(o.XZJ, {
+                    type: o.XZJ.Types.INVERTED,
                     value: s,
                     displayOnly: !0
                 })
@@ -166,9 +160,9 @@ function g(e) {
         ]
     });
 }
-function N(e) {
+function g(e) {
     let { transitionState: l, onClose: a, guildId: s, startingChannelId: d } = e,
-        x = (0, o.Wu)([v.ZP], () => {
+        x = (0, r.Wu)([v.ZP], () => {
             var e, l;
             let a = v.ZP.getChannels(s);
             return (null !== (e = a[v.sH]) && void 0 !== e ? e : [])
@@ -176,85 +170,85 @@ function N(e) {
                 .filter((e) => (0, m.Z)(e.channel))
                 .map((e) => e.channel);
         }),
-        [j, N] = n.useState(0),
+        [j, g] = n.useState(0),
         k = x.find((e) => e.id === d),
-        [_, T] = n.useState(null != k ? [k] : []),
-        y = (0, u.Dt)(),
-        f = _.length === x.length,
-        B = n.useCallback(() => {
-            N(1);
-        }, [N]),
+        [N, _] = n.useState(null != k ? [k] : []),
+        T = (0, u.Dt)(),
+        y = N.length === x.length,
+        z = n.useCallback(() => {
+            g(1);
+        }, [g]),
         I = n.useCallback(
             (e) => {
-                T((l) => (l.includes(e) ? [...i().pull(l, e)] : [...l, e]));
+                _((l) => (l.includes(e) ? [...i().pull(l, e)] : [...l, e]));
             },
-            [T]
+            [_]
         ),
-        A = n.useCallback(() => {
-            f ? T([]) : T(x);
-        }, [f, x, T]),
         L = n.useCallback(() => {
-            _.forEach((e) => {
+            y ? _([]) : _(x);
+        }, [y, x, _]),
+        A = n.useCallback(() => {
+            N.forEach((e) => {
                 let l = (0, h._A)(e, e.accessPermissions, !0);
                 (0, c.hw)(e.id, [l]), a();
             });
-        }, [_, a]);
+        }, [N, a]);
     return 0 === j
-        ? (0, t.jsx)(r.ModalRoot, {
+        ? (0, t.jsx)(o.Y0X, {
               transitionState: l,
-              'aria-labelledby': y,
-              size: r.ModalSize.SMALL,
-              children: (0, t.jsx)(b, {
-                  handleReviewPermissions: B,
+              'aria-labelledby': T,
+              size: o.CgR.SMALL,
+              children: (0, t.jsx)(f, {
+                  handleReviewPermissions: z,
                   onClose: a
               })
           })
-        : (0, t.jsxs)(r.ModalRoot, {
+        : (0, t.jsxs)(o.Y0X, {
               transitionState: l,
-              'aria-labelledby': y,
-              size: r.ModalSize.SMALL,
+              'aria-labelledby': T,
+              size: o.CgR.SMALL,
               children: [
-                  (0, t.jsxs)(r.ModalContent, {
-                      className: p.updateContent,
+                  (0, t.jsxs)(o.hzk, {
+                      className: C.updateContent,
                       children: [
                           (0, t.jsxs)('div', {
-                              className: p.modalHeader,
+                              className: C.modalHeader,
                               children: [
-                                  (0, t.jsx)(r.Heading, {
+                                  (0, t.jsx)(o.X6q, {
                                       variant: 'heading-lg/semibold',
                                       color: 'header-primary',
-                                      children: C.intl.string(C.t.y77PiY)
+                                      children: p.intl.string(p.t.y77PiY)
                                   }),
-                                  (0, t.jsx)(r.Text, {
-                                      className: p.__invalid_modalSubheader,
+                                  (0, t.jsx)(o.Text, {
+                                      className: C.__invalid_modalSubheader,
                                       variant: 'text-sm/normal',
                                       color: 'header-secondary',
-                                      children: C.intl.string(C.t.ZSzBe3)
+                                      children: p.intl.string(p.t.ZSzBe3)
                                   })
                               ]
                           }),
                           (0, t.jsxs)('div', {
-                              className: p.selectAllContainer,
+                              className: C.selectAllContainer,
                               children: [
-                                  (0, t.jsx)(r.Text, {
-                                      className: p.selectAllTitle,
+                                  (0, t.jsx)(o.Text, {
+                                      className: C.selectAllTitle,
                                       variant: 'text-xs/semibold',
                                       color: 'text-muted',
-                                      children: C.intl.format(C.t.rrYCq6, { count: x.length })
+                                      children: p.intl.format(p.t.rrYCq6, { count: x.length })
                                   }),
-                                  (0, t.jsxs)(r.Clickable, {
-                                      'aria-label': C.intl.string(C.t.l4rqa2),
-                                      className: p.selectAllButton,
-                                      onClick: A,
+                                  (0, t.jsxs)(o.P3F, {
+                                      'aria-label': p.intl.string(p.t.l4rqa2),
+                                      className: C.selectAllButton,
+                                      onClick: L,
                                       children: [
-                                          (0, t.jsx)(r.Text, {
+                                          (0, t.jsx)(o.Text, {
                                               variant: 'text-xs/normal',
-                                              children: C.intl.string(C.t.l4rqa2)
+                                              children: p.intl.string(p.t.l4rqa2)
                                           }),
-                                          (0, t.jsx)(r.Checkbox, {
+                                          (0, t.jsx)(o.XZJ, {
                                               size: 16,
-                                              type: r.Checkbox.Types.INVERTED,
-                                              value: f,
+                                              type: o.XZJ.Types.INVERTED,
+                                              value: y,
                                               displayOnly: !0
                                           })
                                       ]
@@ -262,13 +256,13 @@ function N(e) {
                               ]
                           }),
                           (0, t.jsx)('div', {
-                              className: p.deprivateTableBody,
+                              className: C.deprivateTableBody,
                               children: x.map((e) =>
                                   (0, t.jsx)(
-                                      g,
+                                      b,
                                       {
                                           channel: e,
-                                          selected: _.includes(e),
+                                          selected: N.includes(e),
                                           onChange: I
                                       },
                                       e.id
@@ -276,20 +270,20 @@ function N(e) {
                               )
                           }),
                           (0, t.jsx)('div', {
-                              className: p.deprivateExplainer,
-                              children: (0, t.jsx)(r.Text, {
+                              className: C.deprivateExplainer,
+                              children: (0, t.jsx)(o.Text, {
                                   variant: 'text-xs/normal',
                                   color: 'text-muted',
-                                  children: C.intl.format(C.t['OP/pKi'], {
+                                  children: p.intl.format(p.t['OP/pKi'], {
                                       emphasisHook: (e) =>
-                                          (0, t.jsx)(r.Text, {
+                                          (0, t.jsx)(o.Text, {
                                               tag: 'span',
                                               variant: 'text-xs/medium',
                                               color: 'interactive-active',
                                               children: e
                                           }),
                                       brandHook: (e) =>
-                                          (0, t.jsx)(r.Text, {
+                                          (0, t.jsx)(o.Text, {
                                               tag: 'span',
                                               variant: 'text-xs/normal',
                                               color: 'text-brand',
@@ -300,25 +294,25 @@ function N(e) {
                           })
                       ]
                   }),
-                  (0, t.jsxs)(r.ModalFooter, {
-                      className: p.modalFooter,
+                  (0, t.jsxs)(o.mzw, {
+                      className: C.modalFooter,
                       children: [
-                          (0, t.jsx)(r.Button, {
-                              disabled: 0 === _.length,
-                              onClick: L,
-                              children: (0, t.jsx)(r.Text, {
+                          (0, t.jsx)(o.zxk, {
+                              disabled: 0 === N.length,
+                              onClick: A,
+                              children: (0, t.jsx)(o.Text, {
                                   variant: 'text-md/medium',
                                   color: 'always-white',
-                                  children: C.intl.string(C.t.PggHmp)
+                                  children: p.intl.string(p.t.PggHmp)
                               })
                           }),
-                          (0, t.jsx)(r.Button, {
-                              look: r.Button.Looks.LINK,
-                              color: r.Button.Colors.PRIMARY,
+                          (0, t.jsx)(o.zxk, {
+                              look: o.zxk.Looks.LINK,
+                              color: o.zxk.Colors.PRIMARY,
                               onClick: a,
-                              children: (0, t.jsx)(r.Text, {
+                              children: (0, t.jsx)(o.Text, {
                                   variant: 'text-md/medium',
-                                  children: C.intl.string(C.t['ETE/oK'])
+                                  children: p.intl.string(p.t['ETE/oK'])
                               })
                           })
                       ]

@@ -1,9 +1,10 @@
-e.exports = {
-    channelIcon: 'channelIcon_a93d5d',
-    lockIcon: 'lockIcon_a93d5d',
-    identifier: 'identifier_a93d5d',
-    image: 'image_a93d5d ' + n('864435').desaturateUserColors,
-    shield: 'shield_a93d5d ' + n('864435').desaturateUserColors,
-    roleName: 'roleName_a93d5d',
-    tag: 'tag_a93d5d'
+var i = {
+    channelIcon: 'channelIcon_e98186',
+    lockIcon: 'lockIcon_e98186',
+    identifier: 'identifier_e98186',
+    image: 'image_e98186 ' + n(864435).desaturateUserColors,
+    shield: 'shield_e98186 ' + n(864435).desaturateUserColors,
+    roleName: 'roleName_e98186',
+    tag: 'tag_e98186'
 };
+e.exports = i;

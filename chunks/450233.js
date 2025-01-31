@@ -1,58 +1,55 @@
 n.d(t, {
-    G: function () {
-        return s;
-    }
+    G: () => p,
+    Z: () => _
 });
 var i,
-    r,
     l,
+    r,
     a,
-    s,
-    o,
-    c = n(200651),
-    d = n(192379),
-    u = n(442837),
-    h = n(570140),
-    m = n(16084),
-    p = n(855775),
-    g = n(388032);
-((i = s || (s = {})).SHORT = 'SHORT'), (i.LONG = 'LONG');
-class f extends (o = d.PureComponent) {
+    s = n(200651),
+    o = n(192379),
+    c = n(442837),
+    d = n(570140),
+    u = n(16084),
+    h = n(855775),
+    m = n(388032),
+    p = (((i = {}).SHORT = 'SHORT'), (i.LONG = 'LONG'), i);
+class g extends (a = o.PureComponent) {
     getText(e, t) {
         if (429 === e.status)
             switch (t) {
                 case 'SHORT':
-                    return g.intl.string(g.t.T15lqq);
+                    return m.intl.string(m.t.T15lqq);
                 case 'LONG':
-                    return g.intl.string(g.t.XFShdH);
+                    return m.intl.string(m.t.XFShdH);
             }
         switch (t) {
             case 'SHORT':
-                return g.intl.string(g.t['+XstBw']);
+                return m.intl.string(m.t['+XstBw']);
             case 'LONG':
-                return g.intl.string(g.t.epyCur);
+                return m.intl.string(m.t.epyCur);
         }
     }
     componentWillUnmount() {
-        null != this.props.purchaseError && h.Z.wait(() => m.pB());
+        null != this.props.purchaseError && d.Z.wait(() => u.pB());
     }
     render() {
         let { className: e, purchaseError: t, messageStyle: n } = this.props;
         return null == t
             ? null
-            : (0, c.jsx)('div', {
+            : (0, s.jsx)('div', {
                   className: e,
                   children: this.getText(t, n)
               });
     }
 }
-(a = { messageStyle: 'LONG' }),
-    (l = 'defaultProps') in (r = f)
-        ? Object.defineProperty(r, l, {
-              value: a,
+(r = { messageStyle: 'LONG' }),
+    (l = 'defaultProps') in g
+        ? Object.defineProperty(g, l, {
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (r[l] = a),
-    (t.Z = u.ZP.connectStores([p.Z], () => ({ purchaseError: p.Z.error }))(f));
+        : (g[l] = r);
+let _ = c.ZP.connectStores([h.Z], () => ({ purchaseError: h.Z.error }))(g);

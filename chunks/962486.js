@@ -1,12 +1,7 @@
-n.d(t, {
-    Z: function () {
-        return g;
-    }
-}),
-    n(653041);
+n.d(t, { Z: () => g }), n(653041);
 var i = n(200651),
-    r = n(192379),
-    l = n(481060),
+    l = n(192379),
+    r = n(481060),
     a = n(322665),
     s = n(17845),
     o = n(374939),
@@ -21,31 +16,31 @@ let p = {
     section: h.jXE.DISCOVER_POPULAR
 };
 function g(e) {
-    let { tab: t, guildIds: n, loading: h, onScroll: g, onGuildCardClick: f, onGuildCardSeen: _ } = e,
+    let { tab: t, guildIds: n, loading: h, onScroll: g, onGuildCardClick: _, onGuildCardSeen: f } = e,
         E = (0, d.Mf)(t),
         I = (0, d.a$)(t),
         C = (0, d.QW)(t),
         v = (0, d.lg)(t),
-        N = r.useMemo(() => {
+        N = l.useMemo(() => {
             let e = h ? 30 : n.length,
                 t = [];
             for (let a = 0; a < e; a++) {
-                var r, l;
+                var l, r;
                 t.push(
                     (0, i.jsx)(
                         u.Eo,
                         {
-                            guildId: null !== (r = n[a]) && void 0 !== r ? r : null,
+                            guildId: null !== (l = n[a]) && void 0 !== l ? l : null,
                             index: a,
-                            onClick: (e) => f(e, a, v, p),
-                            onView: (e) => _(e, v)
+                            onClick: (e) => _(e, a, v, p),
+                            onView: (e) => f(e, v)
                         },
-                        null !== (l = n[a]) && void 0 !== l ? l : a
+                        null !== (r = n[a]) && void 0 !== r ? r : a
                     )
                 );
             }
             return t;
-        }, [v, n, h, f, _]);
+        }, [v, n, h, _, f]);
     return (0, i.jsxs)(c.Z, {
         onScroll: g,
         children: [
@@ -56,7 +51,7 @@ function g(e) {
             }),
             (0, i.jsxs)(o.Z, {
                 children: [
-                    (0, i.jsx)(l.Heading, {
+                    (0, i.jsx)(r.X6q, {
                         className: m.sectionTitle,
                         variant: 'heading-lg/semibold',
                         color: 'header-primary',

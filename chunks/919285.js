@@ -1,12 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-});
+n.d(t, { Z: () => d });
 var i = n(200651);
 n(192379);
-var r = n(324262),
-    l = n(434404),
+var l = n(324262),
+    r = n(434404),
     a = n(929507),
     s = n(981631),
     o = n(388032),
@@ -14,7 +10,7 @@ var r = n(324262),
 function d(e) {
     let { guild: t } = e,
         n = () => a.Z.dismissNotice(t.id);
-    return (0, i.jsx)(r.Z, {
+    return (0, i.jsx)(l.Z, {
         guild: t,
         onDismissed: n,
         cta: o.intl.string(o.t.RzWDqa),
@@ -22,7 +18,7 @@ function d(e) {
         type: s.vID.COMMANDS_MIGRATION,
         image: c,
         onClick: () => {
-            n(), l.Z.open(t.id, s.pNK.INTEGRATIONS);
+            n(), r.Z.open(t.id, s.pNK.INTEGRATIONS);
         },
         imageMarginTop: 15,
         imageMarginX: 22

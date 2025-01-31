@@ -1,25 +1,15 @@
-r.d(n, {
-    On: function () {
-        return l;
-    },
-    YD: function () {
-        return i;
-    },
-    i$: function () {
-        return s;
-    },
-    nO: function () {
-        return o;
-    },
-    u9: function () {
-        return a;
-    }
+n.d(t, {
+    On: () => o,
+    YD: () => i,
+    i$: () => s,
+    nO: () => a,
+    u9: () => r
 });
 let i = [0],
-    a = [0, 0],
-    o = {
+    r = [0, 0],
+    a = {
         path: [0, 0],
         offset: 0
     },
     s = /(\t|\s)/,
-    l = ['applicationCommandOption'];
+    o = ['applicationCommandOption'];

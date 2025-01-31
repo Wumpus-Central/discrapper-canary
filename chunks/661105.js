@@ -1,19 +1,15 @@
-r.d(t, {
-    Z: function () {
-        return s;
-    }
-});
+r.d(t, { Z: () => o });
 var a = r(181568),
     n = r(665352),
-    o = r(262281);
-function s(e, t, { inGamut: r } = {}) {
+    s = r(262281);
+function o(e, t, { inGamut: r } = {}) {
     e = (0, a.Z)(e);
-    let s = (t = n.Z.get(t)).from(e),
-        i = {
+    let i = (t = n.Z.get(t)).from(e),
+        c = {
             space: t,
-            coords: s,
+            coords: i,
             alpha: e.alpha
         };
-    return r && (i = (0, o.Z)(i, !0 === r ? void 0 : r)), i;
+    return r && (c = (0, s.Z)(c, !0 === r ? void 0 : r)), c;
 }
-s.returns = 'color';
+o.returns = 'color';

@@ -1,90 +1,86 @@
-r.d(n, {
-    Z: function () {
-        return y;
-    },
-    h: function () {
-        return v;
-    }
+n.d(t, {
+    Z: () => v,
+    h: () => E
 });
-var i = r(192379),
-    a = r(348327),
-    o = r.n(a),
-    s = r(97613),
-    l = r.n(s),
-    u = r(990547),
-    c = r(570140),
-    d = r(493773),
-    f = r(592125),
-    p = r(944486),
-    h = r(914010),
-    _ = r(626135),
-    m = r(367907),
-    g = r(565384);
-let E = (0, u.trackMaker)({
-    analyticEventConfigs: _.AnalyticEventConfigs,
-    dispatcher: c.Z,
+var i = n(192379),
+    r = n(348327),
+    a = n.n(r),
+    s = n(97613),
+    o = n.n(s),
+    l = n(990547),
+    u = n(570140),
+    c = n(493773),
+    d = n(592125),
+    f = n(944486),
+    _ = n(914010),
+    p = n(626135),
+    h = n(367907),
+    m = n(565384);
+let g = (0, l.trackMaker)({
+    analyticEventConfigs: p.AnalyticEventConfigs,
+    dispatcher: u.Z,
     TRACK_ACTION_NAME: 'TRACK'
 });
-function v(e) {
-    var n, r;
+function E(e) {
+    var t, n;
     let i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        { name: a, type: o, properties: s } = e;
+        { name: r, type: a, properties: s } = e;
     if (
-        e.type === u.ImpressionTypes.MODAL &&
+        e.type === l.ImpressionTypes.MODAL &&
         null == e.name &&
-        (0, g.Ez)().some((e) => {
-            var n;
-            return null === (n = e._stackContext) || void 0 === n ? void 0 : n.isSlide;
+        (0, m.Ez)().some((e) => {
+            var t;
+            return null === (t = e._stackContext) || void 0 === t ? void 0 : t.isSlide;
         })
     )
         return;
-    (0, g.Ps)(e);
-    let l = null !== (n = null == s ? void 0 : s.guild_id) && void 0 !== n ? n : h.Z.getGuildId(),
-        c = null !== (r = null == s ? void 0 : s.channel_id) && void 0 !== r ? r : p.Z.getChannelId(l),
-        d = (0, _.expandEventProperties)({
-            impression_type: o,
-            location: (0, g.k$)(),
-            ...(0, m.hH)(l),
-            ...(0, m.v_)(f.Z.getChannel(c)),
+    (0, m.Ps)(e);
+    let o = null !== (t = null == s ? void 0 : s.guild_id) && void 0 !== t ? t : _.Z.getGuildId(),
+        u = null !== (n = null == s ? void 0 : s.channel_id) && void 0 !== n ? n : f.Z.getChannelId(o),
+        c = (0, p.expandEventProperties)({
+            impression_type: a,
+            location: (0, m.k$)(),
+            ...(0, h.hH)(o),
+            ...(0, h.v_)(d.Z.getChannel(u)),
             ...s
         });
     if (i) {
-        (0, g.dT)(null, null);
+        (0, m.dT)(null, null);
         return;
     }
-    null != a && null != o && ((0, _.debugLogEvent)(a, d), E(a, d)), (0, g.dT)(a, d);
+    null != r && null != a && ((0, p.debugLogEvent)(r, c), g(r, c)), (0, m.dT)(r, c);
 }
-function y(e) {
-    let n =
+function v(e) {
+    let t =
             arguments.length > 1 && void 0 !== arguments[1]
                 ? arguments[1]
                 : {
                       disableTrack: !1,
                       trackOnInitialLoad: !1
                   },
-        r = arguments.length > 2 ? arguments[2] : void 0,
-        a = i.useRef(),
+        n = arguments.length > 2 ? arguments[2] : void 0,
+        r = i.useRef(),
         s = i.useRef(),
-        u = () => {
-            let i = !o()(a.current, e);
-            i && (a.current = e);
-            let u = !o()(s.current, r);
-            if ((u && (s.current = r), !i && !u)) return;
-            let c = {
+        l = () => {
+            let i = !a()(r.current, e);
+            i && (r.current = e);
+            let l = !a()(s.current, n);
+            if ((l && (s.current = n), !i && !l)) return;
+            let u = {
                 ...e,
-                sequenceId: l()('impression_')
+                sequenceId: o()('impression_')
             };
             return (
-                v(c, n.disableTrack),
+                E(u, t.disableTrack),
                 () => {
-                    null != c && (0, g.dw)(c);
+                    null != u && (0, m.dw)(u);
                 }
             );
         };
-    (0, d.Z)(() => {
-        if (n.trackOnInitialLoad) return u();
+    (0, c.Z)(() => {
+        if (t.trackOnInitialLoad) return l();
     }),
         i.useEffect(() => {
-            if (!n.trackOnInitialLoad) return u();
+            if (!t.trackOnInitialLoad) return l();
         });
 }

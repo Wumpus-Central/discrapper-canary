@@ -1,26 +1,21 @@
-r.d(n, {
-    r: function () {
-        return y;
-    }
-});
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(120356),
-    l = r.n(s),
-    u = r(642128),
-    c = r(692547),
-    d = r(186325),
-    f = r(84735),
-    p = r(180035),
-    h = r(481060),
-    _ = r(540059),
-    m = r(348749);
-let g = {
+n.d(t, { r: () => E }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(642128),
+    l = n(692547),
+    u = n(186325),
+    c = n(84735),
+    d = n(180035),
+    f = n(481060),
+    _ = n(540059),
+    p = n(348749);
+let h = {
         mass: 1,
         tension: 250
     },
-    E = {
+    m = {
         X: {
             TOP: 'M5.13231 6.72963L6.7233 5.13864L14.855 13.2704L13.264 14.8614L5.13231 6.72963Z',
             BOTTOM: 'M13.2704 5.13864L14.8614 6.72963L6.72963 14.8614L5.13864 13.2704L13.2704 5.13864Z'
@@ -34,25 +29,25 @@ let g = {
             BOTTOM: 'M4.08643 11.0903L5.67742 9.49929L9.4485 13.2704L7.85751 14.8614L4.08643 11.0903Z'
         }
     };
-function v(e, n, r, i) {
-    let o = e.to({
-            output: [n, r]
+function g(e, t, n, r) {
+    let a = e.to({
+            output: [t, n]
         }),
-        s = i ? [E.X.TOP, E.X.TOP, E.CHECK.TOP, E.CHECK.TOP] : [E.X.TOP, E.BAR.TOP, E.BAR.TOP, E.CHECK.TOP],
-        l = i ? [E.X.BOTTOM, E.X.BOTTOM, E.CHECK.BOTTOM, E.CHECK.BOTTOM] : [E.X.BOTTOM, E.BAR.BOTTOM, E.BAR.BOTTOM, E.CHECK.BOTTOM];
-    return (0, a.jsxs)('svg', {
+        s = r ? [m.X.TOP, m.X.TOP, m.CHECK.TOP, m.CHECK.TOP] : [m.X.TOP, m.BAR.TOP, m.BAR.TOP, m.CHECK.TOP],
+        l = r ? [m.X.BOTTOM, m.X.BOTTOM, m.CHECK.BOTTOM, m.CHECK.BOTTOM] : [m.X.BOTTOM, m.BAR.BOTTOM, m.BAR.BOTTOM, m.CHECK.BOTTOM];
+    return (0, i.jsxs)('svg', {
         viewBox: '0 0 20 20',
         fill: 'none',
         children: [
-            (0, a.jsx)(u.animated.path, {
-                fill: o,
+            (0, i.jsx)(o.animated.path, {
+                fill: a,
                 d: e.to({
                     range: [0, 0.3, 0.7, 1],
                     output: s
                 })
             }),
-            (0, a.jsx)(u.animated.path, {
-                fill: o,
+            (0, i.jsx)(o.animated.path, {
+                fill: a,
                 d: e.to({
                     range: [0, 0.3, 0.7, 1],
                     output: l
@@ -61,99 +56,99 @@ function v(e, n, r, i) {
         ]
     });
 }
-let y = function e(e) {
-    let { id: n, onChange: r, checked: i, disabled: s, className: E, focusProps: y, innerRef: b } = e,
-        { reducedMotion: I } = o.useContext(d.S),
-        T = o.useRef(null),
-        [S, A] = o.useState(!1),
-        C = (0, _.Q3)('Switch'),
-        N = (0, p.d)(C ? c.Z.colors.INTERACTIVE_MUTED : c.Z.unsafe_rawColors.PRIMARY_400).spring(),
-        R = (0, p.d)(C ? c.Z.colors.REDESIGN_INPUT_CONTROL_SELECTED : c.Z.unsafe_rawColors.GREEN_360).spring(),
-        { state: O, opacity: D } = (0, h.useSpring)(
+let E = function (e) {
+    let { id: t, onChange: n, checked: a, disabled: m, className: E, focusProps: v, innerRef: y } = e,
+        { reducedMotion: I } = r.useContext(u.S),
+        b = r.useRef(null),
+        [T, S] = r.useState(!1),
+        A = (0, _.Q3)('Switch'),
+        N = (0, d.d)(A ? l.Z.colors.INTERACTIVE_MUTED : l.Z.unsafe_rawColors.PRIMARY_400).spring(),
+        C = (0, d.d)(A ? l.Z.colors.REDESIGN_INPUT_CONTROL_SELECTED : l.Z.unsafe_rawColors.GREEN_360).spring(),
+        { state: R, opacity: O } = (0, f.q_F)(
             {
-                config: g,
-                opacity: s ? (C ? 0.5 : 0.3) : 1,
-                state: S ? (i ? 0.7 : 0.3) : i ? 1 : 0
+                config: h,
+                opacity: m ? (A ? 0.5 : 0.3) : 1,
+                state: T ? (a ? 0.7 : 0.3) : a ? 1 : 0
             },
             'animate-always'
         );
-    function L(e) {
-        A(!1), null == r || r(e.currentTarget.checked, e);
+    function D(e) {
+        S(!1), null == n || n(e.currentTarget.checked, e);
     }
     function x(e) {
-        if (!s && !e.repeat) (' ' === e.key || 'Enter' === e.key) && A(!0);
+        !m && !e.repeat && (' ' === e.key || 'Enter' === e.key) && S(!0);
     }
-    function w(e) {
-        var n;
-        if (!s && !!S && !e.repeat) A(!1), 'Enter' === e.key && (null === (n = T.current) || void 0 === n || n.click());
+    function L(e) {
+        var t;
+        !m && T && !e.repeat && (S(!1), 'Enter' === e.key && (null === (t = b.current) || void 0 === t || t.click()));
     }
-    return (0, a.jsx)(f.t, {
-        ...y,
+    return (0, i.jsx)(c.t, {
+        ...v,
         within: !0,
         offset: -2,
-        children: (0, a.jsxs)(u.animated.div, {
-            className: l()(m.container, E, {
-                [m.checked]: i,
-                [m.disabled]: s
+        children: (0, i.jsxs)(o.animated.div, {
+            className: s()(p.container, E, {
+                [p.checked]: a,
+                [p.disabled]: m
             }),
-            onMouseDown: () => !s && A(!0),
-            onMouseUp: () => A(!1),
-            onMouseLeave: () => A(!1),
+            onMouseDown: () => !m && S(!0),
+            onMouseUp: () => S(!1),
+            onMouseLeave: () => S(!1),
             style: {
-                opacity: D,
-                backgroundColor: O.to({
-                    output: [N, R]
+                opacity: O,
+                backgroundColor: R.to({
+                    output: [N, C]
                 })
             },
             children: [
-                (0, a.jsxs)(u.animated.svg, {
-                    className: m.slider,
+                (0, i.jsxs)(o.animated.svg, {
+                    className: p.slider,
                     viewBox: '0 0 28 20',
                     preserveAspectRatio: 'xMinYMid meet',
                     style: {
-                        left: O.to({
+                        left: R.to({
                             range: [0, 0.3, 0.7, 1],
-                            output: [C ? -4 : -3, 1, 8, 12]
+                            output: [A ? -4 : -3, 1, 8, 12]
                         })
                     },
                     'aria-hidden': !0,
                     children: [
-                        (0, a.jsx)(u.animated.rect, {
+                        (0, i.jsx)(o.animated.rect, {
                             fill: 'white',
-                            x: O.to({
+                            x: R.to({
                                 range: [0, 0.3, 0.7, 1],
                                 output: [4, 0, 0, 4]
                             }),
-                            y: O.to({
+                            y: R.to({
                                 range: [0, 0.3, 0.7, 1],
                                 output: [0, 1, 1, 0]
                             }),
-                            height: O.to({
+                            height: R.to({
                                 range: [0, 0.3, 0.7, 1],
                                 output: [20, 18, 18, 20]
                             }),
-                            width: O.to({
+                            width: R.to({
                                 range: [0, 0.3, 0.7, 1],
                                 output: [20, 28, 28, 20]
                             }),
                             rx: '10'
                         }),
-                        v(O, N, R, I.enabled)
+                        g(R, N, C, I.enabled)
                     ]
                 }),
-                (0, a.jsx)('input', {
-                    id: n,
+                (0, i.jsx)('input', {
+                    id: t,
                     type: 'checkbox',
                     ref: (e) => {
-                        (T.current = e), null != b && (b.current = e);
+                        (b.current = e), null != y && (y.current = e);
                     },
-                    className: m.input,
-                    tabIndex: s ? -1 : 0,
+                    className: p.input,
+                    tabIndex: m ? -1 : 0,
                     onKeyDown: x,
-                    onKeyUp: w,
-                    onChange: L,
-                    checked: i,
-                    disabled: s
+                    onKeyUp: L,
+                    onChange: D,
+                    checked: a,
+                    disabled: m
                 })
             ]
         })

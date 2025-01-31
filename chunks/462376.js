@@ -1,27 +1,23 @@
 n.d(t, {
-    d: function () {
-        return E;
-    },
-    k: function () {
-        return C;
-    }
+    d: () => T,
+    k: () => E
 }),
     n(47120);
 var l = n(200651),
     i = n(192379),
     s = n(780384),
-    r = n(481060),
-    a = n(630810),
+    a = n(481060),
+    r = n(630810),
     o = n(43267),
     d = n(933557),
     u = n(210887),
     c = n(430824),
     h = n(751771),
     g = n(699516),
-    m = n(594174),
-    v = n(768581),
-    I = n(624138),
-    x = n(51144),
+    v = n(594174),
+    m = n(768581),
+    x = n(624138),
+    I = n(51144),
     p = n(388032),
     S = n(755527);
 function N(e, t, n) {
@@ -37,60 +33,60 @@ function N(e, t, n) {
         e
     );
 }
-let C = 44;
-class E extends i.Component {
+let E = 44;
+class T extends i.Component {
     shouldComponentUpdate(e, t) {
         return this.state.sending !== t.sending || this.state.invited !== t.invited || this.state.hovered !== t.hovered || this.props.user !== e.user || this.props.channel !== e.channel;
     }
     renderUserOrChannel() {
         let e, t, n;
         let { user: i, channel: s } = this.props;
-        if (null != i) (t = i.getAvatarURL(null == s ? void 0 : s.guild_id, 32)), (n = x.ZP.getName(i));
-        else if (null != s && ((t = (0, o.x)(s)), (n = (0, d.F6)(s, m.default, g.Z)), null == t && null != s.guild_id)) {
+        if (null != i) (t = i.getAvatarURL(null == s ? void 0 : s.guild_id, 32)), (n = I.ZP.getName(i));
+        else if (null != s && ((t = (0, o.x)(s)), (n = (0, d.F6)(s, v.default, g.Z)), null == t && null != s.guild_id)) {
             let n = c.Z.getGuild(s.guild_id);
             null != n &&
                 (null != n.icon
-                    ? (t = v.ZP.getGuildIconURL({
+                    ? (t = m.ZP.getGuildIconURL({
                           id: s.guild_id,
                           icon: n.icon,
                           size: 32
                       }))
-                    : (e = (0, I.Zg)(n.name)));
+                    : (e = (0, x.Zg)(n.name)));
         }
-        if (null == t || null == n)
-            return null != e
-                ? (0, l.jsx)(r.Text, {
+        return null == t || null == n
+            ? null != e
+                ? (0, l.jsx)(a.Text, {
                       variant: 'text-md/medium',
                       className: S.acronym,
                       'aria-hidden': !0,
                       children: e
                   })
-                : null;
-        return (0, l.jsx)(r.Avatar, {
-            src: t,
-            'aria-label': n,
-            size: r.AvatarSizes.SIZE_32,
-            className: S.inviteRowAvatar
-        });
+                : null
+            : (0, l.jsx)(a.qEK, {
+                  src: t,
+                  'aria-label': n,
+                  size: a.EFr.SIZE_32,
+                  className: S.inviteRowAvatar
+              });
     }
     render() {
         let e;
         let { user: t, channel: n } = this.props,
-            { sending: i, invited: a, hovered: o } = this.state;
+            { sending: i, invited: r, hovered: o } = this.state;
         return (
-            (e = a
-                ? (0, l.jsx)(r.Button, {
-                      look: r.Button.Looks.LINK,
-                      size: r.Button.Sizes.SMALL,
+            (e = r
+                ? (0, l.jsx)(a.zxk, {
+                      look: a.zxk.Looks.LINK,
+                      size: a.zxk.Sizes.SMALL,
                       disabled: !0,
-                      color: (0, s.wj)(u.Z.theme) ? r.Button.Colors.WHITE : r.Button.Colors.BRAND,
+                      color: (0, s.wj)(u.Z.theme) ? a.zxk.Colors.WHITE : a.zxk.Colors.BRAND,
                       children: p.intl.string(p.t['dVT14+'])
                   })
-                : (0, l.jsx)(r.Button, {
-                      color: r.Button.Colors.GREEN,
-                      look: o ? r.Button.Looks.FILLED : r.Button.Looks.OUTLINED,
+                : (0, l.jsx)(a.zxk, {
+                      color: a.zxk.Colors.GREEN,
+                      look: o ? a.zxk.Looks.FILLED : a.zxk.Looks.OUTLINED,
                       className: S.inviteRowButton,
-                      size: r.Button.Sizes.SMALL,
+                      size: a.zxk.Sizes.SMALL,
                       submitting: i,
                       onClick: this.handleClickInvite,
                       children: p.intl.string(p.t.jYnGPD)
@@ -106,7 +102,7 @@ class E extends i.Component {
                             this.renderUserOrChannel(),
                             (0, l.jsxs)('div', {
                                 className: S.inviteRowName,
-                                children: [x.ZP.getName(t), null != n ? (0, d.F6)(n, m.default, g.Z, !0) : null]
+                                children: [I.ZP.getName(t), null != n ? (0, d.F6)(n, v.default, g.Z, !0) : null]
                             })
                         ]
                     }),
@@ -135,12 +131,12 @@ class E extends i.Component {
             }),
             N(this, 'handleClickInvite', () => {
                 let { user: e, channel: t, inviteKey: n, location: l } = this.props;
-                if (null != n)
-                    null != t
+                null != n &&
+                    (null != t
                         ? (this.setState({ sending: !0 }),
-                          a.Z.enqueue(
+                          r.Z.enqueue(
                               {
-                                  type: a.m.GROUP_DM,
+                                  type: r.m.GROUP_DM,
                                   channel: t,
                                   inviteKey: n,
                                   location: l,
@@ -155,9 +151,9 @@ class E extends i.Component {
                           ))
                         : null != e &&
                           (this.setState({ sending: !0 }),
-                          a.Z.enqueue(
+                          r.Z.enqueue(
                               {
-                                  type: a.m.USER,
+                                  type: r.m.USER,
                                   user: e,
                                   inviteKey: n,
                                   location: l,
@@ -169,7 +165,7 @@ class E extends i.Component {
                                       invited: e
                                   });
                               }
-                          ));
+                          )));
             });
     }
 }

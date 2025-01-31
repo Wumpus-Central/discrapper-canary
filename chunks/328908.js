@@ -1,85 +1,69 @@
-r.d(n, {
-    Hb: function () {
-        return c;
-    },
-    Hi: function () {
-        return p;
-    },
-    LN: function () {
-        return f;
-    },
-    Qj: function () {
-        return y;
-    },
-    Qy: function () {
-        return E;
-    },
-    Rg: function () {
-        return d;
-    },
-    b7: function () {
-        return b;
-    },
-    q5: function () {
-        return _;
-    },
-    t0: function () {
-        return v;
-    },
-    z8: function () {
-        return h;
-    }
+n.d(t, {
+    GA: () => c,
+    Hb: () => l,
+    Hi: () => f,
+    LN: () => d,
+    Ne: () => o,
+    OG: () => y,
+    Qj: () => v,
+    Qy: () => g,
+    Rg: () => u,
+    b7: () => I,
+    q5: () => p,
+    t0: () => E,
+    z8: () => _
 });
-var i,
-    a = r(15729),
-    o = r(731965);
-!(function (e) {
-    (e[(e.SelectingEmoji = 0)] = 'SelectingEmoji'), (e[(e.EmojiSelected = 1)] = 'EmojiSelected');
-})(i || (i = {}));
-let s = Object.freeze({
+var i = n(15729),
+    r = n(731965);
+let a = Object.freeze({
         messageSendConfetti: {},
         messageReactionConfetti: void 0
     }),
-    l = (0, a.U)(() => s),
-    u = (e) => {
-        (0, o.j)(() => {
-            l.setState((n) => {
-                let { messageSendConfetti: r } = n;
+    s = (0, i.U)(() => a),
+    o = (e) => {
+        (0, r.j)(() => {
+            s.setState((t) => {
+                let { messageSendConfetti: n } = t;
                 return {
                     messageSendConfetti: {
-                        ...r,
+                        ...n,
                         [e]: {
                             state: 0,
-                            emoji: void 0
+                            emoji: void 0,
+                            hasAutoPopped: !1
                         }
                     }
                 };
             });
         });
     },
-    c = (e) => {
-        (0, o.j)(() => {
-            l.setState((n) => {
-                let { messageSendConfetti: r } = n,
-                    i = { ...r };
+    l = (e) => {
+        (0, r.j)(() => {
+            s.setState((t) => {
+                let { messageSendConfetti: n } = t,
+                    i = { ...n };
                 return delete i[e], { messageSendConfetti: i };
             });
         });
     },
-    d = (e) => {
-        null != l.getState().messageSendConfetti[e] ? c(e) : u(e);
+    u = (e) => {
+        null != s.getState().messageSendConfetti[e] ? l(e) : o(e);
+    },
+    c = (e) => {
+        let t = s.getState();
+        null != t.messageSendConfetti[e] && 0 === t.messageSendConfetti[e].state && (t.messageSendConfetti[e].hasAutoPopped = !0);
     };
-function f(e) {
-    return l((n) => null != n.messageSendConfetti[e]);
+function d(e) {
+    return s((t) => null != t.messageSendConfetti[e]);
 }
-function p(e, n) {
-    return (0, o.j)(() => {
-        l.setState((r) => {
-            let { messageSendConfetti: i } = r;
+function f(e, t) {
+    return (0, r.j)(() => {
+        s.setState((n) => {
+            let { messageSendConfetti: i } = n;
             return {
                 messageSendConfetti: {
                     ...i,
-                    [n]: {
+                    [t]: {
                         state: 1,
                         emoji: e
                     }
@@ -88,41 +72,47 @@ function p(e, n) {
         });
     });
 }
-function h(e) {
-    return l((n) => {
-        var r;
-        return null === (r = n.messageSendConfetti[e]) || void 0 === r ? void 0 : r.emoji;
+function _(e) {
+    return s((t) => {
+        var n;
+        return null === (n = t.messageSendConfetti[e]) || void 0 === n ? void 0 : n.emoji;
     });
 }
-function _(e) {
-    var n;
-    return null === (n = l.getState().messageSendConfetti[e]) || void 0 === n ? void 0 : n.emoji;
+function p(e) {
+    var t;
+    return null === (t = s.getState().messageSendConfetti[e]) || void 0 === t ? void 0 : t.emoji;
+}
+function h(e) {
+    return null != s.getState().messageSendConfetti[e];
 }
 function m(e) {
-    return null != l.getState().messageSendConfetti[e];
-}
-function g(e) {
-    return (0, o.j)(() => {
-        l.setState(() => ({ messageReactionConfetti: e }));
+    return (0, r.j)(() => {
+        s.setState(() => ({ messageReactionConfetti: e }));
     });
 }
-function E() {
-    return (0, o.j)(() => {
-        l.setState(() => ({ messageReactionConfetti: void 0 }));
+function g() {
+    return (0, r.j)(() => {
+        s.setState(() => ({ messageReactionConfetti: void 0 }));
     });
 }
-function v(e, n, r) {
-    r ? g(e) : p(e, n);
+function E(e, t, n) {
+    n ? m(e) : f(e, t);
 }
-function y(e, n) {
-    return l((r) => {
+function v(e, t) {
+    return s((n) => {
         var i;
-        return n ? r.messageReactionConfetti : null === (i = r.messageSendConfetti[e]) || void 0 === i ? void 0 : i.emoji;
+        return t ? n.messageReactionConfetti : null === (i = n.messageSendConfetti[e]) || void 0 === i ? void 0 : i.emoji;
     });
 }
-function b(e, n, r) {
-    if (n) return !1;
-    let i = m(e),
-        a = _(e);
-    return i && (0 === r || null == a);
+function y(e) {
+    return s((t) => {
+        let n = t.messageSendConfetti[e];
+        if ((null == n ? void 0 : n.state) === 0) return n.hasAutoPopped;
+    });
+}
+function I(e, t, n) {
+    if (t) return !1;
+    let i = h(e),
+        r = p(e);
+    return i && (0 === n || null == r);
 }

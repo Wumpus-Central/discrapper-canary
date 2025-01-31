@@ -1,57 +1,52 @@
-r.d(n, {
-    Z: function () {
-        return I;
-    }
-});
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(120356),
-    l = r.n(s),
-    u = r(392711),
-    c = r.n(u),
-    d = r(481060),
-    f = r(583901),
-    p = r(997945),
-    h = r(630117),
-    _ = r(441319),
-    m = r(981631),
-    g = r(388032),
-    E = r(138363);
-let v = () => [g.intl.string(g.t.EgWTY2), g.intl.string(g.t.umBn5e), g.intl.string(g.t.dG1wDw), g.intl.string(g.t.SesI4e), g.intl.string(g.t.RnMLvr)],
-    y = () => {
+n.d(t, { Z: () => y }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(392711),
+    l = n.n(o),
+    u = n(481060),
+    c = n(583901),
+    d = n(997945),
+    f = n(630117),
+    _ = n(441319),
+    p = n(981631),
+    h = n(388032),
+    m = n(138363);
+let g = () => [h.intl.string(h.t.EgWTY2), h.intl.string(h.t.umBn5e), h.intl.string(h.t.dG1wDw), h.intl.string(h.t.SesI4e), h.intl.string(h.t.RnMLvr)],
+    E = () => {
         var e;
-        return null !== (e = c().sample(v())) && void 0 !== e ? e : g.intl.string(g.t.EgWTY2);
+        return null !== (e = l().sample(g())) && void 0 !== e ? e : h.intl.string(h.t.EgWTY2);
     };
-function b(e) {
-    let { id: n, className: r, onSelect: i, isSelected: s = !1, tabIndex: u, children: c, locked: h = !1 } = e,
-        [g, v] = o.useState((0, _.aW)(n).name),
-        b = n === p.Ru.PIRATE,
-        I = (0, d.useRadioItem)({
+function v(e) {
+    let { id: t, className: n, onSelect: a, isSelected: o = !1, tabIndex: l, children: f, locked: h = !1 } = e,
+        [g, v] = r.useState((0, _.aW)(t).name),
+        y = t === d.Ru.PIRATE,
+        I = (0, u.xUy)({
             label: g,
-            isSelected: s
+            isSelected: o
         });
-    return (0, a.jsx)(d.Tooltip, {
+    return (0, i.jsx)(u.ua7, {
         text: g,
-        onTooltipShow: () => b && v(y()),
+        onTooltipShow: () => y && v(E()),
         children: (e) =>
-            (0, a.jsxs)('div', {
-                className: E.appIconSelectionContainer,
+            (0, i.jsxs)('div', {
+                className: m.appIconSelectionContainer,
                 children: [
-                    (0, a.jsx)(d.Clickable, {
+                    (0, i.jsx)(u.P3F, {
                         ...e,
                         ...I,
-                        tabIndex: null != u ? u : I.tabIndex,
-                        className: l()(E.appIconSelection, { [E.selected]: s }, r),
-                        onClick: s ? m.dG4 : () => (null == i ? void 0 : i(n)),
-                        children: c
+                        tabIndex: null != l ? l : I.tabIndex,
+                        className: s()(m.appIconSelection, { [m.selected]: o }, n),
+                        onClick: o ? p.dG4 : () => (null == a ? void 0 : a(t)),
+                        children: f
                     }),
-                    s && (0, a.jsx)(f.oK, {}),
+                    o && (0, i.jsx)(c.oK, {}),
                     h &&
-                        (0, a.jsx)('div', {
-                            className: E.lockedBadgeContainer,
-                            children: (0, a.jsx)(d.LockIcon, {
-                                className: E.lockedBadge,
+                        (0, i.jsx)('div', {
+                            className: m.lockedBadgeContainer,
+                            children: (0, i.jsx)(u.mBM, {
+                                className: m.lockedBadge,
                                 color: 'currentColor'
                             })
                         })
@@ -59,17 +54,17 @@ function b(e) {
             })
     });
 }
-function I(e) {
-    let { icon: n, isSelected: r, disabled: i, tabIndex: o, onSelect: s, locked: l } = e;
-    return (0, a.jsx)(b, {
-        onSelect: i ? void 0 : s,
-        isSelected: r,
-        id: n.id,
-        className: i ? E.disabled : void 0,
-        tabIndex: o,
-        locked: l,
-        children: (0, a.jsx)(h.Z, {
-            id: n.id,
+function y(e) {
+    let { icon: t, isSelected: n, disabled: r, tabIndex: a, onSelect: s, locked: o } = e;
+    return (0, i.jsx)(v, {
+        onSelect: r ? void 0 : s,
+        isSelected: n,
+        id: t.id,
+        className: r ? m.disabled : void 0,
+        tabIndex: a,
+        locked: o,
+        children: (0, i.jsx)(f.Z, {
+            id: t.id,
             width: _.M9
         })
     });

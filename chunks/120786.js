@@ -1,41 +1,40 @@
-n.d(t, {
-    L: function () {
-        return c;
-    }
-});
+n.d(t, { L: () => m });
 var i = n(200651);
 n(192379);
-var r = n(568611),
-    s = n(693789),
-    a = n(842055);
-let l = () => (0, i.jsx)('hr', { className: a.sectionDivider }),
-    o = () =>
+var s = n(120356),
+    r = n.n(s),
+    l = n(568611),
+    a = n(693789),
+    o = n(965789),
+    c = n(842055),
+    d = n(588245);
+let u = () =>
         (0, i.jsx)('div', {
-            className: a.gifContainer,
+            className: c.gifContainer,
             children: (0, i.jsx)('img', {
-                src: n(37219),
-                className: a.gif,
+                src: o.r,
+                className: c.gif,
                 alt: 'Orb GIF'
             })
         }),
-    c = (e) => {
-        let { ctaText: t, ctaOnClick: n, linkText: c, linkTo: d } = e;
+    m = (e) => {
+        let { ctaText: t, ctaOnClick: n, linkText: s, linkTo: o } = e;
         return (0, i.jsxs)('div', {
-            className: a.container,
+            className: r()(c.container, d.baseCardOutline),
             children: [
-                (0, i.jsx)(o, {}),
-                (0, i.jsx)(s.zx, {
-                    color: s.zx.Colors.BRAND,
-                    look: s.zx.Looks.FILLED,
+                (0, i.jsx)(u, {}),
+                (0, i.jsx)(a.zx, {
+                    className: c.ctaButton,
+                    color: a.zx.Colors.BRAND,
+                    look: a.zx.Looks.FILLED,
                     onClick: n,
                     fullWidth: !0,
                     children: t
                 }),
-                (0, i.jsx)(l, {}),
-                (0, i.jsx)(r.rU, {
-                    to: { pathname: d },
-                    className: a.learnMoreLink,
-                    children: c
+                (0, i.jsx)(l.rU, {
+                    to: { pathname: o },
+                    className: c.learnMoreLink,
+                    children: s
                 })
             ]
         });

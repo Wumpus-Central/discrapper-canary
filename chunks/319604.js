@@ -1,13 +1,7 @@
 n.d(t, {
-    CR: function () {
-        return h;
-    },
-    UU: function () {
-        return m;
-    },
-    jE: function () {
-        return d;
-    }
+    CR: () => h,
+    UU: () => m,
+    jE: () => u
 }),
     n(627494),
     n(757143);
@@ -17,13 +11,13 @@ var l = n(884439),
     r = n(690725),
     o = n(561308),
     s = n(737583),
-    u = n(169040),
-    c = n(388032);
-let d = (e) => {
+    c = n(169040),
+    d = n(388032);
+let u = (e) => {
         let { timestamp: t } = e;
         return [
             {
-                iconPath: u.mb,
+                iconPath: c.mb,
                 text: t
             }
         ];
@@ -35,8 +29,8 @@ let d = (e) => {
             ? []
             : [
                   {
-                      iconPath: u.eF,
-                      text: c.intl.formatToPlainString(c.t.HtifnJ, { count: n })
+                      iconPath: c.eF,
+                      text: d.intl.formatToPlainString(d.t.HtifnJ, { count: n })
                   }
               ];
     },
@@ -48,7 +42,7 @@ let d = (e) => {
         };
     },
     h = async (e) => {
-        let { user: t, channel: n, mediaImageSrc: l, artist: o, description: c, colors: d, badges: m } = e,
+        let { user: t, channel: n, mediaImageSrc: l, artist: o, description: d, colors: u, badges: m } = e,
             h = x({
                 avatarSrc: t.getAvatarURL(n.guild_id, 128),
                 mediaImageSrc: l
@@ -57,6 +51,7 @@ let d = (e) => {
         return await (0, r.f)({
             assetsToLoad: h,
             drawImage: (e) => {
+                var t, n, l;
                 (function (e, t) {
                     let n = t.map((e, t) => ({
                         color: e,
@@ -64,8 +59,8 @@ let d = (e) => {
                     }));
                     e.setSize(
                         {
-                            w: u.nx,
-                            h: u.bg
+                            w: c.nx,
+                            h: c.bg
                         },
                         4
                     ),
@@ -73,83 +68,81 @@ let d = (e) => {
                             n,
                             {
                                 x: 0,
-                                y: u.bg
+                                y: c.bg
                             },
                             {
-                                x: u.nx,
+                                x: c.nx,
                                 y: 0
                             },
                             {
                                 x: 0,
                                 y: 0,
-                                h: u.bg,
-                                w: u.nx
+                                h: c.bg,
+                                w: c.nx
                             },
                             8
                         );
-                })(e, d),
-                    (function (e) {
-                        e.drawRoundedImage(
-                            'MediaImage',
+                })(e, u),
+                    (t = e).drawRoundedImage(
+                        'MediaImage',
+                        {
+                            x: c.sB,
+                            y: c.sB
+                        },
+                        {
+                            w: c.Pu,
+                            h: c.Pu
+                        },
+                        8,
+                        { fillMode: i.JU.Contain }
+                    ) === i.vP.Failure &&
+                        t.drawPath(
+                            a.Cv,
                             {
-                                x: u.sB,
-                                y: u.sB
+                                x: c.sB,
+                                y: c.sB
                             },
-                            {
-                                w: u.Pu,
-                                h: u.Pu
-                            },
-                            8,
-                            { fillMode: i.JU.Contain }
-                        ) === i.vP.Failure &&
-                            e.drawPath(
-                                a.Cv,
-                                {
-                                    x: u.sB,
-                                    y: u.sB
-                                },
-                                !0,
-                                2 + 2 / 3
-                            );
-                    })(e),
+                            !0,
+                            2 + 2 / 3
+                        ),
                     (function (e) {
                         e.drawRoundedImage(
                             'AvatarImage',
                             {
-                                x: u.Iq,
-                                y: u.sB
+                                x: c.Iq,
+                                y: c.sB
                             },
                             {
-                                w: u.$S,
-                                h: u.$S
+                                w: c.$S,
+                                h: c.$S
                             },
                             50
                         );
                     })(e),
-                    (function (e, t) {
-                        e.setColor('white'),
-                            e.setFont({
-                                size: 16,
-                                family: u.I8,
-                                weight: u.Ue,
-                                truncate: i.GX.Wrap
-                            }),
-                            e.drawText(
-                                t,
-                                {
-                                    x: u.Iq,
-                                    y: 64,
-                                    h: 32,
-                                    w: u.kC
-                                },
-                                !0
-                            );
-                    })(e, c),
+                    (n = e),
+                    (l = d),
+                    n.setColor('white'),
+                    n.setFont({
+                        size: 16,
+                        family: c.I8,
+                        weight: c.Ue,
+                        truncate: i.GX.Wrap
+                    }),
+                    n.drawText(
+                        l,
+                        {
+                            x: c.Iq,
+                            y: 64,
+                            h: 32,
+                            w: c.kC
+                        },
+                        !0
+                    ),
                     (0, s.J)({
                         canvas: e,
                         badges: m,
-                        startPosition: u.Iq,
-                        maxWidth: u.kC
+                        startPosition: c.Iq,
+                        maxWidth: c.kC
                     });
             },
             exportConfigs: {

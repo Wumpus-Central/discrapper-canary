@@ -1,94 +1,96 @@
-n.r(t), n(47120);
+n.r(t), n.d(t, { default: () => N }), n(47120);
 var a = n(200651),
     r = n(192379),
     o = n(593473),
-    i = n(702493),
-    l = n(77987),
+    i = n(512969),
+    l = n(702493),
+    s = n(77987),
     c = n(133853),
-    s = n(703656),
-    d = n(643366),
-    u = n(94628),
-    f = n(659154),
-    h = n(581690),
+    d = n(703656),
+    u = n(643366),
+    f = n(94628),
+    h = n(659154),
+    x = n(581690),
     p = n(902928),
-    x = n(521937),
+    _ = n(521937),
     C = n(981631),
     v = n(881579);
 let m = n(575703);
-t.default = (0, l.e)(function () {
+function g() {
     let e;
-    let [t, n] = r.useState(() => {
-        if (window.location.pathname.endsWith(C.Z5c.ACTIVATE_HANDOFF)) {
-            let { user_code: e } = o.parse(window.location.search);
+    let t = (0, i.TH)(),
+        [n, s] = r.useState(() => {
+            if (t.pathname === C.Z5c.ACTIVATE_HANDOFF) {
+                let { user_code: e } = o.parse(window.location.search);
+                return {
+                    type: 'handoff',
+                    code: e
+                };
+            }
             return {
-                type: 'handoff',
-                code: e
+                type: 'user-code-input',
+                usePrefilledCode: !0
             };
-        }
-        return {
-            type: 'user-code-input',
-            usePrefilledCode: !0
-        };
-    });
-    (0, i.Z)(), (0, d.Y)(t);
-    let l = r.useCallback(() => {
-            n({ type: 'user-code-input' });
-        }, [n]),
-        g = r.useCallback(
+        });
+    (0, l.Z)(), (0, u.Y)(n);
+    let g = r.useCallback(() => {
+            s({ type: 'user-code-input' });
+        }, [s]),
+        b = r.useCallback(
             (e) => {
-                n({
+                s({
                     type: 'authorization',
                     userCodeData: e
                 });
             },
-            [n]
+            [s]
         ),
-        _ = r.useCallback(
+        N = r.useCallback(
             (e) => {
-                n({
+                s({
                     type: 'success',
                     userCodeData: e
                 });
             },
-            [n]
+            [s]
         ),
-        b = r.useCallback(
+        j = r.useCallback(
             (e) => {
-                n({
+                s({
                     type: 'error',
                     userCodeData: e
                 });
             },
-            [n]
+            [s]
         ),
-        N = !0;
-    switch (t.type) {
+        y = !0;
+    switch (n.type) {
         case 'handoff':
-            (e = (0, a.jsx)(h.c, { code: t.code })), (N = !1);
+            (e = (0, a.jsx)(x.c, { code: n.code })), (y = !1);
             break;
         case 'user-code-input':
-            e = (0, a.jsx)(x.v, {
-                usePrefilledCode: t.usePrefilledCode || !1,
-                onUserCodeAccepted: g
+            e = (0, a.jsx)(_.v, {
+                usePrefilledCode: n.usePrefilledCode || !1,
+                onUserCodeAccepted: b
             });
             break;
         case 'authorization':
-            (e = (0, a.jsx)(u.B, {
-                data: t.userCodeData,
-                onDenied: l,
-                onError: b,
-                onSuccess: _
+            (e = (0, a.jsx)(f.B, {
+                data: n.userCodeData,
+                onDenied: g,
+                onError: j,
+                onSuccess: N
             })),
-                (N = !1);
+                (y = !1);
             break;
         case 'success':
             e = (0, a.jsx)(p.u, {
-                onComplete: () => (0, s.uL)(C.Z5c.ME),
-                data: t.userCodeData
+                onComplete: () => (0, d.uL)(C.Z5c.ME),
+                data: n.userCodeData
             });
             break;
         case 'error':
-            e = (0, a.jsx)(f.c, { onTryAgain: l });
+            e = (0, a.jsx)(h.c, { onTryAgain: g });
             break;
         default:
             e = null;
@@ -105,7 +107,7 @@ t.default = (0, l.e)(function () {
                 show: !0,
                 className: v.logo
             }),
-            N
+            y
                 ? (0, a.jsx)('div', {
                       className: v.content,
                       children: e
@@ -113,4 +115,8 @@ t.default = (0, l.e)(function () {
                 : e
         ]
     });
-});
+}
+let b = (0, s.e)(g),
+    N = function () {
+        return (0, i.TH)().pathname !== C.Z5c.ACTIVATE_HANDOFF ? (0, a.jsx)(b, {}) : (0, a.jsx)(g, {});
+    };

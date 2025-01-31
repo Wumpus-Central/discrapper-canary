@@ -1,5 +1,6 @@
-var i = r(570140);
-n.Z = {
+n.d(t, { Z: () => r });
+var i = n(570140);
+let r = {
     clearVADWarning() {
         i.Z.dispatch({ type: 'PERMISSION_CLEAR_VAD_WARNING' });
     },

@@ -1,24 +1,20 @@
-n.d(t, {
-    Z: function () {
-        return x;
-    }
-});
-var l = n(200651),
-    o = n(192379),
-    i = n(498607),
-    a = n.n(i),
-    r = n(399606),
-    s = n(481060),
-    c = n(588215),
-    C = n(893966),
-    d = n(527379),
-    u = n(981631),
-    m = n(388032);
+l.d(t, { Z: () => x });
+var n = l(200651),
+    a = l(192379),
+    i = l(498607),
+    o = l.n(i),
+    s = l(399606),
+    r = l(481060),
+    c = l(588215),
+    C = l(893966),
+    d = l(527379),
+    u = l(981631),
+    m = l(388032);
 let h = [c.d$.ORDER_BY_GUILD_JOINED_AT_DESC, c.d$.ORDER_BY_GUILD_JOINED_AT_ASC, c.d$.ORDER_BY_USER_ID_DESC, c.d$.ORDER_BY_USER_ID_ASC];
 function x(e) {
-    let { guildId: t, onClose: n } = e,
-        i = (0, r.e7)([C.Z], () => C.Z.getSearchStateByGuildId(t), [t], a()),
-        x = o.useCallback(
+    let { guildId: t, onClose: l } = e,
+        i = (0, s.e7)([C.Z], () => C.Z.getSearchStateByGuildId(t), [t], o()),
+        x = a.useCallback(
             (e) => {
                 (0, d.Dr)(t, {
                     ...i,
@@ -27,18 +23,18 @@ function x(e) {
             },
             [t, i]
         );
-    return (0, l.jsx)(s.Menu, {
+    return (0, n.jsx)(r.v2r, {
         navId: 'members-table-sort-menu',
         onClose: () => {
-            null == n || n();
+            null == l || l();
         },
         'aria-label': m.intl.string(m.t['u/7RdX']),
         onSelect: u.dG4,
-        children: (0, l.jsx)(s.MenuGroup, {
+        children: (0, n.jsx)(r.kSQ, {
             children: h.map((e) => {
-                var t, n;
-                return (0, l.jsx)(
-                    s.MenuRadioItem,
+                var t;
+                return (0, n.jsx)(
+                    r.k5B,
                     {
                         id: 'members-table-sort-'.concat(e),
                         label: (function (e) {
@@ -55,7 +51,7 @@ function x(e) {
                                     return null;
                             }
                         })(e),
-                        checked: ((t = e), (n = i.selectedSort) === c.d$.ORDER_BY_UNSPECIFIED || null == n ? t === c.d$.ORDER_BY_GUILD_JOINED_AT_DESC : t === n),
+                        checked: (t = i.selectedSort) === c.d$.ORDER_BY_UNSPECIFIED || null == t ? e === c.d$.ORDER_BY_GUILD_JOINED_AT_DESC : e === t,
                         disabled: !1,
                         action: () => x(e),
                         group: 'members-table-sort'

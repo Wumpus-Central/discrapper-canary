@@ -1,10 +1,6 @@
-r.d(n, {
-    Z: function () {
-        return a;
-    }
-});
-var i = r(989573);
-function a(e) {
-    let { context: n } = e;
-    return (0, i.Z)({ context: n });
+n.d(t, { Z: () => r });
+var i = n(989573);
+function r(e) {
+    let { context: t } = e;
+    return (0, i.Z)({ context: t });
 }

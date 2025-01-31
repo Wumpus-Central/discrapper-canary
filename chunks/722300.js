@@ -1,66 +1,62 @@
-t.d(n, {
-    Z: function () {
-        return h;
-    }
-});
-var i = t(200651);
-t(192379);
-var l = t(692547),
-    r = t(481060),
-    a = t(410030),
-    s = t(686546),
-    c = t(60034),
-    o = t(686369),
-    u = t(388032),
-    d = t(950039);
-function h(e) {
-    let { name: n, onRetry: t } = e,
-        h = (0, a.ZP)(),
-        m = (0, r.useToken)(l.Z.colors.BG_BASE_TERTIARY),
-        f = (0, o.d)(h, m.hex()),
-        x = null != n ? n : u.intl.string(u.t.DmIUGB);
+n.d(l, { Z: () => m });
+var i = n(200651);
+n(192379);
+var t = n(692547),
+    a = n(481060),
+    s = n(410030),
+    r = n(686546),
+    c = n(60034),
+    d = n(686369),
+    o = n(388032),
+    u = n(950039);
+function m(e) {
+    let { name: l, onRetry: n } = e,
+        m = (0, s.ZP)(),
+        h = (0, a.dQu)(t.Z.colors.BG_BASE_TERTIARY),
+        x = (0, d.d)(m, h.hex()),
+        j = null != l ? l : o.intl.string(o.t.DmIUGB);
     return (0, i.jsxs)('div', {
-        className: d.container,
+        className: u.container,
         children: [
             (0, i.jsx)('div', {
-                className: d.banner,
-                style: { background: f }
+                className: u.banner,
+                style: { background: x }
             }),
             (0, i.jsx)('div', {
-                className: d.avatarContainer,
-                children: (0, i.jsx)(s.ZP, {
-                    mask: s.QS.CLAN_ICON,
+                className: u.avatarContainer,
+                children: (0, i.jsx)(r.ZP, {
+                    mask: r.QS.CLAN_ICON,
                     width: 70,
                     height: 70,
                     children: (0, i.jsx)('div', {
-                        className: d.avatarWrapper,
+                        className: u.avatarWrapper,
                         children: (0, i.jsx)(c.R, {
-                            guildName: x,
+                            guildName: j,
                             iconSize: 64
                         })
                     })
                 })
             }),
             (0, i.jsxs)('div', {
-                className: d.header,
+                className: u.header,
                 children: [
-                    (0, i.jsx)(r.Heading, {
+                    (0, i.jsx)(a.X6q, {
                         variant: 'heading-lg/medium',
                         color: 'header-primary',
-                        children: x
+                        children: j
                     }),
-                    (0, i.jsxs)(r.Clickable, {
-                        className: d.error,
-                        onClick: t,
+                    (0, i.jsxs)(a.P3F, {
+                        className: u.error,
+                        onClick: n,
                         children: [
-                            (0, i.jsx)(r.CircleWarningIcon, {
+                            (0, i.jsx)(a.P4T, {
                                 size: 'sm',
                                 color: 'currentColor'
                             }),
-                            (0, i.jsx)(r.Text, {
+                            (0, i.jsx)(a.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-warning',
-                                children: u.intl.string(u.t.tmGHjY)
+                                children: o.intl.string(o.t.tmGHjY)
                             })
                         ]
                     })

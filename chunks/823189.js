@@ -38,12 +38,4 @@ function a(e) {
     }
     return e;
 }
-n.r(t),
-    n.d(t, {
-        polyfill: function () {
-            return a;
-        }
-    }),
-    (o.__suppressDeprecationWarning = !0),
-    (r.__suppressDeprecationWarning = !0),
-    (i.__suppressDeprecationWarning = !0);
+n.r(t), n.d(t, { polyfill: () => a }), (o.__suppressDeprecationWarning = !0), (r.__suppressDeprecationWarning = !0), (i.__suppressDeprecationWarning = !0);

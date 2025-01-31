@@ -1,53 +1,49 @@
-r.d(n, {
-    Z: function () {
-        return c;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(481060),
-    l = r(388032),
-    u = r(990999);
-function c(e) {
-    let { className: n, src: r, unicodeEmoji: a, name: c, size: d = 20, enableTooltip: f = !0, enableHeight: p = !0, onClick: h } = e;
-    if (null == r && null == a) return null;
-    let _ = () => {
+n.d(t, { Z: () => u });
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(481060),
+    o = n(388032),
+    l = n(990999);
+function u(e) {
+    let { className: t, src: n, unicodeEmoji: r, name: u, size: c = 20, enableTooltip: d = !0, enableHeight: f = !0, onClick: _ } = e;
+    if (null == n && null == r) return null;
+    let p = () => {
         let e = (0, i.jsx)('img', {
             alt: '',
-            'aria-label': l.intl.formatToPlainString(l.t['9+YWrK'], { name: c }),
-            className: o()(u.roleIcon, n, { [u.clickable]: null != h }),
-            height: p ? d : void 0,
-            src: r,
-            width: d
+            'aria-label': o.intl.formatToPlainString(o.t['9+YWrK'], { name: u }),
+            className: a()(l.roleIcon, t, { [l.clickable]: null != _ }),
+            height: f ? c : void 0,
+            src: n,
+            width: c
         });
-        return (null != a &&
+        return (null != r &&
             (e = (0, i.jsx)('img', {
                 alt: '',
-                'aria-label': a.allNamesString,
-                className: o()(u.roleIcon, n, { [u.clickable]: null != h }),
-                height: p ? d : void 0,
-                src: a.url,
-                width: d
+                'aria-label': r.allNamesString,
+                className: a()(l.roleIcon, t, { [l.clickable]: null != _ }),
+                height: f ? c : void 0,
+                src: r.url,
+                width: c
             })),
-        null == h)
-            ? (0, i.jsx)(s.FocusRing, {
+        null == _)
+            ? (0, i.jsx)(s.tEY, {
                   offset: { left: 5 },
                   children: e
               })
-            : (0, i.jsx)(s.Clickable, {
-                  onClick: h,
+            : (0, i.jsx)(s.P3F, {
+                  onClick: _,
                   tag: 'span',
                   focusProps: { offset: { left: 5 } },
                   children: e
               });
     };
-    return (0, i.jsx)(s.TooltipContainer, {
-        text: c,
+    return (0, i.jsx)(s.DY3, {
+        text: u,
         'aria-label': !1,
-        shouldShow: f,
+        shouldShow: d,
         element: 'span',
-        children: _()
+        children: p()
     });
 }

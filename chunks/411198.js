@@ -1,138 +1,122 @@
-r.d(n, {
-    EO: function () {
-        return E;
-    },
-    Qs: function () {
-        return _;
-    },
-    cL: function () {
-        return g;
-    },
-    di: function () {
-        return h;
-    },
-    rk: function () {
-        return f;
-    },
-    sp: function () {
-        return p;
-    },
-    tK: function () {
-        return m;
-    },
-    wD: function () {
-        return d;
-    }
-});
-var i = r(47120);
-var a = r(512722),
-    o = r.n(a),
-    s = r(283693),
-    l = r(601964),
-    u = r(625137),
-    c = r(981631);
-function d(e, n) {
-    var r, i, a, u, d, f, p, h, _, m, g, E, v;
-    let y = null != e.joined_at ? new Date(e.joined_at) : null == n ? void 0 : n.joinedAt,
-        b = null !== (r = e.premium_subscription_count) && void 0 !== r ? r : 0;
+n.d(t, {
+    EO: () => m,
+    Qs: () => _,
+    cL: () => h,
+    di: () => f,
+    rk: () => c,
+    sp: () => d,
+    tK: () => p,
+    wD: () => u
+}),
+    n(47120);
+var i = n(512722),
+    r = n.n(i),
+    a = n(283693),
+    s = n(601964),
+    o = n(625137),
+    l = n(981631);
+function u(e, t) {
+    var n, i, o, u, c, d, f, _, p, h, m, g, E;
+    let v = null != e.joined_at ? new Date(e.joined_at) : null == t ? void 0 : t.joinedAt,
+        y = null !== (n = e.premium_subscription_count) && void 0 !== n ? n : 0;
     if (null == e.properties) {
-        o()(null != n, 'If guild.properties is null, existingGuild must be passed in');
-        let e = n.joinedAt instanceof Date ? n.joinedAt.getTime() : n.joinedAt,
-            r = y instanceof Date ? y.getTime() : y;
-        return b === n.premiumSubscriberCount && e === r
-            ? n
-            : n.merge({
-                  joinedAt: y,
-                  premiumSubscriberCount: b
+        r()(null != t, 'If guild.properties is null, existingGuild must be passed in');
+        let e = t.joinedAt instanceof Date ? t.joinedAt.getTime() : t.joinedAt,
+            n = v instanceof Date ? v.getTime() : v;
+        return y === t.premiumSubscriberCount && e === n
+            ? t
+            : t.merge({
+                  joinedAt: v,
+                  premiumSubscriberCount: y
               });
     }
     let I = {
         id: e.id,
-        joinedAt: y,
-        premiumSubscriberCount: b,
+        joinedAt: v,
+        premiumSubscriberCount: y,
         name: null !== (i = e.properties.name) && void 0 !== i ? i : '',
         description: e.properties.description,
         icon: e.properties.icon,
         splash: e.properties.splash,
         banner: e.properties.banner,
         homeHeader: e.properties.home_header,
-        features: new Set(null !== (a = e.properties.features) && void 0 !== a ? a : []),
+        features: new Set(null !== (o = e.properties.features) && void 0 !== o ? o : []),
         preferredLocale: null !== (u = e.properties.preferred_locale) && void 0 !== u ? u : 'en-us',
         ownerId: e.properties.owner_id,
         application_id: e.properties.application_id,
         afkChannelId: e.properties.afk_channel_id,
         afkTimeout: e.properties.afk_timeout,
         systemChannelId: e.properties.system_channel_id,
-        verificationLevel: null !== (d = e.properties.verification_level) && void 0 !== d ? d : c.sFg.NONE,
-        explicitContentFilter: null !== (f = e.properties.explicit_content_filter) && void 0 !== f ? f : c.lxg.DISABLED,
-        defaultMessageNotifications: null !== (p = e.properties.default_message_notifications) && void 0 !== p ? p : c.bL.ALL_MESSAGES,
-        mfaLevel: null !== (h = e.properties.mfa_level) && void 0 !== h ? h : c.BpS.NONE,
+        verificationLevel: null !== (c = e.properties.verification_level) && void 0 !== c ? c : l.sFg.NONE,
+        explicitContentFilter: null !== (d = e.properties.explicit_content_filter) && void 0 !== d ? d : l.lxg.DISABLED,
+        defaultMessageNotifications: null !== (f = e.properties.default_message_notifications) && void 0 !== f ? f : l.bL.ALL_MESSAGES,
+        mfaLevel: null !== (_ = e.properties.mfa_level) && void 0 !== _ ? _ : l.BpS.NONE,
         vanityURLCode: e.properties.vanity_url_code,
-        premiumTier: null !== (_ = e.properties.premium_tier) && void 0 !== _ ? _ : c.Eu4.NONE,
+        premiumTier: null !== (p = e.properties.premium_tier) && void 0 !== p ? p : l.Eu4.NONE,
         premiumProgressBarEnabled: e.properties.premium_progress_bar_enabled || !1,
         systemChannelFlags: e.properties.system_channel_flags,
         discoverySplash: e.properties.discovery_splash,
         rulesChannelId: e.properties.rules_channel_id,
         safetyAlertsChannelId: e.properties.safety_alerts_channel_id,
         publicUpdatesChannelId: e.properties.public_updates_channel_id,
-        maxStageVideoChannelUsers: null !== (m = e.properties.max_stage_video_channel_users) && void 0 !== m ? m : -1,
-        maxVideoChannelUsers: null !== (g = e.properties.max_video_channel_users) && void 0 !== g ? g : -1,
-        maxMembers: null !== (E = e.properties.max_members) && void 0 !== E ? E : -1,
-        nsfwLevel: null !== (v = e.properties.nsfw_level) && void 0 !== v ? v : c.V_K.DEFAULT,
+        maxStageVideoChannelUsers: null !== (h = e.properties.max_stage_video_channel_users) && void 0 !== h ? h : -1,
+        maxVideoChannelUsers: null !== (m = e.properties.max_video_channel_users) && void 0 !== m ? m : -1,
+        maxMembers: null !== (g = e.properties.max_members) && void 0 !== g ? g : -1,
+        nsfwLevel: null !== (E = e.properties.nsfw_level) && void 0 !== E ? E : l.V_K.DEFAULT,
         hubType: e.properties.hub_type,
         latestOnboardingQuestionId: e.properties.latest_onboarding_question_id,
         profile: e.properties.profile
     };
-    return null == n ? (0, s.gh)(I, l.ZP) : n.merge(I);
+    return null == t ? (0, a.gh)(I, s.ZP) : t.merge(I);
 }
-function f(e, n) {
-    return new l.Bg({
+function c(e, t) {
+    return new s.Bg({
         ...e,
-        ...n
+        ...t
     });
 }
-function p(e, n) {
-    var r, i, a, o, s, l, u, d, f, p, h, _, g;
-    let E = null !== (r = e.properties) && void 0 !== r ? r : m(n),
-        v = {
+function d(e, t) {
+    var n, i, r, a, s, o, u, c, d, f, _, h, m;
+    let g = null !== (n = e.properties) && void 0 !== n ? n : p(t),
+        E = {
             id: e.id,
-            name: null !== (i = E.name) && void 0 !== i ? i : '',
-            description: E.description,
-            icon: E.icon,
-            splash: E.splash,
-            banner: E.banner,
-            homeHeader: E.home_header,
-            features: new Set(null !== (a = E.features) && void 0 !== a ? a : []),
-            preferredLocale: null !== (o = E.preferred_locale) && void 0 !== o ? o : 'en-us',
-            ownerId: E.owner_id,
-            application_id: E.application_id,
-            afkChannelId: E.afk_channel_id,
-            afkTimeout: E.afk_timeout,
-            systemChannelId: E.system_channel_id,
-            verificationLevel: null !== (s = E.verification_level) && void 0 !== s ? s : c.sFg.NONE,
-            explicitContentFilter: null !== (l = E.explicit_content_filter) && void 0 !== l ? l : c.lxg.DISABLED,
-            defaultMessageNotifications: null !== (u = E.default_message_notifications) && void 0 !== u ? u : c.bL.ALL_MESSAGES,
-            mfaLevel: null !== (d = E.mfa_level) && void 0 !== d ? d : c.BpS.NONE,
-            vanityURLCode: E.vanity_url_code,
-            premiumTier: null !== (f = E.premium_tier) && void 0 !== f ? f : c.Eu4.NONE,
-            premiumProgressBarEnabled: E.premium_progress_bar_enabled || !1,
-            systemChannelFlags: E.system_channel_flags,
-            discoverySplash: E.discovery_splash,
-            rulesChannelId: E.rules_channel_id,
-            safetyAlertsChannelId: E.safety_alerts_channel_id,
-            publicUpdatesChannelId: E.public_updates_channel_id,
-            maxStageVideoChannelUsers: null !== (p = E.max_stage_video_channel_users) && void 0 !== p ? p : -1,
-            maxVideoChannelUsers: null !== (h = E.max_video_channel_users) && void 0 !== h ? h : -1,
-            maxMembers: null !== (_ = E.max_members) && void 0 !== _ ? _ : -1,
-            nsfwLevel: null !== (g = E.nsfw_level) && void 0 !== g ? g : c.V_K.DEFAULT,
-            hubType: E.hub_type,
-            latestOnboardingQuestionId: E.latest_onboarding_question_id,
-            profile: E.profile
+            name: null !== (i = g.name) && void 0 !== i ? i : '',
+            description: g.description,
+            icon: g.icon,
+            splash: g.splash,
+            banner: g.banner,
+            homeHeader: g.home_header,
+            features: new Set(null !== (r = g.features) && void 0 !== r ? r : []),
+            preferredLocale: null !== (a = g.preferred_locale) && void 0 !== a ? a : 'en-us',
+            ownerId: g.owner_id,
+            application_id: g.application_id,
+            afkChannelId: g.afk_channel_id,
+            afkTimeout: g.afk_timeout,
+            systemChannelId: g.system_channel_id,
+            verificationLevel: null !== (s = g.verification_level) && void 0 !== s ? s : l.sFg.NONE,
+            explicitContentFilter: null !== (o = g.explicit_content_filter) && void 0 !== o ? o : l.lxg.DISABLED,
+            defaultMessageNotifications: null !== (u = g.default_message_notifications) && void 0 !== u ? u : l.bL.ALL_MESSAGES,
+            mfaLevel: null !== (c = g.mfa_level) && void 0 !== c ? c : l.BpS.NONE,
+            vanityURLCode: g.vanity_url_code,
+            premiumTier: null !== (d = g.premium_tier) && void 0 !== d ? d : l.Eu4.NONE,
+            premiumProgressBarEnabled: g.premium_progress_bar_enabled || !1,
+            systemChannelFlags: g.system_channel_flags,
+            discoverySplash: g.discovery_splash,
+            rulesChannelId: g.rules_channel_id,
+            safetyAlertsChannelId: g.safety_alerts_channel_id,
+            publicUpdatesChannelId: g.public_updates_channel_id,
+            maxStageVideoChannelUsers: null !== (f = g.max_stage_video_channel_users) && void 0 !== f ? f : -1,
+            maxVideoChannelUsers: null !== (_ = g.max_video_channel_users) && void 0 !== _ ? _ : -1,
+            maxMembers: null !== (h = g.max_members) && void 0 !== h ? h : -1,
+            nsfwLevel: null !== (m = g.nsfw_level) && void 0 !== m ? m : l.V_K.DEFAULT,
+            hubType: g.hub_type,
+            latestOnboardingQuestionId: g.latest_onboarding_question_id,
+            profile: g.profile
         };
-    return n.merge(v);
+    return t.merge(E);
 }
-function h(e, n) {
-    let r = {
+function f(e, t) {
+    let n = {
         id: e.id,
         name: e.name,
         description: e.description,
@@ -144,11 +128,11 @@ function h(e, n) {
         preferredLocale: e.preferred_locale,
         ownerId: e.owner_id,
         application_id: e.application_id,
-        roles: (0, u.C5)(e.id, e.roles),
+        roles: (0, o.C5)(e.id, e.roles),
         afkChannelId: e.afk_channel_id,
         afkTimeout: e.afk_timeout,
         systemChannelId: e.system_channel_id,
-        joinedAt: null != e.joined_at ? new Date(e.joined_at) : null == n ? void 0 : n.joinedAt,
+        joinedAt: null != e.joined_at ? new Date(e.joined_at) : null == t ? void 0 : t.joinedAt,
         verificationLevel: e.verification_level,
         explicitContentFilter: e.explicit_content_filter,
         defaultMessageNotifications: e.default_message_notifications,
@@ -170,10 +154,10 @@ function h(e, n) {
         latestOnboardingQuestionId: e.latest_onboarding_question_id,
         profile: e.profile
     };
-    return null == n ? new l.ZP(r) : n.merge(r);
+    return null == t ? new s.ZP(n) : t.merge(n);
 }
 function _(e) {
-    let n = {
+    let t = {
         id: e.id,
         name: e.name,
         description: e.description,
@@ -187,9 +171,9 @@ function _(e) {
         nsfwLevel: e.nsfw_level,
         memberCount: e.approximate_member_count
     };
-    return new l.ZP(n);
+    return new s.ZP(t);
 }
-function m(e) {
+function p(e) {
     return {
         id: e.id,
         name: e.name,
@@ -227,14 +211,14 @@ function m(e) {
         profile: e.profile
     };
 }
-function g(e) {
-    var n;
-    for (let r in (null != e.joinedAt && (e.joinedAt = new Date(e.joinedAt)), (e.features = new Set(null !== (n = e.features) && void 0 !== n ? n : [])), e.roles)) (0, u.cf)(e.roles[r]);
-    return (0, s.gh)(e, l.ZP);
+function h(e) {
+    var t;
+    for (let n in (null != e.joinedAt && (e.joinedAt = new Date(e.joinedAt)), (e.features = new Set(null !== (t = e.features) && void 0 !== t ? t : [])), e.roles)) (0, o.cf)(e.roles[n]);
+    return (0, a.gh)(e, s.ZP);
 }
-function E(e, n, r, i) {
-    let a = (null != i && i.length > 0) || (null != r && r.length > 0);
-    if ((a && (n = { ...n }), null != i)) for (let e of i) delete n[e];
-    if (null != r && r.length > 0) for (let e of r) n[e.id] = (0, u.CL)(e);
-    return a ? (0, u.iw)(e, Object.values(n)) : n;
+function m(e, t, n, i) {
+    let r = (null != i && i.length > 0) || (null != n && n.length > 0);
+    if ((r && (t = { ...t }), null != i)) for (let e of i) delete t[e];
+    if (null != n && n.length > 0) for (let e of n) t[e.id] = (0, o.CL)(e);
+    return r ? (0, o.iw)(e, Object.values(t)) : t;
 }

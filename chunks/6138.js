@@ -6,8 +6,4 @@ function i(e) {
         bottom: e.y + e.height
     });
 }
-r.d(n, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });

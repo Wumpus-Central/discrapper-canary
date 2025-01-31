@@ -1,42 +1,38 @@
 n.d(t, {
-    V: function () {
-        return x;
-    },
-    Z: function () {
-        return C;
-    }
+    V: () => x,
+    Z: () => _
 }),
     n(47120);
 var i = n(200651),
     a = n(192379),
     r = n(120356),
     l = n.n(r),
-    o = n(442837),
-    s = n(481060),
+    s = n(442837),
+    o = n(481060),
     c = n(894653),
     d = n(34674),
     u = n(89182),
     m = n(706454),
-    p = n(388032),
-    h = n(968654);
+    h = n(388032),
+    p = n(968654);
 function g(e) {
-    let { category: t, count: n, onSelectCategory: r, selected: o } = e,
+    let { category: t, count: n, onSelectCategory: r, selected: s } = e,
         c = a.useCallback(() => {
             r(t.id);
         }, [t.id, r]),
         d = n.toLocaleString(m.default.locale);
-    return (0, i.jsxs)(s.Clickable, {
+    return (0, i.jsxs)(o.P3F, {
         onClick: c,
-        className: l()(h.category, { [h.selected]: o }),
+        className: l()(p.category, { [p.selected]: s }),
         children: [
-            (0, i.jsx)(s.Text, {
-                className: h.name,
+            (0, i.jsx)(o.Text, {
+                className: p.name,
                 variant: 'text-sm/medium',
                 color: 'header-primary',
                 children: t.name
             }),
-            (0, i.jsx)(s.Text, {
-                className: h.count,
+            (0, i.jsx)(o.Text, {
+                className: p.count,
                 variant: 'text-sm/normal',
                 color: 'text-muted',
                 children: d
@@ -44,10 +40,10 @@ function g(e) {
         ]
     });
 }
-function C(e) {
+function _(e) {
     let { countsByCategory: t, onSelectCategory: n, selectedCategoryId: r } = e,
-        l = (0, o.e7)([c.Z], () => c.Z.getCategories()),
-        s = a.useMemo(
+        l = (0, s.e7)([c.Z], () => c.Z.getCategories()),
+        o = a.useMemo(
             () => [
                 (0, d.KQ)(),
                 ...l.filter((e) => {
@@ -57,19 +53,19 @@ function C(e) {
             ],
             [l, t]
         );
-    return 0 === s.length
+    return 0 === o.length
         ? null
         : (0, i.jsx)('div', {
-              className: h.categories,
-              children: s.map((e) => {
+              className: p.categories,
+              children: o.map((e) => {
                   var a;
                   let l = e.id,
-                      o = null !== (a = t[l]) && void 0 !== a ? a : 0;
+                      s = null !== (a = t[l]) && void 0 !== a ? a : 0;
                   return (0, i.jsx)(
                       g,
                       {
                           category: e,
-                          count: o,
+                          count: s,
                           selected: l === r,
                           onSelectCategory: () => n(e)
                       },
@@ -81,7 +77,7 @@ function C(e) {
 function x(e) {
     var t;
     let { countsByCategory: n, onSelectCategory: r, selectedCategoryId: l } = e,
-        m = (0, o.e7)([c.Z], () => c.Z.getCategories()),
+        m = (0, s.e7)([c.Z], () => c.Z.getCategories()),
         g = a.useMemo(
             () => [
                 (0, d.KQ)(),
@@ -92,7 +88,7 @@ function x(e) {
             ],
             [m, n]
         ),
-        C = a.useMemo(
+        _ = a.useMemo(
             () =>
                 g.map((e) => ({
                     id: ''.concat(e.id),
@@ -110,23 +106,23 @@ function x(e) {
             },
             [r, g]
         ),
-        v = a.useMemo(() => g.find((e) => e.id === l), [l, g]);
-    return 0 === C.length
+        C = a.useMemo(() => g.find((e) => e.id === l), [l, g]);
+    return 0 === _.length
         ? null
         : (0, i.jsxs)('div', {
-              className: h.container,
+              className: p.container,
               children: [
-                  (0, i.jsx)(s.Text, {
+                  (0, i.jsx)(o.Text, {
                       variant: 'text-sm/medium',
                       color: 'text-secondary',
-                      children: p.intl.string(p.t.f09BQE)
+                      children: h.intl.string(h.t.f09BQE)
                   }),
                   (0, i.jsx)(u.ZP, {
-                      items: C,
-                      title: null !== (t = null == v ? void 0 : v.name) && void 0 !== t ? t : '',
+                      items: _,
+                      title: null !== (t = null == C ? void 0 : C.name) && void 0 !== t ? t : '',
                       onSelect: x,
                       selected: ''.concat(l),
-                      'aria-label': p.intl.string(p.t.WHdCwc),
+                      'aria-label': h.intl.string(h.t.WHdCwc),
                       variant: u.PA.FILLED
                   })
               ]

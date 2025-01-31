@@ -1,10 +1,6 @@
 n.d(t, {
-    AL: function () {
-        return o;
-    },
-    f3: function () {
-        return a;
-    }
+    AL: () => o,
+    f3: () => a
 }),
     n(411104);
 var i = n(200651),

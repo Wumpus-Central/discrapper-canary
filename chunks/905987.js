@@ -1,39 +1,34 @@
-n.d(t, {
-    Z: function () {
-        return b;
-    }
-}),
-    n(47120);
-var i = n(200651),
-    s = n(192379),
-    r = n(120356),
-    l = n.n(r),
-    a = n(442837),
-    c = n(481060),
-    d = n(430824),
-    o = n(771845),
-    m = n(259580),
-    x = n(186523),
-    h = n(553826),
-    u = n(388032),
-    j = n(415562),
-    g = n(888102);
-function b(e) {
+s.d(t, { Z: () => _ }), s(47120);
+var i = s(200651),
+    n = s(192379),
+    a = s(120356),
+    r = s.n(a),
+    l = s(442837),
+    c = s(481060),
+    d = s(430824),
+    o = s(771845),
+    m = s(259580),
+    x = s(186523),
+    h = s(553826),
+    u = s(388032),
+    j = s(415562),
+    g = s(888102);
+function _(e) {
     let { count: t } = e,
-        [n, r] = s.useState('server');
-    return (0, i.jsxs)(c.Scroller, {
+        [s, a] = n.useState('server');
+    return (0, i.jsxs)(c.Ttm, {
         className: j.content,
         children: [
             (0, i.jsxs)('div', {
-                className: l()(j.header, g.header),
+                className: r()(j.header, g.header),
                 children: [
-                    (0, i.jsx)(c.CircleCheckIcon, {
+                    (0, i.jsx)(c.owK, {
                         size: 'custom',
                         color: 'currentColor',
                         width: 40,
                         height: 40
                     }),
-                    (0, i.jsx)(c.Heading, {
+                    (0, i.jsx)(c.X6q, {
                         variant: 'heading-xl/bold',
                         color: 'header-primary',
                         children: u.intl.format(u.t.Wyk03t, { count: t })
@@ -51,23 +46,23 @@ function b(e) {
                 children: [
                     (0, i.jsx)('div', {
                         className: g.tabBackground,
-                        style: { left: 'server' === n ? 0 : '50%' }
+                        style: { left: 'server' === s ? 0 : '50%' }
                     }),
-                    (0, i.jsx)(c.Clickable, {
+                    (0, i.jsx)(c.P3F, {
                         className: g.tab,
-                        onClick: () => r('server'),
+                        onClick: () => a('server'),
                         children: (0, i.jsx)(c.Text, {
                             variant: 'text-sm/medium',
-                            color: 'server' === n ? 'header-primary' : 'text-muted',
+                            color: 'server' === s ? 'header-primary' : 'text-muted',
                             children: u.intl.string(u.t.pS4WEh)
                         })
                     }),
-                    (0, i.jsx)(c.Clickable, {
+                    (0, i.jsx)(c.P3F, {
                         className: g.tab,
-                        onClick: () => r('channel'),
+                        onClick: () => a('channel'),
                         children: (0, i.jsx)(c.Text, {
                             variant: 'text-sm/medium',
-                            color: 'channel' === n ? 'header-primary' : 'text-muted',
+                            color: 'channel' === s ? 'header-primary' : 'text-muted',
                             children: u.intl.string(u.t.UVxi0d)
                         })
                     })
@@ -75,25 +70,25 @@ function b(e) {
             }),
             (0, i.jsxs)('div', {
                 className: g.container,
-                children: [(0, i.jsx)(v, { hidden: 'channel' === n }), (0, i.jsx)(f, { hidden: 'server' === n })]
+                children: [(0, i.jsx)(v, { hidden: 'channel' === s }), (0, i.jsx)(b, { hidden: 'server' === s })]
             })
         ]
     });
 }
 function v(e) {
     let { hidden: t } = e,
-        n = (0, a.e7)([d.Z, o.ZP], () => {
+        s = (0, l.e7)([d.Z, o.ZP], () => {
             var e;
             return null === (e = d.Z.getGuild(o.ZP.getFlattenedGuildIds()[0])) || void 0 === e ? void 0 : e.name;
         }),
-        [r, x] = s.useState(0);
+        [a, x] = n.useState(0);
     return (
-        s.useEffect(() => {
+        n.useEffect(() => {
             if (t) return;
             let e = 0,
-                n = [1500, 1000, 1000, 500].map((t, n) => setTimeout(() => x(n + 1), (e += t)));
+                s = [1500, 1000, 1000, 500].map((t, s) => setTimeout(() => x(s + 1), (e += t)));
             return () => {
-                n.forEach((e) => clearTimeout(e)), setTimeout(() => x(0), 150);
+                s.forEach((e) => clearTimeout(e)), setTimeout(() => x(0), 150);
             };
         }, [t]),
         (0, i.jsxs)(i.Fragment, {
@@ -101,11 +96,11 @@ function v(e) {
                 (0, i.jsx)('div', {
                     className: g.containerInner,
                     children: (0, i.jsxs)('div', {
-                        className: l()(g.serversSection, {
+                        className: r()(g.serversSection, {
                             [g.hidden]: t,
-                            [g.showBigMenu]: r >= 1,
-                            [g.fadeChannels]: r >= 1,
-                            [g.showModal]: r >= 3
+                            [g.showBigMenu]: a >= 1,
+                            [g.fadeChannels]: a >= 1,
+                            [g.showModal]: a >= 3
                         }),
                         children: [
                             (0, i.jsxs)('div', {
@@ -118,40 +113,40 @@ function v(e) {
                                                 variant: 'text-md/medium',
                                                 color: 'interactive-active',
                                                 lineClamp: 1,
-                                                children: null != n ? n : 'Keyboard Nerds'
+                                                children: null != s ? s : 'Keyboard Nerds'
                                             }),
-                                            r >= 1
-                                                ? (0, i.jsx)(c.XSmallIcon, {
+                                            a >= 1
+                                                ? (0, i.jsx)(c.Dio, {
                                                       size: 'md',
                                                       color: 'currentColor',
                                                       className: g.icon
                                                   })
                                                 : (0, i.jsx)(m.Z, {
-                                                      className: l()(g.__invalid_downCaret, g.icon),
+                                                      className: r()(g.__invalid_downCaret, g.icon),
                                                       width: 24,
                                                       height: 24
                                                   })
                                         ]
                                     }),
-                                    (0, i.jsx)(_, { name: u.intl.string(u.t.jqWm9f) }),
-                                    (0, i.jsx)(_, { name: u.intl.string(u.t.WFejRk) }),
-                                    (0, i.jsx)(_, {
+                                    (0, i.jsx)(N, { name: u.intl.string(u.t.jqWm9f) }),
+                                    (0, i.jsx)(N, { name: u.intl.string(u.t.WFejRk) }),
+                                    (0, i.jsx)(N, {
                                         grey: !0,
                                         name: u.intl.string(u.t.p9z9Iy)
                                     }),
-                                    (0, i.jsx)(_, {
+                                    (0, i.jsx)(N, {
                                         grey: !0,
                                         name: u.intl.string(u.t['2bdWDw'])
                                     }),
-                                    (0, i.jsx)(_, {
+                                    (0, i.jsx)(N, {
                                         grey: !0,
                                         name: u.intl.string(u.t['Ci+Our'])
                                     }),
-                                    (0, i.jsx)(_, {
+                                    (0, i.jsx)(N, {
                                         nodot: !0,
                                         name: u.intl.string(u.t['/7TEdn'])
                                     }),
-                                    (0, i.jsx)(_, {
+                                    (0, i.jsx)(N, {
                                         nodot: !0,
                                         name: u.intl.string(u.t['Ime/t7'])
                                     })
@@ -162,16 +157,16 @@ function v(e) {
                                 children: [
                                     (0, i.jsx)(p, {
                                         text: u.intl.string(u.t.BN75l5),
-                                        icon: (0, i.jsx)(c.GroupPlusIcon, {
+                                        icon: (0, i.jsx)(c.ejJ, {
                                             size: 'sm',
                                             className: g.icon
                                         })
                                     }),
                                     (0, i.jsx)('div', { className: g.divider }),
                                     (0, i.jsx)(p, {
-                                        active: r >= 2,
+                                        active: a >= 2,
                                         text: u.intl.string(u.t.h850Sk),
-                                        icon: (0, i.jsx)(c.BellIcon, {
+                                        icon: (0, i.jsx)(c.Dkj, {
                                             size: 'sm',
                                             color: 'currentColor',
                                             className: g.icon
@@ -179,7 +174,7 @@ function v(e) {
                                     }),
                                     (0, i.jsx)(p, {
                                         text: u.intl.string(u.t.BayiAg),
-                                        icon: (0, i.jsx)(c.ShieldIcon, {
+                                        icon: (0, i.jsx)(c.b7C, {
                                             size: 'sm',
                                             color: 'currentColor',
                                             className: g.icon
@@ -187,7 +182,7 @@ function v(e) {
                                     }),
                                     (0, i.jsx)(p, {
                                         text: u.intl.string(u.t['154/bG']),
-                                        icon: (0, i.jsx)(c.SettingsIcon, {
+                                        icon: (0, i.jsx)(c.ewm, {
                                             size: 'sm',
                                             color: 'currentColor',
                                             className: g.icon
@@ -195,7 +190,7 @@ function v(e) {
                                     }),
                                     (0, i.jsx)(p, {
                                         text: u.intl.string(u.t.qyjZub),
-                                        icon: (0, i.jsx)(c.CalendarPlusIcon, {
+                                        icon: (0, i.jsx)(c.VZI, {
                                             size: 'sm',
                                             color: 'currentColor',
                                             className: g.icon
@@ -218,7 +213,7 @@ function v(e) {
                                             (0, i.jsxs)('div', {
                                                 className: g.notifTab,
                                                 children: [
-                                                    (0, i.jsx)(c.CircleCheckIcon, {
+                                                    (0, i.jsx)(c.owK, {
                                                         size: 'md',
                                                         color: 'currentColor'
                                                     }),
@@ -233,7 +228,7 @@ function v(e) {
                                             (0, i.jsxs)('div', {
                                                 className: g.activeNotifTab,
                                                 children: [
-                                                    (0, i.jsx)(c.AtIcon, {
+                                                    (0, i.jsx)(c.lOy, {
                                                         size: 'md',
                                                         color: 'currentColor'
                                                     }),
@@ -248,7 +243,7 @@ function v(e) {
                                             (0, i.jsxs)('div', {
                                                 className: g.notifTab,
                                                 children: [
-                                                    (0, i.jsx)(c.BellSlashIcon, {
+                                                    (0, i.jsx)(c.owu, {
                                                         size: 'md',
                                                         color: 'currentColor'
                                                     }),
@@ -280,25 +275,25 @@ function v(e) {
                         ]
                     })
                 }),
-                (0, i.jsx)(N, {
+                (0, i.jsx)(f, {
                     text: u.intl.string(u.t['C//fOz']),
                     className: g.tipServers2,
-                    hidden: t || r < 4
+                    hidden: t || a < 4
                 })
             ]
         })
     );
 }
-function f(e) {
+function b(e) {
     let { hidden: t } = e,
-        [n, r] = s.useState(0);
+        [s, a] = n.useState(0);
     return (
-        s.useEffect(() => {
+        n.useEffect(() => {
             if (t) return;
             let e = 0,
-                n = [1000, 1000, 1000, 800, 800].map((t, n) => setTimeout(() => r(n + 1), (e += t)));
+                s = [1000, 1000, 1000, 800, 800].map((t, s) => setTimeout(() => a(s + 1), (e += t)));
             return () => {
-                n.forEach((e) => clearTimeout(e)), setTimeout(() => r(0), 150);
+                s.forEach((e) => clearTimeout(e)), setTimeout(() => a(0), 150);
             };
         }, [t]),
         (0, i.jsxs)(i.Fragment, {
@@ -306,46 +301,46 @@ function f(e) {
                 (0, i.jsx)('div', {
                     className: g.containerInner,
                     children: (0, i.jsxs)('div', {
-                        className: l()(g.channelsSection, {
+                        className: r()(g.channelsSection, {
                             [g.hidden]: t,
-                            [g.fadeOtherChannels]: n >= 2,
-                            [g.showLeftMenu]: n >= 2,
-                            [g.showRightMenu]: n >= 3
+                            [g.fadeOtherChannels]: s >= 2,
+                            [g.showLeftMenu]: s >= 2,
+                            [g.showRightMenu]: s >= 3
                         }),
                         children: [
                             (0, i.jsxs)('div', {
                                 className: g.channels,
                                 children: [
-                                    (0, i.jsx)(_, {
-                                        selected: n >= 1,
-                                        grey: n >= 5,
+                                    (0, i.jsx)(N, {
+                                        selected: s >= 1,
+                                        grey: s >= 5,
                                         name: u.intl.string(u.t.jqWm9f)
                                     }),
-                                    (0, i.jsx)(_, { name: u.intl.string(u.t.WFejRk) }),
-                                    (0, i.jsx)(_, {
+                                    (0, i.jsx)(N, { name: u.intl.string(u.t.WFejRk) }),
+                                    (0, i.jsx)(N, {
                                         grey: !0,
                                         name: u.intl.string(u.t.p9z9Iy)
                                     }),
-                                    (0, i.jsx)(_, {
+                                    (0, i.jsx)(N, {
                                         grey: !0,
                                         name: u.intl.string(u.t['2bdWDw'])
                                     }),
-                                    (0, i.jsx)(_, {
+                                    (0, i.jsx)(N, {
                                         grey: !0,
                                         name: u.intl.string(u.t['Ci+Our'])
                                     }),
-                                    (0, i.jsx)(_, {
+                                    (0, i.jsx)(N, {
                                         nodot: !0,
                                         name: u.intl.string(u.t['/7TEdn'])
                                     }),
-                                    (0, i.jsx)(_, {
+                                    (0, i.jsx)(N, {
                                         nodot: !0,
                                         name: u.intl.string(u.t['Ime/t7'])
                                     })
                                 ]
                             }),
                             (0, i.jsxs)('div', {
-                                className: l()(g.menu, g.leftMenu),
+                                className: r()(g.menu, g.leftMenu),
                                 children: [
                                     (0, i.jsx)(p, {
                                         small: !0,
@@ -359,7 +354,7 @@ function f(e) {
                                     (0, i.jsx)(p, {
                                         small: !0,
                                         text: u.intl.string(u.t.HcoRu7),
-                                        active: n >= 3,
+                                        active: s >= 3,
                                         icon: (0, i.jsx)(m.Z, {
                                             className: g.caret,
                                             width: 12,
@@ -369,13 +364,13 @@ function f(e) {
                                 ]
                             }),
                             (0, i.jsxs)('div', {
-                                className: l()(g.menu, g.rightMenu),
+                                className: r()(g.menu, g.rightMenu),
                                 children: [
                                     (0, i.jsx)(p, {
                                         small: !0,
                                         text: u.intl.string(u.t.hZrr6u),
                                         icon:
-                                            n <= 4
+                                            s <= 4
                                                 ? (0, i.jsx)(h.Z, {
                                                       className: g.icon,
                                                       width: 12,
@@ -386,13 +381,13 @@ function f(e) {
                                                       width: 12,
                                                       height: 12
                                                   }),
-                                        active: n <= 4
+                                        active: s <= 4
                                     }),
                                     (0, i.jsx)(p, {
                                         small: !0,
                                         text: u.intl.string(u.t.y59NJi),
                                         icon:
-                                            n >= 5
+                                            s >= 5
                                                 ? (0, i.jsx)(h.Z, {
                                                       className: g.icon,
                                                       width: 12,
@@ -403,7 +398,7 @@ function f(e) {
                                                       width: 12,
                                                       height: 12
                                                   }),
-                                        active: n >= 5
+                                        active: s >= 5
                                     }),
                                     (0, i.jsx)(p, {
                                         small: !0,
@@ -428,24 +423,24 @@ function f(e) {
                         ]
                     })
                 }),
-                (0, i.jsx)(N, {
+                (0, i.jsx)(f, {
                     text: u.intl.string(u.t['5Il5fn']),
                     className: g.tipChannels1,
-                    hidden: t || n < 4
+                    hidden: t || s < 4
                 }),
-                (0, i.jsx)(N, {
+                (0, i.jsx)(f, {
                     text: u.intl.string(u.t['+ROcrq']),
                     className: g.tipChannels2,
-                    hidden: t || n < 4
+                    hidden: t || s < 4
                 })
             ]
         })
     );
 }
-function N(e) {
-    let { text: t, className: n, hidden: s } = e;
+function f(e) {
+    let { text: t, className: s, hidden: n } = e;
     return (0, i.jsxs)('div', {
-        className: l()(n, g.tip, { [g.hidden]: s }),
+        className: r()(s, g.tip, { [g.hidden]: n }),
         children: [
             (0, i.jsx)(c.Text, {
                 className: g.__invalid_tipText,
@@ -457,16 +452,16 @@ function N(e) {
         ]
     });
 }
-function _(e) {
-    let { grey: t, nodot: n, selected: s, name: r } = e;
+function N(e) {
+    let { grey: t, nodot: s, selected: n, name: a } = e;
     return (0, i.jsxs)('div', {
-        className: l()(g.channel, {
-            [g.grey]: t || n,
-            [g.nodot]: n,
-            [g.selected]: s
+        className: r()(g.channel, {
+            [g.grey]: t || s,
+            [g.nodot]: s,
+            [g.selected]: n
         }),
         children: [
-            (0, i.jsx)(c.TextIcon, {
+            (0, i.jsx)(c.VL1, {
                 size: 'xs',
                 color: 'currentColor',
                 className: g.channelIcon
@@ -474,22 +469,22 @@ function _(e) {
             (0, i.jsx)(c.Text, {
                 variant: 'text-md/medium',
                 className: g.channelName,
-                children: r
+                children: a
             })
         ]
     });
 }
 function p(e) {
-    let { text: t, active: n, small: s, icon: r } = e;
+    let { text: t, active: s, small: n, icon: a } = e;
     return (0, i.jsxs)('div', {
-        className: l()(g.menuItem, { [g.active]: n }),
+        className: r()(g.menuItem, { [g.active]: s }),
         children: [
             (0, i.jsx)(c.Text, {
-                variant: s ? 'text-xs/normal' : 'text-sm/normal',
-                color: n ? 'always-white' : 'interactive-normal',
+                variant: n ? 'text-xs/normal' : 'text-sm/normal',
+                color: s ? 'always-white' : 'interactive-normal',
                 children: t
             }),
-            r
+            a
         ]
     });
 }

@@ -1,47 +1,42 @@
-n.r(e),
-    n.d(e, {
-        default: function () {
-            return d;
-        }
-    });
-var s = n(200651);
-n(192379);
-var i = n(481060),
-    a = n(600164),
-    r = n(388032),
-    l = n(184764);
+i.d(s, { default: () => d });
+var e = i(200651);
+i(192379);
+var n = i(481060),
+    r = i(600164),
+    l = i(388032),
+    a = i(184764);
 function d(t) {
-    let { transitionState: e, onClose: n } = t;
-    return (0, s.jsxs)(i.ModalRoot, {
-        size: i.ModalSize.DYNAMIC,
-        transitionState: e,
-        'aria-label': r.intl.string(r.t.elyVbm),
+    let { transitionState: s, onClose: i } = t;
+    return (0, e.jsxs)(n.Y0X, {
+        size: n.CgR.DYNAMIC,
+        transitionState: s,
+        'aria-label': l.intl.string(l.t.elyVbm),
         children: [
-            (0, s.jsxs)(i.ModalHeader, {
-                justify: a.Z.Justify.BETWEEN,
+            (0, e.jsxs)(n.xBx, {
+                justify: r.Z.Justify.BETWEEN,
                 separator: !1,
                 children: [
-                    (0, s.jsx)(i.Heading, {
+                    (0, e.jsx)(n.X6q, {
                         variant: 'heading-md/semibold',
-                        className: l.header,
-                        children: r.intl.string(r.t.elyVbm)
+                        className: a.header,
+                        children: l.intl.string(l.t.elyVbm)
                     }),
-                    (0, s.jsx)(i.ModalCloseButton, { onClick: n })
+                    (0, e.jsx)(n.olH, { onClick: i })
                 ]
             }),
-            (0, s.jsxs)(i.ModalContent, {
+            (0, e.jsxs)(n.hzk, {
                 children: [
-                    (0, s.jsx)(i.Text, {
+                    (0, e.jsx)(n.Text, {
                         variant: 'text-sm/normal',
-                        children: r.intl.string(r.t.nIeRen)
+                        children: l.intl.string(l.t.nIeRen)
                     }),
-                    (0, s.jsx)('div', { className: l.fullArt })
+                    (0, e.jsx)('div', { className: a.fullArt })
                 ]
             }),
-            (0, s.jsx)(i.ModalFooter, {
-                children: (0, s.jsx)(i.Button, {
-                    onClick: n,
-                    children: r.intl.string(r.t.BddRzc)
+            (0, e.jsx)(n.mzw, {
+                children: (0, e.jsx)(n.zxk, {
+                    onClick: i,
+                    children: l.intl.string(l.t.BddRzc)
                 })
             })
         ]

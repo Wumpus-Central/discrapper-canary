@@ -1,89 +1,77 @@
-r.d(t, {
-    M5: function () {
-        return I;
-    },
-    _I: function () {
-        return u;
-    },
-    m7: function () {
-        return l;
-    },
-    m8: function () {
-        return i;
-    },
-    q4: function () {
-        return c;
-    },
-    uf: function () {
-        return s;
-    }
+a.d(e, {
+    M5: () => u,
+    _I: () => I,
+    m7: () => l,
+    m8: () => c,
+    q4: () => s,
+    uf: () => E
 });
-var a = r(394798),
-    n = r(622916),
-    _ = r(263449),
-    o = r(255768);
-let E = [];
-function i(e) {
-    let t;
-    let r = e.defaultIntegrations || [],
-        n = e.integrations;
-    r.forEach((e) => {
-        e.isDefaultInstance = !0;
+var r = a(394798),
+    n = a(622916),
+    o = a(263449),
+    _ = a(255768);
+let i = [];
+function c(t) {
+    let e;
+    let a = t.defaultIntegrations || [],
+        n = t.integrations;
+    a.forEach((t) => {
+        t.isDefaultInstance = !0;
     });
-    let _ = (function (e) {
-            let t = {};
+    let o = (function (t) {
+            let e = {};
             return (
-                e.forEach((e) => {
-                    let { name: r } = e,
-                        a = t[r];
-                    if (!a || !!a.isDefaultInstance || !e.isDefaultInstance) t[r] = e;
+                t.forEach((t) => {
+                    let { name: a } = t,
+                        r = e[a];
+                    (!r || r.isDefaultInstance || !t.isDefaultInstance) && (e[a] = t);
                 }),
-                Object.values(t)
+                Object.values(e)
             );
-        })((t = Array.isArray(n) ? [...r, ...n] : 'function' == typeof n ? (0, a.lE)(n(r)) : r)),
-        o = _.findIndex((e) => 'Debug' === e.name);
-    if (o > -1) {
-        let [e] = _.splice(o, 1);
-        _.push(e);
+        })(Array.isArray(n) ? [...a, ...n] : 'function' == typeof n ? (0, r.lE)(n(a)) : a),
+        _ = o.findIndex((t) => 'Debug' === t.name);
+    if (_ > -1) {
+        let [t] = o.splice(_, 1);
+        o.push(t);
     }
-    return _;
+    return o;
 }
-function c(e, t) {
-    let r = {};
+function s(t, e) {
+    let a = {};
     return (
-        t.forEach((t) => {
-            t && l(e, t, r);
+        e.forEach((e) => {
+            e && l(t, e, a);
         }),
-        r
+        a
     );
 }
-function s(e, t) {
-    for (let r of t) r && r.afterAllSetup && r.afterAllSetup(e);
+function E(t, e) {
+    for (let a of e) a && a.afterAllSetup && a.afterAllSetup(t);
 }
-function l(e, t, r) {
-    if (r[t.name]) {
-        o.X && n.kg.log(`Integration skipped because it was already installed: ${t.name}`);
+function l(t, e, a) {
+    if (a[e.name]) {
+        _.X && n.kg.log(`Integration skipped because it was already installed: ${e.name}`);
         return;
     }
-    if (((r[t.name] = t), -1 === E.indexOf(t.name) && 'function' == typeof t.setupOnce && (t.setupOnce(), E.push(t.name)), t.setup && 'function' == typeof t.setup && t.setup(e), 'function' == typeof t.preprocessEvent)) {
-        let r = t.preprocessEvent.bind(t);
-        e.on('preprocessEvent', (t, a) => r(t, a, e));
+    if (((a[e.name] = e), -1 === i.indexOf(e.name) && 'function' == typeof e.setupOnce && (e.setupOnce(), i.push(e.name)), e.setup && 'function' == typeof e.setup && e.setup(t), 'function' == typeof e.preprocessEvent)) {
+        let a = e.preprocessEvent.bind(e);
+        t.on('preprocessEvent', (e, r) => a(e, r, t));
     }
-    if ('function' == typeof t.processEvent) {
-        let r = t.processEvent.bind(t),
-            a = Object.assign((t, a) => r(t, a, e), { id: t.name });
-        e.addEventProcessor(a);
+    if ('function' == typeof e.processEvent) {
+        let a = e.processEvent.bind(e),
+            r = Object.assign((e, r) => a(e, r, t), { id: e.name });
+        t.addEventProcessor(r);
     }
-    o.X && n.kg.log(`Integration installed: ${t.name}`);
+    _.X && n.kg.log(`Integration installed: ${e.name}`);
 }
-function I(e) {
-    let t = (0, _.s3)();
-    if (!t) {
-        o.X && n.kg.warn(`Cannot add integration "${e.name}" because no SDK Client is available.`);
+function u(t) {
+    let e = (0, o.s3)();
+    if (!e) {
+        _.X && n.kg.warn(`Cannot add integration "${t.name}" because no SDK Client is available.`);
         return;
     }
-    t.addIntegration(e);
+    e.addIntegration(t);
 }
-function u(e) {
-    return e;
+function I(t) {
+    return t;
 }

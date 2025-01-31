@@ -1,15 +1,11 @@
 t.d(n, {
-    O: function () {
-        return r;
-    },
-    Z: function () {
-        return l;
-    }
+    O: () => s,
+    Z: () => i
 });
-var i = t(159277);
-function l(e) {
-    return i.t.XBOX_APPLICATION_ID === e || i.M.PLAYSTATION_APPLICATION_IDS.has(e);
+var l = t(159277);
+function i(e) {
+    return l.t.XBOX_APPLICATION_ID === e || l.M.PLAYSTATION_APPLICATION_IDS.has(e);
 }
-function r(e) {
-    return l(e);
+function s(e) {
+    return i(e);
 }

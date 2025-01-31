@@ -1,17 +1,13 @@
-function i(e, n) {
-    let { style: r } = e;
-    n.backgroundColor && (r.backgroundColor = n.backgroundColor), n.width && (r.width = `${n.width}px`), n.height && (r.height = `${n.height}px`);
-    let i = n.style;
+function i(e, t) {
+    let { style: n } = e;
+    t.backgroundColor && (n.backgroundColor = t.backgroundColor), t.width && (n.width = `${t.width}px`), t.height && (n.height = `${t.height}px`);
+    let i = t.style;
     return (
         null != i &&
             Object.keys(i).forEach((e) => {
-                r[e] = i[e];
+                n[e] = i[e];
             }),
         e
     );
 }
-r.d(n, {
-    b: function () {
-        return i;
-    }
-});
+n.d(t, { b: () => i });

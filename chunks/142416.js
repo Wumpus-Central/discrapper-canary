@@ -1,6 +1,7 @@
-e.exports = {
-    container: 'container_ab08a5',
-    avatar: 'avatar_ab08a5',
-    avatarHalo: 'avatarHalo_ab08a5',
-    avatarIconContainer: 'avatarIconContainer_ab08a5'
+var i = {
+    container: 'container_a9809a',
+    avatar: 'avatar_a9809a',
+    avatarHalo: 'avatarHalo_a9809a',
+    avatarIconContainer: 'avatarIconContainer_a9809a'
 };
+e.exports = i;

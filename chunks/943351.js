@@ -1,16 +1,8 @@
 t.d(n, {
-    V3: function () {
-        return a;
-    },
-    bp: function () {
-        return r;
-    },
-    hp: function () {
-        return i;
-    },
-    nl: function () {
-        return l;
-    }
+    V3: () => a,
+    bp: () => s,
+    hp: () => i,
+    nl: () => l
 }),
     t(47120);
 let l = {
@@ -28,4 +20,4 @@ let l = {
         return ''.concat(t, '-').concat(JSON.stringify(n));
     },
     i = (e) => ''.concat(e.name, '-').concat(e.size, '-').concat(e.lastModified),
-    r = new Set(['audio/mpeg', 'audio/mp3', 'audio/wav', 'audio/x-wav', 'audio/ogg', 'video/mp4']);
+    s = new Set(['audio/mpeg', 'audio/mp3', 'audio/wav', 'audio/x-wav', 'audio/ogg', 'video/mp4']);

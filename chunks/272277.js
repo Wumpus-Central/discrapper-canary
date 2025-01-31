@@ -1,4 +1,6 @@
-e.exports = {
-    largeAvatar: 'largeAvatar_e3a0ec baseAvatar_e3a0ec',
-    miniAvatar: 'miniAvatar_e3a0ec baseAvatar_e3a0ec'
+var i = {
+    baseAvatar: 'baseAvatar__6738d',
+    largeAvatar: 'largeAvatar__6738d baseAvatar__6738d',
+    miniAvatar: 'miniAvatar__6738d baseAvatar__6738d'
 };
+e.exports = i;

@@ -1,13 +1,9 @@
-t.d(n, {
-    Z: function () {
-        return r;
-    }
-});
+t.d(n, { Z: () => r });
 var i = t(200651);
 t(192379);
-var a = t(331595);
+var a = t(325767);
 function r(e) {
-    let { width: n = 24, height: t = 24, color: r = 'currentColor', foreground: o, ...l } = e;
+    let { width: n = 24, height: t = 24, color: r = 'currentColor', foreground: s, ...l } = e;
     return (0, i.jsxs)('svg', {
         ...(0, a.Z)(l),
         width: n,
@@ -15,7 +11,7 @@ function r(e) {
         viewBox: '0 0 24 25',
         children: [
             (0, i.jsx)('path', {
-                className: o,
+                className: s,
                 fill: r,
                 fillRule: 'evenodd',
                 clipRule: 'evenodd',
@@ -23,7 +19,7 @@ function r(e) {
                 'aria-hidden': !0
             }),
             (0, i.jsx)('path', {
-                className: o,
+                className: s,
                 fill: r,
                 fillRule: 'evenodd',
                 clipRule: 'evenodd',
@@ -31,7 +27,7 @@ function r(e) {
                 'aria-hidden': !0
             }),
             (0, i.jsx)('path', {
-                className: o,
+                className: s,
                 fill: r,
                 fillRule: 'evenodd',
                 clipRule: 'evenodd',

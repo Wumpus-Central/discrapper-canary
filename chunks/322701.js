@@ -1,6 +1,7 @@
+n.d(t, { Z: () => m });
 var i = n(200651),
-    r = n(192379),
-    l = n(924826),
+    l = n(192379),
+    r = n(924826),
     a = n(91192),
     s = n(442837),
     o = n(215569),
@@ -8,19 +9,19 @@ var i = n(200651),
     d = n(607070),
     u = n(981631),
     h = n(732144);
-t.Z = function (e) {
-    let { rows: t, renderRow: n, renderSection: m, hasSearchQuery: p, sectionFilter: g, footer: f } = e,
-        _ = (0, s.e7)([d.Z], () => d.Z.keyboardModeEnabled),
+let m = function (e) {
+    let { rows: t, renderRow: n, renderSection: m, hasSearchQuery: p, sectionFilter: g, footer: _ } = e,
+        f = (0, s.e7)([d.Z], () => d.Z.keyboardModeEnabled),
         E = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
-        I = (0, l.ZP)({
+        I = (0, r.ZP)({
             id: 'people',
-            isEnabled: _,
+            isEnabled: f,
             async scrollToStart() {},
             async scrollToEnd() {}
         }),
         C = g !== u.pJs.ONLINE && g !== u.pJs.ALL,
         v = E || p || C,
-        N = r.useMemo(
+        N = l.useMemo(
             () =>
                 t.map((e, t) =>
                     0 === e.length
@@ -50,11 +51,11 @@ t.Z = function (e) {
         children: (0, i.jsx)(a.SJ, {
             children: (e) => {
                 let { ref: t, ...n } = e;
-                return (0, i.jsxs)(c.ScrollerAuto, {
+                return (0, i.jsxs)(c.w0Z, {
                     ref: t,
                     className: h.peopleList,
                     ...n,
-                    children: [N, f]
+                    children: [N, _]
                 });
             }
         })

@@ -1,4 +1,5 @@
-var n = {
+n.d(a, { Z: () => i });
+var t = {
         lastWeek: "'el' eeee 'pasado a la' p",
         yesterday: "'ayer a la' p",
         today: "'hoy a la' p",
@@ -6,7 +7,7 @@ var n = {
         nextWeek: "eeee 'a la' p",
         other: 'P'
     },
-    t = {
+    o = {
         lastWeek: "'el' eeee 'pasado a las' p",
         yesterday: "'ayer a las' p",
         today: "'hoy a las' p",
@@ -14,6 +15,6 @@ var n = {
         nextWeek: "eeee 'a las' p",
         other: 'P'
     };
-a.Z = function (e, a, o, i) {
-    return 1 !== a.getUTCHours() ? t[e] : n[e];
+let i = function (e, a, n, i) {
+    return 1 !== a.getUTCHours() ? o[e] : t[e];
 };

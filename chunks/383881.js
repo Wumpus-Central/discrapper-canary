@@ -1,18 +1,14 @@
-r.d(n, {
-    A: function () {
-        return u;
-    },
-    O: function () {
-        return s;
-    }
+n.d(t, {
+    A: () => l,
+    O: () => s
 });
-var i = r(200651);
-r(192379);
-var a = r(772848),
-    o = r(689201);
+var i = n(200651);
+n(192379);
+var r = n(772848),
+    a = n(689201);
 function s() {
     return (0, i.jsx)('svg', {
-        className: o.headerWave,
+        className: a.headerWave,
         version: '1.1',
         preserveAspectRatio: 'none',
         xmlns: 'http://www.w3.org/2000/svg',
@@ -27,10 +23,10 @@ function s() {
         })
     });
 }
-let l = (0, a.Z)();
-function u() {
+let o = (0, r.Z)();
+function l() {
     return (0, i.jsxs)('svg', {
-        className: o.bodyWave,
+        className: a.bodyWave,
         version: '1.1',
         preserveAspectRatio: 'none',
         xmlns: 'http://www.w3.org/2000/svg',
@@ -41,7 +37,7 @@ function u() {
         xmlSpace: 'preserve',
         children: [
             (0, i.jsxs)('linearGradient', {
-                id: l,
+                id: o,
                 gradientUnits: 'userSpaceOnUse',
                 x1: '-13.3959',
                 y1: '82.1225',
@@ -50,20 +46,20 @@ function u() {
                 children: [
                     (0, i.jsx)('stop', {
                         offset: '0',
-                        className: o.bodyWaveGradientStop1
+                        className: a.bodyWaveGradientStop1
                     }),
                     (0, i.jsx)('stop', {
                         offset: '0.5',
-                        className: o.bodyWaveGradientStop2
+                        className: a.bodyWaveGradientStop2
                     }),
                     (0, i.jsx)('stop', {
                         offset: '1',
-                        className: o.bodyWaveGradientStop3
+                        className: a.bodyWaveGradientStop3
                     })
                 ]
             }),
             (0, i.jsx)('path', {
-                style: { fill: 'url(#'.concat(l, ')') },
+                style: { fill: 'url(#'.concat(o, ')') },
                 d: 'M0,1619c507-247.2,1154.7-241,1512-194.7V548.5c-150.9,56.4-400.3,51.2-691-222.6C506.6,29.9,186.8-16.5,0,4.3  V1619z'
             })
         ]

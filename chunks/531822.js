@@ -1,14 +1,15 @@
 e.exports = {
-    card: 'card_a34ba1',
-    subTextRow: 'subTextRow_a34ba1 subText_a34ba1',
-    subTextHeader: 'subTextHeader_a34ba1 subText_a34ba1',
-    codeText: 'codeText_a34ba1',
-    headerText: 'headerText_a34ba1',
-    cardHeader: 'cardHeader_a34ba1',
-    giftCodeRow: 'giftCodeRow_a34ba1',
-    generateCodeRow: 'generateCodeRow_a34ba1 giftCodeRow_a34ba1',
-    gameName: 'gameName_a34ba1',
-    expandIcon: 'expandIcon_a34ba1',
-    spinner: 'spinner_a34ba1',
-    seasonalGiftBox: 'seasonalGiftBox_a34ba1'
+    card: 'card__6bc46',
+    subText: 'subText__6bc46',
+    subTextRow: 'subTextRow__6bc46 subText__6bc46',
+    subTextHeader: 'subTextHeader__6bc46 subText__6bc46',
+    codeText: 'codeText__6bc46',
+    headerText: 'headerText__6bc46',
+    cardHeader: 'cardHeader__6bc46',
+    giftCodeRow: 'giftCodeRow__6bc46',
+    generateCodeRow: 'generateCodeRow__6bc46 giftCodeRow__6bc46',
+    gameName: 'gameName__6bc46',
+    expandIcon: 'expandIcon__6bc46',
+    spinner: 'spinner__6bc46',
+    seasonalGiftBox: 'seasonalGiftBox__6bc46'
 };

@@ -1,7 +1,8 @@
-e.exports = {
-    modalOverrideBody: 'modalOverrideBody_e84a32',
-    modalOverrideSliderBody: 'modalOverrideSliderBody_e84a32',
-    confettiCanvas: 'confettiCanvas_e84a32',
-    customConfetti: 'customConfetti_e84a32',
-    hidden: 'hidden_e84a32'
+var i = {
+    modalOverrideBody: 'modalOverrideBody__34eac',
+    modalOverrideSliderBody: 'modalOverrideSliderBody__34eac',
+    confettiCanvas: 'confettiCanvas__34eac',
+    customConfetti: 'customConfetti__34eac',
+    hidden: 'hidden__34eac'
 };
+e.exports = i;

@@ -1,10 +1,13 @@
 e.exports = {
-    nitroGemAnimation: 'nitroGemAnimation_ba5739',
-    gemBackgroundFill: 'gemBackgroundFill_ba5739',
-    progressCircle: 'progressCircle_ba5739',
-    activeProgressCircle: 'activeProgressCircle_ba5739',
-    activeProgressCircleAnimation: 'activeProgressCircleAnimation_ba5739',
-    avatarDecoContainer: 'avatarDecoContainer_ba5739',
-    avatarDeco: 'avatarDeco_ba5739',
-    avatarDecoImage: 'avatarDecoImage_ba5739'
+    nitroGemAnimation: 'nitroGemAnimation__7d30a',
+    gemGlow: 'gemGlow__7d30a',
+    gemBackgroundFill: 'gemBackgroundFill__7d30a',
+    progressCircle: 'progressCircle__7d30a',
+    activeProgressCircle: 'activeProgressCircle__7d30a',
+    activeProgressCircleAnimation: 'activeProgressCircleAnimation__7d30a',
+    glow: 'glow__7d30a',
+    pulse: 'pulse__7d30a',
+    avatarDecoContainer: 'avatarDecoContainer__7d30a',
+    avatarDeco: 'avatarDeco__7d30a',
+    avatarDecoImage: 'avatarDecoImage__7d30a'
 };

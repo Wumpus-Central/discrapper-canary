@@ -1,30 +1,26 @@
-r.d(n, {
-    k: function () {
-        return u;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(939350),
-    l = r(450793);
-function u(e) {
-    let { contents: n, label: r, className: a, color: u = 'default' } = e;
-    return 0 === n.length
+n.d(t, { k: () => l });
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(939350),
+    o = n(450793);
+function l(e) {
+    let { contents: t, label: n, className: r, color: l = 'default' } = e;
+    return 0 === t.length
         ? null
         : (0, i.jsxs)('div', {
-              'aria-label': r,
+              'aria-label': n,
               role: 'group',
-              className: a,
+              className: r,
               children: [
-                  null != r
+                  null != n
                       ? (0, i.jsx)('div', {
-                            className: o()(l.groupLabel, l.hideInteraction, s._[u]),
-                            children: r
+                            className: a()(o.groupLabel, o.hideInteraction, s._[l]),
+                            children: n
                         })
                       : null,
-                  n
+                  t
               ]
           });
 }

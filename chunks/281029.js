@@ -1,13 +1,7 @@
 n.d(t, {
-    Dn: function () {
-        return h;
-    },
-    if: function () {
-        return d;
-    },
-    ig: function () {
-        return o;
-    }
+    Dn: () => h,
+    if: () => u,
+    ig: () => o
 }),
     n(47120),
     n(733860),
@@ -56,18 +50,18 @@ function c(e, t) {
         i
     );
 }
-function u(e) {
+function d(e) {
     return {
         referenceId: e.id,
         parentId: e.parent_id
     };
 }
-function d(e, t, n, i, r) {
+function u(e, t, n, i, r) {
     if (null == e || null == n) return null;
-    let { GUILD_CATEGORY: d } = a.d4z;
-    if (e.type === d)
-        return i === t || (i < t && e.type === n.type)
-            ? u(n)
+    let { GUILD_CATEGORY: u } = a.d4z;
+    return e.type === u
+        ? i === t || (i < t && e.type === n.type)
+            ? d(n)
             : i > t
               ? (function (e, t, n) {
                     var i;
@@ -83,114 +77,114 @@ function d(e, t, n, i, r) {
                             }
                           : null;
                 })(e, n, r)
-              : null;
-    if (o(e.type, n.type)) return u(n);
-    if (i < t)
-        return n.type === d
-            ? (function (e, t, n) {
-                  var i;
-                  let r = n[(null !== (i = c(t, n, !0)) && void 0 !== i ? i : 0) - 1],
-                      a = s(1, t.id, e.type, n);
-                  if (null == r)
-                      return {
-                          referenceId: null,
-                          parentId: null
-                      };
-                  if (null != a) {
-                      if (o(r.channel.type, e.type) || (e.isGuildVocal() && (0, l.r8)(r.channel.type)))
+              : null
+        : o(e.type, n.type)
+          ? d(n)
+          : i < t
+            ? n.type === u
+                ? (function (e, t, n) {
+                      var i;
+                      let r = n[(null !== (i = c(t, n, !0)) && void 0 !== i ? i : 0) - 1],
+                          a = s(1, t.id, e.type, n);
+                      if (null == r)
                           return {
-                              referenceId: a.channel.id,
-                              parentId: r.channel.parent_id
+                              referenceId: null,
+                              parentId: null
                           };
-                      if (r.channel.isCategory())
-                          return {
-                              referenceId: a.channel.id,
-                              parentId: r.channel.id
-                          };
-                  }
-                  return null;
-              })(e, n, r)
-            : (function (e, t, n) {
-                  var i;
-                  let r = n[(null !== (i = c(t, n, !0)) && void 0 !== i ? i : 0) - 1],
-                      a = s(1, t.id, e.type, n);
-                  return null != r || e.isGuildVocal()
-                      ? (0, l.r8)(e.type) && null != a && ((0, l.r8)(r.channel.type) || r.channel.isCategory())
-                          ? {
+                      if (null != a) {
+                          if (o(r.channel.type, e.type) || (e.isGuildVocal() && (0, l.r8)(r.channel.type)))
+                              return {
+                                  referenceId: a.channel.id,
+                                  parentId: r.channel.parent_id
+                              };
+                          if (r.channel.isCategory())
+                              return {
+                                  referenceId: a.channel.id,
+                                  parentId: r.channel.id
+                              };
+                      }
+                      return null;
+                  })(e, n, r)
+                : (function (e, t, n) {
+                      var i;
+                      let r = n[(null !== (i = c(t, n, !0)) && void 0 !== i ? i : 0) - 1],
+                          a = s(1, t.id, e.type, n);
+                      return null != r || e.isGuildVocal()
+                          ? (0, l.r8)(e.type) && null != a && ((0, l.r8)(r.channel.type) || r.channel.isCategory())
+                              ? {
+                                    referenceId: a.channel.id,
+                                    parentId: t.parent_id
+                                }
+                              : null
+                          : {
+                                referenceId: null != a ? a.channel.id : null,
+                                parentId: null
+                            };
+                  })(e, n, r)
+            : n.type === u
+              ? (function (e, t, n) {
+                    var i;
+                    let r = n[(null !== (i = c(t, n, !0)) && void 0 !== i ? i : 0) + 1],
+                        a = s(-1, t.id, e.type, n);
+                    if (null != a) {
+                        if (null == r)
+                            return {
                                 referenceId: a.channel.id,
-                                parentId: t.parent_id
-                            }
-                          : null
-                      : {
-                            referenceId: null != a ? a.channel.id : null,
-                            parentId: null
-                        };
-              })(e, n, r);
-    return n.type === d
-        ? (function (e, t, n) {
-              var i;
-              let r = n[(null !== (i = c(t, n, !0)) && void 0 !== i ? i : 0) + 1],
-                  a = s(-1, t.id, e.type, n);
-              if (null != a) {
-                  if (null == r)
-                      return {
-                          referenceId: a.channel.id,
-                          parentId: t.id
-                      };
-                  if (o(r.channel.type, e.type) || ((0, l.r8)(e.type) && r.channel.isGuildVocal()))
-                      return {
-                          referenceId: a.channel.id,
-                          parentId: r.channel.parent_id
-                      };
-                  if (r.channel.isCategory())
-                      return {
-                          referenceId: a.channel.id,
-                          parentId: t.id
-                      };
-              }
-              return null;
-          })(e, n, r)
-        : (function (e, t, n) {
-              var i;
-              let l = n[(null !== (i = c(t, n, !0)) && void 0 !== i ? i : 0) + 1],
-                  r = s(-1, t.id, e.type, n);
-              if (null == r) return null;
-              if (e.isGuildVocal()) {
-                  if (null == l || l.channel.isCategory())
-                      return {
-                          referenceId: r.channel.id,
-                          parentId: t.parent_id
-                      };
-                  if (l.channel.isGuildVocal())
-                      return {
-                          referenceId: r.channel.id,
-                          parentId: l.channel.parent_id
-                      };
-              }
-              return e.isCategory() && (null == l || l.channel.isCategory())
-                  ? {
-                        referenceId: r.channel.id,
-                        parentId: null
+                                parentId: t.id
+                            };
+                        if (o(r.channel.type, e.type) || ((0, l.r8)(e.type) && r.channel.isGuildVocal()))
+                            return {
+                                referenceId: a.channel.id,
+                                parentId: r.channel.parent_id
+                            };
+                        if (r.channel.isCategory())
+                            return {
+                                referenceId: a.channel.id,
+                                parentId: t.id
+                            };
                     }
-                  : null;
-          })(e, n, r);
+                    return null;
+                })(e, n, r)
+              : (function (e, t, n) {
+                    var i;
+                    let l = n[(null !== (i = c(t, n, !0)) && void 0 !== i ? i : 0) + 1],
+                        r = s(-1, t.id, e.type, n);
+                    if (null == r) return null;
+                    if (e.isGuildVocal()) {
+                        if (null == l || l.channel.isCategory())
+                            return {
+                                referenceId: r.channel.id,
+                                parentId: t.parent_id
+                            };
+                        if (l.channel.isGuildVocal())
+                            return {
+                                referenceId: r.channel.id,
+                                parentId: l.channel.parent_id
+                            };
+                    }
+                    return e.isCategory() && (null == l || l.channel.isCategory())
+                        ? {
+                              referenceId: r.channel.id,
+                              parentId: null
+                          }
+                        : null;
+                })(e, n, r);
 }
 function h(e, t, n, a) {
     let o,
         s,
-        u = [],
         d = [],
+        u = [],
         h = a._categories,
         p = (t) => {
-            var n, i, l, a;
-            let c;
-            if (null == o || null == s || ((n = e), (i = o), (l = s), (a = t), null != i && null != l && null != a[i] && a[i].channel === n && null != a[l] ? 0 : 1)) c = [...t];
-            else c = r.ZP.moveItemFromTo(t, o, s);
+            var n, i;
+            let l;
             return (
-                (u = u.concat(
+                (l = null == o || null == s || ((n = o), (i = s), null != n && null != i && null != t[n] && t[n].channel === e && null != t[i] ? 0 : 1) ? [...t] : r.ZP.moveItemFromTo(t, o, s)),
+                (d = d.concat(
                     r.ZP.calculatePositionDeltas({
                         oldOrdering: t,
-                        newOrdering: c,
+                        newOrdering: l,
                         idGetter: (e) => {
                             let { channel: t } = e;
                             return t.id;
@@ -201,15 +195,15 @@ function h(e, t, n, a) {
                         }
                     })
                 )),
-                c
+                l
             );
         };
     if (e.isCategory()) {
         let n = [...h].slice(1);
-        (o = c(e, n)), (s = c(t, n)), (d = p(n)).unshift(h[0]);
+        (o = c(e, n)), (s = c(t, n)), (u = p(n)).unshift(h[0]);
     }
     if ((0, l.r8)(e.type) || e.isCategory()) {
-        let n = (0, i.Z)(d.length > 0 ? d : h, a, (e) => {
+        let n = (0, i.Z)(u.length > 0 ? u : h, a, (e) => {
             let {
                 channel: { type: t }
             } = e;
@@ -218,7 +212,7 @@ function h(e, t, n, a) {
         (o = c(e, n)), (s = c(t, n)), p(n);
     }
     if (e.isGuildVocal() || e.isCategory()) {
-        let n = (0, i.Z)(d.length > 0 ? d : h, a, (e) => {
+        let n = (0, i.Z)(u.length > 0 ? u : h, a, (e) => {
             let { channel: t } = e;
             return t.isGuildVocal();
         });
@@ -226,12 +220,12 @@ function h(e, t, n, a) {
     }
     if (e.parent_id !== n) {
         let t = !1;
-        u.find((i) => i.id === e.id && ((i.parent_id = n), (t = !0))),
-            !t &&
-                u.push({
+        d.find((i) => i.id === e.id && ((i.parent_id = n), (t = !0))),
+            t ||
+                d.push({
                     id: e.id,
                     parent_id: n
                 });
     }
-    return u;
+    return d;
 }

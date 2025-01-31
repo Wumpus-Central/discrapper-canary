@@ -1,2 +1,2 @@
-var n = Array.isArray;
-e.exports = n;
+var t = Array.isArray;
+e.exports = t;

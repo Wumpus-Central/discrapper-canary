@@ -1,57 +1,53 @@
-t.d(n, {
-    Z: function () {
-        return v;
-    }
-});
+t.d(n, { Z: () => v });
 var i = t(200651);
 t(192379);
 var l = t(442837),
     o = t(481060),
-    r = t(353647),
-    s = t(63063),
-    c = t(369566),
-    a = t(678738),
+    s = t(353647),
+    r = t(63063),
+    a = t(369566),
+    c = t(678738),
     d = t(151545),
     u = t(744802),
-    f = t(493043),
-    m = t(228168),
+    m = t(493043),
+    x = t(228168),
     p = t(981631),
-    I = t(388032),
-    x = t(189144),
+    f = t(388032),
+    I = t(189144),
     h = t(731218);
 function v(e) {
-    let { user: n, currentUser: t, profileGuildId: v, subsection: g, onClose: Z } = e,
-        { live: j, recent: _, stream: b } = (0, c.Z)(n.id),
-        E = j.length > 0 || _.length > 0 || null != b,
-        N = (0, l.e7)([r.Z], () => r.Z.isFetchingUserOutbox(n.id));
-    return !E && N
+    let { user: n, currentUser: t, profileGuildId: v, subsection: Z, onClose: _ } = e,
+        { live: g, recent: j, stream: E } = (0, a.Z)(n.id),
+        N = g.length > 0 || j.length > 0 || null != E,
+        y = (0, l.e7)([s.Z], () => s.Z.isFetchingUserOutbox(n.id));
+    return !N && y
         ? (0, i.jsx)('div', {
               className: h.empty,
-              children: (0, i.jsx)(o.Spinner, {})
+              children: (0, i.jsx)(o.$jN, {})
           })
-        : (0, i.jsxs)(o.ScrollerThin, {
-              className: x.scroller,
+        : (0, i.jsxs)(o.zJl, {
+              className: I.scroller,
               fade: !0,
               children: [
-                  (0, i.jsxs)(a.Z, {
+                  (0, i.jsxs)(c.Z, {
                       children: [
-                          null != b &&
-                              (0, i.jsx)(f.Z, {
+                          null != E &&
+                              (0, i.jsx)(m.Z, {
                                   location: 'UserProfileModalActivity',
                                   user: n,
                                   currentUser: t,
-                                  stream: b,
-                                  onClose: Z,
+                                  stream: E,
+                                  onClose: _,
                                   profileGuildId: v
                               }),
-                          j.map((e, l) =>
+                          g.map((e, l) =>
                               (0, i.jsx)(
                                   d.Z,
                                   {
                                       user: n,
                                       currentUser: t,
                                       activity: e,
-                                      onClose: Z,
+                                      onClose: _,
                                       profileGuildId: v
                                   },
                                   'live-'.concat(l)
@@ -59,25 +55,25 @@ function v(e) {
                           )
                       ]
                   }),
-                  _.length > 0 &&
-                      (0, i.jsx)(a.Z, {
-                          heading: I.intl.string(I.t.M0zgnZ),
+                  j.length > 0 &&
+                      (0, i.jsx)(c.Z, {
+                          heading: f.intl.string(f.t.M0zgnZ),
                           subheading:
                               n.id === t.id
-                                  ? I.intl.format(I.t['4bk9Ag'], {
+                                  ? f.intl.format(f.t['4bk9Ag'], {
                                         learnMoreHook: (e, n) =>
                                             (0, i.jsx)(
-                                                o.Anchor,
+                                                o.eee,
                                                 {
-                                                    href: s.Z.getArticleURL(p.BhN.ACTIVITY_STATUS_SETTINGS),
+                                                    href: r.Z.getArticleURL(p.BhN.ACTIVITY_STATUS_SETTINGS),
                                                     children: e
                                                 },
                                                 n
                                             )
                                     })
                                   : void 0,
-                          scrollIntoView: g === m.Tb.RECENT_ACTIVITY,
-                          children: _.map((e) =>
+                          scrollIntoView: Z === x.Tb.RECENT_ACTIVITY,
+                          children: j.map((e) =>
                               (0, i.jsx)(
                                   u.Z,
                                   {
@@ -86,7 +82,7 @@ function v(e) {
                                       currentUser: t,
                                       entry: e,
                                       profileGuildId: v,
-                                      onClose: Z
+                                      onClose: _
                                   },
                                   e.id
                               )

@@ -1,19 +1,9 @@
 n.d(t, {
-    Bd: function () {
-        return r;
-    },
-    I5: function () {
-        return l;
-    },
-    tq: function () {
-        return s;
-    },
-    uz: function () {
-        return a;
-    },
-    ye: function () {
-        return i;
-    }
+    Bd: () => r,
+    I5: () => l,
+    tq: () => s,
+    uz: () => a,
+    ye: () => i
 }),
     n(47120);
 let i = new Set(['Enter', 'Tab']),

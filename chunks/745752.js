@@ -1,96 +1,88 @@
-r.d(n, {
-    I1: function () {
-        return y;
-    },
-    eM: function () {
-        return E;
-    },
-    rK: function () {
-        return v;
-    },
-    rj: function () {
-        return g;
-    }
-});
-var i = r(789020);
-var a = r(544891),
-    o = r(570140),
-    s = r(367907),
-    l = r(314897),
-    u = r(271383),
-    c = r(430824),
-    d = r(626135),
-    f = r(630388),
-    p = r(45966),
-    h = r(290511),
-    _ = r(981631),
-    m = r(372897);
-function g(e) {
-    d.default.track(_.rMx.GUILD_ONBOARDING_LOADED, {
-        ...(0, s.hH)(e),
+n.d(t, {
+    I1: () => E,
+    eM: () => m,
+    rK: () => g,
+    rj: () => h
+}),
+    n(789020);
+var i = n(544891),
+    r = n(570140),
+    a = n(367907),
+    s = n(314897),
+    o = n(271383),
+    l = n(430824),
+    u = n(626135),
+    c = n(630388),
+    d = n(45966),
+    f = n(290511),
+    _ = n(981631),
+    p = n(372897);
+function h(e) {
+    u.default.track(_.rMx.GUILD_ONBOARDING_LOADED, {
+        ...(0, a.hH)(e),
         has_new_prompts: !1,
         number_of_prompts: 0
     });
 }
-function E(e) {
+function m(e) {
     return (
-        o.Z.dispatch({
+        r.Z.dispatch({
             type: 'GUILD_ONBOARDING_PROMPTS_FETCH_START',
             guildId: e
         }),
-        a.tn
+        i.tn
             .get({
                 url: _.ANM.GUILD_ONBOARDING(e),
                 rejectWithError: !1
             })
             .then(
-                (n) => {
-                    let { body: r } = n,
-                        i = (0, h.cf)(r);
-                    return o.Z.dispatch({
+                (t) => {
+                    let { body: n } = t,
+                        i = (0, f.cf)(n);
+                    return r.Z.dispatch({
                         type: 'GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS',
                         guildId: e,
                         ...i
                     }).then(() => i.prompts);
                 },
-                (n) => (
-                    o.Z.dispatch({
+                (t) => (
+                    r.Z.dispatch({
                         type: 'GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE',
                         guildId: e
                     }),
-                    n
+                    t
                 )
             )
     );
 }
-async function v(e) {
-    var n, r;
-    let i = l.default.getId(),
-        a = (0, f.yE)(null !== (r = null === (n = u.ZP.getMember(e, i)) || void 0 === n ? void 0 : n.flags) && void 0 !== r ? r : 0, m.q.COMPLETED_ONBOARDING),
-        o = c.Z.getGuild(e);
-    if (null == o || !o.hasFeature(_.oNc.GUILD_ONBOARDING)) return Promise.resolve();
-    let s = p.Z.shouldFetchPrompts(e),
-        d = p.Z.getOnboardingPrompts(e);
-    if (!s && d.length > 0) return d.every((e) => !e.inOnboarding) ? (I(e), Promise.resolve()) : (!a && y(e), Promise.resolve());
-    let h = await E(e);
-    return Array.isArray(h) && h.every((e) => !e.inOnboarding) ? (I(e), Promise.resolve()) : (!a && y(e), h);
+async function g(e) {
+    var t, n;
+    let i = s.default.getId(),
+        r = (0, c.yE)(null !== (n = null === (t = o.ZP.getMember(e, i)) || void 0 === t ? void 0 : t.flags) && void 0 !== n ? n : 0, p.q.COMPLETED_ONBOARDING),
+        a = l.Z.getGuild(e);
+    if (null == a || !a.hasFeature(_.oNc.GUILD_ONBOARDING)) return Promise.resolve();
+    let u = d.Z.shouldFetchPrompts(e),
+        f = d.Z.getOnboardingPrompts(e);
+    if (!u && f.length > 0) return f.every((e) => !e.inOnboarding) ? y(e) : r || E(e), Promise.resolve();
+    let h = await m(e);
+    return Array.isArray(h) && h.every((e) => !e.inOnboarding) ? (y(e), Promise.resolve()) : (r || E(e), h);
 }
-function y(e) {
-    o.Z.dispatch({
+function E(e) {
+    r.Z.dispatch({
         type: 'GUILD_ONBOARDING_START',
         guildId: e
     });
 }
-let b = -2;
-function I(e) {
-    d.default.track(_.rMx.GUILD_ONBOARDING_STEP_VIEWED, {
-        ...(0, s.hH)(e),
-        step: b,
+let v = -2;
+function y(e) {
+    u.default.track(_.rMx.GUILD_ONBOARDING_STEP_VIEWED, {
+        ...(0, a.hH)(e),
+        step: v,
         required: !0
     }),
-        d.default.track(_.rMx.GUILD_ONBOARDING_STEP_COMPLETED, {
-            ...(0, s.hH)(e),
-            step: b,
+        u.default.track(_.rMx.GUILD_ONBOARDING_STEP_COMPLETED, {
+            ...(0, a.hH)(e),
+            step: v,
             skipped: !1,
             is_final_step: !0,
             in_onboarding: !0

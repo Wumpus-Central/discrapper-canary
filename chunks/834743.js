@@ -1,7 +1,7 @@
-n(47120);
+n.d(t, { Z: () => p }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(442837),
+    l = n(192379),
+    r = n(442837),
     a = n(324262),
     s = n(623624),
     o = n(650774),
@@ -9,7 +9,7 @@ var i = n(200651),
     d = n(921944),
     u = n(388032),
     h = n(241626);
-class m extends r.PureComponent {
+class m extends l.PureComponent {
     render() {
         let { guild: e, memberCount: t, markAsDismissed: n } = this.props;
         return (0, i.jsx)(a.Z, {
@@ -25,11 +25,10 @@ class m extends r.PureComponent {
         });
     }
     constructor(...e) {
-        var t, n, i;
+        var t, n;
         super(...e),
-            (t = this),
-            (n = 'handleButtonClick'),
-            (i = () => {
+            (t = 'handleButtonClick'),
+            (n = () => {
                 let { guild: e } = this.props;
                 (0, s.f)({
                     guildId: e.id,
@@ -39,17 +38,17 @@ class m extends r.PureComponent {
                     }
                 });
             }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: i,
+            t in this
+                ? Object.defineProperty(this, t, {
+                      value: n,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (t[n] = i);
+                : (this[t] = n);
     }
 }
-t.Z = l.ZP.connectStores([o.Z], (e) => {
+let p = r.ZP.connectStores([o.Z], (e) => {
     let { guild: t } = e;
     return { memberCount: o.Z.getMemberCount(t.id) };
 })(m);

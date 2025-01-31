@@ -1,11 +1,7 @@
-r.d(n, {
-    $: function () {
-        return o.$;
-    },
-    Z: function () {
-        return a.Z;
-    }
-});
-var i = r(858685);
-var a = r(324404),
-    o = r(558985);
+n.d(t, {
+    $: () => r.$,
+    Z: () => i.Z
+}),
+    n(858685);
+var i = n(324404),
+    r = n(558985);

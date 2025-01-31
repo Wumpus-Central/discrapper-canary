@@ -1,85 +1,84 @@
-n(47120);
+n.d(t, { Z: () => C }), n(47120);
 var i,
-    r,
     l,
-    a,
-    s = n(392711),
-    o = n.n(s),
-    c = n(442837),
-    d = n(570140),
-    u = n(598077),
-    h = n(594174),
-    m = n(388380),
-    p = n(72937);
-let g = {},
-    f = 0,
+    r,
+    a = n(392711),
+    s = n.n(a),
+    o = n(442837),
+    c = n(570140),
+    d = n(598077),
+    u = n(594174),
+    h = n(388380),
+    m = n(72937);
+let p = {},
+    g = 0,
     _ = !1,
-    E = !1;
-function I(e) {
+    f = !1;
+function E(e) {
     var t;
     let n = null != e.contact_names && e.contact_names.length >= 2 ? e.contact_names.slice(0, 2) : [];
     return {
         key: e.suggested_user.id,
-        name: null === (t = o().first(e.reasons)) || void 0 === t ? void 0 : t.name,
-        user: new u.Z(e.suggested_user),
+        name: null === (t = s().first(e.reasons)) || void 0 === t ? void 0 : t.name,
+        user: new d.Z(e.suggested_user),
         mutualFriendsCount: e.mutual_friends_count,
         contactNames: n
     };
 }
-class C extends (i = c.ZP.Store) {
+class I extends (i = o.ZP.Store) {
     initialize() {
-        this.waitFor(h.default);
+        this.waitFor(u.default);
     }
     getSuggestionCount() {
-        return f;
+        return g;
     }
     getSuggestions() {
-        return Object.entries(g).map((e) => {
+        return Object.entries(p).map((e) => {
             let [t, n] = e;
             return n;
         });
     }
     getSuggestion(e) {
-        return g[e];
+        return p[e];
     }
 }
-(a = 'FriendSuggestionStore'),
-    (l = 'displayName') in (r = C)
-        ? Object.defineProperty(r, l, {
-              value: a,
+(r = 'FriendSuggestionStore'),
+    (l = 'displayName') in I
+        ? Object.defineProperty(I, l, {
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (r[l] = a),
-    (t.Z = new C(d.Z, {
-        CONNECTION_OPEN: function (e) {
-            (g = {}), (f = e.friendSuggestionCount) > 0 ? ((E = !0), _ || !E || ((_ = !0), (E = !1), m.Z.fetch())) : (0, p.Z)();
-        },
-        FRIEND_SUGGESTION_CREATE: function (e) {
-            let t = I(e.suggestion);
-            if (null != g[t.key]) return !1;
-            f++,
-                (g = {
-                    ...g,
-                    [t.key]: t
-                });
-        },
-        FRIEND_SUGGESTION_DELETE: function (e) {
-            (f = Math.max(0, --f)), delete g[e.suggestedUserId];
-        },
-        LOAD_FRIEND_SUGGESTIONS_SUCCESS: function (e) {
-            var t;
-            (_ = !1),
-                (t = e.suggestions),
-                (g = o()
-                    .chain(t)
-                    .map((e) => I(e))
-                    .keyBy((e) => e.key)
-                    .value()),
-                (f = o().keys(g).length);
-        },
-        LOAD_FRIEND_SUGGESTIONS_FAILURE: function () {
-            (_ = !1), (g = {});
-        }
-    }));
+        : (I[l] = r);
+let C = new I(c.Z, {
+    CONNECTION_OPEN: function (e) {
+        (p = {}), (g = e.friendSuggestionCount) > 0 ? ((f = !0), _ || !f || ((_ = !0), (f = !1), h.Z.fetch())) : (0, m.Z)();
+    },
+    FRIEND_SUGGESTION_CREATE: function (e) {
+        let t = E(e.suggestion);
+        if (null != p[t.key]) return !1;
+        g++,
+            (p = {
+                ...p,
+                [t.key]: t
+            });
+    },
+    FRIEND_SUGGESTION_DELETE: function (e) {
+        (g = Math.max(0, --g)), delete p[e.suggestedUserId];
+    },
+    LOAD_FRIEND_SUGGESTIONS_SUCCESS: function (e) {
+        var t;
+        (_ = !1),
+            (t = e.suggestions),
+            (p = s()
+                .chain(t)
+                .map((e) => E(e))
+                .keyBy((e) => e.key)
+                .value()),
+            (g = s().keys(p).length);
+    },
+    LOAD_FRIEND_SUGGESTIONS_FAILURE: function () {
+        (_ = !1), (p = {});
+    }
+});

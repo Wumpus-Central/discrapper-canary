@@ -1,6 +1,2 @@
-n.d(t, {
-    G: function () {
-        return l;
-    }
-});
+n.d(t, { G: () => l });
 let l = 5;

@@ -1,6 +1,2 @@
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });
 let i = 'https://dis.gd/appeal';

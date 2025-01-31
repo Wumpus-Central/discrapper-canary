@@ -1,73 +1,69 @@
-r.d(n, {
-    u: function () {
-        return c;
-    }
-});
-var i = r(964742),
-    a = r(304832);
-function o(e, n) {
-    var r = Object.keys(e);
+n.d(t, { u: () => u });
+var i = n(964742),
+    r = n(304832);
+function a(e, t) {
+    var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var i = Object.getOwnPropertySymbols(e);
-        n &&
-            (i = i.filter(function (n) {
-                return Object.getOwnPropertyDescriptor(e, n).enumerable;
+        t &&
+            (i = i.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            r.push.apply(r, i);
+            n.push.apply(n, i);
     }
-    return r;
+    return n;
 }
 function s(e) {
-    for (var n = 1; n < arguments.length; n++) {
-        var r = null != arguments[n] ? arguments[n] : {};
-        n % 2
-            ? o(Object(r), !0).forEach(function (n) {
-                  l(e, n, r[n]);
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {};
+        t % 2
+            ? a(Object(n), !0).forEach(function (t) {
+                  o(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : o(Object(r)).forEach(function (n) {
-                    Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(r, n));
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
+              : a(Object(n)).forEach(function (t) {
+                    Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
                 });
     }
     return e;
 }
-function l(e, n, r) {
+function o(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-var u = {
+var l = {
     initialSourceClientOffset: null,
     initialClientOffset: null,
     clientOffset: null
 };
-function c() {
-    var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u,
-        n = arguments.length > 1 ? arguments[1] : void 0,
-        r = n.payload;
-    switch (n.type) {
+function u() {
+    var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l,
+        t = arguments.length > 1 ? arguments[1] : void 0,
+        n = t.payload;
+    switch (t.type) {
         case i.TL:
         case i.qu:
             return {
-                initialSourceClientOffset: r.sourceClientOffset,
-                initialClientOffset: r.clientOffset,
-                clientOffset: r.clientOffset
+                initialSourceClientOffset: n.sourceClientOffset,
+                initialClientOffset: n.clientOffset,
+                clientOffset: n.clientOffset
             };
         case i.$T:
-            if ((0, a.YJ)(e.clientOffset, r.clientOffset)) return e;
-            return s(s({}, e), {}, { clientOffset: r.clientOffset });
+            if ((0, r.YJ)(e.clientOffset, n.clientOffset)) return e;
+            return s(s({}, e), {}, { clientOffset: n.clientOffset });
         case i.Bs:
         case i.rp:
-            return u;
+            return l;
         default:
             return e;
     }

@@ -1,9 +1,4 @@
-var i;
-r.d(n, {
-    J: function () {
-        return i;
-    }
-}),
-    !(function (e) {
-        (e.NICKNAME_UPDATE = 'nickname_update'), (e.NICKNAME_RESET = 'nickname_reset');
-    })(i || (i = {}));
+n.d(t, { J: () => i });
+var i = (function (e) {
+    return (e.NICKNAME_UPDATE = 'nickname_update'), (e.NICKNAME_RESET = 'nickname_reset'), e;
+})({});

@@ -1,6 +1,2 @@
-function i(e, n) {}
-r.d(n, {
-    _: function () {
-        return i;
-    }
-});
+function i(e, t) {}
+n.d(t, { _: () => i });

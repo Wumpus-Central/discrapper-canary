@@ -1,83 +1,85 @@
+n.d(t, { Z: () => v });
 var i,
-    a = r(392711),
-    o = r.n(a),
-    s = r(442837),
-    l = r(433517),
-    u = r(570140),
-    c = r(65154);
-function d(e, n, r) {
+    r = n(392711),
+    a = n.n(r),
+    s = n(442837),
+    o = n(433517),
+    l = n(570140),
+    u = n(65154);
+function c(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let f = 'CertifiedDeviceStore',
-    p = {},
-    h = {},
-    _ = 0;
-function m(e, n, r) {
-    let i = h[e];
-    return null != i ? r(i) : n;
+let d = 'CertifiedDeviceStore',
+    f = {},
+    _ = {},
+    p = 0;
+function h(e, t, n) {
+    let i = _[e];
+    return null != i ? n(i) : t;
 }
-function g(e, n) {
-    let r = p[e];
-    null != r && r.forEach((e) => delete h[e.id]), (p[e] = n), n.forEach((e) => (h[e.id] = e));
+function m(e, t) {
+    let n = f[e];
+    null != n && n.forEach((e) => delete _[e.id]), (f[e] = t), t.forEach((e) => (_[e.id] = e));
 }
-function E(e) {
-    let { applicationId: n, devices: r } = e;
-    g(n, r), l.K.set(f, p), _++;
+function g(e) {
+    let { applicationId: t, devices: n } = e;
+    m(t, n), o.K.set(d, f), p++;
 }
-class v extends (i = s.ZP.Store) {
+class E extends (i = s.ZP.Store) {
     initialize() {
-        let e = l.K.get(f);
+        let e = o.K.get(d);
         null != e &&
-            o().forEach(e, (e, n) => {
+            a().forEach(e, (e, t) => {
                 e.forEach((e) => {
                     'audioinput' === e.type && e.hardwareMute && (e.hardwareMute = !1);
                 }),
-                    g(n, e);
+                    m(t, e);
             });
     }
     isCertified(e) {
-        return null != h[e];
+        return null != _[e];
     }
     getCertifiedDevice(e) {
-        return h[e];
+        return _[e];
     }
-    getCertifiedDeviceName(e, n) {
-        let r = this.getCertifiedDevice(e);
-        return null != r ? ''.concat(r.vendor.name, ' ').concat(r.model.name) : n;
+    getCertifiedDeviceName(e, t) {
+        let n = this.getCertifiedDevice(e);
+        return null != n ? ''.concat(n.vendor.name, ' ').concat(n.model.name) : t;
     }
     getCertifiedDeviceByType(e) {
-        return o().find(h, (n) => n.type === e);
+        return a().find(_, (t) => t.type === e);
     }
     isHardwareMute(e) {
-        return m(e, !1, (e) => e.type === c.h7.AUDIO_INPUT && e.hardwareMute);
+        return h(e, !1, (e) => e.type === u.h7.AUDIO_INPUT && e.hardwareMute);
     }
     hasEchoCancellation(e) {
-        return m(e, !1, (e) => e.type === c.h7.AUDIO_INPUT && e.echoCancellation);
+        return h(e, !1, (e) => e.type === u.h7.AUDIO_INPUT && e.echoCancellation);
     }
     hasNoiseSuppression(e) {
-        return m(e, !1, (e) => e.type === c.h7.AUDIO_INPUT && e.noiseSuppression);
+        return h(e, !1, (e) => e.type === u.h7.AUDIO_INPUT && e.noiseSuppression);
     }
     hasAutomaticGainControl(e) {
-        return m(e, !1, (e) => e.type === c.h7.AUDIO_INPUT && e.automaticGainControl);
+        return h(e, !1, (e) => e.type === u.h7.AUDIO_INPUT && e.automaticGainControl);
     }
     getVendor(e) {
-        return m(e, null, (e) => e.vendor);
+        return h(e, null, (e) => e.vendor);
     }
     getModel(e) {
-        return m(e, null, (e) => e.model);
+        return h(e, null, (e) => e.model);
     }
     getRevision() {
-        return _;
+        return p;
     }
 }
-d(v, 'displayName', 'CertifiedDeviceStore'), (n.Z = new v(u.Z, { CERTIFIED_DEVICES_SET: E }));
+c(E, 'displayName', 'CertifiedDeviceStore');
+let v = new E(l.Z, { CERTIFIED_DEVICES_SET: g });

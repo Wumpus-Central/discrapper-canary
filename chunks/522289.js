@@ -1,68 +1,64 @@
-r.d(n, {
-    Z: function () {
-        return f;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(392711),
-    l = r.n(s),
-    u = r(481060),
-    c = r(565138),
-    d = r(357498);
-function f(e) {
-    let { className: n, maxGuilds: r, guilds: a, onFocus: s, onClick: f, size: p = c.Z.Sizes.SMALLER, hideOverflowCount: h = !1, disableGuildNameTooltip: _ = !1 } = e;
-    function m() {
-        let e = l()(a)
-                .take(r)
+n.d(t, { Z: () => d });
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(392711),
+    o = n.n(s),
+    l = n(481060),
+    u = n(565138),
+    c = n(357498);
+function d(e) {
+    let { className: t, maxGuilds: n, guilds: r, onFocus: s, onClick: d, size: f = u.Z.Sizes.SMALLER, hideOverflowCount: _ = !1, disableGuildNameTooltip: p = !1 } = e;
+    function h() {
+        let e = o()(r)
+                .take(n)
                 .map((e) => {
-                    let n = e.name;
-                    return _
+                    let t = e.name;
+                    return p
                         ? (0, i.jsx)('div', {
-                              className: d.avatar,
-                              children: (0, i.jsx)(c.Z, {
+                              className: c.avatar,
+                              children: (0, i.jsx)(u.Z, {
                                   guild: e,
-                                  onClick: f,
-                                  size: p,
+                                  onClick: d,
+                                  size: f,
                                   showTooltip: !1
                               })
                           })
                         : (0, i.jsx)(
-                              u.TooltipContainer,
+                              l.DY3,
                               {
-                                  text: n,
-                                  className: d.avatar,
-                                  children: (0, i.jsx)(c.Z, {
+                                  text: t,
+                                  className: c.avatar,
+                                  children: (0, i.jsx)(u.Z, {
                                       guild: e,
-                                      onClick: f,
-                                      size: p
+                                      onClick: d,
+                                      size: f
                                   })
                               },
                               e.id
                           );
                 })
                 .value(),
-            n = a.length - r;
+            t = r.length - n;
         return (
-            n > 0 &&
-                !h &&
-                (e[e.length - 1] = (0, i.jsxs)(u.Button, {
-                    className: o()(d.avatar, d.overflow),
+            t > 0 &&
+                !_ &&
+                (e[e.length - 1] = (0, i.jsxs)(l.zxk, {
+                    className: a()(c.avatar, c.overflow),
                     onFocus: s,
-                    onClick: (e) => (null == f ? void 0 : f(e)),
-                    look: u.Button.Looks.BLANK,
-                    size: u.Button.Sizes.NONE,
-                    children: ['+', n + 1]
+                    onClick: (e) => (null == d ? void 0 : d(e)),
+                    look: l.zxk.Looks.BLANK,
+                    size: l.zxk.Sizes.NONE,
+                    children: ['+', t + 1]
                 })),
             e
         );
     }
-    return a.length <= 0
+    return r.length <= 0
         ? null
         : (0, i.jsx)('div', {
-              className: o()(n, d.avatars),
-              children: m()
+              className: a()(t, c.avatars),
+              children: h()
           });
 }

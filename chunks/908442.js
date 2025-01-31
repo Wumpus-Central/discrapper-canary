@@ -1,16 +1,8 @@
-r.d(n, {
-    F$: function () {
-        return o;
-    },
-    S6: function () {
-        return a;
-    },
-    ZF: function () {
-        return s;
-    },
-    o0: function () {
-        return i;
-    }
+n.d(t, {
+    F$: () => a,
+    S6: () => r,
+    ZF: () => s,
+    o0: () => i
 });
 let i = {
         discord_marketing: 'Discord Marketing',
@@ -19,7 +11,7 @@ let i = {
         discord_android: 'Discord Android',
         discord_developers: 'Discord Developers'
     },
-    a = [
+    r = [
         {
             value: 3600,
             label: '1 Hour'
@@ -49,7 +41,7 @@ let i = {
             label: '1 Month'
         }
     ],
-    o = [
+    a = [
         {
             value: 'all',
             label: 'All'

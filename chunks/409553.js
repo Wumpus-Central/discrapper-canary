@@ -1,54 +1,50 @@
-t.d(n, {
-    Z: function () {
-        return u;
-    }
-});
-var o = t(200651),
-    i = t(192379),
-    r = t(481060),
-    c = t(63063),
-    s = t(921869),
-    a = t(981631),
-    l = t(388032),
-    d = t(493358);
+n.d(t, { Z: () => u });
+var o = n(200651),
+    i = n(192379),
+    r = n(481060),
+    s = n(63063),
+    a = n(921869),
+    l = n(981631),
+    c = n(388032),
+    d = n(493358);
 function u(e) {
-    let { onContinue: n, onClose: t } = e,
-        u = c.Z.getArticleURL(a.BhN.XBOX_CONNECTION),
-        f = l.intl.format(l.t.CIc3IC, { helpdeskArticleUrl: u }),
-        p = i.useMemo(
+    let { onContinue: t, onClose: n } = e,
+        u = s.Z.getArticleURL(l.BhN.XBOX_CONNECTION),
+        p = c.intl.format(c.t.CIc3IC, { helpdeskArticleUrl: u }),
+        f = i.useMemo(
             () => [
                 {
-                    label: l.intl.string(l.t.ihQXsb),
-                    icon: r.VoiceNormalIcon
+                    label: c.intl.string(c.t.ihQXsb),
+                    icon: r.gj8
                 },
                 {
-                    label: l.intl.string(l.t.Xt1n4O),
-                    icon: r.ScreenStreamIcon
+                    label: c.intl.string(c.t.Xt1n4O),
+                    icon: r.m3e
                 },
                 {
-                    label: l.intl.string(l.t.xqVY3t),
-                    icon: r.GroupIcon
+                    label: c.intl.string(c.t.xqVY3t),
+                    icon: r.BFJ
                 },
                 {
-                    label: l.intl.string(l.t.iQsKVV),
-                    icon: r.GameControllerIcon
+                    label: c.intl.string(c.t.iQsKVV),
+                    icon: r.iWm
                 }
             ],
             []
         );
-    return (0, o.jsx)(s.m, {
-        platformType: a.ABu.XBOX,
-        headerConnect: l.intl.string(l.t.m8aaho),
-        headerReconnect: l.intl.string(l.t.z3rAho),
-        body: f,
-        onClose: t,
-        onContinue: n,
+    return (0, o.jsx)(a.m, {
+        platformType: l.ABu.XBOX,
+        headerConnect: c.intl.string(c.t.m8aaho),
+        headerReconnect: c.intl.string(c.t.z3rAho),
+        body: p,
+        onClose: n,
+        onContinue: t,
         img: (0, o.jsx)('img', {
             src: d.Z,
             width: 230,
             height: 160,
             alt: ''
         }),
-        valueProps: p
+        valueProps: f
     });
 }

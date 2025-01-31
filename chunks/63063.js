@@ -1,37 +1,36 @@
-r.d(n, {
-    w: function () {
-        return l;
-    }
+n.d(t, {
+    Z: () => _,
+    w: () => o
 });
-var i = r(299379),
-    a = r(706454),
-    o = r(358085),
-    s = r(981631);
-let l = 'https://'.concat(s.xr4),
-    u = 'https://'.concat(s.rxP),
-    c = 'https://creator-support.discord.com',
-    d = 'https://support-apps.discord.com';
-function f(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l;
-    return n + e;
+var i = n(299379),
+    r = n(706454),
+    a = n(358085),
+    s = n(981631);
+let o = 'https://'.concat(s.xr4),
+    l = 'https://'.concat(s.rxP),
+    u = 'https://creator-support.discord.com',
+    c = 'https://support-apps.discord.com';
+function d(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o;
+    return t + e;
 }
-function p() {
-    return a.default.locale.toLowerCase();
+function f() {
+    return r.default.locale.toLowerCase();
 }
-n.Z = {
-    getArticleURL: (e) => f('/hc/'.concat(p(), '/articles/').concat(e)),
-    getDevArticleURL: (e) => f('/hc/'.concat(p(), '/articles/').concat(e), u),
-    getCreatorSupportArticleURL: (e) => f('/hc/'.concat(p(), '/articles/').concat(e), c),
+let _ = {
+    getArticleURL: (e) => d('/hc/'.concat(f(), '/articles/').concat(e)),
+    getDevArticleURL: (e) => d('/hc/'.concat(f(), '/articles/').concat(e), l),
+    getCreatorSupportArticleURL: (e) => d('/hc/'.concat(f(), '/articles/').concat(e), u),
     getTwitterURL: () => (0, i.Z)(s.RK.TWITTER),
-    getCommunityURL: () => f('/hc/'.concat(p())),
+    getCommunityURL: () => d('/hc/'.concat(f())),
     getSubmitRequestURL(e) {
-        let n = f('/hc/'.concat(p(), '/requests/new?platform=').concat(encodeURIComponent((0, o.getPlatformName)())));
-        return null != e && (n += '&device_info='.concat(encodeURIComponent(e))), n;
+        let t = d('/hc/'.concat(f(), '/requests/new?platform=').concat(encodeURIComponent((0, a.getPlatformName)())));
+        return null != e && (t += '&device_info='.concat(encodeURIComponent(e))), t;
     },
     getSearchURL(e) {
-        let n = encodeURIComponent(e);
-        return f('/hc/'.concat(p(), '/search?utf8=%E2%9C%93&query=').concat(n, '&commit=Search'));
+        let t = encodeURIComponent(e);
+        return d('/hc/'.concat(f(), '/search?utf8=%E2%9C%93&query=').concat(t, '&commit=Search'));
     },
-    getFeaturedArticlesJsonURL: () => f('/api/v2/help_center/en-us/articles.json?label_names=featured'),
-    getAppsSupportURL: (e) => f('/hc/'.concat(p(), '/articles/').concat(e), d)
+    getFeaturedArticlesJsonURL: () => d('/api/v2/help_center/en-us/articles.json?label_names=featured'),
+    getAppsSupportURL: (e) => d('/hc/'.concat(f(), '/articles/').concat(e), c)
 };

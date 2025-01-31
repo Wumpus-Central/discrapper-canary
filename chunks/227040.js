@@ -1,12 +1,11 @@
-n.r(
-    (e.exports = {
-        recentMentionsPopout: 'recentMentionsPopout_ddb5b4',
-        scroller: 'scroller_ddb5b4',
-        container: 'container_ddb5b4',
-        closeButton: 'closeButton_ddb5b4',
-        messageContainer: 'messageContainer_ddb5b4',
-        jumpMessageButton: 'jumpMessageButton_ddb5b4 ' + n('68394').jumpButton,
-        message: 'message_ddb5b4',
-        checkbox: 'checkbox_ddb5b4'
-    })
-);
+var i = {
+    recentMentionsPopout: 'recentMentionsPopout__95796',
+    widerInbox: 'widerInbox__95796',
+    scroller: 'scroller__95796',
+    container: 'container__95796',
+    closeButton: 'closeButton__95796',
+    messageContainer: 'messageContainer__95796',
+    jumpMessageButton: 'jumpMessageButton__95796 ' + n(68394).jumpButton,
+    message: 'message__95796'
+};
+e.exports = i;

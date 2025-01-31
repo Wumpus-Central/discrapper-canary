@@ -1,66 +1,49 @@
-r.d(n, {
-    Cl: function () {
-        return p;
-    },
-    GN: function () {
-        return h;
-    },
-    L9: function () {
-        return l;
-    },
-    UK: function () {
-        return i;
-    },
-    av: function () {
-        return f;
-    },
-    cu: function () {
-        return c;
-    },
-    hL: function () {
-        return d;
-    },
-    tr: function () {
-        return u;
-    }
+n.d(t, {
+    Cl: () => f,
+    GN: () => _,
+    L9: () => o,
+    UK: () => s,
+    av: () => d,
+    cu: () => u,
+    hL: () => c,
+    tr: () => l
 });
-var i,
-    a = r(63063),
-    o = r(981631),
-    s = r(388032);
-function l(e) {
+var i = n(63063),
+    r = n(981631),
+    a = n(388032),
+    s = (function (e) {
+        return (e[(e.DURATION_60_SEC = 60)] = 'DURATION_60_SEC'), (e[(e.DURATION_5_MIN = 300)] = 'DURATION_5_MIN'), (e[(e.DURATION_10_MIN = 600)] = 'DURATION_10_MIN'), (e[(e.DURATION_1_HOUR = 3600)] = 'DURATION_1_HOUR'), (e[(e.DURATION_1_DAY = 86400)] = 'DURATION_1_DAY'), (e[(e.DURATION_1_WEEK = 604800)] = 'DURATION_1_WEEK'), e;
+    })({});
+function o(e) {
     switch (e) {
         case 60:
-            return s.intl.formatToPlainString(s.t['4zv/jo'], { secs: 60 });
+            return a.intl.formatToPlainString(a.t['4zv/jo'], { secs: 60 });
         case 300:
-            return s.intl.formatToPlainString(s.t.opVZ9v, { mins: 5 });
+            return a.intl.formatToPlainString(a.t.opVZ9v, { mins: 5 });
         case 600:
-            return s.intl.formatToPlainString(s.t.opVZ9v, { mins: 10 });
+            return a.intl.formatToPlainString(a.t.opVZ9v, { mins: 10 });
         case 3600:
-            return s.intl.formatToPlainString(s.t.xCjYxM, { hours: 1 });
+            return a.intl.formatToPlainString(a.t.xCjYxM, { hours: 1 });
         case 86400:
-            return s.intl.formatToPlainString(s.t.k2UNz8, { days: 1 });
+            return a.intl.formatToPlainString(a.t.k2UNz8, { days: 1 });
         case 604800:
-            return s.intl.formatToPlainString(s.t.EmoBDw, { weeks: 1 });
+            return a.intl.formatToPlainString(a.t.EmoBDw, { weeks: 1 });
         default:
             return;
     }
 }
-!(function (e) {
-    (e[(e.DURATION_60_SEC = 60)] = 'DURATION_60_SEC'), (e[(e.DURATION_5_MIN = 300)] = 'DURATION_5_MIN'), (e[(e.DURATION_10_MIN = 600)] = 'DURATION_10_MIN'), (e[(e.DURATION_1_HOUR = 3600)] = 'DURATION_1_HOUR'), (e[(e.DURATION_1_DAY = 86400)] = 'DURATION_1_DAY'), (e[(e.DURATION_1_WEEK = 604800)] = 'DURATION_1_WEEK');
-})(i || (i = {}));
-let u = () =>
-        Object.keys(i)
+let l = () =>
+        Object.keys(s)
             .filter((e) => isNaN(Number(e)))
             .map((e) => {
-                var n;
+                var t;
                 return {
-                    label: null !== (n = l(i[e])) && void 0 !== n ? n : '',
-                    value: i[e]
+                    label: null !== (t = o(s[e])) && void 0 !== t ? t : '',
+                    value: s[e]
                 };
             }),
-    c = a.Z.getArticleURL(o.BhN.DISABLE_GUILD_COMMUNICATION),
-    d = 'GuildCommunicationDisabledDismissedGuilds',
-    f = 'Set Communication Disabled Modal',
-    p = 'Clear Communication Disabled Modal',
-    h = 512;
+    u = i.Z.getArticleURL(r.BhN.DISABLE_GUILD_COMMUNICATION),
+    c = 'GuildCommunicationDisabledDismissedGuilds',
+    d = 'Set Communication Disabled Modal',
+    f = 'Clear Communication Disabled Modal',
+    _ = 512;

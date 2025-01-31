@@ -1,69 +1,69 @@
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(622535),
-    l = r(481060),
-    u = r(425493),
-    c = r(211266),
-    d = r(906732),
-    f = r(626135),
-    p = r(724884),
-    h = r(355045),
-    _ = r(290799),
-    m = r(394769),
-    g = r(555932),
-    E = r(808189),
-    v = r(362948),
-    y = r(245004),
-    b = r(383881),
-    I = r(981631),
-    T = r(388032),
-    S = r(483843);
-function A(e) {
-    let { analyticsLocation: n, guild: r, onClose: i } = e,
-        [A, C] = o.useState(!0),
-        N = o.useRef(!1),
-        R = (0, c.Z)(() => Date.now()),
-        { analyticsLocations: O } = (0, d.ZP)(),
-        D = o.useCallback(() => {
-            i(),
-                f.default.track(I.rMx.MODAL_DISMISSED, {
-                    type: I.ZY5.PREMIUM_GUILD_USER_MODAL,
-                    location_stack: O,
-                    location_section: n.section,
-                    location_object: n.object,
-                    guild_id: r.id,
-                    duration_open_ms: Date.now() - R
+n.d(t, { Z: () => T }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(622535),
+    s = n(481060),
+    o = n(425493),
+    l = n(211266),
+    u = n(906732),
+    c = n(626135),
+    d = n(724884),
+    f = n(355045),
+    _ = n(290799),
+    p = n(394769),
+    h = n(555932),
+    m = n(808189),
+    g = n(362948),
+    E = n(245004),
+    v = n(383881),
+    y = n(981631),
+    I = n(388032),
+    b = n(483843);
+let T = function (e) {
+    let { analyticsLocation: t, guild: n, onClose: T } = e,
+        [S, A] = r.useState(!0),
+        N = r.useRef(!1),
+        C = (0, l.Z)(() => Date.now()),
+        { analyticsLocations: R } = (0, u.ZP)(),
+        O = r.useCallback(() => {
+            T(),
+                c.default.track(y.rMx.MODAL_DISMISSED, {
+                    type: y.ZY5.PREMIUM_GUILD_USER_MODAL,
+                    location_stack: R,
+                    location_section: t.section,
+                    location_object: t.object,
+                    guild_id: n.id,
+                    duration_open_ms: Date.now() - C
                 });
-        }, [i, n, O, R, r.id]),
-        L = o.useCallback(
+        }, [T, t, R, C, n.id]),
+        D = r.useCallback(
             (e) => {
                 e &&
                     !N.current &&
-                    (f.default.track(I.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
-                        type: I.ZY5.PREMIUM_GUILD_USER_MODAL,
-                        location_stack: O,
-                        location_section: n.section,
-                        location_object: n.object,
-                        guild_id: r.id
+                    (c.default.track(y.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                        type: y.ZY5.PREMIUM_GUILD_USER_MODAL,
+                        location_stack: R,
+                        location_section: t.section,
+                        location_object: t.object,
+                        guild_id: n.id
                     }),
                     (N.current = !0));
             },
-            [n, O, r.id]
+            [t, R, n.id]
         );
     return (
-        o.useEffect(() => {
-            f.default.track(I.rMx.OPEN_MODAL, {
-                type: I.ZY5.PREMIUM_GUILD_USER_MODAL,
-                location_stack: O,
-                location_section: n.section,
-                location_object: n.object,
-                guild_id: r.id
+        r.useEffect(() => {
+            c.default.track(y.rMx.OPEN_MODAL, {
+                type: y.ZY5.PREMIUM_GUILD_USER_MODAL,
+                location_stack: R,
+                location_section: t.section,
+                location_object: t.object,
+                guild_id: n.id
             });
-        }, [r.id, n, O]),
-        o.useEffect(() => {
+        }, [n.id, t, R]),
+        r.useEffect(() => {
             function e(e) {
-                'Escape' === e.key && D();
+                'Escape' === e.key && O();
             }
             return (
                 window.addEventListener('keydown', e),
@@ -71,80 +71,79 @@ function A(e) {
                     window.removeEventListener('keydown', e);
                 }
             );
-        }, [D]),
-        (0, a.jsxs)(a.Fragment, {
+        }, [O]),
+        (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, a.jsx)('div', {
-                    className: S.closeIconWrapper,
-                    children: (0, a.jsx)(u.Z, {
-                        className: S.closeIcon,
-                        closeAction: D,
+                (0, i.jsx)('div', {
+                    className: b.closeIconWrapper,
+                    children: (0, i.jsx)(o.Z, {
+                        className: b.closeIcon,
+                        closeAction: O,
                         keybind: 'ESC',
-                        variant: u.Z.Variants.SOLID
+                        variant: o.Z.Variants.SOLID
                     })
                 }),
-                (0, a.jsxs)(l.AdvancedScrollerAuto, {
-                    className: S.scroller,
+                (0, i.jsxs)(s.yWw, {
+                    className: b.scroller,
                     children: [
-                        (0, a.jsxs)('div', {
-                            className: S.header,
+                        (0, i.jsxs)('div', {
+                            className: b.header,
                             children: [
-                                (0, a.jsxs)('div', {
-                                    className: S.headerContentWrapper,
+                                (0, i.jsxs)('div', {
+                                    className: b.headerContentWrapper,
                                     children: [
-                                        (0, a.jsx)(l.Heading, {
-                                            className: S.heading,
+                                        (0, i.jsx)(s.X6q, {
+                                            className: b.heading,
                                             color: 'always-white',
                                             variant: 'display-lg',
-                                            children: T.intl.string(T.t.N4sqzM)
+                                            children: I.intl.string(I.t.N4sqzM)
                                         }),
-                                        (0, a.jsx)(h.Z, {
-                                            guild: r,
-                                            closeLayer: D,
-                                            onCtaVisibilityChange: C
+                                        (0, i.jsx)(f.Z, {
+                                            guild: n,
+                                            closeLayer: O,
+                                            onCtaVisibilityChange: A
                                         }),
-                                        (0, a.jsx)(g.Z, { guild: r }),
-                                        (0, a.jsx)(E.Z, { guild: r })
+                                        (0, i.jsx)(h.Z, { guild: n }),
+                                        (0, i.jsx)(m.Z, { guild: n })
                                     ]
                                 }),
-                                (0, a.jsx)(b.O, {})
+                                (0, i.jsx)(v.O, {})
                             ]
                         }),
-                        (0, a.jsx)('div', {
-                            className: S.middleBodyContentWrapper,
-                            children: (0, a.jsx)(y.Z, {})
+                        (0, i.jsx)('div', {
+                            className: b.middleBodyContentWrapper,
+                            children: (0, i.jsx)(E.Z, {})
                         }),
-                        (0, a.jsxs)('div', {
-                            className: S.lowerBody,
+                        (0, i.jsxs)('div', {
+                            className: b.lowerBody,
                             children: [
-                                (0, a.jsxs)('div', {
-                                    className: S.lowerBodyContentWrapper,
+                                (0, i.jsxs)('div', {
+                                    className: b.lowerBodyContentWrapper,
                                     children: [
-                                        (0, a.jsx)(v.Z, {
-                                            className: S.tierComparisonTable,
-                                            guild: r
+                                        (0, i.jsx)(g.Z, {
+                                            className: b.tierComparisonTable,
+                                            guild: n
                                         }),
-                                        (0, a.jsx)(p.Z, {}),
-                                        (0, a.jsx)(_.Z, {})
+                                        (0, i.jsx)(d.Z, {}),
+                                        (0, i.jsx)(_.Z, {})
                                     ]
                                 }),
-                                (0, a.jsx)(b.A, {}),
-                                (0, a.jsx)('div', { className: S.lowerBodyBackgroundImage })
+                                (0, i.jsx)(v.A, {}),
+                                (0, i.jsx)('div', { className: b.lowerBodyBackgroundImage })
                             ]
                         }),
-                        (0, a.jsx)(s.$, {
-                            onChange: L,
-                            children: (0, a.jsx)('div', { className: S.persistentCtaSpacer })
+                        (0, i.jsx)(a.$, {
+                            onChange: D,
+                            children: (0, i.jsx)('div', { className: b.persistentCtaSpacer })
                         })
                     ]
                 }),
-                (0, a.jsx)(m.Z, {
-                    guild: r,
-                    isVisible: !A,
-                    closeLayer: D
+                (0, i.jsx)(p.Z, {
+                    guild: n,
+                    isVisible: !S,
+                    closeLayer: O
                 })
             ]
         })
     );
-}
-n.Z = A;
+};

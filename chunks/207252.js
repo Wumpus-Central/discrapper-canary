@@ -1,82 +1,77 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return k;
-        }
-    });
-var i = n(200651),
-    a = n(192379),
-    l = n(442837),
-    s = n(780384),
-    o = n(481060),
-    c = n(313201),
-    r = n(210887),
-    d = n(450269),
-    h = n(388032),
-    u = n(42129),
-    x = n(112847),
-    m = n(516954);
+i.d(t, { default: () => k });
+var n = i(200651),
+    c = i(192379),
+    s = i(442837),
+    l = i(780384),
+    a = i(481060),
+    r = i(313201),
+    d = i(210887),
+    o = i(450269),
+    h = i(388032),
+    x = i(42129),
+    u = i(112847),
+    m = i(516954);
 function k(e) {
-    let { guildId: t, transitionState: n, onClose: k, onConfirm: C } = e,
-        b = (0, c.Dt)(),
-        g = (0, l.e7)([r.Z], () => r.Z.theme),
-        p = (0, s.wj)(g) ? x : m,
-        { rules: y, rulesAccepted: j } = (0, d.V)(t),
-        E = a.useCallback(() => {
-            k(), C();
-        }, [k, C]);
-    return (0, i.jsxs)(o.ModalRoot, {
-        transitionState: n,
-        'aria-labelledby': b,
-        className: u.modal,
+    let { guildId: t, transitionState: i, onClose: k, onConfirm: _ } = e,
+        C = (0, r.Dt)(),
+        b = (0, s.e7)([d.Z], () => d.Z.theme),
+        g = (0, l.wj)(b) ? u : m,
+        { rules: j, rulesAccepted: p } = (0, o.V)(t),
+        y = c.useCallback(() => {
+            k(), _();
+        }, [k, _]);
+    return (0, n.jsxs)(a.Y0X, {
+        transitionState: i,
+        'aria-labelledby': C,
+        className: x.modal,
         children: [
-            (0, i.jsx)(o.ModalCloseButton, {
+            (0, n.jsx)(a.olH, {
                 onClick: k,
-                className: u.close
+                className: x.close
             }),
-            (0, i.jsxs)(o.ModalContent, {
-                className: u.content,
+            (0, n.jsxs)(a.hzk, {
+                className: x.content,
                 children: [
-                    (0, i.jsxs)('div', {
-                        className: u.header,
+                    (0, n.jsxs)('div', {
+                        className: x.header,
                         children: [
-                            (0, i.jsx)('img', {
+                            (0, n.jsx)('img', {
                                 alt: '',
-                                src: p,
+                                src: g,
                                 width: 80
                             }),
-                            (0, i.jsx)(o.Heading, {
+                            (0, n.jsx)(a.X6q, {
                                 variant: 'heading-xxl/semibold',
                                 color: 'header-primary',
-                                id: b,
+                                id: C,
                                 children: h.intl.string(h.t.Q8OFNz)
                             })
                         ]
                     }),
-                    (0, i.jsx)(o.Text, {
+                    (0, n.jsx)(a.Text, {
                         variant: 'text-md/medium',
                         color: 'header-secondary',
-                        className: u.centeredText,
+                        className: x.centeredText,
                         children: h.intl.string(h.t['WT+829'])
                     }),
-                    (0, i.jsx)('div', {
-                        className: u.checkboxContainer,
-                        children: y.map((e) =>
-                            (0, i.jsxs)(
-                                o.Checkbox,
+                    (0, n.jsx)('div', {
+                        className: x.checkboxContainer,
+                        children: j.map((e) =>
+                            (0, n.jsxs)(
+                                a.XZJ,
                                 {
+                                    className: x.checkbox,
                                     reverse: !0,
-                                    type: o.Checkbox.Types.ROW,
                                     value: e.checked,
-                                    align: o.Checkbox.Aligns.CENTER,
+                                    align: a.XZJ.Aligns.CENTER,
                                     onChange: e.onCheck,
                                     children: [
-                                        (0, i.jsx)(o.Text, {
+                                        (0, n.jsx)(a.Text, {
                                             variant: 'text-md/semibold',
                                             color: 'header-primary',
                                             children: e.title
                                         }),
-                                        (0, i.jsx)(o.Text, {
+                                        (0, n.jsx)(a.Text, {
                                             variant: 'text-sm/medium',
                                             color: 'text-secondary',
                                             children: e.body
@@ -89,14 +84,14 @@ function k(e) {
                     })
                 ]
             }),
-            (0, i.jsx)(o.ModalFooter, {
-                children: (0, i.jsx)(o.Button, {
+            (0, n.jsx)(a.mzw, {
+                children: (0, n.jsx)(a.zxk, {
                     fullWidth: !0,
-                    disabled: !j,
-                    color: o.Button.Colors.BRAND,
-                    onClick: E,
-                    size: o.Button.Sizes.LARGE,
-                    children: (0, i.jsx)(o.Text, {
+                    disabled: !p,
+                    color: a.zxk.Colors.BRAND,
+                    onClick: y,
+                    size: a.zxk.Sizes.LARGE,
+                    children: (0, n.jsx)(a.Text, {
                         variant: 'text-sm/semibold',
                         children: h.intl.string(h.t['qjtt/v'])
                     })

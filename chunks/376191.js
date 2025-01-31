@@ -1,12 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return S;
-    }
-});
+n.d(t, { Z: () => S });
 var i = n(200651);
 n(192379);
-var r = n(442837),
-    l = n(481060),
+var l = n(442837),
+    r = n(481060),
     a = n(129861),
     s = n(607070),
     o = n(570928),
@@ -17,8 +13,8 @@ var r = n(442837),
     m = n(522289),
     p = n(699516),
     g = n(51144),
-    f = n(998502),
-    _ = n(620924),
+    _ = n(998502),
+    f = n(620924),
     E = n(332712),
     I = n(81471),
     C = n(388032),
@@ -27,7 +23,7 @@ let N = (e) => {
         let { userId: t } = e,
             n = (0, E.O)(t);
         return null == n || 0 === n.length
-            ? (0, i.jsx)(l.Text, {
+            ? (0, i.jsx)(r.Text, {
                   className: v.mutualGuilds,
                   variant: 'text-sm/normal',
                   color: 'text-muted',
@@ -42,7 +38,7 @@ let N = (e) => {
                           size: c.Vj.Sizes.SMOL,
                           hideOverflowCount: !0
                       }),
-                      (0, i.jsx)(l.Text, {
+                      (0, i.jsx)(r.Text, {
                           className: v.mutualGuilds,
                           variant: 'text-sm/normal',
                           color: 'text-muted',
@@ -51,17 +47,17 @@ let N = (e) => {
                   ]
               });
     },
-    T = f.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
+    T = _.ZP.getEnableHardwareAcceleration() ? r.Xo$ : r.qEK;
 function S(e) {
     var t;
     let { channel: n, otherUser: c, active: m } = e,
-        f = (0, r.e7)([s.Z], () => s.Z.useReducedMotion),
-        E = (0, r.e7)([p.Z], () => (null == c ? null : p.Z.getNickname(c.id))),
-        S = !f && m,
-        b = (0, _.c)(n),
-        { avatarDecorationSrc: A } = (0, u.Z)({
+        _ = (0, l.e7)([s.Z], () => s.Z.useReducedMotion),
+        E = (0, l.e7)([p.Z], () => (null == c ? null : p.Z.getNickname(c.id))),
+        S = !_ && m,
+        Z = (0, f.c)(n),
+        { avatarDecorationSrc: x } = (0, u.Z)({
             user: c,
-            size: (0, d.y9)(l.AvatarSizes.SIZE_40),
+            size: (0, d.y9)(r.EFr.SIZE_40),
             onlyAnimateOnHover: !0
         });
     return (0, i.jsxs)(i.Fragment, {
@@ -69,8 +65,8 @@ function S(e) {
             (0, i.jsx)(T, {
                 className: v.avatar,
                 src: (0, h.x)(n, 40, S),
-                avatarDecoration: A,
-                size: l.AvatarSizes.SIZE_40,
+                avatarDecoration: x,
+                size: r.EFr.SIZE_40,
                 'aria-label': null !== (t = null == c ? void 0 : c.username) && void 0 !== t ? t : C.intl.string(C.t['30mdIy'])
             }),
             (0, i.jsxs)('div', {
@@ -87,11 +83,11 @@ function S(e) {
                                 usernameClass: v.username,
                                 discriminatorClass: null != g.ZP.getGlobalName(c) ? v.globalName : v.discriminator
                             }),
-                            (0, i.jsx)(l.Text, {
+                            (0, i.jsx)(r.Text, {
                                 className: v.timestampWithPreview,
                                 color: 'text-muted',
                                 variant: 'text-xs/normal',
-                                children: b
+                                children: Z
                             })
                         ]
                     }),

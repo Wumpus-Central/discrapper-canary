@@ -1,5 +1,6 @@
-e.exports = {
-    back: 'back_e27221',
-    primaryIcon: 'primaryIcon_e27221',
-    button: 'button_e27221'
+var i = {
+    back: 'back__962c6',
+    primaryIcon: 'primaryIcon__962c6',
+    button: 'button__962c6'
 };
+e.exports = i;

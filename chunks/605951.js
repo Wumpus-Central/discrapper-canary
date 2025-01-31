@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-});
+n.d(t, { Z: () => r });
 var i = n(192379),
     l = n(914010);
 function r(e) {
@@ -10,7 +6,7 @@ function r(e) {
         let t = null;
         function n() {
             let n = l.Z.getGuildId();
-            if (n !== t) (t = null != n ? n : null), e(null != n ? n : null, !1);
+            n !== t && ((t = null != n ? n : null), e(null != n ? n : null, !1));
         }
         return (
             l.Z.addChangeListener(n),

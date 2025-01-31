@@ -1,16 +1,12 @@
-r.d(n, {
-    _: function () {
-        return p;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(331595),
-    o = r(249849);
+n.d(t, { _: () => f });
+var i = n(200651);
+n(192379);
+var r = n(331595),
+    a = n(249849);
 let s = ['#be0351', '#ff2c52', '#f0f0f0'],
-    l = ['#4282d8', '#47baff', '#f0f0f0'],
-    u = [0.1, 0.25, 1],
-    c = [
+    o = ['#4282d8', '#47baff', '#f0f0f0'],
+    l = [0.1, 0.25, 1],
+    u = [
         {
             base: 3,
             tint: 1
@@ -24,8 +20,8 @@ let s = ['#be0351', '#ff2c52', '#f0f0f0'],
             tint: 1
         }
     ],
-    d = [0.1, 0.25, 1],
-    f = [
+    c = [0.1, 0.25, 1],
+    d = [
         {
             base: 3,
             tint: 1
@@ -39,33 +35,33 @@ let s = ['#be0351', '#ff2c52', '#f0f0f0'],
             tint: 1
         }
     ],
-    p = (e) => {
-        let { width: n = 24, height: r = 24, primaryTintColor: p, secondaryTintColor: h, ..._ } = e,
-            { primaryColorsTransformed: m, secondaryColorsTransformed: g } = (0, o.s)({
+    f = (e) => {
+        let { width: t = 24, height: n = 24, primaryTintColor: f, secondaryTintColor: _, ...p } = e,
+            { primaryColorsTransformed: h, secondaryColorsTransformed: m } = (0, a.s)({
                 primaryBaseColors: s,
-                primaryTintColor: p,
-                primaryTintLuminances: u,
-                primaryLuminanceWeights: c,
-                secondaryBaseColors: l,
-                secondaryTintColor: h,
-                secondaryTintLuminances: d,
-                secondaryLuminanceWeights: f
+                primaryTintColor: f,
+                primaryTintLuminances: l,
+                primaryLuminanceWeights: u,
+                secondaryBaseColors: o,
+                secondaryTintColor: _,
+                secondaryTintLuminances: c,
+                secondaryLuminanceWeights: d
             });
         return (0, i.jsxs)('svg', {
-            ...(0, a.Z)(_),
-            width: n,
-            height: r,
+            ...(0, r.Z)(p),
+            width: t,
+            height: n,
             viewBox: '0 0 16 16',
             fill: 'none',
             xmlns: 'http://www.w3.org/2000/svg',
             children: [
                 (0, i.jsx)('path', {
                     d: 'M10 4V3H9V1H7v2H6v1H5v1h1v1h1v1h2V6h1V5h1V4h-1Z',
-                    fill: g[1]
+                    fill: m[1]
                 }),
                 (0, i.jsx)('path', {
                     d: 'M10 12v1H9v2H7v-2H6v-1H5v-1h1v-1h1V9h2v1h1v1h1v1h-1Z',
-                    fill: m[1]
+                    fill: h[1]
                 }),
                 (0, i.jsx)('path', {
                     d: 'M7 0v1h2V0H7Z',
@@ -73,11 +69,11 @@ let s = ['#be0351', '#ff2c52', '#f0f0f0'],
                 }),
                 (0, i.jsx)('path', {
                     d: 'M7 1v1h2V1H7Z',
-                    fill: g[2]
+                    fill: m[2]
                 }),
                 (0, i.jsx)('path', {
                     d: 'M7 6v1h2V6H7Z',
-                    fill: g[0]
+                    fill: m[0]
                 }),
                 (0, i.jsx)('path', {
                     d: 'M7 1H6v2h1V1ZM1 7H0v2h1V7ZM3 7V6H1v1h2ZM6 3H5v1h1V3Z',
@@ -85,31 +81,31 @@ let s = ['#be0351', '#ff2c52', '#f0f0f0'],
                 }),
                 (0, i.jsx)('path', {
                     d: 'M6 4H5v1h1V4ZM7 3H6v1h1V3Z',
-                    fill: g[2]
+                    fill: m[2]
                 }),
                 (0, i.jsx)('path', {
                     d: 'M7 9v1h2V9H7Z',
-                    fill: g[2]
+                    fill: m[2]
                 }),
                 (0, i.jsx)('path', {
                     d: 'M7 14v1h2v-1H7ZM7 12H6v1h1v-1ZM6 11H5v1h1v-1Z',
-                    fill: m[0]
+                    fill: h[0]
                 }),
                 (0, i.jsx)('path', {
                     d: 'M7 10H6v1h1v-1Z',
-                    fill: g[2]
+                    fill: m[2]
                 }),
                 (0, i.jsx)('path', {
                     d: 'M9 13h1v-1H9v1ZM10 12h1v-1h-1v1ZM9 11h1v-1H9v1Z',
-                    fill: m[0]
+                    fill: h[0]
                 }),
                 (0, i.jsx)('path', {
                     d: 'M8 4H7v1h1V4Z',
-                    fill: g[2]
+                    fill: m[2]
                 }),
                 (0, i.jsx)('path', {
                     d: 'M10 5H9v1h1V5ZM11 4h-1v1h1V4Z',
-                    fill: g[0]
+                    fill: m[0]
                 }),
                 (0, i.jsx)('path', {
                     d: 'M12 10h1V9h2V7h-2V6h-1V5h-1v1h-1v1H9v2h1v1h1v1h1v-1Z',

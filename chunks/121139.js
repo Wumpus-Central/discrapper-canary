@@ -1,7 +1,8 @@
-e.exports = {
-    container: 'container_df5532',
-    keybind: 'keybind_df5532',
-    closeButton: 'closeButton_df5532',
-    closeButtonSolid: 'closeButtonSolid_df5532',
-    closeButtonBold: 'closeButtonBold_df5532'
+var i = {
+    container: 'container_c2b141',
+    keybind: 'keybind_c2b141',
+    closeButton: 'closeButton_c2b141',
+    closeButtonSolid: 'closeButtonSolid_c2b141',
+    closeButtonBold: 'closeButtonBold_c2b141'
 };
+e.exports = i;

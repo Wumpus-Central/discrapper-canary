@@ -1,10 +1,6 @@
 function i(e) {
     if (null == e) return !1;
-    for (var n = 0; n < e.length; n++) if (e[n].voiceState.selfStream) return !0;
+    for (var t = 0; t < e.length; t++) if (e[t].voiceState.selfStream) return !0;
     return !1;
 }
-r.d(n, {
-    a: function () {
-        return i;
-    }
-});
+n.d(t, { a: () => i });

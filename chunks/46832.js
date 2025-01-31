@@ -1,13 +1,7 @@
-n.d(t, {
-    Z: function () {
-        return I;
-    }
-}),
-    n(47120),
-    n(653041);
+n.d(t, { Z: () => I }), n(47120), n(653041);
 var i = n(836560),
-    r = n(317381),
-    l = n(16609),
+    l = n(317381),
+    r = n(16609),
     a = n(626135),
     s = n(585483),
     o = n(70956),
@@ -30,8 +24,8 @@ function p(e, t, n) {
     );
 }
 let g = 10 * o.Z.Millis.SECOND,
-    f = new Map(),
-    _ = new Set(),
+    _ = new Map(),
+    f = new Set(),
     E = (e, t, n) => {
         n([d.Z.CLOSE, t], e);
     };
@@ -41,17 +35,17 @@ class I extends i.EventEmitter {
             console.warn('[PostMessageTransport] Protocol error: event data should be an Array!');
             return;
         }
-        let [r, l] = n;
-        switch (r) {
+        let [l, r] = n;
+        switch (l) {
             case d.Z.HANDSHAKE:
                 if (null != e) throw new c.Z({ closeCode: m.$VG.CLOSE_UNSUPPORTED }, 'Already connected');
-                return this.handleHandshake(t, l, i);
+                return this.handleHandshake(t, r, i);
             case d.Z.FRAME:
                 if (null == e) throw new c.Z({ closeCode: m.$VG.CLOSE_UNSUPPORTED }, 'Not connected');
-                return this.handleFrame(t, e, l);
+                return this.handleFrame(t, e, r);
             case d.Z.CLOSE:
                 if (null == e) throw new c.Z({ closeCode: m.$VG.CLOSE_UNSUPPORTED }, 'Not connected');
-                return this.handleClose(e, l);
+                return this.handleClose(e, r);
             default:
                 throw new c.Z({ closeCode: m.$VG.CLOSE_UNSUPPORTED }, 'Invalid opcode');
         }
@@ -67,28 +61,28 @@ class I extends i.EventEmitter {
             p(this, 'handshakeFailureTimeoutId', void 0),
             p(this, 'disconnectSocket', function (e, t) {
                 var n, i;
-                let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                d.emit('disconnect', e, r ? void 0 : t), e.close(t.code, null !== (n = t.message) && void 0 !== n ? n : 'Unknown');
-                let [l] =
+                let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+                d.emit('disconnect', e, l ? void 0 : t), e.close(t.code, null !== (n = t.message) && void 0 !== n ? n : 'Unknown');
+                let [r] =
                     null !==
-                        (i = Array.from(f.entries()).find((t) => {
+                        (i = Array.from(_.entries()).find((t) => {
                             let [n, i] = t;
                             return i === e;
                         })) && void 0 !== i
                         ? i
                         : [null, null];
-                null != l && f.delete(l);
+                null != r && _.delete(r);
             }),
             p(this, 'handleIFrameMount', (e) => {
                 let { id: t } = e;
-                _.add(t),
+                f.add(t),
                     (this.handshakeFailureTimeoutId = setTimeout(() => {
-                        Array.from(r.ZP.getSelfEmbeddedActivities().entries()).forEach((e) => {
+                        Array.from(l.ZP.getSelfEmbeddedActivities().entries()).forEach((e) => {
                             let [t, n] = e;
                             a.default.track(m.rMx.ACTIVITY_HANDSHAKE_TIMED_OUT, {
                                 application_id: t,
-                                channel_id: (0, l.p)(n.location),
-                                guild_id: (0, l.j)(n.location),
+                                channel_id: (0, r.p)(n.location),
+                                guild_id: (0, r.j)(n.location),
                                 timeout_ms: g
                             });
                         });
@@ -97,29 +91,29 @@ class I extends i.EventEmitter {
             p(this, 'handleIFrameUnmount', (e) => {
                 var t;
                 let { id: n } = e;
-                _.delete(n);
-                let [i, r] =
+                f.delete(n);
+                let [i, l] =
                     null !==
-                        (t = Array.from(f.entries()).find((e) => {
+                        (t = Array.from(_.entries()).find((e) => {
                             let [t, i] = e;
                             return i.frameId === n;
                         })) && void 0 !== t
                         ? t
                         : [null, null];
-                null != r &&
+                null != l &&
                     null != i &&
                     (this.disconnectSocket(
-                        r,
+                        l,
                         {
                             code: m.$VG.CLOSE_NORMAL,
                             message: 'iFrame gone'
                         },
                         !0
                     ),
-                    f.delete(i));
+                    _.delete(i));
             }),
             p(this, 'handleMessage', (e, t, n) => {
-                let i = f.get(t);
+                let i = _.get(t);
                 try {
                     this.routeEvent(i, t, e, n);
                 } catch (e) {
@@ -145,37 +139,37 @@ class I extends i.EventEmitter {
             }),
             p(this, 'handleFrame', (e, t, n) => {
                 var i;
-                let r;
+                let l;
                 if (e !== t.origin) throw new c.Z({ closeCode: m.$VG.INVALID_ORIGIN }, 'Origin has changed');
                 try {
-                    r = 'string' == typeof n ? JSON.parse(n) : n;
+                    l = 'string' == typeof n ? JSON.parse(n) : n;
                 } catch (e) {
                     throw new c.Z({ closeCode: m.$VG.CLOSE_UNSUPPORTED }, 'Payload not recognized encoding');
                 }
-                null === (i = this.onFrameHandled) || void 0 === i || i.call(this, r, this.logger, t), this.emit('request', t, r);
+                null === (i = this.onFrameHandled) || void 0 === i || i.call(this, l, this.logger, t), this.emit('request', t, l);
             }),
             p(this, 'handleHandshake', async (e, t, i) => {
-                let r;
+                let l;
                 null != this.handshakeFailureTimeoutId && clearTimeout(this.handshakeFailureTimeoutId);
-                let l = (await n.e('56268').then(n.t.bind(n, 826753, 23))).default;
+                let r = (await n.e('85441').then(n.t.bind(n, 826753, 23))).default;
                 try {
-                    l.assert(
+                    r.assert(
                         t,
-                        (0, u.Z)(l)
+                        (0, u.Z)(r)
                             .required()
                             .keys({
-                                v: l.number().min(1).max(1).required(),
-                                encoding: l.string().equal('json').optional(),
-                                client_id: l.string().required(),
-                                frame_id: l.string().required(),
-                                sdk_version: l.string().optional()
+                                v: r.number().min(1).max(1).required(),
+                                encoding: r.string().equal('json').optional(),
+                                client_id: r.string().required(),
+                                frame_id: r.string().required(),
+                                sdk_version: r.string().optional()
                             })
                     );
                 } catch (e) {
                     throw new c.Z({ closeCode: m.$VG.CLOSE_UNSUPPORTED }, e.message);
                 }
                 let s = t.frame_id;
-                if (!_.has(s)) throw (this.logger.error('Unrecognized frame ID '.concat(s)), new c.Z({ closeCode: m.$VG.CLOSE_UNSUPPORTED }, 'Unrecognized frame ID '.concat(s)));
+                if (!f.has(s)) throw (this.logger.error('Unrecognized frame ID '.concat(s)), new c.Z({ closeCode: m.$VG.CLOSE_UNSUPPORTED }, 'Unrecognized frame ID '.concat(s)));
                 null != t.sdk_version &&
                     a.default.track(m.rMx.ACTIVITY_HANDSHAKE, {
                         application_id: t.client_id,
@@ -183,7 +177,7 @@ class I extends i.EventEmitter {
                     });
                 try {
                     var o;
-                    r = this.createPostMessageProxySocket({
+                    l = this.createPostMessageProxySocket({
                         origin: e,
                         postMessageToRPCClient: i,
                         frameId: s,
@@ -195,16 +189,16 @@ class I extends i.EventEmitter {
                 } catch (e) {
                     throw (this.logger.error('Error opening window socket '.concat(e)), e);
                 }
-                this.logger.info('Socket Opened: '.concat(r.id));
+                this.logger.info('Socket Opened: '.concat(l.id));
                 try {
-                    if ((await this.validateSocketClient(r, e, t.client_id), !_.has(s))) throw (this.logger.error('Frame ID '.concat(s, ' no longer exists')), new c.Z({ closeCode: m.$VG.CLOSE_UNSUPPORTED }, 'Unrecognized frame ID '.concat(s)));
-                    f.set(e, r), _.delete(s), r.authorization.scopes.push(h.b_), this.emit('connect', r), this.logger.info('Socket Validated: '.concat(r.id));
+                    if ((await this.validateSocketClient(l, e, t.client_id), !f.has(s))) throw (this.logger.error('Frame ID '.concat(s, ' no longer exists')), new c.Z({ closeCode: m.$VG.CLOSE_UNSUPPORTED }, 'Unrecognized frame ID '.concat(s)));
+                    _.set(e, l), f.delete(s), l.authorization.scopes.push(h.b_), this.emit('connect', l), this.logger.info('Socket Validated: '.concat(l.id));
                 } catch (e) {
-                    throw (this.logger.info('Socket Closed: '.concat(r.id, ', ').concat(e.message)), e);
+                    throw (this.logger.info('Socket Closed: '.concat(l.id, ', ').concat(e.message)), e);
                 }
             }),
             p(this, 'handleClose', async (e, t) => {
-                let i = (await n.e('56268').then(n.t.bind(n, 826753, 23))).default;
+                let i = (await n.e('85441').then(n.t.bind(n, 826753, 23))).default;
                 try {
                     i.assert(
                         t,

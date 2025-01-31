@@ -1,5 +1,6 @@
-e.exports = {
-    container: 'container_f62934',
-    frame: 'frame_f62934',
-    rankBadge: 'rankBadge_f62934'
+var i = {
+    container: 'container_a804d4',
+    frame: 'frame_a804d4',
+    rankBadge: 'rankBadge_a804d4'
 };
+e.exports = i;

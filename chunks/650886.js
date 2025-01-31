@@ -1,11 +1,7 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(718798),
-    a = r(558065);
-function o(e) {
-    return o.useDirectVideo ? (0, a.Z)(e, o.onContainerResized) : (0, i.Z)(e);
+n.d(t, { Z: () => a });
+var i = n(718798),
+    r = n(558065);
+function a(e) {
+    return a.useDirectVideo ? (0, r.Z)(e, a.onContainerResized) : (0, i.Z)(e);
 }
-(o.defaultProps = i.Z.defaultProps), (o.useDirectVideo = !1), (o.onContainerResized = (e, n, r) => {});
+(a.defaultProps = i.Z.defaultProps), (a.useDirectVideo = !1), (a.onContainerResized = (e, t, n) => {});

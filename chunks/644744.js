@@ -1,30 +1,25 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => p }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    s = n(120356),
-    a = n.n(s),
-    l = n(481060),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(481060),
     o = n(600164),
     c = n(490529),
     d = n(981631),
     u = n(388032),
     m = n(187033);
-let g = {
+let h = {
         [d.gkr.HOUSE_1]: m.membershipDialogHouse1,
         [d.gkr.HOUSE_2]: m.membershipDialogHouse2,
         [d.gkr.HOUSE_3]: m.membershipDialogHouse3
     },
-    h = {
+    g = {
         [d.gkr.HOUSE_1]: m.houseLogoHouse1,
         [d.gkr.HOUSE_2]: m.__invalid_houseLogoHouse2,
         [d.gkr.HOUSE_3]: m.__invalid_houseLogoHouse3
     },
-    p = {
+    _ = {
         [d.gkr.HOUSE_1]: n(246300),
         [d.gkr.HOUSE_2]: n(797148),
         [d.gkr.HOUSE_3]: n(374347)
@@ -35,14 +30,14 @@ let g = {
             [d.gkr.HOUSE_2]: u.intl.string(u.t.VNPE6u),
             [d.gkr.HOUSE_3]: u.intl.string(u.t.KNfiTU)
         })[e];
-class f extends r.Component {
+class p extends s.Component {
     render() {
         let { houseMembership: e, isClaimed: t, isVerified: n } = this.props;
         if (!t || !n) return null;
         if (null != e) {
             let t = u.intl.formatToPlainString(u.t.yG0XAA, { houseName: (0, c.X8)(e) });
             return (0, i.jsx)('div', {
-                className: a()(m.membershipDialog, g[e]),
+                className: l()(m.membershipDialog, h[e]),
                 children: (0, i.jsxs)('div', {
                     className: m.membershipDialogContent,
                     children: [
@@ -52,17 +47,17 @@ class f extends r.Component {
                                     grow: 1,
                                     shrink: 1,
                                     children: [
-                                        (0, i.jsx)(l.Text, {
+                                        (0, i.jsx)(a.Text, {
                                             className: m.membershipDialogHeading,
                                             variant: 'text-xs/bold',
                                             children: u.intl.string(u.t.KZoEIy)
                                         }),
-                                        (0, i.jsx)(l.Heading, {
+                                        (0, i.jsx)(a.X6q, {
                                             className: m.membershipDialogHouseName,
                                             variant: 'heading-sm/semibold',
                                             children: t
                                         }),
-                                        (0, i.jsx)(l.Text, {
+                                        (0, i.jsx)(a.Text, {
                                             className: m.membershipDialogHouseDescription,
                                             variant: 'text-md/normal',
                                             children: x(e)
@@ -75,19 +70,19 @@ class f extends r.Component {
                                     shrink: 0,
                                     wrap: !0,
                                     children: (0, i.jsx)('img', {
-                                        className: a()(m.houseLogo, h[e]),
-                                        src: p[e],
+                                        className: l()(m.houseLogo, g[e]),
+                                        src: _[e],
                                         alt: t
                                     })
                                 })
                             ]
                         }),
-                        (0, i.jsxs)(l.Text, {
+                        (0, i.jsxs)(a.Text, {
                             className: m.membershipDialogSwitchHouses,
                             variant: 'text-md/normal',
                             children: [
                                 u.intl.string(u.t.zD3mqK),
-                                (0, i.jsx)(l.Clickable, {
+                                (0, i.jsx)(a.P3F, {
                                     className: m.membershipDialogSwitchHousesAction,
                                     onClick: this.handleJoinHypeSquadClick,
                                     tag: 'span',
@@ -111,7 +106,7 @@ class f extends r.Component {
                         (0, i.jsx)(o.Z.Child, {
                             grow: 0,
                             shrink: 0,
-                            children: (0, i.jsx)(l.Text, {
+                            children: (0, i.jsx)(a.Text, {
                                 variant: 'text-sm/normal',
                                 children: u.intl.string(u.t.Uq6KRk)
                             })
@@ -119,14 +114,14 @@ class f extends r.Component {
                         (0, i.jsx)(o.Z.Child, {
                             grow: 0,
                             shrink: 0,
-                            children: (0, i.jsx)(l.Button, {
+                            children: (0, i.jsx)(a.zxk, {
                                 onClick: this.handleJoinHypeSquadClick,
                                 children: u.intl.string(u.t['1GWQKi'])
                             })
                         })
                     ]
                 }),
-                (0, i.jsx)(l.Text, {
+                (0, i.jsx)(a.Text, {
                     className: m.newsletterWarning,
                     variant: 'text-sm/normal',
                     children: u.intl.string(u.t['3kUvgo'])
@@ -135,23 +130,22 @@ class f extends r.Component {
         });
     }
     constructor(...e) {
-        var t, r, s;
+        var t, s;
         super(...e),
-            (t = this),
-            (r = 'handleJoinHypeSquadClick'),
+            (t = 'handleJoinHypeSquadClick'),
             (s = () => {
-                (0, l.openModalLazy)(async () => {
+                (0, a.ZDy)(async () => {
                     let { default: e } = await n.e('83264').then(n.bind(n, 711184));
                     return (t) => (0, i.jsx)(e, { ...t });
                 });
             }),
-            r in t
-                ? Object.defineProperty(t, r, {
+            t in this
+                ? Object.defineProperty(this, t, {
                       value: s,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (t[r] = s);
+                : (this[t] = s);
     }
 }

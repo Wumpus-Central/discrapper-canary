@@ -1,48 +1,43 @@
-n.d(t, {
-    Z: function () {
-        return x;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => f }), n(47120);
 var i = n(200651),
     r = n(192379),
-    s = n(525654),
-    l = n.n(s),
+    l = n(525654),
+    a = n.n(l),
     o = n(442837),
-    a = n(893776),
+    s = n(893776),
     c = n(493773),
     d = n(129293),
     u = n(388905),
     h = n(108427),
-    g = n(981631),
-    f = n(388032),
-    m = n(232186);
-function p(e) {
+    _ = n(981631),
+    g = n(388032),
+    p = n(232186);
+function m(e) {
     return n.g.location.assign(e);
 }
-function x(e) {
-    let { location: t, transitionTo: s = p } = e,
-        [o, x] = r.useState('submitting');
-    function _() {
-        return 'Android' === l().os.family || 'iOS' === l().os.family
+function f(e) {
+    let { location: t, transitionTo: l = m } = e,
+        [o, f] = r.useState('submitting');
+    function E() {
+        return 'Android' === a().os.family || 'iOS' === a().os.family
             ? null
             : (0, i.jsx)(u.zx, {
-                  onClick: () => s(g.Z5c.LOGIN),
-                  children: f.intl.string(f.t.dKhVQE)
+                  onClick: () => l(_.Z5c.LOGIN),
+                  children: g.intl.string(g.t.dKhVQE)
               });
     }
     return ((0, c.Z)(() => {
         (0, h.e)('authorize_ip');
         let e = (0, d.Z)(t);
         if (null == e) {
-            x('failed');
+            f('failed');
             return;
         }
         (async () => {
             try {
-                await a.Z.authorizeIPAddress(e), x('succeeded');
+                await s.Z.authorizeIPAddress(e), f('succeeded');
             } catch (e) {
-                x('failed');
+                f('failed');
             }
         })();
     }),
@@ -52,17 +47,17 @@ function x(e) {
                   (0, i.jsx)('img', {
                       alt: '',
                       src: n(262467),
-                      className: m.marginBottom20
+                      className: p.marginBottom20
                   }),
                   (0, i.jsx)(u.Dx, {
-                      className: m.marginBottom8,
-                      children: f.intl.string(f.t['f/54a2'])
+                      className: p.marginBottom8,
+                      children: g.intl.string(g.t['f/54a2'])
                   }),
                   (0, i.jsx)(u.DK, {
-                      className: m.marginBottom40,
-                      children: f.intl.string(f.t.i3ehMj)
+                      className: p.marginBottom40,
+                      children: g.intl.string(g.t.i3ehMj)
                   }),
-                  _()
+                  E()
               ]
           })
         : 'succeeded' === o
@@ -71,21 +66,21 @@ function x(e) {
                     (0, i.jsx)('img', {
                         alt: '',
                         src: n(640356),
-                        className: m.marginBottom20
+                        className: p.marginBottom20
                     }),
                     (0, i.jsx)(u.Dx, {
-                        className: m.marginBottom8,
-                        children: f.intl.string(f.t.iG0SlJ)
+                        className: p.marginBottom8,
+                        children: g.intl.string(g.t.iG0SlJ)
                     }),
                     (0, i.jsx)(u.DK, {
-                        className: m.marginBottom40,
-                        children: f.intl.string(f.t['Elv+qq'])
+                        className: p.marginBottom40,
+                        children: g.intl.string(g.t['Elv+qq'])
                     }),
-                    _()
+                    E()
                 ]
             })
           : (0, i.jsxs)(u.ZP, {
-                children: [(0, i.jsx)(u.Hh, {}), (0, i.jsx)(u.Dx, { children: f.intl.string(f.t['9exy+f']) })]
+                children: [(0, i.jsx)(u.Hh, {}), (0, i.jsx)(u.Dx, { children: g.intl.string(g.t['9exy+f']) })]
             });
 }
 o.ZP.initialize();

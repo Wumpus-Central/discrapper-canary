@@ -1,65 +1,61 @@
-r.d(n, {
-    HI: function () {
-        return u;
-    },
-    gm: function () {
-        return l;
-    }
+n.d(t, {
+    HI: () => l,
+    gm: () => o
 });
-var i = r(200651),
-    a = r(192379),
-    o = r(588468);
-r(419922);
-var s = r(388032);
-function l(e) {
-    let { titleWithQuery: n, titleWithoutQuery: r, query: a, getQuery: l, headerClassName: u, headerTrailingContent: c } = e,
-        d = a.length > 0 ? s.intl.formatToPlainString(n, { prefix: l(a) }) : r;
+var i = n(200651),
+    r = n(192379),
+    a = n(588468);
+n(419922);
+var s = n(388032);
+function o(e) {
+    let { titleWithQuery: t, titleWithoutQuery: n, query: r, getQuery: o, headerClassName: l, headerTrailingContent: u } = e,
+        c = r.length > 0 ? s.intl.formatToPlainString(t, { prefix: o(r) }) : n;
     return (0, i.jsx)(
-        o.ZP.Title,
+        a.ZP.Title,
         {
-            className: u,
-            title: d,
-            children: c
+            className: l,
+            title: c,
+            children: u
         },
-        'autocomplete-title-'.concat(d)
+        'autocomplete-title-'.concat(c)
     );
 }
-function u(e) {
-    let { query: n, selectedIndex: r, autocompletes: o, onHover: s, onClick: u, titleWithQuery: c, titleWithoutQuery: d, Component: f, getProps: p, getQuery: h, key: _, indexOffset: m = 0, headerClassName: g, headerTrailingContent: E, footer: v } = e;
-    if (null == v && (null == o || 0 === o.length)) return null;
-    let y =
-        null == o
+function l(e) {
+    let { query: t, selectedIndex: n, autocompletes: a, onHover: s, onClick: l, titleWithQuery: u, titleWithoutQuery: c, Component: d, getProps: f, getQuery: _, key: p, indexOffset: h = 0, headerClassName: m, headerTrailingContent: g, footer: E } = e;
+    if (null == E && (null == a || 0 === a.length)) return null;
+    let v =
+        null == a
             ? void 0
-            : o.map((e, n) => {
-                  let i = n + m,
-                      o = p(e, i);
-                  return (0, a.createElement)(f, {
-                      onClick: u,
+            : a.map((e, t) => {
+                  let i = t + h,
+                      a = f(e, i);
+                  return (0, r.createElement)(d, {
+                      onClick: l,
                       onHover: s,
-                      selected: r === i,
+                      selected: n === i,
                       index: i,
-                      ...o,
-                      key: o.key
+                      ...a,
+                      key: a.key
                   });
               });
     return (0, i.jsxs)(
-        a.Fragment,
+        r.Fragment,
         {
             children: [
-                null != c && null != d
-                    ? l({
-                          titleWithQuery: c,
-                          titleWithoutQuery: d,
-                          query: n,
-                          getQuery: h,
-                          headerClassName: g,
-                          headerTrailingContent: E
+                null != u && null != c
+                    ? o({
+                          titleWithQuery: u,
+                          titleWithoutQuery: c,
+                          query: t,
+                          getQuery: _,
+                          headerClassName: m,
+                          headerTrailingContent: g
                       })
                     : null,
-                y,
-                v
+                v,
+                E
             ]
         },
-        _
+        p
     );
 }

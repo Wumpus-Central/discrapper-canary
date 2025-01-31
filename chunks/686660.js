@@ -1,37 +1,30 @@
-r.d(n, {
-    gs: function () {
-        return c;
-    },
-    p1: function () {
-        return d;
-    },
-    s8: function () {
-        return i;
-    }
-});
-var i,
-    a = r(627341);
-var o = r(278074),
-    s = r(981631),
-    l = r(490897),
-    u = r(388032);
-function c(e, n) {
-    return (0, o.EQ)([n, e])
-        .with([s.bL.ALL_MESSAGES, l.i.ALL_MESSAGES], () => 'all_messages')
-        .with([s.bL.ONLY_MENTIONS, l.i.UNSET], () => 'mentions')
-        .with([s.bL.ONLY_MENTIONS, l.i.ONLY_MENTIONS], () => 'mentions')
-        .with([s.bL.NO_MESSAGES, l.i.UNSET], () => 'nothing')
-        .with([s.bL.NO_MESSAGES, l.i.ONLY_MENTIONS], () => 'nothing')
+n.d(t, {
+    gs: () => l,
+    p1: () => u,
+    s8: () => o
+}),
+    n(627341);
+var i = n(278074),
+    r = n(981631),
+    a = n(490897),
+    s = n(388032),
+    o = (function (e) {
+        return (e.ALL_MESSAGES = 'all_messages'), (e.MENTIONS = 'mentions'), (e.NOTHING = 'nothing'), (e.CUSTOM = 'custom'), e;
+    })({});
+function l(e, t) {
+    return (0, i.EQ)([t, e])
+        .with([r.bL.ALL_MESSAGES, a.i.ALL_MESSAGES], () => 'all_messages')
+        .with([r.bL.ONLY_MENTIONS, a.i.UNSET], () => 'mentions')
+        .with([r.bL.ONLY_MENTIONS, a.i.ONLY_MENTIONS], () => 'mentions')
+        .with([r.bL.NO_MESSAGES, a.i.UNSET], () => 'nothing')
+        .with([r.bL.NO_MESSAGES, a.i.ONLY_MENTIONS], () => 'nothing')
         .otherwise(() => 'custom');
 }
-function d(e) {
-    return (0, o.EQ)(e)
-        .with('all_messages', () => u.intl.string(u.t.hZrr6u))
-        .with('mentions', () => u.intl.string(u.t.y59NJi))
-        .with('nothing', () => u.intl.string(u.t['pGn/bG']))
-        .with('custom', () => u.intl.string(u.t['32yow8']))
+function u(e) {
+    return (0, i.EQ)(e)
+        .with('all_messages', () => s.intl.string(s.t.hZrr6u))
+        .with('mentions', () => s.intl.string(s.t.y59NJi))
+        .with('nothing', () => s.intl.string(s.t['pGn/bG']))
+        .with('custom', () => s.intl.string(s.t['32yow8']))
         .exhaustive();
 }
-!(function (e) {
-    (e.ALL_MESSAGES = 'all_messages'), (e.MENTIONS = 'mentions'), (e.NOTHING = 'nothing'), (e.CUSTOM = 'custom');
-})(i || (i = {}));

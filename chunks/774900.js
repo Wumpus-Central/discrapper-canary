@@ -1,20 +1,16 @@
-r.d(n, {
-    Z: function () {
-        return s;
-    }
-});
-var i = r(369977),
-    a = r(335832),
-    o = r(299188);
-function s(e, n) {
-    if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function');
-    (e.prototype = i(n && n.prototype, {
+n.d(t, { Z: () => s });
+var i = n(369977),
+    r = n(335832),
+    a = n(299188);
+function s(e, t) {
+    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function');
+    (e.prototype = i(t && t.prototype, {
         constructor: {
             value: e,
             writable: !0,
             configurable: !0
         }
     })),
-        a(e, 'prototype', { writable: !1 }),
-        n && (0, o.Z)(e, n);
+        r(e, 'prototype', { writable: !1 }),
+        t && (0, a.Z)(e, t);
 }

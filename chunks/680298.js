@@ -1,26 +1,22 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
+n.d(t, { Z: () => u });
 var i = n(200651),
     l = n(192379),
-    r = n(481060),
-    a = n(239091),
-    o = n(911969),
-    s = n(399860),
+    a = n(481060),
+    r = n(239091),
+    s = n(911969),
+    o = n(399860),
     d = n(388032),
     c = n(19751);
 function u(e) {
-    let { applicationIcon: t, applicationName: u, canNavigate: m, command: h, guildId: p } = e,
-        g = l.useMemo(() => {
+    let { applicationIcon: t, applicationName: u, canNavigate: m, command: h, guildId: x } = e,
+        p = l.useMemo(() => {
             var e;
             return 0 !== Object.keys(null !== (e = h.permissions) && void 0 !== e ? e : {}).length;
         }, [h.permissions]),
-        x = l.useCallback(() => {
+        g = l.useCallback(() => {
             null != h &&
                 m() &&
-                (0, r.openModalLazy)(async () => {
+                (0, a.ZDy)(async () => {
                     let { default: e } = await n.e('78786').then(n.bind(n, 50474));
                     return (n) =>
                         (0, i.jsx)(e, {
@@ -28,14 +24,14 @@ function u(e) {
                             applicationId: h.applicationId,
                             applicationName: u,
                             command: h,
-                            guildId: p,
+                            guildId: x,
                             ...n
                         });
                 });
-        }, [t, u, m, h, p]),
+        }, [t, u, m, h, x]),
         f = l.useCallback(
             (e) => {
-                (0, a.jW)(e, async () => {
+                (0, r.jW)(e, async () => {
                     let { default: e } = await n.e('5396').then(n.bind(n, 731646));
                     return (t) =>
                         (0, i.jsx)(e, {
@@ -47,38 +43,38 @@ function u(e) {
             },
             [h]
         ),
-        v = h.type === o.yU.CHAT ? r.SlashBoxIcon : r.PaperIcon,
-        b = (0, s.gw)(h.type, h.displayName);
-    return (0, i.jsxs)(r.Clickable, {
-        onClick: x,
+        b = h.type === s.yU.CHAT ? a.SsZ : a.hH0,
+        v = (0, o.gw)(h.type, h.displayName);
+    return (0, i.jsxs)(a.P3F, {
+        onClick: g,
         className: c.item,
         onContextMenu: f,
         children: [
             (0, i.jsxs)('div', {
                 className: c.identifier,
                 children: [
-                    (0, i.jsx)(v, {
+                    (0, i.jsx)(b, {
                         className: c.icon,
                         size: 'md',
                         color: 'currentColor'
                     }),
-                    (0, i.jsx)(r.Text, {
+                    (0, i.jsx)(a.Text, {
                         variant: 'text-md/normal',
-                        children: b
+                        children: v
                     })
                 ]
             }),
             (0, i.jsx)('div', {
                 className: c.statusContainer,
-                children: g
+                children: p
                     ? (0, i.jsxs)('div', {
                           className: c.statusLine,
                           children: [
-                              (0, i.jsx)(r.Text, {
+                              (0, i.jsx)(a.Text, {
                                   variant: 'text-md/normal',
                                   children: d.intl.string(d.t.jH4B9P)
                               }),
-                              (0, i.jsx)(r.CircleInformationIcon, {
+                              (0, i.jsx)(a.d3s, {
                                   size: 'sm',
                                   color: 'currentColor',
                                   className: c.statusIcon

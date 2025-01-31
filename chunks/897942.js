@@ -1,51 +1,47 @@
-r.d(n, {
-    Z: function () {
-        return _;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(442837),
-    o = r(481060),
-    s = r(607070),
-    l = r(821982),
-    u = r(594174),
-    c = r(169413),
-    d = r(328756),
-    f = r(131812);
-let p = 1.2,
-    h = 0.321;
-function _(e) {
-    let { maxRewardImageSrc: n, claimableRewards: r, size: _ } = e,
-        m = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
-        g = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
-        E = (0, o.getAvatarSize)(_),
-        v = { height: E * p };
-    return r.length > 2
+n.d(t, { Z: () => p });
+var i = n(200651);
+n(192379);
+var r = n(442837),
+    a = n(481060),
+    s = n(607070),
+    o = n(821982),
+    l = n(594174),
+    u = n(169413),
+    c = n(328756),
+    d = n(131812);
+let f = 1.2,
+    _ = 0.321;
+function p(e) {
+    let { maxRewardImageSrc: t, claimableRewards: n, size: p } = e,
+        h = (0, r.e7)([l.default], () => l.default.getCurrentUser()),
+        m = (0, r.e7)([s.Z], () => s.Z.useReducedMotion),
+        g = (0, a.pxk)(p),
+        E = { height: g * f };
+    return n.length > 2
         ? (0, i.jsx)('img', {
               alt: '',
-              src: n,
-              style: v
+              src: t,
+              style: E
           })
         : (0, i.jsxs)('div', {
-              className: c.container,
+              className: u.container,
               children: [
-                  (1 === r.length || 2 === r.length) &&
-                      (0, i.jsx)(o.AnimatedAvatar, {
-                          'aria-label': null == m ? void 0 : m.username,
-                          size: _,
-                          className: c.firstPromotionalAvatar,
-                          src: 1 === r.length ? (null == m ? void 0 : m.getAvatarURL(void 0, (0, o.getAvatarSize)(_), !g)) : f,
-                          avatarDecoration: (0, l.Z)(r[0].assetId, _, !g)
+                  (1 === n.length || 2 === n.length) &&
+                      (0, i.jsx)(a.Xo$, {
+                          'aria-label': null == h ? void 0 : h.username,
+                          size: p,
+                          className: u.firstPromotionalAvatar,
+                          src: 1 === n.length ? (null == h ? void 0 : h.getAvatarURL(void 0, (0, a.pxk)(p), !m)) : d,
+                          avatarDecoration: (0, o.Z)(n[0].assetId, p, !m)
                       }),
-                  2 === r.length &&
+                  2 === n.length &&
                       (0, i.jsx)('div', {
-                          style: { marginRight: -Math.round(E * h) },
-                          children: (0, i.jsx)(o.AnimatedAvatar, {
-                              'aria-label': null == m ? void 0 : m.username,
-                              size: _,
-                              src: d,
-                              avatarDecoration: (0, l.Z)(r[1].assetId, _, !g)
+                          style: { marginRight: -Math.round(g * _) },
+                          children: (0, i.jsx)(a.Xo$, {
+                              'aria-label': null == h ? void 0 : h.username,
+                              size: p,
+                              src: c,
+                              avatarDecoration: (0, o.Z)(n[1].assetId, p, !m)
                           })
                       })
               ]

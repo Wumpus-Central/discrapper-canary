@@ -1,14 +1,10 @@
-n.d(t, {
-    Z: function () {
-        return s;
-    }
-});
+n.d(t, { Z: () => o });
 var r = n(200651);
 n(192379);
-var i = n(120356),
-    l = n.n(i),
-    o = n(451680);
-function s(e) {
+var l = n(120356),
+    i = n.n(l),
+    s = n(451680);
+function o(e) {
     let { className: t, color: n } = e;
     return (0, r.jsx)('svg', {
         xmlns: 'http://www.w3.org/2000/svg',
@@ -16,7 +12,7 @@ function s(e) {
         height: '40',
         viewBox: '0 0 2 40',
         fill: 'none',
-        className: l()(o.verticalDivider, t),
+        className: i()(s.verticalDivider, t),
         children: (0, r.jsx)('path', {
             d: 'M1 0V40',
             stroke: n,

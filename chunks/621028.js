@@ -1,19 +1,15 @@
-r.d(t, {
-    Z: function () {
-        return n;
-    }
-});
-var a = r(501951);
-function n(e, t, r) {
+n.d(t, { Z: () => r });
+var i = n(501951);
+function r(e, t, n) {
     return (
-        (t = (0, a.Z)(t)) in e
+        (t = (0, i.Z)(t)) in e
             ? Object.defineProperty(e, t, {
-                  value: r,
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = r),
+            : (e[t] = n),
         e
     );
 }

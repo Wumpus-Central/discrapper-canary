@@ -1,20 +1,14 @@
-r.d(n, {
-    OU: function () {
-        return f;
-    },
-    ZP: function () {
-        return p;
-    },
-    fC: function () {
-        return s;
-    }
+n.d(t, {
+    OU: () => d,
+    ZP: () => f,
+    fC: () => s
 });
-var i = r(192379),
-    a = function () {
+var i = n(192379),
+    r = function () {
         (this.locks = []), (this.listeners = []);
     };
-function o(e, n, r) {
-    void 0 === r && (r = !1);
+function a(e, t, n) {
+    void 0 === n && (n = !1);
     var i = (function (e) {
             return document.createTreeWalker(e, NodeFilter.SHOW_ELEMENT, {
                 acceptNode: function (e) {
@@ -22,63 +16,63 @@ function o(e, n, r) {
                 }
             });
         })(e),
-        a = n.compareDocumentPosition(e),
-        o = null;
-    a & Node.DOCUMENT_POSITION_PRECEDING || r ? (o = i.firstChild()) : a & Node.DOCUMENT_POSITION_FOLLOWING && (o = i.lastChild()), (null != o ? o : e).focus();
+        r = t.compareDocumentPosition(e),
+        a = null;
+    r & Node.DOCUMENT_POSITION_PRECEDING || n ? (a = i.firstChild()) : r & Node.DOCUMENT_POSITION_FOLLOWING && (a = i.lastChild()), (null != a ? a : e).focus();
 }
-(a.prototype.add = function (e, n) {
-    var r = {
+(r.prototype.add = function (e, t) {
+    var n = {
         uid: e,
-        setEnabled: n,
+        setEnabled: t,
         enabled: !1
     };
-    this.toggleLayer(this.current(), !1), this.locks.push(r), this.toggleLayer(r, !0), this.emit();
+    this.toggleLayer(this.current(), !1), this.locks.push(n), this.toggleLayer(n, !0), this.emit();
 }),
-    (a.prototype.remove = function (e) {
-        var n = this.locks.find(function (n) {
-            return n.uid === e;
+    (r.prototype.remove = function (e) {
+        var t = this.locks.find(function (t) {
+            return t.uid === e;
         });
-        this.toggleLayer(n, !1);
-        var r = this.current(),
-            i = null != r && r.uid === e;
-        (this.locks = this.locks.filter(function (n) {
-            return n.uid !== e;
+        this.toggleLayer(t, !1);
+        var n = this.current(),
+            i = null != n && n.uid === e;
+        (this.locks = this.locks.filter(function (t) {
+            return t.uid !== e;
         })),
             i && this.toggleLayer(this.current(), !0),
             this.emit();
     }),
-    (a.prototype.current = function () {
+    (r.prototype.current = function () {
         return this.locks[this.locks.length - 1];
     }),
-    (a.prototype.isActive = function () {
+    (r.prototype.isActive = function () {
         var e = this.current();
         return null != e && e.enabled;
     }),
-    (a.prototype.toggleLayer = function (e, n) {
-        null != e && (e.setEnabled(n), (e.enabled = n));
+    (r.prototype.toggleLayer = function (e, t) {
+        null != e && (e.setEnabled(t), (e.enabled = t));
     }),
-    (a.prototype.subscribe = function (e) {
-        var n = this;
+    (r.prototype.subscribe = function (e) {
+        var t = this;
         return (
             this.listeners.push(e),
             e(this.isActive(), this.locks),
             function () {
-                return (n.listeners = n.listeners.filter(function (n) {
-                    return n !== e;
+                return (t.listeners = t.listeners.filter(function (t) {
+                    return t !== e;
                 }));
             }
         );
     }),
-    (a.prototype.emit = function () {
+    (r.prototype.emit = function () {
         var e = this,
-            n = this.isActive();
-        this.listeners.forEach(function (r) {
-            return r(n, e.locks);
+            t = this.isActive();
+        this.listeners.forEach(function (n) {
+            return n(t, e.locks);
         });
     });
-var s = new a(),
-    l = 0;
-function u(e) {
+var s = new r(),
+    o = 0;
+function l(e) {
     (0, i.useEffect)(
         function () {
             return s.subscribe(e);
@@ -86,48 +80,48 @@ function u(e) {
         [e]
     );
 }
-function c(e) {
-    var n = (0, i.useState)(function () {
+function u(e) {
+    var t = (0, i.useState)(function () {
         return document.activeElement;
     })[0];
     (0, i.useLayoutEffect)(function () {
         return function () {
             (null != e && e.current) ||
                 requestAnimationFrame(function () {
-                    null != n && n.focus();
+                    null != t && t.focus();
                 });
         };
     }, []);
 }
-function d(e) {
-    var n = (0, i.useState)(function () {
-            return e || 'lock-' + l++;
+function c(e) {
+    var t = (0, i.useState)(function () {
+            return e || 'lock-' + o++;
         })[0],
-        r = (0, i.useRef)(!1);
+        n = (0, i.useRef)(!1);
     return (
         (0, i.useLayoutEffect)(
             function () {
                 return (
-                    s.add(n, function (e) {
-                        return (r.current = e);
+                    s.add(t, function (e) {
+                        return (n.current = e);
                     }),
                     function () {
-                        return s.remove(n);
+                        return s.remove(t);
                     }
                 );
             },
-            [n]
+            [t]
         ),
-        r
+        n
     );
 }
-var f = (0, i.memo)(function () {
+var d = (0, i.memo)(function () {
     var e = (0, i.useState)(!1),
-        n = e[0];
+        t = e[0];
     return (
-        u(e[1]),
+        l(e[1]),
         (0, i.createElement)('div', {
-            tabIndex: n ? 0 : void 0,
+            tabIndex: t ? 0 : void 0,
             style: {
                 position: 'fixed',
                 opacity: 0,
@@ -136,51 +130,51 @@ var f = (0, i.memo)(function () {
         })
     );
 });
-function p(e, n) {
-    void 0 === n && (n = {});
-    var r = n.disableReturnRef,
-        a = n.attachTo;
-    void 0 === a && (a = document);
-    var s = n.disable,
-        l = d();
+function f(e, t) {
+    void 0 === t && (t = {});
+    var n = t.disableReturnRef,
+        r = t.attachTo;
+    void 0 === r && (r = document);
+    var s = t.disable,
+        o = c();
     (0, i.useEffect)(
         function () {
-            s && (l.current = !1);
+            s && (o.current = !1);
         },
         [s]
     ),
         (0, i.useLayoutEffect)(
             function () {
-                var n = e.current;
-                function r(n) {
-                    if (l.current) {
-                        var r = e.current;
-                        if (null != r) {
-                            var i = n.target || document.body;
-                            r.contains(i) || (n.preventDefault(), n.stopImmediatePropagation(), o(r, i));
+                var t = e.current;
+                function n(t) {
+                    if (o.current) {
+                        var n = e.current;
+                        if (null != n) {
+                            var i = t.target || document.body;
+                            n.contains(i) || (t.preventDefault(), t.stopImmediatePropagation(), a(n, i));
                         }
                     }
                 }
-                function i(n) {
-                    if (l.current) {
-                        var r = e.current;
-                        if (null != r) {
-                            (null != n.relatedTarget && n.relatedTarget !== document.body) || (n.preventDefault(), r.focus());
-                            var i = n.target || document.body;
-                            r.contains(i) || o(r, i);
+                function i(t) {
+                    if (o.current) {
+                        var n = e.current;
+                        if (null != n) {
+                            (null != t.relatedTarget && t.relatedTarget !== document.body) || (t.preventDefault(), n.focus());
+                            var i = t.target || document.body;
+                            n.contains(i) || a(n, i);
                         }
                     }
                 }
                 return (
-                    null == n || null == document.activeElement || n.contains(document.activeElement) || null != n.querySelector('[autofocus]') || o(n, document.activeElement, !0),
-                    a.addEventListener('focusin', r, { capture: !0 }),
-                    a.addEventListener('focusout', i, { capture: !0 }),
+                    null == t || null == document.activeElement || t.contains(document.activeElement) || null != t.querySelector('[autofocus]') || a(t, document.activeElement, !0),
+                    r.addEventListener('focusin', n, { capture: !0 }),
+                    r.addEventListener('focusout', i, { capture: !0 }),
                     function () {
-                        a.removeEventListener('focusin', r, { capture: !0 }), a.removeEventListener('focusout', i, { capture: !0 });
+                        r.removeEventListener('focusin', n, { capture: !0 }), r.removeEventListener('focusout', i, { capture: !0 });
                     }
                 );
             },
             [e]
         ),
-        c(r);
+        u(n);
 }

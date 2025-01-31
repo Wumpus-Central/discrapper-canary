@@ -1,10 +1,6 @@
-function i(e, n) {
-    return n.reduce(function (n, r) {
-        return (n[r] = e), n;
+function i(e, t) {
+    return t.reduce(function (t, n) {
+        return (t[n] = e), t;
     }, {});
 }
-r.d(n, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });

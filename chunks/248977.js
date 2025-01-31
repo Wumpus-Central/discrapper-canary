@@ -1,14 +1,9 @@
-r.d(n, {
-    Z: function () {
-        return a;
+function i(e) {
+    let t = '';
+    for (let n of Object.keys(e)) {
+        let i = e[n];
+        void 0 !== i && ('boolean' == typeof i && (i = i ? 'yes' : 'no'), (t += ''.concat(n, '=').concat(i, ',')));
     }
-});
-var i = r(47120);
-function a(e) {
-    let n = '';
-    for (let r of Object.keys(e)) {
-        let i = e[r];
-        void 0 !== i && ('boolean' == typeof i && (i = i ? 'yes' : 'no'), (n += ''.concat(r, '=').concat(i, ',')));
-    }
-    return n;
+    return t;
 }
+n.d(t, { Z: () => i }), n(47120);

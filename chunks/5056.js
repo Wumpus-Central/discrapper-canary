@@ -1,115 +1,116 @@
+t.d(n, { Z: () => h });
 var i = t(200651),
     l = t(192379),
-    a = t(120356),
-    s = t.n(a),
+    s = t(120356),
+    a = t.n(s),
     r = t(481060),
     o = t(838221),
     c = t(246364),
     d = t(700833),
     u = t(388032),
-    m = t(31619);
-function x(e) {
+    x = t(31619);
+function m(e) {
     let { onClick: n, text: t, icon: l } = e;
     return (0, i.jsx)('div', {
-        className: m.addFormFieldContainer,
-        children: (0, i.jsxs)(r.Clickable, {
-            className: m.addFormField,
+        className: x.addFormFieldContainer,
+        children: (0, i.jsxs)(r.P3F, {
+            className: x.addFormField,
             onClick: n,
             children: [
                 (0, i.jsx)(l, {
-                    className: m.icon,
+                    className: x.icon,
                     size: 'xs',
                     color: 'currentColor'
                 }),
-                (0, i.jsx)(r.FormText, {
-                    className: m.addFormFieldText,
+                (0, i.jsx)(r.R94, {
+                    className: x.addFormFieldText,
                     children: t
                 })
             ]
         })
     });
 }
-n.Z = function (e) {
-    let { addFormField: n, showManualApprovalWarning: a, guild: f, showHeader: h } = e,
-        g = l.useCallback(
-            (e) => {
-                (0, d.Md)(e, n, f);
-            },
-            [n, f]
-        ),
+let h = function (e) {
+    let { addFormField: n, showManualApprovalWarning: s, guild: h, showHeader: f } = e,
         v = l.useCallback(
             (e) => {
-                a
-                    ? (0, r.openModalLazy)(async () => {
+                (0, d.Md)(e, n, h);
+            },
+            [n, h]
+        ),
+        g = l.useCallback(
+            (e) => {
+                s
+                    ? (0, r.ZDy)(async () => {
                           let { default: n } = await t.e('54845').then(t.bind(t, 199836));
                           return (t) =>
                               (0, i.jsx)(n, {
                                   ...t,
-                                  onSubmit: () => g(e)
+                                  onSubmit: () => v(e)
                               });
                       })
-                    : g(e);
+                    : v(e);
             },
-            [a, g]
+            [s, v]
         );
     return (0, i.jsxs)('div', {
-        className: s()(m.spacingContainer, m.backgroundContainer),
+        className: a()(x.spacingContainer, x.backgroundContainer),
         children: [
-            h &&
+            f &&
                 (0, i.jsx)('div', {
-                    className: m.containerTopHat,
+                    className: x.containerTopHat,
                     children: (0, i.jsx)(r.Text, {
-                        className: m.containerTopHatText,
+                        className: x.containerTopHatText,
                         variant: 'text-xs/bold',
                         color: 'header-secondary',
                         children: u.intl.string(u.t.neG9U1)
                     })
                 }),
             (0, i.jsxs)('div', {
-                className: m.leftRailIconContainer,
+                className: x.leftRailIconContainer,
                 children: [
                     (0, i.jsx)('div', {
-                        className: m.iconContainer,
-                        children: (0, i.jsx)(r.PlusSmallIcon, {
+                        className: x.iconContainer,
+                        children: (0, i.jsx)(r.qJs, {
                             size: 'custom',
                             color: 'currentColor',
                             width: 18,
                             height: 20,
-                            className: m.icon
+                            className: x.icon
                         })
                     }),
-                    (0, i.jsxs)(r.FormSection, {
+                    (0, i.jsxs)(r.hjN, {
                         children: [
-                            (0, i.jsx)(r.FormTitle, {
+                            (0, i.jsx)(r.vwX, {
                                 tag: 'h3',
-                                className: m.leftRailIconContainerTitle,
+                                className: x.leftRailIconContainerTitle,
                                 children: u.intl.string(u.t['7v2xvr'])
                             }),
-                            (0, i.jsx)(r.FormText, {
-                                className: m.leftRailIconContainerDescription,
-                                type: r.FormText.Types.DESCRIPTION,
+                            (0, i.jsx)(r.R94, {
+                                className: x.leftRailIconContainerDescription,
+                                type: r.R94.Types.DESCRIPTION,
                                 children: u.intl.string(u.t.DyARHR)
                             }),
-                            (0, i.jsx)(x, {
+                            (0, i.jsx)(m, {
                                 formFieldType: c.QJ.TEXT_INPUT,
                                 addFormField: n,
-                                icon: (0, r.makeIconCompat)(o.Z),
+                                icon: (0, r.GSL)(o.Z),
                                 text: u.intl.string(u.t.w6Q9w8),
-                                onClick: () => v(c.QJ.TEXT_INPUT)
+                                onClick: () => g(c.QJ.TEXT_INPUT)
                             }),
-                            (0, i.jsx)(x, {
+                            (0, i.jsx)(m, {
                                 formFieldType: c.QJ.PARAGRAPH,
                                 addFormField: n,
-                                icon: r.ChannelListIcon,
+                                icon: r.OvV,
                                 text: u.intl.string(u.t.gG0JBA),
-                                onClick: () => v(c.QJ.PARAGRAPH)
+                                onClick: () => g(c.QJ.PARAGRAPH)
                             }),
-                            (0, i.jsx)(x, {
+                            (0, i.jsx)(m, {
                                 formFieldType: c.QJ.MULTIPLE_CHOICE,
                                 addFormField: n,
-                                icon: r.ListBulletsIcon,
+                                icon: r.jE$,
                                 text: u.intl.string(u.t.ooKh3t),
-                                onClick: () => v(c.QJ.MULTIPLE_CHOICE)
+                                onClick: () => g(c.QJ.MULTIPLE_CHOICE)
                             })
                         ]
                     })

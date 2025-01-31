@@ -1,16 +1,17 @@
-e.exports = {
-    container: 'container_d6cb89',
-    playIcon: 'playIcon_d6cb89',
-    playing: 'playing_d6cb89',
-    playButtonContainer: 'playButtonContainer_d6cb89',
-    oldPlayIconSpacing: 'oldPlayIconSpacing_d6cb89',
-    audioElement: 'audioElement_d6cb89',
-    volumeButton: 'volumeButton_d6cb89',
-    volumeButtonIcon: 'volumeButtonIcon_d6cb89',
-    volumeSlider: 'volumeSlider_d6cb89',
-    duration: 'duration_d6cb89',
-    waveform: 'waveform_d6cb89',
-    rippleContainer: 'rippleContainer_d6cb89',
-    ripple: 'ripple_d6cb89',
-    reducedMotion: 'reducedMotion_d6cb89'
+var i = {
+    container: 'container_a8e786',
+    playIcon: 'playIcon_a8e786',
+    playing: 'playing_a8e786',
+    playButtonContainer: 'playButtonContainer_a8e786',
+    oldPlayIconSpacing: 'oldPlayIconSpacing_a8e786',
+    audioElement: 'audioElement_a8e786',
+    volumeButton: 'volumeButton_a8e786',
+    volumeButtonIcon: 'volumeButtonIcon_a8e786',
+    volumeSlider: 'volumeSlider_a8e786',
+    duration: 'duration_a8e786',
+    waveform: 'waveform_a8e786',
+    rippleContainer: 'rippleContainer_a8e786',
+    ripple: 'ripple_a8e786',
+    reducedMotion: 'reducedMotion_a8e786'
 };
+e.exports = i;

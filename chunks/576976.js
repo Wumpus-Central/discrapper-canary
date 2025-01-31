@@ -1,10 +1,12 @@
 e.exports = {
-    root: 'root_dd069c',
-    idle: 'idle_dd069c',
-    topControls: 'topControls_dd069c controlSection_dd069c',
-    bottomControls: 'bottomControls_dd069c controlSection_dd069c',
-    videoControls: 'videoControls_dd069c',
-    gradientTop: 'gradientTop_dd069c gradientContainer_dd069c',
-    gradientBottom: 'gradientBottom_dd069c gradientContainer_dd069c',
-    edgeControls: 'edgeControls_dd069c'
+    root: 'root_bfe55a',
+    idle: 'idle_bfe55a',
+    gradientContainer: 'gradientContainer_bfe55a',
+    topControls: 'topControls_bfe55a controlSection_bfe55a',
+    bottomControls: 'bottomControls_bfe55a controlSection_bfe55a',
+    videoControls: 'videoControls_bfe55a',
+    gradientTop: 'gradientTop_bfe55a gradientContainer_bfe55a',
+    gradientBottom: 'gradientBottom_bfe55a gradientContainer_bfe55a',
+    controlSection: 'controlSection_bfe55a',
+    edgeControls: 'edgeControls_bfe55a'
 };

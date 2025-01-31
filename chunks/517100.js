@@ -1,143 +1,144 @@
+n.d(t, { Z: () => L });
 var i,
-    a = r(442837),
-    o = r(570140),
-    s = r(287734),
-    l = r(579806),
-    u = r(695346),
-    c = r(70956),
-    d = r(358085),
-    f = r(314897),
-    p = r(981631),
-    h = r(65154);
-function _(e, n, r) {
+    r = n(442837),
+    a = n(570140),
+    s = n(287734),
+    o = n(579806),
+    l = n(695346),
+    u = n(70956),
+    c = n(358085),
+    d = n(314897),
+    f = n(981631),
+    _ = n(65154);
+function p(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let m = Date.now(),
+let h = Date.now(),
+    m = !1,
     g = !1,
     E = !1,
     v = !1,
-    y = !1,
-    b = !1;
+    y = !1;
 function I() {
-    return v || y || ((0, d.isAndroid)() && b);
+    return E || v || ((0, c.isAndroid)() && y);
 }
-function T() {
-    Date.now() - m > Math.min(u.CM.getSetting() * c.Z.Millis.SECOND, p.OSm) || I()
-        ? !E &&
-          o.Z.dispatch({
+function b() {
+    Date.now() - h > Math.min(l.CM.getSetting() * u.Z.Millis.SECOND, f.OSm) || I()
+        ? g ||
+          a.Z.dispatch({
               type: 'AFK',
               afk: !0
           })
-        : E &&
-          o.Z.dispatch({
+        : g &&
+          a.Z.dispatch({
               type: 'AFK',
               afk: !1
           });
 }
-function S() {
-    Date.now() - m > p.OSm || I()
-        ? !g &&
-          o.Z.dispatch({
+function T() {
+    Date.now() - h > f.OSm || I()
+        ? m ||
+          a.Z.dispatch({
               type: 'IDLE',
               idle: !0,
-              idleSince: m
+              idleSince: h
           })
-        : g &&
-          o.Z.dispatch({
+        : m &&
+          a.Z.dispatch({
               type: 'IDLE',
               idle: !1
           });
 }
-function A() {
-    S(), T();
+function S() {
+    T(), b();
 }
-function C() {
+function A() {
     var e;
-    let n = (e) => {
-        (m = Math.max(Date.now() - e, m)), A(), setTimeout(C, 10 * c.Z.Millis.SECOND);
+    let t = (e) => {
+        (h = Math.max(Date.now() - e, h)), S(), setTimeout(A, 10 * u.Z.Millis.SECOND);
     };
-    if ((null === l.Z || void 0 === l.Z ? void 0 : null === (e = l.Z.remotePowerMonitor) || void 0 === e ? void 0 : e.getSystemIdleTimeMs) != null) {
-        let e = l.Z.remotePowerMonitor.getSystemIdleTimeMs();
-        e instanceof Promise ? e.then(n) : n(e);
+    if ((null === o.Z || void 0 === o.Z ? void 0 : null === (e = o.Z.remotePowerMonitor) || void 0 === e ? void 0 : e.getSystemIdleTimeMs) != null) {
+        let e = o.Z.remotePowerMonitor.getSystemIdleTimeMs();
+        e instanceof Promise ? e.then(t) : t(e);
     }
 }
 function N(e) {
-    g = e.idle;
+    m = e.idle;
+}
+function C(e) {
+    g = e.afk;
 }
 function R(e) {
-    E = e.afk;
+    let { userId: t, speakingFlags: n } = e;
+    return n !== _.Dg.NONE && t === d.default.getId() && D({}), !1;
 }
 function O(e) {
-    let { userId: n, speakingFlags: r } = e;
-    return r !== h.Dg.NONE && n === f.default.getId() && L({}), !1;
+    let { state: t } = e;
+    return (y = t === f.$7l.BACKGROUND), (h = Date.now()), S(), !1;
 }
 function D(e) {
-    let { state: n } = e;
-    return (b = n === p.$7l.BACKGROUND), (m = Date.now()), A(), !1;
-}
-function L(e) {
-    let { timestamp: n, type: r } = e,
-        i = 'OVERLAY_SET_NOT_IDLE' === r && null != n;
+    let { timestamp: t, type: n } = e,
+        i = 'OVERLAY_SET_NOT_IDLE' === n && null != t;
     return (
-        (!i || !(n <= m)) &&
-        ((m = i ? n : Date.now()),
+        (!i || !(t <= h)) &&
+        ((h = i ? t : Date.now()),
         __OVERLAY__
-            ? o.Z.dispatch({
+            ? a.Z.dispatch({
                   type: 'OVERLAY_SET_NOT_IDLE',
-                  timestamp: m
+                  timestamp: h
               })
-            : A(),
+            : S(),
         !1)
     );
 }
-!__OVERLAY__ &&
-    (d.isPlatformEmbedded && (null === l.Z || void 0 === l.Z ? void 0 : l.Z.remotePowerMonitor) != null
-        ? (C(),
-          l.Z.remotePowerMonitor.on('resume', () => {
-              (v = !1), L({});
+__OVERLAY__ ||
+    (c.isPlatformEmbedded && (null === o.Z || void 0 === o.Z ? void 0 : o.Z.remotePowerMonitor) != null
+        ? (A(),
+          o.Z.remotePowerMonitor.on('resume', () => {
+              (E = !1), D({});
           }),
-          l.Z.remotePowerMonitor.on('suspend', () => {
-              (v = !0), L({}), s.default.disconnect();
+          o.Z.remotePowerMonitor.on('suspend', () => {
+              (E = !0), D({}), s.default.disconnect();
           }),
-          l.Z.remotePowerMonitor.on('lock-screen', () => {
-              (y = !0), L({});
+          o.Z.remotePowerMonitor.on('lock-screen', () => {
+              (v = !0), D({});
           }),
-          l.Z.remotePowerMonitor.on('unlock-screen', () => {
-              (y = !1), L({});
+          o.Z.remotePowerMonitor.on('unlock-screen', () => {
+              (v = !1), D({});
           }))
-        : setInterval(A, 0.25 * p.OSm));
-class x extends (i = a.ZP.Store) {
+        : setInterval(S, 0.25 * f.OSm));
+class x extends (i = r.ZP.Store) {
     isIdle() {
-        return g;
+        return m;
     }
     isAFK() {
-        return E;
+        return g;
     }
     getIdleSince() {
-        return g ? m : null;
+        return m ? h : null;
     }
 }
-_(x, 'displayName', 'IdleStore'),
-    (n.Z = new x(o.Z, {
-        IDLE: N,
-        AFK: R,
-        SPEAKING: O,
-        APP_STATE_UPDATE: D,
-        OVERLAY_SET_NOT_IDLE: L,
-        CHANNEL_SELECT: L,
-        VOICE_CHANNEL_SELECT: L,
-        WINDOW_FOCUS: L,
-        OVERLAY_INITIALIZE: L,
-        OVERLAY_SET_INPUT_LOCKED: L,
-        USER_SETTINGS_PROTO_UPDATE: L
-    }));
+p(x, 'displayName', 'IdleStore');
+let L = new x(a.Z, {
+    IDLE: N,
+    AFK: C,
+    SPEAKING: R,
+    APP_STATE_UPDATE: O,
+    OVERLAY_SET_NOT_IDLE: D,
+    CHANNEL_SELECT: D,
+    VOICE_CHANNEL_SELECT: D,
+    WINDOW_FOCUS: D,
+    OVERLAY_INITIALIZE: D,
+    OVERLAY_SET_INPUT_LOCKED: D,
+    USER_SETTINGS_PROTO_UPDATE: D
+});

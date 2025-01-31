@@ -1,61 +1,55 @@
-r.d(n, {
-    ZP: function () {
-        return h;
-    },
-    hf: function () {
-        return f;
-    }
+n.d(t, {
+    ZP: () => _,
+    hf: () => d
 });
-var i = r(763296),
-    a = r(375954),
-    o = r(768581),
-    s = r(722932),
-    l = r(801606),
-    u = r(12327),
-    c = r(277078),
-    d = r(981631);
-let f = /^<sound:(\d+):(\d+)>/;
-function p(e, n, r, o) {
+var i = n(763296),
+    r = n(375954),
+    a = n(768581),
+    s = n(722932),
+    o = n(801606),
+    l = n(12327),
+    u = n(277078),
+    c = n(981631);
+let d = /^<sound:(\d+):(\d+)>/;
+function f(e, t, n, a) {
     if (!s.zv.getCurrentConfig({ location: 'getSoundmojiASTFromString' }, { autoTrackExposure: !1 }).enabled) return;
-    let u = i.Z.getSoundById(o),
-        f = (0, c.Z)(u, e, n);
-    if (null != r && null != n) {
-        let e = (0, l.Z)(n, r, o);
-        if (f && null == e) {
-            let e = a.Z.getMessage(n, r);
-            if ((null == e ? void 0 : e.state) !== d.yb.SENT) return u;
+    let l = i.Z.getSoundById(a),
+        d = (0, u.Z)(l, e, t);
+    if (null != n && null != t) {
+        let e = (0, o.Z)(t, n, a);
+        if (d && null == e) {
+            let e = r.Z.getMessage(t, n);
+            if ((null == e ? void 0 : e.state) !== c.yb.SENT) return l;
         }
         return e;
     }
-    if (!!f) {
-        if (null != u) return u;
-    }
+    if (d && null != l) return l;
 }
-function h(e, n) {
-    var r;
+function _(e, t) {
+    var n;
     let i = e[1],
-        a = e[2],
-        { guildId: s, channelId: l, messageId: c } = n,
-        d = p(s, l, c, a);
-    if (null == d)
+        r = e[2],
+        { guildId: s, channelId: o, messageId: u } = t,
+        c = f(s, o, u, r);
+    if (null == c)
         return {
             type: 'text',
-            content: (0, u.Z)(i, a)
+            content: (0, l.Z)(i, r)
         };
-    let f = null !== (r = null == d ? void 0 : d.name) && void 0 !== r ? r : a;
+    let d = null !== (n = null == c ? void 0 : c.name) && void 0 !== n ? n : r;
     return {
         type: 'soundboard',
-        soundId: a,
+        soundId: r,
         guildId: i,
-        messageId: n.messageId,
-        channelId: n.channelId,
-        content: f,
-        emojiId: null == d ? void 0 : d.emojiId,
-        emojiName: null == d ? void 0 : d.emojiName,
+        messageId: t.messageId,
+        channelId: t.channelId,
+        content: d,
+        emojiId: null == c ? void 0 : c.emojiId,
+        emojiName: null == c ? void 0 : c.emojiName,
         emojiSrc:
-            (null == d ? void 0 : d.emojiId) != null
-                ? (0, o.gT)({
-                      id: null == d ? void 0 : d.emojiId,
+            (null == c ? void 0 : c.emojiId) != null
+                ? (0, a.gT)({
+                      id: null == c ? void 0 : c.emojiId,
                       animated: !1,
                       size: 16
                   })

@@ -1,27 +1,23 @@
-e.d(t, {
-    E: function () {
-        return a;
-    }
-});
+e.d(n, { E: () => l });
 var o = e(200651);
 e(192379);
 var i = e(421580),
-    c = e(159277),
-    r = e(585183),
-    s = e(981631),
-    l = e(927923);
-function a(n) {
-    let { platformType: t, authToken: e, onContinue: a, onError: d, onClose: u } = n,
-        p = t === s.ABu.PLAYSTATION_STAGING ? c.t.PLAYSTATION_STAGING_APPLICATION_ID : c.t.PLAYSTATION_APPLICATION_ID,
-        A = t === s.ABu.PLAYSTATION_STAGING ? i.x.PLAYSTATION_STAGING : i.x.PLAYSTATION;
-    return (0, o.jsx)(r.h, {
-        platformType: t,
-        clientId: p,
-        scopes: l.KL,
+    r = e(159277),
+    s = e(585183),
+    c = e(981631),
+    a = e(927923);
+function l(t) {
+    let { platformType: n, authToken: e, onContinue: l, onError: d, onClose: u } = t,
+        _ = n === c.ABu.PLAYSTATION_STAGING ? r.t.PLAYSTATION_STAGING_APPLICATION_ID : r.t.PLAYSTATION_APPLICATION_ID,
+        p = n === c.ABu.PLAYSTATION_STAGING ? i.x.PLAYSTATION_STAGING : i.x.PLAYSTATION;
+    return (0, o.jsx)(s.h, {
+        platformType: n,
+        clientId: _,
+        scopes: a.KL,
         authToken: e,
-        onContinue: a,
+        onContinue: l,
         onError: d,
         onClose: u,
-        redirectUri: A
+        redirectUri: p
     });
 }

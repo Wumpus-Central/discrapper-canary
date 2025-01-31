@@ -1,17 +1,11 @@
 n.d(t, {
-    A7: function () {
-        return v;
-    },
-    CI: function () {
-        return N;
-    },
-    lH: function () {
-        return T;
-    }
+    A7: () => v,
+    CI: () => N,
+    lH: () => T
 });
 var i = n(200651),
-    r = n(192379),
-    l = n(704215),
+    l = n(192379),
+    r = n(704215),
     a = n(481060),
     s = n(605236),
     o = n(765585),
@@ -22,13 +16,13 @@ var i = n(200651),
     m = n(981631),
     p = n(921944),
     g = n(388032),
-    f = n(762042);
-let _ = 'url(#dark-purple-gradient)',
+    _ = n(762042);
+let f = 'url(#dark-purple-gradient)',
     E = () =>
         (0, i.jsxs)('div', {
-            className: f.coachtipContent,
+            className: _.coachtipContent,
             children: [
-                (0, i.jsx)(a.Heading, {
+                (0, i.jsx)(a.X6q, {
                     variant: 'heading-sm/bold',
                     children: g.intl.string(g.t.USo4s7)
                 }),
@@ -50,32 +44,32 @@ let _ = 'url(#dark-purple-gradient)',
                 fill: 'white'
             })
         }),
-    C = () => (0, s.EW)(l.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: p.L.TAKE_ACTION }),
+    C = () => (0, s.EW)(r.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR, { dismissAction: p.L.TAKE_ACTION }),
     v = (e) => {
         let { children: t } = e;
-        return (0, i.jsx)(a.Popout, {
+        return (0, i.jsx)(a.yRy, {
             shouldShow: !0,
             renderPopout: () =>
                 (0, i.jsx)(o.Z, {
-                    artClassName: f.coachmarkArt,
-                    dismissIconClassName: f.exitIcon,
+                    artClassName: _.coachmarkArt,
+                    dismissIconClassName: _.exitIcon,
                     onDismissIconClick: C,
                     dismissIcon: (0, i.jsx)(I, {}),
-                    headerClassName: f.incentiveCoachtipContent,
-                    contentClassName: f.incentiveCoachtipContainer,
-                    pointerClassName: f.incentiveTooltipPointer,
+                    headerClassName: _.incentiveCoachtipContent,
+                    contentClassName: _.incentiveCoachtipContainer,
+                    pointerClassName: _.incentiveTooltipPointer,
                     onTryFeature: () => {
                         (0, c.uL)(m.Z5c.NITRO_HOME), C();
                     },
                     art: (0, i.jsx)(i.Fragment, {
                         children: (0, i.jsx)(d.ZP, {
                             staticPercentage: 100,
-                            iconClassName: f.incentiveIcon,
+                            iconClassName: _.incentiveIcon,
                             showAnimations: !1,
                             progressCircleVariation: d.Qo.NITRO_LOGO,
                             ellipseOpacity: 1,
-                            circleColor: _,
-                            circleStroke: _,
+                            circleColor: f,
+                            circleStroke: f,
                             progressCircleStrokeSize: 4
                         })
                     }),
@@ -85,7 +79,7 @@ let _ = 'url(#dark-purple-gradient)',
                     header: g.intl.formatToPlainString(g.t.md2GU1, { discountRate: u.Nq }),
                     hideDismissButton: !0,
                     body: g.intl.formatToPlainString(g.t.mxPPxc, { discountRate: u.Nq }),
-                    dismissibleContent: l.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR,
+                    dismissibleContent: r.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR,
                     maxWidth: 320
                 }),
             children: t
@@ -94,30 +88,30 @@ let _ = 'url(#dark-purple-gradient)',
     N = (e) => {
         let { children: t } = e,
             n = (0, i.jsxs)('div', {
-                className: f.coachTipContainer,
+                className: _.coachTipContainer,
                 children: [
                     (0, i.jsx)('div', {
-                        className: f.iconContainer,
+                        className: _.iconContainer,
                         children: (0, i.jsx)(d.ZP, {
                             staticPercentage: 100,
-                            iconClassName: f.icon,
+                            iconClassName: _.icon,
                             showAnimations: !0,
                             progressCircleVariation: d.Qo.NITRO_LOGO,
                             ellipseOpacity: 1,
-                            customAnimationClassName: f.customCircleAnimation,
+                            customAnimationClassName: _.customCircleAnimation,
                             circleColor: 'url(#purple-gradient)'
                         })
                     }),
                     (0, i.jsx)(E, {})
                 ]
             });
-        return (0, i.jsx)(a.Tooltip, {
+        return (0, i.jsx)(a.ua7, {
             text: n,
             position: 'right',
             'aria-label': g.intl.string(g.t.USo4s7),
-            tooltipClassName: f.marketingBadgeTooltip,
+            tooltipClassName: _.marketingBadgeTooltip,
             allowOverflow: !0,
-            tooltipContentClassName: f.tooltipContent,
+            tooltipContentClassName: _.tooltipContent,
             children: (e) =>
                 (0, i.jsx)('div', {
                     ...e,
@@ -128,7 +122,7 @@ let _ = 'url(#dark-purple-gradient)',
     T = (e) => {
         let { isSelected: t, onSelect: n } = e;
         return (
-            r.useEffect(() => {
+            l.useEffect(() => {
                 t && n();
             }, [t, n]),
             (0, i.jsx)(h.Z, { copy: g.intl.string(g.t.y2b7CA) })

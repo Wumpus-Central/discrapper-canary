@@ -1,3 +1,4 @@
-t.exports = function (t) {
-    return null != t && 'object' == typeof t;
-};
+function t(e) {
+    return null != e && 'object' == typeof e;
+}
+e.exports = t;

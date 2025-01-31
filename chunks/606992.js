@@ -1,56 +1,51 @@
-r.d(n, {
-    Z: function () {
-        return l;
-    }
-});
-var i = r(47120);
-var a = r(192379),
-    o = r(40851),
-    s = r(590921);
-function l(e) {
-    let { editorHeight: n, type: r, state: i, isInPopoutExperiment: l = !1 } = e,
-        [u, c] = a.useState(void 0),
-        d = null == i ? void 0 : i.query,
-        f = null == i ? void 0 : i.isVisible,
-        { renderWindow: p } = a.useContext(o.ZP),
-        h = a.useCallback(() => {
-            var e, n, a, o;
-            if (null != i && (null == d || !f)) {
-                c(void 0);
+n.d(t, { Z: () => s }), n(47120);
+var i = n(192379),
+    r = n(40851),
+    a = n(590921);
+function s(e) {
+    let { editorHeight: t, type: n, state: s, isInPopoutExperiment: o = !1 } = e,
+        [l, u] = i.useState(void 0),
+        c = null == s ? void 0 : s.query,
+        d = null == s ? void 0 : s.isVisible,
+        { renderWindow: f } = i.useContext(r.ZP),
+        _ = i.useCallback(() => {
+            var e, t, i, r;
+            if (null != s && (null == c || !d)) {
+                u(void 0);
                 return;
             }
-            if ((null == d ? void 0 : d.type) === s.eq.GIFS || (null != r && !l && !(null === (e = r.autocomplete) || void 0 === e ? void 0 : e.alwaysUseLayer))) {
-                c(null);
+            if ((null == c ? void 0 : c.type) === a.eq.GIFS || (null != n && !o && !(null === (e = n.autocomplete) || void 0 === e ? void 0 : e.alwaysUseLayer))) {
+                u(null);
                 return;
             }
-            let u = p.document.getSelection(),
-                h = null != u && u.rangeCount > 0 ? u.getRangeAt(0) : null;
-            if (null == h) return;
-            let _ = h.startContainer,
-                m = h.startOffset;
-            for (; null != _; ) {
-                if (_.nodeType !== Node.TEXT_NODE || null == _.nodeValue) {
-                    c(null);
+            let l = f.document.getSelection(),
+                _ = null != l && l.rangeCount > 0 ? l.getRangeAt(0) : null;
+            if (null == _) return;
+            let p = _.startContainer,
+                h = _.startOffset;
+            for (; null != p; ) {
+                if (p.nodeType !== Node.TEXT_NODE || null == p.nodeValue) {
+                    u(null);
                     return;
                 }
-                if ((null === (n = _.nodeValue) || void 0 === n ? void 0 : n.length) === 0) {
-                    m = null !== (o = null == (_ = _.previousSibling) ? void 0 : null === (a = _.nodeValue) || void 0 === a ? void 0 : a.length) && void 0 !== o ? o : 0;
+                if ((null === (t = p.nodeValue) || void 0 === t ? void 0 : t.length) === 0) {
+                    h = null !== (r = null == (p = p.previousSibling) ? void 0 : null === (i = p.nodeValue) || void 0 === i ? void 0 : i.length) && void 0 !== r ? r : 0;
                     continue;
                 }
-                null != d && (m >= d.queryText.length ? (m -= d.queryText.length) : (m = 0));
+                null != c && (h >= c.queryText.length ? (h -= c.queryText.length) : (h = 0));
                 break;
             }
-            if (null == _) return;
-            let g = p.document.createRange();
-            g.setStart(_, m), g.setEnd(_, m);
-            let E = g.getBoundingClientRect();
-            if ((null == E ? void 0 : E.height) !== 0) c(null != E ? E : null);
-        }, [l, p.document, i, f, d, r]);
+            if (null == p) return;
+            let m = f.document.createRange();
+            m.setStart(p, h), m.setEnd(p, h);
+            let g = m.getBoundingClientRect();
+            (null == g ? void 0 : g.height) !== 0 && u(null != g ? g : null);
+        }, [o, f.document, s, d, c, n]);
     return (
-        a.useEffect(() => (p.document.addEventListener('selectionchange', h), () => p.document.removeEventListener('selectionchange', h)), [p.document, h]),
-        a.useEffect(() => {
-            h();
-        }, [h, n]),
-        u
+        i.useEffect(() => (f.document.addEventListener('selectionchange', _), () => f.document.removeEventListener('selectionchange', _)), [f.document, _]),
+        i.useEffect(() => {
+            _();
+        }, [_, t]),
+        l
     );
 }

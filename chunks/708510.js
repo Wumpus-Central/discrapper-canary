@@ -1,8 +1,4 @@
-n.d(t, {
-    O: function () {
-        return _;
-    }
-});
+n.d(t, { O: () => j });
 var i = n(200651),
     r = n(192379),
     l = n(442837),
@@ -17,10 +13,10 @@ var i = n(200651),
     g = n(44867),
     x = n(557359),
     p = n(658666),
-    f = n(307375),
+    _ = n(307375),
     C = n(384632),
-    v = n(388032),
-    I = n(322825);
+    f = n(388032),
+    v = n(322825);
 function N(e) {
     let { pendingState: t } = e,
         n = r.useRef(!1),
@@ -52,34 +48,34 @@ function N(e) {
             });
     }
 }
-function _() {
+function j() {
     let e = (0, l.e7)([c.Z], () => c.Z.getProps().guild),
         t = (0, l.e7)([p.Z], () => p.Z.pendingState);
     r.useEffect(() => {
-        if ((null == e ? void 0 : e.id) != null) o.ZP.fetchVerificationForm(e.id);
+        (null == e ? void 0 : e.id) != null && o.ZP.fetchVerificationForm(e.id);
     }, [null == e ? void 0 : e.id]);
     let n = r.useCallback(
         (t) => {
-            if ((null == e ? void 0 : e.id) != null) m.Z.setSelectedJoinType(e.id, t);
+            (null == e ? void 0 : e.id) != null && m.Z.setSelectedJoinType(e.id, t);
         },
         [null == e ? void 0 : e.id]
     );
     if (null == e || null == t) return null;
     let { joinType: a } = t;
-    return (0, i.jsxs)(s.Stack, {
+    return (0, i.jsxs)(s.Kqy, {
         gap: 32,
         children: [
-            (0, i.jsx)(s.Heading, {
+            (0, i.jsx)(s.X6q, {
                 color: 'header-primary',
                 variant: 'heading-lg/semibold',
-                children: v.intl.string(v.t['+hFV+P'])
+                children: f.intl.string(f.t['+hFV+P'])
             }),
-            (0, i.jsx)(f.h, {
+            (0, i.jsx)(_.h, {
                 onTypePicked: n,
                 activeType: a,
                 guild: e
             }),
-            (0, i.jsx)('div', { className: I.divider }),
+            (0, i.jsx)('div', { className: v.divider }),
             (0, i.jsx)('div', { children: (0, i.jsx)(N, { pendingState: t }) })
         ]
     });

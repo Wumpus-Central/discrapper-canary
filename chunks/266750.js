@@ -1,38 +1,39 @@
-var i = r(392711),
-    a = r.n(i),
-    o = r(250407),
-    s = r(710845),
-    l = r(914010),
-    u = r(70956),
-    c = r(287328);
-function d(e, n, r) {
+n.d(t, { Z: () => _ });
+var i = n(392711),
+    r = n.n(i),
+    a = n(250407),
+    s = n(710845),
+    o = n(914010),
+    l = n(70956),
+    u = n(287328);
+function c(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let f = new s.Z('NonGuildVersions');
-class p {
+let d = new s.Z('NonGuildVersions');
+class f {
     async getCommittedVersions() {
         try {
-            let e = c.Z.nonGuildVersions();
+            let e = u.Z.nonGuildVersions();
             if (null == e) return {};
-            let n = (await e.getMany()).map((e) => [e.id, 'version' in e ? e.version : e.versionString]);
-            return Object.fromEntries(null != n ? n : []);
+            let t = (await e.getMany()).map((e) => [e.id, 'version' in e ? e.version : e.versionString]);
+            return Object.fromEntries(null != t ? t : []);
         } catch (e) {
-            return f.warn("couldn't load guild versions", e), {};
+            return d.warn("couldn't load guild versions", e), {};
         }
     }
-    handleConnectionOpen(e, n) {
+    handleConnectionOpen(e, t) {
         null != e.apiCodeVersion &&
-            c.Z.nonGuildVersionsTransaction(n).put({
+            u.Z.nonGuildVersionsTransaction(t).put({
                 id: 'api_code_version',
                 version: e.apiCodeVersion
             });
@@ -40,29 +41,29 @@ class p {
     resetInMemoryState() {}
     constructor() {
         if (
-            (d(this, 'actions', {
-                CONNECTION_OPEN: (e, n) => this.handleConnectionOpen(e, n),
-                BACKGROUND_SYNC: (e, n) => this.handleConnectionOpen(e, n)
+            (c(this, 'actions', {
+                CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
+                BACKGROUND_SYNC: (e, t) => this.handleConnectionOpen(e, t)
             }),
-            !(0, o.O)())
+            !(0, a.O)())
         )
             return;
-        l.Z.addChangeListener(
-            a().throttle(() => {
+        o.Z.addChangeListener(
+            r().throttle(() => {
                 var e;
-                null === (e = c.Z.database()) ||
+                null === (e = u.Z.database()) ||
                     void 0 === e ||
                     e.transaction((e) => {
-                        let n = l.Z.getGuildId();
-                        null == n || isNaN(Number(n))
-                            ? c.Z.nonGuildVersionsTransaction(e).delete('initial_guild_id')
-                            : c.Z.nonGuildVersionsTransaction(e).put({
+                        let t = o.Z.getGuildId();
+                        null == t || isNaN(Number(t))
+                            ? u.Z.nonGuildVersionsTransaction(e).delete('initial_guild_id')
+                            : u.Z.nonGuildVersionsTransaction(e).put({
                                   id: 'initial_guild_id',
-                                  versionString: n
+                                  versionString: t
                               });
                     });
-            }, 10 * u.Z.Millis.SECOND)
+            }, 10 * l.Z.Millis.SECOND)
         );
     }
 }
-n.Z = new p();
+let _ = new f();

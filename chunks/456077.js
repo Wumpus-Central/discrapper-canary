@@ -1,8 +1,4 @@
-function i(e, n) {
-    return n && (e = e.trim()), e;
+function i(e, t) {
+    return t && (e = e.trim()), e;
 }
-r.d(n, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });

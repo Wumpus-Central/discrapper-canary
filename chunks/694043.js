@@ -1,46 +1,38 @@
-r.d(t, {
-    Ak: function () {
-        return o;
-    },
-    QC: function () {
-        return E;
-    },
-    t$: function () {
-        return i;
-    },
-    zb: function () {
-        return c;
-    }
+a.d(e, {
+    Ak: () => _,
+    QC: () => i,
+    t$: () => c,
+    zb: () => s
 });
-var a = r(176984),
-    n = r(622916);
-let _ = r(899517).n;
-function o() {
-    if (!('fetch' in _)) return !1;
+var r = a(176984),
+    n = a(622916);
+let o = a(899517).n;
+function _() {
+    if (!('fetch' in o)) return !1;
     try {
         return new Headers(), new Request('http://www.example.com'), new Response(), !0;
-    } catch (e) {
+    } catch (t) {
         return !1;
     }
 }
-function E(e) {
-    return e && /^function\s+\w+\(\)\s+\{\s+\[native code\]\s+\}$/.test(e.toString());
-}
-function i() {
-    if ('string' == typeof EdgeRuntime) return !0;
-    if (!o()) return !1;
-    if (E(_.fetch)) return !0;
-    let e = !1,
-        t = _.document;
-    if (t && 'function' == typeof t.createElement)
-        try {
-            let r = t.createElement('iframe');
-            (r.hidden = !0), t.head.appendChild(r), r.contentWindow && r.contentWindow.fetch && (e = E(r.contentWindow.fetch)), t.head.removeChild(r);
-        } catch (e) {
-            a.X && n.kg.warn('Could not create sandbox iframe for pure fetch check, bailing to window.fetch: ', e);
-        }
-    return e;
+function i(t) {
+    return t && /^function\s+\w+\(\)\s+\{\s+\[native code\]\s+\}$/.test(t.toString());
 }
 function c() {
-    return 'ReportingObserver' in _;
+    if ('string' == typeof EdgeRuntime) return !0;
+    if (!_()) return !1;
+    if (i(o.fetch)) return !0;
+    let t = !1,
+        e = o.document;
+    if (e && 'function' == typeof e.createElement)
+        try {
+            let a = e.createElement('iframe');
+            (a.hidden = !0), e.head.appendChild(a), a.contentWindow && a.contentWindow.fetch && (t = i(a.contentWindow.fetch)), e.head.removeChild(a);
+        } catch (t) {
+            r.X && n.kg.warn('Could not create sandbox iframe for pure fetch check, bailing to window.fetch: ', t);
+        }
+    return t;
+}
+function s() {
+    return 'ReportingObserver' in o;
 }

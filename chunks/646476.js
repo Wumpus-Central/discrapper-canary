@@ -1,27 +1,20 @@
-r.d(n, {
-    RO: function () {
-        return u;
-    },
-    TX: function () {
-        return f;
-    },
-    Ys: function () {
-        return c;
-    },
-    rK: function () {
-        return d;
-    }
+n.d(t, {
+    RO: () => l,
+    TX: () => d,
+    Ys: () => u,
+    ZP: () => f,
+    rK: () => c
 });
-var i = r(987170),
-    a = r(535201),
-    o = r(987338);
+var i = n(987170),
+    r = n(535201),
+    a = n(987338);
 let s = new Date('2025-01-06T07:59:59.000Z'),
-    l = (0, i.Z)({
+    o = (0, i.Z)({
         id: '2024-11_seasonal_gifting',
         label: 'Seasonal Gifting 2024',
         kind: 'user',
         defaultConfig: { enabled: !1 },
-        commonTriggerPoint: o.$P.CONNECTION_OPEN,
+        commonTriggerPoint: a.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,
@@ -30,7 +23,7 @@ let s = new Date('2025-01-06T07:59:59.000Z'),
             }
         ]
     }),
-    u = (0, i.Z)({
+    l = (0, i.Z)({
         id: '2023-11_seasonal_gifting_marketing_2023',
         label: 'Seasonal Gifting Marketing 2023',
         kind: 'user',
@@ -43,12 +36,12 @@ let s = new Date('2025-01-06T07:59:59.000Z'),
             }
         ]
     }),
-    c = (0, i.Z)({
+    u = (0, i.Z)({
         id: '2024-11_seasonal_gifting_reminder',
         label: 'Seasonal Gifting Reminder 2024',
         kind: 'user',
         defaultConfig: { enabled: !1 },
-        commonTriggerPoint: o.$P.CONNECTION_OPEN,
+        commonTriggerPoint: a.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 1,
@@ -57,12 +50,12 @@ let s = new Date('2025-01-06T07:59:59.000Z'),
             }
         ]
     });
+function c() {
+    return (0, r.p)(s);
+}
 function d() {
-    return (0, a.p)(s);
+    let e = c(),
+        { enabled: t } = o.useExperiment({ location: 'useIsInSeasonalGiftingXPAndSeasonalGiftingActive' }, { autoTrackExposure: !1 });
+    return e && t;
 }
-function f() {
-    let e = d(),
-        { enabled: n } = l.useExperiment({ location: 'useIsInSeasonalGiftingXPAndSeasonalGiftingActive' }, { autoTrackExposure: !1 });
-    return e && n;
-}
-n.ZP = l;
+let f = o;

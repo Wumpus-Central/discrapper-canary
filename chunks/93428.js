@@ -1,1 +1,2 @@
-e.exports = { clickable: 'clickable_eebaf6' };
+var i = { clickable: 'clickable__75b30' };
+e.exports = i;

@@ -1,10 +1,6 @@
 n.d(t, {
-    J: function () {
-        return i;
-    },
-    N: function () {
-        return r;
-    }
+    J: () => i,
+    N: () => l
 });
 let i = 800,
-    r = 500;
+    l = 500;

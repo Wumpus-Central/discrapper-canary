@@ -1,45 +1,41 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
+n.d(t, { Z: () => d });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(857395),
-    a = n(739566),
-    o = n(834129),
-    s = n(388032);
+var l = n(481060),
+    a = n(857395),
+    r = n(739566),
+    s = n(834129),
+    o = n(388032);
 function c(e) {
-    let { children: t, messageReference: n, guildName: a } = e;
-    if (null == n) return (0, i.jsx)(r.Anchor, { children: t });
-    let { guild_id: o, channel_id: s, message_id: c } = n;
-    return null == o
-        ? (0, i.jsx)(r.Anchor, { children: t })
-        : (0, i.jsx)(l.Z, {
-              guildId: o,
-              channelId: s,
+    let { children: t, messageReference: n, guildName: r } = e;
+    if (null == n) return (0, i.jsx)(l.eee, { children: t });
+    let { guild_id: s, channel_id: o, message_id: c } = n;
+    return null == s
+        ? (0, i.jsx)(l.eee, { children: t })
+        : (0, i.jsx)(a.Z, {
+              guildId: s,
+              channelId: o,
               messageId: c,
-              name: a,
+              name: r,
               children: (e) => {
-                  let { 'aria-controls': n, 'aria-expanded': l, ...a } = e;
-                  return (0, i.jsx)(r.Anchor, {
-                      ...a,
+                  let { 'aria-controls': n, 'aria-expanded': a, ...r } = e;
+                  return (0, i.jsx)(l.eee, {
+                      ...r,
                       children: t
                   });
               }
           });
 }
-function u(e) {
-    let { usernameHook: t, message: r, compact: l } = e,
-        { content: u, timestamp: d, messageReference: m } = r,
-        h = (0, a.ZP)(r),
-        f = t(h),
-        p = (null != u ? u : '').split(' ').slice(0, -1).join(' '),
-        _ = s.intl.format(s.t['47CZc3'], {
+function d(e) {
+    let { usernameHook: t, message: l, compact: a } = e,
+        { content: d, timestamp: u, messageReference: m } = l,
+        h = (0, r.ZP)(l),
+        _ = t(h),
+        p = (null != d ? d : '').split(' ').slice(0, -1).join(' '),
+        g = o.intl.format(o.t['47CZc3'], {
             username: h.nick,
-            usernameHook: f,
-            webhookName: u,
+            usernameHook: _,
+            webhookName: d,
             webhookNameHook: (e, t) =>
                 (0, i.jsx)(
                     c,
@@ -51,10 +47,10 @@ function u(e) {
                     t
                 )
         });
-    return (0, i.jsx)(o.Z, {
+    return (0, i.jsx)(s.Z, {
         icon: n(570111),
-        timestamp: d,
-        compact: l,
-        children: _
+        timestamp: u,
+        compact: a,
+        children: g
     });
 }

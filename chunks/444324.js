@@ -1,11 +1,6 @@
-n.d(t, {
-    Z: function () {
-        return l;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => r }), n(47120);
 var i = n(900849);
-function r(e, t, n) {
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +13,7 @@ function r(e, t, n) {
         e
     );
 }
-class l {
+class r {
     markAsSeen(e, t, n) {
         this.categoryId !== e && ((this.categoryId = e), this.flushSeenGuilds(n)), this.guildIds.add(t);
     }
@@ -26,6 +21,6 @@ class l {
         this.guildIds.size > 0 && (i.Az(e, Array.from(this.guildIds)), this.guildIds.clear());
     }
     constructor(e) {
-        r(this, 'guildIds', new Set()), r(this, 'categoryId', void 0), (this.categoryId = e);
+        l(this, 'guildIds', new Set()), l(this, 'categoryId', void 0), (this.categoryId = e);
     }
 }

@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-});
+n.d(t, { Z: () => r });
 var a = n(192379),
     l = n(358085);
 function r(e) {
@@ -15,7 +11,7 @@ function r(e) {
             let n = e.ctrlKey && !(e.altKey || e.metaKey || e.shiftKey),
                 a = e.metaKey && !(e.altKey || e.ctrlKey || e.shiftKey),
                 { disabled: r = !1, onSubmit: i } = t.current;
-            if ('enter' === e.key.toLowerCase()) ('macos' === (0, l.getOS)() ? a : n) && !r && (e.preventDefault(), i());
+            'enter' === e.key.toLowerCase() && ('macos' === (0, l.getOS)() ? a : n) && !r && (e.preventDefault(), i());
         }, [])
     );
 }

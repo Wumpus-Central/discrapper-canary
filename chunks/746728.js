@@ -1,13 +1,12 @@
 n.d(t, {
-    I: function () {
-        return p;
-    }
+    I: () => p,
+    Z: () => _
 }),
     n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
     s = n(481060),
     o = n(706454),
     c = n(959165),
@@ -26,17 +25,17 @@ function p(e) {
         });
 }
 function g(e) {
-    let { loadId: t, categoryId: n, count: l } = e,
-        c = r.useCallback(() => {
+    let { loadId: t, categoryId: n, count: r } = e,
+        c = l.useCallback(() => {
             p({
                 categoryId: n,
                 loadId: t
             });
         }, [n, t]),
         h = d.Z.useField('categoryId') === n,
-        g = l.toLocaleString(o.default.locale),
-        f = (0, u.E)({ categoryId: n });
-    return (0, i.jsxs)(s.Clickable, {
+        g = r.toLocaleString(o.default.locale),
+        _ = (0, u.E)({ categoryId: n });
+    return (0, i.jsxs)(s.P3F, {
         onClick: c,
         className: a()(m.category, { [m.selected]: h }),
         children: [
@@ -44,7 +43,7 @@ function g(e) {
                 className: m.name,
                 variant: 'text-sm/medium',
                 color: 'header-primary',
-                children: f
+                children: _
             }),
             (0, i.jsx)(s.Text, {
                 className: m.count,
@@ -55,7 +54,7 @@ function g(e) {
         ]
     });
 }
-t.Z = function (e) {
+let _ = function (e) {
     let { loadId: t } = e,
         n = (0, h.q)();
     return null == n
@@ -63,13 +62,13 @@ t.Z = function (e) {
         : (0, i.jsx)('div', {
               className: m.categories,
               children: n.map((e) => {
-                  let [n, r] = e;
+                  let [n, l] = e;
                   return (0, i.jsx)(
                       g,
                       {
                           loadId: t,
                           categoryId: n,
-                          count: r
+                          count: l
                       },
                       n
                   );

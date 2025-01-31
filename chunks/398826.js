@@ -1,32 +1,28 @@
 n.d(t, {
-    A: function () {
-        return l;
-    },
-    h: function () {
-        return o;
-    }
+    A: () => a,
+    h: () => o
 });
 var i = n(544891),
-    r = n(570140),
-    s = n(809206),
-    a = n(981631);
-function l() {
+    s = n(570140),
+    r = n(809206),
+    l = n(981631);
+function a() {
     return (
-        r.Z.dispatch({ type: 'LOAD_DATA_HARVEST_TYPE_START' }),
+        s.Z.dispatch({ type: 'LOAD_DATA_HARVEST_TYPE_START' }),
         i.tn
             .get({
-                url: a.ANM.USER_HARVEST,
+                url: l.ANM.USER_HARVEST,
                 oldFormErrors: !0,
                 rejectWithError: !1
             })
             .then((e) => {
-                r.Z.dispatch({
+                s.Z.dispatch({
                     type: 'UPDATE_DATA_HARVEST_TYPE',
                     harvestType: e.body
                 });
             })
             .catch((e) => {
-                r.Z.dispatch({
+                s.Z.dispatch({
                     type: 'LOAD_DATA_HARVEST_TYPE_FAILURE',
                     error: e
                 });
@@ -34,11 +30,11 @@ function l() {
     );
 }
 function o(e) {
-    return (0, s.V3)(e).then(
+    return (0, r.V3)(e).then(
         (e) => (
             null != e &&
                 null != e.body &&
-                r.Z.dispatch({
+                s.Z.dispatch({
                     type: 'UPDATE_DATA_HARVEST_TYPE',
                     harvestType: e.body
                 }),

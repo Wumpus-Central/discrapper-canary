@@ -1,11 +1,6 @@
-n.d(t, {
-    Z: function () {
-        return w;
-    }
-}),
-    n(47120);
-var i = n(200651),
-    a = n(192379),
+n.d(t, { Z: () => k }), n(47120);
+var a = n(200651),
+    i = n(192379),
     l = n(120356),
     s = n.n(l),
     c = n(442837),
@@ -14,17 +9,17 @@ var i = n(200651),
     d = n(434650),
     u = n(895924),
     p = n(70097),
-    f = n(695346),
-    m = n(594174),
-    g = n(695103),
+    m = n(695346),
+    g = n(594174),
+    f = n(695103),
     v = n(880448),
     h = n(823379),
     x = n(5192),
-    b = n(624138),
-    C = n(115130),
-    I = n(147865),
-    T = n(542094),
-    _ = n(665811),
+    _ = n(624138),
+    b = n(115130),
+    C = n(147865),
+    I = n(542094),
+    T = n(665811),
     Z = n(182906),
     S = n(556505),
     y = n(513202),
@@ -35,32 +30,32 @@ var i = n(200651),
     M = n(969728);
 function O(e) {
     let { value: t, icon: n } = e;
-    return (0, i.jsxs)(o.Text, {
+    return (0, a.jsxs)(o.Text, {
         className: A.activityTag,
         color: 'interactive-normal',
         variant: 'text-xs/semibold',
-        children: [(0, h.lm)(n) ? (0, i.jsx)(n, { className: A.icon }) : null, t]
+        children: [(0, h.lm)(n) ? (0, a.jsx)(n, { className: A.icon }) : null, t]
     });
 }
 function L(e) {
-    let { activity: t, application: n, context: a, guildId: l, large: s = !1 } = e,
-        r = 'channel' === a.type ? a.channel : void 0,
-        d = (0, c.Wu)([m.default], () => {
+    let { activity: t, application: n, context: i, guildId: l, large: s = !1 } = e,
+        r = 'channel' === i.type ? i.channel : void 0,
+        d = (0, c.Wu)([g.default], () => {
             var e;
             return Array.from(null !== (e = null == t ? void 0 : t.userIds) && void 0 !== e ? e : [])
                 .map((e) => {
                     let [t] = e;
-                    return m.default.getUser(t);
+                    return g.default.getUser(t);
                 })
                 .filter(h.lm);
         }),
         u = x.ZP.getName(l, null == r ? void 0 : r.id, null == d ? void 0 : d[0]);
-    if (((u = (0, b.aF)(u, 15)), null == t || 0 === d.length)) {
-        var p, f;
-        let e = ''.concat((0, I.ZP)(null !== (p = n.maxParticipants) && void 0 !== p ? p : 0));
+    if (((u = (0, _.aF)(u, 15)), null == t || 0 === d.length)) {
+        var p, m;
+        let e = ''.concat((0, C.ZP)(null !== (p = n.maxParticipants) && void 0 !== p ? p : 0));
         return (
-            s && (e = null !== (f = n.description) && void 0 !== f ? f : ''),
-            (0, i.jsx)(o.Text, {
+            s && (e = null !== (m = n.description) && void 0 !== m ? m : ''),
+            (0, a.jsx)(o.Text, {
                 className: A.activitySubtitleText,
                 variant: 'text-xs/normal',
                 color: 'interactive-normal',
@@ -68,10 +63,10 @@ function L(e) {
             })
         );
     }
-    return (0, i.jsxs)('div', {
+    return (0, a.jsxs)('div', {
         className: A.activitySubtitleText,
         children: [
-            (0, i.jsx)(o.Text, {
+            (0, a.jsx)(o.Text, {
                 className: A.usersArePlayingText,
                 variant: 'text-xs/normal',
                 children:
@@ -82,7 +77,7 @@ function L(e) {
                           })
                         : E.intl.formatToPlainString(E.t['7Uuia2'], { username: u })
             }),
-            (0, i.jsx)(N.Z, {
+            (0, a.jsx)(N.Z, {
                 size: s ? N.u.SIZE_24 : N.u.SIZE_16,
                 guildId: l,
                 users: d,
@@ -91,49 +86,49 @@ function L(e) {
         ]
     });
 }
-function w(e) {
+function k(e) {
     var t;
-    let { activityItem: n, context: l, guildId: m, locationObject: h, onActivityItemVisible: x, onActivityItemSelected: b, large: N = !1 } = e,
+    let { activityItem: n, context: l, guildId: g, locationObject: h, onActivityItemVisible: x, onActivityItemSelected: _, large: N = !1 } = e,
         {
-            imageBackground: w,
-            videoUrl: k,
-            activityAction: B,
+            imageBackground: k,
+            videoUrl: w,
+            activityAction: P,
             joinableEmbeddedApp: D,
-            onActivityItemSelected: P,
-            labelType: R,
-            staffReleasePhase: F
-        } = (0, T.ZP)({
+            onActivityItemSelected: R,
+            labelType: F,
+            staffReleasePhase: B
+        } = (0, I.ZP)({
             activityItem: n,
             context: l,
-            guildId: m,
+            guildId: g,
             locationObject: h,
             onActivityItemVisible: x,
-            onActivityItemSelected: b,
+            onActivityItemSelected: _,
             embeddedActivitiesManager: y.Z,
             commandOrigin: u.bB.APPLICATION_LAUNCHER
         }),
-        H = (0, c.e7)([C.Z, g.Z], () => C.Z.inDevModeForApplication(n.application.id) || g.Z.inTestModeForApplication(n.application.id), [n.application.id]),
-        { application: V } = n,
-        U = a.useCallback((e) => e && (null == x ? void 0 : x({ applicationId: n.application.id })), [n.application.id, x]),
+        V = (0, c.e7)([b.Z, f.Z], () => b.Z.inDevModeForApplication(n.application.id) || f.Z.inTestModeForApplication(n.application.id), [n.application.id]),
+        { application: H } = n,
+        U = i.useCallback((e) => e && (null == x ? void 0 : x({ applicationId: n.application.id })), [n.application.id, x]),
         Y = (0, d.O)(U, 0.8, !0),
-        [G, W] = a.useState(!1),
-        [z, q] = a.useState(G);
-    a.useEffect(() => {
+        [G, z] = i.useState(!1),
+        [W, q] = i.useState(G);
+    i.useEffect(() => {
         G && q(!0);
     }, [G]);
-    let J = () => W(!0),
-        X = () => W(!1),
-        $ = f.Sb.useSetting(),
-        Q = a.useCallback(() => {
-            null == P || P();
-        }, [P]);
-    return (0, i.jsxs)(o.Clickable, {
-        onClick: B === T.JS.START ? Q : void 0,
+    let J = () => z(!0),
+        X = () => z(!1),
+        $ = m.Sb.useSetting(),
+        Q = i.useCallback(() => {
+            null == R || R();
+        }, [R]);
+    return (0, a.jsxs)(o.P3F, {
+        onClick: P === I.JS.START ? Q : void 0,
         onContextMenu: $
             ? (e) => {
                   (0, r.vq)(e, (e) =>
-                      (0, i.jsx)(j.Z, {
-                          application: V,
+                      (0, a.jsx)(j.Z, {
+                          application: H,
                           ...e
                       })
                   );
@@ -141,10 +136,10 @@ function w(e) {
             : void 0,
         className: s()(A.activityItem, {
             [A.large]: !0 === N,
-            [A.disabled]: B !== T.JS.START
+            [A.disabled]: P !== I.JS.START
         }),
         children: [
-            (0, i.jsxs)('div', {
+            (0, a.jsxs)('div', {
                 ref: Y,
                 className: s()(A.activityImageContainer, { [A.large]: !0 === N }),
                 onMouseEnter: J,
@@ -152,81 +147,81 @@ function w(e) {
                 onMouseLeave: X,
                 onBlur: X,
                 children: [
-                    (0, i.jsx)(Z.Z, {
-                        imageBackground: w,
-                        applicationName: V.name,
+                    (0, a.jsx)(Z.Z, {
+                        imageBackground: k,
+                        applicationName: H.name,
                         imageClassName: s()(A.activityImage, { [A.large]: !0 === N }),
                         imageNotFoundClassName: A.brokenImageIconWrapper
                     }),
-                    null != k && z && B === T.JS.START
-                        ? (0, i.jsx)('div', {
+                    null != w && W && P === I.JS.START
+                        ? (0, a.jsx)('div', {
                               className: s()(A.activityVideo, { [A.videoFadeOut]: !G }),
                               onAnimationEnd: () => (G ? null : q(!1)),
-                              children: (0, i.jsx)(p.Z, {
+                              children: (0, a.jsx)(p.Z, {
                                   className: A.activityVideo,
-                                  src: k,
+                                  src: w,
                                   loop: !0,
                                   autoPlay: !0,
                                   muted: !0
                               })
                           })
                         : null,
-                    B !== T.JS.START
-                        ? (0, i.jsx)(_.U, {
-                              action: B,
+                    P !== I.JS.START
+                        ? (0, a.jsx)(T.U, {
+                              action: P,
                               onClick: Q
                           })
                         : null,
-                    (0, i.jsx)('div', {
+                    (0, a.jsx)('div', {
                         className: A.overlayBadge,
-                        children: (0, i.jsx)('div', {
+                        children: (0, a.jsx)('div', {
                             className: A.badgeContainer,
-                            children: (0, i.jsx)(S.Z, {
-                                name: V.name,
-                                labelType: R
+                            children: (0, a.jsx)(S.Z, {
+                                name: H.name,
+                                labelType: F
                             })
                         })
                     }),
-                    H
-                        ? (0, i.jsx)(o.Tooltip, {
+                    V
+                        ? (0, a.jsx)(o.ua7, {
                               text: E.intl.string(E.t.CfTySU),
                               children: (e) =>
-                                  (0, i.jsx)('div', {
+                                  (0, a.jsx)('div', {
                                       className: A.devShelfBadge,
                                       ...e,
-                                      children: (0, i.jsx)(v.Z, { className: A.devShelfIcon })
+                                      children: (0, a.jsx)(v.Z, { className: A.devShelfIcon })
                                   })
                           })
                         : null
                 ]
             }),
-            (0, i.jsxs)('div', {
+            (0, a.jsxs)('div', {
                 className: s()(A.activityTextContainer, { [A.large]: N }),
                 children: [
                     N
-                        ? (0, i.jsx)(o.Text, {
+                        ? (0, a.jsx)(o.Text, {
                               className: A.activityMaxParticipantsLarge,
                               variant: 'text-xs/normal',
                               color: 'interactive-normal',
-                              children: (0, I.ZP)(null !== (t = V.maxParticipants) && void 0 !== t ? t : 0)
+                              children: (0, C.ZP)(null !== (t = H.maxParticipants) && void 0 !== t ? t : 0)
                           })
                         : null,
-                    (0, i.jsxs)('div', {
+                    (0, a.jsxs)('div', {
                         className: A.activityName,
                         children: [
-                            (0, i.jsx)(o.Heading, {
+                            (0, a.jsx)(o.X6q, {
                                 className: A.activityTitleText,
                                 variant: 'heading-md/semibold',
                                 color: 'interactive-active',
-                                children: V.name
+                                children: H.name
                             }),
-                            null != F
-                                ? (0, i.jsx)(o.Tooltip, {
-                                      text: F,
+                            null != B
+                                ? (0, a.jsx)(o.ua7, {
+                                      text: B,
                                       children: (e) =>
-                                          (0, i.jsx)('img', {
+                                          (0, a.jsx)('img', {
                                               className: A.staffBadge,
-                                              alt: F,
+                                              alt: B,
                                               src: M,
                                               ...e
                                           })
@@ -234,16 +229,16 @@ function w(e) {
                                 : null
                         ]
                     }),
-                    (0, i.jsx)(L, {
+                    (0, a.jsx)(L, {
                         activity: null == D ? void 0 : D.embeddedActivity,
-                        application: V,
+                        application: H,
                         context: l,
-                        guildId: m,
+                        guildId: g,
                         large: N
                     }),
-                    (0, i.jsx)('div', {
+                    (0, a.jsx)('div', {
                         className: A.activityTagsContainer,
-                        children: V.tags.slice(0, 3).map((e) => (0, i.jsx)(O, { value: e }, 'activity-tag-'.concat(V.id, '-').concat(e)))
+                        children: H.tags.slice(0, 3).map((e) => (0, a.jsx)(O, { value: e }, 'activity-tag-'.concat(H.id, '-').concat(e)))
                     })
                 ]
             })

@@ -1,12 +1,13 @@
-var i = r(570140),
-    a = r(317770),
-    o = r(358085),
-    s = r(374023),
-    l = r(761274),
-    u = r(981631);
-class c extends a.Z {
+n.d(t, { Z: () => c });
+var i = n(570140),
+    r = n(317770),
+    a = n(358085),
+    s = n(374023),
+    o = n(761274),
+    l = n(981631);
+class u extends r.Z {
     isEnabled() {
-        return (0, o.isDesktop)() && (0, o.isMac)() && !s.s.isDiscordTestSet();
+        return (0, a.isDesktop)() && (0, a.isMac)() && !s.s.isDiscordTestSet();
     }
     _initialize() {
         this.isEnabled() && i.Z.subscribe('AUDIO_SET_MODE', this.handleAudioSetMode);
@@ -15,8 +16,8 @@ class c extends a.Z {
         this.isEnabled() && i.Z.unsubscribe('AUDIO_SET_MODE', this.handleAudioSetMode);
     }
     handleAudioSetMode(e) {
-        let { mode: n } = e;
-        n === u.pM4.PUSH_TO_TALK && r(751571).Z.requestPermission(l.Eu.INPUT_MONITORING);
+        let { mode: t } = e;
+        t === l.pM4.PUSH_TO_TALK && n(751571).Z.requestPermission(o.Eu.INPUT_MONITORING);
     }
 }
-n.Z = new c();
+let c = new u();

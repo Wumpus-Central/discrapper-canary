@@ -1,150 +1,195 @@
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(481060),
-    l = r(835473),
-    u = r(626135),
-    c = r(709054),
-    d = r(814059),
-    f = r(873128),
-    p = r(428268),
-    h = r(114201),
-    _ = r(154658),
-    m = r(370611),
-    g = r(981631),
-    E = r(701488),
-    v = r(231338),
-    y = r(388032),
-    b = r(743022);
-function I(e) {
-    let { children: n } = e;
-    return (0, a.jsx)(s.ThemeProvider, {
-        theme: v.BR.DARK,
+n.d(t, { Z: () => T }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(481060),
+    s = n(835473),
+    o = n(626135),
+    l = n(709054),
+    u = n(814059),
+    c = n(873128),
+    d = n(428268),
+    f = n(114201),
+    _ = n(154658),
+    p = n(370611),
+    h = n(981631),
+    m = n(701488),
+    g = n(231338),
+    E = n(388032),
+    v = n(743022);
+function y(e) {
+    let { children: t } = e;
+    return (0, i.jsx)(a.f6W, {
+        theme: g.BR.DARK,
         disableAdaptiveTheme: !0,
         children: (e) =>
-            (0, a.jsx)('div', {
+            (0, i.jsx)('div', {
                 className: e,
-                children: n
+                children: t
             })
     });
 }
-function T(e) {
-    let { guildId: n, leaderboardId: r, source: i } = e,
-        a = (0, f.Z)({
-            guildId: null != n ? n : '',
-            leaderboardId: r,
-            intervalOffset: 0
-        }),
-        s = {
-            leaderboard: a,
-            prevLeaderboard: (0, f.Z)({
-                guildId: null != n ? n : '',
-                leaderboardId: r,
+function I(e) {
+    let { guildId: t, leaderboardId: n, source: i } = e,
+        a = {
+            leaderboard: (0, c.Z)({
+                guildId: null != t ? t : '',
+                leaderboardId: n,
+                intervalOffset: 0
+            }),
+            prevLeaderboard: (0, c.Z)({
+                guildId: null != t ? t : '',
+                leaderboardId: n,
                 intervalOffset: -1
             })
         },
-        l = o.useRef(s);
-    o.useEffect(() => {
-        l.current = s;
+        s = r.useRef(a);
+    r.useEffect(() => {
+        s.current = a;
     }),
-        o.useEffect(() => {
-            let e, r;
-            let { leaderboard: a, prevLeaderboard: o } = l.current;
-            if (null == a) return;
-            let s = a.guild_settings.sort_by_statistic_id;
-            if (null != o) {
-                var c, d;
-                let n = o.guild_settings.sort_by_statistic_id,
-                    i = o.users[0];
-                (e = null == i ? void 0 : i.user_id), (r = null == i ? void 0 : null === (d = i.statistics) || void 0 === d ? void 0 : null === (c = d[n]) || void 0 === c ? void 0 : c.value);
+        r.useEffect(() => {
+            let e, n;
+            let { leaderboard: r, prevLeaderboard: a } = s.current;
+            if (null == r) return;
+            let l = r.guild_settings.sort_by_statistic_id;
+            if (null != a) {
+                var u, c;
+                let t = a.guild_settings.sort_by_statistic_id,
+                    i = a.users[0];
+                (e = null == i ? void 0 : i.user_id), (n = null == i ? void 0 : null === (c = i.statistics) || void 0 === c ? void 0 : null === (u = c[t]) || void 0 === u ? void 0 : u.value);
             }
-            u.default.track(g.rMx.LEADERBOARD_POPOUT_VIEWED, {
-                guild_id: n,
-                leaderboard_id: a.leaderboard_id,
-                interval_start: a.interval_start,
-                interval_end: a.interval_end,
-                sort_by_statistic_id: s,
-                sort_desc: a.guild_settings.sort_desc,
-                ordered_leaderboard_user_ids: a.users.map((e) => e.user_id),
-                ordered_leaderboard_user_values: a.users.map((e) => {
-                    var n, r;
-                    return null !== (r = null === (n = e.statistics[s]) || void 0 === n ? void 0 : n.value) && void 0 !== r ? r : 0;
+            o.default.track(h.rMx.LEADERBOARD_POPOUT_VIEWED, {
+                guild_id: t,
+                leaderboard_id: r.leaderboard_id,
+                interval_start: r.interval_start,
+                interval_end: r.interval_end,
+                sort_by_statistic_id: l,
+                sort_desc: r.guild_settings.sort_desc,
+                ordered_leaderboard_user_ids: r.users.map((e) => e.user_id),
+                ordered_leaderboard_user_values: r.users.map((e) => {
+                    var t, n;
+                    return null !== (n = null === (t = e.statistics[l]) || void 0 === t ? void 0 : t.value) && void 0 !== n ? n : 0;
                 }),
                 opened_from_source: i,
                 last_interval_champion_id: e,
-                last_interval_champion_value: r
+                last_interval_champion_value: n
             });
-        }, [n, r, i]);
+        }, [t, n, i]);
 }
-let S = (e) => {
-    var n;
-    let { guildId: r, leaderboardId: i, previewMode: u = !1, source: c, trackRankingItemInteraction: d } = e,
-        [h, g] = o.useState(u),
-        E = o.useRef(null),
-        v = (0, f.Z)({
-            guildId: r,
-            leaderboardId: i,
+function b(e) {
+    let { leaderboard: t, application: n } = e,
+        s = r.useMemo(() => (0, u.n)(l.default.extractTimestamp(t.interval_end)), [t]),
+        o = n.getIconURL(m.Si.LARGE),
+        c =
+            null == o
+                ? null
+                : (0, i.jsx)('img', {
+                      className: v.gameIcon,
+                      src: o,
+                      'aria-hidden': !0,
+                      alt: ''
+                  });
+    return (0, i.jsxs)('div', {
+        className: v.header,
+        children: [
+            c,
+            (0, i.jsx)(a.LZC, {
+                size: 8,
+                horizontal: !0
+            }),
+            (0, i.jsx)(a.X6q, {
+                variant: 'text-xs/normal',
+                className: v.leaderboardTitle,
+                children: E.intl.format(E.t['MlT4+P'], {
+                    leaderboardName: n.name,
+                    timeLeft: s,
+                    leaderboardNameHook: (e, t) =>
+                        (0, i.jsx)(
+                            a.Text,
+                            {
+                                variant: 'text-sm/medium',
+                                className: v.leaderboardName,
+                                children: e
+                            },
+                            t
+                        )
+                })
+            }),
+            (0, i.jsx)(f.Z, {
+                guildId: t.guild_id,
+                leaderboardId: t.leaderboard_id
+            })
+        ]
+    });
+}
+let T = (e) => {
+    var t;
+    let { guildId: n, leaderboardId: o, previewMode: l = !1, source: u, trackRankingItemInteraction: f } = e,
+        [h, m] = r.useState(l),
+        g = r.useRef(null),
+        T = (0, c.Z)({
+            guildId: n,
+            leaderboardId: o,
             intervalOffset: 0
         }),
-        S = (0, f.Z)({
-            guildId: r,
-            leaderboardId: i,
+        S = (0, c.Z)({
+            guildId: n,
+            leaderboardId: o,
             intervalOffset: -1
         });
-    (0, s.useFocusLock)(E),
-        T({
-            guildId: r,
-            leaderboardId: i,
-            source: c
+    (0, a.Tbt)(g),
+        I({
+            guildId: n,
+            leaderboardId: o,
+            source: u
         });
-    let C = (0, l.q)(null == v ? void 0 : null === (n = v.settings) || void 0 === n ? void 0 : n.application_id);
-    return null == v || null == C
+    let A = (0, s.q)(null == T ? void 0 : null === (t = T.settings) || void 0 === t ? void 0 : t.application_id);
+    return null == T || null == A
         ? null
-        : (0, a.jsx)(I, {
-              children: (0, a.jsxs)('div', {
-                  className: b.popout,
-                  ref: E,
+        : (0, i.jsx)(y, {
+              children: (0, i.jsxs)('div', {
+                  className: v.popout,
+                  ref: g,
                   children: [
-                      (0, a.jsxs)('div', {
-                          className: b.content,
+                      (0, i.jsxs)('div', {
+                          className: v.content,
                           children: [
-                              (0, a.jsx)(A, {
-                                  leaderboard: v,
-                                  application: C
+                              (0, i.jsx)(b, {
+                                  leaderboard: T,
+                                  application: A
                               }),
-                              (0, a.jsx)(m.Z, {
-                                  leaderboard: v,
+                              (0, i.jsx)(p.Z, {
+                                  leaderboard: T,
                                   previewMode: h,
-                                  trackRankingItemInteraction: d
+                                  trackRankingItemInteraction: f
                               }),
                               h
                                   ? null
-                                  : (0, a.jsxs)(a.Fragment, {
+                                  : (0, i.jsxs)(i.Fragment, {
                                         children: [
                                             null != S &&
-                                                (0, a.jsx)(_.Z, {
-                                                    className: b.previousChampion,
-                                                    guildId: r,
+                                                (0, i.jsx)(_.Z, {
+                                                    className: v.previousChampion,
+                                                    guildId: n,
                                                     leaderboard: S
                                                 }),
-                                            (0, a.jsx)(p.Z, {
-                                                guildId: r,
-                                                leaderboardId: i
+                                            (0, i.jsx)(d.Z, {
+                                                guildId: n,
+                                                leaderboardId: o
                                             })
                                         ]
                                     })
                           ]
                       }),
                       h
-                          ? (0, a.jsx)(a.Fragment, {
-                                children: (0, a.jsx)(s.Clickable, {
-                                    onClick: () => g(!1),
-                                    children: (0, a.jsx)('div', {
-                                        className: b.exitPreviewModeButton,
-                                        children: (0, a.jsx)(s.Text, {
+                          ? (0, i.jsx)(i.Fragment, {
+                                children: (0, i.jsx)(a.P3F, {
+                                    onClick: () => m(!1),
+                                    children: (0, i.jsx)('div', {
+                                        className: v.exitPreviewModeButton,
+                                        children: (0, i.jsx)(a.Text, {
                                             variant: 'text-sm/medium',
-                                            className: b.exitPreviewModeText,
-                                            children: y.intl.string(y.t.GLeQe3)
+                                            className: v.exitPreviewModeText,
+                                            children: E.intl.string(E.t.GLeQe3)
                                         })
                                     })
                                 })
@@ -154,50 +199,3 @@ let S = (e) => {
               })
           });
 };
-function A(e) {
-    let { leaderboard: n, application: r } = e,
-        i = o.useMemo(() => (0, d.n)(c.default.extractTimestamp(n.interval_end)), [n]),
-        l = r.getIconURL(E.Si.LARGE),
-        u =
-            null == l
-                ? null
-                : (0, a.jsx)('img', {
-                      className: b.gameIcon,
-                      src: l,
-                      'aria-hidden': !0,
-                      alt: ''
-                  });
-    return (0, a.jsxs)('div', {
-        className: b.header,
-        children: [
-            u,
-            (0, a.jsx)(s.Spacer, {
-                size: 8,
-                horizontal: !0
-            }),
-            (0, a.jsx)(s.Heading, {
-                variant: 'text-xs/normal',
-                className: b.leaderboardTitle,
-                children: y.intl.format(y.t['MlT4+P'], {
-                    leaderboardName: r.name,
-                    timeLeft: i,
-                    leaderboardNameHook: (e, n) =>
-                        (0, a.jsx)(
-                            s.Text,
-                            {
-                                variant: 'text-sm/medium',
-                                className: b.leaderboardName,
-                                children: e
-                            },
-                            n
-                        )
-                })
-            }),
-            (0, a.jsx)(h.Z, {
-                guildId: n.guild_id,
-                leaderboardId: n.leaderboard_id
-            })
-        ]
-    });
-}
-n.Z = S;

@@ -1,77 +1,71 @@
-t.d(n, {
-    Z: function () {
-        return j;
-    }
-}),
-    t(47120);
+t.d(n, { Z: () => g }), t(47120);
 var i = t(200651),
     l = t(192379),
     o = t(442837),
-    r = t(706898),
-    s = t(481060),
-    c = t(246946),
-    a = t(785717),
+    s = t(706898),
+    r = t(481060),
+    a = t(246946),
+    c = t(785717),
     d = t(786366),
     u = t(323090),
-    f = t(296391),
-    m = t(384816),
+    m = t(296391),
+    x = t(384816),
     p = t(389190),
-    I = t(428927),
-    x = t(228168),
+    f = t(428927),
+    I = t(228168),
     h = t(388032),
     v = t(731218),
-    g = t(893302);
-function Z(e) {
-    let { section: n, subsection: t, user: l, currentUser: o, displayProfile: r, onClose: s, hideIdentityInfo: c = !1 } = e;
-    return n === x.oh.ACTIVITY
-        ? (0, i.jsx)(f.Z, {
-              profileGuildId: null == r ? void 0 : r.guildId,
+    Z = t(893302);
+function _(e) {
+    let { section: n, subsection: t, user: l, currentUser: o, displayProfile: s, onClose: r } = e;
+    return n === I.oh.ACTIVITY
+        ? (0, i.jsx)(m.Z, {
+              profileGuildId: null == s ? void 0 : s.guildId,
               user: l,
               currentUser: o,
-              onClose: s
+              onClose: r
           })
-        : n === x.oh.MUTUAL_FRIENDS
+        : n === I.oh.MUTUAL_FRIENDS
           ? (0, i.jsx)(p.Z, {
                 user: l,
-                onClose: s
+                onClose: r
             })
-          : n === x.oh.MUTUAL_GUILDS
-            ? (0, i.jsx)(I.Z, {
+          : n === I.oh.MUTUAL_GUILDS
+            ? (0, i.jsx)(f.Z, {
                   user: l,
-                  onClose: s
+                  onClose: r
               })
-            : n === x.oh.BOT_DATA_ACCESS
+            : n === I.oh.BOT_DATA_ACCESS
               ? (0, i.jsx)(d.Z, { user: l })
-              : n === x.oh.BOT_INFO
+              : n === I.oh.BOT_INFO
                 ? (0, i.jsx)(u.Z, {
                       user: l,
                       currentUser: o,
-                      displayProfile: r,
+                      displayProfile: s,
                       subsection: t,
-                      onClose: s
+                      onClose: r
                   })
-                : (0, i.jsx)(m.Z, {
+                : (0, i.jsx)(x.Z, {
                       user: l,
                       currentUser: o,
-                      displayProfile: r,
+                      displayProfile: s,
                       subsection: t,
-                      onClose: s,
-                      hideIdentityInfo: c
+                      onClose: r
                   });
 }
-function j(e) {
+function g(e) {
     var n, t, d;
-    let { user: u, currentUser: f, displayProfile: m, items: p, initialSection: I = x.oh.USER_INFO, initialSubsection: j, onClose: _, hideIdentityInfo: b = !1 } = e,
-        { trackUserProfileAction: E } = (0, a.KZ)(),
-        N = (0, o.e7)([c.Z], () => c.Z.hidePersonalInformation),
-        [{ section: y, subsection: S }, T] = l.useState({
+    let { user: u, currentUser: m, displayProfile: x, items: p, initialSection: f = I.oh.USER_INFO, initialSubsection: g, onClose: j } = e,
+        { trackUserProfileAction: E } = (0, c.KZ)(),
+        N = (0, o.e7)([a.Z], () => a.Z.hidePersonalInformation),
+        [{ section: y, subsection: T }, P] = l.useState({
             section:
                 null !==
                     (d =
                         null ===
                             (n = p.find((e) => {
                                 let { section: n } = e;
-                                return n === I;
+                                return n === f;
                             })) || void 0 === n
                             ? void 0
                             : n.section) && void 0 !== d
@@ -79,31 +73,31 @@ function j(e) {
                     : null === (t = p[0]) || void 0 === t
                       ? void 0
                       : t.section,
-            subsection: j
+            subsection: g
         });
     l.useEffect(() => {
-        if (null == p.find((e) => e.section === y))
-            T({
+        null == p.find((e) => e.section === y) &&
+            P({
                 section: p[0].section,
                 subsection: void 0
             });
     }, [p, y]);
-    let P = l.useCallback(
+    let b = l.useCallback(
         (e) => {
             E({
                 action: 'PRESS_SECTION',
                 section: e
             }),
-                T({
+                P({
                     section: e,
                     subsection: void 0
                 });
         },
-        [E, T]
+        [E, P]
     );
     return N
         ? (0, i.jsx)('div', {
-              className: g.container,
+              className: Z.container,
               children: (0, i.jsxs)('div', {
                   className: v.empty,
                   children: [
@@ -116,22 +110,22 @@ function j(e) {
               })
           })
         : (0, i.jsxs)('div', {
-              className: g.container,
+              className: Z.container,
               children: [
-                  (0, i.jsx)(r.n, {
-                      className: g.tabBar,
+                  (0, i.jsx)(s.n, {
+                      className: Z.tabBar,
                       type: 'top',
                       selectedItem: y,
-                      onItemSelect: P,
+                      onItemSelect: b,
                       children: p.map((e) => {
                           let { section: n, text: t } = e;
                           return (0, i.jsx)(
-                              r.n.Item,
+                              s.n.Item,
                               {
-                                  className: g.tabBarItem,
+                                  className: Z.tabBarItem,
                                   id: n,
                                   'aria-label': t,
-                                  children: (0, i.jsx)(s.Text, {
+                                  children: (0, i.jsx)(r.Text, {
                                       variant: 'text-sm/normal',
                                       children: t
                                   })
@@ -140,15 +134,14 @@ function j(e) {
                           );
                       })
                   }),
-                  (0, i.jsx)(Z, {
+                  (0, i.jsx)(_, {
                       items: p,
                       section: y,
-                      subsection: S,
+                      subsection: T,
                       user: u,
-                      currentUser: f,
-                      displayProfile: m,
-                      onClose: _,
-                      hideIdentityInfo: b
+                      currentUser: m,
+                      displayProfile: x,
+                      onClose: j
                   })
               ]
           });

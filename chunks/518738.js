@@ -1,47 +1,41 @@
-r.d(n, {
-    Kz: function () {
-        return l;
-    },
-    oC: function () {
-        return c;
-    },
-    p9: function () {
-        return u;
-    }
+n.d(t, {
+    Kz: () => o,
+    oC: () => u,
+    p9: () => l
 });
-var i = r(192379),
-    a = r(442837),
-    o = r(430824),
-    s = r(829883);
-function l(e, n) {
-    var r;
-    let { customIconSrc: i, unicodeEmoji: a } = null !== (r = (0, s.zy)(e, n)) && void 0 !== r ? r : {};
-    if (null != i || null != a)
+var i = n(192379),
+    r = n(442837),
+    a = n(430824),
+    s = n(829883);
+function o(e, t) {
+    var n;
+    let { customIconSrc: i, unicodeEmoji: r } = null !== (n = (0, s.zy)(e, t)) && void 0 !== n ? n : {};
+    if (null != i || null != r)
         return {
             src: i,
             name: e.name,
             roleId: e.id,
-            size: n,
-            unicodeEmoji: a
+            size: t,
+            unicodeEmoji: r
         };
 }
-function u(e) {
-    let { guildId: n, roleId: r, size: u = 20 } = e,
-        { guild: c, roles: d } = (0, a.cj)(
-            [o.Z],
+function l(e) {
+    let { guildId: t, roleId: n, size: l = 20 } = e,
+        { guild: u, roles: c } = (0, r.cj)(
+            [a.Z],
             () => ({
-                guild: o.Z.getGuild(n),
-                roles: o.Z.getRoles(n)
+                guild: a.Z.getGuild(t),
+                roles: a.Z.getRoles(t)
             }),
-            [n]
+            [t]
         );
     return i.useMemo(() => {
-        if (null == c || null == r) return;
-        let e = d[r];
-        if (!!(0, s._b)(c, e)) return l(e, u);
-    }, [c, d, r, u]);
+        if (null == u || null == n) return;
+        let e = c[n];
+        if ((0, s._b)(u, e)) return o(e, l);
+    }, [u, c, n, l]);
 }
-function c(e, n) {
-    let r = (0, a.e7)([o.Z], () => o.Z.getGuild(e));
-    if (null != r && !!(0, s._b)(r, n)) return l(n);
+function u(e, t) {
+    let n = (0, r.e7)([a.Z], () => a.Z.getGuild(e));
+    if (null != n && (0, s._b)(n, t)) return o(t);
 }

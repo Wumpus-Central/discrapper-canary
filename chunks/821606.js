@@ -1,47 +1,42 @@
-e.r(n),
-    e.d(n, {
-        default: function () {
-            return d;
-        }
-    });
-var a = e(200651);
-e(192379);
-var l = e(481060),
-    r = e(600164),
-    o = e(313201),
-    i = e(988158),
-    s = e(388032),
-    c = e(614460);
+n.d(e, { default: () => d });
+var a = n(200651);
+n(192379);
+var l = n(481060),
+    i = n(600164),
+    s = n(313201),
+    r = n(988158),
+    o = n(388032),
+    c = n(614460);
 function d(t) {
-    let { url: n, onClose: d, transitionState: u } = t,
-        x = (0, o.Dt)(),
-        { protocol: h, hostname: m, theRestOfTheUrl: b } = (0, i.h)(n);
-    return (0, a.jsxs)(l.ModalRoot, {
+    let { url: e, onClose: d, transitionState: u } = t,
+        x = (0, s.Dt)(),
+        { protocol: h, hostname: m, theRestOfTheUrl: b } = (0, r.h)(e);
+    return (0, a.jsxs)(l.Y0X, {
         transitionState: u,
         'aria-labelledby': x,
         children: [
             (0, a.jsx)('img', {
                 className: c.art,
-                src: e(902623),
+                src: n(902623),
                 alt: ''
             }),
-            (0, a.jsx)(l.ModalContent, {
-                children: (0, a.jsxs)(r.Z, {
-                    direction: r.Z.Direction.VERTICAL,
-                    justify: r.Z.Justify.CENTER,
+            (0, a.jsx)(l.hzk, {
+                children: (0, a.jsxs)(i.Z, {
+                    direction: i.Z.Direction.VERTICAL,
+                    justify: i.Z.Justify.CENTER,
                     children: [
-                        (0, a.jsx)(l.Heading, {
+                        (0, a.jsx)(l.X6q, {
                             id: x,
                             variant: 'heading-lg/semibold',
                             className: c.title,
-                            children: s.intl.string(s.t['2B3wj4'])
+                            children: o.intl.string(o.t['2B3wj4'])
                         }),
                         (0, a.jsx)(l.Text, {
                             variant: 'text-md/normal',
                             className: c.body,
-                            children: s.intl.format(s.t.jnHyYW, {})
+                            children: o.intl.format(o.t.jnHyYW, {})
                         }),
-                        (0, a.jsxs)(l.Scroller, {
+                        (0, a.jsxs)(l.Ttm, {
                             className: c.linkCalloutContainer,
                             children: [
                                 (0, a.jsxs)(l.Text, {
@@ -67,13 +62,13 @@ function d(t) {
                     ]
                 })
             }),
-            (0, a.jsx)(l.ModalFooter, {
-                children: (0, a.jsx)(l.Button, {
+            (0, a.jsx)(l.mzw, {
+                children: (0, a.jsx)(l.zxk, {
                     type: 'button',
-                    size: l.Button.Sizes.MEDIUM,
-                    color: l.Button.Colors.BRAND,
+                    size: l.zxk.Sizes.MEDIUM,
+                    color: l.zxk.Colors.BRAND,
                     onClick: d,
-                    children: s.intl.string(s.t['/g10LC'])
+                    children: o.intl.string(o.t['/g10LC'])
                 })
             })
         ]

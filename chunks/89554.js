@@ -1,9 +1,10 @@
-e.exports = {
-    participantsButton: 'participantsButton_b83b18',
-    rightCaret: 'rightCaret_b83b18',
-    leftCaret: 'leftCaret_b83b18',
-    upCaret: 'upCaret_b83b18',
-    downCaret: 'downCaret_b83b18',
-    members: 'members_b83b18',
-    iconContainer: 'iconContainer_b83b18'
+var i = {
+    participantsButton: 'participantsButton__211d1',
+    rightCaret: 'rightCaret__211d1',
+    leftCaret: 'leftCaret__211d1',
+    upCaret: 'upCaret__211d1',
+    downCaret: 'downCaret__211d1',
+    members: 'members__211d1',
+    iconContainer: 'iconContainer__211d1'
 };
+e.exports = i;

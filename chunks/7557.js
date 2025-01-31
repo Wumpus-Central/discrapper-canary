@@ -1,13 +1,13 @@
-n(47120), n(653041);
+n.d(t, { Z: () => E }), n(47120), n(653041);
 var s,
     i,
-    o = n(200651),
-    l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    l = n(200651),
+    o = n(192379),
+    a = n(120356),
+    r = n.n(a),
     h = n(600164),
     c = n(145097);
-function u(e, t, n) {
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,12 +20,12 @@ function u(e, t, n) {
         e
     );
 }
-class d extends (s = l.PureComponent) {
+class u extends (s = o.PureComponent) {
     render() {
         let { className: e } = this.props;
-        return (0, o.jsx)('input', {
+        return (0, l.jsx)('input', {
             ref: this.setCodeBlockRef,
-            className: a()(c.input, e),
+            className: r()(c.input, e),
             maxLength: 1,
             value: null != this.props.code ? this.props.code : void 0,
             autoFocus: this.props.autoFocus,
@@ -43,34 +43,34 @@ class d extends (s = l.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            u(this, '_codeBlockRef', void 0),
-            u(this, 'setCodeBlockRef', (e) => {
+            d(this, '_codeBlockRef', void 0),
+            d(this, 'setCodeBlockRef', (e) => {
                 this._codeBlockRef = e;
             }),
-            u(this, 'handleKeyDown', (e) => {
+            d(this, 'handleKeyDown', (e) => {
                 let t = 8 === e.which || 37 === e.which || 39 === e.which,
                     n = (e.which >= 48 && e.which <= 57) || (e.keyCode >= 96 && e.keyCode <= 105);
-                !t && !n && e.preventDefault();
+                t || n || e.preventDefault();
                 let { onKeyDown: s } = this.props;
                 null == s || s(e);
             }),
-            u(this, 'handleChange', (e) => {
+            d(this, 'handleChange', (e) => {
                 let { onChange: t } = this.props;
                 null == t || t(e.currentTarget.value);
             });
     }
 }
-u(d, 'defaultProps', { autoFocus: !1 });
-class p extends (i = l.PureComponent) {
+d(u, 'defaultProps', { autoFocus: !1 });
+class p extends (i = o.PureComponent) {
     render() {
         let { className: e, inputClassName: t } = this.props,
             { codes: n } = this.state,
             s = [];
         for (let e = 0; e < n.length; e++)
-            e === n.length / 2 && s.push((0, o.jsx)('div', { className: c.spacer }, 'spacer')),
+            e === n.length / 2 && s.push((0, l.jsx)('div', { className: c.spacer }, 'spacer')),
                 s.push(
-                    (0, o.jsx)(
-                        d,
+                    (0, l.jsx)(
+                        u,
                         {
                             ref: (t) => this.setCodeBlockRef(e, t),
                             code: n[e],
@@ -82,7 +82,7 @@ class p extends (i = l.PureComponent) {
                         e
                     )
                 );
-        return (0, o.jsx)(h.Z, {
+        return (0, l.jsx)(h.Z, {
             align: h.Z.Align.CENTER,
             justify: h.Z.Justify.CENTER,
             className: e,
@@ -124,7 +124,8 @@ class p extends (i = l.PureComponent) {
         null == t || t(e);
     }
     constructor(e) {
-        super(e), u(this, '_codeBlockRefs', Array(this.props.count)), (this.state = { codes: Array(e.count) });
+        super(e), d(this, '_codeBlockRefs', Array(this.props.count)), (this.state = { codes: Array(e.count) });
     }
 }
-u(p, 'defaultProps', { count: 6 }), (t.Z = p);
+d(p, 'defaultProps', { count: 6 });
+let E = p;

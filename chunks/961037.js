@@ -1,1 +1,2 @@
-t.exports = { wrapper: 'wrapper_d4fa29 ' + n('763971').scrollbarGhost };
+var s = { wrapper: 'wrapper__6c798 ' + n(763971).scrollbarGhost };
+t.exports = s;

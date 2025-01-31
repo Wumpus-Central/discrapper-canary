@@ -1,7 +1,8 @@
-e.exports = {
-    userContainer: 'userContainer_d270e1',
-    userName: 'userName_d270e1',
-    userNameContainer: 'userNameContainer_d270e1',
-    userSubtitle: 'userSubtitle_d270e1',
-    winnerImage: 'winnerImage_d270e1'
+var i = {
+    userContainer: 'userContainer__91600',
+    userName: 'userName__91600',
+    userNameContainer: 'userNameContainer__91600',
+    userSubtitle: 'userSubtitle__91600',
+    winnerImage: 'winnerImage__91600'
 };
+e.exports = i;

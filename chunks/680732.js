@@ -1,10 +1,6 @@
-r.d(n, {
-    u: function () {
-        return a;
-    }
-});
-var i = r(408160);
-let a = {
+n.d(t, { u: () => r });
+var i = n(408160);
+let r = {
     announce: i.announce,
     clearAnnouncements: i.clearAnnouncer
 };

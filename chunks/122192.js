@@ -1,30 +1,26 @@
-r.d(n, {
-    j: function () {
-        return d;
-    }
-});
-var i = r(200651),
-    a = r(192379),
-    o = r(481060),
-    s = r(462566);
-r(600164);
-var l = r(603421),
-    u = r(388032),
-    c = r(868069);
-let d = (e) => {
-    let { billingError: n, onCardInfoChange: r } = e,
-        d = null != n && (null == n.code || (0, l.ly)(n) === l.Rg.CREDIT_CARD_INFORMATION);
-    return (0, i.jsxs)(a.Fragment, {
+n.d(t, { j: () => c });
+var i = n(200651),
+    r = n(192379),
+    a = n(481060),
+    s = n(462566);
+n(600164);
+var o = n(603421),
+    l = n(388032),
+    u = n(868069);
+let c = (e) => {
+    let { billingError: t, onCardInfoChange: n } = e,
+        c = null != t && (null == t.code || (0, o.ly)(t) === o.Rg.CREDIT_CARD_INFORMATION);
+    return (0, i.jsxs)(r.Fragment, {
         children: [
-            d
-                ? (0, i.jsx)(o.FormErrorBlock, {
-                      className: c.errorBlock,
-                      children: u.intl.string(u.t['4vnhKS'])
+            c
+                ? (0, i.jsx)(a.kzN, {
+                      className: u.errorBlock,
+                      children: l.intl.string(l.t['4vnhKS'])
                   })
                 : null,
             (0, i.jsx)(s.Z, {
-                onCardInfoChange: r,
-                error: n
+                onCardInfoChange: n,
+                error: t
             })
         ]
     });

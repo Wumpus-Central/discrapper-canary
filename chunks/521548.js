@@ -4,19 +4,15 @@ function r(e, t, n, r) {
     if (e === t) return !0;
     if ('object' != typeof e || !e || 'object' != typeof t || !t) return !1;
     var o = Object.keys(e),
-        u = Object.keys(t);
-    if (o.length !== u.length) return !1;
-    for (var a = Object.prototype.hasOwnProperty.bind(t), c = 0; c < o.length; c++) {
+        a = Object.keys(t);
+    if (o.length !== a.length) return !1;
+    for (var u = Object.prototype.hasOwnProperty.bind(t), c = 0; c < o.length; c++) {
         var s = o[c];
-        if (!a(s)) return !1;
+        if (!u(s)) return !1;
         var l = e[s],
             f = t[s];
         if (!1 === (i = n ? n.call(r, l, f, s) : void 0) || (void 0 === i && l !== f)) return !1;
     }
     return !0;
 }
-n.d(t, {
-    w: function () {
-        return r;
-    }
-});
+n.d(t, { w: () => r });

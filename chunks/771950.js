@@ -1,8 +1,4 @@
-a.d(t, {
-    L: function () {
-        return s;
-    }
-});
+a.d(t, { L: () => s });
 var n = a(330711);
 let s = (e) => {
     let t = n.Z.getLocale().toLowerCase();

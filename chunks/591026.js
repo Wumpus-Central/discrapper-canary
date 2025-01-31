@@ -1,9 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return g;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => g }), n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(481060),
@@ -18,7 +13,7 @@ var i = n(200651),
 function g(e) {
     var t, n;
     let { rule: g, onChangeRule: x } = e,
-        [p, f] = r.useState(null === (t = g.triggerMetadata) || void 0 === t ? void 0 : t.mentionTotalLimit),
+        [p, _] = r.useState(null === (t = g.triggerMetadata) || void 0 === t ? void 0 : t.mentionTotalLimit),
         C = (0, s.a)(g.guildId, !1);
     return (0, i.jsx)(i.Fragment, {
         children: (0, i.jsxs)('div', {
@@ -33,7 +28,7 @@ function g(e) {
                             children: [
                                 (0, i.jsx)('div', {
                                     className: h.mentionLimitIconContainer,
-                                    children: (0, i.jsx)(l.AtIcon, {
+                                    children: (0, i.jsx)(l.lOy, {
                                         size: 'md',
                                         color: 'currentColor',
                                         className: h.mentionLimitIcon
@@ -42,7 +37,7 @@ function g(e) {
                                 (0, i.jsxs)('div', {
                                     className: h.mentionLimitTextContainer,
                                     children: [
-                                        (0, i.jsx)(l.Heading, {
+                                        (0, i.jsx)(l.X6q, {
                                             variant: 'heading-sm/semibold',
                                             children: m.intl.string(m.t['s/26oa'])
                                         }),
@@ -56,10 +51,10 @@ function g(e) {
                                 }),
                                 (0, i.jsx)('div', {
                                     className: h.stepperContainer,
-                                    children: (0, i.jsx)(l.NumberInputStepper, {
+                                    children: (0, i.jsx)(l.FiK, {
                                         value: p,
                                         onChange: (e) => {
-                                            f(e),
+                                            _(e),
                                                 x({
                                                     ...g,
                                                     triggerMetadata: {
@@ -81,7 +76,7 @@ function g(e) {
                                   children: [
                                       (0, i.jsx)('div', {
                                           className: h.mentionLimitIconContainer,
-                                          children: (0, i.jsx)(l.ShieldAtIcon, {
+                                          children: (0, i.jsx)(l.S4f, {
                                               size: 'md',
                                               color: 'currentColor',
                                               className: h.mentionLimitIcon
@@ -90,7 +85,7 @@ function g(e) {
                                       (0, i.jsxs)('div', {
                                           className: h.mentionLimitTextContainer,
                                           children: [
-                                              (0, i.jsx)(l.Heading, {
+                                              (0, i.jsx)(l.X6q, {
                                                   variant: 'heading-sm/semibold',
                                                   children: m.intl.string(m.t.XnuC9v)
                                               }),
@@ -103,8 +98,8 @@ function g(e) {
                                           ]
                                       }),
                                       (0, i.jsx)('div', {
-                                          children: (0, i.jsx)(l.Checkbox, {
-                                              type: l.Checkbox.Types.INVERTED,
+                                          children: (0, i.jsx)(l.XZJ, {
+                                              type: l.XZJ.Types.INVERTED,
                                               value: null === (n = g.triggerMetadata) || void 0 === n ? void 0 : n.mentionRaidProtectionEnabled,
                                               onChange: (e, t) => {
                                                   x({

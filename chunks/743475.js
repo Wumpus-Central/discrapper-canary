@@ -1,13 +1,7 @@
 n.d(t, {
-    BG: function () {
-        return x;
-    },
-    DO: function () {
-        return f;
-    },
-    pt: function () {
-        return p;
-    }
+    BG: () => x,
+    DO: () => _,
+    pt: () => p
 }),
     n(47120);
 var i = n(570140),
@@ -31,13 +25,13 @@ function p(e) {
         channelId: e
     });
 }
-async function f(e) {
+async function _(e) {
     let t = Array.from(d.Z.editedDefaultChannelIds).filter((e) => null != o.Z.getChannel(e)),
         n = m.Z.advancedMode,
         [x, p] = (0, a.d9)(e.id, [...t]),
-        f = (0, a.kl)(e.id, t, m.Z.editedOnboardingPrompts),
+        _ = (0, a.kl)(e.id, t, m.Z.editedOnboardingPrompts),
         C = (0, a.kl)(e.id, t, m.Z.editedOnboardingPrompts, a.V7);
-    if (s.Z.getEnabled(e.id) && ((!n && (p.length < h.md || x.length < h.X)) || (n && (f.length < h.md || C.length < h.X)))) {
+    if (s.Z.getEnabled(e.id) && ((!n && (p.length < h.md || x.length < h.X)) || (n && (_.length < h.md || C.length < h.X)))) {
         r.Z.show({
             title: g.intl.string(g.t.iLdiqa),
             body: g.intl.string(g.t.JOT74e)
@@ -54,8 +48,8 @@ async function f(e) {
                     channelIds: t
                 });
         } catch (n) {
-            var v;
-            let { fieldName: e, error: t } = null !== (v = new l.Hx(n).getAnyErrorMessageAndField()) && void 0 !== v ? v : {};
+            var f;
+            let { fieldName: e, error: t } = null !== (f = new l.Hx(n).getAnyErrorMessageAndField()) && void 0 !== f ? f : {};
             r.Z.show({
                 title: g.intl.string(g.t.iLdiqa),
                 body: [e, t].filter(c.lm).join(': ')

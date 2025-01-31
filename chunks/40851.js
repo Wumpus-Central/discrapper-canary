@@ -1,90 +1,77 @@
-r.d(n, {
-    Aq: function () {
-        return b;
-    },
-    GB: function () {
-        return E;
-    },
-    J5: function () {
-        return _;
-    },
-    UI: function () {
-        return d;
-    },
-    Wu: function () {
-        return v;
-    },
-    bp: function () {
-        return y;
-    },
-    g0: function () {
-        return g;
-    }
-});
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(585483),
-    l = r(830917),
-    u = r(919570),
-    c = r(981631);
-let d = new s.b(),
-    f = o.createContext({
-        appContext: c.IlC.APP,
+n.d(t, {
+    Aq: () => v,
+    GB: () => m,
+    J5: () => _,
+    UI: () => u,
+    Wu: () => g,
+    ZP: () => y,
+    bp: () => E,
+    g0: () => h
+}),
+    n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(585483),
+    s = n(830917),
+    o = n(919570),
+    l = n(981631);
+let u = new a.b(),
+    c = r.createContext({
+        appContext: l.IlC.APP,
         renderWindow: window,
-        windowDispatch: d,
-        windowId: (0, l.UU)()
+        windowDispatch: u,
+        windowId: (0, s.UU)()
     }),
-    p = new Map();
-function h(e, n) {
-    let r = (0, l.ZY)(n),
-        i = p.get(r);
+    d = new Map();
+function f(e, t) {
+    let n = (0, s.ZY)(t),
+        i = d.get(n);
     return (
         null == i &&
             ((i = {
                 appContext: e,
-                renderWindow: n,
-                windowDispatch: new s.b(),
-                windowId: r
+                renderWindow: t,
+                windowDispatch: new a.b(),
+                windowId: n
             }),
-            p.set(r, i),
-            n.addEventListener('unload', () => {
-                p.delete(r);
+            d.set(n, i),
+            t.addEventListener('unload', () => {
+                d.delete(n);
             })),
         i
     );
 }
 function _(e) {
-    var n;
-    let r = e.ownerDocument.defaultView;
-    if (null == r) return;
-    let i = (0, l.ZY)(r);
-    return null === (n = p.get(i)) || void 0 === n ? void 0 : n.windowDispatch;
+    var t;
+    let n = e.ownerDocument.defaultView;
+    if (null == n) return;
+    let i = (0, s.ZY)(n);
+    return null === (t = d.get(i)) || void 0 === t ? void 0 : t.windowDispatch;
+}
+function p() {
+    var e;
+    let t = (0, o.GR)();
+    return null == t ? null : null !== (e = d.get(t)) && void 0 !== e ? e : null;
+}
+function h(e) {
+    return d.get(e);
 }
 function m() {
-    var e;
-    let n = (0, u.GR)();
-    return null == n ? null : null !== (e = p.get(n)) && void 0 !== e ? e : null;
-}
-function g(e) {
-    return p.get(e);
-}
-function E() {
-    let e = m();
+    let e = p();
     return null != e ? e.appContext : null;
 }
-function v(e) {
-    let { appContext: n, renderWindow: r, children: i } = e,
-        o = h(n, r);
-    return (0, a.jsx)(f.Provider, {
-        value: o,
-        children: i
+function g(e) {
+    let { appContext: t, renderWindow: n, children: r } = e,
+        a = f(t, n);
+    return (0, i.jsx)(c.Provider, {
+        value: a,
+        children: r
     });
 }
-function y() {
-    return o.useContext(f).appContext;
+function E() {
+    return r.useContext(c).appContext;
 }
-function b() {
-    return o.useContext(f).windowDispatch;
+function v() {
+    return r.useContext(c).windowDispatch;
 }
-n.ZP = f;
+let y = c;

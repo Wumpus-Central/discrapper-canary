@@ -1,23 +1,19 @@
-r.d(n, {
-    Z: function () {
-        return u;
-    }
-});
-var i = r(646391),
-    a = r(871074),
-    o = r(662939),
-    s = r(299188),
-    l = r(35972);
-function u(e, n, r) {
-    if ((0, l.Z)()) {
-        var c;
-        u = i((c = a)).call(c);
+n.d(t, { Z: () => l });
+var i = n(646391),
+    r = n(871074),
+    a = n(662939),
+    s = n(299188),
+    o = n(35972);
+function l(e, t, n) {
+    if ((0, o.Z)()) {
+        var u;
+        l = i((u = r)).call(u);
     } else
-        u = function (e, n, r) {
-            var a = [null];
-            o(a).apply(a, n);
-            var l = new (i(Function).apply(e, a))();
-            return r && (0, s.Z)(l, r.prototype), l;
+        l = function (e, t, n) {
+            var r = [null];
+            a(r).apply(r, t);
+            var o = new (i(Function).apply(e, r))();
+            return n && (0, s.Z)(o, n.prototype), o;
         };
-    return u.apply(null, arguments);
+    return l.apply(null, arguments);
 }

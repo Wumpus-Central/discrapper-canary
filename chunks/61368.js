@@ -1,16 +1,17 @@
-e.exports = {
-    sectionContainer: 'sectionContainer_ca5acd',
-    sectionContainerNitroLocked: 'sectionContainerNitroLocked_ca5acd',
-    sectionHeader: 'sectionHeader_ca5acd',
-    sectionTitle: 'sectionTitle_ca5acd',
-    sectionHeaderContent: 'sectionHeaderContent_ca5acd',
-    notFirstSectionHeader: 'notFirstSectionHeader_ca5acd',
-    sectionFooter: 'sectionFooter_ca5acd',
-    headerIcon: 'headerIcon_ca5acd',
-    soundRow: 'soundRow_ca5acd',
-    soundRowNitroLocked: 'soundRowNitroLocked_ca5acd',
-    lastSoundRow: 'lastSoundRow_ca5acd',
-    settingsClickArea: 'settingsClickArea_ca5acd',
-    settingsSoundmojiClickArea: 'settingsSoundmojiClickArea_ca5acd',
-    settingsIcon: 'settingsIcon_ca5acd'
+var i = {
+    sectionContainer: 'sectionContainer__61424',
+    sectionContainerNitroLocked: 'sectionContainerNitroLocked__61424',
+    sectionHeader: 'sectionHeader__61424',
+    sectionTitle: 'sectionTitle__61424',
+    sectionHeaderContent: 'sectionHeaderContent__61424',
+    notFirstSectionHeader: 'notFirstSectionHeader__61424',
+    sectionFooter: 'sectionFooter__61424',
+    headerIcon: 'headerIcon__61424',
+    soundRow: 'soundRow__61424',
+    soundRowNitroLocked: 'soundRowNitroLocked__61424',
+    lastSoundRow: 'lastSoundRow__61424',
+    settingsClickArea: 'settingsClickArea__61424',
+    settingsSoundmojiClickArea: 'settingsSoundmojiClickArea__61424',
+    settingsIcon: 'settingsIcon__61424'
 };
+e.exports = i;

@@ -1,8 +1,4 @@
-r.d(e, {
-    $: function () {
-        return E;
-    }
-});
+r.d(e, { $: () => C });
 let n = {
         ational: 'ate',
         tional: 'tion',
@@ -53,13 +49,13 @@ let n = {
     b = /^.+?[^s]s$/,
     S = /^.+?(ss|i)es$/,
     w = /([^aeiouylsz])\1$/,
-    k = /^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$/,
-    x = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/,
-    C = /^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$/;
-function E(t) {
+    x = /^(.+?)(ational|tional|enci|anci|izer|bli|alli|entli|eli|ousli|ization|ation|ator|alism|iveness|fulness|ousness|aliti|iviti|biliti|logi)$/,
+    k = /^(.+?)(icate|ative|alize|iciti|ical|ful|ness)$/,
+    E = /^(.+?)(al|ance|ence|er|ic|able|ible|ant|ement|ment|ent|ou|ism|ate|iti|ous|ive|ize)$/;
+function C(t) {
     let e,
         r = String(t).toLowerCase();
     if (r.length < 3) return r;
     let o = !1;
-    return 121 === r.codePointAt(0) && ((o = !0), (r = 'Y' + r.slice(1))), S.test(r) ? (r = r.slice(0, -2)) : b.test(r) && (r = r.slice(0, -1)), (e = _.exec(r)) ? s.test(e[1]) && (r = r.slice(0, -1)) : (e = v.exec(r)) && f.test(e[1]) && ((r = e[1]), m.test(r) ? (r += 'e') : w.test(r) ? (r = r.slice(0, -1)) : p.test(r) && (r += 'e')), (e = g.exec(r)) && f.test(e[1]) && (r = e[1] + 'i'), (e = k.exec(r)) && s.test(e[1]) && (r = e[1] + n[e[2]]), (e = x.exec(r)) && s.test(e[1]) && (r = e[1] + i[e[2]]), (e = C.exec(r)) ? l.test(e[1]) && (r = e[1]) : (e = y.exec(r)) && l.test(e[1]) && (r = e[1]), (e = d.exec(r)) && (l.test(e[1]) || (c.test(e[1]) && !p.test(e[1]))) && (r = e[1]), h.test(r) && l.test(r) && (r = r.slice(0, -1)), o && (r = 'y' + r.slice(1)), r;
+    return 121 === r.codePointAt(0) && ((o = !0), (r = 'Y' + r.slice(1))), S.test(r) ? (r = r.slice(0, -2)) : b.test(r) && (r = r.slice(0, -1)), (e = _.exec(r)) ? s.test(e[1]) && (r = r.slice(0, -1)) : (e = v.exec(r)) && f.test(e[1]) && ((r = e[1]), m.test(r) ? (r += 'e') : w.test(r) ? (r = r.slice(0, -1)) : p.test(r) && (r += 'e')), (e = g.exec(r)) && f.test(e[1]) && (r = e[1] + 'i'), (e = x.exec(r)) && s.test(e[1]) && (r = e[1] + n[e[2]]), (e = k.exec(r)) && s.test(e[1]) && (r = e[1] + i[e[2]]), (e = E.exec(r)) ? l.test(e[1]) && (r = e[1]) : (e = y.exec(r)) && l.test(e[1]) && (r = e[1]), (e = d.exec(r)) && (l.test(e[1]) || (c.test(e[1]) && !p.test(e[1]))) && (r = e[1]), h.test(r) && l.test(r) && (r = r.slice(0, -1)), o && (r = 'y' + r.slice(1)), r;
 }

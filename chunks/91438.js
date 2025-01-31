@@ -174,8 +174,7 @@ var t;
                     var r = e('./is-ios'),
                         i = e('./is-ios-google-search-app');
                     t.exports = function (e) {
-                        if (r((e = e || window.navigator.userAgent))) return !!i(e) || /.+AppleWebKit(?!.*Safari)/i.test(e);
-                        return !1;
+                        return !!r((e = e || window.navigator.userAgent)) && (!!i(e) || /.+AppleWebKit(?!.*Safari)/i.test(e));
                     };
                 },
                 {
@@ -247,8 +246,8 @@ var t;
                         return (e = e || window.navigator.userAgent).indexOf('Opera Mini') > -1;
                     }
                     t.exports = function (e) {
-                        var t, n, u, l;
-                        return !(o((e = e || window.navigator.userAgent)) || i(e) || (r((t = (t = e) || window.navigator.userAgent)) && /Version\/[\d.]+/i.test(t) && !d(t) && !c(t)) || d(e) || ((u = (n = (n = e) || window.navigator.userAgent).match(/CriOS\/(\d+)\./)) && 48 > parseInt(u[1], 10)) || (!a((l = e)) && !s(l) && /samsung/i.test(l)));
+                        var t, n, l, u;
+                        return !(o((e = e || window.navigator.userAgent)) || i(e) || (r((t = (t = e) || window.navigator.userAgent)) && /Version\/[\d.]+/i.test(t) && !d(t) && !c(t)) || d(e) || ((l = (e || window.navigator.userAgent).match(/CriOS\/(\d+)\./)) && 48 > parseInt(l[1], 10)) || (!a((u = e)) && !s(u) && /samsung/i.test(u)));
                     };
                 },
                 {
@@ -332,7 +331,7 @@ var t;
                             }),
                             (e.prototype.off = function (e, t) {
                                 var n = this._events[e];
-                                if (!!n) {
+                                if (n) {
                                     var r = n.indexOf(t);
                                     n.splice(r, 1);
                                 }
@@ -340,7 +339,7 @@ var t;
                             (e.prototype._emit = function (e) {
                                 for (var t = [], n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
                                 var r = this._events[e];
-                                if (!!r)
+                                r &&
                                     r.forEach(function (e) {
                                         e.apply(void 0, t);
                                     });
@@ -416,37 +415,39 @@ var t;
                                 }),
                                 (e.prototype.resolve = function (t) {
                                     var n = this;
-                                    return this.isFulfilled
-                                        ? this
-                                        : (this._setResolved(),
-                                          e.Promise.resolve()
-                                              .then(function () {
-                                                  return n._onResolve(t);
-                                              })
-                                              .then(function (e) {
-                                                  n._resolveFunction(e);
-                                              })
-                                              .catch(function (e) {
-                                                  n._resetState(), n.reject(e);
-                                              }),
-                                          this);
+                                    return (
+                                        this.isFulfilled ||
+                                            (this._setResolved(),
+                                            e.Promise.resolve()
+                                                .then(function () {
+                                                    return n._onResolve(t);
+                                                })
+                                                .then(function (e) {
+                                                    n._resolveFunction(e);
+                                                })
+                                                .catch(function (e) {
+                                                    n._resetState(), n.reject(e);
+                                                })),
+                                        this
+                                    );
                                 }),
                                 (e.prototype.reject = function (t) {
                                     var n = this;
-                                    return this.isFulfilled
-                                        ? this
-                                        : (this._setRejected(),
-                                          e.Promise.resolve()
-                                              .then(function () {
-                                                  return n._onReject(t);
-                                              })
-                                              .then(function (e) {
-                                                  n._setResolved(), n._resolveFunction(e);
-                                              })
-                                              .catch(function (e) {
-                                                  return n._rejectFunction(e);
-                                              }),
-                                          this);
+                                    return (
+                                        this.isFulfilled ||
+                                            (this._setRejected(),
+                                            e.Promise.resolve()
+                                                .then(function () {
+                                                    return n._onReject(t);
+                                                })
+                                                .then(function (e) {
+                                                    n._setResolved(), n._resolveFunction(e);
+                                                })
+                                                .catch(function (e) {
+                                                    return n._rejectFunction(e);
+                                                })),
+                                        this
+                                    );
                                 }),
                                 (e.prototype._resetState = function () {
                                     (this.isFulfilled = !1), (this.isResolved = !1), (this.isRejected = !1);
@@ -474,7 +475,7 @@ var t;
                         void 0 === e && (e = {});
                         var t = document.createElement('iframe'),
                             n = (0, o.assign)({}, i.defaultAttributes, e);
-                        return n.style && 'string' != typeof n.style && ((0, o.assign)(t.style, n.style), delete n.style), (0, r.setAttributes)(t, n), !t.getAttribute('id') && (t.id = t.name), t;
+                        return n.style && 'string' != typeof n.style && ((0, o.assign)(t.style, n.style), delete n.style), (0, r.setAttributes)(t, n), t.getAttribute('id') || (t.id = t.name), t;
                     };
                 },
                 {
@@ -485,19 +486,20 @@ var t;
             ],
             33: [
                 function (e, t, n) {
-                    Object.defineProperty(n, '__esModule', { value: !0 }), (n.assign = void 0);
-                    n.assign = function (e) {
-                        for (var t = [], n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
-                        return (
-                            t.forEach(function (t) {
-                                if ('object' == typeof t)
-                                    Object.keys(t).forEach(function (n) {
-                                        e[n] = t[n];
-                                    });
-                            }),
-                            e
-                        );
-                    };
+                    Object.defineProperty(n, '__esModule', { value: !0 }),
+                        (n.assign = void 0),
+                        (n.assign = function (e) {
+                            for (var t = [], n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
+                            return (
+                                t.forEach(function (t) {
+                                    'object' == typeof t &&
+                                        Object.keys(t).forEach(function (n) {
+                                            e[n] = t[n];
+                                        });
+                                }),
+                                e
+                            );
+                        });
                 },
                 {}
             ],
@@ -516,14 +518,15 @@ var t;
             ],
             35: [
                 function (e, t, n) {
-                    Object.defineProperty(n, '__esModule', { value: !0 }), (n.setAttributes = void 0);
-                    n.setAttributes = function (e, t) {
-                        for (var n in t)
-                            if (t.hasOwnProperty(n)) {
-                                var r = t[n];
-                                null == r ? e.removeAttribute(n) : e.setAttribute(n, r);
-                            }
-                    };
+                    Object.defineProperty(n, '__esModule', { value: !0 }),
+                        (n.setAttributes = void 0),
+                        (n.setAttributes = function (e, t) {
+                            for (var n in t)
+                                if (t.hasOwnProperty(n)) {
+                                    var r = t[n];
+                                    null == r ? e.removeAttribute(n) : e.setAttribute(n, r);
+                                }
+                        });
                 },
                 {}
             ],
@@ -540,46 +543,46 @@ var t;
             ],
             37: [
                 function (e, t, n) {
-                    Object.defineProperty(n, '__esModule', { value: !0 });
-                    n.deferred = function (e) {
-                        return function () {
-                            for (var t = [], n = 0; n < arguments.length; n++) t[n] = arguments[n];
-                            setTimeout(function () {
-                                try {
-                                    e.apply(void 0, t);
-                                } catch (e) {
-                                    console.log('Error in callback function'), console.log(e);
-                                }
-                            }, 1);
-                        };
-                    };
+                    Object.defineProperty(n, '__esModule', { value: !0 }),
+                        (n.deferred = function (e) {
+                            return function () {
+                                for (var t = [], n = 0; n < arguments.length; n++) t[n] = arguments[n];
+                                setTimeout(function () {
+                                    try {
+                                        e.apply(void 0, t);
+                                    } catch (e) {
+                                        console.log('Error in callback function'), console.log(e);
+                                    }
+                                }, 1);
+                            };
+                        });
                 },
                 {}
             ],
             38: [
                 function (e, t, n) {
-                    Object.defineProperty(n, '__esModule', { value: !0 });
-                    n.once = function (e) {
-                        var t = !1;
-                        return function () {
-                            for (var n = [], r = 0; r < arguments.length; r++) n[r] = arguments[r];
-                            !t && ((t = !0), e.apply(void 0, n));
-                        };
-                    };
+                    Object.defineProperty(n, '__esModule', { value: !0 }),
+                        (n.once = function (e) {
+                            var t = !1;
+                            return function () {
+                                for (var n = [], r = 0; r < arguments.length; r++) n[r] = arguments[r];
+                                t || ((t = !0), e.apply(void 0, n));
+                            };
+                        });
                 },
                 {}
             ],
             39: [
                 function (e, t, n) {
-                    Object.defineProperty(n, '__esModule', { value: !0 });
-                    n.promiseOrCallback = function (e, t) {
-                        if (!t) return e;
-                        e.then(function (e) {
-                            return t(null, e);
-                        }).catch(function (e) {
-                            return t(e);
+                    Object.defineProperty(n, '__esModule', { value: !0 }),
+                        (n.promiseOrCallback = function (e, t) {
+                            if (!t) return e;
+                            e.then(function (e) {
+                                return t(null, e);
+                            }).catch(function (e) {
+                                return t(e);
+                            });
                         });
-                    };
                 },
                 {}
             ],
@@ -779,10 +782,11 @@ var t;
                                     t
                                 );
                             }
-                            s.clearCache = function () {
+                            (s.clearCache = function () {
                                 a = {};
-                            };
-                            Object.defineProperty(o, '__esModule', { value: !0 }), (o.loadStylesheet = c = o.loadScript = void 0);
+                            }),
+                                Object.defineProperty(o, '__esModule', { value: !0 }),
+                                (o.loadStylesheet = c = o.loadScript = void 0);
                             var c = (o.loadScript = s);
                             o.loadStylesheet = function (e) {
                                 var t = document.querySelector('link[href="'.concat(e.href, '"]'));
@@ -792,14 +796,14 @@ var t;
                                 return t.setAttribute('rel', 'stylesheet'), t.setAttribute('type', 'text/css'), t.setAttribute('href', e.href), t.setAttribute('id', e.id), n.firstChild ? n.insertBefore(t, n.firstChild) : n.appendChild(t), Promise.resolve(t);
                             };
                             var d = 'fastlane',
-                                u = 'connect-boba',
-                                l = {
+                                l = 'connect-boba',
+                                u = {
                                     AXO_ASSET_NAME: {
                                         minified: 'axo.min',
                                         unminified: 'axo'
                                     },
-                                    AXO_ASSET_PATH: u,
-                                    LOCALE_PATH: ''.concat(u, '/locales/'),
+                                    AXO_ASSET_PATH: l,
+                                    LOCALE_PATH: ''.concat(l, '/locales/'),
                                     CDNX_PROD: 'https://www.paypalobjects.com'
                                 },
                                 p = {
@@ -816,12 +820,7 @@ var t;
                                     t(this, void 0, void 0, function () {
                                         var t, s;
                                         return n(this, function (n) {
-                                            if (
-                                                (t = (function () {
-                                                    return null == window ? void 0 : window.braintree;
-                                                })()) &&
-                                                t[e.module]
-                                            ) {
+                                            if ((t = null == window ? void 0 : window.braintree) && t[e.module]) {
                                                 if (!r || (null === (o = t[e.module]) || void 0 === o ? void 0 : o.VERSION) === r) return [2, !0];
                                                 throw ((s = null === (a = t[e.module]) || void 0 === a ? void 0 : a.VERSION), Error(''.concat(e.module, ' already loaded with version ').concat(s, ' cannot load version ').concat(r)));
                                             }
@@ -880,7 +879,7 @@ var t;
                                 var n;
                                 if ((void 0 === t && (t = !0), _())) {
                                     _() && 'function' == typeof window.requirejs && 'function' == typeof window.requirejs.config && requirejs.config({ paths: (((n = {})[d] = e), n) });
-                                    var r = ''.concat(d, '/').concat(t ? l.AXO_ASSET_NAME.minified : l.AXO_ASSET_NAME.unminified);
+                                    var r = ''.concat(d, '/').concat(t ? u.AXO_ASSET_NAME.minified : u.AXO_ASSET_NAME.unminified);
                                     return new Promise(function (e, t) {
                                         window.require([r], e, t);
                                     });
@@ -894,34 +893,30 @@ var t;
                             function I(e) {
                                 var t = e.assetUrl,
                                     n = e.bundleId;
-                                return n ? 'https://cdn-'.concat(n, '.static.engineering.dev.paypalinc.com/').concat(t) : ''.concat(l.CDNX_PROD, '/').concat(t);
+                                return n ? 'https://cdn-'.concat(n, '.static.engineering.dev.paypalinc.com/').concat(t) : ''.concat(u.CDNX_PROD, '/').concat(t);
                             }
-                            (e.constants = l),
+                            (e.constants = u),
                                 (e.loadAxo = function (e) {
                                     return t(this, void 0, void 0, function () {
                                         var t, r, i, o;
                                         return n(this, function (n) {
                                             switch (n.label) {
                                                 case 0:
+                                                    var a, s, c, d, l;
                                                     if (
                                                         (performance.mark('pp_axo_sdk_init_invoked'),
                                                         (t = e.btSdkVersion),
                                                         (r = e.minified),
-                                                        (i = (function (e) {
-                                                            var t,
-                                                                n = (null == e ? void 0 : e.minified) !== !1 ? l.AXO_ASSET_NAME.minified : l.AXO_ASSET_NAME.unminified;
-                                                            return I({
-                                                                assetUrl: _() ? l.AXO_ASSET_PATH : ''.concat(l.AXO_ASSET_PATH, '/').concat(n, '.js'),
-                                                                bundleId: null === (t = null == e ? void 0 : e.metadata) || void 0 === t ? void 0 : t.bundleIdOverride
-                                                            });
-                                                        })(e)),
-                                                        (o = (function (e) {
-                                                            var t;
-                                                            return I({
-                                                                assetUrl: l.LOCALE_PATH,
-                                                                bundleId: null === (t = null == e ? void 0 : e.metadata) || void 0 === t ? void 0 : t.bundleIdOverride
-                                                            });
-                                                        })(e)),
+                                                        (c = (null == (a = e) ? void 0 : a.minified) !== !1 ? u.AXO_ASSET_NAME.minified : u.AXO_ASSET_NAME.unminified),
+                                                        (i = I({
+                                                            assetUrl: _() ? u.AXO_ASSET_PATH : ''.concat(u.AXO_ASSET_PATH, '/').concat(c, '.js'),
+                                                            bundleId: null === (s = null == a ? void 0 : a.metadata) || void 0 === s ? void 0 : s.bundleIdOverride
+                                                        })),
+                                                        (d = e),
+                                                        (o = I({
+                                                            assetUrl: u.LOCALE_PATH,
+                                                            bundleId: null === (l = null == d ? void 0 : d.metadata) || void 0 === l ? void 0 : l.bundleIdOverride
+                                                        })),
                                                         e.platform !== p.BT)
                                                     )
                                                         return [3, 2];
@@ -953,7 +948,7 @@ var t;
                                 return (r =
                                     Object.assign ||
                                     function (e) {
-                                        for (var t, n = 1, r = arguments.length; n < r; n++) for (var i in ((t = arguments[n]), t)) Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i]);
+                                        for (var t, n = 1, r = arguments.length; n < r; n++) for (var i in (t = arguments[n])) Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i]);
                                         return e;
                                     }).apply(this, arguments);
                             },
@@ -963,7 +958,7 @@ var t;
                         s = e('./lib/find-best-match'),
                         c = e('./lib/clone'),
                         d = {},
-                        u = {
+                        l = {
                             VISA: 'visa',
                             MASTERCARD: 'mastercard',
                             AMERICAN_EXPRESS: 'american-express',
@@ -977,8 +972,8 @@ var t;
                             HIPER: 'hiper',
                             HIPERCARD: 'hipercard'
                         },
-                        l = [u.VISA, u.MASTERCARD, u.AMERICAN_EXPRESS, u.DINERS_CLUB, u.DISCOVER, u.JCB, u.UNIONPAY, u.MAESTRO, u.ELO, u.MIR, u.HIPER, u.HIPERCARD],
-                        p = (0, c.clone)(l);
+                        u = [l.VISA, l.MASTERCARD, l.AMERICAN_EXPRESS, l.DINERS_CLUB, l.DISCOVER, l.JCB, l.UNIONPAY, l.MAESTRO, l.ELO, l.MIR, l.HIPER, l.HIPERCARD],
+                        p = (0, c.clone)(u);
                     function _(e) {
                         return d[e] || i[e];
                     }
@@ -1025,9 +1020,9 @@ var t;
                             p.splice(n, 1), p.splice(t, 0, e);
                         }),
                         (h.resetModifications = function () {
-                            (p = (0, c.clone)(l)), (d = {});
+                            (p = (0, c.clone)(u)), (d = {});
                         }),
-                        (h.types = u),
+                        (h.types = l),
                         (t.exports = h);
                 },
                 {
@@ -1047,7 +1042,7 @@ var t;
                         var o, a;
                         for (o = 0; o < t.patterns.length; o++) {
                             var s = t.patterns[o];
-                            if (!!(0, i.matches)(e, s)) {
+                            if ((0, i.matches)(e, s)) {
                                 var c = (0, r.clone)(t);
                                 (a = Array.isArray(s) ? String(s[0]).length : String(s).length), e.length >= a && (c.matchStrength = a), n.push(c);
                                 break;
@@ -1201,48 +1196,49 @@ var t;
             ],
             45: [
                 function (e, t, n) {
-                    Object.defineProperty(n, '__esModule', { value: !0 }), (n.clone = void 0);
-                    n.clone = function (e) {
-                        return e ? JSON.parse(JSON.stringify(e)) : null;
-                    };
+                    Object.defineProperty(n, '__esModule', { value: !0 }),
+                        (n.clone = void 0),
+                        (n.clone = function (e) {
+                            return e ? JSON.parse(JSON.stringify(e)) : null;
+                        });
                 },
                 {}
             ],
             46: [
                 function (e, t, n) {
-                    Object.defineProperty(n, '__esModule', { value: !0 }), (n.findBestMatch = void 0);
-                    n.findBestMatch = function (e) {
-                        var t, n;
-                        return (n = (t = e).filter(function (e) {
-                            return e.matchStrength;
-                        }).length) > 0 && n === t.length
-                            ? e.reduce(function (e, t) {
-                                  return !e || Number(e.matchStrength) < Number(t.matchStrength) ? t : e;
-                              })
-                            : null;
-                    };
+                    Object.defineProperty(n, '__esModule', { value: !0 }),
+                        (n.findBestMatch = void 0),
+                        (n.findBestMatch = function (e) {
+                            var t;
+                            return (t = e.filter(function (e) {
+                                return e.matchStrength;
+                            }).length) > 0 && t === e.length
+                                ? e.reduce(function (e, t) {
+                                      return !e || Number(e.matchStrength) < Number(t.matchStrength) ? t : e;
+                                  })
+                                : null;
+                        });
                 },
                 {}
             ],
             47: [
                 function (e, t, n) {
-                    Object.defineProperty(n, '__esModule', { value: !0 }), (n.isValidInputType = void 0);
-                    n.isValidInputType = function (e) {
-                        return 'string' == typeof e || e instanceof String;
-                    };
+                    Object.defineProperty(n, '__esModule', { value: !0 }),
+                        (n.isValidInputType = void 0),
+                        (n.isValidInputType = function (e) {
+                            return 'string' == typeof e || e instanceof String;
+                        });
                 },
                 {}
             ],
             48: [
                 function (e, t, n) {
-                    Object.defineProperty(n, '__esModule', { value: !0 }), (n.matches = void 0);
-                    n.matches = function (e, t) {
-                        var n, r, i, o, a, s, c, d;
-                        if (Array.isArray(t)) {
-                            return (n = e), (r = t[0]), (i = t[1]), (o = String(r).length), (s = parseInt((a = n.substr(0, o)), 10)), (r = parseInt(String(r).substr(0, a.length), 10)), (i = parseInt(String(i).substr(0, a.length), 10)), s >= r && s <= i;
-                        }
-                        return (c = e), (d = String((d = t))).substring(0, c.length) === c.substring(0, d.length);
-                    };
+                    Object.defineProperty(n, '__esModule', { value: !0 }),
+                        (n.matches = void 0),
+                        (n.matches = function (e, t) {
+                            var n, r, i, o, a, s;
+                            return Array.isArray(t) ? ((n = t[0]), (r = t[1]), (i = String(n).length), (a = parseInt((o = e.substr(0, i)), 10)), (n = parseInt(String(n).substr(0, o.length), 10)), (r = parseInt(String(r).substr(0, o.length), 10)), a >= n && a <= r) : (s = String((s = t))).substring(0, e.length) === e.substring(0, s.length);
+                        });
                 },
                 {}
             ],
@@ -1263,7 +1259,7 @@ var t;
                                     return new e(t);
                                 }),
                                 (e.prototype.addTargetFrame = function (e) {
-                                    if (!!this.limitBroadcastToFramesArray) this.targetFrames.push(e);
+                                    this.limitBroadcastToFramesArray && this.targetFrames.push(e);
                                 }),
                                 (e.prototype.include = function (e) {
                                     return null != e && null != e.Window && e.constructor === e.Window && (r.childWindows.push(e), !0);
@@ -1293,9 +1289,9 @@ var t;
                                 (e.prototype.emitAsPromise = function (t, n) {
                                     var r = this;
                                     return new e.Promise(function (e, i) {
-                                        !r.emit(t, n, function (t) {
+                                        r.emit(t, n, function (t) {
                                             e(t);
-                                        }) && i(Error('Listener not added for "'.concat(t, '"')));
+                                        }) || i(Error('Listener not added for "'.concat(t, '"')));
                                     });
                                 }),
                                 (e.prototype.on = function (e, t) {
@@ -1309,7 +1305,7 @@ var t;
                                             (this.hasAdditionalChecksForOnListeners &&
                                                 (o = function () {
                                                     for (var e = [], r = 0; r < arguments.length; r++) e[r] = arguments[r];
-                                                    if (!!n.passesVerifyDomainCheck(this && this.origin) && !!n.hasMatchingTargetFrame(this && this.source)) t.apply(void 0, e);
+                                                    n.passesVerifyDomainCheck(this && this.origin) && n.hasMatchingTargetFrame(this && this.source) && t.apply(void 0, e);
                                                 }),
                                             this.listeners.push({
                                                 eventName: e,
@@ -1402,12 +1398,12 @@ var t;
                     Object.defineProperty(n, '__esModule', { value: !0 }), (n.detach = n.attach = void 0);
                     var r = e('./'),
                         i = !1;
-                    n.attach = function () {
-                        if (!i && 'undefined' != typeof window) (i = !0), window.addEventListener('message', r.onMessage, !1);
-                    };
-                    n.detach = function () {
-                        (i = !1), window.removeEventListener('message', r.onMessage, !1);
-                    };
+                    (n.attach = function () {
+                        !i && 'undefined' != typeof window && ((i = !0), window.addEventListener('message', r.onMessage, !1));
+                    }),
+                        (n.detach = function () {
+                            (i = !1), window.removeEventListener('message', r.onMessage, !1);
+                        });
                 },
                 { './': 57 }
             ],
@@ -1472,7 +1468,7 @@ var t;
                     Object.defineProperty(n, '__esModule', { value: !0 }), (n.dispatch = void 0);
                     var r = e('./');
                     n.dispatch = function (e, t, n, i, o) {
-                        if (!!r.subscribers[e] && !!r.subscribers[e][t]) {
+                        if (r.subscribers[e] && r.subscribers[e][t]) {
                             var a = [];
                             n && a.push(n), i && a.push(i);
                             for (var s = 0; s < r.subscribers[e][t].length; s++) r.subscribers[e][t][s].apply(o, a);
@@ -1483,10 +1479,11 @@ var t;
             ],
             56: [
                 function (e, t, n) {
-                    Object.defineProperty(n, '__esModule', { value: !0 }), (n.hasOpener = void 0);
-                    n.hasOpener = function (e) {
-                        return e.top === e && null != e.opener && e.opener !== e && !0 !== e.opener.closed && !0;
-                    };
+                    Object.defineProperty(n, '__esModule', { value: !0 }),
+                        (n.hasOpener = void 0),
+                        (n.hasOpener = function (e) {
+                            return e.top === e && null != e.opener && e.opener !== e && !0 !== e.opener.closed;
+                        });
                 },
                 {}
             ],
@@ -1513,7 +1510,7 @@ var t;
                         i =
                             (this && this.__exportStar) ||
                             function (e, t) {
-                                for (var n in e) 'default' !== n && !Object.prototype.hasOwnProperty.call(t, n) && r(t, e, n);
+                                for (var n in e) 'default' === n || Object.prototype.hasOwnProperty.call(t, n) || r(t, e, n);
                             };
                     Object.defineProperty(n, '__esModule', { value: !0 }), i(e('./attach'), n), i(e('./broadcast-to-child-windows'), n), i(e('./broadcast'), n), i(e('./constants'), n), i(e('./dispatch'), n), i(e('./has-opener'), n), i(e('./is-not-string'), n), i(e('./message'), n), i(e('./package-payload'), n), i(e('./send-message'), n), i(e('./subscribe-replier'), n), i(e('./subscription-args-invalid'), n), i(e('./types'), n), i(e('./unpack-payload'), n);
                 },
@@ -1536,10 +1533,11 @@ var t;
             ],
             58: [
                 function (e, t, n) {
-                    Object.defineProperty(n, '__esModule', { value: !0 }), (n.isntString = void 0);
-                    n.isntString = function (e) {
-                        return 'string' != typeof e;
-                    };
+                    Object.defineProperty(n, '__esModule', { value: !0 }),
+                        (n.isntString = void 0),
+                        (n.isntString = function (e) {
+                            return 'string' != typeof e;
+                        });
                 },
                 {}
             ],
@@ -1548,12 +1546,13 @@ var t;
                     Object.defineProperty(n, '__esModule', { value: !0 }), (n.onMessage = void 0);
                     var r = e('./');
                     n.onMessage = function (e) {
-                        if ((0, r.isntString)(e.data)) return;
-                        var t = (0, r.unpackPayload)(e);
-                        if (!!t) {
-                            var n = t.eventData,
-                                i = t.reply;
-                            (0, r.dispatch)('*', t.event, n, i, e), (0, r.dispatch)(e.origin, t.event, n, i, e), (0, r.broadcastToChildWindows)(e.data, t.origin, e.source);
+                        if (!(0, r.isntString)(e.data)) {
+                            var t = (0, r.unpackPayload)(e);
+                            if (t) {
+                                var n = t.eventData,
+                                    i = t.reply;
+                                (0, r.dispatch)('*', t.event, n, i, e), (0, r.dispatch)(e.origin, t.event, n, i, e), (0, r.broadcastToChildWindows)(e.data, t.origin, e.source);
+                            }
                         }
                     };
                 },
@@ -1582,12 +1581,13 @@ var t;
             ],
             61: [
                 function (e, t, n) {
-                    Object.defineProperty(n, '__esModule', { value: !0 }), (n.sendMessage = void 0);
-                    n.sendMessage = function (e, t, n) {
-                        try {
-                            e.postMessage(t, n);
-                        } catch (e) {}
-                    };
+                    Object.defineProperty(n, '__esModule', { value: !0 }),
+                        (n.sendMessage = void 0),
+                        (n.sendMessage = function (e, t, n) {
+                            try {
+                                e.postMessage(t, n);
+                            } catch (e) {}
+                        });
                 },
                 {}
             ],
@@ -1649,9 +1649,10 @@ var t;
                                 i = e.source,
                                 o = t.reply;
                             t.reply = function (e) {
-                                if (!i) return;
-                                var t = (0, r.packagePayload)(o, n, e);
-                                if (!!t) i.postMessage(t, n);
+                                if (i) {
+                                    var t = (0, r.packagePayload)(o, n, e);
+                                    t && i.postMessage(t, n);
+                                }
                             };
                         }
                         return t;
@@ -1682,16 +1683,16 @@ var t;
                     var c = e('@braintree/browser-detection/is-ie9');
                     n.isIE9 = c;
                     var d = /Version\/\d\.\d* Chrome\/\d*\.0\.0\.0/;
-                    n.isKitKatWebview = function (e) {
+                    (n.isKitKatWebview = function (e) {
                         return void 0 === e && (e = r), i(e) && d.test(e);
-                    };
-                    n.isAndroidChrome = function (e) {
-                        return void 0 === e && (e = r), (i(e) || o(e)) && a(e);
-                    };
-                    n.isSamsungBrowser = function (e) {
-                        var t;
-                        return void 0 === e && (e = r), /SamsungBrowser/.test(e) || (!a((t = e)) && t.indexOf('Samsung') > -1);
-                    };
+                    }),
+                        (n.isAndroidChrome = function (e) {
+                            return void 0 === e && (e = r), (i(e) || o(e)) && a(e);
+                        }),
+                        (n.isSamsungBrowser = function (e) {
+                            var t;
+                            return void 0 === e && (e = r), /SamsungBrowser/.test(e) || (!a((t = e)) && t.indexOf('Samsung') > -1);
+                        });
                 },
                 {
                     '@braintree/browser-detection/is-android': 80,
@@ -2004,7 +2005,7 @@ var t;
                     }),
                         (d.prototype._setMerchantIdentifier = function () {
                             var e = this._client.getConfiguration().gatewayConfiguration.applePayWeb;
-                            if (!!e)
+                            e &&
                                 Object.defineProperty(this, 'merchantIdentifier', {
                                     value: e.merchantIdentifier,
                                     configurable: !1,
@@ -2174,9 +2175,9 @@ var t;
                         s = e('../lib/create-assets-url'),
                         c = e('../lib/create-deferred-client'),
                         d = e('./errors'),
-                        u = e('@braintree/wrap-promise');
+                        l = e('@braintree/wrap-promise');
                     t.exports = {
-                        create: u(function (e) {
+                        create: l(function (e) {
                             var t = 'Apple Pay';
                             return a
                                 .verify({
@@ -2227,8 +2228,8 @@ var t;
                         s = e('../lib/braintree-error'),
                         c = e('../lib/convert-to-braintree-error'),
                         d = e('./get-configuration').getConfiguration,
-                        u = e('../lib/create-authorization-data'),
-                        l = e('../lib/add-metadata'),
+                        l = e('../lib/create-authorization-data'),
+                        u = e('../lib/add-metadata'),
                         p = e('@braintree/wrap-promise'),
                         _ = e('../lib/once'),
                         E = e('../lib/deferred'),
@@ -2279,7 +2280,7 @@ var t;
                             r = b[e.authorization];
                         if (r) return m.sendEvent(r, 'custom.client.load.cached'), r;
                         try {
-                            n = u(e.authorization);
+                            n = l(e.authorization);
                         } catch (e) {
                             return Promise.reject(new s(f.CLIENT_INVALID_AUTHORIZATION));
                         }
@@ -2307,7 +2308,7 @@ var t;
                                 r,
                                 i,
                                 o = document.querySelector('script[fncls="' + O + '"]');
-                            !o && (((o = document.body.appendChild(document.createElement('script'))).type = 'application/json'), o.setAttribute('fncls', O)),
+                            o || (((o = document.body.appendChild(document.createElement('script'))).type = 'application/json'), o.setAttribute('fncls', O)),
                                 (n = {
                                     rda_tenant: 'bt_card',
                                     mid: (t = this.getConfiguration()).gatewayConfiguration.merchantId
@@ -2331,30 +2332,31 @@ var t;
                                     var o,
                                         a,
                                         d,
-                                        u,
-                                        p = !!('payment_methods/credit_cards' === e.endpoint && n.getConfiguration().gatewayConfiguration.creditCards.collectDeviceData);
-                                    if (('graphQLApi' !== e.api && (e.method ? !e.endpoint && (o = 'options.endpoint') : (o = 'options.method')), o))
+                                        l,
+                                        p,
+                                        _ = !!('payment_methods/credit_cards' === e.endpoint && n.getConfiguration().gatewayConfiguration.creditCards.collectDeviceData);
+                                    if (('graphQLApi' === e.api || (e.method ? e.endpoint || (a = 'options.endpoint') : (a = 'options.method')), a))
                                         throw new s({
                                             type: f.CLIENT_OPTION_REQUIRED.type,
                                             code: f.CLIENT_OPTION_REQUIRED.code,
-                                            message: o + ' is required when making a request.'
+                                            message: a + ' is required when making a request.'
                                         });
                                     if (
-                                        ((a = 'api' in e ? e.api : 'clientApi'),
-                                        (u = {
+                                        ((d = 'api' in e ? e.api : 'clientApi'),
+                                        (p = {
                                             method: e.method,
                                             graphQL: n._graphQL,
                                             timeout: e.timeout,
                                             metadata: n._configuration.analyticsMetadata
                                         }),
-                                        'clientApi' === a)
+                                        'clientApi' === d)
                                     )
-                                        (d = n._clientApiBaseUrl), (u.data = l.addMetadata(n._configuration, e.data));
-                                    else if ('graphQLApi' === a)
-                                        (d = A[n._configuration.gatewayConfiguration.environment]),
+                                        (l = n._clientApiBaseUrl), (p.data = u.addMetadata(n._configuration, e.data));
+                                    else if ('graphQLApi' === d) {
+                                        (l = A[n._configuration.gatewayConfiguration.environment]),
                                             (e.endpoint = ''),
-                                            (u.method = 'post'),
-                                            (u.data = h(
+                                            (p.method = 'post'),
+                                            (p.data = h(
                                                 {
                                                     clientSdkMetadata: {
                                                         platform: n._configuration.analyticsMetadata.platform,
@@ -2366,26 +2368,24 @@ var t;
                                                 },
                                                 e.data
                                             )),
-                                            (u.headers = (function (e) {
-                                                return {
-                                                    Authorization: 'Bearer ' + (e.authorizationFingerprint || e.authorization),
-                                                    'Braintree-Version': r
-                                                };
-                                            })(n._configuration));
-                                    else
+                                            (p.headers = {
+                                                Authorization: 'Bearer ' + ((o = n._configuration).authorizationFingerprint || o.authorization),
+                                                'Braintree-Version': r
+                                            });
+                                    } else
                                         throw new s({
                                             type: f.CLIENT_OPTION_INVALID.type,
                                             code: f.CLIENT_OPTION_INVALID.code,
                                             message: 'options.api is invalid.'
                                         });
-                                    (u.url = d + e.endpoint),
-                                        (u.sendAnalyticsEvent = function (e) {
+                                    (p.url = l + e.endpoint),
+                                        (p.sendAnalyticsEvent = function (e) {
                                             m.sendEvent(n, e);
                                         }),
-                                        n._request(u, function (e, r, o) {
-                                            var d, u;
+                                        n._request(p, function (e, r, o) {
+                                            var a, l;
                                             if (
-                                                (u = (function (e, t) {
+                                                (l = (function (e, t) {
                                                     var n;
                                                     if (
                                                         (-1 === e
@@ -2409,10 +2409,10 @@ var t;
                                                         return (n.details = n.details || {}), (n.details.httpStatus = e), n;
                                                 })(o, e))
                                             ) {
-                                                i(u);
+                                                i(l);
                                                 return;
                                             }
-                                            if ('graphQLApi' === a && r.errors) {
+                                            if ('graphQLApi' === d && r.errors) {
                                                 i(
                                                     c(r.errors, {
                                                         type: f.CLIENT_GRAPHQL_REQUEST_ERROR.type,
@@ -2422,16 +2422,16 @@ var t;
                                                 );
                                                 return;
                                             }
-                                            (d = h({ _httpStatus: o }, r)),
-                                                p &&
-                                                    d.creditCards &&
-                                                    d.creditCards.length > 0 &&
-                                                    (n._findOrCreateFraudnetJSON(d.creditCards[0].nonce),
+                                            (a = h({ _httpStatus: o }, r)),
+                                                _ &&
+                                                    a.creditCards &&
+                                                    a.creditCards.length > 0 &&
+                                                    (n._findOrCreateFraudnetJSON(a.creditCards[0].nonce),
                                                     N.loadScript({
                                                         src: P,
                                                         forceScriptReload: !0
                                                     })),
-                                                t(d);
+                                                t(a);
                                         });
                                 });
                             if ('function' == typeof t) {
@@ -2447,17 +2447,17 @@ var t;
                                 return;
                             }
                             return i;
-                        });
-                    (v.prototype.toJSON = function () {
-                        return this.getConfiguration();
-                    }),
+                        }),
+                        (v.prototype.toJSON = function () {
+                            return this.getConfiguration();
+                        }),
                         (v.prototype.getVersion = function () {
                             return y;
                         }),
                         (v.prototype.teardown = p(function () {
                             return delete b[this.getConfiguration().authorization], I(this, T(v.prototype)), Promise.resolve();
-                        }));
-                    t.exports = v;
+                        })),
+                        (t.exports = v);
                 },
                 {
                     '../lib/add-metadata': 137,
@@ -2561,8 +2561,8 @@ var t;
                         s = e('../lib/constants'),
                         c = e('./errors'),
                         d = e('./request/graphql'),
-                        u = e('../lib/constants').GRAPHQL_URLS,
-                        l = e('../lib/is-date-string-before-or-on'),
+                        l = e('../lib/constants').GRAPHQL_URLS,
+                        u = e('../lib/is-date-string-before-or-on'),
                         p = e('./constants').BRAINTREE_VERSION;
                     t.exports = {
                         getConfiguration: i(function (e, t) {
@@ -2591,7 +2591,7 @@ var t;
                                         data: _
                                     }),
                                     _.authorizationFingerprint && e.graphQL
-                                        ? (l(e.graphQL.date, p) &&
+                                        ? (u(e.graphQL.date, p) &&
                                               (h.graphQL = new d({
                                                   graphQL: {
                                                       url: e.graphQL.url,
@@ -2602,7 +2602,7 @@ var t;
                                         : _.tokenizationKey &&
                                           ((h.graphQL = new d({
                                               graphQL: {
-                                                  url: u[e.environment],
+                                                  url: l[e.environment],
                                                   features: ['configuration']
                                               }
                                           })),
@@ -2680,10 +2680,10 @@ var t;
                         s = e('./xhr'),
                         c = s.isAvailable,
                         d = e('./graphql/request'),
-                        u = e('./default-request');
+                        l = e('./default-request');
                     t.exports = {
                         request: function (e, t) {
-                            !(function e(t, n, l) {
+                            !(function e(t, n, u) {
                                 var p,
                                     _,
                                     E,
@@ -2697,7 +2697,7 @@ var t;
                                     N = s.getRequestObject(),
                                     O = !!(T && T.isGraphQLRequest(A, t.data));
                                 (t.headers = i({ 'Content-Type': 'application/json' }, t.headers)),
-                                    (A = (E = O ? new d(t) : new u(t)).getUrl()),
+                                    (A = (E = O ? new d(t) : new l(t)).getUrl()),
                                     (h = E.getBody()),
                                     (m = E.getMethod()),
                                     (f = E.getHeaders()),
@@ -2706,39 +2706,39 @@ var t;
                                         ? (N.onreadystatechange = function () {
                                               if (4 === N.readyState) {
                                                   if (0 === N.status && O) {
-                                                      delete t.graphQL, e(t, n, l);
+                                                      delete t.graphQL, e(t, n, u);
                                                       return;
                                                   }
                                                   if (((y = a(N.responseText)), (_ = E.adaptResponseBody(y)), (p = E.determineStatus(N.status, y)) >= 400 || p < 200)) {
-                                                      var r, i, o;
-                                                      if (O && ('UNKNOWN' === (i = !(r = y).data && r.errors && r.errors[0] && r.errors[0].extensions && r.errors[0].extensions.errorClass) || 'INTERNAL' === i)) {
-                                                          delete t.graphQL, e(t, n, l);
+                                                      var r;
+                                                      if (O && ('UNKNOWN' === (r = !y.data && y.errors && y.errors[0] && y.errors[0].extensions && y.errors[0].extensions.errorClass) || 'INTERNAL' === r)) {
+                                                          delete t.graphQL, e(t, n, u);
                                                           return;
                                                       }
-                                                      if (n < 1 && (!(o = p) || 408 === o)) {
-                                                          e(t, ++n, l);
+                                                      if (n < 1 && (!p || 408 === p)) {
+                                                          e(t, ++n, u);
                                                           return;
                                                       }
-                                                      l(_ || 'error', null, p || 500);
-                                                  } else l(null, _, p);
+                                                      u(_ || 'error', null, p || 500);
+                                                  } else u(null, _, p);
                                               }
                                           })
                                         : (t.headers && (A = r.queryify(A, f)),
                                           (N.onload = function () {
-                                              l(null, a(N.responseText), N.status);
+                                              u(null, a(N.responseText), N.status);
                                           }),
                                           (N.onerror = function () {
-                                              l('error', null, 500);
+                                              u('error', null, 500);
                                           }),
                                           (N.onprogress = function () {}),
                                           (N.ontimeout = function () {
-                                              l('timeout', null, -1);
+                                              u('timeout', null, -1);
                                           }));
                                 try {
                                     N.open(m, A, !0);
                                 } catch (r) {
                                     if (!O) throw r;
-                                    delete t.graphQL, e(t, n, l);
+                                    delete t.graphQL, e(t, n, u);
                                     return;
                                 }
                                 (N.timeout = I),
@@ -2847,84 +2847,79 @@ var t;
                         }, []);
                     }
                     t.exports = function (e, t) {
-                        var n;
-                        return (n =
-                            e.data && !e.errors
-                                ? (function (e, t) {
-                                      var n,
-                                          r = e.data.clientConfiguration;
-                                      return (
-                                          (n = {
-                                              environment: r.environment.toLowerCase(),
-                                              clientApiUrl: r.clientApiUrl,
-                                              assetsUrl: r.assetsUrl,
-                                              analytics: { url: r.analyticsUrl },
-                                              merchantId: r.merchantId,
-                                              venmo: 'off'
-                                          }),
-                                          r.supportedFeatures &&
-                                              (n.graphQL = {
-                                                  url: t._graphQL._config.url,
-                                                  features: r.supportedFeatures.map(function (e) {
-                                                      return e.toLowerCase();
-                                                  })
-                                              }),
-                                          r.braintreeApi && (n.braintreeApi = r.braintreeApi),
-                                          r.applePayWeb && ((n.applePayWeb = r.applePayWeb), (n.applePayWeb.supportedNetworks = a(r.applePayWeb.supportedCardBrands, o.applePayWeb)), delete n.applePayWeb.supportedCardBrands),
-                                          r.fastlane && (n.fastlane = r.fastlane),
-                                          r.ideal && (n.ideal = r.ideal),
-                                          r.kount && (n.kount = { kountMerchantId: r.kount.merchantId }),
-                                          r.creditCard
-                                              ? ((n.challenges = r.creditCard.challenges.map(function (e) {
-                                                    return e.toLowerCase();
-                                                })),
-                                                (n.creditCards = { supportedCardTypes: a(r.creditCard.supportedCardBrands, o.creditCard) }),
-                                                (n.threeDSecureEnabled = r.creditCard.threeDSecureEnabled),
-                                                (n.threeDSecure = r.creditCard.threeDSecure))
-                                              : ((n.challenges = []), (n.creditCards = { supportedCardTypes: [] }), (n.threeDSecureEnabled = !1)),
-                                          r.googlePay &&
-                                              (n.androidPay = {
-                                                  displayName: r.googlePay.displayName,
-                                                  enabled: !0,
-                                                  environment: r.googlePay.environment.toLowerCase(),
-                                                  googleAuthorizationFingerprint: r.googlePay.googleAuthorization,
-                                                  paypalClientId: r.googlePay.paypalClientId,
-                                                  supportedNetworks: a(r.googlePay.supportedCardBrands, o.googlePay)
-                                              }),
-                                          r.venmo &&
-                                              (n.payWithVenmo = {
-                                                  merchantId: r.venmo.merchantId,
-                                                  accessToken: r.venmo.accessToken,
-                                                  environment: r.venmo.environment.toLowerCase(),
-                                                  enrichedCustomerDataEnabled: r.venmo.enrichedCustomerDataEnabled
-                                              }),
-                                          r.paypal ? ((n.paypalEnabled = !0), (n.paypal = i({}, r.paypal)), (n.paypal.currencyIsoCode = n.paypal.currencyCode), (n.paypal.environment = n.paypal.environment.toLowerCase()), delete n.paypal.currencyCode) : (n.paypalEnabled = !1),
-                                          r.unionPay &&
-                                              (n.unionPay = {
-                                                  enabled: !0,
-                                                  merchantAccountId: r.unionPay.merchantAccountId
-                                              }),
-                                          r.visaCheckout &&
-                                              (n.visaCheckout = {
-                                                  apikey: r.visaCheckout.apiKey,
-                                                  encryptionKey: r.visaCheckout.encryptionKey,
-                                                  externalClientId: r.visaCheckout.externalClientId,
-                                                  supportedCardTypes: a(r.visaCheckout.supportedCardBrands, o.visaCheckout)
-                                              }),
-                                          r.masterpass &&
-                                              (n.masterpass = {
-                                                  merchantCheckoutId: r.masterpass.merchantCheckoutId,
-                                                  supportedNetworks: a(r.masterpass.supportedCardBrands, o.masterpass)
-                                              }),
-                                          r.usBankAccount &&
-                                              (n.usBankAccount = {
-                                                  routeId: r.usBankAccount.routeId,
-                                                  plaid: { publicKey: r.usBankAccount.plaidPublicKey }
-                                              }),
-                                          n
-                                      );
-                                  })(e, t)
-                                : r(e));
+                        var n, s, c, d, l;
+                        return e.data && !e.errors
+                            ? ((s = e),
+                              (c = t),
+                              (d = {
+                                  environment: (l = s.data.clientConfiguration).environment.toLowerCase(),
+                                  clientApiUrl: l.clientApiUrl,
+                                  assetsUrl: l.assetsUrl,
+                                  analytics: { url: l.analyticsUrl },
+                                  merchantId: l.merchantId,
+                                  venmo: 'off'
+                              }),
+                              l.supportedFeatures &&
+                                  (d.graphQL = {
+                                      url: c._graphQL._config.url,
+                                      features: l.supportedFeatures.map(function (e) {
+                                          return e.toLowerCase();
+                                      })
+                                  }),
+                              l.braintreeApi && (d.braintreeApi = l.braintreeApi),
+                              l.applePayWeb && ((d.applePayWeb = l.applePayWeb), (d.applePayWeb.supportedNetworks = a(l.applePayWeb.supportedCardBrands, o.applePayWeb)), delete d.applePayWeb.supportedCardBrands),
+                              l.fastlane && (d.fastlane = l.fastlane),
+                              l.ideal && (d.ideal = l.ideal),
+                              l.kount && (d.kount = { kountMerchantId: l.kount.merchantId }),
+                              l.creditCard
+                                  ? ((d.challenges = l.creditCard.challenges.map(function (e) {
+                                        return e.toLowerCase();
+                                    })),
+                                    (d.creditCards = { supportedCardTypes: a(l.creditCard.supportedCardBrands, o.creditCard) }),
+                                    (d.threeDSecureEnabled = l.creditCard.threeDSecureEnabled),
+                                    (d.threeDSecure = l.creditCard.threeDSecure))
+                                  : ((d.challenges = []), (d.creditCards = { supportedCardTypes: [] }), (d.threeDSecureEnabled = !1)),
+                              l.googlePay &&
+                                  (d.androidPay = {
+                                      displayName: l.googlePay.displayName,
+                                      enabled: !0,
+                                      environment: l.googlePay.environment.toLowerCase(),
+                                      googleAuthorizationFingerprint: l.googlePay.googleAuthorization,
+                                      paypalClientId: l.googlePay.paypalClientId,
+                                      supportedNetworks: a(l.googlePay.supportedCardBrands, o.googlePay)
+                                  }),
+                              l.venmo &&
+                                  (d.payWithVenmo = {
+                                      merchantId: l.venmo.merchantId,
+                                      accessToken: l.venmo.accessToken,
+                                      environment: l.venmo.environment.toLowerCase(),
+                                      enrichedCustomerDataEnabled: l.venmo.enrichedCustomerDataEnabled
+                                  }),
+                              l.paypal ? ((d.paypalEnabled = !0), (d.paypal = i({}, l.paypal)), (d.paypal.currencyIsoCode = d.paypal.currencyCode), (d.paypal.environment = d.paypal.environment.toLowerCase()), delete d.paypal.currencyCode) : (d.paypalEnabled = !1),
+                              l.unionPay &&
+                                  (d.unionPay = {
+                                      enabled: !0,
+                                      merchantAccountId: l.unionPay.merchantAccountId
+                                  }),
+                              l.visaCheckout &&
+                                  (d.visaCheckout = {
+                                      apikey: l.visaCheckout.apiKey,
+                                      encryptionKey: l.visaCheckout.encryptionKey,
+                                      externalClientId: l.visaCheckout.externalClientId,
+                                      supportedCardTypes: a(l.visaCheckout.supportedCardBrands, o.visaCheckout)
+                                  }),
+                              l.masterpass &&
+                                  (d.masterpass = {
+                                      merchantCheckoutId: l.masterpass.merchantCheckoutId,
+                                      supportedNetworks: a(l.masterpass.supportedCardBrands, o.masterpass)
+                                  }),
+                              l.usBankAccount &&
+                                  (d.usBankAccount = {
+                                      routeId: l.usBankAccount.routeId,
+                                      plaid: { publicKey: l.usBankAccount.plaidPublicKey }
+                                  }),
+                              d)
+                            : r(e);
                     };
                 },
                 {
@@ -2956,50 +2951,40 @@ var t;
                         },
                         a = { PSDTWO: 'psd2' };
                     t.exports = function (e) {
-                        var t;
-                        return (t =
-                            e.data && !e.errors
-                                ? (function (e) {
-                                      var t,
-                                          n,
-                                          r = e.data.tokenizeCreditCardForPayPalConnect,
-                                          s = r.paymentMethod.details,
-                                          c = s.last4 ? s.last4.substr(2, 4) : '',
-                                          d = s.binData;
-                                      return (
-                                          d &&
-                                              (['commercial', 'debit', 'durbinRegulated', 'healthcare', 'payroll', 'prepaid'].forEach(function (e) {
-                                                  d[e] ? (d[e] = o[d[e]]) : (d[e] = 'Unknown');
-                                              }),
-                                              ['issuingBank', 'countryOfIssuance', 'productId'].forEach(function (e) {
-                                                  !d[e] && (d[e] = 'Unknown');
-                                              })),
-                                          (t = {
-                                              creditCards: [
-                                                  {
-                                                      binData: d,
-                                                      consumed: !1,
-                                                      description: c ? 'ending in ' + c : '',
-                                                      nonce: r.paymentMethod.id,
-                                                      details: {
-                                                          cardholderName: s.cardholderName,
-                                                          expirationMonth: s.expirationMonth,
-                                                          expirationYear: s.expirationYear,
-                                                          bin: s.bin || '',
-                                                          cardType: i[s.brandCode] || 'Unknown',
-                                                          lastFour: s.last4 || '',
-                                                          lastTwo: c
-                                                      },
-                                                      type: 'CreditCard',
-                                                      threeDSecureInfo: null
-                                                  }
-                                              ]
-                                          }),
-                                          r.authenticationInsight && ((n = r.authenticationInsight.customerAuthenticationRegulationEnvironment), (t.creditCards[0].authenticationInsight = { regulationEnvironment: a[n] || n.toLowerCase() })),
-                                          t
-                                      );
-                                  })(e)
-                                : r(e));
+                        var t, n, s, c, d, l, u;
+                        return e.data && !e.errors
+                            ? ((l = (d = (c = e.data.tokenizeCreditCardForPayPalConnect).paymentMethod.details).last4 ? d.last4.substr(2, 4) : ''),
+                              (u = d.binData) &&
+                                  (['commercial', 'debit', 'durbinRegulated', 'healthcare', 'payroll', 'prepaid'].forEach(function (e) {
+                                      u[e] ? (u[e] = o[u[e]]) : (u[e] = 'Unknown');
+                                  }),
+                                  ['issuingBank', 'countryOfIssuance', 'productId'].forEach(function (e) {
+                                      u[e] || (u[e] = 'Unknown');
+                                  })),
+                              (n = {
+                                  creditCards: [
+                                      {
+                                          binData: u,
+                                          consumed: !1,
+                                          description: l ? 'ending in ' + l : '',
+                                          nonce: c.paymentMethod.id,
+                                          details: {
+                                              cardholderName: d.cardholderName,
+                                              expirationMonth: d.expirationMonth,
+                                              expirationYear: d.expirationYear,
+                                              bin: d.bin || '',
+                                              cardType: i[d.brandCode] || 'Unknown',
+                                              lastFour: d.last4 || '',
+                                              lastTwo: l
+                                          },
+                                          type: 'CreditCard',
+                                          threeDSecureInfo: null
+                                      }
+                                  ]
+                              }),
+                              c.authenticationInsight && ((s = c.authenticationInsight.customerAuthenticationRegulationEnvironment), (n.creditCards[0].authenticationInsight = { regulationEnvironment: a[s] || s.toLowerCase() })),
+                              n)
+                            : r(e);
                     };
                 },
                 { './error': 102 }
@@ -3028,50 +3013,40 @@ var t;
                         },
                         a = { PSDTWO: 'psd2' };
                     t.exports = function (e) {
-                        var t;
-                        return (t =
-                            e.data && !e.errors
-                                ? (function (e) {
-                                      var t,
-                                          n,
-                                          r = e.data.tokenizeCreditCard,
-                                          s = r.creditCard,
-                                          c = s.last4 ? s.last4.substr(2, 4) : '',
-                                          d = s.binData;
-                                      return (
-                                          d &&
-                                              (['commercial', 'debit', 'durbinRegulated', 'healthcare', 'payroll', 'prepaid'].forEach(function (e) {
-                                                  d[e] ? (d[e] = o[d[e]]) : (d[e] = 'Unknown');
-                                              }),
-                                              ['issuingBank', 'countryOfIssuance', 'productId'].forEach(function (e) {
-                                                  !d[e] && (d[e] = 'Unknown');
-                                              })),
-                                          (t = {
-                                              creditCards: [
-                                                  {
-                                                      binData: d,
-                                                      consumed: !1,
-                                                      description: c ? 'ending in ' + c : '',
-                                                      nonce: r.token,
-                                                      details: {
-                                                          cardholderName: s.cardholderName,
-                                                          expirationMonth: s.expirationMonth,
-                                                          expirationYear: s.expirationYear,
-                                                          bin: s.bin || '',
-                                                          cardType: i[s.brandCode] || 'Unknown',
-                                                          lastFour: s.last4 || '',
-                                                          lastTwo: c
-                                                      },
-                                                      type: 'CreditCard',
-                                                      threeDSecureInfo: null
-                                                  }
-                                              ]
-                                          }),
-                                          r.authenticationInsight && ((n = r.authenticationInsight.customerAuthenticationRegulationEnvironment), (t.creditCards[0].authenticationInsight = { regulationEnvironment: a[n] || n.toLowerCase() })),
-                                          t
-                                      );
-                                  })(e)
-                                : r(e));
+                        var t, n, s, c, d, l, u;
+                        return e.data && !e.errors
+                            ? ((l = (d = (c = e.data.tokenizeCreditCard).creditCard).last4 ? d.last4.substr(2, 4) : ''),
+                              (u = d.binData) &&
+                                  (['commercial', 'debit', 'durbinRegulated', 'healthcare', 'payroll', 'prepaid'].forEach(function (e) {
+                                      u[e] ? (u[e] = o[u[e]]) : (u[e] = 'Unknown');
+                                  }),
+                                  ['issuingBank', 'countryOfIssuance', 'productId'].forEach(function (e) {
+                                      u[e] || (u[e] = 'Unknown');
+                                  })),
+                              (n = {
+                                  creditCards: [
+                                      {
+                                          binData: u,
+                                          consumed: !1,
+                                          description: l ? 'ending in ' + l : '',
+                                          nonce: c.token,
+                                          details: {
+                                              cardholderName: d.cardholderName,
+                                              expirationMonth: d.expirationMonth,
+                                              expirationYear: d.expirationYear,
+                                              bin: d.bin || '',
+                                              cardType: i[d.brandCode] || 'Unknown',
+                                              lastFour: d.last4 || '',
+                                              lastTwo: l
+                                          },
+                                          type: 'CreditCard',
+                                          threeDSecureInfo: null
+                                      }
+                                  ]
+                              }),
+                              c.authenticationInsight && ((s = c.authenticationInsight.customerAuthenticationRegulationEnvironment), (n.creditCards[0].authenticationInsight = { regulationEnvironment: a[s] || s.toLowerCase() })),
+                              n)
+                            : r(e);
                     };
                 },
                 { './error': 102 }
@@ -3080,64 +3055,58 @@ var t;
                 function (e, t, n) {
                     t.exports = function (e) {
                         var t,
-                            n = e.errors && e.errors[0] && e.errors[0].extensions && e.errors[0].extensions.errorClass;
-                        return (t =
-                            'VALIDATION' === n
-                                ? (function (e) {
-                                      var t = (function (e) {
-                                          var t = [];
-                                          return (
-                                              e.forEach(function (e) {
-                                                  if (!!(e.extensions && e.extensions.inputPath))
-                                                      (function e(t, n, r) {
-                                                          var i,
-                                                              o = n.extensions.legacyCode,
-                                                              a = t[0];
-                                                          if (1 === t.length) {
-                                                              r.push({
-                                                                  code: o,
-                                                                  field: a,
-                                                                  message: n.message
-                                                              });
-                                                              return;
-                                                          }
-                                                          r.forEach(function (e) {
-                                                              e.field === a && (i = e);
-                                                          }),
-                                                              !i &&
-                                                                  ((i = {
-                                                                      field: a,
-                                                                      fieldErrors: []
-                                                                  }),
-                                                                  r.push(i)),
-                                                              e(t.slice(1), n, i.fieldErrors);
-                                                      })(e.extensions.inputPath.slice(1), e, t);
+                            n,
+                            r,
+                            i,
+                            o,
+                            a = e.errors && e.errors[0] && e.errors[0].extensions && e.errors[0].extensions.errorClass;
+                        return 'VALIDATION' === a
+                            ? 0 ===
+                              (i =
+                                  ((n = (t = e).errors),
+                                  (r = []),
+                                  n.forEach(function (e) {
+                                      e.extensions &&
+                                          e.extensions.inputPath &&
+                                          (function e(t, n, r) {
+                                              var i,
+                                                  o = n.extensions.legacyCode,
+                                                  a = t[0];
+                                              if (1 === t.length) {
+                                                  r.push({
+                                                      code: o,
+                                                      field: a,
+                                                      message: n.message
+                                                  });
+                                                  return;
+                                              }
+                                              r.forEach(function (e) {
+                                                  e.field === a && (i = e);
                                               }),
-                                              t
-                                          );
-                                      })(e.errors);
-                                      return 0 === t.length
-                                          ? { error: { message: e.errors[0].message } }
-                                          : {
-                                                error: {
-                                                    message: (function (e) {
-                                                        return { creditCard: 'Credit card is invalid' }[e[0].field];
-                                                    })(t)
-                                                },
-                                                fieldErrors: t
-                                            };
-                                  })(e)
-                                : n
-                                  ? (function (e) {
-                                        return {
-                                            error: { message: e.errors[0].message },
-                                            fieldErrors: []
-                                        };
-                                    })(e)
-                                  : {
-                                        error: { message: 'There was a problem serving your request' },
-                                        fieldErrors: []
-                                    });
+                                                  i ||
+                                                      ((i = {
+                                                          field: a,
+                                                          fieldErrors: []
+                                                      }),
+                                                      r.push(i)),
+                                                  e(t.slice(1), n, i.fieldErrors);
+                                          })(e.extensions.inputPath.slice(1), e, r);
+                                  }),
+                                  r)).length
+                                ? { error: { message: t.errors[0].message } }
+                                : {
+                                      error: { message: { creditCard: 'Credit card is invalid' }[i[0].field] },
+                                      fieldErrors: i
+                                  }
+                            : a
+                              ? {
+                                    error: { message: e.errors[0].message },
+                                    fieldErrors: []
+                                }
+                              : {
+                                    error: { message: 'There was a problem serving your request' },
+                                    fieldErrors: []
+                                };
                     };
                 },
                 {}
@@ -3165,60 +3134,61 @@ var t;
                             s,
                             c,
                             d,
-                            u,
                             l,
+                            u,
                             p,
-                            _ = { hasAuthenticationInsight: !!(e.authenticationInsight && e.merchantAccountId) };
+                            _,
+                            E,
+                            h,
+                            m,
+                            f,
+                            y,
+                            A,
+                            T,
+                            I,
+                            N = { hasAuthenticationInsight: !!(e.authenticationInsight && e.merchantAccountId) };
                         return {
-                            query: ((t = _.hasAuthenticationInsight), (n = 'mutation TokenizeCreditCardForPayPalConnect($input: TokenizeCreditCardForPayPalConnectInput!'), t && (n += ', $authenticationInsightInput: AuthenticationInsightInput!'), (n += ') {   tokenizeCreditCardForPayPalConnect(input: $input) {     clientMutationId     paymentMethod {       id       details {         ... on CreditCardDetails {       bin       brandCode       last4       cardholderName       expirationMonth      expirationYear      binData {         prepaid         healthcare         debit         durbinRegulated         commercial         payroll         issuingBank         countryOfIssuance         productId       }         }       }     }'), t && (n += '    authenticationInsight(input: $authenticationInsightInput) {      customerAuthenticationRegulationEnvironment    }'), (n += '  } }')),
+                            query: ((_ = N.hasAuthenticationInsight), (E = 'mutation TokenizeCreditCardForPayPalConnect($input: TokenizeCreditCardForPayPalConnectInput!'), _ && (E += ', $authenticationInsightInput: AuthenticationInsightInput!'), (E += ') {   tokenizeCreditCardForPayPalConnect(input: $input) {     clientMutationId     paymentMethod {       id       details {         ... on CreditCardDetails {       bin       brandCode       last4       cardholderName       expirationMonth      expirationYear      binData {         prepaid         healthcare         debit         durbinRegulated         commercial         payroll         issuingBank         countryOfIssuance         productId       }         }       }     }'), _ && (E += '    authenticationInsight(input: $authenticationInsightInput) {      customerAuthenticationRegulationEnvironment    }'), (E += '  } }')),
                             variables:
-                                ((i = e),
-                                (o = _),
-                                (s = (a = i.creditCard).fastlane || {}),
-                                (c = 'fastlane' in a && 'termsAndConditionsVersion' in a.fastlane && a.fastlane.termsAndConditionsVersion),
-                                (d = a.email),
-                                (u = 'hasBuyerConsent' in s && s.hasBuyerConsent),
-                                (l = a.shippingAddress),
-                                (p = r(
+                                ((m = (h = e.creditCard).fastlane || {}),
+                                (f = 'fastlane' in h && 'termsAndConditionsVersion' in h.fastlane && h.fastlane.termsAndConditionsVersion),
+                                (y = h.email),
+                                (A = 'hasBuyerConsent' in m && m.hasBuyerConsent),
+                                (T = h.shippingAddress),
+                                (I = r(
                                     {},
-                                    (function (e, t) {
-                                        var n = e.creditCard,
-                                            i = n && n.billingAddress,
-                                            o = n && n.expirationDate,
-                                            a = n && (n.expirationMonth || (o && o.split('/')[0].trim())),
-                                            s = n && (n.expirationYear || (o && o.split('/')[1].trim())),
-                                            c = {
-                                                input: {
-                                                    creditCard: {
-                                                        number: n && n.number,
-                                                        expirationMonth: a,
-                                                        expirationYear: s,
-                                                        cvv: n && n.cvv,
-                                                        cardholderName: n && n.cardholderName
-                                                    },
-                                                    options: {}
-                                                }
-                                            };
-                                        return (
-                                            t.hasAuthenticationInsight && (c.authenticationInsightInput = { merchantAccountId: e.merchantAccountId }),
-                                            i && (c.input.creditCard.billingAddress = i),
-                                            (c.input = (function (e, t) {
-                                                var n;
-                                                return e.creditCard && e.creditCard.options && 'boolean' == typeof e.creditCard.options.validate ? (n = e.creditCard.options.validate) : (e.authorizationFingerprint && e.tokenizationKey) || e.authorizationFingerprint ? (n = !0) : e.tokenizationKey && (n = !1), 'boolean' == typeof n && (t.options = r({ validate: n }, t.options)), t;
-                                            })(e, c.input)),
-                                            c
-                                        );
-                                    })(i, o).input,
+                                    ((t = e),
+                                    (n = N),
+                                    (o = (i = t.creditCard) && i.billingAddress),
+                                    (a = i && i.expirationDate),
+                                    (s = i && (i.expirationMonth || (a && a.split('/')[0].trim()))),
+                                    (c = i && (i.expirationYear || (a && a.split('/')[1].trim()))),
+                                    (d = {
+                                        input: {
+                                            creditCard: {
+                                                number: i && i.number,
+                                                expirationMonth: s,
+                                                expirationYear: c,
+                                                cvv: i && i.cvv,
+                                                cardholderName: i && i.cardholderName
+                                            },
+                                            options: {}
+                                        }
+                                    }),
+                                    n.hasAuthenticationInsight && (d.authenticationInsightInput = { merchantAccountId: t.merchantAccountId }),
+                                    o && (d.input.creditCard.billingAddress = o),
+                                    (d.input = ((l = t), (u = d.input), l.creditCard && l.creditCard.options && 'boolean' == typeof l.creditCard.options.validate ? (p = l.creditCard.options.validate) : (l.authorizationFingerprint && l.tokenizationKey) || l.authorizationFingerprint ? (p = !0) : l.tokenizationKey && (p = !1), 'boolean' == typeof p && (u.options = r({ validate: p }, u.options)), u)),
+                                    d).input,
                                     {
-                                        email: d,
-                                        optIn: u,
-                                        phone: a.phone,
-                                        termsAndConditionsVersion: c
+                                        email: y,
+                                        optIn: A,
+                                        phone: h.phone,
+                                        termsAndConditionsVersion: f
                                     }
                                 )),
-                                'authAssertion' in s && (p.authAssertion = s.authAssertion),
-                                l && (p.shippingAddress = l),
-                                { input: p }),
+                                'authAssertion' in m && (I.authAssertion = m.authAssertion),
+                                T && (I.shippingAddress = T),
+                                { input: I }),
                             operationName: 'TokenizeCreditCardForPayPalConnect'
                         };
                     };
@@ -3237,37 +3207,33 @@ var t;
                             s,
                             c,
                             d,
-                            u,
                             l,
-                            p = { hasAuthenticationInsight: !!(e.authenticationInsight && e.merchantAccountId) };
+                            u,
+                            p,
+                            _ = { hasAuthenticationInsight: !!(e.authenticationInsight && e.merchantAccountId) };
                         return {
-                            query: ((t = p.hasAuthenticationInsight), (n = 'mutation TokenizeCreditCard($input: TokenizeCreditCardInput!'), t && (n += ', $authenticationInsightInput: AuthenticationInsightInput!'), (n += ') {   tokenizeCreditCard(input: $input) {     token     creditCard {       bin       brandCode       last4       cardholderName       expirationMonth      expirationYear      binData {         prepaid         healthcare         debit         durbinRegulated         commercial         payroll         issuingBank         countryOfIssuance         productId       }     } '), t && (n += '    authenticationInsight(input: $authenticationInsightInput) {      customerAuthenticationRegulationEnvironment    }'), (n += '  } }')),
+                            query: ((o = _.hasAuthenticationInsight), (a = 'mutation TokenizeCreditCard($input: TokenizeCreditCardInput!'), o && (a += ', $authenticationInsightInput: AuthenticationInsightInput!'), (a += ') {   tokenizeCreditCard(input: $input) {     token     creditCard {       bin       brandCode       last4       cardholderName       expirationMonth      expirationYear      binData {         prepaid         healthcare         debit         durbinRegulated         commercial         payroll         issuingBank         countryOfIssuance         productId       }     } '), o && (a += '    authenticationInsight(input: $authenticationInsightInput) {      customerAuthenticationRegulationEnvironment    }'), (a += '  } }')),
                             variables:
-                                ((i = e),
-                                (o = p),
-                                (s = (a = i.creditCard) && a.billingAddress),
-                                (c = a && a.expirationDate),
-                                (d = a && (a.expirationMonth || (c && c.split('/')[0].trim()))),
-                                (u = a && (a.expirationYear || (c && c.split('/')[1].trim()))),
-                                (l = {
+                                ((c = (s = e.creditCard) && s.billingAddress),
+                                (d = s && s.expirationDate),
+                                (l = s && (s.expirationMonth || (d && d.split('/')[0].trim()))),
+                                (u = s && (s.expirationYear || (d && d.split('/')[1].trim()))),
+                                (p = {
                                     input: {
                                         creditCard: {
-                                            number: a && a.number,
-                                            expirationMonth: d,
+                                            number: s && s.number,
+                                            expirationMonth: l,
                                             expirationYear: u,
-                                            cvv: a && a.cvv,
-                                            cardholderName: a && a.cardholderName
+                                            cvv: s && s.cvv,
+                                            cardholderName: s && s.cardholderName
                                         },
                                         options: {}
                                     }
                                 }),
-                                o.hasAuthenticationInsight && (l.authenticationInsightInput = { merchantAccountId: i.merchantAccountId }),
-                                s && (l.input.creditCard.billingAddress = s),
-                                (l.input = (function (e, t) {
-                                    var n;
-                                    return e.creditCard && e.creditCard.options && 'boolean' == typeof e.creditCard.options.validate ? (n = e.creditCard.options.validate) : (e.authorizationFingerprint && e.tokenizationKey) || e.authorizationFingerprint ? (n = !0) : e.tokenizationKey && (n = !1), 'boolean' == typeof n && (t.options = r({ validate: n }, t.options)), t;
-                                })(i, l.input)),
-                                l),
+                                _.hasAuthenticationInsight && (p.authenticationInsightInput = { merchantAccountId: e.merchantAccountId }),
+                                c && (p.input.creditCard.billingAddress = c),
+                                (p.input = ((t = e), (n = p.input), t.creditCard && t.creditCard.options && 'boolean' == typeof t.creditCard.options.validate ? (i = t.creditCard.options.validate) : (t.authorizationFingerprint && t.tokenizationKey) || t.authorizationFingerprint ? (i = !0) : t.tokenizationKey && (i = !1), 'boolean' == typeof i && (n.options = r({ validate: i }, n.options)), n)),
+                                p),
                             operationName: 'TokenizeCreditCard'
                         };
                     };
@@ -3289,23 +3255,23 @@ var t;
                     }),
                         (o.prototype.isGraphQLRequest = function (e, t) {
                             var n,
-                                o = this.getClientApiPath(e);
+                                o,
+                                a = this.getClientApiPath(e);
                             return (
                                 !!this._isGraphQLEnabled() &&
-                                !!o &&
-                                ((n = this._config.features.some(function (e) {
-                                    return r[e] === o;
+                                !!a &&
+                                ((o = this._config.features.some(function (e) {
+                                    return r[e] === a;
                                 })),
-                                !(function (e) {
-                                    return i.some(function (t) {
-                                        return (
-                                            void 0 !==
-                                            t.split('.').reduce(function (e, t) {
-                                                return e && e[t];
-                                            }, e)
-                                        );
-                                    });
-                                })(t) && n)
+                                (n = t),
+                                !i.some(function (e) {
+                                    return (
+                                        void 0 !==
+                                        e.split('.').reduce(function (e, t) {
+                                            return e && e[t];
+                                        }, n)
+                                    );
+                                }) && o)
                             );
                         }),
                         (o.prototype.getClientApiPath = function (e) {
@@ -3315,8 +3281,8 @@ var t;
                         }),
                         (o.prototype._isGraphQLEnabled = function () {
                             return !!this._config;
-                        });
-                    t.exports = o;
+                        }),
+                        (t.exports = o);
                 },
                 {}
             ],
@@ -3329,14 +3295,14 @@ var t;
                         s = e('./generators/credit-card-tokenization'),
                         c = e('./adapters/credit-card-tokenization'),
                         d = e('./adapters/credit-card-tokenization-fastlane'),
-                        u = e('./generators/credit-card-for-fastlane-tokenization'),
-                        l = e('./generators/configuration'),
+                        l = e('./generators/credit-card-for-fastlane-tokenization'),
+                        u = e('./generators/configuration'),
                         p = e('./adapters/configuration'),
                         _ = {
                             'payment_methods/credit_cards': function (e, t) {
-                                return t ? u(e) : s(e);
+                                return t ? l(e) : s(e);
                             },
-                            configuration: l
+                            configuration: u
                         },
                         E = {
                             'payment_methods/credit_cards': function (e, t, n) {
@@ -3395,31 +3361,10 @@ var t;
                             return this._adapter(e, this, 'creditCard' in this._data && a(this._data.creditCard));
                         }),
                         (h.prototype.determineStatus = function (e, t) {
-                            var n, r;
-                            return (
-                                200 === e
-                                    ? ((r = t.errors && t.errors[0] && t.errors[0].extensions && t.errors[0].extensions.errorClass),
-                                      (n =
-                                          t.data && !t.errors
-                                              ? 200
-                                              : 'VALIDATION' === r
-                                                ? 422
-                                                : 'AUTHORIZATION' === r
-                                                  ? 403
-                                                  : 'AUTHENTICATION' === r
-                                                    ? 401
-                                                    : (function (e, t) {
-                                                            return !e && t.errors[0].message;
-                                                        })(r, t)
-                                                      ? 403
-                                                      : 500))
-                                    : (n = e ? e : 500),
-                                this._sendAnalyticsEvent('graphql.status.' + e),
-                                this._sendAnalyticsEvent('graphql.determinedStatus.' + n),
-                                n
-                            );
-                        });
-                    t.exports = h;
+                            var n, r, i, o;
+                            return 200 === e ? ((r = t.errors && t.errors[0] && t.errors[0].extensions && t.errors[0].extensions.errorClass), (n = t.data && !t.errors ? 200 : 'VALIDATION' === r ? 422 : 'AUTHORIZATION' === r ? 403 : 'AUTHENTICATION' === r ? 401 : ((i = r), (o = t), !i && o.errors[0].message) ? 403 : 500)) : (n = e || 500), this._sendAnalyticsEvent('graphql.status.' + e), this._sendAnalyticsEvent('graphql.determinedStatus.' + n), n;
+                        }),
+                        (t.exports = h);
                 },
                 {
                     '../../../lib/assign': 140,
@@ -3513,27 +3458,36 @@ var t;
                         e && e.parentNode && e.parentNode.removeChild(e);
                     }
                     (c.prototype.initialize = function (e) {
-                        var t = e.environment,
-                            n = this;
+                        var t,
+                            n,
+                            c,
+                            d,
+                            l,
+                            u = e.environment,
+                            p = this;
                         return (
                             (this.sessionId = e.sessionId || e.clientSessionId),
                             this.sessionId && (this.sessionId = this.sessionId.substring(0, 32)),
-                            !e.sessionId && (r = this.sessionId),
-                            (this._beaconId = (function (e) {
-                                return 'https://b.stats.paypal.com/counter.cgi?i=127.0.0.1&p=' + e + '&t=' + new Date().getTime() / 1000 + '&a=14';
-                            })(this.sessionId)),
-                            (this._parameterBlock = (function (e, t, n) {
-                                var r = document.body.appendChild(document.createElement('script')),
-                                    a = {
-                                        f: e,
-                                        s: o,
-                                        b: t
-                                    };
-                                return 'production' !== n && (a.sandbox = !0), (r.type = 'application/json'), r.setAttribute('fncls', i), (r.text = JSON.stringify(a)), r;
-                            })(this.sessionId, this._beaconId, t)),
+                            e.sessionId || (r = this.sessionId),
+                            (this._beaconId = 'https://b.stats.paypal.com/counter.cgi?i=127.0.0.1&p=' + this.sessionId + '&t=' + new Date().getTime() / 1000 + '&a=14'),
+                            (this._parameterBlock =
+                                ((t = this.sessionId),
+                                (n = this._beaconId),
+                                (c = u),
+                                (d = document.body.appendChild(document.createElement('script'))),
+                                (l = {
+                                    f: t,
+                                    s: o,
+                                    b: n
+                                }),
+                                'production' !== c && (l.sandbox = !0),
+                                (d.type = 'application/json'),
+                                d.setAttribute('fncls', i),
+                                (d.text = JSON.stringify(l)),
+                                d)),
                             s({ src: a })
                                 .then(function (e) {
-                                    return (n._thirdPartyBlock = e), n;
+                                    return (p._thirdPartyBlock = e), p;
                                 })
                                 .catch(function () {
                                     return null;
@@ -3542,16 +3496,16 @@ var t;
                     }),
                         (c.prototype.teardown = function () {
                             d(document.querySelector('iframe[title="ppfniframe"]')), d(document.querySelector('iframe[title="pbf"]')), d(this._parameterBlock), d(this._thirdPartyBlock);
+                        }),
+                        (t.exports = {
+                            setup: function (e) {
+                                var t = new c();
+                                return !(e = e || {}).sessionId && r ? ((t.sessionId = r), Promise.resolve(t)) : t.initialize(e);
+                            },
+                            clearSessionIdCache: function () {
+                                r = null;
+                            }
                         });
-                    t.exports = {
-                        setup: function (e) {
-                            var t = new c();
-                            return !(e = e || {}).sessionId && r ? ((t.sessionId = r), Promise.resolve(t)) : t.initialize(e);
-                        },
-                        clearSessionIdCache: function () {
-                            r = null;
-                        }
-                    };
                 },
                 {
                     '../lib/assets': 139,
@@ -3567,11 +3521,11 @@ var t;
                         s = e('../lib/create-deferred-client'),
                         c = e('../lib/create-assets-url'),
                         d = e('../lib/methods'),
-                        u = e('../lib/convert-methods-to-error'),
-                        l = e('@braintree/wrap-promise'),
+                        l = e('../lib/convert-methods-to-error'),
+                        u = e('@braintree/wrap-promise'),
                         p = e('./errors');
                     t.exports = {
-                        create: l(function (e) {
+                        create: u(function (e) {
                             var t,
                                 n = 'Data Collector',
                                 _ = { _instances: [] };
@@ -3582,6 +3536,7 @@ var t;
                                     authorization: e.authorization
                                 })
                                 .then(function () {
+                                    var a, E;
                                     return ((_._instantiatedWithAClient = !e.useDeferredClient),
                                     (_._createPromise = s
                                         .create({
@@ -3628,26 +3583,26 @@ var t;
                                         .then(function () {
                                             return 0 === _._instances.length ? Promise.reject(new o(p.DATA_COLLECTOR_REQUIRES_CREATE_OPTIONS)) : ((_.deviceData = JSON.stringify(t)), (_.rawDeviceData = t), _);
                                         })),
-                                    (_.teardown = (function (e) {
-                                        return l(function () {
-                                            return e._createPromise.then(function () {
-                                                e._instances.forEach(function (e) {
+                                    (_.teardown =
+                                        ((a = _),
+                                        u(function () {
+                                            return a._createPromise.then(function () {
+                                                a._instances.forEach(function (e) {
                                                     e && e.teardown();
                                                 }),
-                                                    u(e, d(e));
+                                                    l(a, d(a));
                                             });
-                                        });
-                                    })(_)),
-                                    (_.getDeviceData = (function (e) {
-                                        return l(function (t) {
+                                        }))),
+                                    (_.getDeviceData =
+                                        ((E = _),
+                                        u(function (e) {
                                             return (
-                                                (t = t || {}),
-                                                e._createPromise.then(function () {
-                                                    return t.raw ? Promise.resolve(e.rawDeviceData) : Promise.resolve(e.deviceData);
+                                                (e = e || {}),
+                                                E._createPromise.then(function () {
+                                                    return e.raw ? Promise.resolve(E.rawDeviceData) : Promise.resolve(E.deviceData);
                                                 })
                                             );
-                                        });
-                                    })(_)),
+                                        }))),
                                     _._instantiatedWithAClient)
                                         ? _._createPromise
                                         : _;
@@ -3696,7 +3651,7 @@ var t;
                             s[e] = t;
                         }),
                         (c.prototype.teardown = function () {
-                            !this._isCached && (r.random.stopCollectors(), this._removeIframe());
+                            this._isCached || (r.random.stopCollectors(), this._removeIframe());
                         }),
                         (c.prototype._removeIframe = function () {
                             this._iframe.parentNode.removeChild(this._iframe);
@@ -3797,7 +3752,7 @@ var t;
                                 }
                             }
                         };
-                    function u(e, t, n) {
+                    function l(e, t, n) {
                         if (4 !== t.length) throw new d.exception.invalid('invalid aes block size');
                         var r = e.b[n],
                             i = t[0] ^ r[0],
@@ -3806,8 +3761,8 @@ var t;
                         t = t[n ? 1 : 3] ^ r[3];
                         var s,
                             c,
-                            u,
                             l,
+                            u,
                             p = r.length / 4 - 2,
                             _ = 4,
                             E = [0, 0, 0, 0];
@@ -3816,11 +3771,11 @@ var t;
                             m = s[2],
                             f = s[3],
                             y = s[4];
-                        for (l = 0; l < p; l++) (s = e[i >>> 24] ^ h[(o >> 16) & 255] ^ m[(a >> 8) & 255] ^ f[255 & t] ^ r[_]), (c = e[o >>> 24] ^ h[(a >> 16) & 255] ^ m[(t >> 8) & 255] ^ f[255 & i] ^ r[_ + 1]), (u = e[a >>> 24] ^ h[(t >> 16) & 255] ^ m[(i >> 8) & 255] ^ f[255 & o] ^ r[_ + 2]), (t = e[t >>> 24] ^ h[(i >> 16) & 255] ^ m[(o >> 8) & 255] ^ f[255 & a] ^ r[_ + 3]), (_ += 4), (i = s), (o = c), (a = u);
-                        for (l = 0; 4 > l; l++) (E[n ? 3 & -l : l] = (y[i >>> 24] << 24) ^ (y[(o >> 16) & 255] << 16) ^ (y[(a >> 8) & 255] << 8) ^ y[255 & t] ^ r[_++]), (s = i), (i = o), (o = a), (a = t), (t = s);
+                        for (u = 0; u < p; u++) (s = e[i >>> 24] ^ h[(o >> 16) & 255] ^ m[(a >> 8) & 255] ^ f[255 & t] ^ r[_]), (c = e[o >>> 24] ^ h[(a >> 16) & 255] ^ m[(t >> 8) & 255] ^ f[255 & i] ^ r[_ + 1]), (l = e[a >>> 24] ^ h[(t >> 16) & 255] ^ m[(i >> 8) & 255] ^ f[255 & o] ^ r[_ + 2]), (t = e[t >>> 24] ^ h[(i >> 16) & 255] ^ m[(o >> 8) & 255] ^ f[255 & a] ^ r[_ + 3]), (_ += 4), (i = s), (o = c), (a = l);
+                        for (u = 0; 4 > u; u++) (E[n ? 3 & -u : u] = (y[i >>> 24] << 24) ^ (y[(o >> 16) & 255] << 16) ^ (y[(a >> 8) & 255] << 8) ^ y[255 & t] ^ r[_++]), (s = i), (i = o), (o = a), (a = t), (t = s);
                         return E;
                     }
-                    function l(e, t) {
+                    function u(e, t) {
                         var n,
                             r,
                             i,
@@ -3829,13 +3784,13 @@ var t;
                             s = o[0],
                             c = o[1],
                             d = o[2],
-                            u = o[3],
-                            l = o[4],
+                            l = o[3],
+                            u = o[4],
                             p = o[5],
                             _ = o[6],
                             E = o[7];
-                        for (n = 0; 64 > n; n++) 16 > n ? (r = t[n]) : ((r = t[(n + 1) & 15]), (i = t[(n + 14) & 15]), (r = t[15 & n] = (((r >>> 7) ^ (r >>> 18) ^ (r >>> 3) ^ (r << 25) ^ (r << 14)) + ((i >>> 17) ^ (i >>> 19) ^ (i >>> 10) ^ (i << 15) ^ (i << 13)) + t[15 & n] + t[(n + 9) & 15]) | 0)), (r = r + E + ((l >>> 6) ^ (l >>> 11) ^ (l >>> 25) ^ (l << 26) ^ (l << 21) ^ (l << 7)) + (_ ^ (l & (p ^ _))) + a[n]), (E = _), (_ = p), (p = l), (l = (u + r) | 0), (u = d), (d = c), (s = (r + (((c = s) & d) ^ (u & (c ^ d))) + ((c >>> 2) ^ (c >>> 13) ^ (c >>> 22) ^ (c << 30) ^ (c << 19) ^ (c << 10))) | 0);
-                        (o[0] = (o[0] + s) | 0), (o[1] = (o[1] + c) | 0), (o[2] = (o[2] + d) | 0), (o[3] = (o[3] + u) | 0), (o[4] = (o[4] + l) | 0), (o[5] = (o[5] + p) | 0), (o[6] = (o[6] + _) | 0), (o[7] = (o[7] + E) | 0);
+                        for (n = 0; 64 > n; n++) 16 > n ? (r = t[n]) : ((r = t[(n + 1) & 15]), (i = t[(n + 14) & 15]), (r = t[15 & n] = (((r >>> 7) ^ (r >>> 18) ^ (r >>> 3) ^ (r << 25) ^ (r << 14)) + ((i >>> 17) ^ (i >>> 19) ^ (i >>> 10) ^ (i << 15) ^ (i << 13)) + t[15 & n] + t[(n + 9) & 15]) | 0)), (r = r + E + ((u >>> 6) ^ (u >>> 11) ^ (u >>> 25) ^ (u << 26) ^ (u << 21) ^ (u << 7)) + (_ ^ (u & (p ^ _))) + a[n]), (E = _), (_ = p), (p = u), (u = (l + r) | 0), (l = d), (d = c), (s = (r + (((c = s) & d) ^ (l & (c ^ d))) + ((c >>> 2) ^ (c >>> 13) ^ (c >>> 22) ^ (c << 30) ^ (c << 19) ^ (c << 10))) | 0);
+                        (o[0] = (o[0] + s) | 0), (o[1] = (o[1] + c) | 0), (o[2] = (o[2] + d) | 0), (o[3] = (o[3] + l) | 0), (o[4] = (o[4] + u) | 0), (o[5] = (o[5] + p) | 0), (o[6] = (o[6] + _) | 0), (o[7] = (o[7] + E) | 0);
                     }
                     function p(e, t) {
                         var n,
@@ -3875,10 +3830,10 @@ var t;
                     }),
                         (d.cipher.aes.prototype = {
                             encrypt: function (e) {
-                                return u(this, e, 0);
+                                return l(this, e, 0);
                             },
                             decrypt: function (e) {
-                                return u(this, e, 1);
+                                return l(this, e, 1);
                             },
                             l: [
                                 [[], [], [], [], []],
@@ -3895,11 +3850,11 @@ var t;
                                     s = this.l[0],
                                     c = this.l[1],
                                     d = s[4],
-                                    u = c[4],
-                                    l = [],
+                                    l = c[4],
+                                    u = [],
                                     p = [];
-                                for (e = 0; 256 > e; e++) p[(l[e] = (e << 1) ^ (283 * (e >> 7))) ^ e] = e;
-                                for (t = n = 0; !d[t]; t ^= r || 1, n = p[n] || 1) for (o = ((o = n ^ (n << 1) ^ (n << 2) ^ (n << 3) ^ (n << 4)) >> 8) ^ (255 & o) ^ 99, d[t] = o, u[o] = t, a = (16843009 * (i = l[(e = l[(r = l[t])])])) ^ (65537 * e) ^ (257 * r) ^ (16843008 * t), i = (257 * l[o]) ^ (16843008 * o), e = 0; 4 > e; e++) (s[e][t] = i = (i << 24) ^ (i >>> 8)), (c[e][o] = a = (a << 24) ^ (a >>> 8));
+                                for (e = 0; 256 > e; e++) p[(u[e] = (e << 1) ^ (283 * (e >> 7))) ^ e] = e;
+                                for (t = n = 0; !d[t]; t ^= r || 1, n = p[n] || 1) for (o = ((o = n ^ (n << 1) ^ (n << 2) ^ (n << 3) ^ (n << 4)) >> 8) ^ (255 & o) ^ 99, d[t] = o, l[o] = t, a = (16843009 * (i = u[(e = u[(r = u[t])])])) ^ (65537 * e) ^ (257 * r) ^ (16843008 * t), i = (257 * u[o]) ^ (16843008 * o), e = 0; 4 > e; e++) (s[e][t] = i = (i << 24) ^ (i >>> 8)), (c[e][o] = a = (a << 24) ^ (a >>> 8));
                                 for (e = 0; 5 > e; e++) (s[e] = s[e].slice(0)), (c[e] = c[e].slice(0));
                             }
                         }),
@@ -4007,9 +3962,9 @@ var t;
                                 if ('undefined' != typeof Uint32Array) {
                                     var r = new Uint32Array(n),
                                         i = 0;
-                                    for (t = 512 + t - ((512 + t) & 511); t <= e; t += 512) l(this, r.subarray(16 * i, 16 * (i + 1))), (i += 1);
+                                    for (t = 512 + t - ((512 + t) & 511); t <= e; t += 512) u(this, r.subarray(16 * i, 16 * (i + 1))), (i += 1);
                                     n.splice(0, 16 * i);
-                                } else for (t = 512 + t - ((512 + t) & 511); t <= e; t += 512) l(this, n.splice(0, 16));
+                                } else for (t = 512 + t - ((512 + t) & 511); t <= e; t += 512) u(this, n.splice(0, 16));
                                 return this;
                             },
                             finalize: function () {
@@ -4018,7 +3973,7 @@ var t;
                                     n = this.u,
                                     t = d.bitArray.concat(t, [d.bitArray.partial(1, 1)]);
                                 for (e = t.length + 2; 15 & e; e++) t.push(0);
-                                for (t.push(Math.floor(this.h / 4294967296)), t.push(0 | this.h); t.length; ) l(this, t.splice(0, 16));
+                                for (t.push(Math.floor(this.h / 4294967296)), t.push(0 | this.h); t.length; ) u(this, t.splice(0, 16));
                                 return this.reset(), n;
                             },
                             K: [],
@@ -4351,8 +4306,8 @@ var t;
                         s = e('../lib/generate-google-pay-configuration'),
                         c = e('../lib/braintree-error'),
                         d = e('./errors'),
-                        u = e('../lib/methods'),
-                        l = e('@braintree/wrap-promise'),
+                        l = e('../lib/methods'),
+                        u = e('@braintree/wrap-promise'),
                         p = {
                             1: '_createV1PaymentDataRequest',
                             2: '_createV2PaymentDataRequest'
@@ -4378,7 +4333,7 @@ var t;
                             return !(this._googlePayVersion in p);
                         }),
                         (_.prototype._getDefaultConfig = function () {
-                            return !this._defaultConfig && (this._defaultConfig = s(this._client.getConfiguration(), this._googlePayVersion, this._googleMerchantId)), this._defaultConfig;
+                            return this._defaultConfig || (this._defaultConfig = s(this._client.getConfiguration(), this._googlePayVersion, this._googleMerchantId)), this._defaultConfig;
                         }),
                         (_.prototype._createV1PaymentDataRequest = function (e) {
                             var t = this._getDefaultConfig(),
@@ -4465,9 +4420,9 @@ var t;
                                 });
                         }),
                         (_.prototype.teardown = function () {
-                            return o(this, u(_.prototype)), Promise.resolve();
-                        });
-                    t.exports = l.wrapPrototype(_);
+                            return o(this, l(_.prototype)), Promise.resolve();
+                        }),
+                        (t.exports = u.wrapPrototype(_));
                 },
                 {
                     '../lib/analytics': 138,
@@ -4541,13 +4496,11 @@ var t;
                         i = e('../shared/errors'),
                         o = e('../shared/constants').allowedAttributes;
                     t.exports = function (e, t) {
-                        var n;
+                        var n, a, s;
                         return (
                             o.hasOwnProperty(e)
-                                ? null != t &&
-                                  !(function (e, t) {
-                                      return 'string' === o[e] ? 'string' == typeof t || 'number' == typeof t : 'boolean' === o[e] && ('true' === String(t) || 'false' === String(t));
-                                  })(e, t) &&
+                                ? null == t ||
+                                  ((a = e), (s = t), 'string' === o[a] ? 'string' == typeof s || 'number' == typeof s : 'boolean' === o[a] && ('true' === String(s) || 'false' === String(s))) ||
                                   (n = new r({
                                       type: i.HOSTED_FIELDS_ATTRIBUTE_VALUE_NOT_ALLOWED.type,
                                       code: i.HOSTED_FIELDS_ATTRIBUTE_VALUE_NOT_ALLOWED.code,
@@ -4592,7 +4545,7 @@ var t;
                     function d(e) {
                         return i.hasSoftwareKeyboard() ? s.indexOf(e.tagName) > -1 && 0 > c.indexOf(e.type) : 'hidden' !== e.type;
                     }
-                    function u(e) {
+                    function l(e) {
                         var t, n;
                         for (t = 0; t < e.length; t++) if (d((n = e[t]))) return n;
                         return null;
@@ -4600,8 +4553,8 @@ var t;
                     t.exports = {
                         removeExtraFocusElements: function (e, t) {
                             var n = Array.prototype.slice.call(e.elements);
-                            [u(n), u(n.reverse())].forEach(function (e) {
-                                if (!!e) o.matchFocusElement(e.getAttribute('id')) && t(e.getAttribute('id'));
+                            [l(n), l(n.reverse())].forEach(function (e) {
+                                e && o.matchFocusElement(e.getAttribute('id')) && t(e.getAttribute('id'));
                             });
                         },
                         createFocusChangeHandler: function (e, t) {
@@ -4609,15 +4562,15 @@ var t;
                                 var i,
                                     s,
                                     c,
-                                    u,
-                                    l = document.getElementById('bt-' + n.field + '-' + n.direction + '-' + e);
-                                if (!!l) {
-                                    if (((c = a(l, 'form')[0]), document.forms.length < 1 || !c)) {
+                                    l,
+                                    u = document.getElementById('bt-' + n.field + '-' + n.direction + '-' + e);
+                                if (u) {
+                                    if (((c = a(u, 'form')[0]), document.forms.length < 1 || !c)) {
                                         t.onRemoveFocusIntercepts();
                                         return;
                                     }
-                                    (i = (c = [].slice.call(c.elements)).indexOf(l)),
-                                        (u = (function (e, t) {
+                                    (i = (c = [].slice.call(c.elements)).indexOf(u)),
+                                        (l = (function (e, t) {
                                             switch (e) {
                                                 case r.BACK:
                                                     return {
@@ -4637,7 +4590,7 @@ var t;
                                             return {};
                                         })(n.direction, c.length));
                                     do {
-                                        if (((i += u.indexChange), u.checkIndexBounds(i))) return;
+                                        if (((i += l.indexChange), l.checkIndexBounds(i))) return;
                                         s = c[i];
                                     } while (!d(s));
                                     o.matchFocusElement(s.getAttribute('id')) ? t.onTriggerInputFocus(s.getAttribute('data-braintree-type')) : s.focus();
@@ -4689,8 +4642,8 @@ var t;
                         s = e('@braintree/iframer'),
                         c = e('framebus'),
                         d = e('../../lib/create-deferred-client'),
-                        u = e('../../lib/braintree-error'),
-                        l = e('./compose-url'),
+                        l = e('../../lib/braintree-error'),
+                        u = e('./compose-url'),
                         p = e('./get-styles-from-class'),
                         _ = e('../shared/constants'),
                         E = e('../shared/errors'),
@@ -4719,28 +4672,27 @@ var t;
                             f,
                             y,
                             O,
-                            b,
-                            S = this,
+                            b = this,
+                            S = {},
                             D = {},
-                            U = {},
-                            k = [],
-                            F = m(),
-                            x = e.sessionId;
+                            U = [],
+                            k = m(),
+                            F = e.sessionId;
                         if (
                             ((this._merchantConfigurationOptions = r({}, e)),
-                            e.client ? ((y = (f = e.client.getConfiguration(void 0, x)).gatewayConfiguration.assetsUrl), (O = f.isDebug)) : ((y = i.create(e.authorization)), (O = !!e.isDebug)),
+                            e.client ? ((f = (n = e.client.getConfiguration(void 0, F)).gatewayConfiguration.assetsUrl), (y = n.isDebug)) : ((f = i.create(e.authorization)), (y = !!e.isDebug)),
                             (this._clientPromise = d.create({
                                 client: e.client,
                                 authorization: e.authorization,
-                                debug: O,
-                                assetsUrl: y,
+                                debug: y,
+                                assetsUrl: f,
                                 name: 'Hosted Fields',
-                                sessionId: x
+                                sessionId: F
                             })),
-                            (b = l(y, F, O)),
+                            (O = u(f, k, y)),
                             !e.fields || 0 === Object.keys(e.fields).length)
                         )
-                            throw new u({
+                            throw new l({
                                 type: C.INSTANTIATION_OPTION_REQUIRED.type,
                                 code: C.INSTANTIATION_OPTION_REQUIRED.code,
                                 message: 'options.fields is required when instantiating Hosted Fields.'
@@ -4748,32 +4700,32 @@ var t;
                         T.call(this),
                             (this._injectedNodes = []),
                             (this._destructor = new a()),
-                            (this._fields = D),
+                            (this._fields = S),
                             (this._state = {
                                 fields: {},
                                 cards: R('')
                             }),
                             (this._bus = new c({
-                                channel: F,
+                                channel: k,
                                 verifyDomain: o,
                                 targetFrames: [window]
                             })),
                             this._destructor.registerFunctionForTeardown(function () {
-                                S._bus.teardown();
+                                b._bus.teardown();
                             }),
                             e.client ? N.sendEvent(this._clientPromise, 'custom.hosted-fields.initialized') : N.sendEvent(this._clientPromise, 'custom.hosted-fields.initialized.deferred-client'),
                             Object.keys(e.fields).forEach(
                                 function (t) {
                                     var n, r, i, o, a;
                                     if (!_.allowedFields.hasOwnProperty(t))
-                                        throw new u({
+                                        throw new l({
                                             type: E.HOSTED_FIELDS_INVALID_FIELD_KEY.type,
                                             code: E.HOSTED_FIELDS_INVALID_FIELD_KEY.code,
                                             message: '"' + t + '" is not a valid field.'
                                         });
                                     if (('string' == typeof (r = (n = e.fields[t]).container || n.selector) && (r = document.querySelector(r)), r && 1 === r.nodeType)) {
                                         if (r.querySelector('iframe[name^="braintree-"]'))
-                                            throw new u({
+                                            throw new l({
                                                 type: E.HOSTED_FIELDS_FIELD_DUPLICATE_IFRAME.type,
                                                 code: E.HOSTED_FIELDS_FIELD_DUPLICATE_IFRAME.code,
                                                 message: E.HOSTED_FIELDS_FIELD_DUPLICATE_IFRAME.message,
@@ -4784,7 +4736,7 @@ var t;
                                                 }
                                             });
                                     } else
-                                        throw new u({
+                                        throw new l({
                                             type: E.HOSTED_FIELDS_INVALID_FIELD_SELECTOR.type,
                                             code: E.HOSTED_FIELDS_INVALID_FIELD_SELECTOR.code,
                                             message: E.HOSTED_FIELDS_INVALID_FIELD_SELECTOR.message,
@@ -4795,14 +4747,14 @@ var t;
                                             }
                                         });
                                     if (((i = r), P.isShadowElement(i) && (i = P.transformToSlot(i, 'height: 100%')), n.maxlength && 'number' != typeof n.maxlength))
-                                        throw new u({
+                                        throw new l({
                                             type: E.HOSTED_FIELDS_FIELD_PROPERTY_INVALID.type,
                                             code: E.HOSTED_FIELDS_FIELD_PROPERTY_INVALID.code,
                                             message: 'The value for maxlength must be a number.',
                                             details: { fieldKey: t }
                                         });
                                     if (n.minlength && 'number' != typeof n.minlength)
-                                        throw new u({
+                                        throw new l({
                                             type: E.HOSTED_FIELDS_FIELD_PROPERTY_INVALID.type,
                                             code: E.HOSTED_FIELDS_FIELD_PROPERTY_INVALID.code,
                                             message: 'The value for minlength must be a number.',
@@ -4817,19 +4769,19 @@ var t;
                                         this._bus.addTargetFrame(o),
                                         this._injectedNodes.push.apply(
                                             this._injectedNodes,
-                                            I(F, o, i, function () {
-                                                S.focus(t);
+                                            I(k, o, i, function () {
+                                                b.focus(t);
                                             })
                                         ),
                                         this._setupLabelFocus(t, r),
-                                        (D[t] = {
+                                        (S[t] = {
                                             frameElement: o,
                                             containerElement: r
                                         }),
                                         (a = new Promise(function (e) {
-                                            U[t] = e;
+                                            D[t] = e;
                                         })),
-                                        k.push(a),
+                                        U.push(a),
                                         (this._state.fields[t] = {
                                             isEmpty: !0,
                                             isValid: !1,
@@ -4838,95 +4790,90 @@ var t;
                                             container: r
                                         }),
                                         setTimeout(function () {
-                                            o.src = b;
+                                            o.src = O;
                                         }, 0);
                                 }.bind(this)
                             ),
                             this._merchantConfigurationOptions.styles &&
                                 Object.keys(this._merchantConfigurationOptions.styles).forEach(function (e) {
-                                    var t = S._merchantConfigurationOptions.styles[e];
-                                    'string' == typeof t && (S._merchantConfigurationOptions.styles[e] = p(t));
+                                    var t = b._merchantConfigurationOptions.styles[e];
+                                    'string' == typeof t && (b._merchantConfigurationOptions.styles[e] = p(t));
                                 }),
                             this._bus.on(A.REMOVE_FOCUS_INTERCEPTS, function (e) {
                                 L(e && e.id);
                             }),
                             this._bus.on(
                                 A.TRIGGER_FOCUS_CHANGE,
-                                w.createFocusChangeHandler(F, {
+                                w.createFocusChangeHandler(k, {
                                     onRemoveFocusIntercepts: function (e) {
-                                        S._bus.emit(A.REMOVE_FOCUS_INTERCEPTS, { id: e });
+                                        b._bus.emit(A.REMOVE_FOCUS_INTERCEPTS, { id: e });
                                     },
                                     onTriggerInputFocus: function (e) {
-                                        S.focus(e);
+                                        b.focus(e);
                                     }
                                 })
                             ),
                             this._bus.on(A.READY_FOR_CLIENT, function (e) {
-                                S._clientPromise.then(function (t) {
+                                b._clientPromise.then(function (t) {
                                     e(t);
                                 });
                             }),
                             this._bus.on(A.CARD_FORM_ENTRY_HAS_BEGUN, function () {
-                                N.sendEvent(S._clientPromise, 'hosted-fields.input.started');
+                                N.sendEvent(b._clientPromise, 'hosted-fields.input.started');
                             }),
                             this._bus.on(A.BIN_AVAILABLE, function (e) {
-                                S._emit('binAvailable', { bin: e });
+                                b._emit('binAvailable', { bin: e });
                             }),
-                            (n = setTimeout(function () {
-                                N.sendEvent(S._clientPromise, 'custom.hosted-fields.load.timed-out'), S._emit('timeout');
+                            (t = setTimeout(function () {
+                                N.sendEvent(b._clientPromise, 'custom.hosted-fields.load.timed-out'), b._emit('timeout');
                             }, h)),
-                            Promise.all(k).then(function (e) {
-                                var t = e[0];
-                                clearTimeout(n),
-                                    t(
-                                        (function (e) {
-                                            var t = r({}, e);
-                                            return (
-                                                (t.fields = r({}, t.fields)),
-                                                Object.keys(t.fields).forEach(function (e) {
-                                                    (t.fields[e] = r({}, t.fields[e])), delete t.fields[e].container;
-                                                }),
-                                                t
-                                            );
-                                        })(S._merchantConfigurationOptions)
+                            Promise.all(U).then(function (e) {
+                                var n,
+                                    i = e[0];
+                                clearTimeout(t),
+                                    i(
+                                        (((n = r({}, b._merchantConfigurationOptions)).fields = r({}, n.fields)),
+                                        Object.keys(n.fields).forEach(function (e) {
+                                            (n.fields[e] = r({}, n.fields[e])), delete n.fields[e].container;
+                                        }),
+                                        n)
                                     ),
-                                    S._cleanUpFocusIntercepts(),
-                                    S._emit('ready');
+                                    b._cleanUpFocusIntercepts(),
+                                    b._emit('ready');
                             }),
                             this._bus.on(A.FRAME_READY, function (e, t) {
-                                U[e.field](t);
+                                D[e.field](t);
                             }),
                             this._bus.on(
                                 A.INPUT_EVENT,
-                                ((t = D),
                                 function (e) {
-                                    var n,
-                                        r = e.merchantPayload,
-                                        i = r.emittedBy,
-                                        o = t[i].containerElement;
-                                    Object.keys(r.fields).forEach(function (e) {
-                                        r.fields[e].container = t[e].containerElement;
+                                    var t,
+                                        n = e.merchantPayload,
+                                        r = n.emittedBy,
+                                        i = S[r].containerElement;
+                                    Object.keys(n.fields).forEach(function (e) {
+                                        n.fields[e].container = S[e].containerElement;
                                     }),
-                                        (n = r.fields[i]),
-                                        o.classList.toggle(_.externalClasses.FOCUSED, n.isFocused),
-                                        o.classList.toggle(_.externalClasses.VALID, n.isValid),
-                                        o.classList.toggle(_.externalClasses.INVALID, !n.isPotentiallyValid),
+                                        (t = n.fields[r]),
+                                        i.classList.toggle(_.externalClasses.FOCUSED, t.isFocused),
+                                        i.classList.toggle(_.externalClasses.VALID, t.isValid),
+                                        i.classList.toggle(_.externalClasses.INVALID, !t.isPotentiallyValid),
                                         (this._state = {
-                                            cards: r.cards,
-                                            fields: r.fields
+                                            cards: n.cards,
+                                            fields: n.fields
                                         }),
-                                        this._emit(e.type, r);
-                                }).bind(this)
+                                        this._emit(e.type, n);
+                                }.bind(this)
                             ),
                             this._destructor.registerFunctionForTeardown(function () {
                                 var e, t, n;
-                                for (e = 0; e < S._injectedNodes.length; e++) (n = (t = S._injectedNodes[e]).parentNode).removeChild(t), n.classList.remove(_.externalClasses.FOCUSED, _.externalClasses.INVALID, _.externalClasses.VALID);
+                                for (e = 0; e < b._injectedNodes.length; e++) (n = (t = b._injectedNodes[e]).parentNode).removeChild(t), n.classList.remove(_.externalClasses.FOCUSED, _.externalClasses.INVALID, _.externalClasses.VALID);
                             }),
                             this._destructor.registerFunctionForTeardown(function () {
                                 L();
                             }),
                             this._destructor.registerFunctionForTeardown(function () {
-                                v(S, g(M.prototype).concat(g(T.prototype)));
+                                v(b, g(M.prototype).concat(g(T.prototype)));
                             });
                     }
                     T.createChild(M),
@@ -4975,13 +4922,15 @@ var t;
                                   : this._bus.emit(A.REMOVE_FOCUS_INTERCEPTS);
                         }),
                         (M.prototype._attachInvalidFieldContainersToError = function (e) {
-                            if (!!(e.details && e.details.invalidFieldKeys && e.details.invalidFieldKeys.length > 0))
-                                (e.details.invalidFields = {}),
-                                    e.details.invalidFieldKeys.forEach(
-                                        function (t) {
-                                            e.details.invalidFields[t] = this._fields[t].containerElement;
-                                        }.bind(this)
-                                    );
+                            e.details &&
+                                e.details.invalidFieldKeys &&
+                                e.details.invalidFieldKeys.length > 0 &&
+                                ((e.details.invalidFields = {}),
+                                e.details.invalidFieldKeys.forEach(
+                                    function (t) {
+                                        e.details.invalidFields[t] = this._fields[t].containerElement;
+                                    }.bind(this)
+                                ));
                         }),
                         (M.prototype.getChallenges = function () {
                             return this._clientPromise.then(function (e) {
@@ -5006,12 +4955,12 @@ var t;
                         (M.prototype.tokenize = function (e) {
                             var t = this;
                             return (
-                                !e && (e = {}),
+                                e || (e = {}),
                                 new Promise(function (n, r) {
                                     t._bus.emit(A.TOKENIZATION_REQUEST, e, function (e) {
                                         var i = e[0],
                                             o = e[1];
-                                        i ? (t._attachInvalidFieldContainersToError(i), r(new u(i))) : n(o);
+                                        i ? (t._attachInvalidFieldContainersToError(i), r(new l(i))) : n(o);
                                     });
                                 })
                             );
@@ -5024,12 +4973,12 @@ var t;
                                           field: e,
                                           classname: t
                                       })
-                                    : (n = new u({
+                                    : (n = new l({
                                           type: E.HOSTED_FIELDS_FIELD_NOT_PRESENT.type,
                                           code: E.HOSTED_FIELDS_FIELD_NOT_PRESENT.code,
                                           message: 'Cannot add class to "' + e + '" field because it is not part of the current Hosted Fields options.'
                                       }))
-                                : (n = new u({
+                                : (n = new l({
                                       type: E.HOSTED_FIELDS_FIELD_INVALID.type,
                                       code: E.HOSTED_FIELDS_FIELD_INVALID.code,
                                       message: '"' + e + '" is not a valid field. You must use a valid field option when adding a class.'
@@ -5046,12 +4995,12 @@ var t;
                                           field: e,
                                           classname: t
                                       })
-                                    : (n = new u({
+                                    : (n = new l({
                                           type: E.HOSTED_FIELDS_FIELD_NOT_PRESENT.type,
                                           code: E.HOSTED_FIELDS_FIELD_NOT_PRESENT.code,
                                           message: 'Cannot remove class from "' + e + '" field because it is not part of the current Hosted Fields options.'
                                       }))
-                                : (n = new u({
+                                : (n = new l({
                                       type: E.HOSTED_FIELDS_FIELD_INVALID.type,
                                       code: E.HOSTED_FIELDS_FIELD_INVALID.code,
                                       message: '"' + e + '" is not a valid field. You must use a valid field option when removing a class.'
@@ -5071,12 +5020,12 @@ var t;
                                               attribute: e.attribute,
                                               value: e.value
                                           })
-                                    : (n = new u({
+                                    : (n = new l({
                                           type: E.HOSTED_FIELDS_FIELD_NOT_PRESENT.type,
                                           code: E.HOSTED_FIELDS_FIELD_NOT_PRESENT.code,
                                           message: 'Cannot set attribute for "' + e.field + '" field because it is not part of the current Hosted Fields options.'
                                       }))
-                                : (n = new u({
+                                : (n = new l({
                                       type: E.HOSTED_FIELDS_FIELD_INVALID.type,
                                       code: E.HOSTED_FIELDS_FIELD_INVALID.code,
                                       message: '"' + e.field + '" is not a valid field. You must use a valid field option when setting an attribute.'
@@ -5089,9 +5038,9 @@ var t;
                             var t,
                                 n = this,
                                 r = this._merchantConfigurationOptions.fields;
-                            return (r.expirationMonth ? !r.expirationMonth.select && (t = 'Expiration month field must be a select element.') : (t = 'Expiration month field must exist to use setMonthOptions.'), t)
+                            return (r.expirationMonth ? r.expirationMonth.select || (t = 'Expiration month field must be a select element.') : (t = 'Expiration month field must exist to use setMonthOptions.'), t)
                                 ? Promise.reject(
-                                      new u({
+                                      new l({
                                           type: E.HOSTED_FIELDS_FIELD_PROPERTY_INVALID.type,
                                           code: E.HOSTED_FIELDS_FIELD_PROPERTY_INVALID.code,
                                           message: t
@@ -5117,12 +5066,12 @@ var t;
                                               field: e.field,
                                               attribute: e.attribute
                                           })
-                                    : (n = new u({
+                                    : (n = new l({
                                           type: E.HOSTED_FIELDS_FIELD_NOT_PRESENT.type,
                                           code: E.HOSTED_FIELDS_FIELD_NOT_PRESENT.code,
                                           message: 'Cannot remove attribute for "' + e.field + '" field because it is not part of the current Hosted Fields options.'
                                       }))
-                                : (n = new u({
+                                : (n = new l({
                                       type: E.HOSTED_FIELDS_FIELD_INVALID.type,
                                       code: E.HOSTED_FIELDS_FIELD_INVALID.code,
                                       message: '"' + e.field + '" is not a valid field. You must use a valid field option when removing an attribute.'
@@ -5143,12 +5092,12 @@ var t;
                             return (O.hasOwnProperty(e)
                                 ? this._fields.hasOwnProperty(e)
                                     ? this._bus.emit(A.CLEAR_FIELD, { field: e })
-                                    : (t = new u({
+                                    : (t = new l({
                                           type: E.HOSTED_FIELDS_FIELD_NOT_PRESENT.type,
                                           code: E.HOSTED_FIELDS_FIELD_NOT_PRESENT.code,
                                           message: 'Cannot clear "' + e + '" field because it is not part of the current Hosted Fields options.'
                                       }))
-                                : (t = new u({
+                                : (t = new l({
                                       type: E.HOSTED_FIELDS_FIELD_INVALID.type,
                                       code: E.HOSTED_FIELDS_FIELD_INVALID.code,
                                       message: '"' + e + '" is not a valid field. You must use a valid field option when clearing a field.'
@@ -5167,14 +5116,14 @@ var t;
                                       y.isIos() &&
                                           setTimeout(function () {
                                               var e, t, r;
-                                              if (((t = Math.floor((e = n.containerElement.getBoundingClientRect()).height / 2)), (r = Math.floor(e.width / 2)), !(e.top < (window.innerHeight - t || document.documentElement.clientHeight - t)) || !(e.right > r) || !(e.bottom > t) || !(e.left < (window.innerWidth - r || document.documentElement.clientWidth - r)))) n.containerElement.scrollIntoView();
+                                              (t = Math.floor((e = n.containerElement.getBoundingClientRect()).height / 2)), (r = Math.floor(e.width / 2)), (!(e.top < (window.innerHeight - t || document.documentElement.clientHeight - t)) || !(e.right > r) || !(e.bottom > t) || !(e.left < (window.innerWidth - r || document.documentElement.clientWidth - r))) && n.containerElement.scrollIntoView();
                                           }, 5))
-                                    : (t = new u({
+                                    : (t = new l({
                                           type: E.HOSTED_FIELDS_FIELD_NOT_PRESENT.type,
                                           code: E.HOSTED_FIELDS_FIELD_NOT_PRESENT.code,
                                           message: 'Cannot focus "' + e + '" field because it is not part of the current Hosted Fields options.'
                                       }))
-                                : (t = new u({
+                                : (t = new l({
                                       type: E.HOSTED_FIELDS_FIELD_INVALID.type,
                                       code: E.HOSTED_FIELDS_FIELD_INVALID.code,
                                       message: '"' + e + '" is not a valid field. You must use a valid field option when focusing a field.'
@@ -5185,8 +5134,8 @@ var t;
                         }),
                         (M.prototype.getState = function () {
                             return this._state;
-                        });
-                    t.exports = D.wrapPrototype(M);
+                        }),
+                        (t.exports = D.wrapPrototype(M));
                 },
                 {
                     '../../lib/analytics': 138,
@@ -5229,8 +5178,8 @@ var t;
                             s = document.createElement('div'),
                             c = document.createDocumentFragment(),
                             d = r.generate(e, a, i.BACK, o),
-                            u = r.generate(e, a, i.FORWARD, o);
-                        return (s.style.clear = 'both'), c.appendChild(d), c.appendChild(t), c.appendChild(u), c.appendChild(s), n.appendChild(c), [t, s];
+                            l = r.generate(e, a, i.FORWARD, o);
+                        return (s.style.clear = 'both'), c.appendChild(d), c.appendChild(t), c.appendChild(l), c.appendChild(s), n.appendChild(c), [t, s];
                     };
                 },
                 {
@@ -5524,7 +5473,7 @@ var t;
                                       ),
                                       o.classList.add('focus-intercept'),
                                       o.addEventListener('focus', function (e) {
-                                          i(e), !r.hasSoftwareKeyboard() && o.blur();
+                                          i(e), r.hasSoftwareKeyboard() || o.blur();
                                       }),
                                       o)
                                     : document.createDocumentFragment();
@@ -5572,8 +5521,8 @@ var t;
                         s = e('./data-collector'),
                         c = e('./hosted-fields'),
                         d = e('./local-payment'),
-                        u = e('./masterpass'),
-                        l = e('./payment-request'),
+                        l = e('./masterpass'),
+                        u = e('./payment-request'),
                         p = e('./paypal'),
                         _ = e('./paypal-checkout'),
                         E = e('./google-payment'),
@@ -5593,9 +5542,9 @@ var t;
                         dataCollector: s,
                         hostedFields: c,
                         localPayment: d,
-                        masterpass: u,
+                        masterpass: l,
                         googlePayment: E,
-                        paymentRequest: l,
+                        paymentRequest: u,
                         paypal: p,
                         paypalCheckout: _,
                         threeDSecure: m,
@@ -5687,15 +5636,15 @@ var t;
                                         s = r.ANALYTICS_URL,
                                         c = r.ANALYTICS_PREFIX + t,
                                         d = 'production' === e.getConfiguration().gatewayConfiguration.environment,
-                                        u = {
+                                        l = {
                                             events: [],
                                             tracking: []
                                         },
-                                        l = i.addEventMetadata(e, u);
+                                        u = i.addEventMetadata(e, l);
                                     return (
-                                        (l.event_name = c),
-                                        (l.t = o),
-                                        (u.events = [
+                                        (u.event_name = c),
+                                        (u.t = o),
+                                        (l.events = [
                                             {
                                                 level: 'info',
                                                 event: c,
@@ -5705,12 +5654,12 @@ var t;
                                                 }
                                             }
                                         ]),
-                                        (u.tracking = [l]),
+                                        (l.tracking = [u]),
                                         a(
                                             {
                                                 url: s,
                                                 method: 'post',
-                                                data: u,
+                                                data: l,
                                                 timeout: r.ANALYTICS_REQUEST_TIMEOUT_MS
                                             },
                                             n
@@ -5747,7 +5696,7 @@ var t;
                     var r = 'function' == typeof Object.assign ? Object.assign : i;
                     function i(e) {
                         var t, n, r;
-                        for (t = 1; t < arguments.length; t++) for (r in ((n = arguments[t]), n)) n.hasOwnProperty(r) && (e[r] = n[r]);
+                        for (t = 1; t < arguments.length; t++) for (r in (n = arguments[t])) n.hasOwnProperty(r) && (e[r] = n[r]);
                         return e;
                     }
                     t.exports = {
@@ -5804,24 +5753,21 @@ var t;
                     t.exports = function (e, t) {
                         var n,
                             i,
-                            o,
-                            a = e.length,
-                            s = a,
-                            c = r(t);
-                        if (0 === a) {
-                            c(null);
+                            o = e.length,
+                            a = o,
+                            s = r(t);
+                        if (0 === o) {
+                            s(null);
                             return;
                         }
-                        function d(e) {
+                        function c(e) {
                             if (e) {
-                                c(e);
+                                s(e);
                                 return;
                             }
-                            0 == (s -= 1) && c(null);
+                            0 == (a -= 1) && s(null);
                         }
-                        for (o = 0; o < a; o++) {
-                            (n = e[o]), (i = d), 0 === n.length ? (n(), i(null)) : n(i);
-                        }
+                        for (i = 0; i < o; i++) 0 === (n = e[i]).length ? (n(), c(null)) : n(c);
                     };
                 },
                 { './once': 176 }
@@ -5963,22 +5909,23 @@ var t;
                             n,
                             o,
                             a,
-                            s,
-                            c = {
+                            s = {
                                 attrs: {},
                                 configUrl: ''
                             };
-                        if (((t = e), /^[a-zA-Z0-9]+_[a-zA-Z0-9]+_[a-zA-Z0-9_]+$/.test(t))) {
-                            (o = (n = e.split('_'))[0]),
-                                (s = {
-                                    merchantId: n.slice(2).join('_'),
-                                    environment: o
-                                }),
-                                (c.environment = s.environment),
-                                (c.attrs.tokenizationKey = e),
-                                (c.configUrl = i[s.environment] + '/merchants/' + s.merchantId + '/client_api/v1/configuration');
-                        } else (a = JSON.parse(r(e))), (c.environment = a.environment), (c.attrs.authorizationFingerprint = a.authorizationFingerprint), (c.configUrl = a.configUrl), (c.graphQL = a.graphQL);
-                        return c;
+                        return (
+                            /^[a-zA-Z0-9]+_[a-zA-Z0-9]+_[a-zA-Z0-9_]+$/.test(e)
+                                ? ((n = (t = e.split('_'))[0]),
+                                  (a = {
+                                      merchantId: t.slice(2).join('_'),
+                                      environment: n
+                                  }),
+                                  (s.environment = a.environment),
+                                  (s.attrs.tokenizationKey = e),
+                                  (s.configUrl = i[a.environment] + '/merchants/' + a.merchantId + '/client_api/v1/configuration'))
+                                : ((o = JSON.parse(r(e))), (s.environment = o.environment), (s.attrs.authorizationFingerprint = o.authorizationFingerprint), (s.configUrl = o.configUrl), (s.graphQL = o.graphQL)),
+                            s
+                        );
                     };
                 },
                 {
@@ -5997,7 +5944,7 @@ var t;
                             var t = Promise.resolve();
                             return e.client
                                 ? Promise.resolve(e.client)
-                                : (!(window.braintree && window.braintree.client) &&
+                                : ((window.braintree && window.braintree.client) ||
                                       (t = i.loadScript({ src: e.assetsUrl + '/web/' + a + '/js/client.min.js' }).catch(function (e) {
                                           return Promise.reject(
                                               new r({
@@ -6140,8 +6087,8 @@ var t;
                         s = e('../shared/events'),
                         c = e('../shared/errors'),
                         d = e('../shared/constants'),
-                        u = e('@braintree/uuid'),
-                        l = e('@braintree/iframer'),
+                        l = e('@braintree/uuid'),
+                        u = e('@braintree/iframer'),
                         p = e('../../braintree-error'),
                         _ = e('../shared/browser-detection'),
                         E = e('./../../assign').assign,
@@ -6149,7 +6096,7 @@ var t;
                         m = ['name', 'dispatchFrameUrl', 'openFrameUrl'];
                     function f() {}
                     function y(e) {
-                        !(function (e) {
+                        (function (e) {
                             if (!e) throw Error('Valid configuration is required');
                             if (
                                 (m.forEach(function (t) {
@@ -6159,7 +6106,7 @@ var t;
                             )
                                 throw Error('A valid frame name must be provided');
                         })(e),
-                            (this._serviceId = u().replace(/-/g, '')),
+                            (this._serviceId = l().replace(/-/g, '')),
                             (this._options = {
                                 name: e.name + '_' + this._serviceId,
                                 dispatchFrameUrl: e.dispatchFrameUrl,
@@ -6182,7 +6129,7 @@ var t;
                         (y.prototype._writeDispatchFrame = function () {
                             var e = d.DISPATCH_FRAME_NAME + '_' + this._serviceId,
                                 t = this._options.dispatchFrameUrl;
-                            (this._dispatchFrame = l({
+                            (this._dispatchFrame = u({
                                 'aria-hidden': !0,
                                 name: e,
                                 title: e,
@@ -6224,10 +6171,10 @@ var t;
                             this._frame && !this.isFrameClosed() && this._frame.redirect(e);
                         }),
                         (y.prototype.close = function () {
-                            !this.isFrameClosed() && this._frame.close();
+                            this.isFrameClosed() || this._frame.close();
                         }),
                         (y.prototype.focus = function () {
-                            !this.isFrameClosed() && this._frame.focus();
+                            this.isFrameClosed() || this._frame.focus();
                         }),
                         (y.prototype.createHandler = function (e) {
                             return (
@@ -6458,7 +6405,7 @@ var t;
                             this._frame.focus();
                         }),
                         (i.prototype.close = function () {
-                            if (!this._frame.closed) this._frame.close();
+                            !this._frame.closed && this._frame.close();
                         }),
                         (i.prototype.isClosed = function () {
                             return !this._frame || !!this._frame.closed;
@@ -6472,21 +6419,18 @@ var t;
             ],
             163: [
                 function (e, t, n) {
-                    function r(e, t, n) {
-                        return (e - t) / 2 + n;
-                    }
                     t.exports = {
                         top: function (e) {
-                            return (function (e, t, n) {
-                                return (e - t) / 2 + n;
-                            })(window.outerHeight || document.documentElement.clientHeight, e, null == window.screenY ? window.screenTop : window.screenY);
+                            var t;
+                            return (t = window.outerHeight || document.documentElement.clientHeight), (t - e) / 2 + (null == window.screenY ? window.screenTop : window.screenY);
                         },
                         left: function (e) {
-                            return (function (e, t, n) {
-                                return (e - t) / 2 + n;
-                            })(window.outerWidth || document.documentElement.clientWidth, e, null == window.screenX ? window.screenLeft : window.screenX);
+                            var t;
+                            return (t = window.outerWidth || document.documentElement.clientWidth), (t - e) / 2 + (null == window.screenX ? window.screenLeft : window.screenX);
                         },
-                        center: r
+                        center: function (e, t, n) {
+                            return (e - t) / 2 + n;
+                        }
                     };
                 },
                 {}
@@ -6691,8 +6635,7 @@ var t;
                         };
                     t.exports = function (e) {
                         var t;
-                        if (((e = e.toLowerCase()), !/^https:/.test(e))) return !1;
-                        return ((r = r || document.createElement('a')).href = e), (t = r.hostname.split('.').slice(-2).join('.')), i.hasOwnProperty(t);
+                        return (e = e.toLowerCase()), !!/^https:/.test(e) && (((r = r || document.createElement('a')).href = e), (t = r.hostname.split('.').slice(-2).join('.')), i.hasOwnProperty(t));
                     };
                 },
                 {}
@@ -6720,7 +6663,7 @@ var t;
                     t.exports = function (e) {
                         var t = !1;
                         return function () {
-                            !t && ((t = !0), e.apply(null, arguments));
+                            t || ((t = !0), e.apply(null, arguments));
                         };
                     };
                 },
@@ -6735,29 +6678,23 @@ var t;
                         var n,
                             r,
                             o,
-                            a,
-                            s = [];
-                        for (a in e) {
-                            if (!!e.hasOwnProperty(a)) {
-                                if (((o = e[a]), t)) {
-                                    if ((n = e) && 'object' == typeof n && 'number' == typeof n.length && '[object Array]' === Object.prototype.toString.call(n)) r = t + '[]';
-                                    else r = t + '[' + a + ']';
-                                } else r = a;
-                                'object' == typeof o ? s.push(i(o, r)) : s.push(encodeURIComponent(r) + '=' + encodeURIComponent(o));
-                            }
-                        }
-                        return s.join('&');
+                            a = [];
+                        for (o in e) e.hasOwnProperty(o) && ((r = e[o]), (n = t ? (e && 'object' == typeof e && 'number' == typeof e.length && '[object Array]' === Object.prototype.toString.call(e) ? t + '[]' : t + '[' + o + ']') : o), 'object' == typeof r ? a.push(i(r, n)) : a.push(encodeURIComponent(n) + '=' + encodeURIComponent(r)));
+                        return a.join('&');
                     }
                     t.exports = {
                         parse: function (e) {
                             var t;
                             return r((e = e || window.location.href))
-                                ? (t = (t = e.split('?')[1] || '').replace(/#.*$/, '').split('&')).reduce(function (e, t) {
-                                      var n = t.split('='),
-                                          r = decodeURIComponent(n[0]),
-                                          i = decodeURIComponent(n[1]);
-                                      return (e[r] = i), e;
-                                  }, {})
+                                ? (e.split('?')[1] || '')
+                                      .replace(/#.*$/, '')
+                                      .split('&')
+                                      .reduce(function (e, t) {
+                                          var n = t.split('='),
+                                              r = decodeURIComponent(n[0]),
+                                              i = decodeURIComponent(n[1]);
+                                          return (e[r] = i), e;
+                                      }, {})
                                 : {};
                         },
                         stringify: i,
@@ -6771,7 +6708,7 @@ var t;
                                         for (t in e) if (e.hasOwnProperty(t)) return !0;
                                         return !1;
                                     })(t) &&
-                                    ((e += -1 === e.indexOf('?') ? '?' : ''), (e += (-1 !== e.indexOf('=') ? '&' : '') + i(t))),
+                                    ((e += -1 === e.indexOf('?') ? '?' : ''), (e += -1 !== e.indexOf('=') ? '&' : ''), (e += i(t))),
                                 e
                             );
                         },
@@ -6797,9 +6734,9 @@ var t;
                             var s = i(t).querySelector('style'),
                                 c = a(t),
                                 d = 'shadow-slot-' + r(),
-                                u = document.createElement('slot'),
-                                l = document.createElement('div');
-                            return (u.setAttribute('name', d), t.appendChild(u), l.setAttribute('slot', d), c.appendChild(l), n && (!s && ((s = document.createElement('style')), t.appendChild(s)), s.sheet.insertRule('::slotted([slot="' + d + '"]) { ' + n + ' }')), o(c)) ? e(l, n) : l;
+                                l = document.createElement('slot'),
+                                u = document.createElement('div');
+                            return (l.setAttribute('name', d), t.appendChild(l), u.setAttribute('slot', d), c.appendChild(u), n && (s || ((s = document.createElement('style')), t.appendChild(s)), s.sheet.insertRule('::slotted([slot="' + d + '"]) { ' + n + ' }')), o(c)) ? e(u, n) : u;
                         }
                     };
                 },
@@ -6852,13 +6789,13 @@ var t;
                             s,
                             c,
                             d = RegExp('^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=|[A-Za-z0-9+/]{4})([=]{1,2})?$'),
-                            u = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=',
-                            l = '';
+                            l = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=',
+                            u = '';
                         if (!d.test(e)) throw Error('Non base64 encoded input passed to window.atob polyfill');
                         c = 0;
-                        do (i = u.indexOf(e.charAt(c++))), (o = u.indexOf(e.charAt(c++))), (a = u.indexOf(e.charAt(c++))), (s = u.indexOf(e.charAt(c++))), (t = ((63 & i) << 2) | ((o >> 4) & 3)), (n = ((15 & o) << 4) | ((a >> 2) & 15)), (r = ((3 & a) << 6) | (63 & s)), (l += String.fromCharCode(t) + (n ? String.fromCharCode(n) : '') + (r ? String.fromCharCode(r) : ''));
+                        do (i = l.indexOf(e.charAt(c++))), (o = l.indexOf(e.charAt(c++))), (a = l.indexOf(e.charAt(c++))), (s = l.indexOf(e.charAt(c++))), (t = ((63 & i) << 2) | ((o >> 4) & 3)), (n = ((15 & o) << 4) | ((a >> 2) & 15)), (r = ((3 & a) << 6) | (63 & s)), (u += String.fromCharCode(t) + (n ? String.fromCharCode(n) : '') + (r ? String.fromCharCode(r) : ''));
                         while (c < e.length);
-                        return l;
+                        return u;
                     }
                     t.exports = {
                         atob: function (e) {
@@ -6893,8 +6830,8 @@ var t;
                         s = e('../../lib/analytics'),
                         c = e('../../lib/methods'),
                         d = e('../../lib/convert-methods-to-error'),
-                        u = e('../../lib/convert-to-braintree-error'),
-                        l = e('@braintree/extended-promise'),
+                        l = e('../../lib/convert-to-braintree-error'),
+                        u = e('@braintree/extended-promise'),
                         p = e('../../lib/querystring'),
                         _ = e('@braintree/wrap-promise'),
                         E = e('./constants'),
@@ -6908,7 +6845,7 @@ var t;
                             n = 'string' == typeof e.paymentType ? e.paymentType.toLowerCase() : e.paymentType;
                         return 'blik' === n ? t.hasOwnProperty('level_0') || t.hasOwnProperty('oneClick') : ['pay_upon_invoice', 'mbway', 'bancomatpay'].includes(n);
                     }
-                    (l.suppressUnhandledPromiseMessage = !0),
+                    (u.suppressUnhandledPromiseMessage = !0),
                         (f.prototype._initialize = function () {
                             var e = this,
                                 t = this._client,
@@ -6975,7 +6912,7 @@ var t;
                                                 n,
                                                 r,
                                                 i = e.blikOptions || {};
-                                            for (!e.redirectUrl && E.REQUIRED_OPTIONS_FOR_BLIK_SEAMLESS_PAYMENT_TYPE.push('onPaymentStart'), t = 0; t < E.REQUIRED_OPTIONS_FOR_BLIK_SEAMLESS_PAYMENT_TYPE.length; t++) if (((n = E.REQUIRED_OPTIONS_FOR_BLIK_SEAMLESS_PAYMENT_TYPE[t]), !e.hasOwnProperty(n))) return n;
+                                            for (e.redirectUrl || E.REQUIRED_OPTIONS_FOR_BLIK_SEAMLESS_PAYMENT_TYPE.push('onPaymentStart'), t = 0; t < E.REQUIRED_OPTIONS_FOR_BLIK_SEAMLESS_PAYMENT_TYPE.length; t++) if (((n = E.REQUIRED_OPTIONS_FOR_BLIK_SEAMLESS_PAYMENT_TYPE[t]), !e.hasOwnProperty(n))) return n;
                                             if (i.hasOwnProperty('level_0')) {
                                                 for (t = 0; t < E.REQUIRED_OPTIONS_FOR_BLIK_OPTIONS_LEVEL_0.length; t++) if (((n = E.REQUIRED_OPTIONS_FOR_BLIK_OPTIONS_LEVEL_0[t]), !i.level_0.hasOwnProperty(n))) return 'blikOptions.level_0.' + n;
                                             } else if (i.hasOwnProperty('oneClick')) {
@@ -6986,7 +6923,7 @@ var t;
                                             return !1;
                                         })(e);
                                 } else {
-                                    for (!e.redirectUrl && E.REQUIRED_OPTIONS_FOR_START_PAYMENT.push('onPaymentStart'), t = 0; t < E.REQUIRED_OPTIONS_FOR_START_PAYMENT.length; t++) if (((n = E.REQUIRED_OPTIONS_FOR_START_PAYMENT[t]), !e.hasOwnProperty(n))) return n;
+                                    for (e.redirectUrl || E.REQUIRED_OPTIONS_FOR_START_PAYMENT.push('onPaymentStart'), t = 0; t < E.REQUIRED_OPTIONS_FOR_START_PAYMENT.length; t++) if (((n = E.REQUIRED_OPTIONS_FOR_START_PAYMENT[t]), !e.hasOwnProperty(n))) return n;
                                     if (!e.fallback.url) return 'fallback.url';
                                     if (!e.fallback.buttonText) return 'fallback.buttonText';
                                     if (!0 === e.recurrent && !e.customerId) return 'customerId';
@@ -7060,9 +6997,9 @@ var t;
                                     O._authorizationInProgress && !O._isRedirectFlow)
                                   ? (s.sendEvent(O._client, O._paymentType + '.local-payment.start-payment.error.already-opened'), Promise.reject(new i(h.LOCAL_PAYMENT_ALREADY_IN_PROGRESS)))
                                   : ((O._authorizationInProgress = !0),
-                                    (d = new l()),
-                                    !y(e) &&
-                                        !O._isRedirectFlow &&
+                                    (d = new u()),
+                                    y(e) ||
+                                        O._isRedirectFlow ||
                                         ((O._startPaymentCallback = O._createStartPaymentCallback(
                                             function (e) {
                                                 d.resolve(e);
@@ -7105,7 +7042,7 @@ var t;
                                         })
                                         .catch(function (e) {
                                             var t = e.details && e.details.httpStatus;
-                                            if ((!O._isRedirectFlow && O._frameService.close(), (O._authorizationInProgress = !1), 422 === t)) {
+                                            if ((O._isRedirectFlow || O._frameService.close(), (O._authorizationInProgress = !1), 422 === t)) {
                                                 d.reject(
                                                     new i({
                                                         type: h.LOCAL_PAYMENT_INVALID_PAYMENT_OPTION.type,
@@ -7117,7 +7054,7 @@ var t;
                                                 return;
                                             }
                                             d.reject(
-                                                u(e, {
+                                                l(e, {
                                                     type: h.LOCAL_PAYMENT_START_PAYMENT_FAILED.type,
                                                     code: h.LOCAL_PAYMENT_START_PAYMENT_FAILED.code,
                                                     message: h.LOCAL_PAYMENT_START_PAYMENT_FAILED.message
@@ -7171,7 +7108,7 @@ var t;
                                             return (
                                                 s.sendEvent(n, t._paymentType + '.local-payment.tokenization.failed'),
                                                 Promise.reject(
-                                                    u(e, {
+                                                    l(e, {
                                                         type: h.LOCAL_PAYMENT_TOKENIZATION_FAILED.type,
                                                         code: h.LOCAL_PAYMENT_TOKENIZATION_FAILED.code,
                                                         message: h.LOCAL_PAYMENT_TOKENIZATION_FAILED.message
@@ -7210,7 +7147,7 @@ var t;
                                             );
                                 } else
                                     a &&
-                                        (!window.popupBridge && n._frameService.redirect(n._loadingFrameUrl),
+                                        (window.popupBridge || n._frameService.redirect(n._loadingFrameUrl),
                                         n
                                             .tokenize(a)
                                             .then(e)
@@ -7250,10 +7187,10 @@ var t;
                                     intent: 'sale'
                                 }
                             };
-                        });
-                    (f.prototype.teardown = function () {
-                        return !this._isRedirectFlow && this._frameService.teardown(), d(this, c(f.prototype)), s.sendEvent(this._client, 'local-payment.teardown-completed'), Promise.resolve();
-                    }),
+                        }),
+                        (f.prototype.teardown = function () {
+                            return this._isRedirectFlow || this._frameService.teardown(), d(this, c(f.prototype)), s.sendEvent(this._client, 'local-payment.teardown-completed'), Promise.resolve();
+                        }),
                         (t.exports = _.wrapPrototype(f));
                 },
                 {
@@ -7282,8 +7219,8 @@ var t;
                         s = e('./external/local-payment'),
                         c = e('@braintree/wrap-promise'),
                         d = e('../lib/braintree-error'),
-                        u = e('./shared/errors'),
-                        l = e('../lib/querystring').parse;
+                        l = e('./shared/errors'),
+                        u = e('../lib/querystring').parse;
                     t.exports = {
                         create: c(function (e) {
                             var t = 'Local Payment';
@@ -7306,19 +7243,20 @@ var t;
                                     var n,
                                         i,
                                         o = t.getConfiguration();
-                                    if (((e.client = t), !0 !== o.gatewayConfiguration.paypalEnabled)) return Promise.reject(new d(u.LOCAL_PAYMENT_NOT_ENABLED));
-                                    if ((r.sendEvent(t, 'local-payment.initialized'), (n = new s(e)), e.redirectUrl))
-                                        return (i = l(window.location.href)).token || i.wasCanceled
-                                            ? n
-                                                  .tokenize(i)
-                                                  .then(function (e) {
-                                                      return (n.tokenizePayload = e), n;
-                                                  })
-                                                  .catch(function (e) {
-                                                      return console.log('Error while tokenizing: ', e), n;
-                                                  })
-                                            : n;
-                                    return n._initialize();
+                                    return ((e.client = t), !0 !== o.gatewayConfiguration.paypalEnabled)
+                                        ? Promise.reject(new d(l.LOCAL_PAYMENT_NOT_ENABLED))
+                                        : (r.sendEvent(t, 'local-payment.initialized'), (n = new s(e)), e.redirectUrl)
+                                          ? (i = u(window.location.href)).token || i.wasCanceled
+                                              ? n
+                                                    .tokenize(i)
+                                                    .then(function (e) {
+                                                        return (n.tokenizePayload = e), n;
+                                                    })
+                                                    .catch(function (e) {
+                                                        return console.log('Error while tokenizing: ', e), n;
+                                                    })
+                                              : n
+                                          : n._initialize();
                                 });
                         }),
                         VERSION: '3.112.1'
@@ -7403,8 +7341,8 @@ var t;
                         s = e('@braintree/wrap-promise'),
                         c = e('../../lib/analytics'),
                         d = e('../../lib/convert-methods-to-error'),
-                        u = e('../../lib/convert-to-braintree-error'),
-                        l = e('../shared/constants'),
+                        l = e('../../lib/convert-to-braintree-error'),
+                        u = e('../shared/constants'),
                         p = e('../../lib/constants').INTEGRATION_TIMEOUT_MS;
                     function _(e) {
                         var t = e.client.getConfiguration();
@@ -7418,9 +7356,9 @@ var t;
                             }, p);
                             r.create(
                                 {
-                                    name: l.LANDING_FRAME_NAME,
-                                    height: l.POPUP_HEIGHT,
-                                    width: l.POPUP_WIDTH,
+                                    name: u.LANDING_FRAME_NAME,
+                                    height: u.POPUP_HEIGHT,
+                                    width: u.POPUP_WIDTH,
                                     dispatchFrameUrl: e._assetsUrl + '/html/dispatch-frame' + (e._isDebug ? '' : '.min') + '.html',
                                     openFrameUrl: e._assetsUrl + '/html/masterpass-landing-frame' + (e._isDebug ? '' : '.min') + '.html'
                                 },
@@ -7435,7 +7373,7 @@ var t;
                             return !e ||
                                 (function (e) {
                                     var t, n;
-                                    for (t = 0; t < l.REQUIRED_OPTIONS_FOR_TOKENIZE.length; t++) if (((n = l.REQUIRED_OPTIONS_FOR_TOKENIZE[t]), !e.hasOwnProperty(n))) return !0;
+                                    for (t = 0; t < u.REQUIRED_OPTIONS_FOR_TOKENIZE.length; t++) if (((n = u.REQUIRED_OPTIONS_FOR_TOKENIZE[t]), !e.hasOwnProperty(n))) return !0;
                                     return !1;
                                 })(e)
                                 ? Promise.reject(new i(o.MASTERPASS_TOKENIZE_MISSING_REQUIRED_OPTION))
@@ -7473,7 +7411,7 @@ var t;
                                             callbackUrl: t._callbackUrl,
                                             merchantCheckoutId: o.masterpass.merchantCheckoutId,
                                             allowedCardTypes: o.masterpass.supportedNetworks,
-                                            version: l.MASTERPASS_VERSION
+                                            version: u.MASTERPASS_VERSION
                                         }),
                                             Object.keys(a).forEach(function (e) {
                                                 'function' != typeof a[e] && (r[e] = a[e]);
@@ -7487,7 +7425,7 @@ var t;
                                     })
                                     .catch(function (e) {
                                         var n = e.details && e.details.httpStatus;
-                                        return (t._closeWindow(), 422 === n) ? Promise.reject(u(e, o.MASTERPASS_INVALID_PAYMENT_OPTION)) : Promise.reject(u(e, o.MASTERPASS_FLOW_FAILED));
+                                        return (t._closeWindow(), 422 === n) ? Promise.reject(l(e, o.MASTERPASS_INVALID_PAYMENT_OPTION)) : Promise.reject(l(e, o.MASTERPASS_FLOW_FAILED));
                                     })
                             );
                         }),
@@ -7496,7 +7434,7 @@ var t;
                             return window.popupBridge
                                 ? function (r, a) {
                                       if (((n._authInProgress = !1), r)) {
-                                          c.sendEvent(n._client, 'masterpass.tokenization.closed-popupbridge.by-user'), t(u(r, o.MASTERPASS_POPUP_CLOSED));
+                                          c.sendEvent(n._client, 'masterpass.tokenization.closed-popupbridge.by-user'), t(l(r, o.MASTERPASS_POPUP_CLOSED));
                                           return;
                                       }
                                       if (!a.queryItems) {
@@ -7523,23 +7461,22 @@ var t;
                                                   );
                                               return;
                                           }
-                                          c.sendEvent(n._client, 'masterpass.tokenization.failed'), n._closeWindow(), t(u(r, o.MASTERPASS_FLOW_FAILED));
+                                          c.sendEvent(n._client, 'masterpass.tokenization.failed'), n._closeWindow(), t(l(r, o.MASTERPASS_FLOW_FAILED));
                                           return;
                                       }
                                       n._tokenizeMasterpass(a).then(e).catch(t);
                                   };
                         }),
                         (_.prototype._tokenizeMasterpass = function (e) {
-                            var t = this;
+                            var t,
+                                n = this;
                             return 'success' !== e.mpstatus
-                                ? (c.sendEvent(t._client, 'masterpass.tokenization.closed.by-user'), t._closeWindow(), Promise.reject(new i(o.MASTERPASS_POPUP_CLOSED)))
-                                : (function (e) {
-                                        return [e.oauth_verifier, e.oauth_token, e.checkout_resource_url].some(function (e) {
-                                            return null == e || 'null' === e;
-                                        });
-                                    })(e)
-                                  ? (c.sendEvent(t._client, 'masterpass.tokenization.closed.missing-payload'), t._closeWindow(), Promise.reject(new i(o.MASTERPASS_POPUP_MISSING_REQUIRED_PARAMETERS)))
-                                  : t._client
+                                ? (c.sendEvent(n._client, 'masterpass.tokenization.closed.by-user'), n._closeWindow(), Promise.reject(new i(o.MASTERPASS_POPUP_CLOSED)))
+                                : [(t = e).oauth_verifier, t.oauth_token, t.checkout_resource_url].some(function (e) {
+                                        return null == e || 'null' === e;
+                                    })
+                                  ? (c.sendEvent(n._client, 'masterpass.tokenization.closed.missing-payload'), n._closeWindow(), Promise.reject(new i(o.MASTERPASS_POPUP_MISSING_REQUIRED_PARAMETERS)))
+                                  : n._client
                                         .request({
                                             endpoint: 'payment_methods/masterpass_cards',
                                             method: 'post',
@@ -7552,22 +7489,22 @@ var t;
                                             }
                                         })
                                         .then(function (e) {
-                                            return t._closeWindow(), window.popupBridge ? c.sendEvent(t._client, 'masterpass.tokenization.success-popupbridge') : c.sendEvent(t._client, 'masterpass.tokenization.success'), e.masterpassCards[0];
+                                            return n._closeWindow(), window.popupBridge ? c.sendEvent(n._client, 'masterpass.tokenization.success-popupbridge') : c.sendEvent(n._client, 'masterpass.tokenization.success'), e.masterpassCards[0];
                                         })
                                         .catch(function (e) {
-                                            return t._closeWindow(), window.popupBridge ? c.sendEvent(t._client, 'masterpass.tokenization.failed-popupbridge') : c.sendEvent(t._client, 'masterpass.tokenization.failed'), Promise.reject(u(e, o.MASTERPASS_ACCOUNT_TOKENIZATION_FAILED));
+                                            return n._closeWindow(), window.popupBridge ? c.sendEvent(n._client, 'masterpass.tokenization.failed-popupbridge') : c.sendEvent(n._client, 'masterpass.tokenization.failed'), Promise.reject(l(e, o.MASTERPASS_ACCOUNT_TOKENIZATION_FAILED));
                                         });
-                        });
-                    (_.prototype._closeWindow = function () {
-                        (this._authInProgress = !1), this._frameService.close();
-                    }),
+                        }),
+                        (_.prototype._closeWindow = function () {
+                            (this._authInProgress = !1), this._frameService.close();
+                        }),
                         (_.prototype.teardown = function () {
                             var e = this;
                             return new Promise(function (t) {
                                 e._frameService.teardown(), d(e, a(_.prototype)), c.sendEvent(e._client, 'masterpass.teardown-completed'), t();
                             });
-                        });
-                    t.exports = s.wrapPrototype(_);
+                        }),
+                        (t.exports = s.wrapPrototype(_));
                 },
                 {
                     '../../lib/analytics': 138,
@@ -7591,12 +7528,12 @@ var t;
                         s = e('../lib/create-deferred-client'),
                         c = e('../lib/create-assets-url'),
                         d = e('./shared/errors'),
-                        u = e('@braintree/wrap-promise');
-                    function l() {
+                        l = e('@braintree/wrap-promise');
+                    function u() {
                         return !!(window.popupBridge || o.supportsPopups());
                     }
                     t.exports = {
-                        create: u(function (e) {
+                        create: l(function (e) {
                             var t = 'Masterpass';
                             return i
                                 .verify({
@@ -7605,7 +7542,7 @@ var t;
                                     authorization: e.authorization
                                 })
                                 .then(function () {
-                                    return l() ? Promise.resolve() : Promise.reject(new r(d.MASTERPASS_BROWSER_NOT_SUPPORTED));
+                                    return u() ? Promise.resolve() : Promise.reject(new r(d.MASTERPASS_BROWSER_NOT_SUPPORTED));
                                 })
                                 .then(function () {
                                     return s.create({
@@ -7620,7 +7557,7 @@ var t;
                                     return ((e.client = t), e.client.getConfiguration().gatewayConfiguration.masterpass) ? new a(e)._initialize() : Promise.reject(new r(d.MASTERPASS_NOT_ENABLED));
                                 });
                         }),
-                        isSupported: l,
+                        isSupported: u,
                         VERSION: '3.112.1'
                     };
                 },
@@ -7720,8 +7657,8 @@ var t;
                         s = e('../../lib/generate-google-pay-configuration'),
                         c = e('@braintree/iframer'),
                         d = e('@braintree/uuid'),
-                        u = e('../../lib/use-min'),
-                        l = e('../../lib/methods'),
+                        l = e('../../lib/use-min'),
+                        u = e('../../lib/methods'),
                         p = e('@braintree/event-emitter'),
                         _ = e('../../lib/braintree-error'),
                         E = e('../shared/constants'),
@@ -7829,7 +7766,7 @@ var t;
                                                   }),
                                                   n(t);
                                           }),
-                                          (t._frame.src = ((i = e.gatewayConfiguration.assetsUrl), (o = t._componentId), i + '/web/3.112.1/html/payment-request-frame' + u(e.isDebug) + '.html#' + o)),
+                                          (t._frame.src = ((i = e.gatewayConfiguration.assetsUrl), (o = t._componentId), i + '/web/3.112.1/html/payment-request-frame' + l(e.isDebug) + '.html#' + o)),
                                           document.body.appendChild(t._frame);
                                   });
                         }),
@@ -7880,7 +7817,7 @@ var t;
                                 ? e.supportedPaymentMethods &&
                                   (e.supportedPaymentMethods.forEach(function (e) {
                                       var n = e.supportedMethods;
-                                      !(n in E.SUPPORTED_METHODS) && (t = n);
+                                      n in E.SUPPORTED_METHODS || (t = n);
                                   }),
                                   t)
                                     ? Promise.reject(
@@ -7912,7 +7849,7 @@ var t;
                                 : (r.sendEvent(n._client, 'payment-request.can-make-payment.not-available'), Promise.resolve(!1));
                         }),
                         (A.prototype.teardown = function () {
-                            return this._bus.teardown(), this._frame.parentNode.removeChild(this._frame), a(this, l(A.prototype)), r.sendEvent(this._client, 'payment-request.teardown-completed'), Promise.resolve();
+                            return this._bus.teardown(), this._frame.parentNode.removeChild(this._frame), a(this, u(A.prototype)), r.sendEvent(this._client, 'payment-request.teardown-completed'), Promise.resolve();
                         }),
                         (A.prototype._formatTokenizationError = function (e) {
                             var t;
@@ -8233,8 +8170,8 @@ var t;
                         s = e('@braintree/extended-promise'),
                         c = e('@braintree/wrap-promise'),
                         d = e('../lib/braintree-error'),
-                        u = e('../lib/convert-to-braintree-error'),
-                        l = e('./errors'),
+                        l = e('../lib/convert-to-braintree-error'),
+                        u = e('./errors'),
                         p = e('../paypal/shared/constants'),
                         _ = e('../lib/frame-service/external'),
                         E = e('../lib/create-authorization-data'),
@@ -8272,7 +8209,7 @@ var t;
                                 })
                                 .then(
                                     function (e) {
-                                        return ((this._configuration = e.getConfiguration()), !this._merchantAccountId && (this._configuration.gatewayConfiguration.paypalEnabled ? !0 === this._configuration.gatewayConfiguration.paypal.environmentNoNetwork && (this._setupError = new d(l.PAYPAL_SANDBOX_ACCOUNT_NOT_LINKED)) : (this._setupError = new d(l.PAYPAL_NOT_ENABLED))), this._setupError) ? Promise.reject(this._setupError) : (r.sendEvent(e, 'paypal-checkout.initialized'), (this._frameServicePromise = this._setupFrameService(e)), e);
+                                        return ((this._configuration = e.getConfiguration()), this._merchantAccountId || (this._configuration.gatewayConfiguration.paypalEnabled ? !0 === this._configuration.gatewayConfiguration.paypal.environmentNoNetwork && (this._setupError = new d(u.PAYPAL_SANDBOX_ACCOUNT_NOT_LINKED)) : (this._setupError = new d(u.PAYPAL_NOT_ENABLED))), this._setupError) ? Promise.reject(this._setupError) : (r.sendEvent(e, 'paypal-checkout.initialized'), (this._frameServicePromise = this._setupFrameService(e)), e);
                                     }.bind(this)
                                 )),
                             e.client)
@@ -8287,7 +8224,7 @@ var t;
                             var t = new s(),
                                 n = e.getConfiguration(),
                                 i = setTimeout(function () {
-                                    r.sendEvent(e, 'paypal-checkout.frame-service.timed-out'), t.reject(new d(l.PAYPAL_START_VAULT_INITIATED_CHECKOUT_SETUP_FAILED));
+                                    r.sendEvent(e, 'paypal-checkout.frame-service.timed-out'), t.reject(new d(u.PAYPAL_START_VAULT_INITIATED_CHECKOUT_SETUP_FAILED));
                                 }, T);
                             return (
                                 (this._assetsUrl = n.gatewayConfiguration.paypal.assetsUrl + '/web/3.112.1'),
@@ -8311,9 +8248,9 @@ var t;
                                 ? (r.sendEvent(this._clientPromise, 'paypal-checkout.createPayment'),
                                   this._createPaymentResource(e).then(function (t) {
                                       var n;
-                                      return (n = 'checkout' === e.flow ? y.parse(t.paymentResource.redirectUrl).token : t.agreementSetup.tokenId);
+                                      return 'checkout' === e.flow ? y.parse(t.paymentResource.redirectUrl).token : t.agreementSetup.tokenId;
                                   }))
-                                : Promise.reject(new d(l.PAYPAL_FLOW_OPTION_REQUIRED));
+                                : Promise.reject(new d(u.PAYPAL_FLOW_OPTION_REQUIRED));
                         }),
                         (N.prototype._createPaymentResource = function (e, t) {
                             var n = this,
@@ -8341,17 +8278,17 @@ var t;
                                             : 422 === (e.details && e.details.httpStatus)
                                               ? Promise.reject(
                                                     new d({
-                                                        type: l.PAYPAL_INVALID_PAYMENT_OPTION.type,
-                                                        code: l.PAYPAL_INVALID_PAYMENT_OPTION.code,
-                                                        message: l.PAYPAL_INVALID_PAYMENT_OPTION.message,
+                                                        type: u.PAYPAL_INVALID_PAYMENT_OPTION.type,
+                                                        code: u.PAYPAL_INVALID_PAYMENT_OPTION.code,
+                                                        message: u.PAYPAL_INVALID_PAYMENT_OPTION.message,
                                                         details: { originalError: e }
                                                     })
                                                 )
                                               : Promise.reject(
-                                                    u(e, {
-                                                        type: l.PAYPAL_FLOW_FAILED.type,
-                                                        code: l.PAYPAL_FLOW_FAILED.code,
-                                                        message: l.PAYPAL_FLOW_FAILED.message
+                                                    l(e, {
+                                                        type: u.PAYPAL_FLOW_FAILED.type,
+                                                        code: u.PAYPAL_FLOW_FAILED.code,
+                                                        message: u.PAYPAL_FLOW_FAILED.message
                                                     })
                                                 );
                                     })
@@ -8360,7 +8297,7 @@ var t;
                         (N.prototype.updatePayment = function (e) {
                             var t = this;
                             return !e || this._hasMissingOption(e, p.REQUIRED_OPTIONS)
-                                ? (r.sendEvent(t._clientPromise, 'paypal-checkout.updatePayment.missing-options'), Promise.reject(new d(l.PAYPAL_MISSING_REQUIRED_OPTION)))
+                                ? (r.sendEvent(t._clientPromise, 'paypal-checkout.updatePayment.missing-options'), Promise.reject(new d(u.PAYPAL_MISSING_REQUIRED_OPTION)))
                                 : this._verifyConsistentCurrency(e)
                                   ? (r.sendEvent(this._clientPromise, 'paypal-checkout.updatePayment'),
                                     this._clientPromise
@@ -8376,27 +8313,27 @@ var t;
                                                 ? (r.sendEvent(t._clientPromise, 'paypal-checkout.updatePayment.invalid'),
                                                   Promise.reject(
                                                       new d({
-                                                          type: l.PAYPAL_INVALID_PAYMENT_OPTION.type,
-                                                          code: l.PAYPAL_INVALID_PAYMENT_OPTION.code,
-                                                          message: l.PAYPAL_INVALID_PAYMENT_OPTION.message,
+                                                          type: u.PAYPAL_INVALID_PAYMENT_OPTION.type,
+                                                          code: u.PAYPAL_INVALID_PAYMENT_OPTION.code,
+                                                          message: u.PAYPAL_INVALID_PAYMENT_OPTION.message,
                                                           details: { originalError: e }
                                                       })
                                                   ))
-                                                : (r.sendEvent(t._clientPromise, 'paypal-checkout.updatePayment.' + l.PAYPAL_FLOW_FAILED.code),
+                                                : (r.sendEvent(t._clientPromise, 'paypal-checkout.updatePayment.' + u.PAYPAL_FLOW_FAILED.code),
                                                   Promise.reject(
-                                                      u(e, {
-                                                          type: l.PAYPAL_FLOW_FAILED.type,
-                                                          code: l.PAYPAL_FLOW_FAILED.code,
-                                                          message: l.PAYPAL_FLOW_FAILED.message
+                                                      l(e, {
+                                                          type: u.PAYPAL_FLOW_FAILED.type,
+                                                          code: u.PAYPAL_FLOW_FAILED.code,
+                                                          message: u.PAYPAL_FLOW_FAILED.message
                                                       })
                                                   ));
                                         }))
                                   : (r.sendEvent(t._clientPromise, 'paypal-checkout.updatePayment.inconsistent-currencies'),
                                     Promise.reject(
                                         new d({
-                                            type: l.PAYPAL_INVALID_PAYMENT_OPTION.type,
-                                            code: l.PAYPAL_INVALID_PAYMENT_OPTION.code,
-                                            message: l.PAYPAL_INVALID_PAYMENT_OPTION.message,
+                                            type: u.PAYPAL_INVALID_PAYMENT_OPTION.type,
+                                            code: u.PAYPAL_INVALID_PAYMENT_OPTION.code,
+                                            message: u.PAYPAL_INVALID_PAYMENT_OPTION.message,
                                             details: { originalError: Error('One or more shipping option currencies differ from checkout currency.') }
                                         })
                                     ));
@@ -8405,15 +8342,15 @@ var t;
                             var t,
                                 n = this;
                             return this._vaultInitiatedCheckoutInProgress
-                                ? (r.sendEvent(this._clientPromise, 'paypal-checkout.startVaultInitiatedCheckout.error.already-in-progress'), Promise.reject(new d(l.PAYPAL_START_VAULT_INITIATED_CHECKOUT_IN_PROGRESS)))
+                                ? (r.sendEvent(this._clientPromise, 'paypal-checkout.startVaultInitiatedCheckout.error.already-in-progress'), Promise.reject(new d(u.PAYPAL_START_VAULT_INITIATED_CHECKOUT_IN_PROGRESS)))
                                 : (I.forEach(function (n) {
-                                        !e.hasOwnProperty(n) && (t = n);
+                                        e.hasOwnProperty(n) || (t = n);
                                     }),
                                     t)
                                   ? Promise.reject(
                                         new d({
-                                            type: l.PAYPAL_START_VAULT_INITIATED_CHECKOUT_PARAM_REQUIRED.type,
-                                            code: l.PAYPAL_START_VAULT_INITIATED_CHECKOUT_PARAM_REQUIRED.code,
+                                            type: u.PAYPAL_START_VAULT_INITIATED_CHECKOUT_PARAM_REQUIRED.type,
+                                            code: u.PAYPAL_START_VAULT_INITIATED_CHECKOUT_PARAM_REQUIRED.code,
                                             message: 'Required param ' + t + ' is missing.'
                                         })
                                     )
@@ -8437,14 +8374,14 @@ var t;
                                         })
                                         .catch(function (e) {
                                             return ((n._vaultInitiatedCheckoutInProgress = !1), n._removeModalBackdrop(), 'FRAME_SERVICE_FRAME_CLOSED' === e.code)
-                                                ? (r.sendEvent(n._clientPromise, 'paypal-checkout.startVaultInitiatedCheckout.canceled.by-customer'), Promise.reject(new d(l.PAYPAL_START_VAULT_INITIATED_CHECKOUT_CANCELED)))
+                                                ? (r.sendEvent(n._clientPromise, 'paypal-checkout.startVaultInitiatedCheckout.canceled.by-customer'), Promise.reject(new d(u.PAYPAL_START_VAULT_INITIATED_CHECKOUT_CANCELED)))
                                                 : (n._frameService && n._frameService.close(), e.code && e.code.indexOf('FRAME_SERVICE_FRAME_OPEN_FAILED') > -1)
                                                   ? (r.sendEvent(n._clientPromise, 'paypal-checkout.startVaultInitiatedCheckout.failed.popup-not-opened'),
                                                     Promise.reject(
                                                         new d({
-                                                            code: l.PAYPAL_START_VAULT_INITIATED_CHECKOUT_POPUP_OPEN_FAILED.code,
-                                                            type: l.PAYPAL_START_VAULT_INITIATED_CHECKOUT_POPUP_OPEN_FAILED.type,
-                                                            message: l.PAYPAL_START_VAULT_INITIATED_CHECKOUT_POPUP_OPEN_FAILED.message,
+                                                            code: u.PAYPAL_START_VAULT_INITIATED_CHECKOUT_POPUP_OPEN_FAILED.code,
+                                                            type: u.PAYPAL_START_VAULT_INITIATED_CHECKOUT_POPUP_OPEN_FAILED.type,
+                                                            message: u.PAYPAL_START_VAULT_INITIATED_CHECKOUT_POPUP_OPEN_FAILED.message,
                                                             details: { originalError: e }
                                                         })
                                                     ))
@@ -8455,8 +8392,8 @@ var t;
                                         }));
                         }),
                         (N.prototype._addModalBackdrop = function (e) {
-                            if (!e.optOutOfModalBackdrop)
-                                !this._modalBackdrop &&
+                            !e.optOutOfModalBackdrop &&
+                                (this._modalBackdrop ||
                                     ((this._modalBackdrop = document.createElement('div')),
                                     this._modalBackdrop.setAttribute('data-braintree-paypal-vault-initiated-checkout-modal', !0),
                                     (this._modalBackdrop.style.position = 'fixed'),
@@ -8473,10 +8410,10 @@ var t;
                                             this.focusVaultInitiatedCheckoutWindow();
                                         }.bind(this)
                                     )),
-                                    document.body.appendChild(this._modalBackdrop);
+                                document.body.appendChild(this._modalBackdrop));
                         }),
                         (N.prototype._removeModalBackdrop = function () {
-                            if (!!(this._modalBackdrop && this._modalBackdrop.parentNode)) this._modalBackdrop.parentNode.removeChild(this._modalBackdrop);
+                            this._modalBackdrop && this._modalBackdrop.parentNode && this._modalBackdrop.parentNode.removeChild(this._modalBackdrop);
                         }),
                         (N.prototype.closeVaultInitiatedCheckoutWindow = function () {
                             return (
@@ -8563,10 +8500,10 @@ var t;
                                             ? Promise.reject(n._setupError)
                                             : (r.sendEvent(n._clientPromise, 'paypal-checkout.tokenization.failed'),
                                               Promise.reject(
-                                                  u(e, {
-                                                      type: l.PAYPAL_ACCOUNT_TOKENIZATION_FAILED.type,
-                                                      code: l.PAYPAL_ACCOUNT_TOKENIZATION_FAILED.code,
-                                                      message: l.PAYPAL_ACCOUNT_TOKENIZATION_FAILED.message
+                                                  l(e, {
+                                                      type: u.PAYPAL_ACCOUNT_TOKENIZATION_FAILED.type,
+                                                      code: u.PAYPAL_ACCOUNT_TOKENIZATION_FAILED.code,
+                                                      message: u.PAYPAL_ACCOUNT_TOKENIZATION_FAILED.message
                                                   })
                                               ));
                                     })
@@ -8585,7 +8522,7 @@ var t;
                                 a = o['user-id-token'] || o['data-user-id-token'];
                             return (
                                 this._configuration && (o['client-metadata-id'] = o['client-metadata-id'] ? o['client-metadata-id'] : this._configuration.analyticsMetadata.sessionId),
-                                !a && (a = this._authorizationInformation.fingerprint && this._authorizationInformation.fingerprint.split('?')[0]),
+                                a || (a = this._authorizationInformation.fingerprint && this._authorizationInformation.fingerprint.split('?')[0]),
                                 (this._paypalScript = document.createElement('script')),
                                 (e = i({}, { components: 'buttons' }, e)),
                                 delete e.dataAttributes,
@@ -8599,7 +8536,7 @@ var t;
                                         this._paypalScript.setAttribute('data-' + e.replace(/^data\-/, ''), o[e]);
                                     }.bind(this)
                                 ),
-                                (t = e['client-id'] ? Promise.resolve(e['client-id']) : this.getClientId()).then(
+                                (e['client-id'] ? Promise.resolve(e['client-id']) : this.getClientId()).then(
                                     function (t) {
                                         (e['client-id'] = t),
                                             this._autoSetDataUserIdToken &&
@@ -8756,8 +8693,8 @@ var t;
                         s = e('../../lib/once'),
                         c = '3.112.1',
                         d = e('../shared/constants'),
-                        u = e('../../lib/constants').INTEGRATION_TIMEOUT_MS,
-                        l = e('../../lib/analytics'),
+                        l = e('../../lib/constants').INTEGRATION_TIMEOUT_MS,
+                        u = e('../../lib/analytics'),
                         p = e('../../lib/methods'),
                         _ = e('../../lib/deferred'),
                         E = e('../shared/errors'),
@@ -8771,8 +8708,8 @@ var t;
                         var e = this,
                             t = this._client,
                             n = setTimeout(function () {
-                                l.sendEvent(t, 'paypal.load.timed-out');
-                            }, u);
+                                u.sendEvent(t, 'paypal.load.timed-out');
+                            }, l);
                         return new Promise(function (i) {
                             r.create(
                                 {
@@ -8781,7 +8718,7 @@ var t;
                                     openFrameUrl: e._loadingFrameUrl
                                 },
                                 function (r) {
-                                    (e._frameService = r), clearTimeout(n), l.sendEvent(t, 'paypal.load.succeeded'), i(e);
+                                    (e._frameService = r), clearTimeout(n), u.sendEvent(t, 'paypal.load.succeeded'), i(e);
                                 }
                             );
                         });
@@ -8791,22 +8728,25 @@ var t;
                                 r,
                                 o = this,
                                 a = this._client;
-                            if ((t && (t = s(_(t))), !e || !d.FLOW_ENDPOINTS.hasOwnProperty(e.flow))) return ((r = new i(E.PAYPAL_FLOW_OPTION_REQUIRED)), t) ? (t(r), this._frameService.createNoopHandler()) : Promise.reject(r);
-                            return ((n = new Promise(function (t, n) {
-                                o._authorizationInProgress ? (l.sendEvent(a, 'paypal.tokenization.error.already-opened'), n(new i(E.PAYPAL_TOKENIZATION_REQUEST_ACTIVE))) : ((o._authorizationInProgress = !0), !window.popupBridge && l.sendEvent(a, 'paypal.tokenization.opened'), !0 === e.offerCredit && l.sendEvent(a, 'paypal.credit.offered'), !0 === e.offerPayLater && l.sendEvent(a, 'paypal.paylater.offered'), o._navigateFrameToAuth(e).catch(n), o._frameService.open({}, o._createFrameServiceCallback(e, t, n)));
-                            })),
-                            t)
-                                ? (n
-                                      .then(function (e) {
-                                          t(null, e);
-                                      })
-                                      .catch(t),
-                                  this._frameService.createHandler({
-                                      beforeClose: function () {
-                                          l.sendEvent(a, 'paypal.tokenization.closed.by-merchant');
-                                      }
-                                  }))
-                                : n;
+                            return (t && (t = s(_(t))), e && d.FLOW_ENDPOINTS.hasOwnProperty(e.flow))
+                                ? ((n = new Promise(function (t, n) {
+                                      o._authorizationInProgress ? (u.sendEvent(a, 'paypal.tokenization.error.already-opened'), n(new i(E.PAYPAL_TOKENIZATION_REQUEST_ACTIVE))) : ((o._authorizationInProgress = !0), window.popupBridge || u.sendEvent(a, 'paypal.tokenization.opened'), !0 === e.offerCredit && u.sendEvent(a, 'paypal.credit.offered'), !0 === e.offerPayLater && u.sendEvent(a, 'paypal.paylater.offered'), o._navigateFrameToAuth(e).catch(n), o._frameService.open({}, o._createFrameServiceCallback(e, t, n)));
+                                  })),
+                                  t)
+                                    ? (n
+                                          .then(function (e) {
+                                              t(null, e);
+                                          })
+                                          .catch(t),
+                                      this._frameService.createHandler({
+                                          beforeClose: function () {
+                                              u.sendEvent(a, 'paypal.tokenization.closed.by-merchant');
+                                          }
+                                      }))
+                                    : n
+                                : ((r = new i(E.PAYPAL_FLOW_OPTION_REQUIRED)), t)
+                                  ? (t(r), this._frameService.createNoopHandler())
+                                  : Promise.reject(r);
                         }),
                         (y.prototype._createFrameServiceCallback = function (e, t, n) {
                             var r = this,
@@ -8814,13 +8754,13 @@ var t;
                             return window.popupBridge
                                 ? function (a, s) {
                                       var c = s && s.path && '/cancel' === s.path.substring(0, 7);
-                                      (r._authorizationInProgress = !1), a || c ? (l.sendEvent(o, 'paypal.tokenization.closed-popupbridge.by-user'), n(new i(E.PAYPAL_POPUP_CLOSED))) : s && r._tokenizePayPal(e, s.queryItems).then(t).catch(n);
+                                      (r._authorizationInProgress = !1), a || c ? (u.sendEvent(o, 'paypal.tokenization.closed-popupbridge.by-user'), n(new i(E.PAYPAL_POPUP_CLOSED))) : s && r._tokenizePayPal(e, s.queryItems).then(t).catch(n);
                                   }
                                 : function (a, s) {
                                       (r._authorizationInProgress = !1),
                                           a
                                               ? 'FRAME_SERVICE_FRAME_CLOSED' === a.code
-                                                  ? (l.sendEvent(o, 'paypal.tokenization.closed.by-user'), n(new i(E.PAYPAL_POPUP_CLOSED)))
+                                                  ? (u.sendEvent(o, 'paypal.tokenization.closed.by-user'), n(new i(E.PAYPAL_POPUP_CLOSED)))
                                                   : a.code &&
                                                     a.code.indexOf('FRAME_SERVICE_FRAME_OPEN_FAILED') > -1 &&
                                                     n(
@@ -8838,7 +8778,7 @@ var t;
                             var n = this,
                                 r = this._client;
                             return (
-                                !window.popupBridge && this._frameService.redirect(this._loadingFrameUrl),
+                                window.popupBridge || this._frameService.redirect(this._loadingFrameUrl),
                                 r
                                     .request({
                                         endpoint: 'payment_methods/paypal_accounts',
@@ -8847,11 +8787,11 @@ var t;
                                     })
                                     .then(function (e) {
                                         var t = n._formatTokenizePayload(e);
-                                        return window.popupBridge ? l.sendEvent(r, 'paypal.tokenization.success-popupbridge') : l.sendEvent(r, 'paypal.tokenization.success'), t.creditFinancingOffered && l.sendEvent(r, 'paypal.credit.accepted'), n._frameService.close(), t;
+                                        return window.popupBridge ? u.sendEvent(r, 'paypal.tokenization.success-popupbridge') : u.sendEvent(r, 'paypal.tokenization.success'), t.creditFinancingOffered && u.sendEvent(r, 'paypal.credit.accepted'), n._frameService.close(), t;
                                     })
                                     .catch(function (e) {
                                         return (
-                                            window.popupBridge ? l.sendEvent(r, 'paypal.tokenization.failed-popupbridge') : l.sendEvent(r, 'paypal.tokenization.failed'),
+                                            window.popupBridge ? u.sendEvent(r, 'paypal.tokenization.failed-popupbridge') : u.sendEvent(r, 'paypal.tokenization.failed'),
                                             n._frameService.close(),
                                             Promise.reject(
                                                 o(e, {
@@ -8903,7 +8843,7 @@ var t;
                                 })
                                 .then(function (r) {
                                     var i;
-                                    (i = 'checkout' === e.flow ? r.paymentResource.redirectUrl : r.agreementSetup.approvalUrl), 'commit' === e.useraction && (i = m.queryify(i, { useraction: 'commit' })), window.popupBridge && l.sendEvent(n, 'paypal.tokenization.opened-popupbridge'), t._frameService.redirect(i);
+                                    (i = 'checkout' === e.flow ? r.paymentResource.redirectUrl : r.agreementSetup.approvalUrl), 'commit' === e.useraction && (i = m.queryify(i, { useraction: 'commit' })), window.popupBridge && u.sendEvent(n, 'paypal.tokenization.opened-popupbridge'), t._frameService.redirect(i);
                                 })
                                 .catch(function (e) {
                                     var n = e.details && e.details.httpStatus;
@@ -8947,13 +8887,13 @@ var t;
                             return i;
                         }),
                         (y.prototype.closeWindow = function () {
-                            this._authorizationInProgress && l.sendEvent(this._client, 'paypal.tokenize.closed.by-merchant'), this._frameService.close();
+                            this._authorizationInProgress && u.sendEvent(this._client, 'paypal.tokenize.closed.by-merchant'), this._frameService.close();
                         }),
                         (y.prototype.focusWindow = function () {
                             this._frameService.focus();
                         }),
                         (y.prototype.teardown = f(function () {
-                            return this._frameService.teardown(), h(this, p(y.prototype)), l.sendEvent(this._client, 'paypal.teardown-completed'), Promise.resolve();
+                            return this._frameService.teardown(), h(this, p(y.prototype)), u.sendEvent(this._client, 'paypal.teardown-completed'), Promise.resolve();
                         })),
                         (t.exports = y);
                 },
@@ -8983,9 +8923,9 @@ var t;
                         s = e('../lib/braintree-error'),
                         c = e('./shared/errors'),
                         d = e('./external/paypal'),
-                        u = e('@braintree/wrap-promise');
+                        l = e('@braintree/wrap-promise');
                     t.exports = {
-                        create: u(function (e) {
+                        create: l(function (e) {
                             var t = 'PayPal';
                             return i
                                 .verify({
@@ -9186,8 +9126,8 @@ var t;
                         s = e('../../lib/use-min'),
                         c = e('../shared/constants').BILLING_ADDRESS_OPTIONS,
                         d = e('../../lib/snake-case-to-camel-case'),
-                        u = e('../../lib/assign').assign;
-                    function l(e, t) {
+                        l = e('../../lib/assign').assign;
+                    function u(e, t) {
                         var n = {
                             sepa_debit_account: {
                                 last_4: t.last4,
@@ -9262,42 +9202,33 @@ var t;
                         openPopup: function (e, t) {
                             var n = t.assetsUrl + '/html',
                                 c = t.debug || !1;
-                            return new Promise(function (d, u) {
-                                var l = (function () {
-                                    return {
-                                        top: Math.round((window.outerHeight - 570) / 2) + window.screenTop,
-                                        left: Math.round((window.outerWidth - 400) / 2) + window.screenLeft
-                                    };
-                                })();
+                            return new Promise(function (d, l) {
+                                var u = {
+                                    top: Math.round((window.outerHeight - 570) / 2) + window.screenTop,
+                                    left: Math.round((window.outerWidth - 400) / 2) + window.screenLeft
+                                };
                                 o.create(
                                     {
                                         name: 'sepadirectdebit',
                                         dispatchFrameUrl: n + '/dispatch-frame' + s(c) + '.html',
                                         openFrameUrl: n + '/sepa-landing-frame' + s(c) + '.html',
-                                        top: l.top,
-                                        left: l.left,
+                                        top: u.top,
+                                        left: u.left,
                                         height: 570,
                                         width: 400
                                     },
                                     function (n) {
                                         a.sendEvent(e, 'sepa.popup.initialized'),
                                             n.open({}, function (e, t) {
-                                                return (function (e) {
-                                                    return e && e.success;
-                                                })(t)
-                                                    ? (n.close(), d())
-                                                    : (function (e, t) {
-                                                            return (e && e.cancel) || (t && 'FRAME_SERVICE_FRAME_CLOSED' === t.code);
-                                                        })(t, e)
-                                                      ? (n.close(), u(new r(i.SEPA_CUSTOMER_CANCELED)))
-                                                      : (n.close(), u(new r(i.SEPA_TOKENIZATION_FAILED)));
+                                                var o, a, s;
+                                                return (o = t) && o.success ? (n.close(), d()) : ((a = t), (s = e), (a && a.cancel) || (s && 'FRAME_SERVICE_FRAME_CLOSED' === s.code)) ? (n.close(), l(new r(i.SEPA_CUSTOMER_CANCELED))) : (n.close(), l(new r(i.SEPA_TOKENIZATION_FAILED)));
                                             }),
                                             n.redirect(t.approvalUrl);
                                     }
                                 );
                             });
                         },
-                        handleApproval: l,
+                        handleApproval: u,
                         POPUP_WIDTH: 400,
                         POPUP_HEIGHT: 570,
                         redirectPage: function (e) {
@@ -9314,13 +9245,13 @@ var t;
                                     var r = n.sepaDebitMandateDetail;
                                     return (
                                         a.sendEvent(e, 'sepa.redirect.mandate.approved'),
-                                        u(t, {
+                                        l(t, {
                                             last4: r.last4,
                                             customerId: r.merchantOrPartnerCustomerId,
                                             mandateType: r.mandateType,
                                             bankReferenceToken: r.bankReferenceToken
                                         }),
-                                        l(e, t)
+                                        u(e, t)
                                     );
                                 })
                                 .then(function (t) {
@@ -9352,15 +9283,15 @@ var t;
                         s = e('./mandate'),
                         c = e('../shared/has-missing-option'),
                         d = e('../../lib/analytics'),
-                        u = e('../../lib/assign').assign;
-                    function l(e) {
+                        l = e('../../lib/assign').assign;
+                    function u(e) {
                         var t = e.client.getConfiguration();
                         (this._client = e.client), (this._assetsUrl = t.gatewayConfiguration.assetsUrl + '/web/3.112.1'), (this._isDebug = t.isDebug), e.redirectUrl ? ((this._returnUrl = e.redirectUrl), (this._cancelUrl = e.redirectUrl + '?cancel=1'), (this._isRedirectFlow = !0)) : ((this._returnUrl = this._assetsUrl + '/html/redirect-frame.html?success=1'), (this._cancelUrl = this._assetsUrl + '/html/redirect-frame.html?cancel=1')), e.tokenizePayload && (this.tokenizePayload = e.tokenizePayload), d.sendEvent(this._client, 'sepa.component.initialized');
                     }
-                    (l.prototype.tokenize = function (e) {
+                    (u.prototype.tokenize = function (e) {
                         var t,
                             n = this,
-                            r = u(
+                            r = l(
                                 {
                                     cancelUrl: n._cancelUrl,
                                     returnUrl: n._returnUrl
@@ -9403,7 +9334,7 @@ var t;
                                         })
                               : (d.sendEvent(n._client, 'sepa.input-validation.invalid-mandate'), Promise.reject(new i(o.SEPA_INVALID_MANDATE_TYPE)));
                     }),
-                        (t.exports = r.wrapPrototype(l));
+                        (t.exports = r.wrapPrototype(u));
                 },
                 {
                     '../../lib/analytics': 138,
@@ -9425,8 +9356,8 @@ var t;
                         s = e('../lib/basic-component-verification'),
                         c = e('@braintree/wrap-promise'),
                         d = e('../lib/querystring').parse,
-                        u = e('../lib/assign').assign,
-                        l = e('./external/mandate');
+                        l = e('../lib/assign').assign,
+                        u = e('./external/mandate');
                     t.exports = {
                         create: c(function (e) {
                             var t = 'SEPA',
@@ -9451,8 +9382,8 @@ var t;
                                 })
                                 .then(function (t) {
                                     return n.success && 'true' === n.success && n.cart_id
-                                        ? ((e = u(e, n)),
-                                          l
+                                        ? ((e = l(e, n)),
+                                          u
                                               .handleApprovalForFullPageRedirect(e.client, e)
                                               .then(function (e) {
                                                   return (t.tokenizePayload = e), t;
@@ -9549,8 +9480,8 @@ var t;
                         s = e('@braintree/extended-promise'),
                         c = e('@braintree/event-emitter'),
                         d = e('../../shared/errors'),
-                        u = e('@braintree/iframer'),
-                        l = e('framebus'),
+                        l = e('@braintree/iframer'),
+                        u = e('framebus'),
                         p = e('../../shared/constants'),
                         _ = e('@braintree/uuid'),
                         E = e('../../shared/events'),
@@ -9647,7 +9578,7 @@ var t;
                             var n;
                             return !0 === this._verifyCardInProgress
                                 ? new o(d.THREEDS_AUTHENTICATION_IN_PROGRESS)
-                                : (e.nonce ? !this._existsAndIsNumeric(e.amount) && (n = 'an amount') : (n = 'a nonce'), !n && (n = this._checkForFrameworkSpecificVerifyCardErrors(e, t)), n)
+                                : (e.nonce ? this._existsAndIsNumeric(e.amount) || (n = 'an amount') : (n = 'a nonce'), n || (n = this._checkForFrameworkSpecificVerifyCardErrors(e, t)), n)
                                   ? new o({
                                         type: d.THREEDS_MISSING_VERIFY_CARD_OPTION.type,
                                         code: d.THREEDS_MISSING_VERIFY_CARD_OPTION.code,
@@ -9726,7 +9657,7 @@ var t;
                                 n = window.location.href.split('#')[0],
                                 r = e.lookupResponse,
                                 i = _(),
-                                o = new l({
+                                o = new u({
                                     channel: i,
                                     verifyDomain: a
                                 }),
@@ -9748,7 +9679,7 @@ var t;
                             );
                         }),
                         (y.prototype._setupV1Iframe = function (e) {
-                            return u({
+                            return l({
                                 src: this._assetsUrl + '/html/three-d-secure-bank-frame' + h(this._isDebug) + '.html?showLoader=' + e.showLoader,
                                 height: 400,
                                 width: 400,
@@ -9813,7 +9744,7 @@ var t;
                         (i.prototype._createV1IframeModalElement = function (e) {
                             var t = document.createElement('div'),
                                 n = !!(this._createOptions && this._createOptions.cardinalSDKConfig && this._createOptions.cardinalSDKConfig.payment && this._createOptions.cardinalSDKConfig.payment.displayExitButton);
-                            return (t.innerHTML = '<div style="position: fixed;z-index: 999999;top: 50%;left: 50%;padding: 24px 20px;transform: translate(-50%,-50%);border-radius: 2px;background: #fff;max-width: 100%;overflow: auto;"><div><button data-braintree-v1-fallback-close-button style="font-family: Helvetica,Arial,sans-serif;font-size: 25px;line-height: 12px;position: absolute;top: 2px;right: 0px;cursor: pointer;color: #999;border: 0;outline: none;background: none;" onMouseOver="this.style.color=\'#000\'" onMouseOut="this.style.color=\'#999\'">\xD7</button></div><div data-braintree-v1-fallback-iframe-container style="height: 400px;"></div></div><div data-braintree-v1-fallback-backdrop style="position: fixed;z-index: 999998;cursor: pointer;top: 0;left: 0;width: 100%;height: 100%;transition: opacity 1ms ease;background: rgba(0,0,0,.6);"></div>'), !n && (t.querySelector('[data-braintree-v1-fallback-close-button]').style.display = 'none'), t.querySelector('[data-braintree-v1-fallback-iframe-container]').appendChild(e), t;
+                            return (t.innerHTML = '<div style="position: fixed;z-index: 999999;top: 50%;left: 50%;padding: 24px 20px;transform: translate(-50%,-50%);border-radius: 2px;background: #fff;max-width: 100%;overflow: auto;"><div><button data-braintree-v1-fallback-close-button style="font-family: Helvetica,Arial,sans-serif;font-size: 25px;line-height: 12px;position: absolute;top: 2px;right: 0px;cursor: pointer;color: #999;border: 0;outline: none;background: none;" onMouseOver="this.style.color=\'#000\'" onMouseOut="this.style.color=\'#999\'">\xD7</button></div><div data-braintree-v1-fallback-iframe-container style="height: 400px;"></div></div><div data-braintree-v1-fallback-backdrop style="position: fixed;z-index: 999998;cursor: pointer;top: 0;left: 0;width: 100%;height: 100%;transition: opacity 1ms ease;background: rgba(0,0,0,.6);"></div>'), n || (t.querySelector('[data-braintree-v1-fallback-close-button]').style.display = 'none'), t.querySelector('[data-braintree-v1-fallback-iframe-container]').appendChild(e), t;
                         }),
                         (t.exports = i);
                 },
@@ -9868,7 +9799,7 @@ var t;
                         }),
                         (s.prototype._onInlineSetup = function (e, t, n, r) {
                             var a, c;
-                            if ((e && t ? ('CCA' !== t.paymentType ? (c = !0) : !('suppress' === t.data.mode || 'static' === t.data.mode) && (c = !0)) : (c = !0), c)) {
+                            if ((e && t ? ('CCA' !== t.paymentType ? (c = !0) : 'suppress' === t.data.mode || 'static' === t.data.mode || (c = !0)) : (c = !0), c)) {
                                 r(new i(o.THREEDS_INLINE_IFRAME_DETAILS_INCORRECT));
                                 return;
                             }
@@ -9965,8 +9896,8 @@ var t;
                         s = e('../../../lib/convert-to-braintree-error'),
                         c = e('../../../lib/analytics'),
                         d = e('../../../lib/assets'),
-                        u = e('../../shared/errors'),
-                        l = e('../../../lib/enumerate'),
+                        l = e('../../shared/errors'),
+                        u = e('../../../lib/enumerate'),
                         p = e('../../shared/constants'),
                         _ = e('@braintree/extended-promise'),
                         E = e('../../../lib/constants').INTEGRATION_TIMEOUT_MS,
@@ -9991,7 +9922,7 @@ var t;
                     }
                     (_.suppressUnhandledPromiseMessage = !0),
                         (A.prototype = Object.create(r.prototype, { constructor: A })),
-                        (A.events = l(['LOOKUP_COMPLETE', 'CUSTOMER_CANCELED', 'UI.CLOSE', 'UI.RENDER', 'UI.RENDERHIDDEN', 'UI.LOADING.CLOSE', 'UI.LOADING.RENDER'], 'songbird-framework:')),
+                        (A.events = u(['LOOKUP_COMPLETE', 'CUSTOMER_CANCELED', 'UI.CLOSE', 'UI.RENDER', 'UI.RENDERHIDDEN', 'UI.LOADING.CLOSE', 'UI.LOADING.RENDER'], 'songbird-framework:')),
                         (A.prototype.setUpEventListeners = function (e) {
                             this.on(A.events.LOOKUP_COMPLETE, function (t, n) {
                                 e('lookup-complete', t, n);
@@ -10067,11 +9998,11 @@ var t;
                                 r = t.querySelector('[data-braintree-v1-fallback-backdrop]'),
                                 i = this;
                             function o() {
-                                t.parentNode.removeChild(t), i.cancelVerifyCard(u.THREEDS_CARDINAL_SDK_CANCELED), document.removeEventListener('keyup', i._onV1Keyup), (i._onV1Keyup = null);
+                                t.parentNode.removeChild(t), i.cancelVerifyCard(l.THREEDS_CARDINAL_SDK_CANCELED), document.removeEventListener('keyup', i._onV1Keyup), (i._onV1Keyup = null);
                             }
                             return (
                                 (this._onV1Keyup = function (e) {
-                                    if ('Escape' === e.key && !!t.parentNode) o();
+                                    'Escape' === e.key && t.parentNode && o();
                                 }),
                                 n && n.addEventListener('click', o),
                                 r && r.addEventListener('click', o),
@@ -10085,30 +10016,31 @@ var t;
                         (A.prototype.setupSongbird = function (e) {
                             var t = this,
                                 n = Date.now();
-                            return this._songbirdPromise
-                                ? this._songbirdPromise
-                                : ((e = e || {}),
-                                  (this._songbirdPromise = new _()),
-                                  (this._v2SetupFailureReason = 'reason-unknown'),
-                                  t
-                                      ._loadCardinalScript(e)
-                                      .then(function () {
-                                          return window.Cardinal
-                                              ? t._configureCardinalSdk({
-                                                    setupOptions: e,
-                                                    setupStartTime: n
-                                                })
-                                              : ((t._v2SetupFailureReason = 'cardinal-global-unavailable'), Promise.reject(new a(u.THREEDS_CARDINAL_SDK_SETUP_FAILED)));
-                                      })
-                                      .catch(function (e) {
-                                          var n = s(e, {
-                                              type: u.THREEDS_CARDINAL_SDK_SETUP_FAILED.type,
-                                              code: u.THREEDS_CARDINAL_SDK_SETUP_FAILED.code,
-                                              message: u.THREEDS_CARDINAL_SDK_SETUP_FAILED.message
-                                          });
-                                          t._getDfReferenceIdPromisePlus.reject(n), window.clearTimeout(t._songbirdSetupTimeoutReference), c.sendEvent(t._client, 'three-d-secure.cardinal-sdk.init.setup-failed'), t.handleSongbirdError('cardinal-sdk-setup-failed.' + t._v2SetupFailureReason);
-                                      }),
-                                  this._songbirdPromise);
+                            return (
+                                this._songbirdPromise ||
+                                    ((e = e || {}),
+                                    (this._songbirdPromise = new _()),
+                                    (this._v2SetupFailureReason = 'reason-unknown'),
+                                    t
+                                        ._loadCardinalScript(e)
+                                        .then(function () {
+                                            return window.Cardinal
+                                                ? t._configureCardinalSdk({
+                                                      setupOptions: e,
+                                                      setupStartTime: n
+                                                  })
+                                                : ((t._v2SetupFailureReason = 'cardinal-global-unavailable'), Promise.reject(new a(l.THREEDS_CARDINAL_SDK_SETUP_FAILED)));
+                                        })
+                                        .catch(function (e) {
+                                            var n = s(e, {
+                                                type: l.THREEDS_CARDINAL_SDK_SETUP_FAILED.type,
+                                                code: l.THREEDS_CARDINAL_SDK_SETUP_FAILED.code,
+                                                message: l.THREEDS_CARDINAL_SDK_SETUP_FAILED.message
+                                            });
+                                            t._getDfReferenceIdPromisePlus.reject(n), window.clearTimeout(t._songbirdSetupTimeoutReference), c.sendEvent(t._client, 'three-d-secure.cardinal-sdk.init.setup-failed'), t.handleSongbirdError('cardinal-sdk-setup-failed.' + t._v2SetupFailureReason);
+                                        })),
+                                this._songbirdPromise
+                            );
                         }),
                         (A.prototype._configureCardinalSdk = function (e) {
                             var t = this;
@@ -10159,7 +10091,7 @@ var t;
                                     );
                                 })
                                 .catch(function (e) {
-                                    return (t._v2SetupFailureReason = 'songbird-js-failed-to-load'), Promise.reject(s(e, u.THREEDS_CARDINAL_SDK_SCRIPT_LOAD_FAILED));
+                                    return (t._v2SetupFailureReason = 'songbird-js-failed-to-load'), Promise.reject(s(e, l.THREEDS_CARDINAL_SDK_SCRIPT_LOAD_FAILED));
                                 });
                         }),
                         (A.prototype._getCardinalScriptSource = function () {
@@ -10201,9 +10133,9 @@ var t;
                                     })
                                     .catch(function (e) {
                                         var t = new a({
-                                            type: u.THREEDS_JWT_AUTHENTICATION_FAILED.type,
-                                            code: u.THREEDS_JWT_AUTHENTICATION_FAILED.code,
-                                            message: u.THREEDS_JWT_AUTHENTICATION_FAILED.message,
+                                            type: l.THREEDS_JWT_AUTHENTICATION_FAILED.type,
+                                            code: l.THREEDS_JWT_AUTHENTICATION_FAILED.code,
+                                            message: l.THREEDS_JWT_AUTHENTICATION_FAILED.message,
                                             details: { originalError: e }
                                         });
                                         return c.sendEvent(n._client, 'three-d-secure.verification-flow.upgrade-payment-method.errored'), Promise.reject(t);
@@ -10234,26 +10166,26 @@ var t;
                                         switch ((c.sendEvent(e._createPromise, 'three-d-secure.verification-flow.cardinal-sdk-error.' + t.ErrorNumber), t.ErrorNumber)) {
                                             case 10001:
                                             case 10002:
-                                                r = new a(u.THREEDS_CARDINAL_SDK_SETUP_TIMEDOUT);
+                                                r = new a(l.THREEDS_CARDINAL_SDK_SETUP_TIMEDOUT);
                                                 break;
                                             case 10003:
                                             case 10007:
                                             case 10009:
-                                                r = new a(u.THREEDS_CARDINAL_SDK_RESPONSE_TIMEDOUT);
+                                                r = new a(l.THREEDS_CARDINAL_SDK_RESPONSE_TIMEDOUT);
                                                 break;
                                             case 10005:
                                             case 10006:
-                                                r = new a(u.THREEDS_CARDINAL_SDK_BAD_CONFIG);
+                                                r = new a(l.THREEDS_CARDINAL_SDK_BAD_CONFIG);
                                                 break;
                                             case 10008:
                                             case 10010:
-                                                r = new a(u.THREEDS_CARDINAL_SDK_BAD_JWT);
+                                                r = new a(l.THREEDS_CARDINAL_SDK_BAD_JWT);
                                                 break;
                                             case 10011:
-                                                c.sendEvent(e._createPromise, 'three-d-secure.verification-flow.canceled'), (r = new a(u.THREEDS_CARDINAL_SDK_CANCELED));
+                                                c.sendEvent(e._createPromise, 'three-d-secure.verification-flow.canceled'), (r = new a(l.THREEDS_CARDINAL_SDK_CANCELED));
                                                 break;
                                             default:
-                                                r = new a(u.THREEDS_CARDINAL_SDK_ERROR);
+                                                r = new a(l.THREEDS_CARDINAL_SDK_ERROR);
                                         }
                                         (r.details = {
                                             originalError: {
@@ -10269,14 +10201,14 @@ var t;
                             return e.bin
                                 ? r.prototype._checkForVerifyCardError.call(this, e, t)
                                 : new a({
-                                      type: u.THREEDS_MISSING_VERIFY_CARD_OPTION.type,
-                                      code: u.THREEDS_MISSING_VERIFY_CARD_OPTION.code,
+                                      type: l.THREEDS_MISSING_VERIFY_CARD_OPTION.type,
+                                      code: l.THREEDS_MISSING_VERIFY_CARD_OPTION.code,
                                       message: 'verifyCard options must include a BIN.'
                                   });
                         }),
                         (A.prototype._checkForFrameworkSpecificVerifyCardErrors = function (e, t) {
                             var n;
-                            return 'function' != typeof e.onLookupComplete && !t.ignoreOnLookupCompleteRequirement && (n = 'an onLookupComplete function'), n;
+                            return 'function' == typeof e.onLookupComplete || t.ignoreOnLookupCompleteRequirement || (n = 'an onLookupComplete function'), n;
                         }),
                         (A.prototype._formatVerifyCardOptions = function (e) {
                             var t = r.prototype._formatVerifyCardOptions.call(this, e),
@@ -10295,7 +10227,8 @@ var t;
                             });
                         }),
                         (A.prototype._presentChallenge = function (e) {
-                            if (!this._songbirdInitFailed && !!e.lookup.transactionId)
+                            !this._songbirdInitFailed &&
+                                e.lookup.transactionId &&
                                 window.Cardinal.continue(
                                     'cca',
                                     {
@@ -10311,8 +10244,8 @@ var t;
                                 if (((n.additionalInfo = e.additionalInformation), e.accountType && (n.accountType = e.accountType), e.challengeRequested && (n.challengeRequested = e.challengeRequested), e.requestedExemptionType)) {
                                     if (!y.includes(e.requestedExemptionType))
                                         throw new a({
-                                            code: u.THREEDS_REQUESTED_EXEMPTION_TYPE_INVALID.code,
-                                            type: u.THREEDS_REQUESTED_EXEMPTION_TYPE_INVALID.type,
+                                            code: l.THREEDS_REQUESTED_EXEMPTION_TYPE_INVALID.code,
+                                            type: l.THREEDS_REQUESTED_EXEMPTION_TYPE_INVALID.type,
                                             message: 'requestedExemptionType `' + e.requestedExemptionType + '` is not a valid exemption. The accepted values are: `' + y.join('`, `') + '`'
                                         });
                                     n.requestedExemptionType = e.requestedExemptionType;
@@ -10323,7 +10256,7 @@ var t;
                         (A.prototype.cancelVerifyCard = function (e) {
                             var t = this;
                             return r.prototype.cancelVerifyCard.call(this).then(function (n) {
-                                return t._verifyCardPromisePlus && ((e = e || new a(u.THREEDS_VERIFY_CARD_CANCELED_BY_MERCHANT)), t._verifyCardPromisePlus.reject(e)), n;
+                                return t._verifyCardPromisePlus && ((e = e || new a(l.THREEDS_VERIFY_CARD_CANCELED_BY_MERCHANT)), t._verifyCardPromisePlus.reject(e)), n;
                             });
                         }),
                         (A.prototype._removeSongbirdListeners = function () {
@@ -10416,18 +10349,18 @@ var t;
                         s = e('../lib/create-assets-url'),
                         c = e('../lib/braintree-error'),
                         d = e('../lib/analytics'),
-                        u = e('./shared/errors'),
-                        l = e('@braintree/wrap-promise');
+                        l = e('./shared/errors'),
+                        u = e('@braintree/wrap-promise');
                     t.exports = {
-                        create: l(function (e) {
+                        create: u(function (e) {
                             var t = '3D Secure',
                                 n = (function (e) {
                                     var t = String(e.version || '');
                                     if (!t || '1' === t)
                                         throw new c({
-                                            code: u.THREEDS_UNSUPPORTED_VERSION.code,
-                                            type: u.THREEDS_UNSUPPORTED_VERSION.type,
-                                            message: u.THREEDS_UNSUPPORTED_VERSION.message
+                                            code: l.THREEDS_UNSUPPORTED_VERSION.code,
+                                            type: l.THREEDS_UNSUPPORTED_VERSION.type,
+                                            message: l.THREEDS_UNSUPPORTED_VERSION.message
                                         });
                                     switch (t) {
                                         case '2':
@@ -10439,8 +10372,8 @@ var t;
                                             return 'inline-iframe';
                                         default:
                                             throw new c({
-                                                code: u.THREEDS_UNRECOGNIZED_VERSION.code,
-                                                type: u.THREEDS_UNRECOGNIZED_VERSION.type,
+                                                code: l.THREEDS_UNRECOGNIZED_VERSION.code,
+                                                type: l.THREEDS_UNRECOGNIZED_VERSION.type,
                                                 message: 'Version `' + e.version + '` is not a recognized version. You may need to update the version of your Braintree SDK to support this version.'
                                             });
                                     }
@@ -10453,7 +10386,7 @@ var t;
                                 })
                                 .then(function () {
                                     var o = s.create(e.authorization),
-                                        l = a
+                                        u = a
                                             .create({
                                                 authorization: e.authorization,
                                                 client: e.client,
@@ -10465,18 +10398,18 @@ var t;
                                                 var r,
                                                     o = t.getConfiguration(),
                                                     a = o.gatewayConfiguration;
-                                                return ((e.client = t), !a.threeDSecureEnabled && (r = u.THREEDS_NOT_ENABLED), 'TOKENIZATION_KEY' === o.authorizationType && (r = u.THREEDS_CAN_NOT_USE_TOKENIZATION_KEY), 'production' === a.environment && !i() && (r = u.THREEDS_HTTPS_REQUIRED), 'legacy' !== n && !(a.threeDSecure && a.threeDSecure.cardinalAuthenticationJWT) && (d.sendEvent(e.client, 'three-d-secure.initialization.failed.missing-cardinalAuthenticationJWT'), (r = u.THREEDS_NOT_ENABLED_FOR_V2)), r) ? Promise.reject(new c(r)) : (d.sendEvent(e.client, 'three-d-secure.initialized'), t);
+                                                return ((e.client = t), a.threeDSecureEnabled || (r = l.THREEDS_NOT_ENABLED), 'TOKENIZATION_KEY' === o.authorizationType && (r = l.THREEDS_CAN_NOT_USE_TOKENIZATION_KEY), 'production' !== a.environment || i() || (r = l.THREEDS_HTTPS_REQUIRED), 'legacy' === n || (a.threeDSecure && a.threeDSecure.cardinalAuthenticationJWT) || (d.sendEvent(e.client, 'three-d-secure.initialization.failed.missing-cardinalAuthenticationJWT'), (r = l.THREEDS_NOT_ENABLED_FOR_V2)), r) ? Promise.reject(new c(r)) : (d.sendEvent(e.client, 'three-d-secure.initialized'), t);
                                             }),
                                         p = new r({
                                             client: e.client,
                                             assetsUrl: o,
-                                            createPromise: l,
+                                            createPromise: u,
                                             loggingEnabled: e.loggingEnabled,
                                             cardinalSDKConfig: e.cardinalSDKConfig,
                                             framework: n
                                         });
                                     return e.client
-                                        ? l.then(function () {
+                                        ? u.then(function () {
                                               return p;
                                           })
                                         : p;
@@ -10661,9 +10594,9 @@ var t;
                         s = e('../lib/create-assets-url'),
                         c = e('../lib/analytics'),
                         d = e('./shared/errors'),
-                        u = e('@braintree/wrap-promise');
+                        l = e('@braintree/wrap-promise');
                     t.exports = {
-                        create: u(function (e) {
+                        create: l(function (e) {
                             var t = 'UnionPay';
                             return i
                                 .verify({
@@ -10786,8 +10719,8 @@ var t;
                         s = e('../../lib/is-verified-domain'),
                         c = e('../../lib/use-min'),
                         d = e('../../lib/convert-methods-to-error'),
-                        u = e('./errors'),
-                        l = a.events,
+                        l = e('./errors'),
+                        u = a.events,
                         p = e('@braintree/iframer'),
                         _ = e('../../lib/methods'),
                         E = e('@braintree/uuid'),
@@ -10801,48 +10734,49 @@ var t;
                             n = this._options.client,
                             o = e.card ? e.card.number : null,
                             a = e.hostedFields;
-                        if (o && a) return Promise.reject(new i(u.UNIONPAY_CARD_AND_HOSTED_FIELDS_INSTANCES));
-                        if (o)
-                            return n
-                                .request({
-                                    method: 'get',
-                                    endpoint: 'payment_methods/credit_cards/capabilities',
-                                    data: {
-                                        _meta: { source: 'unionpay' },
-                                        creditCard: { number: o }
-                                    }
-                                })
-                                .then(function (e) {
-                                    return r.sendEvent(n, 'unionpay.capabilities-received'), e;
-                                })
-                                .catch(function (e) {
-                                    var t = e.details && e.details.httpStatus;
-                                    return (r.sendEvent(n, 'unionpay.capabilities-failed'), 403 === t)
-                                        ? Promise.reject(e)
-                                        : Promise.reject(
-                                              new i({
-                                                  type: u.UNIONPAY_FETCH_CAPABILITIES_NETWORK_ERROR.type,
-                                                  code: u.UNIONPAY_FETCH_CAPABILITIES_NETWORK_ERROR.code,
-                                                  message: u.UNIONPAY_FETCH_CAPABILITIES_NETWORK_ERROR.message,
-                                                  details: { originalError: e }
-                                              })
-                                          );
-                                });
-                        if (a)
-                            return a._bus
-                                ? t._initializeHostedFields().then(function () {
-                                      return new Promise(function (e, n) {
-                                          t._bus.emit(l.HOSTED_FIELDS_FETCH_CAPABILITIES, { hostedFields: a }, function (t) {
-                                              if (t.err) {
-                                                  n(new i(t.err));
-                                                  return;
-                                              }
-                                              e(t.payload);
+                        return o && a
+                            ? Promise.reject(new i(l.UNIONPAY_CARD_AND_HOSTED_FIELDS_INSTANCES))
+                            : o
+                              ? n
+                                    .request({
+                                        method: 'get',
+                                        endpoint: 'payment_methods/credit_cards/capabilities',
+                                        data: {
+                                            _meta: { source: 'unionpay' },
+                                            creditCard: { number: o }
+                                        }
+                                    })
+                                    .then(function (e) {
+                                        return r.sendEvent(n, 'unionpay.capabilities-received'), e;
+                                    })
+                                    .catch(function (e) {
+                                        var t = e.details && e.details.httpStatus;
+                                        return (r.sendEvent(n, 'unionpay.capabilities-failed'), 403 === t)
+                                            ? Promise.reject(e)
+                                            : Promise.reject(
+                                                  new i({
+                                                      type: l.UNIONPAY_FETCH_CAPABILITIES_NETWORK_ERROR.type,
+                                                      code: l.UNIONPAY_FETCH_CAPABILITIES_NETWORK_ERROR.code,
+                                                      message: l.UNIONPAY_FETCH_CAPABILITIES_NETWORK_ERROR.message,
+                                                      details: { originalError: e }
+                                                  })
+                                              );
+                                    })
+                              : a
+                                ? a._bus
+                                    ? t._initializeHostedFields().then(function () {
+                                          return new Promise(function (e, n) {
+                                              t._bus.emit(u.HOSTED_FIELDS_FETCH_CAPABILITIES, { hostedFields: a }, function (t) {
+                                                  if (t.err) {
+                                                      n(new i(t.err));
+                                                      return;
+                                                  }
+                                                  e(t.payload);
+                                              });
                                           });
-                                      });
-                                  })
-                                : Promise.reject(new i(u.UNIONPAY_HOSTED_FIELDS_INSTANCE_INVALID));
-                        return Promise.reject(new i(u.UNIONPAY_CARD_OR_HOSTED_FIELDS_INSTANCE_REQUIRED));
+                                      })
+                                    : Promise.reject(new i(l.UNIONPAY_HOSTED_FIELDS_INSTANCE_INVALID))
+                                : Promise.reject(new i(l.UNIONPAY_CARD_OR_HOSTED_FIELDS_INSTANCE_REQUIRED));
                     }),
                         (f.prototype.enroll = function (e) {
                             var t,
@@ -10851,15 +10785,15 @@ var t;
                                 a = e.card,
                                 s = e.mobile,
                                 c = e.hostedFields;
-                            if (!s) return Promise.reject(new i(u.UNIONPAY_MISSING_MOBILE_PHONE_DATA));
+                            if (!s) return Promise.reject(new i(l.UNIONPAY_MISSING_MOBILE_PHONE_DATA));
                             if (c)
                                 return c._bus
                                     ? a
-                                        ? Promise.reject(new i(u.UNIONPAY_CARD_AND_HOSTED_FIELDS_INSTANCES))
+                                        ? Promise.reject(new i(l.UNIONPAY_CARD_AND_HOSTED_FIELDS_INSTANCES))
                                         : new Promise(function (e, t) {
                                               n._initializeHostedFields().then(function () {
                                                   n._bus.emit(
-                                                      l.HOSTED_FIELDS_ENROLL,
+                                                      u.HOSTED_FIELDS_ENROLL,
                                                       {
                                                           hostedFields: c,
                                                           mobile: s
@@ -10874,7 +10808,7 @@ var t;
                                                   );
                                               });
                                           })
-                                    : Promise.reject(new i(u.UNIONPAY_HOSTED_FIELDS_INSTANCE_INVALID));
+                                    : Promise.reject(new i(l.UNIONPAY_HOSTED_FIELDS_INSTANCE_INVALID));
                             if (a && a.number) {
                                 if (
                                     ((t = {
@@ -10889,7 +10823,7 @@ var t;
                                 )
                                     t.unionPayEnrollment.expirationDate = a.expirationDate;
                                 else if (a.expirationMonth || a.expirationYear) {
-                                    if (!a.expirationMonth || !a.expirationYear) return Promise.reject(new i(u.UNIONPAY_EXPIRATION_DATE_INCOMPLETE));
+                                    if (!a.expirationMonth || !a.expirationYear) return Promise.reject(new i(l.UNIONPAY_EXPIRATION_DATE_INCOMPLETE));
                                     (t.unionPayEnrollment.expirationYear = a.expirationYear), (t.unionPayEnrollment.expirationMonth = a.expirationMonth);
                                 }
                                 return o
@@ -10910,10 +10844,10 @@ var t;
                                     .catch(function (e) {
                                         var t,
                                             n = e.details && e.details.httpStatus;
-                                        return 403 === n ? (t = e) : n < 500 ? ((t = new i(u.UNIONPAY_ENROLLMENT_CUSTOMER_INPUT_INVALID)).details = { originalError: e }) : ((t = new i(u.UNIONPAY_ENROLLMENT_NETWORK_ERROR)).details = { originalError: e }), r.sendEvent(o, 'unionpay.enrollment-failed'), Promise.reject(t);
+                                        return 403 === n ? (t = e) : n < 500 ? ((t = new i(l.UNIONPAY_ENROLLMENT_CUSTOMER_INPUT_INVALID)).details = { originalError: e }) : ((t = new i(l.UNIONPAY_ENROLLMENT_NETWORK_ERROR)).details = { originalError: e }), r.sendEvent(o, 'unionpay.enrollment-failed'), Promise.reject(t);
                                     });
                             }
-                            return Promise.reject(new i(u.UNIONPAY_CARD_OR_HOSTED_FIELDS_INSTANCE_REQUIRED));
+                            return Promise.reject(new i(l.UNIONPAY_CARD_OR_HOSTED_FIELDS_INSTANCE_REQUIRED));
                         }),
                         (f.prototype.tokenize = function (e) {
                             var t,
@@ -10921,10 +10855,10 @@ var t;
                                 o = this._options.client,
                                 a = e.card,
                                 s = e.hostedFields;
-                            if (a && s) return Promise.reject(new i(u.UNIONPAY_CARD_AND_HOSTED_FIELDS_INSTANCES));
-                            if (a)
-                                return (
-                                    (t = {
+                            return a && s
+                                ? Promise.reject(new i(l.UNIONPAY_CARD_AND_HOSTED_FIELDS_INSTANCES))
+                                : a
+                                  ? ((t = {
                                         _meta: { source: 'unionpay' },
                                         creditCard: {
                                             number: e.card.number,
@@ -10947,24 +10881,23 @@ var t;
                                         .catch(function (e) {
                                             var t,
                                                 n = e.details && e.details.httpStatus;
-                                            return r.sendEvent(o, 'unionpay.nonce-failed'), 403 === n ? (t = e) : n < 500 ? ((t = new i(u.UNIONPAY_FAILED_TOKENIZATION)).details = { originalError: e }) : ((t = new i(u.UNIONPAY_TOKENIZATION_NETWORK_ERROR)).details = { originalError: e }), Promise.reject(t);
-                                        })
-                                );
-                            if (s)
-                                return s._bus
-                                    ? new Promise(function (t, r) {
-                                          n._initializeHostedFields().then(function () {
-                                              n._bus.emit(l.HOSTED_FIELDS_TOKENIZE, e, function (e) {
-                                                  if (e.err) {
-                                                      r(new i(e.err));
-                                                      return;
-                                                  }
-                                                  t(e.payload);
+                                            return r.sendEvent(o, 'unionpay.nonce-failed'), 403 === n ? (t = e) : n < 500 ? ((t = new i(l.UNIONPAY_FAILED_TOKENIZATION)).details = { originalError: e }) : ((t = new i(l.UNIONPAY_TOKENIZATION_NETWORK_ERROR)).details = { originalError: e }), Promise.reject(t);
+                                        }))
+                                  : s
+                                    ? s._bus
+                                        ? new Promise(function (t, r) {
+                                              n._initializeHostedFields().then(function () {
+                                                  n._bus.emit(u.HOSTED_FIELDS_TOKENIZE, e, function (e) {
+                                                      if (e.err) {
+                                                          r(new i(e.err));
+                                                          return;
+                                                      }
+                                                      t(e.payload);
+                                                  });
                                               });
-                                          });
-                                      })
-                                    : Promise.reject(new i(u.UNIONPAY_HOSTED_FIELDS_INSTANCE_INVALID));
-                            return Promise.reject(new i(u.UNIONPAY_CARD_OR_HOSTED_FIELDS_INSTANCE_REQUIRED));
+                                          })
+                                        : Promise.reject(new i(l.UNIONPAY_HOSTED_FIELDS_INSTANCE_INVALID))
+                                    : Promise.reject(new i(l.UNIONPAY_CARD_OR_HOSTED_FIELDS_INSTANCE_REQUIRED));
                         }),
                         (f.prototype.teardown = function () {
                             return this._bus && (this._hostedFieldsFrame.parentNode.removeChild(this._hostedFieldsFrame), this._bus.teardown()), d(this, _(f.prototype)), Promise.resolve();
@@ -10974,27 +10907,28 @@ var t;
                                 t,
                                 n = E(),
                                 r = this;
-                            return this._hostedFieldsInitializePromise
-                                ? this._hostedFieldsInitializePromise
-                                : ((this._hostedFieldsInitializePromise = new Promise(function (i) {
-                                      (e = r._options.client.getConfiguration().gatewayConfiguration.assetsUrl),
-                                          (t = r._options.client.getConfiguration().isDebug),
-                                          (r._bus = new o({
-                                              channel: n,
-                                              verifyDomain: s
-                                          })),
-                                          (r._hostedFieldsFrame = p({
-                                              name: a.HOSTED_FIELDS_FRAME_NAME + '_' + n,
-                                              src: e + '/web/3.112.1/html/unionpay-hosted-fields-frame' + c(t) + '.html',
-                                              height: 0,
-                                              width: 0
-                                          })),
-                                          r._bus.on(m, function (e) {
-                                              e(r._options.client), i();
-                                          }),
-                                          document.body.appendChild(r._hostedFieldsFrame);
-                                  })),
-                                  this._hostedFieldsInitializePromise);
+                            return (
+                                this._hostedFieldsInitializePromise ||
+                                    (this._hostedFieldsInitializePromise = new Promise(function (i) {
+                                        (e = r._options.client.getConfiguration().gatewayConfiguration.assetsUrl),
+                                            (t = r._options.client.getConfiguration().isDebug),
+                                            (r._bus = new o({
+                                                channel: n,
+                                                verifyDomain: s
+                                            })),
+                                            (r._hostedFieldsFrame = p({
+                                                name: a.HOSTED_FIELDS_FRAME_NAME + '_' + n,
+                                                src: e + '/web/3.112.1/html/unionpay-hosted-fields-frame' + c(t) + '.html',
+                                                height: 0,
+                                                width: 0
+                                            })),
+                                            r._bus.on(m, function (e) {
+                                                e(r._options.client), i();
+                                            }),
+                                            document.body.appendChild(r._hostedFieldsFrame);
+                                    })),
+                                this._hostedFieldsInitializePromise
+                            );
                         }),
                         (t.exports = h.wrapPrototype(f));
                 },
@@ -11124,8 +11058,8 @@ var t;
                         s = e('../lib/analytics'),
                         c = e('../lib/once'),
                         d = e('../lib/convert-methods-to-error'),
-                        u = e('../lib/methods'),
-                        l = e('@braintree/wrap-promise'),
+                        l = e('../lib/methods'),
+                        u = e('@braintree/wrap-promise'),
                         p = T('UsBankAccount'),
                         _ = T('UsBankLogin');
                     function E(e) {
@@ -11134,7 +11068,7 @@ var t;
                     function h(e) {
                         var t,
                             n = e.details && e.details.httpStatus;
-                        return ((t = 401 === n ? new r(a.BRAINTREE_API_ACCESS_RESTRICTED) : n < 500 ? new r(o.US_BANK_ACCOUNT_FAILED_TOKENIZATION) : new r(o.US_BANK_ACCOUNT_TOKENIZATION_NETWORK_ERROR)).details = { originalError: e }), t;
+                        return ((t = new r(401 === n ? a.BRAINTREE_API_ACCESS_RESTRICTED : n < 500 ? o.US_BANK_ACCOUNT_FAILED_TOKENIZATION : o.US_BANK_ACCOUNT_TOKENIZATION_NETWORK_ERROR)).details = { originalError: e }), t;
                     }
                     function m(e, t) {
                         var n = e.data[t].paymentMethod,
@@ -11149,11 +11083,7 @@ var t;
                     function f(e, t) {
                         function n() {
                             var r = this.readyState;
-                            (!r || 'loaded' === r || 'complete' === r) &&
-                                ((function () {
-                                    e.removeEventListener('error', i), e.removeEventListener('load', n), e.removeEventListener('readystatechange', n);
-                                })(),
-                                t(null, window.Plaid));
+                            (r && 'loaded' !== r && 'complete' !== r) || (e.removeEventListener('error', i), e.removeEventListener('load', n), e.removeEventListener('readystatechange', n), t(null, window.Plaid));
                         }
                         function i() {
                             e.parentNode.removeChild(e), t(new r(o.US_BANK_ACCOUNT_LOGIN_LOAD_FAILED));
@@ -11181,31 +11111,33 @@ var t;
                         return 'mutation Tokenize' + e + '($input: Tokenize' + e + 'Input!) {  tokenize' + e + '(input: $input) {    paymentMethod {      id      details {        ... on UsBankAccountDetails {          last4        }      }    }  }}';
                     }
                     (E.prototype.tokenize = function (e) {
-                        if (!(e = e || {}).mandateText)
-                            return Promise.reject(
-                                new r({
-                                    type: o.US_BANK_ACCOUNT_OPTION_REQUIRED.type,
-                                    code: o.US_BANK_ACCOUNT_OPTION_REQUIRED.code,
-                                    message: 'mandateText property is required.'
-                                })
-                            );
-                        if (e.bankDetails && e.bankLogin)
-                            return Promise.reject(
-                                new r({
-                                    type: o.US_BANK_ACCOUNT_MUTUALLY_EXCLUSIVE_OPTIONS.type,
-                                    code: o.US_BANK_ACCOUNT_MUTUALLY_EXCLUSIVE_OPTIONS.code,
-                                    message: 'tokenize must be called with bankDetails or bankLogin, not both.'
-                                })
-                            );
-                        if (e.bankDetails) return this._tokenizeBankDetails(e);
-                        if (e.bankLogin) return this._tokenizeBankLogin(e);
-                        return Promise.reject(
-                            new r({
-                                type: o.US_BANK_ACCOUNT_OPTION_REQUIRED.type,
-                                code: o.US_BANK_ACCOUNT_OPTION_REQUIRED.code,
-                                message: 'tokenize must be called with bankDetails or bankLogin.'
-                            })
-                        );
+                        return (e = e || {}).mandateText
+                            ? e.bankDetails && e.bankLogin
+                                ? Promise.reject(
+                                      new r({
+                                          type: o.US_BANK_ACCOUNT_MUTUALLY_EXCLUSIVE_OPTIONS.type,
+                                          code: o.US_BANK_ACCOUNT_MUTUALLY_EXCLUSIVE_OPTIONS.code,
+                                          message: 'tokenize must be called with bankDetails or bankLogin, not both.'
+                                      })
+                                  )
+                                : e.bankDetails
+                                  ? this._tokenizeBankDetails(e)
+                                  : e.bankLogin
+                                    ? this._tokenizeBankLogin(e)
+                                    : Promise.reject(
+                                          new r({
+                                              type: o.US_BANK_ACCOUNT_OPTION_REQUIRED.type,
+                                              code: o.US_BANK_ACCOUNT_OPTION_REQUIRED.code,
+                                              message: 'tokenize must be called with bankDetails or bankLogin.'
+                                          })
+                                      )
+                            : Promise.reject(
+                                  new r({
+                                      type: o.US_BANK_ACCOUNT_OPTION_REQUIRED.type,
+                                      code: o.US_BANK_ACCOUNT_OPTION_REQUIRED.code,
+                                      message: 'mandateText property is required.'
+                                  })
+                              );
                     }),
                         (E.prototype._tokenizeBankDetails = function (e) {
                             var t = this._client,
@@ -11248,12 +11180,12 @@ var t;
                                         ? Promise.reject(new r(o.US_BANK_ACCOUNT_LOGIN_REQUEST_ACTIVE))
                                         : ((this._isTokenizingBankLogin = !0),
                                           new Promise(function (i, d) {
-                                              t._loadPlaid(function (u, l) {
-                                                  if (u) {
-                                                      d(u);
+                                              t._loadPlaid(function (l, u) {
+                                                  if (l) {
+                                                      d(l);
                                                       return;
                                                   }
-                                                  l
+                                                  u
                                                       .create({
                                                           clientName: e.bankLogin.displayName,
                                                           apiVersion: 'v2',
@@ -11266,20 +11198,20 @@ var t;
                                                           },
                                                           onSuccess: function (r, o) {
                                                               var c = e.bankLogin,
-                                                                  u = {
+                                                                  l = {
                                                                       publicToken: r,
                                                                       accountId: a ? o.account_id : 'plaid_account_id',
                                                                       accountType: o.account.subtype.toUpperCase(),
                                                                       achMandate: e.mandateText,
                                                                       billingAddress: y(c.billingAddress || {})
                                                                   };
-                                                              A(u, c),
+                                                              A(l, c),
                                                                   n
                                                                       .request({
                                                                           api: 'graphQLApi',
                                                                           data: {
                                                                               query: _,
-                                                                              variables: { input: { usBankLogin: u } }
+                                                                              variables: { input: { usBankLogin: l } }
                                                                           }
                                                                       })
                                                                       .then(function (e) {
@@ -11313,9 +11245,9 @@ var t;
                             (t = document.querySelector('script[src="' + i.PLAID_LINK_JS + '"]')) ? f(t, e) : (((n = document.createElement('script')).src = i.PLAID_LINK_JS), (n.async = !0), f(n, e), document.body.appendChild(n), (this._plaidScript = n));
                         }),
                         (E.prototype.teardown = function () {
-                            return this._plaidScript && document.body.removeChild(this._plaidScript), d(this, u(E.prototype)), Promise.resolve();
+                            return this._plaidScript && document.body.removeChild(this._plaidScript), d(this, l(E.prototype)), Promise.resolve();
                         }),
-                        (t.exports = l.wrapPrototype(E));
+                        (t.exports = u.wrapPrototype(E));
                 },
                 {
                     '../lib/analytics': 138,
@@ -11400,7 +11332,7 @@ var t;
                     function d(e) {
                         this._createPromise = e.createPromise;
                     }
-                    function u(e) {
+                    function l(e) {
                         var t = {
                             nonce: e.nonce,
                             default: e.default,
@@ -11424,7 +11356,7 @@ var t;
                                 })
                                 .then(
                                     function (e) {
-                                        return r.sendEvent(this._createPromise, 'vault-manager.fetch-payment-methods.succeeded'), e.paymentMethods.map(u);
+                                        return r.sendEvent(this._createPromise, 'vault-manager.fetch-payment-methods.succeeded'), e.paymentMethods.map(l);
                                     }.bind(this)
                                 )
                         );
@@ -11458,7 +11390,7 @@ var t;
                                                           message: 'A payment method for payment method nonce `' + e + '` could not be found.',
                                                           details: { originalError: s }
                                                       })),
-                                                  !a &&
+                                                  a ||
                                                       (a = new i({
                                                           type: o.VAULT_MANAGER_DELETE_PAYMENT_METHOD_UNKNOWN_ERROR.type,
                                                           code: o.VAULT_MANAGER_DELETE_PAYMENT_METHOD_UNKNOWN_ERROR.code,
@@ -11512,7 +11444,7 @@ var t;
                                 return (r =
                                     Object.assign ||
                                     function (e) {
-                                        for (var t, n = 1, r = arguments.length; n < r; n++) for (var i in ((t = arguments[n]), t)) Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i]);
+                                        for (var t, n = 1, r = arguments.length; n < r; n++) for (var i in (t = arguments[n])) Object.prototype.hasOwnProperty.call(t, i) && (e[i] = t[i]);
                                         return e;
                                     }).apply(this, arguments);
                             },
@@ -11527,7 +11459,7 @@ var t;
                         s = i(e('@braintree/uuid')),
                         c = e('../shared/events'),
                         d = e('./queries'),
-                        u = (function () {
+                        l = (function () {
                             function e(e) {
                                 (this.isHidden = !0), (this.env = e.environment), (this.id = s.default()), (this.profileId = e.profileId), (this.displayName = e.displayName), (this.paymentMethodUsage = e.paymentMethodUsage), (this.shouldUseLegacyQRCodeMutation = !this.paymentMethodUsage);
                                 var t = e.url + '#' + this.env + '_' + this.id;
@@ -11628,7 +11560,7 @@ var t;
                                 }),
                                 (e.prototype.triggerCompleted = function (e) {
                                     var t = this;
-                                    if (!this.isHidden)
+                                    !this.isHidden &&
                                         setTimeout(function () {
                                             t.completedHandler && t.completedHandler(e), delete t.completedHandler;
                                         }, 2000);
@@ -11640,21 +11572,21 @@ var t;
                                     this.setAlert(''), (this.iframe.style.display = 'none'), this.bus.emit(c.VENMO_DESKTOP_CLOSED_FROM_PARENT), (this.isHidden = !0);
                                 }),
                                 (e.prototype.displayError = function (e) {
-                                    if (!this.isHidden) this.bus.emit(c.VENMO_DESKTOP_DISPLAY_ERROR, { message: e }), this.setAlert(e);
+                                    !this.isHidden && (this.bus.emit(c.VENMO_DESKTOP_DISPLAY_ERROR, { message: e }), this.setAlert(e));
                                 }),
                                 (e.prototype.displayQRCode = function (e, t) {
-                                    if (!this.isHidden)
-                                        this.bus.emit(c.VENMO_DESKTOP_DISPLAY_QR_CODE, {
+                                    !this.isHidden &&
+                                        (this.bus.emit(c.VENMO_DESKTOP_DISPLAY_QR_CODE, {
                                             id: e,
                                             merchantId: t
                                         }),
-                                            this.setAlert('To scan the QR code, open your Venmo app');
+                                        this.setAlert('To scan the QR code, open your Venmo app'));
                                 }),
                                 (e.prototype.authorize = function () {
-                                    if (!this.isHidden) this.bus.emit(c.VENMO_DESKTOP_AUTHORIZE), this.setAlert('Venmo account authorized');
+                                    !this.isHidden && (this.bus.emit(c.VENMO_DESKTOP_AUTHORIZE), this.setAlert('Venmo account authorized'));
                                 }),
                                 (e.prototype.authorizing = function () {
-                                    if (!this.isHidden) this.bus.emit(c.VENMO_DESKTOP_AUTHORIZING), this.setAlert('Authorize on your Venmo app');
+                                    !this.isHidden && (this.bus.emit(c.VENMO_DESKTOP_AUTHORIZING), this.setAlert('Authorize on your Venmo app'));
                                 }),
                                 (e.prototype.startPolling = function () {
                                     var e = this;
@@ -11665,7 +11597,7 @@ var t;
                                             return e.displayQRCode(t.id, t.merchantId), e.pollForStatusChange(t.status, r);
                                         })
                                         .then(function (t) {
-                                            if (!!t) {
+                                            if (t) {
                                                 var n = t.userName || '';
                                                 (n = '@' + n.replace('@', '')),
                                                     e.triggerCompleted({
@@ -11677,7 +11609,7 @@ var t;
                                             }
                                         })
                                         .catch(function (t) {
-                                            if (!t.allowUIToHandleError) e.sendEvent('venmo.tokenize.desktop.unhandled-error'), e.triggerRejected(t);
+                                            !t.allowUIToHandleError && (e.sendEvent('venmo.tokenize.desktop.unhandled-error'), e.triggerRejected(t));
                                         });
                                 }),
                                 (e.prototype.pollForStatusChange = function (e, t) {
@@ -11794,7 +11726,7 @@ var t;
                                 e
                             );
                         })();
-                    n.default = u;
+                    n.default = l;
                 },
                 {
                     '../shared/events': 241,
@@ -11813,8 +11745,8 @@ var t;
                         s = e('./shared/errors'),
                         c = e('@braintree/wrap-promise'),
                         d = e('../lib/braintree-error'),
-                        u = e('./venmo'),
-                        l = e('./shared/supports-venmo');
+                        l = e('./venmo'),
+                        u = e('./shared/supports-venmo');
                     t.exports = {
                         create: c(function (e) {
                             var t = 'Venmo';
@@ -11843,7 +11775,7 @@ var t;
                                                     return ((e.client = t), n.gatewayConfiguration.payWithVenmo) ? t : Promise.reject(new d(s.VENMO_NOT_ENABLED));
                                                 })),
                                             (e.createPromise = n),
-                                            (i = new u(e)),
+                                            (i = new l(e)),
                                             r.sendEvent(n, 'venmo.initialized'),
                                             n.then(function () {
                                                 return i;
@@ -11851,7 +11783,7 @@ var t;
                                 });
                         }),
                         isBrowserSupported: function (e) {
-                            return l.isBrowserSupported(e);
+                            return u.isBrowserSupported(e);
                         },
                         VERSION: '3.112.1'
                     };
@@ -12077,14 +12009,12 @@ var t;
                         a = e('../shared/errors'),
                         s = e('../../lib/braintree-error'),
                         c = 'venmo-desktop-web-backdrop',
-                        d = 'venmo-desktop-web-backdrop.hidden',
-                        u = 'venmo-backdrop-container',
+                        d = 'venmo-backdrop-container',
                         l = 'venmo-popup-cancel-button',
-                        p = 'venmo-popup-continue-button',
-                        _ = 'venmo-message',
-                        E = 'venmo-instructions',
-                        h = 'venmo-full-logo';
-                    function m(e) {
+                        u = 'venmo-popup-continue-button',
+                        p = 'venmo-message',
+                        _ = 'venmo-instructions';
+                    function E(e) {
                         var t = e.frameServiceInstance,
                             n = e.venmoUrl,
                             r = e.checkForStatusChange,
@@ -12092,11 +12022,11 @@ var t;
                             c = e.checkPaymentContextStatus,
                             d = new o();
                         return (
-                            document.getElementById(p).addEventListener('click', function () {
+                            document.getElementById(u).addEventListener('click', function () {
                                 t.focus();
                             }),
                             document.getElementById(l).addEventListener('click', function () {
-                                t.close(), i(), f();
+                                t.close(), i(), h();
                             }),
                             t.open({}, function (e) {
                                 e
@@ -12111,101 +12041,101 @@ var t;
                                               });
                                           }),
                                     t.close(),
-                                    f();
+                                    h();
                             }),
                             t.redirect(n),
                             d
                         );
                     }
-                    o.suppressUnhandledPromiseMessage = !0;
-                    function f() {
+                    function h() {
                         document.getElementById('venmo-desktop-web-backdrop').classList.add('hidden');
                     }
-                    t.exports = {
-                        runWebLogin: function (e) {
-                            return (
-                                !(function () {
-                                    var e,
-                                        t,
-                                        n,
-                                        r,
-                                        i,
-                                        o,
-                                        a,
-                                        s,
-                                        m = document.getElementById(c);
-                                    if (m) {
-                                        m.classList.remove('hidden');
-                                        return;
-                                    }
-                                    (e = document.createElement('style')),
-                                        (t = document.createElement('div')),
-                                        (n = document.createElement('div')),
-                                        (r = document.createElement('div')),
-                                        (i = document.createElement('div')),
-                                        (o = document.createElement('div')),
-                                        (a = document.createElement('button')),
-                                        (s = document.createElement('button')),
-                                        (e.id = 'venmo-desktop-web__injected-styles'),
-                                        (e.innerHTML = ['#' + d + ' {', 'display: none;', '}', '#' + c + ' {', 'z-index: 3141592632;', 'cursor: pointer;', 'position: fixed;', 'top: 0;', 'left: 0;', 'bottom: 0;', 'width: 100%;', 'background: rgba(0, 0, 0, 0.8);', '}'].concat(['#' + u + ' {', 'display: flex;', 'align-content: center;', 'justify-content: center;', 'align-items: center;', 'width: 100%;', 'height: 100%;', 'flex-direction: column;', '}'], ['#' + l + ' {', 'height: 24px;', 'width: 380px;', "font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;", 'font-style: normal;', 'font-weight: 700;', 'font-size: 18px;', 'line-height: 24px;', 'text-align: center;', 'background-color: transparent;', 'border: none;', 'color: #FFFFFF;', 'margin-top: 28px;', '}'], ['#' + p + ' {', 'width: 400px;', 'height: 50px;', 'background: #0074DE;', 'border-radius: 24px;', 'border: none;', "font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;", 'font-style: normal;', 'font-weight: 700;', 'font-size: 18px;', 'color: #FFFFFF;', 'margin-top: 44px;', '}'], ['#' + _ + ' {', "font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;", 'font-style: normal;', 'font-weight: 500;', 'font-size: 24px;', 'line-height: 32px;', 'text-align: center;', 'color: #FFFFFF;', 'margin-top: 32px;', '}'], ['#' + E + ' {', "font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;", 'font-style: normal;', 'font-weight: 400;', 'font-size: 16px;', 'line-height: 20px;', 'text-align: center;', 'color: #FFFFFF;', 'margin-top: 16px;', 'width: 400px;', '}']).join('\n')),
-                                        (t.id = c),
-                                        (n.id = u),
-                                        (r.id = h),
-                                        (r.innerHTML = '<svg width="198" height="58" viewBox="0 0 198 58" fill="none" xmlns="http://www.w3.org/2000/svg">\n  <path fill-rule="evenodd" clip-rule="evenodd" d="M43.0702 13.6572C44.1935 15.4585 44.6999 17.3139 44.6999 19.6576C44.6999 27.1328 38.1277 36.8436 32.7935 43.6625H20.6099L15.7236 15.2939L26.3917 14.3105L28.9751 34.4966C31.389 30.6783 34.3678 24.6779 34.3678 20.587C34.3678 18.3477 33.9727 16.8225 33.3553 15.5666L43.0702 13.6572Z" fill="white"/>\n  <path fill-rule="evenodd" clip-rule="evenodd" d="M56.8965 26.1491C58.8596 26.1491 63.8018 25.2772 63.8018 22.5499C63.8018 21.2402 62.8481 20.587 61.7242 20.587C59.7579 20.587 57.1776 22.8763 56.8965 26.1491ZM56.6715 31.5506C56.6715 34.8807 58.5787 36.1873 61.107 36.1873C63.8603 36.1873 66.4966 35.534 69.923 33.8433L68.6324 42.3523C66.2183 43.4976 62.4559 44.2617 58.8039 44.2617C49.5403 44.2617 46.2249 38.8071 46.2249 31.9879C46.2249 23.1496 51.6179 13.765 62.7365 13.765C68.858 13.765 72.2809 17.0949 72.2809 21.7317C72.2815 29.2066 62.4005 31.4965 56.6715 31.5506Z" fill="white"/>\n  <path fill-rule="evenodd" clip-rule="evenodd" d="M103.067 20.3142C103.067 21.4052 102.897 22.9875 102.727 24.0216L99.5262 43.6622H89.1385L92.0585 25.658C92.1139 25.1696 92.284 24.1865 92.284 23.6411C92.284 22.3314 91.4414 22.0047 90.4282 22.0047C89.0826 22.0047 87.7337 22.6042 86.8354 23.0418L83.5234 43.6625H73.0772L77.8495 14.257H86.8908L87.0052 16.6041C89.1382 15.2404 91.9469 13.7656 95.932 13.7656C101.212 13.765 103.067 16.3845 103.067 20.3142Z" fill="white"/>\n  <path fill-rule="evenodd" clip-rule="evenodd" d="M133.906 16.9841C136.881 14.9131 139.69 13.765 143.563 13.765C148.897 13.765 150.753 16.3845 150.753 20.3142C150.753 21.4052 150.583 22.9875 150.413 24.0216L147.216 43.6622H136.825L139.801 25.2774C139.855 24.786 139.971 24.1865 139.971 23.8063C139.971 22.3317 139.128 22.0047 138.115 22.0047C136.824 22.0047 135.535 22.5501 134.577 23.0418L131.266 43.6625H120.878L123.854 25.2777C123.908 24.7863 124.02 24.1868 124.02 23.8065C124.02 22.332 123.177 22.0049 122.167 22.0049C120.819 22.0049 119.473 22.6045 118.574 23.0421L115.26 43.6628H104.817L109.589 14.2573H118.52L118.8 16.7122C120.878 15.241 123.684 13.7662 127.446 13.7662C130.704 13.765 132.837 15.129 133.906 16.9841Z" fill="white"/>\n  <path fill-rule="evenodd" clip-rule="evenodd" d="M171.426 25.5502C171.426 23.1496 170.808 21.513 168.956 21.513C164.857 21.513 164.015 28.55 164.015 32.1498C164.015 34.8807 164.802 36.5709 166.653 36.5709C170.528 36.5709 171.426 29.1497 171.426 25.5502ZM153.458 31.7152C153.458 22.442 158.511 13.765 170.136 13.765C178.896 13.765 182.098 18.7854 182.098 25.7148C182.098 34.8805 177.099 44.3723 165.194 44.3723C156.378 44.3723 153.458 38.7525 153.458 31.7152Z" fill="white"/>\n</svg>'),
-                                        (i.id = _),
-                                        (i.innerText = 'What would you like to do?'),
-                                        (o.id = E),
-                                        (o.innerText = 'Tap cancel payment to cancel and return to the business. Continue payment will relaunch the payment window.'),
-                                        (a.id = p),
-                                        (a.innerText = 'Continue payment'),
-                                        (s.id = l),
-                                        (s.innerText = 'Cancel payment'),
-                                        document.head.appendChild(e),
-                                        n.appendChild(r),
-                                        n.appendChild(i),
-                                        n.appendChild(o),
-                                        n.appendChild(a),
-                                        n.appendChild(s),
-                                        t.appendChild(n),
-                                        document.body.appendChild(t),
-                                        t.addEventListener('click', function (e) {
-                                            e.stopPropagation();
-                                        });
-                                })(),
-                                m(e)
-                            );
-                        },
-                        openPopup: m,
-                        setupDesktopWebLogin: function (e) {
-                            var t = new o(),
-                                n = e.assetsUrl,
-                                a = e.debug || !1,
-                                s = {
-                                    top: Math.round((window.outerHeight - 570) / 2) + window.screenTop,
-                                    left: Math.round((window.outerWidth - 400) / 2) + window.screenLeft
-                                },
-                                c = n + '/web/3.112.1/html';
-                            return (
-                                r.create(
-                                    {
-                                        name: 'venmoDesktopWebLogin',
-                                        dispatchFrameUrl: c + '/dispatch-frame' + i(a) + '.html',
-                                        openFrameUrl: c + '/venmo-landing-frame' + i(a) + '.html',
-                                        top: s.top,
-                                        left: s.left,
-                                        height: 570,
-                                        width: 400
+                    (o.suppressUnhandledPromiseMessage = !0),
+                        (t.exports = {
+                            runWebLogin: function (e) {
+                                return (
+                                    (function () {
+                                        var e,
+                                            t,
+                                            n,
+                                            r,
+                                            i,
+                                            o,
+                                            a,
+                                            s,
+                                            E = document.getElementById(c);
+                                        if (E) {
+                                            E.classList.remove('hidden');
+                                            return;
+                                        }
+                                        (e = document.createElement('style')),
+                                            (t = document.createElement('div')),
+                                            (n = document.createElement('div')),
+                                            (r = document.createElement('div')),
+                                            (i = document.createElement('div')),
+                                            (o = document.createElement('div')),
+                                            (a = document.createElement('button')),
+                                            (s = document.createElement('button')),
+                                            (e.id = 'venmo-desktop-web__injected-styles'),
+                                            (e.innerHTML = ['#venmo-desktop-web-backdrop.hidden {', 'display: none;', '}', '#' + c + ' {', 'z-index: 3141592632;', 'cursor: pointer;', 'position: fixed;', 'top: 0;', 'left: 0;', 'bottom: 0;', 'width: 100%;', 'background: rgba(0, 0, 0, 0.8);', '}'].concat(['#' + d + ' {', 'display: flex;', 'align-content: center;', 'justify-content: center;', 'align-items: center;', 'width: 100%;', 'height: 100%;', 'flex-direction: column;', '}'], ['#' + l + ' {', 'height: 24px;', 'width: 380px;', "font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;", 'font-style: normal;', 'font-weight: 700;', 'font-size: 18px;', 'line-height: 24px;', 'text-align: center;', 'background-color: transparent;', 'border: none;', 'color: #FFFFFF;', 'margin-top: 28px;', '}'], ['#' + u + ' {', 'width: 400px;', 'height: 50px;', 'background: #0074DE;', 'border-radius: 24px;', 'border: none;', "font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;", 'font-style: normal;', 'font-weight: 700;', 'font-size: 18px;', 'color: #FFFFFF;', 'margin-top: 44px;', '}'], ['#' + p + ' {', "font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;", 'font-style: normal;', 'font-weight: 500;', 'font-size: 24px;', 'line-height: 32px;', 'text-align: center;', 'color: #FFFFFF;', 'margin-top: 32px;', '}'], ['#' + _ + ' {', "font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;", 'font-style: normal;', 'font-weight: 400;', 'font-size: 16px;', 'line-height: 20px;', 'text-align: center;', 'color: #FFFFFF;', 'margin-top: 16px;', 'width: 400px;', '}']).join('\n')),
+                                            (t.id = c),
+                                            (n.id = d),
+                                            (r.id = 'venmo-full-logo'),
+                                            (r.innerHTML = '<svg width="198" height="58" viewBox="0 0 198 58" fill="none" xmlns="http://www.w3.org/2000/svg">\n  <path fill-rule="evenodd" clip-rule="evenodd" d="M43.0702 13.6572C44.1935 15.4585 44.6999 17.3139 44.6999 19.6576C44.6999 27.1328 38.1277 36.8436 32.7935 43.6625H20.6099L15.7236 15.2939L26.3917 14.3105L28.9751 34.4966C31.389 30.6783 34.3678 24.6779 34.3678 20.587C34.3678 18.3477 33.9727 16.8225 33.3553 15.5666L43.0702 13.6572Z" fill="white"/>\n  <path fill-rule="evenodd" clip-rule="evenodd" d="M56.8965 26.1491C58.8596 26.1491 63.8018 25.2772 63.8018 22.5499C63.8018 21.2402 62.8481 20.587 61.7242 20.587C59.7579 20.587 57.1776 22.8763 56.8965 26.1491ZM56.6715 31.5506C56.6715 34.8807 58.5787 36.1873 61.107 36.1873C63.8603 36.1873 66.4966 35.534 69.923 33.8433L68.6324 42.3523C66.2183 43.4976 62.4559 44.2617 58.8039 44.2617C49.5403 44.2617 46.2249 38.8071 46.2249 31.9879C46.2249 23.1496 51.6179 13.765 62.7365 13.765C68.858 13.765 72.2809 17.0949 72.2809 21.7317C72.2815 29.2066 62.4005 31.4965 56.6715 31.5506Z" fill="white"/>\n  <path fill-rule="evenodd" clip-rule="evenodd" d="M103.067 20.3142C103.067 21.4052 102.897 22.9875 102.727 24.0216L99.5262 43.6622H89.1385L92.0585 25.658C92.1139 25.1696 92.284 24.1865 92.284 23.6411C92.284 22.3314 91.4414 22.0047 90.4282 22.0047C89.0826 22.0047 87.7337 22.6042 86.8354 23.0418L83.5234 43.6625H73.0772L77.8495 14.257H86.8908L87.0052 16.6041C89.1382 15.2404 91.9469 13.7656 95.932 13.7656C101.212 13.765 103.067 16.3845 103.067 20.3142Z" fill="white"/>\n  <path fill-rule="evenodd" clip-rule="evenodd" d="M133.906 16.9841C136.881 14.9131 139.69 13.765 143.563 13.765C148.897 13.765 150.753 16.3845 150.753 20.3142C150.753 21.4052 150.583 22.9875 150.413 24.0216L147.216 43.6622H136.825L139.801 25.2774C139.855 24.786 139.971 24.1865 139.971 23.8063C139.971 22.3317 139.128 22.0047 138.115 22.0047C136.824 22.0047 135.535 22.5501 134.577 23.0418L131.266 43.6625H120.878L123.854 25.2777C123.908 24.7863 124.02 24.1868 124.02 23.8065C124.02 22.332 123.177 22.0049 122.167 22.0049C120.819 22.0049 119.473 22.6045 118.574 23.0421L115.26 43.6628H104.817L109.589 14.2573H118.52L118.8 16.7122C120.878 15.241 123.684 13.7662 127.446 13.7662C130.704 13.765 132.837 15.129 133.906 16.9841Z" fill="white"/>\n  <path fill-rule="evenodd" clip-rule="evenodd" d="M171.426 25.5502C171.426 23.1496 170.808 21.513 168.956 21.513C164.857 21.513 164.015 28.55 164.015 32.1498C164.015 34.8807 164.802 36.5709 166.653 36.5709C170.528 36.5709 171.426 29.1497 171.426 25.5502ZM153.458 31.7152C153.458 22.442 158.511 13.765 170.136 13.765C178.896 13.765 182.098 18.7854 182.098 25.7148C182.098 34.8805 177.099 44.3723 165.194 44.3723C156.378 44.3723 153.458 38.7525 153.458 31.7152Z" fill="white"/>\n</svg>'),
+                                            (i.id = p),
+                                            (i.innerText = 'What would you like to do?'),
+                                            (o.id = _),
+                                            (o.innerText = 'Tap cancel payment to cancel and return to the business. Continue payment will relaunch the payment window.'),
+                                            (a.id = u),
+                                            (a.innerText = 'Continue payment'),
+                                            (s.id = l),
+                                            (s.innerText = 'Cancel payment'),
+                                            document.head.appendChild(e),
+                                            n.appendChild(r),
+                                            n.appendChild(i),
+                                            n.appendChild(o),
+                                            n.appendChild(a),
+                                            n.appendChild(s),
+                                            t.appendChild(n),
+                                            document.body.appendChild(t),
+                                            t.addEventListener('click', function (e) {
+                                                e.stopPropagation();
+                                            });
+                                    })(),
+                                    E(e)
+                                );
+                            },
+                            openPopup: E,
+                            setupDesktopWebLogin: function (e) {
+                                var t = new o(),
+                                    n = e.assetsUrl,
+                                    a = e.debug || !1,
+                                    s = {
+                                        top: Math.round((window.outerHeight - 570) / 2) + window.screenTop,
+                                        left: Math.round((window.outerWidth - 400) / 2) + window.screenLeft
                                     },
-                                    function (e) {
-                                        t.resolve(e);
-                                    }
-                                ),
-                                t
-                            );
-                        },
-                        POPUP_WIDTH: 400,
-                        POPUP_HEIGHT: 570
-                    };
+                                    c = n + '/web/3.112.1/html';
+                                return (
+                                    r.create(
+                                        {
+                                            name: 'venmoDesktopWebLogin',
+                                            dispatchFrameUrl: c + '/dispatch-frame' + i(a) + '.html',
+                                            openFrameUrl: c + '/venmo-landing-frame' + i(a) + '.html',
+                                            top: s.top,
+                                            left: s.left,
+                                            height: 570,
+                                            width: 400
+                                        },
+                                        function (e) {
+                                            t.resolve(e);
+                                        }
+                                    ),
+                                    t
+                                );
+                            },
+                            POPUP_WIDTH: 400,
+                            POPUP_HEIGHT: 570
+                        });
                 },
                 {
                     '../../lib/braintree-error': 143,
@@ -12224,8 +12154,8 @@ var t;
                         s = e('./shared/errors'),
                         c = e('../lib/querystring'),
                         d = e('../lib/is-verified-domain'),
-                        u = e('../lib/methods'),
-                        l = e('../lib/convert-methods-to-error'),
+                        l = e('../lib/methods'),
+                        u = e('../lib/convert-methods-to-error'),
                         p = e('@braintree/wrap-promise'),
                         _ = e('../lib/braintree-error'),
                         E = e('../lib/in-iframe'),
@@ -12333,17 +12263,14 @@ var t;
                                                     return r.sendEvent(t._createPromise, 'venmo.' + o + '.presented'), e;
                                                 })
                                                 .catch(function (e) {
+                                                    var n;
                                                     return (
                                                         r.sendEvent(t._createPromise, 'venmo.' + o + '.setup-failed'),
                                                         Promise.reject(
                                                             new _({
                                                                 type: s.VENMO_MOBILE_PAYMENT_CONTEXT_SETUP_FAILED.type,
                                                                 code: s.VENMO_MOBILE_PAYMENT_CONTEXT_SETUP_FAILED.code,
-                                                                message: (function (e) {
-                                                                    return e.details && e.details.originalError && e.details.originalError[0] && e.details.originalError[0].extensions && 'VALIDATION' === e.details.originalError[0].extensions.errorClass && 'user_error' === e.details.originalError[0].extensions.errorType;
-                                                                })(e)
-                                                                    ? e.details.originalError[0].message
-                                                                    : s.VENMO_MOBILE_PAYMENT_CONTEXT_SETUP_FAILED.message,
+                                                                message: (n = e).details && n.details.originalError && n.details.originalError[0] && n.details.originalError[0].extensions && 'VALIDATION' === n.details.originalError[0].extensions.errorClass && 'user_error' === n.details.originalError[0].extensions.errorType ? e.details.originalError[0].message : s.VENMO_MOBILE_PAYMENT_CONTEXT_SETUP_FAILED.message,
                                                                 details: { originalError: e }
                                                             })
                                                         )
@@ -12360,7 +12287,6 @@ var t;
                                         );
                                     })));
                     }
-                    h.suppressUnhandledPromiseMessage = !0;
                     function g(e) {
                         var t = (e || window.location.hash.substring(1)).split('&').reduce(function (e, t) {
                             var n = t.split('='),
@@ -12373,96 +12299,90 @@ var t;
                     function P(e) {
                         return '@' + (e = e || '').replace('@', '');
                     }
-                    (O.prototype._createVenmoPaymentContext = function (e, t) {
-                        var n,
-                            r,
-                            i = this,
-                            o = e.getConfiguration().gatewayConfiguration.payWithVenmo,
-                            a = !1,
-                            c = i._useAllowDesktopWebLogin ? 'NATIVE_WEB' : 'MOBILE_WEB';
-                        if (!this._shouldCreateVenmoPaymentContext) return Promise.resolve();
-                        if (this._shouldUseLegacyFlow)
-                            n = e
-                                .request({
-                                    api: 'graphQLApi',
-                                    data: {
-                                        query: I.LEGACY_CREATE_PAYMENT_CONTEXT_QUERY,
-                                        variables: {
-                                            input: {
-                                                environment: this._mobilePollingContextEnvironment,
-                                                intent: 'PAY_FROM_APP'
-                                            }
-                                        }
-                                    }
-                                })
-                                .then(function (e) {
-                                    return e.data.createVenmoQRCodePaymentContext.venmoQRCodePaymentContext;
-                                });
-                        else {
-                            if ((this._collectCustomerBillingAddress || this._collectCustomerShippingAddress) && !o.enrichedCustomerDataEnabled) return Promise.reject(new _(s.VENMO_ECD_DISABLED));
-                            this._lineItems &&
-                                this._lineItems.forEach(function (e) {
-                                    e.unitTaxAmount = e.unitTaxAmount || '0';
-                                }),
-                                (a = Object.keys(
-                                    (r = {
-                                        subTotalAmount: this._subTotalAmount,
-                                        discountAmount: this._discountAmount,
-                                        taxAmount: this._taxAmount,
-                                        shippingAmount: this._shippingAmount,
-                                        totalAmount: this._totalAmount,
-                                        lineItems: this._lineItems
-                                    })
-                                ).some(function (e) {
-                                    return void 0 !== r[e];
-                                })),
-                                (n = e
+                    function b() {
+                        var e;
+                        return void 0 !== window.document.hidden ? (e = 'visibilitychange') : void 0 !== window.document.msHidden ? (e = 'msvisibilitychange') : void 0 !== window.document.webkitHidden && (e = 'webkitvisibilitychange'), e;
+                    }
+                    (h.suppressUnhandledPromiseMessage = !0),
+                        (O.prototype._createVenmoPaymentContext = function (e, t) {
+                            var n,
+                                r,
+                                i = this,
+                                o = e.getConfiguration().gatewayConfiguration.payWithVenmo,
+                                a = !1,
+                                c = i._useAllowDesktopWebLogin ? 'NATIVE_WEB' : 'MOBILE_WEB';
+                            if (!this._shouldCreateVenmoPaymentContext) return Promise.resolve();
+                            if (this._shouldUseLegacyFlow)
+                                n = e
                                     .request({
                                         api: 'graphQLApi',
                                         data: {
-                                            query: I.CREATE_PAYMENT_CONTEXT_QUERY,
+                                            query: I.LEGACY_CREATE_PAYMENT_CONTEXT_QUERY,
                                             variables: {
                                                 input: {
-                                                    paymentMethodUsage: this._paymentMethodUsage,
-                                                    intent: 'CONTINUE',
-                                                    customerClient: c,
-                                                    isFinalAmount: this._isFinalAmount,
-                                                    displayName: this._displayName,
-                                                    paysheetDetails: {
-                                                        collectCustomerBillingAddress: this._collectCustomerBillingAddress,
-                                                        collectCustomerShippingAddress: this._collectCustomerShippingAddress,
-                                                        transactionDetails: a ? r : void 0
-                                                    }
+                                                    environment: this._mobilePollingContextEnvironment,
+                                                    intent: 'PAY_FROM_APP'
                                                 }
                                             }
                                         }
                                     })
                                     .then(function (e) {
-                                        return e.data.createVenmoPaymentContext.venmoPaymentContext;
-                                    }));
-                        }
-                        return n.then(function (n) {
-                            var r = new Date(n.expiresAt) - new Date(n.createdAt);
-                            if (
-                                (clearTimeout(i._refreshPaymentContextTimeout),
-                                (i._refreshPaymentContextTimeout = setTimeout(function () {
-                                    if (!i._tokenizationInProgress) i._createVenmoPaymentContext(e, !0);
-                                }, 0.6666 * r)),
-                                !t || !i._tokenizationInProgress)
-                            )
-                                (i._venmoPaymentContextStatus = n.status), (i._venmoPaymentContextId = n.id);
-                        });
-                    }),
+                                        return e.data.createVenmoQRCodePaymentContext.venmoQRCodePaymentContext;
+                                    });
+                            else {
+                                if ((this._collectCustomerBillingAddress || this._collectCustomerShippingAddress) && !o.enrichedCustomerDataEnabled) return Promise.reject(new _(s.VENMO_ECD_DISABLED));
+                                this._lineItems &&
+                                    this._lineItems.forEach(function (e) {
+                                        e.unitTaxAmount = e.unitTaxAmount || '0';
+                                    }),
+                                    (a = Object.keys(
+                                        (r = {
+                                            subTotalAmount: this._subTotalAmount,
+                                            discountAmount: this._discountAmount,
+                                            taxAmount: this._taxAmount,
+                                            shippingAmount: this._shippingAmount,
+                                            totalAmount: this._totalAmount,
+                                            lineItems: this._lineItems
+                                        })
+                                    ).some(function (e) {
+                                        return void 0 !== r[e];
+                                    })),
+                                    (n = e
+                                        .request({
+                                            api: 'graphQLApi',
+                                            data: {
+                                                query: I.CREATE_PAYMENT_CONTEXT_QUERY,
+                                                variables: {
+                                                    input: {
+                                                        paymentMethodUsage: this._paymentMethodUsage,
+                                                        intent: 'CONTINUE',
+                                                        customerClient: c,
+                                                        isFinalAmount: this._isFinalAmount,
+                                                        displayName: this._displayName,
+                                                        paysheetDetails: {
+                                                            collectCustomerBillingAddress: this._collectCustomerBillingAddress,
+                                                            collectCustomerShippingAddress: this._collectCustomerShippingAddress,
+                                                            transactionDetails: a ? r : void 0
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        })
+                                        .then(function (e) {
+                                            return e.data.createVenmoPaymentContext.venmoPaymentContext;
+                                        }));
+                            }
+                            return n.then(function (n) {
+                                var r = new Date(n.expiresAt) - new Date(n.createdAt);
+                                clearTimeout(i._refreshPaymentContextTimeout),
+                                    (i._refreshPaymentContextTimeout = setTimeout(function () {
+                                        !i._tokenizationInProgress && i._createVenmoPaymentContext(e, !0);
+                                    }, 0.6666 * r)),
+                                    (!t || !i._tokenizationInProgress) && ((i._venmoPaymentContextStatus = n.status), (i._venmoPaymentContextId = n.id));
+                            });
+                        }),
                         (O.prototype.appSwitch = function (e) {
-                            this._deepLinkReturnUrl
-                                ? (function () {
-                                      return window.navigator.platform && /iPhone|iPad|iPod/.test(window.navigator.platform);
-                                  })()
-                                    ? (r.sendEvent(this._createPromise, 'venmo.appswitch.start.ios-webview'), (window.location.href = e))
-                                    : window.popupBridge && 'function' == typeof window.popupBridge.open
-                                      ? (r.sendEvent(this._createPromise, 'venmo.appswitch.start.popup-bridge'), window.popupBridge.open(e))
-                                      : (r.sendEvent(this._createPromise, 'venmo.appswitch.start.webview'), window.open(e))
-                                : (r.sendEvent(this._createPromise, 'venmo.appswitch.start.browser'), o.doesNotSupportWindowOpenInIos() || this._shouldUseRedirectStrategy() ? (window.location.href = e) : window.open(e));
+                            this._deepLinkReturnUrl ? (window.navigator.platform && /iPhone|iPad|iPod/.test(window.navigator.platform) ? (r.sendEvent(this._createPromise, 'venmo.appswitch.start.ios-webview'), (window.location.href = e)) : window.popupBridge && 'function' == typeof window.popupBridge.open ? (r.sendEvent(this._createPromise, 'venmo.appswitch.start.popup-bridge'), window.popupBridge.open(e)) : (r.sendEvent(this._createPromise, 'venmo.appswitch.start.webview'), window.open(e))) : (r.sendEvent(this._createPromise, 'venmo.appswitch.start.browser'), o.doesNotSupportWindowOpenInIos() || this._shouldUseRedirectStrategy() ? (window.location.href = e) : window.open(e));
                         }),
                         (O.prototype.getUrl = function () {
                             return this._createPromise.then(
@@ -12531,26 +12451,26 @@ var t;
                             return ((e = e || {}), !0 === this._tokenizationInProgress)
                                 ? Promise.reject(new _(s.VENMO_TOKENIZATION_REQUEST_ACTIVE))
                                 : ((this._tokenizationInProgress = !0),
-                                  (t = this._useDesktopQRFlow ? this._tokenizeForDesktopQRFlow(e) : this._useAllowDesktopWebLogin ? this._tokenizeWebLoginWithRedirect() : this._cannotHaveReturnUrls ? this._tokenizeForMobileWithManualReturn() : this._tokenizeForMobileWithHashChangeListeners(e))
+                                  (this._useDesktopQRFlow ? this._tokenizeForDesktopQRFlow(e) : this._useAllowDesktopWebLogin ? this._tokenizeWebLoginWithRedirect() : this._cannotHaveReturnUrls ? this._tokenizeForMobileWithManualReturn() : this._tokenizeForMobileWithHashChangeListeners(e))
                                       .then(function (e) {
                                           return n._createPromise
                                               .then(function (e) {
                                                   return n._createVenmoPaymentContext(e);
                                               })
                                               .then(function () {
+                                                  var t, r;
                                                   return (
                                                       (n._tokenizationInProgress = !1),
-                                                      (function (e) {
-                                                          var t = {
-                                                              nonce: e.paymentMethodNonce,
-                                                              type: 'VenmoAccount',
-                                                              details: {
-                                                                  username: P(e.username),
-                                                                  paymentContextId: e.id
-                                                              }
-                                                          };
-                                                          return e.payerInfo && ((t.details.payerInfo = e.payerInfo), (t.details.payerInfo.userName = P(e.payerInfo.userName))), t;
-                                                      })(e)
+                                                      (r = {
+                                                          nonce: (t = e).paymentMethodNonce,
+                                                          type: 'VenmoAccount',
+                                                          details: {
+                                                              username: P(t.username),
+                                                              paymentContextId: t.id
+                                                          }
+                                                      }),
+                                                      t.payerInfo && ((r.details.payerInfo = t.payerInfo), (r.details.payerInfo.userName = P(t.payerInfo.userName))),
+                                                      r
                                                   );
                                               });
                                       })
@@ -12723,7 +12643,7 @@ var t;
                                         t = e;
                                     })
                                     .then(function (e) {
-                                        !i._ignoreHistoryChanges && window.location.hash !== i._previousHash && (window.location.hash = i._previousHash), i._removeVisibilityEventListener(), t ? i._tokenizePromise.reject(t) : i._tokenizePromise.resolve(e), delete i._tokenizePromise;
+                                        i._ignoreHistoryChanges || window.location.hash === i._previousHash || (window.location.hash = i._previousHash), i._removeVisibilityEventListener(), t ? i._tokenizePromise.reject(t) : i._tokenizePromise.resolve(e), delete i._tokenizePromise;
                                     });
                             }
                             return (
@@ -12732,12 +12652,12 @@ var t;
                                 (this._previousHash = window.location.hash),
                                 (this._onHashChangeListener = function (e) {
                                     var r = e.newURL.split('#')[1];
-                                    if (!!i._hasTokenizationResult(r)) (t = !0), clearTimeout(n), o(r);
+                                    i._hasTokenizationResult(r) && ((t = !0), clearTimeout(n), o(r));
                                 }),
                                 window.addEventListener('hashchange', this._onHashChangeListener, !1),
                                 (this._visibilityChangeListener = function () {
                                     var r = e.processResultsDelay || a.DEFAULT_PROCESS_RESULTS_DELAY;
-                                    !window.document.hidden && !t && (n = setTimeout(o, r));
+                                    window.document.hidden || t || (n = setTimeout(o, r));
                                 }),
                                 this.getUrl().then(function (e) {
                                     return (
@@ -12812,7 +12732,7 @@ var t;
                                 this._removeVisibilityEventListener(),
                                 this._createPromise.then(
                                     function () {
-                                        e._venmoDesktopInstance && e._venmoDesktopInstance.teardown(), clearTimeout(e._refreshPaymentContextTimeout), e._cancelMobilePaymentContext(), l(this, u(O.prototype));
+                                        e._venmoDesktopInstance && e._venmoDesktopInstance.teardown(), clearTimeout(e._refreshPaymentContextTimeout), e._cancelMobilePaymentContext(), u(this, l(O.prototype));
                                     }.bind(this)
                                 )
                             );
@@ -12865,13 +12785,9 @@ var t;
                             });
                         }),
                         (O.prototype._clearFragmentParameters = function () {
-                            if (!this._ignoreHistoryChanges) 'function' == typeof window.history.replaceState && window.location.hash && history.pushState({}, '', window.location.href.slice(0, window.location.href.indexOf('#')));
-                        });
-                    function b() {
-                        var e;
-                        return void 0 !== window.document.hidden ? (e = 'visibilitychange') : void 0 !== window.document.msHidden ? (e = 'msvisibilitychange') : void 0 !== window.document.webkitHidden && (e = 'webkitvisibilitychange'), e;
-                    }
-                    t.exports = p.wrapPrototype(O);
+                            !this._ignoreHistoryChanges && 'function' == typeof window.history.replaceState && window.location.hash && history.pushState({}, '', window.location.href.slice(0, window.location.href.indexOf('#')));
+                        }),
+                        (t.exports = p.wrapPrototype(O));
                 },
                 {
                     '../lib/analytics': 138,
@@ -12932,9 +12848,9 @@ var t;
                         s = e('./visa-checkout'),
                         c = e('../lib/analytics'),
                         d = e('./errors'),
-                        u = e('@braintree/wrap-promise');
+                        l = e('@braintree/wrap-promise');
                     t.exports = {
-                        create: u(function (e) {
+                        create: l(function (e) {
                             var t = 'Visa Checkout';
                             return r
                                 .verify({
@@ -12978,27 +12894,35 @@ var t;
                         s = e('../lib/methods'),
                         c = e('../lib/convert-methods-to-error'),
                         d = e('@braintree/wrap-promise'),
-                        u = {
+                        l = {
                             Visa: 'VISA',
                             MasterCard: 'MASTERCARD',
                             Discover: 'DISCOVER',
                             'American Express': 'AMEX'
                         };
-                    function l(e) {
+                    function u(e) {
                         this._client = e.client;
                     }
-                    (l.prototype.createInitOptions = function (e) {
+                    (u.prototype.createInitOptions = function (e) {
                         var t,
                             n = this._client.getConfiguration().gatewayConfiguration,
                             i = n.visaCheckout;
                         if (!e) throw new r(o.VISA_CHECKOUT_INIT_OPTIONS_REQUIRED);
-                        if ((((t = a(e)).apikey = t.apikey || i.apikey), (t.encryptionKey = i.encryptionKey), (t.externalClientId = t.externalClientId || i.externalClientId), (t.settings = t.settings || {}), (t.settings.dataLevel = 'FULL'), (t.settings.payment = t.settings.payment || {}), !t.settings.payment.cardBrands))
-                            t.settings.payment.cardBrands = n.visaCheckout.supportedCardTypes.reduce(function (e, t) {
-                                return u.hasOwnProperty(t) ? e.concat(u[t]) : e;
-                            }, []);
-                        return t;
+                        return (
+                            ((t = a(e)).apikey = t.apikey || i.apikey),
+                            (t.encryptionKey = i.encryptionKey),
+                            (t.externalClientId = t.externalClientId || i.externalClientId),
+                            (t.settings = t.settings || {}),
+                            (t.settings.dataLevel = 'FULL'),
+                            (t.settings.payment = t.settings.payment || {}),
+                            !t.settings.payment.cardBrands &&
+                                (t.settings.payment.cardBrands = n.visaCheckout.supportedCardTypes.reduce(function (e, t) {
+                                    return l.hasOwnProperty(t) ? e.concat(l[t]) : e;
+                                }, [])),
+                            t
+                        );
                     }),
-                        (l.prototype.tokenize = function (e) {
+                        (u.prototype.tokenize = function (e) {
                             var t = this;
                             return e.callid && e.encKey && e.encPaymentData
                                 ? this._client
@@ -13032,10 +12956,10 @@ var t;
                                       })
                                 : Promise.reject(new r(o.VISA_CHECKOUT_PAYMENT_REQUIRED));
                         }),
-                        (l.prototype.teardown = function () {
-                            return c(this, s(l.prototype)), Promise.resolve();
+                        (u.prototype.teardown = function () {
+                            return c(this, s(u.prototype)), Promise.resolve();
                         }),
-                        (t.exports = d.wrapPrototype(l));
+                        (t.exports = d.wrapPrototype(u));
                 },
                 {
                     '../lib/analytics': 138,

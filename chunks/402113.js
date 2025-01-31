@@ -1,31 +1,27 @@
-r.d(n, {
-    Z: function () {
-        return c;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(481060),
-    o = r(513202),
-    s = r(861254),
-    l = r(871499),
-    u = r(388032);
-function c(e) {
-    let { location: n, applicationId: r, centerButton: c = !1, ...d } = e,
-        { groupedButtons: f } = (0, s.ZP)({ location: 'LeaveActivityButton' }),
-        p = c ? l.d : l.Z,
-        h = () => {
-            o.Z.leaveActivity({
-                location: n,
-                applicationId: r,
+n.d(t, { Z: () => u });
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(513202),
+    s = n(861254),
+    o = n(871499),
+    l = n(388032);
+function u(e) {
+    let { location: t, applicationId: n, centerButton: u = !1, ...c } = e,
+        { groupedButtons: d } = (0, s.ZP)({ location: 'LeaveActivityButton' }),
+        f = u ? o.d : o.Z,
+        _ = () => {
+            a.Z.leaveActivity({
+                location: t,
+                applicationId: n,
                 showFeedback: !0
             });
         };
-    return (0, i.jsx)(p, {
-        ...d,
-        fullRegionButton: f,
-        onClick: h,
-        iconComponent: a.DoorExitIcon,
-        label: u.intl.string(u.t['R/FK4O'])
+    return (0, i.jsx)(f, {
+        ...c,
+        fullRegionButton: d,
+        onClick: _,
+        iconComponent: r.PBZ,
+        label: l.intl.string(l.t['R/FK4O'])
     });
 }

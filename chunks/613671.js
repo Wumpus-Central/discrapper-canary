@@ -1,8 +1,9 @@
-e.exports = {
-    gameIcon: 'gameIcon_a9e62c',
-    small: 'small_a9e62c',
-    medium: 'medium_a9e62c',
-    large: 'large_a9e62c',
-    xxsmall: 'xxsmall_a9e62c',
-    xsmall: 'xsmall_a9e62c'
+var i = {
+    gameIcon: 'gameIcon_b52e4f',
+    large: 'large_b52e4f',
+    medium: 'medium_b52e4f',
+    small: 'small_b52e4f',
+    xxsmall: 'xxsmall_b52e4f',
+    xsmall: 'xsmall_b52e4f'
 };
+e.exports = i;

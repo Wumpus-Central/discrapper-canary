@@ -1,11 +1,7 @@
-r.d(n, {
-    _: function () {
-        return a;
-    }
-});
-var i = r(36056);
-function a(e, n) {
-    switch (n) {
+n.d(t, { _: () => r });
+var i = n(36056);
+function r(e, t) {
+    switch (t) {
         case i.pz.BIGINT:
             return e.toBigInt();
         case i.pz.NUMBER:

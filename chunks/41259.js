@@ -1,50 +1,46 @@
-r.d(n, {
-    Z: function () {
-        return m;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(974674),
-    o = r(1561),
-    s = r(993365),
-    l = r(385499),
-    u = r(768581),
-    c = r(630388),
-    d = r(489863),
-    f = r(981631),
-    p = r(182294),
-    h = r(388032),
-    _ = r(256405);
-function m(e) {
-    let { id: n, user: r, application: m, bot: g, accountScopes: E, showLogout: v, location: y } = e,
-        b = u.ZP.getApplicationIconURL({
-            id: m.id,
-            icon: m.icon
+n.d(t, { Z: () => h });
+var i = n(200651);
+n(192379);
+var r = n(974674),
+    a = n(1561),
+    s = n(993365),
+    o = n(385499),
+    l = n(768581),
+    u = n(630388),
+    c = n(489863),
+    d = n(981631),
+    f = n(182294),
+    _ = n(388032),
+    p = n(256405);
+function h(e) {
+    let { id: t, user: n, application: h, bot: m, accountScopes: g, showLogout: E, location: v } = e,
+        y = l.ZP.getApplicationIconURL({
+            id: h.id,
+            icon: h.icon
         }),
-        I = u.ZP.getUserAvatarURL(r);
+        I = l.ZP.getUserAvatarURL(n);
     return (0, i.jsxs)('header', {
-        id: n,
-        className: _.header,
+        id: t,
+        className: p.header,
         children: [
             (0, i.jsxs)('div', {
-                className: _.headerIcons,
+                className: p.headerIcons,
                 children: [
-                    (0, i.jsx)(a.qE, {
-                        className: _.avatar,
-                        src: b,
-                        size: p.EF.SIZE_56,
-                        'aria-label': m.name
+                    (0, i.jsx)(r.qE, {
+                        className: p.avatar,
+                        src: y,
+                        size: f.EF.SIZE_56,
+                        'aria-label': h.name
                     }),
                     (0, i.jsxs)('div', {
-                        className: _.ellipseGroup,
-                        children: [(0, i.jsx)('div', { className: _.ellipse }), (0, i.jsx)('div', { className: _.ellipse }), (0, i.jsx)('div', { className: _.ellipse })]
+                        className: p.ellipseGroup,
+                        children: [(0, i.jsx)('div', { className: p.ellipse }), (0, i.jsx)('div', { className: p.ellipse }), (0, i.jsx)('div', { className: p.ellipse })]
                     }),
-                    (0, i.jsx)(a.qE, {
-                        className: _.avatar,
+                    (0, i.jsx)(r.qE, {
+                        className: p.avatar,
                         src: I,
-                        size: p.EF.SIZE_56,
-                        'aria-label': r.username
+                        size: f.EF.SIZE_56,
+                        'aria-label': n.username
                     })
                 ]
             }),
@@ -52,60 +48,60 @@ function m(e) {
                 variant: 'text-lg/bold',
                 color: 'header-primary',
                 children: [
-                    m.name,
-                    null != g
-                        ? (0, i.jsx)(l.Z, {
-                              className: _.botTag,
-                              verified: null != g.public_flags && (0, c.yE)(g.public_flags, f.xW$.VERIFIED_BOT)
+                    h.name,
+                    null != m
+                        ? (0, i.jsx)(o.Z, {
+                              className: p.botTag,
+                              verified: null != m.public_flags && (0, u.yE)(m.public_flags, d.xW$.VERIFIED_BOT)
                           })
                         : null
                 ]
             }),
-            E.length > 0
+            g.length > 0
                 ? (0, i.jsx)(s.x, {
                       variant: 'text-md/normal',
                       color: 'header-secondary',
-                      className: _.label,
-                      children: h.intl.string(h.t.jFbDnJ)
+                      className: p.label,
+                      children: _.intl.string(_.t.jFbDnJ)
                   })
                 : (0, i.jsx)(s.x, {
                       variant: 'text-md/normal',
                       color: 'header-secondary',
-                      className: _.label,
-                      children: h.intl.string(h.t['X+Fdpq'])
+                      className: p.label,
+                      children: _.intl.string(_.t['X+Fdpq'])
                   }),
-            v
+            E
                 ? (0, i.jsx)('div', {
-                      className: _.currentUser,
+                      className: p.currentUser,
                       children: (0, i.jsxs)(s.x, {
                           variant: 'text-sm/normal',
                           color: 'text-muted',
                           children: [
-                              h.intl.format(h.t.qRvpYW, {
+                              _.intl.format(_.t.qRvpYW, {
                                   userHook: () =>
                                       (0, i.jsxs)(
                                           s.x,
                                           {
-                                              className: _.currentUserTag,
+                                              className: p.currentUserTag,
                                               variant: 'text-sm/normal',
                                               children: [
-                                                  r.username,
-                                                  !r.isPomelo() &&
+                                                  n.username,
+                                                  !n.isPomelo() &&
                                                       (0, i.jsx)(s.x, {
-                                                          className: _.currentUserDiscriminator,
+                                                          className: p.currentUserDiscriminator,
                                                           variant: 'text-sm/normal',
-                                                          children: '#'.concat(r.discriminator)
+                                                          children: '#'.concat(n.discriminator)
                                                       })
                                               ]
                                           },
-                                          r.id
+                                          n.id
                                       )
                               }),
-                              (0, i.jsx)(o.P, {
+                              (0, i.jsx)(a.P, {
                                   tag: 'a',
-                                  className: _.logoutLink,
-                                  onClick: () => (0, d.c$)(y),
-                                  children: h.intl.string(h.t['yV/hjI'])
+                                  className: p.logoutLink,
+                                  onClick: () => (0, c.c$)(v),
+                                  children: _.intl.string(_.t['yV/hjI'])
                               })
                           ]
                       })

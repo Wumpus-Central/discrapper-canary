@@ -1,20 +1,14 @@
-n.d(t, {
-    Av: function () {
-        return c;
-    },
-    hp: function () {
-        return d;
-    },
-    wE: function () {
-        return u;
-    }
+r.d(t, {
+    Av: () => c,
+    hp: () => d,
+    wE: () => u
 });
-var r = n(544891),
-    a = n(570140),
-    l = n(959776),
-    o = n(626135),
-    i = n(723359),
-    s = n(981631);
+var n = r(544891),
+    a = r(570140),
+    l = r(959776),
+    o = r(626135),
+    i = r(723359),
+    s = r(981631);
 function c(e, t) {
     return (
         (0, l.Z)(e, t),
@@ -22,7 +16,7 @@ function c(e, t) {
             source: t,
             action: i.Al.AGE_GATE_SUBMITTED
         }),
-        r.tn
+        n.tn
             .patch({
                 url: s.ANM.ME,
                 oldFormErrors: !0,
@@ -30,10 +24,10 @@ function c(e, t) {
                 rejectWithError: !1
             })
             .then((e) => {
-                let n = e.body;
+                let r = e.body;
                 a.Z.dispatch({
                     type: 'CURRENT_USER_UPDATE',
-                    user: n
+                    user: r
                 }),
                     o.default.track(s.rMx.AGE_GATE_ACTION, {
                         source: t,

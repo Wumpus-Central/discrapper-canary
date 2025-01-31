@@ -1,8 +1,4 @@
-n.d(t, {
-    m: function () {
-        return S;
-    }
-});
+n.d(t, { m: () => S });
 var i = n(200651),
     l = n(192379),
     r = n(399606),
@@ -10,36 +6,36 @@ var i = n(200651),
     o = n(692547),
     s = n(481060),
     c = n(239091),
-    u = n(605236),
-    d = n(45966),
+    d = n(605236),
+    u = n(45966),
     h = n(31445),
     p = n(22082),
     m = n(703656),
-    f = n(306680),
-    g = n(709054),
-    v = n(540126),
-    C = n(434479),
+    g = n(306680),
+    f = n(709054),
+    _ = n(540126),
+    v = n(434479),
     x = n(981631),
-    I = n(176505),
-    _ = n(490897),
-    Z = n(388032),
+    C = n(176505),
+    Z = n(490897),
+    I = n(388032),
     b = n(518360);
 function S(e) {
     let { guild: t, selected: S } = e,
         N = (0, h.Z)(t),
-        E = (0, u.wE)(a.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
-        y = (0, r.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter((e) => p.Z.shouldIndicateNewChannel(t.id, e))),
-        j = (0, r.e7)([f.ZP], () => f.ZP.hasUnread(t.id, _.W.GUILD_ONBOARDING_QUESTION)),
-        T = y.length > v.Cb,
-        A = (0, r.e7)([d.Z, f.ZP], () => {
-            let e = d.Z.lastFetchedAt(t.id),
-                n = f.ZP.lastMessageId(t.id, _.W.GUILD_ONBOARDING_QUESTION);
+        E = (0, d.wE)(a.z.CHANNEL_BROWSER_NEW_BADGE_NUX),
+        j = (0, r.Wu)([p.Z], () => Array.from(p.Z.getNewChannelIds(t.id)).filter((e) => p.Z.shouldIndicateNewChannel(t.id, e))),
+        y = (0, r.e7)([g.ZP], () => g.ZP.hasUnread(t.id, Z.W.GUILD_ONBOARDING_QUESTION)),
+        P = j.length > _.Cb,
+        A = (0, r.e7)([u.Z, g.ZP], () => {
+            let e = u.Z.lastFetchedAt(t.id),
+                n = g.ZP.lastMessageId(t.id, Z.W.GUILD_ONBOARDING_QUESTION);
             if (null == n) return !1;
-            let i = g.default.extractTimestamp(n);
+            let i = f.default.extractTimestamp(n);
             return null != e && e > i;
         }),
-        P = l.useCallback(() => {
-            (0, m.uL)(x.Z5c.CHANNEL(t.id, N ? I.oC.CUSTOMIZE_COMMUNITY : I.oC.CHANNEL_BROWSER));
+        T = l.useCallback(() => {
+            (0, m.uL)(x.Z5c.CHANNEL(t.id, N ? C.oC.CUSTOMIZE_COMMUNITY : C.oC.CHANNEL_BROWSER));
         }, [t.id, N]),
         w = l.useCallback(
             (e) => {
@@ -54,29 +50,29 @@ function S(e) {
             },
             [t]
         ),
-        M = null;
+        R = null;
     return (
-        (!E || j || T) &&
-            !S &&
-            !A &&
-            (M = (0, i.jsx)(s.TextBadge, {
+        (E && !y && !P) ||
+            S ||
+            A ||
+            (R = (0, i.jsx)(s.IGR, {
                 color: o.Z.colors.BADGE_BRAND_BG.css,
-                text: Z.intl.string(Z.t.y2b7CA),
+                text: I.intl.string(I.t.y2b7CA),
                 className: b.newChannel
             })),
-        (0, i.jsx)(C.m, {
+        (0, i.jsx)(v.m, {
             id: 'channels-'.concat(t.id),
             renderIcon: (e) =>
-                (0, i.jsx)(s.ChannelListMagnifyingGlassIcon, {
+                (0, i.jsx)(s.H$4, {
                     size: 'md',
                     color: 'currentColor',
                     className: e
                 }),
-            text: N ? Z.intl.string(Z.t.h9mGOD) : Z.intl.string(Z.t.et6wam),
+            text: N ? I.intl.string(I.t.h9mGOD) : I.intl.string(I.t.et6wam),
             selected: S,
-            onClick: P,
+            onClick: T,
             onContextMenu: w,
-            trailing: M
+            trailing: R
         })
     );
 }

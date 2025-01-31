@@ -1,6 +1,7 @@
-e.exports = {
-    root: 'root_d6170c',
-    text: 'text_d6170c',
-    premium: 'premium_d6170c',
-    iconOnly: 'iconOnly_d6170c'
+var i = {
+    root: 'root__6c5a1',
+    text: 'text__6c5a1',
+    premium: 'premium__6c5a1',
+    iconOnly: 'iconOnly__6c5a1'
 };
+e.exports = i;

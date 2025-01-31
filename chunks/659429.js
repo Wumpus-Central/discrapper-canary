@@ -1,14 +1,10 @@
-n.d(t, {
-    $: function () {
-        return s;
-    }
-});
+n.d(t, { $: () => s });
 var i = n(544891),
-    r = n(570140),
-    l = n(34756),
+    l = n(570140),
+    r = n(34756),
     a = n(981631);
 async function s(e) {
-    r.Z.dispatch({
+    l.Z.dispatch({
         type: 'APPLICATION_ACTIVITY_STATISTICS_FETCH_START',
         applicationId: e
     });
@@ -21,7 +17,7 @@ async function s(e) {
             })
         ).body;
         return (
-            r.Z.dispatch({
+            l.Z.dispatch({
                 type: 'APPLICATION_ACTIVITY_STATISTICS_FETCH_SUCCESS',
                 statistics: t,
                 applicationId: e
@@ -30,11 +26,11 @@ async function s(e) {
         );
     } catch (t) {
         throw (
-            (r.Z.dispatch({
+            (l.Z.dispatch({
                 type: 'APPLICATION_ACTIVITY_STATISTICS_FETCH_FAIL',
                 applicationId: e
             }),
-            new l.Z(t))
+            new r.Z(t))
         );
     }
 }

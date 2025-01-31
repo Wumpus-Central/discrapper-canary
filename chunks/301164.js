@@ -1,13 +1,9 @@
-n.d(t, {
-    t: function () {
-        return h;
-    }
-});
+n.d(t, { t: () => h });
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    r = n.n(l),
-    a = n(481060),
+    a = n.n(l),
+    r = n(481060),
     s = n(738672),
     o = n(447564),
     c = n(921944),
@@ -31,22 +27,22 @@ let h = (e) => {
 function p(e) {
     let { channel: t, onClick: n, hidden: l, onDismiss: s } = e;
     return (0, i.jsxs)('div', {
-        className: r()(u.popoutContainer, { [u.hidden]: l }),
+        className: a()(u.popoutContainer, { [u.hidden]: l }),
         children: [
             (0, i.jsx)('img', {
                 className: u.image,
                 src: 'https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png',
                 alt: 'HD Streaming Nitro Perk'
             }),
-            (0, i.jsx)(a.Button, {
+            (0, i.jsx)(r.zxk, {
                 className: u.closeButton,
                 'aria-label': d.intl.string(d.t.cpT0Cg),
-                look: a.Button.Looks.BLANK,
-                size: a.Button.Sizes.NONE,
+                look: r.zxk.Looks.BLANK,
+                size: r.zxk.Sizes.NONE,
                 onClick: () => {
                     s();
                 },
-                children: (0, i.jsx)(a.XSmallIcon, {
+                children: (0, i.jsx)(r.Dio, {
                     size: 'xs',
                     className: u.closeIcon,
                     color: 'white'
@@ -55,14 +51,14 @@ function p(e) {
             (0, i.jsxs)('div', {
                 className: u.infoContainerParent,
                 children: [
-                    (0, i.jsx)(a.Heading, {
+                    (0, i.jsx)(r.X6q, {
                         className: u.heading,
                         variant: 'heading-md/extrabold',
                         children: d.intl.string(d.t.kQqTnp)
                     }),
                     (0, i.jsx)('div', {
                         className: u.infoContainer,
-                        children: (0, i.jsx)(a.Text, {
+                        children: (0, i.jsx)(r.Text, {
                             className: u.infoText,
                             variant: 'text-sm/medium',
                             children: d.intl.string(d.t.cxf5yM)
@@ -70,11 +66,11 @@ function p(e) {
                     }),
                     (0, i.jsx)('div', {
                         className: u.buttonContainer,
-                        children: (0, i.jsx)(a.Button, {
+                        children: (0, i.jsx)(r.zxk, {
                             onClick: () => {
-                                (0, o.openHDPotionModal)(t, 'HDStreamingPotionUpsellPopout'), n();
+                                (0, o.k)(t, 'HDStreamingPotionUpsellPopout'), n();
                             },
-                            color: a.ButtonColors.WHITE,
+                            color: r.Ttl.WHITE,
                             className: u.button,
                             children: d.intl.string(d.t.GBe9lJ)
                         })

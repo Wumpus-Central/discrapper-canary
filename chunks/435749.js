@@ -1,9 +1,5 @@
-r.d(n, {
-    A: function () {
-        return a;
-    }
-});
-let i = (0, r(818083).B)({
+n.d(t, { A: () => r });
+let i = (0, n(818083).B)({
     kind: 'user',
     id: '2024-03_clickstream_analytics',
     label: 'Clickstream Analytics',
@@ -16,7 +12,7 @@ let i = (0, r(818083).B)({
         }
     ]
 });
-function a() {
+function r() {
     let { enabled: e } = i.getCurrentConfig({ location: 'clickstream' });
     return e;
 }

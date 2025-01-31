@@ -1,29 +1,30 @@
-var o = n(200651),
+n.d(t, { Z: () => l });
+var s = n(200651),
     r = n(481060),
-    s = n(388032),
-    a = n(160952);
+    a = n(388032),
+    o = n(160952);
 function i(e) {
     let { onClick: t, children: n } = e;
-    return (0, o.jsx)(r.Button, {
+    return (0, s.jsx)(r.zxk, {
         onClick: t,
-        className: a.button,
-        innerClassName: a.buttonInner,
+        className: o.button,
+        innerClassName: o.buttonInner,
         look: 'blank',
         children: n
     });
 }
-t.Z = function (e) {
+let l = function (e) {
     let { onDesktop: t, onConsole: n } = e;
-    return (0, o.jsxs)('div', {
-        className: a.buttons,
+    return (0, s.jsxs)('div', {
+        className: o.buttons,
         children: [
-            (0, o.jsxs)(i, {
+            (0, s.jsxs)(i, {
                 onClick: t,
-                children: [s.intl.string(s.t.QXc019), (0, o.jsx)(r.ScreenIcon, { size: 'sm' })]
+                children: [a.intl.string(a.t.QXc019), (0, s.jsx)(r.pzj, { size: 'sm' })]
             }),
-            (0, o.jsxs)(i, {
+            (0, s.jsxs)(i, {
                 onClick: n,
-                children: [s.intl.string(s.t['8lAfuL']), (0, o.jsx)(r.GameControllerIcon, { size: 'sm' })]
+                children: [a.intl.string(a.t['8lAfuL']), (0, s.jsx)(r.iWm, { size: 'sm' })]
             })
         ]
     });

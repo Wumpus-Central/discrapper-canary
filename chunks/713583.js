@@ -1,81 +1,77 @@
-r.d(n, {
-    Z: function () {
-        return h;
-    }
-});
-var i = r(200651),
-    a = r(192379),
-    o = r(120356),
-    s = r.n(o),
-    l = r(239091),
-    u = r(962293),
-    c = r(555573),
-    d = r(665692),
-    f = r(388032),
-    p = r(870493);
-function h(e) {
-    var n;
-    let o,
-        h,
+n.d(t, { Z: () => _ });
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(239091),
+    l = n(962293),
+    u = n(555573),
+    c = n(665692),
+    d = n(388032),
+    f = n(870493);
+function _(e) {
+    var t;
+    let a,
         _,
-        { className: m, activeCommand: g, activeOption: E, optionStates: v, channelId: y } = e,
-        b = a.useCallback(
+        p,
+        { className: h, activeCommand: m, activeOption: g, optionStates: E, channelId: v } = e,
+        y = r.useCallback(
             (e) => {
-                var n;
-                let a = null == g ? void 0 : null === (n = g.rootCommand) || void 0 === n ? void 0 : n.id;
-                if (null == a) {
+                var t;
+                let r = null == m ? void 0 : null === (t = m.rootCommand) || void 0 === t ? void 0 : t.id;
+                if (null == r) {
                     e.preventDefault();
                     return;
                 }
-                (0, l.jW)(e, async () => {
-                    let { default: e } = await r.e('5396').then(r.bind(r, 731646));
-                    return (n) =>
+                (0, o.jW)(e, async () => {
+                    let { default: e } = await n.e('5396').then(n.bind(n, 731646));
+                    return (t) =>
                         (0, i.jsx)(e, {
-                            ...n,
-                            id: a,
-                            label: f.intl.string(f.t.oJ1Mu7)
+                            ...t,
+                            id: r,
+                            label: d.intl.string(d.t.oJ1Mu7)
                         });
                 });
             },
-            [null == g ? void 0 : null === (n = g.rootCommand) || void 0 === n ? void 0 : n.id]
+            [null == m ? void 0 : null === (t = m.rootCommand) || void 0 === t ? void 0 : t.id]
         ),
-        I = a.useCallback(() => {
-            c.Po({
-                channelId: y,
+        I = r.useCallback(() => {
+            u.Po({
+                channelId: v,
                 command: null,
                 section: null
             });
-        }, [y]);
-    if (null == g) return null;
-    if (null != E) {
-        let e = v[E.name].lastValidationResult;
-        (o = E.displayName), (h = E.displayDescription), (_ = (null == e ? void 0 : e.success) ? null : null == e ? void 0 : e.error);
-    } else (o = ''.concat(d.GI).concat(g.displayName)), (h = g.displayDescription), (_ = null);
+        }, [v]);
+    if (null == m) return null;
+    if (null != g) {
+        let e = E[g.name].lastValidationResult;
+        (a = g.displayName), (_ = g.displayDescription), (p = (null == e ? void 0 : e.success) ? null : null == e ? void 0 : e.error);
+    } else (a = ''.concat(c.GI).concat(m.displayName)), (_ = m.displayDescription), (p = null);
     return (0, i.jsxs)('div', {
-        className: s()(m, p.bar),
-        onContextMenu: b,
+        className: s()(h, f.bar),
+        onContextMenu: y,
         children: [
             (0, i.jsxs)('div', {
-                className: p.commandInfo,
+                className: f.commandInfo,
                 children: [
                     (0, i.jsx)('span', {
-                        className: p.name,
-                        children: o
+                        className: f.name,
+                        children: a
                     }),
-                    null != _
+                    null != p
                         ? (0, i.jsx)('span', {
-                              className: p.error,
-                              children: _
+                              className: f.error,
+                              children: p
                           })
                         : (0, i.jsx)('span', {
-                              className: p.description,
-                              children: h
+                              className: f.description,
+                              children: _
                           })
                 ]
             }),
             (0, i.jsx)('div', {
-                className: p.actions,
-                children: (0, i.jsx)(u.B, { onClick: I })
+                className: f.actions,
+                children: (0, i.jsx)(l.B, { onClick: I })
             })
         ]
     });

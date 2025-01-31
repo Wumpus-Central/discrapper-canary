@@ -1,29 +1,24 @@
-r.d(n, {
-    Z: function () {
-        return l;
-    }
-});
-var i = r(411104);
-var a = r(836560);
-var o = r(376398);
-function s(e, n, r) {
+n.d(t, { Z: () => s }), n(411104);
+var i = n(836560),
+    r = n(376398);
+function a(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class l extends a.EventEmitter {
-    static async get(e, n) {
-        var r;
+class s extends i.EventEmitter {
+    static async get(e, t) {
+        var n;
         let i = {
-            audio: n && {
+            audio: t && {
                 echoCancellation: !1,
                 noiseSuppression: !1,
                 autoGainControl: !1
@@ -33,11 +28,11 @@ class l extends a.EventEmitter {
                 frameRate: 30
             }
         };
-        if ((null === (r = navigator.mediaDevices) || void 0 === r ? void 0 : r.getDisplayMedia) != null) return new l(await navigator.mediaDevices.getDisplayMedia(i));
+        if ((null === (n = navigator.mediaDevices) || void 0 === n ? void 0 : n.getDisplayMedia) != null) return new s(await navigator.mediaDevices.getDisplayMedia(i));
         throw Error('UNKNOWN');
     }
     destroy() {
-        this.removeAllListeners(), (0, o.jC)(this.streamId), this.stream.getTracks().forEach((e) => e.stop());
+        this.removeAllListeners(), (0, r.jC)(this.streamId), this.stream.getTracks().forEach((e) => e.stop());
     }
     reset() {
         this.refreshSpeaking();
@@ -53,9 +48,9 @@ class l extends a.EventEmitter {
     }
     constructor(e) {
         super(),
-            s(this, 'id', void 0),
-            s(this, 'stream', void 0),
-            s(this, 'streamId', void 0),
+            a(this, 'id', void 0),
+            a(this, 'stream', void 0),
+            a(this, 'streamId', void 0),
             e.getVideoTracks().forEach((e) => {
                 e.onended = () => {
                     this.emit('desktopsourceend');
@@ -63,6 +58,6 @@ class l extends a.EventEmitter {
             }),
             (this.id = e.getVideoTracks()[0].label),
             (this.stream = e),
-            (this.streamId = (0, o.N7)(e));
+            (this.streamId = (0, r.N7)(e));
     }
 }

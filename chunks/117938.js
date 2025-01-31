@@ -1,13 +1,9 @@
 n.d(t, {
-    C: function () {
-        return l;
-    },
-    L: function () {
-        return a;
-    }
+    C: () => a,
+    L: () => l
 });
 var i = n(873546),
-    r = n(464179),
-    s = n(981631);
-let a = (e) => ([s.HeQ.CARD, s.HeQ.VENMO].includes(e.type) && 'US' === e.country ? (i.tq ? r.ZP.Layouts.SETTINGS_US_MOBILE : r.ZP.Layouts.SETTINGS_US) : e.type === s.HeQ.CARD && 'US' !== e.country ? (i.tq ? r.ZP.Layouts.SETTINGS_INTL_MOBILE : r.ZP.Layouts.SETTINGS_INTL) : i.tq ? r.ZP.Layouts.SETTINGS_INTL_NO_NAME_MOBILE : r.ZP.Layouts.SETTINGS_INTL_NO_NAME),
-    l = i.tq ? r.ZP.Layouts.SETTINGS_US_MOBILE : r.ZP.Layouts.SETTINGS_US;
+    s = n(464179),
+    r = n(981631);
+let l = (e) => ([r.HeQ.CARD, r.HeQ.VENMO].includes(e.type) && 'US' === e.country ? (i.tq ? s.ZP.Layouts.SETTINGS_US_MOBILE : s.ZP.Layouts.SETTINGS_US) : e.type === r.HeQ.CARD && 'US' !== e.country ? (i.tq ? s.ZP.Layouts.SETTINGS_INTL_MOBILE : s.ZP.Layouts.SETTINGS_INTL) : i.tq ? s.ZP.Layouts.SETTINGS_INTL_NO_NAME_MOBILE : s.ZP.Layouts.SETTINGS_INTL_NO_NAME),
+    a = i.tq ? s.ZP.Layouts.SETTINGS_US_MOBILE : s.ZP.Layouts.SETTINGS_US;

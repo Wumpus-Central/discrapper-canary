@@ -1,171 +1,166 @@
-r.d(n, {
-    sg: function () {
-        return b;
-    },
-    sk: function () {
-        return v;
-    }
-});
-var i = r(47120);
-var a = r(653041);
-var o = r(757143);
-var s = r(512722),
-    l = r.n(s),
-    u = r(933557),
-    c = r(660199),
-    d = r(763296),
-    f = r(592125),
-    p = r(430824),
-    h = r(699516),
-    _ = r(914010),
-    m = r(594174),
-    g = r(51144),
-    E = r(887490);
-function v(e, n) {
-    let { mode: r, ignoreTrailingEmptyNodes: i, preventEmojiSurrogates: a } = null != n ? n : {},
-        [o, s] = (null == n ? void 0 : n.range) != null ? E.M8.edges(n.range) : [void 0, void 0];
-    return y(e, {
-        mode: r,
-        start: o,
+n.d(t, {
+    sg: () => g,
+    sk: () => h
+}),
+    n(47120),
+    n(653041),
+    n(757143);
+var i = n(512722),
+    r = n.n(i),
+    a = n(933557),
+    s = n(660199),
+    o = n(763296),
+    l = n(592125),
+    u = n(430824),
+    c = n(699516),
+    d = n(914010),
+    f = n(594174),
+    _ = n(51144),
+    p = n(887490);
+function h(e, t) {
+    let { mode: n, ignoreTrailingEmptyNodes: i, preventEmojiSurrogates: r } = null != t ? t : {},
+        [a, s] = (null == t ? void 0 : t.range) != null ? p.M8.edges(t.range) : [void 0, void 0];
+    return m(e, {
+        mode: n,
+        start: a,
         end: s,
         ignoreTrailingEmptyNodes: i,
-        preventEmojiSurrogates: a
+        preventEmojiSurrogates: r
     });
 }
-function y(e, n) {
-    var r, i;
-    let { mode: a, start: o, end: s, separator: l, ignoreEmptyNodes: u, ignoreTrailingEmptyNodes: c, preventEmojiSurrogates: d } = null != n ? n : {},
-        f = e.length > 0 && !E.LC.isText(e[0]);
-    null == l && (l = f ? '\n' : '');
-    let p = null !== (r = null == o ? void 0 : o.path[0]) && void 0 !== r ? r : 0,
-        h = null !== (i = null == s ? void 0 : s.path[0]) && void 0 !== i ? i : e.length - 1;
-    if (c)
-        for (let n = h; n >= p; n--) {
-            let r = e[n];
-            if (E.LC.isText(r)) {
-                if (r.text.length > 0) {
-                    h = n;
+function m(e, t) {
+    var n, i;
+    let { mode: r, start: a, end: s, separator: o, ignoreEmptyNodes: l, ignoreTrailingEmptyNodes: u, preventEmojiSurrogates: c } = null != t ? t : {},
+        d = e.length > 0 && !p.LC.isText(e[0]);
+    null == o && (o = d ? '\n' : '');
+    let f = null !== (n = null == a ? void 0 : a.path[0]) && void 0 !== n ? n : 0,
+        _ = null !== (i = null == s ? void 0 : s.path[0]) && void 0 !== i ? i : e.length - 1;
+    if (u)
+        for (let t = _; t >= f; t--) {
+            let n = e[t];
+            if (p.LC.isText(n)) {
+                if (n.text.length > 0) {
+                    _ = t;
                     break;
                 }
-            } else if (!E.q.isEmpty(r)) {
-                h = n;
+            } else if (!p.q.isEmpty(n)) {
+                _ = t;
                 break;
             }
-            if (n === p) return '';
+            if (t === f) return '';
         }
-    let _ = p > 0 && E.aj.isType(e[p - 1], 'blockQuote'),
-        m = E.aj.isType(e[p], 'blockQuote'),
-        g = E.aj.isType(e[h], 'blockQuote'),
+    let h = f > 0 && p.aj.isType(e[f - 1], 'blockQuote'),
+        m = p.aj.isType(e[f], 'blockQuote'),
+        E = p.aj.isType(e[_], 'blockQuote'),
         v = [];
-    for (let n = p; n <= h; n++) {
-        let r = e[n];
-        if (u && E.LC.isText(r) && 0 === r.text.length) continue;
+    for (let t = f; t <= _; t++) {
+        let n = e[t];
+        if (l && p.LC.isText(n) && 0 === n.text.length) continue;
         let i =
-                null != o && n === p
+                null != a && t === f
                     ? {
-                          path: o.path.slice(1),
-                          offset: o.offset
+                          path: a.path.slice(1),
+                          offset: a.offset
                       }
                     : void 0,
-            l =
-                null != s && n === h
-                    ? {
-                          path: s.path.slice(1),
-                          offset: s.offset
-                      }
-                    : void 0,
-            c = b(r, {
-                mode: a,
+            o = g(n, {
+                mode: r,
                 start: i,
-                end: l,
-                allowBlockQuotePrefix: null == o || null == s || (!_ && (!m || g)),
-                preventEmojiSurrogates: d
+                end:
+                    null != s && t === _
+                        ? {
+                              path: s.path.slice(1),
+                              offset: s.offset
+                          }
+                        : void 0,
+                allowBlockQuotePrefix: null == a || null == s || (!h && (!m || E)),
+                preventEmojiSurrogates: c
             });
-        (!u || c.length > 0) && v.push(c);
+        (!l || o.length > 0) && v.push(o);
     }
-    return v.join(l);
+    return v.join(o);
 }
-function b(e, n) {
-    let { mode: r, start: i, allowBlockQuotePrefix: a = !1, preventEmojiSurrogates: o = !1 } = null != n ? n : {};
-    if (E.LC.isText(e)) return I(e.text, n);
+function g(e, t) {
+    let { mode: n, start: i, allowBlockQuotePrefix: r = !1, preventEmojiSurrogates: h = !1 } = null != t ? t : {};
+    if (p.LC.isText(e)) return E(e.text, t);
     switch (e.type) {
         case 'line':
         case 'testInline':
-            return y(e.children, n);
+            return m(e.children, t);
         case 'testInlineVoid':
             return '';
         case 'blockQuote': {
-            let r = y(e.children, n),
-                o = null != i && 1 === i.path.length && 0 === i.path[0] && 0 === i.offset;
-            if (a && (null == i || o)) return '> '.concat(r);
-            return r;
+            let n = m(e.children, t),
+                a = null != i && 1 === i.path.length && 0 === i.path[0] && 0 === i.offset;
+            if (r && (null == i || a)) return '> '.concat(n);
+            return n;
         }
         case 'emoji': {
-            let n = e.emoji;
-            if (!o && null != n.surrogate) return n.surrogate;
-            return n.name;
+            let t = e.emoji;
+            if (!h && null != t.surrogate) return t.surrogate;
+            return t.name;
         }
         case 'customEmoji': {
-            let n = e.emoji;
-            if ('raw' === r) {
-                let e = n.animated ? 'a' : '',
-                    r = n.name.replace(/:/g, '').split('~')[0];
-                return '<'.concat(e, ':').concat(r, ':').concat(n.emojiId, '>');
+            let t = e.emoji;
+            if ('raw' === n) {
+                let e = t.animated ? 'a' : '',
+                    n = t.name.replace(/:/g, '').split('~')[0];
+                return '<'.concat(e, ':').concat(n, ':').concat(t.emojiId, '>');
             }
-            return n.name;
+            return t.name;
         }
         case 'textMention':
             return e.name;
         case 'channelMention': {
-            let n = '<#'.concat(e.channelId, '>');
-            if ('raw' === r) return n;
-            let i = f.Z.getChannel(e.channelId);
-            if (null == i) return n;
-            return (0, u.F6)(i, m.default, h.Z, !0, !0);
+            let t = '<#'.concat(e.channelId, '>');
+            if ('raw' === n) return t;
+            let i = l.Z.getChannel(e.channelId);
+            if (null == i) return t;
+            return (0, a.F6)(i, f.default, c.Z, !0, !0);
         }
         case 'soundboard': {
-            let n = '<sound:'.concat(e.guildId, ':').concat(e.soundId, '>');
-            if ('raw' === r) return n;
-            let i = d.Z.getSoundById(e.soundId);
-            if (null == i) return n;
+            let t = '<sound:'.concat(e.guildId, ':').concat(e.soundId, '>');
+            if ('raw' === n) return t;
+            let i = o.Z.getSoundById(e.soundId);
+            if (null == i) return t;
             return i.name;
         }
         case 'staticRouteLink':
             return null != e.itemId ? '<id:'.concat(e.id, ':').concat(e.itemId, '>') : '<id:'.concat(e.id, '>');
         case 'roleMention': {
-            let n = '<@&'.concat(e.roleId, '>');
-            if ('raw' === r) return n;
-            let i = _.Z.getGuildId(),
-                a = null != i ? p.Z.getRole(i, e.roleId) : void 0;
-            if (null == a) return n;
-            return '@'.concat(a.name);
+            let t = '<@&'.concat(e.roleId, '>');
+            if ('raw' === n) return t;
+            let i = d.Z.getGuildId(),
+                r = null != i ? u.Z.getRole(i, e.roleId) : void 0;
+            if (null == r) return t;
+            return '@'.concat(r.name);
         }
         case 'userMention': {
-            let n = '<@'.concat(e.userId, '>');
-            if ('raw' === r) return n;
-            let i = m.default.getUser(e.userId);
-            if (null == i) return n;
-            return '@'.concat(g.ZP.getUserTag(i, { decoration: 'never' }));
+            let t = '<@'.concat(e.userId, '>');
+            if ('raw' === n) return t;
+            let i = f.default.getUser(e.userId);
+            if (null == i) return t;
+            return '@'.concat(_.ZP.getUserTag(i, { decoration: 'never' }));
         }
         case 'commandMention':
             return '</'.concat(e.commandName, ':').concat(e.commandId, '>');
         case 'timestamp':
-            return (0, c.He)(e.parsed.timestamp, e.parsed.format);
+            return (0, s.He)(e.parsed.timestamp, e.parsed.format);
         case 'applicationCommand':
-            return y(e.children, {
-                ...n,
+            return m(e.children, {
+                ...t,
                 separator: ' ',
                 ignoreEmptyNodes: !0
             });
         case 'applicationCommandOption': {
-            let r = y(e.children, n);
-            if (null == i) return ''.concat(e.optionDisplayName, ':').concat(r);
-            return r;
+            let n = m(e.children, t);
+            if (null == i) return ''.concat(e.optionDisplayName, ':').concat(n);
+            return n;
         }
     }
 }
-function I(e, n) {
-    var r, i;
-    let { start: a, end: o } = null != n ? n : {};
-    return l()(null == a || 0 === a.path.length, 'Invalid start provided to serializeText'), l()(null == o || 0 === o.path.length, 'Invalid end provided to serializeText'), e.substring(null !== (r = null == a ? void 0 : a.offset) && void 0 !== r ? r : 0, null !== (i = null == o ? void 0 : o.offset) && void 0 !== i ? i : e.length);
+function E(e, t) {
+    var n, i;
+    let { start: a, end: s } = null != t ? t : {};
+    return r()(null == a || 0 === a.path.length, 'Invalid start provided to serializeText'), r()(null == s || 0 === s.path.length, 'Invalid end provided to serializeText'), e.substring(null !== (n = null == a ? void 0 : a.offset) && void 0 !== n ? n : 0, null !== (i = null == s ? void 0 : s.offset) && void 0 !== i ? i : e.length);
 }

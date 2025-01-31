@@ -1,36 +1,35 @@
-r.d(n, {
-    ku: function () {
-        return S;
-    }
+n.d(t, {
+    ZP: () => A,
+    ku: () => T
 });
-var i = r(200651),
-    a = r(192379),
-    o = r(120356),
-    s = r.n(o),
-    l = r(399606),
-    u = r(481060),
-    c = r(596454),
-    d = r(722932),
-    f = r(125900),
-    p = r(801606),
-    h = r(409700),
-    _ = r(321889),
-    m = r(763296),
-    g = r(697426),
-    E = r(409673),
-    v = r(695346),
-    y = r(592125),
-    b = r(388032),
-    I = r(205659);
-function T(e) {
-    let { playSound: n } = e;
-    return (0, i.jsxs)(u.Clickable, {
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(399606),
+    l = n(481060),
+    u = n(596454),
+    c = n(722932),
+    d = n(125900),
+    f = n(801606),
+    _ = n(409700),
+    p = n(321889),
+    h = n(763296),
+    m = n(697426),
+    g = n(409673),
+    E = n(695346),
+    v = n(592125),
+    y = n(388032),
+    I = n(205659);
+function b(e) {
+    let { playSound: t } = e;
+    return (0, i.jsxs)(l.P3F, {
         title: 'Risky Click',
         tag: 'span',
-        onClick: n,
+        onClick: t,
         className: I.inlineContainer,
         children: [
-            (0, i.jsx)(u.VoiceNormalIcon, {
+            (0, i.jsx)(l.gj8, {
                 size: 'md',
                 color: 'currentColor',
                 className: I.unknownSound
@@ -39,91 +38,91 @@ function T(e) {
         ]
     });
 }
-function S(e) {
-    let { soundId: n } = e,
-        r = (0, l.e7)([m.Z], () => m.Z.getSoundById(n)),
-        a = (0, f.V2)({ location: 'SoundboardMentionInline' }),
-        { playing: o, playSound: s } = (0, _.Z)(r);
-    return a
-        ? null == r
-            ? (0, i.jsx)(T, {})
-            : (0, i.jsx)(A, {
+function T(e) {
+    let { soundId: t } = e,
+        n = (0, o.e7)([h.Z], () => h.Z.getSoundById(t)),
+        r = (0, d.V2)({ location: 'SoundboardMentionInline' }),
+        { playing: a, playSound: s } = (0, p.Z)(n);
+    return r
+        ? null == n
+            ? (0, i.jsx)(b, {})
+            : (0, i.jsx)(S, {
                   className: I.inlineTextArea,
-                  isPlaying: o,
+                  isPlaying: a,
                   playSound: s,
-                  sound: r
+                  sound: n
               })
         : null;
 }
-function A(e) {
-    let { className: n, sound: r, playSound: a, isPlaying: o } = e,
-        l = (null == r ? void 0 : r.emojiId) != null || (null == r ? void 0 : r.emojiName) != null,
-        f = b.intl.formatToPlainString(b.t.tuMUJy, {
-            emojiName: null == r ? void 0 : r.emojiName,
-            soundName: null == r ? void 0 : r.name
+function S(e) {
+    let { className: t, sound: n, playSound: r, isPlaying: a } = e,
+        o = (null == n ? void 0 : n.emojiId) != null || (null == n ? void 0 : n.emojiName) != null,
+        d = y.intl.formatToPlainString(y.t.tuMUJy, {
+            emojiName: null == n ? void 0 : n.emojiName,
+            soundName: null == n ? void 0 : n.name
         });
-    return (0, d.X0)({ location: 'SoundboardMentionInline' })
-        ? (0, i.jsxs)(u.Clickable, {
-              'aria-label': f,
+    return (0, c.X0)({ location: 'SoundboardMentionInline' })
+        ? (0, i.jsxs)(l.P3F, {
+              'aria-label': d,
               tag: 'span',
-              onClick: a,
-              className: s()(I.inlineContainer, I.inlineButton, { [I.playing]: !0 === o }, n),
+              onClick: r,
+              className: s()(I.inlineContainer, I.inlineButton, { [I.playing]: !0 === a }, t),
               children: [
-                  l &&
-                      (0, i.jsx)(c.Z, {
-                          emojiId: null == r ? void 0 : r.emojiId,
-                          emojiName: null == r ? void 0 : r.emojiName,
+                  o &&
+                      (0, i.jsx)(u.Z, {
+                          emojiId: null == n ? void 0 : n.emojiId,
+                          emojiName: null == n ? void 0 : n.emojiName,
                           className: I.soundmojiEmoji
                       }),
-                  (0, i.jsx)('span', { children: ' '.concat(null == r ? void 0 : r.name, ' ') })
+                  (0, i.jsx)('span', { children: ' '.concat(null == n ? void 0 : n.name, ' ') })
               ]
           })
         : null;
 }
-function C(e) {
-    let { channelId: n, messageId: r, soundId: o, jumbo: s = !1 } = e,
-        c = v.jU.useSetting(),
-        f = (0, l.e7)([m.Z], () => m.Z.getSoundById(o), [o]),
-        b = a.useMemo(() => {
+let A = function (e) {
+    let { channelId: t, messageId: n, soundId: a, jumbo: s = !1 } = e,
+        u = E.jU.useSetting(),
+        d = (0, o.e7)([h.Z], () => h.Z.getSoundById(a), [a]),
+        y = r.useMemo(() => {
             var e;
-            return null !== (e = (0, p.Z)(n, r, o)) && void 0 !== e ? e : f;
-        }, [n, r, o, f]),
-        S = (0, l.e7)([y.Z], () => y.Z.getChannel(n)),
-        C = (0, d.X0)({ location: 'SoundboardMention' }),
-        N = a.useRef(null),
-        { playing: R, playSound: O } = (0, _.Z)(b, S),
-        D = a.useCallback(() => {
-            if (O()) {
+            return null !== (e = (0, f.Z)(t, n, a)) && void 0 !== e ? e : d;
+        }, [t, n, a, d]),
+        T = (0, o.e7)([v.Z], () => v.Z.getChannel(t)),
+        A = (0, c.X0)({ location: 'SoundboardMention' }),
+        N = r.useRef(null),
+        { playing: C, playSound: R } = (0, p.Z)(y, T),
+        O = r.useCallback(() => {
+            if (R()) {
                 var e;
                 null === (e = N.current) || void 0 === e || e.addAnimation();
             }
-        }, [O]);
-    return C
-        ? null == b
-            ? (0, i.jsx)(T, { playSound: D })
-            : s && !c
+        }, [R]);
+    return A
+        ? null == y
+            ? (0, i.jsx)(b, { playSound: O })
+            : s && !u
               ? (0, i.jsx)(
-                    E.ZP,
+                    g.ZP,
                     {
                         containerClassName: I.jumboContainer,
                         className: I.jumboButton,
-                        sound: b,
-                        channel: S,
+                        sound: y,
+                        channel: T,
                         refreshEnabled: !0,
-                        onSelectItem: D,
-                        isPlayingSoundOverride: R,
+                        onSelectItem: O,
+                        isPlayingSoundOverride: C,
                         isSoundmoji: !0,
-                        buttonOverlay: g.Pb.SOUNDMOJI,
+                        buttonOverlay: m.Pb.SOUNDMOJI,
                         tooltipClassName: I.tooltip,
                         tooltipContentClassName: I.tooltipContainer,
-                        tooltipOverride: (0, i.jsx)(h.Dp, { sound: b }),
+                        tooltipOverride: (0, i.jsx)(_.Dp, { sound: y }),
                         soundmojiVisualEffectRef: N
                     },
-                    ''.concat(b.soundId)
+                    ''.concat(y.soundId)
                 )
-              : (0, i.jsx)(u.Tooltip, {
-                    'aria-label': b.name,
-                    text: (0, i.jsx)(h.Dp, { sound: b }),
+              : (0, i.jsx)(l.ua7, {
+                    'aria-label': y.name,
+                    text: (0, i.jsx)(_.Dp, { sound: y }),
                     tooltipClassName: I.tooltip,
                     tooltipContentClassName: I.tooltipContainer,
                     position: 'top',
@@ -131,13 +130,12 @@ function C(e) {
                     children: (e) =>
                         (0, i.jsx)('span', {
                             ...e,
-                            children: (0, i.jsx)(A, {
-                                sound: b,
-                                playSound: D,
-                                isPlaying: R
+                            children: (0, i.jsx)(S, {
+                                sound: y,
+                                playSound: O,
+                                isPlaying: C
                             })
                         })
                 })
         : null;
-}
-n.ZP = C;
+};

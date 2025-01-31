@@ -1,22 +1,18 @@
-r.d(n, {
-    Z: function () {
-        return s;
-    }
-});
-var i = r(544891),
-    a = r(981631),
-    o = r(388032);
+n.d(t, { Z: () => s });
+var i = n(544891),
+    r = n(981631),
+    a = n(388032);
 class s extends i.sX {
-    constructor(e, n) {
+    constructor(e, t) {
         super(
             e,
-            n,
-            null != n
-                ? o.intl.formatToPlainString(o.t.aKRa0d, {
-                      statusPageURL: a.yXt.STATUS,
-                      details: ''.concat(n)
+            t,
+            null != t
+                ? a.intl.formatToPlainString(a.t.aKRa0d, {
+                      statusPageURL: r.yXt.STATUS,
+                      details: ''.concat(t)
                   })
-                : o.intl.formatToPlainString(o.t.aTVNen, { statusPageURL: a.yXt.STATUS })
+                : a.intl.formatToPlainString(a.t.aTVNen, { statusPageURL: r.yXt.STATUS })
         );
     }
 }

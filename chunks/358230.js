@@ -1,73 +1,69 @@
-t.d(n, {
-    T: function () {
-        return C;
-    },
-    Z: function () {
-        return s;
-    }
+n.d(t, {
+    T: () => f,
+    Z: () => g
 }),
-    t(653041);
-var l = t(192379),
-    i = t(442837),
-    r = t(734307),
-    a = t(854444),
-    u = t(131704),
-    o = t(680089),
-    d = t(888369),
-    E = t(944486),
-    _ = t(981631),
-    c = t(647086);
-function s(e) {
-    let { withVoiceChannels: n = !1, withCurrentVoiceChannel: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+    n(653041);
+var l = n(192379),
+    i = n(442837),
+    r = n(734307),
+    a = n(854444),
+    o = n(131704),
+    s = n(680089),
+    d = n(888369),
+    u = n(944486),
+    c = n(981631),
+    h = n(647086);
+function g(e) {
+    let { withVoiceChannels: t = !1, withCurrentVoiceChannel: n = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         l = arguments.length > 2 ? arguments[2] : void 0;
-    return T(
-        e === c._ || e === _.I_8 ? (0, a.t)() : r.Z.getGuildWithoutChangingGuildActionRows(e).guildChannels,
+    return p(
+        e === h._ || e === c.I_8 ? (0, a.t)() : r.Z.getGuildWithoutChangingGuildActionRows(e).guildChannels,
         {
-            currentVoiceChannelId: E.Z.getVoiceChannelId(),
-            selectedChannelId: E.Z.getChannelId()
+            currentVoiceChannelId: u.Z.getVoiceChannelId(),
+            selectedChannelId: u.Z.getChannelId()
         },
         {
-            withVoiceChannels: n,
-            withCurrentVoiceChannel: t
+            withVoiceChannels: t,
+            withCurrentVoiceChannel: n
         },
         l
     );
 }
-function C(e, n, t) {
+function f(e, t, n) {
     let { withVoiceChannels: r = !1, withCurrentVoiceChannel: a = !1 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-        u = arguments.length > 4 ? arguments[4] : void 0,
-        _ = (0, i.e7)([d.default], () => d.default.getGuildChangeSentinel(e)),
-        c = (0, i.e7)([o.Z], () => o.Z.version),
-        { currentVoiceChannelId: s, selectedChannelId: C } = (0, i.cj)([E.Z], () => ({
-            currentVoiceChannelId: E.Z.getVoiceChannelId(),
-            selectedChannelId: E.Z.getChannelId()
+        o = arguments.length > 4 ? arguments[4] : void 0,
+        c = (0, i.e7)([d.default], () => d.default.getGuildChangeSentinel(e)),
+        h = (0, i.e7)([s.Z], () => s.Z.version),
+        { currentVoiceChannelId: g, selectedChannelId: f } = (0, i.cj)([u.Z], () => ({
+            currentVoiceChannelId: u.Z.getVoiceChannelId(),
+            selectedChannelId: u.Z.getChannelId()
         }));
     return (0, l.useMemo)(
         () =>
-            T(
-                n,
+            p(
+                t,
                 {
-                    currentVoiceChannelId: s,
-                    selectedChannelId: C
+                    currentVoiceChannelId: g,
+                    selectedChannelId: f
                 },
                 {
                     withVoiceChannels: r,
                     withCurrentVoiceChannel: a
                 },
-                u
+                o
             ).map((e) => e.id),
-        [n, t, _, c]
+        [t, n, c, h]
     );
 }
-function T(e, n) {
-    let { currentVoiceChannelId: t, selectedChannelId: l } = n,
+function p(e, t) {
+    let { currentVoiceChannelId: n, selectedChannelId: l } = t,
         { withVoiceChannels: i, withCurrentVoiceChannel: r } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         a = arguments.length > 3 ? arguments[3] : void 0,
-        o = [];
+        s = [];
     return (
         e.forEachShownChannel((e) => {
-            ((0, u.r8)(e.type) || (i && (0, u.bw)(e.type)) || (r && (e.id === t || e.id === l))) && o.push(e);
+            ((0, o.r8)(e.type) || (i && (0, o.bw)(e.type)) || (r && (e.id === n || e.id === l))) && s.push(e);
         }, a),
-        o
+        s
     );
 }

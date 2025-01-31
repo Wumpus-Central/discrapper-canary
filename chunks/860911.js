@@ -1,74 +1,49 @@
-r.d(t, {
-    Ft: function () {
-        return _;
-    },
-    Ui: function () {
-        return a;
-    },
-    Zn: function () {
-        return n;
-    }
-}),
-    r(47120);
-function a(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : '',
-        a = null != window.GLOBAL_ENV.WEBAPP_ENDPOINT ? window.GLOBAL_ENV.WEBAPP_ENDPOINT : '',
-        n = null != e ? '?redirect_to='.concat(encodeURIComponent(e)) : '';
-    return (
-        0 !== r.length && (r = 0 === n.length ? '?'.concat(r) : '&'.concat(r)),
-        ''
-            .concat(t ? a : '', '/login')
-            .concat(n)
-            .concat(r)
-    );
-}
-class n {
+a.d(e, { Ft: () => n }), a(47120);
+class r {
     toString() {
         return this.value;
     }
-    constructor(e) {
-        var t, r, a;
-        (t = this),
-            (a = void 0),
-            (r = 'value') in t
-                ? Object.defineProperty(t, r, {
+    constructor(t) {
+        var e, a;
+        (a = void 0),
+            (e = 'value') in this
+                ? Object.defineProperty(this, e, {
                       value: a,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (t[r] = a),
-            (this.value = e);
+                : (this[e] = a),
+            (this.value = t);
     }
 }
-function _(e, t) {
-    let r = {};
-    for (let a of Object.keys(e)) {
-        let _ = e[a];
-        if ('function' != typeof _) {
-            r[a] = _;
+function n(t, e) {
+    let a = {};
+    for (let n of Object.keys(t)) {
+        let o = t[n];
+        if ('function' != typeof o) {
+            a[n] = o;
             continue;
         }
-        r[a] = function () {
-            for (var e = arguments.length, r = Array(e), a = 0; a < e; a++) r[a] = arguments[a];
-            return _(
-                ...(function (e, t) {
-                    return e.map((e) =>
-                        null == e
-                            ? e
-                            : e instanceof n
-                              ? e.toString()
-                              : null == t
-                                ? encodeURIComponent(e)
-                                : String(e)
+        a[n] = function () {
+            for (var t = arguments.length, a = Array(t), n = 0; n < t; n++) a[n] = arguments[n];
+            return o(
+                ...(function (t, e) {
+                    return t.map((t) =>
+                        null == t
+                            ? t
+                            : t instanceof r
+                              ? t.toString()
+                              : null == e
+                                ? encodeURIComponent(t)
+                                : String(t)
                                       .split('')
-                                      .map((e) => (null != t && t.includes(e) ? e : encodeURIComponent(e)))
+                                      .map((t) => (null != e && e.includes(t) ? t : encodeURIComponent(t)))
                                       .join('')
                     );
-                })(r, t)
+                })(a, e)
             );
         };
     }
-    return r;
+    return a;
 }

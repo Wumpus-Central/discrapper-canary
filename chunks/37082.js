@@ -1,24 +1,20 @@
 let i;
-function a(e, n, r) {
+function r(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-r.d(n, {
-    R: function () {
-        return l;
-    },
-    y: function () {
-        return u;
-    }
+n.d(t, {
+    R: () => o,
+    y: () => l
 });
 try {
     i = window.localStorage;
@@ -26,7 +22,7 @@ try {
 try {
     delete window.localStorage;
 } catch (e) {}
-function o() {
+function a() {
     let e = 'test';
     try {
         return i.setItem(e, e), i.removeItem(e), !0;
@@ -35,19 +31,19 @@ function o() {
     }
 }
 class s {
-    get(e, n) {
-        let r = i.getItem(e);
-        if (null != r)
+    get(e, t) {
+        let n = i.getItem(e);
+        if (null != n)
             try {
-                r = JSON.parse(r);
+                n = JSON.parse(n);
             } catch (e) {
-                r = n;
+                n = t;
             }
-        else r = n;
-        return r;
+        else n = t;
+        return n;
     }
-    set(e, n) {
-        i.setItem(e, JSON.stringify(n));
+    set(e, t) {
+        i.setItem(e, JSON.stringify(t));
     }
     remove(e) {
         i.removeItem(e);
@@ -58,22 +54,22 @@ class s {
     stringify() {
         return JSON.stringify(i || {});
     }
-    asyncGetRaw(e, n) {
+    asyncGetRaw(e, t) {
         return Promise.resolve(i.getItem(e));
     }
-    setRaw(e, n) {
-        i.setItem(e, n);
+    setRaw(e, t) {
+        i.setItem(e, t);
     }
     getAfterRefresh(e) {
         return Promise.resolve(this.get(e));
     }
 }
-class l {
-    get(e, n) {
-        return this.storage.hasOwnProperty(e) ? this.storage[e] : n;
+class o {
+    get(e, t) {
+        return this.storage.hasOwnProperty(e) ? this.storage[e] : t;
     }
-    set(e, n) {
-        this.storage[e] = n;
+    set(e, t) {
+        this.storage[e] = t;
     }
     remove(e) {
         delete this.storage[e];
@@ -84,17 +80,17 @@ class l {
     stringify() {
         return JSON.stringify(this.storage);
     }
-    asyncGetRaw(e, n) {
+    asyncGetRaw(e, t) {
         return Promise.resolve(i.getItem(e));
     }
-    setRaw(e, n) {
-        i.setItem(e, n);
+    setRaw(e, t) {
+        i.setItem(e, t);
     }
     getAfterRefresh(e) {
         return Promise.resolve(this.get(e));
     }
     constructor() {
-        a(this, 'storage', void 0), (this.storage = {});
+        r(this, 'storage', void 0), (this.storage = {});
     }
 }
-let u = o() ? new s() : new l();
+let l = a() ? new s() : new o();

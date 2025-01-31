@@ -1,37 +1,35 @@
 n.d(t, {
-    y: function () {
-        return l;
-    }
+    Z: () => x,
+    y: () => c
 });
 var i,
-    l,
-    r = n(200651);
+    l = n(200651);
 n(192379);
 var a = n(120356),
-    o = n.n(a),
+    r = n.n(a),
     s = n(481060),
-    d = n(388032),
-    c = n(222569);
-((i = l || (l = {})).DENY = 'DENY'), (i.PASSTHROUGH = 'PASSTHROUGH'), (i.ALLOW = 'ALLOW');
-let u = Object.keys(l);
+    o = n(388032),
+    d = n(222569),
+    c = (((i = {}).DENY = 'DENY'), (i.PASSTHROUGH = 'PASSTHROUGH'), (i.ALLOW = 'ALLOW'), i);
+let u = Object.keys(c);
 function m(e) {
-    let { value: t = 'PASSTHROUGH', onChange: n, labelledBy: i, disabled: l = !1 } = e,
-        a = (0, s.useRadioGroup)({
+    let { value: t = 'PASSTHROUGH', onChange: n, labelledBy: i, disabled: a = !1 } = e,
+        o = (0, s.arW)({
             orientation: 'horizontal',
-            isDisabled: l,
+            isDisabled: a,
             labelledBy: i
         });
-    return (0, r.jsx)('div', {
-        className: o()(c.group, { [c.disabled]: l }),
-        ...a,
+    return (0, l.jsx)('div', {
+        className: r()(d.group, { [d.disabled]: a }),
+        ...o,
         children: u.map((e) =>
-            (0, r.jsx)(
+            (0, l.jsx)(
                 h,
                 {
                     type: e,
                     isSelected: t === e,
                     onSelect: (e) => {
-                        t !== e && !l && n(e);
+                        t === e || a || n(e);
                     }
                 },
                 e
@@ -43,29 +41,30 @@ function h(e) {
     let t,
         n,
         i,
-        { type: l, onSelect: a, isSelected: u } = e;
-    switch (l) {
+        { type: a, onSelect: c, isSelected: u } = e;
+    switch (a) {
         case 'DENY':
-            (i = d.intl.string(d.t['6639Oz'])), (t = s.XSmallIcon), (n = c.deny);
+            (i = o.intl.string(o.t['6639Oz'])), (t = s.Dio), (n = d.deny);
             break;
         case 'ALLOW':
-            (i = d.intl.string(d.t.RzDfSk)), (t = s.CheckmarkLargeIcon), (n = c.allow);
+            (i = o.intl.string(o.t.RzDfSk)), (t = s.dz2), (n = d.allow);
             break;
         default:
-            (i = d.intl.string(d.t.ujC3ZW)), (t = s.SlashIcon), (n = c.passthrough);
+            (i = o.intl.string(o.t.ujC3ZW)), (t = s.XZC), (n = d.passthrough);
     }
-    let m = (0, s.useRadioItem)({
+    let m = (0, s.xUy)({
         isSelected: u,
         label: i
     });
-    return (0, r.jsx)(s.Clickable, {
-        className: o()(c.item, n, { [c.selected]: u }),
-        onClick: () => a(l),
+    return (0, l.jsx)(s.P3F, {
+        className: r()(d.item, n, { [d.selected]: u }),
+        onClick: () => c(a),
         ...m,
-        children: (0, r.jsx)(t, {
+        children: (0, l.jsx)(t, {
             color: 'currentColor',
             size: 'xs'
         })
     });
 }
-(m.Types = l), (t.Z = m);
+m.Types = c;
+let x = m;

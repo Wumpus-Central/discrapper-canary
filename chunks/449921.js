@@ -1,4 +1,5 @@
-var e = {
+n.d(i, { Z: () => a });
+var o = {
     lessThanXSeconds: {
         one: {
             regular: 'mniej niż sekunda',
@@ -108,17 +109,17 @@ var e = {
         other: 'prawie {{count}} lat'
     }
 };
-function o(n, i, e) {
-    var o = (function (n, i) {
-        if (1 === i) return n.one;
-        var e = i % 100;
-        if (e <= 20 && e > 10) return n.other;
-        var o = e % 10;
-        return o >= 2 && o <= 4 ? n.twoFour : n.other;
-    })(n, i);
-    return ('string' == typeof o ? o : o[e]).replace('{{count}}', String(i));
+function t(e, i, n) {
+    var o = (function (e, i) {
+        if (1 === i) return e.one;
+        var n = i % 100;
+        if (n <= 20 && n > 10) return e.other;
+        var o = n % 10;
+        return o >= 2 && o <= 4 ? e.twoFour : e.other;
+    })(e, i);
+    return ('string' == typeof o ? o : o[n]).replace('{{count}}', String(i));
 }
-i.Z = function (n, i, t) {
-    var a = e[n];
-    return null != t && t.addSuffix ? (t.comparison && t.comparison > 0 ? 'za ' + o(a, i, 'future') : o(a, i, 'past') + ' temu') : o(a, i, 'regular');
+let a = function (e, i, n) {
+    var a = o[e];
+    return null != n && n.addSuffix ? (n.comparison && n.comparison > 0 ? 'za ' + t(a, i, 'future') : t(a, i, 'past') + ' temu') : t(a, i, 'regular');
 };

@@ -1,13 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return C;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => _ }), n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(442837),
-    a = n(481060),
+    a = n(442837),
+    r = n(481060),
     s = n(592125),
     o = n(430824),
     c = n(584825),
@@ -18,52 +13,52 @@ var i = n(200651),
     m = n(981631),
     f = n(388032),
     g = n(625298);
-function C(e) {
+function _(e) {
     let { guildId: t, channelId: n } = e,
-        C = (0, d.C)({
+        _ = (0, d.C)({
             guildId: t,
             channelId: n
         }),
-        x = (0, c.GG)(t),
-        v = (0, c.YB)(t),
-        _ = (0, r.e7)([o.Z], () => o.Z.getGuild(t), [t]),
-        I = null == _ ? void 0 : _.name,
-        E = (0, r.e7)([s.Z], () => s.Z.getChannel(n)),
+        C = (0, c.GG)(t),
+        x = (0, c.YB)(t),
+        v = (0, a.e7)([o.Z], () => o.Z.getGuild(t), [t]),
+        E = null == v ? void 0 : v.name,
+        I = (0, a.e7)([s.Z], () => s.Z.getChannel(n)),
         b = l.useMemo(() => {
             let e = {};
-            for (let t of x) for (let n of t.subscription_listings_ids) e[n] = t.id;
+            for (let t of C) for (let n of t.subscription_listings_ids) e[n] = t.id;
             return e;
-        }, [x]);
+        }, [C]);
     return ((0, u.Z)({
         guildId: t,
         location: m.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL,
-        relevantSubscriptionListingIds: C.map((e) => e.id)
+        relevantSubscriptionListingIds: _.map((e) => e.id)
     }),
-    null == _)
+    null == v)
         ? (0, i.jsx)('div', {
               className: g.__invalid_spinnerContainer,
-              children: (0, i.jsx)(a.Spinner, { className: g.__invalid_spinner })
+              children: (0, i.jsx)(r.$jN, { className: g.__invalid_spinner })
           })
-        : (0, i.jsxs)(a.ScrollerAuto, {
+        : (0, i.jsxs)(r.w0Z, {
               className: g.pageContainer,
               children: [
-                  (0, i.jsx)(a.Heading, {
+                  (0, i.jsx)(r.X6q, {
                       variant: 'heading-xl/semibold',
                       className: g.joinCtaTitle,
                       children: f.intl.format(f.t.xHMpys, {
-                          serverName: I,
-                          channelName: null == E ? void 0 : E.name
+                          serverName: E,
+                          channelName: null == I ? void 0 : I.name
                       })
                   }),
-                  (0, i.jsx)(a.Text, {
+                  (0, i.jsx)(r.Text, {
                       className: g.joinCtaSubtitle,
                       variant: 'text-md/normal',
                       color: 'header-secondary',
-                      children: null == v ? void 0 : v.description
+                      children: null == x ? void 0 : x.description
                   }),
                   (0, i.jsx)(h.Z, {
                       guildId: t,
-                      children: C.filter((e) => null != b[e.id]).map((e) =>
+                      children: _.filter((e) => null != b[e.id]).map((e) =>
                           (0, i.jsx)(
                               p.Z,
                               {

@@ -1,17 +1,11 @@
-r.r(n),
-    r.d(n, {
-        default: function () {
-            return d;
-        }
-    }),
-    r(47120);
-var i = r(200651),
-    l = r(192379),
-    e = r(481060),
-    s = r(355467),
-    o = r(362786),
-    a = r(388032),
-    u = r(932522);
+n.d(r, { default: () => d }), n(47120);
+var i = n(200651),
+    l = n(192379),
+    e = n(481060),
+    s = n(355467),
+    o = n(362786),
+    a = n(388032),
+    u = n(932522);
 let c = {
     [o.HZ.GIFTING_REFUND]: () => a.intl.string(a.t.o9vzKy),
     [o.HZ.BUYERS_REMORSE]: () => a.intl.string(a.t['OaU+ER']),
@@ -24,20 +18,20 @@ let c = {
     [o.HZ.OTHER]: () => a.intl.string(a.t['sVo/9/'])
 };
 function d(t) {
-    let n,
-        { payment: r, reportProblemUrl: d, onClose: p, ...g } = t,
-        [m, E] = l.useState(null),
-        [h, x] = l.useState(!1),
-        [S, O] = l.useState(null);
-    n = h
-        ? (0, i.jsx)(e.Spinner, {})
-        : null != S
+    let r,
+        { payment: n, reportProblemUrl: d, onClose: x, ...m } = t,
+        [h, p] = l.useState(null),
+        [E, g] = l.useState(!1),
+        [O, _] = l.useState(null);
+    r = E
+        ? (0, i.jsx)(e.$jN, {})
+        : null != O
           ? (0, i.jsxs)('div', {
                 children: [
                     (0, i.jsx)(e.Text, {
                         variant: 'text-md/normal',
                         className: u.refundErrorTitle,
-                        children: a.intl.format(a.t['1LaEh4'], { error: S })
+                        children: a.intl.format(a.t['1LaEh4'], { error: O })
                     }),
                     (0, i.jsx)(e.Text, {
                         className: u.refundErrorSupport,
@@ -49,70 +43,70 @@ function d(t) {
           : (0, i.jsxs)('div', {
                 className: u.body,
                 children: [
-                    (0, i.jsx)(e.SingleSelect, {
+                    (0, i.jsx)(e.q4e, {
                         options: Object.entries(c)
-                            .sort((t, n) => {
-                                let [r] = t,
-                                    [i] = n;
-                                return Number(r) === o.HZ.OTHER ? 1 : Number(i) === o.HZ.OTHER ? -1 : 0;
+                            .sort((t, r) => {
+                                let [n] = t,
+                                    [i] = r;
+                                return Number(n) === o.HZ.OTHER ? 1 : Number(i) === o.HZ.OTHER ? -1 : 0;
                             })
                             .map((t) => {
-                                let [n, r] = t;
+                                let [r, n] = t;
                                 return {
-                                    value: parseInt(n),
-                                    label: r()
+                                    value: parseInt(r),
+                                    label: n()
                                 };
                             }),
-                        onChange: (t) => E(t),
-                        value: m,
+                        onChange: (t) => p(t),
+                        value: h,
                         placeholder: a.intl.string(a.t['SQsI/P'])
                     }),
                     (0, i.jsxs)(e.Text, {
                         className: u.notice,
                         variant: 'text-sm/normal',
-                        children: [a.intl.string(a.t.hZ2ql5), ' ', r.isPremiumSubscription || r.isPremiumGuildSubscription || r.isPremiumGift ? a.intl.string(a.t.IOkTho) : null]
+                        children: [a.intl.string(a.t.hZ2ql5), ' ', n.isPremiumSubscription || n.isPremiumGuildSubscription || n.isPremiumGift ? a.intl.string(a.t.IOkTho) : null]
                     })
                 ]
             });
-    let R = null == m || h || null != S;
-    return (0, i.jsxs)(e.ModalRoot, {
-        ...g,
+    let b = null == h || E || null != O;
+    return (0, i.jsxs)(e.Y0X, {
+        ...m,
         children: [
-            (0, i.jsx)(e.ModalHeader, {
+            (0, i.jsx)(e.xBx, {
                 separator: !1,
-                children: (0, i.jsx)(e.Heading, {
+                children: (0, i.jsx)(e.X6q, {
                     variant: 'heading-lg/semibold',
-                    children: null != S ? a.intl.string(a.t['UleS9/']) : a.intl.string(a.t.RK9GKC)
+                    children: null != O ? a.intl.string(a.t['UleS9/']) : a.intl.string(a.t.RK9GKC)
                 })
             }),
-            (0, i.jsx)(e.ModalContent, { children: n }),
-            (0, i.jsxs)(e.ModalFooter, {
+            (0, i.jsx)(e.hzk, { children: r }),
+            (0, i.jsxs)(e.mzw, {
                 children: [
-                    (0, i.jsx)(e.Button, {
+                    (0, i.jsx)(e.zxk, {
                         type: 'submit',
-                        color: e.Button.Colors.RED,
+                        color: e.zxk.Colors.RED,
                         onClick: async () => {
-                            if (!R && null != m) {
-                                x(!0), O(null);
+                            if (!b && null != h) {
+                                g(!0), _(null);
                                 try {
-                                    await (0, s.Os)(r.id, m), p();
+                                    await (0, s.Os)(n.id, h), x();
                                 } catch (t) {
-                                    O(t.body.message);
+                                    _(t.body.message);
                                 } finally {
-                                    x(!1);
+                                    g(!1);
                                 }
                             }
                         },
-                        disabled: R,
+                        disabled: b,
                         autoFocus: !0,
                         children: a.intl.string(a.t.geKm7u)
                     }),
-                    (0, i.jsx)(e.Button, {
+                    (0, i.jsx)(e.zxk, {
                         type: 'button',
-                        look: e.Button.Looks.LINK,
-                        color: e.Button.Colors.PRIMARY,
+                        look: e.zxk.Looks.LINK,
+                        color: e.zxk.Colors.PRIMARY,
                         onClick: () => {
-                            p();
+                            x();
                         },
                         children: a.intl.string(a.t.oEAioK)
                     })

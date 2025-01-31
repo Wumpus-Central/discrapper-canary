@@ -1,22 +1,18 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
+n.d(t, { Z: () => d });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(424602),
-    a = n(397698),
-    o = n(776862),
-    s = n(701488),
+var l = n(481060),
+    a = n(424602),
+    r = n(397698),
+    s = n(776862),
+    o = n(701488),
     c = n(981631);
-function u(e) {
-    let { channel: t, guildId: u, locationObject: d, openInPopout: m, initialSelectedApplicationId: h, initialSlide: f = s.ag.DIRECTORY, enableSelectedTextChannelInvite: p = !1, analyticsLocations: _, opensAppLauncherModal: g = !1 } = e,
-        E = _.length > 0 ? _[_.length - 1] : 'open-activity-shelf',
-        { enabled: C } = l.m1.getCurrentConfig({ location: E }, { autoTrackExposure: !1 });
-    if (g && C) {
-        (0, a.Z)({
+function d(e) {
+    let { channel: t, guildId: d, locationObject: u, openInPopout: m, initialSelectedApplicationId: h, initialSlide: _ = o.ag.DIRECTORY, enableSelectedTextChannelInvite: p = !1, analyticsLocations: g, opensAppLauncherModal: f = !1 } = e,
+        x = g.length > 0 ? g[g.length - 1] : 'open-activity-shelf',
+        { enabled: E } = a.m1.getCurrentConfig({ location: x }, { autoTrackExposure: !1 });
+    if (f && E) {
+        (0, r.Z)({
             openInPopout: m,
             context:
                 null != t
@@ -25,30 +21,30 @@ function u(e) {
                           channel: t
                       }
                     : { type: 'contextless' },
-            analyticsLocation: E
+            analyticsLocation: x
         });
         return;
     }
-    m && (0, o.Z)(c.KJ3.CHANNEL_CALL_POPOUT);
-    let I = m ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT;
-    return (0, r.openModalLazy)(
+    m && (0, s.Z)(c.KJ3.CHANNEL_CALL_POPOUT);
+    let C = m ? l.u1M : l.z1l;
+    return (0, l.ZDy)(
         async () => {
             let { default: e } = await Promise.all([n.e('69057'), n.e('89754')]).then(n.bind(n, 471840));
             return (n) =>
                 (0, i.jsx)(e, {
                     ...n,
                     channel: t,
-                    guildId: u,
-                    locationObject: d,
-                    initialSlide: f,
+                    guildId: d,
+                    locationObject: u,
+                    initialSlide: _,
                     initialSelectedApplicationId: h,
                     enableSelectedTextChannelInvite: p,
-                    analyticsLocations: _
+                    analyticsLocations: g
                 });
         },
         {
-            modalKey: s.AC,
-            contextKey: I
+            modalKey: o.AC,
+            contextKey: C
         }
     );
 }

@@ -1,32 +1,28 @@
-r.d(n, {
-    r: function () {
-        return c;
-    }
-});
-var i = r(100527),
-    a = r(6025),
-    o = r(897473),
-    s = r(545408),
-    l = r(189357),
-    u = r(50493);
-function c(e, n, r) {
-    var c, d, f;
-    let p = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : { modViewPanel: u.k.INFO };
-    if (!(0, l.Y)(e)) return Promise.resolve();
-    let h = null !== (c = p.modViewPanel) && void 0 !== c ? c : u.k.INFO,
-        _ = null !== (d = p.sourceLocation) && void 0 !== d ? d : i.Z.MEMBER_SAFETY_PAGE;
+n.d(t, { r: () => u });
+var i = n(100527),
+    r = n(6025),
+    a = n(897473),
+    s = n(545408),
+    o = n(189357),
+    l = n(50493);
+function u(e, t, n) {
+    var u, c, d;
+    let f = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : { modViewPanel: l.k.INFO };
+    if (!(0, o.Y)(e)) return Promise.resolve();
+    let _ = null !== (u = f.modViewPanel) && void 0 !== u ? u : l.k.INFO,
+        p = null !== (c = f.sourceLocation) && void 0 !== c ? c : i.Z.MEMBER_SAFETY_PAGE;
     return (
-        (0, s.q)(e, n, h, _),
-        a.Z.openGuildSidebar({
+        (0, s.q)(e, t, _, p),
+        r.Z.openGuildSidebar({
             guildId: e,
-            baseChannelId: r,
-            sidebarType: o.jL.GUILD_MEMBER_MOD_VIEW,
+            baseChannelId: n,
+            sidebarType: a.jL.GUILD_MEMBER_MOD_VIEW,
             details: {
-                type: o.Ff.GUILD_MEMBER_MOD_VIEW,
-                userId: n,
+                type: a.Ff.GUILD_MEMBER_MOD_VIEW,
+                userId: t,
                 guildId: e,
-                ...p,
-                modViewPanel: null !== (f = p.modViewPanel) && void 0 !== f ? f : u.k.INFO
+                ...f,
+                modViewPanel: null !== (d = f.modViewPanel) && void 0 !== d ? d : l.k.INFO
             }
         })
     );

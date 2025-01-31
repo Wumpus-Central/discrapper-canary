@@ -1,10 +1,6 @@
-r.d(n, {
-    Z: function () {
-        return a;
-    }
-});
-var i = r(631053);
-function a() {
+n.d(t, { Z: () => r });
+var i = n(631053);
+function r() {
     let e = (0, i.Z)();
-    return null === e || !!(e >= 31) || !1;
+    return null === e || e >= 31;
 }

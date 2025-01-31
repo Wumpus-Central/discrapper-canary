@@ -1,9 +1,4 @@
-var i;
-r.d(n, {
-    D: function () {
-        return i;
-    }
-}),
-    !(function (e) {
-        (e[(e.CLASSIC_IA = 0)] = 'CLASSIC_IA'), (e[(e.DESIGN_IA = 1)] = 'DESIGN_IA'), (e[(e.DESIGN_TABS_IA = 2)] = 'DESIGN_TABS_IA'), (e[(e.YOU_BAR_IA = 3)] = 'YOU_BAR_IA');
-    })(i || (i = {}));
+n.d(t, { D: () => i });
+var i = (function (e) {
+    return (e[(e.CLASSIC_IA = 0)] = 'CLASSIC_IA'), (e[(e.DESIGN_IA = 1)] = 'DESIGN_IA'), (e[(e.DESIGN_TABS_IA = 2)] = 'DESIGN_TABS_IA'), (e[(e.YOU_BAR_IA = 3)] = 'YOU_BAR_IA'), e;
+})({});

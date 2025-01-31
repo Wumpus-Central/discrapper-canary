@@ -1,15 +1,11 @@
-t.d(e, {
-    J: function () {
-        return u;
-    }
-});
-var i = t(544891),
-    r = t(359119),
-    l = t(981631);
-function u(n) {
+e.d(t, { J: () => a });
+var i = e(544891),
+    l = e(359119),
+    r = e(981631);
+function a(n) {
     return i.tn.post({
-        url: l.ANM.ADD_SAFETY_WARNING(n),
-        body: { safety_warning_type: r.pj.LIKELY_ATO },
+        url: r.ANM.ADD_SAFETY_WARNING(n),
+        body: { safety_warning_type: l.pj.LIKELY_ATO },
         rejectWithError: !1
     });
 }

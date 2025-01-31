@@ -1,5 +1,6 @@
-e.exports = {
-    confirmation: 'confirmation_b0b233',
-    confirmationHeader: 'confirmationHeader_b0b233',
-    divider: 'divider_b0b233'
+var i = {
+    confirmation: 'confirmation__6220d',
+    confirmationHeader: 'confirmationHeader__6220d',
+    divider: 'divider__6220d'
 };
+e.exports = i;

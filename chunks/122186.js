@@ -1,92 +1,88 @@
 t.d(n, {
-    Z: function () {
-        return T;
-    },
-    c: function () {
-        return I;
-    }
+    Z: () => E,
+    c: () => T
 });
 var l = t(200651),
     i = t(192379),
     s = t(120356),
-    r = t.n(s),
-    a = t(848246),
+    a = t.n(s),
+    r = t(848246),
     o = t(442837),
     u = t(481060),
     c = t(607070),
     d = t(436774),
     m = t(933843),
-    g = t(1163),
-    h = t(846401),
-    x = t(639119),
-    S = t(197115),
-    v = t(74538),
-    Z = t(981631),
-    C = t(474936),
-    f = t(388032),
-    j = t(468888);
+    x = t(1163),
+    g = t(846401),
+    h = t(639119),
+    v = t(197115),
+    Z = t(74538),
+    S = t(981631),
+    j = t(474936),
+    C = t(388032),
+    f = t(468888);
 function p(e) {
     let { location: n, ...t } = e,
-        s = (0, x.N)(),
-        a = i.useCallback(() => {
+        s = (0, h.N)(),
+        r = i.useCallback(() => {
             if (null != s) {
                 var e;
-                return null !== (e = (0, v.fr)(s)) && void 0 !== e ? e : f.intl.string(f.t.Y2WKTk);
+                return null !== (e = (0, Z.fr)(s)) && void 0 !== e ? e : C.intl.string(C.t.Y2WKTk);
             }
-            return f.intl.string(f.t.Y2WKTk);
+            return C.intl.string(C.t.Y2WKTk);
         }, [s]);
-    return (0, l.jsx)(S.Z, {
-        className: r()(j.enhancedCTA, j.ctaGradientBackground),
-        iconClassName: j.premiumIcon,
-        subscriptionTier: C.Si.TIER_2,
-        buttonText: a(),
-        size: u.Button.Sizes.TINY,
+    return (0, l.jsx)(v.Z, {
+        className: a()(f.enhancedCTA, f.ctaGradientBackground),
+        iconClassName: f.premiumIcon,
+        subscriptionTier: j.Si.TIER_2,
+        buttonText: r(),
+        size: u.zxk.Sizes.TINY,
         premiumModalAnalyticsLocation: n,
         ...t
     });
 }
 function N() {
-    let e = (0, h.Z)();
+    let e = (0, g.Z)();
     return (0, l.jsxs)('div', {
-        className: j.extendedDemoContainer,
+        className: f.extendedDemoContainer,
         children: [
             (0, l.jsxs)('div', {
                 children: [
                     (0, l.jsxs)('div', {
-                        className: j.extendedDemoContainer,
+                        className: f.extendedDemoContainer,
                         children: [
                             (0, l.jsx)(u.Text, {
                                 variant: 'text-xs/bold',
                                 color: 'status-warning',
-                                className: j.extendedDemoDurationText,
+                                className: f.extendedDemoDurationText,
                                 children: e.toUpperCase()
                             }),
                             (0, l.jsx)(u.Text, {
                                 variant: 'text-xs/bold',
-                                children: f.intl.string(f.t.bbRRNT).toUpperCase()
+                                children: C.intl.string(C.t.bbRRNT).toUpperCase()
                             })
                         ]
                     }),
                     (0, l.jsx)(u.Text, {
                         variant: 'text-sm/medium',
-                        children: f.intl.string(f.t['1swibW'])
+                        children: C.intl.string(C.t['1swibW'])
                     })
                 ]
             }),
             (0, l.jsx)('div', {
-                className: j.extendedDemoButton,
-                children: (0, l.jsx)(p, { size: u.Button.Sizes.SMALL })
+                className: f.extendedDemoButton,
+                children: (0, l.jsx)(p, { size: u.zxk.Sizes.SMALL })
             })
         ]
     });
 }
-function I() {
+function T() {
     let e = (0, o.e7)([c.Z], () => c.Z.useReducedMotion);
     return (0, l.jsxs)('div', {
-        className: r()(j.reverseTrialEducationBannerContainer, { [j.reducedMotion]: e }),
+        className: a()(f.reverseTrialEducationBannerContainer, { [f.reducedMotion]: e }),
         children: [
-            (0, l.jsx)(u.LottieAnimation, {
-                className: r()(j.unlockAnimation, { [j.reducedMotion]: e }),
+            (0, l.jsx)(u.Fmz, {
+                className: a()(f.unlockAnimation, { [f.reducedMotion]: e }),
                 loop: !1,
                 shouldAnimate: !e,
                 pauseAtFrame: e ? 149 : void 0,
@@ -94,47 +90,47 @@ function I() {
             }),
             (0, l.jsx)(u.Text, {
                 variant: 'text-xs/medium',
-                className: j.reverseTrialEducationText,
-                children: f.intl.format(f.t.GimLpa, {})
+                className: f.reverseTrialEducationText,
+                children: C.intl.format(C.t.GimLpa, {})
             })
         ]
     });
 }
-function T(e) {
+function E(e) {
     let { message: n, onClose: t, openStreamUpsellModal: i, glow: s = !1 } = e,
         o = {
-            section: Z.jXE.STREAM_SETTINGS,
-            object: Z.qAy.PREMIUM_UPSELL_BANNER,
-            objectType: Z.Qqv.BUY
+            section: S.jXE.STREAM_SETTINGS,
+            object: S.qAy.PREMIUM_UPSELL_BANNER,
+            objectType: S.Qqv.BUY
         },
-        c = (0, m.So)(a.q.STREAM_HIGH_QUALITY),
-        h = g.Z.useExperiment({ location: 'StreamSettingsUpsellBanner' }, { autoTrackExposure: !1 }).extendedDemoDuration;
+        c = (0, m.So)(r.q.STREAM_HIGH_QUALITY),
+        g = x.Z.useExperiment({ location: 'StreamSettingsUpsellBanner' }, { autoTrackExposure: !1 }).extendedDemoDuration;
     return (0, l.jsx)('div', {
-        className: r()(j.upsellBanner, j.enhancedBanner, { [j.gradientGlow]: s }),
+        className: a()(f.upsellBanner, f.enhancedBanner, { [f.gradientGlow]: s }),
         children:
-            c && h
+            c && g
                 ? (0, l.jsx)(N, {})
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsxs)('div', {
-                              className: j.iconTextContainer,
+                              className: f.iconTextContainer,
                               children: [
-                                  (0, l.jsx)(u.NitroWheelIcon, {
+                                  (0, l.jsx)(u.SrA, {
                                       size: 'md',
                                       color: d.JX.PREMIUM_TIER_2
                                   }),
                                   (0, l.jsx)(u.Text, {
                                       variant: 'text-sm/medium',
-                                      className: r()(j.upsellText, j.enhancedUpsellText),
+                                      className: a()(f.upsellText, f.enhancedUpsellText),
                                       children:
                                           null != n
                                               ? n
                                               : c
                                                 ? (0, l.jsxs)(l.Fragment, {
                                                       children: [
-                                                          f.intl.string(f.t.zuZ2ws),
+                                                          C.intl.string(C.t.zuZ2ws),
                                                           ' ',
-                                                          f.intl.format(f.t.fjSvsL, {
+                                                          C.intl.format(C.t.fjSvsL, {
                                                               onClick: () =>
                                                                   i({
                                                                       analyticsLocation: o,
@@ -143,7 +139,7 @@ function T(e) {
                                                           })
                                                       ]
                                                   })
-                                                : f.intl.format(f.t['L/zCtr'], {
+                                                : C.intl.format(C.t['L/zCtr'], {
                                                       onClick: () =>
                                                           i({
                                                               analyticsLocation: o,
@@ -154,7 +150,7 @@ function T(e) {
                               ]
                           }),
                           (0, l.jsx)('div', {
-                              className: j.enhancedCTAs,
+                              className: f.enhancedCTAs,
                               children: (0, l.jsx)(p, { location: o })
                           })
                       ]

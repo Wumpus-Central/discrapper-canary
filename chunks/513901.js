@@ -1,76 +1,71 @@
-n.d(t, {
-    Z: function () {
-        return _;
-    }
-});
+n.d(t, { Z: () => C });
 var i = n(200651),
-    r = n(192379),
-    s = n(120356),
-    a = n.n(s),
-    l = n(481060),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(481060),
     o = n(906732),
     c = n(642619),
     d = n(626135),
     u = n(74538),
     m = n(150039),
-    g = n(993413),
-    h = n(504983),
-    p = n(981631),
+    h = n(993413),
+    g = n(504983),
+    _ = n(981631),
     x = n(474936),
-    f = n(388032),
+    p = n(388032),
     E = n(184057);
-function _(e) {
-    let { user: t, guild: n, className: s, sectionTitle: _, forcedDivider: C = !1, withTutorial: T = !1, showBorder: S = !1, isTryItOutFlow: b = !1, initialSelectedEffectId: I } = e,
-        N = (0, m.Kg)(t, n),
+function C(e) {
+    let { user: t, guild: n, className: r, sectionTitle: C, forcedDivider: f = !1, withTutorial: T = !1, showBorder: N = !1, isTryItOutFlow: I = !1, initialSelectedEffectId: S } = e,
+        b = (0, m.Kg)(t, n),
         v = u.ZP.canUsePremiumProfileCustomization(t),
-        { analyticsLocations: A } = (0, o.ZP)(),
-        { pendingProfileEffectId: j, errors: O } = (0, m.bd)(n),
-        R = r.useCallback(
+        { analyticsLocations: j } = (0, o.ZP)(),
+        { pendingProfileEffectId: A, errors: O } = (0, m.bd)(n),
+        R = s.useCallback(
             () =>
                 (0, c.H)({
-                    analyticsLocations: A,
-                    initialSelectedEffectId: I,
+                    analyticsLocations: j,
+                    initialSelectedEffectId: S,
                     guild: n
                 }),
-            [A, I, n]
+            [j, S, n]
         );
-    r.useEffect(() => {
+    s.useEffect(() => {
         v &&
-            d.default.track(p.rMx.PREMIUM_UPSELL_VIEWED, {
+            d.default.track(_.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: x.cd.PROFILE_EFFECTS_INLINE_SETTINGS,
-                location_stack: A
+                location_stack: j
             });
-    }, [v, A]);
+    }, [v, j]);
     let P = null != n,
-        D = b || void 0 !== j ? null != j : null != N,
-        y = T ? l.ShinyButton : l.Button;
-    return (0, i.jsx)(g.Z, {
-        forcedDivider: C,
-        borderType: h.Y.PREMIUM,
+        D = T ? a.gtL : a.zxk;
+    return (0, i.jsx)(h.Z, {
+        forcedDivider: f,
+        borderType: g.Y.PREMIUM,
         hasBackground: !0,
-        title: _,
-        showBorder: S,
+        title: C,
+        showBorder: N,
         errors: O,
-        className: s,
+        className: r,
         children: (0, i.jsxs)('div', {
             className: E.buttonsContainer,
             children: [
-                (0, i.jsx)(y, {
-                    size: l.Button.Sizes.SMALL,
+                (0, i.jsx)(D, {
+                    size: a.zxk.Sizes.SMALL,
                     onClick: R,
-                    className: a()({ [E.buttonHighlighted]: T }),
-                    children: f.intl.string(f.t['0nEVoK'])
+                    className: l()({ [E.buttonHighlighted]: T }),
+                    children: p.intl.string(p.t['0nEVoK'])
                 }),
-                D &&
-                    (0, i.jsx)(l.Button, {
+                (I || void 0 !== A ? null != A : null != b) &&
+                    (0, i.jsx)(a.zxk, {
                         className: E.removeButton,
-                        color: l.Button.Colors.PRIMARY,
-                        look: l.Button.Looks.LINK,
-                        size: l.Button.Sizes.SMALL,
+                        color: a.zxk.Colors.PRIMARY,
+                        look: a.zxk.Looks.LINK,
+                        size: a.zxk.Sizes.SMALL,
                         onClick: function () {
-                            (0, m.s6)(null, N, null == n ? void 0 : n.id);
+                            (0, m.s6)(null, b, null == n ? void 0 : n.id);
                         },
-                        children: P ? f.intl.string(f.t.GJ3Fcn) : f.intl.string(f.t['Ld+f5e'])
+                        children: P ? p.intl.string(p.t.GJ3Fcn) : p.intl.string(p.t['Ld+f5e'])
                     })
             ]
         })

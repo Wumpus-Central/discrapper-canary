@@ -1,186 +1,164 @@
-r.d(n, {
-    $p: function () {
-        return I;
-    },
-    FQ: function () {
-        return b;
-    },
-    Il: function () {
-        return T;
-    },
-    Jf: function () {
-        return N;
-    },
-    SA: function () {
-        return L;
-    },
-    Um: function () {
-        return A;
-    },
-    eu: function () {
-        return R;
-    },
-    hW: function () {
-        return x;
-    },
-    lY: function () {
-        return C;
-    },
-    pk: function () {
-        return S;
-    },
-    qB: function () {
-        return O;
-    }
-});
-var i = r(653041);
-var a = r(392711),
-    o = r.n(a),
-    s = r(544891),
-    l = r(570140),
-    u = r(668781),
-    c = r(38618),
-    d = r(706454),
-    f = r(675478),
-    p = r(598077),
-    h = r(486472),
-    _ = r(594174),
-    m = r(73346),
-    g = r(926491),
-    E = r(981631),
-    v = r(526761),
-    y = r(388032);
-let b = async (e, n) => {
-        let { body: r } = await (0, m.Kb)({
-            url: E.ANM.STICKER_PACK(e),
+n.d(t, {
+    $p: () => y,
+    FQ: () => v,
+    Il: () => I,
+    Jf: () => A,
+    SA: () => O,
+    Um: () => T,
+    eu: () => N,
+    hW: () => D,
+    lY: () => S,
+    pk: () => b,
+    qB: () => C
+}),
+    n(653041);
+var i = n(392711),
+    r = n.n(i),
+    a = n(544891),
+    s = n(570140),
+    o = n(668781),
+    l = n(38618),
+    u = n(706454),
+    c = n(675478),
+    d = n(598077),
+    f = n(486472),
+    _ = n(594174),
+    p = n(73346),
+    h = n(926491),
+    m = n(981631),
+    g = n(526761),
+    E = n(388032);
+let v = async (e, t) => {
+        let { body: n } = await (0, p.Kb)({
+            url: m.ANM.STICKER_PACK(e),
             rejectWithError: !1
         });
         return (
-            l.Z.dispatch({
+            s.Z.dispatch({
                 type: 'STICKER_PACK_FETCH_SUCCESS',
                 packId: e,
-                pack: r,
-                ingestStickers: n
+                pack: n,
+                ingestStickers: t
             }),
-            r
+            n
         );
     },
-    I = async function () {
-        let { locale: e = d.default.locale } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        if (g.Z.isFetchingStickerPacks || g.Z.hasLoadedStickerPacks) return;
-        l.Z.wait(() => {
-            l.Z.dispatch({ type: 'STICKER_PACKS_FETCH_START' });
+    y = async function () {
+        let { locale: e = u.default.locale } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        if (h.Z.isFetchingStickerPacks || h.Z.hasLoadedStickerPacks) return;
+        s.Z.wait(() => {
+            s.Z.dispatch({ type: 'STICKER_PACKS_FETCH_START' });
         });
         let {
-            body: { sticker_packs: n }
-        } = await s.tn.get({
-            url: E.ANM.STICKER_PACKS,
+            body: { sticker_packs: t }
+        } = await a.tn.get({
+            url: m.ANM.STICKER_PACKS,
             query: { locale: e },
             rejectWithError: !1
         });
-        l.Z.dispatch({
+        s.Z.dispatch({
             type: 'STICKER_PACKS_FETCH_SUCCESS',
-            packs: n
+            packs: t
         });
     },
-    T = async (e) => {
-        let { body: n } = await s.tn.get({
-            url: E.ANM.STICKER(e),
+    I = async (e) => {
+        let { body: t } = await a.tn.get({
+            url: m.ANM.STICKER(e),
             rejectWithError: !1
         });
-        l.Z.dispatch({
+        s.Z.dispatch({
             type: 'STICKER_FETCH_SUCCESS',
-            sticker: n
+            sticker: t
         });
     },
-    S = async (e) => {
-        let { body: n } = await s.tn.get({
-            url: E.ANM.GUILD_STICKER_PACKS(e),
+    b = async (e) => {
+        let { body: t } = await a.tn.get({
+            url: m.ANM.GUILD_STICKER_PACKS(e),
             rejectWithError: !1
         });
-        l.Z.dispatch({
+        s.Z.dispatch({
             type: 'GUILD_STICKERS_FETCH_SUCCESS',
             guildId: e,
-            stickers: n.map((e) =>
+            stickers: t.map((e) =>
                 null != e.user
                     ? {
                           ...e,
-                          user: new p.Z(e.user)
+                          user: new d.Z(e.user)
                       }
                     : e
             )
         });
     },
-    A = async (e) => {
-        await s.tn.del({
-            url: E.ANM.GUILD_STICKER(e.guild_id, e.id),
+    T = async (e) => {
+        await a.tn.del({
+            url: m.ANM.GUILD_STICKER(e.guild_id, e.id),
             rejectWithError: !1
         });
     },
-    C = async (e, n) => {
-        let r = await s.tn.post({
-            url: E.ANM.GUILD_STICKER_PACKS(e),
-            body: n,
+    S = async (e, t) => {
+        let n = await a.tn.post({
+            url: m.ANM.GUILD_STICKER_PACKS(e),
+            body: t,
             rejectWithError: !1
         });
         return (
-            l.Z.dispatch({
+            s.Z.dispatch({
                 type: 'GUILD_STICKERS_CREATE_SUCCESS',
                 guildId: e,
                 sticker: {
-                    ...r.body,
+                    ...n.body,
                     user: _.default.getCurrentUser()
                 }
             }),
-            r.body
+            n.body
         );
     },
-    N = async (e, n, r) =>
+    A = async (e, t, n) =>
         (
-            await s.tn.patch({
-                url: E.ANM.GUILD_STICKER(e, n),
-                body: r,
+            await a.tn.patch({
+                url: m.ANM.GUILD_STICKER(e, t),
+                body: n,
                 rejectWithError: !1
             })
         ).body;
-function R(e, n, r) {
-    l.Z.dispatch({
+function N(e, t, n) {
+    s.Z.dispatch({
         type: 'ADD_STICKER_PREVIEW',
         channelId: e,
-        sticker: n,
-        draftType: r
-    });
-}
-function O(e, n) {
-    l.Z.dispatch({
-        type: 'CLEAR_STICKER_PREVIEW',
-        channelId: e,
+        sticker: t,
         draftType: n
     });
 }
-function D(e) {
-    return h.Z.totalUnavailableGuilds > 0 || !c.Z.isConnected() ? e : e.filter((e) => null != g.Z.getStickerById(e));
+function C(e, t) {
+    s.Z.dispatch({
+        type: 'CLEAR_STICKER_PREVIEW',
+        channelId: e,
+        draftType: t
+    });
 }
-function L(e) {
-    f.DZ.updateAsync(
+function R(e) {
+    return f.Z.totalUnavailableGuilds > 0 || !l.Z.isConnected() ? e : e.filter((e) => null != h.Z.getStickerById(e));
+}
+function O(e) {
+    c.DZ.updateAsync(
         'favoriteStickers',
-        (n) =>
-            ((n.stickerIds = D(n.stickerIds)), o().size(n.stickerIds) >= v.oX)
-                ? (u.Z.show({
-                      title: y.intl.string(y.t['+XYXtb']),
-                      body: y.intl.formatToPlainString(y.t.JaIyFh, { count: v.oX })
+        (t) =>
+            ((t.stickerIds = R(t.stickerIds)), r().size(t.stickerIds) >= g.oX)
+                ? (o.Z.show({
+                      title: E.intl.string(E.t['+XYXtb']),
+                      body: E.intl.formatToPlainString(E.t.JaIyFh, { count: g.oX })
                   }),
                   !1)
-                : !n.stickerIds.includes(e) && void n.stickerIds.push(e),
-        v.fy.INFREQUENT_USER_ACTION
+                : !t.stickerIds.includes(e) && void t.stickerIds.push(e),
+        g.fy.INFREQUENT_USER_ACTION
     );
 }
-function x(e) {
-    f.DZ.updateAsync(
+function D(e) {
+    c.DZ.updateAsync(
         'favoriteStickers',
-        (n) => {
-            (n.stickerIds = n.stickerIds.filter((n) => n !== e)), (n.stickerIds = D(n.stickerIds));
+        (t) => {
+            (t.stickerIds = t.stickerIds.filter((t) => t !== e)), (t.stickerIds = R(t.stickerIds));
         },
-        v.fy.INFREQUENT_USER_ACTION
+        g.fy.INFREQUENT_USER_ACTION
     );
 }

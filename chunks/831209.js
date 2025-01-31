@@ -1,6 +1,7 @@
-var r;
-!(function (e) {
-    (e.ACTION_SHEET_GRADIENT_BG = 'var(--action-sheet-gradient-bg)'),
+n.d(t, { Z: () => r });
+var i = (function (e) {
+    return (
+        (e.ACTION_SHEET_GRADIENT_BG = 'var(--action-sheet-gradient-bg)'),
         (e.ACTIVITY_CARD_BACKGROUND = 'var(--activity-card-background)'),
         (e.ACTIVITY_CARD_ICON_OVERLAY = 'var(--activity-card-icon-overlay)'),
         (e.ALERT_BG = 'var(--alert-bg)'),
@@ -40,9 +41,19 @@ var r;
         (e.BG_MOD_FAINT = 'var(--bg-mod-faint)'),
         (e.BG_MOD_STRONG = 'var(--bg-mod-strong)'),
         (e.BG_MOD_SUBTLE = 'var(--bg-mod-subtle)'),
+        (e.BG_MODAL_GRADIENT_GREEN_END = 'var(--bg-modal-gradient-green-end)'),
+        (e.BG_MODAL_GRADIENT_GREEN_START = 'var(--bg-modal-gradient-green-start)'),
+        (e.BG_MODAL_GRADIENT_LAVENDER_END = 'var(--bg-modal-gradient-lavender-end)'),
+        (e.BG_MODAL_GRADIENT_LAVENDER_START = 'var(--bg-modal-gradient-lavender-start)'),
+        (e.BG_MODAL_GRADIENT_MAGENTA_END = 'var(--bg-modal-gradient-magenta-end)'),
+        (e.BG_MODAL_GRADIENT_MAGENTA_START = 'var(--bg-modal-gradient-magenta-start)'),
+        (e.BG_MODAL_GRADIENT_NAVY_END = 'var(--bg-modal-gradient-navy-end)'),
+        (e.BG_MODAL_GRADIENT_NAVY_START = 'var(--bg-modal-gradient-navy-start)'),
         (e.BG_SURFACE_OVERLAY = 'var(--bg-surface-overlay)'),
         (e.BG_SURFACE_OVERLAY_TMP = 'var(--bg-surface-overlay-tmp)'),
         (e.BG_SURFACE_RAISED = 'var(--bg-surface-raised)'),
+        (e.BG_TILE_GRADIENT_MAGENTA_END = 'var(--bg-tile-gradient-magenta-end)'),
+        (e.BG_TILE_GRADIENT_MAGENTA_START = 'var(--bg-tile-gradient-magenta-start)'),
         (e.BLACK = 'var(--black)'),
         (e.BLUR_FALLBACK = 'var(--blur-fallback)'),
         (e.BLUR_FALLBACK_PRESSED = 'var(--blur-fallback-pressed)'),
@@ -339,6 +350,8 @@ var r;
         (e.USER_PROFILE_HEADER_OVERFLOW_BACKGROUND = 'var(--user-profile-header-overflow-background)'),
         (e.VOICE_VIDEO_VIDEO_TILE_BACKGROUND = 'var(--voice-video-video-tile-background)'),
         (e.VOICE_VIDEO_VIDEO_TILE_BLUR_FALLBACK = 'var(--voice-video-video-tile-blur-fallback)'),
-        (e.WHITE = 'var(--white)');
-})(r || (r = {})),
-    (n.Z = r);
+        (e.WHITE = 'var(--white)'),
+        e
+    );
+})(i || {});
+let r = i;

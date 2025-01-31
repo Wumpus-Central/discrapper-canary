@@ -1,94 +1,90 @@
-t.d(l, {
-    Z: function () {
-        return h;
-    }
-});
-var n = t(200651),
-    i = t(192379),
-    s = t(120356),
-    a = t.n(s),
-    o = t(442837),
-    r = t(481060),
-    u = t(596454),
-    d = t(225433),
-    c = t(727637),
-    m = t(318766),
-    f = t(907040),
-    g = t(984933),
-    v = t(903749),
-    x = t(185923),
-    p = t(388032),
-    j = t(526194);
+i.d(l, { Z: () => h });
+var t = i(200651),
+    n = i(192379),
+    s = i(120356),
+    a = i.n(s),
+    o = i(442837),
+    r = i(481060),
+    d = i(596454),
+    u = i(225433),
+    c = i(727637),
+    m = i(318766),
+    f = i(907040),
+    g = i(984933),
+    x = i(903749),
+    v = i(185923),
+    j = i(388032),
+    p = i(526194);
 function h(e) {
-    let { className: l, guildId: t, error: s, emojiId: h, emojiName: I, isRequiredField: N = !0, shouldUpdateBothEmojiFields: C = !1, setEmojiId: E, setEmojiName: S } = e,
-        T = (0, v.Z)({
+    let { className: l, guildId: i, error: s, emojiId: h, emojiName: I, isRequiredField: N = !0, shouldUpdateBothEmojiFields: k = !1, setEmojiId: E, setEmojiName: C } = e,
+        S = (0, x.Z)({
             emojiId: h,
             emojiName: I
         }),
-        Z = (0, o.e7)([g.ZP], () => (null != t ? g.ZP.getDefaultChannel(t) : null)),
-        k = i.createRef(),
-        b = (0, c.Z)(k),
-        y = () => {
-            S(void 0), E(void 0);
+        y = (0, o.e7)([g.ZP], () => (null != i ? g.ZP.getDefaultChannel(i) : null)),
+        Z = n.createRef(),
+        b = (0, c.Z)(Z),
+        z = () => {
+            C(void 0), E(void 0);
         },
-        B = (e) => (l, t) => {
-            let n = (null == l ? void 0 : l.id) == null;
-            y(), n ? S(null == l ? void 0 : l.optionallyDiverseSequence) : (C && S(null == l ? void 0 : l.name), E(null == l ? void 0 : l.id)), t && e();
+        R = (e) => (l, i) => {
+            let t = (null == l ? void 0 : l.id) == null;
+            z(), t ? C(null == l ? void 0 : l.optionallyDiverseSequence) : (k && C(null == l ? void 0 : l.name), E(null == l ? void 0 : l.id)), i && e();
         },
-        R = (e) => {
-            e.stopPropagation(), y();
+        _ = (e) => {
+            e.stopPropagation(), z();
         };
-    return (0, n.jsx)(r.FormItem, {
+    return (0, t.jsx)(r.xJW, {
         required: N,
-        title: p.intl.string(p.t['3BQmiI']),
-        className: a()(l, j.section),
+        title: j.intl.string(j.t['3BQmiI']),
+        className: a()(l, p.section),
         error: s,
-        children: (0, n.jsx)(r.Popout, {
-            animation: r.Popout.Animation.NONE,
+        children: (0, t.jsx)(r.yRy, {
+            animation: r.yRy.Animation.NONE,
             position: 'top',
             renderPopout: (e) => {
                 let { closePopout: l } = e;
-                return (0, n.jsx)(f.Z, {
+                return (0, t.jsx)(f.Z, {
                     closePopout: l,
-                    pickerIntention: x.Hz.SOUNDBOARD,
+                    pickerIntention: v.Hz.SOUNDBOARD,
                     onNavigateAway: l,
-                    onSelectEmoji: B(l),
-                    guildId: t,
-                    channel: Z
+                    onSelectEmoji: R(l),
+                    guildId: i,
+                    channel: y
                 });
             },
             children: (e, l) => {
-                let { isShown: t } = l;
-                return (0, n.jsxs)('div', {
+                let { isShown: i } = l;
+                return (0, t.jsxs)('div', {
                     ...e,
-                    className: j.emojiInput,
-                    ref: k,
+                    className: p.emojiInput,
+                    ref: Z,
                     children: [
-                        (0, n.jsx)(m.Z, {
-                            className: j.emojiButton,
-                            active: t,
+                        (0, t.jsx)(m.Z, {
+                            className: p.emojiButton,
+                            active: i,
                             tabIndex: 0,
                             renderButtonContents:
                                 null != h || null != I
                                     ? () =>
-                                          (0, n.jsx)(u.Z, {
+                                          (0, t.jsx)(d.Z, {
                                               emojiName: I,
                                               emojiId: h
                                           })
                                     : null
                         }),
-                        (0, n.jsx)(r.TextInput, {
-                            inputClassName: j.emojiText,
-                            placeholder: p.intl.string(p.t.QTK0TE),
-                            value: null != T ? ':'.concat(T, ':') : '',
+                        (0, t.jsx)(r.oil, {
+                            inputClassName: p.emojiText,
+                            placeholder: j.intl.string(j.t.QTK0TE),
+                            value: null != S ? ':'.concat(S, ':') : '',
                             readOnly: !0
                         }),
                         b &&
-                            null != T &&
-                            (0, n.jsx)(d.Z, {
+                            null != S &&
+                            (0, t.jsx)(u.Z, {
                                 ...e,
-                                onClick: R,
-                                className: j.removeButton
+                                onClick: _,
+                                className: p.removeButton
                             })
                     ]
                 });

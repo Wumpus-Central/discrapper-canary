@@ -1,16 +1,12 @@
 n.r(
     (e.exports = {
-        actionsStreamPreview: 'actionsStreamPreview_dafd61',
-        actionsProfile: 'actionsProfile_dafd61',
-        actionsProfileV2: 'actionsProfileV2_dafd61',
-        actionsSimplifiedProfile: 'actionsSimplifiedProfile_dafd61',
-        actionsActivityFeed: 'actionsActivityFeed_dafd61',
-        errorImage: 'errorImage_dafd61',
-        cannotLaunchImage: 'cannotLaunchImage_dafd61 errorImage_dafd61',
-        actionsUserPopoutV2: 'actionsUserPopoutV2_dafd61',
-        actionsUserPopout: 'actionsUserPopout_dafd61',
-        actionsVoiceChannel: 'actionsVoiceChannel_dafd61',
-        actionsBiteSizePopout: 'actionsBiteSizePopout_dafd61',
-        actionsWrapper: 'actionsWrapper_dafd61'
+        actionsStreamPreview: 'actionsStreamPreview__34f7d',
+        actionsProfile: 'actionsProfile__34f7d',
+        actionsProfileV2: 'actionsProfileV2__34f7d',
+        actionsSimplifiedProfile: 'actionsSimplifiedProfile__34f7d',
+        actionsActivityFeed: 'actionsActivityFeed__34f7d',
+        errorImage: 'errorImage__34f7d',
+        cannotLaunchImage: 'cannotLaunchImage__34f7d errorImage__34f7d',
+        actionsWrapper: 'actionsWrapper__34f7d'
     })
 );

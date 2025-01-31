@@ -1,19 +1,11 @@
-r.d(n, {
-    D1: function () {
-        return o;
-    },
-    FX: function () {
-        return a;
-    },
-    Rm: function () {
-        return s;
-    },
-    pe: function () {
-        return l;
-    }
-});
-var i = r(47120);
-let a = '1285377810587979827',
-    o = '1316162456959057920',
-    s = new Set([a, o]),
-    l = 5;
+n.d(t, {
+    D1: () => r,
+    FX: () => i,
+    Rm: () => a,
+    pe: () => s
+}),
+    n(47120);
+let i = '1285377810587979827',
+    r = '1316162456959057920',
+    a = new Set([i, r]),
+    s = 5;

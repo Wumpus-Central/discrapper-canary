@@ -1,120 +1,119 @@
-n(47120);
+n.d(t, { Z: () => E }), n(47120);
 var i,
     r,
     l,
-    s,
-    a = n(392711),
-    o = n.n(a),
-    c = n(906280),
-    d = n.n(c),
-    u = n(442837),
-    m = n(570140),
-    h = n(944163),
-    g = n(77498),
-    x = n(116175),
-    p = n(308083);
-function f(e) {
-    return new Set(Array.from(e).filter((e) => null != g.Z.getDetectableGame(e)));
+    s = n(392711),
+    a = n.n(s),
+    o = n(906280),
+    c = n.n(o),
+    d = n(442837),
+    u = n(570140),
+    m = n(944163),
+    h = n(77498),
+    g = n(116175),
+    x = n(308083);
+function p(e) {
+    return new Set(Array.from(e).filter((e) => null != h.Z.getDetectableGame(e)));
 }
-let C = () => ({
+let _ = () => ({
         gameApplicationIds: new Set(),
-        playstyle: p.zv.NONE,
+        playstyle: x.zv.NONE,
         interests: new Set(),
         description: '',
-        wildcardDescriptors: [p.U6, p.U6, p.U6],
+        wildcardDescriptors: [x.U6, x.U6, x.U6],
         tag: '',
-        verificationForm: { ...h.t },
-        badgeKind: x.ZD.SWORD,
-        badgePrimaryColor: x.sg['0'].primary,
-        badgeSecondaryColor: x.sg['0'].secondary,
-        banner: p.qC.NIGHT_SKY,
-        brandPrimaryColor: p.ym['0'].primary,
-        brandSecondaryColor: p.ym['0'].secondary
+        verificationForm: { ...m.t },
+        badgeKind: g.ZD.SWORD,
+        badgePrimaryColor: g.sg['0'].primary,
+        badgeSecondaryColor: g.sg['0'].secondary,
+        banner: x.qC.NIGHT_SKY,
+        brandPrimaryColor: x.ym['0'].primary,
+        brandSecondaryColor: x.ym['0'].secondary
     }),
-    v = C(),
-    I = d()(v),
+    C = _(),
+    f = c()(C),
+    v = !1,
     N = !1,
-    _ = !1,
-    T = {};
-class j extends (i = u.ZP.Store) {
+    j = {};
+class I extends (i = d.ZP.Store) {
     getState() {
         return {
-            initialSettings: v,
-            settings: I,
-            dirty: N,
-            errors: T,
-            submitting: _
+            initialSettings: C,
+            settings: f,
+            dirty: v,
+            errors: j,
+            submitting: N
         };
     }
 }
-(s = 'ClanSettingsStore'),
-    (l = 'displayName') in (r = j)
-        ? Object.defineProperty(r, l, {
-              value: s,
+(l = 'ClanSettingsStore'),
+    (r = 'displayName') in I
+        ? Object.defineProperty(I, r, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (r[l] = s),
-    (t.Z = new j(m.Z, {
-        CLAN_SETTINGS_FETCH_START: function () {
-            (_ = !1), (v = C()), (I = d()(v)), (N = !1), (T = {});
-        },
-        CLAN_SETTINGS_FETCH_SUCCESS: function (e) {
-            let { settings: t } = e;
-            (v = {
-                ...C(),
-                ...t
+        : (I[r] = l);
+let E = new I(u.Z, {
+    CLAN_SETTINGS_FETCH_START: function () {
+        (N = !1), (C = _()), (f = c()(C)), (v = !1), (j = {});
+    },
+    CLAN_SETTINGS_FETCH_SUCCESS: function (e) {
+        let { settings: t } = e;
+        (C = {
+            ..._(),
+            ...t
+        }),
+            ((f = c()(C)).gameApplicationIds = p(f.gameApplicationIds)),
+            (v = !1);
+    },
+    CLAN_SETTINGS_UPDATE: function (e) {
+        let { updates: t } = e,
+            { gameApplicationIds: n } = t;
+        for (let e in (null != n && (t.gameApplicationIds = p(n)),
+        (f = {
+            ...f,
+            ...c()(t)
+        }),
+        t))
+            delete j[e], (j = { ...j });
+        v = !a().isEqual(a().omit(f, 'verificationForm'), a().omit(C, 'verificationForm'));
+    },
+    CLAN_SETTINGS_SUBMIT: function () {
+        (N = !0), (j = {});
+    },
+    CLAN_SETTINGS_SUBMIT_SUCCESS: function () {
+        (N = !1), (C = c()(f)), (v = !1), (j = {});
+    },
+    CLAN_SETTINGS_SUBMIT_ERROR: function (e) {
+        let { error: t } = e;
+        (N = !1),
+            (j = {
+                gameApplicationIds: t.getFirstFieldErrorMessage('game_application_ids'),
+                playstyle: t.getFirstFieldErrorMessage('play_style'),
+                description: t.getFirstFieldErrorMessage('description'),
+                wildcardDescriptors: t.getFirstFieldErrorMessage('wildcard_descriptors'),
+                interests: t.getFirstFieldErrorMessage('search_terms'),
+                tag: t.getFirstFieldErrorMessage('tag'),
+                verificationForm: t.getFirstFieldErrorMessage(['verification_form', 'form_fields'])
+            });
+    },
+    MEMBER_VERIFICATION_FORM_UPDATE: function (e) {
+        let { form: t, isLocalUpdate: n } = e;
+        if (null == f.verificationForm) return !1;
+        if (
+            ((f = {
+                ...f,
+                verificationForm: {
+                    ...f.verificationForm,
+                    ...t
+                }
             }),
-                ((I = d()(v)).gameApplicationIds = f(I.gameApplicationIds)),
-                (N = !1);
-        },
-        CLAN_SETTINGS_UPDATE: function (e) {
-            let { updates: t } = e,
-                { gameApplicationIds: n } = t;
-            for (let e in (null != n && (t.gameApplicationIds = f(n)),
-            (I = {
-                ...I,
-                ...d()(t)
-            }),
-            t))
-                delete T[e], (T = { ...T });
-            N = !o().isEqual(o().omit(I, 'verificationForm'), o().omit(v, 'verificationForm'));
-        },
-        CLAN_SETTINGS_SUBMIT: function () {
-            (_ = !0), (T = {});
-        },
-        CLAN_SETTINGS_SUBMIT_SUCCESS: function () {
-            (_ = !1), (v = d()(I)), (N = !1), (T = {});
-        },
-        CLAN_SETTINGS_SUBMIT_ERROR: function (e) {
-            let { error: t } = e;
-            (_ = !1),
-                (T = {
-                    gameApplicationIds: t.getFirstFieldErrorMessage('game_application_ids'),
-                    playstyle: t.getFirstFieldErrorMessage('play_style'),
-                    description: t.getFirstFieldErrorMessage('description'),
-                    wildcardDescriptors: t.getFirstFieldErrorMessage('wildcard_descriptors'),
-                    interests: t.getFirstFieldErrorMessage('search_terms'),
-                    tag: t.getFirstFieldErrorMessage('tag'),
-                    verificationForm: t.getFirstFieldErrorMessage(['verification_form', 'form_fields'])
-                });
-        },
-        MEMBER_VERIFICATION_FORM_UPDATE: function (e) {
-            let { form: t, isLocalUpdate: n } = e;
-            if (null == I.verificationForm) return !1;
-            if (
-                ((I = {
-                    ...I,
-                    verificationForm: {
-                        ...I.verificationForm,
-                        ...t
-                    }
-                }),
-                n)
-            ) {
-                var i;
-                N = !o().isEqual(I.verificationForm.formFields, null === (i = v.verificationForm) || void 0 === i ? void 0 : i.formFields);
-            } else N = !1;
-        }
-    }));
+            n)
+        ) {
+            var i;
+            v = !a().isEqual(f.verificationForm.formFields, null === (i = C.verificationForm) || void 0 === i ? void 0 : i.formFields);
+        } else v = !1;
+    }
+});

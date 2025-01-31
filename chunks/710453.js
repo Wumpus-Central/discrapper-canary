@@ -1,7 +1,9 @@
 e.exports = {
-    root: 'root_b1717f',
-    highFive: 'highFive_b1717f',
-    waiting: 'waiting_b1717f',
-    completeLeft: 'completeLeft_b1717f complete_b1717f',
-    completeRight: 'completeRight_b1717f complete_b1717f'
+    root: 'root_cd27c4',
+    highFive: 'highFive_cd27c4',
+    waiting: 'waiting_cd27c4',
+    wave: 'wave_cd27c4',
+    complete: 'complete_cd27c4',
+    completeLeft: 'completeLeft_cd27c4 complete_cd27c4',
+    completeRight: 'completeRight_cd27c4 complete_cd27c4'
 };

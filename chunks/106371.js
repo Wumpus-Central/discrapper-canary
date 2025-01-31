@@ -1,3 +1,4 @@
+n.d(t, { Z: () => a });
 var i = n(818083);
 let o = (0, i.B)({
     kind: 'user',
@@ -46,5 +47,5 @@ let o = (0, i.B)({
             config: { enableInAppNotifications: !0 }
         }
     ]
-}),
-    (t.Z = o);
+});
+let a = o;

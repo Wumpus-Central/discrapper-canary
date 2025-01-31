@@ -1,14 +1,9 @@
-r.d(n, {
-    Z: function () {
-        return l;
-    }
-});
-var i = r(757143);
-var a = r(379082);
-let o = /🏻|🏼|🏽|🏾|🏿|\uFE0F/g;
-function s(e) {
-    return e.replace(o, '');
+n.d(t, { Z: () => s }), n(757143);
+var i = n(379082);
+let r = /🏻|🏼|🏽|🏾|🏿|\uFE0F/g;
+function a(e) {
+    return e.replace(r, '');
 }
-function l(e) {
-    return a.h.has(s(e));
+function s(e) {
+    return i.h.has(a(e));
 }

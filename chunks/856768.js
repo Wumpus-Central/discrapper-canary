@@ -1,50 +1,46 @@
-t.d(n, {
-    Z: function () {
-        return x;
-    },
-    q: function () {
-        return C;
-    }
+l.d(n, {
+    Z: () => g,
+    q: () => j
 }),
-    t(733860);
-var l = t(200651),
-    o = t(192379),
-    i = t(120356),
-    r = t.n(i),
-    a = t(442837),
-    d = t(481060),
-    c = t(565138),
-    u = t(993413),
-    s = t(430824),
-    h = t(771845),
-    f = t(823379),
-    v = t(778825),
-    m = t(388032),
-    g = t(317486);
-function x(e) {
-    let { guildId: n, className: t, globalOption: o, hideDivider: i = !1, onChange: a, renderOptionSuffix: d } = e;
-    return (0, l.jsx)(u.Z, {
-        className: r()(g.section, t),
+    l(733860);
+var t = l(200651),
+    i = l(192379),
+    a = l(120356),
+    d = l.n(a),
+    o = l(442837),
+    r = l(481060),
+    c = l(565138),
+    s = l(993413),
+    u = l(430824),
+    h = l(771845),
+    f = l(823379),
+    v = l(778825),
+    m = l(388032),
+    x = l(317486);
+function g(e) {
+    let { guildId: n, className: l, globalOption: i, hideDivider: a = !1, onChange: o, renderOptionSuffix: r } = e;
+    return (0, t.jsx)(s.Z, {
+        className: d()(x.section, l),
         title: m.intl.string(m.t.ref7Ki),
-        hideDivider: i,
+        hideDivider: a,
         forcedDivider: !0,
-        children: (0, l.jsx)(C, {
+        children: (0, t.jsx)(j, {
             guildId: n,
-            onChange: a,
-            renderOptionSuffix: d,
-            globalOption: o
+            onChange: o,
+            renderOptionSuffix: r,
+            globalOption: i
         })
     });
 }
-function C(e) {
-    let { guildId: n, globalOption: t, onChange: i, renderOptionSuffix: r } = e,
-        u = (0, a.e7)([v.Z], () => v.Z.showNotice()),
-        x = (0, a.e7)([h.ZP], () => h.ZP.getFlattenedGuildIds()),
-        C = (0, a.e7)([s.Z], () => s.Z.getGuilds()),
-        j = o.useMemo(() => {
-            let e = x
+function j(e) {
+    let { guildId: n, globalOption: l, onChange: a, renderOptionSuffix: d } = e,
+        s = (0, o.e7)([v.Z], () => v.Z.showNotice()),
+        g = (0, o.e7)([h.ZP], () => h.ZP.getFlattenedGuildIds()),
+        j = (0, o.e7)([u.Z], () => u.Z.getGuilds()),
+        p = i.useMemo(() => {
+            let e = g
                 .map((e) => {
-                    let n = C[e];
+                    let n = j[e];
                     return null == n
                         ? null
                         : {
@@ -53,36 +49,36 @@ function C(e) {
                           };
                 })
                 .filter(f.lm);
-            return null != t && e.unshift(t), e;
-        }, [x, C, t]),
-        p = o.useCallback(
+            return null != l && e.unshift(l), e;
+        }, [g, j, l]),
+        C = i.useCallback(
             (e) => {
-                let n = (null == e ? void 0 : e.label) === (null == t ? void 0 : t.label) && (null == e ? void 0 : e.value) === (null == t ? void 0 : t.value);
+                let n = (null == e ? void 0 : e.label) === (null == l ? void 0 : l.label) && (null == e ? void 0 : e.value) === (null == l ? void 0 : l.value);
                 return null == e || '' === e.value || n
                     ? null
-                    : (0, l.jsx)(c.Z, {
-                          className: g.guildSelectOptionIcon,
-                          guild: C[e.value],
+                    : (0, t.jsx)(c.Z, {
+                          className: x.guildSelectOptionIcon,
+                          guild: j[e.value],
                           size: c.Z.Sizes.SMOL,
                           active: !0
                       });
             },
-            [C, t]
+            [j, l]
         );
-    return (0, l.jsx)(d.SearchableSelect, {
-        isDisabled: u,
+    return (0, t.jsx)(r.VcW, {
+        isDisabled: s,
         onChange: (e) => {
-            if ('' === e || e === (null == t ? void 0 : t.value)) {
-                i(null);
+            if ('' === e || e === (null == l ? void 0 : l.value)) {
+                a(null);
                 return;
             }
-            let n = C[e];
-            null != n && i(n);
+            let n = j[e];
+            null != n && a(n);
         },
         value: n,
-        options: j,
-        renderOptionPrefix: p,
-        renderOptionSuffix: r,
+        options: p,
+        renderOptionPrefix: C,
+        renderOptionSuffix: d,
         placeholder: m.intl.string(m.t['kMgj+f'])
     });
 }

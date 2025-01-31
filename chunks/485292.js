@@ -1,64 +1,59 @@
-i.r(t),
-    i.d(t, {
-        default: function () {
-            return v;
-        }
-    });
-var e = i(200651);
-i(192379);
-var l = i(442837),
-    a = i(481060),
-    r = i(239091),
-    d = i(812206),
-    u = i(731646),
-    c = i(283595),
-    o = i(499502),
-    s = i(955809),
-    I = i(332845),
-    b = i(78874),
-    f = i(350758),
-    h = i(149835),
-    p = i(38346),
-    Z = i(683609),
-    g = i(679879),
-    A = i(981631),
-    T = i(388032);
-function x(n) {
-    let { application: t, libraryApplication: i, analyticsContext: l, onSelect: d } = n,
-        u = {
-            ...(null != l ? l.location : null),
+t.d(i, { default: () => x });
+var l = t(200651);
+t(192379);
+var a = t(442837),
+    e = t(481060),
+    r = t(239091),
+    d = t(812206),
+    c = t(731646),
+    s = t(283595),
+    o = t(499502),
+    u = t(955809),
+    h = t(332845),
+    b = t(78874),
+    I = t(350758),
+    Z = t(149835),
+    p = t(38346),
+    f = t(683609),
+    g = t(679879),
+    A = t(981631),
+    T = t(388032);
+function v(n) {
+    let { application: i, libraryApplication: t, analyticsContext: a, onSelect: d } = n,
+        c = {
+            ...(null != a ? a.location : null),
             object: A.qAy.CONTEXT_MENU
         },
-        c = (0, b.Z)(i, u),
-        x = (0, f.Z)(i),
-        v = (0, p.Z)(i),
-        E = (0, g.Z)(i),
-        m = (0, Z.Z)(i),
-        _ = (0, I.Z)(i, t),
-        L = (0, h.Z)(i, t),
-        S = (0, o.Z)(i, t),
-        M = (0, s.Z)(t);
-    return (0, e.jsxs)(a.Menu, {
+        s = (0, b.Z)(t, c),
+        v = (0, I.Z)(t),
+        x = (0, p.Z)(t),
+        E = (0, g.Z)(t),
+        N = (0, f.Z)(t),
+        S = (0, h.Z)(t, i),
+        _ = (0, Z.Z)(t, i),
+        L = (0, o.Z)(t, i),
+        D = (0, u.Z)(i);
+    return (0, l.jsxs)(e.v2r, {
         navId: 'game-context',
         onClose: r.Zy,
         'aria-label': T.intl.string(T.t.tKobzc),
         onSelect: d,
-        children: [c, x, v, E, m, _, L, (0, e.jsx)(a.MenuGroup, { children: S }), (0, e.jsx)(a.MenuGroup, { children: M })]
+        children: [s, v, x, E, N, S, _, (0, l.jsx)(e.kSQ, { children: L }), (0, l.jsx)(e.kSQ, { children: D })]
     });
 }
-function v(n) {
-    let { applicationId: t, branchId: i } = n,
-        a = (0, l.e7)([d.Z], () => d.Z.getApplication(t), [t]),
-        r = (0, l.e7)([c.Z], () => (null != i ? c.Z.getLibraryApplication(t, i) : c.Z.getActiveLibraryApplication(t)), [t, i]);
-    return null == a || null == r
-        ? (0, e.jsx)(u.default, {
+function x(n) {
+    let { applicationId: i, branchId: t } = n,
+        e = (0, a.e7)([d.Z], () => d.Z.getApplication(i), [i]),
+        r = (0, a.e7)([s.Z], () => (null != t ? s.Z.getLibraryApplication(i, t) : s.Z.getActiveLibraryApplication(i)), [i, t]);
+    return null == e || null == r
+        ? (0, l.jsx)(c.default, {
               ...n,
-              id: t,
+              id: i,
               label: T.intl.string(T.t['FfCL+/'])
           })
-        : (0, e.jsx)(x, {
+        : (0, l.jsx)(v, {
               ...n,
-              application: a,
+              application: e,
               libraryApplication: r
           });
 }

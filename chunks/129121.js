@@ -1,6 +1,7 @@
-e.exports = {
-    wrapper: 'wrapper_a3747e',
-    image: 'image_a3747e',
-    title: 'title_a3747e',
-    text: 'text_a3747e'
+var i = {
+    wrapper: 'wrapper__33d12',
+    image: 'image__33d12',
+    title: 'title__33d12',
+    text: 'text__33d12'
 };
+e.exports = i;

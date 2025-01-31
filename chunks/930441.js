@@ -1,23 +1,14 @@
 n.d(t, {
-    $Z: function () {
-        return r;
-    },
-    M0: function () {
-        return l;
-    },
-    Od: function () {
-        return o;
-    },
-    vG: function () {
-        return a;
-    }
+    $Z: () => l,
+    M0: () => a,
+    Od: () => o,
+    vG: () => r
 });
 var i,
-    r,
     s = n(388032);
-let a = 'emails';
-((i = r || (r = {})).COMMUNICATION = 'communication'), (i.SOCIAL = 'social'), (i.TIPS = 'tips'), (i.RECOMMENDATIONS_AND_EVENTS = 'recommendations_and_events'), (i.UPDATES_AND_ANNOUNCEMENTS = 'updates_and_announcements'), (i.FAMILY_CENTER_DIGEST = 'family_center_digest');
-let l = ['tips', 'recommendations_and_events', 'updates_and_announcements'],
+let r = 'emails';
+var l = (((i = {}).COMMUNICATION = 'communication'), (i.SOCIAL = 'social'), (i.TIPS = 'tips'), (i.RECOMMENDATIONS_AND_EVENTS = 'recommendations_and_events'), (i.UPDATES_AND_ANNOUNCEMENTS = 'updates_and_announcements'), (i.FAMILY_CENTER_DIGEST = 'family_center_digest'), i);
+let a = ['tips', 'recommendations_and_events', 'updates_and_announcements'],
     o = [
         {
             category: 'communication',

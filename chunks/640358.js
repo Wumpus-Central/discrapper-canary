@@ -1,8 +1,4 @@
-n.d(t, {
-    o: function () {
-        return r;
-    }
-});
+n.d(t, { o: () => r });
 var i = n(330711);
 let r = (e, t) => {
     let n = Math.round(10 * e) / 10;

@@ -1,10 +1,11 @@
 e.exports = {
-    headerContainer: 'headerContainer_dc57e2',
-    ratingBody: 'ratingBody_dc57e2',
-    ratingsFooter: 'ratingsFooter_dc57e2',
-    modalBody: 'modalBody_dc57e2',
-    ratingsSelector: 'ratingsSelector_dc57e2',
-    selected: 'selected_dc57e2',
-    emojiThumbsDown: 'emojiThumbsDown_dc57e2 emoji_dc57e2',
-    emojiThumbsUp: 'emojiThumbsUp_dc57e2 emoji_dc57e2'
+    headerContainer: 'headerContainer__3131d',
+    ratingBody: 'ratingBody__3131d',
+    ratingsFooter: 'ratingsFooter__3131d',
+    modalBody: 'modalBody__3131d',
+    ratingsSelector: 'ratingsSelector__3131d',
+    emoji: 'emoji__3131d',
+    selected: 'selected__3131d',
+    emojiThumbsDown: 'emojiThumbsDown__3131d emoji__3131d',
+    emojiThumbsUp: 'emojiThumbsUp__3131d emoji__3131d'
 };

@@ -1,17 +1,16 @@
 var n = r(65183).List,
     i = (function () {
         function t(t) {
-            var e, r, n;
-            (e = this),
-                (n = void 0),
-                (r = '_decorators') in e
-                    ? Object.defineProperty(e, r, {
-                          value: n,
+            var e, r;
+            (r = void 0),
+                (e = '_decorators') in this
+                    ? Object.defineProperty(this, e, {
+                          value: r,
                           enumerable: !0,
                           configurable: !0,
                           writable: !0
                       })
-                    : (e[r] = n),
+                    : (this[e] = r),
                 (this._decorators = t.slice());
         }
         var e = t.prototype;
@@ -20,9 +19,8 @@ var n = r(65183).List,
                 var r = Array(t.getText().length).fill(null);
                 return (
                     this._decorators.forEach(function (n, i) {
-                        var o = 0,
-                            a = n.strategy;
-                        a(
+                        var o = 0;
+                        (0, n.strategy)(
                             t,
                             function (t, e) {
                                 (function (t, e, r) {

@@ -1,37 +1,36 @@
-r.d(n, {
-    Z: function () {
-        return d;
-    }
-});
-var i = r(200651),
-    a = r(192379),
-    o = r(120356),
-    s = r.n(o),
-    l = r(768581),
-    u = r(388032),
-    c = r(662355);
-function d(e) {
-    let { application: n, src: r, className: o, size: d, botIconFirst: f, fallbackAvatar: p, rendersPlaceholder: h = !1 } = e,
-        _ = a.useMemo(
+n.d(t, { Z: () => c });
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(768581),
+    l = n(388032),
+    u = n(662355);
+function c(e) {
+    let { application: t, src: n, className: a, size: c, botIconFirst: d, fallbackAvatar: f, rendersPlaceholder: _ = !1 } = e,
+        p = r.useMemo(
             () =>
-                null != n
-                    ? l.ZP.getApplicationIconURL({
-                          id: n.id,
-                          icon: n.icon,
-                          bot: n.bot,
-                          size: d,
-                          botIconFirst: f,
-                          fallbackAvatar: p
+                null != t
+                    ? o.ZP.getApplicationIconURL({
+                          id: t.id,
+                          icon: t.icon,
+                          bot: t.bot,
+                          size: c,
+                          botIconFirst: d,
+                          fallbackAvatar: f
                       })
-                    : r,
-            [n, r, d, f, p]
+                    : n,
+            [t, n, c, d, f]
         );
-    if (null == _) return h ? (0, i.jsx)('div', { className: s()(c.icon, c.placeholder, o) }) : null;
-    return (0, i.jsx)('img', {
-        className: s()(c.icon, o),
-        alt: u.intl.string(u.t.X4IxWF),
-        src: _,
-        'aria-hidden': !0,
-        draggable: !1
-    });
+    return null == p
+        ? _
+            ? (0, i.jsx)('div', { className: s()(u.icon, u.placeholder, a) })
+            : null
+        : (0, i.jsx)('img', {
+              className: s()(u.icon, a),
+              alt: l.intl.string(l.t.X4IxWF),
+              src: p,
+              'aria-hidden': !0,
+              draggable: !1
+          });
 }

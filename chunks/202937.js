@@ -1,10 +1,6 @@
-r.d(t, {
-    A: function () {
-        return n;
-    }
-});
-var a = r(896247);
+a.d(e, { A: () => n });
+var r = a(896247);
 let n = () => {
-    let e = (0, a.W)();
-    return (e && e.activationStart) || 0;
+    let t = (0, r.W)();
+    return (t && t.activationStart) || 0;
 };

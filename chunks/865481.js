@@ -1,5 +1,5 @@
-r.r(n);
-var i = {
+n.r(t), n.d(t, { default: () => i });
+let i = {
     transparent: 0,
     aliceblue: 4042850303,
     antiquewhite: 4209760255,
@@ -151,4 +151,3 @@ var i = {
     yellow: 4294902015,
     yellowgreen: 2597139199
 };
-n.default = i;

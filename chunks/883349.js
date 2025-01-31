@@ -1,8 +1,9 @@
+n.d(t, { Z: () => o });
 var r = n(424706),
-    i = n(14160),
-    a = n(247123),
-    o = n(207662);
-t.Z = {
+    a = n(14160),
+    i = n(247123),
+    l = n(207662);
+let o = {
     id: 'button-name',
     selector: 'button, [role="button"], [role="link"], [role="menuitem"], [role="tab"]',
     tags: ['wcag2a', 'wcag412', 'section508', 'section508.22.a', 'ACT'],
@@ -11,6 +12,6 @@ t.Z = {
         help: ''
     },
     check: function (e) {
-        return '' !== (0, r.AB)(e) || (0, o.Uu)(e) || !(0, i.p)(e) ? a.w : "button's accessible name is empty.";
+        return '' !== (0, r.AB)(e) || (0, l.Uu)(e) || !(0, a.p)(e) ? i.w : "button's accessible name is empty.";
     }
 };

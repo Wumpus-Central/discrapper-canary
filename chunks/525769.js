@@ -1,14 +1,10 @@
-var i, a;
-r.d(n, {
-    a: function () {
-        return a;
-    },
-    z: function () {
-        return i;
-    }
-}),
-    !(function (e) {
-        (e.ACCOUNT_REVERT_CHANGE_PASSWORD = 'impression_account_revert_change_password'),
+n.d(t, {
+    a: () => r,
+    z: () => i
+});
+var i = (function (e) {
+        return (
+            (e.ACCOUNT_REVERT_CHANGE_PASSWORD = 'impression_account_revert_change_password'),
             (e.ACCOUNT_REVERT_EXPLAINER = 'impression_account_revert_explainer'),
             (e.ACCOUNT_REVERT_SUCCESS = 'impression_account_revert_success'),
             (e.ACTIVITIES = 'impression_activities'),
@@ -211,10 +207,13 @@ r.d(n, {
             (e.USER_WELCOME = 'impression_user_welcome'),
             (e.USER_YOU_SCREEN = 'impression_user_you_screen'),
             (e.VIEW_PANEL_DEVTOOLS = 'impression_view_panel_devtools'),
-            (e.VOICE_CHANNEL_BLOCKED_USER_WARNING = 'impression_voice_channel_blocked_user_warning');
-    })(i || (i = {})),
-    !(function (e) {
-        (e.ACCOUNT_REVERT = 'network_action_account_revert'),
+            (e.VOICE_CHANNEL_BLOCKED_USER_WARNING = 'impression_voice_channel_blocked_user_warning'),
+            e
+        );
+    })({}),
+    r = (function (e) {
+        return (
+            (e.ACCOUNT_REVERT = 'network_action_account_revert'),
             (e.APPLE_JWT_TOKEN_CREATE = 'network_action_apple_jwt_token_create'),
             (e.AUTH_SESSIONS_LOGGED_OUT = 'network_action_auth_sessions_logged_out'),
             (e.AUTHORIZE_IP = 'network_action_authorize_ip'),
@@ -273,5 +272,7 @@ r.d(n, {
             (e.USER_VERIFY = 'network_action_user_verify'),
             (e.USER_VERIFY_PHONE = 'network_action_user_verify_phone'),
             (e.USER_VERIFY_RESEND = 'network_action_user_verify_resend'),
-            (e.WEBAUTHN_REGISTER = 'network_action_webauthn_register');
-    })(a || (a = {}));
+            (e.WEBAUTHN_REGISTER = 'network_action_webauthn_register'),
+            e
+        );
+    })({});

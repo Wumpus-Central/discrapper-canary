@@ -1,6 +1,2 @@
-r.d(n, {
-    U: function () {
-        return i;
-    }
-});
+n.d(t, { U: () => i });
 let i = 'Zoomed Media Modal';

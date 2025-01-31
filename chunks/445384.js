@@ -1,5 +1,6 @@
+n.d(t, { Z: () => l });
 var i = n(570140);
-t.Z = {
+let l = {
     viewPrompt: function (e, t) {
         i.Z.wait(() => {
             i.Z.dispatch({

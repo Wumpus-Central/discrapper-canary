@@ -1,20 +1,16 @@
-e.d(n, {
-    Z: function () {
-        return a;
-    }
-});
-var i = e(442837),
-    l = e(314897),
-    r = e(979651),
-    d = e(258609);
-function a() {
+n.d(e, { Z: () => d });
+var i = n(442837),
+    l = n(314897),
+    r = n(979651),
+    a = n(258609);
+function d() {
     return (0, i.e7)(
-        [l.default, r.Z, d.Z],
+        [l.default, r.Z, a.Z],
         () => {
             var t;
-            let n = l.default.getId(),
-                e = d.Z.getRemoteSessionId();
-            return null !== (t = r.Z.getVoiceStateForSession(n, e)) && void 0 !== t ? t : void 0;
+            let e = l.default.getId(),
+                n = a.Z.getRemoteSessionId();
+            return null !== (t = r.Z.getVoiceStateForSession(e, n)) && void 0 !== t ? t : void 0;
         },
         []
     );

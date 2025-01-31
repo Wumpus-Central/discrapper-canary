@@ -1,86 +1,85 @@
-r.d(n, {
-    g: function () {
-        return i;
-    }
+n.d(t, {
+    Z: () => d,
+    g: () => u
 });
-var i,
-    a = r(200651);
-r(192379);
-var o = r(481060),
-    s = r(600164),
-    l = r(612853),
-    u = r(388032),
-    c = r(659915);
-!(function (e) {
-    (e[(e.CONTINUE = 0)] = 'CONTINUE'), (e[(e.UPGRADE = 1)] = 'UPGRADE'), (e[(e.PURCHASE = 2)] = 'PURCHASE');
-})(i || (i = {}));
-let d = (e) => {
-    let { onBack: n, backText: r, primaryIcon: i, primaryCTA: d, primaryType: f, primaryText: p, primaryTooltip: h, primaryDisabled: _, primarySubmitting: m, onPrimary: g, secondaryText: E, onSecondary: v } = e,
-        y = () => {
-            if (null == d || null == p) return null;
-            let e = 2 === d ? o.ShinyButton : o.Button,
-                n = {
-                    innerClassName: c.button,
-                    type: f,
-                    disabled: _,
-                    submitting: m,
-                    color: 0 === d ? o.Button.Colors.BRAND : o.Button.Colors.GREEN,
-                    onClick: g
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(600164),
+    s = n(612853),
+    o = n(388032),
+    l = n(659915),
+    u = (function (e) {
+        return (e[(e.CONTINUE = 0)] = 'CONTINUE'), (e[(e.UPGRADE = 1)] = 'UPGRADE'), (e[(e.PURCHASE = 2)] = 'PURCHASE'), e;
+    })({});
+let c = (e) => {
+    let { onBack: t, backText: n, primaryIcon: u, primaryCTA: c, primaryType: d, primaryText: f, primaryTooltip: _, primaryDisabled: p, primarySubmitting: h, onPrimary: m, secondaryText: g, onSecondary: E } = e,
+        v = () => {
+            if (null == c || null == f) return null;
+            let e = 2 === c ? r.gtL : r.zxk,
+                t = {
+                    innerClassName: l.button,
+                    type: d,
+                    disabled: p,
+                    submitting: h,
+                    color: 0 === c ? r.zxk.Colors.BRAND : r.zxk.Colors.GREEN,
+                    onClick: m
                 };
-            return null != h
-                ? (0, a.jsx)(o.Tooltip, {
-                      text: h,
-                      children: (r) =>
-                          (0, a.jsxs)(e, {
-                              ...r,
+            return null != _
+                ? (0, i.jsx)(r.ua7, {
+                      text: _,
+                      children: (n) =>
+                          (0, i.jsxs)(e, {
                               ...n,
+                              ...t,
                               children: [
-                                  null == i
+                                  null == u
                                       ? null
-                                      : (0, a.jsx)(i, {
+                                      : (0, i.jsx)(u, {
                                             color: 'currentColor',
-                                            className: c.primaryIcon
+                                            className: l.primaryIcon
                                         }),
-                                  p
+                                  f
                               ]
                           })
                   })
-                : (0, a.jsxs)(e, {
-                      ...n,
+                : (0, i.jsxs)(e, {
+                      ...t,
                       children: [
-                          null == i
+                          null == u
                               ? null
-                              : (0, a.jsx)(i, {
+                              : (0, i.jsx)(u, {
                                     color: 'currentColor',
-                                    className: c.primaryIcon
+                                    className: l.primaryIcon
                                 }),
-                          p
+                          f
                       ]
                   });
         },
-        b = () =>
-            null == E
+        y = () =>
+            null == g
                 ? null
-                : (0, a.jsx)(o.Button, {
-                      color: o.Button.Colors.PRIMARY,
-                      look: o.Button.Looks.LINK,
-                      onClick: v,
-                      children: E
+                : (0, i.jsx)(r.zxk, {
+                      color: r.zxk.Colors.PRIMARY,
+                      look: r.zxk.Looks.LINK,
+                      onClick: E,
+                      children: g
                   }),
         I = () =>
-            null == n
+            null == t
                 ? null
-                : (0, a.jsx)(o.Button, {
-                      className: c.back,
-                      color: o.Button.Colors.PRIMARY,
-                      look: o.Button.Looks.LINK,
-                      onClick: n,
-                      children: null != r ? r : u.intl.string(u.t['13/7kZ'])
+                : (0, i.jsx)(r.zxk, {
+                      className: l.back,
+                      color: r.zxk.Colors.PRIMARY,
+                      look: r.zxk.Looks.LINK,
+                      onClick: t,
+                      children: null != n ? n : o.intl.string(o.t['13/7kZ'])
                   });
-    return (0, a.jsxs)(o.ModalFooter, {
-        justify: s.Z.Justify.BETWEEN,
-        align: s.Z.Align.CENTER,
-        children: [y(), b(), (0, a.jsx)(l.Z, {}), I()]
+    return (0, i.jsxs)(r.mzw, {
+        justify: a.Z.Justify.BETWEEN,
+        align: a.Z.Align.CENTER,
+        children: [v(), y(), (0, i.jsx)(s.Z, {}), I()]
     });
 };
-(d.CTAType = i), (n.Z = d);
+c.CTAType = u;
+let d = c;

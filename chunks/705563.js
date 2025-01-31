@@ -1,13 +1,9 @@
-n.d(t, {
-    Z: function () {
-        return x;
-    }
-});
+n.d(t, { Z: () => C });
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    r = n(481060),
-    a = n(665149),
+    a = n(481060),
+    r = n(665149),
     s = n(171368),
     o = n(650774),
     c = n(430824),
@@ -18,17 +14,17 @@ var l = n(442837),
     m = n(360328),
     f = n(981631),
     g = n(388032),
-    C = n(112883);
-function x(e) {
-    let { channelId: t, showProfile: n = !1, showTrailingDivider: x = !1 } = e,
-        v = u.default.cast(t),
+    _ = n(112883);
+function C(e) {
+    let { channelId: t, showProfile: n = !1, showTrailingDivider: C = !1 } = e,
+        x = u.default.cast(t),
         {
-            joinRequest: _,
-            isModmin: I,
-            guildId: E,
+            joinRequest: v,
+            isModmin: E,
+            guildId: I,
             maxMembers: b
         } = (0, l.cj)([h.Z, c.Z, d.Z], () => {
-            let e = h.Z.getRequest(v),
+            let e = h.Z.getRequest(x),
                 t = c.Z.getGuild(null == e ? void 0 : e.guildId);
             return {
                 joinRequest: e,
@@ -37,51 +33,51 @@ function x(e) {
                 maxMembers: null == t ? void 0 : t.maxMembers
             };
         }),
-        Z = (0, l.e7)([o.Z], () => (null != E ? o.Z.getMemberCount(E) : 0)),
+        Z = (0, l.e7)([o.Z], () => (null != I ? o.Z.getMemberCount(I) : 0)),
         N = null != b && (null != Z ? Z : 0) >= b,
-        { approveRequest: S, rejectRequest: T, submitting: j } = (0, m.s)(null == _ ? void 0 : _.guildId, null == _ ? void 0 : _.userId, null == _ ? void 0 : _.joinRequestId);
-    return null != _ && _.applicationStatus === p.wB.SUBMITTED && I
+        { approveRequest: T, rejectRequest: S, submitting: j } = (0, m.s)(null == v ? void 0 : v.guildId, null == v ? void 0 : v.userId, null == v ? void 0 : v.joinRequestId);
+    return null != v && v.applicationStatus === p.wB.SUBMITTED && E
         ? (0, i.jsxs)('div', {
-              className: C.buttons,
+              className: _.buttons,
               children: [
-                  (0, i.jsx)(r.Tooltip, {
+                  (0, i.jsx)(a.ua7, {
                       text: g.intl.string(g.t.RbIXi4),
                       shouldShow: N,
                       children: (e) =>
-                          (0, i.jsx)(r.Button, {
+                          (0, i.jsx)(a.zxk, {
                               ...e,
-                              color: r.Button.Colors.GREEN,
+                              color: a.zxk.Colors.GREEN,
                               submitting: j,
-                              onClick: S,
-                              size: r.ButtonSizes.SMALL,
+                              onClick: T,
+                              size: a.PhG.SMALL,
                               disabled: N,
                               children: g.intl.string(g.t.BzjDQE)
                           })
                   }),
-                  (0, i.jsx)(r.Button, {
-                      color: r.Button.Colors.RED,
-                      onClick: T,
-                      size: r.ButtonSizes.SMALL,
-                      disabled: j || _.applicationStatus !== p.wB.SUBMITTED,
+                  (0, i.jsx)(a.zxk, {
+                      color: a.zxk.Colors.RED,
+                      onClick: S,
+                      size: a.PhG.SMALL,
+                      disabled: j || v.applicationStatus !== p.wB.SUBMITTED,
                       children: g.intl.string(g.t.hDtbs7)
                   }),
                   n &&
-                      (0, i.jsx)(r.Button, {
-                          color: r.Button.Colors.TRANSPARENT,
+                      (0, i.jsx)(a.zxk, {
+                          color: a.zxk.Colors.TRANSPARENT,
                           onClick: () => {
                               (0, s.openUserProfileModal)({
-                                  userId: _.userId,
-                                  guildId: _.guildId,
+                                  userId: v.userId,
+                                  guildId: v.guildId,
                                   analyticsLocation: {
                                       section: f.jXE.GUILD_MEMBER_VERIFICATION_APPLICATION_REVIEW,
                                       object: f.qAy.JOIN_REQUEST
                                   }
                               });
                           },
-                          size: r.ButtonSizes.SMALL,
+                          size: a.PhG.SMALL,
                           children: g.intl.string(g.t.iXAna2)
                       }),
-                  x && (0, i.jsx)(a.ZP.Divider, {})
+                  C && (0, i.jsx)(r.ZP.Divider, {})
               ]
           })
         : null;

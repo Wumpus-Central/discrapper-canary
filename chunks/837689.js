@@ -1,8 +1,8 @@
-n(47120);
+n.d(t, { Z: () => A }), n(47120);
 var i = n(200651);
 n(192379);
-var r = n(873546),
-    l = n(704215),
+var l = n(873546),
+    r = n(704215),
     a = n(481060),
     s = n(570140),
     o = n(317770),
@@ -13,8 +13,8 @@ var r = n(873546),
     m = n(374023),
     p = n(775412),
     g = n(913976),
-    f = n(533990),
-    _ = n(104494),
+    _ = n(533990),
+    f = n(104494),
     E = n(29920),
     I = n(346497),
     C = n(278945),
@@ -34,8 +34,8 @@ function S(e, t, n) {
         e
     );
 }
-let b = 'PremiumServerDriveAnnouncementModal';
-class A extends o.Z {
+let Z = 'PremiumServerDriveAnnouncementModal';
+class x extends o.Z {
     _initialize() {
         s.Z.subscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal), s.Z.subscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview);
     }
@@ -45,28 +45,27 @@ class A extends o.Z {
     constructor(...e) {
         super(...e),
             S(this, 'maybeOpenServerDriveAnnouncementModal', async (e, t) => {
-                let r = (0, N.extractAnnouncementModalContent)({
+                let l = (0, N.r)({
                     content: e,
                     isPreview: t
                 });
-                if (null != r)
-                    return (
-                        !!(!1 !== t || (null == r ? void 0 : r.contentIdentifier) !== 'summer_bogo_content' || (await (0, I.k)())) &&
-                        ((0, a.closeModal)(b),
-                        (0, a.openModalLazy)(
-                            async () => {
-                                let { default: e } = await Promise.resolve().then(n.bind(n, 318199));
-                                return (t) =>
-                                    (0, i.jsx)(e, {
-                                        renderModalProps: t,
-                                        properties: r
-                                    });
-                            },
-                            { modalKey: b }
-                        ),
-                        !0)
-                    );
-                return !1;
+                return (
+                    null != l &&
+                    !!(!1 !== t || (null == l ? void 0 : l.contentIdentifier) !== 'summer_bogo_content' || (await (0, I.k)())) &&
+                    ((0, a.Mr3)(Z),
+                    (0, a.ZDy)(
+                        async () => {
+                            let { default: e } = await Promise.resolve().then(n.bind(n, 318199));
+                            return (t) =>
+                                (0, i.jsx)(e, {
+                                    renderModalProps: t,
+                                    properties: l
+                                });
+                        },
+                        { modalKey: Z }
+                    ),
+                    !0)
+                );
             }),
             S(this, 'handlePreview', (e) => {
                 let { properties: t } = e;
@@ -77,7 +76,7 @@ class A extends o.Z {
                 if ((0, h.I5)(e)) return {};
                 let t = [T.hs, T.RU, T.rB, T.ih]
                     .map((e) => u.Z.getUserDiscountOffer(e))
-                    .filter((e) => null != e && !(0, _.kA)(e))
+                    .filter((e) => null != e && !(0, f.kA)(e))
                     .shift();
                 if (null != t) return { userDiscountOffer: t };
                 let n = (0, p.J0)();
@@ -86,19 +85,17 @@ class A extends o.Z {
             S(this, 'mayShowAnnouncementModal', async () => {
                 if ((await (0, I.l2)(), m.s.isDisallowPopupsSet())) return;
                 let e = this.getOfferFromStore(),
-                    t = f.Z.getCurrentConfig({ location: 'announcementManager' }, { autoTrackExposure: !1 }).inExperiment || f.Z.isAAMode({ location: 'announcementManager' }),
-                    n = (0, c.un)(l.z.REVERSE_TRIAL_ENDED_UPSELL),
+                    t = _.Z.getCurrentConfig({ location: 'announcementManager' }, { autoTrackExposure: !1 }).inExperiment || _.Z.isAAMode({ location: 'announcementManager' }),
+                    n = (0, c.un)(r.z.REVERSE_TRIAL_ENDED_UPSELL),
                     i = d.default.getCurrentUser();
-                if (t && !n && !(0, a.hasAnyModalOpen)() && !(0, h.I5)(i)) {
+                if (t && !n && !(0, a.$sL)() && !(0, h.I5)(i)) {
                     let t = await (0, C.r)(e.userTrialOffer);
                     null != t && (0, v.Z)({ upsellType: t });
                 }
-                if (null == i || !!i.verified) {
-                    if (!(0, a.hasAnyModalOpen)() && g.Z.getCurrentConfig({ location: 'OfferAnnouncementManager' }).enabled && !r.tq) {
-                        for (let t of await (0, E.H)(e)) if (await this.maybeOpenServerDriveAnnouncementModal(t, !1)) break;
-                    }
+                if ((null == i || i.verified) && !(0, a.$sL)() && g.Z.getCurrentConfig({ location: 'OfferAnnouncementManager' }).enabled && !l.tq) {
+                    for (let t of await (0, E.H)(e)) if (await this.maybeOpenServerDriveAnnouncementModal(t, !1)) break;
                 }
             });
     }
 }
-t.Z = new A();
+let A = new x();

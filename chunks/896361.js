@@ -1,22 +1,18 @@
-r.d(n, {
-    Z: function () {
-        return c;
-    }
-});
-var i = r(200651),
-    a = r(192379),
-    o = r(765053),
-    s = r(512969),
-    l = r(304445),
-    u = r(703656);
-function c(e) {
-    let { children: n } = e;
+n.d(t, { Z: () => u });
+var i = n(200651),
+    r = n(192379),
+    a = n(765053),
+    s = n(512969),
+    o = n(304445),
+    l = n(703656);
+function u(e) {
+    let { children: t } = e;
     return (
-        a.useEffect(() => (l.Z.initialize(), () => l.Z.cleanup()), []),
-        (0, i.jsx)(o.B6, {
+        r.useEffect(() => (o.Z.initialize(), () => o.Z.cleanup()), []),
+        (0, i.jsx)(a.B6, {
             children: (0, i.jsx)(s.F0, {
-                history: (0, u.s1)(),
-                children: n
+                history: (0, l.s1)(),
+                children: t
             })
         })
     );

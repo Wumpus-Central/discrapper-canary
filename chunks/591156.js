@@ -1,10 +1,11 @@
-e.exports = {
-    header: 'header_b8cc6d',
-    headerTag: 'headerTag_b8cc6d',
-    body: 'body_b8cc6d',
-    footer: 'footer_b8cc6d',
-    backdrop: 'backdrop_b8cc6d',
-    toast: 'toast_b8cc6d',
-    activity: 'activity_b8cc6d',
-    upsell: 'upsell_b8cc6d'
+var i = {
+    header: 'header__5be3e',
+    headerTag: 'headerTag__5be3e',
+    body: 'body__5be3e',
+    footer: 'footer__5be3e',
+    backdrop: 'backdrop__5be3e',
+    toast: 'toast__5be3e',
+    activity: 'activity__5be3e',
+    upsell: 'upsell__5be3e'
 };
+e.exports = i;

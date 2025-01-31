@@ -1,8 +1,4 @@
-function i(e, n) {
-    return !!(null != n && e.mentions.includes(n.author.id)) || !1;
+function i(e, t) {
+    return !!(null != t && e.mentions.includes(t.author.id));
 }
-r.d(n, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });

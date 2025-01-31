@@ -1,51 +1,50 @@
-var i = r(47120);
-var a = r(200651);
-r(192379);
-var o = r(481060),
-    s = r(753801);
-let l = (e) => {
-        let { onChange: n, label: r, subtitle: i, selected: l } = e;
-        return (0, a.jsx)('div', {
-            className: s.checkboxRow,
-            children: (0, a.jsxs)(o.Checkbox, {
-                type: o.Checkbox.Types.INVERTED,
-                onChange: () => n(),
-                value: l,
+n.d(t, { Z: () => o }), n(47120);
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(753801);
+let s = (e) => {
+        let { onChange: t, label: n, subtitle: s, selected: o } = e;
+        return (0, i.jsx)('div', {
+            className: a.checkboxRow,
+            children: (0, i.jsxs)(r.XZJ, {
+                type: r.XZJ.Types.INVERTED,
+                onChange: () => t(),
+                value: o,
                 children: [
-                    (0, a.jsx)(o.Text, {
+                    (0, i.jsx)(r.Text, {
                         color: 'interactive-active',
                         variant: 'text-md/semibold',
-                        children: r
+                        children: n
                     }),
-                    null != i
-                        ? (0, a.jsx)(o.Text, {
+                    null != s
+                        ? (0, i.jsx)(r.Text, {
                               color: 'interactive-active',
                               variant: 'text-sm/normal',
-                              children: i
+                              children: s
                           })
                         : null
                 ]
             })
         });
     },
-    u = (e) => {
-        let { element: n, state: r, onChange: i } = e;
-        if ((null == n ? void 0 : n.type) !== 'checkbox') return null;
-        let { data: o } = n;
-        return (0, a.jsx)('div', {
-            children: o.map((e, n) => {
-                let [o, s, u] = e;
-                return (0, a.jsx)(
-                    l,
+    o = (e) => {
+        let { element: t, state: n, onChange: r } = e;
+        if ((null == t ? void 0 : t.type) !== 'checkbox') return null;
+        let { data: a } = t;
+        return (0, i.jsx)('div', {
+            children: a.map((e, t) => {
+                let [a, o, l] = e;
+                return (0, i.jsx)(
+                    s,
                     {
-                        onChange: () => i(o, s),
-                        selected: o in r,
-                        label: s,
-                        subtitle: u
+                        onChange: () => r(a, o),
+                        selected: a in n,
+                        label: o,
+                        subtitle: l
                     },
-                    ''.concat(n, '+button')
+                    ''.concat(t, '+button')
                 );
             })
         });
     };
-n.Z = u;

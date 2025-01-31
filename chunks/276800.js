@@ -1,25 +1,26 @@
+n.d(t, { Z: () => o });
 var i = n(200651);
 n(192379);
-var r = n(774078),
-    s = n(706454),
-    a = n(388032);
-function l(e) {
-    return e.toLocaleString(s.default.locale, {
+var s = n(774078),
+    r = n(706454),
+    l = n(388032);
+function a(e) {
+    return e.toLocaleString(r.default.locale, {
         minimumIntegerDigits: 2,
         useGrouping: !1
     });
 }
-t.Z = function (e) {
+let o = function (e) {
     let { endDate: t } = e,
-        n = (0, r.Z)(t, 1000);
+        n = (0, s.Z)(t, 1000);
     return (0, i.jsx)(i.Fragment, {
         children:
             n.days > 0
-                ? a.intl.formatToPlainString(a.t.f0QaSU, { days: n.days })
-                : a.intl.formatToPlainString(a.t['3MT4MT'], {
-                      hours: l(n.hours),
-                      minutes: l(n.minutes),
-                      seconds: l(n.seconds)
+                ? l.intl.formatToPlainString(l.t.f0QaSU, { days: n.days })
+                : l.intl.formatToPlainString(l.t['3MT4MT'], {
+                      hours: a(n.hours),
+                      minutes: a(n.minutes),
+                      seconds: a(n.seconds)
                   })
     });
 };

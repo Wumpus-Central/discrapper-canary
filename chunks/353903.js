@@ -1,68 +1,64 @@
-r.d(n, {
-    G0: function () {
-        return v;
-    },
-    u$: function () {
-        return y;
-    }
-});
+n.d(t, {
+    G0: () => m,
+    u$: () => g
+}),
+    n(47120),
+    n(724458);
 var i,
-    a = r(47120);
-var o = r(724458);
-var s = r(200651),
-    l = r(192379),
-    u = r(392711),
-    c = r.n(u),
-    d = r(748780),
-    f = r(692547),
-    p = r(808674);
-function h(e, n, r) {
+    r = n(200651),
+    a = n(192379),
+    s = n(392711),
+    o = n.n(s),
+    l = n(748780),
+    u = n(692547),
+    c = n(808674);
+function d(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let _ = 12,
-    m = [f.Z.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, f.Z.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, '#929AFA'];
-class g extends l.PureComponent {
+let f = 12,
+    _ = [u.Z.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, u.Z.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, '#929AFA'];
+class p extends a.PureComponent {
     render() {
         let {
             props: { height: e },
-            state: { backgroundColor: n }
+            state: { backgroundColor: t }
         } = this;
-        return (0, s.jsx)('div', {
+        return (0, r.jsx)('div', {
             style: {
                 height: e,
-                backgroundColor: n
+                backgroundColor: t
             },
-            className: p.gif
+            className: c.gif
         });
     }
     constructor(...e) {
-        super(...e), h(this, 'state', { backgroundColor: c().sample(m) });
+        super(...e), d(this, 'state', { backgroundColor: o().sample(_) });
     }
 }
-class E extends (i = l.Component) {
+class h extends (i = a.Component) {
     componentDidMount() {
         this.animateSlide();
     }
     getAnimatedStyle() {
         let {
             props: { columns: e },
-            state: { translateY: n }
+            state: { translateY: t }
         } = this;
         return {
             width: ''.concat(100 / e, '%'),
             transform: [
                 {
-                    translateY: n.interpolate({
+                    translateY: t.interpolate({
                         inputRange: [0, 1],
                         outputRange: ['0px', '1px']
                     })
@@ -72,55 +68,55 @@ class E extends (i = l.Component) {
     }
     render() {
         let { blocks: e } = this.state;
-        return (0, s.jsxs)(d.Z.div, {
-            className: p.column,
+        return (0, r.jsxs)(l.Z.div, {
+            className: c.column,
             style: this.getAnimatedStyle(),
-            children: [e.map((e, n) => (0, s.jsx)(g, { height: e }, n)), e.map((e, n) => (0, s.jsx)(g, { height: e }, 'alt'.concat(n)))]
+            children: [e.map((e, t) => (0, r.jsx)(p, { height: e }, t)), e.map((e, t) => (0, r.jsx)(p, { height: e }, 'alt'.concat(t)))]
         });
     }
     constructor(e) {
         super(e),
-            h(this, 'animateSlide', () => {
+            d(this, 'animateSlide', () => {
                 let {
                         props: { direction: e },
-                        state: { translateY: n, height: r }
+                        state: { translateY: t, height: n }
                     } = this,
-                    i = e > 0 ? 0 : -r / 2 + _,
-                    a = e > 0 ? -r / 2 + _ : 0;
-                n.setValue(i),
-                    d.Z.timing(n, {
-                        toValue: a,
+                    i = e > 0 ? 0 : -n / 2 + f,
+                    r = e > 0 ? -n / 2 + f : 0;
+                t.setValue(i),
+                    l.Z.timing(t, {
+                        toValue: r,
                         duration: 800,
-                        easing: d.Z.Easing.linear
+                        easing: l.Z.Easing.linear
                     }).start(this.animateSlide);
             });
-        let n = Array(10)
+        let t = Array(10)
             .fill(null)
-            .map(() => c().random(40, 150));
+            .map(() => o().random(40, 150));
         this.state = {
-            blocks: n,
-            height: 2 * n.reduce((e, n) => e + n + _, _),
-            translateY: new d.Z.Value(0)
+            blocks: t,
+            height: 2 * t.reduce((e, t) => e + t + f, f),
+            translateY: new l.Z.Value(0)
         };
     }
 }
-h(E, 'defaultProps', { direction: -1 });
-let v = (e) => {
-    let { columns: n } = e;
-    return (0, s.jsx)('div', {
-        className: p.column,
-        style: { width: ''.concat(100 / n, '%') },
-        children: [, , , ,].fill(null).map((e, n) => (0, s.jsx)('div', { className: p.categoryLoader }, n))
+d(h, 'defaultProps', { direction: -1 });
+let m = (e) => {
+    let { columns: t } = e;
+    return (0, r.jsx)('div', {
+        className: c.column,
+        style: { width: ''.concat(100 / t, '%') },
+        children: [, , , ,].fill(null).map((e, t) => (0, r.jsx)('div', { className: c.categoryLoader }, t))
     });
 };
-class y extends l.PureComponent {
+class g extends a.PureComponent {
     render() {
-        let { columns: e, renderColumn: n } = this.props;
-        return (0, s.jsx)('div', {
-            className: p.container,
+        let { columns: e, renderColumn: t } = this.props;
+        return (0, r.jsx)('div', {
+            className: c.container,
             children: Array(e)
                 .fill(null)
-                .map((r, i) => n(e, i))
+                .map((n, i) => t(e, i))
         });
     }
 }

@@ -1,42 +1,38 @@
-t.d(n, {
-    U: function () {
-        return f;
-    },
-    o: function () {
-        return m;
-    }
+n.d(t, {
+    U: () => f,
+    o: () => m
 }),
-    t(47120);
-var i = t(275726),
-    l = t(442837),
-    r = t(71619),
-    a = t(665906),
-    o = t(496675),
-    s = t(594174),
-    u = t(981631),
-    d = t(231338);
-function c(e, n, t) {
+    n(47120);
+var i = n(275726),
+    l = n(442837),
+    a = n(71619),
+    s = n(665906),
+    r = n(496675),
+    o = n(594174),
+    d = n(981631),
+    c = n(231338);
+function u(e, t, n) {
     let l;
-    return (l = e.isPrivate() ? !e.isSystemDM() : t.can(d.Pl.SEND_MESSAGES, e) && t.can(d.Pl.READ_MESSAGE_HISTORY, e)) && i.V.REPLYABLE.has(n.type);
+    return (e.isPrivate() ? !e.isSystemDM() : n.can(c.Pl.SEND_MESSAGES, e) && n.can(c.Pl.READ_MESSAGE_HISTORY, e)) && i.V.REPLYABLE.has(t.type);
 }
-function g(e, n, t, i, l) {
-    let r = n.hasFlag(u.iLy.EPHEMERAL),
-        a = n.state === u.yb.SENT,
-        o = !e.isArchivedThread() || l;
-    return t && a && !r && !i && o;
+function g(e, t, n, i, l) {
+    let a = t.hasFlag(d.iLy.EPHEMERAL),
+        s = t.state === d.yb.SENT,
+        r = !e.isArchivedThread() || l;
+    return n && s && !a && !i && r;
 }
-function f(e, n) {
-    var t;
-    let i = (0, a.tc)(e),
-        [, s] = (0, r.AB)(null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : void 0),
-        u = (0, l.e7)([o.Z], () => null != e && null != n && c(e, n, o.Z));
-    return null != e && null != n && g(e, n, u, s, i);
+function f(e, t) {
+    var n;
+    let i = (0, s.tc)(e),
+        [, o] = (0, a.AB)(null !== (n = null == e ? void 0 : e.getGuildId()) && void 0 !== n ? n : void 0),
+        d = (0, l.e7)([r.Z], () => null != e && null != t && u(e, t, r.Z));
+    return null != e && null != t && g(e, t, d, o, i);
 }
-function m(e, n) {
-    var t;
-    let i = (0, a.kn)(e),
-        l = c(e, n, o.Z),
-        u = s.default.getCurrentUser(),
-        [, d] = (0, r.s5)(null == u ? void 0 : u.id, null !== (t = e.getGuildId()) && void 0 !== t ? t : void 0);
-    return g(e, n, l, d, i);
+function m(e, t) {
+    var n;
+    let i = (0, s.kn)(e),
+        l = u(e, t, r.Z),
+        d = o.default.getCurrentUser(),
+        [, c] = (0, a.s5)(null == d ? void 0 : d.id, null !== (n = e.getGuildId()) && void 0 !== n ? n : void 0);
+    return g(e, t, l, c, i);
 }

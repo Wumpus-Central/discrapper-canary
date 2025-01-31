@@ -1,59 +1,55 @@
-n.d(t, {
-    Z: function () {
-        return _;
-    }
-});
+n.d(t, { Z: () => g });
 var i = n(200651);
 n(192379);
-var r = n(512722),
-    l = n.n(r),
-    a = n(399606),
-    o = n(481060),
-    s = n(607070),
+var l = n(512722),
+    a = n.n(l),
+    r = n(399606),
+    s = n(481060),
+    o = n(607070),
     c = n(430824),
-    u = n(506071),
-    d = n(267101),
+    d = n(506071),
+    u = n(267101),
     m = n(240864),
     h = n(57949),
-    f = n(400916),
+    _ = n(400916),
     p = n(388032);
-function _(e) {
-    let { guildId: t, guildProductListingId: n, sourceAnalyticsLocations: r } = e,
-        _ = (0, a.e7)([m.Z], () => m.Z.getGuildProduct(n)),
-        g = (0, a.e7)([c.Z], () => c.Z.getGuild(t), [t]),
-        E = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
-        C = (0, u.n)();
-    if ((l()(null != g, 'guild cannot be null'), l()(null != _, 'guildProductListing cannot be null'), (0, d.SO)(g)))
-        return (0, i.jsx)(o.Tooltip, {
-            text: p.intl.string(p.t.sAJr9f),
-            children: (e) =>
-                (0, i.jsx)(o.Button, {
-                    ...e,
-                    color: o.Button.Colors.BRAND,
-                    disabled: !0,
-                    children: p.intl.string(p.t.xUi3BA)
-                })
-        });
-    if (!_.has_entitlement)
-        return (0, i.jsx)(o.ShinyButton, {
-            shineSize: o.ShinyButton.ShineSizes.SMALL,
-            pauseAnimation: E || !C,
-            onClick: () =>
-                (0, h.z)({
-                    guildProductListing: _,
-                    guildId: g.id,
-                    sourceAnalyticsLocations: r
-                }),
-            children: p.intl.string(p.t.xUi3BA)
-        });
-    return null != _.attachments
-        ? (0, i.jsx)(f.Z, {
-              guildId: g.id,
-              productId: _.id
+function g(e) {
+    let { guildId: t, guildProductListingId: n, sourceAnalyticsLocations: l } = e,
+        g = (0, r.e7)([m.Z], () => m.Z.getGuildProduct(n)),
+        f = (0, r.e7)([c.Z], () => c.Z.getGuild(t), [t]),
+        x = (0, r.e7)([o.Z], () => o.Z.useReducedMotion),
+        E = (0, d.n)();
+    return (a()(null != f, 'guild cannot be null'), a()(null != g, 'guildProductListing cannot be null'), (0, u.SO)(f))
+        ? (0, i.jsx)(s.ua7, {
+              text: p.intl.string(p.t.sAJr9f),
+              children: (e) =>
+                  (0, i.jsx)(s.zxk, {
+                      ...e,
+                      color: s.zxk.Colors.BRAND,
+                      disabled: !0,
+                      children: p.intl.string(p.t.xUi3BA)
+                  })
           })
-        : (0, i.jsx)(o.Button, {
-              color: o.Button.Colors.PRIMARY,
-              disabled: !0,
-              children: p.intl.string(p.t.RcTOGB)
-          });
+        : g.has_entitlement
+          ? null != g.attachments
+              ? (0, i.jsx)(_.Z, {
+                    guildId: f.id,
+                    productId: g.id
+                })
+              : (0, i.jsx)(s.zxk, {
+                    color: s.zxk.Colors.PRIMARY,
+                    disabled: !0,
+                    children: p.intl.string(p.t.RcTOGB)
+                })
+          : (0, i.jsx)(s.gtL, {
+                shineSize: s.gtL.ShineSizes.SMALL,
+                pauseAnimation: x || !E,
+                onClick: () =>
+                    (0, h.z)({
+                        guildProductListing: g,
+                        guildId: f.id,
+                        sourceAnalyticsLocations: l
+                    }),
+                children: p.intl.string(p.t.xUi3BA)
+            });
 }

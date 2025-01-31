@@ -1,5 +1,6 @@
+n.d(t, { Z: () => l });
 var i = n(570140);
-t.Z = {
+let l = {
     toggleMembersSection() {
         i.Z.dispatch({ type: 'CHANNEL_TOGGLE_MEMBERS_SECTION' });
     },

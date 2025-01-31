@@ -1,1 +1,1 @@
-i.exports = {};
+o.exports = {};

@@ -1,24 +1,19 @@
-r.d(n, {
-    H: function () {
-        return a;
-    }
-});
-var i = r(653041);
-function a(e) {
-    let n = Promise.resolve(null),
-        r = [],
+function i(e) {
+    let t = Promise.resolve(null),
+        n = [],
         i = !1,
-        { onContention: a, onContentionResolved: o, onTimeout: s, timeoutMs: l } = e,
-        u = function (e, u) {
-            r.length > 0 ? (a(u, r), (i = !0)) : i && (o(), (i = !1)), r.push(u);
-            let c = null == l || null == s ? null : setTimeout(() => s(u, r), l);
-            return new Promise((i, a) => {
-                (n = n
+        { onContention: r, onContentionResolved: a, onTimeout: s, timeoutMs: o } = e,
+        l = function (e, l) {
+            n.length > 0 ? (r(l, n), (i = !0)) : i && (a(), (i = !1)), n.push(l);
+            let u = null == o || null == s ? null : setTimeout(() => s(l, n), o);
+            return new Promise((i, r) => {
+                (t = t
                     .then(e)
-                    .then(i, a)
-                    .then(() => r.splice(0, 1))),
-                    null != c && (n = n.then(() => clearTimeout(c)));
+                    .then(i, r)
+                    .then(() => n.splice(0, 1))),
+                    null != u && (t = t.then(() => clearTimeout(u)));
             });
         };
-    return (u.isMutexHeld = () => r.length > 0), (u.getLockHolders = () => r), u;
+    return (l.isMutexHeld = () => n.length > 0), (l.getLockHolders = () => n), l;
 }
+n.d(t, { H: () => i }), n(653041);

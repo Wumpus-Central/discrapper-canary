@@ -1,9 +1,10 @@
-e.exports = {
-    chipletContainerInner: 'chipletContainerInner_d5cb59',
-    chipletContainerInline: 'chipletContainerInline_d5cb59',
-    clickable: 'clickable_d5cb59',
-    text: 'text_d5cb59',
-    badge: 'badge_d5cb59',
-    noTooltip: 'noTooltip_d5cb59',
-    unselectable: 'unselectable_d5cb59'
+var i = {
+    chipletContainerInner: 'chipletContainerInner__4a25c',
+    chipletContainerInline: 'chipletContainerInline__4a25c',
+    clickable: 'clickable__4a25c',
+    text: 'text__4a25c',
+    badge: 'badge__4a25c',
+    noTooltip: 'noTooltip__4a25c',
+    unselectable: 'unselectable__4a25c'
 };
+e.exports = i;

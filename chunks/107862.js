@@ -1,12 +1,8 @@
 t.d(n, {
-    RM: function () {
-        return r;
-    },
-    Ug: function () {
-        return l;
-    }
+    RM: () => s,
+    Ug: () => i
 });
-let i = (0, t(818083).B)({
+let l = (0, t(818083).B)({
     kind: 'guild',
     id: '2023-02_onboardingdropdowns',
     label: 'Enables dropdown selections from onboarding prompts',
@@ -19,8 +15,8 @@ let i = (0, t(818083).B)({
         }
     ]
 });
-function l(e) {
-    return i.useExperiment(
+function i(e) {
+    return l.useExperiment(
         {
             guildId: e,
             location: 'a12ce7_1'
@@ -28,8 +24,8 @@ function l(e) {
         { autoTrackExposure: !1 }
     );
 }
-function r(e) {
-    return i.getCurrentConfig({
+function s(e) {
+    return l.getCurrentConfig({
         guildId: e,
         location: 'a12ce7_2'
     });

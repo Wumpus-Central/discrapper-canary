@@ -1,6 +1,7 @@
-e.exports = {
-    shaker: 'shaker_b93e3f',
-    root: 'root_b93e3f',
-    withHeader: 'withHeader_b93e3f',
-    halloweenModalHeight: 'halloweenModalHeight_b93e3f'
+var i = {
+    shaker: 'shaker_e5f3a9',
+    root: 'root_e5f3a9',
+    withHeader: 'withHeader_e5f3a9',
+    halloweenModalHeight: 'halloweenModalHeight_e5f3a9'
 };
+e.exports = i;

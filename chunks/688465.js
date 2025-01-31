@@ -1,19 +1,15 @@
-r.d(n, {
-    Z: function () {
-        return l;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(692547),
-    o = r(481060),
-    s = r(388032);
-function l(e) {
-    let { className: n, color: r = a.Z.unsafe_rawColors.BRAND_500.css, ...l } = e;
-    return (0, i.jsx)(o.TextBadge, {
-        ...l,
+n.d(t, { Z: () => o });
+var i = n(200651);
+n(192379);
+var r = n(692547),
+    a = n(481060),
+    s = n(388032);
+function o(e) {
+    let { className: t, color: n = r.Z.unsafe_rawColors.BRAND_500.css, ...o } = e;
+    return (0, i.jsx)(a.IGR, {
+        ...o,
         text: s.intl.string(s.t.oW0eUV),
-        color: r,
-        className: n
+        color: n,
+        className: t
     });
 }

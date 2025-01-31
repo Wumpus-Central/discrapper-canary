@@ -1,52 +1,48 @@
-r.d(n, {
-    H: function () {
-        return u;
-    }
-});
-var i = r(192379),
-    a = r(877124),
-    o = r(65400),
-    s = r(731965);
-function l(e, n) {
-    return e === n;
+n.d(t, { H: () => l });
+var i = n(192379),
+    r = n(877124),
+    a = n(65400),
+    s = n(731965);
+function o(e, t) {
+    return e === t;
 }
-function u(e) {
-    let n = (0, o.F)((0, a.XR)((n, r, i) => e((e) => (0, s.j)(() => n(e)), r, i)));
-    function r(e, r) {
-        return n(e, r);
+function l(e) {
+    let t = (0, a.F)((0, r.XR)((t, n, i) => e((e) => (0, s.j)(() => t(e)), n, i)));
+    function n(e, n) {
+        return t(e, n);
+    }
+    function l(e) {
+        let n = t.getState();
+        return null != e ? e(n) : n;
     }
     function u(e) {
-        let r = n.getState();
-        return null != e ? e(r) : r;
+        return (t) => t[e];
     }
     function c(e) {
-        return (n) => n[e];
-    }
-    function d(e) {
-        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l;
-        return r(
-            i.useMemo(() => c(e), [e]),
-            n
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o;
+        return n(
+            i.useMemo(() => u(e), [e]),
+            t
         );
     }
-    function f(e) {
-        return u(c(e));
+    function d(e) {
+        return l(u(e));
     }
-    let p = (e) => {
-        (0, s.j)(() => n.setState(e));
+    let f = (e) => {
+        (0, s.j)(() => t.setState(e));
     };
-    function h() {
-        p(n.getInitialState());
+    function _() {
+        f(t.getInitialState());
     }
     return {
-        useState: r,
-        getState: u,
-        useField: d,
-        getField: f,
-        subscribe: function e(e, r, i) {
-            return n.subscribe(e, r, i);
+        useState: n,
+        getState: l,
+        useField: c,
+        getField: d,
+        subscribe: function (e, n, i) {
+            return t.subscribe(e, n, i);
         },
-        setState: p,
-        resetState: h
+        setState: f,
+        resetState: _
     };
 }

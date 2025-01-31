@@ -1,12 +1,13 @@
+n.d(t, { Z: () => r });
 var i = n(544891),
-    r = n(900849),
-    l = n(981631);
-t.Z = (e) =>
+    l = n(900849),
+    a = n(981631);
+let r = (e) =>
     i.tn
         .get({
-            url: l.ANM.STICKER_GUILD_DATA(e),
+            url: a.ANM.STICKER_GUILD_DATA(e),
             oldFormErrors: !0,
             rejectWithError: !0
         })
-        .then((e) => ((null == e ? void 0 : e.body) != null ? (0, r.PP)(e.body) : null))
+        .then((e) => ((null == e ? void 0 : e.body) != null ? (0, l.PP)(e.body) : null))
         .catch(() => null);

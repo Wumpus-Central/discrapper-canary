@@ -1,47 +1,46 @@
-n(47120);
+n.d(t, { Z: () => h }), n(47120);
 var i = n(200651),
     a = n(192379),
     r = n(622535),
     l = n(481060),
-    o = n(783097),
-    s = n(66637),
+    s = n(783097),
+    o = n(66637),
     c = n(768581),
     d = n(956965),
     u = n(388032),
     m = n(833643);
-let p = 28;
-t.Z = function (e) {
+let h = function (e) {
     var t, n, h;
-    let { application: g, onSelectApplication: C, showCategory: x = !1 } = e,
-        v = null === (t = g.categories) || void 0 === t ? void 0 : t[0],
-        [_, f] = a.useState(!1),
-        b = a.useCallback((e) => {
-            e && f(!0);
+    let { application: p, onSelectApplication: g, showCategory: _ = !1 } = e,
+        x = null === (t = p.categories) || void 0 === t ? void 0 : t[0],
+        [C, v] = a.useState(!1),
+        f = a.useCallback((e) => {
+            e && v(!0);
         }, []),
-        I = (0, o.lf)(g),
-        S = a.useCallback(() => {
-            C(g.id);
-        }, [C, g.id]),
+        I = (0, s.lf)(p),
+        b = a.useCallback(() => {
+            g(p.id);
+        }, [g, p.id]),
         j = a.useMemo(
             () =>
-                _
+                C
                     ? c.ZP.getApplicationIconURL({
-                          id: g.id,
-                          icon: g.icon,
+                          id: p.id,
+                          icon: p.icon,
                           size: 48
                       })
                     : void 0,
-            [_, g]
+            [C, p]
         ),
-        N = x && null != v;
+        S = _ && null != x;
     return (0, i.jsx)(r.$, {
-        onChange: b,
-        active: !_,
+        onChange: f,
+        active: !C,
         children: (0, i.jsx)('div', {
             className: m.container,
-            children: (0, i.jsxs)(s.Z, {
+            children: (0, i.jsxs)(o.Z, {
                 className: m.card,
-                onClick: S,
+                onClick: b,
                 onContextMenu: () => {},
                 children: [
                     (0, i.jsxs)('div', {
@@ -53,9 +52,9 @@ t.Z = function (e) {
                                     display: 'block',
                                     aspectRatio: 16 / 9
                                 },
-                                children: _
+                                children: C
                                     ? (0, i.jsx)(d.Z, {
-                                          application: g,
+                                          application: p,
                                           bannerType: 'card',
                                           iconURL: j
                                       })
@@ -63,8 +62,8 @@ t.Z = function (e) {
                             }),
                             (0, i.jsx)('div', {
                                 className: m.avatarContainer,
-                                style: { height: p },
-                                children: _
+                                style: { height: 28 },
+                                children: C
                                     ? (0, i.jsx)('img', {
                                           src: j,
                                           alt: '',
@@ -87,27 +86,27 @@ t.Z = function (e) {
                                 className: m.titleContainer,
                                 children: (0, i.jsx)('div', {
                                     className: m.title,
-                                    children: (0, i.jsx)(l.Heading, {
+                                    children: (0, i.jsx)(l.X6q, {
                                         variant: 'heading-md/semibold',
                                         color: 'header-primary',
                                         className: m.appName,
-                                        children: g.name
+                                        children: p.name
                                     })
                                 })
                             }),
-                            N || I
+                            S || I
                                 ? (0, i.jsxs)('div', {
                                       className: m.infoContainer,
                                       children: [
-                                          N
+                                          S
                                               ? (0, i.jsx)(l.Text, {
                                                     className: m.appCategory,
                                                     variant: 'text-xs/medium',
                                                     color: 'text-normal',
-                                                    children: v.name
+                                                    children: x.name
                                                 })
                                               : null,
-                                          N && I
+                                          S && I
                                               ? (0, i.jsx)(l.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-secondary',
@@ -128,8 +127,8 @@ t.Z = function (e) {
                                 className: m.description,
                                 variant: 'text-sm/medium',
                                 color: 'header-secondary',
-                                lineClamp: N || I ? 2 : 3,
-                                children: null !== (h = null === (n = g.directory_entry) || void 0 === n ? void 0 : n.short_description) && void 0 !== h ? h : g.description
+                                lineClamp: S || I ? 2 : 3,
+                                children: null !== (h = null === (n = p.directory_entry) || void 0 === n ? void 0 : n.short_description) && void 0 !== h ? h : p.description
                             })
                         ]
                     })

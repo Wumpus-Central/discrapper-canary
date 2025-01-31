@@ -1,4 +1,5 @@
-e.exports = {
-    nitroRewardTileAssetContainer: 'nitroRewardTileAssetContainer_e5593d',
-    nitroRewardTileAsset: 'nitroRewardTileAsset_e5593d'
+var i = {
+    nitroRewardTileAssetContainer: 'nitroRewardTileAssetContainer_a92e89',
+    nitroRewardTileAsset: 'nitroRewardTileAsset_a92e89'
 };
+e.exports = i;

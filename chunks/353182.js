@@ -1,9 +1,4 @@
-i.r(o),
-    i.d(o, {
-        init: function () {
-            return t;
-        }
-    });
+i.r(o), i.d(o, { init: () => t });
 var n = i(559425);
 function t() {
     window.DiscordDevSession = {

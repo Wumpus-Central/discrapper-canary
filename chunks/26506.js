@@ -1,16 +1,6 @@
-r.d(t, {
-    j: function () {
-        return _;
-    }
-});
-var a = r(102733),
-    n = r(899517);
-function _() {
-    return (
-        'undefined' != typeof window &&
-        (!(0, a.KV)() ||
-            (function () {
-                return void 0 !== n.n.process && 'renderer' === n.n.process.type;
-            })())
-    );
+a.d(e, { j: () => o });
+var r = a(102733),
+    n = a(899517);
+function o() {
+    return 'undefined' != typeof window && (!(0, r.KV)() || (void 0 !== n.n.process && 'renderer' === n.n.process.type));
 }

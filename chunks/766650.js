@@ -1,67 +1,62 @@
-n.d(t, {
-    Z: function () {
-        return h;
-    }
-}),
-    n(47120);
-var s = n(200651),
-    r = n(192379),
-    i = n(120356),
-    l = n.n(i),
-    a = n(642128),
-    o = n(481060),
-    c = n(144114),
-    u = n(317175),
-    d = n(149938);
+s.d(t, { Z: () => h }), s(47120);
+var n = s(200651),
+    r = s(192379),
+    i = s(120356),
+    l = s.n(i),
+    a = s(642128),
+    o = s(481060),
+    c = s(144114),
+    d = s(317175),
+    u = s(149938);
 function h(e) {
-    let { show: t, alpha2: n, countryCode: i } = e,
+    let { show: t, alpha2: s, countryCode: i } = e,
         h = r.useRef(null),
-        [p, m] = r.useState(0),
-        [x, f] = r.useState(!1);
+        [m, p] = r.useState(0),
+        [x, g] = r.useState(!1);
     r.useEffect(() => {
         function e() {
-            var e, n;
-            m(t && null !== (n = null === (e = h.current) || void 0 === e ? void 0 : e.getBoundingClientRect().width) && void 0 !== n ? n : 0);
+            var e, s;
+            p(t && null !== (s = null === (e = h.current) || void 0 === e ? void 0 : e.getBoundingClientRect().width) && void 0 !== s ? s : 0);
         }
         return e(), window.addEventListener('resize', e), () => window.removeEventListener('resize', e);
-    }, [t, n, i]);
-    let g = (0, o.useSpring)({
-            width: ''.concat(p, 'px'),
+    }, [t, s, i]);
+    let f = (0, o.q_F)({
+            width: ''.concat(m, 'px'),
             onStart: () => {
-                f(!0);
+                g(!0);
             },
             onRest: () => {
-                f(!1);
+                g(!1);
             }
         }),
-        C = (e) => {
+        j = (e) => {
             c.Z.setCountryCode(e);
         };
-    return (0, s.jsx)(o.Popout, {
+    return (0, n.jsx)(o.yRy, {
         position: 'top',
         renderPopout: (e) =>
-            (0, s.jsx)(u.Z, {
-                className: d.popout,
+            (0, n.jsx)(d.Z, {
+                className: u.popout,
                 onClick: (t) => {
-                    C(t), e.closePopout();
+                    j(t), e.closePopout();
                 }
             }),
         children: (e) =>
-            (0, s.jsx)('div', {
-                className: l()(d.outerContainer, { [d.hidden]: !(t || x) }),
-                children: (0, s.jsx)(a.animated.div, {
-                    className: d.container,
-                    style: g,
-                    children: (0, s.jsxs)('div', {
-                        className: d.innerContainer,
+            (0, n.jsx)('div', {
+                className: l()(u.outerContainer, { [u.hidden]: !(t || x) }),
+                children: (0, n.jsx)(a.animated.div, {
+                    className: u.container,
+                    style: f,
+                    children: (0, n.jsxs)('div', {
+                        className: u.innerContainer,
                         ref: h,
                         children: [
-                            (0, s.jsxs)(o.Clickable, {
+                            (0, n.jsxs)(o.P3F, {
                                 ...e,
-                                className: d.countryCode,
-                                children: [n, ' ', i]
+                                className: u.countryCode,
+                                children: [s, ' ', i]
                             }),
-                            (0, s.jsx)('div', { className: d.separator })
+                            (0, n.jsx)('div', { className: u.separator })
                         ]
                     })
                 })

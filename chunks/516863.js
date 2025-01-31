@@ -1,6 +1,5 @@
-function n(e) {
-    let n = e.COMMENT(/^\s*@?rem\b/, /$/, { relevance: 10 }),
-        r = '^\\s*[A-Za-z._?][A-Za-z0-9_$#@~.?]*(:|\\s+label)';
+function t(e) {
+    let t = e.COMMENT(/^\s*@?rem\b/, /$/, { relevance: 10 });
     return {
         name: 'Batch file (DOS)',
         aliases: ['bat', 'cmd'],
@@ -17,17 +16,17 @@ function n(e) {
             },
             {
                 className: 'function',
-                begin: r,
+                begin: '^\\s*[A-Za-z._?][A-Za-z0-9_$#@~.?]*(:|\\s+label)',
                 end: 'goto:eof',
-                contains: [e.inherit(e.TITLE_MODE, { begin: '([_a-zA-Z]\\w*\\.)*([_a-zA-Z]\\w*:)?[_a-zA-Z]\\w*' }), n]
+                contains: [e.inherit(e.TITLE_MODE, { begin: '([_a-zA-Z]\\w*\\.)*([_a-zA-Z]\\w*:)?[_a-zA-Z]\\w*' }), t]
             },
             {
                 className: 'number',
                 begin: '\\b\\d+',
                 relevance: 0
             },
-            n
+            t
         ]
     };
 }
-e.exports = n;
+e.exports = t;

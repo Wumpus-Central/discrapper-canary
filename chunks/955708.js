@@ -1,121 +1,118 @@
-e.r(n),
-    e.d(n, {
-        InappropriateConversationModalSlideKeys: function () {
-            return r;
-        }
-    }),
-    e(47120);
-var r,
-    o,
-    i = e(200651),
-    s = e(192379),
-    a = e(481060),
-    c = e(378298),
-    l = e(473092),
-    u = e(684471),
-    d = e(745982),
-    E = e(463439),
-    N = e(388032),
-    h = e(515562);
-((o = r || (r = {}))[(o.INTRO = 0)] = 'INTRO'), (o[(o.SAFETY_TIPS = 1)] = 'SAFETY_TIPS'), (o[(o.TAKE_ACTION = 2)] = 'TAKE_ACTION');
-n.default = (t) => {
-    let { warningId: n, warningType: e, senderId: r, modalProps: o, channelId: f } = t,
-        [_, I] = s.useState(0),
-        C = s.useMemo(
+n.d(e, {
+    default: () => N,
+    x: () => h
+}),
+    n(47120);
+var s,
+    i = n(200651),
+    r = n(192379),
+    o = n(481060),
+    a = n(378298),
+    c = n(473092),
+    l = n(684471),
+    d = n(745982),
+    u = n(463439),
+    E = n(388032),
+    _ = n(515562),
+    h = (((s = {})[(s.INTRO = 0)] = 'INTRO'), (s[(s.SAFETY_TIPS = 1)] = 'SAFETY_TIPS'), (s[(s.TAKE_ACTION = 2)] = 'TAKE_ACTION'), s);
+let N = (t) => {
+    let { warningId: e, warningType: n, senderId: s, modalProps: h, channelId: N } = t,
+        [x, C] = r.useState(0),
+        I = r.useMemo(
             () => ({
-                channelId: f,
-                senderId: r,
-                warningId: n,
-                warningType: e,
+                channelId: N,
+                senderId: s,
+                warningId: e,
+                warningType: n,
                 isNudgeWarning: !1
             }),
-            [f, r, n, e]
+            [N, s, e, n]
         );
-    s.useEffect(() => {
-        (0, l.KQ)({
-            ...C,
-            viewName: l.pb.SAFETY_TAKEOVER_MODAL
+    r.useEffect(() => {
+        (0, c.KQ)({
+            ...I,
+            viewName: c.pb.SAFETY_TAKEOVER_MODAL
         });
-    }, [C]);
-    let T = s.useCallback(
+    }, [I]);
+    let A = r.useCallback(
             (t) => {
-                (0, l.qc)({
-                    ...C,
+                (0, c.qc)({
+                    ...I,
                     cta: t
                 });
             },
-            [C]
+            [I]
         ),
-        [A, p] = s.useState(!1);
+        [T, m] = r.useState(!1);
     function g(t) {
-        I(t);
+        C(t);
     }
-    return (0, i.jsxs)(a.ModalRoot, {
-        transitionState: o.transitionState,
+    return (0, i.jsxs)(o.Y0X, {
+        transitionState: h.transitionState,
         children: [
             (0, i.jsx)('div', {
-                className: h.container,
-                children: (0, i.jsxs)(a.Slides, {
+                className: _.container,
+                children: (0, i.jsxs)(o.MyZ, {
                     width: 440,
-                    activeSlide: _,
+                    activeSlide: x,
                     centered: !1,
                     overflow: 'visible',
                     contentDisplay: 'flex',
                     children: [
-                        (0, i.jsx)(a.Slide, {
+                        (0, i.jsx)(o.Mi4, {
                             id: 0,
-                            children: (0, i.jsx)(u.Z, {
-                                warningId: n,
-                                senderId: r,
-                                trackAnalyticsEvent: T,
+                            children: (0, i.jsx)(l.Z, {
+                                warningId: e,
+                                senderId: s,
+                                trackAnalyticsEvent: A,
                                 onNavigate: g
                             })
                         }),
-                        (0, i.jsx)(a.Slide, {
+                        (0, i.jsx)(o.Mi4, {
                             id: 1,
                             children: (0, i.jsx)(d.Z, {
-                                warningId: n,
-                                senderId: r,
-                                trackAnalyticsEvent: T
+                                warningId: e,
+                                senderId: s,
+                                trackAnalyticsEvent: A
                             })
                         }),
-                        (0, i.jsx)(a.Slide, {
+                        (0, i.jsx)(o.Mi4, {
                             id: 2,
-                            children: (0, i.jsx)(E.Z, {
-                                warningId: n,
-                                senderId: r,
-                                trackAnalyticsEvent: T,
-                                channelId: f,
-                                hasReported: A,
+                            children: (0, i.jsx)(u.Z, {
+                                warningId: e,
+                                senderId: s,
+                                trackAnalyticsEvent: A,
+                                channelId: N,
+                                hasReported: T,
                                 onReport: function () {
-                                    p(!0);
+                                    m(!0);
                                 }
                             })
                         })
                     ]
                 })
             }),
-            (0, i.jsxs)(a.ModalFooter, {
-                className: h.footer,
+            (0, i.jsxs)(o.mzw, {
+                className: _.footer,
                 children: [
-                    (0, i.jsx)(a.Button, {
-                        className: h.footerButton,
-                        look: a.Button.Looks.LINK,
-                        color: a.Button.Colors.CUSTOM,
-                        size: a.Button.Sizes.MIN,
+                    (0, i.jsx)(o.zxk, {
+                        className: _.footerButton,
+                        look: o.zxk.Looks.LINK,
+                        color: o.zxk.Colors.CUSTOM,
+                        size: o.zxk.Sizes.MIN,
                         onClick: function () {
-                            o.onClose(), (0, c.T)(f, [n]), T(l.NM.USER_TAKEOVER_MODAL_DISMISS);
+                            h.onClose(), (0, a.T)(N, [e]), A(c.NM.USER_TAKEOVER_MODAL_DISMISS);
                         },
-                        children: N.intl.string(N.t.cpT0Cg)
+                        children: E.intl.string(E.t.cpT0Cg)
                     }),
-                    0 !== _ &&
-                        (0, i.jsx)(a.Button, {
-                            className: h.footerButton,
-                            look: a.Button.Looks.LINK,
-                            color: a.Button.Colors.CUSTOM,
-                            size: a.Button.Sizes.MIN,
+                    0 !== x &&
+                        (0, i.jsx)(o.zxk, {
+                            className: _.footerButton,
+                            look: o.zxk.Looks.LINK,
+                            color: o.zxk.Colors.CUSTOM,
+                            size: o.zxk.Sizes.MIN,
                             onClick: () => g(0),
-                            children: N.intl.string(N.t['13/7kZ'])
+                            children: E.intl.string(E.t['13/7kZ'])
                         })
                 ]
             })

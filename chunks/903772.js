@@ -1,9 +1,5 @@
-function a() {
-    let e = window;
-    return null != e.jQuery || null != e.$ || null != e.BetterDiscord || null != e.BdApi || null != e.rambox;
+function r() {
+    let t = window;
+    return null != t.jQuery || null != t.$ || null != t.BetterDiscord || null != t.BdApi || null != t.rambox;
 }
-r.d(t, {
-    e: function () {
-        return a;
-    }
-});
+a.d(e, { e: () => r });

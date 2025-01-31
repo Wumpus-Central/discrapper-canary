@@ -1,10 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-}),
-    n(47120),
-    n(724458);
+n.d(t, { Z: () => _ }), n(47120), n(724458);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
@@ -37,43 +31,44 @@ function p(e) {
               children: n
           });
 }
-function f(e) {
+function _(e) {
     var t, n;
     let { rule: l, onChangeText: a, className: o } = e,
-        { patterns: m, valueError: f, errors: C, validatePatternsChanged: v, validateEditingValueChanged: I } = (0, d.Z)(l, a),
+        { patterns: m, valueError: _, errors: C, validatePatternsChanged: f, validateEditingValueChanged: v } = (0, d.Z)(l, a),
         [N] = r.useState(() => ({
             tags: m,
             value: '',
             selections: [],
             isSelecting: !1
         })),
-        _ = r.useMemo(
+        j = r.useMemo(
             () =>
                 C.reduce((e, t) => {
                     let { pattern: n, message: i, description: r, erroringCharacterLength: l = n.length, erroringCharacterOffset: s = 0 } = t;
-                    return null == m.find((e) => e === n)
-                        ? e
-                        : ((e[n] = {
-                              value: n,
-                              message: null != r ? r : i,
-                              erroringCharacterLength: l,
-                              erroringCharacterOffset: s
-                          }),
-                          e);
+                    return (
+                        null == m.find((e) => e === n) ||
+                            (e[n] = {
+                                value: n,
+                                message: null != r ? r : i,
+                                erroringCharacterLength: l,
+                                erroringCharacterOffset: s
+                            }),
+                        e
+                    );
                 }, {}),
             [C, m]
         ),
-        T = r.useCallback(
+        I = r.useCallback(
             (e) => {
-                v(e, m);
+                f(e, m);
             },
-            [v, m]
+            [f, m]
         ),
-        j = r.useCallback(
+        E = r.useCallback(
             (e) => {
-                I(e);
+                v(e);
             },
-            [I]
+            [v]
         );
     return (0, i.jsxs)('div', {
         className: s()(g.keywordsContainer, o),
@@ -81,14 +76,14 @@ function f(e) {
             (0, i.jsx)(c.Z, {
                 placeholder: '^b(a|@)d$\nw(o|0)rd(s|$)',
                 initialValue: N,
-                onChangeTags: T,
-                onChangeNewTagValue: j,
-                tagErrors: _,
+                onChangeTags: I,
+                onChangeNewTagValue: E,
+                tagErrors: j,
                 maxTags: u.VW
             }),
             (0, i.jsx)(p, {
                 text: h.intl.format(h.t['PGC/AA'], { helpArticle: x }),
-                hasErrors: C.length > 0 || null != f,
+                hasErrors: C.length > 0 || null != _,
                 errorText:
                     null !==
                         (n =
@@ -100,9 +95,9 @@ function f(e) {
                                 ? void 0
                                 : t.message) && void 0 !== n
                         ? n
-                        : null == f
+                        : null == _
                           ? void 0
-                          : f.message
+                          : _.message
             })
         ]
     });

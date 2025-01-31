@@ -1,11 +1,10 @@
-r.r(
-    (e.exports = {
-        linkButton: 'linkButton_cdf64b',
-        default: 'default_cdf64b',
-        white: 'white_cdf64b',
-        primary: 'primary_cdf64b',
-        destructive: 'destructive_cdf64b',
-        link: 'link_cdf64b',
-        text: 'text_cdf64b'
-    })
-);
+var i = {
+    linkButton: 'linkButton_a995b9',
+    default: 'default_a995b9',
+    white: 'white_a995b9',
+    primary: 'primary_a995b9',
+    destructive: 'destructive_a995b9',
+    link: 'link_a995b9',
+    text: 'text_a995b9'
+};
+n.r((e.exports = i));

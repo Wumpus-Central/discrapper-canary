@@ -1,50 +1,46 @@
-r.d(n, {
-    g: function () {
-        return m;
-    },
-    s: function () {
-        return g;
-    }
+n.d(t, {
+    g: () => h,
+    s: () => m
 });
-var i = r(399606),
-    a = r(637853),
-    o = r(160404),
-    s = r(592125),
-    l = r(430824),
-    u = r(563534),
-    c = r(199689),
-    d = r(460347),
-    f = r(981631),
-    p = r(176505);
-function h(e) {
-    var n;
-    let r = e.id,
-        i = (null !== (n = u.Z.getNewMemberActions(r)) && void 0 !== n ? n : []).length > 0,
-        a = u.Z.getEnabled(r);
-    return i && e.hasFeature(f.oNc.COMMUNITY) && !(e.hasFeature(f.oNc.GUILD_ONBOARDING) && !a);
+var i = n(399606),
+    r = n(637853),
+    a = n(160404),
+    s = n(592125),
+    o = n(430824),
+    l = n(563534),
+    u = n(199689),
+    c = n(460347),
+    d = n(981631),
+    f = n(176505);
+function _(e) {
+    var t;
+    let n = e.id,
+        i = (null !== (t = l.Z.getNewMemberActions(n)) && void 0 !== t ? t : []).length > 0,
+        r = l.Z.getEnabled(n);
+    return i && e.hasFeature(d.oNc.COMMUNITY) && !(e.hasFeature(d.oNc.GUILD_ONBOARDING) && !r);
 }
-function _(e, n) {
-    let r = n.getMutableGuildChannelsForGuild(e);
-    for (let e in r) if (r[e].hasFlag(p.zZ.IS_GUILD_RESOURCE_CHANNEL)) return !0;
+function p(e, t) {
+    let n = t.getMutableGuildChannelsForGuild(e);
+    for (let e in n) if (n[e].hasFlag(f.zZ.IS_GUILD_RESOURCE_CHANNEL)) return !0;
     return !1;
 }
-function m(e) {
-    let n = (0, d.Z)(e);
+function h(e) {
+    let t = (0, c.Z)(e);
     return (0, i.e7)(
-        [s.Z, l.Z, o.Z],
+        [s.Z, o.Z, a.Z],
         () => {
-            if (__OVERLAY__ || e === f.ME || e === f.I_8) return !1;
-            let r = l.Z.getGuild(e);
-            return (null == r ? !!void 0 : !!r.hasFeature(f.oNc.COMMUNITY)) && (o.Z.isFullServerPreview(e) ? h(r) : (0, a.wC)(e) ? n || _(e, s.Z) : !!(0, c.Z)(r) && (n || _(e, s.Z)));
+            if (__OVERLAY__ || e === d.ME || e === d.I_8) return !1;
+            let n = o.Z.getGuild(e);
+            return null != n && !!n.hasFeature(d.oNc.COMMUNITY) && (a.Z.isFullServerPreview(e) ? _(n) : (0, r.wC)(e) ? t || p(e, s.Z) : !!(0, u.Z)(n) && (t || p(e, s.Z)));
         },
-        [e, n]
+        [e, t]
     );
 }
-function g(e) {
-    let n = l.Z.getGuild(e),
-        r = o.Z.isFullServerPreview(e);
-    if (null == n || __OVERLAY__ || e === f.ME || e === f.I_8) return !1;
-    if (r) return h(n);
-    let i = (0, a.wC)(e) && n.hasFeature(f.oNc.GUILD_ONBOARDING) && n.hasFeature(f.oNc.GUILD_SERVER_GUIDE);
-    return ((n.hasFeature(f.oNc.GUILD_ONBOARDING) && n.hasFeature(f.oNc.GUILD_SERVER_GUIDE)) || i) && n.hasFeature(f.oNc.COMMUNITY);
+function m(e) {
+    let t = o.Z.getGuild(e),
+        n = a.Z.isFullServerPreview(e);
+    if (null == t || __OVERLAY__ || e === d.ME || e === d.I_8) return !1;
+    if (n) return _(t);
+    let i = (0, r.wC)(e) && t.hasFeature(d.oNc.GUILD_ONBOARDING) && t.hasFeature(d.oNc.GUILD_SERVER_GUIDE);
+    return ((t.hasFeature(d.oNc.GUILD_ONBOARDING) && t.hasFeature(d.oNc.GUILD_SERVER_GUIDE)) || i) && t.hasFeature(d.oNc.COMMUNITY);
 }

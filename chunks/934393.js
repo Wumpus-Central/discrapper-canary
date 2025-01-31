@@ -1,34 +1,30 @@
-r.d(n, {
-    Z: function () {
-        return p;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(442837),
-    o = r(726542),
-    s = r(906732),
-    l = r(231757),
-    u = r(553795),
-    c = r(475413),
-    d = r(981631),
-    f = r(388032);
-function p(e) {
-    let { platformType: n, icon: r, onAction: p } = e,
-        { newestAnalyticsLocation: h } = (0, s.ZP)();
-    return (0, a.e7)([u.Z], () => null != u.Z.getAccount(null, n))
+n.d(t, { Z: () => f });
+var i = n(200651);
+n(192379);
+var r = n(442837),
+    a = n(726542),
+    s = n(906732),
+    o = n(231757),
+    l = n(553795),
+    u = n(475413),
+    c = n(981631),
+    d = n(388032);
+function f(e) {
+    let { platformType: t, icon: n, onAction: f } = e,
+        { newestAnalyticsLocation: _ } = (0, s.ZP)();
+    return (0, r.e7)([l.Z], () => null != l.Z.getAccount(null, t))
         ? null
-        : (0, i.jsx)(c.tG, {
-              icon: r,
-              text: f.intl.formatToPlainString(f.t.XWSHTU, { platform: o.Z.get(n).name }),
+        : (0, i.jsx)(u.tG, {
+              icon: n,
+              text: d.intl.formatToPlainString(d.t.XWSHTU, { platform: a.Z.get(t).name }),
               fullWidth: !0,
               onClick: (e) => {
                   e.stopPropagation();
-                  let r = n === d.ABu.XBOX;
-                  null == p || p({ action: r ? 'PRESS_CONNECT_XBOX_BUTTON' : 'PRESS_CONNECT_PLAYSTATION_BUTTON' }),
-                      (0, l.Z)({
-                          platformType: n,
-                          location: h
+                  let n = t === c.ABu.XBOX;
+                  null == f || f({ action: n ? 'PRESS_CONNECT_XBOX_BUTTON' : 'PRESS_CONNECT_PLAYSTATION_BUTTON' }),
+                      (0, o.Z)({
+                          platformType: t,
+                          location: _
                       });
               }
           });

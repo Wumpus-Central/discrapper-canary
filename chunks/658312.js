@@ -1,48 +1,47 @@
-var i = r(192379),
-    a = r(512722),
-    o = r.n(a),
-    s = r(493773);
-let l = 1000 / 24,
-    u = 3,
-    c = 3000,
-    d = function (e) {
-        let { minInterval: n = l, allowableMinInterval: r, droppedFramesCallbackThreshold: a, droppedFramesCallback: d, droppedFramesResetTime: f = c } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            p = i.useRef(n),
-            h = i.useRef(0),
-            _ = i.useRef(),
-            m = i.useRef(),
-            g = i.useRef(!0),
-            E = i.useRef(0),
-            v = i.useRef(),
-            y = i.useCallback(() => {
-                (E.current = 0), null != v.current && (clearTimeout(v.current), (v.current = void 0));
+n.d(t, { Z: () => c });
+var i = n(192379),
+    r = n(512722),
+    a = n.n(r),
+    s = n(493773);
+let o = 1000 / 24,
+    l = 3,
+    u = 3000,
+    c = function (e) {
+        let { minInterval: t = o, allowableMinInterval: n, droppedFramesCallbackThreshold: r, droppedFramesCallback: c, droppedFramesResetTime: d = u } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            f = i.useRef(t),
+            _ = i.useRef(0),
+            p = i.useRef(),
+            h = i.useRef(),
+            m = i.useRef(!0),
+            g = i.useRef(0),
+            E = i.useRef(),
+            v = i.useCallback(() => {
+                (g.current = 0), null != E.current && (clearTimeout(E.current), (E.current = void 0));
             }, []),
-            b = i.useCallback(() => {
-                (g.current = !1), cancelAnimationFrame(h.current), clearTimeout(v.current);
+            y = i.useCallback(() => {
+                (m.current = !1), cancelAnimationFrame(_.current), clearTimeout(E.current);
             }, []),
             I = i.useCallback(
-                (n) => {
-                    if (!g.current) return;
-                    null == _.current && (_.current = n), null == m.current && (m.current = n);
-                    let i = n - m.current,
-                        s = n - _.current;
-                    s > 1.5 * Math.min(null != r ? r : 120, p.current) && ((E.current += 1), null != v.current && clearTimeout(v.current), (v.current = setTimeout(y, f)), null != a && E.current > a && (o()(null != d, 'useClock - If you set a dropped frames threshold, you must provide a droppedFramesCallback to do something when that threshold is hit'), d() && (E.current = 0))), (_.current = n), i >= p.current - u && ((m.current = n), e(i)), (h.current = requestAnimationFrame(I));
+                (t) => {
+                    if (!m.current) return;
+                    null == p.current && (p.current = t), null == h.current && (h.current = t);
+                    let i = t - h.current;
+                    t - p.current > 1.5 * Math.min(null != n ? n : 120, f.current) && ((g.current += 1), null != E.current && clearTimeout(E.current), (E.current = setTimeout(v, d)), null != r && g.current > r && (a()(null != c, 'useClock - If you set a dropped frames threshold, you must provide a droppedFramesCallback to do something when that threshold is hit'), c() && (g.current = 0))), (p.current = t), i >= f.current - l && ((h.current = t), e(i)), (_.current = requestAnimationFrame(I));
                 },
-                [r, y, f, a, d, e]
+                [n, v, d, r, c, e]
             ),
-            T = i.useCallback(() => {
-                (g.current = !0), (m.current = void 0), (h.current = requestAnimationFrame(I));
+            b = i.useCallback(() => {
+                (m.current = !0), (h.current = void 0), (_.current = requestAnimationFrame(I));
             }, [I]);
         return (
             i.useEffect(() => {
-                p.current = n;
-            }, [n]),
-            (0, s.Z)(() => ((h.current = requestAnimationFrame(I)), () => b())),
+                f.current = t;
+            }, [t]),
+            (0, s.Z)(() => ((_.current = requestAnimationFrame(I)), () => y())),
             {
-                stop: b,
-                reset: T,
-                ticking: g
+                stop: y,
+                reset: b,
+                ticking: m
             }
         );
     };
-n.Z = d;

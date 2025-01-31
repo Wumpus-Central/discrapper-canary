@@ -1,25 +1,21 @@
-t.d(e, {
-    e: function () {
-        return s;
-    }
-});
-var i = t(200651);
-t(192379);
-var r = t(442837),
-    l = t(481060),
-    u = t(378712),
-    a = t(605984),
-    o = t(594174),
-    d = t(388032);
-function s(n) {
-    let e = (0, r.e7)([o.default], () => o.default.getCurrentUser()),
-        t = (0, a.k)(n.id);
-    return (null == e ? void 0 : e.isStaff()) === !0 && n.isDM() && null == t
+e.d(t, { e: () => o });
+var i = e(200651);
+e(192379);
+var l = e(442837),
+    r = e(481060),
+    a = e(378712),
+    s = e(605984),
+    d = e(594174),
+    u = e(388032);
+function o(n) {
+    let t = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
+        e = (0, s.k)(n.id);
+    return (null == t ? void 0 : t.isStaff()) === !0 && n.isDM() && null == e
         ? (0, i.jsx)(i.Fragment, {
-              children: (0, i.jsx)(l.MenuItem, {
+              children: (0, i.jsx)(r.sNh, {
                   id: 'mark-as-likely-ato',
-                  label: d.intl.string(d.t.AWKKgY),
-                  action: () => (0, u.J)(n.id)
+                  label: u.intl.string(u.t.AWKKgY),
+                  action: () => (0, a.J)(n.id)
               })
           })
         : null;

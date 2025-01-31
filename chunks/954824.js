@@ -1,44 +1,43 @@
-var i = r(525654),
-    a = r.n(i),
-    o = r(444675);
-function s(e, n) {
-    if (!e.startsWith('discord:')) return (location.href = e), o.nextTick(() => n(!0));
-    let { body: r } = document;
-    if (null == r) return o.nextTick(() => n(!1));
+n.d(t, { Z: () => c });
+var i = n(525654),
+    r = n.n(i),
+    a = n(444675);
+function s(e, t) {
+    if (!e.startsWith('discord:')) return (location.href = e), a.nextTick(() => t(!0));
+    let { body: n } = document;
+    if (null == n) return a.nextTick(() => t(!1));
     let i = document.createElement('iframe');
-    r.appendChild(i);
+    n.appendChild(i);
     try {
-        null != i.contentWindow && (i.contentWindow.location.href = e), o.nextTick(() => n(!0));
+        null != i.contentWindow && (i.contentWindow.location.href = e), a.nextTick(() => t(!0));
     } catch (e) {
-        'NS_ERROR_UNKNOWN_PROTOCOL' === e.name && o.nextTick(() => n(!1));
+        'NS_ERROR_UNKNOWN_PROTOCOL' === e.name && a.nextTick(() => t(!1));
     }
     window.setTimeout(() => {
         var e;
-        (null !== (e = null == i ? void 0 : i.parentElement) && void 0 !== e ? e : null) !== null && r.removeChild(i);
+        (null !== (e = null == i ? void 0 : i.parentElement) && void 0 !== e ? e : null) !== null && n.removeChild(i);
     }, 1000);
 }
-function l(e, n) {
-    let r = !1;
+function o(e, t) {
+    let n = !1;
     function i() {
-        r = !0;
+        n = !0;
     }
     window.addEventListener('blur', i),
         (location.href = e),
         setTimeout(() => {
-            window.removeEventListener('blur', i), n(r);
+            window.removeEventListener('blur', i), t(n);
         }, 1000);
 }
-function u(e, n) {
-    n(!1);
+function l(e, t) {
+    t(!1);
 }
-function c(e, n) {
-    (location.href = e), o.nextTick(() => n(!0));
+function u(e, t) {
+    (location.href = e), a.nextTick(() => t(!0));
 }
-function d() {
-    var e, n;
-    if ((null === (e = a().os) || void 0 === e ? void 0 : e.family) === 'Android' || (null === (n = a().os) || void 0 === n ? void 0 : n.family) === 'iOS') return c;
-    if ('Gecko' === a().layout) return s;
-    if (null != a().ua && -1 !== a().ua.indexOf('Valve Steam GameOverlay')) return u;
-    return l;
-}
-n.Z = { launch: d() };
+let c = {
+    launch: (function () {
+        var e, t;
+        return (null === (e = r().os) || void 0 === e ? void 0 : e.family) === 'Android' || (null === (t = r().os) || void 0 === t ? void 0 : t.family) === 'iOS' ? u : 'Gecko' === r().layout ? s : null != r().ua && -1 !== r().ua.indexOf('Valve Steam GameOverlay') ? l : o;
+    })()
+};

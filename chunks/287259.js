@@ -1,23 +1,17 @@
 n.d(t, {
-    JZ: function () {
-        return l;
-    },
-    fS: function () {
-        return r;
-    },
-    wX: function () {
-        return a;
-    }
+    JZ: () => r,
+    fS: () => l,
+    wX: () => a
 });
 var i = n(570140);
-function r(e, t) {
+function l(e, t) {
     i.Z.dispatch({
         type: 'LIBRARY_TABLE_SORT_UPDATE',
         key: e,
         direction: t
     });
 }
-function l(e) {
+function r(e) {
     i.Z.dispatch({
         type: 'LIBRARY_APPLICATION_FILTER_UPDATE',
         query: e

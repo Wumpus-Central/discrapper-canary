@@ -1,29 +1,27 @@
-r.d(n, {
-    y: function () {
-        return c;
-    }
+n.d(t, {
+    Z: () => c,
+    y: () => u
 });
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(481060),
-    l = r(388032),
-    u = r(912626);
-let c = (e) => {
-        let { className: n, onClick: r, children: a } = e;
-        return (0, i.jsx)(s.Anchor, {
-            onClick: r,
-            className: o()(u.link, n),
-            children: a
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(481060),
+    o = n(388032),
+    l = n(912626);
+let u = (e) => {
+        let { className: t, onClick: n, children: r } = e;
+        return (0, i.jsx)(s.eee, {
+            onClick: n,
+            className: a()(l.link, t),
+            children: r
         });
     },
-    d = (e) => {
-        let { className: n, onClick: r } = e;
-        return (0, i.jsx)(c, {
-            className: n,
-            onClick: r,
-            children: l.intl.string(l.t['13/7kZ'])
+    c = (e) => {
+        let { className: t, onClick: n } = e;
+        return (0, i.jsx)(u, {
+            className: t,
+            onClick: n,
+            children: o.intl.string(o.t['13/7kZ'])
         });
     };
-n.Z = d;

@@ -1,10 +1,6 @@
 n.d(t, {
-    c3: function () {
-        return s;
-    },
-    eA: function () {
-        return r;
-    }
+    c3: () => r,
+    eA: () => s
 });
 let i = (0, n(818083).B)({
     kind: 'user',
@@ -33,12 +29,12 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function r(e) {
+function s(e) {
     let { location: t } = e;
     return i.useExperiment({ location: t }, { autoTrackExposure: !0 }).enabled;
 }
-function s(e) {
+function r(e) {
     let { location: t } = e,
-        { enabled: n, showSearchCount: r } = i.useExperiment({ location: t }, { autoTrackExposure: !0 });
-    return n && r;
+        { enabled: n, showSearchCount: s } = i.useExperiment({ location: t }, { autoTrackExposure: !0 });
+    return n && s;
 }

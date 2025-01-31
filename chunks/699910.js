@@ -1,8 +1,4 @@
-n.d(t, {
-    v: function () {
-        return r;
-    }
-});
+n.d(t, { v: () => l });
 let i = (0, n(818083).B)({
         kind: 'user',
         id: '2024-08_collectibles_expiry_modal',
@@ -16,4 +12,4 @@ let i = (0, n(818083).B)({
             }
         ]
     }),
-    r = (e) => i.getCurrentConfig({ location: e }).expiryModalEnabled;
+    l = (e) => i.getCurrentConfig({ location: e }).expiryModalEnabled;

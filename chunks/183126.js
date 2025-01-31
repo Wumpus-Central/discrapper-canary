@@ -1,8 +1,4 @@
-n.d(t, {
-    N: function () {
-        return r;
-    }
-});
+n.d(t, { N: () => l });
 let i = (0, n(818083).B)({
     kind: 'user',
     id: '2023-01_clear_all_message_requests',
@@ -16,6 +12,6 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function r() {
+function l() {
     return i.useExperiment({ location: 'c10bec_1' }, { autoTrackExposure: !0 }).enabled;
 }

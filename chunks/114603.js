@@ -45,10 +45,10 @@ var o,
     b = r(575026),
     S = r(845936),
     w = r(680566),
-    k = r(638146),
-    x = g('draft_tree_data_support'),
-    C = RegExp('\r', 'g'),
-    E = RegExp('\n', 'g'),
+    x = r(638146),
+    k = g('draft_tree_data_support'),
+    E = RegExp('\r', 'g'),
+    C = RegExp('\n', 'g'),
     D = RegExp('^\n', 'g'),
     O = RegExp('&nbsp;', 'g'),
     K = RegExp('&#13;?', 'g'),
@@ -70,7 +70,7 @@ var o,
         u: 'UNDERLINE',
         mark: 'HIGHLIGHT'
     }),
-    N = function (t) {
+    F = function (t) {
         var e = {};
         return (
             t.mapKeys(function (t, r) {
@@ -83,7 +83,7 @@ var o,
             m(e)
         );
     },
-    F = function (t) {
+    N = function (t) {
         var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
         return (
             Object.keys(L).some(function (r) {
@@ -92,7 +92,7 @@ var o,
             e
         );
     },
-    z = function (t, e) {
+    P = function (t, e) {
         if (!w(t)) return e;
         var r = t.style.fontWeight,
             n = t.style.fontStyle,
@@ -101,7 +101,7 @@ var o,
             M.indexOf(r) >= 0 ? t.add('BOLD') : A.indexOf(r) >= 0 && t.remove('BOLD'), 'italic' === n ? t.add('ITALIC') : 'normal' === n && t.remove('ITALIC'), 'underline' === i && t.add('UNDERLINE'), 'line-through' === i && t.add('STRIKETHROUGH'), 'none' === i && (t.remove('UNDERLINE'), t.remove('STRIKETHROUGH'));
         });
     },
-    P = function (t) {
+    z = function (t) {
         return 'ul' === t || 'ol' === t;
     },
     j = (function () {
@@ -119,7 +119,7 @@ var o,
             }),
             (e.getContentBlocks = function () {
                 return (
-                    0 === this.contentBlocks.length && (x ? this._toContentBlocks(this.blockConfigs) : this._toFlatContentBlocks(this.blockConfigs)),
+                    0 === this.contentBlocks.length && (k ? this._toContentBlocks(this.blockConfigs) : this._toFlatContentBlocks(this.blockConfigs)),
                     {
                         contentBlocks: this.contentBlocks,
                         entityMap: this.entityMap
@@ -147,55 +147,53 @@ var o,
             }),
             (e._toBlockConfigs = function (t, e) {
                 for (var r = [], n = 0; n < t.length; n++) {
-                    var i,
-                        o,
-                        a = t[n],
-                        u = a.nodeName.toLowerCase();
-                    if ('body' === u || P(u)) {
+                    var i = t[n],
+                        o = i.nodeName.toLowerCase();
+                    if ('body' === o || z(o)) {
                         this._trimCurrentText(), '' !== this.currentText && r.push(this._makeBlockConfig());
-                        var s = this.currentDepth,
-                            c = this.wrapper;
-                        P(u) && ((this.wrapper = u), P(c) && this.currentDepth++), r.push.apply(r, this._toBlockConfigs(Array.from(a.childNodes), e)), (this.currentDepth = s), (this.wrapper = c);
+                        var a = this.currentDepth,
+                            u = this.wrapper;
+                        z(o) && ((this.wrapper = o), z(u) && this.currentDepth++), r.push.apply(r, this._toBlockConfigs(Array.from(i.childNodes), e)), (this.currentDepth = a), (this.wrapper = u);
                         continue;
                     }
-                    var l = this.blockTypeMap.get(u);
-                    if (void 0 !== l) {
+                    var s = this.blockTypeMap.get(o);
+                    if (void 0 !== s) {
                         this._trimCurrentText(), '' !== this.currentText && r.push(this._makeBlockConfig());
-                        var f = this.currentDepth,
-                            p = this.wrapper;
-                        (this.wrapper = 'pre' === u ? 'pre' : this.wrapper), 'string' != typeof l && (l = this.disambiguate(u, this.wrapper) || l[0] || 'unstyled'), !x && w(a) && ('unordered-list-item' === l || 'ordered-list-item' === l) && (this.currentDepth = F(a, this.currentDepth));
-                        var d = h(),
-                            g = this._toBlockConfigs(Array.from(a.childNodes), e);
+                        var c = this.currentDepth,
+                            l = this.wrapper;
+                        (this.wrapper = 'pre' === o ? 'pre' : this.wrapper), 'string' != typeof s && (s = this.disambiguate(o, this.wrapper) || s[0] || 'unstyled'), !k && w(i) && ('unordered-list-item' === s || 'ordered-list-item' === s) && (this.currentDepth = N(i, this.currentDepth));
+                        var f = h(),
+                            p = this._toBlockConfigs(Array.from(i.childNodes), e);
                         this._trimCurrentText(),
                             r.push(
                                 this._makeBlockConfig({
-                                    key: d,
-                                    childConfigs: g,
-                                    type: l
+                                    key: f,
+                                    childConfigs: p,
+                                    type: s
                                 })
                             ),
-                            (this.currentDepth = f),
-                            (this.wrapper = p);
+                            (this.currentDepth = c),
+                            (this.wrapper = l);
                         continue;
                     }
-                    if ('#text' === u) {
-                        this._addTextNode(a, e);
+                    if ('#text' === o) {
+                        this._addTextNode(i, e);
                         continue;
                     }
-                    if ('br' === u) {
-                        this._addBreakNode(a, e);
+                    if ('br' === o) {
+                        this._addBreakNode(i, e);
                         continue;
                     }
-                    if (k((i = a)) && i.attributes.getNamedItem('src') && i.attributes.getNamedItem('src').value) {
-                        this._addImgNode(a, e);
+                    if (x(i) && i.attributes.getNamedItem('src') && i.attributes.getNamedItem('src').value) {
+                        this._addImgNode(i, e);
                         continue;
                     }
-                    if (b((o = a)) && o.href && ('http:' === o.protocol || 'https:' === o.protocol || 'mailto:' === o.protocol)) {
-                        this._addAnchorNode(a, r, e);
+                    if (b(i) && i.href && ('http:' === i.protocol || 'https:' === i.protocol || 'mailto:' === i.protocol)) {
+                        this._addAnchorNode(i, r, e);
                         continue;
                     }
-                    var y = e;
-                    R.has(u) && (y = y.add(R.get(u))), (y = z(a, y)), r.push.apply(r, this._toBlockConfigs(Array.from(a.childNodes), y));
+                    var d = e;
+                    R.has(o) && (d = d.add(R.get(o))), (d = P(i, d)), r.push.apply(r, this._toBlockConfigs(Array.from(i.childNodes), d));
                 }
                 return r;
             }),
@@ -215,27 +213,26 @@ var o,
                     n = this.characterList.findEntry(function (t) {
                         return null !== t.getEntity();
                     });
-                (e = void 0 !== n ? Math.min(e, n[0]) : e),
-                    e >
-                    (r =
-                        void 0 !==
-                        (n = this.characterList.reverse().findEntry(function (t) {
-                            return null !== t.getEntity();
-                        }))
-                            ? Math.max(r, t - n[0])
-                            : r)
-                        ? ((this.currentText = ''), (this.characterList = v()))
-                        : ((this.currentText = this.currentText.slice(e, r)), (this.characterList = this.characterList.slice(e, r)));
+                (e = void 0 !== n ? Math.min(e, n[0]) : e) >
+                (r =
+                    void 0 !==
+                    (n = this.characterList.reverse().findEntry(function (t) {
+                        return null !== t.getEntity();
+                    }))
+                        ? Math.max(r, t - n[0])
+                        : r)
+                    ? ((this.currentText = ''), (this.characterList = v()))
+                    : ((this.currentText = this.currentText.slice(e, r)), (this.characterList = this.characterList.slice(e, r)));
             }),
             (e._addTextNode = function (t, e) {
                 var r = t.textContent;
-                '' === r.trim() && 'pre' !== this.wrapper && (r = ' '), 'pre' !== this.wrapper && (r = (r = r.replace(D, '')).replace(E, ' ')), this._appendText(r, e);
+                '' === r.trim() && 'pre' !== this.wrapper && (r = ' '), 'pre' !== this.wrapper && (r = (r = r.replace(D, '')).replace(C, ' ')), this._appendText(r, e);
             }),
             (e._addBreakNode = function (t, e) {
-                if (!!S(t)) this._appendText('\n', e);
+                S(t) && this._appendText('\n', e);
             }),
             (e._addImgNode = function (t, e) {
-                if (!!k(t)) {
+                if (x(t)) {
                     var r = {};
                     B.forEach(function (e) {
                         var n = t.getAttribute(e);
@@ -247,7 +244,7 @@ var o,
                 }
             }),
             (e._addAnchorNode = function (t, e, r) {
-                if (!!b(t)) {
+                if (b(t)) {
                     var n = {};
                     I.forEach(function (e) {
                         var r = t.getAttribute(e);
@@ -314,12 +311,12 @@ var o,
 t.exports = function (t) {
     var e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d,
         r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c,
-        n = e((t = t.trim().replace(C, '').replace(O, ' ').replace(K, '').replace(T, '')));
-    if (!n) return null;
-    var i = N(r);
-    return new j(i, function (t, e) {
-        return 'li' === t ? ('ol' === e ? 'ordered-list-item' : 'unordered-list-item') : null;
-    })
-        .addDOMNode(n)
-        .getContentBlocks();
+        n = e((t = t.trim().replace(E, '').replace(O, ' ').replace(K, '').replace(T, '')));
+    return n
+        ? new j(F(r), function (t, e) {
+              return 'li' === t ? ('ol' === e ? 'ordered-list-item' : 'unordered-list-item') : null;
+          })
+              .addDOMNode(n)
+              .getContentBlocks()
+        : null;
 };

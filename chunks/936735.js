@@ -1,8 +1,4 @@
-n.d(t, {
-    k: function () {
-        return m;
-    }
-});
+n.d(t, { k: () => m });
 var i = n(200651),
     r = n(192379),
     l = n(772848),
@@ -40,7 +36,7 @@ function m(e) {
                 memberCount: h
             });
         }, [n, t, h, g]),
-        f = r.useMemo(() => {
+        _ = r.useMemo(() => {
             var e;
             let t = null == p ? void 0 : null === (e = p.emojis) || void 0 === e ? void 0 : e[0];
             return null != t
@@ -57,7 +53,7 @@ function m(e) {
               sourceType: o.w6.GUILD,
               expressionSourceApplication: null,
               expressionSourceGuild: p,
-              node: f,
+              node: _,
               closePopout: u.dG,
               nonce: x.current,
               demoMode: !0

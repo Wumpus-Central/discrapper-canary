@@ -1,24 +1,20 @@
 n.d(t, {
-    H: function () {
-        return a;
-    },
-    Z: function () {
-        return o;
-    }
+    H: () => r,
+    Z: () => s
 });
 var i = n(913527),
-    r = n.n(i),
-    l = n(388032);
-function a(e) {
-    let t = r()();
+    l = n.n(i),
+    a = n(388032);
+function r(e) {
+    let t = l()();
     if (e <= t) return;
     let n = e.diff(t, 'days');
-    if (n > 1) return l.intl.formatToPlainString(l.t.dex68f, { days: n });
+    if (n > 1) return a.intl.formatToPlainString(a.t.dex68f, { days: n });
     let i = e.diff(t, 'hours');
-    if (i > 1) return l.intl.formatToPlainString(l.t.BWqf0d, { hours: i });
-    let a = e.diff(t, 'minutes');
-    return l.intl.formatToPlainString(l.t['3SLXAw'], { minutes: a });
+    if (i > 1) return a.intl.formatToPlainString(a.t.BWqf0d, { hours: i });
+    let r = e.diff(t, 'minutes');
+    return a.intl.formatToPlainString(a.t['3SLXAw'], { minutes: r });
 }
-function o(e) {
-    if (null != e) return a(e);
+function s(e) {
+    if (null != e) return r(e);
 }

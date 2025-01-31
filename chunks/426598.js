@@ -1,6 +1,7 @@
 e.exports = {
-    ratingsSelector: 'ratingsSelector_c18bf0',
-    selected: 'selected_c18bf0',
-    emojiThumbsDown: 'emojiThumbsDown_c18bf0 emoji_c18bf0',
-    emojiThumbsUp: 'emojiThumbsUp_c18bf0 emoji_c18bf0'
+    ratingsSelector: 'ratingsSelector__43d4c',
+    emoji: 'emoji__43d4c',
+    selected: 'selected__43d4c',
+    emojiThumbsDown: 'emojiThumbsDown__43d4c emoji__43d4c',
+    emojiThumbsUp: 'emojiThumbsUp__43d4c emoji__43d4c'
 };

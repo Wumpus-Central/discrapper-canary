@@ -1,58 +1,59 @@
+n.d(t, { Z: () => p });
 var i,
-    a = r(392711),
-    o = r.n(a),
-    s = r(442837),
-    l = r(570140),
-    u = r(314897);
-function c(e, n, r) {
+    r = n(392711),
+    a = n.n(r),
+    s = n(442837),
+    o = n(570140),
+    l = n(314897);
+function u(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let d = Object.freeze([]),
-    f = {};
-function p(e) {
-    (f = {}),
+let c = Object.freeze([]),
+    d = {};
+function f(e) {
+    (d = {}),
         e.sessions.forEach((e) => {
-            f[e.sessionId] = e;
+            d[e.sessionId] = e;
         });
 }
-class h extends (i = s.ZP.Store) {
+class _ extends (i = s.ZP.Store) {
     initialize() {
-        this.waitFor(u.default);
+        this.waitFor(l.default);
     }
     getSessions() {
-        return f;
+        return d;
     }
     getSession() {
-        let e = u.default.getSessionId();
+        let e = l.default.getSessionId();
         return null != e ? this.getSessionById(e) : null;
     }
     getRemoteActivities() {
-        let e = u.default.getSessionId(),
-            n = o().find(f, (n) => n.active && n.sessionId !== e);
-        return null != n ? n.activities : d;
+        let e = l.default.getSessionId(),
+            t = a().find(d, (t) => t.active && t.sessionId !== e);
+        return null != t ? t.activities : c;
     }
     getSessionById(e) {
-        return f[e];
+        return d[e];
     }
     getActiveSession() {
-        return o().find(f, (e) => {
-            let { active: n } = e;
-            return n;
+        return a().find(d, (e) => {
+            let { active: t } = e;
+            return t;
         });
     }
 }
-c(h, 'displayName', 'SessionsStore'),
-    (n.Z = new h(l.Z, {
-        CONNECTION_OPEN: p,
-        SESSIONS_REPLACE: p
-    }));
+u(_, 'displayName', 'SessionsStore');
+let p = new _(o.Z, {
+    CONNECTION_OPEN: f,
+    SESSIONS_REPLACE: f
+});

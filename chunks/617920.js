@@ -1,8 +1,4 @@
-r.d(t, {
-    Z: function () {
-        return n;
-    }
-});
+r.d(t, { Z: () => n });
 var a = r(299028);
 function n(e, t) {
     if (e) {

@@ -1,83 +1,84 @@
+n.d(t, { Z: () => g });
 var i,
-    a = r(442837),
-    o = r(570140);
-function s(e, n, r) {
+    r = n(442837),
+    a = n(570140);
+function s(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let l = { enabled: !1 },
+let o = { enabled: !1 },
+    l = {},
     u = {},
-    c = {},
-    d = !1;
-function f(e) {
-    let { userId: n, channelId: r, emoji: i } = e;
-    u[r] = {
-        ...u[r],
-        [n]: i
+    c = !1;
+function d(e) {
+    let { userId: t, channelId: n, emoji: i } = e;
+    l[n] = {
+        ...l[n],
+        [t]: i
     };
 }
-function p(e) {
-    let { userId: n, channelId: r } = e,
-        i = u[r];
+function f(e) {
+    let { userId: t, channelId: n } = e,
+        i = l[n];
     if (null == i) return !1;
-    delete i[n];
-}
-function h(e) {
-    let { enabled: n } = e;
-    d = n;
+    delete i[t];
 }
 function _(e) {
-    var n;
-    let { completingEmoji: r, completingUserId: i, waitingUserId: a, channelId: o } = e,
-        s = null !== (n = u[o]) && void 0 !== n ? n : {},
-        l = s[a];
-    if ((delete s[a], null == l)) return !1;
-    c[o] = {
-        ...c[o],
-        [a]: [l, r],
-        [i]: [r, l]
+    let { enabled: t } = e;
+    c = t;
+}
+function p(e) {
+    var t;
+    let { completingEmoji: n, completingUserId: i, waitingUserId: r, channelId: a } = e,
+        s = null !== (t = l[a]) && void 0 !== t ? t : {},
+        o = s[r];
+    if ((delete s[r], null == o)) return !1;
+    u[a] = {
+        ...u[a],
+        [r]: [o, n],
+        [i]: [n, o]
     };
 }
-function m(e) {
-    var n;
-    let { firstUserId: r, secondUserId: i, channelId: a } = e,
-        o = null !== (n = c[a]) && void 0 !== n ? n : {};
-    delete o[r], delete o[i];
+function h(e) {
+    var t;
+    let { firstUserId: n, secondUserId: i, channelId: r } = e,
+        a = null !== (t = u[r]) && void 0 !== t ? t : {};
+    delete a[n], delete a[i];
 }
-class g extends (i = a.ZP.DeviceSettingsStore) {
+class m extends (i = r.ZP.DeviceSettingsStore) {
     initialize() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : l;
-        d = e.enabled;
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : o;
+        c = e.enabled;
     }
-    getWaitingHighFive(e, n) {
-        var r;
-        return null === (r = u[e]) || void 0 === r ? void 0 : r[n];
+    getWaitingHighFive(e, t) {
+        var n;
+        return null === (n = l[e]) || void 0 === n ? void 0 : n[t];
     }
-    getCompletedHighFive(e, n) {
-        var r;
-        return null === (r = c[e]) || void 0 === r ? void 0 : r[n];
+    getCompletedHighFive(e, t) {
+        var n;
+        return null === (n = u[e]) || void 0 === n ? void 0 : n[t];
     }
     getEnabled() {
-        return d;
+        return c;
     }
     getUserAgnosticState() {
-        return { enabled: d };
+        return { enabled: c };
     }
 }
-s(g, 'persistKey', 'HighFiveStore'),
-    (n.Z = new g(o.Z, {
-        HIGH_FIVE_QUEUE: f,
-        HIGH_FIVE_REMOVE: p,
-        HIGH_FIVE_SET_ENABLED: h,
-        HIGH_FIVE_COMPLETE: _,
-        HIGH_FIVE_COMPLETE_CLEAR: m
-    }));
+s(m, 'persistKey', 'HighFiveStore');
+let g = new m(a.Z, {
+    HIGH_FIVE_QUEUE: d,
+    HIGH_FIVE_REMOVE: f,
+    HIGH_FIVE_SET_ENABLED: _,
+    HIGH_FIVE_COMPLETE: p,
+    HIGH_FIVE_COMPLETE_CLEAR: h
+});

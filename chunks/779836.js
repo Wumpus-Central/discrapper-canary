@@ -1,13 +1,9 @@
-n.d(t, {
-    Z: function () {
-        return v;
-    }
-});
+n.d(t, { Z: () => x });
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    r = n.n(l),
-    a = n(642128),
+    a = n.n(l),
+    r = n(642128),
     s = n(399606),
     o = n(481060),
     c = n(511010),
@@ -18,11 +14,11 @@ var l = n(120356),
     m = n(531578),
     f = n(959517),
     g = n(388032),
-    C = n(173324);
-function x(e) {
+    _ = n(173324);
+function C(e) {
     let { summary: t, channel: n } = e,
         l = (0, s.e7)([h.Z], () => h.Z.summaryFeedback(t)),
-        r = (e, i) => {
+        a = (e, i) => {
             e.stopPropagation(),
                 (0, p.Z)({
                     summary: t,
@@ -30,7 +26,7 @@ function x(e) {
                     rating: i
                 });
         },
-        c = (0, o.useTransition)(
+        c = (0, o.Yzy)(
             null == l,
             {
                 enter: {
@@ -51,28 +47,28 @@ function x(e) {
         children: c((e, t) =>
             t
                 ? (0, i.jsx)('div', {
-                      className: C.summaryFeedbackWrapper,
-                      children: (0, i.jsxs)(a.animated.div, {
+                      className: _.summaryFeedbackWrapper,
+                      children: (0, i.jsxs)(r.animated.div, {
                           style: e,
-                          className: C.summaryFeedback,
+                          className: _.summaryFeedback,
                           children: [
                               (0, i.jsx)(o.Text, {
                                   variant: 'text-xs/medium',
                                   color: 'interactive-normal',
                                   children: g.intl.string(g.t['5ZsiEx'])
                               }),
-                              (0, i.jsx)(o.Clickable, {
-                                  onClick: (e) => r(e, m.aZ.GOOD),
+                              (0, i.jsx)(o.P3F, {
+                                  onClick: (e) => a(e, m.aZ.GOOD),
                                   children: (0, i.jsx)(u.Z, {
-                                      className: C.thumbIcon,
+                                      className: _.thumbIcon,
                                       width: 12,
                                       height: 12
                                   })
                               }),
-                              (0, i.jsx)(o.Clickable, {
-                                  onClick: (e) => r(e, m.aZ.BAD),
+                              (0, i.jsx)(o.P3F, {
+                                  onClick: (e) => a(e, m.aZ.BAD),
                                   children: (0, i.jsx)(d.Z, {
-                                      className: C.thumbIcon,
+                                      className: _.thumbIcon,
                                       width: 12,
                                       height: 12
                                   })
@@ -84,49 +80,49 @@ function x(e) {
         )
     });
 }
-function v(e) {
+function x(e) {
     var t, n;
     let l,
-        { item: a, channel: d, index: u } = e,
+        { item: r, channel: d, index: u } = e,
         p = (0, s.e7)([h.Z], () => h.Z.selectedSummary(d.id));
     if (null == p) return null;
-    let m = null != a.unreadId,
-        g = null != a.content;
+    let m = null != r.unreadId,
+        g = null != r.content;
     return (
         (l = g
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
-                      (0, i.jsx)(o.TopicsIcon, {
+                      (0, i.jsx)(o.sVe, {
                           size: 'xs',
                           color: 'currentColor',
-                          className: C.summaryStartIcon
+                          className: _.summaryStartIcon
                       }),
-                      a.content
+                      r.content
                   ]
               })
             : (0, i.jsxs)(i.Fragment, {
                   children: [
-                      (0, i.jsx)(x, {
+                      (0, i.jsx)(C, {
                           summary: p,
                           channel: d
                       }),
-                      (0, i.jsx)(o.TopicsIcon, {
+                      (0, i.jsx)(o.sVe, {
                           size: 'xs',
                           color: 'currentColor',
-                          className: C.summaryEndIcon
+                          className: _.summaryEndIcon
                       })
                   ]
               })),
         (0, i.jsx)(
             c.Z,
             {
-                className: r()(C.summaryDivider, g ? C.summaryDividerStart : C.summaryDividerEnd),
-                contentClassName: g ? C.summaryStartContent : C.summaryEndContent,
+                className: a()(_.summaryDivider, g ? _.summaryDividerStart : _.summaryDividerEnd),
+                contentClassName: g ? _.summaryStartContent : _.summaryEndContent,
                 isUnread: m,
                 id: m ? f.j1 : void 0,
                 children: l
             },
-            'divider-'.concat(null !== (n = null !== (t = a.contentKey) && void 0 !== t ? t : a.unreadId) && void 0 !== n ? n : u)
+            'divider-'.concat(null !== (n = null !== (t = r.contentKey) && void 0 !== t ? t : r.unreadId) && void 0 !== n ? n : u)
         )
     );
 }

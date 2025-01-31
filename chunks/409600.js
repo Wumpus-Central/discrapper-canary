@@ -1,51 +1,42 @@
-i.r(n),
-    i.d(n, {
-        STANDARD_ONE_TIME_PAYMENT_STEPS: function () {
-            return p;
-        },
-        default: function () {
-            return P;
-        }
-    }),
-    i(47120);
-var a = i(200651);
-i(192379);
-var e = i(100527),
-    s = i(906732),
-    o = i(987209),
-    c = i(563132),
-    l = i(791785),
-    r = i(961830),
-    u = i(231338);
-function d(t) {
-    let { onClose: n, onComplete: i, transitionState: e, applicationId: o, analyticsLocationObject: r, skuId: u } = t,
-        {} = (0, c.usePaymentContext)(),
-        { analyticsLocations: d } = (0, s.ZP)();
-    return (0, a.jsx)(l.PaymentModal, {
+a.d(n, { default: () => h }), a(47120);
+var i = a(200651);
+a(192379);
+var s = a(100527),
+    e = a(906732),
+    l = a(987209),
+    o = a(563132),
+    c = a(791785),
+    d = a(961830),
+    p = a(231338);
+function r(t) {
+    let { onClose: n, onComplete: a, transitionState: s, applicationId: l, analyticsLocationObject: d, skuId: p } = t,
+        {} = (0, o.JL)(),
+        { analyticsLocations: r } = (0, e.ZP)();
+    return (0, i.jsx)(c.PaymentModal, {
         onClose: n,
-        onComplete: i,
-        applicationId: o,
-        skuId: u,
+        onComplete: a,
+        applicationId: l,
+        skuId: p,
         initialPlanId: null,
-        analyticsObject: r,
-        analyticsLocations: d,
-        transitionState: e
+        analyticsObject: d,
+        analyticsLocations: r,
+        transitionState: s
     });
 }
-let p = [r.WA, r.s2, ...r.yp, r.wo, r.F7];
-function P(t) {
-    let { loadId: n, applicationId: i, skuId: l, analyticsLocations: r } = t,
-        { analyticsLocations: P } = (0, s.ZP)(r, e.Z.PREMIUM_PAYMENT_MODAL);
-    return (0, a.jsx)(s.Gt, {
-        value: P,
-        children: (0, a.jsx)(c.PaymentContextProvider, {
+let u = [d.WA, d.s2, ...d.yp, d.wo, d.F7];
+function h(t) {
+    let { loadId: n, applicationId: a, skuId: c, analyticsLocations: d } = t,
+        { analyticsLocations: h } = (0, e.ZP)(d, s.Z.PREMIUM_PAYMENT_MODAL);
+    return (0, i.jsx)(e.Gt, {
+        value: h,
+        children: (0, i.jsx)(o.PaymentContextProvider, {
             loadId: n,
-            stepConfigs: p,
-            applicationId: i,
-            skuIDs: [l],
+            stepConfigs: u,
+            applicationId: a,
+            skuIDs: [c],
             activeSubscription: null,
-            purchaseType: u.GZ.ONE_TIME,
-            children: (0, a.jsx)(o.KB, { children: (0, a.jsx)(d, { ...t }) })
+            purchaseType: p.GZ.ONE_TIME,
+            children: (0, i.jsx)(l.KB, { children: (0, i.jsx)(r, { ...t }) })
         })
     });
 }

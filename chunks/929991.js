@@ -1,35 +1,29 @@
-r.d(n, {
-    FL: function () {
-        return o;
-    },
-    a8: function () {
-        return a;
-    },
-    rS: function () {
-        return s;
-    }
+n.d(t, {
+    FL: () => a,
+    a8: () => r,
+    rS: () => s
 });
-var i = r(570140);
-function a(e, n, r) {
+var i = n(570140);
+function r(e, t, n) {
     i.Z.dispatch({
         type: 'ANALYTICS_FEED_ITEM_SEEN',
         id: e,
-        feedItemId: n,
-        timestampMillis: r
+        feedItemId: t,
+        timestampMillis: n
     });
 }
-function o(e, n, r) {
+function a(e, t, n) {
     i.Z.dispatch({
         type: 'ANALYTICS_FEED_ITEM_UNSEEN',
         id: e,
-        feedItemId: n,
-        timestampMillis: r
+        feedItemId: t,
+        timestampMillis: n
     });
 }
-function s(e, n) {
+function s(e, t) {
     i.Z.dispatch({
         type: 'ANALYTICS_FEED_FLUSH',
         id: e,
-        force: n
+        force: t
     });
 }

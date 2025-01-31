@@ -1,18 +1,17 @@
-function t(i, n) {
+function e(i, n) {
     if (void 0 !== i.one && 1 === n) return i.one;
     var t = n % 10,
         e = n % 100;
     return 1 === t && 11 !== e ? i.singularNominative.replace('{{count}}', String(n)) : t >= 2 && t <= 4 && (e < 10 || e > 20) ? i.singularGenitive.replace('{{count}}', String(n)) : i.pluralGenitive.replace('{{count}}', String(n));
 }
-function e(i) {
-    return function (n, e) {
-        if (!e || !e.addSuffix) return t(i.regular, n);
-        if (e.comparison && e.comparison > 0) return i.future ? t(i.future, n) : 'за ' + t(i.regular, n);
-        return i.past ? t(i.past, n) : t(i.regular, n) + ' тому';
+function a(i) {
+    return function (n, t) {
+        return t && t.addSuffix ? (t.comparison && t.comparison > 0 ? (i.future ? e(i.future, n) : 'за ' + e(i.regular, n)) : i.past ? e(i.past, n) : e(i.regular, n) + ' тому') : e(i.regular, n);
     };
 }
-var a = {
-    lessThanXSeconds: e({
+t.d(n, { Z: () => u });
+var r = {
+    lessThanXSeconds: a({
         regular: {
             one: 'менше секунди',
             singularNominative: 'менше {{count}} секунди',
@@ -26,7 +25,7 @@ var a = {
             pluralGenitive: 'менше, ніж за {{count}} секунд'
         }
     }),
-    xSeconds: e({
+    xSeconds: a({
         regular: {
             singularNominative: '{{count}} секунда',
             singularGenitive: '{{count}} секунди',
@@ -44,10 +43,9 @@ var a = {
         }
     }),
     halfAMinute: function (i, n) {
-        if (n && n.addSuffix) return n.comparison && n.comparison > 0 ? 'за півхвилини' : 'півхвилини тому';
-        return 'півхвилини';
+        return n && n.addSuffix ? (n.comparison && n.comparison > 0 ? 'за півхвилини' : 'півхвилини тому') : 'півхвилини';
     },
-    lessThanXMinutes: e({
+    lessThanXMinutes: a({
         regular: {
             one: 'менше хвилини',
             singularNominative: 'менше {{count}} хвилини',
@@ -61,7 +59,7 @@ var a = {
             pluralGenitive: 'менше, ніж за {{count}} хвилин'
         }
     }),
-    xMinutes: e({
+    xMinutes: a({
         regular: {
             singularNominative: '{{count}} хвилина',
             singularGenitive: '{{count}} хвилини',
@@ -78,7 +76,7 @@ var a = {
             pluralGenitive: 'за {{count}} хвилин'
         }
     }),
-    aboutXHours: e({
+    aboutXHours: a({
         regular: {
             singularNominative: 'близько {{count}} години',
             singularGenitive: 'близько {{count}} годин',
@@ -90,21 +88,21 @@ var a = {
             pluralGenitive: 'приблизно за {{count}} годин'
         }
     }),
-    xHours: e({
+    xHours: a({
         regular: {
             singularNominative: '{{count}} годину',
             singularGenitive: '{{count}} години',
             pluralGenitive: '{{count}} годин'
         }
     }),
-    xDays: e({
+    xDays: a({
         regular: {
             singularNominative: '{{count}} день',
             singularGenitive: '{{count}} днi',
             pluralGenitive: '{{count}} днів'
         }
     }),
-    aboutXWeeks: e({
+    aboutXWeeks: a({
         regular: {
             singularNominative: 'близько {{count}} тижня',
             singularGenitive: 'близько {{count}} тижнів',
@@ -116,14 +114,14 @@ var a = {
             pluralGenitive: 'приблизно за {{count}} тижнів'
         }
     }),
-    xWeeks: e({
+    xWeeks: a({
         regular: {
             singularNominative: '{{count}} тиждень',
             singularGenitive: '{{count}} тижні',
             pluralGenitive: '{{count}} тижнів'
         }
     }),
-    aboutXMonths: e({
+    aboutXMonths: a({
         regular: {
             singularNominative: 'близько {{count}} місяця',
             singularGenitive: 'близько {{count}} місяців',
@@ -135,14 +133,14 @@ var a = {
             pluralGenitive: 'приблизно за {{count}} місяців'
         }
     }),
-    xMonths: e({
+    xMonths: a({
         regular: {
             singularNominative: '{{count}} місяць',
             singularGenitive: '{{count}} місяці',
             pluralGenitive: '{{count}} місяців'
         }
     }),
-    aboutXYears: e({
+    aboutXYears: a({
         regular: {
             singularNominative: 'близько {{count}} року',
             singularGenitive: 'близько {{count}} років',
@@ -154,14 +152,14 @@ var a = {
             pluralGenitive: 'приблизно за {{count}} років'
         }
     }),
-    xYears: e({
+    xYears: a({
         regular: {
             singularNominative: '{{count}} рік',
             singularGenitive: '{{count}} роки',
             pluralGenitive: '{{count}} років'
         }
     }),
-    overXYears: e({
+    overXYears: a({
         regular: {
             singularNominative: 'більше {{count}} року',
             singularGenitive: 'більше {{count}} років',
@@ -173,7 +171,7 @@ var a = {
             pluralGenitive: 'більше, ніж за {{count}} років'
         }
     }),
-    almostXYears: e({
+    almostXYears: a({
         regular: {
             singularNominative: 'майже {{count}} рік',
             singularGenitive: 'майже {{count}} роки',
@@ -186,6 +184,6 @@ var a = {
         }
     })
 };
-n.Z = function (i, n, t) {
-    return (t = t || {}), a[i](n, t);
+let u = function (i, n, t) {
+    return (t = t || {}), r[i](n, t);
 };

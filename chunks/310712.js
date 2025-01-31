@@ -1,4 +1,5 @@
-e.exports = {
-    heroContainer: 'heroContainer_e12502',
-    heroSplash: 'heroSplash_e12502'
+var i = {
+    heroContainer: 'heroContainer__813d8',
+    heroSplash: 'heroSplash__813d8'
 };
+e.exports = i;

@@ -1,76 +1,72 @@
-r.d(n, {
-    F: function () {
-        return c;
-    },
-    x: function () {
-        return d;
-    }
+n.d(t, {
+    F: () => u,
+    x: () => c
 });
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(981729),
-    l = r(783733);
-function u(e) {
-    let { color: n, className: r, background: a = !0 } = e;
-    return null == n
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(981729),
+    o = n(783733);
+function l(e) {
+    let { color: t, className: n, background: r = !0 } = e;
+    return null == t
         ? null
         : (0, i.jsxs)('svg', {
-              className: o()(l.svg, r),
+              className: a()(o.svg, n),
               viewBox: '0 0 20 20',
               fill: 'none',
               children: [
-                  a &&
+                  r &&
                       (0, i.jsx)('path', {
-                          className: l.background,
+                          className: o.background,
                           d: 'M0 4C0 1.79086 1.79086 0 4 0H16C18.2091 0 20 1.79086 20 4V16C20 18.2091 18.2091 20 16 20H4C1.79086 20 0 18.2091 0 16V4Z'
                       }),
                   (0, i.jsx)('circle', {
-                      className: l.dotBorderBase,
+                      className: o.dotBorderBase,
                       cx: '10',
                       cy: '10',
                       r: '6'
                   }),
                   (0, i.jsx)('circle', {
-                      className: l.dotBorderColor,
+                      className: o.dotBorderColor,
                       cx: '10',
                       cy: '10',
                       r: '6',
-                      fill: n
+                      fill: t
                   }),
                   (0, i.jsx)('circle', {
-                      className: l.dot,
+                      className: o.dot,
                       cx: '10',
                       cy: '10',
                       r: '5',
-                      fill: n
+                      fill: t
                   })
               ]
           });
 }
-function c(e) {
-    let { color: n, name: r, tooltip: a = !0 } = e;
-    return null == n
+function u(e) {
+    let { color: t, name: n, tooltip: r = !0 } = e;
+    return null == t
         ? null
-        : a
+        : r
           ? (0, i.jsx)(s.u, {
-                text: r,
-                children: (n) =>
+                text: n,
+                children: (t) =>
                     (0, i.jsx)('span', {
-                        ...n,
+                        ...t,
                         'aria-hidden': !0,
-                        children: (0, i.jsx)(u, { ...e })
+                        children: (0, i.jsx)(l, { ...e })
                     })
             })
-          : (0, i.jsx)(u, { ...e });
+          : (0, i.jsx)(l, { ...e });
 }
-function d(e) {
-    let { color: n, className: r } = e;
-    return null == n
+function c(e) {
+    let { color: t, className: n } = e;
+    return null == t
         ? null
         : (0, i.jsx)('span', {
-              className: o()(l.roleCircle, r),
-              style: { backgroundColor: n }
+              className: a()(o.roleCircle, n),
+              style: { backgroundColor: t }
           });
 }

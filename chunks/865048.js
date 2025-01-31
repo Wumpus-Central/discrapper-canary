@@ -1,5 +1,6 @@
-e.exports = {
-    container: 'container_cf0ac0',
-    iconContainer: 'iconContainer_cf0ac0',
-    textContainer: 'textContainer_cf0ac0'
+var i = {
+    container: 'container__790b6',
+    iconContainer: 'iconContainer__790b6',
+    textContainer: 'textContainer__790b6'
 };
+e.exports = i;

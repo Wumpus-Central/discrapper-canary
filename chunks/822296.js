@@ -1,33 +1,29 @@
-r.d(n, {
-    Z: function () {
-        return p;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(442837),
-    o = r(872810),
-    s = r(493773),
-    l = r(569545),
-    u = r(592125),
-    c = r(112560),
-    d = r(388032);
-let f = r(340109);
-function p(e) {
-    let { stream: n, width: r, noArt: p = !1, selected: h = !1 } = e,
-        _ = (0, a.e7)([u.Z], () => u.Z.getChannel(n.channelId));
+n.d(t, { Z: () => f });
+var i = n(200651);
+n(192379);
+var r = n(442837),
+    a = n(872810),
+    s = n(493773),
+    o = n(569545),
+    l = n(592125),
+    u = n(112560),
+    c = n(388032);
+let d = n(340109);
+function f(e) {
+    let { stream: t, width: n, noArt: f = !1, selected: _ = !1 } = e,
+        p = (0, r.e7)([l.Z], () => l.Z.getChannel(t.channelId));
     return (
         (0, s.Z)(() => {
-            (null == _ ? void 0 : _.isGuildStageVoice()) && (0, o.aP)((0, l.V9)(n), !1);
+            (null == p ? void 0 : p.isGuildStageVoice()) && (0, a.aP)((0, o.V9)(t), !1);
         }),
-        (0, i.jsx)(c.Z, {
-            artURL: f,
-            noArt: p,
-            selected: h,
-            size: (0, c.L)(r),
-            header: d.intl.formatToMarkdownString(d.t['1Ww0Hh'], {}),
-            onCTAClick: () => (0, o.aP)((0, l.V9)(n)),
-            callToAction: d.intl.string(d.t['4EGMWF'])
+        (0, i.jsx)(u.Z, {
+            artURL: d,
+            noArt: f,
+            selected: _,
+            size: (0, u.L)(n),
+            header: c.intl.formatToMarkdownString(c.t['1Ww0Hh'], {}),
+            onCTAClick: () => (0, a.aP)((0, o.V9)(t)),
+            callToAction: c.intl.string(c.t['4EGMWF'])
         })
     );
 }

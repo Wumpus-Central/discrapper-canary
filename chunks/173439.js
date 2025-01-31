@@ -1,18 +1,12 @@
 n.d(t, {
-    Cj: function () {
-        return p;
-    },
-    M$: function () {
-        return m;
-    },
-    Zw: function () {
-        return h;
-    }
+    Cj: () => p,
+    M$: () => m,
+    Zw: () => h
 }),
     n(789020);
 var i = n(570140),
-    r = n(728345),
-    l = n(812206),
+    l = n(728345),
+    r = n(812206),
     a = n(973616),
     s = n(314897),
     o = n(630388),
@@ -23,17 +17,17 @@ async function h(e) {
     var t, n;
     let { applicationId: h, socketId: g } = e;
     if (!(0, c.Kb)(h)) return;
-    let f = d.ZP.getCurrentEmbeddedActivity();
-    if ((null == f ? void 0 : f.applicationId) !== h) return;
-    let _ = f.compositeInstanceId,
-        E = null !== (t = l.Z.getApplication(h)) && void 0 !== t ? t : a.ZP.createFromServer(await r.ZP.fetchApplication(h));
-    if (null == _ || null == E || !(0, o.yE)(E.flags, u.udG.EMBEDDED)) return;
+    let _ = d.ZP.getCurrentEmbeddedActivity();
+    if ((null == _ ? void 0 : _.applicationId) !== h) return;
+    let f = _.compositeInstanceId,
+        E = null !== (t = r.Z.getApplication(h)) && void 0 !== t ? t : a.ZP.createFromServer(await l.ZP.fetchApplication(h));
+    if (null == f || null == E || !(0, o.yE)(E.flags, u.udG.EMBEDDED)) return;
     let I = {
         type: 0,
         session_id: null !== (n = s.default.getSessionId()) && void 0 !== n ? n : void 0,
         name: E.name,
         application_id: h,
-        secrets: { join: _ },
+        secrets: { join: f },
         party: { size: m },
         flags: p
     };

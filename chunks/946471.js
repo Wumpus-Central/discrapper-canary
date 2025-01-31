@@ -1,20 +1,10 @@
-function a(e, t) {
-    let r = t && t.getDsn(),
-        a = t && t.getOptions().tunnel;
-    return (
-        (function (e, t) {
-            return !!t && e.includes(t.host);
-        })(e, r) ||
-        (function (e, t) {
-            return !!t && n(e) === n(t);
-        })(e, a)
-    );
+function r(t, e) {
+    var a, r, o, _;
+    let i = e && e.getDsn(),
+        c = e && e.getOptions().tunnel;
+    return (a = t), (!!(r = i) && a.includes(r.host)) || ((o = t), !!(_ = c) && n(o) === n(_));
 }
-r.d(t, {
-    W: function () {
-        return a;
-    }
-});
-function n(e) {
-    return '/' === e[e.length - 1] ? e.slice(0, -1) : e;
+function n(t) {
+    return '/' === t[t.length - 1] ? t.slice(0, -1) : t;
 }
+a.d(e, { W: () => r });

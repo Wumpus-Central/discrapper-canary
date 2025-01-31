@@ -1,28 +1,24 @@
-r.d(n, {
-    h: function () {
-        return s;
-    }
-});
-var i = r(544891),
-    a = r(570140),
-    o = r(981631);
-function s(e, n, r) {
+n.d(t, { h: () => s });
+var i = n(544891),
+    r = n(570140),
+    a = n(981631);
+function s(e, t, n) {
     return (
-        a.Z.dispatch({
+        r.Z.dispatch({
             type: 'LIBRARY_APPLICATION_FLAGS_UPDATE_START',
             applicationId: e,
-            branchId: n,
-            flags: r
+            branchId: t,
+            flags: n
         }),
         i.tn
             .patch({
-                url: o.ANM.LIBRARY_APPLICATION_BRANCH(e, n),
-                body: { flags: r },
+                url: a.ANM.LIBRARY_APPLICATION_BRANCH(e, t),
+                body: { flags: n },
                 oldFormErrors: !0,
                 rejectWithError: !1
             })
             .then((e) => {
-                a.Z.dispatch({
+                r.Z.dispatch({
                     type: 'LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS',
                     libraryApplication: e.body
                 });

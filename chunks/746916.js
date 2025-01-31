@@ -1,27 +1,23 @@
-r.d(n, {
-    E: function () {
-        return c;
-    }
-});
-var i = r(442837),
-    a = r(271383),
-    o = r(594174),
-    s = r(881952),
-    l = r(937111),
-    u = r(981631);
-function c(e) {
-    let n = null == e ? void 0 : e.hasFeature(u.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL),
-        r = (0, i.e7)(
-            [l.Z, o.default, a.ZP],
+n.d(t, { E: () => u });
+var i = n(442837),
+    r = n(271383),
+    a = n(594174),
+    s = n(881952),
+    o = n(937111),
+    l = n(981631);
+function u(e) {
+    let t = null == e ? void 0 : e.hasFeature(l.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL),
+        n = (0, i.e7)(
+            [o.Z, a.default, r.ZP],
             () => {
                 if (null == e) return;
-                let n = l.Z.getRequest(e.id),
-                    r = o.default.getCurrentUser();
-                if (null == r || null == n || n.userId !== r.id) return;
-                let i = a.ZP.getMember(e.id, n.userId);
-                if (null == i || !!i.isPending || !!(0, s.oP)(n)) return n.applicationStatus;
+                let t = o.Z.getRequest(e.id),
+                    n = a.default.getCurrentUser();
+                if (null == n || null == t || t.userId !== n.id) return;
+                let i = r.ZP.getMember(e.id, t.userId);
+                if (null == i || i.isPending || (0, s.oP)(t)) return t.applicationStatus;
             },
             [e]
         );
-    return n ? r : void 0;
+    return t ? n : void 0;
 }

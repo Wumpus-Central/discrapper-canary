@@ -1,30 +1,25 @@
-r.d(n, {
-    Z: function () {
-        return d;
-    }
-});
-var i = r(47120);
-var a = r(150039),
-    o = r(768581),
-    s = r(74538),
-    l = r(474936);
-function u(e, n, r) {
+n.d(t, { Z: () => u }), n(47120);
+var i = n(150039),
+    r = n(768581),
+    a = n(74538),
+    s = n(474936);
+function o(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-function c(e, n) {
-    return null == n || '' === n ? e : n;
+function l(e, t) {
+    return null == t || '' === t ? e : t;
 }
-class d {
+class u {
     get premiumSince() {
         return this._userProfile.premiumSince;
     }
@@ -35,11 +30,11 @@ class d {
         return this._userProfile.premiumType;
     }
     get primaryColor() {
-        var e, n;
-        return null !== (n = null === (e = this.themeColors) || void 0 === e ? void 0 : e[0]) && void 0 !== n ? n : this.accentColor;
+        var e, t;
+        return null !== (t = null === (e = this.themeColors) || void 0 === e ? void 0 : e[0]) && void 0 !== t ? t : this.accentColor;
     }
     get canUsePremiumProfileCustomization() {
-        return s.ZP.isPremiumAtLeast(this.premiumType, l.p9.TIER_2);
+        return a.ZP.isPremiumAtLeast(this.premiumType, s.p9.TIER_2);
     }
     get canEditThemes() {
         return this.canUsePremiumProfileCustomization;
@@ -48,8 +43,8 @@ class d {
         return this._userProfile.application;
     }
     hasThemeColors() {
-        var e, n;
-        return (null === (e = this.themeColors) || void 0 === e ? void 0 : e[0]) != null || (null === (n = this.themeColors) || void 0 === n ? void 0 : n[1]) != null;
+        var e, t;
+        return (null === (e = this.themeColors) || void 0 === e ? void 0 : e[0]) != null || (null === (t = this.themeColors) || void 0 === t ? void 0 : t[1]) != null;
     }
     hasPremiumCustomization() {
         return this.isUsingGuildMemberBanner() || this.isUsingGuildMemberBio() || null != this.banner || this.hasThemeColors() || null != this.popoutAnimationParticleType;
@@ -62,64 +57,64 @@ class d {
         return (null === (e = this._guildMemberProfile) || void 0 === e ? void 0 : e.banner) != null;
     }
     isUsingGuildMemberBio() {
-        var e, n;
-        return (null === (e = this._guildMemberProfile) || void 0 === e ? void 0 : e.bio) != null && (null === (n = this._guildMemberProfile) || void 0 === n ? void 0 : n.bio) !== '';
+        var e, t;
+        return (null === (e = this._guildMemberProfile) || void 0 === e ? void 0 : e.bio) != null && (null === (t = this._guildMemberProfile) || void 0 === t ? void 0 : t.bio) !== '';
     }
     isUsingGuildMemberPronouns() {
-        var e, n;
-        return (null === (e = this._guildMemberProfile) || void 0 === e ? void 0 : e.pronouns) != null && (null === (n = this._guildMemberProfile) || void 0 === n ? void 0 : n.pronouns) !== '';
+        var e, t;
+        return (null === (e = this._guildMemberProfile) || void 0 === e ? void 0 : e.pronouns) != null && (null === (t = this._guildMemberProfile) || void 0 === t ? void 0 : t.pronouns) !== '';
     }
     getBannerURL(e) {
-        let { canAnimate: n, size: r } = e;
+        let { canAnimate: t, size: n } = e;
         return null != this.guildId && this.isUsingGuildMemberBanner()
-            ? (0, o.tp)({
+            ? (0, r.tp)({
                   id: this.userId,
                   guildId: this.guildId,
                   banner: this.banner,
-                  canAnimate: n,
-                  size: r
+                  canAnimate: t,
+                  size: n
               })
-            : (0, o.aN)({
+            : (0, r.aN)({
                   id: this.userId,
                   banner: this.banner,
-                  canAnimate: n,
-                  size: r
+                  canAnimate: t,
+                  size: n
               });
     }
-    getPreviewBanner(e, n) {
-        let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 480;
+    getPreviewBanner(e, t) {
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 480;
         return null != e
             ? e
             : null === e
               ? this.isUsingGuildMemberBanner()
-                  ? (0, o.aN)({
+                  ? (0, r.aN)({
                         id: this.userId,
                         banner: this._userProfile.banner,
-                        canAnimate: n,
-                        size: r
+                        canAnimate: t,
+                        size: n
                     })
                   : null
               : this.getBannerURL({
-                    canAnimate: n,
+                    canAnimate: t,
                     size: 480
                 });
     }
     getPreviewBio(e) {
-        var n;
-        return (0, a.Wx)(e, null === (n = this._guildMemberProfile) || void 0 === n ? void 0 : n.bio, this._userProfile.bio, null != this.guildId);
+        var t;
+        return (0, i.Wx)(e, null === (t = this._guildMemberProfile) || void 0 === t ? void 0 : t.bio, this._userProfile.bio, null != this.guildId);
     }
     getPreviewThemeColors(e) {
         return (null == e ? void 0 : e[0]) != null && (null == e ? void 0 : e[1]) != null ? e : void 0 !== e ? this._userProfile.themeColors : this.themeColors;
     }
     getBadges() {
-        var e, n, r;
-        return [...(null !== (n = this._userProfile.badges) && void 0 !== n ? n : []), ...(null !== (r = null === (e = this._guildMemberProfile) || void 0 === e ? void 0 : e.badges) && void 0 !== r ? r : [])];
+        var e, t, n;
+        return [...(null !== (t = this._userProfile.badges) && void 0 !== t ? t : []), ...(null !== (n = null === (e = this._guildMemberProfile) || void 0 === e ? void 0 : e.badges) && void 0 !== n ? n : [])];
     }
     getLegacyUsername() {
         return this._userProfile.legacyUsername;
     }
-    constructor(e, n) {
-        var r, i, a;
-        u(this, 'userId', void 0), u(this, 'guildId', void 0), u(this, 'banner', void 0), u(this, 'bio', void 0), u(this, 'pronouns', void 0), u(this, 'accentColor', void 0), u(this, 'themeColors', void 0), u(this, 'popoutAnimationParticleType', void 0), u(this, 'profileEffectId', void 0), u(this, 'profileEffectExpiresAt', void 0), u(this, '_userProfile', void 0), u(this, '_guildMemberProfile', void 0), (this.userId = e.userId), (this.guildId = null == n ? void 0 : n.guildId), (this.banner = null !== (r = null == n ? void 0 : n.banner) && void 0 !== r ? r : e.banner), (this.bio = c(e.bio, null == n ? void 0 : n.bio)), (this.pronouns = c(e.pronouns, null == n ? void 0 : n.pronouns)), (this.accentColor = e.accentColor), (this.themeColors = null !== (i = null == n ? void 0 : n.themeColors) && void 0 !== i ? i : e.themeColors), (this.popoutAnimationParticleType = null !== (a = null == n ? void 0 : n.popoutAnimationParticleType) && void 0 !== a ? a : e.popoutAnimationParticleType), (null == n ? void 0 : n.profileEffectId) != null ? ((this.profileEffectId = n.profileEffectId), (this.profileEffectExpiresAt = n.profileEffectExpiresAt)) : null != e.profileEffectId && ((this.profileEffectId = e.profileEffectId), (this.profileEffectExpiresAt = e.profileEffectExpiresAt)), (this._userProfile = e), (this._guildMemberProfile = n);
+    constructor(e, t) {
+        var n, i, r;
+        o(this, 'userId', void 0), o(this, 'guildId', void 0), o(this, 'banner', void 0), o(this, 'bio', void 0), o(this, 'pronouns', void 0), o(this, 'accentColor', void 0), o(this, 'themeColors', void 0), o(this, 'popoutAnimationParticleType', void 0), o(this, 'profileEffectId', void 0), o(this, 'profileEffectExpiresAt', void 0), o(this, '_userProfile', void 0), o(this, '_guildMemberProfile', void 0), (this.userId = e.userId), (this.guildId = null == t ? void 0 : t.guildId), (this.banner = null !== (n = null == t ? void 0 : t.banner) && void 0 !== n ? n : e.banner), (this.bio = l(e.bio, null == t ? void 0 : t.bio)), (this.pronouns = l(e.pronouns, null == t ? void 0 : t.pronouns)), (this.accentColor = e.accentColor), (this.themeColors = null !== (i = null == t ? void 0 : t.themeColors) && void 0 !== i ? i : e.themeColors), (this.popoutAnimationParticleType = null !== (r = null == t ? void 0 : t.popoutAnimationParticleType) && void 0 !== r ? r : e.popoutAnimationParticleType), (null == t ? void 0 : t.profileEffectId) != null ? ((this.profileEffectId = t.profileEffectId), (this.profileEffectExpiresAt = t.profileEffectExpiresAt)) : null != e.profileEffectId && ((this.profileEffectId = e.profileEffectId), (this.profileEffectExpiresAt = e.profileEffectExpiresAt)), (this._userProfile = e), (this._guildMemberProfile = t);
     }
 }

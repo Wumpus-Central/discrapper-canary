@@ -1,71 +1,64 @@
-t.d(n, {
-    h: function () {
-        return d;
-    }
-}),
-    t(47120),
-    t(653041);
-var i = t(192379),
-    l = t(442837),
-    a = t(581364),
-    o = t(675478),
-    r = t(709054),
-    s = t(822245),
-    c = t(526761);
-function d(e, n) {
+n.d(t, { h: () => d }), n(47120), n(653041);
+var i = n(192379),
+    l = n(442837),
+    a = n(581364),
+    o = n(675478),
+    s = n(709054),
+    r = n(822245),
+    c = n(526761);
+function d(e, t) {
     i.useEffect(() => {
         o.DZ.loadIfUncached(c.yP.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
-    let t = (0, l.e7)([s.Z], () => s.Z.getApplicationFrecencyWithoutLoadingLatest()),
+    let n = (0, l.e7)([r.Z], () => r.Z.getApplicationFrecencyWithoutLoadingLatest()),
         d = i.useMemo(
             () =>
-                null == n || 0 === n.length
+                null == t || 0 === t.length
                     ? e
                     : e.map((e) => {
-                          var t;
+                          var n;
                           return {
                               ...e,
-                              isUserApp: null !== (t = null == n ? void 0 : n.some((n) => n.application.id === e.id)) && void 0 !== t && t
+                              isUserApp: null !== (n = null == t ? void 0 : t.some((t) => t.application.id === e.id)) && void 0 !== n && n
                           };
                       }),
-            [e, n]
+            [e, t]
         ),
-        u = i.useMemo(() => (null == n ? void 0 : n.filter((n) => !e.some((e) => e.id === n.application.id))), [e, n]),
+        u = i.useMemo(() => (null == t ? void 0 : t.filter((t) => !e.some((e) => e.id === t.application.id))), [e, t]),
         m = i.useMemo(() => {
             var e;
             null == u ||
                 u.forEach((e) => {
-                    let n = r.default.extractTimestamp(e.id);
-                    null == t.getEntry(e.application.id) && t.track(e.application.id, n);
+                    let t = s.default.extractTimestamp(e.id);
+                    null == n.getEntry(e.application.id) && n.track(e.application.id, t);
                 }),
-                t.compute();
-            let n = null !== (e = null == u ? void 0 : u.map((e) => (0, a.X0)(e.application, !0))) && void 0 !== e ? e : [],
+                n.compute();
+            let t = null !== (e = null == u ? void 0 : u.map((e) => (0, a.X0)(e.application, !0))) && void 0 !== e ? e : [],
                 i = [...d];
             return (
-                i.push(...n),
-                i.sort((e, n) => {
+                i.push(...t),
+                i.sort((e, t) => {
                     var i, l;
-                    let a = (null !== (i = t.getScore(n.id)) && void 0 !== i ? i : 0) - (null !== (l = t.getScore(e.id)) && void 0 !== l ? l : 0);
-                    return 0 !== a ? a : e.name.localeCompare(n.name);
+                    let a = (null !== (i = n.getScore(t.id)) && void 0 !== i ? i : 0) - (null !== (l = n.getScore(e.id)) && void 0 !== l ? l : 0);
+                    return 0 !== a ? a : e.name.localeCompare(t.name);
                 }),
                 i
             );
-        }, [d, t, u]);
+        }, [d, n, u]);
     return i.useMemo(() => {
         var e, i;
         let l, a;
-        null == n ||
-            n.forEach((e) => {
-                let n = r.default.extractTimestamp(e.id);
-                (null == a || n > a) && ((l = e), (a = n));
+        null == t ||
+            t.forEach((e) => {
+                let t = s.default.extractTimestamp(e.id);
+                (null == a || t > a) && ((l = e), (a = t));
             }),
             d.forEach((e) => {
-                var n, i;
-                let o = Math.max(...(null !== (i = null === (n = t.getEntry(e.id)) || void 0 === n ? void 0 : n.recentUses) && void 0 !== i ? i : []));
+                var t, i;
+                let o = Math.max(...(null !== (i = null === (t = n.getEntry(e.id)) || void 0 === t ? void 0 : t.recentUses) && void 0 !== i ? i : []));
                 (null == a || o > a) && ((l = e), (a = o));
             });
-        let o = null !== (i = null == l ? void 0 : null === (e = l.application) || void 0 === e ? void 0 : e.id) && void 0 !== i ? i : '',
-            s = m.filter((e) => e.id === o);
-        return [...s, ...m.filter((e) => e.id !== o)];
-    }, [m, d, t, n]);
+        let o = null !== (i = null == l ? void 0 : null === (e = l.application) || void 0 === e ? void 0 : e.id) && void 0 !== i ? i : '';
+        return [...m.filter((e) => e.id === o), ...m.filter((e) => e.id !== o)];
+    }, [m, d, n, t]);
 }

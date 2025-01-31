@@ -1,50 +1,32 @@
 n.d(t, {
-    G: function () {
-        return l;
-    },
-    Z: function () {
-        return a;
-    }
+    G: () => a,
+    Z: () => r
 });
 var i,
-    l,
-    r = n(536895);
-((i = l || (l = {})).UPDATE_ITEM_COUNT = 'UPDATE_ITEM_COUNT'), (i.SET_FOCUSED_INDEX = 'SET_FOCUSED_INDEX');
-function a(e, t) {
-    var n, i, l, a, s, o, c;
+    l = n(536895),
+    a = (((i = {}).UPDATE_ITEM_COUNT = 'UPDATE_ITEM_COUNT'), (i.SET_FOCUSED_INDEX = 'SET_FOCUSED_INDEX'), i);
+function r(e, t) {
     switch (t.type) {
-        case r.Us.NAVIGATE_UP:
-            return (
-                (i = 0),
-                {
-                    ...(n = e),
-                    focusedIndex: Math.max(0, n.focusedIndex - 1)
-                }
-            );
-        case r.Us.NAVIGATE_DOWN:
-            return (
-                (a = 0),
-                {
-                    ...(l = e),
-                    focusedIndex: Math.min(l.focusedIndex + 1, l.itemCount - 1)
-                }
-            );
-        case r.Us.NAVIGATE_START:
-            return (
-                (s = 0),
-                {
-                    ...e,
-                    focusedIndex: 0
-                }
-            );
-        case r.Us.NAVIGATE_END:
-            return (
-                (c = 0),
-                {
-                    ...(o = e),
-                    focusedIndex: o.itemCount - 1
-                }
-            );
+        case l.Us.NAVIGATE_UP:
+            return {
+                ...e,
+                focusedIndex: Math.max(0, e.focusedIndex - 1)
+            };
+        case l.Us.NAVIGATE_DOWN:
+            return {
+                ...e,
+                focusedIndex: Math.min(e.focusedIndex + 1, e.itemCount - 1)
+            };
+        case l.Us.NAVIGATE_START:
+            return {
+                ...e,
+                focusedIndex: 0
+            };
+        case l.Us.NAVIGATE_END:
+            return {
+                ...e,
+                focusedIndex: e.itemCount - 1
+            };
         case 'UPDATE_ITEM_COUNT':
             return (function (e, t) {
                 let { itemCount: n } = t;
@@ -62,7 +44,7 @@ function a(e, t) {
                     focusedIndex: Math.max(0, Math.min(n, e.itemCount - 1))
                 };
             })(e, t);
-        case r.Us.SELECT_FOCUSED_ITEM:
+        case l.Us.SELECT_FOCUSED_ITEM:
             break;
         default:
             console.warn('Listbox navigator was given an unhandled action '.concat(t.type));

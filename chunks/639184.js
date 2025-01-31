@@ -1,13 +1,9 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-});
-var a = n(200651);
+n.d(t, { Z: () => f });
+var i = n(200651);
 n(192379);
-var i = n(120356),
-    r = n.n(i),
-    l = n(481060),
+var l = n(120356),
+    r = n.n(l),
+    a = n(481060),
     s = n(228392),
     o = n(404616),
     c = n(710352),
@@ -19,39 +15,39 @@ var i = n(120356),
     x = n(504764);
 function f(e) {
     let { onDismiss: t } = e;
-    return (0, a.jsxs)(l.Clickable, {
+    return (0, i.jsxs)(a.P3F, {
         onClick: () => {
             open(c.V8), (0, s.GX)({ readGuideCta: !0 });
         },
         className: r()(g.container, h.container, m.mainCard),
         children: [
-            (0, a.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 className: h.inline,
                 children: [
-                    (0, a.jsxs)('div', {
+                    (0, i.jsxs)('div', {
                         className: h.author,
                         children: [
-                            (0, a.jsx)(l.ClydeIcon, {
+                            (0, i.jsx)(a.gw7, {
                                 size: 'custom',
                                 width: 28,
                                 height: 28,
                                 color: 'currentColor',
                                 className: h.discordIcon
                             }),
-                            (0, a.jsx)(l.Text, {
+                            (0, i.jsx)(a.Text, {
                                 variant: 'text-sm/semibold',
                                 color: 'header-primary',
                                 children: u.intl.string(u.t.uvGmCw)
                             }),
-                            (0, a.jsxs)('div', {
+                            (0, i.jsxs)('div', {
                                 className: h.notice,
                                 children: [
-                                    (0, a.jsx)(l.CircleInformationIcon, {
+                                    (0, i.jsx)(a.d3s, {
                                         size: 'md',
                                         color: 'currentColor',
                                         className: h.infoIcon
                                     }),
-                                    (0, a.jsx)(l.Text, {
+                                    (0, i.jsx)(a.Text, {
                                         variant: 'text-sm/normal',
                                         color: 'header-secondary',
                                         children: u.intl.string(u.t.t2GkVV)
@@ -60,11 +56,11 @@ function f(e) {
                             })
                         ]
                     }),
-                    (0, a.jsx)(l.Clickable, {
+                    (0, i.jsx)(a.P3F, {
                         onClick: (e) => {
                             e.stopPropagation(), t(d.L.DISMISS), (0, s.GX)({ readGuideCta: !1 });
                         },
-                        children: (0, a.jsx)(l.XSmallIcon, {
+                        children: (0, i.jsx)(a.Dio, {
                             size: 'xs',
                             color: 'currentColor',
                             className: h.closeIcon
@@ -72,26 +68,26 @@ function f(e) {
                     })
                 ]
             }),
-            (0, a.jsx)('hr', { className: h.separator }),
-            (0, a.jsxs)('div', {
+            (0, i.jsx)('hr', { className: h.separator }),
+            (0, i.jsxs)('div', {
                 className: h.inline,
                 children: [
-                    (0, a.jsxs)('div', {
+                    (0, i.jsxs)('div', {
                         children: [
-                            (0, a.jsx)(l.Heading, {
+                            (0, i.jsx)(a.X6q, {
                                 className: r()(g.__invalid_channelName, h.title),
                                 variant: 'heading-lg/semibold',
                                 color: 'header-primary',
                                 children: u.intl.string(u.t.JtSpDw)
                             }),
-                            (0, a.jsx)(l.Text, {
+                            (0, i.jsx)(a.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
                                 children: u.intl.string(u.t.Ajhp09)
                             })
                         ]
                     }),
-                    (0, a.jsx)('img', {
+                    (0, i.jsx)('img', {
                         src: x,
                         alt: u.intl.string(u.t.gAlJzc),
                         width: o.TJ,

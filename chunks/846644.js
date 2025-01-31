@@ -1,4 +1,5 @@
-e.exports = {
-    editor: 'editor_a552a6',
-    placeholder: 'placeholder_a552a6'
+var i = {
+    editor: 'editor__1b31f',
+    placeholder: 'placeholder__1b31f'
 };
+e.exports = i;

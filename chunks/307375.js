@@ -1,8 +1,4 @@
-n.d(t, {
-    h: function () {
-        return g;
-    }
-});
+n.d(t, { h: () => g });
 var i = n(200651),
     r = n(192379),
     l = n(120356),
@@ -26,7 +22,7 @@ function g(e) {
                     id: d.A.INVITE,
                     title: m.intl.string(m.t['HQVS/P']),
                     body: m.intl.string(m.t.KzXzFR),
-                    icon: o.LockIcon,
+                    icon: o.mBM,
                     enabled: !e,
                     ineligibleText: m.intl.string(m.t.LIZgwM)
                 },
@@ -34,7 +30,7 @@ function g(e) {
                     id: d.A.APPLY,
                     title: m.intl.string(m.t.LrFEYW),
                     body: m.intl.string(m.t.kJj2oK),
-                    icon: o.EnvelopeIcon,
+                    icon: o._XJ,
                     enabled: !e,
                     ineligibleText: m.intl.string(m.t.LIZgwM)
                 },
@@ -42,7 +38,7 @@ function g(e) {
                     id: d.A.DISCOVERABLE,
                     title: m.intl.string(m.t.lhOHLy),
                     body: m.intl.string(m.t.pqQylZ),
-                    icon: o.GlobeEarthIcon,
+                    icon: o.enf,
                     enabled: n,
                     ineligibleText: g ? m.intl.string(m.t.iBpXPj) : m.intl.string(m.t['5TQ+eH'])
                 }
@@ -50,7 +46,7 @@ function g(e) {
         }, [t, g, x]);
     return (0, i.jsxs)('div', {
         children: [
-            (0, i.jsx)(o.Heading, {
+            (0, i.jsx)(o.X6q, {
                 color: 'header-primary',
                 variant: 'text-md/semibold',
                 children: m.intl.string(m.t['N+GnPz'])
@@ -61,7 +57,7 @@ function g(e) {
                 className: h.bodyText,
                 children: m.intl.string(m.t.nBJ89v)
             }),
-            (0, i.jsx)(o.TabBar, {
+            (0, i.jsx)(o.njP, {
                 selectedItem: t,
                 onItemSelect: n,
                 orientation: 'horizontal',
@@ -69,7 +65,7 @@ function g(e) {
                 children: p.map((e) => {
                     let n = e.id === t;
                     return (0, i.jsx)(
-                        o.TabBar.Item,
+                        o.njP.Item,
                         {
                             id: e.id,
                             selectedItem: t,
@@ -77,7 +73,7 @@ function g(e) {
                             className: h.joinOptionTab,
                             disabled: !e.enabled,
                             'aria-label': e.title,
-                            children: (0, i.jsx)(o.TooltipContainer, {
+                            children: (0, i.jsx)(o.DY3, {
                                 text: e.ineligibleText,
                                 position: 'bottom',
                                 shouldShow: !e.enabled,
@@ -93,7 +89,7 @@ function g(e) {
                                     children: [
                                         (0, i.jsx)(e.icon, {
                                             size: 'md',
-                                            color: n ? o.tokens.colors.INTERACTIVE_ACTIVE : o.tokens.colors.TEXT_MUTED
+                                            color: n ? o.TVs.colors.INTERACTIVE_ACTIVE : o.TVs.colors.TEXT_MUTED
                                         }),
                                         (0, i.jsx)(o.Text, {
                                             tag: 'strong',

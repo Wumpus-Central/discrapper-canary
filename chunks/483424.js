@@ -1,54 +1,49 @@
-r.d(n, {
-    Z: function () {
-        return h;
-    }
-});
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(561308),
-    l = r(456644),
-    u = r(369566),
-    c = r(565640),
-    d = r(151545),
-    f = r(744802),
-    p = r(493043);
-function h(e) {
-    let { user: n, currentUser: r, profileGuildId: i, className: h, onClose: _ } = e,
-        { live: m, recent: g, stream: E } = (0, u.Z)(n.id),
-        [v] = m,
-        { recentActivityEnabled: y } = (0, l.i)({ location: 'UserProfileFeaturedActivity' }),
-        b = n.id === r.id,
-        I = (0, c.Z)(n.id, 'UserProfileFeaturedActivity'),
-        T = o.useMemo(() => (b ? g.find(s.Ae) : I), [b, g, I]);
-    return null != E
-        ? (0, a.jsx)(p.Z, {
+n.d(t, { Z: () => f }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(561308),
+    s = n(456644),
+    o = n(369566),
+    l = n(565640),
+    u = n(151545),
+    c = n(744802),
+    d = n(493043);
+function f(e) {
+    let { user: t, currentUser: n, profileGuildId: f, className: _, onClose: p } = e,
+        { live: h, recent: m, stream: g } = (0, o.Z)(t.id),
+        [E] = h,
+        { recentActivityEnabled: v } = (0, s.i)({ location: 'UserProfileFeaturedActivity' }),
+        y = t.id === n.id,
+        I = (0, l.Z)(t.id, 'UserProfileFeaturedActivity'),
+        b = r.useMemo(() => (y ? m.find(a.Ae) : I), [y, m, I]);
+    return null != g
+        ? (0, i.jsx)(d.Z, {
               location: 'UserProfileFeaturedActivity',
-              user: n,
-              currentUser: r,
-              stream: E,
-              profileGuildId: i,
-              className: h,
-              onClose: _
+              user: t,
+              currentUser: n,
+              stream: g,
+              profileGuildId: f,
+              className: _,
+              onClose: p
           })
-        : null != v
-          ? (0, a.jsx)(d.Z, {
-                user: n,
-                currentUser: r,
-                activity: v,
-                profileGuildId: i,
-                className: h,
-                onClose: _
+        : null != E
+          ? (0, i.jsx)(u.Z, {
+                user: t,
+                currentUser: n,
+                activity: E,
+                profileGuildId: f,
+                className: _,
+                onClose: p
             })
-          : y && null != T
-            ? (0, a.jsx)(f.Z, {
+          : v && null != b
+            ? (0, i.jsx)(c.Z, {
                   location: 'UserProfileFeaturedActivity',
-                  user: n,
-                  currentUser: r,
-                  entry: T,
-                  profileGuildId: i,
-                  className: h,
-                  onClose: _
+                  user: t,
+                  currentUser: n,
+                  entry: b,
+                  profileGuildId: f,
+                  className: _,
+                  onClose: p
               })
             : null;
 }

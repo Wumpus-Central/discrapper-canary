@@ -1,9 +1,5 @@
-r.d(t, {
-    T: function () {
-        return n;
-    }
-});
-var a = r(859502);
+a.d(e, { T: () => n });
+var r = a(859502);
 function n() {
-    (0, a.a)();
+    (0, r.a)();
 }

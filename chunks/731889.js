@@ -1,12 +1,8 @@
-n.d(e, {
-    Q: function () {
-        return i;
-    }
-});
-var r = n(394798);
+s.d(e, { Q: () => i });
+var n = s(394798);
 function i() {
     return {
-        traceId: (0, r.DM)(),
-        spanId: (0, r.DM)().substring(16)
+        traceId: (0, n.DM)(),
+        spanId: (0, n.DM)().substring(16)
     };
 }

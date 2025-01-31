@@ -1,8 +1,4 @@
-n.d(t, {
-    I: function () {
-        return l;
-    }
-});
+n.d(t, { I: () => l });
 var i = n(570140);
 function l(e) {
     i.Z.dispatch({

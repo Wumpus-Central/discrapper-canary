@@ -1,2 +1,2 @@
-let r = window.DiscordNative;
-n.Z = r;
+n.d(t, { Z: () => i });
+let i = window.DiscordNative;

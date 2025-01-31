@@ -1,42 +1,38 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-});
+n.d(t, { Z: () => p });
 var i = n(200651),
-    r = n(192379),
-    s = n(120356),
-    a = n.n(s),
-    l = n(481060),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(481060),
     o = n(906732),
     c = n(864106),
     d = n(1585),
     u = n(580747),
     m = n(345861),
-    g = n(150039),
-    h = n(993413),
-    p = n(388032),
+    h = n(150039),
+    g = n(993413),
+    _ = n(388032),
     x = n(887669);
-function f(e) {
-    let { user: t, guild: n, className: s, sectionTitle: m, forcedDivider: f = !1, withTutorial: _ = !1, isTryItOutFlow: C = !1 } = e,
+function p(e) {
+    let { user: t, guild: n, className: r, sectionTitle: m, forcedDivider: p = !1, withTutorial: C = !1, isTryItOutFlow: f = !1 } = e,
         { analyticsLocations: T } = (0, o.ZP)(),
-        S = null != n,
-        { userAvatarDecoration: b, guildAvatarDecoration: I, pendingAvatarDecoration: N, pendingErrors: v } = (0, g.$U)(t, n),
-        A = (0, u.Z)('enable_avatar_decoration_uploads'),
-        j = r.useCallback(
+        N = null != n,
+        { userAvatarDecoration: I, guildAvatarDecoration: S, pendingAvatarDecoration: b, pendingErrors: v } = (0, h.$U)(t, n),
+        j = (0, u.Z)('enable_avatar_decoration_uploads'),
+        A = s.useCallback(
             () =>
                 (0, d.ps)({
                     analyticsLocations: T,
-                    isTryItOutFlow: C,
+                    isTryItOutFlow: f,
                     guild: n
                 }),
-            [T, C, n]
+            [T, f, n]
         ),
-        O = C || void 0 !== N ? null != N : (S ? I : b) != null,
-        R = _ ? l.ShinyButton : l.Button;
-    return (0, i.jsxs)(h.Z, {
-        className: s,
-        forcedDivider: f,
+        O = f || void 0 !== b ? null != b : (N ? S : I) != null,
+        R = C ? a.gtL : a.zxk;
+    return (0, i.jsxs)(g.Z, {
+        className: r,
+        forcedDivider: p,
         hasBackground: !0,
         title: m,
         errors: v,
@@ -45,25 +41,25 @@ function f(e) {
                 className: x.buttonsContainer,
                 children: [
                     (0, i.jsx)(R, {
-                        size: l.Button.Sizes.SMALL,
-                        onClick: j,
-                        className: a()({ [x.buttonHighlighted]: _ }),
-                        children: p.intl.string(p.t['Tna/TU'])
+                        size: a.zxk.Sizes.SMALL,
+                        onClick: A,
+                        className: l()({ [x.buttonHighlighted]: C }),
+                        children: _.intl.string(_.t['Tna/TU'])
                     }),
                     O &&
-                        (0, i.jsx)(l.Button, {
+                        (0, i.jsx)(a.zxk, {
                             className: x.removeButton,
-                            color: l.Button.Colors.PRIMARY,
-                            look: l.Button.Looks.LINK,
-                            size: l.Button.Sizes.SMALL,
+                            color: a.zxk.Colors.PRIMARY,
+                            look: a.zxk.Looks.LINK,
+                            size: a.zxk.Sizes.SMALL,
                             onClick: function () {
-                                (0, g.PO)(null == n ? void 0 : n.id, null);
+                                (0, h.PO)(null == n ? void 0 : n.id, null);
                             },
-                            children: (0, c.ad)(t, n) ? p.intl.string(p.t['GsW4/v']) : p.intl.string(p.t.GReZ6O)
+                            children: (0, c.ad)(t, n) ? _.intl.string(_.t['GsW4/v']) : _.intl.string(_.t.GReZ6O)
                         })
                 ]
             }),
-            t.isStaff() && A && (0, i.jsx)(E, { user: t })
+            t.isStaff() && j && (0, i.jsx)(E, { user: t })
         ]
     });
 }
@@ -72,7 +68,7 @@ let E = (e) => {
     return (0, i.jsxs)('div', {
         className: x.overrideButtonsContainer,
         children: [
-            (0, i.jsx)(l.Text, {
+            (0, i.jsx)(a.Text, {
                 variant: 'text-xs/bold',
                 children: 'STAFF ONLY and Experimental. Upload a decoration to view throughout the app.'
             }),

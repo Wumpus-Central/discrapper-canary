@@ -1,18 +1,19 @@
-e.exports = {
-    cardBrands: 'cardBrands_c7dd62',
-    cardFormHeader: 'cardFormHeader_c7dd62',
-    jcb: 'jcb_c7dd62',
-    jcb_monochrome: 'jcb_monochrome_c7dd62',
-    amex: 'amex_c7dd62',
-    amex_monochrome: 'amex_monochrome_c7dd62',
-    mastercard: 'mastercard_c7dd62',
-    mastercard_monochrome: 'mastercard_monochrome_c7dd62',
-    visa: 'visa_c7dd62',
-    visa_monochrome: 'visa_monochrome_c7dd62',
-    discover: 'discover_c7dd62',
-    discover_monochrome: 'discover_monochrome_c7dd62',
-    dinersclub: 'dinersclub_c7dd62',
-    dinersclub_monochrome: 'dinersclub_monochrome_c7dd62',
-    unionpay: 'unionpay_c7dd62',
-    unionpay_monochrome: 'unionpay_monochrome_c7dd62'
+var i = {
+    cardBrands: 'cardBrands__3e8d5',
+    cardFormHeader: 'cardFormHeader__3e8d5',
+    jcb: 'jcb__3e8d5',
+    jcb_monochrome: 'jcb_monochrome__3e8d5',
+    amex: 'amex__3e8d5',
+    amex_monochrome: 'amex_monochrome__3e8d5',
+    mastercard: 'mastercard__3e8d5',
+    mastercard_monochrome: 'mastercard_monochrome__3e8d5',
+    visa: 'visa__3e8d5',
+    visa_monochrome: 'visa_monochrome__3e8d5',
+    discover: 'discover__3e8d5',
+    discover_monochrome: 'discover_monochrome__3e8d5',
+    dinersclub: 'dinersclub__3e8d5',
+    dinersclub_monochrome: 'dinersclub_monochrome__3e8d5',
+    unionpay: 'unionpay__3e8d5',
+    unionpay_monochrome: 'unionpay_monochrome__3e8d5'
 };
+e.exports = i;

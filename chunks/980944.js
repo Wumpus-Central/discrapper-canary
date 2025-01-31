@@ -1,10 +1,2 @@
-r.d(n, {
-    K: function () {
-        return s;
-    }
-});
-var i = r(47120);
-var a = r(411104);
-r(353926);
-let o = !1;
-function s(e, n, r) {}
+n.d(t, { K: () => i }), n(47120), n(411104), n(353926);
+function i(e, t, n) {}

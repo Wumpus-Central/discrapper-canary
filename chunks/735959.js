@@ -1,73 +1,67 @@
-n.d(t, {
-    Z: function () {
-        return b;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => f }), n(47120);
 var a = n(200651),
-    r = n(192379),
-    l = n(969090),
+    l = n(192379),
+    r = n(914552),
     i = n(913527),
     o = n.n(i),
     s = n(330711),
     c = n(442837),
     d = n(481060),
-    u = n(424395),
-    h = n(665149),
+    u = n(665149),
     m = n(706454),
-    x = n(428530),
-    f = n(257785),
+    h = n(428530),
+    x = n(257785),
     p = n(388032);
-function b() {
+function f() {
     let e = (0, c.e7)([m.default], () => m.default.locale),
-        [t, n] = r.useState(),
-        i = (0, l.runtimeHashMessageKey)(null != t ? t : ''),
-        b = r.useMemo(() => p.t[i], [i]);
+        [t, n] = l.useState(),
+        i = (0, r.runtimeHashMessageKey)(null != t ? t : ''),
+        f = l.useMemo(() => p.t[i], [i]);
     return (0, a.jsxs)('div', {
         children: [
-            (0, a.jsxs)(h.ZP, {
+            (0, a.jsxs)(u.ZP, {
                 children: [
-                    (0, a.jsx)(h.ZP.Icon, {
-                        icon: d.LanguageIcon,
+                    (0, a.jsx)(u.ZP.Icon, {
+                        icon: d.os0,
                         tooltip: 'Locale'
                     }),
-                    (0, a.jsx)(h.ZP.Title, { children: 'Locale' })
+                    (0, a.jsx)(u.ZP.Title, { children: 'Locale' })
                 ]
             }),
-            (0, a.jsxs)(f.E, {
+            (0, a.jsxs)(x.E, {
                 children: [
-                    (0, a.jsx)(f.Z9, {
+                    (0, a.jsx)(x.Z9, {
                         name: 'Active System',
-                        children: u.vJ ? '@discord/intl' : '@discordapp/i18n'
+                        children: '@discord/intl'
                     }),
-                    (0, a.jsx)(f.Z9, {
+                    (0, a.jsx)(x.Z9, {
                         name: 'App',
                         children: e
                     }),
-                    (0, a.jsx)(f.Z9, {
+                    (0, a.jsx)(x.Z9, {
                         name: '@discord/intl',
                         children: p.intl.currentLocale
                     }),
-                    (0, a.jsx)(f.Z9, {
+                    (0, a.jsx)(x.Z9, {
                         name: 'common i18n',
                         children: s.Z.getLocale()
                     }),
-                    (0, a.jsx)(f.Z9, {
+                    (0, a.jsx)(x.Z9, {
                         name: 'Moment',
                         children: o().locale()
                     })
                 ]
             }),
-            (0, a.jsxs)(h.ZP, {
+            (0, a.jsxs)(u.ZP, {
                 children: [
-                    (0, a.jsx)(h.ZP.Icon, {
-                        icon: d.LanguageIcon,
+                    (0, a.jsx)(u.ZP.Icon, {
+                        icon: d.os0,
                         tooltip: 'Messages'
                     }),
-                    (0, a.jsx)(h.ZP.Title, { children: 'New System Messages' })
+                    (0, a.jsx)(u.ZP.Title, { children: 'New System Messages' })
                 ]
             }),
-            (0, a.jsx)(d.TextInput, {
+            (0, a.jsx)(d.oil, {
                 onChange: function (e) {
                     n(e);
                 },
@@ -75,19 +69,19 @@ function b() {
                 style: { margin: 16 },
                 placeholder: 'Find a message'
             }),
-            (0, a.jsxs)(f.E, {
+            (0, a.jsxs)(x.E, {
                 children: [
-                    (0, a.jsx)(f.Z9, {
+                    (0, a.jsx)(x.Z9, {
                         name: 'Hashed key',
                         children: i
                     }),
-                    (0, a.jsx)(f.Z9, {
+                    (0, a.jsx)(x.Z9, {
                         name: 'Exists?',
-                        children: null != b ? 'yes' : 'no'
+                        children: null != f ? 'yes' : 'no'
                     })
                 ]
             }),
-            (0, a.jsx)(x.Z, { data: null == b ? void 0 : b(e) })
+            (0, a.jsx)(h.Z, { data: null == f ? void 0 : f(e) })
         ]
     });
 }

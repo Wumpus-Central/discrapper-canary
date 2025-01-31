@@ -1,5 +1,6 @@
 e.exports = {
-    settingsContent: 'settingsContent_eaf7c3 noScroll_eaf7c3',
-    settingsForm: 'settingsForm_eaf7c3',
-    switch: 'switch_eaf7c3'
+    noScroll: 'noScroll_e81c2b',
+    settingsContent: 'settingsContent_e81c2b noScroll_e81c2b',
+    settingsForm: 'settingsForm_e81c2b',
+    switch: 'switch_e81c2b'
 };

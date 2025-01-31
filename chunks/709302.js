@@ -1,26 +1,27 @@
-var i = r(81825);
-function a(e, n, r) {
+n.d(t, { Z: () => s });
+var i = n(81825);
+function r(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class o extends i.Z {
+class a extends i.Z {
     static fromPath(e) {
-        return new o({
+        return new a({
             id: e,
             path: e
         });
     }
     constructor(e) {
-        super(), a(this, 'id', void 0), a(this, 'path', void 0), (this.id = e.id), (this.path = e.path);
+        super(), r(this, 'id', void 0), r(this, 'path', void 0), (this.id = e.id), (this.path = e.path);
     }
 }
-n.Z = o;
+let s = a;

@@ -4,15 +4,13 @@ var n = r(192379),
         function e() {
             return t.apply(this, arguments) || this;
         }
-        (r = e), (o = t), (r.prototype = Object.create(o.prototype)), (r.prototype.constructor = r), (r.__proto__ = o);
-        var r,
-            o,
-            a = e.prototype;
+        (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
+        var r = e.prototype;
         return (
-            (a.shouldComponentUpdate = function (t) {
+            (r.shouldComponentUpdate = function (t) {
                 return this.props.text !== t.text || this.props.editorState.getSelection().getHasFocus() !== t.editorState.getSelection().getHasFocus();
             }),
-            (a.render = function () {
+            (r.render = function () {
                 var t = i({
                     'public/DraftEditorPlaceholder/root': !0,
                     'public/DraftEditorPlaceholder/hasFocus': this.props.editorState.getSelection().getHasFocus()

@@ -1,8 +1,10 @@
-e.exports = {
-    upsellButton: 'upsellButton_ad7baa',
-    upsellContainer: 'upsellContainer_ad7baa',
-    upsellContainerShadow: 'upsellContainerShadow_ad7baa',
-    upsellContainerFloating: 'upsellContainerFloating_ad7baa',
-    upsellContainerInline: 'upsellContainerInline_ad7baa',
-    upsellText: 'upsellText_ad7baa'
+var i = {
+    upsellButton: 'upsellButton__0b69f',
+    upsellContainer: 'upsellContainer__0b69f',
+    upsellContainerShadow: 'upsellContainerShadow__0b69f',
+    upsellContainerFloating: 'upsellContainerFloating__0b69f',
+    upsellContainerInline: 'upsellContainerInline__0b69f',
+    upsellText: 'upsellText__0b69f',
+    lockIcon: 'lockIcon__0b69f'
 };
+e.exports = i;

@@ -1,4 +1,5 @@
-e.exports = {
-    guildIconImage: 'guildIconImage_a2e41e',
-    acronym: 'acronym_a2e41e'
+var i = {
+    guildIconImage: 'guildIconImage__79e3e',
+    acronym: 'acronym__79e3e'
 };
+e.exports = i;

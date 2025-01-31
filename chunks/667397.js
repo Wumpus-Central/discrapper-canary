@@ -1,12 +1,6 @@
-function i(e, n) {
-    if (e.length !== n.length) return !1;
-    for (let r = 0; r < n.length && r < e.length; r++) {
-        if (!Object.is(e[r], n[r])) return !1;
-    }
+function i(e, t) {
+    if (e.length !== t.length) return !1;
+    for (let n = 0; n < t.length && n < e.length; n++) if (!Object.is(e[n], t[n])) return !1;
     return !0;
 }
-r.d(n, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });

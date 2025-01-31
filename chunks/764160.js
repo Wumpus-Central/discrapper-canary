@@ -1,6 +1,7 @@
+r.d(t, { Z: () => s });
 var a = r(760919),
     n = r(227150);
-t.Z = new a.Z({
+let s = new a.Z({
     id: 'a98rgb',
     cssId: 'a98-rgb',
     name: 'Adobe\xAE 98 RGB compatible',

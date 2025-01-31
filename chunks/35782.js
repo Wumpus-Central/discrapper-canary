@@ -1,10 +1,6 @@
-r.d(n, {
-    V: function () {
-        return a;
-    }
-});
-let { Themes: i } = r(15202).V,
-    a = {
+n.d(t, { V: () => r });
+let { Themes: i } = n(15202).V,
+    r = {
         SemanticColorExperiments: {
             ACTIVITY_CARD_BACKGROUND: {
                 'visual-refresh': {
@@ -89,20 +85,20 @@ let { Themes: i } = r(15202).V,
             BACKGROUND_MENTIONED_HOVER: {
                 'visual-refresh': {
                     [i.DARK]: {
-                        raw: 'OPACITY_YELLOW_16',
-                        opacity: 0.1607843137254902
+                        raw: 'OPACITY_YELLOW_4',
+                        opacity: 0.0392156862745098
                     },
                     [i.LIGHT]: {
                         raw: 'OPACITY_YELLOW_12',
                         opacity: 0.12156862745098039
                     },
                     [i.MIDNIGHT]: {
-                        raw: 'OPACITY_YELLOW_16',
-                        opacity: 0.1607843137254902
+                        raw: 'OPACITY_YELLOW_4',
+                        opacity: 0.0392156862745098
                     },
                     [i.DARKER]: {
-                        raw: 'OPACITY_YELLOW_16',
-                        opacity: 0.1607843137254902
+                        raw: 'OPACITY_YELLOW_4',
+                        opacity: 0.0392156862745098
                     }
                 }
             },
@@ -1206,6 +1202,26 @@ let { Themes: i } = r(15202).V,
                     }
                 }
             },
+            CARD_PRIMARY_BG: {
+                'visual-refresh': {
+                    [i.DARK]: {
+                        raw: 'NEUTRAL_66',
+                        opacity: 1
+                    },
+                    [i.LIGHT]: {
+                        raw: 'NEUTRAL_1',
+                        opacity: 1
+                    },
+                    [i.MIDNIGHT]: {
+                        raw: 'NEUTRAL_91',
+                        opacity: 1
+                    },
+                    [i.DARKER]: {
+                        raw: 'NEUTRAL_79',
+                        opacity: 1
+                    }
+                }
+            },
             CARD_SECONDARY_BG: {
                 'visual-refresh': {
                     [i.DARK]: {
@@ -1595,6 +1611,26 @@ let { Themes: i } = r(15202).V,
                     [i.LIGHT]: {
                         raw: 'BLACK',
                         opacity: 0.04
+                    }
+                }
+            },
+            INPUT_PLACEHOLDER_TEXT: {
+                'visual-refresh': {
+                    [i.DARK]: {
+                        raw: 'NEUTRAL_31',
+                        opacity: 1
+                    },
+                    [i.LIGHT]: {
+                        raw: 'NEUTRAL_44',
+                        opacity: 1
+                    },
+                    [i.MIDNIGHT]: {
+                        raw: 'NEUTRAL_38',
+                        opacity: 1
+                    },
+                    [i.DARKER]: {
+                        raw: 'NEUTRAL_36',
+                        opacity: 1
                     }
                 }
             },

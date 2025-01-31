@@ -1,1 +1,2 @@
-e.exports = { stack: 'stack_ae6a65' };
+var i = { stack: 'stack_dbd263' };
+e.exports = i;

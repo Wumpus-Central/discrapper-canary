@@ -1,19 +1,15 @@
-r.d(n, {
-    Z: function () {
-        return l;
-    }
-});
-var i = r(310680),
-    a = r(660027),
-    o = r(49691),
-    s = r(538018);
-function l(e, n) {
-    void 0 === n && (n = []);
-    var r,
-        u = (0, i.Z)(e),
-        c = u === (null == (r = e.ownerDocument) ? void 0 : r.body),
-        d = (0, o.Z)(u),
-        f = c ? [d].concat(d.visualViewport || [], (0, s.Z)(u) ? u : []) : u,
-        p = n.concat(f);
-    return c ? p : p.concat(l((0, a.Z)(f)));
+n.d(t, { Z: () => o });
+var i = n(310680),
+    r = n(660027),
+    a = n(49691),
+    s = n(538018);
+function o(e, t) {
+    void 0 === t && (t = []);
+    var n,
+        l = (0, i.Z)(e),
+        u = l === (null == (n = e.ownerDocument) ? void 0 : n.body),
+        c = (0, a.Z)(l),
+        d = u ? [c].concat(c.visualViewport || [], (0, s.Z)(l) ? l : []) : l,
+        f = t.concat(d);
+    return u ? f : f.concat(o((0, r.Z)(d)));
 }

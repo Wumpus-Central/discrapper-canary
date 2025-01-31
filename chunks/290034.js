@@ -1,8 +1,4 @@
-n.d(i, {
-    Z: function () {
-        return g;
-    }
-});
+n.d(i, { Z: () => _ });
 var t = n(200651);
 n(192379);
 var o = n(120356),
@@ -23,7 +19,7 @@ let s = {
         [d.Eu4.TIER_2]: c.iconTierTwo,
         [d.Eu4.TIER_3]: c.iconTierThree
     };
-function g(e) {
+function _(e) {
     let { premiumTier: i, iconBackgroundClassName: n, iconClassName: o, size: d } = e;
     return (0, t.jsx)(a.Z, {
         className: r()(n, s[i]),

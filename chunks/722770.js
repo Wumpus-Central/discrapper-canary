@@ -1,7 +1,10 @@
-let r = Object.freeze({
+Object.freeze({
     APPLICATION_SUBSCRIPTION_END: 'hsl(197, calc(var(--saturation-factor, 1) * 98.8%), 32.4%)',
     APPLICATION_SUBSCRIPTION_START: 'hsl(235, calc(var(--saturation-factor, 1) * 68.5%), 52.7%)',
     BATTLENET: 'hsl(200, calc(var(--saturation-factor, 1) * 100.0%), 44.9%)',
+    BG_ANIMATED_GRADIENT_BACKGROUND_INDIGO_1: 'hsl(242, calc(var(--saturation-factor, 1) * 57.1%), 27.5%)',
+    BG_ANIMATED_GRADIENT_BACKGROUND_NOT_BLACK: 'hsl(240, calc(var(--saturation-factor, 1) * 7.1%), 5.5%)',
+    BG_ANIMATED_GRADIENT_BACKGROUND_PINK_1: 'hsl(328, calc(var(--saturation-factor, 1) * 80.6%), 59.6%)',
     BG_GRADIENT_AURORA_1: 'hsl(220, calc(var(--saturation-factor, 1) * 86.5%), 17.5%)',
     BG_GRADIENT_AURORA_2: 'hsl(238, calc(var(--saturation-factor, 1) * 76.4%), 41.6%)',
     BG_GRADIENT_AURORA_3: 'hsl(184, calc(var(--saturation-factor, 1) * 78.0%), 33.9%)',
@@ -66,6 +69,24 @@ let r = Object.freeze({
     BG_GRADIENT_UNDER_THE_SEA_1: 'hsl(115, calc(var(--saturation-factor, 1) * 10.5%), 42.9%)',
     BG_GRADIENT_UNDER_THE_SEA_2: 'hsl(159, calc(var(--saturation-factor, 1) * 20.4%), 43.3%)',
     BG_GRADIENT_UNDER_THE_SEA_3: 'hsl(175, calc(var(--saturation-factor, 1) * 10.9%), 46.7%)',
+    BG_MODAL_GRADIENT_GREEN_DARK_1: 'hsl(146, calc(var(--saturation-factor, 1) * 70.8%), 42.9%)',
+    BG_MODAL_GRADIENT_GREEN_DARK_2: 'hsl(153, calc(var(--saturation-factor, 1) * 100.0%), 20.0%)',
+    BG_MODAL_GRADIENT_GREEN_LIGHT_1: 'hsl(145, calc(var(--saturation-factor, 1) * 100.0%), 94.9%)',
+    BG_MODAL_GRADIENT_GREEN_LIGHT_2: 'hsl(144, calc(var(--saturation-factor, 1) * 87.2%), 75.5%)',
+    BG_MODAL_GRADIENT_LAVENDER_DARK_1: 'hsl(268, calc(var(--saturation-factor, 1) * 85.7%), 64.3%)',
+    BG_MODAL_GRADIENT_LAVENDER_DARK_2: 'hsl(261, calc(var(--saturation-factor, 1) * 72.3%), 31.2%)',
+    BG_MODAL_GRADIENT_LAVENDER_LIGHT_1: 'hsl(269, calc(var(--saturation-factor, 1) * 90.6%), 87.5%)',
+    BG_MODAL_GRADIENT_LAVENDER_LIGHT_2: 'hsl(269, calc(var(--saturation-factor, 1) * 88.3%), 79.8%)',
+    BG_MODAL_GRADIENT_MAGENTA_DARK_1: 'hsl(310, calc(var(--saturation-factor, 1) * 65.0%), 42.5%)',
+    BG_MODAL_GRADIENT_MAGENTA_DARK_2: 'hsl(300, calc(var(--saturation-factor, 1) * 100.0%), 20.0%)',
+    BG_MODAL_GRADIENT_MAGENTA_LIGHT_1: 'hsl(290, calc(var(--saturation-factor, 1) * 100.0%), 95.1%)',
+    BG_MODAL_GRADIENT_MAGENTA_LIGHT_2: 'hsl(312, calc(var(--saturation-factor, 1) * 96.2%), 79.6%)',
+    BG_MODAL_GRADIENT_NAVY_DARK_1: 'hsl(235, calc(var(--saturation-factor, 1) * 85.6%), 64.7%)',
+    BG_MODAL_GRADIENT_NAVY_DARK_2: 'hsl(238, calc(var(--saturation-factor, 1) * 72.5%), 31.4%)',
+    BG_MODAL_GRADIENT_NAVY_LIGHT_1: 'hsl(235, calc(var(--saturation-factor, 1) * 90.5%), 87.6%)',
+    BG_MODAL_GRADIENT_NAVY_LIGHT_2: 'hsl(234, calc(var(--saturation-factor, 1) * 90.0%), 80.4%)',
+    BG_TILE_GRADIENT_MAGENTA_DARK_1: 'hsl(310, calc(var(--saturation-factor, 1) * 65.0%), 42.5%)',
+    BG_TILE_GRADIENT_MAGENTA_DARK_2: 'hsl(300, calc(var(--saturation-factor, 1) * 100.0%), 20.0%)',
     BLACK: 'hsl(0, calc(var(--saturation-factor, 1) * 0.0%), 0.0%)',
     BLACK_100: 'hsl(0, calc(var(--saturation-factor, 1) * 0.0%), 94.9%)',
     BLACK_130: 'hsl(0, calc(var(--saturation-factor, 1) * 0.0%), 91.0%)',
@@ -1503,4 +1524,3 @@ let r = Object.freeze({
     YELLOW_NEW_99: 'hsl(24, calc(var(--saturation-factor, 1) * 71.4%), 1.4%)',
     YOUTUBE: 'hsl(0, calc(var(--saturation-factor, 1) * 72.8%), 46.1%)'
 });
-t.Z = r;

@@ -1,41 +1,37 @@
-r.d(n, {
-    k: function () {
-        return l;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(692547),
-    o = r(331595),
-    s = r(267843);
-let l = (e) => {
-    var n, r;
-    let { size: l = 'md', width: u, height: c, color: d = a.Z.colors.INTERACTIVE_NORMAL, colorClass: f = '', ...p } = e,
-        h = (0, s.m)(l),
-        _ = null !== (n = null == h ? void 0 : h.width) && void 0 !== n ? n : u,
-        m = null !== (r = null == h ? void 0 : h.height) && void 0 !== r ? r : c;
+n.d(t, { k: () => o });
+var i = n(200651);
+n(192379);
+var r = n(692547),
+    a = n(331595),
+    s = n(267843);
+let o = (e) => {
+    var t, n;
+    let { size: o = 'md', width: l, height: u, color: c = r.Z.colors.INTERACTIVE_NORMAL, colorClass: d = '', ...f } = e,
+        _ = (0, s.m)(o),
+        p = null !== (t = null == _ ? void 0 : _.width) && void 0 !== t ? t : l,
+        h = null !== (n = null == _ ? void 0 : _.height) && void 0 !== n ? n : u;
     return (0, i.jsxs)('svg', {
-        ...(0, o.Z)(p),
+        ...(0, a.Z)(f),
         xmlns: 'http://www.w3.org/2000/svg',
-        width: _,
-        height: m,
+        width: p,
+        height: h,
         fill: 'none',
         viewBox: '0 0 24 24',
         children: [
             (0, i.jsx)('path', {
-                fill: 'string' == typeof d ? d : d.css,
+                fill: 'string' == typeof c ? c : c.css,
                 d: 'M1.3 21.3a1 1 0 1 0 1.4 1.4l20-20a1 1 0 0 0-1.4-1.4l-20 20ZM3.16 16.05c.18.24.53.26.74.05l.72-.72c.18-.18.2-.45.05-.66a15.7 15.7 0 0 1-1.43-2.52.48.48 0 0 1 0-.4c.4-.9 1.18-2.37 2.37-3.72C7.13 6.38 9.2 5 12 5c.82 0 1.58.12 2.28.33.18.05.38 0 .52-.13l.8-.8c.25-.25.18-.67-.15-.79A9.79 9.79 0 0 0 12 3C4.89 3 1.73 10.11 1.11 11.7a.83.83 0 0 0 0 .6c.25.64.9 2.15 2.05 3.75Z',
-                className: f
+                className: d
             }),
             (0, i.jsx)('path', {
-                fill: 'string' == typeof d ? d : d.css,
+                fill: 'string' == typeof c ? c : c.css,
                 d: 'M8.18 10.81c-.13.43.36.65.67.34l2.3-2.3c.31-.31.09-.8-.34-.67a4 4 0 0 0-2.63 2.63ZM12.85 15.15c-.31.31-.09.8.34.67a4.01 4.01 0 0 0 2.63-2.63c.13-.43-.36-.65-.67-.34l-2.3 2.3Z',
-                className: f
+                className: d
             }),
             (0, i.jsx)('path', {
-                fill: 'string' == typeof d ? d : d.css,
+                fill: 'string' == typeof c ? c : c.css,
                 d: 'M9.72 18.67a.52.52 0 0 0-.52.13l-.8.8c-.25.25-.18.67.15.79 1.03.38 2.18.61 3.45.61 7.11 0 10.27-7.11 10.89-8.7a.83.83 0 0 0 0-.6c-.25-.64-.9-2.15-2.05-3.75a.49.49 0 0 0-.74-.05l-.72.72a.51.51 0 0 0-.05.66 15.7 15.7 0 0 1 1.43 2.52c.06.13.06.27 0 .4-.4.9-1.18 2.37-2.37 3.72C16.87 17.62 14.8 19 12 19c-.82 0-1.58-.12-2.28-.33Z',
-                className: f
+                className: d
             })
         ]
     });

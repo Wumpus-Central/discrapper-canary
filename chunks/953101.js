@@ -1,12 +1,7 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(47120);
-let a = ['allow-pointer-lock', 'allow-scripts', 'allow-same-origin', 'allow-forms'];
-function o(e) {
-    let { allowPopups: n } = e,
-        r = a;
-    return n && (r = [...a, 'allow-popups', 'allow-popups-to-escape-sandbox']), r.join(' ');
+n.d(t, { Z: () => r }), n(47120);
+let i = ['allow-pointer-lock', 'allow-scripts', 'allow-same-origin', 'allow-forms'];
+function r(e) {
+    let { allowPopups: t } = e,
+        n = i;
+    return t && (n = [...i, 'allow-popups', 'allow-popups-to-escape-sandbox']), n.join(' ');
 }

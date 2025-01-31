@@ -1,13 +1,9 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(571846),
-    a = r(17851);
-function o(e) {
-    return (o =
-        'function' == typeof i && 'symbol' == typeof a
+n.d(t, { Z: () => a });
+var i = n(571846),
+    r = n(17851);
+function a(e) {
+    return (a =
+        'function' == typeof i && 'symbol' == typeof r
             ? function (e) {
                   return typeof e;
               }

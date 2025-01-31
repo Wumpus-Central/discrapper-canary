@@ -1,51 +1,47 @@
-r.d(n, {
-    O: function () {
-        return d;
-    },
-    W: function () {
-        return f;
-    }
-});
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(134432),
-    l = r(747757),
-    u = r(242493);
-let c = 3000;
-function d() {
-    (0, s.po)(''.concat(u, '?query=true'));
+n.d(t, {
+    O: () => u,
+    W: () => c
+}),
+    n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(134432),
+    s = n(747757),
+    o = n(242493);
+let l = 3000;
+function u() {
+    (0, a.po)(''.concat(o, '?query=true'));
 }
-function f(e) {
-    let { onPlayed: n, played: r } = e,
-        [i, s] = o.useState(r),
-        d = o.useRef(0);
+function c(e) {
+    let { onPlayed: t, played: n } = e,
+        [a, u] = r.useState(n),
+        c = r.useRef(0);
     if (
-        (o.useEffect(
+        (r.useEffect(
             () => (
-                clearTimeout(d.current),
-                (d.current = setTimeout(() => {
-                    n();
-                }, c)),
+                clearTimeout(c.current),
+                (c.current = setTimeout(() => {
+                    t();
+                }, l)),
                 () => {
-                    clearTimeout(d.current), n();
+                    clearTimeout(c.current), t();
                 }
             ),
-            [n]
+            [t]
         ),
-        o.useEffect(() => {
-            s((e) => !e);
-        }, [r]),
-        r)
+        r.useEffect(() => {
+            u((e) => !e);
+        }, [n]),
+        n)
     )
         return null;
-    let f = ''.concat(u, '?query=').concat(i);
-    return (0, a.jsx)('div', {
-        className: l.demoEffectOverlay,
-        children: (0, a.jsx)('img', {
+    let d = ''.concat(o, '?query=').concat(a);
+    return (0, i.jsx)('div', {
+        className: s.demoEffectOverlay,
+        children: (0, i.jsx)('img', {
             alt: '',
-            className: l.demoEffectImg,
-            src: f
+            className: s.demoEffectImg,
+            src: d
         })
     });
 }

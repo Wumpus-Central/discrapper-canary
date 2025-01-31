@@ -1,16 +1,15 @@
 var e = (function () {
     function t(t) {
-        var e, r, n;
-        (e = this),
-            (n = void 0),
-            (r = '_uri') in e
-                ? Object.defineProperty(e, r, {
-                      value: n,
+        var e, r;
+        (r = void 0),
+            (e = '_uri') in this
+                ? Object.defineProperty(this, e, {
+                      value: r,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (e[r] = n),
+                : (this[e] = r),
             (this._uri = t);
     }
     return (

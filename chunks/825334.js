@@ -1,8 +1,4 @@
-l.d(n, {
-    Z: function () {
-        return r;
-    }
-});
+l.d(n, { Z: () => r });
 var a = l(399606),
     i = l(592125),
     t = l(563534);

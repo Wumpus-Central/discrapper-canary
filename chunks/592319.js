@@ -1,5 +1,5 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
     return e.defineLocale('he', {
         months: 'ינואר_פברואר_מרץ_אפריל_מאי_יוני_יולי_אוגוסט_ספטמבר_אוקטובר_נובמבר_דצמבר'.split('_'),
@@ -55,12 +55,8 @@
         isPM: function (e) {
             return /^(אחה"צ|אחרי הצהריים|בערב)$/.test(e);
         },
-        meridiem: function (e, n, r) {
-            if (e < 5) return 'לפנות בוקר';
-            if (e < 10) return 'בבוקר';
-            if (e < 12) return r ? 'לפנה"צ' : 'לפני הצהריים';
-            else if (e < 18) return r ? 'אחה"צ' : 'אחרי הצהריים';
-            else return 'בערב';
+        meridiem: function (e, t, n) {
+            return e < 5 ? 'לפנות בוקר' : e < 10 ? 'בבוקר' : e < 12 ? (n ? 'לפנה"צ' : 'לפני הצהריים') : e < 18 ? (n ? 'אחה"צ' : 'אחרי הצהריים') : 'בערב';
         }
     });
 });

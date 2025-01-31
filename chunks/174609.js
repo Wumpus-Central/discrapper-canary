@@ -1,10 +1,6 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(358085),
-    a = r(998502);
-function o(e) {
-    i.isPlatformEmbedded ? a.ZP.focus(e) : window.focus();
+n.d(t, { Z: () => a });
+var i = n(358085),
+    r = n(998502);
+function a(e) {
+    i.isPlatformEmbedded ? r.ZP.focus(e) : window.focus();
 }

@@ -1,85 +1,82 @@
-n(653041), n(47120);
+n.d(t, { Z: () => _ }), n(653041), n(47120);
 var a,
-    r,
     l,
-    i,
-    o = n(772848),
-    s = n(756647),
-    c = n(442837),
-    d = n(570140),
-    u = n(314897),
-    h = n(906467);
+    r,
+    i = n(772848),
+    o = n(756647),
+    s = n(442837),
+    c = n(570140),
+    d = n(314897),
+    u = n(906467);
 let m = 0,
-    x = [],
-    f = 0,
+    h = [],
+    x = 0,
     p = [],
-    b = !1;
-class g extends (a = c.ZP.Store) {
+    f = !1;
+class b extends (a = s.ZP.Store) {
     initialize() {
-        this.waitFor(h.Z);
+        this.waitFor(u.Z);
     }
     get loggedEvents() {
-        return x;
+        return h;
     }
     get loggedEventsVersion() {
-        return f;
+        return x;
     }
     get loggedTriggers() {
         return p;
     }
     get trackTriggers() {
-        return b;
+        return f;
     }
 }
-(i = 'AnalyticsLogStore'),
-    (l = 'displayName') in (r = g)
-        ? Object.defineProperty(r, l, {
-              value: i,
+(r = 'AnalyticsLogStore'),
+    (l = 'displayName') in b
+        ? Object.defineProperty(b, l, {
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (r[l] = i),
-    (t.Z = new g(d.Z, {
-        TRACK: function (e) {
-            let { event: t, properties: n, fingerprint: a } = e;
-            if (h.Z.isDeveloper) {
-                var r;
-                x.push({
-                    key: (m++).toString(),
-                    event: t,
-                    properties: n,
-                    fingerprint: null != (r = a) ? (0, s.s)(r) : u.default.getId(),
+        : (b[l] = r);
+let _ = new b(c.Z, {
+    TRACK: function (e) {
+        let { event: t, properties: n, fingerprint: a } = e;
+        if (u.Z.isDeveloper)
+            h.push({
+                key: (m++).toString(),
+                event: t,
+                properties: n,
+                fingerprint: null != a ? (0, o.s)(a) : d.default.getId(),
+                timestamp: new Date()
+            }),
+                x++,
+                h.length > 500 && (h = h.slice(-Math.floor(250)));
+    },
+    TRACK_TRIGGER: function (e) {
+        let { experimentId: t, descriptor: n, exposureType: a, excluded: l, location: r, previouslyTracked: o } = e;
+        u.Z.isDeveloper &&
+            f &&
+            (p = [
+                ...p,
+                {
+                    key: (0, i.Z)(),
+                    experimentId: t,
+                    descriptor: n,
+                    exposureType: a,
+                    excluded: l,
+                    location: r,
+                    previouslyTracked: o,
                     timestamp: new Date()
-                }),
-                    f++,
-                    x.length > 500 && (x = x.slice(-Math.floor(250)));
-            }
-        },
-        TRACK_TRIGGER: function (e) {
-            let { experimentId: t, descriptor: n, exposureType: a, excluded: r, location: l, previouslyTracked: i } = e;
-            if (!!h.Z.isDeveloper)
-                b &&
-                    (p = [
-                        ...p,
-                        {
-                            key: (0, o.Z)(),
-                            experimentId: t,
-                            descriptor: n,
-                            exposureType: a,
-                            excluded: r,
-                            location: l,
-                            previouslyTracked: i,
-                            timestamp: new Date()
-                        }
-                    ]).length > 500 &&
-                    p.shift();
-        },
-        SET_TRACK_TRIGGERS: function (e) {
-            let { enabled: t } = e;
-            b = t;
-        },
-        ANALYTICS_LOG_CLEAR: function () {
-            (x = []), f++, (p = []);
-        }
-    }));
+                }
+            ]).length > 500 &&
+            p.shift();
+    },
+    SET_TRACK_TRIGGERS: function (e) {
+        let { enabled: t } = e;
+        f = t;
+    },
+    ANALYTICS_LOG_CLEAR: function () {
+        (h = []), x++, (p = []);
+    }
+});

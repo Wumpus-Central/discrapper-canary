@@ -1,62 +1,57 @@
-a.d(t, {
-    h: function () {
-        return _;
-    }
-});
+a.d(t, { h: () => p });
 var n,
     s,
-    i,
-    r,
-    l = a(200651),
-    o = a(192379),
-    c = a(476400),
-    d = a.n(c),
-    u = a(948789),
-    N = a(982905),
-    h = a(66037),
-    m = a(231338),
-    p = a(294419);
-let I = m.j_.MAIN_NAVIGATION_MENU;
-class _ extends (r = o.PureComponent) {
+    l,
+    i = a(200651),
+    r = a(192379),
+    o = a(476400),
+    c = a.n(o),
+    d = a(948789),
+    u = a(982905),
+    _ = a(66037),
+    N = a(231338),
+    h = a(294419);
+let m = N.j_.MAIN_NAVIGATION_MENU;
+class p extends (l = r.PureComponent) {
     render() {
-        let e = (0, u.fQ)(this.context.router),
-            { isOpen: t, dropdownLinks: a, TrackClick: n, avoidRouter: s, id: i, 'aria-label': r } = this.props,
+        let e = (0, d.fQ)(this.context.router),
+            { isOpen: t, dropdownLinks: a, TrackClick: n, avoidRouter: s, id: l, 'aria-label': r } = this.props,
             o = a.map((t, a) =>
                 t.divider
-                    ? (0, l.jsx)('hr', { className: p.divider }, 'divider-'.concat(a))
+                    ? (0, i.jsx)('hr', { className: h.divider }, 'divider-'.concat(a))
                     : t.external
-                      ? (0, l.jsx)(
+                      ? (0, i.jsx)(
                             'li',
                             {
-                                className: p.moreListItemInactive,
-                                children: (0, l.jsx)(n, {
-                                    className: p.moreListLink,
-                                    eventName: I,
+                                className: h.moreListItemInactive,
+                                children: (0, i.jsx)(n, {
+                                    className: h.moreListLink,
+                                    eventName: m,
                                     data: { linkClicked: t.linkClicked },
                                     href: t.route,
                                     rel: 'me',
-                                    children: (0, l.jsx)('span', {
-                                        className: p.moreListLinkCopy,
+                                    children: (0, i.jsx)('span', {
+                                        className: h.moreListLinkCopy,
                                         children: t.title
                                     })
                                 })
                             },
                             t.route
                         )
-                      : (0, l.jsx)(
+                      : (0, i.jsx)(
                             'li',
                             {
-                                className: (0, N.l)(p, 'moreListItem', e(t.route) ? 'Active' : 'Inactive'),
-                                children: (0, l.jsx)(h.Z, {
+                                className: (0, u.l)(h, 'moreListItem', e(t.route) ? 'Active' : 'Inactive'),
+                                children: (0, i.jsx)(_.Z, {
                                     avoidRouter: s,
-                                    className: p.moreListLink,
+                                    className: h.moreListLink,
                                     to: t.route,
-                                    from: m.j_.MAIN_NAVIGATION_MENU,
+                                    from: N.j_.MAIN_NAVIGATION_MENU,
                                     role: 'menuitem',
-                                    children: (0, l.jsx)(n, {
+                                    children: (0, i.jsx)(n, {
                                         tag: 'span',
-                                        className: p.moreListLinkCopy,
-                                        eventName: I,
+                                        className: h.moreListLinkCopy,
+                                        eventName: m,
                                         data: { linkClicked: t.linkClicked },
                                         children: t.title
                                     })
@@ -65,22 +60,21 @@ class _ extends (r = o.PureComponent) {
                             t.route
                         )
             );
-        return (0, l.jsx)('ul', {
-            id: i,
-            className: (0, N.l)(p, 'moreList', t ? 'Open' : 'Closed'),
+        return (0, i.jsx)('ul', {
+            id: l,
+            className: (0, u.l)(h, 'moreList', t ? 'Open' : 'Closed'),
             'aria-label': r,
             children: o
         });
     }
 }
-(n = _),
-    (s = 'contextTypes'),
-    (i = { router: d().object.isRequired }),
-    s in n
-        ? Object.defineProperty(n, s, {
-              value: i,
+(n = 'contextTypes'),
+    (s = { router: c().object.isRequired }),
+    n in p
+        ? Object.defineProperty(p, n, {
+              value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (n[s] = i);
+        : (p[n] = s);

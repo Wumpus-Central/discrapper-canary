@@ -1,106 +1,85 @@
-r.d(n, {
-    MS: function () {
-        return S;
-    },
-    Ph: function () {
-        return A;
-    },
-    _2: function () {
-        return N;
-    },
-    bE: function () {
-        return T;
-    },
-    gq: function () {
-        return a;
-    },
-    nf: function () {
-        return I;
-    }
-});
-var i,
-    a,
-    o,
-    s = r(653041);
-var l = r(544891),
-    u = r(780384),
-    c = r(410030),
-    d = r(726542),
-    f = r(122021),
-    p = r(981631),
-    h = r(388032);
-let _ = {};
-function m(e, n) {
-    return e + n;
+n.d(t, {
+    MS: () => y,
+    Ph: () => I,
+    _2: () => T,
+    bE: () => v,
+    gq: () => E,
+    nf: () => g
+}),
+    n(653041);
+var i = n(544891),
+    r = n(780384),
+    a = n(410030),
+    s = n(726542),
+    o = n(122021),
+    l = n(981631),
+    u = n(388032);
+let c = {};
+function d(e, t) {
+    return e + t;
 }
-function g(e, n) {
-    return n.map((n) => m(e, n));
+function f(e, t) {
+    return t.map((t) => d(e, t));
 }
-function E(e) {
+function _(e) {
     return e.split('-')[1];
 }
-function v(e) {
-    return e.filter((e) => _[e] <= 1).map(E);
+function p(e) {
+    return e.filter((e) => c[e] <= 1).map(_);
 }
-function y(e, n) {
+function h(e, t) {
     e.forEach((e) => {
-        _[e] = n;
+        c[e] = t;
     });
 }
-function b(e, n, r) {
-    _[m(e, n)] = r;
+function m(e, t, n) {
+    c[d(e, t)] = n;
 }
-function I(e, n) {
-    n.forEach((n) => b(e, n, 3));
+function g(e, t) {
+    t.forEach((t) => m(e, t, 3));
 }
-!(function (e) {
-    (e[(e.FAILED = 0)] = 'FAILED'), (e[(e.UNFETCHED = 1)] = 'UNFETCHED'), (e[(e.PENDING = 2)] = 'PENDING'), (e[(e.SUCCEEDED = 3)] = 'SUCCEEDED'), (e[(e.FAILED_NO_RETRY = 4)] = 'FAILED_NO_RETRY');
-})(i || (i = {})),
-    !(function (e) {
-        (e[(e.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (e[(e.BOT = 1)] = 'BOT'), (e[(e.INTEGRATION = 2)] = 'INTEGRATION'), (e[(e.DISCOVERY = 3)] = 'DISCOVERY'), (e[(e.HUB = 4)] = 'HUB'), (e[(e.INVITE = 5)] = 'INVITE'), (e[(e.VANITY_URL = 6)] = 'VANITY_URL'), (e[(e.MANUAL_MEMBER_VERIFICATION = 7)] = 'MANUAL_MEMBER_VERIFICATION');
-    })(a || (a = {}));
-let T = function (e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
-        r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    switch (e) {
-        case 1:
-            return h.intl.string(h.t.HumZAg);
-        case 2:
-            return h.intl.string(h.t.gmCUFx);
-        case 3:
-            return h.intl.string(h.t['Ql/e9f']);
-        case 4:
-            return h.intl.string(h.t.Op8B3N);
-        case 5:
-            return h.intl.string(h.t['/3vIRU']);
-        case 6:
-            if (null != n && !r) return h.intl.formatToPlainString(h.t.EIUjR0, { vanityUrl: n });
-            return h.intl.string(h.t.dGiD1N);
-        case 7:
-            return h.intl.string(h.t.vdu7oa);
-        default:
-            return h.intl.string(h.t.DvMBkZ);
-    }
-};
-!(function (e) {
-    (e.DISCORD = 'discord'), (e.TWITCH = 'twitch'), (e.YOUTUBE = 'youtube'), (e.GUILD_SUBSCRIPTION = 'guild_subscription');
-})(o || (o = {}));
-let S = (e) => {
+var E = (function (e) {
+    return (e[(e.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (e[(e.BOT = 1)] = 'BOT'), (e[(e.INTEGRATION = 2)] = 'INTEGRATION'), (e[(e.DISCOVERY = 3)] = 'DISCOVERY'), (e[(e.HUB = 4)] = 'HUB'), (e[(e.INVITE = 5)] = 'INVITE'), (e[(e.VANITY_URL = 6)] = 'VANITY_URL'), (e[(e.MANUAL_MEMBER_VERIFICATION = 7)] = 'MANUAL_MEMBER_VERIFICATION'), e;
+})({});
+let v = function (e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
+            n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         switch (e) {
-            case 'twitch':
-                return h.intl.string(h.t.AVGAk5);
-            case 'youtube':
-                return h.intl.string(h.t.PHSAsr);
+            case 1:
+                return u.intl.string(u.t.HumZAg);
+            case 2:
+                return u.intl.string(u.t.gmCUFx);
+            case 3:
+                return u.intl.string(u.t['Ql/e9f']);
+            case 4:
+                return u.intl.string(u.t.Op8B3N);
+            case 5:
+                return u.intl.string(u.t['/3vIRU']);
+            case 6:
+                if (null != t && !n) return u.intl.formatToPlainString(u.t.EIUjR0, { vanityUrl: t });
+                return u.intl.string(u.t.dGiD1N);
+            case 7:
+                return u.intl.string(u.t.vdu7oa);
             default:
-                return h.intl.string(h.t.gmCUFx);
+                return u.intl.string(u.t.DvMBkZ);
         }
     },
-    A = (e) => {
-        let n = d.Z.get((0, f.rR)(e)),
-            r = (0, c.ZP)();
-        return null != n && ['twitch', 'youtube'].includes(e) ? "url('".concat((0, u.wj)(r) ? n.icon.darkSVG : n.icon.lightSVG, "')") : null;
+    y = (e) => {
+        switch (e) {
+            case 'twitch':
+                return u.intl.string(u.t.AVGAk5);
+            case 'youtube':
+                return u.intl.string(u.t.PHSAsr);
+            default:
+                return u.intl.string(u.t.gmCUFx);
+        }
+    },
+    I = (e) => {
+        let t = s.Z.get((0, o.rR)(e)),
+            n = (0, a.ZP)();
+        return null != t && ['twitch', 'youtube'].includes(e) ? "url('".concat((0, r.wj)(n) ? t.icon.darkSVG : t.icon.lightSVG, "')") : null;
     };
-function C(e) {
+function b(e) {
     return {
         userId: e.user_id,
         sourceInviteCode: e.source_invite_code,
@@ -109,30 +88,30 @@ function C(e) {
         integrationType: e.integration_type
     };
 }
-async function N(e, n) {
-    let r = g(e, n),
-        i = v(r);
-    if (0 === i.length) return [];
-    y(r, 2);
+async function T(e, t) {
+    let n = f(e, t),
+        r = p(n);
+    if (0 === r.length) return [];
+    h(n, 2);
     try {
-        let n = await l.tn.post({
-            url: p.ANM.MEMBER_SAFETY_SUPPLEMENTAL(e),
-            body: { user_ids: i },
+        let t = await i.tn.post({
+            url: l.ANM.MEMBER_SAFETY_SUPPLEMENTAL(e),
+            body: { user_ids: r },
             rejectWithError: !0
         });
-        if (!Array.isArray(n.body)) return y(r, 0), [];
-        let a = n.body.map(C),
-            o = [];
+        if (!Array.isArray(t.body)) return h(n, 0), [];
+        let a = t.body.map(b),
+            s = [];
         a.forEach((e) => {
-            let { userId: n } = e;
-            return o.push(n);
+            let { userId: t } = e;
+            return s.push(t);
         });
-        let s = g(e, o),
-            u = i.filter((e) => !o.includes(e)),
-            c = g(e, u);
-        return y(s, 3), y(c, 0), a;
+        let o = f(e, s),
+            u = r.filter((e) => !s.includes(e)),
+            c = f(e, u);
+        return h(o, 3), h(c, 0), a;
     } catch (e) {
-        y(r, 0);
+        h(n, 0);
     }
     return [];
 }

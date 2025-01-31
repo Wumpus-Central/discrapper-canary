@@ -6,17 +6,14 @@ var n = r(439853),
     s = r(606166);
 a.List;
 var c = (function (t) {
-    var e, r;
-    function a() {
+    function e() {
         return t.apply(this, arguments) || this;
     }
     return (
-        (e = a),
-        (r = t),
-        (e.prototype = Object.create(r.prototype)),
+        (e.prototype = Object.create(t.prototype)),
         (e.prototype.constructor = e),
-        (e.__proto__ = r),
-        (a.prototype.render = function () {
+        (e.__proto__ = t),
+        (e.prototype.render = function () {
             var t = this.props,
                 e = t.block,
                 r = t.contentState,
@@ -84,7 +81,7 @@ var c = (function (t) {
                 _
             );
         }),
-        a
+        e
     );
 })(u.Component);
 t.exports = c;

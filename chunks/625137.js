@@ -1,61 +1,53 @@
-r.d(n, {
-    C5: function () {
-        return d;
-    },
-    CL: function () {
-        return u;
-    },
-    cf: function () {
-        return l;
-    },
-    iw: function () {
-        return c;
-    }
-});
-var i = r(789020);
-var a = r(149765),
-    o = r(866442),
-    s = r(709054);
-function l(e) {
-    e.permissions = a.vB(e.permissions);
+n.d(t, {
+    C5: () => u,
+    CL: () => o,
+    cf: () => s,
+    iw: () => l
+}),
+    n(789020);
+var i = n(149765),
+    r = n(866442),
+    a = n(709054);
+function s(e) {
+    e.permissions = i.vB(e.permissions);
 }
-function u(e) {
-    var n;
+function o(e) {
+    var t;
     return {
         id: e.id,
         name: e.name,
-        permissions: a.vB(e.permissions),
+        permissions: i.vB(e.permissions),
         mentionable: e.mentionable,
         position: e.position,
         originalPosition: e.position,
         color: e.color,
-        colorString: null != e.color && 0 !== e.color ? (0, o.Rf)(e.color) : null,
+        colorString: null != e.color && 0 !== e.color ? (0, r.Rf)(e.color) : null,
         hoist: e.hoist,
         managed: e.managed,
         tags: e.tags,
         icon: e.icon,
         unicodeEmoji: e.unicode_emoji,
-        flags: null !== (n = e.flags) && void 0 !== n ? n : 0
+        flags: null !== (t = e.flags) && void 0 !== t ? t : 0
     };
 }
-function c(e, n) {
-    if (null == n) return {};
-    let r = n.length - 1,
+function l(e, t) {
+    if (null == t) return {};
+    let n = t.length - 1,
         i = {};
     return (
-        n
-            .sort((n, r) => {
-                var i, a;
-                let o = e === n.id ? 1 / 0 : -(null !== (i = n.originalPosition) && void 0 !== i ? i : n.position),
-                    l = e === r.id ? 1 / 0 : -(null !== (a = r.originalPosition) && void 0 !== a ? a : r.position);
-                return o === l ? s.default.compare(n.id, r.id) : o < l ? -1 : o === l ? 0 : 1;
+        t
+            .sort((t, n) => {
+                var i, r;
+                let s = e === t.id ? 1 / 0 : -(null !== (i = t.originalPosition) && void 0 !== i ? i : t.position),
+                    o = e === n.id ? 1 / 0 : -(null !== (r = n.originalPosition) && void 0 !== r ? r : n.position);
+                return s === o ? a.default.compare(t.id, n.id) : s < o ? -1 : s === o ? 0 : 1;
             })
-            .forEach((e, n) => {
-                (e.position = r - n), (i[e.id] = e);
+            .forEach((e, t) => {
+                (e.position = n - t), (i[e.id] = e);
             }),
         i
     );
 }
-function d(e, n) {
-    return null == n ? {} : c(e, n.map(u));
+function u(e, t) {
+    return null == t ? {} : l(e, t.map(o));
 }

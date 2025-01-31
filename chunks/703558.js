@@ -1,232 +1,229 @@
-r.d(n, {
-    d: function () {
-        return i;
-    }
-});
+n.d(t, {
+    Z: () => L,
+    d: () => h
+}),
+    n(47120);
 var i,
-    a,
-    o = r(47120);
-var s = r(392711),
-    l = r.n(s),
-    u = r(442837),
-    c = r(570140),
-    d = r(823379),
-    f = r(709054),
-    p = r(314897),
-    h = r(592125),
-    _ = r(486472);
-function m(e, n, r) {
+    r = n(392711),
+    a = n.n(r),
+    s = n(442837),
+    o = n(570140),
+    l = n(823379),
+    u = n(709054),
+    c = n(314897),
+    d = n(592125),
+    f = n(486472);
+function _(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let g = r(981631).en1 + 500;
-!(function (e) {
-    (e[(e.ChannelMessage = 0)] = 'ChannelMessage'), (e[(e.ThreadSettings = 1)] = 'ThreadSettings'), (e[(e.FirstThreadMessage = 2)] = 'FirstThreadMessage'), (e[(e.ApplicationLauncherCommand = 3)] = 'ApplicationLauncherCommand'), (e[(e.Poll = 4)] = 'Poll'), (e[(e.SlashCommand = 5)] = 'SlashCommand'), (e[(e.ForwardContextMessage = 6)] = 'ForwardContextMessage');
-})(i || (i = {}));
-let E = {};
+let p = n(981631).en1 + 500;
+var h = (function (e) {
+    return (e[(e.ChannelMessage = 0)] = 'ChannelMessage'), (e[(e.ThreadSettings = 1)] = 'ThreadSettings'), (e[(e.FirstThreadMessage = 2)] = 'FirstThreadMessage'), (e[(e.ApplicationLauncherCommand = 3)] = 'ApplicationLauncherCommand'), (e[(e.Poll = 4)] = 'Poll'), (e[(e.SlashCommand = 5)] = 'SlashCommand'), (e[(e.ForwardContextMessage = 6)] = 'ForwardContextMessage'), e;
+})({});
+let m = {};
+function g(e) {
+    return e.length > p && (e = e.substr(0, p)), e;
+}
+function E(e) {
+    let t = m[e];
+    return null == t && (t = m[e] = {}), t;
+}
 function v(e) {
-    return e.length > g && (e = e.substr(0, g)), e;
-}
-function y(e) {
-    let n = E[e];
-    return null == n && (n = E[e] = {}), n;
-}
-function b(e) {
-    let { type: n, channelId: r, draft: i, draftType: a } = e,
-        o = h.Z.getChannel(r);
-    i === (null == o ? void 0 : o.template) && (i = '');
-    let s = p.default.getId();
+    let { type: t, channelId: n, draft: i, draftType: r } = e,
+        a = d.Z.getChannel(n);
+    i === (null == a ? void 0 : a.template) && (i = '');
+    let s = c.default.getId();
     if (null != s && null != i && '' !== i) {
-        var l;
-        let e = y(s),
-            n = e[r];
-        if ((null == n && (n = e[r] = {}), (i = v(i)) === (null === (l = n[a]) || void 0 === l ? void 0 : l.draft))) return !1;
-        n[a] = {
+        var o;
+        let e = E(s),
+            t = e[n];
+        if ((null == t && (t = e[n] = {}), (i = g(i)) === (null === (o = t[r]) || void 0 === o ? void 0 : o.draft))) return !1;
+        t[r] = {
             timestamp: Date.now(),
             draft: i
         };
-    } else S(r, a);
-    return 'DRAFT_SAVE' === n;
+    } else b(n, r);
+    return 'DRAFT_SAVE' === t;
+}
+function y(e) {
+    let { channelId: t, draftType: n } = e;
+    return b(t, n);
 }
 function I(e) {
-    let { channelId: n, draftType: r } = e;
-    return S(n, r);
-}
-function T(e) {
-    let { channelId: n, draft: r } = e,
-        i = p.default.getId();
+    let { channelId: t, draft: n } = e,
+        i = c.default.getId();
     if (null == i) return;
-    let a = y(i),
-        o = a[n];
-    null == o && (o = a[n] = {}),
-        (o[1] = {
+    let r = E(i),
+        a = r[t];
+    null == a && (a = r[t] = {}),
+        (a[1] = {
             timestamp: Date.now(),
-            ...o[1],
-            ...r,
-            parentChannelId: n
+            ...a[1],
+            ...n,
+            parentChannelId: t
         });
 }
-function S(e, n) {
-    let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : p.default.getId();
+function b(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : c.default.getId();
+    if (null == n) return !1;
+    let i = E(n),
+        r = i[e];
     if (null == r) return !1;
-    let i = y(r),
-        a = i[e];
-    if (null == a) return !1;
-    delete a[n], l().isEmpty(a) && delete i[e];
+    delete r[t], a().isEmpty(r) && delete i[e];
+}
+function T() {
+    let e = c.default.getId();
+    if (null == e || f.Z.totalUnavailableGuilds > 0) return;
+    let t = E(e);
+    for (let e in t) null == d.Z.getChannel(e) && delete t[e];
+}
+function S() {
+    let e = c.default.getId();
+    return e in m || (m[e] = {}), T(), !1;
 }
 function A() {
-    let e = p.default.getId();
-    if (null == e || _.Z.totalUnavailableGuilds > 0) return;
-    let n = y(e);
-    for (let e in n) null == h.Z.getChannel(e) && delete n[e];
+    return T(), !1;
 }
-function C() {
-    let e = p.default.getId();
-    return !(e in E) && (E[e] = {}), A(), !1;
-}
-function N() {
-    return A(), !1;
-}
-function R(e) {
+function N(e) {
     let {
-            channel: { id: n }
+            channel: { id: t }
         } = e,
-        r = p.default.getId();
-    if (null == r) return !1;
-    let i = y(r);
-    return delete i[n], !1;
+        n = c.default.getId();
+    if (null == n) return !1;
+    let i = E(n);
+    return delete i[t], !1;
 }
-function O(e) {
-    let { channel: n } = e,
-        r = p.default.getId();
-    if (null == r || n.ownerId === r) return !1;
-    let i = y(r),
-        a = i[n.parent_id];
-    if (null == a) return !1;
-    let o = a[1];
-    if (null == o) return !1;
-    if (o.parentMessageId !== f.default.castChannelIdAsMessageId(n.id)) return !1;
+function C(e) {
+    let { channel: t } = e,
+        n = c.default.getId();
+    if (null == n || t.ownerId === n) return !1;
+    let i = E(n),
+        r = i[t.parent_id];
+    if (null == r) return !1;
+    let a = r[1];
+    if (null == a || a.parentMessageId !== u.default.castChannelIdAsMessageId(t.id)) return !1;
     {
-        var s, l;
-        let e = i[n.parent_id];
+        var s, o;
+        let e = i[t.parent_id];
         if (null == e) return !1;
-        let r = null !== (l = null === (s = e[2]) || void 0 === s ? void 0 : s.draft) && void 0 !== l ? l : '';
-        '' !== r &&
-            (i[n.id] = {
+        let n = null !== (o = null === (s = e[2]) || void 0 === s ? void 0 : s.draft) && void 0 !== o ? o : '';
+        '' !== n &&
+            (i[t.id] = {
                 0: {
                     timestamp: Date.now(),
-                    draft: r
+                    draft: n
                 }
             }),
-            S(n.parent_id, 1),
-            S(n.parent_id, 2);
+            b(t.parent_id, 1),
+            b(t.parent_id, 2);
     }
 }
-function D(e) {
-    !e.isSwitchingAccount && (E = {});
+function R(e) {
+    e.isSwitchingAccount || (m = {});
 }
-function L(e) {
-    e.userId in E && delete E[e.userId];
+function O(e) {
+    e.userId in m && delete m[e.userId];
 }
-function x() {
-    for (let [e, n] of f.default.entries(E))
-        for (let [r, i] of f.default.entries(n)) {
-            let n = i[0];
-            null != n && ('' === n.draft || '' === n.draft.trim()) && S(r, 0, e);
+function D() {
+    for (let [e, t] of u.default.entries(m))
+        for (let [n, i] of u.default.entries(t)) {
+            let t = i[0];
+            null != t && ('' === t.draft || '' === t.draft.trim()) && b(n, 0, e);
         }
 }
-class w extends (a = u.ZP.PersistedStore) {
+class x extends (i = s.ZP.PersistedStore) {
     initialize(e) {
-        (E = null != e ? e : {}), x(), this.waitFor(p.default, h.Z, _.Z);
+        (m = null != e ? e : {}), D(), this.waitFor(c.default, d.Z, f.Z);
     }
     getState() {
-        return E;
+        return m;
     }
     getThreadDraftWithParentMessageId(e) {
-        let n = p.default.getId();
-        if (null == n) return;
-        let r = y(n),
-            i = f.default.keys(r).find((n) => {
-                let r = this.getThreadSettings(n);
-                return (null == r ? void 0 : r.parentMessageId) === e;
+        let t = c.default.getId();
+        if (null == t) return;
+        let n = E(t),
+            i = u.default.keys(n).find((t) => {
+                let n = this.getThreadSettings(t);
+                return (null == n ? void 0 : n.parentMessageId) === e;
             });
         return null != i ? this.getThreadSettings(i) : void 0;
     }
     getRecentlyEditedDrafts(e) {
-        let n = p.default.getId();
-        if (null == n) return [];
-        let r = y(n);
-        return l()(r)
-            .mapValues((n) => (null == n ? void 0 : n[e]))
-            .pickBy(d.lm)
+        let t = c.default.getId();
+        if (null == t) return [];
+        let n = E(t);
+        return a()(n)
+            .mapValues((t) => (null == t ? void 0 : t[e]))
+            .pickBy(l.lm)
             .toPairs()
             .map((e) => {
-                let [n, { timestamp: r, draft: i }] = e;
+                let [t, { timestamp: n, draft: i }] = e;
                 return {
-                    channelId: n,
-                    timestamp: r,
+                    channelId: t,
+                    timestamp: n,
                     draft: i
                 };
             })
             .sortBy((e) => {
-                let { timestamp: n } = e;
-                return -n;
+                let { timestamp: t } = e;
+                return -t;
             })
             .value();
     }
-    getDraft(e, n) {
-        let r = p.default.getId();
-        if (null == r) return '';
-        let i = y(r)[e];
+    getDraft(e, t) {
+        let n = c.default.getId();
+        if (null == n) return '';
+        let i = E(n)[e];
         if (null != i) {
-            let e = i[n];
+            let e = i[t];
             if (null != e) return e.draft;
         }
         return '';
     }
     getThreadSettings(e) {
-        let n = p.default.getId();
-        if (null == n) return null;
-        let r = y(n)[e];
-        return null == r ? null : r[1];
+        let t = c.default.getId();
+        if (null == t) return null;
+        let n = E(t)[e];
+        return null == n ? null : n[1];
     }
 }
-m(w, 'displayName', 'DraftStore'),
-    m(w, 'persistKey', 'DraftStore'),
-    m(w, 'migrations', [
+_(x, 'displayName', 'DraftStore'),
+    _(x, 'persistKey', 'DraftStore'),
+    _(x, 'migrations', [
         (e) => {
             if (null == e) return {};
-            for (let n in e) 'timestamp' in e[n] && (e[n] = { 0: e[n] });
+            for (let t in e) 'timestamp' in e[t] && (e[t] = { 0: e[t] });
             return e;
         },
         (e) => {
-            let n = p.default.getId();
-            if (null == e || null == n) return {};
-            let r = {},
-                i = (r[n] = {});
-            for (let n in e) i[n] = e[n];
-            return r;
+            let t = c.default.getId();
+            if (null == e || null == t) return {};
+            let n = {},
+                i = (n[t] = {});
+            for (let t in e) i[t] = e[t];
+            return n;
         }
-    ]),
-    (n.Z = new w(c.Z, {
-        CONNECTION_OPEN: C,
-        LOGOUT: D,
-        MULTI_ACCOUNT_REMOVE_ACCOUNT: L,
-        GUILD_DELETE: N,
-        CHANNEL_DELETE: R,
-        THREAD_DELETE: R,
-        THREAD_CREATE: O,
-        DRAFT_SAVE: b,
-        DRAFT_CHANGE: b,
-        DRAFT_CLEAR: I,
-        THREAD_SETTINGS_DRAFT_CHANGE: T
-    }));
+    ]);
+let L = new x(o.Z, {
+    CONNECTION_OPEN: S,
+    LOGOUT: R,
+    MULTI_ACCOUNT_REMOVE_ACCOUNT: O,
+    GUILD_DELETE: A,
+    CHANNEL_DELETE: N,
+    THREAD_DELETE: N,
+    THREAD_CREATE: C,
+    DRAFT_SAVE: v,
+    DRAFT_CHANGE: v,
+    DRAFT_CLEAR: y,
+    THREAD_SETTINGS_DRAFT_CHANGE: I
+});

@@ -1,9 +1,5 @@
-r.d(n, {
-    Z: function () {
-        return a;
-    }
-});
-var i = r(192379);
-function a(e) {
+n.d(t, { Z: () => r });
+var i = n(192379);
+function r(e) {
     return i.useState(e)[0];
 }

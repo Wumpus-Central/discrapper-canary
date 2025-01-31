@@ -1,9 +1,5 @@
-function i(e, n) {
-    for (var r = e < 0 ? '-' : '', i = Math.abs(e).toString(); i.length < n; ) i = '0' + i;
-    return r + i;
+function i(e, t) {
+    for (var n = e < 0 ? '-' : '', i = Math.abs(e).toString(); i.length < t; ) i = '0' + i;
+    return n + i;
 }
-r.d(n, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });

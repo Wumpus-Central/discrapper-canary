@@ -1,51 +1,47 @@
-r.d(n, {
-    Z: function () {
-        return m;
-    }
-});
-var i = r(594190),
-    a = r(569545),
-    o = r(199902),
-    s = r(314897),
-    l = r(158776),
-    u = r(19780),
-    c = r(979651),
-    d = r(709054),
-    f = r(356659),
-    p = r(981631),
-    h = r(388032);
-function _(e) {
-    var n, r;
+n.d(t, { Z: () => h });
+var i = n(594190),
+    r = n(569545),
+    a = n(199902),
+    s = n(314897),
+    o = n(158776),
+    l = n(19780),
+    u = n(979651),
+    c = n(709054),
+    d = n(356659),
+    f = n(981631),
+    _ = n(388032);
+function p(e) {
+    var t, n;
     if (null != e) {
-        let { ownerId: n } = a.my(e);
-        if (n !== s.default.getId()) {
-            let e = l.Z.getActivities(n).find((e) => e.type === p.IIU.PLAYING);
+        let { ownerId: t } = r.my(e);
+        if (t !== s.default.getId()) {
+            let e = o.Z.getActivities(t).find((e) => e.type === f.IIU.PLAYING);
             return {
                 sourceName: null == e ? void 0 : e.name,
                 sourceApplicationId: null == e ? void 0 : e.application_id
             };
         }
     }
-    let u = o.Z.getStreamerActiveStreamMetadata(),
-        c = null == u ? void 0 : u.pid,
-        d = (() => (null != u ? (null != c ? i.ZP.getGameForPID(c) : null) : i.ZP.getVisibleGame()))();
+    let l = a.Z.getStreamerActiveStreamMetadata(),
+        u = null == l ? void 0 : l.pid,
+        c = null != l ? (null != u ? i.ZP.getGameForPID(u) : null) : i.ZP.getVisibleGame();
     return {
-        sourceName: null !== (n = null == u ? void 0 : u.sourceName) && void 0 !== n ? n : null == d ? void 0 : d.name,
-        sourceApplicationId: null !== (r = null == u ? void 0 : u.id) && void 0 !== r ? r : null == d ? void 0 : d.id
+        sourceName: null !== (t = null == l ? void 0 : l.sourceName) && void 0 !== t ? t : null == c ? void 0 : c.name,
+        sourceApplicationId: null !== (n = null == l ? void 0 : l.id) && void 0 !== n ? n : null == c ? void 0 : c.id
     };
 }
-function m(e) {
-    let { sourceName: n, sourceApplicationId: r } = _(e),
-        i = u.Z.getChannelId(),
-        a = [s.default.getId()];
+function h(e) {
+    let { sourceName: t, sourceApplicationId: n } = p(e),
+        i = l.Z.getChannelId(),
+        r = [s.default.getId()];
     return (
-        null != i && (a = Object.keys(c.Z.getVoiceStatesForChannel(i))),
+        null != i && (r = Object.keys(u.Z.getVoiceStatesForChannel(i))),
         {
-            id: d.default.fromTimestamp(Date.now()),
-            version: f.Bg,
-            applicationName: null != n ? n : h.intl.string(h.t.qtSJxc),
-            applicationId: r,
-            users: a,
+            id: c.default.fromTimestamp(Date.now()),
+            version: d.Bg,
+            applicationName: null != t ? t : _.intl.string(_.t.qtSJxc),
+            applicationId: n,
+            users: r,
             clipMethod: 'manual',
             length: 0,
             thumbnail: ''

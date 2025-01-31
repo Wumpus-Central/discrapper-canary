@@ -1,26 +1,21 @@
-e.r(t),
-    e.d(t, {
-        default: function () {
-            return d;
-        }
-    });
-var l = e(200651);
-e(192379);
-var i = e(481060),
-    r = e(239091),
-    u = e(358085),
-    a = e(905041),
-    o = e(388032);
+l.d(t, { default: () => d });
+var e = l(200651);
+l(192379);
+var i = l(481060),
+    a = l(239091),
+    r = l(358085),
+    o = l(905041),
+    u = l(388032);
 function d(n) {
-    let { href: t, textContent: e, onSelect: d } = n,
-        c = (0, a.Z)(t, e);
-    return u.isPlatformEmbedded && null != c
-        ? (0, l.jsx)(i.Menu, {
+    let { href: t, textContent: l, onSelect: d } = n,
+        s = (0, o.Z)(t, l);
+    return r.isPlatformEmbedded && null != s
+        ? (0, e.jsx)(i.v2r, {
               navId: 'image-context',
-              onClose: r.Zy,
-              'aria-label': o.intl.string(o.t.Zow2V1),
+              onClose: a.Zy,
+              'aria-label': u.intl.string(u.t.Zow2V1),
               onSelect: d,
-              children: (0, l.jsx)(i.MenuGroup, { children: c })
+              children: (0, e.jsx)(i.kSQ, { children: s })
           })
         : null;
 }

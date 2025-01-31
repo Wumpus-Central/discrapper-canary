@@ -1,16 +1,12 @@
-n.d(t, {
-    Z: function () {
-        return s;
-    }
-});
+n.d(t, { Z: () => r });
 var i = n(969943),
-    r = n(388032);
-function s(e) {
+    s = n(388032);
+function r(e) {
     switch (e) {
         case i.mX.REDUCED_MOTION:
-            return r.intl.format(r.t['1dT9V1'], {});
+            return s.intl.format(s.t['1dT9V1'], {});
         case i.mX.REDUCED_MOTION_STICKERS:
-            return r.intl.string(r.t['2ExvRk']);
+            return s.intl.string(s.t['2ExvRk']);
         default:
             return;
     }

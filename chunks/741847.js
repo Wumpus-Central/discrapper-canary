@@ -1,16 +1,12 @@
-r.d(n, {
-    Z: function () {
-        return a;
-    }
-});
-var i = r(58346);
-function a(e) {
-    var n;
+n.d(t, { Z: () => r });
+var i = n(58346);
+function r(e) {
+    var t;
     return {
         code: e.code,
         state: i.Rj.RESOLVED,
         name: e.name,
-        description: null !== (n = e.description) && void 0 !== n ? n : '',
+        description: null !== (t = e.description) && void 0 !== t ? t : '',
         creatorId: e.creator_id,
         creator: e.creator,
         createdAt: e.created_at,

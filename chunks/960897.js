@@ -1,1 +1,2 @@
-e.exports = { subtext: 'subtext_ffa9b9' };
+var i = { subtext: 'subtext_beaa93' };
+e.exports = i;

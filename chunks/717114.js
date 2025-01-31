@@ -1,48 +1,47 @@
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(442837),
-    l = r(481060),
-    u = r(923928),
-    c = r(468026),
-    d = r(594190),
-    f = r(131951),
-    p = r(19780),
-    h = r(63063),
-    _ = r(981631),
-    m = r(388032);
-let g = () => {
-    let [e, n] = (0, s.Wu)([d.ZP], () => [d.ZP.canShowAdminWarning, d.ZP.getVisibleGame()], []),
-        r = (0, s.e7)([p.Z], () => p.Z.isConnected(), []),
-        i = (0, s.e7)([f.Z], () => f.Z.getMode() === _.pM4.PUSH_TO_TALK, []),
-        g = null != n && n.elevated && r && i && e,
-        E = o.useRef(null);
-    function v() {
-        null !== E.current && ((0, l.closeModal)(E.current), (E.current = null));
+n.d(t, { Z: () => h }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(442837),
+    s = n(481060),
+    o = n(923928),
+    l = n(468026),
+    u = n(594190),
+    c = n(131951),
+    d = n(19780),
+    f = n(63063),
+    _ = n(981631),
+    p = n(388032);
+let h = () => {
+    let [e, t] = (0, a.Wu)([u.ZP], () => [u.ZP.canShowAdminWarning, u.ZP.getVisibleGame()], []),
+        n = (0, a.e7)([d.Z], () => d.Z.isConnected(), []),
+        h = (0, a.e7)([c.Z], () => c.Z.getMode() === _.pM4.PUSH_TO_TALK, []),
+        m = null != t && t.elevated && n && h && e,
+        g = r.useRef(null);
+    function E() {
+        null !== g.current && ((0, s.Mr3)(g.current), (g.current = null));
     }
     return (
-        o.useEffect(
+        r.useEffect(
             () => (
-                g
-                    ? (E.current = (0, l.openModal)((e) =>
-                          (0, a.jsx)(c.default, {
-                              title: m.intl.string(m.t.eotlXF),
-                              body: m.intl.formatToPlainString(m.t.Lw6KXV, { game: null == n ? void 0 : n.name }),
-                              secondaryConfirmText: m.intl.string(m.t['5E9SBw']),
-                              onConfirmSecondary: () => u.Z.clearPTTAdminWarning(),
-                              onConfirm: () => window.open(h.Z.getArticleURL(_.BhN.PUSH_TO_TALK_ADMINISTRATOR_MODE), '_blank'),
-                              confirmText: m.intl.string(m.t.psXQHB),
+                m
+                    ? (g.current = (0, s.h7j)((e) =>
+                          (0, i.jsx)(l.default, {
+                              title: p.intl.string(p.t.eotlXF),
+                              body: p.intl.formatToPlainString(p.t.Lw6KXV, { game: null == t ? void 0 : t.name }),
+                              secondaryConfirmText: p.intl.string(p.t['5E9SBw']),
+                              onConfirmSecondary: () => o.Z.clearPTTAdminWarning(),
+                              onConfirm: () => window.open(f.Z.getArticleURL(_.BhN.PUSH_TO_TALK_ADMINISTRATOR_MODE), '_blank'),
+                              confirmText: p.intl.string(p.t.psXQHB),
                               ...e
                           })
                       ))
-                    : v(),
+                    : E(),
                 () => {
-                    v();
+                    E();
                 }
             ),
-            [n, g]
+            [t, m]
         ),
         null
     );
 };
-n.Z = g;

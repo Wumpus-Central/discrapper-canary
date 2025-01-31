@@ -1,8 +1,9 @@
-e.exports = {
-    wrapper: 'wrapper_b2fcf5',
-    infoWrapper: 'infoWrapper_b2fcf5',
-    usageWrapper: 'usageWrapper_b2fcf5',
-    image: 'image_b2fcf5',
-    description: 'description_b2fcf5',
-    source: 'source_b2fcf5'
+var i = {
+    wrapper: 'wrapper__78aa3',
+    infoWrapper: 'infoWrapper__78aa3',
+    usageWrapper: 'usageWrapper__78aa3',
+    image: 'image__78aa3',
+    description: 'description__78aa3',
+    source: 'source__78aa3'
 };
+e.exports = i;

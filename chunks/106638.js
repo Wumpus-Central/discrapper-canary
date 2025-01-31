@@ -1,12 +1,13 @@
 e.exports = {
-    visuallyHidden: 'visuallyHidden_b7d6f1',
-    label: 'label_b7d6f1',
-    labelUnchecked: 'labelUnchecked_b7d6f1',
-    labelChecked: 'labelChecked_b7d6f1',
-    burstText: 'burstText_b7d6f1',
-    burstTextChecked: 'burstTextChecked_b7d6f1',
-    tooltip: 'tooltip_b7d6f1',
-    tooltipContainer: 'tooltipContainer_b7d6f1',
-    transition: 'transition_b7d6f1',
-    shine: 'shine_b7d6f1'
+    visuallyHidden: 'visuallyHidden_df4aaf',
+    label: 'label_df4aaf',
+    labelUnchecked: 'labelUnchecked_df4aaf',
+    labelChecked: 'labelChecked_df4aaf',
+    burstText: 'burstText_df4aaf',
+    burstTextChecked: 'burstTextChecked_df4aaf',
+    tooltip: 'tooltip_df4aaf',
+    tooltipContainer: 'tooltipContainer_df4aaf',
+    transition: 'transition_df4aaf',
+    shine: 'shine_df4aaf',
+    Shine: 'Shine_df4aaf'
 };

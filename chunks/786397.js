@@ -1,39 +1,35 @@
-r.d(n, {
-    B: function () {
-        return d;
-    },
-    w: function () {
-        return f;
-    }
-});
-var i = r(47120);
-var a = r(192379),
-    o = r(442837),
-    s = r(846519),
-    l = r(594174),
-    u = r(431),
-    c = r(74538);
-function d(e) {
+n.d(t, {
+    B: () => u,
+    w: () => c
+}),
+    n(47120);
+var i = n(192379),
+    r = n(442837),
+    a = n(846519),
+    s = n(594174),
+    o = n(431),
+    l = n(74538);
+function u(e) {
     return null != e && null != e.expires_at && Date.now() > Date.parse(e.expires_at);
 }
-function f(e) {
-    let n = (0, o.e7)([u.Z], () => u.Z.getUserTrialOffer(e)),
-        [r, i] = a.useState(d(n)),
-        f = (0, o.e7)([l.default], () => (0, c.I5)(l.default.getCurrentUser()));
+function c(e) {
+    let t = (0, r.e7)([o.Z], () => o.Z.getUserTrialOffer(e)),
+        [n, c] = i.useState(u(t)),
+        d = (0, r.e7)([s.default], () => (0, l.I5)(s.default.getCurrentUser()));
     return (
-        a.useEffect(() => {
-            if (null != n && null != n.expires_at) {
-                let e = new s.V7(),
-                    a = () => {
-                        let o = null != n.expires_at ? Date.parse(n.expires_at) - Date.now() : 0;
+        i.useEffect(() => {
+            if (null != t && null != t.expires_at) {
+                let e = new a.V7(),
+                    i = () => {
+                        let r = null != t.expires_at ? Date.parse(t.expires_at) - Date.now() : 0;
                         null == e ||
-                            e.start(o, () => {
-                                !r && d(n) ? i(!0) : a();
+                            e.start(r, () => {
+                                !n && u(t) ? c(!0) : i();
                             });
                     };
-                return a(), () => e.stop();
+                return i(), () => e.stop();
             }
-        }, [r, n]),
-        r || f ? null : n
+        }, [n, t]),
+        n || d ? null : t
     );
 }

@@ -1,15 +1,10 @@
-n.r(t),
-    n.d(t, {
-        GlobalDiscoveryServerCardPopout: function () {
-            return d;
-        },
-        default: function () {
-            return c;
-        }
-    });
+n.d(t, {
+    R: () => d,
+    default: () => c
+});
 var i = n(200651),
-    r = n(192379),
-    l = n(481060),
+    l = n(192379),
+    r = n(481060),
     a = n(239091),
     s = n(299206),
     o = n(388032);
@@ -21,26 +16,26 @@ function c(e) {
             shiftId: n,
             onSuccess: d
         }),
-        m = r.useCallback((e) => {
+        m = l.useCallback((e) => {
             e.stopPropagation();
         }, []);
-    return (0, i.jsx)(l.Clickable, {
+    return (0, i.jsx)(r.P3F, {
         onClick: m,
-        children: (0, i.jsx)(l.Menu, {
+        children: (0, i.jsx)(r.v2r, {
             onSelect: c,
             navId: 'guild-discovery-context-menu',
             'aria-label': null != u ? u : o.intl.string(o.t.ogxXGh),
             onClose: a.Zy,
-            children: (0, i.jsx)(l.MenuGroup, { children: h })
+            children: (0, i.jsx)(r.kSQ, { children: h })
         })
     });
 }
 let d = (e) => {
-    let { guild: t, children: n, onRequestOpen: r, onRequestClose: a } = e;
-    return (0, i.jsx)(l.Popout, {
-        onRequestOpen: r,
+    let { guild: t, children: n, onRequestOpen: l, onRequestClose: a } = e;
+    return (0, i.jsx)(r.yRy, {
+        onRequestOpen: l,
         onRequestClose: a,
-        animation: l.Popout.Animation.NONE,
+        animation: r.yRy.Animation.NONE,
         position: 'bottom',
         spacing: 4,
         align: 'right',

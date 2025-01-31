@@ -1,59 +1,55 @@
-n.d(t, {
-    Z: function () {
-        return E;
-    }
-});
+n.d(t, { Z: () => E });
 var i = n(200651);
 n(192379);
-var r = n(120356),
-    s = n.n(r),
-    a = n(498607),
-    l = n.n(a),
+var s = n(120356),
+    r = n.n(s),
+    l = n(498607),
+    a = n.n(l),
     o = n(692547),
     c = n(481060),
     d = n(220082),
     u = n(687158),
     m = n(576635),
-    g = n(74538),
-    h = n(193528),
-    p = n(993413),
+    h = n(74538),
+    g = n(193528),
+    _ = n(993413),
     x = n(388032),
-    f = n(139019);
+    p = n(139019);
 function E(e) {
-    let { user: t, pendingAvatar: n, pendingColors: r, onThemeColorsChange: a, preventDisabled: E, guildId: _, className: C, showPremiumIcon: T = !0, showResetThemeButton: S = !1, forcedDivider: b } = e,
-        I = (0, u.ZP)(t.id, _),
-        { primaryColor: N, secondaryColor: v } = (0, m.Z)({
+    let { user: t, pendingAvatar: n, pendingColors: s, onThemeColorsChange: l, preventDisabled: E, guildId: C, className: f, showPremiumIcon: T = !0, showResetThemeButton: N = !1, forcedDivider: I } = e,
+        S = (0, u.ZP)(t.id, C),
+        { primaryColor: b, secondaryColor: v } = (0, m.Z)({
             user: t,
-            displayProfile: I,
-            pendingThemeColors: r,
+            displayProfile: S,
+            pendingThemeColors: s,
             isPreview: !0
         }),
-        A = g.ZP.canUsePremiumProfileCustomization(t),
-        j = null != n ? n : t.getAvatarURL(_, 80),
-        O = (0, c.useToken)(o.Z.unsafe_rawColors.PRIMARY_530).hex(),
-        R = (0, d.Cf)(j, O, !1);
-    if (null == N || null == v) return null;
+        j = h.ZP.canUsePremiumProfileCustomization(t),
+        A = null != n ? n : t.getAvatarURL(C, 80),
+        O = (0, c.dQu)(o.Z.unsafe_rawColors.PRIMARY_530).hex(),
+        R = (0, d.Cf)(A, O, !1);
+    if (null == b || null == v) return null;
     let P = (e) => {
-        a(l()(e, null == I ? void 0 : I.themeColors) ? void 0 : e);
+        l(a()(e, null == S ? void 0 : S.themeColors) ? void 0 : e);
     };
-    return (0, i.jsx)(p.Z, {
+    return (0, i.jsx)(_.Z, {
         title: x.intl.string(x.t.DMeO2d),
-        disabled: !A && !E,
-        className: s()(f.__invalid_profileThemesSection, C),
+        disabled: !j && !E,
+        className: r()(p.__invalid_profileThemesSection, f),
         showPremiumIcon: T,
-        forcedDivider: b,
+        forcedDivider: I,
         children: (0, i.jsxs)('div', {
-            className: f.sectionContainer,
+            className: p.sectionContainer,
             children: [
                 (0, i.jsx)('div', {
-                    className: f.sparkleContainer,
-                    children: (0, i.jsx)(h.Z, {
+                    className: p.sparkleContainer,
+                    children: (0, i.jsx)(g.Z, {
                         onChange: (e) => P([e, v]),
-                        color: N,
+                        color: b,
                         suggestedColors: R,
                         showEyeDropper: !0,
                         label: (0, i.jsx)(c.Text, {
-                            className: f.colorSwatchLabel,
+                            className: p.colorSwatchLabel,
                             color: 'header-secondary',
                             variant: 'text-xs/normal',
                             'aria-hidden': !0,
@@ -62,14 +58,14 @@ function E(e) {
                     })
                 }),
                 (0, i.jsx)('div', {
-                    className: f.sparkleContainer,
-                    children: (0, i.jsx)(h.Z, {
-                        onChange: (e) => P([N, e]),
+                    className: p.sparkleContainer,
+                    children: (0, i.jsx)(g.Z, {
+                        onChange: (e) => P([b, e]),
                         color: v,
                         suggestedColors: R,
                         showEyeDropper: !0,
                         label: (0, i.jsx)(c.Text, {
-                            className: f.colorSwatchLabel,
+                            className: p.colorSwatchLabel,
                             color: 'header-secondary',
                             variant: 'text-xs/normal',
                             'aria-hidden': !0,
@@ -77,13 +73,13 @@ function E(e) {
                         })
                     })
                 }),
-                S &&
-                    null != _ &&
-                    (0, i.jsx)(c.Button, {
-                        className: f.resetButton,
-                        color: c.Button.Colors.PRIMARY,
-                        look: c.Button.Looks.LINK,
-                        size: c.Button.Sizes.SMALL,
+                N &&
+                    null != C &&
+                    (0, i.jsx)(c.zxk, {
+                        className: p.resetButton,
+                        color: c.zxk.Colors.PRIMARY,
+                        look: c.zxk.Looks.LINK,
+                        size: c.zxk.Sizes.SMALL,
                         onClick: () => P([null, null]),
                         children: x.intl.string(x.t['L+Gmoa'])
                     })

@@ -1,44 +1,40 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-});
+n.d(t, { Z: () => u });
 var i = n(200651);
 n(192379);
-var r = n(442837),
-    l = n(481060),
-    a = n(592125),
-    o = n(739566),
-    s = n(834129),
+var l = n(442837),
+    a = n(481060),
+    r = n(592125),
+    s = n(739566),
+    o = n(834129),
     c = n(388032),
-    u = n(798168);
-function d(e) {
+    d = n(798168);
+function u(e) {
     var t;
-    let { message: n, compact: d, usernameHook: m, onClickThread: h, onClickViewThreads: f, onContextMenuThread: p } = e,
-        _ = (0, o.ZP)(n),
-        g = m(_),
-        E = (0, r.e7)([a.Z], () => {
+    let { message: n, compact: u, usernameHook: m, onClickThread: h, onClickViewThreads: _, onContextMenuThread: p } = e,
+        g = (0, s.ZP)(n),
+        f = m(g),
+        x = (0, l.e7)([r.Z], () => {
             var e;
-            return a.Z.getChannel(null === (e = n.messageReference) || void 0 === e ? void 0 : e.channel_id);
+            return r.Z.getChannel(null === (e = n.messageReference) || void 0 === e ? void 0 : e.channel_id);
         }),
-        C = c.intl.format(c.t.cZ9Uf3, {
-            actorName: _.nick,
-            actorHook: g,
-            threadName: null !== (t = null == E ? void 0 : E.name) && void 0 !== t ? t : n.content,
+        E = c.intl.format(c.t.cZ9Uf3, {
+            actorName: g.nick,
+            actorHook: f,
+            threadName: null !== (t = null == x ? void 0 : x.name) && void 0 !== t ? t : n.content,
             threadOnClick: {
                 onClick: h,
                 onContextMenu: p
             },
-            viewThreadsOnClick: f
+            viewThreadsOnClick: _
         });
-    return (0, i.jsx)(s.Z, {
-        iconNode: (0, i.jsx)(l.ThreadIcon, {
+    return (0, i.jsx)(o.Z, {
+        iconNode: (0, i.jsx)(a.or_, {
             size: 'md',
             color: 'currentColor',
-            className: u.icon
+            className: d.icon
         }),
         timestamp: n.timestamp,
-        compact: d,
-        children: C
+        compact: u,
+        children: E
     });
 }

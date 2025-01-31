@@ -1,18 +1,14 @@
-r.d(n, {
-    JL: function () {
-        return s;
-    },
-    i9: function () {
-        return o;
-    }
-});
-var i = r(47120);
-let a = (0, r(15729).U)(() => ({ hasFiredFromMessage: new Set() }));
-function o(e) {
-    let { hasFiredFromMessage: n } = a.getState();
-    n.add(e), a.setState({ hasFiredFromMessage: n });
+n.d(t, {
+    JL: () => a,
+    i9: () => r
+}),
+    n(47120);
+let i = (0, n(15729).U)(() => ({ hasFiredFromMessage: new Set() }));
+function r(e) {
+    let { hasFiredFromMessage: t } = i.getState();
+    t.add(e), i.setState({ hasFiredFromMessage: t });
 }
-function s(e) {
-    let { hasFiredFromMessage: n } = a.getState();
-    return n.has(e);
+function a(e) {
+    let { hasFiredFromMessage: t } = i.getState();
+    return t.has(e);
 }

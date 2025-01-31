@@ -1,59 +1,55 @@
-t.d(n, {
-    s: function () {
-        return m;
-    }
-});
+t.d(n, { s: () => C });
 var a = t(200651),
-    r = t(192379),
-    i = t(120356),
-    l = t.n(i),
+    i = t(192379),
+    r = t(120356),
+    l = t.n(r),
     o = t(481060),
     s = t(346610),
-    u = t(868643),
-    c = t(912332),
+    c = t(868643),
+    u = t(912332),
     d = t(701865),
-    f = t(388032),
-    _ = t(923007);
-function h() {
-    (0, o.closeModal)(d.U);
+    _ = t(388032),
+    h = t(923007);
+function f() {
+    (0, o.Mr3)(d.U);
 }
 function p(e) {
-    let { className: n, message: t, target: i, onClick: s } = e,
-        u = r.useCallback(() => {
-            if ((null == s || s(), 'embed' === i.type)) {
-                (0, c.l8)({
+    let { className: n, message: t, target: r, onClick: s } = e,
+        c = i.useCallback(() => {
+            if ((null == s || s(), 'embed' === r.type)) {
+                (0, u.l8)({
                     message: t,
                     source: 'media-viewer',
-                    forwardOptions: { onlyEmbedIndices: [i.embedIndex] },
-                    onRequestSent: h
+                    forwardOptions: { onlyEmbedIndices: [r.embedIndex] },
+                    onRequestSent: f
                 });
                 return;
             }
-            (0, c.l8)({
+            (0, u.l8)({
                 message: t,
                 source: 'media-viewer',
-                forwardOptions: { onlyAttachmentIds: [i.attachmentId] },
-                onRequestSent: h
+                forwardOptions: { onlyAttachmentIds: [r.attachmentId] },
+                onRequestSent: f
             });
-        }, [t, i, s]);
-    return (0, a.jsx)(o.Clickable, {
-        className: l()(_.container, n),
-        onClick: u,
+        }, [t, r, s]);
+    return (0, a.jsx)(o.P3F, {
+        className: l()(h.container, n),
+        onClick: c,
         children: (0, a.jsx)(o.Text, {
-            className: _.text,
+            className: h.text,
             variant: 'text-sm/medium',
             color: 'always-white',
-            children: f.intl.string(f.t.I3ltXF)
+            children: _.intl.string(_.t.I3ltXF)
         })
     });
 }
-function m(e, n, t) {
-    let { canForwardMessages: r } = (0, s.WT)({ location: 'ForwardLink' }, { autoTrackExposure: !1 });
-    return r && (0, u.h)(e)
-        ? (r) => {
-              let { className: i } = r;
+function C(e, n, t) {
+    let { canForwardMessages: i } = (0, s.WT)({ location: 'ForwardLink' }, { autoTrackExposure: !1 });
+    return i && (0, c.h)(e)
+        ? (i) => {
+              let { className: r } = i;
               return (0, a.jsx)(p, {
-                  className: i,
+                  className: r,
                   message: e,
                   target: n,
                   onClick: t

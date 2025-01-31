@@ -1,4 +1,5 @@
-e.exports = {
-    icon: 'icon_ab4bd1',
-    connectionInstructions: 'connectionInstructions_ab4bd1'
+var i = {
+    icon: 'icon_d2b05e',
+    connectionInstructions: 'connectionInstructions_d2b05e'
 };
+e.exports = i;

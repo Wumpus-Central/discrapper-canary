@@ -1,150 +1,144 @@
-t.d(n, {
-    Z: function () {
-        return N;
-    }
-}),
-    t(47120),
-    t(789020);
-var i = t(200651),
-    l = t(192379),
-    a = t(442837),
-    s = t(481060),
-    u = t(87051),
-    r = t(113449),
-    o = t(748756),
-    d = t(686660),
-    c = t(122074),
-    g = t(9156),
-    E = t(621600),
-    h = t(981631),
-    M = t(490897),
-    f = t(526761),
-    _ = t(388032);
-function N(e) {
-    let n = (0, c.ng)(e, !0),
-        N = (0, c.U)();
-    return (0, i.jsxs)(s.MenuItem, {
+n.d(t, { Z: () => f }), n(47120), n(789020);
+var i = n(200651),
+    l = n(192379),
+    s = n(442837),
+    a = n(481060),
+    r = n(87051),
+    d = n(113449),
+    u = n(748756),
+    c = n(686660),
+    o = n(122074),
+    g = n(9156),
+    E = n(621600),
+    h = n(981631),
+    S = n(490897),
+    N = n(526761),
+    _ = n(388032);
+function f(e) {
+    let t = (0, o.ng)(e, !0),
+        f = (0, o.U)();
+    return (0, i.jsxs)(a.sNh, {
         id: 'notification',
         label: (0, i.jsxs)(i.Fragment, {
-            children: [N, _.intl.string(_.t.HcoRu7)]
+            children: [f, _.intl.string(_.t.HcoRu7)]
         }),
         action: () => {
-            (0, s.openModalLazy)(async () => {
-                let { default: n } = await Promise.all([t.e('5863'), t.e('67913')]).then(t.bind(t, 751212));
-                return (t) =>
-                    (0, i.jsx)(n, {
-                        ...t,
+            (0, a.ZDy)(async () => {
+                let { default: t } = await Promise.all([n.e('5863'), n.e('67913')]).then(n.bind(n, 751212));
+                return (n) =>
+                    (0, i.jsx)(t, {
+                        ...n,
                         guildId: e
                     });
             });
         },
         children: [
             (function (e) {
-                let [n, t] = l.useState(!1),
-                    [c, N] = l.useState(!1),
-                    S = (0, a.e7)([g.ZP], () => g.ZP.getGuildUnreadSetting(e)),
-                    I = (0, a.e7)([g.ZP], () => g.ZP.getMessageNotifications(e)),
-                    p = c ? d.s8.CUSTOM : (0, d.gs)(S, I),
-                    m = (n) => {
-                        N(!1);
-                        let t = { message_notifications: n };
-                        n === h.bL.ALL_MESSAGES && S !== M.i.ALL_MESSAGES && (t.flags = (0, r.Q4)(g.ZP.getGuildFlags(e), f.vc.UNREADS_ALL_MESSAGES)), u.Z.updateGuildNotificationSettings(e, t, E.UE.notifications(n));
+                let [t, n] = l.useState(!1),
+                    [o, f] = l.useState(!1),
+                    Z = (0, s.e7)([g.ZP], () => g.ZP.getGuildUnreadSetting(e)),
+                    x = (0, s.e7)([g.ZP], () => g.ZP.getMessageNotifications(e)),
+                    A = o ? c.s8.CUSTOM : (0, c.gs)(Z, x),
+                    p = (t) => {
+                        f(!1);
+                        let n = { message_notifications: t };
+                        t === h.bL.ALL_MESSAGES && Z !== S.i.ALL_MESSAGES && (n.flags = (0, d.Q4)(g.ZP.getGuildFlags(e), N.vc.UNREADS_ALL_MESSAGES)), r.Z.updateGuildNotificationSettings(e, n, E.UE.notifications(t));
                     },
-                    x = (n) => {
-                        N(!1);
-                        let t = g.ZP.getGuildFlags(e);
-                        u.Z.updateGuildNotificationSettings(e, { flags: (0, r.Q4)(t, n === M.i.ALL_MESSAGES ? f.vc.UNREADS_ALL_MESSAGES : f.vc.UNREADS_ONLY_MENTIONS) }, E.UE.unreads(n));
+                    L = (t) => {
+                        f(!1);
+                        let n = g.ZP.getGuildFlags(e);
+                        r.Z.updateGuildNotificationSettings(e, { flags: (0, d.Q4)(n, t === S.i.ALL_MESSAGES ? N.vc.UNREADS_ALL_MESSAGES : N.vc.UNREADS_ONLY_MENTIONS) }, E.UE.unreads(t));
                     };
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsxs)(s.MenuGroup, {
+                        (0, i.jsxs)(a.kSQ, {
                             children: [
-                                (0, i.jsx)(s.MenuRadioItem, {
+                                (0, i.jsx)(a.k5B, {
                                     id: 'everything',
                                     group: 'notification-preset',
-                                    checked: p === d.s8.ALL_MESSAGES,
+                                    checked: A === c.s8.ALL_MESSAGES,
                                     label: _.intl.string(_.t.hZrr6u),
-                                    action: () => ((0, o.V)(e, d.s8.ALL_MESSAGES), N(!1))
+                                    action: () => ((0, u.V)(e, c.s8.ALL_MESSAGES), f(!1))
                                 }),
-                                (0, i.jsx)(s.MenuRadioItem, {
+                                (0, i.jsx)(a.k5B, {
                                     id: 'essentials',
                                     group: 'notification-preset',
-                                    checked: p === d.s8.MENTIONS,
+                                    checked: A === c.s8.MENTIONS,
                                     label: _.intl.string(_.t.y59NJi),
-                                    action: () => ((0, o.V)(e, d.s8.MENTIONS), N(!1))
+                                    action: () => ((0, u.V)(e, c.s8.MENTIONS), f(!1))
                                 }),
-                                (0, i.jsx)(s.MenuRadioItem, {
+                                (0, i.jsx)(a.k5B, {
                                     id: 'nothing',
                                     group: 'notification-preset',
-                                    checked: p === d.s8.NOTHING,
+                                    checked: A === c.s8.NOTHING,
                                     label: _.intl.string(_.t['pGn/bG']),
-                                    action: () => ((0, o.V)(e, d.s8.NOTHING), N(!1))
+                                    action: () => ((0, u.V)(e, c.s8.NOTHING), f(!1))
                                 }),
-                                (0, i.jsx)(s.MenuRadioItem, {
+                                (0, i.jsx)(a.k5B, {
                                     id: 'custom',
                                     group: 'notification-preset',
-                                    checked: p === d.s8.CUSTOM,
-                                    action: () => (t(!0), N(!0)),
+                                    checked: A === c.s8.CUSTOM,
+                                    action: () => (n(!0), f(!0)),
                                     label: _.intl.string(_.t['32yow8'])
                                 })
                             ]
                         }),
-                        (p === d.s8.CUSTOM || n) &&
-                            (0, i.jsxs)(s.MenuGroup, {
+                        (A === c.s8.CUSTOM || t) &&
+                            (0, i.jsxs)(a.kSQ, {
                                 children: [
                                     (0, i.jsxs)(
-                                        s.MenuItem,
+                                        a.sNh,
                                         {
                                             id: 'unread_setting',
                                             label: 'Unread Badges',
                                             children: [
-                                                (0, i.jsx)(s.MenuRadioItem, {
+                                                (0, i.jsx)(a.k5B, {
                                                     id: 'unread_setting_all_messages',
                                                     group: 'unread_setting',
-                                                    checked: S === M.i.ALL_MESSAGES,
+                                                    checked: Z === S.i.ALL_MESSAGES,
                                                     label: _.intl.string(_.t['HVah//']),
-                                                    action: () => x(M.i.ALL_MESSAGES)
+                                                    action: () => L(S.i.ALL_MESSAGES)
                                                 }),
-                                                (0, i.jsx)(s.MenuRadioItem, {
+                                                (0, i.jsx)(a.k5B, {
                                                     id: 'unread_setting_mention_only',
                                                     group: 'unread_setting',
-                                                    checked: S === M.i.ONLY_MENTIONS,
+                                                    checked: Z === S.i.ONLY_MENTIONS,
                                                     label: _.intl.string(_.t['tu+ZWF']),
-                                                    action: () => x(M.i.ONLY_MENTIONS),
-                                                    disabled: S !== M.i.ONLY_MENTIONS && I === h.bL.ALL_MESSAGES,
-                                                    subtext: S !== M.i.ONLY_MENTIONS && I === h.bL.ALL_MESSAGES ? _.intl.string(_.t.eP8yWV) : void 0
+                                                    action: () => L(S.i.ONLY_MENTIONS),
+                                                    disabled: Z !== S.i.ONLY_MENTIONS && x === h.bL.ALL_MESSAGES,
+                                                    subtext: Z !== S.i.ONLY_MENTIONS && x === h.bL.ALL_MESSAGES ? _.intl.string(_.t.eP8yWV) : void 0
                                                 })
                                             ]
                                         },
                                         'unread_setting'
                                     ),
                                     (0, i.jsxs)(
-                                        s.MenuItem,
+                                        a.sNh,
                                         {
                                             id: 'push_settings',
                                             label: _.intl.string(_.t.HcoRu7),
                                             children: [
-                                                (0, i.jsx)(s.MenuRadioItem, {
+                                                (0, i.jsx)(a.k5B, {
                                                     group: 'notification-preset',
                                                     id: 'push_settings_everything',
                                                     label: _.intl.string(_.t['HVah//']),
-                                                    checked: I === h.bL.ALL_MESSAGES,
-                                                    action: () => m(h.bL.ALL_MESSAGES),
-                                                    subtext: S !== M.i.ALL_MESSAGES && I !== h.bL.ALL_MESSAGES ? _.intl.string(_.t.idXSbG) : void 0
+                                                    checked: x === h.bL.ALL_MESSAGES,
+                                                    action: () => p(h.bL.ALL_MESSAGES),
+                                                    subtext: Z !== S.i.ALL_MESSAGES && x !== h.bL.ALL_MESSAGES ? _.intl.string(_.t.idXSbG) : void 0
                                                 }),
-                                                (0, i.jsx)(s.MenuRadioItem, {
+                                                (0, i.jsx)(a.k5B, {
                                                     group: 'notification-preset',
                                                     id: 'push_settings_everything_mention',
-                                                    checked: I === h.bL.ONLY_MENTIONS,
+                                                    checked: x === h.bL.ONLY_MENTIONS,
                                                     label: _.intl.string(_.t['tu+ZWF']),
-                                                    action: () => m(h.bL.ONLY_MENTIONS)
+                                                    action: () => p(h.bL.ONLY_MENTIONS)
                                                 }),
-                                                (0, i.jsx)(s.MenuRadioItem, {
+                                                (0, i.jsx)(a.k5B, {
                                                     group: 'notification-preset',
                                                     id: 'push_settings_everything_nothing',
                                                     label: _.intl.string(_.t.X4wWUl),
-                                                    checked: I === h.bL.NO_MESSAGES,
-                                                    action: () => m(h.bL.NO_MESSAGES)
+                                                    checked: x === h.bL.NO_MESSAGES,
+                                                    action: () => p(h.bL.NO_MESSAGES)
                                                 })
                                             ]
                                         },
@@ -155,53 +149,53 @@ function N(e) {
                     ]
                 });
             })(e),
-            null != n && (0, i.jsx)(s.MenuGroup, { children: n }),
+            null != t && (0, i.jsx)(a.kSQ, { children: t }),
             (function (e) {
-                let n = (0, a.cj)([g.ZP], () => ({
+                let t = (0, s.cj)([g.ZP], () => ({
                         highligths: g.ZP.getNotifyHighlights(e),
                         mobilePush: g.ZP.isMobilePushEnabled(e),
                         suppressRoles: g.ZP.isSuppressRolesEnabled(e),
                         suppressEveryone: g.ZP.isSuppressEveryoneEnabled(e),
                         muteScheduledEvents: g.ZP.isMuteScheduledEventsEnabled(e)
                     })),
-                    t = u.Z.updateGuildNotificationSettings;
+                    n = r.Z.updateGuildNotificationSettings;
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsxs)(s.MenuGroup, {
+                        (0, i.jsxs)(a.kSQ, {
                             children: [
-                                (0, i.jsx)(s.MenuCheckboxItem, {
+                                (0, i.jsx)(a.S89, {
                                     id: 'mention',
-                                    checked: n.suppressEveryone,
+                                    checked: t.suppressEveryone,
                                     label: _.intl.format(_.t.OWiWAg, {}),
-                                    action: () => t(e, { suppress_everyone: !n.suppressEveryone }, E.UE.suppressEveryone(!n.suppressEveryone))
+                                    action: () => n(e, { suppress_everyone: !t.suppressEveryone }, E.UE.suppressEveryone(!t.suppressEveryone))
                                 }),
-                                (0, i.jsx)(s.MenuCheckboxItem, {
+                                (0, i.jsx)(a.S89, {
                                     id: 'roles',
-                                    checked: n.suppressRoles,
+                                    checked: t.suppressRoles,
                                     label: _.intl.string(_.t['O/QdoK']),
-                                    action: () => t(e, { suppress_roles: !n.suppressRoles }, E.UE.suppressRoles(!n.suppressRoles))
+                                    action: () => n(e, { suppress_roles: !t.suppressRoles }, E.UE.suppressRoles(!t.suppressRoles))
                                 }),
-                                (0, i.jsx)(s.MenuCheckboxItem, {
+                                (0, i.jsx)(a.S89, {
                                     id: 'hightlight',
                                     label: _.intl.string(_.t.gPuteH),
-                                    checked: n.highligths === h.gLR.ENABLED,
-                                    action: () => t(e, { notify_highlights: n.highligths === h.gLR.ENABLED ? h.gLR.DISABLED : h.gLR.ENABLED }, E.UE.highlights(n.highligths !== h.gLR.ENABLED))
+                                    checked: t.highligths === h.gLR.ENABLED,
+                                    action: () => n(e, { notify_highlights: t.highligths === h.gLR.ENABLED ? h.gLR.DISABLED : h.gLR.ENABLED }, E.UE.highlights(t.highligths !== h.gLR.ENABLED))
                                 })
                             ]
                         }),
-                        (0, i.jsxs)(s.MenuGroup, {
+                        (0, i.jsxs)(a.kSQ, {
                             children: [
-                                (0, i.jsx)(s.MenuCheckboxItem, {
+                                (0, i.jsx)(a.S89, {
                                     id: 'event',
-                                    checked: n.muteScheduledEvents,
+                                    checked: t.muteScheduledEvents,
                                     label: _.intl.string(_.t.ONG3Y2),
-                                    action: () => t(e, { mute_scheduled_events: !n.muteScheduledEvents }, E.UE.mutedEvents(!n.muteScheduledEvents))
+                                    action: () => n(e, { mute_scheduled_events: !t.muteScheduledEvents }, E.UE.mutedEvents(!t.muteScheduledEvents))
                                 }),
-                                (0, i.jsx)(s.MenuCheckboxItem, {
+                                (0, i.jsx)(a.S89, {
                                     id: 'mobile_push',
-                                    checked: n.mobilePush,
+                                    checked: t.mobilePush,
                                     label: _.intl.string(_.t['h1DL6+']),
-                                    action: () => t(e, { mobile_push: !n.mobilePush }, E.UE.mobilePush(!n.mobilePush))
+                                    action: () => n(e, { mobile_push: !t.mobilePush }, E.UE.mobilePush(!t.mobilePush))
                                 })
                             ]
                         })

@@ -5,9 +5,10 @@ var n = r(806998),
     u = o.OrderedMap,
     s = o.List,
     c = function (t, e, r) {
-        if (!t) return;
-        var n = e.get(t);
-        if (!!n) e.set(t, r(n));
+        if (t) {
+            var n = e.get(t);
+            n && e.set(t, r(n));
+        }
     },
     l = function (t, e, r, n, i) {
         if (!i) return t;
@@ -95,10 +96,10 @@ t.exports = function (t, e, r, o) {
         m = u();
     if ('before' === o) {
         var _ = t.getBlockBefore(s);
-        !_ || _.getKey() !== e.getKey() || a(!1), (m = g.concat([].concat(v, [[s, r]]), y).toOrderedMap());
+        _ && _.getKey() === e.getKey() && a(!1), (m = g.concat([].concat(v, [[s, r]]), y).toOrderedMap());
     } else if ('after' === o) {
         var b = t.getBlockAfter(s);
-        !b || b.getKey() !== c || a(!1), (m = g.concat([[s, r]].concat(v), y).toOrderedMap());
+        b && b.getKey() === c && a(!1), (m = g.concat([[s, r]].concat(v), y).toOrderedMap());
     }
     return t.merge({
         blockMap: l(m, e, r, o, p),

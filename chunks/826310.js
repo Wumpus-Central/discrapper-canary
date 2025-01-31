@@ -1,8 +1,10 @@
-e.exports = {
-    container: 'container_f1c3d9 ' + n('227040').recentMentionsPopout,
-    spinner: 'spinner_f1c3d9',
-    tutorial: 'tutorial_f1c3d9',
-    tutorialIcon: 'tutorialIcon_f1c3d9',
-    tutorialButton: 'tutorialButton_f1c3d9',
-    scroller: 'scroller_f1c3d9'
+var i = {
+    container: 'container__2692d ' + n(227040).recentMentionsPopout,
+    widerInbox: 'widerInbox__2692d ' + n(227040).widerInbox,
+    spinner: 'spinner__2692d',
+    tutorial: 'tutorial__2692d',
+    tutorialIcon: 'tutorialIcon__2692d',
+    tutorialButton: 'tutorialButton__2692d',
+    scroller: 'scroller__2692d'
 };
+e.exports = i;

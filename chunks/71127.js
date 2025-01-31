@@ -1,13 +1,9 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-});
+n.d(t, { Z: () => d });
 var i = n(200651);
 n(192379);
 var l = n(657707),
-    r = n(475179),
-    a = n(325708),
+    a = n(475179),
+    r = n(325708),
     s = n(665149),
     o = n(909820),
     c = n(388032);
@@ -16,10 +12,10 @@ function d(e) {
         d = (0, i.jsx)(s.ZP.Icon, {
             icon: l.Dio,
             tooltip: c.intl.string(c.t.cpT0Cg),
-            onClick: () => r.Z.toggleParticipantsList(t.id, !1)
+            onClick: () => a.Z.toggleParticipantsList(t.id, !1)
         });
-    return (0, i.jsx)(a.Z, {
-        sidebarType: a.y.ParticipantsSidebar,
+    return (0, i.jsx)(r.Z, {
+        sidebarType: r.y.ParticipantsSidebar,
         maxWidth: n,
         floatingLayer: o.ZP,
         children: (0, i.jsxs)(s.ZP, {

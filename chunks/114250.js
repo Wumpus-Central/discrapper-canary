@@ -1,1 +1,2 @@
-e.exports = { effect: 'effect_efd76b' };
+var i = { effect: 'effect__68185' };
+e.exports = i;

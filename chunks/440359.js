@@ -1,56 +1,52 @@
-r.d(n, {
-    e: function () {
-        return u;
-    }
-});
-var i = r(708644);
-function a(e, n) {
-    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
+n.d(t, { e: () => l });
+var i = n(708644);
+function r(e, t) {
+    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function o(e, n) {
-    for (var r = 0; r < n.length; r++) {
-        var i = n[r];
+function a(e, t) {
+    for (var n = 0; n < t.length; n++) {
+        var i = t[n];
         (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
     }
 }
-function s(e, n, r) {
-    return n && o(e.prototype, n), r && o(e, r), e;
+function s(e, t, n) {
+    return t && a(e.prototype, t), n && a(e, n), e;
 }
-function l(e, n, r) {
+function o(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-var u = (function () {
-    function e(n) {
-        a(this, e), l(this, 'entered', []), l(this, 'isNodeInDocument', void 0), (this.isNodeInDocument = n);
+var l = (function () {
+    function e(t) {
+        r(this, e), o(this, 'entered', []), o(this, 'isNodeInDocument', void 0), (this.isNodeInDocument = t);
     }
     return (
         s(e, [
             {
                 key: 'enter',
                 value: function (e) {
-                    var n = this,
-                        r = this.entered.length,
-                        a = function (r) {
-                            return n.isNodeInDocument(r) && (!r.contains || r.contains(e));
+                    var t = this,
+                        n = this.entered.length,
+                        r = function (n) {
+                            return t.isNodeInDocument(n) && (!n.contains || n.contains(e));
                         };
-                    return (this.entered = (0, i.G0)(this.entered.filter(a), [e])), 0 === r && this.entered.length > 0;
+                    return (this.entered = (0, i.G0)(this.entered.filter(r), [e])), 0 === n && this.entered.length > 0;
                 }
             },
             {
                 key: 'leave',
                 value: function (e) {
-                    var n = this.entered.length;
-                    return (this.entered = (0, i.zu)(this.entered.filter(this.isNodeInDocument), e)), n > 0 && 0 === this.entered.length;
+                    var t = this.entered.length;
+                    return (this.entered = (0, i.zu)(this.entered.filter(this.isNodeInDocument), e)), t > 0 && 0 === this.entered.length;
                 }
             },
             {

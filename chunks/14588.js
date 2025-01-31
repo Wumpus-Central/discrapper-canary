@@ -1,36 +1,29 @@
-r.d(t, {
-    JY: function () {
-        return a;
-    },
-    Q: function () {
-        return n;
-    },
-    WG: function () {
-        return _;
-    }
-});
-function a(e, t = Date.now()) {
-    let r = parseInt(`${e}`, 10);
-    if (!isNaN(r)) return 1000 * r;
-    let a = Date.parse(`${e}`);
-    return isNaN(a) ? 60000 : a - t;
+function r(t, e = Date.now()) {
+    let a = parseInt(`${t}`, 10);
+    if (!isNaN(a)) return 1000 * a;
+    let n = Date.parse(`${t}`);
+    return isNaN(n) ? 60000 : n - e;
 }
-function n(e, t, r = Date.now()) {
-    var a;
-    return ((a = e)[t] || a.all || 0) > r;
+function n(t, e, a = Date.now()) {
+    return (t[e] || t.all || 0) > a;
 }
-function _(e, { statusCode: t, headers: r }, n = Date.now()) {
-    let _ = { ...e },
-        o = r && r['x-sentry-rate-limits'],
-        E = r && r['retry-after'];
-    if (o)
-        for (let e of o.trim().split(',')) {
-            let [t, r, , , a] = e.split(':', 5),
-                o = parseInt(t, 10),
-                E = (isNaN(o) ? 60 : o) * 1000;
-            if (r) for (let e of r.split(';')) 'metric_bucket' === e ? (!a || a.split(';').includes('custom')) && (_[e] = n + E) : (_[e] = n + E);
-            else _.all = n + E;
+function o(t, { statusCode: e, headers: a }, n = Date.now()) {
+    let _ = { ...t },
+        i = a && a['x-sentry-rate-limits'],
+        c = a && a['retry-after'];
+    if (i)
+        for (let t of i.trim().split(',')) {
+            let [e, a, , , r] = t.split(':', 5),
+                o = parseInt(e, 10),
+                i = (isNaN(o) ? 60 : o) * 1000;
+            if (a) for (let t of a.split(';')) 'metric_bucket' === t ? (!r || r.split(';').includes('custom')) && (_[t] = n + i) : (_[t] = n + i);
+            else _.all = n + i;
         }
-    else E ? (_.all = n + a(E, n)) : 429 === t && (_.all = n + 60000);
+    else c ? (_.all = n + r(c, n)) : 429 === e && (_.all = n + 60000);
     return _;
 }
+a.d(e, {
+    JY: () => r,
+    Q: () => n,
+    WG: () => o
+});

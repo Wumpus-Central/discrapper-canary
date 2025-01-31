@@ -1,14 +1,9 @@
-var s, r;
-n.d(t, {
-    Nz: function () {
-        return s;
-    },
-    o9: function () {
-        return a;
-    }
-}),
-    ((r = s || (s = {})).PHONE = 'phone'),
-    (r.EMAIL = 'email');
+s.d(t, {
+    Nz: () => r,
+    o9: () => a
+});
+var n,
+    r = (((n = {}).PHONE = 'phone'), (n.EMAIL = 'email'), n);
 let i = /^[-() \d]+$/,
     l = (e) => e.startsWith('+');
 function a(e, t) {

@@ -1,65 +1,48 @@
 let i;
-var a = r(47120);
-var o = r(411104);
-var s = r(259443);
-r(433517);
-let l = new s.Yd('useStateFromStores'),
-    u = c();
-function c() {
+n(47120), n(411104);
+var r = n(259443);
+n(433517);
+let a = new r.Yd('useStateFromStores'),
+    s = o();
+function o() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 60000;
     return e;
 }
-let d = f();
-function f() {
+let l = u();
+function u() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
     return e;
 }
-let p = h();
-function h() {
+let c = d();
+function d() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1000;
     return e;
 }
-let _ = m();
-function m() {
+let f = _();
+function _() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : '';
     return e;
 }
-let g = E();
-function E() {
+(function e() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     return e;
+})() && (i = setInterval(g, s));
+let p = new Map();
+function h(e) {
+    return 'anonymous' !== e.name && ('' === f || e.name === f) && (e.execCount > c || e.execTime > l);
 }
-g && (i = setInterval(T, u));
-let v = new Map();
-function y() {
-    var e;
-    let n = null === (e = Error().stack) || void 0 === e ? void 0 : e.split('\n'),
-        r = null != n ? n : [];
-    for (let e = 3; e < r.length; e++) {
-        let n = r[e].trim().split(' ')[1];
-        if ('useStateFromStores' !== n && 'useStateFromStoresArray' !== n && 'useStateFromStoresObject' !== n) return n;
-    }
-    return 'unknown';
-}
-function b(e) {
-    return 'anonymous' !== e.name && ('' === _ || e.name === _) && (e.execCount > p || e.execTime > d);
-}
-function I() {
-    for (let [e, n] of v) {
-        if (!!b(n)) return !0;
-    }
+function m() {
+    for (let [e, t] of p) if (h(t)) return !0;
     return !1;
 }
-function T() {
-    for (let [e, n] of (I() || '' !== _ ? S() : l.log('No violators found'), v)) (n.warned = !1), (n.execTime = 0), (n.execCount = 0);
+function g() {
+    for (let [e, t] of (m() || '' !== f ? E() : a.log('No violators found'), p)) (t.warned = !1), (t.execTime = 0), (t.execCount = 0);
 }
-let S = function () {
+let E = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 34,
-        n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 20,
-        r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 20,
-        i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : e + n + r + 6;
-    for (let [a, o] of (l.log('|'.padEnd(i, '-') + '|'), l.log('| Consumers of `useStateFromStores` exceeding warning thresholds:'.padEnd(i, ' ') + '|'), l.log('|'.padEnd(i, '-') + '|'), l.log('| '.concat('Function/Component Name'.padEnd(e, ' ')) + '| '.concat('Total Exec Time'.padEnd(n, ' ')) + '| '.concat('Total Exec Count'.padEnd(r, ' '), '|')), l.log('|'.padEnd(i, '-') + '|'), v)) {
-        if (!!('' !== _ && a === _) || !!b(o)) l.log('| '.concat(a.padEnd(e, ' ')) + '| '.concat((o.execTime.toFixed(2) + 'ms').padEnd(n, ' ')) + '| '.concat(o.execCount.toString().padEnd(r, ' '), '|'));
-    }
-    l.log('|'.padEnd(i, '-') + '|');
+        t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 20,
+        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 20,
+        i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : e + t + n + 6;
+    for (let [r, s] of (a.log('|'.padEnd(i, '-') + '|'), a.log('| Consumers of `useStateFromStores` exceeding warning thresholds:'.padEnd(i, ' ') + '|'), a.log('|'.padEnd(i, '-') + '|'), a.log('| '.concat('Function/Component Name'.padEnd(e, ' ')) + '| '.concat('Total Exec Time'.padEnd(t, ' ')) + '| '.concat('Total Exec Count'.padEnd(n, ' '), '|')), a.log('|'.padEnd(i, '-') + '|'), p)) (('' !== f && r === f) || h(s)) && a.log('| '.concat(r.padEnd(e, ' ')) + '| '.concat((s.execTime.toFixed(2) + 'ms').padEnd(t, ' ')) + '| '.concat(s.execCount.toString().padEnd(n, ' '), '|'));
+    a.log('|'.padEnd(i, '-') + '|');
 };

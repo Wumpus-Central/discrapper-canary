@@ -1,8 +1,4 @@
-n.d(t, {
-    C: function () {
-        return l;
-    }
-});
+n.d(t, { C: () => l });
 var i = n(544891),
     r = n(981631);
 let l = async (e, t) =>

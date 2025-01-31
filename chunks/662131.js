@@ -1,1 +1,2 @@
-e.exports = { pricePerInterval: 'pricePerInterval_d06503' };
+var i = { pricePerInterval: 'pricePerInterval_b39acb' };
+e.exports = i;

@@ -1,30 +1,25 @@
-i.r(n),
-    i.d(n, {
-        default: function () {
-            return s;
-        }
-    });
+i.d(n, { default: () => c });
 var r = i(200651);
 i(192379);
 var e = i(481060),
     a = i(239091),
-    o = i(716161),
-    c = i(647177),
-    l = i(388032);
-function s(t) {
-    let { onSelect: n, backgroundOption: i, optionIsInUse: s } = t;
-    return (0, r.jsx)(e.Menu, {
+    s = i(716161),
+    l = i(647177),
+    o = i(388032);
+function c(t) {
+    let { onSelect: n, backgroundOption: i, optionIsInUse: c } = t;
+    return (0, r.jsx)(e.v2r, {
         navId: 'video-background-context',
         onClose: a.Zy,
         onSelect: n,
-        'aria-label': l.intl.string(l.t.ptxALC),
-        children: (0, r.jsx)(e.MenuItem, {
+        'aria-label': o.intl.string(o.t.ptxALC),
+        children: (0, r.jsx)(e.sNh, {
             id: 'remove',
             action: () => {
-                if (!!(0, c.rD)(i)) (0, o.KH)(i), (0, c.$w)(i);
+                (0, l.rD)(i) && ((0, s.KH)(i), (0, l.$w)(i));
             },
-            label: (0, c.rD)(i) ? (s ? l.intl.string(l.t['xh/P//']) : l.intl.string(l.t.oKuPwc)) : l.intl.string(l.t.hFYUDA),
-            disabled: !(0, c.rD)(i) || s,
+            label: (0, l.rD)(i) ? (c ? o.intl.string(o.t['xh/P//']) : o.intl.string(o.t.oKuPwc)) : o.intl.string(o.t.hFYUDA),
+            disabled: !(0, l.rD)(i) || c,
             color: 'danger'
         })
     });

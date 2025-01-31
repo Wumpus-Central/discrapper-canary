@@ -1,15 +1,10 @@
-r.d(n, {
-    Z: function () {
-        return l;
-    }
-});
-var i = r(789020);
-var a = r(630388),
-    o = r(620662),
-    s = r(981631);
-function l(e, n, r, i) {
-    let l = null == n ? void 0 : n.application_id;
-    if (null == e || null == n || !(0, o.Z)(n, s.xjy.JOIN) || null == l) return !1;
-    let u = i.getApplication(l);
-    return !(null == u || (0, a.yE)(u.flags, s.udG.EMBEDDED)) && r.shouldShowEducation(l);
+n.d(t, { Z: () => s }), n(789020);
+var i = n(630388),
+    r = n(620662),
+    a = n(981631);
+function s(e, t, n, s) {
+    let o = null == t ? void 0 : t.application_id;
+    if (null == e || null == t || !(0, r.Z)(t, a.xjy.JOIN) || null == o) return !1;
+    let l = s.getApplication(o);
+    return !(null == l || (0, i.yE)(l.flags, a.udG.EMBEDDED)) && n.shouldShowEducation(o);
 }

@@ -1,15 +1,11 @@
 n.d(t, {
-    U: function () {
-        return r;
-    },
-    e: function () {
-        return l;
-    }
+    U: () => l,
+    e: () => r
 });
 var o,
-    r,
-    a = n(388032);
-function l() {
+    a = n(388032),
+    l = (((o = {}).TOO_HARD = 'Too hard'), (o.TEST = 'Testing purposes'), (o.ACCIDENT = 'Created on accident'), (o.TEMPLATE = 'Curious about server/template'), (o.LONELY = 'Empty server'), (o.INACTIVE = 'Inactive server'), (o.OTHER = 'Other'), o);
+function r() {
     return [
         {
             value: 'Too hard',
@@ -41,4 +37,3 @@ function l() {
         }
     ];
 }
-((o = r || (r = {})).TOO_HARD = 'Too hard'), (o.TEST = 'Testing purposes'), (o.ACCIDENT = 'Created on accident'), (o.TEMPLATE = 'Curious about server/template'), (o.LONELY = 'Empty server'), (o.INACTIVE = 'Inactive server'), (o.OTHER = 'Other');

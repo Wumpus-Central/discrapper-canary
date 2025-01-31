@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return x;
-    }
-});
+n.d(t, { Z: () => x });
 var l = n(200651);
 n(192379);
 var a = n(481060),
@@ -10,77 +6,77 @@ var a = n(481060),
     r = n(299206),
     o = n(810568),
     s = n(168524),
-    u = n(37258),
-    c = n(26033),
-    d = n(388032),
+    c = n(37258),
+    d = n(26033),
+    u = n(388032),
     m = n(607655);
 function x(e) {
     var t;
-    let { user: n, guildId: x, channel: h, entry: p, onSelect: C, disableGameProfileLinks: v } = e,
-        g = (0, u.Z)({
+    let { user: n, guildId: x, channel: h, entry: p, onSelect: g, disableGameProfileLinks: v } = e,
+        C = (0, c.Z)({
             userId: n.id,
             guildId: x,
             channelId: null == h ? void 0 : h.id
         }),
-        f = (0, r.Z)({
-            id: n.id,
-            label: d.intl.string(d.t['/AXYnJ'])
-        }),
-        I = 'application_id' in p.extra ? p.extra.application_id : null,
         j = (0, r.Z)({
-            id: I,
-            label: d.intl.string(d.t['FfCL+/'])
+            id: n.id,
+            label: u.intl.string(u.t['/AXYnJ'])
         }),
-        Z = (0, c.dX)(p),
-        P = (0, s.Z)({
+        f = 'application_id' in p.extra ? p.extra.application_id : null,
+        I = (0, r.Z)({
+            id: f,
+            label: u.intl.string(u.t['FfCL+/'])
+        }),
+        P = (0, d.dX)(p),
+        y = (0, s.Z)({
             location: 'ContentPopoutContextMenu',
-            applicationId: Z && !0 !== v ? (null === (t = p.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
+            applicationId: P && !0 !== v ? (null === (t = p.extra) || void 0 === t ? void 0 : t.application_id) : void 0,
             source: o.m1.ActivityCardContextMenu,
             trackEntryPointImpression: !0,
             sourceUserId: p.author_id
         });
-    return (0, l.jsx)(a.Popout, {
+    return (0, l.jsx)(a.yRy, {
         align: 'top',
         position: 'right',
         disablePointerEvents: !1,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, l.jsx)(a.Menu, {
+            return (0, l.jsx)(a.v2r, {
                 navId: 'content-inventory-context',
                 onClose: () => {
                     (0, i.Zy)(), t();
                 },
-                'aria-label': d.intl.string(d.t.liqwPD),
-                onSelect: C,
+                'aria-label': u.intl.string(u.t.liqwPD),
+                onSelect: g,
                 children: (0, l.jsxs)(l.Fragment, {
                     children: [
-                        (0, l.jsxs)(a.MenuGroup, {
+                        (0, l.jsxs)(a.kSQ, {
                             children: [
-                                g,
-                                null != P &&
-                                    (0, l.jsx)(a.MenuItem, {
+                                C,
+                                null != y &&
+                                    (0, l.jsx)(a.sNh, {
                                         id: 'game-profile',
-                                        label: d.intl.string(d.t.f7aVGh),
-                                        action: P
+                                        label: u.intl.string(u.t.f7aVGh),
+                                        action: y
                                     })
                             ]
                         }),
-                        (0, l.jsxs)(a.MenuGroup, {
-                            children: [f, j]
+                        (0, l.jsxs)(a.kSQ, {
+                            children: [j, I]
                         })
                     ]
                 })
             });
         },
         children: (e) =>
-            (0, l.jsx)(a.Tooltip, {
-                text: d.intl.string(d.t.UKOtz8),
+            (0, l.jsx)(a.ua7, {
+                text: u.intl.string(u.t.UKOtz8),
                 children: (t) =>
-                    (0, l.jsx)(a.Clickable, {
+                    (0, l.jsx)(a.P3F, {
                         ...t,
                         className: m.menuIcon,
                         ...e,
-                        children: (0, l.jsx)(a.MoreHorizontalIcon, {
+                        children: (0, l.jsx)(a.xhG, {
                             color: 'currentColor',
                             size: 'custom',
                             width: 16,

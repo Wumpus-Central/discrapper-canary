@@ -1,15 +1,11 @@
-t.d(n, {
-    Z: function () {
-        return a;
-    }
-});
+t.d(n, { Z: () => a });
 var l = t(200651);
 t(192379);
-var i = t(331595);
+var i = t(325767);
 function a(e) {
-    let { width: n = 32, height: t = 32, color: a = 'currentColor', foreground: r, ...o } = e;
+    let { width: n = 32, height: t = 32, color: a = 'currentColor', foreground: r, ...s } = e;
     return (0, l.jsxs)('svg', {
-        ...(0, i.Z)(o),
+        ...(0, i.Z)(s),
         width: n,
         height: t,
         viewBox: '0 0 32 32',

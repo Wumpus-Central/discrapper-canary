@@ -1,209 +1,197 @@
-r.d(n, {
-    Jh: function () {
-        return L;
-    },
-    Lk: function () {
-        return w;
-    },
-    Xg: function () {
-        return P;
-    },
-    ZP: function () {
-        return O;
-    },
-    _Z: function () {
-        return x;
-    },
-    c7: function () {
-        return D;
-    },
-    j3: function () {
-        return M;
-    }
-});
-var i = r(177593);
-var a = r(200651),
-    o = r(192379),
-    s = r(120356),
-    l = r.n(s),
-    u = r(593473),
-    c = r(512969),
-    d = r(442837),
-    f = r(922770),
-    p = r(993365),
-    h = r(481060),
-    _ = r(132871),
-    m = r(252618),
-    g = r(703656),
-    E = r(769654),
-    v = r(592125),
-    y = r(496675),
-    b = r(944486),
-    I = r(626135),
-    T = r(585483),
-    S = r(591759),
-    A = r(787025),
-    C = r(981631),
-    N = r(388032),
-    R = r(553410);
-function O(e) {
-    let { message: n, footer: r, headerClassName: i, showsCloseWindowText: o, spinner: s } = e;
+n.d(t, {
+    Jh: () => O,
+    Lk: () => x,
+    Xg: () => L,
+    ZP: () => C,
+    _Z: () => D,
+    c7: () => R,
+    j3: () => P
+}),
+    n(177593);
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(593473),
+    l = n(512969),
+    u = n(442837),
+    c = n(922770),
+    d = n(993365),
+    f = n(481060),
+    _ = n(132871),
+    p = n(252618),
+    h = n(703656),
+    m = n(769654),
+    g = n(592125),
+    E = n(496675),
+    v = n(944486),
+    y = n(626135),
+    I = n(585483),
+    b = n(591759),
+    T = n(787025),
+    S = n(981631),
+    A = n(388032),
+    N = n(553410);
+function C(e) {
+    let { message: t, footer: n, headerClassName: r, showsCloseWindowText: a, spinner: o } = e;
     return (
-        (0, m.Tt)({ location: N.intl.string(N.t['3S249/']) }),
-        (0, a.jsxs)('div', {
-            className: R.wrapper,
+        (0, p.Tt)({ location: A.intl.string(A.t['3S249/']) }),
+        (0, i.jsxs)('div', {
+            className: N.wrapper,
             children: [
-                s ? (0, a.jsx)(f.$, {}) : null,
-                (0, a.jsx)('div', { className: l()(R.header, i) }),
-                (0, a.jsx)(h.Heading, {
+                o ? (0, i.jsx)(c.$, {}) : null,
+                (0, i.jsx)('div', { className: s()(N.header, r) }),
+                (0, i.jsx)(f.X6q, {
                     variant: 'heading-lg/bold',
-                    className: R.text,
-                    children: n
+                    className: N.text,
+                    children: t
                 }),
-                null != r ? r : null,
-                o
-                    ? (0, a.jsx)(p.x, {
+                null != n ? n : null,
+                a
+                    ? (0, i.jsx)(d.x, {
                           variant: 'text-sm/normal',
                           color: 'text-muted',
-                          className: R.cta,
-                          children: N.intl.string(N.t['k7J/w8'])
+                          className: N.cta,
+                          children: A.intl.string(A.t['k7J/w8'])
                       })
                     : null
             ]
         })
     );
 }
-function D(e) {
-    return (0, a.jsx)(O, {
+function R(e) {
+    return (0, i.jsx)(C, {
         ...e,
-        headerClassName: R.headerSuccess
+        headerClassName: N.headerSuccess
     });
 }
-function L(e) {
-    let { guild: n, application: r, ...i } = e,
-        s = N.intl.string(N.t.se5gLi);
-    o.useEffect(() => {
-        I.default.track(C.rMx.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: null == r ? void 0 : r.id });
-    }, [null == r ? void 0 : r.id]);
-    let l = o.useMemo(() => {
-            if (null != r)
-                return null != n
-                    ? N.intl.format(N.t.IlF6IS, {
-                          installedApplicationName: null == r ? void 0 : r.name,
-                          guildName: null == n ? void 0 : n.name
-                      })
-                    : N.intl.format(N.t.vTVC5e, { installedApplicationName: null == r ? void 0 : r.name });
-            return N.intl.string(N.t['Dp+rgI']);
-        }, [r, n]),
-        u = (0, a.jsx)(p.x, {
+function O(e) {
+    let { guild: t, application: n, ...a } = e,
+        s = A.intl.string(A.t.se5gLi);
+    r.useEffect(() => {
+        y.default.track(S.rMx.OAUTH2_AUTHORIZE_SUCCESS_VIEWED, { application_id: null == n ? void 0 : n.id });
+    }, [null == n ? void 0 : n.id]);
+    let o = r.useMemo(
+            () =>
+                null != n
+                    ? null != t
+                        ? A.intl.format(A.t.IlF6IS, {
+                              installedApplicationName: null == n ? void 0 : n.name,
+                              guildName: null == t ? void 0 : t.name
+                          })
+                        : A.intl.format(A.t.vTVC5e, { installedApplicationName: null == n ? void 0 : n.name })
+                    : A.intl.string(A.t['Dp+rgI']),
+            [n, t]
+        ),
+        l = (0, i.jsx)(d.x, {
             variant: 'text-md/normal',
-            className: R.authorizedSuccessSubtext,
-            children: l
+            className: N.authorizedSuccessSubtext,
+            children: o
         });
-    return (0, a.jsx)('div', {
-        className: R.authorizedSuccessWrapper,
-        children: (0, a.jsx)(D, {
+    return (0, i.jsx)('div', {
+        className: N.authorizedSuccessWrapper,
+        children: (0, i.jsx)(R, {
             message: s,
-            footer: u,
-            ...i
+            footer: l,
+            ...a
         })
     });
 }
-function x(e) {
-    let { guild: n, application: r, ...i } = e,
-        { onClose: s } = i,
-        l = o.useCallback(() => {
-            if ((null == n ? void 0 : n.id) != null)
-                (0, E.X)(null == n ? void 0 : n.id),
-                    null == s || s(),
-                    I.default.track(C.rMx.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, {
-                        application_id: null == r ? void 0 : r.id,
-                        guild_id: null == n ? void 0 : n.id
-                    });
-        }, [s, null == r ? void 0 : r.id, null == n ? void 0 : n.id]),
-        u = (0, _.g8)((e) => e.entrypoint),
-        c = o.useCallback(() => {
-            null == s || s(), I.default.track(C.rMx.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: null == r ? void 0 : r.id });
-        }, [s, null == r ? void 0 : r.id]),
-        f = window.location.pathname.startsWith(C.Z5c.APPLICATION_DIRECTORY),
-        p = o.useCallback(() => {
-            var e;
-            if ((null == r ? void 0 : r.id) != null)
+function D(e) {
+    let { guild: t, application: n, ...a } = e,
+        { onClose: s } = a,
+        o = r.useCallback(() => {
+            (null == t ? void 0 : t.id) != null &&
+                ((0, m.X)(null == t ? void 0 : t.id),
                 null == s || s(),
-                    null != u && (0, g.uL)(null !== (e = u.pathname) && void 0 !== e ? e : ''),
-                    setImmediate(() => {
-                        T.S.dispatchToLastSubscribed(C.CkL.OPEN_APP_LAUNCHER, { applicationId: r.id }), I.default.track(C.rMx.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, { application_id: r.id });
-                    });
-        }, [null == r ? void 0 : r.id, s, u]),
-        m = (0, d.e7)([b.Z, v.Z], () => v.Z.getChannel(b.Z.getChannelId())),
-        S = (0, d.e7)([y.Z], () => y.Z.can(C.Plq.SEND_MESSAGES, m)),
-        A = null != n,
-        O = null == n && S && (!f || null != u);
-    return null != n || null != s
-        ? (0, a.jsxs)('div', {
-              className: R.buttonsContainer,
+                y.default.track(S.rMx.OAUTH2_AUTHORIZE_SUCCESS_GO_TO_GUILD_CLICKED, {
+                    application_id: null == n ? void 0 : n.id,
+                    guild_id: null == t ? void 0 : t.id
+                }));
+        }, [s, null == n ? void 0 : n.id, null == t ? void 0 : t.id]),
+        l = (0, _.g8)((e) => e.entrypoint),
+        c = r.useCallback(() => {
+            null == s || s(), y.default.track(S.rMx.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: null == n ? void 0 : n.id });
+        }, [s, null == n ? void 0 : n.id]),
+        d = window.location.pathname.startsWith(S.Z5c.APPLICATION_DIRECTORY),
+        p = r.useCallback(() => {
+            var e;
+            (null == n ? void 0 : n.id) != null &&
+                (null == s || s(),
+                null != l && (0, h.uL)(null !== (e = l.pathname) && void 0 !== e ? e : ''),
+                setImmediate(() => {
+                    I.S.dispatchToLastSubscribed(S.CkL.OPEN_APP_LAUNCHER, { applicationId: n.id }), y.default.track(S.rMx.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, { application_id: n.id });
+                }));
+        }, [null == n ? void 0 : n.id, s, l]),
+        b = (0, u.e7)([v.Z, g.Z], () => g.Z.getChannel(v.Z.getChannelId())),
+        T = (0, u.e7)([E.Z], () => E.Z.can(S.Plq.SEND_MESSAGES, b)),
+        C = null != t,
+        R = null == t && T && (!d || null != l);
+    return null != t || null != s
+        ? (0, i.jsxs)('div', {
+              className: N.buttonsContainer,
               children: [
                   null != s
-                      ? A || O
-                          ? (0, a.jsx)(h.Button, {
-                                size: h.Button.Sizes.SMALL,
-                                look: h.Button.Looks.LINK,
-                                color: h.Button.Colors.PRIMARY,
+                      ? C || R
+                          ? (0, i.jsx)(f.zxk, {
+                                size: f.zxk.Sizes.SMALL,
+                                look: f.zxk.Looks.LINK,
+                                color: f.zxk.Colors.PRIMARY,
                                 onClick: c,
-                                children: N.intl.string(N.t.cpT0Cg)
+                                children: A.intl.string(A.t.cpT0Cg)
                             })
-                          : (0, a.jsx)(h.Button, {
+                          : (0, i.jsx)(f.zxk, {
                                 fullWidth: !0,
-                                color: h.Button.Colors.PRIMARY,
+                                color: f.zxk.Colors.PRIMARY,
                                 onClick: c,
-                                children: N.intl.string(N.t.cpT0Cg)
+                                children: A.intl.string(A.t.cpT0Cg)
                             })
                       : void 0,
-                  A &&
-                      (0, a.jsx)(h.Button, {
-                          color: h.Button.Colors.BRAND,
-                          onClick: l,
-                          children: (null == n ? void 0 : n.name.length) > 30 ? N.intl.string(N.t.M35zFB) : N.intl.format(N.t.UdYYPz, { guildName: null == n ? void 0 : n.name })
+                  C &&
+                      (0, i.jsx)(f.zxk, {
+                          color: f.zxk.Colors.BRAND,
+                          onClick: o,
+                          children: (null == t ? void 0 : t.name.length) > 30 ? A.intl.string(A.t.M35zFB) : A.intl.format(A.t.UdYYPz, { guildName: null == t ? void 0 : t.name })
                       }),
-                  O &&
-                      (0, a.jsx)(h.Button, {
-                          color: h.Button.Colors.BRAND,
+                  R &&
+                      (0, i.jsx)(f.zxk, {
+                          color: f.zxk.Colors.BRAND,
                           onClick: p,
-                          children: N.intl.string(N.t['0cCDKC'])
+                          children: A.intl.string(A.t['0cCDKC'])
                       })
               ]
           })
         : null;
 }
-function w(e) {
-    return (0, a.jsx)(O, {
+function x(e) {
+    return (0, i.jsx)(C, {
         ...e,
-        headerClassName: R.headerFailure
+        headerClassName: N.headerFailure
     });
 }
-function P() {
-    var e, n;
-    let r = (0, c.TH)();
-    return (0, a.jsx)(A.G, {
-        children: (0, a.jsx)(L, {
-            guild: null === (e = r.state) || void 0 === e ? void 0 : e.guild,
-            application: null === (n = r.state) || void 0 === n ? void 0 : n.application,
+function L() {
+    var e, t;
+    let n = (0, l.TH)();
+    return (0, i.jsx)(T.G, {
+        children: (0, i.jsx)(O, {
+            guild: null === (e = n.state) || void 0 === e ? void 0 : e.guild,
+            application: null === (t = n.state) || void 0 === t ? void 0 : t.application,
             showsCloseWindowText: !0
         })
     });
 }
-function M(e) {
-    var n, r;
-    let { location: i } = e;
-    o.useEffect(() => {
-        if (null == i || '' === i.search) return;
-        let e = null != document.referrer && '' !== document.referrer ? S.Z.toURLSafe(document.referrer) : null;
-        (null == e || e.host !== window.location.host || e.pathname !== C.Z5c.OAUTH2_AUTHORIZE) && (0, g.uL)(C.Z5c.INDEX);
-    }, [i]);
-    let s = null != i ? (0, u.parse)(i.search) : {},
-        l = null !== (r = null !== (n = s.error_description) && void 0 !== n ? n : s.error) && void 0 !== r ? r : N.intl.string(N.t['mqn87+']);
-    return (0, a.jsx)(A.G, {
-        children: (0, a.jsx)(w, {
+function P(e) {
+    var t, n;
+    let { location: a } = e;
+    r.useEffect(() => {
+        if (null == a || '' === a.search) return;
+        let e = null != document.referrer && '' !== document.referrer ? b.Z.toURLSafe(document.referrer) : null;
+        (null == e || e.host !== window.location.host || e.pathname !== S.Z5c.OAUTH2_AUTHORIZE) && (0, h.uL)(S.Z5c.INDEX);
+    }, [a]);
+    let s = null != a ? (0, o.parse)(a.search) : {},
+        l = null !== (n = null !== (t = s.error_description) && void 0 !== t ? t : s.error) && void 0 !== n ? n : A.intl.string(A.t['mqn87+']);
+    return (0, i.jsx)(T.G, {
+        children: (0, i.jsx)(x, {
             message: l,
             showsCloseWindowText: !0
         })

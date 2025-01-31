@@ -1,11 +1,7 @@
-r.d(n, {
-    Z: function () {
-        return s;
-    }
-});
-var i = r(200651),
-    a = r(192379);
-function o(e) {
+n.d(t, { Z: () => s });
+var i = n(200651),
+    r = n(192379);
+function a(e) {
     return {
         position: 'vertical' === e ? 'absolute' : 'relative',
         pointerEvents: 'none',
@@ -15,44 +11,44 @@ function o(e) {
     };
 }
 function s(e) {
-    let { paddingFix: n = !0, orientation: r = 'vertical', dir: s, className: l, scrollerRef: u, specs: c } = e,
-        d = (0, a.useRef)(null);
+    let { paddingFix: t = !0, orientation: n = 'vertical', dir: s, className: o, scrollerRef: l, specs: u } = e,
+        c = (0, r.useRef)(null);
     return (
-        (0, a.useLayoutEffect)(() => {
+        (0, r.useLayoutEffect)(() => {
             var e;
-            let { current: i } = u;
-            if (null == i || 'auto' === r || !n) return;
-            let a = null === (e = i.ownerDocument) || void 0 === e ? void 0 : e.defaultView;
-            if (null == a) return;
+            let { current: i } = l;
+            if (null == i || 'auto' === n || !t) return;
+            let r = null === (e = i.ownerDocument) || void 0 === e ? void 0 : e.defaultView;
+            if (null == r) return;
             (i.style.paddingTop = ''), (i.style.paddingBottom = ''), (i.style.paddingLeft = ''), (i.style.paddingRight = '');
-            let o = a.getComputedStyle(i);
-            if ('vertical' === r) {
+            let a = r.getComputedStyle(i);
+            if ('vertical' === n) {
                 if ('rtl' === s) {
-                    let e = parseInt(o.getPropertyValue('padding-left'), 10);
-                    (i.style.paddingLeft = ''.concat(Math.max(0, e - c.width), 'px')), (i.style.paddingRight = '');
+                    let e = parseInt(a.getPropertyValue('padding-left'), 10);
+                    (i.style.paddingLeft = ''.concat(Math.max(0, e - u.width), 'px')), (i.style.paddingRight = '');
                 } else {
-                    let e = parseInt(o.getPropertyValue('padding-right'), 10);
-                    (i.style.paddingRight = ''.concat(Math.max(0, e - c.width), 'px')), (i.style.paddingLeft = '');
+                    let e = parseInt(a.getPropertyValue('padding-right'), 10);
+                    (i.style.paddingRight = ''.concat(Math.max(0, e - u.width), 'px')), (i.style.paddingLeft = '');
                 }
-                let { current: e } = d;
-                null != e && (e.style.height = o.getPropertyValue('padding-bottom'));
+                let { current: e } = c;
+                null != e && (e.style.height = a.getPropertyValue('padding-bottom'));
             } else {
-                let e = parseInt(o.getPropertyValue('padding-bottom'), 10);
-                i.style.paddingBottom = ''.concat(Math.max(0, e - c.height), 'px');
-                let { current: n } = d;
-                null != n && (n.style.width = o.getPropertyValue('padding-left'));
+                let e = parseInt(a.getPropertyValue('padding-bottom'), 10);
+                i.style.paddingBottom = ''.concat(Math.max(0, e - u.height), 'px');
+                let { current: t } = c;
+                null != t && (t.style.width = a.getPropertyValue('padding-left'));
             }
-        }, [r, s, l, u, n, c]),
-        (0, a.useMemo)(
+        }, [n, s, o, l, t, u]),
+        (0, r.useMemo)(
             () =>
-                'auto' !== r
+                'auto' !== n
                     ? (0, i.jsx)('div', {
                           'aria-hidden': !0,
-                          style: o(r),
-                          ref: d
+                          style: a(n),
+                          ref: c
                       })
                     : null,
-            [r]
+            [n]
         )
     );
 }

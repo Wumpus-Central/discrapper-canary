@@ -1,20 +1,16 @@
-r.d(t, {
-    L: function () {
-        return k;
-    }
-});
+r.d(t, { L: () => k });
 var a = r(910974),
     n = r(190293),
-    o = r(681996),
-    s = r(525207),
+    s = r(681996),
+    o = r(525207),
     i = r(332133),
     c = r(775310),
-    u = r(700717),
-    l = r(621028),
+    l = r(700717),
+    u = r(621028),
     f = r(872463),
     b = r(192379),
-    h = r(639519),
-    d = r.n(h),
+    d = r(639519),
+    h = r.n(d),
     p = r(422664),
     m = r(605897),
     g = r(667929),
@@ -36,7 +32,7 @@ function Z(e) {
         var r = null != arguments[t] ? arguments[t] : {};
         t % 2
             ? v(Object(r), !0).forEach(function (t) {
-                  (0, l.Z)(e, t, r[t]);
+                  (0, u.Z)(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
@@ -53,39 +49,35 @@ function M(e) {
     var t,
         r,
         a,
-        n,
-        o =
+        n =
             ((t = e.theme),
-            (r = e),
-            (n = Object.keys(
-                (a = {
+            (a = Object.keys(
+                (r = {
                     getArrowStyle: 'arrow',
                     getListStyle: 'nestedNodeChildren',
                     getItemStringStyle: 'nestedNodeItemString',
                     getLabelStyle: 'label',
                     getValueStyle: 'valueText'
                 })
-            ).filter(function (e) {
-                return r[e];
+            ).filter(function (t) {
+                return e[t];
             })).length > 0 &&
                 ((t = 'string' == typeof t ? { extend: t } : Z({}, t)),
-                n.forEach(function (e) {
-                    console.error('Styling method "'.concat(e, '" is deprecated, use "theme" property instead')),
-                        (t[a[e]] = function (t) {
-                            for (var a = t.style, n = arguments.length, o = Array(n > 1 ? n - 1 : 0), s = 1; s < n; s++) o[s - 1] = arguments[s];
-                            return { style: Z(Z({}, a), r[e].apply(r, o)) };
+                a.forEach(function (a) {
+                    console.error('Styling method "'.concat(a, '" is deprecated, use "theme" property instead')),
+                        (t[r[a]] = function (t) {
+                            for (var r = t.style, n = arguments.length, s = Array(n > 1 ? n - 1 : 0), o = 1; o < n; o++) s[o - 1] = arguments[o];
+                            return { style: Z(Z({}, r), e[a].apply(e, s)) };
                         });
                 })),
             t);
-    return e.invertTheme && (o = (0, g.y7)(o)), { styling: (0, m.Z)(o) };
+    return e.invertTheme && (n = (0, g.y7)(n)), { styling: (0, m.Z)(n) };
 }
 var k = (function (e) {
-    (0, i.Z)(f, e);
+    (0, i.Z)(u, e);
     var t,
-        r,
-        l =
-            ((t = f),
-            (r = (function () {
+        r =
+            ((t = (function () {
                 if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
                 if ('function' == typeof Proxy) return !0;
                 try {
@@ -96,15 +88,15 @@ var k = (function (e) {
             })()),
             function () {
                 var e,
-                    a = (0, u.Z)(t);
-                return (e = r ? Reflect.construct(a, arguments, (0, u.Z)(this).constructor) : a.apply(this, arguments)), (0, c.Z)(this, e);
+                    r = (0, l.Z)(u);
+                return (e = t ? Reflect.construct(r, arguments, (0, l.Z)(this).constructor) : r.apply(this, arguments)), (0, c.Z)(this, e);
             });
-    function f(e) {
+    function u(e) {
         var t;
-        return (0, o.Z)(this, f), ((t = l.call(this, e)).state = M(e)), t;
+        return (0, s.Z)(this, u), ((t = r.call(this, e)).state = M(e)), t;
     }
     return (
-        (0, s.Z)(f, [
+        (0, o.Z)(u, [
             {
                 key: 'UNSAFE_componentWillReceiveProps',
                 value: function (e) {
@@ -129,8 +121,8 @@ var k = (function (e) {
                     var e = this.props,
                         t = e.data,
                         r = e.keyPath,
-                        o = e.postprocessValue,
-                        s = e.hideRoot,
+                        s = e.postprocessValue,
+                        o = e.hideRoot,
                         i = (e.theme, e.invertTheme, (0, n.Z)(e, y)),
                         c = this.state.styling;
                     return b.createElement(
@@ -142,15 +134,15 @@ var k = (function (e) {
                                 {},
                                 Z(
                                     {
-                                        postprocessValue: o,
-                                        hideRoot: s,
+                                        postprocessValue: s,
+                                        hideRoot: o,
                                         styling: c
                                     },
                                     i
                                 ),
                                 {
-                                    keyPath: s ? [] : r,
-                                    value: o(t)
+                                    keyPath: o ? [] : r,
+                                    value: s(t)
                                 }
                             )
                         )
@@ -158,19 +150,19 @@ var k = (function (e) {
                 }
             }
         ]),
-        f
+        u
     );
 })(b.Component);
-(0, l.Z)(k, 'propTypes', {
-    data: d().any,
-    hideRoot: d().bool,
-    theme: d().oneOfType([d().object, d().string]),
-    invertTheme: d().bool,
-    keyPath: d().arrayOf(d().oneOfType([d().string, d().number])),
-    postprocessValue: d().func,
-    sortObjectKeys: d().oneOfType([d().func, d().bool])
+(0, u.Z)(k, 'propTypes', {
+    data: h().any,
+    hideRoot: h().bool,
+    theme: h().oneOfType([h().object, h().string]),
+    invertTheme: h().bool,
+    keyPath: h().arrayOf(h().oneOfType([h().string, h().number])),
+    postprocessValue: h().func,
+    sortObjectKeys: h().oneOfType([h().func, h().bool])
 }),
-    (0, l.Z)(k, 'defaultProps', {
+    (0, u.Z)(k, 'defaultProps', {
         shouldExpandNode: function (e, t, r) {
             return 0 === r;
         },

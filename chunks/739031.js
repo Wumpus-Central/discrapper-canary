@@ -1,15 +1,17 @@
-e.exports = {
-    assetWrapper: 'assetWrapper_cb3343',
-    assetWrapperMasked: 'assetWrapperMasked_cb3343',
-    lottieCanvas: 'lottieCanvas_cb3343 stickerAsset_cb3343',
-    pngImage: 'pngImage_cb3343 stickerAsset_cb3343',
-    loadingIndicator: 'loadingIndicator_cb3343',
-    error: 'error_cb3343',
-    errorIcon: 'errorIcon_cb3343',
-    errorText: 'errorText_cb3343',
-    overlayWrapper: 'overlayWrapper_cb3343',
-    overlayStickerWrapper: 'overlayStickerWrapper_cb3343',
-    overlayLabelWrapper: 'overlayLabelWrapper_cb3343',
-    overlayLabel: 'overlayLabel_cb3343',
-    positionedLayer: 'positionedLayer_cb3343'
+var i = {
+    assetWrapper: 'assetWrapper__31fc2',
+    assetWrapperMasked: 'assetWrapperMasked__31fc2',
+    stickerAsset: 'stickerAsset__31fc2',
+    lottieCanvas: 'lottieCanvas__31fc2 stickerAsset__31fc2',
+    pngImage: 'pngImage__31fc2 stickerAsset__31fc2',
+    loadingIndicator: 'loadingIndicator__31fc2',
+    error: 'error__31fc2',
+    errorIcon: 'errorIcon__31fc2',
+    errorText: 'errorText__31fc2',
+    overlayWrapper: 'overlayWrapper__31fc2',
+    overlayStickerWrapper: 'overlayStickerWrapper__31fc2',
+    overlayLabelWrapper: 'overlayLabelWrapper__31fc2',
+    overlayLabel: 'overlayLabel__31fc2',
+    positionedLayer: 'positionedLayer__31fc2'
 };
+e.exports = i;

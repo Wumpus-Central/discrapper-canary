@@ -1,45 +1,40 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return x;
-        }
-    });
+n.d(t, { default: () => x });
 var i = n(200651);
 n(192379);
-var r = n(120356),
-    s = n.n(r),
-    a = n(512722),
-    l = n.n(a),
+var s = n(120356),
+    r = n.n(s),
+    l = n(512722),
+    a = n.n(l),
     o = n(481060),
     c = n(563132),
     d = n(409813),
     u = n(3409),
     m = n(388032),
-    g = n(517978),
-    h = n(652849);
-function p(e) {
-    let { transitionState: t, analyticsLocation: n, onClose: r, onAddPaymentSource: a, toastContent: c, initialStep: p = d.h8.PAYMENT_TYPE, overwriteSubscriptionPaymentSource: x = !1 } = e,
-        f = (0, u.fL)(),
+    h = n(517978),
+    g = n(652849);
+function _(e) {
+    let { transitionState: t, analyticsLocation: n, onClose: s, onAddPaymentSource: l, toastContent: c, initialStep: _ = d.h8.PAYMENT_TYPE, overwriteSubscriptionPaymentSource: x = !1 } = e,
+        p = (0, u.fL)(),
         E = (0, u.vP)({
-            paymentModalArgs: f,
-            initialStep: p,
+            paymentModalArgs: p,
+            initialStep: _,
             prependSteps: [],
             appendSteps: [],
             onReturn: () => {
-                r();
+                s();
             },
             onComplete: (e, t) => {
-                l()(null != t, 'paymentSource missing'), null == a || a(t), r();
+                a()(null != t, 'paymentSource missing'), null == l || l(t), s();
             },
             onStepChange: () => {},
             header: (0, i.jsxs)('div', {
-                className: s()(g.modalTitle, h.flex, h.justifyBetween, h.alignCenter),
+                className: r()(h.modalTitle, g.flex, g.justifyBetween, g.alignCenter),
                 children: [
-                    (0, i.jsx)(o.FormTitle, {
-                        tag: o.FormTitleTags.H4,
+                    (0, i.jsx)(o.vwX, {
+                        tag: o.RB0.H4,
                         children: m.intl.string(m.t.eQ2bLi)
                     }),
-                    (0, i.jsx)(o.ModalCloseButton, { onClick: r })
+                    (0, i.jsx)(o.olH, { onClick: s })
                 ]
             }),
             analyticsLocation: n,
@@ -47,13 +42,13 @@ function p(e) {
             toastContent: c,
             overwriteSubscriptionPaymentSource: x
         });
-    return (0, i.jsx)(o.ModalRoot, {
+    return (0, i.jsx)(o.Y0X, {
         transitionState: t,
-        size: o.ModalSize.SMALL,
-        className: g.modal,
+        size: o.CgR.SMALL,
+        className: h.modal,
         'aria-label': m.intl.string(m.t.eQ2bLi),
         children: (0, i.jsx)('form', {
-            className: g.form,
+            className: h.form,
             onSubmit: function (e) {
                 e.preventDefault();
             },
@@ -66,6 +61,6 @@ function x(e) {
         activeSubscription: null,
         stepConfigs: [],
         skuIDs: [],
-        children: (0, i.jsx)(p, { ...e })
+        children: (0, i.jsx)(_, { ...e })
     });
 }

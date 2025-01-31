@@ -1,12 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return A;
-    }
-});
+n.d(t, { Z: () => A });
 var i = n(200651),
     l = n(192379),
-    r = n(392711),
-    a = n.n(r),
+    a = n(392711),
+    r = n.n(a),
     s = n(442837),
     o = n(570140),
     c = n(239091),
@@ -17,25 +13,25 @@ var i = n(200651),
     m = n(933557),
     f = n(287746),
     g = n(541716),
-    C = n(665149),
-    x = n(910611),
-    v = n(359110),
-    _ = n(592125),
-    I = n(703558),
-    E = n(430824),
+    _ = n(665149),
+    C = n(910611),
+    x = n(359110),
+    v = n(592125),
+    E = n(703558),
+    I = n(430824),
     b = n(979651),
     Z = n(664342),
     N = n(124368),
-    S = n(981631),
-    T = n(388032),
+    T = n(981631),
+    S = n(388032),
     j = n(31224);
 function A(e) {
-    let { channelId: t, baseChannelId: r, channelViewSource: A = 'Split View' } = e,
-        y = (0, s.e7)([_.Z], () => _.Z.getChannel(t)),
-        P = (0, s.e7)([E.Z], () => E.Z.getGuild(null == y ? void 0 : y.getGuildId())),
-        M = (0, m.ZP)(y);
-    (function (e) {
-        let t = (0, s.e7)([b.Z], () => null != e && !a().isEmpty(b.Z.getVoiceStatesForChannel(e.id)));
+    let { channelId: t, baseChannelId: a, channelViewSource: A = 'Split View' } = e,
+        y = (0, s.e7)([v.Z], () => v.Z.getChannel(t)),
+        P = (0, s.e7)([I.Z], () => I.Z.getGuild(null == y ? void 0 : y.getGuildId())),
+        R = (0, m.ZP)(y);
+    !(function (e) {
+        let t = (0, s.e7)([b.Z], () => null != e && !r().isEmpty(b.Z.getVoiceStatesForChannel(e.id)));
         l.useEffect(() => {
             t &&
                 null != e &&
@@ -43,41 +39,41 @@ function A(e) {
                     type: 'SIDEBAR_CLOSE',
                     baseChannelId: e.parent_id
                 }),
-                (0, v.ad)(e, { source: N.on.VOICE_AUTO_OPEN }));
+                (0, x.ad)(e, { source: N.on.VOICE_AUTO_OPEN }));
         }, [t, e]);
     })(y);
-    let R = l.useRef(!1);
+    let M = l.useRef(!1);
     if (
         (l.useEffect(() => {
-            if (null == y || R.current) return;
-            R.current = !0;
-            let e = (0, h.K)(_.Z.getChannel(y.id), !0);
-            (0, u.yw)(S.rMx.CHANNEL_OPENED, {
+            if (null == y || M.current) return;
+            M.current = !0;
+            let e = (0, h.K)(v.Z.getChannel(y.id), !0);
+            (0, u.yw)(T.rMx.CHANNEL_OPENED, {
                 ...e,
                 ...(0, u.$H)(y.id),
                 channel_view: A
             }),
-                (0, p.a)(S.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: y.id });
+                (0, p.a)(T.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: y.id });
         }, [y, A]),
         null == y || null == P)
     )
         return null;
     let L = (0, i.jsx)(Z.Z, {
         channel: y,
-        baseChannelId: r
+        baseChannelId: a
     });
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(d.Z, {
                 channel: y,
-                draftType: I.d.ChannelMessage
+                draftType: E.d.ChannelMessage
             }),
-            (0, i.jsx)(C.ZP, {
+            (0, i.jsx)(_.ZP, {
                 toolbar: L,
-                'aria-label': T.intl.string(T.t.Pwe8tL),
-                children: (0, x.ud)({
+                'aria-label': S.intl.string(S.t.Pwe8tL),
+                children: (0, C.ud)({
                     channel: y,
-                    channelName: M,
+                    channelName: R,
                     guild: P,
                     inSidebar: !0,
                     handleContextMenu: function (e) {
@@ -91,7 +87,7 @@ function A(e) {
                         });
                     },
                     handleClick: function () {
-                        if (null != y) (0, v.Kh)(y.id);
+                        null != y && (0, x.Kh)(y.id);
                     }
                 })
             }),

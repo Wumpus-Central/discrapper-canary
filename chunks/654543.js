@@ -1,10 +1,11 @@
 e.exports = {
-    header: 'header_a970d0',
-    title: 'title_a970d0',
-    heading: 'heading_a970d0',
-    count: 'count_a970d0',
-    features: 'features_a970d0',
-    featuresTooltip: 'featuresTooltip_a970d0',
-    featureIcon: 'featureIcon_a970d0 feature_a970d0',
-    description: 'description_a970d0'
+    header: 'header_fefb6d',
+    title: 'title_fefb6d',
+    heading: 'heading_fefb6d',
+    count: 'count_fefb6d',
+    features: 'features_fefb6d',
+    featuresTooltip: 'featuresTooltip_fefb6d',
+    feature: 'feature_fefb6d',
+    featureIcon: 'featureIcon_fefb6d feature_fefb6d',
+    description: 'description_fefb6d'
 };

@@ -1,12 +1,6 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-}),
-    n(47120),
-    n(653041);
-var r = n(200651),
-    i = n(192379),
+n.d(t, { Z: () => h }), n(47120), n(653041);
+var i = n(200651),
+    r = n(192379),
     a = n(120356),
     l = n.n(a),
     o = n(758713),
@@ -19,22 +13,22 @@ function p(e) {
     let { platform: t, ...n } = e;
     switch (t) {
         case o.z.DESKTOP:
-            return (0, r.jsx)(s.pzj, {
+            return (0, i.jsx)(s.pzj, {
                 size: 'xs',
                 ...n
             });
         case o.z.XBOX:
-            return (0, r.jsx)(s.Mko, {
+            return (0, i.jsx)(s.Mko, {
                 size: 'xs',
                 ...n
             });
         case o.z.PLAYSTATION:
-            return (0, r.jsx)(s.Tsp, {
+            return (0, i.jsx)(s.Tsp, {
                 size: 'xs',
                 ...n
             });
         case o.z.NINTENDO:
-            return (0, r.jsx)(s.aPH, {
+            return (0, i.jsx)(s.aPH, {
                 size: 'xs',
                 ...n
             });
@@ -44,12 +38,12 @@ function p(e) {
 }
 function g(e) {
     let { platforms: t } = e;
-    return (0, r.jsx)('div', {
+    return (0, i.jsx)('div', {
         className: l()(u.row, u.gapSm),
         style: { alignItems: 'center' },
         children: t.map((e) =>
-            (0, r.jsx)(
-                c.Tooltip,
+            (0, i.jsx)(
+                c.ua7,
                 {
                     text: (function (e) {
                         switch (e) {
@@ -66,7 +60,7 @@ function g(e) {
                         }
                     })(e),
                     children: (t) =>
-                        (0, r.jsx)(p, {
+                        (0, i.jsx)(p, {
                             ...t,
                             platform: e
                         })
@@ -76,17 +70,17 @@ function g(e) {
         )
     });
 }
-function f(e) {
+function h(e) {
     let { detectedGame: t, className: n } = e,
-        a = i.useMemo(() => {
+        a = r.useMemo(() => {
             let e = new Set(t.platforms),
                 n = [...e];
             return !e.has(o.z.DESKTOP) && (e.has(o.z.MACOS) || e.has(o.z.LINUX)) && n.push(o.z.DESKTOP), n.filter((e) => m.includes(e));
         }, [t.platforms]);
     return 0 === a.length
         ? null
-        : (0, r.jsx)('div', {
+        : (0, i.jsx)('div', {
               className: l()(u.column, u.gapLg, n),
-              children: a.length > 0 && (0, r.jsx)(g, { platforms: a })
+              children: a.length > 0 && (0, i.jsx)(g, { platforms: a })
           });
 }

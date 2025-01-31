@@ -1,7 +1,8 @@
-e.exports = {
-    container: 'container_df21b5',
-    userContainer: 'userContainer_df21b5',
-    header: 'header_df21b5',
-    userInfo: 'userInfo_df21b5',
-    userIcon: 'userIcon_df21b5'
+var i = {
+    container: 'container__7bd4e',
+    userContainer: 'userContainer__7bd4e',
+    header: 'header__7bd4e',
+    userInfo: 'userInfo__7bd4e',
+    userIcon: 'userIcon__7bd4e'
 };
+e.exports = i;

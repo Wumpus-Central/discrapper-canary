@@ -1,13 +1,9 @@
-n.d(t, {
-    Z: function () {
-        return j;
-    }
-});
+n.d(t, { Z: () => v });
 var i = n(200651),
     l = n(192379),
     s = n(120356),
-    r = n.n(s),
-    a = n(442837),
+    a = n.n(s),
+    r = n(442837),
     o = n(692547),
     d = n(481060),
     c = n(787014),
@@ -18,18 +14,18 @@ var i = n(200651),
     p = n(710352),
     x = n(981631),
     f = n(388032),
-    v = n(28772);
-function j(e) {
+    j = n(28772);
+function v(e) {
     let { channel: t } = e,
-        s = (0, a.e7)([m.Z], () => m.Z.can(x.Plq.MANAGE_CHANNELS, t), [t]),
+        s = (0, r.e7)([m.Z], () => m.Z.can(x.Plq.MANAGE_CHANNELS, t), [t]),
         u = t.availableTags.length >= p.pC,
         g = t.availableTags.length > 0,
-        j = l.useCallback(() => {
+        v = l.useCallback(() => {
             let e = t.availableTags.length >= p.pC;
             s &&
                 !e &&
-                (0, d.openModalLazy)(async () => {
-                    let { default: e } = await n.e('21971').then(n.bind(n, 915774));
+                (0, d.ZDy)(async () => {
+                    let { default: e } = await n.e('21971').then(n.bind(n, 201049));
                     return (n) =>
                         (0, i.jsx)(e, {
                             ...n,
@@ -38,11 +34,11 @@ function j(e) {
                         });
                 });
         }, [t, s]),
-        b = l.useCallback(
+        N = l.useCallback(
             (e) => {
                 s &&
-                    (0, d.openModalLazy)(async () => {
-                        let { default: l } = await n.e('21971').then(n.bind(n, 915774));
+                    (0, d.ZDy)(async () => {
+                        let { default: l } = await n.e('21971').then(n.bind(n, 201049));
                         return (n) =>
                             (0, i.jsx)(l, {
                                 ...n,
@@ -55,14 +51,14 @@ function j(e) {
             [s, t]
         ),
         {
-            handleDragStart: T,
-            handleDragReset: N,
-            handleDragComplete: S
+            handleDragStart: b,
+            handleDragReset: Z,
+            handleDragComplete: T
         } = (0, h.Z)(t.availableTags, (e) => {
             (0, c.pW)({ availableTags: e });
         });
     return (0, i.jsxs)('div', {
-        className: v.tags,
+        className: j.tags,
         children: [
             g
                 ? t.availableTags.map((e) =>
@@ -72,20 +68,20 @@ function j(e) {
                               tag: e,
                               availableTags: t.availableTags,
                               canManageChannels: s,
-                              onTagClick: b,
-                              onDragComplete: S,
-                              onDragReset: N,
-                              onDragStart: T
+                              onTagClick: N,
+                              onDragComplete: T,
+                              onDragReset: Z,
+                              onDragStart: b
                           },
                           e.id
                       )
                   )
                 : null,
             g
-                ? (0, i.jsx)(d.Clickable, {
-                      onClick: j,
-                      className: r()(v.addTags, { [v.disabled]: !s || u }),
-                      children: (0, i.jsx)(d.PlusSmallIcon, {
+                ? (0, i.jsx)(d.P3F, {
+                      onClick: v,
+                      className: a()(j.addTags, { [j.disabled]: !s || u }),
+                      children: (0, i.jsx)(d.qJs, {
                           size: 'custom',
                           'aria-label': f.intl.string(f.t['/jubeH']),
                           color: o.Z.unsafe_rawColors.WHITE_500.css,
@@ -93,16 +89,16 @@ function j(e) {
                           height: 20
                       })
                   })
-                : (0, i.jsx)(d.Button, {
+                : (0, i.jsx)(d.zxk, {
                       disabled: !s,
-                      onClick: j,
+                      onClick: v,
                       children: f.intl.string(f.t['/jubeH'])
                   })
         ]
     });
 }
 function C(e) {
-    let { tag: t, availableTags: n, canManageChannels: l, onTagClick: s, onDragComplete: a, onDragStart: o, onDragReset: d } = e,
+    let { tag: t, availableTags: n, canManageChannels: l, onTagClick: s, onDragComplete: r, onDragStart: o, onDragReset: d } = e,
         c = n.findIndex((e) => e.id === t.id),
         {
             drag: h,
@@ -114,13 +110,13 @@ function C(e) {
             index: c,
             optionId: t.id,
             onDragStart: o,
-            onDragComplete: a,
+            onDragComplete: r,
             onDragReset: d
         });
     return (0, i.jsx)('div', {
-        className: r()(v.container, {
-            [v.dropIndicatorBefore]: null != m && c < m,
-            [v.dropIndicatorAfter]: null != m && c > m
+        className: a()(j.container, {
+            [j.dropIndicatorBefore]: null != m && c < m,
+            [j.dropIndicatorAfter]: null != m && c > m
         }),
         ref: (e) => h(p(e)),
         onMouseEnter: () => x(l),

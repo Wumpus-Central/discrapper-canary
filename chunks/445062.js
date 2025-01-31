@@ -1,29 +1,25 @@
-r.d(n, {
-    Z: function () {
-        return u;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(864094),
-    o = r(871499),
-    s = r(388032);
-function l(e) {
+n.d(t, { Z: () => l });
+var i = n(200651);
+n(192379);
+var r = n(864094),
+    a = n(871499),
+    s = n(388032);
+function o(e) {
     return e ? s.intl.string(s.t.S5anIS) : s.intl.string(s.t.q3O3Jy);
 }
-function u(e) {
-    let { isSelfStream: n, centerButton: r = !1, onMouseEnter: s, onMouseLeave: u, ...c } = e,
-        d = r ? o.d : o.Z,
-        { Component: f, events: p } = (0, a.P)('disable');
-    return (0, i.jsx)(d, {
-        label: l(n),
-        iconComponent: f,
+function l(e) {
+    let { isSelfStream: t, centerButton: n = !1, onMouseEnter: s, onMouseLeave: l, ...u } = e,
+        c = n ? a.d : a.Z,
+        { Component: d, events: f } = (0, r.P)('disable');
+    return (0, i.jsx)(c, {
+        label: o(t),
+        iconComponent: d,
         onMouseEnter: (e) => {
-            null == s || s(e), p.onMouseEnter();
+            null == s || s(e), f.onMouseEnter();
         },
         onMouseLeave: (e) => {
-            null == u || u(e), p.onMouseLeave();
+            null == l || l(e), f.onMouseLeave();
         },
-        ...c
+        ...u
     });
 }

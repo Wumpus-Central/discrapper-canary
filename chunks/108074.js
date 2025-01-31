@@ -1,86 +1,76 @@
-r.d(t, {
-    W: function () {
-        return E;
-    }
-});
-var a = r(617726),
-    n = r(967752),
-    _ = r(510529);
-function o(e, t) {
-    let r;
-    return (0, a.gv)(e, (e, a) => (t.includes(a) && (r = Array.isArray(e) ? e[1] : void 0), !!r)), r;
+a.d(e, { W: () => i });
+var r = a(617726),
+    n = a(967752),
+    o = a(510529);
+function _(t, e) {
+    let a;
+    return (0, r.gv)(t, (t, r) => (e.includes(r) && (a = Array.isArray(t) ? t[1] : void 0), !!a)), a;
 }
-function E(e, t) {
-    return (r) => {
-        let E = e(r),
-            i = new Map();
-        function c(t, a) {
-            let E = a ? `${t}:${a}` : t,
-                c = i.get(E);
-            if (!c) {
-                var s, l;
-                let I = (0, n.U4)(t);
-                if (!I) return;
-                let u = (0, _.U)(I, r.tunnel);
-                (c = a
-                    ? ((s = e),
-                      (l = a),
-                      (e) => {
-                          let t = s(e);
+function i(t, e) {
+    return (a) => {
+        let i = t(a),
+            c = new Map();
+        function s(e, r) {
+            let i = r ? `${e}:${r}` : e,
+                s = c.get(i);
+            if (!s) {
+                let E = (0, n.U4)(e);
+                if (!E) return;
+                let l = (0, o.U)(E, a.tunnel);
+                (s = r
+                    ? ((e) => {
+                          let a = t(e);
                           return {
-                              ...t,
-                              send: async (e) => {
-                                  let r = o(e, ['event', 'transaction', 'profile', 'replay_event']);
-                                  return r && (r.release = l), t.send(e);
+                              ...a,
+                              send: async (t) => {
+                                  let e = _(t, ['event', 'transaction', 'profile', 'replay_event']);
+                                  return e && (e.release = r), a.send(t);
                               }
                           };
                       })({
-                          ...r,
-                          url: u
+                          ...a,
+                          url: l
                       })
-                    : e({
-                          ...r,
-                          url: u
+                    : t({
+                          ...a,
+                          url: l
                       })),
-                    i.set(E, c);
+                    c.set(i, s);
             }
-            return [t, c];
+            return [e, s];
         }
         return {
-            send: async function e(e) {
-                let r = t({
-                        envelope: e,
-                        getEvent: function (t) {
-                            return o(e, t && t.length ? t : ['event']);
+            send: async function (t) {
+                let a = e({
+                        envelope: t,
+                        getEvent: function (e) {
+                            return _(t, e && e.length ? e : ['event']);
                         }
                     })
-                        .map((e) => ('string' == typeof e ? c(e, void 0) : c(e.dsn, e.release)))
-                        .filter((e) => !!e),
-                    n = r.length ? r : [['', E]];
+                        .map((t) => ('string' == typeof t ? s(t, void 0) : s(t.dsn, t.release)))
+                        .filter((t) => !!t),
+                    n = a.length ? a : [['', i]];
                 return (
                     await Promise.all(
-                        n.map(([t, r]) => {
-                            var n, _;
-                            return r.send(
-                                ((n = e),
-                                (_ = t),
-                                (0, a.Jd)(
-                                    _
+                        n.map(([e, a]) =>
+                            a.send(
+                                (0, r.Jd)(
+                                    e
                                         ? {
-                                              ...n[0],
-                                              dsn: _
+                                              ...t[0],
+                                              dsn: e
                                           }
-                                        : n[0],
-                                    n[1]
-                                ))
-                            );
-                        })
+                                        : t[0],
+                                    t[1]
+                                )
+                            )
+                        )
                     )
                 )[0];
             },
-            flush: async function e(e) {
-                let t = [...i.values(), E];
-                return (await Promise.all(t.map((t) => t.flush(e)))).every((e) => e);
+            flush: async function (t) {
+                let e = [...c.values(), i];
+                return (await Promise.all(e.map((e) => e.flush(t)))).every((t) => t);
             }
         };
     };

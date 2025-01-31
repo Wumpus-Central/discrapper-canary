@@ -1,6 +1,2 @@
-n.d(t, {
-    n: function () {
-        return i.n;
-    }
-});
+n.d(t, { n: () => i.n });
 var i = n(95070);

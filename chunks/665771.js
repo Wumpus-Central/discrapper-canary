@@ -1,20 +1,16 @@
-r.d(n, {
-    Z: function () {
-        return s;
-    }
-});
-var i = r(528734),
-    a = r(951516),
-    o = r(964415);
+n.d(t, { Z: () => s });
+var i = n(528734),
+    r = n(951516),
+    a = n(964415);
 function s(e) {
-    (0, a.Z)(1, arguments);
-    var n = (0, i.default)(e),
-        r = n.getUTCFullYear(),
+    (0, r.Z)(1, arguments);
+    var t = (0, i.default)(e),
+        n = t.getUTCFullYear(),
         s = new Date(0);
-    s.setUTCFullYear(r + 1, 0, 4), s.setUTCHours(0, 0, 0, 0);
-    var l = (0, o.Z)(s),
-        u = new Date(0);
-    u.setUTCFullYear(r, 0, 4), u.setUTCHours(0, 0, 0, 0);
-    var c = (0, o.Z)(u);
-    return n.getTime() >= l.getTime() ? r + 1 : n.getTime() >= c.getTime() ? r : r - 1;
+    s.setUTCFullYear(n + 1, 0, 4), s.setUTCHours(0, 0, 0, 0);
+    var o = (0, a.Z)(s),
+        l = new Date(0);
+    l.setUTCFullYear(n, 0, 4), l.setUTCHours(0, 0, 0, 0);
+    var u = (0, a.Z)(l);
+    return t.getTime() >= o.getTime() ? n + 1 : t.getTime() >= u.getTime() ? n : n - 1;
 }

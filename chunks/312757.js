@@ -1,39 +1,34 @@
-e.r(n),
-    e.d(n, {
-        default: function () {
-            return c;
-        }
-    });
-var i = e(200651);
-e(192379);
-var l = e(481060),
-    r = e(287734),
-    d = e(313201),
-    a = e(939863),
-    s = e(482241),
-    u = e(554747),
-    _ = e(388032),
-    E = e(3977);
+n.d(e, { default: () => c });
+var i = n(200651);
+n(192379);
+var l = n(481060),
+    d = n(287734),
+    r = n(313201),
+    a = n(939863),
+    s = n(482241),
+    _ = n(554747),
+    u = n(388032),
+    E = n(3977);
 function c(t) {
-    let { channel: n, transitionState: e, onClose: c } = t,
-        o = (0, d.Dt)(),
-        I = (0, u.qY)(n.id);
+    let { channel: e, transitionState: n, onClose: c } = t,
+        o = (0, r.Dt)(),
+        I = (0, _.qY)(e.id);
     if (null == I) return null;
     let p = () => {
-        r.default.selectVoiceChannel(null), c();
+        d.default.selectVoiceChannel(null), c();
     };
-    return (0, i.jsxs)(l.ModalRoot, {
-        transitionState: e,
+    return (0, i.jsxs)(l.Y0X, {
+        transitionState: n,
         'aria-labelledby': o,
-        size: l.ModalSize.SMALL,
+        size: l.CgR.SMALL,
         children: [
-            (0, i.jsxs)(l.ModalContent, {
+            (0, i.jsxs)(l.hzk, {
                 className: E.content,
                 children: [
                     (0, i.jsx)(a.Z, {
                         children: (0, i.jsx)('div', {
                             className: E.iconBackground,
-                            children: (0, i.jsx)(l.CalendarIcon, {
+                            children: (0, i.jsx)(l.Que, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 height: 40,
@@ -42,35 +37,35 @@ function c(t) {
                             })
                         })
                     }),
-                    (0, i.jsx)(l.Heading, {
+                    (0, i.jsx)(l.X6q, {
                         id: o,
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
                         className: E.title,
-                        children: _.intl.string(_.t['4Ao8LC'])
+                        children: u.intl.string(u.t['4Ao8LC'])
                     }),
                     (0, i.jsx)(l.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
                         className: E.subtitle,
-                        children: _.intl.string(_.t['0I0B8f'])
+                        children: u.intl.string(u.t['0I0B8f'])
                     })
                 ]
             }),
-            (0, i.jsxs)(l.ModalFooter, {
+            (0, i.jsxs)(l.mzw, {
                 children: [
-                    (0, i.jsx)(l.Button, {
-                        color: l.Button.Colors.RED,
+                    (0, i.jsx)(l.zxk, {
+                        color: l.zxk.Colors.RED,
                         onClick: () => {
                             s.Z.endEvent(I.id, I.guild_id), p();
                         },
-                        children: _.intl.string(_.t.mjB9pa)
+                        children: u.intl.string(u.t.mjB9pa)
                     }),
-                    (0, i.jsx)(l.Button, {
-                        color: l.Button.Colors.PRIMARY,
+                    (0, i.jsx)(l.zxk, {
+                        color: l.zxk.Colors.PRIMARY,
                         className: E.cancelButton,
                         onClick: p,
-                        children: _.intl.string(_.t.P60OAQ)
+                        children: u.intl.string(u.t.P60OAQ)
                     })
                 ]
             })

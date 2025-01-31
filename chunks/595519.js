@@ -1,48 +1,36 @@
-r.d(n, {
-    NX: function () {
-        return p;
-    },
-    WS: function () {
-        return f;
-    },
-    l5: function () {
-        return d;
-    },
-    qB: function () {
-        return m;
-    }
+n.d(t, {
+    NX: () => f,
+    WS: () => d,
+    l5: () => c,
+    qB: () => p
 });
-var i = r(106351),
-    a = r(442837),
-    o = r(424602),
-    s = r(592125),
-    l = r(496675),
-    u = r(231338);
-function c(e) {
+var i = n(106351),
+    r = n(442837),
+    a = n(424602),
+    s = n(592125),
+    o = n(496675),
+    l = n(231338);
+function u(e) {
     return [i.d.GUILD_TEXT, i.d.GUILD_VOICE, i.d.GROUP_DM, i.d.DM].includes(e);
 }
-function d(e) {
+function c(e) {
     if (null == e) return !1;
-    let n = s.Z.getChannel(e.parent_id);
-    return (null == n || (null == n ? void 0 : n.type) === i.d.GUILD_CATEGORY) && c(e.type);
+    let t = s.Z.getChannel(e.parent_id);
+    return (null == t || (null == t ? void 0 : t.type) === i.d.GUILD_CATEGORY) && u(e.type);
+}
+function d(e) {
+    return _(e, o.Z);
 }
 function f(e) {
-    return h(e, l.Z);
+    return (0, r.e7)([s.Z, o.Z], () => _(s.Z.getChannel(e), o.Z));
 }
-function p(e) {
-    return (0, a.e7)([s.Z, l.Z], () => h(s.Z.getChannel(e), l.Z));
+function _(e, t) {
+    return !!(null != e && void 0 !== e && c(e) && (null == e.guild_id || t.can(l.Pl.USE_EMBEDDED_ACTIVITIES, e)));
 }
-function h(e, n) {
-    return !!(null != e && void 0 !== e && d(e) && (null == e.guild_id || n.can(u.Pl.USE_EMBEDDED_ACTIVITIES, e))) || !1;
-}
-function _(e) {
-    return (null == e ? void 0 : e.guild_id) != null || d(e);
-}
-function m(e, n) {
-    let r = (0, a.e7)([s.Z], () => s.Z.getChannel(e)),
-        i = (0, a.e7)([l.Z], () => l.Z.can(u.Pl.USE_EMBEDDED_ACTIVITIES, r)),
-        c = d(r),
-        f = null == r ? void 0 : r.guild_id,
-        p = null != f;
-    return !o.T.useExperiment({ location: n }, { autoTrackExposure: !1 }).enabled && (p ? i && c : c);
+function p(e, t) {
+    let n = (0, r.e7)([s.Z], () => s.Z.getChannel(e)),
+        i = (0, r.e7)([o.Z], () => o.Z.can(l.Pl.USE_EMBEDDED_ACTIVITIES, n)),
+        u = c(n),
+        d = null != (null == n ? void 0 : n.guild_id);
+    return !a.T.useExperiment({ location: t }, { autoTrackExposure: !1 }).enabled && (d ? i && u : u);
 }

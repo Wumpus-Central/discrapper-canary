@@ -1,13 +1,8 @@
-n.d(t, {
-    Y: function () {
-        return g;
-    }
-}),
-    n(47120);
+n.d(t, { Y: () => g }), n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(286379),
-    a = n(442837),
+    a = n(286379),
+    r = n(442837),
     s = n(481060),
     o = n(797614),
     c = n(699516),
@@ -18,101 +13,101 @@ var i = n(200651),
     m = n(134612),
     f = n(388032);
 function g(e) {
-    let { channelId: t, warningId: g, senderId: C } = e,
-        x = l.useCallback(() => {
+    let { channelId: t, warningId: g, senderId: _ } = e,
+        C = l.useCallback(() => {
             (0, d.T)(t, [g]);
         }, [t, g]),
-        v = (0, a.e7)([c.Z], () => c.Z.isBlocked(C)),
-        _ = l.useMemo(
+        x = (0, r.e7)([c.Z], () => c.Z.isBlocked(_)),
+        v = l.useMemo(
             () => ({
                 channelId: t,
                 warningId: g,
-                senderId: C,
+                senderId: _,
                 warningType: u.pj.INAPPROPRIATE_CONVERSATION_TIER_2
             }),
-            [t, g, C]
+            [t, g, _]
         );
     l.useEffect(() => {
         (0, h.KQ)({
-            ..._,
+            ...v,
             viewName: h.pb.SAFETY_WARNING_BANNER
         }),
-            o.Z.increment({ name: r.V.SAFETY_WARNING_VIEW });
-    }, [_]);
-    let I = l.useCallback(
+            o.Z.increment({ name: a.V.SAFETY_WARNING_VIEW });
+    }, [v]);
+    let E = l.useCallback(
             (e) => {
                 (0, h.qc)({
-                    ..._,
+                    ...v,
                     cta: e
                 });
             },
-            [_]
+            [v]
         ),
-        E = l.useCallback(() => {
-            (0, s.openModalLazy)(
+        I = l.useCallback(() => {
+            (0, s.ZDy)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e('37229'), n.e('89650')]).then(n.bind(n, 611446));
+                    let { default: e } = await Promise.all([n.e('49508'), n.e('89650')]).then(n.bind(n, 611446));
                     return (n) => {
-                        let { transitionState: l, onClose: r } = n;
+                        let { transitionState: l, onClose: a } = n;
                         return (0, i.jsx)(e, {
-                            otherUserId: C,
+                            otherUserId: _,
                             channelId: t,
                             warningId: g,
                             warningType: u.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
                             transitionState: l,
-                            onClose: r
+                            onClose: a
                         });
                     };
                 },
                 { modalKey: m.X_ }
             ),
-                I(h.NM.USER_BANNER_OPEN_SAFETY_TOOLS);
-        }, [t, C, g, I]),
+                E(h.NM.USER_BANNER_OPEN_SAFETY_TOOLS);
+        }, [t, _, g, E]),
         b = l.useCallback(() => {
-            x(), I(h.NM.USER_BANNER_BLOCK_CONFIRM);
-        }, [x, I]),
+            C(), E(h.NM.USER_BANNER_BLOCK_CONFIRM);
+        }, [C, E]),
         Z = l.useCallback(() => {
-            x(), I(h.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
-        }, [x, I]),
+            C(), E(h.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
+        }, [C, E]),
         N = l.useCallback(() => {
-            (0, s.openModalLazy)(async () => {
+            (0, s.ZDy)(async () => {
                 let { default: e } = await n.e('19538').then(n.bind(n, 699783));
                 return (n) => {
-                    let { transitionState: l, onClose: r } = n;
+                    let { transitionState: l, onClose: a } = n;
                     return (0, i.jsx)(e, {
                         transitionState: l,
                         onBlock: b,
                         onBlockAndReport: Z,
                         onCancel: () => {
-                            null == r || r(), I(h.NM.USER_BANNER_BLOCK_CANCEL);
+                            null == a || a(), E(h.NM.USER_BANNER_BLOCK_CANCEL);
                         },
-                        onClose: r,
-                        userId: C,
+                        onClose: a,
+                        userId: _,
                         channelId: t
                     });
                 };
             });
-        }, [b, Z, C, t, I]);
+        }, [b, Z, _, t, E]);
     return (0, i.jsx)(p.Q, {
         channelId: t,
         warningId: g,
-        senderId: C,
+        senderId: _,
         warningType: u.pj.INAPPROPRIATE_CONVERSATION_TIER_2,
         header: f.intl.string(f.t.ZzlB5u),
         description: f.intl.string(f.t['D1aU+v']),
-        onDismiss: x,
+        onDismiss: C,
         buttons: [
             {
                 text: f.intl.string(f.t.Qyu4UF),
-                color: s.Button.Colors.BRAND,
-                onclick: E
+                color: s.zxk.Colors.BRAND,
+                onclick: I
             },
-            ...(v
+            ...(x
                 ? []
                 : [
                       {
                           text: f.intl.string(f.t['7q0bNT']),
-                          color: s.Button.Colors.PRIMARY,
+                          color: s.zxk.Colors.PRIMARY,
                           onclick: N
                       }
                   ])

@@ -1,48 +1,43 @@
-n.d(t, {
-    Z: function () {
-        return h;
-    }
-}),
-    n(47120);
-var s = n(200651),
-    r = n(192379),
-    i = n(404759),
-    o = n.n(i),
-    a = n(423650),
-    l = n.n(a),
-    u = n(481060),
-    d = n(388032),
-    c = n(561022);
-function p(e, t, n) {
+s.d(t, { Z: () => h }), s(47120);
+var n = s(200651),
+    r = s(192379),
+    i = s(404759),
+    o = s.n(i),
+    l = s(423650),
+    a = s.n(l),
+    u = s(481060),
+    c = s(388032),
+    p = s(561022);
+function d(e, t, s) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: n,
+                  value: s,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = n),
+            : (e[t] = s),
         e
     );
 }
 class h extends r.Component {
     render() {
         let { selectedValue: e } = this.state;
-        return (0, s.jsxs)(r.Fragment, {
+        return (0, n.jsxs)(r.Fragment, {
             children: [
-                (0, s.jsx)(u.Heading, {
-                    className: c.prompt,
+                (0, n.jsx)(u.X6q, {
+                    className: p.prompt,
                     variant: 'heading-md/semibold',
                     children: this.props.prompt
                 }),
-                (0, s.jsx)('hr', { className: c.separator }),
-                (0, s.jsx)(u.Text, {
-                    className: c.selectYourAnswer,
+                (0, n.jsx)('hr', { className: p.separator }),
+                (0, n.jsx)(u.Text, {
+                    className: p.selectYourAnswer,
                     variant: 'text-xs/normal',
-                    children: d.intl.string(d.t.YeiLeH)
+                    children: c.intl.string(c.t.YeiLeH)
                 }),
-                (0, s.jsx)(u.RadioGroup, {
+                (0, n.jsx)(u.FXm, {
                     options: this.getQuestionOptions(),
                     onChange: this.handleOptionChange,
                     value: e
@@ -52,12 +47,12 @@ class h extends r.Component {
     }
     constructor(...e) {
         super(...e),
-            p(this, 'state', { selectedValue: null }),
-            p(
+            d(this, 'state', { selectedValue: null }),
+            d(
                 this,
                 'getQuestionOptions',
                 o()(() =>
-                    l()(
+                    a()(
                         this.props.options.map((e) => ({
                             name: e.copy,
                             value: e.house
@@ -65,7 +60,7 @@ class h extends r.Component {
                     )
                 )
             ),
-            p(this, 'handleOptionChange', (e) => {
+            d(this, 'handleOptionChange', (e) => {
                 let { onSelect: t } = this.props;
                 this.setState({ selectedValue: e.value }), t(e.value);
             });

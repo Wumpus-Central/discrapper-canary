@@ -1,17 +1,12 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return m;
-        },
-        openEffectsUpsellModal: function () {
-            return f;
-        }
-    });
+n.d(t, {
+    default: () => m,
+    h: () => f
+});
 var i = n(200651);
 n(192379);
 var l = n(481060),
-    r = n(70097),
-    a = n(174609),
+    a = n(70097),
+    r = n(174609),
     s = n(98278),
     o = n(790527),
     c = n(626135),
@@ -23,7 +18,7 @@ function m(e) {
     let { onClose: t, analytics: n, ...l } = e,
         m = u.intl.format(u.t['7aNIkZ'], {
             onPressMore: function () {
-                (0, a.Z)(),
+                (0, r.Z)(),
                     t(),
                     c.default.track(d.rMx.PREMIUM_PROMOTION_OPENED, {
                         location_section: d.jXE.VOICE_CHANNEL_EFFECTS_UPSELL_MODAL,
@@ -48,8 +43,8 @@ function m(e) {
             section: n.section
         },
         onClose: t,
-        onSubscribeClick: a.Z,
-        artElement: (0, i.jsx)(r.Z, {
+        onSubscribeClick: r.Z,
+        artElement: (0, i.jsx)(a.Z, {
             className: h.video,
             src: p,
             loop: !0,
@@ -60,7 +55,7 @@ function m(e) {
 }
 function f(e) {
     let { analytics: t } = e;
-    (0, l.openModalLazy)(async () => {
+    (0, l.ZDy)(async () => {
         let { default: e } = await Promise.resolve().then(n.bind(n, 310892));
         return (n) =>
             (0, i.jsx)(e, {

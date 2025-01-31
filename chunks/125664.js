@@ -1,9 +1,10 @@
+n.d(t, { Z: () => a });
 var i = n(200651);
 n(192379);
 var r = n(960259),
     l = n(410319),
-    s = n(331595);
-t.Z = (0, r.hN)(
+    s = n(325767);
+let a = (0, r.hN)(
     function (e) {
         let { width: t = 24, height: n = 24, color: r = 'currentColor', foreground: l, ...a } = e;
         return (0, i.jsx)('svg', {

@@ -1,70 +1,65 @@
-r.d(n, {
-    q: function () {
-        return v;
-    }
-});
+n.d(t, { q: () => g }), n(47120);
 var i,
-    a = r(47120);
-var o = r(442837),
-    s = r(570140),
-    l = r(353926),
-    u = r(626135),
-    c = r(358085),
-    d = r(998502);
-function f(e, n, r) {
+    r = n(442837),
+    a = n(570140),
+    s = n(353926),
+    o = n(626135),
+    l = n(358085),
+    u = n(998502);
+function c(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let p = { hashes: {} };
-async function h() {
-    if (!c.isPlatformEmbedded || !(0, c.isWindows)()) return [];
-    await d.ZP.ensureModule('discord_media');
-    let e = d.ZP.requireModule('discord_media');
+let d = { hashes: {} };
+async function f() {
+    if (!l.isPlatformEmbedded || !(0, l.isWindows)()) return [];
+    await u.ZP.ensureModule('discord_media');
+    let e = u.ZP.requireModule('discord_media');
     return (await e.getSystemAnalyticsBlob()) || [];
 }
 async function _() {
     try {
-        let n = (await h()).filter((e) => p.hashes[e.name] !== e.hash);
-        for (let { name: r, hash: i, data: a } of n) {
+        let t = (await f()).filter((e) => d.hashes[e.name] !== e.hash);
+        for (let { name: n, hash: i, data: r } of t) {
             var e;
-            let n = {
-                ...a,
-                gpus: null === (e = a.gpus) || void 0 === e ? void 0 : e.map((e) => JSON.stringify(e))
+            let t = {
+                ...r,
+                gpus: null === (e = r.gpus) || void 0 === e ? void 0 : e.map((e) => JSON.stringify(e))
             };
-            u.default.track(r, n), ((p = { hashes: { ...p.hashes } }).hashes[r] = i);
+            o.default.track(n, t), ((d = { hashes: { ...d.hashes } }).hashes[n] = i);
         }
-        n.length > 0 && E.emitChange();
+        t.length > 0 && m.emitChange();
     } catch (e) {}
 }
-function m() {
+function p() {
     return _(), !1;
 }
-class g extends (i = o.ZP.PersistedStore) {
+class h extends (i = r.ZP.PersistedStore) {
     initialize(e) {
-        (p = null != e && 'object' == typeof e.hashes ? e : { hashes: {} }), this.waitFor(l.Z);
+        (d = null != e && 'object' == typeof e.hashes ? e : { hashes: {} }), this.waitFor(s.Z);
     }
     getState() {
-        return p;
+        return d;
     }
     async info() {
         try {
-            let e = (await h()).find((e) => 'hardware_detected' === e.name);
+            let e = (await f()).find((e) => 'hardware_detected' === e.name);
             if (null == e) return null;
             return e.data;
         } catch (e) {}
     }
 }
-f(g, 'displayName', 'SystemAnalyticsStore'), f(g, 'persistKey', 'SystemAnalyticsStore');
-let E = new g(s.Z, { START_SESSION: m });
-function v() {
-    return E.info();
+c(h, 'displayName', 'SystemAnalyticsStore'), c(h, 'persistKey', 'SystemAnalyticsStore');
+let m = new h(a.Z, { START_SESSION: p });
+function g() {
+    return m.info();
 }

@@ -1,14 +1,9 @@
-n.d(t, {
-    A: function () {
-        return g;
-    }
-}),
-    n(47120);
+n.d(t, { A: () => h }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    s = n(120356),
-    a = n.n(s),
-    l = n(481060),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(481060),
     o = n(317257),
     c = n(960919),
     d = n(289173);
@@ -20,30 +15,31 @@ let u = () =>
         }),
     m = (e) => {
         let { value: t, placeholderValue: n } = e,
-            [s, a] = (0, r.useState)(null),
-            o = (0, r.useRef)(null);
-        return (
-            (0, r.useEffect)(() => {
-                if (null !== t)
-                    null === s
-                        ? a(t)
-                        : s !== t &&
-                          null === o.current &&
-                          (o.current = setTimeout(() => {
-                              (o.current = null), s < t ? a(s + 1) : s > t && a(s - 1);
-                          }, 20));
-            }, [s, t, a]),
-            (0, i.jsx)(l.Text, {
-                variant: 'text-md/semibold',
-                className: d.text,
-                children: null === s ? n : s
-            })
-        );
+            [r, o] = (0, s.useState)(null),
+            c = (0, s.useRef)(null);
+        (0, s.useEffect)(() => {
+            null !== t &&
+                (null === r
+                    ? o(t)
+                    : r !== t &&
+                      null === c.current &&
+                      (c.current = setTimeout(() => {
+                          (c.current = null), r < t ? o(r + 1) : r > t && o(r - 1);
+                      }, 20)));
+        }, [r, t, o]);
+        let u = null === r ? n : r,
+            m = null !== u ? ''.concat(u).length : 1;
+        return (0, i.jsx)(a.Text, {
+            variant: 'text-md/semibold',
+            className: l()(d.balanceCounterText),
+            style: { width: ''.concat(m, 'ch') },
+            children: u
+        });
     },
-    g = (e) => {
-        let { balance: t, placeholderBalance: n, balanceWidgetMode: r = o.b.DEFAULT, showNotificationBadge: s, onClick: g, onMouseEnter: h, onMouseLeave: p } = e,
+    h = (e) => {
+        let { balance: t, placeholderBalance: n, balanceWidgetMode: s = o.b.DEFAULT, showNotificationBadge: r, onClick: h, onMouseEnter: g, onMouseLeave: _ } = e,
             x = d.default;
-        switch (r) {
+        switch (s) {
             case o.b.HIGHLIGHTED:
                 x = d.highlighted;
                 break;
@@ -51,20 +47,20 @@ let u = () =>
                 x = d.selected;
         }
         return (0, i.jsx)('span', {
-            onMouseEnter: void 0 !== h ? h : () => {},
-            onMouseLeave: void 0 !== p ? p : () => {},
-            children: (0, i.jsxs)(l.Clickable, {
-                className: a()(d.container, x),
-                onClick: void 0 !== g ? g : () => {},
+            onMouseEnter: void 0 !== g ? g : () => {},
+            onMouseLeave: void 0 !== _ ? _ : () => {},
+            children: (0, i.jsxs)(a.P3F, {
+                className: l()(d.container, x),
+                onClick: void 0 !== h ? h : () => {},
                 children: [
                     (0, i.jsx)(c.M, {}),
                     (0, i.jsx)(m, {
                         value: t,
                         placeholderValue: n
                     }),
-                    s && (0, i.jsx)(u, {})
+                    r && (0, i.jsx)(u, {})
                 ]
             })
         });
     };
-g.BalanceWidgetMode = o.b;
+h.BalanceWidgetMode = o.b;

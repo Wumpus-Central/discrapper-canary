@@ -1,14 +1,10 @@
-r.d(n, {
-    w: function () {
-        return o;
-    }
-});
-var i = r(668781),
-    a = r(388032);
-let o = () => {
+n.d(t, { w: () => a });
+var i = n(668781),
+    r = n(388032);
+let a = () => {
     i.Z.show({
-        title: a.intl.string(a.t.otsg2d),
-        body: a.intl.string(a.t['/Yx5qa']),
+        title: r.intl.string(r.t.otsg2d),
+        body: r.intl.string(r.t['/Yx5qa']),
         hideActionSheet: !1
     });
 };

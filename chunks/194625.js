@@ -1,31 +1,26 @@
-r.d(n, {
-    Z: function () {
-        return l;
-    }
-});
-var i = r(47120);
-var a = r(653041);
-var o = r(887490);
-let s = 'applicationCommand';
-function l(e, n) {
-    if (o.bN.areStylesDisabled(e)) return [];
-    let [r, i] = n,
-        a = [];
-    if (!o.LC.isText(r)) return a;
-    let [l] = o.bN.node(e, o.C0.parent(i));
-    return o.aj.isType(l, s)
-        ? (r === l.children[0] &&
-              a.push({
-                  anchor: {
-                      path: i,
-                      offset: 0
-                  },
-                  focus: {
-                      path: i,
-                      offset: 0 + l.command.displayName.length + 1
-                  },
-                  commandName: !0
-              }),
-          a)
-        : a;
+n.d(t, { Z: () => a }), n(47120), n(653041);
+var i = n(887490);
+let r = 'applicationCommand';
+function a(e, t) {
+    if (i.bN.areStylesDisabled(e)) return [];
+    let [n, a] = t,
+        s = [];
+    if (!i.LC.isText(n)) return s;
+    let [o] = i.bN.node(e, i.C0.parent(a));
+    return (
+        i.aj.isType(o, r) &&
+            n === o.children[0] &&
+            s.push({
+                anchor: {
+                    path: a,
+                    offset: 0
+                },
+                focus: {
+                    path: a,
+                    offset: 0 + o.command.displayName.length + 1
+                },
+                commandName: !0
+            }),
+        s
+    );
 }

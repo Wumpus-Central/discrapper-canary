@@ -1,34 +1,26 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(47120);
-function a(e, n, r) {
+function i(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class o {
+n.d(t, { Z: () => r }), n(47120), n(17089);
+class r {
     initialize() {
-        for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
-        if (!this.isInitialized) {
-            this.isInitialized = !0;
-            this._initialize(...n);
-        }
+        for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
+        !this.isInitialized && ((this.isInitialized = !0), this._initialize(...t));
     }
     terminate() {
-        if (!!this.isInitialized) (this.isInitialized = !1), this._terminate();
+        this.isInitialized && ((this.isInitialized = !1), this._terminate());
     }
     constructor() {
-        a(this, 'isInitialized', !1);
+        i(this, 'isInitialized', !1);
     }
 }

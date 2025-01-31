@@ -1,17 +1,12 @@
-t.d(n, {
-    Z: function () {
-        return f;
-    }
-}),
-    t(789020);
+t.d(n, { Z: () => m }), t(789020);
 var i = t(200651);
 t(192379);
 var l = t(597312),
     o = t(442837),
-    r = t(481060),
-    s = t(860719),
-    c = t(621853),
-    a = t(388032),
+    s = t(481060),
+    r = t(860719),
+    a = t(621853),
+    c = t(388032),
     d = t(220613);
 function u(e) {
     let { icon: n, title: t, description: l } = e;
@@ -30,11 +25,11 @@ function u(e) {
             (0, i.jsxs)('div', {
                 className: d.rowText,
                 children: [
-                    (0, i.jsx)(r.Heading, {
+                    (0, i.jsx)(s.X6q, {
                         variant: 'text-xs/semibold',
                         children: t
                     }),
-                    (0, i.jsx)(r.Text, {
+                    (0, i.jsx)(s.Text, {
                         variant: 'text-sm/normal',
                         children: l
                     })
@@ -43,38 +38,38 @@ function u(e) {
         ]
     });
 }
-function f(e) {
+function m(e) {
     let { user: n } = e,
-        t = (0, o.e7)([c.Z], () => {
+        t = (0, o.e7)([a.Z], () => {
             var e;
-            return null === (e = c.Z.getUserProfile(n.id)) || void 0 === e ? void 0 : e.application;
+            return null === (e = a.Z.getUserProfile(n.id)) || void 0 === e ? void 0 : e.application;
         }),
-        { hasMessageContent: f, hasGuildPresences: m, hasGuildMembers: p } = (0, s.w)({ flags: null == t ? void 0 : t.flags });
+        { hasMessageContent: m, hasGuildPresences: x, hasGuildMembers: p } = (0, r.w)({ flags: null == t ? void 0 : t.flags });
     return (0, i.jsxs)(l.zJ, {
         fade: !0,
         className: d.scroller,
         children: [
-            f &&
-                (0, i.jsx)(u, {
-                    icon: r.ChatIcon,
-                    title: a.intl.string(a.t['7Tmhfn']),
-                    description: a.intl.string(a.t['eu5x7+'])
-                }),
             m &&
                 (0, i.jsx)(u, {
-                    icon: r.GameControllerIcon,
-                    title: a.intl.string(a.t.awYSsL),
-                    description: a.intl.string(a.t.TpsXoK)
+                    icon: s.kBi,
+                    title: c.intl.string(c.t['7Tmhfn']),
+                    description: c.intl.string(c.t['eu5x7+'])
+                }),
+            x &&
+                (0, i.jsx)(u, {
+                    icon: s.iWm,
+                    title: c.intl.string(c.t.awYSsL),
+                    description: c.intl.string(c.t.TpsXoK)
                 }),
             p &&
                 (0, i.jsx)(u, {
-                    icon: r.GroupIcon,
-                    title: a.intl.string(a.t.WuKeSE),
-                    description: a.intl.string(a.t.wOBmtb)
+                    icon: s.BFJ,
+                    title: c.intl.string(c.t.WuKeSE),
+                    description: c.intl.string(c.t.wOBmtb)
                 }),
-            (0, i.jsx)(r.Text, {
+            (0, i.jsx)(s.Text, {
                 variant: 'text-xs/normal',
-                children: a.intl.format(a.t.b6nqk5, { helpCenterUrl: 'https://support.discord.com/hc/articles/7933951485975' })
+                children: c.intl.format(c.t.b6nqk5, { helpCenterUrl: 'https://support.discord.com/hc/articles/7933951485975' })
             })
         ]
     });

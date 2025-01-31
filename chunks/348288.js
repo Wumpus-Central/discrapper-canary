@@ -1,6 +1,2 @@
-r.d(n, {
-    L: function () {
-        return i;
-    }
-});
-var i = (0, r(192379).createContext)({ dragDropManager: void 0 });
+n.d(t, { L: () => i });
+var i = (0, n(192379).createContext)({ dragDropManager: void 0 });

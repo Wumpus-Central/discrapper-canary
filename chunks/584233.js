@@ -1,22 +1,17 @@
-n.d(t, {
-    x: function () {
-        return a;
-    }
-});
+n.d(t, { x: () => a });
 var i = n(447543),
-    r = n(652898),
-    l = n(430824);
+    l = n(652898),
+    r = n(430824);
 async function a(e) {
     let { code: t } = e,
-        a = (await (0, r.Z)(t)).invite;
-    if (null == a || null == a.guild) return;
+        a = (await (0, l.Z)(t)).invite;
     if (
-        (await (function () {
-            return new Promise((e) => {
-                l.Z.addConditionalChangeListener(() => !l.Z.isLoaded() || (e(), !1));
-            });
-        })(),
-        null == l.Z.getGuild(a.guild.id))
+        null == a ||
+        null == a.guild ||
+        (await new Promise((e) => {
+            r.Z.addConditionalChangeListener(() => !r.Z.isLoaded() || (e(), !1));
+        }),
+        null == r.Z.getGuild(a.guild.id))
     )
         return;
     let { default: s } = await Promise.resolve().then(n.bind(n, 17181));

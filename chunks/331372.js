@@ -1,21 +1,17 @@
-n.d(t, {
-    Z: function () {
-        return l;
-    }
-});
+n.d(t, { Z: () => a });
 var i = n(200651);
 n(192379);
-var r = n(331595);
-function l(e) {
-    let { width: t = 440, height: n = 200, avatar: l, ...a } = e;
+var l = n(325767);
+function a(e) {
+    let { width: t = 440, height: n = 200, avatar: a, ...r } = e;
     return (0, i.jsxs)('svg', {
-        ...(0, r.Z)(a),
+        ...(0, l.Z)(r),
         width: t,
         height: n,
         viewBox: '0 0 '.concat(t, ' ').concat(n),
         fill: 'none',
         xmlns: 'http://www.w3.org/2000/svg',
-        ...a,
+        ...r,
         children: [
             (0, i.jsx)('rect', {
                 y: '12',
@@ -88,7 +84,7 @@ function l(e) {
                 y: '100',
                 width: '56',
                 height: '56',
-                children: l
+                children: a
             })
         ]
     });

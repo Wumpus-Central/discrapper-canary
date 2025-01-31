@@ -1,8 +1,9 @@
-e.exports = {
-    bar: 'bar_f60904',
-    commandInfo: 'commandInfo_f60904',
-    name: 'name_f60904',
-    description: 'description_f60904',
-    error: 'error_f60904',
-    actions: 'actions_f60904'
+var i = {
+    bar: 'bar__84522',
+    commandInfo: 'commandInfo__84522',
+    name: 'name__84522',
+    description: 'description__84522',
+    error: 'error__84522',
+    actions: 'actions__84522'
 };
+e.exports = i;

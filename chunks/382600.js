@@ -1,11 +1,7 @@
-n.d(t, {
-    P: function () {
-        return s;
-    }
-});
+n.d(t, { P: () => s });
 var i = n(200651),
-    r = n(192379),
-    l = n(709014);
+    l = n(192379),
+    r = n(709014);
 let a = {
         disable: {
             name: 'disable',
@@ -29,35 +25,34 @@ let a = {
         }
     },
     s = (e) => {
-        let t = r.useRef(null),
-            s = r.useRef(e);
+        let t = l.useRef(null),
+            s = l.useRef(e);
         s.current = e;
-        let o = r.useMemo(
+        let o = l.useMemo(
                 () => () => {
                     null != t.current && t.current.play(e);
                 },
                 [e]
             ),
-            c = r.useCallback(() => {
+            c = l.useCallback(() => {
                 if (null == t.current) return;
                 let n = 'enable' === e ? 'hover_disabled' : 'hover_enabled';
                 t.current.play(n);
-            }, [e]),
-            d = r.useCallback(() => {
-                if (null == t.current) return;
-                let n = 'enable' === e ? 'hover_disabled' : 'hover_enabled';
-                t.current.stopIfPlaying(n);
             }, [e]);
         return {
             events: {
                 onClick: o,
                 onMouseEnter: c,
-                onMouseLeave: d
+                onMouseLeave: l.useCallback(() => {
+                    if (null == t.current) return;
+                    let n = 'enable' === e ? 'hover_disabled' : 'hover_enabled';
+                    t.current.stopIfPlaying(n);
+                }, [e])
             },
             play: o,
-            Component: r.useCallback(
+            Component: l.useCallback(
                 (e) =>
-                    (0, i.jsx)(l.L, {
+                    (0, i.jsx)(r.L, {
                         ...e,
                         src: () => n.e('7584').then(n.t.bind(n, 883488, 19)),
                         ref: t,

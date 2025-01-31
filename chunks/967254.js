@@ -1,59 +1,54 @@
-n.d(e, {
-    N: function () {
-        return A;
-    }
-}),
-    n(47120);
-var i = n(200651),
-    a = n(192379),
-    s = n(120356),
-    l = n.n(s),
-    r = n(442837),
-    c = n(481060),
-    o = n(259580),
-    d = n(499033),
-    u = n(626135),
-    m = n(709054),
-    x = n(531441),
-    h = n(236289),
-    g = n(788080),
-    v = n(467432),
-    j = n(451284),
-    N = n(613734),
-    f = n(800530),
-    p = n(981631),
-    S = n(388032),
-    T = n(849963);
-let I = (t) => {
-        let { status: e, onClick: n, opened: a, count: s } = t;
-        return (0, i.jsxs)(c.Clickable, {
-            className: T.header,
-            onClick: n,
+s.d(e, { N: () => R }), s(47120);
+var i = s(200651),
+    a = s(192379),
+    n = s(120356),
+    l = s.n(n),
+    r = s(442837),
+    c = s(481060),
+    o = s(259580),
+    d = s(499033),
+    m = s(626135),
+    u = s(709054),
+    x = s(531441),
+    h = s(236289),
+    g = s(788080),
+    j = s(467432),
+    v = s(451284),
+    N = s(613734),
+    p = s(800530),
+    f = s(981631),
+    T = s(388032),
+    S = s(849963);
+let E = (t) => {
+        let { status: e, onClick: s, opened: a, count: n } = t;
+        return (0, i.jsxs)(c.P3F, {
+            className: S.header,
+            onClick: s,
             children: [
                 (0, i.jsx)('div', {
-                    className: T.headerIconWrapper,
-                    children: (0, i.jsx)(c.WarningIcon, {
+                    className: S.headerIconWrapper,
+                    children: (0, i.jsx)(c.aNP, {
                         size: 'md',
-                        color: 'active' === e ? c.tokens.colors.INTERACTIVE_ACTIVE : c.tokens.colors.INTERACTIVE_MUTED
+                        color: 'active' === e ? c.TVs.colors.INTERACTIVE_ACTIVE : c.TVs.colors.INTERACTIVE_MUTED
                     })
                 }),
                 (0, i.jsxs)('div', {
-                    className: T.title,
+                    className: S.title,
                     children: [
-                        (0, i.jsx)(c.Heading, {
+                        (0, i.jsx)(c.X6q, {
                             variant: 'heading-md/semibold',
                             color: 'text-normal',
-                            children: 'active' === e ? S.intl.formatToPlainString(S.t.IeV2oa, { count: s.toString() }) : S.intl.formatToPlainString(S.t.fZAHBQ, { count: s.toString() })
+                            children: 'active' === e ? T.intl.formatToPlainString(T.t.IeV2oa, { count: n.toString() }) : T.intl.formatToPlainString(T.t.fZAHBQ, { count: n.toString() })
                         }),
-                        (0, i.jsx)(c.Heading, {
+                        (0, i.jsx)(c.X6q, {
                             variant: 'text-sm/normal',
                             color: 'text-muted',
-                            children: 'active' === e ? S.intl.string(S.t.XJ2YVV) : S.intl.string(S.t.SzGV0t)
+                            children: 'active' === e ? T.intl.string(T.t.XJ2YVV) : T.intl.string(T.t.SzGV0t)
                         })
                     ]
                 }),
                 (0, i.jsx)('div', {
-                    className: T.caret,
+                    className: S.caret,
                     children: (0, i.jsx)(o.Z, {
                         width: 18,
                         height: 18,
@@ -63,67 +58,67 @@ let I = (t) => {
             ]
         });
     },
-    E = () =>
+    I = () =>
         (0, i.jsxs)('div', {
-            className: T.emptyState,
+            className: S.emptyState,
             children: [
                 (0, i.jsxs)('div', {
-                    className: T.iconContainer,
+                    className: S.iconContainer,
                     children: [
                         (0, i.jsx)('div', {
-                            className: T.iconBackground,
-                            children: (0, i.jsx)(c.TrophyIcon, {
+                            className: S.iconBackground,
+                            children: (0, i.jsx)(c.rm8, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: T.icon
+                                className: S.icon
                             })
                         }),
-                        (0, i.jsx)(d.Z, { className: T.stars })
+                        (0, i.jsx)(d.Z, { className: S.stars })
                     ]
                 }),
-                (0, i.jsx)(c.Heading, {
+                (0, i.jsx)(c.X6q, {
                     variant: 'heading-md/bold',
-                    className: T.emptyStateText,
-                    children: S.intl.string(S.t.reLFaW)
+                    className: S.emptyStateText,
+                    children: T.intl.string(T.t.reLFaW)
                 }),
                 (0, i.jsx)(c.Text, {
                     variant: 'text-xs/normal',
-                    className: T.emptyStateSubtext,
-                    children: S.intl.string(S.t.ERdH1t)
+                    className: S.emptyStateSubtext,
+                    children: T.intl.string(T.t.ERdH1t)
                 })
             ]
         }),
     _ = () =>
         (0, i.jsx)('div', {
-            className: T.emptyState,
+            className: S.emptyState,
             children: (0, i.jsx)(c.Text, {
                 variant: 'text-xs/normal',
-                className: T.emptyStateSubtext,
-                children: S.intl.string(S.t.RV3AXV)
+                className: S.emptyStateSubtext,
+                children: T.intl.string(T.t.RV3AXV)
             })
         }),
     b = (t) => {
         let { timestamp: e } = t;
         return (0, i.jsx)(c.Text, {
             variant: 'text-xs/normal',
-            className: T.timestamp,
+            className: S.timestamp,
             children: (0, g.XX)(e)
         });
     },
-    C = () =>
+    D = () =>
         (0, i.jsx)(c.Text, {
             variant: 'text-xs/bold',
-            className: T.newBadge,
-            children: S.intl.string(S.t.QKMRCw)
+            className: S.newBadge,
+            children: T.intl.string(T.t.QKMRCw)
         }),
     k = (t) => {
         let { classification: e } = t,
-            { id: s, description: r } = e,
-            o = m.default.extractTimestamp(s),
-            d = (0, v.e)(e),
-            u = a.useMemo(() => {
-                var t, n, a;
-                let s = {
+            { id: n, description: r } = e,
+            o = u.default.extractTimestamp(n),
+            d = (0, j.e)(e),
+            m = a.useMemo(() => {
+                var t, s, a;
+                let n = {
                     description: r,
                     descriptionHook: (t) =>
                         (0, i.jsx)(c.Text, {
@@ -132,121 +127,122 @@ let I = (t) => {
                             children: t
                         })
                 };
-                if (!(0, g.FB)(e)) return S.intl.format(S.t.QY4g5u, s);
-                return (null == e ? void 0 : null === (t = e.guild_metadata) || void 0 === t ? void 0 : t.member_type) === x.wO.OWNER
-                    ? S.intl.format(S.t.Lb0HVl, {
-                          ...s,
-                          guildName: null == e ? void 0 : null === (n = e.guild_metadata) || void 0 === n ? void 0 : n.name
-                      })
-                    : S.intl.format(S.t.rmpEPD, {
-                          guildName: null == e ? void 0 : null === (a = e.guild_metadata) || void 0 === a ? void 0 : a.name,
-                          classification_type: s.description,
-                          classificationHook: s.descriptionHook
-                      });
+                return (0, g.FB)(e)
+                    ? (null == e ? void 0 : null === (t = e.guild_metadata) || void 0 === t ? void 0 : t.member_type) === x.wO.OWNER
+                        ? T.intl.format(T.t.Lb0HVl, {
+                              ...n,
+                              guildName: null == e ? void 0 : null === (s = e.guild_metadata) || void 0 === s ? void 0 : s.name
+                          })
+                        : T.intl.format(T.t.rmpEPD, {
+                              guildName: null == e ? void 0 : null === (a = e.guild_metadata) || void 0 === a ? void 0 : a.name,
+                              classification_type: n.description,
+                              classificationHook: n.descriptionHook
+                          })
+                    : T.intl.format(T.t.QY4g5u, n);
             }, [e, r]);
         return (0, i.jsx)(
-            c.Clickable,
+            c.P3F,
             {
                 onClick: () => {
-                    (0, c.openModalLazy)(async () => {
-                        let { default: t } = await Promise.all([n.e('22878'), n.e('46097'), n.e('25183'), n.e('18831'), n.e('56827')]).then(n.bind(n, 41164));
+                    (0, c.ZDy)(async () => {
+                        let { default: t } = await Promise.all([s.e('22878'), s.e('46097'), s.e('25183'), s.e('18831'), s.e('56827')]).then(s.bind(s, 41164));
                         return (e) =>
                             (0, i.jsx)(t, {
-                                classificationId: s,
-                                source: f.s.StandingTab,
+                                classificationId: n,
+                                source: p.s.StandingTab,
                                 ...e
                             });
                     });
                 },
-                className: l()(T.itemDetail, { [T.itemDetailNew]: d }),
+                className: l()(S.itemDetail, { [S.itemDetailNew]: d }),
                 children: (0, i.jsxs)('div', {
-                    className: T.descriptionContainer,
+                    className: S.descriptionContainer,
                     children: [
-                        d ? (0, i.jsx)(C, {}) : (0, i.jsx)(b, { timestamp: o }),
-                        (0, i.jsx)(c.Heading, {
+                        d ? (0, i.jsx)(D, {}) : (0, i.jsx)(b, { timestamp: o }),
+                        (0, i.jsx)(c.X6q, {
                             variant: 'heading-lg/normal',
-                            children: u
+                            children: m
                         })
                     ]
                 })
             },
-            s
+            n
         );
     },
-    D = (t) => {
-        let { status: e, classifications: n } = t,
-            [s, l] = a.useState(!1),
+    Z = (t) => {
+        let { status: e, classifications: s } = t,
+            [n, l] = a.useState(!1),
             [o, d] = a.useState(3),
-            m = (0, j.P)(),
+            u = (0, v.P)(),
             x = (0, r.e7)([h.Z], () => h.Z.getIsDsaEligible()),
-            g = a.useMemo(() => n.slice(0, o), [n, o]);
+            g = a.useMemo(() => s.slice(0, o), [s, o]);
         a.useEffect(() => {
-            s &&
-                u.default.track(p.rMx.SAFETY_HUB_ACTION, {
-                    action: f.n0.ViewViolationsDropdown,
-                    account_standing: m.state,
+            n &&
+                m.default.track(f.rMx.SAFETY_HUB_ACTION, {
+                    action: p.n0.ViewViolationsDropdown,
+                    account_standing: u.state,
                     classification_ids: g.map((t) => Number(t.id)),
-                    source: f.s.StandingTab,
+                    source: p.s.StandingTab,
                     is_violative_content_shown: !1,
                     is_dsa_eligible: x
                 });
-        }, [s, m.state, g, x]);
-        let v = n.length - g.length > 3 ? 3 : n.length - g.length;
+        }, [n, u.state, g, x]);
+        let j = s.length - g.length > 3 ? 3 : s.length - g.length;
         return (0, i.jsxs)('div', {
-            className: T.dropdown,
+            className: S.dropdown,
             children: [
-                (0, i.jsx)(I, {
+                (0, i.jsx)(E, {
                     status: e,
                     onClick: () => l((t) => !t),
-                    opened: s,
-                    count: n.length
+                    opened: n,
+                    count: s.length
                 }),
-                s &&
+                n &&
                     (0, i.jsxs)('div', {
-                        className: T.items,
+                        className: S.items,
                         children: [
-                            (0, i.jsx)(c.TabBar.Separator, {
+                            (0, i.jsx)(c.njP.Separator, {
                                 style: {
                                     height: '1px',
                                     width: '100%'
                                 }
                             }),
                             g.length > 0 && g.map((t) => (0, i.jsx)(k, { classification: t }, t.id)),
-                            g.length < n.length &&
+                            g.length < s.length &&
                                 (0, i.jsxs)(i.Fragment, {
                                     children: [
-                                        (0, i.jsx)(c.TabBar.Separator, {
+                                        (0, i.jsx)(c.njP.Separator, {
                                             style: {
                                                 height: '1px',
                                                 width: '100%'
                                             }
                                         }),
                                         (0, i.jsx)('button', {
-                                            className: T.paginationButton,
-                                            onClick: () => d((t) => t + v),
-                                            children: S.intl.format(S.t['9Ml56O'], { nextPageSize: v })
+                                            className: S.paginationButton,
+                                            onClick: () => d((t) => t + j),
+                                            children: T.intl.format(T.t['9Ml56O'], { nextPageSize: j })
                                         })
                                     ]
                                 }),
-                            0 === g.length && 'active' === e && (0, i.jsx)(E, {}),
+                            0 === g.length && 'active' === e && (0, i.jsx)(I, {}),
                             0 === g.length && 'expired' === e && (0, i.jsx)(_, {})
                         ]
                     })
             ]
         });
     },
-    A = () => {
+    R = () => {
         let t = (0, N.y9)(),
             e = (0, N.KM)();
         return 0 === t.length && 0 === e.length
             ? null
             : (0, i.jsxs)('div', {
                   children: [
-                      (0, i.jsx)(D, {
+                      (0, i.jsx)(Z, {
                           status: 'active',
                           classifications: t
                       }),
-                      (0, i.jsx)(D, {
+                      (0, i.jsx)(Z, {
                           status: 'expired',
                           classifications: e
                       })

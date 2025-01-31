@@ -1,10 +1,6 @@
 n.d(t, {
-    Z: function () {
-        return o;
-    },
-    _: function () {
-        return a;
-    }
+    Z: () => o,
+    _: () => a
 });
 var i = n(726542),
     l = n(973616),

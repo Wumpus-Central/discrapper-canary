@@ -1,1 +1,4 @@
-e.exports = { updateAvailable: 'updateAvailable_e3584a' };
+e.exports = {
+    updateAvailable: 'updateAvailable__9f94c',
+    spin: 'spin__9f94c'
+};

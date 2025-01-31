@@ -1,13 +1,9 @@
-r.d(n, {
-    N: function () {
-        return o;
-    },
-    m: function () {
-        return a;
-    }
+n.d(t, {
+    N: () => a,
+    m: () => r
 });
-var i = r(818083);
-let a = (0, i.B)({
+var i = n(818083);
+let r = (0, i.B)({
         kind: 'user',
         id: '2023-08_secure_frames_encryption',
         label: 'Allowing testing DAVE protocol for voice/video',
@@ -26,7 +22,7 @@ let a = (0, i.B)({
             }
         ]
     }),
-    o = (0, i.B)({
+    a = (0, i.B)({
         kind: 'guild',
         id: '2024-08_secure_frames_encryption_guilds_v2',
         label: 'Allowing testing DAVE protocol for voice/video (Guilds)',

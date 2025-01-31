@@ -1,19 +1,13 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-});
-var i,
-    l,
-    r = n(251625),
-    a = n(823379),
-    s = n(981631),
-    o = n(388032);
-function c() {
+n.d(t, { Z: () => d });
+var i = n(251625),
+    l = n(823379),
+    a = n(981631),
+    r = n(388032);
+function s() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 30;
     return e <= 5 ? 3 : e <= 15 ? 10 : 15;
 }
-function u(e, t) {
+function o(e, t) {
     let n = {
             packetsSentOrReceived: 0,
             packetsLost: 0,
@@ -22,7 +16,7 @@ function u(e, t) {
             resolution: 0,
             numDatapoints: 0
         },
-        i = e.slice(-1 * t).filter(a.lm);
+        i = e.slice(-1 * t).filter(l.lm);
     if (0 === i.length)
         return {
             type: 'streamer',
@@ -31,10 +25,10 @@ function u(e, t) {
     i.forEach((e, t, i) => {
         (n.packetsSentOrReceived += t > 0 ? i[t].packetsSentOrReceived - i[t - 1].packetsSentOrReceived : 0), (n.packetsLost += t > 0 ? i[t].packetsLost - i[t - 1].packetsLost : 0), (n.frameRate += e.frameRate), (n.resolution += e.resolution);
     });
-    let l = i[0].type,
+    let a = i[0].type,
         r = i.length;
     return {
-        type: l,
+        type: a,
         packetsSentOrReceived: n.packetsSentOrReceived,
         packetsLost: n.packetsLost,
         packetLossRate: n.packetsLost / (n.packetsLost + n.packetsSentOrReceived),
@@ -43,30 +37,29 @@ function u(e, t) {
         numDatapoints: r
     };
 }
-((i = l || (l = {})).PACKET_LOSS = 'Packet Loss'), (i.FRAME_RATE_INPUT = 'Frame Rate Encode'), (i.FRAME_RATE_NETWORK = 'Frame Rate Decode'), (i.SOUNDSHARE_FAILED = 'Soundshare Failed'), (i.BAD_CONNECTION = 'Bad Connection');
-let d = (0, r.oH)((e, t) => ({
+let c = (0, i.oH)((e, t) => ({
     message: e,
     errorType: t
 }));
-function m(e, t) {
+function u(e, t) {
     if ('streamer' === e.type) {
-        if (100 * e.packetLossRate > 10) return d(o.intl.string(o.t['1f1LHh']), 'Packet Loss');
-        if (e.frameRate <= c(t)) return d(o.intl.string(o.t['1f1LHh']), 'Frame Rate Encode');
+        if (100 * e.packetLossRate > 10) return c(r.intl.string(r.t['1f1LHh']), 'Packet Loss');
+        if (e.frameRate <= s(t)) return c(r.intl.string(r.t['1f1LHh']), 'Frame Rate Encode');
     } else {
-        if (100 * e.packetLossRate > 10) return d(o.intl.string(o.t.BcOif3), 'Packet Loss');
-        if (e.frameRate <= c(t)) return d(o.intl.string(o.t.BcOif3), 'Frame Rate Decode');
+        if (100 * e.packetLossRate > 10) return c(r.intl.string(r.t.BcOif3), 'Packet Loss');
+        if (e.frameRate <= s(t)) return c(r.intl.string(r.t.BcOif3), 'Frame Rate Decode');
     }
     return null;
 }
-function f(e, t, n, i) {
-    if (n) return d(o.intl.string(o.t['9lcycn']), 'Soundshare Failed');
+function d(e, t, n, i) {
+    if (n) return c(r.intl.string(r.t['9lcycn']), 'Soundshare Failed');
     if (null != t) {
-        let e = u(t, 5),
-            n = u(t, 30);
+        let e = o(t, 5),
+            n = o(t, 30);
         if (n.numDatapoints >= 5) {
             var l;
-            return null !== (l = m(e, null == i ? void 0 : i.maxFrameRate)) && void 0 !== l ? l : m(n, null == i ? void 0 : i.maxFrameRate);
+            return null !== (l = u(e, null == i ? void 0 : i.maxFrameRate)) && void 0 !== l ? l : u(n, null == i ? void 0 : i.maxFrameRate);
         }
     }
-    return e === s.IE4.BAD ? d(o.intl.string(o.t.Ic588P), 'Bad Connection') : null;
+    return e === a.IE4.BAD ? c(r.intl.string(r.t.Ic588P), 'Bad Connection') : null;
 }

@@ -1,87 +1,81 @@
-r.d(n, {
-    F: function () {
-        return d;
-    }
-});
+n.d(t, { F: () => u }), n(47120);
 var i,
-    a,
-    o = r(47120);
-var s = r(200651),
-    l = r(192379),
-    u = r(846519);
-function c(e, n, r) {
+    r = n(200651),
+    a = n(192379),
+    s = n(846519);
+function o(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-!(function (e) {
-    (e.SVG = 'svg'), (e.CANVAS = 'canvas');
-})(i || (i = {}));
-class d extends (a = l.Component) {
+var l = (function (e) {
+    return (e.SVG = 'svg'), (e.CANVAS = 'canvas'), e;
+})(l || {});
+class u extends (i = a.Component) {
     componentDidMount() {
-        (null == this.props.versionKey || !(this.props.versionKey < 0)) && this.loadAnimation();
+        (null != this.props.versionKey && this.props.versionKey < 0) || this.loadAnimation();
     }
     componentDidUpdate(e) {
-        (null == this.props.versionKey || !(this.props.versionKey < 0)) && (null != this.props.versionKey && null != e.versionKey && this.props.versionKey > e.versionKey ? this.loadAnimation() : this.playOrPauseAnimation(e));
+        (null != this.props.versionKey && this.props.versionKey < 0) || (null != this.props.versionKey && null != e.versionKey && this.props.versionKey > e.versionKey ? this.loadAnimation() : this.playOrPauseAnimation(e));
     }
     componentWillUnmount() {
         null != this.animation && (this.animation.stop(), this.animation.destroy(), (this.animation = null)), this.delayTimeout.stop();
     }
     playOrPauseAnimation(e) {
-        if (null != this.animation) this.props.shouldAnimate && (null == e || !e.shouldAnimate) ? (this.props.resetOnPlay ? this.animation.goToAndPlay(0) : this.animation.play()) : !this.props.shouldAnimate && (null == e || e.shouldAnimate) && (this.animation.pause(), null != this.props.pauseAtFrame && this.animation.goToAndStop(this.props.pauseAtFrame, !0));
+        null != this.animation && (this.props.shouldAnimate && (null == e || !e.shouldAnimate) ? (this.props.resetOnPlay ? this.animation.goToAndPlay(0) : this.animation.play()) : !this.props.shouldAnimate && (null == e || e.shouldAnimate) && (this.animation.pause(), null != this.props.pauseAtFrame && this.animation.goToAndStop(this.props.pauseAtFrame, !0)));
     }
     render() {
-        return (0, s.jsx)('div', {
+        return (0, r.jsx)('div', {
             className: this.props.className,
             ref: this.animationRef
         });
     }
     constructor(...e) {
         super(...e),
-            c(this, 'animationRef', l.createRef()),
-            c(this, 'animation', void 0),
-            c(this, 'delayTimeout', new u.V7()),
-            c(this, 'loadAnimation', async () => {
-                let { importData: e, loop: n, autoplay: i, delay: a, renderer: o, rendererSettings: s, shouldAnimate: l } = this.props;
+            o(this, 'animationRef', a.createRef()),
+            o(this, 'animation', void 0),
+            o(this, 'delayTimeout', new s.V7()),
+            o(this, 'loadAnimation', async () => {
+                let { importData: e, loop: t, autoplay: i, delay: r, renderer: a, rendererSettings: s, shouldAnimate: o } = this.props;
                 null != this.animation && this.animation.destroy();
-                let [u, { default: c }] = await Promise.all([e(), Promise.resolve().then(r.t.bind(r, 500923, 23))]);
+                let [l, { default: u }] = await Promise.all([e(), Promise.resolve().then(n.t.bind(n, 500923, 23))]);
                 if (null == this.animationRef.current) return;
-                let d = 'object' == typeof u && 'default' in u && 'string' == typeof u.default ? { path: u.default } : { animationData: u };
-                (this.animation = c.loadAnimation({
+                let c = 'object' == typeof l && 'default' in l && 'string' == typeof l.default ? { path: l.default } : { animationData: l };
+                (this.animation = u.loadAnimation({
                     container: this.animationRef.current,
-                    renderer: o,
-                    loop: n,
-                    autoplay: i && null == a && l,
+                    renderer: a,
+                    loop: t,
+                    autoplay: i && null == r && o,
                     rendererSettings: s,
-                    ...d
+                    ...c
                 })),
-                    null != a
-                        ? this.delayTimeout.start(a, () => {
+                    null != r
+                        ? this.delayTimeout.start(r, () => {
                               var e;
                               null === (e = this.animation) || void 0 === e || e.play();
                           })
                         : this.playOrPauseAnimation(),
                     this.animation.addEventListener('complete', this.handleComplete);
             }),
-            c(this, 'handleComplete', () => {
+            o(this, 'handleComplete', () => {
                 let { onComplete: e } = this.props;
                 null != e && e();
             });
     }
 }
-c(d, 'defaultProps', {
+o(u, 'defaultProps', {
     loop: !0,
     autoplay: !0,
     renderer: 'svg',
     shouldAnimate: !0,
     resetOnPlay: !1
 }),
-    c(d, 'Renderers', i);
+    o(u, 'Renderers', l);

@@ -1,4 +1,5 @@
-var o = e(757490),
+n.d(i, { Z: () => c });
+var o = n(757490),
     t = {
         masculine: 'ostatni',
         feminine: 'ostatnia'
@@ -20,24 +21,24 @@ var o = e(757490),
         5: 'masculine',
         6: 'feminine'
     };
-function s(n, i, e, s) {
-    if ((0, o.Z)(i, e, s)) d = a;
-    else if ('lastWeek' === n) d = t;
-    else if ('nextWeek' === n) d = r;
-    else throw Error('Cannot determine adjectives for token '.concat(n));
-    var d,
-        c = d[u[i.getUTCDay()]];
+function d(e, i, n, d) {
+    if ((0, o.Z)(i, n, d)) s = a;
+    else if ('lastWeek' === e) s = t;
+    else if ('nextWeek' === e) s = r;
+    else throw Error('Cannot determine adjectives for token '.concat(e));
+    var s,
+        c = s[u[i.getUTCDay()]];
     return "'".concat(c, "' eeee 'o' p");
 }
-var d = {
-    lastWeek: s,
+var s = {
+    lastWeek: d,
     yesterday: "'wczoraj o' p",
     today: "'dzisiaj o' p",
     tomorrow: "'jutro o' p",
-    nextWeek: s,
+    nextWeek: d,
     other: 'P'
 };
-i.Z = function (n, i, e, o) {
-    var t = d[n];
-    return 'function' == typeof t ? t(n, i, e, o) : t;
+let c = function (e, i, n, o) {
+    var t = s[e];
+    return 'function' == typeof t ? t(e, i, n, o) : t;
 };

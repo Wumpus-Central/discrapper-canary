@@ -1,10 +1,9 @@
-r.r(
-    (e.exports = {
-        progress: 'progress_dfa3ef',
-        progressBar: 'progressBar_dfa3ef',
-        animating: 'animating_dfa3ef',
-        xsmall: 'xsmall_dfa3ef',
-        small: 'small_dfa3ef',
-        large: 'large_dfa3ef'
-    })
-);
+var i = {
+    progress: 'progress__58525',
+    progressBar: 'progressBar__58525',
+    animating: 'animating__58525',
+    xsmall: 'xsmall__58525',
+    small: 'small__58525',
+    large: 'large__58525'
+};
+n.r((e.exports = i));

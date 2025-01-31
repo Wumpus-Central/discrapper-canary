@@ -1,63 +1,59 @@
-r.d(n, {
-    Z: function () {
-        return _;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(442837),
-    o = r(648052),
-    s = r(530),
-    l = r(420654),
-    u = r(116854),
-    c = r(271383),
-    d = r(246946),
-    f = r(654904),
-    p = r(228168),
-    h = r(591156);
-function _(e) {
-    var n;
-    let { user: r, displayProfile: _, guild: m, pendingAvatar: g, pendingNickname: E, pendingGlobalName: v, pendingBio: y, pendingPronouns: b, isTryItOutFlow: I, hideBioSection: T } = e,
-        S = (0, a.e7)([c.ZP], () => (null == m ? null : c.ZP.getMember(m.id, r.id))),
-        A = (0, a.e7)([d.Z], () => d.Z.hidePersonalInformation),
-        C = null == _ ? void 0 : null === (n = _.getPreviewBio(y)) || void 0 === n ? void 0 : n.value,
-        N = null != b ? b : null == _ ? void 0 : _.pronouns,
-        R = (0, f.Ly)({
-            pendingNickname: E,
-            pendingGlobalName: v,
-            user: r,
-            guildMember: S
+n.d(t, { Z: () => p });
+var i = n(200651);
+n(192379);
+var r = n(442837),
+    a = n(648052),
+    s = n(530),
+    o = n(420654),
+    l = n(116854),
+    u = n(271383),
+    c = n(246946),
+    d = n(654904),
+    f = n(228168),
+    _ = n(591156);
+function p(e) {
+    var t;
+    let { user: n, displayProfile: p, guild: h, pendingAvatar: m, pendingNickname: g, pendingGlobalName: E, pendingBio: v, pendingPronouns: y, isTryItOutFlow: I, hideBioSection: b } = e,
+        T = (0, r.e7)([u.ZP], () => (null == h ? null : u.ZP.getMember(h.id, n.id))),
+        S = (0, r.e7)([c.Z], () => c.Z.hidePersonalInformation),
+        A = null == p ? void 0 : null === (t = p.getPreviewBio(v)) || void 0 === t ? void 0 : t.value,
+        N = null != y ? y : null == p ? void 0 : p.pronouns,
+        C = (0, d.Ly)({
+            pendingNickname: g,
+            pendingGlobalName: E,
+            user: n,
+            guildMember: T
         }),
-        O = () => {
-            if (!!(null != S) && null !== g && !!(null != S.avatar || null != g))
-                return (0, i.jsx)(u.Z, {
-                    user: r,
-                    nickname: R
+        R = () => {
+            if (null != T && null !== m && (null != T.avatar || null != m))
+                return (0, i.jsx)(l.Z, {
+                    user: n,
+                    nickname: C
                 });
         };
     return (0, i.jsxs)('div', {
         inert: '',
-        className: h.body,
+        className: _.body,
         children: [
             (0, i.jsx)(s.Z, {
-                user: r,
-                profileType: p.y0.BITE_SIZE,
-                usernameIcon: O(),
-                nickname: R,
+                user: n,
+                profileType: f.y0.BITE_SIZE,
+                usernameIcon: R(),
+                nickname: C,
                 pronouns: N,
                 isTryItOut: I,
-                tags: (0, i.jsx)(o.Z, {
-                    displayProfile: _,
-                    profileType: p.y0.BITE_SIZE
+                tags: (0, i.jsx)(a.Z, {
+                    displayProfile: p,
+                    profileType: f.y0.BITE_SIZE
                 })
             }),
-            !T &&
-                null != C &&
-                '' !== C &&
-                (0, i.jsx)(l.Z, {
-                    user: r,
-                    bio: C,
-                    hidePersonalInformation: A,
+            !b &&
+                null != A &&
+                '' !== A &&
+                (0, i.jsx)(o.Z, {
+                    user: n,
+                    bio: A,
+                    hidePersonalInformation: S,
                     viewFullBioDisabled: !0
                 })
         ]

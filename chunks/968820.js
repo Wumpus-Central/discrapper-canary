@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return m;
-    }
-});
+n.d(t, { Z: () => m });
 var i = n(200651);
 n(192379);
 var r = n(481060),
@@ -15,7 +11,7 @@ var r = n(481060),
     u = n(202513);
 function m(e) {
     let { children: t, revenue: n, revenueTrend: m, summaryMetricLabel: h, summaryMetricValue: g, summaryMetricTrend: x, summaryMetricTrendIsPercent: p } = e;
-    return (0, i.jsx)(r.FormSection, {
+    return (0, i.jsx)(r.hjN, {
         title: d.intl.string(d.t.ofmOzc),
         children: (0, i.jsxs)('div', {
             className: u.paymentInfoGroup,

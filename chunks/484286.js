@@ -1,74 +1,74 @@
+n.d(t, { Z: () => d }), n(47120);
 var i,
-    a = r(47120);
-var o = r(200651),
-    s = r(192379),
-    l = r(120356),
-    u = r.n(l),
-    c = r(934158);
-function d(e, n, r) {
+    r = n(200651),
+    a = n(192379),
+    s = n(120356),
+    o = n.n(s),
+    l = n(934158);
+function u(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class f extends (i = s.PureComponent) {
-    static getDerivedStateFromProps(e, n) {
-        let { streamId: r } = e;
-        if (n.aReady) {
-            if (r !== n.aStreamId)
-                return null == r
+class c extends (i = a.PureComponent) {
+    static getDerivedStateFromProps(e, t) {
+        let { streamId: n } = e;
+        if (t.aReady) {
+            if (n !== t.aStreamId)
+                return null == n
                     ? {
-                          bStreamId: r,
+                          bStreamId: n,
                           bReady: !0,
                           aStreamId: null,
                           aReady: !1
                       }
                     : {
-                          bStreamId: r,
+                          bStreamId: n,
                           bReady: !1
                       };
-        } else if (r !== n.bStreamId)
-            return null == r
+        } else if (n !== t.bStreamId)
+            return null == n
                 ? {
-                      aStreamId: r,
+                      aStreamId: n,
                       aReady: !0,
                       bStreamId: null,
                       bReady: !1
                   }
                 : {
-                      aStreamId: r,
+                      aStreamId: n,
                       aReady: !1
                   };
         return null;
     }
-    renderVideo(e, n) {
-        let { children: r, mirror: i, paused: a, component: l } = this.props;
+    renderVideo(e, t) {
+        let { children: n, mirror: i, paused: s, component: o } = this.props;
         if (null == e) {
-            if (null == r) return null;
-            let e = s.Children.only(r);
-            return s.cloneElement(e, {
-                style: { display: n && !i ? void 0 : 'none' },
+            if (null == n) return null;
+            let e = a.Children.only(n);
+            return a.cloneElement(e, {
+                style: { display: t && !i ? void 0 : 'none' },
                 ...e.props
             });
         }
-        return (0, o.jsx)(l, {
-            paused: a,
-            className: c.media,
+        return (0, r.jsx)(o, {
+            paused: s,
+            className: l.media,
             streamId: e,
-            onReady: n ? null : this.handleReady
+            onReady: t ? null : this.handleReady
         });
     }
     render() {
-        let { mirror: e, className: n } = this.props;
-        return (0, o.jsxs)('div', {
-            className: u()(c.video, n, { [c.mirror]: e }),
+        let { mirror: e, className: t } = this.props;
+        return (0, r.jsxs)('div', {
+            className: o()(l.video, t, { [l.mirror]: e }),
             onDoubleClick: this.handleDoubleClick,
             onContextMenu: this.handleContextMenu,
             children: [this.renderVideo(this.state.aStreamId, this.state.aReady), this.renderVideo(this.state.bStreamId, this.state.bReady)]
@@ -76,13 +76,13 @@ class f extends (i = s.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            d(this, 'state', {
+            u(this, 'state', {
                 aStreamId: null,
                 aReady: !1,
                 bStreamId: this.props.streamId,
                 bReady: !0
             }),
-            d(this, 'handleReady', () => {
+            u(this, 'handleReady', () => {
                 this.state.aReady
                     ? this.setState({
                           bReady: !0,
@@ -95,14 +95,15 @@ class f extends (i = s.PureComponent) {
                           bReady: !1
                       });
             }),
-            d(this, 'handleDoubleClick', (e) => {
-                let { onDoubleClick: n, id: r } = this.props;
-                null == n || n(e, r);
+            u(this, 'handleDoubleClick', (e) => {
+                let { onDoubleClick: t, id: n } = this.props;
+                null == t || t(e, n);
             }),
-            d(this, 'handleContextMenu', (e) => {
-                let { onContextMenu: n, id: r } = this.props;
-                null == n || n(e, r);
+            u(this, 'handleContextMenu', (e) => {
+                let { onContextMenu: t, id: n } = this.props;
+                null == t || t(e, n);
             });
     }
 }
-d(f, 'defaultProps', { paused: !0 }), (n.Z = f);
+u(c, 'defaultProps', { paused: !0 });
+let d = c;

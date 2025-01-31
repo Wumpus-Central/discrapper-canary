@@ -1,28 +1,23 @@
-n.d(t, {
-    Z: function () {
-        return x;
-    }
-}),
-    n(47120);
-var l = n(200651),
-    o = n(192379),
-    i = n(120356),
-    a = n.n(i),
-    r = n(399606),
-    s = n(481060),
-    c = n(823596),
-    C = n(201070),
-    d = n(893966),
-    u = n(527379),
-    m = n(388032),
-    h = n(77714);
+l.d(t, { Z: () => x }), l(47120);
+var n = l(200651),
+    a = l(192379),
+    i = l(120356),
+    o = l.n(i),
+    s = l(399606),
+    r = l(481060),
+    c = l(823596),
+    C = l(201070),
+    d = l(893966),
+    u = l(527379),
+    m = l(388032),
+    h = l(77714);
 function x(e) {
-    let { guildId: t, onPageChange: n } = e,
-        [i, x] = o.useTransition(),
-        b = (0, r.e7)([d.Z], () => d.Z.getEstimatedMemberSearchCountByGuildId(t), [t]),
-        f = (0, r.cj)([d.Z], () => d.Z.getPaginationStateByGuildId(t), [t]),
-        g = (0, C.$j)(t),
-        p = o.useMemo(
+    let { guildId: t, onPageChange: l } = e,
+        [i, x] = a.useTransition(),
+        g = (0, s.e7)([d.Z], () => d.Z.getEstimatedMemberSearchCountByGuildId(t), [t]),
+        H = (0, s.cj)([d.Z], () => d.Z.getPaginationStateByGuildId(t), [t]),
+        b = (0, C.$j)(t),
+        p = a.useMemo(
             () =>
                 c.LU.map((e) => ({
                     value: e,
@@ -30,32 +25,32 @@ function x(e) {
                 })),
             []
         ),
-        H = new Intl.NumberFormat(m.intl.currentLocale).format(b),
-        j = m.intl.formatToPlainString(m.t.RNDnQ0, { count: g ? '...' : H }),
-        v = b > f.pageSize || g,
-        N = b > c.LU['0'];
-    return (0, l.jsxs)('div', {
-        className: a()(h.paginationContainer),
+        _ = new Intl.NumberFormat(m.intl.currentLocale).format(g),
+        j = m.intl.formatToPlainString(m.t.RNDnQ0, { count: b ? '...' : _ }),
+        f = g > H.pageSize || b,
+        v = g > c.LU['0'];
+    return (0, n.jsxs)('div', {
+        className: o()(h.paginationContainer),
         children: [
-            (0, l.jsx)('div', {
-                className: a()(h.pageSizeSelection),
-                children: N
-                    ? (0, l.jsxs)(l.Fragment, {
+            (0, n.jsx)('div', {
+                className: o()(h.pageSizeSelection),
+                children: v
+                    ? (0, n.jsxs)(n.Fragment, {
                           children: [
-                              (0, l.jsx)(s.Text, {
+                              (0, n.jsx)(r.Text, {
                                   variant: 'text-md/normal',
                                   color: 'text-muted',
                                   children: m.intl.string(m.t.jNwLu7)
                               }),
-                              (0, l.jsx)(s.Select, {
+                              (0, n.jsx)(r.PhF, {
                                   'aria-label': j,
                                   className: h.pageSizeInput,
                                   options: p,
-                                  isSelected: (e) => e === f.pageSize,
+                                  isSelected: (e) => e === H.pageSize,
                                   select: (e) => {
                                       x(() => {
                                           (0, u._o)(t, {
-                                              ...f,
+                                              ...H,
                                               pageSize: e
                                           });
                                       });
@@ -64,43 +59,43 @@ function x(e) {
                                   popoutPosition: 'top',
                                   popoutWidth: 72
                               }),
-                              (0, l.jsx)(s.Tooltip, {
+                              (0, n.jsx)(r.ua7, {
                                   text: m.intl.string(m.t.ZTNur6),
-                                  shouldShow: g,
+                                  shouldShow: b,
                                   children: (e) =>
-                                      (0, l.jsx)(s.Text, {
+                                      (0, n.jsx)(r.Text, {
                                           variant: 'text-md/normal',
                                           color: 'text-muted',
-                                          className: a()(h.pageLabel),
+                                          className: o()(h.pageLabel),
                                           ...e,
                                           children: j
                                       })
                               })
                           ]
                       })
-                    : (0, l.jsx)(s.Text, {
+                    : (0, n.jsx)(r.Text, {
                           variant: 'text-md/normal',
                           color: 'text-muted',
-                          children: m.intl.format(m.t.GZpwMD, { count: b })
+                          children: m.intl.format(m.t.GZpwMD, { count: g })
                       })
             }),
-            (0, l.jsx)('div', {
-                className: a()(h.pagination),
+            (0, n.jsx)('div', {
+                className: o()(h.pagination),
                 children:
-                    v &&
-                    (0, l.jsx)(s.Paginator, {
-                        className: a()(h.paginationInput),
-                        totalCount: b,
-                        pageSize: f.pageSize,
+                    f &&
+                    (0, n.jsx)(r.DsT, {
+                        className: o()(h.paginationInput),
+                        totalCount: g,
+                        pageSize: H.pageSize,
                         disablePaginationGap: !0,
                         hideMaxPage: !0,
-                        currentPage: f.currentPage,
+                        currentPage: H.currentPage,
                         onPageChange: (e) => {
-                            null == n || n(e),
+                            null == l || l(e),
                                 requestIdleCallback(() => {
                                     x(() => {
                                         (0, u._o)(t, {
-                                            ...f,
+                                            ...H,
                                             currentPage: e
                                         });
                                     });

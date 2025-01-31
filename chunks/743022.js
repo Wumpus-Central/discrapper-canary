@@ -1,11 +1,12 @@
-e.exports = {
-    popout: 'popout_b245a4',
-    content: 'content_b245a4',
-    leaderboardName: 'leaderboardName_b245a4',
-    gameIcon: 'gameIcon_b245a4',
-    leaderboardTitle: 'leaderboardTitle_b245a4',
-    header: 'header_b245a4',
-    previousChampion: 'previousChampion_b245a4',
-    exitPreviewModeText: 'exitPreviewModeText_b245a4',
-    exitPreviewModeButton: 'exitPreviewModeButton_b245a4'
+var i = {
+    popout: 'popout__4f0a5',
+    content: 'content__4f0a5',
+    leaderboardName: 'leaderboardName__4f0a5',
+    gameIcon: 'gameIcon__4f0a5',
+    leaderboardTitle: 'leaderboardTitle__4f0a5',
+    header: 'header__4f0a5',
+    previousChampion: 'previousChampion__4f0a5',
+    exitPreviewModeText: 'exitPreviewModeText__4f0a5',
+    exitPreviewModeButton: 'exitPreviewModeButton__4f0a5'
 };
+e.exports = i;

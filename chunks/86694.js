@@ -1,15 +1,19 @@
-e.exports = {
-    nitroTopDividerContainer: 'nitroTopDividerContainer_e8f337',
-    nitroTopDividerUpper: 'nitroTopDividerUpper_e8f337',
-    nitroTopDividerShadow: 'nitroTopDividerShadow_e8f337',
-    glow: 'glow_e8f337',
-    reducedMotion: 'reducedMotion_e8f337',
-    nitroTopDividerLockContainer: 'nitroTopDividerLockContainer_e8f337',
-    nitroTopDividerLockBorder: 'nitroTopDividerLockBorder_e8f337',
-    nitroTopDividerLockCircle: 'nitroTopDividerLockCircle_e8f337',
-    nitroTopDividerLockBorderReversed: 'nitroTopDividerLockBorderReversed_e8f337',
-    nitroTopDividerLower: 'nitroTopDividerLower_e8f337',
-    reverseTrialTopDividerLower: 'reverseTrialTopDividerLower_e8f337',
-    premiumUnlockAnimation: 'premiumUnlockAnimation_e8f337',
-    premiumUnlockedWithNitroPillContainer: 'premiumUnlockedWithNitroPillContainer_e8f337'
+var i = {
+    nitroTopDividerContainer: 'nitroTopDividerContainer_b3fb5f',
+    nitroTopDividerUpper: 'nitroTopDividerUpper_b3fb5f',
+    nitroTopDividerShadow: 'nitroTopDividerShadow_b3fb5f',
+    glow: 'glow_b3fb5f',
+    reducedMotion: 'reducedMotion_b3fb5f',
+    glowAnimation: 'glowAnimation_b3fb5f',
+    nitroTopDividerLockContainer: 'nitroTopDividerLockContainer_b3fb5f',
+    nitroTopDividerLockBorder: 'nitroTopDividerLockBorder_b3fb5f',
+    nitroTopDividerLockCircle: 'nitroTopDividerLockCircle_b3fb5f',
+    nitroTopDividerLockBorderReversed: 'nitroTopDividerLockBorderReversed_b3fb5f',
+    nitroTopDividerLower: 'nitroTopDividerLower_b3fb5f',
+    reverseTrialTopDividerLower: 'reverseTrialTopDividerLower_b3fb5f',
+    premiumUnlockAnimation: 'premiumUnlockAnimation_b3fb5f',
+    shrink: 'shrink_b3fb5f',
+    premiumUnlockedWithNitroPillContainer: 'premiumUnlockedWithNitroPillContainer_b3fb5f',
+    expand: 'expand_b3fb5f'
 };
+e.exports = i;

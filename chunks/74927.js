@@ -1,8 +1,9 @@
-e.exports = {
-    progressCircle: 'progressCircle_d6931b',
-    circle: 'circle_d6931b',
-    circleBackgroundAlt: 'circleBackgroundAlt_d6931b',
-    circleBackground: 'circleBackground_d6931b',
-    circleProgress: 'circleProgress_d6931b',
-    circleOverlay: 'circleOverlay_d6931b'
+var i = {
+    progressCircle: 'progressCircle__68862',
+    circle: 'circle__68862',
+    circleBackgroundAlt: 'circleBackgroundAlt__68862',
+    circleBackground: 'circleBackground__68862',
+    circleProgress: 'circleProgress__68862',
+    circleOverlay: 'circleOverlay__68862'
 };
+e.exports = i;

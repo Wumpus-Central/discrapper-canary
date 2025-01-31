@@ -1,5 +1,5 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
     return e.defineLocale('it', {
         months: 'gennaio_febbraio_marzo_aprile_maggio_giugno_luglio_agosto_settembre_ottobre_novembre_dicembre'.split('_'),
@@ -21,8 +21,7 @@
             nextWeek: 'dddd [alle] LT',
             lastDay: '[Ieri alle] LT',
             lastWeek: function () {
-                if (0 === this.day()) return '[la scorsa] dddd [alle] LT';
-                return '[lo scorso] dddd [alle] LT';
+                return 0 === this.day() ? '[la scorsa] dddd [alle] LT' : '[lo scorso] dddd [alle] LT';
             },
             sameElse: 'L'
         },

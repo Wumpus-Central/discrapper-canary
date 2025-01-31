@@ -1,62 +1,58 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
+n.d(t, { Z: () => u });
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    r = n.n(l),
-    a = n(481060),
-    o = n(600164),
-    s = n(528144),
+    a = n.n(l),
+    r = n(481060),
+    s = n(600164),
+    o = n(528144),
     d = n(388032),
     c = n(747536);
 function u(e) {
-    let { name: t, description: n, icon: l, imageSrc: u, iconBackgroundColor: m, iconClassName: h, iconWrapperClassName: p, details: g, detailsClassName: x, isHeader: f, isPremium: v } = e;
-    return (0, i.jsxs)(o.Z, {
-        justify: o.Z.Justify.CENTER,
+    let { name: t, description: n, icon: l, imageSrc: u, iconBackgroundColor: m, iconClassName: h, iconWrapperClassName: x, details: p, detailsClassName: g, isHeader: f, isPremium: b } = e;
+    return (0, i.jsxs)(s.Z, {
+        justify: s.Z.Justify.CENTER,
         className: c.wrapper,
         children: [
             null != l || null != u
-                ? (0, i.jsx)(o.Z.Child, {
+                ? (0, i.jsx)(s.Z.Child, {
                       shrink: 0,
                       grow: 0,
-                      children: (function (e, t, n, l, a) {
+                      children: (function (e, t, n, l, r) {
                           if (null != t)
                               return (0, i.jsx)('img', {
                                   alt: '',
                                   src: t,
-                                  className: r()(c.iconWrapper, l)
+                                  className: a()(c.iconWrapper, l)
                               });
-                          let s = null;
+                          let o = null;
                           return (
                               null != e &&
-                                  (s =
+                                  (o =
                                       'string' == typeof e
                                           ? (0, i.jsx)('img', {
                                                 alt: '',
                                                 src: e,
-                                                className: r()(c.icon, l)
+                                                className: a()(c.icon, l)
                                             })
                                           : (0, i.jsx)(e, {
-                                                className: r()(c.icon, l),
+                                                className: a()(c.icon, l),
                                                 color: 'currentColor'
                                             })),
-                              (0, i.jsx)(o.Z, {
-                                  align: o.Z.Align.CENTER,
-                                  justify: o.Z.Justify.CENTER,
+                              (0, i.jsx)(s.Z, {
+                                  align: s.Z.Align.CENTER,
+                                  justify: s.Z.Justify.CENTER,
                                   style: { backgroundColor: n },
-                                  className: r()(c.iconWrapper, a),
-                                  children: s
+                                  className: a()(c.iconWrapper, r),
+                                  children: o
                               })
                           );
-                      })(l, u, m, h, p)
+                      })(l, u, m, h, x)
                   })
                 : null,
             (function (e) {
                 let { name: t, description: n, details: l, detailsClassName: u, isHeader: m, isPremium: h } = e,
-                    p =
+                    x =
                         null == l
                             ? void 0
                             : l.map((e, t) => {
@@ -64,7 +60,7 @@ function u(e) {
                                   return (0, i.jsxs)(
                                       'div',
                                       {
-                                          className: r()(c.detailsWrapper, m ? c.headerDetailsWrapper : null),
+                                          className: a()(c.detailsWrapper, m ? c.headerDetailsWrapper : null),
                                           children: [
                                               null != n
                                                   ? (0, i.jsx)(n, {
@@ -73,7 +69,7 @@ function u(e) {
                                                         className: c.detailsIcon
                                                     })
                                                   : null,
-                                              (0, i.jsx)(a.Text, {
+                                              (0, i.jsx)(r.Text, {
                                                   variant: 'text-xs/normal',
                                                   color: 'header-secondary',
                                                   className: u,
@@ -84,19 +80,19 @@ function u(e) {
                                       t
                                   );
                               });
-                return (0, i.jsxs)(o.Z, {
-                    direction: o.Z.Direction.VERTICAL,
+                return (0, i.jsxs)(s.Z, {
+                    direction: s.Z.Direction.VERTICAL,
                     children: [
-                        (0, i.jsxs)(s.Z, {
-                            size: m ? s.Z.Sizes.SIZE_24 : s.Z.Sizes.SIZE_16,
+                        (0, i.jsxs)(o.Z, {
+                            size: m ? o.Z.Sizes.SIZE_24 : o.Z.Sizes.SIZE_16,
                             className: m ? c.header : c.secondaryHeader,
                             children: [
                                 t,
                                 h &&
-                                    (0, i.jsx)(a.Tooltip, {
+                                    (0, i.jsx)(r.ua7, {
                                         text: d.intl.string(d.t.VFuFur),
                                         children: (e) =>
-                                            (0, i.jsx)(a.TicketIcon, {
+                                            (0, i.jsx)(r.Prq, {
                                                 size: 'xs',
                                                 color: 'currentColor',
                                                 ...e,
@@ -106,27 +102,27 @@ function u(e) {
                             ]
                         }),
                         null != n
-                            ? (0, i.jsx)(a.Text, {
+                            ? (0, i.jsx)(r.Text, {
                                   variant: 'text-sm/normal',
                                   color: 'header-secondary',
                                   children: n
                               })
                             : null,
-                        (0, i.jsx)(o.Z, {
-                            direction: o.Z.Direction.HORIZONTAL,
-                            align: o.Z.Align.CENTER,
-                            wrap: o.Z.Wrap.WRAP,
-                            children: p
+                        (0, i.jsx)(s.Z, {
+                            direction: s.Z.Direction.HORIZONTAL,
+                            align: s.Z.Align.CENTER,
+                            wrap: s.Z.Wrap.WRAP,
+                            children: x
                         })
                     ]
                 });
             })({
                 name: t,
                 description: n,
-                details: g,
-                detailsClassName: x,
+                details: p,
+                detailsClassName: g,
                 isHeader: f,
-                isPremium: v
+                isPremium: b
             })
         ]
     });

@@ -1,26 +1,22 @@
-r.d(n, {
-    Z: function () {
-        return c;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(481060),
-    l = r(549631),
-    u = r(677850);
-function c(e) {
-    let { children: n, className: r, size: a = s.Button.Sizes.MEDIUM, onlyShineOnHover: c = !1, ...d } = e;
-    return (0, i.jsx)(s.ShinyButton, {
-        ...d,
-        color: s.Button.Colors.CUSTOM,
-        size: a,
-        className: o()(u.button, r),
-        onlyShineOnHover: c,
+n.d(t, { Z: () => u });
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(481060),
+    o = n(549631),
+    l = n(677850);
+function u(e) {
+    let { children: t, className: n, size: r = s.zxk.Sizes.MEDIUM, onlyShineOnHover: u = !1, ...c } = e;
+    return (0, i.jsx)(s.gtL, {
+        ...c,
+        color: s.zxk.Colors.CUSTOM,
+        size: r,
+        className: a()(l.button, n),
+        onlyShineOnHover: u,
         children: (0, i.jsxs)('div', {
-            className: u.buttonContents,
-            children: [(0, i.jsx)(l.Z, { className: u.icon }), n]
+            className: l.buttonContents,
+            children: [(0, i.jsx)(o.Z, { className: l.icon }), t]
         })
     });
 }

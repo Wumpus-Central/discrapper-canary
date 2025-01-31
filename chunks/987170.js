@@ -1,154 +1,149 @@
-r.d(n, {
-    Z: function () {
-        return _;
-    }
-});
-var i = r(47120);
-var a = r(192379),
-    o = r(128456),
-    s = r(314897),
-    l = r(492435),
-    u = r(353926),
-    c = r(980944),
-    d = r(987338);
-function f(e, n) {
-    return 'guild' === e ? (0, l.gK)(n) : (0, l.Xz)(n);
+n.d(t, { Z: () => _ }), n(47120);
+var i = n(192379),
+    r = n(128456),
+    a = n(314897),
+    s = n(492435),
+    o = n(353926),
+    l = n(980944),
+    u = n(987338);
+function c(e, t) {
+    return 'guild' === e ? (0, s.gK)(t) : (0, s.Xz)(t);
 }
-function p(e, n, r) {
-    return 'guild' === e ? u.Z.getGuildExperimentDescriptor(n, r.guildId) : u.Z.getUserExperimentDescriptor(n);
+function d(e, t, n) {
+    return 'guild' === e ? o.Z.getGuildExperimentDescriptor(t, n.guildId) : o.Z.getUserExperimentDescriptor(t);
 }
-function h(e, n, r, i) {
-    var a, o;
-    return (null == i ? void 0 : i.aaMode) ? e.defaultConfig : null !== (o = null === (a = r.get(n)) || void 0 === a ? void 0 : a.config) && void 0 !== o ? o : e.defaultConfig;
+function f(e, t, n, i) {
+    var r, a;
+    return (null == i ? void 0 : i.aaMode) ? e.defaultConfig : null !== (a = null === (r = n.get(t)) || void 0 === r ? void 0 : r.config) && void 0 !== a ? a : e.defaultConfig;
 }
 function _(e) {
-    (0, c.K)(e.id, e.label, e.commonTriggerPoint);
-    let n = new Map();
-    n.set(d.NZ.NOT_ELIGIBLE, {
+    (0, l.K)(e.id, e.label, e.commonTriggerPoint);
+    let t = new Map();
+    t.set(u.NZ.NOT_ELIGIBLE, {
         description: 'Not Eligible',
         config: e.defaultConfig
     }),
-        n.set(d.NZ.CONTROL, {
+        t.set(u.NZ.CONTROL, {
             description: 'Control Bucket',
             config: e.defaultConfig
         }),
         e.treatments.forEach((e) => {
-            n.set(e.id, {
+            t.set(e.id, {
                 description: 'Treatment '.concat(e.id, ': ').concat(e.label),
                 config: e.config
             });
         });
-    let r = f(e.kind, {
+    let n = c(e.kind, {
         id: e.id,
         title: e.label,
         commonTriggerPoint: e.commonTriggerPoint,
-        description: [...n.values()].map((e) => e.description),
-        buckets: [...n.keys()]
+        description: [...t.values()].map((e) => e.description),
+        buckets: [...t.keys()]
     });
-    function i(e) {
-        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            r = arguments.length > 2 ? arguments[2] : void 0,
+    function _(e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            n = arguments.length > 2 ? arguments[2] : void 0,
             i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        if (((n.exposureType = r ? d.a0.AUTO_FALLBACK : d.a0.AUTO), (n.excluded = !1), null == i)) {
-            _(e, n);
+        if (((t.exposureType = n ? u.a0.AUTO_FALLBACK : u.a0.AUTO), (t.excluded = !1), null == i)) {
+            p(e, t);
             return;
         }
-        m(e, n, i);
+        h(e, t, i);
     }
-    function _(n) {
+    function p(t) {
         let i =
                 arguments.length > 1 && void 0 !== arguments[1]
                     ? arguments[1]
                     : {
                           excluded: !1,
-                          exposureType: d.a0.MANUAL
+                          exposureType: u.a0.MANUAL
                       },
-            a = p(e.kind, r.id, n);
-        null != a && m(n, i, a);
+            r = d(e.kind, n.id, t);
+        null != r && h(t, i, r);
     }
-    function m(e, n, i) {
+    function h(e, t, i) {
         if (null != i) {
-            var a, o, u, c, f;
-            let p = d.a0.MANUAL,
-                h = !1;
-            (0, l.W9)(r.id, i, {
-                location: null !== (a = null == e ? void 0 : e.location) && void 0 !== a ? a : 'unknown',
-                analyticsLocations: null !== (o = null == n ? void 0 : n.analyticsLocations) && void 0 !== o ? o : [],
-                fingerprint: null !== (c = null !== (u = null == n ? void 0 : n.fingerprint) && void 0 !== u ? u : s.default.getFingerprint()) && void 0 !== c ? c : void 0,
-                excluded: (null == n ? void 0 : n.excluded) || h,
-                exposureType: null !== (f = null == n ? void 0 : n.exposureType) && void 0 !== f ? f : p
+            var r, o, l, c, d;
+            let f = u.a0.MANUAL,
+                _ = !1;
+            (0, s.W9)(n.id, i, {
+                location: null !== (r = null == e ? void 0 : e.location) && void 0 !== r ? r : 'unknown',
+                analyticsLocations: null !== (o = null == t ? void 0 : t.analyticsLocations) && void 0 !== o ? o : [],
+                fingerprint: null !== (c = null !== (l = null == t ? void 0 : t.fingerprint) && void 0 !== l ? l : a.default.getFingerprint()) && void 0 !== c ? c : void 0,
+                excluded: (null == t ? void 0 : t.excluded) || _,
+                exposureType: null !== (d = null == t ? void 0 : t.exposureType) && void 0 !== d ? d : f
             });
         }
     }
-    function g(r, i) {
-        let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-            o = null != a.disable && a.disable,
-            s = p(e.kind, e.id, r),
-            l = null == s || o ? d.NZ.NOT_ELIGIBLE : s.bucket,
+    function m(n, i) {
+        let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+            a = null != r.disable && r.disable,
+            s = d(e.kind, e.id, n),
+            l = null == s || a ? u.NZ.NOT_ELIGIBLE : s.bucket,
             c = null == s ? -1 : s.revision;
-        function f() {
-            let a = p(e.kind, e.id, r),
-                s = null == a || o ? d.NZ.NOT_ELIGIBLE : a.bucket,
-                u = null == a ? -1 : a.revision;
-            (s !== l || c !== u) && (i(h(e, s, n, a), s, u), (l = s), (c = u));
+        function _() {
+            let r = d(e.kind, e.id, n),
+                s = null == r || a ? u.NZ.NOT_ELIGIBLE : r.bucket,
+                o = null == r ? -1 : r.revision;
+            (s !== l || c !== o) && (i(f(e, s, t, r), s, o), (l = s), (c = o));
         }
         return (
-            i(h(e, l, n, s), l, c),
-            u.Z.addReactChangeListener(f),
+            i(f(e, l, t, s), l, c),
+            o.Z.addReactChangeListener(_),
             () => {
-                u.Z.removeReactChangeListener(f);
+                o.Z.removeReactChangeListener(_);
             }
         );
     }
-    function E(n) {
-        let r = p(e.kind, e.id, n);
-        return !!(null == r ? void 0 : r.aaMode);
+    function g(t) {
+        let n = d(e.kind, e.id, t);
+        return !!(null == n ? void 0 : n.aaMode);
     }
     return {
-        useExperiment: function r(r) {
-            var s, l, u;
-            let c = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { autoTrackExposure: !0 },
-                f = null !== (s = c.disable) && void 0 !== s && s,
-                _ = !1 !== c.autoTrackExposure,
-                m = p(e.kind, e.id, r),
-                E = null == c.trackExposureOptions ? void 0 : (0, o.Z)(null !== (l = c.trackExposureOptions) && void 0 !== l ? l : {}),
-                v = null !== (u = null == m ? void 0 : m.triggerDebuggingEnabled) && void 0 !== u && u,
-                [[y, b, I], T] = (0, a.useState)(() => {
-                    let r = null == m || f ? d.NZ.NOT_ELIGIBLE : m.bucket;
-                    return [h(e, r, n, m), r, null == m ? -1 : m.revision];
+        useExperiment: function (n) {
+            var a, s, o;
+            let l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { autoTrackExposure: !0 },
+                c = null !== (a = l.disable) && void 0 !== a && a,
+                p = !1 !== l.autoTrackExposure,
+                h = d(e.kind, e.id, n),
+                g = null == l.trackExposureOptions ? void 0 : (0, r.Z)(null !== (s = l.trackExposureOptions) && void 0 !== s ? s : {}),
+                E = null !== (o = null == h ? void 0 : h.triggerDebuggingEnabled) && void 0 !== o && o,
+                [[v, y, I], b] = (0, i.useState)(() => {
+                    let n = null == h || c ? u.NZ.NOT_ELIGIBLE : h.bucket;
+                    return [f(e, n, t, h), n, null == h ? -1 : h.revision];
                 }),
-                S = (0, o.Z)(r);
+                T = (0, r.Z)(n);
             return (
-                (0, a.useEffect)(() => {
-                    if (!f && (!!_ || !!v) && null == e.commonTriggerPoint) i(S, E, !1 === _);
-                }, [f, _, S, E, b, I, v]),
-                (0, a.useEffect)(
+                (0, i.useEffect)(() => {
+                    !c && (p || E) && null == e.commonTriggerPoint && _(T, g, !1 === p);
+                }, [c, p, T, g, y, I, E]),
+                (0, i.useEffect)(
                     () =>
-                        g(
-                            S,
-                            (e, n, r) => {
-                                T((i) => (i[0] === e && i[1] === n && i[2] === r ? i : [e, n, r]));
+                        m(
+                            T,
+                            (e, t, n) => {
+                                b((i) => (i[0] === e && i[1] === t && i[2] === n ? i : [e, t, n]));
                             },
-                            { disable: f }
+                            { disable: c }
                         ),
-                    [f, S]
+                    [c, T]
                 ),
-                y
+                v
             );
         },
-        subscribe: g,
-        trackExposure: _,
-        getCurrentConfig: function r(r) {
-            let a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { autoTrackExposure: !0 },
-                o = p(e.kind, e.id, r);
-            if (null == o || a.disable) return h(e, d.NZ.NOT_ELIGIBLE, n, o);
-            if ((!1 !== a.autoTrackExposure || o.triggerDebuggingEnabled) && null == e.commonTriggerPoint) {
-                let e = !1 === a.autoTrackExposure;
-                i(r, a.trackExposureOptions, e, o);
+        subscribe: m,
+        trackExposure: p,
+        getCurrentConfig: function (n) {
+            let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { autoTrackExposure: !0 },
+                r = d(e.kind, e.id, n);
+            if (null == r || i.disable) return f(e, u.NZ.NOT_ELIGIBLE, t, r);
+            if ((!1 !== i.autoTrackExposure || r.triggerDebuggingEnabled) && null == e.commonTriggerPoint) {
+                let e = !1 === i.autoTrackExposure;
+                _(n, i.trackExposureOptions, e, r);
             }
-            return h(e, o.bucket, n, o);
+            return f(e, r.bucket, t, r);
         },
         definition: e,
-        isAAMode: E
+        isAAMode: g
     };
 }

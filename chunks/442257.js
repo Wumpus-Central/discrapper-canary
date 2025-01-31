@@ -1,9 +1,4 @@
-a.r(r),
-    a.d(r, {
-        default: function () {
-            return t;
-        }
-    });
+a.r(r), a.d(r, { default: () => t });
 var t = {
     payButton: '支付',
     'payButton.redirecting': '正在重定向...',

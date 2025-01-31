@@ -1,24 +1,18 @@
-r.d(n, {
-    EY: function () {
-        return s;
-    },
-    Vh: function () {
-        return o;
-    },
-    Yh: function () {
-        return a;
-    }
+n.d(t, {
+    EY: () => s,
+    Vh: () => a,
+    Yh: () => r
 });
-var i = r(406432);
-let a = 4;
-function o(e) {
-    var n, r;
+var i = n(406432);
+let r = 4;
+function a(e) {
+    var t, n;
     if (null == e) return;
-    let { thumbnail: i, image: a } = e;
-    return null != i ? (null !== (n = i.proxy_url) && void 0 !== n ? n : i.url) : null != a ? (null !== (r = a.proxy_url) && void 0 !== r ? r : a.url) : void 0;
+    let { thumbnail: i, image: r } = e;
+    return null != i ? (null !== (t = i.proxy_url) && void 0 !== t ? t : i.url) : null != r ? (null !== (n = r.proxy_url) && void 0 !== n ? n : r.url) : void 0;
 }
 function s(e) {
     if (null == e) return;
-    let { url: n, proxy_url: r } = e;
-    return null != n && null != r ? ((0, i.cb)(n) ? ''.concat(r, '?format=webp') : r) : n;
+    let { url: t, proxy_url: n } = e;
+    return null != t && null != n ? ((0, i.cb)(t) ? ''.concat(n, '?format=webp') : n) : t;
 }

@@ -1,17 +1,18 @@
-e.exports = {
-    selectable: 'selectable_d1aa77',
-    strong: 'strong_d1aa77',
-    colorStandard: 'colorStandard_d1aa77',
-    colorLink: 'colorLink_d1aa77',
-    colorMuted: 'colorMuted_d1aa77',
-    colorError: 'colorError_d1aa77',
-    colorBrand: 'colorBrand_d1aa77',
-    colorHeaderPrimary: 'colorHeaderPrimary_d1aa77',
-    colorHeaderSecondary: 'colorHeaderSecondary_d1aa77',
-    colorStatusYellow: 'colorStatusYellow_d1aa77',
-    colorStatusGreen: 'colorStatusGreen_d1aa77',
-    colorStatusRed: 'colorStatusRed_d1aa77',
-    colorInteractiveActive: 'colorInteractiveActive_d1aa77',
-    colorInteractiveNormal: 'colorInteractiveNormal_d1aa77',
-    colorWhite: 'colorWhite_d1aa77'
+var i = {
+    selectable: 'selectable_c9946a',
+    strong: 'strong_c9946a',
+    colorStandard: 'colorStandard_c9946a',
+    colorLink: 'colorLink_c9946a',
+    colorMuted: 'colorMuted_c9946a',
+    colorError: 'colorError_c9946a',
+    colorBrand: 'colorBrand_c9946a',
+    colorHeaderPrimary: 'colorHeaderPrimary_c9946a',
+    colorHeaderSecondary: 'colorHeaderSecondary_c9946a',
+    colorStatusYellow: 'colorStatusYellow_c9946a',
+    colorStatusGreen: 'colorStatusGreen_c9946a',
+    colorStatusRed: 'colorStatusRed_c9946a',
+    colorInteractiveActive: 'colorInteractiveActive_c9946a',
+    colorInteractiveNormal: 'colorInteractiveNormal_c9946a',
+    colorWhite: 'colorWhite_c9946a'
 };
+e.exports = i;

@@ -1,53 +1,48 @@
-r.d(n, {
-    Z: function () {
-        return f;
-    }
-});
-var i,
-    a = r(200651);
-r(192379);
-var o = r(120356),
-    s = r.n(o),
-    l = r(873546),
-    u = r(481060),
-    c = r(388032),
-    d = r(121139);
-function f(e) {
-    let { closeAction: n, variant: r = '', keybind: i, className: o } = e;
-    return (0, a.jsxs)('div', {
-        className: s()(d.container, o),
+n.d(t, { Z: () => d });
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(873546),
+    o = n(481060),
+    l = n(388032),
+    u = n(121139),
+    c = (function (e) {
+        return (e.DEFAULT = ''), (e.BOLD = 'Bold'), (e.SOLID = 'Solid'), e;
+    })(c || {});
+function d(e) {
+    let { closeAction: t, variant: n = '', keybind: r, className: c } = e;
+    return (0, i.jsxs)('div', {
+        className: a()(u.container, c),
         children: [
-            (0, a.jsx)(u.Clickable, {
-                className: s()(d.closeButton, {
-                    [d.closeButtonBold]: 'Bold' === r,
-                    [d.closeButtonSolid]: 'Solid' === r
+            (0, i.jsx)(o.P3F, {
+                className: a()(u.closeButton, {
+                    [u.closeButtonBold]: 'Bold' === n,
+                    [u.closeButtonSolid]: 'Solid' === n
                 }),
-                onClick: n,
-                'aria-label': c.intl.string(c.t.cpT0Cg),
+                onClick: t,
+                'aria-label': l.intl.string(l.t.cpT0Cg),
                 children:
-                    'Solid' === r
-                        ? (0, a.jsx)(u.CircleXIcon, {
+                    'Solid' === n
+                        ? (0, i.jsx)(o.k$p, {
                               size: 'md',
                               color: 'currentColor',
                               'aria-hidden': !0
                           })
-                        : (0, a.jsx)(u.XSmallIcon, {
+                        : (0, i.jsx)(o.Dio, {
                               size: 'sm',
                               color: 'currentColor',
                               'aria-hidden': !0
                           })
             }),
-            l.tq
+            s.tq
                 ? null
-                : (0, a.jsx)('div', {
-                      className: s()(d.keybind),
+                : (0, i.jsx)('div', {
+                      className: a()(u.keybind),
                       'aria-hidden': !0,
-                      children: i
+                      children: r
                   })
         ]
     });
 }
-!(function (e) {
-    (e.DEFAULT = ''), (e.BOLD = 'Bold'), (e.SOLID = 'Solid');
-})(i || (i = {})),
-    (f.Variants = i);
+d.Variants = c;

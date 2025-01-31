@@ -1,13 +1,9 @@
-n.d(t, {
-    Z: function () {
-        return C;
-    }
-});
+n.d(t, { Z: () => _ });
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    r = n(481060),
-    a = n(194359),
+    a = n(481060),
+    r = n(194359),
     s = n(631937),
     o = n(702321),
     c = n(377171),
@@ -18,31 +14,31 @@ var l = n(442837),
     m = n(981631),
     f = n(596401),
     g = n(388032);
-function C(e) {
-    let { channel: t, children: C } = e,
-        x = (0, l.e7)([d.Z], () => d.Z.isBlocked(t.getRecipientId()));
+function _(e) {
+    let { channel: t, children: _ } = e,
+        C = (0, l.e7)([d.Z], () => d.Z.isBlocked(t.getRecipientId()));
     (0, s.Z)(t.id);
-    let v = (0, o.Z)(t.id),
-        _ = t.isSystemDM(),
-        I = x && !_ && !t.isMultiUserDM(),
-        E = {};
-    if (_) {
-        let e = v
+    let x = (0, o.Z)(t.id),
+        v = t.isSystemDM(),
+        E = C && !v && !t.isMultiUserDM(),
+        I = {};
+    if (v) {
+        let e = x
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
                       g.intl.string(g.t['+KSnWV']),
-                      (0, i.jsx)(r.WindowLaunchIcon, {
+                      (0, i.jsx)(a.rgF, {
                           size: 'xs',
                           color: c.Z.HEADER_PRIMARY
                       })
                   ]
               })
             : g.intl.string(g.t.hvVgAQ);
-        (E.message = g.intl.string(g.t.Bt2N7O)),
-            (E.subtitle = g.intl.string(g.t['n/Vzk5'])),
-            (E.buttonText = e),
-            (E.onButtonClick = () => {
-                if (v) {
+        (I.message = g.intl.string(g.t.Bt2N7O)),
+            (I.subtitle = g.intl.string(g.t['n/Vzk5'])),
+            (I.buttonText = e),
+            (I.onButtonClick = () => {
+                if (x) {
                     open(f.D2),
                         u.default.track(m.rMx.CHANGE_LOG_CTA_CLICKED, {
                             cta_type: 'chat_blocker',
@@ -52,16 +48,16 @@ function C(e) {
                 }
                 open(h.Z.getArticleURL(m.BhN.SYSTEM_DMS));
             }),
-            (E.imageSrc = n(780961));
+            (I.imageSrc = n(780961));
     } else
-        I &&
-            ((E.message = g.intl.string(g.t['9T6N5+'])),
-            (E.buttonText = g.intl.string(g.t.XyHpKC)),
-            (E.onButtonClick = () => {
-                a.Z.unblockUser(t.getRecipientId());
+        E &&
+            ((I.message = g.intl.string(g.t['9T6N5+'])),
+            (I.buttonText = g.intl.string(g.t.XyHpKC)),
+            (I.onButtonClick = () => {
+                r.Z.unblockUser(t.getRecipientId());
             }));
     return (0, i.jsx)(p.Z, {
-        ...E,
-        children: C
+        ...I,
+        children: _
     });
 }

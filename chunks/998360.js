@@ -1,1 +1,1 @@
-t.exports = { art: 'art_ebefe4' };
+t.exports = { art: 'art__0668f' };

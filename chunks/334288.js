@@ -1,11 +1,7 @@
-n.d(t, {
-    f: function () {
-        return a;
-    }
-});
+n.d(t, { f: () => a });
 var i = n(996106),
-    r = n(186901),
-    l = n(981631);
+    l = n(186901),
+    r = n(981631);
 function a(e) {
-    if (r.He.IPC !== e && r.He.POST_MESSAGE !== e) throw new i.Z({ errorCode: l.lTL.INVALID_COMMAND }, 'Invalid transport.');
+    if (l.He.IPC !== e && l.He.POST_MESSAGE !== e) throw new i.Z({ errorCode: r.lTL.INVALID_COMMAND }, 'Invalid transport.');
 }

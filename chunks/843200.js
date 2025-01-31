@@ -1,31 +1,27 @@
-n.d(t, {
-    Z: function () {
-        return p;
-    }
-});
+n.d(t, { Z: () => _ });
 var i = n(200651);
 n(192379);
-var r = n(120356),
-    s = n.n(r),
-    a = n(512722),
-    l = n.n(a),
+var s = n(120356),
+    r = n.n(s),
+    l = n(512722),
+    a = n.n(l),
     o = n(442837),
     c = n(481060),
     d = n(600164),
     u = n(594174),
     m = n(418632),
-    g = n(388032),
-    h = n(167836);
-function p(e) {
-    let { unclaimedNotice: t, unverifiedNotice: r, className: a } = e,
+    h = n(388032),
+    g = n(167836);
+function _(e) {
+    let { unclaimedNotice: t, unverifiedNotice: s, className: l } = e,
         {
-            isClaimed: p,
+            isClaimed: _,
             isVerified: x,
-            hasEmail: f
+            hasEmail: p
         } = (0, o.cj)([u.default], () => {
             let e = u.default.getCurrentUser();
             return (
-                l()(null != e, 'EmailNotice: currentUser cannot be undefined'),
+                a()(null != e, 'EmailNotice: currentUser cannot be undefined'),
                 {
                     isClaimed: e.isClaimed(),
                     isVerified: e.verified,
@@ -34,26 +30,20 @@ function p(e) {
             );
         });
     function E() {
-        (0, c.openModalLazy)(async () => {
-            let { default: e } = await n.e('60827').then(n.bind(n, 324239));
-            return (t) => (0, i.jsx)(e, { ...t });
-        });
-    }
-    function _() {
-        (0, c.openModalLazy)(async () => {
+        (0, c.ZDy)(async () => {
             let { default: e } = await Promise.all([n.e('9343'), n.e('1861')]).then(n.bind(n, 642298));
             return (t) => (0, i.jsx)(e, { ...t });
         });
     }
-    return p && x
+    return _ && x
         ? null
-        : (0, i.jsx)(c.Card, {
-              className: s()(h.wrapper, a),
+        : (0, i.jsx)(c.Zbd, {
+              className: r()(g.wrapper, l),
               children: (0, i.jsxs)(d.Z, {
                   align: d.Z.Align.CENTER,
                   children: [
                       (0, i.jsx)(d.Z.Child, {
-                          className: h.image,
+                          className: g.image,
                           grow: 0,
                           shrink: 0
                       }),
@@ -61,44 +51,49 @@ function p(e) {
                           children: [
                               (0, i.jsx)(c.Text, {
                                   variant: 'text-sm/normal',
-                                  children: p ? (null != r ? r : g.intl.string(g.t.WuyBbG)) : null != t ? t : g.intl.string(g.t['f+Zaoq'])
+                                  children: _ ? (null != s ? s : h.intl.string(h.t.WuyBbG)) : null != t ? t : h.intl.string(h.t['f+Zaoq'])
                               }),
                               (0, i.jsxs)(d.Z, {
                                   justify: d.Z.Justify.CENTER,
-                                  className: h.content,
+                                  className: g.content,
                                   children: [
-                                      p
-                                          ? f
+                                      _
+                                          ? p
                                               ? (0, i.jsx)(d.Z.Child, {
                                                     grow: 0,
                                                     shrink: 0,
                                                     children: (0, i.jsx)(m.Z, {})
                                                 })
-                                              : (0, i.jsx)(c.Button, {
-                                                    size: c.Button.Sizes.MEDIUM,
-                                                    color: c.Button.Colors.BRAND,
-                                                    onClick: _,
-                                                    children: g.intl.string(g.t.ydw5nZ)
+                                              : (0, i.jsx)(c.zxk, {
+                                                    size: c.zxk.Sizes.MEDIUM,
+                                                    color: c.zxk.Colors.BRAND,
+                                                    onClick: E,
+                                                    children: h.intl.string(h.t.ydw5nZ)
                                                 })
                                           : (0, i.jsx)(d.Z.Child, {
                                                 grow: 0,
                                                 shrink: 0,
-                                                children: (0, i.jsx)(c.Button, {
-                                                    size: c.Button.Sizes.MEDIUM,
-                                                    color: c.Button.Colors.BRAND,
-                                                    onClick: E,
-                                                    children: g.intl.string(g.t.fiNVio)
+                                                children: (0, i.jsx)(c.zxk, {
+                                                    size: c.zxk.Sizes.MEDIUM,
+                                                    color: c.zxk.Colors.BRAND,
+                                                    onClick: function () {
+                                                        (0, c.ZDy)(async () => {
+                                                            let { default: e } = await n.e('60827').then(n.bind(n, 324239));
+                                                            return (t) => (0, i.jsx)(e, { ...t });
+                                                        });
+                                                    },
+                                                    children: h.intl.string(h.t.fiNVio)
                                                 })
                                             }),
-                                      p && f
+                                      _ && p
                                           ? (0, i.jsx)(d.Z.Child, {
                                                 grow: 0,
                                                 shrink: 0,
-                                                children: (0, i.jsx)(c.Button, {
-                                                    color: c.Button.Colors.PRIMARY,
-                                                    look: c.Button.Looks.LINK,
-                                                    onClick: _,
-                                                    children: g.intl.string(g.t.Vm8akJ)
+                                                children: (0, i.jsx)(c.zxk, {
+                                                    color: c.zxk.Colors.PRIMARY,
+                                                    look: c.zxk.Looks.LINK,
+                                                    onClick: E,
+                                                    children: h.intl.string(h.t.Vm8akJ)
                                                 })
                                             })
                                           : null

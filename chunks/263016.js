@@ -1,19 +1,15 @@
-r.d(n, {
-    W1: function () {
-        return u;
-    }
-});
-var i = r(59973),
-    a = r(202373),
-    o = r(556532),
-    s = r(509883),
-    l = r(713011);
-function u(e) {
+n.d(t, { W1: () => l });
+var i = n(59973),
+    r = n(202373),
+    a = n(556532),
+    s = n(509883),
+    o = n(713011);
+function l(e) {
     return {
         beginDrag: (0, i.m)(e),
-        publishDragSource: (0, a.U)(e),
-        hover: (0, o.s)(e),
+        publishDragSource: (0, r.U)(e),
+        hover: (0, a.s)(e),
         drop: (0, s._)(e),
-        endDrag: (0, l.F)(e)
+        endDrag: (0, o.F)(e)
     };
 }

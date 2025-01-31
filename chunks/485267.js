@@ -1,13 +1,7 @@
 n.d(t, {
-    Bt: function () {
-        return d;
-    },
-    Jn: function () {
-        return c;
-    },
-    lY: function () {
-        return u;
-    }
+    Bt: () => u,
+    Jn: () => d,
+    lY: () => c
 });
 var l = n(570140);
 n(100527), n(592125);
@@ -15,9 +9,10 @@ var a = n(944486),
     i = n(914010);
 n(594174);
 var r = n(626135),
-    o = n(71585),
-    s = n(981631);
-let u = () => {
+    o = n(71585);
+n(295955);
+var s = n(981631);
+let c = () => {
     l.Z.dispatch({ type: 'CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN' }),
         r.default.track(s.rMx.MEMBERLIST_CONTENT_FEED_HIDDEN, {
             channel_id: a.Z.getChannelId(),
@@ -25,9 +20,9 @@ let u = () => {
             hidden: o.Z.hidden
         });
 };
-function c() {
+function d() {
     l.Z.dispatch({ type: 'GAME_PROFILE_OPEN' });
 }
-function d() {
+function u() {
     l.Z.dispatch({ type: 'CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR' });
 }

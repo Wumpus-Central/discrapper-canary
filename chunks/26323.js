@@ -1,44 +1,40 @@
-r.d(n, {
-    Z: function () {
-        return c;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(481060),
-    o = r(928518),
-    s = r(776862),
-    l = r(626135),
-    u = r(981631);
-function c(e, n) {
-    let c = null != n ? n : ''.concat(u.jXE.PREMIUM_GUILD_UPSELL_MODAL);
-    null != e.targetBoostedGuildTier && (c += ' - Tier '.concat(e.targetBoostedGuildTier));
-    let d = () => {
-        l.default.track(u.rMx.MODAL_DISMISSED, {
-            type: c,
+n.d(t, { Z: () => u });
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(928518),
+    s = n(776862),
+    o = n(626135),
+    l = n(981631);
+function u(e, t) {
+    let u = null != t ? t : ''.concat(l.jXE.PREMIUM_GUILD_UPSELL_MODAL);
+    null != e.targetBoostedGuildTier && (u += ' - Tier '.concat(e.targetBoostedGuildTier));
+    let c = () => {
+        o.default.track(l.rMx.MODAL_DISMISSED, {
+            type: u,
             location: e.analyticsSourceLocation
         });
     };
-    l.default.track(u.rMx.OPEN_MODAL, {
-        type: c,
+    o.default.track(l.rMx.OPEN_MODAL, {
+        type: u,
         location: e.analyticsSourceLocation
     });
-    let { openInPopoutEnabled: f, ...p } = e,
-        h = o.Z.getWindowOpen(u.KJ3.CHANNEL_CALL_POPOUT) && null != f && f;
-    h && (0, s.Z)(u.KJ3.CHANNEL_CALL_POPOUT);
-    let _ = h ? a.POPOUT_MODAL_CONTEXT : a.DEFAULT_MODAL_CONTEXT;
-    (0, a.openModalLazy)(
+    let { openInPopoutEnabled: d, ...f } = e,
+        _ = a.Z.getWindowOpen(l.KJ3.CHANNEL_CALL_POPOUT) && null != d && d;
+    _ && (0, s.Z)(l.KJ3.CHANNEL_CALL_POPOUT);
+    let p = _ ? r.u1M : r.z1l;
+    (0, r.ZDy)(
         async () => {
-            let { default: e } = await r.e('89675').then(r.bind(r, 146747));
-            return (n) =>
+            let { default: e } = await n.e('89675').then(n.bind(n, 146747));
+            return (t) =>
                 (0, i.jsx)(e, {
-                    ...p,
-                    ...n
+                    ...f,
+                    ...t
                 });
         },
         {
-            onCloseCallback: d,
-            contextKey: _
+            onCloseCallback: c,
+            contextKey: p
         }
     );
 }

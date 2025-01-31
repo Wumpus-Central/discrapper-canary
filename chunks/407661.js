@@ -1,65 +1,61 @@
-r.d(n, {
-    Z: function () {
-        return A;
-    }
-});
-var i = r(200651),
-    a = r(192379),
-    o = r(120356),
-    s = r.n(o),
-    l = r(442837),
-    u = r(481060),
-    c = r(367907),
-    d = r(739566),
-    f = r(623292),
-    p = r(703656),
-    h = r(665906),
-    _ = r(488131),
-    m = r(375954),
-    g = r(962293),
-    E = r(981631),
-    v = r(388032),
-    y = r(112726);
-let b = 2,
+n.d(t, { Z: () => S });
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(442837),
+    l = n(481060),
+    u = n(367907),
+    c = n(739566),
+    d = n(623292),
+    f = n(703656),
+    _ = n(665906),
+    p = n(488131),
+    h = n(375954),
+    m = n(962293),
+    g = n(981631),
+    E = n(388032),
+    v = n(112726);
+let y = 2,
     I = 10;
-function T(e, n) {
-    let r = e.id,
-        i = n.id;
-    return (0, l.e7)(
-        [m.Z],
+function b(e, t) {
+    let n = e.id,
+        i = t.id;
+    return (0, o.e7)(
+        [h.Z],
         () => {
             let e = i;
-            for (let n = 0; n < I; n++) {
-                let i = m.Z.getMessage(r, e);
-                if ((null == i ? void 0 : i.type) !== E.uaV.REPLY || null == i.messageReference) return n;
+            for (let t = 0; t < I; t++) {
+                let i = h.Z.getMessage(n, e);
+                if ((null == i ? void 0 : i.type) !== g.uaV.REPLY || null == i.messageReference) return t;
                 e = i.messageReference.message_id;
             }
             return I;
         },
-        [r, i]
+        [n, i]
     );
 }
-function S(e) {
-    let { channel: n, message: r, replyChainLength: o } = e;
+function T(e) {
+    let { channel: t, message: n, replyChainLength: a } = e;
     function s() {
-        (0, f.A6)(n.id), (0, _.R6)(n, r, 'Reply Chain Nudge');
+        (0, d.A6)(t.id), (0, p.R6)(t, n, 'Reply Chain Nudge');
     }
-    let l = a.useRef(o);
+    let o = r.useRef(a);
     return (
-        a.useEffect(() => {
-            l.current = o;
+        r.useEffect(() => {
+            o.current = a;
         }),
-        a.useEffect(() => {
-            (0, c.yw)(E.rMx.THREAD_NUDGE_SHOWN, {
-                type: 'Reply Chain ('.concat(b + 1, ')'),
-                reply_chain_length: l.current + 1,
-                channel_id: n.id,
-                guild_id: n.guild_id
+        r.useEffect(() => {
+            (0, u.yw)(g.rMx.THREAD_NUDGE_SHOWN, {
+                type: 'Reply Chain ('.concat(y + 1, ')'),
+                reply_chain_length: o.current + 1,
+                channel_id: t.id,
+                guild_id: t.guild_id
             });
-        }, [n]),
-        (0, i.jsxs)(u.Clickable, {
+        }, [t]),
+        (0, i.jsxs)(l.P3F, {
             onClick: s,
-            className: y.threadSuggestionBar,
+            className: v.threadSuggestionBar,
             focusProps: {
                 offset: {
                     right: -4,
@@ -67,46 +63,46 @@ function S(e) {
                 }
             },
             children: [
-                (0, i.jsx)(u.Text, {
+                (0, i.jsx)(l.Text, {
                     color: 'header-secondary',
-                    className: y.text,
+                    className: v.text,
                     variant: 'text-sm/normal',
-                    children: v.intl.format(v.t.B3V0FB, { count: Math.min(I, o + 1) })
+                    children: E.intl.format(E.t.B3V0FB, { count: Math.min(I, a + 1) })
                 }),
-                (0, i.jsx)(u.Text, {
+                (0, i.jsx)(l.Text, {
                     color: 'text-link',
-                    className: y.createThreadButton,
+                    className: v.createThreadButton,
                     variant: 'text-sm/semibold',
-                    children: v.intl.string(v.t.rBIGBA)
+                    children: E.intl.string(E.t.rBIGBA)
                 })
             ]
         })
     );
 }
-function A(e) {
-    let { reply: n, chatInputType: r } = e,
-        { channel: a, message: o, shouldMention: l, showMentionToggle: c } = n,
-        { nick: _, colorString: m, colorRoleName: I } = (0, d.ZP)(o),
-        A = T(a, o),
-        C = (0, h.NE)(a, o),
-        N = r.showThreadPromptOnReply && A >= b && C,
-        R = () => (0, p.uL)(E.Z5c.CHANNEL(a.getGuildId(), a.id, o.id));
-    function O(e) {
-        e.stopPropagation(), (0, f.qx)(a.id, !l);
+function S(e) {
+    let { reply: t, chatInputType: n } = e,
+        { channel: r, message: a, shouldMention: o, showMentionToggle: u } = t,
+        { nick: p, colorString: h, colorRoleName: I } = (0, c.ZP)(a),
+        S = b(r, a),
+        A = (0, _.NE)(r, a),
+        N = n.showThreadPromptOnReply && S >= y && A,
+        C = () => (0, f.uL)(g.Z5c.CHANNEL(r.getGuildId(), r.id, a.id));
+    function R(e) {
+        e.stopPropagation(), (0, d.qx)(r.id, !o);
     }
-    function D(e) {
-        e.stopPropagation(), (0, f.A6)(a.id);
+    function O(e) {
+        e.stopPropagation(), (0, d.A6)(r.id);
     }
     return (0, i.jsx)('div', {
-        className: y.clipContainer,
+        className: v.clipContainer,
         children: (0, i.jsxs)('div', {
-            className: y.container,
+            className: v.container,
             children: [
                 (0, i.jsxs)('div', {
-                    className: y.replyBar,
+                    className: v.replyBar,
                     children: [
-                        (0, i.jsx)(u.Clickable, {
-                            onClick: R,
+                        (0, i.jsx)(l.P3F, {
+                            onClick: C,
                             focusProps: {
                                 offset: {
                                     top: -8,
@@ -115,76 +111,76 @@ function A(e) {
                                     left: -4
                                 }
                             },
-                            children: (0, i.jsx)(u.Text, {
+                            children: (0, i.jsx)(l.Text, {
                                 color: 'header-secondary',
-                                className: s()(y.text, y.replyLabel),
+                                className: s()(v.text, v.replyLabel),
                                 variant: 'text-sm/normal',
-                                children: v.intl.format(v.t['8E4Gxc'], {
-                                    userHook: (e, n) =>
+                                children: E.intl.format(E.t['8E4Gxc'], {
+                                    userHook: (e, t) =>
                                         (0, i.jsx)(
-                                            u.NameWithRole,
+                                            l.PUh,
                                             {
-                                                className: y.name,
-                                                name: _,
-                                                color: m,
+                                                className: v.name,
+                                                name: p,
+                                                color: h,
                                                 roleName: I
                                             },
-                                            n
+                                            t
                                         )
                                 })
                             })
                         }),
                         (0, i.jsxs)('div', {
-                            className: y.actions,
+                            className: v.actions,
                             children: [
-                                c &&
+                                u &&
                                     (0, i.jsxs)(i.Fragment, {
                                         children: [
-                                            (0, i.jsx)(u.Tooltip, {
-                                                text: l ? v.intl.string(v.t.DH2o6e) : v.intl.string(v.t.utGGIS),
+                                            (0, i.jsx)(l.ua7, {
+                                                text: o ? E.intl.string(E.t.DH2o6e) : E.intl.string(E.t.utGGIS),
                                                 children: (e) => {
-                                                    let { onMouseEnter: n, onMouseLeave: r, onFocus: a, onBlur: o } = e;
-                                                    return (0, i.jsx)(u.Clickable, {
+                                                    let { onMouseEnter: t, onMouseLeave: n, onFocus: r, onBlur: a } = e;
+                                                    return (0, i.jsx)(l.P3F, {
                                                         role: 'switch',
-                                                        'aria-checked': l,
-                                                        onClick: O,
-                                                        onMouseEnter: n,
-                                                        onMouseLeave: r,
-                                                        onFocus: a,
-                                                        onBlur: o,
-                                                        children: (0, i.jsxs)(u.Text, {
+                                                        'aria-checked': o,
+                                                        onClick: R,
+                                                        onMouseEnter: t,
+                                                        onMouseLeave: n,
+                                                        onFocus: r,
+                                                        onBlur: a,
+                                                        children: (0, i.jsxs)(l.Text, {
                                                             variant: 'text-sm/bold',
-                                                            color: l ? 'text-link' : 'text-muted',
-                                                            className: y.mentionButton,
+                                                            color: o ? 'text-link' : 'text-muted',
+                                                            className: v.mentionButton,
                                                             children: [
-                                                                (0, i.jsx)(u.AtIcon, {
+                                                                (0, i.jsx)(l.lOy, {
                                                                     size: 'md',
                                                                     color: 'currentColor',
-                                                                    'aria-label': v.intl.string(v.t.P8tvKC),
-                                                                    className: y.mentionIcon
+                                                                    'aria-label': E.intl.string(E.t.P8tvKC),
+                                                                    className: v.mentionIcon
                                                                 }),
-                                                                l ? v.intl.string(v.t.p9jC2t) : v.intl.string(v.t.U7f3bG)
+                                                                o ? E.intl.string(E.t.p9jC2t) : E.intl.string(E.t.U7f3bG)
                                                             ]
                                                         })
                                                     });
                                                 }
                                             }),
                                             (0, i.jsx)('div', {
-                                                className: y.separator,
+                                                className: v.separator,
                                                 'aria-hidden': !0
                                             })
                                         ]
                                     }),
-                                (0, i.jsx)(g.B, { onClick: D })
+                                (0, i.jsx)(m.B, { onClick: O })
                             ]
                         })
                     ]
                 }),
                 N &&
-                    (0, i.jsx)(S, {
-                        channel: a,
-                        message: o,
-                        replyChainLength: A
+                    (0, i.jsx)(T, {
+                        channel: r,
+                        message: a,
+                        replyChainLength: S
                     })
             ]
         })

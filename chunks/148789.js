@@ -1,53 +1,49 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
+n.d(t, { Z: () => c });
 var i = n(200651),
-    r = n(192379),
-    l = n(481060),
-    a = n(194359),
-    o = n(388032),
-    s = n(586210);
+    l = n(192379),
+    a = n(481060),
+    r = n(194359),
+    s = n(388032),
+    o = n(586210);
 function c(e) {
     let { userId: t } = e,
-        n = r.useCallback(
+        n = l.useCallback(
             (e) => {
-                e.stopPropagation(), a.Z.cancelFriendRequest(t);
+                e.stopPropagation(), r.Z.cancelFriendRequest(t);
             },
             [t]
         ),
-        c = r.useCallback(
+        c = l.useCallback(
             (e) => {
-                e.stopPropagation(), a.Z.addRelationship({ userId: t });
+                e.stopPropagation(), r.Z.addRelationship({ userId: t });
             },
             [t]
         );
     return (0, i.jsxs)('div', {
-        className: s.friendRequestContainer,
+        className: o.friendRequestContainer,
         children: [
-            (0, i.jsx)(l.Button, {
-                className: s.acceptButton,
-                look: l.Button.Looks.FILLED,
-                color: l.Button.Colors.GREEN,
-                size: l.Button.Sizes.NONE,
+            (0, i.jsx)(a.zxk, {
+                className: o.acceptButton,
+                look: a.zxk.Looks.FILLED,
+                color: a.zxk.Colors.GREEN,
+                size: a.zxk.Sizes.NONE,
                 onClick: c,
-                children: (0, i.jsx)(l.Text, {
+                children: (0, i.jsx)(a.Text, {
                     variant: 'text-sm/medium',
                     color: 'always-white',
-                    children: o.intl.string(o.t.ZcibdX)
+                    children: s.intl.string(s.t.ZcibdX)
                 })
             }),
-            (0, i.jsx)(l.Button, {
-                className: s.ignoreButton,
-                look: l.Button.Looks.FILLED,
-                color: l.Button.Colors.PRIMARY,
-                size: l.Button.Sizes.NONE,
+            (0, i.jsx)(a.zxk, {
+                className: o.ignoreButton,
+                look: a.zxk.Looks.FILLED,
+                color: a.zxk.Colors.PRIMARY,
+                size: a.zxk.Sizes.NONE,
                 onClick: n,
-                children: (0, i.jsx)(l.Text, {
+                children: (0, i.jsx)(a.Text, {
                     variant: 'text-sm/medium',
                     color: 'always-white',
-                    children: o.intl.string(o.t.xuio0N)
+                    children: s.intl.string(s.t.xuio0N)
                 })
             })
         ]

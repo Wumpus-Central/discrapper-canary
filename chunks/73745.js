@@ -1,81 +1,55 @@
-var i, a;
-function o(e) {
+var i, r;
+function a(e) {
     return e.type === i.literal;
 }
 function s(e) {
     return e.type === i.argument;
 }
-function l(e) {
+function o(e) {
     return e.type === i.number;
 }
-function u(e) {
+function l(e) {
     return e.type === i.date;
 }
-function c(e) {
+function u(e) {
     return e.type === i.time;
 }
-function d(e) {
+function c(e) {
     return e.type === i.select;
 }
-function f(e) {
+function d(e) {
     return e.type === i.plural;
 }
-function p(e) {
+function f(e) {
     return e.type === i.pound;
 }
-function h(e) {
+function _(e) {
     return e.type === i.tag;
 }
-function _(e) {
-    return !!(e && 'object' == typeof e && e.type === a.number);
+function p(e) {
+    return !!(e && 'object' == typeof e && e.type === r.number);
 }
-function m(e) {
-    return !!(e && 'object' == typeof e && e.type === a.dateTime);
+function h(e) {
+    return !!(e && 'object' == typeof e && e.type === r.dateTime);
 }
-r.d(n, {
-    HI: function () {
-        return h;
-    },
-    Ii: function () {
-        return m;
-    },
-    Jo: function () {
-        return f;
-    },
-    O4: function () {
-        return o;
-    },
-    VG: function () {
-        return s;
-    },
-    Wh: function () {
-        return _;
-    },
-    Wi: function () {
-        return d;
-    },
-    aV: function () {
-        return a;
-    },
-    pe: function () {
-        return c;
-    },
-    rp: function () {
-        return u;
-    },
-    uf: function () {
-        return l;
-    },
-    wD: function () {
-        return i;
-    },
-    yx: function () {
-        return p;
-    }
+n.d(t, {
+    HI: () => _,
+    Ii: () => h,
+    Jo: () => d,
+    O4: () => a,
+    VG: () => s,
+    Wh: () => p,
+    Wi: () => c,
+    aV: () => r,
+    pe: () => u,
+    rp: () => l,
+    uf: () => o,
+    wD: () => i,
+    yx: () => f
 }),
-    !(function (e) {
+    (function (e) {
         (e[(e.literal = 0)] = 'literal'), (e[(e.argument = 1)] = 'argument'), (e[(e.number = 2)] = 'number'), (e[(e.date = 3)] = 'date'), (e[(e.time = 4)] = 'time'), (e[(e.select = 5)] = 'select'), (e[(e.plural = 6)] = 'plural'), (e[(e.pound = 7)] = 'pound'), (e[(e.tag = 8)] = 'tag');
     })(i || (i = {})),
-    !(function (e) {
+    (function (e) {
         (e[(e.number = 0)] = 'number'), (e[(e.dateTime = 1)] = 'dateTime');
-    })(a || (a = {}));
+    })(r || (r = {}));

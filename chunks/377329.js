@@ -1,102 +1,98 @@
-t.d(n, {
-    Z: function () {
-        return f;
-    }
-});
-var l = t(200651),
-    i = t(192379),
-    r = t(442837),
-    a = t(481060),
-    s = t(471445),
-    o = t(41776),
-    c = t(592125),
-    d = t(430824),
-    u = t(594174),
-    x = t(236373),
-    m = t(230900),
-    h = t(405613),
-    g = t(460838),
-    v = t(388032),
-    j = t(959320);
-function f(e) {
-    var n, t, f;
-    let { guildId: N, guildEvent: I, guildEventId: C, error: p } = e,
-        E = i.useMemo(() => (0, x.Gb)(I, N), [I, N]),
-        { channel_id: T, name: S, image: Z, description: b } = E,
-        y = (0, r.e7)([c.Z], () => c.Z.getChannel(T), [T]),
-        _ = (0, r.e7)([d.Z], () => d.Z.getGuild(N), [N]),
-        R = (0, m.cS)(E),
-        k = (0, r.e7)([u.default], () => (null != I.creatorId ? u.default.getUser(I.creatorId) : u.default.getCurrentUser()), [I.creatorId]),
-        A = (0, r.e7)([o.Z], () => o.Z.isLurking(N), [N]),
-        D = (0, s.KS)(y, _);
-    return (0, l.jsxs)('div', {
+l.d(n, { Z: () => N });
+var t = l(200651),
+    i = l(192379),
+    a = l(442837),
+    r = l(481060),
+    s = l(471445),
+    o = l(41776),
+    d = l(592125),
+    c = l(430824),
+    u = l(594174),
+    x = l(236373),
+    m = l(230900),
+    h = l(405613),
+    v = l(460838),
+    g = l(388032),
+    j = l(959320);
+function N(e) {
+    var n, l;
+    let { guildId: N, guildEvent: f, guildEventId: p, error: E } = e,
+        C = i.useMemo(() => (0, x.Gb)(f, N), [f, N]),
+        { channel_id: I, name: T, image: Z, description: S } = C,
+        b = (0, a.e7)([d.Z], () => d.Z.getChannel(I), [I]),
+        y = (0, a.e7)([c.Z], () => c.Z.getGuild(N), [N]),
+        k = (0, m.cS)(C),
+        _ = (0, a.e7)([u.default], () => (null != f.creatorId ? u.default.getUser(f.creatorId) : u.default.getCurrentUser()), [f.creatorId]),
+        z = (0, a.e7)([o.Z], () => o.Z.isLurking(N), [N]),
+        R = (0, s.KS)(b, y);
+    return (0, t.jsxs)('div', {
         className: j.content,
         children: [
-            (0, l.jsx)(g.Z, {
+            (0, t.jsx)(v.Z, {
                 className: j.previewCard,
-                guild: _,
-                channel: y,
-                location: null != R ? R : void 0,
-                creator: k,
-                name: S,
-                description: b,
-                imageSource: ((t = (0, x.Gb)(I, N, C)), null == (f = Z) && null == t.image ? null : null != f && /^data:/.test(f) ? f : (0, h.Z)(t)),
+                guild: y,
+                channel: b,
+                location: null != k ? k : void 0,
+                creator: _,
+                name: T,
+                description: S,
+                imageSource: ((l = (0, x.Gb)(f, N, p)), null == Z && null == l.image ? null : null != Z && /^data:/.test(Z) ? Z : (0, h.Z)(l)),
                 isActive: !1,
-                isUserLurking: A,
+                isUserLurking: z,
                 speakers: [],
                 speakerCount: 0,
                 rsvped: !0,
-                guildEvent: E,
-                eventPreview: E
+                guildEvent: C,
+                eventPreview: C
             }),
-            (0, l.jsxs)('div', {
+            (0, t.jsxs)('div', {
                 className: j.textContainer,
                 children: [
-                    (0, l.jsx)(a.Heading, {
+                    (0, t.jsx)(r.X6q, {
                         variant: 'heading-xl/semibold',
-                        children: v.intl.string(v.t.yBsFEx)
+                        children: g.intl.string(g.t.yBsFEx)
                     }),
-                    (0, l.jsx)(a.Text, {
+                    (0, t.jsx)(r.Text, {
                         color: 'header-secondary',
                         variant: 'text-md/normal',
                         className: j.subheader,
                         children:
                             null != location
-                                ? v.intl.string(v.t.KDPFi4)
-                                : v.intl.format(v.t.f55NX1, {
-                                      channelName: null !== (n = null == y ? void 0 : y.name) && void 0 !== n ? n : '',
+                                ? g.intl.string(g.t.KDPFi4)
+                                : g.intl.format(g.t.f55NX1, {
+                                      channelName: null !== (n = null == b ? void 0 : b.name) && void 0 !== n ? n : '',
                                       channelHook: () => {
                                           var e;
-                                          return (0, l.jsxs)('div', {
+                                          return (0, t.jsxs)('div', {
                                               className: j.channelName,
                                               children: [
-                                                  null != D
-                                                      ? (0, l.jsx)(D, {
+                                                  null != R
+                                                      ? (0, t.jsx)(R, {
                                                             size: 'custom',
                                                             color: 'currentColor',
                                                             width: 20,
                                                             height: 20,
                                                             className: j.icon
                                                         })
-                                                      : (0, l.jsx)(a.LocationIcon, {
+                                                      : (0, t.jsx)(r._tJ, {
                                                             size: 'custom',
                                                             color: 'currentColor',
                                                             height: 18,
                                                             width: 18,
                                                             className: j.locationIcon
                                                         }),
-                                                  null !== (e = null == y ? void 0 : y.name) && void 0 !== e ? e : R
+                                                  null !== (e = null == b ? void 0 : b.name) && void 0 !== e ? e : k
                                               ]
                                           });
                                       }
                                   })
                     }),
-                    null != p &&
-                        (0, l.jsx)(a.Text, {
+                    null != E &&
+                        (0, t.jsx)(r.Text, {
                             color: 'text-danger',
                             variant: 'text-xs/normal',
                             className: j.subheader,
-                            children: p.getAnyErrorMessage()
+                            children: E.getAnyErrorMessage()
                         })
                 ]
             })

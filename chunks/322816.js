@@ -1,10 +1,4 @@
-n.d(t, {
-    ZP: function () {
-        return R;
-    }
-}),
-    n(411104),
-    n(47120);
+n.d(t, { ZP: () => R }), n(411104), n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
@@ -19,16 +13,16 @@ var i = n(200651),
     g = n(233608),
     x = n(700785),
     p = n(764260),
-    f = n(631969),
+    _ = n(631969),
     C = n(95242),
-    v = n(420966),
-    I = n(275296),
+    f = n(420966),
+    v = n(275296),
     N = n(203377),
-    _ = n(981631),
-    T = n(388032),
-    j = n(105452),
+    j = n(981631),
+    I = n(388032),
+    E = n(105452),
     b = n(490909);
-function E(e) {
+function T(e) {
     let { guild: t, role: n, locked: l } = e,
         s = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
         d = r.useMemo(
@@ -59,23 +53,23 @@ function E(e) {
         ),
         g = !a.fS(d, h);
     return (0, i.jsx)('div', {
-        className: j.clearButtonWrapper,
-        children: (0, i.jsx)(c.Tooltip, {
-            text: g ? T.intl.string(T.t['IQ/6Sk']) : null,
+        className: E.clearButtonWrapper,
+        children: (0, i.jsx)(c.ua7, {
+            text: g ? I.intl.string(I.t['IQ/6Sk']) : null,
             position: 'top',
-            color: c.Tooltip.Colors.RED,
+            color: c.ua7.Colors.RED,
             children: (e) => {
                 let { onMouseEnter: t, onMouseLeave: r } = e;
-                return (0, i.jsx)(c.Button, {
-                    className: j.clearButton,
-                    size: c.Button.Sizes.TINY,
-                    look: c.Button.Looks.LINK,
-                    color: c.Button.Colors.LINK,
+                return (0, i.jsx)(c.zxk, {
+                    className: E.clearButton,
+                    size: c.zxk.Sizes.TINY,
+                    look: c.zxk.Looks.LINK,
+                    color: c.zxk.Colors.LINK,
                     onClick: () => (0, p.TY)(n.id),
                     onMouseEnter: t,
                     onMouseLeave: r,
                     disabled: a.fS(n.permissions, x.Hn) || g || l,
-                    children: T.intl.string(T.t['UYq7+P'])
+                    children: I.intl.string(I.t['UYq7+P'])
                 });
             }
         })
@@ -85,12 +79,12 @@ function S(e) {
     let { guild: t, role: n, specs: r, locked: l } = e;
     if (0 === r.length)
         return (0, i.jsxs)('div', {
-            className: j.noResultsContainer,
+            className: E.noResultsContainer,
             children: [
-                (0, i.jsx)(f.Z, { className: j.noResults }),
+                (0, i.jsx)(_.Z, { className: E.noResults }),
                 (0, i.jsx)(c.Text, {
                     variant: 'text-sm/normal',
-                    children: T.intl.string(T.t.DEBGqK)
+                    children: I.intl.string(I.t.DEBGqK)
                 })
             ]
         });
@@ -101,13 +95,13 @@ function S(e) {
                       ...n,
                       permissions: a.Od(n.permissions, e)
                   }
-              }) && T.intl.string(T.t['K+D+GB'])
-            : T.intl.string(T.t.nOtPMD);
+              }) && I.intl.string(I.t['K+D+GB'])
+            : I.intl.string(I.t.nOtPMD);
     }
     return (0, i.jsxs)('div', {
-        className: j.permissionsWrapper,
+        className: E.permissionsWrapper,
         children: [
-            (0, i.jsx)(E, {
+            (0, i.jsx)(T, {
                 guild: t,
                 role: n,
                 locked: l
@@ -116,7 +110,7 @@ function S(e) {
                 (0, i.jsx)(
                     d.Z,
                     {
-                        className: j.permissionsForm,
+                        className: E.permissionsForm,
                         spec: e,
                         permissions: n.permissions,
                         locked: l,
@@ -146,42 +140,42 @@ function R(e) {
             }))
             .filter((e) => e.permissions.length > 0),
         { headerHeight: x, headerRef: p } = (0, C.Z)(0),
-        { scrolledToTop: f, handleScroll: E } = (0, v.V)(),
+        { scrolledToTop: _, handleScroll: T } = (0, f.V)(),
         R = r.useRef(!1);
     return (
         r.useEffect(() => {
-            if (!R.current && '' !== d.trimStart()) h.default.track(_.rMx.SEARCH_STARTED, { search_type: 'Permissions' }), (R.current = !0);
+            !R.current && '' !== d.trimStart() && (h.default.track(j.rMx.SEARCH_STARTED, { search_type: 'Permissions' }), (R.current = !0));
         }, [d]),
-        (0, i.jsx)(c.AdvancedScrollerAuto, {
-            className: j.scroller,
+        (0, i.jsx)(c.yWw, {
+            className: E.scroller,
             style: { scrollPaddingTop: x },
-            onScroll: E,
+            onScroll: T,
             children: (0, i.jsxs)('div', {
                 className: b.contentWidth,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: s()(b.header, b.stickyHeader, { [b.stickyHeaderElevated]: !f }),
+                        className: s()(b.header, b.stickyHeader, { [b.stickyHeaderElevated]: !_ }),
                         ref: p,
                         children: [
-                            (0, i.jsx)(v.Z, {
+                            (0, i.jsx)(f.Z, {
                                 guild: t,
                                 role: n,
                                 selectedSection: N.ZI.PERMISSIONS,
                                 setSelectedSection: a
                             }),
                             (0, i.jsx)('div', {
-                                className: j.noticeContainer,
-                                children: (0, i.jsx)(I.Z, { role: n })
+                                className: E.noticeContainer,
+                                children: (0, i.jsx)(v.Z, { role: n })
                             }),
                             (0, i.jsx)('div', {
-                                className: j.searchContainer,
-                                children: (0, i.jsx)(c.SearchBar, {
-                                    size: c.SearchBar.Sizes.MEDIUM,
+                                className: E.searchContainer,
+                                children: (0, i.jsx)(c.E1j, {
+                                    size: c.E1j.Sizes.MEDIUM,
                                     query: d,
                                     onChange: u,
                                     onClear: () => u(''),
-                                    placeholder: T.intl.string(T.t.OLJAk5),
-                                    'aria-label': T.intl.string(T.t.OLJAk5)
+                                    placeholder: I.intl.string(I.t.OLJAk5),
+                                    'aria-label': I.intl.string(I.t.OLJAk5)
                                 })
                             })
                         ]

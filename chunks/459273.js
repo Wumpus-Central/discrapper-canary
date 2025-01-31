@@ -1,97 +1,89 @@
-r.d(n, {
-    I3: function () {
-        return _;
-    },
-    d9: function () {
-        return g;
-    },
-    oo: function () {
-        return h;
-    },
-    yp: function () {
-        return m;
-    }
-});
-var i = r(47120);
-var a = r(411104);
-var o = r(200651),
-    s = r(192379),
-    l = r(836560);
-var u = r(211266),
-    c = r(585483);
-function d(e, n, r) {
+n.d(t, {
+    I3: () => f,
+    d9: () => p,
+    oo: () => d,
+    yp: () => _
+}),
+    n(47120),
+    n(411104);
+var i = n(200651),
+    r = n(192379),
+    a = n(836560),
+    s = n(211266),
+    o = n(585483);
+function l(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class f {
-    subscribe(e, n) {
-        c.S.subscribe(e, n), this.emitter.on(e, n);
+class u {
+    subscribe(e, t) {
+        o.S.subscribe(e, t), this.emitter.on(e, t);
     }
-    unsubscribe(e, n) {
-        c.S.unsubscribe(e, n), this.emitter.off(e, n);
+    unsubscribe(e, t) {
+        o.S.unsubscribe(e, t), this.emitter.off(e, t);
     }
     bumpDispatchPriority() {
-        for (let e of this.emitter.eventNames()) for (let n of this.emitter.listeners(e)) c.S.resubscribe(e, n);
+        for (let e of this.emitter.eventNames()) for (let t of this.emitter.listeners(e)) o.S.resubscribe(e, t);
     }
     constructor() {
-        d(this, 'emitter', new l.EventEmitter());
+        l(this, 'emitter', new a.EventEmitter());
     }
 }
-class p {
-    subscribe(e, n) {
-        c.S.subscribe(e, n);
+class c {
+    subscribe(e, t) {
+        o.S.subscribe(e, t);
     }
-    unsubscribe(e, n) {
-        c.S.unsubscribe(e, n);
+    unsubscribe(e, t) {
+        o.S.unsubscribe(e, t);
     }
     bumpDispatchPriority() {}
 }
-let h = s.createContext(new p()),
-    _ = s.forwardRef(function (e, n) {
-        let { children: r } = e,
-            i = (0, u.Z)(() => new f());
+let d = r.createContext(new c()),
+    f = r.forwardRef(function (e, t) {
+        let { children: n } = e,
+            a = (0, s.Z)(() => new u());
         return (
-            s.useImperativeHandle(n, () => i, [i]),
-            (0, o.jsx)(h.Provider, {
-                value: i,
-                children: r
+            r.useImperativeHandle(t, () => a, [a]),
+            (0, i.jsx)(d.Provider, {
+                value: a,
+                children: n
             })
         );
     });
-function m(e) {
-    let { event: n, handler: r } = e,
-        i = s.useContext(h),
-        a = s.useRef(r);
-    s.useEffect(() => {
-        a.current = r;
-    }, [r]);
-    let o = null == r;
+function _(e) {
+    let { event: t, handler: n } = e,
+        i = r.useContext(d),
+        a = r.useRef(n);
+    r.useEffect(() => {
+        a.current = n;
+    }, [n]);
+    let s = null == n;
     return (
-        s.useEffect(() => {
-            if (o) return;
+        r.useEffect(() => {
+            if (s) return;
             let e = function () {
-                for (var e, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
-                null === (e = a.current) || void 0 === e || e.call(a, ...r);
+                for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
+                null === (e = a.current) || void 0 === e || e.call(a, ...n);
             };
             return (
-                i.subscribe(n, e),
+                i.subscribe(t, e),
                 () => {
-                    i.unsubscribe(n, e);
+                    i.unsubscribe(t, e);
                 }
             );
-        }, [i, n, o]),
+        }, [i, t, s]),
         null
     );
 }
-function g(e) {
-    return m(e), null;
+function p(e) {
+    return _(e), null;
 }

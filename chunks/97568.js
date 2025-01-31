@@ -1,27 +1,23 @@
-t.d(n, {
-    s: function () {
-        return r;
-    }
-});
-var i = t(200651);
+t.d(i, { s: () => r });
+var n = t(200651);
 t(192379);
 var a = t(481060),
     l = t(621145),
-    o = t(388032),
-    s = t(804711);
+    s = t(388032),
+    o = t(804711);
 let r = (e) => {
-    let { flaggedContent: n } = e;
-    return 0 === n.length
+    let { flaggedContent: i } = e;
+    return 0 === i.length
         ? null
-        : (0, i.jsxs)('div', {
-              className: s.classificationEvidenceContainer,
+        : (0, n.jsxs)('div', {
+              className: o.classificationEvidenceContainer,
               children: [
-                  (0, i.jsx)(a.Text, {
+                  (0, n.jsx)(a.Text, {
                       variant: 'eyebrow',
                       color: 'text-muted',
-                      children: o.intl.string(o.t.s64CMj)
+                      children: s.intl.string(s.t.s64CMj)
                   }),
-                  (0, i.jsx)(l.Z, { flaggedContent: n })
+                  (0, n.jsx)(l.Z, { flaggedContent: i })
               ]
           });
 };

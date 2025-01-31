@@ -1,43 +1,39 @@
-i.d(t, {
-    Z: function () {
-        return o;
-    }
-});
-var n = i(192379),
-    l = i(512722),
-    d = i.n(l),
-    r = i(442837),
-    s = i(430824),
-    a = i(771845),
-    u = i(594174);
+t.d(i, { Z: () => o });
+var n = t(192379),
+    l = t(512722),
+    s = t.n(l),
+    d = t(442837),
+    r = t(430824),
+    u = t(771845),
+    a = t(594174);
 function o(e) {
-    let { isGuildIncluded: t, selectedGuildId: i } = e,
-        l = (0, r.e7)([a.ZP], () => a.ZP.getFlattenedGuildIds()),
-        o = (0, r.e7)([s.Z], () => s.Z.getGuilds()),
-        c = (0, r.e7)([u.default], () => u.default.getCurrentUser());
+    let { isGuildIncluded: i, selectedGuildId: t } = e,
+        l = (0, d.e7)([u.ZP], () => u.ZP.getFlattenedGuildIds()),
+        o = (0, d.e7)([r.Z], () => r.Z.getGuilds()),
+        c = (0, d.e7)([a.default], () => a.default.getCurrentUser());
     return {
         options: n.useMemo(
             () =>
                 null == c
                     ? []
-                    : (null == t
+                    : (null == i
                           ? l
                           : l.filter((e) => {
-                                let i = o[e];
-                                return d()(null != i, 'guild should not be null'), t(i, c);
+                                let t = o[e];
+                                return s()(null != t, 'guild should not be null'), i(t, c);
                             })
                       ).map((e) => {
-                          let t = o[e];
+                          let i = o[e];
                           return (
-                              d()(null != t, 'guild should not be null'),
+                              s()(null != i, 'guild should not be null'),
                               {
-                                  label: t.name,
-                                  value: t.id
+                                  label: i.name,
+                                  value: i.id
                               }
                           );
                       }),
-            [l, o, c, t]
+            [l, o, c, i]
         ),
-        selectedGuild: null == i ? void 0 : o[i]
+        selectedGuild: null == t ? void 0 : o[t]
     };
 }

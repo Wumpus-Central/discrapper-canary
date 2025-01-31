@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-});
+n.d(t, { Z: () => u });
 var r = n(200651);
 n(192379);
 var i = n(388905),
@@ -10,7 +6,7 @@ var i = n(388905),
     l = n(306453),
     a = n(58346),
     c = n(860693);
-let u = {
+let d = {
     [a.HQ.CLASSROOM]: n(320440),
     [a.HQ.LOCAL_COMMUNITIES]: n(526916),
     [a.HQ.CREATORS_HOBBIES]: n(419185),
@@ -22,13 +18,13 @@ let u = {
     [a.HQ.LEAGUE_CLUBS]: n(232454),
     [a.HQ.GITHUB_HACKATHON]: n(123013)
 };
-function d(e) {
+function u(e) {
     let { headerId: t, guildTemplate: n } = e,
-        d = n.code,
-        o = u[d];
+        u = n.code,
+        o = d[u];
     if (null != o) {
         var C;
-        let { header: e, description: u, author: m } = (0, s.Z)(d);
+        let { header: e, description: d, author: m } = (0, s.Z)(u);
         return (0, r.jsxs)('div', {
             children: [
                 (0, r.jsx)('img', {
@@ -41,7 +37,7 @@ function d(e) {
                     id: t,
                     children: e
                 }),
-                (0, r.jsx)(i.DK, { children: u }),
+                (0, r.jsx)(i.DK, { children: d }),
                 n.state === a.Rj.RESOLVED
                     ? (0, r.jsx)(l.D, {
                           className: c.usagePill,

@@ -18,30 +18,27 @@ t.exports = function (t) {
             .flatten()
             .toSet()
             .map(function (r) {
-                var u, s, c, l;
+                var u;
                 return (
-                    (u = t),
-                    (s = e),
-                    (c = r),
-                    (l = []),
+                    (u = []),
                     i(
-                        s
+                        e
                             .map(function (t) {
-                                return t.has(c);
+                                return t.has(r);
                             })
                             .toList(),
                         o,
                         a,
-                        function (t, e) {
-                            var r = u.getText();
-                            l.push({
-                                offset: n.strlen(r.slice(0, t)),
-                                length: n.strlen(r.slice(t, e)),
-                                style: c
+                        function (e, i) {
+                            var o = t.getText();
+                            u.push({
+                                offset: n.strlen(o.slice(0, e)),
+                                length: n.strlen(o.slice(e, i)),
+                                style: r
                             });
                         }
                     ),
-                    l
+                    u
                 );
             });
     return Array.prototype.concat.apply(u, r.toJS());

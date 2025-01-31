@@ -1,38 +1,34 @@
 t.d(n, {
-    c: function () {
-        return c;
-    },
-    v: function () {
-        return a;
-    }
+    c: () => a,
+    v: () => c
 });
 var i = t(200651);
 t(192379);
 var l = t(481060),
     o = t(493683),
-    r = t(475413),
-    s = t(388032);
-function c(e) {
-    let { userId: n, onClose: t, ...c } = e;
-    return (0, i.jsx)(r.tG, {
+    s = t(475413),
+    r = t(388032);
+function a(e) {
+    let { userId: n, onClose: t, ...a } = e;
+    return (0, i.jsx)(s.tG, {
         action: 'SEND_MESSAGE',
-        icon: l.ChatIcon,
-        text: s.intl.string(s.t.zROXER),
+        icon: l.kBi,
+        text: r.intl.string(r.t.zROXER),
         onClick: () => {
             o.Z.openPrivateChannel(n), null == t || t();
         },
-        ...c
+        ...a
     });
 }
-function a(e) {
-    let { userId: n, onClose: t, ...c } = e;
-    return (0, i.jsx)(r.ef, {
+function c(e) {
+    let { userId: n, onClose: t, ...a } = e;
+    return (0, i.jsx)(s.ef, {
         action: 'SEND_MESSAGE',
-        icon: l.ChatIcon,
-        tooltipText: s.intl.string(s.t.zROXER),
+        icon: l.kBi,
+        tooltipText: r.intl.string(r.t.zROXER),
         onClick: () => {
             o.Z.openPrivateChannel(n), null == t || t();
         },
-        ...c
+        ...a
     });
 }

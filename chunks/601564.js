@@ -1,13 +1,12 @@
 n.r(t),
     n.d(t, {
-        getPageSize: function () {
-            return x;
-        }
+        default: () => y,
+        getPageSize: () => b
     }),
     n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(593473),
+    l = n(192379),
+    r = n(593473),
     a = n(512969),
     s = n(442837),
     o = n(930118),
@@ -18,8 +17,8 @@ var i = n(200651),
     m = n(447269),
     p = n(612226),
     g = n(714338),
-    f = n(663993),
-    _ = n(628123),
+    _ = n(663993),
+    f = n(628123),
     E = n(703656),
     I = n(108427),
     C = n(911314),
@@ -27,8 +26,8 @@ var i = n(200651),
     N = n(843445),
     T = n(981631),
     S = n(388032),
-    b = n(32304);
-function A(e, t, n) {
+    Z = n(32304);
+function x(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -41,15 +40,15 @@ function A(e, t, n) {
         e
     );
 }
-let Z = (0, f.Un)({
-    createPromise: () => Promise.all([n.e('1868'), n.e('99838')]).then(n.bind(n, 496691)),
+let A = (0, _.Un)({
+    createPromise: () => Promise.all([n.e('1868'), n.e('87626')]).then(n.bind(n, 496691)),
     webpackId: 496691
 });
-function x(e) {
+function b(e) {
     return e < N.x ? N.b.SMALL : N.b.LARGE;
 }
 s.ZP.initialize();
-class L extends r.PureComponent {
+class L extends l.PureComponent {
     componentDidMount() {
         (0, o.Y)(this.props.location),
             (this.stopListeningToHistory = (0, E.s1)().listen((e) => {
@@ -73,45 +72,45 @@ class L extends r.PureComponent {
         let { isAuthenticated: e, location: t } = this.props,
             n = e
                 ? (0, i.jsx)('div', {
-                      className: b.applicationStore,
+                      className: Z.applicationStore,
                       children: this.renderContent()
                   })
-                : (0, i.jsx)(Z, {
-                      className: b.applicationStore,
+                : (0, i.jsx)(A, {
+                      className: Z.applicationStore,
                       location: t,
                       render: this.renderContent
                   });
-        return (0, i.jsx)(_.Z, {
+        return (0, i.jsx)(f.Z, {
             renderCustomMessage: this.renderCustomErrorMessage,
             children: n
         });
     }
     constructor(...e) {
         super(...e),
-            A(this, 'stopListeningToHistory', void 0),
-            A(this, 'renderStoreListing', (e) => {
+            x(this, 'stopListeningToHistory', void 0),
+            x(this, 'renderStoreListing', (e) => {
                 let {
                         match: {
-                            params: { skuId: t, applicationId: n, slug: r }
+                            params: { skuId: t, applicationId: n, slug: l }
                         },
                         location: a
                     } = e,
                     { width: s } = this.props,
-                    o = (0, l.parse)(a.search);
+                    o = (0, r.parse)(a.search);
                 return (0, i.jsx)(d.Z, {
                     page: T.ZY5.STORE_LISTING,
                     root: !0,
                     children: (0, i.jsx)(v.Z, {
                         skuId: t,
                         applicationId: n,
-                        slug: r,
+                        slug: l,
                         location: a,
                         storeListingId: o.store_listing_id,
-                        pageSize: x(s)
+                        pageSize: b(s)
                     })
                 });
             }),
-            A(this, 'renderContent', () =>
+            x(this, 'renderContent', () =>
                 (0, i.jsxs)(a.rs, {
                     children: [
                         (0, i.jsx)(a.AW, {
@@ -146,4 +145,4 @@ class L extends r.PureComponent {
             );
     }
 }
-t.default = (0, a.EN)((0, u.Z)((0, h.Z)(L)));
+let y = (0, a.EN)((0, u.Z)((0, h.Z)(L)));

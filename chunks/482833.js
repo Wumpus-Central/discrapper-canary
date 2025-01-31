@@ -1,9 +1,5 @@
-r.d(n, {
-    c: function () {
-        return i;
-    }
-});
-let i = (0, r(818083).B)({
+n.d(t, { c: () => i });
+let i = (0, n(818083).B)({
     kind: 'guild',
     id: '2023-04_server_products',
     label: 'Server Products',

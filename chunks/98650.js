@@ -1,18 +1,14 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(237617),
-    a = r(493773);
-function o(e) {
-    let n = (0, i.Z)(e);
-    (0, a.Z)(() => {
+n.d(t, { Z: () => a });
+var i = n(237617),
+    r = n(493773);
+function a(e) {
+    let t = (0, i.Z)(e);
+    (0, r.Z)(() => {
         function e() {
             var i;
-            null === (i = n.current) || void 0 === i || i.call(n), (r = requestAnimationFrame(e));
+            null === (i = t.current) || void 0 === i || i.call(t), (n = requestAnimationFrame(e));
         }
-        let r = requestAnimationFrame(e);
-        return () => cancelAnimationFrame(r);
+        let n = requestAnimationFrame(e);
+        return () => cancelAnimationFrame(n);
     });
 }

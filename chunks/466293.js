@@ -1,2 +1,2 @@
-var a = r(573401).Symbol;
-e.exports = a;
+var r = a(573401).Symbol;
+t.exports = r;

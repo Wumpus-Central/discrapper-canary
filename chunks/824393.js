@@ -1,295 +1,287 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return E;
-        }
-    }),
-    n(47120);
-var r,
-    a,
-    o = n(200651),
-    s = n(192379),
-    C = n(120356),
-    i = n.n(C),
-    d = n(119617),
-    l = n(442837),
-    c = n(481060),
-    u = n(230711),
-    m = n(211266),
-    h = n(607070),
-    x = n(975298),
-    j = n(530618),
-    g = n(436774),
-    p = n(688465),
-    H = n(98278),
-    f = n(741245),
-    M = n(931331),
-    N = n(55935),
-    v = n(70956),
-    _ = n(63063),
-    L = n(74538),
-    Z = n(272008),
-    R = n(497505),
-    B = n(981631),
-    k = n(675654),
-    S = n(474936),
-    V = n(388032),
-    T = n(83266),
-    F = n(499018),
-    I = n(946790);
+r.d(t, { default: () => E }), r(47120);
+var n = r(200651),
+    a = r(192379),
+    o = r(120356),
+    s = r.n(o),
+    C = r(119617),
+    i = r(442837),
+    l = r(481060),
+    c = r(230711),
+    d = r(211266),
+    u = r(607070),
+    m = r(975298),
+    x = r(530618),
+    h = r(436774),
+    _ = r(688465),
+    j = r(98278),
+    g = r(741245),
+    H = r(931331),
+    p = r(55935),
+    N = r(70956),
+    v = r(63063),
+    L = r(74538),
+    f = r(272008),
+    M = r(497505),
+    Z = r(981631),
+    R = r(675654),
+    k = r(474936),
+    B = r(388032),
+    V = r(83266),
+    T = r(499018),
+    S = r(946790);
 function A(e) {
     var t;
-    let { transitionState: n, onClose: r, quest: a, location: C } = e,
-        m = s.useRef(null),
-        [x, g] = s.useState(null),
-        p = s.useRef(new d.qA()),
-        f = (0, l.e7)([h.Z], () => h.Z.useReducedMotion),
-        M = (null === (t = a.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
-        [N, v] = s.useState({ state: 'loading' }),
-        _ = s.useCallback(() => {
-            u.Z.open(B.oAB.SUBSCRIPTIONS, null, {}), r();
-        }, [r]),
-        L = s.useCallback(() => {
-            (0, H.$)(r);
-        }, [r]);
-    s.useEffect(() => {
-        !M &&
-            (0, Z.QB)(a.id, R.y$.CROSS_PLATFORM, C)
+    let { transitionState: r, onClose: o, quest: d, location: m } = e,
+        h = a.useRef(null),
+        [_, g] = a.useState(null),
+        H = a.useRef(new C.qA()),
+        p = (0, i.e7)([u.Z], () => u.Z.useReducedMotion),
+        N = (null === (t = d.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
+        [v, L] = a.useState({ state: 'loading' }),
+        k = a.useCallback(() => {
+            c.Z.open(Z.oAB.SUBSCRIPTIONS, null, {}), o();
+        }, [o]),
+        B = a.useCallback(() => {
+            (0, j.$)(o);
+        }, [o]);
+    a.useEffect(() => {
+        N ||
+            (0, f.QB)(d.id, M.y$.CROSS_PLATFORM, m)
                 .then((e) => {
                     if ((null == e ? void 0 : e.claimedAt) != null) {
-                        v({
+                        L({
                             state: 'claimed',
                             entitlements: e
                         });
                         return;
                     }
-                    v({
+                    L({
                         state: 'error',
                         errorReason: 0
                     });
                 })
                 .catch(() => {
-                    v({
+                    L({
                         state: 'error',
                         errorReason: 0
                     });
                 });
-    }, [a, C, M]);
-    let S = 'loading' === N.state,
-        V = !f && !M && 'claimed' === N.state,
-        F = 'claimed' === N.state && null != N.entitlements && N.entitlements.items.some((e) => e.consumed);
-    return (0, o.jsxs)(o.Fragment, {
+    }, [d, m, N]);
+    let T = 'loading' === v.state,
+        S = !p && !N && 'claimed' === v.state,
+        A = 'claimed' === v.state && null != v.entitlements && v.entitlements.items.some((e) => e.consumed);
+    return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, o.jsx)(d.O_, {
+            (0, n.jsx)(C.O_, {
                 ref: g,
-                className: T.confettiCanvas,
-                environment: p.current
+                className: V.confettiCanvas,
+                environment: H.current
             }),
-            (0, o.jsx)('div', {
-                ref: m,
-                children: (0, o.jsx)(c.ModalRoot, {
-                    transitionState: n,
-                    size: c.ModalSize.DYNAMIC,
-                    className: i()(T.rootContainer, { [T.rootContainerLoading]: S }),
+            (0, n.jsx)('div', {
+                ref: h,
+                children: (0, n.jsx)(l.Y0X, {
+                    transitionState: r,
+                    size: l.CgR.DYNAMIC,
+                    className: s()(V.rootContainer, { [V.rootContainerLoading]: T }),
                     hideShadow: !0,
-                    children: S
-                        ? (0, o.jsx)(c.Spinner, { type: c.Spinner.Type.SPINNING_CIRCLE })
-                        : 'error' === N.state
-                          ? (0, o.jsx)(b, {
-                                errorReason: N.errorReason,
-                                onClose: r
+                    children: T
+                        ? (0, n.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE })
+                        : 'error' === v.state
+                          ? (0, n.jsx)(I, {
+                                errorReason: v.errorReason,
+                                onClose: o
                             })
-                          : F
-                            ? (0, o.jsx)(U, {
-                                  entitlements: N.entitlements,
-                                  onClose: r,
-                                  onLearnMore: L
+                          : A
+                            ? (0, n.jsx)(b, {
+                                  entitlements: v.entitlements,
+                                  onClose: o,
+                                  onLearnMore: B
                               })
-                            : (0, o.jsx)(y, {
-                                  entitlements: N.entitlements,
-                                  onClose: r,
-                                  onLearnMore: _
+                            : (0, n.jsx)(z, {
+                                  entitlements: v.entitlements,
+                                  onClose: o,
+                                  onLearnMore: k
                               })
                 })
             }),
-            V &&
-                (0, o.jsx)(j.Z, {
-                    confettiTarget: m.current,
-                    confettiCanvas: x,
-                    sprites: k.CA,
-                    colors: k.Br
+            S &&
+                (0, n.jsx)(x.Z, {
+                    confettiTarget: h.current,
+                    confettiCanvas: _,
+                    sprites: R.CA,
+                    colors: R.Br
                 })
         ]
     });
 }
-function b(e) {
+function I(e) {
     let { onClose: t } = e,
-        n = V.intl.string(V.t.PbaUtr);
-    return (0, o.jsxs)(o.Fragment, {
+        r = B.intl.string(B.t.PbaUtr);
+    return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, o.jsxs)(c.ModalHeader, {
+            (0, n.jsxs)(l.xBx, {
                 separator: !1,
-                className: T.errorHeader,
+                className: V.errorHeader,
                 children: [
-                    (0, o.jsx)(c.Heading, {
-                        className: T.errorTitle,
+                    (0, n.jsx)(l.X6q, {
+                        className: V.errorTitle,
                         variant: 'heading-xl/medium',
-                        children: V.intl.string(V.t['UleS9/'])
+                        children: B.intl.string(B.t['UleS9/'])
                     }),
-                    (0, o.jsx)(c.ModalCloseButton, {
+                    (0, n.jsx)(l.olH, {
                         onClick: t,
-                        className: T.errorModalCloseButton
+                        className: V.errorModalCloseButton
                     })
                 ]
             }),
-            (0, o.jsx)(c.ModalContent, {
-                className: T.errorContent,
-                children: (0, o.jsx)(c.Text, {
+            (0, n.jsx)(l.hzk, {
+                className: V.errorContent,
+                children: (0, n.jsx)(l.Text, {
                     variant: 'text-md/normal',
-                    children: n
+                    children: r
                 })
             }),
-            (0, o.jsx)(c.ModalFooter, {
-                className: T.errorModalFooter,
-                children: (0, o.jsx)(c.Button, {
-                    color: c.Button.Colors.BRAND,
-                    size: c.Button.Sizes.MEDIUM,
+            (0, n.jsx)(l.mzw, {
+                className: V.errorModalFooter,
+                children: (0, n.jsx)(l.zxk, {
+                    color: l.zxk.Colors.BRAND,
+                    size: l.zxk.Sizes.MEDIUM,
                     onClick: t,
-                    children: V.intl.string(V.t.cpT0Cg)
+                    children: B.intl.string(B.t.cpT0Cg)
                 })
             })
         ]
     });
 }
-function O(e) {
+function F(e) {
     let t = (0, L.xG)(e.map((e) => e.skuId)),
-        n = {
-            days: V.t.fYmir6,
-            hours: V.t['C3RO+v'],
-            minutes: V.t.r77oHR
+        r = {
+            days: B.t.fYmir6,
+            hours: B.t['C3RO+v'],
+            minutes: B.t.r77oHR
         },
-        r = (0, N.TD)(0, t * v.Z.Millis.HOUR);
-    return (0, N.QX)(r, n);
+        n = (0, p.TD)(0, t * N.Z.Millis.HOUR);
+    return (0, p.QX)(n, r);
 }
-function U(e) {
+function b(e) {
     var t;
-    let { entitlements: n, onClose: r, onLearnMore: a } = e,
-        { theme: s } = (0, c.useThemeContext)(),
-        C = O(null !== (t = null == n ? void 0 : n.items) && void 0 !== t ? t : []),
-        i = (0, x.Z)({ forceFetch: !0 }),
-        d = (0, N.vc)(i.endsAt, 'L');
-    return i.fractionalState === S.a$.NONE
-        ? (0, o.jsx)(c.Spinner, { type: c.Spinner.Type.SPINNING_CIRCLE })
-        : (0, o.jsxs)(o.Fragment, {
+    let { entitlements: r, onClose: a, onLearnMore: o } = e,
+        { theme: s } = (0, l.TCT)(),
+        C = F(null !== (t = null == r ? void 0 : r.items) && void 0 !== t ? t : []),
+        i = (0, m.Z)({ forceFetch: !0 }),
+        c = (0, p.vc)(i.endsAt, 'L');
+    return i.fractionalState === k.a$.NONE
+        ? (0, n.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE })
+        : (0, n.jsxs)(n.Fragment, {
               children: [
-                  (0, o.jsxs)('div', {
-                      className: T.nitroHeaderContainer,
+                  (0, n.jsxs)('div', {
+                      className: V.nitroHeaderContainer,
                       children: [
-                          (0, o.jsx)('div', { className: T.nitroHeaderClouds }),
-                          (0, o.jsx)(M.Z, { className: T.nitroHeaderWordmark }),
-                          (0, o.jsx)(c.Image, {
-                              src: I,
+                          (0, n.jsx)('div', { className: V.nitroHeaderClouds }),
+                          (0, n.jsx)(H.Z, { className: V.nitroHeaderWordmark }),
+                          (0, n.jsx)(l.Eep, {
+                              src: S,
                               width: 110,
                               height: 82,
                               zoomable: !1,
-                              className: T.nitroHeaderWumpus
+                              className: V.nitroHeaderWumpus
                           }),
-                          (0, o.jsx)(c.ModalCloseButton, {
-                              className: T.nitroHeaderClose,
-                              onClick: r
+                          (0, n.jsx)(l.olH, {
+                              className: V.nitroHeaderClose,
+                              onClick: a
                           })
                       ]
                   }),
-                  (0, o.jsxs)(c.ModalFooter, {
-                      className: T.footerContainer,
+                  (0, n.jsxs)(l.mzw, {
+                      className: V.footerContainer,
                       separator: !1,
                       children: [
-                          (0, o.jsx)(p.Z, { className: T.beta }),
-                          (0, o.jsx)(f.C, {
-                              className: T.nitroHeading,
-                              premiumType: S.p9.TIER_2,
-                              type: f.C.Types.PREMIUM_ACTIVATED,
+                          (0, n.jsx)(_.Z, { className: V.beta }),
+                          (0, n.jsx)(g.C, {
+                              className: V.nitroHeading,
+                              premiumType: k.p9.TIER_2,
+                              type: g.C.Types.PREMIUM_ACTIVATED,
                               theme: s
                           }),
-                          (0, o.jsx)(c.Text, {
+                          (0, n.jsx)(l.Text, {
                               variant: 'text-sm/normal',
-                              className: T.text,
-                              children: V.intl.format(V.t['jzW5/P'], {
-                                  helpCenterLink: _.Z.getArticleURL(B.BhN.NITRO),
+                              className: V.text,
+                              children: B.intl.format(B.t['jzW5/P'], {
+                                  helpCenterLink: v.Z.getArticleURL(Z.BhN.NITRO),
                                   duration: C,
-                                  date: d
+                                  date: c
                               })
                           }),
-                          (0, o.jsx)(c.Button, {
-                              className: T.cta,
-                              onClick: a,
-                              children: V.intl.string(V.t['eQX+go'])
+                          (0, n.jsx)(l.zxk, {
+                              className: V.cta,
+                              onClick: o,
+                              children: B.intl.string(B.t['eQX+go'])
                           })
                       ]
                   })
               ]
           });
 }
-function y(e) {
+function z(e) {
     var t;
-    let { entitlements: n, onClose: r, onLearnMore: a } = e,
-        s = O(null !== (t = null == n ? void 0 : n.items) && void 0 !== t ? t : []);
-    return (0, o.jsx)(c.ThemeProvider, {
-        theme: B.BRd.DARK,
+    let { entitlements: r, onClose: a, onLearnMore: o } = e,
+        C = F(null !== (t = null == r ? void 0 : r.items) && void 0 !== t ? t : []);
+    return (0, n.jsx)(l.f6W, {
+        theme: Z.BRd.DARK,
         children: (e) =>
-            (0, o.jsxs)('div', {
-                className: i()(T.claimedRootContainer, e),
+            (0, n.jsxs)('div', {
+                className: s()(V.claimedRootContainer, e),
                 children: [
-                    (0, o.jsxs)('div', {
-                        className: T.headerContainer,
+                    (0, n.jsxs)('div', {
+                        className: V.headerContainer,
                         children: [
-                            (0, o.jsx)('img', {
-                                className: T.headerBackground,
-                                src: F,
-                                alt: V.intl.string(V.t['8SsCa2'])
+                            (0, n.jsx)('img', {
+                                className: V.headerBackground,
+                                src: T,
+                                alt: B.intl.string(B.t['8SsCa2'])
                             }),
-                            (0, o.jsx)(p.Z, { className: T.beta }),
-                            (0, o.jsxs)('div', {
-                                className: T.headerForeground,
+                            (0, n.jsx)(_.Z, { className: V.beta }),
+                            (0, n.jsxs)('div', {
+                                className: V.headerForeground,
                                 children: [
-                                    (0, o.jsx)('div', {
-                                        className: T.iconBackgroundFractional,
-                                        children: (0, o.jsx)(c.NitroWheelIcon, {
+                                    (0, n.jsx)('div', {
+                                        className: V.iconBackgroundFractional,
+                                        children: (0, n.jsx)(l.SrA, {
                                             size: 'lg',
-                                            className: T.iconFractional,
-                                            color: g.JX.PREMIUM_GUILD_BADGE_V2_BACKGROUND
+                                            className: V.iconFractional,
+                                            color: h.JX.PREMIUM_GUILD_BADGE_V2_BACKGROUND
                                         })
                                     }),
-                                    (0, o.jsx)(c.ModalCloseButton, {
-                                        className: T.close,
+                                    (0, n.jsx)(l.olH, {
+                                        className: V.close,
                                         withCircleBackground: !0,
-                                        onClick: r
+                                        onClick: a
                                     })
                                 ]
                             })
                         ]
                     }),
-                    (0, o.jsxs)(c.ModalFooter, {
-                        className: i()(T.footerContainer, T.gradient),
+                    (0, n.jsxs)(l.mzw, {
+                        className: s()(V.footerContainer, V.gradient),
                         separator: !1,
                         children: [
-                            (0, o.jsx)(c.Heading, {
+                            (0, n.jsx)(l.X6q, {
                                 variant: 'heading-lg/bold',
-                                className: T.heading,
-                                children: V.intl.string(V.t.dOQ9RU)
+                                className: V.heading,
+                                children: B.intl.string(B.t.dOQ9RU)
                             }),
-                            (0, o.jsx)(c.Text, {
+                            (0, n.jsx)(l.Text, {
                                 variant: 'text-sm/normal',
-                                className: T.text,
-                                children: V.intl.format(V.t.KnH4jo, {
-                                    helpCenterLink: _.Z.getArticleURL(B.BhN.NITRO),
-                                    duration: s
+                                className: V.text,
+                                children: B.intl.format(B.t.KnH4jo, {
+                                    helpCenterLink: v.Z.getArticleURL(Z.BhN.NITRO),
+                                    duration: C
                                 })
                             }),
-                            (0, o.jsx)(c.Button, {
-                                className: T.cta2,
-                                onClick: a,
-                                children: V.intl.string(V.t.LnsQGR)
+                            (0, n.jsx)(l.zxk, {
+                                className: V.cta2,
+                                onClick: o,
+                                children: B.intl.string(B.t.LnsQGR)
                             })
                         ]
                     })
@@ -298,21 +290,20 @@ function y(e) {
     });
 }
 function E(e) {
-    let { quest: t, location: n, onClose: r, transitionState: a } = e,
-        C = (0, m.Z)(() => {
+    let { quest: t, location: r, onClose: o, transitionState: s } = e,
+        C = (0, d.Z)(() => {
             var e;
             return (null === (e = t.userStatus) || void 0 === e ? void 0 : e.claimedAt) != null;
         });
-    return (s.useEffect(() => {
-        C && r();
-    }, [r, C]),
+    return (a.useEffect(() => {
+        C && o();
+    }, [o, C]),
     C)
         ? null
-        : (0, o.jsx)(A, {
-              onClose: r,
-              transitionState: a,
+        : (0, n.jsx)(A, {
+              onClose: o,
+              transitionState: s,
               quest: t,
-              location: n
+              location: r
           });
 }
-(a = r || (r = {}))[(a.Other = 0)] = 'Other';

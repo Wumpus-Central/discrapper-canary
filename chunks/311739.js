@@ -1,56 +1,52 @@
-r.d(n, {
-    Z: function () {
-        return g;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(481060),
-    l = r(782568),
-    u = r(583434),
-    c = r(124072),
-    d = r(692629),
-    f = r(626135),
-    p = r(981631),
-    h = r(388032),
-    _ = r(45348);
-function m(e) {
-    var n;
-    let { shopLink: r, skuId: a, onClick: l } = e,
-        { product: f } = (0, u.T)(a);
+n.d(t, { Z: () => m });
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(481060),
+    o = n(782568),
+    l = n(583434),
+    u = n(124072),
+    c = n(692629),
+    d = n(626135),
+    f = n(981631),
+    _ = n(388032),
+    p = n(45348);
+function h(e) {
+    var t;
+    let { shopLink: n, skuId: r, onClick: o } = e,
+        { product: d } = (0, l.T)(r);
     return (0, i.jsxs)(
-        c.Z,
+        u.Z,
         {
             role: 'link',
-            href: r,
-            onClick: l,
+            href: n,
+            onClick: o,
             children: [
-                (0, i.jsx)(s.ShopIcon, {
+                (0, i.jsx)(s.EOn, {
                     size: 'sm',
-                    className: o()(_.icon),
-                    color: s.tokens.colors.MENTION_FOREGROUND
+                    className: a()(p.icon),
+                    color: s.TVs.colors.MENTION_FOREGROUND
                 }),
-                null !== (n = null == f ? void 0 : f.name) && void 0 !== n ? n : h.intl.string(h.t['Ij+2ra']),
-                (0, i.jsx)(d.Z, {})
+                null !== (t = null == d ? void 0 : d.name) && void 0 !== t ? t : _.intl.string(_.t['Ij+2ra']),
+                (0, i.jsx)(c.Z, {})
             ]
         },
-        a
+        r
     );
 }
-function g(e) {
+function m(e) {
     return {
-        react(n, r, a) {
-            let o = a.noStyleAndInteraction
+        react(t, n, r) {
+            let a = r.noStyleAndInteraction
                 ? void 0
-                : (r) => {
-                      e.shouldStopPropagation && (null == r || r.stopPropagation()), f.default.track(p.rMx.SHOP_LINK_MENTION_CLICKED, { sku_id: n.skuId }), (0, l.Z)(n.shopLink);
+                : (n) => {
+                      e.shouldStopPropagation && (null == n || n.stopPropagation()), d.default.track(f.rMx.SHOP_LINK_MENTION_CLICKED, { sku_id: t.skuId }), (0, o.Z)(t.shopLink);
                   };
-            return (0, i.jsx)(m, {
-                shopLink: n.shopLink,
-                skuId: n.skuId,
-                onClick: o
+            return (0, i.jsx)(h, {
+                shopLink: t.shopLink,
+                skuId: t.skuId,
+                onClick: a
             });
         }
     };

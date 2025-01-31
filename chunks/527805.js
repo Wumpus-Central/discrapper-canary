@@ -1,74 +1,67 @@
-r.d(n, {
-    Fw: function () {
-        return i;
-    },
-    ZP: function () {
-        return _;
-    },
-    s5: function () {
-        return m;
-    }
+n.d(t, {
+    Fw: () => _,
+    ZP: () => p,
+    s5: () => h
 });
-var i,
-    a = r(442837),
-    o = r(592125),
-    s = r(430824),
-    l = r(496675),
-    u = r(594174),
-    c = r(979651),
-    d = r(934415),
-    f = r(782769),
-    p = r(983695),
-    h = r(981631);
-function _(e) {
-    var n, r, i;
-    let { userId: a, activity: o, application: s, channelId: l, currentUser: u, isActivitiesEnabledForCurrentPlatform: c, ChannelStore: f, VoiceStateStore: _, PermissionStore: m, GuildStore: g } = e;
-    if (null == a) return 8;
-    if ((null == u ? void 0 : u.nsfwAllowed) === !1 && (null == s ? void 0 : null === (n = s.embeddedActivityConfig) || void 0 === n ? void 0 : n.requires_age_gate) === !0) return 7;
+var i = n(442837),
+    r = n(592125),
+    a = n(430824),
+    s = n(496675),
+    o = n(594174),
+    l = n(979651),
+    u = n(934415),
+    c = n(782769),
+    d = n(983695),
+    f = n(981631),
+    _ = (function (e) {
+        return (e[(e.CAN_JOIN = 0)] = 'CAN_JOIN'), (e[(e.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION = 1)] = 'NO_USE_EMBEDDED_ACTIVITIES_PERMISSION'), (e[(e.NO_CHANNEL_CONNECT_PERMISSION = 2)] = 'NO_CHANNEL_CONNECT_PERMISSION'), (e[(e.CHANNEL_FULL = 3)] = 'CHANNEL_FULL'), (e[(e.NO_CHANNEL = 4)] = 'NO_CHANNEL'), (e[(e.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS = 5)] = 'ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS'), (e[(e.ACTIVITY_NOT_SUPPORTED_ON_OS = 6)] = 'ACTIVITY_NOT_SUPPORTED_ON_OS'), (e[(e.ACTIVITY_AGE_GATED = 7)] = 'ACTIVITY_AGE_GATED'), (e[(e.NO_USER = 8)] = 'NO_USER'), (e[(e.IS_AFK_CHANNEL = 9)] = 'IS_AFK_CHANNEL'), (e[(e.NO_GUILD = 10)] = 'NO_GUILD'), e;
+    })({});
+function p(e) {
+    var t, n, i;
+    let { userId: r, activity: a, application: s, channelId: o, currentUser: l, isActivitiesEnabledForCurrentPlatform: c, ChannelStore: _, VoiceStateStore: p, PermissionStore: h, GuildStore: m } = e;
+    if (null == r) return 8;
+    if ((null == l ? void 0 : l.nsfwAllowed) === !1 && (null == s ? void 0 : null === (t = s.embeddedActivityConfig) || void 0 === t ? void 0 : t.requires_age_gate) === !0) return 7;
     if (!c) return 5;
-    if (!(0, p.Z)(null == s ? void 0 : null === (r = s.embeddedActivityConfig) || void 0 === r ? void 0 : r.supported_platforms)) return 6;
-    let E = null != l ? l : null === (i = _.getVoiceStateForSession(a, null == o ? void 0 : o.session_id)) || void 0 === i ? void 0 : i.channelId;
+    if (!(0, d.Z)(null == s ? void 0 : null === (n = s.embeddedActivityConfig) || void 0 === n ? void 0 : n.supported_platforms)) return 6;
+    let g = null != o ? o : null === (i = p.getVoiceStateForSession(r, null == a ? void 0 : a.session_id)) || void 0 === i ? void 0 : i.channelId;
+    if (null == g) return 4;
+    let E = _.getChannel(o);
     if (null == E) return 4;
-    let v = f.getChannel(l);
-    if (null == v) return 4;
-    if (!v.isPrivate()) {
-        let e = v.getGuildId();
+    if (!E.isPrivate()) {
+        let e = E.getGuildId();
         if (null == e) return 10;
-        let n = g.getGuild(e);
-        if ((null == n ? void 0 : n.afkChannelId) === v.id) return 9;
-        let r = _.getCurrentClientVoiceChannelId(v.getGuildId()) === E,
-            i = (0, d.rY)(v, _, g),
-            a = m.can(h.Plq.CONNECT, v);
-        if (!m.can(h.Plq.USE_EMBEDDED_ACTIVITIES, v)) return 1;
-        if (v.isVocal() && !r) {
+        let t = m.getGuild(e);
+        if ((null == t ? void 0 : t.afkChannelId) === E.id) return 9;
+        let n = p.getCurrentClientVoiceChannelId(E.getGuildId()) === g,
+            i = (0, u.rY)(E, p, m),
+            r = h.can(f.Plq.CONNECT, E);
+        if (!h.can(f.Plq.USE_EMBEDDED_ACTIVITIES, E)) return 1;
+        if (E.isVocal() && !n) {
             if (i) return 3;
-            if (!a) return 2;
+            if (!r) return 2;
         }
     }
     return 0;
 }
-function m(e) {
-    let { userId: n, activity: r, channelId: i, application: d } = e,
-        p = (0, f.z)(null != i ? i : void 0),
-        h = (0, a.e7)([u.default], () => u.default.getCurrentUser());
-    return (0, a.e7)(
-        [o.Z, c.Z, l.Z, s.Z],
+function h(e) {
+    let { userId: t, activity: n, channelId: u, application: d } = e,
+        f = (0, c.z)(null != u ? u : void 0),
+        _ = (0, i.e7)([o.default], () => o.default.getCurrentUser());
+    return (0, i.e7)(
+        [r.Z, l.Z, s.Z, a.Z],
         () =>
-            _({
-                userId: n,
-                activity: r,
+            p({
+                userId: t,
+                activity: n,
                 application: d,
-                channelId: i,
-                currentUser: h,
-                isActivitiesEnabledForCurrentPlatform: p,
-                ChannelStore: o.Z,
-                VoiceStateStore: c.Z,
-                PermissionStore: l.Z,
-                GuildStore: s.Z
+                channelId: u,
+                currentUser: _,
+                isActivitiesEnabledForCurrentPlatform: f,
+                ChannelStore: r.Z,
+                VoiceStateStore: l.Z,
+                PermissionStore: s.Z,
+                GuildStore: a.Z
             }),
-        [r, d, i, h, p, n]
+        [n, d, u, _, f, t]
     );
 }
-!(function (e) {
-    (e[(e.CAN_JOIN = 0)] = 'CAN_JOIN'), (e[(e.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION = 1)] = 'NO_USE_EMBEDDED_ACTIVITIES_PERMISSION'), (e[(e.NO_CHANNEL_CONNECT_PERMISSION = 2)] = 'NO_CHANNEL_CONNECT_PERMISSION'), (e[(e.CHANNEL_FULL = 3)] = 'CHANNEL_FULL'), (e[(e.NO_CHANNEL = 4)] = 'NO_CHANNEL'), (e[(e.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS = 5)] = 'ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS'), (e[(e.ACTIVITY_NOT_SUPPORTED_ON_OS = 6)] = 'ACTIVITY_NOT_SUPPORTED_ON_OS'), (e[(e.ACTIVITY_AGE_GATED = 7)] = 'ACTIVITY_AGE_GATED'), (e[(e.NO_USER = 8)] = 'NO_USER'), (e[(e.IS_AFK_CHANNEL = 9)] = 'IS_AFK_CHANNEL'), (e[(e.NO_GUILD = 10)] = 'NO_GUILD');
-})(i || (i = {}));

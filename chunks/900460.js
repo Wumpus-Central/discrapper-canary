@@ -1,13 +1,14 @@
-var i = r(200651);
-r(192379);
-var a = r(481060);
-n.Z = {
+n.d(t, { Z: () => a });
+var i = n(200651);
+n(192379);
+var r = n(481060);
+let a = {
     show(e) {
-        (0, a.openModalLazy)(async () => {
-            let { default: n } = await r.e('74194').then(r.bind(r, 269817));
-            return (r) =>
-                (0, i.jsx)(n, {
-                    ...r,
+        (0, r.ZDy)(async () => {
+            let { default: t } = await n.e('74194').then(n.bind(n, 269817));
+            return (n) =>
+                (0, i.jsx)(t, {
+                    ...n,
                     url: e
                 });
         });

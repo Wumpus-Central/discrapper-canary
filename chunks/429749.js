@@ -1,9 +1,5 @@
-r.d(n, {
-    v: function () {
-        return i;
-    }
-});
-let i = (e, n) => ({
+n.d(t, { v: () => i });
+let i = (e, t) => ({
     event: e,
-    check: n
+    check: t
 });

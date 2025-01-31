@@ -1,45 +1,43 @@
 let i = Symbol('SemVer ANY');
-class a {
+class r {
     static get ANY() {
         return i;
     }
-    constructor(e, n) {
-        if (((n = o(n)), e instanceof a)) {
-            if (!!n.loose === e.loose) return e;
+    constructor(e, t) {
+        if (((t = a(t)), e instanceof r)) {
+            if (!!t.loose === e.loose) return e;
             e = e.value;
         }
-        c('comparator', (e = e.trim().split(/\s+/).join(' ')), n), (this.options = n), (this.loose = !!n.loose), this.parse(e), this.semver === i ? (this.value = '') : (this.value = this.operator + this.semver.version), c('comp', this);
+        u('comparator', (e = e.trim().split(/\s+/).join(' ')), t), (this.options = t), (this.loose = !!t.loose), this.parse(e), this.semver === i ? (this.value = '') : (this.value = this.operator + this.semver.version), u('comp', this);
     }
     parse(e) {
-        let n = this.options.loose ? s[l.COMPARATORLOOSE] : s[l.COMPARATOR],
-            r = e.match(n);
-        if (!r) throw TypeError(`Invalid comparator: ${e}`);
-        (this.operator = void 0 !== r[1] ? r[1] : ''), '=' === this.operator && (this.operator = ''), r[2] ? (this.semver = new d(r[2], this.options.loose)) : (this.semver = i);
+        let t = this.options.loose ? s[o.COMPARATORLOOSE] : s[o.COMPARATOR],
+            n = e.match(t);
+        if (!n) throw TypeError(`Invalid comparator: ${e}`);
+        (this.operator = void 0 !== n[1] ? n[1] : ''), '=' === this.operator && (this.operator = ''), n[2] ? (this.semver = new c(n[2], this.options.loose)) : (this.semver = i);
     }
     toString() {
         return this.value;
     }
     test(e) {
-        if ((c('Comparator.test', e, this.options.loose), this.semver === i || e === i)) return !0;
+        if ((u('Comparator.test', e, this.options.loose), this.semver === i || e === i)) return !0;
         if ('string' == typeof e)
             try {
-                e = new d(e, this.options);
+                e = new c(e, this.options);
             } catch (e) {
                 return !1;
             }
-        return u(e, this.operator, this.semver, this.options);
+        return l(e, this.operator, this.semver, this.options);
     }
-    intersects(e, n) {
-        if (!(e instanceof a)) throw TypeError('a Comparator is required');
-        if ('' === this.operator) return '' === this.value || new f(e.value, n).test(this.value);
-        if ('' === e.operator) return '' === e.value || new f(this.value, n).test(e.semver);
-        return !(((n = o(n)).includePrerelease && ('<0.0.0-0' === this.value || '<0.0.0-0' === e.value)) || (!n.includePrerelease && (this.value.startsWith('<0.0.0') || e.value.startsWith('<0.0.0')))) && (!!((this.operator.startsWith('>') && e.operator.startsWith('>')) || (this.operator.startsWith('<') && e.operator.startsWith('<')) || (this.semver.version === e.semver.version && this.operator.includes('=') && e.operator.includes('=')) || (u(this.semver, '<', e.semver, n) && this.operator.startsWith('>') && e.operator.startsWith('<')) || (u(this.semver, '>', e.semver, n) && this.operator.startsWith('<') && e.operator.startsWith('>'))) || !1);
+    intersects(e, t) {
+        if (!(e instanceof r)) throw TypeError('a Comparator is required');
+        return '' === this.operator ? '' === this.value || new d(e.value, t).test(this.value) : '' === e.operator ? '' === e.value || new d(this.value, t).test(e.semver) : !(((t = a(t)).includePrerelease && ('<0.0.0-0' === this.value || '<0.0.0-0' === e.value)) || (!t.includePrerelease && (this.value.startsWith('<0.0.0') || e.value.startsWith('<0.0.0')))) && !!((this.operator.startsWith('>') && e.operator.startsWith('>')) || (this.operator.startsWith('<') && e.operator.startsWith('<')) || (this.semver.version === e.semver.version && this.operator.includes('=') && e.operator.includes('=')) || (l(this.semver, '<', e.semver, t) && this.operator.startsWith('>') && e.operator.startsWith('<')) || (l(this.semver, '>', e.semver, t) && this.operator.startsWith('<') && e.operator.startsWith('>')));
     }
 }
-e.exports = a;
-let o = r(498994),
-    { safeRe: s, t: l } = r(646664),
-    u = r(293745),
-    c = r(13556),
-    d = r(40231),
-    f = r(889658);
+e.exports = r;
+let a = n(498994),
+    { safeRe: s, t: o } = n(646664),
+    l = n(293745),
+    u = n(13556),
+    c = n(40231),
+    d = n(889658);

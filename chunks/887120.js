@@ -1,32 +1,28 @@
-r.d(n, {
-    Z: function () {
-        return d;
-    }
-});
-var i = r(200651),
-    a = r(442837),
-    o = r(596454),
-    s = r(965386),
-    l = r(430824),
-    u = r(710111),
-    c = r(388032);
-function d(e) {
-    let { sound: n } = e,
-        r = (0, a.e7)([l.Z], () => {
+n.d(t, { Z: () => c });
+var i = n(200651),
+    r = n(442837),
+    a = n(596454),
+    s = n(965386),
+    o = n(430824),
+    l = n(710111),
+    u = n(388032);
+function c(e) {
+    let { sound: t } = e,
+        n = (0, r.e7)([o.Z], () => {
             var e;
-            return n.guildId === u.X8 ? c.intl.string(c.t.Rtvk9f) : null === (e = l.Z.getGuild(n.guildId)) || void 0 === e ? void 0 : e.name;
+            return t.guildId === l.X8 ? u.intl.string(u.t.Rtvk9f) : null === (e = o.Z.getGuild(t.guildId)) || void 0 === e ? void 0 : e.name;
         });
     return (0, i.jsxs)(s.RX, {
         children: [
-            (null != n.emojiId || null != n.emojiName) &&
+            (null != t.emojiId || null != t.emojiName) &&
                 (0, i.jsx)(s.Tw, {
-                    children: (0, i.jsx)(o.Z, {
-                        emojiId: n.emojiId,
-                        emojiName: n.emojiName
+                    children: (0, i.jsx)(a.Z, {
+                        emojiId: t.emojiId,
+                        emojiName: t.emojiName
                     })
                 }),
-            (0, i.jsx)(s.z5, { children: (0, i.jsx)(s.BR, { children: n.name }) }),
-            null != r && (0, i.jsx)(s.dY, { children: r })
+            (0, i.jsx)(s.z5, { children: (0, i.jsx)(s.BR, { children: t.name }) }),
+            null != n && (0, i.jsx)(s.dY, { children: n })
         ]
     });
 }

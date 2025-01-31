@@ -1,9 +1,10 @@
-e.exports = {
-    iconPlaceholder: 'iconPlaceholder_a46f56',
-    underline: 'underline_a46f56',
-    container: 'container_a46f56',
-    noAnimation: 'noAnimation_a46f56',
-    textContainer: 'textContainer_a46f56',
-    textPlaceholder: 'textPlaceholder_a46f56',
-    hidden: 'hidden_a46f56'
+n.exports = {
+    iconPlaceholder: 'iconPlaceholder__1729d',
+    underline: 'underline__1729d',
+    container: 'container__1729d',
+    shimmer: 'shimmer__1729d',
+    noAnimation: 'noAnimation__1729d',
+    textContainer: 'textContainer__1729d',
+    textPlaceholder: 'textPlaceholder__1729d',
+    hidden: 'hidden__1729d'
 };

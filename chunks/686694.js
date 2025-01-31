@@ -1,3 +1,4 @@
+e.d(i, { Z: () => M });
 var s,
     n = e(200651),
     h = e(192379),
@@ -10,8 +11,8 @@ var s,
     c = e(624138),
     p = e(890056),
     m = e(636879),
-    f = e(810847),
-    v = e(898625),
+    v = e(810847),
+    f = e(898625),
     g = e(981631),
     w = e(503645);
 function b(t, i, e) {
@@ -35,7 +36,7 @@ class y extends (s = h.Component) {
     }
     componentDidUpdate(t) {
         let { waveState: i } = this.props;
-        i === v.hO.FILLING && i !== t.waveState && this.waveFill();
+        i === f.hO.FILLING && i !== t.waveState && this.waveFill();
     }
     componentWillUnmount() {
         this.terminate();
@@ -54,10 +55,10 @@ class y extends (s = h.Component) {
     }
     advanceTransitionalState() {
         let { waveState: t } = this.props;
-        (t === v.hO.INITIAL || t === v.hO.FILLING) && this.updateWaveState(t + 1);
+        (t === f.hO.INITIAL || t === f.hO.FILLING) && this.updateWaveState(t + 1);
     }
     waveFill() {
-        this._isPlaying ? this.children.forEach((t) => t.fill()) : this.updateWaveState(v.hO.FILLED);
+        this._isPlaying ? this.children.forEach((t) => t.fill()) : this.updateWaveState(f.hO.FILLED);
     }
     updateAnimation(t) {
         this.children.forEach((i) => i.update(t));
@@ -65,18 +66,18 @@ class y extends (s = h.Component) {
     renderAnimation() {
         let { canvasFillStyle: t } = this.props,
             { canvasContext: i } = this;
-        if (null != i) (i.fillStyle = t), i.fillRect(0, 0, this.width, this.height), this.children.forEach((t) => t.render(i));
+        null != i && ((i.fillStyle = t), i.fillRect(0, 0, this.width, this.height), this.children.forEach((t) => t.render(i)));
     }
     render() {
         let { waveState: t, hideFallback: i, embedded: e } = this.props;
-        return (0, n.jsx)(d.AccessibilityPreferencesContext.Consumer, {
+        return (0, n.jsx)(d.Sfi.Consumer, {
             children: (s) => {
                 let { reducedMotion: h } = s;
                 return h.enabled
                     ? (0, n.jsx)('div', {
                           className: r()(w.fallbackImage, {
                               [w.embedded]: e,
-                              [w.visible]: !i && t >= v.hO.ENTERED
+                              [w.visible]: !i && t >= f.hO.ENTERED
                           })
                       })
                     : (0, n.jsx)('canvas', {
@@ -116,7 +117,7 @@ class y extends (s = h.Component) {
                 document.hidden ? this.delayedPause() : this.play();
             }),
             b(this, 'play', () => {
-                clearTimeout(this._pauseTimeout), !this._isPlaying && ((this._isPlaying = !0), this.run());
+                clearTimeout(this._pauseTimeout), this._isPlaying || ((this._isPlaying = !0), this.run());
             }),
             b(this, 'pause', () => {
                 clearTimeout(this._pauseTimeout), (this._isPlaying = !1), null != this._reqAnimId && window.cancelAnimationFrame(this._reqAnimId), (this._reqAnimId = null), this.advanceTransitionalState();
@@ -145,13 +146,13 @@ class y extends (s = h.Component) {
                 }
                 this.renderAnimation(), (this._lastTick = t), (this._reqAnimId = requestAnimationFrame(this.run));
             }),
-            (this.wave = new f.Z(this.updateWaveState)),
+            (this.wave = new v.Z(this.updateWaveState)),
             (this.children = [new p.Z(), new m.Z(), this.wave]);
     }
 }
 b(y, 'defaultProps', { embedded: !1 });
-i.Z = (t) => {
-    let i = (0, d.useToken)(l.Z.unsafe_rawColors.PRIMARY_630).hex();
+let M = (t) => {
+    let i = (0, d.dQu)(l.Z.unsafe_rawColors.PRIMARY_630).hex();
     return (0, n.jsx)(y, {
         canvasFillStyle: i,
         ...t

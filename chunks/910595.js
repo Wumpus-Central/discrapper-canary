@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
+n.d(t, { Z: () => d });
 var i = n(200651);
 n(192379);
 var l = n(481060),
@@ -11,12 +7,12 @@ var l = n(481060),
     o = n(981631),
     s = n(176505),
     c = n(388032);
-function u(e) {
+function d(e) {
     let { guild: t, selected: n } = e;
     return (0, i.jsx)(a.m, {
         id: 'home-tab-'.concat(t.id),
         renderIcon: (e) =>
-            (0, i.jsx)(l.SignPostIcon, {
+            (0, i.jsx)(l.Vy8, {
                 size: 'md',
                 color: 'currentColor',
                 className: e

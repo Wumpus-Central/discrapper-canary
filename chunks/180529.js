@@ -1,20 +1,15 @@
-n.d(t, {
-    Z: function () {
-        return l;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => u }), n(47120);
 var i = n(200651),
     o = n(192379),
-    r = n(642128),
-    a = n(849146),
+    a = n(642128),
+    r = n(849146),
     s = n(481060);
-let u = () => {
+let l = () => {
     let e = o.useRef(null),
         [t, n] = o.useState(0),
         i = o.useMemo(
             () =>
-                new a.Z((e) => {
+                new r.Z((e) => {
                     let [t] = e;
                     return n(t.contentRect.height);
                 }),
@@ -28,18 +23,18 @@ let u = () => {
         }
     );
 };
-function l(e) {
-    let { show: t, children: n, top: o = 0, bottom: a = 0 } = e,
-        { ref: l, height: g } = u(),
-        d = (0, s.useSpring)({
+function u(e) {
+    let { show: t, children: n, top: o = 0, bottom: r = 0 } = e,
+        { ref: u, height: d } = l(),
+        g = (0, s.q_F)({
             from: {
                 height: 0,
                 paddingBottom: '0px',
                 marginTop: '0px'
             },
             to: {
-                height: t ? g : 0,
-                paddingBottom: t ? ''.concat(a, 'px') : '0px',
+                height: t ? d : 0,
+                paddingBottom: t ? ''.concat(r, 'px') : '0px',
                 marginTop: t ? ''.concat(o, 'px') : '0px'
             },
             config: {
@@ -47,7 +42,7 @@ function l(e) {
                 friction: 26
             }
         }),
-        c = (0, s.useSpring)({
+        c = (0, s.q_F)({
             from: { opacity: 0 },
             to: { opacity: t ? 1 : 0 },
             config: {
@@ -55,16 +50,16 @@ function l(e) {
                 easing: t ? (e) => e ** 4 : (e) => e * (2 - e)
             }
         });
-    return (0, i.jsx)(r.animated.div, {
+    return (0, i.jsx)(a.animated.div, {
         style: {
             overflow: 'hidden',
-            height: d.height,
-            paddingBottom: d.paddingBottom,
-            marginTop: d.marginTop
+            height: g.height,
+            paddingBottom: g.paddingBottom,
+            marginTop: g.marginTop
         },
-        children: (0, i.jsx)(r.animated.div, {
+        children: (0, i.jsx)(a.animated.div, {
             style: { opacity: c.opacity },
-            ref: l,
+            ref: u,
             children: n
         })
     });

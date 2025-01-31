@@ -1,107 +1,136 @@
-n.d(t, {
-    O: function () {
-        return j;
-    }
-}),
-    n(653041);
+n.d(t, { O: () => Z }), n(653041);
 var i = n(200651),
-    r = n(192379),
-    l = n(373793),
-    a = n(442837),
-    o = n(481060),
-    s = n(100527),
-    c = n(906732),
-    u = n(783097),
-    d = n(606192),
-    m = n(213459),
-    h = n(812236),
-    f = n(132871),
-    p = n(147890),
-    _ = n(240991),
-    g = n(706454),
-    E = n(592125),
-    C = n(496675),
+    l = n(192379),
+    a = n(373793),
+    r = n(442837),
+    s = n(481060),
+    o = n(361213),
+    c = n(778569),
+    d = n(100527),
+    u = n(906732),
+    m = n(783097),
+    h = n(606192),
+    _ = n(213459),
+    p = n(812236),
+    g = n(132871),
+    f = n(147890),
+    x = n(240991),
+    E = n(706454),
+    C = n(592125),
+    v = n(496675),
     I = n(944486),
-    x = n(914010),
-    N = n(768581),
-    v = n(135431),
-    T = n(758199),
-    S = n(981631),
-    A = n(388032),
-    b = n(129548);
-function j(e) {
+    N = n(914010),
+    S = n(768581),
+    T = n(135431),
+    b = n(758199),
+    A = n(981631),
+    j = n(388032),
+    y = n(129548);
+function Z(e) {
     var t;
-    let { app: n, embedUrl: j, activityCustomId: R, activityReferrerId: Z } = e,
-        { name: P, bot: L, isDiscoverable: y } = n,
-        O = null == L ? void 0 : L.id,
-        M = (0, v.Eb)({
+    let { app: n, embedUrl: Z, activityCustomId: R, activityReferrerId: L } = e,
+        { name: P, bot: k, isDiscoverable: M } = n,
+        O = null == k ? void 0 : k.id,
+        D = (0, T.Eb)({
             customInstallUrl: n.customInstallUrl,
             installParams: n.installParams,
             integrationTypesConfig: n.integrationTypesConfig
         }),
-        D = M && null != n.integrationTypesConfig && l.Y.GUILD_INSTALL in n.integrationTypesConfig,
-        k = M && null != n.integrationTypesConfig && l.Y.USER_INSTALL in n.integrationTypesConfig,
-        U = (0, a.e7)([x.Z], () => {
+        w = D && null != n.integrationTypesConfig && a.Y.GUILD_INSTALL in n.integrationTypesConfig,
+        F = D && null != n.integrationTypesConfig && a.Y.USER_INSTALL in n.integrationTypesConfig,
+        U = (0, r.e7)([N.Z], () => {
             var e;
-            return null !== (e = x.Z.getGuildId()) && void 0 !== e ? e : void 0;
+            return null !== (e = N.Z.getGuildId()) && void 0 !== e ? e : void 0;
         }),
-        B = (0, m.PL)(!0, !1),
-        w = (0, m.LD)(U, !1),
-        F = (0, v.TK)(n.id, B),
-        G = (0, v.TK)(n.id, w),
-        V = (0, u.ye)(n),
-        H = r.useMemo(() => {
+        B = (0, _.PL)(!0, !1),
+        G = (0, _.LD)(U, !1),
+        H = (0, T.TK)(n.id, B),
+        V = (0, T.TK)(n.id, G),
+        z = (0, m.ye)(n),
+        W = l.useMemo(() => {
             var e;
             let t = null === (e = n.description) || void 0 === e ? void 0 : e.trim();
-            return null == t || '' === t ? null : (0, _.parseBioReact)(t);
+            return null == t || '' === t ? null : (0, x.parseBioReact)(t);
         }, [n.description]),
-        z = (0, a.e7)([g.default], () => g.default.locale, []),
-        W = r.useMemo(() => {
+        K = (0, r.e7)([E.default], () => E.default.locale, []),
+        Y = l.useMemo(() => {
             var e, t;
-            let i = new Intl.NumberFormat(z, {
+            let i = new Intl.NumberFormat(K, {
                     notation: 'compact',
                     compactDisplay: 'short'
                 }),
-                r = null !== (t = null === (e = n.directoryEntry) || void 0 === e ? void 0 : e.guild_count) && void 0 !== t ? t : 0;
-            return 0 !== r && D ? A.intl.format(A.t['6IW6Wl'], { guildCount: i.format(r) }) : null;
-        }, [null === (t = n.directoryEntry) || void 0 === t ? void 0 : t.guild_count, D, z]),
-        K =
-            null != L
-                ? (0, N.aN)({
-                      id: null == L ? void 0 : L.id,
-                      banner: null == L ? void 0 : L.banner,
-                      size: 512,
-                      canAnimate: !1
-                  })
-                : void 0,
-        Y = N.ZP.getApplicationIconURL({
+                l = null !== (t = null === (e = n.directoryEntry) || void 0 === e ? void 0 : e.guild_count) && void 0 !== t ? t : 0;
+            return 0 !== l && w ? j.intl.format(j.t['6IW6Wl'], { guildCount: i.format(l) }) : null;
+        }, [null === (t = n.directoryEntry) || void 0 === t ? void 0 : t.guild_count, w, K]),
+        X = S.ZP.getApplicationIconURL({
             id: n.id,
             icon: n.icon,
-            bot: L
+            bot: k
         }),
-        { analyticsLocations: X } = (0, c.ZP)(s.Z.APP_MESSAGE_EMBED),
-        Q = (0, a.e7)(
-            [E.Z, C.Z, I.Z],
+        { url: q } = (0, c.Z)({
+            applicationId: z ? n.id : void 0,
+            size: 600,
+            names: ['embedded_cover']
+        }),
+        {
+            staticBannerSrc: Q,
+            videoBannerSrc: J,
+            bannerAspectRatio: $
+        } = l.useMemo(() => {
+            let e, t;
+            let i = b.u.BOT;
+            if (null != k) {
+                let { banner: n } = k;
+                (e = (0, S.aN)({
+                    id: k.id,
+                    banner: n,
+                    size: 512,
+                    canAnimate: !1
+                })),
+                    (0, S.xR)(n) &&
+                        null == q &&
+                        (t = (0, S.aN)({
+                            id: k.id,
+                            banner: n,
+                            size: 512,
+                            canAnimate: !0
+                        }));
+            }
+            if (z) {
+                let l = (0, m.yJ)(n);
+                null != q && ((e = q), (i = b.u.ACTIVITY));
+                let a = null == l ? void 0 : l.activity_preview_video_asset_id;
+                null != a && ((t = (0, o.Z)(n.id, a)), (i = b.u.ACTIVITY));
+            }
+            return {
+                staticBannerSrc: e,
+                videoBannerSrc: t,
+                bannerAspectRatio: i
+            };
+        }, [q, k, z, n]),
+        { analyticsLocations: ee } = (0, u.ZP)(d.Z.APP_MESSAGE_EMBED),
+        et = (0, r.e7)(
+            [C.Z, v.Z, I.Z],
             () => {
-                let e = E.Z.getChannel(I.Z.getChannelId());
-                return null != e && (e.isPrivate() || C.Z.can(S.Plq.SEND_MESSAGES, e));
+                let e = C.Z.getChannel(I.Z.getChannelId());
+                return null != e && (e.isPrivate() || v.Z.can(A.Plq.SEND_MESSAGES, e));
             },
             []
         ),
-        q = (F || G || k) && Q,
-        J = y || q,
-        $ = r.useCallback(() => {
-            if (q) {
-                (0, u.X)(n.id);
+        en = (H || V || F) && et,
+        ei = M || en,
+        el = l.useCallback(() => {
+            if (en) {
+                (0, m.X)(n.id);
                 return;
             }
-            (0, p.dx)({
+            (0, f.dx)({
                 applicationId: n.id,
-                entrypoint: { name: f.n3.APPLICATION_DIRECTORY_PROFILE_EMBED }
+                entrypoint: { name: g.n3.APPLICATION_DIRECTORY_PROFILE_EMBED }
             });
-        }, [n.id, q]),
-        ee = r.useCallback(() => {
-            (0, v.LO)({
+        }, [n.id, en]),
+        ea = l.useCallback(() => {
+            (0, T.LO)({
                 applicationId: n.id,
                 customInstallUrl: n.customInstallUrl,
                 installParams: n.installParams,
@@ -110,71 +139,73 @@ function j(e) {
                 source: 'app_message_embed'
             });
         }, [n.customInstallUrl, n.id, n.installParams, n.integrationTypesConfig, U]),
-        et = (0, h.ms)({
+        er = (0, p.ms)({
             context: { type: 'contextless' },
             applicationId: n.id,
-            botUserId: null == L ? void 0 : L.id
+            botUserId: null == k ? void 0 : k.id
         }),
-        en = null != O && V && et,
-        ei = r.useMemo(() => {
+        es = null != O && z && er,
+        eo = l.useMemo(() => {
             let e = [];
             return (
-                en &&
+                es &&
                     e.push({
-                        label: A.intl.string(A.t.RscU7O),
+                        label: j.intl.string(j.t.RscU7O),
                         onClick() {
-                            (0, d.W)({
+                            (0, h.W)({
                                 appId: n.id,
                                 botId: O,
-                                analyticsLocations: X,
+                                analyticsLocations: ee,
                                 customId: R,
-                                referrerId: Z
+                                referrerId: L
                             });
                         }
                     }),
-                J
+                ei
                     ? e.push({
-                          label: A.intl.string(A.t['HO/oXl']),
-                          onClick: $
+                          label: j.intl.string(j.t['HO/oXl']),
+                          onClick: el
                       })
-                    : M &&
+                    : D &&
                       e.push({
-                          label: A.intl.string(A.t.NgXl3N),
-                          onClick: ee
+                          label: j.intl.string(j.t.NgXl3N),
+                          onClick: ea
                       }),
                 e
             );
-        }, [R, Z, X, n.id, O, en, J, ee, $, M]);
-    return (0, i.jsx)(T.W, {
+        }, [R, L, ee, n.id, O, es, ei, ea, el, D]);
+    return (0, i.jsx)(b.W, {
         title: P,
-        bannerSrc: K,
-        iconSrc: Y,
-        embedUrl: j,
+        staticBannerSrc: Q,
+        videoBannerSrc: J,
+        bannerAspectRatio: $,
+        iconSrc: X,
+        embedUrl: Z,
         info: (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(o.Text, {
+                (0, i.jsx)(s.Text, {
                     variant: 'text-xs/medium',
-                    className: b.description,
+                    className: y.description,
                     color: 'none',
-                    lineClamp: null != W ? 1 : 2,
-                    children: H
+                    lineClamp: null != Y ? 1 : 2,
+                    children: W
                 }),
-                null != W &&
-                    (0, i.jsxs)(o.Text, {
+                null != Y &&
+                    (0, i.jsxs)(s.Text, {
                         variant: 'text-xs/normal',
-                        className: b.tagline,
+                        className: y.tagline,
                         color: 'none',
                         lineClamp: 1,
                         children: [
-                            (0, i.jsx)(o.CompassIcon, {
+                            (0, i.jsx)(s.Jmo, {
                                 size: 'xxs',
                                 color: 'currentColor'
                             }),
-                            W
+                            Y
                         ]
                     })
             ]
         }),
-        actions: ei
+        actions: eo
     });
 }

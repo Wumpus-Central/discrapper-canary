@@ -1,13 +1,14 @@
+n.d(t, { Z: () => o });
 var i = n(570140),
-    r = n(317770),
-    l = n(117984);
+    l = n(317770),
+    r = n(117984);
 function a(e) {
     let {
         channel: { id: t }
     } = e;
-    (0, l.oC)(t);
+    (0, r.oC)(t);
 }
-class s extends r.Z {
+class s extends l.Z {
     _initialize() {
         i.Z.subscribe('CHANNEL_DELETE', a);
     }
@@ -15,4 +16,4 @@ class s extends r.Z {
         i.Z.unsubscribe('CHANNEL_DELETE', a);
     }
 }
-t.Z = new s();
+let o = new s();

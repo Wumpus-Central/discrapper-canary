@@ -1,6 +1,7 @@
+n.d(t, { Z: () => f });
 var i = n(200651),
-    r = n(192379),
-    l = n(481060),
+    l = n(192379),
+    r = n(481060),
     a = n(749210),
     s = n(322665),
     o = n(17845),
@@ -11,11 +12,11 @@ var i = n(200651),
     m = n(294330),
     p = n(388032),
     g = n(874892),
-    f = n(337596);
-t.Z = function (e) {
+    _ = n(337596);
+let f = function (e) {
     let { onScroll: t } = e,
         n = (0, h.Z)(),
-        _ = r.useMemo(
+        f = l.useMemo(
             () =>
                 n.map((e) => ({
                     ...e,
@@ -39,7 +40,7 @@ t.Z = function (e) {
                     n.length > 0
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsx)(l.Heading, {
+                                  (0, i.jsx)(r.X6q, {
                                       className: g.sectionTitle,
                                       variant: 'heading-lg/semibold',
                                       color: 'header-primary',
@@ -48,7 +49,7 @@ t.Z = function (e) {
                                   (0, i.jsxs)('div', {
                                       className: g.content,
                                       children: [
-                                          _.map((e) =>
+                                          f.map((e) =>
                                               (0, i.jsx)(
                                                   m.VD,
                                                   {
@@ -67,18 +68,18 @@ t.Z = function (e) {
                               className: g.content,
                               children: (0, i.jsx)(u.Z, { hasHub: !1 })
                           }),
-                    (0, i.jsx)('div', { className: f.divider }),
+                    (0, i.jsx)('div', { className: _.divider }),
                     (0, i.jsxs)('div', {
-                        className: f.disclaimer,
+                        className: _.disclaimer,
                         children: [
-                            (0, i.jsxs)(l.Text, {
-                                className: f.text,
+                            (0, i.jsxs)(r.Text, {
+                                className: _.text,
                                 variant: 'text-sm/medium',
                                 color: 'header-secondary',
                                 children: [p.intl.string(p.t.O1k9XV), ' ']
                             }),
-                            (0, i.jsx)(l.Text, {
-                                className: f.text,
+                            (0, i.jsx)(r.Text, {
+                                className: _.text,
                                 variant: 'text-sm/medium',
                                 color: 'header-secondary',
                                 children: p.intl.string(p.t.FV5dvr)

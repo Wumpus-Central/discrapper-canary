@@ -1,16 +1,11 @@
-n.d(t, {
-    Z: function () {
-        return h;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => h }), n(47120);
 var a,
     r = n(200651),
     o = n(192379),
     i = n(120356),
     l = n.n(i),
-    c = n(748780),
-    s = n(481060),
+    s = n(748780),
+    c = n(481060),
     d = n(981631),
     u = n(817623);
 function f(e, t, n) {
@@ -52,7 +47,7 @@ class h extends (a = o.Component) {
         };
     }
     render() {
-        return (0, r.jsx)(c.Z.a, {
+        return (0, r.jsx)(s.Z.a, {
             href: d.Z5c.INDEX,
             target: '_blank',
             rel: 'noopener',
@@ -62,9 +57,9 @@ class h extends (a = o.Component) {
     }
     constructor(...e) {
         super(...e),
-            f(this, 'anim', new c.Z.Value(0)),
+            f(this, 'anim', new s.Z.Value(0)),
             f(this, 'animate', (e) => {
-                c.Z.spring(this.anim, {
+                s.Z.spring(this.anim, {
                     toValue: e,
                     friction: 10,
                     tension: 100
@@ -72,4 +67,4 @@ class h extends (a = o.Component) {
             });
     }
 }
-f(h, 'contextType', s.AccessibilityPreferencesContext);
+f(h, 'contextType', c.Sfi);

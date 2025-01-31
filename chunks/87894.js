@@ -1,50 +1,29 @@
 n.d(t, {
-    DJ: function () {
-        return u;
-    },
-    U0: function () {
-        return m;
-    },
-    W_: function () {
-        return o;
-    },
-    Z$: function () {
-        return d;
-    },
-    Z0: function () {
-        return h;
-    },
-    iM: function () {
-        return a;
-    },
-    j2: function () {
-        return x;
-    },
-    jc: function () {
-        return c;
-    },
-    uq: function () {
-        return r;
-    }
+    DJ: () => r,
+    U0: () => u,
+    W_: () => l,
+    Z$: () => d,
+    Z0: () => m,
+    iM: () => a,
+    j2: () => c,
+    jc: () => o,
+    uq: () => i
 });
-var i,
-    s,
-    l = n(497505);
-function r(e) {
-    return [l.jn.GIFT_INVENTORY_FOR_YOU, l.jn.GIFT_INVENTORY_OTHER].includes(e);
+var s = n(497505);
+function i(e) {
+    return [s.jn.GIFT_INVENTORY_FOR_YOU, s.jn.GIFT_INVENTORY_OTHER].includes(e);
 }
-function o(e) {
-    return e === l.jn.GIFT_INVENTORY_FOR_YOU || !r(e);
+function l(e) {
+    return e === s.jn.GIFT_INVENTORY_FOR_YOU || !i(e);
 }
 function a(e) {
     let { quest: t, location: n } = e,
-        { userStatus: i } = t;
-    return ((null == i ? void 0 : i.enrolledAt) != null && null == i.completedAt) || o(n);
+        { userStatus: s } = t;
+    return ((null == s ? void 0 : s.enrolledAt) != null && null == s.completedAt) || l(n);
 }
-((i = s || (s = {}))[(i.FOR_YOU = 0)] = 'FOR_YOU'), (i[(i.OTHER = 1)] = 'OTHER');
-let u = 100,
-    c = 20,
+let r = 100,
+    o = 20,
     d = 32,
-    m = 1000,
-    x = 460,
-    h = 280;
+    u = 1000,
+    c = 460,
+    m = 280;

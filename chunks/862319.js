@@ -1,10 +1,6 @@
 n.d(t, {
-    Z: function () {
-        return g;
-    },
-    w: function () {
-        return x;
-    }
+    Z: () => g,
+    w: () => x
 });
 var i = n(200651);
 n(192379);
@@ -53,22 +49,18 @@ function g(e) {
                                 })
                             ]
                         }),
-                        (0, i.jsx)(s.Button, {
-                            look: s.Button.Looks.OUTLINED,
-                            color: s.Button.Colors.PRIMARY,
+                        (0, i.jsx)(s.zxk, {
+                            look: s.zxk.Looks.OUTLINED,
+                            color: s.zxk.Colors.PRIMARY,
                             onClick: () => {
-                                var r;
-                                return (
-                                    (r = e),
-                                    void (0, s.openModal)((e) =>
-                                        (0, i.jsx)(u.K, {
-                                            ...e,
-                                            fromSubscriptionListing: r,
-                                            existingChannelBenefits: t,
-                                            existingIntangibleBenefits: n,
-                                            onSubmit: a
-                                        })
-                                    )
+                                (0, s.h7j)((r) =>
+                                    (0, i.jsx)(u.K, {
+                                        ...r,
+                                        fromSubscriptionListing: e,
+                                        existingChannelBenefits: t,
+                                        existingIntangibleBenefits: n,
+                                        onSubmit: a
+                                    })
                                 );
                             },
                             disabled: g,
@@ -83,12 +75,12 @@ function g(e) {
 }
 function x(e) {
     let { guildId: t, onImport: n, disabled: r = !1 } = e;
-    return (0, i.jsxs)(s.Clickable, {
+    return (0, i.jsxs)(s.P3F, {
         className: l()(h.importRoleCard, { [h.disabled]: r }),
         onClick: r
             ? void 0
             : function () {
-                  (0, s.openModal)((e) =>
+                  (0, s.h7j)((e) =>
                       (0, i.jsx)(u.C, {
                           ...e,
                           guildId: t,
@@ -98,7 +90,7 @@ function x(e) {
               },
         'aria-disabled': r,
         children: [
-            (0, i.jsx)(s.ShieldUserIcon, {
+            (0, i.jsx)(s.lZ8, {
                 size: 'custom',
                 width: 23,
                 height: 23,

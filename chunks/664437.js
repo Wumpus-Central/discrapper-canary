@@ -1,63 +1,57 @@
-r.d(n, {
-    Zg: function () {
-        return u;
-    },
-    pj: function () {
-        return s;
-    },
-    pr: function () {
-        return l;
-    }
+n.d(t, {
+    Zg: () => l,
+    pj: () => s,
+    pr: () => o
 });
-var i = r(544891),
-    a = r(570140),
-    o = r(981631);
+var i = n(544891),
+    r = n(570140),
+    a = n(981631);
 function s(e) {
-    a.Z.dispatch({
+    r.Z.dispatch({
         type: 'TOP_EMOJIS_FETCH',
         guildId: e
     }),
         i.tn
             .get({
-                url: o.ANM.TOP_EMOJIS_FOR_GUILD(e),
+                url: a.ANM.TOP_EMOJIS_FOR_GUILD(e),
                 oldFormErrors: !0,
                 rejectWithError: !0
             })
             .then(
-                (n) =>
-                    a.Z.dispatch({
+                (t) =>
+                    r.Z.dispatch({
                         type: 'TOP_EMOJIS_FETCH_SUCCESS',
                         guildId: e,
-                        topEmojisMetadata: n.body.items
+                        topEmojisMetadata: t.body.items
                             .map((e) => ({
                                 emojiId: e.emoji_id,
                                 rank: e.emoji_rank
                             }))
-                            .sort((e, n) => e.rank - n.rank)
+                            .sort((e, t) => e.rank - t.rank)
                     }),
                 () =>
-                    a.Z.dispatch({
+                    r.Z.dispatch({
                         type: 'TOP_EMOJIS_FETCH_FAILURE',
                         guildId: e
                     })
             );
 }
-function l(e, n) {
-    a.Z.dispatch({ type: 'NEWLY_ADDED_EMOJI_SEEN_UPDATED' }),
+function o(e, t) {
+    r.Z.dispatch({ type: 'NEWLY_ADDED_EMOJI_SEEN_UPDATED' }),
         null != e &&
-            null != n &&
-            a.Z.dispatch({
+            null != t &&
+            r.Z.dispatch({
                 type: 'NEWLY_ADDED_EMOJI_SEEN_PENDING',
                 guildId: e,
-                emojiId: n
+                emojiId: t
             });
 }
-function u(e, n) {
+function l(e, t) {
     null != e &&
-        null != n &&
-        a.Z.dispatch({
+        null != t &&
+        r.Z.dispatch({
             type: 'NEWLY_ADDED_EMOJI_SEEN_ACKNOWLEDGED',
             guildId: e,
-            emojiId: n
+            emojiId: t
         });
 }

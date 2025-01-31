@@ -1,8 +1,4 @@
-r.d(n, {
-    L: function () {
-        return i;
-    }
-});
+n.d(t, { L: () => i });
 let i = {
     __proto__: null,
     bg: {

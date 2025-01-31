@@ -1,11 +1,16 @@
-n.exports = {
-    form: 'form_ab60f4',
-    modalHeader: 'modalHeader_ab60f4',
-    closeButton: 'closeButton_ab60f4',
-    headerImage: 'headerImage_ab60f4',
-    inputSection: 'inputSection_ab60f4',
-    title: 'title_ab60f4',
-    textArea: 'textArea_ab60f4',
-    error: 'error_ab60f4',
-    button: 'button_ab60f4'
+e.exports = {
+    form: 'form__08bd2',
+    modalHeader: 'modalHeader__08bd2',
+    closeButton: 'closeButton__08bd2',
+    headerImage: 'headerImage__08bd2',
+    inputSection: 'inputSection__08bd2',
+    title: 'title__08bd2',
+    textArea: 'textArea__08bd2',
+    error: 'error__08bd2',
+    button: 'button__08bd2',
+    modal: 'modal__08bd2',
+    gradientBorder: 'gradientBorder__08bd2',
+    container: 'container__08bd2',
+    cancelButton: 'cancelButton__08bd2',
+    modalFooter: 'modalFooter__08bd2'
 };

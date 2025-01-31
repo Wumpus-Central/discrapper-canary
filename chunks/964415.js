@@ -1,15 +1,11 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(528734),
-    a = r(951516);
-function o(e) {
-    (0, a.Z)(1, arguments);
-    var n = 1,
-        r = (0, i.default)(e),
-        o = r.getUTCDay(),
-        s = (o < n ? 7 : 0) + o - n;
-    return r.setUTCDate(r.getUTCDate() - s), r.setUTCHours(0, 0, 0, 0), r;
+n.d(t, { Z: () => a });
+var i = n(528734),
+    r = n(951516);
+function a(e) {
+    (0, r.Z)(1, arguments);
+    var t = 1,
+        n = (0, i.default)(e),
+        a = n.getUTCDay(),
+        s = (a < t ? 7 : 0) + a - t;
+    return n.setUTCDate(n.getUTCDate() - s), n.setUTCHours(0, 0, 0, 0), n;
 }

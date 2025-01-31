@@ -1,32 +1,27 @@
-r.d(n, {
-    d: function () {
-        return s;
-    }
-});
-var i = r(411104);
-function a(e, n, r) {
+function i(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class o {
+n.d(t, { d: () => a }), n(411104);
+class r {
     raise(e) {
         throw e;
     }
     setCallbacks(e) {
         this.callback = e.response;
     }
-    databaseOpen(e, n, r) {
+    databaseOpen(e, t, n) {
         let i = 'kv_storage: platform "web" is not supported at this time.';
-        if (null == r ? void 0 : r.synchronous) throw Error(i);
+        if (null == n ? void 0 : n.synchronous) throw Error(i);
         return this.reply({
             requestId: e,
             synchronous: !1,
@@ -34,26 +29,26 @@ class o {
             data: i
         });
     }
-    databaseList(e, n) {
+    databaseList(e, t) {
         return this.reply({
             requestId: e,
-            synchronous: null == n ? void 0 : n.synchronous,
+            synchronous: null == t ? void 0 : t.synchronous,
             ok: !0,
             data: []
         });
     }
-    databaseDelete(e, n, r) {
+    databaseDelete(e, t, n) {
         return this.reply({
             requestId: e,
-            synchronous: null == r ? void 0 : r.synchronous,
+            synchronous: null == n ? void 0 : n.synchronous,
             ok: !0,
             data: void 0
         });
     }
-    databaseOptimize(e, n, r) {
+    databaseOptimize(e, t, n) {
         return this.reply({
             requestId: e,
-            synchronous: null == r ? void 0 : r.synchronous,
+            synchronous: null == n ? void 0 : n.synchronous,
             ok: !0,
             data: void 0
         });
@@ -61,12 +56,12 @@ class o {
     reply(e) {
         if (e.synchronous) return e.data;
         if (null != e.requestId) {
-            var n, r;
+            var t, n;
             let i = 0;
-            null === (n = (r = this).callback) ||
-                void 0 === n ||
-                n.call(
-                    r,
+            null === (t = (n = this).callback) ||
+                void 0 === t ||
+                t.call(
+                    n,
                     {
                         id: e.requestId,
                         ok: e.ok,
@@ -83,7 +78,7 @@ class o {
         }
     }
     constructor() {
-        a(this, 'callback', null);
+        i(this, 'callback', null);
     }
 }
-let s = new o();
+let a = new r();

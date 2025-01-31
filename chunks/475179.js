@@ -1,77 +1,78 @@
-var i = r(570140),
-    a = r(367907),
-    o = r(626135),
-    s = r(585483),
-    l = r(981631);
-n.Z = {
+n.d(t, { Z: () => l });
+var i = n(570140),
+    r = n(367907),
+    a = n(626135),
+    s = n(585483),
+    o = n(981631);
+let l = {
     rebuildRTCActiveChannels() {
         i.Z.dispatch({ type: 'CHANNEL_RTC_ACTIVE_CHANNELS' });
     },
-    selectParticipant(e, n) {
+    selectParticipant(e, t) {
         i.Z.dispatch({
             type: 'CHANNEL_RTC_SELECT_PARTICIPANT',
             channelId: e,
-            id: n
+            id: t
         });
     },
-    updateLayout(e, n) {
-        let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.IlC.APP;
-        o.default.track(l.rMx.VIDEO_LAYOUT_TOGGLED, {
-            video_layout: n,
-            ...(0, a.AB)(e)
+    updateLayout(e, t) {
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.IlC.APP;
+        a.default.track(o.rMx.VIDEO_LAYOUT_TOGGLED, {
+            video_layout: t,
+            ...(0, r.AB)(e)
         }),
             i.Z.dispatch({
                 type: 'CHANNEL_RTC_UPDATE_LAYOUT',
                 channelId: e,
-                layout: n,
-                appContext: r
+                layout: t,
+                appContext: n
             });
     },
-    toggleParticipants(e, n) {
+    toggleParticipants(e, t) {
         i.Z.dispatch({
             type: 'CHANNEL_RTC_UPDATE_PARTICIPANTS_OPEN',
             channelId: e,
-            participantsOpen: n
+            participantsOpen: t
         });
     },
-    toggleParticipantsList(e, n) {
+    toggleParticipantsList(e, t) {
         i.Z.dispatch({
             type: 'CHANNEL_RTC_UPDATE_PARTCIPANTS_LIST_OPEN',
             channelId: e,
-            participantsListOpen: n
+            participantsListOpen: t
         });
     },
-    toggleVoiceParticipantsHidden(e, n) {
+    toggleVoiceParticipantsHidden(e, t) {
         i.Z.dispatch({
             type: 'CHANNEL_RTC_UPDATE_VOICE_PARTICIPANTS_HIDDEN',
             channelId: e,
-            voiceParticipantsHidden: n
+            voiceParticipantsHidden: t
         });
     },
-    updateStageStreamSize(e, n) {
+    updateStageStreamSize(e, t) {
         i.Z.dispatch({
             type: 'CHANNEL_RTC_UPDATE_STAGE_STREAM_SIZE',
             channelId: e,
-            large: n
+            large: t
         });
     },
-    updateStageVideoLimitBoostUpsellDismissed(e, n) {
+    updateStageVideoLimitBoostUpsellDismissed(e, t) {
         i.Z.dispatch({
             type: 'CHANNEL_RTC_UPDATE_STAGE_VIDEO_LIMIT_BOOST_UPSELL_DISMISSED',
             channelId: e,
-            dismissed: n
+            dismissed: t
         });
     },
-    updateChatOpen(e, n) {
+    updateChatOpen(e, t) {
         i.Z.dispatch({
             type: 'CHANNEL_RTC_UPDATE_CHAT_OPEN',
             channelId: e,
-            chatOpen: n
+            chatOpen: t
         }),
-            n
+            t
                 ? setTimeout(() => {
-                      s.S.dispatch(l.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
+                      s.S.dispatch(o.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
                   }, 0)
-                : s.S.dispatch(l.CkL.FOCUS_CHAT_BUTTON);
+                : s.S.dispatch(o.CkL.FOCUS_CHAT_BUTTON);
     }
 };

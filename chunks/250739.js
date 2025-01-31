@@ -1,6 +1,1 @@
-n.r(
-    (e.exports = {
-        firefoxFixScrollFlex: 'firefoxFixScrollFlex_c7e9c6',
-        fixClipping: 'fixClipping_c7e9c6'
-    })
-);
+e.exports = { fixClipping: 'fixClipping_efbae7' };

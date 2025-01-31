@@ -1,21 +1,17 @@
-n.d(t, {
-    t: function () {
-        return d;
-    }
-});
+n.d(t, { t: () => d });
 var i = n(200651),
     l = n(192379),
-    r = n(481060),
-    a = n(296023),
-    o = n(768581),
-    s = n(585835);
+    a = n(481060),
+    r = n(296023),
+    s = n(768581),
+    o = n(585835);
 function d(e) {
     var t;
     let { channel: d, application: c, showApplicationImage: u, ...m } = e,
-        h = (0, a.w)(d),
-        p = l.useCallback(
+        h = (0, r.w)(d),
+        x = l.useCallback(
             () =>
-                (0, r.openModalLazy)(async () => {
+                (0, a.ZDy)(async () => {
                     let { default: e } = await n.e('30019').then(n.bind(n, 719498));
                     return (t) =>
                         (0, i.jsx)(e, {
@@ -26,10 +22,10 @@ function d(e) {
                 }),
             [c, d]
         ),
-        g = u ? (null !== (t = c.getIconURL(48)) && void 0 !== t ? t : o.pK['0']) : void 0;
-    return (0, i.jsx)(s.Z, {
-        imageSrc: g,
-        onButtonClick: p,
+        p = u ? (null !== (t = c.getIconURL(48)) && void 0 !== t ? t : s.pK['0']) : void 0;
+    return (0, i.jsx)(o.Z, {
+        imageSrc: p,
+        onButtonClick: x,
         details: null != h ? [{ text: h }] : void 0,
         ...m
     });

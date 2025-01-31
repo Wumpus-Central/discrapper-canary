@@ -1,27 +1,23 @@
-t.d(n, {
-    Z: function () {
-        return c;
-    }
-});
-var i = t(200651);
-t(192379);
-var l = t(442837),
-    r = t(481060),
-    a = t(904245),
-    o = t(665906),
-    s = t(314897),
-    u = t(418476),
-    d = t(388032);
-function c(e, n) {
-    let t = (0, l.e7)([s.default], () => s.default.getId()),
-        c = (0, o.$R)(n),
-        g = (0, o.Gu)(n);
-    return (0, u.Z)(e, t) && c && !g
-        ? (0, i.jsx)(r.MenuItem, {
+n.d(t, { Z: () => u });
+var i = n(200651);
+n(192379);
+var l = n(442837),
+    a = n(481060),
+    s = n(904245),
+    r = n(665906),
+    o = n(314897),
+    d = n(418476),
+    c = n(388032);
+function u(e, t) {
+    let n = (0, l.e7)([o.default], () => o.default.getId()),
+        u = (0, r.$R)(t),
+        g = (0, r.Gu)(t);
+    return (0, d.Z)(e, n) && u && !g
+        ? (0, i.jsx)(a.sNh, {
               id: 'edit',
-              label: d.intl.string(d.t.fsBWmZ),
-              action: () => a.Z.startEditMessage(n.id, e.id, e.content),
-              icon: r.PencilIcon
+              label: c.intl.string(c.t.fsBWmZ),
+              action: () => s.Z.startEditMessage(t.id, e.id, e.content),
+              icon: a.vdY
           })
         : null;
 }

@@ -1,9 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => a }), n(47120);
 var i = n(192379),
     r = n(768581),
     l = n(776155),
@@ -39,28 +34,28 @@ function a(e, t, n) {
             size: n
         }),
         p = i.useMemo(() => (null != h && h.length > t ? h.slice(0, t) : h), [h, t]),
-        f = null != h && h.length > t ? h.length - t : null,
+        _ = null != h && h.length > t ? h.length - t : null,
         C = null == u ? void 0 : u.slug,
-        v = null != C ? s.EYA.ROLE_SUBSCRIPTION_STORE_PAGE(C) : void 0,
-        I = null == m ? void 0 : null === (a = m.guild) || void 0 === a ? void 0 : a.name,
+        f = null != C ? s.EYA.ROLE_SUBSCRIPTION_STORE_PAGE(C) : void 0,
+        v = null == m ? void 0 : null === (a = m.guild) || void 0 === a ? void 0 : a.name,
         N = null == m ? void 0 : null === (o = m.role_subscription) || void 0 === o ? void 0 : o.subscriber_count,
-        _ = !c && null != I && null != g && null != x;
-    return _
+        j = !c && null != v && null != g && null != x;
+    return j
         ? {
-              hasAllImperativeDetails: _,
+              hasAllImperativeDetails: j,
               isLoading: c,
               details: {
-                  guildName: I,
+                  guildName: v,
                   guildIcon: g,
                   guildAvatarUrl: x,
-                  storePageUrl: v,
+                  storePageUrl: f,
                   subscriberCount: N,
                   emojisToShow: p,
-                  notShownEmojiCount: f
+                  notShownEmojiCount: _
               }
           }
         : {
-              hasAllImperativeDetails: _,
+              hasAllImperativeDetails: j,
               isLoading: c,
               error: d
           };

@@ -1,10 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return p;
-    }
-}),
-    n(47120),
-    n(177593);
+n.d(t, { Z: () => p }), n(47120), n(177593);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
@@ -35,7 +29,7 @@ let x = r.forwardRef(function (e, t) {
     let { children: n, onFocus: l, onBlur: s, onClick: o } = e,
         c = r.useRef(null),
         [d, m] = r.useState(u.tq);
-    return (0, i.jsxs)(a.Clickable, {
+    return (0, i.jsxs)(a.P3F, {
         className: h.textArea,
         onFocus: l,
         onBlur: s,
@@ -44,7 +38,7 @@ let x = r.forwardRef(function (e, t) {
         ignoreKeyPress: !0,
         style: { minHeight: d },
         children: [
-            (0, i.jsx)(a.AdvancedScroller, {
+            (0, i.jsx)(a.Den, {
                 className: h.innerScroller,
                 style: { minHeight: d - 2 },
                 ref: t,
@@ -62,79 +56,79 @@ let x = r.forwardRef(function (e, t) {
 });
 function p(e) {
     var t;
-    let { initialValue: n, onChangeTags: l, onChangeNewTagValue: c, tagErrors: u = {}, placeholder: g, className: p, maxTags: f } = e,
+    let { initialValue: n, onChangeTags: l, onChangeNewTagValue: c, tagErrors: u = {}, placeholder: g, className: p, maxTags: _ } = e,
         C = r.useRef(null),
+        f = r.useRef(null),
         v = r.useRef(null),
-        I = r.useRef(null),
         N = (0, m.V)(n),
         {
-            handlePasteEvent: _,
-            handleInputChange: T,
-            handleKeyDown: j,
+            handlePasteEvent: j,
+            handleInputChange: I,
+            handleKeyDown: E,
             handleContainerKeyUp: b,
-            handleRemoveTag: E,
+            handleRemoveTag: T,
             handleTagChangeEvent: S,
             handleSelectTag: R,
-            handleUnselectTag: y,
-            handleResetTagSelections: A,
-            handleInputBlurEvent: Z
+            handleUnselectTag: Z,
+            handleResetTagSelections: y,
+            handleInputBlurEvent: A
         } = (0, m.Q)(N, {
-            scrollerRef: I,
+            scrollerRef: v,
             mainInputRef: C,
-            mainContainerRef: v
+            mainContainerRef: f
         }),
         {
-            state: { value: L, tags: D, selections: O, isSelecting: M }
+            state: { value: L, tags: D, selections: O, isSelecting: k }
         } = N,
         P = (0, o.Z)(D),
-        [k, w] = r.useState(!1),
-        B = r.useCallback(() => {
+        [w, M] = r.useState(!1),
+        U = r.useCallback(() => {
             var e;
-            w(!1), A(), null === (e = C.current) || void 0 === e || e.focus({ preventScroll: !0 });
-        }, [A]);
+            M(!1), y(), null === (e = C.current) || void 0 === e || e.focus({ preventScroll: !0 });
+        }, [y]);
     r.useEffect(() => {
-        if (!k && P !== D) l(D);
-    }, [l, P, D, k]),
+        !w && P !== D && l(D);
+    }, [l, P, D, w]),
         r.useEffect(() => {
-            if (!k) c(L);
-        }, [c, L, k]);
-    let U = r.useCallback(
+            !w && c(L);
+        }, [c, L, w]);
+    let G = r.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                e && B(), w(!1);
+                e && U(), M(!1);
             },
-            [B]
+            [U]
         ),
-        G = r.useCallback(
+        B = r.useCallback(
             (e) => (t) => {
                 if (t) {
                     var n;
                     let t = O.includes(D[e]);
                     null === (n = C.current) || void 0 === n || n.focus(),
                         t
-                            ? y(e)
+                            ? Z(e)
                             : (R(e),
                               setImmediate(() => {
                                   var e;
                                   null === (e = C.current) || void 0 === e || e.blur(),
                                       setTimeout(() => {
                                           var e;
-                                          return null === (e = v.current) || void 0 === e ? void 0 : e.focus();
+                                          return null === (e = f.current) || void 0 === e ? void 0 : e.focus();
                                       }, 16);
                               }));
-                } else y(e, !0), w(!0);
+                } else Z(e, !0), M(!0);
             },
-            [R, y, O, D]
+            [R, Z, O, D]
         );
     return (0, i.jsxs)('div', {
         className: s()(h.mainContainer, p),
-        ref: v,
+        ref: f,
         tabIndex: 0,
         onKeyUp: b,
         children: [
             (0, i.jsxs)(x, {
-                ref: I,
-                onClick: B,
+                ref: v,
+                onClick: U,
                 children: [
                     D.map((e, t) =>
                         (0, i.jsx)(
@@ -142,35 +136,35 @@ function p(e) {
                             {
                                 value: e,
                                 onChange: S(t),
-                                onBlur: U,
-                                onFocus: G(t),
-                                onRemove: () => E(t),
+                                onBlur: G,
+                                onFocus: B(t),
+                                onRemove: () => T(t),
                                 isSelected: O.includes(e),
-                                isSelecting: M,
+                                isSelecting: k,
                                 error: u[e],
-                                forceShowErrorTooltip: !k && t === D.length - 1
+                                forceShowErrorTooltip: !w && t === D.length - 1
                             },
                             t
                         )
                     ),
                     (0, i.jsx)('input', {
-                        className: s()(h.mainTextInput, { [h.isEditingOtherNodes]: k }),
+                        className: s()(h.mainTextInput, { [h.isEditingOtherNodes]: w }),
                         ref: C,
-                        onChange: T,
-                        onKeyDownCapture: j,
-                        onPaste: _,
-                        onBlur: Z,
+                        onChange: I,
+                        onKeyDownCapture: E,
+                        onPaste: j,
+                        onBlur: A,
                         placeholder: 0 === D.length ? g : void 0,
                         value: L
                     })
                 ]
             }),
-            null != f &&
+            null != _ &&
                 (0, i.jsxs)(a.Text, {
                     variant: 'text-xs/normal',
                     color: 'text-muted',
                     className: h.maxTags,
-                    children: [null !== (t = null == D ? void 0 : D.length) && void 0 !== t ? t : 0, '/', f]
+                    children: [null !== (t = null == D ? void 0 : D.length) && void 0 !== t ? t : 0, '/', _]
                 })
         ]
     });

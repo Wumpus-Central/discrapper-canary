@@ -1,36 +1,33 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    var n = 'styczeń_luty_marzec_kwiecień_maj_czerwiec_lipiec_sierpień_wrzesień_październik_listopad_grudzień'.split('_'),
-        r = 'stycznia_lutego_marca_kwietnia_maja_czerwca_lipca_sierpnia_września_października_listopada_grudnia'.split('_');
+    var t = 'styczeń_luty_marzec_kwiecień_maj_czerwiec_lipiec_sierpień_wrzesień_październik_listopad_grudzień'.split('_'),
+        n = 'stycznia_lutego_marca_kwietnia_maja_czerwca_lipca_sierpnia_września_października_listopada_grudnia'.split('_');
     function i(e) {
         return e % 10 < 5 && e % 10 > 1 && ~~(e / 10) % 10 != 1;
     }
-    function a(e, n, r) {
-        var a = e + ' ';
-        switch (r) {
+    function r(e, t, n) {
+        var r = e + ' ';
+        switch (n) {
             case 'ss':
-                return a + (i(e) ? 'sekundy' : 'sekund');
+                return r + (i(e) ? 'sekundy' : 'sekund');
             case 'm':
-                return n ? 'minuta' : 'minutę';
+                return t ? 'minuta' : 'minutę';
             case 'mm':
-                return a + (i(e) ? 'minuty' : 'minut');
+                return r + (i(e) ? 'minuty' : 'minut');
             case 'h':
-                return n ? 'godzina' : 'godzinę';
+                return t ? 'godzina' : 'godzinę';
             case 'hh':
-                return a + (i(e) ? 'godziny' : 'godzin');
+                return r + (i(e) ? 'godziny' : 'godzin');
             case 'MM':
-                return a + (i(e) ? 'miesiące' : 'miesięcy');
+                return r + (i(e) ? 'miesiące' : 'miesięcy');
             case 'yy':
-                return a + (i(e) ? 'lata' : 'lat');
+                return r + (i(e) ? 'lata' : 'lat');
         }
     }
     return e.defineLocale('pl', {
         months: function (e, i) {
-            if (!e) return n;
-            if ('' === i) return '(' + r[e.month()] + '|' + n[e.month()] + ')';
-            if (/D MMMM/.test(i)) return r[e.month()];
-            else return n[e.month()];
+            return e ? ('' === i ? '(' + n[e.month()] + '|' + t[e.month()] + ')' : /D MMMM/.test(i) ? n[e.month()] : t[e.month()]) : t;
         },
         monthsShort: 'sty_lut_mar_kwi_maj_cze_lip_sie_wrz_paź_lis_gru'.split('_'),
         weekdays: 'niedziela_poniedziałek_wtorek_środa_czwartek_piątek_sobota'.split('_'),
@@ -80,17 +77,17 @@
             future: 'za %s',
             past: '%s temu',
             s: 'kilka sekund',
-            ss: a,
-            m: a,
-            mm: a,
-            h: a,
-            hh: a,
+            ss: r,
+            m: r,
+            mm: r,
+            h: r,
+            hh: r,
             d: '1 dzień',
             dd: '%d dni',
             M: 'miesiąc',
-            MM: a,
+            MM: r,
             y: 'rok',
-            yy: a
+            yy: r
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: '%d.',

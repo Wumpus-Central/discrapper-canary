@@ -1,6 +1,7 @@
-e.exports = {
-    clickable: 'clickable_c18810',
-    trait: 'trait_c18810',
-    selectable: 'selectable_c18810',
-    selected: 'selected_c18810'
+var i = {
+    clickable: 'clickable_f01e54',
+    trait: 'trait_f01e54',
+    selectable: 'selectable_f01e54',
+    selected: 'selected_f01e54'
 };
+e.exports = i;

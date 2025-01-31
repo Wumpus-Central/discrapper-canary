@@ -1,30 +1,26 @@
-r.d(n, {
-    Z: function () {
-        return u;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(442837),
-    o = r(481060),
-    s = r(846027),
-    l = r(131951);
-function u() {
-    let e = (0, a.e7)([l.Z], () => Object.values(l.Z.getVideoDevices())),
-        n = (0, a.e7)([l.Z], () => l.Z.getVideoDeviceId());
+n.d(t, { Z: () => l });
+var i = n(200651);
+n(192379);
+var r = n(442837),
+    a = n(481060),
+    s = n(846027),
+    o = n(131951);
+function l() {
+    let e = (0, r.e7)([o.Z], () => Object.values(o.Z.getVideoDevices())),
+        t = (0, r.e7)([o.Z], () => o.Z.getVideoDeviceId());
     return e.map((e) => {
-        let { id: r, disabled: a, name: l } = e;
+        let { id: n, disabled: r, name: o } = e;
         return (0, i.jsx)(
-            o.MenuRadioItem,
+            a.k5B,
             {
                 group: 'video-devices',
-                id: 'video-device-'.concat(r),
-                disabled: a,
-                label: l,
-                checked: r === n,
-                action: () => s.Z.setVideoDevice(r)
+                id: 'video-device-'.concat(n),
+                disabled: r,
+                label: o,
+                checked: n === t,
+                action: () => s.Z.setVideoDevice(n)
             },
-            'video-device-'.concat(r)
+            'video-device-'.concat(n)
         );
     });
 }

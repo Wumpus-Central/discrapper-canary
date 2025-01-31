@@ -1,10 +1,6 @@
 t.d(e, {
-    h: function () {
-        return s;
-    },
-    m: function () {
-        return u;
-    }
+    h: () => s,
+    m: () => u
 });
 var i = t(200651);
 t(192379);
@@ -17,7 +13,7 @@ let s = (n) => {
     return (0, i.jsxs)('div', {
         className: o.confirmationContainer,
         children: [
-            (0, i.jsx)(l.Heading, {
+            (0, i.jsx)(l.X6q, {
                 className: o.confirmationHeader,
                 variant: 'heading-lg/extrabold',
                 children: s
@@ -34,22 +30,22 @@ let s = (n) => {
                 className: o.buttonContainer,
                 children: [
                     d &&
-                        (0, i.jsx)(l.Button, {
+                        (0, i.jsx)(l.zxk, {
                             fullWidth: !0,
                             onClick: () => (0, r.Z)('application_sub_mweb_success_modal'),
                             children: a.intl.string(a.t['8L5bZG'])
                         }),
-                    (0, i.jsx)(l.Button, {
+                    (0, i.jsx)(l.zxk, {
                         fullWidth: !0,
-                        color: l.Button.Colors.PRIMARY,
+                        color: l.zxk.Colors.PRIMARY,
                         onClick: e,
                         children: c
                     }),
                     null != t &&
-                        (0, i.jsx)(l.Button, {
+                        (0, i.jsx)(l.zxk, {
                             fullWidth: !0,
-                            color: l.Button.Colors.PRIMARY,
-                            look: l.Button.Looks.LINK,
+                            color: l.zxk.Colors.PRIMARY,
+                            look: l.zxk.Looks.LINK,
                             onClick: t,
                             children: a.intl.string(a.t.iAfxo6)
                         })
@@ -63,7 +59,7 @@ function u(n) {
     return (0, i.jsxs)('div', {
         className: o.confirmationContainer,
         children: [
-            (0, i.jsx)(l.Heading, {
+            (0, i.jsx)(l.X6q, {
                 className: o.confirmationHeader,
                 variant: 'heading-lg/extrabold',
                 children: a.intl.format(a.t['wLFT6+'], { tier: t })
@@ -77,14 +73,14 @@ function u(n) {
             (0, i.jsxs)('div', {
                 className: o.buttonContainer,
                 children: [
-                    (0, i.jsx)(l.Button, {
+                    (0, i.jsx)(l.zxk, {
                         className: o.__invalid_openDiscordButton,
                         onClick: () => (0, r.Z)('application_sub_mweb_success_modal'),
                         children: a.intl.string(a.t['8L5bZG'])
                     }),
-                    (0, i.jsx)(l.Button, {
+                    (0, i.jsx)(l.zxk, {
                         className: o.__invalid_doneButton,
-                        look: l.Button.Looks.BLANK,
+                        look: l.zxk.Looks.BLANK,
                         onClick: e,
                         children: a.intl.string(a.t.nlkyw8)
                     })

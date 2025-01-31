@@ -1,9 +1,5 @@
-n.d(t, {
-    L: function () {
-        return r;
-    }
-});
-var i = n(782568);
-function r(e) {
-    return (0, i.Z)(e);
+n.d(e, { L: () => i });
+var a = n(782568);
+function i(t) {
+    return (0, a.Z)(t);
 }

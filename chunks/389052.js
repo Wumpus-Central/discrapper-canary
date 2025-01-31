@@ -1,37 +1,32 @@
-r.d(n, {
-    Z: function () {
-        return m;
-    }
-});
-var i = r(627341);
-var a = r(200651);
-r(192379);
-var o = r(278074),
-    s = r(442837),
-    l = r(481060),
-    u = r(194359),
-    c = r(922611),
-    d = r(478923),
-    f = r(681678),
-    p = r(699516),
-    h = r(594174),
-    _ = r(388032);
-function m(e) {
-    let { user: n, color: r, guildId: i, channelId: m, onBlock: g, onIgnore: E, onUnblock: v, location: y = 'ContextMenu' } = e,
-        { id: b } = n,
-        I = (0, s.e7)(
-            [h.default],
+n.d(t, { Z: () => p }), n(627341);
+var i = n(200651);
+n(192379);
+var r = n(278074),
+    a = n(442837),
+    s = n(481060),
+    o = n(194359),
+    l = n(922611),
+    u = n(478923),
+    c = n(681678),
+    d = n(699516),
+    f = n(594174),
+    _ = n(388032);
+function p(e) {
+    let { user: t, color: n, guildId: p, channelId: h, onBlock: m, onIgnore: g, onUnblock: E, location: v = 'ContextMenu' } = e,
+        { id: y } = t,
+        I = (0, a.e7)(
+            [f.default],
             () => {
                 var e;
-                return (null === (e = h.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === b;
+                return (null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === y;
             },
-            [b]
+            [y]
         ),
-        T = (0, s.e7)([p.Z], () => p.Z.isBlocked(b), [b]),
-        S = (0, c.Do)({ location: 'use-block-user-item-web' }),
-        A = (0, o.EQ)({
-            isStealthRemediationEnabled: S,
-            isBlocked: T
+        b = (0, a.e7)([d.Z], () => d.Z.isBlocked(y), [y]),
+        T = (0, l.Do)({ location: 'use-block-user-item-web' }),
+        S = (0, r.EQ)({
+            isStealthRemediationEnabled: T,
+            isBlocked: b
         })
             .with(
                 {
@@ -47,27 +42,27 @@ function m(e) {
                 },
                 () => 'danger'
             )
-            .otherwise(() => r);
+            .otherwise(() => n);
     return I
         ? null
-        : (0, a.jsx)(l.MenuItem, {
+        : (0, i.jsx)(s.sNh, {
               id: 'block',
-              color: null != A ? A : 'default',
-              label: T ? _.intl.string(_.t.XyHpKC) : _.intl.string(_.t.l4EmaW),
-              action: T
+              color: null != S ? S : 'default',
+              label: b ? _.intl.string(_.t.XyHpKC) : _.intl.string(_.t.l4EmaW),
+              action: b
                   ? () => {
-                        null == v || v(), u.Z.unblockUser(b, { location: y }), f.Z.showUnblockSuccessToast(b, null != m ? m : void 0);
+                        null == E || E(), o.Z.unblockUser(y, { location: v }), c.Z.showUnblockSuccessToast(y, null != h ? h : void 0);
                     }
                   : () => {
-                        (0, l.openModal)((e) =>
-                            (0, a.jsx)(d.Z, {
+                        (0, s.h7j)((e) =>
+                            (0, i.jsx)(u.Z, {
                                 ...e,
-                                user: n,
-                                guildId: i,
-                                channelId: m,
-                                onBlock: g,
-                                onIgnore: E,
-                                location: y
+                                user: t,
+                                guildId: p,
+                                channelId: h,
+                                onBlock: m,
+                                onIgnore: g,
+                                location: v
                             })
                         );
                     }

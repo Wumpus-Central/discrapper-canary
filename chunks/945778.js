@@ -1,9 +1,4 @@
-r.r(t),
-    r.d(t, {
-        default: function () {
-            return s;
-        }
-    });
+r.r(t), r.d(t, { default: () => s });
 var n = r(200651);
 r(192379);
 var a = r(238246),

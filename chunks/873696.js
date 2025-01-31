@@ -1,8 +1,4 @@
-n.d(t, {
-    D: function () {
-        return l;
-    }
-});
+n.d(t, { D: () => l });
 var i = n(388032);
 function l(e) {
     if (null == e) return null;

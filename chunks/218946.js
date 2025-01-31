@@ -8,8 +8,4 @@ function i(e) {
         mimeType: e.mime_type
     };
 }
-r.d(n, {
-    m: function () {
-        return i;
-    }
-});
+n.d(t, { m: () => i });

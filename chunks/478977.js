@@ -1,34 +1,35 @@
-var o = n(200651);
+n.d(t, { Z: () => i });
+var s = n(200651);
 n(192379);
 var r = n(866442),
-    s = n(481060),
-    a = n(102787);
-t.Z = function (e) {
+    a = n(481060),
+    o = n(102787);
+let i = function (e) {
     let { colorKey: t, value: n, onChange: i, title: l } = e;
-    return (0, o.jsxs)(s.FormItem, {
+    return (0, s.jsxs)(a.xJW, {
         children: [
-            (0, o.jsx)(s.FormTitle, {
-                tag: s.FormTitleTags.H5,
+            (0, s.jsx)(a.vwX, {
+                tag: a.RB0.H5,
                 children: l
             }),
-            (0, o.jsx)(s.Popout, {
+            (0, s.jsx)(a.yRy, {
                 renderPopout: (e) =>
-                    (0, o.jsx)(s.CustomColorPicker, {
+                    (0, s.jsx)(a.Z$W, {
                         ...e,
                         value: n,
                         onChange: (e) => i(t, (0, r.Rf)(e))
                     }),
                 children: (e) =>
-                    (0, o.jsx)(s.Clickable, {
+                    (0, s.jsx)(a.P3F, {
                         ...e,
                         tag: 'span',
                         'aria-label': 'Select a color',
-                        className: a.swatchContainer,
+                        className: o.swatchContainer,
                         style: { backgroundColor: n },
-                        children: (0, o.jsx)(s.EyeDropperIcon, {
+                        children: (0, s.jsx)(a.ilE, {
                             size: 'xs',
                             color: 'currentColor',
-                            className: a.swatchIcon
+                            className: o.swatchIcon
                         })
                     })
             })

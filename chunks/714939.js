@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-});
+n.d(t, { Z: () => o });
 var i = n(200651);
 n(192379);
 var r = n(481060),
@@ -11,13 +7,13 @@ var r = n(481060),
     a = n(537487);
 function o(e) {
     let { role: t, onClick: n } = e;
-    return (0, i.jsxs)(r.Clickable, {
+    return (0, i.jsxs)(r.P3F, {
         className: a.container,
         onClick: n,
         children: [
             (0, i.jsx)('div', {
                 className: a.icon,
-                children: (0, i.jsx)(r.GroupIcon, {
+                children: (0, i.jsx)(r.BFJ, {
                     size: 'custom',
                     color: 'currentColor',
                     width: 20,

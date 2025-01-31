@@ -1,12 +1,11 @@
-e.exports = {
-    container: 'container_efc1ac',
-    body: 'body_efc1ac',
-    pointer: 'pointer_efc1ac',
-    popoutTarget: 'popoutTarget_efc1ac',
-    text: 'text_efc1ac',
-    coachmark: 'coachmark_efc1ac',
-    dmButtonContainer: 'dmButtonContainer_efc1ac',
-    dmButton: 'dmButton_efc1ac',
-    closeButton: 'closeButton_efc1ac',
-    closeIcon: 'closeIcon_efc1ac'
+var i = {
+    container: 'container__5a2d9',
+    body: 'body__5a2d9',
+    pointer: 'pointer__5a2d9',
+    text: 'text__5a2d9',
+    coachmark: 'coachmark__5a2d9',
+    button: 'button__5a2d9',
+    closeButton: 'closeButton__5a2d9',
+    closeIcon: 'closeIcon__5a2d9'
 };
+e.exports = i;

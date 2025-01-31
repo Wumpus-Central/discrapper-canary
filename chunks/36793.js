@@ -7,22 +7,22 @@ function t(e, i, n, t) {
         c = i.width * o,
         s = i.height * o,
         u = Math.min(c, t.width),
-        g = Math.min(s, t.height);
+        _ = Math.min(s, t.height);
     return {
         x: l,
         y: d,
         scaledCropWidth: c,
         scaledCropHeight: s,
         canvasWidth: u,
-        canvasHeight: g
+        canvasHeight: _
     };
 }
 function o(e, i, n, o) {
     let { x: r, y: a, scaledCropWidth: l, scaledCropHeight: d, canvasWidth: c, canvasHeight: s } = t(e, i, n, o),
         u = document.createElement('canvas');
     (u.width = c), (u.height = s);
-    let g = u.getContext('2d');
-    return null != g && g.drawImage(e, r, a, l, d, 0, 0, u.width, u.height), u.toDataURL('image/png');
+    let _ = u.getContext('2d');
+    return null != _ && _.drawImage(e, r, a, l, d, 0, 0, u.width, u.height), u.toDataURL('image/png');
 }
 function r(e, i, n) {
     let t = e.naturalWidth / e.naturalHeight,
@@ -47,13 +47,7 @@ function r(e, i, n) {
     );
 }
 n.d(i, {
-    Ae: function () {
-        return r;
-    },
-    PT: function () {
-        return o;
-    },
-    eu: function () {
-        return t;
-    }
+    Ae: () => r,
+    PT: () => o,
+    eu: () => t
 });

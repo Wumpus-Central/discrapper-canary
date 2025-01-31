@@ -1,78 +1,73 @@
-r.d(n, {
-    Z: function () {
-        return d;
-    }
-});
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(376398),
-    l = r(825040);
-function u(e) {
+n.d(t, { Z: () => u }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(376398),
+    s = n(825040);
+function o(e) {
     null != e && e.getTracks().forEach((e) => e.stop());
 }
-async function c(e) {
-    let { deviceId: n, width: r, height: i, disabled: a } = e;
-    if (a) return null;
+async function l(e) {
+    let { deviceId: t, width: n, height: i, disabled: r } = e;
+    if (r) return null;
     try {
         return await navigator.mediaDevices.getUserMedia({
             audio: !1,
             video: {
-                width: r * window.devicePixelRatio,
+                width: n * window.devicePixelRatio,
                 height: i * window.devicePixelRatio,
                 frameRate: 30,
-                deviceId: n
+                deviceId: t
             }
         });
     } catch (e) {
         return null;
     }
 }
-function d(e) {
-    let { deviceId: n, width: r, height: i, disabled: d } = e,
-        [f, p] = o.useState();
+function u(e) {
+    let { deviceId: t, width: n, height: u, disabled: c } = e,
+        [d, f] = r.useState();
     return (
-        o.useEffect(() => {
-            let e = c({
-                deviceId: n,
-                width: r,
-                height: i,
-                disabled: d
+        r.useEffect(() => {
+            let e = l({
+                deviceId: t,
+                width: n,
+                height: u,
+                disabled: c
             }).then((e) => {
-                let n = null != e ? (0, s.N7)(e) : null;
+                let t = null != e ? (0, a.N7)(e) : null;
                 return (
-                    p(n),
+                    f(t),
                     {
                         stream: e,
-                        streamId: n
+                        streamId: t
                     }
                 );
             });
             return () => {
                 e.then((e) => {
-                    let { stream: n, streamId: r } = e;
-                    u(n), null != r && (0, s.jC)(r);
+                    let { stream: t, streamId: n } = e;
+                    o(t), null != n && (0, a.jC)(n);
                 });
             };
-        }, [n, r, i, d]),
-        null == f
-            ? (0, a.jsx)('div', {
+        }, [t, n, u, c]),
+        null == d
+            ? (0, i.jsx)('div', {
                   className: 'media-engine-video',
                   style: {
-                      width: r,
-                      height: i
+                      width: n,
+                      height: u
                   }
               })
-            : (0, a.jsx)(l.Z, {
-                  streamId: f,
+            : (0, i.jsx)(s.Z, {
+                  streamId: d,
                   style: {
-                      width: r,
-                      height: i
+                      width: n,
+                      height: u
                   }
               })
     );
 }
-d.defaultProps = {
+u.defaultProps = {
     disabled: !1,
     width: 320,
     height: 180

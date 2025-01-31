@@ -1,16 +1,12 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(978856),
-    a = r(764303);
-function o(e, n) {
+n.d(t, { Z: () => a });
+var i = n(978856),
+    r = n(764303);
+function a(e, t) {
     if (null == e) return {};
-    var r,
-        o,
+    var n,
+        a,
         s = {},
-        l = i(e);
-    for (o = 0; o < l.length; o++) (r = l[o]), !(a(n).call(n, r) >= 0) && (s[r] = e[r]);
+        o = i(e);
+    for (a = 0; a < o.length; a++) (n = o[a]), r(t).call(t, n) >= 0 || (s[n] = e[n]);
     return s;
 }

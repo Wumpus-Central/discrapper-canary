@@ -1,20 +1,14 @@
-c.r(t),
-    c.d(t, {
-        CaptchaError: function () {
-            return n;
-        },
-        emitCaptchaDistributionMetric: function () {
-            return i;
-        },
-        extractCaptchaPropsFromResponse: function () {
-            return u;
-        }
+a.r(t),
+    a.d(t, {
+        CaptchaError: () => i,
+        emitCaptchaDistributionMetric: () => u,
+        extractCaptchaPropsFromResponse: () => n
     });
-var r,
-    n,
-    a = c(644947),
-    o = c(234888);
-function u(e) {
+var c,
+    r = a(644947),
+    o = a(234888),
+    i = (((c = {}).CANCEL = 'cancel'), (c.ERROR = 'error'), (c.EXPIRED = 'expired'), c);
+function n(e) {
     var t;
     return {
         captchaService: e.captcha_service,
@@ -27,7 +21,6 @@ function u(e) {
         }
     };
 }
-function i(e, t) {
-    if (!!e) (0, a._8)() && setTimeout(() => (0, a.Zq)(), o.i), (0, a.s$)(t);
+function u(e, t) {
+    e && ((0, r._8)() && setTimeout(() => (0, r.Zq)(), o.i), (0, r.s$)(t));
 }
-((r = n || (n = {})).CANCEL = 'cancel'), (r.ERROR = 'error'), (r.EXPIRED = 'expired');

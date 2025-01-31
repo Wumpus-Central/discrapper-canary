@@ -1,10 +1,6 @@
-r.d(n, {
-    I: function () {
-        return i;
-    },
-    _: function () {
-        return a;
-    }
+n.d(t, {
+    I: () => i,
+    _: () => r
 });
 let i = '643945264868098049',
-    a = 'URGENT_MESSAGE_MODAL';
+    r = 'URGENT_MESSAGE_MODAL';

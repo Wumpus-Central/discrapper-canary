@@ -1,10 +1,6 @@
-n.d(t, {
-    c: function () {
-        return p;
-    }
-});
-var i = n(200651),
-    l = n(442837),
+n.d(t, { c: () => p });
+var l = n(200651),
+    i = n(442837),
     s = n(780384),
     r = n(481060),
     a = n(410030),
@@ -15,22 +11,22 @@ var i = n(200651),
     c = n(235665);
 function p() {
     var e;
-    let t = (0, l.e7)([o.Z], () => o.Z.useReducedMotion),
+    let t = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
         n = (0, a.ZP)(),
         p = (0, s.wj)(n),
         x = null === (e = (0, d.Z)()) || void 0 === e ? void 0 : e.planSelectionBanner,
         { claimableRewards: h } = (0, C.wD)();
     return null == x || null == h
         ? null
-        : (0, i.jsxs)('div', {
+        : (0, l.jsxs)('div', {
               className: c.promotionalFooterBanner,
               children: [
-                  (0, i.jsx)(u.Z, {
+                  (0, l.jsx)(u.Z, {
                       claimableRewards: h,
                       maxRewardImageSrc: x.getImageUrl(p, t),
-                      size: r.AvatarSizes.SIZE_32
+                      size: r.EFr.SIZE_32
                   }),
-                  (0, i.jsx)(r.Text, {
+                  (0, l.jsx)(r.Text, {
                       variant: 'text-md/medium',
                       className: c.bannerText,
                       children: x.desktopBannerText(h.length)

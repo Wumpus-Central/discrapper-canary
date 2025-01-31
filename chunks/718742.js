@@ -1,69 +1,68 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return f;
-        }
-    }),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
-    a = n(481060),
-    c = n(585483),
-    o = n(637538),
-    s = n(747387),
-    p = n(981631),
-    d = n(388032),
-    l = n(172857),
-    u = n(480781);
-let h = new Set([a.ModalTransitionState.ENTERING, a.ModalTransitionState.ENTERED]);
-function f(e) {
-    let { onClose: t, onCaptchaVerify: n, onReject: f, transitionState: v, headerText: m, bodyText: y, rqtoken: C, serveInvisible: E, ...b } = e,
-        _ = (0, o.Z)(f);
-    return (i.useEffect(() => {
-        c.S.subscribe(p.CkL.LAYER_POP_ESCAPE_KEY, t);
+n.d(t, { default: () => C }), n(47120);
+var a = n(200651),
+    r = n(192379),
+    i = n(120356),
+    c = n.n(i),
+    o = n(481060),
+    s = n(540059),
+    p = n(585483),
+    d = n(637538),
+    l = n(747387),
+    h = n(981631),
+    u = n(388032),
+    f = n(172857),
+    v = n(480781),
+    m = n(140238);
+let y = new Set([o.Dvm.ENTERING, o.Dvm.ENTERED]);
+function C(e) {
+    let { onClose: t, onCaptchaVerify: n, onReject: i, transitionState: C, headerText: E, bodyText: b, rqtoken: _, serveInvisible: R, ...x } = e,
+        g = (0, d.Z)(i),
+        w = (0, s.Q3)('CaptchaModal');
+    return (r.useEffect(() => {
+        p.S.subscribe(h.CkL.LAYER_POP_ESCAPE_KEY, t);
     }, [t]),
-    null != v && h.has(v))
-        ? (0, r.jsx)(a.ModalRoot, {
-              transitionState: v,
+    null != C && y.has(C))
+        ? (0, a.jsx)(o.Y0X, {
+              transitionState: C,
               'aria-label': 'CAPTCHA',
-              className: l.modal,
-              children: (0, r.jsxs)(a.ModalContent, {
-                  className: l.container,
+              className: c()(f.modal, f.gradientBorder),
+              children: (0, a.jsxs)(o.hzk, {
+                  className: f.container,
                   children: [
-                      (0, r.jsx)(a.ModalCloseButton, {
-                          className: l.close,
+                      (0, a.jsx)(o.olH, {
+                          className: f.close,
                           onClick: t
                       }),
-                      (0, r.jsx)('div', {
-                          className: l.content,
+                      (0, a.jsx)('div', {
+                          className: f.content,
                           children:
-                              v !== a.ModalTransitionState.ENTERED
-                                  ? (0, r.jsx)(a.Spinner, { type: a.Spinner.Type.SPINNING_CIRCLE })
-                                  : (0, r.jsxs)(r.Fragment, {
+                              C !== o.Dvm.ENTERED
+                                  ? (0, a.jsx)(o.$jN, { type: o.$jN.Type.SPINNING_CIRCLE })
+                                  : (0, a.jsxs)(a.Fragment, {
                                         children: [
-                                            (0, r.jsx)('div', {
-                                                children: (0, r.jsx)('img', {
-                                                    src: u,
+                                            (0, a.jsx)('div', {
+                                                children: (0, a.jsx)('img', {
+                                                    src: w ? m : v,
                                                     alt: ''
                                                 })
                                             }),
-                                            (0, r.jsx)('div', {
-                                                className: l.title,
+                                            (0, a.jsx)('div', {
+                                                className: f.title,
                                                 'aria-hidden': !0,
-                                                children: null != m ? m : d.intl.string(d.t.FpoiHR)
+                                                children: null != E ? E : u.intl.string(u.t.FpoiHR)
                                             }),
-                                            (0, r.jsx)('div', { children: null != y ? y : d.intl.string(d.t['/CidxM']) }),
-                                            (0, r.jsxs)('div', {
-                                                className: l.captchaContainer,
+                                            (0, a.jsx)('div', { children: null != b ? b : u.intl.string(u.t['/CidxM']) }),
+                                            (0, a.jsxs)('div', {
+                                                className: f.captchaContainer,
                                                 children: [
-                                                    E && (0, r.jsx)(a.Spinner, { type: a.Spinner.Type.SPINNING_CIRCLE }),
-                                                    (0, r.jsx)(s.Z, {
-                                                        size: E ? 'invisible' : void 0,
+                                                    R && (0, a.jsx)(o.$jN, { type: o.$jN.Type.SPINNING_CIRCLE }),
+                                                    (0, a.jsx)(l.Z, {
+                                                        size: R ? 'invisible' : void 0,
                                                         onVerify: (e) => {
-                                                            _(), n(e, C), t();
+                                                            g(), n(e, _), t();
                                                         },
-                                                        onClose: E ? t : void 0,
-                                                        ...b
+                                                        onClose: R ? t : void 0,
+                                                        ...x
                                                     })
                                                 ]
                                             })

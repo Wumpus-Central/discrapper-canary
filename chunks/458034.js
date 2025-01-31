@@ -1,48 +1,42 @@
-r.d(n, {
-    Am: function () {
-        return f;
-    },
-    ZP: function () {
-        return p;
-    },
-    s$: function () {
-        return c;
-    }
+n.d(t, {
+    Am: () => d,
+    ZP: () => f,
+    s$: () => u
 });
-var i = r(200651);
-r(192379);
-var a = r(442837),
-    o = r(481060),
-    s = r(430824),
-    l = r(275759),
-    u = r(388032);
-let c = 'guild-connection-roles';
-function d() {
+var i = n(200651);
+n(192379);
+var r = n(442837),
+    a = n(481060),
+    s = n(430824),
+    o = n(275759),
+    l = n(388032);
+let u = 'guild-connection-roles';
+function c() {
     return {
-        modalKey: c,
-        contextKey: o.DEFAULT_MODAL_CONTEXT,
+        modalKey: u,
+        contextKey: a.z1l,
         onCloseRequest: () => {
-            (0, o.closeModal)(c, o.DEFAULT_MODAL_CONTEXT);
+            (0, a.Mr3)(u, a.z1l);
         }
     };
 }
-function f(e) {
-    (0, o.openModalLazy)(async () => {
-        let { default: n } = await r.e('40897').then(r.bind(r, 507294));
-        return (r) =>
-            (0, i.jsx)(n, {
-                ...r,
+function d(e) {
+    (0, a.ZDy)(async () => {
+        let { default: t } = await n.e('40897').then(n.bind(n, 507294));
+        return (n) =>
+            (0, i.jsx)(t, {
+                ...n,
                 guildId: e
             });
-    }, d());
+    }, c());
 }
-function p(e) {
-    return (0, a.e7)([s.Z], () => (0, l.kQ)(e, s.Z.getRoles(e.id)), [e])
-        ? (0, i.jsx)(o.MenuItem, {
+function f(e) {
+    return (0, r.e7)([s.Z], () => (0, o.kQ)(e, s.Z.getRoles(e.id)), [e])
+        ? (0, i.jsx)(a.sNh, {
               id: 'guild-connection-roles',
-              label: u.intl.string(u.t.ghtnsr),
-              icon: o.LinkIcon,
-              action: () => f(e.id)
+              label: l.intl.string(l.t.ghtnsr),
+              icon: a.xPt,
+              action: () => d(e.id)
           })
         : null;
 }

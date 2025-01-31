@@ -1,80 +1,76 @@
-r.d(n, {
-    r: function () {
-        return d;
-    }
-});
-var i = r(192379),
-    a = r(298503),
-    o = r(632590),
-    s = r(283209),
-    l = function () {},
-    u = function () {
+n.d(t, { r: () => c });
+var i = n(192379),
+    r = n(298503),
+    a = n(632590),
+    s = n(283209),
+    o = function () {},
+    l = function () {
         return Promise.resolve(null);
     },
-    c = [];
-function d(e) {
-    var n = e.placement,
-        r = void 0 === n ? 'bottom' : n,
-        d = e.strategy,
-        f = void 0 === d ? 'absolute' : d,
-        p = e.modifiers,
-        h = void 0 === p ? c : p,
-        _ = e.referenceElement,
-        m = e.onFirstUpdate,
-        g = e.innerRef,
-        E = e.children,
-        v = i.useContext(a.C8),
-        y = i.useState(null),
-        b = y[0],
-        I = y[1],
-        T = i.useState(null),
-        S = T[0],
-        A = T[1];
+    u = [];
+function c(e) {
+    var t = e.placement,
+        n = void 0 === t ? 'bottom' : t,
+        c = e.strategy,
+        d = void 0 === c ? 'absolute' : c,
+        f = e.modifiers,
+        _ = void 0 === f ? u : f,
+        p = e.referenceElement,
+        h = e.onFirstUpdate,
+        m = e.innerRef,
+        g = e.children,
+        E = i.useContext(r.C8),
+        v = i.useState(null),
+        y = v[0],
+        I = v[1],
+        b = i.useState(null),
+        T = b[0],
+        S = b[1];
     i.useEffect(
         function () {
-            (0, o.k$)(g, b);
+            (0, a.k$)(m, y);
         },
-        [g, b]
+        [m, y]
     );
-    var C = i.useMemo(
+    var A = i.useMemo(
             function () {
                 return {
-                    placement: r,
-                    strategy: f,
-                    onFirstUpdate: m,
-                    modifiers: [].concat(h, [
+                    placement: n,
+                    strategy: d,
+                    onFirstUpdate: h,
+                    modifiers: [].concat(_, [
                         {
                             name: 'arrow',
-                            enabled: null != S,
-                            options: { element: S }
+                            enabled: null != T,
+                            options: { element: T }
                         }
                     ])
                 };
             },
-            [r, f, m, h, S]
+            [n, d, h, _, T]
         ),
-        N = (0, s.D)(_ || v, b, C),
-        R = N.state,
-        O = N.styles,
-        D = N.forceUpdate,
-        L = N.update,
+        N = (0, s.D)(p || E, y, A),
+        C = N.state,
+        R = N.styles,
+        O = N.forceUpdate,
+        D = N.update,
         x = i.useMemo(
             function () {
                 return {
                     ref: I,
-                    style: O.popper,
-                    placement: R ? R.placement : r,
-                    hasPopperEscaped: R && R.modifiersData.hide ? R.modifiersData.hide.hasPopperEscaped : null,
-                    isReferenceHidden: R && R.modifiersData.hide ? R.modifiersData.hide.isReferenceHidden : null,
+                    style: R.popper,
+                    placement: C ? C.placement : n,
+                    hasPopperEscaped: C && C.modifiersData.hide ? C.modifiersData.hide.hasPopperEscaped : null,
+                    isReferenceHidden: C && C.modifiersData.hide ? C.modifiersData.hide.isReferenceHidden : null,
                     arrowProps: {
-                        style: O.arrow,
-                        ref: A
+                        style: R.arrow,
+                        ref: S
                     },
-                    forceUpdate: D || l,
-                    update: L || u
+                    forceUpdate: O || o,
+                    update: D || l
                 };
             },
-            [I, A, r, R, O, L, D]
+            [I, S, n, C, R, D, O]
         );
-    return (0, o.$p)(E)(x);
+    return (0, a.$p)(g)(x);
 }

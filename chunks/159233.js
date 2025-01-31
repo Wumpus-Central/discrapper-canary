@@ -1,69 +1,65 @@
-e.d(t, {
-    Z: function () {
-        return E;
-    }
-});
+e.d(n, { Z: () => E });
 var l = e(200651);
 e(192379);
 var i = e(442837),
     r = e(481060),
     u = e(357156),
     d = e(924301),
-    o = e(894017),
-    a = e(79874),
-    c = e(576749),
-    s = e(388032);
-function E(n) {
-    let { guildEventId: t, guild: E, channel: g, recurrenceId: f, isRecurrenceItem: _ } = n,
-        { canManageGuildEvent: v } = (0, u.XJ)(null != g ? g : E),
-        Z = (0, i.e7)([d.ZP], () => d.ZP.getGuildScheduledEvent(t)),
-        h = v(Z),
-        m = (0, c.Z)(),
-        T = (0, o.Z)(f, null == Z ? void 0 : Z.id),
-        I = (0, a.zI)(t, f);
-    if (!h || null == I || null == Z) return null;
-    let N = null != Z.recurrence_rule && !_,
-        p = (n) => {
-            (null == f || n) && !_
-                ? (0, r.openModalLazy)(async () => {
-                      let { default: n } = await Promise.all([e.e('58023'), e.e('4808')]).then(e.bind(e, 779250));
+    a = e(894017),
+    s = e(79874),
+    o = e(576749),
+    c = e(388032);
+function E(t) {
+    let { guildEventId: n, guild: E, channel: g, recurrenceId: v, isRecurrenceItem: h } = t,
+        { canManageGuildEvent: _ } = (0, u.XJ)(null != g ? g : E),
+        f = (0, i.e7)([d.ZP], () => d.ZP.getGuildScheduledEvent(n)),
+        Z = _(f),
+        N = (0, o.Z)(),
+        T = (0, a.Z)(v, null == f ? void 0 : f.id),
+        m = (0, s.zI)(n, v);
+    if (!Z || null == m || null == f) return null;
+    let p = null != f.recurrence_rule && !h,
+        S = (t) => {
+            (null == v || t) && !h
+                ? (0, r.ZDy)(async () => {
+                      let { default: t } = await Promise.all([e.e('58023'), e.e('4808')]).then(e.bind(e, 779250));
                       return (e) =>
-                          (0, l.jsx)(n, {
+                          (0, l.jsx)(t, {
                               ...e,
-                              guildScheduledEventId: t,
+                              guildScheduledEventId: n,
                               guildId: E.id
                           });
-                  }, m)
-                : null != f &&
-                  (0, r.openModalLazy)(async () => {
-                      let { default: n } = await e.e('27919').then(e.bind(e, 379038));
-                      return (t) =>
-                          (0, l.jsx)(n, {
-                              ...t,
-                              guildEvent: Z,
-                              recurrenceId: f
+                  }, N)
+                : null != v &&
+                  (0, r.ZDy)(async () => {
+                      let { default: t } = await e.e('27919').then(e.bind(e, 379038));
+                      return (n) =>
+                          (0, l.jsx)(t, {
+                              ...n,
+                              guildEvent: f,
+                              recurrenceId: v
                           });
-                  }, m);
+                  }, N);
         };
-    return (0, l.jsx)(r.MenuItem, {
-        id: s.intl.string(s.t.Rgy2dX),
-        label: s.intl.string(s.t.Rgy2dX),
-        action: N ? void 0 : () => p(!0),
+    return (0, l.jsx)(r.sNh, {
+        id: c.intl.string(c.t.Rgy2dX),
+        label: c.intl.string(c.t.Rgy2dX),
+        action: p ? void 0 : () => S(!0),
         children:
-            N &&
+            p &&
             (0, l.jsxs)(l.Fragment, {
                 children: [
-                    (0, l.jsx)(r.MenuItem, {
-                        id: s.intl.string(s.t.wmVmXF),
-                        label: s.intl.string(s.t.wmVmXF),
-                        action: () => p(!1),
-                        disabled: (null == T ? void 0 : T.is_canceled) || I.startTime.getTime() < Date.now()
+                    (0, l.jsx)(r.sNh, {
+                        id: c.intl.string(c.t.wmVmXF),
+                        label: c.intl.string(c.t.wmVmXF),
+                        action: () => S(!1),
+                        disabled: (null == T ? void 0 : T.is_canceled) || m.startTime.getTime() < Date.now()
                     }),
-                    (0, l.jsx)(r.MenuItem, {
-                        id: s.intl.string(s.t.BW1Qoq),
-                        label: s.intl.string(s.t.BW1Qoq),
-                        action: () => p(!0),
-                        disabled: new Date(Z.scheduled_start_time).getTime() < Date.now()
+                    (0, l.jsx)(r.sNh, {
+                        id: c.intl.string(c.t.BW1Qoq),
+                        label: c.intl.string(c.t.BW1Qoq),
+                        action: () => S(!0),
+                        disabled: new Date(f.scheduled_start_time).getTime() < Date.now()
                     })
                 ]
             })

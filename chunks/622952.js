@@ -1,11 +1,12 @@
-e.exports = {
-    modalPreview: 'modalPreview_aba31b',
-    smallDecorationPreview: 'smallDecorationPreview_aba31b',
-    previewSections: 'previewSections_aba31b',
-    decorationPreview: 'decorationPreview_aba31b',
-    smallDecorationPreviewsContainer: 'smallDecorationPreviewsContainer_aba31b',
-    shopPreviewContainer: 'shopPreviewContainer_aba31b',
-    shopPreviewBanner: 'shopPreviewBanner_aba31b',
-    shopPreviewTextContainer: 'shopPreviewTextContainer_aba31b',
-    purchaseInfo: 'purchaseInfo_aba31b'
+var i = {
+    modalPreview: 'modalPreview__51743',
+    smallDecorationPreview: 'smallDecorationPreview__51743',
+    previewSections: 'previewSections__51743',
+    decorationPreview: 'decorationPreview__51743',
+    smallDecorationPreviewsContainer: 'smallDecorationPreviewsContainer__51743',
+    shopPreviewContainer: 'shopPreviewContainer__51743',
+    shopPreviewBanner: 'shopPreviewBanner__51743',
+    shopPreviewTextContainer: 'shopPreviewTextContainer__51743',
+    purchaseInfo: 'purchaseInfo__51743'
 };
+e.exports = i;

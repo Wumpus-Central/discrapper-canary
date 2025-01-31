@@ -1,12 +1,3 @@
-var e, o;
-n.d(t, {
-    u: function () {
-        return e;
-    }
-}),
-    ((o = e || (e = {}))[(o.DROP = 0)] = 'DROP'),
-    (o[(o.INITIALIZE = 1)] = 'INITIALIZE'),
-    (o[(o.VISIBILITY_CHANGE = 2)] = 'VISIBILITY_CHANGE'),
-    (o[(o.STATE_CHANGE = 3)] = 'STATE_CHANGE'),
-    (o[(o.FIRST_DRAW = 4)] = 'FIRST_DRAW'),
-    (o[(o.ERROR = 5)] = 'ERROR');
+i.d(e, { u: () => n });
+var r,
+    n = (((r = {})[(r.DROP = 0)] = 'DROP'), (r[(r.INITIALIZE = 1)] = 'INITIALIZE'), (r[(r.VISIBILITY_CHANGE = 2)] = 'VISIBILITY_CHANGE'), (r[(r.STATE_CHANGE = 3)] = 'STATE_CHANGE'), (r[(r.FIRST_DRAW = 4)] = 'FIRST_DRAW'), (r[(r.ERROR = 5)] = 'ERROR'), r);

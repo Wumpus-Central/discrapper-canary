@@ -1,35 +1,30 @@
-r.d(n, {
-    J: function () {
-        return d;
-    }
-});
-var i = r(47120);
-var a = r(592125),
-    o = r(771845),
-    s = r(553245),
-    l = r(814074),
-    u = r(989263),
-    c = r(981631);
-function d(e, n) {
-    if (e.totalLength >= n) return e;
-    let r = new s.b(e.primaryCapacity, e.extendedCapacity),
-        i = n - e.totalLength;
-    for (let n of o.ZP.getGuildFolders()) for (let o of n.guildIds) for (let n of Object.values(a.Z.getMutableBasicGuildChannelsForGuild(o))) if ((f(n) && (0, u.v)(n) && !(0, l.Hr)(n) && p(o, n, r), r.totalLength >= i)) return h(r, e);
-    return h(r, e);
+n.d(t, { J: () => u }), n(47120);
+var i = n(592125),
+    r = n(771845),
+    a = n(553245),
+    s = n(814074),
+    o = n(989263),
+    l = n(981631);
+function u(e, t) {
+    if (e.totalLength >= t) return e;
+    let n = new a.b(e.primaryCapacity, e.extendedCapacity),
+        l = t - e.totalLength;
+    for (let t of r.ZP.getGuildFolders()) for (let r of t.guildIds) for (let t of Object.values(i.Z.getMutableBasicGuildChannelsForGuild(r))) if ((c(t) && (0, o.v)(t) && !(0, s.Hr)(t) && d(r, t, n), n.totalLength >= l)) return f(n, e);
+    return f(n, e);
 }
-function f(e) {
-    return e.type === c.d4z.DM || e.type === c.d4z.GROUP_DM || e.type === c.d4z.GUILD_TEXT;
+function c(e) {
+    return e.type === l.d4z.DM || e.type === l.d4z.GROUP_DM || e.type === l.d4z.GUILD_TEXT;
 }
-function p(e, n, r) {
-    !r.hasExtended(n.id) &&
-        r.put(n.id, {
+function d(e, t, n) {
+    n.hasExtended(t.id) ||
+        n.put(t.id, {
             guildId: e,
-            channelId: n.id,
-            channelType: n.type,
+            channelId: t.id,
+            channelType: t.type,
             fallback: !0
         });
 }
-function h(e, n) {
-    for (let [r, i] of n.allEntries()) e.put(r, i);
+function f(e, t) {
+    for (let [n, i] of t.allEntries()) e.put(n, i);
     return e;
 }

@@ -1,7 +1,8 @@
+n.d(t, { Z: () => T });
 var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
     s = n(636977),
     o = n(481060),
     c = n(132871),
@@ -11,8 +12,8 @@ var i = n(200651),
     m = n(859921),
     p = n(220068),
     g = n(836768),
-    f = n(766219),
-    _ = n(749681),
+    _ = n(766219),
+    f = n(749681),
     E = n(49898),
     I = n(46140),
     C = n(388032),
@@ -20,28 +21,28 @@ var i = n(200651),
 function N(e) {
     let { tab: t } = e,
         n = g.Z.useField('selectedTab'),
-        l = r.useMemo(
+        r = l.useMemo(
             () =>
                 (function (e) {
                     switch (e) {
                         case E.GlobalDiscoveryTab.SERVERS:
-                            return (0, i.jsx)(o.ServerIcon, { color: 'currentColor' });
+                            return (0, i.jsx)(o.QTo, { color: 'currentColor' });
                         case E.GlobalDiscoveryTab.APPS:
-                            return (0, i.jsx)(o.AppsIcon, { color: 'currentColor' });
+                            return (0, i.jsx)(o.jje, { color: 'currentColor' });
                         case E.GlobalDiscoveryTab.QUESTS:
-                            return (0, i.jsx)(o.QuestsIcon, { color: 'currentColor' });
+                            return (0, i.jsx)(o.qDn, { color: 'currentColor' });
                     }
                 })(t),
             [t]
         ),
-        C = r.useMemo(() => (0, f.s)(t), [t]),
+        C = l.useMemo(() => (0, _.s)(t), [t]),
         N = n === t,
-        T = r.useCallback(() => {
+        T = l.useCallback(() => {
             switch (t) {
                 case E.GlobalDiscoveryTab.QUESTS:
                     return (
                         N && p.Z.resetState(),
-                        (0, _.transitionToGlobalDiscovery)({
+                        (0, f.transitionToGlobalDiscovery)({
                             tab: E.GlobalDiscoveryTab.QUESTS,
                             location: I.dr.DISCOVERY_SIDEBAR,
                             questContent: s.j.DISCOVERY_SIDEBAR
@@ -53,23 +54,23 @@ function N(e) {
                             restorePreviousView: !0,
                             entrypoint: { name: c.n3.GLOBAL_DISCOVERY_SIDEBAR }
                         });
-                    u.Z.resetState(), (0, _.transitionToGlobalDiscovery)({ tab: t });
+                    u.Z.resetState(), (0, f.transitionToGlobalDiscovery)({ tab: t });
                     return;
                 case E.GlobalDiscoveryTab.SERVERS:
-                    if (!N) return (0, _.transitionToGlobalDiscovery)({ tab: t });
+                    if (!N) return (0, f.transitionToGlobalDiscovery)({ tab: t });
                     h.Z.resetState(), m.Z.resetState();
                     return;
                 default:
-                    return (0, _.transitionToGlobalDiscovery)({ tab: t });
+                    return (0, f.transitionToGlobalDiscovery)({ tab: t });
             }
         }, [t, N]);
-    return (0, i.jsxs)(o.Clickable, {
+    return (0, i.jsxs)(o.P3F, {
         onClick: T,
         className: a()(v.navItem, { [v.selected]: N }),
         children: [
             (0, i.jsx)('div', {
                 className: v.navItemIcon,
-                children: l
+                children: r
             }),
             (0, i.jsx)(o.Text, {
                 variant: 'text-md/medium',
@@ -79,13 +80,13 @@ function N(e) {
         ]
     });
 }
-t.Z = function () {
+let T = function () {
     return (0, i.jsxs)('div', {
         className: v.container,
         children: [
             (0, i.jsx)('div', {
                 className: v.header,
-                children: (0, i.jsx)(o.Heading, {
+                children: (0, i.jsx)(o.X6q, {
                     variant: 'text-lg/semibold',
                     children: C.intl.string(C.t['1KqYnp'])
                 })

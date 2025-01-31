@@ -1,114 +1,106 @@
-n.d(t, {
-    QN: function () {
-        return s;
-    },
-    ZP: function () {
-        return f;
-    },
-    gb: function () {
-        return p;
-    },
-    uF: function () {
-        return v;
-    }
+i.d(t, {
+    QN: () => p,
+    ZP: () => s,
+    gb: () => f,
+    uF: () => v
 }),
-    n(47120),
-    n(653041);
-var i = n(192379),
-    l = n(442837),
-    r = n(835473),
-    o = n(158776),
-    a = n(594174),
-    u = n(823379),
-    c = n(317381),
-    d = n(16609);
-function f(e, t) {
-    return p(
-        (0, l.Wu)([c.ZP], () => (null != e && null != e.id && '' !== e.id ? c.ZP.getEmbeddedActivitiesForChannel(e.id) : c.i6)),
+    i(47120),
+    i(653041);
+var l = i(192379),
+    n = i(442837),
+    a = i(835473),
+    r = i(158776),
+    d = i(594174),
+    o = i(823379),
+    u = i(317381),
+    c = i(16609);
+function s(e, t) {
+    return f(
+        (0, n.Wu)([u.ZP], () => (null != e && null != e.id && '' !== e.id ? u.ZP.getEmbeddedActivitiesForChannel(e.id) : u.i6)),
         t
     );
 }
-function s(e) {
-    let t = p((0, l.e7)([c.ZP], () => (null != e ? c.ZP.getEmbeddedActivitiesForGuild(e) : c.i6)));
-    return i.useMemo(() => {
+function p(e) {
+    let t = f((0, n.e7)([u.ZP], () => (null != e ? u.ZP.getEmbeddedActivitiesForGuild(e) : u.i6)));
+    return l.useMemo(() => {
         let e = new Map();
         return (
             t.forEach((t) => {
-                var n;
-                let i = (0, d.p)(t.embeddedActivity.location);
-                if (null == i) return;
-                let l = null !== (n = e.get(i)) && void 0 !== n ? n : [];
-                l.push(t), e.set(i, l);
+                var i;
+                let l = (0, c.p)(t.embeddedActivity.location);
+                if (null == l) return;
+                let n = null !== (i = e.get(l)) && void 0 !== i ? i : [];
+                n.push(t), e.set(l, n);
             }),
             e
         );
     }, [t]);
 }
-function p(e, t) {
-    let n = e.map((e) => e.applicationId),
-        o = (0, r.Z)(n),
-        c = new Set([]);
-    for (let t of e) for (let e of t.userIds) c.add(e);
-    let d = (0, l.Wu)(
-        [a.default],
+function f(e, t) {
+    let i = e.map((e) => e.applicationId),
+        r = (0, a.Z)(i),
+        u = new Set([]);
+    for (let t of e) for (let e of t.userIds) u.add(e);
+    let c = (0, n.Wu)(
+        [d.default],
         () => {
             let e = [];
-            for (let t of c) e.push(a.default.getUser(t));
+            for (let t of u) e.push(d.default.getUser(t));
             return e;
         },
-        [c]
+        [u]
     );
-    return i.useMemo(() => {
-        let n = new Map();
+    return l.useMemo(() => {
+        let i = new Map();
         return (
-            d.forEach((e) => {
-                null != e && n.set(e.id, e);
+            c.forEach((e) => {
+                null != e && i.set(e.id, e);
             }),
             e
-                .map((e, i) => {
-                    let l = o[i],
-                        r = [];
-                    if (null != r)
-                        for (let i of e.userIds) {
-                            let e = n.get(i);
+                .map((e, l) => {
+                    let n = r[l],
+                        a = [];
+                    if (null != a)
+                        for (let l of e.userIds) {
+                            let e = i.get(l);
                             if (null != e && null != t) {
-                                let n = t(e);
-                                null != n && r.push(n);
+                                let i = t(e);
+                                null != i && a.push(i);
                             }
                         }
-                    return null == l
+                    return null == n
                         ? null
                         : {
                               embeddedActivity: e,
-                              application: l,
-                              userParticipantAvatarUrls: r
+                              application: n,
+                              userParticipantAvatarUrls: a
                           };
                 })
-                .filter(u.lm)
+                .filter(o.lm)
         );
-    }, [e, o, d, t]);
+    }, [e, r, c, t]);
 }
 function v(e) {
-    return (0, l.e7)(
-        [o.Z],
+    return (0, n.e7)(
+        [r.Z],
         () => {
             let t = new Map();
             return (
                 e.forEach((e) => {
-                    var n;
-                    let i = o.Z.findActivity(null == e ? void 0 : e.embeddedActivity.userIds.values().next().value, (t) => {
-                        var n;
-                        return t.application_id === (null == e ? void 0 : null === (n = e.application) || void 0 === n ? void 0 : n.id);
+                    var i;
+                    let l = r.Z.findActivity(null == e ? void 0 : e.embeddedActivity.userIds.values().next().value, (t) => {
+                        var i;
+                        return t.application_id === (null == e ? void 0 : null === (i = e.application) || void 0 === i ? void 0 : i.id);
                     });
-                    t.set(null == e ? void 0 : null === (n = e.application) || void 0 === n ? void 0 : n.id, {
+                    t.set(null == e ? void 0 : null === (i = e.application) || void 0 === i ? void 0 : i.id, {
                         ...e,
-                        presenceActivity: i
+                        presenceActivity: l
                     });
                 }),
                 t
             );
         },
         [e],
-        l.pF
+        n.pF
     );
 }

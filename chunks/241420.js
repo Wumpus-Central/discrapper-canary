@@ -1,73 +1,65 @@
-n.r(t),
-    n.d(t, {
-        PrivacySettings: function () {
-            return f;
-        },
-        default: function () {
-            return g;
-        }
-    });
-var i = n(200651);
-n(192379);
-var l = n(481060),
-    r = n(546957),
-    a = n(190014),
-    o = n(301812),
-    u = n(988043),
-    s = n(919539),
-    d = n(526761),
-    h = n(388032),
-    c = n(916442);
-function f(e) {
-    let { guildId: t } = e;
-    return (0, i.jsxs)(r.Z, {
+t.d(n, { default: () => I });
+var i = t(200651);
+t(192379);
+var o = t(481060),
+    a = t(546957),
+    l = t(190014),
+    r = t(301812),
+    c = t(988043),
+    _ = t(919539),
+    u = t(526761),
+    d = t(388032),
+    s = t(916442);
+function E(e) {
+    let { guildId: n } = e;
+    return (0, i.jsxs)(a.Z, {
         children: [
-            (0, i.jsx)(u.Z, {
-                ingress: d.f4.SERVER_PRIVACY_MODAL,
-                guildId: t
+            (0, i.jsx)(c.Z, {
+                ingress: u.f4.SERVER_PRIVACY_MODAL,
+                guildId: n
             }),
-            (0, i.jsx)(s.Z, {
-                ingress: d.f4.SERVER_PRIVACY_MODAL,
-                guildId: t
+            (0, i.jsx)(_.Z, {
+                ingress: u.f4.SERVER_PRIVACY_MODAL,
+                guildId: n
             }),
-            (0, i.jsx)(o.Z, {
-                ingress: d.f4.SERVER_PRIVACY_MODAL,
-                guildId: t
+            (0, i.jsx)(r.Z, {
+                ingress: u.f4.SERVER_PRIVACY_MODAL,
+                guildId: n
             }),
-            (0, i.jsx)(a.Z, {
-                ingress: d.f4.SERVER_PRIVACY_MODAL,
-                guildId: t
+            (0, i.jsx)(l.Z, {
+                ingress: u.f4.SERVER_PRIVACY_MODAL,
+                guildId: n
             }),
-            (0, i.jsx)(l.Text, {
+            (0, i.jsx)(o.Text, {
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
-                children: h.intl.format(h.t.LNsV09, { policyLink: 'https://discord.com/safety/360043709612-our-policies' })
+                children: d.intl.format(d.t.LNsV09, { policyLink: 'https://discord.com/safety/360043709612-our-policies' })
             })
         ]
     });
 }
-function g(e) {
-    let { guild: t, transitionState: n, onClose: r } = e,
-        a = ''.concat(h.intl.string(h.t.BayiAg), '\u2014').concat(null != t ? t.toString() : '??');
-    return (0, i.jsxs)(l.ModalRoot, {
-        transitionState: n,
-        size: l.ModalSize.SMALL,
-        'aria-label': a,
+function I(e) {
+    let { guild: n, transitionState: t, onClose: a } = e,
+        l = ''.concat(d.intl.string(d.t.BayiAg), '\u2014').concat(null != n ? n.toString() : '??');
+    return (0, i.jsxs)(o.Y0X, {
+        transitionState: t,
+        size: o.CgR.SMALL,
+        'aria-label': l,
         children: [
-            (0, i.jsx)(l.ModalHeader, {
-                children: (0, i.jsx)(l.Heading, {
+            (0, i.jsx)(o.xBx, {
+                children: (0, i.jsx)(o.X6q, {
                     variant: 'heading-lg/semibold',
-                    children: a
+                    children: l
                 })
             }),
-            (0, i.jsx)(l.ModalContent, {
-                className: c.content,
-                children: (0, i.jsx)(f, { guildId: t.id })
+            (0, i.jsx)(o.hzk, {
+                className: s.content,
+                children: (0, i.jsx)(E, { guildId: n.id })
             }),
-            (0, i.jsx)(l.ModalFooter, {
-                children: (0, i.jsx)(l.Button, {
-                    onClick: () => r(),
-                    children: h.intl.string(h.t.i4jeWV)
+            (0, i.jsx)(o.mzw, {
+                children: (0, i.jsx)(o.zxk, {
+                    onClick: () => a(),
+                    children: d.intl.string(d.t.i4jeWV)
                 })
             })
         ]

@@ -1,45 +1,40 @@
-n(47120);
+n.d(t, { Z: () => x }), n(47120);
 var i,
     l,
-    r,
     a,
-    s = n(873546),
-    o = n(442837),
-    c = n(570140),
-    d = n(38618),
-    u = n(268967),
-    h = n(188785);
-let p = {},
-    m = {},
-    f = !0,
-    g = {},
-    C = !1;
-function x() {
-    return u.Z;
-}
-function v() {
-    if (((g = {}), !f))
-        for (let [e, t] of Object.entries(u.Z)) {
-            let n = !1 !== p[e];
-            if (((g[e] = n), n && null != t.prerequisites)) for (let n of t.prerequisites) !1 !== p[n] && (g[e] = !1);
+    r = n(873546),
+    s = n(442837),
+    o = n(570140),
+    c = n(38618),
+    d = n(268967),
+    u = n(188785);
+let h = {},
+    p = {},
+    m = !0,
+    f = {},
+    g = !1;
+function _() {
+    if (((f = {}), !m))
+        for (let [e, t] of Object.entries(d.Z)) {
+            let n = !1 !== h[e];
+            if (((f[e] = n), n && null != t.prerequisites)) for (let n of t.prerequisites) !1 !== h[n] && (f[e] = !1);
         }
 }
-class _ extends (i = o.ZP.Store) {
+class C extends (i = s.ZP.Store) {
     initialize() {
-        v(), this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type), this.waitFor(d.Z);
+        _(), this.mustEmitChanges((e) => 'CONNECTION_OPEN' !== e.type), this.waitFor(c.Z);
     }
     shouldShow(e) {
-        var t;
-        return !(!C || f || h.a || ((t = e), s.tq && ['writing-messages', 'organize-by-topic'].includes(t))) && (g[e] || !1);
+        return !(!g || m || u.a || (r.tq && ['writing-messages', 'organize-by-topic'].includes(e))) && (f[e] || !1);
     }
     shouldShowAnyIndicators() {
-        return !f;
+        return !m;
     }
     getIndicators() {
-        return m;
+        return p;
     }
     getData() {
-        return u.Z;
+        return d.Z;
     }
     getDefinition(e) {
         let t = this.getData();
@@ -47,41 +42,41 @@ class _ extends (i = o.ZP.Store) {
     }
 }
 (a = 'TutorialIndicatorStore'),
-    (r = 'displayName') in (l = _)
-        ? Object.defineProperty(l, r, {
+    (l = 'displayName') in C
+        ? Object.defineProperty(C, l, {
               value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[r] = a),
-    (t.Z = new _(c.Z, {
-        CONNECTION_OPEN: function (e) {
-            let { tutorial: t } = e;
-            (C = !0), (f = !0), (p = {}), null != t && ((f = t.indicators_suppressed), t.indicators_confirmed.forEach((e) => (p[e] = !1))), v();
-        },
-        CONNECTION_CLOSED: function () {
-            C = !1;
-        },
-        TUTORIAL_INDICATOR_DISMISS: function (e) {
-            (p = {
-                ...p,
-                [e.tutorialId]: !1
-            }),
-                (m = { ...m }),
-                delete m[e.tutorialId],
-                v();
-        },
-        TUTORIAL_INDICATOR_SHOW: function (e) {
-            m = {
-                ...m,
-                [e.tutorialId]: e.renderData
-            };
-        },
-        TUTORIAL_INDICATOR_HIDE: function (e) {
-            (m = { ...m }), delete m[e.tutorialId];
-        },
-        TUTORIAL_INDICATOR_SUPPRESS_ALL: function () {
-            f = !0;
-        }
-    }));
+        : (C[l] = a);
+let x = new C(o.Z, {
+    CONNECTION_OPEN: function (e) {
+        let { tutorial: t } = e;
+        (g = !0), (m = !0), (h = {}), null != t && ((m = t.indicators_suppressed), t.indicators_confirmed.forEach((e) => (h[e] = !1))), _();
+    },
+    CONNECTION_CLOSED: function () {
+        g = !1;
+    },
+    TUTORIAL_INDICATOR_DISMISS: function (e) {
+        (h = {
+            ...h,
+            [e.tutorialId]: !1
+        }),
+            (p = { ...p }),
+            delete p[e.tutorialId],
+            _();
+    },
+    TUTORIAL_INDICATOR_SHOW: function (e) {
+        p = {
+            ...p,
+            [e.tutorialId]: e.renderData
+        };
+    },
+    TUTORIAL_INDICATOR_HIDE: function (e) {
+        (p = { ...p }), delete p[e.tutorialId];
+    },
+    TUTORIAL_INDICATOR_SUPPRESS_ALL: function () {
+        m = !0;
+    }
+});

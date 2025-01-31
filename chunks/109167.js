@@ -1,9 +1,5 @@
-n.d(t, {
-    H: function () {
-        return i;
-    }
-});
-let r = (0, n(818083).B)({
+n.d(t, { H: () => r });
+let a = (0, n(818083).B)({
     kind: 'user',
     id: '2024-08_captcha_serve_volume_distribution_metric',
     label: 'Captcha serve volume distribution metric',
@@ -16,6 +12,6 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-function i(e) {
-    return !!r.useExperiment({ location: e }, { autoTrackExposure: !0 }).enabled;
+function r(e) {
+    return !!a.useExperiment({ location: e }, { autoTrackExposure: !0 }).enabled;
 }

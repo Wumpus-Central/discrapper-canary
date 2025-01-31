@@ -1,12 +1,8 @@
-r.d(n, {
-    N: function () {
-        return a;
-    }
-});
-var i = r(721056),
-    a = (function () {
-        function e(e, n, r, a) {
-            return (this.x = e), (this.y = n), (this.width = r), (this.height = a), (this.top = this.y), (this.left = this.x), (this.bottom = this.top + this.height), (this.right = this.left + this.width), (0, i.v)(this);
+n.d(t, { N: () => r });
+var i = n(721056),
+    r = (function () {
+        function e(e, t, n, r) {
+            return (this.x = e), (this.y = t), (this.width = n), (this.height = r), (this.top = this.y), (this.left = this.x), (this.bottom = this.top + this.height), (this.right = this.left + this.width), (0, i.v)(this);
         }
         return (
             (e.prototype.toJSON = function () {
@@ -22,8 +18,8 @@ var i = r(721056),
                     height: e.height
                 };
             }),
-            (e.fromRect = function (n) {
-                return new e(n.x, n.y, n.width, n.height);
+            (e.fromRect = function (t) {
+                return new e(t.x, t.y, t.width, t.height);
             }),
             e
         );

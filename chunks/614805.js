@@ -1,67 +1,65 @@
 function i(e) {
-    var n = !1;
+    var t = !1;
     return function () {
-        !n && ((n = !0), e.apply(void 0, arguments));
+        t || ((t = !0), e.apply(void 0, arguments));
     };
 }
-var a,
-    o = r(531478).codes,
-    s = o.ERR_MISSING_ARGS,
-    l = o.ERR_STREAM_DESTROYED;
-function u(e) {
+var r,
+    a = n(531478).codes,
+    s = a.ERR_MISSING_ARGS,
+    o = a.ERR_STREAM_DESTROYED;
+function l(e) {
     if (e) throw e;
 }
-function c(e) {
+function u(e) {
     return e.setHeader && 'function' == typeof e.abort;
 }
-function d(e, n, o, s) {
+function c(e, t, a, s) {
     s = i(s);
-    var u = !1;
+    var l = !1;
     e.on('close', function () {
-        u = !0;
+        l = !0;
     }),
-        void 0 === a && (a = r(133495)),
-        a(
+        void 0 === r && (r = n(133495)),
+        r(
             e,
             {
-                readable: n,
-                writable: o
+                readable: t,
+                writable: a
             },
             function (e) {
                 if (e) return s(e);
-                (u = !0), s();
+                (l = !0), s();
             }
         );
-    var d = !1;
-    return function (n) {
-        if (!u) {
-            if (!d) {
-                if (((d = !0), c(e))) return e.abort();
-                if ('function' == typeof e.destroy) return e.destroy();
-                s(n || new l('pipe'));
-            }
+    var c = !1;
+    return function (t) {
+        if (!l && !c) {
+            if (((c = !0), u(e))) return e.abort();
+            if ('function' == typeof e.destroy) return e.destroy();
+            s(t || new o('pipe'));
         }
     };
 }
-function f(e) {
+function d(e) {
     e();
 }
-function p(e, n) {
-    return e.pipe(n);
+function f(e, t) {
+    return e.pipe(t);
 }
-function h(e) {
-    return e.length && 'function' == typeof e[e.length - 1] ? e.pop() : u;
+function _(e) {
+    return e.length && 'function' == typeof e[e.length - 1] ? e.pop() : l;
 }
-function _() {
-    for (var e, n = arguments.length, r = Array(n), i = 0; i < n; i++) r[i] = arguments[i];
-    var a = h(r);
-    if ((Array.isArray(r[0]) && (r = r[0]), r.length < 2)) throw new s('streams');
-    var o = r.map(function (n, i) {
-        var s = i < r.length - 1;
-        return d(n, s, i > 0, function (n) {
-            !e && (e = n), n && o.forEach(f), !s && (o.forEach(f), a(e));
+function p() {
+    for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
+    var r = _(n);
+    if ((Array.isArray(n[0]) && (n = n[0]), n.length < 2)) throw new s('streams');
+    var a = n.map(function (t, i) {
+        var s = i < n.length - 1;
+        return c(t, s, i > 0, function (t) {
+            e || (e = t), t && a.forEach(d), s || (a.forEach(d), r(e));
         });
     });
-    return r.reduce(p);
+    return n.reduce(f);
 }
-e.exports = _;
+e.exports = p;

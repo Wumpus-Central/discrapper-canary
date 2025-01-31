@@ -1,13 +1,14 @@
 e.exports = {
-    contentCollapsed: 'contentCollapsed_c6d7dd',
-    contentCollapsedWrapper: 'contentCollapsedWrapper_c6d7dd',
-    contentCollapsedAccepted: 'contentCollapsedAccepted_c6d7dd',
-    contentCollapsedExpanded: 'contentCollapsedExpanded_c6d7dd',
-    brandingWrapper: 'brandingWrapper_c6d7dd',
-    partnerBranding: 'partnerBranding_c6d7dd',
-    questName: 'questName_c6d7dd',
-    questProgressWrapper: 'questProgressWrapper_c6d7dd',
-    questProgressRewardTile: 'questProgressRewardTile_c6d7dd',
-    questProgressBar: 'questProgressBar_c6d7dd',
-    questProgressHint: 'questProgressHint_c6d7dd'
+    contentCollapsed: 'contentCollapsed_b628ac',
+    contentCollapsedWrapper: 'contentCollapsedWrapper_b628ac',
+    contentCollapsedAccepted: 'contentCollapsedAccepted_b628ac',
+    contentCollapsedExpanded: 'contentCollapsedExpanded_b628ac',
+    brandingWrapper: 'brandingWrapper_b628ac',
+    partnerBranding: 'partnerBranding_b628ac',
+    questName: 'questName_b628ac',
+    questProgressWrapper: 'questProgressWrapper_b628ac',
+    questProgressRewardTile: 'questProgressRewardTile_b628ac',
+    questProgressBar: 'questProgressBar_b628ac',
+    questProgressHint: 'questProgressHint_b628ac',
+    Shine: 'Shine_b628ac'
 };

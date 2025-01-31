@@ -1,22 +1,18 @@
 n.d(t, {
-    O: function () {
-        return s;
-    },
-    w: function () {
-        return o;
-    }
+    O: () => o,
+    w: () => s
 });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(212954);
-function a(e, t) {
+var l = n(481060),
+    a = n(212954);
+function r(e, t) {
     let { children: n } = e;
-    return (0, i.jsx)(r.Text, {
+    return (0, i.jsx)(l.Text, {
         variant: 'text-sm/medium',
         className: t,
         children: n
     });
 }
-let o = (e) => a(e, l.searchFilter),
-    s = (e) => a(e, l.searchAnswer);
+let s = (e) => r(e, a.searchFilter),
+    o = (e) => r(e, a.searchAnswer);

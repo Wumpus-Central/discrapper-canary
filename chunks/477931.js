@@ -1,9 +1,4 @@
-var i;
-r.d(n, {
-    B: function () {
-        return i;
-    }
-}),
-    !(function (e) {
-        e[(e.CONFETTI = 0)] = 'CONFETTI';
-    })(i || (i = {}));
+n.d(t, { B: () => i });
+var i = (function (e) {
+    return (e[(e.CONFETTI = 0)] = 'CONFETTI'), e;
+})({});

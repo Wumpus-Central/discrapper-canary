@@ -1,9 +1,5 @@
 function i(e) {
-    let { proxyURL: n, url: r } = e;
-    return null != n && '' !== n ? n : r;
+    let { proxyURL: t, url: n } = e;
+    return null != t && '' !== t ? t : n;
 }
-r.d(n, {
-    q: function () {
-        return i;
-    }
-});
+n.d(t, { q: () => i });

@@ -1,5 +1,6 @@
-e.exports = {
-    errorPage: 'errorPage_dd2aa2',
-    buttons: 'buttons_dd2aa2',
-    clearOverrideButton: 'clearOverrideButton_dd2aa2'
+var i = {
+    errorPage: 'errorPage_a57b28',
+    buttons: 'buttons_a57b28',
+    clearOverrideButton: 'clearOverrideButton_a57b28'
 };
+e.exports = i;

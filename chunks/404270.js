@@ -1,3 +1,4 @@
+n.d(t, { Z: () => C });
 var i = n(200651);
 n(192379);
 var r = n(120356),
@@ -13,20 +14,20 @@ var r = n(120356),
     g = n(937615),
     x = n(474936),
     p = n(388032),
-    f = n(599733);
-t.Z = (e) => {
+    _ = n(599733);
+let C = (e) => {
     var t;
     let { className: n } = e,
         r = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
         C = (0, s.e7)([o.default], () => o.default.locale),
-        v = (0, s.e7)([u.ZP], () => u.ZP.getPremiumTypeSubscription()),
-        I = (0, s.e7)([d.Z], () => (null != v ? d.Z.get(v.planId) : void 0)),
-        N = null !== (t = (0, s.e7)([d.Z], () => (null != I ? d.Z.getForSkuAndInterval((0, h.Wz)(x.Si.GUILD), I.interval, I.intervalCount) : void 0))) && void 0 !== t ? t : x.GP[x.Xh.PREMIUM_MONTH_GUILD];
+        f = (0, s.e7)([u.ZP], () => u.ZP.getPremiumTypeSubscription()),
+        v = (0, s.e7)([d.Z], () => (null != f ? d.Z.get(f.planId) : void 0)),
+        N = null !== (t = (0, s.e7)([d.Z], () => (null != v ? d.Z.getForSkuAndInterval((0, h.Wz)(x.Si.GUILD), v.interval, v.intervalCount) : void 0))) && void 0 !== t ? t : x.GP[x.Xh.PREMIUM_MONTH_GUILD];
     return (0, i.jsxs)('div', {
-        className: l()(f.wrapper, n),
+        className: l()(_.wrapper, n),
         children: [
-            (0, i.jsx)(a.Heading, {
-                className: f.heading,
+            (0, i.jsx)(a.X6q, {
+                className: _.heading,
                 variant: 'heading-xl/semibold',
                 children: p.intl.string(p.t['3x1PFB'])
             }),
@@ -46,7 +47,7 @@ t.Z = (e) => {
                                   (0, i.jsx)(
                                       'span',
                                       {
-                                          className: f.originalPrice,
+                                          className: _.originalPrice,
                                           children: e
                                       },
                                       t
@@ -62,7 +63,7 @@ t.Z = (e) => {
                                     (0, i.jsx)(
                                         'span',
                                         {
-                                            className: f.originalPrice,
+                                            className: _.originalPrice,
                                             children: e
                                         },
                                         t

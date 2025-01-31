@@ -1,9 +1,4 @@
-n.d(t, {
-    y: function () {
-        return x;
-    }
-}),
-    n(47120);
+n.d(t, { y: () => x }), n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(793030),
@@ -19,45 +14,45 @@ var i = n(200651),
 function x(e) {
     var t;
     let { guild: n, formFields: c } = e,
-        [x, f] = r.useState(c);
-    r.useEffect(() => f(c), [c]);
+        [x, _] = r.useState(c);
+    r.useEffect(() => _(c), [c]);
     let C = null !== (t = (0, a.A)({ guildId: n.id })) && void 0 !== t ? t : 0,
-        [v, I] = r.useState(null),
+        [f, v] = r.useState(null),
         N = r.useMemo(() => (null == x ? void 0 : x.some((e) => (0, s.J)(e))), [x]),
-        _ = r.useMemo(() => x.length === m.nx, [x]),
-        T = r.useCallback(
+        j = r.useMemo(() => x.length === m.nx, [x]),
+        I = r.useCallback(
             (e) => {
-                u.Z.setPendingMemberVerificationRules(n.id, e), f(e), null != v && I(null);
+                u.Z.setPendingMemberVerificationRules(n.id, e), _(e), null != f && v(null);
             },
-            [v, n.id]
+            [f, n.id]
         ),
-        j = r.useCallback(
+        E = r.useCallback(
             (e) => {
-                T([...x, e]);
+                I([...x, e]);
             },
-            [x, T]
+            [x, I]
         ),
         b = r.useCallback(
             (e) => {
-                T([...x.slice(0, e), ...x.slice(e + 1)]);
+                I([...x.slice(0, e), ...x.slice(e + 1)]);
             },
-            [x, T]
+            [x, I]
         ),
-        E = r.useCallback(
+        T = r.useCallback(
             (e, t) => {
                 if (x[e] === t) return;
                 let n = [...x];
-                (n[e] = t), T(n);
+                (n[e] = t), I(n);
             },
-            [x, T]
+            [x, I]
         ),
         S = r.useCallback(
             (e, t, n) => {
                 let i = x.indexOf(e),
                     r = [...x];
-                null != t && t !== i && (r.splice(i, 1), r.splice(t, 0, e), f(r)), n ? (T(r), null !== v && I(null)) : v !== t && I(t);
+                null != t && t !== i && (r.splice(i, 1), r.splice(t, 0, e), _(r)), n ? (I(r), null !== f && v(null)) : f !== t && v(t);
             },
-            [v, x, T]
+            [f, x, I]
         );
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -72,30 +67,30 @@ function x(e) {
             }),
             x.map((e) =>
                 (0, d.a0)({
-                    dropHoveredIndex: v,
+                    dropHoveredIndex: f,
                     formField: e,
                     guild: n,
                     index: x.indexOf(e),
                     isDragEnabled: x.length > 1,
                     submittedGuildJoinRequestsCount: C,
                     removeFormField: b,
-                    updateFormField: E,
+                    updateFormField: T,
                     updateFormFieldOrder: S,
                     canRemove: x.length > 1,
                     actionsLocation: 'side',
                     fieldStyle: s.it.COMPACT
                 })
             ),
-            !_ &&
+            !j &&
                 (0, i.jsx)('div', {
                     className: g.addQuestionsContainer,
                     children: (0, i.jsx)(o.Z, {
-                        addFormField: j,
+                        addFormField: E,
                         guild: n,
                         allowTerms: !N
                     })
                 }),
-            !_ && (0, i.jsx)(p, { addFormField: j })
+            !j && (0, i.jsx)(p, { addFormField: E })
         ]
     });
 }

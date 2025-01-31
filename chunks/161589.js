@@ -1,18 +1,19 @@
-e.exports = {
-    videoHeight: 'videoHeight_c84990',
-    animated: 'animated_c84990',
-    normal: 'normal_c84990',
-    minimum: 'minimum_c84990',
-    noChat: 'noChat_c84990',
-    fullScreen: 'fullScreen_c84990',
-    video: 'video_c84990',
-    idle: 'idle_c84990',
-    videoCenter: 'videoCenter_c84990',
-    videoBottom: 'videoBottom_c84990',
-    videoWrapper: 'videoWrapper_c84990',
-    focused: 'focused_c84990',
-    videoBackgroundTransition: 'videoBackgroundTransition_c84990',
-    videoInner: 'videoInner_c84990',
-    videoTop: 'videoTop_c84990',
-    videoBackground: 'videoBackground_c84990'
+var i = {
+    videoHeight: 'videoHeight__94748',
+    animated: 'animated__94748',
+    normal: 'normal__94748',
+    minimum: 'minimum__94748',
+    noChat: 'noChat__94748',
+    fullScreen: 'fullScreen__94748',
+    video: 'video__94748',
+    idle: 'idle__94748',
+    videoCenter: 'videoCenter__94748',
+    videoBottom: 'videoBottom__94748',
+    videoWrapper: 'videoWrapper__94748',
+    focused: 'focused__94748',
+    videoBackgroundTransition: 'videoBackgroundTransition__94748',
+    videoInner: 'videoInner__94748',
+    videoTop: 'videoTop__94748',
+    videoBackground: 'videoBackground__94748'
 };
+e.exports = i;

@@ -1,8 +1,4 @@
-r.d(n, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });
 let i = {
     xxs: 12,
     xs: 16,

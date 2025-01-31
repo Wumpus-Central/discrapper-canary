@@ -1,12 +1,8 @@
 var i;
-function a(e) {}
-function o(e, n) {}
-r.d(n, {
-    B1: function () {
-        return a;
-    },
-    L8: function () {
-        return o;
-    }
+function r(e) {}
+function a(e, t) {}
+n.d(t, {
+    B1: () => r,
+    L8: () => a
 }),
-    (i = r.g.performance);
+    (i = n.g.performance);

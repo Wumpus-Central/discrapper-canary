@@ -1,9 +1,10 @@
 e.exports = {
-    container: 'container_faebe2',
-    header: 'header_faebe2',
-    headerContainer: 'headerContainer_faebe2',
-    previewForCollected: 'previewForCollected_faebe2 preview_faebe2',
-    body: 'body_faebe2',
-    bodySpacing: 'bodySpacing_faebe2',
-    centeredButton: 'centeredButton_faebe2'
+    container: 'container__48a3a',
+    header: 'header__48a3a',
+    headerContainer: 'headerContainer__48a3a',
+    preview: 'preview__48a3a',
+    previewForCollected: 'previewForCollected__48a3a preview__48a3a',
+    body: 'body__48a3a',
+    bodySpacing: 'bodySpacing__48a3a',
+    centeredButton: 'centeredButton__48a3a'
 };

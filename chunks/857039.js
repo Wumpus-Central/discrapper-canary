@@ -1,13 +1,9 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(987209),
-    a = r(599659);
-function o(e) {
-    let { location: n } = e,
-        { enabled: r } = a.O.useExperiment({ location: n }, { autoTrackExposure: !1 }),
-        { alreadyHasHalloweenDeco: o, isGift: s } = (0, i.wD)();
-    return r && s && !1 === o;
+n.d(t, { Z: () => a });
+var i = n(987209),
+    r = n(599659);
+function a(e) {
+    let { location: t } = e,
+        { enabled: n } = r.O.useExperiment({ location: t }, { autoTrackExposure: !1 }),
+        { alreadyHasHalloweenDeco: a, isGift: s } = (0, i.wD)();
+    return n && s && !1 === a;
 }

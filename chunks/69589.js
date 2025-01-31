@@ -1,48 +1,44 @@
-r.d(n, {
-    Z: function () {
-        return p;
-    }
-});
-var i = r(200651),
-    a = r(481060),
-    o = r(99690),
-    s = r(473188),
-    l = r(688693),
-    u = r(191420),
-    c = r(774621),
-    d = r(49274),
-    f = r(904141);
-function p(e) {
-    let { user: n, rank: r, rankBadgeVisibility: p = 'visible', avatarClassName: h, avatarSize: _ = a.AvatarSizes.SIZE_40 } = e,
-        m = 1 === r ? u : 2 === r ? c : 3 === r ? d : f,
-        g = (0, a.getAvatarSize)(_);
+n.d(t, { Z: () => f });
+var i = n(200651),
+    r = n(481060),
+    a = n(99690),
+    s = n(473188),
+    o = n(688693),
+    l = n(191420),
+    u = n(774621),
+    c = n(49274),
+    d = n(904141);
+function f(e) {
+    let { user: t, rank: n, rankBadgeVisibility: f = 'visible', avatarClassName: _, avatarSize: p = r.EFr.SIZE_40 } = e,
+        h = 1 === n ? l : 2 === n ? u : 3 === n ? c : d,
+        m = (0, r.pxk)(p);
     return (0, i.jsxs)('div', {
-        className: l.container,
+        className: o.container,
         style: {
-            width: ''.concat(g, 'px'),
-            height: ''.concat(g, 'px')
+            width: ''.concat(m, 'px'),
+            height: ''.concat(m, 'px')
         },
         children: [
             (0, i.jsx)('img', {
-                className: l.frame,
-                src: m,
+                className: o.frame,
+                src: h,
                 style: {
-                    width: g + 8,
-                    height: g + 8
+                    width: m + 8,
+                    height: m + 8
                 },
                 alt: ''
             }),
-            (0, i.jsx)(o.Z, {
-                className: h,
-                user: n,
-                size: _
+            (0, i.jsx)(a.Z, {
+                className: _,
+                user: t,
+                size: p
             }),
-            'hidden' !== p &&
+            'hidden' !== f &&
                 (0, i.jsx)('div', {
-                    className: l.rankBadge,
+                    className: o.rankBadge,
                     children: (0, i.jsx)(s._, {
-                        rank: r,
-                        hideInnerBorder: 'visibleWithoutBorder' === p
+                        rank: n,
+                        hideInnerBorder: 'visibleWithoutBorder' === f
                     })
                 })
         ]

@@ -1,67 +1,62 @@
-t.r(e),
-    t.d(e, {
-        default: function () {
-            return v;
-        }
-    });
+t.d(n, { default: () => v });
 var a = t(200651),
-    o = t(192379),
-    s = t(286379),
+    s = t(192379),
+    o = t(286379),
     c = t(399606),
-    l = t(481060),
-    i = t(797614),
+    i = t(481060),
+    l = t(797614),
     r = t(819557),
     d = t(138201),
     u = t(359119),
-    m = t(473092),
+    _ = t(473092),
     x = t(636749),
-    b = t(981631),
-    _ = t(388032),
+    m = t(981631),
+    b = t(388032),
     g = t(636370);
-function v(n) {
-    let { transitionState: e, onClose: t, channelId: v, warningId: h, senderId: k, description: N, safetyTipRows: j, actionRows: B, learnMore: T } = n,
-        f = (0, c.e7)([u.ZP], () => u.ZP.getChannelSafetyWarning(v, h));
+function v(e) {
+    let { transitionState: n, onClose: t, channelId: v, warningId: h, senderId: k, description: N, safetyTipRows: f, actionRows: T, learnMore: j } = e,
+        p = (0, c.e7)([u.ZP], () => u.ZP.getChannelSafetyWarning(v, h));
     return (
-        o.useEffect(() => {
-            (0, m.MC)(b.rMx.SAFETY_WARNING_MODAL_VIEWED, {
+        s.useEffect(() => {
+            (0, _.MC)(m.rMx.SAFETY_WARNING_MODAL_VIEWED, {
                 channelId: v,
                 warningId: h,
                 senderId: k,
-                warningType: null == f ? void 0 : f.type
+                warningType: null == p ? void 0 : p.type
             }),
-                i.Z.increment({ name: s.V.SAFETY_WARNING_MODAL_VIEW });
-        }, [v, h, k, f]),
-        (0, a.jsx)(l.ModalRoot, {
-            transitionState: e,
-            children: (0, a.jsxs)(l.Scroller, {
+                l.Z.increment({ name: o.V.SAFETY_WARNING_MODAL_VIEW });
+        }, [v, h, k, p]),
+        (0, a.jsx)(i.Y0X, {
+            transitionState: n,
+            children: (0, a.jsxs)(i.Ttm, {
                 style: { overflow: 'hidden auto' },
                 children: [
-                    (0, a.jsxs)(l.ModalHeader, {
+                    (0, a.jsxs)(i.xBx, {
                         className: g.modalHeader,
                         children: [
                             (0, a.jsxs)('div', {
                                 className: g.modalHeaderText,
                                 children: [
-                                    (0, a.jsx)(l.Text, {
+                                    (0, a.jsx)(i.Text, {
                                         variant: 'eyebrow',
                                         color: 'status-positive-text',
-                                        children: _.intl.string(_.t.lyt43N)
+                                        children: b.intl.string(b.t.lyt43N)
                                     }),
-                                    (0, a.jsx)(l.Heading, {
+                                    (0, a.jsx)(i.X6q, {
                                         variant: 'heading-xl/bold',
                                         color: 'status-positive-text',
                                         children: N
                                     })
                                 ]
                             }),
-                            (0, a.jsx)(l.Button, {
-                                'aria-label': _.intl.string(_.t.cpT0Cg),
-                                look: l.Button.Looks.BLANK,
-                                size: l.Button.Sizes.NONE,
+                            (0, a.jsx)(i.zxk, {
+                                'aria-label': b.intl.string(b.t.cpT0Cg),
+                                look: i.zxk.Looks.BLANK,
+                                size: i.zxk.Sizes.NONE,
                                 onClick: t,
                                 innerClassName: g.closeButtonInner,
                                 className: g.closeButton,
-                                children: (0, a.jsx)(l.XSmallIcon, {
+                                children: (0, a.jsx)(i.Dio, {
                                     size: 'sm',
                                     color: 'currentColor',
                                     className: g.closeIcon
@@ -69,29 +64,29 @@ function v(n) {
                             })
                         ]
                     }),
-                    (0, a.jsxs)(l.ModalContent, {
+                    (0, a.jsxs)(i.hzk, {
                         className: g.modalContent,
                         children: [
                             (0, a.jsxs)('div', {
                                 className: g.mainSection,
-                                children: [(0, a.jsx)(r.z, { children: j }), null != T ? T : null]
+                                children: [(0, a.jsx)(r.z, { children: f }), null != j ? j : null]
                             }),
                             (0, a.jsxs)('div', {
                                 children: [
-                                    (0, a.jsx)(l.Text, {
+                                    (0, a.jsx)(i.Text, {
                                         className: g.moreHeading,
                                         variant: 'eyebrow',
                                         color: 'header-secondary',
-                                        children: _.intl.string(_.t.K5FKtb)
+                                        children: b.intl.string(b.t.K5FKtb)
                                     }),
-                                    (0, a.jsx)(d.rT, { children: B })
+                                    (0, a.jsx)(d.rT, { children: T })
                                 ]
                             }),
                             (0, a.jsx)(x.Z, {
                                 channelId: v,
                                 warningId: h,
                                 senderId: k,
-                                safetyWarning: f
+                                safetyWarning: p
                             })
                         ]
                     })

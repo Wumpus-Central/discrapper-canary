@@ -1,13 +1,9 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-});
+n.d(t, { Z: () => d });
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    r = n(481060),
-    a = n(846027),
+    a = n(481060),
+    r = n(846027),
     s = n(131951),
     o = n(358085),
     c = n(981631),
@@ -17,13 +13,13 @@ function d(e) {
         n = (0, l.e7)([s.Z], () => s.Z.getMode()),
         d = (t, l) =>
             (0, i.jsx)(
-                r.MenuRadioItem,
+                a.k5B,
                 {
                     id: t,
                     group: 'input-modes',
                     label: l,
                     checked: n === t,
-                    action: () => a.Z.setMode(t, void 0, void 0, { analyticsLocations: e })
+                    action: () => r.Z.setMode(t, void 0, void 0, { analyticsLocations: e })
                 },
                 t
             );

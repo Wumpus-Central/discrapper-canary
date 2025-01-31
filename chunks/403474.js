@@ -1,8 +1,4 @@
-n.d(t, {
-    k: function () {
-        return i;
-    }
-});
+n.d(t, { k: () => i });
 let i = {
     id: '0',
     name: '',

@@ -1,8 +1,9 @@
-e.exports = {
-    categoryList: 'categoryList_ceda83',
-    expressionPickerCategoryList: 'expressionPickerCategoryList_ceda83',
-    category: 'category_ceda83',
-    categoryIcon: 'categoryIcon_ceda83 category_ceda83',
-    selected: 'selected_ceda83',
-    categoryIconIcon: 'categoryIconIcon_ceda83'
+var i = {
+    categoryList: 'categoryList_a1e0e0',
+    expressionPickerCategoryList: 'expressionPickerCategoryList_a1e0e0',
+    category: 'category_a1e0e0',
+    categoryIcon: 'categoryIcon_a1e0e0 category_a1e0e0',
+    selected: 'selected_a1e0e0',
+    categoryIconIcon: 'categoryIconIcon_a1e0e0'
 };
+e.exports = i;

@@ -1,113 +1,109 @@
-r.d(n, {
-    V: function () {
-        return o;
-    }
-});
-var i = r(239189);
-r(444675);
-var a = function (e) {
+n.d(t, { V: () => a });
+var i = n(239189);
+n(444675);
+var r = function (e) {
         return (0, i.requestAnimationFrame)(e);
     },
-    o = (function () {
-        return function e(e) {
-            void 0 === e && (e = a);
-            var n = !0,
-                r = !1,
-                o = 0,
-                l = [],
-                u = 0,
+    a = (function () {
+        return function (e) {
+            void 0 === e && (e = r);
+            var t = !0,
+                n = !1,
+                a = 0,
+                o = [],
+                l = 0,
+                u = new Set(),
                 c = new Set(),
                 d = new Set(),
-                f = new Set(),
-                p = function (e) {
-                    var n = l.indexOf(e);
-                    n < 0 &&
-                        ((n = l.findIndex(function (n) {
-                            return n.priority > e.priority;
+                f = function (e) {
+                    var t = o.indexOf(e);
+                    t < 0 &&
+                        ((t = o.findIndex(function (t) {
+                            return t.priority > e.priority;
                         })),
-                        l.splice(~n ? n : l.length, 0, e));
+                        o.splice(~t ? t : o.length, 0, e));
                 },
-                h = function () {
-                    if (!n)
+                _ = function () {
+                    if (!t)
                         try {
-                            g(), e(h);
+                            m(), e(_);
                         } catch (e) {
                             console.error(e);
                         }
                 },
-                _ = function () {
-                    n && ((n = !1), 0 == o && ((o = i.now()), e(h)));
+                p = function () {
+                    t && ((t = !1), 0 == a && ((a = i.now()), e(_)));
                 },
-                m = [];
-            this.setTimeout = function (e, n) {
-                var r = i.now() + n,
-                    a = function () {
-                        var e = m.findIndex(function (e) {
-                            return e.cancel == a;
+                h = [];
+            this.setTimeout = function (e, t) {
+                var n = i.now() + t,
+                    r = function () {
+                        var e = h.findIndex(function (e) {
+                            return e.cancel == r;
                         });
-                        e >= 0 && m.splice(e, 1);
+                        e >= 0 && h.splice(e, 1);
                     },
-                    o = s(m, function (e) {
-                        return e.time > r;
+                    a = s(h, function (e) {
+                        return e.time > n;
                     }),
-                    l = {
-                        time: r,
+                    o = {
+                        time: n,
                         handler: e,
-                        cancel: a
+                        cancel: r
                     };
-                return m.splice(o, 0, l), _(), l;
+                return h.splice(a, 0, o), p(), o;
             };
-            var g = (this.advance = function () {
+            var m = (this.advance = function () {
                 var e = i.now();
                 if (
-                    (c.size && (c.forEach(p), c.clear()),
-                    m.length &&
+                    (u.size && (u.forEach(f), u.clear()),
+                    h.length &&
                         i.batchedUpdates(function () {
-                            var n = s(m, function (n) {
-                                return n.time > e;
+                            var t = s(h, function (t) {
+                                return t.time > e;
                             });
-                            m.splice(0, n).forEach(function (e) {
+                            h.splice(0, t).forEach(function (e) {
                                 return e.handler();
                             });
                         }),
-                    e > o)
+                    e > a)
                 ) {
-                    var n = Math.min(64, e - o);
-                    (o = e),
+                    var t = Math.min(64, e - a);
+                    (a = e),
                         i.batchedUpdates(function () {
-                            l.length &&
-                                (i.willAdvance(l),
-                                (l = l.filter(function (e) {
-                                    return (u = e.priority), !e.idle && e.advance(n), !e.idle;
+                            o.length &&
+                                (i.willAdvance(o),
+                                (o = o.filter(function (e) {
+                                    return (l = e.priority), e.idle || e.advance(t), !e.idle;
                                 })),
-                                (u = 0)),
+                                (l = 0)),
+                                c.size &&
+                                    (c.forEach(function (t) {
+                                        return t(e);
+                                    }),
+                                    c.clear()),
                                 d.size &&
-                                    (d.forEach(function (n) {
-                                        return n(e);
+                                    ((n = !0),
+                                    d.forEach(function (t) {
+                                        return t(e);
                                     }),
-                                    d.clear()),
-                                f.size &&
-                                    ((r = !0),
-                                    f.forEach(function (n) {
-                                        return n(e);
-                                    }),
-                                    f.clear(),
-                                    (r = !1));
+                                    d.clear(),
+                                    (n = !1));
                         });
                 }
             });
             (this.start = function (e) {
-                u > e.priority ? c.add(e) : (p(e), _());
+                l > e.priority ? u.add(e) : (f(e), p());
             }),
                 (this.onFrame = function (e) {
-                    d.add(e), _();
+                    c.add(e), p();
                 }),
                 (this.onWrite = function (e) {
-                    r ? e(o) : f.add(e);
+                    n ? e(a) : d.add(e);
                 });
         };
     })();
-function s(e, n) {
-    var r = e.findIndex(n);
-    return r < 0 ? e.length : r;
+function s(e, t) {
+    var n = e.findIndex(t);
+    return n < 0 ? e.length : n;
 }

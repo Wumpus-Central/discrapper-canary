@@ -1,1 +1,1 @@
-n.r((e.exports = { box: 'box_f1e381' }));
+n.r((e.exports = { box: 'box_f8c98c' }));

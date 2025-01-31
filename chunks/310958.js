@@ -11,18 +11,16 @@ var n = r(65183),
         function e() {
             return t.apply(this, arguments) || this;
         }
-        (r = e), (n = t), (r.prototype = Object.create(n.prototype)), (r.prototype.constructor = r), (r.__proto__ = n);
-        var r,
-            n,
-            o = e.prototype;
+        (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
+        var r = e.prototype;
         return (
-            (o.getStyle = function () {
+            (r.getStyle = function () {
                 return this.get('style');
             }),
-            (o.getEntity = function () {
+            (r.getEntity = function () {
                 return this.get('entity');
             }),
-            (o.hasStyle = function (t) {
+            (r.hasStyle = function (t) {
                 return this.getStyle().includes(t);
             }),
             (e.applyStyle = function (t, r) {

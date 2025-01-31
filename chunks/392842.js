@@ -1,7 +1,8 @@
 t.exports = {
-    noticeWithoutRightPadding: 'noticeWithoutRightPadding_f97380 notice_f97380',
-    noticeWithRightPadding: 'noticeWithRightPadding_f97380 notice_f97380',
-    noticeLeft: 'noticeLeft_f97380',
-    icon: 'icon_f97380',
-    text: 'text_f97380'
+    notice: 'notice_d37fb3',
+    noticeWithoutRightPadding: 'noticeWithoutRightPadding_d37fb3 notice_d37fb3',
+    noticeWithRightPadding: 'noticeWithRightPadding_d37fb3 notice_d37fb3',
+    noticeLeft: 'noticeLeft_d37fb3',
+    icon: 'icon_d37fb3',
+    text: 'text_d37fb3'
 };

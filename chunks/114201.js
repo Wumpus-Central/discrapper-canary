@@ -1,163 +1,160 @@
-r.d(n, {
-    Z: function () {
-        return A;
+n.d(t, { Z: () => S });
+var i = n(200651);
+n(192379);
+var r = n(99815),
+    a = n(442837),
+    s = n(481060),
+    o = n(239091),
+    l = n(314897),
+    u = n(553795),
+    c = n(430824),
+    d = n(496675),
+    f = n(626135),
+    _ = n(70956),
+    p = n(425128),
+    h = n(979192),
+    m = n(873128),
+    g = n(703733),
+    E = n(463031),
+    v = n(981631),
+    y = n(388032),
+    I = n(234032);
+function b(e) {
+    if (e > _.Z.Seconds.DAYS_30) {
+        let t = Math.round(e / _.Z.Seconds.DAYS_30);
+        return y.intl.formatToPlainString(y.t['HF7p4+'], { count: t });
     }
-});
-var i = r(200651);
-r(192379);
-var a = r(99815),
-    o = r(442837),
-    s = r(481060),
-    l = r(239091),
-    u = r(314897),
-    c = r(553795),
-    d = r(430824),
-    f = r(496675),
-    p = r(626135),
-    h = r(70956),
-    _ = r(425128),
-    m = r(979192),
-    g = r(873128),
-    E = r(703733),
-    v = r(463031),
-    y = r(981631),
-    b = r(388032),
-    I = r(234032);
-function T(e) {
-    if (e > h.Z.Seconds.DAYS_30) {
-        let n = Math.round(e / h.Z.Seconds.DAYS_30);
-        return b.intl.formatToPlainString(b.t['HF7p4+'], { count: n });
+    if (e > 2 * _.Z.Seconds.DAY) {
+        let t = Math.round(e / _.Z.Seconds.DAY);
+        return y.intl.formatToPlainString(y.t.HkESOj, { count: t });
     }
-    if (e > 2 * h.Z.Seconds.DAY) {
-        let n = Math.round(e / h.Z.Seconds.DAY);
-        return b.intl.formatToPlainString(b.t.HkESOj, { count: n });
+    if (e > _.Z.Seconds.DAY) return y.intl.string(y.t.gvgh9P);
+    if (e > _.Z.Seconds.HOUR) {
+        let t = Math.round(e / _.Z.Seconds.HOUR);
+        return y.intl.formatToPlainString(y.t.mW55WV, { count: t });
     }
-    if (e > h.Z.Seconds.DAY) return b.intl.string(b.t.gvgh9P);
-    else if (e > h.Z.Seconds.HOUR) {
-        let n = Math.round(e / h.Z.Seconds.HOUR);
-        return b.intl.formatToPlainString(b.t.mW55WV, { count: n });
-    } else {
-        if (!(e > h.Z.Seconds.MINUTE)) return b.intl.string(b.t.tT0mdn);
-        let n = Math.round(e / h.Z.Seconds.MINUTE);
-        return b.intl.formatToPlainString(b.t['1mNjX1'], { count: n });
+    {
+        if (!(e > _.Z.Seconds.MINUTE)) return y.intl.string(y.t.tT0mdn);
+        let t = Math.round(e / _.Z.Seconds.MINUTE);
+        return y.intl.formatToPlainString(y.t['1mNjX1'], { count: t });
     }
 }
-function S(e, n) {
+function T(e, t) {
     if (null == e)
         return {
             disabled: !1,
             subtext: void 0
         };
-    let r = (Date.now() - e.getTime()) / h.Z.Millis.SECOND;
-    if (r < 0)
+    let n = (Date.now() - e.getTime()) / _.Z.Millis.SECOND;
+    if (n < 0)
         return {
             disabled: !1,
             subtext: void 0
         };
-    let i = null != n ? e.getTime() > n.getTime() && r < h.Z.Seconds.HOUR : r < h.Z.Seconds.HOUR,
-        a = i ? b.intl.string(b.t['3gPhoa']) : T(r);
+    let i = null != t ? e.getTime() > t.getTime() && n < _.Z.Seconds.HOUR : n < _.Z.Seconds.HOUR,
+        r = i ? y.intl.string(y.t['3gPhoa']) : b(n);
     return {
         disabled: i,
-        subtext: a
+        subtext: r
     };
 }
-function A(e) {
-    let { guildId: n, leaderboardId: h } = e,
-        T = (0, o.e7)([u.default], () => u.default.getId()),
-        A = (0, o.e7)([c.Z], () => c.Z.getAccount(null, y.ABu.RIOT_GAMES)),
-        C = (0, o.e7)([c.Z], () => c.Z.getAccount(null, y.ABu.LEAGUE_OF_LEGENDS)),
-        N = (0, g.Z)({
-            guildId: n,
-            leaderboardId: h
+function S(e) {
+    let { guildId: t, leaderboardId: _ } = e,
+        b = (0, a.e7)([l.default], () => l.default.getId()),
+        S = (0, a.e7)([u.Z], () => u.Z.getAccount(null, v.ABu.RIOT_GAMES)),
+        A = (0, a.e7)([u.Z], () => u.Z.getAccount(null, v.ABu.LEAGUE_OF_LEGENDS)),
+        N = (0, m.Z)({
+            guildId: t,
+            leaderboardId: _
         }),
-        { leaderboardsDisabled: R } = (0, m.O)(n, h),
-        O =
-            null != C && null != A
+        { leaderboardsDisabled: C } = (0, h.O)(t, _),
+        R =
+            null != A && null != S
                 ? () => {
-                      p.default.track(y.rMx.LEADERBOARD_USER_DATA_REFRESH_REQUESTED, {
-                          leaderboard_id: h,
-                          guild_id: n
+                      f.default.track(v.rMx.LEADERBOARD_USER_DATA_REFRESH_REQUESTED, {
+                          leaderboard_id: _,
+                          guild_id: t
                       }),
-                          (0, _._7)({
-                              riotConnectionId: A.id,
-                              lolConnectionId: C.id
+                          (0, p._7)({
+                              riotConnectionId: S.id,
+                              lolConnectionId: A.id
                           });
                   }
-                : y.dG4,
-        D = null == A || R ? b.intl.string(b.t['0yRXHx']) : b.intl.string(b.t['KWpU6+']),
-        { lastUpdateRequested: L, statisticLastUpdatedDate: x } = (0, E.Z)({
-            userId: T,
-            guildId: n,
-            leaderboardId: h,
-            statisticId: a.E.LOL_TOTAL_KILLS
+                : v.dG4,
+        O = null == S || C ? y.intl.string(y.t['0yRXHx']) : y.intl.string(y.t['KWpU6+']),
+        { lastUpdateRequested: D, statisticLastUpdatedDate: x } = (0, g.Z)({
+            userId: b,
+            guildId: t,
+            leaderboardId: _,
+            statisticId: r.E.LOL_TOTAL_KILLS
         }),
-        { disabled: w, subtext: P } = S(L, x),
-        M = (0, o.e7)(
-            [f.Z, d.Z],
+        { disabled: L, subtext: P } = T(D, x),
+        w = (0, a.e7)(
+            [d.Z, c.Z],
             () => {
-                let e = d.Z.getGuild(n);
-                return f.Z.can(y.Plq.ADMINISTRATOR, e);
+                let e = c.Z.getGuild(t);
+                return d.Z.can(v.Plq.ADMINISTRATOR, e);
             },
-            [n]
+            [t]
         );
     return null == N
         ? null
-        : (0, i.jsx)(s.Popout, {
+        : (0, i.jsx)(s.yRy, {
               align: 'top',
               position: 'right',
               disablePointerEvents: !1,
               renderPopout: (e) => {
-                  let { closePopout: a } = e;
-                  return (0, i.jsx)(s.Menu, {
+                  let { closePopout: r } = e;
+                  return (0, i.jsx)(s.v2r, {
                       navId: 'leaderboard-popout-context-menu',
                       onClose: () => {
-                          (0, l.Zy)(), a();
+                          (0, o.Zy)(), r();
                       },
-                      'aria-label': b.intl.string(b.t.BjCuf3),
+                      'aria-label': y.intl.string(y.t.BjCuf3),
                       onSelect: void 0,
                       children: (0, i.jsx)(i.Fragment, {
-                          children: (0, i.jsxs)(s.MenuGroup, {
+                          children: (0, i.jsxs)(s.kSQ, {
                               children: [
-                                  N.leaderboard_id === v.z &&
-                                      null != A &&
-                                      (0, i.jsx)(s.MenuItem, {
+                                  N.leaderboard_id === E.z &&
+                                      null != S &&
+                                      (0, i.jsx)(s.sNh, {
                                           id: 'refresh-my-data',
-                                          label: b.intl.string(b.t.iopWUV),
-                                          action: O,
-                                          disabled: w,
+                                          label: y.intl.string(y.t.iopWUV),
+                                          action: R,
+                                          disabled: L,
                                           subtext: P
                                       }),
-                                  (0, i.jsx)(s.MenuItem, {
+                                  (0, i.jsx)(s.sNh, {
                                       id: 'leaderboard-modal',
-                                      label: D,
+                                      label: O,
                                       action: () => {
-                                          (0, s.openModalLazy)(async () => {
-                                              let { default: e } = await r.e('73217').then(r.bind(r, 139964));
-                                              return (r) =>
+                                          (0, s.ZDy)(async () => {
+                                              let { default: e } = await n.e('73217').then(n.bind(n, 139964));
+                                              return (n) =>
                                                   (0, i.jsx)(e, {
-                                                      ...r,
-                                                      guildId: n,
+                                                      ...n,
+                                                      guildId: t,
                                                       leaderboard: N
                                                   });
                                           }),
-                                              null == a || a();
+                                              null == r || r();
                                       }
                                   }),
-                                  M
-                                      ? (0, i.jsx)(s.MenuItem, {
+                                  w
+                                      ? (0, i.jsx)(s.sNh, {
                                             id: 'leaderboard-settings-modal',
-                                            label: b.intl.string(b.t['QV4/6u']),
+                                            label: y.intl.string(y.t['QV4/6u']),
                                             action: () => {
-                                                (0, s.openModalLazy)(async () => {
-                                                    let { default: e } = await r.e('25526').then(r.bind(r, 262918));
-                                                    return (r) =>
+                                                (0, s.ZDy)(async () => {
+                                                    let { default: e } = await n.e('25526').then(n.bind(n, 262918));
+                                                    return (n) =>
                                                         (0, i.jsx)(e, {
-                                                            ...r,
-                                                            guildId: n,
-                                                            leaderboardId: h
+                                                            ...n,
+                                                            guildId: t,
+                                                            leaderboardId: _
                                                         });
                                                 }),
-                                                    null == a || a();
+                                                    null == r || r();
                                             }
                                         })
                                       : null
@@ -167,14 +164,14 @@ function A(e) {
                   });
               },
               children: (e) =>
-                  (0, i.jsx)(s.Tooltip, {
-                      text: b.intl.string(b.t.UKOtz8),
-                      children: (n) =>
-                          (0, i.jsx)(s.Clickable, {
-                              ...n,
+                  (0, i.jsx)(s.ua7, {
+                      text: y.intl.string(y.t.UKOtz8),
+                      children: (t) =>
+                          (0, i.jsx)(s.P3F, {
+                              ...t,
                               className: I.menuIcon,
                               ...e,
-                              children: (0, i.jsx)(s.MoreHorizontalIcon, {
+                              children: (0, i.jsx)(s.xhG, {
                                   color: 'currentColor',
                                   size: 'custom',
                                   width: 16,

@@ -1,72 +1,64 @@
 n.d(t, {
-    FJ: function () {
-        return s;
-    },
-    HL: function () {
-        return u;
-    },
-    Yc: function () {
-        return d;
-    },
-    xe: function () {
-        return c;
-    }
+    FJ: () => o,
+    HL: () => d,
+    Yc: () => u,
+    xe: () => c
 });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(834129),
-    a = n(388032),
-    o = n(507833);
-function s(e) {
-    let { message: t, compact: r, onClick: s } = e;
-    return (0, i.jsx)(l.Z, {
+var l = n(481060),
+    a = n(834129),
+    r = n(388032),
+    s = n(507833);
+function o(e) {
+    let { message: t, compact: l, onClick: o } = e;
+    return (0, i.jsx)(a.Z, {
         icon: n(508933),
         timestamp: t.timestamp,
-        compact: r,
-        contentClassName: o.messageContent,
-        children: a.intl.format(a.t.bYdG3d, { onClick: s })
+        compact: l,
+        contentClassName: s.messageContent,
+        children: r.intl.format(r.t.bYdG3d, { onClick: o })
     });
 }
 function c(e) {
-    let { message: t, compact: r } = e;
-    return (0, i.jsx)(l.Z, {
+    let { message: t, compact: l } = e;
+    return (0, i.jsx)(a.Z, {
         icon: n(324606),
         timestamp: t.timestamp,
-        compact: r,
-        contentClassName: o.messageContent,
-        children: a.intl.string(a.t.tu6tOT)
-    });
-}
-function u(e) {
-    let { message: t, compact: n } = e;
-    return (0, i.jsx)(l.Z, {
-        iconNode: (0, i.jsx)(r.CircleWarningIcon, {
-            size: 'custom',
-            width: 20,
-            height: 20,
-            color: 'currentColor',
-            className: o.alertIcon
-        }),
-        timestamp: t.timestamp,
-        compact: n,
-        contentClassName: o.messageContent,
-        children: a.intl.string(a.t.vzfXqq)
+        compact: l,
+        contentClassName: s.messageContent,
+        children: r.intl.string(r.t.tu6tOT)
     });
 }
 function d(e) {
     let { message: t, compact: n } = e;
-    return (0, i.jsx)(l.Z, {
-        iconNode: (0, i.jsx)(r.CircleWarningIcon, {
+    return (0, i.jsx)(a.Z, {
+        iconNode: (0, i.jsx)(l.P4T, {
             size: 'custom',
             width: 20,
             height: 20,
             color: 'currentColor',
-            className: o.alertIcon
+            className: s.alertIcon
         }),
         timestamp: t.timestamp,
         compact: n,
-        contentClassName: o.messageContent,
-        children: a.intl.string(a.t['/Tfvyc'])
+        contentClassName: s.messageContent,
+        children: r.intl.string(r.t.vzfXqq)
+    });
+}
+function u(e) {
+    let { message: t, compact: n } = e;
+    return (0, i.jsx)(a.Z, {
+        iconNode: (0, i.jsx)(l.P4T, {
+            size: 'custom',
+            width: 20,
+            height: 20,
+            color: 'currentColor',
+            className: s.alertIcon
+        }),
+        timestamp: t.timestamp,
+        compact: n,
+        contentClassName: s.messageContent,
+        children: r.intl.string(r.t['/Tfvyc'])
     });
 }

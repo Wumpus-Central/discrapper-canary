@@ -1,53 +1,49 @@
-t.d(n, {
-    Z: function () {
-        return h;
-    }
-});
-var i = t(200651),
-    l = t(192379),
-    r = t(120356),
-    a = t.n(r),
-    s = t(481060),
-    c = t(934269),
-    o = t(722300),
-    u = t(910200),
-    d = t(37633);
-function h(e) {
-    let { guildId: n, name: t, setPopoutRef: r } = e,
-        { guildProfile: h, fetchGuildProfile: m, isFetching: f } = (0, c.u)(n),
-        x = l.useRef(null),
-        g = l.useCallback(() => {
-            m(!0);
-        }, [m]);
-    l.useEffect(() => {
-        m();
-    }, [m]),
-        l.useEffect(() => {
-            null == r || r(null == x ? void 0 : x.current);
-        }, [x, r]);
-    let j = null;
+n.d(l, { Z: () => m });
+var i = n(200651),
+    t = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    r = n(481060),
+    c = n(934269),
+    d = n(722300),
+    o = n(910200),
+    u = n(37633);
+function m(e) {
+    let { guildId: l, name: n, setPopoutRef: a } = e,
+        { guildProfile: m, fetchGuildProfile: h, isFetching: x } = (0, c.u)(l),
+        j = t.useRef(null),
+        f = t.useCallback(() => {
+            h(!0);
+        }, [h]);
+    t.useEffect(() => {
+        h();
+    }, [h]),
+        t.useEffect(() => {
+            null == a || a(null == j ? void 0 : j.current);
+        }, [j, a]);
+    let v = null;
     return (
-        (j = f
+        (v = x
             ? (0, i.jsx)('div', {
-                  className: a()(d.container, d.spinnerContainer),
-                  children: (0, i.jsx)(s.Spinner, {})
+                  className: s()(u.container, u.spinnerContainer),
+                  children: (0, i.jsx)(r.$jN, {})
               })
-            : null == h
+            : null == m
               ? (0, i.jsx)('div', {
-                    className: d.container,
-                    children: (0, i.jsx)(o.Z, {
-                        name: t,
-                        onRetry: g
+                    className: u.container,
+                    children: (0, i.jsx)(d.Z, {
+                        name: n,
+                        onRetry: f
                     })
                 })
               : (0, i.jsx)('div', {
-                    className: d.container,
-                    children: (0, i.jsx)(u.Z, { profile: h })
+                    className: u.container,
+                    children: (0, i.jsx)(o.Z, { profile: m })
                 })),
-        (0, i.jsx)(s.Dialog, {
-            ref: x,
-            'aria-label': null == h ? void 0 : h.name,
-            children: j
+        (0, i.jsx)(r.VqE, {
+            ref: j,
+            'aria-label': null == m ? void 0 : m.name,
+            children: v
         })
     );
 }

@@ -1,7 +1,8 @@
-e.exports = {
-    modal: 'modal_c97cbd',
-    sizeSmall: 'sizeSmall_c97cbd',
-    sizeMedium: 'sizeMedium_c97cbd',
-    sizeLarge: 'sizeLarge_c97cbd',
-    fullscreenOnMobile: 'fullscreenOnMobile_c97cbd'
+var i = {
+    modal: 'modal__7f8f5',
+    sizeSmall: 'sizeSmall__7f8f5',
+    sizeMedium: 'sizeMedium__7f8f5',
+    sizeLarge: 'sizeLarge__7f8f5',
+    fullscreenOnMobile: 'fullscreenOnMobile__7f8f5'
 };
+e.exports = i;

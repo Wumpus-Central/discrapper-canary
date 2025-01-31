@@ -1,6 +1,2 @@
-n.d(t, {
-    T: function () {
-        return o.T;
-    }
-});
-var o = n(987138);
+n.d(t, { T: () => s.T });
+var s = n(987138);

@@ -11,38 +11,32 @@ function a(t, e, r) {
         for (
             var f,
                 p,
-                h,
-                d,
-                g,
-                y =
-                    ((f = a),
-                    (p = l),
-                    (h = r),
-                    i(
-                        f,
+                h =
+                    (i(
+                        a,
                         function (t, e) {
                             return t.getEntity() === e.getEntity();
                         },
                         function (t) {
-                            return t.getEntity() === p;
+                            return t.getEntity() === l;
                         },
                         function (t, e) {
-                            t <= h &&
-                                e >= h &&
-                                (d = {
+                            t <= r &&
+                                e >= r &&
+                                (f = {
                                     start: t,
                                     end: e
                                 });
                         }
                     ),
-                    'object' != typeof d && o(!1),
-                    d),
-                v = y.start,
-                m = y.end;
-            v < m;
+                    'object' != typeof f && o(!1),
+                    f),
+                d = h.start,
+                g = h.end;
+            d < g;
 
         )
-            (g = a.get(v)), (a = a.set(v, n.applyEntity(g, null))), v++;
+            (p = a.get(d)), (a = a.set(d, n.applyEntity(p, null))), d++;
         return e.set('characterList', a);
     }
     return e;

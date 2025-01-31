@@ -1,22 +1,18 @@
-r.d(n, {
-    k: function () {
-        return l;
-    }
-});
-var i = r(200651),
-    a = r(481060),
-    o = r(626135),
-    s = r(981631);
-let l = (e, n) => {
-    null == n && (n = e[e.length - 1]),
-        o.default.track(s.rMx.OPEN_MODAL, {
+n.d(t, { k: () => o });
+var i = n(200651),
+    r = n(481060),
+    a = n(626135),
+    s = n(981631);
+let o = (e, t) => {
+    null == t && (t = e[e.length - 1]),
+        a.default.track(s.rMx.OPEN_MODAL, {
             type: 'Tiered Tenure Badge Details',
             location_stack: e,
-            location: n,
-            source: n
+            location: t,
+            source: t
         }),
-        (0, a.openModalLazy)(async () => {
-            let { default: e } = await r.e('89839').then(r.bind(r, 121436));
-            return (n) => (0, i.jsx)(e, { ...n });
+        (0, r.ZDy)(async () => {
+            let { default: e } = await n.e('89839').then(n.bind(n, 121436));
+            return (t) => (0, i.jsx)(e, { ...t });
         });
 };

@@ -1,51 +1,45 @@
-r.d(n, {
-    XA: function () {
-        return c;
-    },
-    ep: function () {
-        return d;
-    },
-    sE: function () {
-        return f;
-    }
+n.d(t, {
+    XA: () => u,
+    ep: () => c,
+    sE: () => d
 });
-var i = r(544891),
-    a = r(570140),
-    o = r(786761),
-    s = r(768943),
-    l = r(686478),
-    u = r(981631);
-async function c(e) {
-    let n = await i.tn.put({
-        url: u.ANM.PUT_SAVED_MESSAGE(e.channelId, e.messageId),
+var i = n(544891),
+    r = n(570140),
+    a = n(786761),
+    s = n(768943),
+    o = n(686478),
+    l = n(981631);
+async function u(e) {
+    let t = await i.tn.put({
+        url: l.ANM.PUT_SAVED_MESSAGE(e.channelId, e.messageId),
         body: { due_at: e.dueAt },
         rejectWithError: !1
     });
-    if (n.ok) return (0, l.jk)(n.body);
+    if (t.ok) return (0, o.jk)(t.body);
 }
-async function d(e) {
+async function c(e) {
     if (
         (
             await i.tn.del({
-                url: u.ANM.DELETE_SAVED_MESSAGE(e.channelId, e.messageId),
+                url: l.ANM.DELETE_SAVED_MESSAGE(e.channelId, e.messageId),
                 rejectWithError: !1
             })
         ).ok
     )
         return !0;
 }
-async function f() {
+async function d() {
     if (!s.Z.getIsStale()) return Promise.resolve();
     let e = (
         await i.tn.get({
-            url: u.ANM.GET_SAVED_MESSAGES,
+            url: l.ANM.GET_SAVED_MESSAGES,
             rejectWithError: !1
         })
     ).body.results.map((e) => ({
-        message: null != e.message ? (0, o.e5)(e.message) : null,
-        saveData: (0, l.vL)(e.save_data)
+        message: null != e.message ? (0, a.e5)(e.message) : null,
+        saveData: (0, o.vL)(e.save_data)
     }));
-    a.Z.dispatch({
+    r.Z.dispatch({
         type: 'SAVED_MESSAGES_UPDATE',
         savedMessages: e
     });

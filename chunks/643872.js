@@ -1,23 +1,3 @@
-var r, i;
-n.d(t, {
-    p: function () {
-        return r;
-    }
-}),
-    ((i = r || (r = {}))[(i.OFFICIAL = 1)] = 'OFFICIAL'),
-    (i[(i.WIKIA = 2)] = 'WIKIA'),
-    (i[(i.WIKIPEDIA = 3)] = 'WIKIPEDIA'),
-    (i[(i.FACEBOOK = 4)] = 'FACEBOOK'),
-    (i[(i.TWITTER = 5)] = 'TWITTER'),
-    (i[(i.TWITCH = 6)] = 'TWITCH'),
-    (i[(i.INSTAGRAM = 8)] = 'INSTAGRAM'),
-    (i[(i.YOUTUBE = 9)] = 'YOUTUBE'),
-    (i[(i.IPHONE = 10)] = 'IPHONE'),
-    (i[(i.IPAD = 11)] = 'IPAD'),
-    (i[(i.ANDROID = 12)] = 'ANDROID'),
-    (i[(i.STEAM = 13)] = 'STEAM'),
-    (i[(i.REDDIT = 14)] = 'REDDIT'),
-    (i[(i.ITCH = 15)] = 'ITCH'),
-    (i[(i.EPICGAMES = 16)] = 'EPICGAMES'),
-    (i[(i.GOG = 17)] = 'GOG'),
-    (i[(i.DISCORD = 18)] = 'DISCORD');
+n.d(t, { p: () => r });
+var i,
+    r = (((i = {})[(i.OFFICIAL = 1)] = 'OFFICIAL'), (i[(i.WIKIA = 2)] = 'WIKIA'), (i[(i.WIKIPEDIA = 3)] = 'WIKIPEDIA'), (i[(i.FACEBOOK = 4)] = 'FACEBOOK'), (i[(i.TWITTER = 5)] = 'TWITTER'), (i[(i.TWITCH = 6)] = 'TWITCH'), (i[(i.INSTAGRAM = 8)] = 'INSTAGRAM'), (i[(i.YOUTUBE = 9)] = 'YOUTUBE'), (i[(i.IPHONE = 10)] = 'IPHONE'), (i[(i.IPAD = 11)] = 'IPAD'), (i[(i.ANDROID = 12)] = 'ANDROID'), (i[(i.STEAM = 13)] = 'STEAM'), (i[(i.REDDIT = 14)] = 'REDDIT'), (i[(i.ITCH = 15)] = 'ITCH'), (i[(i.EPICGAMES = 16)] = 'EPICGAMES'), (i[(i.GOG = 17)] = 'GOG'), (i[(i.DISCORD = 18)] = 'DISCORD'), i);

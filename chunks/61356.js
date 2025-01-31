@@ -1,11 +1,7 @@
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-});
+n.d(t, { Z: () => a });
 var i = n(399606),
     l = n(541099);
-function r(e) {
+function a(e) {
     let { type: t } = e;
     return (0, i.e7)(
         [l.Z],

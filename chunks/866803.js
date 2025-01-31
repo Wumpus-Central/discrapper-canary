@@ -1,13 +1,14 @@
 e.exports = {
-    wrapper: 'wrapper_fe3b99',
-    heroImage: 'heroImage_fe3b99',
-    heroImageWithTrialOffer: 'heroImageWithTrialOffer_fe3b99',
-    premiumTrialBadge: 'premiumTrialBadge_fe3b99',
-    closeButton: 'closeButton_fe3b99',
-    heading: 'heading_fe3b99',
-    perks: 'perks_fe3b99',
-    iconColorYellow: 'iconColorYellow_fe3b99 icon_fe3b99',
-    iconColorPink: 'iconColorPink_fe3b99 icon_fe3b99',
-    iconColorPurple: 'iconColorPurple_fe3b99 icon_fe3b99',
-    footer: 'footer_fe3b99'
+    wrapper: 'wrapper__7b551',
+    heroImage: 'heroImage__7b551',
+    heroImageWithTrialOffer: 'heroImageWithTrialOffer__7b551',
+    premiumTrialBadge: 'premiumTrialBadge__7b551',
+    closeButton: 'closeButton__7b551',
+    heading: 'heading__7b551',
+    perks: 'perks__7b551',
+    icon: 'icon__7b551',
+    iconColorYellow: 'iconColorYellow__7b551 icon__7b551',
+    iconColorPink: 'iconColorPink__7b551 icon__7b551',
+    iconColorPurple: 'iconColorPurple__7b551 icon__7b551',
+    footer: 'footer__7b551'
 };

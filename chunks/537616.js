@@ -1,8 +1,10 @@
-e.exports = {
-    previewContainer: 'previewContainer_c99d75',
-    previewContainerSetHeight: 'previewContainerSetHeight_c99d75',
-    previewContainerAnimation: 'previewContainerAnimation_c99d75',
-    preview: 'preview_c99d75',
-    previewForCollected: 'previewForCollected_c99d75 preview_c99d75',
-    purchasedEffect: 'purchasedEffect_c99d75'
+var i = {
+    previewContainer: 'previewContainer__1e458',
+    previewContainerSetHeight: 'previewContainerSetHeight__1e458',
+    previewContainerAnimation: 'previewContainerAnimation__1e458',
+    scaleIn: 'scaleIn__1e458',
+    preview: 'preview__1e458',
+    previewForCollected: 'previewForCollected__1e458 preview__1e458',
+    purchasedEffect: 'purchasedEffect__1e458'
 };
+e.exports = i;

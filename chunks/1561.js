@@ -1,58 +1,53 @@
-r.d(n, {
-    P: function () {
-        return h;
-    }
-});
+n.d(t, { P: () => f }), n(47120);
 var i,
-    a = r(47120);
-var o = r(200651),
-    s = r(192379),
-    l = r(120356),
-    u = r.n(l),
-    c = r(532712),
-    d = r(84735),
-    f = r(981631);
-function p(e, n, r) {
+    r = n(200651),
+    a = n(192379),
+    s = n(120356),
+    o = n.n(s),
+    l = n(532712),
+    u = n(84735),
+    c = n(981631);
+function d(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class h extends (i = s.Component) {
+class f extends (i = a.Component) {
     renderNonInteractive() {
-        let { tag: e, focusProps: n, innerRef: r, onClick: i, role: a, tabIndex: o, ...l } = this.props;
-        return s.createElement(e, {
+        let { tag: e, focusProps: t, innerRef: n, onClick: i, role: r, tabIndex: s, ignoreKeyPress: o, ...l } = this.props;
+        return a.createElement(e, {
             ref: this.setRef,
             ...l
         });
     }
     renderInner() {
-        let { tag: e, onClick: n, className: r, children: i, focusProps: a, innerRef: o, ...l } = this.props;
-        return null == n
-            ? s.createElement(
+        let { tag: e, onClick: t, className: n, children: i, focusProps: r, innerRef: s, ignoreKeyPress: l, ...u } = this.props;
+        return null == t
+            ? a.createElement(
                   e,
                   {
                       ref: this.setRef,
-                      className: u()(r),
-                      ...l
+                      className: o()(n),
+                      ...u
                   },
                   i
               )
-            : s.createElement(
+            : a.createElement(
                   e,
                   {
-                      onClick: n,
+                      onClick: t,
                       ref: this.setRef,
                       onKeyPress: this.handleKeyPress,
-                      className: u()(r),
-                      ...l
+                      className: o()(n),
+                      ...u
                   },
                   i
               );
@@ -60,27 +55,27 @@ class h extends (i = s.Component) {
     render() {
         return this.context
             ? this.renderNonInteractive()
-            : (0, o.jsx)(d.t, {
+            : (0, r.jsx)(u.t, {
                   ...this.props.focusProps,
                   children: this.renderInner()
               });
     }
     constructor(...e) {
         super(...e),
-            p(this, 'ref', void 0),
-            p(this, 'handleKeyPress', (e) => {
-                let { onClick: n, href: r, onKeyPress: i, ignoreKeyPress: a } = this.props;
-                !e.repeat && (!a && null != n && null != this.ref && (e.charCode === f.yXg.SPACE || e.charCode === f.yXg.ENTER) && (null == r && e.preventDefault(), null == this.ref.click ? n(e) : this.ref.click()), null != i && i(e));
+            d(this, 'ref', void 0),
+            d(this, 'handleKeyPress', (e) => {
+                let { onClick: t, href: n, onKeyPress: i, ignoreKeyPress: r } = this.props;
+                e.repeat || (r || null == t || null == this.ref || (e.charCode !== c.yXg.SPACE && e.charCode !== c.yXg.ENTER) || (null == n && e.preventDefault(), null == this.ref.click ? t(e) : this.ref.click()), null != i && i(e));
             }),
-            p(this, 'setRef', (e) => {
+            d(this, 'setRef', (e) => {
                 this.ref = e;
-                let { innerRef: n } = this.props;
-                null != n && ('function' == typeof n ? n(e) : n.hasOwnProperty('current') && (n.current = e));
+                let { innerRef: t } = this.props;
+                null != t && ('function' == typeof t ? t(e) : t.hasOwnProperty('current') && (t.current = e));
             });
     }
 }
-p(h, 'contextType', c.g),
-    p(h, 'defaultProps', {
+d(f, 'contextType', l.g),
+    d(f, 'defaultProps', {
         tag: 'div',
         role: 'button',
         tabIndex: 0

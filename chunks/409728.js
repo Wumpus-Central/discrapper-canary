@@ -1,5 +1,6 @@
-e.exports = {
-    banner: 'banner_d5fdb1',
-    gifTag: 'gifTag_d5fdb1',
-    mask: 'mask_d5fdb1'
+var i = {
+    banner: 'banner__68edb',
+    gifTag: 'gifTag__68edb',
+    mask: 'mask__68edb'
 };
+e.exports = i;

@@ -1,66 +1,60 @@
-A.d(t, {
-    YP: function () {
-        return h;
-    },
-    ZP: function () {
-        return v;
-    },
-    aN: function () {
-        return m;
-    }
+t.d(e, {
+    YP: () => m,
+    ZP: () => p,
+    aN: () => f
 });
-var n = A(200651);
-A(192379);
-var r = A(512722),
-    a = A.n(r),
-    i = A(866442),
-    l = A(399606),
-    o = A(481060),
-    s = A(430824),
-    d = A(470209),
-    c = A(981631),
-    u = A(388032),
-    g = A(288888);
-function h() {
+var n = t(200651);
+t(192379);
+var a = t(512722),
+    l = t.n(a),
+    r = t(866442),
+    i = t(399606),
+    o = t(481060),
+    s = t(430824),
+    d = t(470209),
+    c = t(981631),
+    u = t(388032),
+    g = t(288888);
+function m() {
     return {
         name: '',
         color: c.p6O
     };
 }
-function p(e) {
-    let t,
-        { onRemove: A, role: r } = e;
+function h(A) {
+    let e,
+        { onRemove: t, role: a } = A;
     return (
-        (t =
-            null != r
+        (e =
+            null != a
                 ? (0, n.jsxs)(n.Fragment, {
                       children: [
-                          (0, n.jsx)(o.HiddenVisually, { children: u.intl.format(u.t['94dBOT'], { color: (0, i.Rf)(r.color) }) }),
+                          (0, n.jsx)(o.nn4, { children: u.intl.format(u.t['94dBOT'], { color: (0, r.Rf)(a.color) }) }),
                           (0, n.jsx)('div', {
                               className: g.attachedRoleColor,
-                              style: { backgroundColor: (0, i.Rf)(r.color) }
+                              style: { backgroundColor: (0, r.Rf)(a.color) }
                           }),
-                          (0, n.jsx)(o.Spacer, {
+                          (0, n.jsx)(o.LZC, {
                               size: 8,
                               horizontal: !0
                           }),
                           (0, n.jsx)(o.Text, {
                               variant: 'text-md/normal',
                               color: 'text-normal',
-                              children: r.name
+                              children: a.name
                           }),
-                          null != A &&
+                          null != t &&
                               (0, n.jsxs)(n.Fragment, {
                                   children: [
-                                      (0, n.jsx)(o.Spacer, {
+                                      (0, n.jsx)(o.LZC, {
                                           size: 12,
                                           horizontal: !0
                                       }),
-                                      (0, n.jsx)(o.Clickable, {
+                                      (0, n.jsx)(o.P3F, {
                                           'aria-label': u.intl.string(u.t.tO2HIy),
-                                          onClick: A,
+                                          onClick: t,
                                           className: g.attachedRoleClose,
-                                          children: (0, n.jsx)(o.XSmallIcon, {
+                                          children: (0, n.jsx)(o.Dio, {
                                               size: 'xs',
                                               color: 'currentColor',
                                               className: g.attachedRoleCloseIcon
@@ -70,48 +64,48 @@ function p(e) {
                               })
                       ]
                   })
-                : (0, n.jsx)(o.Spinner, { type: o.Spinner.Type.PULSING_ELLIPSIS })),
+                : (0, n.jsx)(o.$jN, { type: o.$jN.Type.PULSING_ELLIPSIS })),
         (0, n.jsx)('div', {
             className: g.attachedRoleContainer,
-            children: t
+            children: e
         })
     );
 }
-function m() {
-    return (0, n.jsx)(o.CircleWarningIcon, {
+function f() {
+    return (0, n.jsx)(o.P4T, {
         size: 'xs',
         color: 'currentColor',
         className: g.warningIcon
     });
 }
-function f(e) {
-    let { roleName: t } = e;
+function C(A) {
+    let { roleName: e } = A;
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsx)(o.Text, {
                 variant: 'text-md/normal',
                 color: 'text-muted',
                 children: u.intl.format(u.t.i2x5aW, {
-                    roleName: t,
-                    emphasisHook: (e) =>
+                    roleName: e,
+                    emphasisHook: (A) =>
                         (0, n.jsx)(o.Text, {
                             tag: 'span',
                             variant: 'text-md/semibold',
                             color: 'text-normal',
-                            children: e
+                            children: A
                         })
                 })
             }),
-            (0, n.jsxs)(o.Heading, {
+            (0, n.jsxs)(o.X6q, {
                 className: g.detachWarningHeading,
                 variant: 'text-md/medium',
                 color: 'text-normal',
                 children: [
-                    (0, n.jsx)(o.UserMinusIcon, {
+                    (0, n.jsx)(o.I9k, {
                         size: 'sm',
                         color: 'currentColor'
                     }),
-                    (0, n.jsx)(o.Spacer, {
+                    (0, n.jsx)(o.LZC, {
                         horizontal: !0,
                         size: 8
                     }),
@@ -123,16 +117,16 @@ function f(e) {
                 color: 'text-muted',
                 children: u.intl.string(u.t.hNHNpq)
             }),
-            (0, n.jsxs)(o.Heading, {
+            (0, n.jsxs)(o.X6q, {
                 className: g.detachWarningHeading,
                 variant: 'text-md/medium',
                 color: 'text-normal',
                 children: [
-                    (0, n.jsx)(o.TrashIcon, {
+                    (0, n.jsx)(o.XHJ, {
                         size: 'sm',
                         color: 'currentColor'
                     }),
-                    (0, n.jsx)(o.Spacer, {
+                    (0, n.jsx)(o.LZC, {
                         horizontal: !0,
                         size: 8
                     }),
@@ -147,16 +141,16 @@ function f(e) {
         ]
     });
 }
-function v(e) {
-    let { newRoleParams: t, setNewRoleParams: r, guildId: i, productId: c, listingRoleId: h, error: v } = e,
-        C = (0, l.e7)([s.Z], () => (null != h ? s.Z.getRole(i, h) : void 0));
-    return null === t
-        ? (0, n.jsxs)(o.FormItem, {
+function p(A) {
+    let { newRoleParams: e, setNewRoleParams: a, guildId: r, productId: c, listingRoleId: m, error: p } = A,
+        q = (0, i.e7)([s.Z], () => (null != m ? s.Z.getRole(r, m) : void 0));
+    return null === e
+        ? (0, n.jsxs)(o.xJW, {
               title: (0, n.jsxs)('div', {
                   className: g.warningTitle,
                   children: [
-                      (0, n.jsx)(m, {}),
-                      (0, n.jsx)(o.Spacer, {
+                      (0, n.jsx)(f, {}),
+                      (0, n.jsx)(o.LZC, {
                           horizontal: !0,
                           size: 4
                       }),
@@ -164,7 +158,7 @@ function v(e) {
                   ]
               }),
               tag: 'label',
-              error: v,
+              error: p,
               titleClassName: g.roleHeader,
               children: [
                   (0, n.jsx)(o.Text, {
@@ -172,23 +166,23 @@ function v(e) {
                       color: 'text-muted',
                       children: u.intl.string(u.t.H7coX1)
                   }),
-                  (0, n.jsx)(o.Spacer, { size: 8 }),
+                  (0, n.jsx)(o.LZC, { size: 8 }),
                   (0, n.jsxs)('div', {
                       className: g.reattachRoleRow,
                       children: [
-                          (0, n.jsx)(p, {
-                              role: C,
+                          (0, n.jsx)(h, {
+                              role: q,
                               onRemove: void 0
                           }),
-                          (0, n.jsx)(o.Spacer, {
+                          (0, n.jsx)(o.LZC, {
                               horizontal: !0,
                               size: 8
                           }),
-                          (0, n.jsxs)(o.Button, {
+                          (0, n.jsxs)(o.zxk, {
                               innerClassName: g.restoreDetachedRoleButtonInner,
-                              color: o.Button.Colors.PRIMARY,
+                              color: o.zxk.Colors.PRIMARY,
                               onClick: () => {
-                                  r(void 0);
+                                  a(void 0);
                               },
                               children: [
                                   (0, n.jsx)(o.Text, {
@@ -196,11 +190,11 @@ function v(e) {
                                       color: 'none',
                                       children: u.intl.string(u.t.KkRpFh)
                                   }),
-                                  (0, n.jsx)(o.Spacer, {
+                                  (0, n.jsx)(o.LZC, {
                                       horizontal: !0,
                                       size: 8
                                   }),
-                                  (0, n.jsx)(o.UndoIcon, {
+                                  (0, n.jsx)(o.UEU, {
                                       size: 'xs',
                                       color: 'currentColor'
                                   })
@@ -210,11 +204,11 @@ function v(e) {
                   })
               ]
           })
-        : null != h
-          ? (0, n.jsxs)(o.FormItem, {
+        : null != m
+          ? (0, n.jsxs)(o.xJW, {
                 title: u.intl.string(u.t.zIg9t7),
                 tag: 'label',
-                error: v,
+                error: p,
                 titleClassName: g.roleHeader,
                 children: [
                     (0, n.jsx)(o.Text, {
@@ -222,40 +216,40 @@ function v(e) {
                         color: 'text-muted',
                         children: u.intl.string(u.t.OfuEkJ)
                     }),
-                    (0, n.jsx)(o.Spacer, { size: 8 }),
-                    (0, n.jsx)(p, {
-                        role: C,
+                    (0, n.jsx)(o.LZC, { size: 8 }),
+                    (0, n.jsx)(h, {
+                        role: q,
                         onRemove: () => {
-                            a()(null != c, 'productId cannot be null'),
-                                a()(null != C, 'no role attached'),
-                                !(function (e) {
-                                    let { onConfirm: t, roleName: r } = e;
-                                    (0, o.openModalLazy)(async () => {
-                                        let { default: e } = await Promise.resolve().then(A.bind(A, 776045));
-                                        return (A) =>
-                                            (0, n.jsx)(e, {
+                            l()(null != c, 'productId cannot be null'),
+                                l()(null != q, 'no role attached'),
+                                (function (A) {
+                                    let { onConfirm: e, roleName: a } = A;
+                                    (0, o.ZDy)(async () => {
+                                        let { default: A } = await Promise.resolve().then(t.bind(t, 776045));
+                                        return (t) =>
+                                            (0, n.jsx)(A, {
                                                 title: u.intl.string(u.t.Y3Hi3d),
-                                                body: (0, n.jsx)(f, { roleName: r }),
+                                                body: (0, n.jsx)(C, { roleName: a }),
                                                 cta: u.intl.string(u.t.VawZV1),
                                                 closeLabel: u.intl.string(u.t['6y+3Bw']),
-                                                onConfirm: t,
-                                                ...A
+                                                onConfirm: e,
+                                                ...t
                                             });
                                     });
                                 })({
-                                    roleName: C.name,
-                                    onConfirm: () => r(null)
+                                    roleName: q.name,
+                                    onConfirm: () => a(null)
                                 });
                         }
                     })
                 ]
             })
-          : (a()(null != t, 'newRoleParams cannot be null at this point'),
-            (0, n.jsxs)(o.FormItem, {
+          : (l()(null != e, 'newRoleParams cannot be null at this point'),
+            (0, n.jsxs)(o.xJW, {
                 required: !0,
                 title: u.intl.string(u.t.xZvFpK),
                 tag: 'label',
-                error: v,
+                error: p,
                 titleClassName: g.roleHeader,
                 children: [
                     (0, n.jsx)(o.Text, {
@@ -263,10 +257,10 @@ function v(e) {
                         color: 'text-muted',
                         children: u.intl.string(u.t.CllC5u)
                     }),
-                    (0, n.jsx)(o.Spacer, { size: 8 }),
+                    (0, n.jsx)(o.LZC, { size: 8 }),
                     (0, n.jsx)(d.Z, {
-                        newRoleParams: t,
-                        setNewRoleParams: r
+                        newRoleParams: e,
+                        setNewRoleParams: a
                     })
                 ]
             }));

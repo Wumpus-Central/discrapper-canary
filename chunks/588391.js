@@ -1,8 +1,4 @@
-r.d(n, {
-    X: function () {
-        return i;
-    }
-});
+n.d(t, { X: () => i });
 let i = [
     {
         label: 'Alberta',

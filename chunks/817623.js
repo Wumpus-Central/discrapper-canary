@@ -1,1 +1,1 @@
-e.exports = { logo: 'logo_c59dbe' };
+e.exports = { logo: 'logo__11f7b' };

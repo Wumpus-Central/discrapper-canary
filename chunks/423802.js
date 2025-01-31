@@ -1,11 +1,7 @@
-r.d(n, {
-    Lu: function () {
-        return u;
-    }
-});
-var i = r(910974),
-    a = r(725454),
-    o = r.n(a),
+n.d(t, { Lu: () => l });
+var i = n(910974),
+    r = n(725454),
+    a = n.n(r),
     s = {
         CASE_SENSITIVE_EQUAL: 7,
         EQUAL: 6,
@@ -16,39 +12,39 @@ var i = r(910974),
         MATCHES: 1,
         NO_MATCH: 0
     };
-u.rankings = s;
-var l = function (e, n) {
-    return String(e.rankedValue).localeCompare(String(n.rankedValue));
+l.rankings = s;
+var o = function (e, t) {
+    return String(e.rankedValue).localeCompare(String(t.rankedValue));
 };
-function u(e, n, r) {
-    void 0 === r && (r = {});
-    var a = r,
-        o = a.keys,
-        u = a.threshold,
-        d = void 0 === u ? s.MATCHES : u,
-        f = a.baseSort,
-        p = void 0 === f ? l : f,
-        _ = a.sorter;
+function l(e, t, n) {
+    void 0 === n && (n = {});
+    var r = n,
+        a = r.keys,
+        l = r.threshold,
+        c = void 0 === l ? s.MATCHES : l,
+        d = r.baseSort,
+        f = void 0 === d ? o : d,
+        p = r.sorter;
     return (
-        void 0 === _
+        void 0 === p
             ? function (e) {
-                  return e.sort(function (e, n) {
-                      return h(e, n, p);
+                  return e.sort(function (e, t) {
+                      return _(e, t, f);
                   });
               }
-            : _
-    )(e.reduce(m, [])).map(function (e) {
+            : p
+    )(e.reduce(h, [])).map(function (e) {
         return e.item;
     });
-    function m(e, a, s) {
-        var l = c(a, o, n, r),
-            u = l.rank,
-            f = l.keyThreshold;
+    function h(e, r, s) {
+        var o = u(r, a, t, n),
+            l = o.rank,
+            d = o.keyThreshold;
         return (
-            u >= (void 0 === f ? d : f) &&
+            l >= (void 0 === d ? c : d) &&
                 e.push(
-                    (0, i.Z)({}, l, {
-                        item: a,
+                    (0, i.Z)({}, o, {
+                        item: r,
                         index: s
                     })
                 ),
@@ -56,37 +52,37 @@ function u(e, n, r) {
         );
     }
 }
-function c(e, n, r, i) {
-    if (!n) {
-        var a = e;
+function u(e, t, n, i) {
+    if (!t) {
+        var r = e;
         return {
-            rankedValue: a,
-            rank: d(a, r, i),
+            rankedValue: r,
+            rank: c(r, n, i),
             keyIndex: -1,
             keyThreshold: i.threshold
         };
     }
-    return E(e, n).reduce(
-        function (e, n, a) {
-            var o = e.rank,
-                l = e.rankedValue,
-                u = e.keyIndex,
-                c = e.keyThreshold,
-                f = n.itemValue,
-                p = n.attributes,
-                h = d(f, r, i),
-                _ = l,
-                m = p.minRanking,
-                g = p.maxRanking,
-                E = p.threshold;
+    return g(e, t).reduce(
+        function (e, t, r) {
+            var a = e.rank,
+                o = e.rankedValue,
+                l = e.keyIndex,
+                u = e.keyThreshold,
+                d = t.itemValue,
+                f = t.attributes,
+                _ = c(d, n, i),
+                p = o,
+                h = f.minRanking,
+                m = f.maxRanking,
+                g = f.threshold;
             return (
-                h < m && h >= s.MATCHES ? (h = m) : h > g && (h = g),
-                h > o && ((o = h), (u = a), (c = E), (_ = f)),
+                _ < h && _ >= s.MATCHES ? (_ = h) : _ > m && (_ = m),
+                _ > a && ((a = _), (l = r), (u = g), (p = d)),
                 {
-                    rankedValue: _,
-                    rank: o,
-                    keyIndex: u,
-                    keyThreshold: c
+                    rankedValue: p,
+                    rank: a,
+                    keyIndex: l,
+                    keyThreshold: u
                 }
             );
         },
@@ -98,95 +94,93 @@ function c(e, n, r, i) {
         }
     );
 }
-function d(e, n, r) {
-    return ((e = _(e, r)), (n = _(n, r)).length > e.length) ? s.NO_MATCH : e === n ? s.CASE_SENSITIVE_EQUAL : ((e = e.toLowerCase()), e === (n = n.toLowerCase())) ? s.EQUAL : e.startsWith(n) ? s.STARTS_WITH : e.includes(' ' + n) ? s.WORD_STARTS_WITH : e.includes(n) ? s.CONTAINS : 1 === n.length ? s.NO_MATCH : f(e).includes(n) ? s.ACRONYM : p(e, n);
+function c(e, t, n) {
+    return ((e = p(e, n)), (t = p(t, n)).length > e.length) ? s.NO_MATCH : e === t ? s.CASE_SENSITIVE_EQUAL : (e = e.toLowerCase()) === (t = t.toLowerCase()) ? s.EQUAL : e.startsWith(t) ? s.STARTS_WITH : e.includes(' ' + t) ? s.WORD_STARTS_WITH : e.includes(t) ? s.CONTAINS : 1 === t.length ? s.NO_MATCH : d(e).includes(t) ? s.ACRONYM : f(e, t);
 }
-function f(e) {
-    var n = '';
+function d(e) {
+    var t = '';
     return (
         e.split(' ').forEach(function (e) {
             e.split('-').forEach(function (e) {
-                n += e.substr(0, 1);
+                t += e.substr(0, 1);
             });
         }),
-        n
+        t
     );
 }
-function p(e, n) {
-    var r = 0,
+function f(e, t) {
+    var n = 0,
         i = 0;
-    function a(e, n, i) {
-        for (var a = i, o = n.length; a < o; a++) if (n[a] === e) return (r += 1), a + 1;
+    function r(e, t, i) {
+        for (var r = i, a = t.length; r < a; r++) if (t[r] === e) return (n += 1), r + 1;
         return -1;
     }
-    function o(e) {
+    function a(e) {
         var i = 1 / e,
-            a = r / n.length;
-        return s.MATCHES + a * i;
+            r = n / t.length;
+        return s.MATCHES + r * i;
     }
-    var l = a(n[0], e, 0);
-    if (l < 0) return s.NO_MATCH;
-    i = l;
-    for (var u = 1, c = n.length; u < c; u++) if (!((i = a(n[u], e, i)) > -1)) return s.NO_MATCH;
-    return o(i - l);
+    var o = r(t[0], e, 0);
+    if (o < 0) return s.NO_MATCH;
+    i = o;
+    for (var l = 1, u = t.length; l < u; l++) if (!((i = r(t[l], e, i)) > -1)) return s.NO_MATCH;
+    return a(i - o);
 }
-function h(e, n, r) {
+function _(e, t, n) {
     var i = -1,
-        a = 1,
-        o = e.rank,
+        r = 1,
+        a = e.rank,
         s = e.keyIndex,
-        l = n.rank,
-        u = n.keyIndex;
-    return o !== l ? (o > l ? i : a) : s === u ? r(e, n) : s < u ? i : a;
+        o = t.rank,
+        l = t.keyIndex;
+    return a !== o ? (a > o ? i : r) : s === l ? n(e, t) : s < l ? i : r;
 }
-function _(e, n) {
-    var r = n.keepDiacritics;
-    return (e = '' + e), !r && (e = o()(e)), e;
+function p(e, t) {
+    return (e = '' + e), t.keepDiacritics || (e = a()(e)), e;
 }
-function m(e, n) {
-    var r;
-    if (('object' == typeof n && (n = n.key), 'function' == typeof n)) r = n(e);
-    else if (null == e) r = null;
-    else if (Object.hasOwnProperty.call(e, n)) r = e[n];
+function h(e, t) {
+    var n;
+    if (('object' == typeof t && (t = t.key), 'function' == typeof t)) n = t(e);
+    else if (null == e) n = null;
+    else if (Object.hasOwnProperty.call(e, t)) n = e[t];
     else {
-        if (n.includes('.')) return g(n, e);
-        r = null;
+        if (t.includes('.')) return m(t, e);
+        n = null;
     }
-    return null == r ? [] : Array.isArray(r) ? r : [String(r)];
+    return null == n ? [] : Array.isArray(n) ? n : [String(n)];
 }
-function g(e, n) {
-    for (var r = e.split('.'), i = [n], a = 0, o = r.length; a < o; a++) {
-        for (var s = r[a], l = [], u = 0, c = i.length; u < c; u++) {
-            var d = i[u];
-            if (null != d) {
-                if (Object.hasOwnProperty.call(d, s)) {
-                    var f = d[s];
-                    null != f && l.push(f);
-                } else '*' === s && (l = l.concat(d));
+function m(e, t) {
+    for (var n = e.split('.'), i = [t], r = 0, a = n.length; r < a; r++) {
+        for (var s = n[r], o = [], l = 0, u = i.length; l < u; l++) {
+            var c = i[l];
+            if (null != c) {
+                if (Object.hasOwnProperty.call(c, s)) {
+                    var d = c[s];
+                    null != d && o.push(d);
+                } else '*' === s && (o = o.concat(c));
             }
         }
-        i = l;
+        i = o;
     }
     if (Array.isArray(i[0])) {
-        var p = [];
-        return p.concat.apply(p, i);
+        var f = [];
+        return f.concat.apply(f, i);
     }
     return i;
 }
-function E(e, n) {
-    for (var r = [], i = 0, a = n.length; i < a; i++) {
-        for (var o = n[i], s = y(o), l = m(e, o), u = 0, c = l.length; u < c; u++)
-            r.push({
-                itemValue: l[u],
+function g(e, t) {
+    for (var n = [], i = 0, r = t.length; i < r; i++)
+        for (var a = t[i], s = v(a), o = h(e, a), l = 0, u = o.length; l < u; l++)
+            n.push({
+                itemValue: o[l],
                 attributes: s
             });
-    }
-    return r;
+    return n;
 }
-var v = {
+var E = {
     maxRanking: 1 / 0,
     minRanking: -1 / 0
 };
-function y(e) {
-    return 'string' == typeof e ? v : (0, i.Z)({}, v, e);
+function v(e) {
+    return 'string' == typeof e ? E : (0, i.Z)({}, E, e);
 }

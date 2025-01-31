@@ -1,15 +1,8 @@
-n.d(t, {
-    g: function () {
-        return C;
-    }
-}),
-    n(47120),
-    n(757143),
-    n(627494);
+n.d(t, { g: () => _ }), n(47120), n(757143), n(627494);
 var i = n(477660),
     l = n.n(i),
-    r = n(969812),
-    a = n(904245),
+    a = n(969812),
+    r = n(904245),
     s = n(367907),
     o = n(339085),
     c = n(222677),
@@ -27,7 +20,7 @@ let m = /\\([*?+/])/g,
         nick: {
             action(e, t) {
                 let { channel: n } = t;
-                if (null != n.guild_id) return r.Z.changeNickname(n.guild_id, n.id, p.ME, e), { content: '' };
+                if (null != n.guild_id) return a.Z.changeNickname(n.guild_id, n.id, p.ME, e), { content: '' };
             }
         },
         reaction: {
@@ -37,8 +30,8 @@ let m = /\\([*?+/])/g,
                 if (n || !h.Z.hasPresent(i.id)) return;
                 let l = h.Z.getMessages(i.id).last();
                 if (null == l || null == l.id) return;
-                let r = o.ZP.getDisambiguatedEmojiContext(i.guild_id).getByName(e.trim().slice(2, -1));
-                if (null != r) return (0, c.rU)(i.id, l.id, (0, d.g1)(r)), { content: '' };
+                let a = o.ZP.getDisambiguatedEmojiContext(i.guild_id).getByName(e.trim().slice(2, -1));
+                if (null != a) return (0, c.rU)(i.id, l.id, (0, d.g1)(a)), { content: '' };
             }
         },
         searchReplace: {
@@ -47,14 +40,14 @@ let m = /\\([*?+/])/g,
                 var n;
                 let { isEdit: i, channel: l } = t;
                 if (i) return;
-                let r = h.Z.getLastEditableMessage(l.id);
-                if (null == r || null == r.id) return { content: '' };
+                let a = h.Z.getLastEditableMessage(l.id);
+                if (null == a || null == a.id) return { content: '' };
                 let [, s, o] = Array.from(null !== (n = e.match(this.match.regex)) && void 0 !== n ? n : []);
-                (s = s.replace(m, (e, t) => t)), (o = o.replace(m, (e, t) => t));
+                s = s.replace(m, (e, t) => t);
                 let c = !1;
-                o.endsWith('/g') && ((o = o.slice(0, -2)), (c = !0));
-                let d = c ? r.content.replaceAll(s, o) : r.content.replace(s, o);
-                return (null == d || '' === d) && 0 === r.attachments.length ? a.Z.deleteMessage(l.id, r.id) : e !== r.content && a.Z.editMessage(l.id, r.id, { content: d }), { content: '' };
+                (o = o.replace(m, (e, t) => t)).endsWith('/g') && ((o = o.slice(0, -2)), (c = !0));
+                let d = c ? a.content.replaceAll(s, o) : a.content.replace(s, o);
+                return (null == d || '' === d) && 0 === a.attachments.length ? r.Z.deleteMessage(l.id, a.id) : e !== a.content && r.Z.editMessage(l.id, a.id, { content: d }), { content: '' };
             }
         },
         spoiler: { action: (e) => ({ content: (0, p.XmY)(e).trim() }) }
@@ -62,7 +55,7 @@ let m = /\\([*?+/])/g,
 function g(e, t, n, i) {
     return s.ZP.trackWithMetadata(p.rMx.SLASH_COMMAND_USED, { command: e }), t.action(n, i);
 }
-function C(e, t) {
+function _(e, t) {
     for (let i in f) {
         let l = f[i];
         if (null != l.match) {

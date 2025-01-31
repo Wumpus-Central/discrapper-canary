@@ -1,5 +1,5 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
     return e.defineLocale('te', {
         months: 'జనవరి_ఫిబ్రవరి_మార్చి_ఏప్రిల్_మే_జూన్_జూలై_ఆగస్టు_సెప్టెంబర్_అక్టోబర్_నవంబర్_డిసెంబర్'.split('_'),
@@ -43,18 +43,11 @@
         dayOfMonthOrdinalParse: /\d{1,2}వ/,
         ordinal: '%dవ',
         meridiemParse: /రాత్రి|ఉదయం|మధ్యాహ్నం|సాయంత్రం/,
-        meridiemHour: function (e, n) {
-            if ((12 === e && (e = 0), 'రాత్రి' === n)) return e < 4 ? e : e + 12;
-            if ('ఉదయం' === n) return e;
-            if ('మధ్యాహ్నం' === n) return e >= 10 ? e : e + 12;
-            else if ('సాయంత్రం' === n) return e + 12;
+        meridiemHour: function (e, t) {
+            return (12 === e && (e = 0), 'రాత్రి' === t) ? (e < 4 ? e : e + 12) : 'ఉదయం' === t ? e : 'మధ్యాహ్నం' === t ? (e >= 10 ? e : e + 12) : 'సాయంత్రం' === t ? e + 12 : void 0;
         },
-        meridiem: function (e, n, r) {
-            if (e < 4) return 'రాత్రి';
-            if (e < 10) return 'ఉదయం';
-            if (e < 17) return 'మధ్యాహ్నం';
-            else if (e < 20) return 'సాయంత్రం';
-            else return 'రాత్రి';
+        meridiem: function (e, t, n) {
+            return e < 4 ? 'రాత్రి' : e < 10 ? 'ఉదయం' : e < 17 ? 'మధ్యాహ్నం' : e < 20 ? 'సాయంత్రం' : 'రాత్రి';
         },
         week: {
             dow: 0,

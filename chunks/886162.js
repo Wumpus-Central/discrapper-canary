@@ -1,12 +1,7 @@
-n.d(t, {
-    Z: function () {
-        return g;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => g }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(990547),
+    l = n(192379),
+    r = n(990547),
     a = n(399606),
     s = n(481060),
     o = n(232567),
@@ -19,34 +14,34 @@ var i = n(200651),
 function g(e) {
     let { transitionState: t } = e,
         g = (0, a.e7)([u.Z], () => u.Z.getAction()),
-        [f, _] = r.useState(!1),
+        [_, f] = l.useState(!1),
         E = (0, d.Dt)();
     async function I() {
-        return _(!0), g === h.c2C.AGREEMENTS && _(await (0, o.Lr)()), null;
+        return f(!0), g === h.c2C.AGREEMENTS && f(await (0, o.Lr)()), null;
     }
     return (
         (0, c.Z)(
             {
-                type: l.ImpressionTypes.VIEW,
-                name: l.ImpressionNames.USER_AGREEMENTS,
+                type: r.ImpressionTypes.VIEW,
+                name: r.ImpressionNames.USER_AGREEMENTS,
                 properties: { required_action: g }
             },
             {},
             []
         ),
-        (0, i.jsxs)(s.ModalRoot, {
+        (0, i.jsxs)(s.Y0X, {
             'aria-labelledby': E,
             transitionState: t,
             children: [
                 (0, i.jsx)('div', { id: E }),
-                (0, i.jsx)(s.ModalHeader, {
+                (0, i.jsx)(s.xBx, {
                     separator: !1,
-                    children: (0, i.jsx)(s.Heading, {
+                    children: (0, i.jsx)(s.X6q, {
                         variant: 'heading-lg/semibold',
                         children: m.intl.string(m.t['7glvXl'])
                     })
                 }),
-                (0, i.jsxs)(s.ModalContent, {
+                (0, i.jsxs)(s.hzk, {
                     children: [
                         (0, i.jsx)(s.Text, {
                             variant: 'text-md/normal',
@@ -73,11 +68,11 @@ function g(e) {
                         })
                     ]
                 }),
-                (0, i.jsx)(s.ModalFooter, {
-                    children: (0, i.jsx)(s.Button, {
-                        submitting: f,
+                (0, i.jsx)(s.mzw, {
+                    children: (0, i.jsx)(s.zxk, {
+                        submitting: _,
                         onClick: I,
-                        color: s.Button.Colors.GREEN,
+                        color: s.zxk.Colors.GREEN,
                         children: m.intl.string(m.t['+TBKLy'])
                     })
                 })

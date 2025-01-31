@@ -1,61 +1,56 @@
-e.r(a),
-    e.d(a, {
-        default: function () {
-            return b;
-        }
-    });
-var o = e(200651);
-e(192379);
-var n = e(780384),
-    s = e(481060),
-    i = e(410030),
-    l = e(313201),
-    r = e(388032),
-    c = e(274038),
-    d = e(167969),
-    u = e(557256);
-function b(t) {
-    let { onClose: a, transitionState: e } = t,
-        b = (0, l.Dt)(),
-        h = (0, n.wj)((0, i.ZP)());
-    return (0, o.jsxs)(s.ModalRoot, {
-        transitionState: e,
-        'aria-labelledby': b,
-        size: s.ModalSize.SMALL,
+s.d(e, { default: () => h });
+var n = s(200651);
+s(192379);
+var c = s(780384),
+    i = s(481060),
+    a = s(410030),
+    l = s(313201),
+    o = s(388032),
+    r = s(274038),
+    d = s(167969),
+    x = s(557256);
+function h(t) {
+    let { onClose: e, transitionState: s } = t,
+        h = (0, l.Dt)(),
+        m = (0, c.wj)((0, a.ZP)());
+    return (0, n.jsxs)(i.Y0X, {
+        transitionState: s,
+        'aria-labelledby': h,
+        size: i.CgR.SMALL,
         children: [
-            (0, o.jsxs)(s.ModalContent, {
-                className: c.content,
+            (0, n.jsxs)(i.hzk, {
+                className: r.content,
                 children: [
-                    (0, o.jsx)(s.ModalCloseButton, {
-                        className: c.closeButton,
-                        onClick: a
+                    (0, n.jsx)(i.olH, {
+                        className: r.closeButton,
+                        onClick: e
                     }),
-                    (0, o.jsx)('img', {
-                        className: c.image,
-                        src: h ? d : u,
+                    (0, n.jsx)('img', {
+                        className: r.image,
+                        src: m ? d : x,
                         alt: ''
                     }),
-                    (0, o.jsx)(s.Text, {
+                    (0, n.jsx)(i.Text, {
                         variant: 'text-lg/semibold',
                         color: 'header-primary',
-                        className: c.title,
-                        children: r.intl.string(r.t.wLrh09)
+                        className: r.title,
+                        children: o.intl.string(o.t.wLrh09)
                     }),
-                    (0, o.jsx)(s.Text, {
+                    (0, n.jsx)(i.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        className: c.body,
-                        children: r.intl.string(r.t.DW9yJi)
+                        className: r.body,
+                        children: o.intl.string(o.t.DW9yJi)
                     })
                 ]
             }),
-            (0, o.jsx)(s.ModalFooter, {
-                children: (0, o.jsx)(s.Button, {
-                    className: c.button,
-                    color: s.Button.Colors.BRAND,
-                    onClick: a,
-                    size: s.Button.Sizes.LARGE,
-                    children: r.intl.string(r.t.BddRzc)
+            (0, n.jsx)(i.mzw, {
+                children: (0, n.jsx)(i.zxk, {
+                    className: r.button,
+                    color: i.zxk.Colors.BRAND,
+                    onClick: e,
+                    size: i.zxk.Sizes.LARGE,
+                    children: o.intl.string(o.t.BddRzc)
                 })
             })
         ]

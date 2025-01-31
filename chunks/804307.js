@@ -1,20 +1,16 @@
-t.d(n, {
-    Z: function () {
-        return m;
-    }
-});
-var i = t(200651),
-    l = t(192379),
-    a = t(120356),
-    o = t.n(a),
-    r = t(442837),
-    s = t(481060),
-    c = t(607070),
-    d = t(98880),
-    u = t(61474);
+n.d(t, { Z: () => m });
+var i = n(200651),
+    l = n(192379),
+    a = n(120356),
+    o = n.n(a),
+    s = n(442837),
+    r = n(481060),
+    c = n(607070),
+    d = n(98880),
+    u = n(61474);
 function m(e) {
-    let { look: n = d.U4.LARGE_BANNER } = e,
-        t = (0, r.e7)([c.Z], () => c.Z.useReducedMotion),
+    let { look: t = d.U4.LARGE_BANNER } = e,
+        n = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
         { styleLarge: a, styleSmall: m } = l.useMemo(
             () => ({
                 styleLarge: { width: ''.concat(10 + 50 * Math.random(), '%') },
@@ -24,28 +20,28 @@ function m(e) {
         );
     return (0, i.jsxs)('div', {
         className: o()(u.container, u.loadingAnimation, {
-            [u.noAnimation]: t,
-            [u.containerBorderRadius]: n !== d.U4.ROW,
-            [u.rowContainer]: n === d.U4.ROW
+            [u.noAnimation]: n,
+            [u.containerBorderRadius]: t !== d.U4.ROW,
+            [u.rowContainer]: t === d.U4.ROW
         }),
         children: [
             (0, i.jsx)('div', {
                 className: o()(u.bannerImage, {
-                    [u.mediumBanner]: n === d.U4.MEDIUM_BANNER,
-                    [u.largeBanner]: n === d.U4.LARGE_BANNER
+                    [u.mediumBanner]: t === d.U4.MEDIUM_BANNER,
+                    [u.largeBanner]: t === d.U4.LARGE_BANNER
                 })
             }),
             (0, i.jsxs)('div', {
-                className: o()(u.appDetailsContainer, { [u.appDetailsRowContainer]: n === d.U4.ROW }),
+                className: o()(u.appDetailsContainer, { [u.appDetailsRowContainer]: t === d.U4.ROW }),
                 children: [
-                    (0, i.jsx)('div', { className: o()(u.iconPlaceholder, { [u.rowIconPlaceholder]: n === d.U4.ROW }) }),
+                    (0, i.jsx)('div', { className: o()(u.iconPlaceholder, { [u.rowIconPlaceholder]: t === d.U4.ROW }) }),
                     (0, i.jsxs)('div', {
                         className: u.textContainer,
                         children: [
                             (0, i.jsx)('div', {
                                 className: u.textPlaceholder,
                                 style: a,
-                                children: (0, i.jsx)(s.Heading, {
+                                children: (0, i.jsx)(r.X6q, {
                                     className: u.hidden,
                                     variant: 'heading-md/semibold',
                                     color: 'header-primary',
@@ -56,7 +52,7 @@ function m(e) {
                             (0, i.jsx)('div', {
                                 className: u.textPlaceholder,
                                 style: m,
-                                children: (0, i.jsx)(s.Text, {
+                                children: (0, i.jsx)(r.Text, {
                                     className: u.hidden,
                                     variant: 'text-sm/normal',
                                     color: 'text-secondary',
@@ -66,7 +62,7 @@ function m(e) {
                             })
                         ]
                     }),
-                    n === d.U4.ROW && (0, i.jsx)('div', { className: u.rowDivider })
+                    t === d.U4.ROW && (0, i.jsx)('div', { className: u.rowDivider })
                 ]
             })
         ]

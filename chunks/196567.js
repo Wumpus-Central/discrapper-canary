@@ -1,40 +1,36 @@
-r.d(n, {
-    Z: function () {
-        return u;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(481060),
-    l = r(747642);
-function u(e) {
-    let { className: n, copy: r, bannerImage: a, textColor: u = 'always-white', hideGiftIcon: c = !1 } = e;
+n.d(t, { Z: () => l });
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(481060),
+    o = n(747642);
+function l(e) {
+    let { className: t, copy: n, bannerImage: r, textColor: l = 'always-white', hideGiftIcon: u = !1 } = e;
     return (0, i.jsxs)('div', {
-        className: o()(l.bannerContainer, n),
+        className: a()(o.bannerContainer, t),
         children: [
-            null == a
+            null == r
                 ? null
                 : (0, i.jsx)('img', {
                       alt: '',
-                      className: l.banner,
-                      src: a
+                      className: o.banner,
+                      src: r
                   }),
             (0, i.jsxs)('div', {
-                className: l.textContainer,
+                className: o.textContainer,
                 children: [
-                    !1 === c &&
-                        (0, i.jsx)(s.GiftIcon, {
+                    !1 === u &&
+                        (0, i.jsx)(s.OgN, {
                             size: 'md',
                             color: 'currentColor',
-                            className: l.giftIcon
+                            className: o.giftIcon
                         }),
-                    (0, i.jsx)(s.Heading, {
-                        className: o()(l.textHeader, { [l.textHeaderWithGiftIcon]: !c }),
-                        color: u,
+                    (0, i.jsx)(s.X6q, {
+                        className: a()(o.textHeader, { [o.textHeaderWithGiftIcon]: !u }),
+                        color: l,
                         variant: 'eyebrow',
-                        children: r
+                        children: n
                     })
                 ]
             })

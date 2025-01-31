@@ -1,9 +1,10 @@
-e.exports = {
-    wrapper: 'wrapper_e06857',
-    header: 'header_e06857',
-    interactive: 'interactive_e06857',
-    headerIcon: 'headerIcon_e06857',
-    headerLabel: 'headerLabel_e06857',
-    headerCollapseIcon: 'headerCollapseIcon_e06857',
-    headerCollapseIconCollapsed: 'headerCollapseIconCollapsed_e06857'
+var i = {
+    wrapper: 'wrapper__14245',
+    header: 'header__14245',
+    interactive: 'interactive__14245',
+    headerIcon: 'headerIcon__14245',
+    headerLabel: 'headerLabel__14245',
+    headerCollapseIcon: 'headerCollapseIcon__14245',
+    headerCollapseIconCollapsed: 'headerCollapseIconCollapsed__14245'
 };
+e.exports = i;

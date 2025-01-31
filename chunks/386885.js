@@ -1,22 +1,17 @@
-t.d(n, {
-    U: function () {
-        return r;
-    },
-    V: function () {
-        return u;
-    }
+n.d(i, {
+    U: () => r,
+    V: () => a
 });
-var i,
-    r,
-    l = t(981631);
-function u(e, n) {
-    let t = e.hasFeature(l.oNc.VERIFIED),
-        i = e.hasFeature(l.oNc.DISCOVERABLE);
-    if (t) return i ? 'eligible_enabled' : 'eligible_disabled';
-    if (i) {
-        let e = n.sufficientWithoutGracePeriod && null != n.gracePeriodEndDate && n.gracePeriodEndDate > new Date();
-        return n.sufficient || e ? 'eligible_enabled' : 'disqualified';
+var t,
+    l = n(981631),
+    r = (((t = {}).INELIGIBLE = 'ineligible'), (t.DISQUALIFIED = 'disqualified'), (t.ELIGIBLE_DISABLED = 'eligible_disabled'), (t.ELIGIBLE_ENABLED = 'eligible_enabled'), t);
+function a(e, i) {
+    let n = e.hasFeature(l.oNc.VERIFIED),
+        t = e.hasFeature(l.oNc.DISCOVERABLE);
+    if (n) return t ? 'eligible_enabled' : 'eligible_disabled';
+    if (t) {
+        let e = i.sufficientWithoutGracePeriod && null != i.gracePeriodEndDate && i.gracePeriodEndDate > new Date();
+        return i.sufficient || e ? 'eligible_enabled' : 'disqualified';
     }
-    return n.sufficient ? 'eligible_disabled' : 'ineligible';
+    return i.sufficient ? 'eligible_disabled' : 'ineligible';
 }
-((i = r || (r = {})).INELIGIBLE = 'ineligible'), (i.DISQUALIFIED = 'disqualified'), (i.ELIGIBLE_DISABLED = 'eligible_disabled'), (i.ELIGIBLE_ENABLED = 'eligible_enabled');

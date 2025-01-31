@@ -1,47 +1,43 @@
-r.d(n, {
-    C: function () {
-        return f;
-    }
-});
-var i = r(259630),
-    a = r(816552),
-    o = r(739292),
-    s = r(650117);
-function l(e, n) {
-    return n
+n.d(t, { C: () => d });
+var i = n(259630),
+    r = n(816552),
+    a = n(739292),
+    s = n(650117);
+function o(e, t) {
+    return t
         ? (0, i.pi)(
-              (0, i.pi)((0, i.pi)({}, e || {}), n || {}),
-              Object.keys(e).reduce(function (r, a) {
-                  return (r[a] = (0, i.pi)((0, i.pi)({}, e[a]), n[a] || {})), r;
+              (0, i.pi)((0, i.pi)({}, e || {}), t || {}),
+              Object.keys(e).reduce(function (n, r) {
+                  return (n[r] = (0, i.pi)((0, i.pi)({}, e[r]), t[r] || {})), n;
               }, {})
           )
         : e;
 }
-function u(e, n) {
-    return n
+function l(e, t) {
+    return t
         ? Object.keys(e).reduce(
-              function (r, i) {
-                  return (r[i] = l(e[i], n[i])), r;
+              function (n, i) {
+                  return (n[i] = o(e[i], t[i])), n;
               },
               (0, i.pi)({}, e)
           )
         : e;
 }
-function c(e) {
+function u(e) {
     return {
         create: function () {
             return {
-                get: function (n) {
-                    return e[n];
+                get: function (t) {
+                    return e[t];
                 },
-                set: function (n, r) {
-                    e[n] = r;
+                set: function (t, n) {
+                    e[t] = n;
                 }
             };
         }
     };
 }
-function d(e) {
+function c(e) {
     return (
         void 0 === e &&
             (e = {
@@ -50,43 +46,43 @@ function d(e) {
                 pluralRules: {}
             }),
         {
-            getNumberFormat: (0, a.H)(
+            getNumberFormat: (0, r.H)(
                 function () {
-                    for (var e, n = [], r = 0; r < arguments.length; r++) n[r] = arguments[r];
-                    return new ((e = Intl.NumberFormat).bind.apply(e, (0, i.ev)([void 0], n, !1)))();
+                    for (var e, t = [], n = 0; n < arguments.length; n++) t[n] = arguments[n];
+                    return new ((e = Intl.NumberFormat).bind.apply(e, (0, i.ev)([void 0], t, !1)))();
                 },
                 {
-                    cache: c(e.number),
-                    strategy: a.A.variadic
+                    cache: u(e.number),
+                    strategy: r.A.variadic
                 }
             ),
-            getDateTimeFormat: (0, a.H)(
+            getDateTimeFormat: (0, r.H)(
                 function () {
-                    for (var e, n = [], r = 0; r < arguments.length; r++) n[r] = arguments[r];
-                    return new ((e = Intl.DateTimeFormat).bind.apply(e, (0, i.ev)([void 0], n, !1)))();
+                    for (var e, t = [], n = 0; n < arguments.length; n++) t[n] = arguments[n];
+                    return new ((e = Intl.DateTimeFormat).bind.apply(e, (0, i.ev)([void 0], t, !1)))();
                 },
                 {
-                    cache: c(e.dateTime),
-                    strategy: a.A.variadic
+                    cache: u(e.dateTime),
+                    strategy: r.A.variadic
                 }
             ),
-            getPluralRules: (0, a.H)(
+            getPluralRules: (0, r.H)(
                 function () {
-                    for (var e, n = [], r = 0; r < arguments.length; r++) n[r] = arguments[r];
-                    return new ((e = Intl.PluralRules).bind.apply(e, (0, i.ev)([void 0], n, !1)))();
+                    for (var e, t = [], n = 0; n < arguments.length; n++) t[n] = arguments[n];
+                    return new ((e = Intl.PluralRules).bind.apply(e, (0, i.ev)([void 0], t, !1)))();
                 },
                 {
-                    cache: c(e.pluralRules),
-                    strategy: a.A.variadic
+                    cache: u(e.pluralRules),
+                    strategy: r.A.variadic
                 }
             )
         }
     );
 }
-var f = (function () {
-    function e(n, r, a, o) {
-        void 0 === r && (r = e.defaultLocale);
-        var l = this;
+var d = (function () {
+    function e(t, n, r, a) {
+        void 0 === n && (n = e.defaultLocale);
+        var o = this;
         if (
             ((this.formatterCache = {
                 number: {},
@@ -94,39 +90,39 @@ var f = (function () {
                 pluralRules: {}
             }),
             (this.format = function (e) {
-                var n = l.formatToParts(e);
-                if (1 === n.length) return n[0].value;
-                var r = n.reduce(function (e, n) {
-                    return e.length && n.type === s.du.literal && 'string' == typeof e[e.length - 1] ? (e[e.length - 1] += n.value) : e.push(n.value), e;
+                var t = o.formatToParts(e);
+                if (1 === t.length) return t[0].value;
+                var n = t.reduce(function (e, t) {
+                    return e.length && t.type === s.du.literal && 'string' == typeof e[e.length - 1] ? (e[e.length - 1] += t.value) : e.push(t.value), e;
                 }, []);
-                return r.length <= 1 ? r[0] || '' : r;
+                return n.length <= 1 ? n[0] || '' : n;
             }),
             (this.formatToParts = function (e) {
-                return (0, s.FK)(l.ast, l.locales, l.formatters, l.formats, e, void 0, l.message);
+                return (0, s.FK)(o.ast, o.locales, o.formatters, o.formats, e, void 0, o.message);
             }),
             (this.resolvedOptions = function () {
                 var e;
-                return { locale: (null === (e = l.resolvedLocale) || void 0 === e ? void 0 : e.toString()) || Intl.NumberFormat.supportedLocalesOf(l.locales)[0] };
+                return { locale: (null === (e = o.resolvedLocale) || void 0 === e ? void 0 : e.toString()) || Intl.NumberFormat.supportedLocalesOf(o.locales)[0] };
             }),
             (this.getAst = function () {
-                return l.ast;
+                return o.ast;
             }),
-            (this.locales = r),
-            (this.resolvedLocale = e.resolveLocale(r)),
-            'string' == typeof n)
+            (this.locales = n),
+            (this.resolvedLocale = e.resolveLocale(n)),
+            'string' == typeof t)
         ) {
-            if (((this.message = n), !e.__parse)) throw TypeError('IntlMessageFormat.__parse must be set to process `message` of type `string`');
-            var c = o || {},
-                f = (c.formatters, (0, i._T)(c, ['formatters']));
-            this.ast = e.__parse(n, (0, i.pi)((0, i.pi)({}, f), { locale: this.resolvedLocale }));
-        } else this.ast = n;
+            if (((this.message = t), !e.__parse)) throw TypeError('IntlMessageFormat.__parse must be set to process `message` of type `string`');
+            var u = a || {},
+                d = (u.formatters, (0, i._T)(u, ['formatters']));
+            this.ast = e.__parse(t, (0, i.pi)((0, i.pi)({}, d), { locale: this.resolvedLocale }));
+        } else this.ast = t;
         if (!Array.isArray(this.ast)) throw TypeError('A message must be provided as a String or AST.');
-        (this.formats = u(e.formats, a)), (this.formatters = (o && o.formatters) || d(this.formatterCache));
+        (this.formats = l(e.formats, r)), (this.formatters = (a && a.formatters) || c(this.formatterCache));
     }
     return (
         Object.defineProperty(e, 'defaultLocale', {
             get: function () {
-                return !e.memoizedDefaultLocale && (e.memoizedDefaultLocale = new Intl.NumberFormat().resolvedOptions().locale), e.memoizedDefaultLocale;
+                return e.memoizedDefaultLocale || (e.memoizedDefaultLocale = new Intl.NumberFormat().resolvedOptions().locale), e.memoizedDefaultLocale;
             },
             enumerable: !1,
             configurable: !0
@@ -134,11 +130,11 @@ var f = (function () {
         (e.memoizedDefaultLocale = null),
         (e.resolveLocale = function (e) {
             if (void 0 !== Intl.Locale) {
-                var n = Intl.NumberFormat.supportedLocalesOf(e);
-                return n.length > 0 ? new Intl.Locale(n[0]) : new Intl.Locale('string' == typeof e ? e : e[0]);
+                var t = Intl.NumberFormat.supportedLocalesOf(e);
+                return new Intl.Locale(t.length > 0 ? t[0] : 'string' == typeof e ? e : e[0]);
             }
         }),
-        (e.__parse = o.Qc),
+        (e.__parse = a.Qc),
         (e.formats = {
             number: {
                 integer: { maximumFractionDigits: 0 },

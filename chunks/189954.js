@@ -1,1 +1,2 @@
-e.exports = { lottieIcon: 'lottieIcon_f73ef7' };
+var i = { lottieIcon: 'lottieIcon__5eb9b' };
+e.exports = i;

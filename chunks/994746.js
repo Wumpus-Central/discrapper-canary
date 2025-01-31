@@ -1,58 +1,52 @@
-r.d(n, {
-    Z: function () {
-        return u;
-    }
-});
-var i = r(627341);
-var a = r(278074),
-    o = r(90712),
-    s = r(981631),
-    l = r(388032);
-function u(e) {
-    let n = (0, o.Z)(e);
+n.d(t, { Z: () => o }), n(627341);
+var i = n(278074),
+    r = n(90712),
+    a = n(981631),
+    s = n(388032);
+function o(e) {
+    let t = (0, r.Z)(e);
     return {
-        text: (0, a.EQ)([e, null == n ? void 0 : n.type])
-            .with([{ type: s.IIU.PLAYING }, s.ABu.XBOX], () => l.intl.formatToPlainString(l.t.Sq9xJy, { game: l.intl.string(l.t['Nfvo7+']) }))
-            .with([{ type: s.IIU.PLAYING }, s.ABu.PLAYSTATION], () => l.intl.formatToPlainString(l.t.Sq9xJy, { game: l.intl.string(l.t.fFl4jo) }))
-            .with([{ type: s.IIU.STREAMING }, s.ABu.TWITCH], () => l.intl.formatToPlainString(l.t['4CQq9f'], { name: l.intl.string(l.t.q4pBGx) }))
-            .with([{ type: s.IIU.STREAMING }, s.ABu.YOUTUBE], () => l.intl.formatToPlainString(l.t['4CQq9f'], { name: l.intl.string(l.t.aS6cKy) }))
-            .with([{ type: s.IIU.PLAYING }, a.P.any], () => l.intl.string(l.t.BMTj29))
-            .with([{ type: s.IIU.STREAMING }, a.P.any], () => l.intl.string(l.t['Jpkr/v']))
+        text: (0, i.EQ)([e, null == t ? void 0 : t.type])
+            .with([{ type: a.IIU.PLAYING }, a.ABu.XBOX], () => s.intl.formatToPlainString(s.t.Sq9xJy, { game: s.intl.string(s.t['Nfvo7+']) }))
+            .with([{ type: a.IIU.PLAYING }, a.ABu.PLAYSTATION], () => s.intl.formatToPlainString(s.t.Sq9xJy, { game: s.intl.string(s.t.fFl4jo) }))
+            .with([{ type: a.IIU.STREAMING }, a.ABu.TWITCH], () => s.intl.formatToPlainString(s.t['4CQq9f'], { name: s.intl.string(s.t.q4pBGx) }))
+            .with([{ type: a.IIU.STREAMING }, a.ABu.YOUTUBE], () => s.intl.formatToPlainString(s.t['4CQq9f'], { name: s.intl.string(s.t.aS6cKy) }))
+            .with([{ type: a.IIU.PLAYING }, i.P.any], () => s.intl.string(s.t.BMTj29))
+            .with([{ type: a.IIU.STREAMING }, i.P.any], () => s.intl.string(s.t['Jpkr/v']))
             .with(
                 [
                     {
-                        type: s.IIU.LISTENING,
-                        details: a.P.string
+                        type: a.IIU.LISTENING,
+                        details: i.P.string
                     },
-                    a.P.any
+                    i.P.any
                 ],
-                () => l.intl.formatToPlainString(l.t['b+lA5+'], { name: e.name })
+                () => s.intl.formatToPlainString(s.t['b+lA5+'], { name: e.name })
             )
-            .with([{ type: s.IIU.LISTENING }, a.P.any], () => l.intl.string(l.t.dBISa2))
+            .with([{ type: a.IIU.LISTENING }, i.P.any], () => s.intl.string(s.t.dBISa2))
             .with(
                 [
                     {
-                        type: s.IIU.WATCHING,
-                        details: a.P.string
+                        type: a.IIU.WATCHING,
+                        details: i.P.string
                     },
-                    a.P.any
+                    i.P.any
                 ],
-                () => l.intl.formatToPlainString(l.t.mqdfDQ, { name: e.name })
+                () => s.intl.formatToPlainString(s.t.mqdfDQ, { name: e.name })
             )
-            .with([{ type: s.IIU.WATCHING }, a.P.any], () => l.intl.string(l.t.GpNXjI))
+            .with([{ type: a.IIU.WATCHING }, i.P.any], () => s.intl.string(s.t.GpNXjI))
             .with(
                 [
                     {
-                        type: s.IIU.COMPETING,
-                        details: a.P.string
+                        type: a.IIU.COMPETING,
+                        details: i.P.string
                     },
-                    a.P.any
+                    i.P.any
                 ],
-                () => l.intl.formatToPlainString(l.t.oHF7Cg, { name: e.name })
+                () => s.intl.formatToPlainString(s.t.oHF7Cg, { name: e.name })
             )
-            .with([{ type: s.IIU.COMPETING }, a.P.any], () => l.intl.string(l.t.OzCsIC))
-            .with([{ type: s.IIU.HANG_STATUS }, a.P.any], () => l.intl.string(l.t['04B8fH']))
+            .with([{ type: a.IIU.COMPETING }, i.P.any], () => s.intl.string(s.t.OzCsIC))
             .otherwise(() => void 0),
-        platformIcon: null == n ? void 0 : n.icon
+        platformIcon: null == t ? void 0 : t.icon
     };
 }

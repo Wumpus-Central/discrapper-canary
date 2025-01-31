@@ -1,7 +1,6 @@
 n.d(t, {
-    E: function () {
-        return y;
-    }
+    E: () => j,
+    Z: () => y
 }),
     n(47120),
     n(724458),
@@ -13,19 +12,19 @@ var i,
     o = n.n(a),
     s = n(748780),
     c = n(442837),
-    u = n(692547),
-    d = n(215569),
+    d = n(692547),
+    u = n(215569),
     h = n(481060),
     p = n(812206),
     m = n(707409),
-    f = n(703656),
-    g = n(417363),
-    v = n(941128),
-    C = n(780570),
+    g = n(703656),
+    f = n(417363),
+    _ = n(941128),
+    v = n(780570),
     x = n(353042),
-    I = n(981631),
-    _ = n(388032),
-    Z = n(282115);
+    C = n(981631),
+    Z = n(388032),
+    I = n(282115);
 function b(e, t, n) {
     return (
         t in e
@@ -40,56 +39,56 @@ function b(e, t, n) {
     );
 }
 let S = {
-    [I.vxO.INSTALLING]: {
-        [m.J6.NONE]: (e, t) => _.intl.formatToPlainString(_.t['p+2sEx'], { name: e }),
+    [C.vxO.INSTALLING]: {
+        [m.J6.NONE]: (e, t) => Z.intl.formatToPlainString(Z.t['p+2sEx'], { name: e }),
         [m.J6.SECONDS]: (e, t) =>
-            _.intl.formatToPlainString(_.t['/0NgPD'], {
+            Z.intl.formatToPlainString(Z.t['/0NgPD'], {
                 name: e,
                 timeRemaining: t
             }),
         [m.J6.MINUTES]: (e, t) =>
-            _.intl.formatToPlainString(_.t.ZIwMzs, {
+            Z.intl.formatToPlainString(Z.t.ZIwMzs, {
                 name: e,
                 timeRemaining: t
             }),
         [m.J6.HOURS]: (e, t) =>
-            _.intl.formatToPlainString(_.t['3IQDUl'], {
+            Z.intl.formatToPlainString(Z.t['3IQDUl'], {
                 name: e,
                 timeRemaining: t
             })
     },
-    [I.vxO.UPDATING]: {
-        [m.J6.NONE]: (e, t) => _.intl.formatToPlainString(_.t['6F9QzM'], { name: e }),
+    [C.vxO.UPDATING]: {
+        [m.J6.NONE]: (e, t) => Z.intl.formatToPlainString(Z.t['6F9QzM'], { name: e }),
         [m.J6.SECONDS]: (e, t) =>
-            _.intl.formatToPlainString(_.t['2OVgVl'], {
+            Z.intl.formatToPlainString(Z.t['2OVgVl'], {
                 name: e,
                 timeRemaining: t
             }),
         [m.J6.MINUTES]: (e, t) =>
-            _.intl.formatToPlainString(_.t.mgQg1N, {
+            Z.intl.formatToPlainString(Z.t.mgQg1N, {
                 name: e,
                 timeRemaining: t
             }),
         [m.J6.HOURS]: (e, t) =>
-            _.intl.formatToPlainString(_.t['aTdq4+'], {
+            Z.intl.formatToPlainString(Z.t['aTdq4+'], {
                 name: e,
                 timeRemaining: t
             })
     },
-    [I.vxO.REPAIRING]: {
-        [m.J6.NONE]: (e, t) => _.intl.formatToPlainString(_.t['p+2sEx'], { name: e }),
+    [C.vxO.REPAIRING]: {
+        [m.J6.NONE]: (e, t) => Z.intl.formatToPlainString(Z.t['p+2sEx'], { name: e }),
         [m.J6.SECONDS]: (e, t) =>
-            _.intl.formatToPlainString(_.t['/0NgPD'], {
+            Z.intl.formatToPlainString(Z.t['/0NgPD'], {
                 name: e,
                 timeRemaining: t
             }),
         [m.J6.MINUTES]: (e, t) =>
-            _.intl.formatToPlainString(_.t.ZIwMzs, {
+            Z.intl.formatToPlainString(Z.t.ZIwMzs, {
                 name: e,
                 timeRemaining: t
             }),
         [m.J6.HOURS]: (e, t) =>
-            _.intl.formatToPlainString(_.t['3IQDUl'], {
+            Z.intl.formatToPlainString(Z.t['3IQDUl'], {
                 name: e,
                 timeRemaining: t
             })
@@ -98,11 +97,11 @@ let S = {
 class N extends r.PureComponent {
     renderText() {
         let { state: e, isPaused: t } = this.props;
-        if (e.type === I.vxO.UPDATING || e.type === I.vxO.REPAIRING || e.type === I.vxO.INSTALLING) {
-            if (t) return _.intl.string(_.t['5oxtFR']);
-            if (e.stage === I.f07.PATCHING || e.stage === I.f07.REPAIRING)
+        if (e.type === C.vxO.UPDATING || e.type === C.vxO.REPAIRING || e.type === C.vxO.INSTALLING) {
+            if (t) return Z.intl.string(Z.t['5oxtFR']);
+            if (e.stage === C.f07.PATCHING || e.stage === C.f07.REPAIRING)
                 return (0, l.jsx)(x.Z, {
-                    getHistoricalTotalBytes: g.Z.getHistoricalTotalBytesWritten,
+                    getHistoricalTotalBytes: f.Z.getHistoricalTotalBytesWritten,
                     updateInterval: 5000,
                     children: this.renderProgressBody
                 });
@@ -111,7 +110,7 @@ class N extends r.PureComponent {
     }
     render() {
         let e = this.renderText();
-        return null != e ? e : _.intl.string(_.t.cw57am);
+        return null != e ? e : Z.intl.string(Z.t.cw57am);
     }
     constructor(...e) {
         super(...e),
@@ -121,11 +120,11 @@ class N extends r.PureComponent {
                 if (null == r || null == a || null == l) return null;
                 let s = (e[e.length - 1] / t) * 1000,
                     c = 0 !== s ? Math.max(1, (a - r) / s) : null,
-                    u = S[o],
-                    d = null != u ? Object.keys(u) : [],
-                    { unit: h, time: p } = (0, m.CI)(null != c ? c / 60 : null, d);
-                if (null != u && null != h) {
-                    let e = u[h];
+                    d = S[o],
+                    u = null != d ? Object.keys(d) : [],
+                    { unit: h, time: p } = (0, m.CI)(null != c ? c / 60 : null, u);
+                if (null != d && null != h) {
+                    let e = d[h];
                     return null != e ? e(i.name, p) : null;
                 }
                 return null;
@@ -151,7 +150,7 @@ class E extends (i = r.PureComponent) {
     getTooltipText() {
         let { firstApplication: e, firstState: t, isPaused: n } = this.props;
         return null == e || null == t
-            ? _.intl.string(_.t.cw57am)
+            ? Z.intl.string(Z.t.cw57am)
             : (0, l.jsx)(N, {
                   application: e,
                   state: t,
@@ -162,22 +161,22 @@ class E extends (i = r.PureComponent) {
         let { percent: e, isPaused: t, className: n } = this.props;
         return (0, l.jsx)(s.Z.div, {
             style: { transform: [{ scale: this.state.animationScale }] },
-            className: o()(n, Z.progressContainer),
+            className: o()(n, I.progressContainer),
             onClick: this.handleOnClick,
-            children: (0, l.jsx)(h.Tooltip, {
+            children: (0, l.jsx)(h.ua7, {
                 text: this.getTooltipText(),
                 position: 'right',
                 'aria-label': !1,
                 children: (n) =>
                     (0, l.jsx)('div', {
                         ...n,
-                        children: (0, l.jsx)(h.ProgressCircle, {
+                        children: (0, l.jsx)(h._3P, {
                             percent: e,
-                            colorOverride: t ? u.Z.unsafe_rawColors.PRIMARY_500.css : null,
-                            children: (0, l.jsx)(h.DownloadIcon, {
+                            colorOverride: t ? d.Z.unsafe_rawColors.PRIMARY_500.css : null,
+                            children: (0, l.jsx)(h._8t, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: Z.downloadIcon
+                                className: I.downloadIcon
                             })
                         })
                     })
@@ -189,32 +188,32 @@ class E extends (i = r.PureComponent) {
             b(this, 'state', { animationScale: new s.Z.Value(0) }),
             b(this, 'handleOnClick', (e) => {
                 let { onClick: t } = this.props;
-                e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, f.uL)(I.Z5c.APPLICATION_LIBRARY);
+                e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, g.uL)(C.Z5c.APPLICATION_LIBRARY);
             });
     }
 }
-b(E, 'defaultProps', { strokeSize: h.ProgressCircle.StrokeSizes.MEDIUM });
-function y(e, t) {
+function j(e, t) {
     return e.reduce((e, n) => {
         let { applicationId: i, branchId: l } = n,
             r = t.getState(i, l);
         return null != r && e.push(r), e;
     }, []);
 }
-t.Z = c.ZP.connectStores([v.Z, g.Z, p.Z], () => {
-    let e = v.Z.activeItems,
-        t = y(e, g.Z),
-        { total: n, progress: i } = C.lK(t);
+b(E, 'defaultProps', { strokeSize: h._3P.StrokeSizes.MEDIUM });
+let y = c.ZP.connectStores([_.Z, f.Z, p.Z], () => {
+    let e = _.Z.activeItems,
+        t = j(e, f.Z),
+        { total: n, progress: i } = v.lK(t);
     return {
-        percent: C.xI(i, n),
-        isPaused: v.Z.paused,
+        percent: v.xI(i, n),
+        isPaused: _.Z.paused,
         firstApplication: e.length > 0 ? p.Z.getApplication(e[0].applicationId) : null,
         firstState: t.length > 0 ? t[0] : null
     };
 })((e) => {
     let { determineOwnVisibility: t = !0, ...n } = e;
     return t
-        ? (0, l.jsx)(d.W, {
+        ? (0, l.jsx)(u.W, {
               component: r.Fragment,
               children: n.percent > 0 && n.percent < 100 ? (0, l.jsx)(E, { ...n }) : null
           })

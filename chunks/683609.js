@@ -1,31 +1,27 @@
-i.d(t, {
-    Z: function () {
-        return o;
-    }
-});
-var e = i(200651);
-i(192379);
-var l = i(481060),
-    a = i(58642),
-    r = i(626135),
-    d = i(630388),
-    u = i(981631),
-    c = i(388032);
+t.d(i, { Z: () => o });
+var l = t(200651);
+t(192379);
+var a = t(481060),
+    e = t(58642),
+    r = t(626135),
+    d = t(630388),
+    c = t(981631),
+    s = t(388032);
 function o(n) {
     return null == n
         ? null
-        : (0, e.jsx)(l.MenuCheckboxItem, {
+        : (0, l.jsx)(a.S89, {
               id: 'on-overlay',
-              label: c.intl.string(c.t.rgZKg4),
+              label: s.intl.string(s.t.rgZKg4),
               action: function () {
                   if (null == n) return;
-                  let t = (0, d.x9)(n.getFlags(), u.eHb.OVERLAY_DISABLED);
-                  a.h(n.id, n.branchId, t),
-                      r.default.track(u.rMx.APPLICATION_SETTINGS_UPDATED, {
-                          overlay_disabled: (0, d.yE)(t, u.eHb.OVERLAY_DISABLED),
+                  let i = (0, d.x9)(n.getFlags(), c.eHb.OVERLAY_DISABLED);
+                  e.h(n.id, n.branchId, i),
+                      r.default.track(c.rMx.APPLICATION_SETTINGS_UPDATED, {
+                          overlay_disabled: (0, d.yE)(i, c.eHb.OVERLAY_DISABLED),
                           ...n.getAnalyticsData()
                       });
               },
-              checked: n.hasFlag(u.eHb.OVERLAY_DISABLED)
+              checked: n.hasFlag(c.eHb.OVERLAY_DISABLED)
           });
 }

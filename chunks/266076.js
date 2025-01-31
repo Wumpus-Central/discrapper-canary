@@ -1,27 +1,28 @@
+n.d(t, { Z: () => c });
 var l = n(200651),
     i = n(192379),
     a = n(481060),
-    r = n(43267),
-    s = n(93687),
+    s = n(43267),
+    r = n(93687),
     o = n(785232);
-t.Z = i.memo(function (e) {
-    let { channel: t, size: n, facepileSizeOverride: i, experimentLocation: c, isTyping: u, status: d, className: h, animated: f = !1, ..._ } = e,
-        { isFacepileEnabled: g } = s.Z.useExperiment({ location: c }, { autoTrackExposure: !0 });
+let c = i.memo(function (e) {
+    let { channel: t, size: n, facepileSizeOverride: i, experimentLocation: c, isTyping: u, status: d, className: _, animated: h = !1, ...f } = e,
+        { isFacepileEnabled: g } = r.Z.useExperiment({ location: c }, { autoTrackExposure: !0 });
     return t.recipients.length >= 2 && g && null == t.icon
         ? (0, l.jsx)(o.Z, {
-              'aria-label': _['aria-label'],
-              'aria-hidden': _['aria-hidden'],
-              className: h,
+              'aria-label': f['aria-label'],
+              'aria-hidden': f['aria-hidden'],
+              className: _,
               recipients: t.recipients,
               size: null != i ? i : n,
               isTyping: u,
               status: d
           })
-        : (0, l.jsx)(a.Avatar, {
-              'aria-hidden': _['aria-hidden'],
-              'aria-label': _['aria-label'],
-              className: h,
+        : (0, l.jsx)(a.qEK, {
+              'aria-hidden': f['aria-hidden'],
+              'aria-label': f['aria-label'],
+              className: _,
               size: n,
-              src: (0, r.x)(t, 80, f)
+              src: (0, s.x)(t, 80, h)
           });
 });

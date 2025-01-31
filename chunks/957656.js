@@ -1,43 +1,44 @@
-var n = t(200651);
-t(192379);
-var o = t(481060),
-    s = t(198952),
-    l = t(329242),
-    i = t(388032),
-    c = t(217682);
+n.d(r, { Z: () => d });
+var t = n(200651);
+n(192379);
+var s = n(481060),
+    o = n(198952),
+    i = n(329242),
+    l = n(388032),
+    c = n(217682);
 let a = (e) => {
-    let { children: r, className: t, ...s } = e;
-    return (0, n.jsx)(o.ModalRoot, {
-        className: t,
-        ...s,
+    let { children: r, className: n, ...o } = e;
+    return (0, t.jsx)(s.Y0X, {
+        className: n,
+        ...o,
         children: r
     });
 };
 (a.ButtonFooter = (e) => {
     let { children: r } = e;
-    return (0, n.jsx)('div', {
+    return (0, t.jsx)('div', {
         className: c.footer,
         children: r
     });
 }),
     (a.Header = (e) => {
-        let { icon: r, currentUser: t, otherUser: i, header: a } = e;
-        return (0, n.jsxs)('div', {
+        let { icon: r, currentUser: n, otherUser: l, header: a } = e;
+        return (0, t.jsxs)('div', {
             className: c.header,
             children: [
-                (0, n.jsx)(s.Z, {
-                    currentUser: t,
-                    otherUser: i,
+                (0, t.jsx)(o.Z, {
+                    currentUser: n,
+                    otherUser: l,
                     children: r
                 }),
-                (0, n.jsxs)('div', {
+                (0, t.jsxs)('div', {
                     className: c.heading,
                     children: [
-                        (0, n.jsx)(o.Heading, {
+                        (0, t.jsx)(s.X6q, {
                             variant: 'text-lg/bold',
                             children: a
                         }),
-                        (0, n.jsx)(l.Z, { user: i })
+                        (0, t.jsx)(i.Z, { user: l })
                     ]
                 })
             ]
@@ -45,22 +46,22 @@ let a = (e) => {
     }),
     (a.Content = (e) => {
         let { children: r } = e;
-        return (0, n.jsx)('div', {
+        return (0, t.jsx)('div', {
             className: c.content,
             children: r
         });
     }),
     (a.Notice = (e) => {
         let { notice: r } = e;
-        return (0, n.jsxs)('div', {
+        return (0, t.jsxs)('div', {
             className: c.notice,
             children: [
-                (0, n.jsx)(o.Text, {
+                (0, t.jsx)(s.Text, {
                     variant: 'eyebrow',
                     color: 'header-primary',
-                    children: i.intl.string(i.t.cXgKMD)
+                    children: l.intl.string(l.t.cXgKMD)
                 }),
-                (0, n.jsx)(o.Text, {
+                (0, t.jsx)(s.Text, {
                     variant: 'text-sm/normal',
                     color: 'header-secondary',
                     children: r
@@ -69,13 +70,13 @@ let a = (e) => {
         });
     }),
     (a.Error = (e) => {
-        let { error: r, onDismiss: t } = e;
+        let { error: r, onDismiss: n } = e;
         return null == r
             ? null
-            : (0, n.jsx)(o.FormErrorBlock, {
+            : (0, t.jsx)(s.kzN, {
                   className: c.error,
-                  onDismiss: t,
+                  onDismiss: n,
                   children: r
               });
-    }),
-    (r.Z = a);
+    });
+let d = a;

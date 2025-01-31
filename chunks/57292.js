@@ -1,4 +1,5 @@
-e.exports = {
-    closeButton: 'closeButton_cb4d21',
-    closeIcon: 'closeIcon_cb4d21'
+var i = {
+    closeButton: 'closeButton_e876a8',
+    closeIcon: 'closeIcon_e876a8'
 };
+e.exports = i;

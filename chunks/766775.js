@@ -1,52 +1,47 @@
-o.r(n),
-    o.d(n, {
-        default: function () {
-            return m;
-        }
-    });
-var i = o(200651);
-o(192379);
-var a = o(120356),
-    t = o.n(a),
-    r = o(481060),
-    l = o(388905),
-    c = o(313201),
-    d = o(659900),
-    s = o(473855),
-    _ = o(388032),
-    f = o(205857);
+n.d(i, { default: () => m });
+var c = n(200651);
+n(192379);
+var o = n(120356),
+    a = n.n(o),
+    r = n(481060),
+    t = n(388905),
+    l = n(313201),
+    d = n(659900),
+    _ = n(473855),
+    s = n(388032),
+    f = n(205857);
 function m(e) {
-    let { transitionState: n, onClose: o, guildTemplate: a } = e,
-        { form: m, preview: h, handleSubmit: u } = (0, d.Z)(a, !1),
-        p = (0, c.Dt)();
-    return (0, i.jsx)('div', {
-        children: (0, i.jsxs)(r.ModalRoot, {
-            size: r.ModalSize.DYNAMIC,
-            transitionState: n,
-            className: t()(f.modalRoot),
-            'aria-labelledby': p,
+    let { transitionState: i, onClose: n, guildTemplate: o } = e,
+        { form: m, preview: h, handleSubmit: p } = (0, d.Z)(o, !1),
+        C = (0, l.Dt)();
+    return (0, c.jsx)('div', {
+        children: (0, c.jsxs)(r.Y0X, {
+            size: r.CgR.DYNAMIC,
+            transitionState: i,
+            className: a()(f.modalRoot),
+            'aria-labelledby': C,
             children: [
-                (0, i.jsxs)('div', {
+                (0, c.jsxs)('div', {
                     className: f.modalContainer,
                     children: [
-                        (0, i.jsx)('div', {
-                            className: t()(f.modalSection, f.ctaSection),
-                            children: (0, i.jsx)('div', {
+                        (0, c.jsx)('div', {
+                            className: a()(f.modalSection, f.ctaSection),
+                            children: (0, c.jsx)('div', {
                                 className: f.ctaContainer,
-                                children: (0, i.jsx)(s.Z, {
-                                    guildTemplate: a,
-                                    headerId: p
+                                children: (0, c.jsx)(_.Z, {
+                                    guildTemplate: o,
+                                    headerId: C
                                 })
                             })
                         }),
-                        (0, i.jsx)('div', {
-                            className: t()(f.modalSection, f.formSection),
-                            children: (0, i.jsxs)(r.Scroller, {
+                        (0, c.jsx)('div', {
+                            className: a()(f.modalSection, f.formSection),
+                            children: (0, c.jsxs)(r.Ttm, {
                                 className: f.formContainer,
                                 children: [
-                                    (0, i.jsx)(l.Dx, {
+                                    (0, c.jsx)(t.Dx, {
                                         className: f.header,
-                                        children: _.intl.string(_.t.UNFvtL)
+                                        children: s.intl.string(s.t.UNFvtL)
                                     }),
                                     m,
                                     h
@@ -55,20 +50,20 @@ function m(e) {
                         })
                     ]
                 }),
-                (0, i.jsxs)(r.ModalFooter, {
+                (0, c.jsxs)(r.mzw, {
                     className: f.modalFooter,
                     children: [
-                        (0, i.jsx)(r.Button, {
-                            color: r.Button.Colors.PRIMARY,
-                            onClick: o,
-                            children: _.intl.string(_.t.cpT0Cg)
+                        (0, c.jsx)(r.zxk, {
+                            color: r.zxk.Colors.PRIMARY,
+                            onClick: n,
+                            children: s.intl.string(s.t.cpT0Cg)
                         }),
-                        (0, i.jsx)(r.Button, {
-                            color: r.Button.Colors.GREEN,
+                        (0, c.jsx)(r.zxk, {
+                            color: r.zxk.Colors.GREEN,
                             onClick: async () => {
-                                null != (await u()) && o();
+                                null != (await p()) && n();
                             },
-                            children: _.intl.string(_.t.CumH4u)
+                            children: s.intl.string(s.t.CumH4u)
                         })
                     ]
                 })

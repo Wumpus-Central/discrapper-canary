@@ -1,72 +1,31 @@
-r.d(n, {
-    P: function () {
-        return h;
-    },
-    Tb: function () {
-        return a;
-    },
-    cm: function () {
-        return c;
-    },
-    jC: function () {
-        return g;
-    },
-    n_: function () {
-        return p;
-    },
-    oh: function () {
-        return i;
-    },
-    vB: function () {
-        return m;
-    },
-    y0: function () {
-        return o;
-    },
-    yM: function () {
-        return d;
-    }
+n.d(t, {
+    P: () => f,
+    Tb: () => s,
+    cm: () => l,
+    jC: () => c,
+    n_: () => d,
+    oh: () => a,
+    vB: () => r,
+    y0: () => o,
+    yM: () => u
 });
-var i,
-    a,
-    o,
-    s,
-    l,
-    u,
-    c,
-    d,
-    f,
-    p,
-    h,
-    _ = r(981631);
-let m = 300;
-function g(e) {
-    let { API_ENDPOINT: n, CDN_HOST: r } = window.GLOBAL_ENV;
-    return null != r ? ''.concat(location.protocol, '//').concat(r, '/badge-icons/').concat(e, '.png') : ''.concat(location.protocol).concat(n).concat(_.ANM.BADGE_ICON(e));
-}
-!(function (e) {
-    (e.USER_INFO = 'USER_INFO'), (e.BOT_INFO = 'BOT_INFO'), (e.ACTIVITY = 'ACTIVITY'), (e.MUTUAL_GUILDS = 'MUTUAL_GUILDS'), (e.MUTUAL_FRIENDS = 'MUTUAL_FRIENDS'), (e.BOT_DATA_ACCESS = 'BOT_DATA_ACCESS');
-})(i || (i = {})),
-    !(function (e) {
-        (e.ROLES = 'ROLES'), (e.CONNECTIONS = 'CONNECTIONS'), (e.NOTE = 'NOTE'), (e.RECENT_ACTIVITY = 'RECENT_ACTIVITY');
-    })(a || (a = {})),
-    !(function (e) {
-        (e.BITE_SIZE = 'BITE_SIZE'), (e.FULL_SIZE = 'FULL_SIZE'), (e.PANEL = 'PANEL');
-    })(o || (o = {})),
-    !(function (e) {
-        (e.LIVE = 'live'), (e.RECENT = 'recent');
-    })(s || (s = {})),
-    !(function (e) {
-        (e.BITE_SIZE_POPOUT = 'BITE_SIZE_POPOUT'), (e.SIMPLIFIED_MODAL = 'SIMPLIFIED_MODAL'), (e.SIMPLIFIED_DM_PANEL = 'SIMPLIFIED_DM_PANEL'), (e.ACCOUNT_POPOUT = 'ACCOUNT_POPOUT'), (e.ACTION_SHEET = 'ACTION_SHEET'), (e.SIMPLIFIED_ACTION_SHEET = 'SIMPLIFIED_ACTION_SHEET'), (e.YOU_SCREEN = 'YOU_SCREEN'), (e.SIMPLIFIED_ACCOUNT_POPOUT = 'SIMPLIFIED_ACCOUNT_POPOUT'), (e.BLOCKED_PROFILE_POPOUT = 'BLOCKED_PROFILE_POPOUT'), (e.IGNORED_PROFILE_POPOUT = 'IGNORED_PROFILE_POPOUT'), (e.BLOCKED_ACTION_SHEET = 'BLOCKED_ACTION_SHEET'), (e.IGNORED_ACTION_SHEET = 'IGNORED_ACTION_SHEET'), (e.BLOCKED_PROFILE_PANEL = 'BLOCKED_PROFILE_PANEL'), (e.IGNORED_PROFILE_PANEL = 'IGNORED_PROFILE_PANEL'), (e.BLOCKED_PROFILE_MODAL = 'BLOCKED_PROFILE_MODAL'), (e.IGNORED_PROFILE_MODAL = 'IGNORED_PROFILE_MODAL'), (e.SIMPLIFIED_DM_PANEL_RESTRICTED_BLOCKER_PROFILE = 'SIMPLIFIED_DM_PANEL_RESTRICTED_BLOCKER_PROFILE'), (e.BITE_SIZE_POPOUT_RESTRICTED_BLOCKER_PROFILE = 'BITE_SIZE_POPOUT_RESTRICTED_BLOCKER_PROFILE'), (e.SIMPLIFIED_MODAL_RESTRICTED_BLOCKER_PROFILE = 'SIMPLIFIED_MODAL_RESTRICTED_BLOCKER_PROFILE');
-    })(l || (l = {})),
-    !(function (e) {
-        (e.USER_SHEET = 'User Sheet'), (e.BLOCKED_USER_SHEET = 'Blocked User Sheet'), (e.IGNORED_USER_SHEET = 'Ignored User Sheet');
-    })(u || (u = {})),
-    !(function (e) {
-        (e[(e.NICKNAME = 0)] = 'NICKNAME'), (e[(e.PRONOUNS = 1)] = 'PRONOUNS'), (e[(e.AVATAR = 2)] = 'AVATAR'), (e[(e.ANIMATED_AVATAR = 3)] = 'ANIMATED_AVATAR'), (e[(e.BANNER = 4)] = 'BANNER'), (e[(e.ANIMATED_BANNER = 5)] = 'ANIMATED_BANNER'), (e[(e.BIO = 6)] = 'BIO'), (e[(e.THEME = 7)] = 'THEME'), (e[(e.AVATAR_DECORATION = 8)] = 'AVATAR_DECORATION'), (e[(e.PROFILE_EFFECT = 9)] = 'PROFILE_EFFECT');
-    })(c || (c = {})),
-    !(function (e) {
-        (e.VIEW = 'VIEW'),
+var i = n(981631);
+let r = 300;
+var a = (function (e) {
+        return (e.USER_INFO = 'USER_INFO'), (e.BOT_INFO = 'BOT_INFO'), (e.ACTIVITY = 'ACTIVITY'), (e.MUTUAL_GUILDS = 'MUTUAL_GUILDS'), (e.MUTUAL_FRIENDS = 'MUTUAL_FRIENDS'), (e.BOT_DATA_ACCESS = 'BOT_DATA_ACCESS'), e;
+    })({}),
+    s = (function (e) {
+        return (e.ROLES = 'ROLES'), (e.CONNECTIONS = 'CONNECTIONS'), (e.NOTE = 'NOTE'), (e.RECENT_ACTIVITY = 'RECENT_ACTIVITY'), e;
+    })({}),
+    o = (function (e) {
+        return (e.BITE_SIZE = 'BITE_SIZE'), (e.FULL_SIZE = 'FULL_SIZE'), (e.PANEL = 'PANEL'), e;
+    })({}),
+    l = (function (e) {
+        return (e[(e.NICKNAME = 0)] = 'NICKNAME'), (e[(e.PRONOUNS = 1)] = 'PRONOUNS'), (e[(e.AVATAR = 2)] = 'AVATAR'), (e[(e.ANIMATED_AVATAR = 3)] = 'ANIMATED_AVATAR'), (e[(e.BANNER = 4)] = 'BANNER'), (e[(e.ANIMATED_BANNER = 5)] = 'ANIMATED_BANNER'), (e[(e.BIO = 6)] = 'BIO'), (e[(e.THEME = 7)] = 'THEME'), (e[(e.AVATAR_DECORATION = 8)] = 'AVATAR_DECORATION'), (e[(e.PROFILE_EFFECT = 9)] = 'PROFILE_EFFECT'), e;
+    })({}),
+    u = (function (e) {
+        return (
+            (e.VIEW = 'VIEW'),
             (e.SEND_MESSAGE = 'SEND_MESSAGE'),
             (e.SEND_DIRECT_MESSAGE = 'SEND_DIRECT_MESSAGE'),
             (e.SEND_FRIEND_REQUEST = 'SEND_FRIEND_REQUEST'),
@@ -74,6 +33,7 @@ function g(e) {
             (e.IGNORE_FRIEND_REQUEST = 'IGNORE_FRIEND_REQUEST'),
             (e.CANCEL_FRIEND_REQUEST = 'CANCEL_FRIEND_REQUEST'),
             (e.REMOVE_FRIEND = 'REMOVE_FRIEND'),
+            (e.REMOVE_GAME_FRIEND = 'REMOVE_GAME_FRIEND'),
             (e.BLOCK = 'BLOCK'),
             (e.UNBLOCK = 'UNBLOCK'),
             (e.IGNORE = 'IGNORE'),
@@ -157,14 +117,17 @@ function g(e) {
             (e.ACCEPT_GAME_FRIEND_REQUEST = 'ACCEPT_GAME_FRIEND_REQUEST'),
             (e.IGNORE_GAME_FRIEND_REQUEST = 'IGNORE_GAME_FRIEND_REQUEST'),
             (e.RING = 'RING'),
-            (e.STOP_RINGING = 'STOP_RINGING');
-    })(d || (d = {})),
-    !(function (e) {
-        (e.VIEW = 'VIEW'), (e.PRESS_CARD = 'PRESS_CARD'), (e.PRESS_TEXT = 'PRESS_TEXT'), (e.PRESS_IMAGE = 'PRESS_IMAGE'), (e.PRESS_JOIN_BUTTON = 'PRESS_JOIN_BUTTON'), (e.PRESS_ASK_TO_JOIN_BUTTON = 'PRESS_ASK_TO_JOIN_BUTTON'), (e.PRESS_WATCH_BUTTON = 'PRESS_WATCH_BUTTON'), (e.PRESS_JOIN_CALL_BUTTON = 'PRESS_JOIN_CALL_BUTTON'), (e.PRESS_CONNECT_XBOX_BUTTON = 'PRESS_CONNECT_XBOX_BUTTON'), (e.PRESS_CONNECT_PLAYSTATION_BUTTON = 'PRESS_CONNECT_PLAYSTATION_BUTTON'), (e.PRESS_HANG_STATUS_BUTTON = 'PRESS_HANG_STATUS_BUTTON'), (e.PRESS_CUSTOM_BUTTON = 'PRESS_CUSTOM_BUTTON'), (e.PRESS_NOTIFY_BUTTON = 'PRESS_NOTIFY_BUTTON'), (e.PRESS_PLAY_ON_SPOTIFY_BUTTON = 'PRESS_PLAY_ON_SPOTIFY_BUTTON'), (e.PRESS_LISTEN_ALONG_ON_SPOTIFY_BUTTON = 'PRESS_LISTEN_ALONG_ON_SPOTIFY_BUTTON'), (e.PRESS_WATCH_ON_CRUNCHYROLL_BUTTON = 'PRESS_WATCH_ON_CRUNCHYROLL_BUTTON'), (e.PRESS_CLEAR_HISTORY_BUTTON = 'PRESS_CLEAR_HISTORY_BUTTON'), (e.PRESS_CLEAR_HISTORY_DISCLAIMER = 'PRESS_CLEAR_HISTORY_DISCLAIMER'), (e.PRESS_VOICE_CHANNEL_ICON = 'PRESS_VOICE_CHANNEL_ICON'), (e.PRESS_VOICE_CHANNEL_AVATARS = 'PRESS_VOICE_CHANNEL_AVATARS'), (e.OPEN_VOICE_CHANNEL = 'OPEN_VOICE_CHANNEL'), (e.OPEN_VOICE_GUILD = 'OPEN_VOICE_GUILD'), (e.OPEN_SPOTIFY_ARTIST = 'OPEN_SPOTIFY_ARTIST'), (e.OPEN_SPOTIFY_ALBUM = 'OPEN_SPOTIFY_ALBUM'), (e.OPEN_SPOTIFY_TRACK = 'OPEN_SPOTIFY_TRACK'), (e.OPEN_MENU = 'OPEN_MENU'), (e.PRESS_MANAGE_PRIVACY_MENU_ITEM = 'PRESS_MANAGE_PRIVACY_MENU_ITEM'), (e.PRESS_VIEW_ALL_ACTIVITY_MENU_ITEM = 'PRESS_VIEW_ALL_ACTIVITY_MENU_ITEM'), (e.PRESS_DELETE_HISTORY_MENU_ITEM = 'PRESS_DELETE_HISTORY_MENU_ITEM'), (e.PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM = 'PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM'), (e.PRESS_PLAY_ON_SPOTIFY_MENU_ITEM = 'PRESS_PLAY_ON_SPOTIFY_MENU_ITEM'), (e.PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM = 'PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM'), (e.PRESS_CONNECT_SPOTIFY_MENU_ITEM = 'PRESS_CONNECT_SPOTIFY_MENU_ITEM'), (e.PRESS_VIEW_GAME_PROFILE_MENU_ITEM = 'PRESS_VIEW_GAME_PROFILE_MENU_ITEM'), (e.PRESS_VIEW_ACTIVITY_MENU_ITEM = 'PRESS_VIEW_ACTIVITY_MENU_ITEM'), (e.HOVER_ACTIVITY_CARD = 'HOVER_ACTIVITY_CARD'), (e.PRESS_REACT_ACTIVITY = 'PRESS_REACT_ACTIVITY'), (e.PRESS_REPLY_ACTIVITY = 'PRESS_REPLY_ACTIVITY'), (e.SEND_REACT_ACTIVITY = 'SEND_REACT_ACTIVITY'), (e.SEND_REPLY_ACTIVITY = 'SEND_REPLY_ACTIVITY');
-    })(f || (f = {})),
-    !(function (e) {
-        (e.ACTIVITY = 'ACTIVITY'), (e.AVATAR = 'AVATAR'), (e.STATUS = 'STATUS');
-    })(p || (p = {})),
-    !(function (e) {
-        (e.REPLY = 'REPLY'), (e.REACT = 'REACT');
-    })(h || (h = {}));
+            (e.STOP_RINGING = 'STOP_RINGING'),
+            e
+        );
+    })({});
+function c(e) {
+    let { API_ENDPOINT: t, CDN_HOST: n } = window.GLOBAL_ENV;
+    return null != n ? ''.concat(location.protocol, '//').concat(n, '/badge-icons/').concat(e, '.png') : ''.concat(location.protocol).concat(t).concat(i.ANM.BADGE_ICON(e));
+}
+var d = (function (e) {
+        return (e.ACTIVITY = 'ACTIVITY'), (e.AVATAR = 'AVATAR'), (e.STATUS = 'STATUS'), e;
+    })({}),
+    f = (function (e) {
+        return (e.REPLY = 'REPLY'), (e.REACT = 'REACT'), e;
+    })({});

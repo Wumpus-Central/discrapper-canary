@@ -1,4 +1,5 @@
-e.exports = {
-    unownedStickerLockContainer: 'unownedStickerLockContainer_a5e382',
-    unownedStickerLockIcon: 'unownedStickerLockIcon_a5e382'
+var i = {
+    unownedStickerLockContainer: 'unownedStickerLockContainer_ced283',
+    unownedStickerLockIcon: 'unownedStickerLockIcon_ced283'
 };
+e.exports = i;

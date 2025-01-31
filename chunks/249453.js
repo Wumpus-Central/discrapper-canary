@@ -1,30 +1,26 @@
-e.d(n, {
-    Z: function () {
-        return u;
-    }
-});
-var i = e(200651);
-e(192379);
-var o = e(481060),
-    r = e(765250),
-    a = e(388032);
-function u(t) {
-    return (0, i.jsx)(o.MenuControlItem, {
+n.d(e, { Z: () => l });
+var i = n(200651);
+n(192379);
+var a = n(481060),
+    o = n(765250),
+    r = n(388032);
+function l(t) {
+    return (0, i.jsx)(a.II_, {
         id: 'opacity',
         'aria-haspopup': !0,
-        label: a.intl.string(a.t.OVovCQ),
-        control: (n, e) =>
-            (0, i.jsx)(o.MenuSliderControl, {
-                ...n,
-                ref: e,
+        label: r.intl.string(r.t.OVovCQ),
+        control: (e, n) =>
+            (0, i.jsx)(a._wy, {
+                ...e,
+                ref: n,
                 value: 100 * t.opacity,
                 maxValue: 100,
-                onChange: (n) =>
-                    (0, r.nv)({
+                onChange: (e) =>
+                    (0, o.nv)({
                         widgetId: t.id,
-                        opacity: n / 100
+                        opacity: e / 100
                     }),
-                'aria-label': a.intl.string(a.t.kbFsAA)
+                'aria-label': r.intl.string(r.t.kbFsAA)
             })
     });
 }

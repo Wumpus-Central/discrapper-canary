@@ -1,9 +1,4 @@
-n.d(t, {
-    u: function () {
-        return D;
-    }
-}),
-    n(47120);
+n.d(t, { u: () => D }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(91192),
@@ -11,30 +6,30 @@ var i = n(200651),
     o = n(433517),
     s = n(481060),
     c = n(339149),
-    u = n(327943),
-    d = n(864682),
+    d = n(327943),
+    u = n(864682),
     h = n(540059),
     p = n(899740),
     m = n(849862),
+    g = n(460181),
     f = n(155409),
-    g = n(944486),
+    _ = n(944486),
     v = n(594174),
-    C = n(431),
-    x = n(774343),
-    I = n(417363),
-    _ = n(941128),
-    Z = n(780570),
-    b = n(557177),
+    x = n(431),
+    C = n(774343),
+    Z = n(417363),
+    I = n(941128),
+    b = n(780570),
     S = n(278464),
     N = n(276952),
     E = n(682662),
-    y = n(662146),
-    j = n(674552),
-    T = n(981631),
+    j = n(662146),
+    y = n(674552),
+    P = n(981631),
     A = n(474936),
-    P = n(871465),
+    T = n(871465),
     w = n(388032),
-    M = n(491708);
+    R = n(491708);
 let L = {
     origin: {
         x: -16,
@@ -47,68 +42,68 @@ let L = {
         y: 0
     }
 };
-function R(e) {
-    let { selected: t, user: n, badge: p, link: m, showProgressBadge: g } = e,
-        v = (0, a.e7)([u.Z], () => u.Z.isEditorOpen),
-        [C, x] = l.useState(!1),
-        [I, _] = l.useState(!1),
-        [Z, S] = l.useState(null),
-        [A, R] = l.useState(0),
+function M(e) {
+    let { selected: t, user: n, badge: p, link: m, showProgressBadge: _ } = e,
+        v = (0, a.e7)([d.Z], () => d.Z.isEditorOpen),
+        [x, C] = l.useState(!1),
+        [Z, I] = l.useState(!1),
+        [b, S] = l.useState(null),
+        [A, M] = l.useState(0),
         D = (0, r.Ie)('home'),
         G = (0, h.Q3)('DefaultHomeButton'),
         k = () => {
-            S(null), R(0), clearTimeout(Z);
+            S(null), M(0), clearTimeout(b);
         };
     if (null == n) return null;
     let B = w.intl.string(w.t.YUU0RE);
-    I && (B = o.K.get(T.wli) ? w.intl.string(w.t.nkq1l5) : w.intl.string(w.t.Be8Q5O));
-    let U = null;
+    Z && (B = o.K.get(P.wli) ? w.intl.string(w.t.nkq1l5) : w.intl.string(w.t.Be8Q5O));
+    let O = null;
     !t &&
-        g &&
-        (U = (0, i.jsx)(c.Z, {
-            className: M.downloadProgress,
+        _ &&
+        (O = (0, i.jsx)(c.Z, {
+            className: R.downloadProgress,
             determineOwnVisibility: !1
         }));
-    let O = t || C || v,
-        V = (0, i.jsx)(s.BlobMask, {
-            selected: G || O,
-            lowerBadge: p > 0 ? (0, j.Ne)(p) : null,
-            upperBadge: U,
-            lowerBadgeSize: { width: (0, s.getBadgeWidthForValue)(p) },
-            children: (0, i.jsx)(s.NavItem, {
-                onMouseEnter: () => x(!0),
-                onMouseLeave: () => x(!1),
+    let U = t || x || v,
+        V = (0, i.jsx)(s.aRk, {
+            selected: G || U,
+            lowerBadge: p > 0 ? (0, y.Ne)(p) : null,
+            upperBadge: O,
+            lowerBadgeSize: { width: (0, s.OVM)(p) },
+            children: (0, i.jsx)(s.LYs, {
+                onMouseEnter: () => C(!0),
+                onMouseLeave: () => C(!1),
                 onClick: () => {
-                    if (!__OVERLAY__ && (null != Z && clearTimeout(Z), S(setTimeout(k, 500)), R(A + 1), 15 === A)) {
+                    if (!__OVERLAY__ && (null != b && clearTimeout(b), S(setTimeout(k, 500)), M(A + 1), 15 === A)) {
                         k();
-                        let e = !o.K.get(T.wli);
-                        o.K.set(T.wli, e),
-                            e && o.K.set(P.O5, !0),
-                            e ? (0, b.GN)('discodo') : (0, b.GN)('user_leave'),
-                            _(!0),
+                        let e = !o.K.get(P.wli);
+                        o.K.set(P.wli, e),
+                            e && o.K.set(T.O5, !0),
+                            e ? (0, g.GN)('discodo') : (0, g.GN)('user_leave'),
+                            I(!0),
                             setTimeout(() => {
-                                _(!1);
+                                I(!1);
                             }, 1000);
                     }
                 },
-                selected: O,
+                selected: U,
                 ariaLabel: w.intl.string(w.t.YUU0RE),
                 ...D,
                 to: {
                     pathname: m,
                     state: {
                         analyticsSource: {
-                            page: T.ZY5.GUILD_CHANNEL,
-                            section: T.jXE.NAVIGATION,
-                            object: T.qAy.BUTTON_HOME
+                            page: P.ZY5.GUILD_CHANNEL,
+                            section: P.jXE.NAVIGATION,
+                            object: P.qAy.BUTTON_HOME
                         }
                     }
                 },
-                children: (0, i.jsx)(d.Z, {})
+                children: (0, i.jsx)(u.Z, {})
             })
         });
     return (0, i.jsx)('div', {
-        className: M.tutorialContainer,
+        className: R.tutorialContainer,
         children: (0, i.jsx)(f.Z, {
             inlineSpecs: L,
             tutorialId: 'friends-list',
@@ -117,11 +112,11 @@ function R(e) {
                 children: [
                     (0, i.jsx)(N.Z, {
                         selected: t,
-                        hovered: C,
-                        className: M.pill
+                        hovered: x,
+                        className: R.pill
                     }),
-                    (0, i.jsx)(y.Z, {
-                        color: s.Tooltip.Colors.PRIMARY,
+                    (0, i.jsx)(j.Z, {
+                        color: s.ua7.Colors.PRIMARY,
                         hideOnClick: !0,
                         text: B,
                         selected: t,
@@ -134,32 +129,32 @@ function R(e) {
 }
 function D() {
     let e = (0, S.n)(),
-        t = (0, a.e7)([_.Z, I.Z], () => {
-            let e = (0, c.E)(_.Z.activeItems, I.Z),
-                { total: t, progress: n } = Z.lK(e),
-                i = Z.xI(n, t);
+        t = (0, a.e7)([I.Z, Z.Z], () => {
+            let e = (0, c.E)(I.Z.activeItems, Z.Z),
+                { total: t, progress: n } = b.lK(e),
+                i = b.xI(n, t);
             return i > 0 && i < 100;
         }),
         n = (0, m.If)(),
         l = Object.keys(A.nG),
-        { unviewedTrialCount: r, unviewedDiscountCount: o } = (0, a.cj)([C.Z], () => ({
-            unviewedTrialCount: C.Z.getUnacknowledgedOffers(l).length,
-            unviewedDiscountCount: C.Z.getUnacknowledgedDiscountOffers().length
+        { unviewedTrialCount: r, unviewedDiscountCount: o } = (0, a.cj)([x.Z], () => ({
+            unviewedTrialCount: x.Z.getUnacknowledgedOffers(l).length,
+            unviewedDiscountCount: x.Z.getUnacknowledgedDiscountOffers().length
         })),
         s = r + o,
-        u = (0, a.e7)([v.default], () => v.default.getCurrentUser()),
-        d = (0, p.q)(),
-        h = n + s + d,
-        f = h === s && s > 0 && n + d === 0,
-        b = x.Z.getHomeLink();
+        d = (0, a.e7)([v.default], () => v.default.getCurrentUser()),
+        u = (0, p.q)(),
+        h = n + s + u,
+        g = h === s && s > 0 && n + u === 0,
+        f = C.Z.getHomeLink();
     return (
-        f && (b = T.Z5c.APPLICATION_STORE),
-        (0, i.jsx)(R, {
+        g && (f = P.Z5c.APPLICATION_STORE),
+        (0, i.jsx)(M, {
             selected: e,
-            user: u,
-            selectedChannelId: g.Z.getChannelId(T.ME),
+            user: d,
+            selectedChannelId: _.Z.getChannelId(P.ME),
             badge: h,
-            link: b,
+            link: f,
             showProgressBadge: t
         })
     );

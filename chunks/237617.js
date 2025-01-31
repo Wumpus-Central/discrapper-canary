@@ -1,10 +1,6 @@
-r.d(n, {
-    Z: function () {
-        return a;
-    }
-});
-var i = r(192379);
-function a(e) {
-    let n = i.useRef(e);
-    return (n.current = e), n;
+n.d(t, { Z: () => r });
+var i = n(192379);
+function r(e) {
+    let t = i.useRef(e);
+    return (t.current = e), t;
 }

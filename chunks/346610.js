@@ -1,13 +1,9 @@
-r.d(n, {
-    WT: function () {
-        return u;
-    },
-    yk: function () {
-        return c;
-    }
+n.d(t, {
+    WT: () => l,
+    yk: () => u
 });
-var i = r(818083);
-let a = (0, i.B)({
+var i = n(818083);
+let r = (0, i.B)({
         kind: 'user',
         id: '2024-05_message_forwarding',
         label: 'Message forwarding',
@@ -34,7 +30,7 @@ let a = (0, i.B)({
             }
         ]
     }),
-    o = (0, i.B)({
+    a = (0, i.B)({
         kind: 'user',
         id: '2024-07_message_forwarding_iterations',
         label: 'Message forwarding iterations',
@@ -103,7 +99,7 @@ let a = (0, i.B)({
             }
         ]
     }),
-    l = (0, i.B)({
+    o = (0, i.B)({
         kind: 'user',
         id: '2024-09_message_forwarding_gtm',
         label: 'Message forwarding GTM',
@@ -123,27 +119,27 @@ let a = (0, i.B)({
             }
         ]
     });
-function u(e, n) {
-    let r = a.getCurrentConfig(e, n),
-        i = o.getCurrentConfig(e, n),
-        u = s.getCurrentConfig(e, n),
-        c = l.getCurrentConfig(e, n);
+function l(e, t) {
+    let n = r.getCurrentConfig(e, t),
+        i = a.getCurrentConfig(e, t),
+        l = s.getCurrentConfig(e, t),
+        u = o.getCurrentConfig(e, t);
     return {
-        ...r,
+        ...n,
         ...i,
-        ...u,
-        ...c
+        ...l,
+        ...u
     };
 }
-function c(e, n) {
-    let r = a.useExperiment(e, n),
-        i = o.useExperiment(e, n),
-        u = s.useExperiment(e, n),
-        c = l.useExperiment(e, n);
+function u(e, t) {
+    let n = r.useExperiment(e, t),
+        i = a.useExperiment(e, t),
+        l = s.useExperiment(e, t),
+        u = o.useExperiment(e, t);
     return {
-        ...r,
+        ...n,
         ...i,
-        ...u,
-        ...c
+        ...l,
+        ...u
     };
 }

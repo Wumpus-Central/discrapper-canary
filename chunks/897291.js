@@ -1,74 +1,75 @@
-var i = r(200651),
-    a = r(192379),
-    o = r(996146),
-    s = r(481060),
-    l = r(100527),
-    u = r(906732),
-    c = r(540059),
-    d = r(963249),
-    f = r(109213),
-    p = r(51144),
-    h = r(443603),
-    _ = r(981631),
-    m = r(388032),
-    g = r(553796);
-function E(e) {
-    let { disabled: n, channel: a } = e,
-        { analyticsLocations: E } = (0, u.ZP)(l.Z.GIFT_BUTTON),
-        v = (0, p.Ft)(a),
-        { Component: y, events: b, play: I } = (0, o.$)(),
-        { enabled: T } = f.G.useExperiment({ location: 'gift-button' }, { autoTrackExposure: !1 }),
-        S = (0, c.Q3)('ChannelPremiumGiftButton'),
-        A = a.type === _.d4z.DM;
-    if (n) return null;
-    let C = () => {
-        T && A && null != v
-            ? (0, s.openModalLazy)(async () => {
-                  let { default: e } = await r.e('59207').then(r.bind(r, 435626));
-                  return (n) =>
+n.d(t, { Z: () => E });
+var i = n(200651),
+    r = n(192379),
+    a = n(996146),
+    s = n(481060),
+    o = n(100527),
+    l = n(906732),
+    u = n(540059),
+    c = n(963249),
+    d = n(109213),
+    f = n(51144),
+    _ = n(443603),
+    p = n(981631),
+    h = n(388032),
+    m = n(553796);
+function g(e) {
+    let { disabled: t, channel: r } = e,
+        { analyticsLocations: g } = (0, l.ZP)(o.Z.GIFT_BUTTON),
+        E = (0, f.Ft)(r),
+        { Component: v, events: y, play: I } = (0, a.$)(),
+        { enabled: b } = d.G.useExperiment({ location: 'gift-button' }, { autoTrackExposure: !1 }),
+        T = (0, u.Q3)('ChannelPremiumGiftButton'),
+        S = r.type === p.d4z.DM;
+    if (t) return null;
+    let A = () => {
+        b && S && null != E
+            ? (0, s.ZDy)(async () => {
+                  let { default: e } = await n.e('59207').then(n.bind(n, 435626));
+                  return (t) =>
                       (0, i.jsx)(e, {
                           analyticsObject: {
-                              page: _.ZY5.DM_CHANNEL,
-                              section: _.jXE.CHANNEL_TEXT_AREA,
-                              object: _.qAy.BUTTON_ICON,
-                              objectType: _.Qqv.GIFT
+                              page: p.ZY5.DM_CHANNEL,
+                              section: p.jXE.CHANNEL_TEXT_AREA,
+                              object: p.qAy.BUTTON_ICON,
+                              objectType: p.Qqv.GIFT
                           },
-                          analyticsLocations: E,
-                          giftRecipient: v,
-                          ...n
+                          analyticsLocations: g,
+                          giftRecipient: E,
+                          ...t
                       });
               })
-            : (0, d.Z)({
+            : (0, c.Z)({
                   isGift: !0,
-                  giftRecipient: null === v ? void 0 : v,
+                  giftRecipient: null === E ? void 0 : E,
                   initialPlanId: null,
-                  analyticsLocations: E,
+                  analyticsLocations: g,
                   analyticsObject: {
-                      page: a.isPrivate() ? _.ZY5.DM_CHANNEL : _.ZY5.GUILD_CHANNEL,
-                      section: _.jXE.CHANNEL_TEXT_AREA,
-                      object: _.qAy.BUTTON_ICON,
-                      objectType: _.Qqv.GIFT
+                      page: r.isPrivate() ? p.ZY5.DM_CHANNEL : p.ZY5.GUILD_CHANNEL,
+                      section: p.jXE.CHANNEL_TEXT_AREA,
+                      object: p.qAy.BUTTON_ICON,
+                      objectType: p.Qqv.GIFT
                   }
               });
     };
-    return (0, i.jsx)(s.Tooltip, {
-        text: m.intl.string(m.t.sWtWDQ),
+    return (0, i.jsx)(s.ua7, {
+        text: h.intl.string(h.t.sWtWDQ),
         children: (e) =>
-            (0, i.jsx)(h.Z, {
+            (0, i.jsx)(_.Z, {
                 ...e,
-                innerClassName: g.button,
+                innerClassName: m.button,
                 isActive: !1,
-                'aria-label': m.intl.string(m.t.Z1RnTk),
+                'aria-label': h.intl.string(h.t.Z1RnTk),
                 'aria-haspopup': 'dialog',
                 onClick: () => {
-                    C(), I();
+                    A(), I();
                 },
-                ...b,
-                children: (0, i.jsx)(y, {
-                    size: S ? 'refresh_sm' : void 0,
+                ...y,
+                children: (0, i.jsx)(v, {
+                    size: T ? 'refresh_sm' : void 0,
                     color: 'currentColor'
                 })
             })
     });
 }
-n.Z = a.memo(E);
+let E = r.memo(g);

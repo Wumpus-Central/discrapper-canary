@@ -1,19 +1,14 @@
 n.d(t, {
-    Pw: function () {
-        return c;
-    },
-    ms: function () {
-        return d;
-    },
-    p5: function () {
-        return u;
-    }
+    Pw: () => c,
+    ZP: () => A,
+    ms: () => _,
+    p5: () => u
 });
 var r = n(913527),
     l = n.n(r),
     i = n(81825),
-    s = n(960048),
-    a = n(709054),
+    a = n(960048),
+    s = n(709054),
     o = n(981631);
 function E(e, t, n) {
     return (
@@ -32,8 +27,8 @@ function u(e) {
     if (e === o.rsA.ALL) return o.KFR.ALL;
     if (e <= o.rsA.GUILD_UPDATE) return o.KFR.GUILD;
     if (e <= o.rsA.CHANNEL_DELETE || e === o.rsA.MESSAGE_BULK_DELETE) return o.KFR.CHANNEL;
-    else if (e <= o.rsA.CHANNEL_OVERWRITE_DELETE) return o.KFR.CHANNEL_OVERWRITE;
-    else if (e <= o.rsA.BOT_ADD || e === o.rsA.MESSAGE_DELETE || e === o.rsA.MESSAGE_PIN || e === o.rsA.MESSAGE_UNPIN) return o.KFR.USER;
+    if (e <= o.rsA.CHANNEL_OVERWRITE_DELETE) return o.KFR.CHANNEL_OVERWRITE;
+    if (e <= o.rsA.BOT_ADD || e === o.rsA.MESSAGE_DELETE || e === o.rsA.MESSAGE_PIN || e === o.rsA.MESSAGE_UNPIN) return o.KFR.USER;
     else if (e <= o.rsA.ROLE_DELETE) return o.KFR.ROLE;
     else if (e <= o.rsA.INVITE_DELETE) return o.KFR.INVITE;
     else if (e <= o.rsA.WEBHOOK_DELETE) return o.KFR.WEBHOOK;
@@ -58,7 +53,7 @@ function u(e) {
     else if (e <= o.rsA.HOME_SETTINGS_UPDATE) return o.KFR.HOME_SETTINGS;
     else if (e <= o.rsA.VOICE_CHANNEL_STATUS_DELETE) return o.KFR.VOICE_CHANNEL_STATUS;
     else if (e <= o.rsA.GUILD_SCHEDULED_EVENT_EXCEPTION_DELETE) return o.KFR.GUILD_SCHEDULED_EVENT_EXCEPTION;
-    return s.Z.captureMessage('Unknown target type for: '.concat(e)), o.KFR.UNKNOWN;
+    return a.Z.captureMessage('Unknown target type for: '.concat(e)), o.KFR.UNKNOWN;
 }
 function c(e) {
     switch (e) {
@@ -142,15 +137,15 @@ function c(e) {
     }
     return o.vB8.ALL;
 }
-class d {
+class _ {
     constructor(e, t, n) {
         E(this, 'key', void 0), E(this, 'oldValue', void 0), E(this, 'newValue', void 0), E(this, 'subtarget', void 0), (this.key = e), (this.oldValue = t), (this.newValue = n);
     }
 }
-class _ extends i.Z {
+class d extends i.Z {
     constructor(e) {
-        var t, n, r, i, s, o;
-        super(), E(this, 'id', void 0), E(this, 'actionType', void 0), E(this, 'action', void 0), E(this, 'targetType', void 0), E(this, 'targetId', void 0), E(this, 'target', void 0), E(this, 'userId', void 0), E(this, 'changes', void 0), E(this, 'timestampStart', void 0), E(this, 'timestampEnd', void 0), E(this, 'user', void 0), E(this, 'options', void 0), (this.id = e.id), (this.action = e.action), (this.actionType = c(this.action)), (this.targetId = e.targetId), (this.timestampStart = null !== (t = e.timestampStart) && void 0 !== t ? t : l()(a.default.extractTimestamp(this.id))), (this.timestampEnd = null !== (n = e.timestampEnd) && void 0 !== n ? n : this.timestampStart), (this.userId = e.userId), (this.changes = null !== (r = e.changes) && void 0 !== r ? r : []), (this.targetType = u(this.action)), (this.options = null !== (i = e.options) && void 0 !== i ? i : {}), (this.target = null !== (s = e.target) && void 0 !== s ? s : e.id), (this.user = null !== (o = e.user) && void 0 !== o ? o : null);
+        var t, n, r, i, a, o;
+        super(), E(this, 'id', void 0), E(this, 'actionType', void 0), E(this, 'action', void 0), E(this, 'targetType', void 0), E(this, 'targetId', void 0), E(this, 'target', void 0), E(this, 'userId', void 0), E(this, 'changes', void 0), E(this, 'timestampStart', void 0), E(this, 'timestampEnd', void 0), E(this, 'user', void 0), E(this, 'options', void 0), (this.id = e.id), (this.action = e.action), (this.actionType = c(this.action)), (this.targetId = e.targetId), (this.timestampStart = null !== (t = e.timestampStart) && void 0 !== t ? t : l()(s.default.extractTimestamp(this.id))), (this.timestampEnd = null !== (n = e.timestampEnd) && void 0 !== n ? n : this.timestampStart), (this.userId = e.userId), (this.changes = null !== (r = e.changes) && void 0 !== r ? r : []), (this.targetType = u(this.action)), (this.options = null !== (i = e.options) && void 0 !== i ? i : {}), (this.target = null !== (a = e.target) && void 0 !== a ? a : e.id), (this.user = null !== (o = e.user) && void 0 !== o ? o : null);
     }
 }
-t.ZP = _;
+let A = d;

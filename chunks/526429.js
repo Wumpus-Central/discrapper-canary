@@ -1,114 +1,99 @@
-r.d(t, {
-    j: function () {
-        return p;
-    }
-}),
-    r(653041),
-    r(47120);
-var n,
-    i,
+i.d(t, { Z: () => m }), i(653041), i(47120), i(392711);
+var r,
+    n,
     a,
-    l,
-    s = r(392711),
-    o = r.n(s),
-    c = r(442837),
-    d = r(570140),
-    u = r(823379),
-    _ = r(128449),
-    E = r(388032);
-function p(e, t) {
-    return o().isEqual(
-        e.map((e) => [e.categoryId, e.name]),
-        t.map((e) => [e.categoryId, e.name])
-    );
-}
-let I = null,
-    m = [],
-    h = [],
-    T = {};
-class A extends (n = c.ZP.Store) {
+    l = i(442837),
+    s = i(570140),
+    o = i(823379),
+    c = i(128449),
+    d = i(388032);
+let u = null,
+    _ = [],
+    E = [],
+    p = {};
+class I extends (r = l.ZP.Store) {
     getPrimaryCategories() {
-        return m;
+        return _;
     }
     getDiscoveryCategories() {
-        let e = _.L3.map((e) => h.find((t) => t.categoryId === e)).filter(u.lm);
+        let e = c.L3.map((e) => E.find((t) => t.categoryId === e)).filter(o.lm);
         return [
             {
-                categoryId: _.Hk,
-                name: E.intl.string(E.t.Ym2Ri4)
+                categoryId: c.Hk,
+                name: d.intl.string(d.t.Ym2Ri4)
             },
             ...e
         ];
     }
     getClanDiscoveryCategories() {
-        let e = _.L3.map((e) => h.find((t) => t.categoryId === e)).filter(u.lm);
+        let e = c.L3.map((e) => E.find((t) => t.categoryId === e)).filter(o.lm);
         return [
             {
-                categoryId: _.Hk,
-                name: E.intl.string(E.t.QToH29)
+                categoryId: c.Hk,
+                name: d.intl.string(d.t.QToH29)
             },
             ...e
         ];
     }
     getAllCategories() {
-        return h;
+        return E;
     }
     getFetchedLocale() {
-        return I;
+        return u;
     }
     getCategoryName(e) {
-        return e === _.Hk ? E.intl.string(E.t.Ym2Ri4) : T[e];
+        return e === c.Hk ? d.intl.string(d.t.Ym2Ri4) : p[e];
     }
 }
-(l = 'GuildDiscoveryCategoryStore'),
-    (a = 'displayName') in (i = A)
-        ? Object.defineProperty(i, a, {
-              value: l,
+(a = 'GuildDiscoveryCategoryStore'),
+    (n = 'displayName') in I
+        ? Object.defineProperty(I, n, {
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[a] = l),
-    (t.Z = new A(d.Z, {
-        GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function (e) {
-            let t,
-                { categories: r, locale: n } = e,
-                i = [],
-                a = [];
-            if (
-                (r
-                    .sort((e, t) => (e.name < t.name ? -1 : 1))
-                    .forEach((e) => {
-                        let { id: r, name: n, is_primary: l } = e;
-                        if (r !== _.o3) {
-                            if (r === _.dc) {
-                                t = {
-                                    categoryId: r,
-                                    name: n
-                                };
-                                return;
-                            }
-                            !0 === l &&
-                                i.push({
-                                    categoryId: r,
-                                    name: n
-                                }),
-                                a.push({
-                                    categoryId: r,
-                                    name: n
-                                }),
-                                (T[r] = n);
+        : (I[n] = a);
+let m = new I(s.Z, {
+    GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS: function (e) {
+        let t,
+            { categories: i, locale: r } = e,
+            n = [],
+            a = [];
+        if (
+            (i
+                .sort((e, t) => (e.name < t.name ? -1 : 1))
+                .forEach((e) => {
+                    let { id: i, name: r, is_primary: l } = e;
+                    if (i !== c.o3) {
+                        if (i === c.dc) {
+                            t = {
+                                categoryId: i,
+                                name: r
+                            };
+                            return;
                         }
-                    }),
-                null != t)
-            ) {
-                let { categoryId: e, name: r } = t;
-                i.push({
-                    categoryId: e,
-                    name: r
+                        !0 === l &&
+                            n.push({
+                                categoryId: i,
+                                name: r
+                            }),
+                            a.push({
+                                categoryId: i,
+                                name: r
+                            }),
+                            (p[i] = r);
+                    }
                 }),
-                    (T[e] = r);
-            }
-            (I = n), (m = i), (h = a);
+            null != t)
+        ) {
+            let { categoryId: e, name: i } = t;
+            n.push({
+                categoryId: e,
+                name: i
+            }),
+                (p[e] = i);
         }
-    }));
+        (u = r), (_ = n), (E = a);
+    }
+});

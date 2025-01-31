@@ -1,55 +1,51 @@
-r.d(n, {
-    Z: function () {
-        return f;
-    }
-});
-var i = r(200651),
-    a = r(192379),
-    o = r(979554),
-    s = r(481060),
-    l = r(436774),
-    u = r(981631),
-    c = r(388032),
-    d = r(339506);
-function f(e) {
-    let { product: n, onSecondaryClick: f } = e,
-        p = a.useCallback(() => {
-            if (null != n)
-                (0, s.openModalLazy)(async () => {
-                    let { default: e } = await r.e('43360').then(r.bind(r, 73415));
-                    return (r) =>
+n.d(t, { Z: () => d });
+var i = n(200651),
+    r = n(192379),
+    a = n(979554),
+    s = n(481060),
+    o = n(436774),
+    l = n(981631),
+    u = n(388032),
+    c = n(339506);
+function d(e) {
+    let { product: t, onSecondaryClick: d } = e,
+        f = r.useCallback(() => {
+            null != t &&
+                (0, s.ZDy)(async () => {
+                    let { default: e } = await n.e('43360').then(n.bind(n, 73415));
+                    return (n) =>
                         (0, i.jsx)(e, {
-                            collectableType: null == n ? void 0 : n.type,
-                            analyticsSource: u.Sbl.PROFILE_PANEL,
+                            collectableType: null == t ? void 0 : t.type,
+                            analyticsSource: l.Sbl.PROFILE_PANEL,
                             analyticsLocation: {
-                                section: u.jXE.USER_PROFILE,
-                                object: u.qAy.BUTTON_CTA
+                                section: l.jXE.USER_PROFILE,
+                                object: l.qAy.BUTTON_CTA
                             },
-                            onSecondaryClick: f,
-                            ...r
+                            onSecondaryClick: d,
+                            ...n
                         });
                 });
-        }, [n, f]),
-        h = a.useMemo(() => {
-            switch (null == n ? void 0 : n.type) {
-                case o.Z.AVATAR_DECORATION:
-                    return c.intl.format(c.t['aFR/EB'], { onClick: p });
-                case o.Z.PROFILE_EFFECT:
-                    return c.intl.format(c.t.eWNOND, { onClick: p });
+        }, [t, d]),
+        _ = r.useMemo(() => {
+            switch (null == t ? void 0 : t.type) {
+                case a.Z.AVATAR_DECORATION:
+                    return u.intl.format(u.t['aFR/EB'], { onClick: f });
+                case a.Z.PROFILE_EFFECT:
+                    return u.intl.format(u.t.eWNOND, { onClick: f });
             }
-        }, [null == n ? void 0 : n.type, p]);
+        }, [null == t ? void 0 : t.type, f]);
     return (0, i.jsxs)('div', {
-        className: d.nitroUpsellContainer,
+        className: c.nitroUpsellContainer,
         children: [
-            (0, i.jsx)(s.NitroWheelIcon, {
-                className: d.nitroWheel,
+            (0, i.jsx)(s.SrA, {
+                className: c.nitroWheel,
                 size: 'md',
-                color: l.JX.PREMIUM_TIER_2
+                color: o.JX.PREMIUM_TIER_2
             }),
             (0, i.jsx)(s.Text, {
-                className: d.nitroText,
+                className: c.nitroText,
                 variant: 'text-md/medium',
-                children: h
+                children: _
             })
         ]
     });

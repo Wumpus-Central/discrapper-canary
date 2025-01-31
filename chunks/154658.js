@@ -1,90 +1,86 @@
-r.d(n, {
-    Z: function () {
-        return E;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(381338),
-    l = r(442837),
-    u = r(481060),
-    c = r(206295),
-    d = r(594174),
-    f = r(5192),
-    p = r(528567),
-    h = r(371583),
-    _ = r(388032),
-    m = r(828980);
-function g(e) {
+n.d(t, { Z: () => g });
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(381338),
+    o = n(442837),
+    l = n(481060),
+    u = n(206295),
+    c = n(594174),
+    d = n(5192),
+    f = n(528567),
+    _ = n(371583),
+    p = n(388032),
+    h = n(828980);
+function m(e) {
     switch (e) {
         case s.q.DAILY:
-            return _.intl.string(_.t.UfbhDA);
+            return p.intl.string(p.t.UfbhDA);
         case s.q.WEEKLY:
-            return _.intl.string(_.t['9x5Nam']);
+            return p.intl.string(p.t['9x5Nam']);
         case s.q.MONTHLY:
-            return _.intl.string(_.t.xB2Co6);
+            return p.intl.string(p.t.xB2Co6);
         default:
-            return _.intl.string(_.t['4N67JS']);
+            return p.intl.string(p.t['4N67JS']);
     }
 }
-function E(e) {
-    var n, r, a, s;
-    let { guildId: E, leaderboard: v, className: y } = e,
-        b = null == v ? void 0 : null === (n = v.users) || void 0 === n ? void 0 : n[0],
-        { sort_by_statistic_id: I } = v.guild_settings,
-        T = null !== (s = null == b ? void 0 : null === (a = b.statistics) || void 0 === a ? void 0 : null === (r = a[I]) || void 0 === r ? void 0 : r.value) && void 0 !== s ? s : 0,
-        S = _.intl.formatToPlainString(_.t.yhdo8v, {
-            value: T,
-            statisticName: (0, p.C)(I)
+function g(e) {
+    var t, n, r, s;
+    let { guildId: g, leaderboard: E, className: v } = e,
+        y = null == E ? void 0 : null === (t = E.users) || void 0 === t ? void 0 : t[0],
+        { sort_by_statistic_id: I } = E.guild_settings,
+        b = null !== (s = null == y ? void 0 : null === (r = y.statistics) || void 0 === r ? void 0 : null === (n = r[I]) || void 0 === n ? void 0 : n.value) && void 0 !== s ? s : 0,
+        T = p.intl.formatToPlainString(p.t.yhdo8v, {
+            value: b,
+            statisticName: (0, f.C)(I)
         }),
-        A = (0, h.j)(v),
-        { primaryColor: C, secondaryColor: N } = (0, c.Z)(''.concat(A, '?forColors')),
-        R = (0, l.e7)([d.default], () => d.default.getUser(null == b ? void 0 : b.user_id));
-    if (null == R) return null;
-    let O = f.ZP.getName(E, void 0, R);
+        S = (0, _.j)(E),
+        { primaryColor: A, secondaryColor: N } = (0, u.Z)(''.concat(S, '?forColors')),
+        C = (0, o.e7)([c.default], () => c.default.getUser(null == y ? void 0 : y.user_id));
+    if (null == C) return null;
+    let R = d.ZP.getName(g, void 0, C);
     return (0, i.jsxs)('div', {
-        className: o()(m.container, y),
-        style: { backgroundImage: 'linear-gradient(90deg, '.concat(N, ' 0%, ').concat(C, ' 100%)') },
+        className: a()(h.container, v),
+        style: { backgroundImage: 'linear-gradient(90deg, '.concat(N, ' 0%, ').concat(A, ' 100%)') },
         children: [
-            (0, i.jsx)(u.Text, {
+            (0, i.jsx)(l.Text, {
                 variant: 'text-xs/medium',
-                className: m.title,
-                children: g(v.settings.interval_type)
+                className: h.title,
+                children: m(E.settings.interval_type)
             }),
-            (0, i.jsx)(u.Avatar, {
-                src: R.getAvatarURL(E, 16),
-                size: u.AvatarSizes.SIZE_16,
+            (0, i.jsx)(l.qEK, {
+                src: C.getAvatarURL(g, 16),
+                size: l.EFr.SIZE_16,
                 'aria-label': 'avatar'
             }),
-            (0, i.jsx)(u.Spacer, {
+            (0, i.jsx)(l.LZC, {
                 size: 6,
                 horizontal: !0
             }),
             (0, i.jsxs)('div', {
-                className: m.textContainer,
+                className: h.textContainer,
                 children: [
-                    (0, i.jsx)(u.Text, {
-                        className: m.username,
+                    (0, i.jsx)(l.Text, {
+                        className: h.username,
                         variant: 'text-xs/semibold',
                         color: 'header-primary',
-                        children: O
+                        children: R
                     }),
-                    (0, i.jsx)(u.Text, {
-                        className: m.statsText,
+                    (0, i.jsx)(l.Text, {
+                        className: h.statsText,
                         variant: 'text-xxs/medium',
                         color: 'text-secondary',
-                        children: S
+                        children: T
                     })
                 ]
             }),
-            null != A &&
+            null != S &&
                 (0, i.jsx)('div', {
-                    className: m.heroArtContainer,
+                    className: h.heroArtContainer,
                     children: (0, i.jsx)('img', {
-                        className: m.heroArt,
-                        src: A,
+                        className: h.heroArt,
+                        src: S,
                         alt: ''
                     })
                 })

@@ -1,19 +1,15 @@
 function i(e) {
-    var n;
+    var t;
     return function () {
         return (
-            !n &&
-                (n = new Promise(function (r) {
+            t ||
+                (t = new Promise(function (n) {
                     Promise.resolve().then(function () {
-                        (n = void 0), r(e());
+                        (t = void 0), n(e());
                     });
                 })),
-            n
+            t
         );
     };
 }
-r.d(n, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });

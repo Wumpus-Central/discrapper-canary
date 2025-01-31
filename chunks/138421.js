@@ -1,12 +1,8 @@
-r.d(n, {
-    WL: function () {
-        return a;
-    }
-});
-var i = r(483360);
-r(285651);
-let a = (e) =>
+n.d(t, { WL: () => r });
+var i = n(483360);
+n(285651);
+let r = (e) =>
     i.ZP.queryStickers([e], !0).map((e) => {
-        let { sticker: n } = e;
-        return n;
+        let { sticker: t } = e;
+        return t;
     });

@@ -1,12 +1,8 @@
-r.d(t, {
-    R: function () {
-        return i;
-    }
-});
-var a = r(263449),
-    n = r(452896),
-    _ = r(163162);
-let o = {
+a.d(e, { R: () => c });
+var r = a(263449),
+    n = a(452896),
+    o = a(163162);
+let _ = {
         replayIntegration: 'replay',
         replayCanvasIntegration: 'replay-canvas',
         feedbackIntegration: 'feedback',
@@ -24,31 +20,31 @@ let o = {
         sessionTimingIntegration: 'sessiontiming',
         browserProfilingIntegration: 'browserprofiling'
     },
-    E = _.m9;
-async function i(e) {
-    let t = o[e],
-        r = (E.Sentry = E.Sentry || {});
-    if (!t) throw Error(`Cannot lazy load integration: ${e}`);
-    let i = r[e];
-    if ('function' == typeof i) return i;
-    let c = (function (e) {
-            let t = (0, a.s3)(),
-                r = t && t.getOptions(),
-                _ = (r && r.cdnBaseUrl) || 'https://browser.sentry-cdn.com';
-            return new URL(`/${n.J}/${e}.min.js`, _).toString();
-        })(t),
-        s = _.m9.document.createElement('script');
-    (s.src = c), (s.crossOrigin = 'anonymous'), (s.referrerPolicy = 'origin');
-    let l = new Promise((e, t) => {
-        s.addEventListener('load', () => e()), s.addEventListener('error', t);
+    i = o.m9;
+async function c(t) {
+    let e = _[t],
+        a = (i.Sentry = i.Sentry || {});
+    if (!e) throw Error(`Cannot lazy load integration: ${t}`);
+    let c = a[t];
+    if ('function' == typeof c) return c;
+    let s = (function (t) {
+            let e = (0, r.s3)(),
+                a = e && e.getOptions(),
+                o = (a && a.cdnBaseUrl) || 'https://browser.sentry-cdn.com';
+            return new URL(`/${n.J}/${t}.min.js`, o).toString();
+        })(e),
+        E = o.m9.document.createElement('script');
+    (E.src = s), (E.crossOrigin = 'anonymous'), (E.referrerPolicy = 'origin');
+    let l = new Promise((t, e) => {
+        E.addEventListener('load', () => t()), E.addEventListener('error', e);
     });
-    _.m9.document.body.appendChild(s);
+    o.m9.document.body.appendChild(E);
     try {
         await l;
-    } catch (t) {
-        throw Error(`Error when loading integration: ${e}`);
+    } catch (e) {
+        throw Error(`Error when loading integration: ${t}`);
     }
-    let I = r[e];
-    if ('function' != typeof I) throw Error(`Could not load integration: ${e}`);
-    return I;
+    let u = a[t];
+    if ('function' != typeof u) throw Error(`Could not load integration: ${t}`);
+    return u;
 }

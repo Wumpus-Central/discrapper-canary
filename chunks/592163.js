@@ -1,40 +1,35 @@
-c.r(n),
-    c.d(n, {
-        default: function () {
-            return p;
-        }
-    });
-var a = c(200651);
-c(192379);
-var o = c(98278),
-    i = c(790527),
-    r = c(474936),
-    e = c(981631),
-    s = c(388032),
-    d = c(577028),
-    u = c(954696);
+a.d(n, { default: () => p });
+var c = a(200651);
+a(192379);
+var o = a(98278),
+    e = a(790527),
+    i = a(474936),
+    r = a(981631),
+    s = a(388032),
+    d = a(577028),
+    u = a(954696);
 function p(t) {
-    let { onClose: n, analyticsSource: c, onLearnMore: p, ...l } = t,
-        f = r.Si.TIER_2,
-        _ = s.intl.format(s.t.hDMlqK, {
+    let { onClose: n, analyticsSource: a, onLearnMore: p, ...l } = t,
+        _ = i.Si.TIER_2,
+        f = s.intl.format(s.t.hDMlqK, {
             onLearnMore: function () {
                 null == p || p(), n(), (0, o.z)();
             }
         });
-    return (0, a.jsx)(i.Z, {
+    return (0, c.jsx)(e.Z, {
         artURL: u.Z,
         artContainerClassName: d.videoBackgroundArt,
-        type: r.cd.VIDEO_BACKGROUNDS_MODAL,
+        type: i.cd.VIDEO_BACKGROUNDS_MODAL,
         title: s.intl.string(s.t.fHqiDQ),
-        body: _,
-        glowUp: _,
-        analyticsSource: c,
+        body: f,
+        glowUp: f,
+        analyticsSource: a,
         analyticsLocation: {
-            page: e.ZY5.PREMIUM_UPSELL_MODAL_VIDEO_BACKGROUNDS,
-            object: e.qAy.BUTTON_CTA
+            page: r.ZY5.PREMIUM_UPSELL_MODAL_VIDEO_BACKGROUNDS,
+            object: r.qAy.BUTTON_CTA
         },
         onClose: n,
-        subscriptionTier: f,
+        subscriptionTier: _,
         ...l
     });
 }

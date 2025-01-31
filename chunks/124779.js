@@ -1,72 +1,67 @@
-e.r(t),
-    e.d(t, {
-        default: function () {
-            return d;
-        }
-    });
+e.d(t, { default: () => u });
 var i = e(200651);
 e(192379);
-var r = e(481060),
-    l = e(287734),
-    c = e(313201),
-    o = e(471253),
-    a = e(939863),
-    s = e(388032),
-    u = e(499274);
-function d(n) {
-    let { channel: t, transitionState: e, onClose: d } = n,
-        _ = (0, c.Dt)();
+var l = e(481060),
+    r = e(287734),
+    a = e(313201),
+    s = e(471253),
+    c = e(939863),
+    o = e(388032),
+    d = e(499274);
+function u(n) {
+    let { channel: t, transitionState: e, onClose: u } = n,
+        _ = (0, a.Dt)();
     function h() {
-        l.default.disconnect(), d();
+        r.default.disconnect(), u();
     }
-    return (0, i.jsxs)(r.ModalRoot, {
+    return (0, i.jsxs)(l.Y0X, {
         transitionState: e,
         'aria-labelledby': _,
         children: [
-            (0, i.jsxs)(r.ModalContent, {
-                className: u.content,
+            (0, i.jsxs)(l.hzk, {
+                className: d.content,
                 children: [
-                    (0, i.jsx)(a.Z, {
+                    (0, i.jsx)(c.Z, {
                         children: (0, i.jsx)('div', {
-                            className: u.iconBackground,
-                            children: (0, i.jsx)(r.StageXIcon, {
+                            className: d.iconBackground,
+                            children: (0, i.jsx)(l.XzT, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 40,
                                 height: 40,
-                                className: u.headerIcon
+                                className: d.headerIcon
                             })
                         })
                     }),
-                    (0, i.jsx)(r.Heading, {
+                    (0, i.jsx)(l.X6q, {
                         id: _,
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
-                        className: u.title,
-                        children: s.intl.string(s.t.pADdJi)
+                        className: d.title,
+                        children: o.intl.string(o.t.pADdJi)
                     }),
-                    (0, i.jsx)(r.Text, {
+                    (0, i.jsx)(l.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        className: u.subtitle,
-                        children: s.intl.string(s.t.mT7jwM)
+                        className: d.subtitle,
+                        children: o.intl.string(o.t.mT7jwM)
                     })
                 ]
             }),
-            (0, i.jsxs)(r.ModalFooter, {
+            (0, i.jsxs)(l.mzw, {
                 children: [
-                    (0, i.jsx)(r.Button, {
-                        color: r.Button.Colors.RED,
+                    (0, i.jsx)(l.zxk, {
+                        color: l.zxk.Colors.RED,
                         onClick: function () {
-                            (0, o.NZ)(t), h();
+                            (0, s.NZ)(t), h();
                         },
-                        children: s.intl.string(s.t['sBP/1t'])
+                        children: o.intl.string(o.t['sBP/1t'])
                     }),
-                    (0, i.jsx)(r.Button, {
-                        color: r.Button.Colors.PRIMARY,
-                        className: u.cancelButton,
+                    (0, i.jsx)(l.zxk, {
+                        color: l.zxk.Colors.PRIMARY,
+                        className: d.cancelButton,
                         onClick: h,
-                        children: s.intl.string(s.t.xTwqz8)
+                        children: o.intl.string(o.t.xTwqz8)
                     })
                 ]
             })

@@ -1,14 +1,10 @@
-n.d(t, {
-    Z: function () {
-        return m;
-    }
-});
+n.d(t, { Z: () => m });
 var i = n(200651),
     a = n(192379),
     r = n(481060),
     l = n(881294),
-    o = n(258971),
-    s = n(133743),
+    s = n(258971),
+    o = n(133743),
     c = n(981631),
     d = n(388032),
     u = n(190778);
@@ -18,16 +14,16 @@ function m(e) {
             (0, l.zZ)(c.rMx.APP_DIRECTORY_CATEGORY_CLICKED, {
                 category: e.name,
                 category_id: e.id,
-                current_page: o.m_.APPLICATION
+                current_page: s.m_.APPLICATION
             }),
-                (0, s.pR)({ categoryId: e.id });
+                (0, o.pR)({ categoryId: e.id });
         }, []);
     return null == t.categories || 0 === t.categories.length
         ? null
         : (0, i.jsxs)('div', {
               className: n,
               children: [
-                  (0, i.jsx)(r.Heading, {
+                  (0, i.jsx)(r.X6q, {
                       variant: 'heading-sm/semibold',
                       color: 'header-primary',
                       children: d.intl.string(d.t.s7ialZ)
@@ -36,7 +32,7 @@ function m(e) {
                       className: u.categories,
                       children: t.categories.map((e) =>
                           (0, i.jsx)(
-                              r.Clickable,
+                              r.P3F,
                               {
                                   className: u.category,
                                   onClick: () => m(e),

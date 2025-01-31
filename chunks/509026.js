@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return m;
-    }
-});
+n.d(t, { Z: () => m });
 var i = n(200651);
 n(192379);
 var r = n(442837),
@@ -20,21 +16,21 @@ function m(e) {
         g = t.getMaxRoleSubscriptionEmojiSlots() - h.length,
         x = (0, c.mY)();
     return (0, i.jsx)(i.Fragment, {
-        children: (0, i.jsxs)(l.FormSection, {
+        children: (0, i.jsxs)(l.hjN, {
             title: u.intl.string(u.t.LDT0Q0),
             disabled: x,
             children: [
-                (0, i.jsx)(l.FormText, {
-                    type: l.FormText.Types.DESCRIPTION,
+                (0, i.jsx)(l.R94, {
+                    type: l.R94.Types.DESCRIPTION,
                     disabled: x,
                     children: u.intl.format(u.t.H9Jxp6, { maxSlots: t.getMaxRoleSubscriptionEmojiSlots() })
                 }),
-                (0, i.jsx)(l.Spacer, { size: 16 }),
+                (0, i.jsx)(l.LZC, { size: 16 }),
                 (0, i.jsx)(o.Z, {
                     onChange: (e, r) => {
                         null != e &&
                             null != r &&
-                            (0, l.openModalLazy)(async () => {
+                            (0, l.ZDy)(async () => {
                                 let { CreateEmojiWithRolesModal: l } = await n.e('9007').then(n.bind(n, 604623));
                                 return (n) =>
                                     (0, i.jsx)(l, {
@@ -49,7 +45,7 @@ function m(e) {
                     submitting: m,
                     disabled: x || m || 0 === g
                 }),
-                (0, i.jsx)(l.Spacer, { size: 24 }),
+                (0, i.jsx)(l.LZC, { size: 24 }),
                 (0, i.jsx)(a.L3, {
                     title: u.intl.string(u.t.lu1ZQ0),
                     maxSlots: t.getMaxRoleSubscriptionEmojiSlots(),
@@ -59,7 +55,7 @@ function m(e) {
                     guild: t,
                     emojis: h,
                     onEdit: (e, t) => {
-                        (0, l.openModalLazy)(async () => {
+                        (0, l.ZDy)(async () => {
                             let { UpdateEmojiRolesModal: r } = await n.e('9007').then(n.bind(n, 604623));
                             return (n) =>
                                 (0, i.jsx)(r, {

@@ -1,39 +1,34 @@
-r.d(n, {
-    Z: function () {
-        return p;
-    }
-});
-var i = r(47120);
-var a = r(192379),
-    o = r(913527),
-    s = r.n(o),
-    l = r(931609),
-    u = r(70956),
-    c = r(660199);
-let d = [
-        [2 * u.Z.Seconds.MINUTE, u.Z.Seconds.SECOND],
-        [5 * u.Z.Seconds.MINUTE, u.Z.Seconds.MINUTE],
-        [45 * u.Z.Seconds.MINUTE, 2 * u.Z.Seconds.MINUTE],
-        [21 * u.Z.Seconds.HOUR, 5 * u.Z.Seconds.MINUTE]
+n.d(t, { Z: () => d }), n(47120);
+var i = n(192379),
+    r = n(913527),
+    a = n.n(r),
+    s = n(931609),
+    o = n(70956),
+    l = n(660199);
+let u = [
+        [2 * o.Z.Seconds.MINUTE, o.Z.Seconds.SECOND],
+        [5 * o.Z.Seconds.MINUTE, o.Z.Seconds.MINUTE],
+        [45 * o.Z.Seconds.MINUTE, 2 * o.Z.Seconds.MINUTE],
+        [21 * o.Z.Seconds.HOUR, 5 * o.Z.Seconds.MINUTE]
     ],
-    f = 2 * u.Z.Seconds.HOUR;
-function p(e) {
-    let n = (0, l.Z)();
-    return (a.useEffect(() => {
+    c = 2 * o.Z.Seconds.HOUR;
+function d(e) {
+    let t = (0, s.Z)();
+    return (i.useEffect(() => {
         if ('R' !== e.format) return;
-        let r = 1000 * f,
-            i = Math.abs(e.parsed.diff(s()()));
-        for (let [e, n] of d)
+        let n = 1000 * c,
+            i = Math.abs(e.parsed.diff(a()()));
+        for (let [e, t] of u)
             if (i < 1000 * e) {
-                r = 1000 * n;
+                n = 1000 * t;
                 break;
             }
-        let a = setInterval(() => {
-            n();
-        }, r);
-        return () => clearInterval(a);
-    }, [n, e.format, e.parsed]),
+        let r = setInterval(() => {
+            t();
+        }, n);
+        return () => clearInterval(r);
+    }, [t, e.format, e.parsed]),
     'R' === e.format)
-        ? c.Qh.R(e.parsed)
+        ? l.Qh.R(e.parsed)
         : e.formatted;
 }

@@ -1,76 +1,54 @@
-r.d(n, {
-    Cb: function () {
-        return o;
-    },
-    KF: function () {
-        return d;
-    },
-    Mq: function () {
-        return g;
-    },
-    Q0: function () {
-        return s;
-    },
-    Rh: function () {
-        return E;
-    },
-    aA: function () {
-        return m;
-    },
-    dU: function () {
-        return c;
-    },
-    dX: function () {
-        return l;
-    },
-    kq: function () {
-        return f;
-    },
-    m9: function () {
-        return u;
-    },
-    y0: function () {
-        return p;
-    }
+n.d(t, {
+    Cb: () => a,
+    KF: () => c,
+    Mq: () => m,
+    Q0: () => s,
+    Rh: () => g,
+    aA: () => h,
+    dU: () => u,
+    dX: () => o,
+    kq: () => d,
+    m9: () => l,
+    y0: () => f
 });
-var i = r(876215),
-    a = r(758713);
-function o(e) {
+var i = n(876215),
+    r = n(758713);
+function a(e) {
     return (null == e ? void 0 : e.content_type) === i.s.PLAYED_GAME;
 }
 function s(e) {
     return (null == e ? void 0 : e.content_type) === i.s.TOP_GAME;
 }
-function l(e) {
-    return o(e) || s(e);
+function o(e) {
+    return a(e) || s(e);
 }
-function u(e) {
+function l(e) {
     return (null == e ? void 0 : e.extra) != null && 'application_id' in (null == e ? void 0 : e.extra);
 }
-function c(e) {
+function u(e) {
     return (null == e ? void 0 : e.content_type) === i.s.LISTENED_SESSION;
 }
-function d(e) {
+function c(e) {
     return (null == e ? void 0 : e.content_type) === i.s.TOP_ARTIST;
 }
-function f(e) {
-    return c(e) || d(e);
+function d(e) {
+    return u(e) || c(e);
 }
-function p(e) {
+function f(e) {
     return (null == e ? void 0 : e.content_type) === i.s.WATCHED_MEDIA;
 }
-function h(e) {
-    return !!l(e) && e.extra.platform === a.z.XBOX;
-}
 function _(e) {
-    return !!l(e) && e.extra.platform === a.z.PLAYSTATION;
+    return !!o(e) && e.extra.platform === r.z.XBOX;
+}
+function p(e) {
+    return !!o(e) && e.extra.platform === r.z.PLAYSTATION;
+}
+function h(e) {
+    return _(e) || p(e);
 }
 function m(e) {
-    return h(e) || _(e);
-}
-function g(e) {
     return (null == e ? void 0 : e.content_type) === i.s.LAUNCHED_ACTIVITY;
 }
-function E(e) {
-    return l(e) || c(e) || p(e) || u(e);
+function g(e) {
+    return o(e) || u(e) || f(e) || l(e);
 }

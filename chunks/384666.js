@@ -1,48 +1,43 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-}),
-    n(47120);
-var i = n(200651),
-    s = n(192379),
-    r = n(593473),
-    l = n(512969),
+n.d(t, { Z: () => h }), n(47120);
+var s = n(200651),
+    i = n(192379),
+    l = n(593473),
+    r = n(512969),
     o = n(489863),
-    c = n(787025),
-    a = n(397394),
+    a = n(787025),
+    c = n(397394),
     d = n(388032);
-function u() {
+function h() {
     let e;
-    let t = (0, l.TH)(),
-        [n, u] = s.useState(!1),
-        [h, p] = s.useState(!1);
+    let t = (0, r.TH)(),
+        [n, h] = i.useState(!1),
+        [u, _] = i.useState(!1);
     return (
-        s.useEffect(() => {
-            (async function e() {
-                let e = (0, r.parse)(t.search);
+        i.useEffect(() => {
+            (async function () {
+                let e = (0, l.parse)(t.search);
                 try {
                     var n;
-                    await (0, o.g)(null !== (n = e.token) && void 0 !== n ? n : ''), u(!0);
+                    await (0, o.g)(null !== (n = e.token) && void 0 !== n ? n : ''), h(!0);
                 } catch {
-                    p(!0);
+                    _(!0);
                 }
             })();
         }, [t.search]),
         (e = n
-            ? (0, i.jsx)(a.c7, {
+            ? (0, s.jsx)(c.c7, {
                   message: d.intl.string(d.t.Tqu3OT),
                   showsCloseWindowText: !0
               })
-            : h
-              ? (0, i.jsx)(a.Lk, {
+            : u
+              ? (0, s.jsx)(c.Lk, {
                     message: d.intl.string(d.t.J8LsCg),
                     showsCloseWindowText: !0
                 })
-              : (0, i.jsx)(a.ZP, {
+              : (0, s.jsx)(c.ZP, {
                     message: d.intl.string(d.t.BAcf6e),
                     spinner: !0
                 })),
-        (0, i.jsx)(c.G, { children: e })
+        (0, s.jsx)(a.G, { children: e })
     );
 }

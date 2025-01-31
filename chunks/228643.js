@@ -1,13 +1,7 @@
 t.d(n, {
-    L_: function () {
-        return r;
-    },
-    nj: function () {
-        return s;
-    },
-    sE: function () {
-        return i;
-    }
+    L_: () => r,
+    nj: () => s,
+    sE: () => i
 });
 var c = t(544891),
     o = t(570140),

@@ -1,49 +1,44 @@
-r.d(n, {
-    f: function () {
-        return l;
-    }
-});
-var i = r(47120);
-var a = r(742635);
-let o = (e) => {
-        let n = {};
-        for (let r of Object.keys(e)) {
-            let i = e[r];
+n.d(t, { f: () => s }), n(47120);
+var i = n(742635);
+let r = (e) => {
+        let t = {};
+        for (let n of Object.keys(e)) {
+            let i = e[n];
             null != i &&
-                (n[r] = {
+                (t[n] = {
                     eventName: i.event_name,
                     target: i.target,
                     externalIds: i.external_ids
                 });
         }
-        return n;
+        return t;
     },
-    s = (e) => {
-        let n = {};
-        for (let r of Object.keys(e)) {
-            let i = e[r];
+    a = (e) => {
+        let t = {};
+        for (let n of Object.keys(e)) {
+            let i = e[n];
             null != i &&
-                (n[r] = {
+                (t[n] = {
                     eventName: i.event_name,
                     title: i.title,
                     target: i.target,
                     description: i.description
                 });
         }
-        return n;
+        return t;
     },
-    l = (e) => {
+    s = (e) => {
         switch (e.type) {
-            case a.L.FIRST_PARTY:
+            case i.L.FIRST_PARTY:
                 return {
-                    type: a.L.FIRST_PARTY,
-                    tasks: o(e.tasks),
+                    type: i.L.FIRST_PARTY,
+                    tasks: r(e.tasks),
                     joinOperator: e.join_operator
                 };
-            case a.L.THIRD_PARTY:
+            case i.L.THIRD_PARTY:
                 return {
-                    type: a.L.THIRD_PARTY,
-                    tasks: s(e.tasks),
+                    type: i.L.THIRD_PARTY,
+                    tasks: a(e.tasks),
                     enrollmentUrl: e.enrollment_url,
                     developerApplicationId: e.developer_application_id,
                     joinOperator: e.join_operator

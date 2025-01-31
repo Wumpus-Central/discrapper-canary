@@ -1,8 +1,9 @@
-e.exports = {
-    emptyState: 'emptyState_c96e35',
-    unifyTrialUpsell: 'unifyTrialUpsell_c96e35',
-    header: 'header_c96e35',
-    subtitle: 'subtitle_c96e35',
-    stickersRow: 'stickersRow_c96e35',
-    sticker: 'sticker_c96e35'
+var i = {
+    emptyState: 'emptyState__70126',
+    unifyTrialUpsell: 'unifyTrialUpsell__70126',
+    header: 'header__70126',
+    subtitle: 'subtitle__70126',
+    stickersRow: 'stickersRow__70126',
+    sticker: 'sticker__70126'
 };
+e.exports = i;

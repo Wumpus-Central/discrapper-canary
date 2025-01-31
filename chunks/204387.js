@@ -1,54 +1,45 @@
-r.r(t),
-    r.d(t, {
-        Steps: function () {
-            return s;
-        }
-    }),
-    r(47120);
-var s,
-    i,
-    a = r(200651),
-    n = r(192379),
-    l = r(481060),
-    C = r(100527),
-    o = r(906732),
-    d = r(626135),
-    c = r(281494),
-    x = r(687555),
-    f = r(596583),
-    h = r(981631);
-((i = s || (s = {}))[(i.SELECT_FRIENDS = 1)] = 'SELECT_FRIENDS'), (i[(i.CONFIRMATION = 2)] = 'CONFIRMATION');
-t.default = (e) => {
+r.d(t, { default: () => h }), r(47120);
+var a = r(200651),
+    s = r(192379),
+    i = r(481060),
+    n = r(100527),
+    l = r(906732),
+    C = r(626135),
+    o = r(281494),
+    d = r(687555),
+    c = r(596583),
+    x = r(981631);
+let h = (e) => {
     let t,
-        { transitionState: r, onClose: s, sourceAnalyticsLocations: i } = e,
-        [p, u] = n.useState(1),
-        [m, _] = n.useState(new Set()),
-        [j, g] = n.useState(new Map()),
-        { analyticsLocations: L } = (0, o.ZP)([...i, C.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL]);
-    switch (p) {
+        { transitionState: r, onClose: h, sourceAnalyticsLocations: p } = e,
+        [f, u] = s.useState(1),
+        [m, _] = s.useState(new Set()),
+        [j, g] = s.useState(new Map()),
+        { analyticsLocations: L } = (0, l.ZP)([...p, n.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL]);
+    switch (f) {
         case 1:
-            t = (0, a.jsx)(x.Z, {
+            t = (0, a.jsx)(d.Z, {
                 onShare: async (e) => {
                     try {
-                        d.default.track(h.rMx.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, { location_stack: L });
-                        let t = await (0, c.jy)(e.map((e) => e.id));
+                        C.default.track(x.rMx.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, { location_stack: L });
+                        let t = await (0, o.jy)(e.map((e) => e.id));
                         u(2), _(new Set(e)), g(t);
                     } catch {}
                 },
-                onClose: s
+                onClose: h
             });
             break;
         case 2:
-            t = (0, a.jsx)(f.Z, {
+            t = (0, a.jsx)(c.Z, {
                 selectedUsers: m,
                 trialCreationResult: j,
-                onClose: s
+                onClose: h
             });
             break;
         default:
-            s();
+            h();
     }
-    return (0, a.jsx)(l.ModalRoot, {
+    return (0, a.jsx)(i.Y0X, {
         transitionState: r,
         children: t
     });

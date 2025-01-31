@@ -1,41 +1,36 @@
-r.r(n),
-    r.d(n, {
-        default: function () {
-            return s;
-        }
-    });
-var e = r(200651);
-r(192379);
-var i = r(481060),
-    o = r(388032),
-    l = r(505740);
-function s(t) {
-    let { onClose: n, transitionState: r, body: s } = t;
-    return (0, e.jsxs)(i.ModalRoot, {
-        transitionState: r,
+n.d(i, { default: () => c });
+var r = n(200651);
+n(192379);
+var e = n(481060),
+    s = n(388032),
+    l = n(505740);
+function c(t) {
+    let { onClose: i, transitionState: n, body: c } = t;
+    return (0, r.jsxs)(e.Y0X, {
+        transitionState: n,
         children: [
-            (0, e.jsx)(i.ModalHeader, {
+            (0, r.jsx)(e.xBx, {
                 separator: !1,
-                children: (0, e.jsx)(i.FormTitle, {
+                children: (0, r.jsx)(e.vwX, {
                     tag: 'h2',
                     className: l.title,
-                    children: o.intl.string(o.t.KTjjrK)
+                    children: s.intl.string(s.t.KTjjrK)
                 })
             }),
-            (0, e.jsx)(i.ModalContent, {
+            (0, r.jsx)(e.hzk, {
                 children:
-                    'string' == typeof s
-                        ? (0, e.jsx)(i.Text, {
+                    'string' == typeof c
+                        ? (0, r.jsx)(e.Text, {
                               variant: 'text-md/normal',
-                              children: s
+                              children: c
                           })
-                        : s
+                        : c
             }),
-            (0, e.jsx)(i.ModalFooter, {
-                children: (0, e.jsx)(i.Button, {
-                    color: i.Button.Colors.BRAND,
-                    onClick: n,
-                    children: o.intl.string(o.t.i4jeWV)
+            (0, r.jsx)(e.mzw, {
+                children: (0, r.jsx)(e.zxk, {
+                    color: e.zxk.Colors.BRAND,
+                    onClick: i,
+                    children: s.intl.string(s.t.i4jeWV)
                 })
             })
         ]

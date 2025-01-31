@@ -1,15 +1,11 @@
-r.d(n, {
-    S: function () {
-        return p;
-    }
-});
-var i = r(146150),
-    a = r(812975),
-    o = r(531171),
-    s = r(695170),
-    l = r(686942),
-    u = r(200734),
-    c = {
+n.d(t, { S: () => f });
+var i = n(146150),
+    r = n(812975),
+    a = n(531171),
+    s = n(695170),
+    o = n(686942),
+    l = n(200734),
+    u = {
         dtstart: null,
         cache: !1,
         unfold: !1,
@@ -17,152 +13,152 @@ var i = r(146150),
         compatible: !1,
         tzid: null
     };
-function d(e, n) {
-    var r = [],
+function c(e, t) {
+    var n = [],
         i = [],
+        r = [],
         a = [],
-        o = [],
-        s = (0, u.o)(e),
-        l = s.dtstart,
-        c = s.tzid;
+        s = (0, l.o)(e),
+        o = s.dtstart,
+        u = s.tzid;
     return (
-        E(e, n.unfold).forEach(function (e) {
+        g(e, t.unfold).forEach(function (e) {
             if (e) {
-                var n,
-                    s = g(e),
-                    l = s.name,
-                    d = s.parms,
-                    f = s.value;
-                switch (l.toUpperCase()) {
+                var t,
+                    s = m(e),
+                    o = s.name,
+                    c = s.parms,
+                    d = s.value;
+                switch (o.toUpperCase()) {
                     case 'RRULE':
-                        if (d.length) throw Error('unsupported RRULE parm: '.concat(d.join(',')));
-                        r.push((0, u.B)(e));
+                        if (c.length) throw Error('unsupported RRULE parm: '.concat(c.join(',')));
+                        n.push((0, l.B)(e));
                         break;
                     case 'RDATE':
-                        var p = null !== (n = /RDATE(?:;TZID=([^:=]+))?/i.exec(e)) && void 0 !== n ? n : [],
-                            h = p[1];
-                        h && !c && (c = h), (i = i.concat(y(f, d)));
+                        var f = null !== (t = /RDATE(?:;TZID=([^:=]+))?/i.exec(e)) && void 0 !== t ? t : [],
+                            _ = f[1];
+                        _ && !u && (u = _), (i = i.concat(v(d, c)));
                         break;
                     case 'EXRULE':
-                        if (d.length) throw Error('unsupported EXRULE parm: '.concat(d.join(',')));
-                        a.push((0, u.B)(f));
+                        if (c.length) throw Error('unsupported EXRULE parm: '.concat(c.join(',')));
+                        r.push((0, l.B)(d));
                         break;
                     case 'EXDATE':
-                        o = o.concat(y(f, d));
+                        a = a.concat(v(d, c));
                         break;
                     case 'DTSTART':
                         break;
                     default:
-                        throw Error('unsupported property: ' + l);
+                        throw Error('unsupported property: ' + o);
                 }
             }
         }),
         {
-            dtstart: l,
-            tzid: c,
-            rrulevals: r,
+            dtstart: o,
+            tzid: u,
+            rrulevals: n,
             rdatevals: i,
-            exrulevals: a,
-            exdatevals: o
+            exrulevals: r,
+            exdatevals: a
         }
     );
 }
-function f(e, n) {
-    var r = d(e, n),
-        i = r.rrulevals,
-        s = r.rdatevals,
-        l = r.exrulevals,
-        u = r.exdatevals,
-        c = r.dtstart,
-        f = r.tzid,
-        p = !1 === n.cache;
-    if ((n.compatible && ((n.forceset = !0), (n.unfold = !0)), n.forceset || i.length > 1 || s.length || l.length || u.length)) {
-        var _ = new o.p(p);
+function d(e, t) {
+    var n = c(e, t),
+        i = n.rrulevals,
+        s = n.rdatevals,
+        o = n.exrulevals,
+        l = n.exdatevals,
+        u = n.dtstart,
+        d = n.tzid,
+        f = !1 === t.cache;
+    if ((t.compatible && ((t.forceset = !0), (t.unfold = !0)), t.forceset || i.length > 1 || s.length || o.length || l.length)) {
+        var p = new a.p(f);
         return (
-            _.dtstart(c),
-            _.tzid(f || void 0),
+            p.dtstart(u),
+            p.tzid(d || void 0),
             i.forEach(function (e) {
-                _.rrule(new a.Ci(h(e, c, f), p));
+                p.rrule(new r.Ci(_(e, u, d), f));
             }),
             s.forEach(function (e) {
-                _.rdate(e);
+                p.rdate(e);
+            }),
+            o.forEach(function (e) {
+                p.exrule(new r.Ci(_(e, u, d), f));
             }),
             l.forEach(function (e) {
-                _.exrule(new a.Ci(h(e, c, f), p));
+                p.exdate(e);
             }),
-            u.forEach(function (e) {
-                _.exdate(e);
-            }),
-            n.compatible && n.dtstart && _.rdate(c),
-            _
+            t.compatible && t.dtstart && p.rdate(u),
+            p
         );
     }
-    var m = i[0] || {};
-    return new a.Ci(h(m, m.dtstart || n.dtstart || c, m.tzid || n.tzid || f), p);
+    var h = i[0] || {};
+    return new r.Ci(_(h, h.dtstart || t.dtstart || u, h.tzid || t.tzid || d), f);
 }
-function p(e, n) {
-    return void 0 === n && (n = {}), f(e, _(n));
+function f(e, t) {
+    return void 0 === t && (t = {}), d(e, p(t));
 }
-function h(e, n, r) {
+function _(e, t, n) {
     return (0, i.pi)((0, i.pi)({}, e), {
-        dtstart: n,
-        tzid: r
+        dtstart: t,
+        tzid: n
     });
 }
-function _(e) {
-    var n = [],
-        r = Object.keys(e),
-        a = Object.keys(c);
+function p(e) {
+    var t = [],
+        n = Object.keys(e),
+        r = Object.keys(u);
     if (
-        (r.forEach(function (e) {
-            !(0, l.q9)(a, e) && n.push(e);
+        (n.forEach(function (e) {
+            (0, o.q9)(r, e) || t.push(e);
         }),
-        n.length)
+        t.length)
     )
-        throw Error('Invalid options: ' + n.join(', '));
-    return (0, i.pi)((0, i.pi)({}, c), e);
+        throw Error('Invalid options: ' + t.join(', '));
+    return (0, i.pi)((0, i.pi)({}, u), e);
 }
-function m(e) {
+function h(e) {
     if (-1 === e.indexOf(':'))
         return {
             name: 'RRULE',
             value: e
         };
-    var n = (0, l.Vl)(e, ':', 1);
+    var t = (0, o.Vl)(e, ':', 1);
     return {
-        name: n[0],
-        value: n[1]
+        name: t[0],
+        value: t[1]
     };
 }
-function g(e) {
-    var n = m(e),
-        r = n.name,
-        i = n.value,
-        a = r.split(';');
-    if (!a) throw Error('empty property name');
+function m(e) {
+    var t = h(e),
+        n = t.name,
+        i = t.value,
+        r = n.split(';');
+    if (!r) throw Error('empty property name');
     return {
-        name: a[0].toUpperCase(),
-        parms: a.slice(1),
+        name: r[0].toUpperCase(),
+        parms: r.slice(1),
         value: i
     };
 }
-function E(e, n) {
-    if ((void 0 === n && (n = !1), !(e = e && e.trim()))) throw Error('Invalid empty string');
-    if (!n) return e.split(/\s/);
-    for (var r = e.split('\n'), i = 0; i < r.length; ) {
-        var a = (r[i] = r[i].replace(/\s+$/g, ''));
-        a ? (i > 0 && ' ' === a[0] ? ((r[i - 1] += a.slice(1)), r.splice(i, 1)) : (i += 1)) : r.splice(i, 1);
+function g(e, t) {
+    if ((void 0 === t && (t = !1), !(e = e && e.trim()))) throw Error('Invalid empty string');
+    if (!t) return e.split(/\s/);
+    for (var n = e.split('\n'), i = 0; i < n.length; ) {
+        var r = (n[i] = n[i].replace(/\s+$/g, ''));
+        r ? (i > 0 && ' ' === r[0] ? ((n[i - 1] += r.slice(1)), n.splice(i, 1)) : (i += 1)) : n.splice(i, 1);
     }
-    return r;
+    return n;
 }
-function v(e) {
+function E(e) {
     e.forEach(function (e) {
         if (!/(VALUE=DATE(-TIME)?)|(TZID=)/.test(e)) throw Error('unsupported RDATE/EXDATE parm: ' + e);
     });
 }
-function y(e, n) {
+function v(e, t) {
     return (
-        v(n),
+        E(t),
         e.split(',').map(function (e) {
             return (0, s.gE)(e);
         })

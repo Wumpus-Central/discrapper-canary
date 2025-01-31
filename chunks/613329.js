@@ -1,27 +1,22 @@
-i.r(t),
-    i.d(t, {
-        default: function () {
-            return l;
-        }
-    });
-var r = i(200651);
-i(192379);
-var e = i(481060),
-    u = i(239091),
-    o = i(299660),
-    s = i(517640),
-    c = i(388032);
-function l(n) {
-    let { guild: t, onSelect: i } = n,
-        l = (0, s.Z)(t),
-        a = (0, o.Z)(t.id);
-    return (0, r.jsx)(e.Menu, {
+t.d(i, { default: () => a });
+var r = t(200651);
+t(192379);
+var s = t(481060),
+    o = t(239091),
+    e = t(299660),
+    c = t(517640),
+    l = t(388032);
+function a(n) {
+    let { guild: i, onSelect: t } = n,
+        a = (0, c.Z)(i),
+        u = (0, e.Z)(i.id);
+    return (0, r.jsx)(s.v2r, {
         navId: 'role-subscription-context',
-        'aria-label': c.intl.string(c.t.g3KvYG),
-        onClose: u.Zy,
-        onSelect: i,
-        children: (0, r.jsxs)(e.MenuGroup, {
-            children: [l, a]
+        'aria-label': l.intl.string(l.t.g3KvYG),
+        onClose: o.Zy,
+        onSelect: t,
+        children: (0, r.jsxs)(s.kSQ, {
+            children: [a, u]
         })
     });
 }

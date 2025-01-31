@@ -1,5 +1,6 @@
+n.d(t, { Z: () => r });
 var i = n(570140);
-t.Z = {
+let r = {
     setPendingInviteRules: function (e, t, n) {
         i.Z.dispatch({
             type: 'GUILD_SETTINGS_JOIN_RULES_INVITE_SET_PENDING_RULES',

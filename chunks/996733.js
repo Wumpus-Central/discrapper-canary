@@ -1,13 +1,7 @@
 s.d(t, {
-    QH: function () {
-        return r;
-    },
-    Z7: function () {
-        return o;
-    },
-    yN: function () {
-        return i;
-    }
+    QH: () => r,
+    Z7: () => a,
+    yN: () => i
 });
 let n = (0, s(972959).H)(() => ({
     query: '',
@@ -20,6 +14,6 @@ function i(e) {
 function r(e) {
     n.setState({ isActive: e });
 }
-function o() {
+function a() {
     return n.useField('query');
 }

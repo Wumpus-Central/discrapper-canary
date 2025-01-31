@@ -1,108 +1,104 @@
-t.d(n, {
-    Z: function () {
-        return x;
-    }
-});
-var i = t(200651);
-t(192379);
-var l = t(120356),
-    r = t.n(l),
-    a = t(442837),
-    o = t(481060),
-    s = t(543241),
-    u = t(222677),
-    d = t(995774),
-    c = t(665906),
-    g = t(695346),
-    f = t(496675),
-    m = t(768581),
-    h = t(176354),
-    E = t(981631),
-    I = t(185923),
-    v = t(388032),
-    M = t(953568);
+n.d(t, { Z: () => S });
+var i = n(200651);
+n(192379);
+var l = n(120356),
+    a = n.n(l),
+    s = n(442837),
+    r = n(481060),
+    o = n(543241),
+    d = n(222677),
+    c = n(995774),
+    u = n(665906),
+    g = n(695346),
+    f = n(496675),
+    m = n(768581),
+    h = n(176354),
+    E = n(981631),
+    v = n(185923),
+    Z = n(388032),
+    x = n(953568);
 let p = ['slight_smile', 'frowning', 'smile', 'stuck_out_tongue', 'wink'];
-function Z(e) {
-    var n;
-    let { emoji: t, isFocused: l } = e,
-        { animated: a, src: s, surrogates: u } = t;
+function N(e) {
+    var t;
+    let { emoji: n, isFocused: l } = e,
+        { animated: s, src: o, surrogates: d } = n;
     return (
-        null == s && null != t.id
-            ? (s = m.ZP.getEmojiURL({
-                  id: t.id,
-                  animated: !!a,
+        null == o && null != n.id
+            ? (o = m.ZP.getEmojiURL({
+                  id: n.id,
+                  animated: !!s,
                   size: 20
               }))
-            : null == s && (s = h.ZP.getURL(u)),
+            : null == o && (o = h.ZP.getURL(d)),
         (0, i.jsx)(
-            o.Tooltip,
+            r.ua7,
             {
-                text: t.allNamesString,
+                text: n.allNamesString,
                 hideOnClick: !0,
                 spacing: 16,
                 forceOpen: l,
                 children: (e) =>
                     (0, i.jsx)('div', {
-                        'aria-label': v.intl.formatToPlainString(v.t['/iYSo6'], { emojiName: t.name }),
-                        className: r()(M.button, { [M.focused]: l }),
+                        'aria-label': Z.intl.formatToPlainString(Z.t['/iYSo6'], { emojiName: n.name }),
+                        className: a()(x.button, { [x.focused]: l }),
                         ...e,
                         children:
-                            null == s || '' === s.trim()
+                            null == o || '' === o.trim()
                                 ? (0, i.jsx)('span', {
-                                      className: r()('emoji', 'emoji-text', M.icon),
+                                      className: a()('emoji', 'emoji-text', x.icon),
                                       ...e,
-                                      children: u
+                                      children: d
                                   })
                                 : (0, i.jsx)('img', {
-                                      className: M.icon,
-                                      src: s,
+                                      className: x.icon,
+                                      src: o,
                                       alt: ''
                                   })
                     })
             },
-            null !== (n = t.id) && void 0 !== n ? n : t.name
+            null !== (t = n.id) && void 0 !== t ? t : n.name
         )
     );
 }
-function x(e, n) {
-    let t = (0, s.MZ)(n.guild_id).filter((e) => {
-        var t;
+function S(e, t) {
+    let n = (0, o.MZ)(t.guild_id).filter((e) => {
+        var n;
         return (
-            !(e.useSpriteSheet && p.indexOf(null !== (t = e.uniqueName) && void 0 !== t ? t : '') >= 0) &&
+            !(e.useSpriteSheet && p.indexOf(null !== (n = e.uniqueName) && void 0 !== n ? n : '') >= 0) &&
             !h.ZP.isEmojiPremiumLocked({
                 emoji: e,
-                channel: n,
-                intention: I.Hz.REACTION
+                channel: t,
+                intention: v.Hz.REACTION
             })
         );
     });
-    t.length > 4 && (t.length = 4);
+    n.length > 4 && (n.length = 4);
     let l = g.nc.useSetting(),
-        r = (0, c.$R)(n),
-        m = (0, a.e7)([f.Z], () => l && r && (n.isPrivate() || f.Z.can(E.Plq.ADD_REACTIONS, n)), [n, r, l]),
-        v = (t) => {
-            (0, u.rU)(n.id, e.id, (0, d.g1)(t), u.TW.MESSAGE_CONTEXT_MENU);
+        a = (0, u.$R)(t),
+        m = (0, s.e7)([f.Z], () => l && a && (t.isPrivate() || f.Z.can(E.Plq.ADD_REACTIONS, t)), [t, a, l]),
+        Z = (n) => {
+            (0, d.rU)(t.id, e.id, (0, c.g1)(n), d.TW.MESSAGE_CONTEXT_MENU);
         };
-    return m && t.length > 0
-        ? (0, i.jsx)(o.MenuGroup, {
-              className: M.wrapper,
-              children: t.map((e, n) => {
-                  var t;
+    return m && n.length > 0
+        ? (0, i.jsx)(r.kSQ, {
+              className: x.wrapper,
+              children: n.map((e, t) => {
+                  var n;
                   return (0, i.jsx)(
-                      o.MenuItem,
+                      r.sNh,
                       {
-                          id: 'quickreact-'.concat(null !== (t = e.id) && void 0 !== t ? t : n),
-                          render: (n) => {
-                              let { isFocused: t } = n;
-                              return (0, i.jsx)(Z, {
+                          id: 'quickreact-'.concat(null !== (n = e.id) && void 0 !== n ? n : t),
+                          render: (t) => {
+                              let { isFocused: n } = t;
+                              return (0, i.jsx)(N, {
                                   emoji: e,
-                                  isFocused: t
+                                  isFocused: n
                               });
                           },
-                          action: () => v(e),
+                          action: () => Z(e),
                           dontCloseOnActionIfHoldingShiftKey: !0
                       },
-                      n
+                      t
                   );
               })
           })

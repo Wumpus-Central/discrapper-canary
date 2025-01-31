@@ -1,47 +1,42 @@
-A.d(t, {
-    V: function () {
-        return s;
-    }
-});
-var n = A(200651);
-A(192379);
-var r = A(952265),
-    a = A(776045),
-    i = A(871388),
-    l = A(981631),
-    o = A(388032);
-function s(e, t, s) {
-    var d, c, u;
-    switch (e.code) {
-        case l.evJ.TOO_MANY_PUBLISHED_PRODUCT_LISTINGS:
-            (0, i.B)(o.intl.string(o.t['04e8bG']), o.t.uVN1Y2, a.IconVariant.DANGER);
+t.d(e, { V: () => s });
+var n = t(200651);
+t(192379);
+var a = t(952265),
+    l = t(776045),
+    r = t(871388),
+    i = t(981631),
+    o = t(388032);
+function s(A, e, s) {
+    var d, c;
+    switch (A.code) {
+        case i.evJ.TOO_MANY_PUBLISHED_PRODUCT_LISTINGS:
+            (0, r.B)(o.intl.string(o.t['04e8bG']), o.t.uVN1Y2, l.A.DANGER);
             break;
-        case l.evJ.TWO_FA_NOT_ENABLED:
-            (0, i.B)(o.intl.string(o.t['/yBjZ2']), o.t.kZ6Tgo, a.IconVariant.WARNING);
+        case i.evJ.TWO_FA_NOT_ENABLED:
+            (0, r.B)(o.intl.string(o.t['/yBjZ2']), o.t.kZ6Tgo, l.A.WARNING);
             break;
-        case l.evJ.GUILD_PRODUCT_LISTING_CANNOT_PUBLISH_WITHOUT_BENEFIT:
-            (0, i.B)(o.intl.string(o.t.MeXDxs), o.t['5q146O'], a.IconVariant.WARNING);
+        case i.evJ.GUILD_PRODUCT_LISTING_CANNOT_PUBLISH_WITHOUT_BENEFIT:
+            (0, r.B)(o.intl.string(o.t.MeXDxs), o.t['5q146O'], l.A.WARNING);
             break;
-        case l.evJ.MONETIZATION_TERMS_NOT_ACCEPTED:
-            (d = t),
-                (0, r.ZD)(async () => {
-                    let { default: e } = await A.e('31835').then(A.bind(A, 393809));
-                    return (t) =>
-                        (0, n.jsx)(e, {
-                            guildId: d,
-                            ...t
-                        });
-                });
+        case i.evJ.MONETIZATION_TERMS_NOT_ACCEPTED:
+            (0, a.ZD)(async () => {
+                let { default: A } = await t.e('31835').then(t.bind(t, 393809));
+                return (t) =>
+                    (0, n.jsx)(A, {
+                        guildId: e,
+                        ...t
+                    });
+            });
             break;
-        case l.evJ.CREATOR_MONETIZATION_PAYMENT_TEAM_REQUIRED:
-            (0, i.B)(o.intl.string(o.t['4hWo0N']), o.t.Zkhwe3, a.IconVariant.WARNING);
+        case i.evJ.CREATOR_MONETIZATION_PAYMENT_TEAM_REQUIRED:
+            (0, r.B)(o.intl.string(o.t['4hWo0N']), o.t.Zkhwe3, l.A.WARNING);
             break;
-        case l.evJ.CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED:
-            let g, h;
-            null != s ? ((g = o.t.j2VMk5), (h = { url: l.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(s) })) : (g = o.t.ZVV1go), (0, i.B)(o.intl.string(o.t['+CT/gY']), g, a.IconVariant.WARNING, h);
+        case i.evJ.CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED:
+            let u, g;
+            null != s ? ((u = o.t.j2VMk5), (g = { url: i.EYA.DEVELOPER_PORTAL_PAYOUT_SETTINGS(s) })) : (u = o.t.ZVV1go), (0, r.B)(o.intl.string(o.t['+CT/gY']), u, l.A.WARNING, g);
             break;
         default:
-            let p = null !== (u = e.getFirstFieldErrorMessage(['published'])) && void 0 !== u ? u : (null === (c = e.hasFieldErrors) || void 0 === c ? void 0 : c.call(e)) ? void 0 : e.message;
-            if (null != p) (0, i.B)(o.intl.string(o.t.bvWf8f), p, a.IconVariant.WARNING);
+            let m = null !== (c = A.getFirstFieldErrorMessage(['published'])) && void 0 !== c ? c : (null === (d = A.hasFieldErrors) || void 0 === d ? void 0 : d.call(A)) ? void 0 : A.message;
+            null != m && (0, r.B)(o.intl.string(o.t.bvWf8f), m, l.A.WARNING);
     }
 }

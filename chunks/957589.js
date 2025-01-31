@@ -1,11 +1,12 @@
 e.exports = {
-    userContainer: 'userContainer_d3081b',
-    heroQuotes: 'heroQuotes_d3081b quotes_d3081b',
-    testimonialHeroContainer: 'testimonialHeroContainer_d3081b',
-    animatedContainer: 'animatedContainer_d3081b',
-    testimonial: 'testimonial_d3081b',
-    testimonialsControls: 'testimonialsControls_d3081b',
-    testimonialControl: 'testimonialControl_d3081b',
-    testimonialControlInner: 'testimonialControlInner_d3081b',
-    testimonialControlIcon: 'testimonialControlIcon_d3081b'
+    userContainer: 'userContainer__3e7e2',
+    quotes: 'quotes__3e7e2',
+    heroQuotes: 'heroQuotes__3e7e2 quotes__3e7e2',
+    testimonialHeroContainer: 'testimonialHeroContainer__3e7e2',
+    animatedContainer: 'animatedContainer__3e7e2',
+    testimonial: 'testimonial__3e7e2',
+    testimonialsControls: 'testimonialsControls__3e7e2',
+    testimonialControl: 'testimonialControl__3e7e2',
+    testimonialControlIcon: 'testimonialControlIcon__3e7e2',
+    testimonialControlInner: 'testimonialControlInner__3e7e2'
 };

@@ -1,56 +1,55 @@
-var i = r(47120);
-var a = r(392711),
-    o = r.n(a),
-    s = r(626135),
-    l = r(524484),
-    u = r(981631);
-let c = 5000;
-function d(e) {
+n.d(t, { Z: () => f }), n(47120);
+var i = n(392711),
+    r = n.n(i),
+    a = n(626135),
+    s = n(524484),
+    o = n(981631);
+let l = 5000;
+function u(e) {
     switch (e) {
-        case l.oZ.CHAT_INPUT:
+        case s.oZ.CHAT_INPUT:
             return 'chat_input';
-        case l.oZ.MENTION:
+        case s.oZ.MENTION:
             return 'mention';
-        case l.oZ.VOICE_USER:
+        case s.oZ.VOICE_USER:
             return 'voice_user';
     }
 }
-function f(e) {
+function c(e) {
     switch (e) {
-        case l.Hn.CHAT_INPUT:
+        case s.Hn.CHAT_INPUT:
             return 'chat_input';
-        case l.Hn.MEMBER_USER:
+        case s.Hn.MEMBER_USER:
             return 'member_user';
-        case l.Hn.REACTION:
+        case s.Hn.REACTION:
             return 'reaction';
-        case l.Hn.CALL_TILE:
+        case s.Hn.CALL_TILE:
             return 'call_tile';
     }
 }
-function p(e, n) {
+function d(e, t) {
     return Object.entries(e)
         .filter((e) => {
-            let [n, r] = e;
-            return r;
+            let [t, n] = e;
+            return n;
         })
         .map((e) => {
-            let [r] = e;
-            return n(Number.parseInt(r));
+            let [n] = e;
+            return t(Number.parseInt(n));
         });
 }
-let h = o().throttle((e) => {
-    let { enabled: n, combosEnabled: r, combosRequiredCount: i, screenshakeEnabled: a, shakeIntensity: o, screenshakeEnabledLocations: l, confettiEnabled: c, confettiSize: h, confettiCount: _, confettiEnabledLocations: m } = e;
-    s.default.track(u.rMx.POGGERMODE_SETTINGS_UPDATED, {
-        enabled: n,
-        combos_enabled: r,
+let f = r().throttle((e) => {
+    let { enabled: t, combosEnabled: n, combosRequiredCount: i, screenshakeEnabled: r, shakeIntensity: s, screenshakeEnabledLocations: l, confettiEnabled: f, confettiSize: _, confettiCount: p, confettiEnabledLocations: h } = e;
+    a.default.track(o.rMx.POGGERMODE_SETTINGS_UPDATED, {
+        enabled: t,
+        combos_enabled: n,
         combos_required_count: i,
-        screenshake_enabled: a,
-        shake_intensity: o,
-        screenshake_enabled_locations: p(l, d),
-        confetti_enabled: c,
-        confetti_size: h,
-        confetti_count: _,
-        confetti_enabled_locations: p(m, f)
+        screenshake_enabled: r,
+        shake_intensity: s,
+        screenshake_enabled_locations: d(l, u),
+        confetti_enabled: f,
+        confetti_size: _,
+        confetti_count: p,
+        confetti_enabled_locations: d(h, c)
     });
-}, c);
-n.Z = h;
+}, l);

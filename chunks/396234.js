@@ -1,97 +1,96 @@
-r.d(t, {
-    gi: function () {
-        return E;
-    },
-    yo: function () {
-        return i;
-    }
+a.d(e, {
+    gi: () => i,
+    yo: () => c
 });
-var a = r(370336),
-    n = r(394798),
-    _ = r(305625),
-    o = r(696486);
-function E(e, t) {
-    let { fingerprint: r, span: E, breadcrumbs: i, sdkProcessingMetadata: c } = t;
-    (function (e, t) {
-        let { extra: r, tags: n, user: _, contexts: o, level: E, transactionName: i } = t,
-            c = (0, a.Jr)(r);
-        c &&
-            Object.keys(c).length &&
-            (e.extra = {
-                ...c,
-                ...e.extra
-            });
-        let s = (0, a.Jr)(n);
+var r = a(370336),
+    n = a(394798),
+    o = a(305625),
+    _ = a(696486);
+function i(t, e) {
+    var a, i, c, s;
+    let { fingerprint: E, span: l, breadcrumbs: u, sdkProcessingMetadata: I } = e;
+    (function (t, e) {
+        let { extra: a, tags: n, user: o, contexts: _, level: i, transactionName: c } = e,
+            s = (0, r.Jr)(a);
         s &&
             Object.keys(s).length &&
-            (e.tags = {
+            (t.extra = {
                 ...s,
-                ...e.tags
+                ...t.extra
             });
-        let l = (0, a.Jr)(_);
+        let E = (0, r.Jr)(n);
+        E &&
+            Object.keys(E).length &&
+            (t.tags = {
+                ...E,
+                ...t.tags
+            });
+        let l = (0, r.Jr)(o);
         l &&
             Object.keys(l).length &&
-            (e.user = {
+            (t.user = {
                 ...l,
-                ...e.user
+                ...t.user
             });
-        let I = (0, a.Jr)(o);
-        I &&
-            Object.keys(I).length &&
-            (e.contexts = {
-                ...I,
-                ...e.contexts
+        let u = (0, r.Jr)(_);
+        u &&
+            Object.keys(u).length &&
+            (t.contexts = {
+                ...u,
+                ...t.contexts
             }),
-            E && (e.level = E),
-            i && 'transaction' !== e.type && (e.transaction = i);
-    })(e, t),
-        E &&
-            (function (e, t) {
-                (e.contexts = {
-                    trace: (0, o.wy)(t),
-                    ...e.contexts
+            i && (t.level = i),
+            c && 'transaction' !== t.type && (t.transaction = c);
+    })(t, e),
+        l &&
+            (function (t, e) {
+                (t.contexts = {
+                    trace: (0, _.wy)(e),
+                    ...t.contexts
                 }),
-                    (e.sdkProcessingMetadata = {
-                        dynamicSamplingContext: (0, _.jC)(t),
-                        ...e.sdkProcessingMetadata
+                    (t.sdkProcessingMetadata = {
+                        dynamicSamplingContext: (0, o.jC)(e),
+                        ...t.sdkProcessingMetadata
                     });
-                let r = (0, o.Gx)(t),
-                    a = (0, o.XU)(r).description;
-                a && !e.transaction && 'transaction' === e.type && (e.transaction = a);
-            })(e, E),
-        (function (e, t) {
-            (e.fingerprint = e.fingerprint ? (0, n.lE)(e.fingerprint) : []), t && (e.fingerprint = e.fingerprint.concat(t)), e.fingerprint && !e.fingerprint.length && delete e.fingerprint;
-        })(e, r),
-        (function (e, t) {
-            let r = [...(e.breadcrumbs || []), ...t];
-            e.breadcrumbs = r.length ? r : void 0;
-        })(e, i),
-        (function (e, t) {
-            e.sdkProcessingMetadata = {
-                ...e.sdkProcessingMetadata,
-                ...t
-            };
-        })(e, c);
-}
-function i(e, t) {
-    let { extra: r, tags: a, user: n, contexts: _, level: o, sdkProcessingMetadata: E, breadcrumbs: i, fingerprint: s, eventProcessors: l, attachments: I, propagationContext: u, transactionName: R, span: A } = t;
-    c(e, 'extra', r),
-        c(e, 'tags', a),
-        c(e, 'user', n),
-        c(e, 'contexts', _),
-        c(e, 'sdkProcessingMetadata', E),
-        o && (e.level = o),
-        R && (e.transactionName = R),
-        A && (e.span = A),
-        i.length && (e.breadcrumbs = [...e.breadcrumbs, ...i]),
-        s.length && (e.fingerprint = [...e.fingerprint, ...s]),
-        l.length && (e.eventProcessors = [...e.eventProcessors, ...l]),
-        I.length && (e.attachments = [...e.attachments, ...I]),
-        (e.propagationContext = {
-            ...e.propagationContext,
-            ...u
+                let a = (0, _.Gx)(e),
+                    r = (0, _.XU)(a).description;
+                r && !t.transaction && 'transaction' === t.type && (t.transaction = r);
+            })(t, l),
+        (a = t),
+        (i = E),
+        (a.fingerprint = a.fingerprint ? (0, n.lE)(a.fingerprint) : []),
+        i && (a.fingerprint = a.fingerprint.concat(i)),
+        a.fingerprint && !a.fingerprint.length && delete a.fingerprint,
+        (function (t, e) {
+            let a = [...(t.breadcrumbs || []), ...e];
+            t.breadcrumbs = a.length ? a : void 0;
+        })(t, u),
+        (c = t),
+        (s = I),
+        (c.sdkProcessingMetadata = {
+            ...c.sdkProcessingMetadata,
+            ...s
         });
 }
-function c(e, t, r) {
-    if (r && Object.keys(r).length) for (let a in ((e[t] = { ...e[t] }), r)) Object.prototype.hasOwnProperty.call(r, a) && (e[t][a] = r[a]);
+function c(t, e) {
+    let { extra: a, tags: r, user: n, contexts: o, level: _, sdkProcessingMetadata: i, breadcrumbs: c, fingerprint: E, eventProcessors: l, attachments: u, propagationContext: I, transactionName: R, span: d } = e;
+    s(t, 'extra', a),
+        s(t, 'tags', r),
+        s(t, 'user', n),
+        s(t, 'contexts', o),
+        s(t, 'sdkProcessingMetadata', i),
+        _ && (t.level = _),
+        R && (t.transactionName = R),
+        d && (t.span = d),
+        c.length && (t.breadcrumbs = [...t.breadcrumbs, ...c]),
+        E.length && (t.fingerprint = [...t.fingerprint, ...E]),
+        l.length && (t.eventProcessors = [...t.eventProcessors, ...l]),
+        u.length && (t.attachments = [...t.attachments, ...u]),
+        (t.propagationContext = {
+            ...t.propagationContext,
+            ...I
+        });
+}
+function s(t, e, a) {
+    if (a && Object.keys(a).length) for (let r in ((t[e] = { ...t[e] }), a)) Object.prototype.hasOwnProperty.call(a, r) && (t[e][r] = a[r]);
 }

@@ -1,32 +1,27 @@
-r.d(n, {
-    G: function () {
-        return i;
-    },
-    Z: function () {
-        return u;
-    }
+n.d(t, {
+    G: () => o,
+    Z: () => l
 });
-var i,
-    a = r(47770),
-    o = r(68721),
-    s = r(591218);
-function l(e, n, r) {
+var i = n(47770),
+    r = n(68721),
+    a = n(591218);
+function s(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-!(function (e) {
-    (e.Stream = 'stream'), (e.Video = 'video'), (e.Mute = 'mute'), (e.VoiceActivity = 'voiceactivity'), (e.DesktopSourceEnd = 'desktopsourceend'), (e.Speaking = 'speaking'), (e.AudioPermission = 'audio-permission'), (e.VideoPermission = 'video-permission'), (e.AddVideoTrack = 'add-video-track');
-})(i || (i = {}));
-class u extends a.Z {
+var o = (function (e) {
+    return (e.Stream = 'stream'), (e.Video = 'video'), (e.Mute = 'mute'), (e.VoiceActivity = 'voiceactivity'), (e.DesktopSourceEnd = 'desktopsourceend'), (e.Speaking = 'speaking'), (e.AudioPermission = 'audio-permission'), (e.VideoPermission = 'video-permission'), (e.AddVideoTrack = 'add-video-track'), e;
+})({});
+class l extends i.Z {
     destroy() {
         this.removeAllListeners(), this.destroyStreams();
     }
@@ -50,8 +45,8 @@ class u extends a.Z {
     enableAudioInput() {
         this.audio.enable();
     }
-    setAudioMode(e, n) {
-        this.audio.setMode(e, n);
+    setAudioMode(e, t) {
+        this.audio.setMode(e, t);
     }
     setMute(e) {
         (this.audio.mute = e), this.emit('mute', e);
@@ -91,31 +86,31 @@ class u extends a.Z {
     }
     constructor(e) {
         super(),
-            l(this, 'audio', void 0),
-            l(this, 'video', new s.Z()),
-            l(this, 'desktop', null),
-            l(this, 'stream', void 0),
-            l(this, 'mergeStreams', () => {
-                var e, n, r;
+            s(this, 'audio', void 0),
+            s(this, 'video', new a.Z()),
+            s(this, 'desktop', null),
+            s(this, 'stream', void 0),
+            s(this, 'mergeStreams', () => {
+                var e, t, n;
                 let i = new MediaStream();
-                return null != this.desktop ? (null === (e = this.desktop.stream) || void 0 === e || e.getTracks().forEach((e) => i.addTrack(e)), this.desktop.refreshSpeaking()) : (null === (n = this.audio.stream) || void 0 === n || n.getAudioTracks().forEach((e) => i.addTrack(e)), null === (r = this.video.stream) || void 0 === r || r.getVideoTracks().forEach((e) => i.addTrack(e))), (this.stream = i), this.emit('stream', i), this.emit('video', this.getVideoStreamId()), i;
+                return null != this.desktop ? (null === (e = this.desktop.stream) || void 0 === e || e.getTracks().forEach((e) => i.addTrack(e)), this.desktop.refreshSpeaking()) : (null === (t = this.audio.stream) || void 0 === t || t.getAudioTracks().forEach((e) => i.addTrack(e)), null === (n = this.video.stream) || void 0 === n || n.getVideoTracks().forEach((e) => i.addTrack(e))), (this.stream = i), this.emit('stream', i), this.emit('video', this.getVideoStreamId()), i;
             }),
-            l(this, 'handleVoiceActivity', (e) => {
+            s(this, 'handleVoiceActivity', (e) => {
                 this.emit('voiceactivity', e);
             }),
-            l(this, 'handleDesktopSourceEnd', () => {
+            s(this, 'handleDesktopSourceEnd', () => {
                 this.emit('desktopsourceend');
             }),
-            l(this, 'handleSpeaking', (e) => {
+            s(this, 'handleSpeaking', (e) => {
                 this.emit('speaking', e);
             }),
-            l(this, 'handleAudioPermission', (e) => {
+            s(this, 'handleAudioPermission', (e) => {
                 this.emit('audio-permission', e);
             }),
-            l(this, 'handleVideoPermission', (e) => {
+            s(this, 'handleVideoPermission', (e) => {
                 this.emit('video-permission', e);
             }),
-            (this.audio = new o.Z(e)),
+            (this.audio = new r.Z(e)),
             this.audio.addListener('voiceactivity', this.handleVoiceActivity),
             this.audio.addListener('speaking', this.handleSpeaking),
             this.audio.addListener('stream', this.mergeStreams),

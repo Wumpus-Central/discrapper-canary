@@ -1,109 +1,105 @@
-n.d(t, {
-    Z: function () {
-        return g;
-    }
-});
+n.d(t, { Z: () => A });
 var i = n(200651);
 n(192379);
-var r = n(120356),
-    l = n.n(r),
+var l = n(120356),
+    r = n.n(l),
     a = n(481060),
-    o = n(922611),
-    s = n(592125),
+    s = n(922611),
+    o = n(592125),
     c = n(944486),
     u = n(471253),
-    d = n(623633),
-    m = n(930180),
-    h = n(388032),
-    f = n(360686);
-function p(e) {
+    E = n(623633),
+    d = n(930180),
+    _ = n(388032),
+    I = n(360686);
+function T(e) {
     let t = c.Z.getVoiceChannelId();
     if (null == t) return;
-    let n = s.Z.getChannel(t);
-    if (null != n) (0, u.RK)(n, e);
+    let n = o.Z.getChannel(t);
+    null != n && (0, u.RK)(n, e);
 }
-function _(e) {
+function N(e) {
     var t, n;
-    let { channelId: r } = e,
-        s = null !== (t = (0, m._d)(r)) && void 0 !== t ? t : 0,
-        c = null !== (n = (0, m.K3)(r)) && void 0 !== n ? n : 0,
-        u = (0, o.Do)({ location: 'invited_to_speak_header' });
-    return s > 0 && c > 0
+    let { channelId: l } = e,
+        o = null !== (t = (0, d._d)(l)) && void 0 !== t ? t : 0,
+        c = null !== (n = (0, d.K3)(l)) && void 0 !== n ? n : 0,
+        u = (0, s.Do)({ location: 'invited_to_speak_header' });
+    return o > 0 && c > 0
         ? (0, i.jsx)('div', {
-              className: f.blocked,
+              className: I.blocked,
               children: (0, i.jsx)('div', {
-                  className: l()(f.blockedText, f.noIcon),
-                  children: h.intl.string(h.t.xlJRfn)
+                  className: r()(I.blockedText, I.noIcon),
+                  children: _.intl.string(_.t.xlJRfn)
               })
           })
-        : u && s > 0
+        : u && o > 0
           ? (0, i.jsx)('div', {
-                className: f.blocked,
+                className: I.blocked,
                 children: (0, i.jsx)('div', {
-                    className: l()(f.blockedText, f.noIcon),
-                    children: h.intl.string(h.t.WYad9f)
+                    className: r()(I.blockedText, I.noIcon),
+                    children: _.intl.string(_.t.WYad9f)
                 })
             })
-          : s > 0
+          : o > 0
             ? (0, i.jsxs)('div', {
-                  className: f.blocked,
+                  className: I.blocked,
                   children: [
                       u
                           ? null
-                          : (0, i.jsx)(a.DenyIcon, {
+                          : (0, i.jsx)(a.t6m, {
                                 size: 'xxs',
                                 color: 'currentColor',
-                                className: f.blockedIcon
+                                className: I.blockedIcon
                             }),
                       (0, i.jsx)('div', {
-                          className: l()(f.blockedText, { [f.noIcon]: u }),
-                          children: h.intl.format(h.t.ATpigY, { number: s })
+                          className: r()(I.blockedText, { [I.noIcon]: u }),
+                          children: _.intl.format(_.t.ATpigY, { number: o })
                       })
                   ]
               })
             : c > 0
               ? (0, i.jsx)('div', {
-                    className: f.blocked,
+                    className: I.blocked,
                     children: (0, i.jsx)('div', {
-                        className: l()(f.blockedText, f.noIcon),
-                        children: h.intl.string(h.t.eHq2OD)
+                        className: r()(I.blockedText, I.noIcon),
+                        children: _.intl.string(_.t.eHq2OD)
                     })
                 })
               : null;
 }
-function g() {
-    let e = (0, d.Z)();
+function A() {
+    let e = (0, E.Z)();
     return null == e
         ? null
-        : (0, i.jsxs)(a.Notice, {
-              className: f.container,
-              color: a.NoticeColors.DEFAULT,
+        : (0, i.jsxs)(a.qXd, {
+              className: I.container,
+              color: a.DM8.DEFAULT,
               children: [
-                  (0, i.jsx)('div', { children: h.intl.string(h.t.Ul1RJS) }),
-                  (0, i.jsx)(_, { channelId: e.id }),
-                  (0, i.jsx)(a.Button, {
-                      className: f.acceptButton,
-                      size: a.Button.Sizes.MIN,
-                      color: a.Button.Colors.WHITE,
-                      onClick: () => p(!1),
+                  (0, i.jsx)('div', { children: _.intl.string(_.t.Ul1RJS) }),
+                  (0, i.jsx)(N, { channelId: e.id }),
+                  (0, i.jsx)(a.zxk, {
+                      className: I.acceptButton,
+                      size: a.zxk.Sizes.MIN,
+                      color: a.zxk.Colors.WHITE,
+                      onClick: () => T(!1),
                       children: (0, i.jsx)(a.Text, {
-                          className: f.acceptText,
+                          className: I.acceptText,
                           variant: 'text-xs/normal',
                           color: 'none',
-                          children: h.intl.string(h.t.MpO0p6)
+                          children: _.intl.string(_.t.MpO0p6)
                       })
                   }),
-                  (0, i.jsx)(a.Button, {
-                      className: f.declineButton,
-                      look: a.Button.Looks.OUTLINED,
-                      size: a.Button.Sizes.MIN,
-                      color: a.Button.Colors.WHITE,
-                      onClick: () => p(!0),
+                  (0, i.jsx)(a.zxk, {
+                      className: I.declineButton,
+                      look: a.zxk.Looks.OUTLINED,
+                      size: a.zxk.Sizes.MIN,
+                      color: a.zxk.Colors.WHITE,
+                      onClick: () => T(!0),
                       children: (0, i.jsx)(a.Text, {
-                          className: f.declineText,
+                          className: I.declineText,
                           variant: 'text-xs/normal',
                           color: 'none',
-                          children: h.intl.string(h.t['1YDv7e'])
+                          children: _.intl.string(_.t['1YDv7e'])
                       })
                   })
               ]

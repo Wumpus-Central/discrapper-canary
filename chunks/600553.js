@@ -1,10 +1,6 @@
 n.d(t, {
-    Dj: function () {
-        return l;
-    },
-    i1: function () {
-        return r;
-    }
+    Dj: () => l,
+    i1: () => r
 });
 let i = (0, n(987170).Z)({
     kind: 'guild',

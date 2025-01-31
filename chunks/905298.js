@@ -1,9 +1,10 @@
-e.exports = {
-    layerContainer: 'layerContainer_cd0de5',
-    clickTrapContainer: 'clickTrapContainer_cd0de5',
-    trapClicks: 'trapClicks_cd0de5',
-    layer: 'layer_cd0de5',
-    emptyError: 'emptyError_cd0de5',
-    layerHidden: 'layerHidden_cd0de5',
-    disabledPointerEvents: 'disabledPointerEvents_cd0de5'
+var i = {
+    layerContainer: 'layerContainer_da8173',
+    clickTrapContainer: 'clickTrapContainer_da8173',
+    trapClicks: 'trapClicks_da8173',
+    layer: 'layer_da8173',
+    emptyError: 'emptyError_da8173',
+    layerHidden: 'layerHidden_da8173',
+    disabledPointerEvents: 'disabledPointerEvents_da8173'
 };
+e.exports = i;

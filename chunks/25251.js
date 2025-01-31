@@ -1,91 +1,92 @@
-let i, a;
-var o,
-    s = r(392711);
-var l = r(442837),
-    u = r(570140);
-function c(e, n, r) {
+let i, r;
+n.d(t, { Z: () => R });
+var a,
+    s = n(392711),
+    o = n(442837),
+    l = n(570140);
+function u(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let d = [],
-    f = [],
-    p = !1;
-let h = d,
-    _ = {},
-    m = null;
-let g = 0,
-    E = 300000,
-    v = 60000,
-    y = 3600000,
-    b = (e) => {
-        h = (0, s.cloneDeep)(e);
-        let n = {};
-        h.forEach((e) => {
-            if (((n[e.id] = e), f.length > 0)) {
-                var r;
-                n[e.id].config.effects = null !== (r = (0, s.sample)(f)) && void 0 !== r ? r : [];
+let c = [],
+    d = [],
+    f = !1,
+    _ = c,
+    p = {},
+    h = null,
+    m = 0,
+    g = 300000,
+    E = 60000,
+    v = 3600000,
+    y = (e) => {
+        _ = (0, s.cloneDeep)(e);
+        let t = {};
+        _.forEach((e) => {
+            if (((t[e.id] = e), d.length > 0)) {
+                var n;
+                t[e.id].config.effects = null !== (n = (0, s.sample)(d)) && void 0 !== n ? n : [];
             }
         }),
-            (_ = n);
+            (p = t);
     },
     I = () => {
-        p = !0;
+        f = !0;
+    },
+    b = (e) => {
+        let { profileEffects: t } = e;
+        (i = void 0), (r = Date.now() + g), (m = 0), y(0 === t.length ? c : t), (f = !1);
     },
     T = (e) => {
-        let { profileEffects: n } = e;
-        (i = void 0), (a = Date.now() + E), (g = 0), b(0 === n.length ? d : n), (p = !1);
+        let { error: t } = e;
+        (i = t), (r = Date.now() + Math.min(E * 2 ** m, v)), ++m, y(c), (f = !1);
     },
     S = (e) => {
-        let { error: n } = e;
-        (i = n), (a = Date.now() + Math.min(v * 2 ** g, y)), ++g, b(d), (p = !1);
+        let { id: t } = e;
+        h = t;
     },
-    A = (e) => {
-        let { id: n } = e;
-        m = n;
-    },
-    C = () => {
-        b(d), (m = null), (a = void 0), (p = !1);
+    A = () => {
+        y(c), (h = null), (r = void 0), (f = !1);
     },
     N = (e) => {
-        C();
+        A();
     };
-class R extends (o = l.ZP.Store) {
+class C extends (a = o.ZP.Store) {
     get isFetching() {
-        return p;
+        return f;
     }
     get fetchError() {
         return i;
     }
     get profileEffects() {
-        return h;
+        return _;
     }
     get tryItOutId() {
-        return m;
+        return h;
     }
     canFetch() {
-        return null == a || Date.now() >= a;
+        return null == r || Date.now() >= r;
     }
     hasFetched() {
-        return null != a && null == i;
+        return null != r && null == i;
     }
     getProfileEffectById(e) {
-        return null != e ? _[e] : void 0;
+        return null != e ? p[e] : void 0;
     }
 }
-c(R, 'displayName', 'ProfileEffectStore'),
-    (n.Z = new R(u.Z, {
-        USER_PROFILE_EFFECTS_FETCH: I,
-        USER_PROFILE_EFFECTS_FETCH_SUCCESS: T,
-        USER_PROFILE_EFFECTS_FETCH_FAILURE: S,
-        PROFILE_EFFECTS_SET_TRY_IT_OUT: A,
-        LOGOUT: N
-    }));
+u(C, 'displayName', 'ProfileEffectStore');
+let R = new C(l.Z, {
+    USER_PROFILE_EFFECTS_FETCH: I,
+    USER_PROFILE_EFFECTS_FETCH_SUCCESS: b,
+    USER_PROFILE_EFFECTS_FETCH_FAILURE: T,
+    PROFILE_EFFECTS_SET_TRY_IT_OUT: S,
+    LOGOUT: N
+});

@@ -1,32 +1,26 @@
-r.d(n, {
-    G: function () {
-        return s;
-    }
-});
-var i = r(47120);
-var a = r(200651);
-r(192379);
-var o = r(390507);
-let s = function (e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    return function (r) {
-        var i, s, l, u, c;
-        let { color: d, ...f } = r,
-            p = 'currentColor';
-        null != d && (p = 'string' != typeof d && 'css' in d ? d.css : d);
-        let h = null !== (i = f.size) && void 0 !== i ? i : 'md',
-            _ = (0, o.m)(h),
-            m = null !== (l = null !== (s = null == _ ? void 0 : _.width) && void 0 !== s ? s : f.width) && void 0 !== l ? l : 24,
-            g = {
-                color: p,
-                width: m,
-                height: null !== (c = null !== (u = null == _ ? void 0 : _.height) && void 0 !== u ? u : f.height) && void 0 !== c ? c : 24,
-                foreground: f.colorClass
+n.d(t, { G: () => a }), n(47120);
+var i = n(200651);
+n(192379);
+var r = n(390507);
+let a = function (e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    return function (n) {
+        var a, s, o, l, u;
+        let { color: c, ...d } = n,
+            f = 'currentColor';
+        null != c && (f = 'string' != typeof c && 'css' in c ? c.css : c);
+        let _ = null !== (a = d.size) && void 0 !== a ? a : 'md',
+            p = (0, r.m)(_),
+            h = {
+                color: f,
+                width: null !== (o = null !== (s = null == p ? void 0 : p.width) && void 0 !== s ? s : d.width) && void 0 !== o ? o : 24,
+                height: null !== (u = null !== (l = null == p ? void 0 : p.height) && void 0 !== l ? l : d.height) && void 0 !== u ? u : 24,
+                foreground: d.colorClass
             };
-        for (let [e, r] of Object.entries(n)) null != f[e] && (g[r] = f[e]);
-        return (0, a.jsx)(e, {
-            ...f,
-            ...g
+        for (let [e, n] of Object.entries(t)) null != d[e] && (h[n] = d[e]);
+        return (0, i.jsx)(e, {
+            ...d,
+            ...h
         });
     };
 };

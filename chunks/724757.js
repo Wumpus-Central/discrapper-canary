@@ -1,14 +1,10 @@
-n.d(t, {
-    Z: function () {
-        return s;
-    }
-});
+n.d(t, { Z: () => r });
 var l = n(192379),
     i = n(924826),
     a = n(442837),
-    r = n(607070);
-function s(e, t, n) {
-    let s = (0, a.e7)([r.Z], () => r.Z.keyboardModeEnabled),
+    s = n(607070);
+function r(e, t, n) {
+    let r = (0, a.e7)([s.Z], () => s.Z.keyboardModeEnabled),
         o = l.useCallback(
             (e) => {
                 let n = document.querySelector(e),
@@ -49,7 +45,7 @@ function s(e, t, n) {
         );
     return (0, i.ZP)({
         id: e,
-        isEnabled: s,
+        isEnabled: r,
         setFocus: o,
         scrollToStart: c,
         scrollToEnd: u,

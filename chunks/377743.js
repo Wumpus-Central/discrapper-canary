@@ -1,12 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return p;
-    }
-});
+n.d(t, { Z: () => p });
 var i = n(200651);
 n(192379);
-var r = n(100527),
-    l = n(906732),
+var l = n(100527),
+    r = n(906732),
     a = n(324262),
     s = n(26323),
     o = n(267642),
@@ -18,7 +14,7 @@ var r = n(100527),
 function p(e) {
     let { guild: t, markAsDismissed: n } = e,
         p = (0, o.KK)(t, c.Eu4.TIER_2),
-        { analyticsLocations: g } = (0, l.ZP)(r.Z.GUILD_BANNER_NOTICE);
+        { analyticsLocations: g } = (0, r.ZP)(l.Z.GUILD_BANNER_NOTICE);
     return (0, i.jsx)(a.Z, {
         guild: t,
         onDismissed: () => n(d.L.UNKNOWN),

@@ -1,7 +1,8 @@
+r.d(t, { Z: () => c });
 var a = r(621028),
     n = r(667929),
-    o = r(395043);
-function s(e, t) {
+    s = r(395043);
+function o(e, t) {
     var r = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var a = Object.getOwnPropertySymbols(e);
@@ -17,36 +18,35 @@ function i(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {};
         t % 2
-            ? s(Object(r), !0).forEach(function (t) {
+            ? o(Object(r), !0).forEach(function (t) {
                   (0, a.Z)(e, t, r[t]);
               })
             : Object.getOwnPropertyDescriptors
               ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : s(Object(r)).forEach(function (t) {
+              : o(Object(r)).forEach(function (t) {
                     Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t));
                 });
     }
     return e;
 }
-var c = (0, n.t7)(
+let c = (0, n.t7)(
     function (e) {
-        var t,
-            r = {
-                BACKGROUND_COLOR: (t = e).base00,
-                TEXT_COLOR: t.base07,
-                STRING_COLOR: t.base0B,
-                DATE_COLOR: t.base0B,
-                NUMBER_COLOR: t.base09,
-                BOOLEAN_COLOR: t.base09,
-                NULL_COLOR: t.base08,
-                UNDEFINED_COLOR: t.base08,
-                FUNCTION_COLOR: t.base08,
-                SYMBOL_COLOR: t.base08,
-                LABEL_COLOR: t.base0D,
-                ARROW_COLOR: t.base0D,
-                ITEM_STRING_COLOR: t.base0B,
-                ITEM_STRING_EXPANDED_COLOR: t.base03
-            };
+        var t = {
+            BACKGROUND_COLOR: e.base00,
+            TEXT_COLOR: e.base07,
+            STRING_COLOR: e.base0B,
+            DATE_COLOR: e.base0B,
+            NUMBER_COLOR: e.base09,
+            BOOLEAN_COLOR: e.base09,
+            NULL_COLOR: e.base08,
+            UNDEFINED_COLOR: e.base08,
+            FUNCTION_COLOR: e.base08,
+            SYMBOL_COLOR: e.base08,
+            LABEL_COLOR: e.base0D,
+            ARROW_COLOR: e.base0D,
+            ITEM_STRING_COLOR: e.base0B,
+            ITEM_STRING_EXPANDED_COLOR: e.base03
+        };
         return {
             tree: {
                 border: 0,
@@ -58,7 +58,7 @@ var c = (0, n.t7)(
                 listStyle: 'none',
                 MozUserSelect: 'none',
                 WebkitUserSelect: 'none',
-                backgroundColor: r.BACKGROUND_COLOR
+                backgroundColor: t.BACKGROUND_COLOR
             },
             value: function (e, t, r) {
                 return {
@@ -81,36 +81,35 @@ var c = (0, n.t7)(
             },
             label: {
                 display: 'inline-block',
-                color: r.LABEL_COLOR
+                color: t.LABEL_COLOR
             },
             valueLabel: { margin: '0 0.5em 0 0' },
-            valueText: function (e, t) {
-                var a;
+            valueText: function (e, r) {
                 return {
                     style: i(
                         i({}, e.style),
                         {},
                         {
                             color: {
-                                String: (a = r).STRING_COLOR,
-                                Date: a.DATE_COLOR,
-                                Number: a.NUMBER_COLOR,
-                                Boolean: a.BOOLEAN_COLOR,
-                                Null: a.NULL_COLOR,
-                                Undefined: a.UNDEFINED_COLOR,
-                                Function: a.FUNCTION_COLOR,
-                                Symbol: a.SYMBOL_COLOR
-                            }[t]
+                                String: t.STRING_COLOR,
+                                Date: t.DATE_COLOR,
+                                Number: t.NUMBER_COLOR,
+                                Boolean: t.BOOLEAN_COLOR,
+                                Null: t.NULL_COLOR,
+                                Undefined: t.UNDEFINED_COLOR,
+                                Function: t.FUNCTION_COLOR,
+                                Symbol: t.SYMBOL_COLOR
+                            }[r]
                         }
                     )
                 };
             },
-            itemRange: function (e, t) {
+            itemRange: function (e, r) {
                 return {
                     style: {
-                        paddingTop: t ? 0 : '0.25em',
+                        paddingTop: r ? 0 : '0.25em',
                         cursor: 'pointer',
-                        color: r.LABEL_COLOR
+                        color: t.LABEL_COLOR
                     }
                 };
             },
@@ -151,7 +150,7 @@ var c = (0, n.t7)(
                     )
                 };
             },
-            arrowSign: { color: r.ARROW_COLOR },
+            arrowSign: { color: t.ARROW_COLOR },
             arrowSignInner: {
                 position: 'absolute',
                 top: 0,
@@ -190,7 +189,7 @@ var c = (0, n.t7)(
                     )
                 };
             },
-            nestedNodeItemString: function (e, t, a, n) {
+            nestedNodeItemString: function (e, r, a, n) {
                 return {
                     style: i(
                         i({}, e.style),
@@ -198,7 +197,7 @@ var c = (0, n.t7)(
                         {
                             paddingLeft: '0.5em',
                             cursor: 'default',
-                            color: n ? r.ITEM_STRING_EXPANDED_COLOR : r.ITEM_STRING_COLOR
+                            color: n ? t.ITEM_STRING_EXPANDED_COLOR : t.ITEM_STRING_COLOR
                         }
                     )
                 };
@@ -228,6 +227,5 @@ var c = (0, n.t7)(
             }
         };
     },
-    { defaultBase16: o.Z }
+    { defaultBase16: s.Z }
 );
-t.Z = c;

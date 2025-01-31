@@ -1,11 +1,6 @@
-r.r(n),
-    r.d(n, {
-        default: function () {
-            return o;
-        }
-    });
-var i = r(528734),
-    a = r(951516);
-function o(e) {
-    return (0, a.Z)(1, arguments), (0, i.default)(e).getSeconds();
+n.r(t), n.d(t, { default: () => a });
+var i = n(528734),
+    r = n(951516);
+function a(e) {
+    return (0, r.Z)(1, arguments), (0, i.default)(e).getSeconds();
 }

@@ -1,42 +1,34 @@
-r.d(n, {
-    EY: function () {
-        return _;
-    },
-    Ow: function () {
-        return p;
-    },
-    no: function () {
-        return h;
-    },
-    ux: function () {
-        return m;
-    }
-});
-var i = r(47120);
-var a = r(724458);
-var o = r(653041);
-var s = r(789020);
-var l = r(442837),
-    u = r(271383),
-    c = r(630388),
-    d = r(372897);
-let f = [d.q.AUTOMOD_QUARANTINED_BIO, d.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME, d.q.AUTOMOD_QUARANTINED_CLAN_TAG];
-function p(e) {
-    return null == e ? new Set() : new Set(f.reduce((n, r) => ((0, c.yE)(null != e ? e : 0, r) && n.push(r), n), []));
+n.d(t, {
+    EY: () => c,
+    Ow: () => l,
+    no: () => u,
+    ux: () => d
+}),
+    n(47120),
+    n(724458),
+    n(653041),
+    n(789020);
+var i = n(442837),
+    r = n(271383),
+    a = n(630388),
+    s = n(372897);
+let o = [s.q.AUTOMOD_QUARANTINED_BIO, s.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME, s.q.AUTOMOD_QUARANTINED_CLAN_TAG];
+function l(e) {
+    return null == e ? new Set() : new Set(o.reduce((t, n) => ((0, a.yE)(null != e ? e : 0, n) && t.push(n), t), []));
 }
-function h(e) {
-    return null == e ? new Set() : p(e.flags);
+function u(e) {
+    return null == e ? new Set() : l(e.flags);
 }
-function _(e) {
+function c(e) {
     return (
         null != e &&
         null != e.flags &&
-        f.some((n) => {
-            var r;
-            return (0, c.yE)(null !== (r = e.flags) && void 0 !== r ? r : 0, n);
+        o.some((t) => {
+            var n;
+            return (0, a.yE)(null !== (n = e.flags) && void 0 !== n ? n : 0, t);
         })
     );
 }
-function m(e) {
-    return (0, l.e7)([u.ZP], () => null != e && _(u.ZP.getSelfMember(e)), [e]);
+function d(e) {
+    return (0, i.e7)([r.ZP], () => null != e && c(r.ZP.getSelfMember(e)), [e]);
 }

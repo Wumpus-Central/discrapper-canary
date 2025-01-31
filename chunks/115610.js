@@ -1,40 +1,35 @@
-n.d(t, {
-    O: function () {
-        return g;
-    }
-}),
-    n(536091);
+n.d(t, { O: () => f }), n(536091);
 var i = n(904245),
-    r = n(339085),
-    l = n(957730),
-    a = n(285651),
-    o = n(268350),
-    s = n(926491),
+    l = n(339085),
+    a = n(957730),
+    r = n(285651),
+    s = n(268350),
+    o = n(926491),
     c = n(373228),
-    u = n(430824),
-    d = n(594174),
+    d = n(430824),
+    u = n(594174),
     m = n(176354),
     h = n(709054),
-    f = n(981631),
+    _ = n(981631),
     p = n(185923);
-function _(e) {
-    let t = u.Z.getGuild(e);
-    return null != t && (t.nsfwLevel === f.V_K.DEFAULT || t.nsfwLevel === f.V_K.SAFE);
+function g(e) {
+    let t = d.Z.getGuild(e);
+    return null != t && (t.nsfwLevel === _.V_K.DEFAULT || t.nsfwLevel === _.V_K.SAFE);
 }
-async function g(e, t) {
-    var n, f, g;
-    let E = t.getGuildId();
-    if (null == E || null == u.Z.getGuild(E)) return;
-    let C = d.default.getCurrentUser();
-    if (null == C) return;
-    await (0, o.$p)();
-    let I = Array.from(s.Z.getAllStickersIterator()),
-        x = I.filter((e) => e.type === c.n0.GUILD)
-            .filter((e) => _(e.guild_id) && (0, a.kl)(e, C, t))
+async function f(e, t) {
+    var n, _, f;
+    let x = t.getGuildId();
+    if (null == x || null == d.Z.getGuild(x)) return;
+    let E = u.default.getCurrentUser();
+    if (null == E) return;
+    await (0, s.$p)();
+    let C = Array.from(o.Z.getAllStickersIterator()),
+        v = C.filter((e) => e.type === c.n0.GUILD)
+            .filter((e) => g(e.guild_id) && (0, r.kl)(e, E, t))
             .sort((e, t) => -h.default.compare(e.id, t.id));
-    if (x.length > 5) {
-        let r = [x[Math.floor(Math.pow(Math.random(), 2) * x.length)].id];
-        i.Z.sendStickers(t.id, r, '', {
+    if (v.length > 5) {
+        let l = [v[Math.floor(Math.pow(Math.random(), 2) * v.length)].id];
+        i.Z.sendStickers(t.id, l, '', {
             messageReference: {
                 guild_id: null !== (n = t.getGuildId()) && void 0 !== n ? n : void 0,
                 channel_id: t.id,
@@ -43,9 +38,9 @@ async function g(e, t) {
         });
         return;
     }
-    let N = u.Z.getGuildIds()
-        .filter(_)
-        .map((e) => r.ZP.getUsableGuildEmoji(e))
+    let I = d.Z.getGuildIds()
+        .filter(g)
+        .map((e) => l.ZP.getUsableGuildEmoji(e))
         .flat()
         .filter(
             (e) =>
@@ -53,27 +48,27 @@ async function g(e, t) {
                 m.ZP.getEmojiUnavailableReason({
                     emoji: e,
                     channel: t,
-                    guildId: E,
+                    guildId: x,
                     intention: p.Hz.CHAT
                 })
         )
         .sort((e, t) => -h.default.compare(e.id, t.id));
-    if (N.length > 10) {
-        let n = N[Math.floor(Math.pow(Math.random(), 2) * N.length)];
-        i.Z.sendMessage(t.id, l.ZP.parse(t, n.allNamesString), !1, {
+    if (I.length > 10) {
+        let n = I[Math.floor(Math.pow(Math.random(), 2) * I.length)];
+        i.Z.sendMessage(t.id, a.ZP.parse(t, n.allNamesString), !1, {
             messageReference: {
-                guild_id: null !== (f = t.getGuildId()) && void 0 !== f ? f : void 0,
+                guild_id: null !== (_ = t.getGuildId()) && void 0 !== _ ? _ : void 0,
                 channel_id: t.id,
                 message_id: e
             }
         });
         return;
     }
-    let v = I.filter((e) => e.type === c.n0.STANDARD),
-        T = [v[Math.floor(Math.random() * v.length)].id];
-    i.Z.sendStickers(t.id, T, '', {
+    let N = C.filter((e) => e.type === c.n0.STANDARD),
+        S = [N[Math.floor(Math.random() * N.length)].id];
+    i.Z.sendStickers(t.id, S, '', {
         messageReference: {
-            guild_id: null !== (g = t.getGuildId()) && void 0 !== g ? g : void 0,
+            guild_id: null !== (f = t.getGuildId()) && void 0 !== f ? f : void 0,
             channel_id: t.id,
             message_id: e
         }

@@ -1,306 +1,286 @@
-r.d(n, {
-    Go: function () {
-        return w;
+n.d(t, {
+    Go: () => O,
+    LZ: () => L,
+    Pq: () => b,
+    RJ: () => D,
+    Sd: () => M,
+    XW: () => w,
+    el: () => S,
+    fP: () => N,
+    fQ: () => A,
+    t$: () => T
+}),
+    n(653041),
+    n(47120),
+    n(733860);
+var i = n(192379),
+    r = n(442837),
+    a = n(357156),
+    s = n(695346),
+    o = n(516373),
+    l = n(430824),
+    u = n(914010),
+    c = n(771845),
+    d = n(594174),
+    f = n(267642),
+    _ = n(700785),
+    p = n(285651),
+    h = n(268350),
+    m = n(822179),
+    g = n(926491),
+    E = n(373228),
+    v = n(378233),
+    y = n(981631),
+    I = n(388032);
+let b = (e) => {
+        N();
+        let t = (0, r.e7)([g.Z], () => g.Z.hasLoadedStickerPacks);
+        i.useEffect(() => {
+            t && null == g.Z.getStickerPack(e) && (0, h.FQ)(e);
+        }, [e, t]);
     },
-    LZ: function () {
-        return k;
+    T = (e) => {
+        let t = s.Wp.useSetting();
+        return (0, v.WD)(t, e);
     },
-    Pq: function () {
-        return C;
-    },
-    RJ: function () {
-        return P;
-    },
-    Sd: function () {
-        return G;
-    },
-    XW: function () {
-        return B;
-    },
-    el: function () {
-        return R;
-    },
-    fP: function () {
-        return D;
-    },
-    fQ: function () {
-        return O;
-    },
-    t$: function () {
-        return N;
-    }
-});
-var i = r(653041);
-var a = r(47120);
-var o = r(733860);
-var s = r(192379),
-    l = r(442837),
-    u = r(357156),
-    c = r(695346),
-    d = r(516373),
-    f = r(430824),
-    p = r(914010),
-    h = r(771845),
-    _ = r(594174),
-    m = r(267642),
-    g = r(700785),
-    E = r(285651),
-    v = r(268350),
-    y = r(822179),
-    b = r(926491),
-    I = r(373228),
-    T = r(378233),
-    S = r(981631),
-    A = r(388032);
-let C = (e) => {
-        D();
-        let n = (0, l.e7)([b.Z], () => b.Z.hasLoadedStickerPacks);
-        s.useEffect(() => {
-            n && null == b.Z.getStickerPack(e) && (0, v.FQ)(e);
-        }, [e, n]);
-    },
-    N = (e) => {
-        let n = c.Wp.useSetting();
-        return (0, T.WD)(n, e);
-    },
-    R = (e) => {
-        let { collapsedStickersCategories: n, filteredStickers: r, listPaddingRight: i = 0, listWidth: a = 0, stickerNodeMargin: o = 0, stickerNodeWidth: l, stickersCategories: c } = e;
-        return s.useMemo(() => {
-            let e = Math.floor((a - i + o) / (l + o)),
-                s = Math.floor(Math.max(o, (a - i - l * e) / (e - 1))),
-                d = [],
-                h = [],
+    S = (e) => {
+        let { collapsedStickersCategories: t, filteredStickers: n, listPaddingRight: r = 0, listWidth: s = 0, stickerNodeMargin: o = 0, stickerNodeWidth: c, stickersCategories: d } = e;
+        return i.useMemo(() => {
+            let e = Math.floor((s - r + o) / (c + o)),
+                i = Math.floor(Math.max(o, (s - r - c * e) / (e - 1))),
                 _ = [],
+                p = [],
+                h = [],
+                m = 0,
                 g = 0,
-                E = 0,
-                v = 0;
-            if (0 !== a) {
-                let i = function (n, r) {
+                y = 0;
+            if (0 !== s) {
+                let i = function (t, n) {
                     let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                        a = (0, T.J8)(n[0]) ? f.Z.getGuild(n[0].guild_id) : void 0,
-                        { canCreateExpressions: o } = (0, u.Gw)(a),
-                        s = p.Z.getGuildId(),
-                        l = c.findIndex((e) => e.type === I.Ih.FAVORITE),
-                        y = c.findIndex((e) => e.type === I.Ih.RECENT),
-                        b = n.length;
-                    null != a && s === a.id && o && n.length < (0, m.A3)(a.premiumTier) && b++;
-                    let S = Math.ceil(b / e);
-                    h[E] = i ? 0 : S;
-                    for (let o = 0; o < S; o++) {
-                        let s = o * e,
-                            u = s + e,
-                            c = n.slice(s, u).map((e, n) => ({
-                                type: I.al.STICKER,
+                        r = (0, v.J8)(t[0]) ? l.Z.getGuild(t[0].guild_id) : void 0,
+                        { canCreateExpressions: s } = (0, a.Gw)(r),
+                        o = u.Z.getGuildId(),
+                        c = d.findIndex((e) => e.type === E.Ih.FAVORITE),
+                        b = d.findIndex((e) => e.type === E.Ih.RECENT),
+                        T = t.length;
+                    null != r && o === r.id && s && t.length < (0, f.A3)(r.premiumTier) && T++;
+                    let S = Math.ceil(T / e);
+                    p[g] = i ? 0 : S;
+                    for (let a = 0; a < S; a++) {
+                        let s = a * e,
+                            o = s + e,
+                            l = t.slice(s, o).map((e, t) => ({
+                                type: E.al.STICKER,
                                 sticker: e,
-                                packId: (0, T.jl)(e) ? e.pack_id : 'TODO - fix',
-                                gridSectionIndex: E,
-                                rowIndex: g,
-                                columnIndex: n,
-                                visibleRowIndex: v,
-                                category: r
+                                packId: (0, v.jl)(e) ? e.pack_id : 'TODO - fix',
+                                gridSectionIndex: g,
+                                rowIndex: m,
+                                columnIndex: t,
+                                visibleRowIndex: y,
+                                category: n
                             }));
-                        E > y &&
-                            E > l &&
-                            null != a &&
-                            b > n.length &&
-                            c.push({
-                                type: I.al.CREATE_STICKER,
-                                guild_id: a.id,
-                                name: A.intl.string(A.t['UwF+Cw']),
-                                gridSectionIndex: E,
-                                rowIndex: g,
-                                columnIndex: c.length,
-                                visibleRowIndex: v
+                        g > b &&
+                            g > c &&
+                            null != r &&
+                            T > t.length &&
+                            l.push({
+                                type: E.al.CREATE_STICKER,
+                                guild_id: r.id,
+                                name: I.intl.string(I.t['UwF+Cw']),
+                                gridSectionIndex: g,
+                                rowIndex: m,
+                                columnIndex: l.length,
+                                visibleRowIndex: y
                             }),
-                            !i && (v++, _.push(c), d.push(c.length)),
-                            g++;
+                            i || (y++, h.push(l), _.push(l.length)),
+                            m++;
                     }
-                    E++;
+                    g++;
                 };
-                if (null == r) for (let e of c) e.stickers.length > 0 ? (g++, i(e.stickers, e.type, (null == n ? void 0 : n.has(e.id)) === !0)) : e.type === I.Ih.EMPTY_GUILD_UPSELL && ((h[E] = 0), E++);
-                else r.sendable.length > 0 && i(r.sendable, I.Ih.SEARCH_RESULTS), r.sendableWithPremium.length > 0 && i(r.sendableWithPremium, I.Ih.SEARCH_RESULTS);
+                if (null == n) for (let e of d) e.stickers.length > 0 ? (m++, i(e.stickers, e.type, (null == t ? void 0 : t.has(e.id)) === !0)) : e.type === E.Ih.EMPTY_GUILD_UPSELL && ((p[g] = 0), g++);
+                else n.sendable.length > 0 && i(n.sendable, E.Ih.SEARCH_RESULTS), n.sendableWithPremium.length > 0 && i(n.sendableWithPremium, E.Ih.SEARCH_RESULTS);
             }
             return {
-                rowCount: g,
-                rowCountBySection: h,
-                stickersGrid: _,
-                gutterWidth: s,
-                columnCounts: d
+                rowCount: m,
+                rowCountBySection: p,
+                stickersGrid: h,
+                gutterWidth: i,
+                columnCounts: _
             };
-        }, [n, r, i, a, o, l, c]);
+        }, [t, n, r, s, o, c, d]);
     },
-    O = (e) => {
-        let n = (0, l.e7)([_.default], () => _.default.getCurrentUser());
-        return (0, l.e7)(
-            [b.Z],
+    A = (e) => {
+        let t = (0, r.e7)([d.default], () => d.default.getCurrentUser());
+        return (0, r.e7)(
+            [g.Z],
             () => {
-                for (let r of b.Z.getAllStickersIterator()) if ((0, E.kl)(r, n, e)) return !0;
+                for (let n of g.Z.getAllStickersIterator()) if ((0, p.kl)(n, t, e)) return !0;
                 return !1;
             },
-            [n, e]
+            [t, e]
         );
     },
-    D = () => {
-        s.useEffect(() => {
-            (0, v.$p)();
+    N = () => {
+        i.useEffect(() => {
+            (0, h.$p)();
         }, []);
     },
-    L = (e) => {
-        let n = (0, l.e7)([b.Z], () => b.Z.getAllGuildStickers()),
-            r = (0, l.Wu)(
-                [h.ZP, f.Z],
+    C = (e) => {
+        let t = (0, r.e7)([g.Z], () => g.Z.getAllGuildStickers()),
+            n = (0, r.Wu)(
+                [c.ZP, l.Z],
                 () => {
-                    let e = h.ZP.getFlattenedGuildIds(),
-                        n = [];
+                    let e = c.ZP.getFlattenedGuildIds(),
+                        t = [];
                     return (
                         e.forEach((e) => {
-                            let r = f.Z.getGuild(e);
-                            null != r && n.push(r);
+                            let n = l.Z.getGuild(e);
+                            null != n && t.push(n);
                         }),
-                        n
+                        t
                     );
                 },
                 []
             ),
-            i = (0, l.e7)([_.default], () => _.default.getCurrentUser());
-        return s.useMemo(() => {
-            let a = [];
-            for (let { name: e, id: i } of r) {
-                let r = n.get(i);
-                if (null != r && 0 !== r.length)
-                    a.push({
-                        type: I.Ih.GUILD,
-                        id: i,
+            s = (0, r.e7)([d.default], () => d.default.getCurrentUser());
+        return i.useMemo(() => {
+            let i = [];
+            for (let { name: e, id: r } of n) {
+                let n = t.get(r);
+                null != n &&
+                    0 !== n.length &&
+                    i.push({
+                        type: E.Ih.GUILD,
+                        id: r,
                         name: e,
-                        stickers: r
+                        stickers: n
                     });
             }
             if ((null == e ? void 0 : e.getGuildId()) != null) {
-                let n = f.Z.getGuild(e.getGuildId()),
-                    { canManageAllExpressions: r } = (0, u.Gw)(n),
-                    o = a.findIndex((n) => n.id === e.getGuildId());
-                o >= 1
-                    ? a.unshift(a.splice(o, 1)[0])
-                    : -1 === o &&
-                      null != n &&
-                      r &&
-                      a.unshift({
-                          type: I.Ih.EMPTY_GUILD_UPSELL,
-                          id: n.id,
-                          name: n.name,
+                let t = l.Z.getGuild(e.getGuildId()),
+                    { canManageAllExpressions: n } = (0, a.Gw)(t),
+                    r = i.findIndex((t) => t.id === e.getGuildId());
+                r >= 1
+                    ? i.unshift(i.splice(r, 1)[0])
+                    : -1 === r &&
+                      null != t &&
+                      n &&
+                      i.unshift({
+                          type: E.Ih.EMPTY_GUILD_UPSELL,
+                          id: t.id,
+                          name: t.name,
                           stickers: []
                       }),
-                    null != i &&
-                        !g.BT({
-                            permission: S.Plq.USE_EXTERNAL_EMOJIS,
-                            user: i,
+                    null == s ||
+                        _.BT({
+                            permission: y.Plq.USE_EXTERNAL_EMOJIS,
+                            user: s,
                             context: e
-                        }) &&
-                        (a = a.filter((n) => n.id === e.getGuildId()));
+                        }) ||
+                        (i = i.filter((t) => t.id === e.getGuildId()));
             }
-            return a;
-        }, [n, r, i, e]);
+            return i;
+        }, [t, n, s, e]);
     },
-    x = [];
-function w() {
-    var e, n;
-    return null !== (n = null === (e = (0, d.D)().favoriteStickers) || void 0 === e ? void 0 : e.stickerIds) && void 0 !== n ? n : x;
+    R = [];
+function O() {
+    var e, t;
+    return null !== (t = null === (e = (0, o.D)().favoriteStickers) || void 0 === e ? void 0 : e.stickerIds) && void 0 !== t ? t : R;
 }
-function P() {
-    let e = w();
-    return (0, l.Wu)([b.Z], () => e.map((e) => b.Z.getStickerById(e)).filter((e) => null != e && (!(0, T.J8)(e) || (0, T.V9)(e))), [e]);
+function D() {
+    let e = O();
+    return (0, r.Wu)([g.Z], () => e.map((e) => g.Z.getStickerById(e)).filter((e) => null != e && (!(0, v.J8)(e) || (0, v.V9)(e))), [e]);
 }
-function M() {
-    var e, n;
-    let r = (0, d.D)(),
-        i = x;
-    return (null == r ? void 0 : null === (e = r.stickerFrecency) || void 0 === e ? void 0 : e.stickers) != null && (i = Object.keys(null == r ? void 0 : null === (n = r.stickerFrecency) || void 0 === n ? void 0 : n.stickers)), i;
+function x() {
+    var e, t;
+    let n = (0, o.D)(),
+        i = R;
+    return (null == n ? void 0 : null === (e = n.stickerFrecency) || void 0 === e ? void 0 : e.stickers) != null && (i = Object.keys(null == n ? void 0 : null === (t = n.stickerFrecency) || void 0 === t ? void 0 : t.stickers)), i;
 }
-function k() {
-    let e = M();
-    return (0, l.Wu)([b.Z], () => e.map((e) => b.Z.getStickerById(e)).filter((e) => void 0 !== e), [e]);
+function L() {
+    let e = x();
+    return (0, r.Wu)([g.Z], () => e.map((e) => g.Z.getStickerById(e)).filter((e) => void 0 !== e), [e]);
 }
-let U = (e) => {
-        let n = P(),
-            { packs: r, frequentlyUsedStickers: i } = (0, l.cj)(
-                [b.Z, y.Z],
+let P = (e) => {
+        let t = D(),
+            { packs: n, frequentlyUsedStickers: a } = (0, r.cj)(
+                [g.Z, m.Z],
                 () => ({
-                    packs: b.Z.getPremiumPacks(),
-                    frequentlyUsedStickers: y.Z.stickerFrecencyWithoutFetchingLatest.frequently
+                    packs: g.Z.getPremiumPacks(),
+                    frequentlyUsedStickers: m.Z.stickerFrecencyWithoutFetchingLatest.frequently
                 }),
                 []
             ),
-            a = (0, l.e7)([_.default], () => _.default.getCurrentUser()),
-            o = L(e);
-        return s.useMemo(() => {
-            var s;
-            let l = r.map(T.z),
-                u = {
-                    type: I.Ih.FAVORITE,
-                    id: I.Ih.FAVORITE,
-                    name: A.intl.string(A.t.y3LQCA),
-                    stickers: n
-                };
+            s = (0, r.e7)([d.default], () => d.default.getCurrentUser()),
+            o = C(e);
+        return i.useMemo(() => {
+            var i;
+            let r = n.map(v.z);
             return [
-                u,
                 {
-                    type: I.Ih.RECENT,
-                    id: I.Ih.RECENT,
-                    name: A.intl.string(A.t['6hjpXV']),
+                    type: E.Ih.FAVORITE,
+                    id: E.Ih.FAVORITE,
+                    name: I.intl.string(I.t.y3LQCA),
+                    stickers: t
+                },
+                {
+                    type: E.Ih.RECENT,
+                    id: E.Ih.RECENT,
+                    name: I.intl.string(I.t['6hjpXV']),
                     stickers:
                         null !==
-                            (s =
-                                null == i
+                            (i =
+                                null == a
                                     ? void 0
-                                    : i.filter((n) => {
-                                          if ((0, T.J8)(n)) {
-                                              var i, o;
-                                              return null !== (o = null === (i = b.Z.getStickersByGuildId(n.guild_id)) || void 0 === i ? void 0 : i.some((e) => e.id === n.id)) && void 0 !== o && o && (0, E.cO)(n, a, e) !== E.eb.NONSENDABLE;
+                                    : a.filter((t) => {
+                                          if ((0, v.J8)(t)) {
+                                              var i, r;
+                                              return null !== (r = null === (i = g.Z.getStickersByGuildId(t.guild_id)) || void 0 === i ? void 0 : i.some((e) => e.id === t.id)) && void 0 !== r && r && (0, p.cO)(t, s, e) !== p.eb.NONSENDABLE;
                                           }
-                                          if ((0, T.jl)(n)) return r.some((e) => e.id === n.pack_id);
-                                      })) && void 0 !== s
-                            ? s
+                                          if ((0, v.jl)(t)) return n.some((e) => e.id === t.pack_id);
+                                      })) && void 0 !== i
+                            ? i
                             : []
                 },
                 ...o,
-                ...l
+                ...r
             ];
-        }, [r, n, i, o, a, e]);
+        }, [n, t, a, o, s, e]);
     },
-    B = function (e) {
-        let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            r = (0, l.e7)([b.Z], () => b.Z.getStickerById(e.id)),
-            [i, a] = s.useState(!0),
-            [o, u] = s.useState(!1),
-            c = (0, T.J8)(e) || (0, T.jl)(e),
-            d = {
+    w = function (e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            n = (0, r.e7)([g.Z], () => g.Z.getStickerById(e.id)),
+            [a, s] = i.useState(!0),
+            [o, l] = i.useState(!1),
+            u = (0, v.J8)(e) || (0, v.jl)(e),
+            c = {
                 hasFetched: o,
-                isReturnable: c,
+                isReturnable: u,
                 renderableSticker: e,
-                shouldFetch: i,
-                stickersStoreDefinition: r
+                shouldFetch: a,
+                stickersStoreDefinition: n
             },
-            f = s.useRef(d);
-        return (s.useEffect(() => {
-            f.current = d;
+            d = i.useRef(c);
+        return (i.useEffect(() => {
+            d.current = c;
         }),
-        s.useEffect(() => {
+        i.useEffect(() => {
             (async () => {
-                let { hasFetched: e, isReturnable: r, renderableSticker: i, shouldFetch: o, stickersStoreDefinition: s } = f.current;
-                if (n && !r && null == s && o && !e) {
-                    a(!1);
+                let { hasFetched: e, isReturnable: n, renderableSticker: i, shouldFetch: r, stickersStoreDefinition: a } = d.current;
+                if (t && !n && null == a && r && !e) {
+                    s(!1);
                     try {
-                        await (0, v.Il)(i.id);
+                        await (0, h.Il)(i.id);
                     } catch {}
-                    u(!0);
+                    l(!0);
                 }
             })();
-        }, [n]),
-        c)
+        }, [t]),
+        u)
             ? [e, o]
-            : [null != r ? r : null, o];
+            : [null != n ? n : null, o];
     },
-    G = (e) => {
-        let n = U(e);
-        return s.useMemo(() => n.filter((e) => e.type === I.Ih.EMPTY_GUILD_UPSELL || e.stickers.length > 0, []), [n]);
+    M = (e) => {
+        let t = P(e);
+        return i.useMemo(() => t.filter((e) => e.type === E.Ih.EMPTY_GUILD_UPSELL || e.stickers.length > 0, []), [t]);
     };

@@ -1,52 +1,48 @@
-r.d(n, {
-    u: function () {
-        return d;
-    }
-});
-var i = r(964742),
-    a = r(40284),
-    o = r(144459);
-function s(e, n) {
-    var r = Object.keys(e);
+n.d(t, { u: () => c });
+var i = n(964742),
+    r = n(40284),
+    a = n(144459);
+function s(e, t) {
+    var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var i = Object.getOwnPropertySymbols(e);
-        n &&
-            (i = i.filter(function (n) {
-                return Object.getOwnPropertyDescriptor(e, n).enumerable;
+        t &&
+            (i = i.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
             })),
-            r.push.apply(r, i);
+            n.push.apply(n, i);
     }
-    return r;
+    return n;
 }
-function l(e) {
-    for (var n = 1; n < arguments.length; n++) {
-        var r = null != arguments[n] ? arguments[n] : {};
-        n % 2
-            ? s(Object(r), !0).forEach(function (n) {
-                  u(e, n, r[n]);
+function o(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {};
+        t % 2
+            ? s(Object(n), !0).forEach(function (t) {
+                  l(e, t, n[t]);
               })
             : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : s(Object(r)).forEach(function (n) {
-                    Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(r, n));
+              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
+              : s(Object(n)).forEach(function (t) {
+                    Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
                 });
     }
     return e;
 }
-function u(e, n, r) {
+function l(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-var c = {
+var u = {
     itemType: null,
     item: null,
     sourceId: null,
@@ -55,44 +51,44 @@ var c = {
     didDrop: !1,
     isSourcePublic: null
 };
-function d() {
-    var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c,
-        n = arguments.length > 1 ? arguments[1] : void 0,
-        r = n.payload;
-    switch (n.type) {
+function c() {
+    var e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u,
+        t = arguments.length > 1 ? arguments[1] : void 0,
+        n = t.payload;
+    switch (t.type) {
         case i.qu:
-            return l(
-                l({}, e),
+            return o(
+                o({}, e),
                 {},
                 {
-                    itemType: r.itemType,
-                    item: r.item,
-                    sourceId: r.sourceId,
-                    isSourcePublic: r.isSourcePublic,
+                    itemType: n.itemType,
+                    item: n.item,
+                    sourceId: n.sourceId,
+                    isSourcePublic: n.isSourcePublic,
                     dropResult: null,
                     didDrop: !1
                 }
             );
         case i.js:
-            return l(l({}, e), {}, { isSourcePublic: !0 });
+            return o(o({}, e), {}, { isSourcePublic: !0 });
         case i.$T:
-            return l(l({}, e), {}, { targetIds: r.targetIds });
-        case a.IS:
-            if (-1 === e.targetIds.indexOf(r.targetId)) return e;
-            return l(l({}, e), {}, { targetIds: (0, o.zu)(e.targetIds, r.targetId) });
+            return o(o({}, e), {}, { targetIds: n.targetIds });
+        case r.IS:
+            if (-1 === e.targetIds.indexOf(n.targetId)) return e;
+            return o(o({}, e), {}, { targetIds: (0, a.zu)(e.targetIds, n.targetId) });
         case i.rp:
-            return l(
-                l({}, e),
+            return o(
+                o({}, e),
                 {},
                 {
-                    dropResult: r.dropResult,
+                    dropResult: n.dropResult,
                     didDrop: !0,
                     targetIds: []
                 }
             );
         case i.Bs:
-            return l(
-                l({}, e),
+            return o(
+                o({}, e),
                 {},
                 {
                     itemType: null,

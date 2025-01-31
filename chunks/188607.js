@@ -1,1 +1,2 @@
-e.exports = { select: 'select_caf9a3' };
+var i = { select: 'select__71cea' };
+e.exports = i;

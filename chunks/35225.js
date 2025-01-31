@@ -1,17 +1,13 @@
-r.d(n, {
-    V: function () {
-        return c;
-    }
-});
-var i = r(819553),
-    a = r(931261),
-    o = r(592125),
-    s = r(984933),
-    l = r(944486),
-    u = r(176505);
-function c(e) {
-    var n;
-    let r = l.Z.getChannelId(e),
-        c = null === (n = s.ZP.getDefaultChannel(e)) || void 0 === n ? void 0 : n.id;
-    return (r !== u.oC.GUILD_ONBOARDING || i.ZP.shouldShowOnboarding(e)) && (r !== u.oC.GUILD_HOME || (0, a.s)(e)) && null != o.Z.getChannel(r) ? r : c;
+n.d(t, { V: () => u });
+var i = n(819553),
+    r = n(931261),
+    a = n(592125),
+    s = n(984933),
+    o = n(944486),
+    l = n(176505);
+function u(e) {
+    var t;
+    let n = o.Z.getChannelId(e),
+        u = null === (t = s.ZP.getDefaultChannel(e)) || void 0 === t ? void 0 : t.id;
+    return (n !== l.oC.GUILD_ONBOARDING || i.ZP.shouldShowOnboarding(e)) && (n !== l.oC.GUILD_HOME || (0, r.s)(e)) && null != a.Z.getChannel(n) ? n : u;
 }

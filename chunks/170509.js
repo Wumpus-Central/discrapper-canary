@@ -1,9 +1,4 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return s;
-        }
-    });
+n.d(t, { default: () => s });
 var i = n(200651);
 n(192379);
 var l = n(481060),
@@ -13,12 +8,12 @@ var l = n(481060),
 function s(e) {
     let { channel: t, category: n, ...s } = e,
         c = (0, r.ZP)(t, !0),
-        u = (0, r.ZP)(n);
+        d = (0, r.ZP)(n);
     return (0, i.jsx)(l.ConfirmModal, {
         header: a.intl.string(a.t.YWMtRU),
         confirmText: a.intl.string(a.t.eW8Gy8),
         cancelText: a.intl.string(a.t.s4uM3d),
-        confirmButtonColor: l.Button.Colors.BRAND,
+        confirmButtonColor: l.zxk.Colors.BRAND,
         ...s,
         children: (0, i.jsx)(l.Text, {
             variant: 'text-md/normal',
@@ -26,7 +21,7 @@ function s(e) {
             selectable: !1,
             children: a.intl.format(a.t['iKW+jY'], {
                 channelName: c,
-                categoryName: u
+                categoryName: d
             })
         })
     });

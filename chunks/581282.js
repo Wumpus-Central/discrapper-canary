@@ -1,27 +1,23 @@
-r.d(n, {
-    c: function () {
-        return o;
-    },
-    m: function () {
-        return s;
-    }
+n.d(t, {
+    c: () => a,
+    m: () => s
 });
 let i = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'.split(''),
-    a = [];
-for (let e = 0; e < i.length; e++) a[i[e].charCodeAt(0)] = e;
-function o(e) {
-    let n = (3 * e.length) / 4;
-    '=' == e[e.length - 2] ? (n -= 2) : '=' == e[e.length - 1] && (n -= 1);
-    let r = new Uint8Array(n),
+    r = [];
+for (let e = 0; e < i.length; e++) r[i[e].charCodeAt(0)] = e;
+function a(e) {
+    let t = (3 * e.length) / 4;
+    '=' == e[e.length - 2] ? (t -= 2) : '=' == e[e.length - 1] && (t -= 1);
+    let n = new Uint8Array(t),
         i = 0,
-        o = 0,
+        a = 0,
         s,
-        l = 0;
-    for (let n = 0; n < e.length; n++) {
-        if (void 0 === (s = a[e.charCodeAt(n)]))
-            switch (e[n]) {
+        o = 0;
+    for (let t = 0; t < e.length; t++) {
+        if (void 0 === (s = r[e.charCodeAt(t)]))
+            switch (e[t]) {
                 case '=':
-                    o = 0;
+                    a = 0;
                 case '\n':
                 case '\r':
                 case '\t':
@@ -30,39 +26,39 @@ function o(e) {
                 default:
                     throw Error('invalid base64 string.');
             }
-        switch (o) {
+        switch (a) {
             case 0:
-                (l = s), (o = 1);
+                (o = s), (a = 1);
                 break;
             case 1:
-                (r[i++] = (l << 2) | ((48 & s) >> 4)), (l = s), (o = 2);
+                (n[i++] = (o << 2) | ((48 & s) >> 4)), (o = s), (a = 2);
                 break;
             case 2:
-                (r[i++] = ((15 & l) << 4) | ((60 & s) >> 2)), (l = s), (o = 3);
+                (n[i++] = ((15 & o) << 4) | ((60 & s) >> 2)), (o = s), (a = 3);
                 break;
             case 3:
-                (r[i++] = ((3 & l) << 6) | s), (o = 0);
+                (n[i++] = ((3 & o) << 6) | s), (a = 0);
         }
     }
-    if (1 == o) throw Error('invalid base64 string.');
-    return r.subarray(0, i);
+    if (1 == a) throw Error('invalid base64 string.');
+    return n.subarray(0, i);
 }
 function s(e) {
-    let n = '',
-        r = 0,
-        a,
-        o = 0;
+    let t = '',
+        n = 0,
+        r,
+        a = 0;
     for (let s = 0; s < e.length; s++)
-        switch (((a = e[s]), r)) {
+        switch (((r = e[s]), n)) {
             case 0:
-                (n += i[a >> 2]), (o = (3 & a) << 4), (r = 1);
+                (t += i[r >> 2]), (a = (3 & r) << 4), (n = 1);
                 break;
             case 1:
-                (n += i[o | (a >> 4)]), (o = (15 & a) << 2), (r = 2);
+                (t += i[a | (r >> 4)]), (a = (15 & r) << 2), (n = 2);
                 break;
             case 2:
-                (n += i[o | (a >> 6)] + i[63 & a]), (r = 0);
+                (t += i[a | (r >> 6)]), (t += i[63 & r]), (n = 0);
         }
-    return r && ((n += i[o] + '='), 1 == r && (n += '=')), n;
+    return n && ((t += i[a]), (t += '='), 1 == n && (t += '=')), t;
 }
-(a['-'.charCodeAt(0)] = i.indexOf('+')), (a['_'.charCodeAt(0)] = i.indexOf('/'));
+(r['-'.charCodeAt(0)] = i.indexOf('+')), (r['_'.charCodeAt(0)] = i.indexOf('/'));

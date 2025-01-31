@@ -1,8 +1,9 @@
-e.exports = {
-    container: 'container_b217c5',
-    header: 'header_b217c5',
-    bodyText: 'bodyText_b217c5',
-    smsNumberText: 'smsNumberText_b217c5',
-    smsNumberContainer: 'smsNumberContainer_b217c5',
-    copied: 'copied_b217c5'
+var i = {
+    container: 'container_dba137',
+    header: 'header_dba137',
+    bodyText: 'bodyText_dba137',
+    smsNumberText: 'smsNumberText_dba137',
+    smsNumberContainer: 'smsNumberContainer_dba137',
+    copied: 'copied_dba137'
 };
+e.exports = i;

@@ -1,17 +1,13 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
+n.d(t, { Z: () => c });
 var a = n(200651),
-    r = n(192379),
-    l = n(120356),
-    i = n.n(l),
+    l = n(192379),
+    r = n(120356),
+    i = n.n(r),
     o = n(481060),
     s = n(941469);
 function c(e) {
-    let { columns: t, data: n, className: l, rowClassName: c, onClickRow: d, selectedRowKey: u, rowHeight: h = 40 } = e,
-        m = r.useMemo(
+    let { columns: t, data: n, className: r, rowClassName: c, onClickRow: d, selectedRowKey: u, rowHeight: m = 40 } = e,
+        h = l.useMemo(
             () =>
                 t.map((e) => ({
                     renderHeader: () =>
@@ -26,28 +22,28 @@ function c(e) {
         x = [n.length];
     return (0, a.jsx)('div', {
         className: s.tableContainer,
-        children: (0, a.jsx)(o.ListThin, {
-            className: i()(l),
+        children: (0, a.jsx)(o.Tvr, {
+            className: i()(r),
             innerClassName: s.table,
             sections: x,
             sectionHeight: 40,
             renderSection: (e) => {
                 let { section: t } = e,
-                    r = i()(s.tableHeader);
+                    l = i()(s.tableHeader);
                 return (0, a.jsx)(
                     'div',
                     {
-                        className: r,
-                        children: m.map((e) => {
-                            var r, l;
+                        className: l,
+                        children: h.map((e) => {
+                            var l, r;
                             let o = i()(e.cellClassName),
-                                s = { width: 'calc('.concat(null !== (l = e.cellWidth) && void 0 !== l ? l : '1fr', ' - ').concat(16, 'px)') };
+                                s = { width: 'calc('.concat(null !== (r = e.cellWidth) && void 0 !== r ? r : '1fr', ' - ').concat(16, 'px)') };
                             return (0, a.jsx)(
                                 'div',
                                 {
                                     className: o,
                                     style: s,
-                                    children: null === (r = e.renderHeader) || void 0 === r ? void 0 : r.call(e, e, n)
+                                    children: null === (l = e.renderHeader) || void 0 === l ? void 0 : l.call(e, e, n)
                                 },
                                 'dev-tools-th-'.concat(t, '-').concat(e.key)
                             );
@@ -56,33 +52,33 @@ function c(e) {
                     'dev-tools-header-'.concat(t)
                 );
             },
-            rowHeight: h,
+            rowHeight: m,
             renderRow: (e) => {
                 let { rowIndex: t } = e,
-                    r = n[t],
-                    l = r.key,
+                    l = n[t],
+                    r = l.key,
                     x = i()(s.tableRow, {
-                        [s.selectedTableRow]: l === u,
+                        [s.selectedTableRow]: r === u,
                         rowClassName: c
                     });
                 return (0, a.jsx)(
-                    o.Clickable,
+                    o.P3F,
                     {
                         className: x,
-                        onClick: () => (null == d ? void 0 : d(r)),
-                        children: m.map((e) => {
-                            var n, l;
+                        onClick: () => (null == d ? void 0 : d(l)),
+                        children: h.map((e) => {
+                            var n, r;
                             let o = i()(e.cellClassName),
                                 s = {
-                                    width: 'calc('.concat(null !== (l = e.cellWidth) && void 0 !== l ? l : '1fr', ' - ').concat(16, 'px)'),
-                                    height: 'calc('.concat(h, 'px - ').concat(16, 'px)')
+                                    width: 'calc('.concat(null !== (r = e.cellWidth) && void 0 !== r ? r : '1fr', ' - ').concat(16, 'px)'),
+                                    height: 'calc('.concat(m, 'px - ').concat(16, 'px)')
                                 };
                             return (0, a.jsx)(
                                 'div',
                                 {
                                     className: o,
                                     style: s,
-                                    children: null === (n = e.render) || void 0 === n ? void 0 : n.call(e, r, void 0, t)
+                                    children: null === (n = e.render) || void 0 === n ? void 0 : n.call(e, l, void 0, t)
                                 },
                                 'dev-tools-td-'.concat(t, '-').concat(e.key)
                             );

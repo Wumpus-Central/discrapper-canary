@@ -1,169 +1,168 @@
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(120356),
-    l = r.n(s),
-    u = r(442837),
-    c = r(481060),
-    d = r(355467),
-    f = r(100527),
-    p = r(906732),
-    h = r(28546),
-    _ = r(357355),
-    m = r(98278),
-    g = r(104494),
-    E = r(639119),
-    v = r(165583),
-    y = r(197115),
-    b = r(631771),
-    I = r(609218),
-    T = r(210887),
-    S = r(626135),
-    A = r(176354),
-    C = r(74538),
-    N = r(543241),
-    R = r(149203),
-    O = r(981631),
-    D = r(185923),
-    L = r(474936),
-    x = r(388032),
-    w = r(940675);
-let P = (e) => {
-    let n,
-        { onLearnMore: i, onClose: s, channel: P, emojiDescriptor: M, pickerIntention: k, analyticsLocation: U, containerContext: B } = e,
-        G = (0, u.e7)([T.Z], () => T.Z.theme) === O.BRd.LIGHT ? 'light' : 'dark',
-        [Z, F] = o.useState(!1),
-        V = () => {
-            (0, N.A3)(P), (0, m.z)(), i();
+n.d(t, { Z: () => L }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(442837),
+    l = n(481060),
+    u = n(355467),
+    c = n(100527),
+    d = n(906732),
+    f = n(28546),
+    _ = n(357355),
+    p = n(98278),
+    h = n(104494),
+    m = n(639119),
+    g = n(165583),
+    E = n(197115),
+    v = n(631771),
+    y = n(609218),
+    I = n(210887),
+    b = n(626135),
+    T = n(176354),
+    S = n(74538),
+    A = n(543241),
+    N = n(149203),
+    C = n(981631),
+    R = n(185923),
+    O = n(474936),
+    D = n(388032),
+    x = n(940675);
+let L = (e) => {
+    let t,
+        { onLearnMore: a, onClose: L, channel: P, emojiDescriptor: w, pickerIntention: M, analyticsLocation: k, containerContext: U } = e,
+        G = (0, o.e7)([I.Z], () => I.Z.theme) === C.BRd.LIGHT ? 'light' : 'dark',
+        [B, Z] = r.useState(!1),
+        F = () => {
+            (0, A.A3)(P), (0, p.z)(), a();
         },
-        j = r(577391)('./img_premium_emoji_'.concat(G, '.svg')),
-        H = 'https://cdn.discordapp.com/assets/premium/roadblocks/emoji_'.concat(G, '.png'),
-        Y = (0, E.N)(),
-        W = (0, g.Ng)(),
-        K = null != Y || null != W,
-        z = (0, h.Iu)((e) => e.searchQuery),
-        { analyticsLocations: q } = (0, p.ZP)(f.Z.EMOJI_PICKER),
-        Q = b.Gi.useExperiment(
+        V = n(577391)('./img_premium_emoji_'.concat(G, '.svg')),
+        j = 'https://cdn.discordapp.com/assets/premium/roadblocks/emoji_'.concat(G, '.png'),
+        H = (0, m.N)(),
+        Y = (0, h.Ng)(),
+        W = null != H || null != Y,
+        K = (0, f.Iu)((e) => e.searchQuery),
+        { analyticsLocations: z } = (0, d.ZP)(c.Z.EMOJI_PICKER),
+        q = v.Gi.useExperiment(
             { location: 'Premium Emoji Roadblock' },
             {
-                autoTrackExposure: !K,
-                disable: K
+                autoTrackExposure: !W,
+                disable: W
             }
         ),
-        X = Q.enabled || null != Y,
-        J = Q.addSocialProof;
-    n = k === D.Hz.REACTION ? L.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED : null == M ? L.cd.EMOJI_PICKER_FLOATING_UPSELL : M.subCategory === R.t0.TOP_GUILD_EMOJI ? L.cd.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : M.subCategory === R.t0.NEWLY_ADDED_EMOJI ? L.cd.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : L.cd.EMOJI_PICKER_EMOJI_CLICKED;
-    let $ = null != M ? M.emoji : void 0,
-        ee = null != $ && $.animated,
-        et = null != $ && !A.ZP.isInternalEmojiForGuildId($, null == P ? void 0 : P.getGuildId()),
-        en = null != $ ? O.qAy.EMOJI : O.qAy.EMOJI_PICKER_FLOATING_UPSELL;
-    o.useEffect(() => {
-        !X &&
-            S.default.track(O.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: n,
-                is_animated: ee,
-                is_external: et,
-                has_search_query: null != z && '' !== z,
+        Q = q.enabled || null != H,
+        X = q.addSocialProof;
+    t = M === R.Hz.REACTION ? O.cd.EMOJI_PICKER_REACTION_EMOJI_CLICKED : null == w ? O.cd.EMOJI_PICKER_FLOATING_UPSELL : w.subCategory === N.t0.TOP_GUILD_EMOJI ? O.cd.EMOJI_PICKER_TOP_SERVER_EMOJI_CLICKED : w.subCategory === N.t0.NEWLY_ADDED_EMOJI ? O.cd.EMOJI_PICKER_NEWLY_ADDED_EMOJI_CLICKED : O.cd.EMOJI_PICKER_EMOJI_CLICKED;
+    let J = null != w ? w.emoji : void 0,
+        $ = null != J && J.animated,
+        ee = null != J && !T.ZP.isInternalEmojiForGuildId(J, null == P ? void 0 : P.getGuildId()),
+        et = null != J ? C.qAy.EMOJI : C.qAy.EMOJI_PICKER_FLOATING_UPSELL;
+    r.useEffect(() => {
+        Q ||
+            b.default.track(C.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: t,
+                is_animated: $,
+                is_external: ee,
+                has_search_query: null != K && '' !== K,
                 location: {
-                    ...U,
-                    object: en
+                    ...k,
+                    object: et
                 },
-                location_stack: q,
-                sku_id: (0, C.Wz)(C.ZP.getSkuIdForPremiumType(L.p9.TIER_2))
+                location_stack: z,
+                sku_id: (0, S.Wz)(S.ZP.getSkuIdForPremiumType(O.p9.TIER_2))
             });
-    }, [U, q, z, ee, et, n, en, X]);
-    let er = () => (K ? x.intl.string(x.t['Gd/XHB']) : x.intl.string(x.t.P3etAg)),
-        ei = (0, u.e7)([_.Z], () => _.Z.affinities),
-        ea = (0, u.e7)([_.Z], () => _.Z.hasFetched);
-    o.useEffect(() => {
-        !ea && d.MH();
-    }, [ea]);
-    let eo = ei.length > 1 && J,
+    }, [k, z, K, $, ee, t, et, Q]);
+    let en = () => (W ? D.intl.string(D.t['Gd/XHB']) : D.intl.string(D.t.P3etAg)),
+        ei = (0, o.e7)([_.Z], () => _.Z.affinities),
+        er = (0, o.e7)([_.Z], () => _.Z.hasFetched);
+    r.useEffect(() => {
+        er || u.MH();
+    }, [er]);
+    let ea = ei.length > 1 && X,
         es = () =>
-            (0, a.jsx)(I.Z, {
-                containerContext: B,
+            (0, i.jsx)(y.Z, {
+                containerContext: U,
                 image: {
-                    url: H,
+                    url: j,
                     width: 220,
                     height: 132
                 },
-                title: x.intl.string(x.t['0+11FB']),
-                description: x.intl.string(x.t.dURIzc),
-                enableSocialProof: eo,
-                analyticsLocationSection: O.jXE.EMOJI_UPSELL_POPOUT,
-                onClose: s,
+                title: D.intl.string(D.t['0+11FB']),
+                description: D.intl.string(D.t.dURIzc),
+                enableSocialProof: ea,
+                analyticsLocationSection: C.jXE.EMOJI_UPSELL_POPOUT,
+                onClose: L,
                 upsellViewedTrackingData: {
-                    type: n,
-                    is_external: et,
+                    type: t,
+                    is_external: ee,
                     location: {
-                        ...U,
-                        object: en
+                        ...k,
+                        object: et
                     },
-                    location_stack: q,
-                    sku_id: (0, C.Wz)(C.ZP.getSkuIdForPremiumType(L.p9.TIER_2)),
-                    has_search_query: null != z && '' !== z,
-                    is_animated: ee
+                    location_stack: z,
+                    sku_id: (0, S.Wz)(S.ZP.getSkuIdForPremiumType(O.p9.TIER_2)),
+                    has_search_query: null != K && '' !== K,
+                    is_animated: $
                 }
             });
-    return X
+    return Q
         ? es()
-        : (0, a.jsxs)('div', {
-              className: l()(w.premiumPromo, { [w.unifyTrialUpsell]: K }),
+        : (0, i.jsxs)('div', {
+              className: s()(x.premiumPromo, { [x.unifyTrialUpsell]: W }),
               children: [
-                  (0, a.jsx)(c.Clickable, {
-                      className: w.premiumPromoClose,
-                      onClick: s,
-                      children: x.intl.string(x.t.cpT0Cg)
+                  (0, i.jsx)(l.P3F, {
+                      className: x.premiumPromoClose,
+                      onClick: L,
+                      children: D.intl.string(D.t.cpT0Cg)
                   }),
-                  (0, a.jsxs)(a.Fragment, {
+                  (0, i.jsxs)(i.Fragment, {
                       children: [
-                          K
-                              ? (0, a.jsx)(v.ZP, {
-                                    type: L.cd.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI,
-                                    subscriptionTier: L.Si.TIER_2,
-                                    onClose: s,
-                                    trialOffer: Y,
-                                    discountOffer: W,
-                                    children: x.intl.format(x.t.se13Fh, { onClick: V })
+                          W
+                              ? (0, i.jsx)(g.ZP, {
+                                    type: O.cd.AGGREGATE_PREMIUM_UPSELL_MODAL_FEATURE_EMOJI,
+                                    subscriptionTier: O.Si.TIER_2,
+                                    onClose: L,
+                                    trialOffer: H,
+                                    discountOffer: Y,
+                                    children: D.intl.format(D.t.se13Fh, { onClick: F })
                                 })
-                              : (0, a.jsxs)(a.Fragment, {
+                              : (0, i.jsxs)(i.Fragment, {
                                     children: [
-                                        (0, a.jsx)('img', {
+                                        (0, i.jsx)('img', {
                                             alt: '',
-                                            className: w.premiumPromoImage,
-                                            src: j
+                                            className: x.premiumPromoImage,
+                                            src: V
                                         }),
-                                        (0, a.jsx)('div', {
-                                            className: w.premiumPromoTitle,
-                                            children: x.intl.string(x.t['1SsvhY'])
+                                        (0, i.jsx)('div', {
+                                            className: x.premiumPromoTitle,
+                                            children: D.intl.string(D.t['1SsvhY'])
                                         }),
-                                        (0, a.jsx)('div', {
-                                            className: w.premiumPromoDescription,
-                                            children: x.intl.format(x.t.se13Fh, { onClick: V })
+                                        (0, i.jsx)('div', {
+                                            className: x.premiumPromoDescription,
+                                            children: D.intl.format(D.t.se13Fh, { onClick: F })
                                         })
                                     ]
                                 }),
-                          !K &&
-                              (0, a.jsx)(y.Z, {
-                                  subscriptionTier: L.Si.TIER_2,
-                                  submitting: Z,
+                          !W &&
+                              (0, i.jsx)(E.Z, {
+                                  subscriptionTier: O.Si.TIER_2,
+                                  submitting: B,
                                   premiumModalAnalyticsLocation: {
-                                      section: O.jXE.EMOJI_PICKER_POPOUT,
-                                      object: O.qAy.BUTTON_CTA
+                                      section: C.jXE.EMOJI_PICKER_POPOUT,
+                                      object: C.qAy.BUTTON_CTA
                                   },
-                                  size: c.Button.Sizes.SMALL,
-                                  color: c.Button.Colors.GREEN,
+                                  size: l.zxk.Sizes.SMALL,
+                                  color: l.zxk.Colors.GREEN,
                                   onClick: () => {
-                                      F(!0);
+                                      Z(!0);
                                   },
                                   onSubscribeModalClose: (e) => {
-                                      F(!1), e && s();
+                                      Z(!1), e && L();
                                   },
-                                  buttonText: er()
+                                  buttonText: en()
                               })
                       ]
                   })
               ]
           });
 };
-n.Z = P;

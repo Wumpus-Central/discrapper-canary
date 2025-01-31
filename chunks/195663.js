@@ -1,11 +1,7 @@
-r.d(n, {
-    s: function () {
-        return a;
-    }
-});
-var i = r(314897);
-function a(e) {
-    var n, r;
-    let a = i.default.getId();
-    return null != a && (!!((null === (n = e.removedMemberIds) || void 0 === n ? void 0 : n.includes(a)) || (null === (r = e.addedMembers) || void 0 === r ? void 0 : r.some((e) => e.userId === a))) || !1);
+n.d(t, { s: () => r });
+var i = n(314897);
+function r(e) {
+    var t, n;
+    let r = i.default.getId();
+    return null != r && !!((null === (t = e.removedMemberIds) || void 0 === t ? void 0 : t.includes(r)) || (null === (n = e.addedMembers) || void 0 === n ? void 0 : n.some((e) => e.userId === r)));
 }

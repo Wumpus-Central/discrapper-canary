@@ -1,9 +1,10 @@
-e.exports = {
-    premiumPromo: 'premiumPromo_ca9b56',
-    unifyTrialUpsell: 'unifyTrialUpsell_ca9b56',
-    premiumPromoClose: 'premiumPromoClose_ca9b56',
-    premiumPromoImage: 'premiumPromoImage_ca9b56',
-    premiumPromoImageSmaller: 'premiumPromoImageSmaller_ca9b56',
-    premiumPromoTitle: 'premiumPromoTitle_ca9b56',
-    premiumPromoDescription: 'premiumPromoDescription_ca9b56'
+var i = {
+    premiumPromo: 'premiumPromo__3a1b6',
+    unifyTrialUpsell: 'unifyTrialUpsell__3a1b6',
+    premiumPromoClose: 'premiumPromoClose__3a1b6',
+    premiumPromoImage: 'premiumPromoImage__3a1b6',
+    premiumPromoImageSmaller: 'premiumPromoImageSmaller__3a1b6',
+    premiumPromoTitle: 'premiumPromoTitle__3a1b6',
+    premiumPromoDescription: 'premiumPromoDescription__3a1b6'
 };
+e.exports = i;

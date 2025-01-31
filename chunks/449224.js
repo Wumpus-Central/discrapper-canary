@@ -1,41 +1,42 @@
 let i;
-var a,
-    o = r(442837),
-    s = r(570140),
-    l = r(594190),
-    u = r(77498);
-function c(e, n, r) {
+n.d(t, { Z: () => _ });
+var r,
+    a = n(442837),
+    s = n(570140),
+    o = n(594190),
+    l = n(77498);
+function u(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-function d(e) {
+function c(e) {
     i = e.currentGame;
 }
-function f(e) {
+function d(e) {
     i = e.associatedGame;
 }
-class p extends (a = o.ZP.Store) {
+class f extends (r = a.ZP.Store) {
     getGameForPID(e) {
-        var n;
+        var t;
         if (__OVERLAY__ || null == e) return null;
-        let r = null === (n = l.ZP.getGameForPID(e)) || void 0 === n ? void 0 : n.name;
-        return u.Z.getGameByName(r);
+        let n = null === (t = o.ZP.getGameForPID(e)) || void 0 === t ? void 0 : t.name;
+        return l.Z.getGameByName(n);
     }
     getGame() {
         return i;
     }
 }
-c(p, 'displayName', 'OverlayRunningGameStore'),
-    (n.Z = new p(s.Z, {
-        OVERLAY_INITIALIZE: d,
-        OVERLAY_SET_ASSOCIATED_GAME: f
-    }));
+u(f, 'displayName', 'OverlayRunningGameStore');
+let _ = new f(s.Z, {
+    OVERLAY_INITIALIZE: c,
+    OVERLAY_SET_ASSOCIATED_GAME: d
+});

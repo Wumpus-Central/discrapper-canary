@@ -1,66 +1,62 @@
 n.d(t, {
-    B: function () {
-        return v;
-    },
-    a: function () {
-        return h;
-    }
+    B: () => v,
+    a: () => h
 }),
     n(411104);
-var r = n(570140),
+var l = n(570140),
     i = n(493683),
-    l = n(957730),
-    o = n(222677),
-    a = n(995774),
-    u = n(314897),
-    s = n(592125),
+    r = n(957730),
+    a = n(222677),
+    o = n(995774),
+    s = n(314897),
+    u = n(592125),
     c = n(703558),
     d = n(62817),
     f = n(960048);
-let p = (e) => {
+let m = (e) => {
         let t = d.Z.getFiles(e)[0];
         return null == d.Z.getMessageForFile(t.id)
             ? (f.Z.addBreadcrumb({ message: 'No message found for upload' }), Promise.reject())
             : new Promise((e, n) => {
-                  let i = (l) => {
-                      l.file.id === t.id && (r.Z.unsubscribe('UPLOAD_COMPLETE', i), r.Z.unsubscribe('UPLOAD_FAIL', i), 'UPLOAD_COMPLETE' === l.type ? e(l.messageRecord) : n(Error('Upload failed')));
+                  let i = (r) => {
+                      r.file.id === t.id && (l.Z.unsubscribe('UPLOAD_COMPLETE', i), l.Z.unsubscribe('UPLOAD_FAIL', i), 'UPLOAD_COMPLETE' === r.type ? e(r.messageRecord) : n(Error('Upload failed')));
                   };
-                  r.Z.subscribe('UPLOAD_COMPLETE', i), r.Z.subscribe('UPLOAD_FAIL', i);
+                  l.Z.subscribe('UPLOAD_COMPLETE', i), l.Z.subscribe('UPLOAD_FAIL', i);
               });
     },
-    m = async function (e, t) {
-        var r;
+    p = async function (e, t) {
+        var l;
         let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            o = arguments.length > 3 ? arguments[3] : void 0,
-            a = arguments.length > 4 ? arguments[4] : void 0,
-            d = s.Z.getChannel(t);
-        if (((r = u.default.getToken()), l.ZP.parse(d, ''), i));
+            a = arguments.length > 3 ? arguments[3] : void 0,
+            o = arguments.length > 4 ? arguments[4] : void 0,
+            d = u.Z.getChannel(t);
+        if ((s.default.getToken(), r.ZP.parse(d, ''), i));
         else {
-            if (null == s.Z.getChannel(t)) throw Error("AtomicReactor sendUtils: Couldn't resolve channel with id ".concat(t));
+            if (null == u.Z.getChannel(t)) throw Error("AtomicReactor sendUtils: Couldn't resolve channel with id ".concat(t));
             {
-                let r = n(966390).Z;
-                (e.description = o),
-                    await r.uploadFiles({
+                let l = n(966390).Z;
+                (e.description = a),
+                    await l.uploadFiles({
                         channelId: t,
                         uploads: [e],
                         draftType: c.d.ChannelMessage,
-                        parsedMessage: a
+                        parsedMessage: o
                     });
             }
         }
     },
     h = async (e) => {
-        let { file: t, reaction: n, user: r, altText: l, requireConfirmation: u = !1 } = e,
-            s = await i.Z.openPrivateChannel(r.id, !1, !1);
-        m(t, s, u, l);
-        let c = await p(s);
+        let { file: t, reaction: n, user: l, altText: r, requireConfirmation: s = !1 } = e,
+            u = await i.Z.openPrivateChannel(l.id, !1, !1);
+        p(t, u, s, r);
+        let c = await m(u);
         if (null != c) {
-            let e = (0, a.g1)(n);
-            await (0, o.rU)(s, c.id, e);
+            let e = (0, o.g1)(n);
+            await (0, a.rU)(u, c.id, e);
         }
     },
     v = (e) => {
-        let { file: t, reply: n, channel: r, altText: i, requireConfirmation: o = !1 } = e,
-            a = l.ZP.parse(r, n);
-        return m(t, r.id, o, i, a);
+        let { file: t, reply: n, channel: l, altText: i, requireConfirmation: a = !1 } = e,
+            o = r.ZP.parse(l, n);
+        return p(t, l.id, a, i, o);
     };

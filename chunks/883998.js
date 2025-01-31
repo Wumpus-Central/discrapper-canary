@@ -1,44 +1,39 @@
-r.d(n, {
-    Z: function () {
-        return f;
-    }
-});
-var i = r(200651),
-    a = r(192379),
-    o = r(481060),
-    s = r(907040),
-    l = r(981631),
-    u = r(185923);
-let c = {
-        section: l.jXE.MESSAGE_CONFETTI_EMOJI_PICKER_POPOUT,
+n.d(t, { Z: () => d });
+var i = n(200651),
+    r = n(192379),
+    a = n(481060),
+    s = n(907040),
+    o = n(981631),
+    l = n(185923);
+let u = {
+        section: o.jXE.MESSAGE_CONFETTI_EMOJI_PICKER_POPOUT,
         openPopoutType: 'message_confetti_emoji_picker'
     },
-    d = u.Hz.MESSAGE_CONFETTI;
-function f(e) {
-    let { channel: n, setEmojiConfetti: r, shouldShow: l, onRequestClose: u, position: f, align: p, children: h } = e,
-        _ = a.useCallback(
+    c = l.Hz.MESSAGE_CONFETTI;
+function d(e) {
+    let { channel: t, setEmojiConfetti: n, shouldShow: o, onRequestClose: l, position: d, align: f, children: _ } = e,
+        p = r.useCallback(
             (e) => {
-                null != e && (r(e), u());
+                null != e && (n(e), l());
             },
-            [u, r]
+            [l, n]
         );
-    return (0, i.jsx)(o.Popout, {
-        shouldShow: l,
-        position: f,
-        align: p,
-        autoInvert: !1,
-        onRequestClose: u,
+    return (0, i.jsx)(a.yRy, {
+        shouldShow: o,
+        position: d,
+        align: f,
+        onRequestClose: l,
         renderPopout: (e) => {
-            let { closePopout: r } = e;
+            let { closePopout: n } = e;
             return (0, i.jsx)(s.Z, {
-                analyticsOverride: c,
-                channel: n,
-                closePopout: r,
-                onSelectEmoji: _,
-                pickerIntention: d,
+                analyticsOverride: u,
+                channel: t,
+                closePopout: n,
+                onSelectEmoji: p,
+                pickerIntention: c,
                 includeCreateEmojiButton: !1
             });
         },
-        children: h
+        children: _
     });
 }

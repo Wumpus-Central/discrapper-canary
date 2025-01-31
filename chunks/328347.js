@@ -1,54 +1,55 @@
 let i;
-var a,
-    o = r(442837),
-    s = r(570140);
-function l(e, n, r) {
+n.d(t, { Z: () => h });
+var r,
+    a = n(442837),
+    s = n(570140);
+function o(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let u = [],
-    c = u,
-    d = null,
+let l = [],
+    u = l,
+    c = null,
+    d = (e) => {
+        var t, n;
+        (u = null !== (t = e.analyticsLocations) && void 0 !== t ? t : l), (c = null !== (n = e.analyticsSource) && void 0 !== n ? n : null), (i = e.initialProductSkuId);
+    },
     f = (e) => {
-        var n, r;
-        (c = null !== (n = e.analyticsLocations) && void 0 !== n ? n : u), (d = null !== (r = e.analyticsSource) && void 0 !== r ? r : null), (i = e.initialProductSkuId);
+        (u = l), (c = null);
     },
-    p = (e) => {
-        (c = u), (d = null);
-    },
-    h = (e) => {
+    _ = (e) => {
         e.item.skuId === i && (i = void 0);
     };
-class _ extends (a = o.ZP.Store) {
+class p extends (r = a.ZP.Store) {
     get analyticsLocations() {
-        return c;
+        return u;
     }
     get analyticsSource() {
-        return d;
+        return c;
     }
     get initialProductSkuId() {
         return i;
     }
     getAnalytics() {
         return {
-            analyticsLocations: c,
-            analyticsSource: d
+            analyticsLocations: u,
+            analyticsSource: c
         };
     }
 }
-l(_, 'displayName', 'CollectiblesShopStore'),
-    (n.Z = new _(s.Z, {
-        COLLECTIBLES_SHOP_OPEN: f,
-        COLLECTIBLES_SHOP_CLOSE: p,
-        COLLECTIBLES_PRODUCT_DETAILS_OPEN: h,
-        LOGOUT: p
-    }));
+o(p, 'displayName', 'CollectiblesShopStore');
+let h = new p(s.Z, {
+    COLLECTIBLES_SHOP_OPEN: d,
+    COLLECTIBLES_SHOP_CLOSE: f,
+    COLLECTIBLES_PRODUCT_DETAILS_OPEN: _,
+    LOGOUT: f
+});

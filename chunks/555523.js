@@ -1,17 +1,12 @@
-n.r(r),
-    n.d(r, {
-        default: function () {
-            return a;
-        }
-    });
-var e = n(200651);
-n(192379);
-var i = n(481060);
-function a(t) {
-    let { body: r, ...n } = t;
-    return (0, e.jsx)(i.ConfirmModal, {
-        ...n,
-        children: (0, e.jsx)(i.Text, {
+e.d(r, { default: () => d });
+var n = e(200651);
+e(192379);
+var a = e(481060);
+function d(t) {
+    let { body: r, ...e } = t;
+    return (0, n.jsx)(a.ConfirmModal, {
+        ...e,
+        children: (0, n.jsx)(a.Text, {
             variant: 'text-md/normal',
             color: 'text-muted',
             children: r

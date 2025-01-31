@@ -1,40 +1,35 @@
-a.r(t),
-    a.d(t, {
-        default: function () {
-            return u;
-        }
-    });
-var e = a(200651);
+a.d(n, { default: () => h });
+var i = a(200651);
 a(192379);
-var i = a(852229),
-    l = a(481060),
-    c = a(239091),
-    r = a(198620),
-    s = a(388032);
-function u(n) {
-    let { attachmentUrl: t, attachmentName: a, onSelect: u } = n;
-    return (0, e.jsx)(l.Menu, {
+var l = a(852229),
+    c = a(481060),
+    e = a(239091),
+    s = a(198620),
+    r = a(388032);
+function h(t) {
+    let { attachmentUrl: n, attachmentName: a, onSelect: h } = t;
+    return (0, i.jsx)(c.v2r, {
         navId: 'attachment-link-context',
-        onClose: c.Zy,
-        onSelect: u,
-        'aria-label': s.intl.string(s.t['5oIOLS']),
-        children: (0, e.jsxs)(
-            l.MenuGroup,
+        onClose: e.Zy,
+        onSelect: h,
+        'aria-label': r.intl.string(r.t['5oIOLS']),
+        children: (0, i.jsxs)(
+            c.kSQ,
             {
                 children: [
-                    (0, e.jsx)(l.MenuItem, {
+                    (0, i.jsx)(c.sNh, {
                         id: 'attachment-link-copy-link',
-                        label: s.intl.string(s.t.WqhZsr),
+                        label: r.intl.string(r.t.WqhZsr),
                         action: async () => {
-                            let n = await (0, r.B_)(t);
-                            (0, i.J)(null != n ? n : '');
+                            let t = await (0, s.B_)(n);
+                            (0, l.J)(null != t ? t : '');
                         }
                     }),
-                    (0, e.jsx)(l.MenuItem, {
+                    (0, i.jsx)(c.sNh, {
                         id: 'attachment-link-copy-name',
-                        label: s.intl.string(s.t.JrGD7O),
+                        label: r.intl.string(r.t.JrGD7O),
                         action: () => {
-                            (0, i.J)(null != a ? a : '');
+                            (0, l.J)(null != a ? a : '');
                         }
                     })
                 ]

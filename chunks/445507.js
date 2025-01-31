@@ -1,28 +1,12 @@
 n.d(t, {
-    Q3: function () {
-        return d;
-    },
-    Zl: function () {
-        return u;
-    },
-    mC: function () {
-        return a;
-    },
-    mU: function () {
-        return o;
-    },
-    qJ: function () {
-        return s;
-    },
-    u9: function () {
-        return r;
-    },
-    xQ: function () {
-        return c;
-    },
-    z5: function () {
-        return h;
-    }
+    Q3: () => u,
+    Zl: () => d,
+    mC: () => a,
+    mU: () => o,
+    qJ: () => s,
+    u9: () => r,
+    xQ: () => c,
+    z5: () => h
 });
 var i = n(704215),
     l = n(388032);
@@ -107,7 +91,7 @@ let s = {
             }
         ]
     },
-    u = {
+    d = {
         key: 'genshin-user',
         type: 'user',
         title: 'Preview new features for Genshin Impact players on Discord',
@@ -141,7 +125,7 @@ let s = {
             }
         ]
     },
-    d = {
+    u = {
         key: 'genshin-admin',
         type: 'guild',
         title: 'Interested in recruiting more Genshin Impact players for your server?',

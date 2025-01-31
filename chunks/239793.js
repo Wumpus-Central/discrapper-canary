@@ -1,14 +1,15 @@
 e.exports = {
-    ping: 'ping_c02c63',
-    smallPing: 'smallPing_c02c63',
-    rtcConnectionStatus: 'rtcConnectionStatus_c02c63',
-    rtcConnectionStatusConnected: 'rtcConnectionStatusConnected_c02c63 rtcConnectionStatusLabel_c02c63',
-    rtcConnectionStatusConnecting: 'rtcConnectionStatusConnecting_c02c63 rtcConnectionStatusLabel_c02c63',
-    rtcConnectionStatusError: 'rtcConnectionStatusError_c02c63 rtcConnectionStatusLabel_c02c63',
-    rtcConnectionQualityFine: 'rtcConnectionQualityFine_c02c63',
-    pingForeground: 'pingForeground_c02c63',
-    rtcConnectionQualityAverage: 'rtcConnectionQualityAverage_c02c63',
-    rtcConnectionQualityBad: 'rtcConnectionQualityBad_c02c63',
-    labelWrapper: 'labelWrapper_c02c63',
-    rtcConnectionStatusWrapper: 'rtcConnectionStatusWrapper_c02c63'
+    ping: 'ping__06d62',
+    smallPing: 'smallPing__06d62',
+    rtcConnectionStatus: 'rtcConnectionStatus__06d62',
+    rtcConnectionStatusLabel: 'rtcConnectionStatusLabel__06d62',
+    rtcConnectionStatusConnected: 'rtcConnectionStatusConnected__06d62 rtcConnectionStatusLabel__06d62',
+    rtcConnectionStatusConnecting: 'rtcConnectionStatusConnecting__06d62 rtcConnectionStatusLabel__06d62',
+    rtcConnectionStatusError: 'rtcConnectionStatusError__06d62 rtcConnectionStatusLabel__06d62',
+    rtcConnectionQualityFine: 'rtcConnectionQualityFine__06d62',
+    pingForeground: 'pingForeground__06d62',
+    rtcConnectionQualityAverage: 'rtcConnectionQualityAverage__06d62',
+    rtcConnectionQualityBad: 'rtcConnectionQualityBad__06d62',
+    labelWrapper: 'labelWrapper__06d62',
+    rtcConnectionStatusWrapper: 'rtcConnectionStatusWrapper__06d62'
 };

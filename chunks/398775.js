@@ -1,74 +1,70 @@
 n.d(t, {
-    Sz: function () {
-        return S;
-    },
-    of: function () {
-        return T;
-    }
+    Sz: () => N,
+    of: () => T
 }),
     n(653041),
     n(47120);
 var i = n(200651),
-    r = n(192379),
-    s = n(913527),
-    a = n.n(s),
-    l = n(99945),
+    s = n(192379),
+    r = n(913527),
+    l = n.n(r),
+    a = n(99945),
     o = n(780384),
     c = n(481060),
     d = n(355467),
     u = n(493773),
     m = n(410030),
-    g = n(906732),
-    h = n(600164),
-    p = n(296848),
+    h = n(906732),
+    g = n(600164),
+    _ = n(296848),
     x = n(798769),
-    f = n(981631),
+    p = n(981631),
     E = n(388032),
-    _ = n(612711);
-async function C(e) {
-    let { premiumSubscription: t, pauseDuration: n, onClose: i, setHasError: r, setIsCancelling: s, analyticsLocations: a, analyticsLocation: l } = e;
+    C = n(612711);
+async function f(e) {
+    let { premiumSubscription: t, pauseDuration: n, onClose: i, setHasError: s, setIsCancelling: r, analyticsLocations: l, analyticsLocation: a } = e;
     try {
-        s(!0), r(!1), await (0, d.Mg)(t, { pauseDuration: n }, a, l), i();
+        r(!0), s(!1), await (0, d.Mg)(t, { pauseDuration: n }, l, a), i();
     } catch {
-        r(!0), s(!1);
+        s(!0), r(!1);
     }
 }
 function T(e) {
-    let { premiumType: t, onClose: n, pauseDuration: s, setPauseDuration: a, footer: o, premiumSubscription: d } = e,
-        m = r.useCallback(
+    let { premiumType: t, onClose: n, pauseDuration: r, setPauseDuration: l, footer: o, premiumSubscription: d } = e,
+        m = s.useCallback(
             (e) => {
                 let { value: t } = e;
-                a(t);
+                l(t);
             },
-            [a]
+            [l]
         ),
-        g = d.status === f.O0b.PAUSED ? E.intl.string(E.t.Lp9WoK) : E.intl.string(E.t.eSR83d),
-        C = (function (e) {
-            let t = e.status === f.O0b.PAUSED ? E.t.o3upfX : E.t.dBXZEh,
-                { durations: n, currentDaysPaused: i } = (0, p.AT)(e),
-                r = [];
+        h = d.status === p.O0b.PAUSED ? E.intl.string(E.t.Lp9WoK) : E.intl.string(E.t.eSR83d),
+        f = (function (e) {
+            let t = e.status === p.O0b.PAUSED ? E.t.o3upfX : E.t.dBXZEh,
+                { durations: n, currentDaysPaused: i } = (0, _.AT)(e),
+                s = [];
             for (let e of n) {
-                let n = l.T[e];
-                r.push({
+                let n = a.T[e];
+                s.push({
                     name: E.intl.formatToPlainString(t, { days: n - i }),
                     value: n,
-                    radioItemIconClassName: _.radioOption
+                    radioItemIconClassName: C.radioOption
                 });
             }
             return (
-                r.sort((e, t) => e.value - t.value),
-                r.push({
+                s.sort((e, t) => e.value - t.value),
+                s.push({
                     name: E.intl.string(E.t.OCPUMz),
                     value: 0,
-                    radioBarClassName: _.cancelText,
-                    radioItemIconClassName: _.cancelText
+                    radioBarClassName: C.cancelText,
+                    radioItemIconClassName: C.cancelText
                 }),
-                r
+                s
             );
         })(d);
     return (
         (0, u.Z)(() => {
-            if (!(C.length < 1)) a(C[0].value);
+            !(f.length < 1) && l(f[0].value);
         }),
         (0, i.jsxs)(i.Fragment, {
             children: [
@@ -76,126 +72,126 @@ function T(e) {
                     premiumType: t,
                     onClose: n
                 }),
-                (0, i.jsx)(c.ModalHeader, {
+                (0, i.jsx)(c.xBx, {
                     separator: !1,
                     children: (0, i.jsxs)('div', {
-                        className: _.__invalid_header,
+                        className: C.__invalid_header,
                         children: [
-                            (0, i.jsx)(c.Heading, {
+                            (0, i.jsx)(c.X6q, {
                                 variant: 'heading-xl/bold',
-                                className: _.__invalid_modalHeader,
+                                className: C.__invalid_modalHeader,
                                 children: E.intl.string(E.t.f3nnBw)
                             }),
-                            (0, i.jsx)(c.Heading, {
+                            (0, i.jsx)(c.X6q, {
                                 variant: 'heading-sm/medium',
-                                className: _.subtitle,
-                                children: g
+                                className: C.subtitle,
+                                children: h
                             })
                         ]
                     })
                 }),
-                (0, i.jsx)(c.ModalContent, {
-                    className: _.body,
-                    children: (0, i.jsx)(c.RadioGroup, {
-                        options: C,
+                (0, i.jsx)(c.hzk, {
+                    className: C.body,
+                    children: (0, i.jsx)(c.FXm, {
+                        options: f,
                         onChange: m,
-                        value: s
+                        value: r
                     })
                 }),
-                (0, i.jsx)(c.ModalFooter, {
-                    justify: h.Z.Justify.START,
+                (0, i.jsx)(c.mzw, {
+                    justify: g.Z.Justify.START,
                     children: o
                 })
             ]
         })
     );
 }
-function S(e) {
-    let { premiumSubscription: t, premiumType: n, onClose: s, pauseDuration: l, analyticsLocation: d } = e,
-        [u, p] = r.useState(!1),
-        { analyticsLocations: T } = (0, g.ZP)(),
-        [S, b] = r.useState(!1),
-        I = (0, m.ZP)(),
-        N = null,
+function N(e) {
+    let { premiumSubscription: t, premiumType: n, onClose: r, pauseDuration: a, analyticsLocation: d } = e,
+        [u, _] = s.useState(!1),
+        { analyticsLocations: T } = (0, h.ZP)(),
+        [N, I] = s.useState(!1),
+        S = (0, m.ZP)(),
+        b = null,
         v = null,
-        A = [f.O0b.PAST_DUE, f.O0b.PAUSED].includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd,
-        j = a()(A).add(l, 'days').toDate();
+        j = [p.O0b.PAST_DUE, p.O0b.PAUSED].includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd,
+        A = l()(j).add(a, 'days').toDate();
     switch (t.status) {
-        case f.O0b.PAST_DUE:
+        case p.O0b.PAST_DUE:
             v = E.intl.format(E.t['xaS18/'], {
-                pauseDuration: l,
-                resumeDate: j
+                pauseDuration: a,
+                resumeDate: A
             });
             break;
-        case f.O0b.PAUSED:
-            v = E.intl.format(E.t.Vur3FR, { resumeDate: j });
+        case p.O0b.PAUSED:
+            v = E.intl.format(E.t.Vur3FR, { resumeDate: A });
             break;
         default:
             v = E.intl.format(E.t.W85vFB, {
-                pauseDate: A,
-                resumeDate: j,
-                pauseDuration: l
+                pauseDate: j,
+                resumeDate: A,
+                pauseDuration: a
             });
     }
     return (
-        (N = (0, i.jsx)('div', {
-            className: _.body,
+        (b = (0, i.jsx)('div', {
+            className: C.body,
             children: v
         })),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(x.Z, {
                     premiumType: n,
-                    onClose: s
+                    onClose: r
                 }),
-                (0, i.jsx)(c.ModalHeader, {
+                (0, i.jsx)(c.xBx, {
                     separator: !1,
                     children: (0, i.jsx)('div', {
-                        className: _.__invalid_header,
-                        children: (0, i.jsx)(c.Heading, {
+                        className: C.__invalid_header,
+                        children: (0, i.jsx)(c.X6q, {
                             variant: 'heading-xl/bold',
-                            className: _.__invalid_modalHeader,
+                            className: C.__invalid_modalHeader,
                             children: E.intl.string(E.t['AnMG5+'])
                         })
                     })
                 }),
-                (0, i.jsxs)(c.ModalContent, {
-                    className: _.body,
+                (0, i.jsxs)(c.hzk, {
+                    className: C.body,
                     children: [
                         u
-                            ? (0, i.jsx)(c.FormErrorBlock, {
-                                  className: _.errorBlock,
+                            ? (0, i.jsx)(c.kzN, {
+                                  className: C.errorBlock,
                                   children: E.intl.string(E.t['5mlOCQ'])
                               })
                             : null,
-                        N
+                        b
                     ]
                 }),
-                (0, i.jsx)(c.ModalFooter, {
-                    justify: h.Z.Justify.START,
+                (0, i.jsx)(c.mzw, {
+                    justify: g.Z.Justify.START,
                     children: (0, i.jsxs)('div', {
-                        className: _.whatYouLoseButtonContainer,
+                        className: C.whatYouLoseButtonContainer,
                         children: [
-                            (0, i.jsx)(c.Button, {
-                                color: c.Button.Colors.RED,
-                                disabled: S || null == l,
+                            (0, i.jsx)(c.zxk, {
+                                color: c.zxk.Colors.RED,
+                                disabled: N || null == a,
                                 onClick: async () => {
-                                    await C({
+                                    await f({
                                         premiumSubscription: t,
-                                        pauseDuration: l,
-                                        setIsCancelling: b,
-                                        setHasError: p,
-                                        onClose: s,
+                                        pauseDuration: a,
+                                        setIsCancelling: I,
+                                        setHasError: _,
+                                        onClose: r,
                                         analyticsLocations: T,
                                         analyticsLocation: d
                                     });
                                 },
                                 children: E.intl.string(E.t['cY+Ooa'])
                             }),
-                            (0, i.jsx)(c.Button, {
-                                look: c.Button.Looks.LINK,
-                                color: (0, o.wj)(I) ? c.Button.Colors.WHITE : c.Button.Colors.PRIMARY,
-                                onClick: s,
+                            (0, i.jsx)(c.zxk, {
+                                look: c.zxk.Looks.LINK,
+                                color: (0, o.wj)(S) ? c.zxk.Colors.WHITE : c.zxk.Colors.PRIMARY,
+                                onClick: r,
                                 children: E.intl.string(E.t.h9tkAA)
                             })
                         ]

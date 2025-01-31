@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
+n.d(t, { Z: () => c });
 var i = n(200651);
 n(192379);
 var r = n(442837),
@@ -22,23 +18,23 @@ function c(e) {
     return (0, i.jsxs)('div', {
         className: o.container,
         children: [
-            (0, i.jsx)(l.Heading, {
+            (0, i.jsx)(l.X6q, {
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
                 children: 'Monetization Temporarily Disabled'
             }),
-            (0, i.jsx)(l.Spacer, { size: 24 }),
+            (0, i.jsx)(l.LZC, { size: 24 }),
             (0, i.jsx)(l.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
                 children: "This server is overdue for accepting our new terms of service so we've had to temporarily suspend monetization. Don't worry, existing subscribers can still access their benefits and renew their subscription. However, new subscriptions cannot be made until the owner accepts our new terms of service."
             }),
-            (0, i.jsx)(l.Spacer, { size: 24 }),
-            (0, i.jsx)(l.Tooltip, {
+            (0, i.jsx)(l.LZC, { size: 24 }),
+            (0, i.jsx)(l.ua7, {
                 text: 'Only the server owner can accept new terms',
                 shouldShow: !n,
                 children: (e) =>
-                    (0, i.jsx)(l.Button, {
+                    (0, i.jsx)(l.zxk, {
                         disabled: !n,
                         ...e,
                         onClick: c,

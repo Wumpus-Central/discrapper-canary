@@ -1,10 +1,11 @@
 e.exports = {
-    container: 'container_a1db3b',
-    iconContainer: 'iconContainer_a1db3b',
-    icon: 'icon_a1db3b',
-    foreground: 'foreground_a1db3b',
-    avatarSize: 'avatarSize_a1db3b',
-    emptyUser: 'emptyUser_a1db3b',
-    avatarMasked: 'avatarMasked_a1db3b avatar_a1db3b',
-    moreUsers: 'moreUsers_a1db3b'
+    container: 'container_b2d72f',
+    iconContainer: 'iconContainer_b2d72f',
+    icon: 'icon_b2d72f',
+    foreground: 'foreground_b2d72f',
+    avatar: 'avatar_b2d72f',
+    avatarSize: 'avatarSize_b2d72f',
+    emptyUser: 'emptyUser_b2d72f',
+    avatarMasked: 'avatarMasked_b2d72f avatar_b2d72f',
+    moreUsers: 'moreUsers_b2d72f'
 };

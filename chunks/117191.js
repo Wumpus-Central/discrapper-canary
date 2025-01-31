@@ -1,7 +1,8 @@
-e.exports = {
-    container: 'container_ecc1b2',
-    buttonContainer: 'buttonContainer_ecc1b2',
-    button: 'button_ecc1b2',
-    color: 'color_ecc1b2',
-    gameIcon: 'gameIcon_ecc1b2'
+var i = {
+    container: 'container__43a4b',
+    buttonContainer: 'buttonContainer__43a4b',
+    button: 'button__43a4b',
+    color: 'color__43a4b',
+    gameIcon: 'gameIcon__43a4b'
 };
+e.exports = i;

@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return m;
-    }
-});
+n.d(t, { Z: () => m });
 var i = n(200651);
 n(192379);
 var r = n(481060),
@@ -31,7 +27,7 @@ function u(e) {
             (0, i.jsxs)('div', {
                 className: d.actionTextContainer,
                 children: [
-                    (0, i.jsx)(r.Heading, {
+                    (0, i.jsx)(r.X6q, {
                         variant: 'heading-sm/semibold',
                         children: c
                     }),
@@ -43,9 +39,9 @@ function u(e) {
                 ]
             }),
             (0, i.jsx)('div', {
-                children: (0, i.jsx)(r.Checkbox, {
+                children: (0, i.jsx)(r.XZJ, {
                     disabled: !o.isEditable,
-                    type: r.Checkbox.Types.INVERTED,
+                    type: r.XZJ.Types.INVERTED,
                     value: s,
                     onChange: () => a(!1),
                     className: d.__invalid_actionCheckbox

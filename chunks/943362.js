@@ -1,62 +1,58 @@
-r.d(n, {
-    Z: function () {
-        return g;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(481060),
-    l = r(239091),
-    u = r(782568),
-    c = r(364640),
-    d = r(124072),
-    f = r(198620),
-    p = r(746878),
-    h = r(981631),
-    _ = r(694206),
-    m = r(400357);
-function g(e) {
+n.d(t, { Z: () => m });
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(481060),
+    o = n(239091),
+    l = n(782568),
+    u = n(364640),
+    c = n(124072),
+    d = n(198620),
+    f = n(746878),
+    _ = n(981631),
+    p = n(694206),
+    h = n(400357);
+function m(e) {
     return {
-        react(n, a, g) {
-            let E = g.noStyleAndInteraction
+        react(t, r, m) {
+            let g = m.noStyleAndInteraction
                     ? void 0
-                    : async (r) => {
-                          let i = await (0, f.B_)(n.attachmentUrl);
-                          e.shouldStopPropagation && (null == r || r.stopPropagation()), c.Z.trackLinkClicked(i), e.shouldCloseDefaultModals && (0, s.closeAllModals)(), (0, u.Z)(i);
+                    : async (n) => {
+                          let i = await (0, d.B_)(t.attachmentUrl);
+                          e.shouldStopPropagation && (null == n || n.stopPropagation()), u.Z.trackLinkClicked(i), e.shouldCloseDefaultModals && (0, s.pTH)(), (0, l.Z)(i);
                       },
-                v = g.noStyleAndInteraction
-                    ? h.dG4
+                E = m.noStyleAndInteraction
+                    ? _.dG4
                     : (e) => {
-                          (0, l.jW)(e, async () => {
-                              let { default: e } = await r.e('98466').then(r.bind(r, 151578));
-                              return (r) =>
+                          (0, o.jW)(e, async () => {
+                              let { default: e } = await n.e('98466').then(n.bind(n, 151578));
+                              return (n) =>
                                   (0, i.jsx)(e, {
-                                      ...r,
-                                      attachmentUrl: n.attachmentUrl,
-                                      attachmentName: n.attachmentName
+                                      ...n,
+                                      attachmentUrl: t.attachmentUrl,
+                                      attachmentName: t.attachmentName
                                   });
                           });
                       };
             return (0, i.jsxs)(
-                d.Z,
+                c.Z,
                 {
                     role: 'link',
-                    href: n.attachmentUrl,
-                    onClick: E,
-                    onContextMenu: v,
+                    href: t.attachmentUrl,
+                    onClick: g,
+                    onContextMenu: E,
                     className: 'attachmentLink',
                     children: [
-                        (0, i.jsx)(s.AttachmentIcon, {
+                        (0, i.jsx)(s.Ujz, {
                             size: 'xs',
-                            className: o()(m.icon, _.icon),
-                            color: s.tokens.colors.MENTION_FOREGROUND
+                            className: a()(h.icon, p.icon),
+                            color: s.TVs.colors.MENTION_FOREGROUND
                         }),
-                        (0, p.S)(n, a, g)
+                        (0, f.S)(t, r, m)
                     ]
                 },
-                g.key
+                m.key
             );
         }
     };

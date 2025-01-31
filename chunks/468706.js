@@ -1,37 +1,33 @@
-n.d(t, {
-    e: function () {
-        return u;
-    }
-});
+n.d(t, { e: () => d });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(240872),
-    a = n(923500),
-    o = n(247206),
-    s = n(774863),
+var l = n(481060),
+    a = n(240872),
+    r = n(923500),
+    s = n(247206),
+    o = n(774863),
     c = n(388032);
-function u(e, t) {
+function d(e, t) {
     if (
-        ((0, o.aP)({
-            action: o.Yy.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_BUTTON_CLICKED,
+        ((0, s.aP)({
+            action: s.Yy.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_BUTTON_CLICKED,
             messageId: t,
             channelId: e
         }),
-        !s.Z.canSubmitFpReport(t))
+        !o.Z.canSubmitFpReport(t))
     ) {
-        l.Z.show({
+        a.Z.show({
             title: c.intl.string(c.t['iS/eFB']),
             body: c.intl.string(c.t.YrjcgY),
             confirmText: c.intl.string(c.t.BddRzc)
         }),
-            a.Z.disableFalsePositiveButton(e, t);
+            r.Z.disableFalsePositiveButton(e, t);
         return;
     }
-    (0, r.openModalLazy)(async () => {
-        let { default: r } = await n(773276);
+    (0, l.ZDy)(async () => {
+        let { default: l } = await n(773276);
         return (n) =>
-            (0, i.jsx)(r, {
+            (0, i.jsx)(l, {
                 channelId: e,
                 messageId: t,
                 ...n

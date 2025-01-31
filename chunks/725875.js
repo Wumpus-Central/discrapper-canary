@@ -1,33 +1,27 @@
-n.d(t, {
-    Z: function () {
-        return g;
-    }
-}),
-    n(653041),
-    n(47120);
+n.d(t, { Z: () => p }), n(653041), n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(481060),
-    a = n(139387),
-    o = n(933557),
-    s = n(699516),
+    a = n(481060),
+    r = n(139387),
+    s = n(933557),
+    o = n(699516),
     d = n(594174),
     c = n(491302),
     u = n(936726),
     m = n(981631),
     h = n(388032),
-    p = n(669379);
-function g(e) {
-    let { webhooks: t, selectableWebhookChannels: n, lastCreatedWebhookId: g, editedWebhook: x, errors: f, canNavigate: v } = e,
-        b = l.useMemo(
+    x = n(669379);
+function p(e) {
+    let { webhooks: t, selectableWebhookChannels: n, lastCreatedWebhookId: p, editedWebhook: g, errors: f, canNavigate: b } = e,
+        v = l.useMemo(
             () =>
                 Object.values(n).map((e) => ({
                     value: e.id,
-                    label: (0, o.F6)(e, d.default, s.Z, !0)
+                    label: (0, s.F6)(e, d.default, o.Z, !0)
                 })),
             [n]
         ),
-        C = l.useMemo(() => {
+        _ = l.useMemo(() => {
             let e = {};
             for (let i of t)
                 if (i.channel_id in e) e[i.channel_id].webhooks.push(i);
@@ -41,31 +35,31 @@ function g(e) {
                 }
             return Object.values(e).sort((e, t) => e.channel.name.localeCompare(t.channel.name));
         }, [n, t]),
-        I = l.useCallback(
+        j = l.useCallback(
             (e) => {
-                v() && (e === (null == x ? void 0 : x.id) ? a.Z.stopEditingWebhook() : a.Z.startEditingWebhook(e));
+                b() && (e === (null == g ? void 0 : g.id) ? r.Z.stopEditingWebhook() : r.Z.startEditingWebhook(e));
             },
-            [v, x]
+            [b, g]
         );
     return (0, i.jsx)('div', {
-        className: p.__invalid_list,
-        children: C.map((e) => {
+        className: x.__invalid_list,
+        children: _.map((e) => {
             let { channel: t, webhooks: n } = e;
             return (function (e) {
-                let { channel: t, webhooks: n, channelOptions: l, lastCreatedWebhookId: a, editedWebhook: g, errors: x, toggleWebhookExpand: f } = e;
+                let { channel: t, webhooks: n, channelOptions: l, lastCreatedWebhookId: r, editedWebhook: p, errors: g, toggleWebhookExpand: f } = e;
                 return (0, i.jsxs)(
                     'div',
                     {
                         children: [
-                            (0, i.jsx)(r.FormTitle, {
-                                className: p.groupHeader,
+                            (0, i.jsx)(a.vwX, {
+                                className: x.groupHeader,
                                 children: h.intl.format(h.t.TKDIZm, {
                                     channelHook: () =>
                                         (0, i.jsx)(
                                             'span',
                                             {
-                                                className: p.channelName,
-                                                children: (0, o.F6)(t, d.default, s.Z, !0)
+                                                className: x.channelName,
+                                                children: (0, s.F6)(t, d.default, o.Z, !0)
                                             },
                                             t.id
                                         )
@@ -73,33 +67,33 @@ function g(e) {
                             }),
                             n.map((e) => {
                                 var t;
-                                if (e.type === m.ylB.CHANNEL_FOLLOWER)
-                                    return (0, i.jsx)(
-                                        c.Z,
-                                        {
-                                            webhook: e,
-                                            editedWebhook: g,
-                                            channelOptions: l,
-                                            isExpanded: (null == g ? void 0 : g.id) === e.id,
-                                            onToggleExpand: () => f(e.id),
-                                            errors: x
-                                        },
-                                        e.id
-                                    );
-                                return (0, i.jsx)(
-                                    u.Z,
-                                    {
-                                        id: ((t = e.id), 'settings-integrations-webhook-'.concat(t)),
-                                        webhook: e,
-                                        editedWebhook: g,
-                                        channelOptions: l,
-                                        isExpanded: (null == g ? void 0 : g.id) === e.id,
-                                        isNew: a === e.id,
-                                        onToggleExpand: () => f(e.id),
-                                        errors: x
-                                    },
-                                    e.id
-                                );
+                                return e.type === m.ylB.CHANNEL_FOLLOWER
+                                    ? (0, i.jsx)(
+                                          c.Z,
+                                          {
+                                              webhook: e,
+                                              editedWebhook: p,
+                                              channelOptions: l,
+                                              isExpanded: (null == p ? void 0 : p.id) === e.id,
+                                              onToggleExpand: () => f(e.id),
+                                              errors: g
+                                          },
+                                          e.id
+                                      )
+                                    : (0, i.jsx)(
+                                          u.Z,
+                                          {
+                                              id: ((t = e.id), 'settings-integrations-webhook-'.concat(t)),
+                                              webhook: e,
+                                              editedWebhook: p,
+                                              channelOptions: l,
+                                              isExpanded: (null == p ? void 0 : p.id) === e.id,
+                                              isNew: r === e.id,
+                                              onToggleExpand: () => f(e.id),
+                                              errors: g
+                                          },
+                                          e.id
+                                      );
                             })
                         ]
                     },
@@ -108,11 +102,11 @@ function g(e) {
             })({
                 channel: t,
                 webhooks: n,
-                channelOptions: b,
-                lastCreatedWebhookId: g,
-                editedWebhook: x,
+                channelOptions: v,
+                lastCreatedWebhookId: p,
+                editedWebhook: g,
                 errors: f,
-                toggleWebhookExpand: I
+                toggleWebhookExpand: j
             });
         })
     });

@@ -1,128 +1,126 @@
-n(653041), n(47120);
+n.d(t, { Z: () => x }), n(653041), n(47120);
 var i,
     l,
-    r,
     a,
-    s = n(442837),
-    o = n(570140),
-    c = n(633302),
-    u = n(594174),
-    d = n(176354),
-    m = n(984063),
-    f = n(88315),
-    p = n(813900);
-let h = {},
+    r = n(442837),
+    s = n(570140),
+    o = n(633302),
+    c = n(594174),
+    u = n(176354),
+    d = n(984063),
+    m = n(88315),
+    f = n(813900);
+let p = {},
+    h = {},
     g = {},
-    v = {},
-    S = !0,
-    I = null;
-function x(e) {
-    if (null == g[e]) {
-        let t = u.default.getUser(e);
+    v = !0,
+    _ = null;
+function S(e) {
+    if (null == h[e]) {
+        let t = c.default.getUser(e);
         if (null == t) return;
-        let n = t.getAvatarURL(null, p.Ks),
+        let n = t.getAvatarURL(null, f.Ks),
             i = new Image();
-        (i.src = n), (g[e] = i);
+        (i.src = n), (h[e] = i);
     }
 }
-class _ extends (i = s.ZP.Store) {
+class I extends (i = r.ZP.Store) {
     get visibleOverlayCanvas() {
-        return S;
+        return v;
     }
     getDrawables(e) {
-        return null != h[e] ? h[e] : [];
+        return null != p[e] ? p[e] : [];
     }
     getAvatarImage(e) {
-        return g[e];
+        return h[e];
     }
     getEmojiImage(e) {
-        return v[e];
+        return g[e];
     }
     getDrawMode() {
-        return I;
+        return _;
     }
 }
 (a = 'SharedCanvasStore'),
-    (r = 'displayName') in (l = _)
-        ? Object.defineProperty(l, r, {
+    (l = 'displayName') in I
+        ? Object.defineProperty(I, l, {
               value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[r] = a);
-let C = new _(o.Z, {
+        : (I[l] = a);
+let x = new I(s.Z, {
     SHARED_CANVAS_UPDATE_LINE_POINTS: function (e) {
         let { lineId: t, newPoints: n, userId: i, streamerId: l } = e,
-            r = h[l];
-        if (null == r)
-            h[l] = [
+            a = p[l];
+        if (null == a)
+            p[l] = [
                 {
-                    type: m.W.LINE,
+                    type: d.W.LINE,
                     id: t,
                     userId: i,
                     points: n
                 }
             ];
         else {
-            let e = r.find((e) => e.id === t);
+            let e = a.find((e) => e.id === t);
             null == e
-                ? r.push({
-                      type: m.W.LINE,
+                ? a.push({
+                      type: d.W.LINE,
                       id: t,
                       userId: i,
                       points: n
                   })
-                : (0, f.P7)(e) && e.points.push(...n);
+                : (0, m.P7)(e) && e.points.push(...n);
         }
-        x(i);
+        S(i);
     },
     SHARED_CANVAS_UPDATE_EMOJI_HOSE: function (e) {
         var t, n, i;
-        let { emojiHose: l, streamerId: r, userId: a } = e,
+        let { emojiHose: l, streamerId: a, userId: r } = e,
             s = {
                 ...l,
-                type: m.W.EMOJI_HOSE
+                type: d.W.EMOJI_HOSE
             };
-        if (null == h[r]) h[r] = [s];
+        if (null == p[a]) p[a] = [s];
         else {
-            let e = h[r].findIndex((e) => e.id === l.id);
+            let e = p[a].findIndex((e) => e.id === l.id);
             e >= 0
-                ? (h[r][e] = {
-                      ...h[r][e],
+                ? (p[a][e] = {
+                      ...p[a][e],
                       ...s
                   })
-                : h[r].push(s);
+                : p[a].push(s);
         }
-        let o = null !== (n = null !== (t = l.emojiId) && void 0 !== t ? t : l.emojiName) && void 0 !== n ? n : '';
-        if (null == v[o]) {
-            let e = null != l.emojiName ? c.ZP.convertNameToSurrogate(l.emojiName) : null;
-            (v[o] = new Image()),
-                (v[o].src = (0, d.qc)(
+        let c = null !== (n = null !== (t = l.emojiId) && void 0 !== t ? t : l.emojiName) && void 0 !== n ? n : '';
+        if (null == g[c]) {
+            let e = null != l.emojiName ? o.ZP.convertNameToSurrogate(l.emojiName) : null;
+            (g[c] = new Image()),
+                (g[c].src = (0, u.qc)(
                     {
                         id: l.emojiId,
                         name: null !== (i = null != e ? e : l.emojiName) && void 0 !== i ? i : '',
                         animated: !1
                     },
-                    p.qh
+                    f.qh
                 ));
         }
-        x(a);
+        S(r);
     },
     SHARED_CANVAS_CLEAR_DRAWABLES: function (e) {
         let { drawables: t, streamerId: n } = e;
-        if (null != h[n]) {
+        if (null != p[n]) {
             let e = new Set();
-            t.forEach((t) => e.add(t.id)), (h[n] = h[n].filter((t) => !e.has(t.id)));
+            t.forEach((t) => e.add(t.id)), (p[n] = p[n].filter((t) => !e.has(t.id)));
         }
     },
     SHARED_CANVAS_SET_DRAW_MODE: function (e) {
         let { drawMode: t } = e;
-        I = t;
+        _ = t;
     },
     TOGGLE_OVERLAY_CANVAS: function (e) {
         let {} = e;
-        S = !S;
+        v = !v;
     }
 });
-t.Z = C;

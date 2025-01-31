@@ -1,14 +1,15 @@
 e.exports = {
-    tabs: 'tabs_f566d4',
-    separator: 'separator_f566d4',
-    tabPageLarge: 'tabPageLarge_f566d4 tab_f566d4',
-    tabPageSmall: 'tabPageSmall_f566d4 tab_f566d4',
-    tabNotSelected: 'tabNotSelected_f566d4',
-    requirementsContainer: 'requirementsContainer_f566d4',
-    requirements: 'requirements_f566d4',
-    requirement: 'requirement_f566d4',
-    requirementKey: 'requirementKey_f566d4',
-    tabSelected: 'tabSelected_f566d4',
-    tabNotSelectedColor: 'tabNotSelectedColor_f566d4',
-    tabSelectedColor: 'tabSelectedColor_f566d4'
+    tabs: 'tabs_f1dca0',
+    separator: 'separator_f1dca0',
+    tab: 'tab_f1dca0',
+    tabPageLarge: 'tabPageLarge_f1dca0 tab_f1dca0',
+    tabPageSmall: 'tabPageSmall_f1dca0 tab_f1dca0',
+    tabNotSelected: 'tabNotSelected_f1dca0',
+    requirementsContainer: 'requirementsContainer_f1dca0',
+    requirements: 'requirements_f1dca0',
+    requirement: 'requirement_f1dca0',
+    requirementKey: 'requirementKey_f1dca0',
+    tabSelected: 'tabSelected_f1dca0',
+    tabNotSelectedColor: 'tabNotSelectedColor_f1dca0',
+    tabSelectedColor: 'tabSelectedColor_f1dca0'
 };

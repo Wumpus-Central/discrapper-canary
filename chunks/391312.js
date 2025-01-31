@@ -1,43 +1,37 @@
-e.r(n),
-    e.d(n, {
-        default: function () {
-            return u;
-        }
-    }),
-    e(47120);
+e.d(n, { default: () => d }), e(47120);
 var r = e(200651),
-    o = e(192379),
-    i = e(433517),
-    c = e(481060),
-    a = e(818634),
-    s = e(388032),
+    i = e(192379),
+    o = e(433517),
+    a = e(481060),
+    s = e(818634),
+    c = e(388032),
     l = e(383192);
-function u(t) {
-    let [n, e] = o.useState(!1);
-    return (0, r.jsxs)(c.ConfirmModal, {
+function d(t) {
+    let [n, e] = i.useState(!1);
+    return (0, r.jsxs)(a.ConfirmModal, {
         ...t,
-        header: s.intl.string(s.t.pjYu09),
-        confirmText: s.intl.string(s.t.zVZXRU),
-        cancelText: s.intl.string(s.t['ETE/oK']),
+        header: c.intl.string(c.t.pjYu09),
+        confirmText: c.intl.string(c.t.zVZXRU),
+        cancelText: c.intl.string(c.t['ETE/oK']),
         onConfirm: () => {
-            (0, a.l)(!0);
+            (0, s.l)(!0);
         },
-        confirmButtonColor: c.Button.Colors.BRAND,
+        confirmButtonColor: a.zxk.Colors.BRAND,
         children: [
-            (0, r.jsx)(c.Text, {
+            (0, r.jsx)(a.Text, {
                 variant: 'text-md/normal',
-                children: s.intl.format(s.t['0eydys'], {})
+                children: c.intl.format(c.t['0eydys'], {})
             }),
-            (0, r.jsx)(c.Checkbox, {
+            (0, r.jsx)(a.XZJ, {
                 className: l.checkboxMargin,
-                type: c.Checkbox.Types.INVERTED,
+                type: a.XZJ.Types.INVERTED,
                 value: n,
                 onChange: () => {
-                    i.K.set('doNotShowReorderModal', JSON.stringify(!0)), e(!0);
+                    o.K.set('doNotShowReorderModal', JSON.stringify(!0)), e(!0);
                 },
-                children: (0, r.jsx)(c.Text, {
+                children: (0, r.jsx)(a.Text, {
                     variant: 'text-md/normal',
-                    children: s.intl.string(s.t['50TyjY'])
+                    children: c.intl.string(c.t['50TyjY'])
                 })
             })
         ]

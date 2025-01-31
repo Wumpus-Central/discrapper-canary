@@ -1,33 +1,29 @@
-t.d(e, {
-    H: function () {
-        return c;
-    }
-});
-var i = t(200651);
-t(192379);
-var r = t(442837),
-    l = t(481060),
-    u = t(378298),
-    a = t(359119),
-    o = t(832239),
-    d = t(594174),
-    s = t(388032);
+e.d(t, { H: () => c });
+var i = e(200651);
+e(192379);
+var l = e(442837),
+    r = e(481060),
+    a = e(378298),
+    s = e(359119),
+    d = e(832239),
+    u = e(594174),
+    o = e(388032);
 function c(n) {
-    let e = (0, r.e7)([d.default], () => d.default.getCurrentUser()),
-        t = (0, r.e7)([a.ZP], () => a.ZP.getChannelSafetyWarnings(n.id));
-    return (null == e ? void 0 : e.isStaff()) !== !0 || null == t || 0 === t.length
+    let t = (0, l.e7)([u.default], () => u.default.getCurrentUser()),
+        e = (0, l.e7)([s.ZP], () => s.ZP.getChannelSafetyWarnings(n.id));
+    return (null == t ? void 0 : t.isStaff()) !== !0 || null == e || 0 === e.length
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(l.MenuItem, {
+                  (0, i.jsx)(r.sNh, {
                       id: 'delete-safety-warnings',
-                      label: s.intl.string(s.t.g7o9bm),
-                      action: () => (0, o.Vp)(n.id)
+                      label: o.intl.string(o.t.g7o9bm),
+                      action: () => (0, d.Vp)(n.id)
                   }),
-                  (0, i.jsx)(l.MenuItem, {
+                  (0, i.jsx)(r.sNh, {
                       id: 'clear-safety-warnings',
-                      label: s.intl.string(s.t.VuSvGh),
-                      action: () => (0, u.wS)(n.id)
+                      label: o.intl.string(o.t.VuSvGh),
+                      action: () => (0, a.wS)(n.id)
                   })
               ]
           });

@@ -1,9 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return j;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => y }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(120356),
@@ -11,45 +6,45 @@ var i = n(200651),
     o = n(999153),
     s = n(642128),
     c = n(91192),
-    u = n(477690),
-    d = n(481060),
+    d = n(477690),
+    u = n(481060),
     h = n(153867),
     p = n(540059),
     m = n(771845),
-    f = n(624138),
-    g = n(727258),
-    v = n(276952),
-    C = n(199540),
+    g = n(624138),
+    f = n(727258),
+    _ = n(276952),
+    v = n(199540),
     x = n(40153),
-    I = n(252686),
-    _ = n(682662),
-    Z = n(662146),
+    C = n(252686),
+    Z = n(682662),
+    I = n(662146),
     b = n(388032),
     S = n(10448),
     N = n(284923);
-let E = (0, f.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
-    y = (0, s.animated)(d.Stack);
-function j(e) {
-    let { folderNode: t, setNodeRef: n, selected: r, expanded: s, mediaState: u, mentionCount: f = 0, isMentionLowImportance: j, unread: T = !1, defaultFolderName: A, useCircleMask: P = !1, draggable: w = !1, sorting: M = !1, onDragStart: L, onDragEnd: R, onExpandCollapse: D, onContextMenu: G, renderChildNode: k, folderIconContent: B, folderIconContentClassName: U } = e,
-        { id: O, name: V, children: H } = t,
-        F = (0, p.Q3)('FolderItem'),
+let E = (0, g.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
+    j = (0, s.animated)(u.Kqy);
+function y(e) {
+    let { folderNode: t, setNodeRef: n, selected: r, expanded: s, mediaState: d, mentionCount: g = 0, isMentionLowImportance: y, unread: P = !1, defaultFolderName: A, useCircleMask: T = !1, draggable: w = !1, sorting: R = !1, onDragStart: L, onDragEnd: M, onExpandCollapse: D, onContextMenu: G, renderChildNode: k, folderIconContent: B, folderIconContentClassName: O } = e,
+        { id: U, name: V, children: F } = t,
+        H = (0, p.Q3)('FolderItem'),
         [z, W] = l.useState(!1),
         [q, Y] = l.useState(!1),
         Q = z || q;
     l.useEffect(() => {
-        M && W(!1);
-    }, [M]);
-    let [{ dragging: K }, J] = (0, o.c)({
-            type: g.eD.FOLDER,
+        R && W(!1);
+    }, [R]);
+    let [{ dragging: J }, K] = (0, o.c)({
+            type: f.eD.FOLDER,
             item: () => (
                 null == L || L(),
                 {
-                    type: g.eD.FOLDER,
+                    type: f.eD.FOLDER,
                     nodeId: t.id
                 }
             ),
             end() {
-                null == R || R(), (0, h.V1)(m.ZP.getCompatibleGuildFolders());
+                null == M || M(), (0, h.V1)(m.ZP.getCompatibleGuildFolders());
             },
             collect: (e) => ({ dragging: e.isDragging() })
         }),
@@ -63,51 +58,51 @@ function j(e) {
             [D, s]
         ),
         ee = null != V && '' !== V ? V : null != A && '' !== A ? A : b.intl.string(b.t.xV9hVl),
-        et = (0, c.Ie)(''.concat(O)),
-        en = 'folder-items-'.concat(O),
+        et = (0, c.Ie)(''.concat(U)),
+        en = 'folder-items-'.concat(U),
         ei = (function (e) {
-            let t = (0, d.useToken)(d.tokens.modules.guildbar.AVATAR_SIZE),
+            let t = (0, u.dQu)(u.TVs.modules.guildbar.AVATAR_SIZE),
                 n = (0, p.Q3)('FolderItem.useHeight'),
-                { density: i } = (0, d.useThemeContext)();
+                { density: i } = (0, u.TCT)();
             if (!n) return e * (t + 8);
             let l = e * (t + ('cozy' === i ? 8 : 4));
             return 'cozy' === i ? l - 4 : l;
-        })(H.length),
-        el = (0, d.useTransition)(!K && s, {
+        })(F.length),
+        el = (0, u.Yzy)(!J && s, {
             from: { height: 0 },
             enter: { height: 1 },
             leave: { height: 0 },
             config: { duration: E }
         }),
-        er = l.useCallback((e) => (null == n ? void 0 : n(O, e)), [n, O]),
-        ea = (0, i.jsxs)(_.H, {
+        er = l.useCallback((e) => (null == n ? void 0 : n(U, e)), [n, U]),
+        ea = (0, i.jsxs)(Z.H, {
             children: [
-                (0, i.jsx)(v.Z, {
-                    disabled: K || s,
+                (0, i.jsx)(_.Z, {
+                    disabled: J || s,
                     hovered: z,
                     selected: r,
-                    unread: T,
+                    unread: P,
                     className: N.pill
                 }),
-                (0, i.jsx)(Z.Z, {
+                (0, i.jsx)(I.Z, {
                     text: ee,
-                    disabled: M,
+                    disabled: R,
                     selected: r,
                     disableWrapper: !0,
                     children: (0, i.jsx)('div', {
-                        ref: w ? J : void 0,
-                        className: a()(S.folderIcon, { [N.wobble]: !K && q && !s }),
+                        ref: w ? K : void 0,
+                        className: a()(S.folderIcon, { [N.wobble]: !J && q && !s }),
                         'data-dnd-name': ee,
-                        children: K
-                            ? (0, i.jsx)(I.Z, {})
-                            : (0, i.jsx)(C.Z, {
+                        children: J
+                            ? (0, i.jsx)(C.Z, {})
+                            : (0, i.jsx)(v.Z, {
                                   folderNode: t,
                                   expanded: s,
-                                  forceCircular: P,
-                                  sorting: M,
-                                  mediaState: u,
-                                  mentionCount: f,
-                                  isMentionLowImportance: j,
+                                  forceCircular: T,
+                                  sorting: R,
+                                  mediaState: d,
+                                  mentionCount: g,
+                                  isMentionLowImportance: y,
                                   tooltipName: ee,
                                   folderGroupId: en,
                                   onClick: D,
@@ -115,7 +110,7 @@ function j(e) {
                                   onHoverChange: W,
                                   onKeyDown: $,
                                   treeItemProps: et,
-                                  folderIconContentClassName: U,
+                                  folderIconContentClassName: O,
                                   folderIconContent: B
                               })
                     })
@@ -133,7 +128,7 @@ function j(e) {
         ref: er,
         className: a()(S.wrapper, s && S.isExpanded),
         children: [
-            !K &&
+            !J &&
                 s &&
                 (0, i.jsx)('span', {
                     className: a()(S.expandedFolderBackground, {
@@ -147,17 +142,17 @@ function j(e) {
                 return (
                     t &&
                     (0, i.jsx)(
-                        y,
+                        j,
                         {
                             as: 'ul',
-                            gap: F ? 'xxs' : 0,
+                            gap: H ? 'xxs' : 0,
                             id: en,
                             style: {
                                 height: e.height.to((e) => e * ei),
                                 overflow: 'hidden'
                             },
                             role: 'group',
-                            children: H.map((t) => k(t, e.height))
+                            children: F.map((t) => k(t, e.height))
                         },
                         l
                     )

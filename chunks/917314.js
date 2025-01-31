@@ -1,15 +1,10 @@
-e.r(n),
-    e.d(n, {
-        default: function () {
-            return g;
-        }
-    });
+e.d(n, { default: () => g });
 var o = e(200651);
 e(192379);
 var i = e(913527),
-    r = e.n(i),
-    s = e(848246),
-    a = e(442837),
+    s = e.n(i),
+    a = e(848246),
+    r = e(442837),
     l = e(230711),
     c = e(174609),
     d = e(114064),
@@ -21,9 +16,9 @@ var i = e(913527),
 function g(t) {
     let { onClose: n, ...i } = t,
         g = p.Z.useExperiment({ location: 'PerksDemoPostUpsellModal' }, { autoTrackExposure: !1 }).extendedDemoDuration,
-        L = (0, a.e7)([d.Z], () => {
-            let t = r()(d.Z.activatedEndTime(s.q.STREAM_HIGH_QUALITY));
-            return r().duration(t.diff(r()())).days();
+        L = (0, r.e7)([d.Z], () => {
+            let t = s()(d.Z.activatedEndTime(a.q.STREAM_HIGH_QUALITY));
+            return s().duration(t.diff(s()())).days();
         }),
         T = g ? (L < 1 ? f.intl.string(f.t.cRox19) : f.intl.formatToPlainString(f.t['5JlTZW'], { days: Math.floor(L) })) : f.intl.string(f.t.qLByR0);
     return (0, o.jsx)(u.Z, {

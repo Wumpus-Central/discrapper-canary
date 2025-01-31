@@ -1,13 +1,18 @@
-e.exports = {
-    presets: 'presets_f45ea6',
-    presetsJustify: 'presetsJustify_f45ea6',
-    header: 'header_f45ea6',
-    headings: 'headings_f45ea6',
-    upsellText: 'upsellText_f45ea6',
-    title: 'title_f45ea6',
-    description: 'description_f45ea6',
-    premiumIcon: 'premiumIcon_f45ea6',
-    nitroWheel: 'nitroWheel_f45ea6',
-    easterEggSelection: 'easterEggSelection_f45ea6',
-    sparkles: 'sparkles_f45ea6'
+var i = {
+    presets: 'presets__67a11',
+    presetsJustify: 'presetsJustify__67a11',
+    header: 'header__67a11',
+    headings: 'headings__67a11',
+    upsellText: 'upsellText__67a11',
+    title: 'title__67a11',
+    description: 'description__67a11',
+    nitroWheel: 'nitroWheel__67a11',
+    premiumIcon: 'premiumIcon__67a11',
+    easterEggSelection: 'easterEggSelection__67a11',
+    'scale-bounce-wiggle': 'scale-bounce-wiggle__67a11',
+    sparkles: 'sparkles__67a11',
+    fadeOut: 'fadeOut__67a11',
+    subtext: 'subtext__67a11',
+    titleText: 'titleText__67a11'
 };
+e.exports = i;

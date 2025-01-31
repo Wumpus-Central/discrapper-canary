@@ -1,11 +1,12 @@
 e.exports = {
-    textLeft: 'textLeft_ec2fa7 text_ec2fa7',
-    textRight: 'textRight_ec2fa7 text_ec2fa7',
-    bar: 'bar_ec2fa7',
-    barInMultiLine: 'barInMultiLine_ec2fa7 bar_ec2fa7',
-    barInner: 'barInner_ec2fa7',
-    themed: 'themed_ec2fa7',
-    singleLineContainer: 'singleLineContainer_ec2fa7',
-    barInSingleLine: 'barInSingleLine_ec2fa7',
-    textLeftInSingleLine: 'textLeftInSingleLine_ec2fa7 textLeft_ec2fa7 text_ec2fa7'
+    text: 'text_c8b06d',
+    textLeft: 'textLeft_c8b06d text_c8b06d',
+    textRight: 'textRight_c8b06d text_c8b06d',
+    bar: 'bar_c8b06d',
+    barInMultiLine: 'barInMultiLine_c8b06d bar_c8b06d',
+    barInner: 'barInner_c8b06d',
+    themed: 'themed_c8b06d',
+    singleLineContainer: 'singleLineContainer_c8b06d',
+    barInSingleLine: 'barInSingleLine_c8b06d',
+    textLeftInSingleLine: 'textLeftInSingleLine_c8b06d textLeft_c8b06d text_c8b06d'
 };

@@ -1,1 +1,2 @@
-e.exports = { errorBlock: 'errorBlock_a2a4ff' };
+var i = { errorBlock: 'errorBlock__6181b' };
+e.exports = i;

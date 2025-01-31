@@ -1,13 +1,9 @@
 n.d(t, {
-    iN: function () {
-        return r;
-    },
-    oV: function () {
-        return s;
-    }
+    iN: () => s,
+    oV: () => r
 });
 var i = n(846027);
-let r = {
+let s = {
         binds: ['mod+shift+m'],
         comboKeysBindGlobal: !0,
         action: () => (
@@ -18,7 +14,7 @@ let r = {
             !1
         )
     },
-    s = {
+    r = {
         binds: ['mod+shift+d'],
         comboKeysBindGlobal: !0,
         action: () => (

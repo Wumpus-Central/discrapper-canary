@@ -1,11 +1,7 @@
-n.d(t, {
-    O: function () {
-        return u;
-    }
-});
-var i = n(200651);
+n.d(t, { O: () => u });
+var a = n(200651);
 n(192379);
-var a = n(481060),
+var i = n(481060),
     l = n(447003),
     s = n(687352),
     c = n(237583),
@@ -15,33 +11,33 @@ var a = n(481060),
 function u(e) {
     let { channel: t, users: n } = e,
         u = (0, r.ZP)(t);
-    return (0, i.jsxs)('div', {
+    return (0, a.jsxs)('div', {
         className: d.channelInfo,
         children: [
             (0, l.Z)(t)
-                ? (0, i.jsx)(a.VoiceLockIcon, {
+                ? (0, a.jsx)(i.gjC, {
                       size: 'md',
                       color: 'currentColor',
                       className: d.speakerIcon
                   })
-                : (0, i.jsx)(a.VoiceNormalIcon, {
+                : (0, a.jsx)(i.gj8, {
                       size: 'md',
                       color: 'currentColor',
                       className: d.speakerIcon
                   }),
-            (0, i.jsx)('div', {
+            (0, a.jsx)('div', {
                 className: d.channelName,
                 children: t.name
             }),
             u.length > 0
-                ? (0, i.jsxs)(i.Fragment, {
+                ? (0, a.jsxs)(a.Fragment, {
                       children: [
-                          (0, i.jsx)('div', { className: d.divider }),
-                          (0, i.jsx)(s.Z, {
+                          (0, a.jsx)('div', { className: d.divider }),
+                          (0, a.jsx)(s.Z, {
                               embeddedApps: u,
                               className: d.channelItemActivities
                           }),
-                          (0, i.jsx)('div', {
+                          (0, a.jsx)('div', {
                               className: d.channelActivitiesText,
                               children: u
                                   .map((e) => {
@@ -54,9 +50,9 @@ function u(e) {
                       ]
                   })
                 : null,
-            (0, i.jsx)('div', {
+            (0, a.jsx)('div', {
                 className: d.voiceUserContainer,
-                children: (0, i.jsx)(c.Z, {
+                children: (0, a.jsx)(c.Z, {
                     users: n,
                     max: 4
                 })

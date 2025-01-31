@@ -1,28 +1,12 @@
 n.d(t, {
-    UT: function () {
-        return _;
-    },
-    _4: function () {
-        return p;
-    },
-    cm: function () {
-        return f;
-    },
-    e: function () {
-        return v;
-    },
-    eg: function () {
-        return N;
-    },
-    lJ: function () {
-        return C;
-    },
-    rY: function () {
-        return I;
-    },
-    uo: function () {
-        return T;
-    }
+    UT: () => j,
+    _4: () => p,
+    cm: () => _,
+    e: () => f,
+    eg: () => N,
+    lJ: () => C,
+    rY: () => v,
+    uo: () => I
 }),
     n(724458),
     n(653041),
@@ -41,7 +25,7 @@ var i = n(192379),
     g = n(203377),
     x = n(981631);
 let p = 50,
-    f = 1000;
+    _ = 1000;
 function C(e, t) {
     let n = (0, s.Wu)(
             [a.ZP],
@@ -56,7 +40,7 @@ function C(e, t) {
             () =>
                 n.reduce((e, t) => {
                     let n = o.default.getUser(t.userId);
-                    return null == n ? e : ((e[t.userId] = n), e);
+                    return null == n || (e[t.userId] = n), e;
                 }, {}),
             [n]
         );
@@ -82,7 +66,7 @@ function C(e, t) {
         return t;
     }, [n, r, e]);
 }
-function v(e, t, n) {
+function f(e, t, n) {
     let r = i.useRef(n);
     return (
         i.useEffect(() => {
@@ -97,17 +81,17 @@ function v(e, t, n) {
         )
     );
 }
-function I(e, t) {
+function v(e, t) {
     let n = i.useRef(!1);
     i.useEffect(() => {
-        u.Z.requestMembers(e, t, 200), '' !== t && !n.current && (c.default.track(x.rMx.SEARCH_STARTED, { search_type: 'Role Members' }), (n.current = !0));
+        u.Z.requestMembers(e, t, 200), '' === t || n.current || (c.default.track(x.rMx.SEARCH_STARTED, { search_type: 'Role Members' }), (n.current = !0));
     }, [e, t]);
 }
 function N(e, t) {
     let n = e.trim().toLowerCase();
     return t.id === n || l()(n, t.name.toLowerCase()) || l()(n, t.userTag.toLowerCase());
 }
-function _(e) {
+function j(e) {
     switch (e) {
         case g.ZI.MEMBERS:
             return 'Members';
@@ -121,6 +105,6 @@ function _(e) {
             (0, d.vE)(e);
     }
 }
-function T(e, t) {
+function I(e, t) {
     return '' === t || e.name.toLowerCase().includes(t.toLowerCase());
 }

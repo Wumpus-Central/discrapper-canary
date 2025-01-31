@@ -1,47 +1,44 @@
-r.d(n, {
-    Z: function () {
-        return h;
-    },
-    y: function () {
-        return i;
-    }
-});
-var i,
-    a = r(627341);
-var o = r(192379),
-    s = r(278074),
-    l = r(442837),
-    u = r(594174),
-    c = r(74538),
-    d = r(125900),
-    f = r(710111),
-    p = r(388032);
-function h(e, n, r, i) {
-    let a = e.guildId === f.X8,
-        h = (0, l.e7)([u.default], () => c.ZP.canUseSoundboardEverywhere(u.default.getCurrentUser())),
-        _ = (0, d.V2)({ location: 'useSoundmojiGuildInfoData' }),
-        m = e.guildId !== (null == n ? void 0 : n.guild_id),
-        g = o.useMemo(() => (a || !_ ? 2 : _ && !h ? 1 : r || null == i ? 2 : 0), [a, h, _, r, i]);
+n.d(t, {
+    Z: () => f,
+    y: () => d
+}),
+    n(627341);
+var i = n(192379),
+    r = n(278074),
+    a = n(442837),
+    s = n(594174),
+    o = n(74538),
+    l = n(125900),
+    u = n(710111),
+    c = n(388032),
+    d = (function (e) {
+        return (e[(e.JOIN_GUILD = 0)] = 'JOIN_GUILD'), (e[(e.GET_NITRO = 1)] = 'GET_NITRO'), (e[(e.NONE = 2)] = 'NONE'), e;
+    })({});
+function f(e, t, n, d) {
+    let f = e.guildId === u.X8,
+        _ = (0, a.e7)([s.default], () => o.ZP.canUseSoundboardEverywhere(s.default.getCurrentUser())),
+        p = (0, l.V2)({ location: 'useSoundmojiGuildInfoData' }),
+        h = e.guildId !== (null == t ? void 0 : t.guild_id);
     return {
-        buttonType: g,
-        description: o.useMemo(() => {
-            let e = null != i;
-            return (0, s.EQ)({
-                hasSoundmojiPermissions: h,
-                isInGuild: r,
+        buttonType: i.useMemo(() => (f || !p ? 2 : p && !_ ? 1 : n || null == d ? 2 : 0), [f, _, p, n, d]),
+        description: i.useMemo(() => {
+            let e = null != d;
+            return (0, r.EQ)({
+                hasSoundmojiPermissions: _,
+                isInGuild: n,
                 isGuildDiscoverable: e,
-                isSoundFromDifferentGuild: m,
-                canSendSoundmojis: _,
-                isDefaultSound: a
+                isSoundFromDifferentGuild: h,
+                canSendSoundmojis: p,
+                isDefaultSound: f
             })
-                .with({ canSendSoundmojis: !1 }, () => p.intl.string(p.t.x2kyyM))
-                .with({ isDefaultSound: !0 }, () => p.intl.string(p.t.AabHen))
+                .with({ canSendSoundmojis: !1 }, () => c.intl.string(c.t.x2kyyM))
+                .with({ isDefaultSound: !0 }, () => c.intl.string(c.t.AabHen))
                 .with(
                     {
                         isInGuild: !1,
                         isGuildDiscoverable: !1
                     },
-                    () => p.intl.string(p.t.MRYt09)
+                    () => c.intl.string(c.t.MRYt09)
                 )
                 .with(
                     {
@@ -49,7 +46,7 @@ function h(e, n, r, i) {
                         isInGuild: !0,
                         isSoundFromDifferentGuild: !1
                     },
-                    () => p.intl.string(p.t.p17MQE)
+                    () => c.intl.string(c.t.p17MQE)
                 )
                 .with(
                     {
@@ -57,7 +54,7 @@ function h(e, n, r, i) {
                         isInGuild: !0,
                         isSoundFromDifferentGuild: !0
                     },
-                    () => p.intl.string(p.t.Lkbm5u)
+                    () => c.intl.string(c.t.Lkbm5u)
                 )
                 .with(
                     {
@@ -65,7 +62,7 @@ function h(e, n, r, i) {
                         isInGuild: !1,
                         isGuildDiscoverable: !0
                     },
-                    () => p.intl.string(p.t.GTJmaW)
+                    () => c.intl.string(c.t.GTJmaW)
                 )
                 .with(
                     {
@@ -73,7 +70,7 @@ function h(e, n, r, i) {
                         isInGuild: !0,
                         isSoundFromDifferentGuild: !1
                     },
-                    () => p.intl.string(p.t['sj/imZ'])
+                    () => c.intl.string(c.t['sj/imZ'])
                 )
                 .with(
                     {
@@ -82,7 +79,7 @@ function h(e, n, r, i) {
                         isSoundFromDifferentGuild: !0,
                         canSendSoundmojis: !0
                     },
-                    () => p.intl.string(p.t['3Ru2//'])
+                    () => c.intl.string(c.t['3Ru2//'])
                 )
                 .with(
                     {
@@ -90,12 +87,9 @@ function h(e, n, r, i) {
                         isInGuild: !1,
                         isGuildDiscoverable: !0
                     },
-                    () => p.intl.string(p.t.qRkWhY)
+                    () => c.intl.string(c.t.qRkWhY)
                 )
                 .exhaustive();
-        }, [a, i, h, r, m, _])
+        }, [f, d, _, n, h, p])
     };
 }
-!(function (e) {
-    (e[(e.JOIN_GUILD = 0)] = 'JOIN_GUILD'), (e[(e.GET_NITRO = 1)] = 'GET_NITRO'), (e[(e.NONE = 2)] = 'NONE');
-})(i || (i = {}));

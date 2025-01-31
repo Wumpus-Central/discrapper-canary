@@ -1,29 +1,29 @@
-n(627494), n(757143);
+n.d(t, { Z: () => Z }), n(627494), n(757143);
 var l = n(200651),
     a = n(192379),
     i = n(442837),
     r = n(481060),
     o = n(706454),
     s = n(594174),
-    u = n(49012),
-    c = n(5192),
-    d = n(591759),
+    c = n(49012),
+    d = n(5192),
+    u = n(591759),
     m = n(379357),
     x = n(561308),
     h = n(685270),
     p = n(31074),
-    C = n(206295),
+    g = n(206295),
     v = n(335326),
-    g = n(297781),
-    f = n(591853),
-    I = n(410441),
-    j = n(981631),
-    Z = n(388032);
-let P = (e, t, n) => {
-        let l = Z.t.LHF6Dw,
-            a = c.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
+    C = n(297781),
+    j = n(591853),
+    f = n(410441),
+    I = n(981631),
+    P = n(388032);
+let y = (e, t, n) => {
+        let l = P.t.LHF6Dw,
+            a = d.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
             i = e.extra.media_title;
-        return Z.intl
+        return P.intl
             .formatToMarkdownString(l, {
                 mediaTitle: i,
                 userName: a,
@@ -31,77 +31,79 @@ let P = (e, t, n) => {
             })
             .replaceAll('*', '');
     },
-    L = (e, t) =>
-        Z.intl.formatToPlainString(Z.t.kCbfbG, {
+    N = (e, t) =>
+        P.intl.formatToPlainString(P.t.kCbfbG, {
             username: t.username,
             activity: e.extra.media_title
-        });
-t.Z = (e) => {
-    let { channel: t, entry: n, onReaction: c, onVoiceChannelPreview: N } = e,
-        T = (0, i.e7)([s.default], () => s.default.getUser(n.author_id)),
-        { largeImage: y } = (0, m.rv)({ entry: n }),
-        { primaryColor: _, secondaryColor: A } = (0, C.Z)(null == y ? void 0 : y.src),
-        E = (0, i.e7)([o.default], () => o.default.locale),
-        S = (0, p.Z)(j.ABu.CRUNCHYROLL),
-        R = (0, x.ap)(n.extra.media_assets_large_text),
-        M = a.useCallback(
-            (e) => {
-                if (null != T && (null == y ? void 0 : y.src) != null)
-                    return (0, h.B)({
-                        entry: n,
-                        mediaImageSrc: null == y ? void 0 : y.src,
-                        avatarSrc: T.getAvatarURL(null == t ? void 0 : t.guild_id, 128),
-                        description: P(n, t, T),
-                        timestamp: (0, x.yh)(n, E),
-                        episodeDescription: R,
-                        colors: [_, A],
-                        channelId: e
+        }),
+    Z = (e) => {
+        let { channel: t, entry: n, onReaction: d, onVoiceChannelPreview: Z } = e,
+            T = (0, i.e7)([s.default], () => s.default.getUser(n.author_id)),
+            { largeImage: E } = (0, m.rv)({ entry: n }),
+            { primaryColor: A, secondaryColor: _ } = (0, g.Z)(null == E ? void 0 : E.src),
+            S = (0, i.e7)([o.default], () => o.default.locale),
+            R = (0, p.Z)(I.ABu.CRUNCHYROLL),
+            k = (0, x.ap)(n.extra.media_assets_large_text),
+            w = a.useCallback(
+                (e) => {
+                    if (null != T && (null == E ? void 0 : E.src) != null)
+                        return (0, h.B)({
+                            entry: n,
+                            mediaImageSrc: null == E ? void 0 : E.src,
+                            avatarSrc: T.getAvatarURL(null == t ? void 0 : t.guild_id, 128),
+                            description: y(n, t, T),
+                            timestamp: (0, x.yh)(n, S),
+                            episodeDescription: k,
+                            colors: [A, _],
+                            channelId: e
+                        });
+                },
+                [t, n, k, S, null == E ? void 0 : E.src, A, _, T]
+            ),
+            O = () => {
+                if (null == n.extra.url) return;
+                let e = u.Z.safeParseWithQuery(n.extra.url);
+                null != e &&
+                    null != e.protocol &&
+                    null != e.hostname &&
+                    (0, c.q)({
+                        href: u.Z.format(e),
+                        trusted: !1
                     });
-            },
-            [t, n, R, E, null == y ? void 0 : y.src, _, A, T]
-        ),
-        k = () => {
-            if (null == n.extra.url) return;
-            let e = d.Z.safeParseWithQuery(n.extra.url);
-            if (null != e && null != e.protocol && null != e.hostname)
-                (0, u.q)({
-                    href: d.Z.format(e),
-                    trusted: !1
-                });
-        };
-    return null == T
-        ? null
-        : (0, l.jsxs)(f.yR, {
-              children: [
-                  (0, l.jsx)(f.wG, {
-                      channel: t,
-                      entry: n,
-                      userDescription: (0, x.kr)(n) ? Z.t['LH+Z39'] : Z.t.YuKgmp,
-                      title: n.extra.media_title,
-                      subtitle: n.extra.media_subtitle,
-                      headerIcons: (0, l.jsx)(I.Z, {
-                          onClick: S,
-                          Icon: r.CrunchyrollNeutralIcon,
-                          'aria-label': Z.intl.string(Z.t.jdJYX1)
-                      }),
-                      badges: (0, l.jsx)(g.Gk, {
-                          location: g.Gt.POPOUT,
-                          children: v.t.map((e, t) => (0, l.jsx)(e, { entry: n }, t))
-                      }),
-                      onClickTitle: k,
-                      onClickThumbnail: k
-                  }),
-                  (0, l.jsx)(f.St, {
-                      children: (0, l.jsx)(f.WT, {
-                          onReaction: c,
-                          onVoiceChannelPreview: N,
-                          user: T,
+            };
+        return null == T
+            ? null
+            : (0, l.jsxs)(j.yR, {
+                  children: [
+                      (0, l.jsx)(j.wG, {
                           channel: t,
-                          generateReactionImage: M,
-                          reactionImageAltText: L(n, T),
-                          entry: n
+                          entry: n,
+                          userDescription: (0, x.kr)(n) ? P.t['LH+Z39'] : P.t.YuKgmp,
+                          title: n.extra.media_title,
+                          subtitle: n.extra.media_subtitle,
+                          headerIcons: (0, l.jsx)(f.Z, {
+                              onClick: R,
+                              Icon: r.omf,
+                              'aria-label': P.intl.string(P.t.jdJYX1)
+                          }),
+                          badges: (0, l.jsx)(C.Gk, {
+                              location: C.Gt.POPOUT,
+                              children: v.t.map((e, t) => (0, l.jsx)(e, { entry: n }, t))
+                          }),
+                          onClickTitle: O,
+                          onClickThumbnail: O
+                      }),
+                      (0, l.jsx)(j.St, {
+                          children: (0, l.jsx)(j.WT, {
+                              onReaction: d,
+                              onVoiceChannelPreview: Z,
+                              user: T,
+                              channel: t,
+                              generateReactionImage: w,
+                              reactionImageAltText: N(n, T),
+                              entry: n
+                          })
                       })
-                  })
-              ]
-          });
-};
+                  ]
+              });
+    };

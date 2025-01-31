@@ -1,42 +1,38 @@
-r.d(n, {
-    M: function () {
-        return c;
-    }
-});
-var i = r(923341),
-    a = r(130501),
-    o = r(75725),
-    s = r(304329),
-    l = new WeakMap(),
-    u = function (e, n) {
-        for (var r = 0; r < e.length; r += 1) if (e[r].target === n) return r;
+n.d(t, { M: () => u });
+var i = n(923341),
+    r = n(130501),
+    a = n(75725),
+    s = n(304329),
+    o = new WeakMap(),
+    l = function (e, t) {
+        for (var n = 0; n < e.length; n += 1) if (e[n].target === t) return n;
         return -1;
     },
-    c = (function () {
+    u = (function () {
         function e() {}
         return (
-            (e.connect = function (e, n) {
-                var r = new o.r(e, n);
-                l.set(e, r);
+            (e.connect = function (e, t) {
+                var n = new a.r(e, t);
+                o.set(e, n);
             }),
-            (e.observe = function (e, n, r) {
-                var o = l.get(e),
-                    c = 0 === o.observationTargets.length;
-                0 > u(o.observationTargets, n) && (c && s.C.push(o), o.observationTargets.push(new a.Q(n, r && r.box)), (0, i.t)(1), i.p.schedule());
+            (e.observe = function (e, t, n) {
+                var a = o.get(e),
+                    u = 0 === a.observationTargets.length;
+                0 > l(a.observationTargets, t) && (u && s.C.push(a), a.observationTargets.push(new r.Q(t, n && n.box)), (0, i.t)(1), i.p.schedule());
             }),
-            (e.unobserve = function (e, n) {
-                var r = l.get(e),
-                    a = u(r.observationTargets, n),
-                    o = 1 === r.observationTargets.length;
-                a >= 0 && (o && s.C.splice(s.C.indexOf(r), 1), r.observationTargets.splice(a, 1), (0, i.t)(-1));
+            (e.unobserve = function (e, t) {
+                var n = o.get(e),
+                    r = l(n.observationTargets, t),
+                    a = 1 === n.observationTargets.length;
+                r >= 0 && (a && s.C.splice(s.C.indexOf(n), 1), n.observationTargets.splice(r, 1), (0, i.t)(-1));
             }),
             (e.disconnect = function (e) {
-                var n = this,
-                    r = l.get(e);
-                r.observationTargets.slice().forEach(function (r) {
-                    return n.unobserve(e, r.target);
+                var t = this,
+                    n = o.get(e);
+                n.observationTargets.slice().forEach(function (n) {
+                    return t.unobserve(e, n.target);
                 }),
-                    r.activeTargets.splice(0, r.activeTargets.length);
+                    n.activeTargets.splice(0, n.activeTargets.length);
             }),
             e
         );

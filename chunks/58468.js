@@ -1,10 +1,10 @@
-n(47120);
+n.d(t, { Z: () => g }), n(47120);
 var i,
-    r = n(442837),
-    l = n(570140),
-    o = n(709054),
-    s = n(592125);
-function a(e, t, n) {
+    l = n(442837),
+    r = n(570140),
+    s = n(709054),
+    a = n(592125);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,34 +17,33 @@ function a(e, t, n) {
         e
     );
 }
-let u = {},
-    d = u;
+let d = {},
+    u = d;
 function c() {
-    o.default.keys(d).forEach((e) => {
-        null == s.Z.getChannel(e) && delete d[e];
+    s.default.keys(u).forEach((e) => {
+        null == a.Z.getChannel(e) && delete u[e];
     });
 }
-class h extends (i = r.ZP.PersistedStore) {
+class h extends (i = l.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(s.Z), (d = null != e ? e : u);
+        this.waitFor(a.Z), (u = null != e ? e : d);
     }
     getState() {
-        return d;
+        return u;
     }
     getCollapsed() {
-        return d;
+        return u;
     }
     isCollapsed(e) {
-        return d[e] || !1;
+        return u[e] || !1;
     }
 }
-a(h, 'displayName', 'CollapsedVoiceChannelStore'),
-    a(h, 'persistKey', 'collapsedChannels'),
-    (t.Z = new h(l.Z, {
-        CONNECTION_OPEN: c,
-        OVERLAY_INITIALIZE: c,
-        CHANNEL_COLLAPSE: function (e) {
-            let { channelId: t } = e;
-            d[t] ? delete d[t] : (d[t] = !0), (d = { ...d });
-        }
-    }));
+o(h, 'displayName', 'CollapsedVoiceChannelStore'), o(h, 'persistKey', 'collapsedChannels');
+let g = new h(r.Z, {
+    CONNECTION_OPEN: c,
+    OVERLAY_INITIALIZE: c,
+    CHANNEL_COLLAPSE: function (e) {
+        let { channelId: t } = e;
+        u[t] ? delete u[t] : (u[t] = !0), (u = { ...u });
+    }
+});

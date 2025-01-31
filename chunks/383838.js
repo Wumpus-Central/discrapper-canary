@@ -1,73 +1,67 @@
-r.d(n, {
-    Dd: function () {
-        return f;
-    },
-    Sw: function () {
-        return p;
-    },
-    To: function () {
-        return h;
-    }
+n.d(t, {
+    Dd: () => d,
+    Sw: () => f,
+    To: () => _
 });
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(49800),
-    l = r(600164),
-    u = r(534542),
-    c = r(512983),
-    d = r(525999);
-let f = s.Z.Types,
-    p = {
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(49800),
+    o = n(600164),
+    l = n(534542),
+    u = n(512983),
+    c = n(525999);
+let d = s.Z.Types,
+    f = {
         LEFT: 'left',
         RIGHT: 'right'
     };
-function h(e) {
-    let n,
-        r,
-        { type: a = s.Z.Types.DANGER, imageData: f, button: h, className: _, iconClassName: m, title: g, body: E, style: v, align: y = l.Z.Align.START } = e,
-        b = l.Z.Direction.HORIZONTAL;
-    if (null != f) {
-        let { position: e, ...r } = f;
-        (n = (0, i.jsx)(l.Z.Child, {
+function _(e) {
+    let t,
+        n,
+        { type: r = s.Z.Types.DANGER, imageData: d, button: _, className: p, iconClassName: h, title: m, body: g, style: E, align: v = o.Z.Align.START } = e,
+        y = o.Z.Direction.HORIZONTAL;
+    if (null != d) {
+        let { position: e, ...n } = d;
+        (t = (0, i.jsx)(o.Z.Child, {
             grow: 0,
             shrink: 0,
             children: (0, i.jsx)('img', {
                 alt: '',
-                className: o()(d.icon, m),
-                ...r
+                className: a()(c.icon, h),
+                ...n
             })
         })),
-            e === p.RIGHT && (b = l.Z.Direction.HORIZONTAL_REVERSE);
-    } else null != h && (r = h);
+            e === f.RIGHT && (y = o.Z.Direction.HORIZONTAL_REVERSE);
+    } else null != _ && (n = _);
     let I = !0;
     return (
-        a === s.Z.Types.PRIMARY && (I = !1),
+        r === s.Z.Types.PRIMARY && (I = !1),
         (0, i.jsx)(s.Z, {
-            className: o()(d.formNotice, _),
-            type: a,
-            style: v,
-            children: (0, i.jsxs)(l.Z, {
-                direction: b,
-                align: y,
+            className: a()(c.formNotice, p),
+            type: r,
+            style: E,
+            children: (0, i.jsxs)(o.Z, {
+                direction: y,
+                align: v,
                 children: [
-                    n,
-                    (0, i.jsxs)(l.Z.Child, {
+                    t,
+                    (0, i.jsxs)(o.Z.Child, {
                         children: [
-                            null != g && '' !== g
-                                ? (0, i.jsx)(c.v, {
-                                      tag: c.R.H5,
-                                      className: o()(d.formNoticeTitle, { [d.whiteText]: I }),
+                            null != m && '' !== m
+                                ? (0, i.jsx)(u.v, {
+                                      tag: u.R.H5,
+                                      className: a()(c.formNoticeTitle, { [c.whiteText]: I }),
                                       faded: !0,
-                                      children: g
+                                      children: m
                                   })
                                 : null,
-                            (0, i.jsx)(u.R, {
-                                className: o()(d.formNoticeBody, { [d.whiteText]: I }),
-                                children: E
+                            (0, i.jsx)(l.R, {
+                                className: a()(c.formNoticeBody, { [c.whiteText]: I }),
+                                children: g
                             }),
-                            r
+                            n
                         ]
                     })
                 ]
@@ -75,4 +69,4 @@ function h(e) {
         })
     );
 }
-h.Types = s.Z.Types;
+_.Types = s.Z.Types;

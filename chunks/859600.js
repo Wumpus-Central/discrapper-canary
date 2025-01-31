@@ -1,1 +1,1 @@
-e.exports = { applicationPermissions: 'applicationPermissions_c50086' };
+e.exports = { applicationPermissions: 'applicationPermissions__9a8ce' };

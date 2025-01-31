@@ -1,8 +1,9 @@
-e.exports = {
-    wrapper: 'wrapper_aecbd6',
-    innerWrapper: 'innerWrapper_aecbd6',
-    guildInfo: 'guildInfo_aecbd6',
-    guildIcon: 'guildIcon_aecbd6',
-    ctaButton: 'ctaButton_aecbd6',
-    guildName: 'guildName_aecbd6'
+var i = {
+    wrapper: 'wrapper_b4589b',
+    innerWrapper: 'innerWrapper_b4589b',
+    guildInfo: 'guildInfo_b4589b',
+    guildIcon: 'guildIcon_b4589b',
+    ctaButton: 'ctaButton_b4589b',
+    guildName: 'guildName_b4589b'
 };
+e.exports = i;

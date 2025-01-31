@@ -1,74 +1,69 @@
-t.d(n, {
-    Z: function () {
-        return w;
-    }
-}),
-    t(47120);
+t.d(n, { Z: () => C }), t(47120);
 var l = t(200651),
     a = t(192379),
     i = t(120356),
-    r = t.n(i),
-    s = t(442837),
+    s = t.n(i),
+    r = t(442837),
     o = t(481060),
     u = t(565138),
-    c = t(357156),
-    d = t(430824),
+    d = t(357156),
+    c = t(430824),
     f = t(496675),
     m = t(771845),
     h = t(594174),
     g = t(267642),
     p = t(709054),
-    v = t(208049),
-    x = t(763296),
-    N = t(710111),
-    y = t(981631),
-    b = t(388032),
+    x = t(208049),
+    v = t(763296),
+    y = t(710111),
+    b = t(981631),
+    N = t(388032),
     j = t(693793);
-function C(e) {
+function w(e) {
     let { availableSlots: n, className: t } = e;
     return (0, l.jsxs)(o.Text, {
-        className: r()(j.suffixNode, t),
+        className: s()(j.suffixNode, t),
         variant: 'text-sm/medium',
         color: 'text-primary',
         children: [
-            (0, l.jsx)(o.VoiceNormalIcon, {
+            (0, l.jsx)(o.gj8, {
                 size: 'md',
                 color: 'currentColor',
                 className: j.speakerIcon
             }),
-            b.intl.format(b.t['8Dyg1N'], { slots: n })
+            N.intl.format(N.t['8Dyg1N'], { slots: n })
         ]
     });
 }
-function w(e) {
+function C(e) {
     let { value: n, className: t, onChange: i } = e,
-        w = (0, s.cj)([m.ZP, f.Z, h.default, d.Z], () => {
+        C = (0, r.cj)([m.ZP, f.Z, h.default, c.Z], () => {
             let e = {};
             for (let n of m.ZP.getFlattenedGuildIds()) {
-                let t = d.Z.getGuild(n);
-                if (null != t) (0, c.Gw)(t, f.Z, h.default).canCreateExpressions && (e[t.id] = t);
+                let t = c.Z.getGuild(n);
+                null != t && (0, d.Gw)(t, f.Z, h.default).canCreateExpressions && (e[t.id] = t);
             }
             return e;
         }),
-        S = (0, s.cj)(
-            [x.Z],
+        S = (0, r.cj)(
+            [v.Z],
             () => {
                 let e = {};
-                for (let [t, l] of p.default.entries(w)) {
+                for (let [t, l] of p.default.entries(C)) {
                     var n;
-                    let a = (0, g.yw)(l, null !== (n = x.Z.getSoundsForGuild(t)) && void 0 !== n ? n : N.Hy, l.premiumTier);
+                    let a = (0, g.yw)(l, null !== (n = v.Z.getSoundsForGuild(t)) && void 0 !== n ? n : y.Hy, l.premiumTier);
                     e[t] = a;
                 }
                 return e;
             },
-            [w]
+            [C]
         );
     a.useEffect(() => {
-        (0, v.w)();
+        (0, x.w)();
     }, []);
-    let I = a.useMemo(
+    let Z = a.useMemo(
             () =>
-                Object.values(w).map((e) => {
+                Object.values(C).map((e) => {
                     let { name: n, id: t } = e;
                     return {
                         label: n,
@@ -76,59 +71,59 @@ function w(e) {
                         disabled: S[t] <= 0
                     };
                 }),
-            [w, S]
+            [C, S]
         ),
-        E = a.useCallback(
+        M = a.useCallback(
             (e) =>
                 null == e || '' === e.value
                     ? null
                     : (0, l.jsx)(u.Z, {
-                          className: r()(j.guildSelectOptionIcon, { [j.disabledOption]: e.disabled }),
-                          guild: w[e.value],
+                          className: s()(j.guildSelectOptionIcon, { [j.disabledOption]: e.disabled }),
+                          guild: C[e.value],
                           size: u.Z.Sizes.SMOL,
                           active: !0
                       }),
-            [w]
+            [C]
         ),
-        M = a.useCallback(
+        k = a.useCallback(
             (e) => {
                 let n = null == e ? void 0 : e.value;
                 return null == n || '' === n
                     ? null
-                    : (0, l.jsx)(C, {
-                          className: r()({ [j.disabledOption]: null == e ? void 0 : e.disabled }),
+                    : (0, l.jsx)(w, {
+                          className: s()({ [j.disabledOption]: null == e ? void 0 : e.disabled }),
                           availableSlots: S[n]
                       });
             },
             [S]
         ),
-        Z = a.useCallback(
+        E = a.useCallback(
             (e) =>
                 (0, l.jsx)('div', {
-                    className: r()({ [j.disabledOption]: e.disabled }),
+                    className: s()({ [j.disabledOption]: e.disabled }),
                     children: e.label
                 }),
             []
         ),
-        T = a.useCallback(
+        I = a.useCallback(
             (e) => {
-                !(S[e] <= 0) && i(e);
+                S[e] <= 0 || i(e);
             },
             [S, i]
         ),
-        _ = (() => {
-            let e = S[null != n ? n : y.lds];
+        P = (() => {
+            let e = S[null != n ? n : b.lds];
             return null == e || e > 0 ? n : void 0;
         })();
-    return (0, l.jsx)(o.SearchableSelect, {
+    return (0, l.jsx)(o.VcW, {
         className: t,
-        onChange: T,
-        value: _,
+        onChange: I,
+        value: P,
         multi: !1,
-        options: I,
-        renderOptionPrefix: E,
-        renderOptionSuffix: M,
-        renderOptionLabel: Z,
-        placeholder: 0 === I.length ? b.intl.string(b.t.O3i2gY) : b.intl.string(b.t.CunCMD)
+        options: Z,
+        renderOptionPrefix: M,
+        renderOptionSuffix: k,
+        renderOptionLabel: E,
+        placeholder: 0 === Z.length ? N.intl.string(N.t.O3i2gY) : N.intl.string(N.t.CunCMD)
     });
 }

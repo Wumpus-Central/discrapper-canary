@@ -1,56 +1,52 @@
-r.d(n, {
-    Z: function () {
-        return p;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(442837),
-    o = r(481060),
-    s = r(970321),
-    l = r(283836),
-    u = r(621853),
-    c = r(475413),
-    d = r(388032);
-function f(e) {
-    let { user: n, onClick: r, ...a } = e;
+n.d(t, { Z: () => f });
+var i = n(200651);
+n(192379);
+var r = n(442837),
+    a = n(481060),
+    s = n(970321),
+    o = n(283836),
+    l = n(621853),
+    u = n(475413),
+    c = n(388032);
+function d(e) {
+    let { user: t, onClick: n, ...r } = e;
     return (
-        (0, l.q)(n.id),
-        (0, i.jsx)(c.tG, {
+        (0, o.q)(t.id),
+        (0, i.jsx)(u.tG, {
             action: 'PRESS_APP_STOREFRONT',
-            icon: o.ShopIcon,
-            text: d.intl.string(d.t.V7j5aW),
-            color: o.ButtonColors.BRAND,
+            icon: a.EOn,
+            text: c.intl.string(c.t.V7j5aW),
+            color: a.Ttl.BRAND,
             themeColor: 'none',
-            onClick: r,
-            ...a
+            onClick: n,
+            ...r
         })
     );
 }
-function p(e) {
-    var n;
-    let { user: l, guildId: c, ...d } = e,
-        p = (0, a.e7)([u.Z], () => {
+function f(e) {
+    var t;
+    let { user: o, guildId: u, ...c } = e,
+        f = (0, r.e7)([l.Z], () => {
             var e;
-            return null === (e = u.Z.getUserProfile(l.id)) || void 0 === e ? void 0 : e.application;
+            return null === (e = l.Z.getUserProfile(o.id)) || void 0 === e ? void 0 : e.application;
         }),
-        h = (0, s.R)(null !== (n = null == p ? void 0 : p.id) && void 0 !== n ? n : '');
-    if (null == p || !h) return null;
-    let _ = () => {
-        (0, o.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([r.e('66711'), r.e('77803'), r.e('93143')]).then(r.bind(r, 7225));
-            return (n) =>
+        _ = (0, s.R)(null !== (t = null == f ? void 0 : f.id) && void 0 !== t ? t : '');
+    if (null == f || !_) return null;
+    let p = () => {
+        (0, a.ZDy)(async () => {
+            let { default: e } = await Promise.all([n.e('66711'), n.e('77803'), n.e('91902')]).then(n.bind(n, 7225));
+            return (t) =>
                 (0, i.jsx)(e, {
-                    appId: p.id,
-                    guildId: c,
-                    ...n
+                    appId: f.id,
+                    guildId: u,
+                    ...t
                 });
         });
     };
-    return (0, i.jsx)(f, {
-        user: l,
-        guildId: c,
-        onClick: _,
-        ...d
+    return (0, i.jsx)(d, {
+        user: o,
+        guildId: u,
+        onClick: p,
+        ...c
     });
 }

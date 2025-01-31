@@ -1,20 +1,16 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-});
+n.d(t, { Z: () => o });
 var i = n(192379),
-    r = n(817460),
-    l = n(293810),
-    o = n(474936),
-    s = n(388032);
-function a(e) {
+    l = n(817460),
+    r = n(293810),
+    s = n(474936),
+    a = n(388032);
+function o(e) {
     return i.useMemo(() => {
         var t;
-        let n = l.DN.map((e) => ({
+        let n = r.DN.map((e) => ({
                 value: e,
-                label: e.interval === o.rV.DAY && 7 === e.interval_count ? s.intl.formatToPlainString(s.t.XfSsr6, { defaultLimit: (0, r.iG)(e) }) : (0, r.iG)(e),
-                isDefault: e.interval === o.rV.DAY && 7 === e.interval_count
+                label: e.interval === s.rV.DAY && 7 === e.interval_count ? a.intl.formatToPlainString(a.t.XfSsr6, { defaultLimit: (0, l.iG)(e) }) : (0, l.iG)(e),
+                isDefault: e.interval === s.rV.DAY && 7 === e.interval_count
             })),
             i = null != e ? (null === (t = n.find((t) => null != t.value && t.value.interval === e.interval && t.value.interval_count === e.interval_count)) || void 0 === t ? void 0 : t.value) : e;
         return {

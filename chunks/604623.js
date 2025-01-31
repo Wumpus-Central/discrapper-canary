@@ -1,142 +1,137 @@
-l.r(t),
-    l.d(t, {
-        CreateEmojiWithRolesModal: function () {
-            return f;
-        },
-        UpdateEmojiRolesModal: function () {
-            return w;
-        }
-    }),
-    l(47120);
-var a = l(200651),
-    i = l(192379),
-    n = l(120356),
-    s = l.n(n),
-    r = l(392711),
-    o = l.n(r),
-    c = l(772848),
-    d = l(481060),
-    h = l(80932),
-    u = l(935369),
-    x = l(313201),
-    m = l(730089),
-    b = l(626135),
-    j = l(768581),
-    g = l(584825),
-    p = l(46887),
-    C = l(981631),
-    v = l(388032),
-    _ = l(524796);
-let k = (e) => {
-    let { className: t, onChange: l, textVariant: i = 'text-md/normal', label: n, value: r, isArchived: o = !1 } = e;
-    return (0, a.jsx)(d.Checkbox, {
+s.d(t, {
+    CreateEmojiWithRolesModal: () => S,
+    UpdateEmojiRolesModal: () => w
+}),
+    s(47120);
+var l = s(200651),
+    i = s(192379),
+    n = s(120356),
+    a = s.n(n),
+    r = s(392711),
+    o = s.n(r),
+    c = s(772848),
+    d = s(481060),
+    h = s(80932),
+    u = s(935369),
+    x = s(313201),
+    m = s(730089),
+    j = s(626135),
+    b = s(768581),
+    _ = s(584825),
+    v = s(46887),
+    f = s(981631),
+    p = s(388032),
+    C = s(524796);
+let g = (e) => {
+    let { className: t, onChange: s, textVariant: i = 'text-md/normal', label: n, value: r, isArchived: o = !1 } = e;
+    return (0, l.jsx)(d.XZJ, {
         size: 24,
-        className: s()(_.checklistRow, t),
+        className: a()(C.checklistRow, t),
         value: r,
-        onChange: l,
-        type: d.Checkbox.Types.INVERTED,
-        children: (0, a.jsxs)('div', {
-            className: _.checklistLabel,
+        onChange: s,
+        type: d.XZJ.Types.INVERTED,
+        children: (0, l.jsxs)('div', {
+            className: C.checklistLabel,
             children: [
-                (0, a.jsx)(d.Text, {
+                (0, l.jsx)(d.Text, {
                     color: 'interactive-active',
                     variant: i,
                     children: n
                 }),
-                o && (0, a.jsx)(d.TextBadge, { text: v.intl.string(v.t.nhbtEh) })
+                o && (0, l.jsx)(d.IGR, { text: p.intl.string(p.t.nhbtEh) })
             ]
         })
     });
 };
-function S(e) {
-    let { transitionState: t, onClose: l, initialRoleIds: n = [], listingChoices: s, emojiUrl: r, saving: c, onSave: h } = e,
+function k(e) {
+    let { transitionState: t, onClose: s, initialRoleIds: n = [], listingChoices: a, emojiUrl: r, saving: c, onSave: h } = e,
         u = (0, x.Dt)(),
-        [m, b] = i.useState(() => new Set(n)),
-        j = i.useMemo(
+        [m, j] = i.useState(() => new Set(n)),
+        b = i.useMemo(
             () =>
                 o().isEqual(
                     m,
                     new Set(
-                        s.map((e) => {
+                        a.map((e) => {
                             let { role_id: t } = e;
                             return t;
                         })
                     )
                 ),
-            [s, m]
+            [a, m]
         ),
-        g = m.size > 0,
-        p = (e) =>
-            b((t) => {
-                let l = new Set(t);
-                return t.has(e) ? l.delete(e) : l.add(e), l;
+        _ = m.size > 0,
+        v = (e) =>
+            j((t) => {
+                let s = new Set(t);
+                return t.has(e) ? s.delete(e) : s.add(e), s;
             }),
-        C = () => {
-            h(Array.from(m), l);
+        f = () => {
+            h(Array.from(m), s);
         };
-    return (0, a.jsxs)(d.ModalRoot, {
+    return (0, l.jsxs)(d.Y0X, {
         transitionState: t,
         'aria-labelledby': u,
         children: [
-            (0, a.jsxs)(d.ModalHeader, {
+            (0, l.jsxs)(d.xBx, {
                 separator: !1,
                 children: [
-                    (0, a.jsxs)('div', {
-                        className: _.headerContent,
+                    (0, l.jsxs)('div', {
+                        className: C.headerContent,
                         children: [
-                            (0, a.jsx)(d.Image, {
+                            (0, l.jsx)(d.Eep, {
                                 src: r,
                                 width: 40,
                                 height: 40,
                                 alt: ''
                             }),
-                            (0, a.jsx)(d.Spacer, {
+                            (0, l.jsx)(d.LZC, {
                                 size: 16,
                                 horizontal: !0
                             }),
-                            (0, a.jsxs)('div', {
-                                className: _.__invalid_headerText,
+                            (0, l.jsxs)('div', {
+                                className: C.__invalid_headerText,
                                 children: [
-                                    (0, a.jsx)(d.Heading, {
+                                    (0, l.jsx)(d.X6q, {
                                         id: u,
                                         variant: 'heading-md/semibold',
-                                        children: v.intl.string(v.t.nP7nDQ)
+                                        children: p.intl.string(p.t.nP7nDQ)
                                     }),
-                                    (0, a.jsx)(d.Spacer, { size: 2 }),
-                                    (0, a.jsx)(d.Text, {
+                                    (0, l.jsx)(d.LZC, { size: 2 }),
+                                    (0, l.jsx)(d.Text, {
                                         variant: 'text-sm/normal',
                                         color: 'header-secondary',
-                                        children: v.intl.string(v.t.I4SYUF)
+                                        children: p.intl.string(p.t.I4SYUF)
                                     })
                                 ]
                             })
                         ]
                     }),
-                    (0, a.jsx)(d.ModalCloseButton, {
-                        className: _.closeButton,
-                        onClick: l
+                    (0, l.jsx)(d.olH, {
+                        className: C.closeButton,
+                        onClick: s
                     })
                 ]
             }),
-            (0, a.jsx)('div', { className: _.seperator }),
-            (0, a.jsx)(d.ModalContent, {
-                className: _.modalContent,
-                children: (0, a.jsxs)('div', {
-                    className: _.checklistContainer,
+            (0, l.jsx)('div', { className: C.seperator }),
+            (0, l.jsx)(d.hzk, {
+                className: C.modalContent,
+                children: (0, l.jsxs)('div', {
+                    className: C.checklistContainer,
                     children: [
-                        (0, a.jsx)(
-                            k,
+                        (0, l.jsx)(
+                            g,
                             {
-                                className: _.selectAllCheckbox,
-                                label: v.intl.string(v.t['Ve/y5+']),
+                                className: C.selectAllCheckbox,
+                                label: p.intl.string(p.t['Ve/y5+']),
                                 textVariant: 'text-md/semibold',
-                                value: j,
+                                value: b,
                                 onChange: () => {
-                                    j
-                                        ? b(new Set())
-                                        : b(
+                                    b
+                                        ? j(new Set())
+                                        : j(
                                               new Set(
-                                                  s.map((e) => {
+                                                  a.map((e) => {
                                                       let { role_id: t } = e;
                                                       return t;
                                                   })
@@ -146,14 +141,14 @@ function S(e) {
                             },
                             'allSubscriptionRoles'
                         ),
-                        s.map((e, t) =>
-                            (0, a.jsxs)(a.Fragment, {
+                        a.map((e, t) =>
+                            (0, l.jsxs)(l.Fragment, {
                                 children: [
-                                    0 !== t && (0, a.jsx)('div', { className: _.seperator }),
-                                    (0, a.jsx)(
-                                        k,
+                                    0 !== t && (0, l.jsx)('div', { className: C.seperator }),
+                                    (0, l.jsx)(
+                                        g,
                                         {
-                                            onChange: () => p(e.role_id),
+                                            onChange: () => v(e.role_id),
                                             value: m.has(e.role_id),
                                             label: e.name,
                                             isArchived: e.archived
@@ -166,79 +161,79 @@ function S(e) {
                     ]
                 })
             }),
-            (0, a.jsx)(d.ModalFooter, {
-                children: (0, a.jsx)(d.Tooltip, {
-                    shouldShow: !g,
-                    text: v.intl.string(v.t['8aYImJ']),
+            (0, l.jsx)(d.mzw, {
+                children: (0, l.jsx)(d.ua7, {
+                    shouldShow: !_,
+                    text: p.intl.string(p.t['8aYImJ']),
                     children: (e) =>
-                        (0, a.jsx)(d.Button, {
+                        (0, l.jsx)(d.zxk, {
                             ...e,
-                            'aria-label': v.intl.string(v.t.R3BPHx),
-                            disabled: !g,
+                            'aria-label': p.intl.string(p.t.R3BPHx),
+                            disabled: !_,
                             submitting: c,
-                            onClick: C,
-                            children: v.intl.string(v.t.R3BPHx)
+                            onClick: f,
+                            children: p.intl.string(p.t.R3BPHx)
                         })
                 })
             })
         ]
     });
 }
-function f(e) {
-    let { guildId: t, data: l, file: n, ...s } = e,
+function S(e) {
+    let { guildId: t, data: s, file: n, ...a } = e,
         [r, o] = i.useState(!1),
-        d = async (e, a) => {
+        d = async (e, l) => {
             try {
                 o(!0);
                 let i = (0, c.Z)();
-                b.default.track(C.rMx.EMOJI_UPLOAD_STARTED, {
+                j.default.track(f.rMx.EMOJI_UPLOAD_STARTED, {
                     guild_id: t,
                     upload_id: i
                 }),
                     await (0, m.G)({
                         guildId: t,
                         uploadId: i,
-                        data: l,
+                        data: s,
                         file: n,
                         roles: e
                     }),
-                    a();
+                    l();
             } catch (e) {
             } finally {
                 o(!1);
             }
         },
-        h = (0, g.qi)(t, {
+        h = (0, _.qi)(t, {
             includeSoftDeleted: !0,
             sortDeletedListingsLast: !0
         });
-    return (0, a.jsx)(S, {
-        emojiUrl: l,
+    return (0, l.jsx)(k, {
+        emojiUrl: s,
         onSave: d,
         saving: r,
         listingChoices: h,
-        ...s
+        ...a
     });
 }
 function w(e) {
-    let { emoji: t, guildId: l, ...n } = e,
-        s = j.ZP.getEmojiURL({
+    let { emoji: t, guildId: s, ...n } = e,
+        a = b.ZP.getEmojiURL({
             id: t.id,
             animated: t.animated,
             size: 40
         }),
         [r, { loading: o }] = (0, u.Z)(h.dv),
-        c = async (e, a) => {
+        c = async (e, l) => {
             null !=
                 (await r({
-                    guildId: l,
+                    guildId: s,
                     emojiId: t.id,
                     roles: e
-                })) && a();
+                })) && l();
         },
-        d = (0, g.qi)(l, { includeSoftDeleted: !0 });
+        d = (0, _.qi)(s, { includeSoftDeleted: !0 });
     d.sort((e, t) => Number(e.soft_deleted) - Number(t.soft_deleted));
-    let x = (0, p.Z)(l),
+    let x = (0, v.Z)(s),
         m = i.useMemo(() => {
             let e = new Set(
                 x.map((e) => {
@@ -248,8 +243,8 @@ function w(e) {
             );
             return t.roles.filter((t) => e.has(t));
         }, [t.roles, x]);
-    return (0, a.jsx)(S, {
-        emojiUrl: s,
+    return (0, l.jsx)(k, {
+        emojiUrl: a,
         onSave: c,
         initialRoleIds: m,
         saving: o,

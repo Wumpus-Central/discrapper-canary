@@ -1,27 +1,21 @@
-r.d(t, {
-    Z: function () {
-        return p;
-    }
-});
+r.d(t, { Z: () => p });
 var a = r(910974),
     n = r(681996),
-    o = r(525207),
-    s = r(987609),
+    s = r(525207),
+    o = r(987609),
     i = r(332133),
     c = r(775310),
-    u = r(700717),
-    l = r(621028),
+    l = r(700717),
+    u = r(621028),
     f = r(192379),
     b = r(639519),
-    h = r.n(b),
-    d = r(656715),
+    d = r.n(b),
+    h = r(656715),
     p = (function (e) {
-        (0, i.Z)(h, e);
+        (0, i.Z)(b, e);
         var t,
-            r,
-            b =
-                ((t = h),
-                (r = (function () {
+            r =
+                ((t = (function () {
                     if ('undefined' == typeof Reflect || !Reflect.construct || Reflect.construct.sham) return !1;
                     if ('function' == typeof Proxy) return !0;
                     try {
@@ -32,15 +26,15 @@ var a = r(910974),
                 })()),
                 function () {
                     var e,
-                        a = (0, u.Z)(t);
-                    return (e = r ? Reflect.construct(a, arguments, (0, u.Z)(this).constructor) : a.apply(this, arguments)), (0, c.Z)(this, e);
+                        r = (0, l.Z)(b);
+                    return (e = t ? Reflect.construct(r, arguments, (0, l.Z)(this).constructor) : r.apply(this, arguments)), (0, c.Z)(this, e);
                 });
-        function h(e) {
+        function b(e) {
             var t;
             return (
-                (0, n.Z)(this, h),
-                (t = b.call(this, e)),
-                (0, l.Z)((0, s.Z)(t), 'handleClick', function () {
+                (0, n.Z)(this, b),
+                (t = r.call(this, e)),
+                (0, u.Z)((0, o.Z)(t), 'handleClick', function () {
                     t.setState({ expanded: !t.state.expanded });
                 }),
                 (t.state = { expanded: !1 }),
@@ -48,7 +42,7 @@ var a = r(910974),
             );
         }
         return (
-            (0, o.Z)(h, [
+            (0, s.Z)(b, [
                 {
                     key: 'render',
                     value: function () {
@@ -56,15 +50,15 @@ var a = r(910974),
                             t = e.styling,
                             r = e.from,
                             n = e.to,
-                            o = e.renderChildNodes,
-                            s = e.nodeType;
+                            s = e.renderChildNodes,
+                            o = e.nodeType;
                         return this.state.expanded
-                            ? f.createElement('div', t('itemRange', this.state.expanded), o(this.props, r, n))
+                            ? f.createElement('div', t('itemRange', this.state.expanded), s(this.props, r, n))
                             : f.createElement(
                                   'div',
                                   (0, a.Z)({}, t('itemRange', this.state.expanded), { onClick: this.handleClick }),
-                                  f.createElement(d.Z, {
-                                      nodeType: s,
+                                  f.createElement(h.Z, {
+                                      nodeType: o,
                                       styling: t,
                                       expanded: !1,
                                       onClick: this.handleClick,
@@ -75,13 +69,13 @@ var a = r(910974),
                     }
                 }
             ]),
-            h
+            b
         );
     })(f.Component);
-(0, l.Z)(p, 'propTypes', {
-    styling: h().func.isRequired,
-    from: h().number.isRequired,
-    to: h().number.isRequired,
-    renderChildNodes: h().func.isRequired,
-    nodeType: h().string.isRequired
+(0, u.Z)(p, 'propTypes', {
+    styling: d().func.isRequired,
+    from: d().number.isRequired,
+    to: d().number.isRequired,
+    renderChildNodes: d().func.isRequired,
+    nodeType: d().string.isRequired
 });

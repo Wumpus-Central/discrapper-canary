@@ -1,10 +1,11 @@
-e.exports = {
-    note: 'note_e0037c',
-    icon: 'icon_e0037c',
-    large: 'large_e0037c',
-    small: 'small_e0037c',
-    colorWarning: 'colorWarning_e0037c',
-    colorError: 'colorError_e0037c',
-    colorPrimary: 'colorPrimary_e0037c',
-    colorSecondary: 'colorSecondary_e0037c'
+var i = {
+    note: 'note__2ef07',
+    icon: 'icon__2ef07',
+    large: 'large__2ef07',
+    small: 'small__2ef07',
+    colorWarning: 'colorWarning__2ef07',
+    colorError: 'colorError__2ef07',
+    colorPrimary: 'colorPrimary__2ef07',
+    colorSecondary: 'colorSecondary__2ef07'
 };
+e.exports = i;

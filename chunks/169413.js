@@ -1,4 +1,5 @@
-e.exports = {
-    firstPromotionalAvatar: 'firstPromotionalAvatar_b029da',
-    container: 'container_b029da'
+var i = {
+    firstPromotionalAvatar: 'firstPromotionalAvatar__55414',
+    container: 'container__55414'
 };
+e.exports = i;

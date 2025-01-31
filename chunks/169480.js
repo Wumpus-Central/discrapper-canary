@@ -1,28 +1,24 @@
-r.r(n),
-    r.d(n, {
-        showModal: function () {
-            return l;
-        },
-        updateModalProps: function () {
-            return u;
-        }
+n.r(t),
+    n.d(t, {
+        showModal: () => o,
+        updateModalProps: () => l
     });
-var i = r(200651);
-r(192379);
-var a = r(952265),
-    o = r(712364);
-let s = (e, n, r) =>
-    function (a) {
-        return (0, i.jsx)(o.Z, {
+var i = n(200651);
+n(192379);
+var r = n(952265),
+    a = n(712364);
+let s = (e, t, n) =>
+    function (r) {
+        return (0, i.jsx)(a.Z, {
             handleSubmit: e,
-            handleEarlyClose: n,
-            ...r,
-            ...a
+            handleEarlyClose: t,
+            ...n,
+            ...r
         });
     };
-function l(e, n, r) {
-    return (0, a.h7)(s(e, n, r), { onCloseCallback: n });
+function o(e, t, n) {
+    return (0, r.h7)(s(e, t, n), { onCloseCallback: t });
 }
-function u(e, n, r, i) {
-    return (0, a.o)(e, s(n, r, i));
+function l(e, t, n, i) {
+    return (0, r.o)(e, s(t, n, i));
 }

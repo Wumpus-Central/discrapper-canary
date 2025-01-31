@@ -1,49 +1,45 @@
-r.d(n, {
-    O: function () {
-        return d;
-    },
-    a: function () {
-        return f;
-    }
-});
-var i = r(47120);
-var a = r(544891),
-    o = r(570140),
-    s = r(19780),
-    l = r(823379),
-    u = r(41776),
-    c = r(981631);
-async function d(e) {
-    let n = u.Z.lurkingGuildIds().filter((n) => !e.includes(n));
-    0 !== n.length &&
-        (o.Z.dispatch({
+n.d(t, {
+    O: () => u,
+    a: () => c
+}),
+    n(47120);
+var i = n(544891),
+    r = n(570140),
+    a = n(19780),
+    s = n(823379),
+    o = n(41776),
+    l = n(981631);
+async function u(e) {
+    let t = o.Z.lurkingGuildIds().filter((t) => !e.includes(t));
+    0 !== t.length &&
+        (r.Z.dispatch({
             type: 'GUILD_STOP_LURKING',
             ignoredGuildIds: e
         }),
         await Promise.all(
-            n.map(async (e) => {
-                let n = u.Z.getLurkingSource();
+            t.map(async (e) => {
+                let t = o.Z.getLurkingSource();
                 try {
-                    await a.tn.del({
-                        url: c.ANM.GUILD_LEAVE(e),
+                    await i.tn.del({
+                        url: l.ANM.GUILD_LEAVE(e),
                         body: { lurking: !0 },
                         oldFormErrors: !0,
                         rejectWithError: !0
                     });
-                } catch (r) {
-                    o.Z.dispatch({
+                } catch (n) {
+                    r.Z.dispatch({
                         type: 'GUILD_STOP_LURKING_FAILURE',
                         lurkingGuildId: e,
-                        lurkingSource: n
+                        lurkingSource: t
                     });
                 }
             })
         ));
 }
-async function f() {
+async function c() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-        n = u.Z.lurkingGuildIds();
-    if (0 === n.length || !(null == e || !n.includes(e))) return;
-    let r = [e, s.Z.getGuildId()].filter(l.lm);
-    await d(r);
+        t = o.Z.lurkingGuildIds();
+    if (0 === t.length || !(null == e || !t.includes(e))) return;
+    let n = [e, a.Z.getGuildId()].filter(s.lm);
+    await u(n);
 }

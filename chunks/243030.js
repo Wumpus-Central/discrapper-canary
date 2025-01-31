@@ -1,5 +1,5 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
     return e.defineLocale('jv', {
         months: 'Januari_Februari_Maret_April_Mei_Juni_Juli_Agustus_September_Oktober_Nopember_Desember'.split('_'),
@@ -16,16 +16,11 @@
             LLLL: 'dddd, D MMMM YYYY [pukul] HH.mm'
         },
         meridiemParse: /enjing|siyang|sonten|ndalu/,
-        meridiemHour: function (e, n) {
-            if ((12 === e && (e = 0), 'enjing' === n)) return e;
-            if ('siyang' === n) return e >= 11 ? e : e + 12;
-            if ('sonten' === n || 'ndalu' === n) return e + 12;
+        meridiemHour: function (e, t) {
+            return (12 === e && (e = 0), 'enjing' === t) ? e : 'siyang' === t ? (e >= 11 ? e : e + 12) : 'sonten' === t || 'ndalu' === t ? e + 12 : void 0;
         },
-        meridiem: function (e, n, r) {
-            if (e < 11) return 'enjing';
-            if (e < 15) return 'siyang';
-            if (e < 19) return 'sonten';
-            else return 'ndalu';
+        meridiem: function (e, t, n) {
+            return e < 11 ? 'enjing' : e < 15 ? 'siyang' : e < 19 ? 'sonten' : 'ndalu';
         },
         calendar: {
             sameDay: '[Dinten puniko pukul] LT',

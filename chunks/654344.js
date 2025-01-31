@@ -1,8 +1,4 @@
-n.d(t, {
-    c: function () {
-        return s;
-    }
-});
+n.d(t, { c: () => s });
 let i = (0, n(818083).B)({
         kind: 'user',
         label: 'Pomelo Debounce Delay',

@@ -1,86 +1,85 @@
-r.d(n, {
-    a: function () {
-        return g;
-    }
-});
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(392711);
-var l = r(772848),
-    u = r(442837),
-    c = r(607070),
-    d = r(963838),
-    f = r(39127),
-    p = r(594174),
-    h = r(353368),
-    _ = r(685596);
-let m = 50;
-function g(e) {
-    var n;
-    let r = null == e ? void 0 : null === (n = e.parentElement) || void 0 === n ? void 0 : n.getBoundingClientRect();
-    return null == r
+n.d(t, {
+    Z: () => m,
+    a: () => h
+}),
+    n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(392711),
+    s = n(772848),
+    o = n(442837),
+    l = n(607070),
+    u = n(963838),
+    c = n(39127),
+    d = n(594174),
+    f = n(353368),
+    _ = n(685596);
+let p = 50;
+function h(e) {
+    var t;
+    let n = null == e ? void 0 : null === (t = e.parentElement) || void 0 === t ? void 0 : t.getBoundingClientRect();
+    return null == n
         ? {
               width: 0,
               height: 0
           }
         : {
-              width: r.width,
-              height: r.height
+              width: n.width,
+              height: n.height
           };
 }
-n.Z = o.forwardRef(function (e, n) {
-    let { sound: r, containerDimensions: i } = e,
-        g = (0, u.e7)([p.default], () => p.default.getCurrentUser()),
-        E = (0, u.e7)([c.Z], () => c.Z.useReducedMotion),
-        [v, y] = o.useState([]),
-        b = v.length < m,
-        I = (null == r ? void 0 : r.emojiId) != null || (null == r ? void 0 : r.emojiName) != null,
-        T = o.useCallback(() => {
-            if (!E && b && I && null != g) {
+let m = r.forwardRef(function (e, t) {
+    let { sound: n, containerDimensions: h } = e,
+        m = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
+        g = (0, o.e7)([l.Z], () => l.Z.useReducedMotion),
+        [E, v] = r.useState([]),
+        y = E.length < p,
+        I = (null == n ? void 0 : n.emojiId) != null || (null == n ? void 0 : n.emojiName) != null,
+        b = r.useCallback(() => {
+            if (!g && y && I && null != m) {
                 var e;
-                let n = (0, d._r)({
-                        id: r.emojiId,
-                        name: null !== (e = r.emojiName) && void 0 !== e ? e : '',
+                let t = (0, u._r)({
+                        id: n.emojiId,
+                        name: null !== (e = n.emojiName) && void 0 !== e ? e : '',
                         animated: !1
                     }),
-                    i = null != r.emojiId,
-                    a = h.q.PREMIUM,
-                    o = (0, s.random)(d.Jw[a].length, !1),
-                    u = {
-                        id: (0, l.Z)(),
+                    i = null != n.emojiId,
+                    r = f.q.PREMIUM,
+                    o = (0, a.random)(u.Jw[r].length, !1),
+                    l = {
+                        id: (0, s.Z)(),
                         animationId: o,
-                        animationType: a,
+                        animationType: r,
                         shouldResize: i,
-                        url: n,
-                        userId: g.id
+                        url: t,
+                        userId: m.id
                     };
-                y((e) => [...e, u]);
+                v((e) => [...e, l]);
             }
-        }, [E, b, I, g, r]);
-    o.useImperativeHandle(n, () => ({ addAnimation: T }));
-    let S = o.useCallback((e) => {
-        y((n) => {
-            let r = [...n],
-                i = r.findIndex((n) => n.id === e);
-            return r.splice(i, 1), r;
+        }, [g, y, I, m, n]);
+    r.useImperativeHandle(t, () => ({ addAnimation: b }));
+    let T = r.useCallback((e) => {
+        v((t) => {
+            let n = [...t],
+                i = n.findIndex((t) => t.id === e);
+            return n.splice(i, 1), n;
         });
     }, []);
-    return E || !I
+    return g || !I
         ? null
-        : (0, a.jsx)('div', {
+        : (0, i.jsx)('div', {
               className: _.effects,
               style: {
-                  width: i.width,
-                  height: i.height
+                  width: h.width,
+                  height: h.height
               },
-              children: v.map((e) =>
-                  (0, a.jsx)(
-                      f.Z,
+              children: E.map((e) =>
+                  (0, i.jsx)(
+                      c.Z,
                       {
-                          containerDimensions: i,
+                          containerDimensions: h,
                           effect: e,
-                          onComplete: S
+                          onComplete: T
                       },
                       e.id
                   )

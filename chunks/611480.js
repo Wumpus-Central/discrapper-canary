@@ -1,45 +1,24 @@
-var i;
-r.d(n, {
-    ED: function () {
-        return o;
-    },
-    Ht: function () {
-        return f;
-    },
-    Ks: function () {
-        return c;
-    },
-    OC: function () {
-        return p;
-    },
-    Vr: function () {
-        return s;
-    },
-    Wt: function () {
-        return d;
-    },
-    c: function () {
-        return l;
-    },
-    lE: function () {
-        return u;
-    },
-    nZ: function () {
-        return a;
-    },
-    yr: function () {
-        return i;
-    }
+n.d(t, {
+    ED: () => r,
+    Ht: () => c,
+    Ks: () => l,
+    OC: () => d,
+    Vr: () => a,
+    Wt: () => u,
+    c: () => s,
+    lE: () => o,
+    nZ: () => i,
+    yr: () => f
 });
-let a = 'sticker-picker-tab-panel',
-    o = 'sticker-picker-tab',
-    s = 'sticker-picker-grid',
-    l = -1,
-    u = 160,
-    c = '710982414301790216',
-    d = ['781323769960202280', '809209266556764241', '818597810047680532', '819129296374595614'],
-    f = 524288,
-    p = 1572864;
-!(function (e) {
-    (e[(e.ALWAYS_ANIMATE = 0)] = 'ALWAYS_ANIMATE'), (e[(e.ANIMATE_ON_INTERACTION = 1)] = 'ANIMATE_ON_INTERACTION'), (e[(e.NEVER_ANIMATE = 2)] = 'NEVER_ANIMATE');
-})(i || (i = {}));
+let i = 'sticker-picker-tab-panel',
+    r = 'sticker-picker-tab',
+    a = 'sticker-picker-grid',
+    s = -1,
+    o = 160,
+    l = '710982414301790216',
+    u = ['781323769960202280', '809209266556764241', '818597810047680532', '819129296374595614'],
+    c = 524288,
+    d = 1572864;
+var f = (function (e) {
+    return (e[(e.ALWAYS_ANIMATE = 0)] = 'ALWAYS_ANIMATE'), (e[(e.ANIMATE_ON_INTERACTION = 1)] = 'ANIMATE_ON_INTERACTION'), (e[(e.NEVER_ANIMATE = 2)] = 'NEVER_ANIMATE'), e;
+})({});

@@ -1,21 +1,17 @@
-r.d(n, {
-    Z: function () {
-        return s;
-    }
-});
-var i = r(53529),
-    a = r(887490);
-let o = 4000;
-function s(e, n) {
-    let { apply: r, deleteBackward: o, deleteForward: s, deleteFragment: u, insertData: d, insertText: f, onChange: p } = e;
-    function h(r) {
+n.d(t, { Z: () => s });
+var i = n(53529),
+    r = n(887490);
+let a = 4000;
+function s(e, t) {
+    let { apply: n, deleteBackward: a, deleteForward: s, deleteFragment: l, insertData: c, insertText: d, onChange: f } = e;
+    function _(n) {
+        let r = i.T.currentEntry(e);
+        if ((null != r && (r.mergeable = !1), n >= e.history.stack.length)) return;
+        e.history.index = n;
         let a = i.T.currentEntry(e);
-        if ((null != a && (a.mergeable = !1), r >= e.history.stack.length)) return;
-        e.history.index = r;
-        let o = i.T.currentEntry(e);
-        n({
-            newValue: o.value,
-            newSelection: o.selection
+        t({
+            newValue: a.value,
+            newSelection: a.selection
         });
     }
     (e.history = {
@@ -23,64 +19,64 @@ function s(e, n) {
         stack: []
     }),
         (e.onChange = () => {
-            let { history: n } = e;
-            0 === n.stack.length && ((n.stack = [c(e)]), (n.index = 0)), null != e.selection && (i.T.currentEntry(e).selection = e.selection), (m = null), p();
+            let { history: t } = e;
+            0 === t.stack.length && ((t.stack = [u(e)]), (t.index = 0)), null != e.selection && (i.T.currentEntry(e).selection = e.selection), (h = null), f();
         }),
         (e.undo = () => {
-            e.history.index > 0 && h(e.history.index - 1);
+            e.history.index > 0 && _(e.history.index - 1);
         }),
         (e.redo = () => {
-            e.history.index < e.history.stack.length - 1 && h(e.history.index + 1);
+            e.history.index < e.history.stack.length - 1 && _(e.history.index + 1);
         });
-    let _ = null,
-        m = null,
-        g = null;
+    let p = null,
+        h = null,
+        m = null;
     return (
-        (e.apply = (n) => {
-            let { history: o } = e;
-            r(n);
-            let s = a.bN.richValue(e);
-            if (s !== g) 0 === o.stack.length && ((o.stack = [c(e)]), (o.index = 0)), i.T.isSaving(e) && (l(e, n, _), (_ = n)), (m = n), (g = s);
+        (e.apply = (t) => {
+            let { history: a } = e;
+            n(t);
+            let s = r.bN.richValue(e);
+            s !== m && (0 === a.stack.length && ((a.stack = [u(e)]), (a.index = 0)), i.T.isSaving(e) && (o(e, t, p), (p = t)), (h = t), (m = s));
         }),
-        (e.deleteBackward = (n) => {
-            i.T.withSingleEntry(e, () => o(n));
+        (e.deleteBackward = (t) => {
+            i.T.withSingleEntry(e, () => a(t));
         }),
-        (e.deleteForward = (n) => {
-            i.T.withSingleEntry(e, () => s(n));
+        (e.deleteForward = (t) => {
+            i.T.withSingleEntry(e, () => s(t));
         }),
-        (e.deleteFragment = (n) => {
-            i.T.withSingleEntry(e, () => u(n));
+        (e.deleteFragment = (t) => {
+            i.T.withSingleEntry(e, () => l(t));
         }),
-        (e.insertText = (n) => {
-            1 === n.length && (null == m ? void 0 : m.type) === 'remove_text' ? i.T.withMergedEntry(e, () => f(n)) : null != e.selection && a.M8.isExpanded(e.selection) ? i.T.withSingleEntry(e, () => f(n)) : f(n);
+        (e.insertText = (t) => {
+            1 === t.length && (null == h ? void 0 : h.type) === 'remove_text' ? i.T.withMergedEntry(e, () => d(t)) : null != e.selection && r.M8.isExpanded(e.selection) ? i.T.withSingleEntry(e, () => d(t)) : d(t);
         }),
-        (e.insertData = (n) => {
-            (null == m ? void 0 : m.type) === 'remove_text' ? i.T.withMergedEntry(e, () => d(n)) : i.T.withSingleEntry(e, () => d(n));
+        (e.insertData = (t) => {
+            (null == h ? void 0 : h.type) === 'remove_text' ? i.T.withMergedEntry(e, () => c(t)) : i.T.withSingleEntry(e, () => c(t));
         }),
         e
     );
 }
-function l(e, n, r) {
-    let a;
-    let { selection: o } = e,
+function o(e, t, n) {
+    let r;
+    let { selection: a } = e,
         s = i.T.currentEntry(e),
-        l = !0,
-        c = !0;
-    if (('insert_text' === n.type && 1 === n.text.length ? ((a = 'insert'), (c = !(('' === n.text || n.text.endsWith(' ')) && (null == r ? void 0 : r.type) === 'insert_text' && !('' === r.text && r.text.endsWith(' '))))) : 'split_node' === n.type ? (a = 'insert') : 'remove_text' === n.type && 1 === n.text.length ? (a = 'delete') : ((a = 'other'), (l = !1), (c = !1)), 'set_selection' === n.type && null != s)) {
-        s.selection = o;
+        o = !0,
+        u = !0;
+    if (('insert_text' === t.type && 1 === t.text.length ? ((r = 'insert'), (u = !(('' === t.text || t.text.endsWith(' ')) && (null == n ? void 0 : n.type) === 'insert_text' && !('' === n.text && n.text.endsWith(' '))))) : 'split_node' === t.type ? (r = 'insert') : 'remove_text' === t.type && 1 === t.text.length ? (r = 'delete') : ((r = 'other'), (o = !1), (u = !1)), 'set_selection' === t.type && null != s)) {
+        s.selection = a;
         return;
     }
-    l && u(s, a) ? i.T.insertOrMergeEntry(e, a, c) : i.T.insertEntry(e, a, c);
+    o && l(s, r) ? i.T.insertOrMergeEntry(e, r, u) : i.T.insertEntry(e, r, u);
 }
-function u(e, n) {
-    return !((null == e ? void 0 : e.type) !== n || Date.now() - e.createdAt >= o) && !0;
+function l(e, t) {
+    return !((null == e ? void 0 : e.type) !== t || Date.now() - e.createdAt >= a);
 }
-function c(e) {
+function u(e) {
     return {
         type: 'other',
         mergeable: !1,
         createdAt: Date.now(),
-        value: a.bN.richValue(e),
+        value: r.bN.richValue(e),
         selection: e.selection
     };
 }

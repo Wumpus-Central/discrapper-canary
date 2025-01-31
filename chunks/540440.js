@@ -1,51 +1,47 @@
-r.d(n, {
-    B: function () {
-        return p;
-    },
-    y: function () {
-        return f;
-    }
+n.d(t, {
+    B: () => f,
+    y: () => d
 });
-var i = r(200651);
-r(192379);
-var a = r(278074),
-    o = r(442837),
-    s = r(481060),
-    l = r(26033),
-    u = r(594174),
-    c = r(324745),
-    d = r(388032);
-function f(e) {
-    return (0, a.EQ)(e)
-        .when(l.dX, () => d.intl.string(d.t['4f8iur']))
-        .when(l.y0, () => d.intl.string(d.t.yX2hNz))
-        .when(l.kq, () => d.intl.string(d.t.oSs8en))
-        .when(l.m9, () => d.intl.string(d.t.bK9GT0))
+var i = n(200651);
+n(192379);
+var r = n(278074),
+    a = n(442837),
+    s = n(481060),
+    o = n(26033),
+    l = n(594174),
+    u = n(324745),
+    c = n(388032);
+function d(e) {
+    return (0, r.EQ)(e)
+        .when(o.dX, () => c.intl.string(c.t['4f8iur']))
+        .when(o.y0, () => c.intl.string(c.t.yX2hNz))
+        .when(o.kq, () => c.intl.string(c.t.oSs8en))
+        .when(o.m9, () => c.intl.string(c.t.bK9GT0))
         .exhaustive();
 }
-function p(e) {
-    let { user: n, entry: a, display: d, onAction: p, onClose: h } = e,
-        _ = (0, c.Z)({ onClose: h }),
-        m = (0, o.e7)([u.default], () => u.default.getCurrentUser());
-    if (n.id !== (null == m ? void 0 : m.id) || 'live' === d || !(0, l.Rh)(a)) return null;
-    let g = () => {
-        (0, s.openModalLazy)(async () => {
-            let { default: e } = await r.e('26545').then(r.bind(r, 81596));
-            return (r) =>
+function f(e) {
+    let { user: t, entry: r, display: c, onAction: f, onClose: _ } = e,
+        p = (0, u.Z)({ onClose: _ }),
+        h = (0, a.e7)([l.default], () => l.default.getCurrentUser());
+    if (t.id !== (null == h ? void 0 : h.id) || 'live' === c || !(0, o.Rh)(r)) return null;
+    let m = () => {
+        (0, s.ZDy)(async () => {
+            let { default: e } = await n.e('26545').then(n.bind(n, 81596));
+            return (n) =>
                 (0, i.jsx)(e, {
-                    entry: a,
-                    user: n,
-                    onAction: p,
-                    onOpenGameSettings: _,
-                    ...r
+                    entry: r,
+                    user: t,
+                    onAction: f,
+                    onOpenGameSettings: p,
+                    ...n
                 });
         });
     };
-    return (0, i.jsx)(s.MenuItem, {
+    return (0, i.jsx)(s.sNh, {
         id: 'delete-entry-history',
-        label: f(a),
+        label: d(r),
         action: () => {
-            null == p || p({ action: 'PRESS_DELETE_HISTORY_MENU_ITEM' }), g();
+            null == f || f({ action: 'PRESS_DELETE_HISTORY_MENU_ITEM' }), m();
         },
         color: 'danger'
     });

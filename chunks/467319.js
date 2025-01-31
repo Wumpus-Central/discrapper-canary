@@ -1,20 +1,16 @@
 n.d(t, {
-    H: function () {
-        return i;
-    },
-    a: function () {
-        return l;
-    }
+    H: () => l,
+    a: () => i
 });
 var r = n(460083);
-function i(e) {
+function l(e) {
     let { enabled: t } = r.d.getCurrentConfig({
         guildId: e,
         location: '988d4e_3'
     });
     return t;
 }
-function l(e) {
+function i(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         { enabled: n } = r.d.useExperiment(
             {

@@ -1,5 +1,6 @@
-e.exports = {
-    seasonalGiftBoxHeaderIcon: 'seasonalGiftBoxHeaderIcon_fff54c',
-    container: 'container_fff54c',
-    closeButton: 'closeButton_fff54c'
+var i = {
+    seasonalGiftBoxHeaderIcon: 'seasonalGiftBoxHeaderIcon_ae16b8',
+    container: 'container_ae16b8',
+    closeButton: 'closeButton_ae16b8'
 };
+e.exports = i;

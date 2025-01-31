@@ -1,15 +1,11 @@
 n.d(t, {
-    d: function () {
-        return r;
-    },
-    y: function () {
-        return a;
-    }
+    d: () => a,
+    y: () => r
 });
 var i = n(981631),
     s = n(490897),
     l = n(388032);
-let r = (e) => [
+let a = (e) => [
         {
             label: l.intl.string(l.t['HVah//']),
             value: i.bL.ALL_MESSAGES
@@ -23,7 +19,7 @@ let r = (e) => [
             value: i.bL.NO_MESSAGES
         }
     ],
-    a = (e) => [
+    r = (e) => [
         {
             label: l.intl.string(l.t['HVah//']),
             value: s.i.ALL_MESSAGES

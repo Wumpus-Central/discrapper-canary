@@ -1,158 +1,157 @@
-let i, r, l;
-n(653041), n(47120);
+let i, l, r;
+n.d(t, { Z: () => P }), n(653041), n(47120);
 var a,
     s,
     o,
-    c,
-    d = n(392711),
-    u = n.n(d),
-    h = n(442837),
-    m = n(570140),
-    p = n(308063),
-    g = n(388610),
-    f = n(430824),
+    c = n(392711),
+    d = n.n(c),
+    u = n(442837),
+    h = n(570140),
+    m = n(308063),
+    p = n(388610),
+    g = n(430824),
     _ = n(496675),
-    E = n(855674),
-    I = n(981631);
-let C = [],
-    v = null,
-    N = !1,
-    T = I.QZA.CLOSED,
-    S = {},
-    b = !1,
-    A = null;
-function Z() {
-    if (((i = null != (r = g.Z.getChannel()) ? f.Z.getGuild(r.guild_id) : null), (C = null != r && null != i && _.Z.can(I.Plq.MANAGE_WEBHOOKS, r) ? E.Z.getWebhooksForChannel(i.id, r.id) : []), null != v)) {
-        let e = L(v.id);
-        null != e && (v = e);
+    f = n(855674),
+    E = n(981631);
+let I = [],
+    C = null,
+    v = !1,
+    N = E.QZA.CLOSED,
+    T = {},
+    S = !1,
+    Z = null;
+function x() {
+    if (((i = null != (l = p.Z.getChannel()) ? g.Z.getGuild(l.guild_id) : null), (I = null != l && null != i && _.Z.can(E.Plq.MANAGE_WEBHOOKS, l) ? f.Z.getWebhooksForChannel(i.id, l.id) : []), null != C)) {
+        let e = b(C.id);
+        null != e && (C = e);
     }
-    (T = I.QZA.OPEN), (S = {}), (b = !1);
+    (N = E.QZA.OPEN), (T = {}), (S = !1);
 }
-let x = u().debounce(() => {
-    b && ((null == v || u().isEqual(v, L(v.id))) && (b = !1), !b && P.emitChange());
+let A = d().debounce(() => {
+    S && ((null == C || d().isEqual(C, b(C.id))) && (S = !1), S || y.emitChange());
 }, 500);
-function L(e) {
-    return C.find((t) => {
+function b(e) {
+    return I.find((t) => {
         let { id: n } = t;
         return n === e;
     });
 }
-class y extends (a = h.ZP.Store) {
+class L extends (a = u.ZP.Store) {
     initialize() {
-        this.waitFor(g.Z, f.Z, E.Z, _.Z);
+        this.waitFor(p.Z, g.Z, f.Z, _.Z);
     }
     hasChanges() {
-        return b;
+        return S;
     }
     get webhooks() {
-        return C;
+        return I;
     }
     get editedWebhook() {
-        return v;
+        return C;
     }
     get formState() {
-        return T;
+        return N;
     }
     getWebhook(e) {
-        return L(e);
+        return b(e);
     }
     showNotice() {
         return this.hasChanges();
     }
     getProps() {
         return {
-            submitting: T === I.QZA.SUBMITTING,
-            webhooks: C,
-            editedWebhook: v,
-            section: l,
-            sectionId: A,
+            submitting: N === E.QZA.SUBMITTING,
+            webhooks: I,
+            editedWebhook: C,
+            section: r,
+            sectionId: Z,
             hasChanges: this.hasChanges(),
-            isFetching: N,
-            errors: S
+            isFetching: v,
+            errors: T
         };
     }
 }
-(c = 'ChannelSettingsIntegrationsStore'),
-    (o = 'displayName') in (s = y)
-        ? Object.defineProperty(s, o, {
-              value: c,
+(o = 'ChannelSettingsIntegrationsStore'),
+    (s = 'displayName') in L
+        ? Object.defineProperty(L, s, {
+              value: o,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (s[o] = c);
-let P = new y(
-    m.Z,
-    __OVERLAY__
-        ? {}
-        : {
-              INTEGRATION_SETTINGS_INIT: Z,
-              INTEGRATION_SETTINGS_SAVE_SUCCESS: Z,
-              CHANNEL_SETTINGS_SET_SECTION: function (e) {
-                  let { section: t } = e;
-                  if (t !== I.CoT.INTEGRATIONS) return !1;
-                  if (((l = I.b4C.OVERVIEW), null == i)) {
-                      let e = g.Z.getChannel(),
-                          t = null == e ? void 0 : e.getGuildId();
-                      null != e && null != t && (p.Z.fetchForChannel(t, e.id), (N = !0)), Z();
-                  }
-              },
-              INTEGRATION_SETTINGS_SET_SECTION: function (e) {
-                  let { section: t, sectionId: n } = e;
-                  (l = t), (A = n);
-              },
-              INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: function (e) {
-                  let { webhookId: t } = e,
-                      n = L(t);
-                  if (null == n) return !1;
-                  (v = n), (S = {}), (b = !1);
-              },
-              INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK: function () {
-                  (v = null), (S = {}), (b = !1);
-              },
-              INTEGRATION_SETTINGS_UPDATE_WEBHOOK: function (e) {
-                  let { settings: t } = e;
-                  if (null == v) return !1;
-                  (v = { ...v }), null != t.name && v.name !== t.name && ((v.name = t.name), (b = !0)), void 0 !== t.avatar && v.avatar !== t.avatar && ((v.avatar = t.avatar), (b = !0)), null != t.channelId && v.channel_id !== t.channelId && ((v.channel_id = t.channelId), (b = !0)), b && x();
-              },
-              CHANNEL_SETTINGS_CLOSE: function () {
-                  (r = null), (i = null), (C = []), (v = null), (T = I.QZA.CLOSED);
-              },
-              WEBHOOKS_UPDATE: function (e) {
-                  let { guildId: t, channelId: n, webhooks: l } = e;
-                  if (((N = !1), null != i && t === i.id && null != r && n === r.id && null != l && T !== I.QZA.SUBMITTING)) {
-                      for (let e = C.length - 1; e >= 0; e--) {
-                          let t = C[e];
-                          if (null != n && (null == t ? void 0 : t.channel_id) !== n) continue;
-                          let i = l.find((e) => {
-                              let { id: n } = e;
-                              if (n === t.id) return !0;
-                          });
-                          if (null != i) {
-                              let n = {
-                                  ...t,
-                                  ...i
-                              };
-                              (C[e] = n), !b && (null == v ? void 0 : v.id) === n.id && (v = n);
-                          } else (null == v ? void 0 : v.id) === t.id && (v = null), C.splice(e, 1);
+        : (L[s] = o);
+let y = new L(
+        h.Z,
+        __OVERLAY__
+            ? {}
+            : {
+                  INTEGRATION_SETTINGS_INIT: x,
+                  INTEGRATION_SETTINGS_SAVE_SUCCESS: x,
+                  CHANNEL_SETTINGS_SET_SECTION: function (e) {
+                      let { section: t } = e;
+                      if (t !== E.CoT.INTEGRATIONS) return !1;
+                      if (((r = E.b4C.OVERVIEW), null == i)) {
+                          let e = p.Z.getChannel(),
+                              t = null == e ? void 0 : e.getGuildId();
+                          null != e && null != t && (m.Z.fetchForChannel(t, e.id), (v = !0)), x();
                       }
-                      for (let e of l)
-                          null ==
-                              C.find((t) => {
-                                  let { id: n } = t;
-                                  if (n === e.id) return !0;
-                              }) && C.push(e);
-                      (C = [...C]), x();
+                  },
+                  INTEGRATION_SETTINGS_SET_SECTION: function (e) {
+                      let { section: t, sectionId: n } = e;
+                      (r = t), (Z = n);
+                  },
+                  INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: function (e) {
+                      let { webhookId: t } = e,
+                          n = b(t);
+                      if (null == n) return !1;
+                      (C = n), (T = {}), (S = !1);
+                  },
+                  INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK: function () {
+                      (C = null), (T = {}), (S = !1);
+                  },
+                  INTEGRATION_SETTINGS_UPDATE_WEBHOOK: function (e) {
+                      let { settings: t } = e;
+                      if (null == C) return !1;
+                      (C = { ...C }), null != t.name && C.name !== t.name && ((C.name = t.name), (S = !0)), void 0 !== t.avatar && C.avatar !== t.avatar && ((C.avatar = t.avatar), (S = !0)), null != t.channelId && C.channel_id !== t.channelId && ((C.channel_id = t.channelId), (S = !0)), S && A();
+                  },
+                  CHANNEL_SETTINGS_CLOSE: function () {
+                      (l = null), (i = null), (I = []), (C = null), (N = E.QZA.CLOSED);
+                  },
+                  WEBHOOKS_UPDATE: function (e) {
+                      let { guildId: t, channelId: n, webhooks: r } = e;
+                      if (((v = !1), null != i && t === i.id && null != l && n === l.id && null != r && N !== E.QZA.SUBMITTING)) {
+                          for (let e = I.length - 1; e >= 0; e--) {
+                              let t = I[e];
+                              if (null != n && (null == t ? void 0 : t.channel_id) !== n) continue;
+                              let i = r.find((e) => {
+                                  let { id: n } = e;
+                                  if (n === t.id) return !0;
+                              });
+                              if (null != i) {
+                                  let n = {
+                                      ...t,
+                                      ...i
+                                  };
+                                  (I[e] = n), S || (null == C ? void 0 : C.id) !== n.id || (C = n);
+                              } else (null == C ? void 0 : C.id) === t.id && (C = null), I.splice(e, 1);
+                          }
+                          for (let e of r)
+                              null ==
+                                  I.find((t) => {
+                                      let { id: n } = t;
+                                      if (n === e.id) return !0;
+                                  }) && I.push(e);
+                          (I = [...I]), A();
+                      }
+                  },
+                  INTEGRATION_SETTINGS_SUBMITTING: function () {
+                      (N = E.QZA.SUBMITTING), (T = {});
+                  },
+                  INTEGRATION_SETTINGS_SAVE_FAILURE: function (e) {
+                      var t;
+                      if (N !== E.QZA.SUBMITTING) return !1;
+                      (N = E.QZA.OPEN), (T = null !== (t = e.errors) && void 0 !== t ? t : {});
                   }
-              },
-              INTEGRATION_SETTINGS_SUBMITTING: function () {
-                  (T = I.QZA.SUBMITTING), (S = {});
-              },
-              INTEGRATION_SETTINGS_SAVE_FAILURE: function (e) {
-                  var t;
-                  if (T !== I.QZA.SUBMITTING) return !1;
-                  (T = I.QZA.OPEN), (S = null !== (t = e.errors) && void 0 !== t ? t : {});
               }
-          }
-);
-t.Z = P;
+    ),
+    P = y;

@@ -1,24 +1,18 @@
-r.d(n, {
-    N7: function () {
-        return s;
-    },
-    aG: function () {
-        return u;
-    },
-    jC: function () {
-        return l;
-    }
+n.d(t, {
+    N7: () => s,
+    aG: () => l,
+    jC: () => o
 });
-var i = r(39383),
-    a = r.n(i);
-let o = {};
+var i = n(39383),
+    r = n.n(i);
+let a = {};
 function s(e) {
-    let n = a()('VideoStream');
-    return (o[n] = e), n;
+    let t = r()('VideoStream');
+    return (a[t] = e), t;
+}
+function o(e) {
+    delete a[e];
 }
 function l(e) {
-    delete o[e];
-}
-function u(e) {
-    return o[e];
+    return a[e];
 }

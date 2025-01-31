@@ -1,2 +1,2 @@
-var i = n(231338);
-t.Z = { [i.Et.GET_PLATFORM_BEHAVIORS]: { handler: () => ({ iosKeyboardResizesView: !0 }) } };
+n.d(t, { Z: () => i });
+let i = { [n(231338).Et.GET_PLATFORM_BEHAVIORS]: { handler: () => ({ iosKeyboardResizesView: !0 }) } };

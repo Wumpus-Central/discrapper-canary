@@ -1,89 +1,87 @@
-var i = r(47120);
-var a = r(411104);
-var o = r(200651),
-    s = r(192379),
-    l = r(734530);
-var u = r(780384),
-    c = r(481060),
-    d = r(410030),
-    f = r(231338),
-    p = r(388032),
-    h = r(578153),
-    _ = r(744481),
-    m = r(724641),
-    g = r(811974),
-    E = r(212545),
-    v = r(184229),
-    y = r(504309);
-function b(e) {
-    let n = (0, d.ZP)(),
-        r = s.useRef(null),
-        [i, a] = s.useState({});
+n.d(t, { Z: () => E }), n(47120), n(411104);
+var i = n(200651),
+    r = n(192379),
+    a = n(734530),
+    s = n(780384),
+    o = n(481060),
+    l = n(410030),
+    u = n(231338),
+    c = n(388032),
+    d = n(578153),
+    f = n(744481),
+    _ = n(724641),
+    p = n(811974),
+    h = n(212545),
+    m = n(184229),
+    g = n(504309);
+let E = function (e) {
+    let t = (0, l.ZP)(),
+        n = r.useRef(null),
+        [E, v] = r.useState({});
     switch (
-        (s.useLayoutEffect(() => {
-            let { current: e } = r;
+        (r.useLayoutEffect(() => {
+            let { current: e } = n;
             if (null == e) return;
-            let n = window.getComputedStyle(e),
+            let t = window.getComputedStyle(e),
                 i = window.getComputedStyle(e, '::placeholder'),
-                o = n.getPropertyValue('font-family'),
-                s = n.getPropertyValue('font-weight'),
-                l = n.getPropertyValue('color'),
-                u = n.getPropertyValue('font-size');
-            a({
+                r = t.getPropertyValue('font-family'),
+                a = t.getPropertyValue('font-weight'),
+                s = t.getPropertyValue('color');
+            v({
                 base: {
-                    fontFamily: o,
-                    fontWeight: s,
-                    color: l,
-                    fontSize: u,
-                    backgroundColor: n.getPropertyValue('background-color'),
+                    fontFamily: r,
+                    fontWeight: a,
+                    color: s,
+                    fontSize: t.getPropertyValue('font-size'),
+                    backgroundColor: t.getPropertyValue('background-color'),
                     padding: '12px',
                     '::placeholder': { color: i.getPropertyValue('color') }
                 }
             });
-        }, [r]),
+        }, [n]),
         e.type)
     ) {
-        case f.He.PRZELEWY24: {
-            let a = (0, u.wj)(n) ? v : y,
-                { onNameChange: s, onEmailChange: d, onP24BankChange: f, p24BankValue: _, billingAddressInfo: m } = e;
-            return (0, o.jsxs)('div', {
-                className: h.body,
+        case u.He.PRZELEWY24: {
+            let r = (0, s.wj)(t) ? m : g,
+                { onNameChange: l, onEmailChange: u, onP24BankChange: f, p24BankValue: _, billingAddressInfo: p } = e;
+            return (0, i.jsxs)('div', {
+                className: d.body,
                 children: [
-                    (0, o.jsx)(c.FormSection, {
-                        title: p.intl.string(p.t['w/qqKC']),
-                        children: (0, o.jsx)(c.TextInput, {
-                            inputRef: r,
-                            name: p.intl.string(p.t['w/qqKC']),
-                            placeholder: p.intl.string(p.t['w/qqKC']),
-                            onChange: (e) => d(e),
-                            value: m.email
+                    (0, i.jsx)(o.hjN, {
+                        title: c.intl.string(c.t['w/qqKC']),
+                        children: (0, i.jsx)(o.oil, {
+                            inputRef: n,
+                            name: c.intl.string(c.t['w/qqKC']),
+                            placeholder: c.intl.string(c.t['w/qqKC']),
+                            onChange: (e) => u(e),
+                            value: p.email
                         })
                     }),
-                    (0, o.jsx)(c.FormSection, {
-                        className: h.nonTopInputWrapper,
-                        title: p.intl.string(p.t.yf7ms7),
-                        children: (0, o.jsx)(c.TextInput, {
-                            name: p.intl.string(p.t.yf7ms7),
-                            placeholder: p.intl.string(p.t.yf7ms7),
-                            onChange: (e) => s(e),
-                            value: m.name
+                    (0, i.jsx)(o.hjN, {
+                        className: d.nonTopInputWrapper,
+                        title: c.intl.string(c.t.yf7ms7),
+                        children: (0, i.jsx)(o.oil, {
+                            name: c.intl.string(c.t.yf7ms7),
+                            placeholder: c.intl.string(c.t.yf7ms7),
+                            onChange: (e) => l(e),
+                            value: p.name
                         })
                     }),
-                    (0, o.jsxs)(c.FormSection, {
-                        className: h.nonTopInputWrapper,
-                        title: p.intl.string(p.t.De3b8v),
+                    (0, i.jsxs)(o.hjN, {
+                        className: d.nonTopInputWrapper,
+                        title: c.intl.string(c.t.De3b8v),
                         children: [
-                            (0, o.jsx)(l.P24BankElement, {
+                            (0, i.jsx)(a.P24BankElement, {
                                 options: {
                                     value: _,
-                                    style: i
+                                    style: E
                                 },
                                 onChange: (e) => f(e.value)
                             }),
-                            (0, o.jsx)('div', {
-                                className: h.bankSelectionStub,
-                                children: (0, o.jsx)('img', {
-                                    src: a,
+                            (0, i.jsx)('div', {
+                                className: d.bankSelectionStub,
+                                children: (0, i.jsx)('img', {
+                                    src: r,
                                     alt: 'Przelewy24'
                                 })
                             })
@@ -92,37 +90,37 @@ function b(e) {
                 ]
             });
         }
-        case f.He.EPS: {
-            let { onAccountHolderNameChange: a, onEPSBankChange: s, epsBankValue: d, billingAddressInfo: f } = e,
-                g = (0, u.wj)(n) ? _ : m;
-            return (0, o.jsxs)('div', {
-                className: h.body,
+        case u.He.EPS: {
+            let { onAccountHolderNameChange: r, onEPSBankChange: l, epsBankValue: u, billingAddressInfo: p } = e,
+                h = (0, s.wj)(t) ? f : _;
+            return (0, i.jsxs)('div', {
+                className: d.body,
                 children: [
-                    (0, o.jsx)(c.FormSection, {
-                        title: p.intl.string(p.t.sN3wra),
-                        children: (0, o.jsx)(c.TextInput, {
-                            inputRef: r,
-                            name: p.intl.string(p.t.sN3wra),
-                            placeholder: p.intl.string(p.t.sN3wra),
-                            onChange: (e) => a(e),
-                            value: f.name
+                    (0, i.jsx)(o.hjN, {
+                        title: c.intl.string(c.t.sN3wra),
+                        children: (0, i.jsx)(o.oil, {
+                            inputRef: n,
+                            name: c.intl.string(c.t.sN3wra),
+                            placeholder: c.intl.string(c.t.sN3wra),
+                            onChange: (e) => r(e),
+                            value: p.name
                         })
                     }),
-                    (0, o.jsxs)(c.FormSection, {
-                        className: h.nonTopInputWrapper,
-                        title: p.intl.string(p.t.dFyV09),
+                    (0, i.jsxs)(o.hjN, {
+                        className: d.nonTopInputWrapper,
+                        title: c.intl.string(c.t.dFyV09),
                         children: [
-                            (0, o.jsx)(l.EpsBankElement, {
+                            (0, i.jsx)(a.EpsBankElement, {
                                 options: {
-                                    value: d,
-                                    style: i
+                                    value: u,
+                                    style: E
                                 },
-                                onChange: (e) => s(e.value)
+                                onChange: (e) => l(e.value)
                             }),
-                            (0, o.jsx)('div', {
-                                className: h.bankSelectionStub,
-                                children: (0, o.jsx)('img', {
-                                    src: g,
+                            (0, i.jsx)('div', {
+                                className: d.bankSelectionStub,
+                                children: (0, i.jsx)('img', {
+                                    src: h,
                                     alt: 'EPS'
                                 })
                             })
@@ -131,36 +129,36 @@ function b(e) {
                 ]
             });
         }
-        case f.He.IDEAL: {
-            let { onAccountHolderNameChange: a, onIdealBankChange: s, idealBankValue: d, billingAddressInfo: f } = e,
-                _ = (0, u.wj)(n) ? g : E;
-            return (0, o.jsxs)('div', {
-                className: h.body,
+        case u.He.IDEAL: {
+            let { onAccountHolderNameChange: r, onIdealBankChange: l, idealBankValue: u, billingAddressInfo: f } = e,
+                _ = (0, s.wj)(t) ? p : h;
+            return (0, i.jsxs)('div', {
+                className: d.body,
                 children: [
-                    (0, o.jsx)(c.FormSection, {
-                        title: p.intl.string(p.t.sN3wra),
-                        children: (0, o.jsx)(c.TextInput, {
-                            inputRef: r,
-                            name: p.intl.string(p.t.sN3wra),
-                            placeholder: p.intl.string(p.t.sN3wra),
-                            onChange: (e) => a(e),
+                    (0, i.jsx)(o.hjN, {
+                        title: c.intl.string(c.t.sN3wra),
+                        children: (0, i.jsx)(o.oil, {
+                            inputRef: n,
+                            name: c.intl.string(c.t.sN3wra),
+                            placeholder: c.intl.string(c.t.sN3wra),
+                            onChange: (e) => r(e),
                             value: f.name
                         })
                     }),
-                    (0, o.jsxs)(c.FormSection, {
-                        className: h.nonTopInputWrapper,
-                        title: p.intl.string(p.t.Ugq3yM),
+                    (0, i.jsxs)(o.hjN, {
+                        className: d.nonTopInputWrapper,
+                        title: c.intl.string(c.t.Ugq3yM),
                         children: [
-                            (0, o.jsx)(l.IdealBankElement, {
+                            (0, i.jsx)(a.IdealBankElement, {
                                 options: {
-                                    value: d,
-                                    style: i
+                                    value: u,
+                                    style: E
                                 },
-                                onChange: (e) => s(e.value)
+                                onChange: (e) => l(e.value)
                             }),
-                            (0, o.jsx)('div', {
-                                className: h.bankSelectionStub,
-                                children: (0, o.jsx)('img', {
+                            (0, i.jsx)('div', {
+                                className: d.bankSelectionStub,
+                                children: (0, i.jsx)('img', {
                                     src: _,
                                     alt: 'iDeal'
                                 })
@@ -173,5 +171,4 @@ function b(e) {
         default:
             throw Error('unknown payment source type');
     }
-}
-n.Z = b;
+};

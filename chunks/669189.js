@@ -1,5 +1,6 @@
-e.exports = {
-    clipsEnabledIndicator: 'clipsEnabledIndicator_d7719d',
-    clipBadgeText: 'clipBadgeText_d7719d ' + n('914410').liveLarge,
-    clipBadgeIcon: 'clipBadgeIcon_d7719d'
+var i = {
+    clipsEnabledIndicator: 'clipsEnabledIndicator__8c88a',
+    clipBadgeText: 'clipBadgeText__8c88a ' + n(914410).liveLarge,
+    clipBadgeIcon: 'clipBadgeIcon__8c88a'
 };
+e.exports = i;

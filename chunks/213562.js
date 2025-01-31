@@ -18,13 +18,7 @@ t.exports = function (t, e) {
     t.setClipboard(p),
         t.setMode('cut'),
         setTimeout(function () {
-            t.restoreEditorDOM(r),
-                t.exitCurrentMode(),
-                t.update(
-                    (function (t) {
-                        var e = n.removeRange(t.getCurrentContent(), t.getSelection(), 'forward');
-                        return i.push(t, e, 'remove-range');
-                    })(c)
-                );
+            var e, o;
+            t.restoreEditorDOM(r), t.exitCurrentMode(), t.update(((e = c), (o = n.removeRange(e.getCurrentContent(), e.getSelection(), 'forward')), i.push(e, o, 'remove-range')));
         }, 0);
 };

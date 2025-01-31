@@ -1,16 +1,12 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
+n.d(t, { Z: () => c });
 var i = n(442837),
-    r = n(430824),
-    l = n(644542),
+    l = n(430824),
+    r = n(644542),
     a = n(923726),
     s = n(144507),
     o = n(981631);
 function c(e) {
-    let t = (0, i.e7)([r.Z], () => r.Z.getGuild(e)),
+    let t = (0, i.e7)([l.Z], () => l.Z.getGuild(e)),
         n = (0, a.ss)(e),
         c = (0, a.Gp)(),
         d = (null == t ? void 0 : t.hasFeature(o.oNc.ROLE_SUBSCRIPTIONS_ENABLED)) === !0 && (null == t ? void 0 : t.hasFeature(o.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) === !1,
@@ -19,7 +15,7 @@ function c(e) {
         d &&
             c &&
             u &&
-            l.jJ.trackExposure({
+            r.jJ.trackExposure({
                 guildId: e,
                 location: 'ca30d9_1'
             }),

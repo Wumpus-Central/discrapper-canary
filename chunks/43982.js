@@ -1,14 +1,10 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-});
+n.d(t, { Z: () => f });
 var i = n(200651);
 n(192379);
 var l = n(512722),
-    r = n.n(l),
-    a = n(392711),
-    s = n.n(a),
+    a = n.n(l),
+    r = n(392711),
+    s = n.n(r),
     o = n(970731),
     c = n(981631),
     d = n(388032),
@@ -17,8 +13,8 @@ var l = n(512722),
     p = n(699352);
 let m = null;
 function f(e) {
-    let { onDismiss: t, onAccept: n, popoutPosition: l, gameConsoleAccounts: a } = e;
-    r()(a.length > 0, 'Rendering ConsoleNUXTooltip without a game console account'), (null == m || null == a.find((e) => e.type === m)) && (m = s().shuffle(a)[0].type);
+    let { onDismiss: t, onAccept: n, popoutPosition: l, gameConsoleAccounts: r } = e;
+    a()(r.length > 0, 'Rendering ConsoleNUXTooltip without a game console account'), (null == m || null == r.find((e) => e.type === m)) && (m = s().shuffle(r)[0].type);
     let f = null,
         g = null;
     switch (m) {

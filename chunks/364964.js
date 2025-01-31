@@ -1,39 +1,37 @@
-r.r(n);
-var i = r(47120);
-var a = r(757143);
-var o = r(147519),
-    s = r(392711),
-    l = r.n(s),
-    u = r(462176);
-o.Z.registerLanguage('ansi', u.Z);
-let c = /<[^>]*>[^>]*(html\\`)/g,
-    d = new Set(['html', 'xml']);
-n.default = {
-    highlight(e, n, r) {
-        if (!p(n, e)) return null;
-        let i = Date.now(),
-            a = o.Z.highlight(n, {
-                ignoreIllegals: r,
+n.r(t), n.d(t, { default: () => u }), n(47120), n(757143);
+var i = n(147519),
+    r = n(392711),
+    a = n.n(r),
+    s = n(462176);
+i.Z.registerLanguage('ansi', s.Z);
+let o = /<[^>]*>[^>]*(html\\`)/g,
+    l = new Set(['html', 'xml']),
+    u = {
+        highlight(e, t, n) {
+            if (!d(t, e)) return null;
+            Date.now();
+            let r = i.Z.highlight(t, {
+                ignoreIllegals: n,
                 language: e
             });
-        return Date.now(), a;
+            return Date.now(), r;
+        },
+        hasLanguage: (e) => null != i.Z.getLanguage(e)
     },
-    hasLanguage: (e) => null != o.Z.getLanguage(e)
-};
-let f = l().repeat('/', 15);
-function p(e, n) {
-    if (e.indexOf(f) >= 0) return !1;
-    let r = 0;
-    for (let n of e.split('\n')) {
-        if (n.length > 1000) return !1;
-        null == n.match(/^\s*[/][/]/) && null != n.match(/[^/]/) && (r = 0);
-        let e = n.match(/[/]/g);
-        if (null != e && ((r += e.length), r > 30)) return !1;
+    c = a().repeat('/', 15);
+function d(e, t) {
+    if (e.indexOf(c) >= 0) return !1;
+    let n = 0;
+    for (let t of e.split('\n')) {
+        if (t.length > 1000) return !1;
+        null == t.match(/^\s*[/][/]/) && null != t.match(/[^/]/) && (n = 0);
+        let e = t.match(/[/]/g);
+        if (null != e && (n += e.length) > 30) return !1;
     }
-    if (d.has(n)) {
+    if (l.has(t)) {
         var i;
-        let n = e.replace(/\s*/g, '').match(c);
-        if ((null !== (i = null == n ? void 0 : n.length) && void 0 !== i ? i : 0) > 10) return !1;
+        let t = e.replace(/\s*/g, '').match(o);
+        if ((null !== (i = null == t ? void 0 : t.length) && void 0 !== i ? i : 0) > 10) return !1;
     }
     return !0;
 }

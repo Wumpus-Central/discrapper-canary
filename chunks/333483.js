@@ -1,9 +1,11 @@
 e.exports = {
-    addFriendInputWrapper: 'addFriendInputWrapper_de812f',
-    error: 'error_de812f',
-    success: 'success_de812f',
-    addFriendInput: 'addFriendInput_de812f inputText_de812f',
-    input: 'input_de812f inputText_de812f',
-    addFriendHint: 'addFriendHint_de812f inputText_de812f',
-    ring: 'ring_de812f'
+    addFriendInputWrapper: 'addFriendInputWrapper__72ba7',
+    error: 'error__72ba7',
+    success: 'success__72ba7',
+    addFriendWumpusWrapper: 'addFriendWumpusWrapper__72ba7',
+    inputText: 'inputText__72ba7',
+    addFriendInput: 'addFriendInput__72ba7 inputText__72ba7',
+    input: 'input__72ba7 inputText__72ba7',
+    addFriendHint: 'addFriendHint__72ba7 inputText__72ba7',
+    ring: 'ring__72ba7'
 };

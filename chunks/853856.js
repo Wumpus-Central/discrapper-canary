@@ -1,74 +1,76 @@
+n.d(t, { Z: () => m });
 var i,
-    a = r(442837),
-    o = r(524437),
-    s = r(570140),
-    l = r(581883),
-    u = r(131704),
-    c = r(981631);
-function d(e, n, r) {
+    r = n(442837),
+    a = n(524437),
+    s = n(570140),
+    o = n(581883),
+    l = n(131704),
+    u = n(981631);
+function c(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let f = {},
-    p = !1;
-function h(e) {
-    var n;
-    return (0, u.kt)({
+let d = {},
+    f = !1;
+function _(e) {
+    var t;
+    return (0, l.kt)({
         id: e.id,
-        name: null !== (n = e.nickname) && void 0 !== n ? n : '',
-        type: c.d4z.GUILD_CATEGORY,
+        name: null !== (t = e.nickname) && void 0 !== t ? t : '',
+        type: u.d4z.GUILD_CATEGORY,
         position: e.order,
-        guild_id: c.I_8
+        guild_id: u.I_8
     });
 }
-function _() {
-    var e, n, r;
-    (p = null !== (r = null === (e = l.Z.settings.favorites) || void 0 === e ? void 0 : e.muted) && void 0 !== r && r), (f = {});
-    let i = null === (n = l.Z.settings.favorites) || void 0 === n ? void 0 : n.favoriteChannels;
+function p() {
+    var e, t, n;
+    (f = null !== (n = null === (e = o.Z.settings.favorites) || void 0 === e ? void 0 : e.muted) && void 0 !== n && n), (d = {});
+    let i = null === (t = o.Z.settings.favorites) || void 0 === t ? void 0 : t.favoriteChannels;
     if (null == i) return !1;
     for (let e in i) {
-        let n = i[e];
-        f[e] = {
+        let t = i[e];
+        d[e] = {
             id: e,
-            nickname: '' !== n.nickname ? n.nickname : null,
-            type: n.type,
-            order: n.position,
-            parentId: '0' !== n.parentId ? n.parentId : null
+            nickname: '' !== t.nickname ? t.nickname : null,
+            type: t.type,
+            order: t.position,
+            parentId: '0' !== t.parentId ? t.parentId : null
         };
     }
 }
-class m extends (i = a.ZP.Store) {
+class h extends (i = r.ZP.Store) {
     initialize() {
-        this.waitFor(l.Z), _(), this.syncWith([l.Z], _);
+        this.waitFor(o.Z), p(), this.syncWith([o.Z], p);
     }
     getFavoriteChannels() {
-        return f;
+        return d;
     }
     get favoriteServerMuted() {
-        return p;
+        return f;
     }
     isFavorite(e) {
-        return null != e && null != f[e];
+        return null != e && null != d[e];
     }
     getFavorite(e) {
-        if (null != e) return f[e];
+        if (null != e) return d[e];
     }
     getCategoryRecord(e) {
-        return e in f && f[e].type === o.Dd.CATEGORY ? h(f[e]) : null;
+        return e in d && d[e].type === a.Dd.CATEGORY ? _(d[e]) : null;
     }
     getNickname(e) {
-        var n;
-        let r = this.getFavorite(e);
-        return null !== (n = null == r ? void 0 : r.nickname) && void 0 !== n ? n : void 0;
+        var t;
+        let n = this.getFavorite(e);
+        return null !== (t = null == n ? void 0 : n.nickname) && void 0 !== t ? t : void 0;
     }
 }
-d(m, 'displayName', 'FavoriteStore'), (n.Z = new m(s.Z, {}));
+c(h, 'displayName', 'FavoriteStore');
+let m = new h(s.Z, {});

@@ -34,9 +34,7 @@ var s = {
             f = t.viewBoxSize,
             h = (function (t, e) {
                 var r = {};
-                for (var o in t) {
-                    if (!(e.indexOf(o) >= 0)) Object.prototype.hasOwnProperty.call(t, o) && (r[o] = t[o]);
-                }
+                for (var o in t) !(e.indexOf(o) >= 0) && Object.prototype.hasOwnProperty.call(t, o) && (r[o] = t[o]);
                 return r;
             })(t, ['bgColor', 'bgD', 'fgD', 'fgColor', 'size', 'title', 'viewBoxSize']);
         return a.default.createElement(

@@ -1,198 +1,197 @@
-r.d(n, {
-    G: function () {
-        return U;
-    }
-});
-var i = r(47120);
-var a = r(653041);
-var o = r(200651),
-    s = r(192379),
-    l = r(873546),
-    u = r(442837),
-    c = r(911969),
-    d = r(607070),
-    f = r(998698),
-    p = r(211242),
-    h = r(540059),
-    _ = r(111810),
-    m = r(276444),
-    g = r(599659),
-    E = r(963198),
-    v = r(286961),
-    y = r(913663),
-    b = r(117530),
-    I = r(594174),
-    T = r(74538),
-    S = r(94161),
-    A = r(9277),
-    C = r(58995),
-    N = r(655678),
-    R = r(897291),
-    O = r(466711),
-    D = r(764794),
-    L = r(319417),
-    x = r(728386),
-    w = r(474936),
-    P = r(553796);
-function M(e) {
-    let { disabled: n, channel: r } = e,
-        { enabled: i } = g.O.useExperiment({ location: 'gift-button' }),
-        a = (0, v.Z)();
-    return i
-        ? (0, o.jsx)(C.Z, {
-              disabled: n,
-              channel: r
+n.d(t, {
+    G: () => w,
+    Z: () => M
+}),
+    n(47120),
+    n(653041);
+var i = n(200651),
+    r = n(192379),
+    a = n(873546),
+    s = n(442837),
+    o = n(911969),
+    l = n(607070),
+    u = n(998698),
+    c = n(211242),
+    d = n(540059),
+    f = n(111810),
+    _ = n(276444),
+    p = n(599659),
+    h = n(963198),
+    m = n(286961),
+    g = n(913663),
+    E = n(117530),
+    v = n(594174),
+    y = n(74538),
+    I = n(94161),
+    b = n(9277),
+    T = n(58995),
+    S = n(655678),
+    A = n(897291),
+    N = n(466711),
+    C = n(764794),
+    R = n(319417),
+    O = n(728386),
+    D = n(474936),
+    x = n(553796);
+function L(e) {
+    let { disabled: t, channel: n } = e,
+        { enabled: r } = p.O.useExperiment({ location: 'gift-button' }),
+        a = (0, m.Z)();
+    return r
+        ? (0, i.jsx)(T.Z, {
+              disabled: t,
+              channel: n
           })
         : null != a
-          ? (0, o.jsx)(O.Z, {
+          ? (0, i.jsx)(N.Z, {
                 giftingPromotionConfig: a,
-                disabled: n,
-                channel: r
+                disabled: t,
+                channel: n
             })
-          : (0, o.jsx)(R.Z, {
-                disabled: n,
-                channel: r
+          : (0, i.jsx)(A.Z, {
+                disabled: t,
+                channel: n
             });
 }
-function k(e) {
-    var n, r, i, a, s, g, v, y, b;
-    let { type: C, disabled: R, channel: O, handleSubmit: k, isEmpty: B, showAllButtons: G, children: Z } = e,
-        F = (0, u.e7)([d.Z], () => d.Z.isSubmitButtonEnabled),
-        V = U(O.id, C, B),
-        { activeCommand: j, activeCommandOption: H } = (0, u.cj)([f.Z], () => ({
-            activeCommand: f.Z.getActiveCommand(O.id),
-            activeCommandOption: f.Z.getActiveOption(O.id)
+function P(e) {
+    var t, n, r, p, m, g, E, T, A;
+    let { type: N, disabled: P, channel: M, handleSubmit: k, isEmpty: U, showAllButtons: G, children: B } = e,
+        Z = (0, s.e7)([l.Z], () => l.Z.isSubmitButtonEnabled),
+        F = w(M.id, N, U),
+        { activeCommand: V, activeCommandOption: j } = (0, s.cj)([u.Z], () => ({
+            activeCommand: u.Z.getActiveCommand(M.id),
+            activeCommandOption: u.Z.getActiveOption(M.id)
         })),
-        { paymentsBlocked: Y } = p.Z.useExperiment({ location: 'dc120b_3' }, { autoTrackExposure: !1 }),
-        W = [],
-        { enabled: K } = E.Z.getCurrentConfig({ location: 'dc120b_4' }, { autoTrackExposure: !1 }),
-        z = I.default.getCurrentUser(),
-        q = null !== (s = (0, u.e7)([m.Z], () => (K && T.ZP.isPremiumExactly(z, w.p9.TIER_2) ? m.Z.getReferralsRemaining() : 0))) && void 0 !== s ? s : 0,
-        Q = (0, u.e7)([m.Z], () => {
-            if (!O.isDM() || void 0 === O.recipients || O.recipients.length > 1 || !K) return !1;
-            let e = O.recipients[0];
-            return m.Z.getSentUserIds().includes(e);
+        { paymentsBlocked: H } = c.Z.useExperiment({ location: 'dc120b_3' }, { autoTrackExposure: !1 }),
+        Y = [],
+        { enabled: W } = h.Z.getCurrentConfig({ location: 'dc120b_4' }, { autoTrackExposure: !1 }),
+        K = v.default.getCurrentUser(),
+        z = null !== (m = (0, s.e7)([_.Z], () => (W && y.ZP.isPremiumExactly(K, D.p9.TIER_2) ? _.Z.getReferralsRemaining() : 0))) && void 0 !== m ? m : 0,
+        q = (0, s.e7)([_.Z], () => {
+            if (!M.isDM() || void 0 === M.recipients || M.recipients.length > 1 || !W) return !1;
+            let e = M.recipients[0];
+            return _.Z.getSentUserIds().includes(e);
         }),
-        X = (0, u.e7)([I.default], () => (!O.isDM() || void 0 === O.recipients || O.recipients.length > 1 ? null : I.default.getUser(O.recipients[0]))),
-        [J, $] = (0, u.Wu)([m.Z], () => {
+        Q = (0, s.e7)([v.default], () => (!M.isDM() || void 0 === M.recipients || M.recipients.length > 1 ? null : v.default.getUser(M.recipients[0]))),
+        [X, J] = (0, s.Wu)([_.Z], () => {
             let e = [!1, !1];
-            if (!O.isDM() || void 0 === O.recipients || O.recipients.length > 1 || null == X || X.bot) return e;
-            let n = Q || q > 0,
-                r = m.Z.getRecipientEligibility(X.id);
-            return [K && n && r, r];
+            if (!M.isDM() || void 0 === M.recipients || M.recipients.length > 1 || null == Q || Q.bot) return e;
+            let t = q || z > 0,
+                n = _.Z.getRecipientEligibility(Q.id);
+            return [W && t && n, n];
         }),
-        ee = (0, h.R6)('ChannelTextAreaButtons'),
-        et = (0, _.V1)('ChannelTextAreaButtons') && (null === (n = C.confetti) || void 0 === n ? void 0 : n.button) != null;
-    return (!l.tq &&
-        (O.isDM() &&
-            (null === (g = C.gifts) || void 0 === g ? void 0 : g.button) != null &&
-            null == j &&
-            (T.ZP.isPremiumExactly(z, w.p9.TIER_2) && $ && E.Z.trackExposure({ location: 'dc120b_5' }),
-            J &&
-                W.push(
-                    (0, o.jsx)(
-                        D.Z,
+        $ = (0, d.R6)('ChannelTextAreaButtons'),
+        ee = (0, f.V1)('ChannelTextAreaButtons') && (null === (t = N.confetti) || void 0 === t ? void 0 : t.button) != null;
+    return (a.tq ||
+        (M.isDM() &&
+            (null === (g = N.gifts) || void 0 === g ? void 0 : g.button) != null &&
+            null == V &&
+            (y.ZP.isPremiumExactly(K, D.p9.TIER_2) && J && h.Z.trackExposure({ location: 'dc120b_5' }),
+            X &&
+                Y.push(
+                    (0, i.jsx)(
+                        C.Z,
                         {
-                            disabled: R,
-                            referralsRemaining: q,
-                            channel: O,
-                            isResending: Q
+                            disabled: P,
+                            referralsRemaining: z,
+                            channel: M,
+                            isResending: q
                         },
                         'referral'
                     )
                 )),
-        (null === (v = C.gifts) || void 0 === v ? void 0 : v.button) != null &&
-            null == j &&
-            !Y &&
-            (null == X || T.ZP.isPremiumEligible(X)) &&
-            W.push(
-                (0, o.jsx)(
-                    M,
+        (null === (E = N.gifts) || void 0 === E ? void 0 : E.button) != null &&
+            null == V &&
+            !H &&
+            (null == Q || y.ZP.isPremiumEligible(Q)) &&
+            Y.push(
+                (0, i.jsx)(
+                    L,
                     {
-                        disabled: R,
-                        channel: O
+                        disabled: P,
+                        channel: M
                     },
                     'gift'
                 )
             ),
-        (null === (y = C.gifs) || void 0 === y ? void 0 : y.button) != null &&
-            null == j &&
+        (null === (T = N.gifs) || void 0 === T ? void 0 : T.button) != null &&
+            null == V &&
             G &&
-            W.push(
-                (0, o.jsx)(
-                    A.Z,
+            Y.push(
+                (0, i.jsx)(
+                    b.Z,
                     {
-                        disabled: R,
-                        type: C
+                        disabled: P,
+                        type: N
                     },
                     'gif'
                 )
             ),
-        et &&
-            null == j &&
-            W.push(
-                (0, o.jsx)(
-                    N.Z,
+        ee &&
+            null == V &&
+            Y.push(
+                (0, i.jsx)(
+                    S.Z,
                     {
-                        disabled: R,
-                        channelId: O.id
+                        disabled: P,
+                        channelId: M.id
                     },
                     'confetti'
                 )
             ),
-        !et &&
-            (null === (b = C.stickers) || void 0 === b ? void 0 : b.button) != null &&
-            null == j &&
+        !ee &&
+            (null === (A = N.stickers) || void 0 === A ? void 0 : A.button) != null &&
+            null == V &&
             G &&
-            W.push(
-                (0, o.jsx)(
-                    x.Z,
+            Y.push(
+                (0, i.jsx)(
+                    O.Z,
                     {
-                        disabled: R,
-                        type: C
+                        disabled: P,
+                        type: N
                     },
                     'sticker'
                 )
             )),
-    (null === (r = C.emojis) || void 0 === r ? void 0 : r.button) != null &&
-        (null == j || (null != H && H.type !== c.jw.ATTACHMENT)) &&
-        W.push(
-            (0, o.jsx)(
-                S.Z,
+    (null === (n = N.emojis) || void 0 === n ? void 0 : n.button) != null &&
+        (null == V || (null != j && j.type !== o.jw.ATTACHMENT)) &&
+        Y.push(
+            (0, i.jsx)(
+                I.Z,
                 {
-                    disabled: R,
-                    type: C
+                    disabled: P,
+                    type: N
                 },
                 'emoji'
             )
         ),
-    !ee && null != Z && W.push(Z),
-    (null === (i = C.submit) || void 0 === i ? void 0 : i.button) != null &&
-        ((null === (a = C.submit) || void 0 === a ? void 0 : a.ignorePreference) || F) &&
-        !ee &&
-        W.push(
-            (0, o.jsx)(
-                L.Z,
+    $ || null == B || Y.push(B),
+    (null === (r = N.submit) || void 0 === r ? void 0 : r.button) != null &&
+        ((null === (p = N.submit) || void 0 === p ? void 0 : p.ignorePreference) || Z) &&
+        !$ &&
+        Y.push(
+            (0, i.jsx)(
+                R.Z,
                 {
                     onClick: k,
-                    disabled: R || V
+                    disabled: P || F
                 },
                 'submit'
             )
         ),
-    ee && null != Z && W.push(Z),
-    0 === W.length)
+    $ && null != B && Y.push(B),
+    0 === Y.length)
         ? null
-        : (0, o.jsx)('div', {
-              className: P.buttons,
-              children: W
+        : (0, i.jsx)('div', {
+              className: x.buttons,
+              children: Y
           });
 }
-function U(e, n, r) {
-    return (0, u.e7)([y.Z, b.Z], () => {
-        let i = y.Z.getStickerPreview(e, n.drafts.type),
-            a = null != i && i.length > 0;
-        return 0 === b.Z.getUploads(e, n.drafts.type).length && r && !a;
+function w(e, t, n) {
+    return (0, s.e7)([g.Z, E.Z], () => {
+        let i = g.Z.getStickerPreview(e, t.drafts.type),
+            r = null != i && i.length > 0;
+        return 0 === E.Z.getUploads(e, t.drafts.type).length && n && !r;
     });
 }
-n.Z = s.memo(k);
+let M = r.memo(P);

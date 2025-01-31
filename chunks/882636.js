@@ -1,11 +1,12 @@
-e.exports = {
-    avatar: 'avatar_f94206',
-    biteSize: 'biteSize_f94206',
-    fullSize: 'fullSize_f94206',
-    panel: 'panel_f94206',
-    withReactReply: 'withReactReply_f94206',
-    hoisted: 'hoisted_f94206',
-    clickable: 'clickable_f94206',
-    overlay: 'overlay_f94206',
-    focusRing: 'focusRing_f94206'
+var i = {
+    avatar: 'avatar__75742',
+    biteSize: 'biteSize__75742',
+    fullSize: 'fullSize__75742',
+    panel: 'panel__75742',
+    withReactReply: 'withReactReply__75742',
+    hoisted: 'hoisted__75742',
+    clickable: 'clickable__75742',
+    overlay: 'overlay__75742',
+    focusRing: 'focusRing__75742'
 };
+e.exports = i;

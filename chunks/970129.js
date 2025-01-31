@@ -1,10 +1,6 @@
 n.d(t, {
-    T: function () {
-        return c;
-    },
-    Z: function () {
-        return d;
-    }
+    T: () => c,
+    Z: () => d
 });
 var i = n(200651),
     r = n(192379),
@@ -18,13 +14,13 @@ function c(e, t, n) {
 }
 function d(e) {
     let { className: t, tooltipText: n, width: r = 16, height: l = 16 } = e;
-    return (0, i.jsx)(s.Tooltip, {
+    return (0, i.jsx)(s.ua7, {
         text: n,
         children: (e) =>
             (0, i.jsx)('div', {
                 className: t,
                 ...e,
-                children: (0, i.jsx)(s.LockIcon, {
+                children: (0, i.jsx)(s.mBM, {
                     size: 'custom',
                     color: 'currentColor',
                     width: r,

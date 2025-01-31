@@ -1,83 +1,78 @@
-r.d(n, {
-    Z: function () {
-        return S;
-    }
-});
-var i = r(627341);
-var a = r(200651);
-r(192379);
-var o = r(278074),
-    s = r(979554),
-    l = r(481060),
-    u = r(1585),
-    c = r(125988),
-    d = r(583434),
-    f = r(479446),
-    p = r(981632),
-    h = r(731896),
-    _ = r(680295),
-    m = r(998502),
-    g = r(987209),
-    E = r(388032),
-    v = r(975765),
-    y = r(241822);
-let b = m.ZP.getEnableHardwareAcceleration() ? l.AnimatedAvatar : l.Avatar;
-function I(e) {
-    let { avatarDecoration: n } = e,
+n.d(t, { Z: () => b }), n(627341);
+var i = n(200651);
+n(192379);
+var r = n(278074),
+    a = n(979554),
+    s = n(481060),
+    o = n(1585),
+    l = n(125988),
+    u = n(583434),
+    c = n(479446),
+    d = n(981632),
+    f = n(731896),
+    _ = n(680295),
+    p = n(998502),
+    h = n(987209),
+    m = n(388032),
+    g = n(975765),
+    E = n(241822);
+let v = p.ZP.getEnableHardwareAcceleration() ? s.Xo$ : s.qEK;
+function y(e) {
+    let { avatarDecoration: t } = e,
         {
-            avatarDecorationSrc: r,
-            eventHandlers: i,
-            avatarPlaceholderSrc: o
-        } = (0, c.Z)({
-            avatarDecorationOverride: n,
-            size: (0, u.y9)(l.AvatarSizes.SIZE_152)
+            avatarDecorationSrc: n,
+            eventHandlers: r,
+            avatarPlaceholderSrc: a
+        } = (0, l.Z)({
+            avatarDecorationOverride: t,
+            size: (0, o.y9)(s.EFr.SIZE_152)
         });
-    return (0, a.jsx)('div', {
-        className: v.giftMainAnimationWrapper,
-        children: (0, a.jsx)(b, {
-            ...i,
-            avatarDecoration: r,
-            src: o,
-            className: v.avatar,
-            size: l.AvatarSizes.SIZE_152,
-            'aria-label': E.intl.string(E.t.lqaIxM)
+    return (0, i.jsx)('div', {
+        className: g.giftMainAnimationWrapper,
+        children: (0, i.jsx)(v, {
+            ...r,
+            avatarDecoration: n,
+            src: a,
+            className: g.avatar,
+            size: s.EFr.SIZE_152,
+            'aria-label': m.intl.string(m.t.lqaIxM)
         })
     });
 }
-function T(e) {
-    var n;
-    let { id: r } = e,
-        i = null === (n = (0, h.V)(r)) || void 0 === n ? void 0 : n.config;
-    return (0, a.jsxs)('div', {
-        className: v.profileEffectContainer,
+function I(e) {
+    var t;
+    let { id: n } = e,
+        r = null === (t = (0, f.V)(n)) || void 0 === t ? void 0 : t.config;
+    return (0, i.jsxs)('div', {
+        className: g.profileEffectContainer,
         children: [
-            (0, a.jsx)('img', {
-                src: y,
-                alt: null == i ? void 0 : i.accessibilityLabel,
-                className: v.profileEffectBackground
+            (0, i.jsx)('img', {
+                src: E,
+                alt: null == r ? void 0 : r.accessibilityLabel,
+                className: g.profileEffectBackground
             }),
-            (0, a.jsx)(_.Z, { profileEffectId: r })
+            (0, i.jsx)(_.Z, { profileEffectId: n })
         ]
     });
 }
-function S(e) {
-    let { sku: n } = e,
-        { selectedGiftStyle: r } = (0, g.wD)(),
-        { product: i } = (0, d.T)(null == n ? void 0 : n.id),
-        l = null == i ? void 0 : i.items[0],
-        u = (0, o.EQ)(l)
-            .with({ type: s.Z.AVATAR_DECORATION }, (e) => (0, a.jsx)(I, { avatarDecoration: e }))
-            .with({ type: s.Z.PROFILE_EFFECT }, (e) => (0, a.jsx)(T, { id: e.id }))
+function b(e) {
+    let { sku: t } = e,
+        { selectedGiftStyle: n } = (0, h.wD)(),
+        { product: s } = (0, u.T)(null == t ? void 0 : t.id),
+        o = null == s ? void 0 : s.items[0],
+        l = (0, r.EQ)(o)
+            .with({ type: a.Z.AVATAR_DECORATION }, (e) => (0, i.jsx)(y, { avatarDecoration: e }))
+            .with({ type: a.Z.PROFILE_EFFECT }, (e) => (0, i.jsx)(I, { id: e.id }))
             .otherwise(() => null);
-    return null != r && null == u
-        ? (0, a.jsx)('div', {
-              className: v.giftMainAnimationWrapper,
-              children: (0, a.jsx)(p.Z, {
-                  defaultAnimationState: f.SR.LOOP,
-                  giftStyle: r,
+    return null != n && null == l
+        ? (0, i.jsx)('div', {
+              className: g.giftMainAnimationWrapper,
+              children: (0, i.jsx)(d.Z, {
+                  defaultAnimationState: c.SR.LOOP,
+                  giftStyle: n,
                   shouldAnimate: !0,
-                  className: v.__invalid_giftMainAnimation
+                  className: g.__invalid_giftMainAnimation
               })
           })
-        : u;
+        : l;
 }

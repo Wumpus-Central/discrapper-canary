@@ -1,15 +1,16 @@
-e.exports = {
-    upsellContainer: 'upsellContainer_b8bbd6',
-    upsellContent: 'upsellContent_b8bbd6',
-    upsellCloseIconWrapper: 'upsellCloseIconWrapper_b8bbd6',
-    upsellDefaultContent: 'upsellDefaultContent_b8bbd6',
-    upsellHeader: 'upsellHeader_b8bbd6',
-    upsellButtons: 'upsellButtons_b8bbd6',
-    upsellButtonWrapper: 'upsellButtonWrapper_b8bbd6',
-    upsellButton: 'upsellButton_b8bbd6',
-    upsellRowContent: 'upsellRowContent_b8bbd6',
-    upsellRowRight: 'upsellRowRight_b8bbd6',
-    viewPremiumPerksButtonInner: 'viewPremiumPerksButtonInner_b8bbd6',
-    upsellCloseIcon: 'upsellCloseIcon_b8bbd6',
-    viewPremiumPerksButtonShine: 'viewPremiumPerksButtonShine_b8bbd6'
+var i = {
+    upsellContainer: 'upsellContainer__5997d',
+    upsellContent: 'upsellContent__5997d',
+    upsellCloseIconWrapper: 'upsellCloseIconWrapper__5997d',
+    upsellDefaultContent: 'upsellDefaultContent__5997d',
+    upsellHeader: 'upsellHeader__5997d',
+    upsellButtons: 'upsellButtons__5997d',
+    upsellButtonWrapper: 'upsellButtonWrapper__5997d',
+    upsellButton: 'upsellButton__5997d',
+    upsellRowContent: 'upsellRowContent__5997d',
+    upsellRowRight: 'upsellRowRight__5997d',
+    viewPremiumPerksButtonInner: 'viewPremiumPerksButtonInner__5997d',
+    upsellCloseIcon: 'upsellCloseIcon__5997d',
+    viewPremiumPerksButtonShine: 'viewPremiumPerksButtonShine__5997d'
 };
+e.exports = i;

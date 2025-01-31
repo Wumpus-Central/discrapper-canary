@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
+n.d(t, { Z: () => u });
 var i = n(200651);
 n(192379);
 var r = n(120356),
@@ -18,10 +14,10 @@ function u(e) {
     return (0, i.jsxs)('div', {
         className: l()(d.container, t),
         children: [
-            (0, i.jsx)(a.Avatar, {
+            (0, i.jsx)(a.qEK, {
                 className: d.avatar,
                 src: n,
-                size: a.AvatarSizes.SIZE_24,
+                size: a.EFr.SIZE_24,
                 'aria-label': r
             }),
             (0, i.jsxs)('div', {

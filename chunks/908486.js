@@ -1,4 +1,7 @@
-e.exports = {
-    innerContainer: 'innerContainer_a1a22c',
-    outerContainer: 'outerContainer_a1a22c'
+var i = {
+    pulse: 'pulse__7135b',
+    darkerPulse: 'darkerPulse__7135b',
+    innerContainer: 'innerContainer__7135b',
+    outerContainer: 'outerContainer__7135b'
 };
+e.exports = i;

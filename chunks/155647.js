@@ -1,47 +1,43 @@
-r.d(n, {
-    fW: function () {
-        return p;
-    },
-    jc: function () {
-        return _;
-    }
-});
-var i = r(47120);
-var a = r(653041);
-var o = r(192379),
-    s = r(823379),
-    l = r(568315),
-    u = r(83126),
-    c = r(617191),
-    d = r(82554);
-let f = {
-    [d.zR.SAFETY_DM_SPAM_FILTER]: l.Z,
-    [d.zR.SAFETY_SENSITIVE_MEDIA_FILTERS]: c.Z,
-    [d.zR.SAFETY_LANGUAGE_FILTER]: u.Z
+n.d(t, {
+    fW: () => c,
+    jc: () => f
+}),
+    n(47120),
+    n(653041);
+var i = n(192379),
+    r = n(823379),
+    a = n(568315),
+    s = n(83126),
+    o = n(617191),
+    l = n(82554);
+let u = {
+    [l.zR.SAFETY_DM_SPAM_FILTER]: a.Z,
+    [l.zR.SAFETY_SENSITIVE_MEDIA_FILTERS]: o.Z,
+    [l.zR.SAFETY_LANGUAGE_FILTER]: s.Z
 };
-function p(e) {
-    return o.useMemo(() => (null != e ? h(e) : null), [e]);
+function c(e) {
+    return i.useMemo(() => (null != e ? d(e) : null), [e]);
 }
-function h(e) {
-    let n = [];
+function d(e) {
+    let t = [];
     return (
-        Object.entries(f).forEach((r) => {
-            let [i, a] = r;
-            (null == a.eligibleReportSubtypes || a.eligibleReportSubtypes.includes(e)) && n.push(i);
+        Object.entries(u).forEach((n) => {
+            let [i, r] = n;
+            (null == r.eligibleReportSubtypes || r.eligibleReportSubtypes.includes(e)) && t.push(i);
         }),
-        0 === n.length ? null : n
+        0 === t.length ? null : t
     );
 }
-function _(e, n) {
-    return o.useMemo(() => e.map((e) => m(e, n)).filter(s.lm), [e, n]);
+function f(e, t) {
+    return i.useMemo(() => e.map((e) => _(e, t)).filter(r.lm), [e, t]);
 }
-function m(e, n) {
-    let r = f[e];
-    return g(r, n) ? r : null;
+function _(e, t) {
+    let n = u[e];
+    return p(n, t) ? n : null;
 }
-function g(e, n) {
-    let { predicate: r, eligibleChannelTypes: i } = e,
-        a = null == r || (null == r ? void 0 : r()) === !0,
-        o = null == n || null == i || i.includes(n);
-    return a && o;
+function p(e, t) {
+    let { predicate: n, eligibleChannelTypes: i } = e,
+        r = null == n || (null == n ? void 0 : n()) === !0,
+        a = null == t || null == i || i.includes(t);
+    return r && a;
 }

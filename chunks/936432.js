@@ -1,3 +1,4 @@
+t.d(n, { Z: () => l });
 var e = t(528734),
     a = t(757490),
     r = ['неділю', 'понеділок', 'вівторок', 'середу', 'четвер', 'п\u2019ятницю', 'суботу'];
@@ -50,7 +51,7 @@ var o = {
     },
     other: 'P'
 };
-n.Z = function (i, n, t, e) {
+let l = function (i, n, t, e) {
     var a = o[i];
     return 'function' == typeof a ? a(n, t, e) : a;
 };

@@ -1,25 +1,26 @@
+n.d(t, { Z: () => o });
 var i = n(200651);
 n(192379);
 var a = n(120356),
     r = n.n(a),
     l = n(481060),
-    o = n(578451);
-t.Z = function (e) {
-    let { tabs: t, onTabSelect: n, selectedTab: a, className: s } = e;
-    return (0, i.jsx)(l.TabBar, {
+    s = n(578451);
+let o = function (e) {
+    let { tabs: t, onTabSelect: n, selectedTab: a, className: o } = e;
+    return (0, i.jsx)(l.njP, {
         type: 'top-pill',
         selectedItem: a,
         onItemSelect: n,
-        className: s,
+        className: o,
         children: t.map((e, t) => {
-            let { id: n, label: a, count: s } = e;
+            let { id: n, label: a, count: o } = e;
             return (0, i.jsx)(
-                l.TabBar.Item,
+                l.njP.Item,
                 {
                     id: n,
-                    className: r()(o.tabItem, { [o.firstChildSpacingFix]: 0 === t }),
+                    className: r()(s.tabItem, { [s.firstChildSpacingFix]: 0 === t }),
                     'aria-label': a,
-                    children: null != s && s > 0 ? ''.concat(a, ' (').concat(s, ')') : a
+                    children: null != o && o > 0 ? ''.concat(a, ' (').concat(o, ')') : a
                 },
                 n
             );

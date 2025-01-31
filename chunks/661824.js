@@ -1,38 +1,39 @@
-var i = r(200651),
-    a = r(192379),
-    o = r(120356),
-    s = r.n(o),
-    l = r(38068),
-    u = r(388032),
-    c = r(980456);
-n.Z = a.forwardRef(function (e, n) {
-    let { className: r, contentClassName: a, isUnread: o, children: d, id: f, role: p, 'aria-label': h } = e;
+n.d(t, { Z: () => c });
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(38068),
+    l = n(388032),
+    u = n(980456);
+let c = r.forwardRef(function (e, t) {
+    let { className: n, contentClassName: r, isUnread: a, children: c, id: d, role: f, 'aria-label': _ } = e;
     return (0, i.jsxs)('div', {
-        className: s()(r, {
-            [c.divider]: !0,
-            [c.isUnread]: o,
-            [c.hasContent]: null != d
+        className: s()(n, {
+            [u.divider]: !0,
+            [u.isUnread]: a,
+            [u.hasContent]: null != c
         }),
-        ref: n,
-        id: f,
-        role: p,
-        'aria-label': h,
+        ref: t,
+        id: d,
+        role: f,
+        'aria-label': _,
         children: [
-            null != d
+            null != c
                 ? (0, i.jsx)('span', {
-                      className: s()(c.content, a),
-                      children: d
+                      className: s()(u.content, r),
+                      children: c
                   })
                 : null,
-            o
+            a
                 ? (0, i.jsxs)('span', {
-                      className: c.unreadPill,
+                      className: u.unreadPill,
                       children: [
-                          (0, i.jsx)(l.Z, {
-                              foreground: c.unreadPillCapStroke,
-                              className: c.unreadPillCap
+                          (0, i.jsx)(o.Z, {
+                              foreground: u.unreadPillCapStroke,
+                              className: u.unreadPillCap
                           }),
-                          u.intl.string(u.t.y2b7CA)
+                          l.intl.string(l.t.y2b7CA)
                       ]
                   })
                 : null

@@ -1,104 +1,102 @@
+n.d(t, { Z: () => A }), n(47120), n(653041);
 var i,
-    a = r(47120);
-var o = r(653041);
-var s = r(442837),
-    l = r(570140),
-    u = r(162461);
-function c(e, n, r) {
+    r = n(442837),
+    a = n(570140),
+    s = n(162461);
+function o(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let d = 2592000000,
-    f = 2048,
-    p = () => ({
+let l = 2592000000,
+    u = 2048,
+    c = () => ({
         itemImpressions: [],
         hidden: !1
     }),
-    h = p(),
+    d = c(),
+    f = new Set(),
     _ = new Set(),
-    m = new Set(),
-    g = 0,
-    E = !1,
-    v = !1,
-    y = 1000;
-function b() {
+    p = 0,
+    h = !1,
+    m = !1,
+    g = 1000;
+function E() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    if (!e && Date.now() < g) return;
-    let n = 0,
-        r = Date.now() - d;
-    for (let e = 0; e < h.itemImpressions.length; e++) {
-        let [i, a] = h.itemImpressions[e];
-        if (a < r) n = e + 1;
+    if (!e && Date.now() < p) return;
+    let t = 0,
+        n = Date.now() - l;
+    for (let e = 0; e < d.itemImpressions.length; e++) {
+        let [i, r] = d.itemImpressions[e];
+        if (r < n) t = e + 1;
         else break;
     }
-    n > 0 && (h.itemImpressions = h.itemImpressions.slice(n)), h.itemImpressions.length > f && (h.itemImpressions = h.itemImpressions.slice(-f));
-    let { impressionAge: i } = (0, u.m6)('ContentInventoryPersistedStore.updateImpressionCaches'),
-        a = v ? y : i,
+    t > 0 && (d.itemImpressions = d.itemImpressions.slice(t)), d.itemImpressions.length > u && (d.itemImpressions = d.itemImpressions.slice(-u));
+    let { impressionAge: i } = (0, s.m6)('ContentInventoryPersistedStore.updateImpressionCaches'),
+        r = m ? g : i,
+        a = new Set(),
         o = new Set(),
-        s = new Set(),
-        l = Date.now() - a,
-        c = null;
-    for (let [e, n] of h.itemImpressions) n < l ? o.add(e) : null == c && (c = n + a), s.add(e);
-    (_ = o), (m = s), (g = null != c ? c : 1 / 0), (E = !0);
+        c = Date.now() - r,
+        E = null;
+    for (let [e, t] of d.itemImpressions) t < c ? a.add(e) : null == E && (E = t + r), o.add(e);
+    (f = a), (_ = o), (p = null != E ? E : 1 / 0), (h = !0);
 }
-function I(e) {
-    let { itemIds: n } = e;
-    !E && b();
-    let r = Date.now(),
+function v(e) {
+    let { itemIds: t } = e;
+    h || E();
+    let n = Date.now(),
         i = !1;
-    for (let e of n) !m.has(e) && (h.itemImpressions.push([e, r]), (i = !0));
-    return b(i), i;
+    for (let e of t) _.has(e) || (d.itemImpressions.push([e, n]), (i = !0));
+    return E(i), i;
+}
+function y() {
+    (d.itemImpressions = []), E(!0);
+}
+function I() {
+    return console.log('Item impressions:', d.itemImpressions), !1;
+}
+function b() {
+    m = !m;
 }
 function T() {
-    (h.itemImpressions = []), b(!0);
+    d.hidden = !d.hidden;
 }
-function S() {
-    return console.log('Item impressions:', h.itemImpressions), !1;
-}
-function A() {
-    v = !v;
-}
-function C() {
-    h.hidden = !h.hidden;
-}
-class N extends (i = s.ZP.PersistedStore) {
+class S extends (i = r.ZP.PersistedStore) {
     initialize(e) {
-        h = {
-            ...h,
+        d = {
+            ...d,
             ...(null != e ? e : {})
         };
     }
     getState() {
-        return h;
+        return d;
     }
     getImpressionCappedItemIds() {
-        return b(), _;
+        return E(), f;
     }
     getDebugFastImpressionCappingEnabled() {
-        return v;
+        return m;
     }
     get hidden() {
-        return h.hidden;
+        return d.hidden;
     }
     reset() {
-        h = p();
+        d = c();
     }
 }
-c(N, 'displayName', 'ContentInventoryPersistedStore'),
-    c(N, 'persistKey', 'ContentInventoryPersistedStore'),
-    (n.Z = new N(l.Z, {
-        CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS: I,
-        CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS: T,
-        CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS: S,
-        CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING: A,
-        CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: C
-    }));
+o(S, 'displayName', 'ContentInventoryPersistedStore'), o(S, 'persistKey', 'ContentInventoryPersistedStore');
+let A = new S(a.Z, {
+    CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS: v,
+    CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS: y,
+    CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS: I,
+    CONTENT_INVENTORY_DEBUG_TOGGLE_FAST_IMPRESSION_CAPPING: b,
+    CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN: T
+});

@@ -1,67 +1,68 @@
 let i;
-var a,
-    o = r(392711),
-    s = r.n(o),
-    l = r(442837),
-    u = r(433517),
-    c = r(570140),
-    d = r(981631);
-function f(e, n, r) {
+n.d(t, { Z: () => b });
+var r,
+    a = n(392711),
+    s = n.n(a),
+    o = n(442837),
+    l = n(433517),
+    u = n(570140),
+    c = n(981631);
+function d(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let p = 'GameLibraryViewStore',
-    h = 200,
-    _ = d.sHY.ASCENDING,
-    m = d.iEv.LAST_PLAYED,
-    g = !1,
-    E = s().debounce(() => {
-        (g = !1), I.emitChange();
-    }, h);
-function v(e) {
-    let { key: n, isKeyboardEvent: r } = e;
-    r && ((g = !0), E()), (i = n);
+let f = 'GameLibraryViewStore',
+    _ = 200,
+    p = c.sHY.ASCENDING,
+    h = c.iEv.LAST_PLAYED,
+    m = !1,
+    g = s().debounce(() => {
+        (m = !1), I.emitChange();
+    }, _);
+function E(e) {
+    let { key: t, isKeyboardEvent: n } = e;
+    n && ((m = !0), g()), (i = t);
 }
-function y(e) {
-    let { direction: n, key: r } = e;
-    (_ = n),
-        (m = r),
-        u.K.set(p, {
-            sortDirection: _,
-            sortKey: m
+function v(e) {
+    let { direction: t, key: n } = e;
+    (p = t),
+        (h = n),
+        l.K.set(f, {
+            sortDirection: p,
+            sortKey: h
         });
 }
-class b extends (a = l.ZP.Store) {
+class y extends (r = o.ZP.Store) {
     initialize() {
         var e;
-        let n = null !== (e = u.K.get(p)) && void 0 !== e ? e : {};
-        null != n.sortDirection && null != n.sortKey && ((_ = n.sortDirection), (m = n.sortKey));
+        let t = null !== (e = l.K.get(f)) && void 0 !== e ? e : {};
+        null != t.sortDirection && null != t.sortKey && ((p = t.sortDirection), (h = t.sortKey));
     }
     get sortDirection() {
-        return _;
+        return p;
     }
     get sortKey() {
-        return m;
+        return h;
     }
     get activeRowKey() {
         return i;
     }
     get isNavigatingByKeyboard() {
-        return g;
+        return m;
     }
 }
-f(b, 'displayName', 'GameLibraryViewStore');
-let I = new b(c.Z, {
-    LIBRARY_TABLE_SORT_UPDATE: y,
-    LIBRARY_TABLE_ACTIVE_ROW_ID_UPDATE: v
-});
-n.Z = I;
+d(y, 'displayName', 'GameLibraryViewStore');
+let I = new y(u.Z, {
+        LIBRARY_TABLE_SORT_UPDATE: v,
+        LIBRARY_TABLE_ACTIVE_ROW_ID_UPDATE: E
+    }),
+    b = I;

@@ -1,22 +1,18 @@
-r.d(n, {
-    Z: function () {
-        return s;
-    }
-});
-var i = r(192379),
-    a = r(270445),
-    o = r(887490);
-function s(e, n, r) {
+n.d(t, { Z: () => s });
+var i = n(192379),
+    r = n(270445),
+    a = n(887490);
+function s(e, t, n) {
     i.useEffect(() => {
-        let i = a.F3.findDocumentOrShadowRoot(e).defaultView;
+        let i = r.F3.findDocumentOrShadowRoot(e).defaultView;
         if ((null == i ? void 0 : i.ResizeObserver) == null) return;
-        let s = o.bN.toDOMNode(e, e),
-            l = s.offsetHeight;
-        null == r || r(l);
-        let u = new i.ResizeObserver(() => {
-            let i = o.bN.toDOMNode(e, e).offsetHeight;
-            l !== i && (null != n.current && (n.current.style.height = ''.concat(i, 'px')), (l = i), null == r || r(i));
+        let s = a.bN.toDOMNode(e, e),
+            o = s.offsetHeight;
+        null == n || n(o);
+        let l = new i.ResizeObserver(() => {
+            let i = a.bN.toDOMNode(e, e).offsetHeight;
+            o !== i && (null != t.current && (t.current.style.height = ''.concat(i, 'px')), (o = i), null == n || n(i));
         });
-        return u.observe(s), () => u.disconnect();
-    }, [n, e, r]);
+        return l.observe(s), () => l.disconnect();
+    }, [t, e, n]);
 }

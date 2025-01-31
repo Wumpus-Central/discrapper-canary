@@ -1,10 +1,12 @@
 e.exports = {
-    mobileMenuItem: 'mobileMenuItem_fba5f6',
-    mobileSubMenuOpen: 'mobileSubMenuOpen_fba5f6 mobileHeaderSubMenu_fba5f6',
-    subListItemLink: 'subListItemLink_fba5f6',
-    subListItemActive: 'subListItemActive_fba5f6 subListItem_fba5f6',
-    subListItemInactive: 'subListItemInactive_fba5f6 subListItem_fba5f6',
-    desktopSubMenuItem: 'desktopSubMenuItem_fba5f6',
-    desktopMenuMore: 'desktopMenuMore_fba5f6',
-    iconArrow: 'iconArrow_fba5f6'
+    mobileMenuItem: 'mobileMenuItem__43cad',
+    mobileHeaderSubMenu: 'mobileHeaderSubMenu__43cad',
+    mobileSubMenuOpen: 'mobileSubMenuOpen__43cad mobileHeaderSubMenu__43cad',
+    subListItem: 'subListItem__43cad',
+    subListItemLink: 'subListItemLink__43cad',
+    subListItemActive: 'subListItemActive__43cad subListItem__43cad',
+    subListItemInactive: 'subListItemInactive__43cad subListItem__43cad',
+    desktopSubMenuItem: 'desktopSubMenuItem__43cad',
+    desktopMenuMore: 'desktopMenuMore__43cad',
+    iconArrow: 'iconArrow__43cad'
 };

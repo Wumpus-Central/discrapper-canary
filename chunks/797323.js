@@ -1,5 +1,6 @@
 e.exports = {
-    topic: 'topic_bf3bbb text-sm/normal_bf3bbb',
-    topicClickTarget: 'topicClickTarget_bf3bbb',
-    expandable: 'expandable_bf3bbb'
+    'text-sm/normal': 'text-sm/normal__6ec1a',
+    topic: 'topic__6ec1a text-sm/normal__6ec1a',
+    topicClickTarget: 'topicClickTarget__6ec1a',
+    expandable: 'expandable__6ec1a'
 };

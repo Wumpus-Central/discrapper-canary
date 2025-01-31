@@ -1,9 +1,10 @@
 e.exports = {
-    skeleton: 'skeleton_b0ceed',
-    bannerBody: 'bannerBody_b0ceed',
-    cardBody: 'cardBody_b0ceed',
-    cardAvatar: 'cardAvatar_b0ceed',
-    cardTitle: 'cardTitle_b0ceed',
-    cardDescription: 'cardDescription_b0ceed',
-    cardSummary: 'cardSummary_b0ceed'
+    placeholderPulse: 'placeholderPulse__72fa0',
+    skeleton: 'skeleton__72fa0',
+    bannerBody: 'bannerBody__72fa0',
+    cardBody: 'cardBody__72fa0',
+    cardAvatar: 'cardAvatar__72fa0',
+    cardTitle: 'cardTitle__72fa0',
+    cardDescription: 'cardDescription__72fa0',
+    cardSummary: 'cardSummary__72fa0'
 };

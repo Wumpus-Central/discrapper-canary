@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return b;
-    }
-});
+n.d(t, { Z: () => b });
 var i = n(200651);
 n(192379);
 var r = n(780384),
@@ -18,12 +14,12 @@ var r = n(780384),
     g = n(268953),
     x = n(487703),
     p = n(458050),
-    f = n(334364),
+    _ = n(334364),
     C = n(431712);
-function v(e) {
+function f(e) {
     return (0, r.wj)(e) ? c.revenueSharePercentageDark : c.revenueSharePercentageLight;
 }
-function I() {
+function v() {
     let e = (0, s.ZP)(),
         t = { backgroundColor: (0, r.wj)(e) ? '#2e3638' : 'var(--background-primary)' };
     return (0, i.jsxs)('div', {
@@ -37,10 +33,10 @@ function I() {
                         color: 'header-secondary',
                         children: o.intl.string(o.t.TXPK7O)
                     }),
-                    (0, i.jsx)(l.Spacer, { size: 8 }),
-                    (0, i.jsx)(l.Heading, {
+                    (0, i.jsx)(l.LZC, { size: 8 }),
+                    (0, i.jsx)(l.X6q, {
                         variant: 'heading-md/bold',
-                        className: v(e),
+                        className: f(e),
                         children: o.intl.string(o.t.LdjJGx)
                     })
                 ]
@@ -124,7 +120,7 @@ function N() {
         ]
     });
 }
-function _() {
+function j() {
     return (0, i.jsxs)('div', {
         className: c.earningBenefitCard,
         children: [
@@ -133,14 +129,14 @@ function _() {
                 color: 'header-secondary',
                 children: o.intl.string(o.t['9CdmS0'])
             }),
-            (0, i.jsx)(l.Spacer, { size: 32 }),
-            (0, i.jsx)(I, {}),
-            (0, i.jsx)(l.Spacer, { size: 24 }),
+            (0, i.jsx)(l.LZC, { size: 32 }),
+            (0, i.jsx)(v, {}),
+            (0, i.jsx)(l.LZC, { size: 24 }),
             (0, i.jsx)(N, {})
         ]
     });
 }
-function T() {
+function I() {
     return (0, i.jsxs)('div', {
         className: c.followerBenefitCard,
         children: [
@@ -157,21 +153,21 @@ function T() {
             }),
             (0, i.jsx)('img', {
                 className: c.roleSubscriptionLanyardIllo,
-                src: f,
+                src: _,
                 alt: o.intl.string(o.t['+gd9QU'])
             })
         ]
     });
 }
-function j() {
+function E() {
     let e = (0, s.ZP)();
     return (0, i.jsxs)('div', {
         className: c.revenueShareBenefitCard,
         children: [
             (0, i.jsxs)('div', {
                 children: [
-                    (0, i.jsxs)(l.Heading, {
-                        className: v(e),
+                    (0, i.jsxs)(l.X6q, {
+                        className: f(e),
                         style: {
                             fontSize: '50px',
                             lineHeight: '52px'
@@ -197,15 +193,15 @@ function j() {
 function b() {
     return (0, i.jsxs)('div', {
         children: [
-            (0, i.jsx)(l.Heading, {
+            (0, i.jsx)(l.X6q, {
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
                 children: o.intl.string(o.t['1QHJaW'])
             }),
-            (0, i.jsx)(l.Spacer, { size: 24 }),
+            (0, i.jsx)(l.LZC, { size: 24 }),
             (0, i.jsxs)('div', {
                 className: c.creatorBenefitsContainer,
-                children: [(0, i.jsx)(_, {}), (0, i.jsx)(T, {}), (0, i.jsx)(j, {})]
+                children: [(0, i.jsx)(j, {}), (0, i.jsx)(I, {}), (0, i.jsx)(E, {})]
             })
         ]
     });

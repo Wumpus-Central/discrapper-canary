@@ -22,7 +22,7 @@ t.exports = function (t, e) {
         if (g.length > 0) {
             if (t.props.handlePastedFiles && p(t.props.handlePastedFiles(g))) return;
             f(g, function (e) {
-                if (!!(e = e || y)) {
+                if ((e = e || y)) {
                     var r = t._latestEditorState,
                         o = h(e),
                         f = i.create({
@@ -45,36 +45,38 @@ t.exports = function (t, e) {
         b = t._latestEditorState;
     if (!(t.props.handlePastedText && p(t.props.handlePastedText(m, _, b)))) {
         if ((m && (v = h(m)), !t.props.stripPastedStyles)) {
-            var S = t.getClipboard();
-            if (r.isRichText() && S) {
-                if (-1 !== _.indexOf(t.getEditorKey()) || (1 === v.length && 1 === S.size && S.first().getText() === m)) {
-                    t.update(d(t._latestEditorState, S));
+            var S,
+                w,
+                x = t.getClipboard();
+            if (r.isRichText() && x) {
+                if (-1 !== _.indexOf(t.getEditorKey()) || (1 === v.length && 1 === x.size && x.first().getText() === m)) {
+                    t.update(d(t._latestEditorState, x));
                     return;
                 }
-            } else if (
-                S &&
-                r.types.includes('com.apple.webarchive') &&
-                !r.types.includes('text/html') &&
-                (function (t, e) {
-                    return (
-                        t.length === e.size &&
-                        e.valueSeq().every(function (e, r) {
-                            return e.getText() === t[r];
-                        })
-                    );
-                })(v, S)
-            ) {
-                t.update(d(t._latestEditorState, S));
-                return;
+            } else {
+                if (
+                    x &&
+                    r.types.includes('com.apple.webarchive') &&
+                    !r.types.includes('text/html') &&
+                    ((S = v),
+                    (w = x),
+                    S.length === w.size &&
+                        w.valueSeq().every(function (t, e) {
+                            return t.getText() === S[e];
+                        }))
+                ) {
+                    t.update(d(t._latestEditorState, x));
+                    return;
+                }
             }
             if (_) {
-                var w = u.processHTML(_, t.props.blockRenderMap);
-                if (w) {
-                    var k = w.contentBlocks,
-                        x = w.entityMap;
-                    if (k) {
-                        var C = n.createFromArray(k);
-                        t.update(d(t._latestEditorState, C, x));
+                var k = u.processHTML(_, t.props.blockRenderMap);
+                if (k) {
+                    var E = k.contentBlocks,
+                        C = k.entityMap;
+                    if (E) {
+                        var D = n.createFromArray(E);
+                        t.update(d(t._latestEditorState, D, C));
                         return;
                     }
                 }
@@ -82,14 +84,14 @@ t.exports = function (t, e) {
             t.setClipboard(null);
         }
         if (v.length) {
-            var E = i.create({
+            var O = i.create({
                     style: b.getCurrentInlineStyle(),
                     entity: l(b.getCurrentContent(), b.getSelection())
                 }),
-                D = c.getCurrentBlockType(b),
-                O = u.processText(v, E, D),
-                K = n.createFromArray(O);
-            t.update(d(t._latestEditorState, K));
+                K = c.getCurrentBlockType(b),
+                T = u.processText(v, O, K),
+                M = n.createFromArray(T);
+            t.update(d(t._latestEditorState, M));
         }
     }
 };

@@ -1,4 +1,5 @@
-e.exports = {
-    badge: 'badge_cf8912',
-    image: 'image_cf8912'
+var i = {
+    badge: 'badge__36097',
+    image: 'image__36097'
 };
+e.exports = i;

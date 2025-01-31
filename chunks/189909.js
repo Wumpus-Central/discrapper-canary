@@ -1,15 +1,5 @@
-n.d(t, {
-    e: function () {
-        return o;
-    }
-});
-function r(e, t) {
-    for (var n = 0; n < t.length; n++) {
-        var r = t[n];
-        (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
-    }
-}
-function i(e, t, n) {
+n.d(t, { e: () => i });
+function r(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,20 +12,19 @@ function i(e, t, n) {
         e
     );
 }
-var o = (function () {
-    var e, t, n;
-    function o(e, t) {
+var i = (function () {
+    var e;
+    function t(e, n) {
         !(function (e, t) {
             if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-        })(this, o),
-            i(this, 'spec', void 0),
-            i(this, 'monitor', void 0),
+        })(this, t),
+            r(this, 'spec', void 0),
+            r(this, 'monitor', void 0),
             (this.spec = e),
-            (this.monitor = t);
+            (this.monitor = n);
     }
     return (
-        (e = o),
-        (t = [
+        (e = [
             {
                 key: 'canDrop',
                 value: function () {
@@ -61,7 +50,12 @@ var o = (function () {
                 }
             }
         ]),
-        r(e.prototype, t),
-        o
+        (function (e, t) {
+            for (var n = 0; n < t.length; n++) {
+                var r = t[n];
+                (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+            }
+        })(t.prototype, e),
+        t
     );
 })();

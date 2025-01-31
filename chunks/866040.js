@@ -1,11 +1,6 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-}),
-    n(411104);
-var r = n(200651),
-    i = n(192379),
+n.d(t, { Z: () => h }), n(411104);
+var i = n(200651),
+    r = n(192379),
     a = n(442837),
     l = n(481060),
     o = n(239091),
@@ -16,21 +11,22 @@ var r = n(200651),
     m = n(5192),
     p = n(217248);
 function g(e) {
-    let { participants: t, channel: i } = e;
-    return (0, r.jsx)(l.Scroller, {
+    let { participants: t, channel: r } = e;
+    return (0, i.jsx)(l.Ttm, {
         className: p.popout,
         children: t.map((e) =>
-            (0, r.jsx)(
+            (0, i.jsx)(
                 s.Z,
                 {
-                    guildId: null == i ? void 0 : i.guild_id,
                     user: e,
-                    nick: m.ZP.getNickname(null == i ? void 0 : i.guild_id, null == i ? void 0 : i.id, e),
+                    guildId: null == r ? void 0 : r.guild_id,
+                    channelId: null == r ? void 0 : r.id,
+                    nick: m.ZP.getNickname(null == r ? void 0 : r.guild_id, null == r ? void 0 : r.id, e),
                     onContextMenu: (t) => {
                         (0, o.jW)(t, async () => {
-                            let { default: t } = await Promise.all([n.e('79695'), n.e('69220'), n.e('10125')]).then(n.bind(n, 881351));
+                            let { default: t } = await Promise.all([n.e('79695'), n.e('69220'), n.e('351')]).then(n.bind(n, 881351));
                             return (n) =>
-                                (0, r.jsx)(t, {
+                                (0, i.jsx)(t, {
                                     ...n,
                                     user: e
                                 });
@@ -42,14 +38,14 @@ function g(e) {
         )
     });
 }
-function f(e) {
+function h(e) {
     let { children: t, participants: n, channel: o, onPopoutClosed: s } = e,
         m = (0, a.e7)([u.Z], () => u.Z.theme),
         p = 1 === n.length ? n[0] : null,
-        f = (0, i.useCallback)(
+        h = (0, r.useCallback)(
             (e) => {
                 if (null != p)
-                    return (0, r.jsx)(d.Z, {
+                    return (0, i.jsx)(d.Z, {
                         ...e,
                         closePopout: () => {
                             e.closePopout(), null == s || s();
@@ -59,7 +55,7 @@ function f(e) {
                         channelId: null == o ? void 0 : o.id
                     });
                 if (null != n)
-                    return (0, r.jsx)(g, {
+                    return (0, i.jsx)(g, {
                         participants: n,
                         channel: o
                     });
@@ -67,10 +63,10 @@ function f(e) {
             },
             [o, s, n, p]
         );
-    return (0, r.jsx)(l.ThemeContextProvider, {
+    return (0, i.jsx)(l.ze6, {
         theme: m,
-        children: (0, r.jsx)(l.Popout, {
-            renderPopout: f,
+        children: (0, i.jsx)(l.yRy, {
+            renderPopout: h,
             preload: () =>
                 null != p
                     ? (0, c.Z)(p, {

@@ -1,12 +1,13 @@
 e.exports = {
-    root: 'root_fb9b39',
-    previewForCollected: 'previewForCollected_fb9b39 preview_fb9b39',
-    container: 'container_fb9b39',
-    header: 'header_fb9b39',
-    headerContainer: 'headerContainer_fb9b39',
-    body: 'body_fb9b39',
-    bodySpacing: 'bodySpacing_fb9b39',
-    centeredButton: 'centeredButton_fb9b39',
-    safetyTable: 'safetyTable_fb9b39',
-    restrictedSafetyTable: 'restrictedSafetyTable_fb9b39'
+    root: 'root__573a4',
+    preview: 'preview__573a4',
+    previewForCollected: 'previewForCollected__573a4 preview__573a4',
+    container: 'container__573a4',
+    header: 'header__573a4',
+    headerContainer: 'headerContainer__573a4',
+    body: 'body__573a4',
+    bodySpacing: 'bodySpacing__573a4',
+    centeredButton: 'centeredButton__573a4',
+    safetyTable: 'safetyTable__573a4',
+    restrictedSafetyTable: 'restrictedSafetyTable__573a4'
 };

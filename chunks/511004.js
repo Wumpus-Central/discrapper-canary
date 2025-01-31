@@ -1,14 +1,4 @@
-function r() {
-    return e.e('47674').then(e.bind(e, 305522));
+r.d(t, { Q: () => n });
+async function n({ gif: e, x: t, y: n, width: o, height: i, rotationDegrees: a = 0 }) {
+    return (await r.e('47674').then(r.bind(r, 305522))).crop_and_rotate_gif(e, t, n, o, i, a);
 }
-async function u({ gif: n, x: t, y: e, width: u, height: o, rotationDegrees: i = 0 }) {
-    return (await r()).crop_and_rotate_gif(n, t, e, u, o, i);
-}
-e.d(t, {
-    Q: function () {
-        return u;
-    },
-    Z: function () {
-        return r;
-    }
-});

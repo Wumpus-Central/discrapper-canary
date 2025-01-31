@@ -1,10 +1,3 @@
-var i, r;
-n.d(t, {
-    n: function () {
-        return i;
-    }
-}),
-    ((r = i || (i = {})).START = 'start'),
-    (r.PASSWORD = 'password'),
-    (r.SUCCESS = 'success'),
-    (r.FAILED = 'failed');
+n.d(t, { n: () => r });
+var i,
+    r = (((i = {}).START = 'start'), (i.PASSWORD = 'password'), (i.SUCCESS = 'success'), (i.FAILED = 'failed'), i);

@@ -1,7 +1,7 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    var n = {
+    var t = {
             1: '১',
             2: '২',
             3: '৩',
@@ -13,7 +13,7 @@
             9: '৯',
             0: '০'
         },
-        r = {
+        n = {
             '১': '1',
             '২': '2',
             '৩': '3',
@@ -65,24 +65,20 @@
         },
         preparse: function (e) {
             return e.replace(/[১২৩৪৫৬৭৮৯০]/g, function (e) {
-                return r[e];
+                return n[e];
             });
         },
         postformat: function (e) {
             return e.replace(/\d/g, function (e) {
-                return n[e];
+                return t[e];
             });
         },
         meridiemParse: /রাত|সকাল|দুপুর|বিকাল|রাত/,
-        meridiemHour: function (e, n) {
-            return (12 === e && (e = 0), ('রাত' === n && e >= 4) || ('দুপুর' === n && e < 5) || 'বিকাল' === n) ? e + 12 : e;
+        meridiemHour: function (e, t) {
+            return (12 === e && (e = 0), ('রাত' === t && e >= 4) || ('দুপুর' === t && e < 5) || 'বিকাল' === t) ? e + 12 : e;
         },
-        meridiem: function (e, n, r) {
-            if (e < 4) return 'রাত';
-            if (e < 10) return 'সকাল';
-            if (e < 17) return 'দুপুর';
-            else if (e < 20) return 'বিকাল';
-            else return 'রাত';
+        meridiem: function (e, t, n) {
+            return e < 4 ? 'রাত' : e < 10 ? 'সকাল' : e < 17 ? 'দুপুর' : e < 20 ? 'বিকাল' : 'রাত';
         },
         week: {
             dow: 0,

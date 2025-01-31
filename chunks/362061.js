@@ -1,10 +1,6 @@
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => l });
 var r = n(200651);
-function i(e) {
+function l(e) {
     let { isDark: t, style: n } = e;
     return t
         ? (0, r.jsxs)('svg', {

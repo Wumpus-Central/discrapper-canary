@@ -1,19 +1,15 @@
-n.d(t, {
-    Z: function () {
-        return m;
-    }
-});
+n.d(t, { Z: () => m });
 var i = n(200651),
     a = n(192379),
     r = n(120356),
     l = n.n(r),
-    o = n(780384),
-    s = n(481060),
+    s = n(780384),
+    o = n(481060),
     c = n(410030),
     d = n(358459);
 function u(e) {
     let { title: t } = e;
-    return (0, i.jsx)(s.Heading, {
+    return (0, i.jsx)(o.X6q, {
         className: l()(d.title, d.uppercase),
         variant: 'display-lg',
         color: 'header-primary',
@@ -21,10 +17,10 @@ function u(e) {
     });
 }
 function m(e) {
-    let { title: t, description: n, button: r, className: m, children: p } = e,
-        h = (0, c.ZP)(),
-        g = (0, o.wj)(h),
-        C = a.useMemo(() => (Array.isArray(t) ? t.map((e, t) => (0, i.jsx)(u, { title: e }, t)) : (0, i.jsx)(u, { title: t })), [t]);
+    let { title: t, description: n, button: r, className: m, children: h } = e,
+        p = (0, c.ZP)(),
+        g = (0, s.wj)(p),
+        _ = a.useMemo(() => (Array.isArray(t) ? t.map((e, t) => (0, i.jsx)(u, { title: e }, t)) : (0, i.jsx)(u, { title: t })), [t]);
     return (0, i.jsxs)('div', {
         className: l()(d.container, m),
         children: [
@@ -33,9 +29,9 @@ function m(e) {
                 children: (0, i.jsxs)('div', {
                     className: d.textContainer,
                     children: [
-                        C,
+                        _,
                         null != n &&
-                            (0, i.jsx)(s.Text, {
+                            (0, i.jsx)(o.Text, {
                                 className: d.description,
                                 variant: 'text-md/medium',
                                 color: g ? 'text-muted' : 'header-primary',
@@ -49,7 +45,7 @@ function m(e) {
                     ]
                 })
             }),
-            p
+            h
         ]
     });
 }

@@ -1,94 +1,94 @@
-s(47120);
-var n,
-    i = s(200651),
-    r = s(192379),
-    o = s(120356),
-    l = s.n(o),
-    a = s(748780),
-    c = s(846519),
-    d = s(481060),
-    u = s(585483),
-    h = s(981631),
-    E = s(388032),
-    p = s(159381);
-function _(e, t, s) {
+n.d(t, { Z: () => T }), n(47120);
+var i,
+    l = n(200651),
+    r = n(192379),
+    s = n(120356),
+    o = n.n(s),
+    a = n(748780),
+    c = n(846519),
+    d = n(481060),
+    u = n(585483),
+    _ = n(981631),
+    E = n(388032),
+    h = n(159381);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
-                  value: s,
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[t] = s),
+            : (e[t] = n),
         e
     );
 }
-let m = {
+let p = {
     friction: 15,
     tension: 100
 };
-class g extends (n = r.PureComponent) {
+class m extends (i = r.PureComponent) {
     componentDidMount() {
-        this.setState({ shown: !0 }), u.S.subscribe(h.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
+        this.setState({ shown: !0 }), u.S.subscribe(_.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
     }
     componentWillUnmount() {
-        this.focusTimeout.stop(), u.S.unsubscribe(h.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
+        this.focusTimeout.stop(), u.S.unsubscribe(_.CkL.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
     }
     componentDidUpdate() {
         let { hasQuery: e } = this.props;
-        !e && this.springTo(0);
+        e || this.springTo(0);
     }
     springTo(e) {
         let { reducedMotion: t } = this.context;
         !0 !== t.enabled &&
             a.Z.spring(this.state.translateY, {
                 toValue: Math.min(e, 250),
-                ...m
+                ...p
             }).start();
     }
     renderArrowGroup(e) {
-        return (0, i.jsxs)('div', {
-            className: l()(p.arrowGroup, e),
+        return (0, l.jsxs)('div', {
+            className: o()(h.arrowGroup, e),
             children: [
-                (0, i.jsx)(a.Z.div, {
-                    className: l()(p.arrowContainer, p.horizontal),
+                (0, l.jsx)(a.Z.div, {
+                    className: o()(h.arrowContainer, h.horizontal),
                     style: this.getStyle(),
-                    children: (0, i.jsx)('img', {
+                    children: (0, l.jsx)('img', {
                         alt: '',
-                        src: s(403756),
-                        className: p.arrowIcon
+                        src: n(403756),
+                        className: h.arrowIcon
                     })
                 }),
-                (0, i.jsx)('div', {
-                    className: l()(p.arrowContainer, p.diag1),
-                    children: (0, i.jsx)('img', {
+                (0, l.jsx)('div', {
+                    className: o()(h.arrowContainer, h.diag1),
+                    children: (0, l.jsx)('img', {
                         alt: '',
-                        src: s(536404),
-                        className: p.arrowIcon
+                        src: n(536404),
+                        className: h.arrowIcon
                     })
                 }),
-                (0, i.jsx)('div', {
-                    className: l()(p.arrowContainer, p.diag2),
-                    children: (0, i.jsx)('img', {
+                (0, l.jsx)('div', {
+                    className: o()(h.arrowContainer, h.diag2),
+                    children: (0, l.jsx)('img', {
                         alt: '',
-                        src: s(569347),
-                        className: p.arrowIcon
+                        src: n(569347),
+                        className: h.arrowIcon
                     })
                 })
             ]
         });
     }
     renderContent() {
-        return (0, i.jsxs)('div', {
-            className: p.tutorialMessages,
+        return (0, l.jsxs)('div', {
+            className: h.tutorialMessages,
             children: [
-                (0, i.jsx)('div', {
-                    className: p.searchMessage,
+                (0, l.jsx)('div', {
+                    className: h.searchMessage,
                     children: E.intl.string(E.t.Mp0IGB)
                 }),
-                (0, i.jsx)('div', {
-                    className: p.selectMessage,
+                (0, l.jsx)('div', {
+                    className: h.selectMessage,
                     children: E.intl.string(E.t['3CbpwM'])
                 })
             ]
@@ -97,13 +97,13 @@ class g extends (n = r.PureComponent) {
     render() {
         let { hasQuery: e } = this.props,
             { shown: t } = this.state;
-        return (0, i.jsxs)('div', {
+        return (0, l.jsxs)('div', {
             ref: this.rootRef,
-            className: l()(p.tutorial, {
-                [p.shown]: t,
-                [p.hasQuery]: e
+            className: o()(h.tutorial, {
+                [h.shown]: t,
+                [h.hasQuery]: e
             }),
-            children: [this.renderContent(), this.renderArrowGroup(p.__invalid_left), this.renderArrowGroup(p.right)]
+            children: [this.renderContent(), this.renderArrowGroup(h.__invalid_left), this.renderArrowGroup(h.right)]
         });
     }
     getStyle() {
@@ -125,23 +125,24 @@ class g extends (n = r.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            _(this, 'state', {
+            I(this, 'state', {
                 shown: !1,
                 translateY: new a.Z.Value(0)
             }),
-            _(this, 'rootRef', r.createRef()),
-            _(this, 'focusTimeout', new c.V7()),
-            _(this, 'handleResultFocus', (e) => {
+            I(this, 'rootRef', r.createRef()),
+            I(this, 'focusTimeout', new c.V7()),
+            I(this, 'handleResultFocus', (e) => {
                 let { node: t } = e;
                 this.focusTimeout.start(1, () => {
                     if (this.props.hasQuery && null != t && null != this.rootRef.current) {
                         let { top: e } = this.rootRef.current.getBoundingClientRect(),
-                            { top: s } = t.getBoundingClientRect(),
-                            n = Math.abs(e - s);
-                        this.springTo(n - 118 + 9);
+                            { top: n } = t.getBoundingClientRect(),
+                            i = Math.abs(e - n);
+                        this.springTo(i - 118 + 9);
                     } else this.springTo(0);
                 });
             });
     }
 }
-_(g, 'contextType', d.AccessibilityPreferencesContext), (t.Z = g);
+I(m, 'contextType', d.Sfi);
+let T = m;

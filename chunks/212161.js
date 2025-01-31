@@ -1,15 +1,11 @@
-r.d(n, {
-    H: function () {
-        return o;
-    },
-    Z: function () {
-        return s;
-    }
+n.d(t, {
+    H: () => a,
+    Z: () => s
 });
-var i = r(979554),
-    a = r(656698);
-let o = (e) => e instanceof s;
-class s extends a.Z {
+var i = n(979554),
+    r = n(656698);
+let a = (e) => e instanceof s;
+class s extends r.Z {
     static fromServer(e) {
         return new s({
             ...super.fromServer(e),

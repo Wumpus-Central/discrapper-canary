@@ -1,34 +1,30 @@
 n.d(t, {
-    S: function () {
-        return l;
-    },
-    V: function () {
-        return a;
-    }
+    S: () => a,
+    V: () => l
 });
 var i = n(200651),
-    r = n(481060),
-    s = n(388032);
-function a(e) {
-    let { body: t, ...s } = e;
-    (0, r.openModalLazy)(async () => {
+    s = n(481060),
+    r = n(388032);
+function l(e) {
+    let { body: t, ...r } = e;
+    (0, s.ZDy)(async () => {
         let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 481060));
         return (n) =>
             (0, i.jsx)(e, {
                 ...n,
-                ...s,
-                children: (0, i.jsx)(r.Text, {
+                ...r,
+                children: (0, i.jsx)(s.Text, {
                     variant: 'text-md/normal',
                     children: t
                 })
             });
     });
 }
-function l(e) {
+function a(e) {
     let { message: t } = e;
-    a({
-        header: s.intl.string(s.t.OjbtDg),
-        confirmText: s.intl.string(s.t.BddRzc),
+    l({
+        header: r.intl.string(r.t.OjbtDg),
+        confirmText: r.intl.string(r.t.BddRzc),
         body: t
     });
 }

@@ -1,9 +1,5 @@
-r.d(n, {
-    PD: function () {
-        return a;
-    }
-});
-var i = r(367646),
-    a = function (e, n, r) {
-        return new i.z(e, n, r);
+n.d(t, { PD: () => r });
+var i = n(367646),
+    r = function (e, t, n) {
+        return new i.z(e, t, n);
     };

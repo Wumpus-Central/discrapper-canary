@@ -1,62 +1,56 @@
-r.d(n, {
-    KV: function () {
-        return c;
-    },
-    ZP: function () {
-        return p;
-    },
-    dj: function () {
-        return u;
-    }
+n.d(t, {
+    KV: () => u,
+    ZP: () => f,
+    dj: () => l
 });
-var i = r(392711),
-    a = r.n(i),
-    o = r(31775),
-    s = r.n(o);
-function l(e, n, r) {
+var i = n(392711),
+    r = n.n(i),
+    a = n(31775),
+    s = n.n(a);
+function o(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let u = 100,
-    c = [[0, 99]];
-function d(e) {
-    let n = {};
+let l = 100,
+    u = [[0, 99]];
+function c(e) {
+    let t = {};
     return (
-        e.forEach((e, r) => {
-            n[r] = e;
+        e.forEach((e, n) => {
+            t[n] = e;
         }),
-        n
+        t
     );
 }
-let f = 5;
-class p {
+let d = 5;
+class f {
     reset() {
         this._subscriptions = {};
     }
     get(e) {
-        return d(this._get(e));
+        return c(this._get(e));
     }
     _get(e) {
-        var n;
-        return null !== (n = this._subscriptions[e]) && void 0 !== n ? n : new (s())({ max: f });
+        var t;
+        return null !== (t = this._subscriptions[e]) && void 0 !== t ? t : new (s())({ max: d });
     }
     clear(e) {
         delete this._subscriptions[e];
     }
-    subscribe(e, n, r) {
+    subscribe(e, t, n) {
         let i = this._get(e);
-        return !a().isEqual(i.get(n), r) && (i.set(n, r), (this._subscriptions[e] = i), this._onChange(e, d(i)), !0);
+        return !r().isEqual(i.get(t), n) && (i.set(t, n), (this._subscriptions[e] = i), this._onChange(e, c(i)), !0);
     }
     constructor(e) {
-        l(this, '_subscriptions', {}), l(this, '_onChange', void 0), (this._onChange = e);
+        o(this, '_subscriptions', {}), o(this, '_onChange', void 0), (this._onChange = e);
     }
 }

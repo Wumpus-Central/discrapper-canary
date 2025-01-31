@@ -1,13 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => d }), n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(981631),
     o = n(149011);
 function c(e, t, n) {
@@ -33,7 +28,7 @@ class d extends l.Component {
     }
     render() {
         let e;
-        let { className: t, name: n, autoComplete: l, maxLen: r } = this.props,
+        let { className: t, name: n, autoComplete: l, maxLen: a } = this.props,
             s = {
                 position: 'absolute',
                 left: 0,
@@ -48,7 +43,7 @@ class d extends l.Component {
                   })
                 : (s.opacity = 0),
             (0, i.jsx)('div', {
-                className: a()(o.outer, t),
+                className: r()(o.outer, t),
                 children: (0, i.jsxs)('div', {
                     className: o.container,
                     children: [
@@ -59,7 +54,7 @@ class d extends l.Component {
                             style: s,
                             value: this.state.value,
                             name: n,
-                            maxLength: r,
+                            maxLength: a,
                             autoComplete: l,
                             onKeyPress: this.handleKeyPress,
                             onChange: this.handleChange,
@@ -120,5 +115,5 @@ function u() {
         t = arguments.length > 1 ? arguments[1] : void 0,
         n = arguments.length > 2 ? arguments[2] : void 0,
         i = '' !== e ? e : null != n.value && '' !== n.value ? n.value : '';
-    return (null == t.minLen || !(i.length < t.minLen)) && (null == t.maxLen || !(i.length > t.maxLen)) && !0;
+    return (null == t.minLen || !(i.length < t.minLen)) && (null == t.maxLen || !(i.length > t.maxLen));
 }

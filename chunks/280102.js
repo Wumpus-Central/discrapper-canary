@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return s;
-    }
-});
+n.d(t, { Z: () => s });
 var i = n(200651);
 n(192379);
 var l = n(120356),
@@ -21,7 +17,7 @@ function s(e) {
                 }),
                 children: [
                     l
-                        ? (0, i.jsx)(a.VideoIcon, {
+                        ? (0, i.jsx)(a.Odl, {
                               size: 'md',
                               color: 'currentColor',
                               className: o.videoIcon

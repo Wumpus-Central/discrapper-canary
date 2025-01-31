@@ -1,15 +1,11 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(231757),
-    a = r(981631);
-function o(e) {
+n.d(t, { Z: () => a });
+var i = n(231757),
+    r = n(981631);
+function a(e) {
     return (
         !!e ||
         ((0, i.Z)({
-            platformType: a.ABu.SPOTIFY,
+            platformType: r.ABu.SPOTIFY,
             location: 'Spotify Button'
         }),
         !1)

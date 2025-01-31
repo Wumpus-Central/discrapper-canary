@@ -1,4 +1,5 @@
-e.exports = {
-    group: 'group_aa2afb',
-    item: 'item_aa2afb'
+var i = {
+    group: 'group__3d4a0',
+    item: 'item__3d4a0'
 };
+e.exports = i;

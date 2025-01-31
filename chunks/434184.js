@@ -1,11 +1,7 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-});
+n.d(t, { Z: () => _ });
 var i = n(200651),
-    r = n(192379),
-    l = n(481060),
+    l = n(192379),
+    r = n(481060),
     a = n(194359),
     s = n(906732),
     o = n(171368),
@@ -16,9 +12,9 @@ var i = n(200651),
     m = n(981631),
     p = n(388032),
     g = n(146368);
-function f(e) {
-    let { user: t, key: n, isFocused: f } = e,
-        _ = r.useContext(c.AnalyticsContext),
+function _(e) {
+    let { user: t, key: n, isFocused: _ } = e,
+        f = l.useContext(c.AnalyticsContext),
         { analyticsLocations: E } = (0, s.ZP)(),
         I = (e) => {
             e.stopPropagation(), a.Z.unblockUser(t.id, { location: 'Friends' });
@@ -26,12 +22,12 @@ function f(e) {
     return (0, i.jsx)(
         u.Z,
         {
-            isFocused: f,
+            isFocused: _,
             onClick: () =>
                 (0, o.openUserProfileModal)({
                     userId: t.id,
                     sourceAnalyticsLocations: E,
-                    analyticsLocation: _.location
+                    analyticsLocation: f.location
                 }),
             user: t,
             children: (e) =>
@@ -45,7 +41,7 @@ function f(e) {
                             subText: p.intl.string(p.t['4bDptL'])
                         }),
                         (0, i.jsx)(d.Z, {
-                            icon: l.UserMinusIcon,
+                            icon: r.I9k,
                             actionType: d.Z.ActionTypes.DENY,
                             tooltip: p.intl.string(p.t.XyHpKC),
                             onClick: I,

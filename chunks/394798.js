@@ -1,21 +1,17 @@
-n.d(e, {
-    DM: function () {
-        return i;
-    }
-});
-var r = n(899517);
+s.d(e, { DM: () => i });
+var n = s(899517);
 function i() {
-    let t = r.n,
+    let t = n.n,
         e = t.crypto || t.msCrypto,
-        n = () => 16 * Math.random();
+        s = () => 16 * Math.random();
     try {
         if (e && e.randomUUID) return e.randomUUID().replace(/-/g, '');
         e &&
             e.getRandomValues &&
-            (n = () => {
+            (s = () => {
                 let t = new Uint8Array(1);
                 return e.getRandomValues(t), t[0];
             });
     } catch (t) {}
-    return '10000000100040008000100000000000'.replace(/[018]/g, (t) => (t ^ ((15 & n()) >> (t / 4))).toString(16));
+    return '10000000100040008000100000000000'.replace(/[018]/g, (t) => (t ^ ((15 & s()) >> (t / 4))).toString(16));
 }

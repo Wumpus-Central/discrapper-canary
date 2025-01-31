@@ -1,43 +1,38 @@
-n.r(e),
-    n.d(e, {
-        default: function () {
-            return f;
-        }
-    });
-var c = n(200651),
+n.d(e, { default: () => p });
+var l = n(200651),
     i = n(192379),
-    l = n(481060),
+    c = n(481060),
     a = n(561716),
-    o = n(721383),
-    r = n(313201),
-    s = n(63063),
-    u = n(857595),
+    r = n(721383),
+    o = n(313201),
+    _ = n(63063),
+    s = n(857595),
     d = n(981631),
-    _ = n(388032),
+    u = n(388032),
     h = n(549164);
-function f(t) {
+function p(t) {
     let { transitionState: e, onClose: n } = t,
-        f = (0, r.Dt)();
+        p = (0, o.Dt)();
     return (
         i.useEffect(() => {
-            u.r_();
+            s.r_();
         }, []),
-        (0, c.jsxs)(l.ModalRoot, {
+        (0, l.jsxs)(c.Y0X, {
             transitionState: e,
             role: 'alertdialog',
-            'aria-labelledby': f,
+            'aria-labelledby': p,
             children: [
-                (0, c.jsxs)(l.ModalContent, {
+                (0, l.jsxs)(c.hzk, {
                     className: h.content,
                     children: [
-                        (0, c.jsx)(l.Heading, {
+                        (0, l.jsx)(c.X6q, {
                             variant: 'heading-xl/semibold',
-                            id: f,
+                            id: p,
                             className: h.header,
-                            children: _.intl.format(_.t.V4fxrq, {
+                            children: u.intl.format(u.t.V4fxrq, {
                                 tab: (t, e) =>
-                                    (0, c.jsx)(
-                                        l.KeyCombo,
+                                    (0, l.jsx)(
+                                        c.M2$,
                                         {
                                             shortcut: 'tab',
                                             className: h.headerShortcut
@@ -46,46 +41,46 @@ function f(t) {
                                     )
                             })
                         }),
-                        (0, c.jsx)(l.Text, {
+                        (0, l.jsx)(c.Text, {
                             variant: 'text-md/normal',
-                            children: _.intl.string(_.t['oQA/OD'])
+                            children: u.intl.string(u.t['oQA/OD'])
                         }),
-                        (0, c.jsxs)('ul', {
+                        (0, l.jsxs)('ul', {
                             className: h.tips,
                             children: [
-                                (0, c.jsxs)('li', {
+                                (0, l.jsxs)('li', {
                                     children: [
-                                        (0, c.jsx)(l.KeyCombo, { shortcut: o._.binds['0'] }),
-                                        (0, c.jsx)(l.Text, {
+                                        (0, l.jsx)(c.M2$, { shortcut: r._.binds['0'] }),
+                                        (0, l.jsx)(c.Text, {
                                             variant: 'text-md/normal',
-                                            children: _.intl.string(_.t['43Qn2t'])
+                                            children: u.intl.string(u.t['43Qn2t'])
                                         })
                                     ]
                                 }),
-                                (0, c.jsxs)('li', {
+                                (0, l.jsxs)('li', {
                                     children: [
-                                        (0, c.jsx)(l.KeyCombo, { shortcut: a.$.binds['0'] }),
-                                        (0, c.jsx)(l.Text, {
+                                        (0, l.jsx)(c.M2$, { shortcut: a.$.binds['0'] }),
+                                        (0, l.jsx)(c.Text, {
                                             variant: 'text-md/normal',
-                                            children: _.intl.string(_.t.zJg4FR)
+                                            children: u.intl.string(u.t.zJg4FR)
                                         })
                                     ]
                                 })
                             ]
                         }),
-                        (0, c.jsx)(l.Text, {
+                        (0, l.jsx)(c.Text, {
                             variant: 'text-md/normal',
-                            children: _.intl.format(_.t.EWFVSU, { link: s.Z.getArticleURL(d.BhN.KEYBOARD_NAVIGATION) })
+                            children: u.intl.format(u.t.EWFVSU, { link: _.Z.getArticleURL(d.BhN.KEYBOARD_NAVIGATION) })
                         })
                     ]
                 }),
-                (0, c.jsx)(l.ModalFooter, {
-                    children: (0, c.jsx)(l.Button, {
+                (0, l.jsx)(c.mzw, {
+                    children: (0, l.jsx)(c.zxk, {
                         onClick: n,
-                        color: l.Button.Colors.BRAND,
-                        size: l.Button.Sizes.SMALL,
+                        color: c.zxk.Colors.BRAND,
+                        size: c.zxk.Sizes.SMALL,
                         autoFocus: !0,
-                        children: _.intl.string(_.t.BddRzc)
+                        children: u.intl.string(u.t.BddRzc)
                     })
                 })
             ]

@@ -1,8 +1,4 @@
 function i() {
     return !0;
 }
-r.d(n, {
-    O: function () {
-        return i;
-    }
-});
+n.d(t, { O: () => i });

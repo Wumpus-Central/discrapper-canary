@@ -1,45 +1,42 @@
+n.d(t, { Z: () => _ });
 var i,
-    a,
-    o = r(442837),
-    s = r(570140);
-function l(e, n, r) {
+    r = n(442837),
+    a = n(570140);
+function s(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-!(function (e) {
-    (e.NOT_FETCHED = 'NOT_FETCHED'), (e.FETCHING = 'FETCHING'), (e.FETCHED = 'FETCHED');
-})(i || (i = {}));
-let u = {},
-    c = 'NOT_FETCHED',
+let o = {},
+    l = 'NOT_FETCHED',
+    u = () => {
+        l = 'FETCHING';
+    },
+    c = (e) => {
+        (o = e.marketings.marketingsBySurfaces), (l = 'FETCHED');
+    },
     d = () => {
-        c = 'FETCHING';
-    },
-    f = (e) => {
-        (u = e.marketings.marketingsBySurfaces), (c = 'FETCHED');
-    },
-    p = () => {
-        (u = {}), (c = 'NOT_FETCHED');
+        (o = {}), (l = 'NOT_FETCHED');
     };
-class h extends (a = o.ZP.Store) {
+class f extends (i = r.ZP.Store) {
     getMarketingBySurface(e) {
-        return u[e];
+        return o[e];
     }
     get fetchState() {
-        return c;
+        return l;
     }
 }
-l(h, 'displayName', 'CollectiblesMarketingsStore'),
-    (n.Z = new h(s.Z, {
-        COLLECTIBLES_MARKETING_FETCH: d,
-        COLLECTIBLES_MARKETING_FETCH_SUCCESS: f,
-        LOGOUT: p
-    }));
+s(f, 'displayName', 'CollectiblesMarketingsStore');
+let _ = new f(a.Z, {
+    COLLECTIBLES_MARKETING_FETCH: u,
+    COLLECTIBLES_MARKETING_FETCH_SUCCESS: c,
+    LOGOUT: d
+});

@@ -1,10 +1,6 @@
 n.d(t, {
-    O: function () {
-        return ef;
-    },
-    Z: function () {
-        return ev;
-    }
+    O: () => e_,
+    Z: () => ef
 }),
     n(47120),
     n(733860);
@@ -22,34 +18,34 @@ var i = n(200651),
     g = n(481060),
     x = n(852860),
     p = n(902840),
-    f = n(410030),
+    _ = n(410030),
     C = n(100527),
-    v = n(367907),
-    I = n(906732),
+    f = n(367907),
+    v = n(906732),
     N = n(740504),
-    _ = n(933557),
-    T = n(471445),
-    j = n(890477),
+    j = n(933557),
+    I = n(471445),
+    E = n(890477),
     b = n(34586),
-    E = n(600164),
+    T = n(600164),
     S = n(688465),
     R = n(807582),
-    y = n(48217),
-    A = n(26323),
-    Z = n(35125),
+    Z = n(48217),
+    y = n(26323),
+    A = n(35125),
     L = n(536442),
     D = n(142497),
     O = n(884858),
-    M = n(516129),
+    k = n(516129),
     P = n(813197),
-    k = n(208567),
-    w = n(592125),
-    B = n(324067),
-    U = n(650774),
-    G = n(496675),
+    w = n(208567),
+    M = n(592125),
+    U = n(324067),
+    G = n(650774),
+    B = n(496675),
     F = n(699516),
-    H = n(594174),
-    z = n(709586),
+    z = n(594174),
+    H = n(709586),
     V = n(768581),
     W = n(630388),
     Y = n(823379),
@@ -91,9 +87,9 @@ function eg(e) {
 function ex(e) {
     if (null == e) return;
     let { label: t, channel: n, category: r } = e,
-        l = (0, T.KS)(n),
-        s = null != r ? (0, _.F6)(r, H.default, F.Z) : null;
-    return (0, i.jsx)(g.IconSelectOption, {
+        l = (0, I.KS)(n),
+        s = null != r ? (0, j.F6)(r, z.default, F.Z) : null;
+    return (0, i.jsx)(g.ZZ$, {
         title: t,
         icon: l,
         subtitle: s
@@ -102,12 +98,12 @@ function ex(e) {
 function ep(e) {
     return {
         value: e.id,
-        label: (0, _.F6)(e, H.default, F.Z),
+        label: (0, j.F6)(e, z.default, F.Z),
         channel: e,
-        category: w.Z.getChannel(e.parent_id)
+        category: M.Z.getChannel(e.parent_id)
     };
 }
-let ef = () => {
+let e_ = () => {
     let { guild: e, originalGuild: t, submitting: n, errors: l } = (0, u.cj)([X.Z], () => X.Z.getProps()),
         s = r.useMemo(() => (0, Q.LG)(l), [l]),
         a = r.useCallback(() => {
@@ -131,10 +127,10 @@ let ef = () => {
                 homeHeader: e.homeHeader,
                 profile: e.profile
             };
-            !(0, Y.OL)(new Set(e.features), new Set(t.features)) && (n.features = e.features), q.Z.saveGuild(e.id, n);
+            (0, Y.OL)(new Set(e.features), new Set(t.features)) || (n.features = e.features), q.Z.saveGuild(e.id, n);
         }, [e, t]),
         o = r.useCallback(() => {
-            if (null != e) q.Z.init(e.id);
+            null != e && q.Z.init(e.id);
         }, [e]);
     return (0, i.jsx)(x.Z, {
         submitting: n,
@@ -188,17 +184,17 @@ class eC extends r.PureComponent {
     }
     renderBaseSettings() {
         let { guild: e, errors: t, canManageGuild: n } = this.props;
-        return (0, i.jsxs)(E.Z, {
+        return (0, i.jsxs)(T.Z, {
             className: s()(ei.__invalid_baseSection),
             children: [
-                (0, i.jsxs)(E.Z, {
+                (0, i.jsxs)(T.Z, {
                     basis: '50%',
-                    justify: E.Z.Justify.BETWEEN,
+                    justify: T.Z.Justify.BETWEEN,
                     children: [
-                        (0, i.jsxs)(E.Z.Child, {
+                        (0, i.jsxs)(T.Z.Child, {
                             wrap: !0,
                             children: [
-                                (0, i.jsx)(k.Z, {
+                                (0, i.jsx)(w.Z, {
                                     showIcon: !0,
                                     name: e.name,
                                     image: e.icon,
@@ -226,19 +222,19 @@ class eC extends r.PureComponent {
                                     : null
                             ]
                         }),
-                        (0, i.jsxs)(E.Z, {
-                            direction: E.Z.Direction.VERTICAL,
-                            align: E.Z.Align.START,
+                        (0, i.jsxs)(T.Z, {
+                            direction: T.Z.Direction.VERTICAL,
+                            align: T.Z.Align.START,
                             style: { maxWidth: 180 },
                             children: [
-                                (0, i.jsx)(g.FormText, {
-                                    type: g.FormTextTypes.DESCRIPTION,
+                                (0, i.jsx)(g.R94, {
+                                    type: g.geA.DESCRIPTION,
                                     className: ei.marginBottom8,
                                     children: en.intl.string(en.t['R/9yQE'])
                                 }),
-                                (0, i.jsxs)(g.Button, {
-                                    look: g.ButtonLooks.OUTLINED,
-                                    color: g.ButtonColors.PRIMARY,
+                                (0, i.jsxs)(g.zxk, {
+                                    look: g.iLD.OUTLINED,
+                                    color: g.Ttl.PRIMARY,
                                     disabled: !n,
                                     className: ei.marginTop8,
                                     onClick: this.handleUploadImage,
@@ -255,12 +251,12 @@ class eC extends r.PureComponent {
                         })
                     ]
                 }),
-                (0, i.jsx)(E.Z.Child, {
+                (0, i.jsx)(T.Z.Child, {
                     basis: '50%',
-                    children: (0, i.jsx)(g.FormItem, {
+                    children: (0, i.jsx)(g.xJW, {
                         title: en.intl.string(en.t.dBih7e),
                         className: ei.marginBottom20,
-                        children: (0, i.jsx)(g.TextInput, {
+                        children: (0, i.jsx)(g.oil, {
                             type: 'text',
                             disabled: !n,
                             value: e.name,
@@ -315,16 +311,16 @@ class eC extends r.PureComponent {
                 value: ea,
                 label: en.intl.string(en.t.wGiHkJ)
             }),
-            (0, i.jsxs)(g.FormSection, {
+            (0, i.jsxs)(g.hjN, {
                 className: ei.divider,
                 children: [
-                    (0, i.jsxs)(E.Z, {
+                    (0, i.jsxs)(T.Z, {
                         children: [
-                            (0, i.jsx)(E.Z.Child, {
+                            (0, i.jsx)(T.Z.Child, {
                                 basis: '50%',
-                                children: (0, i.jsx)(g.FormItem, {
+                                children: (0, i.jsx)(g.xJW, {
                                     title: en.intl.string(en.t.KuYcnZ),
-                                    children: (0, i.jsx)(g.SingleSelect, {
+                                    children: (0, i.jsx)(g.q4e, {
                                         value: s,
                                         options: o,
                                         onChange: this.handleAFKChannelChange,
@@ -334,11 +330,11 @@ class eC extends r.PureComponent {
                                     })
                                 })
                             }),
-                            (0, i.jsx)(E.Z.Child, {
+                            (0, i.jsx)(T.Z.Child, {
                                 basis: '50%',
-                                children: (0, i.jsx)(g.FormItem, {
+                                children: (0, i.jsx)(g.xJW, {
                                     title: en.intl.string(en.t.brhYaW),
-                                    children: (0, i.jsx)(g.SingleSelect, {
+                                    children: (0, i.jsx)(g.q4e, {
                                         value: l,
                                         options: a,
                                         isDisabled: s === ea || !n,
@@ -348,9 +344,9 @@ class eC extends r.PureComponent {
                             })
                         ]
                     }),
-                    (0, i.jsx)(g.FormText, {
+                    (0, i.jsx)(g.R94, {
                         className: ei.marginTop8,
-                        type: g.FormTextTypes.DESCRIPTION,
+                        type: g.geA.DESCRIPTION,
                         children: en.intl.string(en.t.ffEOKC)
                     })
                 ]
@@ -375,14 +371,14 @@ class eC extends r.PureComponent {
             value: eo,
             label: en.intl.string(en.t.ibUhoa)
         });
-        let c = (0, Z.eI)(t),
+        let c = (0, A.eI)(t),
             u = c || (0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS),
             m = c || (0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES);
-        return (0, i.jsxs)(g.FormSection, {
+        return (0, i.jsxs)(g.hjN, {
             className: ei.divider,
             children: [
-                (0, i.jsx)(g.FormTitle, { children: en.intl.string(en.t.NASFnp) }),
-                (0, i.jsx)(g.SingleSelect, {
+                (0, i.jsx)(g.vwX, { children: en.intl.string(en.t.NASFnp) }),
+                (0, i.jsx)(g.q4e, {
                     value: a,
                     options: o,
                     isDisabled: !r,
@@ -390,12 +386,12 @@ class eC extends r.PureComponent {
                     renderOptionLabel: ex,
                     renderOptionValue: eg
                 }),
-                (0, i.jsx)(g.FormText, {
+                (0, i.jsx)(g.R94, {
                     className: ei.marginTop8,
-                    type: g.FormTextTypes.DESCRIPTION,
+                    type: g.geA.DESCRIPTION,
                     children: en.intl.string(en.t.BT9zR0)
                 }),
-                (0, i.jsx)(g.FormSwitch, {
+                (0, i.jsx)(g.j7V, {
                     className: ei.marginTop20,
                     onChange: this.handleShowJoinsChange,
                     value: !(0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_JOIN_NOTIFICATIONS),
@@ -403,7 +399,7 @@ class eC extends r.PureComponent {
                     disabled: !r || a === eo,
                     children: en.intl.string(en.t['+f0bXV'])
                 }),
-                (0, i.jsx)(g.FormSwitch, {
+                (0, i.jsx)(g.j7V, {
                     className: s()(ei.__invalid_marginReset, ei.marginTop20),
                     onChange: this.handleShowJoinRepliesChange,
                     value: !(0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES),
@@ -411,7 +407,7 @@ class eC extends r.PureComponent {
                     disabled: !r || a === eo,
                     children: en.intl.string(en.t['72k7jY'])
                 }),
-                (0, i.jsx)(g.FormSwitch, {
+                (0, i.jsx)(g.j7V, {
                     className: s()(ei.__invalid_marginReset, ei.marginTop20),
                     onChange: this.handleShowSubscriptionsChange,
                     value: !(0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_PREMIUM_SUBSCRIPTIONS),
@@ -419,7 +415,7 @@ class eC extends r.PureComponent {
                     disabled: !r || a === eo,
                     children: en.intl.string(en.t['2L8NCA'])
                 }),
-                (0, i.jsx)(g.FormSwitch, {
+                (0, i.jsx)(g.j7V, {
                     className: s()(ei.__invalid_marginReset, ei.marginTop20),
                     onChange: this.handleShowGuildRemindersChange,
                     value: !(0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS),
@@ -428,7 +424,7 @@ class eC extends r.PureComponent {
                     children: en.intl.string(en.t['NvnW+f'])
                 }),
                 u &&
-                    (0, i.jsx)(g.FormSwitch, {
+                    (0, i.jsx)(g.j7V, {
                         className: s()(ei.__invalid_marginReset, ei.marginTop20),
                         onChange: this.handleShowGuildRoleSubscriptionPurchaseMessages,
                         value: !(0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS),
@@ -437,7 +433,7 @@ class eC extends r.PureComponent {
                         children: en.intl.string(en.t['54n19f'])
                     }),
                 m &&
-                    (0, i.jsx)(g.FormSwitch, {
+                    (0, i.jsx)(g.j7V, {
                         className: s()(ei.__invalid_marginReset, ei.marginTop20),
                         onChange: this.handleShowGuildRoleSubscriptionPurchaseMessageRepliesChange,
                         value: !(0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES),
@@ -446,7 +442,7 @@ class eC extends r.PureComponent {
                         children: en.intl.string(en.t.IhF5d3)
                     }),
                 l &&
-                    (0, i.jsx)(g.FormSwitch, {
+                    (0, i.jsx)(g.j7V, {
                         className: s()(ei.__invalid_marginReset, ei.marginTop20),
                         onChange: this.handleShowDeadchatPromptMessageChange,
                         value: !(0, W.yE)(t.systemChannelFlags, J.xmn.SUPPRESS_CHANNEL_PROMPT_DEADCHAT),
@@ -475,21 +471,21 @@ class eC extends r.PureComponent {
             ];
         return (0, i.jsx)('div', {
             ref: this._notificationSectionRef,
-            children: (0, i.jsxs)(g.FormSection, {
+            children: (0, i.jsxs)(g.hjN, {
                 className: ei.divider,
                 children: [
-                    (0, i.jsx)(g.FormTitle, { children: en.intl.string(en.t['23TVho']) }),
-                    (0, i.jsx)(g.FormText, {
-                        type: g.FormTextTypes.DESCRIPTION,
+                    (0, i.jsx)(g.vwX, { children: en.intl.string(en.t['23TVho']) }),
+                    (0, i.jsx)(g.R94, {
+                        type: g.geA.DESCRIPTION,
                         className: ei.marginBottom20,
                         children: en.intl.string(en.t.U4LwWF)
                     }),
-                    (0, i.jsx)(g.FormText, {
-                        type: g.FormTextTypes.DESCRIPTION,
+                    (0, i.jsx)(g.R94, {
+                        type: g.geA.DESCRIPTION,
                         className: ei.marginBottom20,
                         children: en.intl.string(en.t.xdY0pK)
                     }),
-                    (0, i.jsx)(g.RadioGroup, {
+                    (0, i.jsx)(g.FXm, {
                         options: r,
                         value: e.defaultMessageNotifications,
                         disabled: !t,
@@ -505,11 +501,11 @@ class eC extends r.PureComponent {
             ? null
             : (0, i.jsx)('div', {
                   ref: this._notificationSectionRef,
-                  children: (0, i.jsxs)(g.FormSection, {
+                  children: (0, i.jsxs)(g.hjN, {
                       className: ei.divider,
                       children: [
-                          (0, i.jsx)(g.FormTitle, { children: en.intl.string(en.t['oQ/7BQ']) }),
-                          (0, i.jsx)(g.FormSwitch, {
+                          (0, i.jsx)(g.vwX, { children: en.intl.string(en.t['oQ/7BQ']) }),
+                          (0, i.jsx)(g.j7V, {
                               className: ei.marginBottom0,
                               onChange: this.handleShowActivityFeedToggle,
                               value: t,
@@ -526,9 +522,9 @@ class eC extends r.PureComponent {
         let { guild: e, canManageGuild: t } = this.props;
         return (0, p.Jc)(e, !1)
             ? (0, i.jsx)('div', {
-                  children: (0, i.jsx)(g.FormSection, {
+                  children: (0, i.jsx)(g.hjN, {
                       className: ei.divider,
-                      children: (0, i.jsx)(g.FormSwitch, {
+                      children: (0, i.jsx)(g.j7V, {
                           className: s()(ei.marginTop8, ei.marginBottom8),
                           onChange: this.handleConversationSummariesToggle,
                           value: e.hasFeature(J.oNc.SUMMARIES_ENABLED_BY_USER),
@@ -539,7 +535,7 @@ class eC extends r.PureComponent {
                               className: ei.badgedItem,
                               children: [
                                   en.intl.string(en.t.vmEDQk),
-                                  (0, i.jsx)(g.TextBadge, {
+                                  (0, i.jsx)(g.IGR, {
                                       text: en.intl.string(en.t.oW0eUV),
                                       color: m.Z.unsafe_rawColors.BRAND_500.css,
                                       className: ei.__invalid_betaTag
@@ -555,7 +551,7 @@ class eC extends r.PureComponent {
         let { guild: e, canManageGuild: t } = this.props,
             n = e.hasFeature(J.oNc.INVITE_SPLASH),
             r = t && n,
-            l = (0, i.jsx)(M.Z, {
+            l = (0, i.jsx)(k.Z, {
                 image: e.splash,
                 makeURL: (t) =>
                     null != t
@@ -573,18 +569,18 @@ class eC extends r.PureComponent {
             });
         return (0, i.jsx)('div', {
             ref: this._inviteSectionRef,
-            children: (0, i.jsx)(g.FormSection, {
+            children: (0, i.jsx)(g.hjN, {
                 className: ei.divider,
-                children: (0, i.jsxs)(E.Z, {
+                children: (0, i.jsxs)(T.Z, {
                     basis: '50%',
-                    direction: E.Z.Direction.HORIZONTAL,
-                    align: E.Z.Justify.START,
+                    direction: T.Z.Direction.HORIZONTAL,
+                    align: T.Z.Justify.START,
                     children: [
-                        (0, i.jsxs)(E.Z.Child, {
+                        (0, i.jsxs)(T.Z.Child, {
                             wrap: !0,
                             basis: '50%',
                             children: [
-                                (0, i.jsxs)(g.FormTitle, {
+                                (0, i.jsxs)(g.vwX, {
                                     className: ei.flexFormTitle,
                                     children: [
                                         (0, i.jsx)('div', { children: en.intl.string(en.t.tzGY0t) }),
@@ -596,19 +592,19 @@ class eC extends r.PureComponent {
                                         })
                                     ]
                                 }),
-                                (0, i.jsx)(g.FormText, {
-                                    type: g.FormTextTypes.DESCRIPTION,
+                                (0, i.jsx)(g.R94, {
+                                    type: g.geA.DESCRIPTION,
                                     className: ei.marginBottom8,
                                     children: en.intl.string(en.t.F7bbrq)
                                 }),
-                                (0, i.jsx)(g.FormText, {
-                                    type: g.FormTextTypes.DESCRIPTION,
+                                (0, i.jsx)(g.R94, {
+                                    type: g.geA.DESCRIPTION,
                                     children: en.intl.format(en.t.ZYA9PT, { articleURL: K.Z.getArticleURL(J.BhN.GUILD_INVITE_SPLASH) })
                                 }),
                                 n
-                                    ? (0, i.jsxs)(g.Button, {
+                                    ? (0, i.jsxs)(g.zxk, {
                                           disabled: !r,
-                                          color: g.ButtonColors.BRAND,
+                                          color: g.Ttl.BRAND,
                                           className: ei.marginTop16,
                                           children: [
                                               en.intl.string(en.t.yG2pUl),
@@ -623,12 +619,12 @@ class eC extends r.PureComponent {
                                     : this.uploadBGUpsellButton(this.handleInviteSplashUpsellButton)
                             ]
                         }),
-                        (0, i.jsx)(E.Z.Child, {
+                        (0, i.jsx)(T.Z.Child, {
                             wrap: !0,
                             basis: '50%',
                             children: n
                                 ? l
-                                : (0, i.jsx)(g.Clickable, {
+                                : (0, i.jsx)(g.P3F, {
                                       'aria-hidden': !0,
                                       tabIndex: -1,
                                       className: ei.upsell,
@@ -646,7 +642,7 @@ class eC extends r.PureComponent {
             r = e.hasFeature(J.oNc.BANNER),
             l = e.hasFeature(J.oNc.ANIMATED_BANNER),
             s = r && t,
-            a = (0, i.jsx)(M.Z, {
+            a = (0, i.jsx)(k.Z, {
                 image: e.banner,
                 makeURL: (t) =>
                     null != t
@@ -662,7 +658,7 @@ class eC extends r.PureComponent {
                 onChange: this.handleBannerChange,
                 hint: en.intl.string(en.t.uPvxqK),
                 onOpenImageSelectModal: () =>
-                    eI(
+                    ev(
                         ee.pC.GUILD_BANNER,
                         et.B,
                         this.handleBannerChange,
@@ -675,12 +671,12 @@ class eC extends r.PureComponent {
                     ),
                 enabled: s
             }),
-            o = (0, i.jsx)(g.Button, {
+            o = (0, i.jsx)(g.zxk, {
                 disabled: !s,
-                color: g.Button.Colors.BRAND,
+                color: g.zxk.Colors.BRAND,
                 className: ei.marginTop16,
                 onClick: () =>
-                    eI(
+                    ev(
                         ee.pC.GUILD_BANNER,
                         et.B,
                         this.handleBannerChange,
@@ -693,18 +689,18 @@ class eC extends r.PureComponent {
                     ),
                 children: en.intl.string(en.t.yG2pUl)
             });
-        return (0, i.jsx)(g.FormSection, {
+        return (0, i.jsx)(g.hjN, {
             className: ei.divider,
-            children: (0, i.jsxs)(E.Z, {
+            children: (0, i.jsxs)(T.Z, {
                 basis: '50%',
-                direction: E.Z.Direction.HORIZONTAL,
-                align: E.Z.Justify.START,
+                direction: T.Z.Direction.HORIZONTAL,
+                align: T.Z.Justify.START,
                 children: [
-                    (0, i.jsxs)(E.Z.Child, {
+                    (0, i.jsxs)(T.Z.Child, {
                         wrap: !0,
                         basis: '50%',
                         children: [
-                            (0, i.jsxs)(g.FormTitle, {
+                            (0, i.jsxs)(g.vwX, {
                                 className: ei.flexFormTitle,
                                 children: [
                                     (0, i.jsx)('div', { children: en.intl.string(en.t['0r0AzM']) }),
@@ -716,24 +712,24 @@ class eC extends r.PureComponent {
                                     })
                                 ]
                             }),
-                            (0, i.jsx)(g.FormText, {
-                                type: g.FormTextTypes.DESCRIPTION,
+                            (0, i.jsx)(g.R94, {
+                                type: g.geA.DESCRIPTION,
                                 className: ei.marginBottom8,
                                 children: en.intl.string(en.t.UfqmIS)
                             }),
-                            (0, i.jsx)(g.FormText, {
-                                type: g.FormTextTypes.DESCRIPTION,
+                            (0, i.jsx)(g.R94, {
+                                type: g.geA.DESCRIPTION,
                                 children: en.intl.format(en.t.vBcWUl, { articleURL: K.Z.getArticleURL(J.BhN.GUILD_BANNER_SPLASH) })
                             }),
                             r ? o : this.uploadBGUpsellButton(this.handleBannerUpsellButton)
                         ]
                     }),
-                    (0, i.jsx)(E.Z.Child, {
+                    (0, i.jsx)(T.Z.Child, {
                         wrap: !0,
                         basis: '50%',
                         children: r
                             ? a
-                            : (0, i.jsx)(g.Clickable, {
+                            : (0, i.jsx)(g.P3F, {
                                   'aria-hidden': !0,
                                   tabIndex: -1,
                                   className: ei.upsell,
@@ -747,16 +743,16 @@ class eC extends r.PureComponent {
     }
     renderProgressBar() {
         let { guild: e, canManageGuild: t, theme: n } = this.props;
-        return (0, i.jsx)(g.FormSection, {
-            children: (0, i.jsxs)(E.Z, {
-                align: E.Z.Align.START,
+        return (0, i.jsx)(g.hjN, {
+            children: (0, i.jsxs)(T.Z, {
+                align: T.Z.Align.START,
                 children: [
-                    (0, i.jsxs)(E.Z, {
+                    (0, i.jsxs)(T.Z, {
                         basis: '50%',
-                        direction: E.Z.Direction.VERTICAL,
-                        align: E.Z.Align.STRETCH,
+                        direction: T.Z.Direction.VERTICAL,
+                        align: T.Z.Align.STRETCH,
                         children: [
-                            (0, i.jsx)(g.FormSwitch, {
+                            (0, i.jsx)(g.j7V, {
                                 className: s()(ei.marginTop8, ei.marginBottom8),
                                 onChange: this.handlePremiumProgressBarEnabledChange,
                                 value: e.premiumProgressBarEnabled,
@@ -764,14 +760,14 @@ class eC extends r.PureComponent {
                                 disabled: !t,
                                 children: en.intl.string(en.t.Dl4mJS)
                             }),
-                            (0, i.jsx)(g.FormText, {
-                                type: g.FormTextTypes.DESCRIPTION,
+                            (0, i.jsx)(g.R94, {
+                                type: g.geA.DESCRIPTION,
                                 className: ei.marginBottom8,
                                 children: en.intl.string(en.t.xzHcoa)
                             })
                         ]
                     }),
-                    (0, i.jsx)(E.Z.Child, {
+                    (0, i.jsx)(T.Z.Child, {
                         wrap: !0,
                         basis: '50%',
                         children: (0, i.jsx)('img', {
@@ -787,18 +783,18 @@ class eC extends r.PureComponent {
     renderDisplaySection() {
         return (0, i.jsx)('div', {
             ref: this._displaySectionRef,
-            children: (0, i.jsxs)(g.FormSection, {
+            children: (0, i.jsxs)(g.hjN, {
                 title: en.intl.string(en.t.lDskxM),
-                tag: g.FormTitleTags.H1,
+                tag: g.RB0.H1,
                 className: ei.divider,
                 children: [this.renderProgressBar(), this.renderBanner(), this.renderServerInviteBGSection()]
             })
         });
     }
     render() {
-        return (0, i.jsxs)(g.FormSection, {
+        return (0, i.jsxs)(g.hjN, {
             title: en.intl.string(en.t.iZmTaG),
-            tag: g.FormTitleTags.H1,
+            tag: g.RB0.H1,
             children: [this.renderBaseSettings(), this.renderSummariesSection(), this.renderAFKSection(), this.renderJoinNotificationSection(), this.renderActivityFeedSection(), this.renderNotificationSection(), this.renderDisplaySection()]
         });
     }
@@ -812,7 +808,7 @@ class eC extends r.PureComponent {
                 q.Z.updateGuild({ icon: e });
             }),
             es(this, 'handleOpenImageCroppingModal', (e, t) => {
-                (0, g.openModalLazy)(async () => {
+                (0, g.ZDy)(async () => {
                     let { default: r } = await Promise.all([n.e('70687'), n.e('48017'), n.e('94127')]).then(n.bind(n, 850085));
                     return (n) =>
                         (0, i.jsx)(r, {
@@ -847,7 +843,7 @@ class eC extends r.PureComponent {
                     q.Z.updateGuild({ homeHeader: null });
                     return;
                 }
-                (0, g.openModalLazy)(async () => {
+                (0, g.ZDy)(async () => {
                     let { default: r } = await Promise.all([n.e('70687'), n.e('48017'), n.e('94127')]).then(n.bind(n, 850085));
                     return (n) =>
                         (0, i.jsx)(r, {
@@ -871,7 +867,7 @@ class eC extends r.PureComponent {
                     if ('image/gif' !== r || n.hasFeature(J.oNc.ANIMATED_BANNER)) {
                         if (!n.hasFeature(J.oNc.BANNER)) {
                             (l.object = J.qAy.IMAGE_CROPPING_MODAL),
-                                (0, y.c)({
+                                (0, Z.c)({
                                     guild: n,
                                     analyticsLocations: i,
                                     analyticsLocation: l,
@@ -882,7 +878,7 @@ class eC extends r.PureComponent {
                         }
                     } else {
                         (l.object = J.qAy.GIF_CROPPING_MODAL),
-                            (0, y.c)({
+                            (0, Z.c)({
                                 guild: n,
                                 analyticsLocations: i,
                                 analyticsLocation: l,
@@ -897,7 +893,7 @@ class eC extends r.PureComponent {
             es(this, 'handleShowModalUpsell', (e, t, n, i) => {
                 e.preventDefault(), e.stopPropagation();
                 let { guild: r, analyticsLocations: l } = this.props;
-                (0, v.yw)(J.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+                (0, f.yw)(J.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                     location: {
                         section: t,
                         object: J.qAy.LEARN_MORE
@@ -905,7 +901,7 @@ class eC extends r.PureComponent {
                     guild_id: null == r ? void 0 : r.id,
                     location_stack: l
                 }),
-                    (0, A.Z)({
+                    (0, y.Z)({
                         analyticsLocations: l,
                         analyticsSourceLocation: {
                             section: t,
@@ -945,13 +941,13 @@ class eC extends r.PureComponent {
                 e ? (n.add(J.oNc.ACTIVITY_FEED_ENABLED_BY_USER), n.delete(J.oNc.ACTIVITY_FEED_DISABLED_BY_USER)) : (n.add(J.oNc.ACTIVITY_FEED_DISABLED_BY_USER), n.delete(J.oNc.ACTIVITY_FEED_ENABLED_BY_USER)), q.Z.updateGuild({ features: n });
             }),
             es(this, 'uploadBGUpsellButton', (e) =>
-                (0, i.jsxs)(g.ShinyButton, {
-                    color: g.Button.Colors.GREEN,
+                (0, i.jsxs)(g.gtL, {
+                    color: g.zxk.Colors.GREEN,
                     className: s()(ei.marginTop16),
                     innerClassName: ei.upsellButton,
                     onClick: e,
                     children: [
-                        (0, i.jsx)(z.Z, {
+                        (0, i.jsx)(H.Z, {
                             height: 16,
                             width: 16,
                             className: ei.premiumUpsellBadge
@@ -963,25 +959,25 @@ class eC extends r.PureComponent {
             );
     }
 }
-function ev() {
+function ef() {
     var e;
     let { guild: t, errors: n, submitting: l, subsection: s } = (0, u.cj)([X.Z], () => X.Z.getProps()),
-        a = (0, f.ZP)(),
-        { analyticsLocations: c } = (0, I.ZP)(C.Z.OVERVIEW);
+        a = (0, _.ZP)(),
+        { analyticsLocations: c } = (0, v.ZP)(C.Z.OVERVIEW);
     r.useEffect(() => {
         (0, D.Kw)(L.v6.ANIMATED_GUILD_BANNER_SETTINGS_NEW_PILL);
     }, []);
-    let d = (0, u.e7)([B.Z], () => B.Z.getCategories(null == t ? void 0 : t.id)),
+    let d = (0, u.e7)([U.Z], () => U.Z.getCategories(null == t ? void 0 : t.id)),
         m = r.useMemo(() => (0, N.Z)(d._categories, d), [d]),
-        { canManageGuild: h, isGuildAdmin: g } = (0, u.cj)([G.Z], () => ({
-            canManageGuild: G.Z.can(J.Plq.MANAGE_GUILD, t),
-            isGuildAdmin: G.Z.can(J.Plq.ADMINISTRATOR, t)
+        { canManageGuild: h, isGuildAdmin: g } = (0, u.cj)([B.Z], () => ({
+            canManageGuild: B.Z.can(J.Plq.MANAGE_GUILD, t),
+            isGuildAdmin: B.Z.can(J.Plq.ADMINISTRATOR, t)
         })),
-        x = (0, u.e7)([U.Z], () => U.Z.getMemberCount(null == t ? void 0 : t.id)),
+        x = (0, u.e7)([G.Z], () => G.Z.getMemberCount(null == t ? void 0 : t.id)),
         p = (0, b.E)(t),
-        v = (0, u.e7)([H.default], () => H.default.getCurrentUser());
-    o()(null != v, 'GuildSettingsOverview: currentUser cannot be undefined');
-    let { enableDeadchat: _ } = j.Z.useExperiment(
+        f = (0, u.e7)([z.default], () => z.default.getCurrentUser());
+    o()(null != f, 'GuildSettingsOverview: currentUser cannot be undefined');
+    let { enableDeadchat: j } = E.Z.useExperiment(
         {
             guildId: null !== (e = null == t ? void 0 : t.id) && void 0 !== e ? e : J.lds,
             location: 'guild_settings'
@@ -993,7 +989,7 @@ function ev() {
     );
     return null == t
         ? null
-        : (0, i.jsx)(I.Gt, {
+        : (0, i.jsx)(v.Gt, {
               value: c,
               children: (0, i.jsx)(eC, {
                   channels: m,
@@ -1003,20 +999,20 @@ function ev() {
                   guild: t,
                   errors: n,
                   submitting: l,
-                  currentUser: v,
+                  currentUser: f,
                   guildMemberCount: x,
                   isInventoryFeedEnabled: p,
                   theme: a,
                   analyticsLocations: c,
-                  eligibleForDeadchatPrompt: _
+                  eligibleForDeadchatPrompt: j
               })
           });
 }
-function eI(e, t, r) {
+function ev(e, t, r) {
     let l = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
         s = arguments.length > 4 ? arguments[4] : void 0,
         a = arguments.length > 5 ? arguments[5] : void 0;
-    (0, g.openModalLazy)(async () => {
+    (0, g.ZDy)(async () => {
         let { default: o } = await Promise.all([n.e('70687'), n.e('66719')]).then(n.bind(n, 28130));
         return (n) =>
             (0, i.jsx)(o, {

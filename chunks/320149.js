@@ -1,11 +1,7 @@
-n.d(t, {
-    Z: function () {
-        return T;
-    }
-});
+n.d(t, { Z: () => T });
 var i = n(200651),
-    r = n(192379),
-    l = n(442837),
+    l = n(192379),
+    r = n(442837),
     a = n(481060),
     s = n(541716),
     o = n(665149),
@@ -16,8 +12,8 @@ var i = n(200651),
     m = n(486622),
     p = n(718538),
     g = n(359110),
-    f = n(6025),
-    _ = n(433355),
+    _ = n(6025),
+    f = n(433355),
     E = n(933557),
     I = n(287746),
     C = n(388032),
@@ -27,14 +23,14 @@ function T(e) {
     let { channel: t, baseChannelId: n } = e,
         T = (0, E.ZP)(t),
         S = (0, h.K)(),
-        b = (0, h.V)(),
-        A = (0, l.e7)([d.Z], () => d.Z.isMessageRequest(t.id)),
-        Z = (0, l.e7)([u.Z], () => u.Z.isSpam(t.id)),
-        x = (0, p.V)(t.id, t.getRecipientId()),
-        L = r.useCallback(() => {
-            f.Z.closeChannelSidebar(_.uZ), A && S && (0, g.Kh)(t.id), Z && b && (0, g.Kh)(t.id);
-        }, [t.id, Z, b, A, S]),
-        y = r.useCallback(() => {
+        Z = (0, h.V)(),
+        x = (0, r.e7)([d.Z], () => d.Z.isMessageRequest(t.id)),
+        A = (0, r.e7)([u.Z], () => u.Z.isSpam(t.id)),
+        b = (0, p.V)(t.id, t.getRecipientId()),
+        L = l.useCallback(() => {
+            _.Z.closeChannelSidebar(f.uZ), x && S && (0, g.Kh)(t.id), A && Z && (0, g.Kh)(t.id);
+        }, [t.id, A, Z, x, S]),
+        y = l.useCallback(() => {
             (0, a.showToast)((0, a.createToast)(C.intl.string(C.t.pIQ3h4), a.ToastType.FAILURE));
         }, []),
         { markAsNotSpam: P } = (0, m.m)({
@@ -46,9 +42,9 @@ function T(e) {
         (0, i.jsx)(
             o.ZP.Icon,
             {
-                icon: a.XSmallIcon,
+                icon: a.Dio,
                 tooltip: C.intl.string(C.t.cpT0Cg),
-                onClick: () => f.Z.closeChannelSidebar(n)
+                onClick: () => _.Z.closeChannelSidebar(n)
             },
             'close'
         )
@@ -64,7 +60,7 @@ function T(e) {
                     inSidebar: !0
                 })
             }),
-            Z &&
+            A &&
                 (0, i.jsxs)('div', {
                     className: N.hamBanner,
                     children: [
@@ -73,10 +69,10 @@ function T(e) {
                             variant: 'text-sm/normal',
                             children: C.intl.string(C.t.XVOKgo)
                         }),
-                        (0, i.jsx)(a.Button, {
+                        (0, i.jsx)(a.zxk, {
                             className: N.hamBannerButton,
-                            size: a.ButtonSizes.SMALL,
-                            onClick: () => P(t, x),
+                            size: a.PhG.SMALL,
+                            onClick: () => P(t, b),
                             children: C.intl.string(C.t.koqL3d)
                         })
                     ]

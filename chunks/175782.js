@@ -1,6 +1,7 @@
-e.exports = {
-    formTitle: 'formTitle_e5aa30',
-    checkbox: 'checkbox_e5aa30',
-    checkboxLabel: 'checkboxLabel_e5aa30',
-    finePrint: 'finePrint_e5aa30'
+var i = {
+    formTitle: 'formTitle__553e7',
+    checkbox: 'checkbox__553e7',
+    checkboxLabel: 'checkboxLabel__553e7',
+    finePrint: 'finePrint__553e7'
 };
+e.exports = i;

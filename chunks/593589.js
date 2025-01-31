@@ -1,53 +1,49 @@
-t.d(e, {
-    Z: function () {
-        return Z;
-    }
-});
+t.d(n, { Z: () => b });
 var i = t(200651),
-    u = t(192379),
-    l = t(481060),
-    o = t(372900),
+    o = t(192379),
+    a = t(481060),
+    l = t(372900),
     r = t(238246),
     c = t(788983),
-    a = t(207035),
-    d = t(823748),
-    s = t(981631),
-    p = t(157523);
-function h(n) {
-    let { windowKey: e, channel: t } = n;
+    d = t(207035),
+    _ = t(823748),
+    u = t(981631),
+    s = t(157523);
+function p(e) {
+    let { windowKey: n, channel: t } = e;
     return (0, i.jsx)(r.Z, {
         withTitleBar: !0,
-        windowKey: e,
+        windowKey: n,
         title: t.name,
         channelId: t.id,
-        contentClassName: p.popoutContent,
-        children: (0, i.jsx)(o.Z.Provider, {
+        contentClassName: s.popoutContent,
+        children: (0, i.jsx)(l.Z.Provider, {
             value: t.guild_id,
-            children: (0, i.jsx)(d.Z, { providedChannel: t })
+            children: (0, i.jsx)(_.Z, { providedChannel: t })
         })
     });
 }
-function Z(n, e) {
-    let t = (0, a.P)(e),
-        o = u.useCallback(() => {
+function b(e, n) {
+    let t = (0, d.P)(n),
+        l = o.useCallback(() => {
             c.bA(
-                ''.concat(s.KJ3.CHANNEL_POPOUT, '-').concat(n.id),
-                (e) =>
-                    (0, i.jsx)(h, {
-                        windowKey: e,
-                        channel: n
+                ''.concat(u.KJ3.CHANNEL_POPOUT, '-').concat(e.id),
+                (n) =>
+                    (0, i.jsx)(p, {
+                        windowKey: n,
+                        channel: e
                     }),
                 {
                     defaultWidth: 854,
                     defaultHeight: 480
                 }
             );
-        }, [n]);
+        }, [e]);
     return t
-        ? (0, i.jsx)(l.MenuItem, {
+        ? (0, i.jsx)(a.sNh, {
               id: 'channel-pop-out',
               label: 'Open in Popout',
-              action: () => o()
+              action: () => l()
           })
         : null;
 }

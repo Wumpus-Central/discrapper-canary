@@ -1,6 +1,7 @@
 e.exports = {
-    container: 'container_f47946',
-    imageContainer: 'imageContainer_f47946',
-    image: 'image_f47946',
-    header: 'header_f47946'
+    container: 'container__2abba',
+    imageContainer: 'imageContainer__2abba',
+    image: 'image__2abba',
+    wiggling: 'wiggling__2abba',
+    header: 'header__2abba'
 };

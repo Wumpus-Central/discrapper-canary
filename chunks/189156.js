@@ -1,58 +1,68 @@
-r.d(n, {
-    Z: function () {
-        return d;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(481060),
-    o = r(502762),
-    s = r(63063),
-    l = r(388032),
-    u = r(483434);
-let c = {
+n.d(t, { Z: () => p });
+var i = n(200651),
+    r = n(192379),
+    a = n(481060),
+    s = n(833062),
+    o = n(502762),
+    l = n(63063),
+    u = n(81866),
+    c = n(981631),
+    d = n(388032),
+    f = n(483434);
+let _ = {
     profile: {
         Wrapper: o.Z.Overlay,
-        className: u.profile,
+        className: f.profile,
         headerVariant: 'heading-sm/semibold',
         bodyVariant: 'text-xs/medium'
     },
     profile_modal: {
         Wrapper: o.Z.Overlay,
-        className: u.profile,
+        className: f.profile,
         headerVariant: 'text-xs/semibold',
         bodyVariant: 'text-sm/normal'
     },
     channel_header: {
         Wrapper: 'div',
-        className: u.channelHeader,
+        className: f.channelHeader,
         headerVariant: 'text-md/semibold',
         bodyVariant: 'text-md/normal'
     }
 };
-function d(e) {
-    let { look: n } = e,
-        { Wrapper: r, className: o, headerVariant: d, bodyVariant: f } = c[n];
-    return (0, i.jsx)(r, {
-        className: o,
+function p(e) {
+    let { look: t, userId: n } = e,
+        { Wrapper: o, className: p, headerVariant: h, bodyVariant: m } = _[t],
+        g = (0, u.Z)(n),
+        E = r.useMemo(
+            () =>
+                null != g
+                    ? d.intl.format(d.t.rSUACQ, {
+                          helpdeskArticle: l.Z.getArticleURL(''),
+                          applicationName: () => (0, i.jsx)(s.Z, { application: g }, g.id)
+                      })
+                    : d.intl.format(d.t['q+N8Ly'], { helpdeskArticle: l.Z.getArticleURL(c.BhN.SLAYER_PROVISIONAL_ACCOUNTS) }),
+            [g]
+        );
+    return (0, i.jsx)(o, {
+        className: p,
         children: (0, i.jsxs)('div', {
-            className: u.layoutContainer,
+            className: f.layoutContainer,
             children: [
-                (0, i.jsx)(a.UserPlatformIcon, {
+                (0, i.jsx)(a.KED, {
                     size: 'md',
-                    className: u.icon
+                    className: f.icon
                 }),
                 (0, i.jsxs)('div', {
                     children: [
-                        (0, i.jsx)(a.Heading, {
-                            variant: d,
+                        (0, i.jsx)(a.X6q, {
+                            variant: h,
                             color: 'text-normal',
-                            children: l.intl.string(l.t.Iyka0d)
+                            children: d.intl.string(d.t.Iyka0d)
                         }),
                         (0, i.jsx)(a.Text, {
-                            variant: f,
+                            variant: m,
                             color: 'text-normal',
-                            children: l.intl.format(l.t['q+N8Ly'], { helpdeskArticle: s.Z.getArticleURL('') })
+                            children: E
                         })
                     ]
                 })

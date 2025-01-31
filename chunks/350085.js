@@ -1,11 +1,7 @@
-n.d(t, {
-    M: function () {
-        return u;
-    }
-});
+n.d(t, { M: () => u });
 var i = n(392711),
-    r = n.n(i),
-    l = n(283595),
+    l = n.n(i),
+    r = n(283595),
     a = n(808506),
     s = n(237997),
     o = n(996106),
@@ -26,14 +22,14 @@ let u = {
                     d = !0,
                     u = n.application.id;
                 if (null != u) {
-                    let e = l.Z.getActiveLibraryApplication(u);
+                    let e = r.Z.getActiveLibraryApplication(u);
                     null != e && (c = c && e.isOverlayEnabled()), (d = s.Z.isLocked(t));
                 }
                 let h = {
                     enabled: c,
                     locked: d
                 };
-                return !r().isEqual(h, i) && o(h), h;
+                return l().isEqual(h, i) || o(h), h;
             };
         }
     }

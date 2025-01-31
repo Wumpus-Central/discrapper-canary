@@ -1,18 +1,19 @@
-var i = r(200651),
-    a = r(192379),
-    o = r(120356),
-    s = r.n(o),
-    l = r(481060),
-    u = r(436774),
-    c = r(452461);
-let d = (e, n) =>
-    (0, i.jsx)('div', {
-        ref: n,
-        className: s()(c.nitroRewardTileAssetContainer, e.className),
-        children: (0, i.jsx)(l.NitroWheelIcon, {
-            size: 'lg',
-            className: c.nitroRewardTileAsset,
-            color: u.JX.PREMIUM_GUILD_BADGE_V2_BACKGROUND
-        })
-    });
-n.Z = a.forwardRef(d);
+n.d(t, { Z: () => d });
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(481060),
+    l = n(436774),
+    u = n(452461);
+let c = (e, t) =>
+        (0, i.jsx)('div', {
+            ref: t,
+            className: s()(u.nitroRewardTileAssetContainer, e.className),
+            children: (0, i.jsx)(o.SrA, {
+                size: 'lg',
+                className: u.nitroRewardTileAsset,
+                color: l.JX.PREMIUM_GUILD_BADGE_V2_BACKGROUND
+            })
+        }),
+    d = r.forwardRef(c);

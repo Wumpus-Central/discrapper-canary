@@ -40,18 +40,16 @@ var c =
                 o
             );
         }
-        (n = t), (o = e), (n.prototype = Object.create(o.prototype)), (n.prototype.constructor = n), (n.__proto__ = o);
-        var n,
-            o,
-            i = t.prototype;
+        (t.prototype = Object.create(e.prototype)), (t.prototype.constructor = t), (t.__proto__ = e);
+        var n = t.prototype;
         return (
-            (i.getChildContext = function () {
+            (n.getChildContext = function () {
                 return { transitionGroup: { isMounting: !this.appeared } };
             }),
-            (i.componentDidMount = function () {
+            (n.componentDidMount = function () {
                 (this.appeared = !0), (this.mounted = !0);
             }),
-            (i.componentWillUnmount = function () {
+            (n.componentWillUnmount = function () {
                 this.mounted = !1;
             }),
             (t.getDerivedStateFromProps = function (e, t) {
@@ -62,9 +60,9 @@ var c =
                     firstRender: !1
                 };
             }),
-            (i.handleExited = function (e, t) {
+            (n.handleExited = function (e, t) {
                 var n = (0, a.getChildMapping)(this.props.children);
-                !(e.key in n) &&
+                e.key in n ||
                     (e.props.onExited && e.props.onExited(t),
                     this.mounted &&
                         this.setState(function (t) {
@@ -72,7 +70,7 @@ var c =
                             return delete n[e.key], { children: n };
                         }));
             }),
-            (i.render = function () {
+            (n.render = function () {
                 var e = this.props,
                     t = e.component,
                     n = e.childFactory,
@@ -82,7 +80,7 @@ var c =
                             o,
                             r = {},
                             i = Object.keys(e);
-                        for (o = 0; o < i.length; o++) (n = i[o]), !(t.indexOf(n) >= 0) && (r[n] = e[n]);
+                        for (o = 0; o < i.length; o++) t.indexOf((n = i[o])) >= 0 || (r[n] = e[n]);
                         return r;
                     })(e, ['component', 'childFactory']),
                     i = c(this.state.children).map(n);

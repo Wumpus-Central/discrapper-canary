@@ -1,19 +1,15 @@
-n.d(t, {
-    M: function () {
-        return r;
-    }
-});
-var i = n(43236),
-    l = n(103714),
-    s = n(940328),
-    a = n(888395),
-    o = n(389028);
-let r = {
-    CREATE: s,
-    HUB_SCHOOL_CLUB: n(142390),
+i.d(t, { M: () => o });
+var n = i(43236),
+    s = i(103714),
+    l = i(940328),
+    a = i(888395),
+    r = i(389028);
+let o = {
+    CREATE: l,
+    HUB_SCHOOL_CLUB: i(142390),
     HUB_STUDY: a,
-    HUB_CLASS: n(425506),
-    HUB_SOCIAL: o,
-    HUB_MAJOR: l,
-    HUB_DORM: i
+    HUB_CLASS: i(425506),
+    HUB_SOCIAL: r,
+    HUB_MAJOR: s,
+    HUB_DORM: n
 };

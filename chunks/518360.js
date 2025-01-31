@@ -1,1 +1,1 @@
-e.exports = { newChannel: 'newChannel_ecb303' };
+e.exports = { newChannel: 'newChannel__599fa' };

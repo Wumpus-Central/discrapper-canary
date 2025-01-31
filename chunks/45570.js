@@ -1,17 +1,13 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
-var r = n(200651);
+n.d(t, { Z: () => s });
+var i = n(200651);
 n(192379);
-var i = n(481060),
+var r = n(481060),
     l = n(547972),
     a = n(326528);
-function u() {
+function s() {
     let e = (0, a.b)().map((e) =>
-        (0, r.jsx)(
-            i.MenuItem,
+        (0, i.jsx)(
+            r.sNh,
             {
                 id: e.id,
                 label: e.title,
@@ -20,5 +16,5 @@ function u() {
             e.id
         )
     );
-    return (0, r.jsx)(r.Fragment, { children: e });
+    return (0, i.jsx)(i.Fragment, { children: e });
 }

@@ -1,7 +1,8 @@
-e.exports = {
-    messagePreviewContainer: 'messagePreviewContainer_b06e1c',
-    container: 'container_b06e1c',
-    header: 'header_b06e1c',
-    attachmentIcon: 'attachmentIcon_b06e1c',
-    contentContainer: 'contentContainer_b06e1c'
+var i = {
+    messagePreviewContainer: 'messagePreviewContainer_f96002',
+    container: 'container_f96002',
+    header: 'header_f96002',
+    attachmentIcon: 'attachmentIcon_f96002',
+    contentContainer: 'contentContainer_f96002'
 };
+e.exports = i;

@@ -1,15 +1,11 @@
-r.d(n, {
-    K: function () {
-        return c;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(331595),
-    o = r(249849);
+n.d(t, { K: () => u });
+var i = n(200651);
+n(192379);
+var r = n(331595),
+    a = n(249849);
 let s = ['#ff1b90', '#ff7fc0', '#f0f0f0'],
-    l = [0.2, 0.52, 1],
-    u = [
+    o = [0.2, 0.52, 1],
+    l = [
         {
             base: 3,
             tint: 1
@@ -23,18 +19,18 @@ let s = ['#ff1b90', '#ff7fc0', '#f0f0f0'],
             tint: 1
         }
     ],
-    c = (e) => {
-        let { width: n = 24, height: r = 24, primaryTintColor: c, ...d } = e,
-            { primaryColorsTransformed: f } = (0, o.s)({
+    u = (e) => {
+        let { width: t = 24, height: n = 24, primaryTintColor: u, ...c } = e,
+            { primaryColorsTransformed: d } = (0, a.s)({
                 primaryBaseColors: s,
-                primaryTintColor: c,
-                primaryTintLuminances: l,
-                primaryLuminanceWeights: u
+                primaryTintColor: u,
+                primaryTintLuminances: o,
+                primaryLuminanceWeights: l
             });
         return (0, i.jsxs)('svg', {
-            ...(0, a.Z)(d),
-            width: n,
-            height: r,
+            ...(0, r.Z)(c),
+            width: t,
+            height: n,
             viewBox: '0 0 16 16',
             fill: 'none',
             xmlns: 'http://www.w3.org/2000/svg',
@@ -45,11 +41,11 @@ let s = ['#ff1b90', '#ff7fc0', '#f0f0f0'],
                 }),
                 (0, i.jsx)('path', {
                     d: 'M15 4h-1V3h-1V2H9v1H7V2H3v1H2v1H1v5h1v2h1v1h2v1h2v1h2v-1h2v-1h2v-1h1V9h1V4Z',
-                    fill: f[1]
+                    fill: d[1]
                 }),
                 (0, i.jsx)('path', {
                     d: 'M15 4h-1v5h1V4ZM14 9h-1v2h1V9ZM3 9H2v2h1V9ZM13 11h-2v1h2v-1ZM11 12H9v1h2v-1ZM9 13H7v1h2v-1ZM7 12H5v1h2v-1ZM5 11H3v1h2v-1Z',
-                    fill: f[0]
+                    fill: d[0]
                 }),
                 (0, i.jsx)('path', {
                     d: 'M3 1v1h4V1H3ZM2 2v1h1V2H2ZM1 3v1h1V3H1ZM0 4v5h1V4H0ZM1 9v2h1V9H1ZM2 11v1h1v-1H2ZM3 12v1h2v-1H3ZM5 13v1h2v-1H5Z',
@@ -57,7 +53,7 @@ let s = ['#ff1b90', '#ff7fc0', '#f0f0f0'],
                 }),
                 (0, i.jsx)('path', {
                     d: 'M3 2v1h4V2H3ZM9 2v1h4V2H9ZM7 3v1h2V3H7Z',
-                    fill: f[2]
+                    fill: d[2]
                 }),
                 (0, i.jsx)('path', {
                     opacity: '.6',
@@ -66,7 +62,7 @@ let s = ['#ff1b90', '#ff7fc0', '#f0f0f0'],
                 }),
                 (0, i.jsx)('path', {
                     d: 'M13 3v1h1V3h-1ZM2 3v1h1V3H2ZM3 4v1h1V4H3ZM1 4v2h1V4H1Z',
-                    fill: f[2]
+                    fill: d[2]
                 })
             ]
         });

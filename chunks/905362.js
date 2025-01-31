@@ -1,64 +1,41 @@
-r.d(n, {
-    CK: function () {
-        return f;
-    },
-    SJ: function () {
-        return c;
-    },
-    qF: function () {
-        return d;
-    }
+n.d(t, {
+    CK: () => u,
+    SJ: () => l
 });
-var i = r(200651);
-r(192379);
-var a = r(704215),
-    o = r(481060),
-    s = r(645041),
-    l = r(693546),
-    u = r(970606);
-function c(e) {
-    (0, o.openModalLazy)(async () => {
-        let { default: n } = await r.e('95883').then(r.bind(r, 83521));
-        return (r) => {
-            let o = (n) => {
-                (0, s.Qd)(a.C.ADOPT_CLAN_IDENTITY_NOTICE, e, !0, n), r.onClose();
+var i = n(200651);
+n(192379);
+var r = n(704215),
+    a = n(481060),
+    s = n(645041),
+    o = n(693546);
+function l(e) {
+    (0, a.ZDy)(async () => {
+        let { default: t } = await n.e('95883').then(n.bind(n, 83521));
+        return (n) => {
+            let a = (t) => {
+                (0, s.Qd)(r.C.ADOPT_CLAN_IDENTITY_NOTICE, e, !0, t), n.onClose();
             };
-            return (0, i.jsx)(n, {
-                ...r,
-                onClose: o,
+            return (0, i.jsx)(t, {
+                ...n,
+                onClose: a,
                 guildId: e
             });
         };
     });
 }
-function d(e, n, a, s, l) {
-    (0, u.Vr)({
-        guildId: e,
-        ...a
-    }),
-        (0, o.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([r.e('53967'), r.e('99916'), r.e('80026'), r.e('44126')]).then(r.bind(r, 723795));
-            return (r) =>
-                (0, i.jsx)(e, {
-                    ...r,
-                    clan: n,
-                    prioritizedGameIds: s,
-                    position: l
-                });
-        });
-}
-function f(e, n) {
-    (0, o.openModalLazy)(async () => {
-        let { default: a } = await Promise.all([r.e('82158'), r.e('54907')]).then(r.bind(r, 717057));
-        return (r) => {
-            let o = () => {
-                null != n && l.Z.ackUserGuildJoinRequest(e, n), r.onClose();
+function u(e, t) {
+    (0, a.ZDy)(async () => {
+        let { default: r } = await Promise.all([n.e('82158'), n.e('54907')]).then(n.bind(n, 717057));
+        return (n) => {
+            let a = () => {
+                null != t && o.Z.ackUserGuildJoinRequest(e, t), n.onClose();
             };
-            return (0, i.jsx)(a, {
-                ...r,
-                onAccept: o,
+            return (0, i.jsx)(r, {
+                ...n,
+                onAccept: a,
                 guildId: e
             });
         };
     });
 }
+n(970606);

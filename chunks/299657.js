@@ -1,100 +1,99 @@
-n(47120);
+n.d(t, { Z: () => w }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    s = n(120356),
-    a = n.n(s),
-    l = n(442837),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(442837),
     o = n(481060),
     c = n(570140),
     d = n(355467),
     u = n(179360),
     m = n(821849),
-    g = n(232567),
-    h = n(497321),
-    p = n(100527),
+    h = n(232567),
+    g = n(497321),
+    _ = n(100527),
     x = n(906732),
-    f = n(211242),
+    p = n(211242),
     E = n(15640),
-    _ = n(89057),
-    C = n(433811),
+    C = n(89057),
+    f = n(433811),
     T = n(214852),
-    S = n(621853),
-    b = n(246946),
-    I = n(594174),
-    N = n(78839),
+    N = n(621853),
+    I = n(246946),
+    S = n(594174),
+    b = n(78839),
     v = n(626135),
-    A = n(111361),
-    j = n(357355),
+    j = n(111361),
+    A = n(357355),
     O = n(937579),
     R = n(91802),
     P = n(104494),
     D = n(639119),
     y = n(943180),
-    B = n(2359),
-    Z = n(132547),
-    L = n(474936),
-    M = n(981631),
-    k = n(579521);
-t.Z = function (e) {
-    let { entrypoint: t = L.EZ.UserSettings } = e;
-    (0, T.z)(C.X);
-    let n = (0, f.Q)(),
-        { sourceAnalyticsLocations: s, analyticsLocations: w } = (0, x.ZP)(p.Z.PREMIUM_MARKETING),
-        F = (0, l.e7)([N.ZP], () => N.ZP.hasFetchedSubscriptions()),
-        U = (0, l.e7)([I.default], () => I.default.getCurrentUser()),
-        V = null == U ? void 0 : U.id,
-        G = (0, D.N)(),
+    Z = n(2359),
+    L = n(132547),
+    k = n(474936),
+    B = n(981631),
+    M = n(579521);
+let w = function (e) {
+    let { entrypoint: t = k.EZ.UserSettings } = e;
+    (0, T.z)(f.X);
+    let n = (0, p.Q)(),
+        { sourceAnalyticsLocations: r, analyticsLocations: w } = (0, x.ZP)(_.Z.PREMIUM_MARKETING),
+        V = (0, a.e7)([b.ZP], () => b.ZP.hasFetchedSubscriptions()),
+        U = (0, a.e7)([S.default], () => S.default.getCurrentUser()),
+        G = null == U ? void 0 : U.id,
+        F = (0, D.N)(),
         H = (0, P.Ng)(),
-        Y = (0, E.V)(),
-        [W, z] = r.useState(!0),
-        K = r.useRef(0),
-        q = (0, A.M5)(U, L.p9.TIER_2),
-        X = (0, R.n)(),
-        Q = null == X ? void 0 : X.countryCode,
-        { enabled: J } = (0, y.D)(),
-        $ = (0, l.e7)([S.Z], () => (null != U ? S.Z.getUserProfile(U.id) : null)),
-        ee = (0, l.e7)([j.Z], () => j.Z.hasFetched);
-    if (
-        (r.useEffect(() => {
-            !ee && d.MH();
-        }, [ee]),
-        r.useEffect(() => {
-            c.Z.wait(async () => {
-                let e = Date.now();
-                await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, m.Y2)(Q, null, M.JjL.DISCOVERY), null != V && J && q && (0, g.In)(V)]), (K.current = Date.now() - e), z(!1);
+        z = (0, E.V)(),
+        [Y, W] = s.useState(!0),
+        K = s.useRef(0),
+        X = (0, j.M5)(U, k.p9.TIER_2),
+        q = (0, R.n)(),
+        J = null == q ? void 0 : q.countryCode,
+        { enabled: Q } = (0, y.D)(),
+        $ = (0, a.e7)([N.Z], () => (null != U ? N.Z.getUserProfile(U.id) : null)),
+        ee = (0, a.e7)([A.Z], () => A.Z.hasFetched);
+    return (s.useEffect(() => {
+        ee || d.MH();
+    }, [ee]),
+    s.useEffect(() => {
+        c.Z.wait(async () => {
+            let e = Date.now();
+            await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, m.Y2)(J, null, B.JjL.DISCOVERY), null != G && Q && X && (0, h.In)(G)]), (K.current = Date.now() - e), W(!1);
+        });
+    }, [J, G, Q, X]),
+    s.useEffect(() => {
+        n && (null != F || null != H) && (0, O.a)(F, H);
+    }, [n, F, H]),
+    s.useEffect(() => {
+        Y ||
+            v.default.track(B.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {
+                location_stack: r,
+                load_duration_ms: K.current
             });
-        }, [Q, V, J, q]),
-        r.useEffect(() => {
-            n && (null != G || null != H) && (0, O.a)(G, H);
-        }, [n, G, H]),
-        r.useEffect(() => {
-            !W &&
-                v.default.track(M.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {
-                    location_stack: s,
-                    load_duration_ms: K.current
+    }, [r, Y]),
+    (0, a.e7)([I.Z], () => I.Z.enabled))
+        ? (0, i.jsx)(g.Z, {})
+        : n
+          ? (0, i.jsx)(C.c8, {})
+          : t === k.EZ.ApplicationStoreHome && X
+            ? Q && null == $
+                ? (0, i.jsx)('div', {
+                      className: l()(M.container, M.loading),
+                      children: (0, i.jsx)(o.$jN, {})
+                  })
+                : (0, i.jsx)(x.Gt, {
+                      value: w,
+                      children: (0, i.jsx)(L.Z, {})
+                  })
+            : V && z && !Y
+              ? (0, i.jsx)(x.Gt, {
+                    value: w,
+                    children: (0, i.jsx)(Z.Z, { entrypoint: t })
+                })
+              : (0, i.jsx)('div', {
+                    className: l()(M.container, M.loading),
+                    children: (0, i.jsx)(o.$jN, {})
                 });
-        }, [s, W]),
-        (0, l.e7)([b.Z], () => b.Z.enabled))
-    )
-        return (0, i.jsx)(h.Z, {});
-    if (n) return (0, i.jsx)(_.c8, {});
-    if (t === L.EZ.ApplicationStoreHome && q)
-        return J && null == $
-            ? (0, i.jsx)('div', {
-                  className: a()(k.container, k.loading),
-                  children: (0, i.jsx)(o.Spinner, {})
-              })
-            : (0, i.jsx)(x.Gt, {
-                  value: w,
-                  children: (0, i.jsx)(Z.Z, {})
-              });
-    return F && Y && !W
-        ? (0, i.jsx)(x.Gt, {
-              value: w,
-              children: (0, i.jsx)(B.Z, { entrypoint: t })
-          })
-        : (0, i.jsx)('div', {
-              className: a()(k.container, k.loading),
-              children: (0, i.jsx)(o.Spinner, {})
-          });
 };

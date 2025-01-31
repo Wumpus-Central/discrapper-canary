@@ -1,72 +1,67 @@
-e.r(n),
-    e.d(n, {
-        default: function () {
-            return c;
-        }
-    });
-var a = e(200651);
-e(192379);
-var i = e(481060),
-    r = e(701488),
-    o = e(388032),
-    s = e(85957),
-    l = e(221886);
-function c(t) {
-    let { application: n, onCancel: e, onClose: c, onConfirm: d, ...u } = t;
-    return (0, a.jsxs)(i.ModalRoot, {
+t.d(n, { default: () => c });
+var a = t(200651);
+t(192379);
+var i = t(481060),
+    r = t(701488),
+    s = t(388032),
+    o = t(85957),
+    l = t(221886);
+function c(e) {
+    let { application: n, onCancel: t, onClose: c, onConfirm: d, ...x } = e;
+    return (0, a.jsxs)(i.Y0X, {
         role: 'alertdialog',
-        transitionState: u.transitionState,
-        className: s.modalRoot,
+        transitionState: x.transitionState,
+        className: o.modalRoot,
         children: [
             (0, a.jsx)('div', {
-                className: s.birbContainer,
+                className: o.birbContainer,
                 children: (0, a.jsx)('img', {
                     src: l,
-                    className: s.announcementBirb,
-                    alt: o.intl.string(o.t.ElsOBA)
+                    className: o.announcementBirb,
+                    alt: s.intl.string(s.t.ElsOBA)
                 })
             }),
-            (0, a.jsxs)(i.ModalContent, {
-                className: s.modalContent,
+            (0, a.jsxs)(i.hzk, {
+                className: o.modalContent,
                 children: [
                     (0, a.jsx)(i.Text, {
                         variant: 'eyebrow',
-                        className: s.eyebrow,
-                        children: o.intl.string(o.t['06YebG'])
+                        className: o.eyebrow,
+                        children: s.intl.string(s.t['06YebG'])
                     }),
-                    (0, a.jsx)(i.Heading, {
+                    (0, a.jsx)(i.X6q, {
                         variant: 'heading-lg/bold',
-                        className: s.header,
-                        children: o.intl.format(o.t['Z/eMDQ'], { activityName: n.name })
+                        className: o.header,
+                        children: s.intl.format(s.t['Z/eMDQ'], { activityName: n.name })
                     }),
                     (0, a.jsx)(i.Text, {
                         variant: 'text-sm/normal',
-                        className: s.subHeader,
-                        children: o.intl.string(o.t.z81WwM)
+                        className: o.subHeader,
+                        children: s.intl.string(s.t.z81WwM)
                     }),
                     (0, a.jsxs)('div', {
-                        className: s.buttonContainer,
+                        className: o.buttonContainer,
                         children: [
-                            (0, a.jsx)(i.Button, {
-                                size: i.Button.Sizes.LARGE,
+                            (0, a.jsx)(i.zxk, {
+                                size: i.zxk.Sizes.LARGE,
                                 onClick: () => {
                                     d(), c();
                                 },
-                                children: o.intl.string(o.t['3PatS0'])
+                                children: s.intl.string(s.t['3PatS0'])
                             }),
-                            (0, a.jsx)(i.Button, {
-                                size: i.Button.Sizes.LARGE,
+                            (0, a.jsx)(i.zxk, {
+                                size: i.zxk.Sizes.LARGE,
                                 onClick: () => {
-                                    e(), c();
+                                    t(), c();
                                 },
-                                color: i.Button.Colors.PRIMARY,
-                                children: o.intl.string(o.t['ETE/oK'])
+                                color: i.zxk.Colors.PRIMARY,
+                                children: s.intl.string(s.t['ETE/oK'])
                             }),
                             (0, a.jsx)(i.Text, {
                                 variant: 'text-xs/normal',
-                                children: (0, a.jsx)(i.Anchor, {
+                                children: (0, a.jsx)(i.eee, {
                                     href: r.OF,
-                                    children: o.intl.string(o.t.E0gf5u)
+                                    children: s.intl.string(s.t.E0gf5u)
                                 })
                             })
                         ]

@@ -1,4 +1,5 @@
-e.exports = {
-    tile: 'tile_dc5fc4',
-    noBorder: 'noBorder_dc5fc4'
+var i = {
+    tile: 'tile__90dc5',
+    noBorder: 'noBorder__90dc5'
 };
+e.exports = i;

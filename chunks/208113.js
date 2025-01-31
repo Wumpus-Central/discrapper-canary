@@ -1,36 +1,31 @@
-n.d(t, {
-    Z: function () {
-        return h;
-    }
-}),
-    n(653041);
+n.d(t, { Z: () => g }), n(653041);
 var i = n(200651);
 n(192379);
-var r = n(442837),
-    s = n(481060),
-    a = n(846027),
-    l = n(921801),
+var s = n(442837),
+    r = n(481060),
+    l = n(846027),
+    a = n(921801),
     o = n(131951),
     c = n(680924),
     d = n(726985),
     u = n(65154),
     m = n(388032),
-    g = n(232186);
-function h(e) {
+    h = n(232186);
+function g(e) {
     let { refreshStyles: t = !1 } = e,
         {
             audioSubsystem: n,
-            legacyAudioSubsystemSupported: h,
-            experimentalAudioSubsystemSupported: p,
+            legacyAudioSubsystemSupported: g,
+            experimentalAudioSubsystemSupported: _,
             automaticAudioSubsystemSupported: x
-        } = (0, r.cj)([o.Z], () => ({
+        } = (0, s.cj)([o.Z], () => ({
             audioSubsystem: o.Z.getAudioSubsystem(),
             legacyAudioSubsystemSupported: o.Z.supports(u.AN.LEGACY_AUDIO_SUBSYSTEM),
             experimentalAudioSubsystemSupported: o.Z.supports(u.AN.EXPERIMENTAL_AUDIO_SUBSYSTEM),
             automaticAudioSubsystemSupported: o.Z.supports(u.AN.AUTOMATIC_AUDIO_SUBSYSTEM)
         })),
-        f = (0, i.jsx)(s.SingleSelect, {
-            className: g.marginBottom20,
+        p = (0, i.jsx)(r.q4e, {
+            className: h.marginBottom20,
             value: n,
             options: (function (e, t, n) {
                 let i = [
@@ -57,22 +52,22 @@ function h(e) {
                         }),
                     i
                 );
-            })(h, p, x),
+            })(g, _, x),
             onChange: (e) => {
-                (0, c.Z)(m.intl.string(m.t.uY7AcX), m.intl.string(m.t.gBqik5), () => a.Z.setAudioSubsystem(e));
+                (0, c.Z)(m.intl.string(m.t.uY7AcX), m.intl.string(m.t.gBqik5), () => l.Z.setAudioSubsystem(e));
             }
         });
-    return (0, i.jsx)(l.F, {
+    return (0, i.jsx)(a.F, {
         setting: d.s6.VOICE_AND_VIDEO_ADVANCED_SUBSYSTEM,
         children: t
-            ? (0, i.jsx)(s.FormItem, {
+            ? (0, i.jsx)(r.xJW, {
                   title: m.intl.string(m.t.wVBHr6),
-                  children: f
+                  children: p
               })
-            : (0, i.jsxs)(s.FormSection, {
-                  className: g.marginBottom20,
+            : (0, i.jsxs)(r.hjN, {
+                  className: h.marginBottom20,
                   title: m.intl.string(m.t.wVBHr6),
-                  children: [f, (0, i.jsx)(s.FormDivider, { className: g.marginBottom20 })]
+                  children: [p, (0, i.jsx)(r.$i$, { className: h.marginBottom20 })]
               })
     });
 }

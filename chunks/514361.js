@@ -1,152 +1,151 @@
-let i, a;
-var o,
-    s = r(47120);
-var l = r(442837),
-    u = r(704215),
-    c = r(570140),
-    d = r(605236),
-    f = r(238514),
-    p = r(781391),
-    h = r(210887),
-    _ = r(740492),
-    m = r(695346),
-    g = r(581883),
-    E = r(131704),
-    v = r(592125),
-    y = r(594174),
-    b = r(74538),
-    I = r(51144),
-    T = r(47760),
-    S = r(469115),
-    A = r(874893);
-function C(e, n, r) {
+let i, r;
+n.d(t, { Z: () => F }), n(47120);
+var a,
+    s = n(442837),
+    o = n(704215),
+    l = n(570140),
+    u = n(605236),
+    c = n(238514),
+    d = n(781391),
+    f = n(210887),
+    _ = n(740492),
+    p = n(695346),
+    h = n(581883),
+    m = n(131704),
+    g = n(592125),
+    E = n(594174),
+    v = n(74538),
+    y = n(51144),
+    I = n(47760),
+    b = n(469115),
+    T = n(874893);
+function S(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let N = !1,
-    R = !0,
-    O = !1,
-    D = (e) => {
-        let { presetId: n } = e;
-        if (null == n) {
+let A = !1,
+    N = !0,
+    C = !1,
+    R = (e) => {
+        let { presetId: t } = e;
+        if (null == t) {
             i = void 0;
             return;
         }
-        i = S.qt[n];
+        i = b.qt[t];
     },
-    L = (e) => {
-        let { mobileThemesIndex: n } = e;
-        if (null == n) {
-            a = void 0;
+    O = (e) => {
+        let { mobileThemesIndex: t } = e;
+        if (null == t) {
+            r = void 0;
             return;
         }
-        a = n;
+        r = t;
+    },
+    D = (e) => {
+        M();
     },
     x = (e) => {
-        U();
+        k();
     },
-    w = (e) => {
-        B();
-    },
-    P = (e) => {
+    L = (e) => {
         i = void 0;
     },
-    M = (e) => {
-        let { channelId: n, guildId: r } = e,
-            i = y.default.getCurrentUser();
-        if (null == n || null == r || (0, d.un)(u.z.CLIENT_THEMES_COACHMARK) || !(0, I.Fc)(i)) return;
-        let a = v.Z.getChannel(n);
-        null != a && (0, E.zi)(a.type) && ((O = !0), U());
+    P = (e) => {
+        let { channelId: t, guildId: n } = e,
+            i = E.default.getCurrentUser();
+        if (null == t || null == n || (0, u.un)(o.z.CLIENT_THEMES_COACHMARK) || !(0, y.Fc)(i)) return;
+        let r = g.Z.getChannel(t);
+        null != r && (0, m.zi)(r.type) && ((C = !0), M());
     };
+function w() {
+    k();
+}
+function M() {
+    A = !0;
+}
 function k() {
-    B();
+    N && (i = void 0), (C = !1), (A = !1);
 }
-function U() {
-    N = !0;
-}
-function B() {
-    R && (i = void 0), (O = !1), (N = !1);
-}
-let G = () => {
-        let e = !b.ZP.canUseClientThemes(y.default.getCurrentUser());
-        if (e === R) return !1;
-        R = e;
+let U = () => {
+        let e = !v.ZP.canUseClientThemes(E.default.getCurrentUser());
+        if (e === N) return !1;
+        N = e;
     },
-    Z = () => {
-        if (!f.Z.shouldSync('appearance')) return !1;
-        let e = m.L1.getSetting().backgroundGradientPresetId;
+    G = () => {
+        if (!c.Z.shouldSync('appearance')) return !1;
+        let e = p.L1.getSetting().backgroundGradientPresetId;
         if (null == e) {
             if (null == i) return !1;
             i = void 0;
         } else {
-            let n = S.qt[e];
-            if (n === i) return !1;
-            i = n;
+            let t = b.qt[e];
+            if (t === i) return !1;
+            i = t;
         }
     },
-    F = () => {
-        if (!f.Z.shouldSync('appearance')) return !1;
-        let e = m.L1.getSetting().backgroundGradientPresetId;
-        if ((_.ZP.useSystemTheme === A.K.ON && null != e && (0, p.hi)(A.K.OFF), null == e)) {
+    B = () => {
+        if (!c.Z.shouldSync('appearance')) return !1;
+        let e = p.L1.getSetting().backgroundGradientPresetId;
+        if ((_.ZP.useSystemTheme === T.K.ON && null != e && (0, d.hi)(T.K.OFF), null == e)) {
             null != i && (i = void 0);
             return;
         }
-        let n = S.qt[e],
-            r = (null == i ? void 0 : i.id) === (null == n ? void 0 : n.id);
-        if (null != n && !r) i = n;
+        let t = b.qt[e],
+            n = (null == i ? void 0 : i.id) === (null == t ? void 0 : t.id);
+        null != t && !n && (i = t);
     };
-class V extends (o = l.ZP.PersistedStore) {
+class Z extends (a = s.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (i = (null == e ? void 0 : e.gradientPresetId) != null ? S.qt[e.gradientPresetId] : void 0), this.waitFor(y.default, h.Z, v.Z, f.Z, g.Z), this.syncWith([y.default], G), this.syncWith([f.Z], Z), this.syncWith([g.Z], F);
+        null != e && (i = (null == e ? void 0 : e.gradientPresetId) != null ? b.qt[e.gradientPresetId] : void 0), this.waitFor(E.default, f.Z, g.Z, c.Z, h.Z), this.syncWith([E.default], U), this.syncWith([c.Z], G), this.syncWith([h.Z], B);
     }
     getState() {
-        return R ? {} : { gradientPresetId: null == i ? void 0 : i.id };
+        return N ? {} : { gradientPresetId: null == i ? void 0 : i.id };
     }
     get gradientPreset() {
         return i;
     }
     getLinearGradient() {
-        return null == this.gradientPreset ? null : (0, T.VK)(this.gradientPreset);
+        return null == this.gradientPreset ? null : (0, I.VK)(this.gradientPreset);
     }
     get isEditorOpen() {
-        return N;
+        return A;
     }
     get isPreview() {
-        return R;
+        return N;
     }
     get isCoachmark() {
-        return O;
+        return C;
     }
     get mobilePendingThemeIndex() {
-        return a;
+        return r;
     }
     constructor(...e) {
         super(...e),
-            C(this, 'migrations', [
+            S(this, 'migrations', [
                 (e) => {
-                    var n;
-                    return { gradientPresetId: null == e ? void 0 : null === (n = e.gradientPreset) || void 0 === n ? void 0 : n.id };
+                    var t;
+                    return { gradientPresetId: null == e ? void 0 : null === (t = e.gradientPreset) || void 0 === t ? void 0 : t.id };
                 }
             ]);
     }
 }
-C(V, 'displayName', 'ClientThemesBackgroundStore'),
-    C(V, 'persistKey', 'ClientThemesBackgroundStore'),
-    (n.Z = new V(c.Z, {
-        UPDATE_BACKGROUND_GRADIENT_PRESET: D,
-        UPDATE_MOBILE_PENDING_THEME_INDEX: L,
-        CLIENT_THEMES_EDITOR_OPEN: x,
-        CLIENT_THEMES_EDITOR_CLOSE: w,
-        RESET_PREVIEW_CLIENT_THEME: P,
-        CHANNEL_SELECT: M,
-        LOGOUT: k
-    }));
+S(Z, 'displayName', 'ClientThemesBackgroundStore'), S(Z, 'persistKey', 'ClientThemesBackgroundStore');
+let F = new Z(l.Z, {
+    UPDATE_BACKGROUND_GRADIENT_PRESET: R,
+    UPDATE_MOBILE_PENDING_THEME_INDEX: O,
+    CLIENT_THEMES_EDITOR_OPEN: D,
+    CLIENT_THEMES_EDITOR_CLOSE: x,
+    RESET_PREVIEW_CLIENT_THEME: L,
+    CHANNEL_SELECT: P,
+    LOGOUT: w
+});

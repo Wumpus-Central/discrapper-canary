@@ -1,12 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return p;
-    }
-});
+n.d(t, { Z: () => p });
 var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
     s = n(481060),
     o = n(55935),
     c = n(981631),
@@ -23,9 +19,9 @@ let h = (e) => {
         });
     },
     m = (e) => {
-        let { circle: t, smallHeader: n, text: r, className: l } = e;
+        let { circle: t, smallHeader: n, text: l, className: r } = e;
         return (0, i.jsxs)('div', {
-            className: a()(u.recommendationReason, l),
+            className: a()(u.recommendationReason, r),
             children: [
                 t,
                 (0, i.jsxs)('div', {
@@ -39,64 +35,64 @@ let h = (e) => {
                             : null,
                         (0, i.jsx)('div', {
                             className: u.text,
-                            children: r
+                            children: l
                         })
                     ]
                 })
             ]
         });
     };
-class p extends r.Component {
+class p extends l.Component {
     render() {
         let { reason: e, className: t } = this.props;
-        if (e.type === c.AzA.RECENT_RELEASE_DATE)
-            return (0, i.jsx)(m, {
-                className: t,
-                circle: (0, i.jsx)(h, { IconComponent: s.CalendarIcon }),
-                smallHeader: d.intl.string(d.t.u81aYW),
-                text: (0, o.vc)(e.releaseDate, 'LL')
-            });
-        if (e.type === c.AzA.RELEASE_DATE)
-            return (0, i.jsx)(m, {
-                className: t,
-                circle: (0, i.jsx)(h, { IconComponent: s.CalendarIcon }),
-                smallHeader: d.intl.string(d.t.qpwaNT),
-                text: (0, o.vc)(e.releaseDate, 'LL')
-            });
-        if (e.type === c.AzA.EARLY_ACCESS)
-            return null != e.releaseDate
-                ? (0, i.jsx)(m, {
-                      className: t,
-                      circle: (0, i.jsx)(h, {
-                          IconComponent: s.LockUnlockedIcon,
-                          className: u.earlyAccess
-                      }),
-                      smallHeader: d.intl.string(d.t.HYys0t),
-                      text: (0, o.vc)(e.releaseDate, 'LL')
-                  })
-                : (0, i.jsx)(m, {
-                      className: t,
-                      circle: (0, i.jsx)(h, {
-                          IconComponent: s.LockUnlockedIcon,
-                          className: u.earlyAccess
-                      }),
-                      text: d.intl.string(d.t.HYys0t)
-                  });
-        return e.type === c.AzA.FLAVOR_TEXT
+        return e.type === c.AzA.RECENT_RELEASE_DATE
             ? (0, i.jsx)(m, {
-                  circle: (0, i.jsx)(h, { IconComponent: s.CheckmarkLargeIcon }),
-                  text: e.flavorText,
-                  className: t
+                  className: t,
+                  circle: (0, i.jsx)(h, { IconComponent: s.Que }),
+                  smallHeader: d.intl.string(d.t.u81aYW),
+                  text: (0, o.vc)(e.releaseDate, 'LL')
               })
-            : e.type === c.AzA.HAS_FREE_PREMIUM_CONTENT
+            : e.type === c.AzA.RELEASE_DATE
               ? (0, i.jsx)(m, {
                     className: t,
-                    circle: (0, i.jsx)(h, {
-                        IconComponent: s.NitroWheelIcon,
-                        className: u.premiumCircle
-                    }),
-                    text: d.intl.string(d.t.R9SwVl)
+                    circle: (0, i.jsx)(h, { IconComponent: s.Que }),
+                    smallHeader: d.intl.string(d.t.qpwaNT),
+                    text: (0, o.vc)(e.releaseDate, 'LL')
                 })
-              : null;
+              : e.type === c.AzA.EARLY_ACCESS
+                ? null != e.releaseDate
+                    ? (0, i.jsx)(m, {
+                          className: t,
+                          circle: (0, i.jsx)(h, {
+                              IconComponent: s.d$P,
+                              className: u.earlyAccess
+                          }),
+                          smallHeader: d.intl.string(d.t.HYys0t),
+                          text: (0, o.vc)(e.releaseDate, 'LL')
+                      })
+                    : (0, i.jsx)(m, {
+                          className: t,
+                          circle: (0, i.jsx)(h, {
+                              IconComponent: s.d$P,
+                              className: u.earlyAccess
+                          }),
+                          text: d.intl.string(d.t.HYys0t)
+                      })
+                : e.type === c.AzA.FLAVOR_TEXT
+                  ? (0, i.jsx)(m, {
+                        circle: (0, i.jsx)(h, { IconComponent: s.dz2 }),
+                        text: e.flavorText,
+                        className: t
+                    })
+                  : e.type === c.AzA.HAS_FREE_PREMIUM_CONTENT
+                    ? (0, i.jsx)(m, {
+                          className: t,
+                          circle: (0, i.jsx)(h, {
+                              IconComponent: s.SrA,
+                              className: u.premiumCircle
+                          }),
+                          text: d.intl.string(d.t.R9SwVl)
+                      })
+                    : null;
     }
 }

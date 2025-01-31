@@ -1,8 +1,4 @@
-function i(e, n) {
-    if (n.has(e)) throw TypeError('Cannot initialize the same private elements twice on an object');
+function n(t, e) {
+    if (e.has(t)) throw TypeError('Cannot initialize the same private elements twice on an object');
 }
-r.d(n, {
-    E: function () {
-        return i;
-    }
-});
+r.d(e, { E: () => n });

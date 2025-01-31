@@ -1,15 +1,11 @@
-n.d(t, {
-    f: function () {
-        return a;
-    }
-});
+n.d(t, { f: () => a });
 var i = n(748780),
     r = n(442837),
     l = n(481060),
     s = n(607070);
 function a() {
     let e = (0, r.e7)([s.Z], () => s.Z.useReducedMotion);
-    return (0, l.useSpring)(
+    return (0, l.q_F)(
         {
             from: {
                 opacity: e ? 1 : 0,

@@ -1,8 +1,4 @@
-n.d(t, {
-    h: function () {
-        return i;
-    }
-});
+n.d(t, { h: () => i });
 let i = (0, n(987170).Z)({
     kind: 'user',
     id: '2025-01_avholdout',

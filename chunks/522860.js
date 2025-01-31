@@ -1,48 +1,44 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
+n.d(t, { Z: () => c });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(194082),
-    a = n(739566),
-    o = n(834129),
-    s = n(388032);
+var l = n(481060),
+    a = n(194082),
+    r = n(739566),
+    s = n(834129),
+    o = n(388032);
 function c(e) {
     var t;
-    let { message: n, channel: c, playingActivity: u, onJoinStream: d, usernameHook: m, compact: h } = e,
-        f = (0, a.ZP)(n),
+    let { message: n, channel: c, playingActivity: d, onJoinStream: u, usernameHook: m, compact: h } = e,
+        _ = (0, r.ZP)(n),
         p = null === (t = n.call) || void 0 === t ? void 0 : t.duration,
-        _ = m(f),
-        g = s.intl.format(s.t.FKXvaG, {
-            username: f.nick,
-            activityName: null != u ? u.name : 'unknown',
-            onJoinStream: d,
-            usernameHook: _
+        g = m(_),
+        f = o.intl.format(o.t.FKXvaG, {
+            username: _.nick,
+            activityName: null != d ? d.name : 'unknown',
+            onJoinStream: u,
+            usernameHook: g
         });
     return (
         null != p &&
-            (g = s.intl.format(s.t.NEFxtb, {
-                username: f.nick,
+            (f = o.intl.format(o.t.NEFxtb, {
+                username: _.nick,
                 duration: p.humanize(),
                 channelName: c.name,
-                usernameHook: _
+                usernameHook: g
             })),
-        (0, i.jsx)(o.Z, {
+        (0, i.jsx)(s.Z, {
             iconNode:
                 null != p
-                    ? (0, i.jsx)(r.ScreenXIcon, {
+                    ? (0, i.jsx)(l.g5r, {
                           size: 'custom',
                           color: 'currentColor',
                           width: 20,
                           height: 20
                       })
-                    : (0, i.jsx)(l.ZP, { size: l.ZP.Sizes.SMALL }),
+                    : (0, i.jsx)(a.ZP, { size: a.ZP.Sizes.SMALL }),
             timestamp: n.timestamp,
             compact: h,
-            children: g
+            children: f
         })
     );
 }

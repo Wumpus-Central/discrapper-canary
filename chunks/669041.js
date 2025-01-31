@@ -1,131 +1,126 @@
-r.r(n),
-    r.d(n, {
-        QuestsRewardModalUnverified: function () {
-            return _;
-        },
-        openRewardModalUnverified: function () {
-            return m;
-        }
-    });
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(442837),
-    l = r(481060),
-    u = r(893776),
-    c = r(594174),
-    d = r(918701),
-    f = r(388032),
-    p = r(162023),
-    h = r(800010);
+n.d(t, {
+    B: () => p,
+    QuestsRewardModalUnverified: () => _
+}),
+    n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(442837),
+    s = n(481060),
+    o = n(893776),
+    l = n(594174),
+    u = n(918701),
+    c = n(388032),
+    d = n(162023),
+    f = n(800010);
 function _(e) {
-    let { transitionState: n, onClose: r } = e,
-        i = (0, s.e7)([c.default], () => {
+    let { transitionState: t, onClose: n } = e,
+        _ = (0, a.e7)([l.default], () => {
             var e;
-            return null === (e = c.default.getCurrentUser()) || void 0 === e ? void 0 : e.email;
+            return null === (e = l.default.getCurrentUser()) || void 0 === e ? void 0 : e.email;
         }),
-        [_, m] = o.useState({ status: 'unknown' });
-    o.useEffect(() => {
-        m({ status: 'loading' }),
-            u.Z.verifyResend().then(
-                () => m({ status: 'success' }),
+        [p, h] = r.useState({ status: 'unknown' });
+    r.useEffect(() => {
+        h({ status: 'loading' }),
+            o.Z.verifyResend().then(
+                () => h({ status: 'success' }),
                 (e) => {
-                    m({ status: 'error' }), (0, d.ys)(e, { tags: { location: 'QuestsRewardModalUnverified' } });
+                    h({ status: 'error' }), (0, u.ys)(e, { tags: { location: 'QuestsRewardModalUnverified' } });
                 }
             );
     }, []);
-    let g = () =>
-        (0, a.jsx)(l.ModalFooter, {
-            className: p.modalFooter,
-            children: (0, a.jsx)(l.Button, {
-                color: l.Button.Colors.BRAND,
-                size: l.Button.Sizes.MEDIUM,
-                onClick: r,
-                children: f.intl.string(f.t.cpT0Cg)
+    let m = () =>
+        (0, i.jsx)(s.mzw, {
+            className: d.modalFooter,
+            children: (0, i.jsx)(s.zxk, {
+                color: s.zxk.Colors.BRAND,
+                size: s.zxk.Sizes.MEDIUM,
+                onClick: n,
+                children: c.intl.string(c.t.cpT0Cg)
             })
         });
-    return (0, a.jsxs)(l.ModalRoot, {
-        transitionState: n,
+    return (0, i.jsxs)(s.Y0X, {
+        transitionState: t,
         disableTrack: !0,
         children: [
-            (0, a.jsx)('img', {
+            (0, i.jsx)('img', {
                 alt: '',
-                className: p.headerImage,
-                src: h
+                className: d.headerImage,
+                src: f
             }),
-            (0, a.jsxs)(l.ModalHeader, {
+            (0, i.jsxs)(s.xBx, {
                 separator: !1,
-                className: p.header,
+                className: d.header,
                 children: [
-                    (0, a.jsx)(l.Heading, {
-                        className: p.title,
+                    (0, i.jsx)(s.X6q, {
+                        className: d.title,
                         variant: 'heading-xl/bold',
-                        children: f.intl.string(f.t.c8eASE)
+                        children: c.intl.string(c.t.c8eASE)
                     }),
-                    (0, a.jsx)(l.ModalCloseButton, {
-                        onClick: r,
-                        className: p.modalCloseButton
+                    (0, i.jsx)(s.olH, {
+                        onClick: n,
+                        className: d.modalCloseButton
                     })
                 ]
             }),
-            'loading' === _.status &&
-                (0, a.jsx)(l.ModalContent, {
-                    className: p.content,
-                    children: (0, a.jsx)(l.Spinner, {})
+            'loading' === p.status &&
+                (0, i.jsx)(s.hzk, {
+                    className: d.content,
+                    children: (0, i.jsx)(s.$jN, {})
                 }),
-            'error' === _.status &&
-                (0, a.jsxs)(a.Fragment, {
+            'error' === p.status &&
+                (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, a.jsx)(l.ModalContent, {
-                            className: p.content,
-                            children: (0, a.jsx)(l.Text, {
+                        (0, i.jsx)(s.hzk, {
+                            className: d.content,
+                            children: (0, i.jsx)(s.Text, {
                                 variant: 'text-md/normal',
-                                children: f.intl.string(f.t.vjyinp)
+                                children: c.intl.string(c.t.vjyinp)
                             })
                         }),
-                        g()
+                        m()
                     ]
                 }),
-            'success' === _.status &&
-                (0, a.jsxs)(a.Fragment, {
+            'success' === p.status &&
+                (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, a.jsx)(l.ModalContent, {
-                            className: p.content,
-                            children: (0, a.jsx)(l.Text, {
+                        (0, i.jsx)(s.hzk, {
+                            className: d.content,
+                            children: (0, i.jsx)(s.Text, {
                                 variant: 'text-md/normal',
-                                children: f.intl.format(f.t.qP5xYW, {
-                                    emailAddress: i,
-                                    emailAddressLink: 'mailto:'.concat(i)
+                                children: c.intl.format(c.t.qP5xYW, {
+                                    emailAddress: _,
+                                    emailAddressLink: 'mailto:'.concat(_)
                                 })
                             })
                         }),
-                        (0, a.jsx)(l.ModalContent, {
-                            className: p.content,
-                            children: (0, a.jsxs)('div', {
-                                className: p.tooltip,
+                        (0, i.jsx)(s.hzk, {
+                            className: d.content,
+                            children: (0, i.jsxs)('div', {
+                                className: d.tooltip,
                                 children: [
-                                    (0, a.jsx)(l.CircleInformationIcon, {
+                                    (0, i.jsx)(s.d3s, {
                                         size: 'xs',
                                         color: 'currentColor',
-                                        className: p.infoFilledIcon
+                                        className: d.infoFilledIcon
                                     }),
-                                    (0, a.jsx)(l.Text, {
-                                        className: p.tooltipText,
+                                    (0, i.jsx)(s.Text, {
+                                        className: d.tooltipText,
                                         variant: 'text-sm/normal',
-                                        children: f.intl.string(f.t.yb7itb)
+                                        children: c.intl.string(c.t.yb7itb)
                                     })
                                 ]
                             })
                         }),
-                        g()
+                        m()
                     ]
                 })
         ]
     });
 }
-function m() {
-    (0, l.openModalLazy)(async () => {
-        let { QuestsRewardModalUnverified: e } = await Promise.resolve().then(r.bind(r, 669041));
-        return (n) => (0, a.jsx)(e, { ...n });
+function p() {
+    (0, s.ZDy)(async () => {
+        let { QuestsRewardModalUnverified: e } = await Promise.resolve().then(n.bind(n, 669041));
+        return (t) => (0, i.jsx)(e, { ...t });
     });
 }

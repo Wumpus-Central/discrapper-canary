@@ -1,59 +1,54 @@
-s.r(e),
-    s.d(e, {
-        default: function () {
-            return u;
-        }
-    });
-var n = s(200651);
+s.d(e, { default: () => d });
+var i = s(200651);
 s(192379);
-var o = s(481060),
-    i = s(118012),
+var n = s(481060),
+    a = s(118012),
     l = s(313201),
-    a = s(388032),
-    c = s(235661),
+    c = s(388032),
+    o = s(235661),
     r = s(462991);
-function u(t) {
-    let { onClose: e, transitionState: s, kind: u } = t,
-        d = (0, l.Dt)();
-    return (0, n.jsxs)(o.ModalRoot, {
+function d(t) {
+    let { onClose: e, transitionState: s, kind: d } = t,
+        u = (0, l.Dt)();
+    return (0, i.jsxs)(n.Y0X, {
         transitionState: s,
-        'aria-labelledby': d,
-        size: o.ModalSize.SMALL,
+        'aria-labelledby': u,
+        size: n.CgR.SMALL,
         children: [
-            (0, n.jsxs)(o.ModalContent, {
-                className: c.content,
+            (0, i.jsxs)(n.hzk, {
+                className: o.content,
                 children: [
-                    (0, n.jsx)(o.ModalCloseButton, {
-                        className: c.closeButton,
+                    (0, i.jsx)(n.olH, {
+                        className: o.closeButton,
                         onClick: e
                     }),
-                    (0, n.jsx)('img', {
-                        className: c.image,
+                    (0, i.jsx)('img', {
+                        className: o.image,
                         src: r,
                         alt: ''
                     }),
-                    (0, n.jsx)(i.Z, {
-                        className: c.title,
-                        id: d,
-                        size: i.Z.Sizes.SIZE_24,
-                        color: i.Z.Colors.HEADER_PRIMARY,
-                        children: a.intl.string(a.t.r0DLNj)
+                    (0, i.jsx)(a.Z, {
+                        className: o.title,
+                        id: u,
+                        size: a.Z.Sizes.SIZE_24,
+                        color: a.Z.Colors.HEADER_PRIMARY,
+                        children: c.intl.string(c.t.r0DLNj)
                     }),
-                    (0, n.jsx)(o.Text, {
-                        className: c.subtitle,
+                    (0, i.jsx)(n.Text, {
+                        className: o.subtitle,
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: 'user' === u ? a.intl.string(a.t.Fqqbho) : a.intl.string(a.t['6Y0JlJ'])
+                        children: 'user' === d ? c.intl.string(c.t.Fqqbho) : c.intl.string(c.t['6Y0JlJ'])
                     })
                 ]
             }),
-            (0, n.jsx)(o.ModalFooter, {
-                children: (0, n.jsx)(o.Button, {
-                    className: c.button,
-                    color: o.Button.Colors.BRAND,
+            (0, i.jsx)(n.mzw, {
+                children: (0, i.jsx)(n.zxk, {
+                    className: o.button,
+                    color: n.zxk.Colors.BRAND,
                     onClick: e,
-                    size: o.Button.Sizes.LARGE,
-                    children: a.intl.string(a.t.BddRzc)
+                    size: n.zxk.Sizes.LARGE,
+                    children: c.intl.string(c.t.BddRzc)
                 })
             })
         ]

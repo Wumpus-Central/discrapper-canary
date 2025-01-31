@@ -40,8 +40,7 @@ var c = (function () {
             });
         }),
         (e.getLink = function () {
-            if (this.data.getData) return -1 != this.types.indexOf('text/x-moz-url') ? this.data.getData('text/x-moz-url').split('\n')[0] : -1 != this.types.indexOf('text/uri-list') ? this.data.getData('text/uri-list') : this.data.getData('url');
-            return null;
+            return this.data.getData ? (-1 != this.types.indexOf('text/x-moz-url') ? this.data.getData('text/x-moz-url').split('\n')[0] : -1 != this.types.indexOf('text/uri-list') ? this.data.getData('text/uri-list') : this.data.getData('url')) : null;
         }),
         (e.isImage = function () {
             if (
@@ -57,10 +56,7 @@ var c = (function () {
             return !0;
         }),
         (e.getCount = function () {
-            if (this.data.hasOwnProperty('items')) return this.data.items.length;
-            if (this.data.hasOwnProperty('mozItemCount')) return this.data.mozItemCount;
-            if (this.data.files) return this.data.files.length;
-            return null;
+            return this.data.hasOwnProperty('items') ? this.data.items.length : this.data.hasOwnProperty('mozItemCount') ? this.data.mozItemCount : this.data.files ? this.data.files.length : null;
         }),
         (e.getFiles = function () {
             return this.data.items ? Array.prototype.slice.call(this.data.items).map(s).filter(o.thatReturnsArgument) : this.data.files ? Array.prototype.slice.call(this.data.files) : [];

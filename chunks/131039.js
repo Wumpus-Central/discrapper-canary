@@ -1,9 +1,10 @@
-e.exports = {
-    searchBox: 'searchBox_d83b4d',
-    searchBoxInput: 'searchBoxInput_d83b4d',
-    searchBoxInputWrapper: 'searchBoxInputWrapper_d83b4d',
-    cta: 'cta_d83b4d',
-    clear: 'clear_d83b4d',
-    clearIcon: 'clearIcon_d83b4d',
-    searchIcon: 'searchIcon_d83b4d'
+var i = {
+    searchBox: 'searchBox_d727b3',
+    searchBoxInput: 'searchBoxInput_d727b3',
+    searchBoxInputWrapper: 'searchBoxInputWrapper_d727b3',
+    cta: 'cta_d727b3',
+    clear: 'clear_d727b3',
+    clearIcon: 'clearIcon_d727b3',
+    searchIcon: 'searchIcon_d727b3'
 };
+e.exports = i;

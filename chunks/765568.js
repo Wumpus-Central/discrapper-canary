@@ -1,1 +1,2 @@
-e.exports = { modal: 'modal_aee8c6' };
+var i = { modal: 'modal_b0827a' };
+e.exports = i;

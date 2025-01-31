@@ -1,48 +1,45 @@
-r.d(n, {
-    PQ: function () {
-        return d;
-    },
-    e3: function () {
-        return f;
-    }
-});
-var i = r(47120);
-var a = r(192379),
-    o = r(691324),
-    s = r(442837),
-    l = r(780384),
-    u = r(514361),
-    c = r(629935);
-let d = 'data-client-themes',
-    f = 'custom-theme-background',
-    p = () => {
-        let e = (0, s.e7)([u.Z], () => u.Z.gradientPreset);
-        return (0, a.useMemo)(() => {
+n.d(t, {
+    PQ: () => u,
+    ZP: () => f,
+    e3: () => c
+}),
+    n(47120);
+var i = n(192379),
+    r = n(691324),
+    a = n(442837),
+    s = n(780384),
+    o = n(514361),
+    l = n(629935);
+let u = 'data-client-themes',
+    c = 'custom-theme-background',
+    d = () => {
+        let e = (0, a.e7)([o.Z], () => o.Z.gradientPreset);
+        return (0, i.useMemo)(() => {
             if (null == e) return null;
-            let n = u.Z.getLinearGradient();
-            if (null == n) return null;
-            let r = o.b[e.colors[0].token].hex,
-                i = o.b[e.colors[e.colors.length - 1].token].hex,
-                a = (0, c.W4)({
+            let t = o.Z.getLinearGradient();
+            if (null == t) return null;
+            let n = r.b[e.colors[0].token].hex,
+                i = r.b[e.colors[e.colors.length - 1].token].hex,
+                a = (0, l.W4)({
                     enabled: !0,
-                    primaryColor: r,
+                    primaryColor: n,
                     secondaryColor: i,
-                    isDarkTheme: (0, l.wj)(e.theme)
+                    isDarkTheme: (0, s.wj)(e.theme)
                 }),
-                s = '\n      '.concat(
+                u = '\n      '.concat(
                     Object.entries(a)
                         .map((e) => {
-                            let [n, r] = e;
-                            return ''.concat(n, ': ').concat(r, ';');
+                            let [t, n] = e;
+                            return ''.concat(t, ': ').concat(n, ';');
                         })
                         .join('\n'),
                     '\n    '
                 );
-            return '.'.concat(f, ' {\n      --custom-theme-background: ').concat(n, ';\n      --custom-theme-primary-color: ').concat(r, ';\n      --custom-theme-secondary-color: ').concat(i, ';\n      ').concat(s, '\n    }');
+            return '.'.concat(c, ' {\n      --custom-theme-background: ').concat(t, ';\n      --custom-theme-primary-color: ').concat(n, ';\n      --custom-theme-secondary-color: ').concat(i, ';\n      ').concat(u, '\n    }');
         }, [e]);
     },
-    h = () => {
-        let e = p();
+    f = () => {
+        let e = d();
         return null === e
             ? {
                   clientThemesCSS: '',
@@ -50,7 +47,6 @@ let d = 'data-client-themes',
               }
             : {
                   clientThemesCSS: e,
-                  clientThemesClassName: f
+                  clientThemesClassName: c
               };
     };
-n.ZP = h;

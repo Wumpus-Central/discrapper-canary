@@ -1,38 +1,32 @@
-r.d(n, {
-    NW: function () {
-        return o;
-    },
-    tf: function () {
-        return a;
-    },
-    zH: function () {
-        return s;
-    }
+n.d(t, {
+    NW: () => a,
+    tf: () => r,
+    zH: () => s
 });
-var i = r(192379),
-    a = function (e) {
+var i = n(192379),
+    r = function (e) {
         return (0, i.useEffect)(e, []);
     },
-    o = function () {
+    a = function () {
         var e = (0, i.useState)(0)[1],
-            n = (0, i.useRef)(!1);
+            t = (0, i.useRef)(!1);
         return (
-            a(function () {
+            r(function () {
                 return function () {
-                    n.current = !0;
+                    t.current = !0;
                 };
             }),
             function () {
-                !n.current && e({});
+                t.current || e({});
             }
         );
     };
 function s(e) {
-    var n = (0, i.useRef)(void 0);
+    var t = (0, i.useRef)(void 0);
     return (
         (0, i.useEffect)(function () {
-            n.current = e;
+            t.current = e;
         }),
-        n.current
+        t.current
     );
 }

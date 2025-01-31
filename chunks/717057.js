@@ -1,12 +1,6 @@
-l.r(t),
-    l.d(t, {
-        default: function () {
-            return _;
-        }
-    }),
-    l(47120);
-var n = l(200651),
-    i = l(192379),
+l.d(t, { default: () => M }), l(47120);
+var i = l(200651),
+    n = l(192379),
     a = l(120356),
     s = l.n(a),
     r = l(913527),
@@ -26,163 +20,163 @@ var n = l(200651),
     N = l(380365),
     Z = l(979264),
     T = l(620929),
-    S = l(284019),
-    y = l(308083),
-    H = l(981631),
+    y = l(284019),
+    H = l(308083),
+    b = l(981631),
     w = l(388032),
-    b = l(470168);
-function M(e) {
+    S = l(470168);
+function _(e) {
     var t;
     let { guildId: l, clanInfo: a, signed: r, onSignCharter: c } = e,
-        u = i.useMemo(() => {
+        u = n.useMemo(() => {
             let e = f.default.extractTimestamp(l);
             return o()(new Date(e)).format('MMMM YYYY');
         }, [l]),
-        x = i.useMemo(() => new Set(a.games), [a.games]);
-    return (0, n.jsx)(j.Z, {
+        x = n.useMemo(() => new Set(a.games), [a.games]);
+    return (0, i.jsx)(j.Z, {
         guildId: l,
         signHintPosition: j.p.LEFT,
         primaryColor: null === (t = a.branding) || void 0 === t ? void 0 : t.primaryColor,
         signed: r,
         onSignCharter: c,
-        children: (0, n.jsxs)('div', {
-            className: b.scrollContentsContainer,
+        children: (0, i.jsxs)('div', {
+            className: S.scrollContentsContainer,
             children: [
-                (0, n.jsx)(Z.aG, {
+                (0, i.jsx)(Z.aG, {
                     guildId: l,
                     clanBadge: a.badge.imageHash,
                     clanTag: a.tag,
                     textVariant: 'heading-lg/semibold',
-                    badgeSize: y.NC.SIZE_24,
-                    className: b.clanTagChiplet
+                    badgeSize: H.NC.SIZE_24,
+                    className: S.clanTagChiplet
                 }),
-                (0, n.jsxs)('div', {
+                (0, i.jsxs)('div', {
                     children: [
-                        (0, n.jsx)(d.Heading, {
+                        (0, i.jsx)(d.X6q, {
                             variant: 'heading-xxl/normal',
                             color: 'text-muted',
-                            className: b.charterHeaderText,
+                            className: S.charterHeaderText,
                             children: w.intl.string(w.t['85S0//'])
                         }),
-                        (0, n.jsx)(d.Heading, {
+                        (0, i.jsx)(d.X6q, {
                             variant: 'heading-xxl/bold',
                             color: 'interactive-active',
-                            className: b.charterHeaderText,
+                            className: S.charterHeaderText,
                             children: a.name
                         }),
-                        (0, n.jsx)(d.Text, {
+                        (0, i.jsx)(d.Text, {
                             variant: 'text-md/normal',
                             color: 'text-muted',
-                            className: b.establishedDate,
+                            className: S.establishedDate,
                             children: w.intl.format(w.t['7RpSYW'], { date: u })
                         })
                     ]
                 }),
-                (0, n.jsx)(T.p, {
+                (0, i.jsx)(T.p, {
                     applicationIds: x,
                     playstyle: a.playstyle,
-                    className: s()(b.charterBodyText, b.gameSection)
+                    className: s()(S.charterBodyText, S.gameSection)
                 }),
-                (0, n.jsx)(d.Text, {
+                (0, i.jsx)(d.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-muted',
-                    className: b.charterBodyText,
+                    className: S.charterBodyText,
                     children: w.intl.string(w.t['YDTd9/'])
                 })
             ]
         })
     });
 }
-function _(e) {
+function M(e) {
     var t;
     let { guildId: l, onClose: a, onAccept: r, ...o } = e,
         f = (0, x.Dt)(),
         j = (0, C.Cc)(l),
         Z = (0, C.E8)(l),
-        [T, y] = i.useState(!0),
-        [_, A] = i.useState(!1),
-        B = i.useCallback(() => {
+        [T, H] = n.useState(!0),
+        [M, B] = n.useState(!1),
+        R = n.useCallback(() => {
             r(), a();
         }, [r, a]);
-    i.useEffect(() => {
-        null == j && !Z && B();
-    }, [j, B, Z]);
-    let R = i.useCallback(() => {
-            T && (0, v.nE)(l, T, H.Sbl.CREATE_JOIN_GUILD_MODAL), B();
-        }, [l, B, T]),
-        k = (0, c.e7)([h.Z], () => h.Z.getGuild(l)),
-        E = (0, c.e7)([g.default], () => g.default.getCurrentUser()),
-        I = (0, c.e7)([m.ZP], () => (null != E ? m.ZP.getMember(l, E.id) : null)),
-        D = (0, u.ZP)(),
-        L = (0, p.nP)(null == j ? void 0 : null === (t = j.branding) || void 0 === t ? void 0 : t.primaryColor, [d.tokens.colors.BG_BRAND, 0.7]),
-        P = d.tokens.colors.BG_SURFACE_OVERLAY.resolve({
-            theme: D,
+    n.useEffect(() => {
+        null != j || Z || R();
+    }, [j, R, Z]);
+    let A = n.useCallback(() => {
+            T && (0, v.nE)(l, T, b.Sbl.CREATE_JOIN_GUILD_MODAL), R();
+        }, [l, R, T]),
+        E = (0, c.e7)([h.Z], () => h.Z.getGuild(l)),
+        k = (0, c.e7)([g.default], () => g.default.getCurrentUser()),
+        D = (0, c.e7)([m.ZP], () => (null != k ? m.ZP.getMember(l, k.id) : null)),
+        I = (0, u.ZP)(),
+        V = (0, p.nP)(null == j ? void 0 : null === (t = j.branding) || void 0 === t ? void 0 : t.primaryColor, [d.TVs.colors.BG_BRAND, 0.7]),
+        F = d.TVs.colors.BG_SURFACE_OVERLAY.resolve({
+            theme: I,
             saturation: 1
         }).hex(),
-        V = (0, p.nj)(L, P, 'top center');
-    return null == k || null == E || null == I || null == j
+        P = (0, p.nj)(V, F, 'top center');
+    return null == E || null == k || null == D || null == j
         ? null
-        : (0, n.jsx)(d.ModalRoot, {
+        : (0, i.jsx)(d.Y0X, {
               ...o,
               transitionState: o.transitionState,
               'aria-labelledby': f,
-              className: b.modal,
-              size: d.ModalSize.DYNAMIC,
-              children: (0, n.jsxs)(d.ModalContent, {
-                  className: b.content,
-                  style: V,
+              className: S.modal,
+              size: d.CgR.DYNAMIC,
+              children: (0, i.jsxs)(d.hzk, {
+                  className: S.content,
+                  style: P,
                   children: [
-                      (0, n.jsxs)('div', {
-                          className: b.infoSide,
+                      (0, i.jsxs)('div', {
+                          className: S.infoSide,
                           children: [
-                              (0, n.jsxs)('div', {
-                                  className: b.titlesContainer,
+                              (0, i.jsxs)('div', {
+                                  className: S.titlesContainer,
                                   children: [
-                                      (0, n.jsx)('div', {
-                                          className: b.title,
-                                          children: (0, n.jsx)(d.Heading, {
+                                      (0, i.jsx)('div', {
+                                          className: S.title,
+                                          children: (0, i.jsx)(d.X6q, {
                                               variant: 'heading-xxl/medium',
-                                              children: w.intl.format(w.t.orbR8f, { name: k.name })
+                                              children: w.intl.format(w.t.orbR8f, { name: E.name })
                                           })
                                       }),
-                                      (0, n.jsx)(d.Text, {
-                                          className: b.subtitle,
+                                      (0, i.jsx)(d.Text, {
+                                          className: S.subtitle,
                                           variant: 'text-md/normal',
                                           children: w.intl.string(w.t.sZHbAQ)
                                       })
                                   ]
                               }),
-                              (0, n.jsx)(N.Z, {
+                              (0, i.jsx)(N.Z, {
                                   guildId: l,
                                   isTagAdopted: T,
-                                  onChangeUseTag: y
+                                  onChangeUseTag: H
                               })
                           ]
                       }),
-                      (0, n.jsx)('div', {
-                          className: b.scrollMainContainer,
-                          children: (0, n.jsx)(M, {
+                      (0, i.jsx)('div', {
+                          className: S.scrollMainContainer,
+                          children: (0, i.jsx)(_, {
                               guildId: l,
                               clanInfo: j,
-                              signed: _,
-                              onSignCharter: A
+                              signed: M,
+                              onSignCharter: B
                           })
                       }),
-                      (0, n.jsx)(S.Z, {
-                          onClick: R,
-                          color: d.Button.Colors.BRAND,
-                          themeColor: L,
+                      (0, i.jsx)(y.Z, {
+                          onClick: A,
+                          color: d.zxk.Colors.BRAND,
+                          themeColor: V,
                           fullWidth: !1,
-                          className: s()(b.ctaButton, _ ? b.ctaButtonSigned : null),
-                          children: (0, n.jsxs)('div', {
-                              className: b.ctaButtonInner,
+                          className: s()(S.ctaButton, M ? S.ctaButtonSigned : null),
+                          children: (0, i.jsxs)('div', {
+                              className: S.ctaButtonInner,
                               children: [
-                                  (0, n.jsx)(d.Text, {
+                                  (0, i.jsx)(d.Text, {
                                       color: 'currentColor',
                                       variant: 'text-md/medium',
                                       children: w.intl.string(w.t.aYmu19)
                                   }),
-                                  (0, n.jsx)(d.ArrowLargeRightIcon, {
+                                  (0, i.jsx)(d.d4D, {
                                       size: 'custom',
                                       width: 20,
                                       height: 20,

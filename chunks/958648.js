@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return s;
-    }
-});
+n.d(t, { Z: () => s });
 var i = n(192379);
 function s(e, t) {
     let n = i.useRef(e);

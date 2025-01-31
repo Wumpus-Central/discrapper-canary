@@ -1,18 +1,17 @@
-function t(i, n) {
+function e(i, n) {
     if (void 0 !== i.one && 1 === n) return i.one;
     var t = n % 10,
         e = n % 100;
     return 1 === t && 11 !== e ? i.singularNominative.replace('{{count}}', String(n)) : t >= 2 && t <= 4 && (e < 10 || e > 20) ? i.singularGenitive.replace('{{count}}', String(n)) : i.pluralGenitive.replace('{{count}}', String(n));
 }
-function e(i) {
-    return function (n, e) {
-        if (null == e || !e.addSuffix) return t(i.regular, n);
-        if (e.comparison && e.comparison > 0) return i.future ? t(i.future, n) : 'через ' + t(i.regular, n);
-        return i.past ? t(i.past, n) : t(i.regular, n) + ' назад';
+function a(i) {
+    return function (n, t) {
+        return null != t && t.addSuffix ? (t.comparison && t.comparison > 0 ? (i.future ? e(i.future, n) : 'через ' + e(i.regular, n)) : i.past ? e(i.past, n) : e(i.regular, n) + ' назад') : e(i.regular, n);
     };
 }
-var a = {
-    lessThanXSeconds: e({
+t.d(n, { Z: () => u });
+var r = {
+    lessThanXSeconds: a({
         regular: {
             one: 'меньше секунды',
             singularNominative: 'меньше {{count}} секунды',
@@ -26,7 +25,7 @@ var a = {
             pluralGenitive: 'меньше, чем через {{count}} секунд'
         }
     }),
-    xSeconds: e({
+    xSeconds: a({
         regular: {
             singularNominative: '{{count}} секунда',
             singularGenitive: '{{count}} секунды',
@@ -44,10 +43,9 @@ var a = {
         }
     }),
     halfAMinute: function (i, n) {
-        if (null != n && n.addSuffix) return n.comparison && n.comparison > 0 ? 'через полминуты' : 'полминуты назад';
-        return 'полминуты';
+        return null != n && n.addSuffix ? (n.comparison && n.comparison > 0 ? 'через полминуты' : 'полминуты назад') : 'полминуты';
     },
-    lessThanXMinutes: e({
+    lessThanXMinutes: a({
         regular: {
             one: 'меньше минуты',
             singularNominative: 'меньше {{count}} минуты',
@@ -61,7 +59,7 @@ var a = {
             pluralGenitive: 'меньше, чем через {{count}} минут'
         }
     }),
-    xMinutes: e({
+    xMinutes: a({
         regular: {
             singularNominative: '{{count}} минута',
             singularGenitive: '{{count}} минуты',
@@ -78,7 +76,7 @@ var a = {
             pluralGenitive: 'через {{count}} минут'
         }
     }),
-    aboutXHours: e({
+    aboutXHours: a({
         regular: {
             singularNominative: 'около {{count}} часа',
             singularGenitive: 'около {{count}} часов',
@@ -90,21 +88,21 @@ var a = {
             pluralGenitive: 'приблизительно через {{count}} часов'
         }
     }),
-    xHours: e({
+    xHours: a({
         regular: {
             singularNominative: '{{count}} час',
             singularGenitive: '{{count}} часа',
             pluralGenitive: '{{count}} часов'
         }
     }),
-    xDays: e({
+    xDays: a({
         regular: {
             singularNominative: '{{count}} день',
             singularGenitive: '{{count}} дня',
             pluralGenitive: '{{count}} дней'
         }
     }),
-    aboutXWeeks: e({
+    aboutXWeeks: a({
         regular: {
             singularNominative: 'около {{count}} недели',
             singularGenitive: 'около {{count}} недель',
@@ -116,14 +114,14 @@ var a = {
             pluralGenitive: 'приблизительно через {{count}} недель'
         }
     }),
-    xWeeks: e({
+    xWeeks: a({
         regular: {
             singularNominative: '{{count}} неделя',
             singularGenitive: '{{count}} недели',
             pluralGenitive: '{{count}} недель'
         }
     }),
-    aboutXMonths: e({
+    aboutXMonths: a({
         regular: {
             singularNominative: 'около {{count}} месяца',
             singularGenitive: 'около {{count}} месяцев',
@@ -135,14 +133,14 @@ var a = {
             pluralGenitive: 'приблизительно через {{count}} месяцев'
         }
     }),
-    xMonths: e({
+    xMonths: a({
         regular: {
             singularNominative: '{{count}} месяц',
             singularGenitive: '{{count}} месяца',
             pluralGenitive: '{{count}} месяцев'
         }
     }),
-    aboutXYears: e({
+    aboutXYears: a({
         regular: {
             singularNominative: 'около {{count}} года',
             singularGenitive: 'около {{count}} лет',
@@ -154,14 +152,14 @@ var a = {
             pluralGenitive: 'приблизительно через {{count}} лет'
         }
     }),
-    xYears: e({
+    xYears: a({
         regular: {
             singularNominative: '{{count}} год',
             singularGenitive: '{{count}} года',
             pluralGenitive: '{{count}} лет'
         }
     }),
-    overXYears: e({
+    overXYears: a({
         regular: {
             singularNominative: 'больше {{count}} года',
             singularGenitive: 'больше {{count}} лет',
@@ -173,7 +171,7 @@ var a = {
             pluralGenitive: 'больше, чем через {{count}} лет'
         }
     }),
-    almostXYears: e({
+    almostXYears: a({
         regular: {
             singularNominative: 'почти {{count}} год',
             singularGenitive: 'почти {{count}} года',
@@ -186,6 +184,6 @@ var a = {
         }
     })
 };
-n.Z = function (i, n, t) {
-    return a[i](n, t);
+let u = function (i, n, t) {
+    return r[i](n, t);
 };

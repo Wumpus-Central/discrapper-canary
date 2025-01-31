@@ -1,232 +1,231 @@
-let i;
-t(47120);
-var r,
-    l,
-    u,
+let t;
+n.d(i, { Z: () => P }), n(47120);
+var l,
+    r,
     a,
-    o = t(392711),
-    s = t.n(o),
-    c = t(442837),
-    d = t(570140),
-    E = t(944163),
-    f = t(246364),
-    I = t(999382),
-    h = t(118215),
-    m = t(384632),
-    _ = t(386885),
-    C = t(981631),
-    g = t(388032);
-let T = {
+    s = n(392711),
+    o = n.n(s),
+    u = n(442837),
+    c = n(570140),
+    d = n(944163),
+    E = n(246364),
+    I = n(999382),
+    f = n(118215),
+    h = n(384632),
+    _ = n(386885),
+    m = n(981631),
+    T = n(388032);
+let g = {
     verificationDirty: !1,
     guildDirty: !1
 };
 function N() {
     let e = I.Z.getGuild();
     if (null == e) return;
-    let n = h.ZP.getDiscoveryChecklist(e.id);
-    if (null != n) return (0, _.V)(e, n);
+    let i = f.ZP.getDiscoveryChecklist(e.id);
+    if (null != i) return (0, _.V)(e, i);
 }
-function v() {
+function C() {
     var e;
-    let n = I.Z.getGuildId();
-    return null == n ? null : null === (e = E.Z.get(n)) || void 0 === e ? void 0 : e.formFields;
+    let i = I.Z.getGuildId();
+    return null == i ? null : null === (e = d.Z.get(i)) || void 0 === e ? void 0 : e.formFields;
 }
 function A() {
-    let e = v();
+    let e = C();
     if (null == e) return;
-    let n = e.find((e) => (0, f.J)(e));
-    return null == n
+    let i = e.find((e) => (0, E.J)(e));
+    return null == i
         ? [
               {
-                  id: (0, o.uniqueId)(),
+                  id: (0, s.uniqueId)(),
                   value: ''
               }
           ]
-        : n.values.map((e) => ({
-              id: (0, o.uniqueId)(),
+        : i.values.map((e) => ({
+              id: (0, s.uniqueId)(),
               value: e
           }));
 }
-function S() {
-    let e = v();
+function v() {
+    let e = C();
     if (null == e) return;
-    let n = e.find((e) => (0, f.J)(e));
-    if (0 === e.length || (1 === e.length && null != n)) {
+    let i = e.find((e) => (0, E.J)(e));
+    if (0 === e.length || (1 === e.length && null != i)) {
         let e = {
-            field_type: f.QJ.TEXT_INPUT,
-            label: g.intl.string(g.t['83ZsRU']),
+            field_type: E.QJ.TEXT_INPUT,
+            label: T.intl.string(T.t['83ZsRU']),
             required: !0
         };
-        return null != n ? [n, e] : [e];
+        return null != i ? [i, e] : [e];
     }
     return [...e];
 }
-function p(e) {
-    return e.hasFeature(C.oNc.DISCOVERABLE) ? m.A.DISCOVERABLE : e.hasFeature(C.oNc.MEMBER_VERIFICATION_GATE_ENABLED) && e.hasFeature(C.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) ? m.A.APPLY : m.A.INVITE;
+function S(e) {
+    return e.hasFeature(m.oNc.DISCOVERABLE) ? h.A.DISCOVERABLE : e.hasFeature(m.oNc.MEMBER_VERIFICATION_GATE_ENABLED) && e.hasFeature(m.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) ? h.A.APPLY : h.A.INVITE;
 }
-function x(e, n) {
-    let t = e.hasFeature(C.oNc.MEMBER_VERIFICATION_GATE_ENABLED) || e.hasFeature(C.oNc.CLAN);
-    switch (n) {
-        case m.A.INVITE:
+function p(e, i) {
+    let n = e.hasFeature(m.oNc.MEMBER_VERIFICATION_GATE_ENABLED) || e.hasFeature(m.oNc.CLAN);
+    switch (i) {
+        case h.A.INVITE:
             return {
-                joinType: m.A.INVITE,
-                requireTerms: t,
+                joinType: h.A.INVITE,
+                requireTerms: n,
                 termRules: A()
             };
-        case m.A.APPLY:
+        case h.A.APPLY:
             return {
-                joinType: m.A.APPLY,
-                pendingVerificationFields: S()
+                joinType: h.A.APPLY,
+                pendingVerificationFields: v()
             };
-        case m.A.DISCOVERABLE:
+        case h.A.DISCOVERABLE:
             return {
-                joinType: m.A.DISCOVERABLE,
+                joinType: h.A.DISCOVERABLE,
                 settingsView: N(),
-                requireTerms: t,
+                requireTerms: n,
                 termRules: A()
             };
     }
 }
-function D(e, n) {
-    var t, i, r, l;
-    let { requireTerms: u, termRules: a } = n;
-    if (e.hasFeature(C.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) || e.hasFeature(C.oNc.MEMBER_VERIFICATION_GATE_ENABLED) !== u) return !0;
-    let o = null !== (i = v()) && void 0 !== i ? i : [];
-    if (o.length > 1) return !0;
-    let c = null !== (r = null === (t = o.find((e) => (0, f.J)(e))) || void 0 === t ? void 0 : t.values) && void 0 !== r ? r : [],
-        d = null !== (l = null == a ? void 0 : a.map((e) => e.value.trim()).filter((e) => '' !== e)) && void 0 !== l ? l : [];
-    return !s().isEqual(c, d);
+function D(e, i) {
+    var n, t, l, r;
+    let { requireTerms: a, termRules: s } = i;
+    if (e.hasFeature(m.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) || e.hasFeature(m.oNc.MEMBER_VERIFICATION_GATE_ENABLED) !== a) return !0;
+    let u = null !== (t = C()) && void 0 !== t ? t : [];
+    if (u.length > 1) return !0;
+    let c = null !== (l = null === (n = u.find((e) => (0, E.J)(e))) || void 0 === n ? void 0 : n.values) && void 0 !== l ? l : [],
+        d = null !== (r = null == s ? void 0 : s.map((e) => e.value.trim()).filter((e) => '' !== e)) && void 0 !== r ? r : [];
+    return !o().isEqual(c, d);
 }
 function L() {
     let e = I.Z.getGuild();
-    if (null == e || null == i) {
-        T = {
+    if (null == e || null == t) {
+        g = {
             verificationDirty: !1,
             guildDirty: !1
         };
         return;
     }
-    let n = p(e) !== i.joinType;
-    switch (i.joinType) {
-        case m.A.INVITE:
-            T = {
-                verificationDirty: D(e, i),
-                guildDirty: n
+    let i = S(e) !== t.joinType;
+    switch (t.joinType) {
+        case h.A.INVITE:
+            g = {
+                verificationDirty: D(e, t),
+                guildDirty: i
             };
             break;
-        case m.A.APPLY:
-            let t;
-            let r = v(),
-                { pendingVerificationFields: l } = i,
-                u = !e.hasFeature(C.oNc.MEMBER_VERIFICATION_GATE_ENABLED) || !e.hasFeature(C.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL);
-            (t = null == r ? null != l : null != l && !s().isEqual(r, l)),
-                (T = {
-                    verificationDirty: u || t,
-                    guildDirty: n
+        case h.A.APPLY:
+            let n;
+            let l = C(),
+                { pendingVerificationFields: r } = t,
+                a = !e.hasFeature(m.oNc.MEMBER_VERIFICATION_GATE_ENABLED) || !e.hasFeature(m.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL);
+            (n = null == l ? null != r : null != r && !o().isEqual(l, r)),
+                (g = {
+                    verificationDirty: a || n,
+                    guildDirty: i
                 });
             break;
-        case m.A.DISCOVERABLE:
-            T = {
-                verificationDirty: D(e, i),
-                guildDirty: n || I.Z.hasChanges()
+        case h.A.DISCOVERABLE:
+            g = {
+                verificationDirty: D(e, t),
+                guildDirty: i || I.Z.hasChanges()
             };
     }
 }
 function R() {
-    if (null == I.Z.getGuildId() || null == i) return !1;
-    (i =
-        i.joinType === m.A.APPLY
+    if (null == I.Z.getGuildId() || null == t) return !1;
+    (t =
+        t.joinType === h.A.APPLY
             ? {
-                  ...i,
-                  pendingVerificationFields: S()
+                  ...t,
+                  pendingVerificationFields: v()
               }
             : {
-                  ...i,
+                  ...t,
                   termRules: A()
               }),
         L();
 }
-function y(e) {
-    let { section: n } = e;
-    if (n !== C.pNK.ACCESS) return j();
-    let t = I.Z.getGuild();
-    if (null == t) return !1;
-    let r = p(t);
-    (i = x(t, r)), L();
+function x(e) {
+    let { section: i } = e;
+    if (i !== m.pNK.ACCESS) return y();
+    let n = I.Z.getGuild();
+    if (null == n) return !1;
+    let l = S(n);
+    (t = p(n, l)), L();
 }
-function j() {
-    (i = void 0),
-        (T = {
+function y() {
+    (t = void 0),
+        (g = {
             verificationDirty: !1,
             guildDirty: !1
         });
 }
-function F() {
-    if ((null == i ? void 0 : i.joinType) !== m.A.DISCOVERABLE) return !1;
-    (i = {
-        ...i,
+function j() {
+    if ((null == t ? void 0 : t.joinType) !== h.A.DISCOVERABLE) return !1;
+    (t = {
+        ...t,
         settingsView: N()
     }),
         L();
 }
-class b extends (r = c.ZP.Store) {
+class F extends (l = u.ZP.Store) {
     initialize() {
-        this.waitFor(I.Z, E.Z, h.ZP),
-            this.syncWith([I.Z, E.Z], () => {
+        this.waitFor(I.Z, d.Z, f.ZP),
+            this.syncWith([I.Z, d.Z], () => {
                 L();
             });
     }
     get pendingState() {
-        return i;
+        return t;
     }
     get dirtyState() {
-        return T;
+        return g;
     }
     showNotice() {
-        return T.guildDirty || T.verificationDirty;
+        return g.guildDirty || g.verificationDirty;
     }
 }
 (a = 'GuildSettingsJoinRulesStore'),
-    (u = 'displayName') in (l = b)
-        ? Object.defineProperty(l, u, {
+    (r = 'displayName') in F
+        ? Object.defineProperty(F, r, {
               value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[u] = a),
-    (n.Z = new b(d.Z, {
-        GUILD_SETTINGS_JOIN_RULES_INVITE_SET_PENDING_RULES: function (e) {
-            let { guildId: n, requireTerms: t, termRules: r } = e;
-            if (n !== I.Z.getGuildId() || ((null == i ? void 0 : i.joinType) !== m.A.INVITE && (null == i ? void 0 : i.joinType) !== m.A.DISCOVERABLE)) return !1;
-            (i = {
-                ...i,
-                requireTerms: t,
-                termRules: r
-            }),
-                L();
-        },
-        GUILD_SETTINGS_JOIN_RULES_APPLY_SET_PENDING_FORM_FIELDS: function (e) {
-            let { guildId: n, formFields: t } = e;
-            if (n !== I.Z.getGuildId() || (null == i ? void 0 : i.joinType) !== m.A.APPLY) return !1;
-            (i = {
-                ...i,
-                pendingVerificationFields: t
-            }),
-                L();
-        },
-        GUILD_SETTINGS_JOIN_RULES_SET_SELECTED_TYPE: function (e) {
-            let { guildId: n, joinType: t } = e,
-                r = I.Z.getGuild();
-            if (n !== (null == r ? void 0 : r.id)) return !1;
-            (i = x(r, t)), L();
-        },
-        MEMBER_VERIFICATION_FORM_UPDATE: R,
-        MEMBER_VERIFICATION_FORM_FETCH_FAIL: R,
-        GUILD_SETTINGS_INIT: y,
-        GUILD_SETTINGS_SET_SECTION: y,
-        GUILD_SETTINGS_CLOSE: j,
-        DISCOVER_CHECKLIST_FETCH_SUCCESS: F,
-        GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER: F,
-        GUILD_SETTINGS_SUBMIT_SUCCESS: F
-    }));
+        : (F[r] = a);
+let P = new F(c.Z, {
+    GUILD_SETTINGS_JOIN_RULES_INVITE_SET_PENDING_RULES: function (e) {
+        let { guildId: i, requireTerms: n, termRules: l } = e;
+        if (i !== I.Z.getGuildId() || ((null == t ? void 0 : t.joinType) !== h.A.INVITE && (null == t ? void 0 : t.joinType) !== h.A.DISCOVERABLE)) return !1;
+        (t = {
+            ...t,
+            requireTerms: n,
+            termRules: l
+        }),
+            L();
+    },
+    GUILD_SETTINGS_JOIN_RULES_APPLY_SET_PENDING_FORM_FIELDS: function (e) {
+        let { guildId: i, formFields: n } = e;
+        if (i !== I.Z.getGuildId() || (null == t ? void 0 : t.joinType) !== h.A.APPLY) return !1;
+        (t = {
+            ...t,
+            pendingVerificationFields: n
+        }),
+            L();
+    },
+    GUILD_SETTINGS_JOIN_RULES_SET_SELECTED_TYPE: function (e) {
+        let { guildId: i, joinType: n } = e,
+            l = I.Z.getGuild();
+        if (i !== (null == l ? void 0 : l.id)) return !1;
+        (t = p(l, n)), L();
+    },
+    MEMBER_VERIFICATION_FORM_UPDATE: R,
+    MEMBER_VERIFICATION_FORM_FETCH_FAIL: R,
+    GUILD_SETTINGS_INIT: x,
+    GUILD_SETTINGS_SET_SECTION: x,
+    GUILD_SETTINGS_CLOSE: y,
+    DISCOVER_CHECKLIST_FETCH_SUCCESS: j,
+    GUILD_UPDATE_DISCOVERY_METADATA_FROM_SERVER: j,
+    GUILD_SETTINGS_SUBMIT_SUCCESS: j
+});

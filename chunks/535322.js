@@ -1,23 +1,19 @@
-r.d(n, {
-    A: function () {
-        return f;
-    },
-    Z: function () {
-        return p;
-    }
+n.d(t, {
+    A: () => d,
+    Z: () => f
 });
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(481060),
-    l = r(331595),
-    u = r(645652),
-    c = r(388032),
-    d = r(572322);
-function f(e) {
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(481060),
+    o = n(325767),
+    l = n(645652),
+    u = n(388032),
+    c = n(572322);
+function d(e) {
     return (0, i.jsx)('svg', {
-        ...(0, l.Z)({ ...e }),
+        ...(0, o.Z)({ ...e }),
         width: '25',
         height: '48',
         viewBox: '0 0 25 48',
@@ -29,18 +25,18 @@ function f(e) {
         })
     });
 }
-function p(e) {
-    let { className: n, forceUseColorForSparkles: r = !1, shouldInheritTextColor: a = !1, shouldInheritBackgroundColor: l = !1 } = e;
-    return (0, i.jsx)(u.Z, {
-        className: n,
-        forceUseColor: r,
-        children: (0, i.jsx)(s.TextBadge, {
+function f(e) {
+    let { className: t, forceUseColorForSparkles: n = !1, shouldInheritTextColor: r = !1, shouldInheritBackgroundColor: o = !1 } = e;
+    return (0, i.jsx)(l.Z, {
+        className: t,
+        forceUseColor: n,
+        children: (0, i.jsx)(s.IGR, {
             disableColor: !0,
-            className: o()(d.tag, {
-                [d.inheritTextColor]: a,
-                [d.inheritBackgroundColor]: l
+            className: a()(c.tag, {
+                [c.inheritTextColor]: r,
+                [c.inheritBackgroundColor]: o
             }),
-            text: c.intl.string(c.t.y2b7CA)
+            text: u.intl.string(u.t.y2b7CA)
         })
     });
 }

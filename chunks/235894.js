@@ -1,17 +1,28 @@
-r.d(n, {
-    E: function () {
-        return o;
-    },
-    U: function () {
-        return a;
-    }
+n.d(t, {
+    Eq: () => s,
+    NV: () => o,
+    Uw: () => a
 });
-var i = r(477931);
+var i = n(358085),
+    r = n(477931);
 let a = (e) => {
-        var n;
-        return !!e.hasPotions() && (null !== (n = e.potions) && void 0 !== n ? n : []).some((e) => e.type === i.B.CONFETTI);
+        var t;
+        if (!e.hasPotions()) return !1;
+        let n = null !== (t = e.potions) && void 0 !== t ? t : [],
+            a = (0, i.isAndroid)();
+        return n.some((e) => e.type === r.B.CONFETTI && (!a || null != e.emoji[0].id));
     },
-    o = (e) => {
-        var n;
-        if (!!e.hasPotions()) return (null !== (n = e.potions) && void 0 !== n ? n : []).find((e) => e.type === i.B.CONFETTI);
-    };
+    s = (e) => {
+        var t;
+        if (e.hasPotions()) return (null !== (t = e.potions) && void 0 !== t ? t : []).find((e) => e.type === r.B.CONFETTI);
+    },
+    o = (e) =>
+        null != e.id
+            ? {
+                  id: e.id,
+                  name: e.name
+              }
+            : {
+                  name: e.optionallyDiverseSequence,
+                  id: void 0
+              };

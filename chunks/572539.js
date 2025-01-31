@@ -1,35 +1,31 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
-var o = n(200651);
+n.d(t, { Z: () => r });
+var i = n(200651);
 n(192379);
-var i = n(120356),
-    a = n.n(i),
-    l = n(481060),
+var l = n(120356),
+    o = n.n(l),
+    a = n(481060),
     s = n(259580),
-    r = n(995181);
-function u(e) {
-    let { options: t, onClick: n, className: i, optionClassName: u, hideCaret: c } = e;
-    return (0, o.jsx)('div', {
-        className: a()(r.root, i),
+    c = n(995181);
+function r(e) {
+    let { options: t, onClick: n, className: l, optionClassName: r, hideCaret: u } = e;
+    return (0, i.jsx)('div', {
+        className: o()(c.root, l),
         children: t.map((e, t) =>
-            (0, o.jsxs)(
-                l.Clickable,
+            (0, i.jsxs)(
+                a.P3F,
                 {
                     onClick: () => n(e),
-                    className: a()(r.option, u),
+                    className: o()(c.option, r),
                     children: [
-                        (0, o.jsx)(l.Text, {
-                            className: r.text,
+                        (0, i.jsx)(a.Text, {
+                            className: c.text,
                             color: 'none',
                             variant: 'text-md/normal',
                             children: e.label
                         }),
-                        !(null == c ? void 0 : c(e)) &&
-                            (0, o.jsx)(s.Z, {
-                                className: r.caret,
+                        !(null == u ? void 0 : u(e)) &&
+                            (0, i.jsx)(s.Z, {
+                                className: c.caret,
                                 direction: s.Z.Directions.RIGHT
                             })
                     ]

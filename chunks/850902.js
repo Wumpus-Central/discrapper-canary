@@ -1,36 +1,31 @@
-t.r(e),
-    t.d(e, {
-        default: function () {
-            return c;
-        }
-    });
-var i = t(200651);
-t(192379);
-var r = t(481060),
-    o = t(239091),
-    l = t(388032);
+e.d(t, { default: () => c });
+var i = e(200651);
+e(192379);
+var l = e(481060),
+    o = e(239091),
+    r = e(388032);
 function c(n) {
-    let { roleId: e, onLeaveRole: t, onSelect: c } = n;
+    let { roleId: t, onLeaveRole: e, onSelect: c } = n;
     return (0, i.jsx)(
-        r.Menu,
+        l.v2r,
         {
             navId: 'guild-role-connections-context',
-            'aria-label': l.intl.string(l.t.vytvJC),
+            'aria-label': r.intl.string(r.t.vytvJC),
             onClose: o.Zy,
             onSelect: c,
-            children: (0, i.jsx)(r.MenuGroup, {
+            children: (0, i.jsx)(l.kSQ, {
                 children: (0, i.jsx)(
-                    r.MenuItem,
+                    l.sNh,
                     {
                         id: 'guild-role-connections-leave-role',
-                        label: l.intl.string(l.t.vytvJC),
-                        action: t,
+                        label: r.intl.string(r.t.vytvJC),
+                        action: e,
                         color: 'danger'
                     },
-                    e
+                    t
                 )
             })
         },
-        e
+        t
     );
 }

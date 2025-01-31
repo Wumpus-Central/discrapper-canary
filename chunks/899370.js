@@ -1,38 +1,33 @@
+n.d(t, { Z: () => g });
 var i,
     r,
-    s,
     l,
-    o = n(973361),
-    a = n(442837),
-    c = n(570140),
-    d = n(358085),
-    u = n(723359);
-let h = null,
-    g = 'underage';
-class f extends (l = a.ZP.Store) {
+    a = n(973361),
+    o = n(442837),
+    s = n(570140),
+    c = n(358085),
+    d = n(723359);
+let u = null,
+    h = 'underage';
+class _ extends (l = o.ZP.Store) {
     isUnderageAnonymous() {
-        if (d.isPlatformEmbedded) {
-            if (null != h && h + u.k0 > Date.now()) return !0;
-        } else return null != o.parse(document.cookie)[g];
-        return !1;
+        return c.isPlatformEmbedded ? !!(null != u && u + d.k0 > Date.now()) : null != a.parse(document.cookie)[h];
     }
 }
-(s = 'AgeGateStore'),
-    (r = 'displayName') in (i = f)
-        ? Object.defineProperty(i, r, {
-              value: s,
+(r = 'AgeGateStore'),
+    (i = 'displayName') in _
+        ? Object.defineProperty(_, i, {
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[r] = s),
-    (t.Z = new f(c.Z, {
-        AGE_GATE_PREVENT_UNDERAGE_REGISTRATION: function () {
-            h = Date.now();
-            document.cookie = ''.concat(g, '=1;path=/');
-        },
-        LOGIN_SUCCESS: function () {
-            h = null;
-            document.cookie = ''.concat(g, '=1;path=/;max-age=0');
-        }
-    }));
+        : (_[i] = r);
+let g = new _(s.Z, {
+    AGE_GATE_PREVENT_UNDERAGE_REGISTRATION: function () {
+        (u = Date.now()), (document.cookie = ''.concat(h, '=1;path=/'));
+    },
+    LOGIN_SUCCESS: function () {
+        (u = null), (document.cookie = ''.concat(h, '=1;path=/;max-age=0'));
+    }
+});

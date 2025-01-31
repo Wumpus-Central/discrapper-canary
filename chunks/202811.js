@@ -1,75 +1,68 @@
-r.d(t, {
-    Fv: function () {
-        return E;
-    },
-    Qy: function () {
-        return function e(t, r = 3, a = 102400) {
-            let n = E(t, r);
-            return (function (e) {
-                return ~-encodeURI(JSON.stringify(e)).split(/%..|./).length;
-            })(n) > a
-                ? e(t, r - 1, a)
-                : n;
-        };
-    }
+a.d(e, {
+    Fv: () => i,
+    Qy: () =>
+        function t(e, a = 3, r = 102400) {
+            let n = i(e, a);
+            return ~-encodeURI(JSON.stringify(n)).split(/%..|./).length > r ? t(e, a - 1, r) : n;
+        }
 });
-var a = r(573736),
-    n = r(41754),
-    _ = r(370336),
-    o = r(688838);
-function E(e, t = 100, r = Infinity) {
+var r = a(573736),
+    n = a(41754),
+    o = a(370336),
+    _ = a(688838);
+function i(t, e = 100, a = Infinity) {
     try {
-        return (function e(t, r, E = Infinity, i = Infinity, c = (0, n.i)()) {
-            let [s, l] = c;
-            if (null == r || (['number', 'boolean', 'string'].includes(typeof r) && !Number.isNaN(r))) return r;
-            let I = (function (e, t) {
+        return (function t(e, a, i = Infinity, c = Infinity, s = (0, n.i)()) {
+            let [E, l] = s;
+            if (null == a || (['number', 'boolean', 'string'].includes(typeof a) && !Number.isNaN(a))) return a;
+            let u = (function (t, e) {
                 try {
-                    if ('domain' === e && t && 'object' == typeof t && t._events) return '[Domain]';
-                    if ('domainEmitter' === e) return '[DomainEmitter]';
-                    if ('undefined' != typeof global && t === global) return '[Global]';
-                    if ('undefined' != typeof window && t === window) return '[Window]';
-                    if ('undefined' != typeof document && t === document) return '[Document]';
-                    if ((0, a.y1)(t)) return '[VueViewModel]';
-                    if ((0, a.Cy)(t)) return '[SyntheticEvent]';
-                    if ('number' == typeof t && t != t) return '[NaN]';
-                    if ('function' == typeof t) return `[Function: ${(0, o.$P)(t)}]`;
-                    if ('symbol' == typeof t) return `[${String(t)}]`;
-                    if ('bigint' == typeof t) return `[BigInt: ${String(t)}]`;
-                    let r = (function (e) {
-                        let t = Object.getPrototypeOf(e);
-                        return t ? t.constructor.name : 'null prototype';
-                    })(t);
-                    if (/^HTML(\w*)Element$/.test(r)) return `[HTMLElement: ${r}]`;
-                    return `[object ${r}]`;
-                } catch (e) {
-                    return `**non-serializable** (${e})`;
+                    if ('domain' === t && e && 'object' == typeof e && e._events) return '[Domain]';
+                    if ('domainEmitter' === t) return '[DomainEmitter]';
+                    if ('undefined' != typeof global && e === global) return '[Global]';
+                    if ('undefined' != typeof window && e === window) return '[Window]';
+                    if ('undefined' != typeof document && e === document) return '[Document]';
+                    if ((0, r.y1)(e)) return '[VueViewModel]';
+                    if ((0, r.Cy)(e)) return '[SyntheticEvent]';
+                    if ('number' == typeof e && e != e) return '[NaN]';
+                    if ('function' == typeof e) return `[Function: ${(0, _.$P)(e)}]`;
+                    if ('symbol' == typeof e) return `[${String(e)}]`;
+                    if ('bigint' == typeof e) return `[BigInt: ${String(e)}]`;
+                    let a = (function (t) {
+                        let e = Object.getPrototypeOf(t);
+                        return e ? e.constructor.name : 'null prototype';
+                    })(e);
+                    if (/^HTML(\w*)Element$/.test(a)) return `[HTMLElement: ${a}]`;
+                    return `[object ${a}]`;
+                } catch (t) {
+                    return `**non-serializable** (${t})`;
                 }
-            })(t, r);
-            if (!I.startsWith('[object ')) return I;
-            if (r.__sentry_skip_normalization__) return r;
-            let u = 'number' == typeof r.__sentry_override_normalization_depth__ ? r.__sentry_override_normalization_depth__ : E;
-            if (0 === u) return I.replace('object ', '');
-            if (s(r)) return '[Circular ~]';
-            if (r && 'function' == typeof r.toJSON)
+            })(e, a);
+            if (!u.startsWith('[object ')) return u;
+            if (a.__sentry_skip_normalization__) return a;
+            let I = 'number' == typeof a.__sentry_override_normalization_depth__ ? a.__sentry_override_normalization_depth__ : i;
+            if (0 === I) return u.replace('object ', '');
+            if (E(a)) return '[Circular ~]';
+            if (a && 'function' == typeof a.toJSON)
                 try {
-                    let t = r.toJSON();
-                    return e('', t, u - 1, i, c);
-                } catch (e) {}
-            let R = Array.isArray(r) ? [] : {},
-                A = 0,
-                T = (0, _.Sh)(r);
-            for (let t in T) {
-                if (!Object.prototype.hasOwnProperty.call(T, t)) continue;
-                if (A >= i) {
-                    R[t] = '[MaxProperties ~]';
+                    let e = a.toJSON();
+                    return t('', e, I - 1, c, s);
+                } catch (t) {}
+            let R = Array.isArray(a) ? [] : {},
+                d = 0,
+                A = (0, o.Sh)(a);
+            for (let e in A) {
+                if (!Object.prototype.hasOwnProperty.call(A, e)) continue;
+                if (d >= c) {
+                    R[e] = '[MaxProperties ~]';
                     break;
                 }
-                let r = T[t];
-                (R[t] = e(t, r, u - 1, i, c)), A++;
+                let a = A[e];
+                (R[e] = t(e, a, I - 1, c, s)), d++;
             }
-            return l(r), R;
-        })('', e, t, r);
-    } catch (e) {
-        return { ERROR: `**non-serializable** (${e})` };
+            return l(a), R;
+        })('', t, e, a);
+    } catch (t) {
+        return { ERROR: `**non-serializable** (${t})` };
     }
 }

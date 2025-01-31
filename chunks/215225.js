@@ -1,11 +1,13 @@
-e.exports = {
-    text: 'text_d7ebeb',
-    ellipsis: 'ellipsis_d7ebeb',
-    typingDots: 'typingDots_d7ebeb',
-    typing: 'typing_d7ebeb base_d7ebeb',
-    isComboing: 'isComboing_d7ebeb',
-    activityInviteEducation: 'activityInviteEducation_d7ebeb base_d7ebeb',
-    activityInviteEducationFadeIn: 'activityInviteEducationFadeIn_d7ebeb',
-    activityInviteEducationArrow: 'activityInviteEducationArrow_d7ebeb',
-    activityInviteEducationLeftArrow: 'activityInviteEducationLeftArrow_d7ebeb'
+var i = {
+    base: 'base_b88801',
+    text: 'text_b88801',
+    ellipsis: 'ellipsis_b88801',
+    typingDots: 'typingDots_b88801',
+    typing: 'typing_b88801 base_b88801',
+    isComboing: 'isComboing_b88801',
+    activityInviteEducation: 'activityInviteEducation_b88801 base_b88801',
+    activityInviteEducationFadeIn: 'activityInviteEducationFadeIn_b88801',
+    activityInviteEducationArrow: 'activityInviteEducationArrow_b88801',
+    activityInviteEducationLeftArrow: 'activityInviteEducationLeftArrow_b88801'
 };
+e.exports = i;

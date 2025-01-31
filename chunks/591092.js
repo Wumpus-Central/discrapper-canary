@@ -1,30 +1,30 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    function n(e, n) {
-        var r = e.split('_');
-        return n % 10 == 1 && n % 100 != 11 ? r[0] : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? r[1] : r[2];
+    function t(e, t) {
+        var n = e.split('_');
+        return t % 10 == 1 && t % 100 != 11 ? n[0] : t % 10 >= 2 && t % 10 <= 4 && (t % 100 < 10 || t % 100 >= 20) ? n[1] : n[2];
     }
-    function r(e, r, i) {
-        var a = {
-            ss: r ? 'секунда_секунди_секунд' : 'секунду_секунди_секунд',
-            mm: r ? 'хвилина_хвилини_хвилин' : 'хвилину_хвилини_хвилин',
-            hh: r ? 'година_години_годин' : 'годину_години_годин',
+    function n(e, n, i) {
+        var r = {
+            ss: n ? 'секунда_секунди_секунд' : 'секунду_секунди_секунд',
+            mm: n ? 'хвилина_хвилини_хвилин' : 'хвилину_хвилини_хвилин',
+            hh: n ? 'година_години_годин' : 'годину_години_годин',
             dd: 'день_дні_днів',
             MM: 'місяць_місяці_місяців',
             yy: 'рік_роки_років'
         };
-        return 'm' === i ? (r ? 'хвилина' : 'хвилину') : 'h' === i ? (r ? 'година' : 'годину') : e + ' ' + n(a[i], +e);
+        return 'm' === i ? (n ? 'хвилина' : 'хвилину') : 'h' === i ? (n ? 'година' : 'годину') : e + ' ' + t(r[i], +e);
     }
-    function i(e, n) {
-        var r = {
+    function i(e, t) {
+        var n = {
             nominative: 'неділя_понеділок_вівторок_середа_четвер_п\u2019ятниця_субота'.split('_'),
             accusative: 'неділю_понеділок_вівторок_середу_четвер_п\u2019ятницю_суботу'.split('_'),
             genitive: 'неділі_понеділка_вівторка_середи_четверга_п\u2019ятниці_суботи'.split('_')
         };
-        return e ? r[/(\[[ВвУу]\]) ?dddd/.test(n) ? 'accusative' : /\[?(?:минулої|наступної)? ?\] ?dddd/.test(n) ? 'genitive' : 'nominative'][e.day()] : r.nominative;
+        return e ? n[/(\[[ВвУу]\]) ?dddd/.test(t) ? 'accusative' : /\[?(?:минулої|наступної)? ?\] ?dddd/.test(t) ? 'genitive' : 'nominative'][e.day()] : n.nominative;
     }
-    function a(e) {
+    function r(e) {
         return function () {
             return e + 'о' + (11 === this.hours() ? 'б' : '') + '] LT';
         };
@@ -47,21 +47,21 @@
             LLLL: 'dddd, D MMMM YYYY р., HH:mm'
         },
         calendar: {
-            sameDay: a('[Сьогодні '),
-            nextDay: a('[Завтра '),
-            lastDay: a('[Вчора '),
-            nextWeek: a('[У] dddd ['),
+            sameDay: r('[Сьогодні '),
+            nextDay: r('[Завтра '),
+            lastDay: r('[Вчора '),
+            nextWeek: r('[У] dddd ['),
             lastWeek: function () {
                 switch (this.day()) {
                     case 0:
                     case 3:
                     case 5:
                     case 6:
-                        return a('[Минулої] dddd [').call(this);
+                        return r('[Минулої] dddd [').call(this);
                     case 1:
                     case 2:
                     case 4:
-                        return a('[Минулого] dddd [').call(this);
+                        return r('[Минулого] dddd [').call(this);
                 }
             },
             sameElse: 'L'
@@ -70,31 +70,28 @@
             future: 'за %s',
             past: '%s тому',
             s: 'декілька секунд',
-            ss: r,
-            m: r,
-            mm: r,
+            ss: n,
+            m: n,
+            mm: n,
             h: 'годину',
-            hh: r,
+            hh: n,
             d: 'день',
-            dd: r,
+            dd: n,
             M: 'місяць',
-            MM: r,
+            MM: n,
             y: 'рік',
-            yy: r
+            yy: n
         },
         meridiemParse: /ночі|ранку|дня|вечора/,
         isPM: function (e) {
             return /^(дня|вечора)$/.test(e);
         },
-        meridiem: function (e, n, r) {
-            if (e < 4) return 'ночі';
-            if (e < 12) return 'ранку';
-            if (e < 17) return 'дня';
-            else return 'вечора';
+        meridiem: function (e, t, n) {
+            return e < 4 ? 'ночі' : e < 12 ? 'ранку' : e < 17 ? 'дня' : 'вечора';
         },
         dayOfMonthOrdinalParse: /\d{1,2}-(й|го)/,
-        ordinal: function (e, n) {
-            switch (n) {
+        ordinal: function (e, t) {
+            switch (t) {
                 case 'M':
                 case 'd':
                 case 'DDD':

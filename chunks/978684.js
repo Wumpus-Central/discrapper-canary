@@ -1,50 +1,49 @@
-r.d(n, {
-    J: function () {
-        return p;
-    }
-});
-var i = r(47120);
-var a = r(298444),
-    o = r(570140),
-    s = r(447543),
-    l = r(147913),
-    u = r(314897),
-    c = r(358085),
-    d = r(981631);
-function f(e, n, r) {
+n.d(t, {
+    J: () => d,
+    Z: () => _
+}),
+    n(47120);
+var i = n(298444),
+    r = n(570140),
+    a = n(447543),
+    s = n(147913),
+    o = n(314897),
+    l = n(358085),
+    u = n(981631);
+function c(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let p = 'guestInviteToAccept';
-class h extends l.Z {
+let d = 'guestInviteToAccept';
+class f extends s.Z {
     constructor(...e) {
         super(...e),
-            f(this, 'actions', { POST_CONNECTION_OPEN: () => this.handleConnectionOpen() }),
-            f(this, 'handleConnectionOpen', async () => {
-                if ((0, c.isWeb)()) {
-                    let e = a.x.get(p);
-                    if (null != e && 'string' == typeof e && u.default.isAuthenticated()) {
-                        let { invite: n } = await s.Z.resolveInvite(e, 'Desktop Modal');
-                        null != n &&
-                            (o.Z.dispatch({
+            c(this, 'actions', { POST_CONNECTION_OPEN: () => this.handleConnectionOpen() }),
+            c(this, 'handleConnectionOpen', async () => {
+                if ((0, l.isWeb)()) {
+                    let e = i.x.get(d);
+                    if (null != e && 'string' == typeof e && o.default.isAuthenticated()) {
+                        let { invite: t } = await a.Z.resolveInvite(e, 'Desktop Modal');
+                        null != t &&
+                            (r.Z.dispatch({
                                 type: 'INVITE_MODAL_OPEN',
-                                invite: n,
+                                invite: t,
                                 code: e,
-                                context: d.IlC.APP
+                                context: u.IlC.APP
                             }),
-                            a.x.remove(p));
+                            i.x.remove(d));
                     }
                 }
             });
     }
 }
-n.Z = new h();
+let _ = new f();

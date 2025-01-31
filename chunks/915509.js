@@ -1,59 +1,54 @@
-t.d(n, {
-    Z: function () {
-        return u;
-    }
-}),
-    t(47120);
-var l = t(200651),
-    a = t(192379),
-    o = t(120356),
-    r = t.n(o),
-    i = t(481060),
-    s = t(313201),
-    c = t(388032),
-    d = t(945330);
+l.d(n, { Z: () => u }), l(47120);
+var t = l(200651),
+    a = l(192379),
+    r = l(120356),
+    i = l.n(r),
+    o = l(481060),
+    s = l(313201),
+    c = l(388032),
+    d = l(945330);
 function u(e) {
-    let { errorText: n, title: t, description: o, transitionState: u, onCancel: f, onConfirm: m, children: g } = e,
-        h = (0, s.Dt)(),
-        [p, x] = a.useState(!1),
-        C = a.useCallback(async () => {
-            x(!0);
+    let { errorText: n, title: l, description: r, transitionState: u, onCancel: m, onConfirm: x, children: h } = e,
+        g = (0, s.Dt)(),
+        [p, _] = a.useState(!1),
+        b = a.useCallback(async () => {
+            _(!0);
             try {
-                await m();
+                await x();
             } catch (e) {
                 throw e;
             } finally {
-                x(!1);
+                _(!1);
             }
-        }, [m]);
-    return (0, l.jsxs)(i.ModalRoot, {
+        }, [x]);
+    return (0, t.jsxs)(o.Y0X, {
         className: d.modal,
         transitionState: u,
-        'aria-labelledby': h,
-        size: i.ModalSize.SMALL,
+        'aria-labelledby': g,
+        size: o.CgR.SMALL,
         children: [
-            (0, l.jsxs)(i.ModalContent, {
+            (0, t.jsxs)(o.hzk, {
                 className: d.modalContent,
                 children: [
-                    (0, l.jsx)(i.Heading, {
+                    (0, t.jsx)(o.X6q, {
                         variant: 'heading-md/semibold',
-                        id: h,
-                        children: t
+                        id: g,
+                        children: l
                     }),
-                    null != o && '' !== o
-                        ? (0, l.jsx)(i.Text, {
+                    null != r && '' !== r
+                        ? (0, t.jsx)(o.Text, {
                               variant: 'text-sm/normal',
                               color: 'header-secondary',
                               className: d.description,
-                              children: o
+                              children: r
                           })
                         : null,
-                    (0, l.jsx)('div', {
+                    (0, t.jsx)('div', {
                         className: d.body,
-                        children: g
+                        children: h
                     }),
                     null != n && '' !== n
-                        ? (0, l.jsx)(i.Text, {
+                        ? (0, t.jsx)(o.Text, {
                               className: d.errorText,
                               variant: 'text-xs/normal',
                               color: 'text-danger',
@@ -62,21 +57,21 @@ function u(e) {
                         : null
                 ]
             }),
-            (0, l.jsxs)(i.ModalFooter, {
+            (0, t.jsxs)(o.mzw, {
                 children: [
-                    (0, l.jsx)(i.Button, {
+                    (0, t.jsx)(o.zxk, {
                         submitting: p,
                         className: d.button,
-                        size: i.Button.Sizes.SMALL,
-                        color: i.Button.Colors.BRAND,
-                        onClick: C,
+                        size: o.zxk.Sizes.SMALL,
+                        color: o.zxk.Colors.BRAND,
+                        onClick: b,
                         children: c.intl.string(c.t.R3BPHx)
                     }),
-                    (0, l.jsx)(i.Button, {
-                        className: r()(d.cancelButton, d.button),
-                        size: i.Button.Sizes.SMALL,
-                        color: i.Button.Colors.PRIMARY,
-                        onClick: f,
+                    (0, t.jsx)(o.zxk, {
+                        className: i()(d.cancelButton, d.button),
+                        size: o.zxk.Sizes.SMALL,
+                        color: o.zxk.Colors.PRIMARY,
+                        onClick: m,
                         children: c.intl.string(c.t['ETE/oK'])
                     })
                 ]

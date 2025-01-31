@@ -1,80 +1,76 @@
-r.d(n, {
-    Z: function () {
-        return T;
-    }
-});
-var i = r(200651),
-    a = r(192379),
-    o = r(442837),
-    s = r(481060),
-    l = r(686546),
-    u = r(544384),
-    c = r(76021),
-    d = r(592125),
-    f = r(594174),
-    p = r(834348),
-    h = r(74538),
-    _ = r(618158),
-    m = r(871499),
-    g = r(981631),
-    E = r(474936),
-    v = r(388032),
-    y = r(556656);
-function b(e) {
-    let { className: n } = e;
-    return (0, i.jsx)(s.SettingsIcon, {
+n.d(t, { Z: () => b });
+var i = n(200651),
+    r = n(192379),
+    a = n(442837),
+    s = n(481060),
+    o = n(686546),
+    l = n(544384),
+    u = n(76021),
+    c = n(592125),
+    d = n(594174),
+    f = n(834348),
+    _ = n(74538),
+    p = n(618158),
+    h = n(871499),
+    m = n(981631),
+    g = n(474936),
+    E = n(388032),
+    v = n(556656);
+function y(e) {
+    let { className: t } = e;
+    return (0, i.jsx)(s.ewm, {
         size: 'md',
         color: 'currentColor',
-        className: n
+        className: t
     });
 }
 function I(e) {
-    let { className: n } = e;
-    return (0, i.jsxs)(a.Fragment, {
+    let { className: t } = e;
+    return (0, i.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)(l.ZP, {
-                className: n,
-                mask: l.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
-                children: (0, i.jsx)(b, {})
+            (0, i.jsx)(o.ZP, {
+                className: t,
+                mask: o.ZP.Masks.HEADER_BAR_BADGE_BOTTOM,
+                children: (0, i.jsx)(y, {})
             }),
-            (0, i.jsx)(p.Z, { className: y.badgeUpgrade })
+            (0, i.jsx)(f.Z, { className: v.badgeUpgrade })
         ]
     });
 }
-function T(e) {
-    let { hideBadges: n = !1, stream: r, ...l } = e,
-        p = (0, o.e7)([f.default], () => h.ZP.isPremium(f.default.getCurrentUser(), E.p9.TIER_1)),
-        y = (0, o.e7)([d.Z], () => d.Z.getChannel(null == r ? void 0 : r.channelId)),
-        T = a.useMemo(() => (null != r ? [r] : []), [r]),
-        S = a.useCallback(() => {
-            null != y && (0, c.Z)(y.getGuildId(), y.id, g.jXE.STREAM_SETTINGS);
-        }, [y]);
-    if (null == r || null == y) return null;
-    let A = b;
+function b(e) {
+    let { hideBadges: t = !1, stream: n, ...o } = e,
+        f = (0, a.e7)([d.default], () => _.ZP.isPremium(d.default.getCurrentUser(), g.p9.TIER_1)),
+        v = (0, a.e7)([c.Z], () => c.Z.getChannel(null == n ? void 0 : n.channelId)),
+        b = r.useMemo(() => (null != n ? [n] : []), [n]),
+        T = r.useCallback(() => {
+            null != v && (0, u.Z)(v.getGuildId(), v.id, m.jXE.STREAM_SETTINGS);
+        }, [v]);
+    if (null == n || null == v) return null;
+    let S = y;
     return (
-        !n && !p && (A = I),
-        (0, i.jsx)(s.Popout, {
+        t || f || (S = I),
+        (0, i.jsx)(s.yRy, {
             position: 'top',
             renderPopout: (e) => {
-                let { closePopout: n } = e;
-                return (0, i.jsx)(_.Z, {
-                    children: (0, i.jsx)(u.Z, {
-                        channel: y,
-                        currentUser: f.default.getCurrentUser(),
-                        activeStreams: T,
-                        onClose: n,
+                let { closePopout: t } = e;
+                return (0, i.jsx)(p.Z, {
+                    children: (0, i.jsx)(l.Z, {
+                        channel: v,
+                        currentUser: d.default.getCurrentUser(),
+                        activeStreams: b,
+                        onClose: t,
                         showReportOption: !0,
-                        handleGoLive: S
+                        handleGoLive: T
                     })
                 });
             },
-            animation: s.Popout.Animation.FADE,
+            animation: s.yRy.Animation.FADE,
             children: (e) =>
-                (0, i.jsx)(m.Z, {
+                (0, i.jsx)(h.Z, {
                     ...e,
-                    label: v.intl.string(v.t.tmiYpK),
-                    iconComponent: A,
-                    ...l
+                    label: E.intl.string(E.t.tmiYpK),
+                    iconComponent: S,
+                    ...o
                 })
         })
     );

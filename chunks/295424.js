@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });
 function i(e) {
     return {
         name: e.name,

@@ -1,13 +1,3 @@
-var i, l;
-t.d(n, {
-    o: function () {
-        return i;
-    }
-}),
-    t(47120),
-    ((l = i || (i = {}))[(l.LIST = 1)] = 'LIST'),
-    (l[(l.LIST_WITH_IMAGE = 2)] = 'LIST_WITH_IMAGE'),
-    (l[(l.GALLERY = 3)] = 'GALLERY'),
-    (l[(l.EXPANDABLE_LIST = 4)] = 'EXPANDABLE_LIST'),
-    (l[(l.BANNER_CARDS = 5)] = 'BANNER_CARDS'),
-    (l[(l.SMALL_BANNER_CARDS = 6)] = 'SMALL_BANNER_CARDS');
+n.d(t, { o: () => l }), n(47120);
+var i,
+    l = (((i = {})[(i.LIST = 1)] = 'LIST'), (i[(i.LIST_WITH_IMAGE = 2)] = 'LIST_WITH_IMAGE'), (i[(i.GALLERY = 3)] = 'GALLERY'), (i[(i.EXPANDABLE_LIST = 4)] = 'EXPANDABLE_LIST'), (i[(i.BANNER_CARDS = 5)] = 'BANNER_CARDS'), (i[(i.SMALL_BANNER_CARDS = 6)] = 'SMALL_BANNER_CARDS'), i);

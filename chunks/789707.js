@@ -1,41 +1,37 @@
-r.d(n, {
-    Z: function () {
-        return u;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(481060),
-    o = r(499033),
-    s = r(388032),
-    l = r(454227);
-function u() {
+n.d(t, { Z: () => l });
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(499033),
+    s = n(388032),
+    o = n(454227);
+function l() {
     return (0, i.jsxs)('div', {
-        className: l.container,
+        className: o.container,
         children: [
             (0, i.jsxs)('div', {
-                className: l.iconContainer,
+                className: o.iconContainer,
                 children: [
                     (0, i.jsx)('div', {
-                        className: l.icon,
-                        children: (0, i.jsx)(a.TopicsIcon, {
+                        className: o.icon,
+                        children: (0, i.jsx)(r.sVe, {
                             size: 'custom',
                             color: 'currentColor',
-                            className: l.iconOffset,
+                            className: o.iconOffset,
                             width: 28,
                             height: 28
                         })
                     }),
-                    (0, i.jsx)(o.Z, { className: l.stars })
+                    (0, i.jsx)(a.Z, { className: o.stars })
                 ]
             }),
-            (0, i.jsx)(a.Heading, {
-                className: l.header,
+            (0, i.jsx)(r.X6q, {
+                className: o.header,
                 variant: 'heading-xl/semibold',
                 children: s.intl.string(s.t.yJHJen)
             }),
-            (0, i.jsx)(a.Text, {
-                className: l.text,
+            (0, i.jsx)(r.Text, {
+                className: o.text,
                 color: 'header-secondary',
                 variant: 'text-md/normal',
                 children: s.intl.string(s.t.p2dIh4)

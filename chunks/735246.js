@@ -1,31 +1,26 @@
-r.d(n, {
-    T: function () {
-        return p;
-    }
-});
-var i = r(47120);
-var a = r(200651),
-    o = r(232713),
-    s = r(442837),
-    l = r(241601),
-    u = r(406128),
-    c = r(706454),
-    d = r(388032),
-    f = r(232833);
-function p(e) {
-    let { children: n } = e,
-        r = (0, s.e7)([c.default], () => c.default.locale),
-        [i, p] = (0, l.R_)((e) => [e.isLoading, e.error], o.X);
-    return null != p
-        ? (0, a.jsx)(u.Z, {
-              title: d.intl.formatToPlainString(d.t['7basa2'], { locale: r }),
-              note: (0, a.jsx)('span', { children: p.message })
+n.d(t, { T: () => d }), n(47120);
+var i = n(200651),
+    r = n(232713),
+    a = n(442837),
+    s = n(241601),
+    o = n(406128),
+    l = n(706454),
+    u = n(388032),
+    c = n(232833);
+function d(e) {
+    let { children: t } = e,
+        n = (0, a.e7)([l.default], () => l.default.locale),
+        [d, f] = (0, s.R_)((e) => [e.isLoading, e.error], r.X);
+    return null != f
+        ? (0, i.jsx)(o.Z, {
+              title: u.intl.formatToPlainString(u.t['7basa2'], { locale: n }),
+              note: (0, i.jsx)('span', { children: f.message })
           })
-        : i
+        : d
           ? __OVERLAY__
               ? null
-              : (0, a.jsx)('div', { className: f.loading })
-          : null != n
-            ? n
+              : (0, i.jsx)('div', { className: c.loading })
+          : null != t
+            ? t
             : null;
 }

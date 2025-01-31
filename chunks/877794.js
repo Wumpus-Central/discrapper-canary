@@ -1,116 +1,108 @@
-n.d(e, {
-    Z: function () {
-        return E;
-    }
-}),
-    n(47120);
+n.d(e, { Z: () => p }), n(47120);
 var l = n(200651),
     i = n(192379),
-    c = n(513431),
-    r = n(442837),
-    u = n(481060),
-    a = n(295866),
-    s = n(398327),
-    o = n(63063),
+    c = n(374470),
+    s = n(442837),
+    a = n(481060),
+    r = n(295866),
+    o = n(398327),
+    u = n(63063),
     d = n(601993),
-    f = n(981631),
-    p = n(388032);
-function E(t) {
+    h = n(981631),
+    E = n(388032);
+function p(t) {
     let { text: e = '', target: n } = t,
-        E = (0, r.e7)([s.Z], () => s.Z.isEnabled()),
-        h = (0, r.e7)([s.Z], () => s.Z.hasLearnedWord(e), [e]),
-        m = i.useRef({
+        p = (0, s.e7)([o.Z], () => o.Z.isEnabled()),
+        f = (0, s.e7)([o.Z], () => o.Z.hasLearnedWord(e), [e]),
+        k = i.useRef({
             ...t,
-            spellcheckEnabled: E
+            spellcheckEnabled: p
         });
-    m.current = {
+    k.current = {
         ...t,
-        spellcheckEnabled: E
+        spellcheckEnabled: p
     };
-    let M = i.useRef(!1),
-        [b, x] = i.useState(!1),
-        [k, C] = i.useState([]),
-        L = i.useCallback(() => {
-            let { spellcheckEnabled: t, text: e, onHeightUpdate: n } = m.current;
+    let b = i.useRef(!1),
+        [x, C] = i.useState(!1),
+        [L, S] = i.useState([]),
+        N = i.useCallback(() => {
+            let { spellcheckEnabled: t, text: e, onHeightUpdate: n } = k.current;
             t &&
                 (0, d.Gb)() &&
                 Promise.all([(0, d.f5)(e, !0), (0, d.WA)(e, !0)]).then((t) => {
                     let [e, l] = t;
-                    M.current && (x(e), C(l), n());
+                    b.current && (C(e), S(l), n());
                 });
         }, []),
-        T = i.useCallback(() => {
+        m = i.useCallback(() => {
             if ((0, c.k)(n, HTMLInputElement) || (0, c.k)(n, HTMLTextAreaElement)) {
                 let { selectionStart: t, selectionEnd: e, value: l } = n;
                 (n.value = ''), (n.value = l), 'email' !== n.type && ((n.selectionStart = t), (n.selectionEnd = e));
             }
         }, [n]);
-    if (
-        (i.useEffect(() => {
-            let t = (0, d.RD)(L);
-            return (
-                (M.current = !0),
-                () => {
-                    (M.current = !1), t();
-                }
-            );
-        }, [L]),
-        i.useEffect(() => {
-            L();
-        }, [e, E, L]),
-        !(0, d.Gb)())
-    )
-        return [null, null];
-    let Z = k.map((t, e) =>
-        (0, l.jsx)(
-            u.MenuItem,
-            {
-                id: 'correction-'.concat(e),
-                label: t,
-                action: () => {
-                    (0, d.Rs)(t), n.focus();
-                }
-            },
-            'correction-'.concat(e)
-        )
-    );
-    return [
-        Z,
-        (0, l.jsxs)(l.Fragment, {
-            children: [
-                b
-                    ? (0, l.jsx)(u.MenuItem, {
-                          id: 'add-to-dictionary',
-                          label: p.intl.string(p.t.HJmG1N),
+    return (i.useEffect(() => {
+        let t = (0, d.RD)(N);
+        return (
+            (b.current = !0),
+            () => {
+                (b.current = !1), t();
+            }
+        );
+    }, [N]),
+    i.useEffect(() => {
+        N();
+    }, [e, p, N]),
+    (0, d.Gb)())
+        ? [
+              L.map((t, e) =>
+                  (0, l.jsx)(
+                      a.sNh,
+                      {
+                          id: 'correction-'.concat(e),
+                          label: t,
                           action: () => {
-                              (0, a.D0)(e), T();
+                              (0, d.Rs)(t), n.focus();
                           }
-                      })
-                    : null,
-                h &&
-                    (0, l.jsx)(u.MenuItem, {
-                        id: 'remove-from-dictionary',
-                        label: p.intl.string(p.t.xXqIX1),
-                        action: () => {
-                            (0, a.lE)(e), T();
-                        }
-                    }),
-                (0, l.jsx)(u.MenuCheckboxItem, {
-                    id: 'spellcheck',
-                    label: p.intl.string(p.t.TKkotb),
-                    checked: E,
-                    action: () => {
-                        (0, a.kY)(), T();
-                    }
-                }),
-                E
-                    ? (0, l.jsx)(u.MenuItem, {
-                          id: 'languages',
-                          label: p.intl.string(p.t.OlOHDA),
-                          action: () => window.open(o.Z.getArticleURL(f.BhN.SPELLCHECK))
-                      })
-                    : null
-            ]
-        })
-    ];
+                      },
+                      'correction-'.concat(e)
+                  )
+              ),
+              (0, l.jsxs)(l.Fragment, {
+                  children: [
+                      x
+                          ? (0, l.jsx)(a.sNh, {
+                                id: 'add-to-dictionary',
+                                label: E.intl.string(E.t.HJmG1N),
+                                action: () => {
+                                    (0, r.D0)(e), m();
+                                }
+                            })
+                          : null,
+                      f &&
+                          (0, l.jsx)(a.sNh, {
+                              id: 'remove-from-dictionary',
+                              label: E.intl.string(E.t.xXqIX1),
+                              action: () => {
+                                  (0, r.lE)(e), m();
+                              }
+                          }),
+                      (0, l.jsx)(a.S89, {
+                          id: 'spellcheck',
+                          label: E.intl.string(E.t.TKkotb),
+                          checked: p,
+                          action: () => {
+                              (0, r.kY)(), m();
+                          }
+                      }),
+                      p
+                          ? (0, l.jsx)(a.sNh, {
+                                id: 'languages',
+                                label: E.intl.string(E.t.OlOHDA),
+                                action: () => window.open(u.Z.getArticleURL(h.BhN.SPELLCHECK))
+                            })
+                          : null
+                  ]
+              })
+          ]
+        : [null, null];
 }

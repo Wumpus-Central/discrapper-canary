@@ -1,15 +1,13 @@
 n.d(t, {
-    u0: function () {
-        return r;
-    }
+    ZP: () => p,
+    u0: () => a
 });
 var i,
-    r,
     s = n(200651);
 n(192379);
-var a = n(780384),
-    l = n(410030);
-((i = r || (r = {}))[(i.TOP = 0)] = 'TOP'), (i[(i.BOTTOM = 1)] = 'BOTTOM');
+var r = n(780384),
+    l = n(410030),
+    a = (((i = {})[(i.TOP = 0)] = 'TOP'), (i[(i.BOTTOM = 1)] = 'BOTTOM'), i);
 let o = 'premium_tier_2_gradient',
     c = 'premium_tier_2_fill',
     d = 'white_gradient',
@@ -63,7 +61,7 @@ let o = 'premium_tier_2_gradient',
             })
         ]
     }),
-    g = (0, s.jsxs)('linearGradient', {
+    h = (0, s.jsxs)('linearGradient', {
         id: d,
         x1: '0.005697',
         y1: '18.3495',
@@ -92,10 +90,10 @@ let o = 'premium_tier_2_gradient',
             })
         ]
     }),
-    h = (0, s.jsxs)('defs', {
-        children: [u, m, g]
+    g = (0, s.jsxs)('defs', {
+        children: [u, m, h]
     }),
-    p = (e) => {
+    _ = (e) => {
         let { className: t, fill: n, gradient: i } = e;
         return (0, s.jsxs)('svg', {
             width: '470',
@@ -122,7 +120,7 @@ let o = 'premium_tier_2_gradient',
                     d: 'M142.759 6.59865L140.044 5.57301C139.986 5.52173 139.986 5.47046 140.044 5.47046L142.759 4.39353L143.972 2.03456C143.972 1.98327 144.029 1.98327 144.087 2.03456L145.242 4.39353H145.3L147.957 5.47046C148.015 5.47046 148.015 5.52173 147.957 5.57301L145.3 6.59865H145.242L144.087 8.95763C144.029 9.00891 143.972 9.00891 143.972 8.95763L142.759 6.59865V6.59865Z',
                     fill: n
                 }),
-                h
+                g
             ]
         });
     },
@@ -153,29 +151,29 @@ let o = 'premium_tier_2_gradient',
                     d: 'M228.758 6.60256L226.043 5.57692C225.986 5.52564 225.986 5.47437 226.043 5.47437L228.758 4.39744L229.971 2.03846C229.971 1.98718 230.029 1.98718 230.087 2.03846L231.242 4.39744H231.3L233.957 5.47437C234.014 5.47437 234.014 5.52564 233.957 5.57692L231.3 6.60256H231.242L230.087 8.96154C230.029 9.01282 229.971 9.01282 229.971 8.96154L228.758 6.60256V6.60256Z',
                     fill: n
                 }),
-                h
+                g
             ]
         });
+    },
+    p = (e) => {
+        let { className: t, variant: n } = e,
+            i = (0, l.ZP)(),
+            a = (0, r.wj)(i) ? d : o,
+            u = (0, r.wj)(i) ? '#F2F3F5' : 'url(#'.concat(c, ')');
+        switch (n) {
+            case 0:
+                return (0, s.jsx)(x, {
+                    className: t,
+                    fill: u,
+                    gradient: a
+                });
+            case 1:
+                return (0, s.jsx)(_, {
+                    className: t,
+                    fill: u,
+                    gradient: a
+                });
+            default:
+                return null;
+        }
     };
-t.ZP = (e) => {
-    let { className: t, variant: n } = e,
-        i = (0, l.ZP)(),
-        r = (0, a.wj)(i) ? d : o,
-        u = (0, a.wj)(i) ? '#F2F3F5' : 'url(#'.concat(c, ')');
-    switch (n) {
-        case 0:
-            return (0, s.jsx)(x, {
-                className: t,
-                fill: u,
-                gradient: r
-            });
-        case 1:
-            return (0, s.jsx)(p, {
-                className: t,
-                fill: u,
-                gradient: r
-            });
-        default:
-            return null;
-    }
-};

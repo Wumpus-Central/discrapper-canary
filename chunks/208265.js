@@ -1,95 +1,89 @@
-t.r(n),
-    t.d(n, {
-        default: function () {
-            return N;
-        }
-    }),
-    t(47120);
+t.d(n, { default: () => _ }), t(47120);
 var i = t(200651),
-    l = t(192379),
-    a = t(990547),
-    s = t(481060),
-    o = t(613734),
-    r = t(409617),
+    s = t(192379),
+    l = t(990547),
+    a = t(481060),
+    r = t(613734),
+    o = t(409617),
     c = t(451426),
     d = t(384725),
-    u = t(534044),
-    x = t(670199),
-    m = t(800530),
+    x = t(534044),
+    m = t(670199),
+    u = t(800530),
     C = t(981631),
     h = t(676566);
-function N(e) {
-    let { classificationId: n, transitionState: t, initialSlide: N = m.Cs.SPEED_BUMP, onClose: p } = e,
-        [g, _] = l.useState(N),
-        { classification: j, isDsaEligible: b } = (0, o.YG)(null != n ? n : C.lds),
-        I = (null == j ? void 0 : j.is_spam) || !1,
+function _(e) {
+    let { classificationId: n, transitionState: t, initialSlide: _ = u.Cs.SPEED_BUMP, onClose: N } = e,
+        [p, g] = s.useState(_),
+        { classification: j, isDsaEligible: I } = (0, r.YG)(null != n ? n : C.lds),
+        k = (null == j ? void 0 : j.is_spam) || !1,
         E = (null == j ? void 0 : j.is_coppa) || !1;
-    l.useEffect(() => {
-        _(N);
-    }, [_, N]);
-    let T = l.useCallback(() => {
-            d.Z.close(), p();
-        }, [p]),
-        S = l.useCallback(() => {
+    s.useEffect(() => {
+        g(_);
+    }, [g, _]);
+    let T = s.useCallback(() => {
+            d.Z.close(), N();
+        }, [N]),
+        v = s.useCallback(() => {
             var e;
-            let n = null === (e = m.JQ[g]) || void 0 === e ? void 0 : e.next;
-            n ? _(n) : T();
-        }, [g, T]),
-        v = l.useCallback(() => {
+            let n = null === (e = u.JQ[p]) || void 0 === e ? void 0 : e.next;
+            n ? g(n) : T();
+        }, [p, T]),
+        f = s.useCallback(() => {
             var e;
-            let n = null === (e = m.JQ[g]) || void 0 === e ? void 0 : e.prev;
-            n ? _(n) : T();
-        }, [g, T]);
-    return (0, i.jsx)(s.ModalRoot, {
+            let n = null === (e = u.JQ[p]) || void 0 === e ? void 0 : e.prev;
+            n ? g(n) : T();
+        }, [p, T]);
+    return (0, i.jsx)(a.Y0X, {
         transitionState: t,
         disableTrack: !0,
-        size: s.ModalSize.DYNAMIC,
+        size: a.CgR.DYNAMIC,
         children: (0, i.jsx)('div', {
             className: h.container,
-            children: (0, i.jsxs)(s.Slides, {
-                activeSlide: g,
+            children: (0, i.jsxs)(a.MyZ, {
+                activeSlide: p,
                 width: 500,
                 children: [
-                    (0, i.jsx)(s.Slide, {
-                        id: m.Cs.SPEED_BUMP,
-                        impressionName: a.ImpressionNames.APPEAL_INGESTION_SPEED_BUMP,
-                        impressionProperties: m.ZW,
-                        children: (0, i.jsx)(x.Z, {
+                    (0, i.jsx)(a.Mi4, {
+                        id: u.Cs.SPEED_BUMP,
+                        impressionName: l.ImpressionNames.APPEAL_INGESTION_SPEED_BUMP,
+                        impressionProperties: u.ZW,
+                        children: (0, i.jsx)(m.Z, {
                             classification: j,
                             onClose: T,
-                            onNext: S,
-                            isSpam: I,
+                            onNext: v,
+                            isSpam: k,
                             isCoppa: E,
-                            isDsaEligible: b
+                            isDsaEligible: I
                         })
                     }),
-                    (0, i.jsx)(s.Slide, {
-                        id: m.Cs.COLLECT_SIGNAL,
-                        impressionName: a.ImpressionNames.APPEAL_INGESTION_COLLECT_SIGNAL,
-                        impressionProperties: m.ZW,
-                        children: (0, i.jsx)(r.Z, {
-                            isDsaEligible: b,
+                    (0, i.jsx)(a.Mi4, {
+                        id: u.Cs.COLLECT_SIGNAL,
+                        impressionName: l.ImpressionNames.APPEAL_INGESTION_COLLECT_SIGNAL,
+                        impressionProperties: u.ZW,
+                        children: (0, i.jsx)(o.Z, {
+                            isDsaEligible: I,
                             onClose: T,
-                            onNext: S,
-                            onBack: v
+                            onNext: v,
+                            onBack: f
                         })
                     }),
-                    (0, i.jsx)(s.Slide, {
-                        id: m.Cs.CONFIRM_SUBMISSION,
-                        impressionName: a.ImpressionNames.APPEAL_INGESTION_CONFIRM_SUBMISSION,
-                        impressionProperties: m.ZW,
+                    (0, i.jsx)(a.Mi4, {
+                        id: u.Cs.CONFIRM_SUBMISSION,
+                        impressionName: l.ImpressionNames.APPEAL_INGESTION_CONFIRM_SUBMISSION,
+                        impressionProperties: u.ZW,
                         children: (0, i.jsx)(c.Z, {
-                            isDsaEligible: b,
+                            isDsaEligible: I,
                             onClose: T,
-                            onNext: S,
-                            onBack: v
+                            onNext: v,
+                            onBack: f
                         })
                     }),
-                    (0, i.jsx)(s.Slide, {
-                        id: m.Cs.REQUEST_SENT,
-                        impressionName: a.ImpressionNames.APPEAL_INGESTION_REQUEST_SENT,
-                        impressionProperties: m.ZW,
-                        children: (0, i.jsx)(u.Z, { onNext: S })
+                    (0, i.jsx)(a.Mi4, {
+                        id: u.Cs.REQUEST_SENT,
+                        impressionName: l.ImpressionNames.APPEAL_INGESTION_REQUEST_SENT,
+                        impressionProperties: u.ZW,
+                        children: (0, i.jsx)(x.Z, { onNext: v })
                     })
                 ]
             })

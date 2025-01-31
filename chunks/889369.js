@@ -1,67 +1,63 @@
-t(47120);
-var i,
-    l,
-    r,
+t.d(n, { Z: () => E }), t(47120);
+var l,
+    i,
     s,
-    a = t(392711),
-    o = t.n(a),
-    c = t(442837),
+    r = t(392711),
+    a = t.n(r),
+    o = t(442837),
     d = t(570140),
-    u = t(45966),
-    m = t(999382),
-    I = t(981631);
-let h = !1,
-    N = null,
-    g = new Set();
-function T() {
-    (function () {
-        (h = !1), (N = null);
-    })(),
-        null != (N = m.Z.getGuildId()) && m.Z.getSection() === I.pNK.ONBOARDING && (g = new Set(u.Z.getDefaultChannelIds(N)));
+    c = t(45966),
+    u = t(999382),
+    m = t(981631);
+let I = !1,
+    h = null,
+    N = new Set();
+function g() {
+    (I = !1), (h = null), null != (h = u.Z.getGuildId()) && u.Z.getSection() === m.pNK.ONBOARDING && (N = new Set(c.Z.getDefaultChannelIds(h)));
 }
-class f extends (i = c.ZP.Store) {
+class x extends (l = o.ZP.Store) {
     initialize() {
-        this.waitFor(m.Z, u.Z);
+        this.waitFor(u.Z, c.Z);
     }
     hasChanges() {
-        if (null == N) return !1;
-        let e = u.Z.getDefaultChannelIds(N).sort(),
-            n = Array.from(g).sort();
-        return !o().isEqual(e, n);
+        if (null == h) return !1;
+        let e = c.Z.getDefaultChannelIds(h).sort(),
+            n = Array.from(N).sort();
+        return !a().isEqual(e, n);
     }
     get guildId() {
-        return N;
-    }
-    get submitting() {
         return h;
     }
+    get submitting() {
+        return I;
+    }
     get editedDefaultChannelIds() {
-        return g;
+        return N;
     }
 }
 (s = 'GuildSettingsDefaultChannelsStore'),
-    (r = 'displayName') in (l = f)
-        ? Object.defineProperty(l, r, {
+    (i = 'displayName') in x
+        ? Object.defineProperty(x, i, {
               value: s,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[r] = s),
-    (n.Z = new f(d.Z, {
-        GUILD_SETTINGS_INIT: T,
-        GUILD_SETTINGS_SET_SECTION: T,
-        GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: T,
-        GUILD_SETTINGS_DEFAULT_CHANNELS_RESET: T,
-        GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_SUCCESS: T,
-        GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_FAILED: function () {
-            h = !1;
-        },
-        GUILD_SETTINGS_DEFAULT_CHANNELS_TOGGLE: function (e) {
-            let { channelId: n } = e;
-            (g = new Set(g)).has(n) ? g.delete(n) : g.add(n);
-        },
-        GUILD_SETTINGS_DEFAULT_CHANNELS_SUBMIT: function () {
-            h = !0;
-        }
-    }));
+        : (x[i] = s);
+let E = new x(d.Z, {
+    GUILD_SETTINGS_INIT: g,
+    GUILD_SETTINGS_SET_SECTION: g,
+    GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: g,
+    GUILD_SETTINGS_DEFAULT_CHANNELS_RESET: g,
+    GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_SUCCESS: g,
+    GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_FAILED: function () {
+        I = !1;
+    },
+    GUILD_SETTINGS_DEFAULT_CHANNELS_TOGGLE: function (e) {
+        let { channelId: n } = e;
+        (N = new Set(N)).has(n) ? N.delete(n) : N.add(n);
+    },
+    GUILD_SETTINGS_DEFAULT_CHANNELS_SUBMIT: function () {
+        I = !0;
+    }
+});

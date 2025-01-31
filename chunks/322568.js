@@ -1,9 +1,5 @@
-function i(e, n, r) {
-    if (!n.has(e)) throw TypeError('attempted to ' + r + ' private field on non-instance');
-    return n.get(e);
+function n(t, e, r) {
+    if (!e.has(t)) throw TypeError('attempted to ' + r + ' private field on non-instance');
+    return e.get(t);
 }
-r.d(n, {
-    J: function () {
-        return i;
-    }
-});
+r.d(e, { J: () => n });

@@ -1,26 +1,17 @@
-var e, o;
-function i(r) {
-    let t = 0,
-        n = [];
+function r(t) {
+    let e = 0,
+        i = [];
     return async function () {
-        if (2 !== t) {
-            if (1 === t)
-                return new Promise((r) => {
-                    n.push(r);
+        if (2 !== e) {
+            if (1 === e)
+                return new Promise((t) => {
+                    i.push(t);
                 });
-            for (t = 1, await r(), t = 2; n.length > 0; ) {
-                var e;
-                null === (e = n.shift()) || void 0 === e || e();
+            for (e = 1, await t(), e = 2; i.length > 0; ) {
+                var r;
+                null === (r = i.shift()) || void 0 === r || r();
             }
         }
     };
 }
-n.d(t, {
-    G: function () {
-        return i;
-    }
-}),
-    n(653041),
-    ((o = e || (e = {}))[(o.UNINITIALIZED = 0)] = 'UNINITIALIZED'),
-    (o[(o.INITIALIZING = 1)] = 'INITIALIZING'),
-    (o[(o.READY = 2)] = 'READY');
+i.d(e, { G: () => r }), i(653041);

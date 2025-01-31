@@ -1,6 +1,4 @@
-n.r(
-    (e.exports = {
-        jumpButton: 'jumpButton_ac3dc2',
-        text: 'text_ac3dc2'
-    })
-);
+e.exports = {
+    jumpButton: 'jumpButton_ed0c8c',
+    text: 'text_ed0c8c'
+};

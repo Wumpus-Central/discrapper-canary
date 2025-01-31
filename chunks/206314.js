@@ -1,23 +1,19 @@
-r.d(t, {
-    Z: function () {
-        return p;
-    }
-});
+r.d(t, { Z: () => p });
 var n = r(200651),
     a = r(192379),
     i = r(120356),
     l = r.n(i),
     s = r(692547),
     o = r(481060),
-    c = r(600164),
-    d = r(4912),
+    d = r(600164),
+    c = r(4912),
     u = r(378481);
 let m = ['firCount', 'nackCount'];
 class p extends a.PureComponent {
     renderValueIcon() {
         let { label: e } = this.props;
         return m.includes(e)
-            ? (0, n.jsx)(d.Z, {
+            ? (0, n.jsx)(c.Z, {
                   color: s.Z.unsafe_rawColors.YELLOW_300.css,
                   className: u.valueIcon
               })
@@ -25,27 +21,27 @@ class p extends a.PureComponent {
     }
     render() {
         let { children: e, className: t, valueRendered: r, section: a, label: i, renderGraph: s } = this.props;
-        return (0, n.jsxs)(c.Z, {
+        return (0, n.jsxs)(d.Z, {
             className: l()(u.item, t),
-            direction: c.Z.Direction.VERTICAL,
+            direction: d.Z.Direction.VERTICAL,
             basis: '50%',
             children: [
-                (0, n.jsxs)(c.Z, {
+                (0, n.jsxs)(d.Z, {
                     className: u.kvContainer,
-                    align: c.Z.Align.START,
+                    align: d.Z.Align.START,
                     children: [
-                        (0, n.jsx)(c.Z.Child, {
+                        (0, n.jsx)(d.Z.Child, {
                             children: (0, n.jsx)(o.H, {
                                 className: u.title,
                                 children: e
                             })
                         }),
                         Array.isArray(r)
-                            ? (0, n.jsx)(c.Z.Child, {
+                            ? (0, n.jsx)(d.Z.Child, {
                                   grow: 1,
                                   children: r
                               })
-                            : (0, n.jsxs)(c.Z.Child, {
+                            : (0, n.jsxs)(d.Z.Child, {
                                   grow: 0,
                                   shrink: 0,
                                   children: [
@@ -61,17 +57,17 @@ class p extends a.PureComponent {
                 }),
                 null !== s &&
                     (0, n.jsx)(
-                        c.Z.Child,
+                        d.Z.Child,
                         {
                             className: u.graph,
-                            children: (0, n.jsx)(o.FormText, {
-                                type: o.FormTextTypes.DESCRIPTION,
+                            children: (0, n.jsx)(o.R94, {
+                                type: o.geA.DESCRIPTION,
                                 children: s
                             })
                         },
                         null != a ? ''.concat(a, '-').concat(i) : i
                     ),
-                (0, n.jsx)(o.FormDivider, { className: u.divider })
+                (0, n.jsx)(o.$i$, { className: u.divider })
             ]
         });
     }

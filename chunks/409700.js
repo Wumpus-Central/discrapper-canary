@@ -1,122 +1,114 @@
-r.d(n, {
-    Dp: function () {
-        return A;
-    },
-    Hh: function () {
-        return C;
-    },
-    ZP: function () {
-        return N;
-    },
-    hq: function () {
-        return T;
-    }
-});
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(120356),
-    l = r.n(s),
-    u = r(831209),
-    c = r(442837),
-    d = r(481060),
-    f = r(914010),
-    p = r(594174),
-    h = r(36703),
-    _ = r(74538),
-    m = r(125900),
-    g = r(824690),
-    E = r(240479),
-    v = r(710111),
-    y = r(388032),
-    b = r(89107),
-    I = r(965965);
-function T() {
-    let { volume: e, onVolumeChange: n } = (0, g.Z)();
-    return (0, a.jsxs)(d.Clickable, {
-        className: b.sliderContainer,
+n.d(t, {
+    Dp: () => T,
+    Hh: () => S,
+    ZP: () => A,
+    hq: () => I
+}),
+    n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(831209),
+    l = n(442837),
+    u = n(481060),
+    c = n(914010),
+    d = n(594174),
+    f = n(36703),
+    _ = n(74538),
+    p = n(125900),
+    h = n(824690),
+    m = n(240479),
+    g = n(710111),
+    E = n(388032),
+    v = n(89107),
+    y = n(965965);
+function I() {
+    let { volume: e, onVolumeChange: t } = (0, h.Z)();
+    return (0, i.jsxs)(u.P3F, {
+        className: v.sliderContainer,
         onClick: (e) => e.stopPropagation(),
         children: [
-            (0, a.jsx)(d.Text, {
+            (0, i.jsx)(u.Text, {
                 variant: 'text-sm/normal',
-                children: y.intl.string(y.t['2JbvKy'])
+                children: E.intl.string(E.t['2JbvKy'])
             }),
-            (0, a.jsx)(d.Slider, {
-                onValueChange: n,
-                className: b.slider,
-                initialValue: (0, h.P)(e),
+            (0, i.jsx)(u.iRW, {
+                onValueChange: t,
+                className: v.slider,
+                initialValue: (0, f.P)(e),
                 maxValue: 100
             })
         ]
     });
 }
-function S(e) {
-    let { sound: n, forceShowBetaLabel: r = !1 } = e,
-        i = (0, m.V2)({ location: 'SoundmojiBanner' }),
-        o = (0, c.e7)([p.default], () => _.ZP.canUseSoundboardEverywhere(p.default.getCurrentUser())),
-        s = (0, c.e7)([f.Z], () => f.Z.getGuildId());
-    return r || o || n.guildId === v.X8 || n.guildId === s || !i
-        ? (0, a.jsx)(d.TextBadge, {
+function b(e) {
+    let { sound: t, forceShowBetaLabel: n = !1 } = e,
+        r = (0, p.V2)({ location: 'SoundmojiBanner' }),
+        a = (0, l.e7)([d.default], () => _.ZP.canUseSoundboardEverywhere(d.default.getCurrentUser())),
+        s = (0, l.e7)([c.Z], () => c.Z.getGuildId());
+    return n || a || t.guildId === g.X8 || t.guildId === s || !r
+        ? (0, i.jsx)(u.IGR, {
               text: 'BETA',
-              color: u.Z.BG_BRAND,
-              className: b.betaBadge
+              color: o.Z.BG_BRAND,
+              className: v.betaBadge
           })
-        : (0, a.jsxs)('div', {
-              className: b.infoNitroContainer,
+        : (0, i.jsxs)('div', {
+              className: v.infoNitroContainer,
               children: [
-                  (0, a.jsx)('div', { className: b.infoNitroBackground }),
-                  (0, a.jsxs)('div', {
-                      className: b.infoNitroTextContainer,
+                  (0, i.jsx)('div', { className: v.infoNitroBackground }),
+                  (0, i.jsxs)('div', {
+                      className: v.infoNitroTextContainer,
                       children: [
-                          (0, a.jsx)(d.NitroWheelIcon, {
+                          (0, i.jsx)(u.SrA, {
                               size: 'xxs',
                               color: 'white',
-                              className: b.infoNitroIcon
+                              className: v.infoNitroIcon
                           }),
-                          (0, a.jsx)(d.Text, {
+                          (0, i.jsx)(u.Text, {
                               variant: 'text-xs/medium',
                               color: 'always-white',
-                              className: b.infoNitroText,
-                              children: y.intl.string(y.t['BMw+7O'])
+                              className: v.infoNitroText,
+                              children: E.intl.string(E.t['BMw+7O'])
                           }),
-                          (0, a.jsx)(d.TextBadge, {
+                          (0, i.jsx)(u.IGR, {
                               text: 'BETA',
-                              color: u.Z.BG_BRAND,
-                              className: b.infoNitroBadge
+                              color: o.Z.BG_BRAND,
+                              className: v.infoNitroBadge
                           })
                       ]
                   })
               ]
           });
 }
-function A(e) {
-    let { sound: n } = e;
-    return (0, a.jsxs)('div', {
-        className: l()(b.infoContainer, b.infoTooltip),
+function T(e) {
+    let { sound: t } = e;
+    return (0, i.jsxs)('div', {
+        className: s()(v.infoContainer, v.infoTooltip),
         children: [
-            (0, a.jsx)(S, { sound: n }),
-            (0, a.jsxs)('div', {
-                className: b.infoSoundContainer,
+            (0, i.jsx)(b, { sound: t }),
+            (0, i.jsxs)('div', {
+                className: v.infoSoundContainer,
                 children: [
-                    (0, a.jsxs)('div', {
-                        className: b.infoSoundInnerContainer,
+                    (0, i.jsxs)('div', {
+                        className: v.infoSoundInnerContainer,
                         children: [
-                            (0, a.jsx)(d.SoundboardIcon, {
+                            (0, i.jsx)(u.KY1, {
                                 size: 'sm',
-                                className: b.infoSoundIcon
+                                className: v.infoSoundIcon
                             }),
-                            (0, a.jsx)(d.Text, {
+                            (0, i.jsx)(u.Text, {
                                 variant: 'text-md/semibold',
                                 color: 'header-primary',
-                                children: n.name
+                                children: t.name
                             })
                         ]
                     }),
-                    (0, a.jsx)('div', {
-                        className: b.infoSoundInnerContainer,
-                        children: (0, a.jsx)(d.Text, {
+                    (0, i.jsx)('div', {
+                        className: v.infoSoundInnerContainer,
+                        children: (0, i.jsx)(u.Text, {
                             variant: 'text-sm/normal',
-                            children: y.intl.string(y.t.D6eYmZ)
+                            children: E.intl.string(E.t.D6eYmZ)
                         })
                     })
                 ]
@@ -124,96 +116,96 @@ function A(e) {
         ]
     });
 }
-function C(e) {
-    let { renderPopout: n, position: r, tooltipText: i, children: s, setTooltipShowing: u, clickableClassName: c } = e,
-        [f, p] = o.useState(!1),
-        [h, _] = o.useState(String(Date.now())),
-        m = o.useCallback(
+function S(e) {
+    let { renderPopout: t, position: n, tooltipText: a, children: o, setTooltipShowing: l, clickableClassName: c } = e,
+        [d, f] = r.useState(!1),
+        [_, p] = r.useState(String(Date.now())),
+        h = r.useCallback(
             (e) => {
-                e.stopPropagation(), p(!f);
+                e.stopPropagation(), f(!d);
             },
-            [f]
+            [d]
         ),
-        g = o.useCallback(() => {
-            _(String(Date.now()));
+        m = r.useCallback(() => {
+            p(String(Date.now()));
         }, []),
-        E = o.useRef(null);
-    o.useEffect(() => {
-        var e, n;
-        f ? null === (e = E.current) || void 0 === e || e.focus() : null === (n = E.current) || void 0 === n || n.blur(), null == u || u(f);
-    }, [f, u]);
-    let v = !f;
-    return (0, a.jsx)(d.Popout, {
+        g = r.useRef(null);
+    r.useEffect(() => {
+        var e, t;
+        d ? null === (e = g.current) || void 0 === e || e.focus() : null === (t = g.current) || void 0 === t || t.blur(), null == l || l(d);
+    }, [d, l]);
+    let E = !d;
+    return (0, i.jsx)(u.yRy, {
         renderPopout: (e) =>
-            (0, a.jsx)(d.Clickable, {
+            (0, i.jsx)(u.P3F, {
                 onClick: (e) => e.stopPropagation(),
                 onMouseOver: (e) => e.stopPropagation(),
-                children: n({
+                children: t({
                     ...e,
-                    refreshPosition: g
+                    refreshPosition: m
                 })
             }),
         align: 'center',
         nudgeAlignIntoViewport: !0,
-        position: r,
-        shouldShow: f,
-        onRequestClose: () => p(!1),
+        position: n,
+        shouldShow: d,
+        onRequestClose: () => f(!1),
         animationPosition: 'bottom',
-        positionKey: h,
+        positionKey: _,
         closeOnScroll: !0,
         children: (e) =>
-            (0, a.jsx)(d.Tooltip, {
+            (0, i.jsx)(u.ua7, {
                 onTooltipHide: () => {
-                    v && (null == u || u(!1));
+                    E && (null == l || l(!1));
                 },
                 onTooltipShow: () => {
-                    v && (null == u || u(!0));
+                    E && (null == l || l(!0));
                 },
-                text: i,
+                text: a,
                 position: 'top',
-                shouldShow: v,
-                children: (n) =>
-                    (0, a.jsx)(d.Clickable, {
-                        innerRef: E,
-                        ...n,
+                shouldShow: E,
+                children: (t) =>
+                    (0, i.jsx)(u.P3F, {
+                        innerRef: g,
+                        ...t,
                         ...e,
-                        'aria-label': i,
-                        onClick: m,
-                        className: l()(I.secondaryButtonRefresh, c),
-                        children: s
+                        'aria-label': a,
+                        onClick: h,
+                        className: s()(y.secondaryButtonRefresh, c),
+                        children: o
                     })
             })
     });
 }
-function N(e) {
-    let { sound: n, channel: r, setTooltipShowing: i } = e;
-    return (0, a.jsxs)(a.Fragment, {
+function A(e) {
+    let { sound: t, channel: n, setTooltipShowing: r } = e;
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, a.jsx)(C, {
-                setTooltipShowing: i,
-                renderPopout: () => (0, a.jsx)(T, {}),
-                tooltipText: y.intl.string(y.t['19lt29']),
+            (0, i.jsx)(S, {
+                setTooltipShowing: r,
+                renderPopout: () => (0, i.jsx)(I, {}),
+                tooltipText: E.intl.string(E.t['19lt29']),
                 position: 'top',
-                children: (0, a.jsx)(d.VoiceNormalIcon, {
+                children: (0, i.jsx)(u.gj8, {
                     size: 'md',
                     color: 'currentColor',
-                    className: I.secondaryIcon
+                    className: y.secondaryIcon
                 })
             }),
-            (0, a.jsx)(C, {
-                setTooltipShowing: i,
+            (0, i.jsx)(S, {
+                setTooltipShowing: r,
                 renderPopout: (e) =>
-                    (0, a.jsx)(E.Z, {
-                        sound: n,
-                        channel: r,
+                    (0, i.jsx)(m.Z, {
+                        sound: t,
+                        channel: n,
                         ...e
                     }),
-                tooltipText: y.intl.string(y.t.KVbJU1),
+                tooltipText: E.intl.string(E.t.KVbJU1),
                 position: 'right',
-                children: (0, a.jsx)(d.CircleInformationIcon, {
+                children: (0, i.jsx)(u.d3s, {
                     size: 'md',
                     color: 'currentColor',
-                    className: I.secondaryIcon
+                    className: y.secondaryIcon
                 })
             })
         ]

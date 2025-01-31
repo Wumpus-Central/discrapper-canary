@@ -1,51 +1,44 @@
-r.d(n, {
-    Z: function () {
-        return d;
-    }
-});
-var i = r(47120);
-var a = r(392711),
-    o = r.n(a),
-    s = r(314897),
-    l = r(908442),
-    u = r(981631),
-    c = r(388032);
-function d(e, n, r) {
-    if (null == e || null == n)
+n.d(t, { Z: () => u }), n(47120);
+var i = n(392711),
+    r = n.n(i),
+    a = n(314897),
+    s = n(908442),
+    o = n(981631),
+    l = n(388032);
+function u(e, t, n) {
+    if (null == e || null == t)
         return {
             valid: !1,
-            reason: c.intl.string(c.t.d34xi4)
+            reason: l.intl.string(l.t.d34xi4)
         };
-    let { releaseChannel: i, expiresAt: a, validForUserIds: d, allowedVersions: f, targetBuildOverride: p } = e,
-        h = Object.keys(p);
-    if (0 === o().intersection(h, n).length)
+    let { releaseChannel: i, expiresAt: u, validForUserIds: c, allowedVersions: d, targetBuildOverride: f } = e,
+        _ = Object.keys(f);
+    if (0 === r().intersection(_, t).length)
         return {
             valid: !1,
-            reason: c.intl.formatToPlainString(c.t.wySUzs, {
-                requestedTargets: h
-                    .map((e) => {
-                        var n;
-                        return null !== (n = l.o0[e]) && void 0 !== n ? n : 'unknown';
-                    })
-                    .join(', ')
+            reason: l.intl.formatToPlainString(l.t.wySUzs, {
+                requestedTargets: _.map((e) => {
+                    var t;
+                    return null !== (t = s.o0[e]) && void 0 !== t ? t : 'unknown';
+                }).join(', ')
             })
         };
     if (null != i && i !== window.GLOBAL_ENV.RELEASE_CHANNEL) {
-        let e = i === u.R5N.PTB ? i.toUpperCase() : ''.concat(i.charAt(0).toUpperCase()).concat(i.slice(1));
+        let e = i === o.R5N.PTB ? i.toUpperCase() : ''.concat(i.charAt(0).toUpperCase()).concat(i.slice(1));
         return {
             valid: !1,
-            reason: c.intl.formatToPlainString(c.t.GOEF0N, { releaseChannel: e })
+            reason: l.intl.formatToPlainString(l.t.GOEF0N, { releaseChannel: e })
         };
     }
-    if (null != f) {
+    if (null != d) {
         let e = !1;
-        if (null == r) e = !1;
-        else if (f.includes(r)) e = !0;
+        if (null == n) e = !1;
+        else if (d.includes(n)) e = !0;
         else {
-            let [n] = r.split('.');
-            for (let r of f) {
-                let [i, a] = r.split('.');
-                if ('*' === a && n === i) {
+            let [t] = n.split('.');
+            for (let n of d) {
+                let [i, r] = n.split('.');
+                if ('*' === r && t === i) {
                     e = !0;
                     break;
                 }
@@ -54,19 +47,19 @@ function d(e, n, r) {
         if (!e)
             return {
                 valid: !1,
-                reason: c.intl.formatToPlainString(c.t.GOEF0N, { releaseChannel: f.join(', ') })
+                reason: l.intl.formatToPlainString(l.t.GOEF0N, { releaseChannel: d.join(', ') })
             };
     }
-    let _ = null != a ? new Date(a).getTime() : null;
-    return null != _ && _ < Date.now()
+    let p = null != u ? new Date(u).getTime() : null;
+    return null != p && p < Date.now()
         ? {
               valid: !1,
-              reason: c.intl.string(c.t['8eRE6e'])
+              reason: l.intl.string(l.t['8eRE6e'])
           }
-        : d.length > 0 && !d.includes(s.default.getId())
+        : c.length > 0 && !c.includes(a.default.getId())
           ? {
                 valid: !1,
-                reason: c.intl.string(c.t.qZgV0d)
+                reason: l.intl.string(l.t.qZgV0d)
             }
           : { valid: !0 };
 }

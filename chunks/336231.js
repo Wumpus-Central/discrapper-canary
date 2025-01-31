@@ -1,88 +1,82 @@
-e.r(o),
-    e.d(o, {
-        default: function () {
-            return s;
-        }
-    }),
-    e(47120);
-var l = e(200651),
-    n = e(192379),
-    r = e(481060),
-    u = e(388032);
-function s(t) {
-    let { defaultColor: o, colors: e, value: s, onChange: i, disabled: a = !1, customPickerPosition: c = 'bottom' } = t,
-        [C, d] = n.useState(() => (0 === s || s === o || e.some((t) => t === s) ? null : s));
-    n.useEffect(() => {
-        d(0 === s || s === o || e.some((t) => t === s) ? null : s);
-    }, [s, e, o]);
-    let p = n.useCallback(
+l.r(e), l.d(e, { default: () => o }), l(47120);
+var n = l(200651),
+    s = l(192379),
+    u = l(481060),
+    a = l(388032);
+function o(t) {
+    let { defaultColor: e, colors: l, value: o, onChange: i, disabled: r = !1, customPickerPosition: c = 'bottom' } = t,
+        [d, b] = s.useState(() => (0 === o || o === e || l.some((t) => t === o) ? null : o));
+    s.useEffect(() => {
+        b(0 === o || o === e || l.some((t) => t === o) ? null : o);
+    }, [o, l, e]);
+    let h = s.useCallback(
             (t) => {
-                null == i || i(t), d(null);
+                null == i || i(t), b(null);
             },
-            [i, d]
+            [i, b]
         ),
-        k = n.useCallback(
+        p = s.useCallback(
             (t) => {
-                null == i || i(t), d(t);
+                null == i || i(t), b(t);
             },
-            [i, d]
+            [i, b]
         ),
-        b = n.useCallback(
+        x = s.useCallback(
             () =>
-                (0, l.jsx)(r.CustomColorPicker, {
-                    onChange: k,
-                    value: C
+                (0, n.jsx)(u.Z$W, {
+                    onChange: p,
+                    value: d
                 }),
-            [k, C]
+            [p, d]
         ),
-        h = n.useCallback(
+        C = s.useCallback(
             (t) => {
-                let o = (0, l.jsx)(r.ColorPickerCustomButton, {
+                let e = (0, n.jsx)(u.jHW, {
                     ...t,
-                    'aria-label': u.intl.string(u.t['FHBa//'])
+                    'aria-label': a.intl.string(a.t['FHBa//'])
                 });
-                return a
-                    ? o
-                    : (0, l.jsx)(r.Popout, {
-                          renderPopout: b,
+                return r
+                    ? e
+                    : (0, n.jsx)(u.yRy, {
+                          renderPopout: x,
                           position: c,
                           children: (t) =>
-                              (0, l.jsx)(r.Tooltip, {
-                                  text: u.intl.string(u.t['FHBa//']),
+                              (0, n.jsx)(u.ua7, {
+                                  text: a.intl.string(a.t['FHBa//']),
                                   position: 'bottom',
-                                  children: (e) =>
-                                      (0, l.jsx)('div', {
-                                          ...e,
+                                  children: (l) =>
+                                      (0, n.jsx)('div', {
+                                          ...l,
                                           ...t,
-                                          children: o
+                                          children: e
                                       })
                               })
                       });
             },
-            [c, a, b]
+            [c, r, x]
         ),
-        x = n.useCallback(
+        j = s.useCallback(
             (t) => {
-                let o = (0, l.jsx)(r.ColorPickerDefaultButton, { ...t });
-                return a
-                    ? o
-                    : (0, l.jsx)(r.Tooltip, {
-                          text: u.intl.string(u.t.bBvAEB),
+                let e = (0, n.jsx)(u.AGO, { ...t });
+                return r
+                    ? e
+                    : (0, n.jsx)(u.ua7, {
+                          text: a.intl.string(a.t.bBvAEB),
                           position: 'bottom',
                           children: (t) =>
-                              (0, l.jsx)('div', {
+                              (0, n.jsx)('div', {
                                   ...t,
-                                  children: o
+                                  children: e
                               })
                       });
             },
-            [a]
+            [r]
         );
-    return (0, l.jsx)(r.ColorPicker, {
+    return (0, n.jsx)(u.zH8, {
         ...t,
-        renderDefaultButton: x,
-        renderCustomButton: h,
-        customColor: C,
-        onChange: p
+        renderDefaultButton: j,
+        renderCustomButton: C,
+        customColor: d,
+        onChange: h
     });
 }

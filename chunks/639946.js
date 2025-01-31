@@ -1,17 +1,13 @@
-n.d(t, {
-    r: function () {
-        return c;
-    }
-});
+n.d(t, { r: () => c });
 var i = n(200651);
 n(192379);
 var r = n(481060),
-    s = n(471445),
-    l = n(742593),
+    l = n(471445),
+    a = n(742593),
     o = n(180483);
-function a(e) {
+function s(e) {
     let { channel: t } = e,
-        n = (0, s.Th)(t.type);
+        n = (0, l.Th)(t.type);
     return (0, i.jsxs)('div', {
         className: o.channelInfoContainer,
         children: [
@@ -37,18 +33,18 @@ function c(e) {
     return (0, i.jsxs)('div', {
         className: o.container,
         children: [
-            (0, i.jsx)(l.HZ, {
+            (0, i.jsx)(a.HZ, {
                 className: o.statusContainer,
                 guildId: n.guild_id,
                 guildEvent: n,
                 eventPreview: n
             }),
-            (0, i.jsx)(l.Rf, {
+            (0, i.jsx)(a.Rf, {
                 name: n.name,
                 description: n.description,
                 guildId: n.guild_id
             }),
-            null != t && n.channel_id === t.id ? (0, i.jsx)(a, { channel: t }) : null
+            null != t && n.channel_id === t.id ? (0, i.jsx)(s, { channel: t }) : null
         ]
     });
 }

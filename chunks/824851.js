@@ -1,28 +1,24 @@
-r.d(t, {
-    V: function () {
-        return o;
-    }
-});
-var a = r(899517),
-    n = r(578346);
-let _ = null;
-function o(e) {
-    let t = 'error';
-    (0, n.Hj)(t, e), (0, n.D2)(t, E);
+a.d(e, { V: () => _ });
+var r = a(899517),
+    n = a(578346);
+let o = null;
+function _(t) {
+    let e = 'error';
+    (0, n.Hj)(e, t), (0, n.D2)(e, i);
 }
-function E() {
-    (_ = a.n.onerror),
-        (a.n.onerror = function (e, t, r, a, o) {
+function i() {
+    (o = r.n.onerror),
+        (r.n.onerror = function (t, e, a, r, _) {
             return (
                 (0, n.rK)('error', {
-                    column: a,
-                    error: o,
-                    line: r,
-                    msg: e,
-                    url: t
+                    column: r,
+                    error: _,
+                    line: a,
+                    msg: t,
+                    url: e
                 }),
-                !!_ && !_.__SENTRY_LOADER__ && _.apply(this, arguments)
+                !!o && !o.__SENTRY_LOADER__ && o.apply(this, arguments)
             );
         }),
-        (a.n.onerror.__SENTRY_INSTRUMENTED__ = !0);
+        (r.n.onerror.__SENTRY_INSTRUMENTED__ = !0);
 }

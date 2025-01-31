@@ -1,29 +1,15 @@
-t.d(r, {
-    Z: function () {
-        return l;
-    }
-});
+t.d(r, { Z: () => n });
 var a = Object.prototype.toString;
 function o(e) {
     return 'function' == typeof e || '[object Function]' === a.call(e);
 }
-var n = 9007199254740991;
-function l(e, r) {
+function n(e, r) {
     var t,
-        a = Array,
+        a,
+        n = Array,
         l = Object(e);
     if (null == e) throw TypeError('Array.from requires an array-like object - not null or undefined');
     if (void 0 !== r && !o(r)) throw TypeError('Array.from: when provided, the second argument must be a function');
-    for (
-        var i = (function (e) {
-                var r;
-                return Math.min(Math.max(isNaN((r = Number(e))) ? 0 : 0 !== r && isFinite(r) ? (r > 0 ? 1 : -1) * Math.floor(Math.abs(r)) : r, 0), n);
-            })(l.length),
-            s = o(a) ? Object(new a(i)) : Array(i),
-            u = 0;
-        u < i;
-
-    )
-        (t = l[u]), r ? (s[u] = r(t, u)) : (s[u] = t), (u += 1);
+    for (var i = Math.min(Math.max(isNaN((t = Number(l.length))) ? 0 : 0 !== t && isFinite(t) ? (t > 0 ? 1 : -1) * Math.floor(Math.abs(t)) : t, 0), 9007199254740991), s = o(n) ? Object(new n(i)) : Array(i), u = 0; u < i; ) (a = l[u]), r ? (s[u] = r(a, u)) : (s[u] = a), (u += 1);
     return (s.length = i), s;
 }

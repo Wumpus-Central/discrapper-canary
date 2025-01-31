@@ -1,58 +1,53 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => u }), n(47120);
 var i = n(192379),
-    r = n(442837),
-    l = n(821849),
-    a = n(509545),
-    o = n(78839),
-    s = n(289393),
+    l = n(442837),
+    a = n(821849),
+    r = n(509545),
+    s = n(78839),
+    o = n(289393),
     c = n(697227),
-    u = n(981631);
-function d(e) {
-    let t = (0, r.e7)([o.ZP], () => o.ZP.getSubscriptions()),
+    d = n(981631);
+function u(e) {
+    let t = (0, l.e7)([s.ZP], () => s.ZP.getSubscriptions()),
         n = i.useMemo(() => {
             if (null == t) return {};
             let e = {};
-            for (let n of Object.values(t)) n.type === u.NYc.GUILD && (e[(0, c.W)(n)] = n);
+            for (let n of Object.values(t)) n.type === d.NYc.GUILD && (e[(0, c.W)(n)] = n);
             return e;
         }, [t]),
-        { activeSubscription: d, activeSubscriptionListing: m } = (0, r.cj)([s.Z], () => {
+        { activeSubscription: u, activeSubscriptionListing: m } = (0, l.cj)([o.Z], () => {
             var t;
             let i,
-                r = null,
-                l = null != e ? s.Z.getSubscriptionGroupListing(e) : null;
-            for (let e of null !== (t = null == l ? void 0 : l.subscription_listings_ids) && void 0 !== t ? t : []) {
-                let t = s.Z.getSubscriptionListing(e),
-                    l = null == t ? void 0 : t.subscription_plans[0].id;
-                if (null == l) continue;
-                let a = n[l];
-                if (null != a) {
-                    (r = a), (i = t);
+                l = null,
+                a = null != e ? o.Z.getSubscriptionGroupListing(e) : null;
+            for (let e of null !== (t = null == a ? void 0 : a.subscription_listings_ids) && void 0 !== t ? t : []) {
+                let t = o.Z.getSubscriptionListing(e),
+                    a = null == t ? void 0 : t.subscription_plans[0].id;
+                if (null == a) continue;
+                let r = n[a];
+                if (null != r) {
+                    (l = r), (i = t);
                     break;
                 }
             }
             return {
-                activeSubscription: r,
+                activeSubscription: l,
                 activeSubscriptionListing: i
             };
         }),
         h = null == m ? void 0 : m.subscription_plans[0],
-        f = null == h ? void 0 : h.id,
+        _ = null == h ? void 0 : h.id,
         p = null == h ? void 0 : h.sku_id,
-        _ = (0, r.e7)([a.Z], () => (null != f ? a.Z.get(f) : null)),
-        g = null == m ? void 0 : m.soft_deleted;
+        g = (0, l.e7)([r.Z], () => (null != _ ? r.Z.get(_) : null)),
+        f = null == m ? void 0 : m.soft_deleted;
     return (
         i.useEffect(() => {
-            null == _ && null != p && !a.Z.isFetchingForSKU(p) && (0, l.GZ)(p, void 0, void 0, g);
-        }, [_, p, g]),
+            null != g || null == p || r.Z.isFetchingForSKU(p) || (0, a.GZ)(p, void 0, void 0, f);
+        }, [g, p, f]),
         {
-            activeSubscription: d,
+            activeSubscription: u,
             activeSubscriptionListing: m,
-            activeSubscriptionPlanFromStore: _
+            activeSubscriptionPlanFromStore: g
         }
     );
 }

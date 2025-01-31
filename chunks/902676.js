@@ -1,16 +1,12 @@
 function i(e) {
-    let n = document.createElement('a');
-    return (n.href = e), n.hostname;
+    let t = document.createElement('a');
+    return (t.href = e), t.hostname;
 }
-function a(e) {
-    let n = document.createElement('a');
-    return (n.href = e), n.protocol;
+function r(e) {
+    let t = document.createElement('a');
+    return (t.href = e), t.protocol;
 }
-r.d(n, {
-    E: function () {
-        return a;
-    },
-    F: function () {
-        return i;
-    }
+n.d(t, {
+    E: () => r,
+    F: () => i
 });

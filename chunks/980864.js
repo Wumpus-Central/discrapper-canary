@@ -1,15 +1,11 @@
-n.d(t, {
-    h: function () {
-        return a;
-    }
-});
+n.d(t, { h: () => l });
 var i = n(416867),
-    r = n(549631),
-    s = n(388032);
-let a = () => {
+    s = n(549631),
+    r = n(388032);
+let l = () => {
     (0, i.B)({
-        title: s.intl.string(s.t.oPV2c3),
-        body: s.intl.string(s.t.DdRizc),
-        Icon: r.Z
+        title: r.intl.string(r.t.oPV2c3),
+        body: r.intl.string(r.t.DdRizc),
+        Icon: s.Z
     });
 };

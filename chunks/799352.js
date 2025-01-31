@@ -1,16 +1,12 @@
-r.d(n, {
-    O: function () {
-        return s;
-    }
-});
-var i = r(544891),
-    a = r(33194),
-    o = r(981631);
+n.d(t, { O: () => s });
+var i = n(544891),
+    r = n(33194),
+    a = n(981631);
 function s(e) {
     return (
-        (0, a.g6)(e),
+        (0, r.g6)(e),
         i.tn.post({
-            url: o.ANM.CHANNEL_BLOCKED_USER_WARNING_ACK(e),
+            url: a.ANM.CHANNEL_BLOCKED_USER_WARNING_ACK(e),
             rejectWithError: !1
         })
     );

@@ -1,41 +1,35 @@
-r.d(n, {
-    s: function () {
-        return f;
-    }
-});
-var i = r(47120);
-var a = r(627341);
-var o = r(278074),
-    s = r(264181),
-    l = r(178185),
-    u = r(272280),
-    c = r(806185);
-function d(e, n, r) {
+n.d(t, { s: () => u }), n(47120), n(627341);
+var i = n(278074),
+    r = n(264181),
+    a = n(178185),
+    s = n(272280),
+    o = n(806185);
+function l(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class f {
+class u {
     static fromServer(e) {
-        var n;
-        return new f(
+        var t;
+        return new u(
             Object.fromEntries(
-                Object.entries(null !== (n = null == e ? void 0 : e.marketings) && void 0 !== n ? n : {}).map((e) => {
-                    let [n, r] = e;
+                Object.entries(null !== (t = null == e ? void 0 : e.marketings) && void 0 !== t ? t : {}).map((e) => {
+                    let [t, n] = e;
                     return [
-                        n,
-                        (0, o.EQ)(r)
-                            .with({ type: s.Z.COACHTIP }, (e) => c.Z.fromServer(e))
-                            .with({ type: s.Z.BADGE }, (e) => l.E.fromServer(e))
-                            .with({ type: s.Z.BANNER }, (e) => u.I.fromServer(e))
+                        t,
+                        (0, i.EQ)(n)
+                            .with({ type: r.Z.COACHTIP }, (e) => o.Z.fromServer(e))
+                            .with({ type: r.Z.BADGE }, (e) => a.E.fromServer(e))
+                            .with({ type: r.Z.BANNER }, (e) => s.I.fromServer(e))
                             .otherwise(() => void 0)
                     ];
                 })
@@ -43,6 +37,6 @@ class f {
         );
     }
     constructor(e) {
-        d(this, 'marketingsBySurfaces', void 0), (this.marketingsBySurfaces = e);
+        l(this, 'marketingsBySurfaces', void 0), (this.marketingsBySurfaces = e);
     }
 }

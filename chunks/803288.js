@@ -1,10 +1,6 @@
 n.d(t, {
-    T: function () {
-        return A;
-    },
-    Z: function () {
-        return L;
-    }
+    T: () => A,
+    Z: () => D
 }),
     n(757143),
     n(47120);
@@ -22,18 +18,19 @@ var i = n(200651),
     g = n(263145),
     x = n(807582),
     p = n(26323),
-    f = n(366980),
+    _ = n(366980),
     C = n(246946),
-    v = n(709586),
-    I = n(267642),
-    N = n(999382),
-    _ = n(621319),
-    T = n(44550),
-    j = n(770270),
-    b = n(981631),
-    E = n(30513),
-    S = n(388032),
-    R = n(445744);
+    f = n(709586),
+    v = n(267642),
+    N = n(63063),
+    j = n(999382),
+    I = n(621319),
+    E = n(44550),
+    b = n(770270),
+    T = n(981631),
+    S = n(30513),
+    R = n(388032),
+    Z = n(445744);
 function y(e, t, n) {
     return (
         t in e
@@ -47,41 +44,40 @@ function y(e, t, n) {
         e
     );
 }
-let A = a.ZP.connectStores([N.Z, T.Z], () => {
-    let e = T.Z.vanityURLCode,
-        t = N.Z.getGuildId();
+let A = a.ZP.connectStores([j.Z, E.Z], () => {
+    let e = E.Z.vanityURLCode,
+        t = j.Z.getGuildId();
     return {
         vanityURLCode: e,
         guildId: t,
         onReset() {
-            (0, _.H7)();
+            (0, I.H7)();
         },
         onSave() {
-            null != t && (0, _.en)(t, e);
+            null != t && (0, I.en)(t, e);
         }
     };
 })(d.Z);
-class Z extends r.PureComponent {
+class L extends r.PureComponent {
     componentWillUnmount() {
-        (0, _.xv)();
+        (0, I.xv)();
     }
     renderEditCard() {
         let { isRemoving: e } = this.state,
             { hasError: t, originalVanityURLCode: n, vanityURLCode: r, vanityURLUses: l, guild: s } = this.props;
-        if (null == r) return (0, i.jsx)(o.Spinner, {});
-        let a = (null == s ? void 0 : s.hasFeature(b.oNc.VANITY_URL)) === !0;
-        return (0, i.jsxs)(o.Card, {
+        if (null == r) return (0, i.jsx)(o.$jN, {});
+        let a = (null == s ? void 0 : s.hasFeature(T.oNc.VANITY_URL)) === !0;
+        return (0, i.jsxs)(o.Zbd, {
             editable: !0,
-            className: R.editVanityUrlCard,
+            className: Z.editVanityUrlCard,
             children: [
-                (0, i.jsxs)(o.FormTitle, {
-                    className: R.__invalid_formTitle,
+                (0, i.jsxs)(o.vwX, {
                     children: [
                         (0, i.jsx)('div', {
-                            className: R.formTitleField,
-                            children: S.intl.string(S.t['6oJyq6'])
+                            className: Z.formTitleField,
+                            children: R.intl.string(R.t['6oJyq6'])
                         }),
-                        r.length > 0 ? (0, i.jsx)('div', { children: S.intl.format(S.t.MVWOUV, { uses: l }) }) : null
+                        r.length > 0 ? (0, i.jsx)('div', { children: R.intl.format(R.t.MVWOUV, { uses: l }) }) : null
                     ]
                 }),
                 (0, i.jsx)(g.Z, {
@@ -94,33 +90,33 @@ class Z extends r.PureComponent {
                     disabled: !a
                 }),
                 null != n && n.length > 0
-                    ? (0, i.jsx)(o.Button, {
-                          className: R.removeVanityUrlButton,
+                    ? (0, i.jsx)(o.zxk, {
+                          className: Z.removeVanityUrlButton,
                           onClick: this.handleRemoveVanityURL,
                           submitting: e,
-                          look: o.Button.Looks.LINK,
-                          size: o.Button.Sizes.MIN,
-                          color: o.Button.Colors.RED,
-                          children: S.intl.string(S.t['3ggb6O'])
+                          look: o.zxk.Looks.LINK,
+                          size: o.zxk.Sizes.MIN,
+                          color: o.zxk.Colors.RED,
+                          children: R.intl.string(R.t['3ggb6O'])
                       })
                     : null
             ]
         });
     }
     renderUpsellButton() {
-        return (0, i.jsxs)(o.ShinyButton, {
-            color: o.Button.Colors.GREEN,
-            className: s()(R.marginTop16),
-            innerClassName: R.upsellButton,
+        return (0, i.jsxs)(o.gtL, {
+            color: o.zxk.Colors.GREEN,
+            className: s()(Z.marginTop16),
+            innerClassName: Z.upsellButton,
             onClick: this.handleVanityUrlUpsellButton,
             children: [
-                (0, i.jsx)(v.Z, {
+                (0, i.jsx)(f.Z, {
                     height: 16,
                     width: 16,
-                    className: R.premiumUpsellBadge
+                    className: Z.premiumUpsellBadge
                 }),
                 ' ',
-                S.intl.string(S.t['+7XY39'])
+                R.intl.string(R.t['+7XY39'])
             ]
         });
     }
@@ -130,15 +126,15 @@ class Z extends r.PureComponent {
             return (0, i.jsx)(o.Text, {
                 variant: 'text-md/normal',
                 color: 'text-danger',
-                className: R.__invalid_marginTop20,
-                children: (0, j.i)(null == t ? void 0 : t.code)
+                className: Z.vanityUrlErrorCode,
+                children: (0, b.i)(null == t ? void 0 : t.code)
             });
         if (null != n && n.length > 0) {
-            let e = (0, f.Z)(n);
-            return (0, i.jsx)(o.FormText, {
-                className: R.__invalid_marginTop20,
-                type: o.FormTextTypes.LABEL_DESCRIPTOR,
-                children: S.intl.format(S.t['1qTOvr'], {
+            let e = (0, _.Z)(n);
+            return (0, i.jsx)(o.R94, {
+                className: Z.vanityUrlHelpLink,
+                type: o.geA.LABEL_DESCRIPTOR,
+                children: R.intl.format(R.t['1qTOvr'], {
                     urlText: e,
                     urlValue: e
                 })
@@ -146,48 +142,39 @@ class Z extends r.PureComponent {
         }
     }
     handleRemoveVanityURL() {
-        (0, _.Gy)('');
+        (0, I.Gy)('');
     }
     handleInviteCodeChange(e) {
-        (0, _.Gy)(e.replace(/ /g, '-'));
+        (0, I.Gy)(e.replace(/ /g, '-'));
     }
     render() {
-        let { hide: e, guild: t } = this.props;
+        let { hide: e, guild: t } = this.props,
+            n = N.Z.getArticleURL(T.BhN.GUILD_VANITY_URL);
         return null == t
             ? null
             : e
               ? (0, i.jsx)(c.Z, {})
-              : (0, i.jsxs)(o.FormSection, {
+              : (0, i.jsxs)(o.hjN, {
                     children: [
-                        (0, i.jsxs)(o.FormTitle, {
-                            tag: o.FormTitleTags.H1,
-                            className: R.flexFormTitle,
+                        (0, i.jsxs)(o.vwX, {
+                            tag: o.RB0.H1,
+                            className: Z.flexFormTitle,
                             children: [
-                                (0, i.jsx)('div', { children: S.intl.string(S.t['5XZKy8']) }),
+                                (0, i.jsx)('div', { children: R.intl.string(R.t['5XZKy8']) }),
                                 (0, i.jsx)(x.Z, {
                                     guild: t,
-                                    guildFeature: b.oNc.VANITY_URL,
-                                    className: R.guildFeatureAvailabilityIndicator,
+                                    guildFeature: T.oNc.VANITY_URL,
+                                    className: Z.guildFeatureAvailabilityIndicator,
                                     onClick: this.handleVanityUrlUpsellIndicator
                                 })
                             ]
                         }),
-                        (0, i.jsx)(o.FormText, {
-                            type: o.FormTextTypes.DESCRIPTION,
-                            className: R.__invalid_marginBottom8,
-                            children: S.intl.string(S.t.IhWDcn)
+                        (0, i.jsx)(o.R94, {
+                            type: o.geA.DESCRIPTION,
+                            className: Z.description,
+                            children: R.intl.format(R.t.koklFB, { helpCenterArticle: n })
                         }),
-                        (0, i.jsx)(o.FormText, {
-                            type: o.FormTextTypes.DESCRIPTION,
-                            className: R.__invalid_marginBottom20,
-                            children: S.intl.string(S.t['1mRkFh'])
-                        }),
-                        (0, i.jsx)(o.FormText, {
-                            type: o.FormTextTypes.DESCRIPTION,
-                            className: R.__invalid_marginBottom20,
-                            children: S.intl.string(S.t['eH/HMz'])
-                        }),
-                        (0, j.p)(t) ? this.renderEditCard() : this.renderUpsellButton(),
+                        (0, b.p)(t) ? this.renderEditCard() : this.renderUpsellButton(),
                         this.renderInfo()
                     ]
                 });
@@ -199,11 +186,11 @@ class Z extends r.PureComponent {
                 e.preventDefault(), e.stopPropagation();
                 let { guild: l, analyticsLocations: s } = this.props;
                 null != l &&
-                    ((0, m.yw)(b.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
+                    ((0, m.yw)(T.rMx.PREMIUM_GUILD_PROMOTION_OPENED, {
                         location: {
                             section: n,
-                            object: b.qAy.LEARN_MORE,
-                            objectType: (0, I.ge)(t),
+                            object: T.qAy.LEARN_MORE,
+                            objectType: (0, v.ge)(t),
                             location_stack: s
                         },
                         guild_id: null == l ? void 0 : l.id
@@ -213,34 +200,34 @@ class Z extends r.PureComponent {
                         analyticsSourceLocation: {
                             section: n,
                             object: i,
-                            page: b.ZY5.GUILD_SETTINGS
+                            page: T.ZY5.GUILD_SETTINGS
                         },
                         guild: l,
                         perks: r
                     }));
             }),
             y(this, 'handleVanityUrlUpsellIndicator', (e) => {
-                this.handleShowModalUpsell(e, b.Eu4.TIER_3, b.jXE.GUILD_SETTINGS_VANITY_URL, b.qAy.BADGE, (0, E.WW)());
+                this.handleShowModalUpsell(e, T.Eu4.TIER_3, T.jXE.GUILD_SETTINGS_VANITY_URL, T.qAy.BADGE, (0, S.WW)());
             }),
             y(this, 'handleVanityUrlUpsellButton', (e) => {
-                this.handleShowModalUpsell(e, b.Eu4.TIER_3, b.jXE.GUILD_SETTINGS_VANITY_URL, b.qAy.BUTTON_CTA, (0, E.WW)());
+                this.handleShowModalUpsell(e, T.Eu4.TIER_3, T.jXE.GUILD_SETTINGS_VANITY_URL, T.qAy.BUTTON_CTA, (0, S.WW)());
             });
     }
 }
-function L() {
-    let e = (0, a.e7)([N.Z], () => N.Z.getGuild()),
-        t = (0, a.cj)([T.Z], () => ({
-            vanityURLCode: T.Z.vanityURLCode,
-            vanityURLUses: T.Z.vanityURLUses,
-            originalVanityURLCode: T.Z.originalVanityURLCode,
-            hasError: T.Z.hasError(),
-            errorDetails: T.Z.errorDetails
+function D() {
+    let e = (0, a.e7)([j.Z], () => j.Z.getGuild()),
+        t = (0, a.cj)([E.Z], () => ({
+            vanityURLCode: E.Z.vanityURLCode,
+            vanityURLUses: E.Z.vanityURLUses,
+            originalVanityURLCode: E.Z.originalVanityURLCode,
+            hasError: E.Z.hasError(),
+            errorDetails: E.Z.errorDetails
         })),
         n = (0, a.e7)([C.Z], () => C.Z.hideInstantInvites),
         { analyticsLocations: r } = (0, h.ZP)(u.Z.VANITY_URL);
     return (0, i.jsx)(h.Gt, {
         value: r,
-        children: (0, i.jsx)(Z, {
+        children: (0, i.jsx)(L, {
             guild: e,
             ...t,
             hide: n,

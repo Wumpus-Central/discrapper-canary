@@ -1,9 +1,5 @@
-r.d(n, {
-    G: function () {
-        return i;
-    }
-});
-let i = (0, r(818083).B)({
+n.d(t, { G: () => i });
+let i = (0, n(818083).B)({
     kind: 'user',
     id: '2024-09_friend_anniversaries_metrics',
     label: 'Friend Anniversaries Metrics',

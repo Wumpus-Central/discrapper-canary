@@ -1,33 +1,27 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => u }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
     s = n(481060),
     o = n(497505),
     c = n(415104),
     d = n(86675);
 function u(e) {
-    var t;
-    let { quests: n, isFetching: l } = e,
-        u = null;
+    let { quests: t, isFetching: n } = e,
+        r = null;
     if (window.location.hash.length > 0) {
         let e = window.location.hash.slice(1);
-        for (let t of n)
-            if (t.id === e) {
-                u = e;
+        for (let n of t)
+            if (n.id === e) {
+                r = e;
                 break;
             }
     }
-    r.useEffect(() => {
-        for (let e of n)
-            if (e.id === u) {
-                let e = document.getElementById('quest-tile-'.concat(u));
+    l.useEffect(() => {
+        for (let e of t)
+            if (e.id === r) {
+                let e = document.getElementById('quest-tile-'.concat(r));
                 null == e ||
                     e.scrollIntoView({
                         behavior: 'smooth',
@@ -35,12 +29,12 @@ function u(e) {
                     });
                 break;
             }
-    }, [n, u]);
-    let h = null != u,
-        [m, p] = r.useState(window.innerWidth);
-    r.useEffect(() => {
+    }, [t, r]);
+    let u = null != r,
+        [h, m] = l.useState(window.innerWidth);
+    l.useEffect(() => {
         let e = () => {
-            p(window.innerWidth);
+            m(window.innerWidth);
         };
         return (
             window.addEventListener('resize', e),
@@ -49,15 +43,15 @@ function u(e) {
             }
         );
     }, []);
-    let g = (t = m) >= 1610 ? 3 : t >= 1340 ? 2 : 1;
-    return l && 0 === n.length
-        ? (0, i.jsx)(s.Spinner, { className: d.spinner })
+    let p = h >= 1610 ? 3 : h >= 1340 ? 2 : 1;
+    return n && 0 === t.length
+        ? (0, i.jsx)(s.$jN, { className: d.spinner })
         : (0, i.jsx)(
               'div',
               {
                   className: d.container,
-                  children: n.map((e, t) => {
-                      let n = Math.floor(t / g);
+                  children: t.map((e, t) => {
+                      let n = Math.floor(t / p);
                       return (0, i.jsx)(
                           c.Z,
                           {
@@ -66,14 +60,14 @@ function u(e) {
                               contentPosition: t,
                               rowIndex: n,
                               className: a()(d.questTile, {
-                                  [d.selected]: h && e.id === u,
-                                  [d.unselected]: h && e.id !== u
+                                  [d.selected]: u && e.id === r,
+                                  [d.unselected]: u && e.id !== r
                               })
                           },
                           e.id
                       );
                   })
               },
-              null != u ? u : ''
+              null != r ? r : ''
           );
 }

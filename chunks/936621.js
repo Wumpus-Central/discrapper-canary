@@ -1,34 +1,30 @@
-r.d(n, {
-    F: function () {
-        return d;
-    }
-});
-var i = r(200651),
-    a = r(192379),
-    o = r(512722),
-    s = r.n(o),
-    l = r(392711),
-    u = r.n(l);
-function c(e, n, r) {
+n.d(t, { F: () => c });
+var i = n(200651),
+    r = n(192379),
+    a = n(512722),
+    s = n.n(a),
+    o = n(392711),
+    l = n.n(o);
+function u(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class d extends a.Component {
-    getDefaultAnimProps(e, n) {
+class c extends r.Component {
+    getDefaultAnimProps(e, t) {
         return {
             duration: null != e ? e : 300,
             progress: 0,
             last: Date.now(),
-            intensity: null != n ? n : 5,
+            intensity: null != t ? t : 5,
             lastDirection: -1,
             frameCount: 0
         };
@@ -36,8 +32,8 @@ class d extends a.Component {
     componentWillUnmount() {
         this._animationCleanup();
     }
-    shake(e, n) {
-        if (((this.animProps = this.getDefaultAnimProps(e, n)), !this.state.shaking)) this.setState({ shaking: !0 }, this._animate);
+    shake(e, t) {
+        (this.animProps = this.getDefaultAnimProps(e, t)), !this.state.shaking && this.setState({ shaking: !0 }, this._animate);
     }
     stop() {
         this.state.shaking && this.setState({ shaking: !1 });
@@ -46,34 +42,34 @@ class d extends a.Component {
         this.setState({ shaking: !1 }, this._animationCleanup);
     }
     render() {
-        let { children: e, ...n } = this.props;
+        let { children: e, ...t } = this.props;
         return (0, i.jsx)('div', {
-            ...n,
+            ...t,
             ref: this.ref,
             children: e
         });
     }
     constructor(e) {
         super(e),
-            c(this, 'animProps', void 0),
-            c(this, '_animationFrame', void 0),
-            c(this, 'ref', a.createRef()),
-            c(this, '_animate', () => {
+            u(this, 'animProps', void 0),
+            u(this, '_animationFrame', void 0),
+            u(this, 'ref', r.createRef()),
+            u(this, '_animate', () => {
                 let { animProps: e } = this;
                 if (!this.state.shaking || e.progress > e.duration || null == this.ref.current) {
                     this._animationComplete();
                     return;
                 }
-                let n = Date.now();
-                if (((e.progress += n - e.last), (e.last = n), e.frameCount % 2 != 0)) {
-                    let n = e.lastDirection * e.intensity,
-                        r = u().random(-e.intensity, e.intensity, !0),
+                let t = Date.now();
+                if (((e.progress += t - e.last), (e.last = t), e.frameCount % 2 != 0)) {
+                    let t = e.lastDirection * e.intensity,
+                        n = l().random(-e.intensity, e.intensity, !0),
                         i = Math.max(0, Math.cbrt(e.duration - e.progress / 1000));
-                    (e.intensity *= Math.min(1, i)), (e.lastDirection *= -1), s()(null != this.ref.current, 'Shakeable style set when not mounted'), (this.ref.current.style.transform = 'translate3d('.concat(n, 'px,').concat(r, 'px,0px)'));
+                    (e.intensity *= Math.min(1, i)), (e.lastDirection *= -1), s()(null != this.ref.current, 'Shakeable style set when not mounted'), (this.ref.current.style.transform = 'translate3d('.concat(t, 'px,').concat(n, 'px,0px)'));
                 }
                 (e.frameCount += 1), (this._animationFrame = requestAnimationFrame(this._animate));
             }),
-            c(this, '_animationCleanup', () => {
+            u(this, '_animationCleanup', () => {
                 null != this.ref.current && (this.ref.current.style.transform = ''), cancelAnimationFrame(this._animationFrame);
             }),
             (this.state = { shaking: !1 });

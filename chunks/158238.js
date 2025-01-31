@@ -1,8 +1,4 @@
-n.d(t, {
-    e: function () {
-        return i;
-    }
-});
+n.d(t, { e: () => i });
 let i = (0, n(818083).B)({
     kind: 'user',
     id: '2024-01_quiet_mode',

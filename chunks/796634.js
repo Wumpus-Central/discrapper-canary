@@ -1,29 +1,26 @@
 n.d(t, {
-    G: function () {
-        return c;
-    },
-    Q: function () {
-        return o;
-    }
+    G: () => c,
+    Q: () => o
 });
 var i = n(192379),
-    r = n(442837),
-    s = n(232567),
-    a = n(594174),
-    l = n(276444);
+    s = n(442837),
+    r = n(232567),
+    l = n(594174),
+    a = n(276444);
 let o = 3;
 function c() {
-    let e = (0, r.Wu)([l.Z], () => l.Z.getSentUserIds()),
-        t = (0, r.Wu)([a.default], () => e.map((e) => a.default.getUser(e)).filter((e) => null != e));
-    i.useEffect(() => {
-        e.forEach((e) => {
-            (0, s.PR)(e);
-        });
-    }, [e]);
-    let n = e.length === o;
-    return {
-        referralSentUsers: t,
-        hasSentAllReferrals: n,
-        refreshAt: (0, r.e7)([l.Z], () => l.Z.getRefreshAt())
-    };
+    let e = (0, s.Wu)([a.Z], () => a.Z.getSentUserIds()),
+        t = (0, s.Wu)([l.default], () => e.map((e) => l.default.getUser(e)).filter((e) => null != e));
+    return (
+        i.useEffect(() => {
+            e.forEach((e) => {
+                (0, r.PR)(e);
+            });
+        }, [e]),
+        {
+            referralSentUsers: t,
+            hasSentAllReferrals: e.length === o,
+            refreshAt: (0, s.e7)([a.Z], () => a.Z.getRefreshAt())
+        }
+    );
 }

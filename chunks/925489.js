@@ -1,33 +1,29 @@
-r.d(n, {
-    T: function () {
-        return i;
-    }
-});
-var i = function (e, n, r, i) {
-    var a = i.clientWidth,
-        o = i.clientHeight,
+n.d(t, { T: () => i });
+var i = function (e, t, n, i) {
+    var r = i.clientWidth,
+        a = i.clientHeight,
         s = 'number' == typeof e.pageX ? e.pageX : e.touches[0].pageX,
-        l = 'number' == typeof e.pageY ? e.pageY : e.touches[0].pageY,
-        u = s - (i.getBoundingClientRect().left + window.pageXOffset),
-        c = l - (i.getBoundingClientRect().top + window.pageYOffset);
-    if ('vertical' === n) {
-        var d = void 0;
-        if (((d = c < 0 ? 359 : c > o ? 0 : (360 * (-((100 * c) / o) + 100)) / 100), r.h !== d))
+        o = 'number' == typeof e.pageY ? e.pageY : e.touches[0].pageY,
+        l = s - (i.getBoundingClientRect().left + window.pageXOffset),
+        u = o - (i.getBoundingClientRect().top + window.pageYOffset);
+    if ('vertical' === t) {
+        var c = void 0;
+        if (((c = u < 0 ? 359 : u > a ? 0 : (360 * (-((100 * u) / a) + 100)) / 100), n.h !== c))
             return {
-                h: d,
-                s: r.s,
-                l: r.l,
-                a: r.a,
+                h: c,
+                s: n.s,
+                l: n.l,
+                a: n.a,
                 source: 'hsl'
             };
     } else {
-        var f = void 0;
-        if (((f = u < 0 ? 0 : u > a ? 359 : (((100 * u) / a) * 360) / 100), r.h !== f))
+        var d = void 0;
+        if (((d = l < 0 ? 0 : l > r ? 359 : (((100 * l) / r) * 360) / 100), n.h !== d))
             return {
-                h: f,
-                s: r.s,
-                l: r.l,
-                a: r.a,
+                h: d,
+                s: n.s,
+                l: n.l,
+                a: n.a,
                 source: 'hsl'
             };
     }

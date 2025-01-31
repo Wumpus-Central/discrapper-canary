@@ -9,16 +9,18 @@ function n(t) {
                 })
             )),
             n.forEach(function (e) {
-                (function (t, e, r) {
-                    e in t
-                        ? Object.defineProperty(t, e, {
-                              value: r,
+                var n, i, o;
+                (n = t),
+                    (i = e),
+                    (o = r[e]),
+                    i in n
+                        ? Object.defineProperty(n, i, {
+                              value: o,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (t[e] = r);
-                })(t, e, r[e]);
+                        : (n[i] = o);
             });
     }
     return t;
@@ -58,14 +60,14 @@ t.exports = {
                 type: 'unstyled'
             };
         d && ((S = n({}, S, { nextSibling: w.key })), (w = n({}, w, { prevSibling: S.key })));
-        var k = [new g(S), new g(w)],
-            x = i.createFromArray(k),
-            C = s.replaceWithFragment(_, m, x),
-            E = C.merge({
+        var x = [new g(S), new g(w)],
+            k = i.createFromArray(x),
+            E = s.replaceWithFragment(_, m, k),
+            C = E.merge({
                 selectionBefore: u,
-                selectionAfter: C.getSelectionAfter().set('hasFocus', !0)
+                selectionAfter: E.getSelectionAfter().set('hasFocus', !0)
             });
-        return c.push(t, E, 'insert-fragment');
+        return c.push(t, C, 'insert-fragment');
     },
     moveAtomicBlock: function (t, e, r, n) {
         var i,

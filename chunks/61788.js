@@ -1,7 +1,8 @@
-e.exports = {
-    diversitySelectorButton: 'diversitySelectorButton_cce80d',
-    diversitySelectorOptions: 'diversitySelectorOptions_cce80d',
-    diversitySelectorOptionsHasTabWrapper: 'diversitySelectorOptionsHasTabWrapper_cce80d',
-    diversityEmojiItem: 'diversityEmojiItem_cce80d',
-    diversityEmojiItemImage: 'diversityEmojiItemImage_cce80d'
+var i = {
+    diversitySelectorButton: 'diversitySelectorButton_a45a2a',
+    diversitySelectorOptions: 'diversitySelectorOptions_a45a2a',
+    diversitySelectorOptionsHasTabWrapper: 'diversitySelectorOptionsHasTabWrapper_a45a2a',
+    diversityEmojiItem: 'diversityEmojiItem_a45a2a',
+    diversityEmojiItemImage: 'diversityEmojiItemImage_a45a2a'
 };
+e.exports = i;

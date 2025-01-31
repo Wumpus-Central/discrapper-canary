@@ -1,28 +1,24 @@
-r.d(n, {
-    Z: function () {
-        return d;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(112560),
-    l = r(388032),
-    u = r(452679);
-let c = r(978538);
-function d(e) {
-    let { width: n, noArt: r = !1, selected: a = !1 } = e;
+n.d(t, { Z: () => c });
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(112560),
+    o = n(388032),
+    l = n(452679);
+let u = n(978538);
+function c(e) {
+    let { width: t, noArt: n = !1, selected: r = !1 } = e;
     return (0, i.jsx)('div', {
-        className: o()(u.content, u.streamHidden),
+        className: a()(l.content, l.streamHidden),
         children: (0, i.jsx)(s.Z, {
-            className: u.streamHiddenEmptyState,
-            artURL: c,
-            noArt: r,
-            selected: a,
-            size: (0, s.L)(n),
-            header: l.intl.string(l.t.wxbmeH),
-            description: l.intl.string(l.t.odF9WF)
+            className: l.streamHiddenEmptyState,
+            artURL: u,
+            noArt: n,
+            selected: r,
+            size: (0, s.L)(t),
+            header: o.intl.string(o.t.wxbmeH),
+            description: o.intl.string(o.t.odF9WF)
         })
     });
 }

@@ -1,10 +1,11 @@
+n.d(t, { Z: () => T });
 var i,
     r = n(200651),
-    o = n(192379),
-    a = n(846519),
-    u = n(481060),
-    I = n(572004),
-    l = n(388032);
+    a = n(192379),
+    _ = n(846519),
+    l = n(481060),
+    o = n(572004),
+    I = n(388032);
 function s(e, t, n) {
     return (
         t in e
@@ -18,39 +19,40 @@ function s(e, t, n) {
         e
     );
 }
-class _ extends (i = o.PureComponent) {
+class u extends (i = a.PureComponent) {
     componentWillUnmount() {
         this._timeout.stop();
     }
     render() {
         let { text: e } = this.props,
             { mode: t } = this.state,
-            n = t === u.CopyInput.Modes.SUCCESS ? l.intl.string(l.t['t5VZ8/']) : e;
-        return (0, r.jsx)(u.CopyInput, {
+            n = t === l.kO8.Modes.SUCCESS ? I.intl.string(I.t['t5VZ8/']) : e;
+        return (0, r.jsx)(l.kO8, {
             ...this.props,
             onCopy: this.handleCopy,
             mode: t,
             text: n,
-            supportsCopy: I.wS
+            supportsCopy: o.wS
         });
     }
     handleCopy(e) {
         let { onCopy: t, delay: n = 1000 } = this.props,
-            i = (0, I.JG)(e);
-        this.setState({ mode: i ? u.CopyInput.Modes.SUCCESS : u.CopyInput.Modes.ERROR }), this._timeout.start(n, () => this.setState({ mode: u.CopyInput.Modes.DEFAULT })), null == t || t(e);
+            i = (0, o.JG)(e);
+        this.setState({ mode: i ? l.kO8.Modes.SUCCESS : l.kO8.Modes.ERROR }), this._timeout.start(n, () => this.setState({ mode: l.kO8.Modes.DEFAULT })), null == t || t(e);
     }
     getVerticalButtonColor(e) {
         switch (e) {
-            case u.CopyInput.Modes.SUCCESS:
-                return u.Button.Colors.GREEN;
-            case u.CopyInput.Modes.ERROR:
-                return u.Button.Colors.RED;
+            case l.kO8.Modes.SUCCESS:
+                return l.zxk.Colors.GREEN;
+            case l.kO8.Modes.ERROR:
+                return l.zxk.Colors.RED;
             default:
-                return u.Button.Colors.BRAND;
+                return l.zxk.Colors.BRAND;
         }
     }
     constructor(e) {
-        super(e), s(this, '_timeout', void 0), (this.state = { mode: u.CopyInput.Modes.DEFAULT }), (this._timeout = new a.V7()), (this.handleCopy = this.handleCopy.bind(this));
+        super(e), s(this, '_timeout', void 0), (this.state = { mode: l.kO8.Modes.DEFAULT }), (this._timeout = new _.V7()), (this.handleCopy = this.handleCopy.bind(this));
     }
 }
-s(_, 'defaultProps', { delay: 1000 }), (t.Z = _);
+s(u, 'defaultProps', { delay: 1000 });
+let T = u;

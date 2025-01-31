@@ -1,24 +1,20 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(192379),
-    a = r(570140);
-function o(e) {
-    let n = (0, i.useRef)(e);
+n.d(t, { Z: () => a });
+var i = n(192379),
+    r = n(570140);
+function a(e) {
+    let t = (0, i.useRef)(e);
     (0, i.useEffect)(() => {
-        n.current = e;
+        t.current = e;
     }, [e]),
         (0, i.useEffect)(() => {
             if (__OVERLAY__) {
                 function e(e) {
-                    e.locked && n.current();
+                    e.locked && t.current();
                 }
                 return (
-                    a.Z.subscribe('OVERLAY_SET_INPUT_LOCKED', e),
+                    r.Z.subscribe('OVERLAY_SET_INPUT_LOCKED', e),
                     () => {
-                        a.Z.unsubscribe('OVERLAY_SET_INPUT_LOCKED', e);
+                        r.Z.unsubscribe('OVERLAY_SET_INPUT_LOCKED', e);
                     }
                 );
             }

@@ -1,58 +1,54 @@
-r.d(n, {
-    B: function () {
-        return l;
-    }
-});
-var i = r(141106);
-function a(e, n, r) {
+n.d(t, { B: () => o });
+var i = n(141106);
+function r(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let o = (e) => ('*' === e.charAt(e.length - 1) ? i.dQ.PrefixMatch : i.dQ.ExactMatch);
+let a = (e) => ('*' === e.charAt(e.length - 1) ? i.dQ.PrefixMatch : i.dQ.ExactMatch);
 class s {
-    _internalAdd(e, n, r) {
+    _internalAdd(e, t, n) {
         let i = e.charAt(0),
-            a = this.suffix[i];
-        null == a && ((a = new s()), (this.suffix[i] = a), null != r ? (a.value = r.slice(0, r.length - e.length + 1)) : (a.value = i)), e.length > 1 && '*' !== e.charAt(1) ? a._internalAdd(e.substring(1), n, null != r ? r : e) : ((a.strategy = o(n)), (a.isWord = !0));
+            r = this.suffix[i];
+        null == r && ((r = new s()), (this.suffix[i] = r), null != n ? (r.value = n.slice(0, n.length - e.length + 1)) : (r.value = i)), e.length > 1 && '*' !== e.charAt(1) ? r._internalAdd(e.substring(1), t, null != n ? n : e) : ((r.strategy = a(t)), (r.isWord = !0));
     }
     add(e) {
         this._internalAdd(e, e);
     }
     constructor() {
-        a(this, 'isWord', void 0), a(this, 'value', void 0), a(this, 'suffix', {}), a(this, 'strategy', void 0), (this.isWord = null), (this.value = null), (this.suffix = {}), (this.strategy = i.dQ.ExactMatch);
+        r(this, 'isWord', void 0), r(this, 'value', void 0), r(this, 'suffix', {}), r(this, 'strategy', void 0), (this.isWord = null), (this.value = null), (this.suffix = {}), (this.strategy = i.dQ.ExactMatch);
     }
 }
-class l {
+class o {
     static fromSnapshot(e) {
-        let n = new l();
-        return (n.trie = e.trie), n;
+        let t = new o();
+        return (t.trie = e.trie), t;
     }
     search(e) {
-        let n = this.trie,
+        let t = this.trie,
+            n = null,
             r = null,
-            a = null,
-            o = {};
-        for (let u = 0; u <= e.length; u++)
-            if (((r = e.charAt(u)), (n = null != (a = n.suffix[r]) ? a : null != this.trie.suffix[r] ? this.trie.suffix[r] : this.trie).isWord)) {
-                var s, l;
-                let r = n.strategy,
-                    a = u + 1 - (null !== (l = null === (s = n.value) || void 0 === s ? void 0 : s.length) && void 0 !== l ? l : 0),
-                    c = u;
-                if ((0, i.BD)(e, a, c, r)) {
-                    let n = (0, i.jO)(e, a, c, r);
-                    (null == o[n.start] || o[n.start].end < n.end) && (o[n.start] = n);
+            a = {};
+        for (let l = 0; l <= e.length; l++)
+            if (((n = e.charAt(l)), (t = null != (r = t.suffix[n]) ? r : null != this.trie.suffix[n] ? this.trie.suffix[n] : this.trie).isWord)) {
+                var s, o;
+                let n = t.strategy,
+                    r = l + 1 - (null !== (o = null === (s = t.value) || void 0 === s ? void 0 : s.length) && void 0 !== o ? o : 0),
+                    u = l;
+                if ((0, i.BD)(e, r, u, n)) {
+                    let t = (0, i.jO)(e, r, u, n);
+                    (null == a[t.start] || a[t.start].end < t.end) && (a[t.start] = t);
                 }
             }
-        return o;
+        return a;
     }
     addWord(e) {
         null == this.trie && (this.trie = new s()), this.trie.add(e);
@@ -64,6 +60,6 @@ class l {
         this.trie = new s();
     }
     constructor() {
-        a(this, 'trie', void 0), (this.trie = new s());
+        r(this, 'trie', void 0), (this.trie = new s());
     }
 }

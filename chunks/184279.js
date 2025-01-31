@@ -1,13 +1,9 @@
-n.d(t, {
-    Z: function () {
-        return m;
-    }
-});
+n.d(t, { Z: () => m });
 var i = n(200651);
 n(192379);
 var l = n(481060),
-    r = n(43267),
-    a = n(933557),
+    a = n(43267),
+    r = n(933557),
     s = n(297700),
     o = n(534091),
     c = n(967128),
@@ -26,7 +22,7 @@ let p = () =>
 function m(e) {
     var t;
     let { channel: n } = e,
-        m = null !== (t = (0, a.ZP)(n)) && void 0 !== t ? t : '';
+        m = null !== (t = (0, r.ZP)(n)) && void 0 !== t ? t : '';
     return (0, i.jsxs)('div', {
         id: (0, o.p)(n.id, n.id),
         className: u.headerContainer,
@@ -43,10 +39,10 @@ function m(e) {
                     (0, i.jsxs)('div', {
                         className: u.chatBubble,
                         children: [
-                            (0, i.jsx)(l.Avatar, {
+                            (0, i.jsx)(l.qEK, {
                                 'aria-label': m,
-                                size: l.AvatarSizes.SIZE_80,
-                                src: (0, r.x)(n, 80, !1)
+                                size: l.EFr.SIZE_80,
+                                src: (0, a.x)(n, 80, !1)
                             }),
                             (0, i.jsxs)(c.Ot, {
                                 className: u.emptyMessageHeader,
@@ -55,7 +51,7 @@ function m(e) {
                                     (0, i.jsx)(s.Z, {
                                         className: u.flowerStar,
                                         size: 24,
-                                        children: (0, i.jsx)(l.CheckmarkSmallIcon, {
+                                        children: (0, i.jsx)(l.kmB, {
                                             size: 'md',
                                             color: 'currentColor',
                                             className: u.verified

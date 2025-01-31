@@ -1,10 +1,6 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(802856),
-    a = r(981631);
-function o(e) {
-    return null == e || null == e.type || e.type !== a.IIU.PLAYING ? null : (0, i.Z)(e) ? a.M7m.XBOX : null != e.platform ? e.platform : a.M7m.DESKTOP;
+n.d(t, { Z: () => a });
+var i = n(802856),
+    r = n(981631);
+function a(e) {
+    return null == e || null == e.type || e.type !== r.IIU.PLAYING ? null : (0, i.Z)(e) ? r.M7m.XBOX : null != e.platform ? e.platform : r.M7m.DESKTOP;
 }

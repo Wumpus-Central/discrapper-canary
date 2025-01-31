@@ -1,22 +1,14 @@
-r.d(n, {
-    Y$: function () {
-        return a;
-    },
-    a8: function () {
-        return l;
-    },
-    jS: function () {
-        return o;
-    },
-    tZ: function () {
-        return s;
-    }
+n.d(t, {
+    Y$: () => r,
+    a8: () => o,
+    jS: () => a,
+    tZ: () => s
 });
-var i = r(570140);
-function a() {
+var i = n(570140);
+function r() {
     i.Z.dispatch({ type: 'DEVELOPER_ACTIVITY_SHELF_TOGGLE_USE_ACTIVITY_URL_OVERRIDE' });
 }
-function o(e) {
+function a(e) {
     i.Z.dispatch({
         type: 'DEVELOPER_ACTIVITY_SHELF_SET_ACTIVITY_URL_OVERRIDE',
         activityUrlOverride: e
@@ -29,7 +21,7 @@ function s(e) {
         timestamp: new Date().getTime()
     });
 }
-function l(e) {
+function o(e) {
     i.Z.dispatch({
         type: 'DEVELOPER_ACTIVITY_SHELF_UPDATE_FILTER',
         filter: e

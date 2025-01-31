@@ -1,8 +1,9 @@
-e.exports = {
-    bar: 'bar_c7ddf6',
-    beginning: 'beginning_c7ddf6',
-    selected: 'selected_c7ddf6',
-    end: 'end_c7ddf6',
-    emojiButtonContainer: 'emojiButtonContainer_c7ddf6',
-    emojiButton: 'emojiButton_c7ddf6'
+var i = {
+    bar: 'bar_f5401d',
+    emojiSelectContainer: 'emojiSelectContainer_f5401d',
+    end: 'end_f5401d',
+    separator: 'separator_f5401d',
+    learnMoreButton: 'learnMoreButton_f5401d',
+    emojiIconContainer: 'emojiIconContainer_f5401d'
 };
+e.exports = i;

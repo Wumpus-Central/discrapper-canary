@@ -1,8 +1,9 @@
-e.exports = {
-    appIconSelectionContainer: 'appIconSelectionContainer_e2863f',
-    appIconSelection: 'appIconSelection_e2863f',
-    selected: 'selected_e2863f',
-    disabled: 'disabled_e2863f',
-    lockedBadgeContainer: 'lockedBadgeContainer_e2863f',
-    lockedBadge: 'lockedBadge_e2863f'
+var i = {
+    appIconSelectionContainer: 'appIconSelectionContainer__8a3d7',
+    appIconSelection: 'appIconSelection__8a3d7',
+    selected: 'selected__8a3d7',
+    disabled: 'disabled__8a3d7',
+    lockedBadgeContainer: 'lockedBadgeContainer__8a3d7',
+    lockedBadge: 'lockedBadge__8a3d7'
 };
+e.exports = i;

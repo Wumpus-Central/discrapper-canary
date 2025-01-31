@@ -1,24 +1,25 @@
+n.d(t, { Z: () => h });
 var i = n(200651),
-    r = n(192379),
-    l = n(442837),
-    a = n(481060),
-    o = n(528963),
-    s = n(143740),
+    l = n(192379),
+    a = n(442837),
+    r = n(481060),
+    s = n(528963),
+    o = n(143740),
     c = n(528144),
-    u = n(212342),
-    d = n(388032),
+    d = n(212342),
+    u = n(388032),
     m = n(869361);
-t.Z = (e) => {
+let h = (e) => {
     let { channelId: t, messageId: n } = e,
-        h = (0, l.e7)([u.Z], () => u.Z.shouldShowBump(n), [n]),
-        f = r.useCallback(() => {
-            o.Z.dismissPublishBump(n), (0, s.Z)(t, n);
+        h = (0, a.e7)([d.Z], () => d.Z.shouldShowBump(n), [n]),
+        _ = l.useCallback(() => {
+            s.Z.dismissPublishBump(n), (0, o.Z)(t, n);
         }, [t, n]),
-        p = r.useCallback(() => {
-            o.Z.dismissPublishBump(n);
+        p = l.useCallback(() => {
+            s.Z.dismissPublishBump(n);
         }, [n]),
-        _ = r.useCallback(() => {
-            o.Z.permanentlyHidePublishBump(t);
+        g = l.useCallback(() => {
+            s.Z.permanentlyHidePublishBump(t);
         }, [t]);
     return h
         ? (0, i.jsxs)('div', {
@@ -27,7 +28,7 @@ t.Z = (e) => {
                   (0, i.jsxs)('div', {
                       className: m.bumpBox,
                       children: [
-                          (0, i.jsx)(a.AnnouncementsIcon, {
+                          (0, i.jsx)(r.MqZ, {
                               size: 'xs',
                               color: 'currentColor',
                               className: m.icon
@@ -35,19 +36,19 @@ t.Z = (e) => {
                           (0, i.jsx)(c.Z, {
                               className: m.tagline,
                               size: c.Z.Sizes.SIZE_14,
-                              children: d.intl.string(d.t.hasZoa)
+                              children: u.intl.string(u.t.hasZoa)
                           }),
-                          (0, i.jsx)(a.Button, {
-                              color: a.Button.Colors.LINK,
-                              look: a.Button.Looks.LINK,
-                              size: a.Button.Sizes.MIN,
+                          (0, i.jsx)(r.zxk, {
+                              color: r.zxk.Colors.LINK,
+                              look: r.zxk.Looks.LINK,
+                              size: r.zxk.Sizes.MIN,
                               className: m.publish,
-                              onClick: f,
-                              children: d.intl.string(d.t['MFGE5+'])
+                              onClick: _,
+                              children: u.intl.string(u.t['MFGE5+'])
                           }),
-                          (0, i.jsx)(a.Clickable, {
+                          (0, i.jsx)(r.P3F, {
                               onClick: p,
-                              children: (0, i.jsx)(a.CircleXIcon, {
+                              children: (0, i.jsx)(r.k$p, {
                                   size: 'xs',
                                   color: 'currentColor',
                                   className: m.closeIcon
@@ -55,13 +56,13 @@ t.Z = (e) => {
                           })
                       ]
                   }),
-                  (0, i.jsx)(a.Text, {
+                  (0, i.jsx)(r.Text, {
                       color: 'text-muted',
                       className: m.hidePermanently,
                       variant: 'text-sm/normal',
-                      children: (0, i.jsx)(a.Clickable, {
-                          onClick: _,
-                          children: d.intl.string(d.t.efSkDg)
+                      children: (0, i.jsx)(r.P3F, {
+                          onClick: g,
+                          children: u.intl.string(u.t.efSkDg)
                       })
                   })
               ]

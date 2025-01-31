@@ -1,89 +1,84 @@
-r.d(n, {
-    S: function () {
-        return f;
-    },
-    b: function () {
-        return d;
-    }
-});
-var i = r(47120);
-var a = r(653041);
-var o = r(836560);
-var s = r(17089),
-    l = r(710845),
-    u = r(981631);
-function c(e, n, r) {
+n.d(t, {
+    S: () => o,
+    b: () => s
+}),
+    n(47120),
+    n(653041);
+var i = n(836560);
+n(17089);
+var r = n(710845);
+function a(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class d {
+n(981631);
+class s {
     safeDispatch(e) {
-        for (var n, r = arguments.length, i = Array(r > 1 ? r - 1 : 0), a = 1; a < r; a++) i[a - 1] = arguments[a];
+        for (var t, n = arguments.length, i = Array(n > 1 ? n - 1 : 0), r = 1; r < n; r++) i[r - 1] = arguments[r];
         if (!this.hasSubscribers(e)) {
-            let [r] = i;
-            return (this._savedDispatches[e] = null !== (n = this._savedDispatches[e]) && void 0 !== n ? n : []).push(r), this;
+            let [n] = i;
+            return (this._savedDispatches[e] = null !== (t = this._savedDispatches[e]) && void 0 !== t ? t : []).push(n), this;
         }
         return this.dispatch(e, ...i);
     }
-    dispatch(e, n) {
-        Date.now();
-        return this.emitter.emit(e, n), this;
+    dispatch(e, t) {
+        return Date.now(), this.emitter.emit(e, t), this;
     }
-    dispatchToLastSubscribed(e, n) {
+    dispatchToLastSubscribed(e, t) {
         Date.now();
         {
-            let r = this.emitter.listeners(e);
-            return r.length > 0 && r[r.length - 1](n), this;
+            let n = this.emitter.listeners(e);
+            return n.length > 0 && n[n.length - 1](t), this;
         }
     }
     hasSubscribers(e) {
         return this.emitter.listenerCount(e) > 0;
     }
     _checkSavedDispatches(e) {
-        let n = this._savedDispatches[e];
-        null != n &&
-            (n.forEach((n) => {
-                this.dispatch(e, n);
+        let t = this._savedDispatches[e];
+        null != t &&
+            (t.forEach((t) => {
+                this.dispatch(e, t);
             }),
             (this._savedDispatches[e] = void 0));
     }
-    subscribe(e, n) {
-        return this.emitter.listeners(e).indexOf(n) >= 0 ? (new l.Z('ComponentDispatchUtils').warn('ComponentDispatch.subscribe: Attempting to add a duplicate listener', e), this) : (this.emitter.on(e, n), this._checkSavedDispatches(e), this);
+    subscribe(e, t) {
+        return this.emitter.listeners(e).indexOf(t) >= 0 ? new r.Z('ComponentDispatchUtils').warn('ComponentDispatch.subscribe: Attempting to add a duplicate listener', e) : (this.emitter.on(e, t), this._checkSavedDispatches(e)), this;
     }
-    subscribeOnce(e, n) {
-        return this.emitter.once(e, n), this._checkSavedDispatches(e), this;
+    subscribeOnce(e, t) {
+        return this.emitter.once(e, t), this._checkSavedDispatches(e), this;
     }
-    resubscribe(e, n) {
-        if (!this.emitter.listeners(e).includes(n)) return new l.Z('ComponentDispatchUtils').warn('ComponentDispatch.resubscribe: Resubscribe without existing subscription', e), this;
-        this.emitter.off(e, n), this.emitter.on(e, n);
+    resubscribe(e, t) {
+        if (!this.emitter.listeners(e).includes(t)) return new r.Z('ComponentDispatchUtils').warn('ComponentDispatch.resubscribe: Resubscribe without existing subscription', e), this;
+        this.emitter.off(e, t), this.emitter.on(e, t);
     }
-    unsubscribe(e, n) {
-        return this.emitter.removeListener(e, n), this;
+    unsubscribe(e, t) {
+        return this.emitter.removeListener(e, t), this;
     }
     reset() {
         return this.emitter.removeAllListeners(), this;
     }
-    dispatchKeyed(e, n) {
-        for (var r = arguments.length, i = Array(r > 2 ? r - 2 : 0), a = 2; a < r; a++) i[a - 2] = arguments[a];
-        return this.dispatch(''.concat(e, '_').concat(n), ...i);
+    dispatchKeyed(e, t) {
+        for (var n = arguments.length, i = Array(n > 2 ? n - 2 : 0), r = 2; r < n; r++) i[r - 2] = arguments[r];
+        return this.dispatch(''.concat(e, '_').concat(t), ...i);
     }
-    subscribeKeyed(e, n, r) {
-        return this.subscribe(''.concat(e, '_').concat(n), r);
+    subscribeKeyed(e, t, n) {
+        return this.subscribe(''.concat(e, '_').concat(t), n);
     }
-    unsubscribeKeyed(e, n, r) {
-        return this.unsubscribe(''.concat(e, '_').concat(n), r);
+    unsubscribeKeyed(e, t, n) {
+        return this.unsubscribe(''.concat(e, '_').concat(t), n);
     }
     constructor() {
-        c(this, 'emitter', new o.EventEmitter()), c(this, '_savedDispatches', {}), this.emitter.setMaxListeners(100);
+        a(this, 'emitter', new i.EventEmitter()), a(this, '_savedDispatches', {}), this.emitter.setMaxListeners(100);
     }
 }
-let f = new d();
+let o = new s();

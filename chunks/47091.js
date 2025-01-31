@@ -1,55 +1,51 @@
-t.d(n, {
-    Z: function () {
-        return Z;
-    }
-});
-var l = t(200651),
-    i = t(192379),
-    r = t(442837),
-    a = t(481060),
-    u = t(91896),
-    o = t(298213),
-    d = t(51144),
-    s = t(749302),
-    c = t(388032);
-function Z(e) {
-    let { user: n } = e,
-        Z = (0, r.Wu)([u.Z], () => u.Z.getGameFriendsForUser(n.id)),
-        f = d.ZP.useName(n),
-        m = i.useCallback(
+n.d(t, { Z: () => f });
+var i = n(200651),
+    r = n(192379),
+    a = n(442837),
+    s = n(481060),
+    o = n(91896),
+    l = n(298213),
+    u = n(51144),
+    c = n(749302),
+    d = n(388032);
+function f(e) {
+    let { user: t } = e,
+        f = (0, a.Wu)([o.Z], () => o.Z.getGameFriendsForUser(t.id)),
+        _ = u.ZP.useName(t),
+        p = r.useCallback(
             (e) => {
-                let { id: i, name: r } = e;
-                (0, a.openModalLazy)(async () => {
-                    let { ConfirmModal: e } = await Promise.resolve().then(t.bind(t, 481060));
-                    return (t) =>
-                        (0, l.jsx)(e, {
-                            header: c.intl.formatToPlainString(c.t['GOFk9/'], { name: f }),
-                            confirmText: c.intl.string(c.t['cY+Ooa']),
-                            cancelText: c.intl.string(c.t['ETE/oK']),
+                let { id: r, name: a } = e;
+                (0, s.ZDy)(async () => {
+                    let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 481060));
+                    return (n) =>
+                        (0, i.jsx)(e, {
+                            header: d.intl.formatToPlainString(d.t['GOFk9/'], { name: _ }),
+                            confirmText: d.intl.string(d.t['cY+Ooa']),
+                            cancelText: d.intl.string(d.t['ETE/oK']),
                             onConfirm: () =>
-                                o.Z.removeFriend({
-                                    userId: n.id,
-                                    applicationId: i,
+                                l.Z.removeFriend({
+                                    userId: t.id,
+                                    applicationId: r,
                                     location: 'Context Menu'
                                 }),
-                            ...t,
-                            children: (0, l.jsx)(a.Text, {
+                            ...n,
+                            children: (0, i.jsx)(s.Text, {
                                 variant: 'text-md/normal',
-                                children: c.intl.format(c.t.dsU5bm, {
-                                    name: f,
-                                    gameName: r
+                                children: d.intl.format(d.t.dsU5bm, {
+                                    name: _,
+                                    gameName: a
                                 })
                             })
                         });
                 });
             },
-            [f, n]
+            [_, t]
         );
-    return (0, s.Z)({
-        user: n,
-        gameRelationships: Z,
+    return (0, c.Z)({
+        user: t,
+        gameRelationships: f,
         menuItemId: 'remove-game-friend',
-        label: c.intl.string(c.t['RLcE6+']),
-        onClick: m
+        label: d.intl.string(d.t['RLcE6+']),
+        onClick: p
     });
 }

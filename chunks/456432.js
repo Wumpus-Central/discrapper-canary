@@ -1,28 +1,24 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-});
+n.d(t, { Z: () => r });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(733597);
-function a(e) {
-    let { activity: t, user: n, source: a, ...o } = e,
-        { label: s, tooltip: c, loading: u, disabled: d, onClick: m } = (0, l.Lz)(t, n, a);
-    return (0, i.jsx)(r.Tooltip, {
+var l = n(481060),
+    a = n(733597);
+function r(e) {
+    let { activity: t, user: n, source: r, ...s } = e,
+        { label: o, tooltip: c, loading: d, disabled: u, onClick: m } = (0, a.Lz)(t, n, r);
+    return (0, i.jsx)(l.ua7, {
         text: c,
         children: (e) => {
             let { onMouseEnter: t, onMouseLeave: n } = e;
-            return (0, i.jsx)(r.Button, {
-                ...o,
-                color: d ? r.Button.Colors.PRIMARY : r.Button.Colors.GREEN,
+            return (0, i.jsx)(l.zxk, {
+                ...s,
+                color: u ? l.zxk.Colors.PRIMARY : l.zxk.Colors.GREEN,
                 onClick: m,
                 onMouseEnter: t,
                 onMouseLeave: n,
-                disabled: !u && d,
-                submitting: u,
-                children: s
+                disabled: !d && u,
+                submitting: d,
+                children: o
             });
         }
     });

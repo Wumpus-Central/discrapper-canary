@@ -1,8 +1,8 @@
-n(47120);
+n.d(t, { Z: () => C }), n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(442837),
     o = n(481060),
     c = n(774078),
@@ -13,42 +13,42 @@ var i = n(200651),
     m = n(643720),
     f = n(127379),
     g = n(981631),
-    C = n(812801);
-t.Z = (e) => {
-    let { channel: t, className: n, whichPopoutIsOpen: r, setWhichPopoutIsOpen: x } = e,
-        { isHovered: v, setIsHovered: _, onMouseEnter: I, onMouseLeave: E, cancelTimers: b } = (0, d.Z)(200, 300),
+    _ = n(812801);
+let C = (e) => {
+    let { channel: t, className: n, whichPopoutIsOpen: a, setWhichPopoutIsOpen: C } = e,
+        { isHovered: x, setIsHovered: v, onMouseEnter: E, onMouseLeave: I, cancelTimers: b } = (0, d.Z)(200, 300),
         [Z, N] = l.useState(!1),
-        S = (0, s.e7)([h.Z], () => h.Z.effectCooldownEndTime),
-        T = l.useMemo(() => (null != S ? (S.getTime() - Date.now()) / 1000 : 0), [S]),
-        { seconds: j } = (0, c.Z)(null != S ? S : new Date()),
+        T = (0, s.e7)([h.Z], () => h.Z.effectCooldownEndTime),
+        S = l.useMemo(() => (null != T ? (T.getTime() - Date.now()) / 1000 : 0), [T]),
+        { seconds: j } = (0, c.Z)(null != T ? T : new Date()),
         A = j > 0,
         { groupedButtons: y, mode: P } = (0, p.ZP)({ location: 'ActionBarSoundboardButton' }),
-        M = P === p.BK.GroupedButtonsRedMic ? 'green' : void 0,
-        R = l.useCallback(
+        R = P === p.BK.GroupedButtonsRedMic ? 'green' : void 0,
+        M = l.useCallback(
             (e) => {
-                if ('focus' !== e.type) !Z && !A && I();
+                'focus' !== e.type && (Z || A || E());
             },
-            [Z, A, I]
+            [Z, A, E]
         ),
         L = l.useCallback(() => {
-            !Z && E();
-        }, [E, Z]),
+            Z || I();
+        }, [I, Z]),
         k = l.useCallback(
             (e, t) => {
-                b(), N(!Z), r === f.D.EMOJI ? null == x || x(void 0) : null == x || x(f.D.EMOJI), (!v || Z) && (null == t || t(e));
+                b(), N(!Z), a === f.D.EMOJI ? null == C || C(void 0) : null == C || C(f.D.EMOJI), (!x || Z) && (null == t || t(e));
             },
-            [b, Z, v, x, r]
+            [b, Z, x, C, a]
         ),
-        O = (v || Z) && (r === f.D.EMOJI || null == r);
-    return (0, i.jsx)(o.Popout, {
+        O = (x || Z) && (a === f.D.EMOJI || null == a);
+    return (0, i.jsx)(o.yRy, {
         shouldShow: O,
-        animation: y ? o.Popout.Animation.FADE : o.Popout.Animation.TRANSLATE,
+        animation: y ? o.yRy.Animation.FADE : o.yRy.Animation.TRANSLATE,
         animationPosition: y ? 'top' : 'bottom',
         position: 'bottom',
         align: 'center',
         spacing: 16,
         onRequestClose: () => {
-            _(!1), N(!1), null == x || x(void 0);
+            v(!1), N(!1), null == C || C(void 0);
         },
         renderPopout: (e) => {
             let { closePopout: n } = e;
@@ -56,7 +56,7 @@ t.Z = (e) => {
                 isHovered: O,
                 channel: t,
                 closePopout: n,
-                onMouseEnter: I,
+                onMouseEnter: E,
                 onMouseLeave: L,
                 onFocus: () => N(!0)
             });
@@ -65,18 +65,17 @@ t.Z = (e) => {
             let { onClick: t, onKeyDown: l } = e;
             return (0, i.jsx)(u.Z, {
                 isCenterButton: !0,
-                color: Z ? M : void 0,
-                totalCooldownSeconds: T,
+                color: Z ? R : void 0,
+                totalCooldownSeconds: S,
                 remainingCooldownSeconds: j,
-                className: a()(!y && C.controlButton, n),
+                className: r()(!y && _.controlButton, n),
                 onKeyDown: (e) => {
-                    var t, n;
-                    return (t = e), (n = l), void (t.keyCode === g.yXg.ENTER && t.keyCode === g.yXg.SPACE && k(t, n));
+                    e.keyCode === g.yXg.ENTER && e.keyCode === g.yXg.SPACE && k(e, l);
                 },
                 onClick: (e) => {
                     k(e, t);
                 },
-                onMouseEnter: R,
+                onMouseEnter: M,
                 onMouseLeave: L,
                 isActive: Z
             });

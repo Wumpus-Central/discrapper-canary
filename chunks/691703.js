@@ -1,26 +1,16 @@
-n.d(t, {
-    Z: function () {
-        return g;
-    }
-}),
-    n(315314),
-    n(610138),
-    n(216116),
-    n(78328),
-    n(815648),
-    n(47120);
+n.d(t, { Z: () => g }), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648), n(47120);
 var i = n(200651),
     a = n(192379),
     r = n(442837),
     l = n(481060),
-    o = n(214912),
-    s = n(703656),
+    s = n(214912),
+    o = n(703656),
     c = n(314897),
     d = n(900849),
     u = n(881294),
     m = n(981631),
-    p = n(388032);
-let h = 'redirect_to_support_server';
+    h = n(388032);
+let p = 'redirect_to_support_server';
 function g(e) {
     let { application: t, className: n } = e,
         { onGoToSupportServer: g } = (function (e) {
@@ -43,16 +33,16 @@ function g(e) {
             return (
                 a.useEffect(() => {
                     let a = new URL(location.href);
-                    if (null != e && t && null != n && 'true' === a.searchParams.get(h)) {
-                        a.searchParams.delete(h);
+                    if (null != e && t && null != n && 'true' === a.searchParams.get(p)) {
+                        a.searchParams.delete(p);
                         let e = a.pathname + a.search;
-                        (0, s.dL)(e), i();
+                        (0, o.dL)(e), i();
                     }
                 }, [t, i, n, e]),
                 {
                     onGoToSupportServer: a.useCallback(() => {
                         var n;
-                        null != (null == e ? void 0 : null === (n = e.guild) || void 0 === n ? void 0 : n.id) && (t ? i() : (0, u.rf)({ [h]: 'true' }));
+                        null != (null == e ? void 0 : null === (n = e.guild) || void 0 === n ? void 0 : n.id) && (t ? i() : (0, u.rf)({ [p]: 'true' }));
                     }, [e, i, t])
                 }
             );
@@ -61,12 +51,12 @@ function g(e) {
         ? (0, i.jsxs)('div', {
               className: n,
               children: [
-                  (0, i.jsx)(l.Heading, {
+                  (0, i.jsx)(l.X6q, {
                       variant: 'heading-sm/semibold',
                       color: 'header-primary',
-                      children: p.intl.string(p.t.KJEO29)
+                      children: h.intl.string(h.t.KJEO29)
                   }),
-                  (0, i.jsx)(o.Z, {
+                  (0, i.jsx)(s.Z, {
                       guild: t.guild,
                       onClick: g
                   })

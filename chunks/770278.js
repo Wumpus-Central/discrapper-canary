@@ -1,81 +1,78 @@
-r.d(n, {
-    f: function () {
-        return i;
-    }
+n.d(t, {
+    Z: () => p,
+    f: () => f
 });
-var i,
-    a = r(200651),
-    o = r(192379),
-    s = r(120356),
-    l = r.n(s),
-    u = r(642128),
-    c = r(481060),
-    d = r(110924),
-    f = r(57239);
-let p = 8;
-function h() {
-    let e = (0, c.useToken)(c.tokens.colors.BG_BACKDROP_NO_OPACITY).spring({ opacity: 0.25 }),
-        n = (0, c.useToken)(c.tokens.colors.BG_BACKDROP).spring();
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(642128),
+    l = n(481060),
+    u = n(110924),
+    c = n(57239);
+let d = 8;
+var f = (function (e) {
+    return (e.SUBTLE = 'SUBTLE'), (e.DARK = 'DARK'), (e.BLUR = 'BLUR'), (e.IMMERSIVE = 'IMMERSIVE'), e;
+})({});
+function _() {
+    let e = (0, l.dQu)(l.TVs.colors.BG_BACKDROP_NO_OPACITY).spring({ opacity: 0.25 }),
+        t = (0, l.dQu)(l.TVs.colors.BG_BACKDROP).spring();
     return {
         SUBTLE: e,
-        DARK: n,
-        BLUR: n,
-        IMMERSIVE: (0, c.useToken)(c.tokens.colors.BG_BACKDROP_IMMERSIVE).spring()
+        DARK: t,
+        BLUR: t,
+        IMMERSIVE: (0, l.dQu)(l.TVs.colors.BG_BACKDROP_IMMERSIVE).spring()
     };
 }
-!(function (e) {
-    (e.SUBTLE = 'SUBTLE'), (e.DARK = 'DARK'), (e.BLUR = 'BLUR'), (e.IMMERSIVE = 'IMMERSIVE');
-})(i || (i = {}));
-let _ = o.forwardRef(function (e, n) {
-    let { backdropStyle: r = 'SUBTLE', backdropInstant: i = !1, zIndexBoost: o = 0, LayerComponent: s, isVisible: _, onClose: m } = e,
-        g = h()[r],
-        E = (0, c.useToken)(c.tokens.colors.BG_BACKDROP_NO_OPACITY).spring({ opacity: 0 }),
-        v = 'BLUR' === r ? p : 0,
-        y = {
-            background: E,
+let p = r.forwardRef(function (e, t) {
+    let { backdropStyle: n = 'SUBTLE', backdropInstant: r = !1, zIndexBoost: a = 0, LayerComponent: f, isVisible: p, onClose: h } = e,
+        m = _()[n],
+        g = (0, l.dQu)(l.TVs.colors.BG_BACKDROP_NO_OPACITY).spring({ opacity: 0 }),
+        E = 'BLUR' === n ? d : 0,
+        v = {
+            background: g,
             backdropFilter: 'blur(0px)'
         },
-        b = {
-            background: g,
-            backdropFilter: 'blur('.concat(v, 'px)')
+        y = {
+            background: m,
+            backdropFilter: 'blur('.concat(E, 'px)')
         },
-        I = (0, d.Z)(i),
-        T = (0, c.useTransition)(
-            _,
+        I = (0, u.Z)(r),
+        b = (0, l.Yzy)(
+            p,
             {
                 keys: (e) => (e ? 'backdrop' : 'empty'),
-                config: { duration: i || I ? 0 : 300 },
-                from: y,
-                enter: b,
-                leave: y
+                config: { duration: r || I ? 0 : 300 },
+                from: v,
+                enter: y,
+                leave: v
             },
             'animate-always'
         );
-    if (null == s) {
-        let e = { zIndex: 1000 + o };
-        return T((n, r) =>
-            r
-                ? (0, a.jsx)(u.animated.div, {
-                      className: f.backdrop,
+    if (null == f) {
+        let e = { zIndex: 1000 + a };
+        return b((t, n) =>
+            n
+                ? (0, i.jsx)(o.animated.div, {
+                      className: c.backdrop,
                       style: {
-                          ...n,
+                          ...t,
                           ...e
                       },
-                      onClick: m
+                      onClick: h
                   })
                 : null
         );
     }
-    return (0, a.jsx)(s, {
-        children: T((e, n) =>
-            n
-                ? (0, a.jsx)(u.animated.div, {
-                      className: l()(f.backdrop, f.withLayer),
+    return (0, i.jsx)(f, {
+        children: b((e, t) =>
+            t
+                ? (0, i.jsx)(o.animated.div, {
+                      className: s()(c.backdrop, c.withLayer),
                       style: e,
-                      onClick: m
+                      onClick: h
                   })
                 : null
         )
     });
 });
-n.Z = _;

@@ -1,55 +1,54 @@
-var i = r(653041);
-var a = r(47120);
-var o = r(200651);
-r(192379);
-var s = r(442837),
-    l = r(692547),
-    u = r(481060),
-    c = r(475179),
-    d = r(519938),
-    f = r(317381),
-    p = r(812206),
-    h = r(358221),
-    _ = r(199902),
-    m = r(366050),
-    g = r(594174),
-    E = r(981631),
-    v = r(354459),
-    y = r(388032),
-    b = r(880397);
-function I(e) {
-    let { closePopout: n, idle: r, pipWindows: i, voiceChannelId: a, onSelect: l } = e;
-    r && n();
-    let g = (0, s.e7)([f.ZP], () => f.ZP.getSelfEmbeddedActivityForChannel(a)),
-        b = (0, s.e7)([m.Z], () => m.Z.pipWindow),
-        I = (0, s.e7)([h.Z], () => h.Z.getSelectedParticipant(a)),
-        T = (0, s.e7)([h.Z], () => h.Z.getStreamParticipants(a));
+n.d(t, { Z: () => y }), n(653041), n(47120);
+var i = n(200651);
+n(192379);
+var r = n(442837),
+    a = n(692547),
+    s = n(481060),
+    o = n(475179),
+    l = n(519938),
+    u = n(317381),
+    c = n(812206),
+    d = n(358221),
+    f = n(199902),
+    _ = n(366050),
+    p = n(594174),
+    h = n(981631),
+    m = n(354459),
+    g = n(388032),
+    E = n(880397);
+function v(e) {
+    let { closePopout: t, idle: n, pipWindows: a, voiceChannelId: p, onSelect: E } = e;
+    n && t();
+    let v = (0, r.e7)([u.ZP], () => u.ZP.getSelfEmbeddedActivityForChannel(p)),
+        y = (0, r.e7)([_.Z], () => _.Z.pipWindow),
+        I = (0, r.e7)([d.Z], () => d.Z.getSelectedParticipant(p)),
+        b = (0, r.e7)([d.Z], () => d.Z.getStreamParticipants(p));
+    function T(e) {
+        (null == y ? void 0 : y.id) !== e.pipWindow.id && (0, l.k3)(e.pipWindow.id);
+        let t = e.participant;
+        null != t && t.type !== m.fO.ACTIVITY && o.Z.selectParticipant(p, t.id);
+    }
     function S(e) {
-        (null == b ? void 0 : b.id) !== e.pipWindow.id && (0, d.k3)(e.pipWindow.id);
-        let n = e.participant;
-        null != n && n.type !== v.fO.ACTIVITY && c.Z.selectParticipant(a, n.id);
-    }
-    function A(e) {
-        if (e.pipWindow.component === E.NYg.EMBED_IFRAME && null != g) {
-            var n;
-            let e = null === (n = p.Z.getApplication(g.applicationId)) || void 0 === n ? void 0 : n.name;
-            return null == e ? y.intl.string(y.t['8raC1N']) : y.intl.formatToPlainString(y.t['a9+V+f'], { activityName: e });
+        if (e.pipWindow.component === h.NYg.EMBED_IFRAME && null != v) {
+            var t;
+            let e = null === (t = c.Z.getApplication(v.applicationId)) || void 0 === t ? void 0 : t.name;
+            return null == e ? g.intl.string(g.t['8raC1N']) : g.intl.formatToPlainString(g.t['a9+V+f'], { activityName: e });
         }
-        return null == e.participant || e.participant.type !== v.fO.STREAM ? y.intl.string(y.t['ng/Kws']) : y.intl.formatToPlainString(y.t.sqmFRk, { username: e.participant.userNick });
+        return null == e.participant || e.participant.type !== m.fO.STREAM ? g.intl.string(g.t['ng/Kws']) : g.intl.formatToPlainString(g.t.sqmFRk, { username: e.participant.userNick });
     }
-    function C() {
+    function A() {
         let e = [],
-            n = i.find((e) => e.component === E.NYg.VIDEO);
+            t = a.find((e) => e.component === h.NYg.VIDEO);
         return (
-            null != n &&
-                T.forEach((r) => {
-                    let i = _.Z.getActiveStreamForApplicationStream(r.stream),
-                        a = r.id === (null == I ? void 0 : I.id) && (null == b ? void 0 : b.id) === n.id;
-                    null != i &&
-                        !a &&
+            null != t &&
+                b.forEach((n) => {
+                    let i = f.Z.getActiveStreamForApplicationStream(n.stream),
+                        r = n.id === (null == I ? void 0 : I.id) && (null == y ? void 0 : y.id) === t.id;
+                    null == i ||
+                        r ||
                         e.push({
-                            pipWindow: n,
-                            participant: r,
+                            pipWindow: t,
+                            participant: n,
                             stream: i
                         });
                 }),
@@ -57,58 +56,57 @@ function I(e) {
         );
     }
     function N(e) {
-        var n;
-        let r = e.pipWindow.id,
-            i = null === (n = e.participant) || void 0 === n ? void 0 : n.id,
-            a = A(e),
-            s = ''.concat(r).concat(null != i ? i : '');
-        return (0, o.jsx)(
-            u.MenuItem,
+        var t;
+        let n = e.pipWindow.id,
+            r = null === (t = e.participant) || void 0 === t ? void 0 : t.id,
+            a = S(e),
+            o = ''.concat(n).concat(null != r ? r : '');
+        return (0, i.jsx)(
+            s.sNh,
             {
-                id: s,
+                id: o,
                 label: a,
-                action: () => S(e)
+                action: () => T(e)
             },
-            s
+            o
         );
     }
-    return (0, o.jsx)(u.Menu, {
+    return (0, i.jsx)(s.v2r, {
         navId: 'pip-menu',
         'aria-label': 'switch PIP',
-        onClose: n,
-        onSelect: l,
-        children: C().map(N)
+        onClose: t,
+        onSelect: E,
+        children: A().map(N)
     });
 }
-function T(e) {
-    let { voiceChannelId: n, idle: r } = e,
-        i = Array.from((0, s.e7)([m.Z], () => m.Z.pipWindows).values()).filter((e) => e.component !== E.NYg.EMBED_IFRAME),
-        a = (0, s.Wu)([_.Z], () => _.Z.getAllActiveStreamsForChannel(n)).filter((e) => {
-            var r;
-            return e.ownerId !== (null === (r = g.default.getCurrentUser()) || void 0 === r ? void 0 : r.id) && e.channelId === n;
+let y = function (e) {
+    let { voiceChannelId: t, idle: n } = e,
+        o = Array.from((0, r.e7)([_.Z], () => _.Z.pipWindows).values()).filter((e) => e.component !== h.NYg.EMBED_IFRAME),
+        l = (0, r.Wu)([f.Z], () => f.Z.getAllActiveStreamsForChannel(t)).filter((e) => {
+            var n;
+            return e.ownerId !== (null === (n = p.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && e.channelId === t;
         }),
-        c = (1 === i.length && i[0].component === E.NYg.EMBED_IFRAME) || 0 === a.length,
-        d = 1 === i.length && a.length <= 1;
-    return c || d
+        u = (1 === o.length && o[0].component === h.NYg.EMBED_IFRAME) || 0 === l.length,
+        c = 1 === o.length && l.length <= 1;
+    return u || c
         ? null
-        : (0, o.jsx)(u.Popout, {
+        : (0, i.jsx)(s.yRy, {
               position: 'bottom',
               renderPopout: (e) =>
-                  (0, o.jsx)(I, {
-                      voiceChannelId: n,
-                      pipWindows: i,
-                      idle: r,
+                  (0, i.jsx)(v, {
+                      voiceChannelId: t,
+                      pipWindows: o,
+                      idle: n,
                       ...e
                   }),
               children: (e) =>
-                  (0, o.jsx)(u.Clickable, {
-                      className: b.menuIcon,
+                  (0, i.jsx)(s.P3F, {
+                      className: E.menuIcon,
                       ...e,
-                      children: (0, o.jsx)(u.MoreVerticalIcon, {
+                      children: (0, i.jsx)(s.Huf, {
                           size: 'md',
-                          color: l.Z.unsafe_rawColors.WHITE_500.css
+                          color: a.Z.unsafe_rawColors.WHITE_500.css
                       })
                   })
           });
-}
-n.Z = T;
+};

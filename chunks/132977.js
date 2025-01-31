@@ -1,86 +1,79 @@
-r.d(n, {
-    ZX: function () {
-        return E;
-    },
-    gt: function () {
-        return v;
-    },
-    rH: function () {
-        return i;
-    }
+n.d(t, {
+    ZX: () => g,
+    gt: () => E,
+    rH: () => p
 });
 var i,
-    a,
-    o = r(200651),
-    s = r(192379),
-    l = r(120356),
-    u = r.n(l),
-    c = r(748780),
-    d = r(481060),
-    f = r(727637),
-    p = r(600164),
-    h = r(136997);
-function _(e, n, r) {
+    r = n(200651),
+    a = n(192379),
+    s = n(120356),
+    o = n.n(s),
+    l = n(748780),
+    u = n(481060),
+    c = n(727637),
+    d = n(600164),
+    f = n(136997);
+function _(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-!(function (e) {
-    (e.DEFAULT = 'default'), (e.SMALL = 'small');
-})(i || (i = {}));
-let m = {
-        default: h.shineDefault,
-        small: h.shineSmall
+var p = (function (e) {
+    return (e.DEFAULT = 'default'), (e.SMALL = 'small'), e;
+})({});
+let h = {
+        default: f.shineDefault,
+        small: f.shineSmall
     },
-    g = {
-        default: h.shineInnerDefault,
-        small: h.shineInnerSmall
+    m = {
+        default: f.shineInnerDefault,
+        small: f.shineInnerSmall
     };
-class E extends (a = s.PureComponent) {
+class g extends (i = a.PureComponent) {
     render() {
-        let { className: e, shineSize: n, shinePaused: r, ...i } = this.props;
-        return (0, o.jsx)(c.Z.div, {
+        let { className: e, shineSize: t, shinePaused: n, ...i } = this.props;
+        return (0, r.jsx)(l.Z.div, {
             ...i,
-            className: u()(h.shineContainer, e, { [h.shinePaused]: r }),
-            children: (0, o.jsx)(p.Z, {
-                align: p.Z.Align.CENTER,
-                justify: p.Z.Justify.CENTER,
-                className: m[n],
-                children: (0, o.jsx)('div', { className: g[n] })
+            className: o()(f.shineContainer, e, { [f.shinePaused]: n }),
+            children: (0, r.jsx)(d.Z, {
+                align: d.Z.Align.CENTER,
+                justify: d.Z.Justify.CENTER,
+                className: h[t],
+                children: (0, r.jsx)('div', { className: m[t] })
             })
         });
     }
 }
-_(E, 'defaultProps', { shineSize: 'default' });
-let v = (e) => {
-    let { children: n, className: r, disabled: i, submitting: a, pauseAnimation: l, shineSize: c = 'default', shinePaused: p, buttonShineClassName: _, onlyShineOnHover: m, ...g } = e,
-        v = s.createRef(),
-        y = (0, f.Z)(v),
-        b = !i && !a && !0 !== l && (!m || y);
-    return (0, o.jsxs)(d.Button, {
-        buttonRef: v,
-        ...g,
-        className: u()(h.shinyButton, r),
+_(g, 'defaultProps', { shineSize: 'default' });
+let E = (e) => {
+    let { children: t, className: n, disabled: i, submitting: s, pauseAnimation: l, shineSize: d = 'default', shinePaused: _, buttonShineClassName: p, onlyShineOnHover: h, ...m } = e,
+        E = a.createRef(),
+        v = (0, c.Z)(E),
+        y = !i && !s && !0 !== l && (!h || v);
+    return (0, r.jsxs)(u.zxk, {
+        buttonRef: E,
+        ...m,
+        className: o()(f.shinyButton, n),
         disabled: i,
-        submitting: a,
+        submitting: s,
         children: [
-            n,
-            b
-                ? (0, o.jsx)(E, {
-                      shinePaused: p,
-                      className: u()(h.buttonShine, m ? h.onlyShineOnHover : void 0, _),
-                      shineSize: c
+            t,
+            y
+                ? (0, r.jsx)(g, {
+                      shinePaused: _,
+                      className: o()(f.buttonShine, h ? f.onlyShineOnHover : void 0, p),
+                      shineSize: d
                   })
                 : null
         ]
     });
 };
-v.ShineSizes = i;
+E.ShineSizes = p;

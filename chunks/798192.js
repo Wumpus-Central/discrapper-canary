@@ -1,4 +1,5 @@
-t.Z = {
+r.d(t, { Z: () => a });
+let a = {
     gamut_mapping: 'css',
     precision: 5,
     deltaE: '76',

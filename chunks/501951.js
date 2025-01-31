@@ -1,11 +1,7 @@
-r.d(t, {
-    Z: function () {
-        return o;
-    }
-});
-var a = r(972698),
-    n = r(929594);
-function o(e) {
-    var t = (0, n.Z)(e, 'string');
-    return 'symbol' == (0, a.Z)(t) ? t : t + '';
+n.d(t, { Z: () => a });
+var i = n(972698),
+    r = n(929594);
+function a(e) {
+    var t = (0, r.Z)(e, 'string');
+    return 'symbol' == (0, i.Z)(t) ? t : t + '';
 }

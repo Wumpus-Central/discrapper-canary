@@ -1,12 +1,13 @@
-var n = i(442837),
-    l = i(353926),
-    d = i(496675),
-    r = i(923726),
-    s = i(981631),
-    a = i(388032);
-t.Z = {
-    title: () => a.intl.string(a.t.aTFQKi),
-    description: () => a.intl.string(a.t.oTbFQk),
+t.d(i, { Z: () => a });
+var n = t(442837),
+    l = t(353926),
+    s = t(496675),
+    d = t(923726),
+    r = t(981631),
+    u = t(388032);
+let a = {
+    title: () => u.intl.string(u.t.aTFQKi),
+    description: () => u.intl.string(u.t.oTbFQk),
     canCreateGuild: !1,
-    useIsGuildSupported: () => (0, n.e7)([l.Z, d.Z], () => (e) => e.hasFeature(s.oNc.ROLE_SUBSCRIPTIONS_ENABLED) && !e.hasFeature(s.oNc.CREATOR_MONETIZABLE_RESTRICTED) && d.Z.can(s.Plq.ADMINISTRATOR, e) && (0, r.$F)() && (0, r.hQ)(e.id), [])
+    useIsGuildSupported: () => (0, n.e7)([l.Z, s.Z], () => (e) => e.hasFeature(r.oNc.ROLE_SUBSCRIPTIONS_ENABLED) && !e.hasFeature(r.oNc.CREATOR_MONETIZABLE_RESTRICTED) && s.Z.can(r.Plq.ADMINISTRATOR, e) && (0, d.$F)() && (0, d.hQ)(e.id), [])
 };

@@ -1,10 +1,7 @@
 n.d(t, {
-    N4: function () {
-        return d;
-    },
-    n: function () {
-        return o;
-    }
+    N4: () => d,
+    ZP: () => u,
+    n: () => r
 });
 var i = n(799761),
     a = {
@@ -19,7 +16,7 @@ var i = n(799761),
         9: '९',
         0: '०'
     },
-    r = {
+    o = {
         '१': '1',
         '२': '2',
         '३': '3',
@@ -31,10 +28,10 @@ var i = n(799761),
         '९': '9',
         '०': '0'
     };
-function o(e) {
+function r(e) {
     return Number(
         e.toString().replace(/[१२३४५६७८९०]/g, function (e) {
-            return r[e];
+            return o[e];
         })
     );
 }
@@ -43,7 +40,7 @@ function d(e) {
         return a[e];
     });
 }
-var u = {
+let u = {
     ordinalNumber: function (e, t) {
         return d(Number(e));
     },
@@ -152,4 +149,3 @@ var u = {
         defaultFormattingWidth: 'wide'
     })
 };
-t.ZP = u;

@@ -1,14 +1,12 @@
-r.d(n, {
-    T9: function () {
-        return s;
-    }
+n.d(t, {
+    T9: () => s,
+    ZP: () => o
 });
-var i = r(477660),
-    a = r.n(i);
-let o = /^[\s\S]+?(?=[^0-9A-Za-z\s\u00c0-\uffff]|\n\n| {2,}\n|\w+:\S|[0-9]+\.|$)/,
+var i = n(477660),
+    r = n.n(i);
+let a = /^[\s\S]+?(?=[^0-9A-Za-z\s\u00c0-\uffff]|\n\n| {2,}\n|\w+:\S|[0-9]+\.|$)/,
     s = (e) => new RegExp('^[\\s\\S]+?(?='.concat(e, '|[^0-9A-Za-z\\s\\u00ff-\\uffff]|\\n\\n| {2,}\\n|\\w+:\\S|[0-9]+\\.|$)')),
-    l = {
-        ...a().defaultRules.text,
-        match: (0, i.anyScopeRegex)(o)
+    o = {
+        ...r().defaultRules.text,
+        match: (0, i.anyScopeRegex)(a)
     };
-n.ZP = l;

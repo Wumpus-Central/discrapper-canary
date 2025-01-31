@@ -1,105 +1,98 @@
-n.d(t, {
-    Z: function () {
-        return L;
-    }
-}),
-    n(47120),
-    n(724458),
-    n(653041);
-var l = n(200651),
-    o = n(192379),
-    i = n(120356),
-    a = n.n(i),
-    r = n(658722),
-    s = n.n(r),
-    c = n(954955),
-    C = n.n(c),
-    d = n(498607),
-    u = n.n(d),
-    m = n(399606),
-    h = n(481060),
-    x = n(563115),
-    b = n(910693),
-    f = n(893966),
-    g = n(527379),
-    p = n(285173),
-    H = n(388032),
-    j = n(137899),
-    v = n(216412);
-let N = new Set();
-function L(e) {
-    let { guildId: t, onClose: n } = e,
-        i = (0, b.BG)(t),
-        r = (0, m.e7)([f.Z], () => f.Z.getSearchStateByGuildId(t), [t], u()),
-        [c, d] = o.useState(r.selectedRoleIds),
-        L = (0, x.h)(t, N, !0),
-        I = (e, n) => {
-            let { record: o } = e;
-            return (0, l.jsx)(
-                h.ComboboxItem,
+l.d(t, { Z: () => N }), l(47120), l(724458), l(653041);
+var n = l(200651),
+    a = l(192379),
+    i = l(120356),
+    o = l.n(i),
+    s = l(658722),
+    r = l.n(s),
+    c = l(954955),
+    C = l.n(c),
+    d = l(498607),
+    u = l.n(d),
+    m = l(399606),
+    h = l(481060),
+    x = l(563115),
+    g = l(910693),
+    H = l(893966),
+    b = l(527379),
+    p = l(285173),
+    _ = l(388032),
+    j = l(137899),
+    f = l(216412);
+let v = new Set();
+function N(e) {
+    let { guildId: t, onClose: l } = e,
+        i = (0, g.BG)(t),
+        s = (0, m.e7)([H.Z], () => H.Z.getSearchStateByGuildId(t), [t], u()),
+        [c, d] = a.useState(s.selectedRoleIds),
+        N = (0, x.h)(t, v, !0),
+        Z = (e, l) => {
+            let { record: a } = e;
+            return (0, n.jsx)(
+                h.lo1,
                 {
-                    value: o.id,
-                    children: (0, l.jsxs)('div', {
-                        className: a()(j.roleNameContainer),
+                    value: a.id,
+                    children: (0, n.jsxs)('div', {
+                        className: o()(j.roleNameContainer),
                         children: [
-                            (0, l.jsxs)('div', {
-                                className: a()(j.roleLabel),
+                            (0, n.jsxs)('div', {
+                                className: o()(j.roleLabel),
                                 children: [
-                                    (0, l.jsx)('div', { className: a()(j.labelBackground, n && j.selected) }),
-                                    (0, l.jsx)(h.ComboboxItem.Label, {
-                                        children: (0, l.jsx)(
+                                    (0, n.jsx)('div', { className: o()(j.labelBackground, l && j.selected) }),
+                                    (0, n.jsx)(h.lo1.Label, {
+                                        children: (0, n.jsx)(
                                             p.Z,
                                             {
-                                                className: a()(v.roleTooltipItem),
-                                                role: o,
+                                                className: o()(f.roleTooltipItem),
+                                                role: a,
                                                 guildId: t
                                             },
-                                            o.id
+                                            a.id
                                         )
                                     })
                                 ]
                             }),
-                            (0, l.jsx)('div', {
+                            (0, n.jsx)('div', {
                                 className: j.checkboxContainer,
-                                children: (0, l.jsx)(h.ComboboxItem.Checkbox, { checked: n })
+                                children: (0, n.jsx)(h.lo1.Checkbox, { checked: l })
                             })
                         ]
                     })
                 },
-                o.id
+                a.id
             );
         },
-        _ = (e, t) =>
-            L.reduce((n, l) => {
-                let { record: o } = l,
-                    i = e.has(o.id);
-                return s()(t.toLowerCase(), o.name.toLowerCase()) ? n.push(I(l, i)) : i && n.push(I(l, i)), n;
+        L = (e, t) =>
+            N.reduce((l, n) => {
+                let { record: a } = n,
+                    i = e.has(a.id);
+                return r()(t.toLowerCase(), a.name.toLowerCase()) ? l.push(Z(n, i)) : i && l.push(Z(n, i)), l;
             }, []),
-        M = o.useCallback(
+        R = a.useCallback(
             (e) => {
-                (0, g.Dr)(t, { selectedRoleIds: e }), i(e);
+                (0, b.Dr)(t, { selectedRoleIds: e }), i(e);
             },
             [t, i]
         ),
-        Z = o.useMemo(() => C()(M, 300), [M]),
-        R = o.useCallback(
+        M = a.useMemo(() => C()(R, 300), [R]),
+        I = a.useCallback(
             (e) => {
                 let t;
-                d((t = c.has(e) ? new Set([...c].filter((t) => t !== e)) : new Set([...c, e]))), Z(t);
+                d((t = new Set(c.has(e) ? [...c].filter((t) => t !== e) : [...c, e]))), M(t);
             },
-            [c, Z]
+            [c, M]
         );
-    return (0, l.jsx)(h.ComboboxPopout, {
-        className: a()(j.rolePopout),
-        placeholder: H.intl.string(H.t.ZveC7e),
+    return (0, n.jsx)(h.DBG, {
+        className: o()(j.rolePopout),
+        placeholder: _.intl.string(_.t.ZveC7e),
         value: c,
-        onChange: R,
+        onChange: I,
         onClose: () => {
-            n();
+            l();
         },
         multiSelect: !0,
         showScrollbar: !0,
         autoFocus: !0,
-        children: (e) => _(c, e)
+        children: (e) => L(c, e)
     });
 }

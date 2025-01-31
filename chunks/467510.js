@@ -1,87 +1,77 @@
-r.d(t, {
-    Rt: function () {
-        return _;
-    },
-    iY: function () {
-        return i;
-    },
-    l4: function () {
-        return o;
-    },
-    qT: function () {
-        return E;
-    }
+a.d(e, {
+    Rt: () => o,
+    iY: () => c,
+    l4: () => _,
+    qT: () => i
 });
-var a = r(573736);
-let n = r(899517).n;
-function _(e, t = {}) {
-    if (!e) return '<unknown>';
+var r = a(573736);
+let n = a(899517).n;
+function o(t, e = {}) {
+    if (!t) return '<unknown>';
     try {
-        let r,
-            _ = e,
-            o = [],
-            E = 0,
+        let a,
+            o = t,
+            _ = [],
             i = 0,
-            c = 3,
-            s = Array.isArray(t) ? t : t.keyAttrs,
-            l = (!Array.isArray(t) && t.maxStringLength) || 80;
+            c = 0,
+            s = Array.isArray(e) ? e : e.keyAttrs,
+            E = (!Array.isArray(e) && e.maxStringLength) || 80;
         for (
             ;
-            _ &&
-            E++ < 5 &&
-            ((r = (function (e, t) {
-                let r = [];
-                if (!e || !e.tagName) return '';
-                if (n.HTMLElement && e instanceof HTMLElement && e.dataset) {
-                    if (e.dataset.sentryComponent) return e.dataset.sentryComponent;
-                    if (e.dataset.sentryElement) return e.dataset.sentryElement;
+            o &&
+            i++ < 5 &&
+            ((a = (function (t, e) {
+                let a = [];
+                if (!t || !t.tagName) return '';
+                if (n.HTMLElement && t instanceof HTMLElement && t.dataset) {
+                    if (t.dataset.sentryComponent) return t.dataset.sentryComponent;
+                    if (t.dataset.sentryElement) return t.dataset.sentryElement;
                 }
-                r.push(e.tagName.toLowerCase());
-                let _ = t && t.length ? t.filter((t) => e.getAttribute(t)).map((t) => [t, e.getAttribute(t)]) : null;
-                if (_ && _.length)
-                    _.forEach((e) => {
-                        r.push(`[${e[0]}="${e[1]}"]`);
+                a.push(t.tagName.toLowerCase());
+                let o = e && e.length ? e.filter((e) => t.getAttribute(e)).map((e) => [e, t.getAttribute(e)]) : null;
+                if (o && o.length)
+                    o.forEach((t) => {
+                        a.push(`[${t[0]}="${t[1]}"]`);
                     });
                 else {
-                    e.id && r.push(`#${e.id}`);
-                    let t = e.className;
-                    if (t && (0, a.HD)(t)) for (let e of t.split(/\s+/)) r.push(`.${e}`);
+                    t.id && a.push(`#${t.id}`);
+                    let e = t.className;
+                    if (e && (0, r.HD)(e)) for (let t of e.split(/\s+/)) a.push(`.${t}`);
                 }
-                for (let t of ['aria-label', 'type', 'name', 'title', 'alt']) {
-                    let a = e.getAttribute(t);
-                    a && r.push(`[${t}="${a}"]`);
+                for (let e of ['aria-label', 'type', 'name', 'title', 'alt']) {
+                    let r = t.getAttribute(e);
+                    r && a.push(`[${e}="${r}"]`);
                 }
-                return r.join('');
-            })(_, s)),
-            'html' !== r && (!(E > 1) || !(i + o.length * c + r.length >= l)));
+                return a.join('');
+            })(o, s)),
+            'html' !== a && (!(i > 1) || !(c + 3 * _.length + a.length >= E)));
 
-        ) {
-            o.push(r), (i += r.length), (_ = _.parentNode);
-        }
-        return o.reverse().join(' > ');
-    } catch (e) {
+        )
+            _.push(a), (c += a.length), (o = o.parentNode);
+        return _.reverse().join(' > ');
+    } catch (t) {
         return '<unknown>';
     }
 }
-function o() {
+function _() {
     try {
         return n.document.location.href;
-    } catch (e) {
+    } catch (t) {
         return '';
     }
 }
-function E(e) {
-    return n.document && n.document.querySelector ? n.document.querySelector(e) : null;
+function i(t) {
+    return n.document && n.document.querySelector ? n.document.querySelector(t) : null;
 }
-function i(e) {
+function c(t) {
     if (!n.HTMLElement) return null;
-    let t = e;
-    for (let e = 0; e < 5 && t; e++) {
-        if (t instanceof HTMLElement) {
-            if (t.dataset.sentryComponent) return t.dataset.sentryComponent;
-            if (t.dataset.sentryElement) return t.dataset.sentryElement;
+    let e = t;
+    for (let t = 0; t < 5 && e; t++) {
+        if (e instanceof HTMLElement) {
+            if (e.dataset.sentryComponent) return e.dataset.sentryComponent;
+            if (e.dataset.sentryElement) return e.dataset.sentryElement;
         }
-        t = t.parentNode;
+        e = e.parentNode;
     }
     return null;
 }

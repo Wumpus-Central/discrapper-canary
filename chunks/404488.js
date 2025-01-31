@@ -1,10 +1,6 @@
 l.d(n, {
-    Z: function () {
-        return u;
-    },
-    q: function () {
-        return c;
-    }
+    Z: () => u,
+    q: () => c
 });
 var a = l(200651);
 l(192379);

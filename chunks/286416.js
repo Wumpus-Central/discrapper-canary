@@ -1,14 +1,15 @@
-e.exports = {
-    button: 'button_f9d37d',
-    icon: 'icon_f9d37d',
-    hover: 'hover_f9d37d',
-    banner: 'banner_f9d37d',
-    textBanner: 'textBanner_f9d37d',
-    visible: 'visible_f9d37d',
-    buttonInner: 'buttonInner_f9d37d',
-    themeColor: 'themeColor_f9d37d',
-    primary: 'primary_f9d37d',
-    secondary: 'secondary_f9d37d',
-    hoverColor: 'hoverColor_f9d37d',
-    bannerColor: 'bannerColor_f9d37d'
+var i = {
+    button: 'button_fb7f94',
+    icon: 'icon_fb7f94',
+    banner: 'banner_fb7f94',
+    hover: 'hover_fb7f94',
+    textBanner: 'textBanner_fb7f94',
+    visible: 'visible_fb7f94',
+    buttonInner: 'buttonInner_fb7f94',
+    themeColor: 'themeColor_fb7f94',
+    primary: 'primary_fb7f94',
+    secondary: 'secondary_fb7f94',
+    hoverColor: 'hoverColor_fb7f94',
+    bannerColor: 'bannerColor_fb7f94'
 };
+e.exports = i;

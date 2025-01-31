@@ -1,9 +1,4 @@
-n.d(t, {
-    A: function () {
-        return f;
-    }
-}),
-    n(47120);
+n.d(t, { A: () => _ }), n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
@@ -18,29 +13,29 @@ var i = n(200651),
     g = n(981631),
     x = n(388032),
     p = n(457255);
-function f(e) {
+function _(e) {
     let { requireTerms: t, rules: n } = e,
         l = (0, o.e7)([m.Z], () => m.Z.getProps().guild),
-        f = null == l ? void 0 : l.id,
+        _ = null == l ? void 0 : l.id,
         C = r.useCallback(() => {
-            if (null != f) d.Z.openMemberVerificationPreviewModal(f);
-        }, [f]),
+            null != _ && d.Z.openMemberVerificationPreviewModal(_);
+        }, [_]),
+        f = r.useCallback(
+            (e) => {
+                if (null == _ || null == n) return null;
+                h.Z.setPendingInviteRules(_, e, [...n]);
+            },
+            [_, n]
+        ),
         v = r.useCallback(
             (e) => {
-                if (null == f || null == n) return null;
-                h.Z.setPendingInviteRules(f, e, [...n]);
+                if (null == _) return null;
+                h.Z.setPendingInviteRules(_, t, e);
             },
-            [f, n]
-        ),
-        I = r.useCallback(
-            (e) => {
-                if (null == f) return null;
-                h.Z.setPendingInviteRules(f, t, e);
-            },
-            [f, t]
+            [_, t]
         );
     if (null == l) return null;
-    if (null == n) return (0, i.jsx)(c.Spinner, {});
+    if (null == n) return (0, i.jsx)(c.$jN, {});
     let N = !l.hasFeature(g.oNc.CLAN);
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -65,16 +60,16 @@ function f(e) {
                         ]
                     }),
                     N &&
-                        (0, i.jsx)(c.Switch, {
-                            onChange: v,
+                        (0, i.jsx)(c.rsf, {
+                            onChange: f,
                             checked: t
                         })
                 ]
             }),
             t &&
-                (0, i.jsx)(c.LinkButton, {
+                (0, i.jsx)(c.Qjf, {
                     text: x.intl.string(x.t.SKNnqq),
-                    icon: c.WindowLaunchIcon,
+                    icon: c.rgF,
                     variant: 'primary',
                     onClick: C
                 }),
@@ -92,7 +87,7 @@ function f(e) {
                         (0, i.jsx)(u.k, {
                             guild: l,
                             rules: n,
-                            setRules: I
+                            setRules: v
                         })
                     ]
                 })

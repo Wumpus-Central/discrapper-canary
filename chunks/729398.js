@@ -1,6 +1,6 @@
-function n(e) {
-    let n = e.regex,
-        r = {
+function t(e) {
+    let t = e.regex,
+        n = {
             className: 'params',
             begin: '\\(',
             end: '\\)'
@@ -8,23 +8,18 @@ function n(e) {
         i = {
             variants: [e.COMMENT('!', '$', { relevance: 0 }), e.COMMENT('^C[ ]', '$', { relevance: 0 }), e.COMMENT('^C$', '$', { relevance: 0 })]
         },
-        a = /(_[a-z_\d]+)?/,
-        o = /([de][+-]?\d+)?/,
+        r = /(_[a-z_\d]+)?/,
+        a = /([de][+-]?\d+)?/,
         s = {
             className: 'number',
-            variants: [{ begin: n.concat(/\b\d+/, /\.(\d*)/, o, a) }, { begin: n.concat(/\b\d+/, o, a) }, { begin: n.concat(/\.\d+/, o, a) }],
+            variants: [{ begin: t.concat(/\b\d+/, /\.(\d*)/, a, r) }, { begin: t.concat(/\b\d+/, a, r) }, { begin: t.concat(/\.\d+/, a, r) }],
             relevance: 0
         },
-        l = {
+        o = {
             className: 'function',
             beginKeywords: 'subroutine function program',
             illegal: '[${=\\n]',
-            contains: [e.UNDERSCORE_TITLE_MODE, r]
-        },
-        u = {
-            className: 'string',
-            relevance: 0,
-            variants: [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE]
+            contains: [e.UNDERSCORE_TITLE_MODE, n]
         };
     return {
         name: 'Fortran',
@@ -38,8 +33,12 @@ function n(e) {
         },
         illegal: /\/\*/,
         contains: [
-            u,
-            l,
+            {
+                className: 'string',
+                relevance: 0,
+                variants: [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE]
+            },
+            o,
             {
                 begin: /^C\s*=(?!=)/,
                 relevance: 0
@@ -49,4 +48,4 @@ function n(e) {
         ]
     };
 }
-e.exports = n;
+e.exports = t;

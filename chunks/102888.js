@@ -1,14 +1,15 @@
+n.d(t, { Z: () => d });
 var i = n(200651),
     l = n(192379),
-    r = n(481060),
-    a = n(128557),
+    a = n(481060),
+    r = n(128557),
     s = n(981631),
     o = n(388032),
     c = n(24298);
-t.Z = (e) => {
+let d = (e) => {
     let { guild: t, onAddGuild: d } = e,
         u = l.useCallback(() => {
-            (0, r.openModalLazy)(async () => {
+            (0, a.ZDy)(async () => {
                 let { default: e } = await Promise.all([n.e('7654'), n.e('86004')]).then(n.bind(n, 560114));
                 return (n) =>
                     (0, i.jsx)(e, {
@@ -27,18 +28,18 @@ t.Z = (e) => {
                 alt: '',
                 src: n(705845)
             }),
-            (0, i.jsx)(r.Heading, {
+            (0, i.jsx)(a.X6q, {
                 className: c.emptyTitle,
                 variant: 'heading-xl/semibold',
                 children: o.intl.format(o.t.vyvrpK, { guildName: t.name })
             }),
-            (0, i.jsx)(r.Text, {
+            (0, i.jsx)(a.Text, {
                 variant: 'text-md/normal',
                 className: c.emptySubtitle,
                 children: o.intl.string(o.t.WypE0t)
             }),
             null != d
-                ? (0, i.jsx)(a.i, {
+                ? (0, i.jsx)(r.i, {
                       className: c.emptyCTA,
                       iconUrl: n(362827),
                       header: o.intl.string(o.t.hyK15u),
@@ -46,7 +47,7 @@ t.Z = (e) => {
                       onClick: d
                   })
                 : null,
-            (0, i.jsx)(a.i, {
+            (0, i.jsx)(r.i, {
                 className: c.emptyCTA,
                 iconUrl: n(538548),
                 header: o.intl.string(o.t.L4bwJy),

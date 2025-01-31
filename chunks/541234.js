@@ -1,1 +1,2 @@
-e.exports = { fauxDisabled: 'fauxDisabled_f4a830' };
+var i = { fauxDisabled: 'fauxDisabled__666fa' };
+e.exports = i;

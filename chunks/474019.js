@@ -1,1 +1,1 @@
-e.exports = '/assets/a9a584801acb67bbd8c7.svg';
+e.exports = '/assets/53e42368b1409f1a.svg';

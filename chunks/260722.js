@@ -1,23 +1,18 @@
 n.d(e, {
-    Yw: function () {
-        return a;
-    },
-    fc: function () {
-        return u;
-    },
-    qd: function () {
-        return s;
-    }
+    Yw: () => o,
+    ZP: () => _,
+    fc: () => E,
+    qd: () => d
 });
 var i = n(544891),
     r = n(570140),
     l = n(626135),
-    o = n(292352),
-    E = n(981631);
-async function a(t, e) {
+    a = n(292352),
+    s = n(981631);
+async function o(t, e) {
     await i.tn
         .patch({
-            url: E.ANM.FAMILY_CENTER_LINKED_USERS,
+            url: s.ANM.FAMILY_CENTER_LINKED_USERS,
             body: {
                 linked_user_id: t,
                 link_status: e
@@ -35,10 +30,10 @@ async function a(t, e) {
             );
         });
 }
-async function u(t) {
+async function E(t) {
     await i.tn
         .del({
-            url: E.ANM.FAMILY_CENTER_LINKED_USERS,
+            url: s.ANM.FAMILY_CENTER_LINKED_USERS,
             body: { linked_user_id: t },
             rejectWithError: !1
         })
@@ -54,10 +49,10 @@ async function u(t) {
             );
         });
 }
-async function s() {
+async function d() {
     await i.tn
         .get({
-            url: E.ANM.FAMILY_CENTER_LINK_CODE,
+            url: s.ANM.FAMILY_CENTER_LINK_CODE,
             rejectWithError: !1
         })
         .then((t) => {
@@ -72,36 +67,36 @@ async function s() {
             );
         });
 }
-e.ZP = {
+let _ = {
     async initialPageLoad() {
         var t, e, n, l;
         r.Z.dispatch({ type: 'FAMILY_CENTER_FETCH_START' });
-        let { body: o } = await i.tn.get({
-                url: E.ANM.FAMILY_CENTER_TEEN_ACTIVITY_ME,
+        let { body: a } = await i.tn.get({
+                url: s.ANM.FAMILY_CENTER_TEEN_ACTIVITY_ME,
                 rejectWithError: !1
             }),
-            { teen_audit_log: a, linked_users: u, users: s } = o,
+            { teen_audit_log: o, linked_users: E, users: d } = a,
             _ = {
-                teenId: null == a ? void 0 : a.teen_user_id,
-                rangeStartId: null == a ? void 0 : a.range_start_id,
-                totals: null !== (t = null == a ? void 0 : a.totals) && void 0 !== t ? t : {},
-                actions: null !== (e = null == a ? void 0 : a.actions) && void 0 !== e ? e : [],
-                users: null !== (n = null == a ? void 0 : a.users) && void 0 !== n ? n : [],
-                guilds: null !== (l = null == a ? void 0 : a.guilds) && void 0 !== l ? l : []
+                teenId: null == o ? void 0 : o.teen_user_id,
+                rangeStartId: null == o ? void 0 : o.range_start_id,
+                totals: null !== (t = null == o ? void 0 : o.totals) && void 0 !== t ? t : {},
+                actions: null !== (e = null == o ? void 0 : o.actions) && void 0 !== e ? e : [],
+                users: null !== (n = null == o ? void 0 : o.users) && void 0 !== n ? n : [],
+                guilds: null !== (l = null == o ? void 0 : o.guilds) && void 0 !== l ? l : []
             };
         return (
             r.Z.dispatch({
                 type: 'FAMILY_CENTER_INITIAL_LOAD',
                 familyCenterTeenActivity: _,
-                linkedUsers: u,
-                users: s
+                linkedUsers: E,
+                users: d
             }),
             _
         );
     },
     async fetchLinkedUsers() {
         let { body: t } = await i.tn.get({
-                url: E.ANM.FAMILY_CENTER_LINKED_USERS,
+                url: s.ANM.FAMILY_CENTER_LINKED_USERS,
                 rejectWithError: !1
             }),
             e = {
@@ -118,7 +113,7 @@ e.ZP = {
     },
     async requestLink(t, e) {
         let { body: n } = await i.tn.post({
-                url: E.ANM.FAMILY_CENTER_LINKED_USERS,
+                url: s.ANM.FAMILY_CENTER_LINKED_USERS,
                 body: {
                     recipient_id: t,
                     code: e
@@ -139,13 +134,13 @@ e.ZP = {
     },
     async fetchTeenActivity(t) {
         r.Z.dispatch({ type: 'FAMILY_CENTER_FETCH_START' });
-        let e = E.ANM.FAMILY_CENTER_TEEN_ACTIVITY(t),
+        let e = s.ANM.FAMILY_CENTER_TEEN_ACTIVITY(t),
             { body: n } = await i.tn.get({
                 url: e,
                 rejectWithError: !1
             }),
             l = n.teen_audit_log,
-            o = {
+            a = {
                 teenId: l.teen_user_id,
                 rangeStartId: l.range_start_id,
                 totals: l.totals,
@@ -156,27 +151,27 @@ e.ZP = {
         return (
             r.Z.dispatch({
                 type: 'FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS',
-                familyCenterTeenActivity: o
+                familyCenterTeenActivity: a
             }),
-            o
+            a
         );
     },
-    async fetchMoreTeenActivity(t, e, n, a) {
-        let { body: u } = await i.tn.get({
-                url: E.ANM.FAMILY_CENTER_TEEN_ACTIVITY_MORE(t, e, n, a),
+    async fetchMoreTeenActivity(t, e, n, o) {
+        let { body: E } = await i.tn.get({
+                url: s.ANM.FAMILY_CENTER_TEEN_ACTIVITY_MORE(t, e, n, o),
                 rejectWithError: !1
             }),
-            { teen_audit_log: s } = u,
+            { teen_audit_log: d } = E,
             _ = {
-                teenId: s.teen_user_id,
-                rangeStartId: s.range_start_id,
-                actions: s.actions,
-                users: s.users,
-                guilds: s.guilds
+                teenId: d.teen_user_id,
+                rangeStartId: d.range_start_id,
+                actions: d.actions,
+                users: d.users,
+                guilds: d.guilds
             };
         return (
-            l.default.track(E.rMx.FAMILY_CENTER_ACTION, {
-                action: o.YC.LoadMore,
+            l.default.track(s.rMx.FAMILY_CENTER_ACTION, {
+                action: a.YC.LoadMore,
                 selected_teen_id: t,
                 action_display_type: e
             }),
@@ -184,7 +179,7 @@ e.ZP = {
                 type: 'FAMILY_CENTER_TEEN_ACTIVITY_MORE_FETCH_SUCCESS',
                 familyCenterTeenActivity: _
             }),
-            s
+            d
         );
     },
     selectTab(t) {

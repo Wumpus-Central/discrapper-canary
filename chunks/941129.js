@@ -1,10 +1,6 @@
 n.d(t, {
-    S: function () {
-        return r;
-    },
-    u: function () {
-        return l;
-    }
+    S: () => l,
+    u: () => r
 });
 let i = (0, n(818083).B)({
     kind: 'user',
@@ -33,9 +29,9 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function r() {
+function l() {
     return i.useExperiment({ location: 'b85a21_1' }, { autoTrackExposure: !0 }).enabled;
 }
-function l() {
+function r() {
     return i.useExperiment({ location: 'b85a21_2' }, { autoTrackExposure: !1 }).bucket;
 }

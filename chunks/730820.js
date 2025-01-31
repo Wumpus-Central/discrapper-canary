@@ -1,35 +1,30 @@
-n.d(t, {
-    Z: function () {
-        return Z;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => L }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    s = n(512722),
-    a = n.n(s),
-    l = n(442837),
+    s = n(192379),
+    r = n(512722),
+    l = n.n(r),
+    a = n(442837),
     o = n(481060),
     c = n(816814),
     d = n(240872),
     u = n(23645),
     m = n(712364),
-    g = n(279837),
-    h = n(600164),
-    p = n(144114),
+    h = n(279837),
+    g = n(600164),
+    _ = n(144114),
     x = n(921801),
-    f = n(607018),
+    p = n(607018),
     E = n(778764),
-    _ = n(314897),
-    C = n(325067),
+    C = n(314897),
+    f = n(325067),
     T = n(594174),
-    S = n(572004),
-    b = n(287880),
-    I = n(714565),
-    N = n(202858),
+    N = n(572004),
+    I = n(287880),
+    S = n(714565),
+    b = n(202858),
     v = n(726985),
-    A = n(981631),
-    j = n(815660),
+    j = n(981631),
+    A = n(815660),
     O = n(388032),
     R = n(142529),
     P = n(232186);
@@ -50,54 +45,54 @@ function y(e) {
     let {
             code: { code: t, consumed: n }
         } = e,
-        s = ''.concat(t.substr(0, 4), '-').concat(t.substr(4)),
-        a = r.useRef(null),
-        l = r.useCallback(
+        r = ''.concat(t.substr(0, 4), '-').concat(t.substr(4)),
+        l = s.useRef(null),
+        a = s.useCallback(
             (e) => {
-                if ('c' === e.key && e.metaKey && S.wS) {
+                if ('c' === e.key && e.metaKey && N.wS) {
                     var t;
-                    e.preventDefault(), e.stopPropagation(), (0, S.JG)(s), null == a || null === (t = a.current) || void 0 === t || t.focus();
+                    e.preventDefault(), e.stopPropagation(), (0, N.JG)(r), null == l || null === (t = l.current) || void 0 === t || t.focus();
                 }
             },
-            [s]
+            [r]
         );
     return (0, i.jsx)('li', {
         className: P.marginBottom20,
-        children: (0, i.jsx)(o.Clickable, {
-            innerRef: a,
+        children: (0, i.jsx)(o.P3F, {
+            innerRef: l,
             className: R.backupCode,
-            onKeyDown: l,
-            children: (0, i.jsx)(o.Checkbox, {
+            onKeyDown: a,
+            children: (0, i.jsx)(o.XZJ, {
                 displayOnly: !0,
                 readOnly: !0,
                 className: R.codeCheckbox,
                 value: n,
                 children: (0, i.jsx)('span', {
                     className: R.code,
-                    children: s
+                    children: r
                 })
             })
         })
     });
 }
-class B extends r.PureComponent {
+class Z extends s.PureComponent {
     maskPhoneNumber(e) {
         return null == e ? '' : ''.concat('*'.repeat(e.length - 4)).concat(e.slice(-4));
     }
     renderMFASMS() {
         let e, t;
         let { revealed: n } = this.state,
-            { currentUser: r, togglingSMS: s } = this.props,
-            a = null != r.phone,
-            l = r.hasFlag(A.xW$.MFA_SMS);
-        if (a || l) {
-            let e = n ? r.phone : this.maskPhoneNumber(r.phone);
-            t = (0, i.jsxs)(o.FormText, {
-                type: o.FormText.Types.DESCRIPTION,
+            { currentUser: s, togglingSMS: r } = this.props,
+            l = null != s.phone,
+            a = s.hasFlag(j.xW$.MFA_SMS);
+        if (l || a) {
+            let e = n ? s.phone : this.maskPhoneNumber(s.phone);
+            t = (0, i.jsxs)(o.R94, {
+                type: o.R94.Types.DESCRIPTION,
                 className: P.marginBottom8,
                 children: [
                     O.intl.format(O.t.PXVoEB, { phoneNumber: e }),
-                    (0, i.jsx)(o.Anchor, {
+                    (0, i.jsx)(o.eee, {
                         onClick: this.togglePhoneNumberVisibility,
                         className: R.phoneRevealer,
                         children: n ? O.intl.string(O.t.FfltIC) : O.intl.string(O.t.llArAg)
@@ -105,36 +100,36 @@ class B extends r.PureComponent {
                 ]
             });
         }
-        if (l)
-            e = (0, i.jsx)(h.Z, {
-                className: a ? '' : P.marginTop8,
-                children: (0, i.jsx)(o.Button, {
-                    color: o.Button.Colors.RED,
-                    look: o.Button.Looks.OUTLINED,
-                    size: o.Button.Sizes.SMALL,
-                    submitting: s,
+        if (a)
+            e = (0, i.jsx)(g.Z, {
+                className: l ? '' : P.marginTop8,
+                children: (0, i.jsx)(o.zxk, {
+                    color: o.zxk.Colors.RED,
+                    look: o.zxk.Looks.OUTLINED,
+                    size: o.zxk.Sizes.SMALL,
+                    submitting: r,
                     onClick: this.handleDisableSMS,
                     children: O.intl.string(O.t.KLWnio)
                 })
             });
         else {
-            let t = (0, I.c)(r);
-            e = (0, i.jsxs)(h.Z, {
-                className: a ? '' : P.marginTop8,
+            let t = (0, S.c)(s);
+            e = (0, i.jsxs)(g.Z, {
+                className: l ? '' : P.marginTop8,
                 children: [
-                    (0, i.jsx)(o.Button, {
+                    (0, i.jsx)(o.zxk, {
                         onClick: this.handleEnableSMS,
-                        size: o.Button.Sizes.SMALL,
-                        submitting: s,
+                        size: o.zxk.Sizes.SMALL,
+                        submitting: r,
                         disabled: null != t,
                         children: null != t ? t : O.intl.string(O.t.DZQe29)
                     }),
-                    a
-                        ? (0, i.jsx)(o.Button, {
+                    l
+                        ? (0, i.jsx)(o.zxk, {
                               onClick: this.handleChangePhoneNumber,
-                              color: o.Button.Colors.PRIMARY,
-                              size: o.Button.Sizes.SMALL,
-                              look: o.Button.Looks.LINK,
+                              color: o.zxk.Colors.PRIMARY,
+                              size: o.zxk.Sizes.SMALL,
+                              look: o.zxk.Looks.LINK,
                               children: O.intl.string(O.t.Ulqq6O)
                           })
                         : null
@@ -143,12 +138,12 @@ class B extends r.PureComponent {
         }
         return (0, i.jsx)(x.F, {
             setting: v.s6.ACCOUNT_SMS_BACKUP,
-            children: (0, i.jsxs)(o.FormSection, {
+            children: (0, i.jsxs)(o.hjN, {
                 className: P.marginTop40,
                 title: O.intl.string(O.t.uHAJ5u),
                 children: [
-                    (0, i.jsx)(o.FormText, {
-                        type: o.FormText.Types.DESCRIPTION,
+                    (0, i.jsx)(o.R94, {
+                        type: o.R94.Types.DESCRIPTION,
                         children: O.intl.string(O.t.fspJ4O)
                     }),
                     t,
@@ -162,9 +157,9 @@ class B extends r.PureComponent {
         let { backupCodes: t } = this.props,
             n = (0, i.jsx)(x.F, {
                 setting: v.s6.ACCOUNT_VIEW_BACKUP_CODES,
-                children: (0, i.jsx)(o.Button, {
+                children: (0, i.jsx)(o.zxk, {
                     onClick: this.sendMFABackupCodesVerificationKeyEmail,
-                    size: o.Button.Sizes.SMALL,
+                    size: o.zxk.Sizes.SMALL,
                     children: O.intl.string(O.t.xZEzbm)
                 })
             });
@@ -173,83 +168,83 @@ class B extends r.PureComponent {
                 fileContents: this.getDownloadFileContents,
                 contentType: 'text/plain',
                 fileName: 'discord_backup_codes.txt',
-                children: (0, i.jsx)(o.Button, {
-                    size: o.Button.Sizes.SMALL,
+                children: (0, i.jsx)(o.zxk, {
+                    size: o.zxk.Sizes.SMALL,
                     children: O.intl.string(O.t.qZZUy8)
                 })
             });
-            let r = (e) => e.map((e) => (0, i.jsx)(y, { code: e }, e.code));
-            e = (0, i.jsxs)(o.FormSection, {
+            let s = (e) => e.map((e) => (0, i.jsx)(y, { code: e }, e.code));
+            e = (0, i.jsxs)(o.hjN, {
                 title: O.intl.string(O.t.GfqHPj),
                 children: [
-                    (0, i.jsx)(o.FormText, {
-                        type: o.FormText.Types.DESCRIPTION,
+                    (0, i.jsx)(o.R94, {
+                        type: o.R94.Types.DESCRIPTION,
                         className: P.marginBottom20,
                         children: O.intl.format(O.t.OhmvYm, {})
                     }),
-                    (0, i.jsxs)(h.Z, {
+                    (0, i.jsxs)(g.Z, {
                         children: [
-                            (0, i.jsx)(h.Z.Child, {
+                            (0, i.jsx)(g.Z.Child, {
                                 children: (0, i.jsx)('ul', {
                                     className: R.checkboxGroup,
-                                    children: r(t.slice(0, t.length / 2))
+                                    children: s(t.slice(0, t.length / 2))
                                 })
                             }),
-                            (0, i.jsx)(h.Z.Child, {
+                            (0, i.jsx)(g.Z.Child, {
                                 children: (0, i.jsx)('ul', {
                                     className: R.checkboxGroup,
-                                    children: r(t.slice(t.length / 2))
+                                    children: s(t.slice(t.length / 2))
                                 })
                             })
                         ]
                     }),
                     (0, i.jsx)('div', {
-                        children: (0, i.jsx)(o.Button, {
+                        children: (0, i.jsx)(o.zxk, {
                             onClick: this.generateBackupCodes,
-                            look: o.ButtonLooks.LINK,
-                            size: o.ButtonSizes.MIN,
+                            look: o.iLD.LINK,
+                            size: o.PhG.MIN,
                             children: O.intl.string(O.t.RIThUl)
                         })
                     }),
-                    (0, i.jsx)(o.FormDivider, { className: P.marginTop20 })
+                    (0, i.jsx)(o.$i$, { className: P.marginTop20 })
                 ]
             });
         }
-        return (0, i.jsxs)(o.FormSection, {
+        return (0, i.jsxs)(o.hjN, {
             children: [
-                (0, i.jsx)(o.FormTitle, { children: O.intl.string(O.t.EPVq09) }),
-                (0, i.jsx)(o.FormText, {
-                    type: o.FormText.Types.DESCRIPTION,
+                (0, i.jsx)(o.vwX, { children: O.intl.string(O.t.EPVq09) }),
+                (0, i.jsx)(o.R94, {
+                    type: o.R94.Types.DESCRIPTION,
                     className: P.marginBottom20,
                     children: O.intl.string(O.t.bQwxiY)
                 }),
-                (0, i.jsxs)(h.Z, {
-                    justify: h.Z.Justify.START,
+                (0, i.jsxs)(g.Z, {
+                    justify: g.Z.Justify.START,
                     className: P.marginBottom20,
                     children: [
-                        (0, i.jsx)(h.Z.Child, {
+                        (0, i.jsx)(g.Z.Child, {
                             wrap: !0,
                             grow: 0,
                             children: n
                         }),
-                        (0, i.jsxs)(h.Z.Child, {
+                        (0, i.jsxs)(g.Z.Child, {
                             wrap: !0,
                             children: [
                                 (0, i.jsx)(x.F, {
                                     setting: v.s6.ACCOUNT_REMOVE_2FA,
-                                    children: (0, i.jsx)(o.Button, {
+                                    children: (0, i.jsx)(o.zxk, {
                                         onClick: this.handleDisableMFA,
-                                        size: o.Button.Sizes.SMALL,
-                                        color: o.ButtonColors.RED,
-                                        look: o.ButtonLooks.OUTLINED,
+                                        size: o.zxk.Sizes.SMALL,
+                                        color: o.Ttl.RED,
+                                        look: o.iLD.OUTLINED,
                                         children: O.intl.string(O.t['D+aE7u'])
                                     })
                                 }),
                                 (0, i.jsx)(x.F, {
                                     setting: v.s6.ACCOUNT_ENABLE_2FA,
-                                    children: (0, i.jsx)(o.Button, {
-                                        onClick: N.ZP.enableMFA,
-                                        size: o.ButtonSizes.SMALL,
+                                    children: (0, i.jsx)(o.zxk, {
+                                        onClick: b.ZP.enableMFA,
+                                        size: o.PhG.SMALL,
                                         children: O.intl.string(O.t.cDgKtb)
                                     })
                                 })
@@ -267,18 +262,18 @@ class B extends r.PureComponent {
         });
     }
     renderDisabled() {
-        return (0, i.jsxs)(o.FormSection, {
+        return (0, i.jsxs)(o.hjN, {
             title: O.intl.string(O.t.EPVq09),
             children: [
-                (0, i.jsx)(o.FormText, {
-                    type: o.FormText.Types.DESCRIPTION,
+                (0, i.jsx)(o.R94, {
+                    type: o.R94.Types.DESCRIPTION,
                     className: P.marginBottom20,
                     children: O.intl.string(O.t['8aDa1t'])
                 }),
-                (0, i.jsx)(o.FormItem, {
-                    children: (0, i.jsx)(o.Button, {
-                        onClick: N.ZP.enableMFA,
-                        size: o.ButtonSizes.SMALL,
+                (0, i.jsx)(o.xJW, {
+                    children: (0, i.jsx)(o.zxk, {
+                        onClick: b.ZP.enableMFA,
+                        size: o.PhG.SMALL,
                         children: O.intl.string(O.t.cDgKtb)
                     })
                 }),
@@ -288,36 +283,36 @@ class B extends r.PureComponent {
     }
     render() {
         let { currentUser: e } = this.props;
-        return b.uZ
+        return I.uZ
             ? e.verified
                 ? e.mfaEnabled
                     ? this.renderEnabled()
                     : this.renderDisabled()
-                : (0, i.jsx)(o.FormSection, {
+                : (0, i.jsx)(o.hjN, {
                       title: O.intl.string(O.t.EPVq09),
-                      children: (0, i.jsx)(o.FormText, {
-                          type: o.FormText.Types.DESCRIPTION,
+                      children: (0, i.jsx)(o.R94, {
+                          type: o.R94.Types.DESCRIPTION,
                           children: O.intl.string(O.t.uggF7u)
                       })
                   })
-            : (0, i.jsx)(o.FormSection, {
+            : (0, i.jsx)(o.hjN, {
                   title: O.intl.string(O.t.EPVq09),
-                  children: (0, i.jsx)(o.FormText, {
-                      type: o.FormText.Types.DESCRIPTION,
+                  children: (0, i.jsx)(o.R94, {
+                      type: o.R94.Types.DESCRIPTION,
                       children: O.intl.string(O.t.PhHhsr)
                   })
               });
     }
     openPhoneVerificationModal() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        (0, o.openModal)(
+        (0, o.h7j)(
             (t) =>
-                (0, i.jsx)(f.default, {
-                    reason: p.L.USER_SETTINGS_UPDATE,
+                (0, i.jsx)(p.default, {
+                    reason: _.L.USER_SETTINGS_UPDATE,
                     ...t,
                     ...e
                 }),
-            { modalKey: j.M }
+            { modalKey: A.M }
         );
     }
     constructor(...e) {
@@ -338,12 +333,12 @@ class B extends r.PureComponent {
                 });
             }),
             D(this, 'generateBackupCodes', async () => {
-                let e = C.Z.getVerificationKey();
+                let e = f.Z.getVerificationKey();
                 await c.Z.confirmViewBackupCodes(e, !0);
             }),
             D(this, 'sendMFABackupCodesVerificationKeyEmail', () => {
-                (0, o.openModal)((e) =>
-                    (0, i.jsx)(g.default, {
+                (0, o.h7j)((e) =>
+                    (0, i.jsx)(h.default, {
                         ...e,
                         handleSubmit: (e) =>
                             c.Z.sendMFABackupCodesVerificationKeyEmail(e).then(() => {
@@ -355,7 +350,7 @@ class B extends r.PureComponent {
                 );
             }),
             D(this, 'viewBackupCodes', (e) => {
-                (0, o.openModal)((t) =>
+                (0, o.h7j)((t) =>
                     (0, i.jsx)(m.Z, {
                         ...t,
                         handleSubmit: (e) => c.Z.confirmViewBackupCodes(e, !1).then(() => t.onClose()),
@@ -390,8 +385,8 @@ class B extends r.PureComponent {
             D(this, 'handleEnableSMS', () => {
                 let { currentUser: e } = this.props,
                     t = () => {
-                        (0, o.openModal)((e) =>
-                            (0, i.jsx)(g.default, {
+                        (0, o.h7j)((e) =>
+                            (0, i.jsx)(h.default, {
                                 ...e,
                                 handleSubmit: c.Z.enableSMS,
                                 title: O.intl.string(O.t.DZQe29)
@@ -401,8 +396,8 @@ class B extends r.PureComponent {
                 null == e.phone ? this.openPhoneVerificationModal({ onAddedPhone: t }) : t();
             }),
             D(this, 'handleDisableSMS', () => {
-                (0, o.openModal)((e) =>
-                    (0, i.jsx)(g.default, {
+                (0, o.h7j)((e) =>
+                    (0, i.jsx)(h.default, {
                         ...e,
                         handleSubmit: c.Z.disableSMS,
                         title: O.intl.string(O.t.KLWnio),
@@ -412,14 +407,14 @@ class B extends r.PureComponent {
             });
     }
 }
-function Z(e) {
-    let t = (0, l.e7)([T.default], () => T.default.getCurrentUser());
-    a()(null != t, 'TwoFactorAuth: currentUser cannot be undefined');
-    let n = (0, l.cj)([C.Z, _.default], () => ({
-        togglingSMS: C.Z.togglingSMS,
-        hasTOTPEnabled: _.default.hasTOTPEnabled()
+function L(e) {
+    let t = (0, a.e7)([T.default], () => T.default.getCurrentUser());
+    l()(null != t, 'TwoFactorAuth: currentUser cannot be undefined');
+    let n = (0, a.cj)([f.Z, C.default], () => ({
+        togglingSMS: f.Z.togglingSMS,
+        hasTOTPEnabled: C.default.hasTOTPEnabled()
     }));
-    return (0, i.jsx)(B, {
+    return (0, i.jsx)(Z, {
         currentUser: t,
         ...n,
         ...e

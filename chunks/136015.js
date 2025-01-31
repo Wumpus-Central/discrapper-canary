@@ -1,11 +1,6 @@
-r.d(n, {
-    Q: function () {
-        return a;
-    }
-});
-var i = r(47120);
-function a(e, n) {
-    let [, r] = e,
-        [, i] = n;
-    return r === i;
+function i(e, t) {
+    let [, n] = e,
+        [, i] = t;
+    return n === i;
 }
+n.d(t, { Q: () => i }), n(47120);

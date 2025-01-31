@@ -1,25 +1,15 @@
-r.d(n, {
-    Wq: function () {
-        return f;
-    },
-    Xn: function () {
-        return p;
-    },
-    ZN: function () {
-        return d;
-    },
-    c: function () {
-        return s;
-    },
-    kJ: function () {
-        return c;
-    }
+n.d(t, {
+    Wq: () => d,
+    Xn: () => f,
+    ZN: () => c,
+    c: () => s,
+    kJ: () => u
 });
-var i = r(877124),
-    a = r(65400),
-    o = r(731965);
+var i = n(877124),
+    r = n(65400),
+    a = n(731965);
 let s = -1,
-    l = Object.freeze({
+    o = Object.freeze({
         inspectedExpressionPosition: {
             rowIndex: 0,
             columnIndex: 0
@@ -28,45 +18,45 @@ let s = -1,
         searchPlaceholder: null,
         bottomPosition: null
     });
-function u() {
-    let e = (0, a.F)()((0, i.XR)((e) => l)),
-        n = () => e.getState(),
-        r = (n, r, i) => {
-            (0, o.j)(() =>
+function l() {
+    let e = (0, r.F)()((0, i.XR)((e) => o)),
+        t = () => e.getState(),
+        n = (t, n, i) => {
+            (0, a.j)(() =>
                 e.setState({
                     inspectedExpressionPosition: {
-                        rowIndex: r,
-                        columnIndex: n,
+                        rowIndex: n,
+                        columnIndex: t,
                         source: i
                     }
                 })
             );
         },
-        s = (n) => {
-            (0, o.j)(() => e.setState({ activeCategoryIndex: n }));
+        s = (t) => {
+            (0, a.j)(() => e.setState({ activeCategoryIndex: t }));
         },
-        u = (n) => {
-            (0, o.j)(() => e.setState({ searchPlaceholder: n }));
+        l = (t) => {
+            (0, a.j)(() => e.setState({ searchPlaceholder: t }));
         },
-        c = (n) => {
-            (0, o.j)(() => e.setState({ bottomPosition: n }));
+        u = (t) => {
+            (0, a.j)(() => e.setState({ bottomPosition: t }));
         },
-        d = () => {
-            (0, o.j)(() => e.setState(l));
+        c = () => {
+            (0, a.j)(() => e.setState(o));
         },
-        f = (n, r) => e.subscribe(n, r);
+        d = (t, n) => e.subscribe(t, n);
     return {
         useStore: e,
-        getState: n,
-        subscribe: f,
-        setInspectedExpressionPosition: r,
+        getState: t,
+        subscribe: d,
+        setInspectedExpressionPosition: n,
         setActiveCategoryIndex: s,
-        setSearchPlaceholder: u,
-        resetStoreState: d,
-        setBottomPosition: c
+        setSearchPlaceholder: l,
+        resetStoreState: c,
+        setBottomPosition: u
     };
 }
-let c = u(),
-    d = u(),
-    f = u(),
-    p = u();
+let u = l(),
+    c = l(),
+    d = l(),
+    f = l();

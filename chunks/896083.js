@@ -1,23 +1,18 @@
-n.d(t, {
-    F: function () {
-        return l;
-    }
-}),
-    n(47120);
+n.d(t, { F: () => a }), n(47120);
 var i = n(192379),
-    r = n(295141);
-let l = () => {
+    l = n(295141);
+let a = () => {
     let [e, t] = i.useState(!1),
-        [n, l] = i.useState(null);
+        [n, a] = i.useState(null);
     return {
         loading: e,
         error: n,
         getTrialPurchaseEligibility: i.useCallback(async (e, n, i) => {
-            t(!0), l(null);
+            t(!0), a(null);
             try {
-                return await (0, r.LB)(e, n, i);
+                return await (0, l.LB)(e, n, i);
             } catch (e) {
-                l(e);
+                a(e);
             } finally {
                 t(!1);
             }

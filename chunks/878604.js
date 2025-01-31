@@ -1,16 +1,12 @@
-function i(e, n, r) {
-    let i = e[n];
-    return null == i ? (r ? ''.concat(e.any, ' (any)') : '100') : i.toString();
+function i(e, t, n) {
+    let i = e[t];
+    return null == i ? (n ? ''.concat(e.any, ' (any)') : '100') : i.toString();
 }
-function a(e, n) {
-    let r = e[n];
-    return null == r ? e.any : r;
+function r(e, t) {
+    let n = e[t];
+    return null == n ? e.any : n;
 }
-r.d(n, {
-    F: function () {
-        return a;
-    },
-    f: function () {
-        return i;
-    }
+n.d(t, {
+    F: () => r,
+    f: () => i
 });

@@ -1,9 +1,4 @@
-r.d(n, {
-    f: function () {
-        return s;
-    }
-});
-var i = r(789020);
-var a = r(630388),
-    o = r(981631);
-let s = (e) => null != e && null != e.attachments && !(e.attachments.length < 1) && e.attachments.some((e) => null != e.flags && (0, a.yE)(e.flags, o.J0y.IS_REMIX));
+n.d(t, { f: () => a }), n(789020);
+var i = n(630388),
+    r = n(981631);
+let a = (e) => null != e && null != e.attachments && !(e.attachments.length < 1) && e.attachments.some((e) => null != e.flags && (0, i.yE)(e.flags, r.J0y.IS_REMIX));

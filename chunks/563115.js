@@ -1,36 +1,32 @@
-n.d(t, {
-    Z: function () {
-        return s;
-    },
-    h: function () {
-        return r;
-    }
+l.d(t, {
+    Z: () => r,
+    h: () => s
 });
-var l = n(200651);
-n(192379);
-var o = n(442837),
-    i = n(430824),
-    a = n(512508);
-function r(e, t, n, l) {
-    return (0, o.Wu)(
+var n = l(200651);
+l(192379);
+var a = l(442837),
+    i = l(430824),
+    o = l(512508);
+function s(e, t, l, n) {
+    return (0, a.Wu)(
         [i.Z],
         () =>
             Object.values(i.Z.getRoles(e))
                 .filter((e) => !t.has(e.id))
-                .filter((t) => !n || t.id !== e)
-                .filter(null != l ? l : () => !0)
-                .map((e) => (0, a.WG)(e).row),
-        [n, e, l, t]
+                .filter((t) => !l || t.id !== e)
+                .filter(null != n ? n : () => !0)
+                .map((e) => (0, o.WG)(e).row),
+        [l, e, n, t]
     );
 }
-function s(e) {
-    let { guildId: t, selectedRoleIds: n, onChange: o, placeholder: i, disableEveryoneRole: s, helperText: c, className: C, selectableRoleFilter: d } = e,
-        u = r(t, n, s, d);
-    return (0, l.jsx)(a.ZP, {
+function r(e) {
+    let { guildId: t, selectedRoleIds: l, onChange: a, placeholder: i, disableEveryoneRole: r, helperText: c, className: C, selectableRoleFilter: d } = e,
+        u = s(t, l, r, d);
+    return (0, n.jsx)(o.ZP, {
         roleRows: u,
         guildId: t,
-        selectedRoleIds: n,
-        onChange: (e, t) => o(t),
+        selectedRoleIds: l,
+        onChange: (e, t) => a(t),
         placeholder: i,
         helperText: c,
         className: C

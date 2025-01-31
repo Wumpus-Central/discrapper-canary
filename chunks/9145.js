@@ -1,13 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return U;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => B }), n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(442837),
     o = n(993365),
     c = n(481060),
@@ -18,49 +13,49 @@ var i = n(200651),
     m = n(740492),
     f = n(861254),
     g = n(871499),
-    C = n(402113),
-    x = n(592125),
-    v = n(271383),
-    _ = n(944486),
-    I = n(594174),
-    E = n(585483),
+    _ = n(402113),
+    C = n(592125),
+    x = n(271383),
+    v = n(944486),
+    E = n(594174),
+    I = n(585483),
     b = n(51144),
     Z = n(566620),
     N = n(317381),
-    S = n(619915),
-    T = n(988980),
+    T = n(619915),
+    S = n(988980),
     j = n(16609),
     A = n(952561),
     y = n(563218),
     P = n(884338),
-    M = n(719296),
-    R = n(651612),
+    R = n(719296),
+    M = n(651612),
     L = n(918559),
     k = n(981631),
     O = n(388032),
     D = n(718691);
 let w = P.u.SIZE_32,
-    B = {
+    U = {
         [L.MI.NO_CHAT]: D.noChat,
         [L.MI.RESIZABLE]: D.resizable
     };
-function U(e) {
+function B(e) {
     var t, n;
-    let { maxHeight: r, connectedLocation: U, renderExternalHeader: H } = e,
-        { groupedButtons: G } = (0, f.ZP)({ location: 'ActivityPanelFocusedView' }),
-        F = (0, A.Z)(),
-        V = (0, s.Wu)([N.ZP], () => N.ZP.getEmbeddedActivitiesForLocation(U), [U]),
-        z = (0, j.p)(U),
-        W = (0, s.e7)([x.Z], () => x.Z.getChannel(z)),
-        K = (0, S.gb)(V),
-        Y = (0, S.uF)(K),
-        q = l.useCallback(() => {
+    let { maxHeight: a, connectedLocation: B, renderExternalHeader: F } = e,
+        { groupedButtons: H } = (0, f.ZP)({ location: 'ActivityPanelFocusedView' }),
+        G = (0, A.Z)(),
+        V = (0, s.Wu)([N.ZP], () => N.ZP.getEmbeddedActivitiesForLocation(B), [B]),
+        z = (0, j.p)(B),
+        W = (0, s.e7)([C.Z], () => C.Z.getChannel(z)),
+        Y = (0, T.gb)(V),
+        q = (0, T.uF)(Y),
+        K = l.useCallback(() => {
             (0, Z.tg)(L.Ez.PIP);
         }, []),
         X = l.useRef(null),
         J = (0, s.e7)([N.ZP], () => N.ZP.getFocusedLayout()),
         Q = J !== L.MI.NO_CHAT,
-        [$, ee] = l.useState(null !== (t = m.ZP.activityPanelHeight) && void 0 !== t ? t : r),
+        [$, ee] = l.useState(null !== (t = m.ZP.activityPanelHeight) && void 0 !== t ? t : a),
         et = l.useCallback((e) => {
             d.ZP.updatedUnsyncedSettings({ activityPanelHeight: e });
         }, []),
@@ -80,22 +75,22 @@ function U(e) {
         });
         return e.observe(en.current), () => e.disconnect();
     }, []);
-    let er = ei.width / Math.max(ei.height, 1) < L.I0,
-        ea = 0,
+    let ea = ei.width / Math.max(ei.height, 1) < L.I0,
+        er = 0,
         es = 0,
-        eo = (0, T.Z)(null == F ? void 0 : F.id);
+        eo = (0, S.Z)(null == G ? void 0 : G.id);
     if (!eo) {
         let e = ei.width,
             t = ei.height;
-        er ? ((t = ei.width / L.I0) > ei.height && (e = (t = ei.height) * L.I0), (es = (ei.height - t) / 2)) : ((e = Math.min(ei.height * L.I0)) > ei.width && (t = (e = ei.width) / L.I0), (ea = (ei.width - e) / 2));
+        ea ? ((t = ei.width / L.I0) > ei.height && (e = (t = ei.height) * L.I0), (es = (ei.height - t) / 2)) : ((e = Math.min(ei.height * L.I0)) > ei.width && (t = (e = ei.width) / L.I0), (er = (ei.width - e) / 2));
     }
-    let ec = Y.get(null !== (n = null == F ? void 0 : F.id) && void 0 !== n ? n : ''),
-        ed = (0, s.e7)([_.Z], () => _.Z.getChannelId()),
+    let ec = q.get(null !== (n = null == G ? void 0 : G.id) && void 0 !== n ? n : ''),
+        ed = (0, s.e7)([v.Z], () => v.Z.getChannelId()),
         eu = (0, s.Wu)(
-            [v.ZP],
+            [x.ZP],
             () => {
                 var e;
-                return null == W ? [] : Array.from(null !== (e = null == ec ? void 0 : ec.embeddedActivity.userIds) && void 0 !== e ? e : []).map((e) => v.ZP.getMember(W.guild_id, e));
+                return null == W ? [] : Array.from(null !== (e = null == ec ? void 0 : ec.embeddedActivity.userIds) && void 0 !== e ? e : []).map((e) => x.ZP.getMember(W.guild_id, e));
             },
             [ec, W]
         ),
@@ -110,14 +105,14 @@ function U(e) {
         }, [eu]),
         ep = (function (e, t, n) {
             let i = (0, u.Z)(e),
-                r = e !== i,
-                [a, s] = l.useState(!1);
+                a = e !== i,
+                [r, s] = l.useState(!1);
             l.useEffect(() => {
                 s(!0);
                 let e = setTimeout(() => s(!1), 50);
                 return () => clearTimeout(e);
             }, [e]);
-            let o = !h.Z.useReducedMotion && (r || a);
+            let o = !h.Z.useReducedMotion && (a || r);
             return l.useMemo(() => {
                 let i = o
                     ? {
@@ -135,28 +130,28 @@ function U(e) {
                       }
                     : i;
             }, [o, e, n, t]);
-        })(Q, $, r);
-    if (null == F) return null;
+        })(Q, $, a);
+    if (null == G) return null;
     let em = [];
     null != ec &&
         (em = Array.from(ec.embeddedActivity.userIds)
-            .map((e) => I.default.getUser(e))
+            .map((e) => E.default.getUser(e))
             .filter((e) => null != e && void 0 !== e));
     let ef = (e, t) => {
         var n;
         if (null == e || void 0 === e || void 0 === t) return null;
         let l = eh.get(e.id),
-            r = null !== (n = null == l ? void 0 : l.nick) && void 0 !== n ? n : b.ZP.getName(e);
+            a = null !== (n = null == l ? void 0 : l.nick) && void 0 !== n ? n : b.ZP.getName(e);
         return (0, i.jsx)(
-            c.TooltipContainer,
+            c.DY3,
             {
-                text: r,
+                text: a,
                 position: 'bottom',
                 children: (0, i.jsx)(
                     'img',
                     {
                         src: e.getAvatarURL(t.guild_id, w),
-                        alt: r,
+                        alt: a,
                         className: D.avatar
                     },
                     e.id
@@ -165,15 +160,15 @@ function U(e) {
             e.id
         );
     };
-    return (0, i.jsx)(c.ThemeProvider, {
+    return (0, i.jsx)(c.f6W, {
         theme: k.BRd.DARK,
         children: (e) =>
             (0, i.jsxs)('div', {
-                className: a()(D.wrapper, B[J], e),
+                className: r()(D.wrapper, U[J], e),
                 ref: X,
                 style: ep,
                 children: [
-                    null == H ? void 0 : H(),
+                    null == F ? void 0 : F(),
                     (0, i.jsxs)('div', {
                         className: D.activityPanelContainer,
                         children: [
@@ -185,21 +180,21 @@ function U(e) {
                                           color: 'header-primary',
                                           variant: 'text-md/semibold',
                                           className: D.headerTitle,
-                                          children: null == F ? void 0 : F.name
+                                          children: null == G ? void 0 : G.name
                                       })
                                   }),
                             (0, i.jsx)('div', {
-                                className: a()(D.activityContainer, { [D.activityContainerNoMargin]: eo }),
+                                className: r()(D.activityContainer, { [D.activityContainerNoMargin]: eo }),
                                 style: {
-                                    paddingLeft: ea,
-                                    paddingRight: ea,
+                                    paddingLeft: er,
+                                    paddingRight: er,
                                     paddingTop: es,
                                     paddingBottom: es
                                 },
                                 ref: en,
                                 children: (0, i.jsx)(y.Z, {
                                     className: D.iframe,
-                                    embedId: (0, M.Z)(U.id, F.id)
+                                    embedId: (0, R.Z)(B.id, G.id)
                                 })
                             }),
                             null != ed
@@ -217,21 +212,21 @@ function U(e) {
                                           (0, i.jsxs)('div', {
                                               className: D.footerButtons,
                                               children: [
-                                                  G
+                                                  H
                                                       ? null
-                                                      : (0, i.jsx)(R.Z, {
+                                                      : (0, i.jsx)(M.Z, {
                                                             channelId: ed,
                                                             className: D.circularButton
                                                         }),
-                                                  G
+                                                  H
                                                       ? (0, i.jsxs)('div', {
                                                             className: D.buttonSection,
                                                             children: [
-                                                                (0, i.jsx)(R.Z, { channelId: ed }),
+                                                                (0, i.jsx)(M.Z, { channelId: ed }),
                                                                 (0, i.jsx)(g.d, {
                                                                     label: O.intl.string(O.t.brPQ5e),
-                                                                    onClick: q,
-                                                                    iconComponent: c.MinimizeIcon,
+                                                                    onClick: K,
+                                                                    iconComponent: c.dOc,
                                                                     themeable: !0
                                                                 })
                                                             ]
@@ -239,20 +234,20 @@ function U(e) {
                                                       : null,
                                                   (0, i.jsx)('div', {
                                                       className: D.leaveButtonContainer,
-                                                      children: (0, i.jsx)(C.Z, {
-                                                          applicationId: F.id,
-                                                          location: U,
+                                                      children: (0, i.jsx)(_.Z, {
+                                                          applicationId: G.id,
+                                                          location: B,
                                                           centerButton: !0,
                                                           color: 'red',
-                                                          className: G ? void 0 : D.leaveActivityButton
+                                                          className: H ? void 0 : D.leaveActivityButton
                                                       })
                                                   }),
-                                                  G
+                                                  H
                                                       ? null
                                                       : (0, i.jsx)(g.d, {
                                                             label: O.intl.string(O.t.brPQ5e),
-                                                            onClick: q,
-                                                            iconComponent: c.MinimizeIcon,
+                                                            onClick: K,
+                                                            iconComponent: c.dOc,
                                                             themeable: !0,
                                                             className: D.circularButton
                                                         })
@@ -267,13 +262,13 @@ function U(e) {
                     Q
                         ? (0, i.jsx)(p.Z, {
                               minHeight: 480,
-                              maxHeight: r,
+                              maxHeight: a,
                               resizableNode: X,
                               onResize: (e) => {
-                                  E.S.dispatch(k.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), ee(e);
+                                  I.S.dispatch(k.CkL.MANUAL_IFRAME_RESIZING, { resizing: !0 }), ee(e);
                               },
                               onResizeEnd: (e) => {
-                                  E.S.dispatch(k.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), et(e);
+                                  I.S.dispatch(k.CkL.MANUAL_IFRAME_RESIZING, { resizing: !1 }), et(e);
                               }
                           })
                         : null

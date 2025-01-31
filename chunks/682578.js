@@ -1,13 +1,9 @@
-n.d(t, {
-    J: function () {
-        return s;
-    }
-});
+n.d(t, { J: () => r });
 var i = n(442837),
-    r = n(594174);
-let s = () =>
-    (0, i.e7)([r.default], () => {
+    s = n(594174);
+let r = () =>
+    (0, i.e7)([s.default], () => {
         var e;
-        let t = r.default.getCurrentUser();
+        let t = s.default.getCurrentUser();
         return null !== (e = null == t ? void 0 : t.nsfwAllowed) && void 0 !== e ? e : null;
     });

@@ -1,10 +1,6 @@
 n.d(t, {
-    R: function () {
-        return p;
-    },
-    Z: function () {
-        return f;
-    }
+    R: () => p,
+    Z: () => _
 });
 var i = n(200651);
 n(192379);
@@ -23,12 +19,12 @@ var r = n(120356),
 function p(e) {
     return h.$X.filter((t) => (null == e ? void 0 : e.id) !== m._ && u.oz(t, e));
 }
-function f(e) {
+function _(e) {
     let { guild: t } = e,
         r = (0, a.e7)([c.Z], () => c.Z.getRole(t.id, t.getEveryoneRoleId())),
         u = p(t),
         m = u.length > 0,
-        f = h.$X.some(
+        _ = h.$X.some(
             (e) =>
                 !d.Z.can(e, t, null, {
                     [r.id]: {
@@ -42,7 +38,7 @@ function f(e) {
                 (0, i.jsxs)('div', {
                     className: x.itemContent,
                     children: [
-                        (0, i.jsx)(o.Heading, {
+                        (0, i.jsx)(o.X6q, {
                             variant: 'text-md/semibold',
                             color: 'header-primary',
                             children: g.intl.string(g.t['+vaUlJ'])
@@ -55,7 +51,7 @@ function f(e) {
                     ]
                 }),
                 m
-                    ? (0, i.jsx)(o.CircleWarningIcon, {
+                    ? (0, i.jsx)(o.P4T, {
                           size: 'custom',
                           color: 'currentColor',
                           height: 24,
@@ -63,7 +59,7 @@ function f(e) {
                           className: x.warning,
                           'aria-label': g.intl.string(g.t.bG7Gu7)
                       })
-                    : (0, i.jsx)(o.CircleCheckIcon, {
+                    : (0, i.jsx)(o.owK, {
                           size: 'custom',
                           color: 'currentColor',
                           height: 24,
@@ -74,8 +70,8 @@ function f(e) {
             ]
         });
     return m
-        ? f
-            ? (0, i.jsx)(o.Tooltip, {
+        ? _
+            ? (0, i.jsx)(o.ua7, {
                   text: g.intl.string(g.t['E5v/a2']),
                   children: (e) =>
                       (0, i.jsx)('div', {
@@ -84,9 +80,9 @@ function f(e) {
                           children: C
                       })
               })
-            : (0, i.jsx)(o.Clickable, {
+            : (0, i.jsx)(o.P3F, {
                   onClick: () => {
-                      (0, o.openModalLazy)(async () => {
+                      (0, o.ZDy)(async () => {
                           let { default: e } = await n.e('39627').then(n.bind(n, 193845));
                           return (n) =>
                               (0, i.jsx)(e, {

@@ -1,12 +1,6 @@
-r.d(n, {
-    h2: function () {
-        return i.h2;
-    },
-    xV: function () {
-        return i.xV;
-    },
-    yW: function () {
-        return i.yW;
-    }
+n.d(t, {
+    h2: () => i.h2,
+    xV: () => i.xV,
+    yW: () => i.yW
 });
-var i = r(349361);
+var i = n(349361);

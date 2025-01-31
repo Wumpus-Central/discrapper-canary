@@ -1,11 +1,12 @@
-var i = r(570140);
-class a {
-    static setPermission(e, n) {
+n.d(t, { Z: () => a });
+var i = n(570140);
+class r {
+    static setPermission(e, t) {
         i.Z.dispatch({
             type: 'SET_NATIVE_PERMISSION',
             permissionType: e,
-            state: n
+            state: t
         });
     }
 }
-n.Z = a;
+let a = r;

@@ -1,40 +1,36 @@
-t.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = t(200651);
-t(192379);
-var l = t(481060),
-    r = t(247206),
-    a = t(388032);
-function o(e, n) {
-    return null != n &&
-        (0, r.KP)(
+n.d(t, { Z: () => r });
+var i = n(200651);
+n(192379);
+var l = n(481060),
+    a = n(247206),
+    s = n(388032);
+function r(e, t) {
+    return null != t &&
+        (0, a.KP)(
             {
-                type: r.lJ.GenericMedia,
-                media: n
+                type: a.lJ.GenericMedia,
+                media: t
             },
-            (0, r.HH)(e)
+            (0, a.HH)(e)
         )
         ? (0, i.jsx)(
-              l.MenuItem,
+              l.sNh,
               {
                   id: 'report-image-false-positive',
-                  label: a.intl.string(a.t.ZH7P2t),
+                  label: s.intl.string(s.t.ZH7P2t),
                   action: () => {
-                      (0, l.openModalLazy)(async () => {
-                          let { default: l } = await t(788679);
-                          return (t) =>
+                      (0, l.ZDy)(async () => {
+                          let { default: l } = await n(788679);
+                          return (n) =>
                               (0, i.jsx)(l, {
                                   channelId: e.channel_id,
                                   messageId: e.id,
-                                  mediaItemUrl: n.url,
-                                  ...t
+                                  mediaItemUrl: t.url,
+                                  ...n
                               });
                       });
                   },
-                  icon: l.ImageWarningIcon
+                  icon: l.fFY
               },
               'report-image-false-positive'
           )

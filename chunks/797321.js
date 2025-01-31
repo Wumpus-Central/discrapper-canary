@@ -1,10 +1,6 @@
-r.d(n, {
-    Z: function () {
-        return a;
-    }
-});
-var i = r(200651);
-function a(e) {
+n.d(t, { Z: () => r });
+var i = n(200651);
+function r(e) {
     return (0, i.jsxs)('svg', {
         width: '18',
         height: '21',
@@ -214,4 +210,4 @@ function a(e) {
         ]
     });
 }
-r(192379);
+n(192379);

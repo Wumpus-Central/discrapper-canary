@@ -1,65 +1,61 @@
-t.d(n, {
-    Z: function () {
-        return c;
-    }
-}),
-    t(47120);
-var l = t(200651),
-    i = t(192379),
-    r = t(442837),
-    a = t(481060),
-    u = t(194359),
-    o = t(699516),
-    d = t(594174),
-    s = t(388032);
-function c(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'ContextMenu',
-        { id: t, username: c, bot: Z } = e,
-        f = (0, r.e7)(
-            [d.default],
+n.d(t, { Z: () => d }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(442837),
+    s = n(481060),
+    o = n(194359),
+    l = n(699516),
+    u = n(594174),
+    c = n(388032);
+function d(e) {
+    let { user: t, location: n = 'ContextMenu', onFriendRequestSent: d, onFriendRemove: f } = e,
+        { id: _, username: p, bot: h } = t,
+        m = (0, a.e7)(
+            [u.default],
             () => {
                 var e;
-                return (null === (e = d.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === t;
+                return (null === (e = u.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === _;
             },
-            [t]
+            [_]
         ),
-        [m, g] = (0, r.Wu)([o.Z], () => [o.Z.isFriend(t), o.Z.isBlocked(t)], [t]),
-        [M, x] = i.useState(!1);
-    return Z || f
-        ? null
-        : m
-          ? (0, l.jsx)(a.MenuItem, {
-                id: 'remove-friend',
-                label: s.intl.string(s.t.cvSt1N),
-                action: function () {
-                    (0, a.openModal)((e) =>
-                        (0, l.jsx)(a.ConfirmModal, {
-                            header: s.intl.formatToPlainString(s.t.fPLvZW, { name: c }),
-                            confirmText: s.intl.string(s.t.cvSt1N),
-                            cancelText: s.intl.string(s.t['ETE/oK']),
-                            onConfirm: () => {
-                                u.Z.removeFriend(t, { location: n }), x(!1);
-                            },
-                            ...e,
-                            children: (0, l.jsx)(a.Text, {
-                                variant: 'text-md/normal',
-                                children: s.intl.format(s.t.l5FFq6, { name: c })
-                            })
-                        })
-                    );
-                }
-            })
-          : (0, l.jsx)(a.MenuItem, {
-                id: 'add-friend',
-                label: M ? s.intl.string(s.t.xMH6vL) : s.intl.string(s.t.w5uwoK),
-                action: () => {
-                    !M &&
-                        (u.Z.addRelationship({
-                            userId: t,
-                            context: { location: n }
-                        }),
-                        x(!0));
+        [g, E] = (0, a.Wu)([l.Z], () => [l.Z.isFriend(_), l.Z.isBlocked(_)], [_]),
+        [v, y] = r.useState(!1);
+    if (h || m) return null;
+    function I() {
+        (0, s.h7j)((e) =>
+            (0, i.jsx)(s.ConfirmModal, {
+                header: c.intl.formatToPlainString(c.t.fPLvZW, { name: p }),
+                confirmText: c.intl.string(c.t.cvSt1N),
+                cancelText: c.intl.string(c.t['ETE/oK']),
+                onConfirm: () => {
+                    o.Z.removeFriend(_, { location: n }), y(!1), null == f || f();
                 },
-                disabled: g || (M && !m)
-            });
+                ...e,
+                children: (0, i.jsx)(s.Text, {
+                    variant: 'text-md/normal',
+                    children: c.intl.format(c.t.l5FFq6, { name: p })
+                })
+            })
+        );
+    }
+    return g
+        ? (0, i.jsx)(s.sNh, {
+              id: 'remove-friend',
+              label: c.intl.string(c.t.cvSt1N),
+              action: I
+          })
+        : (0, i.jsx)(s.sNh, {
+              id: 'add-friend',
+              label: v ? c.intl.string(c.t.xMH6vL) : c.intl.string(c.t.w5uwoK),
+              action: () => {
+                  v ||
+                      (o.Z.addRelationship({
+                          userId: _,
+                          context: { location: n }
+                      }),
+                      y(!0),
+                      null == d || d());
+              },
+              disabled: E || (v && !g)
+          });
 }

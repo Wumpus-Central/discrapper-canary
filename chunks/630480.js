@@ -1,6 +1,7 @@
-e.exports = {
-    container: 'container_ffcaea',
-    emojiContainer: 'emojiContainer_ffcaea',
-    name: 'name_ffcaea',
-    infoContainer: 'infoContainer_ffcaea'
+var i = {
+    container: 'container__9e80c',
+    emojiContainer: 'emojiContainer__9e80c',
+    name: 'name__9e80c',
+    infoContainer: 'infoContainer__9e80c'
 };
+e.exports = i;

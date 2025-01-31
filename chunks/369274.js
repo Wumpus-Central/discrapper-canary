@@ -1,10 +1,6 @@
-r.d(n, {
-    Z: function () {
-        return a;
-    }
-});
-var i = r(395322);
-function a(e) {
-    let { enabled: n } = i.L.getCurrentConfig({ location: e });
-    return n;
+n.d(t, { Z: () => r });
+var i = n(395322);
+function r(e) {
+    let { enabled: t } = i.L.getCurrentConfig({ location: e });
+    return t;
 }

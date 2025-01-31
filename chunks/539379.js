@@ -1,35 +1,31 @@
 e.d(n, {
-    M: function () {
-        return c;
-    },
-    U: function () {
-        return u;
-    }
+    M: () => c,
+    U: () => C
 });
 var i = e(481060),
     l = e(43236),
-    a = e(103714),
-    s = e(940328),
+    s = e(103714),
+    a = e(940328),
     r = e(888395),
     d = e(389028),
     o = e(142390);
 let c = {
-        CREATE: s,
+        CREATE: a,
         GAMING: d,
         FRIENDS: r,
         STUDY: e(425506),
-        CLUBS: a,
+        CLUBS: s,
         CREATORS: l,
         LOCAL_COMMUNITY: o,
-        SCHOOL_CLUB: a
+        SCHOOL_CLUB: s
     },
-    u = {
-        CREATE: i.PencilIllocon,
-        GAMING: i.GamepadIllocon,
-        FRIENDS: i.HeartIllocon,
-        CLUBS: a,
-        SCHOOL_CLUB: i.BookIllocon,
-        STUDY: i.AppleIllocon,
-        LOCAL_COMMUNITY: i.LeafIllocon,
-        CREATORS: i.PaletteIllocon
+    C = {
+        CREATE: i.B0A,
+        GAMING: i.Tg$,
+        FRIENDS: i.z93,
+        CLUBS: s,
+        SCHOOL_CLUB: i.FGi,
+        STUDY: i.Dwq,
+        LOCAL_COMMUNITY: i.YdV,
+        CREATORS: i.lor
     };

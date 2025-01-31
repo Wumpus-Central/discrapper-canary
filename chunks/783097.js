@@ -1,144 +1,108 @@
-r.d(n, {
-    $d: function () {
-        return C;
-    },
-    BQ: function () {
-        return A;
-    },
-    Cb: function () {
-        return P;
-    },
-    Hu: function () {
-        return M;
-    },
-    L1: function () {
-        return Z;
-    },
-    Ow: function () {
-        return G;
-    },
-    Wx: function () {
-        return S;
-    },
-    X: function () {
-        return F;
-    },
-    XZ: function () {
-        return U;
-    },
-    Y$: function () {
-        return x;
-    },
-    Yn: function () {
-        return k;
-    },
-    jD: function () {
-        return N;
-    },
-    lf: function () {
-        return D;
-    },
-    pF: function () {
-        return B;
-    },
-    sl: function () {
-        return w;
-    },
-    vJ: function () {
-        return O;
-    },
-    yJ: function () {
-        return L;
-    },
-    ye: function () {
-        return R;
-    }
-});
-var i = r(789020);
-var a = r(627494);
-var o = r(757143);
-var s = r(653041);
-var l = r(47120);
-var u = r(912370),
-    c = r(668781),
-    d = r(904245),
-    f = r(895924),
-    p = r(667204),
-    h = r(957730),
-    _ = r(973616),
-    m = r(768581),
-    g = r(585483),
-    E = r(630388),
-    v = r(541099),
-    y = r(827498),
-    b = r(981631),
-    I = r(689079),
-    T = r(388032);
-let S = { id: I.bi.BUILT_IN };
-function A(e) {
-    return e.id !== I.bi.BUILT_IN;
+n.d(t, {
+    $d: () => y,
+    BQ: () => v,
+    Cb: () => R,
+    Hu: () => O,
+    L1: () => w,
+    Ow: () => P,
+    Wx: () => E,
+    X: () => M,
+    XZ: () => x,
+    Y$: () => N,
+    Yn: () => D,
+    jD: () => I,
+    lf: () => S,
+    pF: () => L,
+    sl: () => C,
+    vJ: () => T,
+    yJ: () => A,
+    ye: () => b
+}),
+    n(789020),
+    n(627494),
+    n(757143),
+    n(653041),
+    n(47120);
+var i = n(912370),
+    r = n(668781),
+    a = n(904245),
+    s = n(895924),
+    o = n(667204),
+    l = n(957730),
+    u = n(973616),
+    c = n(768581),
+    d = n(585483),
+    f = n(630388),
+    _ = n(541099),
+    p = n(827498),
+    h = n(981631),
+    m = n(689079),
+    g = n(388032);
+let E = { id: m.bi.BUILT_IN };
+function v(e) {
+    return e.id !== m.bi.BUILT_IN;
 }
-function C(e) {
-    return A(e) ? e.name : T.intl.string(T.t.UB2gGx);
+function y(e) {
+    return v(e) ? e.name : g.intl.string(g.t.UB2gGx);
+}
+function I(e) {
+    return v(e) ? e.description : g.intl.string(g.t.X9fusr);
+}
+function b(e) {
+    var t;
+    return v(e) && (0, f.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, h.udG.EMBEDDED);
+}
+function T(e) {
+    var t;
+    return v(e) && (0, f.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, h.udG.PARTNER);
+}
+function S(e) {
+    var t;
+    return v(e) && (0, f.yE)(null !== (t = e.flags) && void 0 !== t ? t : 0, h.udG.PROMOTED);
+}
+function A(e) {
+    return v(e) && b(e) ? (e instanceof u.ZP ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
 }
 function N(e) {
-    return A(e) ? e.description : T.intl.string(T.t.X9fusr);
-}
-function R(e) {
-    var n;
-    return A(e) && (0, E.yE)(null !== (n = e.flags) && void 0 !== n ? n : 0, b.udG.EMBEDDED);
-}
-function O(e) {
-    var n;
-    return A(e) && (0, E.yE)(null !== (n = e.flags) && void 0 !== n ? n : 0, b.udG.PARTNER);
-}
-function D(e) {
-    var n;
-    return A(e) && (0, E.yE)(null !== (n = e.flags) && void 0 !== n ? n : 0, b.udG.PROMOTED);
-}
-function L(e) {
-    return A(e) && R(e) ? (e instanceof _.ZP ? e.embeddedActivityConfig : e.embedded_activity_config) : null;
-}
-function x(e) {
-    let { command: n, optionValues: r, context: i, commandTargetId: a, maxSizeCallback: o, sectionName: s, commandOrigin: l = f.bB.APPLICATION_LAUNCHER } = e,
-        { channel: u } = i,
-        _ = async () => {
+    let { command: t, optionValues: n, context: i, commandTargetId: u, maxSizeCallback: c, sectionName: d, commandOrigin: f = s.bB.APPLICATION_LAUNCHER } = e,
+        { channel: p } = i,
+        h = async () => {
             try {
-                let c = await (0, p.Z)({
-                    command: n,
-                    optionValues: r,
+                let r = await (0, o.Z)({
+                    command: t,
+                    optionValues: n,
                     context: i,
-                    commandTargetId: a,
-                    maxSizeCallback: o,
-                    commandOrigin: l,
-                    sectionName: s,
-                    source: v.Z.entrypoint()
+                    commandTargetId: u,
+                    maxSizeCallback: c,
+                    commandOrigin: f,
+                    sectionName: d,
+                    source: _.Z.entrypoint()
                 });
-                if (n.inputType === f.iw.BUILT_IN_TEXT && null != c && null != i.channel) {
+                if (t.inputType === s.iw.BUILT_IN_TEXT && null != r && null != i.channel) {
                     var e;
-                    let n = h.ZP.parse(u, c.content);
-                    (n.tts = null !== (e = c.tts) && void 0 !== e && e), d.Z.sendMessage(i.channel.id, n);
+                    let t = l.ZP.parse(p, r.content);
+                    (t.tts = null !== (e = r.tts) && void 0 !== e && e), a.Z.sendMessage(i.channel.id, t);
                 }
             } catch (e) {
                 throw (
-                    (c.Z.show({
-                        title: T.intl.string(T.t['aHO//v']),
-                        body: T.intl.string(T.t.kuzKHB),
-                        confirmText: T.intl.string(T.t['5911LS']),
-                        onConfirm: () => _()
+                    (r.Z.show({
+                        title: g.intl.string(g.t['aHO//v']),
+                        body: g.intl.string(g.t.kuzKHB),
+                        confirmText: g.intl.string(g.t['5911LS']),
+                        onConfirm: () => h()
                     }),
                     e)
                 );
             }
         };
-    return _();
+    return h();
 }
-function w(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        { fakeAppIconURL: r, ...i } = n;
-    return A(e)
+function C(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        { fakeAppIconURL: n, ...i } = t;
+    return v(e)
         ? {
-              iconURL: m.ZP.getApplicationIconURL({
+              iconURL: c.ZP.getApplicationIconURL({
                   ...i,
                   id: e.id,
                   icon: e.icon
@@ -147,37 +111,37 @@ function w(e) {
               description: e.description
           }
         : {
-              iconURL: null != r ? r : null,
-              name: T.intl.string(T.t.UB2gGx),
-              description: T.intl.string(T.t.X9fusr)
+              iconURL: null != n ? n : null,
+              name: g.intl.string(g.t.UB2gGx),
+              description: g.intl.string(g.t.X9fusr)
           };
 }
-function P(e) {
-    return !!A(e) && (e instanceof _.ZP ? e.isMonetized : e.is_monetized);
+function R(e) {
+    return !!v(e) && (e instanceof u.ZP ? e.isMonetized : e.is_monetized);
 }
-function M(e) {
-    let n = L(e);
-    return null != n && n.displays_advertisements;
+function O(e) {
+    let t = A(e);
+    return null != t && t.displays_advertisements;
 }
-function k(e) {
-    return e === y._b.TEXT;
+function D(e) {
+    return e === p._b.TEXT;
 }
-function U(e) {
+function x(e) {
     return null == e ? '' : (e.charAt(0).toLocaleUpperCase() + e.slice(1)).replaceAll('_', ' ');
 }
-function B(e) {
-    let n = [];
-    for (let r of e) {
-        let e = r.application_directory_collection_items.filter((e) => e.type === u.C.APPLICATION && R(e.application));
-        if (0 !== e.length)
-            n.push({
-                ...r,
+function L(e) {
+    let t = [];
+    for (let n of e) {
+        let e = n.application_directory_collection_items.filter((e) => e.type === i.C.APPLICATION && b(e.application));
+        0 !== e.length &&
+            t.push({
+                ...n,
                 application_directory_collection_items: e
             });
     }
-    return n;
+    return t;
 }
-function G(e) {
+function P(e) {
     return {
         applicationId: e.id,
         customInstallUrl: e.customInstallUrl,
@@ -185,8 +149,8 @@ function G(e) {
         integrationTypesConfig: e.integrationTypesConfig
     };
 }
-function Z(e) {
-    return e instanceof _.ZP
+function w(e) {
+    return e instanceof u.ZP
         ? {
               applicationId: e.id,
               customInstallUrl: e.customInstallUrl,
@@ -200,6 +164,6 @@ function Z(e) {
               integrationTypesConfig: e.integration_types_config
           };
 }
-function F(e) {
-    g.S.dispatchToLastSubscribed(b.CkL.OPEN_APP_LAUNCHER, { applicationId: e });
+function M(e) {
+    d.S.dispatchToLastSubscribed(h.CkL.OPEN_APP_LAUNCHER, { applicationId: e });
 }

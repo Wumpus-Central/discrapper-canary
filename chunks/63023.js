@@ -11,13 +11,8 @@ function i(e, t, n) {
         e
     );
 }
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-}),
-    n(653041);
-class r {
+n.d(t, { Z: () => l }), n(653041);
+class l {
     _processQueue() {
         setTimeout(() => {
             if (this._queue.length > 0 && this._tokenCount > 0) {

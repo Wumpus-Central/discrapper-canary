@@ -1,37 +1,38 @@
+n.d(t, { Z: () => u });
 var i = n(200651);
 n(192379);
 var s = n(120356),
-    r = n.n(s),
-    o = n(481060),
-    a = n(518084),
-    l = n(981631),
-    c = n(388032),
-    d = n(624414);
-t.Z = function (e) {
+    l = n.n(s),
+    r = n(481060),
+    o = n(518084),
+    a = n(981631),
+    d = n(388032),
+    c = n(624414);
+let u = function (e) {
     let t;
     let { title: n, header: s, children: u, renderSettings: h, onDragStart: p } = e;
     return (
         (t =
             null != n
-                ? (0, i.jsxs)(a.ZP.Bar, {
-                      className: r()(d.header, d.draggableStartArea),
+                ? (0, i.jsxs)(o.ZP.Bar, {
+                      className: l()(c.header, c.draggableStartArea),
                       onMouseDown: p,
                       children: [
-                          (0, i.jsx)(a.ZP.Content, {
-                              className: r()(d.headerTitle, d.draggableStartArea),
+                          (0, i.jsx)(o.ZP.Content, {
+                              className: l()(c.headerTitle, c.draggableStartArea),
                               dynamicSize: !0,
                               children: n
                           }),
-                          (0, i.jsx)(a.ZP.Content, {
-                              children: (0, i.jsx)(o.Popout, {
+                          (0, i.jsx)(o.ZP.Content, {
+                              children: (0, i.jsx)(r.yRy, {
                                   position: 'right',
-                                  renderPopout: null != h ? h : l.dG4,
+                                  renderPopout: null != h ? h : a.dG4,
                                   autoInvert: !1,
                                   children: (e) =>
-                                      (0, i.jsx)(a.ZP.Icon, {
+                                      (0, i.jsx)(o.ZP.Icon, {
                                           ...e,
-                                          icon: o.SettingsIcon,
-                                          label: c.intl.string(c.t['3D5yo6'])
+                                          icon: r.ewm,
+                                          label: d.intl.string(d.t['3D5yo6'])
                                       })
                               })
                           })
@@ -39,11 +40,11 @@ t.Z = function (e) {
                   })
                 : s),
         (0, i.jsxs)('div', {
-            className: d.sidebar,
+            className: c.sidebar,
             children: [
                 t,
                 (0, i.jsx)('div', {
-                    className: d.children,
+                    className: c.children,
                     children: u
                 })
             ]

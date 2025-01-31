@@ -1,19 +1,17 @@
-s.r(e), s(47120);
-var n,
-    a,
-    i = s(200651),
-    o = s(192379),
-    c = s(442837),
-    r = s(481060),
-    l = s(355467),
-    u = s(505649),
-    d = s(626135),
-    h = s(937615),
-    p = s(622999),
-    g = s(981631),
-    m = s(388032),
-    f = s(142780);
-function x(t, e, s) {
+s.d(e, { default: () => f }), s(47120);
+var n = s(200651),
+    i = s(192379),
+    a = s(442837),
+    c = s(481060),
+    r = s(355467),
+    o = s(505649),
+    l = s(626135),
+    u = s(937615),
+    h = s(622999),
+    d = s(981631),
+    p = s(388032),
+    g = s(142780);
+function m(t, e, s) {
     return (
         e in t
             ? Object.defineProperty(t, e, {
@@ -26,36 +24,35 @@ function x(t, e, s) {
         t
     );
 }
-((a = n || (n = {}))[(a.START = 0)] = 'START'), (a[(a.FAIL = 1)] = 'FAIL'), (a[(a.SUCCESS = 2)] = 'SUCCESS'), (a[(a.CANCELED = 3)] = 'CANCELED');
-class A extends o.Component {
+class x extends i.Component {
     componentDidMount() {
-        d.default.track(g.rMx.OPEN_MODAL, { type: g.jXE.PAYMENT_AUTHENTICATION_MODAL });
+        l.default.track(d.rMx.OPEN_MODAL, { type: d.jXE.PAYMENT_AUTHENTICATION_MODAL });
     }
     componentWillUnmount() {
-        d.default.track(g.rMx.MODAL_DISMISSED, { type: g.jXE.PAYMENT_AUTHENTICATION_MODAL });
+        l.default.track(d.rMx.MODAL_DISMISSED, { type: d.jXE.PAYMENT_AUTHENTICATION_MODAL });
     }
     getTitle() {
         let { step: t } = this.state;
         switch (t) {
             case 0:
-                return m.intl.string(m.t.N65Zra);
+                return p.intl.string(p.t.N65Zra);
             case 2:
-                return m.intl.string(m.t.DPgrRk);
+                return p.intl.string(p.t.DPgrRk);
             case 3:
-                return m.intl.string(m.t.xypuIi);
+                return p.intl.string(p.t.xypuIi);
             default:
-                return m.intl.string(m.t.uEoQdH);
+                return p.intl.string(p.t.uEoQdH);
         }
     }
     getImageStyle() {
         let { step: t } = this.state;
         switch (t) {
             case 0:
-                return f.authenticationRequiredImage;
+                return g.authenticationRequiredImage;
             case 2:
-                return f.authenticationSuccessImage;
+                return g.authenticationSuccessImage;
             default:
-                return f.authenticationFailImage;
+                return g.authenticationFailImage;
         }
     }
     getMessage() {
@@ -63,81 +60,81 @@ class A extends o.Component {
             { pendingPayment: e } = this.props;
         switch (t) {
             case 0:
-                return m.intl.format(m.t.RoxWER, {
-                    price: (0, h.T4)(e.amount, e.currency),
+                return p.intl.format(p.t.RoxWER, {
+                    price: (0, u.T4)(e.amount, e.currency),
                     item: e.description
                 });
             case 2:
-                return m.intl.string(m.t.PZskfn);
+                return p.intl.string(p.t.PZskfn);
             case 3:
-                return m.intl.format(m.t['j0tI/f'], { item: e.description });
+                return p.intl.format(p.t['j0tI/f'], { item: e.description });
             default:
-                return m.intl.string(m.t.BAr3rK);
+                return p.intl.string(p.t.BAr3rK);
         }
     }
     renderButtons() {
         let { step: t } = this.state,
             { disableAuthentication: e } = this.props;
-        if (0 === t)
-            return (0, i.jsxs)(o.Fragment, {
-                children: [
-                    (0, i.jsx)(r.Button, {
-                        color: r.ButtonColors.BRAND,
-                        disabled: e,
-                        onClick: this.handleAuthenticate,
-                        children: m.intl.string(m.t.VAqBoK)
-                    }),
-                    (0, i.jsx)(r.Button, {
-                        look: r.Button.Looks.LINK,
-                        size: r.Button.Sizes.NONE,
-                        color: r.Button.Colors.PRIMARY,
-                        onClick: this.cancelPayment,
-                        className: f.cancelButton,
-                        children: m.intl.string(m.t['2NeVoa'])
-                    })
-                ]
-            });
-        return (0, i.jsx)(r.Button, {
-            color: r.ButtonColors.BRAND,
-            onClick: this.close,
-            children: m.intl.string(m.t.cpT0Cg)
-        });
+        return 0 === t
+            ? (0, n.jsxs)(i.Fragment, {
+                  children: [
+                      (0, n.jsx)(c.zxk, {
+                          color: c.Ttl.BRAND,
+                          disabled: e,
+                          onClick: this.handleAuthenticate,
+                          children: p.intl.string(p.t.VAqBoK)
+                      }),
+                      (0, n.jsx)(c.zxk, {
+                          look: c.zxk.Looks.LINK,
+                          size: c.zxk.Sizes.NONE,
+                          color: c.zxk.Colors.PRIMARY,
+                          onClick: this.cancelPayment,
+                          className: g.cancelButton,
+                          children: p.intl.string(p.t['2NeVoa'])
+                      })
+                  ]
+              })
+            : (0, n.jsx)(c.zxk, {
+                  color: c.Ttl.BRAND,
+                  onClick: this.close,
+                  children: p.intl.string(p.t.cpT0Cg)
+              });
     }
     render() {
         let { transitionState: t } = this.props;
-        return (0, i.jsxs)(r.ModalRoot, {
+        return (0, n.jsxs)(c.Y0X, {
             transitionState: t,
-            className: f.modal,
-            size: r.ModalSize.SMALL,
+            className: g.modal,
+            size: c.CgR.SMALL,
             'aria-label': this.getTitle(),
             children: [
-                (0, i.jsxs)(r.ModalHeader, {
+                (0, n.jsxs)(c.xBx, {
                     children: [
-                        (0, i.jsx)(r.Heading, {
+                        (0, n.jsx)(c.X6q, {
                             variant: 'heading-lg/semibold',
-                            children: (0, i.jsx)('span', {
-                                className: f.__invalid_modalTitle,
+                            children: (0, n.jsx)('span', {
+                                className: g.__invalid_modalTitle,
                                 children: this.getTitle()
                             })
                         }),
-                        (0, i.jsx)(r.ModalCloseButton, {
-                            className: f.closeIcon,
+                        (0, n.jsx)(c.olH, {
+                            className: g.closeIcon,
                             onClick: this.close
                         })
                     ]
                 }),
-                (0, i.jsxs)(r.ModalContent, {
-                    className: f.content,
+                (0, n.jsxs)(c.hzk, {
+                    className: g.content,
                     children: [
-                        (0, i.jsx)('div', { className: this.getImageStyle() }),
-                        (0, i.jsx)(r.Text, {
+                        (0, n.jsx)('div', { className: this.getImageStyle() }),
+                        (0, n.jsx)(c.Text, {
                             variant: 'text-md/normal',
                             children: this.getMessage()
                         })
                     ]
                 }),
-                (0, i.jsx)(r.ModalFooter, {
-                    className: f.__invalid_footer,
+                (0, n.jsx)(c.mzw, {
+                    className: g.__invalid_footer,
                     children: this.renderButtons()
                 })
             ]
@@ -145,26 +142,26 @@ class A extends o.Component {
     }
     constructor(...t) {
         super(...t),
-            x(this, 'state', { step: 0 }),
-            x(this, 'close', async () => {
+            m(this, 'state', { step: 0 }),
+            m(this, 'close', async () => {
                 let { step: t } = this.state,
                     { onClose: e, pendingPayment: s } = this.props;
-                0 === t && (await (0, l.UY)(s.id)), e();
+                0 === t && (await (0, r.UY)(s.id)), e();
             }),
-            x(this, 'cancelPayment', async () => {
+            m(this, 'cancelPayment', async () => {
                 let { pendingPayment: t } = this.props;
                 try {
-                    await (0, l.UY)(t.id);
+                    await (0, r.UY)(t.id);
                 } catch (t) {
                     throw (this.setState({ step: 3 }), t);
                 }
                 this.setState({ step: 3 });
             }),
-            x(this, 'handleAuthenticate', async () => {
+            m(this, 'handleAuthenticate', async () => {
                 let { pendingPayment: t } = this.props,
-                    { error: e } = await (0, p.oe)(t.id);
+                    { error: e } = await (0, h.oe)(t.id);
                 null != e ? this.setState({ step: 1 }) : this.setState({ step: 2 });
             });
     }
 }
-e.default = c.ZP.connectStores([u.Z], () => ({ disableAuthentication: u.Z.isAwaitingAuthentication }))(A);
+let f = a.ZP.connectStores([o.Z], () => ({ disableAuthentication: o.Z.isAwaitingAuthentication }))(x);

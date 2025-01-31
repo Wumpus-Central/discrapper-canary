@@ -1,24 +1,20 @@
 n.d(t, {
-    FI: function () {
-        return a;
-    },
-    IL: function () {
-        return s;
-    }
+    FI: () => l,
+    IL: () => r
 });
 var i = n(585483),
-    r = n(981631);
-let s = {
+    s = n(981631);
+let r = {
         binds: ['mod+return'],
         comboKeysBindGlobal: !0,
         action() {
-            if (i.S.hasSubscribers(r.CkL.CALL_ACCEPT)) return i.S.dispatch(r.CkL.CALL_ACCEPT), !1;
+            if (i.S.hasSubscribers(s.CkL.CALL_ACCEPT)) return i.S.dispatch(s.CkL.CALL_ACCEPT), !1;
         }
     },
-    a = {
+    l = {
         binds: ["ctrl+'", "ctrl+shift+'"],
         comboKeysBindGlobal: !0,
         action(e) {
-            if (i.S.hasSubscribers(r.CkL.CALL_START)) return i.S.dispatch(r.CkL.CALL_START, e), !1;
+            if (i.S.hasSubscribers(s.CkL.CALL_START)) return i.S.dispatch(s.CkL.CALL_START, e), !1;
         }
     };

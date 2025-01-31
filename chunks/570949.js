@@ -1,48 +1,44 @@
-t.d(n, {
-    P: function () {
-        return h;
-    },
-    Z: function () {
-        return f;
-    }
+n.d(t, {
+    P: () => h,
+    Z: () => v
 }),
-    t(47120);
-var i = t(200651),
-    l = t(481060),
-    a = t(239091),
-    o = t(299206),
-    r = t(276022),
-    s = t(695346),
-    c = t(914010),
-    d = t(499254),
-    u = t(827498),
-    m = t(314734),
-    p = t(388032);
+    n(47120);
+var i = n(200651),
+    l = n(481060),
+    a = n(239091),
+    o = n(299206),
+    s = n(276022),
+    r = n(695346),
+    c = n(914010),
+    d = n(499254),
+    u = n(827498),
+    m = n(314734),
+    p = n(388032);
 function h(e) {
-    var n;
-    let { application: t } = e,
-        i = null !== (n = c.Z.getGuildId()) && void 0 !== n ? n : void 0;
-    return (0, r.Z)({
-        application: t,
+    var t;
+    let { application: n } = e,
+        i = null !== (t = c.Z.getGuildId()) && void 0 !== t ? t : void 0;
+    return (0, s.Z)({
+        application: n,
         guildId: i,
         onItemClick: () => {
-            (0, l.closeModal)(m.e9), (0, d.yT)(u.ti.DISMISSED);
+            (0, l.Mr3)(m.e9), (0, d.yT)(u.ti.DISMISSED);
         }
     });
 }
-function f(e) {
-    let { application: n, onSelect: t } = e,
-        r = s.Sb.useSetting(),
+function v(e) {
+    let { application: t, onSelect: n } = e,
+        s = r.Sb.useSetting(),
         c = (0, o.Z)({
-            id: n.id,
+            id: t.id,
             label: p.intl.string(p.t['+NP/b2'])
         }),
-        d = h({ application: n });
-    return (0, i.jsxs)(l.Menu, {
+        d = h({ application: t });
+    return (0, i.jsxs)(l.v2r, {
         navId: 'activity-shelf-item-context',
         onClose: a.Zy,
         'aria-label': p.intl.string(p.t.WkcHT0),
-        onSelect: t,
-        children: [null != d && (0, i.jsxs)(l.MenuGroup, { children: [...d] }, 'manage-app-actions'), r && (0, i.jsx)(l.MenuGroup, { children: c }, 'developer-actions')]
+        onSelect: n,
+        children: [null != d && (0, i.jsxs)(l.kSQ, { children: [...d] }, 'manage-app-actions'), s && (0, i.jsx)(l.kSQ, { children: c }, 'developer-actions')]
     });
 }

@@ -1,20 +1,12 @@
 n.d(t, {
-    HU: function () {
-        return f;
-    },
-    KW: function () {
-        return p;
-    },
-    dO: function () {
-        return m;
-    },
-    gQ: function () {
-        return g;
-    }
+    HU: () => _,
+    KW: () => p,
+    dO: () => m,
+    gQ: () => g
 });
 var i = n(392711),
-    r = n.n(i),
-    l = n(570140),
+    l = n.n(i),
+    r = n(570140),
     a = n(317381),
     s = n(16609),
     o = n(594174),
@@ -31,10 +23,10 @@ function m() {
         participants: Array.from(e.userIds, (e) => {
             let i = o.default.getUser(e);
             if (null == i) return;
-            let r = (0, d.y)(t, n, i);
+            let l = (0, d.y)(t, n, i);
             return {
                 ...(0, u.Z)(i),
-                nickname: null != r ? r : void 0
+                nickname: null != l ? l : void 0
             };
         }).filter(c.lm)
     };
@@ -45,13 +37,13 @@ let p = { [h.Gp.ANY]: [h.wE] },
         handler: () => (e) => {
             let { prevState: t, dispatch: n } = e,
                 i = m();
-            return !r().isEqual(i, t) && n(i), i;
+            return l().isEqual(i, t) || n(i), i;
         }
     };
-function f(e) {
+function _(e) {
     let t = 'EMBEDDED_ACTIVITY_UPDATE',
         n = () => {
             e(m());
         };
-    return l.Z.subscribe(t, n), () => l.Z.unsubscribe(t, n);
+    return r.Z.subscribe(t, n), () => r.Z.unsubscribe(t, n);
 }

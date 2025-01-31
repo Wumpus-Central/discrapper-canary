@@ -1,33 +1,27 @@
-r.d(n, {
-    Gc: function () {
-        return l;
-    },
-    ol: function () {
-        return u;
-    },
-    q3: function () {
-        return s;
-    }
+n.d(t, {
+    Gc: () => o,
+    ol: () => l,
+    q3: () => s
 });
-var i = r(200651),
-    a = r(192379),
-    o = r(981631);
-let s = a.createContext({
+var i = n(200651),
+    r = n(192379),
+    a = n(981631);
+let s = r.createContext({
     titleId: void 0,
     errorId: void 0,
     error: void 0,
     isFocused: void 0,
-    setIsFocused: o.dG4,
+    setIsFocused: a.dG4,
     hasValue: void 0,
-    setHasValue: o.dG4
+    setHasValue: a.dG4
 });
-function l() {
-    return a.useContext(s);
+function o() {
+    return r.useContext(s);
 }
-function u(e) {
-    let { children: n, ...r } = e;
+function l(e) {
+    let { children: t, ...n } = e;
     return (0, i.jsx)(s.Provider, {
-        value: r,
-        children: n
+        value: n,
+        children: t
     });
 }

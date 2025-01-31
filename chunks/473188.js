@@ -1,35 +1,31 @@
-r.d(n, {
-    _: function () {
-        return u;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(481060),
-    l = r(744877);
-function u(e) {
-    let { rank: n, hideInnerBorder: r = !1 } = e,
-        a = n <= 3 ? 'text-xs/semibold' : 'text-xs/medium';
+n.d(t, { _: () => l });
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(481060),
+    o = n(744877);
+function l(e) {
+    let { rank: t, hideInnerBorder: n = !1 } = e,
+        r = t <= 3 ? 'text-xs/semibold' : 'text-xs/medium';
     return (0, i.jsx)('div', {
-        className: o()(l.rankContainer, {
-            [l.goldBorder]: 1 === n,
-            [l.silverBorder]: 2 === n,
-            [l.bronzeBorder]: 3 === n,
-            [l.defaultBorder]: n > 3
+        className: a()(o.rankContainer, {
+            [o.goldBorder]: 1 === t,
+            [o.silverBorder]: 2 === t,
+            [o.bronzeBorder]: 3 === t,
+            [o.defaultBorder]: t > 3
         }),
         children: (0, i.jsx)(s.Text, {
             tabularNumbers: !0,
-            variant: a,
-            className: o()(l.rank, {
-                [l.rankWithBorder]: !r,
-                [l.goldText]: 1 === n,
-                [l.silverText]: 2 === n,
-                [l.bronzeText]: 3 === n,
-                [l.rankNoBorder]: r
+            variant: r,
+            className: a()(o.rank, {
+                [o.rankWithBorder]: !n,
+                [o.goldText]: 1 === t,
+                [o.silverText]: 2 === t,
+                [o.bronzeText]: 3 === t,
+                [o.rankNoBorder]: n
             }),
-            children: n
+            children: t
         })
     });
 }

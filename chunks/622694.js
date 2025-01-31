@@ -1,7 +1,8 @@
-e.exports = {
-    modalHeaderCustomGift: 'modalHeaderCustomGift_a27f2f',
-    closeButton: 'closeButton_a27f2f',
-    closeButtonInner: 'closeButtonInner_a27f2f',
-    header: 'header_a27f2f',
-    headerAnimation: 'headerAnimation_a27f2f'
+var i = {
+    modalHeaderCustomGift: 'modalHeaderCustomGift_b54a5b',
+    closeButton: 'closeButton_b54a5b',
+    closeButtonInner: 'closeButtonInner_b54a5b',
+    header: 'header_b54a5b',
+    headerAnimation: 'headerAnimation_b54a5b'
 };
+e.exports = i;

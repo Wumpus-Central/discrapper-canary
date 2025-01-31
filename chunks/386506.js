@@ -1,52 +1,27 @@
 let i;
-r.d(n, {
-    M3: function () {
-        return _;
-    },
-    aD: function () {
-        return f;
-    },
-    bF: function () {
-        return h;
-    },
-    f0: function () {
-        return p;
-    }
+n.d(t, {
+    M3: () => p,
+    aD: () => d,
+    bF: () => _,
+    f0: () => f
 });
-var a = r(544891),
-    o = r(314897),
-    s = r(12647),
-    l = r(865427);
-let u = '/__development/build_overrides',
-    c = '/__development/create_build_override_link',
-    d = '/__development/link';
-async function f(e) {
+var r = n(544891),
+    a = n(314897),
+    s = n(12647),
+    o = n(865427);
+let l = '/__development/build_overrides',
+    u = '/__development/create_build_override_link',
+    c = '/__development/link';
+async function d(e) {
     try {
-        var n;
-        let r = await a.tn.put({
-            url: (0, l.pU)(u),
+        var t;
+        let n = await r.tn.put({
+            url: (0, o.pU)(l),
             body: {
                 overrides: e,
-                version: l.Ji
+                version: o.Ji
             },
-            headers: { Authorization: null !== (n = o.default.getToken()) && void 0 !== n ? n : '' },
-            oldFormErrors: !0,
-            rejectWithError: !1
-        });
-        return await i(r), r;
-    } catch (e) {
-        return e;
-    }
-}
-async function p(e) {
-    try {
-        let n = await a.tn.put({
-            url: (0, l.pU)(d),
-            body: {
-                payload: e,
-                token: o.default.getToken(),
-                version: l.Ji
-            },
+            headers: { Authorization: null !== (t = a.default.getToken()) && void 0 !== t ? t : '' },
             oldFormErrors: !0,
             rejectWithError: !1
         });
@@ -55,21 +30,38 @@ async function p(e) {
         return e;
     }
 }
-async function h() {
-    let e = await a.tn.del({
-        url: (0, l.pU)(u),
+async function f(e) {
+    try {
+        let t = await r.tn.put({
+            url: (0, o.pU)(c),
+            body: {
+                payload: e,
+                token: a.default.getToken(),
+                version: o.Ji
+            },
+            oldFormErrors: !0,
+            rejectWithError: !1
+        });
+        return await i(t), t;
+    } catch (e) {
+        return e;
+    }
+}
+async function _() {
+    let e = await r.tn.del({
+        url: (0, o.pU)(l),
         oldFormErrors: !0,
         rejectWithError: !1
     });
     return await i(e), e;
 }
-function _(e) {
-    var n;
-    return a.tn
+function p(e) {
+    var t;
+    return r.tn
         .post({
-            url: (0, l.pU)(c),
+            url: (0, o.pU)(u),
             body: e,
-            headers: { Authorization: null !== (n = o.default.getToken()) && void 0 !== n ? n : '' },
+            headers: { Authorization: null !== (t = a.default.getToken()) && void 0 !== t ? t : '' },
             oldFormErrors: !0,
             rejectWithError: !1
         })

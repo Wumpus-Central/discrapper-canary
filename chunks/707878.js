@@ -1,47 +1,47 @@
-n(47120);
+n.d(t, { Z: () => v }), n(47120);
 var i = n(200651),
     s = n(192379),
-    r = n(442837),
-    o = n(481060),
-    a = n(13245),
-    l = n(313201),
-    c = n(237997),
-    d = n(766032),
+    l = n(442837),
+    r = n(481060),
+    o = n(13245),
+    a = n(313201),
+    d = n(237997),
+    c = n(766032),
     u = n(987650),
     h = n(981631),
     p = n(388032),
-    f = n(394977);
-let g = Object.values(u.wF).map((e) => 100 * e),
-    m = (0, l.hQ)();
-class v extends s.PureComponent {
+    g = n(394977);
+let f = Object.values(u.wF).map((e) => 100 * e),
+    m = (0, a.hQ)();
+class x extends s.PureComponent {
     handleUpdateBackgroundOpacity(e) {
-        a.Z.setTextWidgetOpacity((0, d.Z)(e / 100)), a.Z.track(h.rMx.OVERLAY_SETTINGS_UPDATED, { text_opacity_slider: e });
+        o.Z.setTextWidgetOpacity((0, c.Z)(e / 100)), o.Z.track(h.rMx.OVERLAY_SETTINGS_UPDATED, { text_opacity_slider: e });
     }
     handlePreviewBackgroundOpacity(e) {
-        a.Z.setTextWidgetOpacity((0, d.Z)(e / 100));
+        o.Z.setTextWidgetOpacity((0, c.Z)(e / 100));
     }
     render() {
         return (0, i.jsxs)('div', {
-            className: f.container,
+            className: g.container,
             children: [
-                (0, i.jsx)(o.FormTitle, {
+                (0, i.jsx)(r.vwX, {
                     id: m,
-                    tag: o.FormTitleTags.H5,
-                    className: f.title,
+                    tag: r.RB0.H5,
+                    className: g.title,
                     children: p.intl.string(p.t.OVovCQ)
                 }),
                 (0, i.jsx)('div', {
-                    className: f.sliderContainer,
-                    children: (0, i.jsx)(o.Slider, {
+                    className: g.sliderContainer,
+                    children: (0, i.jsx)(r.iRW, {
                         mini: !0,
                         initialValue: this.initialValue,
                         defaultValue: this.initialValue,
-                        minValue: g[0],
-                        maxValue: g[g.length - 1],
+                        minValue: f[0],
+                        maxValue: f[f.length - 1],
                         handleSize: 10,
                         onValueChange: this.handleUpdateBackgroundOpacity,
                         asValueChanges: this.handlePreviewBackgroundOpacity,
-                        markers: g,
+                        markers: f,
                         onMarkerRender: h.dG4,
                         equidistant: !0,
                         stickToMarkers: !0,
@@ -52,19 +52,18 @@ class v extends s.PureComponent {
         });
     }
     constructor(...e) {
-        var t, n, i;
+        var t, n;
         super(...e),
-            (t = this),
-            (n = 'initialValue'),
-            (i = 100 * this.props.opacity),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: i,
+            (t = 'initialValue'),
+            (n = 100 * this.props.opacity),
+            t in this
+                ? Object.defineProperty(this, t, {
+                      value: n,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (t[n] = i);
+                : (this[t] = n);
     }
 }
-t.Z = r.ZP.connectStores([c.Z], () => ({ opacity: c.Z.getTextWidgetOpacity() }))(v);
+let v = l.ZP.connectStores([d.Z], () => ({ opacity: d.Z.getTextWidgetOpacity() }))(x);

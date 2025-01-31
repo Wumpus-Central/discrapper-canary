@@ -1,112 +1,104 @@
-i.r(t),
-    i.d(t, {
-        default: function () {
-            return h;
-        }
-    }),
-    i(47120);
-var n = i(200651),
-    l = i(192379),
-    d = i(512722),
-    r = i.n(d),
-    s = i(481060),
-    a = i(313201),
-    u = i(560067),
-    o = i(434404),
-    c = i(430824),
-    p = i(313741),
-    g = i(526079),
-    C = i(388032),
-    G = i(361955);
-function S(e) {
-    let { className: t, guildId: i, onChange: l, isGuildIncluded: d } = e,
-        { options: r } = (0, g.Z)({ isGuildIncluded: d });
-    return (0, n.jsx)(s.SearchableSelect, {
-        className: t,
+t.d(i, { default: () => m }), t(47120);
+var n = t(200651),
+    l = t(192379),
+    s = t(512722),
+    d = t.n(s),
+    r = t(481060),
+    u = t(313201),
+    a = t(560067),
+    o = t(434404),
+    c = t(430824),
+    p = t(313741),
+    g = t(526079),
+    C = t(388032),
+    G = t(361955);
+function h(e) {
+    let { className: i, guildId: t, onChange: l, isGuildIncluded: s } = e,
+        { options: d } = (0, g.Z)({ isGuildIncluded: s });
+    return (0, n.jsx)(r.VcW, {
+        className: i,
         onChange: l,
-        value: i,
-        options: r,
+        value: t,
+        options: d,
         placeholder: C.intl.string(C.t.etZ9tb)
     });
 }
-function h(e) {
-    let { transitionState: t, onClose: i, feature: d, section: g, subsection: C } = e,
-        h = (0, a.Dt)(),
-        { canCreateGuild: m, createGuildCta: f, createGuildDescription: v, selectGuildCta: Z, title: b, description: x, isGuildSupported: j } = (0, p.K)(d),
+function m(e) {
+    let { transitionState: i, onClose: t, feature: s, section: g, subsection: C } = e,
+        m = (0, u.Dt)(),
+        { canCreateGuild: Z, createGuildCta: S, createGuildDescription: x, selectGuildCta: v, title: b, description: f, isGuildSupported: j } = (0, p.K)(s),
         [I, F] = l.useState(),
-        [M, R] = l.useState(!1),
+        [k, _] = l.useState(!1),
         E = async () => {
-            var e;
-            R(!0);
-            let t = await new Promise((e) => {
-                u.Z.openCreateGuildModal({ onSuccess: e });
+            _(!0);
+            let e = await new Promise((e) => {
+                a.Z.openCreateGuildModal({ onSuccess: e });
             });
-            await ((e = t),
-            new Promise((t) => {
-                c.Z.addChangeListener(function i() {
-                    null != c.Z.getGuild(e) && (c.Z.removeChangeListener(i), t());
+            await new Promise((i) => {
+                c.Z.addChangeListener(function t() {
+                    null != c.Z.getGuild(e) && (c.Z.removeChangeListener(t), i());
                 });
-            })),
-                o.Z.open(t, g, void 0, C),
-                null == i || i();
+            }),
+                o.Z.open(e, g, void 0, C),
+                null == t || t();
         };
-    return (0, n.jsxs)(s.ModalRoot, {
-        transitionState: t,
-        'aria-labelledby': h,
+    return (0, n.jsxs)(r.Y0X, {
+        transitionState: i,
+        'aria-labelledby': m,
         children: [
-            (0, n.jsxs)(s.ModalHeader, {
+            (0, n.jsxs)(r.xBx, {
                 className: G.modalHeader,
                 separator: !1,
                 children: [
-                    (0, n.jsx)(s.Heading, {
-                        id: h,
+                    (0, n.jsx)(r.X6q, {
+                        id: m,
                         variant: 'heading-lg/medium',
                         children: b
                     }),
-                    (0, n.jsx)(s.ModalCloseButton, { onClick: i })
+                    (0, n.jsx)(r.olH, { onClick: t })
                 ]
             }),
-            (0, n.jsxs)(s.ModalContent, {
+            (0, n.jsxs)(r.hzk, {
                 className: G.modalContent,
                 children: [
-                    (0, n.jsx)(s.Text, {
+                    (0, n.jsx)(r.Text, {
                         variant: 'text-md/medium',
-                        children: x
+                        children: f
                     }),
-                    (0, n.jsx)(s.Spacer, { size: 16 }),
+                    (0, n.jsx)(r.LZC, { size: 16 }),
                     (0, n.jsxs)('div', {
                         className: G.guildSelection,
                         children: [
                             (0, n.jsx)('div', {
                                 className: G.guildSelectorContainer,
-                                children: (0, n.jsx)(S, {
+                                children: (0, n.jsx)(h, {
                                     guildId: I,
                                     onChange: F,
                                     isGuildIncluded: j
                                 })
                             }),
-                            (0, n.jsx)(s.Button, {
+                            (0, n.jsx)(r.zxk, {
                                 onClick: () => {
-                                    r()(null != I, 'Guild ID must not be null on click'), o.Z.open(I, g, void 0, C), null == i || i();
+                                    d()(null != I, 'Guild ID must not be null on click'), o.Z.open(I, g, void 0, C), null == t || t();
                                 },
                                 disabled: null == I,
-                                children: Z
+                                children: v
                             })
                         ]
                     }),
-                    m &&
+                    Z &&
                         (0, n.jsxs)(n.Fragment, {
                             children: [
-                                (0, n.jsx)(s.Spacer, { size: 32 }),
-                                (0, n.jsx)(s.Text, {
+                                (0, n.jsx)(r.LZC, { size: 32 }),
+                                (0, n.jsx)(r.Text, {
                                     variant: 'text-md/medium',
-                                    children: v
+                                    children: x
                                 }),
-                                (0, n.jsx)(s.Spacer, { size: 8 }),
-                                (0, n.jsx)(s.Button, {
+                                (0, n.jsx)(r.LZC, { size: 8 }),
+                                (0, n.jsx)(r.zxk, {
                                     onClick: E,
-                                    submitting: M,
-                                    children: f
+                                    submitting: k,
+                                    children: S
                                 })
                             ]
                         })

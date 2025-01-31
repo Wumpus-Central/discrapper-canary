@@ -1,15 +1,11 @@
-r.d(n, {
-    Z: function () {
-        return l;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(456644),
-    o = r(899007),
-    s = r(995250);
-function l(e) {
-    let { location: n, ...r } = e,
-        { allProfileReactReplyEnabled: l } = (0, a.i)({ location: n });
-    return l ? (0, i.jsx)(s.Z, { ...r }) : (0, i.jsx)(o.Z, { ...r });
+n.d(t, { Z: () => o });
+var i = n(200651);
+n(192379);
+var r = n(456644),
+    a = n(899007),
+    s = n(995250);
+function o(e) {
+    let { location: t, ...n } = e,
+        { allProfileReactReplyEnabled: o } = (0, r.i)({ location: t });
+    return o ? (0, i.jsx)(s.Z, { ...n }) : (0, i.jsx)(a.Z, { ...n });
 }

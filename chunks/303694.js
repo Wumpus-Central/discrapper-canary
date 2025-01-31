@@ -1,35 +1,31 @@
-r.d(n, {
-    W: function () {
-        return s;
-    },
-    l: function () {
-        return o;
-    }
+n.d(t, {
+    W: () => s,
+    l: () => a
 });
-var i = r(430824),
-    a = r(388032);
-let o = (e) => {
+var i = n(430824),
+    r = n(388032);
+let a = (e) => {
         switch (e) {
             case 'home':
             case 'guide':
-                return a.intl.string(a.t.VbpLyc);
+                return r.intl.string(r.t.VbpLyc);
             case 'browse':
-                return a.intl.string(a.t.et6wam);
+                return r.intl.string(r.t.et6wam);
             case 'customize':
-                return a.intl.string(a.t.h9mGOD);
+                return r.intl.string(r.t.h9mGOD);
             case 'linked-roles':
-                return a.intl.string(a.t.ghtnsr);
+                return r.intl.string(r.t.ghtnsr);
         }
         return null;
     },
-    s = (e, n, r) => {
+    s = (e, t, n) => {
         switch (e) {
             case 'linked-roles':
-                var a;
-                if (null == r) break;
-                let o = i.Z.getRole(r, n);
-                if (null == o || (null === (a = o.tags) || void 0 === a ? void 0 : a.guild_connections) !== null) break;
-                return o.name;
+                var r;
+                if (null == n) break;
+                let a = i.Z.getRole(n, t);
+                if (null == a || (null === (r = a.tags) || void 0 === r ? void 0 : r.guild_connections) !== null) break;
+                return a.name;
         }
         return null;
     };

@@ -1,1 +1,2 @@
-e.exports = { icon: 'icon_a89787' };
+var i = { icon: 'icon__3173f' };
+e.exports = i;

@@ -1,17 +1,13 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(331595);
-function o(e) {
-    let { width: n = 12, height: r = 12, color: o = 'currentColor', foreground: s, ...l } = e;
+n.d(t, { Z: () => a });
+var i = n(200651);
+n(192379);
+var r = n(325767);
+function a(e) {
+    let { width: t = 12, height: n = 12, color: a = 'currentColor', foreground: s, ...o } = e;
     return (0, i.jsx)('svg', {
-        ...(0, a.Z)(l),
-        width: n,
-        height: r,
+        ...(0, r.Z)(o),
+        width: t,
+        height: n,
         viewBox: '0 0 12 12',
         children: (0, i.jsx)('rect', {
             width: '9',
@@ -19,7 +15,7 @@ function o(e) {
             x: '1.5',
             y: '1.5',
             fill: 'none',
-            stroke: o,
+            stroke: a,
             className: s
         })
     });

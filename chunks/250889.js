@@ -1,10 +1,6 @@
 n.d(t, {
-    H: function () {
-        return r;
-    },
-    Z: function () {
-        return a;
-    }
+    H: () => r,
+    Z: () => a
 });
 var i = n(726542),
     l = n(973616);

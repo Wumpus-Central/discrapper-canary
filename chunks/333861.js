@@ -1,21 +1,17 @@
 n.d(t, {
-    M: function () {
-        return o;
-    },
-    s: function () {
-        return s;
-    }
+    M: () => o,
+    s: () => s
 });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(522474),
+var l = n(481060),
+    r = n(522474),
     a = n(981631);
 let s = 'command-share-modal';
 function o(e) {
     let { applicationId: t, channel: o, command: c, previewMessage: d, requireLaunchChannel: u, onShareResult: h } = e,
-        m = l.Z.getWindowOpen(a.KJ3.ACTIVITY_POPOUT) ? r.POPOUT_MODAL_CONTEXT : r.DEFAULT_MODAL_CONTEXT;
-    (0, r.openModalLazy)(
+        m = r.Z.getWindowOpen(a.KJ3.ACTIVITY_POPOUT) ? l.u1M : l.z1l;
+    (0, l.ZDy)(
         async () => {
             let { ApplicationCommandShareModal: e } = await n.e('53682').then(n.bind(n, 683958));
             return (n) =>

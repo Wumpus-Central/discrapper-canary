@@ -1,21 +1,17 @@
-r.d(n, {
-    Z: function () {
-        return l;
-    }
-});
-var i = r(192379),
-    a = r(335218),
-    o = r.n(a),
+n.d(t, { Z: () => o });
+var i = n(192379),
+    r = n(335218),
+    a = n.n(r),
     s = {};
-function l(e, n) {
-    void 0 === n && (n = o());
-    var r = (0, i.useRef)(s),
-        a = r.current;
+function o(e, t) {
+    void 0 === t && (t = a());
+    var n = (0, i.useRef)(s),
+        r = n.current;
     return (
         (0, i.useEffect)(function () {
-            r.current = a;
+            n.current = r;
         }),
-        (r.current !== s && n(e, r.current)) || (a = e),
-        a
+        (n.current !== s && t(e, n.current)) || (r = e),
+        r
     );
 }

@@ -1,52 +1,20 @@
 t.d(r, {
-    $2: function () {
-        return h;
-    },
-    $Q: function () {
-        return o;
-    },
-    CD: function () {
-        return f;
-    },
-    GD: function () {
-        return l;
-    },
-    LL: function () {
-        return i;
-    },
-    RV: function () {
-        return u;
-    },
-    SS: function () {
-        return C;
-    },
-    ZH: function () {
-        return c;
-    },
-    bS: function () {
-        return d;
-    },
-    kK: function () {
-        return n;
-    },
-    pG: function () {
-        return p;
-    },
-    r4: function () {
-        return v;
-    },
-    rO: function () {
-        return b;
-    },
-    xO: function () {
-        return q;
-    },
-    yR: function () {
-        return s;
-    },
-    zO: function () {
-        return m;
-    }
+    $2: () => h,
+    $Q: () => o,
+    CD: () => f,
+    GD: () => l,
+    LL: () => i,
+    RV: () => u,
+    SS: () => C,
+    ZH: () => c,
+    bS: () => d,
+    kK: () => n,
+    pG: () => p,
+    r4: () => v,
+    rO: () => b,
+    xO: () => q,
+    yR: () => s,
+    zO: () => m
 });
 var a = t(652525);
 function o(e) {
@@ -92,8 +60,7 @@ function v(e) {
     return n(e) && 'svg' === o(e);
 }
 function h(e) {
-    var r;
-    return n((r = e)) && void 0 !== r.ownerSVGElement && 'title' === o(e);
+    return n(e) && void 0 !== e.ownerSVGElement && 'title' === o(e);
 }
 function C(e, r) {
     return n(e) && e.hasAttribute(r)

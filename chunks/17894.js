@@ -1,8 +1,4 @@
-t.d(e, {
-    Z: function () {
-        return g;
-    }
-});
+t.d(e, { Z: () => x });
 var i = t(525654),
     l = t.n(i),
     r = t(39612),
@@ -33,7 +29,7 @@ async function p(n) {
     }
     return 'discord://';
 }
-async function g(n) {
+async function x(n) {
     let e = await p(n),
         t = (0, a.zS)(e);
     null != t &&
@@ -43,6 +39,6 @@ async function g(n) {
             source: t.utmSource
         }),
         f.Z.launch(e, (n) => {
-            !n && (0, u.dL)(d.Z.fallbackRoute);
+            n || (0, u.dL)(d.Z.fallbackRoute);
         });
 }

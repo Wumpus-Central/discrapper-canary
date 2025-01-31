@@ -1,91 +1,73 @@
-r.d(n, {
-    B_: function () {
-        return _;
-    },
-    Lm: function () {
-        return d;
-    },
-    Ol: function () {
-        return f;
-    },
-    P4: function () {
-        return p;
-    },
-    Tk: function () {
-        return E;
-    },
-    cO: function () {
-        return h;
-    },
-    cj: function () {
-        return l;
-    },
-    qi: function () {
-        return g;
-    },
-    qu: function () {
-        return m;
-    }
-});
-var i = r(411104);
-var a = r(654861),
-    o = r.n(a);
-function s(e, n, r) {
+n.d(t, {
+    B_: () => _,
+    Lm: () => u,
+    Ol: () => c,
+    P4: () => d,
+    Tk: () => m,
+    cO: () => f,
+    cj: () => s,
+    qi: () => h,
+    qu: () => p
+}),
+    n(411104);
+var i = n(654861),
+    r = n.n(i);
+function a(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let l = 1420070400000,
-    u = 4095,
-    c = 22;
-function d(e) {
-    return Math.floor(Number(e) / 2 ** c) + l;
+let s = 1420070400000,
+    o = 4095,
+    l = 22;
+function u(e) {
+    return Math.floor(Number(e) / 2 ** l) + s;
 }
-function f(e) {
-    let n = e - l;
-    return n <= 0 ? '0' : o()(n).shiftLeft(c).toString();
+function c(e) {
+    let t = e - s;
+    return t <= 0 ? '0' : r()(t).shiftLeft(l).toString();
 }
-function p(e, n) {
-    let r = e - l;
-    return o()(r <= 0 ? 0 : r)
-        .shiftLeft(c)
-        .add(n.next())
+function d(e, t) {
+    let n = e - s;
+    return r()(n <= 0 ? 0 : n)
+        .shiftLeft(l)
+        .add(t.next())
         .toString();
 }
-function h(e) {
-    return f(d(e) - 1);
+function f(e) {
+    return c(u(e) - 1);
 }
 function _(e) {
-    return Date.now() - d(e);
+    return Date.now() - u(e);
 }
-function m(e, n) {
-    return e === n ? 0 : null == n ? 1 : null == e ? -1 : e.length > n.length ? 1 : e.length < n.length ? -1 : e > n ? 1 : -1;
+function p(e, t) {
+    return e === t ? 0 : null == t ? 1 : null == e ? -1 : e.length > t.length ? 1 : e.length < t.length ? -1 : e > t ? 1 : -1;
 }
-function g(e) {
+function h(e) {
     if (null == e || !/^\d{17,19}$/.test(e)) return !1;
     try {
-        return d(e) >= l;
+        return u(e) >= s;
     } catch {
         return !1;
     }
 }
-class E {
+class m {
     next() {
-        if (this.seq > u) throw Error('Snowflake sequence number overflow: '.concat(this.seq));
+        if (this.seq > o) throw Error('Snowflake sequence number overflow: '.concat(this.seq));
         return this.seq++;
     }
     reset() {
         this.seq = 0;
     }
     constructor() {
-        s(this, 'seq', void 0), (this.seq = 0);
+        a(this, 'seq', void 0), (this.seq = 0);
     }
 }

@@ -1,10 +1,11 @@
-e.exports = {
-    button: 'button_e258f5',
-    primary: 'primary_e258f5',
-    disabled: 'disabled_e258f5',
-    secondary: 'secondary_e258f5',
-    tertiary: 'tertiary_e258f5',
-    size24: 'size24_e258f5',
-    size32: 'size32_e258f5',
-    size36: 'size36_e258f5'
+var i = {
+    button: 'button__06eda',
+    primary: 'primary__06eda',
+    disabled: 'disabled__06eda',
+    secondary: 'secondary__06eda',
+    tertiary: 'tertiary__06eda',
+    size24: 'size24__06eda',
+    size32: 'size32__06eda',
+    size36: 'size36__06eda'
 };
+e.exports = i;

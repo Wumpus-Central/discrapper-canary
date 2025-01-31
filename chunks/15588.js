@@ -1,12 +1,15 @@
-e.exports = {
-    clickable: 'clickable_db83a2',
-    wrapper: 'wrapper_db83a2',
-    ringingOutgoing: 'ringingOutgoing_db83a2',
-    ringingIncoming: 'ringingIncoming_db83a2',
-    status: 'status_db83a2',
-    voiceAvatar: 'voiceAvatar_db83a2',
-    border: 'border_db83a2',
-    speaking: 'speaking_db83a2',
-    callAvatarMask: 'callAvatarMask_db83a2',
-    callAvatarMaskContainer: 'callAvatarMaskContainer_db83a2'
+var i = {
+    'outgoing-call-pulse': 'outgoing-call-pulse_f910d0',
+    'incoming-call-pulse': 'incoming-call-pulse_f910d0',
+    clickable: 'clickable_f910d0',
+    wrapper: 'wrapper_f910d0',
+    ringingOutgoing: 'ringingOutgoing_f910d0',
+    ringingIncoming: 'ringingIncoming_f910d0',
+    status: 'status_f910d0',
+    voiceAvatar: 'voiceAvatar_f910d0',
+    border: 'border_f910d0',
+    speaking: 'speaking_f910d0',
+    callAvatarMask: 'callAvatarMask_f910d0',
+    callAvatarMaskContainer: 'callAvatarMaskContainer_f910d0'
 };
+e.exports = i;

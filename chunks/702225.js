@@ -1,18 +1,19 @@
-var i = r(772848);
-function a(e, n, r) {
+n.d(t, { Z: () => o });
+var i = n(772848);
+function r(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-function o(e) {
+function a(e) {
     return {
         channelId: e,
         sessionId: (0, i.Z)()
@@ -20,10 +21,10 @@ function o(e) {
 }
 class s {
     getForumChannelSessionId(e) {
-        return null == this.session && (this.session = o(e)), this.session.channelId !== e && (this.session = o(e)), this.session.sessionId;
+        return null == this.session && (this.session = a(e)), this.session.channelId !== e && (this.session = a(e)), this.session.sessionId;
     }
     constructor() {
-        a(this, 'session', void 0);
+        r(this, 'session', void 0);
     }
 }
-n.Z = new s();
+let o = new s();

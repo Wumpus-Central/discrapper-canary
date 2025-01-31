@@ -1,65 +1,59 @@
-r.d(n, {
-    Z: function () {
-        return _;
-    }
-});
-var i = r(47120);
-var a = r(653041);
-var o = r(200651);
-r(192379);
-var s = r(442837),
-    l = r(481060),
-    u = r(314910),
-    c = r(857192),
-    d = r(517100),
-    f = r(594174),
-    p = r(231338),
-    h = r(717855);
-function _() {
+n.d(t, { Z: () => f }), n(47120), n(653041);
+var i = n(200651);
+n(192379);
+var r = n(442837),
+    a = n(481060),
+    s = n(314910),
+    o = n(857192),
+    l = n(517100),
+    u = n(594174),
+    c = n(231338),
+    d = n(717855);
+function f() {
     var e;
-    let n = (0, s.e7)([c.default], () => c.default.isIdleStatusIndicatorEnabled),
-        r = (0, s.e7)([f.default], () => {
-            var e, n;
-            return null !== (n = null === (e = f.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== n && n;
+    let t = (0, r.e7)([o.default], () => o.default.isIdleStatusIndicatorEnabled),
+        n = (0, r.e7)([u.default], () => {
+            var e, t;
+            return null !== (t = null === (e = u.default.getCurrentUser()) || void 0 === e ? void 0 : e.isStaff()) && void 0 !== t && t;
         }),
-        [i, a] = (0, s.Wu)([d.Z], () => [d.Z.isIdle(), d.Z.isAFK()]),
-        _ = [];
+        [f, _] = (0, r.Wu)([l.Z], () => [l.Z.isIdle(), l.Z.isAFK()]),
+        p = [];
     return (
-        !i && !a && _.push('ACTIVE'),
-        i && _.push('IDLE'),
-        a && _.push('AFK'),
-        r && n
-            ? (0, o.jsx)(u.ZP, {
-                  children: (0, o.jsxs)('div', {
-                      className: h.container,
+        f || _ || p.push('ACTIVE'),
+        f && p.push('IDLE'),
+        _ && p.push('AFK'),
+        n && t
+            ? (0, i.jsx)(s.ZP, {
+                  children: (0, i.jsxs)('div', {
+                      className: d.container,
                       children: [
-                          (0, o.jsxs)('div', {
-                              className: h.status,
+                          (0, i.jsxs)('div', {
+                              className: d.status,
                               children: [
-                                  (0, o.jsx)(l.Status, {
-                                      status: _.includes('ACTIVE') ? p.Sk.ONLINE : p.Sk.IDLE,
-                                      className: h.statusIndicator
+                                  (0, i.jsx)(a.qbd, {
+                                      status: p.includes('ACTIVE') ? c.Sk.ONLINE : c.Sk.IDLE,
+                                      className: d.statusIndicator
                                   }),
-                                  (0, o.jsx)(l.Text, {
+                                  (0, i.jsx)(a.Text, {
                                       variant: 'text-md/normal',
                                       children: 'IDLE STATUS:'
                                   }),
-                                  (0, o.jsx)('div', {
-                                      className: h.statusText,
-                                      children: (0, o.jsx)(l.Text, {
+                                  (0, i.jsx)('div', {
+                                      className: d.statusText,
+                                      children: (0, i.jsx)(a.Text, {
                                           variant: 'text-md/bold',
-                                          children: _.join(' + ')
+                                          children: p.join(' + ')
                                       })
                                   })
                               ]
                           }),
-                          i &&
-                              (0, o.jsxs)(l.Text, {
+                          f &&
+                              (0, i.jsxs)(a.Text, {
                                   variant: 'text-md/normal',
                                   children: [
                                       'Idle since:',
                                       ' ',
-                                      new Date(null !== (e = d.Z.getIdleSince()) && void 0 !== e ? e : 0).toLocaleDateString(void 0, {
+                                      new Date(null !== (e = l.Z.getIdleSince()) && void 0 !== e ? e : 0).toLocaleDateString(void 0, {
                                           year: 'numeric',
                                           day: 'numeric',
                                           month: 'numeric',

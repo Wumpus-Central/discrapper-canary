@@ -1,150 +1,144 @@
-o.r(i),
-    o.d(i, {
-        default: function () {
-            return y;
-        }
-    }),
-    o(47120);
-var s = o(200651),
-    t = o(192379),
-    n = o(392711),
-    r = o.n(n),
-    a = o(481060),
-    l = o(139387),
-    d = o(479531),
-    c = o(895924),
-    m = o(581364),
-    u = o(768581),
-    p = o(821864),
-    h = o(399860),
-    x = o(995390),
-    v = o(665578),
-    E = o(388032),
-    j = o(416510);
-function y(e) {
-    let { applicationIcon: i, applicationId: o, applicationName: n, command: u, guildId: y, onClose: f, transitionState: C } = e,
-        [g, k] = t.useState(null),
-        [B, I] = t.useState(!1),
-        { originalApplicationPermissions: M, originalCommandPermissions: N, editedTargetPermissions: P, hasChanges: R, selectedPermissionCount: w } = (0, x.Z)(y, o, u.id),
-        A = t.useCallback(async () => {
-            var e, i, s, t, n;
+s.d(i, { default: () => j }), s(47120);
+var a = s(200651),
+    o = s(192379),
+    n = s(392711),
+    r = s.n(n),
+    l = s(481060),
+    d = s(139387),
+    t = s(479531),
+    c = s(895924),
+    m = s(581364),
+    p = s(768581),
+    u = s(821864),
+    x = s(399860),
+    h = s(995390),
+    b = s(665578),
+    k = s(388032),
+    E = s(416510);
+function j(e) {
+    let { applicationIcon: i, applicationId: s, applicationName: n, command: p, guildId: j, onClose: v, transitionState: g } = e,
+        [C, f] = o.useState(null),
+        [z, I] = o.useState(!1),
+        { originalApplicationPermissions: N, originalCommandPermissions: w, editedTargetPermissions: P, hasChanges: R, selectedPermissionCount: _ } = (0, h.Z)(j, s, p.id),
+        A = o.useCallback(async () => {
+            var e, i, a, o, n;
             if (!R) {
-                f();
+                v();
                 return;
             }
-            let a = r().difference(Object.keys(null !== (s = u.permissions) && void 0 !== s ? s : {}), Object.keys(P)),
-                l = r().omit({ ...P }, a),
-                x = (0, m.bD)(y),
-                v = (0, h.rE)(y, c.Kw.ROLE),
-                E = (0, h.rE)(x, c.Kw.CHANNEL),
-                j = null === (t = null === (e = M[v]) || void 0 === e ? void 0 : e.permission) || void 0 === t || t,
-                b = null === (n = null === (i = M[E]) || void 0 === i ? void 0 : i.permission) || void 0 === n || n,
-                C = Object.values(l).map((e) => ({
+            let l = r().difference(Object.keys(null !== (a = p.permissions) && void 0 !== a ? a : {}), Object.keys(P)),
+                d = r().omit({ ...P }, l),
+                h = (0, m.bD)(j),
+                b = (0, x.rE)(j, c.Kw.ROLE),
+                k = (0, x.rE)(h, c.Kw.CHANNEL),
+                E = null === (o = null === (e = N[b]) || void 0 === e ? void 0 : e.permission) || void 0 === o || o,
+                y = null === (n = null === (i = N[k]) || void 0 === i ? void 0 : i.permission) || void 0 === n || n,
+                g = Object.values(d).map((e) => ({
                     id: e.id,
                     permission: e.permission,
                     type: e.type
                 }));
-            k(null), I(!0);
+            f(null), I(!0);
             try {
-                await p.U3({
-                    defaultEveryoneValue: j,
-                    defaultEverywhereValue: b,
-                    applicationId: o,
-                    commandId: u.id,
-                    guildId: y,
-                    permissions: C
+                await u.U3({
+                    defaultEveryoneValue: E,
+                    defaultEverywhereValue: y,
+                    applicationId: s,
+                    commandId: p.id,
+                    guildId: j,
+                    permissions: g
                 }),
                     I(!1),
-                    f();
+                    v();
             } catch (e) {
-                k(new d.Z(e));
+                f(new t.Z(e));
             }
             I(!1);
-        }, [o, M, u.id, u.permissions, y, R, f, P, k, I]);
-    t.useEffect(
+        }, [s, N, p.id, p.permissions, j, R, v, P, f, I]);
+    o.useEffect(
         () => () => {
-            p.Ui(u.id), l.Z.stopEditingCommandPermissions(u.id);
+            u.Ui(p.id), d.Z.stopEditingCommandPermissions(p.id);
         },
-        [u.id]
+        [p.id]
     );
-    let _ = (0, h.gw)(u.type, u.displayName);
-    return (0, s.jsxs)(a.ModalRoot, {
-        'aria-label': E.intl.string(E.t['N+InBQ']),
-        size: a.ModalSize.MEDIUM,
-        transitionState: C,
+    let B = (0, x.gw)(p.type, p.displayName);
+    return (0, a.jsxs)(l.Y0X, {
+        'aria-label': k.intl.string(k.t['N+InBQ']),
+        size: l.CgR.MEDIUM,
+        transitionState: g,
         children: [
-            (0, s.jsxs)(a.ModalHeader, {
+            (0, a.jsxs)(l.xBx, {
                 separator: !1,
-                className: j.modalHeader,
+                className: E.modalHeader,
                 children: [
-                    (0, s.jsx)(b, {
+                    (0, a.jsx)(y, {
                         icon: i,
-                        id: o,
+                        id: s,
                         name: n
                     }),
-                    (0, s.jsxs)('div', {
-                        className: j.headerDescription,
+                    (0, a.jsxs)('div', {
+                        className: E.headerDescription,
                         children: [
-                            (0, s.jsx)(a.Text, {
+                            (0, a.jsx)(l.Text, {
                                 variant: 'text-md/semibold',
-                                children: _
+                                children: B
                             }),
-                            (0, s.jsx)(a.Text, {
+                            (0, a.jsx)(l.Text, {
                                 color: 'text-muted',
                                 variant: 'text-sm/normal',
-                                children: u.displayDescription
+                                children: p.displayDescription
                             })
                         ]
                     })
                 ]
             }),
-            (0, s.jsxs)(a.ModalContent, {
-                className: j.modalBody,
+            (0, a.jsxs)(l.hzk, {
+                className: E.modalBody,
                 children: [
-                    null == g || g.hasFieldErrors() ? null : (0, s.jsx)(a.FormErrorBlock, { children: g.getAnyErrorMessage() }),
-                    (0, s.jsx)(v.Z, {
-                        applicationId: o,
-                        commandId: u.id,
-                        guildId: y,
+                    null == C || C.hasFieldErrors() ? null : (0, a.jsx)(l.kzN, { children: C.getAnyErrorMessage() }),
+                    (0, a.jsx)(b.Z, {
+                        applicationId: s,
+                        commandId: p.id,
+                        guildId: j,
                         inModal: !0,
-                        originalApplicationPermissions: M,
-                        originalCommandPermissions: N,
+                        originalApplicationPermissions: N,
+                        originalCommandPermissions: w,
                         editedTargetPermissions: P,
-                        selectedPermissionCount: w
+                        selectedPermissionCount: _
                     })
                 ]
             }),
-            (0, s.jsxs)(a.ModalFooter, {
-                className: j.modalFooter,
+            (0, a.jsxs)(l.mzw, {
+                className: E.modalFooter,
                 children: [
-                    (0, s.jsx)(a.Button, {
+                    (0, a.jsx)(l.zxk, {
                         type: 'submit',
-                        disabled: B,
+                        disabled: z,
                         onClick: A,
-                        color: !0 === R ? a.Button.Colors.GREEN : a.Button.Colors.PRIMARY,
-                        children: E.intl.string(E.t.R3BPHx)
+                        color: !0 === R ? l.zxk.Colors.GREEN : l.zxk.Colors.PRIMARY,
+                        children: k.intl.string(k.t.R3BPHx)
                     }),
-                    (0, s.jsx)(a.Button, {
-                        onClick: f,
-                        look: a.Button.Looks.LINK,
-                        color: a.Button.Colors.PRIMARY,
-                        children: E.intl.string(E.t['ETE/oK'])
+                    (0, a.jsx)(l.zxk, {
+                        onClick: v,
+                        look: l.zxk.Looks.LINK,
+                        color: l.zxk.Colors.PRIMARY,
+                        children: k.intl.string(k.t['ETE/oK'])
                     })
                 ]
             })
         ]
     });
 }
-function b(e) {
-    let { icon: i, id: o } = e,
-        t = u.ZP.getApplicationIconURL({
-            id: o,
+function y(e) {
+    let { icon: i, id: s } = e,
+        o = p.ZP.getApplicationIconURL({
+            id: s,
             icon: i,
             size: 40
         });
-    return (0, s.jsx)(a.Avatar, {
-        src: t,
-        size: a.AvatarSizes.SIZE_40,
+    return (0, a.jsx)(l.qEK, {
+        src: o,
+        size: l.EFr.SIZE_40,
         'aria-hidden': !0
     });
 }

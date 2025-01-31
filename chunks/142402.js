@@ -1,67 +1,63 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return p;
-        }
-    });
+n.d(t, { default: () => g });
 var l = n(200651),
-    a = n(192379),
-    i = n(481060),
+    i = n(192379),
+    a = n(481060),
     r = n(332664),
-    o = n(538211),
-    s = n(698066),
-    c = n(142497),
-    u = n(626135),
-    d = n(981631),
+    s = n(538211),
+    c = n(698066),
+    o = n(142497),
+    d = n(626135),
+    u = n(981631),
     m = n(70722),
-    b = n(190378),
-    f = n(388032);
-let g = [m.kr.OTHER];
-function p(e) {
-    let { isStreamer: t, stream: p, streamApplication: x, onClose: h, transitionState: _, analyticsData: j } = e,
-        k = t ? f.intl.string(f.t['0uxA2d']) : f.intl.string(f.t.CqjnLC);
+    _ = n(190378),
+    x = n(388032);
+let p = [m.kr.OTHER];
+function g(e) {
+    let { isStreamer: t, stream: g, streamApplication: f, onClose: h, transitionState: j, analyticsData: k } = e,
+        b = t ? x.intl.string(x.t['0uxA2d']) : x.intl.string(x.t.CqjnLC);
     return (
-        a.useEffect(() => {
-            u.default.track(d.rMx.OPEN_MODAL, {
+        i.useEffect(() => {
+            d.default.track(u.rMx.OPEN_MODAL, {
                 type: 'Stream Problem Report',
-                other_user_id: p.ownerId,
-                application_id: null != x ? x.id : null,
-                application_name: null != x ? x.name : null,
-                game_id: null != x ? x.id : null,
+                other_user_id: g.ownerId,
+                application_id: null != f ? f.id : null,
+                application_name: null != f ? f.name : null,
+                game_id: null != f ? f.id : null,
                 source: 'Stream End'
             });
-        }, [p.ownerId, x]),
+        }, [g.ownerId, f]),
         (0, l.jsx)(r.Z, {
             modalType: 'stream',
-            header: f.intl.string(f.t['5smP3d']),
-            body: k,
-            problemTitle: f.intl.string(f.t['6Y1t5O']),
-            problems: (0, o.Z)(t, !0),
-            feedbackProblems: g,
+            header: x.intl.string(x.t['5smP3d']),
+            body: b,
+            problemTitle: x.intl.string(x.t['6Y1t5O']),
+            problems: (0, s.Z)(t, !0),
+            feedbackProblems: p,
             onSubmit: function (e) {
-                let { rating: t, problem: a, dontShowAgain: r, feedback: o } = e;
-                if ((r && (0, c.Kw)(b.v.REPORT_PROBLEM_POST_STREAM), null != t))
-                    (0, s.Z)({
-                        problem: a,
-                        stream: p,
-                        feedback: o,
-                        streamApplication: x,
-                        analyticsData: j,
-                        location: 'Stream End',
-                        rating: t
-                    }),
-                        null != a &&
-                            (0, i.openModalLazy)(async () => {
+                let { rating: t, problem: i, dontShowAgain: r, feedback: s } = e;
+                r && (0, o.Kw)(_.v.REPORT_PROBLEM_POST_STREAM),
+                    null != t &&
+                        ((0, c.Z)({
+                            problem: i,
+                            stream: g,
+                            feedback: s,
+                            streamApplication: f,
+                            analyticsData: k,
+                            location: 'Stream End',
+                            rating: t
+                        }),
+                        null != i &&
+                            (0, a.ZDy)(async () => {
                                 let { default: e } = await n.e('14466').then(n.bind(n, 729328));
                                 return (t) =>
                                     (0, l.jsx)(e, {
-                                        body: f.intl.string(f.t.mMTVnp),
+                                        body: x.intl.string(x.t.mMTVnp),
                                         ...t
                                     });
-                            });
+                            }));
             },
             onClose: h,
-            transitionState: _,
+            transitionState: j,
             otherKey: m.kr.OTHER
         })
     );

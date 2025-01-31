@@ -1,10 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return h;
-    }
-}),
-    n(47120),
-    n(390547);
+n.d(t, { Z: () => h }), n(47120), n(390547);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
@@ -26,7 +20,7 @@ function m(e) {
                 children: n
             }),
             t
-                ? (0, i.jsx)(c.CircleCheckIcon, {
+                ? (0, i.jsx)(c.owK, {
                       size: 'md',
                       color: 'currentColor',
                       secondaryColor: o.Z.unsafe_rawColors.WHITE_500.css,
@@ -41,15 +35,15 @@ function h(e) {
         [h, g] = r.useState(!1),
         x = n.flatMap((e) => e.items.map((e) => e.completed)),
         p = x.filter((e) => e).length / x.length,
-        f = (0, c.useSpring)({ width: ''.concat(100 * p, '%') });
+        _ = (0, c.q_F)({ width: ''.concat(100 * p, '%') });
     return (0, i.jsxs)('div', {
         className: u.container,
         children: [
-            (0, i.jsxs)(c.Clickable, {
+            (0, i.jsxs)(c.P3F, {
                 className: u.headerBar,
                 onClick: () => g((e) => !e),
                 children: [
-                    (0, i.jsx)(c.Heading, {
+                    (0, i.jsx)(c.X6q, {
                         variant: 'heading-md/semibold',
                         className: u.headerText,
                         children: t
@@ -64,7 +58,7 @@ function h(e) {
                 className: u.progressBarOuter,
                 children: (0, i.jsx)(a.animated.div, {
                     className: u.progressBarInner,
-                    style: f
+                    style: _
                 })
             }),
             !h &&
@@ -74,8 +68,8 @@ function h(e) {
                         r.Fragment,
                         {
                             children: [
-                                t > 0 && (0, i.jsx)(c.FormDivider, { className: u.divider }),
-                                (0, i.jsx)(c.FormTitle, {
+                                t > 0 && (0, i.jsx)(c.$i$, { className: u.divider }),
+                                (0, i.jsx)(c.vwX, {
                                     className: u.categoryTitle,
                                     children: n
                                 }),
@@ -99,11 +93,11 @@ function h(e) {
                 null !== s &&
                 (0, i.jsxs)('div', {
                     children: [
-                        (0, i.jsx)(c.FormDivider, { className: u.divider }),
-                        (0, i.jsx)(c.Button, {
+                        (0, i.jsx)(c.$i$, { className: u.divider }),
+                        (0, i.jsx)(c.zxk, {
                             className: u.button,
-                            size: c.Button.Sizes.SMALL,
-                            color: c.Button.Colors.BRAND,
+                            size: c.zxk.Sizes.SMALL,
+                            color: c.zxk.Colors.BRAND,
                             onClick: s,
                             disabled: 1 !== p || o,
                             children: l

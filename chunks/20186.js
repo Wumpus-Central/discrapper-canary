@@ -1,9 +1,5 @@
-r.d(n, {
-    d: function () {
-        return a;
-    }
-});
-let i = { design_id: r(804098).D.DESIGN_TABS_IA };
-function a() {
+n.d(t, { d: () => r });
+let i = { design_id: n(804098).D.DESIGN_TABS_IA };
+function r() {
     return Object.keys(i).map((e) => ''.concat(e, ':').concat(i[e]));
 }

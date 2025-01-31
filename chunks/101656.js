@@ -36,18 +36,16 @@ var u = (function (e) {
             t
         );
     }
-    (n = t), (a = e), (n.prototype = Object.create(a.prototype)), (n.prototype.constructor = n), (n.__proto__ = a);
-    var n,
-        a,
-        u = t.prototype;
+    (t.prototype = Object.create(e.prototype)), (t.prototype.constructor = t), (t.__proto__ = e);
+    var n = t.prototype;
     return (
-        (u.handleLifecycle = function (e, t, n) {
+        (n.handleLifecycle = function (e, t, n) {
             var i,
                 a = this.props.children,
                 u = o.default.Children.toArray(a)[t];
             u.props[e] && (i = u.props)[e].apply(i, n), this.props[e] && this.props[e]((0, r.findDOMNode)(this));
         }),
-        (u.render = function () {
+        (n.render = function () {
             var e = this.props,
                 t = e.children,
                 n = e.in,
@@ -57,7 +55,7 @@ var u = (function (e) {
                         o,
                         r = {},
                         i = Object.keys(e);
-                    for (o = 0; o < i.length; o++) (n = i[o]), !(t.indexOf(n) >= 0) && (r[n] = e[n]);
+                    for (o = 0; o < i.length; o++) t.indexOf((n = i[o])) >= 0 || (r[n] = e[n]);
                     return r;
                 })(e, ['children', 'in']),
                 a = o.default.Children.toArray(t),
@@ -92,5 +90,4 @@ var u = (function (e) {
         t
     );
 })(o.default.Component);
-u.propTypes = {};
-(t.default = u), (e.exports = t.default);
+(u.propTypes = {}), (t.default = u), (e.exports = t.default);

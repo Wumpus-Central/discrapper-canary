@@ -1,40 +1,41 @@
-var i = r(477660),
-    a = r.n(i),
-    o = r(840498);
-function s(e, n, r, i, a) {
+n.d(t, { Z: () => o });
+var i = n(477660),
+    r = n.n(i),
+    a = n(840498);
+function s(e, t, n, i, r) {
     let s;
     return (
-        !r && (n += '\n\n'),
-        (s = e(n, {
-            inline: r,
+        n || (t += '\n\n'),
+        (s = e(t, {
+            inline: n,
             ...i
         })),
-        (s = (0, o.ge)(s)),
-        (s = (0, o.RA)(s)),
-        null != a && (s = a(s, r)),
+        (s = (0, a.ge)(s)),
+        (s = (0, a.RA)(s)),
+        null != r && (s = r(s, n)),
         s
     );
 }
-n.Z = {
+let o = {
     reactParserFor(e) {
-        let n = a().parserFor(e),
-            r = a().reactFor(a().ruleOutput(e, 'react'));
+        let t = r().parserFor(e),
+            n = r().reactFor(r().ruleOutput(e, 'react'));
         return function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : '',
                 i = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-                a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-            return r(s(n, e, i, a, o), a);
+                r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+            return n(s(t, e, i, r, a), r);
         };
     },
     astParserFor(e) {
-        let n = a().parserFor(e);
+        let t = r().parserFor(e);
         return function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : '',
-                r = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+                n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                 i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-            return s(n, e, r, i, a);
+                r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+            return s(t, e, n, i, r);
         };
     }
 };

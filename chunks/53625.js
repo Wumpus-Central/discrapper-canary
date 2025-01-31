@@ -1,7 +1,3 @@
-r.d(n, {
-    Q: function () {
-        return a;
-    }
-});
-var i = r(327439);
-let a = (e, n, r) => new i.T(e, n, r);
+n.d(t, { Q: () => r });
+var i = n(327439);
+let r = (e, t, n) => new i.T(e, t, n);

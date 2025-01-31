@@ -1,12 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return g;
-    }
-});
+n.d(t, { Z: () => g });
 var i = n(200651);
 n(192379);
-var r = n(685072),
-    l = n(287734),
+var l = n(685072),
+    r = n(287734),
     a = n(15274),
     s = n(389303),
     o = n(881824),
@@ -15,11 +11,11 @@ var r = n(685072),
     u = n(388032);
 function h(e) {
     let { tooltipText: t, onClick: n } = e,
-        { events: l, Component: a } = (0, r.K)();
+        { events: r, Component: a } = (0, l.K)();
     return (0, i.jsx)(d.Z, {
         tooltipText: t,
         onClick: n,
-        ...l,
+        ...r,
         icon: (0, i.jsx)(a, { size: 'refresh_sm' })
     });
 }
@@ -32,7 +28,7 @@ function m(e) {
                 (0, o.Us)(t);
                 return;
             }
-            l.default.disconnect();
+            r.default.disconnect();
         }
     });
 }
@@ -45,7 +41,7 @@ function p(e) {
                 (0, a.lC)(t);
                 return;
             }
-            l.default.disconnect();
+            r.default.disconnect();
         }
     });
 }

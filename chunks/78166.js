@@ -1,7 +1,7 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    var n = {
+    var t = {
             1: '१',
             2: '२',
             3: '३',
@@ -13,7 +13,7 @@
             9: '९',
             0: '०'
         },
-        r = {
+        n = {
             '१': '1',
             '२': '2',
             '३': '3',
@@ -43,27 +43,20 @@
         },
         preparse: function (e) {
             return e.replace(/[१२३४५६७८९०]/g, function (e) {
-                return r[e];
+                return n[e];
             });
         },
         postformat: function (e) {
             return e.replace(/\d/g, function (e) {
-                return n[e];
+                return t[e];
             });
         },
         meridiemParse: /राति|बिहान|दिउँसो|साँझ/,
-        meridiemHour: function (e, n) {
-            if ((12 === e && (e = 0), 'राति' === n)) return e < 4 ? e : e + 12;
-            if ('बिहान' === n) return e;
-            if ('दिउँसो' === n) return e >= 10 ? e : e + 12;
-            else if ('साँझ' === n) return e + 12;
+        meridiemHour: function (e, t) {
+            return (12 === e && (e = 0), 'राति' === t) ? (e < 4 ? e : e + 12) : 'बिहान' === t ? e : 'दिउँसो' === t ? (e >= 10 ? e : e + 12) : 'साँझ' === t ? e + 12 : void 0;
         },
-        meridiem: function (e, n, r) {
-            if (e < 3) return 'राति';
-            if (e < 12) return 'बिहान';
-            if (e < 16) return 'दिउँसो';
-            else if (e < 20) return 'साँझ';
-            else return 'राति';
+        meridiem: function (e, t, n) {
+            return e < 3 ? 'राति' : e < 12 ? 'बिहान' : e < 16 ? 'दिउँसो' : e < 20 ? 'साँझ' : 'राति';
         },
         calendar: {
             sameDay: '[आज] LT',

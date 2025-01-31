@@ -1,19 +1,18 @@
-r.r(n);
-var i = r(212059),
-    a = r(667895),
-    o = r(11608),
-    s = r(682751),
-    l = r(109515),
-    u = {
-        code: 'en-US',
-        formatDistance: i.Z,
-        formatLong: a.Z,
-        formatRelative: o.Z,
-        localize: s.Z,
-        match: l.Z,
-        options: {
-            weekStartsOn: 0,
-            firstWeekContainsDate: 1
-        }
-    };
-n.default = u;
+n.r(t), n.d(t, { default: () => l });
+var i = n(212059),
+    r = n(667895),
+    a = n(11608),
+    s = n(682751),
+    o = n(109515);
+let l = {
+    code: 'en-US',
+    formatDistance: i.Z,
+    formatLong: r.Z,
+    formatRelative: a.Z,
+    localize: s.Z,
+    match: o.Z,
+    options: {
+        weekStartsOn: 0,
+        firstWeekContainsDate: 1
+    }
+};

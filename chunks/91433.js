@@ -1,86 +1,82 @@
-r.d(n, {
-    Z: function () {
-        return g;
-    }
-});
-var i = r(200651),
-    a = r(192379),
-    o = r(120356),
-    s = r.n(o),
-    l = r(481060),
-    u = r(906732),
-    c = r(835473),
-    d = r(925329),
-    f = r(743056),
-    p = r(5192),
-    h = r(785717),
-    _ = r(388032),
-    m = r(117191);
-function g(e) {
-    let { user: n, guildId: r, channelId: o, applicationId: g, friendToken: E, isGameRelationship: v = !1, className: y } = e,
-        b = p.ZP.getName(r, o, n),
-        { trackUserProfileAction: I } = (0, h.KZ)(),
-        { newestAnalyticsLocation: T } = (0, u.ZP)(),
-        { acceptFriendRequest: S, cancelFriendRequest: A } = (0, f.u)({
-            userId: n.id,
-            applicationId: g,
-            isGameRelationship: v,
-            location: T,
-            friendToken: E
+n.d(t, { Z: () => m });
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(481060),
+    l = n(906732),
+    u = n(835473),
+    c = n(925329),
+    d = n(743056),
+    f = n(5192),
+    _ = n(785717),
+    p = n(388032),
+    h = n(117191);
+function m(e) {
+    let { user: t, guildId: n, channelId: a, applicationId: m, friendToken: g, isGameRelationship: E = !1, className: v } = e,
+        y = f.ZP.getName(n, a, t),
+        { trackUserProfileAction: I } = (0, _.KZ)(),
+        { newestAnalyticsLocation: b } = (0, l.ZP)(),
+        { acceptFriendRequest: T, cancelFriendRequest: S } = (0, d.u)({
+            userId: t.id,
+            applicationId: m,
+            isGameRelationship: E,
+            location: b,
+            friendToken: g
         }),
-        C = a.useCallback(() => {
-            S(), I({ action: v ? 'ACCEPT_GAME_FRIEND_REQUEST' : 'ACCEPT_FRIEND_REQUEST' });
-        }, [S, v, I]),
-        N = a.useCallback(() => {
-            A(), I({ action: v ? 'IGNORE_GAME_FRIEND_REQUEST' : 'IGNORE_FRIEND_REQUEST' });
-        }, [A, v, I]),
-        R = null != g,
-        O = (0, c.q)(g);
-    return R && null == O
+        A = r.useCallback(() => {
+            T(), I({ action: E ? 'ACCEPT_GAME_FRIEND_REQUEST' : 'ACCEPT_FRIEND_REQUEST' });
+        }, [T, E, I]),
+        N = r.useCallback(() => {
+            S(), I({ action: E ? 'IGNORE_GAME_FRIEND_REQUEST' : 'IGNORE_FRIEND_REQUEST' });
+        }, [S, E, I]),
+        C = null != m,
+        R = (0, u.q)(m);
+    return C && null == R
         ? null
         : (0, i.jsxs)('div', {
-              className: s()(m.container, y),
+              className: s()(h.container, v),
               children: [
-                  R
-                      ? (0, i.jsx)(l.Text, {
+                  C
+                      ? (0, i.jsx)(o.Text, {
                             variant: 'text-sm/normal',
-                            children: _.intl.format(v ? _.t.syHjLC : _.t.V15uUF, {
-                                username: b,
+                            children: p.intl.format(E ? p.t.syHjLC : p.t.V15uUF, {
+                                username: y,
                                 applicationIcon: () =>
                                     (0, i.jsx)(
-                                        d.Z,
+                                        c.Z,
                                         {
-                                            className: m.gameIcon,
-                                            game: O,
-                                            size: d.Z.Sizes.XXSMALL
+                                            className: h.gameIcon,
+                                            game: R,
+                                            size: c.Z.Sizes.XXSMALL
                                         },
-                                        null == O ? void 0 : O.id
+                                        null == R ? void 0 : R.id
                                     ),
-                                applicationName: null == O ? void 0 : O.name
+                                applicationName: null == R ? void 0 : R.name
                             })
                         })
-                      : (0, i.jsx)(l.Text, {
+                      : (0, i.jsx)(o.Text, {
                             variant: 'text-sm/normal',
-                            children: _.intl.format(_.t.uIomX1, { username: b })
+                            children: p.intl.format(p.t.uIomX1, { username: y })
                         }),
                   (0, i.jsxs)('div', {
-                      className: m.buttonContainer,
+                      className: h.buttonContainer,
                       children: [
-                          (0, i.jsx)(l.Button, {
-                              look: l.Button.Looks.FILLED,
-                              color: s()(l.Button.Colors.BRAND, m.color),
-                              size: l.Button.Sizes.SMALL,
-                              className: m.button,
-                              onClick: C,
-                              children: _.intl.string(_.t.ZcibdX)
+                          (0, i.jsx)(o.zxk, {
+                              look: o.zxk.Looks.FILLED,
+                              color: s()(o.zxk.Colors.BRAND, h.color),
+                              size: o.zxk.Sizes.SMALL,
+                              className: h.button,
+                              onClick: A,
+                              children: p.intl.string(p.t.ZcibdX)
                           }),
-                          (0, i.jsx)(l.Button, {
-                              look: l.Button.Looks.FILLED,
-                              color: l.Button.Colors.PRIMARY,
-                              size: l.Button.Sizes.SMALL,
-                              className: m.button,
+                          (0, i.jsx)(o.zxk, {
+                              look: o.zxk.Looks.FILLED,
+                              color: o.zxk.Colors.PRIMARY,
+                              size: o.zxk.Sizes.SMALL,
+                              className: h.button,
                               onClick: N,
-                              children: _.intl.string(_.t.xuio0N)
+                              children: p.intl.string(p.t.xuio0N)
                           })
                       ]
                   })

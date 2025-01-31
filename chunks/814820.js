@@ -1,76 +1,71 @@
-n.d(t, {
-    f: function () {
-        return I;
-    }
-}),
-    n(47120);
+n.d(t, { f: () => C }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(442837),
-    a = n(481060),
-    o = n(541716),
-    s = n(419922),
+    l = n(192379),
+    a = n(442837),
+    r = n(481060),
+    s = n(541716),
+    o = n(419922),
     c = n(665906),
-    u = n(271383),
-    d = n(430824),
+    d = n(271383),
+    u = n(430824),
     m = n(496675),
     h = n(594174),
-    f = n(838440),
+    _ = n(838440),
     p = n(779139),
-    _ = n(981631),
-    g = n(388032),
-    E = n(764349);
-let C = (e) => {
+    g = n(981631),
+    f = n(388032),
+    x = n(764349);
+let E = (e) => {
         let { channel: t, message: n } = e,
-            [l, c] = r.useState(!1),
-            u = (0, p.y6)(n.id),
-            d = r.useCallback(() => {
-                (0, f.v)({
-                    type: o.Ie.FORM,
+            [a, c] = l.useState(!1),
+            d = (0, p.y6)(n.id),
+            u = l.useCallback(() => {
+                (0, _.v)({
+                    type: s.Ie.FORM,
                     content: '',
                     channel: t
                 }).then((e) => {
                     let { valid: i } = e;
-                    if (!!i) (0, p.TZ)(t, n, u.id);
+                    i && (0, p.TZ)(t, n, d.id);
                 });
-            }, [t, n, u]);
+            }, [t, n, d]);
         return (0, i.jsx)('div', {
-            className: E.welcomeCTA,
-            children: (0, i.jsxs)(a.Button, {
-                className: E.welcomeCTAButtonOuter,
-                innerClassName: E.welcomeCTAButton,
-                color: a.ButtonColors.PRIMARY,
+            className: x.welcomeCTA,
+            children: (0, i.jsxs)(r.zxk, {
+                className: x.welcomeCTAButtonOuter,
+                innerClassName: x.welcomeCTAButton,
+                color: r.Ttl.PRIMARY,
                 onMouseEnter: () => c(!0),
                 onMouseLeave: () => c(!1),
-                onClick: d,
+                onClick: u,
                 children: [
-                    (0, i.jsx)(s.ZP, {
-                        className: E.welcomeCTASticker,
-                        isInteracting: l,
-                        sticker: u,
+                    (0, i.jsx)(o.ZP, {
+                        className: x.welcomeCTASticker,
+                        isInteracting: a,
+                        sticker: d,
                         size: 28
                     }),
-                    g.intl.string(g.t['7Tj6HR'])
+                    f.intl.string(f.t['7Tj6HR'])
                 ]
             })
         });
     },
-    I = (e) => {
+    C = (e) => {
         let { message: t, channel: n } = e,
-            r = n.getGuildId(),
-            a = (0, l.e7)([h.default, m.Z, d.Z, u.ZP], () => {
+            l = n.getGuildId(),
+            r = (0, a.e7)([h.default, m.Z, u.Z, d.ZP], () => {
                 var e;
                 let i = h.default.getCurrentUser(),
-                    l = (0, c.xl)(n),
-                    a = m.Z.can(_.Plq.SEND_MESSAGES, n),
-                    o = null != r && null != i && (null === (e = u.ZP.getMember(r, i.id)) || void 0 === e ? void 0 : e.isPending),
-                    s = t.author.bot,
-                    f = d.Z.getGuild(r),
-                    p = null != f && (f.systemChannelFlags & _.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
-                return a && !l && !o && !s && p;
+                    a = (0, c.xl)(n),
+                    r = m.Z.can(g.Plq.SEND_MESSAGES, n),
+                    s = null != l && null != i && (null === (e = d.ZP.getMember(l, i.id)) || void 0 === e ? void 0 : e.isPending),
+                    o = t.author.bot,
+                    _ = u.Z.getGuild(l),
+                    p = null != _ && (_.systemChannelFlags & g.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES) == 0;
+                return r && !a && !s && !o && p;
             });
-        return null != r && a
-            ? (0, i.jsx)(C, {
+        return null != l && r
+            ? (0, i.jsx)(E, {
                   message: t,
                   channel: n
               })

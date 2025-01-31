@@ -1,12 +1,8 @@
-n.d(t, {
-    I: function () {
-        return I;
-    }
-});
+n.d(t, { I: () => I });
 var i = n(200651);
 n(192379);
-var r = n(722770),
-    l = n(481060),
+var l = n(722770),
+    r = n(481060),
     a = n(440051),
     s = n(734934),
     o = n(158238),
@@ -17,7 +13,7 @@ var r = n(722770),
     m = n(981631),
     p = n(388032),
     g = n(602654);
-let f = [
+let _ = [
     {
         duration: 30 * d.Z.Millis.MINUTE,
         label: () => p.intl.string(p.t.RxJGbG)
@@ -43,69 +39,70 @@ let f = [
         label: () => p.intl.string(p.t['46dqJS'])
     }
 ];
-function _(e, t, n) {
-    let r = (0, i.jsx)(i.Fragment, {
-        children: f.map((n) => {
-            let { duration: r, label: a } = n;
-            return (0, i.jsx)(
-                l.MenuItem,
-                {
-                    id: ''.concat(e, '-').concat(r),
-                    label: a(),
-                    action: () => (0, h.Z)(e, t, void 0, r),
-                    dontCloseOnAction: !0
-                },
-                r
-            );
-        })
-    });
-    return (0, i.jsx)(l.MenuItem, {
-        id: e,
+function f(e) {
+    let { status: t, currentStatus: n, description: l, defaultClickExpire: a } = e,
+        s = (0, i.jsx)(i.Fragment, {
+            children: _.map((e) => {
+                let { duration: l, label: a } = e;
+                return (0, i.jsx)(
+                    r.sNh,
+                    {
+                        id: ''.concat(t, '-').concat(l),
+                        label: a(),
+                        action: () => (0, h.Z)(t, n, void 0, l),
+                        dontCloseOnAction: !0
+                    },
+                    l
+                );
+            })
+        });
+    return (0, i.jsx)(r.sNh, {
+        id: t,
         className: g.expiringStatusMenuItem,
         keepItemStyles: !0,
         hasSubmenu: !0,
-        label: (t) => {
-            let { isFocused: r } = t;
+        label: (e) => {
+            let { isFocused: n } = e;
             return (0, i.jsxs)('div', {
                 className: g.statusItem,
                 children: [
-                    (0, i.jsx)(l.Status, {
-                        status: e,
+                    (0, i.jsx)(r.qbd, {
+                        status: t,
                         className: g.icon,
                         size: 10,
-                        color: r ? 'currentColor' : void 0
+                        color: n ? 'currentColor' : void 0
                     }),
                     (0, i.jsx)('div', {
                         className: g.status,
-                        children: (0, u.u5)(e)
+                        children: (0, u.u5)(t)
                     }),
-                    null != n &&
+                    null != l &&
                         (0, i.jsx)('div', {
                             className: g.description,
-                            children: n
+                            children: l
                         })
                 ]
             });
         },
-        action: () => (0, h.Z)(e, t),
+        action: () => (0, h.Z)(t, n, void 0, a ? d.Z.Millis.DAY : void 0),
         dontCloseOnAction: !0,
-        children: e !== m.Skl.ONLINE ? r : void 0
+        children: t !== m.Skl.ONLINE ? s : void 0
     });
 }
 function E(e, t, n) {
-    return (0, i.jsx)(l.MenuItem, {
+    return (0, i.jsx)(r.sNh, {
         id: e,
         keepItemStyles: !0,
         render: (t) => {
-            let { isFocused: r } = t;
+            let { isFocused: l } = t;
             return (0, i.jsxs)('div', {
                 className: g.statusItem,
                 children: [
-                    (0, i.jsx)(l.Status, {
+                    (0, i.jsx)(r.qbd, {
                         status: e,
                         className: g.icon,
                         size: 10,
-                        color: r ? 'currentColor' : void 0
+                        color: l ? 'currentColor' : void 0
                     }),
                     (0, i.jsx)('div', {
                         className: g.status,
@@ -124,17 +121,17 @@ function E(e, t, n) {
     });
 }
 function I(e) {
-    let t = a.Y.useExperiment({ location: 'AccountProfilePopout' }).expiringStatus,
-        n = c.Cr.useSetting(),
-        d = (0, s.p)(),
-        u = o.e.useExperiment({ location: 'AccountProfilePopout' }).allowQuietMode || d,
-        h = c.fv.useSetting(),
-        I = e === m.Skl.DND,
-        C = (t) => {
-            let i =
-                null != n && '0' !== n
+    let { expiringStatus: t, defaultClickExpire: n } = a.i.useExperiment({ location: 'AccountProfilePopout' }),
+        d = c.Cr.useSetting(),
+        u = (0, s.p)(),
+        h = o.e.useExperiment({ location: 'AccountProfilePopout' }).allowQuietMode || u,
+        I = c.fv.useSetting(),
+        C = e === m.Skl.DND,
+        v = (t) => {
+            let n =
+                null != d && '0' !== d
                     ? p.intl.formatToPlainString(p.t.BWD8fn, {
-                          endTime: new Date(Number(n)).toLocaleString(p.intl.currentLocale, {
+                          endTime: new Date(Number(d)).toLocaleString(p.intl.currentLocale, {
                               month: 'numeric',
                               day: 'numeric',
                               hour: 'numeric',
@@ -142,24 +139,24 @@ function I(e) {
                           })
                       })
                     : void 0;
-            if (e === t && null != i) return i;
+            if (e === t && null != n) return n;
             switch (t) {
                 case m.Skl.DND:
-                    return u ? p.intl.string(p.t.day5Aw) : p.intl.string(p.t.U9Vv19);
+                    return h ? p.intl.string(p.t.day5Aw) : p.intl.string(p.t.U9Vv19);
                 case m.Skl.INVISIBLE:
                     return p.intl.string(p.t.MqanVF);
                 default:
                     return;
             }
         },
-        v = (0, i.jsx)(i.Fragment, {
-            children: f.map((t) => {
-                let { duration: n, label: r } = t;
+        N = (0, i.jsx)(i.Fragment, {
+            children: _.map((t) => {
+                let { duration: n, label: l } = t;
                 return (0, i.jsx)(
-                    l.MenuItem,
+                    r.sNh,
                     {
                         id: ''.concat(e, '-').concat(n),
-                        label: r(),
+                        label: l(),
                         action: () => {
                             (0, s.oW)(!0, n);
                         },
@@ -172,16 +169,37 @@ function I(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             E(m.Skl.ONLINE, e),
-            (0, i.jsx)(l.MenuSeparator, {}, 'menu-separator-statuses'),
-            t ? _(m.Skl.IDLE, e, C(m.Skl.IDLE)) : E(m.Skl.IDLE, e, C(m.Skl.IDLE)),
-            t ? _(m.Skl.DND, e, C(m.Skl.DND)) : E(m.Skl.DND, e, C(m.Skl.DND)),
-            t ? _(m.Skl.INVISIBLE, e, C(m.Skl.INVISIBLE)) : E(m.Skl.INVISIBLE, e, C(m.Skl.INVISIBLE)),
-            u || d
+            (0, i.jsx)(r.Clw, {}, 'menu-separator-statuses'),
+            t
+                ? f({
+                      status: m.Skl.IDLE,
+                      currentStatus: e,
+                      description: v(m.Skl.IDLE),
+                      defaultClickExpire: n
+                  })
+                : E(m.Skl.IDLE, e, v(m.Skl.IDLE)),
+            t
+                ? f({
+                      status: m.Skl.DND,
+                      currentStatus: e,
+                      description: v(m.Skl.DND),
+                      defaultClickExpire: n
+                  })
+                : E(m.Skl.DND, e, v(m.Skl.DND)),
+            t
+                ? f({
+                      status: m.Skl.INVISIBLE,
+                      currentStatus: e,
+                      description: v(m.Skl.INVISIBLE),
+                      defaultClickExpire: n
+                  })
+                : E(m.Skl.INVISIBLE, e, v(m.Skl.INVISIBLE)),
+            h || u
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, i.jsx)(l.MenuSeparator, {}, 'menu-separator-statuses'),
+                          (0, i.jsx)(r.Clw, {}, 'menu-separator-statuses'),
                           (0, i.jsx)(
-                              l.MenuItem,
+                              r.sNh,
                               {
                                   id: 'quiet-mode',
                                   'aria-label': 'focus mode',
@@ -192,7 +210,7 @@ function I(e) {
                                       (0, i.jsxs)('div', {
                                           className: g.statusItem,
                                           children: [
-                                              (0, i.jsx)(l.BellSlashIcon, {
+                                              (0, i.jsx)(r.owu, {
                                                   size: 'xxs',
                                                   className: g.icon
                                               }),
@@ -200,18 +218,18 @@ function I(e) {
                                                   className: g.focusModeTitle,
                                                   children: [
                                                       p.intl.string(p.t.gJRnwM),
-                                                      (0, i.jsx)(l.TextBadge, {
-                                                          text: d ? p.intl.string(p.t.ApAu9f) : I ? p.intl.string(p.t.gH3Fra) : p.intl.string(p.t['64pl8/']),
-                                                          color: d ? r.Z.BRAND_500 : I ? r.Z.RED_400 : r.Z.PRIMARY_500
+                                                      (0, i.jsx)(r.IGR, {
+                                                          text: u ? p.intl.string(p.t.ApAu9f) : C ? p.intl.string(p.t.gH3Fra) : p.intl.string(p.t['64pl8/']),
+                                                          color: u ? l.Z.BRAND_500 : C ? l.Z.RED_400 : l.Z.PRIMARY_500
                                                       })
                                                   ]
                                               }),
                                               (0, i.jsx)('div', {
                                                   className: g.description,
                                                   children:
-                                                      d && null != h && '0' !== h
+                                                      u && null != I && '0' !== I
                                                           ? p.intl.formatToPlainString(p.t.BWD8fn, {
-                                                                endTime: new Date(Number(h)).toLocaleString(p.intl.currentLocale, {
+                                                                endTime: new Date(Number(I)).toLocaleString(p.intl.currentLocale, {
                                                                     month: 'numeric',
                                                                     day: 'numeric',
                                                                     hour: 'numeric',
@@ -223,10 +241,10 @@ function I(e) {
                                           ]
                                       }),
                                   action: () => {
-                                      (0, s.oW)(!d);
+                                      (0, s.oW)(!u);
                                   },
                                   dontCloseOnAction: !0,
-                                  children: v
+                                  children: N
                               },
                               'quiet-mode'
                           )

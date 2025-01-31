@@ -1,20 +1,16 @@
-r.d(n, {
-    s: function () {
-        return l;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(477660),
-    o = r.n(a),
-    s = r(481060);
-let l = {
-    ...o().defaultRules.link,
-    react: function (e, n, r) {
-        return (0, i.jsx)(s.Anchor, {
+n.d(t, { s: () => o });
+var i = n(200651);
+n(192379);
+var r = n(477660),
+    a = n.n(r),
+    s = n(481060);
+let o = {
+    ...a().defaultRules.link,
+    react: function (e, t, n) {
+        return (0, i.jsx)(s.eee, {
             href: e.target,
             target: '_blank',
-            children: n(e.content, r)
+            children: t(e.content, n)
         });
     }
 };

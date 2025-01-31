@@ -1,27 +1,23 @@
-t.d(n, {
-    A: function () {
-        return s;
-    }
-});
+t.d(n, { A: () => a });
 var i = t(200651);
 t(192379);
 var l = t(481060),
-    a = t(826020);
-function s(e) {
-    let { text: n, tooltipText: t, onClick: s } = e;
-    return (0, i.jsx)(l.Tooltip, {
+    s = t(826020);
+function a(e) {
+    let { text: n, tooltipText: t, onClick: a } = e;
+    return (0, i.jsx)(l.ua7, {
         text: t,
         shouldShow: null != t,
         children: (e) =>
-            (0, i.jsxs)(l.Clickable, {
+            (0, i.jsxs)(l.P3F, {
                 ...e,
-                className: a.container,
-                onClick: s,
+                className: s.container,
+                onClick: a,
                 children: [
-                    (0, i.jsx)(l.PlusSmallIcon, {
+                    (0, i.jsx)(l.qJs, {
                         size: 'md',
                         color: 'currentColor',
-                        className: a.icon
+                        className: s.icon
                     }),
                     (0, i.jsx)(l.Text, {
                         color: 'interactive-active',

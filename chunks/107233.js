@@ -1,1 +1,1 @@
-e.exports = { background: 'background_e6e855' };
+e.exports = { background: 'background_df5e2e' };

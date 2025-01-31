@@ -1,87 +1,73 @@
-r.d(n, {
-    CO: function () {
-        return p;
-    },
-    Rz: function () {
-        return _;
-    },
-    S1: function () {
-        return h;
-    },
-    T_: function () {
-        return l;
-    },
-    al: function () {
-        return u;
-    },
-    dx: function () {
-        return d;
-    },
-    gH: function () {
-        return f;
-    }
+n.d(t, {
+    CO: () => f,
+    Rz: () => p,
+    S1: () => _,
+    T_: () => o,
+    al: () => l,
+    dx: () => c,
+    gH: () => d
 });
-var i = r(392711);
-var a = r(570140),
-    o = r(228488),
-    s = r(830917);
-function l(e, n) {
-    a.Z.dispatch({
+var i = n(392711),
+    r = n(570140),
+    a = n(228488),
+    s = n(830917);
+function o(e, t) {
+    r.Z.dispatch({
         type: 'WINDOW_FOCUS',
         windowId: (0, s.ZY)(e),
-        focused: n
+        focused: t
     });
 }
-function u(e) {
-    a.Z.dispatch({
+function l(e) {
+    r.Z.dispatch({
         type: 'WINDOW_HIDDEN',
         windowId: (0, s.ZY)(e)
     });
 }
-let c = (0, i.memoize)((e) =>
-    (0, i.debounce)((n, r) => {
-        a.Z.dispatch({
+let u = (0, i.memoize)((e) =>
+    (0, i.debounce)((t, n) => {
+        r.Z.dispatch({
             type: 'WINDOW_RESIZED',
             windowId: e,
-            width: n,
-            height: r
+            width: t,
+            height: n
         });
     }, 100)
 );
-function d(e) {
-    c((0, s.ZY)(e))(e.innerWidth, e.innerHeight);
+function c(e) {
+    u((0, s.ZY)(e))(e.innerWidth, e.innerHeight);
 }
-function f(e) {
-    let n = (0, s.ZY)(e);
-    a.Z.dispatch({
+function d(e) {
+    let t = (0, s.ZY)(e);
+    r.Z.dispatch({
         type: 'WINDOW_FULLSCREEN_CHANGE',
-        windowId: n,
-        isElementFullscreen: (0, o.rB)(null, e.document)
+        windowId: t,
+        isElementFullscreen: (0, a.rB)(null, e.document)
     });
 }
-function p(e) {
-    let n = (0, s.ZY)(e);
-    a.Z.dispatch({
+function f(e) {
+    let t = (0, s.ZY)(e);
+    r.Z.dispatch({
         type: 'WINDOW_VISIBILITY_CHANGE',
-        windowId: n,
+        windowId: t,
         visible: 'visible' === e.document.visibilityState
     });
 }
-function h(e) {
-    let n = (0, s.ZY)(e),
-        r = e.document;
-    a.Z.dispatch({
+function _(e) {
+    let t = (0, s.ZY)(e),
+        n = e.document;
+    r.Z.dispatch({
         type: 'WINDOW_INIT',
-        windowId: n,
-        isElementFullscreen: (0, o.rB)(null, r),
-        focused: r.hasFocus(),
+        windowId: t,
+        isElementFullscreen: (0, a.rB)(null, n),
+        focused: n.hasFocus(),
         width: e.innerWidth,
         height: e.innerHeight,
-        visible: 'visible' === r.visibilityState
+        visible: 'visible' === n.visibilityState
     });
 }
-function _(e) {
-    a.Z.dispatch({
+function p(e) {
+    r.Z.dispatch({
         type: 'WINDOW_UNLOAD',
         windowId: (0, s.ZY)(e)
     });

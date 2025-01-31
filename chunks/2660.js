@@ -1,32 +1,33 @@
-var i = n(200651);
+n.d(t, { Z: () => m });
+var s = n(200651);
 n(192379);
-var s = n(442837),
+var i = n(442837),
     l = n(481060),
-    r = n(204418),
-    o = n(594174),
-    a = n(113434),
-    u = n(182294),
-    c = n(443763);
-let d = (e) => {
-    let { questConfig: t, fallback: n, isFocused: d } = e,
-        m = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
-        { avatarDecoration: x, isFetching: h } = (0, a.DU)(t);
-    return h
-        ? (0, i.jsx)('div', {
-              className: c.questsCollectibleReward,
-              children: (0, i.jsx)(l.Spinner, {})
-          })
-        : null == m || null == x
-          ? n
-          : (0, i.jsx)('div', {
-                className: c.questsCollectibleReward,
-                children: (0, i.jsx)(r.Z, {
-                    avatarSize: u.EF.SIZE_56,
-                    user: m,
-                    guildId: null,
-                    avatarDecorationOverride: x,
-                    animateOnHover: !d
-                })
-            });
-};
-t.Z = (e) => (0, i.jsx)(d, { ...e });
+    a = n(204418),
+    r = n(594174),
+    o = n(113434),
+    d = n(182294),
+    u = n(443763);
+let c = (e) => {
+        let { questConfig: t, fallback: n, isFocused: c } = e,
+            m = (0, i.e7)([r.default], () => r.default.getCurrentUser()),
+            { avatarDecoration: x, isFetching: h } = (0, o.DU)(t);
+        return h
+            ? (0, s.jsx)('div', {
+                  className: u.questsCollectibleReward,
+                  children: (0, s.jsx)(l.$jN, {})
+              })
+            : null == m || null == x
+              ? n
+              : (0, s.jsx)('div', {
+                    className: u.questsCollectibleReward,
+                    children: (0, s.jsx)(a.Z, {
+                        avatarSize: d.EF.SIZE_56,
+                        user: m,
+                        guildId: null,
+                        avatarDecorationOverride: x,
+                        animateOnHover: !c
+                    })
+                });
+    },
+    m = (e) => (0, s.jsx)(c, { ...e });

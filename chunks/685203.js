@@ -1,29 +1,25 @@
-r.d(n, {
-    a: function () {
-        return u;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(481060),
-    l = r(660384);
-function u(e) {
-    let { children: n, onClick: r, className: a, tooltip: u } = e;
-    return (0, i.jsx)(s.Tooltip, {
-        text: u,
+n.d(t, { a: () => l });
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(481060),
+    o = n(660384);
+function l(e) {
+    let { children: t, onClick: n, className: r, tooltip: l } = e;
+    return (0, i.jsx)(s.ua7, {
+        text: l,
         children: (e) => {
-            let { onClick: u, ...c } = e;
-            return (0, i.jsx)(s.Button, {
-                ...c,
+            let { onClick: l, ...u } = e;
+            return (0, i.jsx)(s.zxk, {
+                ...u,
                 onClick: (e) => {
-                    null == r || r(e), null == u || u();
+                    null == n || n(e), null == l || l();
                 },
-                innerClassName: l.buttonReset,
-                color: o()(l.cta, a),
-                size: s.Button.Sizes.MIN,
-                children: n
+                innerClassName: o.buttonReset,
+                color: a()(o.cta, r),
+                size: s.zxk.Sizes.MIN,
+                children: t
             });
         }
     });

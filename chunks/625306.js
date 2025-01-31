@@ -1,17 +1,13 @@
-r.d(n, {
-    IH: function () {
-        return s;
-    },
-    qC: function () {
-        return l;
-    }
-});
-var i = r(653041);
-let a = 10,
-    o = [];
-function s(e) {
-    for (o.push(e); o.length > a; ) o.shift();
+n.d(t, {
+    IH: () => a,
+    qC: () => s
+}),
+    n(653041);
+let i = 10,
+    r = [];
+function a(e) {
+    for (r.push(e); r.length > i; ) r.shift();
 }
-function l() {
-    return o.join(' -> ');
+function s() {
+    return r.join(' -> ');
 }

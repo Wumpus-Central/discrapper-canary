@@ -1,42 +1,37 @@
-e.r(n),
-    e.d(n, {
-        default: function () {
-            return d;
-        }
-    });
-var r = e(200651);
-e(192379);
-var s = e(481060),
-    i = e(338690),
-    a = e(388032),
-    o = e(998360);
-function d(t) {
-    let { transitionState: n, onClose: e } = t;
-    return (0, r.jsxs)(s.ModalRoot, {
+s.d(n, { default: () => l });
+var e = s(200651);
+s(192379);
+var i = s(481060),
+    r = s(338690),
+    a = s(388032),
+    c = s(998360);
+function l(t) {
+    let { transitionState: n, onClose: s } = t;
+    return (0, e.jsxs)(i.Y0X, {
         transitionState: n,
         children: [
-            (0, r.jsx)(s.ModalHeader, {
+            (0, e.jsx)(i.xBx, {
                 separator: !1,
-                children: (0, r.jsx)(s.Heading, {
+                children: (0, e.jsx)(i.X6q, {
                     variant: 'heading-lg/semibold',
                     children: a.intl.string(a.t.bAhz9v)
                 })
             }),
-            (0, r.jsxs)(s.ModalContent, {
+            (0, e.jsxs)(i.hzk, {
                 children: [
-                    (0, r.jsx)(s.Text, {
+                    (0, e.jsx)(i.Text, {
                         variant: 'text-md/normal',
                         children: a.intl.string(a.t['7KjxW1'])
                     }),
-                    (0, r.jsx)('div', { className: o.art })
+                    (0, e.jsx)('div', { className: c.art })
                 ]
             }),
-            (0, r.jsx)(s.ModalFooter, {
-                children: (0, r.jsx)(s.Button, {
+            (0, e.jsx)(i.mzw, {
+                children: (0, e.jsx)(i.zxk, {
                     type: 'submit',
-                    color: s.Button.Colors.BRAND,
+                    color: i.zxk.Colors.BRAND,
                     onClick: () => {
-                        (0, i.Z)(), e();
+                        (0, r.Z)(), s();
                     },
                     children: a.intl.string(a.t.BddRzc)
                 })

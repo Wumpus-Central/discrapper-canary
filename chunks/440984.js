@@ -1,100 +1,95 @@
-n.d(t, {
-    D: function () {
-        return C;
-    }
-}),
-    n(47120);
+n.d(t, { D: () => f }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    s = n(442837),
-    a = n(780384),
-    l = n(481060),
+    s = n(192379),
+    r = n(442837),
+    l = n(780384),
+    a = n(481060),
     o = n(410030),
     c = n(607070),
     d = n(530618),
     u = n(74538),
     m = n(937615),
-    g = n(230916),
-    h = n(798769),
-    p = n(474936),
+    h = n(230916),
+    g = n(798769),
+    _ = n(474936),
     x = n(388032),
-    f = n(783899),
+    p = n(783899),
     E = n(982404),
-    _ = n(299156);
-function C(e) {
-    let { premiumSubscription: t, premiumType: n, onClose: C, confettiCanvas: T, userWasChurned: S = !1, userDiscountOffer: b } = e,
-        I = (0, o.ZP)(),
-        N = (0, a.wj)(I) ? E : _,
-        v = r.useRef(null),
-        [A, j] = r.useState(!1),
-        O = (0, g._)(t, p.Xh.PREMIUM_MONTH_TIER_2, b),
-        R = (0, u.aS)(p.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
+    C = n(299156);
+function f(e) {
+    let { premiumSubscription: t, premiumType: n, onClose: f, confettiCanvas: T, userWasChurned: N = !1, userDiscountOffer: I } = e,
+        S = (0, o.ZP)(),
+        b = (0, l.wj)(S) ? E : C,
+        v = s.useRef(null),
+        [j, A] = s.useState(!1),
+        O = (0, h._)(t, _.Xh.PREMIUM_MONTH_TIER_2, I),
+        R = (0, u.aS)(_.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
             currency: t.currency,
             paymentSourceId: t.paymentSourceId
         }),
         P = (0, m.T4)(R.amount, R.currency),
-        D = (0, s.e7)([c.Z], () => c.Z.useReducedMotion);
+        D = (0, r.e7)([c.Z], () => c.Z.useReducedMotion);
     if (
-        (r.useEffect(() => {
-            null != v.current && null != O && j(!0);
-        }, [v, A, O]),
-        null == b || null == O)
+        (s.useEffect(() => {
+            null != v.current && null != O && A(!0);
+        }, [v, j, O]),
+        null == I || null == O)
     )
         return null;
     let y = x.intl.format(x.t.gPzMHR, {
-            numMonths: b.discount.user_usage_limit,
+            numMonths: I.discount.user_usage_limit,
             discountedPrice: O,
             regularPrice: P
         }),
-        B = (0, i.jsx)('div', {
-            className: f.whatYouLoseButtonContainer,
-            children: (0, i.jsx)(l.Button, {
-                color: l.Button.Colors.BRAND,
-                onClick: C,
+        Z = (0, i.jsx)('div', {
+            className: p.whatYouLoseButtonContainer,
+            children: (0, i.jsx)(a.zxk, {
+                color: a.zxk.Colors.BRAND,
+                onClick: f,
                 children: x.intl.string(x.t['/r8g/v'])
             })
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(h.Z, {
+            (0, i.jsx)(g.Z, {
                 premiumType: n,
-                className: f.cancellationHeader,
-                onClose: C
+                className: p.cancellationHeader,
+                onClose: f
             }),
             (0, i.jsx)('div', {
                 ref: v,
-                children: (0, i.jsx)(l.ModalContent, {
-                    className: f.body,
+                children: (0, i.jsx)(a.hzk, {
+                    className: p.body,
                     children:
                         null != O
                             ? (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       (0, i.jsxs)('div', {
-                                          className: f.discountAppliedBody,
+                                          className: p.discountAppliedBody,
                                           children: [
                                               (0, i.jsx)('img', {
                                                   alt: '',
-                                                  src: N,
-                                                  className: f.nitroIcon
+                                                  src: b,
+                                                  className: p.nitroIcon
                                               }),
-                                              (0, i.jsx)(l.Heading, {
+                                              (0, i.jsx)(a.X6q, {
                                                   variant: 'heading-xl/bold',
-                                                  children: S ? x.intl.string(x.t.gOOPaG) : x.intl.string(x.t.PZSyRk)
+                                                  children: N ? x.intl.string(x.t.gOOPaG) : x.intl.string(x.t.PZSyRk)
                                               })
                                           ]
                                       }),
                                       (0, i.jsx)('div', {
-                                          className: f.bodyString,
+                                          className: p.bodyString,
                                           children: y
                                       }),
-                                      B
+                                      Z
                                   ]
                               })
-                            : (0, i.jsx)(l.Spinner, {})
+                            : (0, i.jsx)(a.$jN, {})
                 })
             }),
             !D &&
-                A &&
+                j &&
                 (0, i.jsx)(d.Z, {
                     confettiTarget: v.current,
                     confettiCanvas: T,

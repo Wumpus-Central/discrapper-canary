@@ -1,9 +1,10 @@
 e.exports = {
-    wrapper: 'wrapper_c511e4',
-    fullscreenWrapper: 'fullscreenWrapper_c511e4',
-    innerWrapperV1: 'innerWrapperV1_c511e4 innerWrapperBase_c511e4',
-    innerWrapperV2: 'innerWrapperV2_c511e4 innerWrapperBase_c511e4',
-    invisible: 'invisible_c511e4',
-    button: 'button_c511e4',
-    subButton: 'subButton_c511e4'
+    wrapper: 'wrapper__70f7f',
+    fullscreenWrapper: 'fullscreenWrapper__70f7f',
+    innerWrapperBase: 'innerWrapperBase__70f7f',
+    innerWrapperV1: 'innerWrapperV1__70f7f innerWrapperBase__70f7f',
+    innerWrapperV2: 'innerWrapperV2__70f7f innerWrapperBase__70f7f',
+    invisible: 'invisible__70f7f',
+    button: 'button__70f7f',
+    subButton: 'subButton__70f7f'
 };

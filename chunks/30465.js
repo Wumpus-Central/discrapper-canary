@@ -1,37 +1,31 @@
-r.d(n, {
-    KR: function () {
-        return u;
-    },
-    p8: function () {
-        return l;
-    },
-    sJ: function () {
-        return c;
-    }
+n.d(t, {
+    KR: () => l,
+    p8: () => o,
+    sJ: () => u
 });
-var i = r(192379),
-    a = r(15729),
-    o = r(731965);
+var i = n(192379),
+    r = n(15729),
+    a = n(731965);
 let s = Object.freeze({
         id: null,
         activeDescendant: null
     }),
-    l = (0, a.U)(() => s);
-function u(e, n, r) {
+    o = (0, r.U)(() => s);
+function l(e, t, n) {
     (0, i.useEffect)(() => {
-        (0, o.j)(() => {
-            n
-                ? l.setState({
+        (0, a.j)(() => {
+            t
+                ? o.setState({
                       id: e,
-                      activeDescendant: r
+                      activeDescendant: n
                   })
-                : l.setState({
+                : o.setState({
                       id: null,
                       activeDescendant: null
                   });
         });
-    }, [e, n, r]);
+    }, [e, t, n]);
 }
-function c() {
-    (0, o.j)(() => l.setState(() => s));
+function u() {
+    (0, a.j)(() => o.setState(() => s));
 }

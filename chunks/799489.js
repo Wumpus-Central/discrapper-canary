@@ -1,7 +1,8 @@
-e.exports = {
-    items: 'items_b18699',
-    itemMeasurements: 'itemMeasurements_b18699',
-    overflowMeasurement: 'overflowMeasurement_b18699',
-    measurements: 'measurements_b18699',
-    tooltip: 'tooltip_b18699'
+var i = {
+    items: 'items__3ff92',
+    itemMeasurements: 'itemMeasurements__3ff92',
+    overflowMeasurement: 'overflowMeasurement__3ff92',
+    measurements: 'measurements__3ff92',
+    tooltip: 'tooltip__3ff92'
 };
+e.exports = i;

@@ -1,41 +1,36 @@
-r.d(n, {
-    Z: function () {
-        return u;
-    }
-});
-var i = r(47120);
-var a = r(53529),
-    o = r(436660),
-    s = r(887490);
-let l = ['applicationCommand'];
-function u(e) {
-    let { insertBreak: n, insertText: r } = e;
+n.d(t, { Z: () => o }), n(47120);
+var i = n(53529),
+    r = n(436660),
+    a = n(887490);
+let s = ['applicationCommand'];
+function o(e) {
+    let { insertBreak: t, insertText: n } = e;
     return (
         (e.insertBreak = () => {
-            c(e) && n();
+            l(e) && t();
         }),
         (e.insertSoftBreak = () => {
             e.insertBreak();
         }),
-        (e.insertText = (n) => {
-            if (0 > n.indexOf('\r') && 0 > n.indexOf('\n')) {
-                r(n);
+        (e.insertText = (t) => {
+            if (0 > t.indexOf('\r') && 0 > t.indexOf('\n')) {
+                n(t);
                 return;
             }
-            let i = n.split(/\r\n|\r|\n/);
-            if (!c(e)) {
-                r(i.join(' '));
+            let a = t.split(/\r\n|\r|\n/);
+            if (!l(e)) {
+                n(a.join(' '));
                 return;
             }
-            a.T.withSingleEntry(e, () => {
-                let n = !1;
-                for (let a of i) n && o.Q.splitNodes(e, { always: !0 }), r(a), (n = !0);
+            i.T.withSingleEntry(e, () => {
+                let t = !1;
+                for (let i of a) t && r.Q.splitNodes(e, { always: !0 }), n(i), (t = !0);
             });
         }),
         e
     );
 }
-function c(e) {
-    let n = s.bN.getCurrentBlock(e);
-    return null != n && !l.includes(n[0].type);
+function l(e) {
+    let t = a.bN.getCurrentBlock(e);
+    return null != t && !s.includes(t[0].type);
 }

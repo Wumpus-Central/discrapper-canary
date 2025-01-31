@@ -1,5 +1,5 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
     return e.defineLocale('zh-tw', {
         months: '一月_二月_三月_四月_五月_六月_七月_八月_九月_十月_十一月_十二月'.split('_'),
@@ -20,18 +20,16 @@
             llll: 'YYYY年M月D日dddd HH:mm'
         },
         meridiemParse: /凌晨|早上|上午|中午|下午|晚上/,
-        meridiemHour: function (e, n) {
-            if ((12 === e && (e = 0), '凌晨' === n || '早上' === n || '上午' === n)) return e;
-            if ('中午' === n) return e >= 11 ? e : e + 12;
-            if ('下午' === n || '晚上' === n) return e + 12;
+        meridiemHour: function (e, t) {
+            return (12 === e && (e = 0), '凌晨' === t || '早上' === t || '上午' === t) ? e : '中午' === t ? (e >= 11 ? e : e + 12) : '下午' === t || '晚上' === t ? e + 12 : void 0;
         },
-        meridiem: function (e, n, r) {
-            var i = 100 * e + n;
+        meridiem: function (e, t, n) {
+            var i = 100 * e + t;
             if (i < 600) return '凌晨';
             if (i < 900) return '早上';
             if (i < 1130) return '上午';
-            else if (i < 1230) return '中午';
-            else if (i < 1800) return '下午';
+            if (i < 1230) return '中午';
+            if (i < 1800) return '下午';
             else return '晚上';
         },
         calendar: {
@@ -43,8 +41,8 @@
             sameElse: 'L'
         },
         dayOfMonthOrdinalParse: /\d{1,2}(日|月|週)/,
-        ordinal: function (e, n) {
-            switch (n) {
+        ordinal: function (e, t) {
+            switch (t) {
                 case 'd':
                 case 'D':
                 case 'DDD':

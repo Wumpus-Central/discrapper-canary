@@ -1,33 +1,34 @@
-var i = r(570140);
-n.Z = {
-    clearDraft(e, n) {
+n.d(t, { Z: () => r });
+var i = n(570140);
+let r = {
+    clearDraft(e, t) {
         i.Z.dispatch({
             type: 'DRAFT_CLEAR',
             channelId: e,
-            draftType: n
+            draftType: t
         });
     },
-    saveDraft(e, n, r) {
+    saveDraft(e, t, n) {
         i.Z.dispatch({
             type: 'DRAFT_SAVE',
             channelId: e,
-            draft: n,
-            draftType: r
+            draft: t,
+            draftType: n
         });
     },
-    changeDraft(e, n, r) {
+    changeDraft(e, t, n) {
         i.Z.dispatch({
             type: 'DRAFT_CHANGE',
             channelId: e,
-            draft: n,
-            draftType: r
+            draft: t,
+            draftType: n
         });
     },
-    changeThreadSettings(e, n) {
+    changeThreadSettings(e, t) {
         i.Z.dispatch({
             type: 'THREAD_SETTINGS_DRAFT_CHANGE',
             channelId: e,
-            draft: n
+            draft: t
         });
     }
 };

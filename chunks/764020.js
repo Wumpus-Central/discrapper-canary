@@ -1,14 +1,16 @@
-e.exports = {
-    mediaBarInteraction: 'mediaBarInteraction_d12f5a',
-    mediaBarInteractionDragging: 'mediaBarInteractionDragging_d12f5a',
-    mediaBarWrapper: 'mediaBarWrapper_d12f5a fakeEdges_d12f5a',
-    bubble: 'bubble_d12f5a',
-    mediaBarGrabber: 'mediaBarGrabber_d12f5a',
-    mediaBarPreview: 'mediaBarPreview_d12f5a fakeEdges_d12f5a',
-    mediaBarInteractionVolume: 'mediaBarInteractionVolume_d12f5a',
-    vertical: 'vertical_d12f5a',
-    horizontal: 'horizontal_d12f5a',
-    buffer: 'buffer_d12f5a fakeEdges_d12f5a',
-    mediaBarWrapperVolume: 'mediaBarWrapperVolume_d12f5a',
-    mediaBarProgress: 'mediaBarProgress_d12f5a fakeEdges_d12f5a'
+var i = {
+    mediaBarInteraction: 'mediaBarInteraction_b26b79',
+    mediaBarInteractionDragging: 'mediaBarInteractionDragging_b26b79',
+    mediaBarWrapper: 'mediaBarWrapper_b26b79 fakeEdges_b26b79',
+    bubble: 'bubble_b26b79',
+    mediaBarGrabber: 'mediaBarGrabber_b26b79',
+    mediaBarPreview: 'mediaBarPreview_b26b79 fakeEdges_b26b79',
+    mediaBarInteractionVolume: 'mediaBarInteractionVolume_b26b79',
+    vertical: 'vertical_b26b79',
+    horizontal: 'horizontal_b26b79',
+    fakeEdges: 'fakeEdges_b26b79',
+    buffer: 'buffer_b26b79 fakeEdges_b26b79',
+    mediaBarWrapperVolume: 'mediaBarWrapperVolume_b26b79',
+    mediaBarProgress: 'mediaBarProgress_b26b79 fakeEdges_b26b79'
 };
+e.exports = i;

@@ -1,10 +1,6 @@
-r.d(n, {
-    m: function () {
-        return a;
-    }
-});
-var i = r(312413),
-    a = function () {
+n.d(t, { m: () => r });
+var i = n(312413),
+    r = function () {
         return i.C.some(function (e) {
             return e.activeTargets.length > 0;
         });

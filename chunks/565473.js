@@ -1,16 +1,12 @@
-r.d(n, {
-    y: function () {
-        return o;
-    }
-});
-var i = r(927923),
-    a = r(981631);
-function o(e) {
+n.d(t, { y: () => a });
+var i = n(927923),
+    r = n(981631);
+function a(e) {
     switch (e) {
-        case a.ABu.XBOX:
+        case r.ABu.XBOX:
             return i.YE.XBOX;
-        case a.ABu.PLAYSTATION:
-        case a.ABu.PLAYSTATION_STAGING:
+        case r.ABu.PLAYSTATION:
+        case r.ABu.PLAYSTATION_STAGING:
             return i.YE.PLAYSTATION;
         default:
             return null;

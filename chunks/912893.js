@@ -1,26 +1,22 @@
-r.d(n, {
-    G: function () {
-        return o;
-    },
-    U: function () {
-        return a;
-    }
+n.d(t, {
+    G: () => a,
+    U: () => r
 });
-var i = r(570140);
-function a(e, n, r, a) {
+var i = n(570140);
+function r(e, t, n, r) {
     i.Z.dispatch({
         type: 'BURST_REACTION_PICKER_ANIMATION_ADD',
         messageId: e,
-        emojiName: n,
-        emojiId: r,
-        startPosition: a
+        emojiName: t,
+        emojiId: n,
+        startPosition: r
     });
 }
-function o(e, n, r) {
+function a(e, t, n) {
     i.Z.dispatch({
         type: 'BURST_REACTION_PICKER_ANIMATION_CLEAR',
         messageId: e,
-        emojiName: n,
-        emojiId: r
+        emojiName: t,
+        emojiId: n
     });
 }

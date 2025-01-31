@@ -1,19 +1,9 @@
 e.d(i, {
-    LE: function () {
-        return s;
-    },
-    O1: function () {
-        return a;
-    },
-    hO: function () {
-        return r;
-    },
-    pg: function () {
-        return n;
-    },
-    uo: function () {
-        return h;
-    }
+    LE: () => s,
+    O1: () => a,
+    hO: () => r,
+    pg: () => n,
+    uo: () => h
 });
 let s = 780,
     n = 1000,

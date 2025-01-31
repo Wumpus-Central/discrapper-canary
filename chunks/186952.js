@@ -1,21 +1,8 @@
 let s;
-e.r(t),
-    e.d(t, {
-        default: function () {
-            return w;
-        }
-    }),
-    e(47120),
-    e(315314),
-    e(610138),
-    e(216116),
-    e(78328),
-    e(815648),
-    e(653041),
-    e(411104);
+e.d(t, { default: () => w }), e(47120), e(315314), e(309749), e(610138), e(216116), e(78328), e(815648), e(653041), e(411104);
 var n = e(772848),
-    r = e(647425),
-    a = e(170830);
+    a = e(647425),
+    r = e(170830);
 function o(i, t, e) {
     return (
         t in i
@@ -32,34 +19,34 @@ function o(i, t, e) {
 let l = Math.min(4, Math.ceil(navigator.hardwareConcurrency / 2)),
     h = 'undefined' != typeof OffscreenCanvas,
     d = [],
-    u = new Map(),
     v = new Map(),
-    I = (0, a.G)(async () => {
+    u = new Map(),
+    c = (0, r.G)(async () => {
         for (let i = 0; i < l; i++) {
-            let i = new Worker(new URL('/assets/' + e.u('36412'), e.b));
+            let i = new Worker(new URL('/assets/' + e.u('94703'), e.b));
             d.push({
                 worker: i,
                 numActive: 0
             });
         }
     }),
-    c = (0, a.G)(async () => {
+    I = (0, r.G)(async () => {
         s = (await e.e('57961').then(e.bind(e, 8048))).default;
     });
-h ? I() : c();
+h ? c() : I();
 class w {
     get workerIndex() {
-        let i = u.get(this.canvasId);
+        let i = v.get(this.canvasId);
         if (null == i) {
-            let s = v.get(this.assetUrl);
+            let s = u.get(this.assetUrl);
             if (null != s) i = s;
             else {
                 var t, e;
                 let s = null !== (e = null === (t = d[0]) || void 0 === t ? void 0 : t.numActive) && void 0 !== e ? e : 0;
                 for (let [t, e] of d.entries()) e.numActive <= s && ((s = e.numActive), (i = t));
-                v.set(this.assetUrl, i);
+                u.set(this.assetUrl, i);
             }
-            u.set(this.canvasId, i), d[i].numActive++;
+            v.set(this.canvasId, i), d[i].numActive++;
         }
         return i;
     }
@@ -77,11 +64,11 @@ class w {
                     void 0 === e ||
                     e.postMessage({
                         canvasId: this.canvasId,
-                        type: r.u.DROP
+                        type: a.u.DROP
                     });
-            let s = u.get(this.canvasId);
+            let s = v.get(this.canvasId);
             if (null == s) throw Error('No worker index assigned for asset '.concat(this.canvasId));
-            u.delete(this.canvasId), d[s].numActive--;
+            v.delete(this.canvasId), d[s].numActive--;
         } else null === (s = this.lottieView) || void 0 === s || s.drop();
         this.observer.disconnect();
     }
@@ -94,13 +81,13 @@ class w {
                       void 0 === e ||
                       e.postMessage({
                           canvasId: this.canvasId,
-                          type: r.u.STATE_CHANGE,
+                          type: a.u.STATE_CHANGE,
                           shouldAnimate: i,
                           nextFrame: t
                       })
                     : null === (s = this.lottieView) || void 0 === s || s.setState(i, t));
     }
-    constructor({ canvas: i, animationId: t, assetUrl: e, assetData: a, onInitialDraw: l, onError: d }) {
+    constructor({ canvas: i, animationId: t, assetUrl: e, assetData: r, onInitialDraw: l, onError: d }) {
         o(this, 'assetUrl', void 0),
             o(this, 'assetData', void 0),
             o(this, 'canvasId', void 0),
@@ -122,7 +109,7 @@ class w {
                           void 0 === e ||
                           e.postMessage({
                               canvasId: this.canvasId,
-                              type: r.u.VISIBILITY_CHANGE,
+                              type: a.u.VISIBILITY_CHANGE,
                               isVisible: t
                           })
                         : null === (s = this.lottieView) || void 0 === s || s.setVisibility(t);
@@ -130,7 +117,7 @@ class w {
             }),
             o(this, 'handleMessage', (i) => {
                 var t, e;
-                i.data.type === r.u.FIRST_DRAW && (null === (t = this.onInitialDraw) || void 0 === t || t.call(this)), i.data.type === r.u.ERROR && (null === (e = this.onError) || void 0 === e || e.call(this));
+                i.data.type === a.u.FIRST_DRAW && (null === (t = this.onInitialDraw) || void 0 === t || t.call(this)), i.data.type === a.u.ERROR && (null === (e = this.onError) || void 0 === e || e.call(this));
             }),
             o(this, 'handleError', (i) => {
                 var t;
@@ -138,13 +125,13 @@ class w {
             }),
             (this.canvasId = (0, n.Z)()),
             (this.assetUrl = e),
-            (this.assetData = a),
+            (this.assetData = r),
             (this.onInitialDraw = l),
             (this.onError = d),
             (this.observer = new IntersectionObserver(this.handleVisibilityChange)),
             this.observer.observe(i),
             h
-                ? (this.initializationPromise = I().then(() => {
+                ? (this.initializationPromise = c().then(() => {
                       var s, n, o;
                       null === (s = this.worker) || void 0 === s || s.addEventListener('message', this.handleMessage), null === (n = this.worker) || void 0 === n || n.addEventListener('error', this.handleError);
                       let l = i.transferControlToOffscreen();
@@ -152,10 +139,10 @@ class w {
                           void 0 === o ||
                           o.postMessage(
                               {
-                                  type: r.u.INITIALIZE,
+                                  type: a.u.INITIALIZE,
                                   animationId: t,
                                   assetUrl: e,
-                                  assetData: a,
+                                  assetData: r,
                                   canvas: l,
                                   canvasId: this.canvasId,
                                   isVisible: this.isVisible,
@@ -165,12 +152,12 @@ class w {
                           ),
                           (this.isInitialized = !0);
                   }))
-                : (this.initializationPromise = c().then(() => {
+                : (this.initializationPromise = I().then(() => {
                       (this.lottieView = new s({
                           canvas: i,
                           id: t,
                           assetUrl: e,
-                          assetData: a,
+                          assetData: r,
                           isVisible: this.isVisible,
                           shouldAnimate: this.shouldAnimate,
                           onInitialDraw: l,

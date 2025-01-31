@@ -1,7 +1,8 @@
+n.d(t, { Z: () => v });
 var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
     s = n(442837),
     o = n(304106),
     c = n(649974),
@@ -11,11 +12,11 @@ var i = n(200651),
     m = n(55563),
     p = n(551428),
     g = n(73346),
-    f = n(733789),
-    _ = n(4962),
+    _ = n(733789),
+    f = n(4962),
     E = n(388032),
     I = n(846523);
-class C extends r.Component {
+class C extends l.Component {
     renderReasons(e, t, n) {
         return 0 === e.length && 0 === t.length
             ? null
@@ -29,7 +30,7 @@ class C extends r.Component {
                                   'div',
                                   {
                                       className: I.unit,
-                                      children: (0, i.jsx)(f.Z, {
+                                      children: (0, i.jsx)(_.Z, {
                                           reason: e,
                                           hidePersonalInformation: n
                                       })
@@ -55,25 +56,25 @@ class C extends r.Component {
         let { storeListing: e } = this.props;
         return null != e.staffNotes
             ? {
-                  type: _.Z.Types.STAFF_NOTES,
+                  type: f.Z.Types.STAFF_NOTES,
                   staffNotes: e.staffNotes
               }
             : null;
     }
     render() {
-        let { socialReasons: e, nonSocialReasons: t, storeListing: n, hidePersonalInformation: r, className: l } = this.props;
+        let { socialReasons: e, nonSocialReasons: t, storeListing: n, hidePersonalInformation: l, className: r } = this.props;
         if (0 === e.length && 0 === t.length && null == n.staffNotes) return null;
         let s = this.getReviewToRender();
         return (0, i.jsxs)('div', {
-            className: a()(I.root, l),
+            className: a()(I.root, r),
             children: [
                 (0, i.jsx)('div', {
                     className: I.header,
                     children: E.intl.string(E.t.qABFpa)
                 }),
-                this.renderReasons(e, t, r),
+                this.renderReasons(e, t, l),
                 null != s
-                    ? (0, i.jsx)(_.Z, {
+                    ? (0, i.jsx)(f.Z, {
                           data: s,
                           className: I.review
                       })
@@ -82,7 +83,7 @@ class C extends r.Component {
         });
     }
 }
-t.Z = s.ZP.connectStores([m.Z, u.default, p.Z, c.Z, h.Z, d.Z], (e) => {
+let v = s.ZP.connectStores([m.Z, u.default, p.Z, c.Z, h.Z, d.Z], (e) => {
     let { sku: t } = e;
     return {
         socialReasons: (0, g.Gg)(t.id, m.Z, u.default, c.Z, h.Z),

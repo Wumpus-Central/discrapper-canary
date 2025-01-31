@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
+n.d(t, { Z: () => c });
 var i = n(200651);
 n(192379);
 var r = n(481060),
@@ -18,7 +14,7 @@ function c(e) {
             (0, i.jsxs)('div', {
                 className: o.itemContent,
                 children: [
-                    (0, i.jsx)(r.Heading, {
+                    (0, i.jsx)(r.X6q, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
                         children: t
@@ -32,7 +28,7 @@ function c(e) {
                         : n
                 ]
             }),
-            (0, i.jsx)(r.Tooltip, {
+            (0, i.jsx)(r.ua7, {
                 tooltipContentClassName: o.tooltip,
                 text: a.intl.string(a.t.NQ4nCg),
                 children: (e) =>

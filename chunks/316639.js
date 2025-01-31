@@ -1,7 +1,8 @@
-e.exports = {
-    upsell: 'upsell_d9155b',
-    emojis: 'emojis_d9155b',
-    emojiMask: 'emojiMask_d9155b',
-    emojiBackground: 'emojiBackground_d9155b',
-    emoji: 'emoji_d9155b'
+var i = {
+    upsell: 'upsell__37390',
+    emojis: 'emojis__37390',
+    emojiMask: 'emojiMask__37390',
+    emojiBackground: 'emojiBackground__37390',
+    emoji: 'emoji__37390'
 };
+e.exports = i;

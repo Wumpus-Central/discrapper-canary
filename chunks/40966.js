@@ -1,40 +1,36 @@
-r.d(n, {
-    Z: function () {
-        return d;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(481060),
-    o = r(626135),
-    s = r(596401),
-    l = r(981631),
-    u = r(388032);
-let c = () => {
-    o.default.track(l.rMx.CHANGE_LOG_CTA_CLICKED, {
+n.d(t, { Z: () => c });
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(626135),
+    s = n(596401),
+    o = n(981631),
+    l = n(388032);
+let u = () => {
+    a.default.track(o.rMx.CHANGE_LOG_CTA_CLICKED, {
         cta_type: 'profile_bio',
         target: s.D2
     });
 };
-function d() {
+function c() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)('span', { children: u.intl.string(u.t.OJmNR0) }),
+            (0, i.jsx)('span', { children: l.intl.string(l.t.OJmNR0) }),
             (0, i.jsx)('br', {}),
             (0, i.jsx)('br', {}),
             (0, i.jsx)('span', {
-                children: u.intl.format(u.t.RCYeBA, {
-                    blogHook: (e, n) =>
+                children: l.intl.format(l.t.RCYeBA, {
+                    blogHook: (e, t) =>
                         (0, i.jsx)(
-                            a.Anchor,
+                            r.eee,
                             {
-                                onClick: c,
+                                onClick: u,
                                 target: '_blank',
                                 rel: 'noreferrer noopener',
                                 href: s.D2,
                                 children: e
                             },
-                            n
+                            t
                         )
                 })
             })

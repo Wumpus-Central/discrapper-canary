@@ -1,10 +1,13 @@
 e.exports = {
-    editVanityUrlCard: 'editVanityUrlCard_ceb0aa',
-    removeVanityUrlButton: 'removeVanityUrlButton_ceb0aa',
-    formTitleField: 'formTitleField_ceb0aa',
-    flexFormTitle: 'flexFormTitle_ceb0aa',
-    guildFeatureAvailabilityIndicator: 'guildFeatureAvailabilityIndicator_ceb0aa',
-    upsellButton: 'upsellButton_ceb0aa',
-    premiumUpsellBadge: 'premiumUpsellBadge_ceb0aa',
-    marginTop16: 'marginTop16_ceb0aa'
+    editVanityUrlCard: 'editVanityUrlCard__46bca',
+    description: 'description__46bca',
+    removeVanityUrlButton: 'removeVanityUrlButton__46bca',
+    vanityUrlErrorCode: 'vanityUrlErrorCode__46bca',
+    vanityUrlHelpLink: 'vanityUrlHelpLink__46bca',
+    formTitleField: 'formTitleField__46bca',
+    flexFormTitle: 'flexFormTitle__46bca',
+    guildFeatureAvailabilityIndicator: 'guildFeatureAvailabilityIndicator__46bca',
+    upsellButton: 'upsellButton__46bca',
+    premiumUpsellBadge: 'premiumUpsellBadge__46bca',
+    marginTop16: 'marginTop16__46bca'
 };

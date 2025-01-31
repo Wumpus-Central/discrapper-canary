@@ -1,8 +1,4 @@
-r.d(e, {
-    SV: function () {
-        return a;
-    }
-});
+r.d(e, { SV: () => a });
 var n = r(192379);
 let i = (0, n.createContext)(null),
     o = {

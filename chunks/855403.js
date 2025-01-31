@@ -1,8 +1,4 @@
-function i(e, n) {
-    return null != n && e.startsWith('window:'.concat(n));
+function i(e, t) {
+    return null != t && e.startsWith('window:'.concat(t));
 }
-r.d(n, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });

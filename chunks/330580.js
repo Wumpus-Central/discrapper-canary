@@ -1,12 +1,13 @@
-e.exports = {
-    scroller: 'scroller_c100ff',
-    body: 'body_c100ff',
-    hiddenLibraryApplications: 'hiddenLibraryApplications_c100ff',
-    hiddenLibraryApplicationContent: 'hiddenLibraryApplicationContent_c100ff',
-    hiddenLibraryApplicationsTitle: 'hiddenLibraryApplicationsTitle_c100ff',
-    hiddenLibraryApplication: 'hiddenLibraryApplication_c100ff ' + n('684309').card,
-    restoreButton: 'restoreButton_c100ff',
-    restoreIcon: 'restoreIcon_c100ff',
-    applicationName: 'applicationName_c100ff',
-    applicationSubText: 'applicationSubText_c100ff'
+var i = {
+    scroller: 'scroller_fb04e1',
+    body: 'body_fb04e1',
+    hiddenLibraryApplications: 'hiddenLibraryApplications_fb04e1',
+    hiddenLibraryApplicationContent: 'hiddenLibraryApplicationContent_fb04e1',
+    hiddenLibraryApplicationsTitle: 'hiddenLibraryApplicationsTitle_fb04e1',
+    hiddenLibraryApplication: 'hiddenLibraryApplication_fb04e1 ' + n(684309).card,
+    restoreButton: 'restoreButton_fb04e1',
+    restoreIcon: 'restoreIcon_fb04e1',
+    applicationName: 'applicationName_fb04e1',
+    applicationSubText: 'applicationSubText_fb04e1'
 };
+e.exports = i;

@@ -1,54 +1,44 @@
-r.d(t, {
-    i: function () {
-        return E;
-    }
-});
-var a = r(573736),
-    n = r(886115),
-    _ = r(151122);
-function o(e) {
+a.d(e, { i: () => _ });
+var r = a(573736),
+    n = a(886115);
+function o(t) {
     return {
-        ...e,
-        path: 'path' in e && Array.isArray(e.path) ? e.path.join('.') : void 0,
-        keys: 'keys' in e ? JSON.stringify(e.keys) : void 0,
-        unionErrors: 'unionErrors' in e ? JSON.stringify(e.unionErrors) : void 0
+        ...t,
+        path: 'path' in t && Array.isArray(t.path) ? t.path.join('.') : void 0,
+        keys: 'keys' in t ? JSON.stringify(t.keys) : void 0,
+        unionErrors: 'unionErrors' in t ? JSON.stringify(t.unionErrors) : void 0
     };
 }
-let E = (0, _._I)((e = {}) => {
-    let t = e.limit || 10;
+let _ = (0, a(151122)._I)((t = {}) => {
+    let e = t.limit || 10;
     return {
         name: 'ZodErrors',
-        processEvent(e, r) {
-            var _, E, i, c;
-            return (
-                (_ = t),
-                (E = e),
-                (i = r),
-                E.exception && E.exception.values && i && i.originalException && ((c = i.originalException), (0, a.VZ)(c) && 'ZodError' === c.name && Array.isArray(c.errors)) && 0 !== i.originalException.issues.length
-                    ? {
-                          ...E,
-                          exception: {
-                              ...E.exception,
-                              values: [
-                                  {
-                                      ...E.exception.values[0],
-                                      value: (function (e) {
-                                          let t = new Set();
-                                          for (let r of e.issues) r.path && r.path[0] && t.add(r.path[0]);
-                                          let r = Array.from(t);
-                                          return `Failed to validate keys: ${(0, n.$G)(r.join(', '), 100)}`;
-                                      })(i.originalException)
-                                  },
-                                  ...E.exception.values.slice(1)
-                              ]
-                          },
-                          extra: {
-                              ...E.extra,
-                              'zoderror.issues': i.originalException.errors.slice(0, _).map(o)
-                          }
+        processEvent(t, a) {
+            var _;
+            return t.exception && t.exception.values && a && a.originalException && ((_ = a.originalException), (0, r.VZ)(_) && 'ZodError' === _.name && Array.isArray(_.errors)) && 0 !== a.originalException.issues.length
+                ? {
+                      ...t,
+                      exception: {
+                          ...t.exception,
+                          values: [
+                              {
+                                  ...t.exception.values[0],
+                                  value: (function (t) {
+                                      let e = new Set();
+                                      for (let a of t.issues) a.path && a.path[0] && e.add(a.path[0]);
+                                      let a = Array.from(e);
+                                      return `Failed to validate keys: ${(0, n.$G)(a.join(', '), 100)}`;
+                                  })(a.originalException)
+                              },
+                              ...t.exception.values.slice(1)
+                          ]
+                      },
+                      extra: {
+                          ...t.extra,
+                          'zoderror.issues': a.originalException.errors.slice(0, e).map(o)
                       }
-                    : E
-            );
+                  }
+                : t;
         }
     };
 });

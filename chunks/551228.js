@@ -1,77 +1,74 @@
-r.d(n, {
-    pi: function () {
-        return m;
-    },
-    te: function () {
-        return _;
-    }
-});
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(442837),
-    l = r(594174),
-    u = r(379357),
-    c = r(719247),
-    d = r(442550),
-    f = r(297781),
-    p = r(443487),
-    h = r(830677);
-let _ = [f.XF];
-function m(e) {
-    var n, r, i, a;
-    let o = (0, s.e7)([c.Z], () => c.Z.getMatchingActivity(e)),
-        u = (0, s.e7)([l.default], () => l.default.getUser(e.author_id));
+n.d(t, {
+    ZP: () => m,
+    pi: () => p,
+    te: () => _
+}),
+    n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(442837),
+    s = n(594174),
+    o = n(379357),
+    l = n(719247),
+    u = n(442550),
+    c = n(297781),
+    d = n(443487),
+    f = n(830677);
+let _ = [c.XF];
+function p(e) {
+    var t, n, i, r;
+    let o = (0, a.e7)([l.Z], () => l.Z.getMatchingActivity(e)),
+        u = (0, a.e7)([s.default], () => s.default.getUser(e.author_id));
     if (null == o || null == u) return {};
-    let d = e.extra.entries[0],
-        f = null !== (i = null !== (r = o.state) && void 0 !== r ? r : null === (n = d.media.artists[0]) || void 0 === n ? void 0 : n.name) && void 0 !== i ? i : d.media.title,
-        p = null !== (a = o.details) && void 0 !== a ? a : d.media.title;
+    let c = e.extra.entries[0],
+        d = null !== (i = null !== (n = o.state) && void 0 !== n ? n : null === (t = c.media.artists[0]) || void 0 === t ? void 0 : t.name) && void 0 !== i ? i : c.media.title,
+        f = null !== (r = o.details) && void 0 !== r ? r : c.media.title;
     return {
         activity: o,
-        artist: f,
-        currentEntry: d,
-        title: p,
+        artist: d,
+        currentEntry: c,
+        title: f,
         user: u
     };
 }
-function g(e) {
-    let { entry: n, channel: r, selected: i, hovered: o } = e,
-        { activity: s, artist: l } = m(n),
-        { largeImage: c } = (0, u.rv)({ entry: n });
+function h(e) {
+    let { entry: t, channel: n, selected: r, hovered: a } = e,
+        { activity: s, artist: l } = p(t),
+        { largeImage: h } = (0, o.rv)({ entry: t });
     return null == s
-        ? (0, a.jsx)(p.cA, {})
-        : (0, a.jsxs)(p.Zb, {
-              selected: i,
+        ? (0, i.jsx)(d.cA, {})
+        : (0, i.jsxs)(d.Zb, {
+              selected: r,
               children: [
-                  (0, a.jsxs)(p.e$, {
+                  (0, i.jsxs)(d.e$, {
                       children: [
-                          (0, a.jsx)(p.F9, {
-                              entry: n,
-                              channelId: r.id,
-                              guildId: r.guild_id
+                          (0, i.jsx)(d.F9, {
+                              entry: t,
+                              channelId: n.id,
+                              guildId: n.guild_id
                           }),
-                          (0, a.jsx)(p.ll, { children: l }),
-                          (0, a.jsx)(f.Gk, {
-                              location: f.Gt.CARD,
-                              children: _.map((e, r) =>
-                                  (0, a.jsx)(
+                          (0, i.jsx)(d.ll, { children: l }),
+                          (0, i.jsx)(c.Gk, {
+                              location: c.Gt.CARD,
+                              children: _.map((e, n) =>
+                                  (0, i.jsx)(
                                       e,
                                       {
-                                          entry: n,
-                                          hovered: o
+                                          entry: t,
+                                          hovered: a
                                       },
-                                      r
+                                      n
                                   )
                               )
                           })
                       ]
                   }),
-                  (0, a.jsx)(d.f, {
-                      src: null == c ? void 0 : c.src,
+                  (0, i.jsx)(u.f, {
+                      src: null == h ? void 0 : h.src,
                       size: 48,
-                      className: h.thumbnail
+                      className: f.thumbnail
                   })
               ]
           });
 }
-n.ZP = o.memo(g);
+let m = r.memo(h);

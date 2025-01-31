@@ -1,20 +1,15 @@
-n.d(t, {
-    Z: function () {
-        return p;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => f }), n(47120);
 var a = n(200651),
-    r = n(192379),
-    l = n(848246),
+    l = n(192379),
+    r = n(848246),
     i = n(442837),
     o = n(481060),
     s = n(570140),
     c = n(746599),
     d = n(594174),
     u = n(246992),
-    h = n(473657);
-let m = [
+    m = n(473657);
+let h = [
         {
             label: 'No Override',
             value: !1
@@ -34,7 +29,7 @@ let m = [
             value: !0
         }
     ],
-    f = [
+    p = [
         {
             label: '1 day',
             value: 1
@@ -44,20 +39,20 @@ let m = [
             value: 7
         }
     ];
-function p() {
+function f() {
     let e = (0, i.e7)([d.default], () => d.default.getCurrentUser()),
-        [t, n] = r.useState(!1),
-        [p, b] = r.useState(!1),
-        [g, v] = r.useState(1);
+        [t, n] = l.useState(!1),
+        [f, b] = l.useState(!1),
+        [_, g] = l.useState(1);
     return (0, a.jsxs)('div', {
-        className: h.container,
+        className: m.container,
         children: [
-            (0, a.jsx)(o.FormSection, {
+            (0, a.jsx)(o.hjN, {
                 title: 'Override HQ Streaming: Available',
-                className: h.formElement,
-                tag: o.FormTitleTags.H3,
-                children: (0, a.jsx)(o.SingleSelect, {
-                    options: m,
+                className: m.formElement,
+                tag: o.RB0.H3,
+                children: (0, a.jsx)(o.q4e, {
+                    options: h,
                     value: t,
                     onChange: (e) => {
                         n(e);
@@ -65,41 +60,41 @@ function p() {
                     popoutLayerContext: u.O$
                 })
             }),
-            (0, a.jsx)(o.FormSection, {
+            (0, a.jsx)(o.hjN, {
                 title: 'Override HQ Streaming: Activate',
-                className: h.formElement,
-                tag: o.FormTitleTags.H3,
-                children: (0, a.jsx)(o.SingleSelect, {
+                className: m.formElement,
+                tag: o.RB0.H3,
+                children: (0, a.jsx)(o.q4e, {
                     options: x,
-                    value: p,
+                    value: f,
                     onChange: (e) => {
                         b(e);
                     },
                     popoutLayerContext: u.O$
                 })
             }),
-            (0, a.jsx)(o.FormSection, {
+            (0, a.jsx)(o.hjN, {
                 title: 'Override Demo Duration',
-                className: h.formElement,
-                tag: o.FormTitleTags.H3,
-                children: (0, a.jsx)(o.SingleSelect, {
-                    options: f,
-                    value: g,
+                className: m.formElement,
+                tag: o.RB0.H3,
+                children: (0, a.jsx)(o.q4e, {
+                    options: p,
+                    value: _,
                     onChange: (e) => {
-                        v(e);
+                        g(e);
                     },
                     popoutLayerContext: u.O$
                 })
             }),
-            (0, a.jsx)(o.Button, {
+            (0, a.jsx)(o.zxk, {
                 onClick: () =>
                     void (s.Z.dispatch({
                         type: 'PREMIUM_PERKS_DEMO_OVERRIDE',
-                        perkType: l.q.STREAM_HIGH_QUALITY,
+                        perkType: r.q.STREAM_HIGH_QUALITY,
                         user: e,
                         available: t,
-                        activateSuccess: p,
-                        demoDuration: g
+                        activateSuccess: f,
+                        demoDuration: _
                     }),
                     (0, c.Vk)()),
                 children: 'Update'

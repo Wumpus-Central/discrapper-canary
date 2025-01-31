@@ -1,19 +1,9 @@
 i.d(n, {
-    FI: function () {
-        return U;
-    },
-    LL: function () {
-        return b;
-    },
-    N_: function () {
-        return F;
-    },
-    Xi: function () {
-        return M;
-    },
-    eF: function () {
-        return k;
-    }
+    FI: () => U,
+    LL: () => b,
+    N_: () => F,
+    Xi: () => M,
+    eF: () => k
 }),
     i(789020),
     i(411104);
@@ -52,7 +42,7 @@ function b(t, n, i) {
     let e = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if (n.hasFlag(R.xW$.SPAMMER) || i.isManaged()) return !1;
     let l = i.getGuildId();
-    return !((null != l && a.Z.isLurking(l)) || (!e.ignoreSameUser && n.id === t.id) || T.Z.isBlockedOrIgnored(n.id) || (!e.ignoreStatus && S.Z.getStatus() === R.Skl.DND) || _.QZ.getSetting() || (!e.ignoreNoMessagesSetting && C.ZP.allowNoMessages(i))) && !0;
+    return !((null != l && a.Z.isLurking(l)) || (!e.ignoreSameUser && n.id === t.id) || T.Z.isBlockedOrIgnored(n.id) || (!e.ignoreStatus && S.Z.getStatus() === R.Skl.DND) || _.QZ.getSetting() || (!e.ignoreNoMessagesSetting && C.ZP.allowNoMessages(i)));
 }
 function k(t, n) {
     var i;
@@ -114,7 +104,7 @@ function F(t, n) {
     t.type === R.uaV.THREAD_STARTER_MESSAGE && (e = I.Z.getChannel(null == e ? void 0 : e.parent_id));
     let l = m.default.getCurrentUser(),
         o = m.default.getUser(null === (i = t.author) || void 0 === i ? void 0 : i.id);
-    return !(null == e || null == l || null == o || e.isManaged() || o.hasFlag(R.xW$.SPAMMER) || T.Z.isBlockedOrIgnoredForMessage(t) || o.id === l.id || S.Z.getStatus() === R.Skl.DND || _.QZ.getSetting() || C.ZP.allowNoMessages(e)) && !0;
+    return !(null == e || null == l || null == o || e.isManaged() || o.hasFlag(R.xW$.SPAMMER) || T.Z.isBlockedOrIgnoredForMessage(t) || o.id === l.id || S.Z.getStatus() === R.Skl.DND || _.QZ.getSetting() || C.ZP.allowNoMessages(e));
 }
 function U(t, n) {
     let i = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
@@ -168,7 +158,7 @@ function M(t, n, i) {
             n.type === R.uaV.THREAD_STARTER_MESSAGE && null != f ? (d = L(d, f, I.Z.getChannel(f.parent_id))) : (0, c.Z)(n) ? null != h.Z.getGuild(t.getGuildId()) && (d = L(d, t, f)) : (d = L(d, t, f));
             break;
         case R.d4z.GROUP_DM:
-            !(t.isManaged() && i.bot && d === (0, e.F6)(t, m.default, T.Z)) && (d = ''.concat(d, ' (').concat((0, e.F6)(t, m.default, T.Z, !0), ')'));
+            (t.isManaged() && i.bot && d === (0, e.F6)(t, m.default, T.Z)) || (d = ''.concat(d, ' (').concat((0, e.F6)(t, m.default, T.Z, !0), ')'));
     }
     let g = n.content;
     if ((0, c.Z)(n) && null == (g = O.Z.stringify(n, t))) throw (new l.Z('NotificationTextUtils').warn('SystemMessageUtils.stringify(...) could not convert', n), Error('failed to stringify system message'));

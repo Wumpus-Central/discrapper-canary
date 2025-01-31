@@ -1,27 +1,23 @@
-n.d(t, {
-    w: function () {
-        return o;
-    }
-});
+n.d(t, { w: () => s });
 var i = n(192379),
     l = n(442837),
-    r = n(594174),
-    a = n(388032);
-function o(e) {
+    a = n(594174),
+    r = n(388032);
+function s(e) {
     var t;
     let n = null === (t = e.linkedLobby) || void 0 === t ? void 0 : t.linked_at,
-        o = (0, l.e7)([r.default], () => {
+        s = (0, l.e7)([a.default], () => {
             var t;
-            return r.default.getUser(null === (t = e.linkedLobby) || void 0 === t ? void 0 : t.linked_by);
+            return a.default.getUser(null === (t = e.linkedLobby) || void 0 === t ? void 0 : t.linked_by);
         });
     return i.useMemo(() => {
         if (null == n) return;
         let e = new Date(n);
-        return null != o
-            ? a.intl.format(a.t['xPrJ+v'], {
-                  username: o.username,
+        return null != s
+            ? r.intl.format(r.t['xPrJ+v'], {
+                  username: s.username,
                   linkedAtDate: e
               })
-            : a.intl.formatToPlainString(a.t.EyygeH, { linkedAtDate: e });
-    }, [n, o]);
+            : r.intl.formatToPlainString(r.t.EyygeH, { linkedAtDate: e });
+    }, [n, s]);
 }

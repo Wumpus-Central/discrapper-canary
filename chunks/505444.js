@@ -1,4 +1,4 @@
-var n = {
+var t = {
     animationIterationCount: !0,
     borderImageOutset: !0,
     borderImageSlice: !0,
@@ -41,17 +41,17 @@ var n = {
     strokeOpacity: !0,
     strokeWidth: !0
 };
-function r(e, n) {
-    return e + n.charAt(0).toUpperCase() + n.substring(1);
+function n(e, t) {
+    return e + t.charAt(0).toUpperCase() + t.substring(1);
 }
 var i = ['Webkit', 'ms', 'Moz', 'O'];
-Object.keys(n).forEach(function (e) {
+Object.keys(t).forEach(function (e) {
     i.forEach(function (i) {
-        n[r(i, e)] = n[e];
+        t[n(i, e)] = t[e];
     });
 });
-var a = {
-        isUnitlessNumber: n,
+var r = {
+        isUnitlessNumber: t,
         shorthandPropertyExpansions: {
             background: {
                 backgroundAttachment: !0,
@@ -105,60 +105,59 @@ var a = {
             }
         }
     },
-    o = !!('undefined' != typeof window && window.document && window.document.createElement),
+    a = !!('undefined' != typeof window && window.document && window.document.createElement),
     s = {
-        canUseDOM: o,
+        canUseDOM: a,
         canUseWorkers: 'undefined' != typeof Worker,
-        canUseEventListeners: o && !!(window.addEventListener || window.attachEvent),
-        canUseViewport: o && !!window.screen,
-        isInWorker: !o
+        canUseEventListeners: a && !!(window.addEventListener || window.attachEvent),
+        canUseViewport: a && !!window.screen,
+        isInWorker: !a
     },
-    l = a.isUnitlessNumber;
-function u(e, n, r) {
-    return null == n || 'boolean' == typeof n || '' === n ? '' : r || 'number' != typeof n || 0 === n || (l.hasOwnProperty(e) && l[e]) ? ('' + n).trim() : n + 'px';
+    o = r.isUnitlessNumber;
+function l(e, t, n) {
+    return null == t || 'boolean' == typeof t || '' === t ? '' : n || 'number' != typeof t || 0 === t || (o.hasOwnProperty(e) && o[e]) ? ('' + t).trim() : t + 'px';
 }
-function c(e) {
+function u(e) {
     return function () {
         return e;
     };
 }
-var d = function () {};
-(d.thatReturns = c),
-    (d.thatReturnsFalse = c(!1)),
-    (d.thatReturnsTrue = c(!0)),
-    (d.thatReturnsNull = c(null)),
-    (d.thatReturnsThis = function () {
+var c = function () {};
+(c.thatReturns = u),
+    (c.thatReturnsFalse = u(!1)),
+    (c.thatReturnsTrue = u(!0)),
+    (c.thatReturnsNull = u(null)),
+    (c.thatReturnsThis = function () {
         return this;
     }),
-    (d.thatReturnsArgument = function (e) {
+    (c.thatReturnsArgument = function (e) {
         return e;
     });
-var f = !1;
+var d = !1;
 if (s.canUseDOM) {
-    var p = document.createElement('div').style;
+    var f = document.createElement('div').style;
     try {
-        p.font = '';
+        f.font = '';
     } catch (e) {
-        f = !0;
+        d = !0;
     }
 }
-var h = {
+var _ = {
     createDangerousStringForStyles: function (e) {},
-    setValueForStyles: function (e, n, r) {
+    setValueForStyles: function (e, t, n) {
         var i = e.style;
-        for (var o in n) {
-            if (!!n.hasOwnProperty(o)) {
-                var s = 0 === o.indexOf('--'),
-                    l = u(o, n[o], s);
-                if (('float' === o && (o = 'cssFloat'), s)) i.setProperty(o, l);
-                else if (l) i[o] = l;
+        for (var a in t)
+            if (t.hasOwnProperty(a)) {
+                var s = 0 === a.indexOf('--'),
+                    o = l(a, t[a], s);
+                if (('float' === a && (a = 'cssFloat'), s)) i.setProperty(a, o);
+                else if (o) i[a] = o;
                 else {
-                    var c = f && a.shorthandPropertyExpansions[o];
-                    if (c) for (var d in c) i[d] = '';
-                    else i[o] = '';
+                    var u = d && r.shorthandPropertyExpansions[a];
+                    if (u) for (var c in u) i[c] = '';
+                    else i[a] = '';
                 }
             }
-        }
     }
 };
-e.exports = h;
+e.exports = _;

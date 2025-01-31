@@ -1,10 +1,6 @@
 n.d(t, {
-    V: function () {
-        return x;
-    },
-    Z: function () {
-        return p;
-    }
+    V: () => x,
+    Z: () => p
 }),
     n(47120);
 var i = n(200651),
@@ -29,14 +25,14 @@ function x() {
     };
 }
 function p(e) {
-    let { guild: t, role: x, selectedSection: p, setSelectedSection: f } = e,
+    let { guild: t, role: x, selectedSection: p, setSelectedSection: _ } = e,
         C = r.useCallback(
             (e) => {
-                f(e);
+                _(e);
             },
-            [f]
+            [_]
         ),
-        v = (0, l.e7)(
+        f = (0, l.e7)(
             [d.Z],
             () => {
                 var e;
@@ -44,12 +40,12 @@ function p(e) {
             },
             [x.id, t.id]
         ),
-        I = (0, o.pM)(t.id, x.id),
+        v = (0, o.pM)(t.id, x.id),
         N = (0, u.Z)(x);
     r.useEffect(() => {
-        I && f(m.ZI.PERMISSIONS);
-    }, [I, f]);
-    let _ = (0, c.useHasGuildRoleItems)(t, x);
+        v && _(m.ZI.PERMISSIONS);
+    }, [v, _]);
+    let j = (0, c.e)(t, x);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
@@ -61,8 +57,8 @@ function p(e) {
                         variant: 'text-md/semibold',
                         children: h.intl.format(h.t.BUdGkJ, { roleName: x.name })
                     }),
-                    _
-                        ? (0, i.jsx)(s.Clickable, {
+                    j
+                        ? (0, i.jsx)(s.P3F, {
                               className: g.menu,
                               onClick: function (e) {
                                   (0, a.jW)(e, async () => {
@@ -76,7 +72,7 @@ function p(e) {
                                   });
                               },
                               'aria-label': h.intl.string(h.t.PdRCRk),
-                              children: (0, i.jsx)(s.MoreHorizontalIcon, {
+                              children: (0, i.jsx)(s.xhG, {
                                   size: 'md',
                                   color: 'currentColor'
                               })
@@ -85,12 +81,12 @@ function p(e) {
                 ]
             }),
             null != N
-                ? (0, i.jsx)(s.HelpMessage, {
-                      messageType: s.HelpMessageTypes.WARNING,
+                ? (0, i.jsx)(s.Wn, {
+                      messageType: s.QYI.WARNING,
                       children: N
                   })
                 : null,
-            (0, i.jsxs)(s.TabBar, {
+            (0, i.jsxs)(s.njP, {
                 className: g.tabBar,
                 'aria-label': h.intl.string(h.t['+1H47u']),
                 selectedItem: p,
@@ -98,28 +94,28 @@ function p(e) {
                 look: 'brand',
                 onItemSelect: C,
                 children: [
-                    (0, i.jsx)(s.TabBar.Item, {
+                    (0, i.jsx)(s.njP.Item, {
                         className: g.tabBarItem,
                         id: m.ZI.DISPLAY,
-                        disabled: I,
+                        disabled: v,
                         children: h.intl.string(h.t.hmdom5)
                     }),
-                    (0, i.jsx)(s.TabBar.Item, {
+                    (0, i.jsx)(s.njP.Item, {
                         className: g.tabBarItem,
                         id: m.ZI.PERMISSIONS,
                         children: h.intl.string(h.t.WIDE1N)
                     }),
-                    (0, i.jsx)(s.TabBar.Item, {
+                    (0, i.jsx)(s.njP.Item, {
                         className: g.tabBarItem,
                         id: m.ZI.VERIFICATIONS,
-                        disabled: I,
+                        disabled: v,
                         children: h.intl.string(h.t['5//Mur'])
                     }),
-                    (0, i.jsx)(s.TabBar.Item, {
+                    (0, i.jsx)(s.njP.Item, {
                         className: g.tabBarItem,
                         id: m.ZI.MEMBERS,
-                        disabled: I,
-                        children: I ? h.intl.string(h.t['kg//+/']) : h.intl.formatToPlainString(h.t.bHnZWV, { numMembers: String(v) })
+                        disabled: v,
+                        children: v ? h.intl.string(h.t['kg//+/']) : h.intl.formatToPlainString(h.t.bHnZWV, { numMembers: String(f) })
                     })
                 ]
             })

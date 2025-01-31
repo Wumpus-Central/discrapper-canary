@@ -1,7 +1,8 @@
+n.d(t, { Z: () => r });
 var i = n(544891),
     l = n(570140),
-    r = n(981631);
-t.Z = {
+    a = n(981631);
+let r = {
     show(e, t) {
         l.Z.wait(() =>
             l.Z.dispatch({
@@ -27,7 +28,7 @@ t.Z = {
             })
         ),
             i.tn.put({
-                url: r.ANM.TUTORIAL_INDICATOR(e),
+                url: a.ANM.TUTORIAL_INDICATOR(e),
                 oldFormErrors: !0,
                 rejectWithError: !0
             });
@@ -35,7 +36,7 @@ t.Z = {
     suppressAll() {
         l.Z.dispatch({ type: 'TUTORIAL_INDICATOR_SUPPRESS_ALL' }),
             i.tn.post({
-                url: r.ANM.TUTORIAL_INDICATORS_SUPPRESS,
+                url: a.ANM.TUTORIAL_INDICATORS_SUPPRESS,
                 oldFormErrors: !0,
                 rejectWithError: !0
             });

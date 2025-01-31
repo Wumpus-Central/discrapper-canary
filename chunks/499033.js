@@ -1,17 +1,13 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(331595);
-function o(e) {
-    let { width: n = 104, height: r = 80, ...o } = e;
+n.d(t, { Z: () => a });
+var i = n(200651);
+n(192379);
+var r = n(325767);
+function a(e) {
+    let { width: t = 104, height: n = 80, ...a } = e;
     return (0, i.jsxs)('svg', {
-        ...(0, a.Z)(o),
-        width: n,
-        height: r,
+        ...(0, r.Z)(a),
+        width: t,
+        height: n,
         viewBox: '0 0 104 80',
         fill: 'none',
         children: [

@@ -1,82 +1,79 @@
-var i,
-    l,
-    r,
+t.d(n, { Z: () => _ });
+var l,
+    i,
     s,
-    a = t(392711),
-    o = t.n(a),
-    c = t(442837),
+    r = t(392711),
+    a = t.n(r),
+    o = t(442837),
     d = t(570140),
-    u = t(45966),
-    m = t(999382),
-    I = t(981631),
-    h = t(290511);
-let N = !1,
-    g = null,
-    T = [],
-    f = !1,
-    S = [];
-function x() {
-    (function () {
-        (N = !1), (g = null), (S = []), (f = !1);
-    })(),
-        null != (g = m.Z.getGuildId()) && m.Z.getSection() === I.pNK.ONBOARDING && ((T = u.Z.getOnboardingPrompts(g)), (f = u.Z.isAdvancedMode(g)));
+    c = t(45966),
+    u = t(999382),
+    m = t(981631),
+    I = t(290511);
+let h = !1,
+    N = null,
+    g = [],
+    x = !1,
+    E = [];
+function T() {
+    (h = !1), (N = null), (E = []), (x = !1), null != (N = u.Z.getGuildId()) && u.Z.getSection() === m.pNK.ONBOARDING && ((g = c.Z.getOnboardingPrompts(N)), (x = c.Z.isAdvancedMode(N)));
 }
-class E extends (s = c.ZP.Store) {
+class S extends (s = o.ZP.Store) {
     initialize() {
-        this.waitFor(m.Z, u.Z);
+        this.waitFor(u.Z, c.Z);
     }
     hasChanges() {
-        return null != g && !o().isEqual(u.Z.getOnboardingPrompts(g), T);
+        return null != N && !a().isEqual(c.Z.getOnboardingPrompts(N), g);
     }
     get guildId() {
-        return g;
-    }
-    get submitting() {
         return N;
     }
+    get submitting() {
+        return h;
+    }
     get errors() {
-        return S;
+        return E;
     }
     get editedOnboardingPrompts() {
-        return T;
+        return g;
     }
     get advancedMode() {
-        return f;
+        return x;
     }
 }
-(r = 'GuildSettingsOnboardingPromptsStore'),
-    (l = 'displayName') in (i = E)
-        ? Object.defineProperty(i, l, {
-              value: r,
+(i = 'GuildSettingsOnboardingPromptsStore'),
+    (l = 'displayName') in S
+        ? Object.defineProperty(S, l, {
+              value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[l] = r),
-    (n.Z = new E(d.Z, {
-        GUILD_SETTINGS_INIT: x,
-        GUILD_SETTINGS_SET_SECTION: x,
-        GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: x,
-        GUILD_SETTINGS_ONBOARDING_PROMPTS_RESET: x,
-        GUILD_SETTINGS_DEFAULT_CHANNELS_RESET: x,
-        GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: x,
-        GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED: function (e) {
-            var n;
-            (S = null !== (n = e.errors) && void 0 !== n ? n : []), (N = !1);
-        },
-        GUILD_SETTINGS_ONBOARDING_PROMPTS_EDIT: function (e) {
-            let { prompts: n } = e;
-            T = n;
-        },
-        GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT: function () {
-            (N = !0), (S = []);
-        },
-        GUILD_SETTINGS_ONBOARDING_PROMPTS_ERRORS: function (e) {
-            var n;
-            S = null !== (n = e.errors) && void 0 !== n ? n : [];
-        },
-        GUILD_SETTINGS_ONBOARDING_SET_MODE: function (e) {
-            let { mode: n } = e;
-            f = n === h.Un.ONBOARDING_ADVANCED;
-        }
-    }));
+        : (S[l] = i);
+let _ = new S(d.Z, {
+    GUILD_SETTINGS_INIT: T,
+    GUILD_SETTINGS_SET_SECTION: T,
+    GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: T,
+    GUILD_SETTINGS_ONBOARDING_PROMPTS_RESET: T,
+    GUILD_SETTINGS_DEFAULT_CHANNELS_RESET: T,
+    GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_SUCCESS: T,
+    GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED: function (e) {
+        var n;
+        (E = null !== (n = e.errors) && void 0 !== n ? n : []), (h = !1);
+    },
+    GUILD_SETTINGS_ONBOARDING_PROMPTS_EDIT: function (e) {
+        let { prompts: n } = e;
+        g = n;
+    },
+    GUILD_SETTINGS_ONBOARDING_PROMPTS_SUBMIT: function () {
+        (h = !0), (E = []);
+    },
+    GUILD_SETTINGS_ONBOARDING_PROMPTS_ERRORS: function (e) {
+        var n;
+        E = null !== (n = e.errors) && void 0 !== n ? n : [];
+    },
+    GUILD_SETTINGS_ONBOARDING_SET_MODE: function (e) {
+        let { mode: n } = e;
+        x = n === I.Un.ONBOARDING_ADVANCED;
+    }
+});

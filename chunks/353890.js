@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-});
+n.d(t, { Z: () => _ });
 var i = n(200651);
 n(192379);
 var r = n(120356),
@@ -18,7 +14,7 @@ var r = n(120356),
     g = n(838324),
     x = n(388032),
     p = n(531840);
-function f(e) {
+function _(e) {
     let { guild: t, scrollToQuestions: n } = e,
         r = (0, s.e7)([h.Z], () => h.Z.editedDefaultChannelIds),
         l = (0, u.b)(t.id, r).filter((e) => e.isCategory() || (0, c.s)(e.guild_id, e.id));
@@ -34,7 +30,7 @@ function f(e) {
             }),
             (0, i.jsxs)('div', {
                 className: p.channelList,
-                children: [(0, i.jsx)(I, {}), 0 === l.length && (0, i.jsx)(C, {}), (0, i.jsx)(v, { channels: l })]
+                children: [(0, i.jsx)(v, {}), 0 === l.length && (0, i.jsx)(C, {}), (0, i.jsx)(f, { channels: l })]
             })
         ]
     });
@@ -45,7 +41,7 @@ function C() {
         children: [
             (0, i.jsx)('div', {
                 className: p.emptyStateIcon,
-                children: (0, i.jsx)(a.TextIcon, {
+                children: (0, i.jsx)(a.VL1, {
                     size: 'md',
                     color: 'currentColor'
                 })
@@ -59,11 +55,11 @@ function C() {
         ]
     });
 }
-function v(e) {
+function f(e) {
     let { channels: t } = e;
-    return (0, i.jsx)(i.Fragment, { children: t.map((e) => (e.isCategory() ? (0, i.jsx)(N, { label: e.name }, e.id) : (0, i.jsx)(_, { channel: e }, e.id))) });
+    return (0, i.jsx)(i.Fragment, { children: t.map((e) => (e.isCategory() ? (0, i.jsx)(N, { label: e.name }, e.id) : (0, i.jsx)(j, { channel: e }, e.id))) });
 }
-function I() {
+function v() {
     return (0, i.jsx)('div', { className: p.divider });
 }
 function N(e) {
@@ -86,11 +82,11 @@ function N(e) {
         ]
     });
 }
-function _(e) {
+function j(e) {
     var t;
     let { channel: n } = e,
         r = (0, d.iF)(n),
-        s = null !== (t = (0, o.KS)(n)) && void 0 !== t ? t : a.TextIcon;
+        s = null !== (t = (0, o.KS)(n)) && void 0 !== t ? t : a.VL1;
     return (0, i.jsxs)('div', {
         className: p.channel,
         children: [

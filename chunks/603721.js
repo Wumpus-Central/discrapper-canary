@@ -1,64 +1,56 @@
-r.d(n, {
-    B0: function () {
-        return s;
-    },
-    OG: function () {
-        return c;
-    },
-    kz: function () {
-        return l;
-    },
-    yr: function () {
-        return u;
-    }
+n.d(t, {
+    B0: () => s,
+    OG: () => u,
+    kz: () => o,
+    yr: () => l
 });
-var i = r(544891),
-    a = r(570140),
-    o = r(981631);
-function s(e, n, r, i) {
-    a.Z.dispatch({
+var i = n(544891),
+    r = n(570140),
+    a = n(981631);
+function s(e, t, n, i) {
+    r.Z.dispatch({
         type: 'QUEUE_INTERACTION_COMPONENT_STATE',
         messageId: e,
-        nonce: n,
-        state: r,
+        nonce: t,
+        state: n,
         componentId: i
     });
 }
-function l(e, n) {
-    let { data: r, messageId: i, onCreate: o, onSuccess: s, onFailure: l } = n;
-    a.Z.dispatch({
+function o(e, t) {
+    let { data: n, messageId: i, onCreate: a, onSuccess: s, onFailure: o } = t;
+    r.Z.dispatch({
         type: 'INTERACTION_QUEUE',
-        data: r,
+        data: n,
         nonce: e,
         messageId: i,
-        onCreate: o,
+        onCreate: a,
         onSuccess: s,
-        onFailure: l
+        onFailure: o
     });
 }
-function u(e, n, r, i) {
-    a.Z.dispatch({
+function l(e, t, n, i) {
+    r.Z.dispatch({
         type: 'INTERACTION_FAILURE',
         nonce: e,
-        errorMessage: r,
-        errorCode: n,
+        errorMessage: n,
+        errorCode: t,
         status: i
     });
 }
-async function c(e, n) {
-    let r = await i.tn.get({
-        url: o.ANM.MESSAGE_INTERACTION_DATA(e, n),
+async function u(e, t) {
+    let n = await i.tn.get({
+        url: a.ANM.MESSAGE_INTERACTION_DATA(e, t),
         oldFormErrors: !0,
         rejectWithError: !1
     });
-    if (!r.ok) return null;
+    if (!n.ok) return null;
     {
-        let i = r.body;
+        let i = n.body;
         return (
-            a.Z.dispatch({
+            r.Z.dispatch({
                 type: 'LOAD_MESSAGE_INTERACTION_DATA_SUCCESS',
                 channelId: e,
-                messageId: n,
+                messageId: t,
                 interactionData: i
             }),
             i

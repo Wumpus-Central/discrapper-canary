@@ -1,31 +1,27 @@
-r.d(n, {
-    p: function () {
-        return h;
-    },
-    t: function () {
-        return _;
-    }
+n.d(t, {
+    p: () => _,
+    t: () => p
 });
-var i = r(697171),
-    a = r(288930),
-    o = r(568764),
+var i = n(697171),
+    r = n(288930),
+    a = n(568764),
     s = 0,
-    l = function () {
+    o = function () {
         return !!s;
     },
-    u = 250,
-    c = {
+    l = 250,
+    u = {
         attributes: !0,
         characterData: !0,
         childList: !0,
         subtree: !0
     },
-    d = ['resize', 'load', 'transitionend', 'animationend', 'animationstart', 'animationiteration', 'keyup', 'keydown', 'mouseup', 'mousedown', 'mouseover', 'mouseout', 'blur', 'focus'],
-    f = function (e) {
+    c = ['resize', 'load', 'transitionend', 'animationend', 'animationstart', 'animationiteration', 'keyup', 'keydown', 'mouseup', 'mousedown', 'mouseover', 'mouseout', 'blur', 'focus'],
+    d = function (e) {
         return void 0 === e && (e = 0), Date.now() + e;
     },
-    p = !1,
-    h = new ((function () {
+    f = !1,
+    _ = new ((function () {
         function e() {
             var e = this;
             (this.stopped = !0),
@@ -35,17 +31,17 @@ var i = r(697171),
         }
         return (
             (e.prototype.run = function (e) {
-                var n = this;
-                if ((void 0 === e && (e = u), !p)) {
-                    p = !0;
-                    var r = f(e);
-                    (0, o.p)(function () {
-                        var a = !1;
+                var t = this;
+                if ((void 0 === e && (e = l), !f)) {
+                    f = !0;
+                    var n = d(e);
+                    (0, a.p)(function () {
+                        var r = !1;
                         try {
-                            a = (0, i.N)();
+                            r = (0, i.N)();
                         } finally {
-                            if (((p = !1), (e = r - f()), !l())) return;
-                            a ? n.run(1000) : e > 0 ? n.run(e) : n.start();
+                            if (((f = !1), (e = n - d()), !o())) return;
+                            r ? t.run(1000) : e > 0 ? t.run(e) : t.start();
                         }
                     });
                 }
@@ -55,10 +51,10 @@ var i = r(697171),
             }),
             (e.prototype.observe = function () {
                 var e = this,
-                    n = function () {
-                        return e.observer && e.observer.observe(document.body, c);
+                    t = function () {
+                        return e.observer && e.observer.observe(document.body, u);
                     };
-                document.body ? n() : a.C.addEventListener('DOMContentLoaded', n);
+                document.body ? t() : r.C.addEventListener('DOMContentLoaded', t);
             }),
             (e.prototype.start = function () {
                 var e = this;
@@ -66,22 +62,22 @@ var i = r(697171),
                     ((this.stopped = !1),
                     (this.observer = new MutationObserver(this.listener)),
                     this.observe(),
-                    d.forEach(function (n) {
-                        return a.C.addEventListener(n, e.listener, !0);
+                    c.forEach(function (t) {
+                        return r.C.addEventListener(t, e.listener, !0);
                     }));
             }),
             (e.prototype.stop = function () {
                 var e = this;
-                !this.stopped &&
+                this.stopped ||
                     (this.observer && this.observer.disconnect(),
-                    d.forEach(function (n) {
-                        return a.C.removeEventListener(n, e.listener, !0);
+                    c.forEach(function (t) {
+                        return r.C.removeEventListener(t, e.listener, !0);
                     }),
                     (this.stopped = !0));
             }),
             e
         );
     })())(),
-    _ = function (e) {
-        !s && e > 0 && h.start(), (s += e) || h.stop();
+    p = function (e) {
+        !s && e > 0 && _.start(), (s += e) || _.stop();
     };

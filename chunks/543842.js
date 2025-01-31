@@ -1,11 +1,6 @@
-r.d(n, {
-    Z: function () {
-        return a;
-    }
-});
-var i = r(757143);
-function a(e, n) {
-    var r;
-    let i = null == n ? void 0 : null === (r = n.replace(/-/g, '_')) || void 0 === r ? void 0 : r.toUpperCase();
+function i(e, t) {
+    var n;
+    let i = null == t ? void 0 : null === (n = t.replace(/-/g, '_')) || void 0 === n ? void 0 : n.toUpperCase();
     if (null != i && i in e) return e[i];
 }
+n.d(t, { Z: () => i }), n(757143);

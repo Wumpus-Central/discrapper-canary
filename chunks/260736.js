@@ -1,67 +1,63 @@
-n.d(t, {
-    Z: function () {
-        return p;
-    }
-});
+n.d(t, { Z: () => p });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(67390),
-    a = n(896835),
-    o = n(447564),
-    s = n(63063),
+var l = n(481060),
+    a = n(67390),
+    r = n(896835),
+    s = n(447564),
+    o = n(63063),
     c = n(739566),
-    u = n(942951),
-    d = n(834129),
+    d = n(942951),
+    u = n(834129),
     m = n(981631),
     h = n(388032),
-    f = n(505984);
+    _ = n(505984);
 function p(e) {
     let { compact: t, message: n, channel: p } = e,
-        _ = (0, c.ZP)(n),
-        g = (0, u.l)({
+        g = (0, c.ZP)(n),
+        f = (0, d.l)({
             user: n.author,
             channelId: n.channel_id,
             guildId: p.guild_id,
             messageId: n.id
-        })(_),
-        E = (0, a.j)('HDStreamingUpgradedMessage'),
-        C = () => (0, o.openHDPotionModal)(p, 'HDStreamingUpgradedMessage'),
-        I = E ? C : s.Z.getArticleURL(m.BhN.HD_STREAMING_POTION);
+        })(g),
+        x = (0, r.j)('HDStreamingUpgradedMessage'),
+        E = () => (0, s.k)(p, 'HDStreamingUpgradedMessage'),
+        C = x ? E : o.Z.getArticleURL(m.BhN.HD_STREAMING_POTION);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
-                className: f.parentContainer,
-                children: (0, i.jsx)(d.Z, {
-                    iconNode: (0, i.jsx)(r.PotionIcon, { size: 'sm' }),
+                className: _.parentContainer,
+                children: (0, i.jsx)(u.Z, {
+                    iconNode: (0, i.jsx)(l.hh5, { size: 'sm' }),
                     timestamp: n.timestamp,
                     compact: t,
                     children: h.intl.format(h.t['u0qJ4+'], {
-                        actorName: _.nick,
-                        actorHook: g
+                        actorName: g.nick,
+                        actorHook: f
                     })
                 })
             }),
-            (0, i.jsxs)(r.Clickable, {
+            (0, i.jsxs)(l.P3F, {
                 onClick: () => {
-                    E ? C() : window.open(s.Z.getArticleURL(m.BhN.HD_STREAMING_POTION), '_blank');
+                    x ? E() : window.open(o.Z.getArticleURL(m.BhN.HD_STREAMING_POTION), '_blank');
                 },
-                className: f.embed,
+                className: _.embed,
                 children: [
-                    (0, i.jsx)(l.Z, {}),
+                    (0, i.jsx)(a.Z, {}),
                     (0, i.jsxs)('div', {
-                        className: f.text,
+                        className: _.text,
                         children: [
-                            (0, i.jsx)(r.Text, {
+                            (0, i.jsx)(l.Text, {
                                 color: 'text-normal',
                                 variant: 'text-sm/semibold',
-                                className: f.title,
+                                className: _.title,
                                 children: h.intl.string(h.t['Fh/mk5'])
                             }),
-                            (0, i.jsx)(r.Text, {
+                            (0, i.jsx)(l.Text, {
                                 color: 'text-primary',
                                 variant: 'text-xs/normal',
-                                children: h.intl.format(h.t['bmGF+f'], { helpCenterLink: I })
+                                children: h.intl.format(h.t['bmGF+f'], { helpCenterLink: C })
                             })
                         ]
                     })

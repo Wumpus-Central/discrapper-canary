@@ -1,20 +1,16 @@
-n.d(t, {
-    Y: function () {
-        return u;
-    }
-});
+n.d(t, { Y: () => u });
 var i = n(200651);
 n(192379);
-var r = n(704215),
-    s = n(231757),
-    a = n(63063),
-    l = n(249881),
+var s = n(704215),
+    r = n(231757),
+    l = n(63063),
+    a = n(249881),
     o = n(981631),
     c = n(388032),
     d = n(195794);
 let u = () => {
-    let e = a.Z.getArticleURL(o.BhN.XBOX_CONNECTION);
-    return (0, i.jsx)(l.t, {
+    let e = l.Z.getArticleURL(o.BhN.XBOX_CONNECTION);
+    return (0, i.jsx)(a.t, {
         title: c.intl.string(c.t['2okkZW']),
         body: c.intl.format(c.t.OnERSU, { help_article: e }),
         img: (0, i.jsx)('img', {
@@ -23,9 +19,9 @@ let u = () => {
             height: '45',
             alt: ''
         }),
-        newIndicatorDismissibleContent: r.z.XBOX_ONE_WAY_RECONNECT,
+        newIndicatorDismissibleContent: s.z.XBOX_ONE_WAY_RECONNECT,
         onClick: () =>
-            (0, s.Z)({
+            (0, r.Z)({
                 platformType: o.ABu.XBOX,
                 location: 'Xbox two way upsell'
             })

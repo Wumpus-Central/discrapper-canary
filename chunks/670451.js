@@ -1,37 +1,33 @@
-r.d(n, {
-    Z: function () {
-        return u;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(481060),
-    o = r(386019),
-    s = r(388032),
-    l = r(249942);
-function u(e) {
-    return (0, i.jsx)(o.Z, {
+n.d(t, { Z: () => l });
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(386019),
+    s = n(388032),
+    o = n(249942);
+function l(e) {
+    return (0, i.jsx)(a.Z, {
         ...e,
         children: (e) =>
-            (0, i.jsx)(a.Tooltip, {
+            (0, i.jsx)(r.ua7, {
                 text: s.intl.string(s.t.UKOtz8),
                 'aria-label': !1,
-                children: (n) =>
-                    (0, i.jsx)(a.Clickable, {
-                        ...n,
+                children: (t) =>
+                    (0, i.jsx)(r.P3F, {
+                        ...t,
                         ...e,
                         'aria-label': s.intl.string(s.t.UKOtz8),
-                        onClick: (r) => {
+                        onClick: (n) => {
                             var i;
-                            r.stopPropagation(), null === (i = n.onClick) || void 0 === i || i.call(n), e.onClick(r);
+                            n.stopPropagation(), null === (i = t.onClick) || void 0 === i || i.call(t), e.onClick(n);
                         },
-                        onContextMenu: (r) => {
+                        onContextMenu: (n) => {
                             var i;
-                            r.preventDefault(), null === (i = n.onClick) || void 0 === i || i.call(n), e.onClick(r);
+                            n.preventDefault(), null === (i = t.onClick) || void 0 === i || i.call(t), e.onClick(n);
                         },
-                        className: l.contextMenu,
-                        children: (0, i.jsx)(a.MoreHorizontalIcon, {
-                            color: a.tokens.colors.INTERACTIVE_NORMAL,
+                        className: o.contextMenu,
+                        children: (0, i.jsx)(r.xhG, {
+                            color: r.TVs.colors.INTERACTIVE_NORMAL,
                             size: 'xs'
                         })
                     })

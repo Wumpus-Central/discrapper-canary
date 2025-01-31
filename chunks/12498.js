@@ -1,46 +1,43 @@
-n(47120);
+n.d(t, { Z: () => f }), n(47120);
 var i,
-    r,
     l,
-    o,
+    r,
     s = n(106351),
     a = n(442837),
-    u = n(570140),
+    o = n(570140),
     d = n(38618);
-let c = new Set(),
-    h = {};
-function f() {
-    c.clear();
+let u = new Set(),
+    c = {};
+function h() {
+    u.clear();
 }
 function g(e) {
-    c.delete(e.guild.id);
+    u.delete(e.guild.id);
 }
 class C extends (i = a.ZP.Store) {
     getChannelStatus(e) {
         var t;
-        if (null != e && null != e.guild_id) {
-            if (e.type === s.d.GUILD_VOICE) return !c.has(e.guild_id) && (c.add(e.guild_id), d.Z.getSocket().requestChannelStatuses(e.guild_id)), null === (t = h[e.guild_id]) || void 0 === t ? void 0 : t[e.id];
-        }
+        if (null != e && null != e.guild_id && e.type === s.d.GUILD_VOICE) return u.has(e.guild_id) || (u.add(e.guild_id), d.Z.getSocket().requestChannelStatuses(e.guild_id)), null === (t = c[e.guild_id]) || void 0 === t ? void 0 : t[e.id];
     }
 }
-(o = 'ChannelStatusStore'),
-    (l = 'displayName') in (r = C)
-        ? Object.defineProperty(r, l, {
-              value: o,
+(r = 'ChannelStatusStore'),
+    (l = 'displayName') in C
+        ? Object.defineProperty(C, l, {
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (r[l] = o),
-    (t.Z = new C(u.Z, {
-        GUILD_CREATE: g,
-        GUILD_DELETE: g,
-        CONNECTION_RESUMED: f,
-        CONNECTION_OPEN: f,
-        VOICE_CHANNEL_STATUS_UPDATE: function (e) {
-            null == h[e.guildId] && (h[e.guildId] = {}), (h[e.guildId][e.id] = e.status);
-        },
-        CHANNEL_STATUSES: function (e) {
-            for (let { id: t, status: n } of ((h[e.guildId] = {}), e.channels)) h[e.guildId][t] = n;
-        }
-    }));
+        : (C[l] = r);
+let f = new C(o.Z, {
+    GUILD_CREATE: g,
+    GUILD_DELETE: g,
+    CONNECTION_RESUMED: h,
+    CONNECTION_OPEN: h,
+    VOICE_CHANNEL_STATUS_UPDATE: function (e) {
+        null == c[e.guildId] && (c[e.guildId] = {}), (c[e.guildId][e.id] = e.status);
+    },
+    CHANNEL_STATUSES: function (e) {
+        for (let { id: t, status: n } of ((c[e.guildId] = {}), e.channels)) c[e.guildId][t] = n;
+    }
+});

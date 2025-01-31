@@ -1,67 +1,63 @@
-n.d(t, {
-    U: function () {
-        return O;
-    }
-});
+n.d(t, { U: () => k });
 var i = n(200651),
-    r = n(192379),
-    l = n(481060),
-    a = n(99690),
-    o = n(906732),
-    s = n(336197),
+    l = n(192379),
+    a = n(481060),
+    r = n(99690),
+    s = n(906732),
+    o = n(336197),
     c = n(454585),
-    u = n(171368),
-    d = n(695346),
+    d = n(171368),
+    u = n(695346),
     m = n(598077),
     h = n(594174),
-    f = n(626135),
+    _ = n(626135),
     p = n(709054),
-    _ = n(591759),
-    g = n(833592),
-    E = n(497089),
-    C = n(178480),
-    I = n(418316),
-    x = n(526146),
-    N = n(400565),
-    v = n(148789),
-    T = n(11825),
-    S = n(981631),
-    A = n(388032),
-    b = n(586210),
+    g = n(591759),
+    f = n(833592),
+    x = n(497089),
+    E = n(178480),
+    C = n(418316),
+    v = n(526146),
+    I = n(400565),
+    N = n(148789),
+    S = n(11825),
+    T = n(981631),
+    b = n(388032),
+    A = n(586210),
     j = n(756688),
-    R = n(886765);
+    y = n(886765);
 function Z(e) {
-    var t, n, r;
-    let { item: o } = e,
-        s = null === (t = o.message) || void 0 === t ? void 0 : t.content;
-    if (null == s) return (0, i.jsx)('div', {});
-    let u = null !== (r = h.default.getUser(null === (n = o.other_user) || void 0 === n ? void 0 : n.id)) && void 0 !== r ? r : new m.Z(o.other_user),
-        d = c.Z.parse(s);
+    var t, n, l;
+    let { item: s } = e,
+        o = null === (t = s.message) || void 0 === t ? void 0 : t.content;
+    if (null == o) return (0, i.jsx)('div', {});
+    let d = null !== (l = h.default.getUser(null === (n = s.other_user) || void 0 === n ? void 0 : n.id)) && void 0 !== l ? l : new m.Z(s.other_user),
+        u = c.Z.parse(o);
     return (0, i.jsxs)('div', {
-        className: b.messagePreviewContainer,
+        className: A.messagePreviewContainer,
         children: [
-            (0, i.jsx)(a.Z, {
-                user: u,
-                size: l.AvatarSizes.SIZE_24
+            (0, i.jsx)(r.Z, {
+                user: d,
+                size: a.EFr.SIZE_24
             }),
-            (0, i.jsx)(l.Text, {
-                className: b.messagePreviewText,
+            (0, i.jsx)(a.Text, {
+                className: A.messagePreviewText,
                 variant: 'text-sm/normal',
                 lineClamp: 2,
-                children: d
+                children: u
             })
         ]
     });
 }
-function P(e) {
+function R(e) {
     let {
         item: { callout: t }
     } = e;
     if (null == t) return null;
     let n = c.Z.parse(t);
     return (0, i.jsx)('div', {
-        className: b.calloutContainer,
-        children: (0, i.jsx)(l.Text, {
+        className: A.calloutContainer,
+        children: (0, i.jsx)(a.Text, {
             variant: 'text-sm/normal',
             lineClamp: 2,
             children: n
@@ -70,36 +66,36 @@ function P(e) {
 }
 function L(e) {
     let { item: t } = e,
-        n = R,
-        r = A.intl.string(A.t.SJTHJS);
+        n = y,
+        l = b.intl.string(b.t.SJTHJS);
     return (
-        t.completed && ((n = j), (r = A.intl.string(A.t.f6RTAA))),
+        t.completed && ((n = j), (l = b.intl.string(b.t.f6RTAA))),
         (0, i.jsxs)('div', {
-            className: b.lifecycleContainer,
+            className: A.lifecycleContainer,
             children: [
                 (0, i.jsx)('img', {
-                    className: b.checkbox,
+                    className: A.checkbox,
                     alt: '',
                     src: n
                 }),
-                (0, i.jsx)(l.Text, {
-                    className: b.lifecycleText,
+                (0, i.jsx)(a.Text, {
+                    className: A.lifecycleText,
                     variant: 'text-xs/bold',
                     color: 'header-secondary',
-                    children: r
+                    children: l
                 })
             ]
         })
     );
 }
-let y = r.memo(function (e) {
+let P = l.memo(function (e) {
         var t;
-        let { item: a, ackedBeforeId: d } = e,
-            { analyticsLocations: m } = (0, o.ZP)(),
-            h = (0, x.I)(a, d),
-            A = r.useCallback(async () => {
-                if ((!h && (0, g.wt)(a), null != a.item_enum && a.item_enum === E.AM.FIND_FRIENDS)) {
-                    (0, l.openModalLazy)(async () => {
+        let { item: r, ackedBeforeId: u } = e,
+            { analyticsLocations: m } = (0, s.ZP)(),
+            h = (0, v.I)(r, u),
+            b = l.useCallback(async () => {
+                if ((h || (0, f.wt)(r), null != r.item_enum && r.item_enum === x.AM.FIND_FRIENDS)) {
+                    (0, a.ZDy)(async () => {
                         let { default: e } = await n.e('6074').then(n.bind(n, 443189));
                         return (t) =>
                             (0, i.jsx)(e, {
@@ -109,79 +105,79 @@ let y = r.memo(function (e) {
                     });
                     return;
                 }
-                if (null != a.deeplink) {
-                    let t = _.Z.safeParseWithQuery(a.deeplink);
+                if (null != r.deeplink) {
+                    let t = g.Z.safeParseWithQuery(r.deeplink);
                     if (null == t) return;
                     let n = t.hostname,
                         i = t.path;
                     if (null == n || null == i) return;
-                    if (_.Z.isDiscordHostname(n)) {
+                    if (g.Z.isDiscordHostname(n)) {
                         let t = i.match('^/users/(\\d+)');
                         if (null != t && 2 === t.length) {
                             var e;
-                            (0, u.openUserProfileModal)({
+                            (0, d.openUserProfileModal)({
                                 userId: t[1],
-                                messageId: null === (e = a.message) || void 0 === e ? void 0 : e.id,
+                                messageId: null === (e = r.message) || void 0 === e ? void 0 : e.id,
                                 sourceAnalyticsLocations: m,
-                                analyticsLocation: { section: S.jXE.NOTIFICATION_CENTER }
+                                analyticsLocation: { section: T.jXE.NOTIFICATION_CENTER }
                             });
-                        } else await (0, s.Z)(i);
+                        } else await (0, o.Z)(i);
                     }
-                    f.default.track(S.rMx.NOTIFICATION_CENTER_ACTION, {
-                        action_type: E.ud.CLICKED,
-                        notification_center_id: a.id,
-                        item_type: a.type,
+                    _.default.track(T.rMx.NOTIFICATION_CENTER_ACTION, {
+                        action_type: x.ud.CLICKED,
+                        notification_center_id: r.id,
+                        item_type: r.type,
                         acked: h
                     });
                 }
-            }, [a, h, m]),
+            }, [r, h, m]),
             j = null;
-        a.type === E.O7.INCOMING_FRIEND_REQUESTS && null != a.other_user && (j = (0, i.jsx)(v.Z, { userId: a.other_user.id }));
-        let R = null != a.local_id,
-            y = (0, I.Z)(a);
+        r.type === x.O7.INCOMING_FRIEND_REQUESTS && null != r.other_user && (j = (0, i.jsx)(N.Z, { userId: r.other_user.id }));
+        let y = null != r.local_id,
+            P = (0, C.Z)(r);
         return (0, i.jsxs)('div', {
-            className: b.row,
+            className: A.row,
             children: [
-                (0, i.jsxs)(l.ClickableContainer, {
-                    className: b.rowContent,
+                (0, i.jsxs)(a.kL8, {
+                    className: A.rowContent,
                     focusProps: { offset: 4 },
-                    'aria-label': y,
-                    onClick: A,
+                    'aria-label': P,
+                    onClick: b,
                     children: [
-                        h ? null : (0, i.jsx)('div', { className: b.unread }),
-                        (0, i.jsx)(N.U, { item: a }),
+                        h ? null : (0, i.jsx)('div', { className: A.unread }),
+                        (0, i.jsx)(I.U, { item: r }),
                         (0, i.jsxs)('div', {
-                            className: b.body,
+                            className: A.body,
                             children: [
-                                'lifecycle_item' === a.type && null != a.item_enum && (0, i.jsx)(L, { item: a }),
-                                (0, i.jsx)(l.Text, {
+                                'lifecycle_item' === r.type && null != r.item_enum && (0, i.jsx)(L, { item: r }),
+                                (0, i.jsx)(a.Text, {
                                     variant: 'text-md/normal',
                                     color: h ? 'text-muted' : 'text-normal',
-                                    children: 'string' != typeof y ? y : c.Z.parse(y)
+                                    children: 'string' != typeof P ? P : c.Z.parse(P)
                                 }),
-                                (null === (t = a.message) || void 0 === t ? void 0 : t.content) != null ? (0, i.jsx)(Z, { item: a }) : null,
-                                null != a.callout ? (0, i.jsx)(P, { item: a }) : null,
-                                (0, i.jsx)(l.Text, {
+                                (null === (t = r.message) || void 0 === t ? void 0 : t.content) != null ? (0, i.jsx)(Z, { item: r }) : null,
+                                null != r.callout ? (0, i.jsx)(R, { item: r }) : null,
+                                (0, i.jsx)(a.Text, {
                                     variant: 'text-xs/medium',
                                     color: h ? 'text-muted' : 'header-secondary',
-                                    children: (0, C.a3)(p.default.extractTimestamp(a.id))
+                                    children: (0, E.a3)(p.default.extractTimestamp(r.id))
                                 }),
                                 j
                             ]
                         })
                     ]
                 }),
-                R ? null : (0, i.jsx)(T.z, { item: a })
+                y ? null : (0, i.jsx)(S.z, { item: r })
             ]
         });
     }),
-    O = r.memo(function (e) {
+    k = l.memo(function (e) {
         let { items: t } = e,
-            n = d.d$.useSetting();
+            n = u.d$.useSetting();
         return (0, i.jsx)(i.Fragment, {
             children: t.map((e) =>
                 (0, i.jsx)(
-                    y,
+                    P,
                     {
                         item: e,
                         ackedBeforeId: n

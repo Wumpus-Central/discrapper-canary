@@ -1,53 +1,48 @@
-t.d(n, {
-    Z: function () {
-        return f;
-    }
-}),
-    t(653041);
+t.d(n, { Z: () => m }), t(653041);
 var i = t(697927),
     l = t(200634),
     o = t(369566),
-    r = t(326094),
-    s = t(708108),
-    c = t(146078),
-    a = t(228168),
+    s = t(326094),
+    r = t(708108),
+    a = t(146078),
+    c = t(228168),
     d = t(981631),
     u = t(388032);
-function f(e) {
+function m(e) {
     var n, t;
-    let { user: f, currentUser: m, initialSubsection: p } = e,
-        { live: I, recent: x, stream: h, outbox: v } = (0, o.Z)(f.id),
-        g = I.length > 0 || x.length > 0 || null != h,
-        Z = null === (n = (0, i.Z)(f.id, f.id !== (null == m ? void 0 : m.id)).mutualFriends) || void 0 === n ? void 0 : n.length,
-        j = null === (t = (0, l.Z)(f.id, f.id !== (null == m ? void 0 : m.id)).mutualGuilds) || void 0 === t ? void 0 : t.length,
-        _ = f.id === (null == m ? void 0 : m.id),
-        b = (0, r.Z)({
-            user: f,
-            currentUser: m,
+    let { user: m, currentUser: x, initialSubsection: p } = e,
+        { live: f, recent: I, stream: h, outbox: v } = (0, o.Z)(m.id),
+        Z = f.length > 0 || I.length > 0 || null != h,
+        _ = null === (n = (0, i.Z)(m.id, m.id !== (null == x ? void 0 : x.id)).mutualFriends) || void 0 === n ? void 0 : n.length,
+        g = null === (t = (0, l.Z)(m.id, m.id !== (null == x ? void 0 : x.id)).mutualGuilds) || void 0 === t ? void 0 : t.length,
+        j = m.id === (null == x ? void 0 : x.id),
+        E = (0, s.Z)({
+            user: m,
+            currentUser: x,
             location: d.Sbl.PROFILE_MODAL_TABS
         }),
-        E = [
+        N = [
             {
-                section: a.oh.USER_INFO,
+                section: c.oh.USER_INFO,
                 text: u.intl.string(u.t.jGoPJS)
             }
         ];
     return (
-        (g || (null == v && p === a.Tb.RECENT_ACTIVITY)) &&
-            E.push({
-                section: a.oh.ACTIVITY,
+        (Z || (null == v && p === c.Tb.RECENT_ACTIVITY)) &&
+            N.push({
+                section: c.oh.ACTIVITY,
                 text: u.intl.string(u.t.chq59f)
             }),
-        !_ &&
-            b &&
-            (E.push({
-                section: a.oh.MUTUAL_FRIENDS,
-                text: (0, s.Z)(Z)
+        !j &&
+            E &&
+            (N.push({
+                section: c.oh.MUTUAL_FRIENDS,
+                text: (0, r.Z)(_)
             }),
-            E.push({
-                section: a.oh.MUTUAL_GUILDS,
-                text: (0, c.Z)(j)
+            N.push({
+                section: c.oh.MUTUAL_GUILDS,
+                text: (0, a.Z)(g)
             })),
-        E
+        N
     );
 }

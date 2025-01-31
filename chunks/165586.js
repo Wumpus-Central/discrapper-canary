@@ -1,4 +1,5 @@
-e.exports = {
-    rightTrayIcon: 'rightTrayIcon_d22933',
-    participantName: 'participantName_d22933'
+var i = {
+    rightTrayIcon: 'rightTrayIcon__2cdb8',
+    participantName: 'participantName__2cdb8'
 };
+e.exports = i;

@@ -1,17 +1,13 @@
-r.d(n, {
-    Z: function () {
-        return c;
-    }
-});
-var i = r(442837),
-    a = r(41776),
-    o = r(695346),
-    s = r(314897),
-    l = r(271383),
-    u = r(699516);
-function c(e, n) {
-    let r = (0, i.e7)([s.default], () => s.default.getId() === e),
-        c = (0, i.e7)([a.Z], () => null != n && a.Z.isLurking(n)),
-        d = o.h2.useSetting();
-    return (0, i.e7)([u.Z, l.ZP], () => !r && !c && (u.Z.isFriend(e) || null != l.ZP.memberOf(e).find((e) => !d.includes(e))));
+n.d(t, { Z: () => u });
+var i = n(442837),
+    r = n(41776),
+    a = n(695346),
+    s = n(314897),
+    o = n(271383),
+    l = n(699516);
+function u(e, t) {
+    let n = (0, i.e7)([s.default], () => s.default.getId() === e),
+        u = (0, i.e7)([r.Z], () => null != t && r.Z.isLurking(t)),
+        c = a.h2.useSetting();
+    return (0, i.e7)([l.Z, o.ZP], () => !n && !u && (l.Z.isFriend(e) || null != o.ZP.memberOf(e).find((e) => !c.includes(e))));
 }

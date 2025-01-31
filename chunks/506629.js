@@ -1,26 +1,22 @@
-r.d(n, {
-    G: function () {
-        return s;
-    }
-});
+n.d(t, { G: () => s });
 var i,
-    a = [],
-    o = function () {
-        return a.splice(0).forEach(function (e) {
+    r = [],
+    a = function () {
+        return r.splice(0).forEach(function (e) {
             return e();
         });
     },
     s = function (e) {
         if (!i) {
-            var n = 0,
-                r = document.createTextNode(''),
+            var t = 0,
+                n = document.createTextNode(''),
                 s = { characterData: !0 };
             new MutationObserver(function () {
-                return o();
-            }).observe(r, s),
+                return a();
+            }).observe(n, s),
                 (i = function () {
-                    r.textContent = '' + (n ? n-- : n++);
+                    n.textContent = '' + (t ? t-- : t++);
                 });
         }
-        a.push(e), i();
+        r.push(e), i();
     };

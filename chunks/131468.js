@@ -1,12 +1,7 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => o }), n(47120);
 var i = n(570140),
-    r = n(317770),
-    l = n(314897),
+    l = n(317770),
+    r = n(314897),
     a = n(131951);
 function s(e, t, n) {
     return (
@@ -21,12 +16,12 @@ function s(e, t, n) {
         e
     );
 }
-class o extends r.Z {
+class o extends l.Z {
     _initialize() {
-        !__OVERLAY__ && (i.Z.subscribe('VOICE_CHANNEL_EFFECT_SEND', this._handleSoundboardSoundReceived), i.Z.subscribe('GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY', this._handleSoundboardSoundPlayLocally), i.Z.subscribe('VOICE_CHANNEL_SELECT', this._handleVoiceChannelSelect), i.Z.subscribe('AUDIO_TOGGLE_SELF_DEAF', this._handleToggleSelfDeafened));
+        __OVERLAY__ || (i.Z.subscribe('VOICE_CHANNEL_EFFECT_SEND', this._handleSoundboardSoundReceived), i.Z.subscribe('GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY', this._handleSoundboardSoundPlayLocally), i.Z.subscribe('VOICE_CHANNEL_SELECT', this._handleVoiceChannelSelect), i.Z.subscribe('AUDIO_TOGGLE_SELF_DEAF', this._handleToggleSelfDeafened));
     }
     _terminate() {
-        !__OVERLAY__ && (i.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', this._handleSoundboardSoundReceived), i.Z.unsubscribe('GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY', this._handleSoundboardSoundPlayLocally), i.Z.unsubscribe('VOICE_CHANNEL_SELECT', this._handleVoiceChannelSelect), i.Z.unsubscribe('AUDIO_TOGGLE_SELF_DEAF', this._handleToggleSelfDeafened));
+        __OVERLAY__ || (i.Z.unsubscribe('VOICE_CHANNEL_EFFECT_SEND', this._handleSoundboardSoundReceived), i.Z.unsubscribe('GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY', this._handleSoundboardSoundPlayLocally), i.Z.unsubscribe('VOICE_CHANNEL_SELECT', this._handleVoiceChannelSelect), i.Z.unsubscribe('AUDIO_TOGGLE_SELF_DEAF', this._handleToggleSelfDeafened));
     }
     constructor(...e) {
         super(...e),
@@ -38,12 +33,12 @@ class o extends r.Z {
                 a.Z.isDeaf() && this._stopAndClearSounds();
             }),
             s(this, '_handleSoundboardSoundReceived', (e) => {
-                let { soundId: t, soundVolume: n, userId: i, channelId: r } = e;
-                if (null != t && i !== l.default.getId()) return this._playSound(t, n, i, r);
+                let { soundId: t, soundVolume: n, userId: i, channelId: l } = e;
+                if (null != t && i !== r.default.getId()) return this._playSound(t, n, i, l);
             }),
             s(this, '_handleSoundboardSoundPlayLocally', (e) => {
                 let { sound: t, channelId: n } = e,
-                    i = l.default.getId();
+                    i = r.default.getId();
                 return this._playSound(t.soundId, t.volume, i, n);
             }),
             s(this, '_handleVoiceChannelSelect', () => {

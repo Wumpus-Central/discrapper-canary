@@ -1,12 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return C;
-    }
-});
+n.d(t, { Z: () => _ });
 var i = n(192379),
     l = n(442837),
-    r = n(570140),
-    a = n(911969),
+    a = n(570140),
+    r = n(911969),
     s = n(110924),
     o = n(213459),
     c = n(812206),
@@ -16,54 +12,54 @@ var i = n(192379),
     p = n(973616),
     m = n(594174),
     f = n(981631);
-let g = [a.yU.PRIMARY_ENTRY_POINT, a.yU.CHAT, a.yU.MESSAGE, a.yU.USER];
-function C(e) {
+let g = [r.yU.PRIMARY_ENTRY_POINT, r.yU.CHAT, r.yU.MESSAGE, r.yU.USER];
+function _(e) {
     var t, n;
-    let { context: C } = e,
-        x = C.channel,
-        v = i.useMemo(() => {
-            if (!0 !== x.isDM()) return null;
-            let e = m.default.getUser(x.getRecipientId());
+    let { context: _ } = e,
+        C = _.channel,
+        x = i.useMemo(() => {
+            if (!0 !== C.isDM()) return null;
+            let e = m.default.getUser(C.getRecipientId());
             return void 0 === e || !0 !== e.bot ? null : e;
-        }, [x]),
-        _ = (0, l.e7)([u.Z], () => {
+        }, [C]),
+        v = (0, l.e7)([u.Z], () => {
             var e;
-            return u.Z.isFetchingProfile(null !== (e = null == v ? void 0 : v.id) && void 0 !== e ? e : f.lds);
+            return u.Z.isFetchingProfile(null !== (e = null == x ? void 0 : x.id) && void 0 !== e ? e : f.lds);
         }),
-        I = (0, s.Z)(_),
-        E = (0, l.e7)([c.Z], () => c.Z.getAppIdForBotUserId(null == v ? void 0 : v.id)),
+        E = (0, s.Z)(v),
+        I = (0, l.e7)([c.Z], () => c.Z.getAppIdForBotUserId(null == x ? void 0 : x.id)),
         b = (0, l.e7)([u.Z], () => {
             var e;
-            return null !== v ? (null === (e = u.Z.getUserProfile(null == v ? void 0 : v.id)) || void 0 === e ? void 0 : e.application) : void 0;
+            return null !== x ? (null === (e = u.Z.getUserProfile(null == x ? void 0 : x.id)) || void 0 === e ? void 0 : e.application) : void 0;
         }),
-        Z = null != E ? E : null == b ? void 0 : b.id;
+        Z = null != I ? I : null == b ? void 0 : b.id;
     i.useEffect(() => {
         if (null == Z) {
             var e;
-            (0, h.Z)(null !== (e = null == v ? void 0 : v.id) && void 0 !== e ? e : f.lds);
+            (0, h.Z)(null !== (e = null == x ? void 0 : x.id) && void 0 !== e ? e : f.lds);
         }
-    }, [v, Z]),
+    }, [x, Z]),
         i.useEffect(() => {
-            (null == v ? void 0 : v.id) != null &&
-                r.Z.dispatch({
+            (null == x ? void 0 : x.id) != null &&
+                a.Z.dispatch({
                     type: 'APP_DM_OPEN',
-                    botUserId: v.id
+                    botUserId: x.id
                 });
-        }, [null == v ? void 0 : v.id]);
+        }, [null == x ? void 0 : x.id]);
     let N = (0, o.v1)(
             {
-                channel: x,
+                channel: C,
                 type: 'channel'
             },
             { commandTypes: g },
             {
                 applicationId: Z,
-                allowFetch: (null == v ? void 0 : v.id) != null,
+                allowFetch: (null == x ? void 0 : x.id) != null,
                 allowApplicationState: !0
             }
         ),
-        S = N.commands.filter((e) => e.type === a.yU.PRIMARY_ENTRY_POINT && e.applicationId === Z)[0],
-        T = N.commands.filter((e) => '0' !== e.id && !e.id.startsWith('-')),
+        T = N.commands.filter((e) => e.type === r.yU.PRIMARY_ENTRY_POINT && e.applicationId === Z)[0],
+        S = N.commands.filter((e) => '0' !== e.id && !e.id.startsWith('-')),
         j = N.loading,
         A =
             null ===
@@ -75,16 +71,16 @@ function C(e) {
                 : t.application,
         y = i.useMemo(() => (null != A ? p.ZP.createFromServer(A) : void 0), [A]),
         P = (0, d.q)(null == y ? Z : void 0),
-        M = null !== (n = null != y ? y : P) && void 0 !== n ? n : void 0,
-        R = null == M || (j && 0 === T.length);
+        R = null !== (n = null != y ? y : P) && void 0 !== n ? n : void 0,
+        M = null == R || (j && 0 === S.length);
     return {
-        application: M,
-        isInitialLoading: R,
-        primaryEntryPointCommand: S,
-        isProfileFetching: _,
-        wasProfileFetching: I,
+        application: R,
+        isInitialLoading: M,
+        primaryEntryPointCommand: T,
+        isProfileFetching: v,
+        wasProfileFetching: E,
         applicationId: Z,
-        channelId: x.id,
-        commands: T
+        channelId: C.id,
+        commands: S
     };
 }

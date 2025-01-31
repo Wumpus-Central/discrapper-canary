@@ -1,30 +1,31 @@
+r.d(t, { Z: () => b });
 var a = r(910974),
     n = r(190293),
-    o = r(192379),
-    s = r(639519),
-    i = r.n(s),
+    s = r(192379),
+    o = r(639519),
+    i = r.n(o),
     c = r(247595),
-    u = ['data'];
-function l(e) {
+    l = ['data'];
+function u(e) {
     var t = Object.getOwnPropertyNames(e).length;
     return ''.concat(t, ' ').concat(1 !== t ? 'keys' : 'key');
 }
 var f = function (e) {
     var t = e.data,
-        r = (0, n.Z)(e, u);
-    return o.createElement(
+        r = (0, n.Z)(e, l);
+    return s.createElement(
         c.Z,
         (0, a.Z)({}, r, {
             data: t,
             nodeType: 'Object',
             nodeTypeIndicator: 'Error' === r.nodeType ? 'Error()' : '{}',
-            createItemString: l,
+            createItemString: u,
             expandable: Object.getOwnPropertyNames(t).length > 0
         })
     );
 };
-(f.propTypes = {
+f.propTypes = {
     data: i().object,
     nodeType: i().string.isRequired
-}),
-    (t.Z = f);
+};
+let b = f;

@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
+n.d(t, { Z: () => d });
 var i = n(200651),
     l = n(192379),
     r = n(442837),
@@ -10,16 +6,16 @@ var i = n(200651),
     o = n(727258),
     s = n(325257),
     c = n(981631);
-function u(e) {
+function d(e) {
     let { guild: t, invite: n } = e,
-        u = l.useMemo(() => (0, o.Mg)(t.id), [t.id]),
-        d = (0, r.e7)([a.Z], () => a.Z.isFocused());
+        d = l.useMemo(() => (0, o.Mg)(t.id), [t.id]),
+        u = (0, r.e7)([a.Z], () => a.Z.isFocused());
     return null == t
         ? null
         : (0, i.jsx)(s.Z, {
-              guildNode: u,
+              guildNode: d,
               guild: t,
-              animatable: d,
+              animatable: u,
               draggable: !1,
               contextMenu: () => {},
               selected: !0,

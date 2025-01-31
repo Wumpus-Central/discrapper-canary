@@ -1,5 +1,6 @@
 e.exports = {
-    searchBar: 'searchBar_e06425 search_e06425',
-    searchIcon: 'searchIcon_e06425 search_e06425',
-    searchFloating: 'searchFloating_e06425'
+    search: 'search__1ac1c',
+    searchBar: 'searchBar__1ac1c search__1ac1c',
+    searchIcon: 'searchIcon__1ac1c search__1ac1c',
+    searchFloating: 'searchFloating__1ac1c'
 };

@@ -1,7 +1,8 @@
-e.exports = {
-    gameIcon: 'gameIcon_ed12a9',
-    gameMessageTooltip: 'gameMessageTooltip_ed12a9',
-    gameMessageTooltipContent: 'gameMessageTooltipContent_ed12a9',
-    textContainer: 'textContainer_ed12a9',
-    timestamp: 'timestamp_ed12a9'
+var i = {
+    gameIcon: 'gameIcon__5a366',
+    gameMessageTooltip: 'gameMessageTooltip__5a366',
+    gameMessageTooltipContent: 'gameMessageTooltipContent__5a366',
+    textContainer: 'textContainer__5a366',
+    timestamp: 'timestamp__5a366'
 };
+e.exports = i;

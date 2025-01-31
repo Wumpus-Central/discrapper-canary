@@ -1,60 +1,56 @@
-r.d(n, {
-    q: function () {
-        return c;
-    },
-    z: function () {
-        return u;
-    }
+n.d(t, {
+    q: () => u,
+    z: () => l
 });
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(481060),
-    l = r(182588);
-function u(e) {
-    let { children: n } = e;
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(481060),
+    o = n(182588);
+function l(e) {
+    let { children: t } = e;
     return (0, i.jsx)('div', {
-        className: l.cellGroup,
+        className: o.cellGroup,
         children: (0, i.jsx)('div', {
-            className: l.content,
-            children: n
+            className: o.content,
+            children: t
         })
     });
 }
-function c(e) {
-    let { icon: n, title: r, description: a, iconClassName: u, color: c, listType: d = 'icon', index: f } = e;
+function u(e) {
+    let { icon: t, title: n, description: r, iconClassName: l, color: u, listType: c = 'icon', index: d } = e;
     return (0, i.jsxs)('div', {
-        className: l.cell,
+        className: o.cell,
         children: [
-            'numbered' === d && null != f
-                ? (0, i.jsx)(s.Heading, {
+            'numbered' === c && null != d
+                ? (0, i.jsx)(s.X6q, {
                       variant: 'heading-md/semibold',
                       color: 'text-brand',
-                      className: l.number,
-                      children: f + 1
+                      className: o.number,
+                      children: d + 1
                   })
-                : null != n &&
+                : null != t &&
                   (0, i.jsx)('div', {
-                      className: l.iconContainer,
-                      children: (0, i.jsx)(n, {
-                          color: null != c ? c : 'currentColor',
-                          className: o()(l.icon, u)
+                      className: o.iconContainer,
+                      children: (0, i.jsx)(t, {
+                          color: null != u ? u : 'currentColor',
+                          className: a()(o.icon, l)
                       })
                   }),
             (0, i.jsxs)('div', {
-                className: l.textContainer,
+                className: o.textContainer,
                 children: [
                     (0, i.jsx)(s.Text, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        children: r
+                        children: n
                     }),
-                    null != a &&
+                    null != r &&
                         (0, i.jsx)(s.Text, {
                             variant: 'text-xs/medium',
                             color: 'text-secondary',
-                            children: a
+                            children: r
                         })
                 ]
             })

@@ -1,76 +1,72 @@
-r.d(n, {
-    m: function () {
-        return u;
-    }
-});
-var i = r(573654),
-    a = r(158545),
-    o = r(144459),
-    s = r(964742),
-    l = {
+n.d(t, { m: () => l });
+var i = n(573654),
+    r = n(158545),
+    a = n(144459),
+    s = n(964742),
+    o = {
         type: s.TL,
         payload: {
             clientOffset: null,
             sourceClientOffset: null
         }
     };
-function u(e) {
+function l(e) {
     return function () {
-        var n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
-            r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { publishSource: !0 },
-            i = r.publishSource,
-            o = void 0 === i || i,
-            u = r.clientOffset,
-            h = r.getSourceClientOffset,
-            _ = e.getMonitor(),
-            m = e.getRegistry();
-        e.dispatch((0, a.T)(u)), c(n, _, m);
-        var g = p(n, _);
-        if (null === g) {
-            e.dispatch(l);
+        var t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
+            n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { publishSource: !0 },
+            i = n.publishSource,
+            a = void 0 === i || i,
+            l = n.clientOffset,
+            _ = n.getSourceClientOffset,
+            p = e.getMonitor(),
+            h = e.getRegistry();
+        e.dispatch((0, r.T)(l)), u(t, p, h);
+        var m = f(t, p);
+        if (null === m) {
+            e.dispatch(o);
             return;
         }
-        var E = null;
-        if (u) {
-            if (!h) throw Error('getSourceClientOffset must be defined');
-            d(h), (E = h(g));
+        var g = null;
+        if (l) {
+            if (!_) throw Error('getSourceClientOffset must be defined');
+            c(_), (g = _(m));
         }
-        e.dispatch((0, a.T)(u, E));
-        var v = m.getSource(g).beginDrag(_, g);
-        if (null != v) {
-            f(v), m.pinSource(g);
-            var y = m.getSourceType(g);
+        e.dispatch((0, r.T)(l, g));
+        var E = h.getSource(m).beginDrag(p, m);
+        if (null != E) {
+            d(E), h.pinSource(m);
+            var v = h.getSourceType(m);
             return {
                 type: s.qu,
                 payload: {
-                    itemType: y,
-                    item: v,
-                    sourceId: g,
-                    clientOffset: u || null,
-                    sourceClientOffset: E || null,
-                    isSourcePublic: !!o
+                    itemType: v,
+                    item: E,
+                    sourceId: m,
+                    clientOffset: l || null,
+                    sourceClientOffset: g || null,
+                    isSourcePublic: !!a
                 }
             };
         }
     };
 }
-function c(e, n, r) {
-    (0, i.k)(!n.isDragging(), 'Cannot call beginDrag while dragging.'),
+function u(e, t, n) {
+    (0, i.k)(!t.isDragging(), 'Cannot call beginDrag while dragging.'),
         e.forEach(function (e) {
-            (0, i.k)(r.getSource(e), 'Expected sourceIds to be registered.');
+            (0, i.k)(n.getSource(e), 'Expected sourceIds to be registered.');
         });
 }
-function d(e) {
+function c(e) {
     (0, i.k)('function' == typeof e, 'When clientOffset is provided, getSourceClientOffset must be a function.');
 }
-function f(e) {
-    (0, i.k)((0, o.Kn)(e), 'Item must be an object.');
+function d(e) {
+    (0, i.k)((0, a.Kn)(e), 'Item must be an object.');
 }
-function p(e, n) {
-    for (var r = null, i = e.length - 1; i >= 0; i--)
-        if (n.canDragSource(e[i])) {
-            r = e[i];
+function f(e, t) {
+    for (var n = null, i = e.length - 1; i >= 0; i--)
+        if (t.canDragSource(e[i])) {
+            n = e[i];
             break;
         }
-    return r;
+    return n;
 }

@@ -1,59 +1,55 @@
-t.d(n, {
-    Z: function () {
-        return f;
-    }
-});
-var i = t(200651),
-    l = t(192379),
-    a = t(481060),
-    o = t(239091),
-    r = t(973616),
-    s = t(783097),
-    c = t(176412),
-    d = t(570949),
-    u = t(753972),
-    m = t(532309),
-    p = t(51688),
-    h = t(413097);
-function f(e) {
-    var n;
-    let { command: t, application: f, onClick: C, query: v, searchResultsPosition: x } = e,
-        _ = l.useCallback(
+n.d(t, { Z: () => v });
+var i = n(200651),
+    l = n(192379),
+    a = n(481060),
+    o = n(239091),
+    s = n(973616),
+    r = n(783097),
+    c = n(176412),
+    d = n(570949),
+    u = n(753972),
+    m = n(532309),
+    p = n(51688),
+    h = n(413097);
+function v(e) {
+    var t;
+    let { command: n, application: v, onClick: x, query: f, searchResultsPosition: N } = e,
+        C = l.useCallback(
             (e) => {
-                if ((0, s.BQ)(f)) {
-                    let n = f instanceof r.ZP ? f : r.ZP.createFromServer(f);
+                if ((0, r.BQ)(v)) {
+                    let t = v instanceof s.ZP ? v : s.ZP.createFromServer(v);
                     (0, o.vq)(e, (e) =>
                         (0, i.jsx)(d.Z, {
-                            application: n,
+                            application: t,
                             ...e
                         })
                     );
                 }
             },
-            [f]
+            [v]
         ),
-        { iconURL: N, name: A, description: I } = l.useMemo(() => (0, s.sl)(f, { fakeAppIconURL: h }), [f]),
-        E = l.useMemo(() => {
+        { iconURL: E, name: A, description: I } = l.useMemo(() => (0, r.sl)(v, { fakeAppIconURL: h }), [v]),
+        g = l.useMemo(() => {
             var e;
-            let n = null !== (e = null == t ? void 0 : t.displayDescription) && void 0 !== e ? e : I;
-            return null == n ? null : (0, c.ae)(n, void 0);
-        }, [I, null == t ? void 0 : t.displayDescription]),
-        { trackSearchResultsItemImpressionRef: g } = (0, m.Z)({
-            applicationId: f.id,
-            commandId: null == t ? void 0 : t.id,
-            query: v,
-            searchResultsPosition: x
+            let t = null !== (e = null == n ? void 0 : n.displayDescription) && void 0 !== e ? e : I;
+            return null == t ? null : (0, c.ae)(t, void 0);
+        }, [I, null == n ? void 0 : n.displayDescription]),
+        { trackSearchResultsItemImpressionRef: _ } = (0, m.Z)({
+            applicationId: v.id,
+            commandId: null == n ? void 0 : n.id,
+            query: f,
+            searchResultsPosition: N
         });
-    return (0, i.jsx)(a.Clickable, {
+    return (0, i.jsx)(a.P3F, {
         className: p.clickable,
-        innerRef: (e) => (g.current = e),
-        onClick: C,
-        onContextMenu: _,
-        children: (0, i.jsxs)(a.FocusBlock, {
+        innerRef: (e) => (_.current = e),
+        onClick: x,
+        onContextMenu: C,
+        children: (0, i.jsxs)(a.Rny, {
             className: p.focusBlock,
             children: [
                 (0, i.jsx)(u.Z, {
-                    src: N,
+                    src: E,
                     className: p.icon,
                     'aria-hidden': !0,
                     rendersPlaceholder: !0
@@ -61,21 +57,21 @@ function f(e) {
                 (0, i.jsxs)('div', {
                     className: p.cmdDetails,
                     children: [
-                        (0, i.jsx)(a.Heading, {
+                        (0, i.jsx)(a.X6q, {
                             variant: 'heading-md/semibold',
                             color: 'header-primary',
                             lineClamp: 1,
-                            children: null !== (n = null == t ? void 0 : t.displayName) && void 0 !== n ? n : A
+                            children: null !== (t = null == n ? void 0 : n.displayName) && void 0 !== t ? t : A
                         }),
                         (0, i.jsx)(a.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-secondary',
                             lineClamp: 1,
-                            children: E
+                            children: g
                         })
                     ]
                 }),
-                null != t
+                null != n
                     ? (0, i.jsx)(a.Text, {
                           className: p.cmdAppName,
                           variant: 'text-sm/normal',

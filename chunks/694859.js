@@ -1,9 +1,5 @@
-t.d(n, {
-    X: function () {
-        return l;
-    }
-});
-let i = (0, t(818083).B)({
+n.d(t, { X: () => l });
+let i = (0, n(818083).B)({
     kind: 'user',
     id: '2024-12_save_voice_message_menu_item',
     label: 'Save voice message menu item on web',
@@ -17,6 +13,6 @@ let i = (0, t(818083).B)({
     ]
 });
 function l(e) {
-    let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    return i.useExperiment({ location: e }, { autoTrackExposure: n }).enabled;
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+    return i.useExperiment({ location: e }, { autoTrackExposure: t }).enabled;
 }

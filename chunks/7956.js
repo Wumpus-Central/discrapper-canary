@@ -1,36 +1,32 @@
-r.d(n, {
-    i: function () {
-        return o;
-    }
-});
-var i = r(804739),
-    a = r(981631);
-function o(e, n, r) {
-    let o = n.getState(e.id, e.branchId),
-        s = r.getQueuePosition(e.id, e.branchId),
-        l = r.paused;
-    if (null != o) {
+n.d(t, { i: () => a });
+var i = n(804739),
+    r = n(981631);
+function a(e, t, n) {
+    let a = t.getState(e.id, e.branchId),
+        s = n.getQueuePosition(e.id, e.branchId),
+        o = n.paused;
+    if (null != a) {
         if (null == s || -1 === s)
-            switch (o.type) {
-                case a.vxO.INSTALLING:
-                    return a.apO.INSTALL;
-                case a.vxO.UPDATING:
-                case a.vxO.UPDATE_REQUIRED:
-                    return a.apO.UPDATE;
+            switch (a.type) {
+                case r.vxO.INSTALLING:
+                    return r.apO.INSTALL;
+                case r.vxO.UPDATING:
+                case r.vxO.UPDATE_REQUIRED:
+                    return r.apO.UPDATE;
             }
-        switch (o.type) {
-            case a.vxO.INSTALLING:
-            case a.vxO.UPDATING:
-            case a.vxO.UPDATE_REQUIRED:
-            case a.vxO.REPAIRING:
-                if (s > 0) return a.apO.MOVE_UP;
-                if (l) return a.apO.RESUME;
-                return a.apO.PAUSE;
-            case a.vxO.UP_TO_DATE:
-                return a.apO.PLAY;
-            case a.vxO.UNINSTALLING:
+        switch (a.type) {
+            case r.vxO.INSTALLING:
+            case r.vxO.UPDATING:
+            case r.vxO.UPDATE_REQUIRED:
+            case r.vxO.REPAIRING:
+                if (s > 0) return r.apO.MOVE_UP;
+                if (o) return r.apO.RESUME;
+                return r.apO.PAUSE;
+            case r.vxO.UP_TO_DATE:
+                return r.apO.PLAY;
+            case r.vxO.UNINSTALLING:
                 return null;
         }
     }
-    return null != s && s > 0 ? a.apO.MOVE_UP : (0, i.Q)() ? a.apO.INSTALL : null;
+    return null != s && s > 0 ? r.apO.MOVE_UP : (0, i.Q)() ? r.apO.INSTALL : null;
 }

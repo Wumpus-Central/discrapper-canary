@@ -1,23 +1,18 @@
-r.d(t, {
-    s: function () {
-        return _;
-    }
-});
-var a = r(622916),
-    n = r(151122);
-let _ = (0, n._I)((e = {}) => {
-    let t = {
+a.d(e, { s: () => n });
+var r = a(622916);
+let n = (0, a(151122)._I)((t = {}) => {
+    let e = {
         debugger: !1,
         stringify: !1,
-        ...e
+        ...t
     };
     return {
         name: 'Debug',
-        setup(e) {
-            e.on('beforeSendEvent', (e, r) => {
-                t.debugger,
-                    (0, a.Cf)(() => {
-                        t.stringify ? (console.log(JSON.stringify(e, null, 2)), r && Object.keys(r).length && console.log(JSON.stringify(r, null, 2))) : (console.log(e), r && Object.keys(r).length && console.log(r));
+        setup(t) {
+            t.on('beforeSendEvent', (t, a) => {
+                e.debugger,
+                    (0, r.Cf)(() => {
+                        e.stringify ? (console.log(JSON.stringify(t, null, 2)), a && Object.keys(a).length && console.log(JSON.stringify(a, null, 2))) : (console.log(t), a && Object.keys(a).length && console.log(a));
                     });
             });
         }

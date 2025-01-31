@@ -1,51 +1,45 @@
-r.d(n, {
-    Z: function () {
-        return u;
-    }
-});
-var i = r(47120);
-var a = r(653041);
-var o = r(192379),
-    s = r(442837),
-    l = r(235587);
-function u(e) {
-    let { guildId: n, leaderboardId: r, intervalStart: i } = e,
-        a = (0, s.Wu)(
-            [l.Z],
+n.d(t, { Z: () => s }), n(47120), n(653041);
+var i = n(192379),
+    r = n(442837),
+    a = n(235587);
+function s(e) {
+    let { guildId: t, leaderboardId: n, intervalStart: s } = e,
+        o = (0, r.Wu)(
+            [a.Z],
             () => {
-                var e, a;
-                return null !== (a = null === (e = l.Z.getPrevLeaderboardRanks(n, r, i)) || void 0 === e ? void 0 : e.ranks) && void 0 !== a ? a : [];
+                var e, i;
+                return null !== (i = null === (e = a.Z.getPrevLeaderboardRanks(t, n, s)) || void 0 === e ? void 0 : e.ranks) && void 0 !== i ? i : [];
             },
-            [n, i, r]
+            [t, s, n]
         ),
-        u = (0, s.Wu)(
-            [l.Z],
+        l = (0, r.Wu)(
+            [a.Z],
             () => {
-                var e, a;
-                return null !== (a = null === (e = l.Z.getCurrentLeaderboardRanks(n, r, i)) || void 0 === e ? void 0 : e.ranks) && void 0 !== a ? a : [];
+                var e, i;
+                return null !== (i = null === (e = a.Z.getCurrentLeaderboardRanks(t, n, s)) || void 0 === e ? void 0 : e.ranks) && void 0 !== i ? i : [];
             },
-            [n, i, r]
+            [t, s, n]
         );
     return {
-        rankChanges: o.useMemo(() => {
+        rankChanges: i.useMemo(() => {
             let e = new Map();
-            a.forEach((n, r) => {
-                e.set(n, r + 1);
+            o.forEach((t, n) => {
+                e.set(t, n + 1);
             });
-            let n = [];
+            let t = [];
             return (
-                u.forEach((r, i) => {
-                    let a = i + 1,
-                        o = e.get(r);
-                    o !== a &&
-                        n.push({
-                            userId: r,
-                            currentRank: a,
-                            previousRank: o
+                l.forEach((n, i) => {
+                    let r = i + 1,
+                        a = e.get(n);
+                    a !== r &&
+                        t.push({
+                            userId: n,
+                            currentRank: r,
+                            previousRank: a
                         });
                 }),
-                n
+                t
             );
-        }, [a, u])
+        }, [o, l])
     };
 }

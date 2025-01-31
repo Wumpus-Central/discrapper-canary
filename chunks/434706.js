@@ -1,11 +1,7 @@
-r.d(n, {
-    WG: function () {
-        return a.W;
-    },
-    vQ: function () {
-        return i.vQ;
-    }
+n.d(t, {
+    WG: () => r.W,
+    vQ: () => i.vQ
 });
-var i = r(518648),
-    a = r(767338);
-r(656472), r(779448);
+var i = n(518648),
+    r = n(767338);
+n(656472), n(779448);

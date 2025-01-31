@@ -1,64 +1,60 @@
-n.d(t, {
-    Z: function () {
-        return v;
-    }
-});
-var r = n(200651),
+n.d(t, { Z: () => v });
+var l = n(200651),
     i = n(192379),
-    l = n(120356),
-    o = n.n(l),
-    a = n(442837),
-    u = n(481060),
-    s = n(592125),
+    r = n(120356),
+    a = n.n(r),
+    o = n(442837),
+    s = n(481060),
+    u = n(592125),
     c = n(496675),
     d = n(449605),
     f = n(981631),
-    p = n(388032),
-    m = n(680809);
+    m = n(388032),
+    p = n(680809);
 function h(e) {
-    let { isLoading: t, noText: n, previewText: i, className: l } = e;
-    return (0, r.jsx)('div', {
-        className: o()(m.emptyPreviewContainer, l),
+    let { isLoading: t, noText: n, previewText: i, className: r } = e;
+    return (0, l.jsx)('div', {
+        className: a()(p.emptyPreviewContainer, r),
         children: t
-            ? (0, r.jsx)(u.Spinner, {})
-            : (0, r.jsxs)(r.Fragment, {
+            ? (0, l.jsx)(s.$jN, {})
+            : (0, l.jsxs)(l.Fragment, {
                   children: [
-                      (0, r.jsx)('div', { className: m.emptyPreviewImage }),
+                      (0, l.jsx)('div', { className: p.emptyPreviewImage }),
                       n
                           ? null
-                          : (0, r.jsx)(u.Text, {
+                          : (0, l.jsx)(s.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'none',
-                                className: m.emptyPreviewText,
-                                children: null != i ? i : p.intl.string(p.t.uQZTBQ)
+                                className: p.emptyPreviewText,
+                                children: null != i ? i : m.intl.string(m.t.uQZTBQ)
                             })
                   ]
               })
     });
 }
 function v(e) {
-    let { stream: t, className: n, noText: l = !1 } = e,
-        o = (0, a.e7)([s.Z], () => s.Z.getBasicChannel(t.channelId)),
-        u = (0, a.e7)([c.Z], () => null != o && c.Z.canBasicChannel(f.S7T.CONNECT, o)),
+    let { stream: t, className: n, noText: r = !1 } = e,
+        a = (0, o.e7)([u.Z], () => u.Z.getBasicChannel(t.channelId)),
+        s = (0, o.e7)([c.Z], () => null != a && c.Z.canBasicChannel(f.S7T.CONNECT, a)),
         { previewUrl: v, isLoading: g } = (0, d.Z)(t.guildId, t.channelId, t.ownerId),
         x = i.useRef(g ? null : v);
     i.useEffect(() => {
-        !g && (x.current = v);
+        g || (x.current = v);
     }, [v, g]);
-    let P = null == v || g ? x.current : v;
-    return null == P
-        ? (0, r.jsx)(h, {
+    let E = null == v || g ? x.current : v;
+    return null == E
+        ? (0, l.jsx)(h, {
               className: n,
               isLoading: g,
-              noText: l,
-              previewText: u ? void 0 : p.intl.string(p.t.pgUTZG)
+              noText: r,
+              previewText: s ? void 0 : m.intl.string(m.t.pgUTZG)
           })
-        : (0, r.jsx)('div', {
+        : (0, l.jsx)('div', {
               className: n,
-              children: (0, r.jsx)('img', {
-                  src: P,
+              children: (0, l.jsx)('img', {
+                  src: E,
                   alt: '',
-                  className: m.image
+                  className: p.image
               })
           });
 }

@@ -1,10 +1,6 @@
-r.d(n, {
-    P2: function () {
-        return s;
-    },
-    jl: function () {
-        return o;
-    }
+n.d(t, {
+    P2: () => s,
+    jl: () => a
 });
 let i = {
         emitDefaultValues: !1,
@@ -12,9 +8,9 @@ let i = {
         useProtoFieldName: !1,
         prettySpaces: 0
     },
-    a = { ignoreUnknownFields: !1 };
-function o(e) {
-    return e ? Object.assign(Object.assign({}, a), e) : a;
+    r = { ignoreUnknownFields: !1 };
+function a(e) {
+    return e ? Object.assign(Object.assign({}, r), e) : r;
 }
 function s(e) {
     return e ? Object.assign(Object.assign({}, i), e) : i;

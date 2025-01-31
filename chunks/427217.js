@@ -1,34 +1,30 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-});
+n.d(t, { Z: () => o });
 var i = n(200651);
 n(192379);
-var r = n(120356),
-    l = n.n(r),
+var l = n(120356),
+    r = n.n(l),
     a = n(584973),
     s = n(874751);
 function o(e) {
-    let { activity: t, className: n, emojiClassName: r, textClassName: o, placeholderText: c, soloEmojiClassName: d, animate: u = !0, hideTooltip: h = !1, hideEmoji: m = !1, children: p } = e;
+    let { activity: t, className: n, emojiClassName: l, textClassName: o, placeholderText: c, soloEmojiClassName: d, animate: u = !0, hideTooltip: h = !1, hideEmoji: m = !1, children: p } = e;
     if (null == t) return null;
     let { emoji: g } = t,
-        f = null != t.state && '' !== t.state ? t.state : c;
+        _ = null != t.state && '' !== t.state ? t.state : c;
     return (0, i.jsxs)('div', {
-        className: l()(s.__invalid_container, n),
+        className: r()(s.__invalid_container, n),
         children: [
             m || null == g
                 ? null
                 : (0, i.jsx)(a.Z, {
                       emoji: g,
-                      className: l()(s.emoji, r, null != d ? { [d]: null == f || '' === f } : null),
+                      className: r()(s.emoji, l, null != d ? { [d]: null == _ || '' === _ } : null),
                       animate: u,
                       hideTooltip: h
                   }),
-            null != f && f.length > 0
+            null != _ && _.length > 0
                 ? (0, i.jsx)('span', {
                       className: o,
-                      children: f
+                      children: _
                   })
                 : null,
             p

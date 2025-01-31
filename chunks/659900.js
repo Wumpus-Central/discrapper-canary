@@ -1,24 +1,19 @@
-n.d(t, {
-    Z: function () {
-        return Z;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => Z }), n(47120);
 var r = n(200651),
     i = n(192379),
     s = n(120356),
     l = n.n(s),
     a = n(392711),
     c = n.n(a),
-    u = n(866442),
-    d = n(692547),
+    d = n(866442),
+    u = n(692547),
     o = n(481060),
     C = n(893776),
     m = n(37234),
     L = n(232567),
     h = n(820160),
-    f = n(594174),
-    x = n(259580),
+    x = n(594174),
+    f = n(259580),
     g = n(350566),
     p = n(837748),
     v = n(971401),
@@ -30,22 +25,22 @@ function Z(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         [n, s] = i.useState(''),
         [l, a] = i.useState(null),
-        [c, u] = i.useState(null),
-        d = (0, p.Z)(e.code);
+        [c, d] = i.useState(null),
+        u = (0, p.Z)(e.code);
     i.useEffect(() => {
-        (async function e() {
-            let e = f.default.getCurrentUser();
+        !(async function () {
+            let e = x.default.getCurrentUser();
             if (null == e)
                 try {
                     e = await (0, L.k)();
                 } catch (e) {
                     C.Z.verifySSOToken(null);
                 }
-            null != e && s(H.intl.formatToPlainString(d.defaultName, { username: e.username }));
+            null != e && s(H.intl.formatToPlainString(u.defaultName, { username: e.username }));
         })();
-    }, [d.defaultName]);
-    (0, v.Z)(e);
-    let x = (0, r.jsxs)(r.Fragment, {
+    }, [u.defaultName]),
+        (0, v.Z)(e);
+    let f = (0, r.jsxs)(r.Fragment, {
             children: [
                 t ? (0, r.jsx)(j.Z, { guildTemplate: e }) : null,
                 (0, r.jsx)('div', {
@@ -55,9 +50,9 @@ function Z(e) {
                         onChange: a
                     })
                 }),
-                (0, r.jsx)(o.FormItem, {
-                    title: d.nameLabel,
-                    children: (0, r.jsx)(o.TextInput, {
+                (0, r.jsx)(o.xJW, {
+                    title: u.nameLabel,
+                    children: (0, r.jsx)(o.oil, {
                         type: 'text',
                         value: n,
                         maxLength: 100,
@@ -69,17 +64,17 @@ function Z(e) {
                     variant: 'text-xs/normal',
                     color: 'text-muted',
                     className: E.guidelines,
-                    children: H.intl.format(d.terms, { guidelinesURL: N.EYA.GUIDELINES })
+                    children: H.intl.format(u.terms, { guidelinesURL: N.EYA.GUIDELINES })
                 })
             ]
         }),
         Z = e.serializedSourceGuild.roles.filter((e) => '@everyone' !== e.name);
     return {
-        form: x,
+        form: f,
         preview: (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)('div', { className: E.divider }),
-                (0, r.jsxs)(o.FormItem, {
+                (0, r.jsxs)(o.xJW, {
                     className: E.previewSection,
                     title: H.intl.string(H.t.Zxk1OD),
                     children: [
@@ -101,7 +96,7 @@ function Z(e) {
                 }),
                 Z.length > 0
                     ? (0, r.jsx)(r.Fragment, {
-                          children: (0, r.jsx)(o.FormItem, {
+                          children: (0, r.jsx)(o.xJW, {
                               className: E.previewSection,
                               title: H.intl.string(H.t['RJ1e/v']),
                               children: (0, r.jsx)(T, { roles: Z })
@@ -113,9 +108,9 @@ function Z(e) {
         handleSubmit: () => {
             g.Z.acceptGuildTemplate(e.code, n, l)
                 .then(() => {
-                    (0, o.closeAllModals)(), (0, m.Ou)();
+                    (0, o.pTH)(), (0, m.Ou)();
                 })
-                .catch((e) => u(e));
+                .catch((e) => d(e));
         }
     };
 }
@@ -126,7 +121,7 @@ function M(e) {
             .map((e) => {
                 let t = (function (e) {
                     let { type: t } = e;
-                    return t === N.d4z.GUILD_VOICE ? o.VoiceNormalIcon : t === N.d4z.GUILD_CATEGORY ? x.Z : o.TextIcon;
+                    return t === N.d4z.GUILD_VOICE ? o.gj8 : t === N.d4z.GUILD_CATEGORY ? f.Z : o.VL1;
                 })(e);
                 return (0, r.jsxs)(
                     'div',
@@ -150,27 +145,26 @@ function M(e) {
         children: n
     });
 }
-n(418757);
 function T(e) {
     let { roles: t } = e,
         n = t
             .slice()
             .reverse()
-            .map((e) => (0, r.jsx)(b, { role: e }, e.id));
+            .map((e) => (0, r.jsx)(_, { role: e }, e.id));
     return (0, r.jsx)('ul', {
         className: E.rolesWrapper,
         children: n
     });
 }
-function b(e) {
+function _(e) {
     var t;
     let { role: n } = e,
-        i = null == n.color ? d.Z.unsafe_rawColors.PRIMARY_300.css : (0, u.Rf)(n.color);
+        i = null == n.color ? u.Z.unsafe_rawColors.PRIMARY_300.css : (0, d.Rf)(n.color);
     return (0, r.jsxs)('li', {
         className: E.role,
-        style: { borderColor: null !== (t = (0, u.wK)(i, 0.6)) && void 0 !== t ? t : void 0 },
+        style: { borderColor: null !== (t = (0, d.wK)(i, 0.6)) && void 0 !== t ? t : void 0 },
         children: [
-            (0, r.jsx)(o.RoleCircle, {
+            (0, r.jsx)(o.xko, {
                 className: E.roleCircle,
                 color: i
             }),
@@ -181,3 +175,4 @@ function b(e) {
         ]
     });
 }
+n(418757);

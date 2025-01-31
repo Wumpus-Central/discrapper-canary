@@ -1,51 +1,47 @@
-t.d(e, {
-    g: function () {
-        return p;
-    }
-});
+t.d(n, { g: () => N });
 var i = t(200651);
 t(192379);
 var l = t(120356),
     a = t.n(l),
     r = t(704215),
-    o = t(481060),
-    d = t(605236),
-    u = t(434404),
-    c = t(41776),
-    s = t(703656),
+    d = t(481060),
+    s = t(605236),
+    o = t(434404),
+    u = t(41776),
+    c = t(703656),
     g = t(981631),
-    I = t(388032),
+    h = t(388032),
     f = t(385982);
-let p = (n) => {
-    let { guild: e } = n,
-        l = e.id,
-        p = async () => {
-            let n = c.Z.isLurking(l);
-            await u.Z.leaveGuild(l),
-                n
-                    ? (0, s.uL)(g.Z5c.GUILD_DISCOVERY)
-                    : !(0, d.un)(r.z.GUILD_LEAVE_FEEDBACK) &&
-                      (0, o.openModalLazy)(async () => {
-                          let { default: n } = await t.e('74920').then(t.bind(t, 131102));
+let N = (e) => {
+    let { guild: n } = e,
+        l = n.id,
+        N = async () => {
+            let e = u.Z.isLurking(l);
+            await o.Z.leaveGuild(l),
+                e
+                    ? (0, c.uL)(g.Z5c.GUILD_DISCOVERY)
+                    : (0, s.un)(r.z.GUILD_LEAVE_FEEDBACK) ||
+                      (0, d.ZDy)(async () => {
+                          let { default: e } = await t.e('74920').then(t.bind(t, 131102));
                           return (t) =>
-                              (0, i.jsx)(n, {
+                              (0, i.jsx)(e, {
                                   ...t,
                                   guildId: l,
-                                  guildName: e.name
+                                  guildName: n.name
                               });
                       });
         };
-    return (0, i.jsx)(o.ConfirmModal, {
+    return (0, i.jsx)(d.ConfirmModal, {
         className: a()(f.__invalid_confirmModal),
         bodyClassName: a()(f.__invalid_confirmModalBody),
-        header: I.intl.formatToPlainString(I.t['1GX6Pz'], { name: e.name }),
-        confirmText: e.hasFeature(g.oNc.HUB) ? I.intl.string(I.t.Dv8gFR) : I.intl.string(I.t.J2TBi4),
-        cancelText: I.intl.string(I.t['ETE/oK']),
-        onConfirm: p,
-        ...n,
-        children: (0, i.jsx)(o.Text, {
+        header: h.intl.formatToPlainString(h.t['1GX6Pz'], { name: n.name }),
+        confirmText: n.hasFeature(g.oNc.HUB) ? h.intl.string(h.t.Dv8gFR) : h.intl.string(h.t.J2TBi4),
+        cancelText: h.intl.string(h.t['ETE/oK']),
+        onConfirm: N,
+        ...e,
+        children: (0, i.jsx)(d.Text, {
             variant: 'text-md/normal',
-            children: e.hasFeature(g.oNc.HUB) ? I.intl.format(I.t.ZHTXVF, { name: e.name }) : I.intl.format(I.t.ZEXC0t, { name: e.name })
+            children: n.hasFeature(g.oNc.HUB) ? h.intl.format(h.t.ZHTXVF, { name: n.name }) : h.intl.format(h.t.ZEXC0t, { name: n.name })
         })
     });
 };

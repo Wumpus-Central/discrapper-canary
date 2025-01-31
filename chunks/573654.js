@@ -1,20 +1,16 @@
-function i(e, n) {
-    for (var r, i = arguments.length, a = Array(i > 2 ? i - 2 : 0), o = 2; o < i; o++) a[o - 2] = arguments[o];
+function i(e, t) {
+    for (var n, i = arguments.length, r = Array(i > 2 ? i - 2 : 0), a = 2; a < i; a++) r[a - 2] = arguments[a];
     if (!e) {
-        if (void 0 === n) r = Error('Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.');
+        if (void 0 === t) n = Error('Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.');
         else {
             var s = 0;
-            (r = Error(
-                n.replace(/%s/g, function () {
-                    return a[s++];
+            (n = Error(
+                t.replace(/%s/g, function () {
+                    return r[s++];
                 })
             )).name = 'Invariant Violation';
         }
-        throw ((r.framesToPop = 1), r);
+        throw ((n.framesToPop = 1), n);
     }
 }
-r.d(n, {
-    k: function () {
-        return i;
-    }
-});
+n.d(t, { k: () => i });

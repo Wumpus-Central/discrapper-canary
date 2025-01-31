@@ -1,11 +1,7 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
-var r = n(200651);
+n.d(t, { Z: () => c });
+var i = n(200651);
 n(192379);
-var i = n(481060),
+var r = n(481060),
     a = n(239091),
     l = n(299206),
     o = n(858042),
@@ -22,35 +18,35 @@ function c(e) {
         });
     return null == d && null == u
         ? null
-        : (0, r.jsx)(i.Popout, {
+        : (0, i.jsx)(r.yRy, {
               align: 'top',
               position: 'right',
               disablePointerEvents: !1,
               renderPopout: (e) => {
                   let { closePopout: t } = e;
-                  return (0, r.jsx)(i.Menu, {
+                  return (0, i.jsx)(r.v2r, {
                       navId: 'game-profile-context',
                       onClose: () => {
                           (0, a.Zy)(), t();
                       },
                       'aria-label': s.intl.string(s.t.PNeFgY),
                       onSelect: () => {},
-                      children: (0, r.jsxs)(r.Fragment, {
-                          children: [(0, r.jsx)(i.MenuGroup, { children: d }), (0, r.jsx)(i.MenuGroup, { children: u })]
+                      children: (0, i.jsxs)(i.Fragment, {
+                          children: [(0, i.jsx)(r.kSQ, { children: d }), (0, i.jsx)(r.kSQ, { children: u })]
                       })
                   });
               },
               children: (e) =>
-                  (0, r.jsx)(i.Tooltip, {
+                  (0, i.jsx)(r.ua7, {
                       text: s.intl.string(s.t.UKOtz8),
                       children: (t) =>
-                          (0, r.jsx)(i.Clickable, {
+                          (0, i.jsx)(r.P3F, {
                               className: n,
                               ...t,
                               ...e,
-                              children: (0, r.jsx)(i.MoreHorizontalIcon, {
+                              children: (0, i.jsx)(r.xhG, {
                                   size: 'xs',
-                                  color: i.tokens.colors.WHITE
+                                  color: r.TVs.colors.WHITE
                               })
                           })
                   })

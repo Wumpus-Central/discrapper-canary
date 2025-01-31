@@ -1,57 +1,52 @@
-r.d(n, {
-    W: function () {
-        return f;
-    },
-    s: function () {
-        return i;
-    }
-});
+n.d(t, {
+    W: () => u,
+    s: () => l
+}),
+    n(47120),
+    n(653041);
 var i,
-    a,
-    o = r(47120);
-var s = r(653041);
-var l = r(192379),
-    u = r(392711),
-    c = r.n(u);
-function d(e, n, r) {
+    r = n(192379),
+    a = n(392711),
+    s = n.n(a);
+function o(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-!(function (e) {
-    (e.PAGE = 'PAGE'), (e.GAP = 'GAP'), (e.BACK = 'BACK'), (e.NEXT = 'NEXT');
-})(i || (i = {}));
-class f extends (a = l.PureComponent) {
+var l = (function (e) {
+    return (e.PAGE = 'PAGE'), (e.GAP = 'GAP'), (e.BACK = 'BACK'), (e.NEXT = 'NEXT'), e;
+})({});
+class u extends (i = r.PureComponent) {
     getNeighborBounds() {
-        let { totalPageCount: e, maxVisiblePages: n, selectedPage: r } = this.props,
-            i = Math.ceil(n / 2),
-            a = Math.floor(n / 2),
-            o = [1, e],
-            [s, l] = (o = r <= i ? [1, n] : r > e - a ? [e - n + 1, e] : [r - i + 1, r + a]);
-        return [Math.max(s, 1), Math.min(l, e)];
+        let { totalPageCount: e, maxVisiblePages: t, selectedPage: n } = this.props,
+            i = Math.ceil(t / 2),
+            r = Math.floor(t / 2),
+            a = [1, e],
+            [s, o] = (a = n <= i ? [1, t] : n > e - r ? [e - t + 1, e] : [n - i + 1, n + r]);
+        return [Math.max(s, 1), Math.min(o, e)];
     }
     getPageList() {
-        let { totalPageCount: e, selectedPage: n, hideMaxPage: r } = this.props,
-            [i, a] = this.getNeighborBounds(),
-            o = {
+        let { totalPageCount: e, selectedPage: t, hideMaxPage: n } = this.props,
+            [i, r] = this.getNeighborBounds(),
+            a = {
                 type: 'BACK',
                 key: 'back',
-                disabled: 1 === n,
+                disabled: 1 === t,
                 selected: !1,
                 navigateToPage: this.handleBackward
             },
-            s = {
+            o = {
                 type: 'NEXT',
                 key: 'next',
-                disabled: n === e,
+                disabled: t === e,
                 selected: !1,
                 navigateToPage: this.handleForward
             },
@@ -72,64 +67,64 @@ class f extends (a = l.PureComponent) {
                     }
                 ]),
                 (i += 2)),
-            a < e &&
+            r < e &&
                 ((u = [
                     {
                         type: 'GAP',
                         key: 'right-gap'
                     }
                 ]),
-                !r &&
+                n ||
                     u.push({
                         type: 'PAGE',
                         key: 'page-'.concat(e),
                         targetPage: e,
                         navigateToPage: () => this.handleJump(e)
                     }),
-                (a -= 2)),
+                (r -= 2)),
             [
-                o,
+                a,
                 ...l,
-                ...c()
-                    .range(i, a + 1)
+                ...s()
+                    .range(i, r + 1)
                     .map((e) => ({
                         type: 'PAGE',
                         key: 'page-'.concat(e),
                         targetPage: e,
-                        selected: e === n,
+                        selected: e === t,
                         disabled: !1,
                         navigateToPage: () => this.handleJump(e)
                     })),
                 ...u,
-                s
+                o
             ]
         );
     }
     render() {
-        let { totalPageCount: e, children: n } = this.props;
-        return n({
+        let { totalPageCount: e, children: t } = this.props;
+        return t({
             pages: this.getPageList(),
             hasMultiplePages: e > 1
         });
     }
     constructor(...e) {
         super(...e),
-            d(this, 'changePageTo', (e) => {
-                let { selectedPage: n, onPageChange: r } = this.props;
-                n !== e && null != r && r(e);
+            o(this, 'changePageTo', (e) => {
+                let { selectedPage: t, onPageChange: n } = this.props;
+                t !== e && null != n && n(e);
             }),
-            d(this, 'handleForward', () => {
+            o(this, 'handleForward', () => {
                 this.changePageTo(Math.min(this.props.selectedPage + 1, this.props.totalPageCount));
             }),
-            d(this, 'handleBackward', () => {
+            o(this, 'handleBackward', () => {
                 this.changePageTo(Math.max(this.props.selectedPage - 1, 1));
             }),
-            d(this, 'handleJump', (e) => {
+            o(this, 'handleJump', (e) => {
                 this.changePageTo(e);
             });
     }
 }
-d(f, 'defaultProps', {
+o(u, 'defaultProps', {
     maxVisiblePages: 9,
     hideMaxPage: !1
 });

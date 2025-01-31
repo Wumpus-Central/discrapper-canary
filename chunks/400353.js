@@ -1,2 +1,2 @@
-var a = r(480751)(r(573401), 'Set');
-e.exports = a;
+var r = a(480751)(a(573401), 'Set');
+t.exports = r;

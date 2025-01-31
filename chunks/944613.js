@@ -1,57 +1,56 @@
-var i = r(47120);
-var a = r(200651);
-r(192379);
-var o = r(658722),
-    s = r.n(o),
-    l = r(392711),
-    u = r.n(l),
-    c = r(866442),
-    d = r(442837),
-    f = r(481060),
-    p = r(430824),
-    h = r(981631),
-    _ = r(388032),
-    m = r(286841);
-function g(e) {
-    let { className: n, guild: r, roleStyle: i, roleFilter: o, onSelect: l, onClose: g } = e,
-        E = (0, d.e7)([p.Z], () => p.Z.getRoles(r.id)),
-        v = (e) =>
-            u()(E)
-                .filter(o)
-                .filter((n) => s()(e.toLowerCase(), n.name.toLowerCase()))
+n.d(t, { Z: () => h }), n(47120);
+var i = n(200651);
+n(192379);
+var r = n(658722),
+    a = n.n(r),
+    s = n(392711),
+    o = n.n(s),
+    l = n(866442),
+    u = n(442837),
+    c = n(481060),
+    d = n(430824),
+    f = n(981631),
+    _ = n(388032),
+    p = n(286841);
+let h = function (e) {
+    let { className: t, guild: n, roleStyle: r, roleFilter: s, onSelect: h, onClose: m } = e,
+        g = (0, u.e7)([d.Z], () => d.Z.getRoles(n.id)),
+        E = (e) =>
+            o()(g)
+                .filter(s)
+                .filter((t) => a()(e.toLowerCase(), t.name.toLowerCase()))
                 .value();
-    return (0, a.jsx)(f.ComboboxPopout, {
-        className: n,
+    return (0, i.jsx)(c.DBG, {
+        className: t,
         value: new Set(),
-        onChange: l,
+        onChange: h,
         placeholder: _.intl.string(_.t.XPGZXF),
         'aria-label': _.intl.string(_.t.ljnBlp),
-        onClose: g,
+        onClose: m,
         children: (e) =>
-            v(e).map((e) => {
-                var n, r;
-                return (0, a.jsxs)(
-                    f.ComboboxItem,
+            E(e).map((e) => {
+                var t, n;
+                return (0, i.jsxs)(
+                    c.lo1,
                     {
                         value: e.id,
                         children: [
-                            'dot' === i
-                                ? (0, a.jsx)(f.RoleDot, {
-                                      className: m.popoutRoleDot,
-                                      color: null !== (n = e.colorString) && void 0 !== n ? n : (0, c.Rf)(h.p6O),
+                            'dot' === r
+                                ? (0, i.jsx)(c.FhE, {
+                                      className: p.popoutRoleDot,
+                                      color: null !== (t = e.colorString) && void 0 !== t ? t : (0, l.Rf)(f.p6O),
                                       background: !1,
                                       tooltip: !1
                                   })
-                                : (0, a.jsx)(f.RoleCircle, {
-                                      className: m.popoutRoleCircle,
-                                      color: null !== (r = e.colorString) && void 0 !== r ? r : (0, c.Rf)(h.p6O)
+                                : (0, i.jsx)(c.xko, {
+                                      className: p.popoutRoleCircle,
+                                      color: null !== (n = e.colorString) && void 0 !== n ? n : (0, l.Rf)(f.p6O)
                                   }),
-                            (0, a.jsx)(f.ComboboxItem.Label, { children: e.name })
+                            (0, i.jsx)(c.lo1.Label, { children: e.name })
                         ]
                     },
                     e.id
                 );
             })
     });
-}
-n.Z = g;
+};

@@ -1,19 +1,18 @@
-r.r(
-    (e.exports = {
-        video: 'video_f017d0',
-        container: 'container_f017d0',
-        image: 'image_f017d0',
-        title: 'title_f017d0',
-        lead: 'lead_f017d0',
-        added: 'added_f017d0 title_f017d0',
-        fixed: 'fixed_f017d0 title_f017d0',
-        progress: 'progress_f017d0 title_f017d0',
-        improved: 'improved_f017d0 title_f017d0',
-        marginTop: 'marginTop_f017d0',
-        footer: 'footer_f017d0',
-        socialLink: 'socialLink_f017d0',
-        premiumBanner: 'premiumBanner_f017d0',
-        premiumIcon: 'premiumIcon_f017d0',
-        date: 'date_f017d0'
-    })
-);
+var i = {
+    video: 'video__1689b',
+    container: 'container__1689b',
+    image: 'image__1689b',
+    title: 'title__1689b',
+    lead: 'lead__1689b',
+    added: 'added__1689b title__1689b',
+    fixed: 'fixed__1689b title__1689b',
+    improved: 'improved__1689b title__1689b',
+    progress: 'progress__1689b title__1689b',
+    marginTop: 'marginTop__1689b',
+    footer: 'footer__1689b',
+    socialLink: 'socialLink__1689b',
+    premiumBanner: 'premiumBanner__1689b',
+    premiumIcon: 'premiumIcon__1689b',
+    date: 'date__1689b'
+};
+n.r((e.exports = i));

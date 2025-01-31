@@ -1,70 +1,64 @@
-a.r(t),
-    a.d(t, {
-        default: function () {
-            return x;
-        }
-    }),
-    a(47120);
-var e = a(200651);
-a(192379);
-var o = a(512722),
-    i = a.n(o),
-    l = a(481060),
-    s = a(935369),
-    r = a(313201),
-    c = a(53365),
-    d = a(981631),
-    u = a(388032),
-    g = a(129224);
-function x(n) {
-    let { transitionState: t, guild: a, onClose: o } = n,
-        x = (0, r.Dt)(),
-        [h, { loading: m, error: _ }] = (0, s.Z)(c.oL),
-        p = async () => {
-            i()(null != a, 'no guild'), null != (await h(a.id)) && o();
+t.d(i, { default: () => _ }), t(47120);
+var s = t(200651);
+t(192379);
+var l = t(512722),
+    e = t.n(l),
+    a = t(481060),
+    c = t(935369),
+    o = t(313201),
+    r = t(53365),
+    d = t(981631),
+    u = t(388032),
+    x = t(129224);
+function _(n) {
+    let { transitionState: i, guild: t, onClose: l } = n,
+        _ = (0, o.Dt)(),
+        [g, { loading: h, error: j }] = (0, c.Z)(r.oL),
+        m = async () => {
+            e()(null != t, 'no guild'), null != (await g(t.id)) && l();
         };
-    return (0, e.jsxs)(l.ModalRoot, {
-        transitionState: t,
-        'aria-labelledby': x,
+    return (0, s.jsxs)(a.Y0X, {
+        transitionState: i,
+        'aria-labelledby': _,
         children: [
-            (0, e.jsxs)(l.ModalHeader, {
+            (0, s.jsxs)(a.xBx, {
                 children: [
-                    (0, e.jsx)(l.Heading, {
-                        id: x,
+                    (0, s.jsx)(a.X6q, {
+                        id: _,
                         variant: 'heading-md/semibold',
                         children: u.intl.string(u.t.rRpcEx)
                     }),
-                    (0, e.jsx)(l.ModalCloseButton, {
-                        className: g.closeButton,
-                        onClick: o
+                    (0, s.jsx)(a.olH, {
+                        className: x.closeButton,
+                        onClick: l
                     })
                 ]
             }),
-            (0, e.jsxs)(l.ModalContent, {
-                className: g.content,
+            (0, s.jsxs)(a.hzk, {
+                className: x.content,
                 children: [
-                    null != _
-                        ? (0, e.jsxs)(e.Fragment, {
-                              children: [(0, e.jsx)(l.FormErrorBlock, { children: _.message }), (0, e.jsx)(l.Spacer, { size: 24 })]
+                    null != j
+                        ? (0, s.jsxs)(s.Fragment, {
+                              children: [(0, s.jsx)(a.kzN, { children: j.message }), (0, s.jsx)(a.LZC, { size: 24 })]
                           })
                         : null,
-                    (0, e.jsx)(l.FormText, {
-                        type: l.FormText.Types.ERROR,
+                    (0, s.jsx)(a.R94, {
+                        type: a.R94.Types.ERROR,
                         children: u.intl.format(u.t['Oa5P6+'], {
-                            guildName: a.toString(),
+                            guildName: t.toString(),
                             url: d.EYA.DEVELOPER_PORTAL_TEAMS
                         })
                     }),
-                    (0, e.jsx)(l.Spacer, { size: 16 })
+                    (0, s.jsx)(a.LZC, { size: 16 })
                 ]
             }),
-            (0, e.jsx)(l.ModalFooter, {
-                className: g.__invalid_footer,
-                children: (0, e.jsx)(l.Button, {
-                    color: l.Button.Colors.RED,
-                    className: g.__invalid_goBackButton,
-                    submitting: m,
-                    onClick: p,
+            (0, s.jsx)(a.mzw, {
+                className: x.__invalid_footer,
+                children: (0, s.jsx)(a.zxk, {
+                    color: a.zxk.Colors.RED,
+                    className: x.__invalid_goBackButton,
+                    submitting: h,
+                    onClick: m,
                     children: u.intl.string(u.t.R3BPHx)
                 })
             })

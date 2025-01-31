@@ -1,26 +1,21 @@
-n.d(t, {
-    Z: function () {
-        return s;
-    }
-});
+n.d(t, { Z: () => s });
 var i = n(442837),
     l = n(872810),
-    r = n(199902),
-    a = n(314897);
+    a = n(199902),
+    r = n(314897);
 function s(e, t) {
-    let n = (0, i.e7)([a.default], () => a.default.getId()),
+    let n = (0, i.e7)([r.default], () => r.default.getId()),
         s = (0, i.e7)(
-            [r.Z],
+            [a.Z],
             () => {
-                let t = r.Z.getCurrentUserActiveStream();
+                let t = a.Z.getCurrentUserActiveStream();
                 return null != t && t.channelId === e;
             },
             [e]
-        ),
-        o = (0, i.e7)([r.Z], () => r.Z.isSelfStreamHidden(e), [e]);
+        );
     return [
         (null == t || t === n) && s,
-        o,
+        (0, i.e7)([a.Z], () => a.Z.isSelfStreamHidden(e), [e]),
         (t) => {
             (0, l.pR)(e, t);
         }

@@ -18,12 +18,10 @@ var o = r(481253),
         function e() {
             return t.apply(this, arguments) || this;
         }
-        (r = e), (n = t), (r.prototype = Object.create(n.prototype)), (r.prototype.constructor = r), (r.__proto__ = n);
-        var r,
-            n,
-            c = e.prototype;
+        (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
+        var r = e.prototype;
         return (
-            (c.shouldComponentUpdate = function (t) {
+            (r.shouldComponentUpdate = function (t) {
                 var e = this.props.editorState,
                     r = t.editorState;
                 if (e.getDirectionMap() !== r.getDirectionMap() || e.getSelection().getHasFocus() !== r.getSelection().getHasFocus()) return !0;
@@ -37,10 +35,10 @@ var o = r(481253),
                     c = r.getDecorator();
                 return i !== o || a !== u || s !== c || r.mustForceSelection();
             }),
-            (c.render = function () {
+            (r.render = function () {
                 for (var t = this.props, e = t.blockRenderMap, r = t.blockRendererFn, n = t.blockStyleFn, c = t.customStyleMap, l = t.customStyleFn, f = t.editorState, p = t.editorKey, h = t.textDirectionality, d = f.getCurrentContent(), g = f.getSelection(), y = f.mustForceSelection(), v = f.getDecorator(), m = s(f.getDirectionMap()), _ = d.getBlocksAsArray()[0], b = [], S = _; S; ) {
                     var w = S.getKey(),
-                        k = {
+                        x = {
                             blockRenderMap: e,
                             blockRendererFn: r,
                             blockStyleFn: n,
@@ -56,17 +54,17 @@ var o = r(481253),
                             direction: h || m.get(w),
                             tree: f.getBlockTree(w)
                         },
-                        x = (e.get(S.getType()) || e.get('unstyled')).wrapper;
+                        k = (e.get(S.getType()) || e.get('unstyled')).wrapper;
                     b.push({
-                        block: u.createElement(o, i({ key: w }, k)),
-                        wrapperTemplate: x,
+                        block: u.createElement(o, i({ key: w }, x)),
+                        wrapperTemplate: k,
                         key: w,
                         offsetKey: a.encode(w, 0, 0)
                     });
-                    var C = S.getNextSiblingKey();
-                    S = C ? d.getBlockForKey(C) : null;
+                    var E = S.getNextSiblingKey();
+                    S = E ? d.getBlockForKey(E) : null;
                 }
-                for (var E = [], D = 0; D < b.length; ) {
+                for (var C = [], D = 0; D < b.length; ) {
                     var O = b[D];
                     if (O.wrapperTemplate) {
                         var K = [];
@@ -80,10 +78,10 @@ var o = r(481253),
                             },
                             K
                         );
-                        E.push(T);
-                    } else E.push(O.block), D++;
+                        C.push(T);
+                    } else C.push(O.block), D++;
                 }
-                return u.createElement('div', { 'data-contents': 'true' }, E);
+                return u.createElement('div', { 'data-contents': 'true' }, C);
             }),
             e
         );

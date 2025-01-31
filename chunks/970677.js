@@ -1,37 +1,33 @@
-r.d(n, {
-    q: function () {
-        return d;
-    }
-});
-var i = r(200651),
-    a = r(192379),
-    o = r(120356),
-    s = r.n(o),
-    l = r(743236),
-    u = r(939350),
-    c = r(450793);
-function d(e) {
-    let { color: n = 'default', disabled: r, isFocused: o, showDefaultFocus: d = !1, menuItemProps: f, children: p } = e,
-        h = a.useRef(null);
+n.d(t, { q: () => c });
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(743236),
+    l = n(939350),
+    u = n(450793);
+function c(e) {
+    let { color: t = 'default', disabled: n, isFocused: a, showDefaultFocus: c = !1, menuItemProps: d, children: f } = e,
+        _ = r.useRef(null);
     return (
-        a.useLayoutEffect(() => {
-            if (!o) return;
-            let e = h.current;
+        r.useLayoutEffect(() => {
+            if (!a) return;
+            let e = _.current;
             if (null == e) return;
-            (0, l.F)(h);
-            let n = e.querySelector('[tabindex="0"]');
-            null == n || n.focus();
-        }, [o]),
+            (0, o.F)(_);
+            let t = e.querySelector('[tabindex="0"]');
+            null == t || t.focus();
+        }, [a]),
         (0, i.jsx)('div', {
-            ref: h,
-            className: s()(c.item, u._[n], {
-                [c.disabled]: r,
-                [c.focused]: d && o,
-                [c.hideInteraction]: !d
+            ref: _,
+            className: s()(u.item, l._[t], {
+                [u.disabled]: n,
+                [u.focused]: c && a,
+                [u.hideInteraction]: !c
             }),
-            'aria-disabled': r,
-            ...f,
-            children: p
+            'aria-disabled': n,
+            ...d,
+            children: f
         })
     );
 }

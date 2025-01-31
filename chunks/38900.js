@@ -1,43 +1,42 @@
 n.d(t, {
-    K: function () {
-        return C;
-    }
+    K: () => C,
+    Z: () => h
 });
 var r = n(200651);
 n(192379);
-var i = n(120356),
-    l = n.n(i),
-    a = n(697526),
-    s = n(539181),
+var l = n(120356),
+    i = n.n(l),
+    s = n(697526),
+    a = n(539181),
     o = n(779646),
-    c = n(176500);
-let d = () => 4 * Math.random() + 8,
-    u = [d(), d(), d()],
+    d = n(176500);
+let c = () => 4 * Math.random() + 8,
+    u = [c(), c(), c()],
     C = () =>
         (0, r.jsx)('div', {
-            className: l()(o.skeleton, c.shopCard),
+            className: i()(o.skeleton, d.shopCard),
             children: (0, r.jsxs)('div', {
                 className: o.cardBody,
                 children: [(0, r.jsx)('div', { className: o.cardAvatar }), (0, r.jsx)('div', { className: o.cardTitle }), (0, r.jsx)('div', { className: o.cardDescription }), (0, r.jsx)('div', { className: o.cardSummary })]
             })
-        });
-t.Z = () =>
-    (0, r.jsx)('div', {
-        className: a.skeletons,
-        children: u.map((e) =>
-            (0, r.jsxs)(
-                'div',
-                {
-                    className: a.cardsContainer,
-                    children: [
-                        (0, r.jsx)('div', {
-                            className: l()(o.skeleton, s.shopBanner),
-                            children: (0, r.jsx)('div', { className: o.bannerBody })
-                        }),
-                        Array.from({ length: e }, (e, t) => t).map((e) => (0, r.jsx)(C, {}, e))
-                    ]
-                },
-                e
+        }),
+    h = () =>
+        (0, r.jsx)('div', {
+            className: s.skeletons,
+            children: u.map((e) =>
+                (0, r.jsxs)(
+                    'div',
+                    {
+                        className: s.cardsContainer,
+                        children: [
+                            (0, r.jsx)('div', {
+                                className: i()(o.skeleton, a.shopBanner),
+                                children: (0, r.jsx)('div', { className: o.bannerBody })
+                            }),
+                            Array.from({ length: e }, (e, t) => t).map((e) => (0, r.jsx)(C, {}, e))
+                        ]
+                    },
+                    e
+                )
             )
-        )
-    });
+        });

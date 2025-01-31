@@ -1,20 +1,16 @@
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-});
-var a = n(192379),
-    i = n(924826);
+n.d(t, { Z: () => r });
+var i = n(192379),
+    l = n(924826);
 function r(e) {
-    let { listRef: t, padding: n, channel: r, isEnabled: l } = e,
-        s = a.useCallback(
+    let { listRef: t, padding: n, channel: r, isEnabled: a } = e,
+        s = i.useCallback(
             (e) => {
-                let a = t.current,
-                    i = document.querySelector(e);
-                null != i &&
-                    (null == a ||
-                        a.scrollIntoViewNode({
-                            node: i,
+                let i = t.current,
+                    l = document.querySelector(e);
+                null != l &&
+                    (null == i ||
+                        i.scrollIntoViewNode({
+                            node: l,
                             padding: n,
                             callback: () => {
                                 var t;
@@ -24,7 +20,7 @@ function r(e) {
             },
             [n, t]
         ),
-        o = a.useCallback(
+        o = i.useCallback(
             () =>
                 new Promise((e) => {
                     let n = t.current;
@@ -32,7 +28,7 @@ function r(e) {
                 }),
             [t]
         ),
-        c = a.useCallback(
+        c = i.useCallback(
             () =>
                 new Promise((e) => {
                     let n = t.current;
@@ -40,9 +36,9 @@ function r(e) {
                 }),
             [t]
         );
-    return (0, i.ZP)({
+    return (0, l.ZP)({
         id: 'forum-channel-list-'.concat(r.id),
-        isEnabled: l,
+        isEnabled: a,
         scrollToStart: o,
         scrollToEnd: c,
         setFocus: s

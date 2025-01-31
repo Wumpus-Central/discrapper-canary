@@ -1,35 +1,30 @@
-r.d(n, {
-    o: function () {
-        return _;
-    }
-});
+n.d(t, { o: () => _ }), n(47120);
 var i,
-    a = r(47120);
-var o = r(200651),
-    s = r(192379),
-    l = r(120356),
-    u = r.n(l),
-    c = r(748780),
-    d = r(481060),
-    f = r(728767);
-function p(e, n, r) {
+    r = n(200651),
+    a = n(192379),
+    s = n(120356),
+    o = n.n(s),
+    l = n(748780),
+    u = n(481060),
+    c = n(728767);
+function d(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let h = {
+let f = {
     friction: 7,
     tension: 60
 };
-class _ extends (i = s.Component) {
+class _ extends (i = a.Component) {
     componentWillAppear(e) {
         this.animateTo(1).start(e);
     }
@@ -37,18 +32,18 @@ class _ extends (i = s.Component) {
         this.animateTo(1).start(e);
     }
     componentWillLeave(e) {
-        let { reducedMotion: n } = this.context;
-        n.enabled ? this.animateTo(0).start(e) : c.Z.stagger(250, [this.animateTo(1.3), this.animateTo(0)]).start(e);
+        let { reducedMotion: t } = this.context;
+        t.enabled ? this.animateTo(0).start(e) : l.Z.stagger(250, [this.animateTo(1.3), this.animateTo(0)]).start(e);
     }
     animateTo(e) {
-        return c.Z.spring(this.animation, {
-            ...h,
+        return l.Z.spring(this.animation, {
+            ...f,
             toValue: e
         });
     }
     getAnimatedStyle() {
         let { reducedMotion: e } = this.context;
-        return c.Z.accelerate({
+        return l.Z.accelerate({
             opacity: this.animation,
             transform: e.enabled
                 ? void 0
@@ -63,15 +58,15 @@ class _ extends (i = s.Component) {
         });
     }
     render() {
-        let { className: e, children: n } = this.props;
-        return (0, o.jsx)(c.Z.div, {
-            className: u()(e, f.slider),
+        let { className: e, children: t } = this.props;
+        return (0, r.jsx)(l.Z.div, {
+            className: o()(e, c.slider),
             style: this.getAnimatedStyle(),
-            children: n
+            children: t
         });
     }
     constructor(...e) {
-        super(...e), p(this, 'animation', new c.Z.Value(0));
+        super(...e), d(this, 'animation', new l.Z.Value(0));
     }
 }
-p(_, 'contextType', d.AccessibilityPreferencesContext);
+d(_, 'contextType', u.Sfi);

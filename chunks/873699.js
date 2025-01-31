@@ -1,62 +1,56 @@
-t.d(n, {
-    Z: function () {
-        return E;
-    }
-}),
-    t(724458),
-    t(47120);
-var i = t(200651),
-    l = t(192379),
-    r = t(442837),
-    a = t(481060),
-    o = t(668781),
-    s = t(79390),
-    u = t(222677),
-    d = t(665906),
-    c = t(496675),
-    g = t(768581),
-    f = t(176354),
-    m = t(981631),
-    h = t(388032);
-function E(e, n) {
-    let { reducedMotion: t } = l.useContext(a.AccessibilityPreferencesContext),
-        g = (0, d.$R)(n),
-        f = (0, r.e7)([c.Z], () => c.Z.can(m.Plq.MANAGE_MESSAGES, n) && g, [n, g]),
-        E = e.reactions.reduce((e, n) => {
-            var t;
-            return (null === (t = n.count_details) || void 0 === t ? void 0 : t.vote) != null || null != e.find((e) => (null != e.id && e.id === n.emoji.id) || e.name === n.emoji.name) ? e : [...e, n.emoji];
+n.d(t, { Z: () => E }), n(724458), n(47120);
+var i = n(200651),
+    l = n(192379),
+    a = n(442837),
+    s = n(481060),
+    r = n(668781),
+    o = n(79390),
+    d = n(222677),
+    c = n(665906),
+    u = n(496675),
+    g = n(768581),
+    f = n(176354),
+    m = n(981631),
+    h = n(388032);
+function E(e, t) {
+    let { reducedMotion: n } = l.useContext(s.Sfi),
+        g = (0, c.$R)(t),
+        f = (0, a.e7)([u.Z], () => u.Z.can(m.Plq.MANAGE_MESSAGES, t) && g, [t, g]),
+        E = e.reactions.reduce((e, t) => {
+            var n;
+            return (null === (n = t.count_details) || void 0 === n ? void 0 : n.vote) != null || null != e.find((e) => (null != e.id && e.id === t.emoji.id) || e.name === t.emoji.name) ? e : [...e, t.emoji];
         }, []),
-        v = (t, i) => {
-            t.shiftKey
-                ? (0, u.$E)(n.id, e.id, i)
-                : o.Z.show({
+        Z = (n, i) => {
+            n.shiftKey
+                ? (0, d.$E)(t.id, e.id, i)
+                : r.Z.show({
                       title: h.intl.string(h.t['73GqT0']),
                       body: h.intl.string(h.t.dmy5bm),
                       confirmText: h.intl.string(h.t.p89ACg),
                       cancelText: h.intl.string(h.t.gm1Ven),
                       onConfirm: () => {
-                          (0, u.$E)(n.id, e.id, i);
+                          (0, d.$E)(t.id, e.id, i);
                       }
                   });
         };
-    return !f || null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, s.eQ)(e))
+    return !f || null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, o.eQ)(e))
         ? null
-        : (0, i.jsx)(a.MenuItem, {
+        : (0, i.jsx)(s.sNh, {
               id: 'remove-emoji-reactions',
               label: h.intl.string(h.t['zx/e4O']),
               color: 'danger',
               children: E.map((e) => {
-                  var n, l;
+                  var t, l;
                   return (0, i.jsx)(
-                      a.MenuItem,
+                      s.sNh,
                       {
-                          id: 'remove-emoji-reactions-'.concat(null !== (n = e.name) && void 0 !== n ? n : e.id),
+                          id: 'remove-emoji-reactions-'.concat(null !== (t = e.name) && void 0 !== t ? t : e.id),
                           label: null == e.id ? e.name : ':'.concat(e.name, ':'),
-                          action: (n) => v(n, e),
-                          icon: (n) =>
-                              (0, i.jsx)(I, {
-                                  ...n,
-                                  reducedMotionEnabled: t.enabled,
+                          action: (t) => Z(t, e),
+                          icon: (t) =>
+                              (0, i.jsx)(v, {
+                                  ...t,
+                                  reducedMotionEnabled: n.enabled,
                                   emoji: e
                               }),
                           dontCloseOnActionIfHoldingShiftKey: !0
@@ -66,19 +60,19 @@ function E(e, n) {
               })
           });
 }
-function I(e) {
-    var n;
-    let { emoji: t, reducedMotionEnabled: l, className: r = '', isFocused: a = !1 } = e;
+function v(e) {
+    var t;
+    let { emoji: n, reducedMotionEnabled: l, className: a = '', isFocused: s = !1 } = e;
     return (0, i.jsx)('img', {
-        className: r,
+        className: a,
         src:
-            null != t.id
+            null != n.id
                 ? g.ZP.getEmojiURL({
-                      id: t.id,
-                      animated: t.animated && (!l || a),
+                      id: n.id,
+                      animated: n.animated && (!l || s),
                       size: 18
                   })
-                : f.ZP.getURL(null !== (n = t.name) && void 0 !== n ? n : ''),
+                : f.ZP.getURL(null !== (t = n.name) && void 0 !== t ? t : ''),
         alt: ''
     });
 }

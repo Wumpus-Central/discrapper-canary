@@ -1,81 +1,75 @@
-r.d(n, {
-    KZ: function () {
-        return f;
-    },
-    Mt: function () {
-        return c;
-    },
-    ZB: function () {
-        return d;
-    }
+n.d(t, {
+    KZ: () => d,
+    Mt: () => u,
+    ZB: () => c
 });
-var i = r(200651),
-    a = r(192379),
-    o = r(772848),
-    s = r(906732),
-    l = r(221292);
-let u = a.createContext(null),
-    c = (e) => {
-        let { value: n, children: r, shouldTrackViewOnMount: o = !0 } = e,
-            { analyticsLocations: c } = (0, s.ZP)(),
-            d = {
-                analyticsLocations: c,
-                value: n
+var i = n(200651),
+    r = n(192379),
+    a = n(772848),
+    s = n(906732),
+    o = n(221292);
+let l = r.createContext(null),
+    u = (e) => {
+        let { value: t, children: n, shouldTrackViewOnMount: a = !0 } = e,
+            { analyticsLocations: u } = (0, s.ZP)(),
+            c = {
+                analyticsLocations: u,
+                value: t
             },
-            f = a.useRef(d);
+            d = r.useRef(c);
         return (
-            a.useEffect(() => {
-                f.current = d;
+            r.useEffect(() => {
+                d.current = c;
             }),
-            a.useEffect(() => {
-                if (!o) return;
-                let { analyticsLocations: e, value: n } = f.current;
-                (0, l.pQ)({
+            r.useEffect(() => {
+                if (!a) return;
+                let { analyticsLocations: e, value: t } = d.current;
+                (0, o.pQ)({
                     action: 'VIEW',
                     analyticsLocations: e,
-                    ...n
+                    ...t
                 });
-            }, [o]),
-            (0, i.jsx)(u.Provider, {
-                value: n,
-                children: r
+            }, [a]),
+            (0, i.jsx)(l.Provider, {
+                value: t,
+                children: n
             })
         );
     },
-    d = (e) => {
-        var n;
-        let { layout: r, userId: i, guildId: s, channelId: l, messageId: c, roleId: d, sourceSessionId: f, showGuildProfile: p = !0 } = e,
-            h = null === (n = a.useContext(u)) || void 0 === n ? void 0 : n.sessionId;
-        return a.useMemo(
+    c = (e) => {
+        var t;
+        let { layout: n, userId: i, guildId: s, channelId: o, messageId: u, roleId: c, sourceSessionId: d, showGuildProfile: f = !0 } = e,
+            _ = null === (t = r.useContext(l)) || void 0 === t ? void 0 : t.sessionId;
+        return r.useMemo(
             () => ({
-                sessionId: (0, o.Z)(),
-                sourceSessionId: null != f ? f : h,
-                layout: r,
+                sessionId: (0, a.Z)(),
+                sourceSessionId: null != d ? d : _,
+                layout: n,
                 userId: i,
                 guildId: s,
-                channelId: l,
-                messageId: c,
-                roleId: d,
-                showGuildProfile: p
+                channelId: o,
+                messageId: u,
+                roleId: c,
+                showGuildProfile: f
             }),
-            [h, r, i, s, l, c, d, f, p]
+            [_, n, i, s, o, u, c, d, f]
         );
     },
-    f = () => {
-        let e = a.useContext(u),
-            { analyticsLocations: n } = (0, s.ZP)();
+    d = () => {
+        let e = r.useContext(l),
+            { analyticsLocations: t } = (0, s.ZP)();
         return {
             context: e,
-            trackUserProfileAction: a.useCallback(
-                (r) => {
-                    if (null != e)
-                        (0, l.pQ)({
-                            analyticsLocations: n,
+            trackUserProfileAction: r.useCallback(
+                (n) => {
+                    null != e &&
+                        (0, o.pQ)({
+                            analyticsLocations: t,
                             ...e,
-                            ...r
+                            ...n
                         });
                 },
-                [e, n]
+                [e, t]
             )
         };
     };

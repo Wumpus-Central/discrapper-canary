@@ -1,106 +1,96 @@
-r.d(n, {
-    Fs: function () {
-        return m;
-    },
-    Xu: function () {
-        return _;
-    },
-    ZP: function () {
-        return h;
-    },
-    ms: function () {
-        return E;
-    },
-    sV: function () {
-        return f;
-    }
-});
-var i = r(411104);
-var a = r(192379),
-    o = r(373793),
-    s = r(911969),
-    l = r(592125),
-    u = r(963456),
-    c = r(213459),
-    d = r(367790);
-let f = 'no primary app command for application',
-    p = [s.yU.PRIMARY_ENTRY_POINT];
-async function h(e, n) {
-    let r,
-        i = l.Z.getChannel(e);
+n.d(t, {
+    Fs: () => p,
+    Xu: () => _,
+    ZP: () => f,
+    ms: () => m,
+    sV: () => c
+}),
+    n(411104);
+var i = n(192379),
+    r = n(373793),
+    a = n(911969),
+    s = n(592125),
+    o = n(963456),
+    l = n(213459),
+    u = n(367790);
+let c = 'no primary app command for application',
+    d = [a.yU.PRIMARY_ENTRY_POINT];
+async function f(e, t) {
+    let n;
+    let i = s.Z.getChannel(e);
     if (
         (null != i &&
             null ==
-                (r = _(
+                (n = _(
                     {
                         channel: i,
                         type: 'channel'
                     },
-                    n
+                    t
                 )) &&
-            (await (0, c.FN)({
+            (await (0, l.FN)({
                 type: 'application',
-                applicationId: n
+                applicationId: t
             }),
-            (r = _(
+            (n = _(
                 {
                     channel: i,
                     type: 'channel'
                 },
-                n
+                t
             ))),
-        null != r)
+        null != n)
     )
-        return r;
-    throw Error(f);
+        return n;
+    throw Error(c);
 }
-function _(e, n) {
-    return c.ZP.query(
+function _(e, t) {
+    return l.ZP.query(
         e,
-        { commandTypes: [s.yU.PRIMARY_ENTRY_POINT] },
+        { commandTypes: [a.yU.PRIMARY_ENTRY_POINT] },
         {
             placeholderCount: 1,
-            scoreMethod: d.p.COMMAND_ONLY,
-            applicationId: n,
+            scoreMethod: u.p.COMMAND_ONLY,
+            applicationId: t,
             allowFetch: !1,
             allowApplicationState: !0
         }
     ).commands[0];
 }
-function m(e, n) {
-    let { commands: r, loading: i } = g(e, n),
-        o = r[0],
-        s = null != o;
+function p(e, t) {
+    let { commands: n, loading: r } = h(e, t),
+        a = n[0],
+        s = null != a;
     return (
-        a.useEffect(() => {
-            !s &&
-                !i &&
-                (0, u.j)({
+        i.useEffect(() => {
+            s ||
+                r ||
+                (0, o.j)({
                     type: 'application',
-                    applicationId: n
+                    applicationId: t
                 });
-        }, [n, s, i]),
-        o
+        }, [t, s, r]),
+        a
     );
 }
-function g(e, n) {
-    return (0, c.v1)(
+function h(e, t) {
+    return (0, l.v1)(
         e,
-        { commandTypes: p },
+        { commandTypes: d },
         {
             placeholderCount: 1,
-            scoreMethod: d.p.COMMAND_ONLY,
-            applicationId: n,
+            scoreMethod: u.p.COMMAND_ONLY,
+            applicationId: t,
             allowFetch: !1,
             allowApplicationState: !0
         }
     );
 }
-function E(e) {
-    let { context: n, applicationId: r, botUserId: i } = e,
-        a = m(n, r);
-    if (null == a) return !1;
-    let l = null != a.integration_types && a.integration_types.includes(o.Y.USER_INSTALL),
-        u = null != a.contexts && a.contexts.includes(s.D.BOT_DM);
-    return null != i && l && u;
+function m(e) {
+    let { context: t, applicationId: n, botUserId: i } = e,
+        s = p(t, n);
+    if (null == s) return !1;
+    let o = null != s.integration_types && s.integration_types.includes(r.Y.USER_INSTALL),
+        l = null != s.contexts && s.contexts.includes(a.D.BOT_DM);
+    return null != i && o && l;
 }

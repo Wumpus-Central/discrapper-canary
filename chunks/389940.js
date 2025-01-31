@@ -1,9 +1,10 @@
-e.exports = {
-    wrapper: 'wrapper_adc107',
-    heading: 'heading_adc107',
-    topPerksCards: 'topPerksCards_adc107',
-    topPerksCard: 'topPerksCard_adc107',
-    topPerksCardImage: 'topPerksCardImage_adc107',
-    topPerksCardHeading: 'topPerksCardHeading_adc107',
-    topPerksCardDescription: 'topPerksCardDescription_adc107'
+var i = {
+    wrapper: 'wrapper__3add8',
+    heading: 'heading__3add8',
+    topPerksCards: 'topPerksCards__3add8',
+    topPerksCard: 'topPerksCard__3add8',
+    topPerksCardImage: 'topPerksCardImage__3add8',
+    topPerksCardHeading: 'topPerksCardHeading__3add8',
+    topPerksCardDescription: 'topPerksCardDescription__3add8'
 };
+e.exports = i;

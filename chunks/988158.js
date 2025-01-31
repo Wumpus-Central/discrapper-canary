@@ -1,46 +1,42 @@
-e.d(n, {
-    X: function () {
-        return r;
-    },
-    h: function () {
-        return a;
-    }
+n.d(e, {
+    X: () => r,
+    h: () => i
 }),
-    e(757143),
-    e(47120);
-var o = e(192379),
-    l = e(902676);
-function a(t) {
-    let { protocol: n, hostname: e } = o.useMemo(
+    n(757143),
+    n(47120);
+var l = n(192379),
+    a = n(902676);
+function i(t) {
+    let { protocol: e, hostname: n } = l.useMemo(
             () => ({
-                protocol: (0, l.E)(t),
-                hostname: (0, l.F)(t)
+                protocol: (0, a.E)(t),
+                hostname: (0, a.F)(t)
             }),
             [t]
         ),
-        a = ''.concat(n, '//').concat(e);
+        i = ''.concat(e, '//').concat(n);
     return {
-        protocol: n,
-        hostname: e,
-        theRestOfTheUrl: t.replace(a, '')
+        protocol: e,
+        hostname: n,
+        theRestOfTheUrl: t.replace(i, '')
     };
 }
 function r(t) {
-    let { url: n, trustUrl: e, onConfirm: l, onCancel: r, onClose: i } = t,
-        [c, s] = o.useState(!1),
-        { protocol: d, hostname: u, theRestOfTheUrl: x } = a(n),
-        h = o.useCallback(() => {
-            c && e(n), null == i || i(), l();
-        }, [n, c, e, l, i]);
+    let { url: e, trustUrl: n, onConfirm: a, onCancel: r, onClose: o } = t,
+        [s, c] = l.useState(!1),
+        { protocol: x, hostname: d, theRestOfTheUrl: h } = i(e),
+        m = l.useCallback(() => {
+            s && n(e), null == o || o(), a();
+        }, [e, s, n, a, o]);
     return {
-        protocol: d,
-        hostname: u,
-        theRestOfTheUrl: x,
-        shouldTrustUrl: c,
-        setShouldTrustUrl: s,
-        handleConfirm: h,
-        handleCancel: o.useCallback(() => {
-            null == i || i(), r();
-        }, [r, i])
+        protocol: x,
+        hostname: d,
+        theRestOfTheUrl: h,
+        shouldTrustUrl: s,
+        setShouldTrustUrl: c,
+        handleConfirm: m,
+        handleCancel: l.useCallback(() => {
+            null == o || o(), r();
+        }, [r, o])
     };
 }

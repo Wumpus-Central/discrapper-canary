@@ -1,5 +1,6 @@
-e.exports = {
-    artContainer: 'artContainer_ecade5',
-    art: 'art_ecade5',
-    body: 'body_ecade5'
+var i = {
+    artContainer: 'artContainer__8162d',
+    art: 'art__8162d',
+    body: 'body__8162d'
 };
+e.exports = i;

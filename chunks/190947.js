@@ -1,38 +1,36 @@
-r.d(n, {
-    b: function () {
-        return l;
-    }
+n.d(t, {
+    Z: () => o,
+    b: () => s
 });
-var i = r(200651);
-r(192379);
-var a = r(481060),
-    o = r(991862);
-let s = function (e) {
-    let { currencies: n, onChange: r, selectedCurrency: s, className: l, disabled: u = !1 } = e;
-    if (n.length < 2) return null;
-    let c = n.map((e, n) => ({
-            key: n,
-            value: e,
-            label: ''.concat(e.toUpperCase(), ' - ').concat((0, o.T)(e))
-        })),
-        d = (e) => {
-            null != e && r(e);
-        };
-    return (0, i.jsx)(a.SingleSelect, {
-        value: s,
-        options: c,
-        onChange: d,
-        className: l,
-        isDisabled: u
-    });
-};
-function l(e) {
-    let { currencies: n, className: r, children: a } = e;
-    return n.length < 2
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(991862);
+function s(e) {
+    let { currencies: t, className: n, children: r } = e;
+    return t.length < 2
         ? null
         : (0, i.jsx)('div', {
-              className: r,
-              children: a
+              className: n,
+              children: r
           });
 }
-n.Z = s;
+let o = function (e) {
+    let { currencies: t, onChange: n, selectedCurrency: s, className: o, disabled: l = !1 } = e;
+    if (t.length < 2) return null;
+    let u = t.map((e, t) => ({
+            key: t,
+            value: e,
+            label: ''.concat(e.toUpperCase(), ' - ').concat((0, a.T)(e))
+        })),
+        c = (e) => {
+            null != e && n(e);
+        };
+    return (0, i.jsx)(r.q4e, {
+        value: s,
+        options: u,
+        onChange: c,
+        className: o,
+        isDisabled: l
+    });
+};

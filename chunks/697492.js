@@ -1,33 +1,23 @@
-r.d(n, {
-    Gd: function () {
-        return o;
-    },
-    ME: function () {
-        return s;
-    },
-    Ym: function () {
-        return l;
-    },
-    _g: function () {
-        return a;
-    },
-    hu: function () {
-        return u;
-    }
+n.d(t, {
+    Gd: () => a,
+    ME: () => s,
+    Ym: () => o,
+    _g: () => r,
+    hu: () => l
 });
-var i = r(570140);
-function a(e, n, r) {
+var i = n(570140);
+function r(e, t, n) {
     i.Z.dispatch({
         type: 'HIGH_FIVE_QUEUE',
-        userId: n,
-        channelId: r,
+        userId: t,
+        channelId: n,
         emoji: e
     });
 }
-function o(e, n) {
+function a(e, t) {
     i.Z.dispatch({
         type: 'HIGH_FIVE_REMOVE',
-        channelId: n,
+        channelId: t,
         userId: e
     });
 }
@@ -37,20 +27,20 @@ function s(e) {
         enabled: e
     });
 }
-function l(e, n, r, a) {
+function o(e, t, n, r) {
     i.Z.dispatch({
         type: 'HIGH_FIVE_COMPLETE',
         waitingUserId: e,
-        completingUserId: n,
-        channelId: r,
-        completingEmoji: a
+        completingUserId: t,
+        channelId: n,
+        completingEmoji: r
     });
 }
-function u(e, n, r) {
+function l(e, t, n) {
     i.Z.dispatch({
         type: 'HIGH_FIVE_COMPLETE_CLEAR',
         firstUserId: e,
-        secondUserId: n,
-        channelId: r
+        secondUserId: t,
+        channelId: n
     });
 }

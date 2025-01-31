@@ -1,40 +1,36 @@
-r.d(n, {
-    b: function () {
-        return u;
-    }
-});
-var i = r(961742);
-function a(e) {
-    let n = e.getPropertyValue('content');
-    return `${e.cssText} content: '${n.replace(/'|"/g, '')}';`;
+n.d(t, { b: () => l });
+var i = n(961742);
+function r(e) {
+    let t = e.getPropertyValue('content');
+    return `${e.cssText} content: '${t.replace(/'|"/g, '')}';`;
 }
-function o(e) {
+function a(e) {
     return (0, i.qo)(e)
-        .map((n) => {
-            let r = e.getPropertyValue(n),
-                i = e.getPropertyPriority(n);
-            return `${n}: ${r}${i ? ' !important' : ''};`;
+        .map((t) => {
+            let n = e.getPropertyValue(t),
+                i = e.getPropertyPriority(t);
+            return `${t}: ${n}${i ? ' !important' : ''};`;
         })
         .join(' ');
 }
-function s(e, n, r) {
-    let i = `.${e}:${n}`,
-        s = r.cssText ? a(r) : o(r);
+function s(e, t, n) {
+    let i = `.${e}:${t}`,
+        s = n.cssText ? r(n) : a(n);
     return document.createTextNode(`${i}{${s}}`);
 }
-function l(e, n, r) {
-    let a = window.getComputedStyle(e, r),
-        o = a.getPropertyValue('content');
-    if ('' === o || 'none' === o) return;
-    let l = (0, i.Vj)();
+function o(e, t, n) {
+    let r = window.getComputedStyle(e, n),
+        a = r.getPropertyValue('content');
+    if ('' === a || 'none' === a) return;
+    let o = (0, i.Vj)();
     try {
-        n.className = `${n.className} ${l}`;
+        t.className = `${t.className} ${o}`;
     } catch (e) {
         return;
     }
-    let u = document.createElement('style');
-    u.appendChild(s(l, r, a)), n.appendChild(u);
+    let l = document.createElement('style');
+    l.appendChild(s(o, n, r)), t.appendChild(l);
 }
-function u(e, n) {
-    l(e, n, ':before'), l(e, n, ':after');
+function l(e, t) {
+    o(e, t, ':before'), o(e, t, ':after');
 }

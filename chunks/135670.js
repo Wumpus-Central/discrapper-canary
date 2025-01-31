@@ -1,45 +1,38 @@
-r.d(n, {
-    Z: function () {
-        return f;
-    }
-});
-var i = r(411104);
-var a = r(47120);
-var o = r(47770),
-    s = r(46973),
-    l = r(65154);
-function u(e, n, r) {
+n.d(t, { Z: () => u }), n(411104), n(47120);
+var i = n(47770),
+    r = n(46973),
+    a = n(65154);
+function s(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-function c(e) {
+function o(e) {
     return null;
 }
-function d(e) {
+function l(e) {
     return null;
 }
-class f extends o.Z {
+class u extends i.Z {
     destroy() {
-        this.emit(s.aB.Destroy), this.removeAllListeners();
+        this.emit(r.aB.Destroy), this.removeAllListeners();
     }
     interact() {}
     supported() {
         return __OVERLAY__;
     }
     supports(e) {
-        if (e === l.AN.AUTO_ENABLE) return __OVERLAY__;
-        return !1;
+        return e === a.AN.AUTO_ENABLE && __OVERLAY__;
     }
-    connect(e, n, r) {
+    connect(e, t, n) {
         throw Error('NOT_IMPLEMENTED');
     }
     eachConnection() {}
@@ -70,40 +63,40 @@ class f extends o.Z {
         return Promise.reject(Error('getCodecSurvey is not implemented for MediaEngineDummy'));
     }
     getAudioSubsystem() {
-        return l.iA.STANDARD;
+        return a.iA.STANDARD;
     }
     getAudioLayer() {
         return '';
     }
-    setGoLiveSource(e, n) {}
+    setGoLiveSource(e, t) {}
     setClipsSource(e) {}
-    setClipsQualitySettings(e, n, r) {
+    setClipsQualitySettings(e, t, n) {
         return !1;
     }
     setDesktopSource(e) {
-        arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.Yn.DEFAULT;
+        arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.Yn.DEFAULT;
     }
-    setSoundshareSource(e, n, r) {}
+    setSoundshareSource(e, t, n) {}
     getDesktopSource() {
         return Promise.reject(Error('NO_STREAM'));
     }
-    getScreenPreviews(e, n) {
+    getScreenPreviews(e, t) {
         return Promise.reject(Error('UNSUPPORTED'));
     }
-    getWindowPreviews(e, n) {
+    getWindowPreviews(e, t) {
         return Promise.reject(Error('UNSUPPORTED'));
     }
     setClipBufferLength(e) {}
-    saveClip(e, n) {
+    saveClip(e, t) {
         return Promise.reject(Error('UNSUPPORTED'));
     }
-    saveClipForUser(e, n, r) {
+    saveClipForUser(e, t, n) {
         return Promise.reject(Error('UNSUPPORTED'));
     }
-    updateClipMetadata(e, n) {
+    updateClipMetadata(e, t) {
         return Promise.reject(Error('UNSUPPORTED'));
     }
-    exportClip(e, n) {
+    exportClip(e, t) {
         return Promise.reject(Error('UNSUPPORTED'));
     }
     setAudioSubsystem(e) {}
@@ -116,18 +109,18 @@ class f extends o.Z {
         return Promise.reject(Error('Audio debug state is not supported.'));
     }
     setExperimentalAdm(e) {}
-    setLoopback(e, n) {}
+    setLoopback(e, t) {}
     getLoopback() {
         return !1;
     }
     setH264Enabled(e) {}
     setAv1Enabled(e) {}
     setH265Enabled(e) {}
-    setExperimentFlag(e, n) {}
+    setExperimentFlag(e, t) {}
     startAecDump() {}
     stopAecDump() {}
     setAecDump(e) {}
-    createReplayConnection(e, n) {
+    createReplayConnection(e, t) {
         throw Error('Connection replay is not supported.');
     }
     setUseDirectVideo(e) {}
@@ -150,7 +143,7 @@ class f extends o.Z {
     getSupportedBandwidthEstimationExperiments(e) {
         e([]);
     }
-    getMLSSigningKey(e, n) {
+    getMLSSigningKey(e, t) {
         return Promise.reject(Error('NOT_IMPLEMENTED'));
     }
     setSidechainCompression(e) {}
@@ -159,6 +152,6 @@ class f extends o.Z {
     presentNativeScreenSharePicker(e) {}
     releaseNativeDesktopVideoSourcePickerStream() {}
     constructor(...e) {
-        super(...e), u(this, 'Video', c), u(this, 'Camera', d);
+        super(...e), s(this, 'Video', o), s(this, 'Camera', l);
     }
 }

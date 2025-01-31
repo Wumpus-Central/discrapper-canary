@@ -1,136 +1,134 @@
-r.d(n, {
-    C: function () {
-        return b;
-    }
-});
+n.d(t, {
+    C: () => v,
+    Z: () => R
+}),
+    n(653041);
 var i,
-    a = r(653041);
-var o = r(392711),
-    s = r.n(o),
-    l = r(442837),
-    u = r(570140),
-    c = r(704907),
-    d = r(581883),
-    f = r(592125),
-    p = r(430824),
-    h = r(944486),
-    _ = r(914010),
-    m = r(981631),
-    g = r(526761);
-function E(e, n, r) {
+    r = n(392711),
+    a = n.n(r),
+    s = n(442837),
+    o = n(570140),
+    l = n(704907),
+    u = n(581883),
+    c = n(592125),
+    d = n(430824),
+    f = n(944486),
+    _ = n(914010),
+    p = n(981631),
+    h = n(526761);
+function m(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let v = 10,
-    y = 100,
-    b = 100,
-    I = new c.ZP({
-        computeBonus: () => y,
+let g = 10,
+    E = 100,
+    v = 100,
+    y = new l.ZP({
+        computeBonus: () => E,
         computeWeight: (e) => {
-            let n = 1;
-            return 0 === e ? (n = 100) : e >= 1 && e < 2 ? (n = 70) : e >= 2 && e < 4 ? (n = 50) : e >= 4 && e < 7 ? (n = 30) : e >= 7 && (n = 10), n;
+            let t = 1;
+            return 0 === e ? (t = 100) : e >= 1 && e < 2 ? (t = 70) : e >= 2 && e < 4 ? (t = 50) : e >= 4 && e < 7 ? (t = 30) : e >= 7 && (t = 10), t;
         },
         lookupKey: (e) => {
-            var n, r;
-            return null !== (r = null !== (n = p.Z.getGuild(e)) && void 0 !== n ? n : f.Z.getChannel(e)) && void 0 !== r ? r : f.Z.getChannel(f.Z.getDMFromUserId(e));
+            var t, n;
+            return null !== (n = null !== (t = d.Z.getGuild(e)) && void 0 !== t ? t : c.Z.getChannel(e)) && void 0 !== n ? n : c.Z.getChannel(c.Z.getDMFromUserId(e));
         },
         afterCompute: () => {},
-        numFrequentlyItems: b,
-        maxSamples: v
+        numFrequentlyItems: v,
+        maxSamples: g
     }),
-    T = null,
-    S = null;
-function A(e) {
-    let { guildId: n, channelId: r } = e,
+    I = null,
+    b = null;
+function T(e) {
+    let { guildId: t, channelId: n } = e,
         i = !1;
     return (
-        r !== T &&
-            ((T = null != r ? r : null),
-            null != r &&
-                m.Xyh.test(r) &&
+        n !== I &&
+            ((I = null != n ? n : null),
+            null != n &&
+                p.Xyh.test(n) &&
                 ((i = !0),
-                I.track(r),
-                R.pendingUsages.push({
-                    key: r,
+                y.track(n),
+                N.pendingUsages.push({
+                    key: n,
                     timestamp: Date.now()
                 }))),
-        n !== S &&
-            ((S = null != n ? n : null),
-            null != n &&
-                m.Xyh.test(n) &&
+        t !== b &&
+            ((b = null != t ? t : null),
+            null != t &&
+                p.Xyh.test(t) &&
                 ((i = !0),
-                I.track(n),
-                R.pendingUsages.push({
-                    key: n,
+                y.track(t),
+                N.pendingUsages.push({
+                    key: t,
                     timestamp: Date.now()
                 }))),
         i
     );
 }
-function C(e) {
+function S(e) {
     let {
-        settings: { type: n },
-        wasSaved: r
+        settings: { type: t },
+        wasSaved: n
     } = e;
-    return n === g.yP.FRECENCY_AND_FAVORITES_SETTINGS && !!r && ((R.pendingUsages = []), !0);
+    return t === h.yP.FRECENCY_AND_FAVORITES_SETTINGS && !!n && ((N.pendingUsages = []), !0);
 }
-function N() {
+function A() {
     var e;
-    let n = null === (e = d.Z.frecencyWithoutFetchingLatest.guildAndChannelFrecency) || void 0 === e ? void 0 : e.guildAndChannels;
-    if (null == n) return !1;
-    I.overwriteHistory(
-        s().mapValues(n, (e) => ({
+    let t = null === (e = u.Z.frecencyWithoutFetchingLatest.guildAndChannelFrecency) || void 0 === e ? void 0 : e.guildAndChannels;
+    if (null == t) return !1;
+    y.overwriteHistory(
+        a().mapValues(t, (e) => ({
             ...e,
             recentUses: e.recentUses.map(Number).filter((e) => e > 0)
         })),
-        R.pendingUsages
+        N.pendingUsages
     );
 }
-let R = { pendingUsages: [] };
-class O extends (i = l.ZP.PersistedStore) {
+let N = { pendingUsages: [] };
+class C extends (i = s.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(_.Z, h.Z), null != e && ((e.pendingUsages = e.pendingUsages.filter((e) => null != e && m.Xyh.test(e.key))), (R = e)), this.syncWith([d.Z], N);
+        this.waitFor(_.Z, f.Z), null != e && ((e.pendingUsages = e.pendingUsages.filter((e) => null != e && p.Xyh.test(e.key))), (N = e)), this.syncWith([u.Z], A);
     }
     getState() {
-        return R;
+        return N;
     }
     hasPendingUsage() {
-        return R.pendingUsages.length > 0;
+        return N.pendingUsages.length > 0;
     }
     get frecencyWithoutFetchingLatest() {
-        return I;
-    }
-    getFrequentlyWithoutFetchingLatest() {
-        return I.frequently;
-    }
-    getScoreWithoutFetchingLatest(e) {
-        var n;
-        return null !== (n = I.getFrecency(e)) && void 0 !== n ? n : 0;
-    }
-    getScoreForDMWithoutFetchingLatest(e) {
-        let n = f.Z.getDMFromUserId(e);
-        return null != n ? this.getScoreWithoutFetchingLatest(n) : 0;
-    }
-    getMaxScore() {
-        return b * v;
-    }
-    getBonusScore() {
         return y;
     }
+    getFrequentlyWithoutFetchingLatest() {
+        return y.frequently;
+    }
+    getScoreWithoutFetchingLatest(e) {
+        var t;
+        return null !== (t = y.getFrecency(e)) && void 0 !== t ? t : 0;
+    }
+    getScoreForDMWithoutFetchingLatest(e) {
+        let t = c.Z.getDMFromUserId(e);
+        return null != t ? this.getScoreWithoutFetchingLatest(t) : 0;
+    }
+    getMaxScore() {
+        return v * g;
+    }
+    getBonusScore() {
+        return E;
+    }
 }
-E(O, 'displayName', 'FrecencyStore'),
-    E(O, 'persistKey', 'FrecencyStore'),
-    (n.Z = new O(u.Z, {
-        CHANNEL_SELECT: A,
-        VOICE_CHANNEL_SELECT: A,
-        USER_SETTINGS_PROTO_UPDATE: C
-    }));
+m(C, 'displayName', 'FrecencyStore'), m(C, 'persistKey', 'FrecencyStore');
+let R = new C(o.Z, {
+    CHANNEL_SELECT: T,
+    VOICE_CHANNEL_SELECT: T,
+    USER_SETTINGS_PROTO_UPDATE: S
+});

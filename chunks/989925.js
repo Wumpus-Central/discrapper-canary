@@ -1,6 +1,2 @@
-n.d(t, {
-    D: function () {
-        return i;
-    }
-});
+n.d(t, { D: () => i });
 let i = 200;

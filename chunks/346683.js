@@ -1,21 +1,16 @@
-t.d(n, {
-    Q: function () {
-        return a;
-    }
-}),
-    t(47120);
-var i = t(192379),
-    l = t(542094);
+n.d(t, { Q: () => a }), n(47120);
+var i = n(192379),
+    l = n(542094);
 function a(e) {
-    let [n, t] = i.useState(e);
+    let [t, n] = i.useState(e);
     return (
         i.useLayoutEffect(() => {
             if (e === l.JS.LEAVE) {
-                let n = setTimeout(() => t(e), 100);
-                return () => clearTimeout(n);
+                let t = setTimeout(() => n(e), 100);
+                return () => clearTimeout(t);
             }
-            t(e);
+            n(e);
         }, [e]),
-        n
+        t
     );
 }

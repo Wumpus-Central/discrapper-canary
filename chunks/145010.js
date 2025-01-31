@@ -1,13 +1,9 @@
-n.d(t, {
-    Z: function () {
-        return m;
-    }
-});
+n.d(t, { Z: () => m });
 var i = n(200651);
 n(192379);
 var l = n(399606),
-    r = n(481060),
-    a = n(125268),
+    a = n(481060),
+    r = n(125268),
     s = n(673125),
     o = n(984063),
     c = n(390322),
@@ -21,12 +17,12 @@ function m(e) {
         m = (null == n ? void 0 : n.type) === o.W.EMOJI_HOSE,
         f = (e, t) => {
             null != e
-                ? (0, a.Bo)({
+                ? (0, r.Bo)({
                       type: o.W.EMOJI_HOSE,
                       emojiName: e.name,
                       emojiId: e.id
                   })
-                : m && (0, a.Bo)(null),
+                : m && (0, r.Bo)(null),
                 null == t || t();
         };
     return (0, i.jsx)(h.Z, {
@@ -45,7 +41,7 @@ function m(e) {
         children: (e) =>
             (0, i.jsx)(d.Z, {
                 ...e,
-                iconComponent: r.PaintbrushThinIcon,
+                iconComponent: a.j9u,
                 isActive: m || e.isActive,
                 onClick: (t) => {
                     f(null), e.onClick(t);

@@ -1,53 +1,49 @@
-n.d(t, {
-    Z: function () {
-        return C;
-    }
-});
+n.d(t, { Z: () => _ });
 var i = n(200651),
     a = n(192379),
     r = n(793030),
     l = n(442837),
-    o = n(445986),
-    s = n(9807),
+    s = n(445986),
+    o = n(9807),
     c = n(341176),
     d = n(312097),
     u = n(451478),
     m = n(981631),
-    p = n(388032),
-    h = n(520432),
+    h = n(388032),
+    p = n(520432),
     g = n(902294);
-function C(e) {
+function _(e) {
     let { application: t, carouselItems: n } = e,
-        C = (0, l.e7)([u.Z], () => u.Z.isFocused()),
+        _ = (0, l.e7)([u.Z], () => u.Z.isFocused()),
         x = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('img', {
-                    className: h.errorImage,
+                    className: p.errorImage,
                     src: g,
                     'aria-hidden': !0,
                     alt: ''
                 }),
                 (0, i.jsx)(r.X6, {
                     variant: 'heading-xl/semibold',
-                    children: p.intl.string(p.t.UvDfMz)
+                    children: h.intl.string(h.t.UvDfMz)
                 })
             ]
         });
     n.forEach((e, i) => {
-        e.alt = p.intl.formatToPlainString(p.t.sSEhHR, {
+        e.alt = h.intl.formatToPlainString(h.t.sSEhHR, {
             index: i + 1,
             totalImages: n.length,
             name: t.name
         });
     });
-    let v = a.useCallback(
+    let C = a.useCallback(
         (e, t) => {
             if (e.type === m.s9s.IMG) {
                 let t = n.filter((e) => e.type === m.s9s.IMG),
                     i = t.findIndex((t) => t === e);
                 if (i < 0) return;
                 let a = t.map((e) => ({
-                    url: (0, o.Q)(e.src),
+                    url: (0, s.Q)(e.src),
                     original: e.src,
                     width: e.width,
                     height: e.height,
@@ -67,14 +63,14 @@ function C(e) {
     );
     return 0 === n.length
         ? null
-        : (0, i.jsx)(s.Z, {
-              className: h.carousel,
+        : (0, i.jsx)(o.Z, {
+              className: p.carousel,
               themedPagination: !0,
               items: n,
               autoplayInterval: 8000,
-              paused: !C,
+              paused: !_,
               videoAutoPlay: !0,
-              onCurrentItemClick: v,
+              onCurrentItemClick: C,
               errorComponent: x
           });
 }

@@ -1,32 +1,28 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
+n.d(t, { Z: () => u });
 var i = n(200651),
-    r = n(192379),
-    s = n(442837),
-    a = n(481060),
-    l = n(588126),
+    s = n(192379),
+    r = n(442837),
+    l = n(481060),
+    a = n(588126),
     o = n(25990),
     c = n(921813),
     d = n(617630);
 function u(e) {
     var t;
-    let { user: u, disabledInputs: m, containerClassName: g } = e,
-        { reducedMotion: h } = r.useContext(a.AccessibilityPreferencesContext),
+    let { user: u, disabledInputs: m, containerClassName: h } = e,
+        { reducedMotion: g } = s.useContext(l.Sfi),
         {
-            pendingAvatar: p,
+            pendingAvatar: _,
             pendingBanner: x,
-            pendingThemeColors: f,
+            pendingThemeColors: p,
             pendingPronouns: E,
-            pendingBio: _,
-            tryItOutThemeColors: C,
+            pendingBio: C,
+            tryItOutThemeColors: f,
             tryItOutAvatar: T,
-            tryItOutBanner: S,
-            tryItOutAvatarDecoration: b,
-            tryItOutProfileEffectId: I
-        } = (0, s.cj)([o.Z], () => {
+            tryItOutBanner: N,
+            tryItOutAvatarDecoration: I,
+            tryItOutProfileEffectId: S
+        } = (0, r.cj)([o.Z], () => {
             let e = o.Z.getAllPending(),
                 t = o.Z.getAllTryItOut();
             return {
@@ -34,18 +30,18 @@ function u(e) {
                 ...t
             };
         }),
-        N = (0, l.Z)(b, !1);
+        b = (0, a.Z)(I, !1);
     return (0, i.jsx)(c.Z, {
-        containerClassName: g,
+        containerClassName: h,
         user: u,
         pendingPronouns: E,
-        pendingBio: _,
-        pendingBanner: null !== (t = null != S ? S : x) && void 0 !== t ? t : n(466045),
-        pendingAvatar: null != T ? T : p,
-        pendingThemeColors: null != C ? C : f,
-        pendingAvatarDecoration: N,
-        pendingProfileEffectId: I,
-        avatarClassName: null != T || null != p || h.enabled ? void 0 : d.spinningAvatar,
+        pendingBio: C,
+        pendingBanner: null !== (t = null != N ? N : x) && void 0 !== t ? t : n(466045),
+        pendingAvatar: null != T ? T : _,
+        pendingThemeColors: null != f ? f : p,
+        pendingAvatarDecoration: b,
+        pendingProfileEffectId: S,
+        avatarClassName: null != T || null != _ || g.enabled ? void 0 : d.spinningAvatar,
         canUsePremiumCustomization: !0,
         isTryItOutFlow: !0,
         hideExampleButton: !0,

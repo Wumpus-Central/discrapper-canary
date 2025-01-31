@@ -1,23 +1,19 @@
 n.d(t, {
-    Jl: function () {
-        return o;
-    },
-    g9: function () {
-        return s;
-    }
+    Jl: () => s,
+    g9: () => o
 }),
     n(653041);
 var i = n(395041);
 n(349033);
-var r = n(999650);
+var l = n(999650);
 n(72006);
-var l = n(405656);
+var a = n(405656);
 n(981631);
-let a = {
-    [r.Qe.FILTER]: i.w,
-    [r.Qe.ANSWER]: i.O
+let r = {
+    [l.Qe.FILTER]: i.w,
+    [l.Qe.ANSWER]: i.O
 };
-function o() {
+function s() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = [];
     return (
@@ -31,13 +27,13 @@ function o() {
                             return null !== n && e.getEntity(n).getType() === i;
                         }, n);
                     })(i, e, t, n),
-                component: a[i.componentType]
+                component: r[i.componentType]
             });
         }),
         t
     );
 }
-function s(e, t) {
+function o(e, t) {
     let { focusOffset: n, anchorOffset: i } = t.getSelection();
-    return (0, l.g9)(e, n, i);
+    return (0, a.g9)(e, n, i);
 }

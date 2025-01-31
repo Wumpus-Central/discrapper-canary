@@ -1,65 +1,61 @@
-r.d(t, {
-    Y: function () {
-        return T;
-    }
-});
-var a = r(395848),
-    n = r(140955),
-    _ = r(596308),
-    o = r(622574),
-    E = r(433691),
-    i = r(412828),
-    c = r(873712);
-let s = [200, 500],
-    l = () => (0, i.U)() - 0,
-    I = [],
-    u = {},
-    R = (e) => {
-        let t = I[I.length - 1],
-            r = u[e.interactionId];
-        if (r || I.length < 10 || (t && e.duration > t.latency)) {
-            if (r) r.entries.push(e), (r.latency = Math.max(r.latency, e.duration));
+a.d(e, { Y: () => A });
+var r = a(395848),
+    n = a(140955),
+    o = a(596308),
+    _ = a(622574),
+    i = a(433691),
+    c = a(412828),
+    s = a(873712);
+let E = [200, 500],
+    l = () => (0, c.U)() - 0,
+    u = [],
+    I = {},
+    R = (t) => {
+        let e = u[u.length - 1],
+            a = I[t.interactionId];
+        if (a || u.length < 10 || (e && t.duration > e.latency)) {
+            if (a) a.entries.push(t), (a.latency = Math.max(a.latency, t.duration));
             else {
-                let t = {
-                    id: e.interactionId,
-                    latency: e.duration,
-                    entries: [e]
+                let e = {
+                    id: t.interactionId,
+                    latency: t.duration,
+                    entries: [t]
                 };
-                (u[t.id] = t), I.push(t);
+                (I[e.id] = e), u.push(e);
             }
-            I.sort((e, t) => t.latency - e.latency),
-                I.splice(10).forEach((e) => {
-                    delete u[e.id];
+            u.sort((t, e) => e.latency - t.latency),
+                u.splice(10).forEach((t) => {
+                    delete I[t.id];
                 });
         }
     },
-    A = () => {
-        let e = Math.min(I.length - 1, Math.floor(l() / 50));
-        return I[e];
+    d = () => {
+        let t = Math.min(u.length - 1, Math.floor(l() / 50));
+        return u[t];
     },
-    T = (e, t = {}) => {
-        (0, c.A)(() => {
-            let r;
-            (0, i.Y)();
-            let c = (0, _.I)('INP'),
-                u = (e) => {
-                    e.forEach((e) => {
-                        e.interactionId && R(e), 'first-input' === e.entryType && !I.some((t) => t.entries.some((t) => e.duration === t.duration && e.startTime === t.startTime)) && R(e);
+    A = (t, e = {}) => {
+        (0, s.A)(() => {
+            let a;
+            (0, c.Y)();
+            let s = (0, o.I)('INP'),
+                I = (t) => {
+                    t.forEach((t) => {
+                        t.interactionId && R(t), 'first-input' !== t.entryType || u.some((e) => e.entries.some((e) => t.duration === e.duration && t.startTime === e.startTime)) || R(t);
                     });
-                    let t = A();
-                    t && t.latency !== c.value && ((c.value = t.latency), (c.entries = t.entries), r());
+                    let e = d();
+                    e && e.latency !== s.value && ((s.value = e.latency), (s.entries = e.entries), a());
                 },
-                T = (0, o.N)('event', u, { durationThreshold: null != t.durationThreshold ? t.durationThreshold : 40 });
-            (r = (0, n._)(e, c, s, t.reportAllChanges)),
-                T &&
-                    ('PerformanceEventTiming' in a.m &&
+                A = (0, _.N)('event', I, { durationThreshold: null != e.durationThreshold ? e.durationThreshold : 40 });
+            (a = (0, n._)(t, s, E, e.reportAllChanges)),
+                A &&
+                    ('PerformanceEventTiming' in r.m &&
                         'interactionId' in PerformanceEventTiming.prototype &&
-                        T.observe({
+                        A.observe({
                             type: 'first-input',
                             buffered: !0
                         }),
-                    (0, E.u)(() => {
-                        u(T.takeRecords()), c.value < 0 && l() > 0 && ((c.value = 0), (c.entries = [])), r(!0);
+                    (0, i.u)(() => {
+                        I(A.takeRecords()), s.value < 0 && l() > 0 && ((s.value = 0), (s.entries = [])), a(!0);
                     }));
         });
     };

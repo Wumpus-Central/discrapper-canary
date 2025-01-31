@@ -1,63 +1,53 @@
-r.d(n, {
-    Y0: function () {
-        return d.Y0;
-    },
-    hz: function () {
-        return d.hz;
-    },
-    mz: function () {
-        return d.mz;
-    },
-    u_: function () {
-        return f;
-    },
-    xB: function () {
-        return d.xB;
-    }
-});
-var i = r(47120);
-var a = r(192379),
-    o = r(97613),
-    s = r.n(o),
-    l = r(493773),
-    u = r(952265),
-    c = r(307616),
-    d = r(466377);
-function f(e) {
-    let { renderModal: n, onCloseRequest: r, onCloseCallback: i } = e,
-        [o] = a.useState(() => s()()),
-        d = (0, c.v)();
-    (0, l.N)(
+n.d(t, {
+    Y0: () => u.Y0,
+    hz: () => u.hz,
+    mz: () => u.mz,
+    u_: () => c,
+    xB: () => u.xB
+}),
+    n(47120);
+var i = n(192379),
+    r = n(97613),
+    a = n.n(r),
+    s = n(493773),
+    o = n(952265),
+    l = n(307616),
+    u = n(466377);
+function c(e) {
+    let { renderModal: t, onCloseRequest: n, onCloseCallback: r } = e,
+        [u] = i.useState(() => a()()),
+        c = (0, l.v)();
+    (0, s.N)(
         () => (
-            (0, u.h7)(
-                n,
+            (0, o.h7)(
+                t,
                 {
-                    modalKey: o,
-                    onCloseRequest: r,
-                    onCloseCallback: i
+                    modalKey: u,
+                    onCloseRequest: n,
+                    onCloseCallback: r
                 },
-                d
+                c
             ),
             () => {
-                (0, u.Mr)(o, d);
+                (0, o.Mr)(u, c);
             }
         )
     );
-    let f = a.useRef(!0),
-        p = {
-            contextKey: d,
-            modalKey: o,
-            onCloseCallback: i
+    let d = i.useRef(!0),
+        f = {
+            contextKey: c,
+            modalKey: u,
+            onCloseCallback: r
         },
-        h = a.useRef(p);
+        _ = i.useRef(f);
     return (
-        a.useEffect(() => {
-            h.current = p;
+        i.useEffect(() => {
+            _.current = f;
         }),
-        a.useLayoutEffect(() => {
-            let { contextKey: e, modalKey: i, onCloseCallback: a } = h.current;
-            !f.current && (0, u.o)(i, n, r, a, e), (f.current = !1);
-        }, [n, r]),
+        i.useLayoutEffect(() => {
+            let { contextKey: e, modalKey: i, onCloseCallback: r } = _.current;
+            d.current || (0, o.o)(i, t, n, r, e), (d.current = !1);
+        }, [t, n]),
         null
     );
 }

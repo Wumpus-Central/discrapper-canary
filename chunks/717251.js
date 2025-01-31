@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
+n.d(t, { Z: () => c });
 var i = n(200651);
 n(192379);
 var r = n(120356),
@@ -15,7 +11,7 @@ function c(e) {
     return (0, i.jsxs)('div', {
         className: l()(o.container, h),
         children: [
-            (0, i.jsx)(s.Clickable, {
+            (0, i.jsx)(s.P3F, {
                 className: l()(
                     o.clickableContainer,
                     {

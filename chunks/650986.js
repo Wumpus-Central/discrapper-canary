@@ -1,6 +1,6 @@
-function n(e) {
-    let n = e.regex,
-        r = {
+function t(e) {
+    let t = e.regex,
+        n = {
             begin: /<\/?[A-Za-z_]/,
             end: '>',
             subLanguage: 'xml',
@@ -10,7 +10,7 @@ function n(e) {
             begin: '^[-\\*]{3,}',
             end: '$'
         },
-        a = {
+        r = {
             className: 'code',
             variants: [
                 { begin: '(`{3,})[^`](.|\\n)*?\\1`*[ ]*' },
@@ -36,7 +36,7 @@ function n(e) {
                 }
             ]
         },
-        o = {
+        a = {
             className: 'bullet',
             begin: '^[ \t]*([*+-]|(\\d+\\.))(?=\\s+)',
             end: '\\s+',
@@ -61,8 +61,8 @@ function n(e) {
                 }
             ]
         },
-        l = /[A-Za-z][A-Za-z0-9+.-]*/,
-        u = {
+        o = /[A-Za-z][A-Za-z0-9+.-]*/,
+        l = {
             variants: [
                 {
                     begin: /\[.+?\]\[.*?\]/,
@@ -73,7 +73,7 @@ function n(e) {
                     relevance: 2
                 },
                 {
-                    begin: n.concat(/\[.+?\]\(/, l, /:\/\/.*?\)/),
+                    begin: t.concat(/\[.+?\]\(/, o, /:\/\/.*?\)/),
                     relevance: 2
                 },
                 {
@@ -114,7 +114,7 @@ function n(e) {
                 }
             ]
         },
-        c = {
+        u = {
             className: 'strong',
             contains: [],
             variants: [
@@ -128,7 +128,7 @@ function n(e) {
                 }
             ]
         },
-        d = {
+        c = {
             className: 'emphasis',
             contains: [],
             variants: [
@@ -143,58 +143,59 @@ function n(e) {
                 }
             ]
         },
-        f = e.inherit(c, { contains: [] }),
-        p = e.inherit(d, { contains: [] });
-    c.contains.push(p), d.contains.push(f);
-    let h = [r, u];
-    [c, d, f, p].forEach((e) => {
-        e.contains = e.contains.concat(h);
-    });
-    let _ = {
-        className: 'section',
-        variants: [
-            {
-                begin: '^#{1,6}',
-                end: '$',
-                contains: (h = h.concat(c, d))
-            },
-            {
-                begin: '(?=^.+?\\n[=-]{2,}$)',
-                contains: [
-                    { begin: '^[=-]*$' },
-                    {
-                        begin: '^',
-                        end: '\\n',
-                        contains: h
-                    }
-                ]
-            }
-        ]
-    };
-    return {
-        name: 'Markdown',
-        aliases: ['md', 'mkdown', 'mkd'],
-        contains: [
-            _,
-            r,
-            o,
-            c,
-            d,
-            {
-                className: 'quote',
-                begin: '^>\\s+',
-                contains: h,
-                end: '$'
-            },
-            a,
-            i,
-            u,
-            s,
-            {
-                scope: 'literal',
-                match: /&([a-zA-Z0-9]+|#[0-9]{1,7}|#[Xx][0-9a-fA-F]{1,6});/
-            }
-        ]
-    };
+        d = e.inherit(u, { contains: [] }),
+        f = e.inherit(c, { contains: [] });
+    u.contains.push(f), c.contains.push(d);
+    let _ = [n, l];
+    return (
+        [u, c, d, f].forEach((e) => {
+            e.contains = e.contains.concat(_);
+        }),
+        {
+            name: 'Markdown',
+            aliases: ['md', 'mkdown', 'mkd'],
+            contains: [
+                {
+                    className: 'section',
+                    variants: [
+                        {
+                            begin: '^#{1,6}',
+                            end: '$',
+                            contains: (_ = _.concat(u, c))
+                        },
+                        {
+                            begin: '(?=^.+?\\n[=-]{2,}$)',
+                            contains: [
+                                { begin: '^[=-]*$' },
+                                {
+                                    begin: '^',
+                                    end: '\\n',
+                                    contains: _
+                                }
+                            ]
+                        }
+                    ]
+                },
+                n,
+                a,
+                u,
+                c,
+                {
+                    className: 'quote',
+                    begin: '^>\\s+',
+                    contains: _,
+                    end: '$'
+                },
+                r,
+                i,
+                l,
+                s,
+                {
+                    scope: 'literal',
+                    match: /&([a-zA-Z0-9]+|#[0-9]{1,7}|#[Xx][0-9a-fA-F]{1,6});/
+                }
+            ]
+        }
+    );
 }
-e.exports = n;
+e.exports = t;

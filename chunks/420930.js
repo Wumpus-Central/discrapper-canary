@@ -1,10 +1,11 @@
-e.exports = {
-    container: 'container_c22357',
-    buttonGroupContainer: 'buttonGroupContainer_c22357',
-    cardContainer: 'cardContainer_c22357',
-    button: 'button_c22357',
-    askToJoinInputWrapper: 'askToJoinInputWrapper_c22357',
-    inputRow: 'inputRow_c22357',
-    sendButton: 'sendButton_c22357',
-    input: 'input_c22357'
+var i = {
+    container: 'container__88e24',
+    buttonGroupContainer: 'buttonGroupContainer__88e24',
+    cardContainer: 'cardContainer__88e24',
+    button: 'button__88e24',
+    askToJoinInputWrapper: 'askToJoinInputWrapper__88e24',
+    inputRow: 'inputRow__88e24',
+    sendButton: 'sendButton__88e24',
+    input: 'input__88e24'
 };
+e.exports = i;

@@ -1,236 +1,235 @@
-r.d(n, {
-    sE: function () {
-        return P;
-    }
-});
+n.d(t, {
+    ZP: () => w,
+    sE: () => x
+}),
+    n(653041),
+    n(47120);
 var i,
-    a = r(653041);
-var o = r(47120);
-var s = r(442837),
-    l = r(570140),
-    u = r(710845),
-    c = r(301766),
-    d = r(255078),
-    f = r(314897),
-    p = r(122289),
-    h = r(981631),
-    _ = r(474936);
-function m(e, n, r) {
+    r = n(442837),
+    a = n(570140),
+    s = n(710845),
+    o = n(301766),
+    l = n(255078),
+    u = n(314897),
+    c = n(122289),
+    d = n(981631),
+    f = n(474936);
+function _(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let g = null,
+let p = null,
+    h = null,
+    m = null,
+    g = null,
     E = null,
-    v = null,
-    y = null,
-    b = null,
-    I = !1,
-    T = !1,
-    S = null,
-    A = !1,
-    C = new u.Z('SubscriptionStore');
-function N(e) {
-    let { subscriptions: n } = e,
-        r = {},
+    v = !1,
+    y = !1,
+    I = null,
+    b = !1,
+    T = new s.Z('SubscriptionStore');
+function S(e) {
+    let { subscriptions: t } = e,
+        n = {},
         i = {},
+        r = [],
         a = [],
-        o = [],
-        s = f.default.getId();
-    n.forEach((e) => {
-        if (e.user_id !== s && !T) {
-            C.log('[handleSubscriptionsFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch'),
-                (0, p.g9)('[handleSubscriptionsFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch', {
+        s = u.default.getId();
+    t.forEach((e) => {
+        if (e.user_id !== s && !y) {
+            T.log('[handleSubscriptionsFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch'),
+                (0, c.g9)('[handleSubscriptionsFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch', {
                     extra: {
                         authUserId: s,
                         subscriptionId: e.id,
                         subscriptionUserId: e.user_id
                     }
                 }),
-                (T = !0);
+                (y = !0);
             return;
         }
-        let n = d.Q.createFromServer(e);
-        (r[n.id] = n), w(n) && ((i[n.id] = n), n.type === h.NYc.GUILD && n.status !== h.O0b.ENDED && a.push(n), n.type === h.NYc.APPLICATION && n.status !== h.O0b.ENDED && o.push(n));
+        let t = l.Q.createFromServer(e);
+        (n[t.id] = t), D(t) && ((i[t.id] = t), t.type === d.NYc.GUILD && t.status !== d.O0b.ENDED && r.push(t), t.type === d.NYc.APPLICATION && t.status !== d.O0b.ENDED && a.push(t));
     }),
+        (p = n),
+        (h = i),
         (g = r),
-        (E = i),
-        (y = a),
-        (b = o);
+        (E = a);
 }
-function R(e) {
-    let { activeSubscriptions: n, record: r } = e,
-        i = n.findIndex((e) => e.id === r.id);
-    if (-1 === i) return [r, ...n];
+function A(e) {
+    let { activeSubscriptions: t, record: n } = e,
+        i = t.findIndex((e) => e.id === n.id);
+    if (-1 === i) return [n, ...t];
     {
-        let e = [...n];
-        return w(r) && r.status !== h.O0b.ENDED ? (e[i] = r) : e.splice(i, 1), e;
+        let e = [...t];
+        return D(n) && n.status !== d.O0b.ENDED ? (e[i] = n) : e.splice(i, 1), e;
     }
 }
-function O(e) {
-    let { subscription: n } = e,
-        r = d.Q.createFromServer(n);
-    (g = {
-        ...g,
-        [r.id]: r
+function N(e) {
+    let { subscription: t } = e,
+        n = l.Q.createFromServer(t);
+    (p = {
+        ...p,
+        [n.id]: n
     }),
-        w(r) &&
-            (E = {
-                ...E,
-                [r.id]: r
+        D(n) &&
+            (h = {
+                ...h,
+                [n.id]: n
             }),
-        null != y &&
-            r.type === h.NYc.GUILD &&
-            (y = R({
-                activeSubscriptions: y,
-                record: r
+        null != g &&
+            n.type === d.NYc.GUILD &&
+            (g = A({
+                activeSubscriptions: g,
+                record: n
             })),
-        null != b &&
-            r.type === h.NYc.APPLICATION &&
-            (y = R({
-                activeSubscriptions: b,
-                record: r
+        null != E &&
+            n.type === d.NYc.APPLICATION &&
+            (g = A({
+                activeSubscriptions: E,
+                record: n
             }));
 }
+function C(e) {
+    let { subscription: t } = e;
+    if (((v = !0), null != t)) {
+        let e = u.default.getId();
+        if (t.user_id !== e && !y) {
+            T.log('[handleMostRecentSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch'),
+                (0, c.g9)('[handleMostRecentSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch', {
+                    extra: {
+                        authUserId: e,
+                        subscriptionId: t.id,
+                        subscriptionUserId: t.user_id
+                    }
+                }),
+                (v = !1),
+                (y = !0);
+            return;
+        }
+        m = l.Q.createFromServer(t);
+    }
+}
+function R(e) {
+    let { subscription: t } = e;
+    if (((b = !0), null != t)) {
+        let e = u.default.getId();
+        if (t.user_id !== e && !y) {
+            T.log('[handlePreviousSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch'),
+                (0, c.g9)('[handlePreviousSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch', {
+                    extra: {
+                        authUserId: e,
+                        subscriptionId: t.id,
+                        subscriptionUserId: t.user_id
+                    }
+                }),
+                (b = !1),
+                (y = !0);
+            return;
+        }
+        I = l.Q.createFromServer(t);
+    }
+}
+function O() {
+    (p = null), (h = null), (m = null), (g = null), (E = null), (v = !1), (y = !1), (I = null), (b = !1);
+}
 function D(e) {
-    let { subscription: n } = e;
-    if (((I = !0), null != n)) {
-        let e = f.default.getId();
-        if (n.user_id !== e && !T) {
-            C.log('[handleMostRecentSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch'),
-                (0, p.g9)('[handleMostRecentSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch', {
-                    extra: {
-                        authUserId: e,
-                        subscriptionId: n.id,
-                        subscriptionUserId: n.user_id
-                    }
-                }),
-                (I = !1),
-                (T = !0);
-            return;
-        }
-        v = d.Q.createFromServer(n);
-    }
+    return e.status !== d.O0b.UNPAID;
 }
-function L(e) {
-    let { subscription: n } = e;
-    if (((A = !0), null != n)) {
-        let e = f.default.getId();
-        if (n.user_id !== e && !T) {
-            C.log('[handlePreviousSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch'),
-                (0, p.g9)('[handlePreviousSubscriptionFetch] Skipping adding Subscription into SubscriptionStore because of userId mismatch', {
-                    extra: {
-                        authUserId: e,
-                        subscriptionId: n.id,
-                        subscriptionUserId: n.user_id
-                    }
-                }),
-                (A = !1),
-                (T = !0);
-            return;
-        }
-        S = d.Q.createFromServer(n);
-    }
+function x(e) {
+    let t = u.default.getId();
+    return e.userId === t;
 }
-function x() {
-    (g = null), (E = null), (v = null), (y = null), (b = null), (I = !1), (T = !1), (S = null), (A = !1);
-}
-function w(e) {
-    return e.status !== h.O0b.UNPAID;
-}
-function P(e) {
-    let n = f.default.getId();
-    return e.userId === n;
-}
-function M(e, n) {
-    let r = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        i = r ? E : g;
+function L(e, t) {
+    let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+        i = n ? h : p;
     if (null == i) return null;
-    for (let r in i) {
-        let a = i[r];
-        if (!P(a)) {
-            if (!T) {
-                let e = f.default.getId();
-                C.log('user id mismatch between logged in user and SubscriptionStore user'),
-                    (0, p.g9)('user id mismatch between logged in user and SubscriptionStore user', {
+    for (let n in i) {
+        let r = i[n];
+        if (!x(r)) {
+            if (!y) {
+                let e = u.default.getId();
+                T.log('user id mismatch between logged in user and SubscriptionStore user'),
+                    (0, c.g9)('user id mismatch between logged in user and SubscriptionStore user', {
                         extra: {
                             authUserId: e,
-                            subscriptionId: a.id,
-                            subscriptionUserId: a.userId
+                            subscriptionId: r.id,
+                            subscriptionUserId: r.userId
                         }
                     }),
-                    (T = !0);
+                    (y = !0);
             }
             break;
         }
-        if (a.type === e && (null == n || n(a))) return a;
+        if (r.type === e && (null == t || t(r))) return r;
     }
     return null;
 }
-class k extends (i = s.ZP.Store) {
+class P extends (i = r.ZP.Store) {
     hasFetchedSubscriptions() {
-        return null != g;
+        return null != p;
     }
     hasFetchedMostRecentPremiumTypeSubscription() {
-        return I;
+        return v;
     }
     hasFetchedPreviousPremiumTypeSubscription() {
-        return A;
+        return b;
     }
     getPremiumSubscription() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        return M(h.NYc.PREMIUM, (e) => !(0, c.Q0)(e.planId), e);
+        return L(d.NYc.PREMIUM, (e) => !(0, o.Q0)(e.planId), e);
     }
     getPremiumTypeSubscription() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        return M(h.NYc.PREMIUM, void 0, e);
+        return L(d.NYc.PREMIUM, void 0, e);
     }
     inReverseTrial() {
-        let e = M(h.NYc.PREMIUM, void 0, !0);
-        return !!(null != e && null != e.trialId && _.h8.includes(e.trialId)) && null == e.paymentSourceId;
+        let e = L(d.NYc.PREMIUM, void 0, !0);
+        return !!(null != e && null != e.trialId && f.h8.includes(e.trialId)) && null == e.paymentSourceId;
     }
     getSubscriptions() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-        return e ? E : g;
+        return e ? h : p;
     }
     getSubscriptionById(e) {
-        var n;
-        return null !== (n = null == g ? void 0 : g[e]) && void 0 !== n ? n : void 0;
+        var t;
+        return null !== (t = null == p ? void 0 : p[e]) && void 0 !== t ? t : void 0;
     }
     getActiveGuildSubscriptions() {
-        return y;
+        return g;
     }
     getActiveApplicationSubscriptions() {
-        return b;
+        return E;
     }
     getSubscriptionForPlanIds(e) {
-        var n;
-        let r = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+        var t;
+        let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             i = new Set(e),
-            a = r ? E : g;
-        return null == a ? null : null !== (n = Object.values(a).find((e) => e.items.some((e) => i.has(e.planId)))) && void 0 !== n ? n : null;
+            r = n ? h : p;
+        return null == r ? null : null !== (t = Object.values(r).find((e) => e.items.some((e) => i.has(e.planId)))) && void 0 !== t ? t : null;
     }
     getMostRecentPremiumTypeSubscription() {
-        return v;
+        return m;
     }
     getPreviousPremiumTypeSubscription() {
-        return S;
+        return I;
     }
 }
-m(k, 'displayName', 'SubscriptionStore'),
-    (n.ZP = new k(l.Z, {
-        BILLING_SUBSCRIPTION_FETCH_SUCCESS: N,
-        BILLING_SUBSCRIPTION_UPDATE_SUCCESS: O,
-        BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: D,
-        BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS: L,
-        BILLING_SUBSCRIPTION_RESET: x,
-        LOGOUT: x
-    }));
+_(P, 'displayName', 'SubscriptionStore');
+let w = new P(a.Z, {
+    BILLING_SUBSCRIPTION_FETCH_SUCCESS: S,
+    BILLING_SUBSCRIPTION_UPDATE_SUCCESS: N,
+    BILLING_MOST_RECENT_SUBSCRIPTION_FETCH_SUCCESS: C,
+    BILLING_PREVIOUS_PREMIUM_SUBSCRIPTION_FETCH_SUCCESS: R,
+    BILLING_SUBSCRIPTION_RESET: O,
+    LOGOUT: O
+});

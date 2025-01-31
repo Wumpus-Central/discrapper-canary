@@ -1,21 +1,17 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(512722),
-    a = r.n(i);
-function o(e, n) {
-    if ((a()(e.length >= n, 'Waveform smaller than samples'), e.length === n)) return e;
-    let r = e.length / n,
+n.d(t, { Z: () => a });
+var i = n(512722),
+    r = n.n(i);
+function a(e, t) {
+    if ((r()(e.length >= t, 'Waveform smaller than samples'), e.length === t)) return e;
+    let n = e.length / t,
         i = [],
-        o = 0;
-    for (; i.length < n; ) {
-        let n = Math.round((i.length + 1) * r),
-            a = 0,
+        a = 0;
+    for (; i.length < t; ) {
+        let t = Math.round((i.length + 1) * n),
+            r = 0,
             s = 0;
-        for (let r = o; r < n && r < e.length; r++) (a += e[r]), s++;
-        (i[i.length] = a / s), (o = n);
+        for (let n = a; n < t && n < e.length; n++) (r += e[n]), s++;
+        (i[i.length] = r / s), (a = t);
     }
     return i;
 }

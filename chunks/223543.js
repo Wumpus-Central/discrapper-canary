@@ -1,30 +1,25 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => u }), n(47120);
 var i = n(200651),
     r = n(192379),
-    s = n(893776),
-    l = n(129293),
+    l = n(893776),
+    a = n(129293),
     o = n(388905),
-    a = n(108427),
+    s = n(108427),
     c = n(388032),
     d = n(232186);
 function u(e) {
     let { location: t } = e,
         [u, h] = r.useState('submitting');
     return (r.useEffect(() => {
-        (0, a.e)('authorize_payment');
-        let e = (0, l.Z)(t);
+        (0, s.e)('authorize_payment');
+        let e = (0, a.Z)(t);
         if (null == e) {
             h('failed');
             return;
         }
         (async () => {
             try {
-                await s.Z.authorizePayment(e), h('succeeded');
+                await l.Z.authorizePayment(e), h('succeeded');
             } catch (e) {
                 h('failed');
             }

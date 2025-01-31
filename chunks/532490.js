@@ -1,225 +1,218 @@
 l.d(t, {
-    p: function () {
-        return n;
-    }
+    Z: () => Z,
+    p: () => N
 }),
     l(47120);
-var n,
-    i,
-    a = l(200651),
-    s = l(192379),
-    r = l(120356),
-    o = l.n(r),
-    c = l(642128),
-    d = l(442837),
-    u = l(481060),
-    x = l(393238),
-    m = l(434650),
-    h = l(607070),
-    g = l(594174),
-    f = l(5192),
-    v = l(603368),
-    C = l(856682),
-    p = l(284019),
-    j = l(388032),
-    N = l(577076);
-((i = n || (n = {})).LEFT = 'left'), (i.RIGHT = 'right');
-t.Z = s.memo(function (e) {
-    let { guildId: t, primaryColor: l, children: n, canSignCharter: i = !0, signed: r, onSignCharter: Z, animationDelayMs: T = 1000, signHintButtonText: S, signHintHelperText: y, signHintPosition: H = 'left', className: w, fullHeight: b, showDisclaimer: M } = e,
-        _ = s.useRef(null),
-        A = s.useCallback(
+var i,
+    n = l(200651),
+    a = l(192379),
+    s = l(120356),
+    r = l.n(s),
+    o = l(642128),
+    c = l(442837),
+    d = l(481060),
+    u = l(393238),
+    x = l(434650),
+    m = l(607070),
+    h = l(594174),
+    g = l(5192),
+    f = l(603368),
+    v = l(856682),
+    C = l(284019),
+    p = l(388032),
+    j = l(577076),
+    N = (((i = {}).LEFT = 'left'), (i.RIGHT = 'right'), i);
+let Z = a.memo(function (e) {
+    let { guildId: t, primaryColor: l, children: i, canSignCharter: s = !0, signed: N, onSignCharter: Z, animationDelayMs: T = 1000, signHintButtonText: y, signHintHelperText: H, signHintPosition: b = 'left', className: w, fullHeight: S, showDisclaimer: _ } = e,
+        M = a.useRef(null),
+        B = a.useCallback(
             (e) => {
-                e.preventDefault(), e.stopPropagation(), null == Z || Z(!r);
+                e.preventDefault(), e.stopPropagation(), null == Z || Z(!N);
             },
-            [Z, r]
+            [Z, N]
         ),
-        [B, R] = s.useState(!1),
-        [k, E] = s.useState(!1),
-        I = s.useRef(null),
-        D = s.useCallback(
+        [R, A] = a.useState(!1),
+        [E, k] = a.useState(!1),
+        D = a.useRef(null),
+        I = a.useCallback(
             (e) => {
                 e &&
-                    (I.current = setTimeout(() => {
-                        E(!0);
+                    (D.current = setTimeout(() => {
+                        k(!0);
                     }, T));
             },
             [T]
         ),
-        L = (0, m.O)(D),
-        P = (0, d.e7)([h.Z], () => h.Z.useReducedMotion),
-        V = (0, d.e7)([g.default], () => g.default.getCurrentUser()),
-        [G, F] = (0, u.useSpring)(() => {
-            var e, t;
-            return (
-                (e = H),
-                (t = P),
-                'left' === e
-                    ? {
-                          right: t ? 68 : 0,
-                          config: c.config.stiff
-                      }
-                    : {
-                          left: t ? 68 : 0,
-                          config: c.config.stiff
-                      }
-            );
-        }),
-        [Y, z] = (0, u.useSpring)(() => ({
+        V = (0, x.O)(I),
+        F = (0, c.e7)([m.Z], () => m.Z.useReducedMotion),
+        P = (0, c.e7)([h.default], () => h.default.getCurrentUser()),
+        [G, L] = (0, d.q_F)(() =>
+            'left' === b
+                ? {
+                      right: F ? 68 : 0,
+                      config: o.config.stiff
+                  }
+                : {
+                      left: F ? 68 : 0,
+                      config: o.config.stiff
+                  }
+        ),
+        [Y, z] = (0, d.q_F)(() => ({
             opacity: 0,
             top: -24,
             onRest: () => {
-                r && R(!0);
+                N && A(!0);
             }
         })),
         U = {
             animateFade: z,
-            animateExpand: F
+            animateExpand: L
         },
-        O = s.useRef(U);
-    s.useEffect(() => {
-        O.current = U;
+        q = a.useRef(U);
+    a.useEffect(() => {
+        q.current = U;
     }),
-        s.useEffect(() => {
-            let { animateFade: e, animateExpand: t } = O.current;
-            if (k)
-                t({
-                    ...('left' === H
+        a.useEffect(() => {
+            let { animateFade: e, animateExpand: t } = q.current;
+            E &&
+                (t({
+                    ...('left' === b
                         ? {
                               right: 68,
-                              config: c.config.stiff
+                              config: o.config.stiff
                           }
                         : {
                               left: 280,
-                              config: c.config.stiff
+                              config: o.config.stiff
                           })
                 }),
-                    e({
-                        opacity: 1,
-                        top: -24
-                    });
-            k &&
-                r &&
                 e({
-                    opacity: 0,
-                    top: 0
-                });
-        }, [k, r, H]),
-        s.useEffect(
+                    opacity: 1,
+                    top: -24
+                })),
+                E &&
+                    N &&
+                    e({
+                        opacity: 0,
+                        top: 0
+                    });
+        }, [E, N, b]),
+        a.useEffect(
             () => () => {
-                null != I.current && clearTimeout(I.current);
+                null != D.current && clearTimeout(D.current);
             },
             []
         );
-    let W = o()(N.signHintAnimationContainer, B && N.noDisplay, 'left' === H ? N.signTextLeft : N.signTextRight),
-        q = (0, u.useToken)(u.tokens.colors.BG_SURFACE_OVERLAY),
-        J = (0, u.useToken)(u.tokens.colors.BG_BRAND),
-        K = null != l ? l : J.hex(),
-        Q = (0, v.j1)(K, q.hex()),
-        { height: X = 87, ref: $ } = (0, x.Z)(i),
-        ee = (0, u.useTransition)(i, {
+    let O = r()(j.signHintAnimationContainer, R && j.noDisplay, 'left' === b ? j.signTextLeft : j.signTextRight),
+        X = (0, d.dQu)(d.TVs.colors.BG_SURFACE_OVERLAY),
+        Q = (0, d.dQu)(d.TVs.colors.BG_BRAND),
+        W = null != l ? l : Q.hex(),
+        K = (0, f.j1)(W, X.hex()),
+        { height: J = 87, ref: $ } = (0, u.Z)(s),
+        ee = (0, d.Yzy)(s, {
             from: {
                 opacity: 0,
-                translateY: X
+                translateY: J
             },
             enter: {
                 opacity: 1,
                 translateY: 0
             },
-            config: c.config.stiff
+            config: o.config.stiff
         });
-    return (0, a.jsx)('div', {
-        className: o()(N.container, w),
-        ref: L,
-        children: (0, a.jsx)(C.Z, {
-            fullHeight: b,
-            children: (0, a.jsxs)('div', {
-                className: o()(N.overviewSidebarWrapper, b && N.fullHeight),
+    return (0, n.jsx)('div', {
+        className: r()(j.container, w),
+        ref: V,
+        children: (0, n.jsx)(v.Z, {
+            fullHeight: S,
+            children: (0, n.jsxs)('div', {
+                className: r()(j.overviewSidebarWrapper, S && j.fullHeight),
                 children: [
-                    (0, a.jsx)(u.ScrollerNone, {
+                    (0, n.jsx)(d.u2D, {
                         fade: !0,
-                        className: N.overviewSidebarContent,
-                        children: (0, a.jsx)('div', {
-                            className: N.scrollContentContainer,
-                            children: n
+                        className: j.overviewSidebarContent,
+                        children: (0, n.jsx)('div', {
+                            className: j.scrollContentContainer,
+                            children: i
                         })
                     }),
                     ee(
                         (e, l) =>
                             l &&
-                            (0, a.jsx)(c.animated.div, {
-                                className: N.signatureBlockContainer,
+                            (0, n.jsx)(o.animated.div, {
+                                className: j.signatureBlockContainer,
                                 style: e,
-                                children: (0, a.jsx)('div', {
+                                children: (0, n.jsx)('div', {
                                     ref: $,
-                                    children: (0, a.jsxs)('div', {
-                                        className: N.signatureBlock,
+                                    children: (0, n.jsxs)('div', {
+                                        className: j.signatureBlock,
                                         children: [
-                                            (0, a.jsx)('div', {
-                                                ref: _,
-                                                className: N.signHintContainer,
-                                                children: (0, a.jsxs)(c.animated.div, {
-                                                    className: W,
+                                            (0, n.jsx)('div', {
+                                                ref: M,
+                                                className: j.signHintContainer,
+                                                children: (0, n.jsxs)(o.animated.div, {
+                                                    className: O,
                                                     style: {
                                                         ...G,
                                                         ...Y
                                                     },
                                                     children: [
-                                                        (0, a.jsx)('div', {
-                                                            className: N.signContainerButton,
-                                                            children: (0, a.jsxs)(p.Z, {
-                                                                themeColor: K,
-                                                                className: N.signButton,
-                                                                size: u.Button.Sizes.SMALL,
+                                                        (0, n.jsx)('div', {
+                                                            className: j.signContainerButton,
+                                                            children: (0, n.jsxs)(C.Z, {
+                                                                themeColor: W,
+                                                                className: j.signButton,
+                                                                size: d.zxk.Sizes.SMALL,
                                                                 onClick: (e) => {
                                                                     var t;
-                                                                    null === (t = _.current) || void 0 === t || t.scrollIntoView({ behavior: 'smooth' }), A(e);
+                                                                    null === (t = M.current) || void 0 === t || t.scrollIntoView({ behavior: 'smooth' }), B(e);
                                                                 },
                                                                 children: [
-                                                                    (0, a.jsx)('div', {
-                                                                        className: o()(N.signCarot, { [N.signCarotCustomColors]: null != Q }),
-                                                                        style: null != Q ? Q : { borderColor: K }
+                                                                    (0, n.jsx)('div', {
+                                                                        className: r()(j.signCarot, { [j.signCarotCustomColors]: null != K }),
+                                                                        style: null != K ? K : { borderColor: W }
                                                                     }),
-                                                                    null != S ? S : j.intl.string(j.t.ySpZ9P)
+                                                                    null != y ? y : p.intl.string(p.t.ySpZ9P)
                                                                 ]
                                                             })
                                                         }),
-                                                        (0, a.jsx)(u.Text, {
+                                                        (0, n.jsx)(d.Text, {
                                                             variant: 'text-xs/normal',
                                                             color: 'text-muted',
-                                                            className: N.signHintHelperText,
-                                                            children: null != y ? S : j.intl.string(j.t.Pwzyy8)
+                                                            className: j.signHintHelperText,
+                                                            children: null != H ? y : p.intl.string(p.t.Pwzyy8)
                                                         }),
-                                                        M &&
-                                                            (0, a.jsx)(u.Text, {
+                                                        _ &&
+                                                            (0, n.jsx)(d.Text, {
                                                                 variant: 'text-xs/normal',
                                                                 color: 'text-muted',
-                                                                className: N.signHintHelperText,
-                                                                children: j.intl.format(j.t.msDbmZ, {})
+                                                                className: j.signHintHelperText,
+                                                                children: p.intl.format(p.t.msDbmZ, {})
                                                             })
                                                     ]
                                                 })
                                             }),
-                                            (0, a.jsxs)(u.Clickable, {
-                                                onClick: A,
-                                                className: o()(N.signatureContainer, { [N.clickable]: null != Z }),
+                                            (0, n.jsxs)(d.P3F, {
+                                                onClick: B,
+                                                className: r()(j.signatureContainer, { [j.clickable]: null != Z }),
                                                 children: [
-                                                    (0, a.jsx)(u.Text, {
+                                                    (0, n.jsx)(d.Text, {
                                                         variant: 'text-md/normal',
                                                         color: 'none',
                                                         children: 'x'
                                                     }),
-                                                    r
-                                                        ? (0, a.jsx)(u.Text, {
+                                                    N
+                                                        ? (0, n.jsx)(d.Text, {
                                                               variant: 'text-lg/normal',
                                                               color: 'header-primary',
-                                                              className: N.signatureText,
-                                                              children: f.ZP.getName(t, null, V)
+                                                              className: j.signatureText,
+                                                              children: g.ZP.getName(t, null, P)
                                                           })
-                                                        : (0, a.jsx)(u.Text, {
+                                                        : (0, n.jsx)(d.Text, {
                                                               variant: 'text-lg/normal',
                                                               color: 'none',
-                                                              className: N.signatureText,
-                                                              children: j.intl.string(j.t.RC1D19)
+                                                              className: j.signatureText,
+                                                              children: p.intl.string(p.t.RC1D19)
                                                           })
                                                 ]
                                             })

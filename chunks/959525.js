@@ -1,18 +1,10 @@
-r.d(n, {
-    aT: function () {
-        return i;
-    },
-    b9: function () {
-        return a;
-    },
-    hN: function () {
-        return s;
-    },
-    yF: function () {
-        return o;
-    }
+n.d(t, {
+    aT: () => i,
+    b9: () => r,
+    hN: () => s,
+    yF: () => a
 });
 let i = /\{.+?\}/,
-    a = /[~*_]{2}.+?[~*_]{2}|\[.*?\]\(.+?\)|\n\n/,
-    o = /!!/,
+    r = /[~*_]{2}.+?[~*_]{2}|\[.*?\]\(.+?\)|\n\n/,
+    a = /!!/,
     s = /!!/g;

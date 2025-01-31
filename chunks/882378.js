@@ -1,8 +1,8 @@
-n(47120);
+n.d(t, { Z: () => x }), n(47120);
 var i = n(200651),
     l = n(192379),
-    r = n(442837),
-    a = n(952265),
+    a = n(442837),
+    r = n(952265),
     s = n(481060),
     o = n(493773),
     c = n(378298),
@@ -13,97 +13,98 @@ var i = n(200651),
     m = n(819640),
     f = n(665149),
     g = n(134612),
-    C = n(388032),
-    x = n(629435);
-t.Z = l.memo(function (e) {
+    _ = n(388032),
+    C = n(629435);
+let x = l.memo(function (e) {
     let { channel: t } = e,
-        v = (0, d.h)(t.id),
-        _ = (0, u.o)(t.id),
-        I = (0, h.M)(t.id),
-        E = (0, a.f9)(),
-        b = (0, r.e7)([m.Z], () => m.Z.hasLayers()),
-        Z = l.useCallback(() => (_ ? C.intl.string(C.t['16QyDg']) : null != I ? C.intl.string(C.t.kCN9i4) : null), [_, I]),
-        N = l.useMemo(() => (_ || null != I) && !E && !b, [_, I, E, b]),
-        [S, T] = l.useState(Z());
+        x = (0, d.h)(t.id),
+        v = (0, u.o)(t.id),
+        E = (0, h.M)(t.id),
+        I = (0, r.f9)(),
+        b = (0, a.e7)([m.Z], () => m.Z.hasLayers()),
+        Z = l.useCallback(() => (v ? _.intl.string(_.t['16QyDg']) : null != E ? _.intl.string(_.t.kCN9i4) : null), [v, E]),
+        N = l.useMemo(() => (v || null != E) && !I && !b, [v, E, I, b]),
+        [T, S] = l.useState(Z());
     l.useEffect(() => {
-        null != I &&
-            null != v &&
-            (s.AccessibilityAnnouncer.announce(C.intl.string(C.t.acsXuL)),
+        null != E &&
+            null != x &&
+            (s.uvj.announce(_.intl.string(_.t.acsXuL)),
             setTimeout(() => {
-                (0, c.T)(t.id, [I.id]);
+                (0, c.T)(t.id, [E.id]);
             }, 5000),
             (0, p.KQ)({
                 channelId: t.id,
                 senderId: t.getRecipientId(),
-                warningId: I.id,
-                warningType: I.type,
-                isNudgeWarning: null != I,
+                warningId: E.id,
+                warningType: E.type,
+                isNudgeWarning: null != E,
                 viewName: p.pb.SAFETY_TOOLS_NUDGE_TOOLTIP
             })),
-            _ &&
-                (s.AccessibilityAnnouncer.announce(C.intl.string(C.t['1dxCqK'])),
+            v &&
+                (s.uvj.announce(_.intl.string(_.t['1dxCqK'])),
                 setTimeout(() => {
                     (0, c.Ot)(t.id);
                 }, 5000));
-    }, [t, I, v, _]),
+    }, [t, E, x, v]),
         (0, o.Z)(() => {
-            null != v &&
+            null != x &&
                 (0, p.KQ)({
                     channelId: t.id,
                     senderId: t.getRecipientId(),
-                    warningId: v.id,
-                    warningType: v.type,
-                    isNudgeWarning: null != I,
+                    warningId: x.id,
+                    warningType: x.type,
+                    isNudgeWarning: null != E,
                     viewName: p.pb.SAFETY_TOOLS_BUTTON
                 });
         }),
         l.useEffect(() => {
             let e = Z();
-            null != e && T(e);
-        }, [_, I, Z]);
+            null != e && S(e);
+        }, [v, E, Z]);
     let j = l.useCallback(() => {
-        if ((null != I && (0, c.T)(t.id, [I.id]), null != v))
-            (0, s.openModalLazy)(
-                async () => {
-                    let { default: e } = await Promise.all([n.e('37229'), n.e('89650')]).then(n.bind(n, 611446));
-                    return (n) => {
-                        let { onClose: l, transitionState: r } = n;
-                        return (0, i.jsx)(e, {
-                            otherUserId: t.getRecipientId(),
-                            channelId: t.id,
-                            warningId: v.id,
-                            warningType: v.type,
-                            onClose: l,
-                            transitionState: r
-                        });
-                    };
-                },
-                { modalKey: g.X_ }
-            ),
+        null != E && (0, c.T)(t.id, [E.id]),
+            null != x &&
+                ((0, s.ZDy)(
+                    async () => {
+                        let { default: e } = await Promise.all([n.e('49508'), n.e('89650')]).then(n.bind(n, 611446));
+                        return (n) => {
+                            let { onClose: l, transitionState: a } = n;
+                            return (0, i.jsx)(e, {
+                                otherUserId: t.getRecipientId(),
+                                channelId: t.id,
+                                warningId: x.id,
+                                warningType: x.type,
+                                onClose: l,
+                                transitionState: a
+                            });
+                        };
+                    },
+                    { modalKey: g.X_ }
+                ),
                 (0, p.qc)({
                     channelId: t.id,
                     senderId: t.getRecipientId(),
-                    warningId: v.id,
-                    warningType: v.type,
+                    warningId: x.id,
+                    warningType: x.type,
                     cta: p.NM.USER_SAFETY_TOOLS_BUTTON_CLICK,
-                    isNudgeWarning: null != I
-                });
-    }, [I, v, t]);
-    return null == v
+                    isNudgeWarning: null != E
+                }));
+    }, [E, x, t]);
+    return null == x
         ? null
-        : (0, i.jsx)(s.Tooltip, {
+        : (0, i.jsx)(s.ua7, {
               forceOpen: N,
-              text: S,
-              color: s.TooltipColors.BRAND,
+              text: T,
+              color: s.FGA.BRAND,
               position: 'bottom',
-              tooltipClassName: x.tooltip,
-              tooltipContentClassName: x.tooltipContent,
+              tooltipClassName: C.tooltip,
+              tooltipContentClassName: C.tooltipContent,
               children: () =>
                   (0, i.jsx)(f.ZP.Icon, {
-                      icon: s.ShieldIcon,
+                      icon: s.b7C,
                       onClick: j,
-                      tooltip: C.intl.string(C.t.rpc2qq),
-                      tooltipDisabled: null != I
+                      tooltip: _.intl.string(_.t.rpc2qq),
+                      tooltipDisabled: null != E
                   })
           });
 });

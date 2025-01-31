@@ -1,14 +1,12 @@
-r.d(n, {
-    B: function () {
-        return i;
-    }
+n.d(t, {
+    B: () => r,
+    Z: () => a
 });
-var i,
-    a = r(818083);
-!(function (e) {
-    (e[(e.NONE = 0)] = 'NONE'), (e[(e.WITH_TOP_LIST = 1)] = 'WITH_TOP_LIST'), (e[(e.WITHOUT_TOP_LIST = 2)] = 'WITHOUT_TOP_LIST');
-})(i || (i = {}));
-let o = (0, a.B)({
+var i = n(818083),
+    r = (function (e) {
+        return (e[(e.NONE = 0)] = 'NONE'), (e[(e.WITH_TOP_LIST = 1)] = 'WITH_TOP_LIST'), (e[(e.WITHOUT_TOP_LIST = 2)] = 'WITHOUT_TOP_LIST'), e;
+    })({});
+let a = (0, i.B)({
     kind: 'user',
     id: '2024-02_emoji_picker_upload_desktop',
     label: 'Desktop: Consistently show the Emoji Picker Upload button at the start of emoji lists',
@@ -35,4 +33,3 @@ let o = (0, a.B)({
         }
     ]
 });
-n.Z = o;

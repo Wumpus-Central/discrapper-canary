@@ -1,11 +1,6 @@
 function a(e) {
     return 1 === e.nodeType;
 }
-t.d(r, {
-    p: function () {
-        return o;
-    }
-});
 function o(e) {
     let r = e.ownerDocument.defaultView;
     if (!r) throw Error('cannot check visibility of non attached element');
@@ -39,7 +34,7 @@ function o(e) {
             return !1;
         function i(e) {
             let t = e.getBoundingClientRect();
-            return (!!(t.height > 0) && !!(t.width > 0)) || ('hidden' != r.getComputedStyle(e).overflow && Array.from(e.childNodes).some((e) => 3 === e.nodeType || (a(e) && i(e))));
+            return (t.height > 0 && t.width > 0) || ('hidden' != r.getComputedStyle(e).overflow && Array.from(e.childNodes).some((e) => 3 === e.nodeType || (a(e) && i(e))));
         }
         return (
             !!(t || i(o)) &&
@@ -59,16 +54,9 @@ function o(e) {
                                     let t = r.getComputedStyle(e).position;
                                     if ('fixed' == t) return (a = !0), e == l ? null : l;
                                     {
+                                        var o;
                                         let a = e.parentElement;
-                                        for (
-                                            ;
-                                            a &&
-                                            !(function (e) {
-                                                return e == l || (!r.getComputedStyle(e).display.match(/^inline/) && ('absolute' != t || 'static' != r.getComputedStyle(e).position) && !0);
-                                            })(a);
-
-                                        )
-                                            a = a.parentElement;
+                                        for (; a && !((o = a) == l || (!r.getComputedStyle(o).display.match(/^inline/) && ('absolute' != t || 'static' != r.getComputedStyle(o).position))); ) a = a.parentElement;
                                         return a;
                                     }
                                 }
@@ -132,8 +120,8 @@ function o(e) {
                         })
                     );
                 })(o)
-            ) &&
-            !0
+            )
         );
     })(e);
 }
+t.d(r, { p: () => o });

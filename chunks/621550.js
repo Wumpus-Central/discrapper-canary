@@ -1,4 +1,5 @@
 e.exports = {
-    codeRedemptionInput: 'codeRedemptionInput_c9555c',
-    errorMessage: 'errorMessage_c9555c'
+    codeRedemptionInput: 'codeRedemptionInput__3514e',
+    confirmBackgroundImage: 'confirmBackgroundImage__3514e',
+    errorMessage: 'errorMessage__3514e'
 };

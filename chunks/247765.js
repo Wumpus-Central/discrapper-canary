@@ -1,9 +1,5 @@
 function i(e) {
-    let { isInline: n, isVoid: r } = e;
-    return (e.isInline = (e) => 'testInline' === e.type || 'testInlineVoid' === e.type || n(e)), (e.isVoid = (e) => 'testInlineVoid' === e.type || r(e)), e;
+    let { isInline: t, isVoid: n } = e;
+    return (e.isInline = (e) => 'testInline' === e.type || 'testInlineVoid' === e.type || t(e)), (e.isVoid = (e) => 'testInlineVoid' === e.type || n(e)), e;
 }
-r.d(n, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });

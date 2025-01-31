@@ -1,142 +1,141 @@
+n.d(t, { Z: () => D }), n(47120), n(653041);
 var i,
-    a = r(47120);
-var o = r(653041);
-var s = r(392711),
-    l = r.n(s),
-    u = r(442837),
-    c = r(570140),
-    d = r(668781),
-    f = r(141795),
-    p = r(596956),
-    h = r(703558),
-    _ = r(981631),
-    m = r(388032);
-function g(e, n, r) {
+    r = n(392711),
+    a = n.n(r),
+    s = n(442837),
+    o = n(570140),
+    l = n(668781),
+    u = n(141795),
+    c = n(596956),
+    d = n(703558),
+    f = n(981631),
+    _ = n(388032);
+function p(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let E = new Map(),
-    v = [];
-function y(e, n) {
-    var r, i;
-    return null !== (i = null === (r = b(e)) || void 0 === r ? void 0 : r.get(n)) && void 0 !== i ? i : v;
+let h = new Map(),
+    m = [];
+function g(e, t) {
+    var n, i;
+    return null !== (i = null === (n = E(e)) || void 0 === n ? void 0 : n.get(t)) && void 0 !== i ? i : m;
 }
-function b(e) {
-    var n;
-    return null !== (n = E.get(e)) && void 0 !== n ? n : new Map();
+function E(e) {
+    var t;
+    return null !== (t = h.get(e)) && void 0 !== t ? t : new Map();
 }
-function I(e, n, r) {
-    let i = b(e);
-    i.set(n, r), E.set(e, i);
+function v(e, t, n) {
+    let i = E(e);
+    i.set(t, n), h.set(e, i);
 }
-function T(e) {
-    let { channelId: n } = e,
-        r = [...y(n, h.d.ChannelMessage)];
-    r.shift(), I(n, h.d.ChannelMessage, r);
+function y(e) {
+    let { channelId: t } = e,
+        n = [...g(t, d.d.ChannelMessage)];
+    n.shift(), v(t, d.d.ChannelMessage, n);
 }
-let S = (e) => {
-    let { files: n, channelId: r, showLargeMessageDialog: i, draftType: a } = e,
-        o = [...y(r, a)];
-    if (o.length + n.length > _.dN1 && a !== h.d.SlashCommand && a !== h.d.ApplicationLauncherCommand) {
-        d.Z.show({
-            title: m.intl.string(m.t.wOr6hI),
-            body: m.intl.formatToPlainString(m.t['qqyp/f'], { limit: _.dN1 })
+let I = (e) => {
+    let { files: t, channelId: n, showLargeMessageDialog: i, draftType: r } = e,
+        s = [...g(n, r)];
+    if (s.length + t.length > f.dN1 && r !== d.d.SlashCommand && r !== d.d.ApplicationLauncherCommand) {
+        l.Z.show({
+            title: _.intl.string(_.t.wOr6hI),
+            body: _.intl.formatToPlainString(_.t['qqyp/f'], { limit: f.dN1 })
         });
         return;
     }
-    l().forEach(n, (e) => {
-        let n = new f.n(e, r, i, o.length);
-        n.upload(), o.push(n);
+    a().forEach(t, (e) => {
+        let t = new u.n(e, n, i, s.length);
+        t.upload(), s.push(t);
     }),
-        I(r, a, o);
+        v(n, r, s);
 };
-function A(e) {
-    let { channelId: n, id: r, draftType: i } = e,
-        a = [...y(n, i)],
-        o = a.findIndex((e) =>
-            (0, p.T)(
+function b(e) {
+    let { channelId: t, id: n, draftType: i } = e,
+        r = [...g(t, i)],
+        a = r.findIndex((e) =>
+            (0, c.T)(
                 {
-                    uri: r,
-                    filename: r
+                    uri: n,
+                    filename: n
                 },
                 e
             )
         );
-    o > -1 && (a.splice(o, 1)[0].cancel(), I(n, i, a));
+    a > -1 && (r.splice(a, 1)[0].cancel(), v(t, i, r));
 }
-function C(e) {
-    let { channelId: n, attachmentIds: r, draftType: i } = e,
-        a = [...y(n, i)];
-    r.forEach((e) => {
-        let n = a.findIndex((n) => e === n.id);
-        n > -1 && a.splice(n, 1)[0].cancel();
+function T(e) {
+    let { channelId: t, attachmentIds: n, draftType: i } = e,
+        r = [...g(t, i)];
+    n.forEach((e) => {
+        let t = r.findIndex((t) => e === t.id);
+        t > -1 && r.splice(t, 1)[0].cancel();
     }),
-        I(n, i, a);
+        v(t, i, r);
+}
+function S(e) {
+    let { channelId: t, id: n, filename: i, description: r, spoiler: a, thumbnail: s, draftType: o } = e,
+        l = [...g(t, o)].map((e) => (e.id === n && (void 0 !== i && (e.filename = i), void 0 !== a && (e.spoiler = a), void 0 !== r && (e.description = r), void 0 !== s && (e.isThumbnail = s)), e));
+    v(t, o, l);
+}
+function A(e) {
+    let { channelId: t, id: n, file: i, draftType: r } = e,
+        a = [...g(t, r)].filter((e) => e.id !== n),
+        s = new u.n(i, t);
+    s.upload(), a.push(s), v(t, r, a);
 }
 function N(e) {
-    let { channelId: n, id: r, filename: i, description: a, spoiler: o, thumbnail: s, draftType: l } = e,
-        u = [...y(n, l)].map((e) => (e.id === r && (void 0 !== i && (e.filename = i), void 0 !== o && (e.spoiler = o), void 0 !== a && (e.description = a), void 0 !== s && (e.isThumbnail = s)), e));
-    I(n, l, u);
+    let { channelId: t, uploads: n, draftType: i } = e;
+    v(t, i, n);
+}
+function C(e) {
+    let { channelId: t, draftType: n } = e;
+    v(t, n, []);
 }
 function R(e) {
-    let { channelId: n, id: r, file: i, draftType: a } = e,
-        o = [...y(n, a)].filter((e) => e.id !== r),
-        s = new f.n(i, n);
-    s.upload(), o.push(s), I(n, a, o);
+    let { baseChannelId: t } = e;
+    v(t, d.d.FirstThreadMessage, []);
 }
-function O(e) {
-    let { channelId: n, uploads: r, draftType: i } = e;
-    I(n, i, r);
-}
-function D(e) {
-    let { channelId: n, draftType: r } = e;
-    I(n, r, []);
-}
-function L(e) {
-    let { baseChannelId: n } = e;
-    I(n, h.d.FirstThreadMessage, []);
-}
-class x extends (i = u.ZP.Store) {
-    getFirstUpload(e, n) {
-        let r = y(e, n);
-        return r.length > 0 ? r[0] : null;
+class O extends (i = s.ZP.Store) {
+    getFirstUpload(e, t) {
+        let n = g(e, t);
+        return n.length > 0 ? n[0] : null;
     }
-    hasAdditionalUploads(e, n) {
-        var r;
-        return (null !== (r = y(e, n).length) && void 0 !== r ? r : 0) > 1;
+    hasAdditionalUploads(e, t) {
+        var n;
+        return (null !== (n = g(e, t).length) && void 0 !== n ? n : 0) > 1;
     }
-    getUploads(e, n) {
-        return y(e, n);
+    getUploads(e, t) {
+        return g(e, t);
     }
-    getUploadCount(e, n) {
-        var r;
-        return null !== (r = y(e, n).length) && void 0 !== r ? r : 0;
+    getUploadCount(e, t) {
+        var n;
+        return null !== (n = g(e, t).length) && void 0 !== n ? n : 0;
     }
-    getUpload(e, n, r) {
-        return y(e, r).find((e) => e.id === n);
+    getUpload(e, t, n) {
+        return g(e, n).find((e) => e.id === t);
     }
-    findUpload(e, n, r) {
-        return y(e, n).find(r);
+    findUpload(e, t, n) {
+        return g(e, t).find(n);
     }
 }
-g(x, 'displayName', 'UploadAttachmentStore'),
-    (n.Z = new x(c.Z, {
-        UPLOAD_ATTACHMENT_POP_FILE: T,
-        UPLOAD_ATTACHMENT_ADD_FILES: S,
-        UPLOAD_ATTACHMENT_UPDATE_FILE: N,
-        UPLOAD_ATTACHMENT_REMOVE_FILE: A,
-        UPLOAD_ATTACHMENT_REMOVE_FILES: C,
-        UPLOAD_ATTACHMENT_CLEAR_ALL_FILES: D,
-        UPLOAD_ATTACHMENT_SET_UPLOADS: O,
-        UPLOAD_ATTACHMENT_SET_FILE: R,
-        SIDEBAR_CLOSE: L
-    }));
+p(O, 'displayName', 'UploadAttachmentStore');
+let D = new O(o.Z, {
+    UPLOAD_ATTACHMENT_POP_FILE: y,
+    UPLOAD_ATTACHMENT_ADD_FILES: I,
+    UPLOAD_ATTACHMENT_UPDATE_FILE: S,
+    UPLOAD_ATTACHMENT_REMOVE_FILE: b,
+    UPLOAD_ATTACHMENT_REMOVE_FILES: T,
+    UPLOAD_ATTACHMENT_CLEAR_ALL_FILES: C,
+    UPLOAD_ATTACHMENT_SET_UPLOADS: N,
+    UPLOAD_ATTACHMENT_SET_FILE: A,
+    SIDEBAR_CLOSE: R
+});

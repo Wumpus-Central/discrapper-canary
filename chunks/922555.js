@@ -1,10 +1,11 @@
-var i = r(570140);
-n.Z = {
-    move(e, n) {
+n.d(t, { Z: () => r });
+var i = n(570140);
+let r = {
+    move(e, t) {
         i.Z.dispatch({
             type: 'INCOMING_CALL_MOVE',
             x: e,
-            y: n
+            y: t
         });
     }
 };

@@ -1,17 +1,7 @@
-n.d(t, {
-    Y: function () {
-        return c;
-    }
-});
+n.d(t, { Y: () => u });
 var r = n(521548),
     i = n(62090),
     o = n(866851);
-function u(e, t) {
-    for (var n = 0; n < t.length; n++) {
-        var r = t[n];
-        (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
-    }
-}
 function a(e, t, n) {
     return (
         t in e
@@ -25,19 +15,19 @@ function a(e, t, n) {
         e
     );
 }
-var c = (function () {
-    var e, t, n;
-    function c(e) {
-        var t = this;
+var u = (function () {
+    var e;
+    function t(e) {
+        var n = this;
         !(function (e, t) {
             if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-        })(this, c),
+        })(this, t),
             a(
                 this,
                 'hooks',
                 (0, i.p)({
-                    dropTarget: function (e, n) {
-                        t.clearDropTarget(), (t.dropTargetOptions = n), (0, o.d)(e) ? (t.dropTargetRef = e) : (t.dropTargetNode = e), t.reconnect();
+                    dropTarget: function (e, t) {
+                        n.clearDropTarget(), (n.dropTargetOptions = t), (0, o.d)(e) ? (n.dropTargetRef = e) : (n.dropTargetNode = e), n.reconnect();
                     }
                 })
             ),
@@ -53,8 +43,7 @@ var c = (function () {
             (this.backend = e);
     }
     return (
-        (e = c),
-        (t = [
+        (e = [
             {
                 key: 'connectTarget',
                 get: function () {
@@ -67,7 +56,7 @@ var c = (function () {
                     var e = this.didHandlerIdChange() || this.didDropTargetChange() || this.didOptionsChange();
                     e && this.disconnectDropTarget();
                     var t = this.dropTarget;
-                    if (!!this.handlerId) {
+                    if (this.handlerId) {
                         if (!t) {
                             this.lastConnectedDropTarget = t;
                             return;
@@ -79,7 +68,7 @@ var c = (function () {
             {
                 key: 'receiveHandlerId',
                 value: function (e) {
-                    if (e !== this.handlerId) (this.handlerId = e), this.reconnect();
+                    e !== this.handlerId && ((this.handlerId = e), this.reconnect());
                 }
             },
             {
@@ -128,7 +117,12 @@ var c = (function () {
                 }
             }
         ]),
-        u(e.prototype, t),
-        c
+        (function (e, t) {
+            for (var n = 0; n < t.length; n++) {
+                var r = t[n];
+                (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+            }
+        })(t.prototype, e),
+        t
     );
 })();

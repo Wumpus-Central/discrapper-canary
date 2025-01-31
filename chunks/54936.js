@@ -1,58 +1,53 @@
-n.d(t, {
-    n: function () {
-        return p;
-    }
-}),
-    n(411104);
+n.d(t, { n: () => p }), n(411104);
 var i = n(200651);
 n(192379);
-var r = n(120356),
-    l = n.n(r),
-    a = n(481060),
-    o = n(910111),
-    s = n(732559),
+var l = n(120356),
+    a = n.n(l),
+    r = n(481060),
+    s = n(910111),
+    o = n(732559),
     c = n(723851),
-    u = n(981631),
-    d = n(388032),
+    d = n(981631),
+    u = n(388032),
     m = n(758528);
 let h = {
-    [u.TaA.WINDOWS]: {
+    [d.TaA.WINDOWS]: {
         icon: c.Z,
-        getLabel: () => d.intl.string(d.t['0/xHFB'])
+        getLabel: () => u.intl.string(u.t['0/xHFB'])
     },
-    [u.TaA.MACOS]: {
-        icon: s.Z,
-        getLabel: () => d.intl.string(d.t.E4u4n5)
-    },
-    [u.TaA.LINUX]: {
+    [d.TaA.MACOS]: {
         icon: o.Z,
-        getLabel: () => d.intl.string(d.t.tcawo6)
+        getLabel: () => u.intl.string(u.t.E4u4n5)
+    },
+    [d.TaA.LINUX]: {
+        icon: s.Z,
+        getLabel: () => u.intl.string(u.t.tcawo6)
     }
 };
-function f(e) {
+function _(e) {
     let { operatingSystem: t, className: n } = e,
-        r = h[t];
-    if (null == r) throw Error('Unexpected operating system: '.concat(t));
-    let l = r.icon;
-    return (0, i.jsx)(a.Tooltip, {
-        text: r.getLabel(),
+        l = h[t];
+    if (null == l) throw Error('Unexpected operating system: '.concat(t));
+    let a = l.icon;
+    return (0, i.jsx)(r.ua7, {
+        text: l.getLabel(),
         children: (e) =>
-            (0, i.jsx)(l, {
+            (0, i.jsx)(a, {
                 ...e,
                 className: n
             })
     });
 }
 let p = (e) => {
-    let { systems: t, className: n, iconClassName: r } = e;
+    let { systems: t, className: n, iconClassName: l } = e;
     return (0, i.jsx)('div', {
-        className: l()(m.OSSection, n),
+        className: a()(m.OSSection, n),
         children: t.map((e) =>
             (0, i.jsx)(
-                f,
+                _,
                 {
                     operatingSystem: e,
-                    className: l()(m.purchaseUnitOperatingSystem, r)
+                    className: a()(m.purchaseUnitOperatingSystem, l)
                 },
                 e
             )

@@ -1,20 +1,16 @@
-r.d(n, {
-    Z: function () {
-        return u;
-    }
-});
-var i = r(592125),
-    a = r(19780),
-    o = r(797258),
-    s = r(626135),
-    l = r(981631);
-function u(e, n, r) {
-    var u, c;
-    s.default.track(l.rMx.VOICE_CALL_TRANSFER, {
-        source_platform: null != r ? (null === (u = o.Z.getSessionById(r)) || void 0 === u ? void 0 : u.clientInfo.os) : 'discord_client',
-        guild_id: null === (c = i.Z.getChannel(e)) || void 0 === c ? void 0 : c.guild_id,
+n.d(t, { Z: () => l });
+var i = n(592125),
+    r = n(19780),
+    a = n(797258),
+    s = n(626135),
+    o = n(981631);
+function l(e, t, n) {
+    var l, u;
+    s.default.track(o.rMx.VOICE_CALL_TRANSFER, {
+        source_platform: null != n ? (null === (l = a.Z.getSessionById(n)) || void 0 === l ? void 0 : l.clientInfo.os) : 'discord_client',
+        guild_id: null === (u = i.Z.getChannel(e)) || void 0 === u ? void 0 : u.guild_id,
         channel_id: e,
-        rtc_connection_id: a.Z.getRTCConnectionId(),
-        target_platform: n
+        rtc_connection_id: r.Z.getRTCConnectionId(),
+        target_platform: t
     });
 }

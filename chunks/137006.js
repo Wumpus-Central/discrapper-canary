@@ -1,22 +1,17 @@
-n.d(t, {
-    m: function () {
-        return l;
-    }
-}),
-    n(47120);
+n.d(t, { m: () => r }), n(47120);
 var i = n(243814),
-    r = n(103964);
-let l = {
-        [r.Q5.INITIATE_IMAGE_UPLOAD]: {
+    l = n(103964);
+let r = {
+        [l.Q5.INITIATE_IMAGE_UPLOAD]: {
             request: void 0,
             response: (e) => e.object({ image_url: e.string().required() })
         },
-        [r.Q5.OPEN_SHARE_MOMENT_DIALOG]: {
+        [l.Q5.OPEN_SHARE_MOMENT_DIALOG]: {
             response: void 0,
-            request: (e) => (0, r.C5)(e.object({ mediaUrl: e.string().required().max(1024) }))
+            request: (e) => (0, l.C5)(e.object({ mediaUrl: e.string().required().max(1024) }))
         },
-        [r.Q5.AUTHENTICATE]: {
-            request: (e) => (0, r.C5)(e.object({ access_token: e.string().allow(null).optional() })),
+        [l.Q5.AUTHENTICATE]: {
+            request: (e) => (0, l.C5)(e.object({ access_token: e.string().allow(null).optional() })),
             response: (e) =>
                 e.object({
                     access_token: e.string().required(),
@@ -32,7 +27,7 @@ let l = {
                         .required(),
                     scopes: e
                         .array()
-                        .items(e.string().valid(...(0, r.no)(i.x)))
+                        .items(e.string().valid(...(0, l.no)(i.x)))
                         .required(),
                     expires: e.string().required(),
                     application: e
@@ -46,7 +41,7 @@ let l = {
                         .required()
                 })
         },
-        [r.Q5.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: {
+        [l.Q5.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: {
             request: void 0,
             response: (e) =>
                 e
@@ -62,9 +57,9 @@ let l = {
                     })
                     .required()
         },
-        [r.Q5.SHARE_INTERACTION]: {
+        [l.Q5.SHARE_INTERACTION]: {
             request: (e) =>
-                (0, r.C5)(
+                (0, l.C5)(
                     e.object({
                         command: e.string().required(),
                         content: e.string().max(2000),
@@ -79,9 +74,9 @@ let l = {
                 ),
             response: (e) => e.object({ success: e.boolean().required() })
         },
-        [r.Q5.SHARE_LINK]: {
+        [l.Q5.SHARE_LINK]: {
             request: (e) =>
-                (0, r.C5)(
+                (0, l.C5)(
                     e.object({
                         referrer_id: e.string().max(64),
                         custom_id: e.string().max(64),

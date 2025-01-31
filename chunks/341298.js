@@ -1,46 +1,40 @@
-r.d(n, {
-    g: function () {
-        return c;
-    },
-    mM: function () {
-        return f;
-    },
-    tr: function () {
-        return d;
-    }
+n.d(t, {
+    g: () => u,
+    mM: () => d,
+    tr: () => c
 }),
-    r(442837);
-var i = r(430824),
-    a = r(914010),
-    o = r(369274),
-    s = r(558921);
-let l = 3000,
-    u = 3600000;
+    n(442837);
+var i = n(430824),
+    r = n(914010),
+    a = n(369274),
+    s = n(558921);
+let o = 3000,
+    l = 3600000;
+function u(e) {
+    let { guildStore: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        n = null != t ? t : i.Z,
+        r = n.getGuild(s.y),
+        o = (null == r ? void 0 : r.joinedAt) instanceof Date && Date.now() - r.joinedAt.getTime() <= l;
+    return 1 === n.getGuildCount() && o && (0, a.Z)(e);
+}
 function c(e) {
-    let { guildStore: n } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        r = null != n ? n : i.Z,
-        a = r.getGuild(s.y),
-        l = (null == a ? void 0 : a.joinedAt) instanceof Date && Date.now() - a.joinedAt.getTime() <= u;
-    return 1 === r.getGuildCount() && l && (0, o.Z)(e);
+    return e.isDM() && 1 === e.rawRecipients.length && e.rawRecipients[0].id === s.g && u('app');
 }
 function d(e) {
-    return e.isDM() && 1 === e.rawRecipients.length && e.rawRecipients[0].id === s.g && c('app');
-}
-function f(e) {
-    return new Promise((n, r) => {
-        if (a.Z.getGuildId() === e) {
-            n();
+    return new Promise((t, n) => {
+        if (r.Z.getGuildId() === e) {
+            t();
             return;
         }
         let i = setTimeout(() => {
-                s(), r();
-            }, l),
-            o = () => {
-                a.Z.getGuildId() === e && (s(), n());
+                s(), n();
+            }, o),
+            a = () => {
+                r.Z.getGuildId() === e && (s(), t());
             },
             s = () => {
-                a.Z.removeChangeListener(o), clearTimeout(i);
+                r.Z.removeChangeListener(a), clearTimeout(i);
             };
-        a.Z.addChangeListener(o);
+        r.Z.addChangeListener(a);
     });
 }

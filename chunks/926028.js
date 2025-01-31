@@ -1,49 +1,45 @@
-function i(e, n) {
-    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
+function i(e, t) {
+    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function a(e, n) {
-    for (var r = 0; r < n.length; r++) {
-        var i = n[r];
+function r(e, t) {
+    for (var n = 0; n < t.length; n++) {
+        var i = t[n];
         (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
     }
 }
-function o(e, n, r) {
-    return n && a(e.prototype, n), r && a(e, r), e;
+function a(e, t, n) {
+    return t && r(e.prototype, t), n && r(e, n), e;
 }
-function s(e, n, r) {
+function s(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-r.d(n, {
-    p: function () {
-        return l;
-    }
-});
-var l = (function () {
-    function e(n) {
-        i(this, e), s(this, 'item', void 0), s(this, 'config', void 0), (this.config = n), (this.item = {}), this.initializeExposedProperties();
+n.d(t, { p: () => o });
+var o = (function () {
+    function e(t) {
+        i(this, e), s(this, 'item', void 0), s(this, 'config', void 0), (this.config = t), (this.item = {}), this.initializeExposedProperties();
     }
     return (
-        o(e, [
+        a(e, [
             {
                 key: 'initializeExposedProperties',
                 value: function () {
                     var e = this;
-                    Object.keys(this.config.exposeProperties).forEach(function (n) {
-                        Object.defineProperty(e.item, n, {
+                    Object.keys(this.config.exposeProperties).forEach(function (t) {
+                        Object.defineProperty(e.item, t, {
                             configurable: !0,
                             enumerable: !0,
                             get: function () {
-                                return console.warn('Browser doesn\'t allow reading "'.concat(n, '" until the drop event.')), null;
+                                return console.warn('Browser doesn\'t allow reading "'.concat(t, '" until the drop event.')), null;
                             }
                         });
                     });
@@ -52,17 +48,17 @@ var l = (function () {
             {
                 key: 'loadDataTransfer',
                 value: function (e) {
-                    var n = this;
+                    var t = this;
                     if (e) {
-                        var r = {};
+                        var n = {};
                         Object.keys(this.config.exposeProperties).forEach(function (i) {
-                            r[i] = {
-                                value: n.config.exposeProperties[i](e, n.config.matchesTypes),
+                            n[i] = {
+                                value: t.config.exposeProperties[i](e, t.config.matchesTypes),
                                 configurable: !0,
                                 enumerable: !0
                             };
                         }),
-                            Object.defineProperties(this.item, r);
+                            Object.defineProperties(this.item, n);
                     }
                 }
             },
@@ -80,8 +76,8 @@ var l = (function () {
             },
             {
                 key: 'isDragging',
-                value: function (e, n) {
-                    return n === e.getSourceId();
+                value: function (e, t) {
+                    return t === e.getSourceId();
                 }
             },
             {

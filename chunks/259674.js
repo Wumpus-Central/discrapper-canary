@@ -1,37 +1,30 @@
 n.d(t, {
-    Nx: function () {
-        return c;
-    },
-    lW: function () {
-        return d;
-    },
-    tK: function () {
-        return r;
-    }
+    Nx: () => c,
+    lW: () => d,
+    tK: () => o
 });
 var i,
-    r,
-    l = n(367907),
-    s = n(626135),
-    a = n(63063),
-    o = n(981631);
-((i = r || (r = {})).DESCRIPTION = 'description'), (i.CATEGORIES = 'categories'), (i.TAGS = 'tags'), (i.AGREE_TO_RULES = 'agree_to_rules');
+    r = n(367907),
+    l = n(626135),
+    s = n(63063),
+    a = n(981631),
+    o = (((i = {}).DESCRIPTION = 'description'), (i.CATEGORIES = 'categories'), (i.TAGS = 'tags'), (i.AGREE_TO_RULES = 'agree_to_rules'), i);
 let c = (e, t, n) => {
-        s.default.track(o.rMx.USER_FLOW_TRANSITION, {
-            flow_type: o.jXE.DISCOVERY_SETUP_MODAL,
+        l.default.track(a.rMx.USER_FLOW_TRANSITION, {
+            flow_type: a.jXE.DISCOVERY_SETUP_MODAL,
             from_step: e,
             to_step: t,
-            ...(0, l.hH)(n)
+            ...(0, r.hH)(n)
         });
     },
     d = (e) => {
-        let { articleId: t, guildId: n, modalStep: i = null, pageView: r = null } = e;
-        open(a.Z.getArticleURL(t)),
-            s.default.track(o.rMx.DISCOVERY_SETUP_CTA_CLICKED, {
-                cta_name: o.b8q,
-                discovery_settings_view: r,
+        let { articleId: t, guildId: n, modalStep: i = null, pageView: o = null } = e;
+        open(s.Z.getArticleURL(t)),
+            l.default.track(a.rMx.DISCOVERY_SETUP_CTA_CLICKED, {
+                cta_name: a.b8q,
+                discovery_settings_view: o,
                 help_center_article_id: t,
                 modal_step: i,
-                ...(0, l.hH)(n)
+                ...(0, r.hH)(n)
             });
     };

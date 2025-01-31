@@ -1,10 +1,11 @@
-e.exports = {
-    spinner: 'spinner_d9c03f',
-    modal: 'modal_d9c03f',
-    modalHeader: 'modalHeader_d9c03f',
-    modalCloseButton: 'modalCloseButton_d9c03f',
-    modalContent: 'modalContent_d9c03f',
-    modalPreview: 'modalPreview_d9c03f',
-    modalFooter: 'modalFooter_d9c03f',
-    modalFooterShopButton: 'modalFooterShopButton_d9c03f'
+var i = {
+    spinner: 'spinner_ced2f2',
+    modal: 'modal_ced2f2',
+    modalHeader: 'modalHeader_ced2f2',
+    modalCloseButton: 'modalCloseButton_ced2f2',
+    modalContent: 'modalContent_ced2f2',
+    modalPreview: 'modalPreview_ced2f2',
+    modalFooter: 'modalFooter_ced2f2',
+    modalFooterShopButton: 'modalFooterShopButton_ced2f2'
 };
+e.exports = i;

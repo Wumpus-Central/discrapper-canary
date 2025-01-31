@@ -1,178 +1,176 @@
-r.d(n, {
-    K: function () {
-        return C;
-    }
+n.d(t, {
+    K: () => A,
+    Z: () => R
 });
-var i = r(200651);
-r(192379);
-var a = r(693789),
-    o = r(952265),
-    s = r(911969),
-    l = r(555573),
-    u = r(254711),
-    c = r(213459),
-    d = r(10718),
-    f = r(367790),
-    p = r(998698),
-    h = r(895924),
-    _ = r(581364),
-    m = r(826298),
-    g = r(588468),
-    E = r(496675),
-    v = r(226951),
-    y = r(877565),
-    b = r(590921),
-    I = r(665692),
-    T = r(689079),
-    S = r(388032),
-    A = r(858567);
-let C = { results: { entries: [] } };
+var i = n(200651);
+n(192379);
+var r = n(693789),
+    a = n(952265),
+    s = n(911969),
+    o = n(555573),
+    l = n(254711),
+    u = n(213459),
+    c = n(10718),
+    d = n(367790),
+    f = n(998698),
+    _ = n(895924),
+    p = n(581364),
+    h = n(826298),
+    m = n(588468),
+    g = n(496675),
+    E = n(226951),
+    v = n(877565),
+    y = n(590921),
+    I = n(665692),
+    b = n(689079),
+    T = n(388032),
+    S = n(858567);
+let A = { results: { entries: [] } };
 function N() {
-    (0, o.ZD)(async () => {
-        let { default: e } = await r.e('87549').then(r.bind(r, 913962));
-        return (n) => (0, i.jsx)(e, { ...n });
+    (0, a.ZD)(async () => {
+        let { default: e } = await n.e('87549').then(n.bind(n, 913962));
+        return (t) => (0, i.jsx)(e, { ...t });
     });
+}
+function C(e) {
+    return ''.concat(I.GI).concat(e.displayName);
 }
 let R = {
     sentinel: I.GI,
-    stores: [p.Z, c.ZP, E.Z],
-    matches: (e, n, r, i, a) => a.commands !== b.L8.DISABLED && null == p.Z.getActiveCommand(e.id) && (i || a.commands !== b.L8.OLD_BUILT_INS),
-    queryResults(e, n, r, i, a) {
-        if (0 === r.length && i.commands !== b.L8.OLD_BUILT_INS) return C;
-        if (i.commands === b.L8.OLD_BUILT_INS) {
-            let i = (0, u.Kh)([s.yU.CHAT], !1, !1),
-                a = RegExp('^'.concat(v.Z.escape(r)), 'i'),
-                o = (0, _.Dd)(
+    stores: [f.Z, u.ZP, g.Z],
+    matches: (e, t, n, i, r) => r.commands !== y.L8.DISABLED && null == f.Z.getActiveCommand(e.id) && (i || r.commands !== y.L8.OLD_BUILT_INS),
+    queryResults(e, t, n, i, r) {
+        if (0 === n.length && i.commands !== y.L8.OLD_BUILT_INS) return A;
+        if (i.commands === y.L8.OLD_BUILT_INS) {
+            let i = (0, l.Kh)([s.yU.CHAT], !1, !1),
+                r = RegExp('^'.concat(E.Z.escape(n)), 'i'),
+                a = (0, p.Dd)(
                     i,
-                    a,
+                    r,
                     {
                         channel: e,
-                        guild: n
+                        guild: t
                     },
-                    b.AQ
+                    y.AQ
                 ),
-                l = u.Tm[T.bi.BUILT_IN];
-            return 0 === o.length
-                ? C
+                o = l.Tm[b.bi.BUILT_IN];
+            return 0 === a.length
+                ? A
                 : {
                       results: {
-                          entries: o.map((e) => ({
+                          entries: a.map((e) => ({
                               command: e,
-                              section: l
+                              section: o
                           }))
                       }
                   };
         }
-        let o = (0, m.hV)(e, r),
-            { commands: l, sections: c } = d.JT(
+        let a = (0, h.hV)(e, n),
+            { commands: o, sections: u } = c.JT(
                 {
                     channel: e,
                     type: 'channel'
                 },
                 {
                     commandTypes: [s.yU.CHAT],
-                    text: o.text
+                    text: a.text
                 },
                 {
-                    limit: b.AQ,
-                    placeholderCount: b.YP,
-                    scoreMethod: f.p.COMMAND_OR_APPLICATION,
-                    allowFetch: a
+                    limit: y.AQ,
+                    placeholderCount: y.YP,
+                    scoreMethod: d.p.COMMAND_OR_APPLICATION,
+                    allowFetch: r
                 }
             );
-        if (null == l) return C;
-        let p = l;
-        if (o.hasSpaceTerminator) {
-            let e = o.text.trim(),
-                n = e + ' ';
-            p = p.filter((r) => r.displayName === e || r.displayName.startsWith(n));
+        if (null == o) return A;
+        let f = o;
+        if (a.hasSpaceTerminator) {
+            let e = a.text.trim(),
+                t = e + ' ';
+            f = f.filter((n) => n.displayName === e || n.displayName.startsWith(t));
         }
-        return 0 === p.length
-            ? C
+        return 0 === f.length
+            ? A
             : {
                   results: {
-                      entries: p.slice(0, b.AQ).map((e) => ({
+                      entries: f.slice(0, y.AQ).map((e) => ({
                           command: e,
-                          section: null == c ? void 0 : c.find((n) => n.id === e.applicationId)
+                          section: null == u ? void 0 : u.find((t) => t.id === e.applicationId)
                       }))
                   }
               };
     },
     renderResults(e) {
         let {
-                results: { entries: n },
-                selectedIndex: r,
-                channel: o,
+                results: { entries: t },
+                selectedIndex: n,
+                channel: a,
                 query: s,
-                options: l,
-                onHover: u,
-                onClick: c
+                options: o,
+                onHover: l,
+                onClick: u
             } = e,
-            d = (0, m.hV)(o, s),
-            f = l.commands === b.L8.OLD_BUILT_INS;
-        return (0, y.HI)({
-            query: d.text,
-            selectedIndex: r,
-            autocompletes: n,
-            onHover: u,
-            onClick: c,
-            titleWithQuery: S.t.HFRoZW,
-            titleWithoutQuery: S.intl.string(S.t['0hKkS0']),
+            c = (0, h.hV)(a, s),
+            d = o.commands === y.L8.OLD_BUILT_INS;
+        return (0, v.HI)({
+            query: c.text,
+            selectedIndex: n,
+            autocompletes: t,
+            onHover: l,
+            onClick: u,
+            titleWithQuery: T.t.HFRoZW,
+            titleWithoutQuery: T.intl.string(T.t['0hKkS0']),
             getQuery: (e) => ''.concat(I.GI).concat(e),
-            Component: f ? g.ZP.Command : g.ZP.NewCommand,
+            Component: d ? m.ZP.Command : m.ZP.NewCommand,
             getProps: (e) => {
-                let { command: n, section: r } = e;
+                let { command: t, section: n } = e;
                 return {
-                    key: n.id,
-                    command: n,
-                    channel: o,
-                    guildId: o.guild_id,
+                    key: t.id,
+                    command: t,
+                    channel: a,
+                    guildId: a.guild_id,
                     showImage: !0,
-                    section: r
+                    section: n
                 };
             },
             key: 'commands',
-            headerClassName: f ? A.legacyInputCommandHeader : null,
-            headerTrailingContent: f
-                ? (0, i.jsx)(a.zx, {
+            headerClassName: d ? S.legacyInputCommandHeader : null,
+            headerTrailingContent: d
+                ? (0, i.jsx)(r.zx, {
                       type: 'button',
-                      look: a.zx.Looks.LINK,
-                      color: a.zx.Colors.BRAND,
-                      size: a.zx.Sizes.MIN,
+                      look: r.zx.Looks.LINK,
+                      color: r.zx.Colors.BRAND,
+                      size: r.zx.Sizes.MIN,
                       onClick: N,
-                      children: S.intl.string(S.t['8a0P09'])
+                      children: T.intl.string(T.t['8a0P09'])
                   })
                 : null
         });
     },
     onSelect(e) {
         let {
-                results: { entries: n },
-                index: r,
+                results: { entries: t },
+                index: n,
                 queryText: i,
-                options: a,
-                channel: o,
+                options: r,
+                channel: a,
                 location: s,
-                tabOrEnter: u
+                tabOrEnter: l
             } = e,
-            { command: c, section: d } = n[r];
-        if (c.inputType === h.iw.PLACEHOLDER) return null;
-        if (a.commands === b.L8.OLD_BUILT_INS) a.insertText(O(c));
+            { command: u, section: c } = t[n];
+        if (u.inputType === _.iw.PLACEHOLDER) return null;
+        if (r.commands === y.L8.OLD_BUILT_INS) r.insertText(C(u));
         else {
             let e = s;
-            null == e && (e = u ? h.Vh.QUERY : h.Vh.DISCOVERY),
-                l.Po({
-                    channelId: o.id,
-                    command: c,
-                    section: null != d ? d : null,
+            null == e && (e = l ? _.Vh.QUERY : _.Vh.DISCOVERY),
+                o.Po({
+                    channelId: a.id,
+                    command: u,
+                    section: null != c ? c : null,
                     location: e,
                     queryLength: null == i ? void 0 : i.length
                 });
         }
-        return { type: b.z2.COMMAND };
+        return { type: y.z2.COMMAND };
     }
 };
-function O(e) {
-    return ''.concat(I.GI).concat(e.displayName);
-}
-n.Z = R;

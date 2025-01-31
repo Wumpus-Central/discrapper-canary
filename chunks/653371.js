@@ -1,25 +1,19 @@
-a.d(t, {
-    a: function () {
-        return f;
-    }
-}),
-    a(47120),
-    a(653041);
+a.d(t, { a: () => O }), a(47120), a(653041);
 var n = a(200651),
     s = a(192379),
-    i = a(557533),
-    r = a.n(i),
-    l = a(771950),
+    l = a(557533),
+    i = a.n(l),
+    r = a(771950),
     o = a(860911),
     c = a(66037),
     d = a(787907),
     u = a(643103),
-    N = a(34211),
-    h = a(231338),
-    m = a(436620),
-    p = a(431138),
-    I = a(330711),
-    _ = a(790730);
+    _ = a(34211),
+    N = a(231338),
+    h = a(436620),
+    m = a(431138),
+    p = a(330711),
+    I = a(790730);
 function k(e, t, a) {
     return (
         t in e
@@ -33,56 +27,56 @@ function k(e, t, a) {
         e
     );
 }
-let A = h.j_.MAIN_NAVIGATION_MENU,
+let A = N.j_.MAIN_NAVIGATION_MENU,
     g = () => [
         {
-            route: (0, l.L)(h.RK.TWITTER),
+            route: (0, r.L)(N.RK.TWITTER),
             linkClicked: 'twitter',
             alt: "Discord's Twitter",
-            img: p.r.ASSET_SOCIAL_TWITTER
+            img: m.r.ASSET_SOCIAL_TWITTER
         },
         {
-            route: h.fK.FACEBOOK_URL,
+            route: N.fK.FACEBOOK_URL,
             linkClicked: 'facebook',
             alt: "Discord's Facebook",
-            img: p.r.ASSET_SOCIAL_FACEBOOK
+            img: m.r.ASSET_SOCIAL_FACEBOOK
         },
         {
-            route: h.fK.INSTAGRAM_URL,
+            route: N.fK.INSTAGRAM_URL,
             linkClicked: 'instagram',
             alt: "Discord's Instagram",
-            img: p.r.ASSET_SOCIAL_INSTAGRAM
+            img: m.r.ASSET_SOCIAL_INSTAGRAM
         }
     ];
-class f extends s.PureComponent {
+class O extends s.PureComponent {
     componentDidMount() {
-        this.setState({ isAppCompatible: m.KO });
+        this.setState({ isAppCompatible: h.KO });
     }
     render() {
-        let { className: e, mainContentId: t, skipToContentLabel: a, onChangeLocale: s, TrackClick: i, avoidRouter: l } = this.props;
+        let { className: e, mainContentId: t, skipToContentLabel: a, onChangeLocale: s, TrackClick: l, avoidRouter: r } = this.props;
         return (0, n.jsxs)('header', {
-            className: r()(_.header, e),
+            className: i()(I.header, e),
             children: [
                 (0, n.jsxs)('nav', {
-                    className: _.headerInner,
+                    className: I.headerInner,
                     children: [
                         (0, n.jsxs)('div', {
-                            className: _.headerLogo,
+                            className: I.headerLogo,
                             children: [
-                                (0, n.jsx)(i, {
+                                (0, n.jsx)(l, {
                                     tag: 'div',
                                     eventName: A,
                                     data: { linkClicked: 'logo' },
                                     children: (0, n.jsx)(c.Z, {
-                                        avoidRouter: l,
-                                        to: h.am.INDEX,
-                                        from: h.j_.MAIN_NAVIGATION_MENU,
+                                        avoidRouter: r,
+                                        to: N.am.INDEX,
+                                        from: N.j_.MAIN_NAVIGATION_MENU,
                                         children: (0, n.jsx)(d.O, {})
                                     })
                                 }),
                                 null != t
                                     ? (0, n.jsx)('a', {
-                                          className: _.skipToContent,
+                                          className: I.skipToContent,
                                           href: '#'.concat(t),
                                           children: a
                                       })
@@ -90,15 +84,15 @@ class f extends s.PureComponent {
                             ]
                         }),
                         (0, n.jsx)('ul', {
-                            className: _.headerNav,
-                            children: (0, n.jsx)(N.o, {
-                                avoidRouter: l,
-                                TrackClick: i,
-                                styles: _
+                            className: I.headerNav,
+                            children: (0, n.jsx)(_.o, {
+                                avoidRouter: r,
+                                TrackClick: l,
+                                styles: I
                             })
                         }),
                         (0, n.jsxs)('ul', {
-                            className: _.headerNavRight,
+                            className: I.headerNavRight,
                             children: [this.renderSocialMediaNav(), (0, n.jsx)(u.p, { onChange: s })]
                         })
                     ]
@@ -117,24 +111,24 @@ class f extends s.PureComponent {
             k(this, 'getAppButton', () => {
                 let { token: e, TrackClick: t, authRedirectTo: a } = this.props,
                     { isAppCompatible: s } = this.state,
-                    i = (0, o.Ui)(a),
-                    r = I.Z.Messages.NAVIGATION_LOGIN;
+                    l = (0, o.Ui)(a),
+                    i = p.Z.Messages.NAVIGATION_LOGIN;
                 return (
-                    null != e && ((i = h.$w.ME), (r = I.Z.Messages.NAVIGATION_OPEN)),
+                    null != e && ((l = N.$w.ME), (i = p.Z.Messages.NAVIGATION_OPEN)),
                     s
                         ? (0, n.jsx)(
                               'li',
                               {
-                                  className: _.listItemInactive,
+                                  className: I.listItemInactive,
                                   children: (0, n.jsx)(t, {
                                       eventName: A,
-                                      className: _.appButton,
+                                      className: I.appButton,
                                       data: {
                                           linkClicked: e ? 'open' : 'login',
                                           googleAnalytics: !0
                                       },
-                                      href: i,
-                                      children: r
+                                      href: l,
+                                      children: i
                                   })
                               },
                               'app-button'
@@ -148,10 +142,10 @@ class f extends s.PureComponent {
                         (0, n.jsx)(
                             'li',
                             {
-                                className: r()(_.listItemInactive, _.listItemSocialMedia),
+                                className: i()(I.listItemInactive, I.listItemSocialMedia),
                                 children: (0, n.jsx)(e, {
                                     eventName: A,
-                                    className: _.rightNavLink,
+                                    className: I.rightNavLink,
                                     data: { linkClicked: t.linkClicked },
                                     href: t.route,
                                     rel: 'me',

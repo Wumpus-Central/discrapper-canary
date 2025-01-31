@@ -1,19 +1,9 @@
 n.d(t, {
-    NR: function () {
-        return r;
-    },
-    Ob: function () {
-        return s;
-    },
-    ZI: function () {
-        return a;
-    },
-    m1: function () {
-        return c;
-    },
-    uc: function () {
-        return o;
-    }
+    NR: () => r,
+    Ob: () => s,
+    ZI: () => a,
+    m1: () => c,
+    uc: () => o
 });
 var i = n(987170),
     l = n(987338);

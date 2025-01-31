@@ -1,8 +1,4 @@
-n.d(t, {
-    m: function () {
-        return i;
-    }
-});
+n.d(t, { m: () => i });
 let i = [
     {
         id: '749054660769218631',

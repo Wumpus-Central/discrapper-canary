@@ -1,47 +1,43 @@
-r.d(n, {
-    Z: function () {
-        return c;
-    }
-});
-var i = r(979590),
-    a = r.n(i),
-    o = r(866442),
-    s = r(81825);
-function l(e, n, r) {
+n.d(t, { Z: () => u });
+var i = n(979590),
+    r = n.n(i),
+    a = n(866442),
+    s = n(81825);
+function o(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let u = (e) =>
+let l = (e) =>
     null == e
         ? e
         : {
-              backgroundColors: e.background_colors.map((e) => a()((0, o.Rf)(e))),
-              buttonColors: e.button_colors.map((e) => a()((0, o.Rf)(e))),
-              confettiColors: e.confetti_colors.map((e) => a()((0, o.Rf)(e)))
+              backgroundColors: e.background_colors.map((e) => r()((0, a.Rf)(e))),
+              buttonColors: e.button_colors.map((e) => r()((0, a.Rf)(e))),
+              confettiColors: e.confetti_colors.map((e) => r()((0, a.Rf)(e)))
           };
-class c extends s.Z {
+class u extends s.Z {
     static fromServer(e) {
-        let { store_listing_id: n, sku_id: r, unpublished_at: i, banner_asset: a, styles: o, ...s } = e,
-            l = null != i ? new Date(i) : null;
-        return new c({
+        let { store_listing_id: t, sku_id: n, unpublished_at: i, banner_asset: r, styles: a, ...s } = e,
+            o = null != i ? new Date(i) : null;
+        return new u({
             ...s,
-            storeListingId: n,
-            skuId: r,
-            unpublishedAt: l,
-            bannerAsset: a,
-            styles: u(o)
+            storeListingId: t,
+            skuId: n,
+            unpublishedAt: o,
+            bannerAsset: r,
+            styles: l(a)
         });
     }
     constructor(e) {
-        super(), l(this, 'storeListingId', void 0), l(this, 'skuId', void 0), l(this, 'name', void 0), l(this, 'summary', void 0), l(this, 'banner', void 0), l(this, 'bannerAsset', void 0), l(this, 'unpublishedAt', void 0), l(this, 'styles', void 0), (this.storeListingId = e.storeListingId), (this.skuId = e.skuId), (this.name = e.name), (this.summary = e.summary), (this.banner = e.banner), (this.unpublishedAt = e.unpublishedAt), (this.styles = e.styles), (this.bannerAsset = e.bannerAsset);
+        super(), o(this, 'storeListingId', void 0), o(this, 'skuId', void 0), o(this, 'name', void 0), o(this, 'summary', void 0), o(this, 'banner', void 0), o(this, 'bannerAsset', void 0), o(this, 'unpublishedAt', void 0), o(this, 'styles', void 0), (this.storeListingId = e.storeListingId), (this.skuId = e.skuId), (this.name = e.name), (this.summary = e.summary), (this.banner = e.banner), (this.unpublishedAt = e.unpublishedAt), (this.styles = e.styles), (this.bannerAsset = e.bannerAsset);
     }
 }

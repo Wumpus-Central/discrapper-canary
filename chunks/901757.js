@@ -1,19 +1,12 @@
-var i,
-    a,
-    o = r(544891),
-    s = r(388032);
-!(function (e) {
-    e.ASSET_SIZE = 'BINARY_TYPE_MAX_SIZE';
-})(i || (i = {})),
-    !(function (e) {
-        e.ASSET = 'asset';
-    })(a || (a = {}));
-class l extends o.sX {
-    constructor(e, n) {
-        var r;
-        super(e, n, s.intl.string(s.t.Mt8yDA));
+n.d(t, { Z: () => s });
+var i = n(544891),
+    r = n(388032);
+class a extends i.sX {
+    constructor(e, t) {
+        var n;
+        super(e, t, r.intl.string(r.t.Mt8yDA));
         let i = this.getFieldErrors('asset');
-        null != i && (null === (r = i[0]) || void 0 === r ? void 0 : r.code) === 'BINARY_TYPE_MAX_SIZE' && (this.message = s.intl.string(s.t.mrlScX));
+        null != i && (null === (n = i[0]) || void 0 === n ? void 0 : n.code) === 'BINARY_TYPE_MAX_SIZE' && (this.message = r.intl.string(r.t.mrlScX));
     }
 }
-n.Z = l;
+let s = a;

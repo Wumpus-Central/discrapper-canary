@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return h;
-    }
-});
+n.d(t, { Z: () => h });
 var i = n(200651);
 n(192379);
 var r = n(512722),
@@ -23,7 +19,7 @@ function h(e) {
             guildId: t,
             children: [
                 (0, i.jsx)(c.Z, { children: m.intl.string(m.t.WMyX29) }),
-                (0, i.jsx)(a.Spacer, { size: 32 }),
+                (0, i.jsx)(a.LZC, { size: 32 }),
                 (0, i.jsx)(d.Z, {
                     guild: n,
                     isGuildProducts: !0

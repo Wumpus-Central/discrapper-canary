@@ -1,4 +1,5 @@
-e.exports = {
-    content: 'content_a4002a',
-    cancelButton: 'cancelButton_a4002a'
+var i = {
+    content: 'content_e9b214',
+    cancelButton: 'cancelButton_e9b214'
 };
+e.exports = i;

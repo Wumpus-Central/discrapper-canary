@@ -1,19 +1,13 @@
-r.d(n, {
-    $8: function () {
-        return o;
-    },
-    LP: function () {
-        return a;
-    },
-    gK: function () {
-        return s;
-    }
+n.d(t, {
+    $8: () => a,
+    LP: () => r,
+    gK: () => s
 });
-var i = r(213919);
-function a() {
+var i = n(213919);
+function r() {
     return i.getToken();
 }
-function o() {
-    return null != a();
+function a() {
+    return null != r();
 }
-let s = (e) => (null != e && /^\/developers/.test(e) ? r(376665) : null);
+let s = (e) => (null != e && /^\/developers/.test(e) ? n(376665) : null);

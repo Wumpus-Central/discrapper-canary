@@ -1,47 +1,43 @@
-e.d(n, {
-    Z: function () {
-        return r;
-    }
-});
-var a = e(200651);
-e(192379);
-var o = e(481060),
-    i = e(746163);
-function r(t) {
-    var n;
-    let { attachment: e } = t,
-        r = Math.round(((null !== (n = e.size) && void 0 !== n ? n : 0) / 1024 / 1024) * 100) / 100;
+n.d(e, { Z: () => o });
+var a = n(200651);
+n(192379);
+var i = n(481060),
+    l = n(746163);
+function o(t) {
+    var e;
+    let { attachment: n } = t,
+        o = Math.round(((null !== (e = n.size) && void 0 !== e ? e : 0) / 1024 / 1024) * 100) / 100;
     return (0, a.jsxs)('div', {
-        className: i.container,
+        className: l.container,
         children: [
-            (0, a.jsx)(o.ImageFileIcon, {
+            (0, a.jsx)(i.ZKT, {
                 size: 'xs',
                 color: 'currentColor',
-                className: i.fileIcon
+                className: l.fileIcon
             }),
-            (0, a.jsx)(o.Spacer, {
+            (0, a.jsx)(i.LZC, {
                 size: 8,
                 horizontal: !0
             }),
-            (0, a.jsx)(o.Text, {
+            (0, a.jsx)(i.Text, {
                 variant: 'text-sm/normal',
                 color: 'text-normal',
-                className: i.fileName,
-                children: e.filename
+                className: l.fileName,
+                children: n.filename
             }),
-            (0, a.jsx)(o.Spacer, {
+            (0, a.jsx)(i.LZC, {
                 size: 8,
                 horizontal: !0
             }),
-            (0, a.jsx)('div', { className: i.dot }),
-            (0, a.jsx)(o.Spacer, {
+            (0, a.jsx)('div', { className: l.dot }),
+            (0, a.jsx)(i.LZC, {
                 size: 8,
                 horizontal: !0
             }),
-            (0, a.jsxs)(o.Text, {
+            (0, a.jsxs)(i.Text, {
                 variant: 'text-sm/normal',
                 color: 'text-muted',
-                children: [r, 'MB']
+                children: [o, 'MB']
             })
         ]
     });

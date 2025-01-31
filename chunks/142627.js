@@ -15,27 +15,25 @@ var n = r(763453),
         function e() {
             return t.apply(this, arguments) || this;
         }
-        (r = e), (f = t), (r.prototype = Object.create(f.prototype)), (r.prototype.constructor = r), (r.__proto__ = f);
-        var r,
-            f,
-            d = e.prototype;
+        (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
+        var r = e.prototype;
         return (
-            (d.getEntityMap = function () {
+            (r.getEntityMap = function () {
                 return u;
             }),
-            (d.getBlockMap = function () {
+            (r.getBlockMap = function () {
                 return this.get('blockMap');
             }),
-            (d.getSelectionBefore = function () {
+            (r.getSelectionBefore = function () {
                 return this.get('selectionBefore');
             }),
-            (d.getSelectionAfter = function () {
+            (r.getSelectionAfter = function () {
                 return this.get('selectionAfter');
             }),
-            (d.getBlockForKey = function (t) {
+            (r.getBlockForKey = function (t) {
                 return this.getBlockMap().get(t);
             }),
-            (d.getKeyBefore = function (t) {
+            (r.getKeyBefore = function (t) {
                 return this.getBlockMap()
                     .reverse()
                     .keySeq()
@@ -45,7 +43,7 @@ var n = r(763453),
                     .skip(1)
                     .first();
             }),
-            (d.getKeyAfter = function (t) {
+            (r.getKeyAfter = function (t) {
                 return this.getBlockMap()
                     .keySeq()
                     .skipUntil(function (e) {
@@ -54,7 +52,7 @@ var n = r(763453),
                     .skip(1)
                     .first();
             }),
-            (d.getBlockAfter = function (t) {
+            (r.getBlockAfter = function (t) {
                 return this.getBlockMap()
                     .skipUntil(function (e, r) {
                         return r === t;
@@ -62,7 +60,7 @@ var n = r(763453),
                     .skip(1)
                     .first();
             }),
-            (d.getBlockBefore = function (t) {
+            (r.getBlockBefore = function (t) {
                 return this.getBlockMap()
                     .reverse()
                     .skipUntil(function (e, r) {
@@ -71,42 +69,42 @@ var n = r(763453),
                     .skip(1)
                     .first();
             }),
-            (d.getBlocksAsArray = function () {
+            (r.getBlocksAsArray = function () {
                 return this.getBlockMap().toArray();
             }),
-            (d.getFirstBlock = function () {
+            (r.getFirstBlock = function () {
                 return this.getBlockMap().first();
             }),
-            (d.getLastBlock = function () {
+            (r.getLastBlock = function () {
                 return this.getBlockMap().last();
             }),
-            (d.getPlainText = function (t) {
+            (r.getPlainText = function (t) {
                 return this.getBlockMap()
                     .map(function (t) {
                         return t ? t.getText() : '';
                     })
                     .join(t || '\n');
             }),
-            (d.getLastCreatedEntityKey = function () {
+            (r.getLastCreatedEntityKey = function () {
                 return u.__getLastCreatedEntityKey();
             }),
-            (d.hasText = function () {
+            (r.hasText = function () {
                 var t = this.getBlockMap();
                 return t.size > 1 || escape(t.first().getText()).replace(/%u200B/g, '').length > 0;
             }),
-            (d.createEntity = function (t, e, r) {
+            (r.createEntity = function (t, e, r) {
                 return u.__create(t, e, r), this;
             }),
-            (d.mergeEntityData = function (t, e) {
+            (r.mergeEntityData = function (t, e) {
                 return u.__mergeData(t, e), this;
             }),
-            (d.replaceEntityData = function (t, e) {
+            (r.replaceEntityData = function (t, e) {
                 return u.__replaceData(t, e), this;
             }),
-            (d.addEntity = function (t) {
+            (r.addEntity = function (t) {
                 return u.__add(t), this;
             }),
-            (d.getEntity = function (t) {
+            (r.getEntity = function (t) {
                 return u.__get(t);
             }),
             (e.createFromBlockArray = function (t, r) {

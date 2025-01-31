@@ -1,9 +1,5 @@
-t.d(n, {
-    Vc: function () {
-        return a;
-    }
-});
-let i = (0, t(818083).B)({
+t.d(i, { Vc: () => a });
+let n = (0, t(818083).B)({
     kind: 'user',
     id: '2025-01_underage_appeals_mobile',
     label: 'Luanching underage appeals on mobile',
@@ -17,6 +13,6 @@ let i = (0, t(818083).B)({
     ]
 });
 function a(e) {
-    let { location: n } = e;
-    return i.getCurrentConfig({ location: n }, { autoTrackExposure: !0 }).enabled;
+    let { location: i } = e;
+    return n.getCurrentConfig({ location: i }, { autoTrackExposure: !0 }).enabled;
 }

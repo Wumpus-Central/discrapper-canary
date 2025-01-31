@@ -1,116 +1,112 @@
-e.d(n, {
-    Z: function () {
-        return g;
-    }
-});
+e.d(n, { Z: () => _ });
 var i = e(200651),
     l = e(192379),
-    a = e(120356),
-    s = e.n(a),
+    s = e(120356),
+    a = e.n(s),
     r = e(481060),
     d = e(600164),
     o = e(540059),
     c = e(539379),
-    u = e(109983),
-    C = e(834891),
-    m = e(388032),
-    p = e(627769);
+    C = e(109983),
+    m = e(834891),
+    p = e(388032),
+    u = e(627769);
 function L(t) {
-    let { guildTemplate: n, onClick: e, autoFocus: a } = t,
-        s = (0, o.Q3)('GuildTemplatesItem'),
+    let { guildTemplate: n, onClick: e, autoFocus: s } = t,
+        a = (0, o.Q3)('GuildTemplatesItem'),
         r = l.useCallback(() => {
             e(n);
         }, [n, e]);
-    return (0, i.jsx)(u.Z, {
-        icon: s ? c.U[n.id] : c.M[n.id],
+    return (0, i.jsx)(C.Z, {
+        icon: a ? c.U[n.id] : c.M[n.id],
         message: n.label,
         onClick: r,
-        autoFocus: a
+        autoFocus: s
     });
 }
-function g(t) {
-    let { className: n, isNewUser: e, onClose: l, onChooseTemplate: a, onJoin: o } = t,
-        c = (0, C.E)();
+function _(t) {
+    let { className: n, isNewUser: e, onClose: l, onChooseTemplate: s, onJoin: o } = t,
+        c = (0, m.E)();
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsxs)(r.ModalHeader, {
+            (0, i.jsxs)(r.xBx, {
                 direction: d.Z.Direction.VERTICAL,
-                className: p.header,
+                className: u.header,
                 separator: !1,
                 children: [
-                    (0, i.jsx)(r.Heading, {
-                        className: p.title,
+                    (0, i.jsx)(r.X6q, {
+                        className: u.title,
                         variant: 'heading-xl/semibold',
-                        children: e ? m.intl.string(m.t['9U0b1t']) : m.intl.string(m.t['5HZu09'])
+                        children: e ? p.intl.string(p.t['9U0b1t']) : p.intl.string(p.t['5HZu09'])
                     }),
                     (0, i.jsx)(r.Text, {
-                        className: p.subtitle,
+                        className: u.subtitle,
                         color: 'header-secondary',
                         variant: 'text-md/normal',
-                        children: m.intl.string(m.t['wti/Hx'])
+                        children: p.intl.string(p.t['wti/Hx'])
                     }),
                     null != l &&
-                        (0, i.jsx)(r.ModalCloseButton, {
-                            className: p.closeButton,
+                        (0, i.jsx)(r.olH, {
+                            className: u.closeButton,
                             onClick: l
                         })
                 ]
             }),
-            (0, i.jsxs)(r.ModalContent, {
-                className: s()(p.templatesList, n),
+            (0, i.jsxs)(r.hzk, {
+                className: a()(u.templatesList, n),
                 paddingFix: !1,
                 children: [
                     (0, i.jsx)(L, {
-                        guildTemplate: c[C.l.CREATE],
-                        onClick: a,
+                        guildTemplate: c[m.l.CREATE],
+                        onClick: s,
                         autoFocus: !0
                     }),
                     (0, i.jsx)(r.Text, {
-                        className: p.optionHeader,
+                        className: u.optionHeader,
                         color: 'header-secondary',
                         variant: 'text-xs/bold',
-                        children: m.intl.string(m.t.JGDkfn)
+                        children: p.intl.string(p.t.JGDkfn)
                     }),
                     (0, i.jsx)(L, {
-                        guildTemplate: c[C.l.GAMING],
-                        onClick: a
+                        guildTemplate: c[m.l.GAMING],
+                        onClick: s
                     }),
                     (0, i.jsx)(L, {
-                        guildTemplate: c[C.l.FRIENDS],
-                        onClick: a
+                        guildTemplate: c[m.l.FRIENDS],
+                        onClick: s
                     }),
                     (0, i.jsx)(L, {
-                        guildTemplate: c[C.l.STUDY],
-                        onClick: a
+                        guildTemplate: c[m.l.STUDY],
+                        onClick: s
                     }),
                     (0, i.jsx)(L, {
-                        guildTemplate: c[C.l.SCHOOL_CLUB],
-                        onClick: a
+                        guildTemplate: c[m.l.SCHOOL_CLUB],
+                        onClick: s
                     }),
                     (0, i.jsx)(L, {
-                        guildTemplate: c[C.l.LOCAL_COMMUNITY],
-                        onClick: a
+                        guildTemplate: c[m.l.LOCAL_COMMUNITY],
+                        onClick: s
                     }),
                     (0, i.jsx)(L, {
-                        guildTemplate: c[C.l.CREATORS],
-                        onClick: a
+                        guildTemplate: c[m.l.CREATORS],
+                        onClick: s
                     })
                 ]
             }),
             null != o &&
-                (0, i.jsxs)(r.ModalFooter, {
-                    className: p.footer,
+                (0, i.jsxs)(r.mzw, {
+                    className: u.footer,
                     children: [
-                        (0, i.jsx)(r.Heading, {
+                        (0, i.jsx)(r.X6q, {
                             variant: 'heading-lg/semibold',
-                            className: p.footerTitle,
-                            children: m.intl.string(m.t['N+Mi/f'])
+                            className: u.footerTitle,
+                            children: p.intl.string(p.t['N+Mi/f'])
                         }),
-                        (0, i.jsx)(r.Button, {
-                            className: p.footerButton,
-                            color: r.Button.Colors.PRIMARY,
+                        (0, i.jsx)(r.zxk, {
+                            className: u.footerButton,
+                            color: r.zxk.Colors.PRIMARY,
                             onClick: o,
-                            children: m.intl.string(m.t.riOUtL)
+                            children: p.intl.string(p.t.riOUtL)
                         })
                     ]
                 })

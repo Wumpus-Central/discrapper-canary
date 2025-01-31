@@ -1,8 +1,9 @@
-e.exports = {
-    container: 'container_efde15',
-    iconContainer: 'iconContainer_efde15',
-    decorativeLayer: 'decorativeLayer_efde15',
-    decorativeLayerActive: 'decorativeLayerActive_efde15',
-    giftIconButton: 'giftIconButton_efde15',
-    giftIconButtonActive: 'giftIconButtonActive_efde15'
+var i = {
+    container: 'container_eaf2fb',
+    iconContainer: 'iconContainer_eaf2fb',
+    decorativeLayer: 'decorativeLayer_eaf2fb',
+    decorativeLayerActive: 'decorativeLayerActive_eaf2fb',
+    giftIconButton: 'giftIconButton_eaf2fb',
+    giftIconButtonActive: 'giftIconButtonActive_eaf2fb'
 };
+e.exports = i;

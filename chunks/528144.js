@@ -1,42 +1,44 @@
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(481060),
-    l = r(972623),
-    u = r(430229);
-let c = Object.freeze({
-        SIZE_10: u.size10,
-        SIZE_12: u.size12,
-        SIZE_14: u.size14,
-        SIZE_16: u.size16,
-        SIZE_20: u.size20,
-        SIZE_24: u.size24,
-        SIZE_32: u.size32
+n.d(t, { Z: () => d });
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(481060),
+    o = n(972623),
+    l = n(430229);
+let u = Object.freeze({
+        SIZE_10: l.size10,
+        SIZE_12: l.size12,
+        SIZE_14: l.size14,
+        SIZE_16: l.size16,
+        SIZE_20: l.size20,
+        SIZE_24: l.size24,
+        SIZE_32: l.size32
     }),
-    d = (e) => {
-        let { id: n, muted: r = !1, className: a = l.wrapper, size: u = c.SIZE_14, selectable: d = !1, children: f, color: p, onClick: h, onContextMenu: _, style: m, title: g, uppercase: E } = e;
+    c = (e) => {
+        let { id: t, muted: n = !1, className: r = o.wrapper, size: l = u.SIZE_14, selectable: c = !1, children: d, color: f, onClick: _, onContextMenu: p, style: h, title: m, uppercase: g } = e;
         return (0, i.jsx)(s.H, {
-            role: null != h ? 'button' : void 0,
-            onClick: h,
-            onContextMenu: _,
-            id: n,
-            className: o()(a, {
-                [l.base]: !0,
-                [u]: !0,
-                [l.selectable]: d,
-                [l.muted]: r,
-                [l.uppercase]: E
+            role: null != _ ? 'button' : void 0,
+            onClick: _,
+            onContextMenu: p,
+            id: t,
+            className: a()(r, {
+                [o.base]: !0,
+                [l]: !0,
+                [o.selectable]: c,
+                [o.muted]: n,
+                [o.uppercase]: g
             }),
-            title: g,
+            title: m,
             style:
-                null != p
+                null != f
                     ? {
-                          ...m,
-                          color: p
+                          ...h,
+                          color: f
                       }
-                    : m,
-            children: f
+                    : h,
+            children: d
         });
     };
-(d.Sizes = c), (n.Z = d);
+c.Sizes = u;
+let d = c;

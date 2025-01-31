@@ -1,18 +1,19 @@
-var i = r(192379),
-    a = r(723184),
-    o = r(877837),
+n.d(t, { Z: () => o });
+var i = n(192379),
+    r = n(723184),
+    a = n(877837),
     s = function (e) {
-        var n = e.hover,
-            r = e.color,
+        var t = e.hover,
+            n = e.color,
             s = e.onClick,
-            l = e.onSwatchHover,
-            u = {
+            o = e.onSwatchHover,
+            l = {
                 position: 'relative',
                 zIndex: '2',
                 outline: '2px solid #fff',
                 boxShadow: '0 0 5px 2px rgba(0,0,0,0.25)'
             },
-            c = (0, a.default)(
+            u = (0, r.default)(
                 {
                     default: {
                         swatch: {
@@ -21,19 +22,19 @@ var i = r(192379),
                             fontSize: '0'
                         }
                     },
-                    hover: { swatch: u }
+                    hover: { swatch: l }
                 },
-                { hover: n }
+                { hover: t }
             );
         return i.createElement(
             'div',
-            { style: c.swatch },
-            i.createElement(o.m4, {
-                color: r,
+            { style: u.swatch },
+            i.createElement(a.m4, {
+                color: n,
                 onClick: s,
-                onHover: l,
-                focusStyle: u
+                onHover: o,
+                focusStyle: l
             })
         );
     };
-n.Z = (0, a.handleHover)(s);
+let o = (0, r.handleHover)(s);

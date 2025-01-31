@@ -1,48 +1,50 @@
-var i = r(47120);
-var a = r(200651);
-r(192379);
-var o = r(481060),
-    s = r(259580),
-    l = r(847273);
-let u = (e) => {
-        let { child: n, onClick: r } = e,
-            [i] = n;
-        return (0, a.jsxs)(o.Clickable, {
-            className: l.childButton,
-            onClick: () => r(n),
+n.d(t, { Z: () => d }), n(47120);
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(481060),
+    o = n(259580),
+    l = n(170780),
+    u = n(847273);
+let c = (e) => {
+        let { child: t, onClick: n } = e,
+            [r] = t;
+        return (0, i.jsxs)(s.P3F, {
+            className: a()(u.childButton, l.listElement),
+            onClick: () => n(t),
             children: [
-                (0, a.jsx)(o.Text, {
-                    className: l.childText,
+                (0, i.jsx)(s.Text, {
+                    className: u.childText,
                     variant: 'text-md/semibold',
-                    children: i
+                    children: r
                 }),
-                (0, a.jsx)(s.Z, {
-                    className: l.childIcon,
-                    direction: s.Z.Directions.RIGHT
+                (0, i.jsx)(o.Z, {
+                    className: u.childIcon,
+                    direction: o.Z.Directions.RIGHT
                 })
             ]
         });
     },
-    c = (e) => {
+    d = (e) => {
         let {
-            node: { children: n },
-            onSelectChild: r
+            node: { children: t },
+            onSelectChild: n
         } = e;
-        if (null == n || 0 === n.length) return null;
-        let i = n.map((e) => {
-            let [n, i] = e;
-            return (0, a.jsx)(
-                u,
+        if (null == t || 0 === t.length) return null;
+        let r = t.map((e) => {
+            let [t, r] = e;
+            return (0, i.jsx)(
+                c,
                 {
                     child: e,
-                    onClick: r
+                    onClick: n
                 },
-                ''.concat(n, '+').concat(i)
+                ''.concat(t, '+').concat(r)
             );
         });
-        return (0, a.jsx)('div', {
-            className: l.__invalid_childrenContainer,
-            children: i
+        return (0, i.jsx)('div', {
+            className: l.listElementWrapper,
+            children: r
         });
     };
-n.Z = c;

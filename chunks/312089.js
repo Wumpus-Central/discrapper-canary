@@ -1,15 +1,11 @@
-function i(e, n) {
+function i(e, t) {
     if (null == e) return {};
-    var r = {};
+    var n = {};
     for (var i in e)
         if ({}.hasOwnProperty.call(e, i)) {
-            if (n.includes(i)) continue;
-            r[i] = e[i];
+            if (t.includes(i)) continue;
+            n[i] = e[i];
         }
-    return r;
+    return n;
 }
-r.d(n, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });

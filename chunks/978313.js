@@ -1,11 +1,6 @@
-n.d(t, {
-    Z: function () {
-        return x;
-    }
-}),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
+n.d(t, { Z: () => f }), n(47120);
+var i = n(200651),
+    r = n(192379),
     a = n(120356),
     l = n.n(a),
     o = n(657707),
@@ -16,58 +11,58 @@ var r = n(200651),
     m = n(810568),
     p = n(221370),
     g = n(388032),
-    f = n(561526),
-    h = n(72020);
-function x(e) {
+    h = n(561526),
+    _ = n(72020);
+function f(e) {
     let { detectedGame: t, trackAction: n } = e,
-        [a, x] = i.useState((null == t ? void 0 : t.summaryLocalized) != null),
-        [_, E] = i.useState(!0),
-        [v, I] = i.useState(!1),
-        C = i.useRef(null),
+        [a, f] = r.useState((null == t ? void 0 : t.summaryLocalized) != null),
+        [x, E] = r.useState(!0),
+        [v, I] = r.useState(!1),
+        C = r.useRef(null),
         { width: A, height: S } = (0, u.Z)();
-    return (i.useEffect(() => {
+    return (r.useEffect(() => {
         let e = C.current;
-        null != e && I(e.scrollHeight - e.clientHeight > 1 || !_);
-    }, [C, A, S, _]),
+        null != e && I(e.scrollHeight - e.clientHeight > 1 || !x);
+    }, [C, A, S, x]),
     null == t.summary)
         ? null
-        : (0, r.jsxs)('div', {
-              className: l()(f.column, f.gapMd),
+        : (0, i.jsxs)('div', {
+              className: l()(h.column, h.gapMd),
               children: [
                   null != t.summaryLocalized &&
-                      (0, r.jsxs)('div', {
-                          className: l()(f.row, f.gapSm),
+                      (0, i.jsxs)('div', {
+                          className: l()(h.row, h.gapSm),
                           children: [
-                              (0, r.jsx)(o.SxY, {
+                              (0, i.jsx)(o.SxY, {
                                   color: c.Z.colors.HEADER_SECONDARY,
                                   size: 'xs'
                               }),
-                              (0, r.jsx)(s.xv, {
+                              (0, i.jsx)(s.xv, {
                                   variant: 'text-xs/medium',
                                   color: 'header-secondary',
-                                  children: a ? g.intl.format(g.t.aZ2iIi, { onShowOriginal: () => x(!1) }) : g.intl.format(g.t['/2ylFx'], { onShowTranslated: () => x(!0) })
+                                  children: a ? g.intl.format(g.t.aZ2iIi, { onShowOriginal: () => f(!1) }) : g.intl.format(g.t['/2ylFx'], { onShowTranslated: () => f(!0) })
                               })
                           ]
                       }),
-                  (0, r.jsx)(s.xv, {
+                  (0, i.jsx)(s.xv, {
                       ref: C,
-                      lineClamp: _ ? 8 : void 0,
+                      lineClamp: x ? 8 : void 0,
                       variant: 'text-sm/normal',
                       children: a ? t.summaryLocalized : t.summary
                   }),
                   v &&
-                      (0, r.jsx)(d.Clickable, {
-                          className: f.clickable,
+                      (0, i.jsx)(d.P3F, {
+                          className: h.clickable,
                           onClick: () => {
-                              n(_ ? m.as.ShowMore : m.as.ShowLess), E(!_);
+                              n(x ? m.as.ShowMore : m.as.ShowLess), E(!x);
                           },
-                          children: (0, r.jsx)(s.xv, {
+                          children: (0, i.jsx)(s.xv, {
                               variant: 'text-sm/semibold',
-                              children: _ ? g.intl.string(g.t.lBeKY2) : g.intl.string(g.t['6MwJo6'])
+                              children: x ? g.intl.string(g.t.lBeKY2) : g.intl.string(g.t['6MwJo6'])
                           })
                       }),
-                  (0, r.jsx)(p.Z, {
-                      className: h.platforms,
+                  (0, i.jsx)(p.Z, {
+                      className: _.platforms,
                       detectedGame: t
                   })
               ]

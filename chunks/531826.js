@@ -1,64 +1,56 @@
-r.d(n, {
-    ZP: function () {
-        return _;
-    },
-    jA: function () {
-        return g;
-    },
-    sU: function () {
-        return E;
-    }
-});
-var i = r(789020);
-var a = r(442837),
-    o = r(812206),
-    s = r(522474),
-    l = r(630388),
-    u = r(636449),
-    c = r(317381),
-    d = r(16609),
-    f = r(917107),
-    p = r(918559),
-    h = r(981631);
+n.d(t, {
+    ZP: () => _,
+    jA: () => h,
+    sU: () => m
+}),
+    n(789020);
+var i = n(442837),
+    r = n(812206),
+    a = n(522474),
+    s = n(630388),
+    o = n(636449),
+    l = n(317381),
+    u = n(16609),
+    c = n(917107),
+    d = n(918559),
+    f = n(981631);
 function _(e) {
-    var n;
-    let { application: r, channelId: i } = e;
-    if (null != r) {
-        if ((0, l.yE)(null !== (n = r.flags) && void 0 !== n ? n : 0, h.udG.EMBEDDED)) {
-            if (s.Z.getWindowOpen(h.KJ3.ACTIVITY_POPOUT) && c.ZP.getActivityPanelMode() === p.Ez.ACTIVITY_POPOUT_WINDOW) return h.KJ3.ACTIVITY_POPOUT;
-            if (s.Z.getWindowOpen(h.KJ3.CHANNEL_CALL_POPOUT) && (0, f.Z)(i) && !(0, u.R)()) return h.KJ3.CHANNEL_CALL_POPOUT;
-        }
+    var t;
+    let { application: n, channelId: i } = e;
+    if (null != n && (0, s.yE)(null !== (t = n.flags) && void 0 !== t ? t : 0, f.udG.EMBEDDED)) {
+        if (a.Z.getWindowOpen(f.KJ3.ACTIVITY_POPOUT) && l.ZP.getActivityPanelMode() === d.Ez.ACTIVITY_POPOUT_WINDOW) return f.KJ3.ACTIVITY_POPOUT;
+        if (a.Z.getWindowOpen(f.KJ3.CHANNEL_CALL_POPOUT) && (0, c.Z)(i) && !(0, o.R)()) return f.KJ3.CHANNEL_CALL_POPOUT;
     }
 }
-function m(e) {
-    let { channelId: n, EmbeddedActivitiesStore: r, ApplicationStore: i } = e,
-        a = r.getSelfEmbeddedActivityForChannel(n),
-        o = i.getApplication(null == a ? void 0 : a.applicationId);
-    if (null != o)
+function p(e) {
+    let { channelId: t, EmbeddedActivitiesStore: n, ApplicationStore: i } = e,
+        r = n.getSelfEmbeddedActivityForChannel(t),
+        a = i.getApplication(null == r ? void 0 : r.applicationId);
+    if (null != a)
         return _({
-            application: o,
-            channelId: n
+            application: a,
+            channelId: t
         });
 }
-function g(e) {
-    let { applicationId: n } = e,
-        r = c.ZP.getCurrentEmbeddedActivity();
-    if (null == r || r.applicationId !== n) return;
-    let i = o.Z.getApplication(n);
+function h(e) {
+    let { applicationId: t } = e,
+        n = l.ZP.getCurrentEmbeddedActivity();
+    if (null == n || n.applicationId !== t) return;
+    let i = r.Z.getApplication(t);
     if (null != i)
         return _({
             application: i,
-            channelId: (0, d.p)(r.location)
+            channelId: (0, u.p)(n.location)
         });
 }
-function E(e) {
-    let { channelId: n } = e;
-    return (0, a.e7)([s.Z, c.ZP, o.Z], () => {
-        let e = m({
-            channelId: null != n ? n : c.ZP.getConnectedActivityChannelId(),
-            EmbeddedActivitiesStore: c.ZP,
-            ApplicationStore: o.Z
+function m(e) {
+    let { channelId: t } = e;
+    return (0, i.e7)([a.Z, l.ZP, r.Z], () => {
+        let e = p({
+            channelId: null != t ? t : l.ZP.getConnectedActivityChannelId(),
+            EmbeddedActivitiesStore: l.ZP,
+            ApplicationStore: r.Z
         });
-        return null != e ? s.Z.getWindow(e) : void 0;
+        return null != e ? a.Z.getWindow(e) : void 0;
     });
 }

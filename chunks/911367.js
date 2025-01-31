@@ -1,12 +1,8 @@
-r.d(n, {
-    t: function () {
-        return o;
-    }
-});
-var i = r(192379),
-    a = r(365943);
-function o() {
+n.d(t, { t: () => a });
+var i = n(192379),
+    r = n(365943);
+function a() {
     i.useEffect(() => {
-        (0, a.z)();
+        (0, r.z)();
     }, []);
 }

@@ -1,12 +1,7 @@
-n.d(t, {
-    D: function () {
-        return A;
-    }
-}),
-    n(411104);
+n.d(t, { D: () => x }), n(411104);
 var i = n(903772),
-    r = n(433517),
-    l = n(570140),
+    l = n(433517),
+    r = n(570140),
     a = n(188471),
     s = n(581567),
     o = n(594190),
@@ -17,14 +12,14 @@ var i = n(903772),
     m = n(960048),
     p = n(844889),
     g = n(981631);
-let f = 'LATEST_HEARTBEAST_EVENT_TIMESTAMP',
-    _ = null,
+let _ = 'LATEST_HEARTBEAST_EVENT_TIMESTAMP',
+    f = null,
     E = null,
     I = !1;
 async function C() {
     if (I) return;
     (I = !0), (0, p.fr)(!0), m.Z.addBreadcrumb({ message: 'Start Analytics Heartbeat' });
-    let e = await r.K.getAfterRefresh(f).then(p.Hg);
+    let e = await l.K.getAfterRefresh(_).then(p.Hg);
     if (!I) return;
     let t = Date.now(),
         n = 15 * u.Z.Millis.MINUTE + e - t;
@@ -35,7 +30,7 @@ async function C() {
         (E = setTimeout(
             () => {
                 N(),
-                    (_ = setInterval(() => {
+                    (f = setInterval(() => {
                         N();
                     }, 15 * u.Z.Millis.MINUTE));
             },
@@ -43,15 +38,15 @@ async function C() {
         ));
 }
 function v() {
-    null != E && (clearTimeout(E), (E = null)), null != _ && (clearInterval(_), (_ = null));
+    null != E && (clearTimeout(E), (E = null)), null != f && (clearInterval(f), (f = null));
 }
 async function N() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = Date.now(),
         n = await (0, p.Gg)(),
-        l = Date.now();
+        r = Date.now();
     if (null == n) {
-        m.Z.captureException(Error('Null session when tracking session heartbeat. Waited '.concat(l - t, 'ms')));
+        m.Z.captureException(Error('Null session when tracking session heartbeat. Waited '.concat(r - t, 'ms')));
         return;
     }
     if (!I && !e) {
@@ -68,43 +63,40 @@ async function N() {
         },
         u = h.Z.getMemoryUsageElectronRenderer();
     null != u && (c.client_heartbeat_renderer_memory = u);
-    let _ = h.Z.getMemoryUsageElectronRendererUsedHeapSize();
-    null != _ && (c.client_heartbeat_renderer_memory_used_heap = _);
+    let f = h.Z.getMemoryUsageElectronRendererUsedHeapSize();
+    null != f && (c.client_heartbeat_renderer_memory_used_heap = f);
     {
         let e = o.ZP.getCurrentGameForAnalytics();
         null != e && ((c.client_heartbeat_current_game_id = e.id), (c.client_heartbeat_current_game_name = e.name), (c.client_heartbeat_current_game_executable = (0, s.N6)(e.exePath)), (c.client_heartbeat_current_game_distributor = e.distributor), (c.uses_client_mods = (0, i.e)()));
     }
-    d.default.track(g.rMx.CLIENT_HEARTBEAT, c), r.K.set(f, Date.now().toString()), (0, a.Z)();
+    d.default.track(g.rMx.CLIENT_HEARTBEAT, c), l.K.set(_, Date.now().toString()), (0, a.Z)();
 }
 let T = null,
     S = !0;
-function b() {
+function Z() {
     if (S || (null != T && T !== g.hes.DISCONNECTED && T !== g.hes.RTC_DISCONNECTED))
         try {
             C();
         } catch (e) {
             m.Z.captureException(e);
         }
-    else
-        !(function () {
-            if (!!I) (I = !1), m.Z.addBreadcrumb({ message: 'Stopping Analytics Heartbeat' }), (0, p.fr)(!1), v(), (0, a.Z)();
-        })();
-}
-function A() {
-    m.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), c.Z.addChangeListener(x), l.Z.subscribe('WINDOW_FOCUS', L), l.Z.subscribe('APP_STATE_UPDATE', y), l.Z.subscribe('LOGIN_SUCCESS', Z), b();
-}
-function Z() {
-    N(!0);
+    else !I || ((I = !1), m.Z.addBreadcrumb({ message: 'Stopping Analytics Heartbeat' }), (0, p.fr)(!1), v(), (0, a.Z)());
 }
 function x() {
+    m.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), c.Z.addChangeListener(b), r.Z.subscribe('WINDOW_FOCUS', L), r.Z.subscribe('APP_STATE_UPDATE', y), r.Z.subscribe('LOGIN_SUCCESS', A), Z();
+}
+function A() {
+    N(!0);
+}
+function b() {
     let e = c.Z.getState();
-    T !== e && ((T = e), b());
+    T !== e && ((T = e), Z());
 }
 function L(e) {
     let { focused: t } = e;
-    (S = t), b();
+    (S = t), Z();
 }
 function y(e) {
     let { state: t } = e;
-    (S = t === g.$7l.ACTIVE), b();
+    (S = t === g.$7l.ACTIVE), Z();
 }

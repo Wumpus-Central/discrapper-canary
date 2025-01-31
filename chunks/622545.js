@@ -1,20 +1,16 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-});
+n.d(t, { Z: () => s });
 var i = n(388032);
-let r = ['a', 'b', 'c', 'd'],
-    l = (e) => e;
-function a(e, t) {
+let l = ['a', 'b', 'c', 'd'],
+    a = (e) => e;
+function r(e, t) {
     let n = {},
-        i = Math.min(e.length, r.length);
-    for (let l = 0; l < i; ++l) n[r[l]] = (n, i) => t(e[l], i);
+        i = Math.min(e.length, l.length);
+    for (let a = 0; a < i; ++a) n[l[a]] = (n, i) => t(e[a], i);
     return n;
 }
-class o {
+class s {
     asString() {
-        return this.transformed(l);
+        return this.transformed(a);
     }
     isEmpty() {
         return 0 === this.items.length;
@@ -26,25 +22,24 @@ class o {
             case 1:
                 return e(this.items[0], '');
             case 2:
-                return i.intl.format(i.t.GENERIC_FORMATTED_LIST_TWO, a(this.items, e));
+                return i.intl.format(i.t.GENERIC_FORMATTED_LIST_TWO, r(this.items, e));
             case 3:
-                return i.intl.format(i.t.GENERIC_FORMATTED_LIST_THREE, a(this.items, e));
+                return i.intl.format(i.t.GENERIC_FORMATTED_LIST_THREE, r(this.items, e));
             default:
-                return i.intl.format(i.t.GENERIC_FORMATTED_LIST_FOUR, a(this.items, e));
+                return i.intl.format(i.t.GENERIC_FORMATTED_LIST_FOUR, r(this.items, e));
         }
     }
     constructor(e) {
-        var t, n, i;
-        (t = this),
-            (i = void 0),
-            (n = 'items') in t
-                ? Object.defineProperty(t, n, {
-                      value: i,
+        var t, n;
+        (n = void 0),
+            (t = 'items') in this
+                ? Object.defineProperty(this, t, {
+                      value: n,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (t[n] = i),
+                : (this[t] = n),
             (this.items = e);
     }
 }

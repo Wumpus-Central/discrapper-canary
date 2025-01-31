@@ -1,24 +1,20 @@
-n.d(t, {
-    Z: function () {
-        return s;
-    }
-});
+n.d(t, { Z: () => o });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(834129),
-    a = n(388032),
-    o = n(397919);
-function s(e) {
+var l = n(481060),
+    a = n(834129),
+    r = n(388032),
+    s = n(397919);
+function o(e) {
     let { message: t, compact: n } = e;
-    return (0, i.jsx)(l.Z, {
-        iconNode: (0, i.jsx)(r.ThreadIcon, {
+    return (0, i.jsx)(a.Z, {
+        iconNode: (0, i.jsx)(l.or_, {
             size: 'md',
             color: 'currentColor',
-            className: o.icon
+            className: s.icon
         }),
         timestamp: t.timestamp,
         compact: n,
-        children: a.intl.string(a.t.OCs36O)
+        children: r.intl.string(r.t.OCs36O)
     });
 }

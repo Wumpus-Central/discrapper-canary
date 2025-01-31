@@ -1,14 +1,10 @@
 function i() {
     return !1;
 }
-function a() {
+function r() {
     return null;
 }
-r.d(n, {
-    K: function () {
-        return i;
-    },
-    d: function () {
-        return a;
-    }
+n.d(t, {
+    K: () => i,
+    d: () => r
 });

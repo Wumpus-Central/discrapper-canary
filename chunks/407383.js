@@ -1,14 +1,8 @@
-var i, r, o, a;
 e.d(n, {
-    G: function () {
-        return i;
-    },
-    I: function () {
-        return r;
-    }
-}),
-    ((o = i || (i = {})).PLAY = 'play'),
-    (o.PAUSE = 'pause'),
-    (o.BACK_TO_CONVERSATION = 'back_to_conversation'),
-    ((a = r || (r = {})).INAPPROPRIATE_CONVERSATION = 'inappropriate_conversation'),
-    (a.KEYBIND = 'keybind');
+    G: () => a,
+    I: () => s
+});
+var i,
+    r,
+    a = (((i = {}).PLAY = 'play'), (i.PAUSE = 'pause'), (i.BACK_TO_CONVERSATION = 'back_to_conversation'), i),
+    s = (((r = {}).INAPPROPRIATE_CONVERSATION = 'inappropriate_conversation'), (r.KEYBIND = 'keybind'), r);

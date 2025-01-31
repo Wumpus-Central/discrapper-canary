@@ -1,8 +1,8 @@
-n(47120);
+n.d(t, { Z: () => _ }), n(47120);
 var i = n(200651);
 n(192379);
-var r = n(570140),
-    l = n(765250),
+var l = n(570140),
+    r = n(765250),
     a = n(317770),
     s = n(663993),
     o = n(355863),
@@ -10,31 +10,31 @@ var r = n(570140),
     d = n(981631);
 n(378481);
 let u = (0, s.Un)({
-        createPromise: () => n.e('58621').then(n.bind(n, 223455)),
+        createPromise: () => n.e('80960').then(n.bind(n, 223455)),
         webpackId: 223455,
         name: 'PopoutWindowChannelCall'
     }),
     h = (0, s.Un)({
-        createPromise: () => n.e('91032').then(n.bind(n, 432472)),
+        createPromise: () => n.e('20176').then(n.bind(n, 432472)),
         webpackId: 432472,
         name: 'PopoutWindowStageChannelCall'
     }),
     m = (0, s.Un)({
-        createPromise: () => n.e('92006').then(n.bind(n, 945778)),
+        createPromise: () => n.e('80960').then(n.bind(n, 945778)),
         webpackId: 945778,
         name: 'PopoutWindowRTCDebug'
     }),
     p = (0, s.Un)({
-        createPromise: () => Promise.all([n.e('93382'), n.e('19582'), n.e('92922'), n.e('88359'), n.e('14797')]).then(n.bind(n, 748623)),
+        createPromise: () => Promise.all([n.e('93382'), n.e('19582'), n.e('92922'), n.e('70336'), n.e('27278')]).then(n.bind(n, 748623)),
         webpackId: 748623,
         name: 'PopoutWindowActivity'
     });
 class g extends a.Z {
     _initialize() {
-        r.Z.subscribe('CHANNEL_CALL_POPOUT_WINDOW_OPEN', this.handleOpenChannelCallPopout), r.Z.subscribe('RTC_DEBUG_POPOUT_WINDOW_OPEN', this.handleOpenRTCDebugPopout), r.Z.subscribe('ACTIVITY_POPOUT_WINDOW_OPEN', this.handleOpenActivityPopout), this.initializeStyleSheetObserver();
+        l.Z.subscribe('CHANNEL_CALL_POPOUT_WINDOW_OPEN', this.handleOpenChannelCallPopout), l.Z.subscribe('RTC_DEBUG_POPOUT_WINDOW_OPEN', this.handleOpenRTCDebugPopout), l.Z.subscribe('ACTIVITY_POPOUT_WINDOW_OPEN', this.handleOpenActivityPopout), this.initializeStyleSheetObserver();
     }
     _terminate() {
-        r.Z.unsubscribe('CHANNEL_CALL_POPOUT_WINDOW_OPEN', this.handleOpenChannelCallPopout), r.Z.unsubscribe('RTC_DEBUG_POPOUT_WINDOW_OPEN', this.handleOpenRTCDebugPopout), r.Z.unsubscribe('ACTIVITY_POPOUT_WINDOW_OPEN', this.handleOpenActivityPopout), this.terminateStyleSheetObserver();
+        l.Z.unsubscribe('CHANNEL_CALL_POPOUT_WINDOW_OPEN', this.handleOpenChannelCallPopout), l.Z.unsubscribe('RTC_DEBUG_POPOUT_WINDOW_OPEN', this.handleOpenRTCDebugPopout), l.Z.unsubscribe('ACTIVITY_POPOUT_WINDOW_OPEN', this.handleOpenActivityPopout), this.terminateStyleSheetObserver();
     }
     handleOpenChannelCallPopout(e) {
         let { channel: t } = e;
@@ -81,25 +81,23 @@ class g extends a.Z {
     }
     async handleOpenActivityPopout() {
         let { OVERLAY_V3_LAYOUT_ID: e } = await Promise.resolve().then(n.bind(n, 501787));
-        (0, l.te)(e, o.Z.getDefaultLayout(e, 1), 1),
+        (0, r.te)(e, o.Z.getDefaultLayout(e, 1), 1),
             c.bA(d.KJ3.ACTIVITY_POPOUT, (e) => (0, i.jsx)(p, { windowKey: e }), {
                 defaultWidth: 854,
                 defaultHeight: 480
             });
     }
     constructor(...e) {
-        var t, n, i;
+        var t;
         super(...e),
-            (t = this),
-            (i = null),
-            (n = '_observer') in t
-                ? Object.defineProperty(t, n, {
+            (t = '_observer') in this
+                ? Object.defineProperty(this, t, {
                       value: null,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (t[n] = i);
+                : (this[t] = null);
     }
 }
-t.Z = new g();
+let _ = new g();

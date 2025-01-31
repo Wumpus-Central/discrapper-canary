@@ -1,6 +1,2 @@
-r.d(n, {
-    $: function () {
-        return i.$;
-    }
-});
-var i = r(275735);
+n.d(t, { $: () => i.$ });
+var i = n(275735);

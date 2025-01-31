@@ -1,9 +1,5 @@
-r.d(n, {
-    u: function () {
-        return a;
-    }
-});
-let i = (0, r(818083).B)({
+n.d(t, { u: () => r });
+let i = (0, n(818083).B)({
         kind: 'user',
         id: '2024-10_nitro_shop_entry_points',
         label: 'User Profile Nitro Shop Entry Points',
@@ -30,7 +26,7 @@ let i = (0, r(818083).B)({
             }
         ]
     }),
-    a = (e) => {
-        let { location: n, autoTrackExposure: r = !0 } = e;
-        return i.useExperiment({ location: n }, { autoTrackExposure: r });
+    r = (e) => {
+        let { location: t, autoTrackExposure: n = !0 } = e;
+        return i.useExperiment({ location: t }, { autoTrackExposure: n });
     };

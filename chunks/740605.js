@@ -1,18 +1,14 @@
-r.d(n, {
-    Y: function () {
-        return s;
-    },
-    o: function () {
-        return l;
-    }
+n.d(t, {
+    Y: () => s,
+    o: () => o
 });
-var i = r(18323),
-    a = r(358085),
-    o = r(616922);
+var i = n(18323),
+    r = n(358085),
+    a = n(616922);
 function s(e) {
-    let n = null;
-    !(0, a.isDesktop)() && (n = window.open('', '_blank')), null != n ? (n.location.href = e) : window.open(e);
+    let t = null;
+    (0, r.isDesktop)() || (t = window.open('', '_blank')), null != t ? (t.location.href = e) : window.open(e);
 }
-function l(e, n) {
-    s(i.Z.isProtocolRegistered() ? o.C7.PLAYER_OPEN(e, n) : o.C7.WEB_OPEN(e, n));
+function o(e, t) {
+    s(i.Z.isProtocolRegistered() ? a.C7.PLAYER_OPEN(e, t) : a.C7.WEB_OPEN(e, t));
 }

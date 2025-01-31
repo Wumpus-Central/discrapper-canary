@@ -1,49 +1,45 @@
-r.d(n, {
-    K: function () {
-        return f;
-    }
-});
-var i = r(200651),
-    a = r(442837),
-    o = r(481060),
-    s = r(607070),
-    l = r(987209),
-    u = r(286961),
-    c = r(897942),
-    d = r(870705);
-function f() {
+n.d(t, { K: () => d });
+var i = n(200651),
+    r = n(442837),
+    a = n(481060),
+    s = n(607070),
+    o = n(987209),
+    l = n(286961),
+    u = n(897942),
+    c = n(870705);
+function d() {
     var e;
-    let n = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
-        { claimableRewards: r } = (0, l.wD)(),
-        f = null === (e = (0, u.Z)()) || void 0 === e ? void 0 : e.planSelection;
-    return null == f || null == r || 0 === r.length
+    let t = (0, r.e7)([s.Z], () => s.Z.useReducedMotion),
+        { claimableRewards: n } = (0, o.wD)(),
+        d = null === (e = (0, l.Z)()) || void 0 === e ? void 0 : e.planSelection;
+    return null == d || null == n || 0 === n.length
         ? null
         : (0, i.jsxs)('div', {
-              className: d.promotionalGiftMessage,
+              className: c.promotionalGiftMessage,
               children: [
                   (0, i.jsxs)('div', {
-                      className: d.promotionalTextSection,
+                      className: c.promotionalTextSection,
                       children: [
-                          (0, i.jsx)(o.Text, {
-                              className: d.promotionalGiftMessageText,
-                              variant: 'text-sm/bold',
-                              children: f.heading()
+                          (0, i.jsx)(a.Text, {
+                              className: c.promotionalGiftMessageText,
+                              variant: 'text-sm/semibold',
+                              children: d.heading()
                           }),
-                          null != f.subheading &&
-                              r.length > 1 &&
-                              (0, i.jsx)(o.Text, {
-                                  className: d.promotionalGiftMessageText,
+                          null != d.subheading &&
+                              n.length > 1 &&
+                              (0, i.jsx)(a.Text, {
+                                  className: c.promotionalGiftMessageText,
                                   variant: 'text-sm/normal',
-                                  children: f.subheading(r.length)
+                                  children: d.subheading(n.length)
                               })
                       ]
                   }),
                   (0, i.jsx)('div', {
-                      className: d.avatar,
-                      children: (0, i.jsx)(c.Z, {
-                          maxRewardImageSrc: f.getImageUrl(!0, n),
-                          claimableRewards: r,
-                          size: o.AvatarSizes.SIZE_56
+                      className: c.avatar,
+                      children: (0, i.jsx)(u.Z, {
+                          maxRewardImageSrc: d.getImageUrl(!0, t),
+                          claimableRewards: n,
+                          size: a.EFr.SIZE_56
                       })
                   })
               ]

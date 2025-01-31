@@ -1,61 +1,55 @@
-n(571269), n(298267);
-var o = n(200651);
+n.d(t, { Z: () => c }), n(571269), n(298267);
+var s = n(200651);
 n(192379);
 var r = n(481060),
-    s = n(113434),
-    a = n(665430),
-    i = n(26650),
-    l = n(46140),
-    c = n(388032),
-    d = n(597924);
-function u(e) {
+    a = n(113434),
+    o = n(388032),
+    i = n(597924);
+function l(e) {
     let { header: t, children: n } = e;
-    return (0, o.jsxs)('div', {
-        className: d.card,
+    return (0, s.jsxs)('div', {
+        className: i.card,
         children: [
-            (0, o.jsxs)('div', {
-                className: d.header,
+            (0, s.jsxs)('div', {
+                className: i.header,
                 children: [
-                    (0, o.jsx)(r.CircleWarningIcon, {
+                    (0, s.jsx)(r.P4T, {
                         size: 'custom',
                         color: 'currentColor',
-                        className: d.icon,
+                        className: i.icon,
                         width: 16,
                         height: 16
                     }),
-                    (0, o.jsx)(r.Heading, {
+                    (0, s.jsx)(r.X6q, {
                         color: 'text-normal',
                         variant: 'heading-sm/medium',
                         children: t
                     })
                 ]
             }),
-            (0, o.jsx)(r.Text, {
+            (0, s.jsx)(r.Text, {
                 color: 'text-muted',
                 variant: 'text-xs/normal',
-                className: d.warningBody,
+                className: i.warningBody,
                 children: n
             })
         ]
     });
 }
-t.Z = function (e) {
+let c = function (e) {
     let { quest: t } = e,
-        n = (0, a.pF)({ location: l.dr.QUESTS_BAR }),
-        r = (0, s.qb)(t);
-    if (0 === r.length) return null;
-    let d = r.at(0);
-    return n
-        ? d === c.intl.string(c.t.BV6xDg)
-            ? (0, o.jsx)(u, {
-                  header: c.intl.string(c.t.onh6cn),
-                  children: c.intl.string(c.t.arVHRE)
-              })
-            : d === c.intl.string(c.t.MFGxFB)
-              ? (0, o.jsx)(u, {
-                    header: c.intl.string(c.t.JPihZG),
-                    children: c.intl.string(c.t.MFGxFB)
-                })
-              : null
-        : (0, o.jsx)(i.Z, { children: d });
+        n = (0, a.qb)(t);
+    if (0 === n.length) return null;
+    let r = n.at(0);
+    return r === o.intl.string(o.t.BV6xDg)
+        ? (0, s.jsx)(l, {
+              header: o.intl.string(o.t.onh6cn),
+              children: o.intl.string(o.t.arVHRE)
+          })
+        : r === o.intl.string(o.t.MFGxFB)
+          ? (0, s.jsx)(l, {
+                header: o.intl.string(o.t.JPihZG),
+                children: o.intl.string(o.t.MFGxFB)
+            })
+          : null;
 };

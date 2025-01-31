@@ -1,8 +1,7 @@
-r.r(
-    (e.exports = {
-        scrollbar: 'scrollbar_c858ce',
-        scrollbarDefault: 'scrollbarDefault_c858ce scrollbar_c858ce',
-        scrollbarGhost: 'scrollbarGhost_c858ce scrollbar_c858ce',
-        scrollbarGhostHairline: 'scrollbarGhostHairline_c858ce scrollbar_c858ce'
-    })
-);
+var i = {
+    scrollbar: 'scrollbar__506b3',
+    scrollbarDefault: 'scrollbarDefault__506b3 scrollbar__506b3',
+    scrollbarGhost: 'scrollbarGhost__506b3 scrollbar__506b3',
+    scrollbarGhostHairline: 'scrollbarGhostHairline__506b3 scrollbar__506b3'
+};
+e.exports = i;

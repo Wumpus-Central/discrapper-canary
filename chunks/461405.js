@@ -1,11 +1,12 @@
-e.exports = {
-    giftMainAnimation: 'giftMainAnimation_d90c00',
-    adjustedGiftMainAnimation: 'adjustedGiftMainAnimation_d90c00',
-    soundEmojiContainer: 'soundEmojiContainer_d90c00',
-    sound: 'sound_d90c00',
-    emoji: 'emoji_d90c00',
-    animation: 'animation_d90c00',
-    spinner: 'spinner_d90c00',
-    giftBoxOptionContainer: 'giftBoxOptionContainer_d90c00',
-    adjustedGiftBoxOptionContainer: 'adjustedGiftBoxOptionContainer_d90c00'
+var i = {
+    giftMainAnimation: 'giftMainAnimation_d54fab',
+    adjustedGiftMainAnimation: 'adjustedGiftMainAnimation_d54fab',
+    soundEmojiContainer: 'soundEmojiContainer_d54fab',
+    emoji: 'emoji_d54fab',
+    sound: 'sound_d54fab',
+    animation: 'animation_d54fab',
+    spinner: 'spinner_d54fab',
+    giftBoxOptionContainer: 'giftBoxOptionContainer_d54fab',
+    adjustedGiftBoxOptionContainer: 'adjustedGiftBoxOptionContainer_d54fab'
 };
+e.exports = i;

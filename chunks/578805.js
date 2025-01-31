@@ -1,108 +1,107 @@
-var i = r(444675),
-    a = r(607974),
-    o = r(64750);
-if (r(322499)() || r(882171)()) {
+var i = n(444675),
+    r = n(607974),
+    a = n(64750);
+if (n(322499)() || n(882171)()) {
     var s = Symbol.iterator;
     e.exports = function (e) {
-        return null != e && void 0 !== e[s] ? e[s]() : a(e) ? Array.prototype[s].call(e) : void 0;
+        return null != e && void 0 !== e[s] ? e[s]() : r(e) ? Array.prototype[s].call(e) : void 0;
     };
 } else {
-    var l = r(189612),
-        u = r(163494),
-        c = r(690244),
-        d = c('%Map%', !0),
-        f = c('%Set%', !0),
-        p = r(192853),
-        h = p('Array.prototype.push'),
-        _ = p('String.prototype.charCodeAt'),
-        m = p('String.prototype.slice'),
-        g = function (e, n) {
-            if (n + 1 >= e.length) return n + 1;
-            var r = _(e, n);
-            if (r < 55296 || r > 56319) return n + 1;
-            var i = _(e, n + 1);
-            return i < 56320 || i > 57343 ? n + 1 : n + 2;
+    var o = n(189612),
+        l = n(163494),
+        u = n(690244),
+        c = u('%Map%', !0),
+        d = u('%Set%', !0),
+        f = n(192853),
+        _ = f('Array.prototype.push'),
+        p = f('String.prototype.charCodeAt'),
+        h = f('String.prototype.slice'),
+        m = function (e, t) {
+            if (t + 1 >= e.length) return t + 1;
+            var n = p(e, t);
+            if (n < 55296 || n > 56319) return t + 1;
+            var i = p(e, t + 1);
+            return i < 56320 || i > 57343 ? t + 1 : t + 2;
         },
-        E = function (e) {
-            var n = 0;
+        g = function (e) {
+            var t = 0;
             return {
                 next: function () {
-                    var r,
-                        i = n >= e.length;
+                    var n,
+                        i = t >= e.length;
                     return (
-                        !i && ((r = e[n]), (n += 1)),
+                        i || ((n = e[t]), (t += 1)),
                         {
                             done: i,
-                            value: r
+                            value: n
                         }
                     );
                 }
             };
         },
-        v = function (e, n) {
-            if (l(e) || a(e)) return E(e);
-            if (u(e)) {
-                var r = 0;
+        E = function (e, t) {
+            if (o(e) || r(e)) return g(e);
+            if (l(e)) {
+                var n = 0;
                 return {
                     next: function () {
-                        var n = g(e, r),
-                            i = m(e, r, n);
+                        var t = m(e, n),
+                            i = h(e, n, t);
                         return (
-                            (r = n),
+                            (n = t),
                             {
-                                done: n > e.length,
+                                done: t > e.length,
                                 value: i
                             }
                         );
                     }
                 };
             }
-            if (n && void 0 !== e['_es6-shim iterator_']) return e['_es6-shim iterator_']();
+            if (t && void 0 !== e['_es6-shim iterator_']) return e['_es6-shim iterator_']();
         };
-    if (d || f) {
-        var y = r(403006),
-            b = r(72859),
-            I = p('Map.prototype.forEach', !0),
-            T = p('Set.prototype.forEach', !0);
-        if (void 0 === i || !i.versions || !i.versions.node) {
-            var S = p('Map.prototype.iterator', !0),
-                A = p('Set.prototype.iterator', !0);
-        }
-        var C = p('Map.prototype.@@iterator', !0) || p('Map.prototype._es6-shim iterator_', !0),
-            N = p('Set.prototype.@@iterator', !0) || p('Set.prototype._es6-shim iterator_', !0),
-            R = function (e) {
-                if (y(e)) {
-                    if (S) return o(S(e));
-                    if (C) return C(e);
+    if (c || d) {
+        var v = n(403006),
+            y = n(72859),
+            I = f('Map.prototype.forEach', !0),
+            b = f('Set.prototype.forEach', !0);
+        if (void 0 === i || !i.versions || !i.versions.node)
+            var T = f('Map.prototype.iterator', !0),
+                S = f('Set.prototype.iterator', !0);
+        var A = f('Map.prototype.@@iterator', !0) || f('Map.prototype._es6-shim iterator_', !0),
+            N = f('Set.prototype.@@iterator', !0) || f('Set.prototype._es6-shim iterator_', !0),
+            C = function (e) {
+                if (v(e)) {
+                    if (T) return a(T(e));
+                    if (A) return A(e);
                     if (I) {
-                        var n = [];
+                        var t = [];
                         return (
-                            I(e, function (e, r) {
-                                h(n, [r, e]);
+                            I(e, function (e, n) {
+                                _(t, [n, e]);
                             }),
-                            E(n)
+                            g(t)
                         );
                     }
                 }
-                if (b(e)) {
-                    if (A) return o(A(e));
+                if (y(e)) {
+                    if (S) return a(S(e));
                     if (N) return N(e);
-                    if (T) {
-                        var r = [];
+                    if (b) {
+                        var n = [];
                         return (
-                            T(e, function (e) {
-                                h(r, e);
+                            b(e, function (e) {
+                                _(n, e);
                             }),
-                            E(r)
+                            g(n)
                         );
                     }
                 }
             };
         e.exports = function (e) {
-            return R(e) || v(e);
+            return C(e) || E(e);
         };
     } else
         e.exports = function (e) {
-            if (null != e) return v(e, !0);
+            if (null != e) return E(e, !0);
         };
 }

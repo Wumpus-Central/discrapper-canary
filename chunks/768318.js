@@ -1,12 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return l;
-    }
-});
+n.d(t, { Z: () => a });
 var i = n(192379),
-    r = n(584825);
-function l(e, t) {
-    let n = (0, r.oC)(t);
+    l = n(584825);
+function a(e, t) {
+    let n = (0, l.oC)(t);
     return i.useMemo(() => {
         var e;
         return null != n && (null == n.max_num_active_trial_users || n.max_num_active_trial_users > (null !== (e = n.num_active_trial_users) && void 0 !== e ? e : 0));

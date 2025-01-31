@@ -1,5 +1,6 @@
-class r {
+n.d(t, { Z: () => r });
+class i {
     nativeMuteChanged(e) {}
     updateNativeMute() {}
 }
-n.Z = new r();
+let r = new i();

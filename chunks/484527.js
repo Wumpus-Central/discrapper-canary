@@ -1,11 +1,6 @@
-n.d(t, {
-    Z: function () {
-        return E;
-    }
-}),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
+n.d(t, { Z: () => E }), n(47120);
+var i = n(200651),
+    r = n(192379),
     a = n(120356),
     l = n.n(a),
     o = n(643872),
@@ -16,18 +11,18 @@ var r = n(200651),
     m = n(93093),
     p = n(768581),
     g = n(810568),
-    f = n(981631),
-    h = n(388032),
-    x = n(561526),
-    _ = n(731364);
+    h = n(981631),
+    _ = n(388032),
+    f = n(561526),
+    x = n(731364);
 function E(e) {
     let { detectedGame: t, trackClick: n, onInviteResolved: a, closeModal: E } = e,
-        [v, I] = i.useState(),
+        [v, I] = r.useState(),
         C = (0, s.e7)([m.Z], () => {
             var e, t;
             return (null == v ? void 0 : null === (e = v.guild) || void 0 === e ? void 0 : e.id) != null && m.Z.isMember(null == v ? void 0 : null === (t = v.guild) || void 0 === t ? void 0 : t.id);
         }),
-        A = i.useMemo(() => {
+        A = r.useMemo(() => {
             var e;
             return null === (e = t.websites) || void 0 === e
                 ? void 0
@@ -37,7 +32,7 @@ function E(e) {
                   });
         }, [t.websites]);
     if (
-        (i.useEffect(() => {
+        (r.useEffect(() => {
             let e = async (e) => {
                 let t = e.split('/').pop();
                 if (null != t) {
@@ -55,41 +50,41 @@ function E(e) {
         icon: v.guild.icon,
         size: 32
     });
-    return (0, r.jsxs)('div', {
-        className: x.column,
+    return (0, i.jsxs)('div', {
+        className: f.column,
         children: [
-            (0, r.jsx)(c.Heading, {
-                className: x.sectionHeader,
+            (0, i.jsx)(c.X6q, {
+                className: f.sectionHeader,
                 variant: 'text-xs/semibold',
                 color: 'header-secondary',
-                children: h.intl.string(h.t.kBDZSE)
+                children: _.intl.string(_.t.kBDZSE)
             }),
-            (0, r.jsxs)('div', {
-                className: l()(x.row, x.gapMd),
+            (0, i.jsxs)('div', {
+                className: l()(f.row, f.gapMd),
                 children: [
-                    (0, r.jsx)('img', {
-                        className: _.guildIcon,
+                    (0, i.jsx)('img', {
+                        className: x.guildIcon,
                         src: S,
-                        alt: h.intl.formatToPlainString(h.t.xm6W9P, { guildName: v.guild.name })
+                        alt: _.intl.formatToPlainString(_.t.xm6W9P, { guildName: v.guild.name })
                     }),
-                    (0, r.jsxs)('div', {
-                        className: _.inviteInfo,
+                    (0, i.jsxs)('div', {
+                        className: x.inviteInfo,
                         children: [
-                            (0, r.jsx)(c.Text, {
+                            (0, i.jsx)(c.Text, {
                                 variant: 'text-sm/normal',
                                 children: v.guild.name
                             }),
                             null != v.approximate_member_count &&
-                                (0, r.jsx)(c.Text, {
+                                (0, i.jsx)(c.Text, {
                                     variant: 'text-xxs/normal',
-                                    children: h.intl.format(h.t.zRl6XV, { count: v.approximate_member_count })
+                                    children: _.intl.format(_.t.zRl6XV, { count: v.approximate_member_count })
                                 })
                         ]
                     })
                 ]
             }),
-            (0, r.jsx)(c.Button, {
-                color: c.ButtonColors.PRIMARY,
+            (0, i.jsx)(c.zxk, {
+                color: c.Ttl.PRIMARY,
                 onClick: () => {
                     E(),
                         n(g.as.JoinOfficialServer),
@@ -97,10 +92,10 @@ function E(e) {
                             type: 'INVITE_MODAL_OPEN',
                             invite: v,
                             code: v.code,
-                            context: f.IlC.APP
+                            context: h.IlC.APP
                         });
                 },
-                children: C ? h.intl.string(h.t.cEnaW1) : h.intl.string(h.t.XpeFYm)
+                children: C ? _.intl.string(_.t.cEnaW1) : _.intl.string(_.t.XpeFYm)
             })
         ]
     });

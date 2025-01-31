@@ -1,51 +1,47 @@
-r.d(n, {
-    d: function () {
-        return m;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(780384),
-    l = r(481060),
-    u = r(410030),
-    c = r(876917),
-    d = r(328456),
-    f = r(616066),
-    p = r(379252),
-    h = r(63243),
-    _ = r(244488);
-let m = (e) => {
-    let { product: n, isPurchased: r, isHighlighted: a, user: m, forCollectedModal: g, profileEffectClassName: E } = e,
-        { firstProfileEffect: v, firstAvatarDecoration: y } = (0, d.R)(n),
-        b = (0, u.ZP)(),
-        I = (0, s.ap)(b);
+n.d(t, { d: () => h });
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(780384),
+    o = n(481060),
+    l = n(410030),
+    u = n(876917),
+    c = n(328456),
+    d = n(616066),
+    f = n(379252),
+    _ = n(63243),
+    p = n(244488);
+let h = (e) => {
+    let { product: t, isPurchased: n, isHighlighted: r, user: h, forCollectedModal: m, profileEffectClassName: g } = e,
+        { firstProfileEffect: E, firstAvatarDecoration: v } = (0, c.R)(t),
+        y = (0, l.ZP)(),
+        I = (0, s.ap)(y);
     return (0, i.jsxs)('div', {
-        className: p.container,
+        className: f.container,
         children: [
-            null != v
+            null != E
                 ? (0, i.jsx)('div', {
-                      className: o()(p.profileEffectShopPreview, E),
-                      children: (0, i.jsx)(c.Z, {
-                          isHovering: a,
-                          profileEffectId: v.id,
-                          isPurchased: r,
-                          forCollectedModal: g,
+                      className: a()(f.profileEffectShopPreview, g),
+                      children: (0, i.jsx)(u.Z, {
+                          isHovering: r,
+                          profileEffectId: E.id,
+                          isPurchased: n,
+                          forCollectedModal: m,
                           removeSetHeight: !0
                       })
                   })
                 : null,
-            null != y
+            null != v
                 ? (0, i.jsx)('div', {
-                      className: p.avatarDecorationPreview,
-                      children: (0, i.jsx)(f.R, {
-                          item: y,
-                          user: m,
-                          avatarSize: l.AvatarSizes.SIZE_120,
-                          isPurchased: r,
-                          isHighlighted: a,
-                          avatarPlaceholderSrc: I ? _ : h
+                      className: f.avatarDecorationPreview,
+                      children: (0, i.jsx)(d.R, {
+                          item: v,
+                          user: h,
+                          avatarSize: o.EFr.SIZE_120,
+                          isPurchased: n,
+                          isHighlighted: r,
+                          avatarPlaceholderSrc: I ? p : _
                       })
                   })
                 : null

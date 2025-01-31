@@ -1,10 +1,6 @@
-r.d(n, {
-    p: function () {
-        return a;
-    }
-});
-var i = r(506629),
-    a = function (e) {
+n.d(t, { p: () => r });
+var i = n(506629),
+    r = function (e) {
         (0, i.G)(function () {
             requestAnimationFrame(e);
         });

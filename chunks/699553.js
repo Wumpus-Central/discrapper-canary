@@ -1,15 +1,11 @@
-t.d(n, {
-    C: function () {
-        return a;
-    }
-});
-var i = t(544891),
-    l = t(405222),
-    r = t(981631);
-async function a(e) {
-    let n = await i.tn.get({
-        url: r.ANM.GUILD_PROFILE(e),
+n.d(l, { C: () => s });
+var i = n(544891),
+    t = n(405222),
+    a = n(981631);
+async function s(e) {
+    let l = await i.tn.get({
+        url: a.ANM.GUILD_PROFILE(e),
         rejectWithError: !1
     });
-    return (0, l.x)(n.body);
+    return (0, t.x)(l.body);
 }

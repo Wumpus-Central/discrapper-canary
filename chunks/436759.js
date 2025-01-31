@@ -1,22 +1,18 @@
-r.d(n, {
-    N: function () {
-        return s;
-    }
-});
-var i = r(36056),
-    a = r(929412),
-    o = r(69122);
-function s(e, n = i.pz.STRING) {
+n.d(t, { N: () => s });
+var i = n(36056),
+    r = n(929412),
+    a = n(69122);
+function s(e, t = i.pz.STRING) {
     switch (e) {
         case i.wx.BOOL:
             return !1;
         case i.wx.UINT64:
         case i.wx.FIXED64:
-            return (0, a._)(o.p.ZERO, n);
+            return (0, r._)(a.p.ZERO, t);
         case i.wx.INT64:
         case i.wx.SFIXED64:
         case i.wx.SINT64:
-            return (0, a._)(o.M.ZERO, n);
+            return (0, r._)(a.M.ZERO, t);
         case i.wx.DOUBLE:
         case i.wx.FLOAT:
             return 0;

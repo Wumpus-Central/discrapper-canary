@@ -1,158 +1,150 @@
-n.d(t, {
-    Z: function () {
-        return _;
-    }
-}),
-    n(47120);
-var i,
-    r,
-    s = n(200651),
-    a = n(192379),
-    l = n(442837),
-    o = n(481060),
-    c = n(570140),
-    d = n(401430),
-    u = n(155268),
-    m = n(600164),
-    g = n(313201),
-    h = n(695103),
-    p = n(388032),
-    x = n(840891),
-    f = n(232186);
-let E = /^\d+$|^$/;
-((r = i || (i = {})).LOCALHOST = 'localhost'), (r.PROXY = 'proxy');
-function _(e) {
+n.d(t, { Z: () => p }), n(47120);
+var i = n(200651),
+    s = n(192379),
+    r = n(442837),
+    l = n(481060),
+    a = n(570140),
+    o = n(401430),
+    c = n(155268),
+    d = n(600164),
+    u = n(313201),
+    m = n(695103),
+    h = n(388032),
+    g = n(840891),
+    _ = n(232186);
+let x = /^\d+$|^$/;
+function p(e) {
     let { onClose: t, transitionState: n } = e,
         {
-            authorizedApplicationId: i,
-            authorizationError: r,
-            authorizing: _
-        } = (0, l.cj)([h.Z], () => ({
-            authorizedApplicationId: h.Z.testModeApplicationId,
-            authorizationError: h.Z.error,
-            authorizing: h.Z.isFetchingAuthorization
+            authorizedApplicationId: p,
+            authorizationError: E,
+            authorizing: C
+        } = (0, r.cj)([m.Z], () => ({
+            authorizedApplicationId: m.Z.testModeApplicationId,
+            authorizationError: m.Z.error,
+            authorizing: m.Z.isFetchingAuthorization
         })),
-        [C, T] = a.useState(null != i ? i : ''),
-        [S, b] = a.useState('8080'),
-        [I, N] = a.useState('localhost'),
-        v = (0, g.Dt)(),
-        A = E.test(C);
-    async function j() {
-        d.q$();
+        [f, T] = s.useState(null != p ? p : ''),
+        [N, I] = s.useState('8080'),
+        [S, b] = s.useState('localhost'),
+        v = (0, u.Dt)(),
+        j = x.test(f);
+    async function A() {
+        o.q$();
         let e = (function (e, t, n) {
             if (null == e) return null;
             switch (e) {
                 case 'localhost':
                     return 'https://localhost:'.concat(t);
                 case 'proxy':
-                    return (0, u.Z)(n);
+                    return (0, c.Z)(n);
             }
-        })(I, S, C);
-        null != (await d.Wt(C, e)) && t();
+        })(S, N, f);
+        null != (await o.Wt(f, e)) && t();
     }
-    a.useEffect(() => () => c.Z.wait(() => d.q$()), []);
-    let O = null != i && i === C,
+    s.useEffect(() => () => a.Z.wait(() => o.q$()), []);
+    let O = null != p && p === f,
         R = O
             ? function () {
-                  d.mc(), T(''), N(null);
+                  o.mc(), T(''), b(null);
               }
-            : j;
-    return (0, s.jsxs)(o.ModalRoot, {
+            : A;
+    return (0, i.jsxs)(l.Y0X, {
         'aria-labelledby': v,
         transitionState: n,
         children: [
-            (0, s.jsxs)(o.ModalHeader, {
-                justify: m.Z.Justify.BETWEEN,
+            (0, i.jsxs)(l.xBx, {
+                justify: d.Z.Justify.BETWEEN,
                 separator: !1,
                 children: [
-                    (0, s.jsx)(o.FormTitle, {
+                    (0, i.jsx)(l.vwX, {
                         id: v,
                         tag: 'h1',
-                        className: f.marginReset,
-                        children: p.intl.string(p.t.f8fzk5)
+                        className: _.marginReset,
+                        children: h.intl.string(h.t.f8fzk5)
                     }),
-                    (0, s.jsx)(o.ModalCloseButton, { onClick: t })
+                    (0, i.jsx)(l.olH, { onClick: t })
                 ]
             }),
-            (0, s.jsxs)(o.ModalContent, {
-                className: x.modalContent,
+            (0, i.jsxs)(l.hzk, {
+                className: g.modalContent,
                 children: [
-                    (0, s.jsx)(o.FormText, {
-                        className: f.marginBottom20,
-                        type: o.FormText.Types.DESCRIPTION,
-                        children: p.intl.string(p.t.a6Vilp)
+                    (0, i.jsx)(l.R94, {
+                        className: _.marginBottom20,
+                        type: l.R94.Types.DESCRIPTION,
+                        children: h.intl.string(h.t.a6Vilp)
                     }),
-                    null == r
+                    null == E
                         ? null
-                        : (0, s.jsx)(o.FormErrorBlock, {
-                              className: f.marginBottom20,
-                              children: r
+                        : (0, i.jsx)(l.kzN, {
+                              className: _.marginBottom20,
+                              children: E
                           }),
-                    (0, s.jsx)('form', {
+                    (0, i.jsx)('form', {
                         onSubmit: (e) => {
                             e.preventDefault(), R();
                         },
-                        children: (0, s.jsxs)(m.Z, {
-                            direction: m.Z.Direction.VERTICAL,
-                            align: m.Z.Align.START,
+                        children: (0, i.jsxs)(d.Z, {
+                            direction: d.Z.Direction.VERTICAL,
+                            align: d.Z.Align.START,
                             children: [
-                                (0, s.jsx)(o.FormItem, {
-                                    className: x.inputWrapper,
-                                    title: p.intl.string(p.t.P6TzgI),
+                                (0, i.jsx)(l.xJW, {
+                                    className: g.inputWrapper,
+                                    title: h.intl.string(h.t.P6TzgI),
                                     required: !0,
-                                    children: (0, s.jsx)(o.TextInput, {
-                                        value: C,
+                                    children: (0, i.jsx)(l.oil, {
+                                        value: f,
                                         maxLength: 19,
-                                        error: A ? null : p.intl.string(p.t.gPNgKC),
+                                        error: j ? null : h.intl.string(h.t.gPNgKC),
                                         onChange: function (e) {
                                             T(e);
                                         },
-                                        disabled: _
+                                        disabled: C
                                     })
                                 }),
-                                (0, s.jsx)(o.FormItem, {
-                                    className: x.inputWrapper,
-                                    title: p.intl.string(p.t['/GTqXF']),
-                                    children: (0, s.jsx)(o.SingleSelect, {
-                                        isDisabled: !A || '' === C,
-                                        value: I,
+                                (0, i.jsx)(l.xJW, {
+                                    className: g.inputWrapper,
+                                    title: h.intl.string(h.t['/GTqXF']),
+                                    children: (0, i.jsx)(l.q4e, {
+                                        isDisabled: !j || '' === f,
+                                        value: S,
                                         options: [
                                             {
                                                 value: 'localhost',
-                                                label: p.intl.string(p.t['+Y9Y6u']),
+                                                label: h.intl.string(h.t['+Y9Y6u']),
                                                 key: 'localhost'
                                             },
                                             {
                                                 value: 'proxy',
-                                                label: p.intl.string(p.t.uaksyc),
+                                                label: h.intl.string(h.t.uaksyc),
                                                 key: 'proxy'
                                             }
                                         ],
                                         onChange: function (e) {
-                                            N(e);
+                                            b(e);
                                         },
                                         placeholder: 'URL Origin Type'
                                     })
                                 }),
-                                'localhost' !== I
+                                'localhost' !== S
                                     ? null
-                                    : (0, s.jsx)(o.FormItem, {
-                                          className: x.inputWrapper,
-                                          title: p.intl.string(p.t.fF4zxs),
+                                    : (0, i.jsx)(l.xJW, {
+                                          className: g.inputWrapper,
+                                          title: h.intl.string(h.t.fF4zxs),
                                           required: !0,
-                                          children: (0, s.jsx)(o.TextInput, {
-                                              value: S,
+                                          children: (0, i.jsx)(l.oil, {
+                                              value: N,
                                               maxLength: 5,
-                                              onChange: (e) => b(e),
-                                              disabled: _
+                                              onChange: (e) => I(e),
+                                              disabled: C
                                           })
                                       }),
-                                (0, s.jsx)(o.Button, {
-                                    submitting: _,
+                                (0, i.jsx)(l.zxk, {
+                                    submitting: C,
                                     type: 'submit',
-                                    disabled: !A || 0 === C.length || ('localhost' === I && 0 === S.length),
-                                    color: O ? o.Button.Colors.RED : o.Button.Colors.GREEN,
-                                    children: O ? p.intl.string(p.t.d6TR3N) : p.intl.string(p.t.qwuK5O)
+                                    disabled: !j || 0 === f.length || ('localhost' === S && 0 === N.length),
+                                    color: O ? l.zxk.Colors.RED : l.zxk.Colors.GREEN,
+                                    children: O ? h.intl.string(h.t.d6TR3N) : h.intl.string(h.t.qwuK5O)
                                 })
                             ]
                         })

@@ -1,11 +1,7 @@
-t.d(o, {
-    Z: function () {
-        return a;
-    }
-});
-var e = t(703656),
-    i = t(981631);
-function a() {
-    let n = (0, e.s1)();
-    n.length > 0 ? n.goBack() : (0, e.uL)(i.Z5c.ME);
+o.d(e, { Z: () => l });
+var t = o(703656),
+    i = o(981631);
+function l() {
+    let n = (0, t.s1)();
+    n.length > 0 ? n.goBack() : (0, t.uL)(i.Z5c.ME);
 }

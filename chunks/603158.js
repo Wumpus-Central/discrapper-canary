@@ -1,10 +1,6 @@
-r.d(n, {
-    F: function () {
-        return u;
-    }
-});
+n.d(t, { F: () => o });
 let i = { '|': ' ' },
-    a = {
+    r = {
         '[': ' ',
         ']': ' ',
         '(': ' ',
@@ -12,28 +8,25 @@ let i = { '|': ' ' },
         '|': ' ',
         '~': ' '
     },
-    o = {
-        '-': '-',
-        ' ': ' '
-    },
-    s = {
+    a = {
         '\u200B': '',
         '‌': '',
         '‍': '',
         '\u200E': '',
         '\uFEFF': ''
     },
-    l = {
-        ...o,
+    s = {
+        '-': '-',
+        ' ': ' ',
+        ...r,
         ...a,
-        ...s,
         ...i
     };
-function u(e) {
-    let n = '';
-    for (let r = 0; r < e.length; r++) {
-        let i = e[r];
-        null != l[i] ? (n += l[i]) : /[\p{Pd}\p{Pc}\p{Po}]/gu.test(i) ? (n += ' ') : (n += i);
+function o(e) {
+    let t = '';
+    for (let n = 0; n < e.length; n++) {
+        let i = e[n];
+        null != s[i] ? (t += s[i]) : /[\p{Pd}\p{Pc}\p{Po}]/gu.test(i) ? (t += ' ') : (t += i);
     }
-    return n.toLowerCase();
+    return t.toLowerCase();
 }

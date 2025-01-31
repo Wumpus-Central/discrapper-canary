@@ -1,16 +1,12 @@
 n.d(t, {
-    n: function () {
-        return m;
-    },
-    t: function () {
-        return p;
-    }
+    n: () => m,
+    t: () => p
 }),
     n(47120);
-var o = n(200651),
+var s = n(200651),
     r = n(192379),
-    s = n(642128),
-    a = n(442837),
+    a = n(642128),
+    o = n(442837),
     i = n(481060),
     l = n(393238),
     c = n(110924),
@@ -27,7 +23,7 @@ function p(e) {
         }),
         [e.springConfig, e.isExpanded]
     );
-    return (0, o.jsx)(u.Provider, {
+    return (0, s.jsx)(u.Provider, {
         value: t,
         children: e.children
     });
@@ -36,29 +32,29 @@ function m(e) {
     var t;
     let { children: n } = e,
         { springConfig: p, isExpanded: m } = r.useContext(u),
-        x = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
-        { ref: g, height: h = null } = (0, l.Z)(),
-        f = null !== (t = (0, c.Z)(h)) && void 0 !== t ? t : null,
-        [{ height: v }, C] = (0, i.useSpring)(() => ({
+        x = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
+        { ref: h, height: g = null } = (0, l.Z)(),
+        f = null !== (t = (0, c.Z)(g)) && void 0 !== t ? t : null,
+        [{ height: v }, _] = (0, i.q_F)(() => ({
             from: { height: 0 },
             config: p
         }));
     return (
         r.useLayoutEffect(() => {
-            null !== h &&
-                C({
-                    height: h,
+            null !== g &&
+                _({
+                    height: g,
                     immediate: !m || x || null === f
                 });
-        }, [h, C, m, x, f]),
-        (0, o.jsx)(s.animated.div, {
+        }, [g, _, m, x, f]),
+        (0, s.jsx)(a.animated.div, {
             style: {
                 height: null === f ? 'auto' : v,
                 overflow: 'hidden'
             },
-            children: (0, o.jsx)('div', {
+            children: (0, s.jsx)('div', {
                 style: { overflow: 'hidden' },
-                ref: g,
+                ref: h,
                 children: n
             })
         })

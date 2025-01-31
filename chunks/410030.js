@@ -1,26 +1,23 @@
-r.d(n, {
-    Fg: function () {
-        return o;
-    },
-    i6: function () {
-        return s;
-    }
+n.d(t, {
+    Fg: () => a,
+    ZP: () => l,
+    i6: () => s
 });
-var i = r(780384),
-    a = r(981631);
-function o() {
+var i = n(780384),
+    r = n(981631);
+function a() {
     let { theme: e } = (0, i.TC)();
     return e;
 }
 function s() {
-    return l(o());
+    return o(a());
 }
-function l(e) {
+function o(e) {
     switch (e) {
-        case a.BRd.DARK:
+        case r.BRd.DARK:
             return 0;
-        case a.BRd.LIGHT:
+        case r.BRd.LIGHT:
             return 1;
     }
 }
-n.ZP = o;
+let l = a;

@@ -1,12 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-});
+n.d(t, { Z: () => o });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(388032),
+var l = n(481060),
+    r = n(388032),
     a = n(549440),
     s = n(968153);
 function o() {
@@ -17,19 +13,19 @@ function o() {
             children: [
                 (0, i.jsx)('img', {
                     src: s,
-                    alt: l.intl.string(l.t.MvLOqq)
+                    alt: r.intl.string(r.t.MvLOqq)
                 }),
-                (0, i.jsx)(r.Spacer, { size: 12 }),
-                (0, i.jsx)(r.Heading, {
+                (0, i.jsx)(l.LZC, { size: 12 }),
+                (0, i.jsx)(l.X6q, {
                     className: a.header,
                     variant: 'heading-lg/semibold',
-                    children: l.intl.string(l.t.t18lFh)
+                    children: r.intl.string(r.t.t18lFh)
                 }),
-                (0, i.jsx)(r.Spacer, { size: 8 }),
-                (0, i.jsx)(r.Text, {
+                (0, i.jsx)(l.LZC, { size: 8 }),
+                (0, i.jsx)(l.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
-                    children: l.intl.string(l.t.TvGJgo)
+                    children: r.intl.string(r.t.TvGJgo)
                 })
             ]
         })

@@ -1,9 +1,5 @@
-r.d(n, {
-    e: function () {
-        return a;
-    }
-});
-let i = (0, r(818083).B)({
+n.d(t, { e: () => r });
+let i = (0, n(818083).B)({
     kind: 'user',
     id: '2024-04_genshin_admin_signup',
     label: 'Genshin Admin Signup',
@@ -16,8 +12,8 @@ let i = (0, r(818083).B)({
         }
     ]
 });
-function a(e) {
-    let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        { showAdminSignup: r } = i.getCurrentConfig({ location: e }, { autoTrackExposure: n });
-    return r;
+function r(e) {
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+        { showAdminSignup: n } = i.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+    return n;
 }

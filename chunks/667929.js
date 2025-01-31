@@ -1,19 +1,15 @@
 r.d(t, {
-    t7: function () {
-        return M;
-    },
-    y7: function () {
-        return C;
-    }
+    t7: () => M,
+    y7: () => C
 });
 var a = r(972698),
     n = r(621028),
-    o = r(872463),
-    s = r(30486),
+    s = r(872463),
+    o = r(30486),
     i = r(690094),
     c = r.n(i),
-    u = r(417181),
-    l = r.n(u),
+    l = r(417181),
+    u = r.n(l),
     f = r(960465);
 function b(e, t) {
     var r = Object.keys(e);
@@ -27,7 +23,7 @@ function b(e, t) {
     }
     return r;
 }
-function h(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {};
         t % 2
@@ -42,25 +38,23 @@ function h(e) {
     }
     return e;
 }
-var d = s.default,
-    p = Object.keys(d),
+var h = o.default,
+    p = Object.keys(h),
     m = function (e) {
-        var t,
-            r = c()(e),
-            a = (0, f.L)(r.array()),
-            n = (0, o.Z)(a, 3),
-            s = n[0],
-            i = n[1],
-            u = n[2];
-        var l = [(t = s) < 0.25 ? 1 : t < 0.5 ? 0.9 - t : 1.1 - t, i, u],
-            b = (0, f.x)(l);
-        return c().rgb(b).hex();
+        var t = c()(e),
+            r = (0, f.L)(t.array()),
+            a = (0, s.Z)(r, 3),
+            n = a[0],
+            o = a[1],
+            i = a[2],
+            l = (0, f.x)([n < 0.25 ? 1 : n < 0.5 ? 0.9 - n : 1.1 - n, o, i]);
+        return c().rgb(l).hex();
     },
     g = function (e) {
         return function (t) {
             return {
                 className: [t.className, e.className].filter(Boolean).join(' '),
-                style: h(h({}, t.style || {}), e.style || {})
+                style: d(d({}, t.style || {}), e.style || {})
             };
         };
     },
@@ -81,7 +75,7 @@ var d = s.default,
                         });
                     case 'function':
                         return function (r) {
-                            for (var a = arguments.length, n = Array(a > 1 ? a - 1 : 0), o = 1; o < a; o++) n[o - 1] = arguments[o];
+                            for (var a = arguments.length, n = Array(a > 1 ? a - 1 : 0), s = 1; s < a; s++) n[s - 1] = arguments[s];
                             return g({ className: e })(t.apply(void 0, [r].concat(n)));
                         };
                 }
@@ -94,10 +88,10 @@ var d = s.default,
                             style: e
                         });
                     case 'object':
-                        return h(h({}, t), e);
+                        return d(d({}, t), e);
                     case 'function':
                         return function (r) {
-                            for (var a = arguments.length, n = Array(a > 1 ? a - 1 : 0), o = 1; o < a; o++) n[o - 1] = arguments[o];
+                            for (var a = arguments.length, n = Array(a > 1 ? a - 1 : 0), s = 1; s < a; s++) n[s - 1] = arguments[s];
                             return g({ style: e })(t.apply(void 0, [r].concat(n)));
                         };
                 }
@@ -106,17 +100,17 @@ var d = s.default,
                 switch (n) {
                     case 'string':
                         return function (r) {
-                            for (var a = arguments.length, n = Array(a > 1 ? a - 1 : 0), o = 1; o < a; o++) n[o - 1] = arguments[o];
+                            for (var a = arguments.length, n = Array(a > 1 ? a - 1 : 0), s = 1; s < a; s++) n[s - 1] = arguments[s];
                             return e.apply(void 0, [g(r)({ className: t })].concat(n));
                         };
                     case 'object':
                         return function (r) {
-                            for (var a = arguments.length, n = Array(a > 1 ? a - 1 : 0), o = 1; o < a; o++) n[o - 1] = arguments[o];
+                            for (var a = arguments.length, n = Array(a > 1 ? a - 1 : 0), s = 1; s < a; s++) n[s - 1] = arguments[s];
                             return e.apply(void 0, [g(r)({ style: t })].concat(n));
                         };
                     case 'function':
                         return function (r) {
-                            for (var a = arguments.length, n = Array(a > 1 ? a - 1 : 0), o = 1; o < a; o++) n[o - 1] = arguments[o];
+                            for (var a = arguments.length, n = Array(a > 1 ? a - 1 : 0), s = 1; s < a; s++) n[s - 1] = arguments[s];
                             return e.apply(void 0, [t.apply(void 0, [r].concat(n))].concat(n));
                         };
                 }
@@ -130,38 +124,38 @@ var d = s.default,
         }, {});
     },
     Z = function (e, t) {
-        for (var r = arguments.length, n = Array(r > 2 ? r - 2 : 0), o = 2; o < r; o++) n[o - 2] = arguments[o];
+        for (var r = arguments.length, n = Array(r > 2 ? r - 2 : 0), s = 2; s < r; s++) n[s - 2] = arguments[s];
         if (null === t) return e;
-        !Array.isArray(t) && (t = [t]);
-        var s = t
+        Array.isArray(t) || (t = [t]);
+        var o = t
             .map(function (t) {
                 return e[t];
             })
             .filter(Boolean)
             .reduce(
                 function (e, t) {
-                    return 'string' == typeof t ? (e.className = [e.className, t].filter(Boolean).join(' ')) : 'object' === (0, a.Z)(t) ? (e.style = h(h({}, e.style), t)) : 'function' == typeof t && (e = h(h({}, e), t.apply(void 0, [e].concat(n)))), e;
+                    return 'string' == typeof t ? (e.className = [e.className, t].filter(Boolean).join(' ')) : 'object' === (0, a.Z)(t) ? (e.style = d(d({}, e.style), t)) : 'function' == typeof t && (e = d(d({}, e), t.apply(void 0, [e].concat(n)))), e;
                 },
                 {
                     className: '',
                     style: {}
                 }
             );
-        return !s.className && delete s.className, 0 === Object.keys(s.style).length && delete s.style, s;
+        return o.className || delete o.className, 0 === Object.keys(o.style).length && delete o.style, o;
     },
     w = function (e) {
         return Object.keys(e).reduce(function (t, r) {
             return (t[r] = /^base/.test(r) ? m(e[r]) : 'scheme' === r ? e[r] + ':inverted' : e[r]), t;
         }, {});
     },
-    M = l()(function (e) {
+    M = u()(function (e) {
         var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
             r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
             a = t.defaultBase16,
-            n = void 0 === a ? d : a,
-            o = t.base16Themes,
-            s = O(r, void 0 === o ? null : o);
-        s && (r = h(h({}, s), r));
+            n = void 0 === a ? h : a,
+            s = t.base16Themes,
+            o = O(r, void 0 === s ? null : s);
+        o && (r = d(d({}, o), r));
         for (
             var i = p.reduce(function (e, t) {
                     return (e[t] = r[t] || n[t]), e;
@@ -172,14 +166,14 @@ var d = s.default,
                     }, {}),
                     e(i)
                 ),
-                u = arguments.length,
-                f = Array(u > 3 ? u - 3 : 0),
+                l = arguments.length,
+                f = Array(l > 3 ? l - 3 : 0),
                 b = 3;
-            b < u;
+            b < l;
             b++
         )
             f[b - 3] = arguments[b];
-        return l()(Z, 2).apply(void 0, [c].concat(f));
+        return u()(Z, 2).apply(void 0, [c].concat(f));
     }, 3),
     k = function (e) {
         return !!e.extend;
@@ -187,15 +181,13 @@ var d = s.default,
     O = function (e, t) {
         if ((e && k(e) && e.extend && (e = e.extend), 'string' == typeof e)) {
             var r = e.split(':'),
-                a = (0, o.Z)(r, 2),
+                a = (0, s.Z)(r, 2),
                 n = a[0],
                 i = a[1];
-            (e = t ? t[n] : s[n]), 'inverted' === i && (e = w(e));
+            (e = t ? t[n] : o[n]), 'inverted' === i && (e = w(e));
         }
         return e && Object.prototype.hasOwnProperty.call(e, 'base00') ? e : void 0;
     },
     C = function (e) {
-        if ('string' == typeof e) return ''.concat(e, ':inverted');
-        if (e && k(e) && e.extend) return 'string' == typeof e.extend ? h(h({}, e), {}, { extend: ''.concat(e.extend, ':inverted') }) : h(h({}, e), {}, { extend: w(e.extend) });
-        return e ? w(e) : e;
+        return 'string' == typeof e ? ''.concat(e, ':inverted') : e && k(e) && e.extend ? ('string' == typeof e.extend ? d(d({}, e), {}, { extend: ''.concat(e.extend, ':inverted') }) : d(d({}, e), {}, { extend: w(e.extend) })) : e ? w(e) : e;
     };

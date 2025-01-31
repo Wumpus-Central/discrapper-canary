@@ -1,8 +1,4 @@
-n.d(t, {
-    P: function () {
-        return c;
-    }
-});
+n.d(t, { P: () => c });
 var i = n(200651),
     r = n(192379),
     l = n(442837),
@@ -18,7 +14,7 @@ function c(e) {
         null != e &&
             t &&
             u &&
-            (0, s.openModalLazy)(async () => {
+            (0, s.ZDy)(async () => {
                 let { default: t } = await n.e('710').then(n.bind(n, 32342));
                 return (n) =>
                     (0, i.jsx)(t, {

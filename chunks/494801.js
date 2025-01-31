@@ -1,42 +1,38 @@
-t.d(n, {
-    Z: function () {
-        return l;
-    }
-});
-var o = t(200651);
-t(192379);
-var i = t(212598),
-    r = t(981631),
-    c = t(388032),
-    s = t(250331),
-    a = t(300778);
-function l(e) {
-    let { isWaitingForConnection: n, onWaitingForConnection: t, expectedCallbackState: l, onAuthToken: d, onError: u, onClose: f } = e,
-        p = n
+n.d(t, { Z: () => c });
+var o = n(200651);
+n(192379);
+var i = n(212598),
+    r = n(981631),
+    s = n(388032),
+    a = n(250331),
+    l = n(300778);
+function c(e) {
+    let { isWaitingForConnection: t, onWaitingForConnection: n, expectedCallbackState: c, onAuthToken: d, onError: u, onClose: p } = e,
+        f = t
             ? (0, o.jsx)('img', {
-                  src: a.Z,
+                  src: l.Z,
                   width: '231',
                   height: '172',
                   alt: ''
               })
             : (0, o.jsx)('img', {
-                  src: s.Z,
+                  src: a.Z,
                   width: '231',
                   height: '160',
                   alt: ''
               }),
-        x = n ? c.intl.string(c.t.EuwcxM) : c.intl.string(c.t['e/z3nZ']),
-        C = n ? c.intl.string(c.t['1GjS/f']) : c.intl.string(c.t['7tXu0t']);
+        b = t ? s.intl.string(s.t.EuwcxM) : s.intl.string(s.t['e/z3nZ']),
+        x = t ? s.intl.string(s.t['1GjS/f']) : s.intl.string(s.t['7tXu0t']);
     return (0, o.jsx)(i.t, {
         platformType: r.ABu.XBOX,
-        isWaitingForConnection: n,
-        onWaitingForConnection: t,
-        expectedCallbackState: l,
+        isWaitingForConnection: t,
+        onWaitingForConnection: n,
+        expectedCallbackState: c,
         onAuthToken: d,
         onError: u,
-        onClose: f,
-        img: p,
-        title: x,
-        body: C
+        onClose: p,
+        img: f,
+        title: b,
+        body: x
     });
 }

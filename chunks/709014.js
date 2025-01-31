@@ -1,101 +1,96 @@
-r.d(n, {
-    L: function () {
-        return g;
-    }
-});
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(120356),
-    l = r.n(s),
-    u = r(906280),
-    c = r.n(u),
-    d = r(186325),
-    f = r(390507),
-    p = r(679400),
-    h = r(580747),
-    _ = r(189954);
-function m(e, n) {
-    let { color: i, src: s, size: u = 'md', width: m, height: g, className: E, initialAnimation: v, markers: y } = e,
-        [b, I] = o.useState(null),
-        T = o.useRef(null),
-        S = o.useRef(null),
-        A = o.useRef(null),
-        C =
-            'custom' === u
+n.d(t, { L: () => h }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(906280),
+    l = n.n(o),
+    u = n(186325),
+    c = n(390507),
+    d = n(679400),
+    f = n(580747),
+    _ = n(189954);
+function p(e, t) {
+    let { color: a, src: o, size: p = 'md', width: h, height: m, className: g, initialAnimation: E, markers: v } = e,
+        [y, I] = r.useState(null),
+        b = r.useRef(null),
+        T = r.useRef(null),
+        S = r.useRef(null),
+        A =
+            'custom' === p
                 ? {
-                      width: m,
-                      height: g
+                      width: h,
+                      height: m
                   }
-                : (0, f.m)(u),
-        N = !(0, h.Z)('lottie_hover_multiple_loop'),
-        R = o.useContext(d.S).reducedMotion.enabled,
-        { enabled: O } = p.Z.useExperiment({ location: 'LottieIcon web entry point' }),
-        D = R || !O,
-        L = o.useRef(v);
+                : (0, c.m)(p),
+        N = !(0, f.Z)('lottie_hover_multiple_loop'),
+        C = r.useContext(u.S).reducedMotion.enabled,
+        { enabled: R } = d.Z.useExperiment({ location: 'LottieIcon web entry point' }),
+        O = C || !R,
+        D = r.useRef(E);
     return (
-        o.useImperativeHandle(
-            n,
+        r.useImperativeHandle(
+            t,
             () => ({
                 play: (e) => {
-                    if (null != A.current) {
-                        if (((S.current = e), D)) {
-                            let n = y[e];
-                            A.current.resetSegments(!0), A.current.setSegment(n.start + n.duration, n.start + n.duration), A.current.stop();
-                        } else A.current.setLoop(!N && e.includes('hover')), A.current.resetSegments(!0), A.current.playSegments([y[e].start, y[e].start + y[e].duration], !0);
+                    if (null != S.current) {
+                        if (((T.current = e), O)) {
+                            let t = v[e];
+                            S.current.resetSegments(!0), S.current.setSegment(t.start + t.duration, t.start + t.duration), S.current.stop();
+                        } else S.current.setLoop(!N && e.includes('hover')), S.current.resetSegments(!0), S.current.playSegments([v[e].start, v[e].start + v[e].duration], !0);
                     }
                 },
                 stop: () => {
-                    if (null == A.current || D) return;
+                    if (null == S.current || O) return;
                 },
                 stopIfPlaying: (e) => {
-                    null != A.current && !D && S.current === e && (A.current.resetSegments(!0), A.current.setSegment(y[e].start, y[e].start), A.current.stop());
+                    null == S.current || O || T.current !== e || (S.current.resetSegments(!0), S.current.setSegment(v[e].start, v[e].start), S.current.stop());
                 }
             }),
-            [D, N, y]
+            [O, N, v]
         ),
-        o.useEffect(() => {
-            null == b && s().then((e) => I(e.default));
-        }, [b, s]),
-        o.useEffect(
+        r.useEffect(() => {
+            null == y && o().then((e) => I(e.default));
+        }, [y, o]),
+        r.useEffect(
             () => (
                 Promise.resolve()
-                    .then(r.t.bind(r, 500923, 23))
+                    .then(n.t.bind(n, 500923, 23))
                     .then((e) => {
-                        var n;
-                        let r,
+                        var t;
+                        let n,
                             { default: i } = e,
-                            a = null !== (n = S.current) && void 0 !== n ? n : L.current;
-                        if (null != a && null != y[a]) {
-                            let e = y[a];
-                            r = [e.start, e.start + e.duration];
+                            r = null !== (t = T.current) && void 0 !== t ? t : D.current;
+                        if (null != r && null != v[r]) {
+                            let e = v[r];
+                            n = [e.start, e.start + e.duration];
                         }
-                        null != T.current &&
-                            (A.current = i.loadAnimation({
-                                container: T.current,
+                        null != b.current &&
+                            (S.current = i.loadAnimation({
+                                container: b.current,
                                 renderer: 'svg',
                                 loop: !1,
                                 autoplay: !1,
-                                animationData: c()(b),
-                                initialSegment: r
+                                animationData: l()(y),
+                                initialSegment: n
                             }));
                     }),
                 () => {
                     var e;
-                    null === (e = A.current) || void 0 === e || e.destroy();
+                    null === (e = S.current) || void 0 === e || e.destroy();
                 }
             ),
-            [b, y]
+            [y, v]
         ),
-        (0, a.jsx)('div', {
+        (0, i.jsx)('div', {
             style: {
-                '--__lottieIconColor': null != i && 'string' == typeof i ? i : null == i ? void 0 : i.css,
+                '--__lottieIconColor': null != a && 'string' == typeof a ? a : null == a ? void 0 : a.css,
                 display: 'flex',
-                ...C
+                ...A
             },
-            className: l()(_.lottieIcon, E),
-            ref: T
+            className: s()(_.lottieIcon, g),
+            ref: b
         })
     );
 }
-let g = o.forwardRef(m);
+let h = r.forwardRef(p);

@@ -1,6 +1,11 @@
 e.exports = {
-    page: 'page_a2a504',
-    contentWrapper: 'contentWrapper_a2a504',
-    v2ContentWrapper: 'v2ContentWrapper_a2a504',
-    dragRegion: 'dragRegion_a2a504'
+    page: 'page__99a7e',
+    contentWrapper: 'contentWrapper__99a7e',
+    v2screensWrapper: 'v2screensWrapper__99a7e',
+    screensWrapper: 'screensWrapper__99a7e',
+    dragRegion: 'dragRegion__99a7e',
+    splash: 'splash__99a7e',
+    defaultGradient: 'defaultGradient__99a7e',
+    splashGradient: 'splashGradient__99a7e',
+    cover: 'cover__99a7e'
 };

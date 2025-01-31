@@ -1,42 +1,38 @@
-r.d(n, {
-    c: function () {
-        return h;
-    }
-});
-var i = r(200651),
-    a = r(192379),
-    o = r(642128),
-    s = r(442837),
-    l = r(710593),
-    u = r(481060),
-    c = r(607070),
-    d = r(79320),
-    f = r(388032),
-    p = r(481320);
-function h() {
+n.d(t, { c: () => _ });
+var i = n(200651),
+    r = n(192379),
+    a = n(642128),
+    s = n(442837),
+    o = n(710593),
+    l = n(481060),
+    u = n(607070),
+    c = n(79320),
+    d = n(388032),
+    f = n(481320);
+function _() {
     let e = [
             {
                 keybinds: ['Spacebar', 'Enter'],
-                name: f.intl.string(f.t['cs/HVF'])
+                name: d.intl.string(d.t['cs/HVF'])
             },
             {
                 keybinds: ['up', 'down'],
-                name: f.intl.string(f.t.dmMqa2)
+                name: d.intl.string(d.t.dmMqa2)
             },
             {
                 keybinds: ['ESC'],
-                name: f.intl.string(f.t['1ioMJS'])
+                name: d.intl.string(d.t['1ioMJS'])
             }
         ],
-        n = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
-        r = (0, d.zP)();
-    return (0, u.useTransition)(
-        r,
+        t = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
+        n = (0, c.zP)();
+    return (0, l.Yzy)(
+        n,
         {
             enter: {
                 from: {
                     opacity: 0,
-                    y: n ? 0 : 80
+                    y: t ? 0 : 80
                 },
                 to: {
                     opacity: 1,
@@ -45,40 +41,40 @@ function h() {
             },
             leave: {
                 opacity: 0,
-                y: n ? 0 : 80
+                y: t ? 0 : 80
             },
-            config: o.config.stiff
+            config: a.config.stiff
         },
         'animate-always'
-    )((n, r) =>
-        r
+    )((t, n) =>
+        n
             ? (0, i.jsx)('div', {
-                  className: p.positioner,
-                  children: (0, i.jsx)(o.animated.div, {
-                      className: p.container,
-                      style: n,
-                      children: e.map((n, r) => {
-                          let { keybinds: o, name: s } = n;
+                  className: f.positioner,
+                  children: (0, i.jsx)(a.animated.div, {
+                      className: f.container,
+                      style: t,
+                      children: e.map((t, n) => {
+                          let { keybinds: a, name: s } = t;
                           return (0, i.jsxs)(
-                              a.Fragment,
+                              r.Fragment,
                               {
                                   children: [
-                                      (0, i.jsx)(u.Text, {
+                                      (0, i.jsx)(l.Text, {
                                           variant: 'text-md/semibold',
-                                          className: p.bindName,
+                                          className: f.bindName,
                                           children: s
                                       }),
-                                      o.map((e) =>
+                                      a.map((e) =>
                                           (0, i.jsx)(
-                                              l.M,
+                                              o.M,
                                               {
                                                   shortcut: e,
-                                                  className: p.shortcut
+                                                  className: f.shortcut
                                               },
                                               e
                                           )
                                       ),
-                                      r < e.length - 1 ? (0, i.jsx)('span', { className: p.separator }) : null
+                                      n < e.length - 1 ? (0, i.jsx)('span', { className: f.separator }) : null
                                   ]
                               },
                               s

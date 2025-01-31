@@ -1,55 +1,49 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return I;
-        }
-    }),
-    n(47120);
-var l = n(200651),
-    a = n(192379),
-    i = n(658722),
-    o = n.n(i),
-    s = n(392711),
-    r = n.n(s),
-    c = n(990547),
-    d = n(442837),
-    u = n(952265),
-    m = n(481060),
-    p = n(100527),
-    v = n(906732),
-    h = n(213609),
-    x = n(709054),
-    g = n(435064),
-    C = n(39604),
-    f = n(680056),
-    j = n(10217),
-    N = n(410426),
-    E = n(207346),
-    b = n(356659),
-    L = n(436898);
-function I(e) {
-    let { channelId: t, onClose: i, transitionState: s } = e,
-        [I, S] = a.useState(''),
-        [Z, k] = a.useState('descending'),
-        [T, y] = a.useState(!0),
-        [M, B] = a.useState(null),
-        D = a.useDeferredValue(I),
-        _ = (0, d.e7)([g.Z], () => g.Z.getClips()),
-        H = (0, d.e7)([g.Z], () => g.Z.getPendingClips()),
-        P = (0, d.e7)([g.Z], () => g.Z.getSettings().storageLocation),
+l.d(t, { default: () => b }), l(47120);
+var a = l(200651),
+    n = l(192379),
+    i = l(658722),
+    s = l.n(i),
+    r = l(392711),
+    o = l.n(r),
+    c = l(990547),
+    d = l(442837),
+    u = l(952265),
+    m = l(481060),
+    p = l(100527),
+    x = l(906732),
+    v = l(213609),
+    h = l(709054),
+    g = l(435064),
+    C = l(39604),
+    f = l(680056),
+    j = l(10217),
+    N = l(410426),
+    k = l(207346),
+    E = l(356659),
+    Z = l(436898);
+function b(e) {
+    let { channelId: t, onClose: i, transitionState: r } = e,
+        [b, L] = n.useState(''),
+        [y, I] = n.useState('descending'),
+        [T, M] = n.useState(!0),
+        [S, D] = n.useState(null),
+        _ = n.useDeferredValue(b),
+        z = (0, d.e7)([g.Z], () => g.Z.getClips()),
+        P = (0, d.e7)([g.Z], () => g.Z.getPendingClips()),
+        w = (0, d.e7)([g.Z], () => g.Z.getSettings().storageLocation),
         R = (0, d.Wu)([g.Z], () => g.Z.getNewClipIds()),
-        { analyticsLocations: w } = (0, v.ZP)(p.Z.CLIPS_GALLERY),
-        A = a.useMemo(() => [...H, ..._], [_, H]);
-    (0, h.Z)(
+        { analyticsLocations: A } = (0, x.ZP)(p.Z.CLIPS_GALLERY),
+        H = n.useMemo(() => [...P, ...z], [z, P]);
+    (0, v.Z)(
         {
             type: c.ImpressionTypes.MODAL,
             name: c.ImpressionNames.CLIP_GALLERY_VIEWED,
-            properties: { number_of_clips_loaded: A.length }
+            properties: { number_of_clips_loaded: H.length }
         },
         { disableTrack: T },
-        [A.length, T]
+        [H.length, T]
     ),
-        a.useEffect(
+        n.useEffect(
             () => (
                 (0, C.eL)(),
                 () => {
@@ -58,84 +52,84 @@ function I(e) {
             ),
             []
         );
-    let V = a.useMemo(
+    let V = n.useMemo(
         () =>
-            r()(A)
+            o()(H)
                 .filter((e) => {
-                    if ('' === D.trim()) return !0;
-                    let t = D.toLowerCase();
-                    return (null != e.name && '' !== e.name && o()(t, e.name.toLowerCase())) || o()(t, e.applicationName.toLowerCase());
+                    if ('' === _.trim()) return !0;
+                    let t = _.toLowerCase();
+                    return (null != e.name && '' !== e.name && s()(t, e.name.toLowerCase())) || s()(t, e.applicationName.toLowerCase());
                 })
-                .sort((e, t) => ('ascending' === Z ? x.default.compare(e.id, t.id) : 'descending' === Z ? x.default.compare(t.id, e.id) : 0))
+                .sort((e, t) => ('ascending' === y ? h.default.compare(e.id, t.id) : 'descending' === y ? h.default.compare(t.id, e.id) : 0))
                 .chunk(3)
                 .value(),
-        [A, D, Z]
+        [H, _, y]
     );
-    a.useEffect(() => {
-        (async function e() {
-            y(!0);
+    n.useEffect(() => {
+        !(async function () {
+            M(!0);
             try {
-                await C.jv(P);
+                await C.jv(w);
             } finally {
-                y(!1);
+                M(!1);
             }
         })();
-    }, [P]);
-    let z = a.useCallback(
+    }, [w]);
+    let B = n.useCallback(
             (e) => {
-                (0, m.openModalLazy)(
+                (0, m.ZDy)(
                     async () => {
-                        let { default: a } = await n.e('61526').then(n.bind(n, 22989));
-                        return (n) =>
-                            (0, l.jsx)(a, {
-                                ...n,
+                        let { default: n } = await l.e('61526').then(l.bind(l, 22989));
+                        return (l) =>
+                            (0, a.jsx)(n, {
+                                ...l,
                                 channelId: t,
                                 clip: e
                             });
                     },
-                    { modalKey: b.Ut }
+                    { modalKey: E.Ut }
                 );
             },
             [t]
         ),
         { onShareClick: F } = (0, f.Z)({
             channelId: t,
-            setExporting: B
+            setExporting: D
         }),
-        O = a.useCallback((e, t) => {
-            (0, m.openModalLazy)(async () => {
-                let { default: a } = await n.e('15915').then(n.bind(n, 799677));
-                return (n) =>
-                    (0, l.jsx)(a, {
+        Y = n.useCallback((e, t) => {
+            (0, m.ZDy)(async () => {
+                let { default: n } = await l.e('15915').then(l.bind(l, 799677));
+                return (l) =>
+                    (0, a.jsx)(n, {
                         clip: e,
-                        ...n,
+                        ...l,
                         onBeforeDelete: t,
-                        onAfterDelete: () => n.onClose()
+                        onAfterDelete: () => l.onClose()
                     });
             });
         }, []),
-        G = a.useCallback(
+        O = n.useCallback(
             (e) => {
                 let { row: t } = e,
-                    n = V[t];
-                return (0, l.jsx)(
+                    l = V[t];
+                return (0, a.jsx)(
                     'div',
                     {
-                        className: L.clipsRow,
-                        children: n.map((e) => {
+                        className: Z.clipsRow,
+                        children: l.map((e) => {
                             let t = 0 === e.length;
-                            return (0, l.jsx)(
+                            return (0, a.jsx)(
                                 j.Z,
                                 {
-                                    actionsDisabled: null != M || t,
-                                    exporting: M === e.id,
+                                    actionsDisabled: null != S || t,
+                                    exporting: S === e.id,
                                     isNew: R.includes(e.id),
-                                    onDelete: O,
-                                    onEdit: z,
+                                    onDelete: Y,
+                                    onEdit: B,
                                     onShare: (e) =>
                                         F({
                                             clip: e,
-                                            onShareComplete: () => u.Mr(b.Qr)
+                                            onShareComplete: () => u.Mr(E.Qr)
                                         }),
                                     clip: e
                                 },
@@ -146,41 +140,41 @@ function I(e) {
                     'clips-gallery-'.concat(t)
                 );
             },
-            [V, R, M, F, O, z]
+            [V, R, S, F, Y, B]
         ),
-        K =
+        G =
             T || 0 !== V.length
                 ? T
-                    ? (0, l.jsx)('div', {
-                          className: L.spinnerContainer,
-                          children: (0, l.jsx)(m.Spinner, {})
+                    ? (0, a.jsx)('div', {
+                          className: Z.spinnerContainer,
+                          children: (0, a.jsx)(m.$jN, {})
                       })
-                    : (0, l.jsx)(m.List, {
-                          className: L.clipGrid,
+                    : (0, a.jsx)(m.aVo, {
+                          className: Z.clipGrid,
                           sections: [V.length],
                           sectionHeight: 0,
                           rowHeight: 328.25,
-                          renderRow: G
+                          renderRow: O
                       })
-                : (0, l.jsx)(N.Z, {
-                      isEmptyBecauseQuery: A.length > 0,
+                : (0, a.jsx)(N.Z, {
+                      isEmptyBecauseQuery: H.length > 0,
                       closePopout: i
                   });
-    return (0, l.jsx)(m.ModalRoot, {
-        size: m.ModalSize.DYNAMIC,
-        transitionState: s,
-        className: L.root,
-        children: (0, l.jsxs)(v.Gt, {
-            value: w,
+    return (0, a.jsx)(m.Y0X, {
+        size: m.CgR.DYNAMIC,
+        transitionState: r,
+        className: Z.root,
+        children: (0, a.jsxs)(x.Gt, {
+            value: A,
             children: [
-                (0, l.jsx)(E.Z, {
+                (0, a.jsx)(k.Z, {
                     onClose: i,
-                    filterQuery: I,
-                    setFilterQuery: S,
-                    sortOrder: Z,
-                    setSortOrder: k
+                    filterQuery: b,
+                    setFilterQuery: L,
+                    sortOrder: y,
+                    setSortOrder: I
                 }),
-                K
+                G
             ]
         })
     });

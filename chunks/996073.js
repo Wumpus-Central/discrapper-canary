@@ -1,39 +1,40 @@
-var i = r(192379),
-    a = r(442837),
-    o = r(230711),
-    s = r(607070),
-    l = r(663389),
-    u = r(526761),
-    c = r(981631);
-let d = Object.freeze({
-        [u.KQ.ProfileCustomizationScrollPositions.TRY_IT_OUT]: c.oAB.PROFILE_CUSTOMIZATION,
-        [u.KQ.AccessibilityScrollPositions.REDUCED_MOTION]: c.oAB.ACCESSIBILITY,
-        [u.KQ.AccessibilityScrollPositions.SYNC_PROFILE_THEME_WITH_USER_THEME]: c.oAB.ACCESSIBILITY,
-        [u.KQ.AccessibilityScrollPositions.LEGACY_CHAT_INPUT]: c.oAB.ACCESSIBILITY,
-        [u.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION]: c.oAB.VOICE,
-        [u.KQ.AppearanceScrollPositions.CUSTOM_APP_ICONS]: c.oAB.APPEARANCE,
-        [u.KQ.ContentAndSocialScrollPositions.DM_SAFETY_ALERTS_V2]: c.oAB.CONTENT_AND_SOCIAL,
-        [u.KQ.ContentAndSocialScrollPositions.MESSAGE_REQUESTS_V2]: c.oAB.CONTENT_AND_SOCIAL,
-        [u.KQ.ContentAndSocialScrollPositions.EXPLICIT_MEDIA_REDACTION_V2]: c.oAB.CONTENT_AND_SOCIAL,
-        [u.KQ.ContentAndSocialScrollPositions.RESTRICTED_ACCOUNTS]: c.oAB.CONTENT_AND_SOCIAL
+n.d(t, { Z: () => d });
+var i = n(192379),
+    r = n(442837),
+    a = n(230711),
+    s = n(607070),
+    o = n(663389),
+    l = n(526761),
+    u = n(981631);
+let c = Object.freeze({
+        [l.KQ.ProfileCustomizationScrollPositions.TRY_IT_OUT]: u.oAB.PROFILE_CUSTOMIZATION,
+        [l.KQ.AccessibilityScrollPositions.REDUCED_MOTION]: u.oAB.ACCESSIBILITY,
+        [l.KQ.AccessibilityScrollPositions.SYNC_PROFILE_THEME_WITH_USER_THEME]: u.oAB.ACCESSIBILITY,
+        [l.KQ.AccessibilityScrollPositions.LEGACY_CHAT_INPUT]: u.oAB.ACCESSIBILITY,
+        [l.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION]: u.oAB.VOICE,
+        [l.KQ.AppearanceScrollPositions.CUSTOM_APP_ICONS]: u.oAB.APPEARANCE,
+        [l.KQ.ContentAndSocialScrollPositions.DM_SAFETY_ALERTS_V2]: u.oAB.CONTENT_AND_SOCIAL,
+        [l.KQ.ContentAndSocialScrollPositions.MESSAGE_REQUESTS_V2]: u.oAB.CONTENT_AND_SOCIAL,
+        [l.KQ.ContentAndSocialScrollPositions.EXPLICIT_MEDIA_REDACTION_V2]: u.oAB.CONTENT_AND_SOCIAL,
+        [l.KQ.ContentAndSocialScrollPositions.RESTRICTED_ACCOUNTS]: u.oAB.CONTENT_AND_SOCIAL
     }),
-    f = function (e, n, r) {
-        let u = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-            c = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
-            f = (0, a.e7)([l.Z], () => l.Z.getScrollPosition());
+    d = function (e, t, n) {
+        let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+            u = (0, r.e7)([s.Z], () => s.Z.useReducedMotion),
+            d = (0, r.e7)([o.Z], () => o.Z.getScrollPosition());
         (0, i.useEffect)(() => {
             let i = e.current;
-            if (null != i && n === f)
+            null != i &&
+                t === d &&
                 setTimeout(() => {
                     let e = requestAnimationFrame(() => {
                         i.scrollIntoView({
-                            behavior: c ? 'auto' : 'smooth',
-                            ...r
+                            behavior: u ? 'auto' : 'smooth',
+                            ...n
                         }),
-                            o.Z.clearScrollPosition(d[n]);
+                            a.Z.clearScrollPosition(c[t]);
                     });
                     return () => cancelAnimationFrame(e);
-                }, u);
-        }, [e, n, f, c, r, u]);
+                }, l);
+        }, [e, t, d, u, n, l]);
     };
-n.Z = f;

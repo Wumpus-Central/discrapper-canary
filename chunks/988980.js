@@ -1,19 +1,14 @@
-r.d(n, {
-    Z: function () {
-        return s;
-    },
-    q: function () {
-        return l;
-    }
+n.d(t, {
+    Z: () => s,
+    q: () => o
 });
-var i = r(192379),
-    a = r(812206),
-    o = r(701488);
+var i = n(192379),
+    r = n(812206),
+    a = n(701488);
 function s(e) {
-    return i.useMemo(() => l(e), [e]);
+    return i.useMemo(() => o(e), [e]);
 }
-function l(e) {
-    var n, r;
-    if (!(null != e && o.P9.includes(null != e ? e : ''))) return !0;
-    return null === (r = a.Z.getApplication(e)) || void 0 === r ? void 0 : null === (n = r.embeddedActivityConfig) || void 0 === n ? void 0 : n.legacy_responsive_aspect_ratio;
+function o(e) {
+    var t, n;
+    return !(null != e && a.P9.includes(null != e ? e : '')) || (null === (n = r.Z.getApplication(e)) || void 0 === n ? void 0 : null === (t = n.embeddedActivityConfig) || void 0 === t ? void 0 : t.legacy_responsive_aspect_ratio);
 }

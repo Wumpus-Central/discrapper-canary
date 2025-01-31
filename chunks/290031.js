@@ -1,19 +1,11 @@
-r.d(n, {
-    Hd: function () {
-        return l;
-    },
-    OW: function () {
-        return a;
-    },
-    fR: function () {
-        return s;
-    },
-    sg: function () {
-        return o;
-    }
+n.d(t, {
+    Hd: () => o,
+    OW: () => r,
+    fR: () => s,
+    sg: () => a
 });
-var i = r(818083);
-let a = (0, i.B)({
+var i = n(818083);
+let r = (0, i.B)({
         kind: 'user',
         id: '2024-03_nitro_tenure_reward_card',
         label: 'Nitro Tenure Reward Card',
@@ -26,7 +18,7 @@ let a = (0, i.B)({
             }
         ]
     }),
-    o = (0, i.B)({
+    a = (0, i.B)({
         kind: 'user',
         id: '2024-02_nitro_tenure_rewards',
         label: 'Nitro Tenure Reward Experiment',
@@ -52,7 +44,7 @@ let a = (0, i.B)({
             }
         ]
     }),
-    l = (0, i.B)({
+    o = (0, i.B)({
         kind: 'user',
         id: '2024-11_nitro_tenure_rewards_collectible',
         label: 'Nitro Tenure Reward Collectible',

@@ -1,18 +1,14 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-});
+n.d(t, { Z: () => s });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(388032),
-    a = n(873970);
-function o(e) {
+var l = n(481060),
+    a = n(388032),
+    r = n(873970);
+function s(e) {
     let { message: t } = e;
-    return (0, i.jsxs)(r.Clickable, {
+    return (0, i.jsxs)(l.P3F, {
         onClick: () => {
-            (0, r.openModalLazy)(async () => {
+            (0, l.ZDy)(async () => {
                 let { default: e } = await n.e('14021').then(n.bind(n, 910673));
                 return (n) =>
                     (0, i.jsx)(e, {
@@ -22,16 +18,16 @@ function o(e) {
                     });
             });
         },
-        className: a.accessory,
+        className: r.accessory,
         children: [
-            (0, i.jsx)(r.CircleInformationIcon, {
+            (0, i.jsx)(l.d3s, {
                 size: 'xs',
                 color: 'currentColor'
             }),
-            (0, i.jsx)(r.Text, {
+            (0, i.jsx)(l.Text, {
                 variant: 'text-xs/normal',
-                className: a.accessoryText,
-                children: l.intl.string(l.t['2aXnfX'])
+                className: r.accessoryText,
+                children: a.intl.string(a.t['2aXnfX'])
             })
         ]
     });

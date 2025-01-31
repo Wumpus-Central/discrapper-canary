@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return h;
-    }
-});
+n.d(t, { Z: () => h });
 var i = n(200651),
     r = n(192379),
     l = n(120356),
@@ -17,9 +13,9 @@ function h(e) {
     let { guild: t } = e,
         l = t.verificationLevel,
         h = r.useMemo(() => (0, o.I9)(l), [l]);
-    return (0, i.jsxs)(a.Clickable, {
+    return (0, i.jsxs)(a.P3F, {
         onClick: () =>
-            (0, a.openModalLazy)(async () => {
+            (0, a.ZDy)(async () => {
                 let { default: e } = await n.e('72458').then(n.bind(n, 694278));
                 return (n) =>
                     (0, i.jsx)(e, {
@@ -33,7 +29,7 @@ function h(e) {
             (0, i.jsxs)('div', {
                 className: m.itemContent,
                 children: [
-                    (0, i.jsx)(a.Heading, {
+                    (0, i.jsx)(a.X6q, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
                         children: u.intl.string(u.t.DpRdYG)
@@ -51,13 +47,13 @@ function h(e) {
                             className: m.valuePill,
                             children: [
                                 l === d.sFg.VERY_HIGH
-                                    ? (0, i.jsx)(a.MobilePhoneIcon, {
+                                    ? (0, i.jsx)(a.AtH, {
                                           size: 'custom',
                                           color: 'currentColor',
                                           width: 16,
                                           height: 16
                                       })
-                                    : (0, i.jsx)(a.EnvelopeIcon, {
+                                    : (0, i.jsx)(a._XJ, {
                                           size: 'custom',
                                           color: 'currentColor',
                                           width: 16,

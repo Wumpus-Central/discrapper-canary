@@ -1,21 +1,17 @@
-t.d(e, {
-    Z: function () {
-        return o;
-    }
-});
-var i = t(200651);
-t(192379);
-var r = t(481060),
-    l = t(493683),
-    u = t(592125),
-    a = t(388032);
-function o(n, e) {
-    let t = u.Z.getChannel(n);
-    return null == t || t.isMultiUserDM()
+e.d(t, { Z: () => d });
+var i = e(200651);
+e(192379);
+var l = e(481060),
+    r = e(493683),
+    a = e(592125),
+    s = e(388032);
+function d(n, t) {
+    let e = a.Z.getChannel(n);
+    return null == e || e.isMultiUserDM()
         ? null
-        : (0, i.jsx)(r.MenuItem, {
+        : (0, i.jsx)(l.sNh, {
               id: 'close-dm',
-              label: a.intl.string(a.t.jsvgc3),
-              action: () => l.Z.closePrivateChannel(n, e)
+              label: s.intl.string(s.t.jsvgc3),
+              action: () => r.Z.closePrivateChannel(n, t)
           });
 }

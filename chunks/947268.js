@@ -1,9 +1,8 @@
 var n,
     i = r(114912),
     o = 'Unknown',
-    a = { 'Mac OS': 'Mac OS X' },
-    u = new i().getResult(),
-    s = (function (t) {
+    a = new i().getResult(),
+    u = (function (t) {
         if (!t)
             return {
                 major: '',
@@ -14,19 +13,19 @@ var n,
             major: e[0],
             minor: e[1]
         };
-    })(u.browser.version);
-var c = {
-    browserArchitecture: u.cpu.architecture || o,
-    browserFullVersion: u.browser.version || o,
-    browserMinorVersion: s.minor || o,
-    browserName: u.browser.name || o,
-    browserVersion: u.browser.major || o,
-    deviceName: u.device.model || o,
-    engineName: u.engine.name || o,
-    engineVersion: u.engine.version || o,
-    platformArchitecture: u.cpu.architecture || o,
-    platformName: a[(n = u.os.name)] || n || o,
-    platformVersion: u.os.version || o,
-    platformFullVersion: u.os.version || o
-};
-t.exports = c;
+    })(a.browser.version),
+    s = {
+        browserArchitecture: a.cpu.architecture || o,
+        browserFullVersion: a.browser.version || o,
+        browserMinorVersion: u.minor || o,
+        browserName: a.browser.name || o,
+        browserVersion: a.browser.major || o,
+        deviceName: a.device.model || o,
+        engineName: a.engine.name || o,
+        engineVersion: a.engine.version || o,
+        platformArchitecture: a.cpu.architecture || o,
+        platformName: { 'Mac OS': 'Mac OS X' }[(n = a.os.name)] || n || o,
+        platformVersion: a.os.version || o,
+        platformFullVersion: a.os.version || o
+    };
+t.exports = s;

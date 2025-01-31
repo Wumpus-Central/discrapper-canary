@@ -1,57 +1,51 @@
-r.d(n, {
-    _7: function () {
-        return d;
-    },
-    _b: function () {
-        return f;
-    },
-    pV: function () {
-        return c;
-    }
+n.d(t, {
+    _7: () => c,
+    _b: () => d,
+    pV: () => u
 });
-var i = r(544891),
-    a = r(570140),
-    o = r(881052),
-    s = r(463031),
-    l = r(981631);
-let u = 900000,
-    c = async (e) => {
-        let { guildId: n, leaderboardId: r, intervalOffset: a = 0, force: s = !1 } = e;
+var i = n(544891),
+    r = n(570140),
+    a = n(881052),
+    s = n(463031),
+    o = n(981631);
+let l = 900000,
+    u = async (e) => {
+        let { guildId: t, leaderboardId: n, intervalOffset: r = 0, force: s = !1 } = e;
         try {
-            var c;
+            var u;
             let e = (
                     await i.tn.get({
-                        url: l.ANM.GUILD_LEADERBOARD(n, r),
+                        url: o.ANM.GUILD_LEADERBOARD(t, n),
                         query: {
-                            interval_offset: a,
+                            interval_offset: r,
                             cached: !s
                         },
                         rejectWithError: !1
                     })
                 ).body,
-                o = null !== (c = e.wait_ms_until_next_fetch) && void 0 !== c ? c : u;
-            return null != o && (e.expires_at = Date.now() + o), e;
+                a = null !== (u = e.wait_ms_until_next_fetch) && void 0 !== u ? u : l;
+            return null != a && (e.expires_at = Date.now() + a), e;
         } catch (e) {
-            throw new o.Hx(e);
+            throw new a.Hx(e);
         }
     },
-    d = async (e) => {
-        let { riotConnectionId: n, lolConnectionId: r, onlyUpdateIfStale: u } = e;
+    c = async (e) => {
+        let { riotConnectionId: t, lolConnectionId: n, onlyUpdateIfStale: l } = e;
         try {
             let e = (
                 await i.tn.post({
-                    url: l.ANM.UPDATE_MY_LOL_LEADERBOARD(),
+                    url: o.ANM.UPDATE_MY_LOL_LEADERBOARD(),
                     body: {
-                        riot_connection_id: n,
-                        lol_connection_id: r,
-                        only_update_if_stale: u
+                        riot_connection_id: t,
+                        lol_connection_id: n,
+                        only_update_if_stale: l
                     },
                     rejectWithError: !1
                 })
             ).body;
             return (
                 null != e.update_enqueued_timestamp &&
-                    a.Z.dispatch({
+                    r.Z.dispatch({
                         type: 'SET_USER_LEADERBOARD_LAST_UPDATE_REQUESTED',
                         leaderboardId: s.z,
                         lastUpdateRequested: e.update_enqueued_timestamp
@@ -59,24 +53,24 @@ let u = 900000,
                 e
             );
         } catch (e) {
-            throw new o.Hx(e);
+            throw new a.Hx(e);
         }
     },
-    f = async (e) => {
-        let { guildId: n, leaderboardId: r, sortByStatisticId: a, sortDesc: s, showWinnerCrown: u } = e;
+    d = async (e) => {
+        let { guildId: t, leaderboardId: n, sortByStatisticId: r, sortDesc: s, showWinnerCrown: l } = e;
         try {
             return (
                 await i.tn.put({
-                    url: l.ANM.GUILD_LEADERBOARD_SETTINGS(n, r),
+                    url: o.ANM.GUILD_LEADERBOARD_SETTINGS(t, n),
                     body: {
-                        sort_by_statistic_id: a,
+                        sort_by_statistic_id: r,
                         sort_desc: s,
-                        show_winner_crown: u
+                        show_winner_crown: l
                     },
                     rejectWithError: !1
                 })
             ).body;
         } catch (e) {
-            throw new o.Hx(e);
+            throw new a.Hx(e);
         }
     };

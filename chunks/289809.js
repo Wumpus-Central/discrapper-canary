@@ -1,36 +1,32 @@
-r.d(n, {
-    Z: function () {
-        return u;
-    }
-});
-var i = r(200651),
-    a = r(192379),
-    o = r(481060),
-    s = r(454585),
-    l = r(992516);
-function u(e) {
+n.d(t, { Z: () => l });
+var i = n(200651),
+    r = n(192379),
+    a = n(481060),
+    s = n(454585),
+    o = n(992516);
+function l(e) {
     let {
             element: {
-                data: { header: n, body: r, is_localized: u }
+                data: { header: t, body: n, is_localized: l }
             }
         } = e,
-        c = a.useRef(s.Z.reactParserFor(s.Z.defaultRules));
-    return u && (null != n || null != r)
+        u = r.useRef(s.Z.reactParserFor(s.Z.defaultRules));
+    return l && (null != t || null != n)
         ? (0, i.jsxs)('div', {
-              className: l.container,
+              className: o.container,
               children: [
-                  null != n &&
-                      (0, i.jsx)(o.Heading, {
+                  null != t &&
+                      (0, i.jsx)(a.X6q, {
                           variant: 'heading-sm/semibold',
                           color: 'header-secondary',
-                          className: l.header,
-                          children: n
+                          className: o.header,
+                          children: t
                       }),
-                  null != r &&
-                      (0, i.jsx)(o.Text, {
+                  null != n &&
+                      (0, i.jsx)(a.Text, {
                           variant: 'text-sm/normal',
-                          className: l.bodyText,
-                          children: c.current(r)
+                          className: o.bodyText,
+                          children: u.current(n)
                       })
               ]
           })

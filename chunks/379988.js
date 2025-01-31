@@ -1,11 +1,12 @@
-e.exports = {
-    emptyOption: 'emptyOption_fff78a',
-    emptyOptionActive: 'emptyOptionActive_fff78a',
-    clickContainer: 'clickContainer_fff78a',
-    commandOptionContainer: 'commandOptionContainer_fff78a',
-    optionName: 'optionName_fff78a',
-    optionNameActive: 'optionNameActive_fff78a',
-    optionIcon: 'optionIcon_fff78a',
-    optionHelp: 'optionHelp_fff78a',
-    fileInput: 'fileInput_fff78a'
+var i = {
+    emptyOption: 'emptyOption_b088b0',
+    emptyOptionActive: 'emptyOptionActive_b088b0',
+    clickContainer: 'clickContainer_b088b0',
+    commandOptionContainer: 'commandOptionContainer_b088b0',
+    optionName: 'optionName_b088b0',
+    optionNameActive: 'optionNameActive_b088b0',
+    optionIcon: 'optionIcon_b088b0',
+    optionHelp: 'optionHelp_b088b0',
+    fileInput: 'fileInput_b088b0'
 };
+e.exports = i;

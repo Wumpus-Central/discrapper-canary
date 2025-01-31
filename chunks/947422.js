@@ -1,81 +1,76 @@
-n.r(e),
-    n.d(e, {
-        default: function () {
-            return c;
-        }
-    });
-var a = n(200651);
+n.d(e, { default: () => d });
+var l = n(200651);
 n(192379);
 var i = n(481060),
-    l = n(313201),
-    o = n(388032),
-    r = n(864183),
-    s = n(298860);
-let d = (t) => {
-    let { text: e, icon: n, foreground: l } = t;
-    return (0, a.jsxs)('div', {
-        className: r.bulletContainer,
+    s = n(313201),
+    r = n(388032),
+    o = n(864183),
+    a = n(298860);
+let c = (t) => {
+    let { text: e, icon: n, foreground: s } = t;
+    return (0, l.jsxs)('div', {
+        className: o.bulletContainer,
         children: [
-            (0, a.jsx)('div', {
-                className: r.iconContainer,
-                children: (0, a.jsx)(n, {
-                    color: null != l ? l : 'currentColor',
-                    className: r.bulletIcon,
+            (0, l.jsx)('div', {
+                className: o.iconContainer,
+                children: (0, l.jsx)(n, {
+                    color: null != s ? s : 'currentColor',
+                    className: o.bulletIcon,
                     size: 'custom',
                     height: 40,
                     width: 40
                 })
             }),
-            (0, a.jsx)(i.Text, {
+            (0, l.jsx)(i.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
-                className: r.bulletText,
+                className: o.bulletText,
                 children: e
             })
         ]
     });
 };
-function c(t) {
-    let { transitionState: e, onClose: n, ...c } = t,
-        u = (0, l.Dt)();
-    return (0, a.jsx)(i.ModalRoot, {
+function d(t) {
+    let { transitionState: e, onClose: n, ...d } = t,
+        u = (0, s.Dt)();
+    return (0, l.jsx)(i.Y0X, {
         transitionState: e,
         'aria-labelledby': u,
-        ...c,
-        size: i.ModalSize.SMALL,
-        children: (0, a.jsxs)('div', {
-            className: r.content,
+        ...d,
+        size: i.CgR.SMALL,
+        children: (0, l.jsxs)('div', {
+            className: o.content,
             children: [
-                (0, a.jsx)('img', {
-                    src: s,
-                    alt: o.intl.string(o.t['5DRw+/']),
-                    className: r.illustration
+                (0, l.jsx)('img', {
+                    src: a,
+                    alt: r.intl.string(r.t['5DRw+/']),
+                    className: o.illustration
                 }),
-                (0, a.jsx)(i.Heading, {
+                (0, l.jsx)(i.X6q, {
                     id: u,
                     variant: 'heading-xl/semibold',
                     color: 'header-primary',
-                    className: r.headerTitle,
-                    children: o.intl.string(o.t.UVuXCg)
+                    className: o.headerTitle,
+                    children: r.intl.string(r.t.UVuXCg)
                 }),
-                (0, a.jsx)(d, {
-                    text: o.intl.string(o.t.sBDfo6),
-                    icon: i.MicrophoneSlashIcon,
-                    foreground: r.red
+                (0, l.jsx)(c, {
+                    text: r.intl.string(r.t.sBDfo6),
+                    icon: i.nRN,
+                    foreground: o.red
                 }),
-                (0, a.jsx)(d, {
-                    text: o.intl.string(o.t.x58YtL),
-                    icon: i.PhoneHangUpIcon
+                (0, l.jsx)(c, {
+                    text: r.intl.string(r.t.x58YtL),
+                    icon: i.gkL
                 }),
-                (0, a.jsx)(d, {
-                    text: o.intl.string(o.t.XtVqlZ),
-                    icon: i.HandRequestSpeakIcon
+                (0, l.jsx)(c, {
+                    text: r.intl.string(r.t.XtVqlZ),
+                    icon: i.V9
                 }),
-                (0, a.jsx)(i.Button, {
-                    color: i.Button.Colors.BRAND,
-                    className: r.button,
+                (0, l.jsx)(i.zxk, {
+                    color: i.zxk.Colors.BRAND,
+                    className: o.button,
                     onClick: n,
-                    children: o.intl.string(o.t.obLqZ2)
+                    children: r.intl.string(r.t.obLqZ2)
                 })
             ]
         })

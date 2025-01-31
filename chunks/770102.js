@@ -1,17 +1,13 @@
-r.d(n, {
-    $: function () {
-        return l;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(171573);
-function l(e) {
-    let { className: n, style: r } = e;
+n.d(t, { $: () => o });
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(171573);
+function o(e) {
+    let { className: t, style: n } = e;
     return (0, i.jsx)('div', {
-        className: o()(s.divider, n),
-        style: r
+        className: a()(s.divider, t),
+        style: n
     });
 }

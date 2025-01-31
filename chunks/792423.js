@@ -1,14 +1,9 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => d }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    s = n(481060),
-    a = n(401190),
-    l = n(388032),
+    s = n(192379),
+    r = n(481060),
+    l = n(401190),
+    a = n(388032),
     o = n(255701);
 function c(e, t, n) {
     return (
@@ -23,13 +18,13 @@ function c(e, t, n) {
         e
     );
 }
-class d extends r.PureComponent {
+class d extends s.PureComponent {
     renderErrorMessage() {
         let { hasError: e } = this.state;
         return e
             ? (0, i.jsx)('div', {
                   className: o.error,
-                  children: l.intl.string(l.t.UUcECA)
+                  children: a.intl.string(a.t.UUcECA)
               })
             : null;
     }
@@ -41,18 +36,18 @@ class d extends r.PureComponent {
                   className: o.leaveActionWrapper,
                   children: [
                       this.renderErrorMessage(),
-                      (0, i.jsxs)(s.Text, {
+                      (0, i.jsxs)(r.Text, {
                           variant: 'text-sm/normal',
                           children: [
-                              l.intl.string(l.t.ziWmcH),
-                              (0, i.jsx)(s.Button, {
+                              a.intl.string(a.t.ziWmcH),
+                              (0, i.jsx)(r.zxk, {
                                   className: o.leaveButton,
-                                  color: s.Button.Colors.LINK,
-                                  look: s.Button.Looks.LINK,
+                                  color: r.zxk.Colors.LINK,
+                                  look: r.zxk.Looks.LINK,
                                   onClick: this.handleLeaveHypeSquadClick,
-                                  size: s.Button.Sizes.NONE,
+                                  size: r.zxk.Sizes.NONE,
                                   submitting: e,
-                                  children: l.intl.string(l.t['WH+dho'])
+                                  children: a.intl.string(a.t['WH+dho'])
                               })
                           ]
                       })
@@ -71,7 +66,7 @@ class d extends r.PureComponent {
             }),
             c(this, 'handleLeaveHypeSquadClick', () => {
                 this.setState({ isRequestPending: !0 }, () => {
-                    a.Z.leaveHypeSquadOnline()
+                    l.Z.leaveHypeSquadOnline()
                         .then(() => {
                             this.setState({ isRequestPending: !1 });
                         })

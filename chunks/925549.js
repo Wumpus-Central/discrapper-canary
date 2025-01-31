@@ -1,31 +1,32 @@
-var i = r(570140);
-n.Z = {
-    updateChannelDimensions(e, n, r, a, o) {
+n.d(t, { Z: () => r });
+var i = n(570140);
+let r = {
+    updateChannelDimensions(e, t, n, r, a) {
         i.Z.wait(() => {
             i.Z.dispatch({
                 type: 'UPDATE_CHANNEL_DIMENSIONS',
                 channelId: e,
-                scrollTop: n,
-                scrollHeight: r,
-                offsetHeight: a
+                scrollTop: t,
+                scrollHeight: n,
+                offsetHeight: r
             }),
-                null != o && o();
+                null != a && a();
         });
     },
-    updateChannelListScroll(e, n) {
-        let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+    updateChannelListScroll(e, t) {
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
         i.Z.dispatch({
             type: 'UPDATE_CHANNEL_LIST_DIMENSIONS',
             guildId: e,
-            scrollTop: n,
-            channelIds: r
+            scrollTop: t,
+            channelIds: n
         });
     },
-    channelListScrollTo(e, n) {
+    channelListScrollTo(e, t) {
         i.Z.dispatch({
             type: 'UPDATE_CHANNEL_LIST_DIMENSIONS',
             guildId: e,
-            scrollTo: n,
+            scrollTo: t,
             channelIds: []
         });
     },
@@ -37,8 +38,8 @@ n.Z = {
             channelIds: []
         });
     },
-    clearChannelDimensions(e, n) {
-        this.updateChannelDimensions(e, null, null, null, n);
+    clearChannelDimensions(e, t) {
+        this.updateChannelDimensions(e, null, null, null, t);
     },
     updateGuildListScrollTo(e) {
         i.Z.dispatch({

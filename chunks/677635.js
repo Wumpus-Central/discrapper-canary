@@ -1,9 +1,10 @@
-e.exports = {
-    container: 'container_bb37e1',
-    soundIcon: 'soundIcon_bb37e1',
-    textSelected: 'textSelected_bb37e1',
-    sound: 'sound_bb37e1',
-    text: 'text_bb37e1',
-    customGiftHeader: 'customGiftHeader_bb37e1',
-    searchAndSound: 'searchAndSound_bb37e1'
+var i = {
+    container: 'container__8564e',
+    soundIcon: 'soundIcon__8564e',
+    textSelected: 'textSelected__8564e',
+    sound: 'sound__8564e',
+    text: 'text__8564e',
+    customGiftHeader: 'customGiftHeader__8564e',
+    searchAndSound: 'searchAndSound__8564e'
 };
+e.exports = i;

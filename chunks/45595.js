@@ -1,14 +1,10 @@
 n.d(t, {
-    H: function () {
-        return c;
-    },
-    Z: function () {
-        return p;
-    }
+    H: () => c,
+    Z: () => p
 }),
     n(47120);
-var i = n(200651),
-    l = n(192379),
+var l = n(200651),
+    i = n(192379),
     s = n(120356),
     r = n.n(s),
     a = n(995295),
@@ -17,23 +13,23 @@ var i = n(200651),
     d = n(626325);
 let u = (0, o.Z)();
 function c() {
-    return (0, i.jsx)('div', {
+    return (0, l.jsx)('div', {
         id: u,
         className: d.noticeBar
     });
 }
 function p(e) {
     let { show: t, children: n } = e,
-        [i, s] = l.useState(!1),
-        [o, c] = l.useState(!1),
+        [l, s] = i.useState(!1),
+        [o, c] = i.useState(!1),
         p = (0, C.Z)(t);
-    !t || !1 !== p || i || o ? !t && p && !o && !i && (c(!0), setTimeout(() => c(!1), 500)) : (s(!0), setTimeout(() => s(!1), 500));
+    !t || !1 !== p || l || o ? t || !p || o || l || (c(!0), setTimeout(() => c(!1), 500)) : (s(!0), setTimeout(() => s(!1), 500));
     let x = window.document.getElementById(u);
-    return null != n && l.isValidElement(n) && null != x && (t || i || o)
+    return null != n && i.isValidElement(n) && null != x && (t || l || o)
         ? a.createPortal(
-              l.cloneElement(n, {
+              i.cloneElement(n, {
                   className: r()({
-                      [d.slideIn]: i,
+                      [d.slideIn]: l,
                       [d.slideOut]: o
                   })
               }),

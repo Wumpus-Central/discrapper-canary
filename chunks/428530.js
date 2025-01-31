@@ -1,33 +1,28 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => p }), n(47120);
 var a = n(200651);
 n(192379);
-var r = n(189223),
-    l = n(692547),
+var l = n(189223),
+    r = n(692547),
     i = n(410030),
     o = n(95398),
     s = n(981631),
     c = n(941469);
 let d = {
-    base00: l.Z.colors.BACKGROUND_SECONDARY.css,
-    base03: l.Z.colors.TEXT_WARNING.css,
-    base07: l.Z.colors.TEXT_NORMAL.css,
-    base08: l.Z.colors.TEXT_MUTED.css,
-    base09: l.Z.colors.TEXT_POSITIVE.css,
-    base0B: l.Z.colors.TEXT_WARNING.css,
-    base0D: l.Z.colors.TEXT_BRAND.css
+    base00: r.Z.colors.BACKGROUND_SECONDARY.css,
+    base03: r.Z.colors.TEXT_WARNING.css,
+    base07: r.Z.colors.TEXT_NORMAL.css,
+    base08: r.Z.colors.TEXT_MUTED.css,
+    base09: r.Z.colors.TEXT_POSITIVE.css,
+    base0B: r.Z.colors.TEXT_WARNING.css,
+    base0D: r.Z.colors.TEXT_BRAND.css
 };
 function u(e) {
     let t = {};
     for (let [n, a] of Object.entries(e)) t[n] = a;
     return t;
 }
-let h = u(d),
-    m = u(d);
+let m = u(d),
+    h = u(d);
 function x(e) {
     return s.Jn9.test(e)
         ? (0, a.jsx)(o.Z, {
@@ -36,14 +31,14 @@ function x(e) {
           })
         : e;
 }
-function f(e) {
+function p(e) {
     let { data: t } = e,
         n = (0, i.ZP)();
     return (0, a.jsx)('div', {
         className: c.inspectorWrapper,
-        children: (0, a.jsx)(r.L, {
+        children: (0, a.jsx)(l.L, {
             data: t,
-            theme: 'light' === n ? m : h,
+            theme: 'light' === n ? h : m,
             invertTheme: !1,
             valueRenderer: x,
             shouldExpandNode: () => !0

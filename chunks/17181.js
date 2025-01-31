@@ -1,59 +1,49 @@
-r.r(n),
-    r.d(n, {
-        default: function () {
-            return E;
-        },
-        discardOnboardingPromise: function () {
-            return g;
-        },
-        isOnboardingActiveForGuild: function () {
-            return y;
-        },
-        openAndWaitForOnboarding: function () {
-            return v;
-        }
-    });
-var i = r(512722),
-    a = r.n(i),
-    o = r(481060),
-    s = r(749210),
-    l = r(703656),
-    u = r(549817),
-    c = r(745752),
-    d = r(819553),
-    f = r(679240),
-    p = r(981631),
-    h = r(176505);
-let _ = {};
+n.d(t, {
+    EI: () => m,
+    default: () => g,
+    hz: () => v
+});
+var i = n(512722),
+    r = n.n(i),
+    a = n(481060),
+    s = n(749210),
+    o = n(703656),
+    l = n(549817),
+    u = n(745752),
+    c = n(819553),
+    d = n(679240),
+    f = n(981631),
+    _ = n(176505);
+let p = {};
+function h(e) {
+    var t;
+    null === (t = p[e]) || void 0 === t || t.call(p), (p[e] = null);
+}
 function m(e) {
-    var n;
-    null === (n = _[e]) || void 0 === n || n.call(_), (_[e] = null);
+    p[e] = null;
 }
-function g(e) {
-    _[e] = null;
-}
-async function E(e) {
-    let { guildId: n, returnChannelId: r, isPreview: i = !1 } = e;
-    (0, o.closeAllModals)(), a()(null == _[n], 'should not double-join guilds');
-    let u = await (0, s.V)(n);
-    if (u.hasFeature(p.oNc.COMMUNITY)) {
-        if (i) (0, c.I1)(n);
+async function g(e) {
+    let { guildId: t, returnChannelId: n, isPreview: i = !1 } = e;
+    (0, a.pTH)(), r()(null == p[t], 'should not double-join guilds');
+    let l = await (0, s.V)(t);
+    if (l.hasFeature(f.oNc.COMMUNITY)) {
+        if (i) (0, u.I1)(t);
         else {
-            if (!u.hasFeature(p.oNc.GUILD_ONBOARDING)) return;
-            await (0, c.rK)(n);
+            if (!l.hasFeature(f.oNc.GUILD_ONBOARDING)) return;
+            await (0, u.rK)(t);
         }
-        d.ZP.shouldShowOnboarding(n) && (await v(n), null != r && (0, l.uL)(p.Z5c.CHANNEL(n, r)));
+        c.ZP.shouldShowOnboarding(t) && (await E(t), null != n && (0, o.uL)(f.Z5c.CHANNEL(t, n)));
     }
 }
-function v(e) {
-    return new Promise((n) => {
-        (_[e] = n),
-            (0, f.x)(e).then(() => {
-                m(e), u.Z.finishOnboarding(e);
+function E(e) {
+    return new Promise((t) => {
+        (p[e] = t),
+            (0, d.x)(e).then(() => {
+                h(e), l.Z.finishOnboarding(e);
             }),
-            (0, l.uL)(p.Z5c.CHANNEL(e, h.oC.GUILD_ONBOARDING));
+            (0, o.uL)(f.Z5c.CHANNEL(e, _.oC.GUILD_ONBOARDING));
     });
 }
-function y(e) {
-    return null != _[e];
+function v(e) {
+    return null != p[e];
 }

@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
+n.d(t, { Z: () => u });
 var i = n(200651);
 n(192379);
 var r = n(481060),
@@ -20,8 +16,8 @@ function u(e) {
     if (null == h || m === a.Eu4.TIER_3 || n < g) return null;
     let x = u
         ? {
-              color: r.ButtonColors.GREEN,
-              look: r.ButtonLooks.FILLED,
+              color: r.Ttl.GREEN,
+              look: r.iLD.FILLED,
               text: c.intl.string(c.t.cYzxGh)
           }
         : void 0;

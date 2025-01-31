@@ -1,8 +1,4 @@
-n.d(t, {
-    M: function () {
-        return r;
-    }
-});
+n.d(t, { M: () => l });
 let i = (0, n(818083).B)({
     kind: 'user',
     id: '2023-10_social_proofing_file_size',
@@ -16,6 +12,6 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function r(e) {
+function l(e) {
     return i.getCurrentConfig({ location: e }).enabled;
 }

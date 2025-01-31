@@ -1,9 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return x;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => x }), n(47120);
 var i = n(200651);
 n(192379);
 var r = n(481060),
@@ -20,10 +15,10 @@ var r = n(481060),
 function x() {
     let { editStateId: e, guildId: t } = (0, s.N)(),
         [, x] = a.p9(e, t),
-        [p, f] = a.Ek(e, t),
+        [p, _] = a.Ek(e, t),
         C = a.qs(e, t);
-    function v() {
-        (0, r.openModalLazy)(async () => {
+    function f() {
+        (0, r.ZDy)(async () => {
             let { default: e } = await n.e('22942').then(n.bind(n, 660727));
             return (n) =>
                 (0, i.jsx)(e, {
@@ -42,31 +37,31 @@ function x() {
                 });
         });
     }
-    let I = (0, l.mY)();
+    let v = (0, l.mY)();
     return (0, i.jsxs)(o.Z, {
         title: m.intl.string(m.t['Ah+sQ0']),
         description: m.intl.string(m.t.ixbWiI),
         children: [
-            (0, i.jsx)(r.FormSection, {
+            (0, i.jsx)(r.hjN, {
                 title: m.intl.string(m.t['6OUqDQ']),
-                disabled: I,
+                disabled: v,
                 children: (0, i.jsx)(d.Z, {
                     value: p,
-                    onChange: f,
-                    disabled: I
+                    onChange: _,
+                    disabled: v
                 })
             }),
-            (0, i.jsx)(r.Spacer, { size: 24 }),
+            (0, i.jsx)(r.LZC, { size: 24 }),
             (0, i.jsx)('div', {
                 className: h.__invalid_iconSection,
-                children: (0, i.jsxs)(r.FormSection, {
+                children: (0, i.jsxs)(r.hjN, {
                     title: m.intl.string(m.t['zn8/AQ']),
-                    disabled: I,
+                    disabled: v,
                     children: [
-                        (0, i.jsx)(r.FormText, {
-                            type: r.FormText.Types.DESCRIPTION,
+                        (0, i.jsx)(r.R94, {
+                            type: r.R94.Types.DESCRIPTION,
                             className: h.formDescription,
-                            disabled: I,
+                            disabled: v,
                             children: m.intl.string(m.t.AqHUra)
                         }),
                         (0, i.jsxs)('div', {
@@ -75,15 +70,15 @@ function x() {
                                 (0, i.jsx)(u.Z, {
                                     role: C,
                                     'aria-label': m.intl.string(m.t.mD1oGB),
-                                    onClick: v,
-                                    disabled: I
+                                    onClick: f,
+                                    disabled: v
                                 }),
-                                (0, i.jsx)(r.Button, {
-                                    look: r.Button.Looks.OUTLINED,
-                                    color: r.Button.Colors.PRIMARY,
+                                (0, i.jsx)(r.zxk, {
+                                    look: r.zxk.Looks.OUTLINED,
+                                    color: r.zxk.Colors.PRIMARY,
                                     className: h.__invalid_imageUploadButtonCTA,
-                                    onClick: v,
-                                    disabled: I,
+                                    onClick: f,
+                                    disabled: v,
                                     children: m.intl.string(m.t.mD1oGB)
                                 })
                             ]
@@ -91,8 +86,8 @@ function x() {
                     ]
                 })
             }),
-            (0, i.jsx)(r.Spacer, { size: 24 }),
-            (0, i.jsx)(r.FocusBlock, {
+            (0, i.jsx)(r.LZC, { size: 24 }),
+            (0, i.jsx)(r.Rny, {
                 children: (0, i.jsxs)('div', {
                     className: g.previewContainer,
                     'aria-hidden': !0,

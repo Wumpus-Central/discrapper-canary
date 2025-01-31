@@ -1,4 +1,5 @@
-e.exports = {
-    containerTop: 'containerTop_b18d5c',
-    containerBottom: 'containerBottom_b18d5c'
+var i = {
+    containerTop: 'containerTop__45edc',
+    containerBottom: 'containerBottom__45edc'
 };
+e.exports = i;

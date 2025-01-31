@@ -1,66 +1,62 @@
-r.d(n, {
-    t: function () {
-        return u;
-    }
-});
-var i = r(192379),
-    a = r(611144),
-    o = r(2052),
-    s = r(691251),
-    l = r(98528);
-let u = (e) => {
-    let { columnCounts: n, stickersGrid: r, stickersListRef: u, store: c, gridNavigatorId: d, setInspectedStickerPosition: f, onGridItemSelect: p } = e,
-        h = (0, o.O)(),
-        _ = i.useCallback(
+n.d(t, { t: () => l });
+var i = n(192379),
+    r = n(611144),
+    a = n(2052),
+    s = n(691251),
+    o = n(98528);
+let l = (e) => {
+    let { columnCounts: t, stickersGrid: n, stickersListRef: l, store: u, gridNavigatorId: c, setInspectedStickerPosition: d, onGridItemSelect: f } = e,
+        _ = (0, a.O)(),
+        p = i.useCallback(
             (e) => {
-                p(e, h);
+                f(e, _);
             },
-            [p, h]
+            [f, _]
         ),
-        m = i.useCallback(
-            (e, n) => {
-                f(e, n, s.u.GRID_NAVIGATOR_EVENT);
+        h = i.useCallback(
+            (e, t) => {
+                d(e, t, s.u.GRID_NAVIGATOR_EVENT);
             },
-            [f]
+            [d]
         ),
         {
-            gridDispatch: g,
-            getItemProps: E,
-            getRowProps: v,
-            gridContainerProps: y,
-            handleGridContainerKeyDown: b,
+            gridDispatch: m,
+            getItemProps: g,
+            getRowProps: E,
+            gridContainerProps: v,
+            handleGridContainerKeyDown: y,
             isUsingKeyboardNavigation: I
-        } = (0, l.VO)({
-            columnCounts: n,
-            gridNavigatorId: d,
-            itemGrid: r,
-            itemList: u,
-            onGridNavigatorItemSelect: _,
-            onGridNavigatorPositionChange: m
+        } = (0, o.VO)({
+            columnCounts: t,
+            gridNavigatorId: c,
+            itemGrid: n,
+            itemList: l,
+            onGridNavigatorItemSelect: p,
+            onGridNavigatorPositionChange: h
         });
     return (
         i.useEffect(
             () =>
-                c.subscribe(
+                u.subscribe(
                     (e) => e.inspectedExpressionPosition,
                     (e) => {
                         if (null == e) return;
-                        let { columnIndex: n, rowIndex: r, source: i } = e;
+                        let { columnIndex: t, rowIndex: n, source: i } = e;
                         i !== s.u.GRID_NAVIGATOR_EVENT &&
-                            g({
-                                type: a.s.SET_FOCUSED_POSITION,
-                                x: n,
-                                y: r
+                            m({
+                                type: r.s.SET_FOCUSED_POSITION,
+                                x: t,
+                                y: n
                             });
                     }
                 ),
-            [g, c]
+            [m, u]
         ),
         {
-            getItemProps: E,
-            getRowProps: v,
-            gridContainerProps: y,
-            handleGridContainerKeyDown: b,
+            getItemProps: g,
+            getRowProps: E,
+            gridContainerProps: v,
+            handleGridContainerKeyDown: y,
             isUsingKeyboardNavigation: I
         }
     );

@@ -1,163 +1,162 @@
-var i = r(411104);
-var a = r(47120);
-var o = r(274616),
-    s = r(710845),
-    l = r(893988),
-    u = r(812967),
-    c = r(314897),
-    d = r(757266),
-    f = r(906467),
-    p = r(6132),
-    h = r(830168),
-    _ = r(358085),
-    m = r(591759),
-    g = r(998502),
-    E = r(981631);
-let v = new s.Z('Games'),
-    y = {},
-    b = 0,
-    I = null,
-    T = 250,
-    S = 120000,
-    A = 3600000;
-function C() {
-    return null != I
-        ? Promise.resolve(I)
-        : (0, _.isDesktop)()
-          ? g.ZP.ensureModule('discord_game_utils').then(() => {
-                let e = g.ZP.getGameUtils();
-                return null != e && null != e.findLaunchable ? ((I = e), e) : Promise.reject(Error('game utils not found'));
+n.d(t, { Z: () => O }), n(411104), n(47120);
+var i = n(274616),
+    r = n(710845),
+    a = n(893988),
+    s = n(812967),
+    o = n(314897),
+    l = n(757266),
+    u = n(906467),
+    c = n(6132),
+    d = n(830168),
+    f = n(358085),
+    _ = n(591759),
+    p = n(998502),
+    h = n(981631);
+let m = new r.Z('Games'),
+    g = {},
+    E = 0,
+    v = null,
+    y = 250,
+    I = 120000,
+    b = 3600000;
+function T() {
+    return null != v
+        ? Promise.resolve(v)
+        : (0, f.isDesktop)()
+          ? p.ZP.ensureModule('discord_game_utils').then(() => {
+                let e = p.ZP.getGameUtils();
+                return null != e && null != e.findLaunchable ? ((v = e), e) : Promise.reject(Error('game utils not found'));
             })
           : Promise.reject(Error('not desktop client'));
 }
-function N(e) {
-    let n = {
+function S(e) {
+    let t = {
             id: e.id,
             name: e.name,
             thirdPartySkus: e.thirdPartySkus,
-            executables: e.executables.filter((e) => e.os === (0, _.getPlatformName)()).map((e) => e.name)
+            executables: e.executables.filter((e) => e.os === (0, f.getPlatformName)()).map((e) => e.name)
         },
-        r = e.aliases.map((e) => ({
-            ...n,
+        n = e.aliases.map((e) => ({
+            ...t,
             name: e
         }));
-    return [n, ...r];
+    return [t, ...n];
 }
-function R(e) {
+function A(e) {
     return { id: e };
 }
-async function O(e) {
+async function N(e) {
     if (
-        (!Array.isArray(e) && (e = [e]),
-        !f.Z.isDeveloper &&
+        (Array.isArray(e) || (e = [e]),
+        u.Z.isDeveloper ||
             (e = e.filter(
                 (e) =>
                     null == e.thirdPartySkus ||
                     -1 ===
                         e.thirdPartySkus.findIndex((e) => {
-                            let { distributor: n } = e;
-                            return n === E.GQo.BATTLENET;
+                            let { distributor: t } = e;
+                            return t === h.GQo.BATTLENET;
                         })
             )),
         0 === e.length)
     )
         throw Error('No remaining launchable queries');
-    let n = Date.now();
-    n > b && ((b = n + A), (y = {}));
-    let r = await C();
-    for (let n of e) {
-        let e = y[n.id];
+    let t = Date.now();
+    t > E && ((E = t + b), (g = {}));
+    let n = await T();
+    for (let t of e) {
+        let e = g[t.id];
         if (null != e) return e;
-        let i = await new Promise((e) => r.findLaunchable(n, e));
-        if (null != i) return (y[n.id] = i), i;
+        let i = await new Promise((e) => n.findLaunchable(t, e));
+        if (null != i) return (g[t.id] = i), i;
     }
     throw Error('could not find launchable');
 }
-function D(e, n, r) {
+function C(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
     if (e()) {
-        n();
+        t();
         return;
     }
     setTimeout(() => {
-        i * T <= S ? D(e, n, r, i + 1) : r();
-    }, T);
+        i * y <= I ? C(e, t, n, i + 1) : n();
+    }, y);
 }
-function L(e) {
+function R(e) {
     return (
-        v.info('launch', e),
-        new Promise((n, r) => {
-            null == m.Z.safeParseWithQuery(e.launchTarget) ? r(Error('Failed to parse launch target. '.concat(e.launchTarget))) : (window.open(e.launchTarget), n([]));
+        m.info('launch', e),
+        new Promise((t, n) => {
+            null == _.Z.safeParseWithQuery(e.launchTarget) ? n(Error('Failed to parse launch target. '.concat(e.launchTarget))) : (window.open(e.launchTarget), t([]));
         })
     );
 }
-n.Z = {
-    waitSubscribed: (e, n) => new Promise((r, i) => D(() => u.Z.isSubscribed(e, n), r, i)),
+let O = {
+    waitSubscribed: (e, t) => new Promise((n, i) => C(() => s.Z.isSubscribed(e, t), n, i)),
     waitConnected(e) {
-        return new Promise(D.bind(this, () => d.Z.isConnected(e)));
+        return new Promise(C.bind(this, () => l.Z.isConnected(e)));
     },
     isLaunchable: (e) =>
-        O(N(e))
+        N(S(e))
             .then((e) => null != e)
             .catch(() => !1),
-    launch: (e) => O(N(e)).then(L),
-    launchDispatchApplication(e, n, r, i, a) {
-        let { launchOptions: s, defaultLaunchOptionId: u, installPath: d, applicationId: f, branchId: _, buildId: m, shouldPatch: g } = e;
-        if (null == s || null == u || null == d) throw Error("Couldn't construct launchable for ".concat(e.applicationId));
-        null == a && (a = u);
-        let v = s[a];
-        if (null == v) throw Error("Couldn't construct launchable for ".concat(e.applicationId, '. No launch option.'));
-        return (0, o.o)([_])
+    launch: (e) => N(S(e)).then(R),
+    launchDispatchApplication(e, t, n, r, s) {
+        let { launchOptions: l, defaultLaunchOptionId: u, installPath: f, applicationId: _, branchId: p, buildId: m, shouldPatch: g } = e;
+        if (null == l || null == u || null == f) throw Error("Couldn't construct launchable for ".concat(e.applicationId));
+        null == s && (s = u);
+        let E = l[s];
+        if (null == E) throw Error("Couldn't construct launchable for ".concat(e.applicationId, '. No launch option.'));
+        return (0, i.o)([p])
             .then((e) => {
-                let n = e[0];
-                if (null == n) return Promise.reject(Error('branch is null'));
-                let { liveBuildId: r } = n;
-                if (g && r !== m) return Promise.reject(Error('live build id changed'));
+                let t = e[0];
+                if (null == t) return Promise.reject(Error('branch is null'));
+                let { liveBuildId: n } = t;
+                if (g && n !== m) return Promise.reject(Error('live build id changed'));
             })
-            .then(() => h.Z.runLaunchSetup(f, _))
+            .then(() => d.Z.runLaunchSetup(_, p))
             .then(() => {
-                let e = (0, l.Z)(d),
-                    a = {
-                        DISCORD_INSTANCE_ID: p.Z.getId().toString(),
-                        DISCORD_ACCESS_TOKEN: null != n ? n : '',
-                        DISCORD_CURRENT_LOCALE: r,
-                        DISCORD_CURRENT_BRANCH: i,
-                        DISCORD_STORAGE_PATH: E.SRg.ROOT_STORAGE_PATH(e, c.default.getId())
+                let e = (0, a.Z)(f),
+                    i = {
+                        DISCORD_INSTANCE_ID: c.Z.getId().toString(),
+                        DISCORD_ACCESS_TOKEN: null != t ? t : '',
+                        DISCORD_CURRENT_LOCALE: n,
+                        DISCORD_CURRENT_BRANCH: r,
+                        DISCORD_STORAGE_PATH: h.SRg.ROOT_STORAGE_PATH(e, o.default.getId())
                     };
-                return h.Z.launch(f, _, v.name, a);
+                return d.Z.launch(_, p, E.name, i);
             });
     },
     removeShortcuts: (e) =>
-        (0, _.isWindows)()
-            ? C().then((n) => {
-                  var r, i;
-                  return null !== (i = null === (r = n.removeShortcuts) || void 0 === r ? void 0 : r.call(n, e)) && void 0 !== i && i;
+        (0, f.isWindows)()
+            ? T().then((t) => {
+                  var n, i;
+                  return null !== (i = null === (n = t.removeShortcuts) || void 0 === n ? void 0 : n.call(t, e)) && void 0 !== i && i;
               })
             : Promise.resolve(!1),
-    createShortcuts(e, n, r, i, a) {
-        if (null == a || !(0, _.isWindows)()) return Promise.resolve(!1);
-        let o = 'discord:///library/'.concat(i, '/launch'),
-            s = ''.concat(a, '\\icon.ico');
-        return C().then((i) => {
-            var a, l;
-            return null !== (l = null === (a = i.createShortcuts) || void 0 === a ? void 0 : a.call(i, e, n, r, o, s)) && void 0 !== l && l;
+    createShortcuts(e, t, n, i, r) {
+        if (null == r || !(0, f.isWindows)()) return Promise.resolve(!1);
+        let a = 'discord:///library/'.concat(i, '/launch'),
+            s = ''.concat(r, '\\icon.ico');
+        return T().then((i) => {
+            var r, o;
+            return null !== (o = null === (r = i.createShortcuts) || void 0 === r ? void 0 : r.call(i, e, t, n, a, s)) && void 0 !== o && o;
         });
     },
     isGameLaunchable: (e) =>
-        O(R(e))
+        N(A(e))
             .then((e) => null != e)
             .catch(() => !1),
-    launchGame: (e) => (d.Z.isConnected(e) ? Promise.resolve() : O(R(e)).then(L)),
+    launchGame: (e) => (l.Z.isConnected(e) ? Promise.resolve() : N(A(e)).then(R)),
     isProtocolRegistered: (e) =>
-        C().then((n) => {
-            var r, i;
-            return null !== (i = null === (r = n.isProtocolSchemeRegistered) || void 0 === r ? void 0 : r.call(n, e)) && void 0 !== i && i;
+        T().then((t) => {
+            var n, i;
+            return null !== (i = null === (n = t.isProtocolSchemeRegistered) || void 0 === n ? void 0 : n.call(t, e)) && void 0 !== i && i;
         }),
     setRecentGames(e) {
-        C()
-            .then((n) => {
-                var r;
-                return null === (r = n.setRecentGames) || void 0 === r ? void 0 : r.call(n, e);
+        T()
+            .then((t) => {
+                var n;
+                return null === (n = t.setRecentGames) || void 0 === n ? void 0 : n.call(t, e);
             })
             .catch(() => {});
     }

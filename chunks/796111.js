@@ -1,8 +1,4 @@
-t.d(n, {
-    P: function () {
-        return r;
-    }
-});
+t.d(n, { P: () => a });
 let o = (0, t(818083).B)({
         id: '2024-06_quest_inline_console_connection',
         kind: 'user',
@@ -21,8 +17,8 @@ let o = (0, t(818083).B)({
             }
         ]
     }),
-    r = (e) => {
+    a = (e) => {
         let { location: n, autoTrackExposure: t = !1 } = e,
-            { enabled: r } = o.useExperiment({ location: n }, { autoTrackExposure: t });
-        return r;
+            { enabled: a } = o.useExperiment({ location: n }, { autoTrackExposure: t });
+        return a;
     };

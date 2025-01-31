@@ -1,5 +1,6 @@
-e.exports = {
-    interactive: 'interactive_f5eb4b',
-    muted: 'muted_f5eb4b',
-    selected: 'selected_f5eb4b'
+var i = {
+    interactive: 'interactive_bf202d',
+    muted: 'muted_bf202d',
+    selected: 'selected_bf202d'
 };
+e.exports = i;

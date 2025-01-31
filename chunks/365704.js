@@ -1,32 +1,28 @@
-r.d(n, {
-    R: function () {
-        return _;
-    },
-    W: function () {
-        return m;
-    }
+n.d(t, {
+    R: () => p,
+    W: () => h
 });
-var i = r(590921),
-    a = r(521090),
-    o = r(126226),
-    s = r(116364),
-    l = r(941140),
-    u = r(341561),
-    c = r(277981),
-    d = r(420001),
-    f = r(65090),
-    p = r(591236),
-    h = r(233577);
-let _ = [i.eq.CHOICES, i.eq.GIFS, i.eq.STICKERS, i.eq.COMMAND_OPTIONS, i.eq.EMOJIS_AND_STICKERS, i.eq.REACTIONS, i.eq.CHANNELS, i.eq.MENTIONS, i.eq.COMMANDS, i.eq.LEGACY_COMMANDS],
-    m = {
-        [i.eq.CHANNELS]: a.Z,
-        [i.eq.COMMANDS]: o.Z,
-        [i.eq.COMMAND_OPTIONS]: l.Z,
+var i = n(590921),
+    r = n(521090),
+    a = n(126226),
+    s = n(116364),
+    o = n(941140),
+    l = n(341561),
+    u = n(277981),
+    c = n(420001),
+    d = n(65090),
+    f = n(591236),
+    _ = n(233577);
+let p = [i.eq.CHOICES, i.eq.GIFS, i.eq.STICKERS, i.eq.COMMAND_OPTIONS, i.eq.EMOJIS_AND_STICKERS, i.eq.REACTIONS, i.eq.CHANNELS, i.eq.MENTIONS, i.eq.COMMANDS, i.eq.LEGACY_COMMANDS],
+    h = {
+        [i.eq.CHANNELS]: r.Z,
+        [i.eq.COMMANDS]: a.Z,
+        [i.eq.COMMAND_OPTIONS]: o.Z,
         [i.eq.CHOICES]: s.Z,
-        [i.eq.EMOJIS_AND_STICKERS]: u.Z,
-        [i.eq.STICKERS]: h.Z,
-        [i.eq.GIFS]: c.Z,
-        [i.eq.LEGACY_COMMANDS]: d.Z,
-        [i.eq.MENTIONS]: f.Z,
-        [i.eq.REACTIONS]: p.Z
+        [i.eq.EMOJIS_AND_STICKERS]: l.Z,
+        [i.eq.STICKERS]: _.Z,
+        [i.eq.GIFS]: u.Z,
+        [i.eq.LEGACY_COMMANDS]: c.Z,
+        [i.eq.MENTIONS]: d.Z,
+        [i.eq.REACTIONS]: f.Z
     };

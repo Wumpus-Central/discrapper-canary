@@ -1,8 +1,4 @@
-n.d(t, {
-    L: function () {
-        return m;
-    }
-});
+n.d(t, { L: () => m });
 var i = n(200651);
 n(192379);
 var r = n(481060),
@@ -16,7 +12,7 @@ var r = n(481060),
 function m(e) {
     let { guildId: t, role: n } = e;
     return (0, i.jsx)(i.Fragment, {
-        children: (0, i.jsxs)(r.FormItem, {
+        children: (0, i.jsxs)(r.xJW, {
             title: d.intl.string(d.t.arFPfH),
             className: u.container,
             children: [
@@ -24,11 +20,11 @@ function m(e) {
                     variant: 'text-sm/normal',
                     children: d.intl.string(d.t['IT/0AA'])
                 }),
-                (0, i.jsxs)(r.Button, {
+                (0, i.jsxs)(r.zxk, {
                     className: u.button,
                     innerClassName: u.buttonInner,
-                    size: r.Button.Sizes.SMALL,
-                    color: r.Button.Colors.PRIMARY,
+                    size: r.zxk.Sizes.SMALL,
+                    color: r.zxk.Colors.PRIMARY,
                     onClick: () => {
                         o.Z.close(),
                             (0, l.iD)(t, {

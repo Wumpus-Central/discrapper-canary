@@ -1,28 +1,30 @@
+n.d(t, { Z: () => d });
 var i,
-    a = r(442837),
-    o = r(570140),
-    s = r(981631);
-function l(e, n, r) {
+    r = n(442837),
+    a = n(570140),
+    s = n(981631);
+function o(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let u = 0;
-function c(e) {
-    let { port: n } = e;
-    u = s.V6Z - n;
+let l = 0;
+function u(e) {
+    let { port: t } = e;
+    l = s.V6Z - t;
 }
-class d extends (i = a.ZP.Store) {
+class c extends (i = r.ZP.Store) {
     getId() {
-        return u;
+        return l;
     }
 }
-l(d, 'displayName', 'InstanceIdStore'), (n.Z = new d(o.Z, { RPC_SERVER_READY: c }));
+o(c, 'displayName', 'InstanceIdStore');
+let d = new c(a.Z, { RPC_SERVER_READY: u });

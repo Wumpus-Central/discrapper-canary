@@ -5,10 +5,6 @@ function n(t, i, e, s) {
     return s.tension * (t - i) - s.friction * e;
 }
 e.d(i, {
-    B: function () {
-        return n;
-    },
-    M: function () {
-        return s;
-    }
+    B: () => n,
+    M: () => s
 });

@@ -1,9 +1,3 @@
-var i, r;
-n.d(t, {
-    T: function () {
-        return i;
-    }
-}),
-    ((r = i || (i = {})).ADMIN = 'admin'),
-    (r.DEVELOPER = 'developer'),
-    (r.READ_ONLY = 'read_only');
+n.d(t, { T: () => r });
+var i,
+    r = (((i = {}).ADMIN = 'admin'), (i.DEVELOPER = 'developer'), (i.READ_ONLY = 'read_only'), i);

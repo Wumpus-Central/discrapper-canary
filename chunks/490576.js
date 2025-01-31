@@ -1,86 +1,81 @@
-e.r(n),
-    e.d(n, {
-        default: function () {
-            return g;
-        }
-    });
-var a = e(200651);
-e(192379);
-var o = e(512722),
-    i = e.n(o),
-    r = e(468194),
-    l = e(442837),
-    s = e(477690),
-    c = e(481060),
-    d = e(809086),
-    u = e(430824),
-    m = e(240864),
-    f = e(598952),
-    h = e(596211),
-    x = e(388032),
-    _ = e(954374);
-let b = (0, r.Mg)(s.Z.GUILD_PRODUCT_DOWNLOAD_MODAL_HEADER_IMAGE_WIDTH);
-function j(t) {
-    let { guildProductListing: n, guildId: e, onClose: o } = t,
-        i = (0, l.e7)([u.Z], () => {
+n.d(e, { default: () => Z });
+var a = n(200651);
+n(192379);
+var i = n(512722),
+    l = n.n(i),
+    o = n(468194),
+    s = n(442837),
+    r = n(477690),
+    c = n(481060),
+    d = n(809086),
+    u = n(430824),
+    m = n(240864),
+    x = n(598952),
+    h = n(596211),
+    f = n(388032),
+    _ = n(954374);
+let j = (0, o.Mg)(r.Z.GUILD_PRODUCT_DOWNLOAD_MODAL_HEADER_IMAGE_WIDTH);
+function v(t) {
+    let { guildProductListing: e, guildId: n, onClose: i } = t,
+        l = (0, s.e7)([u.Z], () => {
             var t;
-            return null === (t = u.Z.getGuild(e)) || void 0 === t ? void 0 : t.name;
+            return null === (t = u.Z.getGuild(n)) || void 0 === t ? void 0 : t.name;
         });
-    return (0, a.jsxs)(c.ModalHeader, {
+    return (0, a.jsxs)(c.xBx, {
         className: _.header,
         children: [
             (0, a.jsx)(d.Z, {
                 className: _.headerImage,
-                listing: n,
-                imageSize: b,
+                listing: e,
+                imageSize: j,
                 alt: ''
             }),
-            (0, a.jsx)(c.Spacer, {
+            (0, a.jsx)(c.LZC, {
                 size: 16,
                 horizontal: !0
             }),
             (0, a.jsxs)('div', {
                 className: _.headerTextColumn,
                 children: [
-                    (0, a.jsx)(c.Heading, {
+                    (0, a.jsx)(c.X6q, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
-                        children: n.name
+                        children: e.name
                     }),
-                    (0, a.jsx)(c.Spacer, { size: 8 }),
+                    (0, a.jsx)(c.LZC, { size: 8 }),
                     (0, a.jsx)(c.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-muted',
                         className: _.__invalid_description,
-                        children: i
+                        children: l
                     }),
                     (0, a.jsx)(c.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-muted',
                         className: _.__invalid_description,
-                        children: x.intl.format(x.t['6dOuaG'], { count: n.attachments_count })
+                        children: f.intl.format(f.t['6dOuaG'], { count: e.attachments_count })
                     })
                 ]
             }),
-            (0, a.jsx)(c.ModalCloseButton, {
+            (0, a.jsx)(c.olH, {
                 className: _.closeButton,
-                onClick: o
+                onClick: i
             })
         ]
     });
 }
-function v(t) {
-    let { attachment: n, guildId: e, productId: o } = t;
+function g(t) {
+    let { attachment: e, guildId: n, productId: i } = t;
     return (0, a.jsxs)('li', {
         className: _.attachmentRow,
         children: [
-            (0, a.jsx)(f.Z, { attachment: n }),
+            (0, a.jsx)(x.Z, { attachment: e }),
             (0, a.jsx)(h.Z, {
                 className: _.attachmentDownloadButton,
-                guildId: e,
-                productId: o,
-                attachmentId: n.id,
-                children: (0, a.jsx)(c.DownloadIcon, {
+                guildId: n,
+                productId: i,
+                attachmentId: e.id,
+                children: (0, a.jsx)(c._8t, {
                     size: 'md',
                     color: 'currentColor'
                 })
@@ -88,31 +83,31 @@ function v(t) {
         ]
     });
 }
-function g(t) {
-    var n;
-    let { guildId: e, productId: o, onClose: r, transitionState: s } = t,
-        d = (0, l.e7)([m.Z], () => m.Z.getGuildProduct(o));
-    i()(null != d, 'guildProductListing cannot be null');
-    let u = null !== (n = d.attachments) && void 0 !== n ? n : [];
-    return (0, a.jsxs)(c.ModalRoot, {
+function Z(t) {
+    var e;
+    let { guildId: n, productId: i, onClose: o, transitionState: r } = t,
+        d = (0, s.e7)([m.Z], () => m.Z.getGuildProduct(i));
+    l()(null != d, 'guildProductListing cannot be null');
+    let u = null !== (e = d.attachments) && void 0 !== e ? e : [];
+    return (0, a.jsxs)(c.Y0X, {
         className: _.modal,
-        size: c.ModalSize.MEDIUM,
-        transitionState: s,
-        'aria-label': x.intl.string(x.t['3jaCaW']),
+        size: c.CgR.MEDIUM,
+        transitionState: r,
+        'aria-label': f.intl.string(f.t['3jaCaW']),
         children: [
-            (0, a.jsx)(j, {
-                guildId: e,
+            (0, a.jsx)(v, {
+                guildId: n,
                 guildProductListing: d,
-                onClose: r
+                onClose: o
             }),
-            (0, a.jsx)(c.ModalContent, {
+            (0, a.jsx)(c.hzk, {
                 children: (0, a.jsx)('ul', {
                     className: _.__invalid_attachmentsList,
                     children: u.map((t) =>
                         (0, a.jsx)(
-                            v,
+                            g,
                             {
-                                guildId: e,
+                                guildId: n,
                                 productId: d.id,
                                 attachment: t
                             },

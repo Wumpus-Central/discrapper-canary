@@ -1,15 +1,11 @@
 n.d(e, {
-    $: function () {
-        return i;
-    },
-    C: function () {
-        return l;
-    }
+    $: () => i,
+    C: () => c
 });
-var c = n(570140);
+var l = n(570140);
 function i() {
-    c.Z.dispatch({ type: 'SHOW_KEYBOARD_SHORTCUTS' });
+    l.Z.dispatch({ type: 'SHOW_KEYBOARD_SHORTCUTS' });
 }
-function l() {
-    c.Z.dispatch({ type: 'HIDE_KEYBOARD_SHORTCUTS' });
+function c() {
+    l.Z.dispatch({ type: 'HIDE_KEYBOARD_SHORTCUTS' });
 }

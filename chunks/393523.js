@@ -1,50 +1,46 @@
-let a;
-r.d(t, {
-    a: function () {
-        return i;
-    }
-});
-var n = r(578346),
-    _ = r(987886),
-    o = r(370336),
-    E = r(395848);
-function i(e) {
-    let t = 'history';
-    (0, n.Hj)(t, e), (0, n.D2)(t, c);
+let r;
+a.d(e, { a: () => c });
+var n = a(578346),
+    o = a(987886),
+    _ = a(370336),
+    i = a(395848);
+function c(t) {
+    let e = 'history';
+    (0, n.Hj)(e, t), (0, n.D2)(e, s);
 }
-function c() {
-    if (!(0, _.B)()) return;
-    let e = E.m.onpopstate;
-    function t(e) {
-        return function (...t) {
-            let r = t.length > 2 ? t[2] : void 0;
-            if (r) {
-                let e = a,
-                    t = String(r);
-                a = t;
-                (0, n.rK)('history', {
-                    from: e,
-                    to: t
-                });
+function s() {
+    if (!(0, o.B)()) return;
+    let t = i.m.onpopstate;
+    function e(t) {
+        return function (...e) {
+            let a = e.length > 2 ? e[2] : void 0;
+            if (a) {
+                let t = r,
+                    e = String(a);
+                (r = e),
+                    (0, n.rK)('history', {
+                        from: t,
+                        to: e
+                    });
             }
-            return e.apply(this, t);
+            return t.apply(this, e);
         };
     }
-    (E.m.onpopstate = function (...t) {
-        let r = E.m.location.href,
-            _ = a;
-        a = r;
+    (i.m.onpopstate = function (...e) {
+        let a = i.m.location.href,
+            o = r;
         if (
-            ((0, n.rK)('history', {
-                from: _,
-                to: r
+            ((r = a),
+            (0, n.rK)('history', {
+                from: o,
+                to: a
             }),
-            e)
+            t)
         )
             try {
-                return e.apply(this, t);
-            } catch (e) {}
+                return t.apply(this, e);
+            } catch (t) {}
     }),
-        (0, o.hl)(E.m.history, 'pushState', t),
-        (0, o.hl)(E.m.history, 'replaceState', t);
+        (0, _.hl)(i.m.history, 'pushState', e),
+        (0, _.hl)(i.m.history, 'replaceState', e);
 }

@@ -75,44 +75,38 @@ var n = r(763453),
     },
     d = function (t, e, r, o, a, u) {
         var s,
-            l,
-            d,
-            g,
-            y = r.first() instanceof i,
-            v = [],
-            m = o.size,
-            _ = r.get(a),
-            b = o.first(),
-            S = o.last(),
-            w = S.getLength(),
-            k = S.getKey(),
-            x = y && (!_.getChildKeys().isEmpty() || !b.getChildKeys().isEmpty());
+            l = r.first() instanceof i,
+            d = [],
+            g = o.size,
+            y = r.get(a),
+            v = o.first(),
+            m = o.last(),
+            _ = m.getLength(),
+            b = m.getKey(),
+            S = l && (!y.getChildKeys().isEmpty() || !v.getChildKeys().isEmpty());
         r.forEach(function (t, e) {
             if (e !== a) {
-                v.push(t);
+                d.push(t);
                 return;
             }
-            x ? v.push(t) : v.push(f(t, u, o)),
-                o.slice(x ? 0 : 1, m - 1).forEach(function (t) {
-                    return v.push(t);
+            S ? d.push(t) : d.push(f(t, u, o)),
+                o.slice(S ? 0 : 1, g - 1).forEach(function (t) {
+                    return d.push(t);
                 }),
-                v.push(p(t, u, o));
+                d.push(p(t, u, o));
         });
-        var C = n.createFromArray(v);
-        if (y) {
-            (s = C),
-                (l = 0),
-                (d = _),
-                (g = b),
-                (C = s.withMutations(function (t) {
-                    var e = d.getKey(),
-                        r = g.getKey(),
-                        n = d.getNextSiblingKey(),
-                        i = d.getParentKey(),
-                        o = h(g, s),
+        var w = n.createFromArray(d);
+        return (
+            l &&
+                (w = (s = w).withMutations(function (t) {
+                    var e = y.getKey(),
+                        r = v.getKey(),
+                        n = y.getNextSiblingKey(),
+                        i = y.getParentKey(),
+                        o = h(v, s),
                         a = o[o.length - 1];
                     if (
-                        (t.get(r) ? (t.setIn([e, 'nextSibling'], r), t.setIn([r, 'prevSibling'], e)) : (t.setIn([e, 'nextSibling'], g.getNextSiblingKey()), t.setIn([g.getNextSiblingKey(), 'prevSibling'], e)),
+                        (t.get(r) ? (t.setIn([e, 'nextSibling'], r), t.setIn([r, 'prevSibling'], e)) : (t.setIn([e, 'nextSibling'], v.getNextSiblingKey()), t.setIn([v.getNextSiblingKey(), 'prevSibling'], e)),
                         t.setIn([a, 'nextSibling'], n),
                         n && t.setIn([n, 'prevSibling'], a),
                         o.forEach(function (e) {
@@ -125,19 +119,19 @@ var n = r(763453),
                             f = u.toArray();
                         f.splice.apply(f, [l + 1, 0].concat(o)), t.setIn([i, 'children'], c(f));
                     }
-                }));
-        }
-        return t.merge({
-            blockMap: C,
-            selectionBefore: e,
-            selectionAfter: e.merge({
-                anchorKey: k,
-                anchorOffset: w,
-                focusKey: k,
-                focusOffset: w,
-                isBackward: !1
+                })),
+            t.merge({
+                blockMap: w,
+                selectionBefore: e,
+                selectionAfter: e.merge({
+                    anchorKey: b,
+                    anchorOffset: _,
+                    focusKey: b,
+                    focusOffset: _,
+                    isBackward: !1
+                })
             })
-        });
+        );
     };
 t.exports = function (t, e, r) {
     var n = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 'REPLACE_WITH_NEW_DATA';

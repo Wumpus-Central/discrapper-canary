@@ -1,20 +1,11 @@
-r.d(n, {
-    e: function () {
-        return o;
-    }
-});
-var i = r(47120);
-let a = '_errors';
-function o(e) {
-    return s(e, void 0);
+n.d(t, { e: () => r }), n(47120);
+let i = '_errors';
+function r(e) {
+    return a(e, void 0);
 }
-function s(e, n) {
-    let r = e[a];
-    if (null != r && Array.isArray(r)) return r[0];
-    for (let [r, i] of Object.entries(e)) {
-        if (r !== a && null != i) {
-            if ('object' == typeof i) return s(i, null != n ? n : r);
-        }
-    }
+function a(e, t) {
+    let n = e[i];
+    if (null != n && Array.isArray(n)) return n[0];
+    for (let [n, r] of Object.entries(e)) if (n !== i && null != r && 'object' == typeof r) return a(r, null != t ? t : n);
     return null;
 }

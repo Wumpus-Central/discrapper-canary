@@ -1,73 +1,74 @@
-var i = r(200651);
-r(192379);
-var a = r(952265),
-    o = r(626135),
-    s = r(863249),
-    l = r(63568),
-    u = r(266395),
-    c = r(592286),
-    d = r(981631);
-let f = () => {
-        o.default.track(d.rMx.MODAL_DISMISSED, { type: c.N4 });
+n.d(t, { Z: () => _ });
+var i = n(200651);
+n(192379);
+var r = n(952265),
+    a = n(626135),
+    s = n(863249),
+    o = n(63568),
+    l = n(266395),
+    u = n(592286),
+    c = n(981631);
+let d = () => {
+        a.default.track(c.rMx.MODAL_DISMISSED, { type: u.N4 });
     },
-    p = (e) => {
-        o.default.track(d.rMx.OPEN_MODAL, {
-            type: c.N4,
+    f = (e) => {
+        a.default.track(c.rMx.OPEN_MODAL, {
+            type: u.N4,
             guild_id: e
         });
-    };
-n.Z = {
-    openMemberVerificationModal(e, n) {
-        if (__OVERLAY__) return;
-        p(e);
-        let o = async (n) => {
-                await s.ZP.submitVerificationForm(e, n);
-            },
-            d = (0, l.K2)(e, 'MemberVerificationModalActionCreators');
-        (0, a.ZD)(
-            async () => {
-                let { default: n } = d ? await Promise.all([r.e('53967'), r.e('99916'), r.e('55774'), r.e('56835')]).then(r.bind(r, 309135)) : await Promise.all([r.e('53967'), r.e('99916'), r.e('80026'), r.e('29260')]).then(r.bind(r, 645264));
-                return (r) =>
-                    (0, i.jsx)(n, {
-                        ...r,
-                        guildId: e,
-                        onComplete: o,
-                        onClose: function () {
-                            let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                            if (!e) {
-                                if (u.rb.getState().hasUnsubmittedChanges) {
-                                    (0, u.PE)(!0);
-                                    return;
-                                }
-                                f();
-                            }
-                            r.onClose();
-                        }
-                    });
-            },
-            {
-                modalKey: c.Pn,
-                onCloseRequest: () => {
-                    f(), u.rb.getState().hasUnsubmittedChanges ? (0, u.PE)(!0) : (0, a.Mr)(c.Pn);
+    },
+    _ = {
+        openMemberVerificationModal(e, t) {
+            if (__OVERLAY__) return;
+            f(e);
+            let a = async (t) => {
+                    await s.ZP.submitVerificationForm(e, t);
                 },
-                onCloseCallback: n
-            }
-        );
-    },
-    closeMemberVerificationModal() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        !e && f(), (0, a.Mr)(c.Pn);
-    },
-    openMemberVerificationPreviewModal(e) {
-        let n = (0, l.K2)(e, 'openMemberVerificationPreviewModal');
-        (0, a.ZD)(async () => {
-            let { default: a } = n ? await Promise.all([r.e('53967'), r.e('99916'), r.e('55774'), r.e('56835')]).then(r.bind(r, 309135)) : await Promise.all([r.e('53967'), r.e('99916'), r.e('80026'), r.e('29260')]).then(r.bind(r, 645264));
-            return (n) =>
-                (0, i.jsx)(a, {
-                    ...n,
-                    guildId: e,
-                    isPreview: !0
-                });
-        });
-    }
-};
+                c = (0, o.K2)(e, 'MemberVerificationModalActionCreators');
+            (0, r.ZD)(
+                async () => {
+                    let { default: t } = c ? await Promise.all([n.e('53967'), n.e('99916'), n.e('55774'), n.e('14987')]).then(n.bind(n, 309135)) : await Promise.all([n.e('53967'), n.e('99916'), n.e('80026'), n.e('75446')]).then(n.bind(n, 645264));
+                    return (n) =>
+                        (0, i.jsx)(t, {
+                            ...n,
+                            guildId: e,
+                            onComplete: a,
+                            onClose: function () {
+                                let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+                                if (!e) {
+                                    if (l.rb.getState().hasUnsubmittedChanges) {
+                                        (0, l.PE)(!0);
+                                        return;
+                                    }
+                                    d();
+                                }
+                                n.onClose();
+                            }
+                        });
+                },
+                {
+                    modalKey: u.Pn,
+                    onCloseRequest: () => {
+                        d(), l.rb.getState().hasUnsubmittedChanges ? (0, l.PE)(!0) : (0, r.Mr)(u.Pn);
+                    },
+                    onCloseCallback: t
+                }
+            );
+        },
+        closeMemberVerificationModal() {
+            let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+            e || d(), (0, r.Mr)(u.Pn);
+        },
+        openMemberVerificationPreviewModal(e) {
+            let t = (0, o.K2)(e, 'openMemberVerificationPreviewModal');
+            (0, r.ZD)(async () => {
+                let { default: r } = t ? await Promise.all([n.e('53967'), n.e('99916'), n.e('55774'), n.e('14987')]).then(n.bind(n, 309135)) : await Promise.all([n.e('53967'), n.e('99916'), n.e('80026'), n.e('75446')]).then(n.bind(n, 645264));
+                return (t) =>
+                    (0, i.jsx)(r, {
+                        ...t,
+                        guildId: e,
+                        isPreview: !0
+                    });
+            });
+        }
+    };

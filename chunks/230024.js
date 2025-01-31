@@ -1,1 +1,5 @@
-e.exports = { snowflake: 'snowflake_a8ba4a' };
+e.exports = {
+    snowflake: 'snowflake_ca9710',
+    'snowflakes-fall': 'snowflakes-fall_ca9710',
+    'snowflakes-shake': 'snowflakes-shake_ca9710'
+};

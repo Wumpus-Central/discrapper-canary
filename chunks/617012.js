@@ -1,31 +1,27 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
+n.d(t, { Z: () => u });
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
-    o = n(481060),
-    s = n(388032),
+    a = n(120356),
+    r = n.n(a),
+    s = n(481060),
+    o = n(388032),
     d = n(301882);
 let c = [!1, !0];
 function u(e) {
-    let { isDisabled: t, currentValue: n, onChange: r } = e,
-        s = (0, o.useRadioGroup)({
+    let { isDisabled: t, currentValue: n, onChange: a } = e,
+        o = (0, s.arW)({
             orientation: 'horizontal',
             isDisabled: t
         }),
         u = l.useCallback(
             (e) => {
-                !t && e !== n && r(e);
+                t || e === n || a(e);
             },
-            [t, n, r]
+            [t, n, a]
         );
     return (0, i.jsx)('div', {
-        className: a()(d.group, { [d.disabled]: t }),
-        ...s,
+        className: r()(d.group, { [d.disabled]: t }),
+        ...o,
         children: c.map((e) =>
             (0, i.jsx)(
                 m,
@@ -41,15 +37,15 @@ function u(e) {
 }
 function m(e) {
     let { isSelected: t, itemValue: n, onClick: l } = e,
-        r = n ? d.allow : d.deny,
-        c = n ? o.CheckmarkLargeIcon : o.XSmallIcon,
-        u = n ? s.intl.string(s.t.RzDfSk) : s.intl.string(s.t['6639Oz']),
-        m = (0, o.useRadioItem)({
+        a = n ? d.allow : d.deny,
+        c = n ? s.dz2 : s.Dio,
+        u = n ? o.intl.string(o.t.RzDfSk) : o.intl.string(o.t['6639Oz']),
+        m = (0, s.xUy)({
             isSelected: t,
             label: u
         });
-    return (0, i.jsx)(o.Clickable, {
-        className: a()(d.item, r, { [d.selected]: t }),
+    return (0, i.jsx)(s.P3F, {
+        className: r()(d.item, a, { [d.selected]: t }),
         onClick: l,
         ...m,
         children: (0, i.jsx)(c, {

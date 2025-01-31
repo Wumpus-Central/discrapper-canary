@@ -1,13 +1,15 @@
-e.exports = {
-    notAllowedIcon: 'notAllowedIcon_b35b54 icon_b35b54',
-    shopIcon: 'shopIcon_b35b54 icon_b35b54',
-    presetDecorationImg: 'presetDecorationImg_b35b54',
-    decorationGridItem: 'decorationGridItem_b35b54',
-    decorationGridItemChurned: 'decorationGridItemChurned_b35b54',
-    selected: 'selected_b35b54',
-    list: 'list_b35b54',
-    headings: 'headings_b35b54',
-    iconBadge: 'iconBadge_b35b54',
-    newBadge: 'newBadge_b35b54',
-    newBadgeText: 'newBadgeText_b35b54'
+var i = {
+    icon: 'icon_dfa67d',
+    notAllowedIcon: 'notAllowedIcon_dfa67d icon_dfa67d',
+    shopIcon: 'shopIcon_dfa67d icon_dfa67d',
+    presetDecorationImg: 'presetDecorationImg_dfa67d',
+    decorationGridItem: 'decorationGridItem_dfa67d',
+    decorationGridItemChurned: 'decorationGridItemChurned_dfa67d',
+    selected: 'selected_dfa67d',
+    list: 'list_dfa67d',
+    headings: 'headings_dfa67d',
+    iconBadge: 'iconBadge_dfa67d',
+    newBadge: 'newBadge_dfa67d',
+    newBadgeText: 'newBadgeText_dfa67d'
 };
+e.exports = i;

@@ -1,6 +1,7 @@
+n.d(t, { Z: () => l });
 var i = n(200651);
 n(192379);
-t.Z = (e) =>
+let l = (e) =>
     (0, i.jsxs)('svg', {
         viewBox: '0 0 500 350',
         xmlns: 'http://www.w3.org/2000/svg',

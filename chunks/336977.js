@@ -1,126 +1,120 @@
-e.r(n),
-    e.d(n, {
-        VibingWumpus: function () {
-            return x;
-        }
-    }),
-    e(47120);
+e.d(n, { default: () => C }), e(47120);
 var i = e(200651),
     r = e(192379),
-    o = e(120356),
-    a = e.n(o),
-    c = e(399606),
-    s = e(481060),
-    u = e(607070),
-    l = e(626135),
-    d = e(832239),
-    _ = e(407383),
-    I = e(981631),
-    N = e(388032),
-    f = e(724263),
+    a = e(120356),
+    s = e.n(a),
+    o = e(399606),
+    c = e(481060),
+    l = e(607070),
+    u = e(626135),
+    _ = e(832239),
+    d = e(407383),
+    N = e(981631),
+    I = e(388032),
+    x = e(724263),
     p = e(617921);
-function x(t) {
-    let { onClose: n, source: o = _.I.INAPPROPRIATE_CONVERSATION } = t,
-        x = (0, c.e7)([u.Z], () => u.Z.useReducedMotion),
+function h(t) {
+    let { onClose: n, source: a = d.I.INAPPROPRIATE_CONVERSATION } = t,
+        h = (0, o.e7)([l.Z], () => l.Z.useReducedMotion),
         [C, A] = r.useState(!1);
     r.useEffect(() => {
         let t = new Date();
         return (
-            l.default.track(I.rMx.VIBING_WUMPUS_VIEWED, { source: o }),
-            (0, d.JO)(),
+            u.default.track(N.rMx.VIBING_WUMPUS_VIEWED, { source: a }),
+            (0, _.JO)(),
             () => {
-                l.default.track(I.rMx.VIBING_WUMPUS_CLOSED, {
+                u.default.track(N.rMx.VIBING_WUMPUS_CLOSED, {
                     duration_open_ms: new Date().getTime() - t.getTime(),
-                    source: o
+                    source: a
                 }),
-                    (0, d.zu)();
+                    (0, _.zu)();
             }
         );
-    }, [o]);
-    let h = () => {
-        C ? ((0, d.JO)(), l.default.track(I.rMx.VIBING_WUMPUS_ACTION, { action: _.G.PLAY })) : ((0, d.hW)(), l.default.track(I.rMx.VIBING_WUMPUS_ACTION, { action: _.G.PAUSE })), A(!C);
+    }, [a]);
+    let S = () => {
+        C ? ((0, _.JO)(), u.default.track(N.rMx.VIBING_WUMPUS_ACTION, { action: d.G.PLAY })) : ((0, _.hW)(), u.default.track(N.rMx.VIBING_WUMPUS_ACTION, { action: d.G.PAUSE })), A(!C);
     };
-    async function S() {
+    async function f() {
         let { default: t } = await e.e('29641').then(e.t.bind(e, 937359, 19));
         return t;
     }
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)('div', {
-                className: f.ringContainer,
+                className: x.ringContainer,
                 children: (0, i.jsx)('img', {
                     src: p,
                     alt: '',
-                    className: f.__invalid_ringArt
+                    className: x.__invalid_ringArt
                 })
             }),
-            (0, i.jsx)(s.LottieAnimation, {
-                importData: S,
-                shouldAnimate: !C && !x,
-                className: f.wumpus,
-                pauseAtFrame: x ? 200 : void 0
+            (0, i.jsx)(c.Fmz, {
+                importData: f,
+                shouldAnimate: !C && !h,
+                className: x.wumpus,
+                pauseAtFrame: h ? 200 : void 0
             }),
-            (0, i.jsx)(s.Tooltip, {
-                text: C ? N.intl.string(N.t.RscU7O) : N.intl.string(N.t.ZcgDJS),
+            (0, i.jsx)(c.ua7, {
+                text: C ? I.intl.string(I.t.RscU7O) : I.intl.string(I.t.ZcgDJS),
                 position: 'top',
-                'aria-label': C ? N.intl.string(N.t.RscU7O) : N.intl.string(N.t.ZcgDJS),
+                'aria-label': C ? I.intl.string(I.t.RscU7O) : I.intl.string(I.t.ZcgDJS),
                 children: (t) =>
-                    (0, i.jsx)(s.Clickable, {
+                    (0, i.jsx)(c.P3F, {
                         ...t,
-                        onClick: h,
-                        className: f.iconButton,
+                        onClick: S,
+                        className: x.iconButton,
                         children: C
-                            ? (0, i.jsx)(s.PlayIcon, {
+                            ? (0, i.jsx)(c.o1U, {
                                   size: 'xs',
                                   color: 'currentColor',
-                                  className: f.icon
+                                  className: x.icon
                               })
-                            : (0, i.jsx)(s.PauseIcon, {
+                            : (0, i.jsx)(c.fpf, {
                                   size: 'xs',
                                   color: 'currentColor',
-                                  className: f.icon
+                                  className: x.icon
                               })
                     })
             }),
-            (0, i.jsx)(s.ModalContent, {
-                className: a()(f.body),
+            (0, i.jsx)(c.hzk, {
+                className: s()(x.body),
                 children: (0, i.jsxs)('div', {
-                    className: a()(f.textContainer),
+                    className: s()(x.textContainer),
                     children: [
-                        (0, i.jsx)(s.Heading, {
+                        (0, i.jsx)(c.X6q, {
                             variant: 'heading-xl/semibold',
                             color: 'header-primary',
-                            children: N.intl.string(N.t.L4ifkZ)
+                            children: I.intl.string(I.t.L4ifkZ)
                         }),
-                        (0, i.jsx)(s.Text, {
+                        (0, i.jsx)(c.Text, {
                             variant: 'text-md/normal',
                             color: 'header-secondary',
-                            children: N.intl.string(N.t.R8LCMT)
+                            children: I.intl.string(I.t.R8LCMT)
                         })
                     ]
                 })
             }),
-            (0, i.jsx)(s.ModalFooter, {
+            (0, i.jsx)(c.mzw, {
                 children: (0, i.jsx)('div', {
-                    className: f.buttonContainer,
-                    children: (0, i.jsx)(s.Button, {
+                    className: x.buttonContainer,
+                    children: (0, i.jsx)(c.zxk, {
                         fullWidth: !0,
-                        color: s.Button.Colors.BRAND,
-                        size: s.Button.Sizes.MEDIUM,
+                        color: c.zxk.Colors.BRAND,
+                        size: c.zxk.Sizes.MEDIUM,
                         onClick: () => {
-                            n(), l.default.track(I.rMx.VIBING_WUMPUS_ACTION, { action: _.G.BACK_TO_CONVERSATION });
+                            n(), u.default.track(N.rMx.VIBING_WUMPUS_ACTION, { action: d.G.BACK_TO_CONVERSATION });
                         },
-                        children: N.intl.string(N.t['8eKkaW'])
+                        children: I.intl.string(I.t['8eKkaW'])
                     })
                 })
             })
         ]
     });
 }
-n.default = (t) => {
+let C = (t) => {
     let { onClose: n, transitionState: e } = t;
-    return (0, i.jsx)(s.ModalRoot, {
+    return (0, i.jsx)(c.Y0X, {
         transitionState: e,
-        children: (0, i.jsx)(x, { onClose: n })
+        children: (0, i.jsx)(h, { onClose: n })
     });
 };

@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return g;
-    }
-});
+n.d(t, { Z: () => g });
 var i = n(200651);
 n(192379);
 var r = n(249849),
@@ -59,7 +55,7 @@ let o = ['#0fa3dd', '#a7e4e4', '#a2ccdd'],
     ];
 function g(e) {
     let { width: t, height: n, primaryTintColor: g, secondaryTintColor: x, ...p } = e,
-        { primaryColorsTransformed: f, secondaryColorsTransformed: C } = (0, r.s)({
+        { primaryColorsTransformed: _, secondaryColorsTransformed: C } = (0, r.s)({
             primaryBaseColors: o,
             primaryTintColor: g,
             primaryTintLuminances: d,
@@ -69,7 +65,7 @@ function g(e) {
             secondaryTintLuminances: m,
             secondaryLuminanceWeights: h
         }),
-        { styleContent: v, containerId: I } = (0, l.bC)(f, C);
+        { styleContent: f, containerId: v } = (0, l.bC)(_, C);
     return (0, i.jsxs)('svg', {
         ...p,
         'aria-label': s.intl.string(s.t.nH6S2d),
@@ -88,17 +84,17 @@ function g(e) {
                             y2: '1',
                             children: [
                                 (0, i.jsx)('stop', {
-                                    stopColor: f[2],
+                                    stopColor: _[2],
                                     offset: '0%'
                                 }),
                                 (0, i.jsx)('stop', {
-                                    stopColor: f[0],
+                                    stopColor: _[0],
                                     offset: '100%'
                                 })
                             ]
                         })
                     }),
-                    (0, i.jsx)('style', { children: v })
+                    (0, i.jsx)('style', { children: f })
                 ]
             }),
             (0, i.jsx)('use', {
@@ -107,7 +103,7 @@ function g(e) {
             }),
             (0, i.jsx)('use', {
                 href: ''.concat(a, '#wrapper-layer'),
-                id: I
+                id: v
             })
         ]
     });

@@ -9,16 +9,18 @@ function n(t) {
                 })
             )),
             n.forEach(function (e) {
-                (function (t, e, r) {
-                    e in t
-                        ? Object.defineProperty(t, e, {
-                              value: r,
+                var n, i, o;
+                (n = t),
+                    (i = e),
+                    (o = r[e]),
+                    i in n
+                        ? Object.defineProperty(n, i, {
+                              value: o,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (t[e] = r);
-                })(t, e, r[e]);
+                        : (n[i] = o);
             });
     }
     return t;
@@ -56,10 +58,9 @@ var c = r(105500),
     },
     w = function (t, e) {
         var r = t.text,
-            i = t.entityRanges,
-            o = t.inlineStyleRanges;
+            i = t.entityRanges;
         return l(
-            p(r, o || []),
+            p(r, t.inlineStyleRanges || []),
             f(
                 r,
                 (i || [])
@@ -72,84 +73,71 @@ var c = r(105500),
             )
         );
     },
-    k = function (t) {
+    x = function (t) {
         return n({}, t, { key: t.key || h() });
     },
-    x = function (t, e, r) {
+    k = function (t, e, r) {
         var i = e.map(function (t) {
             return n({}, t, { parentRef: r });
         });
         return t.concat(i.reverse());
     },
-    C = function (t, e) {
-        var r,
-            a,
-            u,
-            c,
-            l = t.blocks.find(function (t) {
+    E = function (t, e) {
+        var r = t.blocks.find(function (t) {
                 return Array.isArray(t.children) && t.children.length > 0;
             }),
-            f = v && !l ? s.fromRawStateToRawTreeState(t).blocks : t.blocks;
-        if (!v) {
-            return (
-                (r = l ? s.fromRawTreeStateToRawState(t).blocks : f),
-                (a = e),
-                b(
-                    r.map(function (t) {
-                        var e = new i(S(t, a));
-                        return [e.getKey(), e];
-                    })
-                )
-            );
-        }
-        var p =
-            ((u = f),
-            (c = e),
-            u.map(k).reduce(function (t, e, r) {
-                Array.isArray(e.children) || y(!1);
-                var i = e.children.map(k),
-                    a = new o(
-                        n({}, S(e, c), {
-                            prevSibling: 0 === r ? null : u[r - 1].key,
-                            nextSibling: r === u.length - 1 ? null : u[r + 1].key,
-                            children: m(
-                                i.map(function (t) {
-                                    return t.key;
-                                })
-                            )
-                        })
-                    );
-                t = t.set(a.getKey(), a);
-                for (var s = x([], i, a); s.length > 0; ) {
-                    var l = s.pop(),
-                        f = l.parentRef,
-                        p = f.getChildKeys(),
-                        h = p.indexOf(l.key),
-                        d = Array.isArray(l.children);
-                    if (!d) {
-                        d || y(!1);
-                        break;
-                    }
-                    var g = l.children.map(k),
-                        v = new o(
-                            n({}, S(l, c), {
-                                parent: f.getKey(),
-                                children: m(
-                                    g.map(function (t) {
-                                        return t.key;
-                                    })
-                                ),
-                                prevSibling: 0 === h ? null : p.get(h - 1),
-                                nextSibling: h === p.size - 1 ? null : p.get(h + 1)
-                            })
-                        );
-                    (t = t.set(v.getKey(), v)), (s = x(s, g, v));
-                }
-                return t;
-            }, b()));
-        return p;
+            a = v && !r ? s.fromRawStateToRawTreeState(t).blocks : t.blocks;
+        return v
+            ? a.map(x).reduce(function (t, r, i) {
+                  Array.isArray(r.children) || y(!1);
+                  var u = r.children.map(x),
+                      s = new o(
+                          n({}, S(r, e), {
+                              prevSibling: 0 === i ? null : a[i - 1].key,
+                              nextSibling: i === a.length - 1 ? null : a[i + 1].key,
+                              children: m(
+                                  u.map(function (t) {
+                                      return t.key;
+                                  })
+                              )
+                          })
+                      );
+                  t = t.set(s.getKey(), s);
+                  for (var c = k([], u, s); c.length > 0; ) {
+                      var l = c.pop(),
+                          f = l.parentRef,
+                          p = f.getChildKeys(),
+                          h = p.indexOf(l.key),
+                          d = Array.isArray(l.children);
+                      if (!d) {
+                          d || y(!1);
+                          break;
+                      }
+                      var g = l.children.map(x),
+                          v = new o(
+                              n({}, S(l, e), {
+                                  parent: f.getKey(),
+                                  children: m(
+                                      g.map(function (t) {
+                                          return t.key;
+                                      })
+                                  ),
+                                  prevSibling: 0 === h ? null : p.get(h - 1),
+                                  nextSibling: h === p.size - 1 ? null : p.get(h + 1)
+                              })
+                          );
+                      (t = t.set(v.getKey(), v)), (c = k(c, g, v));
+                  }
+                  return t;
+              }, b())
+            : b(
+                  (r ? s.fromRawTreeStateToRawState(t).blocks : a).map(function (t) {
+                      var r = new i(S(t, e));
+                      return [r.getKey(), r];
+                  })
+              );
     },
-    E = function (t) {
+    C = function (t) {
         var e = t.entityMap,
             r = {};
         return (
@@ -165,8 +153,8 @@ var c = r(105500),
     };
 t.exports = function (t) {
     Array.isArray(t.blocks) || y(!1);
-    var e = E(t),
-        r = C(t, e),
+    var e = C(t),
+        r = E(t, e),
         n = r.isEmpty() ? new c() : c.createEmpty(r.first().getKey());
     return new a({
         blockMap: r,

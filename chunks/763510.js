@@ -1,4 +1,5 @@
-e.exports = {
-    btnHamburger: 'btnHamburger_a3ca40',
-    btnHamburgerOpen: 'btnHamburgerOpen_a3ca40'
+var i = {
+    btnHamburger: 'btnHamburger__006d6',
+    btnHamburgerOpen: 'btnHamburgerOpen__006d6'
 };
+e.exports = i;

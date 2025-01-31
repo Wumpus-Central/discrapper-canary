@@ -1,8 +1,4 @@
-n.d(t, {
-    s: function () {
-        return l;
-    }
-});
+n.d(t, { s: () => l });
 let i = (0, n(818083).B)({
         kind: 'user',
         id: '2024-12_collectibles_share_link',

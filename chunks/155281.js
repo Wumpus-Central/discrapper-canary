@@ -1,8 +1,4 @@
-r.d(t, {
-    G: function () {
-        return d;
-    }
-});
+r.d(t, { G: () => d });
 var n = r(573654),
     o = r(556841),
     i = r(717435),

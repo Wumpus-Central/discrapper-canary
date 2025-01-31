@@ -1,17 +1,13 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(824523),
-    a = r(176031);
-function o(e, n) {
+n.d(t, { Z: () => a });
+var i = n(824523),
+    r = n(176031);
+function a(e, t) {
     if ('object' !== (0, i.Z)(e) || null === e) return e;
-    var r = e[a];
-    if (void 0 !== r) {
-        var o = r.call(e, n || 'default');
-        if ('object' !== (0, i.Z)(o)) return o;
+    var n = e[r];
+    if (void 0 !== n) {
+        var a = n.call(e, t || 'default');
+        if ('object' !== (0, i.Z)(a)) return a;
         throw TypeError('@@toPrimitive must return a primitive value.');
     }
-    return ('string' === n ? String : Number)(e);
+    return ('string' === t ? String : Number)(e);
 }

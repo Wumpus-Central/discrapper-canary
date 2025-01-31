@@ -1,20 +1,16 @@
-r.d(n, {
-    Z: function () {
-        return l;
-    }
-});
-var i = r(528734),
-    a = r(492511),
-    o = r(991656),
-    s = r(951516);
-function l(e, n) {
+n.d(t, { Z: () => o });
+var i = n(528734),
+    r = n(492511),
+    a = n(991656),
+    s = n(951516);
+function o(e, t) {
     (0, s.Z)(2, arguments);
-    var r = (0, i.default)(e),
-        l = (0, i.default)(n),
-        u = (0, o.Z)(r, l),
-        c = Math.abs((0, a.default)(r, l));
-    r.setFullYear(1584), l.setFullYear(1584);
-    var d = (0, o.Z)(r, l) === -u,
-        f = u * (c - Number(d));
-    return 0 === f ? 0 : f;
+    var n = (0, i.default)(e),
+        o = (0, i.default)(t),
+        l = (0, a.Z)(n, o),
+        u = Math.abs((0, r.default)(n, o));
+    n.setFullYear(1584), o.setFullYear(1584);
+    var c = (0, a.Z)(n, o) === -l,
+        d = l * (u - Number(c));
+    return 0 === d ? 0 : d;
 }

@@ -1,8 +1,4 @@
-t.d(n, {
-    Y: function () {
-        return o;
-    }
-});
+t.d(n, { Y: () => o });
 let o = {
     tension: 250,
     friction: 20

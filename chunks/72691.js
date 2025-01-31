@@ -1,115 +1,110 @@
-n.r(o),
-    n.d(o, {
-        default: function () {
-            return v;
-        }
-    });
-var r = n(200651),
-    i = n(192379),
-    t = n(120356),
-    l = n.n(t),
-    s = n(442837),
-    c = n(481060),
-    a = n(570140),
-    u = n(355467),
-    p = n(821849),
-    d = n(15640),
-    f = n(563132),
-    m = n(409813),
-    h = n(104494),
-    x = n(639119),
-    _ = n(165583),
-    k = n(197115),
-    C = n(185139),
-    I = n(263954),
-    j = n(706454),
-    g = n(853872),
-    b = n(930153),
-    P = n(74538),
-    S = n(937615),
-    T = n(981631),
-    N = n(474936),
-    L = n(388032),
-    R = n(866803);
-let B = (e) => {
-        let { locale: o } = e;
-        return (0, r.jsxs)(r.Fragment, {
+o.d(r, { default: () => M });
+var n = o(200651),
+    i = o(192379),
+    s = o(120356),
+    l = o.n(s),
+    c = o(442837),
+    t = o(481060),
+    a = o(570140),
+    u = o(355467),
+    p = o(821849),
+    d = o(15640),
+    _ = o(563132),
+    m = o(409813),
+    f = o(104494),
+    x = o(639119),
+    h = o(165583),
+    k = o(197115),
+    j = o(185139),
+    C = o(263954),
+    I = o(706454),
+    b = o(853872),
+    g = o(930153),
+    P = o(74538),
+    N = o(937615),
+    T = o(981631),
+    E = o(474936),
+    L = o(388032),
+    S = o(866803);
+let R = (e) => {
+        let { locale: r } = e;
+        return (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, r.jsx)(I.Z, {
-                    icon: c.StickerIcon,
-                    iconClassName: R.iconColorPurple,
+                (0, n.jsx)(C.Z, {
+                    icon: t.SlE,
+                    iconClassName: S.iconColorPurple,
                     description: L.intl.string(L.t.uAfKTU)
                 }),
-                (0, r.jsx)(I.Z, {
-                    icon: c.BoostTier2SimpleIcon,
-                    iconClassName: R.iconColorPink,
+                (0, n.jsx)(C.Z, {
+                    icon: t.$zw,
+                    iconClassName: S.iconColorPink,
                     description: L.intl.formatToPlainString(L.t.sWnv5O, {
-                        numGuildSubscriptions: N.cb,
-                        discountPercent: (0, b.T3)(o, N.Rr / 100)
+                        numGuildSubscriptions: E.cb,
+                        discountPercent: (0, g.T3)(r, E.Rr / 100)
                     })
                 }),
-                (0, r.jsx)(I.Z, {
-                    icon: c.ReactionIcon,
-                    iconClassName: R.iconColorYellow,
+                (0, n.jsx)(C.Z, {
+                    icon: t.EO4,
+                    iconClassName: S.iconColorYellow,
                     description: L.intl.string(L.t.pqHIf3)
                 })
             ]
         });
     },
-    E = (e) => {
-        let { trialOffer: o, discountOffer: i, isLoading: t, price: a, onClose: u } = e,
-            p = (0, s.e7)([j.default], () => j.default.locale),
-            d = null != o || null != i;
-        return (0, r.jsxs)('div', {
-            className: R.wrapper,
+    v = (e) => {
+        let { trialOffer: r, discountOffer: i, isLoading: s, price: a, onClose: u } = e,
+            p = (0, c.e7)([I.default], () => I.default.locale),
+            d = null != r || null != i;
+        return (0, n.jsxs)('div', {
+            className: S.wrapper,
             children: [
-                (0, r.jsx)(c.ModalCloseButton, {
+                (0, n.jsx)(t.olH, {
                     onClick: u,
-                    className: R.closeButton
+                    className: S.closeButton
                 }),
-                d && (0, r.jsx)(_.dz, { className: R.premiumTrialBadge }),
-                (0, r.jsx)('img', {
-                    className: l()(R.heroImage, { [R.heroImageWithTrialOffer]: d }),
-                    src: n(178632),
+                d && (0, n.jsx)(h.dz, { className: S.premiumTrialBadge }),
+                (0, n.jsx)('img', {
+                    className: l()(S.heroImage, { [S.heroImageWithTrialOffer]: d }),
+                    src: o(178632),
                     alt: ''
                 }),
-                t
-                    ? (0, r.jsx)(c.Spinner, {})
-                    : (0, r.jsxs)(r.Fragment, {
+                s
+                    ? (0, n.jsx)(t.$jN, {})
+                    : (0, n.jsxs)(n.Fragment, {
                           children: [
-                              (0, r.jsx)(c.Text, {
+                              (0, n.jsx)(t.Text, {
                                   variant: 'text-md/normal',
-                                  className: R.heading,
-                                  children: null == a ? (0, r.jsx)(c.Spinner, { type: c.Spinner.Type.PULSING_ELLIPSIS }) : L.intl.format(L.t.TBsJfX, { monthlyPrice: (0, S.T4)(a.amount, a.currency) })
+                                  className: S.heading,
+                                  children: null == a ? (0, n.jsx)(t.$jN, { type: t.$jN.Type.PULSING_ELLIPSIS }) : L.intl.format(L.t.TBsJfX, { monthlyPrice: (0, N.T4)(a.amount, a.currency) })
                               }),
-                              (0, r.jsx)('div', {
-                                  className: R.perks,
-                                  children: (0, r.jsx)(B, { locale: p })
+                              (0, n.jsx)('div', {
+                                  className: S.perks,
+                                  children: (0, n.jsx)(R, { locale: p })
                               })
                           ]
                       })
             ]
         });
     },
-    M = (e) => {
-        let { trialOffer: o, discountOffer: n, onClose: i } = e,
-            t = { section: T.jXE.STICKER_PREMIUM_TIER_2_UPSELL_MODAL };
-        return (0, r.jsxs)(c.ModalFooter, {
-            className: R.footer,
+    w = (e) => {
+        let { trialOffer: r, discountOffer: o, onClose: i } = e,
+            s = { section: T.jXE.STICKER_PREMIUM_TIER_2_UPSELL_MODAL };
+        return (0, n.jsxs)(t.mzw, {
+            className: S.footer,
             children: [
-                (0, r.jsx)(c.Button, {
+                (0, n.jsx)(t.zxk, {
                     onClick: i,
-                    size: c.Button.Sizes.SMALL,
-                    color: c.Button.Colors.PRIMARY,
-                    look: c.Button.Looks.LINK,
+                    size: t.zxk.Sizes.SMALL,
+                    color: t.zxk.Colors.PRIMARY,
+                    look: t.zxk.Looks.LINK,
                     children: L.intl.string(L.t.cpT0Cg)
                 }),
-                (0, r.jsx)(k.Z, {
-                    buttonText: null != o || null != n ? L.intl.string(L.t['Gd/XHB']) : void 0,
-                    premiumModalAnalyticsLocation: t,
-                    subscriptionTier: N.Si.TIER_2,
-                    size: c.Button.Sizes.SMALL,
-                    color: c.Button.Colors.GREEN,
+                (0, n.jsx)(k.Z, {
+                    buttonText: null != r || null != o ? L.intl.string(L.t['Gd/XHB']) : void 0,
+                    premiumModalAnalyticsLocation: s,
+                    subscriptionTier: E.Si.TIER_2,
+                    size: t.zxk.Sizes.SMALL,
+                    color: t.zxk.Colors.GREEN,
                     onClick: () => {
                         i();
                     }
@@ -117,39 +112,39 @@ let B = (e) => {
             ]
         });
     };
-function v(e) {
-    let { onClose: o, ...n } = e,
-        t = (0, d.V)(),
-        l = (0, s.e7)([g.Z], () => g.Z.hasFetchedPaymentSources),
-        _ = t && l,
+function M(e) {
+    let { onClose: r, ...o } = e,
+        s = (0, d.V)(),
+        l = (0, c.e7)([b.Z], () => b.Z.hasFetchedPaymentSources),
+        h = s && l,
         k = (0, x.N)(),
-        I = (0, h.Ng)();
+        C = (0, f.Ng)();
     i.useEffect(() => {
         a.Z.wait(() => {
             (0, u.tZ)(), (0, p.Y2)(null, null, T.JjL.DISCOVERY);
         });
     }, []);
-    let j = _ ? P.ZP.getDefaultPrice(N.Xh.PREMIUM_MONTH_TIER_2) : null;
-    return (0, r.jsx)(f.PaymentContextProvider, {
+    let I = h ? P.ZP.getDefaultPrice(E.Xh.PREMIUM_MONTH_TIER_2) : null;
+    return (0, n.jsx)(_.PaymentContextProvider, {
         activeSubscription: null,
         stepConfigs: [],
         skuIDs: [],
-        children: (0, r.jsx)(c.ModalRoot, {
-            ...n,
+        children: (0, n.jsx)(t.Y0X, {
+            ...o,
             'aria-labelledby': 'sticker-pack-premium-upsell-modal-header',
-            children: (0, r.jsx)(C.Z, {
+            children: (0, n.jsx)(j.Z, {
                 hideBreadcrumbs: !0,
-                body: (0, r.jsx)(E, {
+                body: (0, n.jsx)(v, {
                     trialOffer: k,
-                    discountOffer: I,
-                    isLoading: !_,
-                    price: j,
-                    onClose: o
+                    discountOffer: C,
+                    isLoading: !h,
+                    price: I,
+                    onClose: r
                 }),
-                footer: (0, r.jsx)(M, {
+                footer: (0, n.jsx)(w, {
                     trialOffer: k,
-                    discountOffer: I,
-                    onClose: o
+                    discountOffer: C,
+                    onClose: r
                 }),
                 steps: [m.h8.PREMIUM_UPSELL],
                 currentStep: m.h8.PREMIUM_UPSELL

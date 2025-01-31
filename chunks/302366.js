@@ -1,83 +1,84 @@
-var i = r(117417);
+var i = n(117417);
 e.exports = function (e) {
-    var n = (e = e || {}).reporter,
-        r = e.batchProcessor,
-        a = e.stateHandler.getState;
-    if (!n) throw Error('Missing required dependency: reporter.');
-    function o(n) {
-        var r = e.important ? ' !important; ' : '; ';
-        return (n.join(r) + r).trim();
+    var t = (e = e || {}).reporter,
+        n = e.batchProcessor,
+        r = e.stateHandler.getState;
+    if (!t) throw Error('Missing required dependency: reporter.');
+    function a(t) {
+        var n = e.important ? ' !important; ' : '; ';
+        return (t.join(n) + n).trim();
     }
     function s(e) {
-        return a(e).object;
+        return r(e).object;
     }
     return {
-        makeDetectable: function e(e, s, l) {
-            function u(s, l) {
-                var u = o(['display: block', 'position: absolute', 'top: 0', 'left: 0', 'width: 100%', 'height: 100%', 'border: none', 'padding: 0', 'margin: 0', 'opacity: 0', 'z-index: -1000', 'pointer-events: none']),
-                    c = !1,
-                    d = window.getComputedStyle(s),
-                    f = s.offsetWidth,
-                    p = s.offsetHeight;
-                function h() {
-                    function r() {
-                        if ('static' === d.position) {
+        makeDetectable: function (e, s, o) {
+            function l(s, o) {
+                var l = a(['display: block', 'position: absolute', 'top: 0', 'left: 0', 'width: 100%', 'height: 100%', 'border: none', 'padding: 0', 'margin: 0', 'opacity: 0', 'z-index: -1000', 'pointer-events: none']),
+                    u = !1,
+                    c = window.getComputedStyle(s),
+                    d = s.offsetWidth,
+                    f = s.offsetHeight;
+                function _() {
+                    function n() {
+                        if ('static' === c.position) {
                             s.style.setProperty('position', 'relative', e.important ? 'important' : '');
-                            var r = function (n, r, i, a) {
-                                function o(e) {
+                            var n = function (t, n, i, r) {
+                                function a(e) {
                                     return e.replace(/[^-\d\.]/g, '');
                                 }
-                                var s = i[a];
-                                'auto' !== s && '0' !== o(s) && (n.warn('An element that is positioned static has style.' + a + '=' + s + ' which is ignored due to the static positioning. The element will need to be positioned relative, so the style.' + a + ' will be set to 0. Element: ', r), r.style.setProperty(a, '0', e.important ? 'important' : ''));
+                                var s = i[r];
+                                'auto' !== s && '0' !== a(s) && (t.warn('An element that is positioned static has style.' + r + '=' + s + ' which is ignored due to the static positioning. The element will need to be positioned relative, so the style.' + r + ' will be set to 0. Element: ', n), n.style.setProperty(r, '0', e.important ? 'important' : ''));
                             };
-                            r(n, s, d, 'top'), r(n, s, d, 'right'), r(n, s, d, 'bottom'), r(n, s, d, 'left');
+                            n(t, s, c, 'top'), n(t, s, c, 'right'), n(t, s, c, 'bottom'), n(t, s, c, 'left');
                         }
                     }
-                    function o() {
-                        function e(n, r) {
-                            if (!n.contentDocument) {
-                                var i = a(n);
+                    function a() {
+                        function e(t, n) {
+                            if (!t.contentDocument) {
+                                var i = r(t);
                                 i.checkForObjectDocumentTimeoutId && window.clearTimeout(i.checkForObjectDocumentTimeoutId),
                                     (i.checkForObjectDocumentTimeoutId = setTimeout(function () {
-                                        (i.checkForObjectDocumentTimeoutId = 0), e(n, r);
+                                        (i.checkForObjectDocumentTimeoutId = 0), e(t, n);
                                     }, 100));
                                 return;
                             }
-                            r(n.contentDocument);
+                            n(t.contentDocument);
                         }
-                        !c && r();
-                        var n = this;
-                        e(n, function (e) {
-                            l(s);
+                        u || n();
+                        var t = this;
+                        e(t, function (e) {
+                            o(s);
                         });
                     }
-                    '' !== d.position && (r(d), (c = !0));
-                    var f = document.createElement('object');
-                    if (((f.style.cssText = u), (f.tabIndex = -1), (f.type = 'text/html'), f.setAttribute('aria-hidden', 'true'), (f.onload = o), !i.isIE() && (f.data = 'about:blank'), !!a(s))) s.appendChild(f), (a(s).object = f), i.isIE() && (f.data = 'about:blank');
+                    '' !== c.position && (n(c), (u = !0));
+                    var d = document.createElement('object');
+                    (d.style.cssText = l), (d.tabIndex = -1), (d.type = 'text/html'), d.setAttribute('aria-hidden', 'true'), (d.onload = a), i.isIE() || (d.data = 'about:blank'), r(s) && (s.appendChild(d), (r(s).object = d), i.isIE() && (d.data = 'about:blank'));
                 }
-                (a(s).startSize = {
-                    width: f,
-                    height: p
+                (r(s).startSize = {
+                    width: d,
+                    height: f
                 }),
-                    r ? r.add(h) : h();
+                    n ? n.add(_) : _();
             }
-            !l && ((l = s), (s = e), (e = null)), (e = e || {}).debug, i.isIE(8) ? l(s) : u(s, l);
+            o || ((o = s), (s = e), (e = null)), (e = e || {}).debug, i.isIE(8) ? o(s) : l(s, o);
         },
-        addListener: function e(e, n) {
-            function r() {
-                n(e);
+        addListener: function (e, t) {
+            function n() {
+                t(e);
             }
-            if (i.isIE(8)) (a(e).object = { proxy: r }), e.attachEvent('onresize', r);
+            if (i.isIE(8)) (r(e).object = { proxy: n }), e.attachEvent('onresize', n);
             else {
-                var o = s(e);
-                if (!o) throw Error('Element is not detectable by this strategy.');
-                o.contentDocument.defaultView.addEventListener('resize', r);
+                var a = s(e);
+                if (!a) throw Error('Element is not detectable by this strategy.');
+                a.contentDocument.defaultView.addEventListener('resize', n);
             }
         },
-        uninstall: function e(e) {
-            if (!a(e)) return;
-            var n = s(e);
-            if (!!n) i.isIE(8) ? e.detachEvent('onresize', n.proxy) : e.removeChild(n), a(e).checkForObjectDocumentTimeoutId && window.clearTimeout(a(e).checkForObjectDocumentTimeoutId), delete a(e).object;
+        uninstall: function (e) {
+            if (r(e)) {
+                var t = s(e);
+                t && (i.isIE(8) ? e.detachEvent('onresize', t.proxy) : e.removeChild(t), r(e).checkForObjectDocumentTimeoutId && window.clearTimeout(r(e).checkForObjectDocumentTimeoutId), delete r(e).object);
+            }
         }
     };
 };

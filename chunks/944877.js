@@ -1,47 +1,43 @@
-r.d(n, {
-    Z: function () {
-        return d;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(481060),
-    l = r(689079),
-    u = r(426838);
-let c = (e) => {
+n.d(t, { Z: () => c });
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(481060),
+    o = n(689079),
+    l = n(426838);
+let u = (e) => {
     switch (e.id) {
-        case l.bi.BUILT_IN:
-            return s.SlashBoxIcon;
-        case l.bi.FRECENCY:
-            return s.ClockIcon;
+        case o.bi.BUILT_IN:
+            return s.SsZ;
+        case o.bi.FRECENCY:
+            return s.T39;
         default:
             return;
     }
 };
-function d(e) {
-    let { section: n, className: r, width: a, height: s, padding: l, isSelected: d, selectable: f = !1, ...p } = e,
-        h = c(n);
+function c(e) {
+    let { section: t, className: n, width: r, height: s, padding: o, isSelected: c, selectable: d = !1, ...f } = e,
+        _ = u(t);
     return (0, i.jsx)('div', {
-        className: o()(u.wrapper, r, {
-            [u.selectable]: f,
-            [u.selected]: f && d
+        className: a()(l.wrapper, n, {
+            [l.selectable]: d,
+            [l.selected]: d && c
         }),
         style: {
-            width: a,
+            width: r,
             height: s,
-            padding: null != l ? l : 0
+            padding: null != o ? o : 0
         },
         children:
-            null != h
-                ? (0, i.jsx)(h, {
-                      className: u.icon,
+            null != _
+                ? (0, i.jsx)(_, {
+                      className: l.icon,
                       color: 'currentColor',
                       size: 'custom',
-                      width: a,
+                      width: r,
                       height: s,
-                      ...p
+                      ...f
                   })
                 : null
     });

@@ -1,9 +1,4 @@
-a.r(e),
-    a.d(e, {
-        default: function () {
-            return x;
-        }
-    });
+a.d(e, { default: () => _ });
 var i = a(200651);
 a(192379);
 var t = a(120356),
@@ -16,7 +11,7 @@ var t = a(120356),
     d = a(122021),
     u = a(388032),
     m = a(478588);
-function f(n) {
+function h(n) {
     let { onComplete: e, excludedPlatformTypes: a, includedPlatformTypes: t } = n,
         l = (0, d.fq)();
     return (0, i.jsx)('div', {
@@ -37,7 +32,7 @@ function f(n) {
             )
     });
 }
-function h(n) {
+function x(n) {
     let { integrations: e, onCompleteApplication: a } = n;
     if (null == e || null == a) return null;
     let t = e.filter((n) => {
@@ -63,7 +58,7 @@ function h(n) {
                           return (
                               o()(null != t, 'bot is null'),
                               (0, i.jsxs)(
-                                  s.Clickable,
+                                  s.P3F,
                                   {
                                       onClick: () => a(e.id),
                                       className: m.application,
@@ -75,7 +70,7 @@ function h(n) {
                                           (0, i.jsxs)('div', {
                                               className: m.applicationNameContainer,
                                               children: [
-                                                  (0, i.jsx)(s.Heading, {
+                                                  (0, i.jsx)(s.X6q, {
                                                       variant: 'heading-sm/semibold',
                                                       className: m.applicationNameText,
                                                       children: e.name
@@ -100,35 +95,35 @@ function h(n) {
               ]
           });
 }
-function x(n) {
+function _(n) {
     let { transitionState: e, onComplete: a, onClose: t, excludedPlatformTypes: c, includedPlatformTypes: o, integrations: r, onCompleteApplication: p } = n;
-    return (0, i.jsx)(s.ModalRoot, {
+    return (0, i.jsx)(s.Y0X, {
         'aria-label': u.intl.string(u.t.syl6HR),
-        size: s.ModalSize.SMALL,
+        size: s.CgR.SMALL,
         transitionState: e,
         className: l()(m.container),
         fullscreenOnMobile: !1,
-        children: (0, i.jsxs)(s.ModalContent, {
+        children: (0, i.jsxs)(s.hzk, {
             children: [
                 (0, i.jsxs)('div', {
                     className: m.header,
                     children: [
-                        (0, i.jsx)(s.Heading, {
+                        (0, i.jsx)(s.X6q, {
                             className: m.title,
                             variant: 'heading-md/bold',
                             children: u.intl.string(u.t.syl6HR)
                         }),
-                        (0, i.jsx)(s.ModalCloseButton, { onClick: t })
+                        (0, i.jsx)(s.olH, { onClick: t })
                     ]
                 }),
-                (0, i.jsx)(f, {
+                (0, i.jsx)(h, {
                     onComplete: function (n) {
                         a(n), t();
                     },
                     excludedPlatformTypes: c,
                     includedPlatformTypes: o
                 }),
-                (0, i.jsx)(h, {
+                (0, i.jsx)(x, {
                     integrations: r,
                     onCompleteApplication:
                         null != p

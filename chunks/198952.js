@@ -1,23 +1,22 @@
 n.d(t, {
-    r: function () {
-        return d;
-    }
+    Z: () => u,
+    r: () => d
 });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    s = n(518950),
-    a = n(998502),
-    l = n(388032),
+var s = n(481060),
+    r = n(518950),
+    l = n(998502),
+    a = n(388032),
     o = n(866445);
-let c = a.ZP.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar,
+let c = l.ZP.getEnableHardwareAcceleration() ? s.Xo$ : s.qEK,
     d = (e) => {
-        let { user: t, avatarSize: n = r.AvatarSizes.SIZE_48 } = e,
+        let { user: t, avatarSize: n = s.EFr.SIZE_48 } = e,
             {
-                avatarSrc: a,
+                avatarSrc: l,
                 avatarDecorationSrc: d,
                 eventHandlers: u
-            } = (0, s.Z)({
+            } = (0, r.Z)({
                 user: t,
                 size: n
             });
@@ -25,20 +24,20 @@ let c = a.ZP.getEnableHardwareAcceleration() ? r.AnimatedAvatar : r.Avatar,
             ...u,
             children: (0, i.jsx)(c, {
                 className: o.__invalid_avatar,
-                src: a,
+                src: l,
                 avatarDecoration: d,
                 size: n,
-                'aria-label': l.intl.formatToPlainString(l.t.kFj4h4, { name: t.username })
+                'aria-label': a.intl.formatToPlainString(a.t.kFj4h4, { name: t.username })
+            })
+        });
+    },
+    u = (e) => {
+        let { currentUser: t, otherUser: n, children: s } = e;
+        return (0, i.jsx)('div', {
+            className: o.avatarPairContainer,
+            children: (0, i.jsxs)('div', {
+                className: o.avatarPair,
+                children: [(0, i.jsx)(d, { user: t }), s, (0, i.jsx)(d, { user: n })]
             })
         });
     };
-t.Z = (e) => {
-    let { currentUser: t, otherUser: n, children: r } = e;
-    return (0, i.jsx)('div', {
-        className: o.avatarPairContainer,
-        children: (0, i.jsxs)('div', {
-            className: o.avatarPair,
-            children: [(0, i.jsx)(d, { user: t }), r, (0, i.jsx)(d, { user: n })]
-        })
-    });
-};

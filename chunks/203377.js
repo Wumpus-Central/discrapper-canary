@@ -1,32 +1,21 @@
 n.d(t, {
-    G7: function () {
-        return a;
-    },
-    LG: function () {
-        return d;
-    },
-    Pg: function () {
-        return s;
-    },
-    ZI: function () {
-        return r;
-    },
-    _0: function () {
-        return o;
-    }
+    G7: () => s,
+    LG: () => d,
+    Pg: () => l,
+    ZI: () => o,
+    _0: () => a
 });
 var i,
-    r,
-    l = n(388032);
-let s = 5,
-    a = 10,
-    o = 30;
-((i = r || (r = {}))[(i.DISPLAY = 0)] = 'DISPLAY'), (i[(i.PERMISSIONS = 1)] = 'PERMISSIONS'), (i[(i.MEMBERS = 2)] = 'MEMBERS'), (i[(i.VERIFICATIONS = 3)] = 'VERIFICATIONS');
+    r = n(388032);
+let l = 5,
+    s = 10,
+    a = 30;
+var o = (((i = {})[(i.DISPLAY = 0)] = 'DISPLAY'), (i[(i.PERMISSIONS = 1)] = 'PERMISSIONS'), (i[(i.MEMBERS = 2)] = 'MEMBERS'), (i[(i.VERIFICATIONS = 3)] = 'VERIFICATIONS'), i);
 let c = {
-    afk_channel_id: () => l.intl.string(l.t.KuYcnZ),
-    public_updates_channel_id: () => l.intl.string(l.t.vAyDGR),
-    safety_alerts_channel_id: () => l.intl.string(l.t.sMkYEx),
-    system_channel_id: () => l.intl.string(l.t.NASFnp)
+    afk_channel_id: () => r.intl.string(r.t.KuYcnZ),
+    public_updates_channel_id: () => r.intl.string(r.t.vAyDGR),
+    safety_alerts_channel_id: () => r.intl.string(r.t.sMkYEx),
+    system_channel_id: () => r.intl.string(r.t.NASFnp)
 };
 function d(e) {
     var t;

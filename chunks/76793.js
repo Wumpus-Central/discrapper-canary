@@ -1,13 +1,9 @@
-n.d(t, {
-    q: function () {
-        return E;
-    }
-});
+n.d(t, { q: () => E });
 var i = n(200651),
-    r = n(192379),
-    s = n(442837),
-    a = n(481060),
-    l = n(232567),
+    s = n(192379),
+    r = n(442837),
+    l = n(481060),
+    a = n(232567),
     o = n(700582);
 n(90641), n(615830);
 var c = n(630759),
@@ -15,88 +11,88 @@ var c = n(630759),
 n(921157);
 var u = n(171368),
     m = n(594174),
-    g = n(51144),
-    h = n(388032),
-    p = n(47074);
+    h = n(51144),
+    g = n(388032),
+    _ = n(47074);
 function x(e) {
     let { userId: t, count: n } = e,
-        d = (0, s.e7)([m.default], () => m.default.getUser(t)),
-        x = g.ZP.getFormattedName(d),
-        f = r.useCallback(() => {
+        d = (0, r.e7)([m.default], () => m.default.getUser(t)),
+        x = h.ZP.getFormattedName(d),
+        p = s.useCallback(() => {
             (0, c.Zn)(t);
         }, [t]),
-        E = r.useCallback(() => (0, u.openUserProfileModal)({ userId: t }), [t]);
+        E = s.useCallback(() => (0, u.openUserProfileModal)({ userId: t }), [t]);
     return (
-        r.useEffect(() => {
-            (0, l.PR)(t);
+        s.useEffect(() => {
+            (0, a.PR)(t);
         }, [t]),
         (0, i.jsxs)('div', {
-            className: p.section,
+            className: _.section,
             children: [
                 null != d &&
                     (0, i.jsx)(o.Z, {
-                        className: p.avatar,
+                        className: _.avatar,
                         user: d,
-                        size: a.AvatarSizes.SIZE_40
+                        size: l.EFr.SIZE_40
                     }),
                 (0, i.jsxs)('div', {
-                    className: p.text,
+                    className: _.text,
                     children: [
-                        (0, i.jsx)(a.Clickable, {
-                            className: p.username,
+                        (0, i.jsx)(l.P3F, {
+                            className: _.username,
                             onClick: E,
-                            children: (0, i.jsx)(a.Text, {
+                            children: (0, i.jsx)(l.Text, {
                                 variant: 'text-md/semibold',
                                 color: 'interactive-active',
                                 children: x
                             })
                         }),
-                        (0, i.jsx)(a.Text, {
+                        (0, i.jsx)(l.Text, {
                             variant: 'text-md/medium',
                             color: 'header-secondary',
-                            children: h.intl.format(h.t['/MBjYG'], { count: n })
+                            children: g.intl.format(g.t['/MBjYG'], { count: n })
                         })
                     ]
                 }),
-                (0, i.jsx)(a.Clickable, {
-                    onClick: f,
-                    className: p.sectionIconContainer,
-                    children: (0, i.jsx)(a.TrashIcon, { size: 'xs' })
+                (0, i.jsx)(l.P3F, {
+                    onClick: p,
+                    className: _.sectionIconContainer,
+                    children: (0, i.jsx)(l.XHJ, { size: 'xs' })
                 })
             ]
         })
     );
 }
-function f(e) {
-    let { className: t, userId: n, verification: s, index: l } = e,
-        o = (0, c.bo)(s.timestamp),
-        d = r.useCallback(() => {
-            (0, c.ZU)(n, s.verifiedKey);
-        }, [s.verifiedKey, n]);
+function p(e) {
+    let { className: t, userId: n, verification: r, index: a } = e,
+        o = (0, c.bo)(r.timestamp),
+        d = s.useCallback(() => {
+            (0, c.ZU)(n, r.verifiedKey);
+        }, [r.verifiedKey, n]);
     return (0, i.jsxs)('div', {
         className: t,
         children: [
             (0, i.jsxs)('div', {
-                className: p.text,
+                className: _.text,
                 children: [
-                    (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(l.Text, {
                         variant: 'text-sm/semibold',
                         color: 'interactive-active',
-                        children: h.intl.format(h.t.N4qBBA, { index: l + 1 })
+                        children: g.intl.format(g.t.N4qBBA, { index: a + 1 })
                     }),
-                    (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(l.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
                         children: o
                     })
                 ]
             }),
-            (0, i.jsx)(a.Clickable, {
-                className: p.icon,
+            (0, i.jsx)(l.P3F, {
+                className: _.icon,
                 onClick: d,
-                children: (0, i.jsx)(a.XSmallIcon, {
+                children: (0, i.jsx)(l.Dio, {
                     size: 'md',
-                    color: a.tokens.colors.INTERACTIVE_NORMAL
+                    color: l.TVs.colors.INTERACTIVE_NORMAL
                 })
             })
         ]
@@ -111,21 +107,21 @@ function E(e) {
                 userId: t,
                 count: n.length
             }),
-            n.map((e, s) =>
+            n.map((e, r) =>
                 (0, i.jsxs)(
-                    r.Fragment,
+                    s.Fragment,
                     {
                         children: [
-                            (0, i.jsx)(f, {
-                                className: p.row,
+                            (0, i.jsx)(p, {
+                                className: _.row,
                                 userId: t,
-                                index: s,
+                                index: r,
                                 verification: e
                             }),
-                            s !== n.length - 1 && (0, i.jsx)('div', { className: p.divider })
+                            r !== n.length - 1 && (0, i.jsx)('div', { className: _.divider })
                         ]
                     },
-                    ''.concat(s, '-').concat(e.timestamp)
+                    ''.concat(r, '-').concat(e.timestamp)
                 )
             )
         ]

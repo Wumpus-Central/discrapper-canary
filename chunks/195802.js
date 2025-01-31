@@ -1,16 +1,12 @@
-r.d(n, {
-    Z: function () {
-        return s;
-    }
-});
-var i = r(422903),
-    a = r(646391),
-    o = r(314972);
+n.d(t, { Z: () => s });
+var i = n(422903),
+    r = n(646391),
+    a = n(314972);
 function s(e) {
-    var n;
+    var t;
     return (s = i
-        ? a((n = o)).call(n)
+        ? r((t = a)).call(t)
         : function (e) {
-              return e.__proto__ || o(e);
+              return e.__proto__ || a(e);
           })(e);
 }

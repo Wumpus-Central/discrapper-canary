@@ -1,20 +1,15 @@
-r.d(n, {
-    Z: function () {
-        return s;
-    }
-});
-var i = r(47120);
-var a = r(192379);
-function o(e, n) {
-    let r = e.getBoundingClientRect();
-    return Math.min(1, Math.max(0, (n.clientX - r.left) / r.width));
+n.d(t, { Z: () => a }), n(47120);
+var i = n(192379);
+function r(e, t) {
+    let n = e.getBoundingClientRect();
+    return Math.min(1, Math.max(0, (t.clientX - n.left) / n.width));
 }
-function s(e) {
-    let { ref: n, onDrag: r, onDragStart: i, onDragEnd: s } = e,
-        [l, u] = a.useState(!1);
+function a(e) {
+    let { ref: t, onDrag: n, onDragStart: a, onDragEnd: s } = e,
+        [o, l] = i.useState(!1);
     return (
-        a.useEffect(() => {
-            if (!!l)
+        i.useEffect(() => {
+            if (o)
                 return (
                     window.addEventListener('mouseup', e),
                     window.addEventListener('mousemove', i),
@@ -23,22 +18,22 @@ function s(e) {
                     }
                 );
             function e() {
-                null == s || s(), u(!1);
+                null == s || s(), l(!1);
             }
             function i(e) {
-                let i = n.current;
-                if (null != i) null == r || r(o(i, e));
+                let i = t.current;
+                null != i && (null == n || n(r(i, e)));
             }
-        }, [n, l, s, r]),
+        }, [t, o, s, n]),
         [
-            l,
-            a.useCallback(
+            o,
+            i.useCallback(
                 (e) => {
                     e.preventDefault();
-                    let a = n.current;
-                    if (null != a) u(!0), null == i || i(), null == r || r(o(a, e));
+                    let i = t.current;
+                    null != i && (l(!0), null == a || a(), null == n || n(r(i, e)));
                 },
-                [n, i, r]
+                [t, a, n]
             )
         ]
     );

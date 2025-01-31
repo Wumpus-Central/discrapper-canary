@@ -1,107 +1,102 @@
-s.d(t, {
-    Z: function () {
-        return x;
-    }
-}),
-    s(47120);
+s.d(t, { Z: () => x }), s(47120);
 var n = s(200651),
-    o = s(192379),
-    a = s(512722),
-    i = s.n(a),
+    a = s(192379),
+    o = s(512722),
+    i = s.n(o),
     r = s(442837),
     l = s(692547),
     c = s(481060),
     d = s(771308),
-    u = s(13430),
-    f = s(594174),
-    _ = s(63063),
+    _ = s(13430),
+    u = s(594174),
+    m = s(63063),
     p = s(981631),
-    m = s(723359),
-    h = s(388032),
-    N = s(580200);
+    f = s(723359),
+    b = s(388032),
+    h = s(580200);
 function x(e) {
     let { onComplete: t, onClose: s } = e,
-        [a, x] = o.useState(null),
-        [C, E] = o.useState(null),
-        [T, b] = o.useState(!1),
-        I = (0, r.e7)([f.default], () => f.default.getCurrentUser()),
-        j = o.createRef();
+        [o, x] = a.useState(null),
+        [N, E] = a.useState(null),
+        [C, T] = a.useState(!1),
+        I = (0, r.e7)([u.default], () => u.default.getCurrentUser()),
+        j = a.createRef();
     async function v(e) {
-        e.preventDefault(), i()(null != a, 'Cannot submit null birthday.'), b(!0);
+        e.preventDefault(), i()(null != o, 'Cannot submit null birthday.'), T(!0);
         try {
-            await d.Av(a, m.L0.NEW_USER_FLOW), t();
+            await d.Av(o, f.L0.NEW_USER_FLOW), t();
         } catch (e) {
-            if (null != e.body && null != e.body.date_of_birth) d.wE(m.L0.NEW_USER_FLOW), d.hp(m.L0.NEW_USER_FLOW), s();
+            if (null != e.body && null != e.body.date_of_birth) d.wE(f.L0.NEW_USER_FLOW), d.hp(f.L0.NEW_USER_FLOW), s();
             else {
                 var n;
-                (null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.username) != null ? E(h.intl.string(h.t['TGg/2t'])) : E(null == e ? void 0 : e.body.message);
+                (null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.username) != null ? E(b.intl.string(b.t['TGg/2t'])) : E(null == e ? void 0 : e.body.message);
             }
         }
-        b(!1);
+        T(!1);
     }
-    o.useEffect(() => {
+    a.useEffect(() => {
         null != I && null != I.nsfwAllowed && t();
     }, [I, t]);
-    let A = o.useCallback(
+    let A = a.useCallback(
             (e) => {
                 x(e);
             },
             [x]
         ),
-        F = o.useCallback(() => {
+        g = a.useCallback(() => {
             var e;
             null === (e = j.current) || void 0 === e || e.focus();
         }, [j]);
     return null == I
         ? null
         : (0, n.jsxs)('form', {
-              className: N.content,
+              className: h.content,
               onSubmit: v,
               children: [
-                  (0, n.jsx)(c.ClydeIcon, {
+                  (0, n.jsx)(c.gw7, {
                       size: 'custom',
                       width: 56,
                       height: 40,
-                      className: N.logo,
+                      className: h.logo,
                       color: l.Z.unsafe_rawColors.BRAND_500.css
                   }),
-                  (0, n.jsx)(c.Heading, {
-                      className: N.title,
+                  (0, n.jsx)(c.X6q, {
+                      className: h.title,
                       variant: 'heading-xl/semibold',
-                      children: h.intl.string(h.t.n7i7sr)
+                      children: b.intl.string(b.t.n7i7sr)
                   }),
                   (0, n.jsx)(c.Text, {
                       color: 'text-normal',
-                      className: N.description,
+                      className: h.description,
                       variant: 'text-md/normal',
-                      children: h.intl.format(h.t.fa8kW1, { helpURL: _.Z.getArticleURL(p.BhN.AGE_GATE) })
+                      children: b.intl.format(b.t.fa8kW1, { helpURL: m.Z.getArticleURL(p.BhN.AGE_GATE) })
                   }),
-                  (0, n.jsx)(c.ThemeContextProvider, {
+                  (0, n.jsx)(c.ze6, {
                       theme: p.BRd.LIGHT,
-                      children: (0, n.jsx)(u.Z, {
+                      children: (0, n.jsx)(_.Z, {
                           required: !0,
                           autoFocus: !0,
-                          wrapperClassName: N.formItem,
-                          label: h.intl.string(h.t.rhBeKS),
+                          wrapperClassName: h.formItem,
+                          label: b.intl.string(b.t.rhBeKS),
                           name: 'birthday',
                           onChange: A,
-                          onPopulated: F,
-                          error: C,
-                          value: a
+                          onPopulated: g,
+                          error: N,
+                          value: o
                       })
                   }),
                   (0, n.jsx)('div', {
-                      className: N.footer,
+                      className: h.footer,
                       children: (0, n.jsx)('div', {
-                          className: N.buttonWrapper,
-                          children: (0, n.jsx)(c.Button, {
+                          className: h.buttonWrapper,
+                          children: (0, n.jsx)(c.zxk, {
                               buttonRef: j,
                               type: 'submit',
-                              size: c.Button.Sizes.LARGE,
-                              submitting: T,
-                              disabled: null == a,
+                              size: c.zxk.Sizes.LARGE,
+                              submitting: C,
+                              disabled: null == o,
                               fullWidth: !0,
-                              children: h.intl.string(h.t.PDTjLC)
+                              children: b.intl.string(b.t.PDTjLC)
                           })
                       })
                   })

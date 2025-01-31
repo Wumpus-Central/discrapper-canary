@@ -1,26 +1,21 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(789020);
-var a = r(978003);
-function o(e, n) {
-    return null == (n = null != n ? n : (0, a.Z)(e) ? e.messageSnapshots[0] : void 0)
+n.d(t, { Z: () => r }), n(789020);
+var i = n(978003);
+function r(e, t) {
+    return null == (t = null != t ? t : (0, i.Z)(e) ? e.messageSnapshots[0] : void 0)
         ? e
         : e.merge({
-              content: n.message.content,
-              attachments: n.message.attachments,
-              embeds: n.message.embeds,
-              flags: n.message.flags,
-              components: n.message.components,
+              content: t.message.content,
+              attachments: t.message.attachments,
+              embeds: t.message.embeds,
+              flags: t.message.flags,
+              components: t.message.components,
               editedTimestamp: null,
-              timestamp: n.message.timestamp,
-              codedLinks: n.message.codedLinks,
+              timestamp: t.message.timestamp,
+              codedLinks: t.message.codedLinks,
               reactions: [],
               messageSnapshots: [],
-              stickers: n.message.stickers,
-              stickerItems: n.message.stickerItems,
+              stickers: t.message.stickers,
+              stickerItems: t.message.stickerItems,
               customRenderedContent: null
           });
 }

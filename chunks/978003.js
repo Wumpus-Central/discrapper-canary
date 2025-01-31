@@ -1,17 +1,13 @@
-r.d(n, {
-    Z: function () {
-        return a;
-    },
-    s: function () {
-        return o;
-    }
+n.d(t, {
+    Z: () => r,
+    s: () => a
 });
-var i = r(981631);
-function a(e) {
-    var n;
-    return (null === (n = e.messageReference) || void 0 === n ? void 0 : n.type) === i.Uvt.FORWARD;
+var i = n(981631);
+function r(e) {
+    var t;
+    return (null === (t = e.messageReference) || void 0 === t ? void 0 : t.type) === i.Uvt.FORWARD;
 }
-function o(e) {
-    var n;
-    return (null === (n = e.message_reference) || void 0 === n ? void 0 : n.type) === i.Uvt.FORWARD;
+function a(e) {
+    var t;
+    return (null === (t = e.message_reference) || void 0 === t ? void 0 : t.type) === i.Uvt.FORWARD;
 }

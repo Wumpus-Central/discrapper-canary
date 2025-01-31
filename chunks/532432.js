@@ -1,14 +1,10 @@
-n.d(t, {
-    Z: function () {
-        return g;
-    }
-});
+n.d(t, { Z: () => h });
 var i = n(200651);
 n(192379);
-var r = n(120356),
-    s = n.n(r),
-    a = n(481060),
-    l = n(654904),
+var s = n(120356),
+    r = n.n(s),
+    l = n(481060),
+    a = n(654904),
     o = n(993413),
     c = n(486324),
     d = n(388032),
@@ -19,32 +15,32 @@ let m = [
         extensions: ['gif']
     }
 ];
-function g(e) {
-    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: r, sectionTitle: g, changeAvatarButtonText: h, guildId: p, className: x, disabled: f = !1, isTryItOutFlow: E = !1, forcedDivider: _, withHighlight: C = !1 } = e,
-        T = C ? a.ShinyButton : a.Button;
+function h(e) {
+    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: s, sectionTitle: h, changeAvatarButtonText: g, guildId: _, className: x, disabled: p = !1, isTryItOutFlow: E = !1, forcedDivider: C, withHighlight: f = !1 } = e,
+        T = f ? l.gtL : l.zxk;
     return (0, i.jsx)(o.Z, {
         className: x,
-        title: g,
+        title: h,
         errors: n,
-        disabled: f,
-        forcedDivider: _,
+        disabled: p,
+        forcedDivider: C,
         children: (0, i.jsxs)('div', {
             className: u.buttonsContainer,
             children: [
                 (0, i.jsx)(T, {
-                    className: s()({ [u.buttonHighlighted]: C }),
-                    size: a.Button.Sizes.SMALL,
-                    onClick: () => (0, l.$r)(c.pC.AVATAR, p, E, E ? m : void 0),
-                    children: null != h ? h : d.intl.string(d.t['4OynCA'])
+                    className: r()({ [u.buttonHighlighted]: f }),
+                    size: l.zxk.Sizes.SMALL,
+                    onClick: () => (0, a.$r)(c.pC.AVATAR, _, E, E ? m : void 0),
+                    children: null != g ? g : d.intl.string(d.t['4OynCA'])
                 }),
                 t &&
-                    (0, i.jsx)(a.Button, {
+                    (0, i.jsx)(l.zxk, {
                         className: u.removeButton,
-                        color: a.Button.Colors.PRIMARY,
-                        look: a.Button.Looks.LINK,
-                        size: a.Button.Sizes.SMALL,
-                        onClick: () => r(null),
-                        children: null != p ? d.intl.string(d.t.TDjKDg) : d.intl.string(d.t.twB3f3)
+                        color: l.zxk.Colors.PRIMARY,
+                        look: l.zxk.Looks.LINK,
+                        size: l.zxk.Sizes.SMALL,
+                        onClick: () => s(null),
+                        children: null != _ ? d.intl.string(d.t.TDjKDg) : d.intl.string(d.t.twB3f3)
                     })
             ]
         })

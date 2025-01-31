@@ -1,8 +1,4 @@
 function i(e) {
-    (0, r(226106).Z)(e);
+    (0, n(226106).Z)(e);
 }
-r.d(n, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });

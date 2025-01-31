@@ -1,135 +1,131 @@
-r.d(n, {
-    Z: function () {
-        return y;
-    }
-});
-var i = r(200651),
-    a = r(192379),
-    o = r(990547),
-    s = r(481060),
-    l = r(194359),
-    u = r(819557),
-    c = r(138201),
-    d = r(626135),
-    f = r(63063),
-    p = r(5192),
-    h = r(478923),
-    _ = r(858380),
-    m = r(981631),
-    g = r(388032),
-    E = r(294794);
-function v() {
-    return (0, i.jsxs)(u.z, {
+n.d(t, { Z: () => v });
+var i = n(200651),
+    r = n(192379),
+    a = n(990547),
+    s = n(481060),
+    o = n(194359),
+    l = n(819557),
+    u = n(138201),
+    c = n(626135),
+    d = n(63063),
+    f = n(5192),
+    _ = n(478923),
+    p = n(858380),
+    h = n(981631),
+    m = n(388032),
+    g = n(294794);
+function E() {
+    return (0, i.jsxs)(l.z, {
         children: [
-            (0, i.jsx)(u.q, {
-                title: g.intl.string(g.t.ruhGkp),
-                description: g.intl.string(g.t['/FWKKC']),
-                icon: s.CircleCheckIcon
+            (0, i.jsx)(l.q, {
+                title: m.intl.string(m.t.ruhGkp),
+                description: m.intl.string(m.t['/FWKKC']),
+                icon: s.owK
             }),
-            (0, i.jsx)(u.q, {
-                title: g.intl.string(g.t.N9v3en),
-                description: g.intl.string(g.t.ddpuJi),
-                icon: s.CircleCheckIcon
+            (0, i.jsx)(l.q, {
+                title: m.intl.string(m.t.N9v3en),
+                description: m.intl.string(m.t.ddpuJi),
+                icon: s.owK
             }),
-            (0, i.jsx)(u.q, {
-                title: g.intl.string(g.t['4ycGEx']),
-                description: g.intl.string(g.t['5yfN+v']),
-                icon: s.CircleInformationIcon
+            (0, i.jsx)(l.q, {
+                title: m.intl.string(m.t['4ycGEx']),
+                description: m.intl.string(m.t['5yfN+v']),
+                icon: s.d3s
             })
         ]
     });
 }
-function y(e) {
-    let { user: n, guildId: r, channelId: u, onIgnore: y, onBlock: b, location: I = 'ContextMenu', ...T } = e,
-        S = () => {
-            d.default.track(m.rMx.USER_REMEDIATION_ACTION, {
-                action: _.l.CANCEL_IGNORE,
+function v(e) {
+    let { user: t, guildId: n, channelId: l, onIgnore: v, onBlock: y, location: I = 'ContextMenu', ...b } = e,
+        T = () => {
+            c.default.track(h.rMx.USER_REMEDIATION_ACTION, {
+                action: p.l.CANCEL_IGNORE,
                 location: I
             });
         };
     return (
-        a.useLayoutEffect(
+        r.useLayoutEffect(
             () => () => {
-                d.default.track(m.rMx.USER_REMEDIATION_ACTION, {
-                    action: _.l.DISMISS_IGNORE,
+                c.default.track(h.rMx.USER_REMEDIATION_ACTION, {
+                    action: p.l.DISMISS_IGNORE,
                     location: I
                 });
             },
             [I]
         ),
         (0, i.jsx)(s.ConfirmModal, {
-            confirmText: g.intl.string(g.t.ytCpKi),
-            cancelText: g.intl.string(g.t['ETE/oK']),
+            confirmText: m.intl.string(m.t.ytCpKi),
+            cancelText: m.intl.string(m.t['ETE/oK']),
             onConfirm: () => {
-                null == y || y(), l.Z.ignoreUser(n.id, I, null != u ? u : void 0), d.default.track(m.rMx.IGNORE_USER_CONFIRMED);
+                null == v || v(), o.Z.ignoreUser(t.id, I, null != l ? l : void 0), c.default.track(h.rMx.IGNORE_USER_CONFIRMED);
             },
-            onCancel: S,
-            impression: { impressionName: o.ImpressionNames.IGNORE_USER_CONFIRMATION },
-            confirmButtonColor: s.Button.Colors.BRAND,
-            ...T,
+            onCancel: T,
+            impression: { impressionName: a.ImpressionNames.IGNORE_USER_CONFIRMATION },
+            confirmButtonColor: s.zxk.Colors.BRAND,
+            ...b,
             children: (0, i.jsxs)('div', {
-                className: E.container,
+                className: g.container,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: E.confirmationHeader,
+                        className: g.confirmationHeader,
                         children: [
                             (0, i.jsxs)('div', {
-                                className: E.iconContainer,
+                                className: g.iconContainer,
                                 children: [
-                                    (0, i.jsx)(s.Avatar, {
-                                        size: s.AvatarSizes.SIZE_56,
-                                        src: n.getAvatarURL(void 0, 64),
+                                    (0, i.jsx)(s.qEK, {
+                                        size: s.EFr.SIZE_56,
+                                        src: t.getAvatarURL(void 0, 64),
                                         'aria-hidden': !0
                                     }),
                                     (0, i.jsx)('div', {
-                                        className: E.icon,
-                                        children: (0, i.jsx)(s.EyeSlashIcon, {})
+                                        className: g.icon,
+                                        children: (0, i.jsx)(s.kZF, {})
                                     })
                                 ]
                             }),
                             (0, i.jsxs)('div', {
                                 children: [
-                                    (0, i.jsx)(s.Heading, {
+                                    (0, i.jsx)(s.X6q, {
                                         variant: 'heading-xl/bold',
                                         color: 'header-primary',
-                                        children: g.intl.format(g.t['WrQD/f'], { username: p.ZP.getName(r, u, n) })
+                                        children: m.intl.format(m.t['WrQD/f'], { username: f.ZP.getName(n, l, t) })
                                     }),
                                     (0, i.jsx)(s.Text, {
                                         variant: 'text-md/medium',
                                         color: 'header-secondary',
-                                        children: g.intl.string(g.t.JKL1u7)
+                                        children: m.intl.string(m.t.JKL1u7)
                                     })
                                 ]
                             })
                         ]
                     }),
-                    (0, i.jsx)(v, {}),
+                    (0, i.jsx)(E, {}),
                     (0, i.jsxs)('div', {
-                        className: E.otherOptions,
+                        className: g.otherOptions,
                         children: [
-                            (0, i.jsx)(c.rT, {
-                                title: g.intl.string(g.t['1v01go']),
-                                children: (0, i.jsx)(c.ZP, {
-                                    title: g.intl.string(g.t.bwxY39),
-                                    description: g.intl.string(g.t.NTnf1d),
+                            (0, i.jsx)(u.rT, {
+                                title: m.intl.string(m.t['1v01go']),
+                                children: (0, i.jsx)(u.ZP, {
+                                    title: m.intl.string(m.t.bwxY39),
+                                    description: m.intl.string(m.t.NTnf1d),
                                     titleVariant: 'text-md/medium',
                                     descriptionVariant: 'text-xs/medium',
-                                    buttonText: g.intl.string(g.t.QdfUHB),
-                                    buttonColor: s.ButtonColors.PRIMARY,
+                                    buttonText: m.intl.string(m.t.QdfUHB),
+                                    buttonColor: s.Ttl.PRIMARY,
                                     onButtonPress: () => {
-                                        d.default.track(m.rMx.USER_REMEDIATION_ACTION, {
-                                            action: _.l.GOTO_BLOCK,
+                                        c.default.track(h.rMx.USER_REMEDIATION_ACTION, {
+                                            action: p.l.GOTO_BLOCK,
                                             location: I
                                         }),
-                                            (0, s.closeAllModals)(),
-                                            (0, s.openModal)((e) =>
-                                                (0, i.jsx)(h.Z, {
+                                            (0, s.pTH)(),
+                                            (0, s.h7j)((e) =>
+                                                (0, i.jsx)(_.Z, {
                                                     ...e,
-                                                    user: n,
-                                                    guildId: r,
-                                                    channelId: u,
-                                                    onBlock: b,
-                                                    onIgnore: y,
+                                                    user: t,
+                                                    guildId: n,
+                                                    channelId: l,
+                                                    onBlock: y,
+                                                    onIgnore: v,
                                                     location: I
                                                 })
                                             );
@@ -138,8 +134,8 @@ function y(e) {
                             }),
                             (0, i.jsx)(s.Text, {
                                 variant: 'text-sm/medium',
-                                className: E.featureGuide,
-                                children: g.intl.format(g.t.Hjvqr6, { articleLink: f.Z.getArticleURL(m.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE) })
+                                className: g.featureGuide,
+                                children: m.intl.format(m.t.Hjvqr6, { articleLink: d.Z.getArticleURL(h.BhN.STEALTH_REMEDIATION_FEATURE_GUIDE) })
                             })
                         ]
                     })

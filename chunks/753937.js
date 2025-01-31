@@ -1,7 +1,5 @@
-n.r(
-    (e.exports = {
-        container: 'container_ea91d1',
-        sectionDivider: 'sectionDivider_ea91d1',
-        card: 'card_ea91d1'
-    })
-);
+e.exports = {
+    container: 'container_fc2e20',
+    sectionDivider: 'sectionDivider_fc2e20',
+    card: 'card_fc2e20'
+};

@@ -1,5 +1,6 @@
-e.exports = {
-    inputWrapper: 'inputWrapper_c40e61',
-    paypalIcon: 'paypalIcon_c40e61',
-    paypalInput: 'paypalInput_c40e61'
+var i = {
+    inputWrapper: 'inputWrapper_a76d33',
+    paypalIcon: 'paypalIcon_a76d33',
+    paypalInput: 'paypalInput_a76d33'
 };
+e.exports = i;

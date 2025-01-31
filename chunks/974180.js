@@ -1,10 +1,6 @@
 i.d(n, {
-    Ay: function () {
-        return j;
-    },
-    yk: function () {
-        return Q;
-    }
+    Ay: () => j,
+    yk: () => Q
 }),
     i(47120),
     i(653041);
@@ -93,7 +89,7 @@ let j = 'message1',
         }
     })();
 function ta() {
-    return !!(b.Z.getDesktopType() === B.qrD.NEVER || L.Z.getStatus() === B.Skl.DND || R.QZ.getSetting()) || !1;
+    return !!(b.Z.getDesktopType() === B.qrD.NEVER || L.Z.getStatus() === B.Skl.DND || R.QZ.getSetting());
 }
 function tu(t) {
     return null != V.Z.getVoiceStateForChannel(t);
@@ -111,8 +107,8 @@ J(tr, 'displayName', 'NotificationStore'),
             : {
                   NOTIFICATIONS_SET_PERMISSION_STATE: function (t) {
                       let { enabled: n } = t;
-                      n === B.$Ab.ENABLED &&
-                          !q.isPlatformEmbedded &&
+                      n !== B.$Ab.ENABLED ||
+                          q.isPlatformEmbedded ||
                           z.Z.showNotification(
                               i(185672),
                               K.intl.string(K.t.VSgOVl),
@@ -309,7 +305,7 @@ J(tr, 'displayName', 'NotificationStore'),
                       if (ta() || null == n.notification_type) return !1;
                       n.notification_type === X.sy.EVENT_START &&
                           (n.entity_type === X.WX.STAGE_INSTANCE || n.entity_type === X.WX.VOICE
-                              ? !(function (t) {
+                              ? (function (t) {
                                     if (ta()) return !1;
                                     let n = t.channel_id;
                                     if (null == n || tu(n)) return !1;
@@ -338,7 +334,7 @@ J(tr, 'displayName', 'NotificationStore'),
                                     );
                                 })(n)
                               : n.entity_type === X.WX.EXTERNAL &&
-                                !(function (t) {
+                                (function (t) {
                                     if (ta()) return !1;
                                     let n = M.default.getCurrentUser(),
                                         i = D.Z.getGuild(t.guild_id);

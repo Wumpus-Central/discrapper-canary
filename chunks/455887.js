@@ -1,8 +1,9 @@
-e.exports = {
-    badgeContainer: 'badgeContainer_d60c6d',
-    badgeLabel: 'badgeLabel_d60c6d',
-    badgesContainer: 'badgesContainer_d60c6d',
-    badgesContainerCard: 'badgesContainerCard_d60c6d',
-    badgesContainerPopout: 'badgesContainerPopout_d60c6d',
-    badgesContainerGameProfile: 'badgesContainerGameProfile_d60c6d'
+var i = {
+    badgeContainer: 'badgeContainer__635ed',
+    badgeLabel: 'badgeLabel__635ed',
+    badgesContainer: 'badgesContainer__635ed',
+    badgesContainerCard: 'badgesContainerCard__635ed',
+    badgesContainerGameProfile: 'badgesContainerGameProfile__635ed',
+    badgesContainerPopout: 'badgesContainerPopout__635ed'
 };
+e.exports = i;

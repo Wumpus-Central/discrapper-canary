@@ -1,35 +1,31 @@
-r.d(n, {
-    Z: function () {
-        return c;
+n.d(t, { Z: () => u });
+var i = n(200651);
+n(192379);
+var r = n(512722),
+    a = n.n(r),
+    s = n(481060),
+    o = n(695346),
+    l = n(572004);
+function u(e) {
+    let { id: t, label: n, onSuccess: r, shiftId: u, showIconFirst: c, showWithoutDeveloperMode: d, focusedClassName: f } = e,
+        _ = o.Sb.useSetting();
+    function p(e) {
+        let n = null != u && e.shiftKey ? u : t;
+        a()(null != n, 'cannot copy null text'), (0, l.JG)(n), null == r || r();
     }
-});
-var i = r(200651);
-r(192379);
-var a = r(512722),
-    o = r.n(a),
-    s = r(481060),
-    l = r(695346),
-    u = r(572004);
-function c(e) {
-    let { id: n, label: r, onSuccess: a, shiftId: c, showIconFirst: d, showWithoutDeveloperMode: f, focusedClassName: p } = e,
-        h = l.Sb.useSetting();
-    function _(e) {
-        let r = null != c && e.shiftKey ? c : n;
-        o()(null != r, 'cannot copy null text'), (0, u.JG)(r), null == a || a();
-    }
-    let m = f || h;
-    if (__OVERLAY__ || !m || !u.wS || null == n) return null;
-    let g = 'devmode-copy-id-'.concat(n);
+    let h = d || _;
+    if (__OVERLAY__ || !h || !l.wS || null == t) return null;
+    let m = 'devmode-copy-id-'.concat(t);
     return (0, i.jsx)(
-        s.MenuItem,
+        s.sNh,
         {
-            id: g,
-            label: r,
-            action: _,
-            icon: d ? void 0 : s.IdIcon,
-            iconLeft: d ? s.IdIcon : void 0,
-            focusedClassName: p
+            id: m,
+            label: n,
+            action: p,
+            icon: c ? void 0 : s.VuL,
+            iconLeft: c ? s.VuL : void 0,
+            focusedClassName: f
         },
-        g
+        m
     );
 }

@@ -1,49 +1,43 @@
 n.d(t, {
-    Vz: function () {
-        return c;
-    },
-    Zn: function () {
-        return u;
-    },
-    aB: function () {
-        return d;
-    }
+    Vz: () => c,
+    Zn: () => u,
+    aB: () => d
 }),
     n(757143);
 var i = n(392711),
-    o = n(772848),
-    a = n(134432),
-    l = n(963838),
-    s = n(302221),
+    a = n(772848),
+    o = n(134432),
+    s = n(963838),
+    l = n(302221),
     r = n(347904);
 let c = 7.5,
     d = (0, i.memoize)(
         (e, t, n, i) =>
             new Promise((e) => {
-                let o = new Image();
-                (o.src = t),
-                    (o.crossOrigin = 'Anonymous'),
-                    (o.onload = () => {
-                        let t = 32 * (0, a.x_)(),
-                            l = JSON.stringify(n);
-                        if ((null != i && (l = (0, r.s4)(l, (0, s.oo)(i))), (o.width === t && o.height === t) || (0 === o.width && 0 === o.height))) e(JSON.parse(l));
+                let a = new Image();
+                (a.src = t),
+                    (a.crossOrigin = 'Anonymous'),
+                    (a.onload = () => {
+                        let t = 32 * (0, o.x_)(),
+                            s = JSON.stringify(n);
+                        if ((null != i && (s = (0, r.s4)(s, (0, l.oo)(i))), (a.width === t && a.height === t) || (0 === a.width && 0 === a.height))) e(JSON.parse(s));
                         else {
-                            let t = (128 / o.width) * o.height;
-                            e(JSON.parse((l = (l = l.replace(/"w":128,"h":128/, '"w":128,"h":'.concat(t))).replace(/"a":{"a":0,"k":\[64,64/, '"a":{"a":0,"k":[64,'.concat(t / 2)))));
+                            let t = (128 / a.width) * a.height;
+                            e(JSON.parse((s = (s = s.replace(/"w":128,"h":128/, '"w":128,"h":'.concat(t))).replace(/"a":{"a":0,"k":\[64,64/, '"a":{"a":0,"k":[64,'.concat(t / 2)))));
                         }
                     });
             })
     );
 function u(e, t, n, i) {
-    let { emojiSize: a, key: s, messageId: r } = null != i ? i : {},
-        c = (0, l._r)(e, null != a ? 2 * a : void 0);
+    let { emojiSize: o, key: l, messageId: r } = null != i ? i : {},
+        c = (0, s._r)(e, null != o ? 2 * o : void 0);
     return {
         channelId: n,
         messageId: r,
         emoji: e,
-        animationId: (0, o.Z)(),
+        animationId: (0, a.Z)(),
         url: c,
-        key: s,
+        key: l,
         color: t
     };
 }

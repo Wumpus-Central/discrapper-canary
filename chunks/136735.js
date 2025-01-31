@@ -1,48 +1,42 @@
-t.r(l),
-    t.d(l, {
-        default: function () {
-            return F;
-        }
-    }),
-    t(47120);
-var n = t(200651),
-    i = t(192379),
-    s = t(120356),
-    a = t.n(s),
-    o = t(772848),
-    r = t(36793),
-    u = t(442837),
-    d = t(780384),
-    c = t(481060),
-    m = t(600164),
-    f = t(339085),
-    g = t(349709),
-    v = t(763610),
-    x = t(210887),
-    p = t(430824),
-    j = t(594174),
-    h = t(626135),
-    I = t(424218),
-    N = t(63063),
-    C = t(956664),
-    E = t(268350),
-    S = t(373228),
-    T = t(378233),
-    Z = t(419922),
-    k = t(611480),
-    b = t(981631),
-    y = t(388032),
-    B = t(496699),
-    R = t(434227),
-    _ = t(600126);
-let A = new Set(['application/json', 'image/png', 'image/apng', 'image/gif']),
+i.d(l, { default: () => U }), i(47120);
+var t = i(200651),
+    n = i(192379),
+    s = i(120356),
+    a = i.n(s),
+    o = i(772848),
+    r = i(36793),
+    d = i(442837),
+    u = i(780384),
+    c = i(481060),
+    m = i(600164),
+    f = i(339085),
+    g = i(349709),
+    x = i(763610),
+    v = i(210887),
+    j = i(430824),
+    p = i(594174),
+    h = i(626135),
+    I = i(424218),
+    N = i(63063),
+    k = i(956664),
+    E = i(268350),
+    C = i(373228),
+    S = i(378233),
+    y = i(419922),
+    Z = i(611480),
+    b = i(981631),
+    z = i(388032),
+    R = i(496699),
+    _ = i(434227),
+    w = i(600126);
+let T = new Set(['application/json', 'image/png', 'image/apng', 'image/gif']),
     D = [
         {
             name: 'Sticker file',
             extensions: ['json', 'png', 'apng', 'gif']
         }
     ];
-function w(e, l) {
+function A(e, l) {
     h.default.track(b.rMx.STICKER_UPLOAD_COMPLETED, {
         successful: e,
         error: null != l ? l : ''
@@ -50,43 +44,43 @@ function w(e, l) {
 }
 let P = (e) => {
         let { stickerPreview: l } = e;
-        return (0, n.jsxs)('div', {
-            className: B.preview,
+        return (0, t.jsxs)('div', {
+            className: R.preview,
             children: [
-                (0, n.jsx)('div', {
-                    className: B.previewDark,
+                (0, t.jsx)('div', {
+                    className: R.previewDark,
                     children:
                         null != l
                             ? l
-                            : (0, n.jsx)('img', {
-                                  src: R,
-                                  alt: y.intl.string(y.t.qOsjZm)
+                            : (0, t.jsx)('img', {
+                                  src: _,
+                                  alt: z.intl.string(z.t.qOsjZm)
                               })
                 }),
-                (0, n.jsx)('div', {
-                    className: B.previewLight,
+                (0, t.jsx)('div', {
+                    className: R.previewLight,
                     children:
                         null != l
                             ? l
-                            : (0, n.jsx)('img', {
-                                  src: _,
-                                  alt: y.intl.string(y.t.YC5NAA)
+                            : (0, t.jsx)('img', {
+                                  src: w,
+                                  alt: z.intl.string(z.t.YC5NAA)
                               })
                 })
             ]
         });
     },
-    z = (e) => {
-        let { sticker: l, previewData: t, onStickerError: i } = e;
+    B = (e) => {
+        let { sticker: l, previewData: i, onStickerError: n } = e;
         if (null != l)
-            return (0, n.jsx)(Z.ZP, {
+            return (0, t.jsx)(y.ZP, {
                 size: 160,
                 sticker: l
             });
-        if (null == t) return null;
-        let { id: s, formatType: a, content: o } = t;
-        return (0, n.jsx)(
-            Z.ZP,
+        if (null == i) return null;
+        let { id: s, formatType: a, content: o } = i;
+        return (0, t.jsx)(
+            y.ZP,
             {
                 assetData: o,
                 fileUri: o,
@@ -98,269 +92,269 @@ let P = (e) => {
                     pack_id: '',
                     format_type: a
                 },
-                onError: i
+                onError: n
             },
             s
         );
     };
 async function L(e) {
-    let l = await (0, C.fD)(e),
-        t = new Image();
-    (t.src = l), await t.decode();
-    let n = (0, r.Ae)(t, 320, 320);
-    return (0, C.Bo)(n, e.name, e.type);
+    let l = await (0, k.fD)(e),
+        i = new Image();
+    (i.src = l), await i.decode();
+    let t = (0, r.Ae)(i, 320, 320);
+    return (0, k.Bo)(t, e.name, e.type);
 }
-function F(e) {
-    var l, t, s, r, Z, R, _, F;
-    let { transitionState: U, onClose: M, guildId: O, sticker: K } = e,
-        H = (0, u.e7)([x.Z], () => x.Z.theme),
-        V = (0, u.e7)([f.ZP], () => ((null == K ? void 0 : K.tags) != null ? f.ZP.getCustomEmojiById(K.tags) : null)),
-        Y = null !== (t = null === (l = j.default.getCurrentUser()) || void 0 === l ? void 0 : l.isStaff()) && void 0 !== t && t ? k.OC : k.Ht,
-        [q, G] = i.useState(null),
-        [W, X] = i.useState(null !== (s = null == K ? void 0 : K.name) && void 0 !== s ? s : ''),
-        [J, Q] = i.useState({
+function U(e) {
+    var l, i, s, r, y, _, w, U;
+    let { transitionState: O, onClose: K, guildId: M, sticker: F } = e,
+        H = (0, d.e7)([v.Z], () => v.Z.theme),
+        Y = (0, d.e7)([f.ZP], () => ((null == F ? void 0 : F.tags) != null ? f.ZP.getCustomEmojiById(F.tags) : null)),
+        q = null !== (i = null === (l = p.default.getCurrentUser()) || void 0 === l ? void 0 : l.isStaff()) && void 0 !== i && i ? Z.OC : Z.Ht,
+        [V, W] = n.useState(null),
+        [X, J] = n.useState(null !== (s = null == F ? void 0 : F.name) && void 0 !== s ? s : ''),
+        [G, Q] = n.useState({
             file: null,
-            filename: null !== (r = (0, T._V)(K)) && void 0 !== r ? r : ''
+            filename: null !== (r = (0, S._V)(F)) && void 0 !== r ? r : ''
         }),
-        [$, ee] = i.useState(null == V ? void 0 : V.id),
-        [el, et] = i.useState(null !== (Z = null == V ? void 0 : V.name) && void 0 !== Z ? Z : null == K ? void 0 : K.tags),
-        [en, ei] = i.useState(null !== (R = null == K ? void 0 : K.description) && void 0 !== R ? R : ''),
-        [es, ea] = i.useState(!1),
-        [eo, er] = i.useState(null),
-        eu = (0, u.e7)([p.Z], () => p.Z.getGuild(O)),
-        ed = (null == eu ? void 0 : eu.hasFeature(b.oNc.PARTNERED)) || (null == eu ? void 0 : eu.hasFeature(b.oNc.VERIFIED)),
-        ec = null != K,
-        em = ec || (null == J ? void 0 : J.file) != null,
-        ef = 0 === en.length || (en.length >= 2 && en.length <= 100),
-        eg = !es && (null == eo ? void 0 : eo.isBlocking) !== !0 && W.length >= 2 && (null != $ || null != el || ((null == K ? void 0 : K.tags) != null && (null == K ? void 0 : K.tags) !== '')) && em && ef,
-        ev = async (e) => {
+        [$, ee] = n.useState(null == Y ? void 0 : Y.id),
+        [el, ei] = n.useState(null !== (y = null == Y ? void 0 : Y.name) && void 0 !== y ? y : null == F ? void 0 : F.tags),
+        [et, en] = n.useState(null !== (_ = null == F ? void 0 : F.description) && void 0 !== _ ? _ : ''),
+        [es, ea] = n.useState(!1),
+        [eo, er] = n.useState(null),
+        ed = (0, d.e7)([j.Z], () => j.Z.getGuild(M)),
+        eu = (null == ed ? void 0 : ed.hasFeature(b.oNc.PARTNERED)) || (null == ed ? void 0 : ed.hasFeature(b.oNc.VERIFIED)),
+        ec = null != F,
+        em = ec || (null == G ? void 0 : G.file) != null,
+        ef = 0 === et.length || (et.length >= 2 && et.length <= 100),
+        eg = !es && (null == eo ? void 0 : eo.isBlocking) !== !0 && X.length >= 2 && (null != $ || null != el || ((null == F ? void 0 : F.tags) != null && (null == F ? void 0 : F.tags) !== '')) && em && ef,
+        ex = async (e) => {
             var l;
             if (null == e) return;
-            let t = null === (l = e.type) || void 0 === l ? void 0 : l.split(';')[0];
-            if (!A.has(t)) {
+            let i = null === (l = e.type) || void 0 === l ? void 0 : l.split(';')[0];
+            if (!T.has(i)) {
                 er({
-                    message: y.intl.string(y.t.B2hGAA),
+                    message: z.intl.string(z.t.B2hGAA),
                     isBlocking: !0
                 });
                 return;
             }
-            let n = e;
-            if ('image/png' === t && e.size > Y && !(await (0, C.c0)(e))) {
-                let l = (n = await L(e)).size > Y;
+            let t = e;
+            if ('image/png' === i && e.size > q && !(await (0, k.c0)(e))) {
+                let l = (t = await L(e)).size > q;
                 h.default.track(b.rMx.STICKER_FILE_RESIZED, {
                     original_file_size_bytes: e.size,
-                    resized_file_size_bytes: n.size,
+                    resized_file_size_bytes: t.size,
                     resized_file_too_big: l
                 });
             }
-            if (n.size > Y) {
+            if (t.size > q) {
                 er({
-                    message: y.intl.formatToPlainString(y.t['3eK7Rk'], { maxSize: (0, I.IC)(Y, { useKibibytes: !0 }) }),
-                    isBlocking: null == J.file
+                    message: z.intl.formatToPlainString(z.t['3eK7Rk'], { maxSize: (0, I.IC)(q, { useKibibytes: !0 }) }),
+                    isBlocking: null == G.file
                 }),
                     h.default.track(b.rMx.STICKER_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, {
-                        size: n.size,
-                        filetype: t
+                        size: t.size,
+                        filetype: i
                     });
                 return;
             }
-            let i = (0, T.Zv)(n.type);
-            if (i === S.u3.LOTTIE) {
-                if (!ed) {
+            let n = (0, S.Zv)(t.type);
+            if (n === C.u3.LOTTIE) {
+                if (!eu) {
                     er({
-                        message: y.intl.format(y.t.RNNjy8, { articleURL: N.Z.getArticleURL(b.BhN.STICKERS_UPLOAD) }),
+                        message: z.intl.format(z.t.RNNjy8, { articleURL: N.Z.getArticleURL(b.BhN.STICKERS_UPLOAD) }),
                         isBlocking: !0
                     });
                     return;
                 }
                 let e = new FileReader();
                 e.addEventListener('load', () => {
-                    G({
+                    W({
                         id: (0, o.Z)(),
-                        formatType: i,
+                        formatType: n,
                         content: e.result
                     }),
                         er(null);
                 }),
-                    e.readAsText(n);
+                    e.readAsText(t);
             } else {
-                let e = await (0, C.fD)(n);
-                G({
+                let e = await (0, k.fD)(t);
+                W({
                     id: (0, o.Z)(),
-                    formatType: i,
+                    formatType: n,
                     content: e
                 }),
                     er(null);
             }
             Q({
-                file: n,
-                filename: n.name
+                file: t,
+                filename: t.name
             });
         },
-        ex = async (e) => {
-            var l, t, n, i, s, a;
+        ev = async (e) => {
+            var l, i, t, n, s, a;
             e.preventDefault();
-            let o = null !== (t = null !== (l = null != $ ? $ : el) && void 0 !== l ? l : null == K ? void 0 : K.tags) && void 0 !== t ? t : '';
+            let o = null !== (i = null !== (l = null != $ ? $ : el) && void 0 !== l ? l : null == F ? void 0 : F.tags) && void 0 !== i ? i : '';
             try {
                 if ((ea(!0), ec))
-                    await (0, E.Jf)(O, null !== (n = null == K ? void 0 : K.id) && void 0 !== n ? n : '', {
-                        name: W,
+                    await (0, E.Jf)(M, null !== (t = null == F ? void 0 : F.id) && void 0 !== t ? t : '', {
+                        name: X,
                         tags: o,
-                        description: en
+                        description: et
                     });
                 else {
                     let e = new FormData();
-                    e.append('name', W), e.append('tags', o), e.append('description', en), (null == J ? void 0 : J.file) != null && e.append('file', J.file), (a = null !== (s = null === (i = J.file) || void 0 === i ? void 0 : i.type) && void 0 !== s ? s : ''), h.default.track(b.rMx.STICKER_UPLOAD_STARTED, { filetype: a }), await (0, E.lY)(O, e), w(!0);
+                    e.append('name', X), e.append('tags', o), e.append('description', et), (null == G ? void 0 : G.file) != null && e.append('file', G.file), (a = null !== (s = null === (n = G.file) || void 0 === n ? void 0 : n.type) && void 0 !== s ? s : ''), h.default.track(b.rMx.STICKER_UPLOAD_STARTED, { filetype: a }), await (0, E.lY)(M, e), A(!0);
                 }
-                M();
+                K();
             } catch (e) {
                 er({
                     message: e.body.message,
                     isBlocking: !1
                 }),
-                    w(!1, e.body.message);
+                    A(!1, e.body.message);
             } finally {
                 ea(!1);
             }
         },
-        ep = z({
-            sticker: K,
-            previewData: q,
-            onStickerError: i.useCallback(() => {
+        ej = B({
+            sticker: F,
+            previewData: V,
+            onStickerError: n.useCallback(() => {
                 er({
-                    message: y.intl.string(y.t['/WIYNT']),
+                    message: z.intl.string(z.t['/WIYNT']),
                     isBlocking: !0
                 });
             }, [])
         }),
-        ej = ed ? y.t.alYXBA : y.t.kpcMfn;
-    return (0, n.jsxs)(c.ModalRoot, {
-        transitionState: U,
+        ep = eu ? z.t.alYXBA : z.t.kpcMfn;
+    return (0, t.jsxs)(c.Y0X, {
+        transitionState: O,
         'aria-labelledby': 'STICKER_UPLOAD_MODAL',
-        className: B.modal,
+        className: R.modal,
         children: [
-            (0, n.jsx)(c.ModalCloseButton, {
-                onClick: M,
-                className: B.modalClose
+            (0, t.jsx)(c.olH, {
+                onClick: K,
+                className: R.modalClose
             }),
-            (0, n.jsxs)('form', {
-                onSubmit: ex,
-                className: B.form,
+            (0, t.jsxs)('form', {
+                onSubmit: ev,
+                className: R.form,
                 children: [
-                    (0, n.jsxs)(c.ModalContent, {
-                        className: B.modalContent,
+                    (0, t.jsxs)(c.hzk, {
+                        className: R.modalContent,
                         children: [
-                            (0, n.jsxs)(c.ModalHeader, {
+                            (0, t.jsxs)(c.xBx, {
                                 direction: m.Z.Direction.VERTICAL,
                                 separator: !1,
-                                className: B.modalHeader,
+                                className: R.modalHeader,
                                 children: [
-                                    (0, n.jsx)(c.Heading, {
+                                    (0, t.jsx)(c.X6q, {
                                         variant: 'heading-xl/semibold',
-                                        className: B.modalHeaderTitle,
-                                        children: y.intl.string(y.t.yxVsBA)
+                                        className: R.modalHeaderTitle,
+                                        children: z.intl.string(z.t.yxVsBA)
                                     }),
-                                    (0, n.jsx)(c.Text, {
+                                    (0, t.jsx)(c.Text, {
                                         variant: 'text-md/normal',
-                                        children: y.intl.format(ej, { fileSize: (0, I.IC)(k.Ht, { useKibibytes: !0 }) })
+                                        children: z.intl.format(ep, { fileSize: (0, I.IC)(Z.Ht, { useKibibytes: !0 }) })
                                     })
                                 ]
                             }),
-                            (0, n.jsx)(c.FormSection, {
-                                title: y.intl.string(y.t.gjdiKC),
-                                className: B.formItem,
-                                children: (0, n.jsx)(P, { stickerPreview: ep })
+                            (0, t.jsx)(c.hjN, {
+                                title: z.intl.string(z.t.gjdiKC),
+                                className: R.formItem,
+                                children: (0, t.jsx)(P, { stickerPreview: ej })
                             }),
-                            (0, n.jsxs)(c.FormSection, {
-                                className: a()(B.formItem, B.formItemRow),
+                            (0, t.jsxs)(c.hjN, {
+                                className: a()(R.formItem, R.formItemRow),
                                 children: [
-                                    (0, n.jsx)(c.FormItem, {
-                                        title: ec ? y.intl.string(y.t.wp36s7) : y.intl.string(y.t.AM3mzc),
+                                    (0, t.jsx)(c.xJW, {
+                                        title: ec ? z.intl.string(z.t.wp36s7) : z.intl.string(z.t.AM3mzc),
                                         required: !0,
-                                        className: B.formItemRowChild,
+                                        className: R.formItemRowChild,
                                         children: ec
-                                            ? (0, n.jsx)(c.TextInput, {
+                                            ? (0, t.jsx)(c.oil, {
                                                   disabled: !0,
-                                                  value: null !== (_ = null == J ? void 0 : J.filename) && void 0 !== _ ? _ : ''
+                                                  value: null !== (w = null == G ? void 0 : G.filename) && void 0 !== w ? w : ''
                                               })
-                                            : (0, n.jsx)(v.Z, {
-                                                  buttonText: y.intl.string(y.t.xEnDUV),
+                                            : (0, t.jsx)(x.Z, {
+                                                  buttonText: z.intl.string(z.t.xEnDUV),
                                                   filters: D,
-                                                  filename: null !== (F = null == J ? void 0 : J.filename) && void 0 !== F ? F : '',
-                                                  placeholder: y.intl.string(y.t.rUYLJy),
-                                                  onFileSelect: ev
+                                                  filename: null !== (U = null == G ? void 0 : G.filename) && void 0 !== U ? U : '',
+                                                  placeholder: z.intl.string(z.t.rUYLJy),
+                                                  onFileSelect: ex
                                               })
                                     }),
-                                    (0, n.jsx)(g.Z, {
-                                        className: B.formItemRowChild,
-                                        guildId: O,
+                                    (0, t.jsx)(g.Z, {
+                                        className: R.formItemRowChild,
+                                        guildId: M,
                                         emojiId: $,
                                         emojiName: el,
                                         setEmojiId: ee,
-                                        setEmojiName: et,
+                                        setEmojiName: ei,
                                         shouldUpdateBothEmojiFields: !0
                                     })
                                 ]
                             }),
-                            (0, n.jsx)(c.FormItem, {
-                                title: y.intl.string(y.t['0VRh6u']),
+                            (0, t.jsx)(c.xJW, {
+                                title: z.intl.string(z.t['0VRh6u']),
                                 required: !0,
-                                className: B.formItem,
-                                children: (0, n.jsx)(c.TextInput, {
-                                    value: W,
-                                    onChange: X,
-                                    placeholder: y.intl.string(y.t['3fGttb']),
+                                className: R.formItem,
+                                children: (0, t.jsx)(c.oil, {
+                                    value: X,
+                                    onChange: J,
+                                    placeholder: z.intl.string(z.t['3fGttb']),
                                     maxLength: 30
                                 })
                             }),
-                            (0, n.jsxs)('div', {
-                                className: B.formItem,
+                            (0, t.jsxs)('div', {
+                                className: R.formItem,
                                 children: [
-                                    (0, n.jsxs)(c.FormTitle, {
+                                    (0, t.jsxs)(c.vwX, {
                                         children: [
-                                            y.intl.string(y.t.uGccen),
-                                            (0, n.jsx)(c.Tooltip, {
-                                                text: y.intl.string(y.t.S6jlDg),
+                                            z.intl.string(z.t.uGccen),
+                                            (0, t.jsx)(c.ua7, {
+                                                text: z.intl.string(z.t.S6jlDg),
                                                 children: (e) =>
-                                                    (0, n.jsx)(c.CircleInformationIcon, {
+                                                    (0, t.jsx)(c.d3s, {
                                                         size: 'xs',
                                                         color: 'currentColor',
-                                                        className: B.infoIcon,
+                                                        className: R.infoIcon,
                                                         ...e
                                                     })
                                             })
                                         ]
                                     }),
-                                    (0, n.jsx)(c.TextArea, {
-                                        value: en,
-                                        onChange: ei,
-                                        placeholder: y.intl.string(y.t.zwR0fX),
+                                    (0, t.jsx)(c.Kx8, {
+                                        value: et,
+                                        onChange: en,
+                                        placeholder: z.intl.string(z.t.zwR0fX),
                                         maxLength: 100
                                     })
                                 ]
                             }),
                             null != eo &&
-                                (0, n.jsx)(c.Text, {
-                                    className: B.formItem,
+                                (0, t.jsx)(c.Text, {
+                                    className: R.formItem,
                                     variant: 'text-sm/normal',
                                     color: 'text-danger',
                                     children: eo.message
                                 })
                         ]
                     }),
-                    (0, n.jsxs)(c.ModalFooter, {
-                        className: B.modalFooter,
+                    (0, t.jsxs)(c.mzw, {
+                        className: R.modalFooter,
                         children: [
-                            (0, n.jsx)(c.Button, {
+                            (0, t.jsx)(c.zxk, {
                                 type: 'submit',
                                 disabled: !eg,
-                                children: ec ? y.intl.string(y.t.Arwnen) : y.intl.string(y.t['3UB9aW'])
+                                children: ec ? z.intl.string(z.t.Arwnen) : z.intl.string(z.t['3UB9aW'])
                             }),
-                            (0, n.jsx)(c.Button, {
-                                look: c.Button.Looks.LINK,
-                                color: (0, d.ap)(H) ? c.Button.Colors.PRIMARY : c.Button.Colors.WHITE,
-                                onClick: M,
-                                children: y.intl.string(y.t.oEAioK)
+                            (0, t.jsx)(c.zxk, {
+                                look: c.zxk.Looks.LINK,
+                                color: (0, u.ap)(H) ? c.zxk.Colors.PRIMARY : c.zxk.Colors.WHITE,
+                                onClick: K,
+                                children: z.intl.string(z.t.oEAioK)
                             })
                         ]
                     })

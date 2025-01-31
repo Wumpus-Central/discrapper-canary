@@ -1,5 +1,6 @@
+n.d(t, { Z: () => l });
 var i = n(570140);
-t.Z = {
+let l = {
     search(e, t) {
         i.Z.dispatch({
             type: 'PRIVATE_CHANNEL_RECIPIENTS_INVITE_QUERY',

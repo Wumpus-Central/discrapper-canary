@@ -1,76 +1,72 @@
-let i, a;
-r.d(n, {
-    Z: function () {
-        return _;
-    }
-});
-var o = r(213919),
-    s = r(570140),
-    l = r(147913),
-    u = r(594174),
-    c = r(626135),
-    d = r(726745),
-    f = r(981631);
-function p(e, n, r) {
+let i, r;
+n.d(t, { Z: () => p });
+var a = n(213919),
+    s = n(570140),
+    o = n(147913),
+    l = n(594174),
+    u = n(626135),
+    c = n(726745),
+    d = n(981631);
+function f(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let h = !1;
-class _ extends l.Z {
+let _ = !1;
+class p extends o.Z {
     _initialize() {
         s.Z.subscribe('CONNECTION_OPEN', () => this.handleConnectionOpen()), this.handleConnectionOpen();
     }
     _terminate() {
         s.Z.unsubscribe('CONNECTION_OPEN', () => this.handleConnectionOpen());
     }
-    constructor({ onSwitchStart: e, onSwitchSuccess: n, onSwitchError: r, onTokenSet: s }) {
+    constructor({ onSwitchStart: e, onSwitchSuccess: t, onSwitchError: n, onTokenSet: s }) {
         super(),
-            p(this, 'onSwitchStart', void 0),
-            p(this, 'onSwitchSuccess', void 0),
-            p(this, 'onSwitchError', void 0),
-            p(this, 'onTokenSet', void 0),
-            p(this, 'actions', { LOGOUT: (e) => this.handleLogout(e) }),
-            p(this, 'handleConnectionOpen', () => {
-                var e, n, r, s, l, p;
-                let _ = u.default.getCurrentUser();
-                if (null == _) return;
-                if (null != a) {
-                    if (a !== i) {
-                        let e = d.Z.getUsers().map((e) => {
-                            let { id: n } = e;
-                            return n;
+            f(this, 'onSwitchStart', void 0),
+            f(this, 'onSwitchSuccess', void 0),
+            f(this, 'onSwitchError', void 0),
+            f(this, 'onTokenSet', void 0),
+            f(this, 'actions', { LOGOUT: (e) => this.handleLogout(e) }),
+            f(this, 'handleConnectionOpen', () => {
+                var e, t, n, s, o, f;
+                let p = l.default.getCurrentUser();
+                if (null == p) return;
+                if (null != r) {
+                    if (r !== i) {
+                        let e = c.Z.getUsers().map((e) => {
+                            let { id: t } = e;
+                            return t;
                         });
-                        c.default.track(f.rMx.MULTI_ACCOUNT_SWITCH_SUCCESS, {
-                            from_user_id: a,
+                        u.default.track(d.rMx.MULTI_ACCOUNT_SWITCH_SUCCESS, {
+                            from_user_id: r,
                             linked_user_ids: e
                         }),
-                            null === (r = (s = this).onSwitchSuccess) || void 0 === r || r.call(s, _, h);
-                    } else c.default.track(f.rMx.MULTI_ACCOUNT_SWITCH_FAILURE), null === (l = (p = this).onSwitchError) || void 0 === l || l.call(p, _);
-                    a = null;
+                            null === (n = (s = this).onSwitchSuccess) || void 0 === n || n.call(s, p, _);
+                    } else u.default.track(d.rMx.MULTI_ACCOUNT_SWITCH_FAILURE), null === (o = (f = this).onSwitchError) || void 0 === o || o.call(f, p);
+                    r = null;
                 }
-                i = _.id;
-                let m = o.getToken();
-                null != m && '' !== m && o.setToken(m, _.id), null === (e = (n = this).onTokenSet) || void 0 === e || e.call(n, _);
+                i = p.id;
+                let h = a.getToken();
+                null != h && '' !== h && a.setToken(h, p.id), null === (e = (t = this).onTokenSet) || void 0 === e || e.call(t, p);
             }),
-            p(this, 'handleLogout', (e) => {
+            f(this, 'handleLogout', (e) => {
                 if (e.isSwitchingAccount) {
-                    var n, r;
-                    (a = i), null === (n = (r = this).onSwitchStart) || void 0 === n || n.call(r), (h = !!e.goHomeAfterSwitching);
-                } else (h = !1), o.removeToken(i);
+                    var t, n;
+                    (r = i), null === (t = (n = this).onSwitchStart) || void 0 === t || t.call(n), (_ = !!e.goHomeAfterSwitching);
+                } else (_ = !1), a.removeToken(i);
                 i = null;
             }),
             (this.onSwitchStart = e),
-            (this.onSwitchSuccess = n),
-            (this.onSwitchError = r),
+            (this.onSwitchSuccess = t),
+            (this.onSwitchError = n),
             (this.onTokenSet = s);
     }
 }

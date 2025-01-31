@@ -1,43 +1,39 @@
-r.d(n, {
-    H: function () {
-        return u;
-    },
-    j: function () {
-        return l;
-    }
-});
-var i = r(47120);
-var a = r(653041);
-var o = r(392711),
-    s = r.n(o);
-function l(e) {
-    let n = (e, n) => e.subscriptionPlanId === n.subscriptionPlanId && e.subscriptionPlanPrice === n.subscriptionPlanPrice && e.amount === n.amount && s().isEqual(e.discounts, n.discounts),
-        r = [],
+n.d(t, {
+    H: () => s,
+    j: () => a
+}),
+    n(47120),
+    n(653041);
+var i = n(392711),
+    r = n.n(i);
+function a(e) {
+    let t = (e, t) => e.subscriptionPlanId === t.subscriptionPlanId && e.subscriptionPlanPrice === t.subscriptionPlanPrice && e.amount === t.amount && r().isEqual(e.discounts, t.discounts),
+        n = [],
         i = new Set();
     return (
         e.map((e) => {
-            for (let a of r)
-                if (n(a, e)) {
-                    i.add(a.subscriptionPlanId), (a.quantity += e.quantity);
+            for (let r of n)
+                if (t(r, e)) {
+                    i.add(r.subscriptionPlanId), (r.quantity += e.quantity);
                     return;
                 }
-            r.push({ ...e });
+            n.push({ ...e });
         }),
-        r.map((e) => {
-            let n = { ...e };
+        n.map((e) => {
+            let t = { ...e };
             return (
                 i.has(e.subscriptionPlanId) &&
-                    ((n.amount = n.amount * n.quantity),
-                    (n.discounts = n.discounts.map((e) => ({
+                    ((t.amount = t.amount * t.quantity),
+                    (t.discounts = t.discounts.map((e) => ({
                         ...e,
-                        amount: e.amount * n.quantity
+                        amount: e.amount * t.quantity
                     })))),
-                n
+                t
             );
         })
     );
 }
-function u(e) {
+function s(e) {
     return {
         id: e.id,
         subscriptionPlanId: e.subscription_plan_id,

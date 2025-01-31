@@ -1,1 +1,5 @@
-e.exports = { container: 'container_f8a938 ' + n('227040').recentMentionsPopout };
+var i = {
+    container: 'container_fc561d ' + n(227040).recentMentionsPopout,
+    widerInbox: 'widerInbox_fc561d ' + n(227040).widerInbox
+};
+e.exports = i;

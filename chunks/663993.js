@@ -1,14 +1,8 @@
-r.d(n, {
-    GI: function () {
-        return i.GI;
-    },
-    Un: function () {
-        return i.Un;
-    },
-    wE: function () {
-        return i.wE;
-    }
+n.d(t, {
+    GI: () => i.GI,
+    Un: () => i.Un,
+    wE: () => i.wE
 });
-var i = r(608787),
-    a = r(931619);
-(0, i.Jt)(a.Z.awaitOnline);
+var i = n(608787),
+    r = n(931619);
+(0, i.Jt)(r.Z.awaitOnline);

@@ -1,4 +1,5 @@
-t.Z = function (e) {
+n.d(t, { Z: () => o });
+let o = function (e) {
     function t(e, t, o) {
         var r = t.trim().split(h);
         t = r;
@@ -155,7 +156,7 @@ t.Z = function (e) {
     }
     function s(e, n) {
         var u = e;
-        if ((33 > u.charCodeAt(0) && (u = u.trim()), (u = [(T = u)]), 0 < P)) {
+        if ((33 > u.charCodeAt(0) && (u = u.trim()), (u = [u]), 0 < P)) {
             var s = a(-1, n, u, u, k, w, 0, 0, 0, 0);
             void 0 !== s && 'string' == typeof s && (n = s);
         }
@@ -334,13 +335,7 @@ t.Z = function (e) {
                                 0 === S + x + O && A--;
                                 break;
                             case 40:
-                                if (0 === S + x + O) {
-                                    if (0 === f) {
-                                        if (2 * I + 3 * L == 533);
-                                        else f = 1;
-                                    }
-                                    A++;
-                                }
+                                0 === S + x + O && (0 === f && (2 * I + 3 * L == 533 || (f = 1)), A++);
                                 break;
                             case 64:
                                 0 === x + A + S + O + T + m && (m = 1);
@@ -381,7 +376,7 @@ t.Z = function (e) {
             }
             return G + W + z;
         })(M, u, n, 0, 0);
-        return 0 < P && void 0 !== (s = a(-2, p, u, u, k, w, p.length, 0, 0, 0)) && (p = s), (T = ''), (F = 0), (w = k = 1), p;
+        return 0 < P && void 0 !== (s = a(-2, p, u, u, k, w, p.length, 0, 0, 0)) && (p = s), (F = 0), (w = k = 1), p;
     }
     var l = /^\0+/g,
         c = /[\0\r\f]/g,

@@ -1,122 +1,114 @@
-t.d(n, {
-    CA: function () {
-        return c;
-    },
-    Ih: function () {
-        return d;
-    },
-    PU: function () {
-        return f;
-    },
-    hK: function () {
-        return a;
-    }
+n.d(t, {
+    CA: () => c,
+    Ih: () => d,
+    PU: () => m,
+    hK: () => u
 });
-var i = t(200651);
-t(192379);
-var r = t(120356),
-    l = t.n(r),
-    s = t(692547),
-    o = t(481060),
-    u = t(130948);
-function a(e) {
-    let { title: n, children: t } = e;
+var i = n(200651);
+n(192379);
+var l = n(120356),
+    r = n.n(l),
+    s = n(692547),
+    o = n(481060),
+    a = n(130948);
+function u(e) {
+    let { title: t, children: n } = e;
     return (0, i.jsxs)('div', {
-        className: u.questionContainer,
+        className: a.questionContainer,
         children: [
             (0, i.jsx)(o.Text, {
-                className: u.questionTitle,
+                className: a.questionTitle,
                 variant: 'text-md/normal',
                 color: 'header-primary',
-                children: n
+                children: t
             }),
-            t
+            n
         ]
     });
 }
 function c(e) {
-    let { title: n, children: t } = e;
+    let { title: t, children: n } = e;
     return (0, i.jsxs)('div', {
-        className: u.disabledQuestionContainer,
+        className: a.disabledQuestionContainer,
         children: [
             (0, i.jsx)(o.Text, {
-                className: u.questionTitle,
+                className: a.questionTitle,
                 variant: 'text-sm/medium',
                 color: 'text-muted',
-                children: n
+                children: t
             }),
-            t
+            n
         ]
     });
 }
 function d(e) {
-    let { icon: n, text: t, meetsRequirement: r } = e;
+    let { icon: t, text: n, meetsRequirement: l } = e;
     return (0, i.jsxs)('div', {
-        className: u.requirementContainer,
+        className: a.requirementContainer,
         children: [
-            (0, i.jsx)(n, {
-                className: u.requirementIcon,
+            (0, i.jsx)(t, {
+                className: a.requirementIcon,
                 height: 16,
                 width: 16,
                 size: 'custom',
                 color: 'currentColor'
             }),
             (0, i.jsx)(o.Text, {
-                className: u.requirementText,
+                className: a.requirementText,
                 variant: 'text-sm/medium',
-                children: t
+                children: n
             }),
-            r
-                ? (0, i.jsx)(o.CircleCheckIcon, {
+            l
+                ? (0, i.jsx)(o.owK, {
                       size: 'sm',
                       color: 'currentColor',
-                      className: u.requirementSuccess,
+                      className: a.requirementSuccess,
                       secondaryColor: s.Z.colors.WHITE.css
                   })
-                : (0, i.jsx)(o.CircleXIcon, {
+                : (0, i.jsx)(o.k$p, {
                       size: 'sm',
                       color: 'currentColor',
-                      className: u.requirementFailure,
+                      className: a.requirementFailure,
                       secondaryColor: s.Z.colors.WHITE.css
                   })
         ]
     });
 }
-function f(e) {
-    let { icon: n, text: t, footnote: r, meetsRequirement: a, children: c, className: d } = e;
+function m(e) {
+    let { icon: t, text: n, footnote: l, meetsRequirement: u, children: c, className: d } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)('div', {
-                className: l()(u.requirementContainer, d),
+                className: r()(a.requirementContainer, d),
                 children: [
-                    (0, i.jsx)(n, {
-                        className: u.requirementIcon,
+                    (0, i.jsx)(t, {
+                        className: a.requirementIcon,
                         height: 20,
                         width: 20,
                         size: 'custom',
                         color: 'currentColor'
                     }),
                     (0, i.jsx)(o.Text, {
-                        className: u.requirementText,
+                        className: a.requirementText,
                         variant: 'text-md/normal',
-                        children: t
+                        children: n
                     }),
-                    a
-                        ? (0, i.jsx)(o.CircleCheckIcon, {
+                    u
+                        ? (0, i.jsx)(o.owK, {
                               size: 'md',
                               color: 'currentColor',
-                              className: u.requirementSuccess,
+                              className: a.requirementSuccess,
                               secondaryColor: s.Z.colors.WHITE.css
                           })
                         : c
                 ]
             }),
-            null != r &&
+            null != l &&
                 (0, i.jsx)(o.Text, {
                     color: 'header-secondary',
-                    className: u.footnote,
+                    className: a.footnote,
                     variant: 'text-xs/normal',
-                    children: r
+                    children: l
                 })
         ]
     });

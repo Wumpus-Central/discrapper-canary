@@ -1,33 +1,30 @@
-n(627341);
-var r,
-    i,
-    l = n(200651);
+n.d(t, { Z: () => h }), n(627341);
+var r = n(200651);
 n(192379);
-var a = n(120356),
-    s = n.n(a),
-    o = n(278074),
-    c = n(780384),
-    d = n(481060),
-    u = n(410030),
-    C = n(884697),
-    h = n(388032),
-    p = n(660370);
-((i = r || (r = {})).BANNER = 'banner'), (i.MODAL = 'modal'), (i.CARD = 'card');
-t.Z = (e) => {
-    let { category: t, display: n, className: r } = e,
-        i = (0, u.ZP)();
+var l = n(120356),
+    i = n.n(l),
+    s = n(278074),
+    a = n(780384),
+    o = n(481060),
+    d = n(410030),
+    c = n(884697),
+    u = n(388032),
+    C = n(660370);
+let h = (e) => {
+    let { category: t, display: n, className: l } = e,
+        h = (0, d.ZP)();
     if (null == t.unpublishedAt) return null;
-    let a = (0, C.OT)(t.unpublishedAt);
-    function f(e) {
-        return (0, l.jsx)(d.TextBadge, {
+    let p = (0, c.OT)(t.unpublishedAt);
+    function m(e) {
+        return (0, r.jsx)(o.IGR, {
             disableColor: !0,
             text: e,
-            className: s()((0, c.wj)(i) ? p.badgeDark : p.badgeLight, r)
+            className: i()((0, a.wj)(h) ? C.badgeDark : C.badgeLight, l)
         });
     }
-    return (0, o.EQ)([n, a > 1])
+    return (0, s.EQ)([n, p > 1])
         .with(['card', !0], () => null)
-        .with(['banner', !0], () => f(h.intl.formatToPlainString(h.t['8gsP5O'], { days: a })))
-        .with(['modal', !0], () => f(h.intl.formatToPlainString(h.t.Io7ozs, { days: a })))
-        .otherwise(() => f(h.intl.string(h.t.Bc13HB)));
+        .with(['banner', !0], () => m(u.intl.formatToPlainString(u.t['8gsP5O'], { days: p })))
+        .with(['modal', !0], () => m(u.intl.formatToPlainString(u.t.Io7ozs, { days: p })))
+        .otherwise(() => m(u.intl.string(u.t.Bc13HB)));
 };

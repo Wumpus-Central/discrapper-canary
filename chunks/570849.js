@@ -1,24 +1,20 @@
-n.d(t, {
-    l: function () {
-        return r;
-    },
-    u: function () {
-        return s;
-    }
+a.d(t, {
+    l: () => s,
+    u: () => r
 });
-var a = n(544891),
-    l = n(570140),
-    i = n(981631);
-function r(e, t) {
+var n = a(544891),
+    l = a(570140),
+    i = a(981631);
+function s(e, t) {
     l.Z.dispatch({
         type: 'GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS',
         selectedTemplate: e,
         guildId: t
     });
 }
-async function s(e) {
+async function r(e) {
     let t = (
-        await a.tn.get({
+        await n.tn.get({
             url: i.ANM.GUILD_ROLE_SUBSCRIPTION_LISTING_TEMPLATES(e),
             rejectWithError: !1
         })

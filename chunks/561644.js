@@ -1,18 +1,20 @@
-e.exports = {
-    results: 'results_bad108',
-    result: 'result_bad108',
-    favButton: 'favButton_bad108',
-    gif: 'gif_bad108',
-    endContainer: 'endContainer_bad108',
-    endText: 'endText_bad108',
-    searchSuggestions: 'searchSuggestions_bad108',
-    searchSuggestion: 'searchSuggestion_bad108',
-    noResults: 'noResults_bad108',
-    emptyHints: 'emptyHints_bad108',
-    emptyHint: 'emptyHint_bad108',
-    emptyHintCard: 'emptyHintCard_bad108',
-    emptyHintSpacer: 'emptyHintSpacer_bad108',
-    emptyHintText: 'emptyHintText_bad108',
-    emptyHintFavorite: 'emptyHintFavorite_bad108',
-    placeholder: 'placeholder_bad108'
+var i = {
+    results: 'results__2dc39',
+    result: 'result__2dc39',
+    favButton: 'favButton__2dc39',
+    gif: 'gif__2dc39',
+    endContainer: 'endContainer__2dc39',
+    endText: 'endText__2dc39',
+    searchSuggestions: 'searchSuggestions__2dc39',
+    searchSuggestion: 'searchSuggestion__2dc39',
+    noResults: 'noResults__2dc39',
+    emptyHints: 'emptyHints__2dc39',
+    emptyHint: 'emptyHint__2dc39',
+    emptyHintCard: 'emptyHintCard__2dc39',
+    emptyHintSpacer: 'emptyHintSpacer__2dc39',
+    emptyHintText: 'emptyHintText__2dc39',
+    emptyHintFavorite: 'emptyHintFavorite__2dc39',
+    loadIN: 'loadIN__2dc39',
+    placeholder: 'placeholder__2dc39'
 };
+e.exports = i;

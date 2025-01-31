@@ -1,250 +1,209 @@
-r.d(n, {
-    Ae: function () {
-        return b;
-    },
-    GE: function () {
-        return R;
-    },
-    GL: function () {
-        return m;
-    },
-    Jd: function () {
-        return L;
-    },
-    Jg: function () {
-        return T;
-    },
-    Nq: function () {
-        return A;
-    },
-    Ol: function () {
-        return y;
-    },
-    PJ: function () {
-        return E;
-    },
-    T_: function () {
-        return h;
-    },
-    V5: function () {
-        return C;
-    },
-    ap: function () {
-        return O;
-    },
-    bT: function () {
-        return D;
-    },
-    dw: function () {
-        return N;
-    },
-    ig: function () {
-        return M;
-    },
-    kr: function () {
-        return v;
-    },
-    n2: function () {
-        return I;
-    },
-    q_: function () {
-        return w;
-    },
-    vU: function () {
-        return x;
-    },
-    yA: function () {
-        return S;
-    },
-    yh: function () {
-        return g;
-    },
-    zo: function () {
-        return P;
-    }
+n.d(t, {
+    Ae: () => y,
+    GE: () => C,
+    GL: () => h,
+    Jd: () => D,
+    Jg: () => b,
+    Nq: () => S,
+    Ol: () => v,
+    PJ: () => g,
+    T_: () => _,
+    V5: () => A,
+    ap: () => R,
+    bT: () => O,
+    dw: () => N,
+    ig: () => w,
+    kr: () => E,
+    n2: () => I,
+    q_: () => L,
+    vU: () => x,
+    yA: () => T,
+    yh: () => m,
+    zo: () => P
 });
-var i = r(164369),
-    a = r(913527),
-    o = r.n(a),
-    s = r(884439),
-    l = r(876215),
-    u = r(70956),
-    c = r(709054),
-    d = r(388032);
-let f = (e) => {
-        let { start: n, now: r } = e,
-            i = Math.max(r - n, 0) / u.Z.Millis.SECOND,
-            a = Math.floor(i) % u.Z.Seconds.MINUTE,
-            o = Math.floor(i / u.Z.Seconds.MINUTE) % u.Z.Seconds.MINUTE,
-            s = Math.floor(i / u.Z.Seconds.HOUR);
+var i = n(164369),
+    r = n(913527),
+    a = n.n(r),
+    s = n(884439),
+    o = n(876215),
+    l = n(70956),
+    u = n(709054),
+    c = n(388032);
+let d = (e) => {
+        let { start: t, now: n } = e,
+            i = Math.max(n - t, 0) / l.Z.Millis.SECOND,
+            r = Math.floor(i) % l.Z.Seconds.MINUTE,
+            a = Math.floor(i / l.Z.Seconds.MINUTE) % l.Z.Seconds.MINUTE;
         return {
-            seconds: a,
-            minutes: o,
-            hours: s,
-            days: Math.floor(i / u.Z.Seconds.DAY)
+            seconds: r,
+            minutes: a,
+            hours: Math.floor(i / l.Z.Seconds.HOUR),
+            days: Math.floor(i / l.Z.Seconds.DAY)
         };
     },
-    p = (e, n) => {
-        let r = 'id' in e ? c.default.extractTimestamp(e.id) : e.start;
-        return f({
-            start: r,
-            now: 'end' in e && null != e.end ? Math.min(e.end, n) : n
-        });
-    },
-    h = (e, n) => {
-        let { seconds: r, minutes: i, hours: a } = p(e, n);
-        function o(e) {
+    f = (e, t) =>
+        d({
+            start: 'id' in e ? u.default.extractTimestamp(e.id) : e.start,
+            now: 'end' in e && null != e.end ? Math.min(e.end, t) : t
+        }),
+    _ = (e, t) => {
+        let { seconds: n, minutes: i, hours: r } = f(e, t);
+        function a(e) {
             return String(e).padStart(2, '0');
         }
-        return d.intl.formatToPlainString(d.t['l5PP//'], {
-            hours: a,
-            minutes: a > 0 ? o(i) : i,
-            seconds: o(r)
+        return c.intl.formatToPlainString(c.t['l5PP//'], {
+            hours: r,
+            minutes: r > 0 ? a(i) : i,
+            seconds: a(n)
         });
     },
-    _ = {
-        secondsAgo: (e) => d.intl.formatToPlainString(d.t.EOrEJi, { count: e }),
-        minutesAgo: (e) => d.intl.formatToPlainString(d.t.LRNgHh, { count: e }),
-        hoursAgo: (e) => d.intl.formatToPlainString(d.t.raJpz8, { count: e }),
-        daysAgo: (e) => d.intl.formatToPlainString(d.t.KkvKho, { count: e }),
-        weeksAgo: (e) => d.intl.formatToPlainString(d.t.sDtO6O, { count: e }),
-        monthsAgo: (e) => d.intl.formatToPlainString(d.t.ITymoq, { count: e })
+    p = {
+        secondsAgo: (e) => c.intl.formatToPlainString(c.t.EOrEJi, { count: e }),
+        minutesAgo: (e) => c.intl.formatToPlainString(c.t.LRNgHh, { count: e }),
+        hoursAgo: (e) => c.intl.formatToPlainString(c.t.raJpz8, { count: e }),
+        daysAgo: (e) => c.intl.formatToPlainString(c.t.KkvKho, { count: e }),
+        weeksAgo: (e) => c.intl.formatToPlainString(c.t.sDtO6O, { count: e }),
+        monthsAgo: (e) => c.intl.formatToPlainString(c.t.ITymoq, { count: e })
     },
-    m = function (e, n, r) {
-        let { formatSet: i = _ } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-            a = o()(r),
-            s = o()(c.default.extractTimestamp(e.id)),
-            l = a.diff(s, 's'),
-            d = Math.abs(l);
-        if (d < u.Z.Seconds.MINUTE) return i.secondsAgo(l);
-        if (d < u.Z.Seconds.HOUR) {
-            let e = Math.round(l / u.Z.Seconds.MINUTE);
+    h = function (e, t, n) {
+        let { formatSet: i = p } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
+            r = a()(n),
+            s = a()(u.default.extractTimestamp(e.id)),
+            o = r.diff(s, 's'),
+            c = Math.abs(o);
+        if (c < l.Z.Seconds.MINUTE) return i.secondsAgo(o);
+        if (c < l.Z.Seconds.HOUR) {
+            let e = Math.round(o / l.Z.Seconds.MINUTE);
             return i.minutesAgo(e);
         }
-        if (d < 12 * u.Z.Seconds.HOUR) {
-            let e = Math.round(l / u.Z.Seconds.HOUR);
+        if (c < 12 * l.Z.Seconds.HOUR) {
+            let e = Math.round(o / l.Z.Seconds.HOUR);
             return i.hoursAgo(e);
-        } else if (d < 9 * u.Z.Seconds.DAY) {
-            let e = Math.round(l / u.Z.Seconds.DAY);
+        }
+        if (c < 9 * l.Z.Seconds.DAY) {
+            let e = Math.round(o / l.Z.Seconds.DAY);
             return i.daysAgo(e);
-        } else if (d < 4 * u.Z.Seconds.WEEK) {
-            let e = Math.round(l / (7 * u.Z.Seconds.DAY));
+        }
+        if (c < 4 * l.Z.Seconds.WEEK) {
+            let e = Math.round(o / (7 * l.Z.Seconds.DAY));
             return i.weeksAgo(e);
         }
-        let f = Math.round(l / u.Z.Seconds.DAYS_30);
-        return i.monthsAgo(f);
+        let d = Math.round(o / l.Z.Seconds.DAYS_30);
+        return i.monthsAgo(d);
     },
-    g = function (e, n) {
-        let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now(),
+    m = function (e, t) {
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now(),
             i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        return v(e) ? h(e, r) : m(e, n, r, i);
+        return E(e) ? _(e, n) : h(e, t, n, i);
     };
-function E(e, n) {
-    return e.traits.find((e) => e.type === n);
+function g(e, t) {
+    return e.traits.find((e) => e.type === t);
+}
+function E(e) {
+    var t, n;
+    return null !== (n = null === (t = g(e, s.N.IS_LIVE)) || void 0 === t ? void 0 : t.is_live) && void 0 !== n && n;
 }
 function v(e) {
-    var n, r;
-    return null !== (r = null === (n = E(e, s.N.IS_LIVE)) || void 0 === n ? void 0 : n.is_live) && void 0 !== r && r;
+    var t, n;
+    return null !== (n = null === (t = g(e, s.N.FIRST_TIME)) || void 0 === t ? void 0 : t.first_time) && void 0 !== n && n;
 }
 function y(e) {
-    var n, r;
-    return null !== (r = null === (n = E(e, s.N.FIRST_TIME)) || void 0 === n ? void 0 : n.first_time) && void 0 !== r && r;
-}
-function b(e) {
-    return c.default.age(e.id) / u.Z.Millis.HOUR < 48;
+    return u.default.age(e.id) / l.Z.Millis.HOUR < 48;
 }
 function I(e) {
     return null != e.expires_at && new Date(e.expires_at) < new Date();
 }
+function b(e) {
+    return E(e) && !I(e);
+}
 function T(e) {
-    return v(e) && !I(e);
+    var t;
+    return null === (t = g(e, s.N.DURATION_SECONDS)) || void 0 === t ? void 0 : t.duration_seconds;
 }
 function S(e) {
-    var n;
-    return null === (n = E(e, s.N.DURATION_SECONDS)) || void 0 === n ? void 0 : n.duration_seconds;
+    var t;
+    return null === (t = g(e, s.N.AGGREGATE_RANGE)) || void 0 === t ? void 0 : t.range;
 }
 function A(e) {
-    var n;
-    return null === (n = E(e, s.N.AGGREGATE_RANGE)) || void 0 === n ? void 0 : n.range;
-}
-function C(e) {
-    var n;
-    return null === (n = E(e, s.N.MARATHON)) || void 0 === n ? void 0 : n.marathon;
+    var t;
+    return null === (t = g(e, s.N.MARATHON)) || void 0 === t ? void 0 : t.marathon;
 }
 function N(e) {
-    let n = E(e, s.N.RESURRECTED);
-    return (null == n ? void 0 : n.resurrected_last_played) != null ? new Date(n.resurrected_last_played) : void 0;
+    let t = g(e, s.N.RESURRECTED);
+    return (null == t ? void 0 : t.resurrected_last_played) != null ? new Date(t.resurrected_last_played) : void 0;
 }
-function R(e) {
+function C(e) {
     let {
-        months: n = 0,
-        weeks: r = 0,
-        days: a = 0
+        months: t = 0,
+        weeks: n = 0,
+        days: r = 0
     } = (0, i.Z)({
         start: e,
         end: new Date()
     });
-    return d.intl.formatToPlainString(d.t.NXBtjI, {
-        months: n,
-        weeks: n > 0 ? 0 : r,
-        days: n > 0 || r > 0 ? 0 : a
+    return c.intl.formatToPlainString(c.t.NXBtjI, {
+        months: t,
+        weeks: t > 0 ? 0 : n,
+        days: t > 0 || n > 0 ? 0 : r
     });
 }
-function O(e) {
+function R(e) {
     if (null == e || '' === e) return null;
-    let n = /\w+ (\d+), \w+ (\d+)/.exec(e);
-    return null == n
+    let t = /\w+ (\d+), \w+ (\d+)/.exec(e);
+    return null == t
         ? null
-        : d.intl.formatToPlainString(d.t['ijVm6+'], {
-              seasonNum: n[1],
-              episodeNum: n[2]
+        : c.intl.formatToPlainString(c.t['ijVm6+'], {
+              seasonNum: t[1],
+              episodeNum: t[2]
           });
 }
-function D(e, n) {
-    var r, i, a, o;
-    let s = null !== (a = null == n ? void 0 : null === (r = n.size) || void 0 === r ? void 0 : r[0]) && void 0 !== a ? a : void 0,
-        l = null !== (o = null == n ? void 0 : null === (i = n.size) || void 0 === i ? void 0 : i[1]) && void 0 !== o ? o : void 0,
-        u =
-            null != s && null != l
-                ? d.intl.formatToPlainString(d.t.wmUSi4, {
-                      count: s,
-                      max: l
-                  })
-                : void 0;
-    return null != u && null != e ? ''.concat(e, ' (').concat(u, ')') : null != e ? e : u;
+function O(e, t) {
+    var n, i, r, a;
+    let s;
+    let o = null !== (r = null == t ? void 0 : null === (n = t.size) || void 0 === n ? void 0 : n[0]) && void 0 !== r ? r : void 0,
+        l = null !== (a = null == t ? void 0 : null === (i = t.size) || void 0 === i ? void 0 : i[1]) && void 0 !== a ? a : void 0;
+    return (
+        null != o && null != l && o > 0 && l > 0
+            ? (s = c.intl.formatToPlainString(c.t.wmUSi4, {
+                  count: o,
+                  max: l
+              }))
+            : null != o && o > 0 && (s = c.intl.formatToPlainString(c.t.UTYMsb, { count: o })),
+        null != s && null != e ? ''.concat(e, ' (').concat(s, ')') : null != e ? e : s
+    );
 }
-function L(e) {
-    return e.content_type === l.s.TOP_GAME;
+function D(e) {
+    return e.content_type === o.s.TOP_GAME;
 }
 function x(e) {
-    var n;
-    return null === (n = E(e, s.N.STREAK_DAYS)) || void 0 === n ? void 0 : n.streak_count_days;
+    var t;
+    return null === (t = g(e, s.N.STREAK_DAYS)) || void 0 === t ? void 0 : t.streak_count_days;
 }
-function w(e) {
-    let n = x(e);
-    if (null == n || n < 3) return !1;
-    let r = c.default.extractTimestamp(e.id);
-    return !(Date.now() - r > 48 * u.Z.Millis.HOUR) && !0;
+function L(e) {
+    let t = x(e);
+    if (null == t || t < 3) return !1;
+    let n = u.default.extractTimestamp(e.id);
+    return !(Date.now() - n > 48 * l.Z.Millis.HOUR);
 }
 function P(e) {
-    let n = S(e);
-    if (null == n)
+    let t = T(e);
+    if (null == t)
         return {
             text: null,
             tooltipText: null
         };
-    let r = Math.round(n / u.Z.Seconds.HOUR);
-    return r <= 0
+    let n = Math.round(t / l.Z.Seconds.HOUR);
+    return n <= 0
         ? {
               text: null,
               tooltipText: null
           }
         : {
-              text: d.intl.formatToPlainString(d.t.vZaMen, { hours: r }),
-              tooltipText: d.intl.formatToPlainString(d.t['S5F48/'], { hours: r })
+              text: c.intl.formatToPlainString(c.t.vZaMen, { hours: n }),
+              tooltipText: c.intl.formatToPlainString(c.t['S5F48/'], { hours: n })
           };
 }
-function M(e) {
-    var n;
-    return null === (n = E(e, s.N.TRENDING_CONTENT)) || void 0 === n ? void 0 : n.trending;
+function w(e) {
+    var t;
+    return null === (t = g(e, s.N.TRENDING_CONTENT)) || void 0 === t ? void 0 : t.trending;
 }

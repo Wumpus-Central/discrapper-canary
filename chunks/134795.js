@@ -1,44 +1,40 @@
-n.d(t, {
-    Z: function () {
-        return m;
-    }
-});
+n.d(t, { Z: () => m });
 var i = n(200651);
 n(192379);
-var r = n(120356),
-    s = n.n(r),
-    a = n(481060),
-    l = n(654904),
+var s = n(120356),
+    r = n.n(s),
+    l = n(481060),
+    a = n(654904),
     o = n(993413),
     c = n(486324),
     d = n(388032),
     u = n(25836);
 function m(e) {
-    let { showRemoveBannerButton: t, errors: n, onBannerChange: r, guildId: m, className: g, disabled: h = !1, showPremiumIcon: p = !0, isTryItOutFlow: x = !1, forcedDivider: f, withHighlight: E = !1 } = e,
-        _ = E ? a.ShinyButton : a.Button;
+    let { showRemoveBannerButton: t, errors: n, onBannerChange: s, guildId: m, className: h, disabled: g = !1, showPremiumIcon: _ = !0, isTryItOutFlow: x = !1, forcedDivider: p, withHighlight: E = !1 } = e,
+        C = E ? l.gtL : l.zxk;
     return (0, i.jsx)(o.Z, {
-        className: g,
+        className: h,
         title: d.intl.string(d.t.Vgdusr),
-        showPremiumIcon: p,
+        showPremiumIcon: _,
         errors: n,
-        disabled: h,
-        forcedDivider: f,
+        disabled: g,
+        forcedDivider: p,
         children: (0, i.jsxs)('div', {
             className: u.buttonsContainer,
             children: [
-                (0, i.jsx)(_, {
-                    className: s()({ [u.buttonHighlighted]: E }),
-                    size: a.Button.Sizes.SMALL,
-                    onClick: () => (0, l.$r)(c.pC.BANNER, m, x, void 0),
+                (0, i.jsx)(C, {
+                    className: r()({ [u.buttonHighlighted]: E }),
+                    size: l.zxk.Sizes.SMALL,
+                    onClick: () => (0, a.$r)(c.pC.BANNER, m, x, void 0),
                     children: d.intl.string(d.t.N0bC3N)
                 }),
                 t &&
-                    (0, i.jsx)(a.Button, {
+                    (0, i.jsx)(l.zxk, {
                         className: u.removeButton,
-                        color: a.Button.Colors.PRIMARY,
-                        look: a.Button.Looks.LINK,
-                        size: a.Button.Sizes.SMALL,
-                        onClick: () => r(null),
+                        color: l.zxk.Colors.PRIMARY,
+                        look: l.zxk.Looks.LINK,
+                        size: l.zxk.Sizes.SMALL,
+                        onClick: () => s(null),
                         children: null != m ? d.intl.string(d.t.jHlJNT) : d.intl.string(d.t.tT9n7O)
                     })
             ]

@@ -1,15 +1,11 @@
-r.d(n, {
-    M: function () {
-        return s;
-    }
-});
-var i = r(192379),
-    a = r(409447),
-    o = r(330905);
+n.d(t, { M: () => s });
+var i = n(192379),
+    r = n(409447),
+    a = n(330905);
 let s = (e) => {
-    let n;
-    let r = (0, a.u)();
-    if (!r.display) return null;
-    let { display: s, ...l } = r;
-    return (n = 'children' in e ? ('function' == typeof e.children ? e.children(l) : e.children) : e.generator(l)), i.createElement(o._.Provider, { value: l }, n);
+    let t;
+    let n = (0, r.u)();
+    if (!n.display) return null;
+    let { display: s, ...o } = n;
+    return (t = 'children' in e ? ('function' == typeof e.children ? e.children(o) : e.children) : e.generator(o)), i.createElement(a._.Provider, { value: o }, t);
 };

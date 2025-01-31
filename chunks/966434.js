@@ -1,22 +1,18 @@
-r.d(n, {
-    Z: function () {
-        return s;
-    }
-});
-var i = r(668781),
-    a = r(624138),
-    o = r(388032);
-function s(e, n, r, s) {
-    var l;
+n.d(t, { Z: () => s });
+var i = n(668781),
+    r = n(624138),
+    a = n(388032);
+function s(e, t, n, s) {
+    var o;
     i.Z.show({
-        title: o.intl.string(o.t.XkIWkp),
-        cancelText: o.intl.string(o.t['ETE/oK']),
-        confirmText: o.intl.string(o.t['cY+Ooa']),
-        onConfirm: r,
+        title: a.intl.string(a.t.XkIWkp),
+        cancelText: a.intl.string(a.t['ETE/oK']),
+        confirmText: a.intl.string(a.t['cY+Ooa']),
+        onConfirm: n,
         onCancel: s,
-        body: o.intl.format(o.t['5/Xorq'], {
-            currentApplicationName: null !== (l = null == e ? void 0 : e.name) && void 0 !== l ? l : o.intl.string(o.t.G99XFh),
-            currentApplicationChannelName: (0, a.Ew)(null == n ? void 0 : n.name) ? o.intl.string(o.t.OGUjmp) : null == n ? void 0 : n.name
+        body: a.intl.format(a.t['5/Xorq'], {
+            currentApplicationName: null !== (o = null == e ? void 0 : e.name) && void 0 !== o ? o : a.intl.string(a.t.G99XFh),
+            currentApplicationChannelName: (0, r.Ew)(null == t ? void 0 : t.name) ? a.intl.string(a.t.OGUjmp) : null == t ? void 0 : t.name
         })
     });
 }

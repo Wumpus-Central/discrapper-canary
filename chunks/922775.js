@@ -1,12 +1,14 @@
 e.exports = {
-    iconBackground: 'iconBackground_e5ee5b',
-    icon: 'icon_e5ee5b',
-    headerContainer: 'headerContainer_e5ee5b',
-    subtitle: 'subtitle_e5ee5b',
-    eventPrompt: 'eventPrompt_e5ee5b',
-    separator: 'separator_e5ee5b',
-    continueIcon: 'continueIcon_e5ee5b',
-    continueIconContainer: 'continueIconContainer_e5ee5b',
-    audienceSummary: 'audienceSummary_e5ee5b',
-    summaryItem: 'summaryItem_e5ee5b'
+    iconBackground: 'iconBackground__0b34e',
+    icon: 'icon__0b34e',
+    headerContainer: 'headerContainer__0b34e',
+    eventPrompt: 'eventPrompt__0b34e',
+    subtitle: 'subtitle__0b34e',
+    separator: 'separator__0b34e',
+    continueIcon: 'continueIcon__0b34e',
+    continueIconContainer: 'continueIconContainer__0b34e',
+    audienceSummary: 'audienceSummary__0b34e',
+    summaryItem: 'summaryItem__0b34e',
+    container: 'container__0b34e',
+    content: 'content__0b34e'
 };

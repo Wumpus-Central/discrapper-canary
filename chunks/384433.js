@@ -1,9 +1,4 @@
-t.d(n, {
-    e: function () {
-        return i;
-    }
-});
+t.d(n, { e: () => r });
 var l,
-    i,
-    r = t(246364);
-((l = i || (i = {})).ALL_MEMBERS = 'ALL_MEMBERS'), (l[(l.PENDING = r.wB.SUBMITTED)] = 'PENDING'), (l[(l.REJECTED = r.wB.REJECTED)] = 'REJECTED');
+    i = t(246364),
+    r = (((l = {}).ALL_MEMBERS = 'ALL_MEMBERS'), (l[(l.PENDING = i.wB.SUBMITTED)] = 'PENDING'), (l[(l.REJECTED = i.wB.REJECTED)] = 'REJECTED'), l);

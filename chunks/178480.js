@@ -1,54 +1,44 @@
-r.d(n, {
-    RB: function () {
-        return f;
-    },
-    a3: function () {
-        return l;
-    },
-    hn: function () {
-        return d;
-    },
-    mH: function () {
-        return c;
-    },
-    r: function () {
-        return u;
-    }
+n.d(t, {
+    RB: () => d,
+    a3: () => o,
+    hn: () => c,
+    mH: () => u,
+    r: () => l
 });
-var i = r(695346),
-    a = r(709054),
-    o = r(497089),
-    s = r(925928);
-let l = function (e) {
-        let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+var i = n(695346),
+    r = n(709054),
+    a = n(497089),
+    s = n(925928);
+let o = function (e) {
+        let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
         return (0, s.ZP)({
             since: e,
-            getFormatter: n ? s.d0 : s.Zk
+            getFormatter: t ? s.d0 : s.Zk
         });
     },
-    u = (e, n) => e.acked || (n !== i.uL && a.default.compare(n, e.id) >= 0);
-function c(e, n) {
-    let r = a.default.fromTimestamp(new Date(n).getTime());
+    l = (e, t) => e.acked || (t !== i.uL && r.default.compare(t, e.id) >= 0);
+function u(e, t) {
+    let n = r.default.fromTimestamp(new Date(t).getTime());
     return {
         acked: !1,
         forceUnacked: !0,
         other_user: e,
         kind: 'notification-center-item',
-        local_id: 'incoming_friend_requests_'.concat(e.id, '_').concat(r),
+        local_id: 'incoming_friend_requests_'.concat(e.id, '_').concat(n),
         deeplink: 'https://discord.com/users/'.concat(e.id),
-        type: o.O7.INCOMING_FRIEND_REQUESTS,
-        id: r
+        type: a.O7.INCOMING_FRIEND_REQUESTS,
+        id: n
     };
 }
-function d(e) {
+function c(e) {
     return {
         acked: !1,
         enableBadge: !0,
-        id: a.default.fromTimestamp(new Date().getTime()),
+        id: r.default.fromTimestamp(new Date().getTime()),
         kind: 'notification-center-item',
         local_id: 'mobile_update_available_'.concat(e.build),
-        type: o.O7.MOBILE_NATIVE_UPDATE_AVAILABLE,
+        type: a.O7.MOBILE_NATIVE_UPDATE_AVAILABLE,
         deeplink: e.urls.install.toString()
     };
 }
-let f = (e) => e.type === o.DY.RECENT_MENTION || e.type === o.DY.REPLY_MENTION;
+let d = (e) => e.type === a.DY.RECENT_MENTION || e.type === a.DY.REPLY_MENTION;

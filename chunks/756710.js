@@ -1,40 +1,36 @@
-r.d(n, {
-    o: function () {
-        return f;
-    }
-});
-var i = r(200651),
-    a = r(192379),
-    o = r(120356),
-    s = r.n(o),
-    l = r(1561),
-    u = r(743236),
-    c = r(939350),
-    d = r(450793);
-function f(e) {
-    let { children: n, color: r = 'default', isFocused: o = !1, disabled: f = !1, keepItemStyles: p = !1, menuItemProps: h, action: _, dontCloseOnActionIfHoldingShiftKey: m, dontCloseOnAction: g, onClose: E } = e,
-        v = a.useRef(null);
-    a.useEffect(() => {
-        o && (0, u.F)(v);
-    }, [o]);
-    let y = a.useCallback(
+n.d(t, { o: () => d });
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(1561),
+    l = n(743236),
+    u = n(939350),
+    c = n(450793);
+function d(e) {
+    let { children: t, color: n = 'default', isFocused: a = !1, disabled: d = !1, keepItemStyles: f = !1, menuItemProps: _, action: p, dontCloseOnActionIfHoldingShiftKey: h, dontCloseOnAction: m, onClose: g } = e,
+        E = r.useRef(null);
+    r.useEffect(() => {
+        a && (0, l.F)(E);
+    }, [a]);
+    let v = r.useCallback(
             (e) => {
-                if (null == _) return !1;
-                !(e.shiftKey && m) && !g && E(), e.persist(), requestAnimationFrame(() => _(e));
+                if (null == p) return !1;
+                (e.shiftKey && h) || m || g(), e.persist(), requestAnimationFrame(() => p(e));
             },
-            [_, E, m, g]
+            [p, g, h, m]
         ),
-        b = p ? s()(d.item, c._[r], { [d.focused]: o }) : d.customItem;
-    return (0, i.jsx)(l.P, {
-        innerRef: v,
-        className: b,
-        onClick: f ? void 0 : y,
-        'aria-disabled': f,
-        ...h,
-        children: n({
-            color: r,
-            disabled: f,
-            isFocused: o
+        y = f ? s()(c.item, u._[n], { [c.focused]: a }) : c.customItem;
+    return (0, i.jsx)(o.P, {
+        innerRef: E,
+        className: y,
+        onClick: d ? void 0 : v,
+        'aria-disabled': d,
+        ..._,
+        children: t({
+            color: n,
+            disabled: d,
+            isFocused: a
         })
     });
 }

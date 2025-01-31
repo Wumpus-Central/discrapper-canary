@@ -1,30 +1,26 @@
-r.d(n, {
-    t: function () {
-        return a;
-    }
-});
-var i = r(887490);
-function a(e, n, r, a) {
-    var o, s;
-    let l = 0;
-    for (let o = 0; o < r.length; o++) {
-        let s = r[o];
+n.d(t, { t: () => r });
+var i = n(887490);
+function r(e, t, n, r) {
+    var a, s;
+    let o = 0;
+    for (let a = 0; a < n.length; a++) {
+        let s = n[a];
         if (null == s) continue;
-        let u = l + s.length;
-        if (a <= u) {
-            let r = i.C0.child(n, o),
-                s = i.bN.node(e, r)[0];
+        let l = o + s.length;
+        if (r <= l) {
+            let n = i.C0.child(t, a),
+                s = i.bN.node(e, n)[0];
             if (i.LC.isText(s))
                 return {
-                    path: r,
-                    offset: Math.min(Math.max(a - l, 0), s.text.length)
+                    path: n,
+                    offset: Math.min(Math.max(r - o, 0), s.text.length)
                 };
         }
-        l = u;
+        o = l;
     }
-    let u = r.length - 1;
+    let l = n.length - 1;
     return {
-        path: i.C0.child(n, u),
-        offset: null !== (s = null === (o = r[u]) || void 0 === o ? void 0 : o.length) && void 0 !== s ? s : 0
+        path: i.C0.child(t, l),
+        offset: null !== (s = null === (a = n[l]) || void 0 === a ? void 0 : a.length) && void 0 !== s ? s : 0
     };
 }

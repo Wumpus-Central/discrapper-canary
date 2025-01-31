@@ -1,31 +1,32 @@
-var i = r(200651),
-    a = r(192379),
-    o = r(477660),
-    s = r.n(o),
-    l = r(481060),
-    u = r(100527),
-    c = r(906732),
-    d = r(49012);
-let f = 1;
-n.Z = a.memo(function (e) {
-    let { onClick: n, trusted: r, title: o, href: p, children: h, messageId: _, channelId: m, ...g } = e,
-        { analyticsLocations: E } = (0, c.ZP)(u.Z.MASKED_LINK),
-        v = a.useCallback((n) => (0, d.q)(e, n, E), [E, e]),
-        y = a.useCallback(
-            (e) => {
-                e.button === f && v(e);
-            },
-            [v]
-        ),
-        b = s().sanitizeUrl(p);
-    return (0, i.jsx)(l.Anchor, {
-        ...g,
-        title: o,
-        target: '_blank',
-        rel: 'noreferrer noopener',
-        href: b,
-        onClick: v,
-        onAuxClick: y,
-        children: null != h ? h : o
+n.d(t, { Z: () => f });
+var i = n(200651),
+    r = n(192379),
+    a = n(477660),
+    s = n.n(a),
+    o = n(481060),
+    l = n(100527),
+    u = n(906732),
+    c = n(49012);
+let d = 1,
+    f = r.memo(function (e) {
+        let { onClick: t, trusted: n, title: a, href: f, children: _, messageId: p, channelId: h, ...m } = e,
+            { analyticsLocations: g } = (0, u.ZP)(l.Z.MASKED_LINK),
+            E = r.useCallback((t) => (0, c.q)(e, t, g), [g, e]),
+            v = r.useCallback(
+                (e) => {
+                    e.button === d && E(e);
+                },
+                [E]
+            ),
+            y = s().sanitizeUrl(f);
+        return (0, i.jsx)(o.eee, {
+            ...m,
+            title: a,
+            target: '_blank',
+            rel: 'noreferrer noopener',
+            href: y,
+            onClick: E,
+            onAuxClick: v,
+            children: null != _ ? _ : a
+        });
     });
-});

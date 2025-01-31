@@ -1,4 +1,4 @@
-e(47120), e(653041);
+e.d(i, { Z: () => m }), e(47120), e(653041);
 var s = e(954955),
     n = e.n(s),
     h = e(477690),
@@ -19,16 +19,12 @@ function d(t, i, e) {
         t
     );
 }
-let u = 7.5,
-    c = (0, a.Mg)(h.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
-    p = 1 / 60;
-function m(t, i, e, s) {
-    return (e / s) * i + t;
-}
-function f() {
+let u = (0, a.Mg)(h.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
+    c = 1 / 60;
+function p() {
     return Math.min(Math.max(Math.min(0.8 * window.innerWidth, 0.8 * window.innerHeight), o.LE), o.pg);
 }
-i.Z = class t {
+let m = class {
     initialize() {
         this._resizeWave();
     }
@@ -39,7 +35,7 @@ i.Z = class t {
         this.points = [];
     }
     update(t) {
-        if (0 !== this.points.length) this.points.forEach((i) => i.update(Math.min(t, p))), !this.hasEntered && this.points[0].x > c && ((this.hasEntered = !0), this.updateWaveState(o.hO.ENTERED)), this.isFilling && this.points[0].x > this.points[0].targetX && ((this.isFilling = !1), this.updateWaveState(o.hO.FILLED));
+        0 !== this.points.length && (this.points.forEach((i) => i.update(Math.min(t, c))), !this.hasEntered && this.points[0].x > u && ((this.hasEntered = !0), this.updateWaveState(o.hO.ENTERED)), this.isFilling && this.points[0].x > this.points[0].targetX && ((this.isFilling = !1), this.updateWaveState(o.hO.FILLED)));
     }
     render(t) {
         if (0 === this.points.length) return;
@@ -64,7 +60,7 @@ i.Z = class t {
     }
     fill() {
         let t = Math.sqrt(window.innerWidth * window.innerWidth + window.innerHeight * window.innerHeight) + 100,
-            i = f() - 140,
+            i = p() - 140,
             e = (t, i, e, s) => {
                 (t.targetX = -40 + i * Math.cos(o.uo * ((e / 15) * 0.25 + 0))), (t.targetY = -40 + i * Math.sin(o.uo * ((e / 15) * 0.25 + 0))), s && ((t.targetX += (0, l.M)(0, 30) - 15), (t.targetY += (0, l.M)(0, 30) - 15), (t.speedUp = 3), (t.spring.tension = o.O1 * Math.random() * 0.5 + o.O1));
             };
@@ -85,7 +81,7 @@ i.Z = class t {
             d(this, 'isFilling', !1),
             d(this, 'updateWaveState', void 0),
             d(this, '_resizeWave', () => {
-                let t = f();
+                let t = p();
                 this.points.forEach((i, e) => {
                     let s = -40 + t * Math.cos(o.uo * ((e / 15) * 0.25 + 0)),
                         n = -40 + t * Math.sin(o.uo * ((e / 15) * 0.25 + 0));
@@ -95,6 +91,6 @@ i.Z = class t {
             d(this, 'resizeWave', n()(this._resizeWave, 200)),
             (this.updateWaveState = t),
             (this.hasEntered = !1);
-        for (let t = 0; t <= 15; t++) this.points.push(new r.Z(Math.floor(u - Math.floor(Math.abs(t - u)))));
+        for (let t = 0; t <= 15; t++) this.points.push(new r.Z(Math.floor(7.5 - Math.floor(Math.abs(t - 7.5)))));
     }
 };

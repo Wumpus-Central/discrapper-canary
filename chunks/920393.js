@@ -1,20 +1,15 @@
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => l }), n(47120);
 var r = n(192379);
-function i(e) {
-    let { videoRef: t, isPlaying: n, isMetadataLoaded: i, isInitialSeekComplete: l, onAnalytics: o, emitIntervalMs: s, minSegmentDurationMs: a } = e,
+function l(e) {
+    let { videoRef: t, isPlaying: n, isMetadataLoaded: l, isInitialSeekComplete: i, onAnalytics: s, emitIntervalMs: o, minSegmentDurationMs: a } = e,
         [u, c] = r.useState(null),
         d = (0, r.useRef)(null),
         m = (0, r.useRef)(Date.now()),
         v = (0, r.useRef)(!1),
         E = (0, r.useCallback)(
             (e) => {
-                if (!(e.segmentEndSec < e.segmentStartSec))
-                    o({
+                !(e.segmentEndSec < e.segmentStartSec) &&
+                    s({
                         start_time: e.startTime,
                         end_time: e.endTime,
                         duration: e.endTime - e.startTime,
@@ -23,10 +18,10 @@ function i(e) {
                         segment_duration_sec: e.segmentEndSec - e.segmentStartSec
                     });
             },
-            [o]
+            [s]
         ),
         C = (0, r.useCallback)(() => {
-            if (null != t.current && i && l) {
+            if (null != t.current && l && i) {
                 let e = Date.now(),
                     n = t.current.currentTime;
                 c({
@@ -37,33 +32,33 @@ function i(e) {
                 }),
                     (v.current = !0);
             }
-        }, [t, i, l]),
+        }, [t, l, i]),
         p = (0, r.useCallback)(() => {
             if (null == t.current || null == u) return;
             let e = Date.now();
-            if (e - m.current < s) return;
+            if (e - m.current < o) return;
             let n = t.current.currentTime;
-            if (!(n - u.segmentStartSec < a / 1000))
-                E({
+            !(n - u.segmentStartSec < a / 1000) &&
+                (E({
                     ...u,
                     endTime: e,
                     segmentEndSec: n
                 }),
-                    c({
-                        startTime: e,
-                        endTime: e,
-                        segmentStartSec: n,
-                        segmentEndSec: n
-                    }),
-                    (m.current = e);
-        }, [u, E, s, t, a]);
+                c({
+                    startTime: e,
+                    endTime: e,
+                    segmentStartSec: n,
+                    segmentEndSec: n
+                }),
+                (m.current = e));
+        }, [u, E, o, t, a]);
     return (
         (0, r.useEffect)(() => {
-            (!i || !l) && (c(null), (v.current = !1));
-        }, [i, l]),
+            (l && i) || (c(null), (v.current = !1));
+        }, [l, i]),
         (0, r.useEffect)(() => {
-            if (n && i && l)
-                !v.current && C(),
+            if (n && l && i)
+                v.current || C(),
                     (d.current = window.setInterval(() => {
                         p();
                     }, 200));
@@ -83,7 +78,7 @@ function i(e) {
             return () => {
                 null != d.current && (clearInterval(d.current), (d.current = null));
             };
-        }, [n, i, l, u, p, E, t, C]),
+        }, [n, l, i, u, p, E, t, C]),
         {
             forceSendCurrentSegment: (0, r.useCallback)(() => {
                 if (null != u && null != t.current) {

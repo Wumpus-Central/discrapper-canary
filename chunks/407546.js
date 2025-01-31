@@ -1,54 +1,50 @@
-r.d(n, {
-    Z: function () {
-        return f;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(149765),
-    o = r(993365),
-    s = r(481060),
-    l = r(981631),
-    u = r(388032),
-    c = r(804537);
-let d = 5;
-function f(e) {
-    let { error: n, selectedGuildId: r, onGuildChange: f, guilds: p, disabled: h = !1 } = e,
-        _ = p
-            .filter((e) => a.e$(e.permissions, l.Plq.MANAGE_GUILD))
+n.d(t, { Z: () => d });
+var i = n(200651);
+n(192379);
+var r = n(149765),
+    a = n(993365),
+    s = n(481060),
+    o = n(981631),
+    l = n(388032),
+    u = n(804537);
+let c = 5;
+function d(e) {
+    let { error: t, selectedGuildId: n, onGuildChange: d, guilds: f, disabled: _ = !1 } = e,
+        p = f
+            .filter((e) => r.e$(e.permissions, o.Plq.MANAGE_GUILD))
             .map((e) => ({
                 value: e.id,
                 label: e.name
             }));
     return (0, i.jsxs)('div', {
-        className: c.selectorGroup,
+        className: u.selectorGroup,
         children: [
-            (0, i.jsx)(s.Heading, {
+            (0, i.jsx)(s.X6q, {
                 variant: 'heading-deprecated-12/semibold',
-                className: c.sectionLabel,
-                children: u.intl.string(u.t['1DXFFR'])
+                className: u.sectionLabel,
+                children: l.intl.string(l.t['1DXFFR'])
             }),
-            null != n && '' !== n
-                ? (0, i.jsx)(o.x, {
+            null != t && '' !== t
+                ? (0, i.jsx)(a.x, {
                       variant: 'text-xs/normal',
                       color: 'text-danger',
-                      children: n
+                      children: t
                   })
                 : null,
-            (0, i.jsx)(s.SearchableSelect, {
-                wrapperClassName: c.select,
-                maxVisibleItems: d,
-                placeholder: u.intl.string(u.t.oM4E1N),
-                options: _,
-                onChange: f,
-                isDisabled: h,
-                value: r
+            (0, i.jsx)(s.VcW, {
+                wrapperClassName: u.select,
+                maxVisibleItems: c,
+                placeholder: l.intl.string(l.t.oM4E1N),
+                options: p,
+                onChange: d,
+                isDisabled: _,
+                value: n
             }),
-            (0, i.jsx)(o.x, {
+            (0, i.jsx)(a.x, {
                 variant: 'text-xs/medium',
                 color: 'header-secondary',
-                className: c.label,
-                children: u.intl.format(u.t.t9Jm9v, {})
+                className: u.label,
+                children: l.intl.format(l.t.t9Jm9v, {})
             })
         ]
     });

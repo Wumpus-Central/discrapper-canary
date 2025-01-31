@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
+n.d(t, { Z: () => c });
 var i = n(200651),
     r = n(192379),
     l = n(481060),
@@ -12,7 +8,7 @@ function o(e) {
     let { showSecondaryColor: t, palette: n, onPrimaryColorChange: o, onSecondaryColorChange: c } = e,
         d = r.useRef(null);
     return (
-        (0, l.useFocusLock)(d),
+        (0, l.Tbt)(d),
         (0, i.jsxs)('div', {
             className: a.popoutContainer,
             children: [
@@ -38,7 +34,7 @@ function o(e) {
                                     color: 'text-normal',
                                     children: s.intl.string(s.t.C3KTQk)
                                 }),
-                                (0, i.jsx)(l.CustomColorPicker, {
+                                (0, i.jsx)(l.Z$W, {
                                     className: a.colorPicker,
                                     value: n.primary,
                                     eagerUpdate: !0,
@@ -61,7 +57,7 @@ function o(e) {
                                         color: 'text-normal',
                                         children: s.intl.string(s.t['8elvy8'])
                                     }),
-                                    (0, i.jsx)(l.CustomColorPicker, {
+                                    (0, i.jsx)(l.Z$W, {
                                         className: a.colorPicker,
                                         value: n.secondary,
                                         eagerUpdate: !0,
@@ -79,7 +75,7 @@ function o(e) {
 }
 function c(e) {
     let { shouldShow: t, showSecondaryColor: n, onRequestClose: r, children: s, palette: a, onPrimaryColorChange: c, onSecondaryColorChange: d } = e;
-    return (0, i.jsx)(l.Popout, {
+    return (0, i.jsx)(l.yRy, {
         renderPopout: () =>
             (0, i.jsx)(o, {
                 showSecondaryColor: n,
@@ -90,7 +86,7 @@ function c(e) {
         position: 'left',
         shouldShow: t,
         onRequestClose: r,
-        animation: l.Popout.Animation.TRANSLATE,
+        animation: l.yRy.Animation.TRANSLATE,
         animationPosition: 'right',
         children: s
     });

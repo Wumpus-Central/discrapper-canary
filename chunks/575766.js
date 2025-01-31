@@ -1,8 +1,4 @@
-t.d(n, {
-    n: function () {
-        return r;
-    }
-});
+t.d(n, { n: () => r });
 var l = t(192379),
     i = t(941028);
 function r(e) {

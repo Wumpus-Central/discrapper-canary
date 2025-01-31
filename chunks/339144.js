@@ -1,10 +1,6 @@
 n.d(t, {
-    J: function () {
-        return _;
-    },
-    y: function () {
-        return I;
-    }
+    J: () => Z,
+    y: () => C
 });
 var i = n(200651),
     l = n(192379),
@@ -13,38 +9,38 @@ var i = n(200651),
     o = n(481060),
     s = n(24124),
     c = n(636449),
-    u = n(620662),
-    d = n(513202),
+    d = n(620662),
+    u = n(513202),
     h = n(311352),
     p = n(803647),
     m = n(131704),
-    f = n(626135),
-    g = n(870569),
-    v = n(981631),
-    C = n(388032),
+    g = n(626135),
+    f = n(870569),
+    _ = n(981631),
+    v = n(388032),
     x = n(272371);
-function I(e, t, n) {
-    return null != e && (null != n ? n.applicationId === e.id : null != t && t.application_id === e.id && t.type === v.IIU.PLAYING && (0, u.Z)(t, v.xjy.JOIN));
+function C(e, t, n) {
+    return null != e && (null != n ? n.applicationId === e.id : null != t && t.application_id === e.id && t.type === _.IIU.PLAYING && (0, d.Z)(t, _.xjy.JOIN));
 }
-let _ = l.memo(function (e) {
+let Z = l.memo(function (e) {
     let t,
         r,
-        u,
-        _,
-        { stream: Z, canGoLive: b, guildId: S, isStreaming: N, channel: E, canStream: y, runningGame: j, embeddedActivity: T, activity: A, application: P, analyticsContext: w } = e,
-        M = I(P, A, T),
+        d,
+        Z,
+        { stream: I, canGoLive: b, guildId: S, isStreaming: N, channel: E, canStream: j, runningGame: y, embeddedActivity: P, activity: A, application: T, analyticsContext: w } = e,
+        R = C(T, A, P),
         L = l.useCallback(() => {
             a()(null != A, 'Received null activity'),
-                f.default.track(v.rMx.OPEN_MODAL, {
+                g.default.track(_.rMx.OPEN_MODAL, {
                     type: 'Send Join Invite',
                     application_id: A.application_id,
                     location: w.location
                 }),
                 (0, s.h7)(A, !1);
         }, [A, w]),
-        R = l.useCallback(
+        M = l.useCallback(
             (e, t) => () => {
-                d.Z.leaveActivity({
+                u.Z.leaveActivity({
                     location: t,
                     applicationId: e,
                     showFeedback: !0
@@ -53,56 +49,56 @@ let _ = l.memo(function (e) {
             []
         ),
         D = l.useCallback(() => {
-            (0, p.Z)(Z);
-        }, [Z]),
+            (0, p.Z)(I);
+        }, [I]),
         G = l.useCallback(() => {
             let e = null != E && (0, m.vd)(E.type) ? E : null,
                 t = null != e ? e.getGuildId() : S;
-            (0, o.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('46298')]).then(n.bind(n, 60594));
+            (0, o.ZDy)(async () => {
+                let { default: e } = await Promise.all([n.e('93382'), n.e('79477'), n.e('56877')]).then(n.bind(n, 60594));
                 return (n) =>
                     (0, i.jsx)(e, {
                         ...n,
                         selectSource: !1,
                         guildId: t,
-                        analyticsLocation: v.Sbl.ACTIVITY_PANEL
+                        analyticsLocation: _.Sbl.ACTIVITY_PANEL
                     });
             });
-        }, [E, S]);
-    let k =
-            (null != j || null == T || (0, c.R)()) && (N || b)
-                ? (N ? ((t = !1), (r = D), (u = o.ScreenXIcon), (_ = C.intl.string(C.t.S5anIS))) : y ? ((t = !1), (r = G), (u = o.ScreenArrowIcon), (_ = null != j ? C.intl.formatToPlainString(C.t.AB5gT0, { game: j.name }) : C.intl.string(C.t.FeUKeH))) : ((t = !0), (r = null), (u = o.ScreenArrowIcon), (_ = null != E && (0, m.vd)(E.type) ? C.intl.string(C.t.uQn9Bw) : null != S ? C.intl.string(C.t.fBXEoK) : C.intl.string(C.t.n3feND))),
+        }, [E, S]),
+        k =
+            (null != y || null == P || (0, c.R)()) && (N || b)
+                ? (N ? ((t = !1), (r = D), (d = o.g5r), (Z = v.intl.string(v.t.S5anIS))) : j ? ((t = !1), (r = G), (d = o.hGI), (Z = null != y ? v.intl.formatToPlainString(v.t.AB5gT0, { game: y.name }) : v.intl.string(v.t.FeUKeH))) : ((t = !0), (r = null), (d = o.hGI), (Z = null != E && (0, m.vd)(E.type) ? v.intl.string(v.t.uQn9Bw) : null != S ? v.intl.string(v.t.fBXEoK) : v.intl.string(v.t.n3feND))),
                   (0, i.jsx)('div', {
                       className: x.panelButtonContainer,
-                      children: (0, i.jsx)(g.Z, {
-                          tooltipText: _,
+                      children: (0, i.jsx)(f.Z, {
+                          tooltipText: Z,
                           disabled: t,
                           onClick: r,
-                          icon: u
+                          icon: d
                       })
                   }))
                 : null,
         B =
-            M && null == T
-                ? (0, i.jsx)(g.Z, {
-                      tooltipText: C.intl.string(C.t['hC/Ze3']),
+            R && null == P
+                ? (0, i.jsx)(f.Z, {
+                      tooltipText: v.intl.string(v.t['hC/Ze3']),
                       onClick: L,
-                      icon: o.GroupPlusIcon
+                      icon: o.ejJ
                   })
                 : null,
-        U =
-            null == T || null == E
+        O =
+            null == P || null == E
                 ? null
-                : (0, i.jsx)(g.Z, {
-                      tooltipText: C.intl.string(C.t['R/FK4O']),
-                      onClick: R(T.applicationId, T.location),
-                      icon: o.DoorExitIcon
+                : (0, i.jsx)(f.Z, {
+                      tooltipText: v.intl.string(v.t['R/FK4O']),
+                      onClick: M(P.applicationId, P.location),
+                      icon: o.PBZ
                   }),
-        O = null == Z ? null : (0, i.jsx)(h.Z, {});
-    return null == k && null == B && null == U
+        U = null == I ? null : (0, i.jsx)(h.Z, {});
+    return null == k && null == B && null == O
         ? null
         : (0, i.jsxs)('div', {
               className: x.actions,
-              children: [k, B, null != U ? U : O]
+              children: [k, B, null != O ? O : U]
           });
 });

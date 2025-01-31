@@ -1,7 +1,8 @@
-e.exports = {
-    shopPageContainer: 'shopPageContainer_dd4901',
-    giftModalContainer: 'giftModalContainer_dd4901',
-    heading1: 'heading1_dd4901',
-    description: 'description_dd4901',
-    reload: 'reload_dd4901'
+var i = {
+    shopPageContainer: 'shopPageContainer__4485d',
+    giftModalContainer: 'giftModalContainer__4485d',
+    heading1: 'heading1__4485d',
+    description: 'description__4485d',
+    reload: 'reload__4485d'
 };
+e.exports = i;

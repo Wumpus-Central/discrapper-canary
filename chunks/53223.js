@@ -1,1 +1,4 @@
-e.exports = { container: 'container_a771d0' };
+e.exports = {
+    container: 'container__2ee44',
+    text: 'text__2ee44'
+};

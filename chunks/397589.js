@@ -1,55 +1,58 @@
-var i = r(200651),
-    a = r(192379),
-    o = r(481060),
-    s = r(782568),
-    l = r(592125),
-    u = r(594174),
-    c = r(63063),
-    d = r(5192),
-    f = r(111810),
-    p = r(287941),
-    h = r(477931),
-    _ = r(235894),
-    m = r(981631),
-    g = r(388032),
-    E = r(814169);
+n.d(t, { Z: () => v });
+var i = n(200651),
+    r = n(192379),
+    a = n(481060),
+    s = n(782568),
+    o = n(592125),
+    l = n(594174),
+    u = n(63063),
+    c = n(5192),
+    d = n(992970),
+    f = n(111810),
+    _ = n(287941),
+    p = n(477931),
+    h = n(235894),
+    m = n(981631),
+    g = n(388032),
+    E = n(814169);
 let v = (e) => {
-    var n;
-    let { message: r } = e,
-        v = a.useRef(null),
-        y = (0, f.p7)('Message Header') && r.hasPotions(),
-        b = l.Z.getChannel(r.getChannelId()),
-        I = null === (n = r.potions) || void 0 === n ? void 0 : n[0],
-        T = a.useMemo(() => {
+    var t;
+    let { message: n } = e,
+        v = r.useRef(null),
+        y = (0, f.p7)('Message Header') && n.hasPotions(),
+        I = o.Z.getChannel(n.getChannelId()),
+        b = null === (t = n.potions) || void 0 === t ? void 0 : t[0],
+        T = r.useMemo(() => {
             var e;
-            if (null == I) return null;
-            let n = u.default.getUser(I.used_by);
-            return null !== (e = (0, d.y)(null == b ? void 0 : b.getGuildId(), null == b ? void 0 : b.id, n)) && void 0 !== e ? e : null == n ? void 0 : n.globalName;
-        }, [I, b]),
-        S = a.useCallback(() => {
-            if (null != v.current && (0, _.U)(r)) {
-                let { x: e, y: n, width: i, height: a } = v.current.getBoundingClientRect();
-                (0, p.Z)(
-                    r,
+            if (null == b) return null;
+            let t = l.default.getUser(b.used_by);
+            return null !== (e = (0, c.y)(null == I ? void 0 : I.getGuildId(), null == I ? void 0 : I.id, t)) && void 0 !== e ? e : null == t ? void 0 : t.globalName;
+        }, [b, I]),
+        S = r.useCallback(() => {
+            if (null != v.current && (0, h.Uw)(n)) {
+                let { x: e, y: t, width: i, height: r } = v.current.getBoundingClientRect();
+                (0, _.Z)(
+                    n,
                     {
                         x: e,
-                        y: n,
+                        y: t,
                         w: i,
-                        h: a
+                        h: r
                     },
-                    !0
+                    !0,
+                    d.LL.UserTriggered
                 );
             }
-        }, [r]),
-        A = a.useCallback(() => {
-            (0, s.Z)(c.Z.getArticleURL(m.BhN.CONFETTI_POTION));
+        }, [n]),
+        A = r.useCallback(() => {
+            (0, s.Z)(u.Z.getArticleURL(m.BhN.CONFETTI_POTION));
         }, []);
-    return y && null != T && (null == I ? void 0 : I.type) === h.B.CONFETTI
-        ? (0, i.jsx)(o.Clickable, {
+    return y && null != T && (null == b ? void 0 : b.type) === p.B.CONFETTI
+        ? (0, i.jsx)(a.P3F, {
               onFocus: S,
               onClick: A,
               'aria-label': g.intl.string(g.t.Mp5k6O),
-              children: (0, i.jsx)(o.Tooltip, {
+              children: (0, i.jsx)(a.ua7, {
                   text: g.intl.formatToPlainString(g.t['FE++aG'], { user: T }),
                   children: (e) =>
                       (0, i.jsxs)('div', {
@@ -57,13 +60,13 @@ let v = (e) => {
                           className: E.potionBadge,
                           ...e,
                           children: [
-                              (0, i.jsx)(o.ExperimentalConfettiIcon, {
+                              (0, i.jsx)(a.l22, {
                                   size: 'custom',
                                   color: 'currentColor',
                                   width: 12,
                                   height: 12
                               }),
-                              (0, i.jsx)(o.Text, {
+                              (0, i.jsx)(a.Text, {
                                   variant: 'text-xs/bold',
                                   color: 'currentColor',
                                   children: g.intl.string(g.t['8Rrro6'])
@@ -74,4 +77,3 @@ let v = (e) => {
           })
         : null;
 };
-n.Z = v;

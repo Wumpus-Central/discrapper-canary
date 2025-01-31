@@ -1,214 +1,217 @@
+n.d(t, { Z: () => W }), n(47120), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648), n(519149), n(411104);
 var i,
-    a = r(47120);
-var o = r(315314);
-var s = r(610138);
-var l = r(216116);
-var u = r(78328);
-var c = r(815648);
-var d = r(519149);
-var f = r(411104);
-var p = r(512722),
-    h = r.n(p),
-    _ = r(392711),
-    m = r.n(_),
-    g = r(616254),
-    E = r(442837),
-    v = r(570140),
-    y = r(710845),
-    b = r(857192),
-    I = r(358085),
-    T = r(998502),
-    S = r(228488),
-    A = r(248977),
-    C = r(981631);
-function N(e, n, r) {
+    r = n(512722),
+    a = n.n(r),
+    s = n(392711),
+    o = n.n(s),
+    l = n(616254),
+    u = n(442837),
+    c = n(570140),
+    d = n(710845),
+    f = n(857192),
+    _ = n(358085),
+    p = n(998502),
+    h = n(228488),
+    m = n(248977),
+    g = n(981631);
+function E(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let R = new y.Z('PopoutWindowStore'),
-    O = {},
-    D = {},
-    L = {},
-    x = {},
-    w = {},
-    P = new Set(),
-    M = 'app-mount',
-    k = () => ee.emitChange(),
-    U = m().debounce(k, 150),
-    B = !1;
-function G(e, n) {
-    let r = n.document,
-        i = r.body;
-    for (let e of (h()(null != i, 'Body for popout window is null!'), document.querySelectorAll('style'))) {
-        let n = r.importNode(e, !0);
-        i.appendChild(n);
+let v = new d.Z('PopoutWindowStore'),
+    y = {},
+    I = {},
+    b = {},
+    T = {},
+    S = {},
+    A = new Set(),
+    N = 'app-mount',
+    C = () => Y.emitChange(),
+    R = o().debounce(C, 150),
+    O = !1;
+function D(e, t) {
+    let n = t.document,
+        i = n.body;
+    for (let e of (a()(null != i, 'Body for popout window is null!'), document.querySelectorAll('style'))) {
+        let t = n.importNode(e, !0);
+        i.appendChild(t);
     }
     for (let e of document.querySelectorAll('link[rel="stylesheet"]')) {
-        let n = r.importNode(e, !0);
-        i.appendChild(n);
+        let t = n.importNode(e, !0);
+        i.appendChild(t);
     }
 }
-function Z(e) {
-    let n = L[e];
-    null != n &&
-        !n.closed &&
-        (O[e] = {
-            x: n.screenX,
-            y: n.screenY,
-            width: n.innerWidth,
-            height: n.innerHeight,
-            alwaysOnTop: !!I.isPlatformEmbedded && D[e]
+function x(e) {
+    let t = b[e];
+    null == t ||
+        t.closed ||
+        (y[e] = {
+            x: t.screenX,
+            y: t.screenY,
+            width: t.innerWidth,
+            height: t.innerHeight,
+            alwaysOnTop: !!_.isPlatformEmbedded && I[e]
         });
 }
-function F(e) {
-    let n = L[e];
-    h()(null != n, 'Popout window was null during unmount'), n.removeEventListener('focus', k), n.removeEventListener('blur', k), n.removeEventListener('resize', U);
-    let r = x[e];
-    h()(null != r, 'Window root was null while unmounting'), r.unmount(), delete L[e], delete D[e], delete w[e], delete x[e];
+function L(e) {
+    let t = b[e];
+    a()(null != t, 'Popout window was null during unmount'), t.removeEventListener('focus', C), t.removeEventListener('blur', C), t.removeEventListener('resize', R);
+    let n = T[e];
+    a()(null != n, 'Window root was null while unmounting'), n.unmount(), delete b[e], delete I[e], delete S[e], delete T[e];
 }
-function V(e, n, i) {
-    let a = e.document,
-        o = new URL(n).origin,
-        s = new URL(''.concat(window.location.protocol, '//').concat(window.location.host)).origin,
-        l = URL.canParse(r.p) ? new URL(r.p).origin : '';
-    if (o !== s && o !== l) {
-        R.warn('Not injecting stylesheet, unrecognized origin', o);
+function P(e, t, i) {
+    let r = e.document,
+        s = new URL(t).origin,
+        o = new URL(''.concat(window.location.protocol, '//').concat(window.location.host)).origin,
+        l = URL.canParse(n.p) ? new URL(n.p).origin : '';
+    if (s !== o && s !== l) {
+        v.warn('Not injecting stylesheet, unrecognized origin', s);
         return;
     }
-    let u = a.createElement('link');
-    (u.href = n), (u.rel = 'stylesheet'), (u.integrity = i), h()(null != a.head, 'Document head was null'), a.head.appendChild(u);
+    let u = r.createElement('link');
+    (u.href = t), (u.rel = 'stylesheet'), (u.integrity = i), a()(null != r.head, 'Document head was null'), r.head.appendChild(u);
 }
-function j(e, n) {
-    for (let e of document.querySelectorAll('link[rel="stylesheet"]')) V(n, e.href, e.integrity);
+function w(e, t) {
+    for (let e of document.querySelectorAll('link[rel="stylesheet"]')) P(t, e.href, e.integrity);
 }
-function H(e) {
-    let n = L[e],
-        r = w[e];
-    if (null == n) {
-        R.warn('Failed to open window', e);
+function M(e) {
+    let t = b[e],
+        n = S[e];
+    if (null == t) {
+        v.warn('Failed to open window', e);
         return;
     }
-    let i = n.document;
-    (0, S.uF)(i, k), n.addEventListener('focus', k), n.addEventListener('blur', k), n.addEventListener('resize', U), B ? G(e, n) : j(e, n);
-    let a = (0, g.createRoot)(i.getElementById(M));
-    h()(null != a, 'No render target for popout!'), (x[e] = a), a.render(r(e));
+    let i = t.document;
+    (0, h.uF)(i, C), t.addEventListener('focus', C), t.addEventListener('blur', C), t.addEventListener('resize', R), O ? D(e, t) : w(e, t);
+    let r = (0, l.createRoot)(i.getElementById(N));
+    a()(null != r, 'No render target for popout!'), (T[e] = r), r.render(n(e));
 }
-function Y(e) {
-    let { key: n, features: r, render: i } = e;
-    if (I.isPlatformEmbedded && !T.ZP.supportsFeature(C.eRX.POPOUT_WINDOWS)) throw Error('Popout windows not supported on this native module version!');
-    let a = !0 === r.outOfProcessOverlay,
-        o = L[n],
-        s = null != o && !o.closed;
-    if (s && !a) return I.isPlatformEmbedded ? T.ZP.focus(n) : null != o && o.focus(), !1;
-    if (s && a) return R.info('Already has open window, skipping focus'), !1;
-    let { defaultWidth: l, defaultHeight: u, defaultAlwaysOnTop: c = !1, ...d } = r,
-        f = d,
-        p = c,
-        h = O[n];
+function k(e) {
+    let { key: t, features: n, render: i } = e;
+    if (_.isPlatformEmbedded && !p.ZP.supportsFeature(g.eRX.POPOUT_WINDOWS)) throw Error('Popout windows not supported on this native module version!');
+    let r = !0 === n.outOfProcessOverlay,
+        a = b[t],
+        s = null != a && !a.closed;
+    if (s && !r) return _.isPlatformEmbedded ? p.ZP.focus(t) : null != a && a.focus(), !1;
+    if (s && r) return v.info('Already has open window, skipping focus'), !1;
+    let { defaultWidth: o, defaultHeight: l, defaultAlwaysOnTop: u = !1, ...c } = n,
+        d = c,
+        f = u,
+        h = y[t];
     if (null != h) {
-        let { width: e, height: n, x: r, y: i, alwaysOnTop: a } = h;
-        (p = null != a ? a : c),
-            (f = {
-                width: null != e && 0 !== e ? e : l,
-                height: null != n && 0 !== n ? n : u,
-                left: r,
+        let { width: e, height: t, x: n, y: i, alwaysOnTop: r } = h;
+        (f = null != r ? r : u),
+            (d = {
+                width: null != e && 0 !== e ? e : o,
+                height: null != t && 0 !== t ? t : l,
+                left: n,
                 top: i,
-                ...f
+                ...d
             });
     }
-    let _ = window.open(C.Z5c.POPOUT_WINDOW, n, (0, A.Z)(f));
-    (_.windowKey = n), !a && (null == _ || _.focus()), (L[n] = _), (w[n] = i), I.isPlatformEmbedded && (T.ZP.setAlwaysOnTop(n, p), (D[n] = p), T.ZP.isAlwaysOnTop(n).then((e) => (D[n] = e))), P.add(n);
+    let E = window.open(g.Z5c.POPOUT_WINDOW, t, (0, m.Z)(d));
+    (E.windowKey = t), r || null == E || E.focus(), (b[t] = E), (S[t] = i), _.isPlatformEmbedded && (p.ZP.setAlwaysOnTop(t, f), (I[t] = f), p.ZP.isAlwaysOnTop(t).then((e) => (I[t] = e))), A.add(t);
 }
-function W(e) {
-    P.has(e) && (H(e), P.delete(e), ee.emitChange());
+function U(e) {
+    A.has(e) && (M(e), A.delete(e), Y.emitChange());
 }
-function K(e) {
-    let n = L[e];
-    null != n && (!n.closed && Z(e), setTimeout(() => n.close(), 100), F(e), ee.emitChange());
+function G(e) {
+    let t = b[e];
+    null != t &&
+        (t.closed || x(e),
+        L(e),
+        setTimeout(() => {
+            try {
+                t.closed || t.close();
+            } catch (e) {
+                v.warn('Failed to close popout window', e);
+            }
+        }, 100),
+        Y.emitChange());
 }
-function z(e) {
-    let { data: n } = e;
-    if (!(n instanceof Object && n.discordPopoutEvent instanceof Object)) return;
-    let r = n.discordPopoutEvent;
-    if (null != r.key)
-        switch (r.type) {
-            case C.l9w.LOADED:
-                return W(r.key);
-            case C.l9w.UNLOADED:
-                return K(r.key);
+function B(e) {
+    let { data: t } = e;
+    if (!(t instanceof Object && t.discordPopoutEvent instanceof Object)) return;
+    let n = t.discordPopoutEvent;
+    if (null != n.key)
+        switch (n.type) {
+            case g.l9w.LOADED:
+                return U(n.key);
+            case g.l9w.UNLOADED:
+                return G(n.key);
         }
 }
-function q(e) {
-    let { key: n } = e,
-        r = L[n];
-    null != r && !r.closed && (Z(n), !b.default.preventPopoutClose && r.close());
+function Z(e) {
+    let { key: t } = e,
+        n = b[t];
+    null == n || n.closed || (x(t), f.default.preventPopoutClose || n.close());
 }
-function Q() {
-    for (let e of Object.keys(L)) {
-        let n = L[e];
-        null != n && n.close();
+function F() {
+    for (let e of Object.keys(b)) {
+        let t = b[e];
+        null != t && t.close();
     }
 }
-function X(e) {
-    let { key: n, alwaysOnTop: r } = e;
-    I.isPlatformEmbedded && (T.ZP.setAlwaysOnTop(n, r), (D[n] = r), T.ZP.isAlwaysOnTop(n).then((e) => (D[n] = e)));
+function V(e) {
+    let { key: t, alwaysOnTop: n } = e;
+    _.isPlatformEmbedded && (p.ZP.setAlwaysOnTop(t, n), (I[t] = n), p.ZP.isAlwaysOnTop(t).then((e) => (I[t] = e)));
 }
-function J(e) {
-    let { url: n, integrity: r } = e;
-    for (let e of Object.values(L)) null != e && !e.closed && V(e, n, r);
+function j(e) {
+    let { url: t, integrity: n } = e;
+    for (let e of Object.values(b)) null == e || e.closed || P(e, t, n);
 }
-class $ extends (i = E.ZP.PersistedStore) {
+class H extends (i = u.ZP.PersistedStore) {
     initialize(e) {
-        window.addEventListener('message', z), window.addEventListener('beforeunload', Q), (O = null != e ? e : {});
+        window.addEventListener('message', B), window.addEventListener('beforeunload', F), (y = null != e ? e : {});
     }
     getWindow(e) {
-        return L[e];
+        return b[e];
     }
     getWindowState(e) {
-        return O[e];
+        return y[e];
     }
     getWindowKeys() {
-        return Object.keys(L);
+        return Object.keys(b);
     }
     getWindowOpen(e) {
-        let n = L[e];
-        return null != n && !n.closed;
+        let t = b[e];
+        return null != t && !t.closed;
     }
     getIsAlwaysOnTop(e) {
-        return !!D[e];
+        return !!I[e];
     }
     getWindowFocused(e) {
-        var n, r;
-        let i = L[e];
-        return null !== (r = null == i ? void 0 : null === (n = i.document) || void 0 === n ? void 0 : n.hasFocus()) && void 0 !== r && r;
+        var t, n;
+        let i = b[e];
+        return null !== (n = null == i ? void 0 : null === (t = i.document) || void 0 === t ? void 0 : t.hasFocus()) && void 0 !== n && n;
     }
     getWindowVisible(e) {
-        var n;
-        let r = L[e];
-        return (null == r ? void 0 : null === (n = r.document) || void 0 === n ? void 0 : n.visibilityState) === 'visible';
+        var t;
+        let n = b[e];
+        return (null == n ? void 0 : null === (t = n.document) || void 0 === t ? void 0 : t.visibilityState) === 'visible';
     }
     getState() {
-        return O;
+        return y;
     }
     unmountWindow(e) {
-        return K(e);
+        return G(e);
     }
 }
-N($, 'displayName', 'PopoutWindowStore'), N($, 'persistKey', 'PopoutWindowStore');
-let ee = new $(v.Z, {
-    POPOUT_WINDOW_OPEN: Y,
-    POPOUT_WINDOW_ADD_STYLESHEET: J,
-    POPOUT_WINDOW_CLOSE: q,
-    POPOUT_WINDOW_SET_ALWAYS_ON_TOP: X,
-    LOGOUT: Q
-});
-n.Z = ee;
+E(H, 'displayName', 'PopoutWindowStore'), E(H, 'persistKey', 'PopoutWindowStore');
+let Y = new H(c.Z, {
+        POPOUT_WINDOW_OPEN: k,
+        POPOUT_WINDOW_ADD_STYLESHEET: j,
+        POPOUT_WINDOW_CLOSE: Z,
+        POPOUT_WINDOW_SET_ALWAYS_ON_TOP: V,
+        LOGOUT: F
+    }),
+    W = Y;

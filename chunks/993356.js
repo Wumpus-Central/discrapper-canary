@@ -1,145 +1,141 @@
-t.d(n, {
-    Z: function () {
-        return h;
-    }
-});
-var i = t(200651);
-t(192379);
-var l = t(442837),
-    a = t(481060),
-    s = t(87051),
-    u = t(778123),
-    r = t(122074),
-    o = t(9156),
-    d = t(621600),
-    c = t(981631),
-    g = t(388032);
+n.d(t, { Z: () => h });
+var i = n(200651);
+n(192379);
+var l = n(442837),
+    s = n(481060),
+    a = n(87051),
+    r = n(778123),
+    d = n(122074),
+    u = n(9156),
+    c = n(621600),
+    o = n(981631),
+    g = n(388032);
 function E() {
     return [
         {
-            setting: c.bL.ALL_MESSAGES,
+            setting: o.bL.ALL_MESSAGES,
             label: g.intl.string(g.t['n/bTaW'])
         },
         {
-            setting: c.bL.ONLY_MENTIONS,
+            setting: o.bL.ONLY_MENTIONS,
             label: g.intl.format(g.t.L2hmY2, {})
         },
         {
-            setting: c.bL.NO_MESSAGES,
+            setting: o.bL.NO_MESSAGES,
             label: g.intl.string(g.t.CtVGyc)
         }
     ];
 }
 function h(e) {
-    var n, h;
-    let M = (function (e) {
+    var t, h;
+    let S = (function (e) {
             let {
-                    suppressEveryone: n,
-                    suppressRoles: t,
+                    suppressEveryone: t,
+                    suppressRoles: n,
                     mobilePush: h,
-                    messageNotifications: M,
-                    notifyHighlights: f
+                    messageNotifications: S,
+                    notifyHighlights: N
                 } = (0, l.cj)(
-                    [o.ZP],
+                    [u.ZP],
                     () => ({
-                        suppressEveryone: o.ZP.isSuppressEveryoneEnabled(e.id),
-                        suppressRoles: o.ZP.isSuppressRolesEnabled(e.id),
-                        mobilePush: o.ZP.isMobilePushEnabled(e.id),
-                        messageNotifications: o.ZP.getMessageNotifications(e.id),
-                        notifyHighlights: o.ZP.getNotifyHighlights(e.id)
+                        suppressEveryone: u.ZP.isSuppressEveryoneEnabled(e.id),
+                        suppressRoles: u.ZP.isSuppressRolesEnabled(e.id),
+                        mobilePush: u.ZP.isMobilePushEnabled(e.id),
+                        messageNotifications: u.ZP.getMessageNotifications(e.id),
+                        notifyHighlights: u.ZP.getNotifyHighlights(e.id)
                     }),
                     [e.id]
                 ),
-                _ = f === c.gLR.DISABLED,
-                N = (0, u.Z)(e.id);
-            function S(n, t) {
-                s.Z.updateGuildNotificationSettings(e.id, n, t);
+                _ = N === o.gLR.DISABLED,
+                f = (0, r.Z)(e.id);
+            function Z(t, n) {
+                a.Z.updateGuildNotificationSettings(e.id, t, n);
             }
-            let I = (0, r.ng)(e.id, !0);
+            let x = (0, d.ng)(e.id, !0);
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(a.MenuGroup, {
+                    (0, i.jsx)(s.kSQ, {
                         children: E().map((e) => {
-                            let { setting: n, label: t } = e;
+                            let { setting: t, label: n } = e;
                             return (0, i.jsx)(
-                                a.MenuRadioItem,
+                                s.k5B,
                                 {
                                     group: 'guild-notifications',
-                                    id: ''.concat(n),
-                                    label: t,
-                                    action: () => S({ message_notifications: n }, d.UE.notifications(n)),
-                                    checked: n === M
+                                    id: ''.concat(t),
+                                    label: n,
+                                    action: () => Z({ message_notifications: t }, c.UE.notifications(t)),
+                                    checked: t === S
                                 },
-                                n
+                                t
                             );
                         })
                     }),
-                    null != I && (0, i.jsx)(a.MenuGroup, { children: I }),
-                    (0, i.jsxs)(a.MenuGroup, {
+                    null != x && (0, i.jsx)(s.kSQ, { children: x }),
+                    (0, i.jsxs)(s.kSQ, {
                         children: [
-                            (0, i.jsx)(a.MenuCheckboxItem, {
+                            (0, i.jsx)(s.S89, {
                                 id: 'suppress-everyone',
                                 label: g.intl.format(g.t.OWiWAg, {}),
-                                action: () => S({ suppress_everyone: !n }, d.UE.suppressEveryone(!n)),
-                                checked: n
-                            }),
-                            (0, i.jsx)(a.MenuCheckboxItem, {
-                                id: 'suppress-roles',
-                                label: g.intl.string(g.t['O/QdoK']),
-                                action: () => S({ suppress_roles: !t }, d.UE.suppressRoles(!t)),
+                                action: () => Z({ suppress_everyone: !t }, c.UE.suppressEveryone(!t)),
                                 checked: t
                             }),
-                            (0, i.jsx)(a.MenuCheckboxItem, {
+                            (0, i.jsx)(s.S89, {
+                                id: 'suppress-roles',
+                                label: g.intl.string(g.t['O/QdoK']),
+                                action: () => Z({ suppress_roles: !n }, c.UE.suppressRoles(!n)),
+                                checked: n
+                            }),
+                            (0, i.jsx)(s.S89, {
                                 id: 'suppress-highlights',
                                 label: g.intl.string(g.t.gPuteH),
                                 action: () => {
-                                    S({ notify_highlights: _ ? c.gLR.ENABLED : c.gLR.DISABLED }, d.UE.highlights(_));
+                                    Z({ notify_highlights: _ ? o.gLR.ENABLED : o.gLR.DISABLED }, c.UE.highlights(_));
                                 },
                                 checked: _
                             }),
-                            N
+                            f
                         ]
                     }),
-                    (0, i.jsx)(a.MenuGroup, {
-                        children: (0, i.jsx)(a.MenuCheckboxItem, {
+                    (0, i.jsx)(s.kSQ, {
+                        children: (0, i.jsx)(s.S89, {
                             id: 'mobile-push',
                             label: g.intl.string(g.t['h1DL6+']),
-                            action: () => S({ mobile_push: !h }, d.UE.mobilePush(!h)),
+                            action: () => Z({ mobile_push: !h }, c.UE.mobilePush(!h)),
                             checked: h
                         })
                     })
                 ]
             });
         })(e),
-        f = (0, l.e7)([o.ZP], () => o.ZP.getMessageNotifications(e.id), [e.id]),
+        N = (0, l.e7)([u.ZP], () => u.ZP.getMessageNotifications(e.id), [e.id]),
         _ =
             null === (h = E()) || void 0 === h
                 ? void 0
                 : null ===
-                        (n = h.find((e) => {
-                            let { setting: n } = e;
-                            return n === f;
-                        })) || void 0 === n
+                        (t = h.find((e) => {
+                            let { setting: t } = e;
+                            return t === N;
+                        })) || void 0 === t
                   ? void 0
-                  : n.label,
-        N = (0, r.U)();
-    return null != M
-        ? (0, i.jsx)(a.MenuItem, {
+                  : t.label,
+        f = (0, d.U)();
+    return null != S
+        ? (0, i.jsx)(s.sNh, {
               id: 'guild-notifications',
               label: (0, i.jsxs)(i.Fragment, {
-                  children: [N, g.intl.string(g.t.h850Sk)]
+                  children: [f, g.intl.string(g.t.h850Sk)]
               }),
               subtext: _,
               action: () =>
-                  (0, a.openModalLazy)(async () => {
-                      let { default: n } = await Promise.all([t.e('5863'), t.e('67913')]).then(t.bind(t, 751212));
-                      return (t) =>
-                          (0, i.jsx)(n, {
-                              ...t,
+                  (0, s.ZDy)(async () => {
+                      let { default: t } = await Promise.all([n.e('5863'), n.e('67913')]).then(n.bind(n, 751212));
+                      return (n) =>
+                          (0, i.jsx)(t, {
+                              ...n,
                               guildId: e.id
                           });
                   }),
-              children: M
+              children: S
           })
         : null;
 }

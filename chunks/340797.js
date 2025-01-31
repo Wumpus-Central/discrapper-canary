@@ -1,44 +1,40 @@
-r.d(n, {
-    Z: function () {
-        return c;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(481060),
-    o = r(946273),
-    s = r(441110),
-    l = r(388032),
-    u = r(673094);
-function c(e) {
-    let { guild: n, message: r } = e;
-    return (0, o.vV)(n.id, r.author.id)
-        ? (0, i.jsx)(a.Popout, {
-              animation: a.Popout.Animation.TRANSLATE,
+n.d(t, { Z: () => u });
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(946273),
+    s = n(441110),
+    o = n(388032),
+    l = n(673094);
+function u(e) {
+    let { guild: t, message: n } = e;
+    return (0, a.vV)(t.id, n.author.id)
+        ? (0, i.jsx)(r.yRy, {
+              animation: r.yRy.Animation.TRANSLATE,
               align: 'center',
               autoInvert: !0,
               nudgeAlignIntoViewport: !0,
               position: 'right',
               renderPopout: (e) => {
-                  let { closePopout: a } = e;
+                  let { closePopout: r } = e;
                   return (0, i.jsx)(s.Z, {
-                      guild: n,
-                      message: r,
-                      onClose: a
+                      guild: t,
+                      message: n,
+                      onClose: r
                   });
               },
               children: (e) => {
-                  let { onClick: n } = e;
-                  return (0, i.jsx)(a.Clickable, {
-                      onClick: n,
+                  let { onClick: t } = e;
+                  return (0, i.jsx)(r.P3F, {
+                      onClick: t,
                       tag: 'span',
-                      children: (0, i.jsx)(a.Tooltip, {
-                          text: l.intl.string(l.t['v/OYd3']),
+                      children: (0, i.jsx)(r.ua7, {
+                          text: o.intl.string(o.t['v/OYd3']),
                           children: (e) =>
                               (0, i.jsx)('div', {
-                                  className: u.newMemberBadge,
+                                  className: l.newMemberBadge,
                                   ...e,
-                                  children: (0, i.jsx)(a.NewUserIcon, {
+                                  children: (0, i.jsx)(r.hg2, {
                                       size: 'custom',
                                       color: 'currentColor',
                                       width: 20,

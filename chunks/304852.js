@@ -1,22 +1,18 @@
-r.d(n, {
-    J: function () {
-        return o;
-    },
-    Z: function () {
-        return s;
-    }
+n.d(t, {
+    J: () => a,
+    Z: () => s
 });
-var i = r(192379),
-    a = r(149203);
-function o(e) {
-    let { topEmojis: n, newlyAddedEmojis: r, rowSize: i = a.N6 } = e,
-        o = n.slice(0, i - r.length);
+var i = n(192379),
+    r = n(149203);
+function a(e) {
+    let { topEmojis: t, newlyAddedEmojis: n, rowSize: i = r.N6 } = e,
+        a = t.slice(0, i - n.length);
     return {
-        visibleTopEmojis: o,
-        visibleNewlyAddedEmojis: r,
-        allEmojis: o.concat(r)
+        visibleTopEmojis: a,
+        visibleNewlyAddedEmojis: n,
+        allEmojis: a.concat(n)
     };
 }
 function s(e) {
-    return i.useMemo(() => o(e), [e]);
+    return i.useMemo(() => a(e), [e]);
 }

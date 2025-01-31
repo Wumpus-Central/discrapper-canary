@@ -1,16 +1,12 @@
-r.d(n, {
-    Z: function () {
-        return u;
-    }
-});
-var i = r(442837),
-    a = r(314897),
-    o = r(351780),
-    s = r(843693);
-function l(e, n) {
-    return e === n || ((null == e ? void 0 : e.channelId) === (null == n ? void 0 : n.channelId) && (null == e ? void 0 : e.value) === (null == n ? void 0 : n.value) && (null == e ? void 0 : e.multiplier) === (null == n ? void 0 : n.multiplier) && !0);
+n.d(t, { Z: () => l });
+var i = n(442837),
+    r = n(314897),
+    a = n(351780),
+    s = n(843693);
+function o(e, t) {
+    return e === t || ((null == e ? void 0 : e.channelId) === (null == t ? void 0 : t.channelId) && (null == e ? void 0 : e.value) === (null == t ? void 0 : t.value) && (null == e ? void 0 : e.multiplier) === (null == t ? void 0 : t.multiplier));
 }
-function u(e) {
-    let n = (0, i.e7)([o.Z], () => !!o.Z.isEnabled() && o.Z.combosEnabled);
-    return (0, i.e7)([s.ZP, a.default], () => (n ? s.ZP.getUserCombo(a.default.getId(), e) : void 0), [e, n], l);
+function l(e) {
+    let t = (0, i.e7)([a.Z], () => !!a.Z.isEnabled() && a.Z.combosEnabled);
+    return (0, i.e7)([s.ZP, r.default], () => (t ? s.ZP.getUserCombo(r.default.getId(), e) : void 0), [e, t], o);
 }

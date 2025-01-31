@@ -1,71 +1,58 @@
 n.d(t, {
-    LD: function () {
-        return x;
-    },
-    LJ: function () {
-        return v;
-    },
-    mV: function () {
-        return g;
-    },
-    mh: function () {
-        return C;
-    },
-    qc: function () {
-        return i;
-    },
-    wi: function () {
-        return _;
-    }
+    LD: () => C,
+    LJ: () => x,
+    mV: () => g,
+    mh: () => _,
+    qc: () => f,
+    wi: () => v
 }),
     n(789020),
     n(47120);
 var i,
-    l,
-    r = n(192379),
+    l = n(192379),
     a = n(913527),
-    s = n.n(a),
-    o = n(399606),
-    c = n(983736),
-    d = n(271383),
-    u = n(430824),
-    h = n(594174),
-    p = n(630388),
-    m = n(709054);
+    r = n.n(a),
+    s = n(399606),
+    o = n(983736),
+    c = n(271383),
+    d = n(430824),
+    u = n(594174),
+    h = n(630388),
+    p = n(709054);
 n(893966), n(527379);
-var f = n(372897);
+var m = n(372897),
+    f = (((i = {})[(i.NO_GATE = 0)] = 'NO_GATE'), (i[(i.NO_AGREEMENT = 1)] = 'NO_AGREEMENT'), (i[(i.AGREED = 2)] = 'AGREED'), i);
 function g(e, t) {
     var n, i;
-    let l = (0, o.e7)([h.default], () => h.default.getUser(e), [e]),
-        r = (0, o.e7)([d.ZP], () => d.ZP.getMember(t, e), [t, e]),
-        a = (0, o.e7)([u.Z], () => u.Z.getGuild(t), [t]);
-    return (0, c.Dc)(a) ? (null == l || null == r || null == a ? 1 : (0, p.yE)(null !== (n = r.flags) && void 0 !== n ? n : 0, f.q.BYPASSES_VERIFICATION) || (0, p.yE)(null !== (i = r.flags) && void 0 !== i ? i : 0, f.q.COMPLETED_ONBOARDING) || (null != r.isPending && !r.isPending) ? 2 : 1) : 0;
-}
-function C(e, t) {
-    var n;
-    let i = (0, o.e7)([h.default], () => h.default.getUser(e), [e]),
-        l = (0, o.e7)([d.ZP], () => d.ZP.getMember(t, e), [t, e]);
-    if (null == i || null == l) return !1;
-    let r = (0, p.yE)(null !== (n = l.flags) && void 0 !== n ? n : 0, f.q.BYPASSES_VERIFICATION),
-        a = (null == i ? void 0 : i.isPhoneVerified()) || (null == i ? void 0 : i.isStaff()),
-        s = (null == l ? void 0 : l.joinedAt) != null;
-    return i.verified || a || s || r;
-}
-function x(e) {
-    return r.useMemo(() => {
-        let t = m.default.extractTimestamp(e);
-        return s()(new Date(t)).format('MMM DD, YYYY');
-    }, [e]);
-}
-function v(e) {
-    return r.useMemo(() => {
-        let t = m.default.extractTimestamp(e);
-        return s()(new Date(t)).format('MM/DD/YYYY');
-    }, [e]);
+    let l = (0, s.e7)([u.default], () => u.default.getUser(e), [e]),
+        a = (0, s.e7)([c.ZP], () => c.ZP.getMember(t, e), [t, e]),
+        r = (0, s.e7)([d.Z], () => d.Z.getGuild(t), [t]);
+    return (0, o.Dc)(r) ? (null == l || null == a || null == r ? 1 : (0, h.yE)(null !== (n = a.flags) && void 0 !== n ? n : 0, m.q.BYPASSES_VERIFICATION) || (0, h.yE)(null !== (i = a.flags) && void 0 !== i ? i : 0, m.q.COMPLETED_ONBOARDING) || (null != a.isPending && !a.isPending) ? 2 : 1) : 0;
 }
 function _(e, t) {
-    let n = (0, o.e7)([d.ZP], () => d.ZP.getMember(t, e), [t, e]),
-        i = null == n ? void 0 : n.joinedAt;
-    return r.useMemo(() => (null == i ? '' : s()(new Date(i)).format('MMM DD, YYYY')), [i]);
+    var n;
+    let i = (0, s.e7)([u.default], () => u.default.getUser(e), [e]),
+        l = (0, s.e7)([c.ZP], () => c.ZP.getMember(t, e), [t, e]);
+    if (null == i || null == l) return !1;
+    let a = (0, h.yE)(null !== (n = l.flags) && void 0 !== n ? n : 0, m.q.BYPASSES_VERIFICATION),
+        r = (null == i ? void 0 : i.isPhoneVerified()) || (null == i ? void 0 : i.isStaff()),
+        o = (null == l ? void 0 : l.joinedAt) != null;
+    return i.verified || r || o || a;
 }
-((l = i || (i = {}))[(l.NO_GATE = 0)] = 'NO_GATE'), (l[(l.NO_AGREEMENT = 1)] = 'NO_AGREEMENT'), (l[(l.AGREED = 2)] = 'AGREED');
+function C(e) {
+    return l.useMemo(() => {
+        let t = p.default.extractTimestamp(e);
+        return r()(new Date(t)).format('MMM DD, YYYY');
+    }, [e]);
+}
+function x(e) {
+    return l.useMemo(() => {
+        let t = p.default.extractTimestamp(e);
+        return r()(new Date(t)).format('MM/DD/YYYY');
+    }, [e]);
+}
+function v(e, t) {
+    let n = (0, s.e7)([c.ZP], () => c.ZP.getMember(t, e), [t, e]),
+        i = null == n ? void 0 : n.joinedAt;
+    return l.useMemo(() => (null == i ? '' : r()(new Date(i)).format('MMM DD, YYYY')), [i]);
+}

@@ -1,16 +1,17 @@
-e.exports = {
-    stepBody: 'stepBody_dcb6d5',
-    bodyColumnMiddle: 'bodyColumnMiddle_dcb6d5',
-    bodyColumnLeft: 'bodyColumnLeft_dcb6d5',
-    bodyColumnRight: 'bodyColumnRight_dcb6d5',
-    sendTo: 'sendTo_dcb6d5',
-    customGiftMessageWrapper: 'customGiftMessageWrapper_dcb6d5',
-    customGiftMessage: 'customGiftMessage_dcb6d5',
-    giftPreview: 'giftPreview_dcb6d5',
-    selectGiftTitle: 'selectGiftTitle_dcb6d5',
-    recommendedGiftPreview: 'recommendedGiftPreview_dcb6d5',
-    navigateToShopButton: 'navigateToShopButton_dcb6d5',
-    navigateToShopBody: 'navigateToShopBody_dcb6d5',
-    navigateToShopTextWrapper: 'navigateToShopTextWrapper_dcb6d5',
-    shopIcon: 'shopIcon_dcb6d5'
+var i = {
+    stepBody: 'stepBody_bf1b4a',
+    bodyColumnMiddle: 'bodyColumnMiddle_bf1b4a',
+    bodyColumnLeft: 'bodyColumnLeft_bf1b4a',
+    bodyColumnRight: 'bodyColumnRight_bf1b4a',
+    customGiftMessageWrapper: 'customGiftMessageWrapper_bf1b4a',
+    sendTo: 'sendTo_bf1b4a',
+    customGiftMessage: 'customGiftMessage_bf1b4a',
+    giftPreview: 'giftPreview_bf1b4a',
+    selectGiftTitle: 'selectGiftTitle_bf1b4a',
+    recommendedGiftPreview: 'recommendedGiftPreview_bf1b4a',
+    navigateToShopButton: 'navigateToShopButton_bf1b4a',
+    navigateToShopBody: 'navigateToShopBody_bf1b4a',
+    navigateToShopTextWrapper: 'navigateToShopTextWrapper_bf1b4a',
+    shopIcon: 'shopIcon_bf1b4a'
 };
+e.exports = i;

@@ -1,46 +1,37 @@
-r.d(n, {
-    $: function () {
-        return a;
-    },
-    a: function () {
-        return d;
-    }
+n.d(t, {
+    $: () => a,
+    a: () => u
 });
-var i,
-    a,
-    o = r(231053),
-    s = r(388032);
-!(function (e) {
-    (e.DEFAULT = 'Custom Emoji Popout'), (e.CROSS_SERVER = 'Custom Emoji Popout (Cross-Server)'), (e.UPSELL_CURRENT_SERVER_JOINED = 'Custom Emoji Popout (Upsell Joined Current-Server)'), (e.UPSELL_CROSS_SERVER_JOINED = 'Custom Emoji Popout (Upsell Joined Cross-Server)'), (e.UPSELL_CROSS_SERVER_JOINABLE = 'Custom Emoji Popout (Upsell Not-Joined Cross-Server)'), (e.UPSELL_CROSS_SERVER_UNJOINABLE = 'Custom Emoji Popout (Soft Upsell)');
-})(i || (i = {})),
-    !(function (e) {
-        (e.GET_PREMIUM = 'GET_PREMIUM'), (e.JOIN_GUILD = 'JOIN_GUILD'), (e.UNAVAILABLE = 'UNAVAILABLE');
-    })(a || (a = {}));
-let l = (e) => {
-        let { isPremium: n, hasJoinedEmojiSourceGuild: r, isUnusableRoleSubscriptionEmoji: i, emojiComesFromCurrentGuild: a, isDiscoverable: o } = e,
+var i = n(231053),
+    r = n(388032),
+    a = (function (e) {
+        return (e.GET_PREMIUM = 'GET_PREMIUM'), (e.JOIN_GUILD = 'JOIN_GUILD'), (e.UNAVAILABLE = 'UNAVAILABLE'), e;
+    })({});
+let s = (e) => {
+        let { isPremium: t, hasJoinedEmojiSourceGuild: n, isUnusableRoleSubscriptionEmoji: i, emojiComesFromCurrentGuild: r, isDiscoverable: a } = e,
             s = 'Custom Emoji Popout';
-        return n && !r && o ? (s = 'Custom Emoji Popout (Cross-Server)') : n || !r || i ? !n && !r && (s = o ? 'Custom Emoji Popout (Upsell Not-Joined Cross-Server)' : 'Custom Emoji Popout (Soft Upsell)') : (s = a ? 'Custom Emoji Popout (Upsell Joined Current-Server)' : 'Custom Emoji Popout (Upsell Joined Cross-Server)'), s;
+        return t && !n && a ? (s = 'Custom Emoji Popout (Cross-Server)') : t || !n || i ? t || n || (s = a ? 'Custom Emoji Popout (Upsell Not-Joined Cross-Server)' : 'Custom Emoji Popout (Soft Upsell)') : (s = r ? 'Custom Emoji Popout (Upsell Joined Current-Server)' : 'Custom Emoji Popout (Upsell Joined Cross-Server)'), s;
     },
-    u = (e) => {
-        let { sourceType: n, expressionSourceApplication: r, isPremium: i, hasJoinedEmojiSourceGuild: a, isUnusableRoleSubscriptionEmoji: l, isDiscoverable: u, emojiComesFromCurrentGuild: c, userIsRoleSubscriber: d, isRoleSubscriptionEmoji: f, shouldHideRoleSubscriptionCTA: p, onOpenPremiumSettings: h } = e,
-            _ = null;
-        return (_ = n === o.w6.APPLICATION && null != r ? s.intl.formatToPlainString(s.t.uERlTU, { appName: r.name }) : i ? (a ? (f ? (p && l ? s.intl.string(s.t.xFb68v) : l ? (d ? s.intl.string(s.t.vLklfH) : s.intl.string(s.t['g8i/bW'])) : s.intl.string(s.t.Eoynp6)) : c ? s.intl.string(s.t.hU4kIS) : s.intl.string(s.t.GM0xaW)) : u ? s.intl.string(s.t.xE9WGh) : s.intl.string(s.t['0LMpW1'])) : a ? (p && l ? s.intl.string(s.t.xFb68v) : l ? (d ? s.intl.string(s.t.vLklfH) : s.intl.string(s.t['g8i/bW'])) : c ? s.intl.string(s.t.ICPhqa) : s.intl.string(s.t.jQy3aG)) : u ? s.intl.string(s.t.FJ6Z09) : s.intl.format(s.t.U6vLcH, { openPremiumSettings: h }));
+    o = (e) => {
+        let { sourceType: t, expressionSourceApplication: n, isPremium: a, hasJoinedEmojiSourceGuild: s, isUnusableRoleSubscriptionEmoji: o, isDiscoverable: l, emojiComesFromCurrentGuild: u, userIsRoleSubscriber: c, isRoleSubscriptionEmoji: d, shouldHideRoleSubscriptionCTA: f, onOpenPremiumSettings: _ } = e,
+            p = null;
+        return t === i.w6.APPLICATION && null != n ? r.intl.formatToPlainString(r.t.uERlTU, { appName: n.name }) : a ? (s ? (d ? (f && o ? r.intl.string(r.t.xFb68v) : o ? (c ? r.intl.string(r.t.vLklfH) : r.intl.string(r.t['g8i/bW'])) : r.intl.string(r.t.Eoynp6)) : u ? r.intl.string(r.t.hU4kIS) : r.intl.string(r.t.GM0xaW)) : l ? r.intl.string(r.t.xE9WGh) : r.intl.string(r.t['0LMpW1'])) : s ? (f && o ? r.intl.string(r.t.xFb68v) : o ? (c ? r.intl.string(r.t.vLklfH) : r.intl.string(r.t['g8i/bW'])) : u ? r.intl.string(r.t.ICPhqa) : r.intl.string(r.t.jQy3aG)) : l ? r.intl.string(r.t.FJ6Z09) : r.intl.format(r.t.U6vLcH, { openPremiumSettings: _ });
     },
-    c = (e) => {
-        let { isPremium: n, hasJoinedEmojiSourceGuild: r, isUnusableRoleSubscriptionEmoji: i, isDiscoverable: a } = e,
-            o = r && !i,
-            l = !r && a,
-            u = !n && (o || l);
-        return n && l
+    l = (e) => {
+        let { isPremium: t, hasJoinedEmojiSourceGuild: n, isUnusableRoleSubscriptionEmoji: i, isDiscoverable: a } = e,
+            s = n && !i,
+            o = !n && a,
+            l = !t && (s || o);
+        return t && o
             ? {
                   type: 'JOIN_GUILD',
-                  text: s.intl.string(s.t.riu2R0),
+                  text: r.intl.string(r.t.riu2R0),
                   description: null
               }
-            : u
+            : l
               ? {
                     type: 'GET_PREMIUM',
-                    text: s.intl.string(s.t['gl/XHB']),
+                    text: r.intl.string(r.t['gl/XHB']),
                     description: null
                 }
               : {
@@ -49,12 +40,12 @@ let l = (e) => {
                     description: null
                 };
     },
-    d = (e) => {
-        let n = u(e),
-            r = l(e);
+    u = (e) => {
+        let t = o(e),
+            n = s(e);
         return {
-            ...c(e),
-            emojiDescription: n,
-            analyticsType: r
+            ...l(e),
+            emojiDescription: t,
+            analyticsType: n
         };
     };

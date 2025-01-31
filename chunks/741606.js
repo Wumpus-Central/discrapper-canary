@@ -1,19 +1,15 @@
-r.d(n, {
-    Z: function () {
-        return l;
-    }
-});
-var i = r(192379),
-    a = r(442837),
-    o = r(693546),
-    s = r(937111);
-function l(e) {
-    let n = (0, a.e7)([s.Z], () => (null == e ? null : s.Z.getRequest(e))),
-        r = (0, a.e7)([s.Z], () => s.Z.hasFetchedRequestToJoinGuilds);
+n.d(t, { Z: () => o });
+var i = n(192379),
+    r = n(442837),
+    a = n(693546),
+    s = n(937111);
+function o(e) {
+    let t = (0, r.e7)([s.Z], () => (null == e ? null : s.Z.getRequest(e))),
+        n = (0, r.e7)([s.Z], () => s.Z.hasFetchedRequestToJoinGuilds);
     return (
         i.useEffect(() => {
-            !r && o.Z.fetchRequestToJoinGuilds();
-        }, [r]),
-        n
+            n || a.Z.fetchRequestToJoinGuilds();
+        }, [n]),
+        t
     );
 }

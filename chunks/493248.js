@@ -1,6 +1,7 @@
-e.exports = {
-    activityCoachmark: 'activityCoachmark_a3e4b5',
-    profileCoachmark: 'profileCoachmark_a3e4b5',
-    tooltipHeader: 'tooltipHeader_a3e4b5',
-    profileImage: 'profileImage_a3e4b5'
+var i = {
+    activityCoachmark: 'activityCoachmark_a2f9d3',
+    profileCoachmark: 'profileCoachmark_a2f9d3',
+    tooltipHeader: 'tooltipHeader_a2f9d3',
+    profileImage: 'profileImage_a2f9d3'
 };
+e.exports = i;

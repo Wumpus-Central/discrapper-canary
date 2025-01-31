@@ -1,4 +1,5 @@
-var e = {
+n.d(e, { Z: () => i });
+var t = {
     lastWeek: function (o) {
         switch (o.getUTCDay()) {
             case 0:
@@ -28,7 +29,7 @@ var e = {
     },
     other: 'P'
 };
-n.Z = function (o, n, t, i) {
-    var a = e[o];
-    return 'function' == typeof a ? a(n) : a;
+let i = function (o, e, n, i) {
+    var a = t[o];
+    return 'function' == typeof a ? a(e) : a;
 };

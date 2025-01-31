@@ -1,14 +1,9 @@
-r.d(n, {
-    Z: function () {
-        return c;
-    }
-});
-var i = r(47120);
-var a = r(192379),
-    o = r(663507),
-    s = r(924428),
-    l = r(151973);
-let u = Object.freeze({
+n.d(t, { Z: () => l }), n(47120);
+var i = n(192379),
+    r = n(663507),
+    a = n(924428),
+    s = n(151973);
+let o = Object.freeze({
     coordsMap: {},
     visibleSections: {},
     totalHeight: 0,
@@ -17,53 +12,53 @@ let u = Object.freeze({
         coordinates: {}
     }
 });
-function c(e) {
-    let { sections: n, columns: r, getItemKey: i, getItemHeight: c, getSectionHeight: d, chunkSize: f = 250, getScrollerState: p, maxBufferWidth: h, itemGutter: _, removeEdgeItemGutters: m, sectionGutter: g, padding: E, paddingVertical: v, paddingHorizontal: y, dir: b } = e,
-        I = (0, s.Z)(),
-        T = (0, a.useRef)(u),
-        [S] = (0, a.useState)(() => new o.ZP()),
-        A = p(),
-        C = Math.min(null != h ? h : 1 / 0, A.offsetWidth),
-        N = null != h ? Math.max(0, A.offsetWidth - h) : 0,
+function l(e) {
+    let { sections: t, columns: n, getItemKey: l, getItemHeight: u, getSectionHeight: c, chunkSize: d = 250, getScrollerState: f, maxBufferWidth: _, itemGutter: p, removeEdgeItemGutters: h, sectionGutter: m, padding: g, paddingVertical: E, paddingHorizontal: v, dir: y } = e,
+        I = (0, a.Z)(),
+        b = (0, i.useRef)(o),
+        [T] = (0, i.useState)(() => new r.ZP()),
+        S = f(),
+        A = Math.min(null != _ ? _ : 1 / 0, S.offsetWidth),
+        N = null != _ ? Math.max(0, S.offsetWidth - _) : 0,
         {
-            dirty: R,
-            chunkStart: O,
-            chunkEnd: D,
-            forceUpdateOnChunkChange: L
-        } = (0, l.Z)({
-            chunkSize: f,
-            getScrollerState: p,
+            dirty: C,
+            chunkStart: R,
+            chunkEnd: O,
+            forceUpdateOnChunkChange: D
+        } = (0, s.Z)({
+            chunkSize: d,
+            getScrollerState: f,
             forceUpdate: I
         });
     return (
-        (T.current = (0, a.useMemo)(
+        (b.current = (0, i.useMemo)(
             () =>
-                R > 0
-                    ? T.current
-                    : (S.mergeProps({
-                          sections: n,
-                          columns: r,
-                          getItemKey: i,
-                          getItemHeight: c,
-                          getSectionHeight: d,
-                          bufferWidth: C,
-                          itemGutter: _,
-                          removeEdgeItemGutters: m,
-                          sectionGutter: g,
-                          padding: E,
-                          paddingVertical: v,
-                          paddingHorizontal: y,
+                C > 0
+                    ? b.current
+                    : (T.mergeProps({
+                          sections: t,
+                          columns: n,
+                          getItemKey: l,
+                          getItemHeight: u,
+                          getSectionHeight: c,
+                          bufferWidth: A,
+                          itemGutter: p,
+                          removeEdgeItemGutters: h,
+                          sectionGutter: m,
+                          padding: g,
+                          paddingVertical: E,
+                          paddingHorizontal: v,
                           marginLeft: N / 2,
-                          dir: b
+                          dir: y
                       }),
-                      S.computeVisibleSections(Math.max(0, O * f), D * f),
-                      S.getState()),
-            [R, S, n, r, i, c, d, O, D, f, _, m, g, E, v, y, C, b]
+                      T.computeVisibleSections(Math.max(0, R * d), O * d),
+                      T.getState()),
+            [C, T, t, n, l, u, c, R, O, d, p, h, m, g, E, v, A, y]
         )),
         {
-            ...T.current,
-            masonryComputer: S,
-            forceUpdateOnChunkChange: L,
+            ...b.current,
+            masonryComputer: T,
+            forceUpdateOnChunkChange: D,
             forceUpdate: I
         }
     );

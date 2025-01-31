@@ -1,37 +1,32 @@
-r.d(n, {
-    Z: function () {
-        return u;
-    }
-});
-var i = r(47120);
-var a = r(192379),
-    o = r(442837),
-    s = r(355467),
-    l = r(853872);
-function u(e) {
-    let { isGift: n, activeSubscription: r } = e,
+n.d(t, { Z: () => o }), n(47120);
+var i = n(192379),
+    r = n(442837),
+    a = n(355467),
+    s = n(853872);
+function o(e) {
+    let { isGift: t, activeSubscription: n } = e,
         {
-            defaultPaymentSourceId: i,
-            paymentSources: u,
-            hasFetchedPaymentSources: c
-        } = (0, o.cj)([l.Z], () => ({
-            defaultPaymentSourceId: l.Z.defaultPaymentSourceId,
-            paymentSources: l.Z.paymentSources,
-            hasFetchedPaymentSources: l.Z.hasFetchedPaymentSources
+            defaultPaymentSourceId: o,
+            paymentSources: l,
+            hasFetchedPaymentSources: u
+        } = (0, r.cj)([s.Z], () => ({
+            defaultPaymentSourceId: s.Z.defaultPaymentSourceId,
+            paymentSources: s.Z.paymentSources,
+            hasFetchedPaymentSources: s.Z.hasFetchedPaymentSources
         })),
-        d = (e, n, r) => (e || (null == n ? void 0 : n.paymentSourceId) == null ? r : n.paymentSourceId),
-        [f, p] = a.useState(() => d(n, r, i));
+        c = (e, t, n) => (e || (null == t ? void 0 : t.paymentSourceId) == null ? n : t.paymentSourceId),
+        [d, f] = i.useState(() => c(t, n, o));
     return (
-        a.useEffect(() => {
-            c ? p(d(n, r, i)) : (0, s.tZ)();
-        }, [c, n, r, i]),
+        i.useEffect(() => {
+            u ? f(c(t, n, o)) : (0, a.tZ)();
+        }, [u, t, n, o]),
         {
-            paymentSources: u,
-            hasPaymentSources: Object.keys(u).length > 0,
-            paymentSourceId: f,
-            setPaymentSourceId: p,
-            hasFetchedPaymentSources: c,
-            defaultPaymentSource: null != i ? u[i] : null
+            paymentSources: l,
+            hasPaymentSources: Object.keys(l).length > 0,
+            paymentSourceId: d,
+            setPaymentSourceId: f,
+            hasFetchedPaymentSources: u,
+            defaultPaymentSource: null != o ? l[o] : null
         }
     );
 }

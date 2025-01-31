@@ -1,17 +1,18 @@
-e.exports = {
-    root: 'root_cbf230',
-    previewCamera: 'previewCamera_cbf230',
-    previewRoot: 'previewRoot_cbf230',
-    preview: 'preview_cbf230',
-    mainChannelInfo: 'mainChannelInfo_cbf230',
-    titleGroup: 'titleGroup_cbf230',
-    icon: 'icon_cbf230',
-    title: 'title_cbf230',
-    subtitle: 'subtitle_cbf230',
-    previewChannelHeader: 'previewChannelHeader_cbf230',
-    wrapper: 'wrapper_cbf230',
-    actions: 'actions_cbf230',
-    actionButton: 'actionButton_cbf230',
-    experimentActions: 'experimentActions_cbf230',
-    previewButton: 'previewButton_cbf230'
+var i = {
+    root: 'root__2dbe1',
+    previewCamera: 'previewCamera__2dbe1',
+    previewRoot: 'previewRoot__2dbe1',
+    preview: 'preview__2dbe1',
+    mainChannelInfo: 'mainChannelInfo__2dbe1',
+    titleGroup: 'titleGroup__2dbe1',
+    icon: 'icon__2dbe1',
+    subtitle: 'subtitle__2dbe1',
+    title: 'title__2dbe1',
+    previewChannelHeader: 'previewChannelHeader__2dbe1',
+    wrapper: 'wrapper__2dbe1',
+    actions: 'actions__2dbe1',
+    actionButton: 'actionButton__2dbe1',
+    experimentActions: 'experimentActions__2dbe1',
+    previewButton: 'previewButton__2dbe1'
 };
+e.exports = i;

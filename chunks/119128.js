@@ -1,31 +1,27 @@
-r.d(t, {
-    j: function () {
-        return i;
-    }
-});
-var a = r(696486),
-    n = r(793373),
-    _ = r(622916),
-    o = r(454463),
-    E = r(163162);
-function i() {
-    E.m9 && E.m9.document
-        ? E.m9.document.addEventListener('visibilitychange', () => {
-              let e = (0, a.HN)();
-              if (!e) return;
-              let t = (0, a.Gx)(e);
-              if (E.m9.document.hidden && t) {
-                  let e = 'cancelled',
-                      { op: r, status: E } = (0, a.XU)(t);
-                  o.X && _.kg.log(`[Tracing] Transaction: ${e} -> since tab moved to the background, op: ${r}`),
-                      !E &&
-                          t.setStatus({
+a.d(e, { j: () => c });
+var r = a(696486),
+    n = a(793373),
+    o = a(622916),
+    _ = a(454463),
+    i = a(163162);
+function c() {
+    i.m9 && i.m9.document
+        ? i.m9.document.addEventListener('visibilitychange', () => {
+              let t = (0, r.HN)();
+              if (!t) return;
+              let e = (0, r.Gx)(t);
+              if (i.m9.document.hidden && e) {
+                  let t = 'cancelled',
+                      { op: a, status: i } = (0, r.XU)(e);
+                  _.X && o.kg.log(`[Tracing] Transaction: ${t} -> since tab moved to the background, op: ${a}`),
+                      i ||
+                          e.setStatus({
                               code: n.jt,
-                              message: e
+                              message: t
                           }),
-                      t.setAttribute('sentry.cancellation_reason', 'document.hidden'),
-                      t.end();
+                      e.setAttribute('sentry.cancellation_reason', 'document.hidden'),
+                      e.end();
               }
           })
-        : o.X && _.kg.warn('[Tracing] Could not set up background tab detection due to lack of global document');
+        : _.X && o.kg.warn('[Tracing] Could not set up background tab detection due to lack of global document');
 }

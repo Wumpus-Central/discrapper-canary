@@ -1,13 +1,7 @@
 n.d(t, {
-    RI: function () {
-        return r;
-    },
-    k5: function () {
-        return o;
-    },
-    kR: function () {
-        return a;
-    }
+    RI: () => r,
+    k5: () => o,
+    kR: () => a
 });
 var i = n(626135),
     l = n(981631);

@@ -1,51 +1,41 @@
 n.d(t, {
-    Vk: function () {
-        return m;
-    },
-    g3: function () {
-        return g;
-    },
-    jF: function () {
-        return h;
-    },
-    jk: function () {
-        return f;
-    },
-    wt: function () {
-        return p;
-    }
+    Vk: () => m,
+    g3: () => f,
+    jF: () => h,
+    jk: () => _,
+    wt: () => p
 });
 var i = n(990547),
-    r = n(544891),
-    l = n(283693),
-    a = n(570140),
-    o = n(695346),
-    s = n(573261),
+    l = n(544891),
+    a = n(283693),
+    r = n(570140),
+    s = n(695346),
+    o = n(573261),
     c = n(140155),
-    u = n(178480),
-    d = n(981631);
+    d = n(178480),
+    u = n(981631);
 function m(e) {
-    a.Z.dispatch({
+    r.Z.dispatch({
         type: 'NOTIFICATION_CENTER_SET_ACTIVE',
         active: e
     });
 }
 function h() {
-    a.Z.dispatch({ type: 'RESET_NOTIFICATION_CENTER' });
+    r.Z.dispatch({ type: 'RESET_NOTIFICATION_CENTER' });
 }
-async function f(e, t) {
+async function _(e, t) {
     if (c.Z.loading) return;
-    await a.Z.dispatch({ type: 'LOAD_NOTIFICATION_CENTER_ITEMS' });
+    await r.Z.dispatch({ type: 'LOAD_NOTIFICATION_CENTER_ITEMS' });
     let n = Math.ceil(c.Z.items.length / e.limit);
     try {
-        let r = await s.Z.get({
-            url: d.ANM.NOTIF_CENTER_ITEMS(),
+        let l = await o.Z.get({
+            url: u.ANM.NOTIF_CENTER_ITEMS(),
             trackedActionData: {
                 event: i.NetworkActionNames.NOTIFICATION_CENTER_PAGE_FETCH,
                 properties: (e) => {
                     var t;
                     let i = ((null === (t = e.body) || void 0 === t ? void 0 : t.items) || []).map((e) => e.type);
-                    return (0, l.iG)({
+                    return (0, a.iG)({
                         page: n,
                         items: i,
                         item_count: i.length
@@ -56,67 +46,66 @@ async function f(e, t) {
             rejectWithError: !0
         });
         null == t || t(),
-            await a.Z.dispatch({
+            await r.Z.dispatch({
                 type: 'LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS',
-                items: r.body.items,
-                cursor: r.body.cursor,
-                hasMore: r.body.has_more
+                items: l.body.items,
+                cursor: l.body.cursor,
+                hasMore: l.body.has_more
             });
     } catch (e) {
-        null == t || t(), await a.Z.dispatch({ type: 'LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE' });
+        null == t || t(), await r.Z.dispatch({ type: 'LOAD_NOTIFICATION_CENTER_ITEMS_FAILURE' });
     }
 }
 function p(e) {
+    var t, n;
     null != e.local_id
-        ? (function (e) {
-              a.Z.dispatch({
-                  type: 'NOTIFICATION_CENTER_ITEMS_LOCAL_ACK',
-                  localIds: e
-              });
-          })([e.local_id])
-        : (0, u.RB)(e)
-          ? (function (e) {
-                a.Z.dispatch({
-                    type: 'NOTIFICATION_CENTER_ITEMS_ACK',
-                    optimistic: !0,
-                    ids: [e]
-                });
-            })(e.id)
-          : _(e.id);
+        ? ((t = [e.local_id]),
+          r.Z.dispatch({
+              type: 'NOTIFICATION_CENTER_ITEMS_LOCAL_ACK',
+              localIds: t
+          }))
+        : (0, d.RB)(e)
+          ? ((n = e.id),
+            r.Z.dispatch({
+                type: 'NOTIFICATION_CENTER_ITEMS_ACK',
+                optimistic: !0,
+                ids: [n]
+            }))
+          : g(e.id);
 }
-async function _(e) {
+async function g(e) {
     try {
-        a.Z.dispatch({
+        r.Z.dispatch({
             type: 'NOTIFICATION_CENTER_ITEMS_ACK',
             optimistic: !0,
             ids: [e]
         }),
-            await r.tn.post({
-                url: d.ANM.NOTIF_CENTER_ITEMS_ACK(e),
+            await l.tn.post({
+                url: u.ANM.NOTIF_CENTER_ITEMS_ACK(e),
                 rejectWithError: !0
             });
     } catch (t) {
-        a.Z.dispatch({
+        r.Z.dispatch({
             type: 'NOTIFICATION_CENTER_ITEMS_ACK_FAILURE',
             ids: [e]
         });
     }
 }
-async function g(e) {
-    let t = o.d$.getSetting();
+async function f(e) {
+    let t = s.d$.getSetting();
     try {
-        a.Z.dispatch({
+        r.Z.dispatch({
             type: 'NOTIFICATION_CENTER_ITEM_DELETE',
             id: e.id
         }),
-            await s.Z.delete({
-                url: d.ANM.NOTIF_CENTER_ITEMS(e.id),
-                body: { item_type: (0, u.RB)(e) ? 'mention' : 'regular' },
+            await o.Z.delete({
+                url: u.ANM.NOTIF_CENTER_ITEMS(e.id),
+                body: { item_type: (0, d.RB)(e) ? 'mention' : 'regular' },
                 trackedActionData: {
                     event: i.NetworkActionNames.NOTIFICATION_CENTER_ITEM_DELETE,
                     properties: {
                         notification_center_id: e.id,
-                        acked: (0, u.r)(e, t),
+                        acked: (0, d.r)(e, t),
                         item_type: e.type
                     }
                 },
@@ -124,7 +113,7 @@ async function g(e) {
             });
     } catch (t) {
         throw (
-            (a.Z.dispatch({
+            (r.Z.dispatch({
                 type: 'NOTIFICATION_CENTER_ITEM_DELETE_FAILURE',
                 item: e
             }),

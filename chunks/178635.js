@@ -1,121 +1,117 @@
-r.d(n, {
-    R: function () {
-        return g;
-    },
-    Z: function () {
-        return S;
-    }
-});
-var i = r(47120);
-var a = r(392711),
-    o = r.n(a),
-    s = r(433517),
-    l = r(147913),
-    u = r(536442),
-    c = r(810788),
-    d = r(19780),
-    f = r(115470),
-    p = r(531578);
-function h(e, n, r) {
+n.d(t, {
+    R: () => h,
+    Z: () => b
+}),
+    n(47120);
+var i = n(392711),
+    r = n.n(i),
+    a = n(433517),
+    s = n(147913),
+    o = n(536442),
+    l = n(810788),
+    u = n(19780),
+    c = n(115470),
+    d = n(531578);
+function f(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
 let _ = 200,
-    m = {
+    p = {
         chance: 0.2,
         cooldown: 86400000
     },
-    g = {
-        [p.nw.VOICE]: {
-            ...m,
-            hotspot: u.v6.VOICE_CALL_FEEDBACK,
+    h = {
+        [d.nw.VOICE]: {
+            ...p,
+            hotspot: o.v6.VOICE_CALL_FEEDBACK,
             storageKey: 'lastVoiceFeedback',
-            eligibilityChecks: [I]
+            eligibilityChecks: [y]
         },
-        [p.nw.STREAM]: {
-            ...m,
-            hotspot: u.v6.REPORT_PROBLEM_POST_STREAM,
+        [d.nw.STREAM]: {
+            ...p,
+            hotspot: o.v6.REPORT_PROBLEM_POST_STREAM,
             storageKey: 'lastStreamFeedback'
         },
-        [p.nw.VIDEO_BACKGROUND]: {
-            ...m,
-            hotspot: u.v6.VIDEO_BACKGROUND_FEEDBACK,
+        [d.nw.VIDEO_BACKGROUND]: {
+            ...p,
+            hotspot: o.v6.VIDEO_BACKGROUND_FEEDBACK,
             storageKey: 'lastVideoBackgroundFeedback'
         },
-        [p.nw.ACTIVITY]: {
+        [d.nw.ACTIVITY]: {
             cooldown: 0,
             chance: 0.5,
-            hotspot: u.v6.POST_ACTIVITY_FEEDBACK,
+            hotspot: o.v6.POST_ACTIVITY_FEEDBACK,
             storageKey: 'lastActivityFeedback'
         },
-        [p.nw.IN_APP_REPORTS]: {
+        [d.nw.IN_APP_REPORTS]: {
             cooldown: 172800000,
             chance: 0.5,
-            hotspot: u.v6.IN_APP_REPORTS_FEEDBACK,
+            hotspot: o.v6.IN_APP_REPORTS_FEEDBACK,
             storageKey: 'inAppReportsFeedback'
         },
-        [p.nw.USER_DM_MUTE]: {
+        [d.nw.USER_DM_MUTE]: {
             cooldown: 604800000,
             chance: 1,
-            hotspot: u.v6.USER_DM_MUTE_FEEDBACK,
+            hotspot: o.v6.USER_DM_MUTE_FEEDBACK,
             storageKey: 'userDmMute'
         },
-        [p.nw.BLOCK_USER]: {
+        [d.nw.BLOCK_USER]: {
             cooldown: 0,
             chance: 1,
-            hotspot: u.v6.BLOCK_USER_FEEDBACK,
+            hotspot: o.v6.BLOCK_USER_FEEDBACK,
             storageKey: 'blockUser'
         }
     };
-function E(e) {
-    var n, r;
+function m(e) {
+    var t, n;
     if (__OVERLAY__) return !1;
-    let i = null !== (n = f.Z.getFeedbackConfig(e)) && void 0 !== n ? n : g[e],
-        a = [b, y, v],
-        o = null !== (r = i.eligibilityChecks) && void 0 !== r ? r : [];
-    return a.every((e) => e(i)) && o.every((e) => e(i));
+    let i = null !== (t = c.Z.getFeedbackConfig(e)) && void 0 !== t ? t : h[e],
+        r = [v, E, g],
+        a = null !== (n = i.eligibilityChecks) && void 0 !== n ? n : [];
+    return r.every((e) => e(i)) && a.every((e) => e(i));
 }
-function v(e) {
-    return c.Z.hasHotspot(e.hotspot);
+function g(e) {
+    return l.Z.hasHotspot(e.hotspot);
 }
-function y(e) {
+function E(e) {
     return Math.random() < e.chance;
 }
-function b(e) {
+function v(e) {
     if (null != e.storageKey) {
-        let n = s.K.get(e.storageKey);
-        if (null != n && Date.now() - n < e.cooldown) return !1;
+        let t = a.K.get(e.storageKey);
+        if (null != t && Date.now() - t < e.cooldown) return !1;
     }
     return !0;
 }
+function y(e) {
+    return !u.Z.getWasEverRtcConnected() || u.Z.getWasEverMultiParticipant();
+}
 function I(e) {
-    return !d.Z.getWasEverRtcConnected() || d.Z.getWasEverMultiParticipant();
+    let t = h[e];
+    null != t.storageKey && a.K.set(t.storageKey, Date.now());
 }
-function T(e) {
-    let n = g[e];
-    null != n.storageKey && s.K.set(n.storageKey, Date.now());
-}
-class S extends l.Z {
-    possiblyShowFeedbackModal(e, n) {
-        if (!!E(e) && (null == this.feedbackTypeToShow || !(p.b5[this.feedbackTypeToShow] < p.b5[e]))) (this.feedbackTypeToShow = e), this.showFeedbackModalDebounced(n);
+class b extends s.Z {
+    possiblyShowFeedbackModal(e, t) {
+        m(e) && (null == this.feedbackTypeToShow || !(d.b5[this.feedbackTypeToShow] < d.b5[e])) && ((this.feedbackTypeToShow = e), this.showFeedbackModalDebounced(t));
     }
     constructor(...e) {
         super(...e),
-            h(this, 'feedbackTypeToShow', null),
-            h(
+            f(this, 'feedbackTypeToShow', null),
+            f(
                 this,
                 'showFeedbackModalDebounced',
-                o().debounce((e) => {
-                    null != this.feedbackTypeToShow && (T(this.feedbackTypeToShow), (this.feedbackTypeToShow = null), e());
+                r().debounce((e) => {
+                    null != this.feedbackTypeToShow && (I(this.feedbackTypeToShow), (this.feedbackTypeToShow = null), e());
                 }, _)
             );
     }

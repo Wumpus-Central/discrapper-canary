@@ -1,116 +1,111 @@
-t.r(a),
-    t.d(a, {
-        default: function () {
-            return g;
-        }
-    });
-var n = t(200651),
-    l = t(192379),
+t.d(a, { default: () => g });
+var l = t(200651),
+    n = t(192379),
     i = t(442837),
     s = t(481060),
-    u = t(239091),
-    r = t(13245),
-    d = t(237997),
-    o = t(981631),
-    c = t(388032);
+    r = t(239091),
+    d = t(13245),
+    u = t(237997),
+    c = t(981631),
+    o = t(388032);
 let v = () => [
         {
-            value: o.ipw.LARGE,
-            name: c.intl.string(c.t.YcOxtr)
+            value: c.ipw.LARGE,
+            name: o.intl.string(o.t.YcOxtr)
         },
         {
-            value: o.ipw.SMALL,
-            name: c.intl.string(c.t.BKIKq6)
+            value: c.ipw.SMALL,
+            name: o.intl.string(o.t.BKIKq6)
         }
     ],
     m = () => [
         {
-            value: o.wC$.ALWAYS,
-            name: c.intl.string(c.t.nBmDra)
+            value: c.wC$.ALWAYS,
+            name: o.intl.string(o.t.nBmDra)
         },
         {
-            value: o.wC$.ONLY_WHILE_SPEAKING,
-            name: c.intl.string(c.t['2OvIZW'])
+            value: c.wC$.ONLY_WHILE_SPEAKING,
+            name: o.intl.string(o.t['2OvIZW'])
         },
         {
-            value: o.wC$.NEVER,
-            name: c.intl.string(c.t.ekjlPD)
+            value: c.wC$.NEVER,
+            name: o.intl.string(o.t.ekjlPD)
         }
     ],
     p = () => [
         {
-            value: o.OYC.ALWAYS,
-            name: c.intl.string(c.t.nBmDra)
+            value: c.OYC.ALWAYS,
+            name: o.intl.string(o.t.nBmDra)
         },
         {
-            value: o.OYC.ONLY_WHILE_SPEAKING,
-            name: c.intl.string(c.t['2OvIZW'])
+            value: c.OYC.ONLY_WHILE_SPEAKING,
+            name: o.intl.string(o.t['2OvIZW'])
         }
     ];
 function g(e) {
     let { onSelect: a, onClose: t } = e,
         {
-            avatarSizeMode: o,
+            avatarSizeMode: c,
             displayNameMode: g,
-            displayUserMode: M
-        } = (0, i.cj)([d.Z], () => ({
-            avatarSizeMode: d.Z.getAvatarSizeMode(),
-            displayNameMode: d.Z.getDisplayNameMode(),
-            displayUserMode: d.Z.getDisplayUserMode()
+            displayUserMode: k
+        } = (0, i.cj)([u.Z], () => ({
+            avatarSizeMode: u.Z.getAvatarSizeMode(),
+            displayNameMode: u.Z.getDisplayNameMode(),
+            displayUserMode: u.Z.getDisplayUserMode()
         })),
-        h = l.useRef(t);
+        S = n.useRef(t);
     return (
-        l.useEffect(() => void (h.current = t)),
-        l.useEffect(() => () => h.current(), []),
-        (0, n.jsxs)(s.Menu, {
+        n.useEffect(() => void (S.current = t)),
+        n.useEffect(() => () => S.current(), []),
+        (0, l.jsxs)(s.v2r, {
             navId: 'overlay-voice-widget-context-menu',
-            onClose: u.Zy,
-            'aria-label': c.intl.string(c.t.tPfVWl),
+            onClose: r.Zy,
+            'aria-label': o.intl.string(o.t.tPfVWl),
             onSelect: a,
             children: [
-                (0, n.jsx)(s.MenuGroup, {
-                    label: c.intl.string(c.t.dnvZSk),
+                (0, l.jsx)(s.kSQ, {
+                    label: o.intl.string(o.t.dnvZSk),
                     children: v().map((e) =>
-                        (0, n.jsx)(
-                            s.MenuRadioItem,
+                        (0, l.jsx)(
+                            s.k5B,
                             {
                                 label: e.name,
-                                checked: o === e.value,
+                                checked: c === e.value,
                                 id: 'avatar-size-mode-'.concat(e.value),
                                 group: 'avatar-size-mode',
-                                action: () => r.Z.setAvatarSizeMode(e.value)
+                                action: () => d.Z.setAvatarSizeMode(e.value)
                             },
                             e.value
                         )
                     )
                 }),
-                (0, n.jsx)(s.MenuGroup, {
-                    label: c.intl.string(c.t.J0dpcH),
+                (0, l.jsx)(s.kSQ, {
+                    label: o.intl.string(o.t.J0dpcH),
                     children: m().map((e) =>
-                        (0, n.jsx)(
-                            s.MenuRadioItem,
+                        (0, l.jsx)(
+                            s.k5B,
                             {
                                 label: e.name,
                                 checked: g === e.value,
                                 id: 'display-name-mode-'.concat(e.value),
                                 group: 'display-name-mode',
-                                action: () => r.Z.setDisplayNameMode(e.value)
+                                action: () => d.Z.setDisplayNameMode(e.value)
                             },
                             e.value
                         )
                     )
                 }),
-                (0, n.jsx)(s.MenuGroup, {
-                    label: c.intl.string(c.t.swsWWF),
+                (0, l.jsx)(s.kSQ, {
+                    label: o.intl.string(o.t.swsWWF),
                     children: p().map((e) =>
-                        (0, n.jsx)(
-                            s.MenuRadioItem,
+                        (0, l.jsx)(
+                            s.k5B,
                             {
                                 label: e.name,
-                                checked: M === e.value,
+                                checked: k === e.value,
                                 id: 'display-user-mode-'.concat(e.value),
                                 group: 'display-user-mode',
-                                action: () => r.Z.setDisplayUserMode(e.value)
+                                action: () => d.Z.setDisplayUserMode(e.value)
                             },
                             e.value
                         )

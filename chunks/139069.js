@@ -1,2 +1,2 @@
-var a = r(573401).Uint8Array;
-e.exports = a;
+var r = a(573401).Uint8Array;
+t.exports = r;

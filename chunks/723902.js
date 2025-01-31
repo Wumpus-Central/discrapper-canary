@@ -1,8 +1,9 @@
 e.exports = {
-    container: 'container_f2bd71',
-    tiles: 'tiles_f2bd71',
-    tile: 'tile_f2bd71',
-    participantsRow: 'participantsRow_f2bd71',
-    channelName: 'channelName_f2bd71',
-    joinButton: 'joinButton_f2bd71'
+    container: 'container__5aa3a',
+    tiles: 'tiles__5aa3a',
+    tile: 'tile__5aa3a',
+    participantsRow: 'participantsRow__5aa3a',
+    channelName: 'channelName__5aa3a',
+    joinButton: 'joinButton__5aa3a',
+    roundButton: 'roundButton__5aa3a'
 };

@@ -1,1 +1,2 @@
-e.exports = { item: 'item_f5370e' };
+var i = { item: 'item__0c135' };
+e.exports = i;

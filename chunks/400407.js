@@ -1,9 +1,5 @@
-r.d(n, {
-    A: function () {
-        return i;
-    }
-});
-let i = (0, r(818083).B)({
+n.d(t, { A: () => i });
+let i = (0, n(818083).B)({
     kind: 'user',
     id: '2022-12_localized_pricing_promo_manager',
     label: 'Localized Pricing Promo Manager',

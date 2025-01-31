@@ -1,48 +1,43 @@
 n.d(t, {
-    M: function () {
-        return o;
-    },
-    Z: function () {
-        return b;
-    }
+    M: () => f,
+    Z: () => T
 });
 var i,
-    o,
     a = n(200651),
-    l = n(192379),
+    o = n(192379),
     s = n(120356),
-    r = n.n(s),
-    c = n(500923),
-    d = n.n(c),
-    u = n(570140),
-    h = n(960020),
-    m = n(831244),
-    p = n(815605),
-    f = n(981631),
-    g = n(278135);
-((i = o || (o = {}))[(i.NORMAL = 16)] = 'NORMAL'), (i[(i.NORMAL_NEW = 20)] = 'NORMAL_NEW'), (i[(i.LARGE = 32)] = 'LARGE');
+    l = n.n(s),
+    r = n(500923),
+    c = n.n(r),
+    d = n(570140),
+    u = n(960020),
+    h = n(831244),
+    m = n(815605),
+    p = n(981631),
+    g = n(278135),
+    f = (((i = {})[(i.NORMAL = 16)] = 'NORMAL'), (i[(i.NORMAL_NEW = 20)] = 'NORMAL_NEW'), (i[(i.LARGE = 32)] = 'LARGE'), i);
 let v = async (e) => {
     var t;
     let { effect: n } = e,
-        i = await (0, m.T)(n.channelId, null !== (t = n.messageId) && void 0 !== t ? t : f.lds, n.emoji.name),
-        o = await (0, p.aB)(''.concat(n.channelId, ':').concat(n.messageId, ':').concat(n.emoji.name), n.url, i, n.color);
-    return (o.assets[0].p = n.url), o;
+        i = await (0, h.T)(n.channelId, null !== (t = n.messageId) && void 0 !== t ? t : p.lds, n.emoji.name),
+        a = await (0, m.aB)(''.concat(n.channelId, ':').concat(n.messageId, ':').concat(n.emoji.name), n.url, i, n.color);
+    return (a.assets[0].p = n.url), a;
 };
-function b(e) {
-    let { className: t, effect: n, onComplete: i, emojiSize: o = 16 } = e,
-        s = l.useRef(null),
-        c = o * p.Vz,
-        m = (c + o) / 2;
+function T(e) {
+    let { className: t, effect: n, onComplete: i, emojiSize: s = 16 } = e,
+        r = o.useRef(null),
+        h = s * m.Vz,
+        p = (h + s) / 2;
     return (
-        l.useEffect(() => {
+        o.useEffect(() => {
             let e;
             if (null != n)
                 return (
-                    !(async function () {
-                        if (null != s.current) {
+                    (async function () {
+                        if (null != r.current) {
                             let t = await v({ effect: n });
-                            (e = d().loadAnimation({
-                                container: s.current,
+                            (e = c().loadAnimation({
+                                container: r.current,
                                 renderer: 'svg',
                                 loop: !1,
                                 autoplay: !0,
@@ -53,8 +48,8 @@ function b(e) {
                                 null != n.channelId &&
                                     null != n.messageId &&
                                     null != n.emoji &&
-                                    n.key === h.I.HOVER &&
-                                    u.Z.dispatch({
+                                    n.key === u.I.HOVER &&
+                                    d.Z.dispatch({
                                         type: 'BURST_REACTION_ANIMATION_ADD',
                                         channelId: n.channelId,
                                         messageId: n.messageId,
@@ -67,17 +62,17 @@ function b(e) {
                         null != e && e.destroy();
                     }
                 );
-        }, [i, n, o]),
+        }, [i, n, s]),
         (0, a.jsx)('div', {
             className: g.effectsWrapper,
             children: (0, a.jsx)('div', {
-                className: r()(g.effect, t),
+                className: l()(g.effect, t),
                 style: {
-                    transform: 'translateY('.concat(m, 'px)'),
-                    height: c,
-                    width: c
+                    transform: 'translateY('.concat(p, 'px)'),
+                    height: h,
+                    width: h
                 },
-                ref: s
+                ref: r
             })
         })
     );

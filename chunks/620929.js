@@ -1,10 +1,6 @@
-l.d(t, {
-    p: function () {
-        return x;
-    }
-});
-var n = l(200651),
-    i = l(192379),
+l.d(t, { p: () => x });
+var i = l(200651),
+    n = l(192379),
     a = l(120356),
     s = l.n(a);
 l(913527), l(442837);
@@ -17,9 +13,9 @@ var c = l(308083),
     u = l(869650);
 function x(e) {
     let { applicationIds: t, playstyle: l, className: a } = e,
-        x = i.useMemo(() => Array.from(t), [t]),
+        x = n.useMemo(() => Array.from(t), [t]),
         m = (0, o.i)(x),
-        h = i.useMemo(() => {
+        h = n.useMemo(() => {
             if (null == m) return null;
             let e = (0, c.mv)(l);
             return null == e
@@ -29,7 +25,7 @@ function x(e) {
                       games: m
                   });
         }, [m, l]);
-    return (0, n.jsx)(r.Text, {
+    return (0, i.jsx)(r.Text, {
         variant: 'text-sm/normal',
         color: 'text-muted',
         className: s()(u.overviewText, a),

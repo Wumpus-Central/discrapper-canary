@@ -1,18 +1,14 @@
-r.d(n, {
-    A: function () {
-        return l;
-    }
-});
-var i = r(200651),
-    a = r(192379),
-    o = r(642128),
-    s = r(481060);
-function l(e) {
-    let { shouldAnimate: n = 'respect-motion-settings', ...r } = e,
-        l = a.useContext(s.AccessibilityPreferencesContext).reducedMotion.enabled,
-        u = 'animate-always' === n || ('respect-motion-settings' === n && !l);
-    return (0, i.jsx)(o.Spring, {
-        ...r,
-        immediate: !u
+n.d(t, { A: () => o });
+var i = n(200651),
+    r = n(192379),
+    a = n(642128),
+    s = n(481060);
+function o(e) {
+    let { shouldAnimate: t = 'respect-motion-settings', ...n } = e,
+        o = r.useContext(s.Sfi).reducedMotion.enabled,
+        l = 'animate-always' === t || ('respect-motion-settings' === t && !o);
+    return (0, i.jsx)(a.Spring, {
+        ...n,
+        immediate: !l
     });
 }

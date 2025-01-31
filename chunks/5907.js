@@ -1,26 +1,22 @@
-r.d(n, {
-    M: function () {
-        return a;
-    }
-});
+n.d(t, { M: () => r });
 let i = (e) => {
-        let n;
-        let r = new Set(),
+        let t;
+        let n = new Set(),
             i = (e, i) => {
-                let a = 'function' == typeof e ? e(n) : e;
-                if (!Object.is(a, n)) {
-                    let e = n;
-                    (n = (null != i ? i : 'object' != typeof a || null === a) ? a : Object.assign({}, n, a)), r.forEach((r) => r(n, e));
+                let r = 'function' == typeof e ? e(t) : e;
+                if (!Object.is(r, t)) {
+                    let e = t;
+                    (t = (null != i ? i : 'object' != typeof r || null === r) ? r : Object.assign({}, t, r)), n.forEach((n) => n(t, e));
                 }
             },
-            a = () => n,
-            o = {
+            r = () => t,
+            a = {
                 setState: i,
-                getState: a,
+                getState: r,
                 getInitialState: () => s,
-                subscribe: (e) => (r.add(e), () => r.delete(e))
+                subscribe: (e) => (n.add(e), () => n.delete(e))
             },
-            s = (n = e(i, a, o));
-        return o;
+            s = (t = e(i, r, a));
+        return a;
     },
-    a = (e) => (e ? i(e) : i);
+    r = (e) => (e ? i(e) : i);

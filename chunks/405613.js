@@ -1,22 +1,12 @@
-n.d(e, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });
 var l = n(134432),
     r = n(981631);
-function i(t, e) {
+function i(e, t) {
     let n;
-    if (null == t.image) return null;
-    null == e && (e = window.screen.width * (0, l.x_)()), (e = (0, l.oO)(e));
+    if (null == e.image) return null;
+    null == t && (t = window.screen.width * (0, l.x_)()), (t = (0, l.oO)(t));
     let i = window.GLOBAL_ENV.CDN_HOST;
-    if (null != i) {
-        var a;
-        n = ''
-            .concat(((a = 'https:'), 'https:'), '//')
-            .concat(i, '/guild-events/')
-            .concat(t.id, '/')
-            .concat(t.image);
-    } else n = location.protocol + window.GLOBAL_ENV.API_ENDPOINT + r.ANM.GUILD_EVENT_IMAGE(t.id, t.image, 'png');
-    return (n += '?size='.concat(e));
+    if (null != i) n = ''.concat('https:', '//').concat(i, '/guild-events/').concat(e.id, '/').concat(e.image);
+    else n = location.protocol + window.GLOBAL_ENV.API_ENDPOINT + r.ANM.GUILD_EVENT_IMAGE(e.id, e.image, 'png');
+    return n + '?size='.concat(t);
 }

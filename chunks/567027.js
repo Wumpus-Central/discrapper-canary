@@ -1,6 +1,7 @@
+r.d(t, { Z: () => s });
 var a = r(665352),
     n = r(566162);
-t.Z = new a.Z({
+let s = new a.Z({
     id: 'hwb',
     name: 'HWB',
     coords: {
@@ -27,8 +28,8 @@ t.Z = new a.Z({
         let [t, r, a] = e,
             n = (r /= 100) + (a /= 100);
         if (n >= 1) return [t, 0, (r / n) * 100];
-        let o = 1 - a;
-        return [t, 100 * (0 === o ? 0 : 1 - r / o), 100 * o];
+        let s = 1 - a;
+        return [t, 100 * (0 === s ? 0 : 1 - r / s), 100 * s];
     },
     formats: {
         hwb: {

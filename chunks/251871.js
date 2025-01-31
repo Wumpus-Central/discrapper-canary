@@ -1,120 +1,114 @@
-e.r(n),
-    e.d(n, {
-        default: function () {
-            return M;
-        }
-    }),
-    e(47120);
+e.d(t, { default: () => A }), e(47120);
 var i = e(200651),
-    r = e(192379),
-    l = e(399606),
-    o = e(481060),
-    a = e(493773),
-    s = e(100527),
-    u = e(906732),
-    d = e(565138),
+    l = e(192379),
+    r = e(399606),
+    s = e(481060),
+    o = e(493773),
+    a = e(100527),
+    d = e(906732),
+    u = e(565138),
     c = e(314897),
-    f = e(271383),
+    _ = e(271383),
     g = e(430824),
     h = e(626135),
-    I = e(715903),
-    N = e(295474),
-    _ = e(273504),
-    C = e(981631),
-    Z = e(372897),
-    A = e(388032),
-    E = e(295831);
-function M(t) {
-    var n;
-    let { onClose: e, transitionState: M, guildId: k } = t,
-        R = (0, l.e7)([c.default], () => c.default.getId()),
-        m = (0, l.e7)([f.ZP], () => f.ZP.getMember(k, R), [k, R]),
-        x = (0, l.e7)([g.Z], () => g.Z.getGuild(k), [k]),
-        O = null !== (n = null == x ? void 0 : x.name) && void 0 !== n ? n : '',
-        p = (0, I.no)(m),
-        { analyticsLocations: v } = (0, u.ZP)(s.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT),
-        [L, P] = (0, N.ww)({
-            guildId: k,
-            analyticsLocations: v,
+    N = e(715903),
+    I = e(295474),
+    f = e(273504),
+    k = e(981631),
+    x = e(372897),
+    C = e(388032),
+    Z = e(295831);
+function A(n) {
+    var t;
+    let { onClose: e, transitionState: A, guildId: E } = n,
+        m = (0, r.e7)([c.default], () => c.default.getId()),
+        R = (0, r.e7)([_.ZP], () => _.ZP.getMember(E, m), [E, m]),
+        O = (0, r.e7)([g.Z], () => g.Z.getGuild(E), [E]),
+        p = null !== (t = null == O ? void 0 : O.name) && void 0 !== t ? t : '',
+        v = (0, N.no)(R),
+        { analyticsLocations: L } = (0, d.ZP)(a.Z.AUTOMOD_PROFILE_QUARANTINE_ALERT),
+        [M, P] = (0, I.ww)({
+            guildId: E,
+            analyticsLocations: L,
             openWithoutBackstack: !0
         }),
-        U = p.has(Z.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) ? A.intl.string(A.t.SpDXIy) : A.intl.string(A.t['QRN+Sk']);
-    !P && (U = A.intl.string(A.t.FFj5Dg));
-    let j = P ? A.intl.string(A.t['/PGQf3']) : A.intl.string(A.t.WikgZ2);
-    return ((0, a.Z)(() => {
-        h.default.track(C.rMx.OPEN_MODAL, {
-            type: _.dc,
-            guild_id: k,
-            other_user_id: R
+        U = v.has(x.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) ? C.intl.string(C.t.SpDXIy) : C.intl.string(C.t['QRN+Sk']);
+    P || (U = C.intl.string(C.t.FFj5Dg));
+    let j = P ? C.intl.string(C.t['/PGQf3']) : C.intl.string(C.t.WikgZ2);
+    return ((0, o.Z)(() => {
+        h.default.track(k.rMx.OPEN_MODAL, {
+            type: f.dc,
+            guild_id: E,
+            other_user_id: m
         });
     }),
-    r.useEffect(() => {
-        if (null == x) {
+    l.useEffect(() => {
+        if (null == O) {
             e();
             return;
         }
-    }, [x, e]),
-    null == x)
+    }, [O, e]),
+    null == O)
         ? null
-        : (0, i.jsxs)(o.ModalRoot, {
-              transitionState: M,
-              size: o.ModalSize.SMALL,
+        : (0, i.jsxs)(s.Y0X, {
+              transitionState: A,
+              size: s.CgR.SMALL,
               children: [
-                  (0, i.jsx)(o.ModalHeader, {
+                  (0, i.jsx)(s.xBx, {
                       separator: !1,
                       children: (0, i.jsxs)('div', {
-                          className: E.headerContainer,
+                          className: Z.headerContainer,
                           children: [
                               (0, i.jsxs)('div', {
-                                  className: E.guildIconContainer,
+                                  className: Z.guildIconContainer,
                                   children: [
-                                      (0, i.jsx)(d.Z, {
-                                          guild: x,
-                                          size: d.Z.Sizes.LARGER
+                                      (0, i.jsx)(u.Z, {
+                                          guild: O,
+                                          size: u.Z.Sizes.LARGER
                                       }),
                                       (0, i.jsx)('div', {
-                                          className: E.statusContainer,
-                                          children: (0, i.jsx)(o.ChatXIcon, {
+                                          className: Z.statusContainer,
+                                          children: (0, i.jsx)(s.ics, {
                                               size: 'md',
                                               color: 'currentColor',
-                                              className: E.statusIcon
+                                              className: Z.statusIcon
                                           })
                                       })
                                   ]
                               }),
-                              (0, i.jsx)(o.Heading, {
+                              (0, i.jsx)(s.X6q, {
                                   color: 'header-primary',
                                   variant: 'heading-md/semibold',
-                                  children: A.intl.format(A.t.kcYdTk, { guildName: O })
+                                  children: C.intl.format(C.t.kcYdTk, { guildName: p })
                               })
                           ]
                       })
                   }),
-                  (0, i.jsx)(o.ModalContent, {
+                  (0, i.jsx)(s.hzk, {
                       children: (0, i.jsx)('div', {
-                          className: E.descriptionContainer,
-                          children: (0, i.jsx)(o.Text, {
+                          className: Z.descriptionContainer,
+                          children: (0, i.jsx)(s.Text, {
                               variant: 'text-sm/normal',
                               color: 'header-secondary',
                               children: U
                           })
                       })
                   }),
-                  (0, i.jsxs)(o.ModalFooter, {
+                  (0, i.jsxs)(s.mzw, {
                       children: [
-                          (0, i.jsx)(o.Button, {
+                          (0, i.jsx)(s.zxk, {
                               onClick: () => {
-                                  L(), e();
+                                  M(), e();
                               },
-                              color: o.Button.Colors.BRAND,
-                              look: o.Button.Looks.FILLED,
+                              color: s.zxk.Colors.BRAND,
+                              look: s.zxk.Looks.FILLED,
                               children: j
                           }),
-                          (0, i.jsx)(o.Button, {
+                          (0, i.jsx)(s.zxk, {
                               onClick: e,
-                              color: o.Button.Colors.PRIMARY,
-                              look: o.Button.Looks.LINK,
-                              children: A.intl.string(A.t['ETE/oK'])
+                              color: s.zxk.Colors.PRIMARY,
+                              look: s.zxk.Looks.LINK,
+                              children: C.intl.string(C.t['ETE/oK'])
                           })
                       ]
                   })

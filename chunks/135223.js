@@ -1,52 +1,45 @@
-r.d(n, {
-    Z: function () {
-        return c;
-    }
-});
-var i = r(47120);
-var a = r(653041);
-var o = r(341702),
-    s = r(887490);
-let l = new Set(['line', 'blockQuote']),
-    u = [];
-function c(e, n, r) {
-    if (s.bN.areStylesDisabled(e)) return [];
-    let [i, a] = n;
-    if (1 !== a.length || !s.aj.isInTypes(i, l)) return u;
-    let { entries: c, serializedChildren: d } = s.q.markdown(i, r, !0),
-        f = [];
-    for (let n = 0; n < c.length; n++) {
-        let r = c[n];
-        if (r.attributes.length > 0 && r.text.length > 0) {
-            let i = c[n - 1],
-                l = c[n + 1],
-                u = (0, o.t)(e, a, d, r.start),
-                p = {
-                    anchor: u,
-                    focus: (0, o.t)(e, a, d, r.start + r.text.length)
+n.d(t, { Z: () => o }), n(47120), n(653041);
+var i = n(341702),
+    r = n(887490);
+let a = new Set(['line', 'blockQuote']),
+    s = [];
+function o(e, t, n) {
+    if (r.bN.areStylesDisabled(e)) return [];
+    let [o, l] = t;
+    if (1 !== l.length || !r.aj.isInTypes(o, a)) return s;
+    let { entries: u, serializedChildren: c } = r.q.markdown(o, n, !0),
+        d = [];
+    for (let t = 0; t < u.length; t++) {
+        let n = u[t];
+        if (n.attributes.length > 0 && n.text.length > 0) {
+            let a = u[t - 1],
+                s = u[t + 1],
+                o = {
+                    anchor: (0, i.t)(e, l, c, n.start),
+                    focus: (0, i.t)(e, l, c, n.start + n.text.length)
                 },
-                h = s.bN.nodes(e, {
-                    at: p,
+                f = r.bN.nodes(e, {
+                    at: o,
                     mode: 'lowest',
                     voids: !1
                 }),
                 _ = {};
-            for (let e of r.attributes)
-                if (((_[e] = !0), 'syntaxBefore' === e && null != l)) for (let e of l.attributes) _['before_'.concat(e)] = !0;
-                else if ('syntaxAfter' === e && null != i) for (let e of i.attributes) _['after_'.concat(e)] = !0;
-            for (let [n, r] of h) {
-                let n = {
-                    anchor: s.bN.start(e, r),
-                    focus: s.bN.end(e, r)
+            for (let e of n.attributes)
+                if (((_[e] = !0), 'syntaxBefore' === e && null != s)) for (let e of s.attributes) _['before_'.concat(e)] = !0;
+                else if ('syntaxAfter' === e && null != a) for (let e of a.attributes) _['after_'.concat(e)] = !0;
+            for (let [t, n] of f) {
+                let t = {
+                    anchor: r.bN.start(e, n),
+                    focus: r.bN.end(e, n)
                 };
-                s.Jz.isBefore(n.anchor, p.anchor) && (n.anchor = p.anchor),
-                    s.Jz.isAfter(n.focus, p.focus) && (n.focus = p.focus),
-                    f.push({
+                r.Jz.isBefore(t.anchor, o.anchor) && (t.anchor = o.anchor),
+                    r.Jz.isAfter(t.focus, o.focus) && (t.focus = o.focus),
+                    d.push({
                         ..._,
-                        ...n
+                        ...t
                     });
             }
         }
     }
-    return f;
+    return d;
 }

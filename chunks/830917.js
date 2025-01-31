@@ -1,22 +1,16 @@
-r.d(n, {
-    Ig: function () {
-        return o;
-    },
-    UU: function () {
-        return s;
-    },
-    ZY: function () {
-        return a;
-    }
+n.d(t, {
+    Ig: () => a,
+    UU: () => s,
+    ZY: () => r
 });
-var i = r(392711);
-function a(e) {
+var i = n(392711);
+function r(e) {
     return e.__DISCORD_WINDOW_ID;
 }
-function o(e) {
-    let n = (0, i.uniqueId)('window-');
-    return (e.__DISCORD_WINDOW_ID = n), n;
+function a(e) {
+    let t = (0, i.uniqueId)('window-');
+    return (e.__DISCORD_WINDOW_ID = t), t;
 }
 function s() {
-    return a(window);
+    return r(window);
 }

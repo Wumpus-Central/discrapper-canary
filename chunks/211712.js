@@ -1,71 +1,64 @@
 n.d(t, {
-    J2: function () {
-        return x;
-    },
-    _h: function () {
-        return f;
-    }
+    J2: () => g,
+    _h: () => _
 });
-var i,
-    r,
-    s = n(388032),
-    a = n(201016),
-    l = n(673497),
-    o = n(421450),
-    c = n(977787),
-    d = n(892814),
-    u = n(947557),
-    m = n(808236),
-    g = n(265665),
-    h = n(181793),
-    p = n(338430);
-((i = r || (r = {})).ABOVE_THE_CLOUDS = 'above_the_clouds'), (i.CYBERPUNK = 'cyberpunk'), (i.STARLIT_DREAM = 'starlit_dream'), (i.SHADOW_REALM = 'shadow_realm'), (i.NEON_SPACE = 'neon_space');
-let x = [
+var i = n(388032),
+    s = n(201016),
+    r = n(673497),
+    l = n(421450),
+    a = n(977787),
+    o = n(892814),
+    c = n(947557),
+    d = n(808236),
+    u = n(265665),
+    m = n(181793),
+    h = n(338430);
+let g = [
     {
         presetName: 'above_the_clouds',
-        presetBackgroundUrl: u.Z,
+        presetBackgroundUrl: c.Z,
         themeColors: [752280, 9215590],
-        bannerImageUrl: a.Z,
+        bannerImageUrl: s.Z,
         avatarDecorationSkuId: '1144059132517826601'
     },
     {
         presetName: 'cyberpunk',
-        presetBackgroundUrl: m.Z,
+        presetBackgroundUrl: d.Z,
         themeColors: [1967991, 742532],
-        bannerImageUrl: l.Z
+        bannerImageUrl: r.Z
     },
     {
         presetName: 'shadow_realm',
-        presetBackgroundUrl: g.Z,
+        presetBackgroundUrl: u.Z,
         themeColors: [0, 4458504],
-        bannerImageUrl: o.Z,
+        bannerImageUrl: l.Z,
         avatarDecorationSkuId: '1144058522808614923'
     },
     {
         presetName: 'starlit_dream',
-        presetBackgroundUrl: h.Z,
+        presetBackgroundUrl: m.Z,
         themeColors: [5123751, 590625],
-        bannerImageUrl: c.Z,
+        bannerImageUrl: a.Z,
         avatarDecorationSkuId: '1144058844004233369'
     },
     {
         presetName: 'neon_space',
-        presetBackgroundUrl: p.Z,
+        presetBackgroundUrl: h.Z,
         themeColors: [6094952, 1007678],
-        bannerImageUrl: d.Z
+        bannerImageUrl: o.Z
     }
 ];
-function f(e) {
+function _(e) {
     switch (e) {
         case 'above_the_clouds':
-            return s.intl.string(s.t['TFc+iI']);
+            return i.intl.string(i.t['TFc+iI']);
         case 'cyberpunk':
-            return s.intl.string(s.t['4g+5bm']);
+            return i.intl.string(i.t['4g+5bm']);
         case 'starlit_dream':
-            return s.intl.string(s.t['9WLHvr']);
+            return i.intl.string(i.t['9WLHvr']);
         case 'shadow_realm':
-            return s.intl.string(s.t.ycg1xs);
+            return i.intl.string(i.t.ycg1xs);
         case 'neon_space':
-            return s.intl.string(s.t.UdNuqq);
+            return i.intl.string(i.t.UdNuqq);
     }
 }

@@ -1,28 +1,24 @@
-t.d(n, {
-    W: function () {
-        return u;
-    }
-});
-var l = t(200651),
-    i = t(192379),
-    r = t(481060),
-    a = t(434404),
-    s = t(496675),
-    o = t(981631),
-    c = t(388032),
-    d = t(755527);
+l.d(n, { W: () => u });
+var t = l(200651),
+    i = l(192379),
+    a = l(481060),
+    r = l(434404),
+    s = l(496675),
+    o = l(981631),
+    d = l(388032),
+    c = l(755527);
 function u(e) {
-    let { guild: n, error: t, onClose: u } = e,
+    let { guild: n, error: l, onClose: u } = e,
         x = n.id,
         m = i.useCallback(() => {
-            u(), a.Z.open(x, o.pNK.INSTANT_INVITES);
+            u(), r.Z.open(x, o.pNK.INSTANT_INVITES);
         }, [x, u]),
         h = i.useCallback(
             (e) =>
-                (0, l.jsx)(r.Clickable, {
-                    className: d.errorLink,
+                (0, t.jsx)(a.P3F, {
+                    className: c.errorLink,
                     onClick: m,
-                    children: (0, l.jsx)(r.Text, {
+                    children: (0, t.jsx)(a.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-link',
                         tag: 'span',
@@ -31,12 +27,12 @@ function u(e) {
                 }),
             [m]
         ),
-        g = i.useCallback(
+        v = i.useCallback(
             (e) =>
-                (0, l.jsx)(r.Anchor, {
+                (0, t.jsx)(a.eee, {
                     href: o.EYA.INVITES_HELP,
                     target: '_blank',
-                    children: (0, l.jsx)(r.Text, {
+                    children: (0, t.jsx)(a.Text, {
                         variant: 'text-xs/normal',
                         color: 'text-link',
                         tag: 'span',
@@ -45,19 +41,19 @@ function u(e) {
                 }),
             []
         ),
-        v =
-            t.code !== o.evJ.TOO_MANY_INVITES
-                ? t.getAnyErrorMessage()
+        g =
+            l.code !== o.evJ.TOO_MANY_INVITES
+                ? l.getAnyErrorMessage()
                 : s.Z.can(o.Plq.MANAGE_GUILD, n)
-                  ? c.intl.format(c.t['H/RUY2'], {
+                  ? d.intl.format(d.t['H/RUY2'], {
                         inviteListHook: h,
-                        inviteHelpHook: g
+                        inviteHelpHook: v
                     })
-                  : c.intl.string(c.t['/FxH6O']);
-    return (0, l.jsx)(r.Text, {
-        className: d.errorMessage,
+                  : d.intl.string(d.t['/FxH6O']);
+    return (0, t.jsx)(a.Text, {
+        className: c.errorMessage,
         variant: 'text-xs/normal',
         color: 'text-danger',
-        children: v
+        children: g
     });
 }

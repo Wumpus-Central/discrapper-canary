@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-});
+n.d(t, { Z: () => r });
 var i = n(2070);
 function r() {
     let { createGuildApplication: e, submitting: t, error: n } = (0, i.Z)();

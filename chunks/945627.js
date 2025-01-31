@@ -1,60 +1,71 @@
-n.d(t, {
-    Z: function () {
-        return S;
-    }
-}),
-    n(653041);
+n.d(t, { Z: () => I }), n(47120), n(653041);
 var i = n(200651),
-    r = n(192379),
-    s = n(392711),
-    a = n(442837),
-    l = n(481060),
+    s = n(192379),
+    r = n(392711),
+    l = n(442837),
+    a = n(481060),
     o = n(230711),
-    c = n(91896),
-    d = n(412954),
-    u = n(114504),
+    c = n(835473),
+    d = n(372460),
+    u = n(91896),
     m = n(768581),
+    h = n(136015),
     g = n(695346),
-    h = n(546957),
-    p = n(838436),
-    x = n(51331),
-    f = n(726985),
-    E = n(981631),
-    _ = n(388032),
-    C = n(82873);
-function T() {
-    let e = (0, a.e7)([c.Z], () => c.Z.getGameRelationshipCount()),
-        t = (0, u.U)(),
-        n = (0, a.Wu)([c.Z], () =>
-            (0, s.sortBy)(t, (e) => {
-                let { id: t } = e;
-                return c.Z.getGameFriendsForApplication(t).length;
-            })
+    _ = n(546957),
+    x = n(838436),
+    p = n(51331),
+    E = n(726985),
+    C = n(981631),
+    f = n(388032),
+    T = n(82873);
+function N() {
+    let e = (0, l.e7)([u.Z], () => u.Z.getGameFriendCount()),
+        [t] = (0, l.e7)(
+            [u.Z],
+            () => {
+                let e = u.Z.getGameRelationships().values();
+                return [
+                    (0, r.chain)(e)
+                        .filter((e) => {
+                            let { type: t } = e;
+                            return t === C.OGo.FRIEND;
+                        })
+                        .map((e) => {
+                            let { applicationId: t } = e;
+                            return t;
+                        })
+                        .uniq()
+                        .sortBy((e) => u.Z.getGameFriendsForApplication(e).length)
+                        .take(3)
+                        .value(),
+                    u.Z.getGameRelationshipsVersion()
+                ];
+            },
+            [],
+            h.Q
         ),
-        g = (0, d.x)({ location: 'GameFriendDMsSettingHeader' });
-    r.useEffect(() => {
-        g();
-    }, [g]);
-    let h = r.useMemo(() => {
+        n = (0, d.wn)({ location: 'GameFriendDMsSettingHeader' }),
+        g = (0, c.Z)(t, n),
+        _ = s.useMemo(() => {
             let e = [];
             for (let t = 0; t < 2; t++) {
-                let i = n[t];
-                if (null == i) break;
-                e.push(i.name);
+                let n = g[t];
+                if (null == n) break;
+                e.push(n.name);
             }
-            let t = n.length - 2;
-            return t > 0 && e.push(_.intl.format(_.t['EADv+/'], { count: t })), e.join(', ');
-        }, [n]),
-        p = r.useMemo(() => {
+            let t = g.length - 2;
+            return t > 0 && e.push(f.intl.format(f.t['EADv+/'], { count: t })), e.join(', ');
+        }, [g]),
+        x = s.useMemo(() => {
             let e = [];
-            for (let t = 0; t < n.length; t++) {
-                let r = n[t];
-                if (null == r) continue;
-                let { icon: s, name: a } = r;
+            for (let t = 0; t < g.length; t++) {
+                let n = g[t];
+                if (null == n) continue;
+                let { icon: s, name: r } = n;
                 if (null == s) continue;
                 let l = m.ZP.getApplicationIconURL({
-                    id: r.id,
-                    icon: r.icon
+                    id: n.id,
+                    icon: n.icon
                 });
                 if (
                     (e.push(
@@ -62,10 +73,10 @@ function T() {
                             'img',
                             {
                                 src: l,
-                                'aria-label': a,
-                                className: C.icon
+                                'aria-label': r,
+                                className: T.icon
                             },
-                            a
+                            r
                         )
                     ),
                     3 === e.length)
@@ -73,59 +84,59 @@ function T() {
                     break;
             }
             return e;
-        }, [n]),
-        x = r.useCallback(() => {
-            o.Z.open(E.oAB.AUTHORIZED_APPS);
+        }, [g]),
+        p = s.useCallback(() => {
+            o.Z.open(C.oAB.AUTHORIZED_APPS);
         }, []);
     return (0, i.jsxs)('div', {
-        className: C.header,
+        className: T.header,
         children: [
             (0, i.jsxs)('div', {
-                className: C.gameRelationships,
+                className: T.gameRelationships,
                 children: [
                     (0, i.jsxs)('div', {
-                        className: C.gameRelationshipsDetails,
+                        className: T.gameRelationshipsDetails,
                         children: [
-                            (0, i.jsx)(l.Text, {
+                            (0, i.jsx)(a.Text, {
                                 variant: 'text-md/medium',
                                 color: 'header-primary',
-                                children: _.intl.format(_.t.iPZSeX, { count: e })
+                                children: f.intl.format(f.t.iPZSeX, { count: e })
                             }),
-                            (0, i.jsx)(l.Text, {
+                            (0, i.jsx)(a.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'text-muted',
-                                children: h
+                                children: _
                             })
                         ]
                     }),
                     (0, i.jsx)('div', {
-                        className: C.gameRelationshipIcons,
-                        children: p
+                        className: T.gameRelationshipIcons,
+                        children: x
                     })
                 ]
             }),
-            (0, i.jsx)('div', { className: C.divider }),
-            (0, i.jsx)(l.Clickable, {
-                onClick: x,
-                children: (0, i.jsx)(l.Text, {
+            (0, i.jsx)('div', { className: T.divider }),
+            (0, i.jsx)(a.P3F, {
+                onClick: p,
+                children: (0, i.jsx)(a.Text, {
                     variant: 'text-xs/normal',
                     color: 'interactive-normal',
-                    children: _.intl.format(_.t.oYaYOT, {})
+                    children: f.intl.format(f.t.oYaYOT, {})
                 })
             })
         ]
     });
 }
-function S() {
+function I() {
     let e = g._j.useSetting();
-    return (0, i.jsxs)(h.Z, {
+    return (0, i.jsxs)(_.Z, {
         children: [
-            (0, i.jsx)(T, {}),
-            (0, i.jsx)(p.U, {
-                setting: f.s6.PRIVACY_AND_SAFETY_ALLOW_GAME_FRIEND_DMS,
-                children: (0, i.jsx)(x.Z, {
-                    title: _.intl.string(_.t['/U8Iwc']),
-                    note: _.intl.string(_.t.WO2Hlp),
+            (0, i.jsx)(N, {}),
+            (0, i.jsx)(x.U, {
+                setting: E.s6.PRIVACY_AND_SAFETY_ALLOW_GAME_FRIEND_DMS,
+                children: (0, i.jsx)(p.Z, {
+                    title: f.intl.string(f.t['/U8Iwc']),
+                    note: f.intl.string(f.t.WO2Hlp),
                     value: e,
                     onChange: g._j.updateSetting
                 })

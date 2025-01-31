@@ -1,37 +1,33 @@
 function i(e) {
-    return function (n) {
-        var r,
+    return function (t) {
+        var n,
             i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
             s = i.width,
-            l = (s && e.matchPatterns[s]) || e.matchPatterns[e.defaultMatchWidth],
-            u = n.match(l);
-        if (!u) return null;
-        var c = u[0],
-            d = (s && e.parsePatterns[s]) || e.parsePatterns[e.defaultParseWidth],
-            f = Array.isArray(d)
-                ? o(d, function (e) {
-                      return e.test(c);
+            o = (s && e.matchPatterns[s]) || e.matchPatterns[e.defaultMatchWidth],
+            l = t.match(o);
+        if (!l) return null;
+        var u = l[0],
+            c = (s && e.parsePatterns[s]) || e.parsePatterns[e.defaultParseWidth],
+            d = Array.isArray(c)
+                ? a(c, function (e) {
+                      return e.test(u);
                   })
-                : a(d, function (e) {
-                      return e.test(c);
+                : r(c, function (e) {
+                      return e.test(u);
                   });
         return (
-            (r = e.valueCallback ? e.valueCallback(f) : f),
+            (n = e.valueCallback ? e.valueCallback(d) : d),
             {
-                value: (r = i.valueCallback ? i.valueCallback(r) : r),
-                rest: n.slice(c.length)
+                value: (n = i.valueCallback ? i.valueCallback(n) : n),
+                rest: t.slice(u.length)
             }
         );
     };
 }
-function a(e, n) {
-    for (var r in e) if (e.hasOwnProperty(r) && n(e[r])) return r;
+function r(e, t) {
+    for (var n in e) if (e.hasOwnProperty(n) && t(e[n])) return n;
 }
-function o(e, n) {
-    for (var r = 0; r < e.length; r++) if (n(e[r])) return r;
+function a(e, t) {
+    for (var n = 0; n < e.length; n++) if (t(e[n])) return n;
 }
-r.d(n, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });

@@ -1,39 +1,33 @@
-r.d(n, {
-    K: function () {
-        return p;
-    }
-});
-var i = r(724458);
-var a = r(47120);
-var o = r(200651),
-    s = r(192379),
-    l = r(803997),
-    u = r.n(l),
-    c = r(530892),
-    d = r.n(c),
-    f = r(943361);
-let p = s.forwardRef(function (e, n) {
-        let { as: r = 'div', gap: i = 8, direction: a = 'vertical', align: s = 'stretch', justify: l = 'start', padding: c = 0, style: d, className: p, children: m, ...g } = e;
-        return (0, o.jsx)(r, {
-            ref: n,
-            'data-align': s,
+n.d(t, { K: () => c }), n(724458), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(803997),
+    s = n.n(a),
+    o = n(530892),
+    l = n.n(o),
+    u = n(943361);
+let c = r.forwardRef(function (e, t) {
+        let { as: n = 'div', gap: r = 8, direction: a = 'vertical', align: o = 'stretch', justify: l = 'start', padding: c = 0, style: _, className: p, children: h, ...m } = e;
+        return (0, i.jsx)(n, {
+            ref: t,
+            'data-align': o,
             'data-justify': l,
             'data-direction': a,
-            className: u()(f.stack, p),
+            className: s()(u.stack, p),
             style: {
-                ...d,
-                gap: h(i),
-                ..._(c)
+                ..._,
+                gap: d(r),
+                ...f(c)
             },
-            ...g,
-            children: m
+            ...m,
+            children: h
         });
     }),
-    h = (e) => 'var(--space-'.concat(e, ')'),
-    _ = (e) =>
+    d = (e) => 'var(--space-'.concat(e, ')'),
+    f = (e) =>
         'number' == typeof e || 'string' == typeof e
-            ? { padding: h(e) }
-            : Object.entries(e).reduce((e, n) => {
-                  let [r, i] = n;
-                  return (e['padding'.concat(d()(r))] = h(i)), e;
+            ? { padding: d(e) }
+            : Object.entries(e).reduce((e, t) => {
+                  let [n, i] = t;
+                  return (e['padding'.concat(l()(n))] = d(i)), e;
               }, {});

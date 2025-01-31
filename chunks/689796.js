@@ -1,17 +1,18 @@
+n.d(t, { Z: () => h });
 var i = n(200651),
-    r = n(192379),
-    l = n(77878),
+    l = n(192379),
+    r = n(77878),
     a = n(770146),
     s = n(600164),
     o = n(981631),
     c = n(388032),
     d = n(454072);
-class u extends r.PureComponent {
+class u extends l.PureComponent {
     renderContentRatingImage() {
         let { contentRating: e, contentRatingAgency: t } = this.props.sku;
         return null == e || null == t
             ? null
-            : (0, i.jsx)(l.Z, {
+            : (0, i.jsx)(r.Z, {
                   className: d.rating,
                   agency: t,
                   rating: e.rating
@@ -23,7 +24,7 @@ class u extends r.PureComponent {
             className: n
         } = this.props;
         if (null == e || null == t) return null;
-        let r = {
+        let l = {
                 [o.aIt.ESRB]: {
                     1: c.intl.string(c.t.ErVezc),
                     2: c.intl.string(c.t.xLyerK),
@@ -79,7 +80,7 @@ class u extends r.PureComponent {
                     7: c.intl.string(c.t.ai9C3d)
                 }
             },
-            l = e.descriptors.map((e) => r[t][e]).join(', ');
+            r = e.descriptors.map((e) => l[t][e]).join(', ');
         return (0, i.jsxs)('div', {
             className: n,
             children: [
@@ -90,7 +91,7 @@ class u extends r.PureComponent {
                         this.renderContentRatingImage(),
                         (0, i.jsx)('div', {
                             className: d.__invalid_info,
-                            children: l
+                            children: r
                         })
                     ]
                 })
@@ -98,4 +99,4 @@ class u extends r.PureComponent {
         });
     }
 }
-t.Z = u;
+let h = u;

@@ -1,8 +1,4 @@
-n.d(t, {
-    c: function () {
-        return i;
-    }
-});
+n.d(t, { c: () => l });
 let r = (0, n(818083).B)({
         kind: 'user',
         id: '2024-12_robert_holiday_promo',
@@ -16,4 +12,4 @@ let r = (0, n(818083).B)({
             }
         ]
     }),
-    i = (e) => r.useExperiment({ location: e }).showRobertPromo;
+    l = (e) => r.useExperiment({ location: e }).showRobertPromo;

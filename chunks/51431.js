@@ -1,2 +1,2 @@
-var a = r(604257)();
-e.exports = a;
+var r = a(604257)();
+t.exports = r;

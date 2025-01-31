@@ -1,6 +1,7 @@
 e.exports = {
-    mainTableContainer: 'mainTableContainer_e23072',
-    horizatonalScroller: 'horizatonalScroller_e23072',
-    loaderContainer: 'loaderContainer_e23072',
-    loaderBar: 'loaderBar_e23072'
+    mainTableContainer: 'mainTableContainer__09a38',
+    horizatonalScroller: 'horizatonalScroller__09a38',
+    loaderContainer: 'loaderContainer__09a38',
+    loaderBar: 'loaderBar__09a38',
+    loadingBar: 'loadingBar__09a38'
 };

@@ -1,14 +1,10 @@
-r.d(n, {
-    h: function () {
-        return l;
-    }
-});
-var i = r(502087),
-    a = r(111361),
-    o = r(981631),
-    s = r(474936);
-function l(e) {
-    if (null == e) return o.mBz;
-    let n = i.Z.getPremiumTypeOverride();
-    return e.isStaff() && n === s.F_ ? o.PRK : null != e.premiumType && (0, a.I5)(e) ? s.a1[e.premiumType].fileSize : o.mBz;
+n.d(t, { h: () => o });
+var i = n(502087),
+    r = n(111361),
+    a = n(981631),
+    s = n(474936);
+function o(e) {
+    if (null == e) return a.mBz;
+    let t = i.Z.getPremiumTypeOverride();
+    return e.isStaff() && t === s.F_ ? a.PRK : null != e.premiumType && (0, r.I5)(e) ? s.a1[e.premiumType].fileSize : a.mBz;
 }

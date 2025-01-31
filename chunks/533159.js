@@ -1,35 +1,31 @@
-e.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = e(200651);
-e(192379);
-var r = e(794295),
-    a = e(388032),
-    s = e(83909);
-function o(t) {
-    let { termsOfServiceUrl: n, privacyPolicyUrl: e } = t;
-    return null == n && null == e
+i.d(e, { Z: () => a });
+var n = i(200651);
+i(192379);
+var r = i(794295),
+    s = i(388032),
+    l = i(83909);
+function a(t) {
+    let { termsOfServiceUrl: e, privacyPolicyUrl: i } = t;
+    return null == e && null == i
         ? null
-        : (0, i.jsxs)('span', {
-              className: s.text,
+        : (0, n.jsxs)('span', {
+              className: l.text,
               children: [
-                  null != n &&
-                      (0, i.jsx)(r.Z, {
-                          href: n,
-                          children: a.intl.string(a.t['8S0kcH'])
+                  null != e &&
+                      (0, n.jsx)(r.Z, {
+                          href: e,
+                          children: s.intl.string(s.t['8S0kcH'])
                       }),
-                  null != n &&
-                      null != e &&
-                      (0, i.jsx)('span', {
+                  null != e &&
+                      null != i &&
+                      (0, n.jsx)('span', {
                           'aria-disabled': 'true',
                           children: '\u2022'
                       }),
-                  null != e &&
-                      (0, i.jsx)(r.Z, {
-                          href: e,
-                          children: a.intl.string(a.t.ZpyeCg)
+                  null != i &&
+                      (0, n.jsx)(r.Z, {
+                          href: i,
+                          children: s.intl.string(s.t.ZpyeCg)
                       })
               ]
           });

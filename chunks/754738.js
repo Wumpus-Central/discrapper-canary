@@ -1,8 +1,3 @@
-var i, l;
-t.d(n, {
-    b: function () {
-        return i;
-    }
-}),
-    ((l = i || (i = {}))[(l.APPENDS_REMAINING_ACTIVITIES = 1)] = 'APPENDS_REMAINING_ACTIVITIES'),
-    (l[(l.DEFAULT = 0)] = 'DEFAULT');
+n.d(t, { b: () => l });
+var i,
+    l = (((i = {})[(i.APPENDS_REMAINING_ACTIVITIES = 1)] = 'APPENDS_REMAINING_ACTIVITIES'), (i[(i.DEFAULT = 0)] = 'DEFAULT'), i);

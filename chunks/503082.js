@@ -1,10 +1,4 @@
-i.d(e, {
-    Z: function () {
-        return d;
-    }
-}),
-    i(411104),
-    i(47120);
+i.d(e, { Z: () => u }), i(411104), i(47120);
 var s = i(512722),
     n = i.n(s),
     a = i(129508),
@@ -23,15 +17,14 @@ function h(t, e, i) {
         t
     );
 }
-let l = 'undefined' != typeof OffscreenCanvas,
-    c = 2112;
-class u {
+let l = 'undefined' != typeof OffscreenCanvas;
+class c {
     reset() {
         this.context.clearRect(0, 0, this.MAX_ROW_WIDTH, this.MAX_HEIGHT), this.imageMap.clear(), (this.nextX = 0), (this.nextY = 0), (this.tallestImageHeight = 0), (this.needsReset = !1);
     }
     breakToNewRow() {
         let t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        (this.nextX = 0), (this.nextY += this.tallestImageHeight + 2), (this.tallestImageHeight = 0), this.nextY > this.MAX_HEIGHT && (t ? this.reset() : (this.needsReset = !0));
+        (this.nextX = 0), (this.nextY += this.tallestImageHeight + 4), (this.tallestImageHeight = 0), this.nextY > this.MAX_HEIGHT && (t ? this.reset() : (this.needsReset = !0));
     }
     getImage(t, e, i) {
         var s;
@@ -39,7 +32,7 @@ class u {
             a = this.imageMap.get(t);
         if (null != a && null != a[n]) return a[n];
         if ((this.needsReset && this.reset(), e.width > this.MAX_ROW_WIDTH || e.height > this.MAX_HEIGHT)) throw Error('Image: '.concat(t, ' is too wide to use with offscreen canvas. (').concat(e.width, ' x ').concat(e.height));
-        (this.nextX + e.width > this.MAX_ROW_WIDTH || this.nextY + e.height > this.MAX_HEIGHT) && this.breakToNewRow(!0), this.context.save(), null != i && (this.context.filter = i), this.context.drawImage(e, this.nextX, this.nextY, e.width, e.height), this.context.restore();
+        (this.nextX + e.width + 4 > this.MAX_ROW_WIDTH || this.nextY + e.height + 4 > this.MAX_HEIGHT) && this.breakToNewRow(!0), this.context.save(), null != i && (this.context.filter = i), this.context.drawImage(e, this.nextX, this.nextY, e.width, e.height), this.context.restore();
         let r = null !== (s = this.imageMap.get(t)) && void 0 !== s ? s : {},
             o = {
                 x: this.nextX,
@@ -53,13 +46,13 @@ class u {
                 [n]: o
             }),
             e.height > this.tallestImageHeight && (this.tallestImageHeight = e.height),
-            (this.nextX += e.width + 2),
+            (this.nextX += e.width + 4),
             this.nextX > this.MAX_ROW_WIDTH && this.breakToNewRow(),
             o
         );
     }
     constructor() {
-        h(this, 'MAX_ROW_WIDTH', c), h(this, 'MAX_HEIGHT', c), h(this, 'nextX', 0), h(this, 'nextY', 0), h(this, 'tallestImageHeight', 0), h(this, 'needsReset', !1), h(this, 'canvas', void 0), h(this, 'context', void 0), h(this, 'imageMap', void 0), (this.imageMap = new Map()), l ? (this.canvas = new OffscreenCanvas(this.MAX_ROW_WIDTH, this.MAX_HEIGHT)) : ((this.canvas = document.createElement('canvas')), (this.canvas.width = this.MAX_ROW_WIDTH), (this.canvas.height = this.MAX_HEIGHT));
+        h(this, 'MAX_ROW_WIDTH', 2176), h(this, 'MAX_HEIGHT', 2176), h(this, 'nextX', 0), h(this, 'nextY', 0), h(this, 'tallestImageHeight', 0), h(this, 'needsReset', !1), h(this, 'canvas', void 0), h(this, 'context', void 0), h(this, 'imageMap', void 0), (this.imageMap = new Map()), l ? (this.canvas = new OffscreenCanvas(this.MAX_ROW_WIDTH, this.MAX_HEIGHT)) : ((this.canvas = document.createElement('canvas')), (this.canvas.width = this.MAX_ROW_WIDTH), (this.canvas.height = this.MAX_HEIGHT));
         let t = this.canvas.getContext('2d', {
             alpha: !0,
             willReadFrequently: !1
@@ -68,10 +61,10 @@ class u {
         this.context = t;
     }
 }
-class d extends a.Z {
+class u extends a.Z {
     setupOffscreenCanvas() {
         try {
-            this.offscreenCanvasCache = new u();
+            this.offscreenCanvasCache = new c();
         } catch (t) {
             this.offscreenCanvasCache = void 0;
         }
@@ -126,13 +119,13 @@ class d extends a.Z {
             d = (t, e) => {
                 null != this.context && (i ? this.context.fillText(t, e.x, e.y) : this.context.strokeText(t, e.x, e.y));
             },
-            f = (t) => {
+            v = (t) => {
                 if (null == this.context || l.width <= r.F) return '';
                 let e = ''.concat(t);
                 for (; l.width + r.F > h; ) (e = e.slice(0, -4)), (l = this.context.measureText(e)), (c = !0);
                 return c && (e += '...'), e;
             };
-        if ((this.font.truncate === o.GX.None && d(t, e), this.font.truncate === o.GX.Truncate && d((t = f(t)), e), this.font.truncate === o.GX.Wrap)) {
+        if ((this.font.truncate === o.GX.None && d(t, e), this.font.truncate === o.GX.Truncate && d((t = v(t)), e), this.font.truncate === o.GX.Wrap)) {
             let i = t.split(' '),
                 s = 1 / 0,
                 r = '',
@@ -143,12 +136,12 @@ class d extends a.Z {
                     if (
                         (o + 1 >= s && i.length > 0 && (t = !0),
                         '' !== r
-                            ? (d(t ? f(r + '...') : r, {
+                            ? (d(t ? v(r + '...') : r, {
                                   x: e.x,
                                   y: e.y + u * o
                               }),
                               (r = ''))
-                            : d(f(null !== (a = i.shift()) && void 0 !== a ? a : ''), {
+                            : d(v(null !== (a = i.shift()) && void 0 !== a ? a : ''), {
                                   x: e.x,
                                   y: e.y + u * o
                               }),
@@ -176,8 +169,7 @@ class d extends a.Z {
         let s = this.font.weight,
             n = (t, e, i) => {
                 let n;
-                if ('strong' === t.type) this.setFont({ weight: 700 });
-                return Array.isArray(t.content) ? (n = a(t.content, e, i)) : (n = this.drawText(t.content, e, i)), this.setFont({ weight: s }), n;
+                return 'strong' === t.type && this.setFont({ weight: 700 }), (n = Array.isArray(t.content) ? a(t.content, e, i) : this.drawText(t.content, e, i)), this.setFont({ weight: s }), n;
             },
             a = (t, e, i) => {
                 let s = 0;
@@ -267,9 +259,9 @@ class d extends a.Z {
                         h: r.height
                     },
                     d = +(a.w / a.h).toFixed(1),
-                    f = +(i.w / i.h).toFixed(1);
-                if (f > d) {
-                    let t = a.w / f;
+                    v = +(i.w / i.h).toFixed(1);
+                if (v > d) {
+                    let t = a.w / v;
                     n = {
                         x: 0,
                         y: (a.h - t) * (null !== (l = null == s ? void 0 : null === (h = s.focus) || void 0 === h ? void 0 : h.y) && void 0 !== l ? l : 0.5),
@@ -277,7 +269,7 @@ class d extends a.Z {
                         h: t
                     };
                 } else {
-                    let t = a.h * f;
+                    let t = a.h * v;
                     n = {
                         x: (r.width - t) * (null !== (u = null == s ? void 0 : null === (c = s.focus) || void 0 === c ? void 0 : c.x) && void 0 !== u ? u : 0.5),
                         y: 0,
@@ -341,8 +333,8 @@ class d extends a.Z {
         let a = this.offscreenCanvasCache.getImage(t.toString(), s, this.getFilterString());
         if (null == a) return o.vP.Failure;
         let { x: r, y: h, w: l, h: c } = e,
-            { x: u, y: d, w: f, h: v } = i;
-        return this.context.drawImage(this.offscreenCanvasCache.canvas, a.x + r, a.y + h, l, c, u, d, f, v), o.vP.Success;
+            { x: u, y: d, w: v, h: f } = i;
+        return this.context.drawImage(this.offscreenCanvasCache.canvas, a.x + r, a.y + h, l, c, u, d, v, f), o.vP.Success;
     }
     drawPath(t, e) {
         let i = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],

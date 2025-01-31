@@ -1,8 +1,4 @@
-n.d(t, {
-    R: function () {
-        return i;
-    }
-});
+n.d(t, { R: () => i });
 var r = n(837748);
 function i(e) {
     return (0, r.Z)(e).author;

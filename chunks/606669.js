@@ -1,88 +1,84 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
-var r = n(200651);
+n.d(t, { Z: () => o });
+var i = n(200651);
 n(192379);
-var i = n(442837),
+var r = n(442837),
     l = n(481060),
     a = n(857595),
-    u = n(607070),
-    o = n(388032);
-function c() {
+    s = n(607070),
+    c = n(388032);
+function o() {
     let {
             saturation: e,
             useReducedMotion: t,
             roleStyle: n
-        } = (0, i.cj)([u.Z], () => ({
-            saturation: u.Z.saturation,
-            useReducedMotion: u.Z.useReducedMotion,
-            roleStyle: u.Z.roleStyle
+        } = (0, r.cj)([s.Z], () => ({
+            saturation: s.Z.saturation,
+            useReducedMotion: s.Z.useReducedMotion,
+            roleStyle: s.Z.roleStyle
         })),
-        c = [
+        o = [
             {
-                name: o.intl.string(o.t.YEOEi4),
+                name: c.intl.string(c.t.YEOEi4),
                 value: 'username'
             },
             {
-                name: o.intl.string(o.t.mQaro6),
+                name: c.intl.string(c.t.mQaro6),
                 value: 'dot'
             },
             {
-                name: o.intl.string(o.t.Ji2EVF),
+                name: c.intl.string(c.t.Ji2EVF),
                 value: 'hidden'
             }
         ];
     return [
-        (0, r.jsx)(
-            l.MenuGroup,
+        (0, i.jsx)(
+            l.kSQ,
             {
-                children: (0, r.jsx)(l.MenuCheckboxItem, {
+                children: (0, i.jsx)(l.S89, {
                     id: 'reduced-motion',
-                    label: o.intl.string(o.t.b3XBzs),
+                    label: c.intl.string(c.t.b3XBzs),
                     checked: t,
                     action: () => (0, a.Zt)(t ? 'no-preference' : 'reduce')
                 })
             },
             'reduced-motion'
         ),
-        (0, r.jsx)(
-            l.MenuGroup,
+        (0, i.jsx)(
+            l.kSQ,
             {
-                children: (0, r.jsx)(l.MenuControlItem, {
+                children: (0, i.jsx)(l.II_, {
                     id: 'input',
-                    label: o.intl.string(o.t['5PWWCQ']),
+                    label: c.intl.string(c.t['5PWWCQ']),
                     control: (t, n) =>
-                        (0, r.jsx)(l.MenuSliderControl, {
+                        (0, i.jsx)(l._wy, {
                             ...t,
                             ref: n,
                             value: 100 * e,
                             onChange: (e) => (0, a.o2)(e / 100),
-                            'aria-label': o.intl.string(o.t['5PWWCQ'])
+                            'aria-label': c.intl.string(c.t['5PWWCQ'])
                         })
                 })
             },
             'input'
         ),
-        (0, r.jsx)(
-            l.MenuGroup,
+        (0, i.jsx)(
+            l.kSQ,
             {
-                children: (0, r.jsx)(l.MenuItem, {
+                children: (0, i.jsx)(l.sNh, {
                     id: 'role-colors',
-                    label: o.intl.string(o.t.uSOPWl),
-                    children: c.map((e) => {
-                        let { name: t, value: i } = e;
-                        return (0, r.jsx)(
-                            l.MenuRadioItem,
+                    label: c.intl.string(c.t.uSOPWl),
+                    children: o.map((e) => {
+                        let { name: t, value: r } = e;
+                        return (0, i.jsx)(
+                            l.k5B,
                             {
-                                id: i,
+                                id: r,
                                 group: 'role-colors',
-                                checked: i === n,
+                                checked: r === n,
                                 label: t,
-                                action: () => (0, a.u1)(i)
+                                action: () => (0, a.u1)(r)
                             },
-                            i
+                            r
                         );
                     })
                 })

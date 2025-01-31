@@ -1,62 +1,67 @@
+n.d(t, { Z: () => p });
 var i = n(200651);
 n(192379);
-var r = n(780384),
-    s = n(481060),
-    a = n(410030),
-    l = n(74538),
+var s = n(780384),
+    r = n(481060),
+    l = n(410030),
+    a = n(74538),
     o = n(650032),
     c = n(104494),
     d = n(639119),
     u = n(197115),
     m = n(474936),
-    g = n(388032),
-    h = n(755904);
-let p = (e) => {
-        let { showTrialCTA: t, subscriptionTier: n, shouldShowUpsells: i, trialDurationCopy: r, isPersistentCTA: s, shouldShowReferralTrialCopy: a, subscriptionTrial: o } = e;
-        if (t && a) return g.intl.string(g.t.bXTClZ);
-        if (t && (n === m.Si.TIER_2 || s))
-            return (0, l.Rt)({
-                intervalType: null == o ? void 0 : o.interval,
-                intervalCount: null == o ? void 0 : o.interval_count
-            });
-        if (t) return g.intl.formatToPlainString(g.t.nTmm2t, { freeTrialText: r });
-        else if (i && n === m.Si.TIER_2) return g.intl.string(g.t.MtTjnZ);
+    h = n(388032),
+    g = n(755904);
+let _ = (e) => {
+        let { showTrialCTA: t, subscriptionTier: n, shouldShowUpsells: i, trialDurationCopy: s, isPersistentCTA: r, shouldShowReferralTrialCopy: l, subscriptionTrial: o } = e;
+        return t && l
+            ? h.intl.string(h.t.bXTClZ)
+            : t && (n === m.Si.TIER_2 || r)
+              ? (0, a.Rt)({
+                    intervalType: null == o ? void 0 : o.interval,
+                    intervalCount: null == o ? void 0 : o.interval_count
+                })
+              : t
+                ? h.intl.formatToPlainString(h.t.nTmm2t, { freeTrialText: s })
+                : i && n === m.Si.TIER_2
+                  ? h.intl.string(h.t.MtTjnZ)
+                  : void 0;
     },
-    x = (e, t, n, i) => (t || n ? g.intl.string(g.t.fkPGam) : e === m.Si.TIER_2 ? g.intl.formatToPlainString(g.t.bkQ4bG, { percent: i }) : void 0);
-t.Z = (e) => {
-    let { forceInverted: t, subscriptionTier: n, isEligibleForBogoPromotion: f = !1, isPersistentCTA: E = !1, useShorterCTA: _ = !1, ...C } = e,
-        T = (0, a.ZP)(),
-        S = (0, r.wj)(T) || t,
-        b = (0, d.N)(),
-        I = null == b ? void 0 : b.subscription_trial,
-        N = (0, l.a5)({
-            intervalType: null == I ? void 0 : I.interval,
-            intervalCount: null == I ? void 0 : I.interval_count
-        }),
-        v = (0, c.Ng)(),
-        A = null != I && n === I.sku_id,
-        { enabled: j } = o._.useExperiment({ location: 'SubscribeButton' }, { autoTrackExposure: !1 }),
-        O = j && (null == b ? void 0 : b.trial_id) === m.a7,
-        R = f
-            ? g.intl.string(g.t.J61px8)
-            : null != v
-              ? x(n, _, E, v.discount.amount)
-              : p({
-                    showTrialCTA: A,
-                    subscriptionTier: n,
-                    shouldShowUpsells: !1,
-                    trialDurationCopy: N,
-                    isPersistentCTA: E,
-                    shouldShowReferralTrialCopy: O,
-                    subscriptionTrial: I
-                });
-    return (0, i.jsx)(u.Z, {
-        color: S ? s.ButtonColors.BRAND_INVERTED : s.ButtonColors.BRAND,
-        buttonShineClassName: 'buttonShineClassName' in C ? C.buttonShineClassName : S ? h.brandShine : void 0,
-        buttonText: R,
-        buttonTextClassName: A ? h.freeTrialText : void 0,
-        onlyShineOnHover: !0,
-        subscriptionTier: n,
-        ...C
-    });
-};
+    x = (e, t, n, i) => (t || n ? h.intl.string(h.t.fkPGam) : e === m.Si.TIER_2 ? h.intl.formatToPlainString(h.t.bkQ4bG, { percent: i }) : void 0),
+    p = (e) => {
+        let { forceInverted: t, subscriptionTier: n, isEligibleForBogoPromotion: p = !1, isPersistentCTA: E = !1, useShorterCTA: C = !1, ...f } = e,
+            T = (0, l.ZP)(),
+            N = (0, s.wj)(T) || t,
+            I = (0, d.N)(),
+            S = null == I ? void 0 : I.subscription_trial,
+            b = (0, a.a5)({
+                intervalType: null == S ? void 0 : S.interval,
+                intervalCount: null == S ? void 0 : S.interval_count
+            }),
+            v = (0, c.Ng)(),
+            j = null != S && n === S.sku_id,
+            { enabled: A } = o._.useExperiment({ location: 'SubscribeButton' }, { autoTrackExposure: !1 }),
+            O = A && (null == I ? void 0 : I.trial_id) === m.a7,
+            R = p
+                ? h.intl.string(h.t.J61px8)
+                : null != v
+                  ? x(n, C, E, v.discount.amount)
+                  : _({
+                        showTrialCTA: j,
+                        subscriptionTier: n,
+                        shouldShowUpsells: !1,
+                        trialDurationCopy: b,
+                        isPersistentCTA: E,
+                        shouldShowReferralTrialCopy: O,
+                        subscriptionTrial: S
+                    });
+        return (0, i.jsx)(u.Z, {
+            color: N ? r.Ttl.BRAND_INVERTED : r.Ttl.BRAND,
+            buttonShineClassName: 'buttonShineClassName' in f ? f.buttonShineClassName : N ? g.brandShine : void 0,
+            buttonText: R,
+            buttonTextClassName: j ? g.freeTrialText : void 0,
+            onlyShineOnHover: !0,
+            subscriptionTier: n,
+            ...f
+        });
+    };

@@ -1,25 +1,21 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-}),
-    n(757143);
-var r = n(192379),
-    i = n(442837),
-    l = n(131951),
-    a = n(388032);
-let u = /^Default/;
-function o() {
-    let e = (0, i.e7)([l.Z], () => l.Z.getInputDevices());
-    return r.useMemo(() => {
+n.d(t, { Z: () => a }), n(757143);
+var o = n(192379),
+    r = n(442837),
+    i = n(131951),
+    c = n(388032);
+let d = /^Default/;
+function a() {
+    let e = (0, r.e7)([i.Z], () => i.Z.getInputDevices());
+    return o.useMemo(() => {
         let t = { ...e },
             n = t.default;
-        return null == n
-            ? t
-            : ((t.default = {
-                  ...n,
-                  name: n.name.replace(u, a.intl.string(a.t.bBvAEB))
-              }),
-              t);
+        return (
+            null == n ||
+                (t.default = {
+                    ...n,
+                    name: n.name.replace(d, c.intl.string(c.t.bBvAEB))
+                }),
+            t
+        );
     }, [e]);
 }

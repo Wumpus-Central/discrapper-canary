@@ -1,14 +1,9 @@
-n.d(t, {
-    Z: function () {
-        return p;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => p }), n(47120);
 var i = n(200651),
     l = n(192379),
     s = n(120356),
-    r = n.n(s),
-    a = n(780384),
+    a = n.n(s),
+    r = n(780384),
     o = n(481060),
     d = n(239091),
     c = n(741247),
@@ -17,9 +12,9 @@ var i = n(200651),
     m = n(826080);
 function g(e) {
     let { role: t, guild: s } = e,
-        [a, u] = l.useState(!1);
-    return (0, c.useHasGuildRoleItems)(s, t)
-        ? (0, i.jsx)(o.Clickable, {
+        [r, u] = l.useState(!1);
+    return (0, c.e)(s, t)
+        ? (0, i.jsx)(o.P3F, {
               onClick: (e) => {
                   u(!0),
                       (0, d.jW)(
@@ -36,8 +31,8 @@ function g(e) {
                           { onClose: () => u(!1) }
                       );
               },
-              className: r()(m.roleOverflow, { [m.open]: a }),
-              children: (0, i.jsx)(o.MoreHorizontalIcon, {
+              className: a()(m.roleOverflow, { [m.open]: r }),
+              children: (0, i.jsx)(o.xhG, {
                   size: 'custom',
                   color: 'currentColor',
                   width: 20,
@@ -47,7 +42,7 @@ function g(e) {
         : null;
 }
 function p(e) {
-    let { color: t, id: s, role: r, guild: c, children: p, isDragging: x, selectedItem: f, onItemSelect: v, itemType: j, locked: C, lockTooltip: b, showContextMenu: T, theme: N, roleStyle: S, 'aria-label': Z } = e,
+    let { color: t, id: s, role: a, guild: c, children: p, isDragging: x, selectedItem: f, onItemSelect: j, itemType: v, locked: C, lockTooltip: N, showContextMenu: b, theme: Z, roleStyle: T, 'aria-label': S } = e,
         E = l.useCallback(
             (e) => {
                 (0, d.jW)(e, async () => {
@@ -64,33 +59,33 @@ function p(e) {
         );
     return x
         ? (0, i.jsx)('div', { className: m.dragged })
-        : (0, i.jsx)(o.TabBar.Item, {
+        : (0, i.jsx)(o.njP.Item, {
               className: m.role,
               id: s,
               selectedItem: f,
-              onItemSelect: v,
-              itemType: j,
-              'aria-label': null != b ? ''.concat(Z, ', ').concat(b) : Z,
+              onItemSelect: j,
+              itemType: v,
+              'aria-label': null != N ? ''.concat(S, ', ').concat(N) : S,
               children: (0, i.jsxs)('div', {
                   className: m.roleContent,
                   children: [
-                      'dot' === S
-                          ? (0, i.jsx)(o.RoleDot, {
+                      'dot' === T
+                          ? (0, i.jsx)(o.FhE, {
                                 color: null != t ? t : void 0,
                                 className: m.roleDot,
                                 background: !1,
                                 tooltip: !1
                             })
-                          : (0, i.jsx)(o.RoleCircle, {
+                          : (0, i.jsx)(o.xko, {
                                 color: null != t ? t : void 0,
                                 className: m.roleCircle
                             }),
                       (function () {
                           if (!C) return null;
-                          let e = (0, a.wj)(N) ? n(27377) : n(514811);
-                          return (0, i.jsx)(o.Tooltip, {
-                              text: b,
-                              color: o.Tooltip.Colors.RED,
+                          let e = (0, r.wj)(Z) ? n(27377) : n(514811);
+                          return (0, i.jsx)(o.ua7, {
+                              text: N,
+                              color: o.ua7.Colors.RED,
                               children: (t) =>
                                   (0, i.jsx)(u.Z, {
                                       className: m.lock,
@@ -104,10 +99,10 @@ function p(e) {
                           onContextMenu: E,
                           children: p
                       }),
-                      T && null != r
+                      b && null != a
                           ? (0, i.jsx)(g, {
                                 guild: c,
-                                role: r
+                                role: a
                             })
                           : null
                   ]

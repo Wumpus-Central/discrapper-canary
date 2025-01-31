@@ -1,13 +1,9 @@
-r.d(n, {
-    M: function () {
-        return a;
-    }
-});
-var i = r(695170),
-    a = (function () {
-        function e(e, n) {
+n.d(t, { M: () => r });
+var i = n(695170),
+    r = (function () {
+        function e(e, t) {
             if (isNaN(e.getTime())) throw RangeError('Invalid date passed to DateWithZone');
-            (this.date = e), (this.tzid = n);
+            (this.date = e), (this.tzid = t);
         }
         return (
             Object.defineProperty(e.prototype, 'isUTC', {

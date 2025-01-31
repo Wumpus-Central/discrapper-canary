@@ -1,9 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return s;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => s }), n(47120);
 var r = n(192379),
     o = n(817080),
     i = n(579806),
@@ -26,23 +21,22 @@ class s extends r.Component {
         return r.cloneElement(t, { onClick: this.handleFileDownload });
     }
     constructor(...e) {
-        var t, n, r;
+        var t, n;
         super(...e),
-            (t = this),
-            (n = 'handleFileDownload'),
-            (r = (e) => {
+            (t = 'handleFileDownload'),
+            (n = (e) => {
                 e.preventDefault();
                 let t = this.getFileContents(),
                     { fileName: n, onDownload: r } = this.props;
                 a.isPlatformEmbedded ? this.downloadNative(t, n) : this.downloadHtml5(t, n), null == r || r();
             }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: r,
+            t in this
+                ? Object.defineProperty(this, t, {
+                      value: n,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (t[n] = r);
+                : (this[t] = n);
     }
 }

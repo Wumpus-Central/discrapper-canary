@@ -1,91 +1,73 @@
-r.d(n, {
-    A4: function () {
-        return f;
-    },
-    E9: function () {
-        return c;
-    },
-    Os: function () {
-        return l;
-    },
-    jx: function () {
-        return p;
-    },
-    nv: function () {
-        return s;
-    },
-    sz: function () {
-        return d;
-    },
-    te: function () {
-        return o;
-    },
-    xh: function () {
-        return u;
-    },
-    zG: function () {
-        return h;
-    }
+n.d(t, {
+    A4: () => d,
+    E9: () => u,
+    Os: () => o,
+    jx: () => f,
+    nv: () => s,
+    sz: () => c,
+    te: () => a,
+    xh: () => l,
+    zG: () => _
 });
-var i = r(570140),
-    a = r(145597);
-function o(e, n, r) {
-    let o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : a.Gr;
+var i = n(570140),
+    r = n(145597);
+function a(e, t, n) {
+    let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.Gr;
     i.Z.dispatch({
         type: 'LAYOUT_CREATE',
         layoutId: e,
-        widgets: n,
-        version: r,
-        defaultResolution: o
+        widgets: t,
+        version: n,
+        defaultResolution: a
     });
 }
 function s(e) {
-    let { widgetId: n, anchor: r, size: a, opacity: o } = e;
+    let { widgetId: t, anchor: n, size: r, opacity: a } = e;
     i.Z.dispatch({
         type: 'LAYOUT_UPDATE_WIDGET',
-        widgetId: n,
-        anchor: r,
-        size: a,
-        opacity: o
+        widgetId: t,
+        anchor: n,
+        size: r,
+        opacity: a
     });
 }
-function l(e) {
+function o(e) {
     i.Z.dispatch({
         type: 'LAYOUT_SET_TOP_WIDGET',
         widgetId: e
     });
 }
-function u(e) {
+function l(e) {
     i.Z.dispatch({
         type: 'LAYOUT_SET_PINNED',
         widgetId: e
     });
 }
-function c(e) {
+function u(e) {
     i.Z.dispatch({
         type: 'LAYOUT_DELETE_WIDGET',
         widgetId: e
     });
 }
-function d(e) {
+function c(e) {
     i.Z.dispatch({
         type: 'LAYOUT_DELETE_ALL_WIDGETS',
         layoutId: e
     });
 }
-function f(e) {
-    p([e]);
+function d(e) {
+    f([e]);
 }
-function p(e) {
+function f(e) {
     i.Z.dispatch({
         type: 'LAYOUT_CREATE_WIDGETS',
         widgetConfigs: e
     });
 }
-function h(e, n) {
+function _(e, t) {
     i.Z.dispatch({
         type: 'LAYOUT_SET_WIDGET_META',
         widgetId: e,
-        meta: n
+        meta: t
     });
 }

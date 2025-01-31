@@ -1,16 +1,12 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(302463),
-    a = r(981631);
-class o {
+n.d(t, { Z: () => a });
+var i = n(302463),
+    r = n(981631);
+class a {
     getCreateAttachmentURL(e) {
-        return a.ANM.GUILD_PRODUCT_CREATE_ATTACHMENT_UPLOAD(e);
+        return r.ANM.GUILD_PRODUCT_CREATE_ATTACHMENT_UPLOAD(e);
     }
     getDeleteUploadURL(e) {
-        return a.ANM.MESSAGE_DELETE_UPLOAD(e);
+        return r.ANM.MESSAGE_DELETE_UPLOAD(e);
     }
     getMaxFileSize(e) {
         return i.ve;

@@ -1,20 +1,16 @@
-n.d(e, {
-    aF: function () {
-        return s;
-    },
-    s3: function () {
-        return o;
-    }
+s.d(e, {
+    aF: () => r,
+    s3: () => o
 });
-var r = n(833873),
-    i = n(356442);
-function s() {
+var n = s(833873),
+    i = s(356442);
+function r() {
     let t = (0, i.c)();
-    return (0, r.G)(t).getIsolationScope();
+    return (0, n.G)(t).getIsolationScope();
 }
 function o() {
     return (function () {
         let t = (0, i.c)();
-        return (0, r.G)(t).getCurrentScope();
+        return (0, n.G)(t).getCurrentScope();
     })().getClient();
 }

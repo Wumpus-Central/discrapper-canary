@@ -1,1 +1,2 @@
-e.exports = { spinner: 'spinner_b0f29a' };
+var i = { spinner: 'spinner_ca0af2' };
+e.exports = i;

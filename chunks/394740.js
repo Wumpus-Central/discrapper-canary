@@ -1,113 +1,108 @@
-r.d(n, {
-    Z: function () {
-        return C;
-    }
-});
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(120356),
-    l = r.n(s),
-    u = r(780384),
-    c = r(481060),
-    d = r(2052),
-    f = r(410030),
-    p = r(100527),
-    h = r(906732),
-    _ = r(98278),
-    m = r(197115),
-    g = r(626135),
-    E = r(74538),
-    v = r(706667),
-    y = r(409673),
-    b = r(981631),
-    I = r(474936),
-    T = r(388032),
-    S = r(944634),
-    A = r(940675);
-function C(e) {
-    var n;
-    let { onClose: i, closePopout: s, sound: C, channel: N } = e,
-        R = (0, f.ZP)(),
-        [O, D] = o.useState(!1),
-        { location: L } = (0, d.O)(),
-        x = o.useMemo(
+n.d(t, { Z: () => S }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(780384),
+    l = n(481060),
+    u = n(2052),
+    c = n(410030),
+    d = n(100527),
+    f = n(906732),
+    _ = n(98278),
+    p = n(197115),
+    h = n(626135),
+    m = n(74538),
+    g = n(706667),
+    E = n(409673),
+    v = n(981631),
+    y = n(474936),
+    I = n(388032),
+    b = n(944634),
+    T = n(940675);
+function S(e) {
+    var t;
+    let { onClose: a, closePopout: S, sound: A, channel: N } = e,
+        C = (0, c.ZP)(),
+        [R, O] = r.useState(!1),
+        { location: D } = (0, u.O)(),
+        x = r.useMemo(
             () => ({
-                ...L,
-                section: b.jXE.SOUNDBOARD_SOUND_PICKER
+                ...D,
+                section: v.jXE.SOUNDBOARD_SOUND_PICKER
             }),
-            [L]
+            [D]
         ),
-        { analyticsLocations: w } = (0, h.ZP)(p.Z.PREMIUM_UPSELL),
-        { previewSound: P } = (0, v.Z)(C, null !== (n = null == N ? void 0 : N.id) && void 0 !== n ? n : null),
-        M = (0, y.K_)({
-            sound: C,
+        { analyticsLocations: L } = (0, f.ZP)(d.Z.PREMIUM_UPSELL),
+        { previewSound: P } = (0, g.Z)(A, null !== (t = null == N ? void 0 : N.id) && void 0 !== t ? t : null),
+        w = (0, E.K_)({
+            sound: A,
             previewSound: P,
             tooltipPosition: 'left'
         }),
-        k = (0, u.ap)(R) ? r(537381) : r(341048);
-    o.useEffect(() => {
-        g.default.track(b.rMx.PREMIUM_UPSELL_VIEWED, {
-            type: I.cd.SOUND_PICKER_SOUND_CLICKED,
+        M = (0, o.ap)(C) ? n(537381) : n(341048);
+    r.useEffect(() => {
+        h.default.track(v.rMx.PREMIUM_UPSELL_VIEWED, {
+            type: y.cd.SOUND_PICKER_SOUND_CLICKED,
             is_external: !0,
             location: {
                 ...x,
-                object: b.qAy.SOUNDBOARD_SOUND
+                object: v.qAy.SOUNDBOARD_SOUND
             },
-            location_stack: w,
-            sku_id: E.ZP.getSkuIdForPremiumType(I.p9.TIER_2)
+            location_stack: L,
+            sku_id: m.ZP.getSkuIdForPremiumType(y.p9.TIER_2)
         });
-    }, [w, x]);
-    let U = o.useCallback(() => {
-        g.default.track(b.rMx.PREMIUM_PROMOTION_OPENED, { location_section: b.jXE.SOUNDBOARD_SOUND_PICKER_UPSELL }), (0, _.z)(), s();
-    }, [s]);
-    return (0, a.jsxs)('div', {
-        className: l()(A.premiumPromo, S.container),
+    }, [L, x]);
+    let k = r.useCallback(() => {
+        h.default.track(v.rMx.PREMIUM_PROMOTION_OPENED, { location_section: v.jXE.SOUNDBOARD_SOUND_PICKER_UPSELL }), (0, _.z)(), S();
+    }, [S]);
+    return (0, i.jsxs)('div', {
+        className: s()(T.premiumPromo, b.container),
         children: [
-            (0, a.jsx)(c.Clickable, {
-                className: A.premiumPromoClose,
-                onClick: i,
-                children: T.intl.string(T.t.cpT0Cg)
+            (0, i.jsx)(l.P3F, {
+                className: T.premiumPromoClose,
+                onClick: a,
+                children: I.intl.string(I.t.cpT0Cg)
             }),
-            (0, a.jsx)('img', {
+            (0, i.jsx)('img', {
                 'aria-hidden': !0,
                 alt: '',
-                className: l()(A.premiumPromoImage, A.premiumPromoImageSmaller, S.image),
-                src: k
+                className: s()(T.premiumPromoImage, T.premiumPromoImageSmaller, b.image),
+                src: M
             }),
-            (0, a.jsx)(c.Heading, {
+            (0, i.jsx)(l.X6q, {
                 variant: 'heading-lg/normal',
                 color: 'header-primary',
-                className: A.premiumPromoTitle,
-                children: T.intl.string(T.t['/a5qY2'])
+                className: T.premiumPromoTitle,
+                children: I.intl.string(I.t['/a5qY2'])
             }),
-            (0, a.jsx)(c.Text, {
+            (0, i.jsx)(l.Text, {
                 variant: 'text-md/normal',
                 color: 'header-secondary',
-                className: A.premiumPromoDescription,
-                children: T.intl.format(T.t.lcSxhI, { onClick: U })
+                className: T.premiumPromoDescription,
+                children: I.intl.format(I.t.lcSxhI, { onClick: k })
             }),
-            (0, a.jsxs)('div', {
-                className: S.buttonContainer,
+            (0, i.jsxs)('div', {
+                className: b.buttonContainer,
                 children: [
-                    (0, a.jsx)('div', {
-                        className: S.previewButtonContainer,
-                        children: M
+                    (0, i.jsx)('div', {
+                        className: b.previewButtonContainer,
+                        children: w
                     }),
-                    (0, a.jsx)(m.Z, {
-                        subscriptionTier: I.Si.TIER_2,
-                        submitting: O,
+                    (0, i.jsx)(p.Z, {
+                        subscriptionTier: y.Si.TIER_2,
+                        submitting: R,
                         premiumModalAnalyticsLocation: {
-                            section: b.jXE.SOUNDBOARD_SOUND_PICKER,
-                            object: b.qAy.BUTTON_CTA
+                            section: v.jXE.SOUNDBOARD_SOUND_PICKER,
+                            object: v.qAy.BUTTON_CTA
                         },
-                        size: c.Button.Sizes.SMALL,
-                        color: c.Button.Colors.GREEN,
+                        size: l.zxk.Sizes.SMALL,
+                        color: l.zxk.Colors.GREEN,
                         onClick: () => {
-                            D(!0);
+                            O(!0);
                         },
                         onSubscribeModalClose: (e) => {
-                            D(!1), e && i();
+                            O(!1), e && a();
                         }
                     })
                 ]

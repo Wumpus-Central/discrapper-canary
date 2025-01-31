@@ -1,8 +1,4 @@
-n.d(t, {
-    h: function () {
-        return r;
-    }
-});
+n.d(t, { h: () => l });
 let i = (0, n(818083).B)({
     kind: 'user',
     id: '2023-04_consumer_education_launch__reporting',
@@ -22,6 +18,6 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function r() {
+function l() {
     return i.useExperiment({ location: '183c74_1' }, { autoTrackExposure: !0 }).enabled;
 }

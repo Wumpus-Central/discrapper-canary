@@ -1,90 +1,78 @@
-r.d(n, {
-    hB: function () {
-        return v;
-    },
-    lv: function () {
-        return h;
-    },
-    n2: function () {
-        return m;
-    },
-    nX: function () {
-        return E;
-    },
-    rX: function () {
-        return y;
-    },
-    xC: function () {
-        return g;
-    }
-});
-var i = r(47120);
-var a = r(149765),
-    o = r(442837),
-    s = r(430824),
-    l = r(496675),
-    u = r(594174),
-    c = r(700785),
-    d = r(478743),
-    f = r(981631);
-let p = function (e) {
-        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [s.Z, u.default],
-            [r, i] = n,
-            a = r.getGuild(e);
+n.d(t, {
+    hB: () => g,
+    lv: () => f,
+    n2: () => p,
+    nX: () => m,
+    rX: () => E,
+    xC: () => h
+}),
+    n(47120);
+var i = n(149765),
+    r = n(442837),
+    a = n(430824),
+    s = n(496675),
+    o = n(594174),
+    l = n(700785),
+    u = n(478743),
+    c = n(981631);
+let d = function (e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [a.Z, o.default],
+            [n, i] = t,
+            r = n.getGuild(e);
         return {
             user: i.getCurrentUser(),
-            guild: a
+            guild: r
         };
     },
-    h = function (e) {
-        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [s.Z, u.default],
-            r = p(e, n);
+    f = function (e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [a.Z, o.default],
+            n = d(e, t);
         return (
-            null != r &&
-            a.Db(
-                c.uB({
-                    user: r.user,
-                    context: r.guild,
+            null != n &&
+            i.Db(
+                l.uB({
+                    user: n.user,
+                    context: n.guild,
                     checkElevated: !1
                 }),
-                d.N
+                u.N
             )
         );
     },
     _ = function (e) {
-        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [s.Z, u.default],
-            r = p(e, n);
-        return null != r && l.Z.can(f.Plq.MANAGE_GUILD, r.guild) && l.Z.can(f.Plq.BAN_MEMBERS, r.guild);
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [a.Z, o.default],
+            n = d(e, t);
+        return null != n && s.Z.can(c.Plq.MANAGE_GUILD, n.guild) && s.Z.can(c.Plq.BAN_MEMBERS, n.guild);
     };
+function p(e) {
+    return (0, r.e7)([a.Z, o.default], () => f(e, [a.Z, o.default]), [e]);
+}
+function h(e) {
+    let t = p(e),
+        n = (0, r.e7)([a.Z, o.default], () => _(e, [a.Z, o.default]), [e]);
+    return t && n;
+}
 function m(e) {
-    return (0, o.e7)([s.Z, u.default], () => h(e, [s.Z, u.default]), [e]);
-}
-function g(e) {
-    let n = m(e),
-        r = (0, o.e7)([s.Z, u.default], () => _(e, [s.Z, u.default]), [e]);
-    return n && r;
-}
-function E(e) {
-    return (0, o.e7)(
-        [s.Z, l.Z],
+    return (0, r.e7)(
+        [a.Z, s.Z],
         () => {
-            let n = s.Z.getGuild(e);
-            return null != n && l.Z.can(f.Plq.MANAGE_GUILD, n);
+            let t = a.Z.getGuild(e);
+            return null != t && s.Z.can(c.Plq.MANAGE_GUILD, t);
         },
         [e]
     );
 }
-function v(e, n, r) {
-    return (0, o.e7)(
-        [l.Z, s.Z],
+function g(e, t, n) {
+    return (0, r.e7)(
+        [s.Z, a.Z],
         () => {
-            let i = s.Z.getGuild(e);
-            return null != i && n && l.Z.canManageUser(f.Plq.BAN_MEMBERS, r, i);
+            let i = a.Z.getGuild(e);
+            return null != i && t && s.Z.canManageUser(c.Plq.BAN_MEMBERS, n, i);
         },
-        [n, e, r]
+        [t, e, n]
     );
 }
-function y(e, n, r) {
-    let i = s.Z.getGuild(e);
-    return null != i && n && l.Z.canManageUser(f.Plq.BAN_MEMBERS, r, i);
+function E(e, t, n) {
+    let i = a.Z.getGuild(e);
+    return null != i && t && s.Z.canManageUser(c.Plq.BAN_MEMBERS, n, i);
 }

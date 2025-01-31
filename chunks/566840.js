@@ -1,10 +1,6 @@
 n.d(t, {
-    Eg: function () {
-        return s;
-    },
-    XL: function () {
-        return u;
-    }
+    Eg: () => s,
+    XL: () => d
 });
 var i = n(192379);
 if (12633 == n.j) var l = n(232713);
@@ -26,7 +22,7 @@ function c(e) {
         return !1;
     }
 }
-function u(e, t) {
+function d(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         l = i.useRef(null);
     return (

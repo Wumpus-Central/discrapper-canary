@@ -1,61 +1,60 @@
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(442837),
-    l = r(481060),
-    u = r(384275),
-    c = r(317381),
-    d = r(513202),
-    f = r(367907),
-    p = r(138201),
-    h = r(881998),
-    _ = r(585483),
-    m = r(981631),
-    g = r(388032);
-let E = (e) => {
-    let { application: n, reportId: r } = e,
-        [i, E] = o.useState(!1),
-        v = (0, s.e7)([h.Z], () => {
-            let e = h.Z.getApps();
-            return null != e ? e.find((e) => e.application.id === n.id) : null;
+n.d(t, { Z: () => m }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(442837),
+    s = n(481060),
+    o = n(384275),
+    l = n(317381),
+    u = n(513202),
+    c = n(367907),
+    d = n(138201),
+    f = n(881998),
+    _ = n(585483),
+    p = n(981631),
+    h = n(388032);
+let m = (e) => {
+    let { application: t, reportId: n } = e,
+        [m, g] = r.useState(!1),
+        E = (0, a.e7)([f.Z], () => {
+            let e = f.Z.getApps();
+            return null != e ? e.find((e) => e.application.id === t.id) : null;
         });
-    o.useEffect(() => {
-        null != v && E(!0);
-    }, [v]);
-    let y = o.useRef(!1);
-    o.useEffect(() => {
-        !y.current && (u.Z.fetch(), (y.current = !0));
+    r.useEffect(() => {
+        null != E && g(!0);
+    }, [E]);
+    let v = r.useRef(!1);
+    r.useEffect(() => {
+        v.current || (o.Z.fetch(), (v.current = !0));
     }, []);
-    let b = (0, s.e7)([c.ZP], () => c.ZP.getSelfEmbeddedActivities()),
-        I = o.useCallback(() => {
+    let y = (0, a.e7)([l.ZP], () => l.ZP.getSelfEmbeddedActivities()),
+        I = r.useCallback(() => {
             if (
-                (E(!1),
-                f.ZP.trackWithMetadata(m.rMx.IAR_DEAUTHORIZE_APP_BUTTON_CLICKED, {
-                    application_id: n.id,
-                    report_id: r
+                (g(!1),
+                c.ZP.trackWithMetadata(p.rMx.IAR_DEAUTHORIZE_APP_BUTTON_CLICKED, {
+                    application_id: t.id,
+                    report_id: n
                 }),
-                null == v)
+                null == E)
             )
                 return;
-            u.Z.delete(v.id), _.S.safeDispatch(m.CkL.HIDE_APP_LAUNCHER_BUTTON_APP_INSTALLED_EDUCATION, { applicationId: n.id });
-            let e = b.get(n.id);
+            o.Z.delete(E.id), _.S.safeDispatch(p.CkL.HIDE_APP_LAUNCHER_BUTTON_APP_INSTALLED_EDUCATION, { applicationId: t.id });
+            let e = y.get(t.id);
             null != e &&
-                d.Z.leaveActivity({
+                u.Z.leaveActivity({
                     location: e.location,
-                    applicationId: n.id,
+                    applicationId: t.id,
                     showFeedback: !1
                 });
-        }, [n.id, v, b, r]);
-    return null == n
+        }, [t.id, E, y, n]);
+    return null == t
         ? null
-        : (0, a.jsx)(p.ZP, {
-              title: g.intl.string(g.t.ygG62N),
-              description: g.intl.string(g.t.S51EKi),
-              buttonText: i ? g.intl.string(g.t.xXpoGR) : g.intl.string(g.t.JsiUnJ),
-              buttonDisabled: !i,
-              buttonColor: i ? l.Button.Colors.RED : l.Button.Colors.WHITE,
-              buttonLook: i ? l.Button.Looks.FILLED : l.Button.Looks.LINK,
+        : (0, i.jsx)(d.ZP, {
+              title: h.intl.string(h.t.ygG62N),
+              description: h.intl.string(h.t.S51EKi),
+              buttonText: m ? h.intl.string(h.t.xXpoGR) : h.intl.string(h.t.JsiUnJ),
+              buttonDisabled: !m,
+              buttonColor: m ? s.zxk.Colors.RED : s.zxk.Colors.WHITE,
+              buttonLook: m ? s.zxk.Looks.FILLED : s.zxk.Looks.LINK,
               onButtonPress: I
           });
 };
-n.Z = E;

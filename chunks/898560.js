@@ -1,6 +1,2 @@
-r.d(n, {
-    r: function () {
-        return i;
-    }
-});
-let i = r(192379).createContext(void 0);
+n.d(t, { r: () => i });
+let i = n(192379).createContext(void 0);

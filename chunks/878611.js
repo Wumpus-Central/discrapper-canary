@@ -1,48 +1,49 @@
-var i = r(200651);
-r(192379);
-var a = r(239091),
-    o = r(644956),
-    s = r(819366),
-    l = r(592125);
-n.Z = {
-    handleUserContextMenu(e, n, o, s) {
-        let u = l.Z.getChannel(n);
-        null != u &&
-            (0, a.jW)(s, async () => {
-                let { default: n } = await Promise.all([r.e('50506'), r.e('79695'), r.e('51269'), r.e('13351'), r.e('33862'), r.e('31996'), r.e('13125'), r.e('54492')]).then(r.bind(r, 757387));
-                return (r) =>
-                    (0, i.jsx)(n, {
-                        ...r,
+n.d(t, { Z: () => l });
+var i = n(200651);
+n(192379);
+var r = n(239091),
+    a = n(644956),
+    s = n(819366),
+    o = n(592125);
+let l = {
+    handleUserContextMenu(e, t, a, s) {
+        let l = o.Z.getChannel(t);
+        null != l &&
+            (0, r.jW)(s, async () => {
+                let { default: t } = await Promise.all([n.e('50506'), n.e('79695'), n.e('51269'), n.e('13351'), n.e('33862'), n.e('98783'), n.e('13125'), n.e('61389')]).then(n.bind(n, 757387));
+                return (n) =>
+                    (0, i.jsx)(t, {
+                        ...n,
                         user: e,
-                        channel: u,
-                        guildId: o
+                        channel: l,
+                        guildId: a
                     });
             });
     },
-    react(e, n, r) {
-        let { userId: a, channelId: l, parsedUserId: u, roleId: c, roleName: d, viewingChannelId: f } = e;
-        return null == a && (null != c || '@everyone' === d || '@here' === d)
+    react(e, t, n) {
+        let { userId: r, channelId: o, parsedUserId: l, roleId: u, roleName: c, viewingChannelId: d } = e;
+        return null == r && (null != u || '@everyone' === c || '@here' === c)
             ? (0, i.jsx)(
-                  o.Z,
+                  a.Z,
                   {
-                      inlinePreview: r.formatInline,
+                      inlinePreview: n.formatInline,
                       ...e,
-                      children: n(e.content, r)
+                      children: t(e.content, n)
                   },
-                  r.key
+                  n.key
               )
             : (0, i.jsx)(
                   s.Z,
                   {
                       className: 'mention',
-                      userId: a,
-                      channelId: l,
-                      viewingChannelId: f,
-                      parsedUserId: u,
-                      content: n(e.content, r),
-                      inlinePreview: r.noStyleAndInteraction
+                      userId: r,
+                      channelId: o,
+                      viewingChannelId: d,
+                      parsedUserId: l,
+                      content: t(e.content, n),
+                      inlinePreview: n.noStyleAndInteraction
                   },
-                  r.key
+                  n.key
               );
     }
 };

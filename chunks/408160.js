@@ -1,46 +1,40 @@
-r.r(n),
-    r.d(n, {
-        announce: function () {
-            return o;
-        },
-        clearAnnouncer: function () {
-            return s;
-        },
-        destroyAnnouncer: function () {
-            return l;
-        }
+n.r(t),
+    n.d(t, {
+        announce: () => a,
+        clearAnnouncer: () => s,
+        destroyAnnouncer: () => o
     });
 let i = 7000,
-    a = null;
-function o(e, n = 'assertive', r = i) {
-    !a && (a = new u()), a.announce(e, n, r);
+    r = null;
+function a(e, t = 'assertive', n = i) {
+    r || (r = new l()), r.announce(e, t, n);
 }
 function s(e) {
-    a && a.clear(e);
+    r && r.clear(e);
 }
-function l() {
-    a && (a.destroy(), (a = null));
+function o() {
+    r && (r.destroy(), (r = null));
 }
-class u {
+class l {
     createLog(e) {
-        let n = document.createElement('div');
-        return n.setAttribute('role', 'log'), n.setAttribute('aria-live', e), n.setAttribute('aria-relevant', 'additions'), n;
+        let t = document.createElement('div');
+        return t.setAttribute('role', 'log'), t.setAttribute('aria-live', e), t.setAttribute('aria-relevant', 'additions'), t;
     }
     destroy() {
         this.node && (document.body.removeChild(this.node), (this.node = null));
     }
-    announce(e, n = 'assertive', r = i) {
+    announce(e, t = 'assertive', n = i) {
         if (!this.node) return;
-        let a = document.createElement('div');
-        (a.textContent = e),
-            'assertive' === n ? this.assertiveLog.appendChild(a) : this.politeLog.appendChild(a),
+        let r = document.createElement('div');
+        (r.textContent = e),
+            'assertive' === t ? this.assertiveLog.appendChild(r) : this.politeLog.appendChild(r),
             '' !== e &&
                 setTimeout(() => {
-                    a.remove();
-                }, r);
+                    r.remove();
+                }, n);
     }
     clear(e) {
-        this.node && ((!e || 'assertive' === e) && (this.assertiveLog.innerHTML = ''), (!e || 'polite' === e) && (this.politeLog.innerHTML = ''));
+        this.node && ((e && 'assertive' !== e) || (this.assertiveLog.innerHTML = ''), (e && 'polite' !== e) || (this.politeLog.innerHTML = ''));
     }
     constructor() {
         (this.node = document.createElement('div')),

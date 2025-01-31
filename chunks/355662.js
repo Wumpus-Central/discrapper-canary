@@ -1,7 +1,8 @@
-e.exports = {
-    botPermissions: 'botPermissions_a06cfc',
-    permissionsList: 'permissionsList_a06cfc',
-    permission: 'permission_a06cfc',
-    disabledPermissionIcon: 'disabledPermissionIcon_a06cfc',
-    icon: 'icon_a06cfc'
+var i = {
+    botPermissions: 'botPermissions__41924',
+    permissionsList: 'permissionsList__41924',
+    permission: 'permission__41924',
+    disabledPermissionIcon: 'disabledPermissionIcon__41924',
+    icon: 'icon__41924'
 };
+e.exports = i;

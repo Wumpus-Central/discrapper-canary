@@ -1,180 +1,154 @@
-r.d(n, {
-    CM: function () {
-        return b;
-    },
-    Cf: function () {
-        return v;
-    },
-    ID: function () {
-        return y;
-    },
-    Xz: function () {
-        return S;
-    },
-    Z: function () {
-        return _;
-    },
-    c_: function () {
-        return T;
-    },
-    f4: function () {
-        return A;
-    },
-    g_: function () {
-        return E;
-    },
-    ho: function () {
-        return g;
-    },
-    pG: function () {
-        return m;
-    },
-    rf: function () {
-        return C;
-    },
-    x3: function () {
-        return N;
-    },
-    z5: function () {
-        return I;
-    }
+n.d(t, {
+    CM: () => y,
+    Cf: () => E,
+    ID: () => v,
+    Xz: () => T,
+    Z: () => p,
+    c_: () => b,
+    f4: () => S,
+    g_: () => g,
+    ho: () => m,
+    pG: () => h,
+    rf: () => A,
+    x3: () => N,
+    z5: () => I
 });
-var i = r(544891),
-    a = r(570140),
-    o = r(881052),
-    s = r(957730),
-    l = r(695346),
-    u = r(594174),
-    c = r(626135),
-    d = r(956664),
-    f = r(981631),
-    p = r(474936);
-function h(e) {
-    c.default.track(f.rMx.PREMIUM_FEATURE_TRY_OUT, {
+var i = n(544891),
+    r = n(570140),
+    a = n(881052),
+    s = n(957730),
+    o = n(695346),
+    l = n(594174),
+    u = n(626135),
+    c = n(956664),
+    d = n(981631),
+    f = n(474936);
+function _(e) {
+    u.default.track(d.rMx.PREMIUM_FEATURE_TRY_OUT, {
         feature_name: e,
-        feature_tier: p.h1.PREMIUM_STANDARD
+        feature_tier: f.h1.PREMIUM_STANDARD
     });
 }
-async function _(e, n) {
-    var r, c, d;
-    let p = null === (r = u.default.getCurrentUser()) || void 0 === r ? void 0 : r.id;
-    if (null == p) return;
-    let h = l.dN.getSetting();
-    null != e.bio && h && (e.bio = s.ZP.parse(void 0, e.bio).content);
+async function p(e, t) {
+    var n, u, c;
+    let f = null === (n = l.default.getCurrentUser()) || void 0 === n ? void 0 : n.id;
+    if (null == f) return;
+    let _ = o.dN.getSetting();
+    null != e.bio && _ && (e.bio = s.ZP.parse(void 0, e.bio).content);
     try {
-        a.Z.dispatch({
+        r.Z.dispatch({
             type: 'USER_PROFILE_UPDATE_START',
-            userId: p
+            userId: f
         });
-        let r = await i.tn.patch({
-            url: null != n ? f.ANM.USER_GUILD_PROFILE(n, f.ME) : f.ANM.USER_PROFILE(f.ME),
+        let n = await i.tn.patch({
+            url: null != t ? d.ANM.USER_GUILD_PROFILE(t, d.ME) : d.ANM.USER_PROFILE(d.ME),
             body: e,
             rejectWithError: !1
         });
-        if (r.ok) {
-            let e = null === (c = r.body.profile_effect) || void 0 === c ? void 0 : c.id,
-                n = null === (d = r.body.profile_effect) || void 0 === d ? void 0 : d.expires_at;
-            a.Z.dispatch({
+        if (n.ok) {
+            let e = null === (u = n.body.profile_effect) || void 0 === u ? void 0 : u.id,
+                t = null === (c = n.body.profile_effect) || void 0 === c ? void 0 : c.expires_at;
+            r.Z.dispatch({
                 type: 'USER_PROFILE_UPDATE_SUCCESS',
-                userId: p,
+                userId: f,
                 profileEffectId: e,
-                profileEffectExpiresAt: n,
-                ...r.body
+                profileEffectExpiresAt: t,
+                ...n.body
             });
         } else {
-            let e = new o.Hx(r);
-            a.Z.dispatch({
+            let e = new a.Hx(n);
+            r.Z.dispatch({
                 type: 'USER_PROFILE_UPDATE_FAILURE',
-                errors: r.body,
+                errors: n.body,
                 apiError: e
             });
         }
-        return r;
-    } catch (n) {
-        let e = new o.Hx(n);
+        return n;
+    } catch (t) {
+        let e = new a.Hx(t);
         return (
-            a.Z.dispatch({
+            r.Z.dispatch({
                 type: 'USER_PROFILE_UPDATE_FAILURE',
                 errors: {},
                 apiError: e
             }),
-            n
+            t
         );
     }
 }
-function m() {
-    a.Z.dispatch({ type: 'USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES' });
+function h() {
+    r.Z.dispatch({ type: 'USER_SETTINGS_RESET_PENDING_PROFILE_CHANGES' });
 }
-function g(e) {
+function m(e) {
     (null == e ? void 0 : e.startsWith('https:')) === !0
         ? fetch(e)
               .then((e) => e.blob())
-              .then((e) => (0, d.fD)(e))
-              .then((e) => E(e))
-        : null != e && E(e);
+              .then((e) => (0, c.fD)(e))
+              .then((e) => g(e))
+        : null != e && g(e);
 }
-function E(e) {
-    a.Z.dispatch({
+function g(e) {
+    r.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_BANNER',
         banner: e
     });
 }
-function v(e) {
-    a.Z.dispatch({
+function E(e) {
+    r.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_BIO',
         bio: e
     });
 }
-function y(e) {
-    a.Z.dispatch({
+function v(e) {
+    r.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS',
         pronouns: e
     });
 }
-function b(e) {
-    a.Z.dispatch({
+function y(e) {
+    r.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_ACCENT_COLOR',
         color: e
     });
 }
 function I(e) {
-    a.Z.dispatch({
+    r.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_THEME_COLORS',
         themeColors: e
     });
 }
-function T(e) {
-    a.Z.dispatch({
+function b(e) {
+    r.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR',
         avatar: e
     }),
-        h(p.QP.ANIMATED_AVATAR);
+        _(f.QP.ANIMATED_AVATAR);
 }
-function S(e) {
-    a.Z.dispatch({
+function T(e) {
+    r.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_AVATAR_DECORATION',
         avatarDecoration: e
     }),
-        h(p.QP.AVATAR_DECORATION);
+        _(f.QP.AVATAR_DECORATION);
 }
-function A(e) {
-    a.Z.dispatch({
+function S(e) {
+    r.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_BANNER',
         banner: e
     }),
-        h(p.QP.PROFILE_BANNER);
+        _(f.QP.PROFILE_BANNER);
 }
-function C(e) {
-    a.Z.dispatch({
+function A(e) {
+    r.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_THEME_COLORS',
         themeColors: e
     }),
-        h(p.QP.PROFILE_THEME_COLOR);
+        _(f.QP.PROFILE_THEME_COLOR);
 }
 function N(e) {
-    a.Z.dispatch({
+    r.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET',
         preset: e
     }),
-        h(p.QP.PRESET);
+        _(f.QP.PRESET);
 }

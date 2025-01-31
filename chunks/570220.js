@@ -1,12 +1,11 @@
-r.d(n, {
-    f6: function () {
-        return u;
-    }
-});
-var i = r(411104);
-var a = r(192379),
-    o = r(836560);
-class s extends o.EventEmitter {
+n.d(t, {
+    ZP: () => u,
+    f6: () => o
+}),
+    n(411104);
+var i = n(192379),
+    r = n(836560);
+class a extends r.EventEmitter {
     on() {
         return this;
     }
@@ -23,6 +22,6 @@ class s extends o.EventEmitter {
         return !1;
     }
 }
-let l = a.createContext(new s()),
-    { Provider: u, Consumer: c } = l;
-n.ZP = l;
+let s = i.createContext(new a()),
+    { Provider: o, Consumer: l } = s,
+    u = s;

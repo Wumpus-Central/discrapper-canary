@@ -1,17 +1,13 @@
-n.d(t, {
-    z: function () {
-        return l;
-    }
-});
+n.d(t, { z: () => r });
 var i = n(481060),
-    r = n(531826);
-function l(e) {
+    l = n(531826);
+function r(e) {
     let { application: t, channelId: n } = e;
     return null !=
-        (0, r.ZP)({
+        (0, l.ZP)({
             application: t,
             channelId: n
         })
-        ? i.POPOUT_MODAL_CONTEXT
-        : i.DEFAULT_MODAL_CONTEXT;
+        ? i.u1M
+        : i.z1l;
 }

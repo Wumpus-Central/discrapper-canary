@@ -1,34 +1,33 @@
+n.d(t, { Z: () => p });
 var r,
     i,
-    l,
-    a,
-    u = n(200651),
-    o = n(192379),
-    s = n(120356),
-    c = n.n(s),
-    d = n(481060),
-    f = n(388032),
-    p = n(323822);
-let h = {
-    BLOCK: p.block,
-    INLINE: p.inline
+    l = n(200651),
+    a = n(192379),
+    o = n(120356),
+    u = n.n(o),
+    s = n(481060),
+    c = n(388032),
+    d = n(323822);
+let f = {
+    BLOCK: d.block,
+    INLINE: d.inline
 };
-class _ extends (a = o.PureComponent) {
+class _ extends (i = a.PureComponent) {
     render() {
-        let { children: e, className: t, textClassName: n, type: r = h.BLOCK, style: i } = this.props;
-        return (0, u.jsxs)('div', {
-            className: c()(t, r),
+        let { children: e, className: t, textClassName: n, type: r = f.BLOCK, style: i } = this.props;
+        return (0, l.jsxs)('div', {
+            className: u()(t, r),
             style: i,
             children: [
-                (0, u.jsxs)(d.Text, {
+                (0, l.jsxs)(s.Text, {
                     variant: 'text-sm/bold',
                     tag: 'div',
                     color: 'text-positive',
-                    className: p.pro,
-                    children: [f.intl.string(f.t['8tvIiI']), ':']
+                    className: d.pro,
+                    children: [c.intl.string(c.t['8tvIiI']), ':']
                 }),
-                (0, u.jsx)(d.Text, {
-                    className: c()(p.tip, n),
+                (0, l.jsx)(s.Text, {
+                    className: u()(d.tip, n),
                     variant: 'text-sm/normal',
                     children: e
                 })
@@ -36,15 +35,12 @@ class _ extends (a = o.PureComponent) {
         });
     }
 }
-(r = _),
-    (i = 'Types'),
-    (l = h),
-    i in r
-        ? Object.defineProperty(r, i, {
-              value: l,
-              enumerable: !0,
-              configurable: !0,
-              writable: !0
-          })
-        : (r[i] = l),
-    (t.Z = _);
+(r = 'Types') in _
+    ? Object.defineProperty(_, r, {
+          value: f,
+          enumerable: !0,
+          configurable: !0,
+          writable: !0
+      })
+    : (_[r] = f);
+let p = _;

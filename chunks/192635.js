@@ -1,38 +1,34 @@
-s.d(t, {
-    Z: function () {
-        return l;
-    }
-});
+s.d(t, { Z: () => c });
 var n = s(200651);
 s(192379);
 var i = s(120356),
     r = s.n(i),
-    o = s(776394),
-    c = s(742795),
-    a = s(200289);
-function l(e) {
+    a = s(776394),
+    o = s(742795),
+    l = s(200289);
+function c(e) {
     let { Icon: t, className: s } = e;
     return (0, n.jsx)('div', {
-        className: r()(o.container, s),
+        className: r()(a.container, s),
         children: (0, n.jsxs)('div', {
-            className: o.innerContainer,
+            className: a.innerContainer,
             children: [
                 (0, n.jsx)('img', {
-                    src: a,
+                    src: l,
                     alt: '',
-                    className: o.star
+                    className: a.star
                 }),
                 (0, n.jsx)('div', {
-                    className: o.iconWrapper,
+                    className: a.iconWrapper,
                     children: (0, n.jsx)(t, {
                         width: 40,
                         height: 40
                     })
                 }),
                 (0, n.jsx)('img', {
-                    src: c,
+                    src: o,
                     alt: '',
-                    className: o.sparkle
+                    className: a.sparkle
                 })
             ]
         })

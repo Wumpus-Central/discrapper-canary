@@ -1,9 +1,10 @@
-e.exports = {
-    tooltipBodyContainer: 'tooltipBodyContainer_d56d78',
-    tooltipPremiumFooterContainer: 'tooltipPremiumFooterContainer_d56d78',
-    tooltipRemovePadding: 'tooltipRemovePadding_d56d78',
-    gemIcon: 'gemIcon_d56d78',
-    tooltipPremiumFooterSegment: 'tooltipPremiumFooterSegment_d56d78',
-    tooltipPremiumFooterTierSegment: 'tooltipPremiumFooterTierSegment_d56d78',
-    clanBadgeContainer: 'clanBadgeContainer_d56d78'
+var i = {
+    tooltipBodyContainer: 'tooltipBodyContainer__7d7fe',
+    tooltipPremiumFooterContainer: 'tooltipPremiumFooterContainer__7d7fe',
+    tooltipRemovePadding: 'tooltipRemovePadding__7d7fe',
+    gemIcon: 'gemIcon__7d7fe',
+    tooltipPremiumFooterSegment: 'tooltipPremiumFooterSegment__7d7fe',
+    tooltipPremiumFooterTierSegment: 'tooltipPremiumFooterTierSegment__7d7fe',
+    clanBadgeContainer: 'clanBadgeContainer__7d7fe'
 };
+e.exports = i;

@@ -1,1 +1,1 @@
-e.exports = r(836560).EventEmitter;
+e.exports = n(836560).EventEmitter;

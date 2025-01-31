@@ -1,92 +1,86 @@
-e.r(n),
-    e.d(n, {
-        default: function () {
-            return c;
-        }
-    }),
-    e(47120);
-var i = e(200651),
-    l = e(192379),
-    o = e(481060),
-    s = e(194359),
-    r = e(313201),
-    a = e(51144),
-    d = e(388032),
-    u = e(154210);
-function c(t) {
-    let { user: n, nickname: e, transitionState: c, onClose: p } = t,
-        h = (0, r.Dt)(),
-        [x, f] = l.useState(!1),
-        [g, m] = l.useState(e),
-        j = l.useRef(null),
-        k = async (t) => {
-            t.preventDefault(), f(!0);
+i.d(e, { default: () => u }), i(47120);
+var n = i(200651),
+    s = i(192379),
+    l = i(481060),
+    r = i(194359),
+    a = i(313201),
+    o = i(51144),
+    c = i(388032),
+    d = i(154210);
+function u(t) {
+    let { user: e, nickname: i, transitionState: u, onClose: x } = t,
+        h = (0, a.Dt)(),
+        [p, k] = s.useState(!1),
+        [g, z] = s.useState(i),
+        j = s.useRef(null),
+        m = async (t) => {
+            t.preventDefault(), k(!0);
             try {
-                await s.Z.updateRelationship(n.id, g), p();
+                await r.Z.updateRelationship(e.id, g), x();
             } catch (t) {
             } finally {
-                f(!1);
+                k(!1);
             }
         },
-        B = null == e ? d.intl.string(d.t.BGYkaG) : d.intl.string(d.t['8pOYUF']);
-    return (0, i.jsx)(o.ModalRoot, {
-        transitionState: c,
-        size: o.ModalSize.SMALL,
+        f = null == i ? c.intl.string(c.t.BGYkaG) : c.intl.string(c.t['8pOYUF']);
+    return (0, n.jsx)(l.Y0X, {
+        transitionState: u,
+        size: l.CgR.SMALL,
         'aria-labelledby': h,
-        children: (0, i.jsxs)('form', {
-            onSubmit: k,
+        children: (0, n.jsxs)('form', {
+            onSubmit: m,
             children: [
-                (0, i.jsx)(o.ModalHeader, {
+                (0, n.jsx)(l.xBx, {
                     separator: !1,
-                    children: (0, i.jsx)(o.Heading, {
+                    children: (0, n.jsx)(l.X6q, {
                         variant: 'heading-lg/semibold',
-                        children: B
+                        children: f
                     })
                 }),
-                (0, i.jsxs)(o.ModalContent, {
+                (0, n.jsxs)(l.hzk, {
                     children: [
-                        (0, i.jsx)(o.Text, {
+                        (0, n.jsx)(l.Text, {
                             variant: 'text-md/normal',
-                            className: u.description,
-                            children: d.intl.string(d.t['NdQ+lJ'])
+                            className: d.description,
+                            children: c.intl.string(c.t['NdQ+lJ'])
                         }),
-                        (0, i.jsx)(o.FormItem, {
-                            title: d.intl.string(d.t.pqG6GR),
-                            children: (0, i.jsx)(o.TextInput, {
+                        (0, n.jsx)(l.xJW, {
+                            title: c.intl.string(c.t.pqG6GR),
+                            children: (0, n.jsx)(l.oil, {
                                 inputRef: j,
                                 value: null != g ? g : '',
-                                placeholder: a.ZP.getName(n),
-                                onChange: m,
+                                placeholder: o.ZP.getName(e),
+                                onChange: z,
                                 maxLength: 32,
-                                className: u.input,
+                                className: d.input,
                                 autoFocus: !0
                             })
                         }),
-                        (0, i.jsx)(o.Button, {
-                            look: o.Button.Looks.LINK,
-                            color: o.Button.Colors.LINK,
-                            size: o.Button.Sizes.NONE,
+                        (0, n.jsx)(l.zxk, {
+                            look: l.zxk.Looks.LINK,
+                            color: l.zxk.Colors.LINK,
+                            size: l.zxk.Sizes.NONE,
                             onClick: () => {
                                 var t;
-                                m(null), null === (t = j.current) || void 0 === t || t.focus();
+                                z(null), null === (t = j.current) || void 0 === t || t.focus();
                             },
-                            className: u.reset,
-                            children: d.intl.string(d.t['9qSBvL'])
+                            className: d.reset,
+                            children: c.intl.string(c.t['9qSBvL'])
                         })
                     ]
                 }),
-                (0, i.jsxs)(o.ModalFooter, {
+                (0, n.jsxs)(l.mzw, {
                     children: [
-                        (0, i.jsx)(o.Button, {
+                        (0, n.jsx)(l.zxk, {
                             type: 'submit',
-                            disabled: x,
-                            children: d.intl.string(d.t.R3BPHx)
+                            disabled: p,
+                            children: c.intl.string(c.t.R3BPHx)
                         }),
-                        (0, i.jsx)(o.Button, {
-                            onClick: p,
-                            look: o.Button.Looks.LINK,
-                            color: o.Button.Colors.PRIMARY,
-                            children: d.intl.string(d.t['ETE/oK'])
+                        (0, n.jsx)(l.zxk, {
+                            onClick: x,
+                            look: l.zxk.Looks.LINK,
+                            color: l.zxk.Colors.PRIMARY,
+                            children: c.intl.string(c.t['ETE/oK'])
                         })
                     ]
                 })

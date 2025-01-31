@@ -1,20 +1,16 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(331595);
-function o(e) {
-    let { width: n = 12, height: r = 12, color: o = 'currentColor', foreground: s, ...l } = e;
+n.d(t, { Z: () => a });
+var i = n(200651);
+n(192379);
+var r = n(325767);
+function a(e) {
+    let { width: t = 12, height: n = 12, color: a = 'currentColor', foreground: s, ...o } = e;
     return (0, i.jsx)('svg', {
-        ...(0, a.Z)(l),
-        width: n,
-        height: r,
+        ...(0, r.Z)(o),
+        width: t,
+        height: n,
         viewBox: '0 0 12 12',
         children: (0, i.jsx)('polygon', {
-            fill: o,
+            fill: a,
             className: s,
             fillRule: 'evenodd',
             points: '11 1.576 6.583 6 11 10.424 10.424 11 6 6.583 1.576 11 1 10.424 5.417 6 1 1.576 1.576 1 6 5.417 10.424 1'

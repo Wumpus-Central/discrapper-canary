@@ -1,48 +1,35 @@
-r.d(n, {
-    CO: function () {
-        return u;
-    },
-    NU: function () {
-        return I;
-    },
-    X2: function () {
-        return T;
-    },
-    cb: function () {
-        return b;
-    },
-    d$: function () {
-        return f;
-    },
-    tw: function () {
-        return c;
-    }
-});
-var i = r(47120);
-var a = r(358085);
-let o = (e, n) => {
+n.d(t, {
+    CO: () => o,
+    NU: () => v,
+    X2: () => y,
+    cb: () => E,
+    d$: () => c,
+    tw: () => l
+}),
+    n(47120);
+var i = n(358085);
+let r = (e, t) => {
         if (null == e) return !1;
-        let [r, i] = e.split(/\?/, 1);
-        return n.test(r);
+        let [n, i] = e.split(/\?/, 1);
+        return t.test(n);
     },
-    s = (e, n) => {
+    a = (e, t) => {
         if (null == e) return !1;
-        let [r, i] = e.split('/');
-        return r === n;
+        let [n, i] = e.split('/');
+        return n === t;
     },
-    l = /\.(png|jpe?g|webp|gif|heic|heif|dng|avif)$/i,
-    u = (e) => null != e && l.test(e),
-    c = (e) => s(e, 'image'),
-    d = /\.(webp|gif|avif)$/i,
-    f = (e) => o(e, d),
-    p = /\.(mp3|m4a|wav|aif|aiff|ogg|opus|flac)$/i,
-    h = /\.(mp3|m4a|wav|ogg|opus|flac)$/i,
+    s = /\.(png|jpe?g|webp|gif|heic|heif|dng|avif)$/i,
+    o = (e) => null != e && s.test(e),
+    l = (e) => a(e, 'image'),
+    u = /\.(webp|gif|avif)$/i,
+    c = (e) => r(e, u),
+    d = /\.(mp3|m4a|wav|aif|aiff|ogg|opus|flac)$/i,
+    f = /\.(mp3|m4a|wav|ogg|opus|flac)$/i,
     _ = /\.(mp3|m4a|wav|aif|aiff|ogg|opus|flac)$/i,
-    m = (0, a.isIOS)() ? p : (0, a.isAndroid)() ? h : _,
-    g = /\.(mp4|mov)$/i,
-    E = /\.(mp4|webm|mov)$/i,
-    v = /\.(mp4|webm|mov)$/i,
-    y = (0, a.isIOS)() ? g : (0, a.isAndroid)() ? E : v,
-    b = (e) => o(e, y),
-    I = (e) => null != e && y.test(e),
-    T = (e) => s(e, 'video');
+    p = ((0, i.isIOS)() || (0, i.isAndroid)(), /\.(mp4|mov)$/i),
+    h = /\.(mp4|webm|mov)$/i,
+    m = /\.(mp4|webm|mov)$/i,
+    g = (0, i.isIOS)() ? p : (0, i.isAndroid)() ? h : m,
+    E = (e) => r(e, g),
+    v = (e) => null != e && g.test(e),
+    y = (e) => a(e, 'video');

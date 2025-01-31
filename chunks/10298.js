@@ -1,18 +1,14 @@
-n.d(t, {
-    N: function () {
-        return a;
-    }
-});
+n.d(t, { N: () => l });
 var i = n(200651),
-    r = n(481060),
-    s = n(488931);
-let a = (e) => {
+    s = n(481060),
+    r = n(488931);
+let l = (e) => {
     let { children: t, header: n } = e;
     return (0, i.jsxs)('div', {
-        className: s.settingsPage,
+        className: r.settingsPage,
         children: [
-            (0, i.jsx)(r.HeadingLevel, {
-                children: (0, i.jsx)(r.Heading, {
+            (0, i.jsx)(s.y5t, {
+                children: (0, i.jsx)(s.X6q, {
                     variant: 'heading-xl/semibold',
                     color: 'header-primary',
                     children: n

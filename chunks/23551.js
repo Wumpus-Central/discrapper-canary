@@ -1,34 +1,35 @@
+n.d(t, { Z: () => _ });
 var i = n(200651);
 n(192379);
-var r = n(120356),
-    s = n.n(r),
-    a = n(780384),
-    l = n(481060),
+var s = n(120356),
+    r = n.n(s),
+    l = n(780384),
+    a = n(481060),
     o = n(410030),
     c = n(726542),
     d = n(122021),
     u = n(231757),
     m = n(626135),
-    g = n(981631),
-    h = n(915976);
-t.Z = (e) => {
-    let { disabled: t = !1, type: n, className: r, innerClassName: p, onConnect: x } = e,
-        f = (0, o.ZP)(),
+    h = n(981631),
+    g = n(915976);
+let _ = (e) => {
+    let { disabled: t = !1, type: n, className: s, innerClassName: _, onConnect: x } = e,
+        p = (0, o.ZP)(),
         E = c.Z.get((0, d.rR)(n));
-    return (0, i.jsx)(l.Tooltip, {
+    return (0, i.jsx)(a.ua7, {
         text: E.name,
         children: (e) => {
             let { onMouseEnter: o, onMouseLeave: d } = e;
             return (0, i.jsx)('div', {
-                className: s()(h.wrapper, r),
-                children: (0, i.jsx)(l.FocusRing, {
+                className: r()(g.wrapper, s),
+                children: (0, i.jsx)(a.tEY, {
                     children: (0, i.jsx)('button', {
                         onMouseEnter: o,
                         onMouseLeave: d,
-                        className: s()(h.inner, p),
+                        className: r()(g.inner, _),
                         type: 'button',
                         disabled: t,
-                        style: { backgroundImage: "url('".concat((0, a.wj)(f) ? E.icon.darkSVG : E.icon.lightSVG, "')") },
+                        style: { backgroundImage: "url('".concat((0, l.wj)(p) ? E.icon.darkSVG : E.icon.lightSVG, "')") },
                         onClick:
                             null != x
                                 ? x
@@ -39,7 +40,7 @@ t.Z = (e) => {
                                               platformType: t.type,
                                               location: 'Friends List'
                                           }),
-                                              m.default.track(g.rMx.ACCOUNT_LINK_STEP, {
+                                              m.default.track(h.rMx.ACCOUNT_LINK_STEP, {
                                                   previous_step: 'desktop connections',
                                                   current_step: 'desktop oauth',
                                                   platform_type: t.type

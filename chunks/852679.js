@@ -1,62 +1,57 @@
-r.d(n, {
-    Z: function () {
-        return m;
-    }
-});
-var i = r(47120);
-var a = r(200651);
-r(192379);
-var o = r(481060),
-    s = r(668781),
-    l = r(355467),
-    u = r(821849),
-    c = r(78839),
-    d = r(626135),
-    f = r(74538),
-    p = r(981631),
-    h = r(388032);
+n.d(t, { Z: () => p }), n(47120);
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(668781),
+    s = n(355467),
+    o = n(821849),
+    l = n(78839),
+    u = n(626135),
+    c = n(74538),
+    d = n(981631),
+    f = n(388032);
 let _ = 'guild-boost-purchase-modal';
-async function m(e) {
-    let { analyticsLocations: n, analyticsLocation: i, analyticsSourceLocation: m, guildId: g, closeLayer: E, onCloseModal: v, totalNumberOfSlotsToAssign: y = 1, disablePremiumUpsell: b, onSubscriptionConfirmation: I, inPopout: T, applicationId: S } = e,
-        A = T ? o.POPOUT_MODAL_CONTEXT : o.DEFAULT_MODAL_CONTEXT,
-        C = c.ZP.getPremiumTypeSubscription();
-    if (null != C && C.isPurchasedExternally && null != C.paymentGateway) {
-        null != E && E(),
-            s.Z.show({
-                title: h.intl.formatToPlainString(h.t.rTk9v7, { paymentGatewayName: p.Vzj[C.paymentGateway] }),
-                body: h.intl.format(h.t.NY03WF, {
-                    paymentGatewayName: p.Vzj[C.paymentGateway],
-                    subscriptionManagementLink: (0, f.JE)(C.paymentGateway, 'SUBSCRIPTION_MANAGEMENT')
+async function p(e) {
+    let { analyticsLocations: t, analyticsLocation: p, analyticsSourceLocation: h, guildId: m, closeLayer: g, onCloseModal: E, totalNumberOfSlotsToAssign: v = 1, disablePremiumUpsell: y, onSubscriptionConfirmation: I, inPopout: b, applicationId: T } = e,
+        S = b ? r.u1M : r.z1l,
+        A = l.ZP.getPremiumTypeSubscription();
+    if (null != A && A.isPurchasedExternally && null != A.paymentGateway) {
+        null != g && g(),
+            a.Z.show({
+                title: f.intl.formatToPlainString(f.t.rTk9v7, { paymentGatewayName: d.Vzj[A.paymentGateway] }),
+                body: f.intl.format(f.t.NY03WF, {
+                    paymentGatewayName: d.Vzj[A.paymentGateway],
+                    subscriptionManagementLink: (0, c.JE)(A.paymentGateway, 'SUBSCRIPTION_MANAGEMENT')
                 })
             });
         return;
     }
-    Promise.all([(0, l.tZ)(), (0, u.Y2)()]);
+    Promise.all([(0, s.tZ)(), (0, o.Y2)()]);
     let N = () => {
-        d.default.track(p.rMx.MODAL_DISMISSED, {
-            type: p.jXE.PREMIUM_GUILD_PURCHASE_MODAL,
-            location: i
+        u.default.track(d.rMx.MODAL_DISMISSED, {
+            type: d.jXE.PREMIUM_GUILD_PURCHASE_MODAL,
+            location: p
         });
     };
-    await (0, o.openModalLazy)(
+    await (0, r.ZDy)(
         async () => {
-            let { default: e } = await Promise.all([r.e('8016'), r.e('22646'), r.e('53122')]).then(r.bind(r, 343649));
-            return (r) => {
-                let { transitionState: o, onClose: s } = r;
-                return (0, a.jsx)(e, {
-                    transitionState: o,
+            let { default: e } = await Promise.all([n.e('8016'), n.e('22646'), n.e('53122')]).then(n.bind(n, 343649));
+            return (n) => {
+                let { transitionState: r, onClose: a } = n;
+                return (0, i.jsx)(e, {
+                    transitionState: r,
                     onClose: (e) => {
-                        s(), null == v || v(e);
+                        a(), null == E || E(e);
                     },
-                    analyticsLocations: n,
-                    analyticsLocation: i,
-                    analyticsSourceLocation: null != m ? m : i,
-                    guildId: g,
-                    totalNumberOfSlotsToAssign: y,
-                    closeGuildPerksModal: E,
-                    disablePremiumUpsell: b,
+                    analyticsLocations: t,
+                    analyticsLocation: p,
+                    analyticsSourceLocation: null != h ? h : p,
+                    guildId: m,
+                    totalNumberOfSlotsToAssign: v,
+                    closeGuildPerksModal: g,
+                    disablePremiumUpsell: y,
                     onSubscriptionConfirmation: I,
-                    applicationId: S
+                    applicationId: T
                 });
             };
         },
@@ -64,9 +59,9 @@ async function m(e) {
             modalKey: _,
             onCloseCallback: N,
             onCloseRequest: () => {
-                (0, o.closeModal)(_), null == v || v(!1);
+                (0, r.Mr3)(_), null == E || E(!1);
             },
-            contextKey: A
+            contextKey: S
         }
     );
 }

@@ -1,7 +1,8 @@
+n.d(t, { Z: () => o });
 var i,
-    r = n(442837),
-    s = n(570140);
-function a(e, t, n) {
+    s = n(442837),
+    r = n(570140);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,7 +15,7 @@ function a(e, t, n) {
         e
     );
 }
-class l extends (i = r.ZP.Store) {
+class a extends (i = s.ZP.Store) {
     get redeemError() {
         return this._redeemVirtualCurrencyError;
     }
@@ -65,7 +66,7 @@ class l extends (i = r.ZP.Store) {
         (this._entitlements = null), (this._redeemVirtualCurrencyError = t), (this._redeemingSkuId = null), (this._isRedeemingVirtualCurrency = !1);
     }
     constructor() {
-        super(s.Z, {
+        super(r.Z, {
             VIRTUAL_CURRENCY_REDEEM_START: (e) => this.handleRedeemVirtualCurrencyStart(e),
             VIRTUAL_CURRENCY_REDEEM_SUCCESS: (e) => this.handleRedeemVirtualCurrencySuccess(e),
             VIRTUAL_CURRENCY_REDEEM_FAIL: (e) => this.handleRedeemVirtualCurrencyFail(e),
@@ -74,13 +75,14 @@ class l extends (i = r.ZP.Store) {
             VIRTUAL_CURRENCY_BALANCE_FETCH_FAIL: (e) => this.handleBalanceFetchFail(e),
             VIRTUAL_CURRENCY_BALANCE_UPDATE: (e) => this.handleBalanceUpdate(e)
         }),
-            a(this, '_entitlements', null),
-            a(this, '_redeemingSkuId', null),
-            a(this, '_isRedeemingVirtualCurrency', !1),
-            a(this, '_redeemVirtualCurrencyError', null),
-            a(this, '_balance', null),
-            a(this, '_fetchBalanceError', null),
-            a(this, '_isFetchingBalance', !1);
+            l(this, '_entitlements', null),
+            l(this, '_redeemingSkuId', null),
+            l(this, '_isRedeemingVirtualCurrency', !1),
+            l(this, '_redeemVirtualCurrencyError', null),
+            l(this, '_balance', null),
+            l(this, '_fetchBalanceError', null),
+            l(this, '_isFetchingBalance', !1);
     }
 }
-a(l, 'displayName', 'VirtualCurrencyStore'), (t.Z = new l());
+l(a, 'displayName', 'VirtualCurrencyStore');
+let o = new a();

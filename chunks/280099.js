@@ -1,10 +1,12 @@
-e.exports = {
-    tier2Animation: 'tier2Animation_bfbba7',
-    panningAnimation: 'panningAnimation_bfbba7',
-    tier2Background: 'tier2Background_bfbba7 panningAnimationInner_bfbba7',
-    tier2Foreground: 'tier2Foreground_bfbba7 panningAnimationInner_bfbba7',
-    guildWrapper: 'guildWrapper_bfbba7',
-    guildBackground: 'guildBackground_bfbba7',
-    guildStar: 'guildStar_bfbba7',
-    sequencedAnimation: 'sequencedAnimation_bfbba7'
+var i = {
+    tier2Animation: 'tier2Animation__387d4',
+    panningAnimation: 'panningAnimation__387d4',
+    panningAnimationInner: 'panningAnimationInner__387d4',
+    tier2Background: 'tier2Background__387d4 panningAnimationInner__387d4',
+    tier2Foreground: 'tier2Foreground__387d4 panningAnimationInner__387d4',
+    guildWrapper: 'guildWrapper__387d4',
+    guildBackground: 'guildBackground__387d4',
+    guildStar: 'guildStar__387d4',
+    sequencedAnimation: 'sequencedAnimation__387d4'
 };
+e.exports = i;

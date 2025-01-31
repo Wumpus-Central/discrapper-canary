@@ -1,36 +1,37 @@
-var i = r(544891),
-    a = r(570140),
-    o = r(367907),
-    s = r(957730),
-    l = r(592125),
-    u = r(493683),
-    c = r(904245),
-    d = r(981631);
-n.Z = {
+n.d(t, { Z: () => d });
+var i = n(544891),
+    r = n(570140),
+    a = n(367907),
+    s = n(957730),
+    o = n(592125),
+    l = n(493683),
+    u = n(904245),
+    c = n(981631);
+let d = {
     updateActivity(e) {
-        let { applicationId: n, distributor: r, shareActivity: o, token: s = null, duration: l = 0, closed: u = !1, exePath: c = null, voiceChannelId: f = null, sessionId: p = null, mediaSessionId: h = null } = e;
-        a.Z.wait(() =>
-            a.Z.dispatch({
+        let { applicationId: t, distributor: n, shareActivity: a, token: s = null, duration: o = 0, closed: l = !1, exePath: u = null, voiceChannelId: d = null, sessionId: f = null, mediaSessionId: _ = null } = e;
+        r.Z.wait(() =>
+            r.Z.dispatch({
                 type: 'ACTIVITY_UPDATE_START',
-                applicationId: n,
-                duration: l,
-                distributor: r
+                applicationId: t,
+                duration: o,
+                distributor: n
             })
         ),
             i.tn
                 .post({
-                    url: d.ANM.ACTIVITIES,
+                    url: c.ANM.ACTIVITIES,
                     body: {
-                        application_id: n,
+                        application_id: t,
                         token: s,
-                        duration: l,
-                        share_activity: o,
-                        distributor: r,
-                        closed: u,
-                        exePath: c,
-                        voice_channel_id: f,
-                        session_id: p,
-                        media_session_id: h
+                        duration: o,
+                        share_activity: a,
+                        distributor: n,
+                        closed: l,
+                        exePath: u,
+                        voice_channel_id: d,
+                        session_id: f,
+                        media_session_id: _
                     },
                     retries: 1,
                     oldFormErrors: !0,
@@ -40,66 +41,66 @@ n.Z = {
                     let {
                         body: { token: i }
                     } = e;
-                    a.Z.dispatch({
+                    r.Z.dispatch({
                         type: 'ACTIVITY_UPDATE_SUCCESS',
-                        applicationId: n,
+                        applicationId: t,
                         token: i,
-                        duration: l,
-                        distributor: r
+                        duration: o,
+                        distributor: n
                     });
                 })
                 .catch(() => {
-                    a.Z.dispatch({
+                    r.Z.dispatch({
                         type: 'ACTIVITY_UPDATE_FAIL',
-                        applicationId: n
+                        applicationId: t
                     });
                 });
     },
     sendActivityInvite(e) {
-        let { channelId: n, type: r, activity: i, content: a, location: u } = e,
-            f = l.Z.getChannel(n);
-        if (null == f) return Promise.resolve(null);
-        let p = s.ZP.parse(f, null != a ? a : '');
-        return c.Z.sendMessage(f.id, p, !1, {
+        let { channelId: t, type: n, activity: i, content: r, location: l } = e,
+            d = o.Z.getChannel(t);
+        if (null == d) return Promise.resolve(null);
+        let f = s.ZP.parse(d, null != r ? r : '');
+        return u.Z.sendMessage(d.id, f, !1, {
             activityAction: {
-                type: r,
+                type: n,
                 activity: i
             }
         }).then(
             (e) => (
-                o.ZP.trackWithMetadata(d.rMx.INVITE_SENT, {
-                    location: u,
-                    invite_type: i.type === d.IIU.LISTENING ? d.dAT.SPOTIFY : d.dAT.APPLICATION,
+                a.ZP.trackWithMetadata(c.rMx.INVITE_SENT, {
+                    location: l,
+                    invite_type: i.type === c.IIU.LISTENING ? c.dAT.SPOTIFY : c.dAT.APPLICATION,
                     application_id: i.application_id,
-                    guild_id: f.getGuildId(),
-                    channel_id: f.id,
+                    guild_id: d.getGuildId(),
+                    channel_id: d.id,
                     message_id: null != e ? e.body.id : null
                 }),
-                Promise.resolve(f)
+                Promise.resolve(d)
             ),
             (e) => Promise.reject(e)
         );
     },
     sendActivityInviteUser(e) {
-        let { userId: n, type: r, activity: i, content: a, location: o } = e;
-        return u.Z.ensurePrivateChannel(n).then((e) =>
+        let { userId: t, type: n, activity: i, content: r, location: a } = e;
+        return l.Z.ensurePrivateChannel(t).then((e) =>
             this.sendActivityInvite({
                 channelId: e,
-                type: r,
+                type: n,
                 activity: i,
-                content: a,
-                location: o
+                content: r,
+                location: a
             })
         );
     },
-    async getJoinSecret(e, n, r, a, o) {
+    async getJoinSecret(e, t, n, r, a) {
         let s = {};
         return (
-            null != a && (s.channel_id = a),
-            null != o && (s.message_id = o),
+            null != r && (s.channel_id = r),
+            null != a && (s.message_id = a),
             (
                 await i.tn.get({
-                    url: d.ANM.USER_ACTIVITY_JOIN(e, n, r),
+                    url: c.ANM.USER_ACTIVITY_JOIN(e, t, n),
                     retries: 3,
                     query: s,
                     rejectWithError: !1

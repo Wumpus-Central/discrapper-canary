@@ -1,22 +1,17 @@
-t.d(n, {
-    Z: function () {
-        return s;
-    },
-    z: function () {
-        return i;
-    }
+n.d(t, {
+    Z: () => o,
+    z: () => s
 }),
-    t(653041);
+    n(653041);
 var i,
-    l,
-    r = t(442837),
-    a = t(314897);
-(l = i || (i = {}))[(l.END_EARLY = 0)] = 'END_EARLY';
-let o = [];
-function s(e) {
-    let n = (0, r.e7)([a.default], () => a.default.getId()),
-        { poll: t } = e;
-    if (!e.isPoll() || null == t) return o;
+    l = n(442837),
+    a = n(314897),
+    s = (((i = {})[(i.END_EARLY = 0)] = 'END_EARLY'), i);
+let r = [];
+function o(e) {
+    let t = (0, l.e7)([a.default], () => a.default.getId()),
+        { poll: n } = e;
+    if (!e.isPoll() || null == n) return r;
     let i = [];
-    return !t.expiry.isSameOrBefore(Date.now()) && e.author.id === n && i.push(0), i;
+    return n.expiry.isSameOrBefore(Date.now()) || e.author.id !== t || i.push(0), i;
 }

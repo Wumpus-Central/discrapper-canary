@@ -1,7 +1,8 @@
+n.d(t, { Z: () => l });
 var i = n(200651);
 n(192379);
-t.Z = (e) => {
-    let { id: t, startColor: n, stopColor: r, color: l, stop: a } = e;
+let l = (e) => {
+    let { id: t, startColor: n, stopColor: l, color: r, stop: a } = e;
     return (0, i.jsxs)('linearGradient', {
         id: t,
         children: [
@@ -11,15 +12,15 @@ t.Z = (e) => {
             }),
             (0, i.jsx)('stop', {
                 offset: a,
-                stopColor: r
+                stopColor: l
             }),
             (0, i.jsx)('stop', {
                 offset: a,
-                stopColor: l
+                stopColor: r
             }),
             (0, i.jsx)('stop', {
                 offset: '1',
-                stopColor: l
+                stopColor: r
             })
         ]
     });

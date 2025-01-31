@@ -1,16 +1,12 @@
-r.d(n, {
-    Z: function () {
-        return u;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(723484),
-    o = r(51499),
-    s = r(614277),
-    l = r(559523);
-function u() {
+n.d(t, { Z: () => l });
+var i = n(200651);
+n(192379);
+var r = n(723484),
+    a = n(51499),
+    s = n(614277),
+    o = n(559523);
+function l() {
     return (0, i.jsxs)(i.Fragment, {
-        children: [(0, i.jsx)(o.Z, {}), (0, i.jsx)(s.C3, { children: (0, i.jsx)(a.F, { className: l.awaitingAuthenticationStep }) })]
+        children: [(0, i.jsx)(a.Z, {}), (0, i.jsx)(s.C3, { children: (0, i.jsx)(r.F, { className: o.awaitingAuthenticationStep }) })]
     });
 }

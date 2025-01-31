@@ -1,35 +1,31 @@
-r.d(n, {
-    u: function () {
-        return p;
-    }
-});
-var i = r(192379),
-    a = r(493773),
-    o = r(367907),
-    s = r(592125),
-    l = r(944486),
-    u = r(626135),
-    c = r(255963),
-    d = r(185923),
-    f = r(981631);
-let p = (e) => {
-    let { emojiId: n, currentGuildId: r, popoutData: p, nonce: h, demoMode: _ } = e,
-        { current: m } = i.useRef({
-            guild_id: r,
-            emoji_id: n,
-            ...(0, o.v_)(s.Z.getChannel(l.Z.getChannelId(r)))
+n.d(t, { u: () => f });
+var i = n(192379),
+    r = n(493773),
+    a = n(367907),
+    s = n(592125),
+    o = n(944486),
+    l = n(626135),
+    u = n(255963),
+    c = n(185923),
+    d = n(981631);
+let f = (e) => {
+    let { emojiId: t, currentGuildId: n, popoutData: f, nonce: _, demoMode: p } = e,
+        { current: h } = i.useRef({
+            guild_id: n,
+            emoji_id: t,
+            ...(0, a.v_)(s.Z.getChannel(o.Z.getChannelId(n)))
         });
     return (
-        (0, a.Z)(() => {
+        (0, r.Z)(() => {
             var e;
-            (0, c.x)(d.qR.TrackOpenPopoutUsed),
-                !_ &&
-                    u.default.track(f.rMx.OPEN_POPOUT, {
-                        type: null !== (e = null == p ? void 0 : p.analyticsType) && void 0 !== e ? e : 'Standard Emoji Popout',
-                        nonce: h,
-                        ...m
+            (0, u.x)(c.qR.TrackOpenPopoutUsed),
+                p ||
+                    l.default.track(d.rMx.OPEN_POPOUT, {
+                        type: null !== (e = null == f ? void 0 : f.analyticsType) && void 0 !== e ? e : 'Standard Emoji Popout',
+                        nonce: _,
+                        ...h
                     });
         }),
-        m
+        h
     );
 };

@@ -34,9 +34,4 @@ function i(e) {
     }
     return t;
 }
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => i }), n(47120);

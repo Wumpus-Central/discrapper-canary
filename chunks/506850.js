@@ -1,8 +1,9 @@
 e.exports = {
-    descriptionWrapper: 'descriptionWrapper_ede133',
-    subText: 'subText_ede133',
-    defaultIndicator: 'defaultIndicator_ede133 indicator_ede133',
-    premiumIndicator: 'premiumIndicator_ede133 indicator_ede133',
-    invalidIndicator: 'invalidIndicator_ede133 indicator_ede133',
-    description: 'description_ede133'
+    descriptionWrapper: 'descriptionWrapper__43963',
+    subText: 'subText__43963',
+    indicator: 'indicator__43963',
+    defaultIndicator: 'defaultIndicator__43963 indicator__43963',
+    premiumIndicator: 'premiumIndicator__43963 indicator__43963',
+    invalidIndicator: 'invalidIndicator__43963 indicator__43963',
+    description: 'description__43963'
 };

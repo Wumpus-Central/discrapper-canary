@@ -1,8 +1,4 @@
-n.d(t, {
-    Y: function () {
-        return i;
-    }
-});
+n.d(t, { Y: () => i });
 let i = (0, n(818083).B)({
     kind: 'user',
     id: '2024-11_scheduled_messages',

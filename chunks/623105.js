@@ -1,10 +1,11 @@
-e.exports = {
-    popoutContainer: 'popoutContainer_c938c7',
-    mainContent: 'mainContent_c938c7',
-    roleIconContainer: 'roleIconContainer_c938c7',
-    roleName: 'roleName_c938c7',
-    truncatingText: 'truncatingText_c938c7',
-    ctaButton: 'ctaButton_c938c7',
-    ctaButtonContent: 'ctaButtonContent_c938c7',
-    boosterBadge: 'boosterBadge_c938c7'
+var i = {
+    popoutContainer: 'popoutContainer__8641f',
+    mainContent: 'mainContent__8641f',
+    roleIconContainer: 'roleIconContainer__8641f',
+    roleName: 'roleName__8641f',
+    truncatingText: 'truncatingText__8641f',
+    ctaButton: 'ctaButton__8641f',
+    ctaButtonContent: 'ctaButtonContent__8641f',
+    boosterBadge: 'boosterBadge__8641f'
 };
+e.exports = i;

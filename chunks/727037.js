@@ -1,141 +1,137 @@
-r.d(n, {
-    I: function () {
-        return l;
-    }
-});
-var i = r(230367),
-    a = r(36056),
-    o = r(929412),
-    s = r(436759);
-class l {
+n.d(t, { I: () => o });
+var i = n(230367),
+    r = n(36056),
+    a = n(929412),
+    s = n(436759);
+class o {
     constructor(e) {
         this.info = e;
     }
     prepare() {
         var e;
         if (!this.fieldNoToField) {
-            let n = null !== (e = this.info.fields) && void 0 !== e ? e : [];
-            this.fieldNoToField = new Map(n.map((e) => [e.no, e]));
+            let t = null !== (e = this.info.fields) && void 0 !== e ? e : [];
+            this.fieldNoToField = new Map(t.map((e) => [e.no, e]));
         }
     }
-    read(e, n, r, o) {
+    read(e, t, n, a) {
         this.prepare();
-        let s = void 0 === o ? e.len : e.pos + o;
+        let s = void 0 === a ? e.len : e.pos + a;
         for (; e.pos < s; ) {
-            let [o, s] = e.tag(),
-                l = this.fieldNoToField.get(o);
-            if (!l) {
-                let a = r.readUnknownField;
-                if ('throw' == a) throw Error(`Unknown field ${o} (wire type ${s}) for ${this.info.typeName}`);
-                let l = e.skip(s);
-                !1 !== a && (!0 === a ? i.z.onRead : a)(this.info.typeName, n, o, s, l);
+            let [a, s] = e.tag(),
+                o = this.fieldNoToField.get(a);
+            if (!o) {
+                let r = n.readUnknownField;
+                if ('throw' == r) throw Error(`Unknown field ${a} (wire type ${s}) for ${this.info.typeName}`);
+                let o = e.skip(s);
+                !1 !== r && (!0 === r ? i.z.onRead : r)(this.info.typeName, t, a, s, o);
                 continue;
             }
-            let u = n,
-                c = l.repeat,
-                d = l.localName;
-            switch ((l.oneof && (u = u[l.oneof]).oneofKind !== d && (u = n[l.oneof] = { oneofKind: d }), l.kind)) {
+            let l = t,
+                u = o.repeat,
+                c = o.localName;
+            switch ((o.oneof && (l = l[o.oneof]).oneofKind !== c && (l = t[o.oneof] = { oneofKind: c }), o.kind)) {
                 case 'scalar':
                 case 'enum':
-                    let f = 'enum' == l.kind ? a.wx.INT32 : l.T,
-                        p = 'scalar' == l.kind ? l.L : void 0;
-                    if (c) {
-                        let n = u[d];
-                        if (s == i.TD.LengthDelimited && f != a.wx.STRING && f != a.wx.BYTES) {
-                            let r = e.uint32() + e.pos;
-                            for (; e.pos < r; ) n.push(this.scalar(e, f, p));
-                        } else n.push(this.scalar(e, f, p));
-                    } else u[d] = this.scalar(e, f, p);
+                    let d = 'enum' == o.kind ? r.wx.INT32 : o.T,
+                        f = 'scalar' == o.kind ? o.L : void 0;
+                    if (u) {
+                        let t = l[c];
+                        if (s == i.TD.LengthDelimited && d != r.wx.STRING && d != r.wx.BYTES) {
+                            let n = e.uint32() + e.pos;
+                            for (; e.pos < n; ) t.push(this.scalar(e, d, f));
+                        } else t.push(this.scalar(e, d, f));
+                    } else l[c] = this.scalar(e, d, f);
                     break;
                 case 'message':
-                    if (c) {
-                        let n = u[d],
-                            i = l.T().internalBinaryRead(e, e.uint32(), r);
-                        n.push(i);
-                    } else u[d] = l.T().internalBinaryRead(e, e.uint32(), r, u[d]);
+                    if (u) {
+                        let t = l[c],
+                            i = o.T().internalBinaryRead(e, e.uint32(), n);
+                        t.push(i);
+                    } else l[c] = o.T().internalBinaryRead(e, e.uint32(), n, l[c]);
                     break;
                 case 'map':
-                    let [h, _] = this.mapEntry(l, e, r);
-                    u[d][h] = _;
+                    let [_, p] = this.mapEntry(o, e, n);
+                    l[c][_] = p;
             }
         }
     }
-    mapEntry(e, n, r) {
+    mapEntry(e, t, n) {
         let i,
-            o,
-            l = n.uint32(),
-            u = n.pos + l;
-        for (; n.pos < u; ) {
-            let [s, l] = n.tag();
+            a,
+            o = t.uint32(),
+            l = t.pos + o;
+        for (; t.pos < l; ) {
+            let [s, o] = t.tag();
             switch (s) {
                 case 1:
-                    i = e.K == a.wx.BOOL ? n.bool().toString() : this.scalar(n, e.K, a.pz.STRING);
+                    i = e.K == r.wx.BOOL ? t.bool().toString() : this.scalar(t, e.K, r.pz.STRING);
                     break;
                 case 2:
                     switch (e.V.kind) {
                         case 'scalar':
-                            o = this.scalar(n, e.V.T, e.V.L);
+                            a = this.scalar(t, e.V.T, e.V.L);
                             break;
                         case 'enum':
-                            o = n.int32();
+                            a = t.int32();
                             break;
                         case 'message':
-                            o = e.V.T().internalBinaryRead(n, n.uint32(), r);
+                            a = e.V.T().internalBinaryRead(t, t.uint32(), n);
                     }
                     break;
                 default:
-                    throw Error(`Unknown field ${s} (wire type ${l}) in map entry for ${this.info.typeName}#${e.name}`);
+                    throw Error(`Unknown field ${s} (wire type ${o}) in map entry for ${this.info.typeName}#${e.name}`);
             }
         }
         if (void 0 === i) {
-            let n = (0, s.N)(e.K);
-            i = e.K == a.wx.BOOL ? n.toString() : n;
+            let t = (0, s.N)(e.K);
+            i = e.K == r.wx.BOOL ? t.toString() : t;
         }
-        if (void 0 === o)
+        if (void 0 === a)
             switch (e.V.kind) {
                 case 'scalar':
-                    o = (0, s.N)(e.V.T, e.V.L);
+                    a = (0, s.N)(e.V.T, e.V.L);
                     break;
                 case 'enum':
-                    o = 0;
+                    a = 0;
                     break;
                 case 'message':
-                    o = e.V.T().create();
+                    a = e.V.T().create();
             }
-        return [i, o];
+        return [i, a];
     }
-    scalar(e, n, r) {
-        switch (n) {
-            case a.wx.INT32:
+    scalar(e, t, n) {
+        switch (t) {
+            case r.wx.INT32:
                 return e.int32();
-            case a.wx.STRING:
+            case r.wx.STRING:
                 return e.string();
-            case a.wx.BOOL:
+            case r.wx.BOOL:
                 return e.bool();
-            case a.wx.DOUBLE:
+            case r.wx.DOUBLE:
                 return e.double();
-            case a.wx.FLOAT:
+            case r.wx.FLOAT:
                 return e.float();
-            case a.wx.INT64:
-                return (0, o._)(e.int64(), r);
-            case a.wx.UINT64:
-                return (0, o._)(e.uint64(), r);
-            case a.wx.FIXED64:
-                return (0, o._)(e.fixed64(), r);
-            case a.wx.FIXED32:
+            case r.wx.INT64:
+                return (0, a._)(e.int64(), n);
+            case r.wx.UINT64:
+                return (0, a._)(e.uint64(), n);
+            case r.wx.FIXED64:
+                return (0, a._)(e.fixed64(), n);
+            case r.wx.FIXED32:
                 return e.fixed32();
-            case a.wx.BYTES:
+            case r.wx.BYTES:
                 return e.bytes();
-            case a.wx.UINT32:
+            case r.wx.UINT32:
                 return e.uint32();
-            case a.wx.SFIXED32:
+            case r.wx.SFIXED32:
                 return e.sfixed32();
-            case a.wx.SFIXED64:
-                return (0, o._)(e.sfixed64(), r);
-            case a.wx.SINT32:
+            case r.wx.SFIXED64:
+                return (0, a._)(e.sfixed64(), n);
+            case r.wx.SINT32:
                 return e.sint32();
-            case a.wx.SINT64:
-                return (0, o._)(e.sint64(), r);
+            case r.wx.SINT64:
+                return (0, a._)(e.sint64(), n);
         }
     }
 }

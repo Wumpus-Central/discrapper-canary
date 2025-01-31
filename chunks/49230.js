@@ -1,15 +1,11 @@
 n.d(t, {
-    $: function () {
-        return h;
-    },
-    h: function () {
-        return m;
-    }
+    $: () => h,
+    h: () => m
 }),
     n(47120);
 var i = n(512722),
-    r = n.n(i),
-    l = n(46973),
+    l = n.n(i),
+    r = n(46973),
     a = n(304809),
     s = n(131951),
     o = n(747071);
@@ -31,9 +27,9 @@ function h(e) {
         let o = await u(n);
         null == o && e(),
             s.Z.getMediaEngine().eachConnection((n) => {
-                n.context === l.Yn.DEFAULT &&
+                n.context === r.Yn.DEFAULT &&
                     (a(),
-                    r()(null != o, 'audioBuffer cannot be null here'),
+                    l()(null != o, 'audioBuffer cannot be null here'),
                     n.startSamplesLocalPlayback(t, o, i, () => {
                         e();
                     }));
@@ -41,7 +37,7 @@ function h(e) {
     });
 }
 function m(e, t) {
-    let { soundKey: n, soundURL: i, soundVolume: r, reportSoundStartedPlaying: l } = e,
+    let { soundKey: n, soundURL: i, soundVolume: l, reportSoundStartedPlaying: r } = e,
         a = t.get(n);
     if (null != a) {
         a.currentTime = 0;
@@ -49,9 +45,9 @@ function m(e, t) {
     }
     return new Promise((e) => {
         let a = new Audio(i);
-        (a.volume = (0, o.Z)(r)),
+        (a.volume = (0, o.Z)(l)),
             a.addEventListener('canplaythrough', () => {
-                l(), t.set(n, a), a.play();
+                r(), t.set(n, a), a.play();
             }),
             a.addEventListener('ended', () => {
                 t.delete(n), (a.src = ''), e();

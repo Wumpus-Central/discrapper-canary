@@ -1,18 +1,12 @@
-r.d(n, {
-    H: function () {
-        return l;
-    }
-});
-var i = r(47120);
-r(442837);
-var a = r(271383),
-    o = r(430824),
-    s = r(700785);
-let l = function (e, n) {
-    let [r, i] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [o.Z, a.ZP];
-    if (null == e || null == n) return null;
-    let l = r.getGuild(e);
-    if (null == l) return null;
-    let u = i.getMember(l.id, n);
-    return null == u ? null : s.Hu(l, u);
+n.d(t, { H: () => s }), n(47120), n(442837);
+var i = n(271383),
+    r = n(430824),
+    a = n(700785);
+let s = function (e, t) {
+    let [n, s] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [r.Z, i.ZP];
+    if (null == e || null == t) return null;
+    let o = n.getGuild(e);
+    if (null == o) return null;
+    let l = s.getMember(o.id, t);
+    return null == l ? null : a.Hu(o, l);
 };

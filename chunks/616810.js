@@ -1,37 +1,33 @@
-r.d(n, {
-    Z: function () {
-        return l;
-    }
-});
-var i = r(928801),
-    a = r(549895),
-    o = r(885110);
-function s(e, n, r) {
+n.d(t, { Z: () => o });
+var i = n(928801),
+    r = n(549895),
+    a = n(885110);
+function s(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class l extends i.Z {
+class o extends i.Z {
     getInitialState() {
-        return o.Z.getLocalPresence();
+        return a.Z.getLocalPresence();
     }
     getNextState() {
-        return o.Z.getLocalPresence();
+        return a.Z.getLocalPresence();
     }
     shouldCommit() {
         return this.socket.isSessionEstablished();
     }
     emitPresenceUpdate(e) {
-        let { status: n, since: r, activities: i, afk: a } = e;
-        this.socket.presenceUpdate(n, r, i, a);
+        let { status: t, since: n, activities: i, afk: r } = e;
+        this.socket.presenceUpdate(t, n, i, r);
     }
     handleConnectionOpen() {
         let e = !this.switchingAccounts;
@@ -41,6 +37,6 @@ class l extends i.Z {
         (this.switchingAccounts = !0), this.reset(), this.emitPresenceUpdate(this.getState());
     }
     constructor(e) {
-        super(!1), s(this, 'socket', void 0), s(this, 'switchingAccounts', void 0), s(this, 'didCommit', void 0), (this.socket = e), (this.switchingAccounts = !1), (this.didCommit = (0, a.Z)(5, 20000, this.emitPresenceUpdate.bind(this)));
+        super(!1), s(this, 'socket', void 0), s(this, 'switchingAccounts', void 0), s(this, 'didCommit', void 0), (this.socket = e), (this.switchingAccounts = !1), (this.didCommit = (0, r.Z)(5, 20000, this.emitPresenceUpdate.bind(this)));
     }
 }

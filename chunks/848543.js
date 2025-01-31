@@ -1,13 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return A;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => x }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
     s = n(399606),
     o = n(704215),
     c = n(582019),
@@ -17,8 +12,8 @@ var i = n(200651),
     m = n(906732),
     p = n(540059),
     g = n(706140),
-    f = n(294629),
-    _ = n(131951),
+    _ = n(294629),
+    f = n(131951),
     E = n(459273),
     I = n(242291),
     C = n(792165),
@@ -26,25 +21,25 @@ var i = n(200651),
     N = n(981631),
     T = n(921944),
     S = n(388032),
-    b = n(382290);
-function A(e) {
-    let { channel: t, iconClassName: l, className: A, innerClassName: Z, ...x } = e,
+    Z = n(382290);
+function x(e) {
+    let { channel: t, iconClassName: r, className: x, innerClassName: A, ...b } = e,
         L = (0, p.Q3)('SoundBoardRTCPanelButton'),
-        { mute: y, suppress: P } = (0, f.Z)(t),
-        O = (0, s.e7)([_.Z], () => _.Z.isDeaf()),
+        { mute: y, suppress: P } = (0, _.Z)(t),
+        O = (0, s.e7)([f.Z], () => f.Z.isDeaf()),
         R = y || P || O,
-        [j, D] = r.useState(!1),
-        M = t.getGuildId(),
-        w = (0, I.sR)({ isSoundboardButtonDisabled: R }),
-        [k, U] = (0, g.cv)(w),
+        [j, D] = l.useState(!1),
+        w = t.getGuildId(),
+        M = (0, I.sR)({ isSoundboardButtonDisabled: R }),
+        [k, U] = (0, g.cv)(M),
         { analyticsLocations: G } = (0, m.ZP)(h.Z.SOUNDBOARD_BUTTON);
     function B(e) {
-        null != M &&
+        null != w &&
             (0, u.jW)(e, async () => {
                 let { default: e } = await n.e('56049').then(n.bind(n, 338991));
                 return (t) =>
                     (0, i.jsx)(e, {
-                        guildId: M,
+                        guildId: w,
                         ...t
                     });
             });
@@ -55,15 +50,15 @@ function A(e) {
             events: { onMouseEnter: F, onMouseLeave: z }
         } = (0, c.j)(),
         W = (e) =>
-            (0, i.jsx)(d.Popout, {
-                animation: d.Popout.Animation.FADE,
+            (0, i.jsx)(d.yRy, {
+                animation: d.yRy.Animation.FADE,
                 shouldShow: j,
                 position: 'top',
                 onRequestClose: () => D(!1),
                 renderPopout: (e) => {
                     let { closePopout: n } = e;
                     return (0, i.jsx)(v.Z, {
-                        guildId: M,
+                        guildId: w,
                         channel: t,
                         onClose: n,
                         gridNotice:
@@ -77,42 +72,42 @@ function A(e) {
                 },
                 children: (t) =>
                     (0, i.jsx)('div', {
-                        children: (0, i.jsx)(d.Button, {
+                        children: (0, i.jsx)(d.zxk, {
                             ...e,
                             ...t,
-                            className: a()(A, {
-                                [b.buttonActive]: j,
-                                [b.disabled]: R
+                            className: a()(x, {
+                                [Z.buttonActive]: j,
+                                [Z.disabled]: R
                             }),
-                            wrapperClassName: A,
-                            innerClassName: Z,
+                            wrapperClassName: x,
+                            innerClassName: A,
                             disabled: R,
                             onClick: () => {
-                                var t, n;
+                                var t;
                                 null != k && k !== o.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && U(T.L.UNKNOWN), null == e || null === (t = e.onClick) || void 0 === t || t.call(e), D(!j), H();
                             },
                             onMouseEnter: (t) => {
                                 var n, i;
-                                null === (n = x.onMouseEnter) || void 0 === n || n.call(x, t), null == e || null === (i = e.onMouseEnter) || void 0 === i || i.call(e), F();
+                                null === (n = b.onMouseEnter) || void 0 === n || n.call(b, t), null == e || null === (i = e.onMouseEnter) || void 0 === i || i.call(e), F();
                             },
                             onMouseLeave: (t) => {
                                 var n, i;
-                                null === (n = x.onMouseLeave) || void 0 === n || n.call(x, t), null == e || null === (i = e.onMouseLeave) || void 0 === i || i.call(e), z();
+                                null === (n = b.onMouseLeave) || void 0 === n || n.call(b, t), null == e || null === (i = e.onMouseLeave) || void 0 === i || i.call(e), z();
                             },
                             onContextMenu: B,
                             fullWidth: !0,
-                            size: L ? d.Button.Sizes.MEDIUM : d.Button.Sizes.SMALL,
-                            ...x,
+                            size: L ? d.zxk.Sizes.MEDIUM : d.zxk.Sizes.SMALL,
+                            ...b,
                             children: (0, i.jsx)(V, {
-                                className: l,
+                                className: r,
                                 size: 'sm',
-                                color: j ? 'white' : d.tokens.colors.INTERACTIVE_ACTIVE
+                                color: j ? 'white' : d.TVs.colors.INTERACTIVE_ACTIVE
                             })
                         })
                     })
             }),
-        Y = r.useCallback(() => {
-            !R && D(!j);
+        Y = l.useCallback(() => {
+            R || D(!j);
         }, [R, j]);
     return (
         (0, E.yp)({
@@ -121,13 +116,8 @@ function A(e) {
         }),
         (0, i.jsx)(m.Gt, {
             value: G,
-            children: (0, i.jsx)(d.Tooltip, {
-                text: (function () {
-                    if (y) return S.intl.string(S.t['Ox4/zc']);
-                    if (P) return S.intl.string(S.t['+YBKYG']);
-                    if (O) return S.intl.string(S.t.X1lQlp);
-                    return S.intl.string(S.t['6EJvHh']);
-                })(),
+            children: (0, i.jsx)(d.ua7, {
+                text: y ? S.intl.string(S.t['Ox4/zc']) : P ? S.intl.string(S.t['+YBKYG']) : O ? S.intl.string(S.t.X1lQlp) : S.intl.string(S.t['6EJvHh']),
                 children: (e) => W(e)
             })
         })

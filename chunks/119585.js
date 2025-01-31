@@ -1,14 +1,10 @@
 function i(e) {
-    let n = !1,
-        r = [];
+    let t = !1,
+        n = [];
     for (let i = 0; i < e.length; i++) {
-        let a = e.charAt(i);
-        '_' == a ? (n = !0) : /\d/.test(a) ? (r.push(a), (n = !0)) : n ? (r.push(a.toUpperCase()), (n = !1)) : 0 == i ? r.push(a.toLowerCase()) : r.push(a);
+        let r = e.charAt(i);
+        '_' == r ? (t = !0) : /\d/.test(r) ? (n.push(r), (t = !0)) : t ? (n.push(r.toUpperCase()), (t = !1)) : 0 == i ? n.push(r.toLowerCase()) : n.push(r);
     }
-    return r.join('');
+    return n.join('');
 }
-r.d(n, {
-    c: function () {
-        return i;
-    }
-});
+n.d(t, { c: () => i });

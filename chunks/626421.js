@@ -1,48 +1,39 @@
-n.d(t, {
-    Z: function () {
-        return p;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => p }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
     s = n(399606),
     o = n(243778),
     c = n(914010),
     d = n(566840),
     u = n(921944),
     h = n(913208);
-let m = r.memo(function (e) {
-    var t, n, l;
-    let { state: s, markAsDismissed: o } = e,
-        { name: c, guildId: d, boundingRect: u } = s,
-        m = r.useMemo(
-            () =>
-                (function (e, t, n) {
-                    return null;
-                })(c, 0, 0),
-            [c, d, o]
-        );
-    if (null == m) return null;
-    return (0, i.jsx)('div', {
-        className: a()(h.upsell, !(null != (t = u) && !(t.y < 0)) && h.hidden),
-        style:
-            ((n = c),
-            null == (l = u)
-                ? {}
-                : {
-                      top: l.top,
-                      left: l.right - l.x
-                  }),
-        children: m
-    });
+let m = l.memo(function (e) {
+    let { state: t, markAsDismissed: n } = e,
+        { name: r, guildId: s, boundingRect: o } = t,
+        c = l.useMemo(() => {
+            var e, t, n;
+            return (e = 0), (t = 0), (n = 0), null;
+        }, [r, s, n]);
+    return null == c
+        ? null
+        : (0, i.jsx)('div', {
+              className: a()(h.upsell, !(null != o && !(o.y < 0)) && h.hidden),
+              style:
+                  null == o
+                      ? {}
+                      : {
+                            top: o.top,
+                            left: o.right - o.x
+                        },
+              children: c
+          });
 });
 function p() {
     let e = (0, s.e7)([c.Z], () => c.Z.getGuildId()),
         t = (0, d.Eg)(e),
-        [n, r] = (0, o.US)(
+        [n, l] = (0, o.US)(
             Object.values(t)
                 .filter((e) => {
                     let { disabled: t } = e;
@@ -55,14 +46,14 @@ function p() {
             u.R.SIDEBAR
         );
     if (null == n) return null;
-    let l = t[n];
-    return null == l
+    let r = t[n];
+    return null == r
         ? null
         : (0, i.jsx)('div', {
               className: h.container,
               children: (0, i.jsx)(m, {
-                  state: l,
-                  markAsDismissed: r
+                  state: r,
+                  markAsDismissed: l
               })
           });
 }

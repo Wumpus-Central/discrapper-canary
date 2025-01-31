@@ -1,9 +1,4 @@
-n.d(t, {
-    u: function () {
-        return a;
-    }
-}),
-    n(47120);
+n.d(t, { u: () => a }), n(47120);
 var i = n(220082);
 function a(e) {
     let [t, n, a] = (0, i.Cf)(e, 'transparent'),

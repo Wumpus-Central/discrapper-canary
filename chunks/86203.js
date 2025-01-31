@@ -1,32 +1,28 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-});
+n.d(t, { Z: () => d });
 var i = n(200651);
 n(192379);
 var l = n(481060),
-    r = n(493683),
-    a = n(726521),
+    a = n(493683),
+    r = n(726521),
     s = n(718538),
     o = n(868807),
     c = n(388032);
 function d(e) {
-    let { channel: t, buttonSize: n = l.ButtonSizes.TINY, color: d = l.Button.Colors.RED, className: u, onReportClick: h, onReportSubmit: p, onMouseEnter: m, onMouseLeave: f } = e,
-        { error: g, loaded: C } = (0, o.a)(t),
-        x = t.isDM() ? t.getRecipientId() : null,
-        v = (0, s.V)(t.id, x);
-    if (null == v && (C || g)) return null;
-    let _ = () => {
-        null == p || p(), r.Z.closePrivateChannel(t.id);
+    let { channel: t, buttonSize: n = l.PhG.TINY, color: d = l.zxk.Colors.RED, className: u, onReportClick: h, onReportSubmit: p, onMouseEnter: m, onMouseLeave: f } = e,
+        { error: g, loaded: _ } = (0, o.a)(t),
+        C = t.isDM() ? t.getRecipientId() : null,
+        x = (0, s.V)(t.id, C);
+    if (null == x && (_ || g)) return null;
+    let v = () => {
+        null == p || p(), a.Z.closePrivateChannel(t.id);
     };
-    return (0, i.jsx)(l.Button, {
+    return (0, i.jsx)(l.zxk, {
         className: u,
         size: n,
         color: d,
-        disabled: null == v,
+        disabled: null == x,
         onClick: (e) => {
-            e.stopPropagation(), null == h || h(), null != v && (0, a.WL)(v, _);
+            e.stopPropagation(), null == h || h(), null != x && (0, r.WL)(x, v);
         },
         onMouseEnter: m,
         onMouseLeave: f,

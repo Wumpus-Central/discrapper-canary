@@ -1,19 +1,15 @@
 n.d(t, {
-    Q: function () {
-        return l;
-    },
-    f: function () {
-        return a;
-    }
+    Q: () => a,
+    f: () => r
 });
 var i = n(818083),
-    r = n(987338);
-let l = (0, i.B)({
+    l = n(987338);
+let a = (0, i.B)({
     kind: 'user',
     id: '2024-11_teen_defaults__message_requests',
     label: 'New defaults for message requests',
     defaultConfig: { enabled: !1 },
-    commonTriggerPoint: r.$P.CONNECTION_OPEN,
+    commonTriggerPoint: l.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 1,
@@ -22,7 +18,7 @@ let l = (0, i.B)({
         }
     ]
 });
-function a(e) {
+function r(e) {
     let { location: t } = e;
-    return l.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
+    return a.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
 }

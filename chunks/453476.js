@@ -1,6 +1,7 @@
-e.exports = {
-    giftRecipientInfo: 'giftRecipientInfo_cc6d95',
-    content: 'content_cc6d95',
-    giftRecipientName: 'giftRecipientName_cc6d95',
-    giftRecipientTag: 'giftRecipientTag_cc6d95'
+var i = {
+    giftRecipientInfo: 'giftRecipientInfo__57118',
+    content: 'content__57118',
+    giftRecipientName: 'giftRecipientName__57118',
+    giftRecipientTag: 'giftRecipientTag__57118'
 };
+e.exports = i;

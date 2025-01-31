@@ -1,47 +1,41 @@
-e.r(n),
-    e.d(n, {
-        default: function () {
-            return d;
-        }
-    }),
-    e(47120);
-var o = e(200651),
-    s = e(192379),
-    i = e(481060),
-    l = e(313201),
-    a = e(117984),
-    r = e(388032),
-    c = e(116576);
-function d(t) {
-    let { onClose: n, transitionState: e } = t,
-        d = (0, l.Dt)(),
-        [u, h] = s.useState('');
-    return (0, o.jsx)('form', {
-        onSubmit: function (t) {
-            t.preventDefault(), (0, a.CM)(u), n();
+n.d(t, { default: () => d }), n(47120);
+var s = n(200651),
+    i = n(192379),
+    l = n(481060),
+    a = n(313201),
+    o = n(117984),
+    r = n(388032),
+    c = n(116576);
+function d(e) {
+    let { onClose: t, transitionState: n } = e,
+        d = (0, a.Dt)(),
+        [h, u] = i.useState('');
+    return (0, s.jsx)('form', {
+        onSubmit: function (e) {
+            e.preventDefault(), (0, o.CM)(h), t();
         },
-        children: (0, o.jsxs)(i.ModalRoot, {
-            transitionState: e,
+        children: (0, s.jsxs)(l.Y0X, {
+            transitionState: n,
             'aria-labelledby': d,
             children: [
-                (0, o.jsxs)(i.ModalContent, {
+                (0, s.jsxs)(l.hzk, {
                     children: [
-                        (0, o.jsx)(i.Heading, {
+                        (0, s.jsx)(l.X6q, {
                             id: d,
                             className: c.header,
                             variant: 'heading-xl/semibold',
                             children: r.intl.string(r.t['ISN+ND'])
                         }),
-                        (0, o.jsx)(i.ModalCloseButton, {
-                            onClick: n,
+                        (0, s.jsx)(l.olH, {
+                            onClick: t,
                             className: c.closeButton
                         }),
-                        (0, o.jsx)(i.FormItem, {
+                        (0, s.jsx)(l.xJW, {
                             title: r.intl.string(r.t.OCAkGB),
                             className: c.name,
-                            children: (0, o.jsx)(i.TextInput, {
-                                value: u,
-                                onChange: h,
+                            children: (0, s.jsx)(l.oil, {
+                                value: h,
+                                onChange: u,
                                 maxLength: 100,
                                 placeholder: r.intl.string(r.t.eTVbt7),
                                 className: c.__invalid_inputWrapper,
@@ -50,17 +44,17 @@ function d(t) {
                         })
                     ]
                 }),
-                (0, o.jsxs)(i.ModalFooter, {
+                (0, s.jsxs)(l.mzw, {
                     children: [
-                        (0, o.jsx)(i.Button, {
+                        (0, s.jsx)(l.zxk, {
                             type: 'submit',
-                            disabled: '' === u,
+                            disabled: '' === h,
                             children: r.intl.string(r.t['ISN+ND'])
                         }),
-                        (0, o.jsx)(i.Button, {
-                            onClick: n,
-                            look: i.Button.Looks.LINK,
-                            color: i.Button.Colors.PRIMARY,
+                        (0, s.jsx)(l.zxk, {
+                            onClick: t,
+                            look: l.zxk.Looks.LINK,
+                            color: l.zxk.Colors.PRIMARY,
                             children: r.intl.string(r.t['ETE/oK'])
                         })
                     ]

@@ -1,6 +1,7 @@
-var r;
-!(function (e) {
-    (e.CHANNEL_CHAT_RESIZABLE_SIDEBAR_RESIZE_HANDLE_WIDTH = '8px'),
+n.d(t, { Z: () => r });
+var i = (function (e) {
+    return (
+        (e.CHANNEL_CHAT_RESIZABLE_SIDEBAR_RESIZE_HANDLE_WIDTH = '8px'),
         (e.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE = '485px'),
         (e.ACTIVITY_BOOKMARK_EMBED_IMAGE_WIDTH = '356px'),
         (e.FOLDER_ITEM_ANIMATION_DURATION = '150ms'),
@@ -97,6 +98,8 @@ var r;
         (e.INTERACTION_IFRAME_MODAL_MODAL_MAX_WIDTH = '1280px'),
         (e.INTERACTION_IFRAME_MODAL_MODAL_MARGIN = '80px'),
         (e.INTERACTION_IFRAME_MODAL_MODAL_HEADER_HEIGHT = '52px'),
-        (e.APPLICATION_DIRECTORY_PROFILE_ICON_SIZE = '122px');
-})(r || (r = {})),
-    (n.Z = r);
+        (e.APPLICATION_DIRECTORY_PROFILE_ICON_SIZE = '122px'),
+        e
+    );
+})(i || {});
+let r = i;

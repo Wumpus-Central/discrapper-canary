@@ -1,87 +1,83 @@
-n.d(t, {
-    J: function () {
-        return E;
-    }
-});
+n.d(t, { J: () => x });
 var i = n(192379),
-    r = n(399606),
-    l = n(430198),
-    a = n(754688),
-    o = n(314897),
-    s = n(592125),
+    l = n(399606),
+    a = n(430198),
+    r = n(754688),
+    s = n(314897),
+    o = n(592125),
     c = n(271383),
-    u = n(430824),
-    d = n(914010),
+    d = n(430824),
+    u = n(914010),
     m = n(594174),
     h = n(158222),
-    f = n(312146),
+    _ = n(312146),
     p = n(487554),
-    _ = n(874748),
-    g = n(981631);
-function E(e, t) {
-    let n = (0, f.p$)(),
-        E = (0, _.LR)(e),
-        C = (0, r.e7)(
-            [c.ZP, o.default],
+    g = n(874748),
+    f = n(981631);
+function x(e, t) {
+    let n = (0, _.p$)(),
+        x = (0, g.LR)(e),
+        E = (0, l.e7)(
+            [c.ZP, s.default],
             () => {
-                let e = o.default.getId();
-                return c.ZP.isMember(null == E ? void 0 : E.guildId, e);
+                let e = s.default.getId();
+                return c.ZP.isMember(null == x ? void 0 : x.guildId, e);
             },
-            [E]
+            [x]
         ),
-        I = (0, r.e7)([l.Z], () => null != E && (null == E ? void 0 : E.channelId) != null && l.Z.isChannelGated(E.guildId, E.channelId), [E]),
-        x = t.hasFlag(g.iLy.IS_CROSSPOST),
+        C = (0, l.e7)([a.Z], () => null != x && (null == x ? void 0 : x.channelId) != null && a.Z.isChannelGated(x.guildId, x.channelId), [x]),
+        v = t.hasFlag(f.iLy.IS_CROSSPOST),
         {
-            rawMediaPostEmbedData: N,
-            guild: v,
-            parentChannel: T,
-            user: S,
-            selectedGuildId: A,
-            canAccess: b
-        } = (0, r.cj)(
-            [p.Z, u.Z, s.Z, m.default, d.Z],
+            rawMediaPostEmbedData: I,
+            guild: N,
+            parentChannel: S,
+            user: T,
+            selectedGuildId: b,
+            canAccess: A
+        } = (0, l.cj)(
+            [p.Z, d.Z, o.Z, m.default, u.Z],
             () => {
                 var e;
-                let t = null === (e = p.Z.getMediaPostEmbed(null == E ? void 0 : E.threadId)) || void 0 === e ? void 0 : e.media,
-                    n = u.Z.getGuild(null == E ? void 0 : E.guildId),
-                    i = s.Z.getChannel(null == E ? void 0 : E.channelId),
-                    r = m.default.getUser(null == t ? void 0 : t.author_id),
-                    l = d.Z.getGuildId(),
-                    o = null != i && (0, a.YO)(i);
+                let t = null === (e = p.Z.getMediaPostEmbed(null == x ? void 0 : x.threadId)) || void 0 === e ? void 0 : e.media,
+                    n = d.Z.getGuild(null == x ? void 0 : x.guildId),
+                    i = o.Z.getChannel(null == x ? void 0 : x.channelId),
+                    l = m.default.getUser(null == t ? void 0 : t.author_id),
+                    a = u.Z.getGuildId(),
+                    s = null != i && (0, r.YO)(i);
                 return {
                     rawMediaPostEmbedData: t,
                     guild: n,
                     parentChannel: i,
-                    user: r,
-                    selectedGuildId: l,
-                    canAccess: o
+                    user: l,
+                    selectedGuildId: a,
+                    canAccess: s
                 };
             },
-            [E]
+            [x]
         ),
         j = i.useMemo(() => {
-            let e = (0, _.ku)({
-                mediaPostEmbedData: N,
-                guild: v,
-                parentChannel: T,
-                user: S,
-                selectedGuildId: A,
-                canAccess: b
+            let e = (0, g.ku)({
+                mediaPostEmbedData: I,
+                guild: N,
+                parentChannel: S,
+                user: T,
+                selectedGuildId: b,
+                canAccess: A
             });
             return null == e
                 ? null
                 : {
                       ...e,
-                      user: S
+                      user: T
                   };
-        }, [N, v, T, S, A, b]);
+        }, [I, N, S, T, b, A]);
     return (
         i.useEffect(() => {
-            if ((null == E ? void 0 : E.threadId) != null) {
-                let e = p.Z.getEmbedFetchState(E.threadId);
-                !0 === n && e === p.M.NOT_FETCHED && (!C || !1 !== I) && (C || !x) && (0, h.xP)(null == E ? void 0 : E.threadId);
+            if ((null == x ? void 0 : x.threadId) != null) {
+                let e = p.Z.getEmbedFetchState(x.threadId);
+                !0 !== n || e !== p.M.NOT_FETCHED || (E && !1 === C) || (!E && v) || (0, h.xP)(null == x ? void 0 : x.threadId);
             }
-        }, [E, n, C, I, x]),
+        }, [x, n, E, C, v]),
         j
     );
 }

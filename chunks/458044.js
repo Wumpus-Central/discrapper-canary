@@ -1,23 +1,19 @@
-n.d(a, {
-    Z: function () {
-        return x;
-    }
-});
-var e = n(388032),
-    i = n(918298),
-    s = n(301745),
-    r = n(588415),
-    o = n(162822),
-    l = n(937855),
-    c = n(5396),
-    d = n(563772),
-    m = n(420241),
-    g = n(140574),
-    u = n(765434);
+a.d(e, { Z: () => x });
+var n = a(388032),
+    i = a(918298),
+    s = a(301745),
+    r = a(588415),
+    l = a(162822),
+    o = a(937855),
+    c = a(5396),
+    d = a(563772),
+    m = a(420241),
+    g = a(140574),
+    u = a(765434);
 function x(t) {
     return [
         {
-            tags: [e.intl.string(e.t['/XjSo6']), e.intl.string(e.t['Af/56e']), e.intl.string(e.t.LNsW0N)],
+            tags: [n.intl.string(n.t['/XjSo6']), n.intl.string(n.t['Af/56e']), n.intl.string(n.t.LNsW0N)],
             posts: [
                 {
                     user: {
@@ -25,10 +21,10 @@ function x(t) {
                         avatarSrc: m
                     },
                     tagId: 2,
-                    title: e.intl.string(e.t.g1hPk5),
+                    title: n.intl.string(n.t.g1hPk5),
                     messageCount: 8,
                     reactionCount: 0,
-                    activeAgo: e.intl.formatToPlainString(e.t.N9M4Nz, { count: 10 }),
+                    activeAgo: n.intl.formatToPlainString(n.t.N9M4Nz, { count: 10 }),
                     attachment: i
                 },
                 {
@@ -37,10 +33,10 @@ function x(t) {
                         avatarSrc: d
                     },
                     tagId: 1,
-                    title: e.intl.string(e.t['5GM0TU']),
+                    title: n.intl.string(n.t['5GM0TU']),
                     messageCount: 17,
                     reactionCount: 11,
-                    activeAgo: e.intl.formatToPlainString(e.t.N9M4Nz, { count: 24 })
+                    activeAgo: n.intl.formatToPlainString(n.t.N9M4Nz, { count: 24 })
                 },
                 {
                     user: {
@@ -48,10 +44,10 @@ function x(t) {
                         avatarSrc: g
                     },
                     tagId: 2,
-                    title: e.intl.string(e.t['2LpQS0']),
+                    title: n.intl.string(n.t['2LpQS0']),
                     messageCount: 18,
                     reactionCount: 15,
-                    activeAgo: e.intl.formatToPlainString(e.t.N9M4Nz, { count: 40 })
+                    activeAgo: n.intl.formatToPlainString(n.t.N9M4Nz, { count: 40 })
                 },
                 {
                     user: {
@@ -59,15 +55,15 @@ function x(t) {
                         avatarSrc: u
                     },
                     tagId: 0,
-                    title: e.intl.string(e.t.gFI7Ly),
+                    title: n.intl.string(n.t.gFI7Ly),
                     messageCount: 2,
                     reactionCount: 0,
-                    activeAgo: e.intl.formatToPlainString(e.t.p0KedH, { count: 1 }),
+                    activeAgo: n.intl.formatToPlainString(n.t.p0KedH, { count: 1 }),
                     attachment: s
                 }
             ],
             postPreview: {
-                title: e.intl.string(e.t['5GM0TU']),
+                title: n.intl.string(n.t['5GM0TU']),
                 messages: [
                     {
                         author: {
@@ -75,7 +71,7 @@ function x(t) {
                             avatarSrc: d,
                             isOP: !0
                         },
-                        content: e.intl.string(e.t.zEDYfn)
+                        content: n.intl.string(n.t.zEDYfn)
                     },
                     {
                         author: {
@@ -83,7 +79,7 @@ function x(t) {
                             avatarSrc: m,
                             isOP: !1
                         },
-                        content: e.intl.string(e.t['+XGMDg'])
+                        content: n.intl.string(n.t['+XGMDg'])
                     },
                     {
                         author: {
@@ -91,14 +87,14 @@ function x(t) {
                             avatarSrc: g,
                             isOP: !1
                         },
-                        content: e.intl.string(e.t.z0qmHB)
+                        content: n.intl.string(n.t.z0qmHB)
                     }
                 ]
             },
-            ariaLabel: e.intl.string(e.t.TDOyPj)
+            ariaLabel: n.intl.string(n.t.TDOyPj)
         },
         {
-            tags: [e.intl.string(e.t.ogyxen), e.intl.string(e.t.S97ZX1), e.intl.string(e.t.d6GdPz)],
+            tags: [n.intl.string(n.t.ogyxen), n.intl.string(n.t.S97ZX1), n.intl.string(n.t.d6GdPz)],
             posts: [
                 {
                     user: {
@@ -106,10 +102,10 @@ function x(t) {
                         avatarSrc: g
                     },
                     tagId: 0,
-                    title: e.intl.string(e.t.aOyKZ2),
+                    title: n.intl.string(n.t.aOyKZ2),
                     messageCount: 8,
                     reactionCount: 11,
-                    activeAgo: e.intl.formatToPlainString(e.t.N9M4Nz, { count: 10 }),
+                    activeAgo: n.intl.formatToPlainString(n.t.N9M4Nz, { count: 10 }),
                     attachment: r
                 },
                 {
@@ -118,10 +114,10 @@ function x(t) {
                         avatarSrc: m
                     },
                     tagId: 1,
-                    title: e.intl.string(e.t.EQIrvb),
+                    title: n.intl.string(n.t.EQIrvb),
                     messageCount: 24,
                     reactionCount: 0,
-                    activeAgo: e.intl.formatToPlainString(e.t.N9M4Nz, { count: 24 })
+                    activeAgo: n.intl.formatToPlainString(n.t.N9M4Nz, { count: 24 })
                 },
                 {
                     user: {
@@ -129,10 +125,10 @@ function x(t) {
                         avatarSrc: d
                     },
                     tagId: 1,
-                    title: e.intl.string(e.t.f9n6UV),
+                    title: n.intl.string(n.t.f9n6UV),
                     messageCount: 15,
                     reactionCount: 17,
-                    activeAgo: e.intl.formatToPlainString(e.t.N9M4Nz, { count: 40 })
+                    activeAgo: n.intl.formatToPlainString(n.t.N9M4Nz, { count: 40 })
                 },
                 {
                     user: {
@@ -140,15 +136,15 @@ function x(t) {
                         avatarSrc: u
                     },
                     tagId: 2,
-                    title: e.intl.string(e.t.lCjd1N),
+                    title: n.intl.string(n.t.lCjd1N),
                     messageCount: 2,
                     reactionCount: 0,
-                    activeAgo: e.intl.formatToPlainString(e.t.p0KedH, { count: 1 }),
-                    attachment: o
+                    activeAgo: n.intl.formatToPlainString(n.t.p0KedH, { count: 1 }),
+                    attachment: l
                 }
             ],
             postPreview: {
-                title: e.intl.string(e.t.f9n6UV),
+                title: n.intl.string(n.t.f9n6UV),
                 messages: [
                     {
                         author: {
@@ -156,7 +152,7 @@ function x(t) {
                             avatarSrc: d,
                             isOP: !0
                         },
-                        content: e.intl.string(e.t.VeQaUl)
+                        content: n.intl.string(n.t.VeQaUl)
                     },
                     {
                         author: {
@@ -164,7 +160,7 @@ function x(t) {
                             avatarSrc: m,
                             isOP: !1
                         },
-                        content: e.intl.string(e.t.lwjElJ)
+                        content: n.intl.string(n.t.lwjElJ)
                     },
                     {
                         author: {
@@ -172,14 +168,14 @@ function x(t) {
                             avatarSrc: g,
                             isOP: !1
                         },
-                        content: e.intl.string(e.t.RNqQmJ)
+                        content: n.intl.string(n.t.RNqQmJ)
                     }
                 ]
             },
-            ariaLabel: e.intl.string(e.t.iLeWra)
+            ariaLabel: n.intl.string(n.t.iLeWra)
         },
         {
-            tags: [e.intl.string(e.t['5jLvfX']), e.intl.string(e.t.lRgWdX), e.intl.string(e.t.Hy4EPz)],
+            tags: [n.intl.string(n.t['5jLvfX']), n.intl.string(n.t.lRgWdX), n.intl.string(n.t.Hy4EPz)],
             posts: [
                 {
                     user: {
@@ -187,11 +183,11 @@ function x(t) {
                         avatarSrc: d
                     },
                     tagId: null,
-                    title: e.intl.string(e.t.to6uUV),
+                    title: n.intl.string(n.t.to6uUV),
                     messageCount: 11,
                     reactionCount: 17,
-                    activeAgo: e.intl.formatToPlainString(e.t.N9M4Nz, { count: 10 }),
-                    attachment: l
+                    activeAgo: n.intl.formatToPlainString(n.t.N9M4Nz, { count: 10 }),
+                    attachment: o
                 },
                 {
                     user: {
@@ -199,10 +195,10 @@ function x(t) {
                         avatarSrc: m
                     },
                     tagId: 1,
-                    title: e.intl.string(e.t.dsQXOj),
+                    title: n.intl.string(n.t.dsQXOj),
                     messageCount: 24,
                     reactionCount: 0,
-                    activeAgo: e.intl.formatToPlainString(e.t.N9M4Nz, { count: 24 })
+                    activeAgo: n.intl.formatToPlainString(n.t.N9M4Nz, { count: 24 })
                 },
                 {
                     user: {
@@ -210,10 +206,10 @@ function x(t) {
                         avatarSrc: g
                     },
                     tagId: 0,
-                    title: e.intl.string(e.t['XL/bbW']),
+                    title: n.intl.string(n.t['XL/bbW']),
                     messageCount: 18,
                     reactionCount: 15,
-                    activeAgo: e.intl.formatToPlainString(e.t.N9M4Nz, { count: 40 })
+                    activeAgo: n.intl.formatToPlainString(n.t.N9M4Nz, { count: 40 })
                 },
                 {
                     user: {
@@ -221,15 +217,15 @@ function x(t) {
                         avatarSrc: u
                     },
                     tagId: null,
-                    title: e.intl.string(e.t.XSYHPz),
+                    title: n.intl.string(n.t.XSYHPz),
                     messageCount: 2,
                     reactionCount: 0,
-                    activeAgo: e.intl.formatToPlainString(e.t.p0KedH, { count: 1 }),
+                    activeAgo: n.intl.formatToPlainString(n.t.p0KedH, { count: 1 }),
                     attachment: c
                 }
             ],
             postPreview: {
-                title: e.intl.string(e.t.to6uUV),
+                title: n.intl.string(n.t.to6uUV),
                 messages: [
                     {
                         author: {
@@ -237,7 +233,7 @@ function x(t) {
                             avatarSrc: d,
                             isOP: !0
                         },
-                        content: e.intl.string(e.t['6DyhGh'])
+                        content: n.intl.string(n.t['6DyhGh'])
                     },
                     {
                         author: {
@@ -245,7 +241,7 @@ function x(t) {
                             avatarSrc: m,
                             isOP: !1
                         },
-                        content: e.intl.string(e.t.BLiuYG)
+                        content: n.intl.string(n.t.BLiuYG)
                     },
                     {
                         author: {
@@ -253,11 +249,11 @@ function x(t) {
                             avatarSrc: g,
                             isOP: !1
                         },
-                        content: e.intl.string(e.t.PYLKhI)
+                        content: n.intl.string(n.t.PYLKhI)
                     }
                 ]
             },
-            ariaLabel: e.intl.string(e.t.kEMWrK)
+            ariaLabel: n.intl.string(n.t.kEMWrK)
         }
     ][t];
 }

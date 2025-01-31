@@ -1,153 +1,97 @@
-r.d(n, {
-    $0: function () {
-        return O;
-    },
-    AN: function () {
-        return k;
-    },
-    Ct: function () {
-        return C;
-    },
-    EQ: function () {
-        return Z;
-    },
-    Ej: function () {
-        return S;
-    },
-    ME: function () {
-        return m;
-    },
-    O1: function () {
-        return I;
-    },
-    O8: function () {
-        return L;
-    },
-    Pl: function () {
-        return T;
-    },
-    Uw: function () {
-        return w;
-    },
-    ZE: function () {
-        return M;
-    },
-    _G: function () {
-        return b;
-    },
-    _O: function () {
-        return A;
-    },
-    _y: function () {
-        return g;
-    },
-    do: function () {
-        return U;
-    },
-    g7: function () {
-        return D;
-    },
-    g_: function () {
-        return h;
-    },
-    hs: function () {
-        return v;
-    },
-    j4: function () {
-        return R;
-    },
-    ks: function () {
-        return V;
-    },
-    lX: function () {
-        return y;
-    },
-    m_: function () {
-        return _;
-    },
-    qH: function () {
-        return x;
-    },
-    tj: function () {
-        return E;
-    },
-    uw: function () {
-        return N;
-    },
-    wN: function () {
-        return G;
-    },
-    zZ: function () {
-        return B;
-    },
-    zm: function () {
-        return P;
-    }
+n.d(t, {
+    $0: () => R,
+    AN: () => M,
+    Ct: () => A,
+    EQ: () => B,
+    Ej: () => T,
+    ME: () => h,
+    O1: () => I,
+    O8: () => D,
+    Pl: () => b,
+    Uw: () => L,
+    ZE: () => w,
+    _G: () => y,
+    _O: () => S,
+    _y: () => m,
+    do: () => k,
+    g7: () => O,
+    g_: () => _,
+    hs: () => E,
+    j4: () => C,
+    ks: () => F,
+    lX: () => v,
+    m_: () => p,
+    qH: () => x,
+    tj: () => g,
+    uw: () => N,
+    wN: () => G,
+    zZ: () => U,
+    zm: () => P
 });
-var i = r(848246),
-    a = r(710845),
-    o = r(380684),
-    s = r(533293),
-    l = r(575691),
-    u = r(474936);
-let c = new a.Z('ProductCatalog.tsx'),
-    d = Object.freeze({
-        [u.p9.TIER_0]: u.Si.TIER_0,
-        [u.p9.TIER_1]: u.Si.TIER_1,
-        [u.p9.TIER_2]: u.Si.TIER_2
+var i = n(848246),
+    r = n(710845),
+    a = n(380684),
+    s = n(533293),
+    o = n(575691),
+    l = n(474936);
+let u = new r.Z('ProductCatalog.tsx'),
+    c = Object.freeze({
+        [l.p9.TIER_0]: l.Si.TIER_0,
+        [l.p9.TIER_1]: l.Si.TIER_1,
+        [l.p9.TIER_2]: l.Si.TIER_2
     });
-function f(e, n) {
-    if (null == n || null == n.premiumType) return !1;
+function d(e, t) {
+    if (null == t || null == t.premiumType) return !1;
     try {
-        let r = d[n.premiumType];
-        if (null == r) return c.warn("Cannot find the corresponding SKU to the user's premium type ".concat(n.premiumType)), !1;
-        let i = F[r];
-        if (null == i) return c.warn("Cannot find the corresponding product catalog entry to the user's SKU ".concat(r, ' and premium type ').concat(n.premiumType)), !1;
+        let n = c[t.premiumType];
+        if (null == n) return u.warn("Cannot find the corresponding SKU to the user's premium type ".concat(t.premiumType)), !1;
+        let i = Z[n];
+        if (null == i) return u.warn("Cannot find the corresponding product catalog entry to the user's SKU ".concat(n, ' and premium type ').concat(t.premiumType)), !1;
         return i.skuFeatures.includes(e);
     } catch (e) {
-        var r;
-        c.error("Error while retrieving user's feature access: ".concat(null !== (r = e.message) && void 0 !== r ? r : JSON.stringify(e)));
+        var n;
+        u.error("Error while retrieving user's feature access: ".concat(null !== (n = e.message) && void 0 !== n ? n : JSON.stringify(e)));
     }
     return !1;
 }
-class p extends s.Z {
-    constructor(e, n) {
-        super(e, (e) => f(this, e), n);
+class f extends s.Z {
+    constructor(e, t) {
+        super(e, (e) => d(this, e), t);
     }
 }
-let h = new p(i.q.ANIMATED_EMOJIS),
-    _ = new p(i.q.EMOJIS_EVERYWHERE),
-    m = new p(i.q.STICKERS_EVERYWHERE),
-    g = new p(i.q.SOUNDBOARD_EVERYWHERE),
-    E = new p(i.q.CUSTOM_CALL_SOUNDS),
-    v = new p(i.q.PREMIUM_VOICE_FILTERS),
-    y = new p(i.q.ANIMATED_AVATAR),
-    b = new p(i.q.CUSTOM_DISCRIMINATOR),
-    I = new p(i.q.PREMIUM_GUILD_MEMBER_PROFILE),
-    T = new p('profileBadges'),
-    S = new p(i.q.PROFILE_PREMIUM_FEATURES, 'custom banner and avatar decoration'),
-    A = new p('collectibles'),
-    C = new p('appIcons'),
-    N = new p(i.q.CLIENT_THEMES),
-    R = new p('boostDiscount'),
-    O = new p('freeBoosts'),
-    D = new p(i.q.STREAM_MID_QUALITY),
-    L = new p(i.q.STREAM_HIGH_QUALITY),
-    x = new p(i.q.CUSTOM_NOTIFICATION_SOUNDS),
-    w = new p('fancyVoiceChannelReactions'),
-    P = new p('installPremiumApplications'),
-    M = new p('redeemPremiumPerks'),
-    k = new p(i.q.VIDEO_FILTER_ASSETS);
-new s.Z(i.q.INCREASED_FILE_UPLOAD_SIZE, o.h);
-let U = new p(i.q.INCREASED_GUILD_LIMIT),
-    B = new p(i.q.INCREASED_MESSAGE_LENGTH),
-    G = new p('increasedVideoUploadQuality'),
-    Z = new p('uploadLargeFiles'),
-    F = Object.freeze({
-        [u.Si.TIER_0]: new l.Z(u.Si.TIER_0, [h, _, m, T, k, G, Z, C]),
-        [u.Si.TIER_1]: new l.Z(u.Si.TIER_1, [h, _, y, b, T, R, D, w, G, Z, C]),
-        [u.Si.TIER_2]: new l.Z(u.Si.TIER_2, [h, _, m, g, E, y, b, I, T, S, N, R, O, D, L, w, P, M, k, U, B, G, Z, C, A, x, v])
+let _ = new f(i.q.ANIMATED_EMOJIS),
+    p = new f(i.q.EMOJIS_EVERYWHERE),
+    h = new f(i.q.STICKERS_EVERYWHERE),
+    m = new f(i.q.SOUNDBOARD_EVERYWHERE),
+    g = new f(i.q.CUSTOM_CALL_SOUNDS),
+    E = new f(i.q.PREMIUM_VOICE_FILTERS),
+    v = new f(i.q.ANIMATED_AVATAR),
+    y = new f(i.q.CUSTOM_DISCRIMINATOR),
+    I = new f(i.q.PREMIUM_GUILD_MEMBER_PROFILE),
+    b = new f('profileBadges'),
+    T = new f(i.q.PROFILE_PREMIUM_FEATURES, 'custom banner and avatar decoration'),
+    S = new f('collectibles'),
+    A = new f('appIcons'),
+    N = new f(i.q.CLIENT_THEMES),
+    C = new f('boostDiscount'),
+    R = new f('freeBoosts'),
+    O = new f(i.q.STREAM_MID_QUALITY),
+    D = new f(i.q.STREAM_HIGH_QUALITY),
+    x = new f(i.q.CUSTOM_NOTIFICATION_SOUNDS),
+    L = new f('fancyVoiceChannelReactions'),
+    P = new f('installPremiumApplications'),
+    w = new f('redeemPremiumPerks'),
+    M = new f(i.q.VIDEO_FILTER_ASSETS);
+new s.Z(i.q.INCREASED_FILE_UPLOAD_SIZE, a.h);
+let k = new f(i.q.INCREASED_GUILD_LIMIT),
+    U = new f(i.q.INCREASED_MESSAGE_LENGTH),
+    G = new f('increasedVideoUploadQuality'),
+    B = new f('uploadLargeFiles'),
+    Z = Object.freeze({
+        [l.Si.TIER_0]: new o.Z(l.Si.TIER_0, [_, p, h, b, M, G, B, A]),
+        [l.Si.TIER_1]: new o.Z(l.Si.TIER_1, [_, p, v, y, b, C, O, L, G, B, A]),
+        [l.Si.TIER_2]: new o.Z(l.Si.TIER_2, [_, p, h, m, g, v, y, I, b, T, N, C, R, O, D, L, P, w, M, k, U, G, B, A, S, x, E])
     });
-function V(e, n) {
-    return e.getFeatureValue(n);
+function F(e, t) {
+    return e.getFeatureValue(t);
 }

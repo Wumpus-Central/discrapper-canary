@@ -1,9 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-}),
-    n(653041);
+n.d(t, { Z: () => u }), n(653041);
 var i = n(192379),
     r = n(782568),
     l = n(635142),
@@ -17,7 +12,7 @@ function u(e) {
         { isUserMFAEnabled: m, isModerationMFAEnabled: h } = (0, o.N)(),
         g = i.useCallback(async () => {
             var e, i;
-            m ? !h && (await (null == n ? void 0 : null === (i = n.onRequireModeratorMFAClick) || void 0 === i ? void 0 : i.call(n))) : await (null == n ? void 0 : null === (e = n.onEnableMFAClick) || void 0 === e ? void 0 : e.call(n)), null == t || t();
+            m ? h || (await (null == n ? void 0 : null === (i = n.onRequireModeratorMFAClick) || void 0 === i ? void 0 : i.call(n))) : await (null == n ? void 0 : null === (e = n.onEnableMFAClick) || void 0 === e ? void 0 : e.call(n)), null == t || t();
         }, [m, h, t, n]),
         x = (0, a.R)({ onEnableMFAClick: g });
     return i.useMemo(() => {

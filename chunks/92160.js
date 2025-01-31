@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
+n.d(t, { Z: () => c });
 var i = n(200651);
 n(192379);
 var r = n(120356),
@@ -16,14 +12,14 @@ function c(e) {
         className: l()(t, o.enableContainer),
         children: [
             n
-                ? (0, i.jsx)(s.CheckmarkLargeIcon, {
+                ? (0, i.jsx)(s.dz2, {
                       size: 'custom',
                       color: 'currentColor',
                       width: 24,
                       height: 24,
                       className: l()(o.activeCircle, { [o.animate]: u })
                   })
-                : (0, i.jsx)(s.PencilIcon, {
+                : (0, i.jsx)(s.vdY, {
                       size: 'custom',
                       color: 'currentColor',
                       width: 24,
@@ -48,19 +44,19 @@ function c(e) {
                 children: [
                     null == c
                         ? null
-                        : (0, i.jsx)(s.Button, {
+                        : (0, i.jsx)(s.zxk, {
                               className: o.previewButton,
-                              look: s.Button.Looks.LINK,
-                              size: s.Button.Sizes.SMALL,
+                              look: s.zxk.Looks.LINK,
+                              size: s.zxk.Sizes.SMALL,
                               onClick: c,
                               disabled: g,
-                              color: s.Button.Colors.PRIMARY,
+                              color: s.zxk.Colors.PRIMARY,
                               children: null != r ? r : a.intl.string(a.t['5U0kLy'])
                           }),
-                    (0, i.jsx)(s.Button, {
+                    (0, i.jsx)(s.zxk, {
                         disabled: null == d || g,
-                        size: s.Button.Sizes.SMALL,
-                        color: n ? s.Button.Colors.RED : s.Button.Colors.BRAND,
+                        size: s.zxk.Sizes.SMALL,
+                        color: n ? s.zxk.Colors.RED : s.zxk.Colors.BRAND,
                         onClick: d,
                         children: n ? a.intl.string(a.t.R9GHyc) : a.intl.string(a.t.JFfinp)
                     })

@@ -1,13 +1,9 @@
-n.d(t, {
-    z: function () {
-        return u;
-    }
-});
+n.d(t, { z: () => u });
 var i = n(200651),
-    r = n(120356),
-    s = n.n(r),
-    a = n(84735),
-    l = n(993365),
+    s = n(120356),
+    r = n.n(s),
+    l = n(84735),
+    a = n(993365),
     o = n(247368);
 let c = {
         xs: 'text-sm/semibold',
@@ -22,42 +18,42 @@ let c = {
         lg: 'md'
     };
 function u(e) {
-    let { role: t = 'button', variant: n = 'primary', size: r = 'md', text: u, icon: m, iconPosition: g = 'end', iconOpticalOffsetMargin: h = 0, focusProps: p, ...x } = e;
-    function f() {
+    let { role: t = 'button', variant: n = 'primary', size: s = 'md', text: u, icon: m, iconPosition: h = 'end', iconOpticalOffsetMargin: g = 0, focusProps: _, ...x } = e;
+    function p() {
         if (null == m) return;
         let e = (function () {
-            if (0 === h) return {};
-            switch (g) {
+            if (0 === g) return {};
+            switch (h) {
                 case 'start':
-                    return { marginLeft: h };
+                    return { marginLeft: g };
                 case 'end':
-                    return { marginRight: h };
+                    return { marginRight: g };
             }
             return {};
         })();
         return (0, i.jsx)(m, {
             color: 'currentColor',
             style: e,
-            size: d[r]
+            size: d[s]
         });
     }
-    return (0, i.jsx)(a.t, {
-        ...p,
+    return (0, i.jsx)(l.t, {
+        ..._,
         children: (0, i.jsxs)('button', {
             role: t,
-            className: s()(o.button, o[r], o[n]),
+            className: r()(o.button, o[s], o[n]),
             ...x,
             children: [
-                null != m && 'start' === g && (0, i.jsx)(f, {}),
-                (0, i.jsx)(l.x, {
+                null != m && 'start' === h && (0, i.jsx)(p, {}),
+                (0, i.jsx)(a.x, {
                     tag: 'span',
-                    variant: c[r],
+                    variant: c[s],
                     color: 'none',
                     className: o.text,
                     lineClamp: 1,
                     children: u
                 }),
-                null != m && 'end' === g && (0, i.jsx)(f, {})
+                null != m && 'end' === h && (0, i.jsx)(p, {})
             ]
         })
     });

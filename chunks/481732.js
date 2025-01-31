@@ -1,9 +1,5 @@
-r.d(n, {
-    p: function () {
-        return a;
-    }
-});
+n.d(t, { p: () => r });
 var i = 0;
-function a() {
+function r() {
     return i++;
 }

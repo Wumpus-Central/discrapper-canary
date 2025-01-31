@@ -1,1 +1,2 @@
-e.exports = { legacyInputCommandHeader: 'legacyInputCommandHeader_c70ab6' };
+var i = { legacyInputCommandHeader: 'legacyInputCommandHeader__2862d' };
+e.exports = i;

@@ -1,41 +1,39 @@
 var i =
         Object.assign ||
         function (e) {
-            for (var n = 1; n < arguments.length; n++) {
-                var r = arguments[n];
-                for (var i in r) Object.prototype.hasOwnProperty.call(r, i) && (e[i] = r[i]);
+            for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
             }
             return e;
         },
-    a = 'src/createAnimatedComponent.js',
-    o = (function () {
-        function e(e, n) {
-            for (var r = 0; r < n.length; r++) {
-                var i = n[r];
+    r = 'src/createAnimatedComponent.js',
+    a = (function () {
+        function e(e, t) {
+            for (var n = 0; n < t.length; n++) {
+                var i = t[n];
                 (i.enumerable = i.enumerable || !1), (i.configurable = !0), 'value' in i && (i.writable = !0), Object.defineProperty(e, i.key, i);
             }
         }
-        return function (n, r, i) {
-            return r && e(n.prototype, r), i && e(n, i), n;
+        return function (t, n, i) {
+            return n && e(t.prototype, n), i && e(t, i), t;
         };
     })();
-function s(e, n) {
-    var r = {};
-    for (var i in e) {
-        if (!(n.indexOf(i) >= 0)) Object.prototype.hasOwnProperty.call(e, i) && (r[i] = e[i]);
-    }
-    return r;
+function s(e, t) {
+    var n = {};
+    for (var i in e) !(t.indexOf(i) >= 0) && Object.prototype.hasOwnProperty.call(e, i) && (n[i] = e[i]);
+    return n;
 }
-function l(e, n) {
-    if (!(e instanceof n)) throw TypeError('Cannot call a class as a function');
+function o(e, t) {
+    if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function u(e, n) {
+function l(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-    return n && ('object' == typeof n || 'function' == typeof n) ? n : e;
+    return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
-function c(e, n) {
-    if ('function' != typeof n && null !== n) throw TypeError('Super expression must either be null or a function, not ' + typeof n);
-    (e.prototype = Object.create(n && n.prototype, {
+function u(e, t) {
+    if ('function' != typeof t && null !== t) throw TypeError('Super expression must either be null or a function, not ' + typeof t);
+    (e.prototype = Object.create(t && t.prototype, {
         constructor: {
             value: e,
             enumerable: !1,
@@ -43,20 +41,20 @@ function c(e, n) {
             configurable: !0
         }
     })),
-        n && (Object.setPrototypeOf ? Object.setPrototypeOf(e, n) : (e.__proto__ = n));
+        t && (Object.setPrototypeOf ? Object.setPrototypeOf(e, t) : (e.__proto__ = t));
 }
-var d = r(192379),
-    f = r(724027),
-    p = r(457958);
-function h(e) {
-    var n = 'node',
-        r = (function (r) {
-            function h() {
-                return l(this, h), u(this, (h.__proto__ || Object.getPrototypeOf(h)).apply(this, arguments));
+var c = n(192379),
+    d = n(724027),
+    f = n(457958);
+function _(e) {
+    var t = 'node',
+        n = (function (n) {
+            function _() {
+                return o(this, _), l(this, (_.__proto__ || Object.getPrototypeOf(_)).apply(this, arguments));
             }
             return (
-                c(h, r),
-                o(h, [
+                u(_, n),
+                a(_, [
                     {
                         key: 'componentWillUnmount',
                         value: function () {
@@ -66,7 +64,7 @@ function h(e) {
                     {
                         key: 'setNativeProps',
                         value: function (e) {
-                            !1 === p.current(this.refs[n], e, this) && this.forceUpdate();
+                            !1 === f.current(this.refs[t], e, this) && this.forceUpdate();
                         }
                     },
                     {
@@ -78,12 +76,12 @@ function h(e) {
                     {
                         key: 'attachProps',
                         value: function (e) {
-                            var r = this,
+                            var n = this,
                                 i = this._propsAnimated,
-                                a = function () {
-                                    !1 === p.current(r.refs[n], r._propsAnimated.__getAnimatedValue(), r) && r.forceUpdate();
+                                r = function () {
+                                    !1 === f.current(n.refs[t], n._propsAnimated.__getAnimatedValue(), n) && n.forceUpdate();
                                 };
-                            (this._propsAnimated = new f(e, a)), i && i.__detach();
+                            (this._propsAnimated = new d(e, r)), i && i.__detach();
                         }
                     },
                     {
@@ -95,16 +93,16 @@ function h(e) {
                     {
                         key: 'render',
                         value: function () {
-                            var r = this._propsAnimated.__getValue(),
-                                o = r.style,
-                                l = s(r, ['style']);
-                            return d.createElement(
+                            var n = this._propsAnimated.__getValue(),
+                                a = n.style,
+                                o = s(n, ['style']);
+                            return c.createElement(
                                 e,
-                                i({}, l, {
-                                    style: p.transformStyles(o),
-                                    ref: n,
+                                i({}, o, {
+                                    style: f.transformStyles(a),
+                                    ref: t,
                                     __source: {
-                                        fileName: a,
+                                        fileName: r,
                                         lineNumber: 78
                                     }
                                 })
@@ -112,16 +110,16 @@ function h(e) {
                         }
                     }
                 ]),
-                h
+                _
             );
-        })(d.Component);
+        })(c.Component);
     return (
-        (r.propTypes = {
-            style: function (n, r, i) {
+        (n.propTypes = {
+            style: function (t, n, i) {
                 if (!e.propTypes) return;
             }
         }),
-        r
+        n
     );
 }
-e.exports = h;
+e.exports = _;

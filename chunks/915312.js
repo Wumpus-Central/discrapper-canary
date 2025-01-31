@@ -1,35 +1,31 @@
 n.d(t, {
-    LL: function () {
-        return h;
-    },
-    bN: function () {
-        return f;
-    }
+    LL: () => h,
+    bN: () => f
 }),
     n(47120),
     n(653041);
 var r = n(192379),
-    i = n(15729),
-    a = n(731965),
-    o = n(692114),
-    l = n(626135),
+    a = n(15729),
+    i = n(731965),
+    l = n(692114),
+    o = n(626135),
     u = n(532810),
     c = n(981631);
-let s = new o.Z('a11y_violations'),
-    d = (0, i.U)(() => ({ check: null }));
+let s = new l.Z('a11y_violations'),
+    d = (0, a.U)(() => ({ check: null }));
 function f(e) {
     let t = (0, r.useCallback)((e) => {
         var t;
         e.hash !== (null === (t = d.getState().check) || void 0 === t ? void 0 : t.hash) &&
-            ((0, a.j)(() => d.setState({ check: e })),
-            !(function (e) {
+            ((0, i.j)(() => d.setState({ check: e })),
+            (function (e) {
                 for (let [t, n] of e.entries())
                     for (let e of n.instances.values())
                         for (let { trace: n, hash: r } of e) {
                             let e = JSON.stringify(r);
                             s.has(e) ||
                                 (s.add(e),
-                                l.default.track(c.rMx.A11Y_RUNTIME_VIOLATION, {
+                                o.default.track(c.rMx.A11Y_RUNTIME_VIOLATION, {
                                     rule_id: t,
                                     trace: n.join('\n'),
                                     hash: r
@@ -44,9 +40,9 @@ function h() {
         if (null == e) return [];
         let t = [];
         for (let { instances: n, rule: r } of e.values())
-            for (let [e, i] of n.entries()) {
-                let n = i.map((e) => e.element),
-                    a = i[0].message;
+            for (let [e, a] of n.entries()) {
+                let n = a.map((e) => e.element),
+                    i = a[0].message;
                 t.push({
                     key: e,
                     title: r.metadata.description,
@@ -54,7 +50,7 @@ function h() {
                     id: r.id,
                     tags: r.tags,
                     elements: n,
-                    message: a
+                    message: i
                 });
             }
         return t;

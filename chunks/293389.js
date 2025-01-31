@@ -1,48 +1,48 @@
-n(47120);
+n.d(t, { Z: () => k }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    s = n(120356),
-    a = n.n(s),
-    l = n(442837),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(442837),
     o = n(692547),
     c = n(481060),
     d = n(224706),
     u = n(225433),
     m = n(570928),
-    g = n(594190),
-    h = n(320724),
-    p = n(297700),
+    h = n(594190),
+    g = n(320724),
+    _ = n(297700),
     x = n(77498),
-    f = n(283595),
+    p = n(283595),
     E = n(626135),
-    _ = n(251625),
-    C = n(358085),
+    C = n(251625),
+    f = n(358085),
     T = n(210887),
-    S = n(981631),
-    b = n(388032),
-    I = n(621360),
-    N = n(616926),
+    N = n(981631),
+    I = n(388032),
+    S = n(621360),
+    b = n(616926),
     v = n(652849),
-    A = n(684309),
-    j = n(232186);
-let O = l.ZP.connectStores([T.Z], () => ({ theme: T.Z.theme }))(c.EmptyState),
-    R = (0, C.isWindows)();
+    j = n(684309),
+    A = n(232186);
+let O = a.ZP.connectStores([T.Z], () => ({ theme: T.Z.theme }))(c.ubH),
+    R = (0, f.isWindows)();
 function P(e) {
     let { onClose: t } = e,
-        n = (0, l.e7)([g.ZP], () => g.ZP.getCandidateGames()),
-        [s, o] = r.useState(null),
+        n = (0, a.e7)([h.ZP], () => h.ZP.getCandidateGames()),
+        [r, o] = s.useState(null),
         u = n.map((e) => ({
             key: e.pid,
             value: e,
             label: null != e.name ? e.name : ''
         }));
-    return (0, i.jsxs)(c.Dialog, {
-        className: a()(I.addGamePopout, N.elevationBorderHigh),
-        'aria-label': b.intl.string(b.t.GTCx0t),
+    return (0, i.jsxs)(c.VqE, {
+        className: l()(S.addGamePopout, b.elevationBorderHigh),
+        'aria-label': I.intl.string(I.t.GTCx0t),
         children: [
-            (0, i.jsx)(c.SearchableSelect, {
-                placeholder: b.intl.string(b.t.XqMe3N),
-                value: s,
+            (0, i.jsx)(c.VcW, {
+                placeholder: I.intl.string(I.t.XqMe3N),
+                value: r,
                 options: u,
                 onChange: function (e) {
                     o(e);
@@ -55,23 +55,23 @@ function P(e) {
                         children: e.label
                     })
             }),
-            (0, i.jsx)(c.FormDivider, { className: a()(j.marginTop8, j.marginBottom8) }),
+            (0, i.jsx)(c.$i$, { className: l()(A.marginTop8, A.marginBottom8) }),
             (0, i.jsxs)('div', {
-                className: a()(I.actions, v.horizontal),
+                className: l()(S.actions, v.horizontal),
                 children: [
-                    (0, i.jsx)(c.Button, {
-                        className: I.cancelButton,
-                        look: c.ButtonLooks.LINK,
-                        color: c.ButtonColors.PRIMARY,
+                    (0, i.jsx)(c.zxk, {
+                        className: S.cancelButton,
+                        look: c.iLD.LINK,
+                        color: c.Ttl.PRIMARY,
                         onClick: t,
-                        children: b.intl.string(b.t['ETE/oK'])
+                        children: I.intl.string(I.t['ETE/oK'])
                     }),
-                    (0, i.jsx)(c.Button, {
-                        disabled: null == s,
+                    (0, i.jsx)(c.zxk, {
+                        disabled: null == r,
                         onClick: function () {
-                            if (null != s) d.Z.addGame(s.pid, s.name), t();
+                            null != r && (d.Z.addGame(r.pid, r.name), t());
                         },
-                        children: b.intl.string(b.t.GTCx0t)
+                        children: I.intl.string(I.t.GTCx0t)
                     })
                 ]
             })
@@ -80,61 +80,52 @@ function P(e) {
 }
 function D(e) {
     var t;
-    let { rawGame: n, nowPlaying: s = !1, isOverride: h } = e,
-        _ = (0, l.cj)([x.Z, g.ZP, f.Z], () => (0, g.FZ)(n)),
-        [C, T] = r.useState(!1),
-        [N, j] = r.useState(null !== (t = _.name) && void 0 !== t ? t : '???'),
-        O = a()(v.flexCenter, {
-            [I.game]: !s,
-            [I.activeGame]: s,
-            [A.card]: !s,
-            [I.nowPlaying]: null != _ && s
+    let { rawGame: n, nowPlaying: r = !1, isOverride: g } = e,
+        C = (0, a.cj)([x.Z, h.ZP, p.Z], () => (0, h.FZ)(n)),
+        [f, T] = s.useState(!1),
+        [b, A] = s.useState(null !== (t = C.name) && void 0 !== t ? t : '???'),
+        O = l()(v.flexCenter, {
+            [S.game]: !r,
+            [S.activeGame]: r,
+            [j.card]: !r,
+            [S.nowPlaying]: null != C && r
         });
     function P() {
-        d.Z.deleteEntry(_);
+        d.Z.toggleDetection(C);
     }
     function D() {
-        _.name !== N && d.Z.editName(_, N);
-    }
-    function y(e) {
-        13 === e.keyCode && (e.currentTarget.blur(), e.preventDefault());
-    }
-    function B() {
-        d.Z.toggleDetection(_);
-    }
-    function Z() {
-        if (C) return;
-        let e = null != _.id ? x.Z.getDetectableGame(_.id) : null;
-        E.default.track(S.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
+        if (f) return;
+        let e = null != C.id ? x.Z.getDetectableGame(C.id) : null;
+        E.default.track(N.rMx.USER_SETTINGS_REPORT_INCORRECT_GAME_DETECTION, {
             application_id: null == e ? void 0 : e.id,
-            game_name: _.name
+            game_name: C.name
         }),
-            (0, c.showToast)((0, c.createToast)(b.intl.formatToPlainString(b.t['6klMOj'], { gameName: _.name }), c.ToastType.SUCCESS)),
+            (0, c.showToast)((0, c.createToast)(I.intl.formatToPlainString(I.t['6klMOj'], { gameName: C.name }), c.ToastType.SUCCESS)),
             T(!0);
     }
     return (0, i.jsxs)('div', {
         className: O,
         children: [
             (0, i.jsxs)('div', {
-                className: a()(I.gameNameLastPlayed, v.vertical),
+                className: l()(S.gameNameLastPlayed, v.vertical),
                 children: [
-                    _.verified && !h
+                    C.verified && !g
                         ? (0, i.jsxs)('div', {
-                              className: I.detectedApplication,
+                              className: S.detectedApplication,
                               children: [
                                   (0, i.jsx)('div', {
-                                      className: I.gameName,
-                                      children: _.name
+                                      className: S.gameName,
+                                      children: C.name
                                   }),
-                                  (0, i.jsx)(c.Tooltip, {
-                                      text: b.intl.string(b.t['4PJP5u']),
+                                  (0, i.jsx)(c.ua7, {
+                                      text: I.intl.string(I.t['4PJP5u']),
                                       children: (e) =>
-                                          (0, i.jsx)(p.Z, {
-                                              className: I.gameVerifiedIcon,
+                                          (0, i.jsx)(_.Z, {
+                                              className: S.gameVerifiedIcon,
                                               size: 18,
                                               color: o.Z.unsafe_rawColors.BRAND_500.css,
                                               ...e,
-                                              children: (0, i.jsx)(c.CheckmarkSmallIcon, {
+                                              children: (0, i.jsx)(c.kmB, {
                                                   size: 'custom',
                                                   width: 18,
                                                   height: 18,
@@ -145,21 +136,25 @@ function D(e) {
                               ]
                           })
                         : (0, i.jsx)('input', {
-                              className: a()(I.gameName, I.gameNameInput),
+                              className: l()(S.gameName, S.gameNameInput),
                               type: 'text',
                               maxLength: 128,
-                              value: N,
-                              onBlur: D,
-                              onKeyDown: y,
-                              onChange: (e) => j(e.target.value)
+                              value: b,
+                              onBlur: function () {
+                                  C.name !== b && d.Z.editName(C, b);
+                              },
+                              onKeyDown: function (e) {
+                                  13 === e.keyCode && (e.currentTarget.blur(), e.preventDefault());
+                              },
+                              onChange: (e) => A(e.target.value)
                           }),
                     (function () {
                         let e;
-                        let { played: t, exePath: n } = _;
+                        let { played: t, exePath: n } = C;
                         return (
-                            s ? (e = b.intl.string(b.t.VbV5dn)) : null != t && '' !== t && (e = b.intl.format(b.t.gGeOEx, { when: t })),
+                            r ? (e = I.intl.string(I.t.VbV5dn)) : null != t && '' !== t && (e = I.intl.format(I.t.gGeOEx, { when: t })),
                             (0, i.jsx)('div', {
-                                className: I.lastPlayed,
+                                className: S.lastPlayed,
                                 children: (0, i.jsx)(m.Z, {
                                     hoverText: null != n && '' !== n ? n.toUpperCase() : '',
                                     children: e
@@ -169,59 +164,59 @@ function D(e) {
                     })()
                 ]
             }),
-            h
+            g
                 ? null
-                : C
+                : f
                   ? null
                   : (0, i.jsx)('div', {
-                        className: a()(v.flexCenter, v.noWrap, v.justifyBetween, I.toggleContainer),
-                        children: (0, i.jsx)(c.Tooltip, {
-                            text: b.intl.string(b.t['y0B+lp']),
+                        className: l()(v.flexCenter, v.noWrap, v.justifyBetween, S.toggleContainer),
+                        children: (0, i.jsx)(c.ua7, {
+                            text: I.intl.string(I.t['y0B+lp']),
                             children: (e) => {
                                 let { onMouseEnter: t, onMouseLeave: n } = e;
-                                return (0, i.jsx)(c.Clickable, {
-                                    'aria-label': b.intl.string(b.t['y0B+lp']),
-                                    className: I.toggleIcon,
-                                    onClick: Z,
+                                return (0, i.jsx)(c.P3F, {
+                                    'aria-label': I.intl.string(I.t['y0B+lp']),
+                                    className: S.toggleIcon,
+                                    onClick: D,
                                     onMouseEnter: t,
                                     onMouseLeave: n,
-                                    children: (0, i.jsx)(c.FlagIcon, {
+                                    children: (0, i.jsx)(c.U65, {
                                         size: 'md',
                                         color: 'currentColor',
-                                        className: I.toggleIconOn,
-                                        colorClass: I.fill
+                                        className: S.toggleIconOn,
+                                        colorClass: S.fill
                                     })
                                 });
                             }
                         })
                     }),
             (function () {
-                let { detectable: e } = _,
+                let { detectable: e } = C,
                     t = e
-                        ? (0, i.jsx)(c.EyeIcon, {
+                        ? (0, i.jsx)(c.tEF, {
                               size: 'md',
                               color: 'currentColor',
-                              className: I.toggleIconOn,
-                              colorClass: I.fill
+                              className: S.toggleIconOn,
+                              colorClass: S.fill
                           })
-                        : (0, i.jsx)(c.EyeSlashIcon, {
+                        : (0, i.jsx)(c.kZF, {
                               size: 'md',
                               color: 'currentColor',
-                              className: I.toggleIconOff,
-                              colorClass: I.fill
+                              className: S.toggleIconOff,
+                              colorClass: S.fill
                           });
                 return (0, i.jsx)('div', {
-                    className: a()(v.flexCenter, v.noWrap, v.justifyBetween, I.toggleContainer),
-                    children: (0, i.jsx)(c.Tooltip, {
-                        text: b.intl.string(b.t.QmitzM),
+                    className: l()(v.flexCenter, v.noWrap, v.justifyBetween, S.toggleContainer),
+                    children: (0, i.jsx)(c.ua7, {
+                        text: I.intl.string(I.t.QmitzM),
                         children: (e) => {
-                            let { onMouseEnter: n, onMouseLeave: r } = e;
-                            return (0, i.jsx)(c.Clickable, {
-                                'aria-label': b.intl.string(b.t.QmitzM),
-                                className: I.toggleIcon,
-                                onClick: B,
+                            let { onMouseEnter: n, onMouseLeave: s } = e;
+                            return (0, i.jsx)(c.P3F, {
+                                'aria-label': I.intl.string(I.t.QmitzM),
+                                className: S.toggleIcon,
+                                onClick: P,
                                 onMouseEnter: n,
-                                onMouseLeave: r,
+                                onMouseLeave: s,
                                 children: t
                             });
                         }
@@ -230,47 +225,47 @@ function D(e) {
             })(),
             (function () {
                 if (!R) return null;
-                let { overlay: e, overlayWarn: t } = _,
+                let { overlay: e, overlayWarn: t } = C,
                     n = e
-                        ? (0, i.jsx)(c.ScreenIcon, {
+                        ? (0, i.jsx)(c.pzj, {
                               size: 'md',
                               color: 'currentColor',
-                              className: I.toggleIconOn,
-                              colorClass: I.fill
+                              className: S.toggleIconOn,
+                              colorClass: S.fill
                           })
-                        : (0, i.jsx)(c.ScreenSlashIcon, {
+                        : (0, i.jsx)(c.o8v, {
                               size: 'md',
                               color: 'currentColor',
-                              className: I.toggleIconOff,
-                              colorClass: I.fill
+                              className: S.toggleIconOff,
+                              colorClass: S.fill
                           }),
-                    r = t
-                        ? (0, i.jsx)(c.Tooltip, {
-                              text: b.intl.string(b.t.Vfw2Ly),
+                    s = t
+                        ? (0, i.jsx)(c.ua7, {
+                              text: I.intl.string(I.t.Vfw2Ly),
                               children: (e) =>
                                   (0, i.jsx)('i', {
-                                      className: I.overlayWarningIcon,
+                                      className: S.overlayWarningIcon,
                                       ...e
                                   })
                           })
                         : null;
                 return (0, i.jsxs)('div', {
-                    className: a()(v.flexCenter, v.noWrap, v.justifyBetween, I.toggleContainer),
+                    className: l()(v.flexCenter, v.noWrap, v.justifyBetween, S.toggleContainer),
                     children: [
-                        r,
-                        (0, i.jsx)(c.Tooltip, {
-                            text: b.intl.string(b.t['1+O+Tk']),
+                        s,
+                        (0, i.jsx)(c.ua7, {
+                            text: I.intl.string(I.t['1+O+Tk']),
                             children: (t) => {
-                                let { onMouseEnter: r, onMouseLeave: s } = t;
-                                return (0, i.jsx)(c.Clickable, {
-                                    'aria-label': b.intl.string(b.t['1+O+Tk']),
-                                    className: I.toggleIcon,
+                                let { onMouseEnter: s, onMouseLeave: r } = t;
+                                return (0, i.jsx)(c.P3F, {
+                                    'aria-label': I.intl.string(I.t['1+O+Tk']),
+                                    className: S.toggleIcon,
                                     onClick: () => {
                                         var t;
-                                        return (t = !e), void d.Z.toggleOverlay(_, t);
+                                        return (t = !e), void d.Z.toggleOverlay(C, t);
                                     },
-                                    onMouseEnter: r,
-                                    onMouseLeave: s,
+                                    onMouseEnter: s,
+                                    onMouseLeave: r,
                                     children: n
                                 });
                             }
@@ -278,10 +273,12 @@ function D(e) {
                     ]
                 });
             })(),
-            !s || h
+            !r || g
                 ? (0, i.jsx)(u.Z, {
-                      className: I.removeGame,
-                      onClick: P
+                      className: S.removeGame,
+                      onClick: function () {
+                          d.Z.deleteEntry(C);
+                      }
                   })
                 : null
         ]
@@ -289,28 +286,28 @@ function D(e) {
 }
 function y() {
     return (0, i.jsx)('div', {
-        className: a()(v.flexCenter, I.notDetected, I.activeGame),
+        className: l()(v.flexCenter, S.notDetected, S.activeGame),
         children: (0, i.jsxs)('div', {
-            className: a()(I.gameNameLastPlayed, v.vertical),
+            className: l()(S.gameNameLastPlayed, v.vertical),
             children: [
                 (0, i.jsx)('div', {
-                    className: I.gameName,
-                    children: b.intl.string(b.t['H68X9/'])
+                    className: S.gameName,
+                    children: I.intl.string(I.t['H68X9/'])
                 }),
                 (0, i.jsx)('div', {
-                    className: I.lastPlayed,
-                    children: b.intl.string(b.t.T5Ilm5)
+                    className: S.lastPlayed,
+                    children: I.intl.string(I.t.T5Ilm5)
                 })
             ]
         })
     });
 }
-function B(e) {
+function Z(e) {
     let { children: t } = e;
     return (0, i.jsxs)(O, {
-        className: j.marginTop40,
+        className: A.marginTop40,
         children: [
-            (0, i.jsx)(c.EmptyStateImage, {
+            (0, i.jsx)(c.oxh, {
                 darkSrc: n(879601),
                 lightSrc: n(889000),
                 width: 430,
@@ -320,83 +317,83 @@ function B(e) {
         ]
     });
 }
-let Z = (0, _.oH)(function () {
-    for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-    return new Set(t.map((e) => e.exePath));
-});
-t.Z = function (e) {
-    let { className: t, showHeader: n = !0 } = e,
-        s = (0, l.Wu)([g.ZP], () => g.ZP.getGamesSeen(!0)),
-        { runningGame: o, overrideExePaths: d } = (0, l.cj)([g.ZP], () => ({
-            runningGame: g.ZP.getVisibleGame(),
-            overrideExePaths: Z(...g.ZP.getOverrides())
-        }));
-    return (
-        r.useEffect(() => ((0, h.Ky)(), h.P7), []),
-        (0, i.jsxs)(c.FormSection, {
-            tag: 'h1',
-            title: n ? b.intl.string(b.t.AVDyEh) : null,
-            className: t,
-            children: [
-                null != o
-                    ? (0, i.jsx)(
-                          D,
-                          {
-                              rawGame: o,
-                              isOverride: d.has(o.exePath),
-                              nowPlaying: !0
-                          },
-                          (0, g.rH)(o)
-                      )
-                    : (0, i.jsx)(y, {}),
-                (0, i.jsxs)('div', {
-                    className: a()(I.nowPlayingAdd, j.marginReset, j.marginTop8, j.marginBottom20),
-                    children: [
-                        (0, i.jsx)('span', { children: b.intl.string(b.t.xwhoqK) }),
-                        (0, i.jsx)(c.Popout, {
-                            renderPopout: (e) => {
-                                let { closePopout: t } = e;
-                                return (0, i.jsx)(P, { onClose: t });
-                            },
-                            align: 'center',
-                            position: 'bottom',
-                            children: (e) =>
-                                (0, i.jsx)(c.Button, {
-                                    ...e,
-                                    look: c.ButtonLooks.LINK,
-                                    size: c.ButtonSizes.MIN,
-                                    color: c.ButtonColors.LINK,
-                                    children: b.intl.string(b.t.GjgdXV)
-                                })
-                        })
-                    ]
-                }),
-                0 === s.length
-                    ? (0, i.jsx)(B, { children: (0, i.jsx)(c.EmptyStateText, { children: b.intl.string(b.t['1yiJws']) }) })
-                    : (0, i.jsxs)(c.FormSection, {
-                          className: j.marginTop40,
-                          children: [
-                              (0, i.jsx)(c.FormTitle, {
-                                  className: j.marginBottom4,
-                                  children: b.intl.string(b.t.jCOdv7)
-                              }),
-                              (0, i.jsx)(c.FormText, {
-                                  type: c.FormTextTypes.DESCRIPTION,
-                                  children: b.intl.format(b.t.KPA3m5, { igdbLink: 'https://www.igdb.com/about' })
-                              }),
-                              s.map((e) =>
-                                  (0, i.jsx)(
-                                      D,
-                                      {
-                                          rawGame: e,
-                                          isOverride: d.has(e.exePath)
-                                      },
-                                      (0, g.rH)(e)
+let L = (0, C.oH)(function () {
+        for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
+        return new Set(t.map((e) => e.exePath));
+    }),
+    k = function (e) {
+        let { className: t, showHeader: n = !0 } = e,
+            r = (0, a.Wu)([h.ZP], () => h.ZP.getGamesSeen(!0)),
+            { runningGame: o, overrideExePaths: d } = (0, a.cj)([h.ZP], () => ({
+                runningGame: h.ZP.getVisibleGame(),
+                overrideExePaths: L(...h.ZP.getOverrides())
+            }));
+        return (
+            s.useEffect(() => ((0, g.Ky)(), g.P7), []),
+            (0, i.jsxs)(c.hjN, {
+                tag: 'h1',
+                title: n ? I.intl.string(I.t.AVDyEh) : null,
+                className: t,
+                children: [
+                    null != o
+                        ? (0, i.jsx)(
+                              D,
+                              {
+                                  rawGame: o,
+                                  isOverride: d.has(o.exePath),
+                                  nowPlaying: !0
+                              },
+                              (0, h.rH)(o)
+                          )
+                        : (0, i.jsx)(y, {}),
+                    (0, i.jsxs)('div', {
+                        className: l()(S.nowPlayingAdd, A.marginReset, A.marginTop8, A.marginBottom20),
+                        children: [
+                            (0, i.jsx)('span', { children: I.intl.string(I.t.xwhoqK) }),
+                            (0, i.jsx)(c.yRy, {
+                                renderPopout: (e) => {
+                                    let { closePopout: t } = e;
+                                    return (0, i.jsx)(P, { onClose: t });
+                                },
+                                align: 'center',
+                                position: 'bottom',
+                                children: (e) =>
+                                    (0, i.jsx)(c.zxk, {
+                                        ...e,
+                                        look: c.iLD.LINK,
+                                        size: c.PhG.MIN,
+                                        color: c.Ttl.LINK,
+                                        children: I.intl.string(I.t.GjgdXV)
+                                    })
+                            })
+                        ]
+                    }),
+                    0 === r.length
+                        ? (0, i.jsx)(Z, { children: (0, i.jsx)(c.OZU, { children: I.intl.string(I.t['1yiJws']) }) })
+                        : (0, i.jsxs)(c.hjN, {
+                              className: A.marginTop40,
+                              children: [
+                                  (0, i.jsx)(c.vwX, {
+                                      className: A.marginBottom4,
+                                      children: I.intl.string(I.t.jCOdv7)
+                                  }),
+                                  (0, i.jsx)(c.R94, {
+                                      type: c.geA.DESCRIPTION,
+                                      children: I.intl.format(I.t.KPA3m5, { igdbLink: 'https://www.igdb.com/about' })
+                                  }),
+                                  r.map((e) =>
+                                      (0, i.jsx)(
+                                          D,
+                                          {
+                                              rawGame: e,
+                                              isOverride: d.has(e.exePath)
+                                          },
+                                          (0, h.rH)(e)
+                                      )
                                   )
-                              )
-                          ]
-                      })
-            ]
-        })
-    );
-};
+                              ]
+                          })
+                ]
+            })
+        );
+    };

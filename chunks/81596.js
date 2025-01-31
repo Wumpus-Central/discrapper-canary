@@ -1,65 +1,59 @@
-e.r(n),
-    e.d(n, {
-        default: function () {
-            return f;
-        }
-    }),
-    e(47120);
-var o = e(200651),
+e.d(n, { default: () => x }), e(47120);
+var i = e(200651),
     r = e(192379),
-    i = e(442837),
-    l = e(481060),
-    s = e(230711),
-    a = e(485267),
+    l = e(442837),
+    s = e(481060),
+    d = e(230711),
+    o = e(485267),
     c = e(564990),
-    d = e(353647),
-    u = e(527790),
-    E = e(540440),
+    a = e(353647),
+    E = e(527790),
+    u = e(540440),
     _ = e(365583),
     h = e(388032),
     T = e(51478);
-function f(t) {
-    let { user: n, entry: e, transitionState: f, onAction: N, onClose: R, onOpenGameSettings: x } = t,
-        [C, S] = (0, i.Wu)([d.Z], () => [d.Z.isDeletingEntryHistory, d.Z.deleteOutboxEntryError]);
+function x(t) {
+    let { user: n, entry: e, transitionState: x, onAction: N, onClose: R, onOpenGameSettings: f } = t,
+        [L, p] = (0, l.Wu)([a.Z], () => [a.Z.isDeletingEntryHistory, a.Z.deleteOutboxEntryError]);
     return (
-        r.useEffect(() => a.Bt, []),
-        (0, o.jsxs)(l.ModalRoot, {
-            size: l.ModalSize.SMALL,
-            transitionState: f,
+        r.useEffect(() => o.Bt, []),
+        (0, i.jsxs)(s.Y0X, {
+            size: s.CgR.SMALL,
+            transitionState: x,
             children: [
-                (0, o.jsxs)(l.ModalContent, {
+                (0, i.jsxs)(s.hzk, {
                     className: T.content,
                     children: [
-                        null != S
-                            ? (0, o.jsxs)('div', {
+                        null != p
+                            ? (0, i.jsxs)('div', {
                                   className: T.error,
                                   children: [
-                                      (0, o.jsx)(l.CircleXIcon, { color: l.tokens.colors.STATUS_DANGER }),
-                                      (0, o.jsx)(l.Text, {
+                                      (0, i.jsx)(s.k$p, { color: s.TVs.colors.STATUS_DANGER }),
+                                      (0, i.jsx)(s.Text, {
                                           variant: 'text-sm/medium',
                                           children: h.intl.string(h.t.FMbL3t)
                                       })
                                   ]
                               })
                             : null,
-                        (0, o.jsx)(l.Heading, {
+                        (0, i.jsx)(s.X6q, {
                             variant: 'heading-lg/semibold',
-                            children: (0, E.y)(e)
+                            children: (0, u.y)(e)
                         }),
-                        (0, o.jsx)(l.Text, {
+                        (0, i.jsx)(s.Text, {
                             variant: 'text-sm/normal',
                             tag: 'span',
                             children: h.intl.format(h.t.KV72oa, {
                                 settingsHook: (t, n) => {
                                     let r = (0, _.C)({
                                         entry: e,
-                                        onOpenGameSettings: x
+                                        onOpenGameSettings: f
                                     });
-                                    return (0, o.jsx)(
-                                        l.Anchor,
+                                    return (0, i.jsx)(
+                                        s.eee,
                                         {
                                             onClick: () => {
-                                                null == N || N({ action: 'PRESS_CLEAR_HISTORY_DISCLAIMER' }), null != r ? r() : s.Z.open(), R();
+                                                null == N || N({ action: 'PRESS_CLEAR_HISTORY_DISCLAIMER' }), null != r ? r() : d.Z.open(), R();
                                             },
                                             children: t
                                         },
@@ -68,7 +62,7 @@ function f(t) {
                                 }
                             })
                         }),
-                        (0, o.jsx)(u.Z, {
+                        (0, i.jsx)(E.Z, {
                             user: n,
                             entry: e,
                             className: T.card,
@@ -76,23 +70,23 @@ function f(t) {
                         })
                     ]
                 }),
-                (0, o.jsxs)(l.ModalFooter, {
+                (0, i.jsxs)(s.mzw, {
                     className: T.footer,
                     children: [
-                        (0, o.jsx)(l.Button, {
-                            disabled: C,
-                            color: l.ButtonColors.RED,
-                            size: l.ButtonSizes.SMALL,
+                        (0, i.jsx)(s.zxk, {
+                            disabled: L,
+                            color: s.Ttl.RED,
+                            size: s.PhG.SMALL,
                             onClick: () => {
                                 null == N || N({ action: 'PRESS_CLEAR_HISTORY_BUTTON' }), (0, c.CV)(e, n.id, R);
                             },
-                            children: null != S ? h.intl.string(h.t['5911LS']) : h.intl.string(h.t.VkKicX)
+                            children: null != p ? h.intl.string(h.t['5911LS']) : h.intl.string(h.t.VkKicX)
                         }),
-                        (0, o.jsx)(l.Button, {
+                        (0, i.jsx)(s.zxk, {
                             onClick: R,
-                            size: l.ButtonSizes.SMALL,
-                            look: l.ButtonLooks.FILLED,
-                            color: l.ButtonColors.TRANSPARENT,
+                            size: s.PhG.SMALL,
+                            look: s.iLD.FILLED,
+                            color: s.Ttl.TRANSPARENT,
                             children: h.intl.string(h.t['ETE/oK'])
                         })
                     ]

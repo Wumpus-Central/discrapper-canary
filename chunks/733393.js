@@ -1,29 +1,15 @@
-r.d(n, {
-    V: function () {
-        return g;
-    }
-});
-var i = r(518263);
-var a = r(970173);
-var o = r(520712);
-var s = r(268111);
-var l = r(941497);
-var u = r(32026);
-var c = r(480839);
-var d = r(744285);
-var f = r(492257);
-var p = r(873817);
-var h = r(710845),
-    _ = r(358085),
-    m = r(998502);
-function g() {
-    if (_.isPlatformEmbedded) {
+n.d(t, { V: () => s }), n(518263), n(970173), n(520712), n(268111), n(941497), n(32026), n(480839), n(744285), n(492257), n(873817);
+var i = n(710845),
+    r = n(358085),
+    a = n(998502);
+function s() {
+    if (r.isPlatformEmbedded) {
         let e;
         try {
-            e = m.ZP.requireModule('discord_erlpack');
-        } catch (n) {
+            e = a.ZP.requireModule('discord_erlpack');
+        } catch (t) {
             try {
-                e = m.ZP.requireModule('erlpack');
+                e = a.ZP.requireModule('erlpack');
             } catch (e) {}
         }
         if (null != e)
@@ -31,19 +17,19 @@ function g() {
                 static canUse() {
                     return null != e;
                 }
-                pack(n) {
-                    return e.pack(n).buffer;
+                pack(t) {
+                    return e.pack(t).buffer;
                 }
-                unpack(n) {
-                    n instanceof ArrayBuffer && (n = new Uint8Array(n));
+                unpack(t) {
+                    t instanceof ArrayBuffer && (t = new Uint8Array(t));
                     try {
-                        return e.unpack(n);
+                        return e.unpack(t);
                     } catch (e) {
                         throw (
-                            (new h.Z('GatewayEncodingErlpackEncoding').error('Error unpacking', {
+                            (new i.Z('GatewayEncodingErlpackEncoding').error('Error unpacking', {
                                 erlpackUnpackError: e,
-                                erlpackDataPreview: null != n ? Array.from(n.slice(0, 32)) : null,
-                                erlpackDataLength: null != n ? n.length : null
+                                erlpackDataPreview: null != t ? Array.from(t.slice(0, 32)) : null,
+                                erlpackDataLength: null != t ? t.length : null
                             }),
                             e)
                         );

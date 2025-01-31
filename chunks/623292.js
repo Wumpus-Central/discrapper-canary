@@ -1,31 +1,25 @@
-r.d(n, {
-    A6: function () {
-        return s;
-    },
-    fE: function () {
-        return a;
-    },
-    qx: function () {
-        return o;
-    }
+n.d(t, {
+    A6: () => s,
+    fE: () => r,
+    qx: () => a
 });
-var i = r(570140);
-function a(e) {
-    let { message: n, channel: r, shouldMention: a, showMentionToggle: o, source: s } = e;
+var i = n(570140);
+function r(e) {
+    let { message: t, channel: n, shouldMention: r, showMentionToggle: a, source: s } = e;
     i.Z.dispatch({
         type: 'CREATE_PENDING_REPLY',
-        message: n,
-        channel: r,
-        shouldMention: a,
-        showMentionToggle: o,
+        message: t,
+        channel: n,
+        shouldMention: r,
+        showMentionToggle: a,
         source: s
     });
 }
-function o(e, n) {
+function a(e, t) {
     i.Z.dispatch({
         type: 'SET_PENDING_REPLY_SHOULD_MENTION',
         channelId: e,
-        shouldMention: n
+        shouldMention: t
     });
 }
 function s(e) {

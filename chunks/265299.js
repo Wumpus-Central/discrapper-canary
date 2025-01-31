@@ -1,30 +1,26 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
+n.d(t, { Z: () => d });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(113434),
-    a = n(497505),
-    o = n(37303),
-    s = n(683650),
+var l = n(481060),
+    a = n(113434),
+    r = n(497505),
+    s = n(37303),
+    o = n(683650),
     c = n(461772);
-function u(e) {
+function d(e) {
     let { questId: t } = e,
-        { quests: n, isFetchingCurrentQuests: u } = (0, l.J2)({ fetchPolicy: 'cache-or-network' }),
-        d = n.find((e) => e.id === t);
-    return u
-        ? (0, i.jsx)(r.Spinner, { className: c.spinner })
-        : null == d
-          ? (0, i.jsx)(s.o, {})
+        { quests: n, isFetchingCurrentQuests: d } = (0, a.J2)({ fetchPolicy: 'cache-or-network' }),
+        u = n.find((e) => e.id === t);
+    return d
+        ? (0, i.jsx)(l.$jN, { className: c.spinner })
+        : null == u
+          ? (0, i.jsx)(o.o, {})
           : (0, i.jsx)(
-                o.Z,
+                s.Z,
                 {
-                    quest: d,
-                    location: a.jn.QUESTS_EMBED
+                    quest: u,
+                    location: r.jn.QUESTS_EMBED
                 },
-                d.id
+                u.id
             );
 }

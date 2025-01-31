@@ -1,47 +1,42 @@
-r.d(n, {
-    Z: function () {
-        return c;
-    }
-});
-var i = r(47120);
-var a = r(192379),
-    o = r(846519),
-    s = r(864106),
-    l = r(215023);
-let u = 2147483647;
-function c(e) {
-    let [n, r] = a.useState(!1),
-        i = a.useRef(null);
+n.d(t, { Z: () => l }), n(47120);
+var i = n(192379),
+    r = n(846519),
+    a = n(864106),
+    s = n(215023);
+let o = 2147483647;
+function l(e) {
+    let [t, n] = i.useState(!1),
+        l = i.useRef(null);
     return (
-        a.useEffect(() => {
-            let n = () => {
+        i.useEffect(() => {
+            let t = () => {
                 if (null == e || !('expiresAt' in e) || null == e.expiresAt) {
-                    r(!1);
+                    n(!1);
                     return;
                 }
-                let a = (0, s.fO)(e);
-                r(a);
-                let c = (null == e ? void 0 : e.skuId) === '1251324401459265537' || (null == e ? void 0 : e.skuId) === '1252353273256480818' ? 950400000 : l.Cm,
-                    d = 1000 * e.expiresAt + c - Date.now();
-                if (!a && d > 0) {
-                    let e = new o.V7();
-                    e.start(Math.min(u, d), () => n()), (i.current = e);
+                let i = (0, a.fO)(e);
+                n(i);
+                let u = (null == e ? void 0 : e.skuId) === '1251324401459265537' || (null == e ? void 0 : e.skuId) === '1252353273256480818' ? 950400000 : s.Cm,
+                    c = 1000 * e.expiresAt + u - Date.now();
+                if (!i && c > 0) {
+                    let e = new r.V7();
+                    e.start(Math.min(o, c), () => t()), (l.current = e);
                 }
             };
             return (
-                n(),
+                t(),
                 () => {
                     var e;
-                    return null === (e = i.current) || void 0 === e ? void 0 : e.stop();
+                    return null === (e = l.current) || void 0 === e ? void 0 : e.stop();
                 }
             );
         }, [e]),
-        a.useEffect(() => {
-            if (n) {
+        i.useEffect(() => {
+            if (t) {
                 var e;
-                null === (e = i.current) || void 0 === e || e.stop();
+                null === (e = l.current) || void 0 === e || e.stop();
             }
-        }, [n]),
-        n ? void 0 : e
+        }, [t]),
+        t ? void 0 : e
     );
 }

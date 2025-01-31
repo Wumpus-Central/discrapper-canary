@@ -1,9 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return C;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => C }), n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
@@ -21,7 +16,7 @@ function x(e) {
     return (0, i.jsxs)('div', {
         className: g.roleTag,
         children: [
-            (0, i.jsx)(a.RoleCircle, {
+            (0, i.jsx)(a.xko, {
                 className: g.roleDot,
                 color: t
             }),
@@ -64,8 +59,8 @@ function p(e) {
                 children: (0, i.jsxs)('div', {
                     className: g.avatarContainer,
                     children: [
-                        (0, i.jsx)(a.Avatar, {
-                            size: a.AvatarSizes.SIZE_56,
+                        (0, i.jsx)(a.qEK, {
+                            size: a.EFr.SIZE_56,
                             'aria-hidden': !0,
                             status: m.Skl.ONLINE,
                             src: t.avatar
@@ -82,7 +77,7 @@ function p(e) {
         ]
     });
 }
-function f() {
+function _() {
     let e = r.useMemo(
             () => [
                 {
@@ -230,16 +225,16 @@ function C(e) {
             l(n.id);
         }, [l, n.id]);
     return (0, i.jsx)(c.NM, {
-        children: (0, i.jsxs)(a.FormSection, {
+        children: (0, i.jsxs)(a.hjN, {
             className: g.section,
             title: h.intl.string(h.t.LPJmLy),
-            tag: a.FormTitleTags.H2,
+            tag: a.RB0.H2,
             children: [
                 (0, i.jsxs)('div', {
                     className: g.container,
                     children: [
-                        (0, i.jsx)(f, {}),
-                        (0, i.jsx)(a.Heading, {
+                        (0, i.jsx)(_, {}),
+                        (0, i.jsx)(a.X6q, {
                             variant: 'heading-xl/semibold',
                             children: h.intl.string(h.t.ALlnbm)
                         }),
@@ -249,16 +244,16 @@ function C(e) {
                             className: g.introBody,
                             children: h.intl.string(h.t['1ydhVl'])
                         }),
-                        (0, i.jsx)(a.Button, {
+                        (0, i.jsx)(a.zxk, {
                             className: g.button,
-                            size: a.Button.Sizes.MEDIUM,
+                            size: a.zxk.Sizes.MEDIUM,
                             onClick: m,
                             submitting: s,
                             children: h.intl.string(h.t.JZZjQE)
                         })
                     ]
                 }),
-                (0, i.jsx)(a.FormDivider, { className: g.divider }),
+                (0, i.jsx)(a.$i$, { className: g.divider }),
                 (0, i.jsx)(u.Z, {
                     role: n,
                     onClick: x

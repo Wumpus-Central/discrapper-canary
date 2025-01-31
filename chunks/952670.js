@@ -1,8 +1,9 @@
-e.exports = {
-    option: 'option_bea3ee',
-    inline: 'inline_bea3ee',
-    set: 'set_bea3ee',
-    error: 'error_bea3ee',
-    active: 'active_bea3ee',
-    clickable: 'clickable_bea3ee'
+var i = {
+    option: 'option_a19535',
+    inline: 'inline_a19535',
+    set: 'set_a19535',
+    error: 'error_a19535',
+    active: 'active_a19535',
+    clickable: 'clickable_a19535'
 };
+e.exports = i;

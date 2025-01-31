@@ -1,14 +1,15 @@
+n.d(t, { Z: () => c });
 var i = n(200651);
 n(192379);
 var l = n(120356),
     s = n.n(l),
-    r = n(692547),
-    a = n(481060),
+    a = n(692547),
+    r = n(481060),
     o = n(600164),
     d = n(283877);
-t.Z = (e) => {
+let c = (e) => {
     let { className: t, icon: n, noticeText: l, buttonText: c, onClick: u, canSync: h } = e;
-    return (0, i.jsx)(a.Card, {
+    return (0, i.jsx)(r.Zbd, {
         className: s()(t, d.card),
         children: (0, i.jsxs)(o.Z, {
             justify: o.Z.Justify.BETWEEN,
@@ -18,19 +19,19 @@ t.Z = (e) => {
                     width: 20,
                     height: 20,
                     size: 'custom',
-                    color: r.Z.unsafe_rawColors.YELLOW_300.css
+                    color: a.Z.unsafe_rawColors.YELLOW_300.css
                 }),
                 (0, i.jsx)('div', {
                     className: d.label,
-                    children: (0, i.jsx)(a.Text, {
+                    children: (0, i.jsx)(r.Text, {
                         variant: 'text-md/normal',
                         children: l
                     })
                 }),
                 h &&
-                    (0, i.jsx)(a.Button, {
-                        size: a.Button.Sizes.SMALL,
-                        color: a.Button.Colors.PRIMARY,
+                    (0, i.jsx)(r.zxk, {
+                        size: r.zxk.Sizes.SMALL,
+                        color: r.zxk.Colors.PRIMARY,
                         onClick: u,
                         children: c
                     })

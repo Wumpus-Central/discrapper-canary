@@ -1,10 +1,4 @@
-r.d(n, {
-    Z: function () {
-        return a;
-    }
-});
-var i = r(789020);
-function a(e) {
+function i(e) {
     return {
         id: e.id,
         userId: e.user_id,
@@ -14,3 +8,4 @@ function a(e) {
         joinTimestamp: e.join_timestamp
     };
 }
+n.d(t, { Z: () => i }), n(789020);

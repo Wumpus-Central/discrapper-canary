@@ -1,79 +1,75 @@
-r.d(n, {
-    Z: function () {
-        return d;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(481060),
-    o = r(921944),
-    s = r(388032),
-    l = r(844451),
-    u = r(905287);
-function c(e) {
-    let { onDismissClick: n, onCheckItOutClick: r } = e;
+n.d(t, { Z: () => c });
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(921944),
+    s = n(388032),
+    o = n(844451),
+    l = n(905287);
+function u(e) {
+    let { onDismissClick: t, onCheckItOutClick: n } = e;
     return (0, i.jsxs)('div', {
-        className: l.container,
+        className: o.container,
         children: [
             (0, i.jsx)('img', {
-                src: u.Z,
-                className: l.image,
+                src: l.Z,
+                className: o.image,
                 alt: 'Nitroween Gift Box'
             }),
-            (0, i.jsx)(a.ModalCloseButton, {
-                onClick: n,
+            (0, i.jsx)(r.olH, {
+                onClick: t,
                 withCircleBackground: !0,
-                className: l.closeButton,
-                innerClassName: l.popoutCloseButton
+                className: o.closeButton,
+                innerClassName: o.popoutCloseButton
             }),
             (0, i.jsxs)('div', {
-                className: l.body,
+                className: o.body,
                 children: [
-                    (0, i.jsx)(a.Heading, {
-                        className: l.text,
+                    (0, i.jsx)(r.X6q, {
+                        className: o.text,
                         variant: 'heading-sm/semibold',
                         children: s.intl.string(s.t['YMI+UV'])
                     }),
-                    (0, i.jsx)(a.Text, {
-                        className: l.text,
+                    (0, i.jsx)(r.Text, {
+                        className: o.text,
                         variant: 'text-sm/normal',
                         children: s.intl.string(s.t.BIBwbm)
                     })
                 ]
             }),
             (0, i.jsx)('div', {
-                className: l.buttonContainer,
-                children: (0, i.jsx)(a.Button, {
-                    className: l.ctaButton,
-                    color: a.Button.Colors.BRAND_INVERTED,
-                    onClick: () => r(),
+                className: o.buttonContainer,
+                children: (0, i.jsx)(r.zxk, {
+                    className: o.ctaButton,
+                    color: r.zxk.Colors.BRAND_INVERTED,
+                    onClick: () => n(),
                     children: s.intl.string(s.t.RzWDqa)
                 })
             }),
-            (0, i.jsx)('div', { className: l.pointer })
+            (0, i.jsx)('div', { className: o.pointer })
         ]
     });
 }
-function d(e) {
-    let { onComplete: n, onCheckItOutClick: r, markAsDismissed: s } = e;
-    return (0, i.jsx)(a.Popout, {
+function c(e) {
+    let { onComplete: t, onCheckItOutClick: n, markAsDismissed: s } = e;
+    return (0, i.jsx)(r.yRy, {
         spacing: 0,
         shouldShow: !0,
         position: 'top',
         align: 'center',
         renderPopout: (e) =>
-            (0, i.jsx)(c, {
+            (0, i.jsx)(u, {
                 ...e,
                 onDismissClick: () => {
-                    n(), s(o.L.USER_DISMISS);
+                    t(), s(a.L.USER_DISMISS);
                 },
                 onCheckItOutClick: () => {
-                    r(), n(), s(o.L.TAKE_ACTION);
+                    n(), t(), s(a.L.TAKE_ACTION);
                 }
             }),
         onRequestClose: () => void 0,
         closeOnScroll: !1,
         ignoreModalClicks: !0,
-        children: () => (0, i.jsx)('div', { className: l.popoutTarget })
+        children: () => (0, i.jsx)('div', { className: o.popoutTarget })
     });
 }

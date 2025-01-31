@@ -1,11 +1,16 @@
-e.exports = {
-    shinyButton: 'shinyButton_a669f8',
-    buttonShine: 'buttonShine_a669f8',
-    onlyShineOnHover: 'onlyShineOnHover_a669f8',
-    shineContainer: 'shineContainer_a669f8',
-    shineDefault: 'shineDefault_a669f8 shine_a669f8',
-    shineSmall: 'shineSmall_a669f8 shine_a669f8',
-    shinePaused: 'shinePaused_a669f8',
-    shineInnerDefault: 'shineInnerDefault_a669f8 shineInner_a669f8',
-    shineInnerSmall: 'shineInnerSmall_a669f8 shineInner_a669f8'
+var i = {
+    shinyButton: 'shinyButton__6a443',
+    buttonShine: 'buttonShine__6a443',
+    Shine: 'Shine__6a443',
+    onlyShineOnHover: 'onlyShineOnHover__6a443',
+    InstantShine: 'InstantShine__6a443',
+    shineContainer: 'shineContainer__6a443',
+    shine: 'shine__6a443',
+    shineDefault: 'shineDefault__6a443 shine__6a443',
+    shineSmall: 'shineSmall__6a443 shine__6a443',
+    shinePaused: 'shinePaused__6a443',
+    shineInner: 'shineInner__6a443',
+    shineInnerDefault: 'shineInnerDefault__6a443 shineInner__6a443',
+    shineInnerSmall: 'shineInnerSmall__6a443 shineInner__6a443'
 };
+e.exports = i;

@@ -1,4 +1,4 @@
-function e(t, i, e) {
+function s(t, i, e) {
     return (
         i in t
             ? Object.defineProperty(t, i, {
@@ -11,10 +11,11 @@ function e(t, i, e) {
         t
     );
 }
-function s(t, i) {
+function n(t, i) {
     return Math.max(Math.min((t - i) / 30, 1), -1);
 }
-i.Z = class t {
+e.d(i, { Z: () => h });
+let h = class {
     initialize() {
         window.addEventListener('mousemove', this.handleMouseMove);
     }
@@ -22,18 +23,18 @@ i.Z = class t {
         window.removeEventListener('mousemove', this.handleMouseMove);
     }
     update() {
-        this.x !== this.px && this.y !== this.py && ((this.forceX += s(this.x, this.px)), (this.forceY += s(this.y, this.py)), (this.px = this.x), (this.py = this.y)), 0 !== this.forceX && (this.forceX = this.forceX * this.resistance), 0 !== this.forceY && (this.forceY = this.forceY * this.resistance);
+        this.x !== this.px && this.y !== this.py && ((this.forceX += n(this.x, this.px)), (this.forceY += n(this.y, this.py)), (this.px = this.x), (this.py = this.y)), 0 !== this.forceX && (this.forceX = this.forceX * this.resistance), 0 !== this.forceY && (this.forceY = this.forceY * this.resistance);
     }
     render() {}
     constructor() {
-        e(this, 'resistance', 0.98),
-            e(this, 'px', 0),
-            e(this, 'py', 0),
-            e(this, 'x', 0),
-            e(this, 'y', 0),
-            e(this, 'forceX', 0),
-            e(this, 'forceY', 0),
-            e(this, 'handleMouseMove', (t) => {
+        s(this, 'resistance', 0.98),
+            s(this, 'px', 0),
+            s(this, 'py', 0),
+            s(this, 'x', 0),
+            s(this, 'y', 0),
+            s(this, 'forceX', 0),
+            s(this, 'forceY', 0),
+            s(this, 'handleMouseMove', (t) => {
                 let { clientX: i, clientY: e } = t;
                 (this.x = i), (this.y = e);
             });

@@ -1,16 +1,17 @@
+n.d(t, { Z: () => o });
 var i = n(200651);
 n(192379);
-var r = n(120356),
-    l = n.n(r),
-    a = n(388032),
-    o = n(234007);
-t.Z = (e) => {
+var l = n(120356),
+    a = n.n(l),
+    r = n(388032),
+    s = n(234007);
+let o = (e) => {
     let { className: t } = e;
     return (0, i.jsx)('div', {
-        className: l()(o.tag, t),
+        className: a()(s.tag, t),
         children: (0, i.jsx)('span', {
-            className: o.text,
-            children: a.intl.string(a.t['8IfYqa'])
+            className: s.text,
+            children: r.intl.string(r.t['8IfYqa'])
         })
     });
 };

@@ -1,47 +1,43 @@
-t.d(e, {
-    Z: function () {
-        return d;
-    },
-    e: function () {
-        return u;
-    }
+i.d(n, {
+    Z: () => d,
+    e: () => u
 });
-var i = t(200651);
-t(192379);
-var l = t(120356),
-    r = t.n(l),
-    a = t(481060),
-    s = t(388032),
-    o = t(66294),
-    c = t(531599);
+var t = i(200651);
+i(192379);
+var l = i(120356),
+    r = i.n(l),
+    a = i(481060),
+    s = i(388032),
+    c = i(66294),
+    o = i(531599);
 function u() {
-    return (0, i.jsxs)('div', {
-        className: r()(o.upsellFooter, o.reverseTrialUpsellContainer),
+    return (0, t.jsxs)('div', {
+        className: r()(c.upsellFooter, c.reverseTrialUpsellContainer),
         children: [
-            (0, i.jsx)('img', {
-                src: c.Z,
+            (0, t.jsx)('img', {
+                src: o.Z,
                 alt: 'reverse trial unlock',
-                className: o.unlockIcon
+                className: c.unlockIcon
             }),
-            (0, i.jsx)(a.Text, {
+            (0, t.jsx)(a.Text, {
                 variant: 'text-sm/medium',
-                className: o.upsellText,
+                className: c.upsellText,
                 children: s.intl.format(s.t.f5VHKi, {})
             })
         ]
     });
 }
-function d(n) {
-    let { text: e, color: t } = n;
-    return (0, i.jsxs)('div', {
-        className: o.upsellFooter,
+function d(e) {
+    let { text: n, color: i } = e;
+    return (0, t.jsxs)('div', {
+        className: c.upsellFooter,
         children: [
-            (0, i.jsx)(a.NitroWheelIcon, {
+            (0, t.jsx)(a.SrA, {
                 size: 'md',
-                className: o.upsellFooterIcon,
-                color: t
+                className: c.upsellFooterIcon,
+                color: i
             }),
-            (0, i.jsx)('div', { children: e })
+            (0, t.jsx)('div', { children: n })
         ]
     });
 }

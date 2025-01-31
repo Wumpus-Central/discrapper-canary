@@ -1,10 +1,6 @@
 n.d(t, {
-    Z: function () {
-        return m;
-    },
-    r: function () {
-        return o;
-    }
+    Z: () => m,
+    r: () => o
 }),
     n(47120),
     n(653041);
@@ -22,11 +18,11 @@ async function d(e, t) {
     }
     try {
         await (0, s.qY)(e), t([]);
-    } catch (s) {
-        var n, i;
-        let e = new l.Hx(s).errors;
-        if (!('object' == typeof (n = e) && (null == n ? void 0 : null === (i = n.trigger_metadata) || void 0 === i ? void 0 : i.regex_patterns) != null)) return;
-        let r = (function (e) {
+    } catch (r) {
+        var n;
+        let e = new l.Hx(r).errors;
+        if (!('object' == typeof e && (null == e ? void 0 : null === (n = e.trigger_metadata) || void 0 === n ? void 0 : n.regex_patterns) != null)) return;
+        let i = (function (e) {
             var t;
             let n = null == e ? void 0 : null === (t = e.trigger_metadata) || void 0 === t ? void 0 : t.regex_patterns;
             return null == n
@@ -65,7 +61,7 @@ async function d(e, t) {
                       return i;
                   })(n);
         })(e);
-        r.length > 0 && t(r);
+        i.length > 0 && t(i);
     }
 }
 let u = (0, r.throttle)(d, 1000, { leading: !1 });
@@ -76,7 +72,7 @@ function m(e, t) {
         [m, h] = i.useState(null !== (l = null == e ? void 0 : null === (n = e.triggerMetadata) || void 0 === n ? void 0 : n.regexPatterns) && void 0 !== l ? l : []),
         g = i.useCallback(
             (t) => {
-                if (!(t.length < 3))
+                !(t.length < 3) &&
                     u(
                         {
                             ...e,
@@ -99,22 +95,22 @@ function m(e, t) {
         valueError: o,
         validatePatternsChanged: i.useCallback(
             (n, i) => {
-                if (!(0, r.isEqual)(n, i))
-                    u.cancel(),
-                        d(
-                            {
-                                ...e,
-                                triggerMetadata: {
-                                    ...e.triggerMetadata,
-                                    regexPatterns: n
-                                }
-                            },
-                            (e) => {
-                                a(e), 0 === e.length && c(null);
+                !(0, r.isEqual)(n, i) &&
+                    (u.cancel(),
+                    d(
+                        {
+                            ...e,
+                            triggerMetadata: {
+                                ...e.triggerMetadata,
+                                regexPatterns: n
                             }
-                        ),
-                        h(n),
-                        null == t || t(n);
+                        },
+                        (e) => {
+                            a(e), 0 === e.length && c(null);
+                        }
+                    ),
+                    h(n),
+                    null == t || t(n));
             },
             [e, t]
         ),

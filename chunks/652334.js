@@ -1,22 +1,18 @@
-r.d(n, {
-    v: function () {
-        return u;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(1561),
-    l = r(997249);
-function u(e) {
-    let { as: n, muted: r = !1, selected: a = !1, className: u, ...c } = e,
-        d = null != n ? n : s.P;
-    return (0, i.jsx)(d, {
-        ...c,
-        className: o()(l.interactive, u, {
-            [l.muted]: r,
-            [l.selected]: a
+n.d(t, { v: () => l });
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(1561),
+    o = n(997249);
+function l(e) {
+    let { as: t, muted: n = !1, selected: r = !1, className: l, ...u } = e,
+        c = null != t ? t : s.P;
+    return (0, i.jsx)(c, {
+        ...u,
+        className: a()(o.interactive, l, {
+            [o.muted]: n,
+            [o.selected]: r
         })
     });
 }

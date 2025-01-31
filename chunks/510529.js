@@ -1,45 +1,36 @@
-r.d(t, {
-    U: function () {
-        return o;
-    },
-    h: function () {
-        return E;
-    }
+a.d(e, {
+    U: () => _,
+    h: () => i
 });
-var a = r(370336),
-    n = r(967752);
-function _(e) {
-    let t = e.protocol ? `${e.protocol}:` : '',
-        r = e.port ? `:${e.port}` : '';
-    return `${t}//${e.host}${r}${e.path ? `/${e.path}` : ''}/api/`;
+var r = a(370336),
+    n = a(967752);
+function o(t) {
+    let e = t.protocol ? `${t.protocol}:` : '',
+        a = t.port ? `:${t.port}` : '';
+    return `${e}//${t.host}${a}${t.path ? `/${t.path}` : ''}/api/`;
 }
-function o(e, t, r) {
-    var n, o, E;
+function _(t, e, a) {
     return (
-        t ||
-        `${((n = e), `${_(n)}${n.projectId}/envelope/`)}?${
-            ((o = e),
-            (E = r),
-            (0, a._j)({
-                sentry_key: o.publicKey,
-                sentry_version: '7',
-                ...(E && { sentry_client: `${E.name}/${E.version}` })
-            }))
-        }`
+        e ||
+        `${o(t)}${t.projectId}/envelope/?${(0, r._j)({
+            sentry_key: t.publicKey,
+            sentry_version: '7',
+            ...(a && { sentry_client: `${a.name}/${a.version}` })
+        })}`
     );
 }
-function E(e, t) {
-    let r = (0, n.vK)(e);
-    if (!r) return '';
-    let a = `${_(r)}embed/error-page/`,
-        o = `dsn=${(0, n.RA)(r)}`;
-    for (let e in t) {
-        if ('dsn' !== e && 'onClose' !== e)
-            if ('user' === e) {
-                let e = t.user;
-                if (!e) continue;
-                e.name && (o += `&name=${encodeURIComponent(e.name)}`), e.email && (o += `&email=${encodeURIComponent(e.email)}`);
-            } else o += `&${encodeURIComponent(e)}=${encodeURIComponent(t[e])}`;
-    }
-    return `${a}?${o}`;
+function i(t, e) {
+    let a = (0, n.vK)(t);
+    if (!a) return '';
+    let r = `${o(a)}embed/error-page/`,
+        _ = `dsn=${(0, n.RA)(a)}`;
+    for (let t in e)
+        if ('dsn' !== t && 'onClose' !== t) {
+            if ('user' === t) {
+                let t = e.user;
+                if (!t) continue;
+                t.name && (_ += `&name=${encodeURIComponent(t.name)}`), t.email && (_ += `&email=${encodeURIComponent(t.email)}`);
+            } else _ += `&${encodeURIComponent(t)}=${encodeURIComponent(e[t])}`;
+        }
+    return `${r}?${_}`;
 }

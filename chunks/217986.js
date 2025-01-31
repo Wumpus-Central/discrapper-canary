@@ -1,4 +1,5 @@
-n.Z = [
+n.d(t, { Z: () => i });
+let i = [
     {
         name: 'Afghanistan',
         alpha2: 'AF',

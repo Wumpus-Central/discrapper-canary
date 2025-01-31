@@ -1,83 +1,52 @@
-var i = r(47120);
-var a = r(192379),
-    o = r(688619),
-    s = r.n(o),
-    l = r(979590);
-var u = r(442837),
-    c = r(866442),
-    d = r(607070),
-    f = r(220082),
-    p = r(981631);
-let h = 8,
-    _ = 0.725,
-    m = (e, n) => {
-        let r = AccessibilityStore.desaturateUserColors ? AccessibilityStore.saturation : 1,
-            i = useColorStore.getState().palette[e],
-            a =
-                null == i
-                    ? void 0
-                    : i.map((e) => {
-                          let [n, i, a] = e,
-                              {
-                                  h: o,
-                                  s,
-                                  l
-                              } = tinycolor({
-                                  r: n,
-                                  g: i,
-                                  b: a
-                              }).toHsl();
-                          return tinycolor({
-                              h: o,
-                              s: s * r,
-                              l
-                          }).toHexString();
-                      });
-        return null != a ? a : [n, n];
-    },
-    g = (e) => {
-        var n, i, o, l, m, g;
-        let E;
-        E = r(481060).tokens;
-        let v = (0, u.e7)([d.Z], () => d.Z.saturation),
-            [y, b] = (0, f.Cf)(
+n.d(t, { Z: () => _ }), n(47120);
+var i = n(192379),
+    r = n(688619),
+    a = n.n(r);
+n(979590);
+var s = n(442837),
+    o = n(866442),
+    l = n(607070),
+    u = n(220082),
+    c = n(981631);
+let d = 8,
+    f = 0.725,
+    _ = (e) => {
+        var t, r, _, p, h, m;
+        let g;
+        g = n(481060).TVs;
+        let E = (0, s.e7)([l.Z], () => l.Z.saturation),
+            [v, y] = (0, u.Cf)(
                 e,
                 null !==
-                    (g =
-                        null == E
+                    (m =
+                        null == g
                             ? void 0
-                            : null === (m = E.colors) || void 0 === m
+                            : null === (h = g.colors) || void 0 === h
                               ? void 0
-                              : null === (l = m.BACKGROUND_FLOATING) || void 0 === l
+                              : null === (p = h.BACKGROUND_FLOATING) || void 0 === p
                                 ? void 0
-                                : null === (o = l.resolve) || void 0 === o
+                                : null === (_ = p.resolve) || void 0 === _
                                   ? void 0
                                   : null ===
-                                          (i = o.call(l, {
-                                              theme: p.BRd.DARK,
-                                              saturation: v
-                                          })) || void 0 === i
+                                          (r = _.call(p, {
+                                              theme: c.BRd.DARK,
+                                              saturation: E
+                                          })) || void 0 === r
                                     ? void 0
-                                    : null === (n = i.hex) || void 0 === n
+                                    : null === (t = r.hex) || void 0 === t
                                       ? void 0
-                                      : n.call(i)) && void 0 !== g
-                    ? g
+                                      : t.call(r)) && void 0 !== m
+                    ? m
                     : '#000'
             );
-        return a.useMemo(() => {
-            let e = (0, c._i)(y),
-                n = (0, c._i)(b);
-            for (let n = 1; n < h && !((0, c.Bd)(e) >= _); n++) {
-                e = s()(e).darken(0.5).num();
-            }
-            for (let e = 1; e < h && !((0, c.Bd)(n) >= _); e++) {
-                n = s()(n).darken(0.5).num();
-            }
-            let r = (0, c.Rf)(e);
+        return i.useMemo(() => {
+            let e = (0, o._i)(v),
+                t = (0, o._i)(y);
+            for (let t = 1; t < d && !((0, o.Bd)(e) >= f); t++) e = a()(e).darken(0.5).num();
+            for (let e = 1; e < d && !((0, o.Bd)(t) >= f); e++) t = a()(t).darken(0.5).num();
             return {
-                primaryColor: r,
-                secondaryColor: (0, c.Rf)(n)
+                primaryColor: (0, o.Rf)(e),
+                secondaryColor: (0, o.Rf)(t)
             };
-        }, [y, b]);
+        }, [v, y]);
     };
-n.Z = g;

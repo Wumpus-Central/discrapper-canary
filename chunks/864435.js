@@ -1,7 +1,5 @@
-r.r(
-    (e.exports = {
-        lowSaturationUnderline: 'lowSaturationUnderline_c7819f',
-        desaturate: 'desaturate_c7819f',
-        desaturateUserColors: 'desaturateUserColors_c7819f'
-    })
-);
+var i = {
+    lowSaturationUnderline: 'lowSaturationUnderline__41f68',
+    desaturateUserColors: 'desaturateUserColors__41f68'
+};
+e.exports = i;

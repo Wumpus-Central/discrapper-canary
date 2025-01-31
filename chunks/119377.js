@@ -1,9 +1,4 @@
-r.r(n),
-    r.d(n, {
-        default: function () {
-            return t;
-        }
-    });
+r.r(n), r.d(n, { default: () => t });
 var t = {
     payButton: 'Zahlen',
     'payButton.redirecting': 'Umleiten\u2026',

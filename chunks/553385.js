@@ -1,73 +1,65 @@
-r.d(n, {
-    N7: function () {
-        return p;
-    },
-    XP: function () {
-        return _;
-    },
-    j8: function () {
-        return h;
-    },
-    z$: function () {
-        return m;
-    }
+n.d(t, {
+    N7: () => f,
+    XP: () => p,
+    j8: () => _,
+    z$: () => h
 });
-var i = r(544891),
-    a = r(430742),
-    o = r(904245),
-    s = r(623292),
-    l = r(592125),
-    u = r(703558),
-    c = r(375954),
-    d = r(585483),
-    f = r(981631);
-function p(e) {
+var i = n(544891),
+    r = n(430742),
+    a = n(904245),
+    s = n(623292),
+    o = n(592125),
+    l = n(703558),
+    u = n(375954),
+    c = n(585483),
+    d = n(981631);
+function f(e) {
     i.tn.post({
-        url: f.ANM.INITIATE_CHANNEL_PROMPTS,
+        url: d.ANM.INITIATE_CHANNEL_PROMPTS,
         body: { guild_ids: e },
         rejectWithError: !0
     });
 }
-function h(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f.uaV.GUILD_DEADCHAT_REVIVE_PROMPT;
+function _(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.uaV.GUILD_DEADCHAT_REVIVE_PROMPT;
     i.tn.post({
-        url: f.ANM.FORCE_SEND_PROMPT(e),
-        body: { prompt_type: n },
+        url: d.ANM.FORCE_SEND_PROMPT(e),
+        body: { prompt_type: t },
         rejectWithError: !0
     });
 }
-async function _(e, n, r) {
+async function p(e, t, n) {
     await i.tn.post({
-        url: f.ANM.SEND_GAMING_STATS(n),
+        url: d.ANM.SEND_GAMING_STATS(t),
         body: {
             message_reference: {
                 guild_id: e,
-                channel_id: n,
-                message_id: r
+                channel_id: t,
+                message_id: n
             }
         },
         rejectWithError: !1
     }),
-        g(n);
+        m(t);
 }
-async function m(e) {
-    let n = await i.tn.patch({
-        url: f.ANM.UPDATE_GAMING_STATS(e.channel_id, e.id),
+async function h(e) {
+    let t = await i.tn.patch({
+        url: d.ANM.UPDATE_GAMING_STATS(e.channel_id, e.id),
         rejectWithError: !1
     });
-    if (null != n.text && '' !== n.text) {
-        let r = l.Z.getChannel(e.channel_id);
-        null != r &&
+    if (null != t.text && '' !== t.text) {
+        let n = o.Z.getChannel(e.channel_id);
+        null != n &&
             ((0, s.fE)({
-                channel: r,
+                channel: n,
                 message: e,
                 shouldMention: !1,
                 showMentionToggle: !1
             }),
-            g(r.id)),
-            a.Z.saveDraft(e.channel_id, n.text, u.d.ChannelMessage);
+            m(n.id)),
+            r.Z.saveDraft(e.channel_id, t.text, l.d.ChannelMessage);
     }
 }
-function g(e) {
-    c.Z.getMessages(e).hasMoreAfter ? o.Z.jumpToPresent(e, f.AQB) : d.S.dispatch(f.CkL.SCROLLTO_PRESENT);
+function m(e) {
+    u.Z.getMessages(e).hasMoreAfter ? a.Z.jumpToPresent(e, d.AQB) : c.S.dispatch(d.CkL.SCROLLTO_PRESENT);
 }

@@ -1,14 +1,15 @@
-var i = r(570140),
-    a = r(626135),
-    o = r(981631);
-n.Z = {
+n.d(t, { Z: () => s });
+var i = n(570140),
+    r = n(626135),
+    a = n(981631);
+let s = {
     dismissForApplicationId(e) {
         i.Z.dispatch({
             type: 'ACTIVITY_INVITE_EDUCATION_DISMISS',
             key: e,
             value: !0
         }),
-            a.default.track(o.rMx.CLOSE_TUTORIAL, {
+            r.default.track(a.rMx.CLOSE_TUTORIAL, {
                 tutorial: 'activity-invite-nux-inline',
                 application_id: e,
                 acknowledged: !0

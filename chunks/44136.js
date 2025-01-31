@@ -1,11 +1,4 @@
-n.d(t, {
-    ZP: function () {
-        return l;
-    }
-}),
-    n(442837),
-    n(314897),
-    n(131951);
+n.d(t, { ZP: () => l }), n(442837), n(314897), n(131951);
 var i = n(354459);
 function l(e) {
     var t, n;

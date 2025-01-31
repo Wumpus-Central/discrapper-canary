@@ -1,17 +1,13 @@
-r.d(n, {
-    F: function () {
-        return o;
-    }
-});
-var i = r(573654),
-    a = r(964742);
-function o(e) {
+n.d(t, { F: () => a });
+var i = n(573654),
+    r = n(964742);
+function a(e) {
     return function () {
-        var n = e.getMonitor(),
-            r = e.getRegistry();
-        s(n);
-        var i = n.getSourceId();
-        return null != i && (r.getSource(i, !0).endDrag(n, i), r.unpinSource()), { type: a.Bs };
+        var t = e.getMonitor(),
+            n = e.getRegistry();
+        s(t);
+        var i = t.getSourceId();
+        return null != i && (n.getSource(i, !0).endDrag(t, i), n.unpinSource()), { type: r.Bs };
     };
 }
 function s(e) {

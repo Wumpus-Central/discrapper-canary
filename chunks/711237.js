@@ -1,16 +1,12 @@
 n.d(t, {
-    J_: function () {
-        return s;
-    },
-    R6: function () {
-        return l;
-    }
+    J_: () => s,
+    R6: () => r
 });
 var i = n(818083),
-    r = n(987338);
-let l = (0, i.B)({
+    l = n(987338);
+let r = (0, i.B)({
         kind: 'user',
-        id: r.fL,
+        id: l.fL,
         label: 'Trigger Debugging User AA Experiment',
         defaultConfig: { inUse: !1 },
         treatments: [
@@ -23,7 +19,7 @@ let l = (0, i.B)({
     }),
     a = (0, i.B)({
         kind: 'guild',
-        id: r.nz,
+        id: l.nz,
         label: 'Trigger Debugging Guild AA Experiment',
         defaultConfig: { inUse: !1 },
         treatments: [
@@ -48,6 +44,6 @@ let l = (0, i.B)({
                 location: t,
                 guildId: e
             }),
-            l.useExperiment({ location: n }, { autoTrackExposure: !1 }),
-            l.trackExposure({ location: n });
+            r.useExperiment({ location: n }, { autoTrackExposure: !1 }),
+            r.trackExposure({ location: n });
     };

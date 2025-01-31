@@ -1,1 +1,1 @@
-e.exports = { obscuredIcon: 'obscuredIcon_a62ee5' };
+e.exports = { obscuredIcon: 'obscuredIcon__43090' };

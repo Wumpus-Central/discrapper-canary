@@ -1,27 +1,23 @@
-r.d(n, {
-    Z: function () {
-        return s;
-    }
-});
-var i = r(51144),
-    a = r(616922),
-    o = r(388032);
-function s(e, n, r) {
-    switch (n) {
-        case a.kG.USER_ACTIVITY_PLAY:
-            if (e.isCurrentUser) return o.intl.string(o.t.ZpDeUF);
-            if (e.playingSameTrack) return o.intl.string(o.t.TYSymZ);
-            if (e.notPlayable) return o.intl.formatToPlainString(o.t.SqJBnJ, { name: a.ai });
+n.d(t, { Z: () => s });
+var i = n(51144),
+    r = n(616922),
+    a = n(388032);
+function s(e, t, n) {
+    switch (t) {
+        case r.kG.USER_ACTIVITY_PLAY:
+            if (e.isCurrentUser) return a.intl.string(a.t.ZpDeUF);
+            if (e.playingSameTrack) return a.intl.string(a.t.TYSymZ);
+            if (e.notPlayable) return a.intl.formatToPlainString(a.t.SqJBnJ, { name: r.ai });
             return;
-        case a.kG.USER_ACTIVITY_SYNC:
-            if (e.isCurrentUser) return o.intl.string(o.t['AOU/CQ']);
-            if (e.syncingWithUser || e.syncingWithParty) return o.intl.string(o.t.m8CScn);
-            if (e.notPlayable) return o.intl.formatToPlainString(o.t.SqJBnJ, { name: a.ai });
-            return o.intl.formatToPlainString(o.t.CT9xYG, { name: null != r ? r : i.ZP.getName(e.user) });
-        case a.kG.EMBED_SYNC:
-            if (e.isCurrentUser) return o.intl.string(o.t['AOU/CQ']);
-            if (e.syncingWithUser || e.syncingWithParty) return o.intl.string(o.t.m8CScn);
-            if (e.notPlayable) return o.intl.formatToPlainString(o.t.SqJBnJ, { name: a.ai });
+        case r.kG.USER_ACTIVITY_SYNC:
+            if (e.isCurrentUser) return a.intl.string(a.t['AOU/CQ']);
+            if (e.syncingWithUser || e.syncingWithParty) return a.intl.string(a.t.m8CScn);
+            if (e.notPlayable) return a.intl.formatToPlainString(a.t.SqJBnJ, { name: r.ai });
+            return a.intl.formatToPlainString(a.t.CT9xYG, { name: null != n ? n : i.ZP.getName(e.user) });
+        case r.kG.EMBED_SYNC:
+            if (e.isCurrentUser) return a.intl.string(a.t['AOU/CQ']);
+            if (e.syncingWithUser || e.syncingWithParty) return a.intl.string(a.t.m8CScn);
+            if (e.notPlayable) return a.intl.formatToPlainString(a.t.SqJBnJ, { name: r.ai });
             return;
         default:
             return;

@@ -1,11 +1,4 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return q;
-        }
-    }),
-    n(177593),
-    n(47120);
+n.r(t), n.d(t, { default: () => q }), n(177593), n(47120);
 var l = n(392711),
     r = n.n(l),
     i = n(261470),

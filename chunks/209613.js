@@ -1,25 +1,21 @@
-r.d(n, {
-    Z: function () {
-        return u;
-    }
-});
-var i = r(924826),
-    a = r(442837),
-    o = r(607070);
+n.d(t, { Z: () => l });
+var i = n(924826),
+    r = n(442837),
+    a = n(607070);
 function s() {
     return Promise.resolve();
 }
-function l(e) {
-    let n = document.querySelector(e);
-    null != n && n.focus();
+function o(e) {
+    let t = document.querySelector(e);
+    null != t && t.focus();
 }
-function u(e, n) {
-    let r = (0, a.e7)([o.Z], () => o.Z.keyboardModeEnabled);
+function l(e, t) {
+    let n = (0, r.e7)([a.Z], () => a.Z.keyboardModeEnabled);
     return (0, i.ZP)({
         id: e,
-        isEnabled: r,
-        orientation: n,
-        setFocus: l,
+        isEnabled: n,
+        orientation: t,
+        setFocus: o,
         scrollToStart: s,
         scrollToEnd: s
     });

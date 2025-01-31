@@ -1,14 +1,10 @@
-r.d(n, {
-    Xo: function () {
-        return s;
-    },
-    pB: function () {
-        return l;
-    }
+n.d(t, {
+    Xo: () => s,
+    pB: () => o
 });
-var i = r(818083),
-    a = r(517858);
-let o = (0, i.B)({
+var i = n(818083),
+    r = n(517858);
+let a = (0, i.B)({
     kind: 'user',
     id: '2024-04_keyword_filter_experiment',
     label: 'Replace registered keywords with asterisks',
@@ -22,12 +18,12 @@ let o = (0, i.B)({
     ]
 });
 function s(e) {
-    let { location: n } = e,
-        r = (0, a.C3)({ location: n });
-    return o.useExperiment({ location: n }, { autoTrackExposure: !0 }).enabled || r;
+    let { location: t } = e,
+        n = (0, r.C3)({ location: t });
+    return a.useExperiment({ location: t }, { autoTrackExposure: !0 }).enabled || n;
 }
-function l(e) {
-    let { location: n } = e,
-        r = (0, a.GW)({ location: n });
-    return o.getCurrentConfig({ location: n }).enabled || r;
+function o(e) {
+    let { location: t } = e,
+        n = (0, r.GW)({ location: t });
+    return a.getCurrentConfig({ location: t }).enabled || n;
 }

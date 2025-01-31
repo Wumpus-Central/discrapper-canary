@@ -1,30 +1,25 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => u }), n(47120);
 var i = n(442837),
     l = n(963374),
-    r = n(735020),
-    a = n(905405),
+    a = n(735020),
+    r = n(905405),
     s = n(786761),
     o = n(937889),
     c = n(699516),
     d = n(768119);
 function u(e) {
-    let t = (0, a.p)(),
+    let t = (0, r.p)(),
         n = (0, i.e7)(
-            [d.Z, r.Z],
+            [d.Z, a.Z],
             () => {
                 var n;
                 let i = d.Z.getQuery(e),
-                    a = d.Z.getRawResults(e);
-                if (null == i || null == a) return [];
+                    r = d.Z.getRawResults(e);
+                if (null == i || null == r) return [];
                 let c = (0, l.nC)(null !== (n = i.content) && void 0 !== n ? n : '');
-                return a.map((e) =>
+                return r.map((e) =>
                     e.map((e) => {
-                        let n = r.Z.getMessage(e.id, e.channel_id),
+                        let n = a.Z.getMessage(e.id, e.channel_id),
                             i = (0, s.e5)(e);
                         return (
                             null != n &&

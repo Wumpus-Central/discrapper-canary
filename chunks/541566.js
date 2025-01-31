@@ -1,6 +1,7 @@
+n.d(t, { Z: () => u });
 var i,
-    r = n(442837),
-    l = n(570140),
+    l = n(442837),
+    r = n(570140),
     a = n(267642),
     s = n(981631);
 function o(e, t, n) {
@@ -21,7 +22,7 @@ c = {
     lastDismissedGracePeriods: {},
     isVisible: {}
 };
-class d extends (i = r.ZP.PersistedStore) {
+class d extends (i = l.ZP.PersistedStore) {
     initialize(e) {
         null != e && (c = e);
     }
@@ -43,33 +44,33 @@ o(d, 'displayName', 'GuildBoostingGracePeriodNoticeStore'),
             lastDismissedGracePeriods: null != e ? { ...e.lastDismissedGracePeriods } : {},
             isVisible: {}
         })
-    ]),
-    (t.Z = new d(l.Z, {
-        GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: function (e) {
-            let { guildId: t, appliedBoosts: n } = e,
-                i = null != c.lastDismissedGracePeriods[t] ? c.lastDismissedGracePeriods[t] : null,
-                r = null != i && Date.now() - i <= s.Dge,
-                l = null != n && !r && (0, a.Vx)(n, t);
-            c = {
-                ...c,
-                isVisible: {
-                    ...c.isVisible,
-                    [t]: l
-                }
-            };
-        },
-        BOOSTED_GUILD_GRACE_PERIOD_NOTICE_DISMISS: function (e) {
-            let t = e.guildId;
-            c = {
-                ...c,
-                lastDismissedGracePeriods: {
-                    ...c.lastDismissedGracePeriods,
-                    [t]: Date.now()
-                },
-                isVisible: {
-                    ...c.isVisible,
-                    [t]: !1
-                }
-            };
-        }
-    }));
+    ]);
+let u = new d(r.Z, {
+    GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: function (e) {
+        let { guildId: t, appliedBoosts: n } = e,
+            i = null != c.lastDismissedGracePeriods[t] ? c.lastDismissedGracePeriods[t] : null,
+            l = null != i && Date.now() - i <= s.Dge,
+            r = null != n && !l && (0, a.Vx)(n, t);
+        c = {
+            ...c,
+            isVisible: {
+                ...c.isVisible,
+                [t]: r
+            }
+        };
+    },
+    BOOSTED_GUILD_GRACE_PERIOD_NOTICE_DISMISS: function (e) {
+        let t = e.guildId;
+        c = {
+            ...c,
+            lastDismissedGracePeriods: {
+                ...c.lastDismissedGracePeriods,
+                [t]: Date.now()
+            },
+            isVisible: {
+                ...c.isVisible,
+                [t]: !1
+            }
+        };
+    }
+});

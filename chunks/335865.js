@@ -1,10 +1,6 @@
-n.d(t, {
-    y: function () {
-        return l;
-    }
-});
+n.d(t, { y: () => r });
 var i = n(399606),
-    r = n(650774);
-function l() {
-    return (0, i.e7)([r.Z], () => Object.values(r.Z.getMemberCounts()).some((e) => e >= 200));
+    l = n(650774);
+function r() {
+    return (0, i.e7)([l.Z], () => Object.values(l.Z.getMemberCounts()).some((e) => e >= 200));
 }

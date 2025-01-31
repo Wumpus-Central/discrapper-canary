@@ -1,45 +1,41 @@
-r.d(t, {
-    $p: function () {
-        return E;
-    },
-    pT: function () {
-        return o;
-    }
+a.d(e, {
+    $p: () => i,
+    pT: () => _
 });
-var a = r(285883),
-    n = r(394798);
-let _ = RegExp('^[ \\t]*([0-9a-f]{32})?-?([0-9a-f]{16})?-?([01])?[ \\t]*$');
-function o(e, t) {
-    let r = (function (e) {
-            let t;
-            if (!e) return;
-            let r = e.match(_);
-            if (!!r)
+var r = a(285883),
+    n = a(394798);
+let o = RegExp('^[ \\t]*([0-9a-f]{32})?-?([0-9a-f]{16})?-?([01])?[ \\t]*$');
+function _(t, e) {
+    let a = (function (t) {
+            let e;
+            if (!t) return;
+            let a = t.match(o);
+            if (a)
                 return (
-                    '1' === r[3] ? (t = !0) : '0' === r[3] && (t = !1),
+                    '1' === a[3] ? (e = !0) : '0' === a[3] && (e = !1),
                     {
-                        traceId: r[1],
-                        parentSampled: t,
-                        parentSpanId: r[2]
+                        traceId: a[1],
+                        parentSampled: e,
+                        parentSpanId: a[2]
                     }
                 );
-        })(e),
-        o = (0, a.EN)(t),
-        { traceId: E, parentSpanId: i, parentSampled: c } = r || {};
-    return r
+        })(t),
+        _ = (0, r.EN)(e),
+        { traceId: i, parentSpanId: c, parentSampled: s } = a || {};
+    return a
         ? {
-              traceId: E || (0, n.DM)(),
-              parentSpanId: i || (0, n.DM)().substring(16),
+              traceId: i || (0, n.DM)(),
+              parentSpanId: c || (0, n.DM)().substring(16),
               spanId: (0, n.DM)().substring(16),
-              sampled: c,
-              dsc: o || {}
+              sampled: s,
+              dsc: _ || {}
           }
         : {
-              traceId: E || (0, n.DM)(),
+              traceId: i || (0, n.DM)(),
               spanId: (0, n.DM)().substring(16)
           };
 }
-function E(e = (0, n.DM)(), t = (0, n.DM)().substring(16), r) {
-    let a = '';
-    return void 0 !== r && (a = r ? '-1' : '-0'), `${e}-${t}${a}`;
+function i(t = (0, n.DM)(), e = (0, n.DM)().substring(16), a) {
+    let r = '';
+    return void 0 !== a && (r = a ? '-1' : '-0'), `${t}-${e}${r}`;
 }

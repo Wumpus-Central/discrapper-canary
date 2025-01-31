@@ -1,176 +1,166 @@
-var i = r(610138);
-var a = r(216116);
-var o = r(78328);
-var s = r(815648);
-var l = r(47120);
-var u = r(724458);
-var c = r(653041);
-var d = r(315314);
-var f = r(203651);
-var p = r(544891),
-    h = r(569611),
-    _ = r(547010),
-    m = r(580189),
-    g = r(397550),
-    E = r(931619);
-r(358085);
-var v = r(960048),
-    y = r(591759),
-    b = r(303850),
-    I = r(981631);
-let T = ['https://cdn.discordapp.com/bad-domains/updated_hashes.json', 'https://cdn.discordapp.com/bad-domains/hashes.json'],
-    S = new b.R();
-function A(e) {
-    let n = new URLSearchParams();
-    n.append('query', '@http.x_client_trace_id:"'.concat(e, '"')), n.append('showAllSpans', 'true');
-    let r = y.Z.toURLSafe('traces?'.concat(n.toString()), 'https://datadog.discord.tools/apm/');
-    return null == r ? null : r.toString();
+n(610138), n(216116), n(78328), n(815648), n(47120), n(724458), n(653041), n(315314), n(309749), n(203651);
+var i = n(544891),
+    r = n(569611),
+    a = n(547010),
+    s = n(580189),
+    o = n(397550),
+    l = n(931619);
+n(358085);
+var u = n(960048),
+    c = n(591759),
+    d = n(303850),
+    f = n(981631);
+let _ = ['https://cdn.discordapp.com/bad-domains/updated_hashes.json', 'https://cdn.discordapp.com/bad-domains/hashes.json'],
+    p = new d.R();
+function h(e) {
+    let t = new URLSearchParams();
+    t.append('query', '@http.x_client_trace_id:"'.concat(e, '"')), t.append('showAllSpans', 'true');
+    let n = c.Z.toURLSafe('traces?'.concat(t.toString()), 'https://datadog.discord.tools/apm/');
+    return null == n ? null : n.toString();
 }
-function C() {
+function m() {
     if (null == Intl.DateTimeFormat) return null;
     let e = Intl.DateTimeFormat();
     return null == e.resolvedOptions ? null : e.resolvedOptions().timeZone;
 }
-let N = /\/api(\/v\d+)?\/science/;
-function R(e) {
-    let n = 10;
-    return e.reduce((e, r) => (10 === n ? e.push(r) : e.push(''.concat(r, ';q=0.').concat(n)), (n = Math.max(n - 1, 1)), e), []).join(',');
+let g = /\/api(\/v\d+)?\/science/;
+function E(e) {
+    let t = 10;
+    return e.reduce((e, n) => (10 === t ? e.push(n) : e.push(''.concat(n, ';q=0.').concat(t)), (t = Math.max(t - 1, 1)), e), []).join(',');
 }
-(0, p.lg)({
+(0, i.lg)({
     prepareRequest(e) {
-        let { default: n } = r(314897),
-            { default: i } = r(857192),
-            { default: a } = r(706454),
-            { default: o } = r(594174),
-            { default: s } = r(626135),
-            { isPlatformEmbedded: l } = r(358085);
+        let { default: t } = n(314897),
+            { default: a } = n(857192),
+            { default: s } = n(706454),
+            { default: o } = n(594174),
+            { default: l } = n(626135),
+            { isPlatformEmbedded: c } = n(358085);
         if ('/' === e.url[0]) {
-            var u, c;
-            (e.url = (0, p.K0)() + e.url), !('Authorization' in e.header) && !('authorization' in e.header) && e.set('Authorization', n.getToken());
-            let r = s.getSuperPropertiesBase64();
-            null != r && e.set('X-Super-Properties', r);
-            let d = n.getFingerprint();
-            if ((null != d && '' !== d && e.set('X-Fingerprint', d), l)) {
-                let n = [];
-                null != navigator && (n = ((u = [...navigator.languages]), u));
-                let r = R(n);
-                e.set('Accept-Language', r);
+            var d, f;
+            (e.url = (0, i.K0)() + e.url), 'Authorization' in e.header || 'authorization' in e.header || e.set('Authorization', t.getToken());
+            let n = l.getSuperPropertiesBase64();
+            null != n && e.set('X-Super-Properties', n);
+            let r = t.getFingerprint();
+            if ((null != r && '' !== r && e.set('X-Fingerprint', r), c)) {
+                let t = [];
+                null != navigator && (t = d = [...navigator.languages]);
+                let n = E(t);
+                e.set('Accept-Language', n);
             }
-            e.set('X-Discord-Locale', a.locale);
-            let f = C();
-            null != f && e.set('X-Discord-Timezone', f);
-            let h = i.getDebugOptionsHeaderValue();
-            if ((null != h && '' !== h && e.set('X-Debug-Options', h), i.isTracingRequests)) {
-                let n = o.getCurrentUser(),
-                    r = S.generate(null !== (c = null == n ? void 0 : n.id) && void 0 !== c ? c : '0');
-                e.set('x-client-trace-id', r);
+            e.set('X-Discord-Locale', s.locale);
+            let u = m();
+            null != u && e.set('X-Discord-Timezone', u);
+            let _ = a.getDebugOptionsHeaderValue();
+            if ((null != _ && '' !== _ && e.set('X-Debug-Options', _), a.isTracingRequests)) {
+                let t = o.getCurrentUser(),
+                    n = p.generate(null !== (f = null == t ? void 0 : t.id) && void 0 !== f ? f : '0');
+                e.set('x-client-trace-id', n);
                 try {
-                    let n = new URL(e.url).pathname;
-                    if (!N.test(n)) {
-                        let i = A(r);
-                        null !== i && console.debug('%c[tracing]%c %s %s\n%s', 'font-weight: bold', '', e.method, n, i);
+                    let t = new URL(e.url).pathname;
+                    if (!g.test(t)) {
+                        let i = h(n);
+                        null !== i && console.debug('%c[tracing]%c %s %s\n%s', 'font-weight: bold', '', e.method, t, i);
                     }
                 } catch (e) {
                     console.error('error while printing tracing log', e);
                 }
             }
         }
-        h.Hj('Network', 'Sending '.concat(e.method, ' to ').concat(e.url)),
-            e.on('response', (n) => {
-                let r = null != n && n.status >= 400 ? n.text : null,
-                    i = null == r ? '' : 'and body: '.concat(r);
-                h.Hj(
+        r.Hj('Network', 'Sending '.concat(e.method, ' to ').concat(e.url)),
+            e.on('response', (t) => {
+                let n = null != t && t.status >= 400 ? t.text : null,
+                    i = null == n ? '' : 'and body: '.concat(n);
+                r.Hj(
                     'Network',
                     'Completed '
                         .concat(e.method, ' to ')
                         .concat(e.url, ' with status: ')
-                        .concat(null == n ? void 0 : n.status, ' ')
+                        .concat(null == t ? void 0 : t.status, ' ')
                         .concat(i)
                 );
             }),
-            e.on('error', (n, r) => {
+            e.on('error', (t, n) => {
                 if (
-                    (h.Hj(
+                    (r.Hj(
                         'Network',
                         'Failed '
                             .concat(e.method, ' to ')
                             .concat(e.url, ' with status ')
-                            .concat(null == n ? void 0 : n.status, ' and body: ')
-                            .concat(null == r ? void 0 : r.text)
+                            .concat(null == t ? void 0 : t.status, ' and body: ')
+                            .concat(null == n ? void 0 : n.text)
                     ),
-                    null != n && 'parse' in n && n.parse)
+                    null != t && 'parse' in t && t.parse)
                 ) {
-                    let r = '[FILTERED]';
-                    if (T.includes(e.url)) {
+                    let n = '[FILTERED]';
+                    if (_.includes(e.url)) {
                         var i, a;
-                        r = null === (a = e.xhr) || void 0 === a ? void 0 : null === (i = a.responseText) || void 0 === i ? void 0 : i.slice(0, 1000);
+                        n = null === (a = e.xhr) || void 0 === a ? void 0 : null === (i = a.responseText) || void 0 === i ? void 0 : i.slice(0, 1000);
                     }
-                    v.Z.addBreadcrumb({
+                    u.Z.addBreadcrumb({
                         category: 'superagent',
                         message: 'Failed to parse HTTP response.',
                         data: {
                             method: e.method,
                             url: e.url,
-                            responseText: r,
-                            status: n.status
+                            responseText: n,
+                            status: t.status
                         }
                     });
                 }
             });
     },
-    interceptResponse(e, n, i) {
-        var a, o, s, l, u;
-        return 400 === e.statusCode && (null === (a = e.body) || void 0 === a ? void 0 : a.captcha_key)
-            ? (Promise.all([r.e('36514').then(r.bind(r, 475271)), r.e('31177').then(r.bind(r, 353250))])
-                  .then((n) => {
-                      let [{ default: r }, { extractCaptchaPropsFromResponse: i }] = n;
-                      return r.showCaptchaAsync(i(e.body));
+    interceptResponse(e, t, i) {
+        var r, l, u, c, d;
+        return 400 === e.statusCode && (null === (r = e.body) || void 0 === r ? void 0 : r.captcha_key)
+            ? (Promise.all([n.e('36514').then(n.bind(n, 475271)), n.e('31177').then(n.bind(n, 353250))])
+                  .then((t) => {
+                      let [{ default: n }, { extractCaptchaPropsFromResponse: i }] = t;
+                      return n.showCaptchaAsync(i(e.body));
                   })
                   .then((e) => {
-                      let { captcha_key: r, captcha_rqtoken: i } = e,
-                          a = { 'X-Captcha-Key': r };
-                      null != i && (a['X-Captcha-Rqtoken'] = i), n(a);
+                      let { captcha_key: n, captcha_rqtoken: i } = e,
+                          r = { 'X-Captcha-Key': n };
+                      null != i && (r['X-Captcha-Rqtoken'] = i), t(r);
                   })
                   .catch(i),
               !0)
-            : 401 === e.statusCode && (null === (o = e.body) || void 0 === o ? void 0 : o.code) === I.evJ.MFA_REQUIRED && (null === (s = e.body) || void 0 === s ? void 0 : s.mfa)
-              ? (Promise.all([r.e('52030'), r.e('85665')])
-                    .then(r.bind(r, 24031))
-                    .then((r) => {
-                        let { openMFAModal: a } = r;
-                        a(e.body.mfa, n, i);
+            : 401 === e.statusCode && (null === (l = e.body) || void 0 === l ? void 0 : l.code) === f.evJ.MFA_REQUIRED && (null === (u = e.body) || void 0 === u ? void 0 : u.mfa)
+              ? (Promise.all([n.e('52030'), n.e('85665')])
+                    .then(n.bind(n, 24031))
+                    .then((n) => {
+                        let { openMFAModal: r } = n;
+                        r(e.body.mfa, t, i);
                     })
                     .catch(i),
                 !0)
-              : (0, g.b)(e.statusCode, null === (l = e.body) || void 0 === l ? void 0 : l.code)
-                ? (Promise.resolve()
-                      .then(r.bind(r, 895886))
-                      .then((e) => {
-                          let { default: n } = e;
-                          n();
-                      }),
-                  !1)
-                : (0, _.b)(e.statusCode, null === (u = e.body) || void 0 === u ? void 0 : u.code)
-                  ? (r
-                        .e('76731')
-                        .then(r.bind(r, 626892))
-                        .then((n) => {
-                            var r;
-                            let { default: i } = n;
-                            i(null === (r = e.body) || void 0 === r ? void 0 : r.guild_id);
-                        }),
-                    !1)
-                  : ((0, m.X)(e) &&
-                        r
+              : ((0, o.b)(e.statusCode, null === (c = e.body) || void 0 === c ? void 0 : c.code)
+                    ? Promise.resolve()
+                          .then(n.bind(n, 895886))
+                          .then((e) => {
+                              let { default: t } = e;
+                              t();
+                          })
+                    : (0, a.b)(e.statusCode, null === (d = e.body) || void 0 === d ? void 0 : d.code)
+                      ? n
+                            .e('76731')
+                            .then(n.bind(n, 626892))
+                            .then((t) => {
+                                var n;
+                                let { default: i } = t;
+                                i(null === (n = e.body) || void 0 === n ? void 0 : n.guild_id);
+                            })
+                      : (0, s.X)(e) &&
+                        n
                             .e('89715')
-                            .then(r.bind(r, 707708))
+                            .then(n.bind(n, 707708))
                             .then((e) => {
-                                let { handleBlockedByProxy: n } = e;
-                                n();
+                                let { handleBlockedByProxy: t } = e;
+                                t();
                             }),
-                    !1);
+                !1);
     }
 }),
-    (0, p.Jt)(async (e) => {
-        if ((h.Hj('Network', 'Request to '.concat(e, ' failed, will retry.')), !E.Z.isOnline())) await E.Z.awaitOnline(), h.Hj('Network', 'Network detected online, retrying '.concat(e));
+    (0, i.Jt)(async (e) => {
+        r.Hj('Network', 'Request to '.concat(e, ' failed, will retry.')), !l.Z.isOnline() && (await l.Z.awaitOnline(), r.Hj('Network', 'Network detected online, retrying '.concat(e)));
     });

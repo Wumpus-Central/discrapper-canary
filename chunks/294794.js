@@ -1,8 +1,9 @@
-e.exports = {
-    container: 'container_b01a4f',
-    confirmationHeader: 'confirmationHeader_b01a4f',
-    otherOptions: 'otherOptions_b01a4f',
-    featureGuide: 'featureGuide_b01a4f',
-    iconContainer: 'iconContainer_b01a4f',
-    icon: 'icon_b01a4f'
+var i = {
+    container: 'container_ea1e0b',
+    confirmationHeader: 'confirmationHeader_ea1e0b',
+    otherOptions: 'otherOptions_ea1e0b',
+    featureGuide: 'featureGuide_ea1e0b',
+    iconContainer: 'iconContainer_ea1e0b',
+    icon: 'icon_ea1e0b'
 };
+e.exports = i;

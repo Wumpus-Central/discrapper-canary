@@ -1,6 +1,7 @@
 e.exports = {
-    yellowMessageBlock: 'yellowMessageBlock_b74455 messageBlock_b74455',
-    messageBlockIcon: 'messageBlockIcon_b74455',
-    redMessageBlock: 'redMessageBlock_b74455 messageBlock_b74455',
-    brownMessageBlock: 'brownMessageBlock_b74455 messageBlock_b74455'
+    messageBlock: 'messageBlock__2d815',
+    yellowMessageBlock: 'yellowMessageBlock__2d815 messageBlock__2d815',
+    messageBlockIcon: 'messageBlockIcon__2d815',
+    redMessageBlock: 'redMessageBlock__2d815 messageBlock__2d815',
+    brownMessageBlock: 'brownMessageBlock__2d815 messageBlock__2d815'
 };

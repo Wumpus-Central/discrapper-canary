@@ -1,8 +1,4 @@
-s.d(t, {
-    Z: function () {
-        return i;
-    }
-});
+s.d(t, { Z: () => i });
 var n = s(200651);
 function i(e) {
     return (0, n.jsxs)('svg', {

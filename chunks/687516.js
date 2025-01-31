@@ -1,40 +1,34 @@
-r.d(n, {
-    Cf: function () {
-        return p;
-    },
-    L2: function () {
-        return d;
-    },
-    Um: function () {
-        return c;
-    }
+n.d(t, {
+    Cf: () => f,
+    L2: () => c,
+    Um: () => u
 });
-var i = r(442837),
-    a = r(902704),
-    o = r(158776),
-    s = r(981631);
-function l(e) {
+var i = n(442837),
+    r = n(902704),
+    a = n(158776),
+    s = n(981631);
+function o(e) {
     return e.type === s.IIU.PLAYING;
 }
-function u(e, n) {
-    return n.findActivity(e, l);
+function l(e, t) {
+    return t.findActivity(e, o);
 }
-function c(e, n) {
-    return null != e ? u(e.ownerId, n) : null;
+function u(e, t) {
+    return null != e ? l(e.ownerId, t) : null;
 }
-function d(e, n) {
+function c(e, t) {
     if (null == e) return null;
-    let r = c(e, n);
-    return null == r
+    let n = u(e, t);
+    return null == n
         ? null
         : {
-              id: r.application_id,
-              name: r.name
+              id: n.application_id,
+              name: n.name
           };
 }
-function f(e, n) {
-    return e === n || (null != e && null != n && (0, a.Z)(e, n));
+function d(e, t) {
+    return e === t || (null != e && null != t && (0, r.Z)(e, t));
 }
-function p(e) {
-    return (0, i.e7)([o.Z], () => d(e, o.Z), [e], f);
+function f(e) {
+    return (0, i.e7)([a.Z], () => c(e, a.Z), [e], d);
 }

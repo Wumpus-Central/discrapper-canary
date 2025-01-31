@@ -1,51 +1,46 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-}),
-    n(47120);
+n.d(e, { Z: () => d }), n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
-    o = n.n(l),
-    s = n(481060),
-    a = n(542508);
-function u(e) {
-    let { alt: t, ...n } = e,
-        [l, o] = r.useState(!0);
+    a = n.n(l),
+    u = n(481060),
+    s = n(542508);
+function o(t) {
+    let { alt: e, ...n } = t,
+        [l, a] = r.useState(!0);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             l &&
-                (0, i.jsx)(s.Spinner, {
-                    type: s.Spinner.Type.LOW_MOTION,
-                    className: a.loader
+                (0, i.jsx)(u.$jN, {
+                    type: u.$jN.Type.LOW_MOTION,
+                    className: s.loader
                 }),
             (0, i.jsx)('img', {
                 ...n,
-                alt: t,
-                onLoad: () => o(!1)
+                alt: e,
+                onLoad: () => a(!1)
             })
         ]
     });
 }
-function d(e) {
-    let { src: t, backgroundSrc: n, alt: r, aspectRatio: l, className: s, imageChildClassName: d, ...c } = e;
+function d(t) {
+    let { src: e, backgroundSrc: n, alt: r, aspectRatio: l, className: u, imageChildClassName: d, ...c } = t;
     return (0, i.jsxs)('div', {
-        className: o()(a.container, s),
+        className: a()(s.container, u),
         children: [
             (0, i.jsx)('img', {
                 src: n,
                 alt: r,
-                className: a.backgroundImage
+                className: s.backgroundImage
             }),
-            (0, i.jsx)('div', { className: a.backgroundImageFilter }),
+            (0, i.jsx)('div', { className: s.backgroundImageFilter }),
             (0, i.jsx)('div', {
                 style: { aspectRatio: l },
-                className: a.imageContainer,
-                children: (0, i.jsx)(u, {
-                    src: t,
+                className: s.imageContainer,
+                children: (0, i.jsx)(o, {
+                    src: e,
                     alt: r,
-                    className: o()(a.image, d),
+                    className: a()(s.image, d),
                     ...c
                 })
             })

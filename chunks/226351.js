@@ -1,28 +1,24 @@
-function i(e, n, r) {
+function i(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-r.d(n, {
-    o: function () {
-        return a;
-    }
-});
-class a {
+n.d(t, { o: () => r });
+class r {
     constructor() {
         i(this, 'promise', void 0),
             i(this, 'resolve', void 0),
             i(this, 'reject', void 0),
-            (this.promise = new Promise((e, n) => {
-                (this.resolve = e), (this.reject = n);
+            (this.promise = new Promise((e, t) => {
+                (this.resolve = e), (this.reject = t);
             }));
     }
 }

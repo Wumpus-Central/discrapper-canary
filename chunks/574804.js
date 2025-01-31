@@ -1,5 +1,6 @@
-e.exports = {
-    largeCountdownPill: 'largeCountdownPill_aa13b8',
-    largeCountdownPillText: 'largeCountdownPillText_aa13b8',
-    largePillIcon: 'largePillIcon_aa13b8'
+var i = {
+    largeCountdownPill: 'largeCountdownPill_e270ac',
+    largeCountdownPillText: 'largeCountdownPillText_e270ac',
+    largePillIcon: 'largePillIcon_e270ac'
 };
+e.exports = i;

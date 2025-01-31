@@ -1,9 +1,4 @@
-n.d(t, {
-    B: function () {
-        return c;
-    }
-}),
-    n(653041);
+n.d(t, { B: () => d }), n(653041);
 var l = n(55000),
     a = n(693824),
     i = n(690725),
@@ -14,7 +9,7 @@ let s = (e, t, n) => ({
         ...(null != t && { MediaImage: t }),
         ...(null != n && { ApplicationImage: n })
     }),
-    u = (e, t) => {
+    c = (e, t) => {
         let n = [
             {
                 iconPath: o.i6,
@@ -30,10 +25,10 @@ let s = (e, t, n) => ({
             n
         );
     },
-    c = async (e) => {
-        let { mediaImageSrc: t, entry: n, avatarSrc: c, description: d, timestamp: m, episodeDescription: x, colors: h, channelId: p } = e,
-            C = n.extra.media_title,
-            v = s(c, t);
+    d = async (e) => {
+        let { mediaImageSrc: t, entry: n, avatarSrc: d, description: u, timestamp: m, episodeDescription: x, colors: h, channelId: p } = e,
+            g = n.extra.media_title,
+            v = s(d, t);
         return await (0, i.f)({
             assetsToLoad: v,
             drawImage: (e) => {
@@ -122,7 +117,7 @@ let s = (e, t, n) => ({
                         truncate: a.GX.Wrap
                     }),
                     e.drawText(
-                        d,
+                        u,
                         {
                             x: o.Iq,
                             y: 64,
@@ -131,7 +126,7 @@ let s = (e, t, n) => ({
                         },
                         !0
                     );
-                let i = u(m, x);
+                let i = c(m, x);
                 (0, r.J)({
                     canvas: e,
                     badges: i,
@@ -142,7 +137,7 @@ let s = (e, t, n) => ({
             exportConfigs: {
                 format: a.kH.CloudUpload,
                 quality: 1,
-                fileName: 'user-reacting-to-'.concat(C, '.png').toLowerCase(),
+                fileName: 'user-reacting-to-'.concat(g, '.png').toLowerCase(),
                 fileType: 'png',
                 channelId: p
             }

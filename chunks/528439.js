@@ -1,70 +1,64 @@
 n.d(t, {
-    $0: function () {
-        return r;
-    },
-    Tm: function () {
-        return p;
-    },
-    oT: function () {
-        return h;
-    }
+    $0: () => m,
+    Tm: () => p,
+    ZP: () => g,
+    oT: () => h
 }),
     n(47120),
     n(724458),
     n(653041);
 var r,
-    i,
-    l = n(192379),
-    s = n(392711),
-    o = n(399606),
-    c = n(597688),
-    a = n(1870),
-    d = n(884697),
-    u = n(594174),
-    f = n(74538),
-    m = n(388032);
-((i = r || (r = {})).PURCHASE = 'purchase'), (i.PREMIUM_PURCHASE = 'premium_purchase'), (i.PREVIEW = 'preview');
+    i = n(192379),
+    l = n(392711),
+    s = n(399606),
+    o = n(597688),
+    c = n(1870),
+    a = n(884697),
+    d = n(594174),
+    u = n(74538),
+    f = n(388032),
+    m = (((r = {}).PURCHASE = 'purchase'), (r.PREMIUM_PURCHASE = 'premium_purchase'), (r.PREVIEW = 'preview'), r);
 let p = { id: 'None' },
-    h = { id: 'Shop' };
-t.ZP = () => {
-    let e = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
-        t = f.ZP.canUseCollectibles(e),
-        n = (0, o.e7)([a.Z], () => a.Z.purchases),
-        [r, i] = (0, o.Wu)([c.Z], () => [c.Z.categories, c.Z.products]);
-    return (0, l.useMemo)(() => {
-        let e = (0, s.uniqBy)([...(0, d.aj)(n), ...(0, d.XS)(r)], 'id').reduce(
-            (e, r) => {
-                let l = n.get(r.skuId);
-                return (0, d.qS)(l) ? (e.premium_purchase.push(r), e) : null != l ? (e.purchase.push(r), e) : !t && (0, d.G1)(i.get(r.skuId)) ? (e.premium_purchase.push(r), e) : (e.preview.push(r), e);
-            },
-            {
-                purchase: [],
-                premium_purchase: [],
-                preview: []
-            }
-        );
-        return [
-            {
-                section: 'purchase',
-                items: [p, h, ...e.purchase],
-                height: 12,
-                header: m.intl.string(m.t.JEimX1)
-            },
-            {
-                section: 'premium_purchase',
-                items: e.premium_purchase,
-                height: 12,
-                header: m.intl.string(m.t.DIJLzM)
-            },
-            {
-                section: 'preview',
-                items: e.preview,
-                height: 12,
-                header: m.intl.string(m.t.fmIfaG)
-            }
-        ].filter((e) => {
-            let { items: t } = e;
-            return t.length > 0;
-        });
-    }, [r, i, n, t]);
-};
+    h = { id: 'Shop' },
+    g = () => {
+        let e = (0, s.e7)([d.default], () => d.default.getCurrentUser()),
+            t = u.ZP.canUseCollectibles(e),
+            n = (0, s.e7)([c.Z], () => c.Z.purchases),
+            [r, m] = (0, s.Wu)([o.Z], () => [o.Z.categories, o.Z.products]);
+        return (0, i.useMemo)(() => {
+            let e = (0, l.uniqBy)([...(0, a.aj)(n), ...(0, a.XS)(r)], 'id').reduce(
+                (e, r) => {
+                    let i = n.get(r.skuId);
+                    return (0, a.qS)(i) ? e.premium_purchase.push(r) : null != i ? e.purchase.push(r) : !t && (0, a.G1)(m.get(r.skuId)) ? e.premium_purchase.push(r) : e.preview.push(r), e;
+                },
+                {
+                    purchase: [],
+                    premium_purchase: [],
+                    preview: []
+                }
+            );
+            return [
+                {
+                    section: 'purchase',
+                    items: [p, h, ...e.purchase],
+                    height: 12,
+                    header: f.intl.string(f.t.JEimX1)
+                },
+                {
+                    section: 'premium_purchase',
+                    items: e.premium_purchase,
+                    height: 12,
+                    header: f.intl.string(f.t.DIJLzM)
+                },
+                {
+                    section: 'preview',
+                    items: e.preview,
+                    height: 12,
+                    header: f.intl.string(f.t.fmIfaG)
+                }
+            ].filter((e) => {
+                let { items: t } = e;
+                return t.length > 0;
+            });
+        }, [r, m, n, t]);
+    };

@@ -1,65 +1,61 @@
-n.d(t, {
-    Q: function () {
-        return m;
-    }
-});
-var r = n(200651),
-    i = n(192379),
+n.d(t, { Q: () => m });
+var i = n(200651),
+    r = n(192379),
     s = n(120356),
-    o = n.n(s),
-    l = n(392711),
-    a = n.n(l),
+    l = n.n(s),
+    o = n(392711),
+    a = n.n(o),
     c = n(481060),
     d = n(100527),
     C = n(267101),
     u = n(675297),
     x = n(891561),
-    f = n(333866),
-    p = n(388032),
-    h = n(134207);
+    p = n(333866),
+    h = n(388032),
+    _ = n(134207);
 function m(e) {
     let { guildId: t, productId: n } = e,
         { listingsLoaded: s } = (0, C.eD)(t),
-        l = (0, C.ue)(t),
-        m = i.useRef(null),
+        o = (0, C.ue)(t),
+        m = r.useRef(null),
         { sortOption: g } = (0, x.s)(),
-        v = i.useMemo(
+        v = r.useMemo(
             () =>
                 (function (e, t) {
-                    let n, r;
+                    let n, i;
                     switch (t) {
-                        case f.zJ.NAME:
-                            (n = (e) => e.name.toLowerCase()), (r = 'asc');
+                        case p.zJ.NAME:
+                            (n = (e) => e.name.toLowerCase()), (i = 'asc');
                             break;
-                        case f.zJ.PRICE_ASC:
-                            (n = 'price_tier'), (r = 'asc');
+                        case p.zJ.PRICE_ASC:
+                            (n = 'price_tier'), (i = 'asc');
                             break;
-                        case f.zJ.PRICE_DESC:
-                            (n = 'price_tier'), (r = 'desc');
+                        case p.zJ.PRICE_DESC:
+                            (n = 'price_tier'), (i = 'desc');
                             break;
-                        case f.zJ.NEWEST_ARRIVALS:
-                            (n = 'published_at'), (r = 'desc');
+                        case p.zJ.NEWEST_ARRIVALS:
+                            (n = 'published_at'), (i = 'desc');
                             break;
                         default:
                             return e;
                     }
-                    return a().orderBy(e, [n], [r]);
-                })(l, g),
-            [l, g]
+                    return a().orderBy(e, [n], [i]);
+                })(o, g),
+            [o, g]
         );
     return s
-        ? (0, r.jsx)('ul', {
-              className: h.cardContainer,
-              'aria-label': p.intl.string(p.t.qe4kTU),
+        ? (0, i.jsx)('ul', {
+              className: _.cardContainer,
+              'aria-label': h.intl.string(h.t.qe4kTU),
               children: v.map((e) =>
-                  (0, r.jsx)(
+                  (0, i.jsx)(
                       'li',
                       {
-                          className: h.card,
-                          children: (0, r.jsx)(
+                          className: _.card,
+                          children: (0, i.jsx)(
                               'div',
                               {
-                                  className: o()(h.cardContent, { [h.selectedCard]: e.id === n }),
+                                  className: l()(_.cardContent, { [_.selectedCard]: e.id === n }),
                                   ref: e.id === n ? m : void 0,
                                   onLoad: () => {
                                       let t = m.current;
@@ -70,10 +66,10 @@ function m(e) {
                                               block: 'center'
                                           }),
                                           setTimeout(() => {
-                                              t.classList.remove(h.selectedCard);
+                                              t.classList.remove(_.selectedCard);
                                           }, 2000));
                                   },
-                                  children: (0, r.jsx)(
+                                  children: (0, i.jsx)(
                                       u.H,
                                       {
                                           guildProductListing: e,
@@ -98,5 +94,5 @@ function m(e) {
                   )
               )
           })
-        : (0, r.jsx)(c.Spinner, {});
+        : (0, i.jsx)(c.$jN, {});
 }

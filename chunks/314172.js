@@ -1,64 +1,60 @@
-r.d(n, {
-    Z: function () {
-        return g;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(442837),
-    o = r(693789),
-    s = r(235874),
-    l = r(481060),
-    u = r(944613),
-    c = r(607070),
-    d = r(605436),
-    f = r(496675),
-    p = r(475413),
-    h = r(981631),
-    _ = r(388032),
-    m = r(154304);
-function g(e) {
-    let { guild: n, guildMember: r, numRoles: g, highestRole: E, onAddRole: v, buttonRef: y } = e,
-        b = (0, a.e7)([c.Z], () => c.Z.roleStyle);
-    if (!(0, a.e7)([f.Z], () => f.Z.can(h.Plq.MANAGE_ROLES, n))) return null;
-    let I = (e) => (0, d.Gy)(n.id, e.id) && !e.managed && f.Z.isRoleHigher(n, E, e) && -1 === r.roles.indexOf(e.id);
+n.d(t, { Z: () => m });
+var i = n(200651);
+n(192379);
+var r = n(442837),
+    a = n(693789),
+    s = n(235874),
+    o = n(481060),
+    l = n(944613),
+    u = n(607070),
+    c = n(605436),
+    d = n(496675),
+    f = n(475413),
+    _ = n(981631),
+    p = n(388032),
+    h = n(154304);
+function m(e) {
+    let { guild: t, guildMember: n, numRoles: m, highestRole: g, onAddRole: E, buttonRef: v } = e,
+        y = (0, r.e7)([u.Z], () => u.Z.roleStyle);
+    if (!(0, r.e7)([d.Z], () => d.Z.can(_.Plq.MANAGE_ROLES, t))) return null;
+    let I = (e) => (0, c.Gy)(t.id, e.id) && !e.managed && d.Z.isRoleHigher(t, g, e) && -1 === n.roles.indexOf(e.id);
     return (0, i.jsx)(s.y, {
         position: 'bottom',
         align: 'center',
         renderPopout: (e) => {
-            let { closePopout: r } = e;
-            return (0, i.jsx)(u.Z, {
-                guild: n,
-                roleStyle: b,
+            let { closePopout: n } = e;
+            return (0, i.jsx)(l.Z, {
+                guild: t,
+                roleStyle: y,
                 roleFilter: I,
-                onSelect: v,
-                onClose: r
+                onSelect: E,
+                onClose: n
             });
         },
         children: (e) =>
-            (0, i.jsx)(l.TooltipContainer, {
-                text: _.intl.string(_.t.icyMgY),
+            (0, i.jsx)(o.DY3, {
+                text: p.intl.string(p.t.icyMgY),
                 'aria-label': !1,
-                shouldShow: g > 0,
-                children: (0, i.jsxs)(p.kF, {
-                    className: m.button,
-                    color: o.zx.Colors.CUSTOM,
+                shouldShow: m > 0,
+                children: (0, i.jsxs)(f.kF, {
+                    className: h.button,
+                    color: a.zx.Colors.CUSTOM,
                     themeColor: 'none',
-                    size: o.zx.Sizes.NONE,
+                    size: a.zx.Sizes.NONE,
                     grow: !1,
-                    'aria-label': _.intl.string(_.t.icyMgY),
-                    buttonRef: y,
+                    'aria-label': p.intl.string(p.t.icyMgY),
+                    buttonRef: v,
                     ...e,
                     children: [
-                        (0, i.jsx)(l.PlusSmallIcon, {
+                        (0, i.jsx)(o.qJs, {
                             size: 'xs',
                             color: 'currentColor'
                         }),
-                        0 === g &&
-                            (0, i.jsx)(l.Text, {
+                        0 === m &&
+                            (0, i.jsx)(o.Text, {
                                 variant: 'text-xs/normal',
                                 color: 'none',
-                                children: _.intl.string(_.t.icyMgY)
+                                children: p.intl.string(p.t.icyMgY)
                             })
                     ]
                 })

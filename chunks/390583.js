@@ -1,10 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return h;
-    }
-}),
-    n(47120),
-    n(653041);
+n.d(t, { Z: () => h }), n(47120), n(653041);
 var i = n(200651),
     r = n(192379),
     l = n(481060);
@@ -39,7 +33,7 @@ function h() {
             (0, i.jsx)(d.p, {
                 benefits: n,
                 onEdit: function (e) {
-                    (0, l.openModal)((r) =>
+                    (0, l.h7j)((r) =>
                         (0, i.jsx)(c.x3, {
                             ...r,
                             guildId: t,
@@ -61,10 +55,10 @@ function h() {
                 },
                 guildId: t
             }),
-            n.length > 0 && (0, i.jsx)(l.Spacer, { size: 8 }),
+            n.length > 0 && (0, i.jsx)(l.LZC, { size: 8 }),
             (0, i.jsx)(d.s, {
                 onClick: function () {
-                    (0, l.openModal)((e) =>
+                    (0, l.h7j)((e) =>
                         (0, i.jsx)(c.x3, {
                             ...e,
                             guildId: t,

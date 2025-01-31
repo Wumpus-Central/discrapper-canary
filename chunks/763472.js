@@ -1,62 +1,56 @@
-r.d(n, {
-    Z_: function () {
-        return c;
-    },
-    hY: function () {
-        return d;
-    },
-    sd: function () {
-        return f;
-    }
-});
-var i = r(411104);
-var a = r(544891),
-    o = r(570140),
-    s = r(647162),
-    l = r(158776),
-    u = r(981631);
-function c(e, n) {
-    o.Z.dispatch({
+n.d(t, {
+    Z_: () => l,
+    hY: () => u,
+    sd: () => c
+}),
+    n(411104);
+var i = n(544891),
+    r = n(570140),
+    a = n(647162),
+    s = n(158776),
+    o = n(981631);
+function l(e, t) {
+    r.Z.dispatch({
         type: 'ACTIVITY_SYNC',
         activity: e,
-        userId: n
+        userId: t
     });
 }
-function d(e, n) {
-    (0, s.iy)(e, n)
-        .then((r) =>
-            o.Z.dispatch({
+function u(e, t) {
+    (0, a.iy)(e, t)
+        .then((n) =>
+            r.Z.dispatch({
                 type: 'ACTIVITY_PLAY',
                 activity: e,
-                userId: n,
-                metadata: r
+                userId: t,
+                metadata: n
             })
         )
         .catch(() =>
-            o.Z.dispatch({
+            r.Z.dispatch({
                 type: 'ACTIVITY_PLAY',
                 activity: e,
-                userId: n
+                userId: t
             })
         );
 }
-async function f(e, n) {
-    let r = e.metadata;
-    if (null != r) return r;
-    let i = l.Z.getActivityMetadata(n);
-    if (null != i) return i;
+async function c(e, t) {
+    let n = e.metadata;
+    if (null != n) return n;
+    let a = s.Z.getActivityMetadata(t);
+    if (null != a) return a;
     if (null == e.session_id) throw Error('null/undefined session_id');
-    let { body: s } = await a.tn.get({
-        url: u.ANM.USER_ACTIVITY_METADATA(n, e.session_id, e.application_id),
+    let { body: l } = await i.tn.get({
+        url: o.ANM.USER_ACTIVITY_METADATA(t, e.session_id, e.application_id),
         oldFormErrors: !0,
         rejectWithError: !1
     });
     return (
-        o.Z.dispatch({
+        r.Z.dispatch({
             type: 'ACTIVITY_METADATA_UPDATE',
-            metadata: s,
-            userId: n
+            metadata: l,
+            userId: t
         }),
-        s
+        l
     );
 }

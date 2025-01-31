@@ -1,12 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-});
+n.d(t, { Z: () => l });
 var d = n(442837),
     u = n(241155),
     i = n(430824);
-function r(e, t) {
+function l(e, t) {
     return (0, d.cj)(
         [i.Z, u.Z],
         () => {

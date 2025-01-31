@@ -1,22 +1,16 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return p;
-        }
-    }),
-    n(47120);
-var l = n(200651),
-    r = n(192379),
-    o = n(481060),
-    a = n(661111),
-    i = n(766411),
-    s = n(626135),
-    c = n(388080),
-    d = n(981631),
-    h = n(596401),
-    u = n(388032),
-    g = n(598092);
-function m(e, t, n) {
+n.d(t, { default: () => g }), n(47120);
+var r = n(200651),
+    i = n(192379),
+    d = n(481060),
+    o = n(661111),
+    a = n(766411),
+    l = n(626135),
+    s = n(388080),
+    c = n(981631),
+    m = n(596401),
+    _ = n(388032),
+    h = n(598092);
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,15 +23,15 @@ function m(e, t, n) {
         e
     );
 }
-class x extends r.PureComponent {
+class u extends i.PureComponent {
     componentDidMount() {
-        (this.mountedAt = Date.now()), (this.maxScrolledPercentage = 0), this.track(d.rMx.CHANGE_LOG_OPENED, {}, !0);
+        (this.mountedAt = Date.now()), (this.maxScrolledPercentage = 0), this.track(c.rMx.CHANGE_LOG_OPENED, {}, !0);
     }
     componentWillUnmount() {
-        this.track(d.rMx.CHANGE_LOG_CLOSED);
+        this.track(c.rMx.CHANGE_LOG_CLOSED);
     }
     render() {
-        return (0, l.jsx)(c.Z, {
+        return (0, r.jsx)(s.Z, {
             ...this.props,
             onClose: this.close,
             onScroll: this.handleScroll,
@@ -48,73 +42,71 @@ class x extends r.PureComponent {
         var t;
         super(...e),
             (t = this),
-            m(this, 'maxScrolledPercentage', 0),
-            m(this, 'mountedAt', 0),
-            m(this, 'close', () => {
-                (0, o.closeModal)(h.Xd);
+            b(this, 'maxScrolledPercentage', 0),
+            b(this, 'mountedAt', 0),
+            b(this, 'close', () => {
+                (0, d.Mr3)(m.Xd);
             }),
-            m(this, 'handleScroll', (e) => {
-                let { offsetHeight: t, scrollHeight: n, scrollTop: l } = e.getScrollerState();
-                this.maxScrolledPercentage = Math.min(Math.max(this.maxScrolledPercentage, l / (n - t)), 1);
+            b(this, 'handleScroll', (e) => {
+                let { offsetHeight: t, scrollHeight: n, scrollTop: r } = e.getScrollerState();
+                this.maxScrolledPercentage = Math.min(Math.max(this.maxScrolledPercentage, r / (n - t)), 1);
             }),
-            m(this, 'track', function (e) {
+            b(this, 'track', function (e) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                    l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                    { changeLog: r } = t.props,
-                    { date: o, revision: a } = r,
-                    i = {
-                        change_log_id: ''.concat(o, ':').concat(a),
+                    r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                    { changeLog: i } = t.props,
+                    { date: d, revision: o } = i,
+                    a = {
+                        change_log_id: ''.concat(d, ':').concat(o),
                         ...n
                     };
-                !l &&
-                    (i = {
+                r ||
+                    (a = {
                         seconds_open: Math.round((Date.now() - t.mountedAt) / 1000),
                         max_scrolled_percentage: 100 * parseInt(t.maxScrolledPercentage.toPrecision(4), 10),
-                        ...i
+                        ...a
                     }),
-                    s.default.track(e, i);
+                    l.default.track(e, a);
             });
     }
 }
-function p(e) {
-    let { changelog: t, loaded: n, clientTooOld: s } = (0, i.E)();
-    if (
-        (r.useEffect(() => {
-            if (n && null != t) return () => a.Z.markChangelogAsSeen(t.id, t.date);
-        }, [n, t]),
-        s)
-    )
-        return (0, l.jsx)(o.ModalRoot, {
-            transitionState: e.transitionState,
-            children: (0, l.jsx)('div', {
-                className: g.empty,
-                children: (0, l.jsx)(o.Heading, {
-                    variant: 'heading-lg/medium',
-                    children: u.intl.string(u.t.V9ospq)
-                })
-            })
-        });
-    if (null == t)
-        return n
-            ? (0, l.jsx)(o.ModalRoot, {
-                  transitionState: e.transitionState,
-                  children: (0, l.jsx)('div', {
-                      className: g.empty,
-                      children: (0, l.jsx)(o.Text, {
-                          variant: 'text-md/semibold',
-                          children: u.intl.string(u.t.O1iRT0)
-                      })
+function g(e) {
+    let { changelog: t, loaded: n, clientTooOld: l } = (0, a.E)();
+    return (i.useEffect(() => {
+        if (n && null != t) return () => o.Z.markChangelogAsSeen(t.id, t.date);
+    }, [n, t]),
+    l)
+        ? (0, r.jsx)(d.Y0X, {
+              transitionState: e.transitionState,
+              children: (0, r.jsx)('div', {
+                  className: h.empty,
+                  children: (0, r.jsx)(d.X6q, {
+                      variant: 'heading-lg/medium',
+                      children: _.intl.string(_.t.V9ospq)
                   })
               })
-            : (0, l.jsx)(o.ModalRoot, {
-                  transitionState: e.transitionState,
-                  children: (0, l.jsx)('div', {
-                      className: g.empty,
-                      children: (0, l.jsx)(o.Spinner, { type: o.Spinner.Type.WANDERING_CUBES })
-                  })
-              });
-    return (0, l.jsx)(o.ModalRoot, {
-        transitionState: e.transitionState,
-        children: (0, l.jsx)(x, { changeLog: t })
-    });
+          })
+        : null == t
+          ? n
+              ? (0, r.jsx)(d.Y0X, {
+                    transitionState: e.transitionState,
+                    children: (0, r.jsx)('div', {
+                        className: h.empty,
+                        children: (0, r.jsx)(d.Text, {
+                            variant: 'text-md/semibold',
+                            children: _.intl.string(_.t.O1iRT0)
+                        })
+                    })
+                })
+              : (0, r.jsx)(d.Y0X, {
+                    transitionState: e.transitionState,
+                    children: (0, r.jsx)('div', {
+                        className: h.empty,
+                        children: (0, r.jsx)(d.$jN, { type: d.$jN.Type.WANDERING_CUBES })
+                    })
+                })
+          : (0, r.jsx)(d.Y0X, {
+                transitionState: e.transitionState,
+                children: (0, r.jsx)(u, { changeLog: t })
+            });
 }

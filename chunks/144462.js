@@ -1,66 +1,60 @@
-n.r(e),
-    n.d(e, {
-        default: function () {
-            return d;
-        }
-    }),
-    n(47120);
-var o = n(200651),
+n.d(t, { default: () => d }), n(47120);
+var s = n(200651),
     a = n(192379),
-    r = n(481060),
-    s = n(313201),
-    i = n(273504),
+    i = n(481060),
+    r = n(313201),
+    o = n(273504),
     l = n(388032),
     c = n(246805);
-function d(t) {
-    let { initialCustomMessage: e, onSubmit: n, onClose: d, transitionState: u } = t,
-        h = (0, s.Dt)(),
-        [x, C] = a.useState(e);
-    return (0, o.jsxs)(r.ModalRoot, {
-        transitionState: u,
-        'aria-labelledby': h,
-        size: r.ModalSize.SMALL,
+function d(e) {
+    let { initialCustomMessage: t, onSubmit: n, onClose: d, transitionState: h } = e,
+        x = (0, r.Dt)(),
+        [k, u] = a.useState(t);
+    return (0, s.jsxs)(i.Y0X, {
+        transitionState: h,
+        'aria-labelledby': x,
+        size: i.CgR.SMALL,
         children: [
-            (0, o.jsxs)(r.ModalContent, {
+            (0, s.jsxs)(i.hzk, {
                 className: c.actionContentContainer,
                 children: [
-                    (0, o.jsx)(r.Heading, {
-                        id: h,
+                    (0, s.jsx)(i.X6q, {
+                        id: x,
                         color: 'header-primary',
                         variant: 'heading-md/semibold',
                         className: c.header,
                         children: l.intl.string(l.t.Df4aUF)
                     }),
-                    (0, o.jsx)(r.Text, {
+                    (0, s.jsx)(i.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
                         children: l.intl.string(l.t.eOWEmJ)
                     }),
-                    (0, o.jsx)(r.TextArea, {
+                    (0, s.jsx)(i.Kx8, {
                         className: c.customMessageTextArea,
                         placeholder: l.intl.string(l.t.gDZw7O),
-                        value: x,
-                        onChange: C,
-                        maxLength: i._6
+                        value: k,
+                        onChange: u,
+                        maxLength: o._6
                     })
                 ]
             }),
-            (0, o.jsxs)(r.ModalFooter, {
+            (0, s.jsxs)(i.mzw, {
                 children: [
-                    (0, o.jsx)(r.Button, {
+                    (0, s.jsx)(i.zxk, {
                         onClick: () => {
-                            n(x);
+                            n(k);
                         },
-                        color: r.Button.Colors.BRAND,
-                        size: r.Button.Sizes.SMALL,
+                        color: i.zxk.Colors.BRAND,
+                        size: i.zxk.Sizes.SMALL,
                         children: l.intl.string(l.t.bt75u7)
                     }),
-                    (0, o.jsx)(r.Button, {
+                    (0, s.jsx)(i.zxk, {
                         onClick: () => {
                             d();
                         },
-                        color: r.Button.Colors.TRANSPARENT,
-                        look: r.Button.Looks.LINK,
+                        color: i.zxk.Colors.TRANSPARENT,
+                        look: i.zxk.Looks.LINK,
                         children: l.intl.string(l.t['ETE/oK'])
                     })
                 ]

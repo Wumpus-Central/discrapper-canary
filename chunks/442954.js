@@ -1,20 +1,15 @@
-n.d(t, {
-    Z: function () {
-        return x;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => x }), n(47120);
 var a = n(200651),
-    r = n(192379),
-    l = n(120356),
-    i = n.n(l),
+    l = n(192379),
+    r = n(120356),
+    i = n.n(r),
     o = n(481060),
     s = n(138464),
     c = n(585483),
     d = n(246992),
     u = n(981631),
-    h = n(941469),
-    m = n(509345);
+    m = n(941469),
+    h = n(509345);
 function x() {
     let e = {
             PremiumSubscriptionAprilMarketingDecoModal: async () => {
@@ -30,34 +25,34 @@ function x() {
             label: e,
             value: e
         })),
-        [l, x] = r.useState(t[0].value);
-    return (0, a.jsx)(o.ScrollerThin, {
-        className: i()(h.panel),
+        [r, x] = l.useState(t[0].value);
+    return (0, a.jsx)(o.zJl, {
+        className: i()(m.panel),
         children: (0, a.jsxs)('div', {
-            className: m.panelInner,
+            className: h.panelInner,
             children: [
                 (0, a.jsxs)('section', {
-                    className: m.section,
+                    className: h.section,
                     children: [
-                        (0, a.jsx)(o.Heading, {
+                        (0, a.jsx)(o.X6q, {
                             variant: 'heading-md/semibold',
                             children: 'Open a Modal'
                         }),
                         (0, a.jsxs)('div', {
-                            className: m.inputRow,
+                            className: h.inputRow,
                             children: [
-                                (0, a.jsx)(o.Select, {
-                                    className: m.input,
+                                (0, a.jsx)(o.PhF, {
+                                    className: h.input,
                                     options: t,
-                                    isSelected: (e) => l === e,
+                                    isSelected: (e) => r === e,
                                     placeholder: 'Trial ID',
                                     serialize: (e) => String(e),
                                     select: (e) => x(e),
                                     popoutLayerContext: d.O$
                                 }),
-                                (0, a.jsx)(o.Button, {
+                                (0, a.jsx)(o.zxk, {
                                     onClick: () => {
-                                        (0, o.openModalLazy)(e[l]);
+                                        (0, o.ZDy)(e[r]);
                                     },
                                     children: 'Open'
                                 })
@@ -66,15 +61,15 @@ function x() {
                     ]
                 }),
                 (0, a.jsxs)('section', {
-                    className: m.section,
+                    className: h.section,
                     children: [
-                        (0, a.jsx)(o.Heading, {
+                        (0, a.jsx)(o.X6q, {
                             variant: 'heading-md/semibold',
                             children: 'Wow moment'
                         }),
                         (0, a.jsx)('div', {
-                            className: m.inputRow,
-                            children: (0, a.jsx)(o.Button, {
+                            className: h.inputRow,
+                            children: (0, a.jsx)(o.zxk, {
                                 onClick: () => {
                                     (0, s.H)(!0), c.S.dispatch(u.CkL.PREMIUM_SUBSCRIPTION_CREATED);
                                 },

@@ -1,13 +1,8 @@
-n.d(t, {
-    g: function () {
-        return N;
-    }
-}),
-    n(653041);
+n.d(t, { g: () => N }), n(653041);
 var i = n(200651);
 n(192379);
-var r = n(442837),
-    l = n(780384),
+var l = n(442837),
+    r = n(780384),
     a = n(481060),
     s = n(44315),
     o = n(540059),
@@ -18,40 +13,40 @@ var r = n(442837),
     m = n(626135),
     p = n(51144),
     g = n(480387),
-    f = n(726745),
-    _ = n(251423),
+    _ = n(726745),
+    f = n(251423),
     E = n(383832),
     I = n(981631),
     C = n(388032),
     v = n(543395);
 function N(e) {
-    let t = (0, r.e7)([h.default], () => h.default.getCurrentUser()),
-        n = (0, r.e7)([u.Z], () => u.Z.hidePersonalInformation),
-        N = (0, r.e7)([c.Z], () => (0, l.wj)(c.Z.theme)),
+    let t = (0, l.e7)([h.default], () => h.default.getCurrentUser()),
+        n = (0, l.e7)([u.Z], () => u.Z.hidePersonalInformation),
+        N = (0, l.e7)([c.Z], () => (0, r.wj)(c.Z.theme)),
         T = (0, o.R6)('useMultiAccountMenuItems'),
-        { multiAccountUsers: S } = (0, _.L)(),
-        b = (e) => {
-            if (e !== (null == t ? void 0 : t.id)) m.default.track(I.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: I.jXE.USER_PROFILE } }), g.yD(e);
+        { multiAccountUsers: S } = (0, f.L)(),
+        Z = (e) => {
+            e !== (null == t ? void 0 : t.id) && (m.default.track(I.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: I.jXE.USER_PROFILE } }), g.yD(e));
         },
-        A = S.map((r) => {
-            let l = new d.Z(r),
-                o = l.id === (null == t ? void 0 : t.id),
-                c = r.tokenStatus === f.q.INVALID,
-                u = n ? null : '#'.concat(l.discriminator);
+        x = S.map((l) => {
+            let r = new d.Z(l),
+                o = r.id === (null == t ? void 0 : t.id),
+                c = l.tokenStatus === _.q.INVALID,
+                u = n ? null : '#'.concat(r.discriminator);
             return (0, i.jsx)(
-                a.MenuItem,
+                a.sNh,
                 {
-                    id: l.id,
+                    id: r.id,
                     focusedClassName: v.focused,
                     label: (e) => {
                         let { isFocused: t } = e;
                         return (0, i.jsxs)('div', {
                             className: v.userMenuItem,
                             children: [
-                                (0, i.jsx)(a.Avatar, {
-                                    src: l.getAvatarURL(void 0, 40),
-                                    size: a.AvatarSizes.SIZE_24,
-                                    'aria-label': r.username
+                                (0, i.jsx)(a.qEK, {
+                                    src: r.getAvatarURL(void 0, 40),
+                                    size: a.EFr.SIZE_24,
+                                    'aria-label': l.username
                                 }),
                                 (0, i.jsxs)('div', {
                                     className: v.userMenuUsername,
@@ -59,12 +54,12 @@ function N(e) {
                                         (0, i.jsx)(a.Text, {
                                             className: v.userMenuText,
                                             variant: 'text-sm/normal',
-                                            children: p.ZP.getUserTag(l, {
+                                            children: p.ZP.getUserTag(r, {
                                                 mode: 'username',
                                                 identifiable: n ? 'never' : 'always'
                                             })
                                         }),
-                                        !l.isPomelo() &&
+                                        !r.isPomelo() &&
                                             (0, i.jsx)(a.Text, {
                                                 className: v.userMenuDiscriminator,
                                                 variant: 'text-sm/normal',
@@ -73,14 +68,14 @@ function N(e) {
                                     ]
                                 }),
                                 o &&
-                                    (0, i.jsx)(a.CircleCheckIcon, {
+                                    (0, i.jsx)(a.owK, {
                                         size: 'sm',
                                         color: (0, s.Lq)(t ? I.Ilk.WHITE_500 : I.Ilk.BRAND_500),
                                         secondaryColor: (0, s.Lq)((t && N) || (t && !T && !N) ? I.Ilk.BRAND_500 : I.Ilk.WHITE_500),
                                         className: v.activeIcon
                                     }),
                                 c &&
-                                    (0, i.jsx)(a.CircleWarningIcon, {
+                                    (0, i.jsx)(a.P4T, {
                                         color: (0, s.Lq)(I.Ilk.RED_400),
                                         secondaryColor: (0, s.Lq)((t && N) || (t && !T && !N) ? I.Ilk.BRAND_500 : I.Ilk.WHITE_500),
                                         size: 'xs',
@@ -90,18 +85,18 @@ function N(e) {
                         });
                     },
                     action: () => {
-                        null == e || e(), c ? (0, E.Z)() : b(l.id);
+                        null == e || e(), c ? (0, E.Z)() : Z(r.id);
                     }
                 },
-                l.id
+                r.id
             );
         });
     return (
-        A.push(
+        x.push(
             (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(a.MenuSeparator, {}),
-                    (0, i.jsx)(a.MenuItem, {
+                    (0, i.jsx)(a.Clw, {}),
+                    (0, i.jsx)(a.sNh, {
                         id: 'manage-accounts',
                         label: C.intl.string(C.t.WbFpq6),
                         action: () => {
@@ -111,6 +106,6 @@ function N(e) {
                 ]
             })
         ),
-        A
+        x
     );
 }

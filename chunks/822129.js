@@ -1,14 +1,9 @@
-r.r(n),
-    r.d(n, {
-        default: function () {
-            return s;
-        }
-    });
-var i = r(315008),
-    a = r(951516),
-    o = r(217224);
-function s(e, n) {
-    (0, a.Z)(2, arguments);
-    var r = (0, o.Z)(n);
-    return (0, i.default)(e, -r);
+n.r(t), n.d(t, { default: () => s });
+var i = n(315008),
+    r = n(951516),
+    a = n(217224);
+function s(e, t) {
+    (0, r.Z)(2, arguments);
+    var n = (0, a.Z)(t);
+    return (0, i.default)(e, -n);
 }

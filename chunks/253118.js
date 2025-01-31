@@ -1,64 +1,60 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
+n.d(t, { Z: () => c });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(904245),
-    a = n(739566),
-    o = n(834129),
-    s = n(388032);
+var l = n(481060),
+    a = n(904245),
+    r = n(739566),
+    s = n(834129),
+    o = n(388032);
 function c(e) {
-    let { message: t, usernameHook: c, onClickPins: u, compact: d } = e,
-        m = (0, a.ZP)(t),
+    let { message: t, usernameHook: c, onClickPins: d, compact: u } = e,
+        m = (0, r.ZP)(t),
         h = m.nick,
-        f = c(m),
+        _ = c(m),
         p = () => {
             if (null == t.messageReference) return;
             let { channel_id: e, message_id: n } = t.messageReference;
-            l.Z.jumpToMessage({
+            a.Z.jumpToMessage({
                 channelId: e,
                 messageId: n,
                 flash: !0
             });
         },
-        _ = (0, r.useRedesignIconContext)().enabled
+        g = (0, l.bWb)().enabled
             ? {
-                  iconNode: (0, i.jsx)(r.PinIcon, {
+                  iconNode: (0, i.jsx)(l.qQX, {
                       size: 'sm',
                       color: 'currentColor'
                   })
               }
             : { icon: n(879066) };
-    return (0, i.jsx)(o.Z, {
-        ..._,
+    return (0, i.jsx)(s.Z, {
+        ...g,
         timestamp: t.timestamp,
-        compact: d,
+        compact: u,
         children:
             null != t.messageReference
-                ? null == u
-                    ? s.intl.format(s.t.lD5tur, {
-                          usernameHook: f,
+                ? null == d
+                    ? o.intl.format(o.t.lD5tur, {
+                          usernameHook: _,
                           username: h,
                           messageOnClick: p
                       })
-                    : s.intl.format(s.t.yIDvPD, {
-                          usernameHook: f,
+                    : o.intl.format(o.t.yIDvPD, {
+                          usernameHook: _,
                           username: h,
-                          pinsActionOnClick: u,
+                          pinsActionOnClick: d,
                           messageOnClick: p
                       })
-                : null == u
-                  ? s.intl.format(s.t.vfkjq6, {
-                        usernameHook: f,
+                : null == d
+                  ? o.intl.format(o.t.vfkjq6, {
+                        usernameHook: _,
                         username: h
                     })
-                  : s.intl.format(s.t.R7vZGR, {
-                        usernameHook: f,
+                  : o.intl.format(o.t.R7vZGR, {
+                        usernameHook: _,
                         username: h,
-                        pinsActionOnClick: u
+                        pinsActionOnClick: d
                     })
     });
 }

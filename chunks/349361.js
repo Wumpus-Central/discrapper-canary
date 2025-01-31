@@ -1,16 +1,10 @@
-r.d(n, {
-    h2: function () {
-        return s;
-    },
-    xV: function () {
-        return o;
-    },
-    yW: function () {
-        return l;
-    }
+n.d(t, {
+    h2: () => s,
+    xV: () => a,
+    yW: () => o
 });
-var i = r(49402),
-    a = r(553624);
-let o = (0, i.I)(a.none, a.fade, a.customTheme),
-    s = (0, i.I)(a.thin, a.fade, a.customTheme),
-    l = (0, i.I)(a.auto, a.fade, a.customTheme);
+var i = n(49402),
+    r = n(553624);
+let a = (0, i.I)(r.none, r.fade, r.customTheme),
+    s = (0, i.I)(r.thin, r.fade, r.customTheme),
+    o = (0, i.I)(r.auto, r.fade, r.customTheme);

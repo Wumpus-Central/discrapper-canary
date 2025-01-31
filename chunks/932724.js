@@ -1,19 +1,13 @@
-r.d(n, {
-    P: function () {
-        return l;
-    }
-}),
-    r(192379),
-    r(442837);
-var i = r(581883);
-r(594174);
-var a = r(74538),
-    o = r(647177);
-function s(e, n) {
-    let r = (0, o.Gx)(e, n.id);
-    return (0, o.rD)(r) && !a.ZP.canUseCustomBackgrounds(n) ? null : 'number' != typeof r || (0, o.sd)(r) ? r : null;
+n.d(t, { P: () => o }), n(192379), n(442837);
+var i = n(581883);
+n(594174);
+var r = n(74538),
+    a = n(647177);
+function s(e, t) {
+    let n = (0, a.Gx)(e, t.id);
+    return (0, a.rD)(n) && !r.ZP.canUseCustomBackgrounds(t) ? null : 'number' != typeof n || (0, a.sd)(n) ? n : null;
 }
-function l(e) {
-    var n;
-    return s(null === (n = i.Z.settings.voiceAndVideo) || void 0 === n ? void 0 : n.videoBackgroundFilterDesktop, e);
+function o(e) {
+    var t;
+    return s(null === (t = i.Z.settings.voiceAndVideo) || void 0 === t ? void 0 : t.videoBackgroundFilterDesktop, e);
 }

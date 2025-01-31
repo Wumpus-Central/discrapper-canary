@@ -1,23 +1,18 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return u;
-        }
-    });
-var c = n(200651),
-    r = n(192379),
-    a = n(608787),
-    i = n(765717),
-    p = n(981631);
-let s = r.lazy(() =>
-    (0, a.wE)({
-        createPromise: () => Promise.all([n.e('22878'), n.e('66711'), n.e('21628'), n.e('77803'), n.e('16987'), n.e('62668')]).then(n.bind(n, 319443)),
+a.r(t), a.d(t, { default: () => d });
+var c = a(200651),
+    n = a(192379),
+    i = a(608787),
+    p = a(765717),
+    r = a(981631);
+let s = n.lazy(() =>
+    (0, i.wE)({
+        createPromise: () => Promise.all([a.e('22878'), a.e('66711'), a.e('53937'), a.e('77803'), a.e('16987'), a.e('15066')]).then(a.bind(a, 319443)),
         webpackId: 319443
     })
 );
-function u() {
-    return (0, c.jsx)(i.Z, {
-        path: p.Z5c.GLOBAL_DISCOVERY_APPS,
+function d() {
+    return (0, c.jsx)(p.Z, {
+        path: r.Z5c.GLOBAL_DISCOVERY_APPS,
         component: s
     });
 }

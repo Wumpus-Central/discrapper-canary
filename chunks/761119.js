@@ -1,1 +1,2 @@
-e.exports = { nowrap: 'nowrap_aeef8c' };
+var i = { nowrap: 'nowrap__5db79' };
+e.exports = i;

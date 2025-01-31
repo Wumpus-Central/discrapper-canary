@@ -1,71 +1,66 @@
-n.r(a),
-    n.d(a, {
-        default: function () {
-            return C;
-        }
-    });
-var t = n(200651),
-    r = n(192379),
-    o = n(120356),
-    d = n.n(o),
-    i = n(481060),
-    s = n(313201),
-    c = n(454585),
-    l = n(585483),
-    h = n(981631),
-    u = n(388032),
-    p = n(851938),
-    x = n(665162);
-function C(e) {
-    let { channel: a, isFromComposer: n, transitionState: o, onClose: C } = e,
-        j = (0, s.Dt)();
+a.d(n, { default: () => _ });
+var t = a(200651),
+    s = a(192379),
+    r = a(120356),
+    i = a.n(r),
+    c = a(481060),
+    l = a(313201),
+    o = a(454585),
+    d = a(585483),
+    h = a(981631),
+    u = a(388032),
+    x = a(851938),
+    p = a(665162);
+function _(e) {
+    let { channel: n, isFromComposer: a, transitionState: r, onClose: _ } = e,
+        C = (0, l.Dt)();
     return (
-        r.useEffect(
+        s.useEffect(
             () => () => {
-                n && l.S.dispatch(h.CkL.FOCUS_COMPOSER_TITLE);
+                a && d.S.dispatch(h.CkL.FOCUS_COMPOSER_TITLE);
             },
-            [n]
+            [a]
         ),
-        (0, t.jsxs)(i.ModalRoot, {
-            transitionState: o,
-            'aria-labelledby': j,
-            size: i.ModalSize.DYNAMIC,
-            className: p.container,
+        (0, t.jsxs)(c.Y0X, {
+            transitionState: r,
+            'aria-labelledby': C,
+            size: c.CgR.DYNAMIC,
+            className: x.container,
             children: [
-                (0, t.jsxs)(i.ModalHeader, {
-                    className: p.header,
+                (0, t.jsxs)(c.xBx, {
+                    className: x.header,
                     separator: !1,
                     children: [
-                        (0, t.jsx)(i.BookCheckIcon, {
+                        (0, t.jsx)(c.snC, {
                             size: 'custom',
                             color: 'currentColor',
-                            className: p.rulesIcon,
+                            className: x.rulesIcon,
                             width: 24,
                             height: 24
                         }),
-                        (0, t.jsx)(i.Heading, {
+                        (0, t.jsx)(c.X6q, {
                             variant: 'heading-lg/extrabold',
                             children: u.intl.string(u.t['4d4T4u'])
                         })
                     ]
                 }),
-                (0, t.jsx)(i.ModalContent, {
-                    children: (0, t.jsx)(i.Text, {
-                        className: d()(p.content, x.markup),
+                (0, t.jsx)(c.hzk, {
+                    children: (0, t.jsx)(c.Text, {
+                        className: i()(x.content, p.markup),
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
                         children: (0, t.jsx)('div', {
-                            children: c.Z.parseForumPostGuidelines(a.topic, !0, {
-                                channelId: a.id,
+                            children: o.Z.parseForumPostGuidelines(n.topic, !0, {
+                                channelId: n.id,
                                 allowHeading: !0,
                                 allowList: !0
                             })
                         })
                     })
                 }),
-                (0, t.jsx)(i.ModalFooter, {
-                    children: (0, t.jsx)(i.Button, {
-                        onClick: C,
+                (0, t.jsx)(c.mzw, {
+                    children: (0, t.jsx)(c.zxk, {
+                        onClick: _,
                         children: u.intl.string(u.t['NX+WJC'])
                     })
                 })

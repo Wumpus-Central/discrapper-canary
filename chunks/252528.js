@@ -1,32 +1,27 @@
-i.r(e),
-    i.d(e, {
-        ActivityAgeGateModal: function () {
-            return c;
-        }
-    });
-var n = i(200651);
-i(192379);
-var s = i(481060),
-    o = i(986035),
-    a = i(388032),
-    r = i(966474);
-function c(t) {
-    let { application: e, onAgree: i, onClose: c, onDisagree: l, ...d } = t;
-    return (0, n.jsx)(s.ModalRoot, {
+e.d(i, { ActivityAgeGateModal: () => r });
+var n = e(200651);
+e(192379);
+var s = e(481060),
+    a = e(986035),
+    c = e(388032),
+    o = e(966474);
+function r(t) {
+    let { application: i, onAgree: e, onClose: r, onDisagree: l, ...d } = t;
+    return (0, n.jsx)(s.Y0X, {
         ...d,
         children: (0, n.jsx)('div', {
-            children: (0, n.jsx)(o.Z, {
+            children: (0, n.jsx)(a.Z, {
                 onAgree: () => {
-                    i(), c();
+                    e(), r();
                 },
                 onDisagree: () => {
-                    l(), c();
+                    l(), r();
                 },
-                title: a.intl.string(a.t.SSDPOD),
-                description: a.intl.formatToPlainString(a.t.OgmIq6, { applicationName: e.name }),
-                agreement: a.intl.string(a.t.wVq7ur),
-                disagreement: a.intl.string(a.t.hg1uxs),
-                imageClassName: r.image
+                title: c.intl.string(c.t.SSDPOD),
+                description: c.intl.formatToPlainString(c.t.OgmIq6, { applicationName: i.name }),
+                agreement: c.intl.string(c.t.wVq7ur),
+                disagreement: c.intl.string(c.t.hg1uxs),
+                imageClassName: o.image
             })
         })
     });

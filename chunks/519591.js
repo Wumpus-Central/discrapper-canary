@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return s;
-    }
-});
+n.d(t, { Z: () => s });
 var i = n(987650);
 function s(e) {
     switch (e) {

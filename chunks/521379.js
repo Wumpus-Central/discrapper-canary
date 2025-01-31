@@ -1,29 +1,23 @@
-n.d(t, {
-    Z: function () {
-        return g;
-    }
-}),
-    n(757143);
+n.d(t, { Z: () => h }), n(757143);
 var i,
     r,
-    s,
     l,
-    o = n(200651),
-    a = n(192379),
-    c = n(442837),
-    d = n(388905),
-    u = n(108427),
-    h = n(559786);
-c.ZP.initialize();
-class g extends (i = a.PureComponent) {
+    a = n(200651),
+    o = n(192379),
+    s = n(442837),
+    c = n(388905),
+    d = n(108427),
+    u = n(559786);
+s.ZP.initialize();
+class h extends (i = o.PureComponent) {
     componentDidMount() {
-        (0, u.e)('account_revert');
+        (0, d.e)('account_revert');
     }
     render() {
         let { token: e } = this.props.match.params;
-        return (0, o.jsx)(d.ZP, {
+        return (0, a.jsx)(c.ZP, {
             style: { padding: 0 },
-            children: (0, o.jsx)(h.Z, {
+            children: (0, a.jsx)(u.Z, {
                 width: 464,
                 token: e,
                 ...this.props
@@ -31,17 +25,16 @@ class g extends (i = a.PureComponent) {
         });
     }
 }
-(r = g),
-    (s = 'defaultProps'),
+(r = 'defaultProps'),
     (l = {
         transitionTo: (e) => n.g.location.assign(e),
         replaceWith: (e) => n.g.location.replace(e)
     }),
-    s in r
-        ? Object.defineProperty(r, s, {
+    r in h
+        ? Object.defineProperty(h, r, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (r[s] = l);
+        : (h[r] = l);

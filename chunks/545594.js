@@ -1,37 +1,33 @@
-n.d(t, {
-    i: function () {
-        return s;
-    }
-});
+n.d(t, { i: () => s });
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    r = n.n(l),
-    a = n(14945);
+    a = n.n(l),
+    r = n(14945);
 function s(e) {
     let { bannerIcon: t, bannerHeader: n, bannerSubtext: l, containerStyles: s, headerStyles: o, children: c } = e;
     return (0, i.jsxs)('div', {
-        className: a.spamBanner,
+        className: r.spamBanner,
         children: [
             (0, i.jsxs)('div', {
-                className: r()(a.bannerTextContainer, s),
+                className: a()(r.bannerTextContainer, s),
                 children: [
                     'string' == typeof t
                         ? (0, i.jsx)('img', {
                               src: t,
                               alt: '',
-                              className: a.bannerIcon
+                              className: r.bannerIcon
                           })
                         : t,
                     (0, i.jsxs)('div', {
-                        className: a.bannerText,
+                        className: r.bannerText,
                         children: [
                             (0, i.jsx)('div', {
-                                className: r()(a.bannerHeader, o),
+                                className: a()(r.bannerHeader, o),
                                 children: n
                             }),
                             (0, i.jsx)('div', {
-                                className: a.bannerSubtext,
+                                className: r.bannerSubtext,
                                 children: l
                             })
                         ]
@@ -39,7 +35,7 @@ function s(e) {
                 ]
             }),
             (0, i.jsx)('div', {
-                className: a.actionButtons,
+                className: r.actionButtons,
                 children: c
             })
         ]

@@ -1,13 +1,8 @@
-t.d(e, {
-    W: function () {
-        return u;
-    }
-});
-var i = t(442837),
-    l = t(314897),
-    r = t(979651);
-function u(n) {
-    return (function (n) {
-        return (0, i.e7)([r.Z, l.default], () => r.Z.isInChannel(n, l.default.getId()));
-    })(null == n ? void 0 : n.id);
+i.d(t, { W: () => r });
+var e = i(442837),
+    l = i(314897),
+    a = i(979651);
+function r(n) {
+    var t;
+    return (t = null == n ? void 0 : n.id), (0, e.e7)([a.Z, l.default], () => a.Z.isInChannel(t, l.default.getId()));
 }

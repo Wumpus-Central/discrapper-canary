@@ -1,27 +1,23 @@
-r.d(t, {
-    s: function () {
-        return _;
-    }
-});
-var a = r(151122),
-    n = r(163162);
-let _ = (0, a._I)(() => ({
+a.d(e, { s: () => o });
+var r = a(151122),
+    n = a(163162);
+let o = (0, r._I)(() => ({
     name: 'HttpContext',
-    preprocessEvent(e) {
+    preprocessEvent(t) {
         if (!n.m9.navigator && !n.m9.location && !n.m9.document) return;
-        let t = (e.request && e.request.url) || (n.m9.location && n.m9.location.href),
-            { referrer: r } = n.m9.document || {},
-            { userAgent: a } = n.m9.navigator || {},
-            _ = {
-                ...(e.request && e.request.headers),
-                ...(r && { Referer: r }),
-                ...(a && { 'User-Agent': a })
-            },
+        let e = (t.request && t.request.url) || (n.m9.location && n.m9.location.href),
+            { referrer: a } = n.m9.document || {},
+            { userAgent: r } = n.m9.navigator || {},
             o = {
-                ...e.request,
-                ...(t && { url: t }),
-                headers: _
+                ...(t.request && t.request.headers),
+                ...(a && { Referer: a }),
+                ...(r && { 'User-Agent': r })
+            },
+            _ = {
+                ...t.request,
+                ...(e && { url: e }),
+                headers: o
             };
-        e.request = o;
+        t.request = _;
     }
 }));

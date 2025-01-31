@@ -1,8 +1,8 @@
-n(47120), n(411104);
+n.d(t, { Z: () => T }), n(47120), n(411104);
 var i = n(413135),
-    r = n(836560),
-    l = n(392711),
-    a = n.n(l),
+    l = n(836560),
+    r = n(392711),
+    a = n.n(r),
     s = n(710845),
     o = n(998502),
     c = n(901077),
@@ -18,10 +18,10 @@ let m = o.ZP.requireModule('discord_rpc').RPCIPC,
         PING: 3,
         PONG: 4
     };
-function f(e, t) {
+function _(e, t) {
     null != e.setHandshakeComplete ? e.setHandshakeComplete(t) : (e._didHandshake = t);
 }
-function _(e) {
+function f(e) {
     return null != e.getHandshakeComplete ? e.getHandshakeComplete() : e._didHandshake;
 }
 function E(e) {
@@ -46,7 +46,7 @@ function E(e) {
                     e.end(), e.destroy();
                 } catch (e) {}
             },
-            r = Promise.race([
+            l = Promise.race([
                 new Promise((t) => e.on('error', () => t())),
                 new Promise((t, n) => {
                     e.on('pong', () => n(Error('socket responded with pong')));
@@ -62,26 +62,25 @@ function E(e) {
                     throw (i(), e);
                 }
             );
-        return e.write(I(g.PING, a().uniqueId())), r.then(t, n);
+        return e.write(I(g.PING, a().uniqueId())), l.then(t, n);
     });
 }
 function I(e, t) {
-    var n;
     t = JSON.stringify(t);
-    let r = i.Buffer.byteLength(t),
-        l = i.Buffer.alloc(8 + r);
-    return l.writeInt32LE(e, 0), l.writeInt32LE(r, 4), l.write(t, 8, r), (n = l).buffer.slice(n.byteOffset, n.byteOffset + n.byteLength);
+    let n = i.Buffer.byteLength(t),
+        l = i.Buffer.alloc(8 + n);
+    return l.writeInt32LE(e, 0), l.writeInt32LE(n, 4), l.write(t, 8, n), l.buffer.slice(l.byteOffset, l.byteOffset + l.byteLength);
 }
 function C(e) {
     let t = e.read(8);
     if (null == t) return;
     let n = i.Buffer.from(t),
-        r = n.readInt32LE(0),
-        l = n.readInt32LE(4);
-    if (!Object.values(g).includes(r) || l < 0) throw Error('protocol error');
-    if (null == (t = e.read(l))) throw Error('data size does not match what was received');
+        l = n.readInt32LE(0),
+        r = n.readInt32LE(4);
+    if (!Object.values(g).includes(l) || r < 0) throw Error('protocol error');
+    if (null == (t = e.read(r))) throw Error('data size does not match what was received');
     let a = JSON.parse((n = i.Buffer.from(t)).toString());
-    switch (r) {
+    switch (l) {
         case g.PING:
             e.emit('ping', a), e.write(I(g.PONG, a));
             break;
@@ -89,11 +88,11 @@ function C(e) {
             e.emit('pong', a);
             break;
         case g.HANDSHAKE:
-            if (_(e)) throw Error('already did handshake');
-            f(e, !0), e.emit('handshake', a);
+            if (f(e)) throw Error('already did handshake');
+            _(e, !0), e.emit('handshake', a);
             break;
         case g.FRAME:
-            if (!_(e)) throw Error('did not handshake');
+            if (!f(e)) throw Error('did not handshake');
             e.emit('request', a);
             break;
         case g.CLOSE:
@@ -115,24 +114,23 @@ class v extends d.Z {
             this.socket.destroy();
     }
     constructor(e, t, n) {
-        var i, r, l;
+        var i, l;
         super('ipc', t, n),
-            (i = this),
             (l = void 0),
-            (r = 'socket') in i
-                ? Object.defineProperty(i, r, {
+            (i = 'socket') in this
+                ? Object.defineProperty(this, i, {
                       value: l,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (i[r] = l),
+                : (this[i] = l),
             (this.socket = e);
     }
 }
-class N extends r.EventEmitter {
+class N extends l.EventEmitter {
     handleConnection(e) {
-        f(e, !1),
+        _(e, !1),
             e.pause(),
             e.on('readable', () => {
                 try {
@@ -150,9 +148,9 @@ class N extends r.EventEmitter {
             e.once('handshake', (t) => {
                 let n;
                 let i = t.client_id,
-                    r = +t.v;
+                    l = +t.v;
                 try {
-                    n = new v(e, r, 'json');
+                    n = new v(e, l, 'json');
                 } catch (t) {
                     e.end(
                         I(g.CLOSE, {
@@ -192,4 +190,4 @@ class N extends r.EventEmitter {
             });
     }
 }
-t.Z = new N();
+let T = new N();

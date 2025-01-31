@@ -1,55 +1,44 @@
+n.d(t, { Z: () => c });
 var i = n(200651),
-    r = n(192379),
-    l = n(481060),
+    l = n(192379),
+    r = n(481060),
     a = n(970606),
-    s = n(565138),
-    o = n(388032),
-    c = n(832311),
-    d = n(586522);
-t.Z = function (e) {
+    s = n(388032),
+    o = n(832311);
+let c = function (e) {
     let { onWithdrawApplication: t, guild: n = null } = e,
-        u = null == n ? void 0 : n.id;
+        c = null == n ? void 0 : n.id;
     return (
-        r.useEffect(() => {
-            null != u && (0, a.Pq)(u);
-        }, [u]),
+        l.useEffect(() => {
+            null != c && (0, a.Pq)(c);
+        }, [c]),
         (0, i.jsxs)('div', {
-            className: c.confirmation,
+            className: o.confirmation,
             children: [
-                (0, i.jsxs)('div', {
-                    className: c.confirmationContent,
-                    children: [
-                        null !== n
-                            ? (0, i.jsx)(s.Z, {
-                                  size: s.Z.Sizes.LARGER,
-                                  guild: n,
-                                  className: c.guildIcon
-                              })
-                            : (0, i.jsx)('img', {
-                                  alt: o.intl.string(o.t.SXZrBw),
-                                  src: d
-                              }),
-                        (0, i.jsx)(l.Heading, {
-                            variant: 'heading-xl/semibold',
-                            className: c.header,
-                            children: (null == n ? void 0 : n.name) != null ? o.intl.formatToPlainString(o.t['0Qlu//'], { guildName: n.name }) : o.intl.string(o.t['5iLvS0'])
-                        }),
-                        (0, i.jsx)(l.Text, {
-                            variant: 'text-sm/normal',
-                            color: 'header-secondary',
-                            children: o.intl.string(o.t.FdsK4u)
-                        })
-                    ]
-                }),
                 (0, i.jsx)('div', {
-                    className: c.confirmationButtonColumn,
-                    children: (0, i.jsx)(l.Button, {
-                        onClick: t,
-                        look: l.Button.Looks.LINK,
-                        color: l.Button.Colors.LINK,
-                        size: l.Button.Sizes.SMALL,
-                        children: o.intl.string(o.t.mqtdmZ)
+                    className: o.iconWrapper,
+                    children: (0, i.jsx)(r.wGF, {
+                        size: 'md',
+                        color: r.TVs.colors.INTERACTIVE_ACTIVE
                     })
+                }),
+                (0, i.jsx)(r.X6q, {
+                    variant: 'heading-lg/semibold',
+                    className: o.header,
+                    children: (null == n ? void 0 : n.name) != null ? s.intl.formatToPlainString(s.t['0Qlu//'], { guildName: n.name }) : s.intl.string(s.t['5iLvS0'])
+                }),
+                (0, i.jsx)(r.Text, {
+                    variant: 'text-md/medium',
+                    color: 'header-secondary',
+                    children: s.intl.string(s.t.FdsK4u)
+                }),
+                (0, i.jsx)(r.zxk, {
+                    fullWidth: !0,
+                    onClick: t,
+                    look: r.zxk.Looks.FILLED,
+                    color: r.zxk.Colors.PRIMARY,
+                    size: r.zxk.Sizes.LARGE,
+                    children: s.intl.string(s.t.g9tK0t)
                 })
             ]
         })

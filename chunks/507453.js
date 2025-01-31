@@ -1,13 +1,14 @@
+n.d(t, { Z: () => a });
 var l = n(200651);
 n(192379);
 var i = n(481060),
-    r = n(600164),
-    s = n(388032),
+    s = n(600164),
+    r = n(388032),
     o = n(452091);
-t.Z = {
+let a = {
     SlideContent: function (e) {
         let { children: t, scrollbarType: n } = e;
-        return (0, l.jsx)(i.ModalContent, {
+        return (0, l.jsx)(i.hzk, {
             className: o.content,
             scrollbarType: n,
             children: t
@@ -28,22 +29,22 @@ t.Z = {
         let { mfaChallenge: t, setSlide: n, showConfirm: a = !1, ...d } = e,
             u = t.methods.length > 1;
         return u || a
-            ? (0, l.jsxs)(i.ModalFooter, {
+            ? (0, l.jsxs)(i.mzw, {
                   className: o.footer,
-                  direction: a && !u ? r.Z.Direction.HORIZONTAL_REVERSE : r.Z.Direction.HORIZONTAL,
+                  direction: a && !u ? s.Z.Direction.HORIZONTAL_REVERSE : s.Z.Direction.HORIZONTAL,
                   children: [
                       u &&
-                          (0, l.jsx)(i.Button, {
-                              look: i.Button.Looks.LINK,
+                          (0, l.jsx)(i.zxk, {
+                              look: i.zxk.Looks.LINK,
                               onClick: () => n('select'),
-                              color: i.Button.Colors.PRIMARY,
-                              children: s.intl.string(s.t.Tot4EB)
+                              color: i.zxk.Colors.PRIMARY,
+                              children: r.intl.string(r.t.Tot4EB)
                           }),
                       a &&
-                          (0, l.jsx)(i.Button, {
+                          (0, l.jsx)(i.zxk, {
                               type: 'submit',
                               ...d,
-                              children: s.intl.string(s.t['cY+Ooa'])
+                              children: r.intl.string(r.t['cY+Ooa'])
                           })
                   ]
               })
@@ -51,14 +52,14 @@ t.Z = {
     },
     SlideHeader: function (e) {
         let { subtitle: t, onClose: n } = e;
-        return (0, l.jsxs)(i.ModalHeader, {
-            direction: r.Z.Direction.VERTICAL,
+        return (0, l.jsxs)(i.xBx, {
+            direction: s.Z.Direction.VERTICAL,
             className: o.header,
             separator: !1,
             children: [
-                (0, l.jsx)(i.Heading, {
+                (0, l.jsx)(i.X6q, {
                     variant: 'heading-xl/semibold',
-                    children: s.intl.string(s.t.saHocH)
+                    children: r.intl.string(r.t.saHocH)
                 }),
                 null != t &&
                     (0, l.jsx)(i.Text, {
@@ -67,7 +68,7 @@ t.Z = {
                         className: o.subtitle,
                         children: t
                     }),
-                (0, l.jsx)(i.ModalCloseButton, {
+                (0, l.jsx)(i.olH, {
                     className: o.closeButton,
                     onClick: n
                 })

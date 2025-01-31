@@ -1,1 +1,2 @@
-e.exports = { link: 'link_b84b34' };
+var i = { link: 'link__6a22b' };
+e.exports = i;

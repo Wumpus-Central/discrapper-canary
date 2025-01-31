@@ -1,9 +1,5 @@
-r.d(n, {
-    B: function () {
-        return a;
-    }
-});
-var i = r(131704);
-function a(e) {
+n.d(t, { B: () => r });
+var i = n(131704);
+function r(e) {
     return (0, i.r8)(e) || (0, i.bw)(e);
 }

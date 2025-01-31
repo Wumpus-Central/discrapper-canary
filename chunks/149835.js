@@ -1,50 +1,46 @@
-i.d(t, {
-    Z: function () {
-        return b;
-    }
-});
-var e = i(200651);
-i(192379);
-var l = i(442837),
-    a = i(481060),
-    r = i(58642),
-    d = i(283595),
-    u = i(417363),
-    c = i(626135),
-    o = i(630388),
-    s = i(981631),
-    I = i(388032);
-function b(n, t) {
-    let i = (0, l.e7)([u.Z], () => u.Z.isInstalled(n.id, n.branchId), [n.branchId, n.id]),
-        b = (0, l.e7)([d.Z], () => !d.Z.hasRemovedLibraryApplicationThisSession);
-    if (i && !n.isHidden()) return null;
-    function f() {
-        let t = (0, o.x9)(n.getFlags(), s.eHb.HIDDEN);
-        r.h(n.id, n.branchId, t),
-            c.default.track(s.rMx.APPLICATION_SETTINGS_UPDATED, {
-                hidden_enabled: (0, o.yE)(t, s.eHb.HIDDEN),
+t.d(i, { Z: () => b });
+var l = t(200651);
+t(192379);
+var a = t(442837),
+    e = t(481060),
+    r = t(58642),
+    d = t(283595),
+    c = t(417363),
+    s = t(626135),
+    o = t(630388),
+    u = t(981631),
+    h = t(388032);
+function b(n, i) {
+    let t = (0, a.e7)([c.Z], () => c.Z.isInstalled(n.id, n.branchId), [n.branchId, n.id]),
+        b = (0, a.e7)([d.Z], () => !d.Z.hasRemovedLibraryApplicationThisSession);
+    if (t && !n.isHidden()) return null;
+    function I() {
+        let i = (0, o.x9)(n.getFlags(), u.eHb.HIDDEN);
+        r.h(n.id, n.branchId, i),
+            s.default.track(u.rMx.APPLICATION_SETTINGS_UPDATED, {
+                hidden_enabled: (0, o.yE)(i, u.eHb.HIDDEN),
                 ...n.getAnalyticsData()
             });
     }
-    return (0, e.jsx)(a.MenuItem, {
+    return (0, l.jsx)(e.sNh, {
         id: 'in-library',
-        label: n.isHidden() ? I.intl.string(I.t['0dnEUF']) : I.intl.string(I.t.TuJXLy),
+        label: n.isHidden() ? h.intl.string(h.t['0dnEUF']) : h.intl.string(h.t.TuJXLy),
         action: function () {
             null != n &&
-                null != t &&
+                null != i &&
                 (n.isHidden() || !b
-                    ? f()
-                    : (0, a.openModal)((n) =>
-                          (0, e.jsx)(a.ConfirmModal, {
-                              header: I.intl.string(I.t.oB7isr),
-                              confirmText: I.intl.string(I.t.OWjIiY),
-                              cancelText: I.intl.string(I.t['ETE/oK']),
-                              onConfirm: () => f(),
-                              confirmButtonColor: a.Button.Colors.BRAND,
+                    ? I()
+                    : (0, e.h7j)((n) =>
+                          (0, l.jsx)(e.ConfirmModal, {
+                              header: h.intl.string(h.t.oB7isr),
+                              confirmText: h.intl.string(h.t.OWjIiY),
+                              cancelText: h.intl.string(h.t['ETE/oK']),
+                              onConfirm: () => I(),
+                              confirmButtonColor: e.zxk.Colors.BRAND,
                               ...n,
-                              children: (0, e.jsx)(a.Text, {
+                              children: (0, l.jsx)(e.Text, {
                                   variant: 'text-md/normal',
-                                  children: I.intl.format(I.t.HXfjKi, { name: t.name })
+                                  children: h.intl.format(h.t.HXfjKi, { name: i.name })
                               })
                           })
                       ));

@@ -1,28 +1,23 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-}),
-    n(47120);
-var i = n(442837),
-    l = n(357156),
-    r = n(984933),
-    a = n(430824),
-    o = n(496675),
-    s = n(981631);
-function c(e, t) {
-    return (0, i.e7)(
-        [a.Z, r.ZP, o.Z],
+t.d(n, { Z: () => d }), t(47120);
+var a = t(442837),
+    o = t(357156),
+    i = t(984933),
+    r = t(430824),
+    c = t(496675),
+    l = t(981631);
+function d(e, n) {
+    return (0, a.e7)(
+        [r.Z, i.ZP, c.Z],
         () => {
-            let n = a.Z.getGuild(e);
-            if (o.Z.can(s.Plq.ADMINISTRATOR, n) || o.Z.can(s.Plq.CREATE_EVENTS, n)) return !0;
-            for (let { channel: n } of r.ZP.getChannels(e)[r.Zb])
-                if (null == t || n.type === t) {
-                    let [e] = (0, l.Ob)(n);
-                    if (o.Z.can(e, n)) return !0;
+            let t = r.Z.getGuild(e);
+            if (c.Z.can(l.Plq.ADMINISTRATOR, t) || c.Z.can(l.Plq.CREATE_EVENTS, t)) return !0;
+            for (let { channel: t } of i.ZP.getChannels(e)[i.Zb])
+                if (null == n || t.type === n) {
+                    let [e] = (0, o.Ob)(t);
+                    if (c.Z.can(e, t)) return !0;
                 }
             return !1;
         },
-        [e, t]
+        [e, n]
     );
 }

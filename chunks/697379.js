@@ -1,35 +1,18 @@
-r.d(n, {
-    W: function () {
-        return h;
-    },
-    v: function () {
-        return p;
-    }
+n.d(t, {
+    W: () => u,
+    v: () => l
 });
-var i = r(192379),
-    a = r(442837),
-    o = r(430824),
-    s = r(496675),
-    l = r(863249),
-    u = r(944163),
-    c = r(246364),
-    d = r(983736),
-    f = r(981631);
-function p(e) {
-    let n = o.Z.getGuild(e);
-    return null != n && n.hasFeature(f.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) && s.Z.can(f.Plq.KICK_MEMBERS, n);
+var i = n(442837),
+    r = n(430824),
+    a = n(496675),
+    s = n(983736),
+    o = n(981631);
+function l(e) {
+    let t = r.Z.getGuild(e);
+    return null != t && t.hasFeature(o.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) && a.Z.can(o.Plq.KICK_MEMBERS, t);
 }
-function h(e) {
-    let n = (0, a.e7)([o.Z], () => o.Z.getGuild(e)),
-        r = s.Z.can(f.Plq.KICK_MEMBERS, n) || s.Z.can(f.Plq.MANAGE_GUILD, n),
-        p = null != n && n.hasFeature(f.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) && r && (0, d.Dc)(n),
-        h = (0, a.e7)([u.Z], () => u.Z.get(e), [e]);
-    i.useEffect(() => {
-        p && l.ZP.fetchVerificationForm(e);
-    }, [p, e]);
-    let _ = i.useMemo(() => {
-        var e;
-        return (null !== (e = null == h ? void 0 : h.formFields) && void 0 !== e ? e : []).some((e) => !(0, c.J)(e));
-    }, [null == h ? void 0 : h.formFields]);
-    return p && _;
+function u(e) {
+    let t = (0, i.e7)([r.Z], () => r.Z.getGuild(e)),
+        n = a.Z.can(o.Plq.KICK_MEMBERS, t) || a.Z.can(o.Plq.MANAGE_GUILD, t);
+    return null != t && t.hasFeature(o.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) && n && (0, s.Dc)(t);
 }

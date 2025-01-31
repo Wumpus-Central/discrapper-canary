@@ -1,27 +1,26 @@
-r.d(n, {
-    h: function () {
-        return u;
-    }
+n.d(t, {
+    Z: () => f,
+    h: () => l
 });
 var i,
-    a = r(442837),
-    o = r(570140),
-    s = r(906467);
-function l(e, n, r) {
+    r = n(442837),
+    a = n(570140),
+    s = n(906467);
+function o(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let u = 360,
-    c = {
+let l = 360,
+    u = {
         sidebarWidth: 360,
         lastOpenTabId: null,
         displayTools: !1,
@@ -32,39 +31,39 @@ let u = 360,
         },
         sortedScreenKeys: []
     };
-function d(e) {
-    if (!!s.Z.isDeveloper)
-        c = {
-            ...c,
+function c(e) {
+    s.Z.isDeveloper &&
+        (u = {
+            ...u,
             ...e.settings
-        };
+        });
 }
-class f extends (i = a.ZP.DeviceSettingsStore) {
+class d extends (i = r.ZP.DeviceSettingsStore) {
     initialize(e) {
-        c = null != e ? e : c;
-        o.Z.actionLogger.persist = s.Z.isDeveloper;
+        (u = null != e ? e : u), (a.Z.actionLogger.persist = s.Z.isDeveloper);
     }
     getUserAgnosticState() {
-        return c;
+        return u;
     }
     get sidebarWidth() {
-        return this.displayTools ? c.sidebarWidth : 0;
+        return this.displayTools ? u.sidebarWidth : 0;
     }
     get lastOpenTabId() {
         var e;
-        return null !== (e = c.lastOpenTabId) && void 0 !== e ? e : null;
+        return null !== (e = u.lastOpenTabId) && void 0 !== e ? e : null;
     }
     get displayTools() {
-        return s.Z.isDeveloper && c.displayTools;
+        return s.Z.isDeveloper && u.displayTools;
     }
     get showDevWidget() {
-        return s.Z.isDeveloper && c.showDevWidget;
+        return s.Z.isDeveloper && u.showDevWidget;
     }
     get devWidgetPosition() {
-        return c.devWidgetPosition;
+        return u.devWidgetPosition;
     }
     get sortedScreenKeys() {
-        return c.sortedScreenKeys;
+        return u.sortedScreenKeys;
     }
 }
-l(f, 'displayName', 'DevToolsSettingsStore'), l(f, 'persistKey', 'DevToolsSettingsStore'), (n.Z = new f(o.Z, { DEV_TOOLS_SETTINGS_UPDATE: d }));
+o(d, 'displayName', 'DevToolsSettingsStore'), o(d, 'persistKey', 'DevToolsSettingsStore');
+let f = new d(a.Z, { DEV_TOOLS_SETTINGS_UPDATE: c });

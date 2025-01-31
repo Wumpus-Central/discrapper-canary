@@ -1,7 +1,7 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    var n = {
+    var t = {
             1: '௧',
             2: '௨',
             3: '௩',
@@ -13,7 +13,7 @@
             9: '௯',
             0: '௦'
         },
-        r = {
+        n = {
             '௧': '1',
             '௨': '2',
             '௩': '3',
@@ -69,29 +69,26 @@
         },
         preparse: function (e) {
             return e.replace(/[௧௨௩௪௫௬௭௮௯௦]/g, function (e) {
-                return r[e];
+                return n[e];
             });
         },
         postformat: function (e) {
             return e.replace(/\d/g, function (e) {
-                return n[e];
+                return t[e];
             });
         },
         meridiemParse: /யாமம்|வைகறை|காலை|நண்பகல்|எற்பாடு|மாலை/,
-        meridiem: function (e, n, r) {
+        meridiem: function (e, t, n) {
             if (e < 2) return ' யாமம்';
             if (e < 6) return ' வைகறை';
             if (e < 10) return ' காலை';
-            else if (e < 14) return ' நண்பகல்';
-            else if (e < 18) return ' எற்பாடு';
+            if (e < 14) return ' நண்பகல்';
+            if (e < 18) return ' எற்பாடு';
             else if (e < 22) return ' மாலை';
             else return ' யாமம்';
         },
-        meridiemHour: function (e, n) {
-            if ((12 === e && (e = 0), 'யாமம்' === n)) return e < 2 ? e : e + 12;
-            if ('வைகறை' === n || 'காலை' === n) return e;
-            if ('நண்பகல்' === n) return e >= 10 ? e : e + 12;
-            else return e + 12;
+        meridiemHour: function (e, t) {
+            return (12 === e && (e = 0), 'யாமம்' === t) ? (e < 2 ? e : e + 12) : 'வைகறை' === t || 'காலை' === t ? e : 'நண்பகல்' === t ? (e >= 10 ? e : e + 12) : e + 12;
         },
         week: {
             dow: 0,

@@ -1,53 +1,47 @@
-r.d(n, {
-    DB: function () {
-        return s;
-    },
-    V9: function () {
-        return u;
-    },
-    my: function () {
-        return l;
-    }
-});
-var i = r(47120);
-var a = r(411104);
-var o = r(70722);
-function s(e) {
-    return null != e && (e.startsWith(o.lo.GUILD) || e.startsWith(o.lo.CALL));
+n.d(t, {
+    DB: () => r,
+    V9: () => s,
+    my: () => a
+}),
+    n(47120),
+    n(411104);
+var i = n(70722);
+function r(e) {
+    return null != e && (e.startsWith(i.lo.GUILD) || e.startsWith(i.lo.CALL));
 }
-function l(e) {
-    let n = e.split(':'),
-        r = n[0];
-    switch (r) {
-        case o.lo.GUILD: {
-            let [e, r, i, a] = n;
+function a(e) {
+    let t = e.split(':'),
+        n = t[0];
+    switch (n) {
+        case i.lo.GUILD: {
+            let [e, n, i, r] = t;
             return {
                 streamType: e,
-                guildId: r,
+                guildId: n,
                 channelId: i,
-                ownerId: a
+                ownerId: r
             };
         }
-        case o.lo.CALL: {
-            let [e, r, i] = n;
+        case i.lo.CALL: {
+            let [e, n, i] = t;
             return {
                 streamType: e,
-                channelId: r,
+                channelId: n,
                 ownerId: i
             };
         }
         default:
-            throw Error('Unknown stream type '.concat(r));
+            throw Error('Unknown stream type '.concat(n));
     }
 }
-function u(e) {
-    let { streamType: n, guildId: r, channelId: i, ownerId: a } = e;
-    switch (n) {
-        case o.lo.GUILD:
-            return [n, r, i, a].join(':');
-        case o.lo.CALL:
-            return [n, i, a].join(':');
+function s(e) {
+    let { streamType: t, guildId: n, channelId: r, ownerId: a } = e;
+    switch (t) {
+        case i.lo.GUILD:
+            return [t, n, r, a].join(':');
+        case i.lo.CALL:
+            return [t, r, a].join(':');
         default:
-            throw Error('Unknown stream type '.concat(n));
+            throw Error('Unknown stream type '.concat(t));
     }
 }

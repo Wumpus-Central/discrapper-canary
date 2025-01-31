@@ -1,91 +1,95 @@
+n.d(t, { Z: () => h });
 var i,
-    a = r(392711),
-    o = r.n(a),
-    s = r(442837),
-    l = r(433517),
-    u = r(570140),
-    c = r(981631);
-function d(e, n, r) {
+    r = n(392711),
+    a = n.n(r),
+    s = n(442837),
+    o = n(433517),
+    l = n(570140),
+    u = n(981631);
+function c(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let f = {};
-function p(e) {
-    let { changes: n } = e;
-    for (let e in n) {
-        var r;
+let d = {};
+function f(e) {
+    let { changes: t } = e;
+    for (let e in t) {
+        var n;
         let i = e,
-            { shouldSync: a, settings: o } = n[i];
-        if (!0 === a) {
-            delete f[i];
+            { shouldSync: r, settings: a } = t[i];
+        if (!0 === r) {
+            delete d[i];
             continue;
         }
-        !1 === a &&
-            (f[i] = {
-                shouldSync: a,
-                settings: {}
-            });
-        if ((null === (r = f[i]) || void 0 === r ? void 0 : r.shouldSync) === !1) for (let e in o) f[i].settings[e] = o[e];
+        if (
+            (!1 === r &&
+                (d[i] = {
+                    shouldSync: r,
+                    settings: {}
+                }),
+            (null === (n = d[i]) || void 0 === n ? void 0 : n.shouldSync) === !1)
+        )
+            for (let e in a) d[i].settings[e] = a[e];
     }
 }
-function h() {
-    f = {};
+function _() {
+    d = {};
 }
-class _ extends (i = s.ZP.PersistedStore) {
+class p extends (i = s.ZP.PersistedStore) {
     initialize(e) {
-        f = null != e ? e : {};
+        d = null != e ? e : {};
     }
     getState() {
-        return f;
+        return d;
     }
     shouldSync(e) {
-        var n;
-        return (null === (n = f[e]) || void 0 === n ? void 0 : n.shouldSync) !== !1;
+        var t;
+        return (null === (t = d[e]) || void 0 === t ? void 0 : t.shouldSync) !== !1;
     }
     getTextSettings() {
         var e;
-        return null === (e = f.text) || void 0 === e ? void 0 : e.settings;
+        return null === (e = d.text) || void 0 === e ? void 0 : e.settings;
     }
     getAppearanceSettings() {
         var e;
-        return null === (e = f.appearance) || void 0 === e ? void 0 : e.settings;
+        return null === (e = d.appearance) || void 0 === e ? void 0 : e.settings;
     }
 }
-d(_, 'displayName', 'SelectivelySyncedUserSettingsStore'),
-    d(_, 'persistKey', 'SelectivelySyncedUserSettingsStore'),
-    d(_, 'migrations', [
+c(p, 'displayName', 'SelectivelySyncedUserSettingsStore'),
+    c(p, 'persistKey', 'SelectivelySyncedUserSettingsStore'),
+    c(p, 'migrations', [
         () => {
-            var e, n;
-            let r = null !== (e = l.K.get('UserSettingsSync')) && void 0 !== e ? e : {},
-                i = null !== (n = l.K.get('UserSettingsStore')) && void 0 !== n ? n : {};
-            l.K.remove('UserSettingsSync');
-            let a = {};
+            var e, t;
+            let n = null !== (e = o.K.get('UserSettingsSync')) && void 0 !== e ? e : {},
+                i = null !== (t = o.K.get('UserSettingsStore')) && void 0 !== t ? t : {};
+            o.K.remove('UserSettingsSync');
+            let r = {};
             return (
-                !1 === r[c.oAB.TEXT] &&
-                    (a.text = {
+                !1 === n[u.oAB.TEXT] &&
+                    (r.text = {
                         shouldSync: !1,
-                        settings: o().pick(i, ['inlineAttachmentMedia', 'inlineEmbedMedia', 'renderEmbeds', 'renderReactions', 'animateEmoji', 'animateStickers', 'gifAutoPlay'])
+                        settings: a().pick(i, ['inlineAttachmentMedia', 'inlineEmbedMedia', 'renderEmbeds', 'renderReactions', 'animateEmoji', 'animateStickers', 'gifAutoPlay'])
                     }),
-                !1 === r[c.oAB.APPEARANCE] &&
-                    (a.appearance = {
+                !1 === n[u.oAB.APPEARANCE] &&
+                    (r.appearance = {
                         shouldSync: !1,
-                        settings: o().pick(i, ['theme', 'clientThemeSettings', 'developerMode'])
+                        settings: a().pick(i, ['theme', 'clientThemeSettings', 'developerMode'])
                     }),
-                a
+                r
             );
         },
         (e) => {
-            var n, r;
-            if ((null == e ? void 0 : null === (r = e.appearance) || void 0 === r ? void 0 : null === (n = r.settings) || void 0 === n ? void 0 : n.theme) === 'amoled')
+            var t, n;
+            if ((null == e ? void 0 : null === (n = e.appearance) || void 0 === n ? void 0 : null === (t = n.settings) || void 0 === t ? void 0 : t.theme) === 'amoled')
                 return {
                     ...e,
                     appearance: {
@@ -97,8 +101,8 @@ d(_, 'displayName', 'SelectivelySyncedUserSettingsStore'),
                     }
                 };
         }
-    ]),
-    (n.Z = new _(u.Z, {
-        SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: p,
-        LOGOUT: h
-    }));
+    ]);
+let h = new p(l.Z, {
+    SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: f,
+    LOGOUT: _
+});

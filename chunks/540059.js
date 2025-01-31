@@ -1,27 +1,16 @@
-r.d(n, {
-    Q3: function () {
-        return f;
-    },
-    R6: function () {
-        return u;
-    },
-    TH: function () {
-        return p;
-    },
-    i9: function () {
-        return l;
-    },
-    iT: function () {
-        return c;
-    },
-    o9: function () {
-        return d;
-    }
+n.d(t, {
+    Q3: () => f,
+    R6: () => l,
+    TH: () => _,
+    i9: () => o,
+    iT: () => u,
+    o9: () => d,
+    yl: () => c
 });
-var i = r(442837),
-    a = r(818083),
-    o = r(740492);
-let s = (0, a.B)({
+var i = n(442837),
+    r = n(818083),
+    a = n(740492);
+let s = (0, r.B)({
     id: '2024-05_desktop_visual_refresh',
     label: 'Desktop Visual Refresh',
     kind: 'user',
@@ -94,27 +83,30 @@ let s = (0, a.B)({
         }
     ]
 });
-function l(e) {
-    let n = s.getCurrentConfig({ location: e }).enabled,
-        r = o.ZP.disableVisualRefresh;
-    return !!n && !r;
+function o(e) {
+    let t = s.getCurrentConfig({ location: e }).enabled,
+        n = a.ZP.disableVisualRefresh;
+    return !!t && !n;
 }
-function u(e) {
+function l(e) {
     return f(e) && s.getCurrentConfig({ location: e }).newChatInput;
 }
-function c(e) {
+function u(e) {
     return s.getCurrentConfig({ location: e }).disabledByDefault;
+}
+function c(e, t) {
+    return s.subscribe({ location: e }, t);
 }
 function d(e) {
     return s.useExperiment({ location: e }, { autoTrackExposure: !0 }).enabled;
 }
 function f(e) {
-    let n = d(e),
-        r = (0, i.e7)([o.ZP], () => o.ZP.disableVisualRefresh);
-    return !!n && !r;
+    let t = d(e),
+        n = (0, i.e7)([a.ZP], () => a.ZP.disableVisualRefresh);
+    return !!t && !n;
 }
-function p(e) {
-    let n = f(e),
-        r = s.useExperiment({ location: e }, { autoTrackExposure: !0 }).enableCollapsibleSidebar;
-    return !!n && r;
+function _(e) {
+    let t = f(e),
+        n = s.useExperiment({ location: e }, { autoTrackExposure: !0 }).enableCollapsibleSidebar;
+    return !!t && n;
 }

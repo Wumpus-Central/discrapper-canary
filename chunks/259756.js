@@ -1,8 +1,4 @@
-n.d(t, {
-    Xi: function () {
-        return r;
-    }
-});
+n.d(t, { Xi: () => s });
 let i = (0, n(818083).B)({
     kind: 'user',
     id: '2024-02_family_center_vc_join',
@@ -16,8 +12,8 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function r(e) {
+function s(e) {
     let { location: t, autoTrackExposure: n = !1 } = e,
-        { enabled: r } = i.useExperiment({ location: t }, { autoTrackExposure: n });
-    return r;
+        { enabled: s } = i.useExperiment({ location: t }, { autoTrackExposure: n });
+    return s;
 }

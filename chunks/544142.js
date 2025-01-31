@@ -1,13 +1,9 @@
-n.d(t, {
-    Z: function () {
-        return b;
-    }
-});
+n.d(t, { Z: () => b });
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    r = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    r = n(442837),
     s = n(481060),
     o = n(239091),
     c = n(100527),
@@ -18,60 +14,60 @@ var l = n(120356),
     m = n(271383),
     f = n(594174),
     g = n(51144),
-    C = n(967128),
-    x = n(981631),
-    v = n(388032),
-    _ = n(678606);
-function I(e) {
+    _ = n(967128),
+    C = n(981631),
+    x = n(388032),
+    v = n(678606);
+function E(e) {
     var t, l;
-    let { userId: u, channel: C } = e,
-        { analyticsLocations: x } = (0, d.ZP)(c.Z.USERNAME),
-        v = (0, a.e7)([f.default], () => f.default.getUser(u)),
-        I = (0, a.e7)([m.ZP], () => (null != u ? m.ZP.getMember(C.guild_id, u) : null));
-    function E(e) {
-        if (null == v) return null;
+    let { userId: u, channel: _ } = e,
+        { analyticsLocations: C } = (0, d.ZP)(c.Z.USERNAME),
+        x = (0, r.e7)([f.default], () => f.default.getUser(u)),
+        E = (0, r.e7)([m.ZP], () => (null != u ? m.ZP.getMember(_.guild_id, u) : null));
+    function I(e) {
+        if (null == x) return null;
         (0, o.jW)(e, async () => {
             let { default: e } = await Promise.all([n.e('79695'), n.e('70675')]).then(n.bind(n, 654663));
             return (t) =>
                 (0, i.jsx)(e, {
                     ...t,
-                    user: v,
-                    guildId: C.guild_id,
-                    channel: C
+                    user: x,
+                    guildId: _.guild_id,
+                    channel: _
                 });
         });
     }
-    let b = null !== (l = null !== (t = null == I ? void 0 : I.nick) && void 0 !== t ? t : g.ZP.getName(v)) && void 0 !== l ? l : '???',
-        Z = null == I ? void 0 : I.colorString;
-    return null == v
+    let b = null !== (l = null !== (t = null == E ? void 0 : E.nick) && void 0 !== t ? t : g.ZP.getName(x)) && void 0 !== l ? l : '???',
+        Z = null == E ? void 0 : E.colorString;
+    return null == x
         ? (0, i.jsx)('span', {
-              className: r()(_.threadCreatorName, _.unknownCreatorName),
+              className: a()(v.threadCreatorName, v.unknownCreatorName),
               children: b
           })
         : (0, i.jsx)(d.Gt, {
-              value: x,
-              children: (0, i.jsx)(s.Popout, {
+              value: C,
+              children: (0, i.jsx)(s.yRy, {
                   preload: () =>
-                      (0, h.Z)(v, {
-                          guildId: C.guild_id,
-                          channelId: C.id
+                      (0, h.Z)(x, {
+                          guildId: _.guild_id,
+                          channelId: _.id
                       }),
                   renderPopout: (e) =>
                       (0, i.jsx)(p.Z, {
-                          userId: v.id,
-                          guildId: C.guild_id,
-                          channelId: C.id,
-                          roleId: null == I ? void 0 : I.colorRoleId,
+                          userId: x.id,
+                          guildId: _.guild_id,
+                          channelId: _.id,
+                          roleId: null == E ? void 0 : E.colorRoleId,
                           ...e
                       }),
                   position: 'right',
                   children: (e) =>
-                      (0, i.jsx)(s.Clickable, {
+                      (0, i.jsx)(s.P3F, {
                           ...e,
                           tag: 'span',
-                          className: _.threadCreatorName,
-                          onContextMenu: E,
-                          children: (0, i.jsx)(s.NameWithRole, {
+                          className: v.threadCreatorName,
+                          onContextMenu: I,
+                          children: (0, i.jsx)(s.PUh, {
                               name: b,
                               color: null != Z ? Z : void 0
                           })
@@ -79,7 +75,7 @@ function I(e) {
               })
           });
 }
-function E(e) {
+function I(e) {
     let { channel: t } = e,
         { threadMetadata: n } = t;
     return null == n
@@ -90,11 +86,11 @@ function E(e) {
                       variant: 'text-md/normal',
                       color: 'header-secondary',
                       children: (0, i.jsx)('div', {
-                          className: _.subtitle,
-                          children: v.intl.format(v.t.imPXd3, {
+                          className: v.subtitle,
+                          children: x.intl.format(x.t.imPXd3, {
                               usernameHook: (e, n) =>
                                   (0, i.jsx)(
-                                      I,
+                                      E,
                                       {
                                           userId: t.ownerId,
                                           channel: t
@@ -104,11 +100,11 @@ function E(e) {
                           })
                       })
                   }),
-                  t.type === x.d4z.PRIVATE_THREAD
+                  t.type === C.d4z.PRIVATE_THREAD
                       ? (0, i.jsx)(s.Text, {
                             variant: 'text-md/normal',
                             color: 'header-secondary',
-                            children: v.intl.string(v.t['1awbZG'])
+                            children: x.intl.string(x.t['1awbZG'])
                         })
                       : null
               ]
@@ -117,16 +113,16 @@ function E(e) {
 function b(e) {
     var t;
     let { channel: n } = e,
-        l = null !== (t = (0, u.KS)(n)) && void 0 !== t ? t : s.ThreadIcon;
-    return (0, i.jsxs)(C.ZP, {
+        l = null !== (t = (0, u.KS)(n)) && void 0 !== t ? t : s.or_;
+    return (0, i.jsxs)(_.ZP, {
         channelId: n.id,
         children: [
             (0, i.jsx)('div', {
-                className: _.iconWrapper,
-                children: (0, i.jsx)(l, { className: _.icon })
+                className: v.iconWrapper,
+                children: (0, i.jsx)(l, { className: v.icon })
             }),
-            (0, i.jsx)(C.Ot, { children: n.name }),
-            (0, i.jsx)(E, { channel: n })
+            (0, i.jsx)(_.Ot, { children: n.name }),
+            (0, i.jsx)(I, { channel: n })
         ]
     });
 }

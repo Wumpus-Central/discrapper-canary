@@ -1,4 +1,5 @@
-e.exports = {
-    venmoIcon: 'venmoIcon_b0022c',
-    connectionInstructions: 'connectionInstructions_b0022c'
+var i = {
+    venmoIcon: 'venmoIcon__44362',
+    connectionInstructions: 'connectionInstructions__44362'
 };
+e.exports = i;

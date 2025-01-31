@@ -1,8 +1,4 @@
-t.d(n, {
-    N: function () {
-        return o;
-    }
-});
+t.d(n, { N: () => o });
 var r = t(544891),
     l = t(570140),
     a = t(981631);

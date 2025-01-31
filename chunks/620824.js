@@ -1,14 +1,10 @@
-r.d(n, {
-    b: function () {
-        return s;
-    },
-    y: function () {
-        return o;
-    }
+n.d(t, {
+    b: () => s,
+    y: () => a
 });
-var i = r(818083),
-    a = r(987338);
-let o = (0, i.B)({
+var i = n(818083),
+    r = n(987338);
+let a = (0, i.B)({
     kind: 'user',
     id: '2025-01_checkout_optimization_apple_pay',
     label: 'Checkout Optimization Apple Pay',
@@ -16,7 +12,7 @@ let o = (0, i.B)({
         enabled: !1,
         delay: !1
     },
-    commonTriggerPoint: a.$P.PAYMENT_FLOW_STARTED,
+    commonTriggerPoint: r.$P.PAYMENT_FLOW_STARTED,
     treatments: [
         {
             id: 1,
@@ -29,5 +25,5 @@ let o = (0, i.B)({
     ]
 });
 function s() {
-    return o.getCurrentConfig({ location: 'apple_pay' }, { autoTrackExposure: !0 });
+    return a.getCurrentConfig({ location: 'apple_pay' }, { autoTrackExposure: !0 });
 }

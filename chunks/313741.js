@@ -1,46 +1,41 @@
-i.d(t, {
-    K: function () {
-        return p;
-    }
-}),
-    i(47120);
-var n = i(192379),
-    l = i(442837),
-    d = i(172337),
-    r = i(101492),
-    s = i(710091),
-    a = i(496675),
-    u = i(388032);
+t.d(i, { K: () => p }), t(47120);
+var n = t(192379),
+    l = t(442837),
+    s = t(172337),
+    d = t(101492),
+    r = t(710091),
+    u = t(496675),
+    a = t(388032);
 let o = {
-        'server-subscriptions-onboarding': s.Z,
-        'server-subscriptions-finish-setting-up': r.Z,
-        'server-subscriptions-create-tier-from-template': d.Z
+        'server-subscriptions-onboarding': r.Z,
+        'server-subscriptions-finish-setting-up': d.Z,
+        'server-subscriptions-create-tier-from-template': s.Z
     },
     c = {
-        title: () => u.intl.string(u.t.V42OaG),
-        description: () => u.intl.string(u.t['7dJ16e']),
-        selectGuildCta: () => u.intl.string(u.t.LhlgY2),
-        createGuildDescription: () => u.intl.string(u.t.anOis7),
-        createGuildCta: () => u.intl.string(u.t.B44MTk),
+        title: () => a.intl.string(a.t.V42OaG),
+        description: () => a.intl.string(a.t['7dJ16e']),
+        selectGuildCta: () => a.intl.string(a.t.LhlgY2),
+        createGuildDescription: () => a.intl.string(a.t.anOis7),
+        createGuildCta: () => a.intl.string(a.t.B44MTk),
         canCreateGuild: !0,
-        useIsGuildSupported: () => (0, l.e7)([a.Z], () => (e) => a.Z.canAccessGuildSettings(e), [], l.pF)
+        useIsGuildSupported: () => (0, l.e7)([u.Z], () => (e) => u.Z.canAccessGuildSettings(e), [], l.pF)
     };
 function p(e) {
-    var t;
-    let [i] = n.useState(null == e ? void 0 : o[e]),
+    var i;
+    let [t] = n.useState(null == e ? void 0 : o[e]),
         l = c.useIsGuildSupported(),
-        d = null == i ? void 0 : null === (t = i.useIsGuildSupported) || void 0 === t ? void 0 : t.call(i),
-        r = {
+        s = null == t ? void 0 : null === (i = t.useIsGuildSupported) || void 0 === i ? void 0 : i.call(t),
+        d = {
             ...c,
-            ...(null != i ? i : {})
+            ...(null != t ? t : {})
         };
     return {
-        title: r.title(),
-        description: r.description(),
-        selectGuildCta: r.selectGuildCta(),
-        createGuildDescription: r.createGuildDescription(),
-        createGuildCta: r.createGuildCta(),
-        canCreateGuild: r.canCreateGuild,
-        isGuildSupported: (e, t) => l(e, t) && (null == d ? void 0 : d(e, t)) !== !1
+        title: d.title(),
+        description: d.description(),
+        selectGuildCta: d.selectGuildCta(),
+        createGuildDescription: d.createGuildDescription(),
+        createGuildCta: d.createGuildCta(),
+        canCreateGuild: d.canCreateGuild,
+        isGuildSupported: (e, i) => l(e, i) && (null == s ? void 0 : s(e, i)) !== !1
     };
 }

@@ -1,9 +1,5 @@
-r.d(n, {
-    N: function () {
-        return a;
-    }
-});
-var i = r(818083);
+n.d(t, { N: () => r });
+var i = n(818083);
 (0, i.B)({
     kind: 'user',
     id: '2022-09_mobile_account_switcher',
@@ -31,7 +27,7 @@ var i = r(818083);
         }
     ]
 });
-let a = (0, i.B)({
+let r = (0, i.B)({
     kind: 'user',
     id: '2022-11_mobile_account_switcher_notifications',
     label: 'Mobile Account Switcher: Notifications',

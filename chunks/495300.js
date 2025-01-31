@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return R;
-    }
-});
+n.d(t, { Z: () => R });
 var i = n(200651),
     r = n(192379),
     l = n(120356),
@@ -17,30 +13,30 @@ var i = n(200651),
     g = n(983135),
     x = n(570961),
     p = n(208665),
-    f = n(359191),
+    _ = n(359191),
     C = n(84658),
-    v = n(142961),
-    I = n(729311),
+    f = n(142961),
+    v = n(729311),
     N = n(850864),
-    _ = n(729995),
-    T = n(966301),
-    j = n(707076),
+    j = n(729995),
+    I = n(966301),
+    E = n(707076),
     b = n(213956),
-    E = n(388032),
+    T = n(388032),
     S = n(646231);
 function R() {
     let e = (0, a.e7)([m.Z], () => m.Z.getGuildId());
-    return null == e ? null : (0, i.jsx)(y, { guildId: e });
+    return null == e ? null : (0, i.jsx)(Z, { guildId: e });
 }
-function y(e) {
+function Z(e) {
     let t,
         { guildId: n } = e,
-        l = (0, a.e7)([f.Z], () => f.Z.getCurrentPage()),
-        m = (0, a.e7)([f.Z], () => {
+        l = (0, a.e7)([_.Z], () => _.Z.getCurrentPage()),
+        m = (0, a.e7)([_.Z], () => {
             let e = (0, C.lg)(l);
-            return null != e && !f.Z.isEducationUpsellDismissed(e);
+            return null != e && !_.Z.isEducationUpsellDismissed(e);
         }),
-        p = (0, v.Z)(n),
+        p = (0, f.Z)(n),
         R = !p && m;
     switch (
         (r.useEffect(() => {
@@ -50,26 +46,26 @@ function y(e) {
     ) {
         case C.PG.LANDING:
             t = p
-                ? (0, i.jsx)(_.Z, {
+                ? (0, i.jsx)(j.Z, {
                       completed: !0,
                       guildId: n
                   })
-                : (0, i.jsx)(j.Z, {});
+                : (0, i.jsx)(E.Z, {});
             break;
         case C.PG.SAFETY_CHECK:
             t = (0, i.jsx)(b.Z, {});
             break;
         case C.PG.DEFAULT_CHANNELS:
-            t = (0, i.jsx)(I.Z, { saveOnClose: !p });
+            t = (0, i.jsx)(v.Z, { saveOnClose: !p });
             break;
         case C.PG.CUSTOMIZATION_QUESTIONS:
-            t = (0, i.jsx)(T.ZP, { saveOnClose: !p });
+            t = (0, i.jsx)(I.ZP, { saveOnClose: !p });
             break;
         case C.PG.HOME_SETTINGS:
             t = (0, i.jsx)(N.Z, { saveOnClose: !p });
             break;
         case C.PG.REVIEW:
-            t = (0, i.jsx)(_.Z, {
+            t = (0, i.jsx)(j.Z, {
                 completed: p,
                 guildId: n
             });
@@ -79,7 +75,7 @@ function y(e) {
         children: [
             !p &&
                 l !== C.PG.LANDING &&
-                (0, i.jsx)(A, {
+                (0, i.jsx)(y, {
                     setOnboardingStep: g.$K,
                     page: l,
                     homeSettingsEnabled: !0
@@ -87,10 +83,10 @@ function y(e) {
             p &&
                 l !== C.PG.LANDING &&
                 (0, i.jsx)('div', {
-                    children: (0, i.jsxs)(c.Button, {
+                    children: (0, i.jsxs)(c.zxk, {
                         innerClassName: S.backButton,
-                        look: c.Button.Looks.BLANK,
-                        size: c.Button.Sizes.MIN,
+                        look: c.zxk.Looks.BLANK,
+                        size: c.zxk.Sizes.MIN,
                         onClick: () => {
                             (0, x.NB)(), (0, h.BG)(), (0, g.$K)(C.PG.LANDING);
                         },
@@ -102,7 +98,7 @@ function y(e) {
                             (0, i.jsx)(c.Text, {
                                 variant: 'text-sm/semibold',
                                 color: 'interactive-normal',
-                                children: E.intl.string(E.t['13/7kZ'])
+                                children: T.intl.string(T.t['13/7kZ'])
                             })
                         ]
                     })
@@ -111,9 +107,9 @@ function y(e) {
         ]
     });
 }
-function A(e) {
+function y(e) {
     let { page: t, setOnboardingStep: n, homeSettingsEnabled: r } = e,
-        l = (0, a.e7)([f.Z], () => f.Z.hasErrors()),
+        l = (0, a.e7)([_.Z], () => _.Z.hasErrors()),
         o = (e) => {
             if (!l) return () => n(e);
         },
@@ -121,7 +117,7 @@ function A(e) {
     return (0, i.jsxs)('div', {
         className: S.progressContainer,
         children: [
-            (0, i.jsxs)(c.Clickable, {
+            (0, i.jsxs)(c.P3F, {
                 className: s()(S.progressBarContainer, S.clickableProgressBar),
                 onClick: o(C.PG.SAFETY_CHECK),
                 children: [
@@ -129,11 +125,11 @@ function A(e) {
                     (0, i.jsx)(c.Text, {
                         color: t === C.PG.SAFETY_CHECK ? 'text-brand' : 'text-muted',
                         variant: 'text-xs/medium',
-                        children: E.intl.format(E.t.Me5MmZ, { stepNumber: 1 })
+                        children: T.intl.format(T.t.Me5MmZ, { stepNumber: 1 })
                     })
                 ]
             }),
-            (0, i.jsxs)(c.Clickable, {
+            (0, i.jsxs)(c.P3F, {
                 className: s()(S.progressBarContainer, S.clickableProgressBar),
                 onClick: o(C.PG.DEFAULT_CHANNELS),
                 children: [
@@ -141,11 +137,11 @@ function A(e) {
                     (0, i.jsx)(c.Text, {
                         color: t === C.PG.DEFAULT_CHANNELS ? 'text-brand' : 'text-muted',
                         variant: 'text-xs/medium',
-                        children: d ? E.intl.formatToPlainString(E.t['8mGhOz'], { stepNumber: 2 }) : E.intl.formatToPlainString(E.t.vxpuTU, { stepNumber: 2 })
+                        children: d ? T.intl.formatToPlainString(T.t['8mGhOz'], { stepNumber: 2 }) : T.intl.formatToPlainString(T.t.vxpuTU, { stepNumber: 2 })
                     })
                 ]
             }),
-            (0, i.jsxs)(c.Clickable, {
+            (0, i.jsxs)(c.P3F, {
                 className: s()(S.progressBarContainer, S.clickableProgressBar),
                 onClick: o(C.PG.CUSTOMIZATION_QUESTIONS),
                 children: [
@@ -153,12 +149,12 @@ function A(e) {
                     (0, i.jsx)(c.Text, {
                         color: t === C.PG.CUSTOMIZATION_QUESTIONS ? 'text-brand' : 'text-muted',
                         variant: 'text-xs/medium',
-                        children: d ? E.intl.formatToPlainString(E.t.vb6J5u, { stepNumber: 3 }) : E.intl.formatToPlainString(E.t.ZpdQqK, { stepNumber: 3 })
+                        children: d ? T.intl.formatToPlainString(T.t.vb6J5u, { stepNumber: 3 }) : T.intl.formatToPlainString(T.t.ZpdQqK, { stepNumber: 3 })
                     })
                 ]
             }),
             r &&
-                (0, i.jsxs)(c.Clickable, {
+                (0, i.jsxs)(c.P3F, {
                     className: s()(S.progressBarContainer, S.clickableProgressBar),
                     onClick: o(C.PG.HOME_SETTINGS),
                     children: [
@@ -166,7 +162,7 @@ function A(e) {
                         (0, i.jsx)(c.Text, {
                             color: t === C.PG.HOME_SETTINGS ? 'text-brand' : 'text-muted',
                             variant: 'text-xs/medium',
-                            children: E.intl.format(E.t.KVOukp, { stepNumber: 4 })
+                            children: T.intl.format(T.t.KVOukp, { stepNumber: 4 })
                         })
                     ]
                 }),
@@ -177,7 +173,7 @@ function A(e) {
                     (0, i.jsx)(c.Text, {
                         color: t === C.PG.REVIEW ? 'text-brand' : 'text-muted',
                         variant: 'text-xs/medium',
-                        children: E.intl.format(E.t.oVzkiI, { stepNumber: 3 + (r ? 1 : 0) + 1 })
+                        children: T.intl.format(T.t.oVzkiI, { stepNumber: 3 + (r ? 1 : 0) + 1 })
                     })
                 ]
             })

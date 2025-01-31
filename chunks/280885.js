@@ -1,35 +1,31 @@
-r.d(n, {
-    Z: function () {
-        return h;
-    }
-});
-var i = r(200651),
-    a = r(192379),
-    o = r(120356),
-    s = r.n(o),
-    l = r(481060),
-    u = r(40966),
-    c = r(580552),
-    d = r(249458),
-    f = r(240991),
-    p = r(665162);
-function h(e) {
-    let { userBio: n, className: r, animateOnHover: o = !1, isHovering: h = !1, lineClamp: _ = 6, setLineClamp: m = !0, textColor: g, userId: E } = e,
-        v = a.useMemo(() => ((0, c.Z)(E) ? (0, i.jsx)(u.Z, {}) : null == n || '' === n ? null : (0, f.parseBioReact)(n)), [E, n]);
-    return null == v
+n.d(t, { Z: () => _ });
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(481060),
+    l = n(40966),
+    u = n(580552),
+    c = n(249458),
+    d = n(240991),
+    f = n(665162);
+function _(e) {
+    let { userBio: t, className: n, animateOnHover: a = !1, isHovering: _ = !1, lineClamp: p = 6, setLineClamp: h = !0, textColor: m, userId: g } = e,
+        E = r.useMemo(() => ((0, u.Z)(g) ? (0, i.jsx)(l.Z, {}) : null == t || '' === t ? null : (0, d.parseBioReact)(t)), [g, t]);
+    return null == E
         ? null
         : (0, i.jsx)('div', {
-              className: s()(r, p.markup),
-              children: (0, i.jsx)(l.Text, {
+              className: s()(n, f.markup),
+              children: (0, i.jsx)(o.Text, {
                   variant: 'text-sm/normal',
-                  lineClamp: m ? _ : void 0,
-                  color: void 0 !== g ? g : void 0,
-                  children: (0, i.jsx)(d.G.Provider, {
+                  lineClamp: h ? p : void 0,
+                  color: void 0 !== m ? m : void 0,
+                  children: (0, i.jsx)(c.G.Provider, {
                       value: {
-                          disableAnimations: o && !h,
+                          disableAnimations: a && !_,
                           disableInteractions: !1
                       },
-                      children: v
+                      children: E
                   })
               })
           });

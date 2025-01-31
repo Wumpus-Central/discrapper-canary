@@ -1,12 +1,13 @@
 e.exports = {
-    splashContainer: 'splashContainer_ac2875',
-    splashContainerHorizontal: 'splashContainerHorizontal_ac2875',
-    priceOs: 'priceOs_ac2875',
-    platform: 'platform_ac2875',
-    exclusiveRegular: 'exclusiveRegular_ac2875',
-    exclusivePlaying: 'exclusivePlaying_ac2875',
-    splashVideo: 'splashVideo_ac2875',
-    splashPlaceholder: 'splashPlaceholder_ac2875',
-    tilePrice: 'tilePrice_ac2875',
-    tilePriceWithVisibleBuyButton: 'tilePriceWithVisibleBuyButton_ac2875 tilePrice_ac2875'
+    splashContainer: 'splashContainer__0bef9',
+    splashContainerHorizontal: 'splashContainerHorizontal__0bef9',
+    priceOs: 'priceOs__0bef9',
+    platform: 'platform__0bef9',
+    exclusiveRegular: 'exclusiveRegular__0bef9',
+    exclusivePlaying: 'exclusivePlaying__0bef9',
+    splashPlaceholder: 'splashPlaceholder__0bef9',
+    splashVideo: 'splashVideo__0bef9',
+    tileBuyButton: 'tileBuyButton__0bef9',
+    tilePrice: 'tilePrice__0bef9',
+    tilePriceWithVisibleBuyButton: 'tilePriceWithVisibleBuyButton__0bef9 tilePrice__0bef9'
 };

@@ -1,12 +1,13 @@
-e.exports = {
-    container: 'container_f1f9c9',
-    header: 'header_f1f9c9',
-    description: 'description_f1f9c9',
-    splashImage: 'splashImage_f1f9c9',
-    settings: 'settings_f1f9c9',
-    modal: 'modal_f1f9c9',
-    blockedPaymentsModalHeader: 'blockedPaymentsModalHeader_f1f9c9',
-    blockedPaymentsModalContent: 'blockedPaymentsModalContent_f1f9c9',
-    blockedPaymentsWarningIcon: 'blockedPaymentsWarningIcon_f1f9c9',
-    blockedPaymentsWarning: 'blockedPaymentsWarning_f1f9c9'
+var i = {
+    container: 'container_b7b2cf',
+    header: 'header_b7b2cf',
+    description: 'description_b7b2cf',
+    splashImage: 'splashImage_b7b2cf',
+    settings: 'settings_b7b2cf',
+    modal: 'modal_b7b2cf',
+    blockedPaymentsModalContent: 'blockedPaymentsModalContent_b7b2cf',
+    blockedPaymentsModalHeader: 'blockedPaymentsModalHeader_b7b2cf',
+    blockedPaymentsWarningIcon: 'blockedPaymentsWarningIcon_b7b2cf',
+    blockedPaymentsWarning: 'blockedPaymentsWarning_b7b2cf'
 };
+e.exports = i;

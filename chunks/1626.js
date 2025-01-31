@@ -1,21 +1,17 @@
-t.d(n, {
-    Z: function () {
-        return u;
-    }
-});
-var i = t(200651);
-t(192379);
-var l = t(481060),
-    r = t(111618),
-    a = t(730954),
-    o = t(981631),
-    s = t(388032);
-function u(e, n) {
-    return e.state !== o.yb.SEND_FAILED
+n.d(t, { Z: () => d });
+var i = n(200651);
+n(192379);
+var l = n(481060),
+    a = n(111618),
+    s = n(730954),
+    r = n(981631),
+    o = n(388032);
+function d(e, t) {
+    return e.state !== r.yb.SEND_FAILED
         ? null
-        : (0, i.jsx)(l.MenuItem, {
+        : (0, i.jsx)(l.sNh, {
               id: 'resend',
-              label: s.intl.string(s.t.lXHojo),
-              action: () => (0, a.Z)(n, e, void 0, r.Z.getOptions(e.id))
+              label: o.intl.string(o.t.lXHojo),
+              action: () => (0, s.Z)(t, e, void 0, a.Z.getOptions(e.id))
           });
 }

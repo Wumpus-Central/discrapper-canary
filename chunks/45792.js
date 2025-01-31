@@ -1,15 +1,11 @@
-n.d(t, {
-    S: function () {
-        return r;
-    }
-});
+n.d(t, { S: () => l });
 var i = n(137006);
-function r(e, t) {
+function l(e, t) {
     var n;
-    let { scope: r, handler: l } = t,
+    let { scope: l, handler: r } = t,
         a = {
-            scope: r,
-            handler: l
+            scope: l,
+            handler: r
         },
         s = null === (n = i.m[e]) || void 0 === n ? void 0 : n.request,
         o = null;

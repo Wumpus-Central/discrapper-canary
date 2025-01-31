@@ -1,14 +1,10 @@
-n.d(t, {
-    Y: function () {
-        return c;
-    }
-});
+n.d(t, { Y: () => s });
 var a = n(192379),
     r = n(110924),
     o = n(626135),
     i = n(497350),
     l = n(981631);
-function c(e) {
+function s(e) {
     let t = (0, r.Z)(e);
     a.useEffect(() => {
         if (e === t) return;

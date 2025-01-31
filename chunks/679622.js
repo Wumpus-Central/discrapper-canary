@@ -1,2 +1,2 @@
-var e = n(626544).match(/firefox\/(\d+)/i);
-t.exports = !!e && +e[1];
+var i = n(626544).match(/firefox\/(\d+)/i);
+e.exports = !!i && +i[1];

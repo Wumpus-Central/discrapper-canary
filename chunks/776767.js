@@ -1,26 +1,20 @@
 n.d(t, {
-    Mn: function () {
-        return o;
-    },
-    WM: function () {
-        return d;
-    },
-    _2: function () {
-        return c;
-    }
+    Mn: () => o,
+    WM: () => d,
+    _2: () => c
 });
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    r = n.n(l),
-    a = n(481060),
+    a = n.n(l),
+    r = n(481060),
     s = n(389401);
 let o = 16;
 function c(e) {
     let { description: t, name: n, icon: l, onNavigate: c, className: d, missingNavIcon: u } = e;
-    return (0, i.jsxs)(a.Clickable, {
+    return (0, i.jsxs)(r.P3F, {
         onClick: c,
-        className: r()(s.modInfoItem, null != c && s.modInfoAction, d),
+        className: a()(s.modInfoItem, null != c && s.modInfoAction, d),
         children: [
             null != l &&
                 (0, i.jsx)('div', {
@@ -39,7 +33,7 @@ function c(e) {
             null != c &&
                 (0, i.jsx)('div', {
                     className: s.modInfoItemActionIcon,
-                    children: (0, i.jsx)(a.ChevronLargeRightIcon, {
+                    children: (0, i.jsx)(r.LJT, {
                         size: 'custom',
                         width: o,
                         height: o

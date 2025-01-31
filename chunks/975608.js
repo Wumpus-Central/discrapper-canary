@@ -1,36 +1,35 @@
-var i = r(411104);
-var a = r(192379),
-    o = r(960048);
-let s = (e, n, r, i, s) => {
-    let l = (0, a.useRef)(!1),
-        u = {
+n.d(t, { Z: () => a }), n(411104);
+var i = n(192379),
+    r = n(960048);
+let a = (e, t, n, a, s) => {
+    let o = (0, i.useRef)(!1),
+        l = {
             componentName: e,
             sentryErrorOptions: s,
-            stateToCapture: i
+            stateToCapture: a
         },
-        c = (0, a.useRef)(u);
-    (0, a.useEffect)(() => {
-        c.current = u;
+        u = (0, i.useRef)(l);
+    (0, i.useEffect)(() => {
+        u.current = l;
     }),
-        (0, a.useEffect)(() => {
-            let { componentName: e, sentryErrorOptions: i, stateToCapture: a } = c.current;
-            if (n && !l.current) {
-                l.current = !0;
-                let n = setTimeout(() => {
-                    let n = Error(''.concat(e, ' is taking too long to load.'));
-                    o.Z.setExtra({
+        (0, i.useEffect)(() => {
+            let { componentName: e, sentryErrorOptions: i, stateToCapture: a } = u.current;
+            if (t && !o.current) {
+                o.current = !0;
+                let t = setTimeout(() => {
+                    let t = Error(''.concat(e, ' is taking too long to load.'));
+                    r.Z.setExtra({
                         loadingState: a,
-                        loadingTimeSeconds: r
+                        loadingTimeSeconds: n
                     }),
-                        o.Z.captureException(n, {
+                        r.Z.captureException(t, {
                             ...i,
                             tags: { ...(null == i ? void 0 : i.tags) }
                         });
-                }, 1000 * r);
+                }, 1000 * n);
                 return () => {
-                    clearTimeout(n);
+                    clearTimeout(t);
                 };
             }
-        }, [n, r]);
+        }, [t, n]);
 };
-n.Z = s;

@@ -1,138 +1,128 @@
-r.d(n, {
-    EM: function () {
-        return g;
-    },
-    PR: function () {
-        return _;
-    },
-    Tt: function () {
-        return y;
-    },
-    ZD: function () {
-        return S;
-    },
-    yY: function () {
-        return b;
-    }
-});
-var i = r(47120);
-var a = r(192379),
-    o = r(232713),
-    s = r(65400),
-    l = r(731965);
-let u = { base: r(358085).isPlatformEmbedded ? void 0 : 'Discord' },
-    c = 0,
-    d = {
+n.d(t, {
+    EM: () => h,
+    PR: () => _,
+    Tt: () => E,
+    ZD: () => b,
+    yY: () => v
+}),
+    n(47120);
+var i = n(192379),
+    r = n(232713),
+    a = n(65400),
+    s = n(731965);
+let o = { base: n(358085).isPlatformEmbedded ? void 0 : 'Discord' },
+    l = 0,
+    u = {
         count: 3,
         onlyWhenBlurred: !1,
         interval: 1000
     },
-    f = (0, s.F)(() => ({
-        titles: [u],
+    c = (0, a.F)(() => ({
+        titles: [o],
         notificationCount: void 0,
         flashQueue: []
     }));
-function p(e) {
-    let n, r, i;
-    for (let a of e.titles) {
-        if (null != n && null != r) break;
-        (n = null != n ? n : a.base), (r = null != r ? r : a.location), (i = null != i ? i : a.subsection);
+function d(e) {
+    let t, n, i;
+    for (let r of e.titles) {
+        if (null != t && null != n) break;
+        (t = null != t ? t : r.base), (n = null != n ? n : r.location), (i = null != i ? i : r.subsection);
     }
-    return [n, i, r];
+    return [t, i, n];
 }
-function h(e) {
-    let { notificationCount: n } = e;
-    return null == n || 0 === n ? '' : n < 0 ? '\u2022 ' : '('.concat(n, ') ');
+function f(e) {
+    let { notificationCount: t } = e;
+    return null == t || 0 === t ? '' : t < 0 ? '\u2022 ' : '('.concat(t, ') ');
 }
 function _(e) {
-    (0, l.j)(() => f.setState({ notificationCount: e }));
+    (0, s.j)(() => c.setState({ notificationCount: e }));
 }
-function m(e) {
+function p(e) {
     return (
-        (0, l.j)(() =>
-            f.setState((n) => ({
-                titles: [e, ...n.titles]
+        (0, s.j)(() =>
+            c.setState((t) => ({
+                titles: [e, ...t.titles]
             }))
         ),
         () => {
-            (0, l.j)(() => f.setState((n) => ({ titles: n.titles.filter((n) => n !== e) })));
+            (0, s.j)(() => c.setState((t) => ({ titles: t.titles.filter((t) => t !== e) })));
         }
     );
 }
-function g(e) {
-    let n = {
-        ...d,
+function h(e) {
+    let t = {
+        ...u,
         ...e,
-        id: c++
+        id: l++
     };
     return (
-        (n.count = Math.max(n.count, n.messages.length)),
-        f.setState((e) => ({
-            flashQueue: [...e.flashQueue, n]
+        (t.count = Math.max(t.count, t.messages.length)),
+        c.setState((e) => ({
+            flashQueue: [...e.flashQueue, t]
         })),
-        () => E(n.id)
+        () => m(t.id)
     );
 }
+function m(e) {
+    c.setState((t) => ({ flashQueue: t.flashQueue.filter((t) => t.id !== e) }));
+}
+function g() {
+    c.setState({ flashQueue: [] });
+}
 function E(e) {
-    f.setState((n) => ({ flashQueue: n.flashQueue.filter((n) => n.id !== e) }));
+    i.useEffect(() => p(e), [...Object.values(e)]);
 }
-function v() {
-    f.setState({ flashQueue: [] });
+function v(e) {
+    return E(e), null;
 }
-function y(e) {
-    a.useEffect(() => m(e), [...Object.values(e)]);
-}
-function b(e) {
-    return y(e), null;
-}
-function I() {
-    let [e, n] = f((e) => {
-            let { flashQueue: n } = e,
-                r = p(e)
+function y() {
+    let [e, t] = c((e) => {
+            let { flashQueue: t } = e,
+                n = d(e)
                     .filter((e) => null != e)
                     .join(' | '),
-                i = h(e);
-            return [''.concat(i).concat(r), n[0]];
-        }, o.X),
-        [r, i] = a.useState(!1),
-        s = a.useRef(0),
-        l = null == n ? void 0 : n.messages[s.current % n.messages.length];
+                i = f(e);
+            return [''.concat(i).concat(n), t[0]];
+        }, r.X),
+        [n, a] = i.useState(!1),
+        s = i.useRef(0),
+        o = null == t ? void 0 : t.messages[s.current % t.messages.length];
     return (
-        a.useEffect(() => {
-            if (null == n) {
-                (s.current = 0), i(!1);
+        i.useEffect(() => {
+            if (null == t) {
+                (s.current = 0), a(!1);
                 return;
             }
-            if (document.hasFocus() && n.onlyWhenBlurred) {
-                E(n.id), i(!1);
+            if (document.hasFocus() && t.onlyWhenBlurred) {
+                m(t.id), a(!1);
                 return;
             }
             let e = setInterval(() => {
-                if (s.current >= n.count) {
-                    E(n.id), i(!1);
+                if (s.current >= t.count) {
+                    m(t.id), a(!1);
                     return;
                 }
-                i((e) => !e || ((s.current += 1), !1));
-            }, n.interval);
+                a((e) => !e || ((s.current += 1), !1));
+            }, t.interval);
             return () => clearInterval(e);
-        }, [n]),
-        r ? l : e
+        }, [t]),
+        n ? o : e
     );
 }
-function T() {
-    a.useEffect(() => {
+function I() {
+    i.useEffect(() => {
         function e() {
-            v();
+            g();
         }
         return document.addEventListener('focusin', e, { capture: !0 }), () => document.removeEventListener('focusin', e, { capture: !0 });
     }, []);
 }
-function S() {
+function b() {
     let { skipsSettingDefaultPageTitle: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    T();
-    let n = I();
-    a.useEffect(() => {
-        let r = n === u.base;
-        if (!e || !r) document.title = n;
-    }, [e, n]);
+    I();
+    let t = y();
+    i.useEffect(() => {
+        let n = t === o.base;
+        (!e || !n) && (document.title = t);
+    }, [e, t]);
 }

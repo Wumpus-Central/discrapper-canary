@@ -1,15 +1,11 @@
 n.d(t, {
-    A: function () {
-        return j;
-    },
-    Z: function () {
-        return T;
-    }
+    A: () => j,
+    Z: () => S
 });
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(597312),
     o = n(442837),
     c = n(481060),
@@ -20,19 +16,19 @@ var i = n(200651),
     m = n(5192),
     f = n(785717),
     g = n(221292),
-    C = n(687158),
-    x = n(471879),
-    v = n(502762),
-    _ = n(848780),
-    I = n(907179),
-    E = n(475413),
+    _ = n(687158),
+    C = n(471879),
+    x = n(502762),
+    v = n(848780),
+    E = n(907179),
+    I = n(475413),
     b = n(228168),
     Z = n(388032),
     N = n(562296),
-    S = n(321975);
-function T(e) {
-    let { user: t, channel: n, onViewBlockedProfileClick: r } = e,
-        a = (0, C.ZP)(t.id),
+    T = n(321975);
+function S(e) {
+    let { user: t, channel: n, onViewBlockedProfileClick: a } = e,
+        r = (0, _.ZP)(t.id),
         o = (0, d.ZP)(),
         { analyticsLocations: p } = (0, h.ZP)(u.Z.BLOCKED_PROFILE_PANEL),
         m = (0, f.ZB)({
@@ -40,15 +36,15 @@ function T(e) {
             userId: t.id,
             channelId: n.id
         }),
-        _ = l.useRef(null);
+        v = l.useRef(null);
     return (0, i.jsx)(h.Gt, {
         value: p,
         children: (0, i.jsx)(f.Mt, {
             value: m,
-            children: (0, i.jsx)(v.Z, {
-                ref: _,
+            children: (0, i.jsx)(x.Z, {
+                ref: v,
                 user: t,
-                displayProfile: a,
+                displayProfile: r,
                 profileType: b.y0.PANEL,
                 themeOverride: o,
                 children: (0, i.jsx)(s.u2, {
@@ -57,18 +53,18 @@ function T(e) {
                         children: [
                             (0, i.jsx)('img', {
                                 alt: '',
-                                src: S,
+                                src: T,
                                 className: N.previewForCollected,
                                 'aria-hidden': !0
                             }),
                             (0, i.jsxs)('div', {
                                 className: N.body,
                                 children: [
-                                    (0, i.jsx)(x.Z, {
+                                    (0, i.jsx)(C.Z, {
                                         user: t,
                                         guildId: null
                                     }),
-                                    (0, i.jsx)(c.Heading, {
+                                    (0, i.jsx)(c.X6q, {
                                         variant: 'heading-lg/bold',
                                         className: N.header,
                                         children: Z.intl.string(Z.t.VNJ7UF)
@@ -81,14 +77,14 @@ function T(e) {
                                         variant: 'text-sm/medium',
                                         children: Z.intl.string(Z.t['20WzZ2'])
                                     }),
-                                    (0, i.jsx)(E.tG, {
+                                    (0, i.jsx)(I.tG, {
                                         className: N.centeredButton,
                                         action: 'VIEW_BLOCKED_PROFILE',
                                         text: Z.intl.string(Z.t.iXAna2),
                                         autoFocus: !0,
                                         fullWidth: !1,
                                         onClick: () => {
-                                            null == r || r(),
+                                            null == a || a(),
                                                 (0, g.pQ)({
                                                     action: 'VIEW_BLOCKED_PROFILE',
                                                     analyticsLocations: p,
@@ -106,9 +102,9 @@ function T(e) {
     });
 }
 function j(e) {
-    let { user: t, channel: n, onViewBlockedProfileClick: r } = e,
-        E = (0, C.ZP)(t.id),
-        T = (0, d.ZP)(),
+    let { user: t, channel: n, onViewBlockedProfileClick: a } = e,
+        I = (0, _.ZP)(t.id),
+        S = (0, d.ZP)(),
         j = (0, o.e7)([p.Z], () => p.Z.isBlocked(t.id)),
         { analyticsLocations: A } = (0, h.ZP)(j ? u.Z.BLOCKED_PROFILE_PANEL : u.Z.IGNORED_PROFILE_PANEL),
         y = (0, f.ZB)({
@@ -121,30 +117,30 @@ function j(e) {
         value: A,
         children: (0, i.jsx)(f.Mt, {
             value: y,
-            children: (0, i.jsx)(v.Z, {
+            children: (0, i.jsx)(x.Z, {
                 ref: P,
                 user: t,
-                displayProfile: E,
+                displayProfile: I,
                 profileType: b.y0.PANEL,
-                themeOverride: T,
+                themeOverride: S,
                 children: (0, i.jsx)(s.u2, {
                     children: (0, i.jsxs)('div', {
                         className: N.container,
                         children: [
                             (0, i.jsx)('img', {
                                 alt: '',
-                                src: S,
+                                src: T,
                                 className: N.previewForCollected,
                                 'aria-hidden': !0
                             }),
                             (0, i.jsxs)('div', {
-                                className: a()(N.body, N.bodySpacing),
+                                className: r()(N.body, N.bodySpacing),
                                 children: [
                                     (0, i.jsxs)('div', {
                                         className: N.headerContainer,
                                         children: [
-                                            (0, i.jsx)(x.i, { user: t }),
-                                            (0, i.jsx)(c.Heading, {
+                                            (0, i.jsx)(C.i, { user: t }),
+                                            (0, i.jsx)(c.X6q, {
                                                 variant: 'heading-lg/bold',
                                                 children: Z.intl.string(Z.t.b33pLC)
                                             }),
@@ -154,13 +150,13 @@ function j(e) {
                                             })
                                         ]
                                     }),
-                                    (0, i.jsxs)(c.Stack, {
+                                    (0, i.jsxs)(c.Kqy, {
                                         align: 'center',
                                         children: [
-                                            (0, i.jsx)(I.Z, {
+                                            (0, i.jsx)(E.Z, {
                                                 isBlocked: j,
                                                 onClick: () => {
-                                                    null == r || r(),
+                                                    null == a || a(),
                                                         (0, g.pQ)({
                                                             action: j ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
                                                             analyticsLocations: A,
@@ -168,10 +164,10 @@ function j(e) {
                                                         });
                                                 }
                                             }),
-                                            (0, i.jsx)(_.Z, {
+                                            (0, i.jsx)(v.Z, {
                                                 userId: t.id,
                                                 onClick: () => {
-                                                    null == r || r(),
+                                                    null == a || a(),
                                                         (0, g.pQ)({
                                                             action: 'DONT_SHOW_AGAIN_IGNORED_PROFILE',
                                                             analyticsLocations: A,

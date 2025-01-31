@@ -1,9 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => d }), n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(481060),
@@ -39,7 +34,7 @@ function c(e) {
             (0, i.jsxs)('div', {
                 className: o.keywordListTextContainer,
                 children: [
-                    (0, i.jsx)(l.Heading, {
+                    (0, i.jsx)(l.X6q, {
                         variant: 'heading-sm/semibold',
                         children: c
                     }),
@@ -50,9 +45,9 @@ function c(e) {
                     })
                 ]
             }),
-            (0, i.jsx)(l.Checkbox, {
+            (0, i.jsx)(l.XZJ, {
                 className: o.toggle,
-                type: l.Checkbox.Types.INVERTED,
+                type: l.XZJ.Types.INVERTED,
                 value: n,
                 onChange: () => r(t)
             })

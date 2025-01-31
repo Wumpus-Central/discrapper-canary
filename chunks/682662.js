@@ -1,8 +1,4 @@
-n.d(t, {
-    H: function () {
-        return a;
-    }
-});
+n.d(t, { H: () => a });
 var i = n(200651),
     l = n(192379),
     r = n(940722);

@@ -1,14 +1,16 @@
-e.exports = {
-    fileWrapper: 'fileWrapper_f46c86',
-    file: 'file_f46c86',
-    fileInner: 'fileInner_f46c86',
-    icon: 'icon_f46c86',
-    filenameWrapper: 'filenameWrapper_f46c86',
-    filename: 'filename_f46c86',
-    progressContainer: 'progressContainer_f46c86 metadata_f46c86',
-    progress: 'progress_f46c86',
-    size: 'size_f46c86',
-    cancelButton: 'cancelButton_f46c86',
-    filenameLinkWrapper: 'filenameLinkWrapper_f46c86',
-    fileNameLink: 'fileNameLink_f46c86'
+var i = {
+    fileWrapper: 'fileWrapper__0ccae',
+    file: 'file__0ccae',
+    fileInner: 'fileInner__0ccae',
+    icon: 'icon__0ccae',
+    filenameWrapper: 'filenameWrapper__0ccae',
+    filename: 'filename__0ccae',
+    metadata: 'metadata__0ccae',
+    progressContainer: 'progressContainer__0ccae metadata__0ccae',
+    progress: 'progress__0ccae',
+    cancelButton: 'cancelButton__0ccae',
+    size: 'size__0ccae',
+    filenameLinkWrapper: 'filenameLinkWrapper__0ccae',
+    fileNameLink: 'fileNameLink__0ccae'
 };
+e.exports = i;

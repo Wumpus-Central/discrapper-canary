@@ -1,13 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return m;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => m }), n(47120);
 var a = n(200651),
     l = n(192379),
-    r = n(683860),
-    s = n(481060),
+    s = n(683860),
+    r = n(481060),
     i = n(235449),
     o = n(487894),
     c = n(300234),
@@ -16,13 +11,13 @@ var a = n(200651),
 let h = new Set();
 function m(e) {
     let { channel: t, startThread: n, goToThread: m } = e,
-        { joinedThreadIds: f, unjoinedThreadIds: x } = (0, i.FO)(t),
-        { threadIds: v, canLoadMore: Z, loading: j, loadMore: N } = (0, i.qQ)(t, r.z.LATEST_ACTIVITY, h),
+        { joinedThreadIds: x, unjoinedThreadIds: f } = (0, i.FO)(t),
+        { threadIds: Z, canLoadMore: v, loading: j, loadMore: N } = (0, i.qQ)(t, s.z.LATEST_ACTIVITY, h),
         T = l.useRef(null);
     (0, i.r7)();
-    let I = l.useCallback(
+    let C = l.useCallback(
             (e) => {
-                let t = 0 === e.section ? f : 1 === e.section ? x : v;
+                let t = 0 === e.section ? x : 1 === e.section ? f : Z;
                 return (0, a.jsx)(
                     c.Z,
                     {
@@ -32,22 +27,22 @@ function m(e) {
                     ''.concat(e.section, '-').concat(e.row)
                 );
             },
-            [v, f, x, m]
+            [Z, x, f, m]
         ),
-        C = l.useCallback((e) => (0 === e.section ? (0, a.jsx)(g, { text: d.intl.formatToPlainString(d.t['4E27f3'], { count: f.length }) }, e.section) : 1 === e.section ? (0, a.jsx)(g, { text: d.intl.formatToPlainString(d.t.csPc4O, { count: x.length }) }, e.section) : (0, a.jsx)(g, { text: d.intl.string(d.t['wUNQ+/']) }, e.section)), [f.length, x.length]),
-        p = l.useCallback((e) => (1 === e && f.length > 0 ? 64 : 2 === e && (f.length > 0 || x.length > 0) ? 64 : 32), [f.length, x.length]),
-        S = l.useCallback(() => {
+        I = l.useCallback((e) => (0 === e.section ? (0, a.jsx)(g, { text: d.intl.formatToPlainString(d.t['4E27f3'], { count: x.length }) }, e.section) : 1 === e.section ? (0, a.jsx)(g, { text: d.intl.formatToPlainString(d.t.csPc4O, { count: f.length }) }, e.section) : (0, a.jsx)(g, { text: d.intl.string(d.t['wUNQ+/']) }, e.section)), [x.length, f.length]),
+        p = l.useCallback((e) => (1 === e && x.length > 0 ? 64 : 2 === e && (x.length > 0 || f.length > 0) ? 64 : 32), [x.length, f.length]),
+        E = l.useCallback(() => {
             var e;
             let t = null === (e = T.current) || void 0 === e ? void 0 : e.getScrollerState();
             if (null == t) return;
             let n = t.scrollTop + t.offsetHeight;
             t.scrollHeight - n < 200 && N();
         }, [N]);
-    if (0 === f.length && 0 === x.length && 0 === v.length)
-        return j
+    return 0 === x.length && 0 === f.length && 0 === Z.length
+        ? j
             ? (0, a.jsx)('div', {
                   className: u.list,
-                  children: (0, a.jsx)(s.Spinner, { className: u.spinner })
+                  children: (0, a.jsx)(r.$jN, { className: u.spinner })
               })
             : (0, a.jsx)('div', {
                   className: u.list,
@@ -56,23 +51,23 @@ function m(e) {
                       header: d.intl.string(d.t.HgTQ8v),
                       startThread: n
                   })
-              });
-    return (0, a.jsx)(s.List, {
-        ref: T,
-        className: u.list,
-        fade: !0,
-        sections: [f.length, x.length, v.length],
-        sectionHeight: p,
-        rowHeight: 80,
-        renderRow: I,
-        renderSection: C,
-        chunkSize: 20,
-        onScroll: Z ? S : void 0
-    });
+              })
+        : (0, a.jsx)(r.aVo, {
+              ref: T,
+              className: u.list,
+              fade: !0,
+              sections: [x.length, f.length, Z.length],
+              sectionHeight: p,
+              rowHeight: 80,
+              renderRow: C,
+              renderSection: I,
+              chunkSize: 20,
+              onScroll: v ? E : void 0
+          });
 }
 function g(e) {
     let { text: t } = e;
-    return (0, a.jsx)(s.Text, {
+    return (0, a.jsx)(r.Text, {
         color: 'header-secondary',
         variant: 'text-xs/bold',
         className: u.sectionHeader,

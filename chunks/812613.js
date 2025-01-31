@@ -1,13 +1,7 @@
 t.d(n, {
-    Zk: function () {
-        return d;
-    },
-    bb: function () {
-        return f;
-    },
-    kV: function () {
-        return h;
-    }
+    Zk: () => c,
+    bb: () => f,
+    kV: () => h
 }),
     t(411104),
     t(653041),
@@ -25,16 +19,16 @@ t.d(n, {
 var l = t(512722),
     a = t.n(l),
     i = t(304809),
-    r = t(70956),
-    s = t(208049),
+    s = t(70956),
+    r = t(208049),
     o = t(419202);
 let u = new AudioContext({ sampleRate: Math.min((0, i.N)().sampleRate, 48000) });
-async function c(e) {
+async function d(e) {
     let n = await e.arrayBuffer();
     if (!(n instanceof ArrayBuffer)) throw Error('Unexpected file type');
     return u.decodeAudioData(n);
 }
-async function d(e) {
+async function c(e) {
     var n;
     let t = await ((n = (n) => {
         n.readAsDataURL(e);
@@ -50,14 +44,14 @@ async function d(e) {
     return t;
 }
 async function f(e) {
-    let { readPromise: n, guildId: t, name: l, volume: a, emojiId: i, emojiName: r } = e;
-    return (0, s.Dx)({
+    let { readPromise: n, guildId: t, name: l, volume: a, emojiId: i, emojiName: s } = e;
+    return (0, r.Dx)({
         guildId: t,
         name: l,
         sound: await n,
         volume: a,
         emojiId: i,
-        emojiName: r
+        emojiName: s
     });
 }
 async function m(e) {
@@ -128,20 +122,20 @@ async function m(e) {
 async function h(e, n) {
     let t = (function (e, n) {
         let { startMs: t, endMs: l } = n,
-            { sampleRate: a, numberOfChannels: i, duration: s } = e,
-            o = s * r.Z.Millis.SECOND,
-            c = Math.min(l, o);
-        if (0 === t && c === o) return e;
-        let d = Math.floor((t / o) * e.length),
-            f = Math.floor((c / o) * e.length),
-            m = u.createBuffer(i, f - d, a);
+            { sampleRate: a, numberOfChannels: i, duration: r } = e,
+            o = r * s.Z.Millis.SECOND,
+            d = Math.min(l, o);
+        if (0 === t && d === o) return e;
+        let c = Math.floor((t / o) * e.length),
+            f = Math.floor((d / o) * e.length),
+            m = u.createBuffer(i, f - c, a);
         for (let n = 0; n < i; n++) {
             let t = m.getChannelData(n),
                 l = e.getChannelData(n),
                 a = 0;
-            for (let e = d; e <= f; e++) (t[a] = l[e]), a++;
+            for (let e = c; e <= f; e++) (t[a] = l[e]), a++;
         }
         return m;
-    })(await c(e), n);
+    })(await d(e), n);
     return new File([await m(t)], 'sound.ogg', { type: 'audio/ogg' });
 }

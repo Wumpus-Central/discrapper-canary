@@ -1,47 +1,43 @@
-t.d(e, {
-    M: function () {
-        return d;
-    },
-    t: function () {
-        return o;
-    }
+e.d(t, {
+    M: () => u,
+    t: () => d
 });
-var i = t(381499),
-    r = t(675478),
-    l = t(592125),
-    u = t(626135),
-    a = t(981631);
-function o(n, e, t, l) {
-    if (e !== t)
-        (0, r.PS)(
+var i = e(381499),
+    l = e(675478),
+    r = e(592125),
+    a = e(626135),
+    s = e(981631);
+function d(n, t, e, r) {
+    t !== e &&
+        ((0, l.PS)(
             n,
             (n) => {
-                n.customNotificationSoundConfig = { notificationSoundPackId: i.Gm.create({ value: t }) };
+                n.customNotificationSoundConfig = { notificationSoundPackId: i.Gm.create({ value: e }) };
             },
-            r.fy.INFREQUENT_USER_ACTION
+            l.fy.INFREQUENT_USER_ACTION
         ),
-            u.default.track(a.rMx.CUSTOM_NOTIFICATION_SOUND_SETTINGS_UPDATED, {
-                guild_id: n,
-                location: l,
-                soundpack: t
-            });
+        a.default.track(s.rMx.CUSTOM_NOTIFICATION_SOUND_SETTINGS_UPDATED, {
+            guild_id: n,
+            location: r,
+            soundpack: e
+        }));
 }
-function d(n, e, t, o, d) {
-    var s;
-    if (t !== o)
-        (0, r.BU)(
+function u(n, t, e, d, u) {
+    var o;
+    e !== d &&
+        ((0, l.BU)(
             n,
-            e,
+            t,
             (n) => {
-                n.customNotificationSoundConfig = { notificationSoundPackId: i.Gm.create({ value: o }) };
+                n.customNotificationSoundConfig = { notificationSoundPackId: i.Gm.create({ value: d }) };
             },
-            r.fy.INFREQUENT_USER_ACTION
+            l.fy.INFREQUENT_USER_ACTION
         ),
-            u.default.track(a.rMx.CUSTOM_NOTIFICATION_SOUND_SETTINGS_UPDATED, {
-                guild_id: n,
-                channel_id: e,
-                channel_type: null === (s = l.Z.getChannel(e)) || void 0 === s ? void 0 : s.type,
-                location: d,
-                soundpack: o
-            });
+        a.default.track(s.rMx.CUSTOM_NOTIFICATION_SOUND_SETTINGS_UPDATED, {
+            guild_id: n,
+            channel_id: t,
+            channel_type: null === (o = r.Z.getChannel(t)) || void 0 === o ? void 0 : o.type,
+            location: u,
+            soundpack: d
+        }));
 }

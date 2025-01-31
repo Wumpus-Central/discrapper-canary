@@ -1,75 +1,70 @@
-r.d(n, {
-    Z: function () {
-        return g;
-    }
-});
-var i = r(47120);
-var a = r(200651);
-r(192379);
-var o = r(772848),
-    s = r(481060),
-    l = r(159351),
-    u = r(667),
-    c = r(335131),
-    d = r(626135),
-    f = r(409813),
-    p = r(608579),
-    h = r(981631);
+n.d(t, { Z: () => h }), n(47120);
+var i = n(200651);
+n(192379);
+var r = n(772848),
+    a = n(481060),
+    s = n(159351),
+    o = n(667),
+    l = n(335131),
+    u = n(626135),
+    c = n(409813),
+    d = n(608579),
+    f = n(981631);
 let _ = 'payment-modal',
-    m = new Set([f.h8.REVIEW, f.h8.CONFIRM, f.h8.GIFT_CUSTOMIZATION]);
-function g(e) {
-    let n;
-    let { skuId: r, isGift: i = !1, giftMessage: f, giftingOrigin: g, onClose: E, onComplete: v, analyticsLocations: y, analyticsObject: b, giftRecipient: I, variantsReturnStyle: T } = e,
-        S = !1,
-        A = (0, o.Z)(),
-        C = (e) => {
-            n = e;
+    p = new Set([c.h8.REVIEW, c.h8.CONFIRM, c.h8.GIFT_CUSTOMIZATION]);
+function h(e) {
+    let t;
+    let { skuId: n, isGift: c = !1, giftMessage: h, giftingOrigin: m, onClose: g, onComplete: E, analyticsLocations: v, analyticsObject: y, giftRecipient: I, variantsReturnStyle: b } = e,
+        T = !1,
+        S = (0, r.Z)(),
+        A = (e) => {
+            t = e;
         };
-    (0, s.openModalLazy)(
+    (0, a.ZDy)(
         async () => (e) => {
-            let { onClose: n, returnRef: o, ...s } = e;
-            return (0, a.jsx)(p.Z, {
-                ...s,
-                loadId: A,
-                skuId: r,
-                isGift: i,
-                giftMessage: f,
-                giftingOrigin: g,
-                analyticsLocations: y,
+            let { onClose: t, returnRef: r, ...a } = e;
+            return (0, i.jsx)(d.Z, {
+                ...a,
+                loadId: S,
+                skuId: n,
+                isGift: c,
+                giftMessage: h,
+                giftingOrigin: m,
+                analyticsLocations: v,
                 giftRecipient: I,
                 onClose: (e) => {
-                    n(), null == E || E(e);
+                    t(), null == g || g(e);
                 },
                 onComplete: () => {
-                    (S = !0), null == v || v();
+                    (T = !0), null == E || E();
                 },
-                returnRef: o,
-                onStepChange: C
+                returnRef: r,
+                onStepChange: A
             });
         },
         {
             modalKey: _,
             onCloseCallback: () => {
-                !S &&
-                    d.default.track(h.rMx.PAYMENT_FLOW_CANCELED, {
-                        load_id: A,
-                        payment_type: h.Zuq[h.GZQ.ONE_TIME],
-                        location: b,
-                        is_gift: i,
-                        sku_id: r,
-                        location_stack: y
+                T ||
+                    u.default.track(f.rMx.PAYMENT_FLOW_CANCELED, {
+                        load_id: S,
+                        payment_type: f.Zuq[f.GZQ.ONE_TIME],
+                        location: y,
+                        is_gift: c,
+                        sku_id: n,
+                        location_stack: v
                     }),
-                    (0, l.fw)(),
-                    (0, u.p)(),
-                    null == E || E(S),
-                    S &&
-                        (0, c.qg)({
-                            variantsReturnStyle: T,
+                    (0, s.fw)(),
+                    (0, o.p)(),
+                    null == g || g(T),
+                    T &&
+                        (0, l.qg)({
+                            variantsReturnStyle: b,
                             location: 'openCollectiblesPaymentModal'
                         });
             },
             onCloseRequest: () => {
-                null != n && m.has(n) && (0, s.closeModal)(_);
+                null != t && p.has(t) && (0, a.Mr3)(_);
             }
         }
     );

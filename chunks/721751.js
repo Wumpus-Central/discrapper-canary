@@ -1,62 +1,49 @@
-let i;
-n(47120);
-var r = n(200651),
-    s = n(192379),
-    l = n(120356),
-    o = n.n(l),
+let s;
+n.d(t, { Z: () => A }), n(47120);
+var i = n(200651),
+    l = n(192379),
+    r = n(120356),
+    o = n.n(r),
     a = n(873546),
     c = n(442837),
     d = n(481060),
-    u = n(980591),
-    h = n(605782),
-    g = n(133853),
-    f = n(568154),
-    m = n(353926),
-    p = n(703656),
-    x = n(981631),
-    _ = n(687000);
-let E = n(575703),
-    I = n(2984),
-    N = [x.Z5c.LOGIN, x.Z5c.LOGIN_HANDOFF, x.Z5c.REGISTER, x.Z5c.INVITE(''), x.Z5c.GIFT_CODE(''), x.Z5c.GUILD_TEMPLATE_LOGIN(''), x.Z5c.GUILD_TEMPLATE(''), x.Z5c.DISABLE_EMAIL_NOTIFICATIONS, x.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, x.Z5c.BILLING_PREMIUM_SUBSCRIBE, x.Z5c.BILLING_PAYMENT_SOURCES_CREATE, x.Z5c.BILLING_PAYMENTS, x.Z5c.BILLING_PREMIUM_SWITCH_PLAN, x.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, x.Z5c.VERIFY, x.Z5c.VERIFY_HUB_EMAIL, x.Z5c.REJECT_IP, x.Z5c.REJECT_MFA, x.Z5c.AUTHORIZE_IP, x.Z5c.AUTHORIZE_PAYMENT, x.Z5c.RESET, x.Z5c.HANDOFF, x.Z5c.REPORT, x.Z5c.REPORT_SECOND_LOOK, x.Z5c.ACCOUNT_REVERT('')];
-function v(e) {
-    return N.some((t) => e.startsWith(t));
-}
-let C = (e) => ((i = e), e);
+    h = n(980591),
+    u = n(605782),
+    _ = n(133853),
+    p = n(568154),
+    E = n(353926),
+    m = n(703656),
+    I = n(981631),
+    T = n(687000);
+let Z = n(575703),
+    f = n(2984),
+    g = [I.Z5c.LOGIN, I.Z5c.LOGIN_HANDOFF, I.Z5c.REGISTER, I.Z5c.INVITE(''), I.Z5c.GIFT_CODE(''), I.Z5c.GUILD_TEMPLATE_LOGIN(''), I.Z5c.GUILD_TEMPLATE(''), I.Z5c.DISABLE_EMAIL_NOTIFICATIONS, I.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, I.Z5c.BILLING_PREMIUM_SUBSCRIBE, I.Z5c.BILLING_PAYMENT_SOURCES_CREATE, I.Z5c.BILLING_PAYMENTS, I.Z5c.BILLING_PREMIUM_SWITCH_PLAN, I.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, I.Z5c.VERIFY, I.Z5c.VERIFY_HUB_EMAIL, I.Z5c.REJECT_IP, I.Z5c.REJECT_MFA, I.Z5c.AUTHORIZE_IP, I.Z5c.AUTHORIZE_PAYMENT, I.Z5c.RESET, I.Z5c.HANDOFF, I.Z5c.REPORT, I.Z5c.REPORT_SECOND_LOOK, I.Z5c.ACCOUNT_REVERT('')];
 function b(e) {
+    return g.some((t) => e.startsWith(t));
+}
+let L = (e) => ((s = e), e);
+function x(e) {
     let { children: t } = e;
     switch (
         (function () {
-            let [e, t] = s.useState(!1),
-                [n, r] = s.useState(true),
-                l = (function () {
-                    return null;
-                })(),
-                o = (0, c.e7)([m.Z], () => m.Z.hasLoadedExperiments);
-            return ((0, u.Z)(() => {}, 300), void 0 !== i)
-                ? i
-                : !n && o
-                  ? (!e && t(!0),
-                    C(
-                        (function (e) {
-                            return 'default';
-                        })(l)
-                    ))
-                  : n
-                    ? C('default')
-                    : 'loading';
+            var e;
+            let [t, n] = l.useState(!1),
+                [i, r] = l.useState(!0),
+                o = (0, c.e7)([E.Z], () => E.Z.hasLoadedExperiments);
+            return ((0, h.Z)(() => {}, 300), void 0 !== s) ? s : !i && o ? (t || n(!0), L(((e = 0), 'default'))) : i ? L('default') : 'loading';
         })()
     ) {
         case 'default':
-            return (0, r.jsxs)(r.Fragment, {
+            return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, r.jsx)('img', {
-                        className: _.artwork,
-                        src: E,
+                    (0, i.jsx)('img', {
+                        className: T.artwork,
+                        src: Z,
                         alt: ''
                     }),
-                    (0, r.jsx)('img', {
-                        className: _.logoWithText,
-                        src: I,
+                    (0, i.jsx)('img', {
+                        className: T.logoWithText,
+                        src: f,
                         alt: ''
                     }),
                     t
@@ -67,7 +54,7 @@ function b(e) {
             return null;
     }
 }
-class T extends s.Component {
+class R extends l.Component {
     componentDidMount() {
         window.addEventListener('resize', this.handleResize);
     }
@@ -75,53 +62,53 @@ class T extends s.Component {
         window.removeEventListener('resize', this.handleResize);
     }
     mobileTransitionTo(e, t) {
-        if (v(e)) (0, p.uL)(e, t);
+        if (b(e)) (0, m.uL)(e, t);
         else {
             let n = null != t && null != t.search ? t.search : null;
             window.location = null == n ? e : ''.concat(e, '?').concat(n);
         }
     }
     mobileReplaceWith(e) {
-        v(e) ? (0, p.dL)(e) : (window.location = e);
+        b(e) ? (0, m.dL)(e) : (window.location = e);
     }
     renderDefault() {
         let { splash: e } = this.props,
-            t = (0, r.jsx)(h.Z, {
-                component: s.Fragment,
-                children: s.Children.map(this.props.children, (e) =>
-                    s.cloneElement(e, {
-                        transitionTo: p.uL,
-                        replaceWith: p.dL
+            t = (0, i.jsx)(u.Z, {
+                component: l.Fragment,
+                children: l.Children.map(this.props.children, (e) =>
+                    l.cloneElement(e, {
+                        transitionTo: m.uL,
+                        replaceWith: m.dL
                     })
                 )
             });
-        return (0, r.jsx)('div', {
-            className: _.characterBackground,
-            children: (0, r.jsx)(d.HeadingLevel, {
+        return (0, i.jsx)('div', {
+            className: T.characterBackground,
+            children: (0, i.jsx)(d.y5t, {
                 forceLevel: 1,
                 children:
                     null != e
-                        ? (0, r.jsxs)(r.Fragment, {
+                        ? (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, r.jsx)(g.Z, {
+                                  (0, i.jsx)(_.Z, {
                                       show: !0,
-                                      className: o()(_.logo)
+                                      className: o()(T.logo)
                                   }),
-                                  (0, r.jsx)(f.h, {
+                                  (0, i.jsx)(p.h, {
                                       splash: e,
                                       children: t
                                   })
                               ]
                           })
-                        : (0, r.jsx)(b, { children: t })
+                        : (0, i.jsx)(x, { children: t })
             })
         });
     }
     renderMobile() {
-        return (0, r.jsx)(h.Z, {
-            component: s.Fragment,
-            children: s.Children.map(this.props.children, (e) =>
-                s.cloneElement(e, {
+        return (0, i.jsx)(u.Z, {
+            component: l.Fragment,
+            children: l.Children.map(this.props.children, (e) =>
+                l.cloneElement(e, {
                     transitionTo: this.mobileTransitionTo,
                     replaceWith: this.mobileReplaceWith
                 })
@@ -134,22 +121,21 @@ class T extends s.Component {
         return e || a.tq || a.Em || t ? this.renderMobile() : this.renderDefault();
     }
     constructor(e) {
-        var t, n, i;
+        var t, n;
         super(e),
-            (t = this),
-            (n = 'handleResize'),
-            (i = () => {
+            (t = 'handleResize'),
+            (n = () => {
                 this.setState({ isMobileWidth: window.innerWidth <= 485 });
             }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: i,
+            t in this
+                ? Object.defineProperty(this, t, {
+                      value: n,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (t[n] = i),
+                : (this[t] = n),
             (this.state = { isMobileWidth: window.innerWidth <= 485 });
     }
 }
-t.Z = T;
+let A = R;

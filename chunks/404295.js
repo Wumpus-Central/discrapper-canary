@@ -1,17 +1,13 @@
-r.d(n, {
-    h9: function () {
-        return s;
-    }
-});
-var i = r(442837),
-    a = r(592125),
-    o = r(594174);
+n.d(t, { h9: () => s });
+var i = n(442837),
+    r = n(592125),
+    a = n(594174);
 function s(e) {
-    return l((0, i.e7)([a.Z], () => a.Z.getChannel(e)));
+    return o((0, i.e7)([r.Z], () => r.Z.getChannel(e)));
 }
-r(291574);
-function l(e) {
+function o(e) {
     if ((null == e ? void 0 : e.isDM()) !== !0) return !1;
-    let n = o.default.getUser(e.getRecipientId());
-    return null != n && n.bot;
+    let t = a.default.getUser(e.getRecipientId());
+    return null != t && t.bot;
 }
+n(291574);

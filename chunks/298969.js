@@ -1,3 +1,4 @@
+n.d(t, { Z: () => r });
 var i = n(606271),
-    r = n(30643);
-t.Z = new i.Z(r.Z);
+    l = n(30643);
+let r = new i.Z(l.Z);

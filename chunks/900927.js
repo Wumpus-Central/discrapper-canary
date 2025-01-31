@@ -1,13 +1,9 @@
-n.d(t, {
-    Z: function () {
-        return m;
-    }
-});
+n.d(t, { Z: () => m });
 var i = n(200651);
 n(192379);
 var l = n(399606),
-    r = n(481060),
-    a = n(275759),
+    a = n(481060),
+    r = n(275759),
     s = n(565138),
     o = n(706454),
     c = n(271383),
@@ -18,15 +14,15 @@ var l = n(399606),
 function m(e) {
     let { userId: t, guildId: n, textClassName: m, tooltipDelay: f } = e,
         g = (0, l.e7)([o.default], () => o.default.locale),
-        C = (0, l.e7)([d.Z], () => (null != n ? d.Z.getGuild(n) : null)),
-        x = (0, l.e7)([c.ZP], () => (null != n ? c.ZP.getMember(n, t) : null)),
-        v = (0, a.FI)(u.default.extractTimestamp(t), g),
-        _ = (0, a.FI)(null == x ? void 0 : x.joinedAt, g);
-    return null == C || null == x
-        ? (0, i.jsx)(r.Text, {
+        _ = (0, l.e7)([d.Z], () => (null != n ? d.Z.getGuild(n) : null)),
+        C = (0, l.e7)([c.ZP], () => (null != n ? c.ZP.getMember(n, t) : null)),
+        x = (0, r.FI)(u.default.extractTimestamp(t), g),
+        v = (0, r.FI)(null == C ? void 0 : C.joinedAt, g);
+    return null == _ || null == C
+        ? (0, i.jsx)(a.Text, {
               variant: 'text-sm/normal',
               className: m,
-              children: v
+              children: x
           })
         : (0, i.jsxs)('div', {
               className: p.memberSinceWrapper,
@@ -34,11 +30,11 @@ function m(e) {
                   (0, i.jsxs)('div', {
                       className: p.memberSince,
                       children: [
-                          (0, i.jsx)(r.Tooltip, {
+                          (0, i.jsx)(a.ua7, {
                               text: h.intl.string(h.t.uvGmCw),
                               delay: f,
                               children: (e) =>
-                                  (0, i.jsx)(r.ClydeIcon, {
+                                  (0, i.jsx)(a.gw7, {
                                       size: 'custom',
                                       width: 28,
                                       height: 28,
@@ -47,10 +43,10 @@ function m(e) {
                                       className: p.discordIcon
                                   })
                           }),
-                          (0, i.jsx)(r.Text, {
+                          (0, i.jsx)(a.Text, {
                               variant: 'text-sm/normal',
                               className: m,
-                              children: v
+                              children: x
                           })
                       ]
                   }),
@@ -58,20 +54,20 @@ function m(e) {
                   (0, i.jsxs)('div', {
                       className: p.memberSince,
                       children: [
-                          (0, i.jsx)(r.Tooltip, {
-                              text: C.name,
+                          (0, i.jsx)(a.ua7, {
+                              text: _.name,
                               delay: f,
                               children: (e) =>
                                   (0, i.jsx)(s.Z, {
                                       ...e,
-                                      guild: C,
+                                      guild: _,
                                       size: s.Z.Sizes.SMOL
                                   })
                           }),
-                          (0, i.jsx)(r.Text, {
+                          (0, i.jsx)(a.Text, {
                               variant: 'text-sm/normal',
                               className: m,
-                              children: _
+                              children: v
                           })
                       ]
                   })

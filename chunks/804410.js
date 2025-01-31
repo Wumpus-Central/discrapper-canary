@@ -1,118 +1,113 @@
-r.d(t, {
-    k: function () {
-        return A;
-    }
-});
-var a = r(151122),
-    n = r(263449),
-    _ = r(233517),
-    o = r(824851),
-    E = r(753642),
-    i = r(573736),
-    c = r(467510),
-    s = r(688838),
-    l = r(622916),
-    I = r(454463),
-    u = r(878719),
-    R = r(163162);
-let A = (0, a._I)((e = {}) => {
-    let t = {
+a.d(e, { k: () => d });
+var r = a(151122),
+    n = a(263449),
+    o = a(233517),
+    _ = a(824851),
+    i = a(753642),
+    c = a(573736),
+    s = a(467510),
+    E = a(688838),
+    l = a(622916),
+    u = a(454463),
+    I = a(878719),
+    R = a(163162);
+let d = (0, r._I)((t = {}) => {
+    let e = {
         onerror: !0,
         onunhandledrejection: !0,
-        ...e
+        ...t
     };
     return {
         name: 'GlobalHandlers',
         setupOnce() {
             Error.stackTraceLimit = 50;
         },
-        setup(e) {
-            t.onerror &&
-                ((function (e) {
-                    (0, o.V)((t) => {
-                        let { stackParser: r, attachStacktrace: a } = N();
-                        if ((0, n.s3)() !== e || (0, R.Wz)()) return;
-                        let { msg: o, url: E, line: l, column: I, error: A } = t,
-                            T = (function (e, t, r, a) {
-                                let n = (e.exception = e.exception || {}),
-                                    _ = (n.values = n.values || []),
-                                    o = (_[0] = _[0] || {}),
-                                    E = (o.stacktrace = o.stacktrace || {}),
-                                    l = (E.frames = E.frames || []),
-                                    I = isNaN(parseInt(a, 10)) ? void 0 : a,
-                                    u = isNaN(parseInt(r, 10)) ? void 0 : r,
-                                    R = (0, i.HD)(t) && t.length > 0 ? t : (0, c.l4)();
-                                return (
-                                    0 === l.length &&
-                                        l.push({
-                                            colno: I,
-                                            filename: R,
-                                            function: s.Fi,
-                                            in_app: !0,
-                                            lineno: u
-                                        }),
-                                    e
-                                );
-                            })((0, u.ME)(r, A || o, void 0, a, !1), E, l, I);
-                        (T.level = 'error'),
-                            (0, _.eN)(T, {
-                                originalException: A,
+        setup(t) {
+            var a, r;
+            e.onerror &&
+                ((a = t),
+                (0, _.V)((t) => {
+                    let { stackParser: e, attachStacktrace: r } = f();
+                    if ((0, n.s3)() !== a || (0, R.Wz)()) return;
+                    let { msg: _, url: i, line: l, column: u, error: d } = t,
+                        A = (function (t, e, a, r) {
+                            let n = (t.exception = t.exception || {}),
+                                o = (n.values = n.values || []),
+                                _ = (o[0] = o[0] || {}),
+                                i = (_.stacktrace = _.stacktrace || {}),
+                                l = (i.frames = i.frames || []),
+                                u = isNaN(parseInt(r, 10)) ? void 0 : r,
+                                I = isNaN(parseInt(a, 10)) ? void 0 : a,
+                                R = (0, c.HD)(e) && e.length > 0 ? e : (0, s.l4)();
+                            return (
+                                0 === l.length &&
+                                    l.push({
+                                        colno: u,
+                                        filename: R,
+                                        function: E.Fi,
+                                        in_app: !0,
+                                        lineno: I
+                                    }),
+                                t
+                            );
+                        })((0, I.ME)(e, d || _, void 0, r, !1), i, l, u);
+                    (A.level = 'error'),
+                        (0, o.eN)(A, {
+                            originalException: d,
+                            mechanism: {
+                                handled: !1,
+                                type: 'onerror'
+                            }
+                        });
+                }),
+                A('onerror')),
+                e.onunhandledrejection &&
+                    ((r = t),
+                    (0, i.h)((t) => {
+                        var e;
+                        let { stackParser: a, attachStacktrace: _ } = f();
+                        if ((0, n.s3)() !== r || (0, R.Wz)()) return;
+                        let i = (function (t) {
+                                if ((0, c.pt)(t)) return t;
+                                try {
+                                    if ('reason' in t) return t.reason;
+                                    if ('detail' in t && 'reason' in t.detail) return t.detail.reason;
+                                } catch (t) {}
+                                return t;
+                            })(t),
+                            s = (0, c.pt)(i)
+                                ? ((e = i),
+                                  {
+                                      exception: {
+                                          values: [
+                                              {
+                                                  type: 'UnhandledRejection',
+                                                  value: `Non-Error promise rejection captured with value: ${String(e)}`
+                                              }
+                                          ]
+                                      }
+                                  })
+                                : (0, I.ME)(a, i, void 0, _, !0);
+                        (s.level = 'error'),
+                            (0, o.eN)(s, {
+                                originalException: i,
                                 mechanism: {
                                     handled: !1,
-                                    type: 'onerror'
+                                    type: 'onunhandledrejection'
                                 }
                             });
-                    });
-                })(e),
-                T('onerror')),
-                t.onunhandledrejection &&
-                    ((function (e) {
-                        (0, E.h)((t) => {
-                            let { stackParser: r, attachStacktrace: a } = N();
-                            if ((0, n.s3)() !== e || (0, R.Wz)()) return;
-                            let o = (function (e) {
-                                    if ((0, i.pt)(e)) return e;
-                                    try {
-                                        if ('reason' in e) return e.reason;
-                                        if ('detail' in e && 'reason' in e.detail) return e.detail.reason;
-                                    } catch (e) {}
-                                    return e;
-                                })(t),
-                                E = (0, i.pt)(o)
-                                    ? (function (e) {
-                                          return {
-                                              exception: {
-                                                  values: [
-                                                      {
-                                                          type: 'UnhandledRejection',
-                                                          value: `Non-Error promise rejection captured with value: ${String(e)}`
-                                                      }
-                                                  ]
-                                              }
-                                          };
-                                      })(o)
-                                    : (0, u.ME)(r, o, void 0, a, !0);
-                            (E.level = 'error'),
-                                (0, _.eN)(E, {
-                                    originalException: o,
-                                    mechanism: {
-                                        handled: !1,
-                                        type: 'onunhandledrejection'
-                                    }
-                                });
-                        });
-                    })(e),
-                    T('onunhandledrejection'));
+                    }),
+                    A('onunhandledrejection'));
         }
     };
 });
-function T(e) {
-    I.X && l.kg.log(`Global Handler attached: ${e}`);
+function A(t) {
+    u.X && l.kg.log(`Global Handler attached: ${t}`);
 }
-function N() {
-    let e = (0, n.s3)();
+function f() {
+    let t = (0, n.s3)();
     return (
-        (e && e.getOptions()) || {
+        (t && t.getOptions()) || {
             stackParser: () => [],
             attachStacktrace: !1
         }

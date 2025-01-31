@@ -1,11 +1,7 @@
-r.d(n, {
-    W: function () {
-        return o;
-    }
-});
-var i = r(979554),
-    a = r(597688);
-let o = (e, n) => {
-    var r, o, s;
-    return e.type === i.Z.VARIANTS_GROUP && null != n && null !== (s = a.Z.getProduct(null === (o = e.variants) || void 0 === o ? void 0 : null === (r = o[n]) || void 0 === r ? void 0 : r.skuId)) && void 0 !== s ? s : e;
+n.d(t, { W: () => a });
+var i = n(979554),
+    r = n(597688);
+let a = (e, t) => {
+    var n, a, s;
+    return e.type === i.Z.VARIANTS_GROUP && null != t && null !== (s = r.Z.getProduct(null === (a = e.variants) || void 0 === a ? void 0 : null === (n = a[t]) || void 0 === n ? void 0 : n.skuId)) && void 0 !== s ? s : e;
 };

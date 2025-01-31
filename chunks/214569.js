@@ -1,8 +1,9 @@
-e.exports = {
-    tabItem: 'tabItem_a18ec1',
-    tabContainer: 'tabContainer_a18ec1',
-    pillContainer: 'pillContainer_a18ec1',
-    pillItem: 'pillItem_a18ec1',
-    pillItemSelected: 'pillItemSelected_a18ec1',
-    tabItemSelected: 'tabItemSelected_a18ec1'
+var i = {
+    tabItem: 'tabItem__9e06a',
+    tabContainer: 'tabContainer__9e06a',
+    pillContainer: 'pillContainer__9e06a',
+    pillItem: 'pillItem__9e06a',
+    pillItemSelected: 'pillItemSelected__9e06a',
+    tabItemSelected: 'tabItemSelected__9e06a'
 };
+e.exports = i;

@@ -1,8 +1,4 @@
-n.d(t, {
-    r: function () {
-        return l;
-    }
-});
+n.d(t, { r: () => a });
 var i = n(399606),
-    r = n(774863);
-let l = (e) => null != (0, i.e7)([r.Z], () => r.Z.getFpMessageInfo(e));
+    l = n(774863);
+let a = (e) => null != (0, i.e7)([l.Z], () => l.Z.getFpMessageInfo(e));

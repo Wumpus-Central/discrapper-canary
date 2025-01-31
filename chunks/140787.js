@@ -1,10 +1,12 @@
-e.exports = {
-    visuallyHidden: 'visuallyHidden_d1ac9b',
-    tooltip: 'tooltip_d1ac9b',
-    tooltipContainer: 'tooltipContainer_d1ac9b',
-    nitroWheel: 'nitroWheel_d1ac9b',
-    shine: 'shine_d1ac9b',
-    label: 'label_d1ac9b',
-    labelChecked: 'labelChecked_d1ac9b',
-    icon: 'icon_d1ac9b'
+var i = {
+    visuallyHidden: 'visuallyHidden__0d242',
+    tooltip: 'tooltip__0d242',
+    tooltipContainer: 'tooltipContainer__0d242',
+    nitroWheel: 'nitroWheel__0d242',
+    shine: 'shine__0d242',
+    Shine: 'Shine__0d242',
+    label: 'label__0d242',
+    labelChecked: 'labelChecked__0d242',
+    icon: 'icon__0d242'
 };
+e.exports = i;

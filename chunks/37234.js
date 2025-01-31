@@ -1,22 +1,16 @@
-r.d(n, {
-    Ou: function () {
-        return s;
-    },
-    jN: function () {
-        return a;
-    },
-    xf: function () {
-        return o;
-    }
+n.d(t, {
+    Ou: () => s,
+    jN: () => r,
+    xf: () => a
 });
-var i = r(570140);
-function a(e) {
+var i = n(570140);
+function r(e) {
     i.Z.dispatch({
         type: 'LAYER_PUSH',
         component: e
     });
 }
-function o() {
+function a() {
     i.Z.dispatch({ type: 'LAYER_POP' });
 }
 function s() {

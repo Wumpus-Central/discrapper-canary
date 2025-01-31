@@ -1,35 +1,30 @@
-i.r(e),
-    i.d(e, {
-        default: function () {
-            return l;
-        }
-    });
+i.d(e, { default: () => l });
 var n = i(200651),
     o = i(192379),
     c = i(442837),
     a = i(481060),
-    u = i(239091),
-    r = i(13245),
-    s = i(237997),
+    s = i(239091),
+    u = i(13245),
+    r = i(237997),
     d = i(981631),
     f = i(388032);
 function l(t) {
     let { onSelect: e, onClose: i } = t,
-        { textChatNotificationMode: l } = (0, c.cj)([s.Z], () => ({ textChatNotificationMode: s.Z.getTextChatNotificationMode() })),
+        { textChatNotificationMode: l } = (0, c.cj)([r.Z], () => ({ textChatNotificationMode: r.Z.getTextChatNotificationMode() })),
         h = o.useRef(i);
     return (
         o.useEffect(() => void (h.current = i)),
         o.useEffect(() => () => h.current(), []),
-        (0, n.jsx)(a.Menu, {
+        (0, n.jsx)(a.v2r, {
             navId: 'overlay-notifications-widget-context-menu',
-            onClose: u.Zy,
+            onClose: s.Zy,
             'aria-label': f.intl.string(f.t.tPfVWl),
             onSelect: e,
-            children: (0, n.jsx)(a.MenuCheckboxItem, {
+            children: (0, n.jsx)(a.S89, {
                 label: f.intl.string(f.t.Fy5kPj),
                 checked: l === d.Ypu.ENABLED,
                 id: 'overlay-text-chat-notifications',
-                action: () => r.Z.setTextChatNotificationMode(l === d.Ypu.ENABLED ? d.Ypu.DISABLED : d.Ypu.ENABLED)
+                action: () => u.Z.setTextChatNotificationMode(l === d.Ypu.ENABLED ? d.Ypu.DISABLED : d.Ypu.ENABLED)
             })
         })
     );

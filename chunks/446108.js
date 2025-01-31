@@ -1,30 +1,20 @@
-r.d(n, {
-    Mb: function () {
-        return l;
-    },
-    Z0: function () {
-        return o;
-    },
-    d1: function () {
-        return c;
-    },
-    fy: function () {
-        return s;
-    },
-    r5: function () {
-        return u;
-    }
+n.d(t, {
+    Mb: () => o,
+    Z0: () => a,
+    d1: () => u,
+    fy: () => s,
+    r5: () => l
 });
-var i = r(313201),
-    a = r(388032);
-let o = (0, i.hQ)(),
+var i = n(313201),
+    r = n(388032);
+let a = (0, i.hQ)(),
     s = (0, i.hQ)(),
-    l = (0, i.hQ)(),
-    u = (0, i.hQ)();
-function c() {
+    o = (0, i.hQ)(),
+    l = (0, i.hQ)();
+function u() {
     [
         {
-            id: o,
+            id: a,
             text: ','
         },
         {
@@ -32,16 +22,16 @@ function c() {
             text: ','
         },
         {
-            id: l,
-            text: a.intl.string(a.t.gHp0Cw)
+            id: o,
+            text: r.intl.string(r.t.gHp0Cw)
         },
         {
-            id: u,
-            text: a.intl.string(a.t.SO93ur)
+            id: l,
+            text: r.intl.string(r.t.SO93ur)
         }
     ].forEach((e) => {
-        let { id: n, text: r } = e,
-            i = document.getElementById(n);
-        null == i && ((i = document.createElement('div')).setAttribute('id', n), (i.innerText = r), (i.style.display = 'none'), document.body.appendChild(i));
+        let { id: t, text: n } = e,
+            i = document.getElementById(t);
+        null == i && ((i = document.createElement('div')).setAttribute('id', t), (i.innerText = n), (i.style.display = 'none'), document.body.appendChild(i));
     });
 }

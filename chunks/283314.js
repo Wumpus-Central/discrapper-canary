@@ -1,4 +1,5 @@
-e.exports = {
-    headerContainerGift: 'headerContainerGift_f8f790',
-    closeButtonGift: 'closeButtonGift_f8f790'
+var i = {
+    headerContainerGift: 'headerContainerGift__57a87',
+    closeButtonGift: 'closeButtonGift__57a87'
 };
+e.exports = i;

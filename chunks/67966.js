@@ -1,18 +1,14 @@
-r.d(n, {
-    Z: function () {
-        return a;
-    }
-});
-var i = r(882159);
-function a(e, n) {
-    var r = n.getRootNode && n.getRootNode();
-    if (e.contains(n)) return !0;
-    if (r && (0, i.Zq)(r)) {
-        var a = n;
+n.d(t, { Z: () => r });
+var i = n(882159);
+function r(e, t) {
+    var n = t.getRootNode && t.getRootNode();
+    if (e.contains(t)) return !0;
+    if (n && (0, i.Zq)(n)) {
+        var r = t;
         do {
-            if (a && e.isSameNode(a)) return !0;
-            a = a.parentNode || a.host;
-        } while (a);
+            if (r && e.isSameNode(r)) return !0;
+            r = r.parentNode || r.host;
+        } while (r);
     }
     return !1;
 }

@@ -1,94 +1,88 @@
-r.d(n, {
-    DM: function () {
-        return l;
-    },
-    SF: function () {
-        return c;
-    },
-    iY: function () {
-        return d;
-    }
-});
-var i = r(411104);
-var a = r(966146),
-    o = r(65154);
-function s(e, n, r) {
+n.d(t, {
+    DM: () => s,
+    SF: () => l,
+    iY: () => u
+}),
+    n(411104);
+var i = n(966146),
+    r = n(65154);
+function a(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let l = Object.freeze({
-    [o.Uc.AUTO]: {},
-    [o.Uc.FULL]: {
+let s = Object.freeze({
+    [r.Uc.AUTO]: {},
+    [r.Uc.FULL]: {
         encode: {
             width: 1280,
             height: 720
         }
     }
 });
-class u {
+class o {
     constructor(e) {
-        if ((s(this, 'capture', void 0), s(this, 'encode', void 0), s(this, 'bitrateMin', void 0), s(this, 'bitrateMax', void 0), s(this, 'bitrateTarget', void 0), s(this, 'localWant', void 0), null == e.capture && null == e.encode)) throw Error('Invalid arguments.');
-        (this.capture = null == e.capture ? void 0 : new c(e.capture)), (this.encode = null == e.encode ? void 0 : new c(e.encode)), (this.bitrateMin = e.bitrateMin), (this.bitrateMax = e.bitrateMax), (this.bitrateTarget = e.bitrateTarget), (this.localWant = e.localWant);
+        if ((a(this, 'capture', void 0), a(this, 'encode', void 0), a(this, 'bitrateMin', void 0), a(this, 'bitrateMax', void 0), a(this, 'bitrateTarget', void 0), a(this, 'localWant', void 0), null == e.capture && null == e.encode)) throw Error('Invalid arguments.');
+        (this.capture = null == e.capture ? void 0 : new l(e.capture)), (this.encode = null == e.encode ? void 0 : new l(e.encode)), (this.bitrateMin = e.bitrateMin), (this.bitrateMax = e.bitrateMax), (this.bitrateTarget = e.bitrateTarget), (this.localWant = e.localWant);
     }
 }
-class c {
-    static equals(e, n) {
-        return (null == e && null == n) || (null != e && null != n && e.width === n.width && e.height === n.height && e.framerate === n.framerate);
+class l {
+    static equals(e, t) {
+        return (null == e && null == t) || (null != e && null != t && e.width === t.width && e.height === t.height && e.framerate === t.framerate);
     }
-    static extend(e, n) {
-        var r, i, a, o, s;
-        if (null == e) return n;
-        if (null == n) return e;
-        let l = null !== (i = null !== (r = null == n ? void 0 : n.width) && void 0 !== r ? r : null == e ? void 0 : e.width) && void 0 !== i ? i : 0,
-            u = null !== (o = null !== (a = null == n ? void 0 : n.height) && void 0 !== a ? a : null == e ? void 0 : e.height) && void 0 !== o ? o : 0;
+    static extend(e, t) {
+        var n, i, r, a, s;
+        if (null == e) return t;
+        if (null == t) return e;
+        let o = null !== (i = null !== (n = null == t ? void 0 : t.width) && void 0 !== n ? n : null == e ? void 0 : e.width) && void 0 !== i ? i : 0,
+            l = null !== (a = null !== (r = null == t ? void 0 : t.height) && void 0 !== r ? r : null == e ? void 0 : e.height) && void 0 !== a ? a : 0;
         return {
-            width: l,
-            height: u,
-            framerate: null !== (s = null == n ? void 0 : n.framerate) && void 0 !== s ? s : null == e ? void 0 : e.framerate,
-            pixelCount: l * u
+            width: o,
+            height: l,
+            framerate: null !== (s = null == t ? void 0 : t.framerate) && void 0 !== s ? s : null == e ? void 0 : e.framerate,
+            pixelCount: o * l
         };
     }
     constructor(e) {
-        s(this, 'width', void 0), s(this, 'height', void 0), s(this, 'framerate', void 0), s(this, 'pixelCount', void 0), (this.width = e.width), (this.height = e.height), (this.framerate = e.framerate), (this.pixelCount = e.width * e.height);
+        a(this, 'width', void 0), a(this, 'height', void 0), a(this, 'framerate', void 0), a(this, 'pixelCount', void 0), (this.width = e.width), (this.height = e.height), (this.framerate = e.framerate), (this.pixelCount = e.width * e.height);
     }
 }
-class d {
+class u {
     getQuality(e) {
-        let n = this.connection.getLocalWant(e),
-            r = this.isStreamContext ? this.getGoliveQuality(n) : this.getVideoQuality(n);
+        let t = this.connection.getLocalWant(e),
+            n = this.isStreamContext ? this.getGoliveQuality(t) : this.getVideoQuality(t);
         if (null != this.qualityOverwrite) {
-            var i, a, o;
-            return new u({
-                encode: c.extend(r.encode, this.qualityOverwrite.encode),
-                capture: c.extend(r.capture, this.qualityOverwrite.capture),
-                bitrateMin: null !== (i = this.qualityOverwrite.bitrateMin) && void 0 !== i ? i : r.bitrateMin,
-                bitrateMax: null !== (a = this.qualityOverwrite.bitrateMax) && void 0 !== a ? a : r.bitrateMax,
-                bitrateTarget: null !== (o = this.qualityOverwrite.bitrateTarget) && void 0 !== o ? o : r.bitrateTarget,
-                localWant: r.localWant
+            var i, r, a;
+            return new o({
+                encode: l.extend(n.encode, this.qualityOverwrite.encode),
+                capture: l.extend(n.capture, this.qualityOverwrite.capture),
+                bitrateMin: null !== (i = this.qualityOverwrite.bitrateMin) && void 0 !== i ? i : n.bitrateMin,
+                bitrateMax: null !== (r = this.qualityOverwrite.bitrateMax) && void 0 !== r ? r : n.bitrateMax,
+                bitrateTarget: null !== (a = this.qualityOverwrite.bitrateTarget) && void 0 !== a ? a : n.bitrateTarget,
+                localWant: n.localWant
             });
         }
-        return r;
+        return n;
     }
-    applyQualityConstraints(e, n) {
-        let r = this.getQuality(n);
+    applyQualityConstraints(e, t) {
+        let n = this.getQuality(t);
         return (
-            null != r.capture && ((e.encodingVideoWidth = r.capture.width), (e.encodingVideoHeight = r.capture.height), (e.encodingVideoFrameRate = r.capture.framerate), (e.captureVideoFrameRate = r.capture.framerate)),
-            null != r.encode && ((e.remoteSinkWantsMaxFramerate = r.encode.framerate), (e.remoteSinkWantsPixelCount = r.encode.pixelCount)),
-            null != r.bitrateTarget ? (e.encodingVideoBitRate = r.bitrateTarget) : (e.encodingVideoBitRate = r.bitrateMax),
-            (e.encodingVideoMinBitRate = r.bitrateMin),
-            (e.encodingVideoMaxBitRate = r.bitrateMax),
+            null != n.capture && ((e.encodingVideoWidth = n.capture.width), (e.encodingVideoHeight = n.capture.height), (e.encodingVideoFrameRate = n.capture.framerate), (e.captureVideoFrameRate = n.capture.framerate)),
+            null != n.encode && ((e.remoteSinkWantsMaxFramerate = n.encode.framerate), (e.remoteSinkWantsPixelCount = n.encode.pixelCount)),
+            null != n.bitrateTarget ? (e.encodingVideoBitRate = n.bitrateTarget) : (e.encodingVideoBitRate = n.bitrateMax),
+            (e.encodingVideoMinBitRate = n.bitrateMin),
+            (e.encodingVideoMaxBitRate = n.bitrateMax),
             null != e.encodingVideoBitRate && null != e.encodingVideoMaxBitRate && (e.encodingVideoBitRate = Math.min(e.encodingVideoBitRate, e.encodingVideoMaxBitRate)),
             {
-                quality: r,
+                quality: n,
                 constraints: e
             }
         );
@@ -97,41 +91,41 @@ class d {
         this.qualityOverwrite = e;
     }
     setGoliveQuality(e) {
-        var n, r, i;
-        this.goliveMaxQuality = new u({
-            capture: c.extend(this.goliveMaxQuality.capture, e.capture),
-            encode: c.extend(this.goliveMaxQuality.encode, e.encode),
-            bitrateMin: null !== (n = e.bitrateMin) && void 0 !== n ? n : this.goliveMaxQuality.bitrateMin,
-            bitrateMax: null !== (r = e.bitrateMax) && void 0 !== r ? r : this.goliveMaxQuality.bitrateMax,
+        var t, n, i;
+        this.goliveMaxQuality = new o({
+            capture: l.extend(this.goliveMaxQuality.capture, e.capture),
+            encode: l.extend(this.goliveMaxQuality.encode, e.encode),
+            bitrateMin: null !== (t = e.bitrateMin) && void 0 !== t ? t : this.goliveMaxQuality.bitrateMin,
+            bitrateMax: null !== (n = e.bitrateMax) && void 0 !== n ? n : this.goliveMaxQuality.bitrateMax,
             bitrateTarget: null !== (i = e.bitrateTarget) && void 0 !== i ? i : this.goliveMaxQuality.bitrateTarget,
             localWant: this.goliveMaxQuality.localWant
         });
     }
-    configGoLiveSimulcast(e, n) {
-        (this.goliveSimulcastEnabled = e), (this.goliveSimulcastLQBitrateMax = n), (this.goliveSimulcastLQBitrateTarget = n);
+    configGoLiveSimulcast(e, t) {
+        (this.goliveSimulcastEnabled = e), (this.goliveSimulcastLQBitrateMax = t), (this.goliveSimulcastLQBitrateTarget = t);
     }
     setGoLiveSimulcastLQTargetBitrate(e) {
         this.goliveSimulcastLQBitrateTarget = e;
     }
     shouldEnableGoliveSimulcastForHqQuality(e) {
-        return !!this.goliveSimulcastEnabled && ((0 === e.width && 0 === e.height) || e.width * e.height > o.ef * o.ru);
+        return !!this.goliveSimulcastEnabled && ((0 === e.width && 0 === e.height) || e.width * e.height > r.ef * r.ru);
     }
     getVideoQuality(e) {
-        let n = this.ladder.getResolution(e),
-            r = this.options.videoBitrate.min * n.budgetPortion,
-            i = this.options.videoBitrate.max * n.budgetPortion,
-            a = this.isMuted ? n.mutedFramerate : n.framerate;
-        return new u({
+        let t = this.ladder.getResolution(e),
+            n = this.options.videoBitrate.min * t.budgetPortion,
+            i = this.options.videoBitrate.max * t.budgetPortion,
+            r = this.isMuted ? t.mutedFramerate : t.framerate;
+        return new o({
             encode: {
-                ...n,
-                framerate: a
+                ...t,
+                framerate: r
             },
             capture: {
                 width: this.options.videoCapture.width,
                 height: this.options.videoCapture.height,
                 framerate: this.options.videoCapture.framerate
             },
-            bitrateMin: Math.max(r, this.options.videoBitrateFloor),
+            bitrateMin: Math.max(n, this.options.videoBitrateFloor),
             bitrateMax: Math.max(i, this.options.videoBitrateFloor),
             localWant: e
         });
@@ -140,16 +134,16 @@ class d {
         return this.goliveSimulcastEnabled && e < 100 ? this.getGoliveLQQuality() : this.goliveMaxQuality;
     }
     getDefaultGoliveQuality() {
-        return new u({
+        return new o({
             capture: {
                 width: 1280,
                 height: 720,
-                framerate: o.Gs
+                framerate: r.Gs
             },
             encode: {
                 width: 1280,
                 height: 720,
-                framerate: o.Gs,
+                framerate: r.Gs,
                 pixelCount: 921600
             },
             bitrateMin: this.options.desktopBitrate.min,
@@ -158,30 +152,29 @@ class d {
         });
     }
     getGoliveLQQuality() {
-        var e, n, r, i, a, s, l, c, d, f, p, h;
-        let _ = Math.min(o.ef, null !== (l = null === (e = this.goliveMaxQuality.encode) || void 0 === e ? void 0 : e.width) && void 0 !== l ? l : o.ef),
-            m = Math.min(o.ru, null !== (c = null === (n = this.goliveMaxQuality.encode) || void 0 === n ? void 0 : n.height) && void 0 !== c ? c : o.ru),
-            g = Math.min(o.R$, null !== (d = null === (r = this.goliveMaxQuality.encode) || void 0 === r ? void 0 : r.framerate) && void 0 !== d ? d : o.R$),
-            E = Math.min(o.ef, null !== (f = null === (i = this.goliveMaxQuality.capture) || void 0 === i ? void 0 : i.width) && void 0 !== f ? f : o.ef),
-            v = Math.min(o.ru, null !== (p = null === (a = this.goliveMaxQuality.capture) || void 0 === a ? void 0 : a.height) && void 0 !== p ? p : o.ru);
-        return new u({
+        var e, t, n, i, a, s, l, u, c, d, f, _;
+        let p = Math.min(r.ef, null !== (l = null === (e = this.goliveMaxQuality.encode) || void 0 === e ? void 0 : e.width) && void 0 !== l ? l : r.ef),
+            h = Math.min(r.ru, null !== (u = null === (t = this.goliveMaxQuality.encode) || void 0 === t ? void 0 : t.height) && void 0 !== u ? u : r.ru),
+            m = Math.min(r.R$, null !== (c = null === (n = this.goliveMaxQuality.encode) || void 0 === n ? void 0 : n.framerate) && void 0 !== c ? c : r.R$),
+            g = Math.min(r.ef, null !== (d = null === (i = this.goliveMaxQuality.capture) || void 0 === i ? void 0 : i.width) && void 0 !== d ? d : r.ef);
+        return new o({
             capture: {
-                width: E,
-                height: v,
-                framerate: Math.min(o.R$, null !== (h = null === (s = this.goliveMaxQuality.capture) || void 0 === s ? void 0 : s.framerate) && void 0 !== h ? h : o.R$)
+                width: g,
+                height: Math.min(r.ru, null !== (f = null === (a = this.goliveMaxQuality.capture) || void 0 === a ? void 0 : a.height) && void 0 !== f ? f : r.ru),
+                framerate: Math.min(r.R$, null !== (_ = null === (s = this.goliveMaxQuality.capture) || void 0 === s ? void 0 : s.framerate) && void 0 !== _ ? _ : r.R$)
             },
             encode: {
-                width: _,
-                height: m,
-                framerate: g,
-                pixelCount: _ * m
+                width: p,
+                height: h,
+                framerate: m,
+                pixelCount: p * h
             },
-            bitrateMin: o.UC,
+            bitrateMin: r.UC,
             bitrateMax: this.goliveSimulcastLQBitrateMax,
             bitrateTarget: this.goliveSimulcastLQBitrateTarget
         });
     }
-    constructor(e, n, r = o.kS) {
-        s(this, 'contextType', void 0), s(this, 'connection', void 0), s(this, 'options', void 0), s(this, 'isMuted', void 0), s(this, 'qualityOverwrite', void 0), s(this, 'goliveMaxQuality', void 0), s(this, 'goliveSimulcastEnabled', void 0), s(this, 'goliveSimulcastLQBitrateMax', void 0), s(this, 'goliveSimulcastLQBitrateTarget', void 0), s(this, 'isStreamContext', void 0), s(this, 'ladder', void 0), (this.contextType = e), (this.connection = n), (this.options = r), (this.isMuted = !1), (this.isStreamContext = this.contextType === o.Yn.STREAM), (this.ladder = new a.x(r)), (this.goliveMaxQuality = this.getDefaultGoliveQuality()), (this.goliveSimulcastEnabled = !1), (this.goliveSimulcastLQBitrateMax = o.pk), (this.goliveSimulcastLQBitrateTarget = o.pk);
+    constructor(e, t, n = r.kS) {
+        a(this, 'contextType', void 0), a(this, 'connection', void 0), a(this, 'options', void 0), a(this, 'isMuted', void 0), a(this, 'qualityOverwrite', void 0), a(this, 'goliveMaxQuality', void 0), a(this, 'goliveSimulcastEnabled', void 0), a(this, 'goliveSimulcastLQBitrateMax', void 0), a(this, 'goliveSimulcastLQBitrateTarget', void 0), a(this, 'isStreamContext', void 0), a(this, 'ladder', void 0), (this.contextType = e), (this.connection = t), (this.options = n), (this.isMuted = !1), (this.isStreamContext = this.contextType === r.Yn.STREAM), (this.ladder = new i.x(n)), (this.goliveMaxQuality = this.getDefaultGoliveQuality()), (this.goliveSimulcastEnabled = !1), (this.goliveSimulcastLQBitrateMax = r.pk), (this.goliveSimulcastLQBitrateTarget = r.pk);
     }
 }

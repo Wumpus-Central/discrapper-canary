@@ -1,122 +1,120 @@
-r.d(n, {
-    M: function () {
-        return i;
-    }
+n.d(t, {
+    M: () => u,
+    Z: () => I
 });
 var i,
-    a,
-    o = r(392711),
-    s = r.n(o),
-    l = r(442837),
-    u = r(570140);
-function c(e, n, r) {
+    r = n(392711),
+    a = n.n(r),
+    s = n(442837),
+    o = n(570140);
+function l(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-!(function (e) {
-    (e[(e.FETCHING = 0)] = 'FETCHING'), (e[(e.FETCHED = 1)] = 'FETCHED'), (e[(e.ERROR = 2)] = 'ERROR');
-})(i || (i = {}));
-let d = [],
+var u = (function (e) {
+    return (e[(e.FETCHING = 0)] = 'FETCHING'), (e[(e.FETCHED = 1)] = 'FETCHED'), (e[(e.ERROR = 2)] = 'ERROR'), e;
+})({});
+let c = [],
+    d = {},
     f = {},
-    p = {},
-    h = {};
-function _(e) {
-    let { surface: n, activeState: r } = e;
-    return 'surface:'.concat(n, ' activeState:').concat(r);
+    _ = {};
+function p(e) {
+    let { surface: t, activeState: n } = e;
+    return 'surface:'.concat(t, ' activeState:').concat(n);
 }
-function m(e) {
-    let { surface: n, activeState: r } = e;
-    p = {
-        ...p,
-        [_({
-            surface: n,
-            activeState: r
+function h(e) {
+    let { surface: t, activeState: n } = e;
+    f = {
+        ...f,
+        [p({
+            surface: t,
+            activeState: n
         })]: 0
     };
 }
+function m(e) {
+    return a().sortBy(e, ['position', 'id']);
+}
 function g(e) {
-    return s().sortBy(e, ['position', 'id']);
+    return a().sortBy(e, ['position', 'id']);
 }
 function E(e) {
-    return s().sortBy(e, ['position', 'id']);
-}
-function v(e) {
-    let { collections: n, surface: r, activeState: i } = e,
-        a = _({
-            surface: r,
+    let { collections: t, surface: n, activeState: i } = e,
+        r = p({
+            surface: n,
             activeState: i
         }),
-        o = g(n.map((e) => ((e.application_directory_collection_items = E(e.application_directory_collection_items)), e)));
-    (f = {
-        ...f,
-        [a]: o
+        a = m(t.map((e) => ((e.application_directory_collection_items = g(e.application_directory_collection_items)), e)));
+    (d = {
+        ...d,
+        [r]: a
     }),
-        (p = {
-            ...p,
-            [a]: 1
+        (f = {
+            ...f,
+            [r]: 1
         });
     let s = Date.now();
-    h = {
-        ...h,
-        [a]: s
+    _ = {
+        ..._,
+        [r]: s
     };
 }
-function y(e) {
-    let { surface: n, activeState: r } = e;
-    p = {
-        ...p,
-        [_({
-            surface: n,
-            activeState: r
+function v(e) {
+    let { surface: t, activeState: n } = e;
+    f = {
+        ...f,
+        [p({
+            surface: t,
+            activeState: n
         })]: 2
     };
 }
-class b extends (a = l.ZP.Store) {
+class y extends (i = s.ZP.Store) {
     getLastFetchTimeMs(e) {
-        let { surface: n, activeState: r } = e;
-        return h[
-            _({
-                surface: n,
-                activeState: r
+        let { surface: t, activeState: n } = e;
+        return _[
+            p({
+                surface: t,
+                activeState: n
             })
         ];
     }
     getFetchState(e) {
-        let { surface: n, activeState: r } = e;
-        return p[
-            _({
-                surface: n,
-                activeState: r
+        let { surface: t, activeState: n } = e;
+        return f[
+            p({
+                surface: t,
+                activeState: n
             })
         ];
     }
     getCollections(e) {
-        var n;
-        let { surface: r, activeState: i } = e;
+        var t;
+        let { surface: n, activeState: i } = e;
         return null !==
-            (n =
-                f[
-                    _({
-                        surface: r,
+            (t =
+                d[
+                    p({
+                        surface: n,
                         activeState: i
                     })
-                ]) && void 0 !== n
-            ? n
-            : d;
+                ]) && void 0 !== t
+            ? t
+            : c;
     }
 }
-c(b, 'displayName', void 0),
-    (n.Z = new b(u.Z, {
-        APPLICATION_DIRECTORY_FETCH_COLLECTIONS: m,
-        APPLICATION_DIRECTORY_FETCH_COLLECTIONS_SUCCESS: v,
-        APPLICATION_DIRECTORY_FETCH_COLLECTIONS_FAILURE: y
-    }));
+l(y, 'displayName', void 0);
+let I = new y(o.Z, {
+    APPLICATION_DIRECTORY_FETCH_COLLECTIONS: h,
+    APPLICATION_DIRECTORY_FETCH_COLLECTIONS_SUCCESS: E,
+    APPLICATION_DIRECTORY_FETCH_COLLECTIONS_FAILURE: v
+});

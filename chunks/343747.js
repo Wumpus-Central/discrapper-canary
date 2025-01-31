@@ -1,20 +1,16 @@
-r.d(n, {
-    Z: function () {
-        return l;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(481060),
-    o = r(434404),
-    s = r(981631);
-function l(e) {
-    o.Z.open(e, s.pNK.SOUNDBOARD),
-        (0, a.openModalLazy)(async () => {
-            let { default: n } = await Promise.all([r.e('56035'), r.e('28394')]).then(r.bind(r, 758961));
-            return (r) =>
-                (0, i.jsx)(n, {
-                    ...r,
+n.d(t, { Z: () => o });
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(434404),
+    s = n(981631);
+function o(e) {
+    a.Z.open(e, s.pNK.SOUNDBOARD),
+        (0, r.ZDy)(async () => {
+            let { default: t } = await Promise.all([n.e('56035'), n.e('28394')]).then(n.bind(n, 758961));
+            return (n) =>
+                (0, i.jsx)(t, {
+                    ...n,
                     guildId: e
                 });
         });

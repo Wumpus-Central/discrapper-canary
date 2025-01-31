@@ -1,148 +1,144 @@
-t.d(n, {
-    ZP: function () {
-        return C;
-    },
-    tE: function () {
-        return l;
-    }
+l.d(n, {
+    ZP: () => C,
+    tE: () => f
 }),
-    t(47120);
-var l,
-    i,
-    r = t(200651),
-    a = t(192379),
-    o = t(120356),
-    s = t.n(o),
-    c = t(481060),
-    u = t(911969),
-    d = t(739754),
-    m = t(970184),
-    f = t(280501),
-    p = t(388032),
-    h = t(591580),
-    x = t(844592);
+    l(47120);
+var t,
+    i = l(200651),
+    r = l(192379),
+    a = l(120356),
+    s = l.n(a),
+    o = l(481060),
+    u = l(911969),
+    c = l(739754),
+    d = l(970184),
+    m = l(280501),
+    h = l(388032),
+    p = l(591580),
+    x = l(844592);
 function v(e) {
-    let { icon: n, iconSize: t } = e;
-    return (0, r.jsx)('div', {
-        className: h.iconContainer,
+    let { icon: n, iconSize: l } = e;
+    return (0, i.jsx)('div', {
+        className: p.iconContainer,
         style: {
-            height: t,
-            width: t
+            height: l,
+            width: l
         },
         children: n
     });
 }
+var f = (((t = {})[(t.PILL_ICON_SIZE = 16)] = 'PILL_ICON_SIZE'), (t[(t.ROW_ICON_SIZE = 24)] = 'ROW_ICON_SIZE'), t);
 function C(e) {
-    let { selectActionComponent: n, queryOptions: t, renderIcon: l, renderOptionLabel: i, defaultValues: o } = e,
-        { type: C, placeholder: g, maxValues: _, disabled: b } = n,
-        [I, j] = a.useState(!1),
-        [S, y] = a.useState(!1),
-        [T, N] = a.useState(new Map(null == o ? void 0 : o.map((e) => [e.value, e]))),
-        [E, Z] = a.useState(new Set(T.keys())),
-        [L, k] = a.useState(() => (null != o ? o : []).map((e) => e.value)),
-        [O, P] = a.useState(0);
-    a.useEffect(() => {
-        let e = (null != o ? o : []).map((e) => e.value);
-        if (e.every((e) => L.includes(e)) && L.every((n) => e.includes(n))) return;
-        k(e);
-        let n = new Map(null == o ? void 0 : o.map((e) => [e.value, e]));
-        N(n), Z(new Set(n.keys())), P((e) => e + 1);
-    }, [o, L]);
+    let { selectActionComponent: n, queryOptions: l, renderIcon: t, renderOptionLabel: a, defaultValues: f } = e,
+        { type: C, placeholder: g, maxValues: j, disabled: N } = n,
+        [S, E] = r.useState(!1),
+        [I, Z] = r.useState(!1),
+        [b, T] = r.useState(new Map(null == f ? void 0 : f.map((e) => [e.value, e]))),
+        [y, L] = r.useState(new Set(b.keys())),
+        [k, _] = r.useState(() => (null != f ? f : []).map((e) => e.value)),
+        [R, P] = r.useState(0);
+    r.useEffect(() => {
+        let e = (null != f ? f : []).map((e) => e.value);
+        if (e.every((e) => k.includes(e)) && k.every((n) => e.includes(n))) return;
+        _(e);
+        let n = new Map(null == f ? void 0 : f.map((e) => [e.value, e]));
+        T(n), L(new Set(n.keys())), P((e) => e + 1);
+    }, [f, k]);
     let {
-            state: R,
-            executeStateUpdate: M,
-            visualState: A,
+            state: O,
+            executeStateUpdate: A,
+            visualState: M,
             isDisabled: w,
-            error: B
-        } = (0, m.Ee)(n, {
+            error: U
+        } = (0, d.Ee)(n, {
             type: C,
-            selectedOptions: Array.from(T.values())
+            selectedOptions: Array.from(b.values())
         }),
-        U = A === f.gH.LOADING;
-    a.useEffect(() => {
-        if ((null == R ? void 0 : R.type) === u.re.USER_SELECT || (null == R ? void 0 : R.type) === u.re.ROLE_SELECT || (null == R ? void 0 : R.type) === u.re.MENTIONABLE_SELECT || (null == R ? void 0 : R.type) === u.re.CHANNEL_SELECT) {
-            let e = new Map(R.selectedOptions.map((e) => [e.value, e]));
-            N(e), Z(new Set(e.keys()));
+        H = M === m.gH.LOADING;
+    r.useEffect(() => {
+        if ((null == O ? void 0 : O.type) === u.re.USER_SELECT || (null == O ? void 0 : O.type) === u.re.ROLE_SELECT || (null == O ? void 0 : O.type) === u.re.MENTIONABLE_SELECT || (null == O ? void 0 : O.type) === u.re.CHANNEL_SELECT) {
+            let e = new Map(O.selectedOptions.map((e) => [e.value, e]));
+            T(e), L(new Set(e.keys()));
         }
-    }, [R]);
-    let G = a.useCallback(() => {
-        M({
+    }, [O]);
+    let F = r.useCallback(() => {
+        A({
             type: C,
-            selectedOptions: Array.from(T.values())
-        }) && Z(new Set(T.keys()));
-    }, [M, C, T]);
-    a.useEffect(() => {
-        if (!(I || S || (T.size === E.size && Array.from(T.keys()).every((e) => E.has(e))))) G();
-    }, [I, S, E, T, G]);
-    let H = 0 === T.size || I,
-        D = {
-            isDisabled: b || w,
-            wrapperClassName: h.select,
+            selectedOptions: Array.from(b.values())
+        }) && L(new Set(b.keys()));
+    }, [A, C, b]);
+    r.useEffect(() => {
+        !(S || I || (b.size === y.size && Array.from(b.keys()).every((e) => y.has(e)))) && F();
+    }, [S, I, y, b, F]);
+    let D = 0 === b.size || S,
+        G = {
+            isDisabled: N || w,
+            wrapperClassName: p.select,
             options: (e) =>
                 new Promise((n) => {
-                    n(t(e));
+                    n(l(e));
                 }),
-            placeholder: H ? (null != g ? g : p.intl.string(p.t.Otr6W1)) : void 0,
-            onClose: () => j(!1),
-            onOpen: () => j(!0),
-            onBlur: () => y(!1),
+            placeholder: D ? (null != g ? g : h.intl.string(h.t.Otr6W1)) : void 0,
+            onClose: () => E(!1),
+            onOpen: () => E(!0),
+            onBlur: () => Z(!1),
             maxVisibleItems: 5,
-            optionClassName: h.__invalid_selectOption,
+            optionClassName: p.__invalid_selectOption,
             renderOptionPrefix: (e, n) => {
-                let { inPill: t } = n,
-                    i = t ? 16 : 24,
-                    a = l(e, i);
+                let { inPill: l } = n,
+                    r = l ? 16 : 24,
+                    a = t(e, r);
                 return null != a
-                    ? (0, r.jsx)(v, {
+                    ? (0, i.jsx)(v, {
                           icon: a,
-                          iconSize: i
+                          iconSize: r
                       })
                     : null;
             },
-            renderOptionLabel: i
+            renderOptionLabel: a
         };
-    return (0, r.jsxs)(a.Fragment, {
+    return (0, i.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsxs)('div', {
-                className: h.container,
+            (0, i.jsxs)('div', {
+                className: p.container,
                 children: [
-                    _ > 1
-                        ? (0, r.jsx)(
-                              c.SearchableSelect,
+                    j > 1
+                        ? (0, i.jsx)(
+                              o.VcW,
                               {
-                                  className: h.badges,
-                                  value: Array.from(T.values()),
+                                  className: p.badges,
+                                  value: Array.from(b.values()),
                                   onChange: (e) => {
-                                      !I && y(!0), N(new Map(e.map((e) => [e.value, e])));
+                                      S || Z(!0), T(new Map(e.map((e) => [e.value, e])));
                                   },
                                   multi: !0,
                                   inputClassNames: s()({
-                                      [h.soloInput]: 0 === T.size,
-                                      [h.inlineInput]: T.size > 0,
-                                      [h.hidden]: !H
+                                      [p.soloInput]: 0 === b.size,
+                                      [p.inlineInput]: b.size > 0,
+                                      [p.hidden]: !D
                                   }),
                                   closeOnSelect: !1,
                                   centerCaret: !0,
-                                  ...D
+                                  ...G
                               },
-                              O
+                              R
                           )
-                        : (0, r.jsx)(
-                              c.SearchableSelect,
+                        : (0, i.jsx)(
+                              o.VcW,
                               {
-                                  className: (h.badges, h.singleSelect),
-                                  value: [...T.values()][0],
-                                  onChange: (e) => N(null != e ? new Map([[e.value, e]]) : new Map()),
+                                  className: (p.badges, p.singleSelect),
+                                  value: [...b.values()][0],
+                                  onChange: (e) => T(null != e ? new Map([[e.value, e]]) : new Map()),
                                   clearable: !0,
                                   centerCaret: !0,
-                                  ...D
+                                  ...G
                               },
-                              O
+                              R
                           ),
-                    U
-                        ? (0, r.jsx)('div', {
-                              className: h.loading,
-                              children: (0, r.jsx)(c.Dots, {
+                    H
+                        ? (0, i.jsx)('div', {
+                              className: p.loading,
+                              children: (0, i.jsx)(o.bbz, {
                                   dotRadius: 3.5,
                                   themed: !0
                               })
@@ -150,13 +146,12 @@ function C(e) {
                         : null
                 ]
             }),
-            null != B
-                ? (0, r.jsx)(d.st, {
-                      ...(0, d.c4)(B),
+            null != U
+                ? (0, i.jsx)(c.st, {
+                      ...(0, c.c4)(U),
                       className: x.error
                   })
                 : null
         ]
     });
 }
-((i = l || (l = {}))[(i.PILL_ICON_SIZE = 16)] = 'PILL_ICON_SIZE'), (i[(i.ROW_ICON_SIZE = 24)] = 'ROW_ICON_SIZE');

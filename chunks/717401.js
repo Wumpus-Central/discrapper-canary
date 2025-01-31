@@ -1,59 +1,47 @@
-r.d(n, {
-    YV: function () {
-        return c;
-    },
-    a5: function () {
-        return p;
-    },
-    cF: function () {
-        return f;
-    },
-    iE: function () {
-        return l;
-    },
-    id: function () {
-        return d;
-    },
-    tK: function () {
-        return u;
-    }
-});
-var i = r(47120);
-var a = r(192379),
-    o = r(223143),
-    s = r(286961);
-function l() {
-    let [e, n] = a.useState(),
-        r = (0, s.Z)(),
-        i = null == r ? void 0 : r.rewards,
-        { purchases: l, hasPreviouslyFetched: u } = (0, o.c7)(),
-        c = a.useRef(!1);
+n.d(t, {
+    YV: () => l,
+    a5: () => d,
+    cF: () => c,
+    iE: () => s,
+    id: () => u,
+    tK: () => o
+}),
+    n(47120);
+var i = n(192379),
+    r = n(223143),
+    a = n(286961);
+function s() {
+    let [e, t] = i.useState(),
+        n = (0, a.Z)(),
+        s = null == n ? void 0 : n.rewards,
+        { purchases: o, hasPreviouslyFetched: l, fetchPurchasesError: u } = (0, r.c7)(),
+        c = i.useRef(!1);
     return (
-        a.useEffect(() => {
-            u && !c.current && null != i && (n(i.filter((e) => null == l.get(e.skuId))), (c.current = !0));
-        }, [i, l, u]),
+        i.useEffect(() => {
+            l && !c.current && null != s && (t(null == u ? s.filter((e) => null == o.get(e.skuId)) : []), (c.current = !0));
+        }, [s, o, l, u]),
         null != e ? e : void 0
     );
 }
-function u(e) {
-    let { purchases: n } = (0, o.c7)();
-    return null != e ? n.get(e) : null;
+function o(e) {
+    let { purchases: t } = (0, r.c7)();
+    return null != e ? t.get(e) : null;
 }
-function c(e) {
-    let n = new Map();
-    return e.forEach((e) => n.set(e.skuId, e.assetId)), n;
+function l(e) {
+    let t = new Map();
+    return e.forEach((e) => t.set(e.skuId, e.assetId)), t;
 }
-function d(e, n, r) {
-    let i = p(e),
-        a = null != r && r.length > 1;
-    return n && i && a;
+function u(e, t, n) {
+    let i = d(e),
+        r = null != n && n.length > 1;
+    return t && i && r;
 }
-function f(e, n, r) {
-    let i = p(e);
-    return null != r && 1 === r.length && i && n;
+function c(e, t, n) {
+    let i = d(e);
+    return null != n && 1 === n.length && i && t;
 }
-function p(e) {
-    var n;
-    let r = null === (n = (0, s.Z)()) || void 0 === n ? void 0 : n.eligiblePlanIds;
-    return null == r ? void 0 : r.includes(null == e ? void 0 : e.id);
+function d(e) {
+    var t;
+    let n = null === (t = (0, a.Z)()) || void 0 === t ? void 0 : t.eligiblePlanIds;
+    return null == n ? void 0 : n.includes(null == e ? void 0 : e.id);
 }

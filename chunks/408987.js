@@ -1,15 +1,16 @@
-var i = r(570140),
-    a = r(496675),
-    o = r(751189),
-    s = r(981631);
-n.Z = {
+n.d(t, { Z: () => o });
+var i = n(570140),
+    r = n(496675),
+    a = n(751189),
+    s = n(981631);
+let o = {
     async checkGuildTemplateDirty(e) {
-        if (!a.Z.canWithPartialContext(s.Plq.MANAGE_GUILD, { guildId: e })) return;
-        let n = await o.Z.loadTemplatesForGuild(e);
-        n.body.length > 0 &&
+        if (!r.Z.canWithPartialContext(s.Plq.MANAGE_GUILD, { guildId: e })) return;
+        let t = await a.Z.loadTemplatesForGuild(e);
+        t.body.length > 0 &&
             i.Z.dispatch({
                 type: 'GUILD_TEMPLATE_DIRTY_TOOLTIP_REFRESH',
-                guildTemplate: n.body[0]
+                guildTemplate: t.body[0]
             });
     },
     hideGuildTemplateDirtyTooltip(e) {

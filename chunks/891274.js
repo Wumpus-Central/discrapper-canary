@@ -1,45 +1,44 @@
-var i = r(411104);
-r(570140);
-var a = r(147913);
-r(674588);
-var o = r(751189),
-    s = r(409059);
-r(652898);
-var l = r(728675);
-r(701190);
-var u = r(960904),
-    c = r(213753),
-    d = r(830121);
-function f(e) {
-    let n = (0, d.ZP)(e.content);
-    null != n &&
-        0 !== n.length &&
-        n.forEach((e) => {
-            let { type: n, code: r } = e;
-            if (n === u.g.INVITE);
-            else if (n === u.g.TEMPLATE)
-                (0, c.V)(async () => {
-                    null == s.Z.getGuildTemplate(r) && (await o.Z.resolveGuildTemplate(r));
+n.d(t, { Z: () => f }), n(411104), n(570140);
+var i = n(147913);
+n(674588);
+var r = n(751189),
+    a = n(409059);
+n(652898);
+var s = n(728675);
+n(701190);
+var o = n(960904),
+    l = n(213753),
+    u = n(830121);
+function c(e) {
+    let t = (0, u.ZP)(e.content);
+    null != t &&
+        0 !== t.length &&
+        t.forEach((e) => {
+            let { type: t, code: n } = e;
+            if (t === o.g.INVITE);
+            else if (t === o.g.TEMPLATE)
+                (0, l.V)(async () => {
+                    null == a.Z.getGuildTemplate(n) && (await r.Z.resolveGuildTemplate(n));
                 });
-            else if (n === u.g.BUILD_OVERRIDE || n === u.g.MANUAL_BUILD_OVERRIDE);
-            else if (n === u.g.EVENT);
-            else if (n === u.g.CHANNEL_LINK);
-            else if (n === u.g.APP_DIRECTORY_PROFILE);
-            else if (n === u.g.ACTIVITY_BOOKMARK);
-            else if (n === u.g.EMBEDDED_ACTIVITY_INVITE);
-            else if (n === u.g.GUILD_PRODUCT);
-            else if (n === u.g.SERVER_SHOP);
-            else if (n === u.g.QUESTS_EMBED);
-            else if (n === u.g.APP_DIRECTORY_STOREFRONT);
-            else if (n === u.g.APP_DIRECTORY_STOREFRONT_SKU);
-            else if (n === u.g.APP_OAUTH2_LINK);
-            else if (n === u.g.COLLECTIBLES_SHOP);
-            else throw Error('Unknown coded link type: '.concat(n));
+            else if (t === o.g.BUILD_OVERRIDE || t === o.g.MANUAL_BUILD_OVERRIDE);
+            else if (t === o.g.EVENT);
+            else if (t === o.g.CHANNEL_LINK);
+            else if (t === o.g.APP_DIRECTORY_PROFILE);
+            else if (t === o.g.ACTIVITY_BOOKMARK);
+            else if (t === o.g.EMBEDDED_ACTIVITY_INVITE);
+            else if (t === o.g.GUILD_PRODUCT);
+            else if (t === o.g.SERVER_SHOP);
+            else if (t === o.g.QUESTS_EMBED);
+            else if (t === o.g.APP_DIRECTORY_STOREFRONT);
+            else if (t === o.g.APP_DIRECTORY_STOREFRONT_SKU);
+            else if (t === o.g.APP_OAUTH2_LINK);
+            else if (t === o.g.COLLECTIBLES_SHOP);
+            else throw Error('Unknown coded link type: '.concat(t));
         });
 }
-class p extends a.Z {
+class d extends i.Z {
     constructor() {
-        super(), (0, l.Z)(this, f);
+        super(), (0, s.Z)(this, c);
     }
 }
-n.Z = new p();
+let f = new d();

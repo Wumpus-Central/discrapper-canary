@@ -1,8 +1,9 @@
-e.exports = {
-    biteSize: 'biteSize_c69a7b',
-    fullSize: 'fullSize_c69a7b',
-    panel: 'panel_c69a7b',
-    outer: 'outer_c69a7b',
-    inner: 'inner_c69a7b',
-    overlay: 'overlay_c69a7b'
+var i = {
+    biteSize: 'biteSize_c0bea0',
+    fullSize: 'fullSize_c0bea0',
+    panel: 'panel_c0bea0',
+    outer: 'outer_c0bea0',
+    inner: 'inner_c0bea0',
+    overlay: 'overlay_c0bea0'
 };
+e.exports = i;

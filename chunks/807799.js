@@ -1,86 +1,85 @@
-var i = r(689118),
-    a = r(676972),
-    o = r(957578).Buffer,
+var i = n(689118),
+    r = n(676972),
+    a = n(957578).Buffer,
     s = [1116352408, 3609767458, 1899447441, 602891725, 3049323471, 3964484399, 3921009573, 2173295548, 961987163, 4081628472, 1508970993, 3053834265, 2453635748, 2937671579, 2870763221, 3664609560, 3624381080, 2734883394, 310598401, 1164996542, 607225278, 1323610764, 1426881987, 3590304994, 1925078388, 4068182383, 2162078206, 991336113, 2614888103, 633803317, 3248222580, 3479774868, 3835390401, 2666613458, 4022224774, 944711139, 264347078, 2341262773, 604807628, 2007800933, 770255983, 1495990901, 1249150122, 1856431235, 1555081692, 3175218132, 1996064986, 2198950837, 2554220882, 3999719339, 2821834349, 766784016, 2952996808, 2566594879, 3210313671, 3203337956, 3336571891, 1034457026, 3584528711, 2466948901, 113926993, 3758326383, 338241895, 168717936, 666307205, 1188179964, 773529912, 1546045734, 1294757372, 1522805485, 1396182291, 2643833823, 1695183700, 2343527390, 1986661051, 1014477480, 2177026350, 1206759142, 2456956037, 344077627, 2730485921, 1290863460, 2820302411, 3158454273, 3259730800, 3505952657, 3345764771, 106217008, 3516065817, 3606008344, 3600352804, 1432725776, 4094571909, 1467031594, 275423344, 851169720, 430227734, 3100823752, 506948616, 1363258195, 659060556, 3750685593, 883997877, 3785050280, 958139571, 3318307427, 1322822218, 3812723403, 1537002063, 2003034995, 1747873779, 3602036899, 1955562222, 1575990012, 2024104815, 1125592928, 2227730452, 2716904306, 2361852424, 442776044, 2428436474, 593698344, 2756734187, 3733110249, 3204031479, 2999351573, 3329325298, 3815920427, 3391569614, 3928383900, 3515267271, 566280711, 3940187606, 3454069534, 4118630271, 4000239992, 116418474, 1914138554, 174292421, 2731055270, 289380356, 3203993006, 460393269, 320620315, 685471733, 587496836, 852142971, 1086792851, 1017036298, 365543100, 1126000580, 2618297676, 1288033470, 3409855158, 1501505948, 4234509866, 1607167915, 987167468, 1816402316, 1246189591],
-    l = Array(160);
-function u() {
-    this.init(), (this._w = l), a.call(this, 128, 112);
+    o = Array(160);
+function l() {
+    this.init(), (this._w = o), r.call(this, 128, 112);
 }
-function c(e, n, r) {
-    return r ^ (e & (n ^ r));
+function u(e, t, n) {
+    return n ^ (e & (t ^ n));
 }
-function d(e, n, r) {
-    return (e & n) | (r & (e | n));
+function c(e, t, n) {
+    return (e & t) | (n & (e | t));
 }
-function f(e, n) {
-    return ((e >>> 28) | (n << 4)) ^ ((n >>> 2) | (e << 30)) ^ ((n >>> 7) | (e << 25));
+function d(e, t) {
+    return ((e >>> 28) | (t << 4)) ^ ((t >>> 2) | (e << 30)) ^ ((t >>> 7) | (e << 25));
 }
-function p(e, n) {
-    return ((e >>> 14) | (n << 18)) ^ ((e >>> 18) | (n << 14)) ^ ((n >>> 9) | (e << 23));
+function f(e, t) {
+    return ((e >>> 14) | (t << 18)) ^ ((e >>> 18) | (t << 14)) ^ ((t >>> 9) | (e << 23));
 }
-function h(e, n) {
-    return ((e >>> 1) | (n << 31)) ^ ((e >>> 8) | (n << 24)) ^ (e >>> 7);
+function _(e, t) {
+    return ((e >>> 1) | (t << 31)) ^ ((e >>> 8) | (t << 24)) ^ (e >>> 7);
 }
-function _(e, n) {
-    return ((e >>> 1) | (n << 31)) ^ ((e >>> 8) | (n << 24)) ^ ((e >>> 7) | (n << 25));
+function p(e, t) {
+    return ((e >>> 1) | (t << 31)) ^ ((e >>> 8) | (t << 24)) ^ ((e >>> 7) | (t << 25));
 }
-function m(e, n) {
-    return ((e >>> 19) | (n << 13)) ^ ((n >>> 29) | (e << 3)) ^ (e >>> 6);
+function h(e, t) {
+    return ((e >>> 19) | (t << 13)) ^ ((t >>> 29) | (e << 3)) ^ (e >>> 6);
 }
-function g(e, n) {
-    return ((e >>> 19) | (n << 13)) ^ ((n >>> 29) | (e << 3)) ^ ((e >>> 6) | (n << 26));
+function m(e, t) {
+    return ((e >>> 19) | (t << 13)) ^ ((t >>> 29) | (e << 3)) ^ ((e >>> 6) | (t << 26));
 }
-function E(e, n) {
-    return e >>> 0 < n >>> 0 ? 1 : 0;
+function g(e, t) {
+    return e >>> 0 < t >>> 0 ? 1 : 0;
 }
-i(u, a),
-    (u.prototype.init = function () {
+i(l, r),
+    (l.prototype.init = function () {
         return (this._ah = 1779033703), (this._bh = 3144134277), (this._ch = 1013904242), (this._dh = 2773480762), (this._eh = 1359893119), (this._fh = 2600822924), (this._gh = 528734635), (this._hh = 1541459225), (this._al = 4089235720), (this._bl = 2227873595), (this._cl = 4271175723), (this._dl = 1595750129), (this._el = 2917565137), (this._fl = 725511199), (this._gl = 4215389547), (this._hl = 327033209), this;
     }),
-    (u.prototype._update = function (e) {
-        for (var n = this._w, r = 0 | this._ah, i = 0 | this._bh, a = 0 | this._ch, o = 0 | this._dh, l = 0 | this._eh, u = 0 | this._fh, v = 0 | this._gh, y = 0 | this._hh, b = 0 | this._al, I = 0 | this._bl, T = 0 | this._cl, S = 0 | this._dl, A = 0 | this._el, C = 0 | this._fl, N = 0 | this._gl, R = 0 | this._hl, O = 0; O < 32; O += 2) (n[O] = e.readInt32BE(4 * O)), (n[O + 1] = e.readInt32BE(4 * O + 4));
-        for (; O < 160; O += 2) {
-            var D = n[O - 30],
-                L = n[O - 30 + 1],
-                x = h(D, L),
-                w = _(L, D);
-            D = n[O - 4];
-            var P = m(D, (L = n[O - 4 + 1])),
-                M = g(L, D),
-                k = n[O - 14],
-                U = n[O - 14 + 1],
-                B = n[O - 32],
-                G = n[O - 32 + 1],
-                Z = (w + U) | 0,
-                F = (x + k + E(Z, w)) | 0;
-            (F = (F + P + E((Z = (Z + M) | 0), M)) | 0), (F = (F + B + E((Z = (Z + G) | 0), G)) | 0), (n[O] = F), (n[O + 1] = Z);
+    (l.prototype._update = function (e) {
+        for (var t = this._w, n = 0 | this._ah, i = 0 | this._bh, r = 0 | this._ch, a = 0 | this._dh, o = 0 | this._eh, l = 0 | this._fh, E = 0 | this._gh, v = 0 | this._hh, y = 0 | this._al, I = 0 | this._bl, b = 0 | this._cl, T = 0 | this._dl, S = 0 | this._el, A = 0 | this._fl, N = 0 | this._gl, C = 0 | this._hl, R = 0; R < 32; R += 2) (t[R] = e.readInt32BE(4 * R)), (t[R + 1] = e.readInt32BE(4 * R + 4));
+        for (; R < 160; R += 2) {
+            var O = t[R - 30],
+                D = t[R - 30 + 1],
+                x = _(O, D),
+                L = p(D, O),
+                P = h((O = t[R - 4]), (D = t[R - 4 + 1])),
+                w = m(D, O),
+                M = t[R - 14],
+                k = t[R - 14 + 1],
+                U = t[R - 32],
+                G = t[R - 32 + 1],
+                B = (L + k) | 0,
+                Z = (x + M + g(B, L)) | 0;
+            (Z = ((Z = (Z + P + g((B = (B + w) | 0), w)) | 0) + U + g((B = (B + G) | 0), G)) | 0), (t[R] = Z), (t[R + 1] = B);
         }
-        for (var V = 0; V < 160; V += 2) {
-            (F = n[V]), (Z = n[V + 1]);
-            var j = d(r, i, a),
-                H = d(b, I, T),
-                Y = f(r, b),
-                W = f(b, r),
-                K = p(l, A),
-                z = p(A, l),
-                q = s[V],
-                Q = s[V + 1],
-                X = c(l, u, v),
-                J = c(A, C, N),
-                $ = (R + z) | 0,
-                ee = (y + K + E($, R)) | 0;
-            (ee = (ee + X + E(($ = ($ + J) | 0), J)) | 0), (ee = (ee + q + E(($ = ($ + Q) | 0), Q)) | 0), (ee = (ee + F + E(($ = ($ + Z) | 0), Z)) | 0);
-            var et = (W + H) | 0,
-                en = (Y + j + E(et, W)) | 0;
-            (y = v), (R = N), (v = u), (N = C), (u = l), (C = A), (l = (o + ee + E((A = (S + $) | 0), S)) | 0), (o = a), (S = T), (a = i), (T = I), (i = r), (I = b), (r = (ee + en + E((b = ($ + et) | 0), $)) | 0);
+        for (var F = 0; F < 160; F += 2) {
+            (Z = t[F]), (B = t[F + 1]);
+            var V = c(n, i, r),
+                j = c(y, I, b),
+                H = d(n, y),
+                Y = d(y, n),
+                W = f(o, S),
+                K = f(S, o),
+                z = s[F],
+                q = s[F + 1],
+                Q = u(o, l, E),
+                X = u(S, A, N),
+                J = (C + K) | 0,
+                $ = (v + W + g(J, C)) | 0;
+            $ = (($ = (($ = ($ + Q + g((J = (J + X) | 0), X)) | 0) + z + g((J = (J + q) | 0), q)) | 0) + Z + g((J = (J + B) | 0), B)) | 0;
+            var ee = (Y + j) | 0,
+                et = (H + V + g(ee, Y)) | 0;
+            (v = E), (C = N), (E = l), (N = A), (l = o), (A = S), (o = (a + $ + g((S = (T + J) | 0), T)) | 0), (a = r), (T = b), (r = i), (b = I), (i = n), (I = y), (n = ($ + et + g((y = (J + ee) | 0), J)) | 0);
         }
-        (this._al = (this._al + b) | 0), (this._bl = (this._bl + I) | 0), (this._cl = (this._cl + T) | 0), (this._dl = (this._dl + S) | 0), (this._el = (this._el + A) | 0), (this._fl = (this._fl + C) | 0), (this._gl = (this._gl + N) | 0), (this._hl = (this._hl + R) | 0), (this._ah = (this._ah + r + E(this._al, b)) | 0), (this._bh = (this._bh + i + E(this._bl, I)) | 0), (this._ch = (this._ch + a + E(this._cl, T)) | 0), (this._dh = (this._dh + o + E(this._dl, S)) | 0), (this._eh = (this._eh + l + E(this._el, A)) | 0), (this._fh = (this._fh + u + E(this._fl, C)) | 0), (this._gh = (this._gh + v + E(this._gl, N)) | 0), (this._hh = (this._hh + y + E(this._hl, R)) | 0);
+        (this._al = (this._al + y) | 0), (this._bl = (this._bl + I) | 0), (this._cl = (this._cl + b) | 0), (this._dl = (this._dl + T) | 0), (this._el = (this._el + S) | 0), (this._fl = (this._fl + A) | 0), (this._gl = (this._gl + N) | 0), (this._hl = (this._hl + C) | 0), (this._ah = (this._ah + n + g(this._al, y)) | 0), (this._bh = (this._bh + i + g(this._bl, I)) | 0), (this._ch = (this._ch + r + g(this._cl, b)) | 0), (this._dh = (this._dh + a + g(this._dl, T)) | 0), (this._eh = (this._eh + o + g(this._el, S)) | 0), (this._fh = (this._fh + l + g(this._fl, A)) | 0), (this._gh = (this._gh + E + g(this._gl, N)) | 0), (this._hh = (this._hh + v + g(this._hl, C)) | 0);
     }),
-    (u.prototype._hash = function () {
-        var e = o.allocUnsafe(64);
-        function n(n, r, i) {
-            e.writeInt32BE(n, i), e.writeInt32BE(r, i + 4);
+    (l.prototype._hash = function () {
+        var e = a.allocUnsafe(64);
+        function t(t, n, i) {
+            e.writeInt32BE(t, i), e.writeInt32BE(n, i + 4);
         }
-        return n(this._ah, this._al, 0), n(this._bh, this._bl, 8), n(this._ch, this._cl, 16), n(this._dh, this._dl, 24), n(this._eh, this._el, 32), n(this._fh, this._fl, 40), n(this._gh, this._gl, 48), n(this._hh, this._hl, 56), e;
+        return t(this._ah, this._al, 0), t(this._bh, this._bl, 8), t(this._ch, this._cl, 16), t(this._dh, this._dl, 24), t(this._eh, this._el, 32), t(this._fh, this._fl, 40), t(this._gh, this._gl, 48), t(this._hh, this._hl, 56), e;
     }),
-    (e.exports = u);
+    (e.exports = l);

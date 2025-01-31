@@ -1,21 +1,14 @@
 n.d(t, {
-    SR: function () {
-        return c;
-    },
-    Vk: function () {
-        return o;
-    },
-    xl: function () {
-        return d;
-    }
+    SR: () => o,
+    Vk: () => a,
+    xl: () => c
 });
 var i = n(544891),
     r = n(570140),
     l = n(981631);
-let s = 3628800000;
-function a(e, t) {
+function s(e, t) {
     let n = new Date(),
-        r = new Date(n.getTime() - (n.getDay() + 1) * 86400000 - s);
+        r = new Date(n.getTime() - (n.getDay() + 1) * 86400000 - 3628800000);
     return i.tn.get({
         url: t(e),
         query: {
@@ -27,8 +20,8 @@ function a(e, t) {
         rejectWithError: !1
     });
 }
-function o(e) {
-    return a(e, l.ANM.GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW).then(
+function a(e) {
+    return s(e, l.ANM.GUILD_ANALYTICS_ENGAGEMENT_OVERVIEW).then(
         (t) => {
             let { body: n } = t;
             r.Z.dispatch({
@@ -45,8 +38,8 @@ function o(e) {
         }
     );
 }
-function c(e) {
-    return a(e, l.ANM.GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW).then(
+function o(e) {
+    return s(e, l.ANM.GUILD_ANALYTICS_GROWTH_ACTIVATION_OVERVIEW).then(
         (t) => {
             let { body: n } = t;
             r.Z.dispatch({
@@ -63,8 +56,8 @@ function c(e) {
         }
     );
 }
-function d(e) {
-    return a(e, l.ANM.GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION).then(
+function c(e) {
+    return s(e, l.ANM.GUILD_ANALYTICS_GROWTH_ACTIVATION_RETENTION).then(
         (t) => {
             let { body: n } = t,
                 i = n

@@ -1,79 +1,62 @@
-r.d(n, {
-    Lh: function () {
-        return f;
-    },
-    MR: function () {
-        return E;
-    },
-    g1: function () {
-        return h;
-    },
-    iD: function () {
-        return p;
-    },
-    ir: function () {
-        return _;
-    },
-    s4: function () {
-        return m;
-    },
-    sm: function () {
-        return g;
-    }
-});
-var i = r(757143);
-var a = r(633302),
-    o = r(695346),
-    s = r(314897),
-    l = r(626135),
-    u = r(981631),
-    c = r(468788),
-    d = r(388032);
-function f(e) {
-    return null == e.id ? a.ZP.convertSurrogateToName(e.name) : ':'.concat(e.name, ':');
+n.d(t, {
+    Lh: () => c,
+    MR: () => m,
+    g1: () => f,
+    iD: () => d,
+    ir: () => _,
+    s4: () => p,
+    sm: () => h
+}),
+    n(757143);
+var i = n(633302),
+    r = n(695346),
+    a = n(314897),
+    s = n(626135),
+    o = n(981631),
+    l = n(468788),
+    u = n(388032);
+function c(e) {
+    return null == e.id ? i.ZP.convertSurrogateToName(e.name) : ':'.concat(e.name, ':');
 }
-function p(e, n, r, i) {
-    var a, o, s;
-    let l;
+function d(e, t, n, i) {
+    var r, a, s;
+    let o;
     return (
-        (l = i ? (e ? d.t.i9DXqK : d.t['Z/l+qq']) : e ? d.t.CLuzw8 : d.t.PirBBA),
-        d.intl.formatToPlainString(l, {
-            reactions: n,
-            emojiName: null !== (s = null === (o = f(r)) || void 0 === o ? void 0 : null === (a = o.replace(/[:_]/g, ' ')) || void 0 === a ? void 0 : a.trim()) && void 0 !== s ? s : ''
+        (o = i ? (e ? u.t.i9DXqK : u.t['Z/l+qq']) : e ? u.t.CLuzw8 : u.t.PirBBA),
+        u.intl.formatToPlainString(o, {
+            reactions: t,
+            emojiName: null !== (s = null === (a = c(n)) || void 0 === a ? void 0 : null === (r = a.replace(/[:_]/g, ' ')) || void 0 === r ? void 0 : r.trim()) && void 0 !== s ? s : ''
         })
     );
 }
-function h(e) {
-    var n, r, i;
+function f(e) {
+    var t, n, i;
     return {
-        id: null !== (n = e.id) && void 0 !== n ? n : null,
-        name: null !== (i = null !== (r = null != e.id ? e.name : e.optionallyDiverseSequence) && void 0 !== r ? r : e.name) && void 0 !== i ? i : '',
+        id: null !== (t = e.id) && void 0 !== t ? t : null,
+        name: null !== (i = null !== (n = null != e.id ? e.name : e.optionallyDiverseSequence) && void 0 !== n ? n : e.name) && void 0 !== i ? i : '',
         animated: !!e.animated
     };
 }
-function _(e, n) {
-    if (null != n.id) {
-        let r = null != e.id ? ''.concat(e.id) : e.id;
-        return ''.concat(n.id) === r;
+function _(e, t) {
+    if (null != t.id) {
+        let n = null != e.id ? ''.concat(e.id) : e.id;
+        return ''.concat(t.id) === n;
     }
-    return null == e.id && n.name === e.name;
+    return null == e.id && t.name === e.name;
 }
-function m(e) {
-    if (e.isThread()) return u.jXE.THREAD_TEXT_AREA;
-    if (e.isForumPost()) return u.jXE.FORUM_CHANNEL_TEXT_AREA;
-    if (e.isGuildVocal()) return u.jXE.TEXT_IN_VOICE;
-    return u.jXE.CHANNEL_TEXT_AREA;
+function p(e) {
+    return e.isThread() ? o.jXE.THREAD_TEXT_AREA : e.isForumPost() ? o.jXE.FORUM_CHANNEL_TEXT_AREA : e.isGuildVocal() ? o.jXE.TEXT_IN_VOICE : o.jXE.CHANNEL_TEXT_AREA;
 }
-function g(e) {
-    let { userId: n, optimistic: r } = e,
-        i = s.default.getId() === n;
-    return (!r || !!i) && !0;
+function h(e) {
+    let { userId: t, optimistic: n } = e,
+        i = a.default.getId() === t;
+    return !n || !!i;
 }
-function E(e, n) {
-    o.fz.updateSetting(e),
-        l.default.track(u.rMx.NOTIFICATION_SETTINGS_UPDATED, {
-            update_type: c.I.ACCOUNT,
+function m(e, t) {
+    r.fz.updateSetting(e),
+        s.default.track(o.rMx.NOTIFICATION_SETTINGS_UPDATED, {
+            update_type: l.I.ACCOUNT,
             reaction_notifications: e,
-            reaction_notifications_old: n
+            reaction_notifications_old: t
         });
 }

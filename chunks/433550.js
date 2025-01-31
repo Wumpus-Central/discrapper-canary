@@ -1,99 +1,89 @@
-n.r(t),
-    n.d(t, {
-        StickerPackViewAllModalFooter: function () {
-            return K;
-        },
-        default: function () {
-            return y;
-        }
-    }),
-    n(653041),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
-    o = n(120356),
-    s = n.n(o),
-    a = n(954955),
-    c = n.n(a),
-    l = n(442837),
-    d = n(477690),
-    u = n(481060),
-    h = n(691251),
-    m = n(563132),
-    p = n(409813),
-    k = n(185139),
-    _ = n(624138),
-    I = n(790954),
-    S = n(453070),
-    f = n(926491),
-    x = n(378233),
-    C = n(515005),
-    N = n(282896),
-    g = n(929204),
-    P = n(981631),
-    j = n(388032),
-    E = n(9520);
-let v = (0, _.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSIONS),
-    T = (0, _.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_PADDING),
-    W = (0, _.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_MARGIN),
-    M = v + 2 * T,
-    R = c()(I.pF, 250),
-    B = () => {
+r.d(t, { default: () => Z }), r(653041), r(47120);
+var i = r(200651),
+    n = r(192379),
+    s = r(120356),
+    o = r.n(s),
+    a = r(954955),
+    c = r.n(a),
+    l = r(442837),
+    d = r(477690),
+    u = r(481060),
+    f = r(691251),
+    h = r(563132),
+    m = r(409813),
+    p = r(185139),
+    _ = r(624138),
+    b = r(790954),
+    k = r(453070),
+    x = r(926491),
+    S = r(378233),
+    I = r(515005),
+    C = r(282896),
+    g = r(929204),
+    N = r(981631),
+    P = r(388032),
+    j = r(9520);
+let E = (0, _.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSIONS),
+    v = (0, _.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_PADDING),
+    T = (0, _.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_MARGIN),
+    W = E + 2 * v,
+    R = c()(b.pF, 250),
+    A = () => {
         R.cancel();
     },
-    b = (e) => {
-        let { visibleRowIndex: t, columnIndex: n } = e;
-        R.cancel(), (0, I.Mf)(n, t, h.u.MOUSE_EVENT);
+    B = (e) => {
+        let { visibleRowIndex: t, columnIndex: r } = e;
+        R.cancel(), (0, b.Mf)(r, t, f.u.MOUSE_EVENT);
     },
-    A = (e) => {
-        let { stickerPack: t, width: n, hasHeaderImage: o, isScrolling: a, onInspect: c } = e,
-            l = i.useMemo(() => [(0, x.z)(t)], [t]),
-            d = (0, I.Y6)((e) => e.inspectedStickerPosition),
+    K = (e) => {
+        let { stickerPack: t, width: r, hasHeaderImage: s, isScrolling: a, onInspect: c } = e,
+            l = n.useMemo(() => [(0, S.z)(t)], [t]),
+            d = (0, b.Y6)((e) => e.inspectedStickerPosition),
             {
                 rowCountBySection: u,
-                stickersGrid: h,
-                gutterWidth: m
-            } = (0, S.el)({
+                stickersGrid: f,
+                gutterWidth: h
+            } = (0, k.el)({
                 stickersCategories: l,
-                stickerNodeMargin: W,
-                stickerNodeWidth: M,
-                listWidth: n
+                stickerNodeMargin: T,
+                stickerNodeWidth: W,
+                listWidth: r
             });
-        return (0, r.jsxs)('div', {
-            className: s()(E.container, { [E.containerWithHeader]: o }),
+        return (0, i.jsxs)('div', {
+            className: o()(j.container, { [j.containerWithHeader]: s }),
             children: [
-                (0, r.jsx)(
-                    N.Z,
+                (0, i.jsx)(
+                    C.Z,
                     {
-                        className: E.header,
+                        className: j.header,
                         stickerPack: t,
                         withDescription: !0
                     },
                     t.id
                 ),
-                (0, r.jsx)('div', {
-                    onFocus: B,
+                (0, i.jsx)('div', {
+                    onFocus: A,
                     onBlur: R,
-                    onMouseOver: B,
+                    onMouseOver: A,
                     onMouseOut: R,
                     children: (() => {
                         if (0 === u.length) return null;
                         let e = [];
                         for (let t = 0; t < u[0]; t++)
                             e.push(
-                                (0, r.jsx)(
-                                    C.Z,
+                                (0, i.jsx)(
+                                    I.Z,
                                     {
                                         enlargeOnInteraction: !0,
                                         preferAnimation: !0,
-                                        gutterWidth: m,
+                                        gutterWidth: h,
                                         inspectedStickerPosition: d,
                                         isScrolling: a,
                                         onInspect: c,
                                         rowIndex: t,
-                                        stickerDescriptors: h[t],
-                                        stickerPadding: T,
-                                        stickerSize: v,
+                                        stickerDescriptors: f[t],
+                                        stickerPadding: v,
+                                        stickerSize: E,
                                         isDisplayingIndividualStickers: !0,
                                         checkSendability: !1
                                     },
@@ -106,99 +96,99 @@ let v = (0, _.Mg)(d.Z.STICKERS_CONSTANTS_STICKER_PURCHASE_PACK_PREVIEW_DIMENSION
             ]
         });
     },
-    K = (e) => {
-        let { onClose: t, stickerPack: n } = e;
-        (0, S.fP)();
-        let i = (0, l.e7)([f.Z], () => f.Z.isPremiumPack(n.id));
-        return (0, r.jsxs)(u.ModalFooter, {
-            className: E.footer,
+    M = (e) => {
+        let { onClose: t, stickerPack: r } = e;
+        (0, k.fP)();
+        let n = (0, l.e7)([x.Z], () => x.Z.isPremiumPack(r.id));
+        return (0, i.jsxs)(u.mzw, {
+            className: j.footer,
             children: [
-                (0, r.jsx)(u.Anchor, {
+                (0, i.jsx)(u.eee, {
                     onClick: t,
-                    className: E.skuPreviewFooterCloseButton,
-                    children: j.intl.string(j.t.cpT0Cg)
+                    className: j.skuPreviewFooterCloseButton,
+                    children: P.intl.string(P.t.cpT0Cg)
                 }),
-                i &&
-                    (0, r.jsxs)(u.ShinyButton, {
-                        color: u.Button.Colors.GREEN,
+                n &&
+                    (0, i.jsxs)(u.gtL, {
+                        color: u.zxk.Colors.GREEN,
                         type: 'submit',
-                        innerClassName: E.premiumButtonInner,
+                        innerClassName: j.premiumButtonInner,
                         onClick: () => {
-                            t(), (0, g.Z)({ section: P.jXE.STICKER_PACK_VIEW_ALL });
+                            t(), (0, g.Z)({ section: N.jXE.STICKER_PACK_VIEW_ALL });
                         },
                         children: [
-                            (0, r.jsx)(u.NitroWheelIcon, {
+                            (0, i.jsx)(u.SrA, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: E.premiumButtonNitroWheel
+                                className: j.premiumButtonNitroWheel
                             }),
-                            j.intl.string(j.t['w+kuhY'])
+                            P.intl.string(P.t['w+kuhY'])
                         ]
                     })
             ]
         });
     },
     w = (e) => {
-        let { stickerPack: t, onClose: n } = e,
-            i = (0, x.sM)(t, 1024);
-        return null == i
+        let { stickerPack: t, onClose: r } = e,
+            n = (0, S.sM)(t, 1024);
+        return null == n
             ? null
-            : (0, r.jsxs)(u.ModalHeader, {
-                  className: E.headerWithImage,
+            : (0, i.jsxs)(u.xBx, {
+                  className: j.headerWithImage,
                   children: [
-                      (0, r.jsx)('div', {
+                      (0, i.jsx)('div', {
                           role: 'image',
-                          style: { backgroundImage: 'url('.concat(i, ')') },
-                          className: E.backgroundImage
+                          style: { backgroundImage: 'url('.concat(n, ')') },
+                          className: j.backgroundImage
                       }),
-                      (0, r.jsx)(u.ModalCloseButton, {
-                          className: E.closeButton,
-                          onClick: n
+                      (0, i.jsx)(u.olH, {
+                          className: j.closeButton,
+                          onClick: r
                       })
                   ]
               });
     };
-function y(e) {
-    let { onClose: t, stickerPack: n, ...o } = e,
-        [s, a] = i.useState(null),
-        c = i.useCallback((e) => {
+function Z(e) {
+    let { onClose: t, stickerPack: r, ...s } = e,
+        [o, a] = n.useState(null),
+        c = n.useCallback((e) => {
             null !== e && a(e.offsetWidth);
         }, []);
     return (
-        i.useLayoutEffect(() => {
-            (0, I.pF)();
+        n.useLayoutEffect(() => {
+            (0, b.pF)();
         }, []),
-        (0, r.jsx)(m.PaymentContextProvider, {
+        (0, i.jsx)(h.PaymentContextProvider, {
             activeSubscription: null,
             stepConfigs: [],
             skuIDs: [],
-            children: (0, r.jsx)(u.ModalRoot, {
-                ...o,
+            children: (0, i.jsx)(u.Y0X, {
+                ...s,
                 'aria-labelledby': 'sticker-pack-sku-preview-modal',
-                children: (0, r.jsx)(k.Z, {
+                children: (0, i.jsx)(p.Z, {
                     hideBreadcrumbs: !0,
-                    body: (0, r.jsx)('div', {
+                    body: (0, i.jsx)('div', {
                         ref: c,
                         children:
-                            null != s &&
-                            (0, r.jsx)(A, {
-                                stickerPack: n,
+                            null != o &&
+                            (0, i.jsx)(K, {
+                                stickerPack: r,
                                 hasHeaderImage: !0,
-                                onInspect: b,
-                                width: s
+                                onInspect: B,
+                                width: o
                             })
                     }),
-                    footer: (0, r.jsx)(K, {
+                    footer: (0, i.jsx)(M, {
                         onClose: t,
-                        stickerPack: n
+                        stickerPack: r
                     }),
-                    header: (0, r.jsx)(w, {
+                    header: (0, i.jsx)(w, {
                         onClose: t,
-                        stickerPack: n
+                        stickerPack: r
                     }),
                     onScroll: R,
-                    steps: [p.h8.SKU_PREVIEW],
-                    currentStep: p.h8.SKU_PREVIEW
+                    steps: [m.h8.SKU_PREVIEW],
+                    currentStep: m.h8.SKU_PREVIEW
                 })
             })
         })

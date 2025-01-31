@@ -1,4 +1,5 @@
-e.exports = {
-    iconWrapper: 'iconWrapper_a66fbc',
-    icon: 'icon_a66fbc'
+var i = {
+    iconWrapper: 'iconWrapper_d13236',
+    icon: 'icon_d13236'
 };
+e.exports = i;

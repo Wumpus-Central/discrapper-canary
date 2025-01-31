@@ -1,37 +1,33 @@
-r.d(n, {
-    j: function () {
-        return c;
-    },
-    r: function () {
-        return l;
-    }
+n.d(t, {
+    j: () => u,
+    r: () => o
 });
-var i = r(99815),
-    a = r(81063),
-    o = r(463031);
+var i = n(99815),
+    r = n(81063),
+    a = n(463031);
 function s(e) {
-    var n;
-    let a = e.users[0],
-        o = null == a ? void 0 : null === (n = a.statistics[i.E.LOL_MOST_PLAYED_CHAMPION_ID]) || void 0 === n ? void 0 : n.value;
+    var t;
+    let r = e.users[0],
+        a = null == r ? void 0 : null === (t = r.statistics[i.E.LOL_MOST_PLAYED_CHAMPION_ID]) || void 0 === t ? void 0 : t.value;
     try {
-        return null != o ? r(624119)('./champion_'.concat(o, '.jpg')).default : r(721191).Z;
+        return null != a ? n(624119)('./champion_'.concat(a, '.jpg')).default : n(721191).Z;
     } catch {
-        return r(721191).Z;
+        return n(721191).Z;
     }
+}
+function o(e) {
+    return e.leaderboard_id === a.z ? s(e) : null != e.settings.splash_asset_id ? (0, r.getAssetImage)(e.settings.application_id, e.settings.splash_asset_id) : null;
 }
 function l(e) {
-    return e.leaderboard_id === o.z ? s(e) : null != e.settings.splash_asset_id ? (0, a.getAssetImage)(e.settings.application_id, e.settings.splash_asset_id) : null;
-}
-function u(e) {
-    var n, a;
-    let o = null == e ? void 0 : null === (n = e.users) || void 0 === n ? void 0 : n[0],
-        s = null == o ? void 0 : null === (a = o.statistics[i.E.LOL_MOST_PLAYED_CHAMPION_ID]) || void 0 === a ? void 0 : a.value;
+    var t, r;
+    let a = null == e ? void 0 : null === (t = e.users) || void 0 === t ? void 0 : t[0],
+        s = null == a ? void 0 : null === (r = a.statistics[i.E.LOL_MOST_PLAYED_CHAMPION_ID]) || void 0 === r ? void 0 : r.value;
     try {
-        return null != s ? r(692425)('./champion_'.concat(s, '.jpg')).default : null;
+        return null != s ? n(692425)('./champion_'.concat(s, '.jpg')).default : null;
     } catch {
         return null;
     }
 }
-function c(e) {
-    return e.leaderboard_id === o.z ? u(e) : (0, a.getAssetImage)(e.settings.application_id, e.settings.winner_asset_id);
+function u(e) {
+    return e.leaderboard_id === a.z ? l(e) : (0, r.getAssetImage)(e.settings.application_id, e.settings.winner_asset_id);
 }

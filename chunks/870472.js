@@ -1,10 +1,6 @@
 n.d(t, {
-    Q: function () {
-        return c;
-    },
-    V: function () {
-        return o;
-    }
+    Q: () => c,
+    V: () => o
 }),
     n(47120),
     n(653041),
@@ -26,19 +22,18 @@ function o(e) {
                 o.push(i), n(o), s(o.length - 1);
             },
             [r, a, t]
-        ),
-        c = i.useCallback(
+        );
+    return {
+        state: a,
+        setState: o,
+        goBack: i.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
                     n = Math.max(0, r - e);
                 return s(n), t[n];
             },
             [r, t]
-        );
-    return {
-        state: a,
-        setState: o,
-        goBack: c,
+        ),
         goForward: i.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
@@ -82,8 +77,8 @@ function c(e, t) {
                     .split(a.uz)
                     .map((e) => e.trim())
                     .filter((e) => e.length > 0);
-                if (!(r.length <= 1))
-                    (0, s.flushSync)(() => {
+                !(r.length <= 1) &&
+                    ((0, s.flushSync)(() => {
                         u((e) => {
                             let { tags: t, value: n } = e;
                             return {
@@ -94,9 +89,9 @@ function c(e, t) {
                             };
                         });
                     }),
-                        e.preventDefault(),
-                        e.stopPropagation(),
-                        null === (t = n.current) || void 0 === t || t.scrollToBottom();
+                    e.preventDefault(),
+                    e.stopPropagation(),
+                    null === (t = n.current) || void 0 === t || t.scrollToBottom());
             },
             [u, n]
         ),
@@ -132,7 +127,7 @@ function c(e, t) {
             },
             [u]
         ),
-        f = i.useCallback(
+        _ = i.useCallback(
             (e) => {
                 u((t) => {
                     let { tags: n, value: i, selections: r, isSelecting: l } = t;
@@ -161,7 +156,7 @@ function c(e, t) {
             },
             [u]
         ),
-        v = i.useCallback(
+        f = i.useCallback(
             (e) => {
                 var t;
                 u((e) => {
@@ -178,7 +173,7 @@ function c(e, t) {
             },
             [r, u]
         ),
-        I = i.useCallback(
+        v = i.useCallback(
             (e) => {
                 u((t) => {
                     let { tags: n } = t;
@@ -196,8 +191,8 @@ function c(e, t) {
             function (e) {
                 let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                     i = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-                if (!(o.trim().length <= 0))
-                    (0, s.flushSync)(() => {
+                !(o.trim().length <= 0) &&
+                    ((0, s.flushSync)(() => {
                         u((e) => {
                             let { tags: t } = e;
                             return {
@@ -208,12 +203,12 @@ function c(e, t) {
                             };
                         });
                     }),
-                        i && null != n.current && n.current.scrollToBottom(),
-                        t && (e.preventDefault(), e.stopPropagation());
+                    i && null != n.current && n.current.scrollToBottom(),
+                    t && (e.preventDefault(), e.stopPropagation()));
             },
             [n, u, o]
         ),
-        _ = i.useCallback(
+        j = i.useCallback(
             (e) => {
                 let t = o.trim().length <= 0;
                 if (d.length > 0) {
@@ -252,7 +247,7 @@ function c(e, t) {
             },
             [r, d.length, u, o]
         ),
-        T = i.useCallback(
+        I = i.useCallback(
             (e) => {
                 var t, n, i, l;
                 let s = e.metaKey || e.ctrlKey;
@@ -260,13 +255,14 @@ function c(e, t) {
             },
             [m, h, r]
         ),
-        j = i.useCallback(
+        E = i.useCallback(
             (e) => {
                 var t;
                 let n = o.trim().length > 0,
                     { selectionStart: i = 0, selectionEnd: a = 0 } = null !== (t = r.current) && void 0 !== t ? t : {};
-                if (0 !== c.length && (!n || !!(i !== a)))
-                    (0, s.flushSync)(() => {
+                0 !== c.length &&
+                    (!n || i !== a) &&
+                    ((0, s.flushSync)(() => {
                         u((e) => {
                             let { tags: t, value: n } = e;
                             return {
@@ -277,16 +273,16 @@ function c(e, t) {
                             };
                         });
                     }),
-                        setImmediate(() => {
-                            var e;
-                            null === (e = r.current) || void 0 === e || e.blur(),
-                                setTimeout(() => {
-                                    var e;
-                                    null === (e = l.current) || void 0 === e || e.focus();
-                                }, 16);
-                        }),
-                        e.preventDefault(),
-                        e.stopPropagation();
+                    setImmediate(() => {
+                        var e;
+                        null === (e = r.current) || void 0 === e || e.blur(),
+                            setTimeout(() => {
+                                var e;
+                                null === (e = l.current) || void 0 === e || e.focus();
+                            }, 16);
+                    }),
+                    e.preventDefault(),
+                    e.stopPropagation());
             },
             [l, r, u, c.length, o]
         ),
@@ -295,31 +291,30 @@ function c(e, t) {
                 e.relatedTarget !== e.currentTarget && N(e, !1, !1);
             },
             [N]
-        ),
-        E = i.useCallback(
-            (e) => {
-                let t = e.metaKey || e.ctrlKey;
-                if ('Meta' !== e.key) a.ye.has(e.key) ? N(e) : 'Backspace' === e.key ? _(e) : 'Escape' === e.key ? v(e) : 'a' === e.key && t ? j(e) : a.Bd.has(e.key) && t && T(e);
-            },
-            [N, _, v, j, T]
         );
     return {
         handlePasteEvent: g,
-        handleInputChange: I,
-        handleKeyDown: E,
+        handleInputChange: v,
+        handleKeyDown: i.useCallback(
+            (e) => {
+                let t = e.metaKey || e.ctrlKey;
+                'Meta' !== e.key && (a.ye.has(e.key) ? N(e) : 'Backspace' === e.key ? j(e) : 'Escape' === e.key ? f(e) : 'a' === e.key && t ? E(e) : a.Bd.has(e.key) && t && I(e));
+            },
+            [N, j, f, E, I]
+        ),
         handleContainerKeyUp: i.useCallback(
             (e) => {
                 if (document.activeElement !== l.current) return;
                 let t = e.metaKey || e.ctrlKey;
-                'Backspace' === e.key ? _(e) : 'a' === e.key && t ? j(e) : 'Escape' === e.key ? v(e) : a.Bd.has(e.key) && t ? T(e) : 'Meta' !== e.key && v(e);
+                'Backspace' === e.key ? j(e) : 'a' === e.key && t ? E(e) : 'Escape' === e.key ? f(e) : a.Bd.has(e.key) && t ? I(e) : 'Meta' !== e.key && f(e);
             },
-            [T, _, j, v, l]
+            [I, j, E, f, l]
         ),
         handleRemoveTag: x,
         handleTagChangeEvent: p,
-        handleSelectTag: f,
+        handleSelectTag: _,
         handleUnselectTag: C,
-        handleResetTagSelections: v,
+        handleResetTagSelections: f,
         handleInputBlurEvent: b
     };
 }

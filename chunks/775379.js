@@ -1,11 +1,6 @@
-t.d(n, {
-    S: function () {
-        return i;
-    }
-}),
-    t(47120);
-var l = t(192379);
-class i extends l.PureComponent {
+l.d(n, { S: () => i }), l(47120);
+var t = l(192379);
+class i extends t.PureComponent {
     static getDerivedStateFromError(e) {
         return { error: e };
     }
@@ -16,17 +11,16 @@ class i extends l.PureComponent {
         return null != this.state.error ? this.props.fallback : this.props.children;
     }
     constructor(...e) {
-        var n, t, l;
+        var n, l;
         super(...e),
-            (n = this),
             (l = { error: null }),
-            (t = 'state') in n
-                ? Object.defineProperty(n, t, {
+            (n = 'state') in this
+                ? Object.defineProperty(this, n, {
                       value: l,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (n[t] = l);
+                : (this[n] = l);
     }
 }

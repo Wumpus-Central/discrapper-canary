@@ -1,19 +1,21 @@
+n.d(t, { Z: () => h });
 var i,
-    l,
-    r = n(200651);
+    l = n(200651);
 n(192379);
 var a = n(120356),
-    s = n.n(a),
-    o = n(481060),
-    c = n(871499),
-    d = n(308317);
+    r = n.n(a),
+    s = n(481060),
+    o = n(871499),
+    c = n(308317),
+    d = (((i = d || {})[(i.UP = 0)] = 'UP'), (i[(i.DOWN = 1)] = 'DOWN'), i);
 function u(e) {
-    let { direction: t, className: n, themeable: i, ...l } = e;
-    return (0, r.jsx)(c.Z, {
-        className: s()(n, d.arrow, { [d.up]: 0 === t }),
-        iconComponent: o.ChevronSmallDownIcon,
+    let { direction: t, className: n, themeable: i, ...a } = e;
+    return (0, l.jsx)(o.Z, {
+        className: r()(n, c.arrow, { [c.up]: 0 === t }),
+        iconComponent: s.CJ0,
         themeable: i,
-        ...l
+        ...a
     });
 }
-((i = l || (l = {}))[(i.UP = 0)] = 'UP'), (i[(i.DOWN = 1)] = 'DOWN'), (u.Directions = l), (t.Z = u);
+u.Directions = d;
+let h = u;

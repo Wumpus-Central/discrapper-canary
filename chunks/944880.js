@@ -1,125 +1,126 @@
-var i = r(47120);
-var a = r(913527),
-    o = r.n(a),
-    s = r(570140),
-    l = r(147913),
-    u = r(335131),
-    c = r(228624),
-    d = r(959546),
-    f = r(594174),
-    p = r(580130),
-    h = r(111361),
-    _ = r(470918),
-    m = r(595878),
-    g = r(513785),
-    E = r(106255),
-    v = r(474936);
-function y(e, n, r) {
+n.d(t, { Z: () => w }), n(47120);
+var i = n(913527),
+    r = n.n(i),
+    a = n(570140),
+    s = n(147913),
+    o = n(335131),
+    l = n(228624),
+    u = n(959546),
+    c = n(594174),
+    d = n(580130),
+    f = n(111361),
+    _ = n(470918),
+    p = n(595878),
+    h = n(513785),
+    m = n(106255),
+    g = n(474936);
+function E(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let b = null,
-    I = !1,
-    T = 1209600000,
-    S = 86400000;
-function A(e) {
-    let n = d.Z.createFromServer(e.entitlement);
-    (0, E._k)(n)
-        ? C({ forceRefresh: !0 })
-        : (0, E.YE)(n)
-          ? null != g.Z.getTenureRewardStatusForRewardId(n.skuId) &&
-            s.Z.dispatch({
+let v = null,
+    y = !1,
+    I = 1209600000,
+    b = 86400000;
+function T(e) {
+    let t = u.Z.createFromServer(e.entitlement);
+    (0, m._k)(t)
+        ? S({ forceRefresh: !0 })
+        : (0, m.YE)(t)
+          ? null != h.Z.getTenureRewardStatusForRewardId(t.skuId) &&
+            a.Z.dispatch({
                 type: 'USER_TENURE_REWARD_STATUS_DELETE',
-                tenureRewardIds: [n.skuId]
+                tenureRewardIds: [t.skuId]
             })
-          : (0, E.km)(n) &&
-            (0, u.qg)({
-                variantsReturnStyle: (0, c.oj)('TenureRewardManager'),
+          : (0, m.km)(t) &&
+            (0, o.qg)({
+                variantsReturnStyle: (0, l.oj)('TenureRewardManager'),
                 location: 'tenure_reward_manager'
             });
 }
-function C() {
+function S() {
     let { forceRefresh: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    x();
-    let n = p.Z.getForApplication(v.CL),
-        r = (0, E.kG)(n),
-        i = f.default.getCurrentUser();
-    if (!(0, h.M5)(i, v.p9.TIER_2) && null == r) {
-        null != i && s.Z.dispatch({ type: 'USER_TENURE_REWARD_STATUS_RESET' });
+    D();
+    let t = d.Z.getForApplication(g.CL),
+        n = (0, m.kG)(t),
+        i = c.default.getCurrentUser();
+    if (!(0, f.M5)(i, g.p9.TIER_2) && null == n) {
+        null != i && a.Z.dispatch({ type: 'USER_TENURE_REWARD_STATUS_RESET' });
         return;
     }
-    if (!!(0, m.dR)({ location: 'tenure_reward_manager' }))
-        if (!0 === e || O(i)) L();
+    if ((0, p.dR)({ location: 'tenure_reward_manager' })) {
+        if (!0 === e || C(i)) O();
         else {
-            let e = p.Z.getForApplication(v.CL);
+            let e = d.Z.getForApplication(g.CL);
             if (null == e) return;
-            let n = Array.from(e)
-                .filter((e) => null != g.Z.getTenureRewardStatusForRewardId(e.skuId))
+            let t = Array.from(e)
+                .filter((e) => null != h.Z.getTenureRewardStatusForRewardId(e.skuId))
                 .map((e) => e.skuId);
-            n.length > 0 &&
-                s.Z.dispatch({
+            t.length > 0 &&
+                a.Z.dispatch({
                     type: 'USER_TENURE_REWARD_STATUS_DELETE',
-                    tenureRewardIds: n
+                    tenureRewardIds: t
                 });
         }
+    }
+}
+function A() {
+    let e = h.Z.getState();
+    return null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > I;
 }
 function N() {
-    let e = g.Z.getState();
-    return null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > T;
+    let e = (0, m.GT)();
+    return null != e && null != e.redeemable_at && 0 >= r()(e.redeemable_at).diff(r().utc(), 'seconds');
+}
+function C(e) {
+    if (h.Z.getFetchState() !== h.M.FETCHED) return !0;
+    let t = (0, m.GT)();
+    return (null != t && null != e && e.id !== t.user_id) || A() || N();
 }
 function R() {
-    let e = (0, E.GT)();
-    return null != e && null != e.redeemable_at && 0 >= o()(e.redeemable_at).diff(o().utc(), 'seconds');
+    if ((D(), h.Z.getFetchState() !== h.M.FETCHED || y)) return;
+    let e = (0, m.GT)();
+    if ((null == e ? void 0 : e.redeemable_at) == null) return;
+    let t = (null == e ? void 0 : e.redeemable_at) != null ? new Date(e.redeemable_at).getTime() - Date.now() : null;
+    null != t && t > 0 && (v = setTimeout(S, t));
 }
-function O(e) {
-    if (g.Z.getFetchState() !== g.M.FETCHED) return !0;
-    let n = (0, E.GT)();
-    return (null != n && null != e && e.id !== n.user_id) || N() || R();
+async function O() {
+    !y && ((y = !0), await _.V(), (y = !1), a.Z.wait(() => R()));
 }
 function D() {
-    if ((x(), g.Z.getFetchState() !== g.M.FETCHED || I)) return;
-    let e = (0, E.GT)();
-    if ((null == e ? void 0 : e.redeemable_at) == null) return;
-    let n = (null == e ? void 0 : e.redeemable_at) != null ? new Date(e.redeemable_at).getTime() - Date.now() : null;
-    null != n && n > 0 && (b = setTimeout(C, n));
-}
-async function L() {
-    if (!I) (I = !0), await _.V(), (I = !1), s.Z.wait(() => D());
+    clearTimeout(v), (v = null);
 }
 function x() {
-    clearTimeout(b), (b = null);
+    D();
 }
-function w() {
-    x();
+function L() {
+    S();
 }
-function P() {
-    C();
-}
-class M extends l.Z {
+class P extends s.Z {
     forceRefreshIfOutdated() {
-        let e = g.Z.getState();
-        null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > S && C({ forceRefresh: !0 });
+        let e = h.Z.getState();
+        null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > b && S({ forceRefresh: !0 });
     }
     constructor(...e) {
         super(...e),
-            y(this, 'actions', {
-                POST_CONNECTION_OPEN: P,
-                CONNECTION_CLOSED: w,
-                ENTITLEMENT_FETCH_APPLICATION_SUCCESS: () => C(),
-                ENTITLEMENT_CREATE: A,
-                ENTITLEMENT_UPDATE: () => C(),
-                ENTITLEMENT_DELETE: () => C(),
-                LOGOUT: x
+            E(this, 'actions', {
+                POST_CONNECTION_OPEN: L,
+                CONNECTION_CLOSED: x,
+                ENTITLEMENT_FETCH_APPLICATION_SUCCESS: () => S(),
+                ENTITLEMENT_CREATE: T,
+                ENTITLEMENT_UPDATE: () => S(),
+                ENTITLEMENT_DELETE: () => S(),
+                LOGOUT: D
             });
     }
 }
-n.Z = new M();
+let w = new P();

@@ -1,25 +1,21 @@
-r.d(t, {
-    a: function () {
-        return s;
-    }
-});
-var a = r(140955),
-    n = r(202937),
-    _ = r(416987),
-    o = r(596308),
-    E = r(622574),
-    i = r(873712);
-let c = [1800, 3000],
-    s = (e, t = {}) => {
-        (0, i.A)(() => {
-            let r;
-            let i = (0, _.Y)(),
-                s = (0, o.I)('FCP'),
-                l = (0, E.N)('paint', (e) => {
-                    e.forEach((e) => {
-                        'first-contentful-paint' === e.name && (l.disconnect(), e.startTime < i.firstHiddenTime && ((s.value = Math.max(e.startTime - (0, n.A)(), 0)), s.entries.push(e), r(!0)));
+a.d(e, { a: () => E });
+var r = a(140955),
+    n = a(202937),
+    o = a(416987),
+    _ = a(596308),
+    i = a(622574),
+    c = a(873712);
+let s = [1800, 3000],
+    E = (t, e = {}) => {
+        (0, c.A)(() => {
+            let a;
+            let c = (0, o.Y)(),
+                E = (0, _.I)('FCP'),
+                l = (0, i.N)('paint', (t) => {
+                    t.forEach((t) => {
+                        'first-contentful-paint' === t.name && (l.disconnect(), t.startTime < c.firstHiddenTime && ((E.value = Math.max(t.startTime - (0, n.A)(), 0)), E.entries.push(t), a(!0)));
                     });
                 });
-            l && (r = (0, a._)(e, s, c, t.reportAllChanges));
+            l && (a = (0, r._)(t, E, s, e.reportAllChanges));
         });
     };

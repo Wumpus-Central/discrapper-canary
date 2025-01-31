@@ -1,26 +1,20 @@
-t.d(n, {
-    Z: function () {
-        return m;
-    }
-}),
-    t(724458),
-    t(47120);
-var i = t(192379),
-    l = t(392711),
-    a = t.n(l),
-    o = t(911969),
-    r = t(254711),
-    s = t(213459),
-    c = t(10718),
-    d = t(148958),
-    u = t(689079);
+n.d(t, { Z: () => m }), n(724458), n(47120);
+var i = n(192379),
+    l = n(392711),
+    a = n.n(l),
+    o = n(911969),
+    s = n(254711),
+    r = n(213459),
+    c = n(10718),
+    d = n(148958),
+    u = n(689079);
 function m(e) {
-    var n;
-    let { context: t } = e,
-        l = 'channel' === t.type ? t.channel : void 0,
-        m = (0, s.LD)(null == l ? void 0 : l.guild_id, !0),
+    var t;
+    let { context: n } = e,
+        l = 'channel' === n.type ? n.channel : void 0,
+        m = (0, r.LD)(null == l ? void 0 : l.guild_id, !0),
         { commandsByActiveSection: p, loading: h } = c.wi({
-            context: t,
+            context: n,
             filters: {
                 commandTypes: [o.yU.CHAT, o.yU.PRIMARY_ENTRY_POINT]
             },
@@ -31,38 +25,37 @@ function m(e) {
             },
             allowFetch: !0
         }),
-        f = i.useMemo(
+        v = i.useMemo(
             () =>
-                p.reduce((e, n) => {
-                    let { section: t, data: i } = n;
-                    return i.length > 0 && e.add(t.id), e;
+                p.reduce((e, t) => {
+                    let { section: n, data: i } = t;
+                    return i.length > 0 && e.add(n.id), e;
                 }, new Set()),
             [p]
         ),
-        C = i.useMemo(() => {
-            var e, n;
-            return Object.values(null !== (n = null === (e = m.result) || void 0 === e ? void 0 : e.sections) && void 0 !== n ? n : {})
+        x = i.useMemo(() => {
+            var e, t;
+            return Object.values(null !== (t = null === (e = m.result) || void 0 === e ? void 0 : e.sections) && void 0 !== t ? t : {})
                 .map((e) => {
-                    let { descriptor: n } = e;
-                    return n;
+                    let { descriptor: t } = e;
+                    return t;
                 })
-                .filter((e) => !(e.id in r.Tm) && f.has(e.id));
-        }, [null === (n = m.result) || void 0 === n ? void 0 : n.sections, f]),
-        v = (0, d.h)(C),
-        x = i.useMemo(
+                .filter((e) => !(e.id in s.Tm) && v.has(e.id));
+        }, [null === (t = m.result) || void 0 === t ? void 0 : t.sections, v]),
+        f = (0, d.h)(x);
+    return {
+        appsInThisServer: i.useMemo(
             () =>
                 a()
                     .compact(
-                        v.map((e) => {
-                            let { application: n } = e;
-                            return n;
+                        f.map((e) => {
+                            let { application: t } = e;
+                            return t;
                         })
                     )
                     .map((e) => ({ application: e })),
-            [v]
-        );
-    return {
-        appsInThisServer: x,
-        isLoading: m.fetchState.fetching || h.current
+            [f]
+        ),
+        isLoading: m.fetchState.fetching || h
     };
 }

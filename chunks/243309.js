@@ -1,49 +1,45 @@
-r.d(t, {
-    v: function () {
-        return l;
-    }
-});
-var a = r(696486),
-    n = r(263449),
-    _ = r(101284),
-    o = r(622916),
-    E = r(394798),
-    i = r(454463),
-    c = r(163162),
-    s = r(748688);
-function l(e) {
-    let t;
-    (0, s.x5)(e) && (t = 1000 * (0, _.ph)());
-    let r = (0, s.Ei)();
-    if (!r) return;
-    i.X && o.kg.log(`[Profiling] started profiling span: ${(0, a.XU)(e).description}`);
-    let l = (0, E.DM)();
-    async function I() {
-        if (!!e && !!r)
-            return r
+a.d(e, { v: () => l });
+var r = a(696486),
+    n = a(263449),
+    o = a(101284),
+    _ = a(622916),
+    i = a(394798),
+    c = a(454463),
+    s = a(163162),
+    E = a(748688);
+function l(t) {
+    let e;
+    (0, E.x5)(t) && (e = 1000 * (0, o.ph)());
+    let a = (0, E.Ei)();
+    if (!a) return;
+    c.X && _.kg.log(`[Profiling] started profiling span: ${(0, r.XU)(t).description}`);
+    let l = (0, i.DM)();
+    async function u() {
+        if (t && a)
+            return a
                 .stop()
-                .then((t) => {
-                    if ((u && (c.m9.clearTimeout(u), (u = void 0)), i.X && o.kg.log(`[Profiling] stopped profiling of span: ${(0, a.XU)(e).description}`), !t)) {
-                        i.X && o.kg.log(`[Profiling] profiler returned null profile for: ${(0, a.XU)(e).description}`, 'this may indicate an overlapping span or a call to stopProfiling with a profile title that was never started');
+                .then((e) => {
+                    if ((I && (s.m9.clearTimeout(I), (I = void 0)), c.X && _.kg.log(`[Profiling] stopped profiling of span: ${(0, r.XU)(t).description}`), !e)) {
+                        c.X && _.kg.log(`[Profiling] profiler returned null profile for: ${(0, r.XU)(t).description}`, 'this may indicate an overlapping span or a call to stopProfiling with a profile title that was never started');
                         return;
                     }
-                    (0, s.dz)(l, t);
+                    (0, E.dz)(l, e);
                 })
-                .catch((e) => {
-                    i.X && o.kg.log('[Profiling] error while stopping profiler:', e);
+                .catch((t) => {
+                    c.X && _.kg.log('[Profiling] error while stopping profiler:', t);
                 });
     }
     (0, n.nZ)().setContext('profile', {
         profile_id: l,
-        start_timestamp: t
+        start_timestamp: e
     });
-    let u = c.m9.setTimeout(() => {
-            i.X && o.kg.log('[Profiling] max profile duration elapsed, stopping profiling for:', (0, a.XU)(e).description), I();
-        }, s.WU),
-        R = e.end.bind(e);
-    e.end = function () {
-        return e
-            ? (I().then(
+    let I = s.m9.setTimeout(() => {
+            c.X && _.kg.log('[Profiling] max profile duration elapsed, stopping profiling for:', (0, r.XU)(t).description), u();
+        }, E.WU),
+        R = t.end.bind(t);
+    t.end = function () {
+        return t
+            ? (u().then(
                   () => {
                       R();
                   },
@@ -51,7 +47,7 @@ function l(e) {
                       R();
                   }
               ),
-              e)
+              t)
             : R();
     };
 }

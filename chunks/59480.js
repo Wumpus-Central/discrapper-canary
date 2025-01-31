@@ -1,36 +1,30 @@
-r.d(n, {
-    a: function () {
-        return u;
-    }
-});
-var i = r(47120);
-var a = r(653041);
-var o = r(271383),
-    s = r(594174),
-    l = r(981631);
-class u {
-    static fromMessage(e, n, r, i) {
-        let [a, o] = u.deriveMemberUsers(e, r);
+n.d(t, { a: () => s }), n(47120), n(653041);
+var i = n(271383),
+    r = n(594174),
+    a = n(981631);
+class s {
+    static fromMessage(e, t, n, i) {
+        let [r, a] = s.deriveMemberUsers(e, n);
         return {
-            id: r.id,
-            channelId: n,
-            message: r,
-            members: a,
-            users: o,
+            id: n.id,
+            channelId: t,
+            message: n,
+            members: r,
+            users: a,
             connectionId: i
         };
     }
-    static deriveMemberUsers(e, n) {
-        var r, i, a, u;
-        let c = new Set([null === (r = n.author) || void 0 === r ? void 0 : r.id, null === (i = n.interaction) || void 0 === i ? void 0 : i.user.id, ...(null !== (u = null === (a = n.mentions) || void 0 === a ? void 0 : a.map((e) => e.id)) && void 0 !== u ? u : [])]),
-            d = [],
-            f = [];
-        for (let n of c) {
-            if (null == n) continue;
-            let r = s.default.getUser(n),
-                i = o.ZP.getTrueMember(null != e ? e : l.lds, n);
-            null != r && f.push(r), null != i && d.push(i);
+    static deriveMemberUsers(e, t) {
+        var n, s, o, l;
+        let u = new Set([null === (n = t.author) || void 0 === n ? void 0 : n.id, null === (s = t.interaction) || void 0 === s ? void 0 : s.user.id, ...(null !== (l = null === (o = t.mentions) || void 0 === o ? void 0 : o.map((e) => e.id)) && void 0 !== l ? l : [])]),
+            c = [],
+            d = [];
+        for (let t of u) {
+            if (null == t) continue;
+            let n = r.default.getUser(t),
+                s = i.ZP.getTrueMember(null != e ? e : a.lds, t);
+            null != n && d.push(n), null != s && c.push(s);
         }
-        return [d, f];
+        return [c, d];
     }
 }

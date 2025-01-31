@@ -1,6 +1,7 @@
-e.exports = {
-    promotionalGiftMessage: 'promotionalGiftMessage_d84998',
-    promotionalGiftMessageText: 'promotionalGiftMessageText_d84998',
-    promotionalTextSection: 'promotionalTextSection_d84998',
-    avatar: 'avatar_d84998'
+var i = {
+    promotionalGiftMessage: 'promotionalGiftMessage__6fbbd',
+    promotionalGiftMessageText: 'promotionalGiftMessageText__6fbbd',
+    promotionalTextSection: 'promotionalTextSection__6fbbd',
+    avatar: 'avatar__6fbbd'
 };
+e.exports = i;

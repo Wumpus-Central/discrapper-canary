@@ -1,54 +1,48 @@
-r.d(n, {
-    Ng: function () {
-        return _;
-    },
-    Wp: function () {
-        return p;
-    },
-    kA: function () {
-        return f;
-    }
-});
-var i = r(47120);
-var a = r(192379),
-    o = r(442837),
-    s = r(846519),
-    l = r(594174),
-    u = r(431),
-    c = r(74538),
-    d = r(474936);
-function f(e) {
+n.d(t, {
+    Ng: () => _,
+    Wp: () => d,
+    kA: () => c
+}),
+    n(47120);
+var i = n(192379),
+    r = n(442837),
+    a = n(846519),
+    s = n(594174),
+    o = n(431),
+    l = n(74538),
+    u = n(474936);
+function c(e) {
     return null != e && null != e.expires_at && Date.now() > Date.parse(e.expires_at);
 }
-function p(e, n) {
-    var r;
-    return null != e && new Set(null === (r = e.discount) || void 0 === r ? void 0 : r.plan_ids.map((e) => d.GP[e].skuId)).has(n);
+function d(e, t) {
+    var n;
+    return null != e && new Set(null === (n = e.discount) || void 0 === n ? void 0 : n.plan_ids.map((e) => u.GP[e].skuId)).has(t);
 }
-function h(e, n) {
-    let r = (0, o.e7)([u.Z], () => u.Z.getUserDiscountOffer(e)),
-        [i, d] = a.useState(f(r)),
-        p = (0, o.e7)([l.default], () => (0, c.I5)(l.default.getCurrentUser()));
+function f(e, t) {
+    let n = (0, r.e7)([o.Z], () => o.Z.getUserDiscountOffer(e)),
+        [u, d] = i.useState(c(n)),
+        f = (0, r.e7)([s.default], () => (0, l.I5)(s.default.getCurrentUser()));
     return (
-        a.useEffect(() => {
-            if (null == r || null == r.expires_at) return;
-            let e = new s.V7(),
-                n = () => {
-                    let a = null != r.expires_at ? Date.parse(r.expires_at) - Date.now() : 0;
+        i.useEffect(() => {
+            if (null == n || null == n.expires_at) return;
+            let e = new a.V7(),
+                t = () => {
+                    let i = null != n.expires_at ? Date.parse(n.expires_at) - Date.now() : 0;
                     null == e ||
-                        e.start(a, () => {
-                            !i && f(r) ? d(!0) : n();
+                        e.start(i, () => {
+                            !u && c(n) ? d(!0) : t();
                         });
                 };
-            return n(), () => e.stop();
-        }, [i, r]),
-        i || (p && !n) ? null : r
+            return t(), () => e.stop();
+        }, [u, n]),
+        u || (f && !t) ? null : n
     );
 }
 function _() {
-    var e, n;
-    let r = h(d.hs),
-        i = h(d.RU),
-        a = h(d.rB),
-        o = h(d.ih);
-    return null !== (n = null !== (e = null != r ? r : i) && void 0 !== e ? e : a) && void 0 !== n ? n : o;
+    var e, t;
+    let n = f(u.hs),
+        i = f(u.RU),
+        r = f(u.rB),
+        a = f(u.ih);
+    return null !== (t = null !== (e = null != n ? n : i) && void 0 !== e ? e : r) && void 0 !== t ? t : a;
 }

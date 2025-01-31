@@ -1,22 +1,18 @@
-r.d(n, {
-    Z: function () {
-        return s;
-    }
-});
-var i = r(192379),
-    a = r(512722),
-    o = r.n(a);
-function s(e, n) {
-    let r = (0, i.useRef)(e);
+n.d(t, { Z: () => s });
+var i = n(192379),
+    r = n(512722),
+    a = n.n(r);
+function s(e, t) {
+    let n = (0, i.useRef)(e);
     (0, i.useEffect)(() => {
-        r.current = e;
+        n.current = e;
     }, [e]),
         (0, i.useEffect)(() => {
             function e() {
-                o()(null != r.current, 'Missing callback'), r.current();
+                a()(null != n.current, 'Missing callback'), n.current();
             }
-            if (null === n) return;
-            let i = setInterval(e, n);
+            if (null === t) return;
+            let i = setInterval(e, t);
             return () => clearInterval(i);
-        }, [n]);
+        }, [t]);
 }

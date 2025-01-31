@@ -1,126 +1,141 @@
-e.r(n),
-    e.d(n, {
-        VOICE_CHANNEL_STATUS_MODAL_KEY: function () {
-            return f;
-        },
-        default: function () {
-            return L;
-        }
-    }),
-    e(47120),
-    e(757143);
-var i = e(200651),
-    l = e(192379),
-    r = e(399606),
-    d = e(343817),
-    a = e(481060),
-    u = e(787014),
-    s = e(12498),
-    o = e(541716),
-    _ = e(752305),
-    c = e(893718),
-    E = e(600164),
-    I = e(957730),
-    g = e(19780),
-    p = e(626135),
-    T = e(981631),
-    m = e(388032),
-    C = e(752670);
+n.d(e, {
+    a: () => f,
+    default: () => G
+}),
+    n(47120),
+    n(757143);
+var i = n(200651),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
+    d = n(399606),
+    s = n(343817),
+    u = n(481060),
+    _ = n(787014),
+    o = n(904245),
+    E = n(12498),
+    c = n(541716),
+    g = n(752305),
+    I = n(893718),
+    T = n(600164),
+    p = n(540059),
+    m = n(957730),
+    C = n(19780),
+    L = n(594174),
+    S = n(626135),
+    U = n(981631),
+    N = n(388032),
+    D = n(752670);
 let f = 'VoiceChannelStatusModal';
-function L(t) {
-    let { channel: n, transitionState: e, onClose: L } = t,
-        U = (0, r.e7)([s.Z], () => s.Z.getChannelStatus(n)),
-        D = (0, r.e7)([g.Z], () => g.Z.getMediaSessionId()),
-        [S, N] = l.useState(null != U ? U : ''),
-        [G, A] = l.useState(!1),
-        [y, Z] = l.useState(null),
-        h = S.length > 500;
+function G(t) {
+    let { channel: e, transitionState: n, onClose: r } = t,
+        G = (0, d.e7)([E.Z], () => E.Z.getChannelStatus(e)),
+        A = (0, d.e7)([C.Z], () => C.Z.getMediaSessionId()),
+        [y, O] = l.useState(null != G ? G : ''),
+        [v, Z] = l.useState(!1),
+        [h, P] = l.useState(null),
+        z = (0, d.e7)([L.default], () => L.default.getCurrentUser()),
+        H = y.length > 500,
+        M = (0, p.Q3)('VoiceChannelStatusModal');
     l.useEffect(() => {
-        p.default.track(T.rMx.OPEN_MODAL, {
+        S.default.track(U.rMx.OPEN_MODAL, {
             type: 'Voice Channel Topic Modal',
-            guild_id: n.guild_id
+            guild_id: e.guild_id
         });
-    }, [n.guild_id]);
-    let O = (t) => {
-            Z(new d.Hx(t, t.status).getAnyErrorMessage());
+    }, [e.guild_id]);
+    let B = (t) => {
+            P(new s.Hx(t, t.status).getAnyErrorMessage());
         },
-        v = async (t) => {
-            S === U && L(), null == t || t.preventDefault(), Z(null), A(!0);
-            let e = S.length,
-                i = S.replace(/<(a)?:[^:]+:[0-9]+>/g, '--').length;
-            try {
-                let t = I.ZP.parse(void 0, S),
-                    l = await u.ZP.updateVoiceChannelStatus(n.id, t.content);
-                204 === l.status
-                    ? (p.default.track(T.rMx.VOICE_CHANNEL_TOPIC_SET, {
-                          guild_id: n.guild_id,
-                          channel_id: n.id,
-                          media_session_id: D,
-                          raw_length: e,
-                          text_length: i
-                      }),
-                      L())
-                    : O(l);
-            } catch (t) {
-                O(t);
+        V = (t) => {
+            let { invalidEmojis: n } = t;
+            if (null != n && n.length > 0) {
+                let { errorMessage: t } = o.Z.validateMessage(n, z, e.id);
+                return P(t), Z(!1), { hasErrors: !0 };
             }
-            A(!1);
+            return { hasErrors: !1 };
         },
-        [z, M] = l.useState((0, _.JM)(S)),
-        P = async () => (
-            !h && !G && (await v()),
+        R = async (t) => {
+            y === G && r(), null == t || t.preventDefault(), P(null), Z(!0);
+            let n = y.length,
+                i = y.replace(/<(a)?:[^:]+:[0-9]+>/g, '--').length,
+                l = m.ZP.parse(void 0, y),
+                { hasErrors: a } = V(l);
+            if (!a) {
+                try {
+                    let t = await _.ZP.updateVoiceChannelStatus(e.id, l.content);
+                    204 === t.status
+                        ? (S.default.track(U.rMx.VOICE_CHANNEL_TOPIC_SET, {
+                              guild_id: e.guild_id,
+                              channel_id: e.id,
+                              media_session_id: A,
+                              raw_length: n,
+                              text_length: i
+                          }),
+                          r())
+                        : B(t);
+                } catch (t) {
+                    B(t);
+                }
+                Z(!1);
+            }
+        },
+        [b, x] = l.useState((0, g.JM)(y)),
+        X = async () => (
+            H || v || (await R()),
             Promise.resolve({
                 shouldClear: !1,
                 shouldRefocus: !0
             })
         );
     return (0, i.jsx)('form', {
-        onSubmit: v,
-        className: C.form,
-        children: (0, i.jsxs)(a.ModalRoot, {
-            transitionState: e,
-            size: a.ModalSize.SMALL,
+        onSubmit: R,
+        className: D.form,
+        children: (0, i.jsxs)(u.Y0X, {
+            transitionState: n,
+            size: u.CgR.SMALL,
+            className: a()(D.modal, D.gradientBorder),
             children: [
-                (0, i.jsxs)(a.ModalContent, {
+                (0, i.jsxs)(u.hzk, {
+                    className: D.container,
                     children: [
-                        (0, i.jsxs)(a.ModalHeader, {
-                            direction: E.Z.Direction.VERTICAL,
-                            className: C.modalHeader,
+                        (0, i.jsxs)(u.xBx, {
+                            direction: T.Z.Direction.VERTICAL,
+                            className: D.modalHeader,
                             separator: !1,
                             children: [
-                                (0, i.jsx)(a.ModalCloseButton, {
-                                    className: C.closeButton,
-                                    onClick: L
+                                (0, i.jsx)(u.olH, {
+                                    className: D.closeButton,
+                                    onClick: r
                                 }),
-                                (0, i.jsx)('div', { className: C.headerImage }),
-                                (0, i.jsx)(a.FormTitle, {
+                                (0, i.jsx)('div', { className: D.headerImage }),
+                                (0, i.jsx)(u.vwX, {
                                     tag: 'h1',
-                                    className: C.title,
-                                    children: m.intl.string(m.t['5CyJBQ'])
+                                    className: D.title,
+                                    children: N.intl.string(N.t['5CyJBQ'])
                                 }),
-                                (0, i.jsx)(a.Text, {
+                                (0, i.jsx)(u.Text, {
                                     color: 'header-secondary',
                                     variant: 'text-sm/normal',
-                                    children: m.intl.string(m.t.NRBYjo)
+                                    children: N.intl.string(N.t.NRBYjo)
                                 })
                             ]
                         }),
-                        (0, i.jsxs)(a.FormSection, {
-                            className: C.inputSection,
-                            title: m.intl.string(m.t.Fq5lwM),
+                        (0, i.jsxs)(u.hjN, {
+                            className: D.inputSection,
+                            title: N.intl.string(N.t.Fq5lwM),
                             children: [
-                                (0, i.jsx)(c.Z, {
-                                    innerClassName: C.textArea,
-                                    textValue: S,
-                                    richValue: z,
-                                    placeholder: m.intl.formatToPlainString(m.t.DUXxBg, { channelName: n.name }),
+                                (0, i.jsx)(I.Z, {
+                                    innerClassName: D.textArea,
+                                    textValue: y,
+                                    richValue: b,
+                                    placeholder: N.intl.formatToPlainString(N.t.DUXxBg, { channelName: e.name }),
                                     focused: !0,
-                                    channel: n,
-                                    onChange: (t, n, e) => {
-                                        N(n), M(e);
+                                    channel: e,
+                                    onChange: (t, e, n) => {
+                                        O(e), x(n);
                                     },
-                                    onSubmit: P,
-                                    type: o.Ie.VOICE_CHANNEL_STATUS,
+                                    onSubmit: X,
+                                    type: c.Ie.VOICE_CHANNEL_STATUS,
                                     canMentionRoles: !1,
                                     canMentionChannels: !1,
                                     allowNewLines: !1,
@@ -129,31 +144,34 @@ function L(t) {
                                     showRemainingCharsAfterCount: 250,
                                     emojiPickerCloseOnModalOuterClick: !0
                                 }),
-                                null != y
-                                    ? (0, i.jsx)(a.FormErrorBlock, {
-                                          className: C.error,
-                                          children: y
+                                null != h
+                                    ? (0, i.jsx)(u.kzN, {
+                                          className: D.error,
+                                          children: h
                                       })
                                     : null
                             ]
                         })
                     ]
                 }),
-                (0, i.jsxs)(a.ModalFooter, {
-                    justify: E.Z.Justify.BETWEEN,
-                    direction: E.Z.Direction.HORIZONTAL,
+                (0, i.jsxs)(u.mzw, {
+                    justify: M ? T.Z.Justify.END : T.Z.Justify.BETWEEN,
+                    direction: T.Z.Direction.HORIZONTAL,
+                    className: D.modalFooter,
                     children: [
-                        (0, i.jsx)(a.Button, {
-                            color: a.Button.Colors.PRIMARY,
-                            onClick: L,
-                            children: m.intl.string(m.t['ETE/oK'])
+                        (0, i.jsx)(u.zxk, {
+                            look: u.zxk.Looks.FILLED,
+                            color: u.zxk.Colors.PRIMARY,
+                            className: D.cancelButton,
+                            onClick: r,
+                            children: N.intl.string(N.t['ETE/oK'])
                         }),
-                        (0, i.jsx)(a.Button, {
-                            onClick: v,
-                            submitting: G,
-                            className: C.button,
-                            disabled: h,
-                            children: m.intl.string(m.t.XqK2Iy)
+                        (0, i.jsx)(u.zxk, {
+                            onClick: R,
+                            submitting: v,
+                            className: D.button,
+                            disabled: H,
+                            children: N.intl.string(N.t.XqK2Iy)
                         })
                     ]
                 })

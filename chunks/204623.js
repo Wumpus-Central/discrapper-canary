@@ -1,93 +1,88 @@
-r.d(n, {
-    Z: function () {
-        return C;
-    }
-});
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(525654),
-    l = r.n(s),
-    u = r(765053),
-    c = r(442837),
-    d = r(336317),
-    f = r(481060),
-    p = r(596454),
-    h = r(406128),
-    _ = r(451478),
-    m = r(176354),
-    g = r(63063),
-    E = r(358085),
-    v = r(998502),
-    y = r(151851),
-    b = r(981631),
-    I = r(388032);
-function T(e, n, r) {
+n.d(t, { Z: () => S }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(525654),
+    s = n.n(a),
+    o = n(765053),
+    l = n(442837),
+    u = n(336317),
+    c = n(481060),
+    d = n(596454),
+    f = n(406128),
+    _ = n(451478),
+    p = n(176354),
+    h = n(63063),
+    m = n(358085),
+    g = n(998502),
+    E = n(151851),
+    v = n(981631),
+    y = n(388032);
+function I(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-function S() {
+function b() {
     let e = window.require('electron').remote.getCurrentWindow();
-    (v.ZP.minimize = () => e.minimize()),
-        (v.ZP.maximize = () => {
+    (g.ZP.minimize = () => e.minimize()),
+        (g.ZP.maximize = () => {
             e.isMaximized() ? e.unmaximize() : e.maximize();
         }),
-        (v.ZP.close = () => e.close());
+        (g.ZP.close = () => e.close());
 }
-let A = c.ZP.connectStores([_.Z], () => ({ focused: _.Z.isFocused() }))(y.Z);
-class C extends o.PureComponent {
+let T = l.ZP.connectStores([_.Z], () => ({ focused: _.Z.isFocused() }))(E.Z);
+class S extends r.PureComponent {
     getPlatform() {
         var e;
-        let n = null === (e = l().os) || void 0 === e ? void 0 : e.family;
-        return null != n && /^win/i.test(n) ? E.PlatformTypes.WINDOWS : null != n && /darwin|os x/i.test(n) ? E.PlatformTypes.OSX : E.PlatformTypes.LINUX;
+        let t = null === (e = s().os) || void 0 === e ? void 0 : e.family;
+        return null != t && /^win/i.test(t) ? m.PlatformTypes.WINDOWS : null != t && /darwin|os x/i.test(t) ? m.PlatformTypes.OSX : m.PlatformTypes.LINUX;
     }
     componentDidMount() {
-        S();
+        b();
     }
     render() {
-        let e = (0, a.jsx)('div', {
-                children: (0, a.jsxs)('p', {
+        let e = (0, i.jsx)('div', {
+                children: (0, i.jsxs)('p', {
                     children: [
-                        I.intl.string(I.t['4tRjHB']),
+                        y.intl.string(y.t['4tRjHB']),
                         ' ',
-                        (0, a.jsx)(p.Z, {
-                            src: m.ZP.getURL(d.Z.convert.fromCodePoint('1f44c')),
+                        (0, i.jsx)(d.Z, {
+                            src: p.ZP.getURL(u.Z.convert.fromCodePoint('1f44c')),
                             emojiName: ':ok_hand:',
                             animated: !1
                         })
                     ]
                 })
             }),
-            n = (0, a.jsx)(f.Button, {
-                size: f.ButtonSizes.LARGE,
+            t = (0, i.jsx)(c.zxk, {
+                size: c.PhG.LARGE,
                 onClick: this.handleDownload,
-                children: I.intl.string(I.t['1WjMbG'])
+                children: y.intl.string(y.t['1WjMbG'])
             });
-        return (0, a.jsxs)(o.Fragment, {
+        return (0, i.jsxs)(r.Fragment, {
             children: [
-                (0, a.jsx)(u.ql, { children: (0, a.jsx)('html', { className: (0, f.getThemeClass)(b.BRd.DARK) }) }),
-                (0, a.jsx)(A, { type: this.getPlatform() }),
-                (0, a.jsx)(h.Z, {
-                    title: I.intl.string(I.t['3h+n+/']),
+                (0, i.jsx)(o.ql, { children: (0, i.jsx)('html', { className: (0, c.QeD)(v.BRd.DARK) }) }),
+                (0, i.jsx)(T, { type: this.getPlatform() }),
+                (0, i.jsx)(f.Z, {
+                    title: y.intl.string(y.t['3h+n+/']),
                     note: e,
-                    action: n
+                    action: t
                 })
             ]
         });
     }
     constructor(...e) {
         super(...e),
-            T(this, 'handleDownload', () => {
-                window.open(this.getPlatform() === E.PlatformTypes.WINDOWS ? g.Z.getArticleURL(b.BhN.CORRUPT_INSTALLATION) : b.EYA.DOWNLOAD);
+            I(this, 'handleDownload', () => {
+                window.open(this.getPlatform() === m.PlatformTypes.WINDOWS ? h.Z.getArticleURL(v.BhN.CORRUPT_INSTALLATION) : v.EYA.DOWNLOAD);
             });
     }
 }

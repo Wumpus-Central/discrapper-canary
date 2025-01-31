@@ -1,99 +1,89 @@
-r.d(n, {
-    B_: function () {
-        return L;
-    },
-    MO: function () {
-        return b;
-    },
-    _M: function () {
-        return I;
-    },
-    k5: function () {
-        return O;
-    },
-    q5: function () {
-        return T;
-    }
-});
+n.d(t, {
+    B_: () => O,
+    MO: () => v,
+    _M: () => y,
+    k5: () => C,
+    q5: () => I
+}),
+    n(47120);
 var i,
+    r,
     a,
-    o,
-    s = r(47120);
-var l = r(544891),
-    u = r(70956),
-    c = r(591759),
-    d = r(981631);
-let f = (e) => (null == e ? void 0 : e.split(':')[0]);
-function p(e) {
+    s = n(544891),
+    o = n(70956),
+    l = n(591759),
+    u = n(981631);
+let c = (e) => (null == e ? void 0 : e.split(':')[0]);
+function d(e) {
     return 'localhost' === e || '127.0.0.1' === e;
 }
-let h = new Set(['/attachments/', '/ephemeral-attachments/']),
+let f = new Set(['/attachments/', '/ephemeral-attachments/']),
     _ = new Set(['/external/']),
-    m = 1 * u.Z.Millis.HOUR,
-    g = new Set([window.GLOBAL_ENV.CDN_HOST, null === (i = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) || void 0 === i ? void 0 : i.substring(2)].map(f).filter(Boolean)),
-    E = new Set(
-        (null !== (o = null === (a = window.GLOBAL_ENV.IMAGE_PROXY_ENDPOINTS) || void 0 === a ? void 0 : a.split(',')) && void 0 !== o ? o : [])
+    p = 1 * o.Z.Millis.HOUR,
+    h = new Set([window.GLOBAL_ENV.CDN_HOST, null === (i = window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT) || void 0 === i ? void 0 : i.substring(2)].map(c).filter(Boolean)),
+    m = new Set(
+        (null !== (a = null === (r = window.GLOBAL_ENV.IMAGE_PROXY_ENDPOINTS) || void 0 === r ? void 0 : r.split(',')) && void 0 !== a ? a : [])
             .map((e) => e.substring(2))
-            .map(f)
+            .map(c)
             .filter(Boolean)
     ),
-    v = !1,
-    y = !1;
-function b(e) {
-    let n = g.has(e.hostname),
-        r = v && p(e.hostname),
-        i = Array.from(h).some((n) => e.pathname.startsWith(n));
-    return (n || r) && i;
+    g = !1,
+    E = !1;
+function v(e) {
+    let t = h.has(e.hostname),
+        n = g && d(e.hostname),
+        i = Array.from(f).some((t) => e.pathname.startsWith(t));
+    return (t || n) && i;
+}
+function y(e) {
+    var t;
+    let n = m.has(e.hostname),
+        i = E && d(null !== (t = e.hostname) && void 0 !== t ? t : ''),
+        r = Array.from(_).some((t) => e.pathname.startsWith(t));
+    return (n || i) && r;
 }
 function I(e) {
-    var n;
-    let r = E.has(e.hostname),
-        i = y && p(null !== (n = e.hostname) && void 0 !== n ? n : ''),
-        a = Array.from(_).some((n) => e.pathname.startsWith(n));
-    return (r || i) && a;
+    let t = l.Z.toURLSafe(e);
+    if (null == t) return e;
+    for (let e of ['ex', 'is', 'hm']) t.searchParams.delete(e);
+    return t;
+}
+function b(e) {
+    let t = e.searchParams.get('ex'),
+        n = parseInt(null != t ? t : '', 16);
+    return isNaN(n) ? void 0 : n * o.Z.Millis.SECOND;
 }
 function T(e) {
-    let n = c.Z.toURLSafe(e);
-    if (null == n) return e;
-    for (let e of ['ex', 'is', 'hm']) n.searchParams.delete(e);
-    return n;
+    let t = b(e);
+    return null == t || t <= Date.now() + p;
 }
 function S(e) {
-    let n = e.searchParams.get('ex'),
-        r = parseInt(null != n ? n : '', 16);
-    return isNaN(r) ? void 0 : r * u.Z.Millis.SECOND;
+    let t = l.Z.toURLSafe(e.url);
+    return null != t && T(t);
 }
 function A(e) {
-    let n = S(e);
-    return null == n || n <= Date.now() + m;
-}
-function C(e) {
-    let n = c.Z.toURLSafe(e.url);
-    return null != n && A(n);
+    if (null == e) return !1;
+    let t = l.Z.toURLSafe(e.url);
+    return !!(null != t && v(t)) && T(t);
 }
 function N(e) {
-    if (null == e) return !1;
-    let n = c.Z.toURLSafe(e.url);
-    return !!(null != n && b(n)) && A(n);
+    var t;
+    return A(e.image) || (null === (t = e.images) || void 0 === t ? void 0 : t.some(A)) || A(e.video);
 }
-function R(e) {
-    var n;
-    return N(e.image) || (null === (n = e.images) || void 0 === n ? void 0 : n.some(N)) || N(e.video);
+function C(e) {
+    return e.attachments.some(S) || e.embeds.some(N);
 }
-function O(e) {
-    return e.attachments.some(C) || e.embeds.some(R);
-}
-async function D(e) {
-    let n = await l.tn.post({
-        url: d.ANM.ATTACHMENTS_REFRESH_URLS,
+async function R(e) {
+    let t = await s.tn.post({
+        url: u.ANM.ATTACHMENTS_REFRESH_URLS,
         body: { attachment_urls: [e] },
         rejectWithError: !1
     });
-    return n.ok ? n.body.refreshed_urls[0].refreshed : void 0;
+    return t.ok ? t.body.refreshed_urls[0].refreshed : void 0;
 }
-async function L(e) {
-    let n = c.Z.toURLSafe(e);
-    if (null == n || !A(n)) return e;
-    let r = await D(e);
-    return null != r ? r : e;
+async function O(e) {
+    let t = l.Z.toURLSafe(e);
+    if (null == t || !T(t)) return e;
+    let n = await R(e);
+    return null != n ? n : e;
 }

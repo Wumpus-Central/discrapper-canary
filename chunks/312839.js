@@ -1,34 +1,30 @@
 n.d(t, {
-    P: function () {
-        return d;
-    },
-    R: function () {
-        return c;
-    }
+    P: () => c,
+    R: () => d
 });
 var i = n(13245),
     s = n(556296),
-    r = n(237997),
-    o = n(13140),
-    a = n(981631),
-    l = n(987650);
-function c(e, t) {
+    l = n(237997),
+    r = n(13140),
+    o = n(981631),
+    a = n(987650);
+function d(e, t) {
     return {
         trackView() {
-            i.Z.track(a.rMx.NOTIFICATION_VIEWED, t), i.Z.notificationEvent(e, l.bv.Viewed);
+            i.Z.track(o.rMx.NOTIFICATION_VIEWED, t), i.Z.notificationEvent(e, a.bv.Viewed);
         },
         trackClick(n) {
-            let s = r.Z.isInstanceLocked() ? a.Sbl.LOCKED_OVERLAY : a.Sbl.UNLOCKED_OVERLAY;
-            i.Z.track(a.rMx.NOTIFICATION_CLICKED, {
+            let s = l.Z.isInstanceLocked() ? o.Sbl.LOCKED_OVERLAY : o.Sbl.UNLOCKED_OVERLAY;
+            i.Z.track(o.rMx.NOTIFICATION_CLICKED, {
                 ...t,
                 location: s,
                 action_type: n
             }),
-                i.Z.notificationEvent(e, l.bv.Clicked);
+                i.Z.notificationEvent(e, a.bv.Clicked);
         }
     };
 }
-function d() {
+function c() {
     let e = s.Z.getOverlayKeybind();
-    return null != e ? (0, o.BB)(e.shortcut, !0).split(' + ') : ['???'];
+    return null != e ? (0, r.BB)(e.shortcut, !0).split(' + ') : ['???'];
 }

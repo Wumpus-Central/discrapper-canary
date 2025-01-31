@@ -1,15 +1,11 @@
 n.d(t, {
-    O: function () {
-        return a;
-    },
-    h: function () {
-        return o;
-    }
+    O: () => r,
+    h: () => o
 });
-var i = n(593472),
-    l = n(70956),
-    r = n(981631);
-let a = {
+var l = n(593472),
+    i = n(70956),
+    a = n(981631);
+let r = {
         None: void 0,
         Terraria: {
             id: '356943499456937984',
@@ -26,10 +22,10 @@ let a = {
             pid: 1234,
             pidPath: [],
             windowHandle: '13229',
-            fullscreenType: i.Jx.BORDERLESS_FULLSCREEN,
+            fullscreenType: l.Jx.BORDERLESS_FULLSCREEN,
             isLauncher: !1,
-            start: Date.now() - l.Z.Millis.HOUR,
-            distributor: r.GQo.STEAM
+            start: Date.now() - i.Z.Millis.HOUR,
+            distributor: a.GQo.STEAM
         }
     },
-    o = Object.keys(a);
+    o = Object.keys(r);

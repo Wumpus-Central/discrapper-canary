@@ -1,12 +1,11 @@
-i = { value: !0 };
-var i,
-    a = r(929527);
-Object.keys(a).forEach(function (e) {
+Object.defineProperty(t, '__esModule', { value: !0 });
+var i = n(929527);
+Object.keys(i).forEach(function (e) {
     'default' !== e &&
-        Object.defineProperty(n, e, {
+        Object.defineProperty(t, e, {
             enumerable: !0,
             get: function () {
-                return a[e];
+                return i[e];
             }
         });
 });

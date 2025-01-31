@@ -1,63 +1,60 @@
-r.d(n, {
-    Fq: function () {
-        return h;
-    },
-    Zj: function () {
-        return f;
-    }
-});
+n.d(t, {
+    Fq: () => f,
+    ZP: () => p,
+    Zj: () => c
+}),
+    n(47120);
 var i,
-    a = r(47120);
-var o = r(200651),
-    s = r(192379),
-    l = r(53281),
-    u = r(869783),
-    c = r(388032);
-function d(e, n, r) {
+    r = n(200651),
+    a = n(192379),
+    s = n(53281),
+    o = n(869783),
+    l = n(388032);
+function u(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-function f() {
+function c() {
     return [
         {
-            name: c.intl.string(c.t.Sp2NFx),
+            name: l.intl.string(l.t.Sp2NFx),
             extensions: ['jpg', 'jpeg', 'png', 'gif']
         }
     ];
 }
-function p(e, n) {
+function d(e, t) {
     if (null != e) {
-        let r = new FileReader();
-        (r.onload = (r) => {
+        let n = new FileReader();
+        (n.onload = (n) => {
             var i;
-            'string' == typeof (null === (i = r.target) || void 0 === i ? void 0 : i.result) && n(r.target.result, e);
+            'string' == typeof (null === (i = n.target) || void 0 === i ? void 0 : i.result) && t(n.target.result, e);
         }),
-            r.readAsDataURL(e);
+            n.readAsDataURL(e);
     }
 }
-function h(e, n, r) {
-    p(e, (i) => {
-        if (e.type === u.m.MP4) return n(i, e);
-        let a = new Image();
-        (a.src = i),
-            (a.onload = () => {
-                n(i, e);
+function f(e, t, n) {
+    d(e, (i) => {
+        if (e.type === o.m.MP4) return t(i, e);
+        let r = new Image();
+        (r.src = i),
+            (r.onload = () => {
+                t(i, e);
             }),
-            (a.onerror = () => {
-                r();
+            (r.onerror = () => {
+                n();
             });
     });
 }
-class _ extends (i = s.PureComponent) {
+class _ extends (i = a.PureComponent) {
     componentDidMount() {
         this._isMounted = !0;
     }
@@ -66,50 +63,50 @@ class _ extends (i = s.PureComponent) {
         null === (e = this._ref.current) || void 0 === e || e.activateUploadDialogue();
     }
     render() {
-        let { multiple: e, disabled: n, className: r, tabIndex: i, 'aria-label': a, filters: s } = this.props;
-        return (0, o.jsx)(l.Z, {
+        let { multiple: e, disabled: t, className: n, tabIndex: i, 'aria-label': a, filters: o } = this.props;
+        return (0, r.jsx)(s.Z, {
             ref: this._ref,
             onChange: this.handleFileChange,
-            filters: null != s ? s : f(),
+            filters: null != o ? o : c(),
             multiple: e,
-            disabled: n,
-            className: r,
+            disabled: t,
+            className: n,
             tabIndex: i,
             'aria-label': a
         });
     }
     constructor(...e) {
         super(...e),
-            d(this, '_ref', s.createRef()),
-            d(this, '_isMounted', !1),
-            d(this, 'handleFileChange', (e) => {
-                let { onFileSizeError: n, maxFileSizeBytes: r } = this.props;
+            u(this, '_ref', a.createRef()),
+            u(this, '_isMounted', !1),
+            u(this, 'handleFileChange', (e) => {
+                let { onFileSizeError: t, maxFileSizeBytes: n } = this.props;
                 if ((e.stopPropagation(), e.preventDefault(), null != e.currentTarget.files))
                     for (let i = 0; i < e.currentTarget.files.length; i++) {
-                        let a = e.currentTarget.files[i];
-                        if (a.size > r) {
-                            null == n || n(r, a.size);
+                        let r = e.currentTarget.files[i];
+                        if (r.size > n) {
+                            null == t || t(n, r.size);
                             continue;
                         }
-                        h(a, this.handleFileRead, this.handleFileError);
+                        f(r, this.handleFileRead, this.handleFileError);
                     }
             }),
-            d(this, 'handleFileRead', (e, n) => {
-                let { onChange: r } = this.props;
-                this._isMounted && r(e, n);
+            u(this, 'handleFileRead', (e, t) => {
+                let { onChange: n } = this.props;
+                this._isMounted && n(e, t);
             }),
-            d(this, 'handleFileError', async () => {
-                let { openUploadError: e } = await Promise.resolve().then(r.bind(r, 531643));
+            u(this, 'handleFileError', async () => {
+                let { openUploadError: e } = await Promise.resolve().then(n.bind(n, 531643));
                 e({
-                    title: c.intl.string(c.t['0egKg4']),
-                    help: c.intl.string(c.t['7PnXqq'])
+                    title: l.intl.string(l.t['0egKg4']),
+                    help: l.intl.string(l.t['7PnXqq'])
                 });
             });
     }
 }
-d(_, 'defaultProps', {
+u(_, 'defaultProps', {
     multiple: !0,
     tabIndex: -1,
     maxFileSizeBytes: 1 / 0
-}),
-    (n.ZP = _);
+});
+let p = _;

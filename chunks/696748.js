@@ -1,47 +1,41 @@
-e.d(n, {
-    a: function () {
-        return O;
-    }
-}),
-    e(411104),
-    e(47120);
-var i = e(200651),
-    l = e(192379),
-    o = e(913527),
-    r = e.n(o),
-    a = e(442837),
-    s = e(481060),
-    c = e(372123),
-    d = e(224706),
-    u = e(812206),
-    p = e(600164),
-    h = e(293245),
-    f = e(626135),
-    C = e(981631),
-    y = e(388032),
-    N = e(678099),
-    m = e(232186);
-function g(t, n, e) {
+n.d(e, { a: () => O }), n(411104), n(47120);
+var i = n(200651),
+    l = n(192379),
+    a = n(913527),
+    s = n.n(a),
+    o = n(442837),
+    r = n(481060),
+    c = n(372123),
+    d = n(224706),
+    u = n(812206),
+    p = n(600164),
+    h = n(293245),
+    f = n(626135),
+    C = n(981631),
+    y = n(388032),
+    N = n(678099),
+    m = n(232186);
+function g(t, e, n) {
     return (
-        n in t
-            ? Object.defineProperty(t, n, {
-                  value: e,
+        e in t
+            ? Object.defineProperty(t, e, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (t[n] = e),
+            : (t[e] = n),
         t
     );
 }
-class T extends l.PureComponent {
-    renderConflictButton(t, n, e, l) {
-        return (0, i.jsxs)(s.Button, {
+class A extends l.PureComponent {
+    renderConflictButton(t, e, n, l) {
+        return (0, i.jsxs)(r.zxk, {
             className: N.conflictButton,
             innerClassName: N.conflictButtonInner,
             onClick: l,
             children: [
-                (0, i.jsx)('div', { className: e }),
+                (0, i.jsx)('div', { className: n }),
                 (0, i.jsxs)('div', {
                     className: N.buttonBody,
                     children: [
@@ -52,7 +46,7 @@ class T extends l.PureComponent {
                         (0, i.jsx)('div', { children: y.intl.string(y.t.gflHOz) }),
                         (0, i.jsx)('div', {
                             className: N.timestamp,
-                            children: r()(n).calendar()
+                            children: s()(e).calendar()
                         })
                     ]
                 })
@@ -63,7 +57,7 @@ class T extends l.PureComponent {
         let { application: t } = this.props;
         return (0, i.jsxs)(l.Fragment, {
             children: [
-                (0, i.jsxs)(s.ModalContent, {
+                (0, i.jsxs)(r.hzk, {
                     children: [
                         (0, i.jsx)(p.Z, {
                             justify: p.Z.Justify.CENTER,
@@ -75,15 +69,15 @@ class T extends l.PureComponent {
                         })
                     ]
                 }),
-                (0, i.jsx)(s.ModalFooter, {
+                (0, i.jsx)(r.mzw, {
                     children: (0, i.jsxs)(p.Z, {
                         justify: p.Z.Justify.BETWEEN,
                         children: [
-                            (0, i.jsx)(s.Button, {
+                            (0, i.jsx)(r.zxk, {
                                 className: N.linkButton,
                                 size: N.linkButtonSize,
-                                look: s.Button.Looks.LINK,
-                                color: s.Button.Colors.PRIMARY,
+                                look: r.zxk.Looks.LINK,
+                                color: r.zxk.Colors.PRIMARY,
                                 onClick: this.onClose,
                                 children: y.intl.string(y.t['ETE/oK'])
                             }),
@@ -91,14 +85,14 @@ class T extends l.PureComponent {
                                 direction: p.Z.Direction.HORIZONTAL,
                                 justify: p.Z.Justify.END,
                                 children: [
-                                    (0, i.jsx)(s.Button, {
-                                        look: s.Button.Looks.LINK,
-                                        color: s.Button.Colors.PRIMARY,
+                                    (0, i.jsx)(r.zxk, {
+                                        look: r.zxk.Looks.LINK,
+                                        color: r.zxk.Colors.PRIMARY,
                                         onClick: () => this.handlePlay(),
                                         className: N.retryButton,
                                         children: y.intl.string(y.t['5911LS'])
                                     }),
-                                    (0, i.jsx)(s.Button, {
+                                    (0, i.jsx)(r.zxk, {
                                         onClick: () => this.handlePlay(!1),
                                         children: y.intl.string(y.t['359PbW'])
                                     })
@@ -111,16 +105,16 @@ class T extends l.PureComponent {
         });
     }
     renderConflict() {
-        let { application: t, cloudSyncState: n } = this.props;
-        if (n.type !== C.TzF.CONFLICT) throw Error('Cannot render conflict for non conflict type');
-        return (0, i.jsxs)(s.ModalContent, {
+        let { application: t, cloudSyncState: e } = this.props;
+        if (e.type !== C.TzF.CONFLICT) throw Error('Cannot render conflict for non conflict type');
+        return (0, i.jsxs)(r.hzk, {
             className: m.marginBottom20,
             children: [
                 (0, i.jsx)('div', {
                     className: N.description,
                     children: y.intl.format(y.t.eyXUPz, { applicationName: t.name })
                 }),
-                this.renderConflictButton(y.intl.string(y.t.AQUmkp), n.remote.timestamp, N.conflictDownloadArt, this.handleChooseDownload),
+                this.renderConflictButton(y.intl.string(y.t.AQUmkp), e.remote.timestamp, N.conflictDownloadArt, this.handleChooseDownload),
                 (0, i.jsxs)(p.Z, {
                     className: N.choiceWrapper,
                     align: p.Z.Align.CENTER,
@@ -133,29 +127,29 @@ class T extends l.PureComponent {
                         (0, i.jsx)('div', { className: N.choiceLine })
                     ]
                 }),
-                this.renderConflictButton(y.intl.string(y.t.AXVws7), n.next.timestamp, N.conflictUploadArt, this.handleChooseUpload)
+                this.renderConflictButton(y.intl.string(y.t.AXVws7), e.next.timestamp, N.conflictUploadArt, this.handleChooseUpload)
             ]
         });
     }
     render() {
-        let { cloudSyncState: t, transitionState: n } = this.props,
-            e = t.type === C.TzF.CONFLICT ? y.intl.string(y.t.oNbO1d) : y.intl.string(y.t.as4Tgo);
-        return (0, i.jsxs)(s.ModalRoot, {
-            transitionState: n,
+        let { cloudSyncState: t, transitionState: e } = this.props,
+            n = t.type === C.TzF.CONFLICT ? y.intl.string(y.t.oNbO1d) : y.intl.string(y.t.as4Tgo);
+        return (0, i.jsxs)(r.Y0X, {
+            transitionState: e,
             className: N.modal,
-            'aria-label': e,
+            'aria-label': n,
             children: [
-                (0, i.jsxs)(s.ModalHeader, {
+                (0, i.jsxs)(r.xBx, {
                     separator: !1,
                     children: [
-                        (0, i.jsx)(s.ModalCloseButton, {
+                        (0, i.jsx)(r.olH, {
                             className: N.closeButton,
                             onClick: this.onClose
                         }),
-                        (0, i.jsx)(s.FormTitle, {
+                        (0, i.jsx)(r.vwX, {
                             tag: 'h2',
                             className: m.marginReset,
-                            children: e
+                            children: n
                         })
                     ]
                 }),
@@ -164,21 +158,21 @@ class T extends l.PureComponent {
         });
     }
     constructor(...t) {
-        var n;
+        var e;
         super(...t),
-            (n = this),
+            (e = this),
             g(this, 'onClose', () => {
                 this.props.onClose();
             }),
             g(this, 'handlePlay', function () {
                 let t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-                    e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-                    { libraryApplication: i, analyticsParams: l } = n.props;
-                n.onClose(),
+                    n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+                    { libraryApplication: i, analyticsParams: l } = e.props;
+                e.onClose(),
                     O(i.id, i, {
                         analyticsParams: l,
                         cloudSync: t,
-                        cloudSyncForceHash: e
+                        cloudSyncForceHash: n
                     });
             }),
             g(this, 'handleChooseDownload', () => {
@@ -191,28 +185,28 @@ class T extends l.PureComponent {
             });
     }
 }
-let A = a.ZP.connectStores([h.Z, u.Z], (t) => {
-    let { libraryApplication: n, branchId: e } = t;
+let T = o.ZP.connectStores([h.Z, u.Z], (t) => {
+    let { libraryApplication: e, branchId: n } = t;
     return {
-        cloudSyncState: h.Z.getState(n.id, e),
-        application: u.Z.getApplication(n.id)
+        cloudSyncState: h.Z.getState(e.id, n),
+        application: u.Z.getApplication(e.id)
     };
-})(T);
-async function O(t, n, e) {
+})(A);
+async function O(t, e, n) {
     let l = u.Z.getApplication(t);
     if (null == l) return;
-    let { cloudSync: o = !0, cloudSyncForceHash: r = null, analyticsParams: a } = e;
-    if (o && null != n) {
-        let t = n.branchId;
+    let { cloudSync: a = !0, cloudSyncForceHash: s = null, analyticsParams: o } = n;
+    if (a && null != e) {
+        let t = e.branchId;
         try {
-            await c.Z(n.id, t, r);
-        } catch (e) {
-            (0, s.openModal)((e) =>
-                (0, i.jsx)(A, {
-                    libraryApplication: n,
-                    analyticsParams: a,
+            await c.Z(e.id, t, s);
+        } catch (n) {
+            (0, r.h7j)((n) =>
+                (0, i.jsx)(T, {
+                    libraryApplication: e,
+                    analyticsParams: o,
                     branchId: t,
-                    ...e
+                    ...n
                 })
             );
             return;
@@ -223,12 +217,12 @@ async function O(t, n, e) {
             application_id: l.id,
             application_name: l.name,
             type: C.q5t.LAUNCH,
-            distributor: null != n ? n.getDistributor() : null,
-            ...a
+            distributor: null != e ? e.getDistributor() : null,
+            ...o
         }),
         d.Z.launch({
             applicationId: l.id,
-            branchId: null == n ? void 0 : n.branchId
+            branchId: null == e ? void 0 : e.branchId
         })
     );
 }

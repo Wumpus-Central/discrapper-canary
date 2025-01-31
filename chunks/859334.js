@@ -1,12 +1,8 @@
-r.d(n, {
-    Ci: function () {
-        return i.Ci;
-    },
-    OG: function () {
-        return a.O;
-    }
+n.d(t, {
+    Ci: () => i.Ci,
+    OG: () => r.O
 });
-var i = r(812975);
-r(531171), r(805802), r(707908);
-var a = r(713267);
-r(695170);
+var i = n(812975);
+n(531171), n(805802), n(707908);
+var r = n(713267);
+n(695170);

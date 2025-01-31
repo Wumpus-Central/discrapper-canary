@@ -1,15 +1,10 @@
-r.r(n),
-    r.d(n, {
-        default: function () {
-            return s;
-        }
-    });
-var i = r(217224),
-    a = r(528734),
-    o = r(951516);
-function s(e, n) {
-    (0, o.Z)(2, arguments);
-    var r = (0, a.default)(e),
-        s = (0, i.Z)(n);
-    return r.setMinutes(s), r;
+n.r(t), n.d(t, { default: () => s });
+var i = n(217224),
+    r = n(528734),
+    a = n(951516);
+function s(e, t) {
+    (0, a.Z)(2, arguments);
+    var n = (0, r.default)(e),
+        s = (0, i.Z)(t);
+    return n.setMinutes(s), n;
 }

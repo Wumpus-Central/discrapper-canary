@@ -1,20 +1,16 @@
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-});
-var o = n(200651),
+n.d(t, { Z: () => i });
+var s = n(200651),
     r = n(192379),
-    s = n(642128),
-    a = n(613087);
+    a = n(642128),
+    o = n(613087);
 function i(e) {
     let { expansionSpring: t, isExpanded: n } = e,
-        { animatedComponentProps: i, recalculateAnimationPositions: l, mountPoints: c } = r.useContext(a.B$);
+        { animatedComponentProps: i, recalculateAnimationPositions: l, mountPoints: c } = r.useContext(o.B$);
     return (
         r.useEffect(() => {
             l();
         }, [l, n]),
-        (0, o.jsx)('div', {
+        (0, s.jsx)('div', {
             style: {
                 overflow: 'hidden',
                 pointerEvents: 'none',
@@ -26,10 +22,10 @@ function i(e) {
                 zIndex: 5
             },
             children: i.map((e) => {
-                let { id: n, collapsedLeft: r, expandedLeft: a, collapsedTop: i, expandedTop: l, width: d } = e,
+                let { id: n, collapsedLeft: r, expandedLeft: o, collapsedTop: i, expandedTop: l, width: d } = e,
                     u = c.get(n);
-                return (0, o.jsx)(
-                    s.animated.div,
+                return (0, s.jsx)(
+                    a.animated.div,
                     {
                         ref: u,
                         style: {
@@ -38,11 +34,11 @@ function i(e) {
                             top: 0,
                             left: 0,
                             width: d,
-                            transform: (0, s.to)(
+                            transform: (0, a.to)(
                                 [
                                     t.to({
                                         range: [0, 1],
-                                        output: [r, a]
+                                        output: [r, o]
                                     }),
                                     t.to({
                                         range: [0, 1],

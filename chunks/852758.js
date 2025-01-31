@@ -1,12 +1,7 @@
-n.d(t, {
-    Z: function () {
-        return b;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => Z }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(990547),
+    l = n(192379),
+    r = n(990547),
     a = n(442837),
     s = n(544891),
     o = n(481060),
@@ -17,8 +12,8 @@ var i = n(200651),
     m = n(714338),
     p = n(213609),
     g = n(429142),
-    f = n(144114),
-    _ = n(210887),
+    _ = n(144114),
+    f = n(210887),
     E = n(23434),
     I = n(1964),
     C = n(762756),
@@ -26,29 +21,29 @@ var i = n(200651),
     N = n(981631),
     T = n(815660),
     S = n(388032);
-function b() {
-    let { action: e, theme: t } = (0, a.cj)([E.Z, _.Z], () => ({
+function Z() {
+    let { action: e, theme: t } = (0, a.cj)([E.Z, f.Z], () => ({
             action: E.Z.getAction(),
-            theme: _.Z.theme
+            theme: f.Z.theme
         })),
-        b = I.Z.getVerificationTypes(e),
-        [A, Z] = r.useState(0),
-        x = (0, h.Z)(b);
+        Z = I.Z.getVerificationTypes(e),
+        [x, A] = l.useState(0),
+        b = (0, h.Z)(Z);
     (0, p.Z)(
         {
-            type: l.ImpressionTypes.MODAL,
-            name: l.ImpressionNames.USER_ACTION_REQUIRED,
+            type: r.ImpressionTypes.MODAL,
+            name: r.ImpressionNames.USER_ACTION_REQUIRED,
             properties: {
-                verification_type: b[0],
-                verification_types: b
+                verification_type: Z[0],
+                verification_types: Z
             }
         },
         {},
-        [b.toString()]
+        [Z.toString()]
     );
     let L = () => {
             (0, u.FD)(),
-                (0, o.openModalLazy)(
+                (0, o.ZDy)(
                     async () => {
                         let { default: e } = await n.e('35401').then(n.bind(n, 284549));
                         return (t) => (0, i.jsx)(e, { ...t });
@@ -60,12 +55,12 @@ function b() {
                 );
         },
         y = () => {
-            (0, o.openModalLazy)(
+            (0, o.ZDy)(
                 async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 607018));
                     return (t) =>
                         (0, i.jsx)(e, {
-                            reason: f.L.USER_ACTION_REQUIRED,
+                            reason: _.L.USER_ACTION_REQUIRED,
                             ...t
                         });
                 },
@@ -76,7 +71,7 @@ function b() {
             );
         };
     return (
-        r.useEffect(
+        l.useEffect(
             () => (
                 m.Z.disable(),
                 () => {
@@ -85,10 +80,10 @@ function b() {
             ),
             []
         ),
-        r.useEffect(() => {
-            (null == x ? void 0 : x[0]) === N.PUi.PHONE &&
-                (null == b ? void 0 : b[0]) === N.PUi.EMAIL &&
-                (0, o.openModalLazy)(
+        l.useEffect(() => {
+            (null == b ? void 0 : b[0]) === N.PUi.PHONE &&
+                (null == Z ? void 0 : Z[0]) === N.PUi.EMAIL &&
+                (0, o.ZDy)(
                     async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
                         return (t) =>
@@ -105,10 +100,10 @@ function b() {
                         onCloseCallback: L
                     }
                 );
-        }, [b, x]),
+        }, [Z, b]),
         (0, i.jsx)(C.Z, {
-            types: b,
-            captchaKey: A,
+            types: Z,
+            captchaKey: x,
             onCaptchaVerify: (e) => {
                 s.tn
                     .post({
@@ -118,7 +113,7 @@ function b() {
                         rejectWithError: !0
                     })
                     .then(d.xf, () => {
-                        Z((e) => e + 1);
+                        A((e) => e + 1);
                     });
             },
             theme: t,
@@ -126,7 +121,7 @@ function b() {
                 e === N.PUi.EMAIL_OR_PHONE || e === N.PUi.EMAIL || e === N.PUi.REVERIFY_EMAIL ? L() : y();
             },
             onLogout: () => {
-                (0, o.openModalLazy)(
+                (0, o.ZDy)(
                     async () => {
                         let { ConfirmModal: e, Text: t } = await Promise.resolve().then(n.bind(n, 481060));
                         return (n) =>

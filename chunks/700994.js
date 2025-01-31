@@ -1,38 +1,34 @@
-t.d(n, {
-    Z: function () {
-        return f;
-    }
-});
-var i = t(200651);
-t(192379);
-var l = t(442837),
-    r = t(481060),
-    o = t(846027),
-    a = t(131951),
-    u = t(594174),
-    d = t(36703),
-    s = t(358085),
-    c = t(65154),
-    Z = t(388032);
-function f(e) {
-    var n;
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.Yn.DEFAULT,
-        f = (0, l.e7)([a.Z], () => a.Z.getLocalVolume(e, t), [e, t]),
-        m = e === (null === (n = u.default.getCurrentUser()) || void 0 === n ? void 0 : n.id),
-        g = t === c.Yn.STREAM;
-    return m
+n.d(e, { Z: () => Z });
+var i = n(200651);
+n(192379);
+var l = n(442837),
+    a = n(481060),
+    d = n(846027),
+    r = n(131951),
+    o = n(594174),
+    s = n(36703),
+    u = n(358085),
+    c = n(65154),
+    g = n(388032);
+function Z(t) {
+    var e;
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.Yn.DEFAULT,
+        Z = (0, l.e7)([r.Z], () => r.Z.getLocalVolume(t, n), [t, n]),
+        f = t === (null === (e = o.default.getCurrentUser()) || void 0 === e ? void 0 : e.id),
+        v = n === c.Yn.STREAM;
+    return f
         ? null
-        : (0, i.jsx)(r.MenuControlItem, {
+        : (0, i.jsx)(a.II_, {
               id: 'user-volume',
-              label: g ? Z.intl.string(Z.t.t4JBnJ) : Z.intl.string(Z.t.m7TNdH),
-              control: (n, l) =>
-                  (0, i.jsx)(r.MenuSliderControl, {
-                      ...n,
+              label: v ? g.intl.string(g.t.t4JBnJ) : g.intl.string(g.t.m7TNdH),
+              control: (e, l) =>
+                  (0, i.jsx)(a._wy, {
+                      ...e,
                       ref: l,
-                      value: (0, d.P)(f),
-                      maxValue: s.isPlatformEmbedded ? 200 : 100,
-                      onChange: (n) => o.Z.setLocalVolume(e, (0, d.A)(n), t),
-                      'aria-label': g ? Z.intl.string(Z.t.t4JBnJ) : Z.intl.string(Z.t.m7TNdH)
+                      value: (0, s.P)(Z),
+                      maxValue: u.isPlatformEmbedded ? 200 : 100,
+                      onChange: (e) => d.Z.setLocalVolume(t, (0, s.A)(e), n),
+                      'aria-label': v ? g.intl.string(g.t.t4JBnJ) : g.intl.string(g.t.m7TNdH)
                   })
           });
 }

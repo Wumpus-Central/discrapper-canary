@@ -1,13 +1,14 @@
-e.exports = {
-    arrowIcon: 'arrowIcon_d8c86c',
-    arrowIconExpanded: 'arrowIconExpanded_d8c86c',
-    rightPipIcon: 'rightPipIcon_d8c86c',
-    leftPipIcon: 'leftPipIcon_d8c86c',
-    participantsButton: 'participantsButton_d8c86c',
-    pipHeader: 'pipHeader_d8c86c',
-    pipHeaderContent: 'pipHeaderContent_d8c86c',
-    pipHeaderContentOpen: 'pipHeaderContentOpen_d8c86c',
-    pipHeaderButtonsRight: 'pipHeaderButtonsRight_d8c86c',
-    menuIcon: 'menuIcon_d8c86c',
-    leaveActivityIcon: 'leaveActivityIcon_d8c86c'
+var i = {
+    arrowIcon: 'arrowIcon_f41a99',
+    arrowIconExpanded: 'arrowIconExpanded_f41a99',
+    rightPipIcon: 'rightPipIcon_f41a99',
+    leftPipIcon: 'leftPipIcon_f41a99',
+    participantsButton: 'participantsButton_f41a99',
+    pipHeader: 'pipHeader_f41a99',
+    pipHeaderContent: 'pipHeaderContent_f41a99',
+    pipHeaderContentOpen: 'pipHeaderContentOpen_f41a99',
+    pipHeaderButtonsRight: 'pipHeaderButtonsRight_f41a99',
+    menuIcon: 'menuIcon_f41a99',
+    leaveActivityIcon: 'leaveActivityIcon_f41a99'
 };
+e.exports = i;

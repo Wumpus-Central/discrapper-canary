@@ -1,26 +1,28 @@
+n.d(t, { Z: () => c });
 var i,
-    a = r(442837),
-    o = r(570140);
-function s(e, n, r) {
+    r = n(442837),
+    a = n(570140);
+function s(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let l = r(65154).dX;
-function u(e) {
-    l = e.bitrate;
+let o = n(65154).dX;
+function l(e) {
+    o = e.bitrate;
 }
-class c extends (i = a.ZP.Store) {
+class u extends (i = r.ZP.Store) {
     get bitrate() {
-        return l;
+        return o;
     }
 }
-s(c, 'displayName', 'BitRateStore'), (n.Z = new c(o.Z, { SET_CHANNEL_BITRATE: u }));
+s(u, 'displayName', 'BitRateStore');
+let c = new u(a.Z, { SET_CHANNEL_BITRATE: l });

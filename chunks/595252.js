@@ -1,25 +1,24 @@
-r.r(
-    (e.exports = {
-        'spinner-wandering-cubes': 'spinner-wandering-cubes_b6db20',
-        'spinner-chasing-dots-rotate': 'spinner-chasing-dots-rotate_b6db20',
-        'spinner-chasing-dots-bounce': 'spinner-chasing-dots-bounce_b6db20',
-        'spinner-pulsing-ellipsis': 'spinner-pulsing-ellipsis_b6db20',
-        'spinner-low-motion': 'spinner-low-motion_b6db20',
-        'spinner-spinning-circle-rotate': 'spinner-spinning-circle-rotate_b6db20',
-        'spinner-spinning-circle-dash': 'spinner-spinning-circle-dash_b6db20',
-        spinner: 'spinner_b6db20',
-        inner: 'inner_b6db20',
-        wanderingCubes: 'wanderingCubes_b6db20',
-        item: 'item_b6db20',
-        chasingDots: 'chasingDots_b6db20',
-        pulsingEllipsis: 'pulsingEllipsis_b6db20',
-        lowMotion: 'lowMotion_b6db20',
-        stopAnimation: 'stopAnimation_b6db20',
-        circular: 'circular_b6db20',
-        path: 'path_b6db20',
-        spinningCircle: 'spinningCircle_b6db20',
-        spinningCircleInner: 'spinningCircleInner_b6db20 inner_b6db20',
-        path2: 'path2_b6db20',
-        path3: 'path3_b6db20'
-    })
-);
+var i = {
+    'spinner-wandering-cubes': 'spinner-wandering-cubes__0b5bb',
+    'spinner-chasing-dots-rotate': 'spinner-chasing-dots-rotate__0b5bb',
+    'spinner-chasing-dots-bounce': 'spinner-chasing-dots-bounce__0b5bb',
+    'spinner-pulsing-ellipsis': 'spinner-pulsing-ellipsis__0b5bb',
+    'spinner-low-motion': 'spinner-low-motion__0b5bb',
+    'spinner-spinning-circle-rotate': 'spinner-spinning-circle-rotate__0b5bb',
+    'spinner-spinning-circle-dash': 'spinner-spinning-circle-dash__0b5bb',
+    spinner: 'spinner__0b5bb',
+    inner: 'inner__0b5bb',
+    wanderingCubes: 'wanderingCubes__0b5bb',
+    item: 'item__0b5bb',
+    chasingDots: 'chasingDots__0b5bb',
+    pulsingEllipsis: 'pulsingEllipsis__0b5bb',
+    lowMotion: 'lowMotion__0b5bb',
+    stopAnimation: 'stopAnimation__0b5bb',
+    circular: 'circular__0b5bb',
+    path: 'path__0b5bb',
+    spinningCircle: 'spinningCircle__0b5bb',
+    spinningCircleInner: 'spinningCircleInner__0b5bb inner__0b5bb',
+    path2: 'path2__0b5bb',
+    path3: 'path3__0b5bb'
+};
+n.r((e.exports = i));

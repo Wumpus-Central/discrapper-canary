@@ -1,10 +1,6 @@
-r.d(n, {
-    Z: function () {
-        return a;
-    }
-});
-var i = r(413135).Buffer;
-function a(e) {
+n.d(t, { Z: () => r });
+var i = n(413135).Buffer;
+function r(e) {
     try {
         return i.from(JSON.stringify(e)).toString('base64');
     } catch (e) {

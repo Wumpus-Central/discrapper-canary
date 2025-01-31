@@ -1,41 +1,33 @@
-r.r(n),
-    r.d(n, {
-        getOrParseBioAST: function () {
-            return E;
-        },
-        parseBioReact: function () {
-            return m;
-        },
-        parseBioReactWithCachedAST: function () {
-            return v;
-        },
-        parseBioReactWithoutScrolling: function () {
-            return b;
-        }
+n.r(t),
+    n.d(t, {
+        getOrParseBioAST: () => g,
+        parseBioReact: () => h,
+        parseBioReactWithCachedAST: () => E,
+        parseBioReactWithoutScrolling: () => y
     });
-var i = r(392711),
-    a = r.n(i),
-    o = r(31775),
-    s = r.n(o),
-    l = r(477660),
-    u = r.n(l),
-    c = r(25209),
-    d = r(691424),
-    f = r(428595);
-r(454585);
-var p = r(364458);
-let h = (0, p.Z)([f.Z.PROFILE_BIO_RULES, (0, d.Z)({ enableBuildOverrides: !1 })]),
-    _ = new (s())({ max: 2000 }),
-    m = c.w4(h),
-    g = void 0;
+var i = n(392711),
+    r = n.n(i),
+    a = n(31775),
+    s = n.n(a),
+    o = n(477660),
+    l = n.n(o),
+    u = n(25209),
+    c = n(691424),
+    d = n(428595);
+n(454585);
+var f = n(364458);
+let _ = (0, f.Z)([d.Z.PROFILE_BIO_RULES, (0, c.Z)({ enableBuildOverrides: !1 })]),
+    p = new (s())({ max: 2000 }),
+    h = u.w4(_),
+    m = void 0;
+function g(e) {
+    let t = p.get(e);
+    return null != t || ((t = m(e, !0)), p.set(e, t)), t;
+}
 function E(e) {
-    let n = _.get(e);
-    return null != n ? n : ((n = g(e, !0)), _.set(e, n), n);
-}
-function v(e) {
     if (0 === e.trim().length) return null;
-    let n = E(e);
-    return u().reactFor(u().ruleOutput(h, 'react'))(n);
+    let t = g(e);
+    return l().reactFor(l().ruleOutput(_, 'react'))(t);
 }
-let y = ['link', 'url', 'autolink', 'customEmoji', 'emoji', 'commandMention'],
-    b = c.w4((0, p.Z)([a().omit(h, y), { emoji: { react: () => null } }]));
+let v = ['link', 'url', 'autolink', 'customEmoji', 'emoji', 'commandMention'],
+    y = u.w4((0, f.Z)([r().omit(_, v), { emoji: { react: () => null } }]));

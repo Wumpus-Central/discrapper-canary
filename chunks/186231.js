@@ -1,7 +1,3 @@
-var n;
-e.d(t, {
-    b: function () {
-        return n;
-    }
-}),
-    ((n || (n = {})).OAUTH_REDIRECT = 'oauth_redirect');
+e.d(r, { b: () => n });
+var o,
+    n = (((o = {}).OAUTH_REDIRECT = 'oauth_redirect'), o);

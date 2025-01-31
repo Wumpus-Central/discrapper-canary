@@ -1,69 +1,63 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-}),
-    n(390547),
-    n(653041);
+n.d(t, { Z: () => u }), n(390547), n(653041);
 var i = n(200651);
 n(192379);
-var r = n(392711),
-    l = n.n(r),
-    a = n(661824),
-    o = n(289481),
-    s = n(809780),
+var l = n(392711),
+    a = n.n(l),
+    r = n(661824),
+    s = n(289481),
+    o = n(809780),
     c = n(388032),
-    u = n(4817);
-function d(e, t, n) {
-    let { markChannelRead: r, markGuildRead: d, deleteChannel: m, toggle: h, getNumUnreadChannels: f } = t,
+    d = n(4817);
+function u(e, t, n) {
+    let { markChannelRead: l, markGuildRead: u, deleteChannel: m, toggle: h, getNumUnreadChannels: _ } = t,
         p = null;
-    return l().flatMap(e, (e) => {
+    return a().flatMap(e, (e) => {
         let t = e.sortOrder !== p;
         p = e.sortOrder;
-        let l = [];
+        let a = [];
         return (
             t &&
-                (e.hasLoadedAnything && e.sortOrder === s.As.ReallyOldChannel
-                    ? l.push(
+                (e.hasLoadedAnything && e.sortOrder === o.As.ReallyOldChannel
+                    ? a.push(
                           (0, i.jsx)(
-                              a.Z,
+                              r.Z,
                               {
-                                  className: u.divider,
-                                  contentClassName: u.dividerContent,
+                                  className: d.divider,
+                                  contentClassName: d.dividerContent,
                                   children: c.intl.string(c.t.roBMzs)
                               },
                               'old-divider'
                           )
                       )
                     : e.hasLoadedAnything &&
-                      e.sortOrder === s.As.NoNotifications &&
-                      l.push(
+                      e.sortOrder === o.As.NoNotifications &&
+                      a.push(
                           (0, i.jsx)(
-                              a.Z,
+                              r.Z,
                               {
-                                  className: u.divider,
-                                  contentClassName: u.dividerContent,
+                                  className: d.divider,
+                                  contentClassName: d.dividerContent,
                                   children: c.intl.string(c.t['2Ys7np'])
                               },
                               'disabled-divider'
                           )
                       )),
-            l.push(
+            a.push(
                 (0, i.jsx)(
-                    o.Z,
+                    s.Z,
                     {
                         channel: e,
-                        markChannelRead: r,
-                        markGuildRead: d,
+                        markChannelRead: l,
+                        markGuildRead: u,
                         toggle: h,
                         deleteChannel: m,
                         onJump: n,
-                        getNumUnreadChannels: f
+                        getNumUnreadChannels: _
                     },
                     e.channelId
                 )
             ),
-            l
+            a
         );
     });
 }

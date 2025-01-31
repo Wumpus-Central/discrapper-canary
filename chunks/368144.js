@@ -1,7 +1,8 @@
-e.exports = {
-    container: 'container_c1d80f',
-    guildContainer: 'guildContainer_c1d80f',
-    header: 'header_c1d80f',
-    guildInfo: 'guildInfo_c1d80f',
-    guildIcon: 'guildIcon_c1d80f'
+var i = {
+    container: 'container__631c2',
+    guildContainer: 'guildContainer__631c2',
+    header: 'header__631c2',
+    guildInfo: 'guildInfo__631c2',
+    guildIcon: 'guildIcon__631c2'
 };
+e.exports = i;

@@ -1,45 +1,41 @@
-t.d(e, {
-    Z: function () {
-        return Z;
-    }
-});
-var i = t(200651);
-t(192379);
-var l = t(442837),
-    r = t(481060),
-    u = t(357156),
-    o = t(471253),
-    a = t(924301),
-    d = t(482241),
-    c = t(765305),
-    s = t(388032);
-function Z(n, e, t) {
-    let { canManageGuildEvent: Z } = (0, u.XJ)(null != t ? t : e),
-        h = (0, l.e7)([a.ZP], () => a.ZP.isActive(n)),
-        f = (0, l.e7)([a.ZP], () => a.ZP.getGuildScheduledEvent(n), [n]),
-        x = Z(f);
-    if (null == n || !x || !h || (null == f ? void 0 : f.entity_type) === c.WX.EXTERNAL) return null;
-    let g = () => {
-        if (null == t ? void 0 : t.isGuildStageVoice()) {
-            (0, o.NZ)(t);
+i.d(t, { Z: () => Z });
+var e = i(200651);
+i(192379);
+var l = i(442837),
+    a = i(481060),
+    r = i(357156),
+    d = i(471253),
+    s = i(924301),
+    c = i(482241),
+    o = i(765305),
+    u = i(388032);
+function Z(n, t, i) {
+    let { canManageGuildEvent: Z } = (0, r.XJ)(null != i ? i : t),
+        h = (0, l.e7)([s.ZP], () => s.ZP.isActive(n)),
+        x = (0, l.e7)([s.ZP], () => s.ZP.getGuildScheduledEvent(n), [n]),
+        g = Z(x);
+    if (null == n || !g || !h || (null == x ? void 0 : x.entity_type) === o.WX.EXTERNAL) return null;
+    let v = () => {
+        if (null == i ? void 0 : i.isGuildStageVoice()) {
+            (0, d.NZ)(i);
             return;
         }
-        null != n && d.Z.endEvent(n, e.id), (0, r.closeAllModals)();
+        null != n && c.Z.endEvent(n, t.id), (0, a.pTH)();
     };
-    return (0, i.jsx)(r.MenuItem, {
-        id: s.intl.string(s.t.qaYzPD),
-        label: s.intl.string(s.t.qaYzPD),
+    return (0, e.jsx)(a.sNh, {
+        id: u.intl.string(u.t.qaYzPD),
+        label: u.intl.string(u.t.qaYzPD),
         action: function () {
-            (0, r.openModal)((n) =>
-                (0, i.jsx)(r.ConfirmModal, {
+            (0, a.h7j)((n) =>
+                (0, e.jsx)(a.ConfirmModal, {
                     ...n,
-                    header: s.intl.string(s.t.qaYzPD),
-                    confirmText: s.intl.string(s.t.mjB9pa),
-                    cancelText: s.intl.string(s.t['ETE/oK']),
-                    onConfirm: g,
-                    children: (0, i.jsx)(r.Text, {
+                    header: u.intl.string(u.t.qaYzPD),
+                    confirmText: u.intl.string(u.t.mjB9pa),
+                    cancelText: u.intl.string(u.t['ETE/oK']),
+                    onConfirm: v,
+                    children: (0, e.jsx)(a.Text, {
                         variant: 'text-md/normal',
-                        children: s.intl.string(s.t.bnDQ7O)
+                        children: u.intl.string(u.t.bnDQ7O)
                     })
                 })
             );

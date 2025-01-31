@@ -1,19 +1,15 @@
-r.d(n, {
-    Z: function () {
-        return a;
-    }
-});
-var i = r(358085);
-async function a(e, n) {
-    let { default: a } = await Promise.resolve().then(r.bind(r, 315263)),
-        o = a(e, {
-            skipExtensionCheck: n,
+n.d(t, { Z: () => r });
+var i = n(358085);
+async function r(e, t) {
+    let { default: r } = await Promise.resolve().then(n.bind(n, 315263)),
+        a = r(e, {
+            skipExtensionCheck: t,
             analyticsLocations: []
         });
-    if (null != o) o(null);
+    if (null != a) a(null);
     else if (i.isPlatformEmbedded) window.open(e);
     else {
-        let n = document.createElement('a');
-        (n.href = e), (n.target = '_blank'), (n.rel = 'noreferrer noopener'), n.click();
+        let t = document.createElement('a');
+        (t.href = e), (t.target = '_blank'), (t.rel = 'noreferrer noopener'), t.click();
     }
 }

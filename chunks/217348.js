@@ -1,34 +1,18 @@
-r.d(n, {
-    Df: function () {
-        return u;
-    },
-    S6: function () {
-        return c;
-    },
-    Xy: function () {
-        return l;
-    },
-    ZT: function () {
-        return a;
-    },
-    dE: function () {
-        return o;
-    },
-    is: function () {
-        return s;
-    },
-    qo: function () {
-        return d;
-    },
-    yl: function () {
-        return f;
-    }
+n.d(t, {
+    Df: () => l,
+    S6: () => u,
+    Xy: () => o,
+    ZT: () => r,
+    dE: () => a,
+    is: () => s,
+    qo: () => c,
+    yl: () => d
 });
-var i = r(239189),
-    a = function () {},
-    o = function (e, n, r) {
-        return Object.defineProperty(e, n, {
-            value: r,
+var i = n(239189),
+    r = function () {},
+    a = function (e, t, n) {
+        return Object.defineProperty(e, t, {
+            value: n,
             writable: !0,
             configurable: !0
         });
@@ -51,30 +35,30 @@ var i = r(239189),
             return void 0 === e;
         }
     };
-function l(e, n) {
+function o(e, t) {
     if (s.arr(e)) {
-        if (!s.arr(n) || e.length !== n.length) return !1;
-        for (var r = 0; r < e.length; r++) if (e[r] !== n[r]) return !1;
+        if (!s.arr(t) || e.length !== t.length) return !1;
+        for (var n = 0; n < e.length; n++) if (e[n] !== t[n]) return !1;
         return !0;
     }
-    return e === n;
+    return e === t;
 }
-var u = function (e) {
+var l = function (e) {
         return s.str(e) && ('#' == e[0] || /\d/.test(e) || !!(i.colorNames && i.colorNames[e]));
     },
-    c = function (e, n, r) {
+    u = function (e, t, n) {
         s.fun(e.forEach)
-            ? e.forEach(n, r)
+            ? e.forEach(t, n)
             : Object.keys(e).forEach(function (i) {
-                  return n.call(r, e[i], i);
+                  return t.call(n, e[i], i);
               });
     },
-    d = function (e) {
+    c = function (e) {
         return s.und(e) ? [] : s.arr(e) ? e : [e];
     };
-function f(e, n) {
+function d(e, t) {
     if (e.size) {
-        var r = Array.from(e);
-        e.clear(), c(r, n);
+        var n = Array.from(e);
+        e.clear(), u(n, t);
     }
 }

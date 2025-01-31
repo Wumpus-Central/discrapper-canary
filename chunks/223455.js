@@ -1,40 +1,35 @@
-i.r(e),
-    i.d(e, {
-        default: function () {
-            return Z;
-        }
-    });
-var t = i(200651);
-i(192379);
-var a = i(512722),
-    l = i.n(a),
-    d = i(399606),
-    r = i(721037),
-    u = i(561472),
-    c = i(372900),
-    s = i(238246),
-    h = i(592125),
-    o = i(703558),
-    p = i(677601);
-function Z(n) {
-    let { windowKey: e, channelId: i } = n,
-        a = (0, d.e7)([h.Z], () => h.Z.getChannel(i));
+r.r(t), r.d(t, { default: () => h });
+var n = r(200651);
+r(192379);
+var a = r(512722),
+    i = r.n(a),
+    l = r(399606),
+    s = r(721037),
+    o = r(561472),
+    d = r(372900),
+    c = r(238246),
+    u = r(592125),
+    m = r(703558),
+    p = r(677601);
+function h(e) {
+    let { windowKey: t, channelId: r } = e,
+        a = (0, l.e7)([u.Z], () => u.Z.getChannel(r));
     return (
-        l()(null != a, 'channel cannot be null for popout'),
-        (0, t.jsx)(s.Z, {
+        i()(null != a, 'channel cannot be null for popout'),
+        (0, n.jsx)(c.Z, {
             withTitleBar: !0,
-            windowKey: e,
+            windowKey: t,
             title: a.name,
             channelId: a.id,
-            children: (0, t.jsxs)(c.Z.Provider, {
+            children: (0, n.jsxs)(d.Z.Provider, {
                 value: a.guild_id,
                 children: [
-                    (0, t.jsx)(u.Z, {
+                    (0, n.jsx)(o.Z, {
                         channel: a,
-                        draftType: o.d.ChannelMessage
+                        draftType: m.d.ChannelMessage
                     }),
-                    (0, t.jsx)(p.Z, { channel: a }),
-                    (0, t.jsx)(r.Z, { inPopoutWindow: !0 })
+                    (0, n.jsx)(p.Z, { channel: a }),
+                    (0, n.jsx)(s.Z, { inPopoutWindow: !0 })
                 ]
             })
         })

@@ -33,16 +33,18 @@ var n = r(7298),
                             })
                         )),
                         n.forEach(function (e) {
-                            (function (t, e, r) {
-                                e in t
-                                    ? Object.defineProperty(t, e, {
-                                          value: r,
+                            var n, i, o;
+                            (n = t),
+                                (i = e),
+                                (o = r[e]),
+                                i in n
+                                    ? Object.defineProperty(n, i, {
+                                          value: o,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (t[e] = r);
-                            })(t, e, r[e]);
+                                    : (n[i] = o);
                         });
                 }
                 return t;
@@ -68,7 +70,7 @@ var n = r(7298),
                     function (e) {
                         var n = t.getEntityAt(e),
                             i = o.stringify(n);
-                        if (!a[i]) (a[i] = n), (r[i] = ''.concat(u)), u++;
+                        !a[i] && ((a[i] = n), (r[i] = ''.concat(u)), u++);
                     }
                 ),
                     l(t, r, n, i);

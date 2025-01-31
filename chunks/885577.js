@@ -1,27 +1,23 @@
-r.d(n, {
-    K: function () {
-        return o;
-    }
-});
-var i = r(685816);
-function a(e, n, r) {
+n.d(t, { K: () => a });
+var i = n(685816);
+function r(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class o {
+class a {
     static fromServer(e) {
-        return new o(e);
+        return new a(e);
     }
     constructor(e) {
-        a(this, 'rankedSkuIds', void 0), (this.type = i.z.FEED), (this.rankedSkuIds = e.ranked_sku_ids);
+        r(this, 'rankedSkuIds', void 0), (this.type = i.z.FEED), (this.rankedSkuIds = e.ranked_sku_ids);
     }
 }

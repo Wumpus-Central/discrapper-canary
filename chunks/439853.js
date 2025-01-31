@@ -15,17 +15,14 @@ var o = r(63451),
     u = r(746117),
     s = r(856084),
     c = (function (t) {
-        var e, r;
-        function n() {
+        function e() {
             return t.apply(this, arguments) || this;
         }
         return (
-            (e = n),
-            (r = t),
-            (e.prototype = Object.create(r.prototype)),
+            (e.prototype = Object.create(t.prototype)),
             (e.prototype.constructor = e),
-            (e.__proto__ = r),
-            (n.prototype.render = function () {
+            (e.__proto__ = t),
+            (e.prototype.render = function () {
                 var t = this.props,
                     e = t.block,
                     r = t.children,
@@ -55,7 +52,7 @@ var o = r(63451),
                     r
                 );
             }),
-            n
+            e
         );
     })(a.Component);
 t.exports = c;

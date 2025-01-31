@@ -1,30 +1,26 @@
 n.d(t, {
-    Z: function () {
-        return d;
-    },
-    s: function () {
-        return c;
-    }
+    Z: () => d,
+    s: () => c
 }),
     n(47120);
-var r = n(200651),
-    i = n(192379),
+var i = n(200651),
+    r = n(192379),
     s = n(512722),
-    o = n.n(s),
-    l = n(333866);
-let a = i.createContext(void 0);
+    l = n.n(s),
+    o = n(333866);
+let a = r.createContext(void 0);
 function c() {
-    let e = i.useContext(a);
-    return o()(null != e, 'must use useGuildShopSortContext within a GuildShopSortOptionsContextProvider'), e;
+    let e = r.useContext(a);
+    return l()(null != e, 'must use useGuildShopSortContext within a GuildShopSortOptionsContextProvider'), e;
 }
 function d(e) {
-    let { children: t, defaultSortOption: n = l.zJ.NEWEST_ARRIVALS } = e,
-        [s, o] = i.useState(n);
-    return (0, r.jsx)(a.Provider, {
+    let { children: t, defaultSortOption: n = o.zJ.NEWEST_ARRIVALS } = e,
+        [s, l] = r.useState(n);
+    return (0, i.jsx)(a.Provider, {
         value: {
             sortOption: s,
-            setSortOption: o,
-            onReset: () => o(n)
+            setSortOption: l,
+            onReset: () => l(n)
         },
         children: t
     });

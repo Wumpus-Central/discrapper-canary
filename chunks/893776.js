@@ -1,548 +1,553 @@
 let i;
-r.d(n, {
-    c: function () {
-        return a;
-    }
-});
-var a,
-    o = r(411104);
-var s = r(177593);
-var l = r(773603);
-var u = r(990547),
-    c = r(213919),
-    d = r(544891),
-    f = r(433517),
-    p = r(570140),
-    h = r(881052),
-    _ = r(882037),
-    m = r(710845),
-    g = r(777639),
-    E = r(703656),
-    v = r(365007),
-    y = r(314897),
-    b = r(480294),
-    I = r(573261),
-    T = r(572691),
-    S = r(981631),
-    A = r(792101);
-let C = new m.Z('AuthenticationActionCreators'),
-    N = 5000,
-    R = null;
-function O(e) {
-    let n = {
+n.d(t, {
+    Z: () => C,
+    c: () => S
+}),
+    n(411104),
+    n(177593),
+    n(773603);
+var r = n(990547),
+    a = n(213919),
+    s = n(544891),
+    o = n(433517),
+    l = n(570140),
+    u = n(881052),
+    c = n(882037),
+    d = n(710845),
+    f = n(777639),
+    _ = n(703656),
+    p = n(365007),
+    h = n(314897),
+    m = n(480294),
+    g = n(573261),
+    E = n(572691),
+    v = n(981631),
+    y = n(792101);
+let I = new d.Z('AuthenticationActionCreators'),
+    b = 5000,
+    T = null;
+var S = (function (e) {
+    return (e.MFA = 'MFA'), (e.SUCCESS = 'SUCCESS'), e;
+})({});
+function A(e) {
+    let t = {
         type: 'LOGOUT',
         ...e
     };
-    p.Z.dispatch(n).catch((e) => {
-        var n;
-        throw (C.error('Error while dispatching LOGOUT', e), null === (n = window.DiscordErrors) || void 0 === n || n.softCrash(e), e);
+    l.Z.dispatch(t).catch((e) => {
+        var t;
+        throw (I.error('Error while dispatching LOGOUT', e), null === (t = window.DiscordErrors) || void 0 === t || t.softCrash(e), e);
     });
 }
-function D() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : S.Z5c.DEFAULT_LOGGED_OUT;
-    if ((O(), null == e)) return;
-    let n = (0, g.D)();
-    if (null == n) {
-        (0, E.uL)(e);
+function N() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : v.Z5c.DEFAULT_LOGGED_OUT;
+    if ((A(), null == e)) return;
+    let t = (0, f.D)();
+    if (null == t) {
+        (0, _.uL)(e);
         return;
     }
-    T.Z.popAll(),
-        n.reset({
+    E.Z.popAll(),
+        t.reset({
             index: 0,
             routes: [{ name: 'auth' }]
         });
 }
-!(function (e) {
-    (e.MFA = 'MFA'), (e.SUCCESS = 'SUCCESS');
-})(a || (a = {})),
-    (n.Z = {
-        startSession(e) {
-            p.Z.wait(() => {
-                p.Z.dispatch({
-                    type: 'START_SESSION',
-                    token: e
-                });
+let C = {
+    startSession(e) {
+        l.Z.wait(() => {
+            l.Z.dispatch({
+                type: 'START_SESSION',
+                token: e
             });
-        },
-        login(e) {
-            let { login: n, password: r, undelete: i, source: a, giftCodeSKUId: o, invite: s, isMultiAccount: l } = e;
-            return (
-                p.Z.dispatch({
-                    type: 'LOGIN',
-                    isPasswordAttempt: !0
-                }),
-                I.Z.post({
-                    url: S.ANM.LOGIN,
-                    body: {
-                        login: n,
-                        password: r,
-                        undelete: i,
-                        login_source: a,
-                        gift_code_sku_id: o
-                    },
-                    retries: 2,
-                    oldFormErrors: !0,
-                    trackedActionData: {
-                        event: u.NetworkActionNames.USER_LOGIN,
-                        properties: {
-                            invite_code: null == s ? void 0 : s.code,
-                            is_multi_account: l
-                        }
-                    },
-                    ...(l ? { headers: { authorization: '' } } : {}),
-                    rejectWithError: !1
-                }).then(
-                    (e) => {
-                        let {
-                            body: { mfa: n, sms: r, webauthn: i, ticket: a, token: o, backup: s, user_id: u, required_actions: c, totp: d }
-                        } = e;
-                        p.Z.dispatch({
-                            type: 'LOGIN_ATTEMPTED',
-                            user_id: u,
-                            required_actions: c
-                        }),
-                            n
-                                ? p.Z.dispatch({
-                                      type: 'LOGIN_MFA_STEP',
-                                      ticket: a,
-                                      sms: r,
-                                      webauthn: i,
-                                      totp: d,
-                                      backup: s
-                                  })
-                                : l
-                                  ? this.switchAccountToken(o)
-                                  : p.Z.dispatch({
-                                        type: 'LOGIN_SUCCESS',
-                                        token: o
-                                    });
-                    },
-                    (e) => {
-                        var i, a, o;
-                        let s = new h.yZ(e);
-                        if (null != e.body && (null === (i = e.body) || void 0 === i ? void 0 : i.suspended_user_token) != null)
-                            throw (
-                                (p.Z.dispatch({
-                                    type: 'LOGIN_SUSPENDED_USER',
-                                    suspendedUserToken: null === (o = e.body) || void 0 === o ? void 0 : o.suspended_user_token
-                                }),
-                                s)
-                            );
-                        let l = null === (a = e.body) || void 0 === a ? void 0 : a.code;
-                        throw (
-                            (l === S.evJ.ACCOUNT_SCHEDULED_FOR_DELETION && null != r && '' !== r
-                                ? p.Z.dispatch({
-                                      type: 'LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION',
-                                      credentials: {
-                                          login: n,
-                                          password: r
-                                      }
-                                  })
-                                : l === S.evJ.ACCOUNT_DISABLED && null != r && '' !== r
-                                  ? p.Z.dispatch({
-                                        type: 'LOGIN_ACCOUNT_DISABLED',
-                                        credentials: {
-                                            login: n,
-                                            password: r
-                                        }
-                                    })
-                                  : l === S.evJ.PHONE_VERIFICATION_REQUIRED
-                                    ? p.Z.dispatch({
-                                          type: 'LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED',
-                                          credentials: {
-                                              login: n,
-                                              password: r
-                                          }
-                                      })
-                                    : p.Z.dispatch({
-                                          type: 'LOGIN_FAILURE',
-                                          error: s
-                                      }),
-                            s)
-                        );
-                    }
-                )
-            );
-        },
-        loginMFAv2(e) {
-            let { code: n, ticket: r, source: i, giftCodeSKUId: a, isMultiAccount: o, mfaType: s } = e;
-            return I.Z.post({
-                url: S.ANM.LOGIN_MFA(s),
+        });
+    },
+    login(e) {
+        let { login: t, password: n, undelete: i, source: a, giftCodeSKUId: s, invite: o, isMultiAccount: c } = e;
+        return (
+            l.Z.dispatch({
+                type: 'LOGIN',
+                isPasswordAttempt: !0
+            }),
+            g.Z.post({
+                url: v.ANM.LOGIN,
                 body: {
-                    code: n,
-                    ticket: r,
-                    login_source: i,
-                    gift_code_sku_id: a
+                    login: t,
+                    password: n,
+                    undelete: i,
+                    login_source: a,
+                    gift_code_sku_id: s
                 },
                 retries: 2,
                 oldFormErrors: !0,
-                trackedActionData: { event: u.NetworkActionNames.USER_LOGIN_MFA },
-                rejectWithError: !1
-            })
-                .then((e) => {
-                    o
-                        ? this.switchAccountToken(e.body.token)
-                        : p.Z.dispatch({
-                              type: 'LOGIN_SUCCESS',
-                              token: e.body.token
-                          });
-                })
-                .catch((e) => {
-                    var n;
-                    if (null != e.body && null != e.body.suspended_user_token) {
-                        p.Z.dispatch({
-                            type: 'LOGIN_SUSPENDED_USER',
-                            suspendedUserToken: e.body.suspended_user_token
-                        });
-                        return;
+                trackedActionData: {
+                    event: r.NetworkActionNames.USER_LOGIN,
+                    properties: {
+                        invite_code: null == o ? void 0 : o.code,
+                        is_multi_account: c
                     }
-                    if ((null === (n = e.body) || void 0 === n ? void 0 : n.code) === S.evJ.MFA_INVALID_CODE) throw Error(e.body.message);
-                    throw e;
-                });
-        },
-        authenticatePasswordless(e) {
-            let { authenticateFunc: n, conditionalMediationAbortController: r, source: i, giftCodeSKUId: a } = e;
-            return (
-                null == r || r.abort('Starting non-conditional mediation'),
-                p.Z.dispatch({ type: 'PASSWORDLESS_START' }),
-                (0, v.d$)()
-                    .then((e) => {
-                        let { challenge: r, ticket: o } = e;
-                        return n(r).then((e) =>
-                            this.loginWebAuthn({
-                                ticket: o,
-                                credential: e,
-                                source: i,
-                                giftCodeSKUId: a
-                            })
-                        );
-                    })
-                    .catch((e) => {
-                        throw (
-                            (p.Z.dispatch({
-                                type: 'PASSWORDLESS_FAILURE',
-                                error: e
-                            }),
-                            e)
-                        );
-                    })
-            );
-        },
-        loginWebAuthn(e) {
-            let { ticket: n, credential: r, source: i, giftCodeSKUId: a } = e;
-            return I.Z.post({
-                url: S.ANM.WEBAUTHN_CONDITIONAL_UI_LOGIN,
-                body: {
-                    credential: r,
-                    ticket: n,
-                    source: i,
-                    giftCodeSKUId: a
                 },
-                retries: 1,
-                trackedActionData: { event: u.NetworkActionNames.USER_LOGIN_PASSWORDLESS },
+                ...(c ? { headers: { authorization: '' } } : {}),
                 rejectWithError: !1
-            })
-                .then((e) => {
+            }).then(
+                (e) => {
                     let {
-                        body: { token: n, user_id: r, required_actions: i }
+                        body: { mfa: t, sms: n, webauthn: i, ticket: r, token: a, backup: s, user_id: o, required_actions: u, totp: d }
                     } = e;
-                    p.Z.dispatch({
+                    l.Z.dispatch({
                         type: 'LOGIN_ATTEMPTED',
-                        user_id: r,
-                        required_actions: i
+                        user_id: o,
+                        required_actions: u
                     }),
-                        p.Z.dispatch({
-                            type: 'LOGIN_SUCCESS',
-                            token: n
-                        });
+                        t
+                            ? l.Z.dispatch({
+                                  type: 'LOGIN_MFA_STEP',
+                                  ticket: r,
+                                  sms: n,
+                                  webauthn: i,
+                                  totp: d,
+                                  backup: s
+                              })
+                            : c
+                              ? this.switchAccountToken(a)
+                              : l.Z.dispatch({
+                                    type: 'LOGIN_SUCCESS',
+                                    token: a
+                                });
+                },
+                (e) => {
+                    var i, r, a;
+                    let s = new u.yZ(e);
+                    if (null != e.body && (null === (i = e.body) || void 0 === i ? void 0 : i.suspended_user_token) != null)
+                        throw (
+                            (l.Z.dispatch({
+                                type: 'LOGIN_SUSPENDED_USER',
+                                suspendedUserToken: null === (a = e.body) || void 0 === a ? void 0 : a.suspended_user_token
+                            }),
+                            s)
+                        );
+                    let o = null === (r = e.body) || void 0 === r ? void 0 : r.code;
+                    throw (
+                        (o === v.evJ.ACCOUNT_SCHEDULED_FOR_DELETION && null != n && '' !== n
+                            ? l.Z.dispatch({
+                                  type: 'LOGIN_ACCOUNT_SCHEDULED_FOR_DELETION',
+                                  credentials: {
+                                      login: t,
+                                      password: n
+                                  }
+                              })
+                            : o === v.evJ.ACCOUNT_DISABLED && null != n && '' !== n
+                              ? l.Z.dispatch({
+                                    type: 'LOGIN_ACCOUNT_DISABLED',
+                                    credentials: {
+                                        login: t,
+                                        password: n
+                                    }
+                                })
+                              : o === v.evJ.PHONE_VERIFICATION_REQUIRED
+                                ? l.Z.dispatch({
+                                      type: 'LOGIN_PHONE_IP_AUTHORIZATION_REQUIRED',
+                                      credentials: {
+                                          login: t,
+                                          password: n
+                                      }
+                                  })
+                                : l.Z.dispatch({
+                                      type: 'LOGIN_FAILURE',
+                                      error: s
+                                  }),
+                        s)
+                    );
+                }
+            )
+        );
+    },
+    loginMFAv2(e) {
+        let { code: t, ticket: n, source: i, giftCodeSKUId: a, isMultiAccount: s, mfaType: o } = e;
+        return g.Z.post({
+            url: v.ANM.LOGIN_MFA(o),
+            body: {
+                code: t,
+                ticket: n,
+                login_source: i,
+                gift_code_sku_id: a
+            },
+            retries: 2,
+            oldFormErrors: !0,
+            trackedActionData: { event: r.NetworkActionNames.USER_LOGIN_MFA },
+            rejectWithError: !1
+        })
+            .then((e) => {
+                s
+                    ? this.switchAccountToken(e.body.token)
+                    : l.Z.dispatch({
+                          type: 'LOGIN_SUCCESS',
+                          token: e.body.token
+                      });
+            })
+            .catch((e) => {
+                var t;
+                if (null != e.body && null != e.body.suspended_user_token) {
+                    l.Z.dispatch({
+                        type: 'LOGIN_SUSPENDED_USER',
+                        suspendedUserToken: e.body.suspended_user_token
+                    });
+                    return;
+                }
+                if ((null === (t = e.body) || void 0 === t ? void 0 : t.code) === v.evJ.MFA_INVALID_CODE) throw Error(e.body.message);
+                throw e;
+            });
+    },
+    authenticatePasswordless(e) {
+        let { authenticateFunc: t, conditionalMediationAbortController: n, source: i, giftCodeSKUId: r } = e;
+        return (
+            null == n || n.abort('Starting non-conditional mediation'),
+            l.Z.dispatch({ type: 'PASSWORDLESS_START' }),
+            (0, p.d$)()
+                .then((e) => {
+                    let { challenge: n, ticket: a } = e;
+                    return t(n).then((e) =>
+                        this.loginWebAuthn({
+                            ticket: a,
+                            credential: e,
+                            source: i,
+                            giftCodeSKUId: r
+                        })
+                    );
                 })
                 .catch((e) => {
-                    if (null != e.body && null != e.body.suspended_user_token) {
-                        p.Z.dispatch({
-                            type: 'LOGIN_SUSPENDED_USER',
-                            suspendedUserToken: e.body.suspended_user_token
-                        });
-                        return;
-                    }
                     throw (
-                        (p.Z.dispatch({
+                        (l.Z.dispatch({
                             type: 'PASSWORDLESS_FAILURE',
                             error: e
                         }),
                         e)
                     );
-                });
-        },
-        loginToken(e) {
-            let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-            return (
-                p.Z.dispatch({ type: 'LOGIN' }),
-                new Promise((r) => {
-                    setImmediate(() => {
-                        p.Z.dispatch({
-                            type: 'LOGIN_SUCCESS',
-                            token: e
-                        }),
-                            n && this.startSession(e),
-                            r();
-                    });
                 })
-            );
-        },
-        loginReset(e) {
-            p.Z.dispatch({
-                type: 'LOGIN_RESET',
-                isMultiAccount: e
-            });
-        },
-        loginStatusReset() {
-            p.Z.dispatch({ type: 'LOGIN_STATUS_RESET' });
-        },
-        logoutInternal(e) {
-            O(e);
-        },
-        logout() {
-            var e;
-            let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : S.Z5c.DEFAULT_LOGGED_OUT,
-                r = arguments.length > 1 ? arguments[1] : void 0;
-            return I.Z.post({
-                url: S.ANM.LOGOUT,
-                body: {
-                    provider: (0, A.xJ)(),
-                    token: f.K.get(S.JkL),
-                    voip_provider: A.mv,
-                    voip_token: f.K.get(S.scU)
-                },
-                oldFormErrors: !0,
-                trackedActionData: { event: u.NetworkActionNames.USER_LOGOUT },
-                ...(null != r && { headers: { authorization: null !== (e = c.getToken(r)) && void 0 !== e ? e : '' } }),
-                rejectWithError: !1
-            }).finally(() => {
-                (null == r || r === y.default.getId()) && D(n);
-            });
-        },
-        switchAccountToken(e) {
-            let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-                r = y.default.getToken();
-            return (
-                C.log('Switching accounts', {
-                    wasLoggedIn: null != r,
-                    tokenHasChanged: e !== r
-                }),
-                O({
-                    isSwitchingAccount: !0,
-                    goHomeAfterSwitching: n
-                }),
-                this.loginToken(e, !0).then(() => {
-                    let n = e === y.default.getToken();
-                    return C.log('Switched accounts finished', { isCorrectToken: n }), n;
-                })
-            );
-        },
-        verifySSOToken() {
-            let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : S.Z5c.DEFAULT_LOGGED_OUT;
-            return d.tn
-                .get({
-                    url: S.ANM.ME,
-                    oldFormErrors: !0,
-                    rejectWithError: !0
-                })
-                .catch(() => D(e));
-        },
-        async verify(e) {
-            let n = await I.Z.post({
-                url: S.ANM.VERIFY,
-                body: { token: e },
-                trackedActionData: { event: u.NetworkActionNames.USER_VERIFY },
-                rejectWithError: !1
-            });
-            return (
-                p.Z.dispatch({
-                    type: 'LOGIN_SUCCESS',
-                    token: n.body.token
-                }),
-                n.body.user_id
-            );
-        },
-        authorizePayment: (e) =>
-            I.Z.post({
-                url: S.ANM.AUTHORIZE_PAYMENT,
-                body: { token: e },
-                trackedActionData: { event: u.NetworkActionNames.AUTHORIZE_PAYMENT },
-                rejectWithError: !0
-            }),
-        authorizeIPAddress: (e) =>
-            I.Z.post({
-                url: S.ANM.AUTHORIZE_IP,
-                body: { token: e },
-                trackedActionData: { event: u.NetworkActionNames.AUTHORIZE_IP },
-                rejectWithError: !0
-            }),
-        verifyResend: () =>
-            I.Z.post({
-                url: S.ANM.VERIFY_RESEND,
-                oldFormErrors: !0,
-                trackedActionData: { event: u.NetworkActionNames.USER_VERIFY_RESEND },
-                rejectWithError: !1
-            }),
-        async resetPassword(e, n, r) {
-            p.Z.dispatch({ type: 'LOGIN' });
-            let i = {
-                    token: e,
-                    password: n,
-                    source: r
-                },
-                a = f.K.get(S.JkL),
-                o = (0, A.xJ)();
-            null != o && null != a && ((i.push_provider = o), (i.push_token = a));
-            let s = f.K.get(S.scU);
-            null != A.mv && null != s && ((i.push_voip_provider = A.mv), (i.push_voip_token = s));
-            try {
+        );
+    },
+    loginWebAuthn(e) {
+        let { ticket: t, credential: n, source: i, giftCodeSKUId: a } = e;
+        return g.Z.post({
+            url: v.ANM.WEBAUTHN_CONDITIONAL_UI_LOGIN,
+            body: {
+                credential: n,
+                ticket: t,
+                source: i,
+                giftCodeSKUId: a
+            },
+            retries: 1,
+            trackedActionData: { event: r.NetworkActionNames.USER_LOGIN_PASSWORDLESS },
+            rejectWithError: !1
+        })
+            .then((e) => {
                 let {
-                    body: { mfa: e, sms: n, webauthn: r, ticket: a, token: o, backup: s, totp: l }
-                } = await I.Z.post({
-                    url: S.ANM.RESET_PASSWORD,
-                    body: i,
-                    oldFormErrors: !0,
-                    trackedActionData: { event: u.NetworkActionNames.USER_RESET_PASSWORD },
-                    rejectWithError: !1
-                });
-                return {
-                    result: e ? 'MFA' : 'SUCCESS',
-                    sms: n,
-                    webauthn: r,
-                    ticket: a,
-                    token: o,
-                    backup: s,
-                    totp: l
-                };
-            } catch (e) {
+                    body: { token: t, user_id: n, required_actions: i }
+                } = e;
+                l.Z.dispatch({
+                    type: 'LOGIN_ATTEMPTED',
+                    user_id: n,
+                    required_actions: i
+                }),
+                    l.Z.dispatch({
+                        type: 'LOGIN_SUCCESS',
+                        token: t
+                    });
+            })
+            .catch((e) => {
+                if (null != e.body && null != e.body.suspended_user_token) {
+                    l.Z.dispatch({
+                        type: 'LOGIN_SUSPENDED_USER',
+                        suspendedUserToken: e.body.suspended_user_token
+                    });
+                    return;
+                }
                 throw (
-                    (p.Z.dispatch({
-                        type: 'LOGIN_FAILURE',
-                        error: new h.yZ(e)
+                    (l.Z.dispatch({
+                        type: 'PASSWORDLESS_FAILURE',
+                        error: e
                     }),
                     e)
                 );
-            }
-        },
-        async resetPasswordMFAv2(e) {
-            let { method: n, code: r, ticket: i, password: a, token: o, source: s } = e;
-            return (
-                p.Z.dispatch({ type: 'LOGIN_MFA' }),
-                (
-                    await I.Z.post({
-                        url: S.ANM.RESET_PASSWORD,
-                        body: {
-                            code: r,
-                            ticket: i,
-                            password: a,
-                            token: o,
-                            source: s,
-                            method: n
-                        },
-                        oldFormErrors: !0,
-                        trackedActionData: {
-                            event: u.NetworkActionNames.USER_RESET_PASSWORD,
-                            properties: { mfa: !0 }
-                        },
-                        rejectWithError: !0
-                    })
-                ).body.token
+            });
+    },
+    loginToken(e) {
+        let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+        return (
+            l.Z.dispatch({ type: 'LOGIN' }),
+            new Promise((n) => {
+                setImmediate(() => {
+                    l.Z.dispatch({
+                        type: 'LOGIN_SUCCESS',
+                        token: e
+                    }),
+                        t && this.startSession(e),
+                        n();
+                });
+            })
+        );
+    },
+    loginReset(e) {
+        l.Z.dispatch({
+            type: 'LOGIN_RESET',
+            isMultiAccount: e
+        });
+    },
+    loginStatusReset() {
+        l.Z.dispatch({ type: 'LOGIN_STATUS_RESET' });
+    },
+    logoutInternal(e) {
+        A(e);
+    },
+    logout() {
+        var e;
+        let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : v.Z5c.DEFAULT_LOGGED_OUT,
+            n = arguments.length > 1 ? arguments[1] : void 0;
+        return g.Z.post({
+            url: v.ANM.LOGOUT,
+            body: {
+                provider: (0, y.xJ)(),
+                token: o.K.get(v.JkL),
+                voip_provider: y.mv,
+                voip_token: o.K.get(v.scU)
+            },
+            oldFormErrors: !0,
+            trackedActionData: { event: r.NetworkActionNames.USER_LOGOUT },
+            ...(null != n && { headers: { authorization: null !== (e = a.getToken(n)) && void 0 !== e ? e : '' } }),
+            rejectWithError: !1
+        }).finally(() => {
+            (null == n || n === h.default.getId()) && N(t);
+        });
+    },
+    switchAccountToken(e) {
+        let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+            n = h.default.getToken();
+        return (
+            I.log('Switching accounts', {
+                wasLoggedIn: null != n,
+                tokenHasChanged: e !== n
+            }),
+            A({
+                isSwitchingAccount: !0,
+                goHomeAfterSwitching: t
+            }),
+            this.loginToken(e, !0).then(() => {
+                let t = e === h.default.getToken();
+                return I.log('Switched accounts finished', { isCorrectToken: t }), t;
+            })
+        );
+    },
+    verifySSOToken() {
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : v.Z5c.DEFAULT_LOGGED_OUT;
+        return s.tn
+            .get({
+                url: v.ANM.ME,
+                oldFormErrors: !0,
+                rejectWithError: !0
+            })
+            .catch(() => N(e));
+    },
+    async verify(e) {
+        let t = await g.Z.post({
+            url: v.ANM.VERIFY,
+            body: { token: e },
+            trackedActionData: { event: r.NetworkActionNames.USER_VERIFY },
+            rejectWithError: !1
+        });
+        return (
+            l.Z.dispatch({
+                type: 'LOGIN_SUCCESS',
+                token: t.body.token
+            }),
+            t.body.user_id
+        );
+    },
+    authorizePayment: (e) =>
+        g.Z.post({
+            url: v.ANM.AUTHORIZE_PAYMENT,
+            body: { token: e },
+            trackedActionData: { event: r.NetworkActionNames.AUTHORIZE_PAYMENT },
+            rejectWithError: !0
+        }),
+    authorizeIPAddress: (e) =>
+        g.Z.post({
+            url: v.ANM.AUTHORIZE_IP,
+            body: { token: e },
+            trackedActionData: { event: r.NetworkActionNames.AUTHORIZE_IP },
+            rejectWithError: !0
+        }),
+    verifyResend: () =>
+        g.Z.post({
+            url: v.ANM.VERIFY_RESEND,
+            oldFormErrors: !0,
+            trackedActionData: { event: r.NetworkActionNames.USER_VERIFY_RESEND },
+            rejectWithError: !1
+        }),
+    async resetPassword(e, t, n) {
+        l.Z.dispatch({ type: 'LOGIN' });
+        let i = {
+                token: e,
+                password: t,
+                source: n
+            },
+            a = o.K.get(v.JkL),
+            s = (0, y.xJ)();
+        null != s && null != a && ((i.push_provider = s), (i.push_token = a));
+        let c = o.K.get(v.scU);
+        null != y.mv && null != c && ((i.push_voip_provider = y.mv), (i.push_voip_token = c));
+        try {
+            let {
+                body: { mfa: e, sms: t, webauthn: n, ticket: a, token: s, backup: o, totp: l }
+            } = await g.Z.post({
+                url: v.ANM.RESET_PASSWORD,
+                body: i,
+                oldFormErrors: !0,
+                trackedActionData: { event: r.NetworkActionNames.USER_RESET_PASSWORD },
+                rejectWithError: !1
+            });
+            return {
+                result: e ? 'MFA' : 'SUCCESS',
+                sms: t,
+                webauthn: n,
+                ticket: a,
+                token: s,
+                backup: o,
+                totp: l
+            };
+        } catch (t) {
+            let e = new u.yZ(t);
+            throw (
+                (l.Z.dispatch({
+                    type: 'LOGIN_FAILURE',
+                    error: e
+                }),
+                e)
             );
-        },
-        async forgotPassword(e) {
-            p.Z.dispatch({ type: 'FORGOT_PASSWORD_REQUEST' });
-            try {
-                await I.Z.post({
-                    url: S.ANM.FORGOT_PASSWORD,
+        }
+    },
+    async resetPasswordMFAv2(e) {
+        let { method: t, code: n, ticket: i, password: a, token: s, source: o } = e;
+        return (
+            l.Z.dispatch({ type: 'LOGIN_MFA' }),
+            (
+                await g.Z.post({
+                    url: v.ANM.RESET_PASSWORD,
+                    body: {
+                        code: n,
+                        ticket: i,
+                        password: a,
+                        token: s,
+                        source: o,
+                        method: t
+                    },
+                    oldFormErrors: !0,
+                    trackedActionData: {
+                        event: r.NetworkActionNames.USER_RESET_PASSWORD,
+                        properties: { mfa: !0 }
+                    },
+                    rejectWithError: !0
+                })
+            ).body.token
+        );
+    },
+    async forgotPassword(e) {
+        l.Z.dispatch({ type: 'FORGOT_PASSWORD_REQUEST' });
+        try {
+            return (
+                await g.Z.post({
+                    url: v.ANM.FORGOT_PASSWORD,
                     body: { login: e },
                     oldFormErrors: !0,
-                    trackedActionData: { event: u.NetworkActionNames.FORGOT_PASSWORD },
+                    trackedActionData: { event: r.NetworkActionNames.FORGOT_PASSWORD },
                     rejectWithError: !1
                 }),
-                    p.Z.dispatch({ type: 'FORGOT_PASSWORD_SENT' });
-            } catch (r) {
-                let n = new h.yZ(r);
-                throw (
-                    (n.code === S.evJ.PHONE_VERIFICATION_REQUIRED
-                        ? p.Z.dispatch({
-                              type: 'LOGIN_PASSWORD_RECOVERY_PHONE_VERIFICATION',
-                              credentials: { login: e }
-                          })
-                        : p.Z.dispatch({
-                              type: 'LOGIN_FAILURE',
-                              error: n
-                          }),
-                    r)
+                l.Z.dispatch({ type: 'FORGOT_PASSWORD_SENT' }),
+                !0
+            );
+        } catch (n) {
+            let t = new u.yZ(n);
+            if (t.code === v.evJ.PHONE_VERIFICATION_REQUIRED)
+                return (
+                    l.Z.dispatch({
+                        type: 'LOGIN_PASSWORD_RECOVERY_PHONE_VERIFICATION',
+                        credentials: { login: e }
+                    }),
+                    !1
                 );
-            }
-        },
-        setFingerprint(e) {
-            p.Z.dispatch({
-                type: 'FINGERPRINT',
-                fingerprint: e
-            });
-        },
-        getExperiments(e) {
-            p.Z.dispatch({
-                type: 'EXPERIMENTS_FETCH',
-                withGuildExperiments: e
-            });
-        },
-        getLocationMetadata: () =>
-            null != R
-                ? R
-                : (clearTimeout(i),
-                  (i = setTimeout(() => {
-                      p.Z.dispatch({
-                          type: 'SET_CONSENT_REQUIRED',
-                          consentRequired: !0
-                      });
-                  }, N)),
-                  (R = d.tn
-                      .get({
-                          url: S.ANM.AUTH_LOCATION_METADATA,
-                          retries: 2,
-                          oldFormErrors: !0,
-                          rejectWithError: !0
-                      })
-                      .then(
-                          (e) => {
-                              var n, r, a, o, s;
-                              if ((clearTimeout(i), null == b.Z.getAuthenticationConsentRequired())) {
-                                  let n = null === (o = null == e ? void 0 : null === (a = e.body) || void 0 === a ? void 0 : a.consent_required) || void 0 === o || o;
-                                  p.Z.dispatch({
-                                      type: 'SET_CONSENT_REQUIRED',
-                                      consentRequired: n
-                                  });
-                              }
-                              if (
-                                  (p.Z.dispatch({
-                                      type: 'SET_LOCATION_METADATA',
-                                      countryCode: null !== (s = null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.country_code) && void 0 !== s ? s : void 0
-                                  }),
-                                  (R = null),
-                                  (null == e ? void 0 : null === (r = e.body) || void 0 === r ? void 0 : r.promotional_email_opt_in) != null)
-                              ) {
-                                  let n = e.body.promotional_email_opt_in;
-                                  (0, _.K4)({
-                                      required: n.required,
-                                      checked: n.pre_checked,
-                                      preChecked: n.pre_checked
-                                  });
-                              }
-                          },
-                          () => {
-                              clearTimeout(i),
-                                  p.Z.dispatch({
-                                      type: 'SET_CONSENT_REQUIRED',
-                                      consentRequired: !0
-                                  }),
-                                  (R = null);
-                          }
-                      ))),
-        closeSuspendedUser() {
-            p.Z.dispatch({ type: 'CLOSE_SUSPENDED_USER' });
+            throw (
+                (l.Z.dispatch({
+                    type: 'LOGIN_FAILURE',
+                    error: t
+                }),
+                t)
+            );
         }
-    });
+    },
+    setFingerprint(e) {
+        l.Z.dispatch({
+            type: 'FINGERPRINT',
+            fingerprint: e
+        });
+    },
+    getExperiments(e) {
+        l.Z.dispatch({
+            type: 'EXPERIMENTS_FETCH',
+            withGuildExperiments: e
+        });
+    },
+    getLocationMetadata: () =>
+        null != T
+            ? T
+            : (clearTimeout(i),
+              (i = setTimeout(() => {
+                  l.Z.dispatch({
+                      type: 'SET_CONSENT_REQUIRED',
+                      consentRequired: !0
+                  });
+              }, b)),
+              (T = s.tn
+                  .get({
+                      url: v.ANM.AUTH_LOCATION_METADATA,
+                      retries: 2,
+                      oldFormErrors: !0,
+                      rejectWithError: !0
+                  })
+                  .then(
+                      (e) => {
+                          var t, n, r, a, s;
+                          if ((clearTimeout(i), null == m.Z.getAuthenticationConsentRequired())) {
+                              let t = null === (a = null == e ? void 0 : null === (r = e.body) || void 0 === r ? void 0 : r.consent_required) || void 0 === a || a;
+                              l.Z.dispatch({
+                                  type: 'SET_CONSENT_REQUIRED',
+                                  consentRequired: t
+                              });
+                          }
+                          if (
+                              (l.Z.dispatch({
+                                  type: 'SET_LOCATION_METADATA',
+                                  countryCode: null !== (s = null == e ? void 0 : null === (t = e.body) || void 0 === t ? void 0 : t.country_code) && void 0 !== s ? s : void 0
+                              }),
+                              (T = null),
+                              (null == e ? void 0 : null === (n = e.body) || void 0 === n ? void 0 : n.promotional_email_opt_in) != null)
+                          ) {
+                              let t = e.body.promotional_email_opt_in;
+                              (0, c.K4)({
+                                  required: t.required,
+                                  checked: t.pre_checked,
+                                  preChecked: t.pre_checked
+                              });
+                          }
+                      },
+                      () => {
+                          clearTimeout(i),
+                              l.Z.dispatch({
+                                  type: 'SET_CONSENT_REQUIRED',
+                                  consentRequired: !0
+                              }),
+                              (T = null);
+                      }
+                  ))),
+    closeSuspendedUser() {
+        l.Z.dispatch({ type: 'CLOSE_SUSPENDED_USER' });
+    }
+};

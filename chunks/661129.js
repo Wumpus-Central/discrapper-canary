@@ -1,33 +1,29 @@
-r.d(t, {
-    F: function () {
-        return l;
-    }
-});
-var a = r(140955),
-    n = r(416987),
-    _ = r(596308),
-    o = r(622574),
-    E = r(433691),
-    i = r(135813),
-    c = r(873712);
-let s = [100, 300],
-    l = (e, t = {}) => {
-        (0, c.A)(() => {
-            let r;
-            let c = (0, n.Y)(),
-                l = (0, _.I)('FID'),
-                I = (e) => {
-                    e.startTime < c.firstHiddenTime && ((l.value = e.processingStart - e.startTime), l.entries.push(e), r(!0));
+a.d(e, { F: () => l });
+var r = a(140955),
+    n = a(416987),
+    o = a(596308),
+    _ = a(622574),
+    i = a(433691),
+    c = a(135813),
+    s = a(873712);
+let E = [100, 300],
+    l = (t, e = {}) => {
+        (0, s.A)(() => {
+            let a;
+            let s = (0, n.Y)(),
+                l = (0, o.I)('FID'),
+                u = (t) => {
+                    t.startTime < s.firstHiddenTime && ((l.value = t.processingStart - t.startTime), l.entries.push(t), a(!0));
                 },
-                u = (e) => {
-                    e.forEach(I);
+                I = (t) => {
+                    t.forEach(u);
                 },
-                R = (0, o.N)('first-input', u);
-            (r = (0, a._)(e, l, s, t.reportAllChanges)),
+                R = (0, _.N)('first-input', I);
+            (a = (0, r._)(t, l, E, e.reportAllChanges)),
                 R &&
-                    (0, E.u)(
-                        (0, i.R)(() => {
-                            u(R.takeRecords()), R.disconnect();
+                    (0, i.u)(
+                        (0, c.R)(() => {
+                            I(R.takeRecords()), R.disconnect();
                         })
                     );
         });

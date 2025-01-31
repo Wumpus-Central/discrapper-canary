@@ -1,67 +1,63 @@
-r.d(n, {
-    Z: function () {
-        return v;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(442837),
-    l = r(481060),
-    u = r(872810),
-    c = r(199902),
-    d = r(314897),
-    f = r(685203),
-    p = r(112560),
-    h = r(388032),
-    _ = r(845110);
-let m = 175,
-    g = 195,
-    E = r(978538);
-function v(e) {
-    let { participant: n, width: r, noArt: a = !1, selected: v = !1 } = e,
-        y = r < g,
-        b = (0, s.e7)([c.Z, d.default], () =>
-            c.Z.getAllActiveStreams().some((e) => {
-                let { ownerId: n } = e;
-                return n !== d.default.getId();
+n.d(t, { Z: () => E });
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(442837),
+    o = n(481060),
+    l = n(872810),
+    u = n(199902),
+    c = n(314897),
+    d = n(685203),
+    f = n(112560),
+    _ = n(388032),
+    p = n(845110);
+let h = 175,
+    m = 195,
+    g = n(978538);
+function E(e) {
+    let { participant: t, width: n, noArt: r = !1, selected: E = !1 } = e,
+        v = n < m,
+        y = (0, s.e7)([u.Z, c.default], () =>
+            u.Z.getAllActiveStreams().some((e) => {
+                let { ownerId: t } = e;
+                return t !== c.default.getId();
             })
         );
     return (0, i.jsx)('div', {
-        className: o()(_.content, _.streamHidden, { [_.__invalid_small]: y }),
-        children: (0, i.jsx)(p.Z, {
-            className: _.streamHiddenEmptyState,
-            artURL: E,
-            noArt: a,
-            selected: v,
-            size: (0, p.L)(r),
-            header: y ? null : h.intl.string(h.t.epU4ER),
-            description: v
+        className: a()(p.content, p.streamHidden, { [p.__invalid_small]: v }),
+        children: (0, i.jsx)(f.Z, {
+            className: p.streamHiddenEmptyState,
+            artURL: g,
+            noArt: r,
+            selected: E,
+            size: (0, f.L)(n),
+            header: v ? null : _.intl.string(_.t.epU4ER),
+            description: E
                 ? null
                 : (0, i.jsxs)('div', {
-                      className: o()(_.streamHiddenCTA, { [_.largePaddingTop]: !y }),
+                      className: a()(p.streamHiddenCTA, { [p.largePaddingTop]: !v }),
                       children: [
-                          (0, i.jsx)(f.a, {
-                              isSmall: y,
-                              children: (0, i.jsx)(l.Text, {
-                                  variant: y ? 'text-sm/semibold' : 'text-md/semibold',
+                          (0, i.jsx)(d.a, {
+                              isSmall: v,
+                              children: (0, i.jsx)(o.Text, {
+                                  variant: v ? 'text-sm/semibold' : 'text-md/semibold',
                                   color: 'none',
-                                  children: r < m ? h.intl.string(h.t['I6JG4+']) : h.intl.string(h.t['7Xq/nZ'])
+                                  children: n < h ? _.intl.string(_.t['I6JG4+']) : _.intl.string(_.t['7Xq/nZ'])
                               })
                           }),
-                          b
-                              ? (0, i.jsx)(f.a, {
-                                    className: _.addCTA,
-                                    tooltip: h.intl.string(h.t.wCrzur),
+                          y
+                              ? (0, i.jsx)(d.a, {
+                                    className: p.addCTA,
+                                    tooltip: _.intl.string(_.t.wCrzur),
                                     onClick: (e) => {
-                                        e.stopPropagation(), (0, u.rn)(n.stream, { forceMultiple: !0 });
+                                        e.stopPropagation(), (0, l.rn)(t.stream, { forceMultiple: !0 });
                                     },
-                                    isSmall: y,
-                                    children: (0, i.jsx)(l.EyePlusIcon, {
+                                    isSmall: v,
+                                    children: (0, i.jsx)(o.OgY, {
                                         size: 'xs',
                                         color: 'currentColor',
-                                        className: _.addStreamIcon
+                                        className: p.addStreamIcon
                                     })
                                 })
                               : null

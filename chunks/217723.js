@@ -1,53 +1,47 @@
-a.r(o),
-    a.d(o, {
-        default: function () {
-            return c;
-        }
-    }),
-    a(47120);
-var e = a(200651),
-    n = a(192379),
-    l = a(481060),
-    i = a(313201),
-    s = a(388032),
-    r = a(852796);
+l.d(a, { default: () => c }), l(47120);
+var i = l(200651),
+    e = l(192379),
+    n = l(481060),
+    o = l(313201),
+    s = l(388032),
+    r = l(852796);
 function c(t) {
-    let { transitionState: o, onConfirm: a, onClose: c, onDismiss: d } = t,
-        [u, h] = n.useState(!1),
-        m = (0, i.Dt)(),
-        p = async () => {
-            if (!u) {
-                h(!0);
+    let { transitionState: a, onConfirm: l, onClose: c, onDismiss: d } = t,
+        [h, m] = e.useState(!1),
+        u = (0, o.Dt)(),
+        x = async () => {
+            if (!h) {
+                m(!0);
                 try {
-                    await a();
+                    await l();
                 } catch (t) {
                 } finally {
-                    h(!1);
+                    m(!1);
                 }
                 c();
             }
         };
-    return (0, e.jsxs)(l.ModalRoot, {
-        transitionState: o,
-        'aria-labelledby': m,
-        size: l.ModalSize.SMALL,
+    return (0, i.jsxs)(n.Y0X, {
+        transitionState: a,
+        'aria-labelledby': u,
+        size: n.CgR.SMALL,
         children: [
-            (0, e.jsxs)(l.ModalContent, {
+            (0, i.jsxs)(n.hzk, {
                 children: [
-                    (0, e.jsx)(l.ModalCloseButton, {
+                    (0, i.jsx)(n.olH, {
                         onClick: () => {
                             d(), c();
                         },
                         className: r.closeButton
                     }),
-                    (0, e.jsx)(l.Heading, {
-                        id: m,
+                    (0, i.jsx)(n.X6q, {
+                        id: u,
                         variant: 'heading-lg/extrabold',
                         color: 'header-primary',
                         className: r.modalTitle,
                         children: s.intl.string(s.t['66tnnp'])
                     }),
-                    (0, e.jsx)(l.Text, {
+                    (0, i.jsx)(n.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
                         className: r.modalBody,
@@ -55,12 +49,12 @@ function c(t) {
                     })
                 ]
             }),
-            (0, e.jsx)(l.ModalFooter, {
-                children: (0, e.jsx)(l.Button, {
+            (0, i.jsx)(n.mzw, {
+                children: (0, i.jsx)(n.zxk, {
                     type: 'submit',
-                    color: l.Button.Colors.BRAND,
-                    onClick: p,
-                    submitting: u,
+                    color: n.zxk.Colors.BRAND,
+                    onClick: x,
+                    submitting: h,
                     children: s.intl.string(s.t['cY+Ooa'])
                 })
             })

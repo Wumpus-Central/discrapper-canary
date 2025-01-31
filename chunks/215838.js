@@ -1,15 +1,8 @@
-r.d(n, {
-    U: function () {
-        return c;
-    },
-    w: function () {
-        return u;
-    }
-});
+n.d(t, { w: () => l });
 var i,
-    a,
-    o = r(796075),
-    s = r(478922),
-    l = r(448304);
-let u = (0, s.z)(l.thin, l.fade, null !== (i = window.ResizeObserver) && void 0 !== i ? i : o.d),
-    c = (0, s.z)(l.auto, l.fade, null !== (a = window.ResizeObserver) && void 0 !== a ? a : o.d);
+    r,
+    a = n(796075),
+    s = n(478922),
+    o = n(448304);
+let l = (0, s.z)(o.thin, o.fade, null !== (i = window.ResizeObserver) && void 0 !== i ? i : a.d);
+(0, s.z)(o.auto, o.fade, null !== (r = window.ResizeObserver) && void 0 !== r ? r : a.d);

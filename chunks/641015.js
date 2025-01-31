@@ -1,23 +1,19 @@
-r.d(n, {
-    D: function () {
-        return l;
-    },
-    Z: function () {
-        return u;
-    }
+n.d(t, {
+    D: () => o,
+    Z: () => l
 });
-var i = r(592125),
-    a = r(496675),
-    o = r(944486),
-    s = r(981631);
-function l() {
-    let e = o.Z.getVoiceChannelId();
-    return u(i.Z.getChannel(e));
+var i = n(592125),
+    r = n(496675),
+    a = n(944486),
+    s = n(981631);
+function o() {
+    let e = a.Z.getVoiceChannelId();
+    return l(i.Z.getChannel(e));
 }
-function u(e) {
+function l(e) {
     if (null == e) return !1;
     if (s.TPd.CALLABLE.has(e.type)) return !0;
-    let n = a.Z.can(s.Plq.USE_SOUNDBOARD, e),
-        r = a.Z.can(s.Plq.SPEAK, e);
-    return e.type === s.d4z.GUILD_VOICE && n && r;
+    let t = r.Z.can(s.Plq.USE_SOUNDBOARD, e),
+        n = r.Z.can(s.Plq.SPEAK, e);
+    return e.type === s.d4z.GUILD_VOICE && t && n;
 }

@@ -1,10 +1,6 @@
 n.d(t, {
-    Z: function () {
-        return i;
-    },
-    t: function () {
-        return l;
-    }
+    Z: () => i,
+    t: () => l
 });
 let i = 64,
     l = 1200;

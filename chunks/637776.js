@@ -1,108 +1,103 @@
-n.d(t, {
-    Z: function () {
-        return p;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => m }), n(47120);
 var i = n(200651),
     r = n(192379),
-    s = n(442837),
-    l = n(231239),
+    l = n(442837),
+    a = n(231239),
     o = n(129293),
-    a = n(388905),
+    s = n(388905),
     c = n(703656),
     d = n(108427),
     u = n(844800),
     h = n(580497),
-    g = n(981631),
-    f = n(388032),
-    m = n(841094);
-function p(e) {
+    _ = n(981631),
+    g = n(388032),
+    p = n(841094);
+function m(e) {
     let { location: t } = e,
-        [p, x] = r.useState(!1),
-        { verifySuccess: _, verifyErrors: E, redirectGuildId: I } = (0, s.e7)([u.Z], () => u.Z.getState());
+        [m, f] = r.useState(!1),
+        { verifySuccess: E, verifyErrors: I, redirectGuildId: x } = (0, l.e7)([u.Z], () => u.Z.getState());
     r.useEffect(() => {
         let e = (0, o.Z)(t);
-        l.Z.verify(e), (0, d.e)('verify_hub_email');
+        a.Z.verify(e), (0, d.e)('verify_hub_email');
     }, [t]);
-    let N = () => {
-        (0, h.Z)(I), x(!0);
+    let C = () => {
+        (0, h.Z)(x), f(!0);
     };
-    return p
-        ? (0, i.jsxs)(a.ZP, {
+    return m
+        ? (0, i.jsxs)(s.ZP, {
               children: [
-                  (0, i.jsx)(a.Dx, {
-                      className: m.title,
-                      children: f.intl.string(f.t.csrAMD)
+                  (0, i.jsx)(s.Dx, {
+                      className: p.title,
+                      children: g.intl.string(g.t.csrAMD)
                   }),
-                  (0, i.jsx)(a.DK, {
-                      className: m.subtitle,
-                      children: f.intl.string(f.t['m1+IBg'])
+                  (0, i.jsx)(s.DK, {
+                      className: p.subtitle,
+                      children: g.intl.string(g.t['m1+IBg'])
                   }),
-                  (0, i.jsx)(a.zx, {
-                      className: m.spacedButton,
-                      onClick: () => (0, c.uL)(g.Z5c.CHANNEL(I)),
-                      children: f.intl.string(f.t.fIv16O)
+                  (0, i.jsx)(s.zx, {
+                      className: p.spacedButton,
+                      onClick: () => (0, c.uL)(_.Z5c.CHANNEL(x)),
+                      children: g.intl.string(g.t.fIv16O)
                   })
               ]
           })
-        : _
-          ? (0, i.jsxs)(a.ZP, {
+        : E
+          ? (0, i.jsxs)(s.ZP, {
                 children: [
-                    (0, i.jsx)(a.Ee, {
-                        className: m.image,
+                    (0, i.jsx)(s.Ee, {
+                        className: p.image,
                         src: n(73962)
                     }),
-                    (0, i.jsx)(a.Dx, {
-                        className: m.title,
-                        children: f.intl.string(f.t.dAfGb2)
+                    (0, i.jsx)(s.Dx, {
+                        className: p.title,
+                        children: g.intl.string(g.t.dAfGb2)
                     }),
-                    (0, i.jsx)(a.zx, {
-                        onClick: N,
-                        children: f.intl.string(f.t.uJWIj4)
+                    (0, i.jsx)(s.zx, {
+                        onClick: C,
+                        children: g.intl.string(g.t.uJWIj4)
                     })
                 ]
             })
-          : null != E
-            ? (0, i.jsxs)(a.ZP, {
+          : null != I
+            ? (0, i.jsxs)(s.ZP, {
                   children: [
-                      (0, i.jsx)(a.Ee, {
-                          className: m.image,
+                      (0, i.jsx)(s.Ee, {
+                          className: p.image,
                           src: n(375673)
                       }),
-                      (0, i.jsx)(a.Dx, {
-                          className: m.title,
-                          children: f.intl.string(f.t.PCgG39)
+                      (0, i.jsx)(s.Dx, {
+                          className: p.title,
+                          children: g.intl.string(g.t.PCgG39)
                       }),
-                      (0, i.jsx)(a.DK, {
-                          className: m.subtitle,
-                          children: f.intl.string(f.t.tQpeAw)
+                      (0, i.jsx)(s.DK, {
+                          className: p.subtitle,
+                          children: g.intl.string(g.t.tQpeAw)
                       }),
-                      (0, i.jsx)(a.zx, {
-                          onClick: N,
-                          children: f.intl.string(f.t.uJWIj4)
+                      (0, i.jsx)(s.zx, {
+                          onClick: C,
+                          children: g.intl.string(g.t.uJWIj4)
                       })
                   ]
               })
-            : (0, i.jsxs)(a.ZP, {
+            : (0, i.jsxs)(s.ZP, {
                   children: [
-                      (0, i.jsx)(a.Ee, {
-                          className: m.image,
+                      (0, i.jsx)(s.Ee, {
+                          className: p.image,
                           src: n(892235)
                       }),
-                      (0, i.jsx)(a.Dx, {
-                          className: m.title,
-                          children: f.intl.string(f.t['0c8+5u'])
+                      (0, i.jsx)(s.Dx, {
+                          className: p.title,
+                          children: g.intl.string(g.t['0c8+5u'])
                       }),
-                      (0, i.jsx)(a.DK, {
-                          className: m.subtitle,
-                          children: f.intl.string(f.t.ULTCBA)
+                      (0, i.jsx)(s.DK, {
+                          className: p.subtitle,
+                          children: g.intl.string(g.t.ULTCBA)
                       }),
-                      (0, i.jsx)(a.zx, {
+                      (0, i.jsx)(s.zx, {
                           submitting: !0,
-                          color: a.zx.Colors.PRIMARY
+                          color: s.zx.Colors.PRIMARY
                       })
                   ]
               });
 }
-s.ZP.initialize();
+l.ZP.initialize();

@@ -1,9 +1,10 @@
 e.exports = {
-    alignCenter: 'alignCenter_ad2a08',
-    alignLeft: 'alignLeft_ad2a08',
-    horizontalPaginationItemContainer: 'horizontalPaginationItemContainer_ad2a08',
-    verticalPaginationItemContainer: 'verticalPaginationItemContainer_ad2a08 alignLeft_ad2a08',
-    arrow: 'arrow_ad2a08',
-    prevButtonContainer: 'prevButtonContainer_ad2a08 arrowContainer_ad2a08',
-    nextButtonContainer: 'nextButtonContainer_ad2a08 arrowContainer_ad2a08'
+    alignCenter: 'alignCenter__31873',
+    alignLeft: 'alignLeft__31873',
+    horizontalPaginationItemContainer: 'horizontalPaginationItemContainer__31873',
+    verticalPaginationItemContainer: 'verticalPaginationItemContainer__31873 alignLeft__31873',
+    arrow: 'arrow__31873',
+    arrowContainer: 'arrowContainer__31873',
+    prevButtonContainer: 'prevButtonContainer__31873 arrowContainer__31873',
+    nextButtonContainer: 'nextButtonContainer__31873 arrowContainer__31873'
 };

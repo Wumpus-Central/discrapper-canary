@@ -1,39 +1,35 @@
-n.d(t, {
-    Z: function () {
-        return m;
-    }
-});
+n.d(t, { Z: () => m });
 var i = n(200651),
-    r = n(192379),
-    l = n(692547),
-    a = n(481060),
-    o = n(375954),
-    s = n(876338),
+    l = n(192379),
+    a = n(692547),
+    r = n(481060),
+    s = n(375954),
+    o = n(876338),
     c = n(912332),
-    u = n(245216),
-    d = n(388032);
+    d = n(245216),
+    u = n(388032);
 function m(e) {
-    let { className: t, channelId: n, messageId: m, targetKind: h, embedIndex: f } = e,
-        p = r.useCallback(() => {
-            let e = o.Z.getMessage(n, m);
+    let { className: t, channelId: n, messageId: m, targetKind: h, embedIndex: _ } = e,
+        p = l.useCallback(() => {
+            let e = s.Z.getMessage(n, m);
             if (null == e) return;
-            let t = (0, s.j)(e, {
+            let t = (0, o.j)(e, {
                 targetKind: h,
-                embedIndex: f
+                embedIndex: _
             });
             (0, c.l8)({
                 message: e,
                 source: 'message-actions',
                 forwardOptions: t
             });
-        }, [n, f, m, h]);
-    return (0, i.jsx)(a.CircleIconButton, {
+        }, [n, _, m, h]);
+    return (0, i.jsx)(r.M0o, {
         className: t,
-        tooltip: d.intl.string(d.t.I3ltXF),
-        color: a.CircleIconButtonColors.SECONDARY,
-        icon: (0, i.jsx)(u.Z, {
+        tooltip: u.intl.string(u.t.I3ltXF),
+        color: r.YX$.SECONDARY,
+        icon: (0, i.jsx)(d.Z, {
             size: 'xs',
-            color: l.Z.colors.INTERACTIVE_NORMAL
+            color: a.Z.colors.INTERACTIVE_NORMAL
         }),
         onClick: p
     });

@@ -1,242 +1,240 @@
+n.d(t, { Z: () => z }), n(47120), n(653041);
 var i,
-    a = r(47120);
-var o = r(653041);
-var s = r(348327),
-    l = r.n(s),
-    u = r(392711),
-    c = r.n(u),
-    d = r(442837),
-    f = r(570140),
-    p = r(122810),
-    h = r(106301),
-    _ = r(709054),
-    m = r(314897),
-    g = r(594174),
-    E = r(981631);
-function v(e, n, r) {
+    r = n(348327),
+    a = n.n(r),
+    s = n(392711),
+    o = n.n(s),
+    l = n(442837),
+    u = n(570140),
+    c = n(122810),
+    d = n(709054),
+    f = n(314897),
+    _ = n(594174),
+    p = n(981631);
+function h(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let y = Object.freeze([]),
-    b = {},
-    I = {},
-    T = {},
-    S = {},
-    A = {};
-function C(e, n) {
-    let r = b[e];
-    return null != r ? r[n] : null;
+let m = Object.freeze([]),
+    g = {},
+    E = {},
+    v = {},
+    y = {},
+    I = {};
+function b(e, t) {
+    let n = g[e];
+    return null != n ? n[t] : null;
 }
-let N = (e) => {
+let T = (e) => {
     switch (e.type) {
-        case E.IIU.CUSTOM_STATUS:
+        case p.IIU.CUSTOM_STATUS:
             return 4;
-        case E.IIU.COMPETING:
+        case p.IIU.COMPETING:
             return 3;
-        case E.IIU.STREAMING:
+        case p.IIU.STREAMING:
             return 2;
-        case E.IIU.PLAYING:
+        case p.IIU.PLAYING:
             return 1;
         default:
             return 0;
     }
 };
-function R(e, n) {
-    return N(n) - N(e);
+function S(e, t) {
+    return T(t) - T(e);
 }
-let O = (e) => ((0, p.Z)(e) ? 1 : 0);
-function D(e, n) {
-    return O(n) - O(e);
+let A = (e) => ((0, c.Z)(e) ? 1 : 0);
+function N(e, t) {
+    return A(t) - A(e);
 }
-function L(e, n) {
-    var r, i;
-    return (null !== (r = n.created_at) && void 0 !== r ? r : 0) - (null !== (i = e.created_at) && void 0 !== i ? i : 0);
+function C(e, t) {
+    var n, i;
+    return (null !== (n = t.created_at) && void 0 !== n ? n : 0) - (null !== (i = e.created_at) && void 0 !== i ? i : 0);
 }
-function x(e, n) {
-    return R(e, n) || D(e, n) || L(e, n);
+function R(e, t) {
+    return S(e, t) || N(e, t) || C(e, t);
 }
-function w(e) {
-    if ((delete I[e], delete T[e], delete S[e], null == b[e])) return;
-    let [n] = c().sortBy(b[e], (e) => -e.timestamp);
-    n.status !== E.Skl.OFFLINE ? ((I[e] = n.status), (T[e] = n.activities), null != n.clientStatus && (S[e] = n.clientStatus)) : c().every(b[e], (e) => e.status === E.Skl.OFFLINE) && delete b[e];
+function O(e) {
+    if ((delete E[e], delete v[e], delete y[e], null == g[e])) return;
+    let [t] = o().sortBy(g[e], (e) => -e.timestamp);
+    t.status !== p.Skl.OFFLINE ? ((E[e] = t.status), (v[e] = t.activities), null != t.clientStatus && (y[e] = t.clientStatus)) : o().every(g[e], (e) => e.status === p.Skl.OFFLINE) && delete g[e];
 }
-function P(e) {
-    let n = b[e];
-    if (null == n) return;
-    let r = c().maxBy(Object.values(n), (e) => e.timestamp);
-    r.status !== E.Skl.OFFLINE && ((I[e] = r.status), (T[e] = r.activities), null != r.clientStatus && (S[e] = r.clientStatus));
+function D(e) {
+    let t = g[e];
+    if (null == t) return;
+    let n = o().maxBy(Object.values(t), (e) => e.timestamp);
+    n.status !== p.Skl.OFFLINE && ((E[e] = n.status), (v[e] = n.activities), null != n.clientStatus && (y[e] = n.clientStatus));
 }
-function M(e) {
-    let { guildId: n, userId: r, status: i, clientStatus: a, activities: o } = e;
-    if (r === m.default.getId()) return !1;
-    let s = b[r];
-    if (null == s) {
-        if (i === E.Skl.OFFLINE) return !1;
-        s = b[r] = {};
+function x(e) {
+    let { guildId: t, userId: n, status: i, clientStatus: r, activities: s } = e;
+    if (n === f.default.getId()) return !1;
+    let o = g[n];
+    if (null == o) {
+        if (i === p.Skl.OFFLINE) return !1;
+        o = g[n] = {};
     }
-    if (i === E.Skl.OFFLINE)
-        s[n] = {
+    if (i === p.Skl.OFFLINE)
+        o[t] = {
             status: i,
-            clientStatus: a,
-            activities: y,
+            clientStatus: r,
+            activities: m,
             timestamp: Date.now()
         };
     else {
-        let e = o.length > 1 ? [...o].sort(x) : o,
-            r = s[n];
-        (o = null != r && l()(r.activities, e) ? r.activities : e),
-            (s[n] = {
+        let e = s.length > 1 ? [...s].sort(R) : s,
+            n = o[t];
+        (s = null != n && a()(n.activities, e) ? n.activities : e),
+            (o[t] = {
                 status: i,
-                clientStatus: a,
-                activities: o,
+                clientStatus: r,
+                activities: s,
                 timestamp: Date.now()
             });
     }
-    return delete A[r], w(r), !0;
+    return delete I[n], O(n), !0;
 }
-function k(e) {
-    let { guildId: n, userId: r, status: i, clientStatus: a, activities: o, timestamp: s } = e;
-    if (r === m.default.getId()) return;
-    let l = b[r];
-    if (null == l) {
-        if (i === E.Skl.OFFLINE) return;
-        l = b[r] = {};
+function L(e) {
+    let { guildId: t, userId: n, status: i, clientStatus: r, activities: a, timestamp: s } = e;
+    if (n === f.default.getId()) return;
+    let o = g[n];
+    if (null == o) {
+        if (i === p.Skl.OFFLINE) return;
+        o = g[n] = {};
     }
-    if (i === E.Skl.OFFLINE)
-        l[n] = {
+    if (i === p.Skl.OFFLINE)
+        o[t] = {
             status: i,
-            clientStatus: a,
-            activities: y,
+            clientStatus: r,
+            activities: m,
             timestamp: Date.now()
         };
     else {
-        let e = o.length > 1 ? [...o].sort(x) : o;
-        l[n] = {
+        let e = a.length > 1 ? [...a].sort(R) : a;
+        o[t] = {
             status: i,
-            clientStatus: a,
+            clientStatus: r,
             activities: e,
             timestamp: s
         };
     }
 }
-function U(e, n) {
-    if (n === m.default.getId()) return !1;
-    let r = b[n];
-    if (null == r || null == r[e]) return !1;
-    delete r[e], 0 === Object.keys(r).length && delete b[n], w(n);
+function P(e, t) {
+    if (t === f.default.getId()) return !1;
+    let n = g[t];
+    if (null == n || null == n[e]) return !1;
+    delete n[e], 0 === Object.keys(n).length && delete g[t], O(t);
 }
-function B(e) {
-    for (let n of _.default.keys(b)) U(e, n);
+function w(e) {
+    for (let t of d.default.keys(g)) P(e, t);
 }
-function G() {
+function M() {
     return !0;
 }
-function Z(e) {
-    let { guilds: n, presences: r } = e,
-        i = m.default.getId();
-    (b = {}), (A = {}), (I = { [i]: I[i] }), (T = { [i]: T[i] }), (S = { [i]: {} });
-    let a = new Set(),
-        o = Date.now();
-    n.forEach((e) => {
-        e.presences.forEach((n) => {
-            let { user: r, status: i, clientStatus: s, activities: l } = n;
-            k({
+function k(e) {
+    let { guilds: t, presences: n } = e,
+        i = f.default.getId();
+    (g = {}), (I = {}), (E = { [i]: E[i] }), (v = { [i]: v[i] }), (y = { [i]: {} });
+    let r = new Set(),
+        a = Date.now();
+    t.forEach((e) => {
+        e.presences.forEach((t) => {
+            let { user: n, status: i, clientStatus: s, activities: o } = t;
+            L({
                 guildId: e.id,
-                userId: r.id,
+                userId: n.id,
                 status: i,
                 clientStatus: s,
-                activities: l,
-                timestamp: o
+                activities: o,
+                timestamp: a
             }),
-                a.add(r.id);
+                r.add(n.id);
         });
     }),
-        r.forEach((e) => {
-            let { user: n, status: r, clientStatus: i, activities: s } = e;
-            null != n &&
-                (k({
-                    guildId: E.ME,
-                    userId: n.id,
-                    status: r,
+        n.forEach((e) => {
+            let { user: t, status: n, clientStatus: i, activities: s } = e;
+            null != t &&
+                (L({
+                    guildId: p.ME,
+                    userId: t.id,
+                    status: n,
                     clientStatus: i,
                     activities: s,
-                    timestamp: o
+                    timestamp: a
                 }),
-                a.add(n.id));
+                r.add(t.id));
         }),
-        a.delete(i),
-        a.forEach(P);
+        r.delete(i),
+        r.forEach(D);
 }
-function F(e) {
-    let { presences: n } = e;
-    (b = n.presencesForGuilds), (I = n.statuses), (T = n.activities), (A = n.activityMetadata);
+function U(e) {
+    let { presences: t } = e;
+    (g = t.presencesForGuilds), (E = t.statuses), (v = t.activities), (I = t.activityMetadata);
 }
-function V(e) {
-    let { presences: n } = e;
-    B(E.ME),
-        n.forEach((e) => {
-            let { user: n, status: r, clientStatus: i, activities: a } = e;
-            null != n &&
-                M({
-                    guildId: E.ME,
-                    userId: n.id,
-                    status: r,
+function G(e) {
+    let { presences: t } = e;
+    w(p.ME),
+        t.forEach((e) => {
+            let { user: t, status: n, clientStatus: i, activities: r } = e;
+            null != t &&
+                x({
+                    guildId: p.ME,
+                    userId: t.id,
+                    status: n,
                     clientStatus: i,
-                    activities: a
+                    activities: r
                 });
         });
 }
-function j(e) {
-    let { guild: n } = e;
-    n.presences.forEach((e) => {
-        let { user: r, status: i, clientStatus: a, activities: o } = e;
-        M({
-            guildId: n.id,
-            userId: r.id,
+function B(e) {
+    let { guild: t } = e;
+    t.presences.forEach((e) => {
+        let { user: n, status: i, clientStatus: r, activities: a } = e;
+        x({
+            guildId: t.id,
+            userId: n.id,
             status: i,
-            clientStatus: a,
-            activities: o
+            clientStatus: r,
+            activities: a
         });
     });
 }
-function H(e) {
-    let { guild: n } = e;
-    B(n.id);
+function Z(e) {
+    let { guild: t } = e;
+    w(t.id);
 }
-function Y(e) {
-    let { guildId: n, user: r } = e;
-    return U(n, r.id);
+function F(e) {
+    let { guildId: t, user: n } = e;
+    return P(t, n.id);
 }
-function W(e) {
-    let { updates: n } = e;
-    return n
+function V(e) {
+    let { updates: t } = e;
+    return t
         .map((e) => {
-            let { guildId: n, user: r, status: i, clientStatus: a, activities: o } = e;
-            return M({
-                guildId: null != n ? n : E.ME,
-                userId: r.id,
+            let { guildId: t, user: n, status: i, clientStatus: r, activities: a } = e;
+            return x({
+                guildId: null != t ? t : p.ME,
+                userId: n.id,
                 status: i,
-                clientStatus: a,
-                activities: o
+                clientStatus: r,
+                activities: a
             });
         })
         .some((e) => e);
 }
-function K(e) {
-    let { guildId: n, members: r } = e;
-    r.forEach((e) => {
+function j(e) {
+    let { guildId: t, members: n } = e;
+    n.forEach((e) => {
         null != e.presence &&
-            M({
-                guildId: n,
+            x({
+                guildId: t,
                 userId: e.user_id,
                 status: e.presence.status,
                 clientStatus: e.presence.clientStatus,
@@ -244,13 +242,13 @@ function K(e) {
             });
     });
 }
-function z(e) {
-    let { guildId: n, addedMembers: r } = e;
-    null == r ||
-        r.forEach((e) => {
+function H(e) {
+    let { guildId: t, addedMembers: n } = e;
+    null == n ||
+        n.forEach((e) => {
             null != e.presence &&
-                M({
-                    guildId: n,
+                x({
+                    guildId: t,
                     userId: e.userId,
                     status: e.presence.status,
                     clientStatus: e.presence.clientStatus,
@@ -258,99 +256,99 @@ function z(e) {
                 });
         });
 }
-function q(e) {
-    let n = m.default.getId();
-    if (I[n] === e.status && T[n] === e.activities) return !1;
-    (I[n] = e.status), (T[n] = e.activities), delete A[n];
+function Y(e) {
+    let t = f.default.getId();
+    if (E[t] === e.status && v[t] === e.activities) return !1;
+    (E[t] = e.status), (v[t] = e.activities), delete I[t];
 }
-function Q(e) {
-    let { userId: n, metadata: r } = e;
-    return (A[n] = r), !1;
+function W(e) {
+    let { userId: t, metadata: n } = e;
+    return (I[t] = n), !1;
 }
-class X extends (i = d.ZP.Store) {
+class K extends (i = l.ZP.Store) {
     initialize() {
-        this.waitFor(m.default, h.Z);
+        this.waitFor(f.default);
     }
-    setCurrentUserOnConnectionOpen(e, n) {
-        (I[m.default.getId()] = e), (T[m.default.getId()] = n);
+    setCurrentUserOnConnectionOpen(e, t) {
+        (E[f.default.getId()] = e), (v[f.default.getId()] = t);
     }
     getStatus(e) {
-        var n, r;
+        var t, n;
         let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-            a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : E.Skl.OFFLINE,
-            o = g.default.getUser(e);
-        if ((null != o && o.hasFlag(E.xW$.BOT_HTTP_INTERACTIONS) && (a = E.Skl.UNKNOWN), null == o ? void 0 : o.isClyde())) return E.Skl.ONLINE;
-        if (null == i) return null !== (n = I[e]) && void 0 !== n ? n : a;
-        let s = C(e, i);
-        return null !== (r = null == s ? void 0 : s.status) && void 0 !== r ? r : a;
+            r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : p.Skl.OFFLINE,
+            a = _.default.getUser(e);
+        if ((null != a && a.hasFlag(p.xW$.BOT_HTTP_INTERACTIONS) && (r = p.Skl.UNKNOWN), null == a ? void 0 : a.isClyde())) return p.Skl.ONLINE;
+        if (null == i) return null !== (t = E[e]) && void 0 !== t ? t : r;
+        let s = b(e, i);
+        return null !== (n = null == s ? void 0 : s.status) && void 0 !== n ? n : r;
     }
     getActivities(e) {
-        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        if (null == n) {
-            var r;
-            return null !== (r = T[e]) && void 0 !== r ? r : y;
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        if (null == t) {
+            var n;
+            return null !== (n = v[e]) && void 0 !== n ? n : m;
         }
-        let i = C(e, n);
-        return null == i || null == i.activities ? y : i.activities;
+        let i = b(e, t);
+        return null == i || null == i.activities ? m : i.activities;
     }
     getPrimaryActivity(e) {
-        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        return this.getActivities(e, n).filter((e) => e.type !== E.IIU.HANG_STATUS)[0];
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+        return this.getActivities(e, t).filter((e) => e.type !== p.IIU.HANG_STATUS)[0];
     }
     getAllApplicationActivities(e) {
-        let n = [];
-        for (let r of _.default.keys(T))
-            for (let i of T[r])
+        let t = [];
+        for (let n of d.default.keys(v))
+            for (let i of v[n])
                 i.application_id === e &&
-                    n.push({
-                        userId: r,
+                    t.push({
+                        userId: n,
                         activity: i
                     });
-        return n;
+        return t;
     }
-    getApplicationActivity(e, n) {
-        let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        return this.findActivity(e, (e) => e.application_id === n, r);
+    getApplicationActivity(e, t) {
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        return this.findActivity(e, (e) => e.application_id === t, n);
     }
-    findActivity(e, n) {
-        let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        return this.getActivities(e, r).find(n);
+    findActivity(e, t) {
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        return this.getActivities(e, n).find(t);
     }
     getActivityMetadata(e) {
-        return A[e];
+        return I[e];
     }
     getUserIds() {
-        return _.default.keys(T);
+        return d.default.keys(v);
     }
     isMobileOnline(e) {
-        let n = S[e];
-        return null != n && n[E.X5t.MOBILE] === E.Skl.ONLINE && n[E.X5t.DESKTOP] !== E.Skl.ONLINE;
+        let t = y[e];
+        return null != t && t[p.X5t.MOBILE] === p.Skl.ONLINE && t[p.X5t.DESKTOP] !== p.Skl.ONLINE;
     }
     getClientStatus(e) {
-        return S[e];
+        return y[e];
     }
     getState() {
         return {
-            presencesForGuilds: b,
-            statuses: I,
-            activities: T,
-            activityMetadata: A,
-            clientStatuses: S
+            presencesForGuilds: g,
+            statuses: E,
+            activities: v,
+            activityMetadata: I,
+            clientStatuses: y
         };
     }
 }
-v(X, 'displayName', 'PresenceStore'),
-    (n.Z = new X(f.Z, {
-        CONNECTION_OPEN: G,
-        CONNECTION_OPEN_SUPPLEMENTAL: Z,
-        OVERLAY_INITIALIZE: F,
-        GUILD_CREATE: j,
-        GUILD_DELETE: H,
-        GUILD_MEMBER_REMOVE: Y,
-        PRESENCE_UPDATES: W,
-        PRESENCES_REPLACE: V,
-        ACTIVITY_METADATA_UPDATE: Q,
-        THREAD_MEMBER_LIST_UPDATE: K,
-        THREAD_MEMBERS_UPDATE: z,
-        SELF_PRESENCE_STORE_UPDATE: q
-    }));
+h(K, 'displayName', 'PresenceStore');
+let z = new K(u.Z, {
+    CONNECTION_OPEN: M,
+    CONNECTION_OPEN_SUPPLEMENTAL: k,
+    OVERLAY_INITIALIZE: U,
+    GUILD_CREATE: B,
+    GUILD_DELETE: Z,
+    GUILD_MEMBER_REMOVE: F,
+    PRESENCE_UPDATES: V,
+    PRESENCES_REPLACE: G,
+    ACTIVITY_METADATA_UPDATE: W,
+    THREAD_MEMBER_LIST_UPDATE: j,
+    THREAD_MEMBERS_UPDATE: H,
+    SELF_PRESENCE_STORE_UPDATE: Y
+});

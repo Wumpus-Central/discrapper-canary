@@ -1,50 +1,46 @@
-r.d(t, {
-    R: function () {
-        return l;
-    }
-});
-var a = r(448171),
-    n = r(78355),
-    _ = r(747677),
-    o = r(622916),
-    E = r(454463),
-    i = r(878719),
-    c = r(163162),
-    s = r(463461);
-class l extends a.W {
-    constructor(e) {
-        let t = {
+a.d(e, { R: () => l });
+var r = a(448171),
+    n = a(78355),
+    o = a(747677),
+    _ = a(622916),
+    i = a(454463),
+    c = a(878719),
+    s = a(163162),
+    E = a(463461);
+class l extends r.W {
+    constructor(t) {
+        let e = {
                 parentSpanIsAlwaysRootSpan: !0,
-                ...e
+                ...t
             },
-            r = c.m9.SENTRY_SDK_SOURCE || (0, _.S)();
-        (0, n.V)(t, 'browser', ['browser'], r),
-            super(t),
-            t.sendClientReports &&
-                c.m9.document &&
-                c.m9.document.addEventListener('visibilitychange', () => {
-                    'hidden' === c.m9.document.visibilityState && this._flushOutcomes();
+            a = s.m9.SENTRY_SDK_SOURCE || (0, o.S)();
+        (0, n.V)(e, 'browser', ['browser'], a),
+            super(e),
+            e.sendClientReports &&
+                s.m9.document &&
+                s.m9.document.addEventListener('visibilitychange', () => {
+                    'hidden' === s.m9.document.visibilityState && this._flushOutcomes();
                 });
     }
-    eventFromException(e, t) {
-        return (0, i.dr)(this._options.stackParser, e, t, this._options.attachStacktrace);
+    eventFromException(t, e) {
+        return (0, c.dr)(this._options.stackParser, t, e, this._options.attachStacktrace);
     }
-    eventFromMessage(e, t = 'info', r) {
-        return (0, i.aB)(this._options.stackParser, e, t, r, this._options.attachStacktrace);
+    eventFromMessage(t, e = 'info', a) {
+        return (0, c.aB)(this._options.stackParser, t, e, a, this._options.attachStacktrace);
     }
-    captureUserFeedback(e) {
+    captureUserFeedback(t) {
         if (!this._isEnabled()) {
-            E.X && o.kg.warn('SDK not enabled, will not capture user feedback.');
+            i.X && _.kg.warn('SDK not enabled, will not capture user feedback.');
             return;
         }
-        let t = (0, s.r)(e, {
+        let e = (0, E.r)(t, {
             metadata: this.getSdkMetadata(),
             dsn: this.getDsn(),
             tunnel: this.getOptions().tunnel
         });
-        this.sendEnvelope(t);
+        this.sendEnvelope(e);
     }
-    _prepareEvent(e, t, r) {
-        return (e.platform = e.platform || 'javascript'), super._prepareEvent(e, t, r);
+    _prepareEvent(t, e, a) {
+        return (t.platform = t.platform || 'javascript'), super._prepareEvent(t, e, a);
     }
 }

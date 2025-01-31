@@ -1,87 +1,82 @@
-e.r(n),
-    e.d(n, {
-        default: function () {
-            return C;
-        }
-    });
-var i = e(200651);
-e(192379);
-var o = e(481060),
-    a = e(230711),
-    l = e(600164),
-    s = e(313201),
-    r = e(695346),
-    d = e(626135),
-    c = e(981631),
-    u = e(526761),
-    h = e(388032),
-    p = e(559686),
-    x = e(38880);
-function C(t) {
-    let { onClose: n, transitionState: e } = t,
-        C = (0, s.Dt)();
-    function f() {
-        n(), a.Z.open(c.oAB.ACCESSIBILITY, null, { scrollPosition: u.rP.LEGACY_CHAT_INPUT });
+n.d(i, { default: () => p });
+var e = n(200651);
+n(192379);
+var a = n(481060),
+    s = n(230711),
+    l = n(600164),
+    o = n(313201),
+    r = n(695346),
+    c = n(626135),
+    d = n(981631),
+    x = n(526761),
+    u = n(388032),
+    h = n(559686),
+    k = n(38880);
+function p(t) {
+    let { onClose: i, transitionState: n } = t,
+        p = (0, o.Dt)();
+    function C() {
+        i(), s.Z.open(d.oAB.ACCESSIBILITY, null, { scrollPosition: x.rP.LEGACY_CHAT_INPUT });
     }
-    return (0, i.jsxs)(o.ModalRoot, {
-        transitionState: e,
-        'aria-labelledby': C,
+    return (0, e.jsxs)(a.Y0X, {
+        transitionState: n,
+        'aria-labelledby': p,
         children: [
-            (0, i.jsx)('img', {
-                className: p.art,
-                src: x,
+            (0, e.jsx)('img', {
+                className: h.art,
+                src: k,
                 alt: ''
             }),
-            (0, i.jsx)(o.ModalContent, {
-                children: (0, i.jsxs)(l.Z, {
+            (0, e.jsx)(a.hzk, {
+                children: (0, e.jsxs)(l.Z, {
                     direction: l.Z.Direction.VERTICAL,
                     justify: l.Z.Justify.CENTER,
                     children: [
-                        (0, i.jsx)(o.Heading, {
-                            id: C,
+                        (0, e.jsx)(a.X6q, {
+                            id: p,
                             variant: 'heading-lg/semibold',
-                            className: p.title,
-                            children: h.intl.string(h.t.G9HG5O)
+                            className: h.title,
+                            children: u.intl.string(u.t.G9HG5O)
                         }),
-                        (0, i.jsx)(o.Text, {
+                        (0, e.jsx)(a.Text, {
                             variant: 'text-md/normal',
-                            className: p.body,
-                            children: h.intl.format(h.t.ZtUieH, {
-                                openSettingsHook: (t, n) =>
-                                    (0, i.jsx)(
-                                        o.Anchor,
+                            className: h.body,
+                            children: u.intl.format(u.t.ZtUieH, {
+                                openSettingsHook: (t, i) =>
+                                    (0, e.jsx)(
+                                        a.eee,
                                         {
-                                            onClick: f,
+                                            onClick: C,
                                             children: t
                                         },
-                                        n
+                                        i
                                     )
                             })
                         })
                     ]
                 })
             }),
-            (0, i.jsxs)(o.ModalFooter, {
+            (0, e.jsxs)(a.mzw, {
                 children: [
-                    (0, i.jsx)(o.Button, {
+                    (0, e.jsx)(a.zxk, {
                         type: 'button',
                         onClick: function () {
-                            d.default.track(c.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
+                            c.default.track(d.rMx.LEGACY_CHAT_INPUT_TOGGLED, {
                                 enabled: !1,
                                 location: 'LegacyChatInputExplanationModal'
                             }),
                                 r.dN.updateSetting(!1),
-                                n();
+                                i();
                         },
-                        children: h.intl.string(h.t.VdzwlJ)
+                        children: u.intl.string(u.t.VdzwlJ)
                     }),
-                    (0, i.jsx)(o.Button, {
+                    (0, e.jsx)(a.zxk, {
                         type: 'button',
-                        look: o.Button.Looks.LINK,
-                        size: o.Button.Sizes.MEDIUM,
-                        color: o.Button.Colors.PRIMARY,
-                        onClick: n,
-                        children: h.intl.string(h.t.f3Pet7)
+                        look: a.zxk.Looks.LINK,
+                        size: a.zxk.Sizes.MEDIUM,
+                        color: a.zxk.Colors.PRIMARY,
+                        onClick: i,
+                        children: u.intl.string(u.t.f3Pet7)
                     })
                 ]
             })

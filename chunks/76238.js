@@ -1,11 +1,7 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-});
+n.d(t, { Z: () => o });
 var i = n(392711),
-    r = n.n(i),
-    l = n(996106),
+    l = n.n(i),
+    r = n(996106),
     a = n(981631);
 function s(e, t, n) {
     return (
@@ -32,7 +28,7 @@ class o {
             (this.transport = e),
             (this.version = t),
             (this.encoding = n),
-            (this.id = r().uniqueId()),
+            (this.id = l().uniqueId()),
             (this.authorization = {
                 authing: !1,
                 scopes: [],
@@ -46,6 +42,6 @@ class o {
             }),
             null == t || t > a.X6Q || t < 1)
         )
-            throw new l.Z({ closeCode: a.$VG.INVALID_VERSION }, 'Invalid Version: '.concat(t));
+            throw new r.Z({ closeCode: a.$VG.INVALID_VERSION }, 'Invalid Version: '.concat(t));
     }
 }

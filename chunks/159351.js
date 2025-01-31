@@ -1,18 +1,14 @@
-r.d(n, {
-    Xt: function () {
-        return a;
-    },
-    fw: function () {
-        return o;
-    }
+n.d(t, {
+    Xt: () => r,
+    fw: () => a
 });
-var i = r(570140);
-function a(e) {
+var i = n(570140);
+function r(e) {
     i.Z.dispatch({
         type: 'NEW_PAYMENT_SOURCE_STRIPE_PAYMENT_REQUEST_UPDATE',
         stripePaymentMethod: e
     });
 }
-function o() {
+function a() {
     i.Z.wait(() => i.Z.dispatch({ type: 'NEW_PAYMENT_SOURCE_CLEAR_ERROR' }));
 }

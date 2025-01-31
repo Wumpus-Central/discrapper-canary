@@ -1,20 +1,15 @@
-i.r(n),
-    i.d(n, {
-        default: function () {
-            return e;
-        }
-    });
-var r = i(200651);
-i(192379);
-var s = i(98278),
-    a = i(790527),
-    c = i(474936),
-    o = i(388032);
-function e(t) {
-    let { onClose: n, analyticsSource: e, analyticsLocation: l, ...d } = t;
-    return (0, r.jsx)(a.Z, {
-        artURL: i(677531),
-        type: c.cd.CLIENT_THEMES_UPSELL,
+c.d(n, { default: () => r });
+var i = c(200651);
+c(192379);
+var s = c(98278),
+    a = c(790527),
+    e = c(474936),
+    o = c(388032);
+function r(t) {
+    let { onClose: n, analyticsSource: r, analyticsLocation: l, ...d } = t;
+    return (0, i.jsx)(a.Z, {
+        artURL: c(677531),
+        type: e.cd.CLIENT_THEMES_UPSELL,
         title: o.intl.string(o.t.GI7t09),
         body: o.intl.string(o.t.MRrvSE),
         glowUp: o.intl.string(o.t.MRrvSE),
@@ -22,7 +17,7 @@ function e(t) {
             (0, s.$)(n);
         },
         secondaryCTA: o.intl.string(o.t.PcTCBw),
-        analyticsSource: e,
+        analyticsSource: r,
         analyticsLocation: l,
         onClose: n,
         enableArtBoxShadow: !1,

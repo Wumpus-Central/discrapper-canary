@@ -1,29 +1,24 @@
-t.d(n, {
-    Z: function () {
-        return c;
-    }
-}),
-    t(789020);
-var i = t(200651);
-t(192379);
-var l = t(481060),
-    r = t(39154),
-    a = t(292419),
-    o = t(572004),
-    s = t(630388),
-    u = t(981631),
-    d = t(388032);
-function c(e) {
-    return o.wS
-        ? (0, i.jsx)(l.MenuItem, {
+n.d(t, { Z: () => u }), n(789020);
+var i = n(200651);
+n(192379);
+var l = n(481060),
+    a = n(39154),
+    s = n(292419),
+    r = n(572004),
+    o = n(630388),
+    d = n(981631),
+    c = n(388032);
+function u(e) {
+    return r.wS
+        ? (0, i.jsx)(l.sNh, {
               id: 'copy-text',
-              label: d.intl.string(d.t.JrGD7O),
-              icon: l.CopyIcon,
+              label: c.intl.string(c.t.JrGD7O),
+              icon: l.TIy,
               action: () => {
-                  if (((e = (0, r.Z)(e)), (0, s.yE)(e.flags, u.iLy.IS_UIKIT_COMPONENTS))) {
-                      let n = (0, a.np)(e.components);
-                      null != n && (0, o.JG)(n);
-                  } else (0, o.JG)(e.content);
+                  if (((e = (0, a.Z)(e)), (0, o.yE)(e.flags, d.iLy.IS_UIKIT_COMPONENTS))) {
+                      let t = (0, s.np)(e.components);
+                      null != t && (0, r.JG)(t);
+                  } else (0, r.JG)(e.content);
               }
           })
         : null;

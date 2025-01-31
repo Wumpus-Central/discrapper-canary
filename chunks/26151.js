@@ -1,79 +1,80 @@
-var i = r(544891),
-    a = r(570140),
-    o = r(985588),
-    s = r(592125),
-    l = r(699516),
-    u = r(594174),
-    c = r(626135),
-    d = r(668781),
-    f = r(194359),
-    p = r(287734),
-    h = r(981631),
-    _ = r(388032);
-n.Z = {
-    call(e, n, r, a, o) {
-        let s = (r) => {
-            p.default.selectVoiceChannel(e, n), r && this.ring(e), null == o || o(e);
+n.d(t, { Z: () => h });
+var i = n(544891),
+    r = n(570140),
+    a = n(985588),
+    s = n(592125),
+    o = n(699516),
+    l = n(594174),
+    u = n(626135),
+    c = n(668781),
+    d = n(194359),
+    f = n(287734),
+    _ = n(981631),
+    p = n(388032);
+let h = {
+    call(e, t, n, r, a) {
+        let s = (n) => {
+            f.default.selectVoiceChannel(e, t), n && this.ring(e), null == a || a(e);
         };
-        if (null != a) {
-            if (l.Z.isBlocked(a)) return;
-            let n = u.default.getUser(a);
+        if (null != r) {
+            if (o.Z.isBlocked(r)) return;
+            let t = l.default.getUser(r);
             i.tn
                 .get({
-                    url: h.ANM.CALL(e),
+                    url: _.ANM.CALL(e),
                     oldFormErrors: !0,
                     rejectWithError: !0
                 })
                 .then(
                     (e) => {
-                        s(r && e.body.ringable);
+                        s(n && e.body.ringable);
                     },
                     () => {
-                        c.default.track(h.rMx.OPEN_POPOUT, {
+                        u.default.track(_.rMx.OPEN_POPOUT, {
                             type: 'Not Friend',
                             source: 'Call'
                         }),
-                            d.Z.show({
-                                title: _.intl.string(_.t.My50nZ),
-                                body: _.intl.format(_.t.IdKo29, { username: null != n ? n.username : '' }),
-                                confirmText: _.intl.string(_.t['PMsq/f']),
-                                cancelText: _.intl.string(_.t.BddRzc),
+                            c.Z.show({
+                                title: p.intl.string(p.t.My50nZ),
+                                body: p.intl.format(p.t.IdKo29, { username: null != t ? t.username : '' }),
+                                confirmText: p.intl.string(p.t['PMsq/f']),
+                                cancelText: p.intl.string(p.t.BddRzc),
                                 onConfirm() {
-                                    f.Z.addRelationship({
-                                        userId: a,
+                                    d.Z.addRelationship({
+                                        userId: r,
                                         context: { location: 'Call' }
                                     });
                                 }
                             });
                     }
                 );
-        } else s(r);
+        } else s(n);
     },
-    ring(e, n) {
-        let r = s.Z.getChannel(e);
-        if (null == r) return;
-        let l = (0, o.V)(r),
-            u = h.TPd.CALLABLE.has(r.type);
-        if (l) {
+    ring(e, t) {
+        let n = s.Z.getChannel(e);
+        if (null == n) return;
+        let o = (0, a.V)(n),
+            l = _.TPd.CALLABLE.has(n.type);
+        if (o) {
             i.tn.post({
-                url: h.ANM.CALL_RING(e),
-                body: { recipients: n },
+                url: _.ANM.CALL_RING(e),
+                body: { recipients: t },
                 oldFormErrors: !0,
                 rejectWithError: !0
             });
             return;
         }
-        u &&
-            a.Z.dispatch({
+        l &&
+            r.Z.dispatch({
                 type: 'CALL_ENQUEUE_RING',
                 channelId: e,
-                recipients: n
+                recipients: t
             });
     },
-    stopRinging: (e, n) =>
+    stopRinging: (e, t) =>
         i.tn.post({
-            url: h.ANM.CALL_STOP_RINGING(e),
-            body: { recipients: n },
+            url: _.ANM.CALL_STOP_RINGING(e),
+            body: { recipients: t },
             oldFormErrors: !0,
             rejectWithError: !0
         })

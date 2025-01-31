@@ -1,13 +1,8 @@
-r.d(n, {
-    Z: function () {
-        return s;
-    }
-});
-var i = r(789020);
-var a = r(442837),
-    o = r(621853);
-function s(e) {
-    var n;
-    let r = (0, a.e7)([o.Z], () => o.Z.getUserProfile(e.id));
-    return (null == r ? void 0 : r.bio) === '' && (null == r ? void 0 : r.pronouns) === '' && (null == r ? void 0 : r.banner) === void 0 && (null == r ? void 0 : r.accentColor) === void 0 && (null == r ? void 0 : r.banner) === void 0 && e.flags === e.publicFlags && ((null == r ? void 0 : r.badges) == null || (null == r ? void 0 : null === (n = r.badges) || void 0 === n ? void 0 : n.length) === 0);
+n.d(t, { Z: () => a }), n(789020);
+var i = n(442837),
+    r = n(621853);
+function a(e) {
+    var t;
+    let n = (0, i.e7)([r.Z], () => r.Z.getUserProfile(e.id));
+    return (null == n ? void 0 : n.bio) === '' && (null == n ? void 0 : n.pronouns) === '' && (null == n ? void 0 : n.banner) === void 0 && (null == n ? void 0 : n.accentColor) === void 0 && (null == n ? void 0 : n.banner) === void 0 && e.flags === e.publicFlags && ((null == n ? void 0 : n.badges) == null || (null == n ? void 0 : null === (t = n.badges) || void 0 === t ? void 0 : t.length) === 0);
 }

@@ -1,41 +1,29 @@
-r.d(n, {
-    Br: function () {
-        return o;
-    },
-    CA: function () {
-        return s;
-    },
-    Ko: function () {
-        return l;
-    },
-    We: function () {
-        return u;
-    },
-    rq: function () {
-        return c;
-    },
-    vv: function () {
-        return a;
-    }
+n.d(t, {
+    Br: () => a,
+    CA: () => s,
+    Ko: () => o,
+    We: () => l,
+    rq: () => u,
+    vv: () => r
 });
-var i = r(119617);
-let a = r(177351),
-    o = ['#FF73FA', '#FFC0FF', '#FFD836', '#FF9A15', '#A5F7DE', '#51BC9D', '#AEC7FF', '#3E70DD'],
+var i = n(119617);
+let r = n(177351),
+    a = ['#FF73FA', '#FFC0FF', '#FFD836', '#FF9A15', '#A5F7DE', '#51BC9D', '#AEC7FF', '#3E70DD'],
     s = [
-        r(294521),
-        a,
-        r(817812),
-        r(602002),
-        r(673910),
-        r(337242),
-        r(678282),
+        n(294521),
+        r,
+        n(817812),
+        n(602002),
+        n(673910),
+        n(337242),
+        n(678282),
         {
-            src: r(688815),
+            src: n(688815),
             colorize: !1
         }
     ],
-    l = 28,
-    u = {
+    o = 28,
+    l = {
         velocity: {
             type: 'static-random',
             minValue: {
@@ -60,4 +48,4 @@ let a = r(177351),
             maxValue: 28
         }
     },
-    c = new i.qA();
+    u = new i.qA();

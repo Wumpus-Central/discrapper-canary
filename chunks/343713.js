@@ -1,30 +1,26 @@
-r.d(n, {
-    Z: function () {
-        return p;
-    }
-});
-var i = r(49691),
-    a = r(316138),
-    o = r(874900),
-    s = r(882159),
-    l = r(953177),
-    u = r(660027),
-    c = r(408431);
-function d(e) {
-    return (0, s.Re)(e) && 'fixed' !== (0, o.Z)(e).position ? e.offsetParent : null;
+n.d(t, { Z: () => f });
+var i = n(49691),
+    r = n(316138),
+    a = n(874900),
+    s = n(882159),
+    o = n(953177),
+    l = n(660027),
+    u = n(408431);
+function c(e) {
+    return (0, s.Re)(e) && 'fixed' !== (0, a.Z)(e).position ? e.offsetParent : null;
 }
-function f(e) {
-    var n = /firefox/i.test((0, c.Z)());
-    if (/Trident/i.test((0, c.Z)()) && (0, s.Re)(e) && 'fixed' === (0, o.Z)(e).position) return null;
-    var r = (0, u.Z)(e);
-    for ((0, s.Zq)(r) && (r = r.host); (0, s.Re)(r) && 0 > ['html', 'body'].indexOf((0, a.Z)(r)); ) {
-        var i = (0, o.Z)(r);
-        if ('none' !== i.transform || 'none' !== i.perspective || 'paint' === i.contain || -1 !== ['transform', 'perspective'].indexOf(i.willChange) || (n && 'filter' === i.willChange) || (n && i.filter && 'none' !== i.filter)) return r;
-        r = r.parentNode;
+function d(e) {
+    var t = /firefox/i.test((0, u.Z)());
+    if (/Trident/i.test((0, u.Z)()) && (0, s.Re)(e) && 'fixed' === (0, a.Z)(e).position) return null;
+    var n = (0, l.Z)(e);
+    for ((0, s.Zq)(n) && (n = n.host); (0, s.Re)(n) && 0 > ['html', 'body'].indexOf((0, r.Z)(n)); ) {
+        var i = (0, a.Z)(n);
+        if ('none' !== i.transform || 'none' !== i.perspective || 'paint' === i.contain || -1 !== ['transform', 'perspective'].indexOf(i.willChange) || (t && 'filter' === i.willChange) || (t && i.filter && 'none' !== i.filter)) return n;
+        n = n.parentNode;
     }
     return null;
 }
-function p(e) {
-    for (var n = (0, i.Z)(e), r = d(e); r && (0, l.Z)(r) && 'static' === (0, o.Z)(r).position; ) r = d(r);
-    return r && ('html' === (0, a.Z)(r) || ('body' === (0, a.Z)(r) && 'static' === (0, o.Z)(r).position)) ? n : r || f(e) || n;
+function f(e) {
+    for (var t = (0, i.Z)(e), n = c(e); n && (0, o.Z)(n) && 'static' === (0, a.Z)(n).position; ) n = c(n);
+    return n && ('html' === (0, r.Z)(n) || ('body' === (0, r.Z)(n) && 'static' === (0, a.Z)(n).position)) ? t : n || d(e) || t;
 }

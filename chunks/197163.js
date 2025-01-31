@@ -1,7 +1,7 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    var n = {
+    var t = {
         ss: 'sekundė_sekundžių_sekundes',
         m: 'minutė_minutės_minutę',
         mm: 'minutės_minučių_minutes',
@@ -14,23 +14,21 @@
         y: 'metai_metų_metus',
         yy: 'metai_metų_metus'
     };
-    function r(e, n, r, i) {
-        return n ? 'kelios sekundės' : i ? 'kelių sekundžių' : 'kelias sekundes';
+    function n(e, t, n, i) {
+        return t ? 'kelios sekundės' : i ? 'kelių sekundžių' : 'kelias sekundes';
     }
-    function i(e, n, r, i) {
-        return n ? o(r)[0] : i ? o(r)[1] : o(r)[2];
+    function i(e, t, n, i) {
+        return t ? a(n)[0] : i ? a(n)[1] : a(n)[2];
     }
-    function a(e) {
+    function r(e) {
         return e % 10 == 0 || (e > 10 && e < 20);
     }
-    function o(e) {
-        return n[e].split('_');
+    function a(e) {
+        return t[e].split('_');
     }
-    function s(e, n, r, s) {
-        var l = e + ' ';
-        if (1 === e) return l + i(e, n, r[0], s);
-        if (n) return l + (a(e) ? o(r)[1] : o(r)[0]);
-        return s ? l + o(r)[1] : l + (a(e) ? o(r)[1] : o(r)[2]);
+    function s(e, t, n, s) {
+        var o = e + ' ';
+        return 1 === e ? o + i(e, t, n[0], s) : t ? o + (r(e) ? a(n)[1] : a(n)[0]) : s ? o + a(n)[1] : o + (r(e) ? a(n)[1] : a(n)[2]);
     }
     return e.defineLocale('lt', {
         months: {
@@ -70,7 +68,7 @@
         relativeTime: {
             future: 'po %s',
             past: 'prieš %s',
-            s: r,
+            s: n,
             ss: s,
             m: i,
             mm: s,

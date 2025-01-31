@@ -1,24 +1,20 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
+n.d(t, { Z: () => u });
 var i = n(200651);
 n(192379);
 var r = n(120356),
-    l = n.n(r),
-    o = n(442837),
-    a = n(592125),
+    o = n.n(r),
+    a = n(442837),
+    l = n(592125),
     s = n(944486),
     c = n(293224),
     d = n(201636);
 function u(e) {
     let { locked: t } = e,
-        n = (0, o.e7)([s.Z], () => s.Z.getVoiceChannelId()),
-        r = (0, o.e7)([a.Z], () => a.Z.getChannel(n)),
+        n = (0, a.e7)([s.Z], () => s.Z.getVoiceChannelId()),
+        r = (0, a.e7)([l.Z], () => l.Z.getChannel(n)),
         u = null != r;
     return (0, i.jsxs)('div', {
-        className: l()({
+        className: o()({
             [d.panelContainer]: !0,
             [d.locked]: t
         }),
@@ -57,7 +53,7 @@ function u(e) {
                         ]
                     }),
                     (0, i.jsx)('div', {
-                        className: l()(d.buttonSection, u && d.inCall),
+                        className: o()(d.buttonSection, u && d.inCall),
                         children: (0, i.jsx)(c.c_, {
                             voiceChannel: r,
                             locked: t

@@ -1,145 +1,140 @@
-r.d(n, {
-    Z: function () {
-        return x;
-    }
-});
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(120356),
-    l = r.n(s),
-    u = r(481060),
-    c = r(315263),
-    d = r(100527),
-    f = r(906732),
-    p = r(490248),
-    h = r(768865),
-    _ = r(617136),
-    m = r(497505),
-    g = r(703656),
-    E = r(594174),
-    v = r(626135),
-    y = r(111361),
-    b = r(291175),
-    I = r(785717),
-    T = r(221292),
-    S = r(485341),
-    A = r(797321),
-    C = r(228168),
-    N = r(981631),
-    R = r(474936),
-    O = r(388032),
-    D = r(153225);
-let L = (e) => {
+n.d(t, { Z: () => D }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(481060),
+    l = n(315263),
+    u = n(100527),
+    c = n(906732),
+    d = n(490248),
+    f = n(768865),
+    _ = n(617136),
+    p = n(497505),
+    h = n(703656),
+    m = n(594174),
+    g = n(626135),
+    E = n(111361),
+    v = n(291175),
+    y = n(785717),
+    I = n(221292),
+    b = n(485341),
+    T = n(797321),
+    S = n(228168),
+    A = n(981631),
+    N = n(474936),
+    C = n(388032),
+    R = n(153225);
+let O = (e) => {
     if (null != e)
         switch (e) {
-            case R.JN.PREMIUM_TENURE_1_MONTH:
-                return D.tieredTenureBadgeBronzeGlow;
-            case R.JN.PREMIUM_TENURE_3_MONTH:
-                return D.tieredTenureBadgeSilverGlow;
-            case R.JN.PREMIUM_TENURE_6_MONTH:
-                return D.tieredTenureBadgeGoldGlow;
-            case R.JN.PREMIUM_TENURE_12_MONTH:
-                return D.tieredTenureBadgePlatinumGlow;
-            case R.JN.PREMIUM_TENURE_24_MONTH:
-                return D.tieredTenureBadgeDiamondGlow;
-            case R.JN.PREMIUM_TENURE_36_MONTH:
-                return D.tieredTenureBadgeEmeraldGlow;
-            case R.JN.PREMIUM_TENURE_60_MONTH:
-                return D.tieredTenureBadgeRubyGlow;
-            case R.JN.PREMIUM_TENURE_72_MONTH:
-                return D.tieredTenureBadgeFireGlow;
+            case N.JN.PREMIUM_TENURE_1_MONTH:
+                return R.tieredTenureBadgeBronzeGlow;
+            case N.JN.PREMIUM_TENURE_3_MONTH:
+                return R.tieredTenureBadgeSilverGlow;
+            case N.JN.PREMIUM_TENURE_6_MONTH:
+                return R.tieredTenureBadgeGoldGlow;
+            case N.JN.PREMIUM_TENURE_12_MONTH:
+                return R.tieredTenureBadgePlatinumGlow;
+            case N.JN.PREMIUM_TENURE_24_MONTH:
+                return R.tieredTenureBadgeDiamondGlow;
+            case N.JN.PREMIUM_TENURE_36_MONTH:
+                return R.tieredTenureBadgeEmeraldGlow;
+            case N.JN.PREMIUM_TENURE_60_MONTH:
+                return R.tieredTenureBadgeRubyGlow;
+            case N.JN.PREMIUM_TENURE_72_MONTH:
+                return R.tieredTenureBadgeFireGlow;
             default:
                 return;
         }
 };
-function x(e) {
-    let { badges: n, className: r, badgeClassName: i, displayProfile: s, onClose: x } = e,
-        { analyticsLocations: w } = (0, f.ZP)(d.Z.BADGE),
-        { context: P, trackUserProfileAction: M } = (0, I.KZ)(),
-        [k, U] = o.useState(!1),
-        B = E.default.getCurrentUser(),
-        G = (0, y.yd)(null == B ? void 0 : B.premiumType, R.p9.TIER_2);
-    return (0, a.jsx)('div', {
-        className: l()(D.container, r),
-        'aria-label': O.intl.string(O.t.VWV0y8),
+function D(e) {
+    let { badges: t, className: n, badgeClassName: a, displayProfile: D, onClose: x } = e,
+        { analyticsLocations: L } = (0, c.ZP)(u.Z.BADGE),
+        { context: P, trackUserProfileAction: w } = (0, y.KZ)(),
+        [M, k] = r.useState(!1),
+        U = m.default.getCurrentUser(),
+        G = (0, E.yd)(null == U ? void 0 : U.premiumType, N.p9.TIER_2);
+    return (0, i.jsx)('div', {
+        className: s()(R.container, n),
+        'aria-label': C.intl.string(C.t.VWV0y8),
         role: 'group',
-        children: n.map((e) => {
-            let n = (0, b.fv)(e.id),
-                r = (r) => {
+        children: t.map((e) => {
+            let t = (0, v.fv)(e.id),
+                n = (n) => {
                     if (
-                        (M({ action: 'PRESS_BADGE' }),
-                        (0, T.NE)({
+                        (w({ action: 'PRESS_BADGE' }),
+                        (0, I.NE)({
                             badge: e.id,
-                            analyticsLocations: w,
+                            analyticsLocations: L,
                             ...P
                         }),
-                        (null == n ? void 0 : n.badgeVersion) === 2)
+                        (null == t ? void 0 : t.badgeVersion) === 2)
                     ) {
                         if (
-                            (r.preventDefault(),
-                            v.default.track(N.rMx.TIERED_TENURE_BADGE_CLICKED, {
+                            (n.preventDefault(),
+                            g.default.track(A.rMx.TIERED_TENURE_BADGE_CLICKED, {
                                 badge: e.id,
                                 premium_type: G,
-                                viewed_user_id: null == s ? void 0 : s.userId
+                                viewed_user_id: null == D ? void 0 : D.userId
                             }),
                             !G)
                         ) {
-                            (0, h.k)(w), null == x || x();
+                            (0, f.k)(L), null == x || x();
                             return;
                         }
-                        (0, g.uL)(N.Z5c.APPLICATION_STORE, {
-                            source: d.Z.BADGE,
-                            sourceLocationStack: w
+                        (0, h.uL)(A.Z5c.APPLICATION_STORE, {
+                            source: u.Z.BADGE,
+                            sourceLocationStack: L
                         }),
                             null == x || x();
                         return;
                     }
-                    let i = null != e.link ? (0, c.default)(e.link, { analyticsLocations: w }) : null;
-                    if (null != i) return null == x || x(), i(r);
+                    let i = null != e.link ? (0, l.default)(e.link, { analyticsLocations: L }) : null;
+                    if (null != i) return null == x || x(), i(n);
                 },
-                o = () => {
-                    e.id === S.i && v.default.track(N.rMx.QUEST_CONTENT_VIEWED, { ...(0, _.mH)(m.jn.QUEST_BADGE) }),
-                        M({ action: 'HOVER_BADGE' }),
-                        (0, T.Qf)({
+                r = () => {
+                    e.id === b.i && g.default.track(A.rMx.QUEST_CONTENT_VIEWED, { ...(0, _.mH)(p.jn.QUEST_BADGE) }),
+                        w({ action: 'HOVER_BADGE' }),
+                        (0, I.Qf)({
                             badge: e.id,
-                            analyticsLocations: w,
+                            analyticsLocations: L,
                             ...P
                         });
                 },
-                f = L(null == n ? void 0 : n.id),
-                E = null != n && k,
-                y =
-                    (null == n ? void 0 : n.badgeVersion) === 2
-                        ? (0, a.jsx)(p.Z, {
+                c = O(null == t ? void 0 : t.id),
+                m = null != t && M,
+                E =
+                    (null == t ? void 0 : t.badgeVersion) === 2
+                        ? (0, i.jsx)(d.Z, {
                               profileBadge: e,
-                              tenureBadge: n
+                              tenureBadge: t
                           })
                         : e.description;
-            return (0, a.jsx)(
-                u.TooltipContainer,
+            return (0, i.jsx)(
+                o.DY3,
                 {
-                    text: y,
+                    text: E,
                     'aria-label': e.description,
-                    delay: C.vB,
-                    tooltipClassName: f,
-                    onTooltipShow: () => U(null != n && 1 === n.badgeVersion),
-                    onTooltipHide: () => U(!1),
-                    children: (0, a.jsxs)(u.Anchor, {
-                        onClick: r,
-                        onMouseEnter: o,
+                    delay: S.vB,
+                    tooltipClassName: c,
+                    onTooltipShow: () => k(null != t && 1 === t.badgeVersion),
+                    onTooltipHide: () => k(!1),
+                    children: (0, i.jsxs)(o.eee, {
+                        onClick: n,
+                        onMouseEnter: r,
                         href: e.link,
                         children: [
-                            (0, a.jsx)('img', {
+                            (0, i.jsx)('img', {
                                 alt: ' ',
                                 'aria-hidden': !0,
-                                src: (0, C.jC)(e.icon),
-                                className: l()(D.badge, i)
+                                src: (0, S.jC)(e.icon),
+                                className: s()(R.badge, a)
                             }),
-                            E &&
-                                (0, a.jsxs)('div', {
-                                    className: D.starContainer,
-                                    children: [(0, a.jsx)(A.Z, { className: D.topLeftStar }), (0, a.jsx)(A.Z, { className: D.bottomRightStar })]
+                            m &&
+                                (0, i.jsxs)('div', {
+                                    className: R.starContainer,
+                                    children: [(0, i.jsx)(T.Z, { className: R.topLeftStar }), (0, i.jsx)(T.Z, { className: R.bottomRightStar })]
                                 })
                         ]
                     })

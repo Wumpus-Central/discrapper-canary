@@ -1,64 +1,61 @@
-r.d(n, {
-    i: function () {
-        return i;
-    }
+n.d(t, {
+    Z: () => p,
+    i: () => _
 });
-var i,
-    a = r(200651);
-r(192379);
-var o = r(442837),
-    s = r(780384),
-    l = r(481060),
-    u = r(410030),
-    c = r(594174),
-    d = r(388032),
-    f = r(259319),
-    p = r(982240),
-    h = r(533854);
-!(function (e) {
-    (e[(e.SHOP_PAGE = 0)] = 'SHOP_PAGE'), (e[(e.GIFT_MODAL = 1)] = 'GIFT_MODAL');
-})(i || (i = {}));
-let _ = (e) => {
-    let { onRetry: n, errorOrigin: r, errorMessage: i } = e,
-        _ = (0, u.ZP)(),
-        m = (0, o.e7)([c.default], () => {
-            let e = c.default.getCurrentUser();
+var i = n(200651);
+n(192379);
+var r = n(442837),
+    a = n(780384),
+    s = n(481060),
+    o = n(410030),
+    l = n(594174),
+    u = n(388032),
+    c = n(259319),
+    d = n(982240),
+    f = n(533854),
+    _ = (function (e) {
+        return (e[(e.SHOP_PAGE = 0)] = 'SHOP_PAGE'), (e[(e.GIFT_MODAL = 1)] = 'GIFT_MODAL'), e;
+    })({});
+let p = (e) => {
+    let { onRetry: t, errorOrigin: n, errorMessage: _ } = e,
+        p = (0, o.ZP)(),
+        h = (0, r.e7)([l.default], () => {
+            let e = l.default.getCurrentUser();
             return (null == e ? void 0 : e.isStaff()) || (null == e ? void 0 : e.isStaffPersonal());
         }),
-        g = 1 === r ? f.giftModalContainer : f.shopPageContainer,
-        E = 1 === r ? d.intl.string(d.t['+2QBZW']) : d.intl.string(d.t.LuhKs7);
-    return (0, a.jsxs)('div', {
-        className: g,
+        m = 1 === n ? c.giftModalContainer : c.shopPageContainer,
+        g = 1 === n ? u.intl.string(u.t['+2QBZW']) : u.intl.string(u.t.LuhKs7);
+    return (0, i.jsxs)('div', {
+        className: m,
         children: [
-            (0, a.jsx)('img', {
-                className: f.__invalid_loadIssueImg,
-                src: (0, s.wj)(_) ? p : h,
+            (0, i.jsx)('img', {
+                className: c.__invalid_loadIssueImg,
+                src: (0, a.wj)(p) ? d : f,
                 alt: ''
             }),
-            (0, a.jsx)(l.Heading, {
-                className: f.heading1,
+            (0, i.jsx)(s.X6q, {
+                className: c.heading1,
                 variant: 'heading-xl/semibold',
-                children: d.intl.string(d.t['i5SQ7+'])
+                children: u.intl.string(u.t['i5SQ7+'])
             }),
-            (0, a.jsx)(l.Text, {
-                className: f.description,
+            (0, i.jsx)(s.Text, {
+                className: c.description,
                 variant: 'text-md/normal',
-                children: E
+                children: g
             }),
-            m &&
-                null != i &&
-                (0, a.jsx)(l.Text, {
+            h &&
+                null != _ &&
+                (0, i.jsx)(s.Text, {
                     variant: 'text-md/normal',
-                    children: 'staff-only debug: ' + i
+                    children: 'staff-only debug: ' + _
                 }),
-            (0, a.jsx)(l.Button, {
-                className: f.reload,
-                size: l.Button.Sizes.MEDIUM,
-                color: l.Button.Colors.BRAND,
-                onClick: n,
-                children: d.intl.string(d.t['+hivLS'])
+            (0, i.jsx)(s.zxk, {
+                className: c.reload,
+                size: s.zxk.Sizes.MEDIUM,
+                color: s.zxk.Colors.BRAND,
+                onClick: t,
+                children: u.intl.string(u.t['+hivLS'])
             })
         ]
     });
 };
-n.Z = _;

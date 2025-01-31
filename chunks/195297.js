@@ -1,113 +1,107 @@
-n.r(i),
-    n.d(i, {
-        default: function () {
-            return I;
-        }
-    }),
-    n(47120);
-var t = n(200651),
-    o = n(192379),
-    l = n(120356),
-    r = n.n(l),
-    a = n(481060),
+n.d(i, { default: () => h }), n(47120);
+var o = n(200651),
+    t = n(192379),
+    a = n(120356),
+    l = n.n(a),
+    r = n(481060),
     c = n(100527),
     s = n(906732),
     d = n(313201),
     u = n(455708),
-    g = n(222062),
-    f = n(530329),
-    _ = n(626135),
-    N = n(488499),
-    T = n(58384),
-    p = n(981631),
-    m = n(486324),
-    E = n(388032),
-    h = n(415617);
-function I(e) {
-    let { transitionState: i, onClose: l, onComplete: I, uploadType: b, showUpsellHeader: B, analyticsPage: x } = e,
-        [C, R] = o.useState(!1),
-        A = (0, a.useModalContext)(),
+    _ = n(222062),
+    g = n(530329),
+    N = n(626135),
+    T = n(488499),
+    f = n(58384),
+    m = n(981631),
+    p = n(486324),
+    x = n(388032),
+    E = n(415617);
+function h(e) {
+    let { transitionState: i, onClose: a, onComplete: h, uploadType: I, showUpsellHeader: b, analyticsPage: B } = e,
+        [C, R] = t.useState(!1),
+        A = (0, r.vRw)(),
         j = (0, d.Dt)(),
         { analyticsLocations: P } = (0, s.ZP)(c.Z.GIF_PICKER);
-    async function Z(e) {
+    async function k(e) {
         let { gifSrc: i } = e;
         if (null == i || C) return;
         R(!0);
-        let o = (0, T.Q)(i),
-            r = await fetch(o),
-            c = await r.blob();
-        l(),
-            (0, a.openModalLazy)(
+        let t = (0, f.Q)(i),
+            l = await fetch(t),
+            c = await l.blob();
+        a(),
+            (0, r.ZDy)(
                 async () => {
                     let { default: e } = await Promise.all([n.e('48017'), n.e('27371')]).then(n.bind(n, 850085));
                     return (i) =>
-                        (0, t.jsx)(e, {
-                            imgURI: o,
+                        (0, o.jsx)(e, {
+                            imgURI: t,
                             file: new File([c], 'tenor.gif', { type: 'image/gif' }),
-                            onCrop: I,
-                            uploadType: b,
-                            showUpsellHeader: B,
+                            onCrop: h,
+                            uploadType: I,
+                            showUpsellHeader: b,
                             ...i
                         });
                 },
                 { contextKey: A }
             );
     }
-    o.useEffect(() => {
-        _.default.track(p.rMx.OPEN_MODAL, {
-            type: p.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
-            location: { page: x }
+    t.useEffect(() => {
+        N.default.track(m.rMx.OPEN_MODAL, {
+            type: m.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
+            location: { page: B }
         });
-    }, [x]);
-    let k = b === m.pC.AVATAR || b === m.pC.BANNER,
-        v = (0, g.M)(!k);
-    return (0, t.jsx)(s.Gt, {
+    }, [B]);
+    let Z = I === p.pC.AVATAR || I === p.pC.BANNER,
+        v = (0, _.M)(!Z);
+    return (0, o.jsx)(s.Gt, {
         value: P,
-        children: (0, t.jsxs)(a.ModalRoot, {
+        children: (0, o.jsxs)(r.Y0X, {
             'aria-labelledby': j,
             transitionState: i,
-            size: a.ModalSize.SMALL,
+            size: r.CgR.SMALL,
             children: [
-                B &&
+                b &&
                     !v &&
-                    (0, t.jsx)(N.Z, {
-                        type: b,
-                        analyticsPage: x,
-                        analyticsSection: p.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
+                    (0, o.jsx)(T.Z, {
+                        type: I,
+                        analyticsPage: B,
+                        analyticsSection: m.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
                         isGIF: !0
                     }),
-                (0, t.jsxs)(a.ModalHeader, {
-                    className: h.modalHeader,
+                (0, o.jsxs)(r.xBx, {
+                    className: E.modalHeader,
                     separator: !1,
                     children: [
-                        (0, t.jsx)(a.FormTitle, {
-                            className: h.titleCase,
-                            tag: a.FormTitleTags.H1,
-                            children: E.intl.string(E.t['xsC+//'])
+                        (0, o.jsx)(r.vwX, {
+                            className: E.titleCase,
+                            tag: r.RB0.H1,
+                            children: x.intl.string(x.t['xsC+//'])
                         }),
-                        (0, t.jsx)(a.ModalCloseButton, {
-                            onClick: l,
-                            className: h.modalCloseButton
+                        (0, o.jsx)(r.olH, {
+                            onClick: a,
+                            className: E.modalCloseButton
                         })
                     ]
                 }),
-                (0, t.jsxs)('div', {
+                (0, o.jsxs)('div', {
                     children: [
-                        (0, t.jsx)(u.Z, {
-                            contentClassName: r()({ [h.gifPickerContent]: B && v }),
-                            className: r()(h.gifPicker, { [h.loadingOverlay]: C }),
-                            onSelectGIF: Z,
+                        (0, o.jsx)(u.Z, {
+                            contentClassName: l()({ [E.gifPickerContent]: b && v }),
+                            className: l()(E.gifPicker, { [E.loadingOverlay]: C }),
+                            onSelectGIF: k,
                             hideFavorites: !0
                         }),
-                        C && (0, t.jsx)(a.Spinner, { className: h.spinner })
+                        C && (0, o.jsx)(r.$jN, { className: E.spinner })
                     ]
                 }),
-                B &&
+                b &&
                     v &&
-                    (0, t.jsx)(f.Z, {
-                        uploadType: b,
+                    (0, o.jsx)(g.Z, {
+                        uploadType: I,
                         showUpsell: !0,
-                        className: h.nitroUpsell
+                        className: E.nitroUpsell
                     })
             ]
         })

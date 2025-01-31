@@ -1,258 +1,11 @@
-r.d(t, {
-    $R: function () {
-        return eA;
-    },
-    $V: function () {
-        return L;
-    },
-    Ai: function () {
-        return eL;
-    },
-    Al: function () {
-        return ei.A;
-    },
-    B1: function () {
-        return eH;
-    },
-    BR: function () {
-        return ei.Z;
-    },
-    BZ: function () {
-        return eY;
-    },
-    Cw: function () {
-        return l;
-    },
-    Cy: function () {
-        return ey;
-    },
-    EK: function () {
-        return g;
-    },
-    ET: function () {
-        return M;
-    },
-    Et: function () {
-        return d;
-    },
-    GZ: function () {
-        return T;
-    },
-    H0: function () {
-        return eD;
-    },
-    He: function () {
-        return s;
-    },
-    Il: function () {
-        return el.I;
-    },
-    Jj: function () {
-        return A;
-    },
-    MA: function () {
-        return G;
-    },
-    NY: function () {
-        return u;
-    },
-    OL: function () {
-        return ef;
-    },
-    OM: function () {
-        return ej;
-    },
-    Pl: function () {
-        return eM;
-    },
-    Py: function () {
-        return I;
-    },
-    Q: function () {
-        return P;
-    },
-    QL: function () {
-        return ep;
-    },
-    RG: function () {
-        return U;
-    },
-    RK: function () {
-        return eV;
-    },
-    S7: function () {
-        return N;
-    },
-    Sk: function () {
-        return n;
-    },
-    TC: function () {
-        return ev;
-    },
-    U6: function () {
-        return R;
-    },
-    U9: function () {
-        return ed;
-    },
-    Uk: function () {
-        return eS;
-    },
-    V6: function () {
-        return eB;
-    },
-    Vq: function () {
-        return em;
-    },
-    Vz: function () {
-        return eO;
-    },
-    X5: function () {
-        return o;
-    },
-    X6: function () {
-        return ew;
-    },
-    X7: function () {
-        return eg;
-    },
-    XM: function () {
-        return ex;
-    },
-    Zu: function () {
-        return eU;
-    },
-    aO: function () {
-        return m;
-    },
-    aV: function () {
-        return eh;
-    },
-    dG: function () {
-        return eG;
-    },
-    fK: function () {
-        return eX;
-    },
-    fr: function () {
-        return eW;
-    },
-    gg: function () {
-        return i;
-    },
-    i$: function () {
-        return c;
-    },
-    j8: function () {
-        return eP;
-    },
-    lT: function () {
-        return O;
-    },
-    ld: function () {
-        return eC;
-    },
-    pK: function () {
-        return S;
-    },
-    rx: function () {
-        return eN;
-    },
-    tN: function () {
-        return _;
-    },
-    tP: function () {
-        return eI.t;
-    },
-    xr: function () {
-        return eT;
-    },
-    yA: function () {
-        return eK;
-    },
-    yX: function () {
-        return ek;
-    },
-    yY: function () {
-        return eb;
-    },
-    zM: function () {
-        return f;
-    }
-}),
-    r(47120);
-var a,
+a.d(e, { pK: () => I }), a(47120), a(290926);
+var r,
     n,
-    _,
-    o,
-    E,
-    i,
-    c,
-    s,
-    l,
-    I,
-    u,
-    R,
-    A,
-    T,
-    N,
-    d,
-    f,
-    O,
-    L,
-    p,
-    h,
-    D,
-    S,
-    C,
-    P,
-    g,
-    U,
-    M,
-    G,
-    m,
-    y,
-    b,
-    v,
-    w,
-    B,
-    W,
-    Y,
-    H,
-    x,
-    K,
-    k,
-    V,
-    F,
-    X,
-    j,
-    $,
-    q,
-    J,
-    z,
-    Q,
-    Z,
-    ee,
-    et,
-    er,
-    ea,
-    en,
-    e_,
-    eo,
-    eE,
-    ei = r(290926),
-    ec = r(149765),
-    es = r(860911);
-r(674746);
-var el = r(691324),
-    eI = r(481677);
-r(722770);
-let eu = location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT,
-    eR = location.protocol + '//discord.gg',
-    eA = 'discord.com',
-    eT = 'support.discord.com',
-    eN = 'support-dev.discord.com',
-    ed = 'discord.com';
+    o = a(149765),
+    _ = a(860911);
+a(674746), a(691324), a(481677), a(722770);
+let i = location.protocol + window.GLOBAL_ENV.WEBAPP_ENDPOINT,
+    c = location.protocol + '//discord.gg';
 Object.freeze({
     HINT_PURPLE: '#c9d2f0',
     DARK_PURPLE: '#697ec4',
@@ -277,39 +30,7 @@ Object.freeze({
     GREY7: '#1c242b',
     GREY9: '#202226'
 }),
-    ((y = a || (a = {})).PRIMARY_NORMAL = 'ggsans-Normal, NotoSans-Normal'),
-    (y.PRIMARY_MEDIUM = 'ggsans-Medium, NotoSans-Medium'),
-    (y.PRIMARY_SEMIBOLD = 'ggsans-Semibold, NotoSans-Semibold'),
-    (y.PRIMARY_BOLD = 'ggsans-Bold, NotoSans-Bold'),
-    (y.DISPLAY_NORMAL = 'ggsans-Normal, NotoSans-Normal'),
-    (y.DISPLAY_MEDIUM = 'ggsans-Medium, NotoSans-Medium'),
-    (y.DISPLAY_SEMIBOLD = 'ggsans-Semibold, NotoSans-Semibold'),
-    (y.DISPLAY_BOLD = 'ggsans-Bold, NotoSans-Bold'),
-    (y.DISPLAY_EXTRABOLD = 'ggsans-ExtraBold, NotoSans-ExtraBold'),
-    (y.CODE_NORMAL = 'ggmono-Normal, SourceCodePro-Normal'),
-    (y.CODE_BOLD = 'ggmono-Bold, SourceCodePro-Bold'),
-    ((b = n || (n = {})).ONLINE = 'online'),
-    (b.OFFLINE = 'offline'),
-    (b.IDLE = 'idle'),
-    (b.DND = 'dnd'),
-    (b.INVISIBLE = 'invisible'),
-    (b.STREAMING = 'streaming'),
-    (b.UNKNOWN = 'unknown'),
-    ((v = _ || (_ = {})).CHILLING = 'chilling'),
-    (v.GAMING = 'gaming'),
-    (v.FOCUSING = 'focusing'),
-    (v.BRB = 'brb'),
-    (v.EATING = 'eating'),
-    (v.IN_TRANSIT = 'in-transit'),
-    (v.WATCHING = 'watching'),
-    (v.CUSTOM = 'custom'),
-    ((w = o || (o = {})).DESKTOP = 'desktop'),
-    (w.WEB = 'web'),
-    (w.MOBILE = 'mobile'),
-    (w.UNKNOWN = 'unknown');
-let ef = '6Lef5iQTAAAAAKeIvIY-DeexoO3gj7ryl9rLMEnn';
-((B = E || (E = {}))[(B.CHECKOUT_RECOVERY = 1)] = 'CHECKOUT_RECOVERY'), (B[(B.CASH_APP_PAY_AWARENESS = 2)] = 'CASH_APP_PAY_AWARENESS'), ((W = i || (i = {}))[(W.STRIPE = 1)] = 'STRIPE'), (W[(W.BRAINTREE = 2)] = 'BRAINTREE'), (W[(W.APPLE = 3)] = 'APPLE'), (W[(W.GOOGLE = 4)] = 'GOOGLE'), (W[(W.ADYEN = 5)] = 'ADYEN'), (W[(W.APPLE_PARTNER = 6)] = 'APPLE_PARTNER');
-let eO = Object.freeze({
+    Object.freeze({
         1: 'Stripe',
         2: 'Braintree',
         3: 'Apple',
@@ -317,7 +38,7 @@ let eO = Object.freeze({
         5: 'Adyen',
         6: 'Apple Partner'
     }),
-    eL = Object.freeze({
+    Object.freeze({
         BRAINTREE: {
             KEY: window.GLOBAL_ENV.BRAINTREE_KEY,
             PAYMENT_GATEWAY: 'braintree'
@@ -330,649 +51,110 @@ let eO = Object.freeze({
             KEY: window.GLOBAL_ENV.ADYEN_KEY,
             PAYMENT_GATEWAY: 'adyen'
         }
-    });
-((Y = c || (c = {})).GOOGLE_PAY = 'google_pay'), (Y.APPLE_PAY = 'apple_pay'), ((H = s || (s = {}))[(H.UNKNOWN = 0)] = 'UNKNOWN'), (H[(H.CARD = 1)] = 'CARD'), (H[(H.PAYPAL = 2)] = 'PAYPAL'), (H[(H.GIROPAY = 3)] = 'GIROPAY'), (H[(H.SOFORT = 4)] = 'SOFORT'), (H[(H.PRZELEWY24 = 5)] = 'PRZELEWY24'), (H[(H.SEPA_DEBIT = 6)] = 'SEPA_DEBIT'), (H[(H.PAYSAFE_CARD = 7)] = 'PAYSAFE_CARD'), (H[(H.GCASH = 8)] = 'GCASH'), (H[(H.GRABPAY_MY = 9)] = 'GRABPAY_MY'), (H[(H.MOMO_WALLET = 10)] = 'MOMO_WALLET'), (H[(H.VENMO = 11)] = 'VENMO'), (H[(H.GOPAY_WALLET = 12)] = 'GOPAY_WALLET'), (H[(H.KAKAOPAY = 13)] = 'KAKAOPAY'), (H[(H.BANCONTACT = 14)] = 'BANCONTACT'), (H[(H.EPS = 15)] = 'EPS'), (H[(H.IDEAL = 16)] = 'IDEAL'), (H[(H.CASH_APP = 17)] = 'CASH_APP'), (H[(H.APPLE = 18)] = 'APPLE'), (H[(H.PAYMENT_REQUEST = 99)] = 'PAYMENT_REQUEST');
-let ep = new Map([
-        [7, 'paysafecard'],
-        [8, 'gcash'],
-        [9, 'grabpay_MY'],
-        [10, 'momo_wallet'],
-        [13, 'kakaopay'],
-        [12, 'gopay_wallet'],
-        [17, 'cashapp']
-    ]),
-    eh = new Map([
-        [14, 'bancontact'],
-        [3, 'giropay'],
-        [16, 'ideal']
-    ]),
-    eD = new Set([7, 8, 9, 12, 10, 13, 14, 15, 16, 4, 3, 5, 17]),
-    eS = new Set([7, 9, 3, 5, 4, 14, 15, 16]),
-    eC = new Set([1, 2, 6, 8, 10, 11, 13, 12, 17]),
-    eP = new Set([3, 4, 5, 14, 15, 16, 7, 9, 12]),
-    eg = new Set([6]);
-((x = l || (l = {}))[(x.NEW = 1)] = 'NEW'),
-    ((K = I || (I = {}))[(K.PENDING = 0)] = 'PENDING'),
-    (K[(K.COMPLETED = 1)] = 'COMPLETED'),
-    (K[(K.FAILED = 2)] = 'FAILED'),
-    (K[(K.REVERSED = 3)] = 'REVERSED'),
-    (K[(K.REFUNDED = 4)] = 'REFUNDED'),
-    (K[(K.CANCELED = 5)] = 'CANCELED'),
-    ((k = u || (u = {}))[(k.PREMIUM = 1)] = 'PREMIUM'),
-    (k[(k.GUILD = 2)] = 'GUILD'),
-    (k[(k.APPLICATION = 3)] = 'APPLICATION'),
-    ((V = R || (R = {})).PAYPAL_POPUP_CLOSED = 'PAYPAL_POPUP_CLOSED'),
-    (V.VENMO_APP_CANCELED = 'VENMO_APP_CANCELED'),
-    (V.VENMO_CANCELED = 'VENMO_CANCELED'),
+    }),
     Object.freeze({
         CONSTANT: 1,
         APPLE_STICKER: 2
     }),
-    ((F = A || (A = {}))[(F.DISCOVERY = 0)] = 'DISCOVERY'),
-    (F[(F.CHECKOUT = 1)] = 'CHECKOUT'),
-    ((X = T || (T = {}))[(X.SUBSCRIPTION = 0)] = 'SUBSCRIPTION'),
-    (X[(X.ONE_TIME = 1)] = 'ONE_TIME');
-let eU = Object.freeze({
-    0: 'subscription',
-    1: 'sku'
-});
-((j = N || (N = {}))[(j.VIEW_CHANNEL = 1024)] = 'VIEW_CHANNEL'), (j[(j.READ_MESSAGE_HISTORY = 65536)] = 'READ_MESSAGE_HISTORY'), (j[(j.CONNECT = 1048576)] = 'CONNECT');
-let eM = Object.freeze({
-        CREATE_INSTANT_INVITE: ec.r0(0),
-        KICK_MEMBERS: ec.r0(1),
-        BAN_MEMBERS: ec.r0(2),
-        ADMINISTRATOR: ec.r0(3),
-        MANAGE_CHANNELS: ec.r0(4),
-        MANAGE_GUILD: ec.r0(5),
-        CHANGE_NICKNAME: ec.r0(26),
-        MANAGE_NICKNAMES: ec.r0(27),
-        MANAGE_ROLES: ec.r0(28),
-        MANAGE_WEBHOOKS: ec.r0(29),
-        MANAGE_GUILD_EXPRESSIONS: ec.r0(30),
-        CREATE_GUILD_EXPRESSIONS: ec.r0(43),
-        VIEW_AUDIT_LOG: ec.r0(7),
-        VIEW_CHANNEL: ec.r0(10),
-        VIEW_GUILD_ANALYTICS: ec.r0(19),
-        VIEW_CREATOR_MONETIZATION_ANALYTICS: ec.r0(41),
-        MODERATE_MEMBERS: ec.r0(40),
-        USE_EMBEDDED_ACTIVITIES: ec.r0(39),
-        USE_EXTERNAL_APPS: ec.r0(50),
-        SEND_MESSAGES: ec.r0(11),
-        SEND_TTS_MESSAGES: ec.r0(12),
-        MANAGE_MESSAGES: ec.r0(13),
-        EMBED_LINKS: ec.r0(14),
-        ATTACH_FILES: ec.r0(15),
-        READ_MESSAGE_HISTORY: ec.r0(16),
-        MENTION_EVERYONE: ec.r0(17),
-        USE_EXTERNAL_EMOJIS: ec.r0(18),
-        ADD_REACTIONS: ec.r0(6),
-        USE_APPLICATION_COMMANDS: ec.r0(31),
-        MANAGE_THREADS: ec.r0(34),
-        CREATE_PUBLIC_THREADS: ec.r0(35),
-        CREATE_PRIVATE_THREADS: ec.r0(36),
-        USE_EXTERNAL_STICKERS: ec.r0(37),
-        SEND_MESSAGES_IN_THREADS: ec.r0(38),
-        SEND_VOICE_MESSAGES: ec.r0(46),
-        USE_CLYDE_AI: ec.r0(47),
-        SEND_POLLS: ec.r0(49),
-        CONNECT: ec.r0(20),
-        SPEAK: ec.r0(21),
-        MUTE_MEMBERS: ec.r0(22),
-        DEAFEN_MEMBERS: ec.r0(23),
-        MOVE_MEMBERS: ec.r0(24),
-        USE_VAD: ec.r0(25),
-        PRIORITY_SPEAKER: ec.r0(8),
-        STREAM: ec.r0(9),
-        USE_SOUNDBOARD: ec.r0(42),
-        USE_EXTERNAL_SOUNDS: ec.r0(45),
-        SET_VOICE_CHANNEL_STATUS: ec.r0(48),
-        REQUEST_TO_SPEAK: ec.r0(32),
-        MANAGE_EVENTS: ec.r0(33),
-        CREATE_EVENTS: ec.r0(44)
+    Object.freeze({
+        0: 'subscription',
+        1: 'sku'
+    });
+let s = Object.freeze({
+        CREATE_INSTANT_INVITE: o.r0(0),
+        KICK_MEMBERS: o.r0(1),
+        BAN_MEMBERS: o.r0(2),
+        ADMINISTRATOR: o.r0(3),
+        MANAGE_CHANNELS: o.r0(4),
+        MANAGE_GUILD: o.r0(5),
+        CHANGE_NICKNAME: o.r0(26),
+        MANAGE_NICKNAMES: o.r0(27),
+        MANAGE_ROLES: o.r0(28),
+        MANAGE_WEBHOOKS: o.r0(29),
+        MANAGE_GUILD_EXPRESSIONS: o.r0(30),
+        CREATE_GUILD_EXPRESSIONS: o.r0(43),
+        VIEW_AUDIT_LOG: o.r0(7),
+        VIEW_CHANNEL: o.r0(10),
+        VIEW_GUILD_ANALYTICS: o.r0(19),
+        VIEW_CREATOR_MONETIZATION_ANALYTICS: o.r0(41),
+        MODERATE_MEMBERS: o.r0(40),
+        USE_EMBEDDED_ACTIVITIES: o.r0(39),
+        USE_EXTERNAL_APPS: o.r0(50),
+        SEND_MESSAGES: o.r0(11),
+        SEND_TTS_MESSAGES: o.r0(12),
+        MANAGE_MESSAGES: o.r0(13),
+        EMBED_LINKS: o.r0(14),
+        ATTACH_FILES: o.r0(15),
+        READ_MESSAGE_HISTORY: o.r0(16),
+        MENTION_EVERYONE: o.r0(17),
+        USE_EXTERNAL_EMOJIS: o.r0(18),
+        ADD_REACTIONS: o.r0(6),
+        USE_APPLICATION_COMMANDS: o.r0(31),
+        MANAGE_THREADS: o.r0(34),
+        CREATE_PUBLIC_THREADS: o.r0(35),
+        CREATE_PRIVATE_THREADS: o.r0(36),
+        USE_EXTERNAL_STICKERS: o.r0(37),
+        SEND_MESSAGES_IN_THREADS: o.r0(38),
+        SEND_VOICE_MESSAGES: o.r0(46),
+        USE_CLYDE_AI: o.r0(47),
+        SEND_POLLS: o.r0(49),
+        CONNECT: o.r0(20),
+        SPEAK: o.r0(21),
+        MUTE_MEMBERS: o.r0(22),
+        DEAFEN_MEMBERS: o.r0(23),
+        MOVE_MEMBERS: o.r0(24),
+        USE_VAD: o.r0(25),
+        PRIORITY_SPEAKER: o.r0(8),
+        STREAM: o.r0(9),
+        USE_SOUNDBOARD: o.r0(42),
+        USE_EXTERNAL_SOUNDS: o.r0(45),
+        SET_VOICE_CHANNEL_STATUS: o.r0(48),
+        REQUEST_TO_SPEAK: o.r0(32),
+        MANAGE_EVENTS: o.r0(33),
+        CREATE_EVENTS: o.r0(44)
     }),
-    eG = function () {
-        for (var e = arguments.length, t = Array(e), r = 0; r < e; r++) t[r] = arguments[r];
-    },
-    em = () => null,
-    ey = () => Promise.resolve(),
-    eb = [eM.KICK_MEMBERS, eM.BAN_MEMBERS, eM.ADMINISTRATOR, eM.MANAGE_CHANNELS, eM.MANAGE_GUILD, eM.MANAGE_ROLES, eM.MANAGE_MESSAGES, eM.MANAGE_THREADS, eM.MODERATE_MEMBERS],
-    ev = ec.$e(...eb),
-    ew = 1,
-    eB = 6463,
-    eW = 10,
-    eY = 'RpcApplicationLogger';
-(($ = d || (d = {})).DISPATCH = 'DISPATCH'),
-    ($.SET_CONFIG = 'SET_CONFIG'),
-    ($.AUTHORIZE = 'AUTHORIZE'),
-    ($.AUTHENTICATE = 'AUTHENTICATE'),
-    ($.GET_GUILD = 'GET_GUILD'),
-    ($.GET_GUILDS = 'GET_GUILDS'),
-    ($.GET_CHANNEL = 'GET_CHANNEL'),
-    ($.GET_CHANNELS = 'GET_CHANNELS'),
-    ($.GET_CHANNEL_PERMISSIONS = 'GET_CHANNEL_PERMISSIONS'),
-    ($.CREATE_CHANNEL_INVITE = 'CREATE_CHANNEL_INVITE'),
-    ($.GET_RELATIONSHIPS = 'GET_RELATIONSHIPS'),
-    ($.GET_USER = 'GET_USER'),
-    ($.SUBSCRIBE = 'SUBSCRIBE'),
-    ($.UNSUBSCRIBE = 'UNSUBSCRIBE'),
-    ($.SET_USER_VOICE_SETTINGS = 'SET_USER_VOICE_SETTINGS'),
-    ($.SET_USER_VOICE_SETTINGS_2 = 'SET_USER_VOICE_SETTINGS_2'),
-    ($.PUSH_TO_TALK = 'PUSH_TO_TALK'),
-    ($.SELECT_VOICE_CHANNEL = 'SELECT_VOICE_CHANNEL'),
-    ($.GET_SELECTED_VOICE_CHANNEL = 'GET_SELECTED_VOICE_CHANNEL'),
-    ($.SELECT_TEXT_CHANNEL = 'SELECT_TEXT_CHANNEL'),
-    ($.GET_VOICE_SETTINGS = 'GET_VOICE_SETTINGS'),
-    ($.SET_VOICE_SETTINGS_2 = 'SET_VOICE_SETTINGS_2'),
-    ($.SET_VOICE_SETTINGS = 'SET_VOICE_SETTINGS'),
-    ($.SET_ACTIVITY = 'SET_ACTIVITY'),
-    ($.SEND_ACTIVITY_JOIN_INVITE = 'SEND_ACTIVITY_JOIN_INVITE'),
-    ($.CLOSE_ACTIVITY_JOIN_REQUEST = 'CLOSE_ACTIVITY_JOIN_REQUEST'),
-    ($.ACTIVITY_INVITE_USER = 'ACTIVITY_INVITE_USER'),
-    ($.ACCEPT_ACTIVITY_INVITE = 'ACCEPT_ACTIVITY_INVITE'),
-    ($.OPEN_INVITE_DIALOG = 'OPEN_INVITE_DIALOG'),
-    ($.OPEN_SHARE_MOMENT_DIALOG = 'OPEN_SHARE_MOMENT_DIALOG'),
-    ($.SHARE_INTERACTION = 'SHARE_INTERACTION'),
-    ($.INITIATE_IMAGE_UPLOAD = 'INITIATE_IMAGE_UPLOAD'),
-    ($.SHARE_LINK = 'SHARE_LINK'),
-    ($.INVITE_BROWSER = 'INVITE_BROWSER'),
-    ($.DEEP_LINK = 'DEEP_LINK'),
-    ($.CONNECTIONS_CALLBACK = 'CONNECTIONS_CALLBACK'),
-    ($.BILLING_POPUP_BRIDGE_CALLBACK = 'BILLING_POPUP_BRIDGE_CALLBACK'),
-    ($.BRAINTREE_POPUP_BRIDGE_CALLBACK = 'BRAINTREE_POPUP_BRIDGE_CALLBACK'),
-    ($.GIFT_CODE_BROWSER = 'GIFT_CODE_BROWSER'),
-    ($.GUILD_TEMPLATE_BROWSER = 'GUILD_TEMPLATE_BROWSER'),
-    ($.OPEN_MESSAGE = 'OPEN_MESSAGE'),
-    ($.OVERLAY = 'OVERLAY'),
-    ($.BROWSER_HANDOFF = 'BROWSER_HANDOFF'),
-    ($.SET_CERTIFIED_DEVICES = 'SET_CERTIFIED_DEVICES'),
-    ($.GET_IMAGE = 'GET_IMAGE'),
-    ($.SET_OVERLAY_LOCKED = 'SET_OVERLAY_LOCKED'),
-    ($.OPEN_OVERLAY_ACTIVITY_INVITE = 'OPEN_OVERLAY_ACTIVITY_INVITE'),
-    ($.OPEN_OVERLAY_GUILD_INVITE = 'OPEN_OVERLAY_GUILD_INVITE'),
-    ($.OPEN_OVERLAY_VOICE_SETTINGS = 'OPEN_OVERLAY_VOICE_SETTINGS'),
-    ($.VALIDATE_APPLICATION = 'VALIDATE_APPLICATION'),
-    ($.GET_ENTITLEMENT_TICKET = 'GET_ENTITLEMENT_TICKET'),
-    ($.GET_APPLICATION_TICKET = 'GET_APPLICATION_TICKET'),
-    ($.START_PURCHASE = 'START_PURCHASE'),
-    ($.START_PREMIUM_PURCHASE = 'START_PREMIUM_PURCHASE'),
-    ($.GET_SKUS = 'GET_SKUS'),
-    ($.GET_ENTITLEMENTS = 'GET_ENTITLEMENTS'),
-    ($.GET_SKUS_EMBEDDED = 'GET_SKUS_EMBEDDED'),
-    ($.GET_ENTITLEMENTS_EMBEDDED = 'GET_ENTITLEMENTS_EMBEDDED'),
-    ($.GET_NETWORKING_CONFIG = 'GET_NETWORKING_CONFIG'),
-    ($.NETWORKING_SYSTEM_METRICS = 'NETWORKING_SYSTEM_METRICS'),
-    ($.NETWORKING_PEER_METRICS = 'NETWORKING_PEER_METRICS'),
-    ($.NETWORKING_CREATE_TOKEN = 'NETWORKING_CREATE_TOKEN'),
-    ($.USER_SETTINGS_GET_LOCALE = 'USER_SETTINGS_GET_LOCALE'),
-    ($.SEND_GENERIC_EVENT = 'SEND_GENERIC_EVENT'),
-    ($.SEND_ANALYTICS_EVENT = 'SEND_ANALYTICS_EVENT'),
-    ($.OPEN_EXTERNAL_LINK = 'OPEN_EXTERNAL_LINK'),
-    ($.CAPTURE_LOG = 'CAPTURE_LOG'),
-    ($.ENCOURAGE_HW_ACCELERATION = 'ENCOURAGE_HW_ACCELERATION'),
-    ($.SET_ORIENTATION_LOCK_STATE = 'SET_ORIENTATION_LOCK_STATE'),
-    ($.GET_PLATFORM_BEHAVIORS = 'GET_PLATFORM_BEHAVIORS'),
-    ($.GET_SOUNDBOARD_SOUNDS = 'GET_SOUNDBOARD_SOUNDS'),
-    ($.PLAY_SOUNDBOARD_SOUND = 'PLAY_SOUNDBOARD_SOUND'),
-    ($.TOGGLE_VIDEO = 'TOGGLE_VIDEO'),
-    ($.TOGGLE_SCREENSHARE = 'TOGGLE_SCREENSHARE'),
-    ($.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS = 'GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS'),
-    ($.GET_PROVIDER_ACCESS_TOKEN = 'GET_PROVIDER_ACCESS_TOKEN'),
-    ($.MAYBE_GET_PROVIDER_ACCESS_TOKEN = 'MAYBE_GET_PROVIDER_ACCESS_TOKEN'),
-    ($.NAVIGATE_TO_CONNECTIONS = 'NAVIGATE_TO_CONNECTIONS'),
-    ((q = f || (f = {})).CURRENT_USER_UPDATE = 'CURRENT_USER_UPDATE'),
-    (q.CURRENT_GUILD_MEMBER_UPDATE = 'CURRENT_GUILD_MEMBER_UPDATE'),
-    (q.GUILD_STATUS = 'GUILD_STATUS'),
-    (q.GUILD_CREATE = 'GUILD_CREATE'),
-    (q.CHANNEL_CREATE = 'CHANNEL_CREATE'),
-    (q.RELATIONSHIP_UPDATE = 'RELATIONSHIP_UPDATE'),
-    (q.VOICE_CHANNEL_SELECT = 'VOICE_CHANNEL_SELECT'),
-    (q.VOICE_STATE_CREATE = 'VOICE_STATE_CREATE'),
-    (q.VOICE_STATE_DELETE = 'VOICE_STATE_DELETE'),
-    (q.VOICE_STATE_UPDATE = 'VOICE_STATE_UPDATE'),
-    (q.VOICE_SETTINGS_UPDATE = 'VOICE_SETTINGS_UPDATE'),
-    (q.VOICE_SETTINGS_UPDATE_2 = 'VOICE_SETTINGS_UPDATE_2'),
-    (q.VOICE_CONNECTION_STATUS = 'VOICE_CONNECTION_STATUS'),
-    (q.SPEAKING_START = 'SPEAKING_START'),
-    (q.SPEAKING_STOP = 'SPEAKING_STOP'),
-    (q.GAME_JOIN = 'GAME_JOIN'),
-    (q.GAME_SPECTATE = 'GAME_SPECTATE'),
-    (q.ACTIVITY_JOIN = 'ACTIVITY_JOIN'),
-    (q.ACTIVITY_JOIN_REQUEST = 'ACTIVITY_JOIN_REQUEST'),
-    (q.ACTIVITY_SPECTATE = 'ACTIVITY_SPECTATE'),
-    (q.ACTIVITY_INVITE = 'ACTIVITY_INVITE'),
-    (q.ACTIVITY_PIP_MODE_UPDATE = 'ACTIVITY_PIP_MODE_UPDATE'),
-    (q.ACTIVITY_LAYOUT_MODE_UPDATE = 'ACTIVITY_LAYOUT_MODE_UPDATE'),
-    (q.THERMAL_STATE_UPDATE = 'THERMAL_STATE_UPDATE'),
-    (q.ORIENTATION_UPDATE = 'ORIENTATION_UPDATE'),
-    (q.ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE = 'ACTIVITY_INSTANCE_PARTICIPANTS_UPDATE'),
-    (q.NOTIFICATION_CREATE = 'NOTIFICATION_CREATE'),
-    (q.MESSAGE_CREATE = 'MESSAGE_CREATE'),
-    (q.MESSAGE_UPDATE = 'MESSAGE_UPDATE'),
-    (q.MESSAGE_DELETE = 'MESSAGE_DELETE'),
-    (q.OVERLAY = 'OVERLAY'),
-    (q.OVERLAY_UPDATE = 'OVERLAY_UPDATE'),
-    (q.ENTITLEMENT_CREATE = 'ENTITLEMENT_CREATE'),
-    (q.ENTITLEMENT_DELETE = 'ENTITLEMENT_DELETE'),
-    (q.VOICE_CHANNEL_EFFECT_SEND = 'VOICE_CHANNEL_EFFECT_SEND'),
-    (q.VOICE_CHANNEL_EFFECT_RECENT_EMOJI = 'VOICE_CHANNEL_EFFECT_RECENT_EMOJI'),
-    (q.VOICE_CHANNEL_EFFECT_TOGGLE_ANIMATION_TYPE = 'VOICE_CHANNEL_EFFECT_TOGGLE_ANIMATION_TYPE'),
-    (q.SCREENSHARE_STATE_UPDATE = 'SCREENSHARE_STATE_UPDATE'),
-    (q.VIDEO_STATE_UPDATE = 'VIDEO_STATE_UPDATE'),
-    (q.READY = 'READY'),
-    (q.ERROR = 'ERROR'),
-    ((J = O || (O = {}))[(J.UNKNOWN_ERROR = 1000)] = 'UNKNOWN_ERROR'),
-    (J[(J.SERVICE_UNAVAILABLE = 1001)] = 'SERVICE_UNAVAILABLE'),
-    (J[(J.TRANSACTION_ABORTED = 1002)] = 'TRANSACTION_ABORTED'),
-    (J[(J.INVALID_PAYLOAD = 4000)] = 'INVALID_PAYLOAD'),
-    (J[(J.INVALID_COMMAND = 4002)] = 'INVALID_COMMAND'),
-    (J[(J.INVALID_GUILD = 4003)] = 'INVALID_GUILD'),
-    (J[(J.INVALID_EVENT = 4004)] = 'INVALID_EVENT'),
-    (J[(J.INVALID_CHANNEL = 4005)] = 'INVALID_CHANNEL'),
-    (J[(J.INVALID_PERMISSIONS = 4006)] = 'INVALID_PERMISSIONS'),
-    (J[(J.INVALID_CLIENTID = 4007)] = 'INVALID_CLIENTID'),
-    (J[(J.INVALID_ORIGIN = 4008)] = 'INVALID_ORIGIN'),
-    (J[(J.INVALID_TOKEN = 4009)] = 'INVALID_TOKEN'),
-    (J[(J.INVALID_USER = 4010)] = 'INVALID_USER'),
-    (J[(J.INVALID_INVITE = 4011)] = 'INVALID_INVITE'),
-    (J[(J.INVALID_ACTIVITY_JOIN_REQUEST = 4012)] = 'INVALID_ACTIVITY_JOIN_REQUEST'),
-    (J[(J.INVALID_ENTITLEMENT = 4015)] = 'INVALID_ENTITLEMENT'),
-    (J[(J.INVALID_GIFT_CODE = 4016)] = 'INVALID_GIFT_CODE'),
-    (J[(J.INVALID_GUILD_TEMPLATE = 4017)] = 'INVALID_GUILD_TEMPLATE'),
-    (J[(J.INVALID_SOUND = 4018)] = 'INVALID_SOUND'),
-    (J[(J.INVALID_PROVIDER = 4019)] = 'INVALID_PROVIDER'),
-    (J[(J.INVALID_CONNECTION_CALLBACK_STATE = 4020)] = 'INVALID_CONNECTION_CALLBACK_STATE'),
-    (J[(J.BAD_REQUEST_FOR_PROVIDER = 4021)] = 'BAD_REQUEST_FOR_PROVIDER'),
-    (J[(J.OAUTH2_ERROR = 5000)] = 'OAUTH2_ERROR'),
-    (J[(J.SELECT_CHANNEL_TIMED_OUT = 5001)] = 'SELECT_CHANNEL_TIMED_OUT'),
-    (J[(J.GET_GUILD_TIMED_OUT = 5002)] = 'GET_GUILD_TIMED_OUT'),
-    (J[(J.SELECT_VOICE_FORCE_REQUIRED = 5003)] = 'SELECT_VOICE_FORCE_REQUIRED'),
-    (J[(J.INVALID_ACTIVITY_SECRET = 5005)] = 'INVALID_ACTIVITY_SECRET'),
-    (J[(J.NO_ELIGIBLE_ACTIVITY = 5006)] = 'NO_ELIGIBLE_ACTIVITY'),
-    (J[(J.PURCHASE_CANCELED = 5008)] = 'PURCHASE_CANCELED'),
-    (J[(J.PURCHASE_ERROR = 5009)] = 'PURCHASE_ERROR'),
-    (J[(J.UNAUTHORIZED_FOR_ACHIEVEMENT = 5010)] = 'UNAUTHORIZED_FOR_ACHIEVEMENT'),
-    (J[(J.RATE_LIMITED = 5011)] = 'RATE_LIMITED'),
-    (J[(J.UNAUTHORIZED_FOR_APPLICATION = 5012)] = 'UNAUTHORIZED_FOR_APPLICATION'),
-    (J[(J.NO_CONNECTION_FOUND = 5013)] = 'NO_CONNECTION_FOUND'),
-    ((z = L || (L = {}))[(z.CLOSE_NORMAL = 1000)] = 'CLOSE_NORMAL'),
-    (z[(z.CLOSE_UNSUPPORTED = 1003)] = 'CLOSE_UNSUPPORTED'),
-    (z[(z.CLOSE_ABNORMAL = 1006)] = 'CLOSE_ABNORMAL'),
-    (z[(z.INVALID_CLIENTID = 4000)] = 'INVALID_CLIENTID'),
-    (z[(z.INVALID_ORIGIN = 4001)] = 'INVALID_ORIGIN'),
-    (z[(z.RATELIMITED = 4002)] = 'RATELIMITED'),
-    (z[(z.TOKEN_REVOKED = 4003)] = 'TOKEN_REVOKED'),
-    (z[(z.INVALID_VERSION = 4004)] = 'INVALID_VERSION'),
-    (z[(z.INVALID_ENCODING = 4005)] = 'INVALID_ENCODING');
-let eH = 'token',
-    ex = 'tokens',
-    eK = 'https://'.concat('status.discord.com'),
-    ek = {
-        PRESSKIT: 'https://app.box.com/s/5puqm5ijahrrdao7yldi7fr3zah5i1am',
-        REBRAND_PRESSKIT: 'https://www.dropbox.com/scl/fo/2vittfakjukwa3zl4gnxh/AOS0AZlx-zA4TjDyv-M-dgk?rlkey=kn0v1lcqfq1lurj3lk3x1ujhf&dl=0',
-        STATUS: 'https://discordstatus.com',
-        HELP_AND_SUPPORT: '//'.concat(eT, '/hc/en-us'),
-        FEEDBACK: '//'.concat('feedback.discord.com'),
-        EMAIL_SUPPORT: 'mailto:support@'.concat(ed),
-        EMAIL_LAW_ENFORCEMENT: 'mailto:lawenforcement@'.concat(ed),
-        EMAIL_HYPESQUAD: 'mailto:hypesquad@'.concat(ed),
-        EMAIL_JOBS: 'mailto:jobs@'.concat(ed),
-        DEV_PERKS_FORM: 'https://goo.gl/forms/oZfKBStV3sR8GHdU2',
-        VERIFICATION_REQUIREMENTS: 'https://dis.gd/vfqual',
-        BASE_URL: 'https://'.concat(eA),
-        PRESS_INQUIRIES: 'mailto:press@'.concat(ed),
-        CONTACT_US: 'https://dis.gd/contact',
-        DEV_LANDING: '/build',
-        DEV_PORTAL: '/developers',
-        DEV_PORTAL_APPLICATIONS: '/developers/applications',
-        DEV_PORTAL_DOCUMENTATION: '/developers/docs',
-        DEV_PORTAL_SELF_SERVE_MODAL: '/developers/?store_signup=true',
-        PARTNER_CODE_OF_CONDUCT: 'https://'.concat(eT, '/hc/en-us/articles/360024871991'),
-        SUBMIT_TNS_REPORT: 'https://dis.gd/request',
-        MERCH_STORE: 'https://discordmerch.com',
-        MOD_ACADEMY_EXAM: 'https://dis.gd/exam',
-        OFFICIAL_3RD_PARTY_MERCH: 'https://discordmerch.com/evergreenfooter',
-        COMMUNITY: '/community',
-        TWITTER_SUPPORT: 'https://twitter.com/discord_support',
-        QUESTS: '/quests'
-    },
-    eV = Object.freeze({
+    E = [s.KICK_MEMBERS, s.BAN_MEMBERS, s.ADMINISTRATOR, s.MANAGE_CHANNELS, s.MANAGE_GUILD, s.MANAGE_ROLES, s.MANAGE_MESSAGES, s.MANAGE_THREADS, s.MODERATE_MEMBERS];
+o.$e(...E),
+    Object.freeze({
         TWITTER: Object.freeze({
             default: 'https://twitter.com/discord',
             ja: 'https://twitter.com/discord_jp'
         })
-    }),
-    eF = Object.freeze({
-        WELCOME: ''.concat(eu, '/welcome/'),
-        ME: ''.concat(eu, '/channels/@me'),
-        SETTINGS: (e, t) =>
-            ''
-                .concat(eu, '/settings/')
-                .concat(e)
-                .concat(t ? '/'.concat(t) : ''),
-        CONNECTION: (e) => ''.concat(eu, '/connections/').concat(e),
-        CHANGELOGS: ''.concat(eu, '/settings/changelogs'),
-        LOGIN: ''.concat(eu, '/login'),
-        LOGIN_WITH_REDIRECT: (e) => ''.concat(eu, '/login?redirect_to=').concat(e),
-        REGISTER: ''.concat(eu, '/register'),
-        REGISTER_WITH_REDIRECT: (e) => ''.concat(eu, '/register?redirect_to=').concat(e),
-        CREATE_GUILD: ''.concat(eu, '/guilds/create'),
-        VANITY_INVITE: (e) => ''.concat(eR, '/').concat(e),
-        HYPESQUAD_ONLINE: ''.concat(eu, '/settings/hypesquad-online'),
-        BROWSE_NITRO_TITLES: ''.concat(eu, '/store/browse?type=nitro'),
-        SKU_DETAILS: (e, t) =>
-            ''
-                .concat(eu, '/store/skus/')
-                .concat(e)
-                .concat(null != t ? '?store_listing_id='.concat(t) : ''),
-        MESSAGE: (e, t, r) => '/channels/'.concat(e, '/').concat(t, '/').concat(r),
-        CHANNEL: (e, t) => '/channels/'.concat(e, '/').concat(t),
-        REPORT: ''.concat(eu, '/report')
     });
-((Q = p || (p = {})).INDEX = '/'), (Q.INDEX_WORD = '/index'), (Q.INDEX_BUCKET = '/index/:bucketId'), (Q.CHANGELOGS = '/changelogs/:date'), (Q.COMMUNITY = '/community'), (Q.COMPANY = '/company'), (Q.COMPANY_INFORMATION = '/company-information'), (Q.CREATORS = '/creators'), (Q.DOWNLOADS = '/downloads'), (Q.DOWNLOAD = '/download'), (Q.GAMING = '/gaming'), (Q.PRIVACY = '/privacy'), (Q.TOS = '/tos'), (Q.TERMS = '/terms'), (Q.STORE_TERMS = '/store-terms'), (Q.ACKNOWLEDGEMENTS = '/acknowledgements'), (Q.LICENSES = '/licenses'), (Q.PARTNERS = '/partners'), (Q.HYPESQUAD = '/hypesquad'), (Q.HYPESQUAD_RIOT = '/hypesquad-riot'), (Q.BRANDING = '/branding'), (Q.ERROR_404 = '/404'), (Q.JOBS = '/jobs'), (Q.JOB = '/jobs/:jobId'), (Q.STREAMKIT = '/streamkit'), (Q.SECURITY = '/security'), (Q.NITRO = '/nitro'), (Q.DISCOVER = '/servers'), (Q.QUESTS = '/ads/quests'), (Q.GUIDELINES = '/guidelines'), (Q.RICH_PRESENCE = '/rich-presence'), (Q.VERIFICATION = '/verification'), (Q.OPEN_SOURCE = '/open-source'), (Q.WARFRAME = '/warframe'), (Q.REMOTE_AUTH = '/ra/:remoteAuthFingerprint'), (Q.SAFETY_LANDING = '/safetycenter'), (Q.SAFETY_ARTICLE_ROOT = '/safety'), (Q.SAFETY_ARTICLE = '/safety/:article'), (Q.NEWSROOM = '/newsroom'), (Q.INSPIRATION = '/inspiration'), (Q.MOD_ACADEMY_LANDING = '/moderation'), (Q.MOD_ACADEMY_EXAM = '/moderation/exam'), (Q.MOD_ACADEMY_ARTICLE = '/moderation/:article'), (Q.BLOG = '/blog'), (Q.APP_DIRECTORY = '/application-directory'), (Q.REFRESH_INDEX = '/new'), (Q.REFRESH_INDEX_WORD = '/new/index'), (Q.REFRESH_COMPANY = '/new/company'), (Q.REFRESH_DOWNLOAD = '/new/download'), (Q.REFRESH_PRIVACY = '/new/privacy'), (Q.REFRESH_TERMS = '/new/terms'), (Q.REFRESH_ACKNOWLEDGEMENTS = '/new/acknowledgements'), (Q.REFRESH_LICENSES = '/new/licenses'), (Q.REFRESH_BRANDING = '/new/branding'), (Q.REFRESH_JOBS = '/new/jobs'), (Q.REFRESH_JOB = '/new/jobs/:jobId'), (Q.REFRESH_STREAMKIT = '/new/streamkit'), (Q.REFRESH_NITRO = '/new/nitro'), (Q.REFRESH_GUIDELINES = '/new/guidelines'), (Q.REFRESH_SAFETY_LANDING = '/new/safety'), (Q.REFRESH_SAFETY_ARTICLE = '/new/safety/:article'), (Q.COLLEGE = '/college'), (Q.LEAGUE_CLUBS = '/league-communities'), (Q.DISCORD_RECRUITING_SCAMS = '/discord-recruitment-scams'), (Q.DEV_NEWSLETTER_SIGNUP = '/dev-newsletter'), (Q.LEGACY_DEV_NEWSLETTER = '/newsletter'), (Q.LEGAL_ARCHIVE = '/archive/'), (Q.TERMS_MAY_2020 = '/archive/terms/may-2020'), (Q.PRIVACY_JUNE_2020 = '/archive/privacy/june-2020'), (Q.GUIDELINES_MAY_2020 = '/archive/guidelines/may-2020'), (Q.FALL_RELEASE_2023 = '/fallrelease'), (Q.MOBILE_REDESIGN_2023 = '/mobile'), (Q.REFRESH_XBOX_OFFER = '/new/discord-xbox-offer-2019'), (Q.REFRESH_WHY_DISCORD = '/why-discord-is-different'), (Q.WHY_DISCORD = '/why-discord'), (Q.XBOX_OFFER = '/discord-xbox-offer-2020'), (Q.COLLEGE_BRUINS = '/bruins'), (Q.COLLEGE_ANTEATERS = '/anteaters'), (Q.COLLEGE_GAUCHOS = '/gauchos'), (Q.COLLEGE_BEARS = '/bears'), (Q.COLLEGE_SLUGS = '/slugs'), (Q.BACK_TO_SCHOOL_GIVEAWAY_INSTAGRAM = '/terms/back-to-school-2020/instagram'), (Q.BACK_TO_SCHOOL_GIVEAWAY_TWITTER = '/terms/back-to-school-2020/twitter'), (Q.SNOWSGIVING_GIVEAWAY_INSTAGRAM = '/terms/snowsgiving-2020/instagram'), (Q.SNOWSGIVING_GIVEAWAY_TWITTER = '/terms/snowsgiving-2020/twitter'), (0, es.Ft)(eF), (0, es.Ft)(p);
-let eX = Object.freeze({
-    FACEBOOK_URL: 'https://www.facebook.com/discord/',
-    INSTAGRAM_URL: 'https://www.instagram.com/discord/',
-    YOUTUBE_URL: 'https://www.youtube.com/discord/',
-    TIKTOK_URL: 'https://www.tiktok.com/@discord'
+let l = Object.freeze({
+    WELCOME: ''.concat(i, '/welcome/'),
+    ME: ''.concat(i, '/channels/@me'),
+    SETTINGS: (t, e) =>
+        ''
+            .concat(i, '/settings/')
+            .concat(t)
+            .concat(e ? '/'.concat(e) : ''),
+    CONNECTION: (t) => ''.concat(i, '/connections/').concat(t),
+    CHANGELOGS: ''.concat(i, '/settings/changelogs'),
+    LOGIN: ''.concat(i, '/login'),
+    LOGIN_WITH_REDIRECT: (t) => ''.concat(i, '/login?redirect_to=').concat(t),
+    REGISTER: ''.concat(i, '/register'),
+    REGISTER_WITH_REDIRECT: (t) => ''.concat(i, '/register?redirect_to=').concat(t),
+    CREATE_GUILD: ''.concat(i, '/guilds/create'),
+    VANITY_INVITE: (t) => ''.concat(c, '/').concat(t),
+    HYPESQUAD_ONLINE: ''.concat(i, '/settings/hypesquad-online'),
+    BROWSE_NITRO_TITLES: ''.concat(i, '/store/browse?type=nitro'),
+    SKU_DETAILS: (t, e) =>
+        ''
+            .concat(i, '/store/skus/')
+            .concat(t)
+            .concat(null != e ? '?store_listing_id='.concat(e) : ''),
+    MESSAGE: (t, e, a) => '/channels/'.concat(t, '/').concat(e, '/').concat(a),
+    CHANNEL: (t, e) => '/channels/'.concat(t, '/').concat(e),
+    REPORT: ''.concat(i, '/report')
 });
-((Z = h || (h = {})).EXPERIMENT_USER_TRIGGERED = 'experiment_user_triggered'),
-    (Z.EXPERIMENT_GUILD_TRIGGERED = 'experiment_guild_triggered'),
-    (Z.EXPERIMENT_SAVE_EXPOSURE_FAILED = 'experiment_save_exposure_failed'),
-    (Z.MKTG_PAGE_VIEWED = 'mktg_page_viewed'),
-    (Z.CLICK_LANDING_CTA = 'click_landing_cta'),
-    (Z.DOWNLOAD_APP = 'download_app'),
-    (Z.MKTG_HYPESQUAD_FORM_SUBMITTED = 'mktg_hypesquad_form_submitted'),
-    (Z.MKTG_HYPESQUAD_FORM_OPENED = 'mktg_hypesquad_form_opened'),
-    (Z.CHANGE_MARKETING_LOCALE = 'change_marketing_locale'),
-    (Z.GAME_CLICKED_LANDING = 'game_clicked_landing'),
-    (Z.MAIN_NAVIGATION_MENU = 'main_navigation_menu'),
-    (Z.MKTG_APPLICATION_STEP = 'mktg_application_step'),
-    (Z.MKTG_WARFRAME_CTA_CLICKED = 'mktg_warframe_cta_clicked'),
-    (Z.MKTG_PAGE_CTA_CLICKED = 'mktg_page_cta_clicked'),
-    (Z.MKTG_VIDEO_PLAYED = 'mktg_video_played'),
-    (Z.DEEP_LINK_CLICKED = 'deep_link_clicked'),
-    (Z.SEO_PAGE_VIEWED = 'seo_server_landing_page_viewed'),
-    (Z.SEO_PAGE_CTA_CLICKED = 'seo_server_landing_page_cta_clicked'),
-    (Z.SEO_AGGREGATOR_PAGE_VIEWED = 'seo_aggregator_page_viewed'),
-    (Z.SEO_AGGREGATOR_CTA_CLICKED = 'seo_aggregator_page_cta_clicked'),
-    (Z.LOCATION_STACK_METADATA = 'location_stack_metadata'),
-    (Z.CREATOR_STORE_PAGE_VIEWED = 'creator_store_page_viewed'),
-    (Z.CREATOR_STORE_PAGE_CTA_CLICKED = 'creator_store_page_cta_clicked'),
-    ((D || (D = {})).MKTG_ACKNOWLEDGEMENTS_MODAL_OPEN = 'mktg_ack_modal_open'),
-    ((ee = S || (S = {})).AED = 'aed'),
-    (ee.AFN = 'afn'),
-    (ee.ALL = 'all'),
-    (ee.AMD = 'amd'),
-    (ee.ANG = 'ang'),
-    (ee.AOA = 'aoa'),
-    (ee.ARS = 'ars'),
-    (ee.AUD = 'aud'),
-    (ee.AWG = 'awg'),
-    (ee.AZN = 'azn'),
-    (ee.BAM = 'bam'),
-    (ee.BBD = 'bbd'),
-    (ee.BDT = 'bdt'),
-    (ee.BGN = 'bgn'),
-    (ee.BHD = 'bhd'),
-    (ee.BIF = 'bif'),
-    (ee.BMD = 'bmd'),
-    (ee.BND = 'bnd'),
-    (ee.BOB = 'bob'),
-    (ee.BOV = 'bov'),
-    (ee.BRL = 'brl'),
-    (ee.BSD = 'bsd'),
-    (ee.BTN = 'btn'),
-    (ee.BWP = 'bwp'),
-    (ee.BYN = 'byn'),
-    (ee.BYR = 'byr'),
-    (ee.BZD = 'bzd'),
-    (ee.CAD = 'cad'),
-    (ee.CDF = 'cdf'),
-    (ee.CHE = 'che'),
-    (ee.CHF = 'chf'),
-    (ee.CHW = 'chw'),
-    (ee.CLF = 'clf'),
-    (ee.CLP = 'clp'),
-    (ee.CNY = 'cny'),
-    (ee.COP = 'cop'),
-    (ee.COU = 'cou'),
-    (ee.CRC = 'crc'),
-    (ee.CUC = 'cuc'),
-    (ee.CUP = 'cup'),
-    (ee.CVE = 'cve'),
-    (ee.CZK = 'czk'),
-    (ee.DJF = 'djf'),
-    (ee.DKK = 'dkk'),
-    (ee.DOP = 'dop'),
-    (ee.DZD = 'dzd'),
-    (ee.EGP = 'egp'),
-    (ee.ERN = 'ern'),
-    (ee.ETB = 'etb'),
-    (ee.EUR = 'eur'),
-    (ee.FJD = 'fjd'),
-    (ee.FKP = 'fkp'),
-    (ee.GBP = 'gbp'),
-    (ee.GEL = 'gel'),
-    (ee.GHS = 'ghs'),
-    (ee.GIP = 'gip'),
-    (ee.GMD = 'gmd'),
-    (ee.GNF = 'gnf'),
-    (ee.GTQ = 'gtq'),
-    (ee.GYD = 'gyd'),
-    (ee.HKD = 'hkd'),
-    (ee.HNL = 'hnl'),
-    (ee.HRK = 'hrk'),
-    (ee.HTG = 'htg'),
-    (ee.HUF = 'huf'),
-    (ee.IDR = 'idr'),
-    (ee.ILS = 'ils'),
-    (ee.INR = 'inr'),
-    (ee.IQD = 'iqd'),
-    (ee.IRR = 'irr'),
-    (ee.ISK = 'isk'),
-    (ee.JMD = 'jmd'),
-    (ee.JOD = 'jod'),
-    (ee.JPY = 'jpy'),
-    (ee.KES = 'kes'),
-    (ee.KGS = 'kgs'),
-    (ee.KHR = 'khr'),
-    (ee.KMF = 'kmf'),
-    (ee.KPW = 'kpw'),
-    (ee.KRW = 'krw'),
-    (ee.KWD = 'kwd'),
-    (ee.KYD = 'kyd'),
-    (ee.KZT = 'kzt'),
-    (ee.LAK = 'lak'),
-    (ee.LBP = 'lbp'),
-    (ee.LKR = 'lkr'),
-    (ee.LRD = 'lrd'),
-    (ee.LSL = 'lsl'),
-    (ee.LTL = 'ltl'),
-    (ee.LVL = 'lvl'),
-    (ee.LYD = 'lyd'),
-    (ee.MAD = 'mad'),
-    (ee.MDL = 'mdl'),
-    (ee.MGA = 'mga'),
-    (ee.MKD = 'mkd'),
-    (ee.MMK = 'mmk'),
-    (ee.MNT = 'mnt'),
-    (ee.MOP = 'mop'),
-    (ee.MRO = 'mro'),
-    (ee.MUR = 'mur'),
-    (ee.MVR = 'mvr'),
-    (ee.MWK = 'mwk'),
-    (ee.MXN = 'mxn'),
-    (ee.MXV = 'mxv'),
-    (ee.MYR = 'myr'),
-    (ee.MZN = 'mzn'),
-    (ee.NAD = 'nad'),
-    (ee.NGN = 'ngn'),
-    (ee.NIO = 'nio'),
-    (ee.NOK = 'nok'),
-    (ee.NPR = 'npr'),
-    (ee.NZD = 'nzd'),
-    (ee.OMR = 'omr'),
-    (ee.PAB = 'pab'),
-    (ee.PEN = 'pen'),
-    (ee.PGK = 'pgk'),
-    (ee.PHP = 'php'),
-    (ee.PKR = 'pkr'),
-    (ee.PLN = 'pln'),
-    (ee.PYG = 'pyg'),
-    (ee.QAR = 'qar'),
-    (ee.RON = 'ron'),
-    (ee.RSD = 'rsd'),
-    (ee.RUB = 'rub'),
-    (ee.RWF = 'rwf'),
-    (ee.SAR = 'sar'),
-    (ee.SBD = 'sbd'),
-    (ee.SCR = 'scr'),
-    (ee.SDG = 'sdg'),
-    (ee.SEK = 'sek'),
-    (ee.SGD = 'sgd'),
-    (ee.SHP = 'shp'),
-    (ee.SLL = 'sll'),
-    (ee.SOS = 'sos'),
-    (ee.SRD = 'srd'),
-    (ee.SSP = 'ssp'),
-    (ee.STD = 'std'),
-    (ee.SVC = 'svc'),
-    (ee.SYP = 'syp'),
-    (ee.SZL = 'szl'),
-    (ee.THB = 'thb'),
-    (ee.TJS = 'tjs'),
-    (ee.TMT = 'tmt'),
-    (ee.TND = 'tnd'),
-    (ee.TOP = 'top'),
-    (ee.TRY = 'try'),
-    (ee.TTD = 'ttd'),
-    (ee.TWD = 'twd'),
-    (ee.TZS = 'tzs'),
-    (ee.UAH = 'uah'),
-    (ee.UGX = 'ugx'),
-    (ee.USD = 'usd'),
-    (ee.USN = 'usn'),
-    (ee.USS = 'uss'),
-    (ee.UYI = 'uyi'),
-    (ee.UYU = 'uyu'),
-    (ee.UZS = 'uzs'),
-    (ee.VEF = 'vef'),
-    (ee.VND = 'vnd'),
-    (ee.VUV = 'vuv'),
-    (ee.WST = 'wst'),
-    (ee.XAF = 'xaf'),
-    (ee.XAG = 'xag'),
-    (ee.XAU = 'xau'),
-    (ee.XBA = 'xba'),
-    (ee.XBB = 'xbb'),
-    (ee.XBC = 'xbc'),
-    (ee.XBD = 'xbd'),
-    (ee.XCD = 'xcd'),
-    (ee.XDR = 'xdr'),
-    (ee.XFU = 'xfu'),
-    (ee.XOF = 'xof'),
-    (ee.XPD = 'xpd'),
-    (ee.XPF = 'xpf'),
-    (ee.XPT = 'xpt'),
-    (ee.XSU = 'xsu'),
-    (ee.XTS = 'xts'),
-    (ee.XUA = 'xua'),
-    (ee.YER = 'yer'),
-    (ee.ZAR = 'zar'),
-    (ee.ZMW = 'zmw'),
-    (ee.ZWL = 'zwl'),
-    (ee.DISCORD_ORB = 'discord_orb');
-let ej = 'US';
-((et = C || (C = {})).COUNTRY = 'US'),
-    (et.CURRENCY = 'usd'),
-    ((er = P || (P = {}))[(er.SINGLE_PLAYER = 1)] = 'SINGLE_PLAYER'),
-    (er[(er.ONLINE_MULTIPLAYER = 2)] = 'ONLINE_MULTIPLAYER'),
-    (er[(er.LOCAL_MULTIPLAYER = 3)] = 'LOCAL_MULTIPLAYER'),
-    (er[(er.PVP = 4)] = 'PVP'),
-    (er[(er.LOCAL_COOP = 5)] = 'LOCAL_COOP'),
-    (er[(er.CROSS_PLATFORM = 6)] = 'CROSS_PLATFORM'),
-    (er[(er.RICH_PRESENCE = 7)] = 'RICH_PRESENCE'),
-    (er[(er.DISCORD_GAME_INVITES = 8)] = 'DISCORD_GAME_INVITES'),
-    (er[(er.SPECTATOR_MODE = 9)] = 'SPECTATOR_MODE'),
-    (er[(er.CONTROLLER_SUPPORT = 10)] = 'CONTROLLER_SUPPORT'),
-    (er[(er.CLOUD_SAVES = 11)] = 'CLOUD_SAVES'),
-    (er[(er.ONLINE_COOP = 12)] = 'ONLINE_COOP'),
-    (er[(er.SECURE_NETWORKING = 13)] = 'SECURE_NETWORKING'),
-    ((ea = g || (g = {}))[(ea.ACTION = 1)] = 'ACTION'),
-    (ea[(ea.ACTION_RPG = 2)] = 'ACTION_RPG'),
-    (ea[(ea.BRAWLER = 3)] = 'BRAWLER'),
-    (ea[(ea.HACK_AND_SLASH = 4)] = 'HACK_AND_SLASH'),
-    (ea[(ea.PLATFORMER = 5)] = 'PLATFORMER'),
-    (ea[(ea.STEALTH = 6)] = 'STEALTH'),
-    (ea[(ea.SURVIVAL = 7)] = 'SURVIVAL'),
-    (ea[(ea.ADVENTURE = 8)] = 'ADVENTURE'),
-    (ea[(ea.ACTION_ADVENTURE = 9)] = 'ACTION_ADVENTURE'),
-    (ea[(ea.METROIDVANIA = 10)] = 'METROIDVANIA'),
-    (ea[(ea.OPEN_WORLD = 11)] = 'OPEN_WORLD'),
-    (ea[(ea.PSYCHOLOGICAL_HORROR = 12)] = 'PSYCHOLOGICAL_HORROR'),
-    (ea[(ea.SANDBOX = 13)] = 'SANDBOX'),
-    (ea[(ea.SURVIVAL_HORROR = 14)] = 'SURVIVAL_HORROR'),
-    (ea[(ea.VISUAL_NOVEL = 15)] = 'VISUAL_NOVEL'),
-    (ea[(ea.DRIVING_RACING = 16)] = 'DRIVING_RACING'),
-    (ea[(ea.VEHICULAR_COMBAT = 17)] = 'VEHICULAR_COMBAT'),
-    (ea[(ea.MASSIVELY_MULTIPLAYER = 18)] = 'MASSIVELY_MULTIPLAYER'),
-    (ea[(ea.MMORPG = 19)] = 'MMORPG'),
-    (ea[(ea.ROLE_PLAYING = 20)] = 'ROLE_PLAYING'),
-    (ea[(ea.DUNGEON_CRAWLER = 21)] = 'DUNGEON_CRAWLER'),
-    (ea[(ea.ROGUELIKE = 22)] = 'ROGUELIKE'),
-    (ea[(ea.SHOOTER = 23)] = 'SHOOTER'),
-    (ea[(ea.LIGHT_GUN = 24)] = 'LIGHT_GUN'),
-    (ea[(ea.SHOOT_EM_UP = 25)] = 'SHOOT_EM_UP'),
-    (ea[(ea.FPS = 26)] = 'FPS'),
-    (ea[(ea.DUAL_JOYSTICK_SHOOTER = 27)] = 'DUAL_JOYSTICK_SHOOTER'),
-    (ea[(ea.SIMULATION = 28)] = 'SIMULATION'),
-    (ea[(ea.FLIGHT_SIMULATOR = 29)] = 'FLIGHT_SIMULATOR'),
-    (ea[(ea.TRAIN_SIMULATOR = 30)] = 'TRAIN_SIMULATOR'),
-    (ea[(ea.LIFE_SIMULATOR = 31)] = 'LIFE_SIMULATOR'),
-    (ea[(ea.FISHING = 32)] = 'FISHING'),
-    (ea[(ea.SPORTS = 33)] = 'SPORTS'),
-    (ea[(ea.BASEBALL = 34)] = 'BASEBALL'),
-    (ea[(ea.BASKETBALL = 35)] = 'BASKETBALL'),
-    (ea[(ea.BILLIARDS = 36)] = 'BILLIARDS'),
-    (ea[(ea.BOWLING = 37)] = 'BOWLING'),
-    (ea[(ea.BOXING = 38)] = 'BOXING'),
-    (ea[(ea.FOOTBALL = 39)] = 'FOOTBALL'),
-    (ea[(ea.GOLF = 40)] = 'GOLF'),
-    (ea[(ea.HOCKEY = 41)] = 'HOCKEY'),
-    (ea[(ea.SKATEBOARDING_SKATING = 42)] = 'SKATEBOARDING_SKATING'),
-    (ea[(ea.SNOWBOARDING_SKIING = 43)] = 'SNOWBOARDING_SKIING'),
-    (ea[(ea.SOCCER = 44)] = 'SOCCER'),
-    (ea[(ea.TRACK_FIELD = 45)] = 'TRACK_FIELD'),
-    (ea[(ea.SURFING_WAKEBOARDING = 46)] = 'SURFING_WAKEBOARDING'),
-    (ea[(ea.WRESTLING = 47)] = 'WRESTLING'),
-    (ea[(ea.STRATEGY = 48)] = 'STRATEGY'),
-    (ea[(ea.FOUR_X = 49)] = 'FOUR_X'),
-    (ea[(ea.ARTILLERY = 50)] = 'ARTILLERY'),
-    (ea[(ea.RTS = 51)] = 'RTS'),
-    (ea[(ea.TOWER_DEFENSE = 52)] = 'TOWER_DEFENSE'),
-    (ea[(ea.TURN_BASED_STRATEGY = 53)] = 'TURN_BASED_STRATEGY'),
-    (ea[(ea.WARGAME = 54)] = 'WARGAME'),
-    (ea[(ea.MOBA = 55)] = 'MOBA'),
-    (ea[(ea.FIGHTING = 56)] = 'FIGHTING'),
-    (ea[(ea.PUZZLE = 57)] = 'PUZZLE'),
-    (ea[(ea.CARD_GAME = 58)] = 'CARD_GAME'),
-    (ea[(ea.EDUCATION = 59)] = 'EDUCATION'),
-    (ea[(ea.FITNESS = 60)] = 'FITNESS'),
-    (ea[(ea.GAMBLING = 61)] = 'GAMBLING'),
-    (ea[(ea.MUSIC_RHYTHM = 62)] = 'MUSIC_RHYTHM'),
-    (ea[(ea.PARTY_MINI_GAME = 63)] = 'PARTY_MINI_GAME'),
-    (ea[(ea.PINBALL = 64)] = 'PINBALL'),
-    (ea[(ea.TRIVIA_BOARD_GAME = 65)] = 'TRIVIA_BOARD_GAME'),
-    (ea[(ea.TACTICAL = 66)] = 'TACTICAL'),
-    (ea[(ea.INDIE = 67)] = 'INDIE'),
-    (ea[(ea.ARCADE = 68)] = 'ARCADE'),
-    (ea[(ea.POINT_AND_CLICK = 69)] = 'POINT_AND_CLICK'),
-    ((en = U || (U = {}))[(en.GUILD_ROLE_SUBSCRIPTIONS = 1)] = 'GUILD_ROLE_SUBSCRIPTIONS'),
-    (en[(en.GUILD_PRODUCTS = 2)] = 'GUILD_PRODUCTS'),
-    ((e_ = M || (M = {})).PERMISSION_DENIED = 'PERMISSION_DENIED'),
-    (e_.PERMISSION_DISMISSED = 'PERMISSION_DISMISSED'),
-    (e_.NO_DEVICES_FOUND = 'NO_DEVICES_FOUND'),
-    ((eo = G || (G = {})).SWIPE = 'SWIPE'),
-    (eo.BROWSER = 'BROWSER'),
-    (eo.KEYBIND = 'KEYBIND'),
-    ((eE = m || (m = {}))[(eE.IN_PROMPT = 1)] = 'IN_PROMPT');
+var u = (((r = u || {}).INDEX = '/'), (r.INDEX_WORD = '/index'), (r.INDEX_BUCKET = '/index/:bucketId'), (r.CHANGELOGS = '/changelogs/:date'), (r.COMMUNITY = '/community'), (r.COMPANY = '/company'), (r.COMPANY_INFORMATION = '/company-information'), (r.CREATORS = '/creators'), (r.DOWNLOADS = '/downloads'), (r.DOWNLOAD = '/download'), (r.GAMING = '/gaming'), (r.PRIVACY = '/privacy'), (r.TOS = '/tos'), (r.TERMS = '/terms'), (r.STORE_TERMS = '/store-terms'), (r.ACKNOWLEDGEMENTS = '/acknowledgements'), (r.LICENSES = '/licenses'), (r.PARTNERS = '/partners'), (r.HYPESQUAD = '/hypesquad'), (r.HYPESQUAD_RIOT = '/hypesquad-riot'), (r.BRANDING = '/branding'), (r.ERROR_404 = '/404'), (r.JOBS = '/jobs'), (r.JOB = '/jobs/:jobId'), (r.STREAMKIT = '/streamkit'), (r.SECURITY = '/security'), (r.NITRO = '/nitro'), (r.DISCOVER = '/servers'), (r.QUESTS = '/ads/quests'), (r.GUIDELINES = '/guidelines'), (r.RICH_PRESENCE = '/rich-presence'), (r.VERIFICATION = '/verification'), (r.OPEN_SOURCE = '/open-source'), (r.WARFRAME = '/warframe'), (r.REMOTE_AUTH = '/ra/:remoteAuthFingerprint'), (r.SAFETY_LANDING = '/safetycenter'), (r.SAFETY_ARTICLE_ROOT = '/safety'), (r.SAFETY_ARTICLE = '/safety/:article'), (r.NEWSROOM = '/newsroom'), (r.INSPIRATION = '/inspiration'), (r.MOD_ACADEMY_LANDING = '/moderation'), (r.MOD_ACADEMY_EXAM = '/moderation/exam'), (r.MOD_ACADEMY_ARTICLE = '/moderation/:article'), (r.BLOG = '/blog'), (r.APP_DIRECTORY = '/application-directory'), (r.REFRESH_INDEX = '/new'), (r.REFRESH_INDEX_WORD = '/new/index'), (r.REFRESH_COMPANY = '/new/company'), (r.REFRESH_DOWNLOAD = '/new/download'), (r.REFRESH_PRIVACY = '/new/privacy'), (r.REFRESH_TERMS = '/new/terms'), (r.REFRESH_ACKNOWLEDGEMENTS = '/new/acknowledgements'), (r.REFRESH_LICENSES = '/new/licenses'), (r.REFRESH_BRANDING = '/new/branding'), (r.REFRESH_JOBS = '/new/jobs'), (r.REFRESH_JOB = '/new/jobs/:jobId'), (r.REFRESH_STREAMKIT = '/new/streamkit'), (r.REFRESH_NITRO = '/new/nitro'), (r.REFRESH_GUIDELINES = '/new/guidelines'), (r.REFRESH_SAFETY_LANDING = '/new/safety'), (r.REFRESH_SAFETY_ARTICLE = '/new/safety/:article'), (r.COLLEGE = '/college'), (r.LEAGUE_CLUBS = '/league-communities'), (r.DISCORD_RECRUITING_SCAMS = '/discord-recruitment-scams'), (r.DEV_NEWSLETTER_SIGNUP = '/dev-newsletter'), (r.LEGACY_DEV_NEWSLETTER = '/newsletter'), (r.LEGAL_ARCHIVE = '/archive/'), (r.TERMS_MAY_2020 = '/archive/terms/may-2020'), (r.PRIVACY_JUNE_2020 = '/archive/privacy/june-2020'), (r.GUIDELINES_MAY_2020 = '/archive/guidelines/may-2020'), (r.FALL_RELEASE_2023 = '/fallrelease'), (r.MOBILE_REDESIGN_2023 = '/mobile'), (r.REFRESH_XBOX_OFFER = '/new/discord-xbox-offer-2019'), (r.REFRESH_WHY_DISCORD = '/why-discord-is-different'), (r.WHY_DISCORD = '/why-discord'), (r.XBOX_OFFER = '/discord-xbox-offer-2020'), (r.COLLEGE_BRUINS = '/bruins'), (r.COLLEGE_ANTEATERS = '/anteaters'), (r.COLLEGE_GAUCHOS = '/gauchos'), (r.COLLEGE_BEARS = '/bears'), (r.COLLEGE_SLUGS = '/slugs'), (r.BACK_TO_SCHOOL_GIVEAWAY_INSTAGRAM = '/terms/back-to-school-2020/instagram'), (r.BACK_TO_SCHOOL_GIVEAWAY_TWITTER = '/terms/back-to-school-2020/twitter'), (r.SNOWSGIVING_GIVEAWAY_INSTAGRAM = '/terms/snowsgiving-2020/instagram'), (r.SNOWSGIVING_GIVEAWAY_TWITTER = '/terms/snowsgiving-2020/twitter'), r);
+(0, _.Ft)(l),
+    (0, _.Ft)(u),
+    Object.freeze({
+        FACEBOOK_URL: 'https://www.facebook.com/discord/',
+        INSTAGRAM_URL: 'https://www.instagram.com/discord/',
+        YOUTUBE_URL: 'https://www.youtube.com/discord/',
+        TIKTOK_URL: 'https://www.tiktok.com/@discord'
+    });
+var I = (((n = {}).AED = 'aed'), (n.AFN = 'afn'), (n.ALL = 'all'), (n.AMD = 'amd'), (n.ANG = 'ang'), (n.AOA = 'aoa'), (n.ARS = 'ars'), (n.AUD = 'aud'), (n.AWG = 'awg'), (n.AZN = 'azn'), (n.BAM = 'bam'), (n.BBD = 'bbd'), (n.BDT = 'bdt'), (n.BGN = 'bgn'), (n.BHD = 'bhd'), (n.BIF = 'bif'), (n.BMD = 'bmd'), (n.BND = 'bnd'), (n.BOB = 'bob'), (n.BOV = 'bov'), (n.BRL = 'brl'), (n.BSD = 'bsd'), (n.BTN = 'btn'), (n.BWP = 'bwp'), (n.BYN = 'byn'), (n.BYR = 'byr'), (n.BZD = 'bzd'), (n.CAD = 'cad'), (n.CDF = 'cdf'), (n.CHE = 'che'), (n.CHF = 'chf'), (n.CHW = 'chw'), (n.CLF = 'clf'), (n.CLP = 'clp'), (n.CNY = 'cny'), (n.COP = 'cop'), (n.COU = 'cou'), (n.CRC = 'crc'), (n.CUC = 'cuc'), (n.CUP = 'cup'), (n.CVE = 'cve'), (n.CZK = 'czk'), (n.DJF = 'djf'), (n.DKK = 'dkk'), (n.DOP = 'dop'), (n.DZD = 'dzd'), (n.EGP = 'egp'), (n.ERN = 'ern'), (n.ETB = 'etb'), (n.EUR = 'eur'), (n.FJD = 'fjd'), (n.FKP = 'fkp'), (n.GBP = 'gbp'), (n.GEL = 'gel'), (n.GHS = 'ghs'), (n.GIP = 'gip'), (n.GMD = 'gmd'), (n.GNF = 'gnf'), (n.GTQ = 'gtq'), (n.GYD = 'gyd'), (n.HKD = 'hkd'), (n.HNL = 'hnl'), (n.HRK = 'hrk'), (n.HTG = 'htg'), (n.HUF = 'huf'), (n.IDR = 'idr'), (n.ILS = 'ils'), (n.INR = 'inr'), (n.IQD = 'iqd'), (n.IRR = 'irr'), (n.ISK = 'isk'), (n.JMD = 'jmd'), (n.JOD = 'jod'), (n.JPY = 'jpy'), (n.KES = 'kes'), (n.KGS = 'kgs'), (n.KHR = 'khr'), (n.KMF = 'kmf'), (n.KPW = 'kpw'), (n.KRW = 'krw'), (n.KWD = 'kwd'), (n.KYD = 'kyd'), (n.KZT = 'kzt'), (n.LAK = 'lak'), (n.LBP = 'lbp'), (n.LKR = 'lkr'), (n.LRD = 'lrd'), (n.LSL = 'lsl'), (n.LTL = 'ltl'), (n.LVL = 'lvl'), (n.LYD = 'lyd'), (n.MAD = 'mad'), (n.MDL = 'mdl'), (n.MGA = 'mga'), (n.MKD = 'mkd'), (n.MMK = 'mmk'), (n.MNT = 'mnt'), (n.MOP = 'mop'), (n.MRO = 'mro'), (n.MUR = 'mur'), (n.MVR = 'mvr'), (n.MWK = 'mwk'), (n.MXN = 'mxn'), (n.MXV = 'mxv'), (n.MYR = 'myr'), (n.MZN = 'mzn'), (n.NAD = 'nad'), (n.NGN = 'ngn'), (n.NIO = 'nio'), (n.NOK = 'nok'), (n.NPR = 'npr'), (n.NZD = 'nzd'), (n.OMR = 'omr'), (n.PAB = 'pab'), (n.PEN = 'pen'), (n.PGK = 'pgk'), (n.PHP = 'php'), (n.PKR = 'pkr'), (n.PLN = 'pln'), (n.PYG = 'pyg'), (n.QAR = 'qar'), (n.RON = 'ron'), (n.RSD = 'rsd'), (n.RUB = 'rub'), (n.RWF = 'rwf'), (n.SAR = 'sar'), (n.SBD = 'sbd'), (n.SCR = 'scr'), (n.SDG = 'sdg'), (n.SEK = 'sek'), (n.SGD = 'sgd'), (n.SHP = 'shp'), (n.SLL = 'sll'), (n.SOS = 'sos'), (n.SRD = 'srd'), (n.SSP = 'ssp'), (n.STD = 'std'), (n.SVC = 'svc'), (n.SYP = 'syp'), (n.SZL = 'szl'), (n.THB = 'thb'), (n.TJS = 'tjs'), (n.TMT = 'tmt'), (n.TND = 'tnd'), (n.TOP = 'top'), (n.TRY = 'try'), (n.TTD = 'ttd'), (n.TWD = 'twd'), (n.TZS = 'tzs'), (n.UAH = 'uah'), (n.UGX = 'ugx'), (n.USD = 'usd'), (n.USN = 'usn'), (n.USS = 'uss'), (n.UYI = 'uyi'), (n.UYU = 'uyu'), (n.UZS = 'uzs'), (n.VEF = 'vef'), (n.VND = 'vnd'), (n.VUV = 'vuv'), (n.WST = 'wst'), (n.XAF = 'xaf'), (n.XAG = 'xag'), (n.XAU = 'xau'), (n.XBA = 'xba'), (n.XBB = 'xbb'), (n.XBC = 'xbc'), (n.XBD = 'xbd'), (n.XCD = 'xcd'), (n.XDR = 'xdr'), (n.XFU = 'xfu'), (n.XOF = 'xof'), (n.XPD = 'xpd'), (n.XPF = 'xpf'), (n.XPT = 'xpt'), (n.XSU = 'xsu'), (n.XTS = 'xts'), (n.XUA = 'xua'), (n.YER = 'yer'), (n.ZAR = 'zar'), (n.ZMW = 'zmw'), (n.ZWL = 'zwl'), (n.DISCORD_ORB = 'discord_orb'), n);

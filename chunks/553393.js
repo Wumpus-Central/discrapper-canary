@@ -1,103 +1,98 @@
-r.d(n, {
-    Z: function () {
-        return V;
-    }
-});
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(642128),
-    l = r(91192),
-    u = r(442837),
-    c = r(780384),
-    d = r(481060),
-    f = r(287734),
-    p = r(872810),
-    h = r(393238),
-    _ = r(40851),
-    m = r(607070),
-    g = r(258609),
-    E = r(102172),
-    v = r(210887),
-    y = r(592125),
-    b = r(430824),
-    I = r(496675),
-    T = r(979651),
-    S = r(617136),
-    A = r(113434),
-    C = r(497505),
-    N = r(475595),
-    R = r(602667),
-    O = r(644646),
-    D = r(667105),
-    L = r(341907),
-    x = r(46140),
-    w = r(981631),
-    P = r(231338),
-    M = r(388032),
-    k = r(763054);
-let U = '4px',
-    B = '11px',
-    G = 222;
-function Z(e, n) {
-    return null != e && null != n && (0, E.p9)(n, T.Z, b.Z, I.Z, g.Z)[0];
+n.d(t, { Z: () => Z }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(642128),
+    s = n(91192),
+    o = n(442837),
+    l = n(780384),
+    u = n(481060),
+    c = n(287734),
+    d = n(872810),
+    f = n(393238),
+    _ = n(40851),
+    p = n(607070),
+    h = n(258609),
+    m = n(102172),
+    g = n(210887),
+    E = n(592125),
+    v = n(430824),
+    y = n(496675),
+    I = n(979651),
+    b = n(617136),
+    T = n(113434),
+    S = n(497505),
+    A = n(475595),
+    N = n(602667),
+    C = n(644646),
+    R = n(667105),
+    O = n(341907),
+    D = n(46140),
+    x = n(981631),
+    L = n(231338),
+    P = n(388032),
+    w = n(763054);
+let M = '4px',
+    k = '11px',
+    U = 222;
+function G(e, t) {
+    return null != e && null != t && (0, m.p9)(t, I.Z, v.Z, y.Z, h.Z)[0];
 }
-function F(e) {
-    var n, r, i, g, E;
-    let { quest: b, memberListItemRef: I, applicationStream: T, position: R, closePopout: F, updatePosition: V, impressionRef: j } = e,
-        H = (0, u.e7)([y.Z], () => {
+function B(e) {
+    var t, n, h, m, v;
+    let { quest: y, memberListItemRef: I, applicationStream: N, position: B, closePopout: Z, updatePosition: F, impressionRef: V } = e,
+        j = (0, o.e7)([E.Z], () => {
             var e;
-            return null !== (e = y.Z.getChannel(null == T ? void 0 : T.channelId)) && void 0 !== e ? e : null;
+            return null !== (e = E.Z.getChannel(null == N ? void 0 : N.channelId)) && void 0 !== e ? e : null;
         }),
-        Y = (0, D.hf)({
-            quest: b,
-            location: C.jn.MEMBERS_LIST
+        H = (0, R.hf)({
+            quest: y,
+            location: S.jn.MEMBERS_LIST
         }),
-        W = (0, A.tP)(b),
-        K = (null == b ? void 0 : null === (n = b.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null,
-        z = (null == b ? void 0 : null === (r = b.userStatus) || void 0 === r ? void 0 : r.enrolledAt) != null,
-        q = (null == b ? void 0 : null === (i = b.userStatus) || void 0 === i ? void 0 : i.completedAt) != null,
-        Q = (0, u.e7)([v.Z], () => v.Z.getState().theme),
-        X = (0, c.wj)(Q) ? P.BR.DARK : P.BR.LIGHT,
-        J = (0, u.e7)([m.Z], () => m.Z.useReducedMotion),
-        { ref: $, height: ee } = (0, h.Z)(),
-        [et, en] = o.useState(J),
-        er = (0, _.Aq)(),
-        ei = (0, l.eg)();
-    o.useEffect(() => {
+        Y = (0, T.tP)(y),
+        W = (null == y ? void 0 : null === (t = y.userStatus) || void 0 === t ? void 0 : t.claimedAt) != null,
+        K = (null == y ? void 0 : null === (n = y.userStatus) || void 0 === n ? void 0 : n.enrolledAt) != null,
+        z = (null == y ? void 0 : null === (h = y.userStatus) || void 0 === h ? void 0 : h.completedAt) != null,
+        q = (0, o.e7)([g.Z], () => g.Z.getState().theme),
+        Q = (0, l.wj)(q) ? L.BR.DARK : L.BR.LIGHT,
+        X = (0, o.e7)([p.Z], () => p.Z.useReducedMotion),
+        { ref: J, height: $ } = (0, f.Z)(),
+        [ee, et] = r.useState(X),
+        en = (0, _.Aq)(),
+        ei = (0, s.eg)();
+    r.useEffect(() => {
         let e = ei.current;
         return (
-            null == e || e.addEventListener('scroll', F),
+            null == e || e.addEventListener('scroll', Z),
             () => {
-                null == e || e.removeEventListener('scroll', F);
+                null == e || e.removeEventListener('scroll', Z);
             }
         );
-    }, [F, ei]),
-        o.useEffect(() => {
+    }, [Z, ei]),
+        r.useEffect(() => {
             let e = ei.current,
-                n = I.current;
-            if (null == e || null == n) return;
-            let r = new MutationObserver(() => V());
+                t = I.current;
+            if (null == e || null == t) return;
+            let n = new MutationObserver(() => F());
             return (
-                r.observe(e, {
+                n.observe(e, {
                     childList: !0,
                     subtree: !0
                 }),
                 () => {
-                    r.disconnect();
+                    n.disconnect();
                 }
             );
-        }, [I, ei, V]);
-    let ea = (0, d.useSpring)({
+        }, [I, ei, F]);
+    let er = (0, u.q_F)({
             from: { height: 0 },
-            height: null != ee ? ee : 0,
+            height: null != $ ? $ : 0,
             config: {
                 tension: 450,
                 friction: 45
             },
-            onRest: () => en(!0)
+            onRest: () => et(!0)
         }),
-        eo = (0, d.useTransition)(et, {
+        ea = (0, u.Yzy)(ee, {
             from: {
                 opacity: 0,
                 scale: 0
@@ -108,157 +103,157 @@ function F(e) {
             }
         }),
         es = () => {
-            er.dispatch(w.CkL.POPOUT_CLOSE);
+            en.dispatch(x.CkL.POPOUT_CLOSE);
         },
-        el = 'top' === R ? ''.concat(U, ' ').concat(U, ' 0 0') : '0 0 '.concat(U, ' ').concat(U);
-    if (null == b || W || (K && !Z(T, H))) return null;
-    let eu = () => {
-            (0, S._3)({
-                questId: b.id,
-                questContent: C.jn.MEMBERS_LIST,
-                questContentCTA: S.jZ.OPEN_DISCLOSURE,
+        eo = 'top' === B ? ''.concat(M, ' ').concat(M, ' 0 0') : '0 0 '.concat(M, ' ').concat(M);
+    if (null == y || Y || (W && !G(N, j))) return null;
+    let el = () => {
+            (0, b._3)({
+                questId: y.id,
+                questContent: S.jn.MEMBERS_LIST,
+                questContentCTA: b.jZ.OPEN_DISCLOSURE,
                 trackGuildAndChannelMetadata: !0
             }),
-                (0, L.openDisclosureModal)(b, {
-                    content: C.jn.MEMBERS_LIST,
-                    ctaContent: S.jZ.OPEN_DISCLOSURE
+                (0, O.openDisclosureModal)(y, {
+                    content: S.jn.MEMBERS_LIST,
+                    ctaContent: b.jZ.OPEN_DISCLOSURE
                 });
         },
-        ec = () => {
-            (0, S._3)({
-                questId: b.id,
-                questContent: C.jn.MEMBERS_LIST,
-                questContentCTA: S.jZ.LEARN_MORE,
+        eu = () => {
+            (0, b._3)({
+                questId: y.id,
+                questContent: S.jn.MEMBERS_LIST,
+                questContentCTA: b.jZ.LEARN_MORE,
                 trackGuildAndChannelMetadata: !0
             }),
-                (0, L.navigateToQuestHome)(x.dr.MEMBERS_LIST, C.jn.MEMBERS_LIST, b.id);
+                (0, O.navigateToQuestHome)(D.dr.MEMBERS_LIST, S.jn.MEMBERS_LIST, y.id);
         },
-        ed = (e) => {
-            e.stopPropagation(), eu();
+        ec = (e) => {
+            e.stopPropagation(), el();
         },
-        ef = () => {
-            if (Z(T, H) && null != H)
+        ed = () => {
+            if (G(N, j) && null != j)
                 return (
-                    (0, S._3)({
-                        questId: b.id,
-                        questContent: C.jn.MEMBERS_LIST,
-                        questContentCTA: S.jZ.WATCH_STREAM,
+                    (0, b._3)({
+                        questId: y.id,
+                        questContent: S.jn.MEMBERS_LIST,
+                        questContentCTA: b.jZ.WATCH_STREAM,
                         trackGuildAndChannelMetadata: !0
                     }),
-                    f.default.selectVoiceChannel(H.id),
-                    (0, p.iV)(T)
+                    c.default.selectVoiceChannel(j.id),
+                    (0, d.iV)(N)
                 );
-            ec();
+            eu();
         },
-        ep = (() =>
-            q && !K
+        ef =
+            z && !W
                 ? {
-                      headerText: M.intl.string(M.t.gHerLS),
-                      ctaText: M.intl.string(M.t.cfY4PD),
-                      handleClickCta: Y,
+                      headerText: P.intl.string(P.t.gHerLS),
+                      ctaText: P.intl.string(P.t.cfY4PD),
+                      handleClickCta: H,
                       tileAssetType: 'reward'
                   }
-                : z && !K
+                : K && !W
                   ? {
-                        headerText: M.intl.string(M.t.uH2sf3),
-                        ctaText: M.intl.string(M.t.VN1Ajo),
-                        handleClickCta: ec,
+                        headerText: P.intl.string(P.t.uH2sf3),
+                        ctaText: P.intl.string(P.t.VN1Ajo),
+                        handleClickCta: eu,
                         tileAssetType: 'reward'
                     }
-                  : Z(T, H)
+                  : G(N, j)
                     ? {
-                          headerText: M.intl.string(M.t.Bz6SkJ),
-                          ctaText: M.intl.string(M.t.BXFP39),
-                          handleClickCta: ef,
+                          headerText: P.intl.string(P.t.Bz6SkJ),
+                          ctaText: P.intl.string(P.t.BXFP39),
+                          handleClickCta: ed,
                           tileAssetType: 'game'
                       }
                     : {
-                          headerText: M.intl.string(M.t.Bz6SkJ),
-                          ctaText: M.intl.string(M.t.BSXPZ2),
-                          handleClickCta: ec,
+                          headerText: P.intl.string(P.t.Bz6SkJ),
+                          ctaText: P.intl.string(P.t.BSXPZ2),
+                          handleClickCta: eu,
                           tileAssetType: 'game'
-                      })();
-    return (0, a.jsx)(s.animated.div, {
+                      };
+    return (0, i.jsx)(a.animated.div, {
         ref: (e) => {
-            j.current = e;
+            V.current = e;
         },
-        'aria-expanded': et,
-        className: k.wrapper,
+        'aria-expanded': ee,
+        className: w.wrapper,
         style: {
-            width: null !== (E = null === (g = I.current) || void 0 === g ? void 0 : g.clientWidth) && void 0 !== E ? E : G,
-            height: ea.height,
-            overflow: et ? 'visible' : 'hidden',
-            borderRadius: el
+            width: null !== (v = null === (m = I.current) || void 0 === m ? void 0 : m.clientWidth) && void 0 !== v ? v : U,
+            height: er.height,
+            overflow: ee ? 'visible' : 'hidden',
+            borderRadius: eo
         },
-        children: (0, a.jsxs)('div', {
+        children: (0, i.jsxs)('div', {
             ref: (e) => {
-                $.current = e;
+                J.current = e;
             },
-            className: k.container,
-            style: { borderRadius: el },
+            className: w.container,
+            style: { borderRadius: eo },
             children: [
-                (0, a.jsxs)('div', {
-                    className: k.top,
+                (0, i.jsxs)('div', {
+                    className: w.top,
                     children: [
-                        (0, a.jsxs)('div', {
-                            className: k.left,
+                        (0, i.jsxs)('div', {
+                            className: w.left,
                             children: [
-                                (0, a.jsx)(d.Heading, {
+                                (0, i.jsx)(u.X6q, {
                                     variant: 'heading-sm/semibold',
-                                    children: ep.headerText
+                                    children: ef.headerText
                                 }),
-                                (0, a.jsxs)(d.Clickable, {
-                                    className: k.help,
+                                (0, i.jsxs)(u.P3F, {
+                                    className: w.help,
                                     onClick: (e) => {
-                                        es(), ed(e);
+                                        es(), ec(e);
                                     },
                                     children: [
-                                        (0, a.jsx)(d.Text, {
+                                        (0, i.jsx)(u.Text, {
                                             variant: 'text-xs/medium',
                                             color: 'text-muted',
-                                            className: k.helpText,
-                                            children: M.intl.format(M.t['Lm8/mJ'], { gamePublisher: b.config.messages.gamePublisher })
+                                            className: w.helpText,
+                                            children: P.intl.format(P.t['Lm8/mJ'], { gamePublisher: y.config.messages.gamePublisher })
                                         }),
-                                        (0, a.jsx)(d.CircleQuestionIcon, {
+                                        (0, i.jsx)(u.idN, {
                                             size: 'custom',
-                                            className: k.helpIcon,
-                                            width: B,
-                                            height: B,
-                                            color: d.tokens.colors.INTERACTIVE_NORMAL
+                                            className: w.helpIcon,
+                                            width: k,
+                                            height: k,
+                                            color: u.TVs.colors.INTERACTIVE_NORMAL
                                         })
                                     ]
                                 })
                             ]
                         }),
-                        (0, a.jsx)('div', {
-                            className: k.right,
-                            children: (0, a.jsxs)('div', {
-                                className: k.imgWrapper,
+                        (0, i.jsx)('div', {
+                            className: w.right,
+                            children: (0, i.jsxs)('div', {
+                                className: w.imgWrapper,
                                 children: [
-                                    eo(
-                                        (e, n) =>
-                                            n &&
-                                            (0, a.jsx)(s.animated.div, {
+                                    ea(
+                                        (e, t) =>
+                                            t &&
+                                            (0, i.jsx)(a.animated.div, {
                                                 style: e,
-                                                className: k.imgUnderlay
+                                                className: w.imgUnderlay
                                             })
                                     ),
-                                    'game' === ep.tileAssetType &&
-                                        (0, a.jsx)('img', {
-                                            alt: M.intl.formatToPlainString(M.t.IskzPj, {
-                                                gameTitle: b.config.messages.gameTitle,
-                                                gamePublisher: b.config.messages.gamePublisher
+                                    'game' === ef.tileAssetType &&
+                                        (0, i.jsx)('img', {
+                                            alt: P.intl.formatToPlainString(P.t.IskzPj, {
+                                                gameTitle: y.config.messages.gameTitle,
+                                                gamePublisher: y.config.messages.gamePublisher
                                             }),
-                                            className: k.assetTile,
-                                            src: (0, N.fh)(b, N.eC.GAME_TILE, X).url
+                                            className: w.assetTile,
+                                            src: (0, A.fh)(y, A.eC.GAME_TILE, Q).url
                                         }),
-                                    'reward' === ep.tileAssetType &&
-                                        (0, a.jsx)(O.Z, {
-                                            className: k.assetTile,
-                                            quest: b,
-                                            questContent: C.jn.MEMBERS_LIST,
+                                    'reward' === ef.tileAssetType &&
+                                        (0, i.jsx)(C.Z, {
+                                            className: w.assetTile,
+                                            quest: y,
+                                            questContent: S.jn.MEMBERS_LIST,
                                             learnMoreStyle: 'icon',
-                                            location: x.dr.MEMBERS_LIST,
+                                            location: D.dr.MEMBERS_LIST,
                                             onClick: es
                                         })
                                 ]
@@ -266,28 +261,28 @@ function F(e) {
                         })
                     ]
                 }),
-                (0, a.jsx)(d.Button, {
+                (0, i.jsx)(u.zxk, {
                     onClick: () => {
-                        es(), ep.handleClickCta();
+                        es(), ef.handleClickCta();
                     },
-                    color: d.Button.Colors.CUSTOM,
-                    className: k.ctaButton,
-                    children: ep.ctaText
+                    color: u.zxk.Colors.CUSTOM,
+                    className: w.ctaButton,
+                    children: ef.ctaText
                 })
             ]
         })
     });
 }
-function V(e) {
+function Z(e) {
     return null == e.quest
         ? null
-        : (0, a.jsx)(R.A, {
+        : (0, i.jsx)(N.A, {
               questOrQuests: e.quest,
-              questContent: C.jn.MEMBERS_LIST,
+              questContent: S.jn.MEMBERS_LIST,
               trackGuildAndChannelMetadata: !0,
-              children: (n) =>
-                  (0, a.jsx)(F, {
-                      impressionRef: n,
+              children: (t) =>
+                  (0, i.jsx)(B, {
+                      impressionRef: t,
                       ...e
                   })
           });

@@ -1,46 +1,42 @@
-r.d(n, {
-    T: function () {
-        return m;
-    },
-    Z: function () {
-        return _;
-    }
+n.d(t, {
+    T: () => h,
+    Z: () => p
 });
-var i = r(200651);
-r(192379);
-var a = r(442837),
-    o = r(481060),
-    s = r(100527),
-    l = r(432877),
-    u = r(726521),
-    c = r(87620),
-    d = r(314897),
-    f = r(594174),
-    p = r(981631),
-    h = r(388032);
-function _(e) {
-    let { user: n, guildId: r, color: l, onAction: f, location: _ = s.Z.CONTEXT_MENU } = e,
-        m = (0, c.oV)(_),
-        g = (0, a.e7)([d.default], () => d.default.getId() === n.id);
-    return !m || g || n.isNonUserBot()
+var i = n(200651);
+n(192379);
+var r = n(442837),
+    a = n(481060),
+    s = n(100527),
+    o = n(432877),
+    l = n(726521),
+    u = n(87620),
+    c = n(314897),
+    d = n(594174),
+    f = n(981631),
+    _ = n(388032);
+function p(e) {
+    let { user: t, guildId: n, color: o, onAction: d, location: p = s.Z.CONTEXT_MENU } = e,
+        h = (0, u.oV)(p),
+        m = (0, r.e7)([c.default], () => c.default.getId() === t.id);
+    return !h || m || t.isNonUserBot()
         ? null
-        : (0, i.jsx)(o.MenuItem, {
+        : (0, i.jsx)(a.sNh, {
               id: 'report-user',
-              color: l,
-              label: h.intl.string(h.t.A1MM3N),
-              action: () => (0, u.pX)(n, r === p.ME ? void 0 : r, f)
+              color: o,
+              label: _.intl.string(_.t.A1MM3N),
+              action: () => (0, l.pX)(t, n === f.ME ? void 0 : n, d)
           });
 }
-function m(e) {
-    let { user: n, guildId: r, color: s, onAction: c } = e,
-        d = (0, a.e7)([l.ZP], () => l.ZP.get('iar_testing')),
-        h = (0, a.e7)([f.default], () => f.default.getCurrentUser());
-    return null != h && (n.id === h.id || n.isNonUserBot() || !h.isStaff() || !d)
+function h(e) {
+    let { user: t, guildId: n, color: s, onAction: u } = e,
+        c = (0, r.e7)([o.ZP], () => o.ZP.get('iar_testing')),
+        _ = (0, r.e7)([d.default], () => d.default.getCurrentUser());
+    return null != _ && (t.id === _.id || t.isNonUserBot() || !_.isStaff() || !c)
         ? null
-        : (0, i.jsx)(o.MenuItem, {
+        : (0, i.jsx)(a.sNh, {
               id: 'staff-test-report-user',
               color: s,
               label: '[STAFF] Test Profile Report',
-              action: () => (0, u.I6)(n, r === p.ME ? void 0 : r, c)
+              action: () => (0, l.I6)(t, n === f.ME ? void 0 : n, u)
           });
 }

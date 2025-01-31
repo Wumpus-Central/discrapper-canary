@@ -1,85 +1,78 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return x;
-        }
-    }),
-    n(47120);
+n.d(t, { default: () => _ }), n(47120);
 var a = n(200651),
-    o = n(192379),
-    s = n(481060),
-    l = n(313201),
-    i = n(332664),
+    s = n(192379),
+    l = n(481060),
+    i = n(313201),
+    o = n(332664),
     r = n(429506),
     c = n(981631),
     d = n(531578),
-    u = n(388032),
-    m = n(940290);
-let b = [
+    m = n(388032),
+    u = n(940290);
+let x = [
     {
-        className: m.emojiThumbsUp,
+        className: u.emojiThumbsUp,
         rating: d.aZ.GOOD,
-        classNameSelected: m.selected
+        classNameSelected: u.selected
     },
     {
-        className: m.emojiThumbsDown,
+        className: u.emojiThumbsDown,
         rating: d.aZ.BAD,
-        classNameSelected: m.selected
+        classNameSelected: u.selected
     }
 ];
-function x(e) {
-    let [t, d] = o.useState(null),
-        x = (0, l.Dt)();
-    return (0, a.jsxs)(s.ModalRoot, {
+function _(e) {
+    let [t, d] = s.useState(null),
+        _ = (0, i.Dt)();
+    return (0, a.jsxs)(l.Y0X, {
         transitionState: e.transitionState,
-        'aria-labelledby': x,
+        'aria-labelledby': _,
         children: [
-            (0, a.jsxs)(s.ModalHeader, {
+            (0, a.jsxs)(l.xBx, {
                 separator: !1,
-                className: m.headerContainer,
+                className: u.headerContainer,
                 children: [
-                    (0, a.jsx)(s.Heading, {
-                        id: x,
+                    (0, a.jsx)(l.X6q, {
+                        id: _,
                         variant: 'heading-xl/extrabold',
                         color: 'none',
-                        children: u.intl.string(u.t.BIbnR0)
+                        children: m.intl.string(m.t.BIbnR0)
                     }),
-                    (0, a.jsx)(s.Text, {
+                    (0, a.jsx)(l.Text, {
                         variant: 'text-md/normal',
-                        className: m.ratingBody,
-                        children: u.intl.string(u.t.j2kf2t)
+                        className: u.ratingBody,
+                        children: m.intl.string(m.t.j2kf2t)
                     })
                 ]
             }),
-            (0, a.jsx)(s.ModalContent, {
-                className: m.modalBody,
-                children: (0, a.jsx)(i.L, {
-                    ratingConfigs: b,
-                    className: m.ratingsSelector,
+            (0, a.jsx)(l.hzk, {
+                className: u.modalBody,
+                children: (0, a.jsx)(o.L, {
+                    ratingConfigs: x,
+                    className: u.ratingsSelector,
                     selectedRating: t,
                     onChangeRating: function (t) {
+                        var s;
                         d(t),
-                            !(function (t) {
-                                if (null != t)
-                                    (0, r.Z)({ rating: t }),
-                                        e.onClose(),
-                                        (0, s.openModalLazy)(async () => {
-                                            let { default: e } = await n.e('14466').then(n.bind(n, 729328));
-                                            return (t) =>
-                                                (0, a.jsx)(e, {
-                                                    body: u.intl.string(u.t.IuPjpK),
-                                                    ...t
-                                                });
+                            null != (s = t) &&
+                                ((0, r.Z)({ rating: s }),
+                                e.onClose(),
+                                (0, l.ZDy)(async () => {
+                                    let { default: e } = await n.e('14466').then(n.bind(n, 729328));
+                                    return (t) =>
+                                        (0, a.jsx)(e, {
+                                            body: m.intl.string(m.t.IuPjpK),
+                                            ...t
                                         });
-                            })(t);
+                                }));
                     }
                 })
             }),
-            (0, a.jsx)(s.ModalFooter, {
-                className: m.ratingsFooter,
-                children: (0, a.jsx)(s.Text, {
+            (0, a.jsx)(l.mzw, {
+                className: u.ratingsFooter,
+                children: (0, a.jsx)(l.Text, {
                     variant: 'text-md/normal',
-                    children: u.intl.format(u.t.zru1Ky, { safetyCenterUrl: c.EYA.SAFETY_CENTER })
+                    children: m.intl.format(m.t.zru1Ky, { safetyCenterUrl: c.EYA.SAFETY_CENTER })
                 })
             })
         ]

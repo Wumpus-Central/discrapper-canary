@@ -1,9 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => c }), n(47120);
 var i = n(200651),
     r = n(192379),
     l = n(130341),
@@ -15,7 +10,7 @@ function c(e) {
         [m, h] = r.useState(''),
         [g, x] = r.useState(o.Cl),
         p = m.trim(),
-        f = r.useMemo(() => d.filter((e) => (0, l.uo)(e, p)), [d, p]),
+        _ = r.useMemo(() => d.filter((e) => (0, l.uo)(e, p)), [d, p]),
         C = r.useCallback(
             () =>
                 (0, i.jsx)(
@@ -23,7 +18,7 @@ function c(e) {
                     {
                         guild: n,
                         everyoneRole: c,
-                        filteredRoles: f,
+                        filteredRoles: _,
                         setEditRoleId: t,
                         query: m,
                         setQuery: h,
@@ -31,7 +26,7 @@ function c(e) {
                     },
                     'header'
                 ),
-            [n, c, f, t, m]
+            [n, c, _, t, m]
         );
     return (0, i.jsx)(s.Z, {
         setEditRoleId: t,

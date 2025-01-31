@@ -1,10 +1,6 @@
-r.d(n, {
-    s: function () {
-        return a;
-    },
-    z: function () {
-        return i;
-    }
+n.d(t, {
+    s: () => r,
+    z: () => i
 });
 var i = {
         month: /^(1[0-2]|0?\d)/,
@@ -27,7 +23,7 @@ var i = {
         threeDigitsSigned: /^-?\d{1,3}/,
         fourDigitsSigned: /^-?\d{1,4}/
     },
-    a = {
+    r = {
         basicOptionalMinutes: /^([+-])(\d{2})(\d{2})?|Z/,
         basic: /^([+-])(\d{2})(\d{2})|Z/,
         basicOptionalSeconds: /^([+-])(\d{2})(\d{2})((\d{2}))?|Z/,

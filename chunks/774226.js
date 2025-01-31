@@ -1,23 +1,17 @@
-r.d(n, {
-    GK: function () {
-        return u;
-    },
-    Kb: function () {
-        return c;
-    },
-    sq: function () {
-        return l;
-    }
+n.d(t, {
+    GK: () => l,
+    Kb: () => u,
+    sq: () => o
 });
-var i = r(818083),
-    a = r(701488),
-    o = r(987338);
+var i = n(818083),
+    r = n(701488),
+    a = n(987338);
 let s = (0, i.B)({
     kind: 'user',
     id: '2024-11_activities_contextless',
     label: 'Contextless Activities Experiment',
     defaultConfig: { enabled: !1 },
-    commonTriggerPoint: o.$P.CONNECTION_OPEN,
+    commonTriggerPoint: a.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 1,
@@ -26,12 +20,12 @@ let s = (0, i.B)({
         }
     ]
 });
-function l() {
+function o() {
     return s.getCurrentConfig({ location: 'getIsContextlessActivitiesExperimentEnabled' }).enabled;
 }
-function u() {
+function l() {
     return s.useExperiment({ location: 'useIsContextlessActivitiesExperimentEnabled' }).enabled;
 }
-function c(e) {
-    return a.AU.includes(e) && l();
+function u(e) {
+    return r.AU.includes(e) && o();
 }

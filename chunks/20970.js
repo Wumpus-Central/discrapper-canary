@@ -1,53 +1,49 @@
-r.d(n, {
-    j: function () {
-        return _;
-    }
-});
-var i = r(477660);
-let { newline: a, paragraph: o, url: s, link: l, strong: u, u: c, br: d, em: f, image: p, text: h } = i.defaultRules,
-    _ = {
-        newline: a,
-        paragraph: o,
+n.d(t, { j: () => p });
+var i = n(477660);
+let { newline: r, paragraph: a, url: s, link: o, strong: l, u, br: c, em: d, image: f, text: _ } = i.defaultRules,
+    p = {
+        newline: r,
+        paragraph: a,
         url: s,
         link: {
-            ...l,
-            parse(e, n, r) {
-                let i = l.parse(e, n, r);
-                return (i.context = r.context), i;
+            ...o,
+            parse(e, t, n) {
+                let i = o.parse(e, t, n);
+                return (i.context = n.context), i;
             }
         },
-        strong: u,
-        u: c,
-        br: d,
-        em: f,
-        image: p,
+        strong: l,
+        u,
+        br: c,
+        em: d,
+        image: f,
         hook: {
-            order: h.order,
+            order: _.order,
             match: (0, i.inlineRegex)(/^\$\[(.*?)\]\((\w+)\)/),
-            parse(e, n, r) {
-                let { context: i } = r;
+            parse(e, t, n) {
+                let { context: i } = n;
                 return {
                     render: i[e[2]],
-                    content: n(e[1], r)
+                    content: t(e[1], n)
                 };
             },
-            react: (e, n, r) => e.render(n(e.content, r), r.key)
+            react: (e, t, n) => e.render(t(e.content, n), n.key)
         },
         noparse: {
-            order: h.order,
+            order: _.order,
             match: (0, i.inlineRegex)(/^!!(\d+?)!!/),
-            parse(e, n, r) {
-                let { unsafeContext: i } = r,
-                    a = i[e[1]];
+            parse(e, t, n) {
+                let { unsafeContext: i } = n,
+                    r = i[e[1]];
                 return (
-                    'string' != typeof a && (a = null != a ? a.toString() : ''),
+                    'string' != typeof r && (r = null != r ? r.toString() : ''),
                     {
                         type: 'text',
-                        content: a
+                        content: r
                     }
                 );
             },
             react: (e) => e.content
         },
-        text: h
+        text: _
     };

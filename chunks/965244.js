@@ -1,36 +1,32 @@
-e.d(t, {
-    Z: function () {
-        return s;
-    }
-});
+e.d(t, { Z: () => f });
 var i = e(200651);
 e(192379);
-var r = e(442837),
-    u = e(481060),
-    l = e(666657),
-    o = e(533244),
-    a = e(487419),
-    c = e(430824),
-    d = e(981631),
-    f = e(388032);
-function s(n, t) {
-    let s = t === d.IlC.POPOUT,
-        _ = (0, r.e7)([c.Z], () => c.Z.getGuild(n), [n]),
-        I = (0, r.e7)([a.Z], () => (null != _ ? a.Z.getGuildIncident(_.id) : null));
-    return s
+var l = e(442837),
+    r = e(481060),
+    u = e(666657),
+    a = e(533244),
+    d = e(487419),
+    o = e(430824),
+    c = e(981631),
+    s = e(388032);
+function f(n, t) {
+    let f = t === c.IlC.POPOUT,
+        _ = (0, l.e7)([o.Z], () => o.Z.getGuild(n), [n]),
+        I = (0, l.e7)([d.Z], () => (null != _ ? d.Z.getGuildIncident(_.id) : null));
+    return f
         ? null
-        : (0, i.jsx)(u.MenuItem, {
+        : (0, i.jsx)(r.sNh, {
               id: 'nav-security-actions',
-              label: f.intl.string(f.t.UgXhdn),
+              label: s.intl.string(s.t.UgXhdn),
               action: () => {
                   let t = {
-                      source: l.Zu.MESSAGE,
-                      alertType: (0, o.T1)(I)
+                      source: u.Zu.MESSAGE,
+                      alertType: (0, a.T1)(I)
                   };
-                  (0, u.openModalLazy)(async () => {
-                      let { default: r } = await e.e('61536').then(e.bind(e, 664452));
+                  (0, r.ZDy)(async () => {
+                      let { default: l } = await e.e('61536').then(e.bind(e, 664452));
                       return (e) =>
-                          (0, i.jsx)(r, {
+                          (0, i.jsx)(l, {
                               ...e,
                               guildId: n,
                               analyticsData: t

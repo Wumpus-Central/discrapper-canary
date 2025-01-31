@@ -1,10 +1,4 @@
-n.d(t, {
-    SO: function () {
-        return g;
-    }
-}),
-    n(653041),
-    n(512722);
+n.d(t, { SO: () => C }), n(653041), n(512722);
 var l = n(913527),
     a = n.n(l),
     i = n(705512);
@@ -14,9 +8,9 @@ n(220082);
 var o = n(693824),
     s = n(690725);
 n(706454), n(594174);
-var u = n(70956),
-    c = n(709054),
-    d = n(561308);
+var c = n(70956),
+    d = n(709054),
+    u = n(561308);
 n(206295);
 var m = n(737583);
 n(438226);
@@ -28,58 +22,58 @@ let p = (e, t) => ({
         ...(null != e[2] && { AvatarImage3: e[2] }),
         ...(null != t && { ApplicationImage: t })
     }),
-    C = (e, t) => {
+    g = (e, t) => {
         let n = [
                 {
                     iconPath: x.NM,
                     text: t
                 }
             ],
-            l = c.default.extractTimestamp(e.extra.application_id);
+            l = d.default.extractTimestamp(e.extra.application_id);
         if (
             (7 >= a()().diff(a()(l), 'days') &&
                 n.push({
                     iconPath: x.As,
                     text: h.intl.string(h.t.vYuyWV)
                 }),
-            (0, d.Ol)(e) &&
+            (0, u.Ol)(e) &&
                 n.push({
                     iconPath: x.fO,
                     text: h.intl.string(h.t.keY6mZ)
                 }),
-            (0, d.q_)(e))
+            (0, u.q_)(e))
         ) {
-            let t = (0, d.vU)(e);
+            let t = (0, u.vU)(e);
             n.push({
                 iconPath: x.t1,
                 text: h.intl.formatToPlainString(h.t['Klie/P'], { days: t })
             });
         }
-        (0, d.ig)(e) === i.o.GLOBAL &&
+        (0, u.ig)(e) === i.o.GLOBAL &&
             n.push({
                 iconPath: x.Op,
                 text: h.intl.string(h.t.kAlUs7)
             });
-        let r = (0, d.dw)(e);
+        let r = (0, u.dw)(e);
         if (
             (null != r &&
                 n.push({
                     iconPath: x.Z,
-                    text: (0, d.GE)(r)
+                    text: (0, u.GE)(r)
                 }),
-            (0, d.V5)(e))
+            (0, u.V5)(e))
         ) {
-            let { text: t } = (0, d.zo)(e);
+            let { text: t } = (0, u.zo)(e);
             null != t &&
                 n.push({
                     iconPath: x.Md,
                     text: t
                 });
         }
-        if ((0, d.Jd)(e)) {
-            let t = (0, d.yA)(e);
+        if ((0, u.Jd)(e)) {
+            let t = (0, u.yA)(e);
             if (null != t) {
-                let e = h.intl.formatToPlainString(h.t.C0Axoa, { hours: Math.round(t / u.Z.Seconds.HOUR) });
+                let e = h.intl.formatToPlainString(h.t.C0Axoa, { hours: Math.round(t / c.Z.Seconds.HOUR) });
                 return [
                     {
                         iconPath: x.eF,
@@ -92,7 +86,7 @@ let p = (e, t) => ({
     },
     v = (e, t) => {
         let { timestamp: n, colors: l, description: a, entry: i, numAvatars: s } = t,
-            u = l.map((e, t) => ({
+            c = l.map((e, t) => ({
                 color: e,
                 stop: t
             }));
@@ -104,7 +98,7 @@ let p = (e, t) => ({
             4
         ),
             e.drawRoundedGradientRect(
-                u,
+                c,
                 {
                     x: 0,
                     y: x.bg
@@ -142,16 +136,16 @@ let p = (e, t) => ({
                     },
                     !0,
                     2 + 2 / 3
-                );
-        (0, m.l)({
-            canvas: e,
-            avatarSrcs: ['AvatarImage1', 'AvatarImage2', 'AvatarImage3'].slice(0, s),
-            position: {
-                x: x.Iq,
-                y: x.sB
-            },
-            avatarImageSize: x.$S
-        }),
+                ),
+            (0, m.l)({
+                canvas: e,
+                avatarSrcs: ['AvatarImage1', 'AvatarImage2', 'AvatarImage3'].slice(0, s),
+                position: {
+                    x: x.Iq,
+                    y: x.sB
+                },
+                avatarImageSize: x.$S
+            }),
             e.setColor('white'),
             e.setFont({
                 size: 16,
@@ -169,20 +163,20 @@ let p = (e, t) => ({
                 },
                 !0
             );
-        let c = C(i, n);
+        let d = g(i, n);
         (0, m.J)({
             canvas: e,
-            badges: c,
+            badges: d,
             startPosition: x.Iq,
             maxWidth: x.kC
         });
     },
-    g = async (e) => {
-        let { applicationImageSrc: t, entry: n, avatarSrcs: l, description: a, timestamp: i, colors: r, channelId: u } = e,
-            c = n.extra.game_name,
-            d = p(l, t);
+    C = async (e) => {
+        let { applicationImageSrc: t, entry: n, avatarSrcs: l, description: a, timestamp: i, colors: r, channelId: c } = e,
+            d = n.extra.game_name,
+            u = p(l, t);
         return await (0, s.f)({
-            assetsToLoad: d,
+            assetsToLoad: u,
             drawImage: (e) =>
                 v(e, {
                     timestamp: i,
@@ -194,9 +188,9 @@ let p = (e, t) => ({
             exportConfigs: {
                 format: o.kH.CloudUpload,
                 quality: 1,
-                fileName: 'user-reacting-to-'.concat(c, '.png').toLowerCase(),
+                fileName: 'user-reacting-to-'.concat(d, '.png').toLowerCase(),
                 fileType: 'png',
-                channelId: u
+                channelId: c
             }
         });
     };

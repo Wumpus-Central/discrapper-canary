@@ -6,50 +6,38 @@ var n = r(581079),
     s = /^(\d*)(.*)/;
 function c(t, e) {
     if ('' === (t = t.trim())) return !0;
-    var r = e.split(i),
-        n = p(t),
-        o = n.modifier,
-        a = n.rangeComponents;
-    switch (o) {
+    var r,
+        n,
+        o,
+        a,
+        u,
+        s,
+        c,
+        h = e.split(i),
+        d = f(t),
+        g = d.modifier,
+        v = d.rangeComponents;
+    switch (g) {
         case '<':
-            return (function (t, e) {
-                return -1 === v(t, e);
-            })(r, a);
+            return -1 === y(h, v);
         case '<=':
-            return (function (t, e) {
-                var r = v(t, e);
-                return -1 === r || 0 === r;
-            })(r, a);
+            return -1 === (r = y(h, v)) || 0 === r;
         case '>=':
-            return f(r, a);
+            return l(h, v);
         case '>':
-            return (function (t, e) {
-                return 1 === v(t, e);
-            })(r, a);
+            return 1 === y(h, v);
         case '~':
         case '~>':
-            return (function (t, e) {
-                var r = e.slice(),
-                    n = e.slice();
-                n.length > 1 && n.pop();
-                var i = n.length - 1,
-                    o = parseInt(n[i], 10);
-                return h(o) && (n[i] = o + 1 + ''), f(t, r) && -1 === v(t, n);
-            })(r, a);
+            return (n = h), (a = (o = v).slice()), (u = o.slice()).length > 1 && u.pop(), (s = u.length - 1), p((c = parseInt(u[s], 10))) && (u[s] = c + 1 + ''), l(n, a) && -1 === y(n, u);
         default:
-            return (function (t, e) {
-                return 0 === v(t, e);
-            })(r, a);
+            return 0 === y(h, v);
     }
 }
 function l(t, e) {
-    return -1 === v(t, e);
-}
-function f(t, e) {
-    var r = v(t, e);
+    var r = y(t, e);
     return 1 === r || 0 === r;
 }
-function p(t) {
+function f(t) {
     var e = t.split(i),
         r = e[0].match(u);
     return (
@@ -60,27 +48,27 @@ function p(t) {
         }
     );
 }
-function h(t) {
+function p(t) {
     return !isNaN(t) && isFinite(t);
 }
-function d(t) {
-    return !p(t).modifier;
+function h(t) {
+    return !f(t).modifier;
 }
-function g(t, e) {
+function d(t, e) {
     for (var r = t.length; r < e; r++) t[r] = '0';
 }
-function y(t, e) {
+function g(t, e) {
     return (typeof t != typeof e && n(!1), t > e) ? 1 : t < e ? -1 : 0;
 }
-function v(t, e) {
+function y(t, e) {
     for (
         var r = (function (t, e) {
-                (t = t.slice()), g(t, (e = e.slice()).length);
+                d((t = t.slice()), (e = e.slice()).length);
                 for (var r = 0; r < e.length; r++) {
                     var n = e[r].match(/^[x*]$/i);
                     if (n && ((e[r] = t[r] = '0'), '*' === n[0] && r === e.length - 1)) for (var i = r; i < t.length; i++) t[i] = '0';
                 }
-                return g(e, t.length), [t, e];
+                return d(e, t.length), [t, e];
             })(t, e),
             n = r[0],
             i = r[1],
@@ -93,13 +81,13 @@ function v(t, e) {
                 n = e.match(s)[1],
                 i = parseInt(r, 10),
                 o = parseInt(n, 10);
-            return h(i) && h(o) && i !== o ? y(i, o) : y(t, e);
+            return p(i) && p(o) && i !== o ? g(i, o) : g(t, e);
         })(n[o], i[o]);
         if (a) return a;
     }
     return 0;
 }
-var m = {
+var v = {
     contains: function (t, e) {
         var r, i, u;
         return (
@@ -107,16 +95,16 @@ var m = {
             (i = e.trim()),
             (u = r.split(o)).length > 1
                 ? u.some(function (t) {
-                      return m.contains(t, i);
+                      return v.contains(t, i);
                   })
                 : (function (t, e) {
                       var r = t.split(a);
                       if (((r.length > 0 && r.length <= 2) || n(!1), 1 === r.length)) return c(r[0], e);
                       var i = r[0],
                           o = r[1];
-                      return (d(i) && d(o)) || n(!1), c('>=' + i, e) && c('<=' + o, e);
+                      return (h(i) && h(o)) || n(!1), c('>=' + i, e) && c('<=' + o, e);
                   })((r = u[0].trim()), i)
         );
     }
 };
-t.exports = m;
+t.exports = v;

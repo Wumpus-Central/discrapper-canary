@@ -1,9 +1,3 @@
-var i, l;
-n.d(t, {
-    E: function () {
-        return i;
-    }
-}),
-    ((l = i || (i = {})).NEW_MESSAGES = 'new_messages'),
-    (l.OPT_IN_CHANNEL = 'opt_in_channel'),
-    (l.SUMMARIES = 'summaries');
+n.d(t, { E: () => l });
+var i,
+    l = (((i = {}).NEW_MESSAGES = 'new_messages'), (i.OPT_IN_CHANNEL = 'opt_in_channel'), (i.SUMMARIES = 'summaries'), i);

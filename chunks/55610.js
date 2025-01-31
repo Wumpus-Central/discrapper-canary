@@ -1,55 +1,53 @@
-r.d(n, {
-    U: function () {
-        return g;
-    }
+n.d(t, {
+    U: () => m,
+    Z: () => E
 });
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(512722),
-    l = r.n(s),
-    u = r(481060),
-    c = r(63063),
-    d = r(631818),
-    f = r(987033),
-    p = r(53900),
-    h = r(981631),
-    _ = r(388032),
-    m = r(894879);
-function g() {
-    let e = (0, p.Z)(),
-        { enabled: n } = d.Z.useExperiment({ location: '5ebfcf_1' }, { autoTrackExposure: !1 }),
-        { enabled: r } = f.Z.useExperiment({ location: '5ebfcf_2' }, { autoTrackExposure: !1 });
-    return null != e && ('PL' === e ? n : 'TR' === e && r);
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(512722),
+    o = n.n(s),
+    l = n(481060),
+    u = n(63063),
+    c = n(631818),
+    d = n(987033),
+    f = n(53900),
+    _ = n(981631),
+    p = n(388032),
+    h = n(894879);
+function m() {
+    let e = (0, f.Z)(),
+        { enabled: t } = c.Z.useExperiment({ location: '5ebfcf_1' }, { autoTrackExposure: !1 }),
+        { enabled: n } = d.Z.useExperiment({ location: '5ebfcf_2' }, { autoTrackExposure: !1 });
+    return null != e && ('PL' === e ? t : 'TR' === e && n);
 }
-function E(e, n) {
-    return 'PL' === e ? (n ? _.t.hCpziY : _.t.mTFLPD) : 'TR' === e ? (n ? _.t['9rb4W1'] : _.t.SQ4Lyc) : n ? _.t.M4FYRE : _.t.MIY5dn;
+function g(e, t) {
+    return 'PL' === e ? (t ? p.t.hCpziY : p.t.mTFLPD) : 'TR' === e ? (t ? p.t['9rb4W1'] : p.t.SQ4Lyc) : t ? p.t.M4FYRE : p.t.MIY5dn;
 }
-let v = (e) => {
-    let { fromBoostCancelModal: n, className: r } = e,
-        a = (0, p.Z)();
-    return g()
-        ? (l()(null != a, 'Subscription billing country should not be null'),
+let E = (e) => {
+    let { fromBoostCancelModal: t, className: n } = e,
+        r = (0, f.Z)();
+    return m()
+        ? (o()(null != r, 'Subscription billing country should not be null'),
           (0, i.jsxs)('div', {
-              className: o()(m.noticeRoot, r),
+              className: a()(h.noticeRoot, n),
               children: [
                   (0, i.jsx)('div', {
-                      className: m.iconContainer,
-                      children: (0, i.jsx)(u.CircleWarningIcon, {
+                      className: h.iconContainer,
+                      children: (0, i.jsx)(l.P4T, {
                           size: 'custom',
                           width: 20,
                           height: 20,
                           color: 'currentColor',
-                          className: m.infoIcon
+                          className: h.infoIcon
                       })
                   }),
                   (0, i.jsx)('div', {
-                      className: m.text,
-                      children: _.intl.format(E(a, n), { helpCenterLink: c.Z.getArticleURL(h.BhN.LOCALIZED_PRICING) })
+                      className: h.text,
+                      children: p.intl.format(g(r, t), { helpCenterLink: u.Z.getArticleURL(_.BhN.LOCALIZED_PRICING) })
                   })
               ]
           }))
         : null;
 };
-n.Z = v;

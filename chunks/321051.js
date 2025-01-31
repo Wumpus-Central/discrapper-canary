@@ -1,103 +1,98 @@
-r.d(n, {
-    Z: function () {
-        return _;
+n.d(t, { Z: () => _ }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(692547),
+    s = n(481060),
+    o = n(697426),
+    l = n(603074),
+    u = n(388032),
+    c = n(677635);
+let d = [54, 8, 8, 8];
+function f(e) {
+    let { onSelect: t, sound: n } = e,
+        [f, _] = r.useState(!1);
+    function p(e) {
+        _(!1), null == t || t(e);
     }
-});
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(692547),
-    l = r(481060),
-    u = r(697426),
-    c = r(603074),
-    d = r(388032),
-    f = r(677635);
-let p = [54, 8, 8, 8];
-function h(e) {
-    let { onSelect: n, sound: r } = e,
-        [i, h] = o.useState(!1);
-    function _(e) {
-        h(!1), null == n || n(e);
-    }
-    let m = (e) =>
-        (0, a.jsxs)('div', {
-            className: f.customGiftHeader,
+    let h = (e) =>
+        (0, i.jsxs)('div', {
+            className: c.customGiftHeader,
             children: [
-                (0, a.jsxs)('div', {
-                    className: f.__invalid_customGiftHeaderText,
+                (0, i.jsxs)('div', {
+                    className: c.__invalid_customGiftHeaderText,
                     children: [
-                        (0, a.jsx)(l.Text, {
+                        (0, i.jsx)(s.Text, {
                             variant: 'text-md/bold',
-                            children: d.intl.string(d.t.aThJz8)
+                            children: u.intl.string(u.t.aThJz8)
                         }),
-                        (0, a.jsx)(l.Text, {
+                        (0, i.jsx)(s.Text, {
                             variant: 'text-sm/normal',
-                            children: d.intl.string(d.t.stGFAw)
+                            children: u.intl.string(u.t.stGFAw)
                         })
                     ]
                 }),
-                (0, a.jsx)('div', {
-                    className: f.searchAndSound,
+                (0, i.jsx)('div', {
+                    className: c.searchAndSound,
                     children: e
                 })
             ]
         });
-    return (0, a.jsx)(l.Popout, {
-        shouldShow: i,
+    return (0, i.jsx)(s.yRy, {
+        shouldShow: f,
         position: 'bottom',
         align: 'left',
-        onRequestClose: () => h(!1),
+        onRequestClose: () => _(!1),
         renderPopout: (e) => {
-            let { closePopout: n } = e;
-            return (0, a.jsx)(l.Dialog, {
-                children: (0, a.jsx)(c.Z, {
+            let { closePopout: t } = e;
+            return (0, i.jsx)(s.VqE, {
+                children: (0, i.jsx)(l.Z, {
                     suppressPlaySound: !0,
                     shouldShowUpsell: !1,
                     guildId: null,
                     channel: null,
-                    onClose: n,
-                    onSelect: _,
+                    onClose: t,
+                    onSelect: p,
                     analyticsSource: 'gift soundboard',
-                    soundButtonOverlay: u.Pb.ADD,
-                    listPadding: p,
-                    renderHeader: m,
+                    soundButtonOverlay: o.Pb.ADD,
+                    listPadding: d,
+                    renderHeader: h,
                     defaultSoundsOnly: !0
                 })
             });
         },
         children: () =>
-            (0, a.jsx)(l.Clickable, {
-                className: f.sound,
-                onClick: () => h(!0),
+            (0, i.jsx)(s.P3F, {
+                className: c.sound,
+                onClick: () => _(!0),
                 children:
-                    null == r
-                        ? (0, a.jsxs)(a.Fragment, {
+                    null == n
+                        ? (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, a.jsx)(l.SoundboardIcon, {
+                                  (0, i.jsx)(s.KY1, {
                                       size: 'custom',
-                                      color: s.Z.colors.WHITE,
-                                      className: f.soundIcon,
+                                      color: a.Z.colors.WHITE,
+                                      className: c.soundIcon,
                                       width: 14,
                                       height: 14
                                   }),
-                                  (0, a.jsx)(l.Text, {
-                                      className: f.text,
+                                  (0, i.jsx)(s.Text, {
+                                      className: c.text,
                                       variant: 'text-sm/semibold',
-                                      children: d.intl.string(d.t.aThJz8)
+                                      children: u.intl.string(u.t.aThJz8)
                                   })
                               ]
                           })
-                        : (0, a.jsxs)(a.Fragment, {
+                        : (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, a.jsx)(l.Text, {
-                                      className: f.textSelected,
+                                  (0, i.jsx)(s.Text, {
+                                      className: c.textSelected,
                                       variant: 'text-sm/semibold',
-                                      children: r.emojiName
+                                      children: n.emojiName
                                   }),
-                                  (0, a.jsx)(l.Text, {
-                                      className: f.text,
+                                  (0, i.jsx)(s.Text, {
+                                      className: c.text,
                                       variant: 'text-sm/semibold',
-                                      children: r.name
+                                      children: n.name
                                   })
                               ]
                           })
@@ -105,12 +100,12 @@ function h(e) {
     });
 }
 function _(e) {
-    let { sound: n, onSelect: r } = e;
-    return (0, a.jsx)('div', {
-        className: f.container,
-        children: (0, a.jsx)(h, {
-            onSelect: r,
-            sound: n
+    let { sound: t, onSelect: n } = e;
+    return (0, i.jsx)('div', {
+        className: c.container,
+        children: (0, i.jsx)(f, {
+            onSelect: n,
+            sound: t
         })
     });
 }

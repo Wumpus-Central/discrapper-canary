@@ -1,86 +1,88 @@
 let i;
-var a,
-    o = r(442837),
-    s = r(544891),
-    l = r(570140),
-    u = r(333023),
-    c = r(70956),
-    d = r(314897),
-    f = r(300429),
-    p = r(981631);
-function h(e, n, r) {
+n.d(t, { Z: () => D });
+var r,
+    a = n(442837),
+    s = n(544891),
+    o = n(570140),
+    l = n(333023),
+    u = n(70956),
+    c = n(314897),
+    d = n(300429),
+    f = n(981631);
+function _(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let _ = 10 * c.Z.Millis.SECOND,
-    m = 1.5 * c.Z.Millis.SECOND,
-    g = 5,
-    E = {},
-    v = Object.freeze({});
-function y(e) {
-    var n;
-    return null !== (n = E[e]) && void 0 !== n ? n : v;
+let p = 10 * u.Z.Millis.SECOND,
+    h = 1.5 * u.Z.Millis.SECOND,
+    m = 5,
+    g = {},
+    E = Object.freeze({});
+function v(e) {
+    var t;
+    return null !== (t = g[e]) && void 0 !== t ? t : E;
 }
-function b(e) {
-    let { channelId: n } = e,
-        r = d.default.getId();
-    if (null == r || n === u.V) return !1;
-    null != i && i.channelId !== n && (null != i.timeout && clearTimeout(i.timeout), (i = null));
-    let a = Date.now(),
-        o = 0.8 * _;
-    if (null != i && (null != i.timeout || i.prevSend + o > a)) return !1;
-    let c = setTimeout(
+function y(e) {
+    let { channelId: t } = e,
+        n = c.default.getId();
+    if (null == n || t === l.V) return !1;
+    null != i && i.channelId !== t && (null != i.timeout && clearTimeout(i.timeout), (i = null));
+    let r = Date.now(),
+        a = 0.8 * p;
+    if (null != i && (null != i.timeout || i.prevSend + a > r)) return !1;
+    let u = setTimeout(
         () => {
-            if (null == i || i.channelId !== n || r !== d.default.getId() || null == i.timeout) return;
-            if (((i.timeout = null), !(O(n) > g)))
-                s.tn
-                    .post({
-                        url: p.ANM.TYPING(n),
-                        oldFormErrors: !0,
-                        rejectWithError: !0
-                    })
-                    .then((e) => {
-                        if (200 === e.status) {
-                            var r, i;
-                            let a = null !== (r = e.body.message_send_cooldown_ms) && void 0 !== r ? r : 0,
-                                o = null !== (i = e.body.thread_create_cooldown_ms) && void 0 !== i ? i : 0;
-                            a > 0 &&
-                                l.Z.dispatch({
-                                    type: 'SLOWMODE_SET_COOLDOWN',
-                                    channelId: n,
-                                    slowmodeType: f.S.SendMessage,
-                                    cooldownMs: a
-                                }),
-                                o > 0 &&
-                                    l.Z.dispatch({
-                                        type: 'SLOWMODE_SET_COOLDOWN',
-                                        channelId: n,
-                                        slowmodeType: f.S.CreateThread,
-                                        cooldownMs: o
-                                    });
-                        }
-                    });
+            if (null != i && i.channelId === t && n === c.default.getId() && null != i.timeout)
+                (i.timeout = null),
+                    !(R(t) > m) &&
+                        s.tn
+                            .post({
+                                url: f.ANM.TYPING(t),
+                                oldFormErrors: !0,
+                                rejectWithError: !0
+                            })
+                            .then((e) => {
+                                if (200 === e.status) {
+                                    var n, i;
+                                    let r = null !== (n = e.body.message_send_cooldown_ms) && void 0 !== n ? n : 0,
+                                        a = null !== (i = e.body.thread_create_cooldown_ms) && void 0 !== i ? i : 0;
+                                    r > 0 &&
+                                        o.Z.dispatch({
+                                            type: 'SLOWMODE_SET_COOLDOWN',
+                                            channelId: t,
+                                            slowmodeType: d.S.SendMessage,
+                                            cooldownMs: r
+                                        }),
+                                        a > 0 &&
+                                            o.Z.dispatch({
+                                                type: 'SLOWMODE_SET_COOLDOWN',
+                                                channelId: t,
+                                                slowmodeType: d.S.CreateThread,
+                                                cooldownMs: a
+                                            });
+                                }
+                            });
         },
-        null == i || i.prevSend > a - 2 * o ? m : 0
+        null == i || i.prevSend > r - 2 * a ? h : 0
     );
     return (
         (i = {
-            channelId: n,
-            timeout: c,
-            prevSend: a
+            channelId: t,
+            timeout: u,
+            prevSend: r
         }),
-        A({
-            channelId: n,
-            userId: r
+        S({
+            channelId: t,
+            userId: n
         })
     );
 }
@@ -88,80 +90,80 @@ function I(e) {
     if (null == i || i.channelId !== e) return !1;
     null != i.timeout && clearTimeout(i.timeout), (i = null);
 }
-function T(e) {
-    let { channelId: n } = e,
-        r = d.default.getId();
+function b(e) {
+    let { channelId: t } = e,
+        n = c.default.getId();
     return (
-        null != r &&
+        null != n &&
         null != i &&
-        i.channelId === n &&
+        i.channelId === t &&
         null != i.timeout &&
         (clearTimeout(i.timeout),
         (i = null),
-        C({
-            channelId: n,
-            userId: r
+        A({
+            channelId: t,
+            userId: n
         }))
     );
 }
-function S(e, n) {
+function T(e, t) {
     return setTimeout(() => {
-        l.Z.dispatch({
+        o.Z.dispatch({
             type: 'TYPING_STOP',
             channelId: e,
-            userId: n
+            userId: t
         });
-    }, _);
+    }, p);
+}
+function S(e) {
+    let { channelId: t, userId: n } = e,
+        i = { ...v(t) };
+    clearTimeout(i[n]), (i[n] = T(t, n)), (g[t] = i);
 }
 function A(e) {
-    let { channelId: n, userId: r } = e,
-        i = { ...y(n) };
-    clearTimeout(i[r]), (i[r] = S(n, r)), (E[n] = i);
-}
-function C(e) {
-    let { channelId: n, userId: r } = e,
-        i = E[n];
-    if (null == i || null == i[r]) return !1;
-    let a = { ...i };
-    clearTimeout(a[r]), delete a[r], (E[n] = a);
+    let { channelId: t, userId: n } = e,
+        i = g[t];
+    if (null == i || null == i[n]) return !1;
+    let r = { ...i };
+    clearTimeout(r[n]), delete r[n], (g[t] = r);
 }
 function N(e) {
     let {
-        channelId: n,
-        message: { author: r },
+        channelId: t,
+        message: { author: n },
         optimistic: i
     } = e;
     return (
-        i && I(n),
-        null != r &&
-            C({
-                channelId: n,
-                userId: r.id
+        i && I(t),
+        null != n &&
+            A({
+                channelId: t,
+                userId: n.id
             })
     );
 }
-function R() {
-    E = {};
+function C() {
+    g = {};
 }
-function O(e) {
-    let n = y(e);
-    return n === v ? 0 : Object.keys(n).length;
+function R(e) {
+    let t = v(e);
+    return t === E ? 0 : Object.keys(t).length;
 }
-class D extends (a = o.ZP.Store) {
+class O extends (r = a.ZP.Store) {
     getTypingUsers(e) {
-        return y(e);
+        return v(e);
     }
-    isTyping(e, n) {
-        return null != y(e)[n];
+    isTyping(e, t) {
+        return null != v(e)[t];
     }
 }
-h(D, 'displayName', 'TypingStore'),
-    (n.Z = new D(l.Z, {
-        TYPING_START: A,
-        TYPING_STOP: C,
-        TYPING_START_LOCAL: b,
-        TYPING_STOP_LOCAL: T,
-        CONNECTION_OPEN: R,
-        OVERLAY_INITIALIZE: R,
-        MESSAGE_CREATE: N
-    }));
+_(O, 'displayName', 'TypingStore');
+let D = new O(o.Z, {
+    TYPING_START: S,
+    TYPING_STOP: A,
+    TYPING_START_LOCAL: y,
+    TYPING_STOP_LOCAL: b,
+    CONNECTION_OPEN: C,
+    OVERLAY_INITIALIZE: C,
+    MESSAGE_CREATE: N
+});

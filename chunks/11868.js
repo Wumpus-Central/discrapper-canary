@@ -1,13 +1,14 @@
-e.exports = {
-    wrapper: 'wrapper_c5f96a',
-    wrapperSimple: 'wrapperSimple_c5f96a wrapper_c5f96a',
-    svg: 'svg_c5f96a',
-    noContain: 'noContain_c5f96a',
-    lowerBadge: 'lowerBadge_c5f96a',
-    isHighlighted: 'isHighlighted_c5f96a',
-    upperBadge: 'upperBadge_c5f96a',
-    focusStroke: 'focusStroke_c5f96a',
-    focusFill: 'focusFill_c5f96a',
-    highlight: 'highlight_c5f96a',
-    simpleFocused: 'simpleFocused_c5f96a'
+var i = {
+    wrapper: 'wrapper_cc5dd2',
+    wrapperSimple: 'wrapperSimple_cc5dd2 wrapper_cc5dd2',
+    svg: 'svg_cc5dd2',
+    noContain: 'noContain_cc5dd2',
+    lowerBadge: 'lowerBadge_cc5dd2',
+    isHighlighted: 'isHighlighted_cc5dd2',
+    upperBadge: 'upperBadge_cc5dd2',
+    focusStroke: 'focusStroke_cc5dd2',
+    focusFill: 'focusFill_cc5dd2',
+    highlight: 'highlight_cc5dd2',
+    simpleFocused: 'simpleFocused_cc5dd2'
 };
+e.exports = i;

@@ -1,8 +1,4 @@
-n.d(t, {
-    K: function () {
-        return r;
-    }
-});
+n.d(t, { K: () => r });
 var i = n(998502);
 async function r(e) {
     try {

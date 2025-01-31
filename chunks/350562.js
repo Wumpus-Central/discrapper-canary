@@ -1,14 +1,15 @@
 e.exports = {
-    container: 'container_b572de',
-    titleContainer: 'titleContainer_b572de',
-    titleLeft: 'titleLeft_b572de',
-    titleLeftIcon: 'titleLeftIcon_b572de',
-    titleRight: 'titleRight_b572de',
-    titleRightIcon: 'titleRightIcon_b572de',
-    activityContainer: 'activityContainer_b572de',
-    activitySuggestion: 'activitySuggestion_b572de',
-    wumpusRocketOuterContainer: 'wumpusRocketOuterContainer_b572de',
-    wumpusReducedMotion: 'wumpusReducedMotion_b572de',
-    wumpusRocketInnerContainer: 'wumpusRocketInnerContainer_b572de',
-    wumpusRocket: 'wumpusRocket_b572de'
+    container: 'container__9fa5a',
+    titleContainer: 'titleContainer__9fa5a',
+    titleLeft: 'titleLeft__9fa5a',
+    titleLeftIcon: 'titleLeftIcon__9fa5a',
+    titleRight: 'titleRight__9fa5a',
+    titleRightIcon: 'titleRightIcon__9fa5a',
+    activityContainer: 'activityContainer__9fa5a',
+    activitySuggestion: 'activitySuggestion__9fa5a',
+    wumpusRocketOuterContainer: 'wumpusRocketOuterContainer__9fa5a',
+    wumpusReducedMotion: 'wumpusReducedMotion__9fa5a',
+    wumpusRocketInnerContainer: 'wumpusRocketInnerContainer__9fa5a',
+    slide: 'slide__9fa5a',
+    wumpusRocket: 'wumpusRocket__9fa5a'
 };

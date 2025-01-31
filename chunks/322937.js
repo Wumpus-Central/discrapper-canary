@@ -1,19 +1,15 @@
-n.d(t, {
-    $: function () {
-        return a;
-    }
-});
+n.d(t, { $: () => r });
 var i = n(192379),
     l = n(774078),
-    r = n(202107);
-function a(e) {
-    let { communicationDisabledUntil: t, userId: n, guildId: a } = null != e ? e : {},
+    a = n(202107);
+function r(e) {
+    let { communicationDisabledUntil: t, userId: n, guildId: r } = null != e ? e : {},
         s = (0, l.Z)(null != t ? Date.parse(t) : Date.now()),
         o = s.seconds,
         c = (0, i.useRef)(null);
     return (
         (0, i.useEffect)(() => {
-            if (null == e || null == a || null == n) {
+            if (null == e || null == r || null == n) {
                 clearTimeout(c.current);
                 return;
             }
@@ -21,13 +17,13 @@ function a(e) {
                 o <= 0 &&
                     null == c.current &&
                     (c.current = setTimeout(() => {
-                        r.Z.clearGuildMemberTimeout(a, n);
+                        a.Z.clearGuildMemberTimeout(r, n);
                     }, 1000)),
                 () => {
                     null != c.current && (clearTimeout(c.current), (c.current = null));
                 }
             );
-        }, [a, n, o, t, e]),
+        }, [r, n, o, t, e]),
         s
     );
 }

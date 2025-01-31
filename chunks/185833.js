@@ -1,40 +1,24 @@
-r.d(n, {
-    B8: function () {
-        return s;
-    },
-    Jn: function () {
-        return c;
-    },
-    L_: function () {
-        return f;
-    },
-    Ym: function () {
-        return u;
-    },
-    g7: function () {
-        return p;
-    },
-    m4: function () {
-        return l;
-    },
-    sA: function () {
-        return h;
-    },
-    wb: function () {
-        return d;
-    }
+n.d(t, {
+    B8: () => s,
+    Jn: () => u,
+    L_: () => d,
+    Ym: () => l,
+    g7: () => f,
+    m4: () => o,
+    sA: () => _,
+    wb: () => c
 });
 var i = '[-+]?\\d*\\.?\\d+',
-    a = i + '%';
-function o() {
-    for (var e = [], n = 0; n < arguments.length; n++) e[n] = arguments[n];
+    r = i + '%';
+function a() {
+    for (var e = [], t = 0; t < arguments.length; t++) e[t] = arguments[t];
     return '\\(\\s*(' + e.join(')\\s*,\\s*(') + ')\\s*\\)';
 }
-var s = RegExp('rgb' + o(i, i, i)),
-    l = RegExp('rgba' + o(i, i, i, i)),
-    u = RegExp('hsl' + o(i, a, a)),
-    c = RegExp('hsla' + o(i, a, a, i)),
-    d = /^#([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
-    f = /^#([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
-    p = /^#([0-9a-fA-F]{6})$/,
-    h = /^#([0-9a-fA-F]{8})$/;
+var s = RegExp('rgb' + a(i, i, i)),
+    o = RegExp('rgba' + a(i, i, i, i)),
+    l = RegExp('hsl' + a(i, r, r)),
+    u = RegExp('hsla' + a(i, r, r, i)),
+    c = /^#([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
+    d = /^#([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
+    f = /^#([0-9a-fA-F]{6})$/,
+    _ = /^#([0-9a-fA-F]{8})$/;

@@ -1,10 +1,6 @@
 n.d(t, {
-    hi: function () {
-        return a;
-    },
-    iv: function () {
-        return u;
-    }
+    hi: () => a,
+    iv: () => u
 });
 var o = n(624813),
     r = void 0 !== n.g ? n.g : {},

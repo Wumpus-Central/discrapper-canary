@@ -1,24 +1,25 @@
-var i = r(512722),
-    a = r.n(i),
-    o = r(911969),
-    s = r(465343),
-    l = r(706454),
-    u = r(117530),
-    c = r(160062),
-    d = r(456007),
-    f = r(581364),
-    p = r(388032);
-let h = {
-        [o.jw.SUB_COMMAND]: () => ({ success: !1 }),
-        [o.jw.SUB_COMMAND_GROUP]: () => ({ success: !1 }),
-        [o.jw.BOOLEAN]: (e) => {
+n.d(t, { Z: () => E });
+var i = n(512722),
+    r = n.n(i),
+    a = n(911969),
+    s = n(465343),
+    o = n(706454),
+    l = n(117530),
+    u = n(160062),
+    c = n(456007),
+    d = n(581364),
+    f = n(388032);
+let _ = {
+        [a.jw.SUB_COMMAND]: () => ({ success: !1 }),
+        [a.jw.SUB_COMMAND_GROUP]: () => ({ success: !1 }),
+        [a.jw.BOOLEAN]: (e) => {
             if ('text' !== e.type) return { success: !1 };
-            let n = e.text.trim();
-            return { success: null != (0, c.Kl)(n) };
+            let t = e.text.trim();
+            return { success: null != (0, u.Kl)(t) };
         },
-        [o.jw.STRING]: (e, n, r) => {
+        [a.jw.STRING]: (e, t, n) => {
             let i;
-            switch ((a()(n.type === o.jw.STRING, 'option type must match validator type'), e.type)) {
+            switch ((r()(t.type === a.jw.STRING, 'option type must match validator type'), e.type)) {
                 case 'emoji':
                     i = e.surrogate;
                     break;
@@ -28,130 +29,130 @@ let h = {
                 default:
                     return { success: !1 };
             }
-            if (null != n.choices) return { success: null != (0, c.cT)(n.choices, i) };
-            if (n.autocomplete && null != (0, c.Wv)(r, n.name, i)) return { success: !0 };
+            if (null != t.choices) return { success: null != (0, u.cT)(t.choices, i) };
+            if (t.autocomplete && null != (0, u.Wv)(n, t.name, i)) return { success: !0 };
             let s = i;
-            if (void 0 !== n.minLength || void 0 !== n.maxLength) {
+            if (void 0 !== t.minLength || void 0 !== t.maxLength) {
                 if (null == s) return { success: !1 };
-                let e = g(s, n, {
-                    exactRangeErrorMessage: p.t['e+9/SU'],
-                    rangeErrorMessage: p.t.IE1sTk,
-                    minErrorMessage: p.t.rXAFQE,
-                    maxErrorMessage: p.t.ycEPx8
+                let e = m(s, t, {
+                    exactRangeErrorMessage: f.t['e+9/SU'],
+                    rangeErrorMessage: f.t.IE1sTk,
+                    minErrorMessage: f.t.rXAFQE,
+                    maxErrorMessage: f.t.ycEPx8
                 });
                 if (!e.success) return e;
             }
             return { success: !0 };
         },
-        [o.jw.INTEGER]: (e, n, r) => {
-            a()(n.type === o.jw.INTEGER, 'option type must match validator type');
+        [a.jw.INTEGER]: (e, t, n) => {
+            r()(t.type === a.jw.INTEGER, 'option type must match validator type');
             let i = 'text' === e.type ? e.text.trim() : null;
             if (null == i || 0 === i.length) return { success: !1 };
-            if (null != n.choices) return { success: null != (0, c.l1)(n.choices, i) };
-            if (n.autocomplete && null != (0, c.xg)(r, n.name, i)) return { success: !0 };
-            let s = Number(d.AS(l.default.locale, i));
-            return null == s || isNaN(s) || !Number.isInteger(s) || !Number.isSafeInteger(s) ? { success: !1 } : m(s, n, p.t['8Y5zsr'], p.t.CyRLmJ, p.t['VD3Q+f']);
+            if (null != t.choices) return { success: null != (0, u.l1)(t.choices, i) };
+            if (t.autocomplete && null != (0, u.xg)(n, t.name, i)) return { success: !0 };
+            let s = Number(c.AS(o.default.locale, i));
+            return null == s || isNaN(s) || !Number.isInteger(s) || !Number.isSafeInteger(s) ? { success: !1 } : h(s, t, f.t['8Y5zsr'], f.t.CyRLmJ, f.t['VD3Q+f']);
         },
-        [o.jw.NUMBER]: (e, n, r) => {
-            a()(n.type === o.jw.NUMBER, 'option type must match validator type');
+        [a.jw.NUMBER]: (e, t, n) => {
+            r()(t.type === a.jw.NUMBER, 'option type must match validator type');
             let i = 'text' === e.type ? e.text.trim() : null;
             if (null == i || 0 === i.length) return { success: !1 };
-            if (null != n.choices) return { success: null != (0, c.l1)(n.choices, i) };
-            if (n.autocomplete && null != (0, c.xg)(r, n.name, i)) return { success: !0 };
-            let s = Number(d.AS(l.default.locale, i));
-            return isNaN(s) || s > Number.MAX_SAFE_INTEGER || s < Number.MIN_SAFE_INTEGER ? { success: !1 } : m(s, n, p.t['8Y5zsr'], p.t.CyRLmJ, p.t['VD3Q+f']);
+            if (null != t.choices) return { success: null != (0, u.l1)(t.choices, i) };
+            if (t.autocomplete && null != (0, u.xg)(n, t.name, i)) return { success: !0 };
+            let s = Number(c.AS(o.default.locale, i));
+            return isNaN(s) || s > Number.MAX_SAFE_INTEGER || s < Number.MIN_SAFE_INTEGER ? { success: !1 } : h(s, t, f.t['8Y5zsr'], f.t.CyRLmJ, f.t['VD3Q+f']);
         },
-        [o.jw.USER]: (e, n, r, i) => {
+        [a.jw.USER]: (e, t, n, i) => {
             if ('text' !== e.type) return { success: 'userMention' === e.type };
             {
-                if ((0, f.BH)(e.text)) return { success: !0 };
-                let n = (0, s.K)(e.text, i, r, { allowRoles: !1 });
-                return { success: (null == n ? void 0 : n.type) === 'userMention' };
+                if ((0, d.BH)(e.text)) return { success: !0 };
+                let t = (0, s.K)(e.text, i, n, { allowRoles: !1 });
+                return { success: (null == t ? void 0 : t.type) === 'userMention' };
             }
         },
-        [o.jw.CHANNEL]: (e, n, r, i) => {
+        [a.jw.CHANNEL]: (e, t, n, i) => {
             if ('text' !== e.type) return { success: 'channelMention' === e.type };
             {
-                if ((0, f.BH)(e.text)) return { success: !0 };
-                let n = (0, s.K)(e.text, i, r);
-                return { success: (null == n ? void 0 : n.type) === 'channelMention' };
+                if ((0, d.BH)(e.text)) return { success: !0 };
+                let t = (0, s.K)(e.text, i, n);
+                return { success: (null == t ? void 0 : t.type) === 'channelMention' };
             }
         },
-        [o.jw.ROLE]: (e, n, r, i) => {
-            if ('text' !== e.type) return { success: _(e) };
+        [a.jw.ROLE]: (e, t, n, i) => {
+            if ('text' !== e.type) return { success: p(e) };
             {
-                if ((0, f.BH)(e.text)) return { success: !0 };
-                let n = (0, s.K)(e.text, i, r, { allowUsers: !1 });
-                return { success: (null == n ? void 0 : n.type) === 'roleMention' };
+                if ((0, d.BH)(e.text)) return { success: !0 };
+                let t = (0, s.K)(e.text, i, n, { allowUsers: !1 });
+                return { success: (null == t ? void 0 : t.type) === 'roleMention' };
             }
         },
-        [o.jw.MENTIONABLE]: (e, n, r, i) => {
-            if ('text' !== e.type) return { success: 'userMention' === e.type || _(e) };
+        [a.jw.MENTIONABLE]: (e, t, n, i) => {
+            if ('text' !== e.type) return { success: 'userMention' === e.type || p(e) };
             {
-                if ((0, f.BH)(e.text)) return { success: !0 };
-                let n = (0, s.K)(e.text, i, r);
-                return { success: null != n && ('userMention' === n.type || _(n)) };
+                if ((0, d.BH)(e.text)) return { success: !0 };
+                let t = (0, s.K)(e.text, i, n);
+                return { success: null != t && ('userMention' === t.type || p(t)) };
             }
         },
-        [o.jw.ATTACHMENT]: (e, n, r, i, a) => {
+        [a.jw.ATTACHMENT]: (e, t, n, i, r) => {
             if ('text' !== e.type) return { success: !1 };
-            let o = u.Z.getUpload(r, n.name, (0, f.D7)(a));
-            return { success: null != o && o.filename === e.text };
+            let a = l.Z.getUpload(n, t.name, (0, d.D7)(r));
+            return { success: null != a && a.filename === e.text };
         }
     },
-    _ = (e) => 'roleMention' === e.type || ('textMention' === e.type && '@everyone' === e.text);
-function m(e, n, r, i, a) {
-    if ((null != n.minValue && e < n.minValue) || (null != n.maxValue && e > n.maxValue)) {
-        if (null != n.maxValue && null != n.minValue)
+    p = (e) => 'roleMention' === e.type || ('textMention' === e.type && '@everyone' === e.text);
+function h(e, t, n, i, r) {
+    if ((null != t.minValue && e < t.minValue) || (null != t.maxValue && e > t.maxValue)) {
+        if (null != t.maxValue && null != t.minValue)
             return {
                 success: !1,
-                error: p.intl.formatToPlainString(r, {
-                    minimum: E(n.minValue),
-                    maximum: E(n.maxValue)
+                error: f.intl.formatToPlainString(n, {
+                    minimum: g(t.minValue),
+                    maximum: g(t.maxValue)
                 })
             };
-        if (null != n.minValue)
+        if (null != t.minValue)
             return {
                 success: !1,
-                error: p.intl.formatToPlainString(i, { minimum: E(n.minValue) })
+                error: f.intl.formatToPlainString(i, { minimum: g(t.minValue) })
             };
-        else if (null != n.maxValue)
+        if (null != t.maxValue)
             return {
                 success: !1,
-                error: p.intl.formatToPlainString(a, { maximum: E(n.maxValue) })
+                error: f.intl.formatToPlainString(r, { maximum: g(t.maxValue) })
             };
     }
     return { success: !0 };
 }
-function g(e, n, r) {
-    if ((void 0 !== n.minLength && e.length < n.minLength) || (void 0 !== n.maxLength && e.length > n.maxLength)) {
-        if (void 0 !== n.maxLength && void 0 !== n.minLength && n.minLength === n.maxLength)
+function m(e, t, n) {
+    if ((void 0 !== t.minLength && e.length < t.minLength) || (void 0 !== t.maxLength && e.length > t.maxLength)) {
+        if (void 0 !== t.maxLength && void 0 !== t.minLength && t.minLength === t.maxLength)
             return {
                 success: !1,
-                error: p.intl.formatToPlainString(r.exactRangeErrorMessage, { value: E(n.minLength) })
+                error: f.intl.formatToPlainString(n.exactRangeErrorMessage, { value: g(t.minLength) })
             };
-        if (void 0 !== n.maxLength && void 0 !== n.minLength)
+        if (void 0 !== t.maxLength && void 0 !== t.minLength)
             return {
                 success: !1,
-                error: p.intl.formatToPlainString(r.rangeErrorMessage, {
-                    minimum: E(n.minLength),
-                    maximum: E(n.maxLength)
+                error: f.intl.formatToPlainString(n.rangeErrorMessage, {
+                    minimum: g(t.minLength),
+                    maximum: g(t.maxLength)
                 })
             };
-        else if (void 0 !== n.minLength)
+        if (void 0 !== t.minLength)
             return {
                 success: !1,
-                error: p.intl.formatToPlainString(r.minErrorMessage, { minimum: E(n.minLength) })
+                error: f.intl.formatToPlainString(n.minErrorMessage, { minimum: g(t.minLength) })
             };
-        else if (void 0 !== n.maxLength)
+        else if (void 0 !== t.maxLength)
             return {
                 success: !1,
-                error: p.intl.formatToPlainString(r.maxErrorMessage, { maximum: E(n.maxLength) })
+                error: f.intl.formatToPlainString(n.maxErrorMessage, { maximum: g(t.maxLength) })
             };
     }
     return { success: !0 };
 }
-function E(e) {
-    return e.toLocaleString(p.intl.currentLocale, { useGrouping: !1 });
+function g(e) {
+    return e.toLocaleString(f.intl.currentLocale, { useGrouping: !1 });
 }
-n.Z = h;
+let E = _;

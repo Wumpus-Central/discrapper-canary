@@ -1,98 +1,93 @@
-r.r(n),
-    r.d(n, {
-        ConfirmModal: function () {
-            return p;
-        },
-        DeclarativeConfirmModal: function () {
-            return h;
-        }
-    });
-var i = r(200651),
-    a = r(192379),
-    o = r(120356),
-    s = r.n(o),
-    l = r(693789),
-    u = r(481060),
-    c = r(540059),
-    d = r(709692),
-    f = r(140777);
-function p(e) {
-    let n,
-        r,
-        { header: o, children: p, confirmText: h, cancelText: _, className: m, onConfirm: g, onCancel: E, onClose: v, onCloseCallback: y, bodyClassName: b, transitionState: I, loading: T = !1, confirmButtonColor: S = l.zx.Colors.RED, focusCancel: A = !1, impression: C } = e,
-        N = a.useRef(null),
-        R = (0, c.Q3)('ConfirmModal');
+n.d(t, {
+    ConfirmModal: () => f,
+    s: () => _
+});
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(693789),
+    l = n(481060),
+    u = n(540059),
+    c = n(709692),
+    d = n(140777);
+function f(e) {
+    let t,
+        n,
+        { header: a, children: f, confirmText: _, cancelText: p, className: h, onConfirm: m, onCancel: g, onClose: E, onCloseCallback: v, bodyClassName: y, transitionState: I, loading: b = !1, confirmButtonColor: T = o.zx.Colors.RED, focusCancel: S = !1, impression: A } = e,
+        N = r.useRef(null),
+        C = (0, u.Q3)('ConfirmModal');
     return (
-        a.useEffect(() => {
-            !A &&
+        r.useEffect(() => {
+            S ||
                 setTimeout(() => {
                     var e;
                     return null === (e = N.current) || void 0 === e ? void 0 : e.focus();
                 }, 0);
-        }, [A]),
-        a.useLayoutEffect(() => () => (null == y ? void 0 : y())),
-        null != _ &&
-            (n = (0, i.jsx)(l.zx, {
+        }, [S]),
+        r.useLayoutEffect(() => () => (null == v ? void 0 : v())),
+        null != p &&
+            (t = (0, i.jsx)(o.zx, {
                 type: 'button',
-                look: R ? l.zx.Looks.FILLED : l.zx.Looks.LINK,
-                color: l.zx.Colors.PRIMARY,
-                className: f.cancelButton,
-                size: l.zx.Sizes.MEDIUM,
-                disabled: T,
+                look: C ? o.zx.Looks.FILLED : o.zx.Looks.LINK,
+                color: o.zx.Colors.PRIMARY,
+                className: d.cancelButton,
+                size: o.zx.Sizes.MEDIUM,
+                disabled: b,
                 onClick: () => {
-                    null == E || E(), v();
+                    null == g || g(), E();
                 },
-                autoFocus: A,
-                children: _
+                autoFocus: S,
+                children: p
             })),
-        null != h &&
-            (r = (0, i.jsx)(l.zx, {
+        null != _ &&
+            (n = (0, i.jsx)(o.zx, {
                 buttonRef: N,
                 type: 'submit',
-                size: l.zx.Sizes.MEDIUM,
-                color: S,
-                submitting: T,
+                size: o.zx.Sizes.MEDIUM,
+                color: T,
+                submitting: b,
                 onClick: async () => {
                     try {
-                        await (null == g ? void 0 : g()), v();
+                        await (null == m ? void 0 : m()), E();
                     } catch (e) {
                         throw e;
                     }
                 },
-                autoFocus: !A,
-                children: h
+                autoFocus: !S,
+                children: _
             })),
-        (0, i.jsxs)(d.Y0, {
-            className: m,
+        (0, i.jsxs)(c.Y0, {
+            className: h,
             transitionState: I,
-            impression: C,
+            impression: A,
             children: [
-                null != o
-                    ? (0, i.jsx)(d.xB, {
+                null != a
+                    ? (0, i.jsx)(c.xB, {
                           separator: !1,
-                          children: (0, i.jsx)(u.Heading, {
+                          children: (0, i.jsx)(l.X6q, {
                               variant: 'heading-lg/semibold',
-                              children: o
+                              children: a
                           })
                       })
                     : null,
-                (0, i.jsx)(d.hz, {
-                    className: s()(f.content, b),
-                    children: p
+                (0, i.jsx)(c.hz, {
+                    className: s()(d.content, y),
+                    children: f
                 }),
-                (0, i.jsxs)(d.mz, {
-                    children: [r, n]
+                (0, i.jsxs)(c.mz, {
+                    children: [n, t]
                 })
             ]
         })
     );
 }
-function h(e) {
-    return (0, i.jsx)(d.u_, {
+function _(e) {
+    return (0, i.jsx)(c.u_, {
         onCloseRequest: e.dismissable ? e.onCancel : null,
-        renderModal: (n) =>
-            (0, i.jsx)(p, {
-                ...n,
+        renderModal: (t) =>
+            (0, i.jsx)(f, {
+                ...t,
                 ...e
             })
     });

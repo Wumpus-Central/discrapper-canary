@@ -1,9 +1,4 @@
-var i;
-r.d(n, {
-    W: function () {
-        return i;
-    }
-}),
-    !(function (e) {
-        (e.GAMEPLAY = 'GAMEPLAY'), (e.VIDEO = 'VIDEO');
-    })(i || (i = {}));
+n.d(t, { W: () => i });
+var i = (function (e) {
+    return (e.GAMEPLAY = 'GAMEPLAY'), (e.VIDEO = 'VIDEO'), e;
+})({});

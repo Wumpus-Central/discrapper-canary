@@ -1,17 +1,7 @@
-r.d(t, {
-    S: function () {
-        return u;
-    }
-});
+r.d(t, { S: () => c });
 var n = r(573654),
     o = r(670543);
-function i(e, t) {
-    for (var r = 0; r < t.length; r++) {
-        var n = t[r];
-        (n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n);
-    }
-}
-function a(e, t, r) {
+function i(e, t, r) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,24 +14,23 @@ function a(e, t, r) {
         e
     );
 }
-var s = ['canDrop', 'hover', 'drop'],
-    c = (function () {
-        var e, t, r;
-        function n(e, t, r) {
+var a = ['canDrop', 'hover', 'drop'],
+    s = (function () {
+        var e;
+        function t(e, r, n) {
             !(function (e, t) {
                 if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-            })(this, n),
-                a(this, 'props', null),
-                a(this, 'spec', void 0),
-                a(this, 'monitor', void 0),
-                a(this, 'ref', void 0),
+            })(this, t),
+                i(this, 'props', null),
+                i(this, 'spec', void 0),
+                i(this, 'monitor', void 0),
+                i(this, 'ref', void 0),
                 (this.spec = e),
-                (this.monitor = t),
-                (this.ref = r);
+                (this.monitor = r),
+                (this.ref = n);
         }
         return (
-            (e = n),
-            (t = [
+            (e = [
                 {
                     key: 'receiveProps',
                     value: function (e) {
@@ -63,30 +52,32 @@ var s = ['canDrop', 'hover', 'drop'],
                 {
                     key: 'hover',
                     value: function () {
-                        if (!!this.spec.hover && !!this.props) this.spec.hover(this.props, this.monitor, (0, o.Al)(this.ref));
+                        this.spec.hover && this.props && this.spec.hover(this.props, this.monitor, (0, o.Al)(this.ref));
                     }
                 },
                 {
                     key: 'drop',
                     value: function () {
-                        if (!!this.spec.drop) {
-                            var e = this.spec.drop(this.props, this.monitor, this.ref.current);
-                            return e;
-                        }
+                        if (this.spec.drop) return this.spec.drop(this.props, this.monitor, this.ref.current);
                     }
                 }
             ]),
-            i(e.prototype, t),
-            n
+            (function (e, t) {
+                for (var r = 0; r < t.length; r++) {
+                    var n = t[r];
+                    (n.enumerable = n.enumerable || !1), (n.configurable = !0), 'value' in n && (n.writable = !0), Object.defineProperty(e, n.key, n);
+                }
+            })(t.prototype, e),
+            t
         );
     })();
-function u(e) {
+function c(e) {
     return (
         Object.keys(e).forEach(function (t) {
-            (0, n.k)(s.indexOf(t) > -1, 'Expected the drop target specification to only have some of the following keys: %s. Instead received a specification with an unexpected "%s" key. Read more: http://react-dnd.github.io/react-dnd/docs/api/drop-target', s.join(', '), t), (0, n.k)('function' == typeof e[t], 'Expected %s in the drop target specification to be a function. Instead received a specification with %s: %s. Read more: http://react-dnd.github.io/react-dnd/docs/api/drop-target', t, t, e[t]);
+            (0, n.k)(a.indexOf(t) > -1, 'Expected the drop target specification to only have some of the following keys: %s. Instead received a specification with an unexpected "%s" key. Read more: http://react-dnd.github.io/react-dnd/docs/api/drop-target', a.join(', '), t), (0, n.k)('function' == typeof e[t], 'Expected %s in the drop target specification to be a function. Instead received a specification with %s: %s. Read more: http://react-dnd.github.io/react-dnd/docs/api/drop-target', t, t, e[t]);
         }),
         function (t, r) {
-            return new c(e, t, r);
+            return new s(e, t, r);
         }
     );
 }

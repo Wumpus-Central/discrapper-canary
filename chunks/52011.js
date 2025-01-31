@@ -1,8 +1,4 @@
-t.d(e, {
-    F: function () {
-        return i;
-    }
-});
+t.d(n, { F: () => i });
 let i = (0, t(818083).B)({
     kind: 'guild',
     id: '2023-09_gaming_stats_prompt_guild',

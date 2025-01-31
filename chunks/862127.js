@@ -1,14 +1,10 @@
-function i(e, n) {
+function i(e, t) {
     return e
-        .replace(RegExp('(^|\\s)' + n + '(?:\\s|$)', 'g'), '$1')
+        .replace(RegExp('(^|\\s)' + t + '(?:\\s|$)', 'g'), '$1')
         .replace(/\s+/g, ' ')
         .replace(/^\s*|\s*$/g, '');
 }
-function a(e, n) {
-    e.classList ? e.classList.remove(n) : 'string' == typeof e.className ? (e.className = i(e.className, n)) : e.setAttribute('class', i((e.className && e.className.baseVal) || '', n));
+function r(e, t) {
+    e.classList ? e.classList.remove(t) : 'string' == typeof e.className ? (e.className = i(e.className, t)) : e.setAttribute('class', i((e.className && e.className.baseVal) || '', t));
 }
-r.d(n, {
-    Z: function () {
-        return a;
-    }
-});
+n.d(t, { Z: () => r });

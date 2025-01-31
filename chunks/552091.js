@@ -1,18 +1,20 @@
-e.exports = {
-    creatorBenefitsContainer: 'creatorBenefitsContainer_da92c3',
-    earningBenefitCard: 'earningBenefitCard_da92c3 creatorBenefitCard_da92c3 ' + n('753937').card,
-    followerBenefitCard: 'followerBenefitCard_da92c3 creatorBenefitCard_da92c3 ' + n('753937').card,
-    revenueShareBenefitCard: 'revenueShareBenefitCard_da92c3 creatorBenefitCard_da92c3 ' + n('753937').card,
-    earningsPreviewContainer: 'earningsPreviewContainer_da92c3',
-    avatarGridContainer: 'avatarGridContainer_da92c3',
-    avatarCard: 'avatarCard_da92c3',
-    roundAvatar: 'roundAvatar_da92c3',
-    verticalConnector: 'verticalConnector_da92c3',
-    horizontalConnector: 'horizontalConnector_da92c3',
-    followerBenefitText: 'followerBenefitText_da92c3',
-    roleSubscriptionSocial: 'roleSubscriptionSocial_da92c3',
-    roleSubscriptionLanyardIllo: 'roleSubscriptionLanyardIllo_da92c3',
-    revenueSharePercentageDark: 'revenueSharePercentageDark_da92c3',
-    revenueSharePercentageLight: 'revenueSharePercentageLight_da92c3',
-    roleSubscriptionEarningIllo: 'roleSubscriptionEarningIllo_da92c3'
+var i = {
+    creatorBenefitsContainer: 'creatorBenefitsContainer__02e4c',
+    creatorBenefitCard: 'creatorBenefitCard__02e4c ' + n(753937).card,
+    earningBenefitCard: 'earningBenefitCard__02e4c creatorBenefitCard__02e4c ' + n(753937).card,
+    followerBenefitCard: 'followerBenefitCard__02e4c creatorBenefitCard__02e4c ' + n(753937).card,
+    revenueShareBenefitCard: 'revenueShareBenefitCard__02e4c creatorBenefitCard__02e4c ' + n(753937).card,
+    earningsPreviewContainer: 'earningsPreviewContainer__02e4c',
+    avatarGridContainer: 'avatarGridContainer__02e4c',
+    avatarCard: 'avatarCard__02e4c',
+    roundAvatar: 'roundAvatar__02e4c',
+    verticalConnector: 'verticalConnector__02e4c',
+    horizontalConnector: 'horizontalConnector__02e4c',
+    followerBenefitText: 'followerBenefitText__02e4c',
+    roleSubscriptionSocial: 'roleSubscriptionSocial__02e4c',
+    roleSubscriptionLanyardIllo: 'roleSubscriptionLanyardIllo__02e4c',
+    revenueSharePercentageDark: 'revenueSharePercentageDark__02e4c',
+    revenueSharePercentageLight: 'revenueSharePercentageLight__02e4c',
+    roleSubscriptionEarningIllo: 'roleSubscriptionEarningIllo__02e4c'
 };
+e.exports = i;

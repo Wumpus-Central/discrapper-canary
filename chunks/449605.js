@@ -1,41 +1,37 @@
-r.d(n, {
-    Z: function () {
-        return f;
-    }
-});
-var i = r(192379),
-    a = r(442837),
-    o = r(872810),
-    s = r(543882),
-    l = r(592125),
-    u = r(496675),
-    c = r(944486),
-    d = r(231338);
-function f(e, n, r) {
-    let f = null == n || null == r,
-        p = (0, a.e7)([l.Z], () => l.Z.getChannel(n)),
-        h = (0, a.e7)([u.Z], () => null != p && u.Z.canBasicChannel(d.S7.CONNECT, p)),
-        _ = (0, a.e7)([c.Z], () => c.Z.getVoiceChannelId() === n),
+n.d(t, { Z: () => d });
+var i = n(192379),
+    r = n(442837),
+    a = n(872810),
+    s = n(543882),
+    o = n(592125),
+    l = n(496675),
+    u = n(944486),
+    c = n(231338);
+function d(e, t, n) {
+    let d = null == t || null == n,
+        f = (0, r.e7)([o.Z], () => o.Z.getChannel(t)),
+        _ = (0, r.e7)([l.Z], () => null != f && l.Z.canBasicChannel(c.S7.CONNECT, f)),
+        p = (0, r.e7)([u.Z], () => u.Z.getVoiceChannelId() === t),
         {
-            shouldFetchPreview: m,
-            previewUrl: g,
-            isLoading: E
-        } = (0, a.cj)([s.Z], () => ({
-            shouldFetchPreview: !f && s.Z.shouldFetchPreview(e, n, r),
-            previewUrl: f ? null : s.Z.getPreviewURL(e, n, r),
-            isLoading: !f && s.Z.getIsPreviewLoading(e, n, r)
+            shouldFetchPreview: h,
+            previewUrl: m,
+            isLoading: g
+        } = (0, r.cj)([s.Z], () => ({
+            shouldFetchPreview: !d && s.Z.shouldFetchPreview(e, t, n),
+            previewUrl: d ? null : s.Z.getPreviewURL(e, t, n),
+            isLoading: !d && s.Z.getIsPreviewLoading(e, t, n)
         })),
-        v = h || _;
+        E = _ || p;
     return (i.useEffect(() => {
-        m && !f && v && (0, o.n9)(e, n, r);
-    }, [m, n, e, r, f, v]),
-    f || !v)
+        h && !d && E && (0, a.n9)(e, t, n);
+    }, [h, t, e, n, d, E]),
+    d || !E)
         ? {
               previewUrl: void 0,
               isLoading: !1
           }
         : {
-              previewUrl: g,
-              isLoading: E
+              previewUrl: m,
+              isLoading: g
           };
 }

@@ -1,5 +1,6 @@
-e.exports = {
-    customGiftBox: 'customGiftBox_c4afc7',
-    customGiftBoxHighlighted: 'customGiftBoxHighlighted_c4afc7',
-    button: 'button_c4afc7'
+var i = {
+    customGiftBox: 'customGiftBox_d50aac',
+    customGiftBoxHighlighted: 'customGiftBoxHighlighted_d50aac',
+    button: 'button_d50aac'
 };
+e.exports = i;

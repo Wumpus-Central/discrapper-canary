@@ -1,100 +1,77 @@
-r.d(n, {
-    A_: function () {
-        return b;
-    },
-    Ok: function () {
-        return A;
-    },
-    U4: function () {
-        return I;
-    },
-    Ye: function () {
-        return g.Z;
-    },
-    ZJ: function () {
-        return S;
-    },
-    q: function () {
-        return T;
-    }
-});
-var i = r(789020);
-var a = r(913527),
-    o = r.n(a),
-    s = r(442837),
-    l = r(367907),
-    u = r(731429),
-    c = r(306680),
-    d = r(9156),
-    f = r(626135),
-    p = r(630388),
-    h = r(621600),
-    _ = r(709054),
-    m = r(569471),
-    g = r(814391),
-    E = r(124368),
-    v = r(981631);
-r(388032);
-let y = () => ({
-    minutes: t['1Rcf/v'],
-    hours: t['vgnx5+'],
-    days: t['fNvE5+'],
-    month: intl.string(t.P7Gyg4)
-});
-function b() {
-    (0, l.yw)(v.rMx.THREAD_BROWSER_TAB_CHANGED);
+n.d(t, {
+    A_: () => E,
+    Ok: () => b,
+    U4: () => v,
+    Ye: () => h.Z,
+    ZJ: () => I,
+    q: () => y
+}),
+    n(789020);
+var i = n(913527),
+    r = n.n(i),
+    a = n(442837),
+    s = n(367907),
+    o = n(731429),
+    l = n(306680),
+    u = n(9156),
+    c = n(626135),
+    d = n(630388),
+    f = n(621600),
+    _ = n(709054),
+    p = n(569471),
+    h = n(814391),
+    m = n(124368),
+    g = n(981631);
+n(388032);
+function E() {
+    (0, s.yw)(g.rMx.THREAD_BROWSER_TAB_CHANGED);
 }
-function I() {
+function v() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 'Modal';
-    (0, l.yw)(v.rMx.OPEN_MODAL, {
+    (0, s.yw)(g.rMx.OPEN_MODAL, {
         type: 'Thread Browser',
         location_section: e
     });
 }
-function T() {
-    f.default.track(v.rMx.OPEN_POPOUT, { type: 'Active Threads Popout' });
+function y() {
+    c.default.track(g.rMx.OPEN_POPOUT, { type: 'Active Threads Popout' });
 }
-function S(e, n) {
-    var r, i;
-    let a = (0, u.K)(e);
-    if (null == a) return;
-    let o = e.getGuildId(),
+function I(e, t) {
+    var n, i;
+    let r = (0, o.K)(e);
+    if (null == r) return;
+    let a = e.getGuildId(),
         s = e.parent_id,
-        l = (0, h.I)(o, s),
-        c = (e) => {
-            if ((0, p.yE)(e, E.iN.ALL_MESSAGES)) return h.$R[v.bL.ALL_MESSAGES];
-            if ((0, p.yE)(e, E.iN.ONLY_MENTIONS)) return h.$R[v.bL.ONLY_MENTIONS];
-            if ((0, p.yE)(e, E.iN.NO_MESSAGES)) return h.$R[v.bL.NO_MESSAGES];
-            return h.$R[v.bL.NULL];
-        },
-        _ = null !== (r = m.Z.flags(e.id)) && void 0 !== r ? r : 0,
-        g = c(_),
-        y = m.Z.isMuted(e.id),
-        b = (0, h.sK)(m.Z.getMuteConfig(e.id)),
-        { can_send_message: I, ...T } = a,
-        S = {
-            ...T,
+        l = (0, f.I)(a, s),
+        _ = (e) => ((0, d.yE)(e, m.iN.ALL_MESSAGES) ? f.$R[g.bL.ALL_MESSAGES] : (0, d.yE)(e, m.iN.ONLY_MENTIONS) ? f.$R[g.bL.ONLY_MENTIONS] : (0, d.yE)(e, m.iN.NO_MESSAGES) ? f.$R[g.bL.NO_MESSAGES] : f.$R[g.bL.NULL]),
+        h = null !== (n = p.Z.flags(e.id)) && void 0 !== n ? n : 0,
+        E = _(h),
+        v = p.Z.isMuted(e.id),
+        y = (0, f.sK)(p.Z.getMuteConfig(e.id)),
+        { can_send_message: I, ...b } = r,
+        T = {
+            ...b,
             channel_id: e.id,
-            guild_id: o,
+            guild_id: a,
             parent_id: s,
             channel_type: e.type,
-            has_interacted_with_thread: (_ & E.iN.HAS_INTERACTED) != 0,
-            parent_is_muted: d.ZP.isGuildOrCategoryOrChannelMuted(o, s),
-            old_thread_notification_setting: g,
-            new_thread_notification_setting: null != n.flags ? c(n.flags) : g,
+            has_interacted_with_thread: (h & m.iN.HAS_INTERACTED) != 0,
+            parent_is_muted: u.ZP.isGuildOrCategoryOrChannelMuted(a, s),
+            old_thread_notification_setting: E,
+            new_thread_notification_setting: null != t.flags ? _(t.flags) : E,
             parent_notification_setting: l.channel_message_notification_settings,
-            old_thread_is_muted: y,
-            new_thread_is_muted: null !== (i = n.muted) && void 0 !== i ? i : y,
-            old_thread_muted_until: b,
-            new_thread_muted_until: null != n.mute_config ? (0, h.sK)(n.mute_config) : b
+            old_thread_is_muted: v,
+            new_thread_is_muted: null !== (i = t.muted) && void 0 !== i ? i : v,
+            old_thread_muted_until: y,
+            new_thread_muted_until: null != t.mute_config ? (0, f.sK)(t.mute_config) : y
         };
-    f.default.track(v.rMx.THREAD_NOTIFICATION_SETTINGS_UPDATED, S);
+    c.default.track(g.rMx.THREAD_NOTIFICATION_SETTINGS_UPDATED, T);
 }
-let A = (e) => {
-    var n, r;
-    let i = (0, s.e7)([c.ZP], () => c.ZP.lastMessageId(e.id)),
-        a = null != i ? _.default.extractTimestamp(i) : null,
-        l = null === (n = e.threadMetadata) || void 0 === n ? void 0 : n.createTimestamp,
-        u = null != l ? o()(l).valueOf() : null;
-    return null !== (r = null != a ? a : u) && void 0 !== r ? r : _.default.extractTimestamp(e.id);
+let b = (e) => {
+    var t, n;
+    let i = (0, a.e7)([l.ZP], () => l.ZP.lastMessageId(e.id)),
+        s = null != i ? _.default.extractTimestamp(i) : null,
+        o = null === (t = e.threadMetadata) || void 0 === t ? void 0 : t.createTimestamp,
+        u = null != o ? r()(o).valueOf() : null;
+    return null !== (n = null != s ? s : u) && void 0 !== n ? n : _.default.extractTimestamp(e.id);
 };

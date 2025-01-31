@@ -1,7 +1,2 @@
 let i;
-r.d(n, {
-    K: function () {
-        return i;
-    }
-});
-i = r(37082).y;
+n.d(t, { K: () => i }), (i = n(37082).y);

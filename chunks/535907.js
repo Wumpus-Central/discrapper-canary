@@ -1,8 +1,4 @@
-n.d(t, {
-    z: function () {
-        return i;
-    }
-});
+n.d(t, { z: () => i });
 let i = {
     authorIds: [],
     message: ''

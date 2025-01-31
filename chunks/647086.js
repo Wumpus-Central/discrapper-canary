@@ -1,25 +1,21 @@
-r.d(n, {
-    _: function () {
-        return o;
-    },
-    g: function () {
-        return s;
-    }
+n.d(t, {
+    _: () => a,
+    g: () => s
 });
-var i = r(601964),
-    a = r(981631);
-let o = '373',
+var i = n(601964),
+    r = n(981631);
+let a = '373',
     s = new i.ZP({
-        id: o,
+        id: a,
         name: 'Favorites',
         description: 'The place for all your favorite channels!',
         ownerId: '234',
-        verificationLevel: a.sFg.NONE,
+        verificationLevel: r.sFg.NONE,
         region: '',
         joinedAt: new Date(),
         defaultMessageNotifications: 0,
-        mfaLevel: a.BpS.NONE,
+        mfaLevel: r.BpS.NONE,
         explicitContentFilter: 0,
         maxMembers: 500000,
-        nsfwLevel: a.V_K.DEFAULT
+        nsfwLevel: r.V_K.DEFAULT
     });

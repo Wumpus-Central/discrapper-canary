@@ -1,34 +1,30 @@
-var i, a;
-r.d(n, {
-    TD: function () {
-        return a;
-    },
-    z: function () {
-        return i;
-    }
+var i, r;
+n.d(t, {
+    TD: () => r,
+    z: () => i
 }),
-    !(function (e) {
+    (function (e) {
         (e.symbol = Symbol.for('protobuf-ts/unknown')),
-            (e.onRead = (r, i, a, o, s) => {
-                (n(i) ? i[e.symbol] : (i[e.symbol] = [])).push({
-                    no: a,
-                    wireType: o,
+            (e.onRead = (n, i, r, a, s) => {
+                (t(i) ? i[e.symbol] : (i[e.symbol] = [])).push({
+                    no: r,
+                    wireType: a,
                     data: s
                 });
             }),
-            (e.onWrite = (n, r, i) => {
-                for (let { no: n, wireType: a, data: o } of e.list(r)) i.tag(n, a).raw(o);
+            (e.onWrite = (t, n, i) => {
+                for (let { no: t, wireType: r, data: a } of e.list(n)) i.tag(t, r).raw(a);
             }),
-            (e.list = (r, i) => {
-                if (n(r)) {
-                    let n = r[e.symbol];
-                    return i ? n.filter((e) => e.no == i) : n;
+            (e.list = (n, i) => {
+                if (t(n)) {
+                    let t = n[e.symbol];
+                    return i ? t.filter((e) => e.no == i) : t;
                 }
                 return [];
             }),
-            (e.last = (n, r) => e.list(n, r).slice(-1)[0]);
-        let n = (n) => n && Array.isArray(n[e.symbol]);
-    })(i || (i = {}));
-!(function (e) {
-    (e[(e.Varint = 0)] = 'Varint'), (e[(e.Bit64 = 1)] = 'Bit64'), (e[(e.LengthDelimited = 2)] = 'LengthDelimited'), (e[(e.StartGroup = 3)] = 'StartGroup'), (e[(e.EndGroup = 4)] = 'EndGroup'), (e[(e.Bit32 = 5)] = 'Bit32');
-})(a || (a = {}));
+            (e.last = (t, n) => e.list(t, n).slice(-1)[0]);
+        let t = (t) => t && Array.isArray(t[e.symbol]);
+    })(i || (i = {})),
+    !(function (e) {
+        (e[(e.Varint = 0)] = 'Varint'), (e[(e.Bit64 = 1)] = 'Bit64'), (e[(e.LengthDelimited = 2)] = 'LengthDelimited'), (e[(e.StartGroup = 3)] = 'StartGroup'), (e[(e.EndGroup = 4)] = 'EndGroup'), (e[(e.Bit32 = 5)] = 'Bit32');
+    })(r || (r = {}));

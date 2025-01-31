@@ -1,6 +1,2 @@
-n.d(t, {
-    w: function () {
-        return r;
-    }
-});
+n.d(t, { w: () => r });
 let r = Symbol.for('pass');

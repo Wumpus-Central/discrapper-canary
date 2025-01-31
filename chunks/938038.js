@@ -1,20 +1,16 @@
-r.d(n, {
-    c: function () {
-        return s;
-    }
-});
-var i = r(433517),
-    a = r(593472);
-function o(e, n, r) {
+n.d(t, { c: () => s });
+var i = n(433517),
+    r = n(593472);
+function a(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
@@ -29,50 +25,50 @@ class s {
     static loadInternal() {
         let e = i.K.get(s.storageKey);
         if (null != e) {
-            var n;
-            return new s(null !== (n = e.games) && void 0 !== n ? n : {});
+            var t;
+            return new s(null !== (t = e.games) && void 0 !== t ? t : {});
         }
-        let r = new s({});
-        return r.save(), r;
+        let n = new s({});
+        return n.save(), n;
     }
     static getGameSettings(e) {
-        var n;
-        return null == e ? null : null !== (n = s.load().games[e]) && void 0 !== n ? n : null;
+        var t;
+        return null == e ? null : null !== (t = s.load().games[e]) && void 0 !== t ? t : null;
     }
-    static updateGameSettings(e, n) {
+    static updateGameSettings(e, t) {
         if (null == e) return;
-        let r = s.load(),
-            i = r.games[e];
+        let n = s.load(),
+            i = n.games[e];
         if (null == i) {
-            (r.games[e] = {
-                screen: a.Jx.UNKNOWN,
+            (n.games[e] = {
+                screen: r.Jx.UNKNOWN,
                 date: Date.now(),
-                ...n
+                ...t
             }),
-                r.save();
+                n.save();
             return;
         }
-        'boolean' == typeof n.disabled && (i.disabled = n.disabled), 'number' == typeof n.screen && (i.screen = n.screen), (i.date = Date.now()), r.save();
+        'boolean' == typeof t.disabled && (i.disabled = t.disabled), 'number' == typeof t.screen && (i.screen = t.screen), (i.date = Date.now()), n.save();
     }
     static isPromptingForGameDisable(e) {
-        var n, r;
-        return null !== (r = null === (n = s.getGameSettings(e)) || void 0 === n ? void 0 : n.disabled) && void 0 !== r && r;
+        var t, n;
+        return null !== (n = null === (t = s.getGameSettings(e)) || void 0 === t ? void 0 : t.disabled) && void 0 !== n && n;
     }
-    static setPromptingForGameDisable(e, n) {
-        s.updateGameSettings(e, { disabled: n });
+    static setPromptingForGameDisable(e, t) {
+        s.updateGameSettings(e, { disabled: t });
     }
     static getGameDisplayMode(e) {
-        var n, r;
-        return null == e ? null : null !== (r = null === (n = s.getGameSettings(e)) || void 0 === n ? void 0 : n.screen) && void 0 !== r ? r : null;
+        var t, n;
+        return null == e ? null : null !== (n = null === (t = s.getGameSettings(e)) || void 0 === t ? void 0 : t.screen) && void 0 !== n ? n : null;
     }
-    static setGameDisplayMode(e, n) {
-        s.updateGameSettings(e, { screen: n });
+    static setGameDisplayMode(e, t) {
+        s.updateGameSettings(e, { screen: t });
     }
     static clearOldGameSettings() {
         let e = s.load();
         if (null == e.games) return;
-        let n = Date.now() - 31536000000;
-        for (let r in e.games) e.games[r].date < n && delete e.games[r];
+        let t = Date.now() - 31536000000;
+        for (let n in e.games) e.games[n].date < t && delete e.games[n];
         e.save();
     }
     static reset() {
@@ -86,7 +82,7 @@ class s {
         return !!window.__GAME_DISPLAY_MODE_DEBUG__;
     }
     constructor(e) {
-        o(this, 'games', void 0), (this.games = e);
+        a(this, 'games', void 0), (this.games = e);
     }
 }
-o(s, '_loaded', null), o(s, 'storageKey', 'GameDisplayModeStorage'), setTimeout(() => s.clearOldGameSettings(), 60000);
+a(s, '_loaded', null), a(s, 'storageKey', 'GameDisplayModeStorage'), setTimeout(() => s.clearOldGameSettings(), 60000);

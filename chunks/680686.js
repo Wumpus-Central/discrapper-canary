@@ -1,19 +1,15 @@
-r.d(n, {
-    Z: function () {
-        return u;
-    }
-});
-var i = r(626135),
-    a = r(647162),
-    o = r(616922),
-    s = r(981631);
-let l = [o.kG.USER_ACTIVITY_SYNC, o.kG.EMBED_SYNC];
-function u(e, n, r, o) {
+n.d(t, { Z: () => l });
+var i = n(626135),
+    r = n(647162),
+    a = n(616922),
+    s = n(981631);
+let o = [a.kG.USER_ACTIVITY_SYNC, a.kG.EMBED_SYNC];
+function l(e, t, n, a) {
     i.default.track(s.rMx.SPOTIFY_BUTTON_CLICKED, {
         type: e,
-        source: o,
-        is_premium: (0, a.Wo)(),
-        party_id: l.includes(e) && (null == r ? void 0 : r.party) != null ? r.party.id : null,
-        other_user_id: n.id
+        source: a,
+        is_premium: (0, r.Wo)(),
+        party_id: o.includes(e) && (null == n ? void 0 : n.party) != null ? n.party.id : null,
+        other_user_id: t.id
     });
 }

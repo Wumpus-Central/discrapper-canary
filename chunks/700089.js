@@ -1,17 +1,13 @@
-r.d(n, {
-    R: function () {
-        return u;
-    }
-});
-var i = r(192379),
-    a = r(442837),
-    o = r(675478),
-    s = r(654455),
-    l = r(526761);
-function u(e) {
+n.d(t, { R: () => l });
+var i = n(192379),
+    r = n(442837),
+    a = n(675478),
+    s = n(654455),
+    o = n(526761);
+function l(e) {
     i.useEffect(() => {
-        o.DZ.loadIfUncached(l.yP.FRECENCY_AND_FAVORITES_SETTINGS);
+        a.DZ.loadIfUncached(o.yP.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
-    let n = (0, a.e7)([s.ZP], () => s.ZP.getTopCommandsWithoutLoadingLatest());
-    return i.useMemo(() => (0, s.LU)(n, e), [n, e]);
+    let t = (0, r.e7)([s.ZP], () => s.ZP.getTopCommandsWithoutLoadingLatest());
+    return i.useMemo(() => (0, s.LU)(t, e), [t, e]);
 }

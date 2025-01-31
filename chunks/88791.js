@@ -1,26 +1,22 @@
-t.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = t(200651);
-t(192379);
-var l = t(481060),
-    r = t(79390),
-    a = t(388032);
-function o(e) {
-    return null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, r.eQ)(e))
+n.d(t, { Z: () => r });
+var i = n(200651);
+n(192379);
+var l = n(481060),
+    a = n(79390),
+    s = n(388032);
+function r(e) {
+    return null == e.reactions || 0 === e.reactions.length || (e.isPoll() && !(0, a.eQ)(e))
         ? null
-        : (0, i.jsx)(l.MenuItem, {
+        : (0, i.jsx)(l.sNh, {
               id: 'reactions',
-              label: a.intl.string(a.t.wikODg),
-              icon: l.ReactionIcon,
+              label: s.intl.string(s.t.wikODg),
+              icon: l.EO4,
               action: () =>
-                  (0, l.openModalLazy)(async () => {
-                      let { default: n } = await Promise.resolve().then(t.bind(t, 785388));
-                      return (t) =>
-                          (0, i.jsx)(n, {
-                              ...t,
+                  (0, l.ZDy)(async () => {
+                      let { default: t } = await Promise.resolve().then(n.bind(n, 785388));
+                      return (n) =>
+                          (0, i.jsx)(t, {
+                              ...n,
                               message: e
                           });
                   })

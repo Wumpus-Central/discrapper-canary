@@ -1,55 +1,49 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return L;
-        }
-    }),
-    n(47120);
-var a = n(200651),
-    l = n(192379),
-    i = n(120356),
-    r = n.n(i),
-    s = n(990547),
-    c = n(399606),
-    o = n(780384),
-    d = n(481060),
-    m = n(935369),
-    x = n(367907),
-    u = n(213609),
-    h = n(44315),
-    _ = n(210887),
-    p = n(626135),
-    T = n(923726),
-    g = n(570849),
-    I = n(853439),
-    C = n(303737),
-    j = n(587431),
-    N = n(862239),
-    f = n(847004),
-    v = n(981631),
-    b = n(388032),
-    R = n(729070);
-function S(e) {
-    let { name: t, imageUrl: n, selected: l, onTap: i } = e;
-    return (0, a.jsxs)(d.Clickable, {
+a.d(t, { default: () => L }), a(47120);
+var n = a(200651),
+    l = a(192379),
+    i = a(120356),
+    s = a.n(i),
+    r = a(990547),
+    c = a(399606),
+    o = a(780384),
+    d = a(481060),
+    m = a(935369),
+    x = a(367907),
+    _ = a(213609),
+    h = a(44315),
+    u = a(210887),
+    f = a(626135),
+    p = a(923726),
+    T = a(570849),
+    g = a(853439),
+    j = a(303737),
+    N = a(587431),
+    C = a(862239),
+    I = a(847004),
+    v = a(981631),
+    R = a(388032),
+    E = a(729070);
+function k(e) {
+    let { name: t, imageUrl: a, selected: l, onTap: i } = e;
+    return (0, n.jsxs)(d.P3F, {
         onClick: i,
-        className: R.templateCard,
+        className: E.templateCard,
         children: [
-            (0, a.jsx)('img', {
-                src: n,
+            (0, n.jsx)('img', {
+                src: a,
                 alt: '',
-                className: R.templateCardImage
+                className: E.templateCardImage
             }),
-            (0, a.jsxs)('div', {
-                className: R.templateNameRow,
+            (0, n.jsxs)('div', {
+                className: E.templateNameRow,
                 children: [
-                    (0, a.jsx)(d.Heading, {
+                    (0, n.jsx)(d.X6q, {
                         variant: 'heading-md/normal',
-                        className: r()({ [R.unselectedTemplateName]: !l }),
+                        className: s()({ [E.unselectedTemplateName]: !l }),
                         children: t
                     }),
                     l &&
-                        (0, a.jsx)(d.CircleCheckIcon, {
+                        (0, n.jsx)(d.owK, {
                             size: 'md',
                             secondaryColor: (0, h.Lq)(v.Ilk.WHITE_500),
                             color: (0, h.Lq)(v.Ilk.BRAND_500)
@@ -59,140 +53,140 @@ function S(e) {
         ]
     });
 }
-function B(e) {
-    let { loading: t, error: n, templates: l, selectedTemplateIndex: i, handleTapTemplate: r } = e,
-        s = (0, c.e7)([_.Z], () => _.Z.theme);
+function S(e) {
+    let { loading: t, error: a, templates: l, selectedTemplateIndex: i, handleTapTemplate: s } = e,
+        r = (0, c.e7)([u.Z], () => u.Z.theme);
     return t
-        ? (0, a.jsx)(d.Spinner, {})
-        : null != n
-          ? (0, a.jsx)(j.Z, { children: n.message })
+        ? (0, n.jsx)(d.$jN, {})
+        : null != a
+          ? (0, n.jsx)(N.Z, { children: a.message })
           : null == l || 0 === l.length
             ? null
-            : (0, a.jsx)('div', {
-                  className: R.templateCardList,
+            : (0, n.jsx)('div', {
+                  className: E.templateCardList,
                   children: l.map((e, t) =>
-                      (0, a.jsx)(
-                          S,
+                      (0, n.jsx)(
+                          k,
                           {
-                              imageUrl: t === i ? e.category_image : (0, o.ap)(s) ? e.unselected_light_theme_category_image : e.unselected_dark_theme_category_image,
+                              imageUrl: t === i ? e.category_image : (0, o.ap)(r) ? e.unselected_light_theme_category_image : e.unselected_dark_theme_category_image,
                               name: e.category,
                               selected: t === i,
-                              onTap: () => r(t)
+                              onTap: () => s(t)
                           },
                           t
                       )
                   )
               });
 }
-function E(e) {
-    var t, n;
-    let { guildId: i, templates: r, selectedTemplateIndex: s, priceTiers: c, showPriceReselection: o, setShowPriceReselection: d, handleCreateTierFromTemplate: m } = e,
-        x = (0, C.g4)(i, c, null != r ? (null === (n = r[s]) || void 0 === n ? void 0 : null === (t = n.listings[0]) || void 0 === t ? void 0 : t.price_tier) : void 0),
-        u = null != x && x.length > 0,
+function B(e) {
+    var t, a;
+    let { guildId: i, templates: s, selectedTemplateIndex: r, priceTiers: c, showPriceReselection: o, setShowPriceReselection: d, handleCreateTierFromTemplate: m } = e,
+        x = (0, j.g4)(i, c, null != s ? (null === (a = s[r]) || void 0 === a ? void 0 : null === (t = a.listings[0]) || void 0 === t ? void 0 : t.price_tier) : void 0),
+        _ = null != x && x.length > 0,
         h = l.useCallback(
             (e) => {
-                u ? d(!0) : m(e);
+                _ ? d(!0) : m(e);
             },
-            [m, u, d]
+            [m, _, d]
         );
-    return null == r || 0 === r.length
+    return null == s || 0 === s.length
         ? null
-        : o && u
-          ? (0, a.jsx)(f.Z, {
-                selectedTemplate: r[s],
+        : o && _
+          ? (0, n.jsx)(I.Z, {
+                selectedTemplate: s[r],
                 handleSelectTemplate: m,
                 newPricesToPick: x
             })
-          : (0, a.jsx)(N.Z, {
-                selectedTemplate: r[s],
+          : (0, n.jsx)(C.Z, {
+                selectedTemplate: s[r],
                 handleSelectTemplate: h
             });
 }
 function L(e) {
-    let { transitionState: t, onClose: n, guildId: i, addNewEditStateFromTemplate: r, addNewEditStateFromScratch: o, priceTiers: h } = e,
-        _ = (0, c.e7)([I.Z], () => I.Z.getTemplates(i)),
-        [C, { loading: j, error: N }] = (0, m.Z)(g.u),
-        f = l.useRef('voluntarily_exit');
+    let { transitionState: t, onClose: a, guildId: i, addNewEditStateFromTemplate: s, addNewEditStateFromScratch: o, priceTiers: h } = e,
+        u = (0, c.e7)([g.Z], () => g.Z.getTemplates(i)),
+        [j, { loading: N, error: C }] = (0, m.Z)(T.u),
+        I = l.useRef('voluntarily_exit');
     l.useEffect(() => {
-        (null == _ || 0 === _.length) && C(i);
-    }, [C, i, _]),
+        (null == u || 0 === u.length) && j(i);
+    }, [j, i, u]),
         l.useEffect(() => {
-            t === d.ModalTransitionState.EXITING &&
-                p.default.track(v.rMx.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED, {
-                    exit_reason: f.current,
+            t === d.Dvm.EXITING &&
+                f.default.track(v.rMx.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED, {
+                    exit_reason: I.current,
                     ...(0, x.hH)(i)
                 });
-        }, [t, i, f]);
-    let [S, L] = l.useState(0),
-        [k, y] = l.useState(!1),
-        w = l.useCallback(
+        }, [t, i, I]);
+    let [k, L] = l.useState(0),
+        [y, w] = l.useState(!1),
+        b = l.useCallback(
             (e) => {
-                (f.current = 'template_selected'), (0, g.l)(e, i), r(e), n();
+                (I.current = 'template_selected'), (0, T.l)(e, i), s(e), a();
             },
-            [i, r, n]
+            [i, s, a]
         ),
         U = l.useCallback(() => {
-            k ? y(!1) : n();
-        }, [k, n]),
-        D = (0, T.yi)(i);
+            y ? w(!1) : a();
+        }, [y, a]),
+        D = (0, p.yi)(i);
     return (
-        (0, u.Z)({
-            type: s.ImpressionTypes.MODAL,
-            name: s.ImpressionNames.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR,
+        (0, _.Z)({
+            type: r.ImpressionTypes.MODAL,
+            name: r.ImpressionNames.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR,
             properties: { guild_id: i }
         }),
-        (0, a.jsxs)(d.ModalRoot, {
+        (0, n.jsxs)(d.Y0X, {
             transitionState: t,
-            size: d.ModalSize.DYNAMIC,
-            className: R.modalRoot,
+            size: d.CgR.DYNAMIC,
+            className: E.modalRoot,
             children: [
-                (0, a.jsx)(d.Clickable, {
+                (0, n.jsx)(d.P3F, {
                     onClick: U,
-                    className: R.closeButton,
-                    children: (0, a.jsx)(d.XSmallIcon, {
+                    className: E.closeButton,
+                    children: (0, n.jsx)(d.Dio, {
                         size: 'xxs',
                         color: 'currentColor'
                     })
                 }),
-                (0, a.jsxs)(d.ModalContent, {
-                    className: R.modalContent,
+                (0, n.jsxs)(d.hzk, {
+                    className: E.modalContent,
                     children: [
-                        (0, a.jsxs)('div', {
-                            className: R.templatesContainer,
+                        (0, n.jsxs)('div', {
+                            className: E.templatesContainer,
                             children: [
-                                k &&
-                                    (0, a.jsx)(d.Clickable, {
-                                        className: R.blackoutOverlay,
+                                y &&
+                                    (0, n.jsx)(d.P3F, {
+                                        className: E.blackoutOverlay,
                                         onClick: () => {
-                                            k && y(!1);
+                                            y && w(!1);
                                         },
                                         'aria-label': 'overlay'
                                     }),
-                                (0, a.jsxs)(d.ScrollerThin, {
-                                    className: R.templatesContainerBody,
+                                (0, n.jsxs)(d.zJl, {
+                                    className: E.templatesContainerBody,
                                     children: [
-                                        (0, a.jsx)(d.Heading, {
+                                        (0, n.jsx)(d.X6q, {
                                             variant: 'heading-xl/semibold',
-                                            children: b.intl.string(b.t['9QQ+i4'])
+                                            children: R.intl.string(R.t['9QQ+i4'])
                                         }),
-                                        (0, a.jsx)(d.Text, {
+                                        (0, n.jsx)(d.Text, {
                                             variant: 'text-sm/normal',
-                                            className: R.modalBodyText,
-                                            children: b.intl.string(b.t.CvFFOj)
+                                            className: E.modalBodyText,
+                                            children: R.intl.string(R.t.CvFFOj)
                                         }),
                                         D &&
-                                            (0, a.jsx)(d.Text, {
+                                            (0, n.jsx)(d.Text, {
                                                 variant: 'text-sm/normal',
-                                                className: R.creatorPortalText,
-                                                children: b.intl.format(b.t.iQML2t, { creatorPortalUrl: 'https://discord.com/creator-portal/learn-from-creators?tab=lightning-lessons' })
+                                                className: E.creatorPortalText,
+                                                children: R.intl.format(R.t.iQML2t, { creatorPortalUrl: 'https://discord.com/creator-portal/learn-from-creators?tab=lightning-lessons' })
                                             }),
-                                        (0, a.jsx)('div', {
-                                            className: R.templatesContentContainer,
-                                            children: (0, a.jsx)(B, {
-                                                loading: j,
-                                                error: N,
-                                                templates: _,
-                                                selectedTemplateIndex: S,
+                                        (0, n.jsx)('div', {
+                                            className: E.templatesContentContainer,
+                                            children: (0, n.jsx)(S, {
+                                                loading: N,
+                                                error: C,
+                                                templates: u,
+                                                selectedTemplateIndex: k,
                                                 handleTapTemplate: (e) => {
                                                     L(e);
                                                 }
@@ -200,40 +194,40 @@ function L(e) {
                                         })
                                     ]
                                 }),
-                                (0, a.jsx)(d.Text, {
+                                (0, n.jsx)(d.Text, {
                                     variant: 'text-sm/normal',
-                                    children: b.intl.string(b.t.jymUTE)
+                                    children: R.intl.string(R.t.jymUTE)
                                 }),
-                                (0, a.jsxs)(d.Button, {
-                                    size: d.Button.Sizes.MEDIUM,
+                                (0, n.jsxs)(d.zxk, {
+                                    size: d.zxk.Sizes.MEDIUM,
                                     onClick: () => {
-                                        (f.current = 'create_from_scratch'), o(), n();
+                                        (I.current = 'create_from_scratch'), o(), a();
                                     },
-                                    look: d.Button.Looks.OUTLINED,
-                                    color: d.Button.Colors.PRIMARY,
-                                    className: R.createFromStratchButton,
-                                    innerClassName: R.createFromStratchButtonInner,
+                                    look: d.zxk.Looks.OUTLINED,
+                                    color: d.zxk.Colors.PRIMARY,
+                                    className: E.createFromStratchButton,
+                                    innerClassName: E.createFromStratchButtonInner,
                                     children: [
-                                        (0, a.jsx)(d.PencilIcon, {
+                                        (0, n.jsx)(d.vdY, {
                                             size: 'custom',
                                             color: 'currentColor',
                                             width: 14,
                                             height: 14,
-                                            className: R.editIcon
+                                            className: E.editIcon
                                         }),
-                                        b.intl.string(b.t.a3ycUV)
+                                        R.intl.string(R.t.a3ycUV)
                                     ]
                                 })
                             ]
                         }),
-                        (0, a.jsx)(E, {
+                        (0, n.jsx)(B, {
                             guildId: i,
-                            templates: _,
-                            selectedTemplateIndex: S,
+                            templates: u,
+                            selectedTemplateIndex: k,
                             priceTiers: h,
-                            showPriceReselection: k,
-                            setShowPriceReselection: y,
-                            handleCreateTierFromTemplate: w
+                            showPriceReselection: y,
+                            setShowPriceReselection: w,
+                            handleCreateTierFromTemplate: b
                         })
                     ]
                 })

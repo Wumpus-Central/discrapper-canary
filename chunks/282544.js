@@ -1,1 +1,2 @@
-e.exports = { body: 'body_e16e99' };
+var i = { body: 'body__96722' };
+e.exports = i;

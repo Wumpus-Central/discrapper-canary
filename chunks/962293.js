@@ -1,21 +1,17 @@
-r.d(n, {
-    B: function () {
-        return s;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(481060),
-    o = r(57292);
+n.d(t, { B: () => s });
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(57292);
 function s(e) {
-    let { onClick: n } = e;
-    return (0, i.jsx)(a.Clickable, {
-        className: o.closeButton,
-        onClick: n,
-        children: (0, i.jsx)(a.CircleXIcon, {
+    let { onClick: t } = e;
+    return (0, i.jsx)(r.P3F, {
+        className: a.closeButton,
+        onClick: t,
+        children: (0, i.jsx)(r.k$p, {
             size: 'md',
             color: 'currentColor',
-            className: o.closeIcon
+            className: a.closeIcon
         })
     });
 }

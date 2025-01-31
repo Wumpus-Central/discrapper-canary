@@ -1,13 +1,9 @@
-n.d(t, {
-    Z: function () {
-        return g;
-    }
-});
+n.d(t, { Z: () => g });
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    r = n(481060),
-    a = n(787014),
+    a = n(481060),
+    r = n(787014),
     s = n(933557),
     o = n(454585),
     c = n(131704),
@@ -38,9 +34,9 @@ function g(e) {
                       children: (0, i.jsx)(u.Z, {
                           label: m.intl.string(m.t['3gUsJS']),
                           onClick: () => {
-                              a.ZP.open(t.id);
+                              r.ZP.open(t.id);
                           },
-                          icon: (0, i.jsx)(r.PencilIcon, {
+                          icon: (0, i.jsx)(a.vdY, {
                               size: 'xs',
                               color: 'currentColor'
                           })

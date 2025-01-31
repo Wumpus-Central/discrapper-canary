@@ -1,53 +1,47 @@
-r.d(n, {
-    B: function () {
-        return p;
-    },
-    i: function () {
-        return f;
-    }
+n.d(t, {
+    B: () => f,
+    i: () => d
 });
-var i = r(399606),
-    a = r(704215),
-    o = r(314897),
-    s = r(70956),
-    l = r(709054),
-    u = r(68985);
-let c = {
-        [a.z.MJ_NEW_USER_CHAT_BAR]: 0,
-        [a.z.NUX_GUILD_CHANNEL_EXPLAINER]: 0,
-        [a.z.SEEN_LAUNCH_WELCOME]: 0,
-        [a.z.SEEN_OLD_DESIGN]: 0,
-        [a.z.REFERRAL_PROGRAM_PROGRESS_BAR_TOGGLE]: 0,
-        [a.z.WHATS_NEW_APP_STYLES_JUNE_2024_FLIP]: 0,
-        [a.z.WHATS_NEW_REFERRAL_PROGRAM_FLIP]: 0,
-        [a.z.WHATS_NEW_APP_STYLES_JUNE_2024_NITRO_BADGE]: 0,
-        [a.z.WHATS_NEW_REFERRAL_PROGRAM_NITRO_BADGE]: 0,
-        [a.z.WHATS_NEW_SERVER_PROFILE_FLIP]: 0,
-        [a.z.WHATS_NEW_SERVER_PROFILE_BADGE]: 0,
-        [a.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR]: 0,
-        [a.z.REFERRAL_INCENTIVE_AWARDED_INFO]: 0,
-        [a.z.WHATS_NEW_TENURE_BADGE_REWARD]: 0,
-        [a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL]: 0,
-        [a.z.TRIAL_NUX_EMOJI_BUTTON]: 0,
-        [a.z.TRIAL_NUX_EMOJI_PICKER]: 0,
-        [a.z.TRIAL_NUX_STREAM_COACH_MARK]: 0
+var i = n(399606),
+    r = n(704215),
+    a = n(314897),
+    s = n(70956),
+    o = n(709054),
+    l = n(68985);
+let u = {
+        [r.z.MJ_NEW_USER_CHAT_BAR]: 0,
+        [r.z.NUX_GUILD_CHANNEL_EXPLAINER]: 0,
+        [r.z.SEEN_LAUNCH_WELCOME]: 0,
+        [r.z.SEEN_OLD_DESIGN]: 0,
+        [r.z.REFERRAL_PROGRAM_PROGRESS_BAR_TOGGLE]: 0,
+        [r.z.WHATS_NEW_APP_STYLES_JUNE_2024_FLIP]: 0,
+        [r.z.WHATS_NEW_REFERRAL_PROGRAM_FLIP]: 0,
+        [r.z.WHATS_NEW_APP_STYLES_JUNE_2024_NITRO_BADGE]: 0,
+        [r.z.WHATS_NEW_REFERRAL_PROGRAM_NITRO_BADGE]: 0,
+        [r.z.WHATS_NEW_SERVER_PROFILE_FLIP]: 0,
+        [r.z.WHATS_NEW_SERVER_PROFILE_BADGE]: 0,
+        [r.z.REFERRAL_INCENTIVE_TOOLTIP_AND_TAB_COLOR]: 0,
+        [r.z.REFERRAL_INCENTIVE_AWARDED_INFO]: 0,
+        [r.z.WHATS_NEW_TENURE_BADGE_REWARD]: 0,
+        [r.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL]: 0,
+        [r.z.TRIAL_NUX_EMOJI_BUTTON]: 0,
+        [r.z.TRIAL_NUX_EMOJI_PICKER]: 0,
+        [r.z.TRIAL_NUX_STREAM_COACH_MARK]: 0
     },
-    d = s.Z.Millis.DAY;
-function f(e) {
-    let { userId: n, newUserMinAgeRequiredOverridden: r } = (0, i.cj)([o.default, u.Z], () => ({
-        userId: o.default.getId(),
-        newUserMinAgeRequiredOverridden: u.Z.newUserMinAgeRequiredOverridden
+    c = s.Z.Millis.DAY;
+function d(e) {
+    let { userId: t, newUserMinAgeRequiredOverridden: n } = (0, i.cj)([a.default, l.Z], () => ({
+        userId: a.default.getId(),
+        newUserMinAgeRequiredOverridden: l.Z.newUserMinAgeRequiredOverridden
     }));
-    if (r) return e;
-    let a = null != n ? l.default.age(n) : 0;
+    if (n) return e;
+    let r = null != t ? o.default.age(t) : 0;
     return e.filter((e) => {
-        var n;
-        return a > (null !== (n = c[e]) && void 0 !== n ? n : d);
+        var t;
+        return r > (null !== (t = u[e]) && void 0 !== t ? t : c);
     });
 }
-function p(e) {
-    var n;
-    if (u.Z.newUserMinAgeRequiredOverridden) return !1;
-    let r = null != o.default.getId() ? l.default.age(o.default.getId()) : 0;
-    return r < (null !== (n = c[e]) && void 0 !== n ? n : d);
+function f(e) {
+    var t;
+    return !l.Z.newUserMinAgeRequiredOverridden && (null != a.default.getId() ? o.default.age(a.default.getId()) : 0) < (null !== (t = u[e]) && void 0 !== t ? t : c);
 }

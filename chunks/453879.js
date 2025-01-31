@@ -1,14 +1,8 @@
-n.d(t, {
-    v: function () {
-        return a;
-    }
-}),
-    n(47120),
-    n(653041);
+n.d(t, { v: () => r }), n(47120), n(653041);
 var i = n(975984),
     l = n(486527),
-    r = n(388032);
-function a(e, t) {
+    a = n(388032);
+function r(e, t) {
     if (t !== l.AR.ALL)
         return [
             {
@@ -17,19 +11,19 @@ function a(e, t) {
             }
         ];
     let n = [],
-        a = (0, i.Lz)(e),
-        s = new Set(a.map((e) => e.guildId));
-    a.length > 0 &&
+        r = (0, i.Lz)(e),
+        s = new Set(r.map((e) => e.guildId));
+    r.length > 0 &&
         n.push({
-            header: r.intl.string(r.t.CbaapK),
-            entries: a,
+            header: a.intl.string(a.t.CbaapK),
+            entries: r,
             appendEndCard: !1
         });
     let o = e.filter((e) => !s.has(e.guildId));
     return (
         (o = (0, i.Th)(o)).length > 0 &&
             n.push({
-                header: r.intl.string(r.t.wxbhER),
+                header: a.intl.string(a.t.wxbhER),
                 entries: o,
                 appendEndCard: !0
             }),

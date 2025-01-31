@@ -1,8 +1,4 @@
-n.d(t, {
-    E: function () {
-        return h;
-    }
-});
+n.d(t, { E: () => h });
 var i = n(200651);
 n(192379);
 var r = n(120356),
@@ -34,14 +30,14 @@ function m(e) {
                 className: u.emojiAlias,
                 children: t.name
             }),
-            (0, i.jsx)(s.Button, {
-                look: s.Button.Looks.BLANK,
-                size: s.Button.Sizes.ICON,
+            (0, i.jsx)(s.zxk, {
+                look: s.zxk.Looks.BLANK,
+                size: s.zxk.Sizes.ICON,
                 className: u.deleteButton,
                 onClick: () => n(t),
                 'aria-label': d.intl.string(d.t.dVS92d),
                 disabled: r,
-                children: (0, i.jsx)(s.TrashIcon, {
+                children: (0, i.jsx)(s.XHJ, {
                     size: 'md',
                     color: 'currentColor',
                     className: u.trashIcon

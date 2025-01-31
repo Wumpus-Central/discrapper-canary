@@ -1,29 +1,24 @@
-r.d(n, {
-    Z: function () {
-        return d;
-    }
-});
-var i = r(47120);
-var a = r(192379),
-    o = r(442837),
-    s = r(902704),
-    l = r(158776),
-    u = r(561308),
-    c = r(231338);
-function d(e) {
-    let n = a.useRef(new Set()),
-        r = a.useMemo(() => {
-            let r = new Set(null == e ? void 0 : e.map((e) => e.author_id));
-            return !(0, s.E)([...n.current], [...r]) && (n.current = r), n.current;
+n.d(t, { Z: () => u }), n(47120);
+var i = n(192379),
+    r = n(442837),
+    a = n(902704),
+    s = n(158776),
+    o = n(561308),
+    l = n(231338);
+function u(e) {
+    let t = i.useRef(new Set()),
+        n = i.useMemo(() => {
+            let n = new Set(null == e ? void 0 : e.map((e) => e.author_id));
+            return (0, a.E)([...t.current], [...n]) || (t.current = n), t.current;
         }, [e]),
-        i = (0, o.Wu)([l.Z], () =>
-            Array.from(r).filter((e) => {
-                let n = l.Z.getStatus(e);
-                return null !== n && [c.Sk.OFFLINE, c.Sk.INVISIBLE].includes(n);
+        u = (0, r.Wu)([s.Z], () =>
+            Array.from(n).filter((e) => {
+                let t = s.Z.getStatus(e);
+                return null !== t && [l.Sk.OFFLINE, l.Sk.INVISIBLE].includes(t);
             })
         );
-    return a.useMemo(() => {
-        let n = new Set(i);
-        return null == e ? void 0 : e.filter((e) => !(0, u.kr)(e) || !n.has(e.author_id));
-    }, [e, i]);
+    return i.useMemo(() => {
+        let t = new Set(u);
+        return null == e ? void 0 : e.filter((e) => !(0, o.kr)(e) || !t.has(e.author_id));
+    }, [e, u]);
 }

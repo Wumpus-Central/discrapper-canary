@@ -1,12 +1,13 @@
 e.exports = {
-    gameImage: 'gameImage_d6ed83',
-    gameUnknownImage: 'gameUnknownImage_d6ed83',
-    selectedGame: 'selectedGame_d6ed83',
-    checkBackground: 'checkBackground_d6ed83',
-    selectedGameCheck: 'selectedGameCheck_d6ed83',
-    selectedGameCheckLocked: 'selectedGameCheckLocked_d6ed83',
-    gameImageLoading: 'gameImageLoading_d6ed83',
-    gameImageBackground: 'gameImageBackground_d6ed83',
-    gameName: 'gameName_d6ed83',
-    remainingGame: 'remainingGame_d6ed83'
+    gameImage: 'gameImage__58a74',
+    gameUnknownImage: 'gameUnknownImage__58a74',
+    selectedGame: 'selectedGame__58a74',
+    checkBackground: 'checkBackground__58a74',
+    selectedGameCheck: 'selectedGameCheck__58a74',
+    selectedGameCheckLocked: 'selectedGameCheckLocked__58a74',
+    placeholderPulse: 'placeholderPulse__58a74',
+    gameImageLoading: 'gameImageLoading__58a74',
+    gameImageBackground: 'gameImageBackground__58a74',
+    gameName: 'gameName__58a74',
+    remainingGame: 'remainingGame__58a74'
 };

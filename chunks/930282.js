@@ -1,64 +1,61 @@
-r.d(n, {
-    HR: function () {
-        return v;
-    },
-    L5: function () {
-        return g;
-    }
+n.d(t, {
+    HR: () => E,
+    L5: () => m,
+    ZP: () => v
 });
-var i = r(200651),
-    a = r(192379),
-    o = r(120356),
-    s = r.n(o),
-    l = r(653603),
-    u = r.n(l),
-    c = r(902704),
-    d = r(453687),
-    f = r(318713),
-    p = r(981631),
-    h = r(388032),
-    _ = r(507304),
-    m = r(665162);
-function g(e, n) {
-    return e.type === p.uaV.VOICE_HANGOUT_INVITE ? '' : e.hasFlag(p.iLy.SOURCE_MESSAGE_DELETED) ? h.intl.string(h.t.JOtgS0) : n;
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(653603),
+    l = n.n(o),
+    u = n(902704),
+    c = n(453687),
+    d = n(318713),
+    f = n(981631),
+    _ = n(388032),
+    p = n(507304),
+    h = n(665162);
+function m(e, t) {
+    return e.type === f.uaV.VOICE_HANGOUT_INVITE ? '' : e.hasFlag(f.iLy.SOURCE_MESSAGE_DELETED) ? _.intl.string(_.t.JOtgS0) : t;
 }
-function E(e) {
-    var n;
-    let { className: r, message: o, children: l, content: c, onUpdate: E, contentRef: v } = e,
-        y = o.isEdited(),
-        b = o.state === p.yb.SEND_FAILED,
-        I = o.state === p.yb.SENDING,
-        T = o.isCommandType(),
-        S = null === (n = o.editedTimestamp) || void 0 === n ? void 0 : n.toString(),
-        A = a.useRef(!1);
+function g(e) {
+    var t;
+    let { className: n, message: a, children: o, content: u, onUpdate: g, contentRef: E } = e,
+        v = a.isEdited(),
+        y = a.state === f.yb.SEND_FAILED,
+        I = a.state === f.yb.SENDING,
+        b = a.isCommandType(),
+        T = null === (t = a.editedTimestamp) || void 0 === t ? void 0 : t.toString(),
+        S = r.useRef(!1);
     return (
-        a.useLayoutEffect(() => {
-            A.current ? null != E && E() : (A.current = !0);
-        }, [E, o.content, c, S, l]),
+        r.useLayoutEffect(() => {
+            S.current ? null != g && g() : (S.current = !0);
+        }, [g, a.content, u, T, o]),
         (0, i.jsxs)('div', {
-            id: (0, d.ut)(o),
-            ref: v,
-            className: s()(r, m.markup, {
-                [_.messageContent]: !0,
-                [_.isSending]: I && !T,
-                [_.markupRtl]: 'rtl' === u()(o.content),
-                [_.isFailed]: b,
-                [_.isUnsupported]: o.isUnsupported
+            id: (0, c.ut)(a),
+            ref: E,
+            className: s()(n, h.markup, {
+                [p.messageContent]: !0,
+                [p.isSending]: I && !b,
+                [p.markupRtl]: 'rtl' === l()(a.content),
+                [p.isFailed]: y,
+                [p.isUnsupported]: a.isUnsupported
             }),
             children: [
-                null != l ? l : g(o, c),
-                y &&
-                    null != o.editedTimestamp &&
+                null != o ? o : m(a, u),
+                v &&
+                    null != a.editedTimestamp &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             ' ',
-                            (0, i.jsx)(f.Z, {
-                                timestamp: o.editedTimestamp,
+                            (0, i.jsx)(d.Z, {
+                                timestamp: a.editedTimestamp,
                                 isEdited: !0,
                                 isInline: !1,
                                 children: (0, i.jsxs)('span', {
-                                    className: _.edited,
-                                    children: ['(', h.intl.string(h.t.C8sXIC), ')']
+                                    className: p.edited,
+                                    children: ['(', _.intl.string(_.t.C8sXIC), ')']
                                 })
                             })
                         ]
@@ -67,10 +64,10 @@ function E(e) {
         })
     );
 }
-function v(e, n) {
-    var r, i;
-    let { message: a } = n,
-        { message: o } = e;
-    return (0, c.Z)(e, n, ['message']) && a.content === o.content && a.state === o.state && (null === (r = a.editedTimestamp) || void 0 === r ? void 0 : r.toString()) === (null === (i = o.editedTimestamp) || void 0 === i ? void 0 : i.toString());
+function E(e, t) {
+    var n, i;
+    let { message: r } = t,
+        { message: a } = e;
+    return (0, u.Z)(e, t, ['message']) && r.content === a.content && r.state === a.state && (null === (n = r.editedTimestamp) || void 0 === n ? void 0 : n.toString()) === (null === (i = a.editedTimestamp) || void 0 === i ? void 0 : i.toString());
 }
-n.ZP = a.memo(E, v);
+let v = r.memo(g, E);

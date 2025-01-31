@@ -1,7 +1,8 @@
-e.exports = {
-    formNotice: 'formNotice_aae945',
-    formNoticeTitle: 'formNoticeTitle_aae945',
-    formNoticeBody: 'formNoticeBody_aae945',
-    icon: 'icon_aae945',
-    whiteText: 'whiteText_aae945'
+var i = {
+    formNotice: 'formNotice_f43ba5',
+    formNoticeTitle: 'formNoticeTitle_f43ba5',
+    formNoticeBody: 'formNoticeBody_f43ba5',
+    icon: 'icon_f43ba5',
+    whiteText: 'whiteText_f43ba5'
 };
+e.exports = i;

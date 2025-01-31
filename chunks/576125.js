@@ -1,13 +1,9 @@
-r.d(n, {
-    Z: function () {
-        return s;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(399606),
-    o = r(351780);
+n.d(t, { Z: () => s });
+var i = n(200651);
+n(192379);
+var r = n(399606),
+    a = n(351780);
 function s(e) {
-    let { children: n, confettiLocation: r } = e;
-    return (0, a.e7)([o.Z], () => o.Z.isEnabled({ confettiLocation: r })) ? (0, i.jsx)(i.Fragment, { children: n }) : null;
+    let { children: t, confettiLocation: n } = e;
+    return (0, r.e7)([a.Z], () => a.Z.isEnabled({ confettiLocation: n })) ? (0, i.jsx)(i.Fragment, { children: t }) : null;
 }

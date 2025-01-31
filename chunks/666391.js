@@ -1,3 +1,4 @@
+n.d(e, { Z: () => o });
 var i = n(757490);
 function a(t, e, n) {
     var a = 'eeee p';
@@ -11,7 +12,7 @@ var r = {
     nextWeek: a,
     other: 'PP p'
 };
-e.Z = function (t, e, n, i) {
+let o = function (t, e, n, i) {
     var a = r[t];
     return 'function' == typeof a ? a(e, n, i) : a;
 };

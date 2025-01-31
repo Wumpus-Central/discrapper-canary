@@ -1,14 +1,10 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(211266),
-    a = r(493773);
-function o() {
+n.d(t, { Z: () => a });
+var i = n(211266),
+    r = n(493773);
+function a() {
     let e = (0, i.Z)(() => new AbortController());
     return (
-        (0, a.Z)(() => () => {
+        (0, r.Z)(() => () => {
             e.abort();
         }),
         e.signal

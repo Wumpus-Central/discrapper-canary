@@ -1,44 +1,36 @@
-r.d(n, {
-    Iu: function () {
-        return s;
-    },
-    OS: function () {
-        return l;
-    },
-    g6: function () {
-        return c;
-    },
-    v3: function () {
-        return u;
-    }
+n.d(t, {
+    Iu: () => s,
+    OS: () => o,
+    g6: () => u,
+    v3: () => l
 });
-var i = r(15729),
-    a = r(877124);
-let o = (0, i.U)(
-    (0, a.tJ)(
+var i = n(15729),
+    r = n(877124);
+let a = (0, i.U)(
+    (0, r.tJ)(
         (e) => ({
             channelDismissTimestamps: {},
             queuedWarning: !1
         }),
         {
             name: 'shared-spaces-warning-storage',
-            storage: (0, a.FL)(() => localStorage)
+            storage: (0, r.FL)(() => localStorage)
         }
     )
 );
 function s(e) {
-    return o.getState().channelDismissTimestamps[e];
+    return a.getState().channelDismissTimestamps[e];
+}
+function o() {
+    return a.getState().queuedWarning;
 }
 function l() {
-    return o.getState().queuedWarning;
+    a.setState({ queuedWarning: !1 });
 }
-function u() {
-    o.setState({ queuedWarning: !1 });
-}
-function c(e) {
-    o.setState((n) => ({
+function u(e) {
+    a.setState((t) => ({
         channelDismissTimestamps: {
-            ...n.channelDismissTimestamps,
+            ...t.channelDismissTimestamps,
             [e]: Date.now()
         }
     }));

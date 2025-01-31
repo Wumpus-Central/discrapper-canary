@@ -1,51 +1,47 @@
-n.d(t, {
-    Z: function () {
-        return s;
-    }
-});
+n.d(t, { Z: () => o });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(499033),
-    a = n(388032),
-    o = n(243946);
-function s(e) {
-    let { Icon: t, header: n, tip: s, disableStars: c } = e;
+var l = n(481060),
+    a = n(499033),
+    r = n(388032),
+    s = n(243946);
+function o(e) {
+    let { Icon: t, header: n, tip: o, disableStars: c } = e;
     return (0, i.jsxs)('div', {
-        className: o.container,
+        className: s.container,
         children: [
             (0, i.jsxs)('div', {
-                className: o.iconContainer,
+                className: s.iconContainer,
                 children: [
                     (0, i.jsx)(t, {
                         color: 'currentColor',
                         size: 'custom',
-                        className: o.icon,
+                        className: s.icon,
                         width: 36,
                         height: 36
                     }),
-                    c ? null : (0, i.jsx)(l.Z, { className: o.stars })
+                    c ? null : (0, i.jsx)(a.Z, { className: s.stars })
                 ]
             }),
-            (0, i.jsx)(r.Heading, {
-                className: o.header,
+            (0, i.jsx)(l.X6q, {
+                className: s.header,
                 variant: 'heading-xl/semibold',
                 children: n
             }),
-            (0, i.jsxs)(r.Text, {
+            (0, i.jsxs)(l.Text, {
                 color: 'header-secondary',
                 variant: 'text-xs/normal',
                 children: [
                     c
                         ? null
-                        : (0, i.jsxs)(r.Text, {
+                        : (0, i.jsxs)(l.Text, {
                               tag: 'span',
-                              className: o.protip,
+                              className: s.protip,
                               variant: 'text-xs/bold',
                               color: 'text-positive',
-                              children: [a.intl.string(a.t['8tvIiI']), ':', ' ']
+                              children: [r.intl.string(r.t['8tvIiI']), ':', ' ']
                           }),
-                    s
+                    o
                 ]
             })
         ]

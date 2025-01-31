@@ -1,67 +1,62 @@
 n.d(t, {
-    Dx: function () {
-        return m;
-    },
-    aP: function () {
-        return f;
-    }
+    Dx: () => h,
+    aP: () => p
 }),
     n(653041),
     n(47120);
-var i,
-    l,
-    r = n(192379),
-    a = n(392711),
-    s = n(442837),
-    o = n(638730),
-    c = n(358221),
-    d = n(136015),
-    u = n(565799),
-    h = n(431328),
-    p = n(501655);
-function m(e) {
-    let t = (0, h.Rk)(e, p.pV.AUDIENCE),
-        [n, i] = r.useState(!1);
+var i = n(192379),
+    l = n(392711),
+    a = n(442837),
+    r = n(638730),
+    s = n(358221),
+    o = n(136015),
+    c = n(565799),
+    d = n(431328),
+    u = n(501655);
+function h(e) {
+    let t = (0, d.Rk)(e, u.pV.AUDIENCE),
+        [n, l] = i.useState(!1);
     return (
-        r.useEffect(() => {
-            t > 100 ? i(!0) : t < 75 && i(!1);
+        i.useEffect(() => {
+            t > 100 ? l(!0) : t < 75 && l(!1);
         }, [t]),
         n ? 5000 : 0
     );
 }
-function f(e, t, n) {
-    let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        l = (function (e, t, n) {
-            let i = (0, s.e7)([u.Z], () => [e, u.Z.getParticipantsVersion(e)], [e], d.Q),
-                l = (0, s.e7)([c.Z], () => c.Z.getSelectedParticipantId(e), [e]);
-            return r.useMemo(() => {
-                let r = [],
-                    s = [],
-                    o = -1,
-                    c = [];
+function p(e, t, n) {
+    let d = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        h = (function (e, t, n) {
+            let r = (0, a.e7)([c.Z], () => [e, c.Z.getParticipantsVersion(e)], [e], o.Q),
+                d = (0, a.e7)([s.Z], () => s.Z.getSelectedParticipantId(e), [e]);
+            return i.useMemo(() => {
+                let i = [],
+                    a = [],
+                    s = -1,
+                    o = [];
                 if (n)
-                    for (let t of u.Z.getMutableParticipants(e, p.pV.SPEAKER))
-                        if (t.type === p.Ui.STREAM) t.id !== l && c.push(t), o++;
+                    for (let t of c.Z.getMutableParticipants(e, u.pV.SPEAKER))
+                        if (t.type === u.Ui.STREAM) t.id !== d && o.push(t), s++;
                         else break;
-                let d = (e, t, n) => {
-                        let i = n ? e.filter((e, t) => e.id !== l && t > o) : e,
-                            c = (0, a.chunk)(i, t);
-                        s.push(c), r.push(c.length);
+                let h = (e, t, n) => {
+                        let r = n ? e.filter((e, t) => e.id !== d && t > s) : e,
+                            o = (0, l.chunk)(r, t);
+                        a.push(o), i.push(o.length);
                     },
-                    h = null != l ? u.Z.getParticipant(e, l) : null;
+                    p = null != d ? c.Z.getParticipant(e, d) : null;
                 return (
-                    (null == h ? void 0 : h.speaker) ? d([h], 1, !1) : d([], 1, !1),
-                    [p.pV.SPEAKER, p.pV.AUDIENCE].forEach((e) => {
-                        d(u.Z.getMutableParticipants(i[0], e), t[e], e === p.pV.SPEAKER);
+                    (null == p ? void 0 : p.speaker) ? h([p], 1, !1) : h([], 1, !1),
+                    [u.pV.SPEAKER, u.pV.AUDIENCE].forEach((e) => {
+                        h(c.Z.getMutableParticipants(r[0], e), t[e], e === u.pV.SPEAKER);
                     }),
-                    d(c, 1, !1),
-                    [r, s]
+                    h(o, 1, !1),
+                    [i, a]
                 );
-            }, [i, t, l, n, e]);
-        })(e, t, i),
-        [h, m] = l,
-        [f, g] = (0, o.T)(l, n, [t[p.pV.AUDIENCE]]),
-        C = [h[i ? 3 : 0], h[1], f[2]];
-    return [C, [m[i ? 3 : 0], m[1], g[2]]];
+            }, [r, t, d, n, e]);
+        })(e, t, d),
+        [p, m] = h,
+        [f, g] = (0, r.T)(h, n, [t[u.pV.AUDIENCE]]);
+    return [
+        [p[d ? 3 : 0], p[1], f[2]],
+        [m[d ? 3 : 0], m[1], g[2]]
+    ];
 }
-((l = i || (i = {}))[(l.SELECTED = 0)] = 'SELECTED'), (l[(l.SPEAKER = 1)] = 'SPEAKER'), (l[(l.AUDIENCE = 2)] = 'AUDIENCE'), (l[(l.MEDIA = 3)] = 'MEDIA');

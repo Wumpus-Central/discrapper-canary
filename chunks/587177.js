@@ -1,35 +1,31 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(311850);
-function a(e, n, r) {
+n.d(t, { Z: () => a });
+var i = n(311850);
+function r(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class o {
+class a {
     static fromServer(e) {
-        let { prices: n, type: r, premium_type: a, name: s, sku_id: l, summary: u } = e;
-        return new o({
-            prices: (0, i.l)(n),
-            type: r,
-            premiumType: a,
+        let { prices: t, type: n, premium_type: r, name: s, sku_id: o, summary: l } = e;
+        return new a({
+            prices: (0, i.l)(t),
+            type: n,
+            premiumType: r,
             name: s,
-            skuId: l,
-            summary: u
+            skuId: o,
+            summary: l
         });
     }
     constructor(e) {
-        a(this, 'prices', void 0), a(this, 'type', void 0), a(this, 'premiumType', void 0), a(this, 'name', void 0), a(this, 'skuId', void 0), a(this, 'summary', void 0), (this.prices = e.prices), (this.type = e.type), (this.premiumType = e.premiumType), (this.name = e.name), (this.skuId = e.skuId), (this.summary = e.summary);
+        r(this, 'prices', void 0), r(this, 'type', void 0), r(this, 'premiumType', void 0), r(this, 'name', void 0), r(this, 'skuId', void 0), r(this, 'summary', void 0), (this.prices = e.prices), (this.type = e.type), (this.premiumType = e.premiumType), (this.name = e.name), (this.skuId = e.skuId), (this.summary = e.summary);
     }
 }

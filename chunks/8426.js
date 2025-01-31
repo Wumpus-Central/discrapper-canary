@@ -1,49 +1,19 @@
 n.d(t, {
-    Hr: function () {
-        return C;
-    },
-    Hz: function () {
-        return T;
-    },
-    To: function () {
-        return S;
-    },
-    XG: function () {
-        return _;
-    },
-    _N: function () {
-        return x;
-    },
-    ad: function () {
-        return I;
-    },
-    bj: function () {
-        return A;
-    },
-    el: function () {
-        return f;
-    },
-    hS: function () {
-        return v;
-    },
-    lq: function () {
-        return j;
-    },
-    mM: function () {
-        return b;
-    },
-    oo: function () {
-        return E;
-    },
-    q6: function () {
-        return y;
-    },
-    r2: function () {
-        return N;
-    },
-    vR: function () {
-        return p;
-    }
+    Hr: () => C,
+    Hz: () => I,
+    To: () => S,
+    XG: () => j,
+    _N: () => x,
+    ad: () => v,
+    bj: () => y,
+    el: () => _,
+    hS: () => f,
+    lq: () => E,
+    mM: () => b,
+    oo: () => T,
+    q6: () => Z,
+    r2: () => N,
+    vR: () => p
 }),
     n(390547);
 var i = n(392711),
@@ -70,7 +40,7 @@ function p(e) {
         action: e
     });
 }
-function f(e, t) {
+function _(e, t) {
     s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_UPDATE_NEW_MEMBER_ACTION',
         channelId: e,
@@ -83,13 +53,13 @@ function C(e) {
         channelId: e
     });
 }
-function v(e) {
+function f(e) {
     s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_REORDER_NEW_MEMBER_ACTION',
         actions: e
     });
 }
-async function I(e, t, n, i) {
+async function v(e, t, n, i) {
     if (!i) return Promise.resolve();
     try {
         let i = await l.tn.patch({
@@ -126,20 +96,20 @@ function N(e) {
         resourceChannel: e
     });
 }
-function _(e, t) {
+function j(e, t) {
     s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_UPDATE_RESOURCE_CHANNEL',
         channelId: e,
         resourceChannel: t
     });
 }
-function T(e) {
+function I(e) {
     s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_DELETE_RESOURCE_CHANNEL',
         resourceChannelId: e
     });
 }
-function j(e) {
+function E(e) {
     s.Z.dispatch({
         type: 'GUILD_SETTINGS_ONBOARDING_REORDER_RESOURCE_CHANNEL',
         resourceChannels: e
@@ -171,7 +141,7 @@ async function b(e, t, n) {
         });
     }
 }
-function E(e, t) {
+function T(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return n || m.Z.hasChanges()
         ? o.Z.getEnabled(e) && !(0, c.uo)(t)
@@ -206,7 +176,7 @@ function S(e, t) {
     );
 }
 async function R(e, t) {
-    var n, i, o, u, m, x, p, f, C;
+    var n, i, o, u, m, x, p, _, C;
     s.Z.dispatch({ type: 'GUILD_HOME_SETTINGS_UPDATE_START' });
     try {
         let r = await l.tn.put({
@@ -228,7 +198,7 @@ async function R(e, t) {
                 welcome_message_length: null !== (m = null == a ? void 0 : null === (o = a.welcomeMessage) || void 0 === o ? void 0 : null === (i = o.message) || void 0 === i ? void 0 : i.length) && void 0 !== m ? m : 0,
                 member_action_channel_ids: (null !== (x = null == a ? void 0 : a.newMemberActions) && void 0 !== x ? x : []).map((e) => e.channelId),
                 member_action_channel_actions: (null !== (p = null == a ? void 0 : a.newMemberActions) && void 0 !== p ? p : []).map((e) => e.actionType),
-                resource_channel_ids: (null !== (f = null == a ? void 0 : a.resourceChannels) && void 0 !== f ? f : []).map((e) => e.channelId),
+                resource_channel_ids: (null !== (_ = null == a ? void 0 : a.resourceChannels) && void 0 !== _ ? _ : []).map((e) => e.channelId),
                 enabled: null == a ? void 0 : a.enabled
             }),
             r.body
@@ -242,7 +212,7 @@ async function R(e, t) {
             });
     }
 }
-function y(e, t) {
+function Z(e, t) {
     null != e &&
         s.Z.dispatch({
             type: 'GUILD_SETTINGS_ONBOARDING_DISMISS_RESOURCE_CHANNEL_SUGGESTION',
@@ -250,6 +220,6 @@ function y(e, t) {
             channelIds: t
         });
 }
-function A() {
+function y() {
     s.Z.dispatch({ type: 'GUILD_SETTINGS_ONBOARDING_HOME_SETTINGS_RESET' });
 }

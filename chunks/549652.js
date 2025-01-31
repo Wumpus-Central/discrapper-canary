@@ -1,9 +1,4 @@
-n.r(e),
-    n.d(e, {
-        default: function () {
-            return E;
-        }
-    });
+n.r(e), n.d(e, { default: () => E });
 var s = n(200651),
     r = n(192379),
     i = n(593473),

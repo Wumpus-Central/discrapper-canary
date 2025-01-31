@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return p;
-    }
-});
+n.d(t, { Z: () => p });
 var i = n(200651),
     r = n(192379),
     l = n(120356),
@@ -19,22 +15,22 @@ let x = (0, m.Mg)(a.Z.ROLE_ICON_UPLOADER_ICON_SIZE);
 function p(e) {
     let { role: t, 'aria-label': n = h.intl.string(h.t['MsUY/f']), className: l, onClick: a, disabled: m = !1 } = e,
         p = r.useRef(null),
-        f = r.useMemo(() => (null != t ? (0, d.Kz)(t, x) : null), [t]),
+        _ = r.useMemo(() => (null != t ? (0, d.Kz)(t, x) : null), [t]),
         C =
-            null != f
+            null != _
                 ? (0, i.jsx)(c.Z, {
                       enableTooltip: !1,
                       className: g.icon,
-                      ...f
+                      ..._
                   })
-                : (0, i.jsx)(o.ImagePlusIcon, {
+                : (0, i.jsx)(o.FmF, {
                       size: 'md',
                       color: 'currentColor',
                       className: g.icon
                   });
-    return (0, i.jsx)(o.FocusRing, {
+    return (0, i.jsx)(o.tEY, {
         ringTarget: p,
-        children: (0, i.jsxs)(o.Clickable, {
+        children: (0, i.jsxs)(o.P3F, {
             'aria-label': n,
             className: s()(g.container, l, { [g.disabled]: m }),
             onClick: m ? void 0 : a,
@@ -45,7 +41,7 @@ function p(e) {
                     className: g.preview,
                     children: C
                 }),
-                null != f ? (0, i.jsx)(u.S, { className: g.uploaderIcon }) : null
+                null != _ ? (0, i.jsx)(u.S, { className: g.uploaderIcon }) : null
             ]
         })
     });

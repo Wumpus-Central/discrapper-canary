@@ -1,10 +1,6 @@
-r.d(n, {
-    lG: function () {
-        return i;
-    },
-    td: function () {
-        return a;
-    }
+n.d(t, {
+    lG: () => i,
+    td: () => r
 });
 let i = 500,
-    a = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
+    r = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';

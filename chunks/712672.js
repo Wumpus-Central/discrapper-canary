@@ -1,7 +1,6 @@
 var n = r(169774),
     i = r(581079),
-    o = n.isBrowser('Chrome'),
-    a = o
+    o = n.isBrowser('Chrome')
         ? function (t) {
               for (var e = t.cloneRange(), r = [], n = t.endContainer; null != n; n = n.parentNode) {
                   var o,
@@ -16,4 +15,4 @@ var n = r(169774),
         : function (t) {
               return Array.from(t.getClientRects());
           };
-t.exports = a;
+t.exports = o;

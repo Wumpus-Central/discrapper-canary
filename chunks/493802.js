@@ -1,23 +1,19 @@
-t.d(e, {
-    Z: function () {
-        return d;
-    }
-});
-var i = t(200651);
-t(192379);
-var l = t(442837),
-    r = t(481060),
-    u = t(5036),
-    o = t(58468),
-    a = t(388032);
-function d(n) {
-    let e = (0, l.e7)([o.Z], () => o.Z.isCollapsed(n.id), [n.id]);
+i.d(t, { Z: () => c });
+var e = i(200651);
+i(192379);
+var l = i(442837),
+    a = i(481060),
+    r = i(5036),
+    d = i(58468),
+    s = i(388032);
+function c(n) {
+    let t = (0, l.e7)([d.Z], () => d.Z.isCollapsed(n.id), [n.id]);
     return __OVERLAY__
         ? null
-        : (0, i.jsx)(r.MenuCheckboxItem, {
+        : (0, e.jsx)(a.S89, {
               id: 'hide-voice-names',
-              label: a.intl.string(a.t.LxzNio),
-              action: () => u.Z.update(n.id),
-              checked: e
+              label: s.intl.string(s.t.LxzNio),
+              action: () => r.Z.update(n.id),
+              checked: t
           });
 }

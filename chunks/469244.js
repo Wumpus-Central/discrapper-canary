@@ -1,6 +1,2 @@
-n.d(t, {
-    P: function () {
-        return i.P;
-    }
-});
-var i = n(161294);
+n.d(t, { P: () => s.P });
+var s = n(161294);

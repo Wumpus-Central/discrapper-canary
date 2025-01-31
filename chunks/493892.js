@@ -1,24 +1,18 @@
-r.d(n, {
-    DQ: function () {
-        return u;
-    },
-    He: function () {
-        return l;
-    },
-    P1: function () {
-        return s;
-    }
+n.d(t, {
+    DQ: () => l,
+    He: () => o,
+    P1: () => s
 });
-var i = r(825829),
-    a = r(594174),
-    o = r(981631);
+var i = n(825829),
+    r = n(594174),
+    a = n(981631);
 function s(e) {
-    return void 0 !== e && e.type !== o.d4z.DM;
+    return void 0 !== e && e.type !== a.d4z.DM;
+}
+function o(e) {
+    var t, n;
+    return null !== (n = null === (t = r.default.getUser(e)) || void 0 === t ? void 0 : t.hasFlag(a.xW$.SPAMMER)) && void 0 !== n && n;
 }
 function l(e) {
-    var n, r;
-    return null !== (r = null === (n = a.default.getUser(e)) || void 0 === n ? void 0 : n.hasFlag(o.xW$.SPAMMER)) && void 0 !== r && r;
-}
-function u(e) {
-    return l(e.author.id) && !(0, i.nY)(e);
+    return o(e.author.id) && !(0, i.nY)(e);
 }

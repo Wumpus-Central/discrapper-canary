@@ -1,13 +1,7 @@
 n.d(t, {
-    HV: function () {
-        return s;
-    },
-    IS: function () {
-        return r;
-    },
-    VY: function () {
-        return u;
-    }
+    HV: () => s,
+    IS: () => r,
+    VY: () => c
 }),
     n(627494),
     n(757143),
@@ -35,7 +29,7 @@ let r = (e, t) =>
             })
             .replaceAll('*', '');
     },
-    u = (e) => {
+    c = (e) => {
         let { entry: t, channel: n, users: r, countOthers: o } = e,
             s = (0, a.kr)(t) ? i.t.QaUWPT : i.t['7j/5mp'];
         return i.intl

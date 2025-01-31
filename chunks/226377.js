@@ -1,95 +1,91 @@
-r.d(t, {
-    q: function () {
-        return A;
-    }
-});
-var a = r(899517),
-    n = r(622916),
-    _ = r(101284),
-    o = r(263449),
-    E = r(255768),
-    i = r(696486),
-    c = r(152228),
-    s = r(366569),
-    l = r(147498);
-function I(e, t) {
-    let r = (0, a.Y)('globalMetricsAggregators', () => new WeakMap()),
-        n = r.get(e);
+a.d(e, { q: () => d });
+var r = a(899517),
+    n = a(622916),
+    o = a(101284),
+    _ = a(263449),
+    i = a(255768),
+    c = a(696486),
+    s = a(152228),
+    E = a(366569),
+    l = a(147498);
+function u(t, e) {
+    let a = (0, r.Y)('globalMetricsAggregators', () => new WeakMap()),
+        n = a.get(t);
     if (n) return n;
-    let _ = new t(e);
-    return e.on('flush', () => _.flush()), e.on('close', () => _.close()), r.set(e, _), _;
+    let o = new e(t);
+    return t.on('flush', () => o.flush()), t.on('close', () => o.close()), a.set(t, o), o;
 }
-function u(e, t, r, a, _ = {}) {
-    let c = _.client || (0, o.s3)();
-    if (!c) return;
-    let s = (0, i.HN)(),
-        l = s ? (0, i.Gx)(s) : void 0,
-        u = l && (0, i.XU)(l).description,
-        { unit: R, tags: A, timestamp: T } = _,
-        { release: N, environment: d } = c.getOptions(),
-        f = {};
-    N && (f.release = N),
-        d && (f.environment = d),
-        u && (f.transaction = u),
-        E.X && n.kg.log(`Adding value of ${a} to ${t} metric ${r}`),
-        I(c, e).add(
-            t,
-            r,
+function I(t, e, a, r, o = {}) {
+    let s = o.client || (0, _.s3)();
+    if (!s) return;
+    let E = (0, c.HN)(),
+        l = E ? (0, c.Gx)(E) : void 0,
+        R = l && (0, c.XU)(l).description,
+        { unit: d, tags: A, timestamp: f } = o,
+        { release: p, environment: T } = s.getOptions(),
+        N = {};
+    p && (N.release = p),
+        T && (N.environment = T),
+        R && (N.transaction = R),
+        i.X && n.kg.log(`Adding value of ${r} to ${e} metric ${a}`),
+        u(s, t).add(
+            e,
             a,
-            R,
+            r,
+            d,
             {
-                ...f,
+                ...N,
                 ...A
             },
-            T
+            f
         );
 }
-function R(e, t, r, a) {
-    u(e, l.g_, t, T(r), a);
+function R(t, e, a, r) {
+    I(t, l.g_, e, A(a), r);
 }
-let A = {
-    increment: function (e, t, r = 1, a) {
-        u(e, l.JM, t, T(r), a);
+let d = {
+    increment: function (t, e, a = 1, r) {
+        I(t, l.JM, e, A(a), r);
     },
     distribution: R,
-    set: function (e, t, r, a) {
-        u(e, l.is, t, r, a);
+    set: function (t, e, a, r) {
+        I(t, l.is, e, a, r);
     },
-    gauge: function (e, t, r, a) {
-        u(e, l.uG, t, T(r), a);
+    gauge: function (t, e, a, r) {
+        I(t, l.uG, e, A(a), r);
     },
-    timing: function (e, t, r, a = 'second', n) {
-        if ('function' == typeof r) {
-            let a = (0, _.ph)();
-            return (0, c.V0)(
+    timing: function (t, e, a, r = 'second', n) {
+        if ('function' == typeof a) {
+            let r = (0, o.ph)();
+            return (0, s.V0)(
                 {
                     op: 'metrics.timing',
-                    name: t,
-                    startTime: a,
+                    name: e,
+                    startTime: r,
                     onlyIfParent: !0
                 },
-                (o) =>
-                    (0, s.i)(
-                        () => r(),
+                (_) =>
+                    (0, E.i)(
+                        () => a(),
                         () => {},
                         () => {
-                            let r = (0, _.ph)();
-                            R(e, t, r - a, {
+                            let a = (0, o.ph)();
+                            R(t, e, a - r, {
                                 ...n,
                                 unit: 'second'
                             }),
-                                o.end(r);
+                                _.end(a);
                         }
                     )
             );
         }
-        R(e, t, r, {
+        R(t, e, a, {
             ...n,
-            unit: a
+            unit: r
         });
     },
-    getMetricsAggregatorForClient: I
+    getMetricsAggregatorForClient: u
 };
-function T(e) {
-    return 'string' == typeof e ? parseInt(e) : e;
+function A(t) {
+    return 'string' == typeof t ? parseInt(t) : t;
 }

@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return m;
-    }
-});
+n.d(t, { Z: () => m });
 var i = n(200651);
 n(192379);
 var r = n(399606),
@@ -21,7 +17,7 @@ function m() {
     return (0, i.jsx)('main', {
         children:
             null == e || !t || m
-                ? (0, i.jsx)(l.Spinner, {})
+                ? (0, i.jsx)(l.$jN, {})
                 : (0, i.jsx)(c.t, {
                       guildId: e.id,
                       hasValidApplication: h

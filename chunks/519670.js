@@ -1,6 +1,7 @@
 e.exports = {
-    card: 'card_f3d244',
-    header: 'header_f3d244',
-    splashArt: 'splashArt_f3d244 coverArtPosition_f3d244',
-    body: 'body_f3d244'
+    card: 'card_fedacc',
+    header: 'header_fedacc',
+    coverArtPosition: 'coverArtPosition_fedacc',
+    splashArt: 'splashArt_fedacc coverArtPosition_fedacc',
+    body: 'body_fedacc'
 };

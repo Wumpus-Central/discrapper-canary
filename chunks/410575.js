@@ -1,73 +1,69 @@
-r.d(n, {
-    Z: function () {
-        return f;
-    }
-});
+n.d(t, { Z: () => d });
 var i,
-    a = r(200651),
-    o = r(192379),
-    s = r(772848),
-    l = r(626135),
-    u = r(251625),
-    c = r(981631);
-function d(e, n, r) {
+    r = n(200651),
+    a = n(192379),
+    s = n(772848),
+    o = n(626135),
+    l = n(251625),
+    u = n(981631);
+function c(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class f extends (i = o.Component) {
+class d extends (i = a.Component) {
     renderProvider(e) {
-        var n, r;
-        let { section: i, page: o, object: s, objectType: u, children: c } = this.props,
-            d = this.mergeLocation(e.location, this.getLocation(o, i, s, u)),
-            f = this.getContext(d, null !== (n = this._loadDate) && void 0 !== n ? n : e.loadDate, null !== (r = this._loadId) && void 0 !== r ? r : e.loadId);
-        return (0, a.jsx)(l.AnalyticsContext.Provider, {
-            value: f,
-            children: c
+        var t, n;
+        let { section: i, page: a, object: s, objectType: l, children: u } = this.props,
+            c = this.mergeLocation(e.location, this.getLocation(a, i, s, l)),
+            d = this.getContext(c, null !== (t = this._loadDate) && void 0 !== t ? t : e.loadDate, null !== (n = this._loadId) && void 0 !== n ? n : e.loadId);
+        return (0, r.jsx)(o.AnalyticsContext.Provider, {
+            value: d,
+            children: u
         });
     }
     render() {
         let { context: e } = this.props;
-        return null != e ? this.renderProvider(e) : (0, a.jsx)(l.AnalyticsContext.Consumer, { children: (e) => this.renderProvider(e) });
+        return null != e ? this.renderProvider(e) : (0, r.jsx)(o.AnalyticsContext.Consumer, { children: (e) => this.renderProvider(e) });
     }
     constructor(e) {
         super(e),
-            d(this, '_loadId', null),
-            d(this, '_loadDate', this.props.root ? Date.now() : null),
-            d(
+            c(this, '_loadId', null),
+            c(this, '_loadDate', this.props.root ? Date.now() : null),
+            c(
                 this,
                 'getLocation',
-                (0, u.oH)((e, n, r, i) => {
-                    let a = {};
-                    return null != e && (a.page = e), null != n && (a.section = n), null != r && (a.object = r), null != i && (a.objectType = i), a;
+                (0, l.oH)((e, t, n, i) => {
+                    let r = {};
+                    return null != e && (r.page = e), null != t && (r.section = t), null != n && (r.object = n), null != i && (r.objectType = i), r;
                 })
             ),
-            d(
+            c(
                 this,
                 'mergeLocation',
-                (0, u.oH)((e, n) => ({
+                (0, l.oH)((e, t) => ({
                     ...e,
-                    ...n
+                    ...t
                 }))
             ),
-            d(
+            c(
                 this,
                 'getContext',
-                (0, u.oH)((e, n, r) => ({
+                (0, l.oH)((e, t, n) => ({
                     location: e,
-                    loadDate: n,
-                    loadId: r
+                    loadDate: t,
+                    loadId: n
                 }))
             ),
             null != e.loadId ? (this._loadId = e.loadId) : e.root && (this._loadId = (0, s.Z)());
     }
 }
-d(f, 'Pages', c.ZY5), d(f, 'Sections', c.jXE), d(f, 'Objects', c.qAy), d(f, 'ObjectTypes', c.Qqv), d(f, 'defaultProps', { root: !1 });
+c(d, 'Pages', u.ZY5), c(d, 'Sections', u.jXE), c(d, 'Objects', u.qAy), c(d, 'ObjectTypes', u.Qqv), c(d, 'defaultProps', { root: !1 });

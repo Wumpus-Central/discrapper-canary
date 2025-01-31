@@ -1,76 +1,70 @@
-r.d(n, {
-    JD: function () {
-        return h;
-    },
-    Wd: function () {
-        return f;
-    },
-    mF: function () {
-        return d;
-    }
+n.d(t, {
+    JD: () => _,
+    Wd: () => d,
+    mF: () => c
 }),
-    r(200651);
-var i = r(192379),
-    a = r(372817),
-    o = r(5967),
-    s = r(420212);
-let l = 'data-jump-section',
-    u = 'global',
-    c = i.createContext(u);
-function d() {
-    let e = i.useContext(c);
-    return i.useMemo(() => ({ [l]: e }), [e]);
+    n(200651);
+var i = n(192379),
+    r = n(372817),
+    a = n(5967),
+    s = n(420212);
+let o = 'data-jump-section',
+    l = 'global',
+    u = i.createContext(l);
+function c() {
+    let e = i.useContext(u);
+    return i.useMemo(() => ({ [o]: e }), [e]);
 }
-function f(e) {
-    let n = d();
-    return e.children(n);
+function d(e) {
+    let t = c();
+    return e.children(t);
 }
-async function p(e) {
-    var n, r, i, c;
+async function f(e) {
+    var t, n, i, u;
     if (e.key !== s.LT) return;
-    let d = (0, o.uB)(e);
-    if (null == d) return;
-    let f = null,
-        p = null,
-        h = e.target;
-    for (; null != h; ) {
-        if (h.hasAttribute(l)) {
-            (f = h.getAttribute(l)), (p = h);
+    let c = (0, a.uB)(e);
+    if (null == c) return;
+    let d = null,
+        f = null,
+        _ = e.target;
+    for (; null != _; ) {
+        if (_.hasAttribute(o)) {
+            (d = _.getAttribute(o)), (f = _);
             break;
         }
-        h = h.parentElement;
+        _ = _.parentElement;
     }
-    let _ = (0, a.E)({
-        getFocusableElements: () => Array.from(d.querySelectorAll('['.concat(l, '="').concat(null != f ? f : u, '"]'))),
-        getActiveElement: () => d.activeElement
+    let p = (0, r.E)({
+        getFocusableElements: () => Array.from(c.querySelectorAll('['.concat(o, '="').concat(null != d ? d : l, '"]'))),
+        getActiveElement: () => c.activeElement
     });
-    if ((null === (n = (0, o.uB)(e)) || void 0 === n ? void 0 : n.activeElement) == null || null == p) {
-        null === (r = _.getFirstFocusableElement()) || void 0 === r || r.focus();
+    if ((null === (t = (0, a.uB)(e)) || void 0 === t ? void 0 : t.activeElement) == null || null == f) {
+        null === (n = p.getFirstFocusableElement()) || void 0 === n || n.focus();
         return;
     }
     e.getModifierState('Shift')
         ? null ===
-              (i = await _.getPreviousFocusableElement({
+              (i = await p.getPreviousFocusableElement({
                   wrap: !0,
-                  from: p
+                  from: f
               })) ||
           void 0 === i ||
           i.focus()
         : null ===
-              (c = await _.getNextFocusableElement({
+              (u = await p.getNextFocusableElement({
                   wrap: !0,
-                  from: p
+                  from: f
               })) ||
-          void 0 === c ||
-          c.focus();
+          void 0 === u ||
+          u.focus();
 }
-function h(e) {
+function _(e) {
     i.useEffect(() => {
         if (e)
             return (
-                window.addEventListener('keydown', p),
+                window.addEventListener('keydown', f),
                 () => {
-                    window.removeEventListener('keydown', p);
+                    window.removeEventListener('keydown', f);
                 }
             );
     }, [e]);

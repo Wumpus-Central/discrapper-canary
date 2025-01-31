@@ -1,9 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return p;
-    }
-}),
-    n(536091);
+n.d(t, { Z: () => p }), n(536091);
 var i = n(200651),
     r = n(192379),
     l = n(481060),
@@ -24,14 +19,14 @@ function x(e) {
             (0, i.jsxs)('div', {
                 className: g.safetyStepContent,
                 children: [
-                    (0, i.jsx)(l.Avatar, {
+                    (0, i.jsx)(l.qEK, {
                         src: r,
-                        size: l.AvatarSizes.SIZE_40,
+                        size: l.EFr.SIZE_40,
                         'aria-label': t
                     }),
                     (0, i.jsxs)('div', {
                         children: [
-                            (0, i.jsx)(l.Heading, {
+                            (0, i.jsx)(l.X6q, {
                                 variant: 'heading-md/semibold',
                                 color: 'header-primary',
                                 children: t
@@ -45,11 +40,11 @@ function x(e) {
                     })
                 ]
             }),
-            (0, i.jsx)(l.Button, {
+            (0, i.jsx)(l.zxk, {
                 className: g.__invalid_editButton,
-                size: l.Button.Sizes.SMALL,
-                color: l.Button.Colors.PRIMARY,
-                look: l.Button.Looks.OUTLINED,
+                size: l.zxk.Sizes.SMALL,
+                color: l.zxk.Colors.PRIMARY,
+                look: l.zxk.Looks.OUTLINED,
                 onClick: () => (0, d.K)(s),
                 children: h.intl.string(h.t.bt75u7)
             })
@@ -61,40 +56,38 @@ function p(e) {
     (0, s.RD)(t.id);
     let d = (0, a.Z6)(t.id),
         { rulesByTriggerType: p } = (0, s.pH)(t.id),
-        { numEnabledRules: f, numRules: C } = r.useMemo(() => {
+        { numEnabledRules: _, numRules: C } = r.useMemo(() => {
             let e = 0,
                 t = 0;
-            return null == p
-                ? {
-                      numEnabledRules: e,
-                      numRules: t
-                  }
-                : (Object.values(d)
-                      .flat()
-                      .forEach((n) => {
-                          var i;
-                          let r = null === (i = p[n]) || void 0 === i ? void 0 : i.filter(c.lm);
-                          if (null == r || 0 === r.length) {
-                              t++;
-                              return;
-                          }
-                          r.forEach((n) => {
-                              n.enabled && e++, t++;
-                          });
-                      }),
-                  {
-                      numEnabledRules: e,
-                      numRules: t
-                  });
+            return (
+                null == p ||
+                    Object.values(d)
+                        .flat()
+                        .forEach((n) => {
+                            var i;
+                            let r = null === (i = p[n]) || void 0 === i ? void 0 : i.filter(c.lm);
+                            if (null == r || 0 === r.length) {
+                                t++;
+                                return;
+                            }
+                            r.forEach((n) => {
+                                n.enabled && e++, t++;
+                            });
+                        }),
+                {
+                    numEnabledRules: e,
+                    numRules: t
+                }
+            );
         }, [d, p]),
-        v = (0, m.Q)(t),
-        I = v[u.u.CAPTCHA_AND_RAID_PROTECTION],
-        N = v[u.u.DM_AND_SPAM_PROTECTION],
-        _ = v[u.u.PERMISSIONS],
-        T = (0, o.pr)(t.id);
+        f = (0, m.Q)(t),
+        v = f[u.u.CAPTCHA_AND_RAID_PROTECTION],
+        N = f[u.u.DM_AND_SPAM_PROTECTION],
+        j = f[u.u.PERMISSIONS],
+        I = (0, o.pr)(t.id);
     return (0, i.jsxs)('div', {
         children: [
-            (0, i.jsx)(l.Heading, {
+            (0, i.jsx)(l.X6q, {
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
                 className: g.header,
@@ -107,8 +100,8 @@ function p(e) {
                         icon: n(14215),
                         title: h.intl.string(h.t['53eF5u']),
                         subtitle: h.intl.formatToPlainString(h.t.TG7NYG, {
-                            enabled: I.filter((e) => e.enabled).length,
-                            total: I.length
+                            enabled: v.filter((e) => e.enabled).length,
+                            total: v.length
                         }),
                         page: u.u.CAPTCHA_AND_RAID_PROTECTION
                     }),
@@ -123,14 +116,14 @@ function p(e) {
                         page: u.u.DM_AND_SPAM_PROTECTION
                     }),
                     (0, i.jsx)('div', { className: g.divider }),
-                    T &&
+                    I &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)(x, {
                                     icon: n(145136),
                                     title: h.intl.string(h.t.uRelg4),
                                     subtitle: h.intl.formatToPlainString(h.t.TG7NYG, {
-                                        enabled: f,
+                                        enabled: _,
                                         total: C
                                     }),
                                     page: u.u.AUTOMOD
@@ -142,8 +135,8 @@ function p(e) {
                         icon: n(913414),
                         title: h.intl.string(h.t.xrmhRU),
                         subtitle: h.intl.formatToPlainString(h.t.TG7NYG, {
-                            enabled: _.filter((e) => e.enabled).length,
-                            total: _.length
+                            enabled: j.filter((e) => e.enabled).length,
+                            total: j.length
                         }),
                         page: u.u.PERMISSIONS
                     })

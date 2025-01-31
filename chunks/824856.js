@@ -1,57 +1,53 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-});
+n.d(t, { Z: () => p });
 var i = n(200651),
-    r = n(192379),
-    s = n(120356),
-    a = n.n(s),
-    l = n(561537),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(561537),
     o = n(269210),
     c = n(481060),
     d = n(58385),
     u = n(889989),
     m = n(937615),
-    g = n(624138),
-    h = n(150414),
-    p = n(993553),
+    h = n(624138),
+    g = n(150414),
+    _ = n(993553),
     x = n(525981);
-function f(e) {
-    let { cta: t, storeListing: n, className: s } = e,
-        { applicationId: f, benefits: E, description: _ } = n,
-        C = r.useMemo(() => (null == n.thumbnail ? null : (0, h.q)(f, n.thumbnail, 256)), [f, n.thumbnail]),
+function p(e) {
+    let { cta: t, storeListing: n, className: r } = e,
+        { applicationId: p, benefits: E, description: C } = n,
+        f = s.useMemo(() => (null == n.thumbnail ? null : (0, g.q)(p, n.thumbnail, 256)), [p, n.thumbnail]),
         { data: T } = (0, d.X)(n.skuId),
-        S = r.useMemo(() => {
+        N = s.useMemo(() => {
             if (null == T || 0 === T.length) return null;
             let e = T[0];
             return (0, m.xg)(e);
         }, [T]);
-    return null == S
+    return null == N
         ? null
-        : (0, i.jsxs)(l.l, {
-              className: a()(x.wrapper, s),
+        : (0, i.jsxs)(a.l, {
+              className: l()(x.wrapper, r),
               header: (0, i.jsxs)(i.Fragment, {
                   children: [
                       (0, i.jsxs)('div', {
                           className: x.headerTitle,
                           children: [
-                              null != C &&
-                                  (0, i.jsx)(c.Image, {
-                                      src: C.href,
+                              null != f &&
+                                  (0, i.jsx)(c.Eep, {
+                                      src: f.href,
                                       imageClassName: x.subscriptionImg,
                                       width: 48,
                                       height: 48
                                   }),
                               (0, i.jsxs)('div', {
                                   children: [
-                                      (0, i.jsx)(c.Heading, {
+                                      (0, i.jsx)(c.X6q, {
                                           variant: 'heading-md/bold',
                                           children: n.summary
                                       }),
                                       (0, i.jsx)(c.Text, {
                                           variant: 'text-md/medium',
-                                          children: S
+                                          children: N
                                       })
                                   ]
                               })
@@ -61,12 +57,12 @@ function f(e) {
                   ]
               }),
               children: [
-                  !(0, g.Ew)(_) &&
+                  !(0, h.Ew)(C) &&
                       (0, i.jsx)('div', {
                           className: x.description,
-                          children: (0, i.jsx)(p.Z, {
+                          children: (0, i.jsx)(_.Z, {
                               variant: 'text-sm/medium',
-                              children: _
+                              children: C
                           })
                       }),
                   null != E &&
@@ -74,13 +70,13 @@ function f(e) {
                       (0, i.jsx)('div', {
                           className: x.benefits,
                           children: E.map((e) => {
-                              let { id: t, name: n, description: r, icon: s } = e;
+                              let { id: t, name: n, description: s, icon: r } = e;
                               return (0, i.jsx)(
                                   o.Gm,
                                   {
                                       header: n,
-                                      icon: (0, u.n)(f, s),
-                                      description: r
+                                      icon: (0, u.n)(p, r),
+                                      description: s
                                   },
                                   t
                               );

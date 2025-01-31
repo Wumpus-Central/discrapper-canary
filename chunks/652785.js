@@ -1,17 +1,11 @@
 n.d(t, {
-    HG: function () {
-        return m;
-    },
-    Iv: function () {
-        return u;
-    },
-    XN: function () {
-        return h;
-    }
+    HG: () => m,
+    Iv: () => u,
+    XN: () => h
 });
 var i = n(704215),
-    r = n(823385),
-    l = n(327689),
+    l = n(823385),
+    r = n(327689),
     a = n(421176),
     s = n(456065),
     o = n(683743),
@@ -30,7 +24,7 @@ let u = 'lastHiddenChannelNotice',
         },
         {
             type: d.vID.GUILD_BANNER,
-            store: l.Z,
+            store: r.Z,
             dismissibleContentType: i.z.CHANNEL_NOTICE_GUILD_BANNER
         },
         {
@@ -45,7 +39,7 @@ let u = 'lastHiddenChannelNotice',
         },
         {
             type: d.vID.QUICKSWITCHER,
-            store: r.Z,
+            store: l.Z,
             dismissibleContentType: i.z.CHANNEL_NOTICE_QUICKSWITCHER
         },
         {

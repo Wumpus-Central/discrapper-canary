@@ -1,12 +1,12 @@
-r(47120);
+r.d(t, { Z: () => o }), r(47120);
 var n = r(192379),
     a = r(570140),
     i = r(4646),
     l = r(258340),
-    c = r(768581),
-    u = r(176354),
+    u = r(768581),
+    c = r(176354),
     s = r(823961);
-t.Z = (e) => {
+let o = (e) => {
     let { update: t, draw: r, emit: o, tickRate: d, improvePerformance: f, shouldTick: m } = (0, l.Z)(e),
         h = n.useMemo(() => new i.ZP(), []),
         p = n.useCallback(
@@ -15,9 +15,10 @@ t.Z = (e) => {
             },
             [h, r]
         ),
-        [y, w] = n.useState(!1),
+        [w, y] = n.useState(!1),
         v = n.useRef(),
-        x = n.useRef();
+        x = n.useRef(),
+        S = n.useRef(s.Z.lastConfetti);
     return (
         n.useEffect(() => {
             async function e(e) {
@@ -26,8 +27,8 @@ t.Z = (e) => {
                     i = null !== (t = r.id) && void 0 !== t ? t : r.name,
                     l =
                         null == r.id
-                            ? u.ZP.getURL(r.name)
-                            : c.ZP.getEmojiURL({
+                            ? c.ZP.getURL(r.name)
+                            : u.ZP.getEmojiURL({
                                   id: r.id,
                                   animated: !1,
                                   size: 64,
@@ -35,18 +36,20 @@ t.Z = (e) => {
                               });
                 await h.loadRemoteImage(i, l),
                     o(i, n),
-                    w(!0),
+                    y(!0),
                     null != x.current && clearTimeout(x.current),
                     (x.current = setTimeout(() => {
-                        let e = s.Z.lastConfettiTrigger;
-                        (null == e || Date.now() - e > 5000) &&
+                        var e;
+                        let t = null === (e = s.Z.lastConfetti) || void 0 === e ? void 0 : e.triggerTime;
+                        (null == t || Date.now() - t > 2500) &&
                             a.Z.dispatch({
                                 type: 'POTIONS_SET_CONFETTI_MODE',
                                 enabled: !1
                             });
-                    }, 5000));
+                    }, 2500));
             }
-            return a.Z.subscribe('POTIONS_TRIGGER_MESSAGE_CONFETTI', e), () => a.Z.unsubscribe('POTIONS_TRIGGER_MESSAGE_CONFETTI', e);
+            let t = S.current;
+            return null != t && ((S.current = void 0), e(t)), a.Z.subscribe('POTIONS_TRIGGER_MESSAGE_CONFETTI', e), () => a.Z.unsubscribe('POTIONS_TRIGGER_MESSAGE_CONFETTI', e);
         }, [h, o]),
         n.useEffect(
             () => () => {
@@ -56,7 +59,7 @@ t.Z = (e) => {
         ),
         n.useEffect(() => {
             let e = () => {
-                m.current ? (v.current = setTimeout(e, 1000)) : (w(!1), (v.current = null));
+                m.current ? (v.current = setTimeout(e, 1000)) : (y(!1), (v.current = null));
             };
             return (
                 (v.current = setTimeout(e, 1000)),
@@ -64,13 +67,13 @@ t.Z = (e) => {
                     null != v.current && clearTimeout(v.current);
                 }
             );
-        }, [y, m]),
+        }, [w, m]),
         {
             update: t,
             draw: p,
             tickRate: d,
             improvePerformance: f,
-            playing: y
+            playing: w
         }
     );
 };

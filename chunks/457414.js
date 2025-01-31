@@ -1,10 +1,6 @@
 n.d(t, {
-    S: function () {
-        return c;
-    },
-    w: function () {
-        return p;
-    }
+    S: () => c,
+    w: () => p
 });
 var i = n(481060),
     r = n(925221),
@@ -39,15 +35,13 @@ let c = (e) => {
         return null !== (n = null == t ? void 0 : t.name) && void 0 !== n ? n : s.I6[e].getDefaultRuleName();
     },
     m = (e, t) => {
-        if (!!(0, l.Vb)(t)) {
-            if ((0, l.DO)(t))
-                return t.triggerMetadata.regexPatterns.length > 0
-                    ? o.intl.formatToPlainString(o.t.xZUvxc, {
-                          keywordCount: t.triggerMetadata.keywordFilter.length,
-                          regexPatternCount: t.triggerMetadata.regexPatterns.length
-                      })
-                    : o.intl.formatToPlainString(o.t.dJN7Li, { keywordCount: t.triggerMetadata.keywordFilter.length });
-        }
+        if ((0, l.Vb)(t) && (0, l.DO)(t))
+            return t.triggerMetadata.regexPatterns.length > 0
+                ? o.intl.formatToPlainString(o.t.xZUvxc, {
+                      keywordCount: t.triggerMetadata.keywordFilter.length,
+                      regexPatternCount: t.triggerMetadata.regexPatterns.length
+                  })
+                : o.intl.formatToPlainString(o.t.dJN7Li, { keywordCount: t.triggerMetadata.keywordFilter.length });
     },
     h = (e) => {
         switch (e) {
@@ -71,14 +65,14 @@ let c = (e) => {
     x = (e) => {
         switch (e) {
             case a.fX.MENTION_SPAM:
-                return i.AtIcon;
+                return i.lOy;
             case a.fX.KEYWORD:
-                return i.ChannelListPlusIcon;
+                return i.avL;
             case a.fX.ML_SPAM:
             case a.fX.USER_PROFILE:
-                return (0, i.makeIconCompat)(r.Z);
+                return (0, i.GSL)(r.Z);
             case a.fX.DEFAULT_KEYWORD_LIST:
-                return i.MenuIcon;
+                return i.Oqj;
         }
     };
 function p(e, t) {
@@ -89,7 +83,7 @@ function p(e, t) {
               headerSubtext: null !== (r = m(e, t)) && void 0 !== r ? r : '',
               descriptionText: null !== (l = h(e)) && void 0 !== l ? l : '',
               descriptionSubtext: null !== (s = g(e)) && void 0 !== s ? s : '',
-              icon: null !== (a = x(e)) && void 0 !== a ? a : i.LinkIcon
+              icon: null !== (a = x(e)) && void 0 !== a ? a : i.xPt
           }
         : null;
 }

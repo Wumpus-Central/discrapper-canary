@@ -1,29 +1,25 @@
-t.d(n, {
-    Z: function () {
-        return g;
-    }
-});
-var i = t(200651),
-    l = t(192379),
-    r = t(512722),
-    a = t.n(r),
-    o = t(481060),
-    s = t(626135),
-    u = t(358085),
-    d = t(981631),
-    c = t(388032);
+n.d(t, { Z: () => g });
+var i = n(200651),
+    l = n(192379),
+    a = n(512722),
+    s = n.n(a),
+    r = n(481060),
+    o = n(626135),
+    d = n(358085),
+    c = n(981631),
+    u = n(388032);
 function g(e) {
-    let n = l.useCallback(() => {
-        a()(null != e, 'text cannot be null'), s.default.track(d.rMx.MESSAGE_MENU_GOOGLE_SEARCHED), window.open('https://www.google.com/search?q='.concat(encodeURIComponent(e)), '_blank');
+    let t = l.useCallback(() => {
+        s()(null != e, 'text cannot be null'), o.default.track(c.rMx.MESSAGE_MENU_GOOGLE_SEARCHED), window.open('https://www.google.com/search?q='.concat(encodeURIComponent(e)), '_blank');
     }, [e]);
-    return u.isPlatformEmbedded && null != e && (null == e ? void 0 : e.length) !== 0
+    return d.isPlatformEmbedded && null != e && (null == e ? void 0 : e.length) !== 0
         ? [
               (0, i.jsx)(
-                  o.MenuItem,
+                  r.sNh,
                   {
                       id: 'search-google',
-                      label: c.intl.string(c.t['Rd/Mkp']),
-                      action: n
+                      label: u.intl.string(u.t['Rd/Mkp']),
+                      action: t
                   },
                   'search-google'
               )

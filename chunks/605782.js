@@ -1,28 +1,27 @@
-var i = n(200651),
-    r = n(192379),
-    s = n(512969),
-    l = n(215569);
-class o extends r.Component {
+n.d(t, { Z: () => a });
+var s = n(200651),
+    i = n(192379),
+    l = n(512969),
+    r = n(215569);
+class o extends i.Component {
     render() {
         let { children: e, location: t, history: n, staticContext: o, match: a, ...c } = this.props,
             d = null,
-            u = null;
+            h = null;
         return (
-            r.Children.forEach(e, (e) => {
-                if (null == d && r.isValidElement(e)) {
-                    let { component: i, render: l, ...a } = e.props,
+            i.Children.forEach(e, (e) => {
+                if (null == d && i.isValidElement(e)) {
+                    let { component: s, render: r, ...a } = e.props,
                         c = a.path || a.from;
-                    if (
-                        null !=
+                    null !=
                         (d =
                             null != c
-                                ? (0, s.LX)(t.pathname, {
+                                ? (0, l.LX)(t.pathname, {
                                       ...a,
                                       path: c
                                   })
-                                : null)
-                    )
-                        (a = {
+                                : null) &&
+                        ((a = {
                             ...a,
                             key: c,
                             location: t,
@@ -30,14 +29,14 @@ class o extends r.Component {
                             history: n,
                             staticContext: o
                         }),
-                            null != i ? (u = r.createElement(i, a)) : null != l && (u = l(a));
+                        null != s ? (h = i.createElement(s, a)) : null != r && (h = r(a)));
                 }
             }),
-            (0, i.jsx)(l.W, {
+            (0, s.jsx)(r.W, {
                 ...c,
-                children: u
+                children: h
             })
         );
     }
 }
-t.Z = (0, s.EN)(o);
+let a = (0, l.EN)(o);

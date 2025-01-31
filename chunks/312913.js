@@ -1,8 +1,4 @@
-n.d(t, {
-    UQ: function () {
-        return r;
-    }
-});
+n.d(t, { UQ: () => r });
 let i = (0, n(818083).B)({
     kind: 'guild',
     id: '2023-02_onboarding_advanced_mode',

@@ -1,6 +1,7 @@
-e.exports = {
-    oauth2PageWrapper: 'oauth2PageWrapper_c2b22e',
-    oauth2PageContent: 'oauth2PageContent_c2b22e',
-    oauth2ModalWrapper: 'oauth2ModalWrapper_c2b22e',
-    footer: 'footer_c2b22e'
+var i = {
+    oauth2PageWrapper: 'oauth2PageWrapper__647f0',
+    oauth2PageContent: 'oauth2PageContent__647f0',
+    oauth2ModalWrapper: 'oauth2ModalWrapper__647f0',
+    footer: 'footer__647f0'
 };
+e.exports = i;

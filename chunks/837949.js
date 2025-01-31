@@ -1,29 +1,25 @@
-t.d(e, {
-    Z: function () {
-        return g;
-    }
-});
+t.d(n, { Z: () => g });
 var i = t(200651);
 t(192379);
 var l = t(442837),
     a = t(481060),
     r = t(430824),
-    o = t(594174),
-    d = t(724213),
-    u = t(398758),
-    c = t(981631),
-    s = t(388032);
-function g(n) {
-    let e = (0, u.DM)(n),
-        t = (0, l.e7)([r.Z], () => r.Z.getGuild(n)),
-        g = (0, l.e7)([o.default], () => o.default.getCurrentUser());
-    return null != g && null != t && (t.hasFeature(c.oNc.COMMUNITY) || g.isStaff())
-        ? (0, i.jsx)(a.MenuCheckboxItem, {
+    d = t(594174),
+    s = t(724213),
+    o = t(398758),
+    u = t(981631),
+    c = t(388032);
+function g(e) {
+    let n = (0, o.DM)(e),
+        t = (0, l.e7)([r.Z], () => r.Z.getGuild(e)),
+        g = (0, l.e7)([d.default], () => d.default.getCurrentUser());
+    return null != g && null != t && (t.hasFeature(u.oNc.COMMUNITY) || g.isStaff())
+        ? (0, i.jsx)(a.S89, {
               id: 'opt-in',
-              label: s.intl.string(s.t.FB2ZZW),
-              checked: !e,
+              label: c.intl.string(c.t.FB2ZZW),
+              checked: !n,
               action: () => {
-                  (0, d.kH)(n);
+                  (0, s.kH)(e);
               }
           })
         : null;

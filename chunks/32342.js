@@ -1,126 +1,117 @@
-n.r(t),
-    n.d(t, {
-        TeamSetup: function () {
-            return x;
-        },
-        default: function () {
-            return p;
-        }
-    }),
-    n(47120);
+n.d(t, { default: () => _ }), n(47120);
 var a = n(200651),
-    l = n(192379),
-    r = n(481060),
-    s = n(782568),
-    o = n(313201),
-    i = n(53365),
-    d = n(377176),
+    s = n(192379),
+    l = n(481060),
+    r = n(782568),
+    i = n(313201),
+    d = n(53365),
+    o = n(377176),
     c = n(577275),
-    u = n(981631),
-    h = n(829857),
-    f = n(388032),
-    m = n(907523);
-function x(e) {
-    let { selectedTeamId: t, onSetSelectedTeamId: n, teamOptions: l } = e;
+    h = n(981631),
+    x = n(829857),
+    m = n(388032),
+    u = n(907523);
+function p(e) {
+    let { selectedTeamId: t, onSetSelectedTeamId: n, teamOptions: s } = e;
     return (0, a.jsx)('div', {
-        className: m.teamSetup,
+        className: u.teamSetup,
         children:
-            0 === l.length
-                ? (0, a.jsx)(r.Text, {
+            0 === s.length
+                ? (0, a.jsx)(l.Text, {
                       variant: 'text-md/normal',
                       color: 'header-secondary',
-                      children: f.intl.format(f.t.Jyy4pa, {})
+                      children: m.intl.format(m.t.Jyy4pa, {})
                   })
                 : (0, a.jsxs)(a.Fragment, {
                       children: [
-                          (0, a.jsx)(r.Text, {
+                          (0, a.jsx)(l.Text, {
                               variant: 'text-md/normal',
-                              className: m.teamBodyText,
+                              className: u.teamBodyText,
                               color: 'header-secondary',
-                              children: f.intl.string(f.t.U1Vz29)
+                              children: m.intl.string(m.t.U1Vz29)
                           }),
-                          (0, a.jsx)(r.SingleSelect, {
-                              options: l,
-                              placeholder: f.intl.string(f.t.QXf93N),
+                          (0, a.jsx)(l.q4e, {
+                              options: s,
+                              placeholder: m.intl.string(m.t.QXf93N),
                               value: t,
                               onChange: n,
-                              'aria-label': f.intl.string(f.t.QXf93N)
+                              'aria-label': m.intl.string(m.t.QXf93N)
                           })
                       ]
                   })
     });
 }
-function p(e) {
-    let { guildId: t, requireTeamSetup: n, onClose: p, transitionState: g } = e,
-        j = (0, o.Dt)(),
-        [b, T] = l.useState(),
-        [C, S] = l.useState(!1),
-        { teams: y } = (0, c.Z)(),
-        _ = y.filter((e) => e.payout_account_status === h.C.ACTIVE),
-        k = l.useMemo(
+function _(e) {
+    let { guildId: t, requireTeamSetup: n, onClose: _, transitionState: g } = e,
+        j = (0, i.Dt)(),
+        [f, b] = s.useState(),
+        [T, y] = s.useState(!1),
+        { teams: k } = (0, c.Z)(),
+        C = k.filter((e) => e.payout_account_status === x.C.ACTIVE),
+        v = s.useMemo(
             () =>
-                _.map((e) => ({
+                C.map((e) => ({
                     label: e.name,
                     value: e.id
                 })),
-            [_]
+            [C]
         ),
-        v = l.useCallback(() => {
-            (0, s.Z)(u.EYA.DEVELOPER_PORTAL_TEAMS);
+        N = s.useCallback(() => {
+            (0, r.Z)(h.EYA.DEVELOPER_PORTAL_TEAMS);
         }, []);
-    return (0, a.jsxs)(r.ModalRoot, {
+    return (0, a.jsxs)(l.Y0X, {
         'aria-labelledby': j,
-        size: r.ModalSize.DYNAMIC,
+        size: l.CgR.DYNAMIC,
         transitionState: g,
         children: [
-            (0, a.jsx)(r.ModalHeader, {
+            (0, a.jsx)(l.xBx, {
                 separator: !1,
-                className: m.header,
-                children: (0, a.jsx)(r.Heading, {
+                className: u.header,
+                children: (0, a.jsx)(l.X6q, {
                     variant: 'heading-xl/semibold',
-                    children: n ? f.intl.string(f.t.inJKQk) : f.intl.string(f.t.GfObDA)
+                    children: n ? m.intl.string(m.t.inJKQk) : m.intl.string(m.t.GfObDA)
                 })
             }),
-            (0, a.jsxs)(r.ModalContent, {
-                className: m.content,
+            (0, a.jsxs)(l.hzk, {
+                className: u.content,
                 children: [
                     n &&
-                        (0, a.jsx)(x, {
-                            selectedTeamId: b,
-                            onSetSelectedTeamId: T,
-                            teamOptions: k
+                        (0, a.jsx)(p, {
+                            selectedTeamId: f,
+                            onSetSelectedTeamId: b,
+                            teamOptions: v
                         }),
-                    (0, a.jsx)(r.Checkbox, {
+                    (0, a.jsx)(l.XZJ, {
                         onChange: () => {
-                            S((e) => !e);
+                            y((e) => !e);
                         },
                         size: 20,
-                        type: r.Checkbox.Types.INVERTED,
-                        value: C,
-                        children: (0, a.jsx)(r.Text, {
+                        type: l.XZJ.Types.INVERTED,
+                        value: T,
+                        children: (0, a.jsx)(l.Text, {
                             variant: 'text-md/normal',
                             color: 'header-secondary',
-                            children: (0, d.f)()
+                            children: (0, o.f)()
                         })
                     })
                 ]
             }),
-            (0, a.jsx)(r.ModalFooter, {
-                className: m.footer,
+            (0, a.jsx)(l.mzw, {
+                className: u.footer,
                 children: (0, a.jsx)('div', {
-                    className: m.buttons,
+                    className: u.buttons,
                     children:
-                        n && 0 === k.length
-                            ? (0, a.jsx)(r.Button, {
-                                  onClick: v,
-                                  children: f.intl.string(f.t.JddVgI)
+                        n && 0 === v.length
+                            ? (0, a.jsx)(l.zxk, {
+                                  onClick: N,
+                                  children: m.intl.string(m.t.JddVgI)
                               })
-                            : (0, a.jsx)(r.Button, {
-                                  disabled: !C || (n && null == b),
+                            : (0, a.jsx)(l.zxk, {
+                                  disabled: !T || (n && null == f),
                                   onClick: () => {
-                                      p(), (0, i.df)(t, b);
+                                      _(), (0, d.df)(t, f);
                                   },
-                                  children: f.intl.string(f.t.geKm7u)
+                                  children: m.intl.string(m.t.geKm7u)
                               })
                 })
             })

@@ -1,9 +1,9 @@
+a.d(t, { Z: () => i });
 var n = a(799761);
 function r(e, t, a, n, r) {
-    var i;
-    return e + '-' + ('quarter' === t ? r : 'year' === (i = t) || 'week' === i || 'minute' === i || 'second' === i ? n : a);
+    return e + '-' + ('quarter' === t ? r : 'year' === t || 'week' === t || 'minute' === t || 'second' === t ? n : a);
 }
-var i = {
+let i = {
     ordinalNumber: function (e, t) {
         var a = Number(e),
             n = null == t ? void 0 : t.unit;
@@ -74,4 +74,3 @@ var i = {
         defaultWidth: 'wide'
     })
 };
-t.Z = i;

@@ -1,38 +1,34 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-});
-var r = n(200651);
+n.d(t, { Z: () => o });
+var l = n(200651);
 n(192379);
 var i = n(481060),
-    l = n(103450),
-    o = n(915863);
-function a(e) {
-    let { activity: t, embeddedActivity: n, user: a, onAction: u, ButtonComponent: s = o.Z, ...c } = e,
-        d = (0, l.e)({
+    r = n(103450),
+    a = n(915863);
+function o(e) {
+    let { activity: t, embeddedActivity: n, user: o, onAction: s, ButtonComponent: u = a.Z, ...c } = e,
+        d = (0, r.e)({
             activity: null != t ? t : void 0,
             embeddedActivity: n,
-            user: a,
-            onGameJoin: u
+            user: o,
+            onGameJoin: s
         });
     if (null == d) return null;
-    let { isJoining: f, handleJoinRequest: p, buttonCTA: m, tooltip: h, isEnabled: v } = d;
-    return (0, r.jsx)(
-        i.Tooltip,
+    let { isJoining: f, handleJoinRequest: m, buttonCTA: p, tooltip: h, isEnabled: v } = d;
+    return (0, l.jsx)(
+        i.ua7,
         {
             text: h,
             children: (e) => {
                 let { onMouseEnter: t, onMouseLeave: n } = e;
-                return (0, r.jsx)(s, {
-                    onClick: p,
+                return (0, l.jsx)(u, {
+                    onClick: m,
                     onMouseEnter: t,
                     onMouseLeave: n,
                     disabled: !v,
                     submitting: f,
                     fullWidth: !0,
                     ...c,
-                    children: m
+                    children: p
                 });
             }
         },

@@ -1,43 +1,29 @@
 n.d(t, {
-    I4: function () {
-        return a;
-    },
-    Sn: function () {
-        return u;
-    },
-    U3: function () {
-        return S;
-    },
-    Ui: function () {
-        return _;
-    },
-    W4: function () {
-        return o;
-    },
-    gq: function () {
-        return N;
-    },
-    kZ: function () {
-        return E;
-    }
+    I4: () => a,
+    Sn: () => N,
+    U3: () => S,
+    Ui: () => _,
+    W4: () => o,
+    gq: () => u,
+    kZ: () => E
 });
 var i = n(544891),
-    r = n(570140),
-    l = n(555573),
+    l = n(570140),
+    r = n(555573),
     T = n(581364),
     I = n(981631);
 function E() {
-    r.Z.dispatch({ type: 'INTEGRATION_PERMISSION_SETTINGS_CLEAR' });
+    l.Z.dispatch({ type: 'INTEGRATION_PERMISSION_SETTINGS_CLEAR' });
 }
 function o(e, t, n) {
-    r.Z.dispatch({
+    l.Z.dispatch({
         applicationId: e,
         commandId: t,
         permissions: n,
         type: 'INTEGRATION_PERMISSION_SETTINGS_EDIT'
     });
 }
-function u(e, t) {
+function N(e, t) {
     i.tn
         .get({
             url: I.ANM.GUILD_COMMANDS_FOR_APPLICATION(e, t),
@@ -45,7 +31,7 @@ function u(e, t) {
         })
         .then(
             (n) => {
-                r.Z.dispatch({
+                l.Z.dispatch({
                     type: 'INTEGRATION_PERMISSION_SETTINGS_COMMANDS_FETCH_SUCCESS',
                     applicationId: t,
                     commands: n.body.application_commands,
@@ -54,24 +40,24 @@ function u(e, t) {
                 });
             },
             () => {
-                r.Z.dispatch({
+                l.Z.dispatch({
                     type: 'INTEGRATION_PERMISSION_SETTINGS_COMMANDS_FETCH_FAILURE',
                     applicationId: t
                 });
             }
         );
 }
-async function N(e, t, n) {
-    let l = [];
+async function u(e, t, n) {
+    let r = [];
     try {
-        let r = await i.tn.get({
+        let l = await i.tn.get({
             url: I.ANM.APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(e, t, n),
             rejectWithError: !1
         });
-        r.ok && (l = r.body.permissions);
+        l.ok && (r = l.body.permissions);
     } catch (i) {
         if (404 !== i.status) {
-            r.Z.dispatch({
+            l.Z.dispatch({
                 type: 'INTEGRATION_PERMISSION_SETTINGS_APPLICATION_PERMISSIONS_FETCH_FAILURE',
                 applicationId: e,
                 commandId: n,
@@ -80,49 +66,49 @@ async function N(e, t, n) {
             return;
         }
     }
-    r.Z.dispatch({
+    l.Z.dispatch({
         type: 'INTEGRATION_PERMISSION_SETTINGS_COMMAND_UPDATE',
         applicationId: e,
         commandId: n,
         guildId: t,
-        permissions: l
+        permissions: r
     });
 }
 function a(e) {
-    r.Z.dispatch({
+    l.Z.dispatch({
         applicationId: e,
         type: 'INTEGRATION_PERMISSION_SETTINGS_INIT'
     });
 }
 function _(e) {
-    r.Z.dispatch({
+    l.Z.dispatch({
         commandId: e,
         type: 'INTEGRATION_PERMISSION_SETTINGS_RESET'
     });
 }
 async function S(e) {
     let { applicationId: t, commandId: n, defaultEveryoneValue: i, defaultEverywhereValue: I, guildId: E, permissions: o } = e,
-        u =
+        N =
             n === t
                 ? (function (e, t, n, i) {
                       if (!n || !i) return t;
-                      let r = {
+                      let l = {
                           [e]: n,
                           [(0, T.bD)(e)]: i
                       };
                       return t.filter((e) => {
-                          let t = r[e.id];
+                          let t = l[e.id];
                           return null == t || e.permission !== t;
                       });
                   })(E, o, i, I)
                 : o,
-        N = await l.dh(t, E, n, u);
-    N.ok &&
-        r.Z.dispatch({
+        u = await r.dh(t, E, n, N);
+    u.ok &&
+        l.Z.dispatch({
             type: 'INTEGRATION_PERMISSION_SETTINGS_COMMAND_UPDATE',
             applicationId: t,
             commandId: n,
             guildId: E,
-            permissions: N.body.permissions
+            permissions: u.body.permissions
         });
 }

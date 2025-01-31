@@ -1,10 +1,6 @@
 r.d(t, {
-    al: function () {
-        return F;
-    },
-    ck: function () {
-        return Z;
-    }
+    al: () => E,
+    ck: () => R
 }),
     r(47120),
     r(653041),
@@ -16,8 +12,8 @@ var n = r(200651),
     l = r.n(i),
     s = r(226961),
     o = r(706619),
-    c = r(206314);
-let d = {
+    d = r(206314);
+let c = {
     accelerateRate: 'Accelerate Rate',
     audioDetected: 'Audio Detected',
     audioLevel: 'Audio Level',
@@ -150,13 +146,13 @@ function p(e) {
 function h(e) {
     return ''.concat(e, ' ms');
 }
-function g(e) {
+function y(e) {
     return ''.concat(e.toFixed(0), '%');
 }
-function f(e) {
+function g(e) {
     return e ? 'Yes' : 'No';
 }
-function y(e) {
+function f(e) {
     return ''.concat(Math.max(e, 0).toFixed(2), ' dB');
 }
 function v(e) {
@@ -166,7 +162,7 @@ function v(e) {
 function D(e) {
     return e.toFixed(2);
 }
-let F = {
+let E = {
         audioJitterBuffer: !0,
         audioJitterDelay: !0,
         audioJitterTarget: !0,
@@ -195,15 +191,15 @@ let F = {
         videoJitterTarget: !0,
         voiceActivityDetectorProcessTime: !0
     },
-    S = {
-        accelerateRate: g,
-        audioDetected: f,
-        audioLevel: y,
+    C = {
+        accelerateRate: y,
+        audioDetected: g,
+        audioLevel: f,
         availableOutgoingBitrate: u,
         averageDecodeTime: h,
         averageEncodeTime: h,
-        bandwidthLimitedFrameRate: f,
-        bandwidthLimitedResolution: f,
+        bandwidthLimitedFrameRate: g,
+        bandwidthLimitedResolution: g,
         bitrate: u,
         bitrateTarget: u,
         bytesReceived: m,
@@ -212,17 +208,17 @@ let F = {
             let { id: t, name: r } = e;
             return (r = null != (r = '' === r ? 'unknown' : r) ? r : 'unknown'), ''.concat(r[0].toUpperCase()).concat(r.slice(1), ' (').concat(t, ')');
         },
-        cpuLimitedResolution: f,
+        cpuLimitedResolution: g,
         currentDelay: h,
         decoderImplementationName: p,
         delayEstimate: h,
         encoderImplementationName: p,
-        encoderQualityPsnr: y,
+        encoderQualityPsnr: f,
         encoderQualityVmaf: D,
-        encodeUsage: g,
-        expandRate: g,
+        encodeUsage: y,
+        expandRate: y,
         filter: p,
-        fractionLost: g,
+        fractionLost: y,
         inboundBitrateEstimate: u,
         jitter: h,
         jitterBuffer: h,
@@ -232,7 +228,7 @@ let F = {
         outboundBitrateEstimate: u,
         pacerDelay: h,
         ping: h,
-        preemptiveExpandRate: g,
+        preemptiveExpandRate: y,
         receiverBitrateEstimate: u,
         relativePlayoutDelay: v,
         relativeReceptionDelay: v,
@@ -241,11 +237,11 @@ let F = {
             let { width: t, height: r } = e;
             return ''.concat(t, 'x').concat(r);
         },
-        secondaryDecodedRate: g,
+        secondaryDecodedRate: y,
         secureFramesProtocolVersion: function (e) {
             return e > 0 ? 'Version '.concat(e) : 'Disabled';
         },
-        speechExpandRate: g,
+        speechExpandRate: y,
         targetDelay: h,
         videohookBackend: function (e) {
             let t = ['N/A', 'Direct3D 9', 'Direct3D 10', 'Direct3D 11', 'Direct3D 12', 'OpenGL', 'Vulkan'];
@@ -253,8 +249,8 @@ let F = {
         },
         videoEntropy: D
     },
-    E = (e) => e,
-    C = (e) => {
+    Z = (e) => e,
+    N = (e) => {
         let [t] = a.useState([]);
         return (
             t.push({
@@ -269,31 +265,31 @@ let F = {
             })
         );
     };
-function Z(e) {
-    var t, r, a, i;
-    let { label: l, value: u, section: m } = e,
-        p = null !== (r = S[l]) && void 0 !== r ? r : E;
-    let h =
-            s.Pz[l] &&
-            (Array.isArray((i = u)) && i.length > 0 && 'number' == typeof i[0].value
+function R(e) {
+    var t, r, a;
+    let { label: i, value: l, section: u } = e,
+        m = null !== (r = C[i]) && void 0 !== r ? r : Z,
+        p =
+            s.Pz[i] &&
+            (Array.isArray(l) && l.length > 0 && 'number' == typeof l[0].value
                 ? (0, n.jsx)(o.Z, {
-                      dataPoints: i,
+                      dataPoints: l,
                       width: 300,
                       height: 100
                   })
-                : 'number' == typeof i
-                  ? (0, n.jsx)(C, {
-                        value: i,
+                : 'number' == typeof l
+                  ? (0, n.jsx)(N, {
+                        value: l,
                         width: 300,
                         height: 100
                     })
                   : void 0),
-        g = Array.isArray(u) ? (null === (t = u.at(-1)) || void 0 === t ? void 0 : t.value) : u;
-    return (0, n.jsx)(c.Z, {
-        label: l,
-        valueRendered: p(g),
-        section: m,
-        renderGraph: h,
-        children: null !== (a = d[l]) && void 0 !== a ? a : l
+        h = Array.isArray(l) ? (null === (t = l.at(-1)) || void 0 === t ? void 0 : t.value) : l;
+    return (0, n.jsx)(d.Z, {
+        label: i,
+        valueRendered: m(h),
+        section: u,
+        renderGraph: p,
+        children: null !== (a = c[i]) && void 0 !== a ? a : i
     });
 }

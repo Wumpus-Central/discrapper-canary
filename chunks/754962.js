@@ -1,7 +1,8 @@
-e.exports = {
-    transition: 'transition_f48d4e',
-    directionDown: 'directionDown_f48d4e',
-    directionRight: 'directionRight_f48d4e',
-    directionLeft: 'directionLeft_f48d4e',
-    directionUp: 'directionUp_f48d4e'
+var i = {
+    transition: 'transition__5fbe9',
+    directionDown: 'directionDown__5fbe9',
+    directionRight: 'directionRight__5fbe9',
+    directionLeft: 'directionLeft__5fbe9',
+    directionUp: 'directionUp__5fbe9'
 };
+e.exports = i;

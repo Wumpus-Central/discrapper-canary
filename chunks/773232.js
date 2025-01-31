@@ -1,1 +1,2 @@
-e.exports = { awaitingWrapper: 'awaitingWrapper_a4ec0f' };
+var i = { awaitingWrapper: 'awaitingWrapper__8a7af' };
+e.exports = i;

@@ -1,64 +1,60 @@
-r.d(n, {
-    Z: function () {
-        return l;
-    }
-});
-var i = r(424218),
-    a = r(186901),
-    o = r(388032);
-function s(e, n, r) {
+n.d(t, { Z: () => o });
+var i = n(424218),
+    r = n(186901),
+    a = n(388032);
+function s(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class l {
+class o {
     get displayMessage() {
-        if (null == this.code) return o.intl.string(o.t['5NMPSU']);
+        if (null == this.code) return a.intl.string(a.t['5NMPSU']);
         let { path: e } = this.context;
         switch (this.code) {
-            case a.ff.DISK_LOW:
-                let { available: n, required: r } = this.context,
-                    s = (0, i.BU)(n, { useKibibytes: !0 }),
-                    l = (0, i.BU)(r, { useKibibytes: !0 });
-                return o.intl.formatToPlainString(o.t['2DR5dn'], {
-                    required: l,
+            case r.ff.DISK_LOW:
+                let { available: t, required: n } = this.context,
+                    s = (0, i.BU)(t, { useKibibytes: !0 }),
+                    o = (0, i.BU)(n, { useKibibytes: !0 });
+                return a.intl.formatToPlainString(a.t['2DR5dn'], {
+                    required: o,
                     available: s
                 });
-            case a.ff.POST_INSTALL_FAILED:
-                let { name: u } = this.context;
-                return o.intl.formatToPlainString(o.t.hP0B3N, { name: u });
-            case a.ff.FILE_NAME_TOO_LONG:
-                return o.intl.string(o.t['FWht5+']);
-            case a.ff.POST_INSTALL_CANCELLED:
-                return o.intl.string(o.t['9CNxFB']);
-            case a.ff.IO_PERMISSION_DENIED:
-                return o.intl.string(o.t['PJx5+f']);
-            case a.ff.NO_MANIFESTS:
-                return o.intl.string(o.t['gLM39/']);
-            case a.ff.NOT_ENTITLED:
-                return o.intl.string(o.t['TLCR4+']);
-            case a.ff.NOT_DIRECTORY:
-            case a.ff.DISK_PERMISSION_DENIED:
-                return o.intl.formatToPlainString(o.t.EjWbOz, { path: e });
-            case a.ff.INVALID_DRIVE:
-                return o.intl.formatToPlainString(o.t['08L2TE'], { path: e });
-            case a.ff.APPLICATION_LOCK_FAILED:
-                return o.intl.string(o.t.RDYCUV);
-            case a.ff.DISK_FULL:
-                return o.intl.string(o.t.mojtDA);
-            case a.ff.API_ERROR:
-            case a.ff.MAX_REQUEST_RETRIES_EXCEEDED:
-                return o.intl.string(o.t.OXD41N);
+            case r.ff.POST_INSTALL_FAILED:
+                let { name: l } = this.context;
+                return a.intl.formatToPlainString(a.t.hP0B3N, { name: l });
+            case r.ff.FILE_NAME_TOO_LONG:
+                return a.intl.string(a.t['FWht5+']);
+            case r.ff.POST_INSTALL_CANCELLED:
+                return a.intl.string(a.t['9CNxFB']);
+            case r.ff.IO_PERMISSION_DENIED:
+                return a.intl.string(a.t['PJx5+f']);
+            case r.ff.NO_MANIFESTS:
+                return a.intl.string(a.t['gLM39/']);
+            case r.ff.NOT_ENTITLED:
+                return a.intl.string(a.t['TLCR4+']);
+            case r.ff.NOT_DIRECTORY:
+            case r.ff.DISK_PERMISSION_DENIED:
+                return a.intl.formatToPlainString(a.t.EjWbOz, { path: e });
+            case r.ff.INVALID_DRIVE:
+                return a.intl.formatToPlainString(a.t['08L2TE'], { path: e });
+            case r.ff.APPLICATION_LOCK_FAILED:
+                return a.intl.string(a.t.RDYCUV);
+            case r.ff.DISK_FULL:
+                return a.intl.string(a.t.mojtDA);
+            case r.ff.API_ERROR:
+            case r.ff.MAX_REQUEST_RETRIES_EXCEEDED:
+                return a.intl.string(a.t.OXD41N);
             default:
-                return o.intl.formatToPlainString(o.t.r477WF, { code: ''.concat(this.code) });
+                return a.intl.formatToPlainString(a.t.r477WF, { code: ''.concat(this.code) });
         }
     }
     constructor(e) {

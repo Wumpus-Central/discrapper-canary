@@ -1,11 +1,7 @@
-n.d(t, {
-    C: function () {
-        return p;
-    }
-});
+n.d(t, { C: () => p });
 var i = n(200651),
-    r = n(192379),
-    l = n(481060),
+    l = n(192379),
+    r = n(481060),
     a = n(359110),
     s = n(6025),
     o = n(433355),
@@ -17,13 +13,13 @@ var i = n(200651),
 function p(e) {
     let { active: t, user: n, channel: p } = e,
         g = (0, c.K)(),
-        f = r.useCallback(() => {
-            (0, l.showToast)((0, l.createToast)(h.intl.string(h.t.EDYbS0), l.ToastType.FAILURE));
+        _ = l.useCallback(() => {
+            (0, r.showToast)((0, r.createToast)(h.intl.string(h.t.EDYbS0), r.ToastType.FAILURE));
         }, []),
-        _ = r.useCallback(() => {
+        f = l.useCallback(() => {
             s.Z.closeChannelSidebar(o.uZ);
         }, []),
-        E = r.useCallback(() => {
+        E = l.useCallback(() => {
             s.Z.closeChannelSidebar(o.uZ), g && (0, a.Kh)(p.id);
         }, [p.id, g]),
         {
@@ -33,14 +29,14 @@ function p(e) {
             isRejectLoading: N,
             isUserProfileLoading: T,
             isOptimisticAccepted: S,
-            isOptimisticRejected: b
+            isOptimisticRejected: Z
         } = (0, d.m)({
             user: n,
             onAcceptSuccess: E,
-            onRejectSuccess: _,
-            onError: f
+            onRejectSuccess: f,
+            onError: _
         }),
-        A = v || N || T || S || b;
+        x = v || N || T || S || Z;
     return (0, i.jsxs)('div', {
         className: m.container,
         children: [
@@ -52,25 +48,25 @@ function p(e) {
             (0, i.jsxs)('div', {
                 className: m.actions,
                 children: [
-                    (0, i.jsx)(l.Button, {
+                    (0, i.jsx)(r.zxk, {
                         className: m.button,
-                        color: l.ButtonColors.PRIMARY,
-                        size: l.Button.Sizes.SMALL,
+                        color: r.Ttl.PRIMARY,
+                        size: r.zxk.Sizes.SMALL,
                         onClick: (e) => {
                             e.stopPropagation(), C(p.id);
                         },
-                        disabled: A,
-                        submitting: N || b,
+                        disabled: x,
+                        submitting: N || Z,
                         children: h.intl.string(h.t.B2nygY)
                     }),
-                    (0, i.jsx)(l.Button, {
+                    (0, i.jsx)(r.zxk, {
                         className: m.button,
-                        color: l.ButtonColors.BRAND,
-                        size: l.Button.Sizes.SMALL,
+                        color: r.Ttl.BRAND,
+                        size: r.zxk.Sizes.SMALL,
                         onClick: (e) => {
                             e.stopPropagation(), I(p.id);
                         },
-                        disabled: A,
+                        disabled: x,
                         submitting: v || T || S,
                         children: h.intl.string(h.t.Kz8Pws)
                     })

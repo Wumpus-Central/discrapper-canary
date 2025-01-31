@@ -1,42 +1,36 @@
-r.d(n, {
-    K4: function () {
-        return d;
-    },
-    Zz: function () {
-        return c;
-    },
-    q9: function () {
-        return p;
-    }
+n.d(t, {
+    K4: () => c,
+    Zz: () => u,
+    q9: () => f
 });
-var i = r(512722),
-    a = r.n(i),
-    o = r(217986),
-    s = r(388032);
-let l = 'United States';
+var i = n(512722),
+    r = n.n(i),
+    a = n(217986),
+    s = n(388032);
+let o = 'United States';
+function l(e) {
+    let t = a.Z.find((t) => t.name === e);
+    if (null != t)
+        return {
+            name: t.name,
+            code: t.phoneCountryCode,
+            alpha2: t.alpha2
+        };
+}
 function u(e) {
-    let n = o.Z.find((n) => n.name === e);
-    if (null != n)
+    let t = a.Z.find((t) => t.alpha2 === e);
+    if (null != t)
         return {
-            name: n.name,
-            code: n.phoneCountryCode,
-            alpha2: n.alpha2
+            name: t.name,
+            code: t.phoneCountryCode,
+            alpha2: t.alpha2
         };
 }
-function c(e) {
-    let n = o.Z.find((n) => n.alpha2 === e);
-    if (null != n)
-        return {
-            name: n.name,
-            code: n.phoneCountryCode,
-            alpha2: n.alpha2
-        };
+function c() {
+    let e = l(o);
+    return r()(e, 'Default country code cannot be missing.'), e;
 }
-function d() {
-    let e = u(l);
-    return a()(e, 'Default country code cannot be missing.'), e;
-}
-let f = {
+let d = {
     AF: () => s.intl.string(s.t['Jafq//']),
     AX: () => s.intl.string(s.t.fqW5xM),
     AL: () => s.intl.string(s.t['45zGd3']),
@@ -293,6 +287,6 @@ let f = {
     ZM: () => s.intl.string(s.t.e0NQFR),
     ZW: () => s.intl.string(s.t.kQ6oLi)
 };
-function p(e) {
-    return f[e]();
+function f(e) {
+    return d[e]();
 }

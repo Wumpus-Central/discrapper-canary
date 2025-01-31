@@ -1,7 +1,8 @@
+n.d(t, { Z: () => f });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(584825),
+var l = n(481060),
+    r = n(584825),
     a = n(290348),
     s = n(934826),
     o = n(660196),
@@ -12,32 +13,32 @@ var r = n(481060),
     m = n(726324),
     p = n(981631),
     g = n(388032),
-    f = n(205572);
-t.Z = (e) => {
+    _ = n(205572);
+let f = (e) => {
     var t, n;
-    let { guild: _ } = e,
-        E = (0, l.GG)(_.id)[0];
+    let { guild: f } = e,
+        E = (0, r.GG)(f.id)[0];
     (0, o.Z)({
-        guildId: _.id,
+        guildId: f.id,
         groupListingId: null == E ? void 0 : E.id,
         location: p.Sbl.ROLE_SUBSCRIPTIONS_TAB,
         relevantSubscriptionListingIds: null == E ? void 0 : E.subscription_listings_ids
     });
     let { activeSubscription: I } = (0, s.Z)(null == E ? void 0 : E.id),
-        C = (0, l.YB)(_.id),
+        C = (0, r.YB)(f.id),
         v = null == C ? void 0 : C.description,
-        { editStateIds: N } = a.B7(null !== (t = null == E ? void 0 : E.id) && void 0 !== t ? t : null, _.id);
+        { editStateIds: N } = a.B7(null !== (t = null == E ? void 0 : E.id) && void 0 !== t ? t : null, f.id);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(m.Z, {
-                title: g.intl.format(g.t['rm+ojI'], { serverName: _.toString() }),
+                title: g.intl.format(g.t['rm+ojI'], { serverName: f.toString() }),
                 description: null != v ? v : null,
                 coverImageAsset: null !== (n = null == C ? void 0 : C.cover_image_asset) && void 0 !== n ? n : null,
-                guild: _,
+                guild: f,
                 children: [
                     null != E
                         ? (0, i.jsx)(c.Z, {
-                              className: f.pendingPlanChangeNotice,
+                              className: _.pendingPlanChangeNotice,
                               groupListingId: E.id,
                               subscription: I
                           })
@@ -45,15 +46,15 @@ t.Z = (e) => {
                     (0, i.jsx)(d.Z, { subscription: I })
                 ]
             }),
-            (0, i.jsx)(r.HeadingLevel, {
+            (0, i.jsx)(l.y5t, {
                 children: (0, i.jsx)(u.Z, {
-                    guildId: _.id,
+                    guildId: f.id,
                     children: N.map((e) => {
                         var t;
                         return (0, i.jsx)(
                             h.Z,
                             {
-                                guildId: _.id,
+                                guildId: f.id,
                                 groupListingId: null !== (t = null == E ? void 0 : E.id) && void 0 !== t ? t : '',
                                 listingId: e,
                                 analyticsLocation: p.Sbl.ROLE_SUBSCRIPTIONS_TAB

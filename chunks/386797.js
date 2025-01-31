@@ -1,40 +1,35 @@
-r.d(t, {
-    S: function () {
-        return i;
-    }
-});
-var a = r(151122),
-    n = r(899517),
-    _ = r(873567),
-    o = r(394798);
-let E = n.n,
-    i = (0, a._I)((e = {}) => {
-        let t = null != e.frameContextLines ? e.frameContextLines : 7;
+a.d(e, { S: () => c });
+var r = a(151122),
+    n = a(899517),
+    o = a(873567),
+    _ = a(394798);
+let i = n.n,
+    c = (0, r._I)((t = {}) => {
+        let e = null != t.frameContextLines ? t.frameContextLines : 7;
         return {
             name: 'ContextLines',
-            processEvent: (e) =>
-                (function (e, t) {
-                    let r = E.document,
-                        a = E.location && (0, _.rt)(E.location.href);
-                    if (!r || !a) return e;
-                    let n = e.exception && e.exception.values;
-                    if (!n || !n.length) return e;
-                    let i = r.documentElement.innerHTML;
-                    if (!i) return e;
-                    let c = ['<!DOCTYPE html>', '<html>', ...i.split('\n'), '</html>'];
+            processEvent: (t) =>
+                (function (t, e) {
+                    let a = i.document,
+                        r = i.location && (0, o.rt)(i.location.href);
+                    if (!a || !r) return t;
+                    let n = t.exception && t.exception.values;
+                    if (!n || !n.length) return t;
+                    let c = a.documentElement.innerHTML;
+                    if (!c) return t;
+                    let s = ['<!DOCTYPE html>', '<html>', ...c.split('\n'), '</html>'];
                     return (
-                        n.forEach((e) => {
-                            let r = e.stacktrace;
-                            r &&
-                                r.frames &&
-                                (r.frames = r.frames.map((e) =>
-                                    (function (e, t, r, a) {
-                                        return e.filename === r && e.lineno && t.length ? ((0, o.go)(t, e, a), e) : e;
-                                    })(e, c, a, t)
-                                ));
+                        n.forEach((t) => {
+                            let a = t.stacktrace;
+                            a &&
+                                a.frames &&
+                                (a.frames = a.frames.map((t) => {
+                                    var a, n, o, i;
+                                    return (a = t), (n = s), (o = r), (i = e), a.filename === o && a.lineno && n.length && (0, _.go)(n, a, i), a;
+                                }));
                         }),
-                        e
+                        t
                     );
-                })(e, t)
+                })(t, e)
         };
     });

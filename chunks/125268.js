@@ -1,42 +1,22 @@
 n.d(t, {
-    AX: function () {
-        return c;
-    },
-    BR: function () {
-        return d;
-    },
-    Bo: function () {
-        return g;
-    },
-    Df: function () {
-        return m;
-    },
-    LT: function () {
-        return v;
-    },
-    ZZ: function () {
-        return f;
-    },
-    cV: function () {
-        return u;
-    },
-    fW: function () {
-        return h;
-    },
-    gr: function () {
-        return p;
-    },
-    oW: function () {
-        return o;
-    }
+    AX: () => c,
+    BR: () => d,
+    Bo: () => g,
+    Df: () => m,
+    LT: () => v,
+    ZZ: () => f,
+    cV: () => u,
+    fW: () => h,
+    gr: () => p,
+    oW: () => o
 });
 var i = n(261470),
     l = n(544891),
-    r = n(570140),
-    a = n(984063),
+    a = n(570140),
+    r = n(984063),
     s = n(981631);
 function o(e, t, n, i, l) {
-    r.Z.dispatch({
+    a.Z.dispatch({
         type: 'SHARED_CANVAS_DRAW_LINE_POINT',
         channelId: e,
         userId: n,
@@ -56,7 +36,7 @@ function c(e, t, n, i) {
     });
 }
 function u(e, t, n, i) {
-    r.Z.dispatch({
+    a.Z.dispatch({
         type: 'SHARED_CANVAS_UPDATE_LINE_POINTS',
         userId: t,
         lineId: e,
@@ -79,8 +59,8 @@ function m(e, t, n) {
     });
 }
 function f(e, t) {
-    (t.state = a.f.STOP),
-        r.Z.dispatch({
+    (t.state = r.f.STOP),
+        a.Z.dispatch({
             type: 'SHARED_CANVAS_UPDATE_EMOJI_HOSE',
             emojiHose: t,
             userId: t.userId,
@@ -88,7 +68,7 @@ function f(e, t) {
         });
 }
 function p(e, t, n) {
-    r.Z.dispatch({
+    a.Z.dispatch({
         type: 'SHARED_CANVAS_UPDATE_EMOJI_HOSE',
         emojiHose: e,
         userId: t,
@@ -96,18 +76,18 @@ function p(e, t, n) {
     });
 }
 function h(e, t) {
-    r.Z.dispatch({
+    a.Z.dispatch({
         type: 'SHARED_CANVAS_CLEAR_DRAWABLES',
         drawables: e,
         streamerId: t
     });
 }
 function g(e) {
-    r.Z.dispatch({
+    a.Z.dispatch({
         type: 'SHARED_CANVAS_SET_DRAW_MODE',
         drawMode: e
     });
 }
 function v() {
-    r.Z.dispatch({ type: 'TOGGLE_OVERLAY_CANVAS' });
+    a.Z.dispatch({ type: 'TOGGLE_OVERLAY_CANVAS' });
 }

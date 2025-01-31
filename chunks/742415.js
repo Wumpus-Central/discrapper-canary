@@ -1,10 +1,11 @@
-e.exports = {
-    buttonIcon: 'buttonIcon_b78763',
-    allPaymentsToggleButton: 'allPaymentsToggleButton_b78763',
-    allPaymentsSection: 'allPaymentsSection_b78763',
-    hidden: 'hidden_b78763',
-    newPaymentBadge: 'newPaymentBadge_b78763',
-    SeparatorUpper: 'SeparatorUpper_b78763',
-    SeparatorLower: 'SeparatorLower_b78763',
-    container: 'container_b78763'
+var i = {
+    buttonIcon: 'buttonIcon__92b20',
+    allPaymentsToggleButton: 'allPaymentsToggleButton__92b20',
+    allPaymentsSection: 'allPaymentsSection__92b20',
+    hidden: 'hidden__92b20',
+    newPaymentBadge: 'newPaymentBadge__92b20',
+    SeparatorLower: 'SeparatorLower__92b20',
+    SeparatorUpper: 'SeparatorUpper__92b20',
+    container: 'container__92b20'
 };
+e.exports = i;

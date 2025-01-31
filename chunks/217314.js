@@ -1,13 +1,9 @@
-n.d(t, {
-    Z: function () {
-        return m;
-    }
-});
+n.d(t, { Z: () => m });
 var i = n(200651);
 n(192379);
 var l = n(399606),
-    r = n(481060),
-    a = n(210975),
+    a = n(481060),
+    r = n(210975),
     s = n(158776),
     o = n(699516),
     c = n(594174),
@@ -21,23 +17,23 @@ function m(e) {
         m = (0, l.e7)([c.default], () => c.default.getUser(t)),
         f = (0, l.e7)([s.Z], () => s.Z.getStatus(t)),
         g = (0, l.e7)([s.Z], () => s.Z.isMobileOnline(t)),
-        C = (0, l.e7)([o.Z], () => o.Z.getNickname(t)),
-        x = d.ZP.useUserTag(m),
-        v = (0, a.m$)({
+        _ = (0, l.e7)([o.Z], () => o.Z.getNickname(t)),
+        C = d.ZP.useUserTag(m),
+        x = (0, r.m$)({
             channelId: e.channel.id,
             location: 'HeaderBarDirectMessageV2'
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(r.HiddenVisually, { children: h.intl.string(h.t.EJRzg4) }),
+            (0, i.jsx)(a.nn4, { children: h.intl.string(h.t.EJRzg4) }),
             null != m &&
                 !n &&
                 (0, i.jsx)('div', {
-                    children: (0, i.jsx)(r.Avatar, {
+                    children: (0, i.jsx)(a.qEK, {
                         status: f,
                         isMobile: g,
                         className: p.avatar,
-                        size: r.AvatarSizes.SIZE_24,
+                        size: a.EFr.SIZE_24,
                         'aria-label': d.ZP.getName(m),
                         src: m.getAvatarURL(void 0, 24)
                     })
@@ -49,20 +45,20 @@ function m(e) {
                 className: null != e.handleClick ? p.cursorPointer : null,
                 children: (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(r.TooltipContainer, {
-                            text: x,
+                        (0, i.jsx)(a.DY3, {
+                            text: C,
                             position: 'bottom',
-                            children: null != C ? C : d.ZP.getName(m)
+                            children: null != _ ? _ : d.ZP.getName(m)
                         }),
-                        v &&
-                            (0, i.jsx)(r.Tooltip, {
+                        x &&
+                            (0, i.jsx)(a.ua7, {
                                 text: h.intl.string(h.t.QyZ4TU),
                                 children: (e) =>
-                                    (0, i.jsx)(r.ShieldLockIcon, {
+                                    (0, i.jsx)(a.tQf, {
                                         ...e,
                                         size: 'xs',
                                         'aria-label': h.intl.string(h.t.VHXh8f),
-                                        color: r.tokens.colors.INTERACTIVE_NORMAL,
+                                        color: a.TVs.colors.INTERACTIVE_NORMAL,
                                         className: p.secureFramesIcon
                                     })
                             })

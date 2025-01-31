@@ -1,48 +1,29 @@
-var i, a, o, s;
-r.r(n),
-    r.d(n, {
-        GLOBAL_DISCOVERY_DEFAULT_TAB: function () {
-            return c;
-        },
-        GLOBAL_DISCOVERY_SEARCH_BAR_ICON_WIDTH_PX: function () {
-            return d;
-        },
-        GLOBAL_DISCOVERY_SEARCH_BAR_WIDTH_PX: function () {
-            return f;
-        },
-        GLOBAL_DISCOVERY_TABS: function () {
-            return l;
-        },
-        GlobalDiscoveryAnalyticsLocations: function () {
-            return s;
-        },
-        GlobalDiscoveryRoutes: function () {
-            return o;
-        },
-        GlobalDiscoverySearchBarState: function () {
-            return a;
-        },
-        GlobalDiscoveryTab: function () {
-            return i;
-        },
-        MOBILE_GLOBAL_DISCOVERY_TABS: function () {
-            return u;
-        }
-    }),
-    !(function (e) {
-        (e.SERVERS = 'servers'), (e.QUESTS = 'quests'), (e.APPS = 'apps');
-    })(i || (i = {}));
-let l = ['apps', 'servers', 'quests'],
-    u = ['servers', 'quests'],
-    c = 'servers',
-    d = 24,
-    f = 240;
-!(function (e) {
-    (e.DEFAULT = 'default'), (e.FLOATING = 'floating'), (e.COLLAPSED = 'collapsed');
-})(a || (a = {})),
-    !(function (e) {
-        (e.ROOT = 'root'), (e.SERVERS_CATEGORY = 'server_tab'), (e.SERVERS_SEARCH = 'server_search');
-    })(o || (o = {})),
-    !(function (e) {
-        e.GUILDS_BAR_ICON = 'guilds_bar_icon';
-    })(s || (s = {}));
+n.r(t),
+    n.d(t, {
+        GLOBAL_DISCOVERY_DEFAULT_TAB: () => s,
+        GLOBAL_DISCOVERY_SEARCH_BAR_ICON_WIDTH_PX: () => o,
+        GLOBAL_DISCOVERY_SEARCH_BAR_WIDTH_PX: () => l,
+        GLOBAL_DISCOVERY_TABS: () => r,
+        GlobalDiscoveryAnalyticsLocations: () => d,
+        GlobalDiscoveryRoutes: () => c,
+        GlobalDiscoverySearchBarState: () => u,
+        GlobalDiscoveryTab: () => i,
+        MOBILE_GLOBAL_DISCOVERY_TABS: () => a
+    });
+var i = (function (e) {
+    return (e.SERVERS = 'servers'), (e.QUESTS = 'quests'), (e.APPS = 'apps'), e;
+})({});
+let r = ['apps', 'servers', 'quests'],
+    a = ['servers', 'quests'],
+    s = 'servers',
+    o = 24,
+    l = 240;
+var u = (function (e) {
+        return (e.DEFAULT = 'default'), (e.FLOATING = 'floating'), (e.COLLAPSED = 'collapsed'), e;
+    })({}),
+    c = (function (e) {
+        return (e.ROOT = 'root'), (e.SERVERS_CATEGORY = 'server_tab'), (e.SERVERS_SEARCH = 'server_search'), e;
+    })({}),
+    d = (function (e) {
+        return (e.GUILDS_BAR_ICON = 'guilds_bar_icon'), e;
+    })({});

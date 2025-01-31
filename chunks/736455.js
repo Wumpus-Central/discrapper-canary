@@ -1,8 +1,11 @@
-e.exports = {
-    verified: 'verified_d082f7 background_d082f7',
-    staff: 'staff_d082f7 background_d082f7',
-    icon: 'icon_d082f7',
-    partnered: 'partnered_d082f7 background_d082f7',
-    hub: 'hub_d082f7 hubContainer_d082f7 background_d082f7',
-    verifiedHub: 'verifiedHub_d082f7 hubContainer_d082f7 background_d082f7'
+var i = {
+    background: 'background__09691',
+    hubContainer: 'hubContainer__09691 background__09691',
+    verified: 'verified__09691 background__09691',
+    staff: 'staff__09691 background__09691',
+    icon: 'icon__09691',
+    partnered: 'partnered__09691 background__09691',
+    hub: 'hub__09691 hubContainer__09691 background__09691',
+    verifiedHub: 'verifiedHub__09691 hubContainer__09691 background__09691'
 };
+e.exports = i;

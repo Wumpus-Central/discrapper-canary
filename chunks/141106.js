@@ -1,42 +1,32 @@
-var i;
-r.d(n, {
-    BD: function () {
-        return l;
+n.d(t, {
+    BD: () => o,
+    dQ: () => i,
+    jO: () => l
+});
+var i = (function (e) {
+    return (e[(e.ExactMatch = 0)] = 'ExactMatch'), (e[(e.PrefixMatch = 1)] = 'PrefixMatch'), e;
+})({});
+let r = (e) => /\p{P}/gu.test(null != e ? e : '') || ' ' === e || '' === e,
+    a = (e, t, n) => {
+        if (n - t > e.length) return !1;
+        let i = e.charAt(t - 1),
+            a = e.charAt(n + 1);
+        return r(i) && r(a);
     },
-    dQ: function () {
-        return i;
-    },
-    jO: function () {
-        return u;
-    }
-}),
-    !(function (e) {
-        (e[(e.ExactMatch = 0)] = 'ExactMatch'), (e[(e.PrefixMatch = 1)] = 'PrefixMatch');
-    })(i || (i = {}));
-let a = (e) => /\p{P}/gu.test(null != e ? e : '') || ' ' === e || '' === e,
-    o = (e, n, r) => {
-        if (r - n > e.length) return !1;
-        let i = e.charAt(n - 1),
-            o = e.charAt(r + 1);
-        return a(i) && a(o);
-    },
-    s = (e, n) => a(e.charAt(n - 1)),
-    l = (e, n, r, i) => {
-        if (1 === i) return s(e, n);
-        return o(e, n, r);
-    },
-    u = (e, n, r, i) => {
+    s = (e, t) => r(e.charAt(t - 1)),
+    o = (e, t, n, i) => (1 === i ? s(e, t) : a(e, t, n)),
+    l = (e, t, n, i) => {
         if (0 === i)
             return {
-                start: n,
-                end: r,
-                keyword: e.substring(n, r + 1)
+                start: t,
+                end: n,
+                keyword: e.substring(t, n + 1)
             };
-        let o = r;
-        for (; o < e.length - 1 && !a(e.charAt(o + 1)); ) o++;
+        let a = n;
+        for (; a < e.length - 1 && !r(e.charAt(a + 1)); ) a++;
         return {
-            start: n,
-            end: o,
-            keyword: e.substring(n, o + 1)
+            start: t,
+            end: a,
+            keyword: e.substring(t, a + 1)
         };
     };

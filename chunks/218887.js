@@ -1,179 +1,174 @@
-var i = r(444675);
-function a(e) {
+var i = n(444675);
+function r(e) {
     if ('string' != typeof e) throw TypeError('Path must be a string. Received ' + JSON.stringify(e));
 }
-function o(e, n) {
-    for (var r, i = '', a = 0, o = -1, s = 0, l = 0; l <= e.length; ++l) {
-        if (l < e.length) r = e.charCodeAt(l);
-        else if (47 === r) break;
-        else r = 47;
-        if (47 === r) {
-            if (o === l - 1 || 1 === s);
-            else if (o !== l - 1 && 2 === s) {
-                if (i.length < 2 || 2 !== a || 46 !== i.charCodeAt(i.length - 1) || 46 !== i.charCodeAt(i.length - 2)) {
+function a(e, t) {
+    for (var n, i = '', r = 0, a = -1, s = 0, o = 0; o <= e.length; ++o) {
+        if (o < e.length) n = e.charCodeAt(o);
+        else if (47 === n) break;
+        else n = 47;
+        if (47 === n) {
+            if (a === o - 1 || 1 === s);
+            else if (a !== o - 1 && 2 === s) {
+                if (i.length < 2 || 2 !== r || 46 !== i.charCodeAt(i.length - 1) || 46 !== i.charCodeAt(i.length - 2)) {
                     if (i.length > 2) {
-                        var u = i.lastIndexOf('/');
-                        if (u !== i.length - 1) {
-                            -1 === u ? ((i = ''), (a = 0)) : (a = (i = i.slice(0, u)).length - 1 - i.lastIndexOf('/')), (o = l), (s = 0);
+                        var l = i.lastIndexOf('/');
+                        if (l !== i.length - 1) {
+                            -1 === l ? ((i = ''), (r = 0)) : (r = (i = i.slice(0, l)).length - 1 - i.lastIndexOf('/')), (a = o), (s = 0);
                             continue;
                         }
                     } else if (2 === i.length || 1 === i.length) {
-                        (i = ''), (a = 0), (o = l), (s = 0);
+                        (i = ''), (r = 0), (a = o), (s = 0);
                         continue;
                     }
                 }
-                n && (i.length > 0 ? (i += '/..') : (i = '..'), (a = 2));
-            } else i.length > 0 ? (i += '/' + e.slice(o + 1, l)) : (i = e.slice(o + 1, l)), (a = l - o - 1);
-            (o = l), (s = 0);
-        } else 46 === r && -1 !== s ? ++s : (s = -1);
+                t && (i.length > 0 ? (i += '/..') : (i = '..'), (r = 2));
+            } else i.length > 0 ? (i += '/' + e.slice(a + 1, o)) : (i = e.slice(a + 1, o)), (r = o - a - 1);
+            (a = o), (s = 0);
+        } else 46 === n && -1 !== s ? ++s : (s = -1);
     }
     return i;
 }
-function s(e, n) {
-    var r = n.dir || n.root,
-        i = n.base || (n.name || '') + (n.ext || '');
-    return r ? (r === n.root ? r + i : r + e + i) : i;
+function s(e, t) {
+    var n = t.dir || t.root,
+        i = t.base || (t.name || '') + (t.ext || '');
+    return n ? (n === t.root ? n + i : n + e + i) : i;
 }
-var l = {
+var o = {
     resolve: function () {
-        for (var e, n, r = '', s = !1, l = arguments.length - 1; l >= -1 && !s; l--) {
-            if ((l >= 0 ? (n = arguments[l]) : (void 0 === e && (e = i.cwd()), (n = e)), a(n), 0 !== n.length)) (r = n + '/' + r), (s = 47 === n.charCodeAt(0));
-        }
-        if (((r = o(r, !s)), s)) return r.length > 0 ? '/' + r : '/';
-        if (r.length > 0) return r;
-        return '.';
+        for (var e, t, n = '', s = !1, o = arguments.length - 1; o >= -1 && !s; o--) o >= 0 ? (t = arguments[o]) : (void 0 === e && (e = i.cwd()), (t = e)), r(t), 0 !== t.length && ((n = t + '/' + n), (s = 47 === t.charCodeAt(0)));
+        return ((n = a(n, !s)), s) ? (n.length > 0 ? '/' + n : '/') : n.length > 0 ? n : '.';
     },
     normalize: function (e) {
-        if ((a(e), 0 === e.length)) return '.';
-        var n = 47 === e.charCodeAt(0),
-            r = 47 === e.charCodeAt(e.length - 1);
-        return (0 === (e = o(e, !n)).length && !n && (e = '.'), e.length > 0 && r && (e += '/'), n) ? '/' + e : e;
+        if ((r(e), 0 === e.length)) return '.';
+        var t = 47 === e.charCodeAt(0),
+            n = 47 === e.charCodeAt(e.length - 1);
+        return (0 !== (e = a(e, !t)).length || t || (e = '.'), e.length > 0 && n && (e += '/'), t) ? '/' + e : e;
     },
     isAbsolute: function (e) {
-        return a(e), e.length > 0 && 47 === e.charCodeAt(0);
+        return r(e), e.length > 0 && 47 === e.charCodeAt(0);
     },
     join: function () {
         if (0 == arguments.length) return '.';
-        for (var e, n = 0; n < arguments.length; ++n) {
-            var r = arguments[n];
-            a(r), r.length > 0 && (void 0 === e ? (e = r) : (e += '/' + r));
+        for (var e, t = 0; t < arguments.length; ++t) {
+            var n = arguments[t];
+            r(n), n.length > 0 && (void 0 === e ? (e = n) : (e += '/' + n));
         }
-        return void 0 === e ? '.' : l.normalize(e);
+        return void 0 === e ? '.' : o.normalize(e);
     },
-    relative: function (e, n) {
-        if ((a(e), a(n), e === n)) return '';
-        if (((e = l.resolve(e)), e === (n = l.resolve(n)))) return '';
-        for (var r = 1; r < e.length && 47 === e.charCodeAt(r); ++r);
-        for (var i = e.length, o = i - r, s = 1; s < n.length && 47 === n.charCodeAt(s); ++s);
-        for (var u = n.length - s, c = o < u ? o : u, d = -1, f = 0; f <= c; ++f) {
-            if (f === c) {
-                if (u > c) {
-                    if (47 === n.charCodeAt(s + f)) return n.slice(s + f + 1);
-                    if (0 === f) return n.slice(s + f);
-                } else o > c && (47 === e.charCodeAt(r + f) ? (d = f) : 0 === f && (d = 0));
+    relative: function (e, t) {
+        if ((r(e), r(t), e === t || (e = o.resolve(e)) === (t = o.resolve(t)))) return '';
+        for (var n = 1; n < e.length && 47 === e.charCodeAt(n); ++n);
+        for (var i = e.length, a = i - n, s = 1; s < t.length && 47 === t.charCodeAt(s); ++s);
+        for (var l = t.length - s, u = a < l ? a : l, c = -1, d = 0; d <= u; ++d) {
+            if (d === u) {
+                if (l > u) {
+                    if (47 === t.charCodeAt(s + d)) return t.slice(s + d + 1);
+                    if (0 === d) return t.slice(s + d);
+                } else a > u && (47 === e.charCodeAt(n + d) ? (c = d) : 0 === d && (c = 0));
                 break;
             }
-            var p = e.charCodeAt(r + f);
-            if (p !== n.charCodeAt(s + f)) break;
-            47 === p && (d = f);
+            var f = e.charCodeAt(n + d);
+            if (f !== t.charCodeAt(s + d)) break;
+            47 === f && (c = d);
         }
-        var h = '';
-        for (f = r + d + 1; f <= i; ++f) (f === i || 47 === e.charCodeAt(f)) && (0 === h.length ? (h += '..') : (h += '/..'));
-        return h.length > 0 ? h + n.slice(s + d) : ((s += d), 47 === n.charCodeAt(s) && ++s, n.slice(s));
+        var _ = '';
+        for (d = n + c + 1; d <= i; ++d) (d === i || 47 === e.charCodeAt(d)) && (0 === _.length ? (_ += '..') : (_ += '/..'));
+        return _.length > 0 ? _ + t.slice(s + c) : ((s += c), 47 === t.charCodeAt(s) && ++s, t.slice(s));
     },
     _makeLong: function (e) {
         return e;
     },
     dirname: function (e) {
-        if ((a(e), 0 === e.length)) return '.';
-        for (var n = e.charCodeAt(0), r = 47 === n, i = -1, o = !0, s = e.length - 1; s >= 1; --s)
-            if (47 === (n = e.charCodeAt(s))) {
-                if (!o) {
+        if ((r(e), 0 === e.length)) return '.';
+        for (var t = e.charCodeAt(0), n = 47 === t, i = -1, a = !0, s = e.length - 1; s >= 1; --s)
+            if (47 === (t = e.charCodeAt(s))) {
+                if (!a) {
                     i = s;
                     break;
                 }
-            } else o = !1;
-        return -1 === i ? (r ? '/' : '.') : r && 1 === i ? '//' : e.slice(0, i);
+            } else a = !1;
+        return -1 === i ? (n ? '/' : '.') : n && 1 === i ? '//' : e.slice(0, i);
     },
-    basename: function (e, n) {
-        if (void 0 !== n && 'string' != typeof n) throw TypeError('"ext" argument must be a string');
-        a(e);
-        var r,
+    basename: function (e, t) {
+        if (void 0 !== t && 'string' != typeof t) throw TypeError('"ext" argument must be a string');
+        r(e);
+        var n,
             i = 0,
-            o = -1,
+            a = -1,
             s = !0;
-        if (void 0 !== n && n.length > 0 && n.length <= e.length) {
-            if (n.length === e.length && n === e) return '';
-            var l = n.length - 1,
-                u = -1;
-            for (r = e.length - 1; r >= 0; --r) {
-                var c = e.charCodeAt(r);
-                if (47 === c) {
+        if (void 0 !== t && t.length > 0 && t.length <= e.length) {
+            if (t.length === e.length && t === e) return '';
+            var o = t.length - 1,
+                l = -1;
+            for (n = e.length - 1; n >= 0; --n) {
+                var u = e.charCodeAt(n);
+                if (47 === u) {
                     if (!s) {
-                        i = r + 1;
+                        i = n + 1;
                         break;
                     }
-                } else -1 === u && ((s = !1), (u = r + 1)), l >= 0 && (c === n.charCodeAt(l) ? -1 == --l && (o = r) : ((l = -1), (o = u)));
+                } else -1 === l && ((s = !1), (l = n + 1)), o >= 0 && (u === t.charCodeAt(o) ? -1 == --o && (a = n) : ((o = -1), (a = l)));
             }
-            return i === o ? (o = u) : -1 === o && (o = e.length), e.slice(i, o);
+            return i === a ? (a = l) : -1 === a && (a = e.length), e.slice(i, a);
         }
-        for (r = e.length - 1; r >= 0; --r)
-            if (47 === e.charCodeAt(r)) {
+        for (n = e.length - 1; n >= 0; --n)
+            if (47 === e.charCodeAt(n)) {
                 if (!s) {
-                    i = r + 1;
+                    i = n + 1;
                     break;
                 }
-            } else -1 === o && ((s = !1), (o = r + 1));
-        return -1 === o ? '' : e.slice(i, o);
+            } else -1 === a && ((s = !1), (a = n + 1));
+        return -1 === a ? '' : e.slice(i, a);
     },
     extname: function (e) {
-        a(e);
-        for (var n = -1, r = 0, i = -1, o = !0, s = 0, l = e.length - 1; l >= 0; --l) {
-            var u = e.charCodeAt(l);
-            if (47 === u) {
-                if (!o) {
-                    r = l + 1;
+        r(e);
+        for (var t = -1, n = 0, i = -1, a = !0, s = 0, o = e.length - 1; o >= 0; --o) {
+            var l = e.charCodeAt(o);
+            if (47 === l) {
+                if (!a) {
+                    n = o + 1;
                     break;
                 }
                 continue;
             }
-            -1 === i && ((o = !1), (i = l + 1)), 46 === u ? (-1 === n ? (n = l) : 1 !== s && (s = 1)) : -1 !== n && (s = -1);
+            -1 === i && ((a = !1), (i = o + 1)), 46 === l ? (-1 === t ? (t = o) : 1 !== s && (s = 1)) : -1 !== t && (s = -1);
         }
-        return -1 === n || -1 === i || 0 === s || (1 === s && n === i - 1 && n === r + 1) ? '' : e.slice(n, i);
+        return -1 === t || -1 === i || 0 === s || (1 === s && t === i - 1 && t === n + 1) ? '' : e.slice(t, i);
     },
     format: function (e) {
         if (null === e || 'object' != typeof e) throw TypeError('The "pathObject" argument must be of type Object. Received type ' + typeof e);
         return s('/', e);
     },
     parse: function (e) {
-        a(e);
-        var n,
-            r = {
+        r(e);
+        var t,
+            n = {
                 root: '',
                 dir: '',
                 base: '',
                 ext: '',
                 name: ''
             };
-        if (0 === e.length) return r;
+        if (0 === e.length) return n;
         var i = e.charCodeAt(0),
-            o = 47 === i;
-        o ? ((r.root = '/'), (n = 1)) : (n = 0);
-        for (var s = -1, l = 0, u = -1, c = !0, d = e.length - 1, f = 0; d >= n; --d) {
-            if (47 === (i = e.charCodeAt(d))) {
-                if (!c) {
-                    l = d + 1;
+            a = 47 === i;
+        a ? ((n.root = '/'), (t = 1)) : (t = 0);
+        for (var s = -1, o = 0, l = -1, u = !0, c = e.length - 1, d = 0; c >= t; --c) {
+            if (47 === (i = e.charCodeAt(c))) {
+                if (!u) {
+                    o = c + 1;
                     break;
                 }
                 continue;
             }
-            -1 === u && ((c = !1), (u = d + 1)), 46 === i ? (-1 === s ? (s = d) : 1 !== f && (f = 1)) : -1 !== s && (f = -1);
+            -1 === l && ((u = !1), (l = c + 1)), 46 === i ? (-1 === s ? (s = c) : 1 !== d && (d = 1)) : -1 !== s && (d = -1);
         }
-        return -1 === s || -1 === u || 0 === f || (1 === f && s === u - 1 && s === l + 1) ? -1 !== u && (0 === l && o ? (r.base = r.name = e.slice(1, u)) : (r.base = r.name = e.slice(l, u))) : (0 === l && o ? ((r.name = e.slice(1, s)), (r.base = e.slice(1, u))) : ((r.name = e.slice(l, s)), (r.base = e.slice(l, u))), (r.ext = e.slice(s, u))), l > 0 ? (r.dir = e.slice(0, l - 1)) : o && (r.dir = '/'), r;
+        return -1 === s || -1 === l || 0 === d || (1 === d && s === l - 1 && s === o + 1) ? -1 !== l && (0 === o && a ? (n.base = n.name = e.slice(1, l)) : (n.base = n.name = e.slice(o, l))) : (0 === o && a ? ((n.name = e.slice(1, s)), (n.base = e.slice(1, l))) : ((n.name = e.slice(o, s)), (n.base = e.slice(o, l))), (n.ext = e.slice(s, l))), o > 0 ? (n.dir = e.slice(0, o - 1)) : a && (n.dir = '/'), n;
     },
     sep: '/',
     delimiter: ':',
     win32: null,
     posix: null
 };
-(l.posix = l), (e.exports = l);
+(o.posix = o), (e.exports = o);

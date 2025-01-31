@@ -1,4 +1,5 @@
-e.exports = {
-    container: 'container_b80cb2',
-    progress: 'progress_b80cb2'
+var i = {
+    container: 'container__1fad5',
+    progress: 'progress__1fad5'
 };
+e.exports = i;

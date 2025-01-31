@@ -1,33 +1,29 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-});
+n.d(t, { Z: () => o });
 var i = n(192379),
     l = n(442837),
-    r = n(499254),
-    a = n(213459),
+    a = n(499254),
+    r = n(213459),
     s = n(592125);
 function o(e) {
     let { isProfileFetching: t, wasProfileFetching: n, applicationId: o, channelId: c, commands: d } = e;
     i.useEffect(() => {
-        !t && n && null == o && (0, r.Tv)(c);
+        !t && n && null == o && (0, a.Tv)(c);
     }, [t, n, o, c]),
         i.useEffect(() => {
-            (0, r.Hm)(c);
+            (0, a.Hm)(c);
         }, [c]);
-    let u = (0, l.e7)([a.ZP], () => {
+    let u = (0, l.e7)([r.ZP], () => {
             var e, t;
-            return null !== (t = null === (e = a.ZP.getApplicationState(o)) || void 0 === e ? void 0 : e.fetchState.fetching) && void 0 !== t && t;
+            return null !== (t = null === (e = r.ZP.getApplicationState(o)) || void 0 === e ? void 0 : e.fetchState.fetching) && void 0 !== t && t;
         }),
-        h = (0, l.e7)([a.ZP, s.Z], () => {
+        h = (0, l.e7)([r.ZP, s.Z], () => {
             var e, t;
             let n = s.Z.getChannel(c);
             return (
                 null !==
                     (t =
                         null ===
-                            (e = a.ZP.getContextState(
+                            (e = r.ZP.getContextState(
                                 null != n
                                     ? {
                                           channel: n,
@@ -53,6 +49,6 @@ function o(e) {
             h && (m.current = !0);
         }, [h]),
         i.useEffect(() => {
-            !u && !h && p.current && m.current && 0 === d.length && (0, r.Tv)(c);
+            !u && !h && p.current && m.current && 0 === d.length && (0, a.Tv)(c);
         }, [u, h, d, c]);
 }

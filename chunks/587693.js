@@ -1,36 +1,32 @@
-r.d(n, {
-    i: function () {
-        return l;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(692547),
-    o = r(331595),
-    s = r(267843);
-let l = (e) => {
-    var n, r;
-    let { size: l = 'md', width: u, height: c, color: d = a.Z.colors.INTERACTIVE_NORMAL, colorClass: f = '', ...p } = e,
-        h = (0, s.m)(l),
-        _ = null !== (n = null == h ? void 0 : h.width) && void 0 !== n ? n : u,
-        m = null !== (r = null == h ? void 0 : h.height) && void 0 !== r ? r : c;
+n.d(t, { i: () => o });
+var i = n(200651);
+n(192379);
+var r = n(692547),
+    a = n(331595),
+    s = n(267843);
+let o = (e) => {
+    var t, n;
+    let { size: o = 'md', width: l, height: u, color: c = r.Z.colors.INTERACTIVE_NORMAL, colorClass: d = '', ...f } = e,
+        _ = (0, s.m)(o),
+        p = null !== (t = null == _ ? void 0 : _.width) && void 0 !== t ? t : l,
+        h = null !== (n = null == _ ? void 0 : _.height) && void 0 !== n ? n : u;
     return (0, i.jsxs)('svg', {
-        ...(0, o.Z)(p),
+        ...(0, a.Z)(f),
         xmlns: 'http://www.w3.org/2000/svg',
-        width: _,
-        height: m,
+        width: p,
+        height: h,
         fill: 'none',
         viewBox: '0 0 24 24',
         children: [
             (0, i.jsx)('path', {
                 d: 'M13.19 2.5c.29-.24.35-.7.06-.94l-.2-.16a1.59 1.59 0 0 0-2.1 0l-4.9 4A3.37 3.37 0 0 0 5 8v8c0 1.07.4 2.06 1.05 2.6l4.9 4c.65.53 1.45.53 2.1 0l4.9-4A3.37 3.37 0 0 0 19 16v-3.5c0-.28-.23-.5-.5-.54-.2-.03-.4-.08-.6-.15-.4-.14-.9.12-.9.54V16c0 .65-.25 1-.32 1.05l-4.36 3.57a.5.5 0 0 1-.64 0l-4.36-3.57C7.25 16.99 7 16.65 7 16V8c0-.65.25-1 .32-1.05l4.52-3.7c.1-.07.23-.07.32 0 .12.1.3.06.39-.07.17-.25.38-.49.64-.69Z',
-                fill: 'string' == typeof d ? d : d.css,
-                className: f
+                fill: 'string' == typeof c ? c : c.css,
+                className: d
             }),
             (0, i.jsx)('path', {
                 d: 'm9.3 8.7 2.35-2.35c.2-.2.5-.2.7 0l2.36 2.36a1 1 0 0 1 .29.7v5.18a1 1 0 0 1-.3.7l-2.35 2.36a.5.5 0 0 1-.7 0l-2.36-2.36a1 1 0 0 1-.29-.7V9.4a1 1 0 0 1 .3-.7ZM17.86.8a1.21 1.21 0 0 1 2.28 0l.5 1.37a2 2 0 0 0 1.19 1.18l1.38.51a1.21 1.21 0 0 1 0 2.28l-1.38.5a2 2 0 0 0-1.18 1.19l-.51 1.38a1.21 1.21 0 0 1-2.28 0l-.5-1.38a2 2 0 0 0-1.19-1.18l-1.38-.51a1.21 1.21 0 0 1 0-2.28l1.38-.5a2 2 0 0 0 1.18-1.19l.51-1.38Z',
-                fill: 'string' == typeof d ? d : d.css,
-                className: f
+                fill: 'string' == typeof c ? c : c.css,
+                className: d
             })
         ]
     });

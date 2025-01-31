@@ -1,54 +1,50 @@
-r.d(n, {
-    vg: function () {
-        return _;
-    },
-    w7: function () {
-        return h;
-    }
+n.d(t, {
+    vg: () => p,
+    w7: () => _
 });
-var i = r(961742),
-    a = r(295415),
-    o = r(27273);
+var i = n(961742),
+    r = n(295415),
+    a = n(27273);
 let s = /url\((['"]?)([^'"]+?)\1\)/g,
-    l = /url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,
-    u = /src:\s*(?:url\([^)]+\)\s*format\([^)]+\)[,;]\s*)+/g;
+    o = /url\([^)]+\)\s*format\((["']?)([^"']+)\1\)/g,
+    l = /src:\s*(?:url\([^)]+\)\s*format\([^)]+\)[,;]\s*)+/g;
+function u(e) {
+    let t = e.replace(/([.*+?^${}()|\[\]\/\\])/g, '\\$1');
+    return RegExp(`(url\\(['"]?)(${t})(['"]?\\))`, 'g');
+}
 function c(e) {
-    let n = e.replace(/([.*+?^${}()|\[\]\/\\])/g, '\\$1');
-    return RegExp(`(url\\(['"]?)(${n})(['"]?\\))`, 'g');
+    let t = [];
+    return e.replace(s, (e, n, i) => (t.push(i), e)), t.filter((e) => !(0, a.pZ)(e));
 }
-function d(e) {
-    let n = [];
-    return e.replace(s, (e, r, i) => (n.push(i), e)), n.filter((e) => !(0, o.pZ)(e));
-}
-async function f(e, n, r, s, l) {
+async function d(e, t, n, s, o) {
     try {
-        let u;
-        let d = r ? (0, i.Kk)(n, r) : n,
-            f = (0, a.b)(n);
-        if (l) {
-            let e = await l(d);
-            u = (0, o.DT)(e, f);
-        } else u = await (0, o.sx)(d, f, s);
-        return e.replace(c(n), `$1${u}$3`);
+        let l;
+        let c = n ? (0, i.Kk)(t, n) : t,
+            d = (0, r.b)(t);
+        if (o) {
+            let e = await o(c);
+            l = (0, a.DT)(e, d);
+        } else l = await (0, a.sx)(c, d, s);
+        return e.replace(u(t), `$1${l}$3`);
     } catch (e) {}
     return e;
 }
-function p(e, { preferredFontFormat: n }) {
-    return n
-        ? e.replace(u, (e) => {
+function f(e, { preferredFontFormat: t }) {
+    return t
+        ? e.replace(l, (e) => {
               for (;;) {
-                  let [r, , i] = l.exec(e) || [];
+                  let [n, , i] = o.exec(e) || [];
                   if (!i) return '';
-                  if (i === n) return `src: ${r};`;
+                  if (i === t) return `src: ${n};`;
               }
           })
         : e;
 }
-function h(e) {
+function _(e) {
     return -1 !== e.search(s);
 }
-async function _(e, n, r) {
-    if (!h(e)) return e;
-    let i = p(e, r);
-    return d(i).reduce((e, i) => e.then((e) => f(e, i, n, r)), Promise.resolve(i));
+async function p(e, t, n) {
+    if (!_(e)) return e;
+    let i = f(e, n);
+    return c(i).reduce((e, i) => e.then((e) => d(e, i, t, n)), Promise.resolve(i));
 }

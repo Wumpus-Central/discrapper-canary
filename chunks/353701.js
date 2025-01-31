@@ -1,9 +1,11 @@
 e.exports = {
-    enableContainer: 'enableContainer_a1879c',
-    activeCircle: 'activeCircle_a1879c iconCircle_a1879c',
-    animate: 'animate_a1879c',
-    editCircle: 'editCircle_a1879c iconCircle_a1879c',
-    enableDescription: 'enableDescription_a1879c',
-    buttonContainer: 'buttonContainer_a1879c',
-    previewButton: 'previewButton_a1879c'
+    enableContainer: 'enableContainer__5ea8c',
+    iconCircle: 'iconCircle__5ea8c',
+    enable: 'enable__5ea8c',
+    activeCircle: 'activeCircle__5ea8c iconCircle__5ea8c',
+    animate: 'animate__5ea8c',
+    editCircle: 'editCircle__5ea8c iconCircle__5ea8c',
+    enableDescription: 'enableDescription__5ea8c',
+    buttonContainer: 'buttonContainer__5ea8c',
+    previewButton: 'previewButton__5ea8c'
 };

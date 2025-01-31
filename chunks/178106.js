@@ -1,131 +1,129 @@
+n.d(t, { Z: () => P }), n(653041), n(47120);
 var i,
-    a = r(653041);
-var o = r(47120);
-var s = r(392711),
-    l = r.n(s),
-    u = r(31775),
-    c = r.n(u),
-    d = r(442837),
-    f = r(570140),
-    p = r(704907),
-    h = r(581883),
-    _ = r(594174),
-    m = r(164878),
-    g = r(763296),
-    E = r(697426),
-    v = r(710111),
-    y = r(526761);
-function b(e, n, r) {
+    r = n(392711),
+    a = n.n(r),
+    s = n(31775),
+    o = n.n(s),
+    l = n(442837),
+    u = n(570140),
+    c = n(704907),
+    d = n(581883),
+    f = n(594174),
+    _ = n(164878),
+    p = n(763296),
+    h = n(697426),
+    m = n(710111),
+    g = n(526761);
+function E(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let I = [],
-    T = new (c())({ max: v.zb }),
-    S = new p.ZP({
+let v = [],
+    y = new (o())({ max: m.zb }),
+    I = new c.ZP({
         computeBonus: () => 100,
         computeWeight: (e) => {
-            let n = 1;
-            return e <= 3 ? (n = 100) : e <= 15 ? (n = 70) : e <= 30 ? (n = 50) : e <= 45 ? (n = 30) : e <= 80 && (n = 10), n;
+            let t = 1;
+            return e <= 3 ? (t = 100) : e <= 15 ? (t = 70) : e <= 30 ? (t = 50) : e <= 45 ? (t = 30) : e <= 80 && (t = 10), t;
         },
-        lookupKey: (e) => g.Z.getSoundById(e),
+        lookupKey: (e) => p.Z.getSoundById(e),
         afterCompute: () => {},
-        numFrequentlyItems: v.O6
+        numFrequentlyItems: m.O6
     });
+function b(e) {
+    let { sound: t, trigger: n } = e;
+    if (!x()) return;
+    let i = t.soundId.toString();
+    n === h.YQ.SOUNDBOARD && A(i);
+}
+function T(e) {
+    var t;
+    let { soundId: n, userId: i } = e;
+    if (!D()) return;
+    let r = n.toString();
+    i !== (null === (t = f.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && N(r) && S(r);
+}
+function S(e) {
+    y.set(e, e);
+}
 function A(e) {
-    let { sound: n, trigger: r } = e;
-    if (!P()) return;
-    let i = n.soundId.toString();
-    r === E.YQ.SOUNDBOARD && R(i);
-}
-function C(e) {
-    var n;
-    let { soundId: r, userId: i } = e;
-    if (!w()) return;
-    let a = r.toString();
-    i !== (null === (n = _.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && O(a) && N(a);
-}
-function N(e) {
-    T.set(e, e);
-}
-function R(e) {
-    S.track(e),
-        I.push({
+    I.track(e),
+        v.push({
             key: e,
             timestamp: Date.now()
         }),
-        S.compute();
+        I.compute();
 }
-function O(e) {
-    for (let n of g.Z.getSounds().values()) if (null != n.find((n) => n.soundId.toString() === e)) return !0;
+function N(e) {
+    for (let t of p.Z.getSounds().values()) if (null != t.find((t) => t.soundId.toString() === e)) return !0;
     return !1;
 }
-function D(e) {
-    return l().mapValues(e, (e) => ({
+function C(e) {
+    return a().mapValues(e, (e) => ({
         ...e,
         recentUses: e.recentUses.map(Number).filter((e) => e > 0)
     }));
 }
-function L() {
+function R() {
     var e;
-    if (!P()) return;
-    let n = null === (e = h.Z.frecencyWithoutFetchingLatest.playedSoundFrecency) || void 0 === e ? void 0 : e.playedSounds;
-    S.overwriteHistory(D(null != n ? n : {}), I);
+    if (!x()) return;
+    let t = null === (e = d.Z.frecencyWithoutFetchingLatest.playedSoundFrecency) || void 0 === e ? void 0 : e.playedSounds;
+    I.overwriteHistory(C(null != t ? t : {}), v);
 }
-function x(e) {
+function O(e) {
     let {
-        settings: { type: n },
-        wasSaved: r
+        settings: { type: t },
+        wasSaved: n
     } = e;
-    P() && n === y.yP.FRECENCY_AND_FAVORITES_SETTINGS && r && (I = []);
+    x() && t === g.yP.FRECENCY_AND_FAVORITES_SETTINGS && n && (v = []);
 }
-function w() {
-    return (0, m.v)({
+function D() {
+    return (0, _.v)({
         location: 'soundboard_event_store',
         autoTrackExposure: !1
     }).canSeeRecentlyHeard;
 }
-function P() {
-    return (0, m.v)({
+function x() {
+    return (0, _.v)({
         location: 'soundboard_event_store',
         autoTrackExposure: !1
     }).canSeeFrequentlyPlayed;
 }
-class M extends (i = d.ZP.PersistedStore) {
+class L extends (i = l.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(_.default, g.Z), (null == e ? void 0 : e.recentlyHeardCache) != null && T.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (I = e.playedEventsPendingFlush), this.syncWith([h.Z], L);
+        this.waitFor(f.default, p.Z), (null == e ? void 0 : e.recentlyHeardCache) != null && y.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (v = e.playedEventsPendingFlush), this.syncWith([d.Z], R);
     }
     getState() {
         return {
-            recentlyHeardCache: T.dump(),
-            playedEventsPendingFlush: I
+            recentlyHeardCache: y.dump(),
+            playedEventsPendingFlush: v
         };
     }
     hasPendingUsage() {
-        return I.length > 0;
+        return v.length > 0;
     }
     get playedSoundHistory() {
-        return S.usageHistory;
+        return I.usageHistory;
     }
     get recentlyHeardSoundIds() {
-        return T.values();
+        return y.values();
     }
     get frecentlyPlayedSounds() {
-        return S.frequently;
+        return I.frequently;
     }
 }
-b(M, 'displayName', 'SoundboardEventStore'),
-    b(M, 'persistKey', 'SoundboardEventStore'),
-    (n.Z = new M(f.Z, {
-        GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY: A,
-        GUILD_SOUNDBOARD_SOUND_PLAY_START: C,
-        USER_SETTINGS_PROTO_UPDATE: x
-    }));
+E(L, 'displayName', 'SoundboardEventStore'), E(L, 'persistKey', 'SoundboardEventStore');
+let P = new L(u.Z, {
+    GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY: b,
+    GUILD_SOUNDBOARD_SOUND_PLAY_START: T,
+    USER_SETTINGS_PROTO_UPDATE: O
+});

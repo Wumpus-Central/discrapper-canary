@@ -1,29 +1,23 @@
-r.d(n, {
-    Tk: function () {
-        return h;
-    },
-    kT: function () {
-        return f;
-    },
-    wN: function () {
-        return p;
-    }
-});
-var i = r(757143);
-var a = r(299608),
-    o = r.n(a),
-    s = r(626135),
-    l = r(549058),
-    u = r(981631);
-let c = /(!|\.|;|,|-|—|–|\?|"|')/g,
-    d = /(\n|\t|\s)/g,
-    f = (e) => e.replace(c, '').replace(d, ' '),
-    p = (e) => (null == e ? [] : f(e).trim().split(' ')),
-    h = o()(
+n.d(t, {
+    Tk: () => f,
+    kT: () => c,
+    wN: () => d
+}),
+    n(757143);
+var i = n(299608),
+    r = n.n(i),
+    a = n(626135),
+    s = n(549058),
+    o = n(981631);
+let l = /(!|\.|;|,|-|—|–|\?|"|')/g,
+    u = /(\n|\t|\s)/g,
+    c = (e) => e.replace(l, '').replace(u, ' '),
+    d = (e) => (null == e ? [] : c(e).trim().split(' ')),
+    f = r()(
         (e) => {
-            s.default.track(u.rMx.AUTO_SUGGEST_DISPLAYED, { suggestion_trigger: e });
+            a.default.track(o.rMx.AUTO_SUGGEST_DISPLAYED, { suggestion_trigger: e });
         },
-        l.xv,
+        s.xv,
         {
             leading: !0,
             trailing: !1

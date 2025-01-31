@@ -1,10 +1,6 @@
 n.d(t, {
-    Z: function () {
-        return E;
-    },
-    _: function () {
-        return b;
-    }
+    Z: () => T,
+    _: () => b
 }),
     n(47120);
 var i = n(200651),
@@ -21,18 +17,18 @@ var i = n(200651),
     g = n(434404),
     x = n(764260),
     p = n(946724),
-    f = n(999382),
+    _ = n(999382),
     C = n(130341),
-    v = n(853813),
-    I = n(163249),
+    f = n(853813),
+    v = n(163249),
     N = n(150689),
-    _ = n(203377),
-    T = n(981631);
-function j(e) {
+    j = n(203377),
+    I = n(981631);
+function E(e) {
     g.Z.selectRole(e);
 }
 let b = () => {
-    let { guild: e } = (0, a.cj)([f.Z], () => f.Z.getProps()),
+    let { guild: e } = (0, a.cj)([_.Z], () => _.Z.getProps()),
         t = (0, a.e7)([p.Z], () => p.Z.formState),
         n = (0, a.e7)([p.Z], () => p.Z.errorMessage);
     return (0, i.jsx)(c.Z, {
@@ -46,11 +42,11 @@ let b = () => {
                 l = null;
             p.Z.hasRoleConfigurationChanges && ((l = p.Z.editedRoleIdsForConfigurations), (r = p.Z.getEditedRoleConnectionConfigurationsMap())), (0, x.Gf)(t, n, i, l, r);
         },
-        submitting: t === T.QZA.SUBMITTING,
+        submitting: t === I.QZA.SUBMITTING,
         onReset: x.S1
     });
 };
-function E(e) {
+function T(e) {
     let { refToScroller: t } = e,
         { guild: n, roles: l } = (0, a.cj)(
             [p.Z],
@@ -64,38 +60,38 @@ function E(e) {
     let c = r.useMemo(() => l.find((e) => (0, u.pM)(n.id, e.id)), [l, n]);
     s()(null != c, 'Guild must have an everyone role');
     let h = r.useMemo(() => l.filter((e) => !(0, u.pM)(n.id, e.id)), [l, n]),
-        g = (0, a.e7)([f.Z], () => f.Z.getSelectedRoleId()),
-        [x, T] = r.useState(h.length > 0);
+        g = (0, a.e7)([_.Z], () => _.Z.getSelectedRoleId()),
+        [x, I] = r.useState(h.length > 0);
     r.useEffect(() => {
-        T(x || h.length > 0);
+        I(x || h.length > 0);
     }, [x, h.length]),
         (0, d.Z)(() => {
             let e = m.Z.getMemberCount(n.id);
             null != e && e <= C.cm && o.Z.requestMembers(n.id, '', 0, !1);
         });
-    let [b, E] = r.useState(_.ZI.DISPLAY);
+    let [b, T] = r.useState(j.ZI.DISPLAY);
     return (r.useEffect(() => {
-        null == g && E(_.ZI.DISPLAY);
+        null == g && T(j.ZI.DISPLAY);
     }, [g]),
     null != g)
-        ? (0, i.jsx)(v.Z, {
+        ? (0, i.jsx)(f.Z, {
               editRoleId: g,
-              setEditRoleId: j,
+              setEditRoleId: E,
               selectedSection: b,
-              setSelectedSection: E
+              setSelectedSection: T
           })
         : x
           ? (0, i.jsx)(N.Z, {
-                setEditRoleId: j,
+                setEditRoleId: E,
                 guild: n,
                 everyoneRole: c,
                 otherRoles: h,
-                setSelectedSection: E,
+                setSelectedSection: T,
                 refToScroller: t
             })
-          : (0, i.jsx)(I.Z, {
+          : (0, i.jsx)(v.Z, {
                 guild: n,
                 everyoneRole: c,
-                setEditRoleId: j
+                setEditRoleId: E
             });
 }

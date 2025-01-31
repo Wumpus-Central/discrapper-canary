@@ -1,7 +1,7 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    var n = {
+    var t = {
             1: '೧',
             2: '೨',
             3: '೩',
@@ -13,7 +13,7 @@
             9: '೯',
             0: '೦'
         },
-        r = {
+        n = {
             '೧': '1',
             '೨': '2',
             '೩': '3',
@@ -66,27 +66,20 @@
         },
         preparse: function (e) {
             return e.replace(/[೧೨೩೪೫೬೭೮೯೦]/g, function (e) {
-                return r[e];
+                return n[e];
             });
         },
         postformat: function (e) {
             return e.replace(/\d/g, function (e) {
-                return n[e];
+                return t[e];
             });
         },
         meridiemParse: /ರಾತ್ರಿ|ಬೆಳಿಗ್ಗೆ|ಮಧ್ಯಾಹ್ನ|ಸಂಜೆ/,
-        meridiemHour: function (e, n) {
-            if ((12 === e && (e = 0), 'ರಾತ್ರಿ' === n)) return e < 4 ? e : e + 12;
-            if ('ಬೆಳಿಗ್ಗೆ' === n) return e;
-            if ('ಮಧ್ಯಾಹ್ನ' === n) return e >= 10 ? e : e + 12;
-            else if ('ಸಂಜೆ' === n) return e + 12;
+        meridiemHour: function (e, t) {
+            return (12 === e && (e = 0), 'ರಾತ್ರಿ' === t) ? (e < 4 ? e : e + 12) : 'ಬೆಳಿಗ್ಗೆ' === t ? e : 'ಮಧ್ಯಾಹ್ನ' === t ? (e >= 10 ? e : e + 12) : 'ಸಂಜೆ' === t ? e + 12 : void 0;
         },
-        meridiem: function (e, n, r) {
-            if (e < 4) return 'ರಾತ್ರಿ';
-            if (e < 10) return 'ಬೆಳಿಗ್ಗೆ';
-            if (e < 17) return 'ಮಧ್ಯಾಹ್ನ';
-            else if (e < 20) return 'ಸಂಜೆ';
-            else return 'ರಾತ್ರಿ';
+        meridiem: function (e, t, n) {
+            return e < 4 ? 'ರಾತ್ರಿ' : e < 10 ? 'ಬೆಳಿಗ್ಗೆ' : e < 17 ? 'ಮಧ್ಯಾಹ್ನ' : e < 20 ? 'ಸಂಜೆ' : 'ರಾತ್ರಿ';
         },
         dayOfMonthOrdinalParse: /\d{1,2}(ನೇ)/,
         ordinal: function (e) {

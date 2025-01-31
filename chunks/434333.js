@@ -1,46 +1,42 @@
-r.d(n, {
-    k: function () {
-        return f;
-    },
-    m: function () {
-        return d;
-    }
+n.d(t, {
+    k: () => d,
+    m: () => c
 });
-var i = r(200651),
-    a = r(192379),
-    o = r(120356),
-    s = r.n(o),
-    l = r(1561),
-    u = r(481060),
-    c = r(195895);
-let d = {
-        RED: c.backgroundRed,
-        BACKGROUND_TERTIARY: c.backgroundTertiary,
-        BACKGROUND_ACCENT: c.backgroundAccent
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(1561),
+    l = n(481060),
+    u = n(195895);
+let c = {
+        RED: u.backgroundRed,
+        BACKGROUND_TERTIARY: u.backgroundTertiary,
+        BACKGROUND_ACCENT: u.backgroundAccent
     },
-    f = a.forwardRef(function (e, n) {
-        let { role: r, children: a, className: o, onDismiss: f, backgroundColor: p = d.RED, icon: h = u.CircleWarningIcon, iconClassName: _ } = e;
+    d = r.forwardRef(function (e, t) {
+        let { role: n, children: r, className: a, onDismiss: d, backgroundColor: f = c.RED, icon: _ = l.P4T, iconClassName: p } = e;
         return (0, i.jsxs)('div', {
-            className: s()(c.error, o, p),
-            ref: n,
+            className: s()(u.error, a, f),
+            ref: t,
             children: [
-                (0, i.jsx)(h, {
-                    className: s()(c.icon, _),
+                (0, i.jsx)(_, {
+                    className: s()(u.icon, p),
                     color: 'currentColor'
                 }),
                 (0, i.jsx)('div', {
-                    role: r,
-                    className: c.text,
-                    children: a
+                    role: n,
+                    className: u.text,
+                    children: r
                 }),
-                null != f
-                    ? (0, i.jsx)(l.P, {
-                          onClick: f,
-                          className: c.errorClose,
-                          children: (0, i.jsx)(u.XSmallIcon, {
+                null != d
+                    ? (0, i.jsx)(o.P, {
+                          onClick: d,
+                          className: u.errorClose,
+                          children: (0, i.jsx)(l.Dio, {
                               size: 'md',
                               color: 'currentColor',
-                              className: c.errorCloseIcon
+                              className: u.errorCloseIcon
                           })
                       })
                     : null

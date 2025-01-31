@@ -1,5 +1,6 @@
-var i = r(998502);
-n.Z = {
+n.d(t, { Z: () => r });
+var i = n(998502);
+let r = {
     flushDNSCache() {
         i.ZP.flushDNSCache();
     },
@@ -9,8 +10,8 @@ n.Z = {
     },
     setZoomFactor: (e) => i.ZP.setZoomFactor(e),
     focus(e) {
-        let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        i.ZP.focus(e, n);
+        let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        i.ZP.focus(e, t);
     },
     submitLiveCrashReport: (e) => i.ZP.submitLiveCrashReport(e),
     getPidFromDesktopSource: (e) => i.ZP.getPidFromDesktopSource(e),

@@ -1,29 +1,23 @@
-r.d(n, {
-    AQ: function () {
-        return y;
-    },
-    DY: function () {
-        return g;
-    },
-    yQ: function () {
-        return E;
-    }
-});
+n.d(t, {
+    AQ: () => g,
+    DY: () => p,
+    yQ: () => h
+}),
+    n(653041),
+    n(733860);
 var i,
+    r,
     a,
-    o,
     s,
+    o,
     l,
-    u,
-    c = r(653041);
-var d = r(733860);
-var f = r(553813),
-    p = r.n(f),
-    h = r(65154);
-let _ = [
+    u = n(553813),
+    c = n.n(u),
+    d = n(65154);
+let f = [
     {
         name: 'H265',
-        encode: (null === (a = window) || void 0 === a ? void 0 : null === (i = a.DiscordNative) || void 0 === i ? void 0 : i.process.platform) !== 'darwin' || ((null === (s = window) || void 0 === s ? void 0 : null === (o = s.DiscordNative) || void 0 === o ? void 0 : o.os.arch) === 'arm64' && p().satisfies(null === (u = window) || void 0 === u ? void 0 : null === (l = u.DiscordNative) || void 0 === l ? void 0 : l.os.release, h.n4)),
+        encode: (null === (r = window) || void 0 === r ? void 0 : null === (i = r.DiscordNative) || void 0 === i ? void 0 : i.process.platform) !== 'darwin' || ((null === (s = window) || void 0 === s ? void 0 : null === (a = s.DiscordNative) || void 0 === a ? void 0 : a.os.arch) === 'arm64' && c().satisfies(null === (l = window) || void 0 === l ? void 0 : null === (o = l.DiscordNative) || void 0 === o ? void 0 : o.os.release, d.n4)),
         decode: !0
     },
     {
@@ -42,62 +36,62 @@ let _ = [
         decode: !0
     }
 ];
-function m(e, n) {
-    let r = n.concat(_),
+function _(e, t) {
+    let n = t.concat(f),
         i = [];
     return (
-        r.forEach((n) => {
-            let r = e.find((e) => n.name === e.codec);
-            null != r &&
+        n.forEach((t) => {
+            let n = e.find((e) => t.name === e.codec);
+            null != n &&
                 i.push({
-                    name: r.codec,
-                    encode: r.encode && n.encode,
-                    decode: r.decode && n.decode
+                    name: n.codec,
+                    encode: n.encode && t.encode,
+                    decode: n.decode && t.decode
                 });
         }),
         i
     );
 }
-function g(e) {
-    let n = [];
+function p(e) {
+    let t = [];
     return (
-        e.has(h.V8.SIGNAL_AV1_DECODE)
-            ? n.unshift({
+        e.has(d.V8.SIGNAL_AV1_DECODE)
+            ? t.unshift({
                   name: 'AV1',
                   encode: !1,
                   decode: !0
               })
-            : e.has(h.V8.SIGNAL_AV1) &&
-              n.unshift({
+            : e.has(d.V8.SIGNAL_AV1) &&
+              t.unshift({
                   name: 'AV1',
                   encode: !0,
                   decode: !0
               }),
-        n
+        t
     );
 }
-function E(e, n) {
+function h(e, t) {
     return 'string' == typeof e
-        ? m(
+        ? _(
               JSON.parse(e).map((e) => ({
-                  codec: v(e.codec),
+                  codec: m(e.codec),
                   encode: e.encode,
                   decode: e.decode
               })),
-              n
+              t
           )
-        : m(
+        : _(
               e.map((e) => ({
-                  codec: v(e),
+                  codec: m(e),
                   encode: !0,
                   decode: !0
               })),
-              n
+              t
           );
 }
-function v(e) {
+function m(e) {
     return 'AV1X' === e ? 'AV1' : e;
 }
-function y(e) {
+function g(e) {
     return 'AV1' === e ? 'AV1X' : e;
 }

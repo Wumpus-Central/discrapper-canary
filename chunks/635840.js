@@ -1,131 +1,126 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-}),
-    n(47120);
-var i = n(200651),
-    a = n(192379),
-    l = n(481060),
-    s = n(153867),
-    o = n(626135),
-    r = n(981631),
-    c = n(388032),
-    d = n(412492);
-let C = [
+i.d(t, { Z: () => C }), i(47120);
+var n = i(200651),
+    a = i(192379),
+    s = i(481060),
+    l = i(153867),
+    r = i(626135),
+    o = i(981631),
+    d = i(388032),
+    c = i(412492);
+let _ = [
     {
         value: 'APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_NOT_USING_ENOUGH',
-        nameGetter: () => c.intl.string(c.t['+RZgNT'])
+        nameGetter: () => d.intl.string(d.t['+RZgNT'])
     },
     {
         value: 'APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_TOO_EXPENSIVE',
-        nameGetter: () => c.intl.string(c.t.kgPXgo)
+        nameGetter: () => d.intl.string(d.t.kgPXgo)
     },
     {
         value: 'APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_NOT_WORTH',
-        nameGetter: () => c.intl.string(c.t.vujsUF)
+        nameGetter: () => d.intl.string(d.t.vujsUF)
     },
     {
         value: 'APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_NOT_SURE_HOW_TO_USE',
-        nameGetter: () => c.intl.string(c.t.AYAOLC)
+        nameGetter: () => d.intl.string(d.t.AYAOLC)
     },
     {
         value: 'APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_OTHER',
-        nameGetter: () => c.intl.string(c.t.wZLu3d)
+        nameGetter: () => d.intl.string(d.t.wZLu3d)
     }
 ];
-function u(e) {
-    let { application: t, subscriptionId: n, onClose: u } = e,
-        [_, N] = a.useState(!1),
-        [S, h] = a.useState(null),
-        [I, m] = a.useState(''),
-        E = a.useCallback(() => {
-            null != S &&
-                (o.default.track(r.rMx.PREMIUM_APP_CANCELLATION_SURVEY_SUBMITTED, {
-                    answer: S,
+function C(e) {
+    let { application: t, subscriptionId: i, onClose: C } = e,
+        [u, N] = a.useState(!1),
+        [x, m] = a.useState(null),
+        [h, I] = a.useState(''),
+        S = a.useCallback(() => {
+            null != x &&
+                (r.default.track(o.rMx.PREMIUM_APP_CANCELLATION_SURVEY_SUBMITTED, {
+                    answer: x,
                     application_id: t.id,
-                    reason: I,
-                    subscription_id: n
+                    reason: h,
+                    subscription_id: i
                 }),
-                u());
-        }, [t.id, n, S, u, I]);
+                C());
+        }, [t.id, i, x, C, h]);
     return (
         a.useEffect(() => {
-            s.ZP.updatedUnsyncedSettings({ disableApplicationSubscriptionCancellationSurvey: _ });
-        }, [_]),
-        (0, i.jsxs)(i.Fragment, {
+            l.ZP.updatedUnsyncedSettings({ disableApplicationSubscriptionCancellationSurvey: u });
+        }, [u]),
+        (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, i.jsxs)(l.ModalHeader, {
-                    className: d.headerContainer,
+                (0, n.jsxs)(s.xBx, {
+                    className: c.headerContainer,
                     separator: !1,
                     children: [
-                        (0, i.jsxs)('div', {
-                            className: d.titleContainer,
+                        (0, n.jsxs)('div', {
+                            className: c.titleContainer,
                             children: [
-                                (0, i.jsx)(l.Text, {
-                                    className: d.headerTitle,
+                                (0, n.jsx)(s.Text, {
+                                    className: c.headerTitle,
                                     variant: 'text-lg/semibold',
-                                    children: c.intl.string(c.t.zPxMdX)
+                                    children: d.intl.string(d.t.zPxMdX)
                                 }),
-                                (0, i.jsx)(l.ModalCloseButton, {
-                                    className: d.modalCloseButton,
-                                    onClick: u
+                                (0, n.jsx)(s.olH, {
+                                    className: c.modalCloseButton,
+                                    onClick: C
                                 })
                             ]
                         }),
-                        (0, i.jsx)(l.Spacer, { size: 8 }),
-                        (0, i.jsx)(l.Text, {
-                            className: d.headerSubtitle,
+                        (0, n.jsx)(s.LZC, { size: 8 }),
+                        (0, n.jsx)(s.Text, {
+                            className: c.headerSubtitle,
                             variant: 'text-md/medium',
-                            children: c.intl.string(c.t.QJGdBw)
+                            children: d.intl.string(d.t.QJGdBw)
                         })
                     ]
                 }),
-                (0, i.jsxs)(l.ModalContent, {
+                (0, n.jsxs)(s.hzk, {
                     children: [
-                        (0, i.jsx)('div', {
-                            className: d.answerChoicesContainer,
-                            children: (0, i.jsx)(l.RadioGroup, {
-                                value: S,
-                                options: C.map((e) => {
-                                    let { nameGetter: t, value: n } = e;
+                        (0, n.jsx)('div', {
+                            className: c.answerChoicesContainer,
+                            children: (0, n.jsx)(s.FXm, {
+                                value: x,
+                                options: _.map((e) => {
+                                    let { nameGetter: t, value: i } = e;
                                     return {
                                         name: t(),
-                                        value: n
+                                        value: i
                                     };
                                 }),
-                                onChange: (e) => h(e.value),
+                                onChange: (e) => m(e.value),
                                 withTransparentBackground: !0
                             })
                         }),
-                        'APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_OTHER' === S &&
-                            (0, i.jsx)(l.TextInput, {
+                        'APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_OTHER' === x &&
+                            (0, n.jsx)(s.oil, {
                                 autoFocus: !0,
-                                className: d.otherField,
-                                placeholder: c.intl.string(c.t.s6tM8f),
-                                value: I,
-                                onChange: m
+                                className: c.otherField,
+                                placeholder: d.intl.string(d.t.s6tM8f),
+                                value: h,
+                                onChange: I
                             })
                     ]
                 }),
-                (0, i.jsxs)(l.ModalFooter, {
-                    className: d.footer,
+                (0, n.jsxs)(s.mzw, {
+                    className: c.footer,
                     children: [
-                        (0, i.jsx)(l.Button, {
-                            onClick: E,
-                            color: l.Button.Colors.BRAND,
-                            disabled: null == S,
-                            children: c.intl.string(c.t.geKm7u)
+                        (0, n.jsx)(s.zxk, {
+                            onClick: S,
+                            color: s.zxk.Colors.BRAND,
+                            disabled: null == x,
+                            children: d.intl.string(d.t.geKm7u)
                         }),
-                        (0, i.jsx)(l.Checkbox, {
-                            type: l.Checkbox.Types.INVERTED,
-                            value: _,
+                        (0, n.jsx)(s.XZJ, {
+                            type: s.XZJ.Types.INVERTED,
+                            value: u,
                             onChange: (e, t) => N(t),
                             size: 20,
-                            className: d.__invalid_checkbox,
-                            children: (0, i.jsx)(l.Text, {
+                            className: c.__invalid_checkbox,
+                            children: (0, n.jsx)(s.Text, {
                                 variant: 'text-sm/medium',
-                                children: c.intl.string(c.t['3vPFQk'])
+                                children: d.intl.string(d.t['3vPFQk'])
                             })
                         })
                     ]

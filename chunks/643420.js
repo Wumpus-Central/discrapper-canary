@@ -1,19 +1,14 @@
-r.d(n, {
-    k: function () {
-        return E;
-    }
-});
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(119617),
-    l = r(40851),
-    u = r(745510),
-    c = r(661637),
-    d = r(146128),
-    f = r(981631);
-let p = 1000 / 60,
-    h = 24,
+n.d(t, { k: () => m }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(119617),
+    s = n(40851),
+    o = n(745510),
+    l = n(661637),
+    u = n(146128),
+    c = n(981631);
+let d = 1000 / 60,
+    f = 24,
     _ = {
         velocity: {
             type: 'static-random',
@@ -65,57 +60,57 @@ let p = 1000 / 60,
             maxValue: 0.5
         }
     },
-    m = ['#FFFFFF'],
-    g = [r(123353), ...(0, c.Z)(['snowflake'])];
-function E(e) {
-    let { children: n } = e,
-        [r, i] = o.useState(!1),
-        c = (0, l.bp)(),
-        [E, v] = o.useState(null),
-        { confettiCanvas: y } = o.useContext(u.h),
-        b = (0, s.uR)(y, E),
-        I = o.useMemo(
+    p = ['#FFFFFF'],
+    h = [n(123353), ...(0, l.Z)(['snowflake'])];
+function m(e) {
+    let { children: t } = e,
+        [n, l] = r.useState(!1),
+        m = (0, s.bp)(),
+        [g, E] = r.useState(null),
+        { confettiCanvas: v } = r.useContext(o.h),
+        y = (0, a.uR)(v, g),
+        I = r.useMemo(
             () => ({
-                triggerAnimation: () => i(!0),
-                untriggerAnimation: () => i(!1)
+                triggerAnimation: () => l(!0),
+                untriggerAnimation: () => l(!1)
             }),
             []
         ),
-        T = o.useCallback(() => {
-            let e = null == y ? void 0 : y.getCanvas();
+        b = r.useCallback(() => {
+            let e = null == v ? void 0 : v.getCanvas();
             if (null == e) return;
-            let n = e.getBoundingClientRect();
-            b.createConfetti({
+            let t = e.getBoundingClientRect();
+            y.createConfetti({
                 ..._,
                 position: {
                     type: 'static-random',
                     minValue: {
-                        x: -n.width / 2,
-                        y: -h
+                        x: -t.width / 2,
+                        y: -f
                     },
                     maxValue: {
-                        x: n.width,
-                        y: -h
+                        x: t.width,
+                        y: -f
                     }
                 }
             });
-        }, [b, y]);
-    return (o.useEffect(() => {
-        let e = r ? setInterval(T, p) : null;
+        }, [y, v]);
+    return (r.useEffect(() => {
+        let e = n ? setInterval(b, d) : null;
         return () => clearInterval(e);
-    }, [r, T]),
-    c === f.IlC.OVERLAY)
-        ? (0, a.jsx)(a.Fragment, { children: n })
-        : (0, a.jsxs)(d.Rm.Provider, {
+    }, [n, b]),
+    m === c.IlC.OVERLAY)
+        ? (0, i.jsx)(i.Fragment, { children: t })
+        : (0, i.jsxs)(u.Rm.Provider, {
               value: I,
               children: [
-                  n,
-                  (0, a.jsx)(s.Ji, {
-                      ref: v,
-                      colors: m,
-                      sprites: g,
-                      spriteWidth: h,
-                      spriteHeight: h
+                  t,
+                  (0, i.jsx)(a.Ji, {
+                      ref: E,
+                      colors: p,
+                      sprites: h,
+                      spriteWidth: f,
+                      spriteHeight: f
                   })
               ]
           });

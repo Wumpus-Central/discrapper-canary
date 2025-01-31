@@ -1,11 +1,7 @@
-t.d(e, {
-    Z: function () {
-        return r;
-    }
-});
+t.d(e, { Z: () => a });
 var l = t(466330),
     i = t(981631);
-function r(n, e, t) {
+function a(n, e, t) {
     return (0, l.Z)({
         guild: e,
         channel: n,

@@ -1,86 +1,45 @@
-r.d(n, {
-    HH: function () {
-        return T;
-    },
-    O9: function () {
-        return _;
-    },
-    Vu: function () {
-        return E;
-    },
-    W4: function () {
-        return d;
-    },
-    Wz: function () {
-        return f;
-    },
-    Z3: function () {
-        return p;
-    },
-    ZR: function () {
-        return c;
-    },
-    am: function () {
-        return g;
-    },
-    av: function () {
-        return C;
-    },
-    cq: function () {
-        return y;
-    },
-    j: function () {
-        return a;
-    },
-    k3: function () {
-        return R;
-    },
-    kb: function () {
-        return O;
-    },
-    n: function () {
-        return m;
-    },
-    oi: function () {
-        return i;
-    },
-    pw: function () {
-        return A;
-    },
-    rk: function () {
-        return S;
-    },
-    tB: function () {
-        return I;
-    },
-    uo: function () {
-        return N;
-    },
-    vD: function () {
-        return b;
-    },
-    x3: function () {
-        return v;
-    }
+n.d(t, {
+    HH: () => I,
+    O9: () => f,
+    Vu: () => h,
+    W4: () => l,
+    Wz: () => u,
+    Z3: () => c,
+    ZR: () => o,
+    am: () => p,
+    av: () => S,
+    cq: () => E,
+    j: () => R,
+    k3: () => N,
+    kb: () => C,
+    n: () => _,
+    oi: () => g,
+    pw: () => T,
+    rk: () => b,
+    tB: () => y,
+    uo: () => A,
+    vD: () => v,
+    x3: () => m
 });
-var i,
-    a,
-    o = r(592125),
-    s = r(823379),
-    l = r(700785),
-    u = r(981631);
-let c = 7,
-    d = 300,
-    f = 7,
-    p = 60,
-    h = 3,
-    _ = 5,
-    m = 1,
-    g = 30,
-    E = 200,
-    v = 7;
-function y(e) {
-    var n;
+var i = n(592125),
+    r = n(823379),
+    a = n(700785),
+    s = n(981631);
+let o = 7,
+    l = 300,
+    u = 7,
+    c = 60,
+    d = 3,
+    f = 5,
+    _ = 1,
+    p = 30,
+    h = 200,
+    m = 7;
+var g = (function (e) {
+    return (e[(e.VIEW = 0)] = 'VIEW'), (e[(e.CHAT = 1)] = 'CHAT'), e;
+})({});
+function E(e) {
+    var t;
     return {
         channelId: e.channel_id,
         actionType: e.action_type,
@@ -94,15 +53,15 @@ function y(e) {
                       name: e.emoji.name,
                       animated: e.emoji.animated
                   },
-        icon: null !== (n = e.icon) && void 0 !== n ? n : null
+        icon: null !== (t = e.icon) && void 0 !== t ? t : null
     };
 }
-function b(e) {
-    var n, r;
+function v(e) {
+    var t, n;
     return {
         channelId: e.channel_id,
         title: e.title,
-        description: null !== (n = e.description) && void 0 !== n ? n : '',
+        description: null !== (t = e.description) && void 0 !== t ? t : '',
         emoji:
             null == e.emoji
                 ? null
@@ -111,105 +70,100 @@ function b(e) {
                       name: e.emoji.name,
                       animated: e.emoji.animated
                   },
-        icon: null !== (r = e.icon) && void 0 !== r ? r : null
+        icon: null !== (n = e.icon) && void 0 !== n ? n : null
     };
 }
-function I(e) {
+function y(e) {
     if (null == e) return null;
-    let { welcome_message: n, new_member_actions: r, resource_channels: i, enabled: a } = e,
-        l = {
-            authorIds: n.author_ids,
-            message: n.message
-        },
-        u = r.filter((e) => (0, s.lm)(o.Z.getChannel(e.channel_id))).map(y);
+    let { welcome_message: t, new_member_actions: n, resource_channels: a, enabled: s } = e,
+        o = {
+            authorIds: t.author_ids,
+            message: t.message
+        };
     return {
-        welcomeMessage: l,
-        newMemberActions: u,
-        resourceChannels: i.filter((e) => (0, s.lm)(o.Z.getChannel(e.channel_id))).map(b),
-        enabled: a
+        welcomeMessage: o,
+        newMemberActions: n.filter((e) => (0, r.lm)(i.Z.getChannel(e.channel_id))).map(E),
+        resourceChannels: a.filter((e) => (0, r.lm)(i.Z.getChannel(e.channel_id))).map(v),
+        enabled: s
     };
 }
-function T(e, n) {
-    var r, i;
-    if (null == n) return null;
-    let { welcomeMessage: a, newMemberActions: l, resourceChannels: u, enabled: c } = n,
-        d = {
-            author_ids: null !== (r = null == a ? void 0 : a.authorIds) && void 0 !== r ? r : [],
-            message: null !== (i = null == a ? void 0 : a.message) && void 0 !== i ? i : ''
-        },
-        f = (null != l ? l : [])
-            .filter((e) => (0, s.lm)(o.Z.getChannel(e.channelId)))
+function I(e, t) {
+    var n, a;
+    if (null == t) return null;
+    let { welcomeMessage: s, newMemberActions: o, resourceChannels: l, enabled: u } = t,
+        c = {
+            author_ids: null !== (n = null == s ? void 0 : s.authorIds) && void 0 !== n ? n : [],
+            message: null !== (a = null == s ? void 0 : s.message) && void 0 !== a ? a : ''
+        };
+    return {
+        guild_id: e,
+        welcome_message: c,
+        new_member_actions: (null != o ? o : [])
+            .filter((e) => (0, r.lm)(i.Z.getChannel(e.channelId)))
             .map((e) => {
-                var n, r, i, a, o, s, l;
+                var t, n, i, r, a, s, o;
                 return {
                     channel_id: e.channelId,
                     action_type: e.actionType,
                     title: e.title,
                     description: e.description,
                     emoji: {
-                        id: null !== (a = null === (n = e.emoji) || void 0 === n ? void 0 : n.id) && void 0 !== a ? a : void 0,
-                        name: null !== (o = null === (r = e.emoji) || void 0 === r ? void 0 : r.name) && void 0 !== o ? o : void 0,
+                        id: null !== (r = null === (t = e.emoji) || void 0 === t ? void 0 : t.id) && void 0 !== r ? r : void 0,
+                        name: null !== (a = null === (n = e.emoji) || void 0 === n ? void 0 : n.name) && void 0 !== a ? a : void 0,
                         animated: null !== (s = null === (i = e.emoji) || void 0 === i ? void 0 : i.animated) && void 0 !== s ? s : void 0
                     },
-                    icon: null !== (l = e.icon) && void 0 !== l ? l : void 0
+                    icon: null !== (o = e.icon) && void 0 !== o ? o : void 0
                 };
-            });
-    return {
-        guild_id: e,
-        welcome_message: d,
-        new_member_actions: f,
-        resource_channels: (null != u ? u : [])
-            .filter((e) => (0, s.lm)(o.Z.getChannel(e.channelId)))
+            }),
+        resource_channels: (null != l ? l : [])
+            .filter((e) => (0, r.lm)(i.Z.getChannel(e.channelId)))
             .map((e) => {
-                var n, r, i, a, o, s, l;
+                var t, n, i, r, a, s, o;
                 return {
                     channel_id: e.channelId,
                     title: e.title,
                     description: e.description,
                     emoji: {
-                        id: null !== (a = null === (n = e.emoji) || void 0 === n ? void 0 : n.id) && void 0 !== a ? a : void 0,
-                        name: null !== (o = null === (r = e.emoji) || void 0 === r ? void 0 : r.name) && void 0 !== o ? o : void 0,
+                        id: null !== (r = null === (t = e.emoji) || void 0 === t ? void 0 : t.id) && void 0 !== r ? r : void 0,
+                        name: null !== (a = null === (n = e.emoji) || void 0 === n ? void 0 : n.name) && void 0 !== a ? a : void 0,
                         animated: null !== (s = null === (i = e.emoji) || void 0 === i ? void 0 : i.animated) && void 0 !== s ? s : void 0
                     },
-                    icon: null !== (l = e.icon) && void 0 !== l ? l : void 0
+                    icon: null !== (o = e.icon) && void 0 !== o ? o : void 0
                 };
             }),
-        enabled: c
+        enabled: u
     };
 }
-!(function (e) {
-    (e[(e.VIEW = 0)] = 'VIEW'), (e[(e.CHAT = 1)] = 'CHAT');
-})(i || (i = {}));
-let S = (e) => {
+let b = (e) => {
     if (null == e) return null;
-    let n = {};
-    for (let r in e.channel_actions) n[r] = e.channel_actions[r].completed;
-    return n;
+    let t = {};
+    for (let n in e.channel_actions) t[n] = e.channel_actions[n].completed;
+    return t;
 };
-function A(e) {
-    return null == e || ((null == e.message || !(e.message.length > 0)) && (null == e.authorIds || !(e.authorIds.length > 0)) && !0);
+function T(e) {
+    return null == e || ((null == e.message || !(e.message.length > 0)) && (null == e.authorIds || !(e.authorIds.length > 0)));
 }
-function C(e) {
-    return null == e || (!!A(e.welcomeMessage) && (null == e.newMemberActions || !(e.newMemberActions.length > 0)) && (null == e.resourceChannels || !(e.resourceChannels.length > 0)) && !0);
+function S(e) {
+    return null == e || (!!T(e.welcomeMessage) && (null == e.newMemberActions || !(e.newMemberActions.length > 0)) && (null == e.resourceChannels || !(e.resourceChannels.length > 0)));
+}
+function A(e) {
+    var t, n;
+    return null != e && (!!S(e) || ((null === (t = e.welcomeMessage) || void 0 === t ? void 0 : t.message) != null && !(e.welcomeMessage.message.length < o) && (null === (n = e.welcomeMessage) || void 0 === n ? void 0 : n.authorIds) != null && 0 !== e.welcomeMessage.authorIds.length && null != e.newMemberActions && !(e.newMemberActions.length < d)));
 }
 function N(e) {
-    var n, r;
-    return null != e && (!!C(e) || ((null === (n = e.welcomeMessage) || void 0 === n ? void 0 : n.message) != null && !(e.welcomeMessage.message.length < c) && (null === (r = e.welcomeMessage) || void 0 === r ? void 0 : r.authorIds) != null && 0 !== e.welcomeMessage.authorIds.length && null != e.newMemberActions && !(e.newMemberActions.length < h) && !0));
+    return e.type === s.d4z.GUILD_TEXT && !a.Uu(s.Plq.SEND_MESSAGES, e) && a.Uu(s.Plq.VIEW_CHANNEL, e);
 }
-function R(e) {
-    return e.type === u.d4z.GUILD_TEXT && !l.Uu(u.Plq.SEND_MESSAGES, e) && l.Uu(u.Plq.VIEW_CHANNEL, e);
-}
-function O(e) {
+function C(e) {
     switch (e.type) {
-        case u.d4z.GUILD_TEXT:
-        case u.d4z.GUILD_ANNOUNCEMENT:
-        case u.d4z.GUILD_FORUM:
-        case u.d4z.GUILD_MEDIA:
-            return l.Uu(u.Plq.VIEW_CHANNEL, e);
+        case s.d4z.GUILD_TEXT:
+        case s.d4z.GUILD_ANNOUNCEMENT:
+        case s.d4z.GUILD_FORUM:
+        case s.d4z.GUILD_MEDIA:
+            return a.Uu(s.Plq.VIEW_CHANNEL, e);
         default:
             return !1;
     }
 }
-!(function (e) {
-    (e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.TODO = 1)] = 'TODO'), (e[(e.RESOURCE = 2)] = 'RESOURCE');
-})(a || (a = {}));
+var R = (function (e) {
+    return (e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.TODO = 1)] = 'TODO'), (e[(e.RESOURCE = 2)] = 'RESOURCE'), e;
+})({});

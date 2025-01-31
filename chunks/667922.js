@@ -1,77 +1,73 @@
-t.d(n, {
-    Z: function () {
-        return M;
-    }
-});
-var i = t(200651),
-    l = t(192379),
-    r = t(442837),
-    a = t(481060),
-    o = t(543241),
-    s = t(222677),
-    u = t(995774),
-    d = t(665906),
-    c = t(695346),
-    g = t(496675),
-    f = t(768581),
-    m = t(585483),
-    h = t(176354),
-    E = t(981631),
-    I = t(185923),
-    v = t(388032);
-function M(e, n) {
-    let { reducedMotion: t } = l.useContext(a.AccessibilityPreferencesContext),
-        f = (0, d.$R)(n),
-        M = (0, r.e7)([g.Z], () => (n.isPrivate() || g.Z.can(E.Plq.ADD_REACTIONS, n)) && f, [n, f]),
-        Z = (0, o.MZ)(n.getGuildId());
-    if (!c.nc.getSetting() || !M || e.type === E.uaV.GUILD_INVITE_REMINDER) return null;
-    let x = Z.filter(
+n.d(t, { Z: () => x });
+var i = n(200651),
+    l = n(192379),
+    a = n(442837),
+    s = n(481060),
+    r = n(543241),
+    o = n(222677),
+    d = n(995774),
+    c = n(665906),
+    u = n(695346),
+    g = n(496675),
+    f = n(768581),
+    m = n(585483),
+    h = n(176354),
+    E = n(981631),
+    v = n(185923),
+    Z = n(388032);
+function x(e, t) {
+    let { reducedMotion: n } = l.useContext(s.Sfi),
+        f = (0, c.$R)(t),
+        x = (0, a.e7)([g.Z], () => (t.isPrivate() || g.Z.can(E.Plq.ADD_REACTIONS, t)) && f, [t, f]),
+        N = (0, r.MZ)(t.getGuildId());
+    if (!u.nc.getSetting() || !x || e.type === E.uaV.GUILD_INVITE_REMINDER) return null;
+    let S = N.filter(
         (e) =>
             !h.ZP.isEmojiFilteredOrLocked({
                 emoji: e,
-                channel: n,
-                intention: I.Hz.REACTION
+                channel: t,
+                intention: v.Hz.REACTION
             })
     )
         .slice(0, 12)
-        .map((l, r) => {
-            var o, d;
+        .map((l, a) => {
+            var r, c;
             return (0, i.jsx)(
-                a.MenuItem,
+                s.sNh,
                 {
                     color: 'default',
-                    id: null !== (d = null !== (o = l.id) && void 0 !== o ? o : l.optionallyDiverseSequence) && void 0 !== d ? d : l.name,
+                    id: null !== (c = null !== (r = l.id) && void 0 !== r ? r : l.optionallyDiverseSequence) && void 0 !== c ? c : l.name,
                     label: ':'.concat(l.name, ':'),
                     icon: (e) =>
                         (0, i.jsx)(p, {
                             ...e,
-                            reducedMotionEnabled: t.enabled,
+                            reducedMotionEnabled: n.enabled,
                             emoji: l
                         }),
                     action: () => {
-                        (0, s.rU)(n.id, e.id, (0, u.g1)(l), s.TW.MESSAGE_CONTEXT_MENU);
+                        (0, o.rU)(t.id, e.id, (0, d.g1)(l), o.TW.MESSAGE_CONTEXT_MENU);
                     },
                     dontCloseOnActionIfHoldingShiftKey: !0
                 },
-                r
+                a
             );
         });
-    return (0, i.jsx)(a.MenuItem, {
+    return (0, i.jsx)(s.sNh, {
         id: 'add-reaction',
-        label: v.intl.string(v.t.lfIHs7),
+        label: Z.intl.string(Z.t.lfIHs7),
         action: () => {
             m.S.dispatchKeyed(E.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
         },
         color: 'default',
         children: (0, i.jsxs)(i.Fragment, {
             children: [
-                x,
-                (0, i.jsx)(a.MenuSeparator, {}),
-                (0, i.jsx)(a.MenuItem, {
+                S,
+                (0, i.jsx)(s.Clw, {}),
+                (0, i.jsx)(s.sNh, {
                     color: 'default',
                     id: 'other-reactions',
-                    label: v.intl.string(v.t['OBCR+v']),
-                    icon: a.ReactionIcon,
+                    label: Z.intl.string(Z.t['OBCR+v']),
+                    icon: s.EO4,
                     action: () => {
                         m.S.dispatchKeyed(E.LPv.TOGGLE_REACTION_POPOUT, e.id, { emojiPicker: !0 });
                     }
@@ -81,18 +77,18 @@ function M(e, n) {
     });
 }
 function p(e) {
-    var n;
-    let { emoji: t, reducedMotionEnabled: l, className: r = '', isFocused: a = !1 } = e;
+    var t;
+    let { emoji: n, reducedMotionEnabled: l, className: a = '', isFocused: s = !1 } = e;
     return (0, i.jsx)('img', {
-        className: r,
+        className: a,
         src:
-            null != t.id
+            null != n.id
                 ? f.ZP.getEmojiURL({
-                      id: t.id,
-                      animated: t.animated && (!l || a),
+                      id: n.id,
+                      animated: n.animated && (!l || s),
                       size: 18
                   })
-                : h.ZP.getURL(null !== (n = t.optionallyDiverseSequence) && void 0 !== n ? n : ''),
+                : h.ZP.getURL(null !== (t = n.optionallyDiverseSequence) && void 0 !== t ? t : ''),
         alt: ''
     });
 }

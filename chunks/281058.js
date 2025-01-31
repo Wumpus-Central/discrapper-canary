@@ -1,48 +1,50 @@
+n.d(t, { Z: () => f });
 var i,
-    a = r(442837),
-    o = r(570140),
-    s = r(626135),
-    l = r(761274),
-    u = r(981631);
-function c(e, n, r) {
+    r = n(442837),
+    a = n(570140),
+    s = n(626135),
+    o = n(761274),
+    l = n(981631);
+function u(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let d = { permissionStates: {} };
-class f extends (i = a.ZP.DeviceSettingsStore) {
+let c = { permissionStates: {} };
+class d extends (i = r.ZP.DeviceSettingsStore) {
     initialize(e) {
-        d = null != e ? e : d;
+        c = null != e ? e : c;
     }
     getUserAgnosticState() {
-        return d;
+        return c;
     }
     hasPermission(e) {
-        let n = d.permissionStates[e];
-        return null != n && n === l.PQ.ACCEPTED;
+        let t = c.permissionStates[e];
+        return null != t && t === o.PQ.ACCEPTED;
     }
     handleSetNativePermission(e) {
-        let { state: n, permissionType: r } = e,
-            i = d.permissionStates,
-            a = i[r];
-        (i[r] = n),
-            a !== n &&
-                s.default.track(u.rMx.PERMISSIONS_ACKED, {
-                    type: r,
-                    action: n,
-                    previous_action: null != a ? a : l.PQ.NONE
+        let { state: t, permissionType: n } = e,
+            i = c.permissionStates,
+            r = i[n];
+        (i[n] = t),
+            r !== t &&
+                s.default.track(l.rMx.PERMISSIONS_ACKED, {
+                    type: n,
+                    action: t,
+                    previous_action: null != r ? r : o.PQ.NONE
                 });
     }
     constructor() {
-        super(o.Z, { SET_NATIVE_PERMISSION: (e) => this.handleSetNativePermission(e) });
+        super(a.Z, { SET_NATIVE_PERMISSION: (e) => this.handleSetNativePermission(e) });
     }
 }
-c(f, 'displayName', 'NativePermissionStore'), c(f, 'persistKey', 'NativePermissionsStore'), (n.Z = f);
+u(d, 'displayName', 'NativePermissionStore'), u(d, 'persistKey', 'NativePermissionsStore');
+let f = d;

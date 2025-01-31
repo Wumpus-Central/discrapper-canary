@@ -1,8 +1,4 @@
-n.d(t, {
-    w: function () {
-        return o;
-    }
-});
+n.d(t, { w: () => o });
 var r = n(192379);
 function i(e, t) {
     (null == t || t > e.length) && (t = e.length);
@@ -20,7 +16,7 @@ function o(e, t) {
             })(n) ||
             (function (e, t) {
                 if (e) {
-                    if ('string' == typeof e) return i(e, t);
+                    if ('string' == typeof e) return i(e, void 0);
                     var n = Object.prototype.toString.call(e).slice(8, -1);
                     if (('Object' === n && e.constructor && (n = e.constructor.name), 'Map' === n || 'Set' === n)) return Array.from(e);
                     if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return i(e, t);

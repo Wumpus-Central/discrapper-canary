@@ -1,33 +1,26 @@
-var t = n(757490),
-    a = ['domenica', 'lunedì', 'martedì', 'mercoledì', 'giovedì', 'venerdì', 'sabato'];
+t.d(i, { Z: () => d });
+var a = t(757490),
+    n = ['domenica', 'lunedì', 'martedì', 'mercoledì', 'giovedì', 'venerdì', 'sabato'];
 function o(e) {
-    return "'" + a[e] + " alle' p";
+    return "'" + n[e] + " alle' p";
 }
 var r = {
-    lastWeek: function (e, i, n) {
-        var r = e.getUTCDay();
-        return (0, t.Z)(e, i, n)
-            ? o(r)
-            : (function (e) {
-                  if (0 === e) return "'domenica scorsa alle' p";
-                  return "'" + a[e] + " scorso alle' p";
-              })(r);
+    lastWeek: function (e, i, t) {
+        var r,
+            d = e.getUTCDay();
+        return (0, a.Z)(e, i, t) ? o(d) : 0 === (r = d) ? "'domenica scorsa alle' p" : "'" + n[r] + " scorso alle' p";
     },
     yesterday: "'ieri alle' p",
     today: "'oggi alle' p",
     tomorrow: "'domani alle' p",
-    nextWeek: function (e, i, n) {
-        var r = e.getUTCDay();
-        return (0, t.Z)(e, i, n)
-            ? o(r)
-            : (function (e) {
-                  if (0 === e) return "'domenica prossima alle' p";
-                  return "'" + a[e] + " prossimo alle' p";
-              })(r);
+    nextWeek: function (e, i, t) {
+        var r,
+            d = e.getUTCDay();
+        return (0, a.Z)(e, i, t) ? o(d) : 0 === (r = d) ? "'domenica prossima alle' p" : "'" + n[r] + " prossimo alle' p";
     },
     other: 'P'
 };
-i.Z = function (e, i, n, t) {
-    var a = r[e];
-    return 'function' == typeof a ? a(i, n, t) : a;
+let d = function (e, i, t, a) {
+    var n = r[e];
+    return 'function' == typeof n ? n(i, t, a) : n;
 };

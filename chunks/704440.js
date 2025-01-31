@@ -1,99 +1,93 @@
-r.d(n, {
-    Z: function () {
-        return D;
-    }
-});
-var i = r(773603);
-var a = r(47120);
-var o = r(200651),
-    s = r(192379),
-    l = r(120356),
-    u = r.n(l),
-    c = r(913527),
-    d = r.n(c),
-    f = r(235874),
-    p = r(481060),
-    h = r(37234),
-    _ = r(100527),
-    m = r(906732),
-    g = r(626135),
-    E = r(55935),
-    v = r(63063),
-    y = r(281494),
-    b = r(474936),
-    I = r(981631),
-    T = r(388032),
-    S = r(735633),
-    A = r(352175),
-    C = r(90351);
-let N = async (e, n, r) => {
-        r(!0),
-            await (0, y.Eo)(e)
+n.d(t, { Z: () => C }), n(773603), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(913527),
+    l = n.n(o),
+    u = n(235874),
+    c = n(481060),
+    d = n(37234),
+    f = n(100527),
+    _ = n(906732),
+    p = n(626135),
+    h = n(55935),
+    m = n(63063),
+    g = n(281494),
+    E = n(474936),
+    v = n(981631),
+    y = n(388032),
+    I = n(735633),
+    b = n(352175),
+    T = n(90351);
+let S = async (e, t, n) => {
+        n(!0),
+            await (0, g.Eo)(e)
                 .then(() => {
-                    n(), (0, h.Ou)();
+                    t(), (0, d.Ou)();
                 })
                 .finally(() => {
-                    r(!1);
+                    n(!1);
                 });
     },
-    R = (e) => {
-        let { onClose: n, referralsRemaining: r, recipient: i, analyticsLocations: a } = e,
-            [l, u] = s.useState(!1),
-            c = r - 1;
-        return (0, o.jsxs)('div', {
-            className: S.confirmationContainer,
+    A = (e) => {
+        let { onClose: t, referralsRemaining: n, recipient: a, analyticsLocations: s } = e,
+            [o, l] = r.useState(!1),
+            u = n - 1;
+        return (0, i.jsxs)('div', {
+            className: I.confirmationContainer,
             children: [
-                (0, o.jsxs)('div', {
-                    className: S.confirmationBody,
+                (0, i.jsxs)('div', {
+                    className: I.confirmationBody,
                     children: [
-                        (0, o.jsx)(p.ModalCloseButton, {
-                            onClick: n,
-                            className: S.closeButton
+                        (0, i.jsx)(c.olH, {
+                            onClick: t,
+                            className: I.closeButton
                         }),
-                        (0, o.jsx)('img', {
+                        (0, i.jsx)('img', {
                             alt: '',
-                            src: A,
-                            className: S.confirmationImage
+                            src: b,
+                            className: I.confirmationImage
                         }),
-                        (0, o.jsx)(p.Heading, {
+                        (0, i.jsx)(c.X6q, {
                             variant: 'heading-xl/bold',
                             color: 'interactive-active',
-                            className: S.confirmationHeading,
-                            children: T.intl.string(T.t.dF5azM)
+                            className: I.confirmationHeading,
+                            children: y.intl.string(y.t.dF5azM)
                         }),
-                        (0, o.jsx)(p.Text, {
-                            className: S.confirmationBodyCopy,
+                        (0, i.jsx)(c.Text, {
+                            className: I.confirmationBodyCopy,
                             variant: 'text-md/medium',
                             color: 'header-primary',
-                            children: c > 0 ? T.intl.formatToPlainString(T.t['J/tYnp'], { count: c }) : T.intl.string(T.t.vVnRxc)
+                            children: u > 0 ? y.intl.formatToPlainString(y.t['J/tYnp'], { count: u }) : y.intl.string(y.t.vVnRxc)
                         }),
-                        (0, o.jsx)('hr', { className: S.confirmationBodySeparator })
+                        (0, i.jsx)('hr', { className: I.confirmationBodySeparator })
                     ]
                 }),
-                (0, o.jsxs)('div', {
-                    className: S.confirmationButtonContainer,
+                (0, i.jsxs)('div', {
+                    className: I.confirmationButtonContainer,
                     children: [
-                        (0, o.jsx)(p.Button, {
-                            className: S.confirmationShareButton,
-                            submitting: l,
+                        (0, i.jsx)(c.zxk, {
+                            className: I.confirmationShareButton,
+                            submitting: o,
                             onClick: () => {
-                                N(i, n, u),
-                                    g.default.track(I.rMx.SHARE_NITRO_FLOW_STEPS, {
-                                        location_stack: a,
-                                        step: b.fz.FLOW_COMPLETED,
-                                        other_user_id: Number(i)
+                                S(a, t, l),
+                                    p.default.track(v.rMx.SHARE_NITRO_FLOW_STEPS, {
+                                        location_stack: s,
+                                        step: E.fz.FLOW_COMPLETED,
+                                        other_user_id: Number(a)
                                     });
                             },
-                            children: T.intl.string(T.t['zxlx6+'])
+                            children: y.intl.string(y.t['zxlx6+'])
                         }),
-                        (0, o.jsx)('div', {
-                            className: S.confirmationCancelButtonContainer,
-                            children: (0, o.jsx)(p.Clickable, {
-                                onClick: n,
-                                children: (0, o.jsx)(p.Text, {
+                        (0, i.jsx)('div', {
+                            className: I.confirmationCancelButtonContainer,
+                            children: (0, i.jsx)(c.P3F, {
+                                onClick: t,
+                                children: (0, i.jsx)(c.Text, {
                                     variant: 'text-sm/medium',
-                                    className: S.confirmationCancelCopy,
-                                    children: T.intl.string(T.t['ETE/oK'])
+                                    className: I.confirmationCancelCopy,
+                                    children: y.intl.string(y.t['ETE/oK'])
                                 })
                             })
                         })
@@ -102,108 +96,108 @@ let N = async (e, n, r) => {
             ]
         });
     };
-function O(e) {
-    let { referralsRemaining: n, channel: r, onClose: i, isResending: a } = e,
-        [l, c] = s.useState(!1),
-        [f, h] = s.useState(!1),
-        y = r.isDM() && void 0 !== r.recipients ? r.recipients[0] : null,
-        { analyticsLocations: A } = (0, m.ZP)(_.Z.REFERRAL_TRIALS_POPOUT),
-        O = new Date('2023-06-15T08:00:00-08:00');
-    return null == y
+function N(e) {
+    let { referralsRemaining: t, channel: n, onClose: a, isResending: o } = e,
+        [u, d] = r.useState(!1),
+        [g, b] = r.useState(!1),
+        N = n.isDM() && void 0 !== n.recipients ? n.recipients[0] : null,
+        { analyticsLocations: C } = (0, _.ZP)(f.Z.REFERRAL_TRIALS_POPOUT),
+        R = new Date('2023-06-15T08:00:00-08:00');
+    return null == N
         ? null
-        : l
-          ? (0, o.jsx)(R, {
-                onClose: i,
-                referralsRemaining: n,
-                recipient: y,
-                analyticsLocations: A
+        : u
+          ? (0, i.jsx)(A, {
+                onClose: a,
+                referralsRemaining: t,
+                recipient: N,
+                analyticsLocations: C
             })
-          : (0, o.jsxs)('div', {
-                className: S.generalContainer,
+          : (0, i.jsxs)('div', {
+                className: I.generalContainer,
                 children: [
-                    (0, o.jsxs)('div', {
-                        className: S.generalBodyContainer,
+                    (0, i.jsxs)('div', {
+                        className: I.generalBodyContainer,
                         children: [
-                            (0, o.jsx)('img', {
+                            (0, i.jsx)('img', {
                                 alt: '',
-                                src: C,
-                                className: S.generalBodyImage
+                                src: T,
+                                className: I.generalBodyImage
                             }),
-                            (0, o.jsxs)('div', {
-                                className: S.innerContent,
+                            (0, i.jsxs)('div', {
+                                className: I.innerContent,
                                 children: [
-                                    (0, o.jsx)(p.ModalCloseButton, {
-                                        onClick: i,
-                                        className: S.closeButton
+                                    (0, i.jsx)(c.olH, {
+                                        onClick: a,
+                                        className: I.closeButton
                                     }),
-                                    (0, o.jsx)(p.Heading, {
-                                        className: S.generalHeading,
+                                    (0, i.jsx)(c.X6q, {
+                                        className: I.generalHeading,
                                         variant: 'heading-xl/bold',
-                                        children: a ? T.intl.string(T.t.yCN5Qk) : T.intl.string(T.t.c1wxcX)
+                                        children: o ? y.intl.string(y.t.yCN5Qk) : y.intl.string(y.t.c1wxcX)
                                     }),
-                                    (0, o.jsxs)(p.Text, {
-                                        className: S.generalBodyCopy,
+                                    (0, i.jsxs)(c.Text, {
+                                        className: I.generalBodyCopy,
                                         variant: 'text-md/normal',
                                         children: [
-                                            (0, o.jsx)(p.Anchor, {
-                                                className: u()(S.learnMore, { [S.learnMoreResendUnderlinedText]: a }),
-                                                href: v.Z.getArticleURL(I.BhN.SHARE_NITRO_FAQ),
-                                                children: a ? T.intl.string(T.t.yJfqPT) : T.intl.format(T.t['+Z4ey8'], { count: n })
+                                            (0, i.jsx)(c.eee, {
+                                                className: s()(I.learnMore, { [I.learnMoreResendUnderlinedText]: o }),
+                                                href: m.Z.getArticleURL(v.BhN.SHARE_NITRO_FAQ),
+                                                children: o ? y.intl.string(y.t.yJfqPT) : y.intl.format(y.t['+Z4ey8'], { count: t })
                                             }),
-                                            a
-                                                ? (0, o.jsx)('div', {
-                                                      className: S.shareNitroResendCopySuffix,
-                                                      children: T.intl.string(T.t['b0B69/'])
+                                            o
+                                                ? (0, i.jsx)('div', {
+                                                      className: I.shareNitroResendCopySuffix,
+                                                      children: y.intl.string(y.t['b0B69/'])
                                                   })
-                                                : (0, o.jsx)('div', { children: T.intl.format(T.t['58lPt7'], { date: (0, E.vc)(d()(O), 'LL') }) })
+                                                : (0, i.jsx)('div', { children: y.intl.format(y.t['58lPt7'], { date: (0, h.vc)(l()(R), 'LL') }) })
                                         ]
                                     })
                                 ]
                             })
                         ]
                     }),
-                    (0, o.jsx)('div', {
-                        className: S.generalButtonContainer,
-                        children: (0, o.jsx)(p.Button, {
-                            className: S.generalShareButton,
-                            submitting: f,
+                    (0, i.jsx)('div', {
+                        className: I.generalButtonContainer,
+                        children: (0, i.jsx)(c.zxk, {
+                            className: I.generalShareButton,
+                            submitting: g,
                             onClick: () => {
-                                a
-                                    ? N(y, i, h)
-                                    : (c(!0),
-                                      g.default.track(I.rMx.SHARE_NITRO_FLOW_STEPS, {
-                                          location_stack: A,
-                                          step: b.fz.FLOW_STARTED,
-                                          other_user_id: Number(y)
+                                o
+                                    ? S(N, a, b)
+                                    : (d(!0),
+                                      p.default.track(v.rMx.SHARE_NITRO_FLOW_STEPS, {
+                                          location_stack: C,
+                                          step: E.fz.FLOW_STARTED,
+                                          other_user_id: Number(N)
                                       }));
                             },
-                            children: a ? T.intl.string(T.t.awsERE) : T.intl.string(T.t.Ago7Zm)
+                            children: o ? y.intl.string(y.t.awsERE) : y.intl.string(y.t.Ago7Zm)
                         })
                     })
                 ]
             });
 }
-function D(e) {
-    let { shouldShowPopout: n, referralsRemaining: r, channel: i, onClose: a, isResending: s } = e;
-    return n
-        ? (0, o.jsx)('div', {
+function C(e) {
+    let { shouldShowPopout: t, referralsRemaining: n, channel: r, onClose: a, isResending: s } = e;
+    return t
+        ? (0, i.jsx)('div', {
               onMouseDown: (e) => e.stopPropagation(),
-              children: (0, o.jsx)(f.y, {
+              children: (0, i.jsx)(u.y, {
                   shouldShow: !0,
                   position: 'top',
                   align: 'center',
                   renderPopout: (e) =>
-                      (0, o.jsx)(O, {
+                      (0, i.jsx)(N, {
                           ...e,
-                          referralsRemaining: r,
-                          channel: i,
+                          referralsRemaining: n,
+                          channel: r,
                           onClose: a,
                           isResending: s
                       }),
                   onRequestClose: () => void 0,
                   closeOnScroll: !1,
                   ignoreModalClicks: !0,
-                  children: () => (0, o.jsx)('div', { className: S.__invalid_popoutTarget })
+                  children: () => (0, i.jsx)('div', { className: I.__invalid_popoutTarget })
               })
           })
         : null;

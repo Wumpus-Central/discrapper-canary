@@ -1,32 +1,33 @@
+n.d(t, { Z: () => A });
 var i,
-    a = r(200651),
-    o = r(192379),
-    s = r(120356),
-    l = r.n(s),
-    u = r(568611),
-    c = r(442837),
-    d = r(692547),
-    f = r(481060),
-    p = r(891819),
-    h = r(372769),
-    _ = r(451478),
-    m = r(956664),
-    g = r(153066),
-    E = r(84966);
-function v(e, n, r) {
+    r = n(200651),
+    a = n(192379),
+    s = n(120356),
+    o = n.n(s),
+    l = n(568611),
+    u = n(442837),
+    c = n(692547),
+    d = n(481060),
+    f = n(891819),
+    _ = n(372769),
+    p = n(451478),
+    h = n(956664),
+    m = n(153066),
+    g = n(84966);
+function E(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let y = {
+let v = {
         SMOL: 'Smol',
         MINI: 'Mini',
         SMALLER: 'Smaller',
@@ -36,123 +37,123 @@ let y = {
         LARGER: 'Larger',
         XLARGE: 'XLarge'
     },
-    b = {
-        [y.SMOL]: 16,
-        [y.MINI]: 20,
-        [y.SMALLER]: 24,
-        [y.SMALL]: 30,
-        [y.MEDIUM]: 40,
-        [y.LARGE]: 50,
-        [y.LARGER]: 64,
-        [y.XLARGE]: 100
+    y = {
+        [v.SMOL]: 16,
+        [v.MINI]: 20,
+        [v.SMALLER]: 24,
+        [v.SMALL]: 30,
+        [v.MEDIUM]: 40,
+        [v.LARGE]: 50,
+        [v.LARGER]: 64,
+        [v.XLARGE]: 100
     },
     I = {
-        [y.SMOL]: [10, 10, 8, 6, 6, 4],
-        [y.MINI]: [12, 12, 10, 10, 8, 6, 4],
-        [y.SMALLER]: [13, 13, 11, 11, 9, 7, 5],
-        [y.SMALL]: [14, 14, 12, 12, 10, 8, 6],
-        [y.MEDIUM]: [16, 16, 14, 14, 12, 10, 8],
-        [y.LARGE]: [18, 18, 16, 16, 14, 12, 10],
-        [y.LARGER]: [19, 19, 17, 17, 15, 13, 11],
-        [y.XLARGE]: [20, 20, 18, 18, 16, 14, 12]
+        [v.SMOL]: [10, 10, 8, 6, 6, 4],
+        [v.MINI]: [12, 12, 10, 10, 8, 6, 4],
+        [v.SMALLER]: [13, 13, 11, 11, 9, 7, 5],
+        [v.SMALL]: [14, 14, 12, 12, 10, 8, 6],
+        [v.MEDIUM]: [16, 16, 14, 14, 12, 10, 8],
+        [v.LARGE]: [18, 18, 16, 16, 14, 12, 10],
+        [v.LARGER]: [19, 19, 17, 17, 15, 13, 11],
+        [v.XLARGE]: [20, 20, 18, 18, 16, 14, 12]
     };
-class T extends o.PureComponent {
+class b extends a.PureComponent {
     renderAcronym() {
-        let { guild: e, iconSrc: n } = this.props;
-        return null != e.icon || null != n
+        let { guild: e, iconSrc: t } = this.props;
+        return null != e.icon || null != t
             ? null
-            : (0, a.jsx)('div', {
-                  className: E.acronym,
+            : (0, r.jsx)('div', {
+                  className: g.acronym,
                   children: e.acronym
               });
     }
     renderBadge() {
-        let { showBadge: e, guild: n, badgeStrokeColor: r, badgeTooltipColor: i, badgeTooltipDelay: o } = this.props;
-        return e && null != n.hasFeature
-            ? (0, a.jsx)(h.Z, {
-                  className: E.guildIconBadge,
-                  guild: n,
-                  badgeStrokeColor: r,
+        let { showBadge: e, guild: t, badgeStrokeColor: n, badgeTooltipColor: i, badgeTooltipDelay: a } = this.props;
+        return e && null != t.hasFeature
+            ? (0, r.jsx)(_.Z, {
+                  className: g.guildIconBadge,
+                  guild: t,
+                  badgeStrokeColor: n,
                   tooltipColor: i,
-                  tooltipDelay: o
+                  tooltipDelay: a
               })
             : null;
     }
     renderIcon() {
-        var e, n;
-        let { guild: r, className: i, showBadge: o, active: s, size: u, style: c = {}, textScale: d, showTooltip: p, tooltipPosition: h, onClick: _, to: m, badgeStrokeColor: v, animate: y, tabIndex: b, iconSrc: T, 'aria-hidden': S, ...A } = this.props,
-            C = I[u],
-            N = null != _ ? f.Clickable : 'div';
-        return (0, a.jsxs)(N, {
-            className: l()(E.icon, i, (0, g.l)(E, 'iconSize', u), {
-                [null !== (e = (0, g.l)(E, 'iconActive', u)) && void 0 !== e ? e : '']: s,
-                [E.iconInactive]: !s,
-                [E.noIcon]: null == r.icon
+        var e, t;
+        let { guild: n, className: i, showBadge: a, active: s, size: l, style: u = {}, textScale: c, showTooltip: f, tooltipPosition: _, onClick: p, to: h, badgeStrokeColor: E, animate: v, tabIndex: y, iconSrc: b, 'aria-hidden': T, ...S } = this.props,
+            A = I[l],
+            N = null != p ? d.P3F : 'div';
+        return (0, r.jsxs)(N, {
+            className: o()(g.icon, i, (0, m.l)(g, 'iconSize', l), {
+                [null !== (e = (0, m.l)(g, 'iconActive', l)) && void 0 !== e ? e : '']: s,
+                [g.iconInactive]: !s,
+                [g.noIcon]: null == n.icon
             }),
-            'aria-hidden': S,
+            'aria-hidden': T,
             style:
-                null == r.icon
+                null == n.icon
                     ? {
-                          fontSize: (null !== (n = C[r.acronym.length]) && void 0 !== n ? n : C[C.length - 1]) * d,
-                          ...c
+                          fontSize: (null !== (t = A[n.acronym.length]) && void 0 !== t ? t : A[A.length - 1]) * c,
+                          ...u
                       }
-                    : c,
-            onClick: null != m || null == _ ? void 0 : _,
-            tabIndex: b,
-            ...A,
+                    : u,
+            onClick: null != h || null == p ? void 0 : p,
+            tabIndex: y,
+            ...S,
             children: [this.renderAcronym(), this.renderBadge()]
         });
     }
     renderTooltip() {
-        let { guild: e, showTooltip: n, tooltipPosition: r } = this.props;
-        return n
-            ? (0, a.jsx)(f.Tooltip, {
+        let { guild: e, showTooltip: t, tooltipPosition: n } = this.props;
+        return t
+            ? (0, r.jsx)(d.ua7, {
                   text: e.name,
-                  position: r,
+                  position: n,
                   'aria-label': !1,
-                  children: (e) => o.cloneElement(o.Children.only(this.renderIcon()), { ...e })
+                  children: (e) => a.cloneElement(a.Children.only(this.renderIcon()), { ...e })
               })
             : this.renderIcon();
     }
     render() {
-        let { to: e, guild: n, source: r, tabIndex: i, 'aria-hidden': o } = this.props;
+        let { to: e, guild: t, source: n, tabIndex: i, 'aria-hidden': a } = this.props;
         return null != e
-            ? (0, a.jsx)(u.rU, {
-                  'aria-hidden': o,
+            ? (0, r.jsx)(l.rU, {
+                  'aria-hidden': a,
                   to: {
                       pathname: e,
-                      state: null != r ? { analyticsSource: r } : null
+                      state: null != n ? { analyticsSource: n } : null
                   },
-                  'aria-label': n.toString(),
+                  'aria-label': t.toString(),
                   tabIndex: i,
                   children: this.renderTooltip()
               })
             : this.renderTooltip();
     }
 }
-let S = c.ZP.connectStores([_.Z], (e) => {
-    let { guild: n, animate: r, iconSrc: i, style: a, size: o, iconSize: s, lossless: l } = e;
+let T = u.ZP.connectStores([p.Z], (e) => {
+    let { guild: t, animate: n, iconSrc: i, style: r, size: a, iconSize: s, lossless: o } = e;
     return {
         style: {
-            ...a,
-            backgroundImage: (0, m.rv)(null != i ? i : n.getIconURL(null != s ? s : b[o], r && _.Z.isFocused(), l))
+            ...r,
+            backgroundImage: (0, h.rv)(null != i ? i : t.getIconURL(null != s ? s : y[a], n && p.Z.isFocused(), o))
         }
     };
-})((0, p.N)((e) => (0, a.jsx)(T, { ...e })));
-class A extends (i = o.PureComponent) {
+})((0, f.N)((e) => (0, r.jsx)(b, { ...e })));
+class S extends (i = a.PureComponent) {
     render() {
-        return (0, a.jsx)(S, { ...this.props });
+        return (0, r.jsx)(T, { ...this.props });
     }
 }
-v(A, 'Sizes', y),
-    v(A, 'defaultProps', {
-        size: y.LARGE,
+E(S, 'Sizes', v),
+    E(S, 'defaultProps', {
+        size: v.LARGE,
         textScale: 1,
         showBadge: !1,
         showTooltip: !1,
         active: !1,
         tooltipPosition: 'top',
-        badgeStrokeColor: d.Z.unsafe_rawColors.WHITE_500.css,
+        badgeStrokeColor: c.Z.unsafe_rawColors.WHITE_500.css,
         animate: !1
-    }),
-    (n.Z = A);
+    });
+let A = S;

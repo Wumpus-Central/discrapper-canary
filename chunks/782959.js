@@ -1,12 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return m;
-    }
-});
+n.d(t, { Z: () => m });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(367907),
+var l = n(481060),
+    r = n(367907),
     a = n(70097),
     s = n(970731),
     o = n(626135),
@@ -18,13 +14,13 @@ function m(e) {
     let { guildId: t, markAsDismissed: m } = e,
         p = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(r.Text, {
+                (0, i.jsx)(l.Text, {
                     color: 'always-white',
                     variant: 'text-sm/normal',
                     className: h.upsellBody,
                     children: u.intl.string(u.t['yQ0X+f'])
                 }),
-                (0, i.jsx)(r.Text, {
+                (0, i.jsx)(l.Text, {
                     color: 'always-white',
                     variant: 'text-sm/normal',
                     children: u.intl.format(u.t['2Sapx8'], { hcArticleUrl: c.Z.getCreatorSupportArticleURL(d.BhN.MEDIA_CHANNEL) })
@@ -42,8 +38,8 @@ function m(e) {
         }),
         buttonCTA: u.intl.string(u.t.JzJpg4),
         onClick: () => {
-            o.default.track(d.rMx.MEDIA_CHANNEL_UPSELL_CLICKED, { ...(0, l.hH)(t) }),
-                (0, r.openModalLazy)(async () => {
+            o.default.track(d.rMx.MEDIA_CHANNEL_UPSELL_CLICKED, { ...(0, r.hH)(t) }),
+                (0, l.ZDy)(async () => {
                     let { default: e } = await Promise.all([n.e('45094'), n.e('5506')]).then(n.bind(n, 218613));
                     return (n) =>
                         (0, i.jsx)(e, {

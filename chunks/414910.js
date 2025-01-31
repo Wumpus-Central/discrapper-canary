@@ -1,17 +1,13 @@
-r.d(n, {
-    Z: function () {
-        return s;
-    }
-});
-var i = r(354459),
-    a = r(65154);
-let o = Object.freeze({
-    [i.fO.STREAM]: a.Yn.STREAM,
-    [i.fO.HIDDEN_STREAM]: a.Yn.STREAM,
-    [i.fO.USER]: a.Yn.DEFAULT,
-    [i.fO.ACTIVITY]: a.Yn.DEFAULT,
-    [i.fO.PRESENCE_EMBEDDED_ACTIVITY]: a.Yn.DEFAULT
+n.d(t, { Z: () => s });
+var i = n(354459),
+    r = n(65154);
+let a = Object.freeze({
+    [i.fO.STREAM]: r.Yn.STREAM,
+    [i.fO.HIDDEN_STREAM]: r.Yn.STREAM,
+    [i.fO.USER]: r.Yn.DEFAULT,
+    [i.fO.ACTIVITY]: r.Yn.DEFAULT,
+    [i.fO.PRESENCE_EMBEDDED_ACTIVITY]: r.Yn.DEFAULT
 });
 function s(e) {
-    return o[e];
+    return a[e];
 }

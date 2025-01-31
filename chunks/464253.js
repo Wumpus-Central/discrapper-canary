@@ -1,56 +1,53 @@
-var i = r(411104);
-var a = r(570140),
-    o = r(846027),
-    s = r(872810),
-    l = r(710845),
-    u = r(77014),
-    c = r(361291),
-    d = r(199902),
-    f = r(314897),
-    p = r(569545),
-    h = r(803647),
-    _ = r(981631),
-    m = r(65154);
-function g(e, n, r) {
+n.d(t, { Z: () => g }), n(411104);
+var i = n(570140),
+    r = n(846027),
+    a = n(872810),
+    s = n(710845),
+    o = n(77014),
+    l = n(361291),
+    u = n(199902),
+    c = n(314897),
+    d = n(569545),
+    f = n(803647),
+    _ = n(981631),
+    p = n(65154);
+function h(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class E {
+class m {
     _onGameDetectionUpdate(e) {
-        if (
-            ((this.applications = e.map((e) => {
-                var n, r;
-                return {
-                    applicationId: null !== (n = e.id) && void 0 !== n ? n : null,
-                    processId: e.pid,
-                    processPath: e.pidPath,
-                    windowHandle: null !== (r = e.windowHandle) && void 0 !== r ? r : null,
-                    executableName: e.exeName
-                };
-            })),
-            'verbatim-source' !== this.mode)
-        )
-            this.director.onDetectionUpdate(this.applications);
+        (this.applications = e.map((e) => {
+            var t, n;
+            return {
+                applicationId: null !== (t = e.id) && void 0 !== t ? t : null,
+                processId: e.pid,
+                processPath: e.pidPath,
+                windowHandle: null !== (n = e.windowHandle) && void 0 !== n ? n : null,
+                executableName: e.exeName
+            };
+        })),
+            'verbatim-source' !== this.mode && this.director.onDetectionUpdate(this.applications);
     }
-    _onStreamApplication(e, n) {
-        (this.mode = 'application'), (this.streamKey = e), this.director.onStreamBegin(this.applications, n);
+    _onStreamApplication(e, t) {
+        (this.mode = 'application'), (this.streamKey = e), this.director.onStreamBegin(this.applications, t);
     }
-    _onStreamDirectSource(e, n, r, i) {
+    _onStreamDirectSource(e, t, n, i) {
         (this.mode = 'verbatim-source'),
             (this.streamKey = e),
             this._onDirectorAction({
-                type: u.A.STREAM,
-                sourceId: n,
-                audioSourceId: r,
+                type: o.A.STREAM,
+                sourceId: t,
+                audioSourceId: n,
                 sound: i
             });
     }
@@ -61,11 +58,11 @@ class E {
                     this.director.onStreamEnd();
                     break;
                 case 'verbatim-source':
-                    this._onDirectorAction({ type: u.A.STOP });
+                    this._onDirectorAction({ type: o.A.STOP });
                     break;
                 default:
-                    var n;
-                    throw Error('unknown streaming mode: '.concat(null !== (n = this.mode) && void 0 !== n ? n : '(none)'));
+                    var t;
+                    throw Error('unknown streaming mode: '.concat(null !== (t = this.mode) && void 0 !== t ? t : '(none)'));
             }
     }
     _onStreamKilled(e) {
@@ -77,58 +74,58 @@ class E {
                 case 'verbatim-source':
                     break;
                 default:
-                    var n;
-                    throw Error('unknown streaming mode: '.concat(null !== (n = this.mode) && void 0 !== n ? n : '(none)'));
+                    var t;
+                    throw Error('unknown streaming mode: '.concat(null !== (t = this.mode) && void 0 !== t ? t : '(none)'));
             }
     }
     _onDirectorAction(e) {
-        let n = d.Z.getCurrentUserActiveStream(),
-            r = c.Z.getState();
+        let t = u.Z.getCurrentUserActiveStream(),
+            n = l.Z.getState();
         switch (e.type) {
-            case u.A.STREAM:
-                if ((null != n && (0, s.tK)(n, !1), e.sourceId.startsWith('camera') && null != e.audioSourceId)) {
-                    let n = e.sourceId.split(':')[1];
-                    o.Z.setGoLiveSource({
+            case o.A.STREAM:
+                if ((null != t && (0, a.tK)(t, !1), e.sourceId.startsWith('camera') && null != e.audioSourceId)) {
+                    let t = e.sourceId.split(':')[1];
+                    r.Z.setGoLiveSource({
                         cameraSettings: {
-                            videoDeviceGuid: n,
+                            videoDeviceGuid: t,
                             audioDeviceGuid: e.audioSourceId
                         },
                         qualityOptions: {
-                            preset: r.preset,
-                            resolution: r.resolution,
-                            frameRate: r.fps
+                            preset: n.preset,
+                            resolution: n.resolution,
+                            frameRate: n.fps
                         },
-                        context: m.Yn.STREAM
+                        context: p.Yn.STREAM
                     });
                 } else {
                     var i;
-                    o.Z.setGoLiveSource({
+                    r.Z.setGoLiveSource({
                         desktopSettings: {
                             sourceId: e.sourceId,
                             sound: null === (i = e.sound) || void 0 === i || i
                         },
                         qualityOptions: {
-                            preset: r.preset,
-                            resolution: r.resolution,
-                            frameRate: r.fps
+                            preset: n.preset,
+                            resolution: n.resolution,
+                            frameRate: n.fps
                         },
-                        context: m.Yn.STREAM
+                        context: p.Yn.STREAM
                     });
                 }
                 break;
-            case u.A.PAUSE:
-                null != n && (0, s.tK)(n, !0);
+            case o.A.PAUSE:
+                null != t && (0, a.tK)(t, !0);
                 break;
-            case u.A.STOP:
-                null != n && (0, h.Z)(n);
+            case o.A.STOP:
+                null != t && (0, f.Z)(t);
                 break;
             default:
                 throw Error('unhandled stream action: '.concat(e.type));
         }
     }
     _onCapturePaused(e) {
-        let n = d.Z.getCurrentUserActiveStream();
-        null != n && (0, s.tK)(n, e);
+        let t = u.Z.getCurrentUserActiveStream();
+        null != t && (0, a.tK)(t, e);
     }
     _onCaptureEnded() {
         switch (this.mode) {
@@ -144,49 +141,49 @@ class E {
         }
     }
     constructor() {
-        g(this, 'director', void 0),
-            g(this, 'applications', void 0),
-            g(this, 'streamKey', void 0),
-            g(this, 'mode', void 0),
+        h(this, 'director', void 0),
+            h(this, 'applications', void 0),
+            h(this, 'streamKey', void 0),
+            h(this, 'mode', void 0),
             (this.mode = null),
             (this.applications = []),
-            (this.director = new u.a((e) => this._onDirectorAction(e))),
-            a.Z.subscribe('STREAM_START', (e) => {
-                let { streamType: n, guildId: r, channelId: i, pid: a, sourceId: o, audioSourceId: s, sound: u } = e,
-                    c = f.default.getId(),
-                    d = (0, p.V9)({
-                        streamType: n,
-                        guildId: r,
+            (this.director = new o.a((e) => this._onDirectorAction(e))),
+            i.Z.subscribe('STREAM_START', (e) => {
+                let { streamType: t, guildId: n, channelId: i, pid: r, sourceId: a, audioSourceId: o, sound: l } = e,
+                    u = c.default.getId(),
+                    f = (0, d.V9)({
+                        streamType: t,
+                        guildId: n,
                         channelId: i,
-                        ownerId: c
+                        ownerId: u
                     });
-                (null == a) != (null == o) ? (null != a && this._onStreamApplication(d, a), null != o && this._onStreamDirectSource(d, o, s, u)) : new l.Z('ApplicationSwitchingManager').warn('invalid start_stream: both application + display modes were specified (pid: '.concat(a, ', source-id: ').concat(o, ')'));
+                (null == r) != (null == a) ? (null != r && this._onStreamApplication(f, r), null != a && this._onStreamDirectSource(f, a, o, l)) : new s.Z('ApplicationSwitchingManager').warn('invalid start_stream: both application + display modes were specified (pid: '.concat(r, ', source-id: ').concat(a, ')'));
             }),
-            a.Z.subscribe('STREAM_DELETE', (e) => {
-                let { streamKey: n } = e;
-                this._onStreamKilled(n);
+            i.Z.subscribe('STREAM_DELETE', (e) => {
+                let { streamKey: t } = e;
+                this._onStreamKilled(t);
             }),
-            a.Z.subscribe('STREAM_STOP', (e) => {
-                let { streamKey: n } = e;
-                this._onStreamEnd(n);
+            i.Z.subscribe('STREAM_STOP', (e) => {
+                let { streamKey: t } = e;
+                this._onStreamEnd(t);
             }),
-            a.Z.subscribe('RUNNING_GAMES_CHANGE', (e) => {
-                let { games: n } = e;
-                this._onGameDetectionUpdate(n);
+            i.Z.subscribe('RUNNING_GAMES_CHANGE', (e) => {
+                let { games: t } = e;
+                this._onGameDetectionUpdate(t);
             }),
-            a.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', (e) => {
-                let { videoState: n, context: r } = e;
-                r === m.Yn.STREAM && this._onCapturePaused(n === _.FQ1.PAUSED);
+            i.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', (e) => {
+                let { videoState: t, context: n } = e;
+                n === p.Yn.STREAM && this._onCapturePaused(t === _.FQ1.PAUSED);
             }),
-            a.Z.subscribe('MEDIA_ENGINE_SET_GO_LIVE_SOURCE', (e) => {
-                let { settings: n } = e;
-                (null == n ? void 0 : n.context) === m.Yn.STREAM && (null == n ? void 0 : n.desktopSettings) == null && (null == n ? void 0 : n.cameraSettings) == null && this._onCaptureEnded();
+            i.Z.subscribe('MEDIA_ENGINE_SET_GO_LIVE_SOURCE', (e) => {
+                let { settings: t } = e;
+                (null == t ? void 0 : t.context) === p.Yn.STREAM && (null == t ? void 0 : t.desktopSettings) == null && (null == t ? void 0 : t.cameraSettings) == null && this._onCaptureEnded();
             });
     }
 }
-n.Z = {
+let g = {
     instance: null,
     init() {
-        null == this.instance && (this.instance = new E());
+        null == this.instance && (this.instance = new m());
     }
 };

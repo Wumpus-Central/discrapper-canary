@@ -1,92 +1,84 @@
-var i = r(47120);
-var a = r(315314);
-var o = r(610138);
-var s = r(216116);
-var l = r(78328);
-var u = r(815648);
-var c = r(628735),
-    d = r.n(c),
-    f = r(392711),
-    p = r.n(f),
-    h = r(729594),
-    _ = r(591759),
-    m = r(981631);
-let g = /(?:^|\.)(?:discordapp|discord|discordmerch)\.com$/i,
-    E = '(?:(?:[a-z]+:)?//)',
-    v = '(?:\\S+(?::\\S*)?@)?',
-    y = d().v4().source,
-    b = '(?:[a-z\\u00a1-\\uffff0-9-_]+\\.)+',
-    I = '(?:(?:[a-z\\u00a1-\\uffff]{2,}))',
-    T = '(?::\\d{2,5})?',
-    S = '(?:[/?#][^\\s"]*)?',
-    A = RegExp('(?:'.concat(E, '|www\\.)').concat(v, '(?:localhost|').concat(y, '|').concat(b).concat(I, ')').concat(T).concat(S), 'ig'),
-    C = new Set([window.GLOBAL_ENV.CDN_HOST, window.GLOBAL_ENV.INVITE_HOST, window.GLOBAL_ENV.GIFT_CODE_HOST, window.GLOBAL_ENV.GUILD_TEMPLATE_HOST]),
-    N = !1;
-function R(e) {
-    return C.has(e.toLowerCase());
+n.d(t, { Z: () => N }), n(47120), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648);
+var i = n(628735),
+    r = n.n(i),
+    a = n(392711),
+    s = n.n(a),
+    o = n(729594),
+    l = n(591759),
+    u = n(981631);
+let c = /(?:^|\.)(?:discordapp|discord|discordmerch)\.com$/i,
+    d = '(?:(?:[a-z]+:)?//)',
+    f = '(?:\\S+(?::\\S*)?@)?',
+    _ = r().v4().source,
+    p = '(?:[a-z\\u00a1-\\uffff0-9-_]+\\.)+',
+    h = '(?:(?:[a-z\\u00a1-\\uffff]{2,}))',
+    m = '(?::\\d{2,5})?',
+    g = '(?:[/?#][^\\s"]*)?',
+    E = RegExp('(?:'.concat(d, '|www\\.)').concat(f, '(?:localhost|').concat(_, '|').concat(p).concat(h, ')').concat(m).concat(g), 'ig'),
+    v = new Set([window.GLOBAL_ENV.CDN_HOST, window.GLOBAL_ENV.INVITE_HOST, window.GLOBAL_ENV.GIFT_CODE_HOST, window.GLOBAL_ENV.GUILD_TEMPLATE_HOST]),
+    y = !1;
+function I(e) {
+    return v.has(e.toLowerCase());
 }
-function O(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return null != e && (g.test(e) || (n && R(e)));
+function b(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    return null != e && (c.test(e) || (t && I(e)));
 }
-function D(e, n) {
-    return null != e && null != n && (window.location.host === e || !1);
-}
-function L(e) {
+function T(e) {
     return null != e && 'discord:' === e;
 }
-function x(e) {
-    return null != e && h.parse(e).hostname === window.GLOBAL_ENV.CDN_HOST;
-}
-function w(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+function S(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (null != e) {
-        var r;
-        let i = null === (r = _.Z.toURLSafe(e)) || void 0 === r ? void 0 : r.hostname;
-        if (null != i && O(i, n)) return !0;
+        var n;
+        let i = null === (n = l.Z.toURLSafe(e)) || void 0 === n ? void 0 : n.hostname;
+        if (null != i && b(i, t)) return !0;
     }
     return !1;
 }
-function P(e) {
-    return null != e && L(h.parse(e).protocol);
+function A(e) {
+    return null != e && T(o.parse(e).protocol);
 }
-function M(e) {
-    let n = N ? window.GLOBAL_ENV.INVITE_HOST : location.host;
-    return ''.concat(location.protocol, '//').concat(n).concat(e);
-}
-n.Z = {
-    URL_REGEX: A,
-    isDiscordHostname: O,
-    isDiscordLocalhost: D,
-    isDiscordProtocol: L,
-    isDiscordUrl: w,
-    isDiscordUri: P,
-    isDiscordCdnUrl: x,
-    isDiscordUrlOrUri: (e) => w(e) || P(e),
-    isAppRoute: (e) => {
-        let n = e.toLowerCase();
-        return n.startsWith('/channels/') || n.startsWith(m.Z5c.APPLICATION_STORE) || n.startsWith(m.Z5c.APPLICATION_LIBRARY) || n.startsWith(m.Z5c.MESSAGE_REQUESTS) || n.startsWith(m.Z5c.FAMILY_CENTER) || n.startsWith(m.Z5c.ACTIVITIES) || n.startsWith(m.Z5c.COLLECTIBLES_SHOP) || n.startsWith(m.Z5c.ACTIVITY);
+let N = {
+    URL_REGEX: E,
+    isDiscordHostname: b,
+    isDiscordLocalhost: function (e, t) {
+        return null != e && null != t && window.location.host === e;
     },
-    format: (e) => h.format(e),
-    formatPathWithQuery: (e, n) =>
-        h.format({
+    isDiscordProtocol: T,
+    isDiscordUrl: S,
+    isDiscordUri: A,
+    isDiscordCdnUrl: function (e) {
+        return null != e && o.parse(e).hostname === window.GLOBAL_ENV.CDN_HOST;
+    },
+    isDiscordUrlOrUri: (e) => S(e) || A(e),
+    isAppRoute: (e) => {
+        let t = e.toLowerCase();
+        return t.startsWith('/channels/') || t.startsWith(u.Z5c.APPLICATION_STORE) || t.startsWith(u.Z5c.APPLICATION_LIBRARY) || t.startsWith(u.Z5c.MESSAGE_REQUESTS) || t.startsWith(u.Z5c.FAMILY_CENTER) || t.startsWith(u.Z5c.ACTIVITIES) || t.startsWith(u.Z5c.COLLECTIBLES_SHOP) || t.startsWith(u.Z5c.ACTIVITY);
+    },
+    format: (e) => o.format(e),
+    formatPathWithQuery: (e, t) =>
+        o.format({
             pathname: e,
-            query: p().pickBy(n)
+            query: s().pickBy(t)
         }),
-    formatSearch: (e) => h.format({ query: p().pickBy(e) }),
+    formatSearch: (e) => o.format({ query: s().pickBy(e) }),
     safeParseWithQuery(e) {
         try {
-            return h.parse(e, !0);
+            return o.parse(e, !0);
         } catch (e) {
             return null;
         }
     },
-    toURLSafe(e, n) {
+    toURLSafe(e, t) {
         try {
-            return new URL(e, n);
+            return new URL(e, t);
         } catch (e) {
             return null;
         }
     },
-    makeUrl: M
+    makeUrl: function (e) {
+        let t = y ? window.GLOBAL_ENV.INVITE_HOST : location.host;
+        return ''.concat(location.protocol, '//').concat(t).concat(e);
+    }
 };

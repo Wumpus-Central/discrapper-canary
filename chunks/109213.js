@@ -1,18 +1,13 @@
-r.d(n, {
-    G: function () {
-        return s;
-    },
-    u: function () {
-        return i;
-    }
+n.d(t, {
+    G: () => s,
+    u: () => a
 });
-var i,
-    a = r(818083),
-    o = r(987338);
-!(function (e) {
-    (e[(e.NONE = 0)] = 'NONE'), (e[(e.POPULAR = 1)] = 'POPULAR'), (e[(e.RECENT = 2)] = 'RECENT');
-})(i || (i = {}));
-let s = (0, a.B)({
+var i = n(818083),
+    r = n(987338),
+    a = (function (e) {
+        return (e[(e.NONE = 0)] = 'NONE'), (e[(e.POPULAR = 1)] = 'POPULAR'), (e[(e.RECENT = 2)] = 'RECENT'), e;
+    })({});
+let s = (0, i.B)({
     kind: 'user',
     id: '2024-10_shop_skus_in_gift_flow',
     label: 'Gift Collectibles in DM',
@@ -21,7 +16,7 @@ let s = (0, a.B)({
         showBothNitroSkusInCategorySelect: !1,
         giftRecommendationAlgorithm: 0
     },
-    commonTriggerPoint: o.$P.DM_GDM_LIST_RENDER,
+    commonTriggerPoint: r.$P.DM_GDM_LIST_RENDER,
     treatments: [
         {
             id: 1,

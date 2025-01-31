@@ -1,51 +1,52 @@
+n.d(t, { Z: () => h });
 var i = n(200651),
-    r = n(192379),
-    l = n(924826),
+    l = n(192379),
+    r = n(924826),
     a = n(91192),
     s = n(442837),
     o = n(481060),
     c = n(607070),
     d = n(617015),
     u = n(732144);
-t.Z = function (e) {
+let h = function (e) {
     let { rows: t, renderRow: n, renderSection: h, footer: m } = e,
         p = (e) => {
-            let { section: i, row: r } = e,
-                l = t[i];
-            if (null == l || null == r) return null;
-            let a = l[r];
+            let { section: i, row: l } = e,
+                r = t[i];
+            if (null == r || null == l) return null;
+            let a = r[l];
             return null == a ? null : n(a);
         },
-        g = r.useCallback(
+        g = l.useCallback(
             (e) => {
                 let { section: t } = e;
                 return h(t);
             },
             [h]
         ),
-        f = (0, s.e7)([c.Z], () => c.Z.keyboardModeEnabled),
-        _ = r.useRef(null),
-        E = r.useCallback(
+        _ = (0, s.e7)([c.Z], () => c.Z.keyboardModeEnabled),
+        f = l.useRef(null),
+        E = l.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = _.current;
+                    let t = f.current;
                     if (null == t) return e();
                     t.scrollToTop({ callback: () => requestAnimationFrame(() => e()) });
                 }),
             []
         ),
-        I = r.useCallback(
+        I = l.useCallback(
             () =>
                 new Promise((e) => {
-                    let t = _.current;
+                    let t = f.current;
                     if (null == t) return e();
                     t.scrollToBottom({ callback: () => requestAnimationFrame(() => e()) });
                 }),
             []
         ),
-        C = r.useCallback((e) => {
+        C = l.useCallback((e) => {
             let t = document.querySelector(e),
-                n = _.current;
+                n = f.current;
             null != t &&
                 null != n &&
                 n.scrollIntoViewNode({
@@ -54,14 +55,14 @@ t.Z = function (e) {
                     callback: () => (null == t ? void 0 : t.focus())
                 });
         }, []),
-        v = (0, l.ZP)({
+        v = (0, r.ZP)({
             id: 'people-list',
-            isEnabled: f,
+            isEnabled: _,
             scrollToStart: E,
             scrollToEnd: I,
             setFocus: C
         }),
-        N = r.useMemo(() => t.map((e) => e.length), [t]);
+        N = l.useMemo(() => t.map((e) => e.length), [t]);
     return (0, i.jsx)(a.bG, {
         navigator: v,
         children: (0, i.jsx)(a.SJ, {
@@ -69,10 +70,10 @@ t.Z = function (e) {
                 let { ref: t, ...n } = e;
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(o.ListAuto, {
+                        (0, i.jsx)(o._2F, {
                             ref: (e) => {
                                 var n;
-                                (_.current = e), (t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
+                                (f.current = e), (t.current = null !== (n = null == e ? void 0 : e.getScrollerNode()) && void 0 !== n ? n : null);
                             },
                             renderRow: p,
                             rowHeight: d.NV,

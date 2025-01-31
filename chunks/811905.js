@@ -1,8 +1,9 @@
-e.exports = {
-    container: 'container_ced1ae',
-    v2Container: 'v2Container_ced1ae',
-    iconContainer: 'iconContainer_ced1ae',
-    icon: 'icon_ced1ae',
-    mask: 'mask_ced1ae',
-    textContainer: 'textContainer_ced1ae'
+var i = {
+    container: 'container__61733',
+    v2Container: 'v2Container__61733',
+    iconContainer: 'iconContainer__61733',
+    icon: 'icon__61733',
+    mask: 'mask__61733',
+    textContainer: 'textContainer__61733'
 };
+e.exports = i;

@@ -1,2 +1,2 @@
-var i = r(204384);
+var i = n(204384);
 e.exports = /web0s(?!.*chrome)/i.test(i);

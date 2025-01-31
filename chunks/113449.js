@@ -1,23 +1,17 @@
-r.d(n, {
-    Q4: function () {
-        return s;
-    },
-    YF: function () {
-        return l;
-    },
-    pq: function () {
-        return u;
-    }
+n.d(t, {
+    Q4: () => s,
+    YF: () => o,
+    pq: () => l
 });
-var i = r(630388),
-    a = r(526761);
-function o(e) {
-    return i.M1(e, a.vc.UNREADS_ALL_MESSAGES, a.vc.UNREADS_ONLY_MENTIONS);
+var i = n(630388),
+    r = n(526761);
+function a(e) {
+    return i.M1(e, r.vc.UNREADS_ALL_MESSAGES, r.vc.UNREADS_ONLY_MENTIONS);
 }
-function s(e, n) {
-    return i.pj(o(e), n);
+function s(e, t) {
+    return i.pj(a(e), t);
 }
-let l = (e) => i.M1(e, a.ic.UNREADS_ALL_MESSAGES, a.ic.UNREADS_ONLY_MENTIONS);
-function u(e, n) {
-    return i.pj(l(e), n);
+let o = (e) => i.M1(e, r.ic.UNREADS_ALL_MESSAGES, r.ic.UNREADS_ONLY_MENTIONS);
+function l(e, t) {
+    return i.pj(o(e), t);
 }

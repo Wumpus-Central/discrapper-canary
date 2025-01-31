@@ -1,30 +1,26 @@
-r.d(n, {
-    E: function () {
-        return o;
-    }
-});
-var i = r(264181);
-function a(e, n, r) {
+n.d(t, { E: () => a });
+var i = n(264181);
+function r(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class o {
+class a {
     static fromServer(e) {
-        return new o({
+        return new a({
             ...e,
             dismissibleContent: e.dismissible_content
         });
     }
     constructor(e) {
-        a(this, 'dismissibleContent', void 0), a(this, 'version', void 0), (this.type = i.Z.BADGE), (this.dismissibleContent = e.dismissibleContent), (this.version = e.version);
+        r(this, 'dismissibleContent', void 0), r(this, 'version', void 0), (this.type = i.Z.BADGE), (this.dismissibleContent = e.dismissibleContent), (this.version = e.version);
     }
 }

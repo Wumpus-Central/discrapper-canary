@@ -1,37 +1,59 @@
-var i = r(200651),
-    a = r(192379),
-    o = r(120356),
-    s = r.n(o),
-    l = r(481060),
-    u = r(540059),
-    c = r(328908),
-    d = r(443603),
-    f = r(957825),
-    p = r(388032),
-    h = r(553796);
-function _(e, n) {
-    let { disabled: r, channelId: o } = e,
-        _ = (0, u.Q3)('ChannelMessageConfettiButton'),
-        m = (0, c.LN)(o),
-        g = a.useCallback(() => {
-            (0, c.Rg)(o);
-        }, [o]);
-    return r
+n.d(t, { Z: () => I }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(704215),
+    l = n(481060),
+    u = n(540059),
+    c = n(243778),
+    d = n(328908),
+    f = n(13132),
+    _ = n(576645),
+    p = n(317951),
+    h = n(443603),
+    m = n(981631),
+    g = n(957825),
+    E = n(388032),
+    v = n(553796);
+function y(e, t) {
+    let { disabled: n, channelId: a } = e,
+        y = (0, u.Q3)('ChannelMessageConfettiButton'),
+        I = (0, d.LN)(a),
+        { entitlement: b } = (0, _.t6)(p.D1),
+        T = r.useCallback(() => {
+            (0, d.Rg)(a);
+        }, [a]),
+        S = (null == b ? void 0 : b.type) === m.qc2.DEVELOPER_GIFT ? [o.z.CONFETTI_POTION_UPSELL] : [],
+        [A, N] = (0, c.US)(S);
+    return n
         ? null
-        : (0, i.jsx)('div', {
-              className: s()(f.CT, h.buttonContainer),
-              ref: n,
-              children: (0, i.jsx)(d.Z, {
-                  innerClassName: s()(h.button, h.messageConfettiButton),
-                  onClick: g,
-                  isActive: m,
-                  'aria-label': p.intl.string(p.t.yvN8bG),
-                  'aria-haspopup': 'false',
-                  children: (0, i.jsx)(l.ExperimentalConfettiIcon, {
-                      size: _ ? 'refresh_sm' : void 0,
-                      color: 'currentColor'
+        : (0, i.jsx)(l.yRy, {
+              renderPopout: () =>
+                  (0, i.jsx)(f.Z, {
+                      channelId: a,
+                      dismissContent: N
+                  }),
+              align: 'center',
+              position: 'top',
+              shouldShow: A === o.z.CONFETTI_POTION_UPSELL,
+              children: () =>
+                  (0, i.jsx)('div', {
+                      className: s()(g.CT, v.buttonContainer),
+                      ref: t,
+                      children: (0, i.jsx)(h.Z, {
+                          innerClassName: s()(v.button, v.messageConfettiButton),
+                          childClassName: s()(v.messageConfettiIcon, { [v.active]: I }),
+                          onClick: T,
+                          isActive: I,
+                          'aria-label': E.intl.string(E.t.yvN8bG),
+                          'aria-haspopup': 'false',
+                          children: (0, i.jsx)(l.l22, {
+                              size: y ? 'refresh_sm' : void 0,
+                              color: 'currentColor'
+                          })
+                      })
                   })
-              })
           });
 }
-n.Z = a.memo(a.forwardRef(_));
+let I = r.memo(r.forwardRef(y));

@@ -1,30 +1,26 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
+n.d(t, { Z: () => c });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(739566),
-    a = n(834129),
-    o = n(388032),
-    s = n(938530);
+var l = n(481060),
+    a = n(739566),
+    r = n(834129),
+    s = n(388032),
+    o = n(938530);
 function c(e) {
     let { message: t, compact: n, usernameHook: c } = e,
-        u = (0, l.ZP)(t),
-        d = c(u),
-        m = o.intl.format(o.t.tv2DNz, {
-            username: u.nick,
-            usernameHook: d
+        d = (0, a.ZP)(t),
+        u = c(d),
+        m = s.intl.format(s.t.tv2DNz, {
+            username: d.nick,
+            usernameHook: u
         });
-    return (0, i.jsx)(a.Z, {
-        className: s.stageSystemMessage,
-        iconNode: (0, i.jsx)(r.HandRequestSpeakIcon, {
+    return (0, i.jsx)(r.Z, {
+        className: o.stageSystemMessage,
+        iconNode: (0, i.jsx)(l.V9, {
             size: 'md',
             color: 'currentColor'
         }),
-        iconContainerClassName: s.iconContainer,
+        iconContainerClassName: o.iconContainer,
         timestamp: t.timestamp,
         compact: n,
         children: m

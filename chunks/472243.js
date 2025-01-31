@@ -1,71 +1,67 @@
-r.d(n, {
-    Z: function () {
-        return y;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(442837),
-    l = r(481060),
-    u = r(100527),
-    c = r(906732),
-    d = r(849522),
-    f = r(639119),
-    p = r(594174),
-    h = r(74538),
-    _ = r(694320),
-    m = r(981631),
-    g = r(474936),
-    E = r(388032),
-    v = r(454816);
-function y(e) {
-    var n, r, a, y;
-    let { type: b, textValue: I, maxCharacterCount: T, showRemainingCharsAfterCount: S, className: A } = e,
-        C = (0, s.e7)([p.default], () => h.ZP.canUseIncreasedMessageLength(p.default.getCurrentUser())),
-        N = (0, d.Z)(),
-        R = null != T ? T : N,
-        O = null !== (y = null != S ? S : T) && void 0 !== y ? y : N / 10,
-        D = I.length,
-        L = null != b.upsellLongMessages && (null != D ? D : 0) > m.J6R && C,
-        x = null != b.upsellLongMessages && !C,
-        w = (null === (r = (0, f.N)()) || void 0 === r ? void 0 : null === (n = r.subscription_trial) || void 0 === n ? void 0 : n.sku_id) === g.Si.TIER_2,
-        P = R - D,
-        M = P > O,
-        k = P < 0 && w,
-        U = 0 === P ? E.intl.string(E.t.tU6YQ0) : P > 0 ? E.intl.formatToPlainString(E.t.qH8uFR, { count: P }) : E.intl.string(E.t.YSRIqa),
-        { analyticsLocations: B } = (0, c.ZP)(u.Z.CHARACTER_COUNT);
-    if (!((L && P >= 0) || !M || (x && !M))) return null;
+n.d(t, { Z: () => v });
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(442837),
+    o = n(481060),
+    l = n(100527),
+    u = n(906732),
+    c = n(849522),
+    d = n(639119),
+    f = n(594174),
+    _ = n(74538),
+    p = n(694320),
+    h = n(981631),
+    m = n(474936),
+    g = n(388032),
+    E = n(454816);
+function v(e) {
+    var t, n, r, v;
+    let { type: y, textValue: I, maxCharacterCount: b, showRemainingCharsAfterCount: T, className: S } = e,
+        A = (0, s.e7)([f.default], () => _.ZP.canUseIncreasedMessageLength(f.default.getCurrentUser())),
+        N = (0, c.Z)(),
+        C = null != b ? b : N,
+        R = null !== (v = null != T ? T : b) && void 0 !== v ? v : N / 10,
+        O = I.length,
+        D = null != y.upsellLongMessages && (null != O ? O : 0) > h.J6R && A,
+        x = null != y.upsellLongMessages && !A,
+        L = (null === (n = (0, d.N)()) || void 0 === n ? void 0 : null === (t = n.subscription_trial) || void 0 === t ? void 0 : t.sku_id) === m.Si.TIER_2,
+        P = C - O,
+        w = P > R,
+        M = P < 0 && L,
+        k = 0 === P ? g.intl.string(g.t.tU6YQ0) : P > 0 ? g.intl.formatToPlainString(g.t.qH8uFR, { count: P }) : g.intl.string(g.t.YSRIqa),
+        { analyticsLocations: U } = (0, u.ZP)(l.Z.CHARACTER_COUNT);
+    if (!((D && P >= 0) || !w || (x && !w))) return null;
     let G = P >= 0;
-    return (0, i.jsx)(c.Gt, {
-        value: B,
+    return (0, i.jsx)(u.Gt, {
+        value: U,
         children: (0, i.jsxs)('div', {
-            className: o()(A, v.characterCount),
+            className: a()(S, E.characterCount),
             children: [
                 (0, i.jsxs)('div', {
-                    className: v.flairContainer,
+                    className: E.flairContainer,
                     children: [
-                        L && G
-                            ? (0, i.jsx)(l.Tooltip, {
-                                  text: E.intl.formatToPlainString(E.t.vcvHa2, { maxLength: R }),
+                        D && G
+                            ? (0, i.jsx)(o.ua7, {
+                                  text: g.intl.formatToPlainString(g.t.vcvHa2, { maxLength: C }),
                                   position: 'top',
                                   children: (e) =>
-                                      (0, i.jsx)(l.NitroWheelIcon, {
+                                      (0, i.jsx)(o.SrA, {
                                           size: 'md',
                                           color: 'currentColor',
-                                          className: v.premiumFlair,
+                                          className: E.premiumFlair,
                                           ...e
                                       })
                               })
                             : null,
-                        M || k
+                        w || M
                             ? null
-                            : (0, i.jsx)(l.Tooltip, {
-                                  text: U,
+                            : (0, i.jsx)(o.ua7, {
+                                  text: k,
                                   position: 'top',
                                   children: (e) =>
-                                      (0, i.jsx)(l.Text, {
+                                      (0, i.jsx)(o.Text, {
                                           variant: 'text-sm/semibold',
                                           tabularNumbers: !0,
                                           'aria-hidden': !0,
@@ -76,11 +72,11 @@ function y(e) {
                               })
                     ]
                 }),
-                (0, i.jsx)(l.HiddenVisually, { children: E.intl.format(E.t.qH8uFR, { count: P }) }),
-                x && !M
-                    ? (0, i.jsx)(_.Z, {
-                          className: v.upsell,
-                          iconOnly: (null === (a = b.upsellLongMessages) || void 0 === a ? void 0 : a.iconOnly) || !1,
+                (0, i.jsx)(o.nn4, { children: g.intl.format(g.t.qH8uFR, { count: P }) }),
+                x && !w
+                    ? (0, i.jsx)(p.Z, {
+                          className: E.upsell,
+                          iconOnly: (null === (r = y.upsellLongMessages) || void 0 === r ? void 0 : r.iconOnly) || !1,
                           remaining: P
                       })
                     : null

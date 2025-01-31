@@ -1,46 +1,47 @@
+n.d(t, { Z: () => _ });
 var i,
-    a = r(442837),
-    o = r(570140);
-function s(e, n, r) {
+    r = n(442837),
+    a = n(570140);
+function s(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let l = null,
-    u = !1;
-function c(e) {
-    let { progress: n, total: r, name: i } = e;
-    l = {
-        progress: n,
-        total: r,
+let o = null,
+    l = !1;
+function u(e) {
+    let { progress: t, total: n, name: i } = e;
+    o = {
+        progress: t,
+        total: n,
         name: i
     };
 }
+function c() {
+    (o = null), (l = !1);
+}
 function d() {
-    (l = null), (u = !1);
+    l = !0;
 }
-function f() {
-    u = !0;
-}
-class p extends (i = a.ZP.Store) {
+class f extends (i = r.ZP.Store) {
     getLastProgress() {
-        return l;
+        return o;
     }
     isRunning() {
-        return u;
+        return l;
     }
 }
-s(p, 'displayName', 'DispatchApplicationLaunchSetupStore'),
-    (n.Z = new p(o.Z, {
-        DISPATCH_APPLICATION_LAUNCH_SETUP_START: f,
-        DISPATCH_APPLICATION_INSTALL_SCRIPTS_PROGRESS_UPDATE: c,
-        DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE: d
-    }));
+s(f, 'displayName', 'DispatchApplicationLaunchSetupStore');
+let _ = new f(a.Z, {
+    DISPATCH_APPLICATION_LAUNCH_SETUP_START: d,
+    DISPATCH_APPLICATION_INSTALL_SCRIPTS_PROGRESS_UPDATE: u,
+    DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE: c
+});

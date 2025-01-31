@@ -1,9 +1,4 @@
-d.r(o),
-    d.d(o, {
-        default: function () {
-            return r;
-        }
-    });
+d.r(i), d.d(i, { default: () => r });
 var e = d(200651);
 d(192379);
 var l = d(481060),
@@ -11,7 +6,7 @@ var l = d(481060),
 function r() {
     return (
         (0, n.bN)(document.body),
-        (0, e.jsx)(l.HiddenVisually, {
+        (0, e.jsx)(l.nn4, {
             children: (0, e.jsx)('svg', {
                 'aria-hidden': !0,
                 children: (0, e.jsxs)('filter', {

@@ -1,16 +1,17 @@
-e.exports = {
-    draggableContainer: 'draggableContainer_ca37d0',
-    container: 'container_ca37d0',
-    headerParentContainer: 'headerParentContainer_ca37d0',
-    headerContainer: 'headerContainer_ca37d0',
-    closeContainer: 'closeContainer_ca37d0',
-    closeInner: 'closeInner_ca37d0',
-    scrollContainer: 'scrollContainer_ca37d0',
-    footerContainer: 'footerContainer_ca37d0',
-    footerLabelContainer: 'footerLabelContainer_ca37d0',
-    footerButtonContainer: 'footerButtonContainer_ca37d0',
-    footerNitro: 'footerNitro_ca37d0',
-    footerText: 'footerText_ca37d0',
-    footerButtonBack: 'footerButtonBack_ca37d0',
-    footerButton: 'footerButton_ca37d0'
+var i = {
+    draggableContainer: 'draggableContainer__6a6d6',
+    container: 'container__6a6d6',
+    headerParentContainer: 'headerParentContainer__6a6d6',
+    headerContainer: 'headerContainer__6a6d6',
+    closeContainer: 'closeContainer__6a6d6',
+    closeInner: 'closeInner__6a6d6',
+    scrollContainer: 'scrollContainer__6a6d6',
+    footerContainer: 'footerContainer__6a6d6',
+    footerLabelContainer: 'footerLabelContainer__6a6d6',
+    footerButtonContainer: 'footerButtonContainer__6a6d6',
+    footerNitro: 'footerNitro__6a6d6',
+    footerText: 'footerText__6a6d6',
+    footerButtonBack: 'footerButtonBack__6a6d6',
+    footerButton: 'footerButton__6a6d6'
 };
+e.exports = i;

@@ -1,49 +1,45 @@
-r.d(n, {
-    d: function () {
-        return m;
-    }
-});
-var i = r(259630),
-    a = r(52948),
-    o = r(548097),
-    s = r(33251),
-    l = r(222987),
-    u = r(735896),
-    c = r(275282),
-    d = r(753778),
-    f = r(280999),
-    p = r(667358);
-function h(e) {
+n.d(t, { d: () => h });
+var i = n(259630),
+    r = n(52948),
+    a = n(548097),
+    s = n(33251),
+    o = n(222987),
+    l = n(735896),
+    u = n(275282),
+    c = n(753778),
+    d = n(280999),
+    f = n(667358);
+function _(e) {
     return 'string' == typeof (e ? e[Object.keys(e)[0]] : void 0);
 }
-function _(e) {
-    e.onWarn && e.defaultRichTextElements && h(e.messages || {}) && e.onWarn('[@formatjs/intl] "defaultRichTextElements" was specified but "message" was not pre-compiled. \nPlease consider using "@formatjs/cli" to pre-compile your messages for performance.\nFor more details see https://formatjs.io/docs/getting-started/message-distribution');
+function p(e) {
+    e.onWarn && e.defaultRichTextElements && _(e.messages || {}) && e.onWarn('[@formatjs/intl] "defaultRichTextElements" was specified but "message" was not pre-compiled. \nPlease consider using "@formatjs/cli" to pre-compile your messages for performance.\nFor more details see https://formatjs.io/docs/getting-started/message-distribution');
 }
-function m(e, n) {
-    var r = (0, a.ax)(n),
-        h = (0, i.pi)((0, i.pi)({}, a.Z0), e),
-        m = h.locale,
-        g = h.defaultLocale,
-        E = h.onError;
+function h(e, t) {
+    var n = (0, r.ax)(t),
+        _ = (0, i.pi)((0, i.pi)({}, r.Z0), e),
+        h = _.locale,
+        m = _.defaultLocale,
+        g = _.onError;
     return (
-        m ? (!Intl.NumberFormat.supportedLocalesOf(m).length && E ? E(new o.gb('Missing locale data for locale: "'.concat(m, '" in Intl.NumberFormat. Using default locale: "').concat(g, '" as fallback. See https://formatjs.io/docs/react-intl#runtime-requirements for more details'))) : !Intl.DateTimeFormat.supportedLocalesOf(m).length && E && E(new o.gb('Missing locale data for locale: "'.concat(m, '" in Intl.DateTimeFormat. Using default locale: "').concat(g, '" as fallback. See https://formatjs.io/docs/react-intl#runtime-requirements for more details')))) : (E && E(new o.OV('"locale" was not configured, using "'.concat(g, '" as fallback. See https://formatjs.io/docs/react-intl/api#intlshape for more details'))), (h.locale = h.defaultLocale || 'en')),
-        _(h),
-        (0, i.pi)((0, i.pi)({}, h), {
-            formatters: r,
-            formatNumber: s.uf.bind(null, h, r.getNumberFormat),
-            formatNumberToParts: s.T.bind(null, h, r.getNumberFormat),
-            formatRelativeTime: l.S.bind(null, h, r.getRelativeTimeFormat),
-            formatDate: u.p6.bind(null, h, r.getDateTimeFormat),
-            formatDateToParts: u.OI.bind(null, h, r.getDateTimeFormat),
-            formatTime: u.mr.bind(null, h, r.getDateTimeFormat),
-            formatDateTimeRange: u.Hk.bind(null, h, r.getDateTimeFormat),
-            formatTimeToParts: u.uE.bind(null, h, r.getDateTimeFormat),
-            formatPlural: c.R.bind(null, h, r.getPluralRules),
-            formatMessage: d.w.bind(null, h, r),
-            $t: d.w.bind(null, h, r),
-            formatList: f.I.bind(null, h, r.getListFormat),
-            formatListToParts: f.T.bind(null, h, r.getListFormat),
-            formatDisplayName: p.I.bind(null, h, r.getDisplayNames)
+        h ? (!Intl.NumberFormat.supportedLocalesOf(h).length && g ? g(new a.gb('Missing locale data for locale: "'.concat(h, '" in Intl.NumberFormat. Using default locale: "').concat(m, '" as fallback. See https://formatjs.io/docs/react-intl#runtime-requirements for more details'))) : !Intl.DateTimeFormat.supportedLocalesOf(h).length && g && g(new a.gb('Missing locale data for locale: "'.concat(h, '" in Intl.DateTimeFormat. Using default locale: "').concat(m, '" as fallback. See https://formatjs.io/docs/react-intl#runtime-requirements for more details')))) : (g && g(new a.OV('"locale" was not configured, using "'.concat(m, '" as fallback. See https://formatjs.io/docs/react-intl/api#intlshape for more details'))), (_.locale = _.defaultLocale || 'en')),
+        p(_),
+        (0, i.pi)((0, i.pi)({}, _), {
+            formatters: n,
+            formatNumber: s.uf.bind(null, _, n.getNumberFormat),
+            formatNumberToParts: s.T.bind(null, _, n.getNumberFormat),
+            formatRelativeTime: o.S.bind(null, _, n.getRelativeTimeFormat),
+            formatDate: l.p6.bind(null, _, n.getDateTimeFormat),
+            formatDateToParts: l.OI.bind(null, _, n.getDateTimeFormat),
+            formatTime: l.mr.bind(null, _, n.getDateTimeFormat),
+            formatDateTimeRange: l.Hk.bind(null, _, n.getDateTimeFormat),
+            formatTimeToParts: l.uE.bind(null, _, n.getDateTimeFormat),
+            formatPlural: u.R.bind(null, _, n.getPluralRules),
+            formatMessage: c.w.bind(null, _, n),
+            $t: c.w.bind(null, _, n),
+            formatList: d.I.bind(null, _, n.getListFormat),
+            formatListToParts: d.T.bind(null, _, n.getListFormat),
+            formatDisplayName: f.I.bind(null, _, n.getDisplayNames)
         })
     );
 }

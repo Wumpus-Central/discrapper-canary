@@ -1,8 +1,4 @@
-n.d(t, {
-    k: function () {
-        return f;
-    }
-});
+n.d(t, { k: () => g });
 var i = n(200651);
 n(192379);
 var l = n(120356),
@@ -11,31 +7,30 @@ var l = n(120356),
     o = n(40614),
     s = n(925329),
     c = n(810568),
-    u = n(168524),
-    d = n(115530),
+    d = n(168524),
+    u = n(115530),
     h = n(388032),
     p = n(832926);
 function m(e) {
     let { name: t, applicationId: n } = e,
-        l = (0, u.Z)({
+        l = (0, d.Z)({
             location: 'ActivityPanelGameCard',
             applicationId: n,
             source: c.m1.RtcPanel,
             trackEntryPointImpression: !0
         });
-    return (0, i.jsx)(a.Clickable, {
+    return (0, i.jsx)(a.P3F, {
         onClick: l,
         className: r()(null != l && p.clickableGameName),
-        children: (0, i.jsx)(d.Z, {
+        children: (0, i.jsx)(u.Z, {
             className: p.gameName,
             children: t
         })
     });
 }
-function f(e) {
-    var t, n;
-    let { isStreaming: l, application: r, game: c, onClickNotSharing: u } = e;
-    let d = ((t = r), (n = c), null != t ? t.name : null != n ? n.name : h.intl.string(h.t['UQMV/P']));
+function g(e) {
+    let { isStreaming: t, application: n, game: l, onClickNotSharing: r } = e,
+        c = null != n ? n.name : null != l ? l.name : h.intl.string(h.t['UQMV/P']);
     return (0, i.jsxs)('div', {
         className: p.gameWrapper,
         children: [
@@ -44,11 +39,11 @@ function f(e) {
                 children: [
                     (0, i.jsx)(s.Z, {
                         className: p.gameIcon,
-                        game: r,
-                        pid: null == c ? void 0 : c.pid
+                        game: n,
+                        pid: null == l ? void 0 : l.pid
                     }),
-                    l
-                        ? (0, i.jsx)(a.VideoIcon, {
+                    t
+                        ? (0, i.jsx)(a.Odl, {
                               size: 'md',
                               color: 'currentColor',
                               className: p.liveBadge
@@ -59,15 +54,15 @@ function f(e) {
             (0, i.jsxs)('div', {
                 className: p.info,
                 children: [
-                    null != d
+                    null != c
                         ? (0, i.jsx)(i.Fragment, {
                               children: (0, i.jsx)(m, {
-                                  name: d,
-                                  applicationId: null == r ? void 0 : r.id
+                                  name: c,
+                                  applicationId: null == n ? void 0 : n.id
                               })
                           })
                         : null,
-                    (0, i.jsx)(o.V, { onClick: u })
+                    (0, i.jsx)(o.V, { onClick: r })
                 ]
             })
         ]

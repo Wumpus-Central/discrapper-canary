@@ -1,5 +1,5 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
     return e.defineLocale('ss', {
         months: "Bhimbidvwane_Indlovana_Indlov'lenkhulu_Mabasa_Inkhwekhweti_Inhlaba_Kholwane_Ingci_Inyoni_Imphala_Lweti_Ingongoni".split('_'),
@@ -41,16 +41,11 @@
             yy: '%d iminyaka'
         },
         meridiemParse: /ekuseni|emini|entsambama|ebusuku/,
-        meridiem: function (e, n, r) {
-            if (e < 11) return 'ekuseni';
-            if (e < 15) return 'emini';
-            if (e < 19) return 'entsambama';
-            else return 'ebusuku';
+        meridiem: function (e, t, n) {
+            return e < 11 ? 'ekuseni' : e < 15 ? 'emini' : e < 19 ? 'entsambama' : 'ebusuku';
         },
-        meridiemHour: function (e, n) {
-            if ((12 === e && (e = 0), 'ekuseni' === n)) return e;
-            if ('emini' === n) return e >= 11 ? e : e + 12;
-            if ('entsambama' === n || 'ebusuku' === n) return 0 === e ? 0 : e + 12;
+        meridiemHour: function (e, t) {
+            return (12 === e && (e = 0), 'ekuseni' === t) ? e : 'emini' === t ? (e >= 11 ? e : e + 12) : 'entsambama' === t || 'ebusuku' === t ? (0 === e ? 0 : e + 12) : void 0;
         },
         dayOfMonthOrdinalParse: /\d{1,2}/,
         ordinal: '%d',

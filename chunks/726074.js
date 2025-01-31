@@ -1,31 +1,27 @@
-r.d(n, {
-    as: function () {
-        return o;
-    },
-    tX: function () {
-        return l;
-    }
+n.d(t, {
+    as: () => a,
+    tX: () => o
 });
 let i = 'undefined' != typeof global ? global : self,
-    a = i.MutationObserver || i.WebKitMutationObserver;
-function o(e) {
+    r = i.MutationObserver || i.WebKitMutationObserver;
+function a(e) {
     return function () {
-        let n = setTimeout(i, 0),
-            r = setInterval(i, 50);
+        let t = setTimeout(i, 0),
+            n = setInterval(i, 50);
         function i() {
-            clearTimeout(n), clearInterval(r), e();
+            clearTimeout(t), clearInterval(n), e();
         }
     };
 }
 function s(e) {
-    let n = 1,
-        r = new a(e),
+    let t = 1,
+        n = new r(e),
         i = document.createTextNode('');
     return (
-        r.observe(i, { characterData: !0 }),
+        n.observe(i, { characterData: !0 }),
         function () {
-            (n = -n), (i.data = n);
+            (t = -t), (i.data = t);
         }
     );
 }
-let l = 'function' == typeof a ? s : o;
+let o = 'function' == typeof r ? s : a;

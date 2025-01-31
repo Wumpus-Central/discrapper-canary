@@ -1,48 +1,47 @@
+n.d(t, { Z: () => p });
 var i,
-    r,
     l,
     a,
-    o = n(442837),
+    r = n(442837),
     s = n(433517),
-    c = n(570140),
-    u = n(205355);
+    o = n(570140),
+    c = n(205355);
 let d = 'MaintenanceStore',
+    u = null,
     m = null,
-    h = null,
-    f = null;
-class p extends (a = o.ZP.Store) {
+    h = null;
+class _ extends (a = r.ZP.Store) {
     initialize() {
-        f = s.K.get(d);
+        h = s.K.get(d);
     }
     getIncident() {
-        return m;
+        return u;
     }
     getScheduledMaintenance() {
-        return null != h && h.id !== f ? h : null;
+        return null != m && m.id !== h ? m : null;
     }
 }
 (l = 'MaintenanceStore'),
-    (r = 'displayName') in (i = p)
-        ? Object.defineProperty(i, r, {
+    (i = 'displayName') in _
+        ? Object.defineProperty(_, i, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (i[r] = l),
-    (t.Z = new p(c.Z, {
-        CONNECTION_OPEN: function () {
-            m = null;
-            u.Z.checkScheduledMaintenances();
-        },
-        STATUS_PAGE_INCIDENT: function (e) {
-            m = e.incident;
-        },
-        STATUS_PAGE_SCHEDULED_MAINTENANCE: function (e) {
-            h = e.maintenance;
-        },
-        STATUS_PAGE_SCHEDULED_MAINTENANCE_ACK: function () {
-            if (null == h) return !1;
-            (f = h.id), s.K.set(d, f);
-        }
-    }));
+        : (_[i] = l);
+let p = new _(o.Z, {
+    CONNECTION_OPEN: function () {
+        (u = null), c.Z.checkScheduledMaintenances();
+    },
+    STATUS_PAGE_INCIDENT: function (e) {
+        u = e.incident;
+    },
+    STATUS_PAGE_SCHEDULED_MAINTENANCE: function (e) {
+        m = e.maintenance;
+    },
+    STATUS_PAGE_SCHEDULED_MAINTENANCE_ACK: function () {
+        if (null == m) return !1;
+        (h = m.id), s.K.set(d, h);
+    }
+});

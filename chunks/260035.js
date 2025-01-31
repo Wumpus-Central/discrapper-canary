@@ -1,57 +1,52 @@
-r.d(n, {
-    m: function () {
-        return p;
-    }
-});
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(119617),
-    l = r(442837),
-    u = r(944486),
-    c = r(745510),
-    d = r(675654),
-    f = r(839524);
-function p(e) {
-    let { children: n } = e,
-        [r, i] = o.useState(null),
-        [p, h] = o.useState(null),
-        _ = o.useRef(new Set()),
-        [m, g] = o.useState(!1),
-        E = (0, l.e7)([u.Z], () => u.Z.getCurrentlySelectedChannelId()),
-        v = o.useCallback((e) => {
-            _.current.delete(e), g(_.current.size > 0);
+n.d(t, { m: () => d }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(119617),
+    s = n(442837),
+    o = n(944486),
+    l = n(745510),
+    u = n(675654),
+    c = n(839524);
+function d(e) {
+    let { children: t } = e,
+        [n, d] = r.useState(null),
+        [f, _] = r.useState(null),
+        p = r.useRef(new Set()),
+        [h, m] = r.useState(!1),
+        g = (0, s.e7)([o.Z], () => o.Z.getCurrentlySelectedChannelId()),
+        E = r.useCallback((e) => {
+            p.current.delete(e), m(p.current.size > 0);
         }, []),
-        y = o.useCallback((e) => (_.current.add(e), g(!0), () => v(e)), [v]),
-        b = o.useCallback((e, n) => {
-            for (let r of _.current) r(e, n);
+        v = r.useCallback((e) => (p.current.add(e), m(!0), () => E(e)), [E]),
+        y = r.useCallback((e, t) => {
+            for (let n of p.current) n(e, t);
         }, []);
     return (
-        o.useEffect(() => {
-            null == p || p.clearConfetti();
-        }, [p, E]),
-        (0, a.jsxs)(a.Fragment, {
+        r.useEffect(() => {
+            null == f || f.clearConfetti();
+        }, [f, g]),
+        (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, a.jsx)(c.d, {
-                    confettiCanvas: p,
-                    spriteCanvas: r,
-                    baseConfig: d.We,
-                    addClickListener: y,
-                    removeClickListener: v,
-                    children: n
+                (0, i.jsx)(l.d, {
+                    confettiCanvas: f,
+                    spriteCanvas: n,
+                    baseConfig: u.We,
+                    addClickListener: v,
+                    removeClickListener: E,
+                    children: t
                 }),
-                (0, a.jsx)(s.O_, {
-                    ref: h,
-                    className: f.canvas,
-                    environment: d.rq,
-                    onClick: m ? b : void 0
+                (0, i.jsx)(a.O_, {
+                    ref: _,
+                    className: c.canvas,
+                    environment: u.rq,
+                    onClick: h ? y : void 0
                 }),
-                (0, a.jsx)(s.Ji, {
-                    ref: i,
-                    colors: d.Br,
-                    sprites: d.CA,
-                    spriteWidth: d.Ko,
-                    spriteHeight: d.Ko
+                (0, i.jsx)(a.Ji, {
+                    ref: d,
+                    colors: u.Br,
+                    sprites: u.CA,
+                    spriteWidth: u.Ko,
+                    spriteHeight: u.Ko
                 })
             ]
         })

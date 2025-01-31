@@ -1,116 +1,117 @@
-var i = r(47120);
-var a = r(846519),
-    o = r(147913),
-    s = r(553795),
-    l = r(430824),
-    u = r(626135),
-    c = r(425128),
-    d = r(276344),
-    f = r(981631);
-function p(e, n, r) {
+n.d(t, { Z: () => b }), n(47120);
+var i = n(846519),
+    r = n(147913),
+    a = n(553795),
+    s = n(430824),
+    o = n(626135),
+    l = n(425128),
+    u = n(276344),
+    c = n(981631);
+function d(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let h = 'League of Legends',
-    _ = new a.V7(),
-    m = !1,
-    g = !1;
-function E(e) {
-    return e.some((e) => e.name === h);
+let f = 'League of Legends',
+    _ = new i.V7(),
+    p = !1,
+    h = !1;
+function m(e) {
+    return e.some((e) => e.name === f);
 }
-function v() {
-    let e = s.Z.getAccount(null, f.ABu.RIOT_GAMES),
-        n = s.Z.getAccount(null, f.ABu.LEAGUE_OF_LEGENDS);
-    if (null == e && null == n) return 'missing_connections';
-    if (null == e) return 'missing_riot_connection';
-    if (null == n) return 'missing_league_of_legends_connection';
-    return {
-        riotConnection: e,
-        lolConnection: n
-    };
+function g() {
+    let e = a.Z.getAccount(null, c.ABu.RIOT_GAMES),
+        t = a.Z.getAccount(null, c.ABu.LEAGUE_OF_LEGENDS);
+    return null == e && null == t
+        ? 'missing_connections'
+        : null == e
+          ? 'missing_riot_connection'
+          : null == t
+            ? 'missing_league_of_legends_connection'
+            : {
+                  riotConnection: e,
+                  lolConnection: t
+              };
 }
-async function y(e) {
-    let { riotConnectionId: n, lolConnectionId: r, onlyUpdateIfStale: i } = e;
-    if (!m && (!g || !i)) {
+async function E(e) {
+    let { riotConnectionId: t, lolConnectionId: n, onlyUpdateIfStale: i } = e;
+    if (!p && (!h || !i)) {
         _.stop();
         try {
-            m = !0;
-            let { next_update_timestamp: e } = await (0, c._7)({
-                riotConnectionId: n,
-                lolConnectionId: r,
+            p = !0;
+            let { next_update_timestamp: e } = await (0, l._7)({
+                riotConnectionId: t,
+                lolConnectionId: n,
                 onlyUpdateIfStale: i
             });
-            (m = !1), (g = !1);
-            let a = new Date(1000 * e),
-                o = new Date(),
-                s = Math.max(0, a.getTime() - o.getTime());
+            (p = !1), (h = !1);
+            let r = new Date(1000 * e),
+                a = new Date(),
+                s = Math.max(0, r.getTime() - a.getTime());
             _.start(s, () =>
-                (0, c._7)({
-                    riotConnectionId: n,
-                    lolConnectionId: r
+                (0, l._7)({
+                    riotConnectionId: t,
+                    lolConnectionId: n
                 })
             );
         } catch (e) {
-            (m = !1), (g = !0);
+            (p = !1), (h = !0);
         }
     }
 }
-function b() {
-    return Object.values(l.Z.getGuilds()).some(
+function v() {
+    return Object.values(s.Z.getGuilds()).some(
         (e) =>
-            e.hasFeature(f.oNc.LEADERBOARD_ENABLED) &&
-            (0, d.NM)({
+            e.hasFeature(c.oNc.LEADERBOARD_ENABLED) &&
+            (0, u.NM)({
                 guildId: e.id,
                 location: 'LeagueOfLegendsLifecycleManager.handleDependantStoreChanges',
                 autoTrackExposure: !1
             })
     );
 }
-function I(e) {
-    u.default.track(f.rMx.LEAGUE_OF_LEGENDS_MATCH_DATA_NOT_FETCHING, { reason: e });
+function y(e) {
+    o.default.track(c.rMx.LEAGUE_OF_LEGENDS_MATCH_DATA_NOT_FETCHING, { reason: e });
 }
-class T extends o.Z {
+class I extends r.Z {
     handleRunningGameChange(e) {
-        let { removed: n } = e;
-        if (!!b()) {
-            if (E(n)) {
-                let e = v();
-                if ('string' == typeof e) {
-                    I(e);
-                    return;
-                }
-                y({
-                    riotConnectionId: e.riotConnection.id,
-                    lolConnectionId: e.lolConnection.id
-                });
+        let { removed: t } = e;
+        if (v() && m(t)) {
+            let e = g();
+            if ('string' == typeof e) {
+                y(e);
+                return;
             }
+            E({
+                riotConnectionId: e.riotConnection.id,
+                lolConnectionId: e.lolConnection.id
+            });
         }
     }
     handleDependantStoreChanges() {
-        let e = v(),
-            n = 'string' != typeof e,
-            r = b() && n;
-        _.isStarted() && !r
+        let e = g(),
+            t = 'string' != typeof e,
+            n = v() && t;
+        _.isStarted() && !n
             ? _.stop()
             : !_.isStarted() &&
-              r &&
-              y({
+              n &&
+              E({
                   riotConnectionId: e.riotConnection.id,
                   lolConnectionId: e.lolConnection.id,
                   onlyUpdateIfStale: !0
               });
     }
     constructor(...e) {
-        super(...e), p(this, 'actions', { RUNNING_GAMES_CHANGE: this.handleRunningGameChange }), p(this, 'stores', new Map().set(l.Z, this.handleDependantStoreChanges).set(s.Z, this.handleDependantStoreChanges));
+        super(...e), d(this, 'actions', { RUNNING_GAMES_CHANGE: this.handleRunningGameChange }), d(this, 'stores', new Map().set(s.Z, this.handleDependantStoreChanges).set(a.Z, this.handleDependantStoreChanges));
     }
 }
-n.Z = new T();
+let b = new I();

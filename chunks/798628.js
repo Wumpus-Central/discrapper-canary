@@ -1,30 +1,24 @@
 n.d(t, {
-    cE: function () {
-        return s;
-    },
-    eu: function () {
-        return c;
-    },
-    fU: function () {
-        return u;
-    }
+    cE: () => o,
+    eu: () => c,
+    fU: () => d
 });
 var i = n(65400),
-    r = n(731965),
-    l = n(902704);
-let a = {},
-    o = (0, i.F)((e) => ({
+    l = n(731965),
+    a = n(902704);
+let r = {},
+    s = (0, i.F)((e) => ({
         polls: {},
         updatePollState(t, n, i) {
-            (0, r.j)(() => {
+            (0, l.j)(() => {
                 e((e) => {
-                    var r;
+                    var l;
                     return {
                         polls: {
                             ...e.polls,
                             [t]: {
                                 ...e.polls[t],
-                                [n]: i(null === (r = e.polls[t]) || void 0 === r ? void 0 : r[n])
+                                [n]: i(null === (l = e.polls[t]) || void 0 === l ? void 0 : l[n])
                             }
                         }
                     };
@@ -32,16 +26,16 @@ let a = {},
             });
         }
     }));
-function s(e) {
-    return o((t) => {
+function o(e) {
+    return s((t) => {
         var n;
-        return null !== (n = t.polls[e]) && void 0 !== n ? n : a;
-    }, l.Z);
+        return null !== (n = t.polls[e]) && void 0 !== n ? n : r;
+    }, a.Z);
 }
 function c(e, t, n) {
-    o.getState().updatePollState(e, t, n);
+    s.getState().updatePollState(e, t, n);
 }
-function u(e, t) {
+function d(e, t) {
     var n;
-    return null === (n = o.getState().polls[e]) || void 0 === n ? void 0 : n[t];
+    return null === (n = s.getState().polls[e]) || void 0 === n ? void 0 : n[t];
 }

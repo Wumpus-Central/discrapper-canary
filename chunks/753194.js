@@ -1,41 +1,36 @@
-r.d(n, {
-    Z: function () {
-        return p;
-    }
-});
-var i = r(47120);
-var a = r(200651);
-r(192379);
-var o = r(866442),
-    s = r(442837),
-    l = r(692547),
-    u = r(481060),
-    c = r(607070),
-    d = r(297700),
-    f = r(388032);
-function p(e) {
-    let n,
-        { color: r, size: i, forcedIconColor: p, className: h, iconClassName: _, tooltipText: m } = e,
-        [g, E] = (0, s.Wu)([c.Z], () => [c.Z.desaturateUserColors, c.Z.saturation]),
-        v = (0, u.useToken)(l.Z.unsafe_rawColors.PRIMARY_300).hex(),
-        y = (0, o._i)(null != r ? r : v),
-        b = (0, o.ho)(y, !1, g ? E : null);
+n.d(t, { Z: () => d }), n(47120);
+var i = n(200651);
+n(192379);
+var r = n(866442),
+    a = n(442837),
+    s = n(692547),
+    o = n(481060),
+    l = n(607070),
+    u = n(297700),
+    c = n(388032);
+function d(e) {
+    let t,
+        { color: n, size: d, forcedIconColor: f, className: _, iconClassName: p, tooltipText: h } = e,
+        [m, g] = (0, a.Wu)([l.Z], () => [l.Z.desaturateUserColors, l.Z.saturation]),
+        E = (0, o.dQu)(s.Z.unsafe_rawColors.PRIMARY_300).hex(),
+        v = (0, r._i)(null != n ? n : E),
+        y = (0, r.ho)(v, !1, m ? g : null);
     return (
-        (n = null != p ? p : 0.3 > (0, o.Bd)(y) ? l.Z.unsafe_rawColors.PRIMARY_630.css : l.Z.unsafe_rawColors.WHITE_500.css),
-        (0, a.jsx)(u.Tooltip, {
-            text: null != m ? m : f.intl.string(f.t.T3PvV1),
+        (t = null != f ? f : 0.3 > (0, r.Bd)(v) ? s.Z.unsafe_rawColors.PRIMARY_630.css : s.Z.unsafe_rawColors.WHITE_500.css),
+        (0, i.jsx)(o.ua7, {
+            text: null != h ? h : c.intl.string(c.t.T3PvV1),
             children: (e) =>
-                (0, a.jsx)(d.Z, {
+                (0, i.jsx)(u.Z, {
                     ...e,
-                    className: h,
-                    color: b,
-                    size: i,
-                    children: (0, a.jsx)(u.CheckmarkSmallIcon, {
+                    className: _,
+                    color: y,
+                    size: d,
+                    children: (0, i.jsx)(o.kmB, {
                         size: 'custom',
-                        color: n,
-                        height: i,
-                        width: i,
-                        className: _
+                        color: t,
+                        height: d,
+                        width: d,
+                        className: p
                     })
                 })
         })

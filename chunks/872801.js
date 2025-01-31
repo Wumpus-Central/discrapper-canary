@@ -1,13 +1,9 @@
-function i(e, n) {
-    let r = e.parentElement;
-    for (; null != r; ) {
-        if (r.classList.contains(n)) return r;
-        r = r.parentElement;
+function i(e, t) {
+    let n = e.parentElement;
+    for (; null != n; ) {
+        if (n.classList.contains(t)) return n;
+        n = n.parentElement;
     }
     return null;
 }
-r.d(n, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });

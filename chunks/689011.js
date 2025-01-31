@@ -1,113 +1,107 @@
-r.d(n, {
-    Oc: function () {
-        return g;
-    },
-    t: function () {
-        return m;
-    },
-    xe: function () {
-        return E;
-    }
+n.d(t, {
+    Oc: () => m,
+    t: () => h,
+    xe: () => g
 });
-var i = r(200651);
-r(192379);
-var a = r(481060),
-    o = r(131388),
-    s = r(409813),
-    l = r(586585),
-    u = r(614277),
-    c = r(225715),
-    d = r(750143),
-    f = r(388032),
-    p = r(641479),
-    h = r(365627),
-    _ = r(753260);
-let m = (e) => {
-        let { step: n, onClose: r } = e,
-            l = (0, o.Z)(d.X);
-        return n === s.h8.CONFIRM || n === s.h8.BENEFITS
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(131388),
+    s = n(409813),
+    o = n(586585),
+    l = n(614277),
+    u = n(225715),
+    c = n(750143),
+    d = n(388032),
+    f = n(641479),
+    _ = n(365627),
+    p = n(753260);
+let h = (e) => {
+        let { step: t, onClose: n } = e,
+            o = (0, a.Z)(c.X);
+        return t === s.h8.CONFIRM || t === s.h8.BENEFITS
             ? (0, i.jsx)('div', {})
             : (0, i.jsxs)('div', {
-                  className: p.headerContainer,
+                  className: f.headerContainer,
                   children: [
-                      !l &&
+                      !o &&
                           (0, i.jsx)('div', {
-                              className: p.headerImageContainer,
+                              className: f.headerImageContainer,
                               'aria-hidden': 'true',
                               children: (0, i.jsx)('img', {
-                                  src: _,
+                                  src: p,
                                   alt: '',
-                                  className: p.headerImage
+                                  className: f.headerImage
                               })
                           }),
-                      (0, i.jsx)(a.Clickable, {
-                          className: p.closeContainer,
-                          onClick: () => r(),
-                          'aria-label': f.intl.string(f.t.cpT0Cg),
-                          children: (0, i.jsx)(a.XSmallIcon, {
+                      (0, i.jsx)(r.P3F, {
+                          className: f.closeContainer,
+                          onClick: () => n(),
+                          'aria-label': d.intl.string(d.t.cpT0Cg),
+                          children: (0, i.jsx)(r.Dio, {
                               size: 'md',
                               color: 'currentColor',
-                              className: p.closeIcon
+                              className: f.closeIcon
                           })
                       })
                   ]
               });
     },
-    g = (e) => {
-        let { icon: n, storeListingBenefits: r, skuBenefits: a, application: o, title: s, subtitle: l, description: u } = e;
-        return null == o
+    m = (e) => {
+        let { icon: t, storeListingBenefits: n, skuBenefits: r, application: a, title: s, subtitle: o, description: l } = e;
+        return null == a
             ? null
             : (0, i.jsx)('div', {
-                  className: p.confirmationContainer,
-                  children: (0, i.jsxs)(c.q$, {
+                  className: f.confirmationContainer,
+                  children: (0, i.jsxs)(u.q$, {
                       children: [
-                          (0, i.jsx)(c.CW, {
-                              application: o,
-                              asset: n
+                          (0, i.jsx)(u.CW, {
+                              application: a,
+                              asset: t
                           }),
-                          (0, i.jsx)(c.r0, { children: s }),
-                          (0, i.jsx)(c.s$, {}),
-                          (0, i.jsx)(c.K9, {
-                              title: l,
-                              description: u
+                          (0, i.jsx)(u.r0, { children: s }),
+                          (0, i.jsx)(u.s$, {}),
+                          (0, i.jsx)(u.K9, {
+                              title: o,
+                              description: l
                           }),
-                          (0, i.jsx)(c.G9, {
-                              applicationId: o.id,
-                              storeListingBenefits: r,
-                              skuBenefits: a
+                          (0, i.jsx)(u.G9, {
+                              applicationId: a.id,
+                              storeListingBenefits: n,
+                              skuBenefits: r
                           })
                       ]
                   })
               });
     };
-function E(e) {
-    let { tierName: n, onConfirm: r, subscription: o } = e;
+function g(e) {
+    let { tierName: t, onConfirm: n, subscription: a } = e;
     return (0, i.jsxs)('div', {
-        className: p.purchaseConfirmation,
+        className: f.purchaseConfirmation,
         children: [
             (0, i.jsx)('img', {
-                src: h,
+                src: _,
                 alt: '',
                 width: 300,
                 height: 126
             }),
-            (0, i.jsx)(a.Heading, {
-                className: p.confirmationTitle,
+            (0, i.jsx)(r.X6q, {
+                className: f.confirmationTitle,
                 variant: 'heading-xl/extrabold',
                 color: 'header-primary',
-                children: f.intl.format(f.t['wLFT6+'], { tier: n })
+                children: d.intl.format(d.t['wLFT6+'], { tier: t })
             }),
-            (0, i.jsx)(a.Text, {
-                className: p.confirmationSubtitle,
+            (0, i.jsx)(r.Text, {
+                className: f.confirmationSubtitle,
                 variant: 'text-md/medium',
                 color: 'header-secondary',
-                children: f.intl.format(f.t.OsAK9v, { timestamp: null == o ? void 0 : o.currentPeriodEnd })
+                children: d.intl.format(d.t.OsAK9v, { timestamp: null == a ? void 0 : a.currentPeriodEnd })
             }),
-            (0, i.jsx)(u.O3, {
-                children: (0, i.jsx)(l.Z, {
-                    onPrimary: r,
-                    primaryCTA: l.g.CONTINUE,
-                    primaryText: f.intl.string(f.t['JtWl+f'])
+            (0, i.jsx)(l.O3, {
+                children: (0, i.jsx)(o.Z, {
+                    onPrimary: n,
+                    primaryCTA: o.g.CONTINUE,
+                    primaryText: d.intl.string(d.t['JtWl+f'])
                 })
             })
         ]

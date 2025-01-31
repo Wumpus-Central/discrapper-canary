@@ -1,219 +1,214 @@
-r.d(n, {
-    Z: function () {
-        return U;
-    },
-    _: function () {
-        return i;
-    }
-});
-var i,
-    a = r(627341);
-var o = r(47120);
-var s = r(200651),
-    l = r(192379),
-    u = r(120356),
-    c = r.n(u),
-    d = r(278074),
-    f = r(442837),
-    p = r(481060),
-    h = r(230711),
-    _ = r(351773),
-    m = r(100527),
-    g = r(94795),
-    E = r(327943),
-    v = r(539873),
-    y = r(207164),
-    b = r(238302),
-    I = r(514361),
-    T = r(572397),
-    S = r(705262),
-    A = r(436774),
-    C = r(768762),
-    N = r(197115),
-    R = r(727939),
-    O = r(981631),
-    D = r(921944),
-    L = r(474936),
-    x = r(388032),
-    w = r(860768);
-function P() {
-    let e = (0, T.q)();
+n.d(t, {
+    Z: () => w,
+    _: () => D
+}),
+    n(627341),
+    n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(278074),
+    l = n(442837),
+    u = n(481060),
+    c = n(230711),
+    d = n(351773),
+    f = n(100527),
+    _ = n(94795),
+    p = n(327943),
+    h = n(539873),
+    m = n(207164),
+    g = n(238302),
+    E = n(514361),
+    v = n(572397),
+    y = n(705262),
+    I = n(436774),
+    b = n(768762),
+    T = n(197115),
+    S = n(727939),
+    A = n(981631),
+    N = n(921944),
+    C = n(474936),
+    R = n(388032),
+    O = n(860768),
+    D = (function (e) {
+        return (e[(e.CLIENT_THEMES = 0)] = 'CLIENT_THEMES'), (e[(e.APP_ICONS = 1)] = 'APP_ICONS'), e;
+    })({});
+function x() {
+    let e = (0, v.q)();
     return (
-        l.useEffect(() => ((0, b.Kq)(), e(O.rMx.CLIENT_THEME_PREVIEW_VIEWED), () => e(O.rMx.CLIENT_THEME_PREVIEW_CLOSED)), [e]),
-        (0, s.jsx)(S.ZP, {
-            type: S.yH.EDITOR,
-            children: (0, s.jsx)(S.ZP.BasicAndGradient, { isEditor: !0 })
+        r.useEffect(() => ((0, g.Kq)(), e(A.rMx.CLIENT_THEME_PREVIEW_VIEWED), () => e(A.rMx.CLIENT_THEME_PREVIEW_CLOSED)), [e]),
+        (0, i.jsx)(y.ZP, {
+            type: y.yH.EDITOR,
+            children: (0, i.jsx)(y.ZP.BasicAndGradient, { isEditor: !0 })
         })
     );
 }
-function M() {
-    let e = (0, y.Z)();
+function L() {
+    let e = (0, m.Z)();
     return (
-        l.useEffect(() => {
-            (0, g.nJ)(), e();
+        r.useEffect(() => {
+            (0, _.nJ)(), e();
         }, [e]),
-        (0, s.jsx)(v.Z, { isEditor: !0 })
+        (0, i.jsx)(h.Z, { isEditor: !0 })
     );
 }
-function k(e) {
-    let { tab: n, isPreview: i, isCoachmark: a, onClose: o } = e,
-        u = l.useCallback(() => {
-            o(), !a && h.Z.open();
-        }, [o, a]),
-        f = (0, d.EQ)({
-            isPreview: i,
-            isCoachmark: a
+function P(e) {
+    let { tab: t, isPreview: a, isCoachmark: l, onClose: d } = e,
+        _ = r.useCallback(() => {
+            d(), l || c.Z.open();
+        }, [d, l]),
+        p = (0, o.EQ)({
+            isPreview: a,
+            isCoachmark: l
         })
-            .with({ isCoachmark: !0 }, () => x.intl.string(x.t.cpT0Cg))
-            .with({ isPreview: !0 }, () => x.intl.string(x.t['dqH+qq']))
-            .otherwise(() => x.intl.string(x.t.Olc2Ky)),
-        _ = l.useCallback(() => {
-            if (1 === n) {
-                (0, p.openModalLazy)(async () => {
-                    let { default: e } = await r.e('69052').then(r.bind(r, 184250));
-                    return (n) =>
-                        (0, s.jsx)(e, {
-                            analyticsSource: m.Z.APP_ICON_EDITOR,
-                            analyticsLocation: { section: O.jXE.SETTINGS_APP_ICONS },
-                            ...n
+            .with({ isCoachmark: !0 }, () => R.intl.string(R.t.cpT0Cg))
+            .with({ isPreview: !0 }, () => R.intl.string(R.t['dqH+qq']))
+            .otherwise(() => R.intl.string(R.t.Olc2Ky)),
+        h = r.useCallback(() => {
+            if (1 === t) {
+                (0, u.ZDy)(async () => {
+                    let { default: e } = await n.e('69052').then(n.bind(n, 184250));
+                    return (t) =>
+                        (0, i.jsx)(e, {
+                            analyticsSource: f.Z.APP_ICON_EDITOR,
+                            analyticsLocation: { section: A.jXE.SETTINGS_APP_ICONS },
+                            ...t
                         });
                 });
                 return;
             }
-            if (0 === n) {
-                (0, p.openModalLazy)(async () => {
-                    let { default: e } = await r.e('68192').then(r.bind(r, 742234));
-                    return (n) =>
-                        (0, s.jsx)(e, {
-                            analyticsSource: m.Z.CLIENT_THEMES_EDITOR,
-                            analyticsLocation: { section: O.jXE.SETTINGS_CLIENT_THEMES },
-                            ...n
+            if (0 === t) {
+                (0, u.ZDy)(async () => {
+                    let { default: e } = await n.e('68192').then(n.bind(n, 742234));
+                    return (t) =>
+                        (0, i.jsx)(e, {
+                            analyticsSource: f.Z.CLIENT_THEMES_EDITOR,
+                            analyticsLocation: { section: A.jXE.SETTINGS_CLIENT_THEMES },
+                            ...t
                         });
                 });
                 return;
             }
-        }, [n]);
-    return (0, s.jsxs)('div', {
-        className: w.footerContainer,
+        }, [t]);
+    return (0, i.jsxs)('div', {
+        className: O.footerContainer,
         children: [
-            i &&
-                (0, s.jsxs)('div', {
-                    className: w.footerLabelContainer,
+            a &&
+                (0, i.jsxs)('div', {
+                    className: O.footerLabelContainer,
                     children: [
-                        (0, s.jsx)(p.NitroWheelIcon, {
-                            className: w.footerNitro,
+                        (0, i.jsx)(u.SrA, {
+                            className: O.footerNitro,
                             size: 'xs',
-                            color: A.JX.PREMIUM_TIER_2
+                            color: I.JX.PREMIUM_TIER_2
                         }),
-                        (0, s.jsx)(p.Text, {
-                            className: w.footerText,
+                        (0, i.jsx)(u.Text, {
+                            className: O.footerText,
                             variant: 'text-sm/medium',
-                            children: x.intl.format(x.t.x2dQxM, { onClick: _ })
+                            children: R.intl.format(R.t.x2dQxM, { onClick: h })
                         })
                     ]
                 }),
-            (0, s.jsxs)('div', {
-                className: w.footerButtonContainer,
+            (0, i.jsxs)('div', {
+                className: O.footerButtonContainer,
                 children: [
-                    (0, s.jsx)('div', {
-                        children: (0, s.jsx)(p.Button, {
-                            className: c()(w.footerButton, w.footerButtonBack),
-                            color: p.ButtonColors.PRIMARY,
-                            size: p.Button.Sizes.NONE,
-                            onClick: u,
-                            'aria-label': f,
-                            children: (0, s.jsx)(C.Z, { direction: C.Z.Directions.LEFT })
+                    (0, i.jsx)('div', {
+                        children: (0, i.jsx)(u.zxk, {
+                            className: s()(O.footerButton, O.footerButtonBack),
+                            color: u.Ttl.PRIMARY,
+                            size: u.zxk.Sizes.NONE,
+                            onClick: _,
+                            'aria-label': p,
+                            children: (0, i.jsx)(b.Z, { direction: b.Z.Directions.LEFT })
                         })
                     }),
-                    i &&
-                        (0, s.jsx)(N.Z, {
-                            className: w.footerButton,
-                            subscriptionTier: L.Si.TIER_2,
+                    a &&
+                        (0, i.jsx)(T.Z, {
+                            className: O.footerButton,
+                            subscriptionTier: C.Si.TIER_2,
                             showGradient: !0,
                             fullWidth: !0,
-                            buttonText: x.intl.string(x.t.pj0XBA)
+                            buttonText: R.intl.string(R.t.pj0XBA)
                         })
                 ]
             })
         ]
     });
 }
-function U(e) {
-    let { initialTab: n, markAsDismissed: r } = e,
-        [i, a] = l.useState(n),
-        o = l.useMemo(
+function w(e) {
+    let { initialTab: t, markAsDismissed: n } = e,
+        [a, s] = r.useState(t),
+        o = r.useMemo(
             () => [
                 {
-                    name: x.intl.string(x.t.Ksh3io),
+                    name: R.intl.string(R.t.Ksh3io),
                     value: 0
                 },
                 {
-                    name: x.intl.string(x.t.RPh2oq),
+                    name: R.intl.string(R.t.RPh2oq),
                     value: 1
                 }
             ],
             []
         ),
-        u = (0, f.e7)([I.Z], () => I.Z.isPreview),
-        c = (0, f.e7)([E.Z], () => E.Z.isUpsellPreview),
-        d = u || c,
-        h = (0, T.J)(),
-        m = l.useCallback(() => {
-            u && h(), c && (0, g.O7)();
-        }, [u, c, h]),
-        v = (0, _.Z)(null, d ? m : O.dG4),
-        y = l.useCallback(() => {
-            (0, g.G8)(), (0, b.Mo)(), m(), null == r || r(D.L.DISMISS);
-        }, [m, r]);
-    return (0, s.jsx)(R.Z, {
-        className: w.draggableContainer,
-        children: (0, s.jsxs)('div', {
-            ref: v,
-            className: w.container,
+        c = (0, l.e7)([E.Z], () => E.Z.isPreview),
+        f = (0, l.e7)([p.Z], () => p.Z.isUpsellPreview),
+        h = c || f,
+        m = (0, v.J)(),
+        y = r.useCallback(() => {
+            c && m(), f && (0, _.O7)();
+        }, [c, f, m]),
+        I = (0, d.Z)(null, h ? y : A.dG4),
+        b = r.useCallback(() => {
+            (0, _.G8)(), (0, g.Mo)(), y(), null == n || n(N.L.DISMISS);
+        }, [y, n]);
+    return (0, i.jsx)(S.Z, {
+        className: O.draggableContainer,
+        children: (0, i.jsxs)('div', {
+            ref: I,
+            className: O.container,
             children: [
-                (0, s.jsxs)('div', {
-                    className: w.headerParentContainer,
+                (0, i.jsxs)('div', {
+                    className: O.headerParentContainer,
                     children: [
-                        (0, s.jsxs)('div', {
-                            className: w.headerContainer,
+                        (0, i.jsxs)('div', {
+                            className: O.headerContainer,
                             children: [
-                                (0, s.jsx)(p.Heading, {
+                                (0, i.jsx)(u.X6q, {
                                     variant: 'heading-lg/extrabold',
-                                    children: x.intl.string(x.t.viGN6e)
+                                    children: R.intl.string(R.t.viGN6e)
                                 }),
-                                (0, s.jsx)(p.ModalCloseButton, {
-                                    className: w.closeContainer,
-                                    innerClassName: w.closeInner,
+                                (0, i.jsx)(u.olH, {
+                                    className: O.closeContainer,
+                                    innerClassName: O.closeInner,
                                     withCircleBackground: !0,
-                                    onClick: y
+                                    onClick: b
                                 })
                             ]
                         }),
-                        (0, s.jsx)(p.SegmentedControl, {
+                        (0, i.jsx)(u.sY7, {
                             options: o,
-                            value: i,
+                            value: a,
                             onChange: (e) => {
-                                let { value: n } = e;
-                                return a(n);
+                                let { value: t } = e;
+                                return s(t);
                             },
                             look: 'pill'
                         })
                     ]
                 }),
-                (0, s.jsxs)(p.Scroller, {
-                    className: w.scrollContainer,
-                    children: [0 === i && (0, s.jsx)(P, {}), 1 === i && (0, s.jsx)(M, {})]
+                (0, i.jsxs)(u.Ttm, {
+                    className: O.scrollContainer,
+                    children: [0 === a && (0, i.jsx)(x, {}), 1 === a && (0, i.jsx)(L, {})]
                 }),
-                (0, s.jsx)(k, {
-                    tab: i,
-                    isPreview: d,
-                    onClose: y,
+                (0, i.jsx)(P, {
+                    tab: a,
+                    isPreview: h,
+                    onClose: b,
                     isCoachmark: !1
                 })
             ]
         })
     });
 }
-!(function (e) {
-    (e[(e.CLIENT_THEMES = 0)] = 'CLIENT_THEMES'), (e[(e.APP_ICONS = 1)] = 'APP_ICONS');
-})(i || (i = {}));

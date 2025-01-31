@@ -47,36 +47,31 @@ var o = r(76883),
                 e
             );
         }
-        (r = e), (n = t), (r.prototype = Object.create(n.prototype)), (r.prototype.constructor = r), (r.__proto__ = n);
-        var r,
-            n,
-            b = e.prototype;
+        (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
+        var r = e.prototype;
         return (
-            (b.shouldComponentUpdate = function (t) {
+            (r.shouldComponentUpdate = function (t) {
                 return this.props.block !== t.block || this.props.tree !== t.tree || this.props.direction !== t.direction || (_(t.selection, t.block.getKey()) && t.forceSelection);
             }),
-            (b.componentDidMount = function () {
-                if (this.props.preventScroll) return;
-                var t,
-                    e = this.props.selection,
-                    r = e.getEndKey();
-                if (!e.getHasFocus() || r !== this.props.block.getKey()) return;
-                var n = this._node;
-                if (null != n) {
-                    var i = c.getScrollParent(n),
-                        o = d(i);
-                    if (i === window) {
-                        var a = h(n),
-                            u = a.y + a.height;
-                        (t = u - g().height) > 0 && window.scrollTo(o.x, o.y + t + 10);
-                    } else {
-                        v(n) || y(!1);
-                        var l = n.offsetHeight + n.offsetTop;
-                        (t = l - (i.offsetTop + i.offsetHeight + o.y)) > 0 && s.setTop(i, s.getTop(i) + t + 10);
+            (r.componentDidMount = function () {
+                if (!this.props.preventScroll) {
+                    var t,
+                        e = this.props.selection,
+                        r = e.getEndKey();
+                    if (e.getHasFocus() && r === this.props.block.getKey()) {
+                        var n = this._node;
+                        if (null != n) {
+                            var i = c.getScrollParent(n),
+                                o = d(i);
+                            if (i === window) {
+                                var a = h(n);
+                                (t = a.y + a.height - g().height) > 0 && window.scrollTo(o.x, o.y + t + 10);
+                            } else v(n) || y(!1), (t = n.offsetHeight + n.offsetTop - (i.offsetTop + i.offsetHeight + o.y)) > 0 && s.setTop(i, s.getTop(i) + t + 10);
+                        }
                     }
                 }
             }),
-            (b._renderChildren = function () {
+            (r._renderChildren = function () {
                 var t = this,
                     e = this.props.block,
                     r = e.getKey(),
@@ -115,26 +110,26 @@ var o = r(76883),
                         if (!b) return y;
                         var S = _.getPropsForKey(v),
                             w = a.encode(r, h, 0),
-                            k = d.first().get('start'),
-                            x = d.last().get('end'),
-                            C = n.slice(k, x),
-                            E = e.getEntityAt(p.get('start')),
-                            D = f.getHTMLDirIfDifferent(l.getDirection(C), t.props.direction),
+                            x = d.first().get('start'),
+                            k = d.last().get('end'),
+                            E = n.slice(x, k),
+                            C = e.getEntityAt(p.get('start')),
+                            D = f.getHTMLDirIfDifferent(l.getDirection(E), t.props.direction),
                             O = {
                                 contentState: t.props.contentState,
-                                decoratedText: C,
+                                decoratedText: E,
                                 dir: D,
-                                start: k,
-                                end: x,
+                                start: x,
+                                end: k,
                                 blockKey: r,
-                                entityKey: E,
+                                entityKey: C,
                                 offsetKey: w
                             };
                         return u.createElement(b, i({}, S, O, { key: w }), y);
                     })
                     .toArray();
             }),
-            (b.render = function () {
+            (r.render = function () {
                 var t = this,
                     e = this.props,
                     r = e.direction,

@@ -1,25 +1,26 @@
-var i = r(442837),
-    a = r(570140),
-    o = r(710845),
-    s = r(70956),
-    l = r(287328);
-function u(e, n, r) {
+n.d(t, { Z: () => _ });
+var i = n(442837),
+    r = n(570140),
+    a = n(710845),
+    s = n(70956),
+    o = n(287328);
+function l(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let c = new o.Z('FileSystemStore'),
-    d = 1048576,
-    f = 10 * s.Z.Millis.MINUTE;
-class p extends i.ZP.Store {
+let u = new a.Z('FileSystemStore'),
+    c = 1048576,
+    d = 10 * s.Z.Millis.MINUTE;
+class f extends i.ZP.Store {
     handlePostConnectionOpen() {
         return this.refresh(), !1;
     }
@@ -27,24 +28,24 @@ class p extends i.ZP.Store {
         return 'active' !== e.state && this.refresh(), !1;
     }
     async refresh() {
-        var e, n;
-        let r = await (null === (n = l.Z.database()) || void 0 === n ? void 0 : null === (e = n.fsInfo()) || void 0 === e ? void 0 : e.catch((e) => c.warn("couldn't get fs info", e)));
-        if (null != r) {
-            let e = r.fs.available < 256 * d || r.fs.available < 3 * r.database.used || r.fs.available < 2 * r.database.total,
-                n = r.fs.available > 768 * d && r.fs.available > 4 * r.database.used && r.fs.available > 4 * r.database.total,
-                i = !!e || (!n && null);
+        var e, t;
+        let n = await (null === (t = o.Z.database()) || void 0 === t ? void 0 : null === (e = t.fsInfo()) || void 0 === e ? void 0 : e.catch((e) => u.warn("couldn't get fs info", e)));
+        if (null != n) {
+            let e = n.fs.available < 256 * c || n.fs.available < 3 * n.database.used || n.fs.available < 2 * n.database.total,
+                t = n.fs.available > 768 * c && n.fs.available > 4 * n.database.used && n.fs.available > 4 * n.database.total,
+                i = !!e || (!t && null);
             null != i && this.isLowDisk !== i && ((this.isLowDisk = i), this.emitChange());
         }
     }
     constructor() {
-        super(a.Z, {
+        super(r.Z, {
             APP_STATE_UPDATE: (e) => this.handleAppStateUpdate(e),
             POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen()
         }),
-            u(this, 'isLowDisk', !1),
+            l(this, 'isLowDisk', !1),
             this.refresh(),
-            this.waitFor(l.Z),
-            setInterval(() => this.refresh(), f);
+            this.waitFor(o.Z),
+            setInterval(() => this.refresh(), d);
     }
 }
-n.Z = new p();
+let _ = new f();

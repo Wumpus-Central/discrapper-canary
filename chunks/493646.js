@@ -1,10 +1,6 @@
 n.d(t, {
-    K: function () {
-        return l;
-    },
-    v: function () {
-        return r;
-    }
+    K: () => l,
+    v: () => r
 });
 var i = n(979007),
     a = n(388032);

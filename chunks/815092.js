@@ -20,12 +20,10 @@ var o = r(542038),
         function e() {
             return t.apply(this, arguments) || this;
         }
-        (r = e), (n = t), (r.prototype = Object.create(n.prototype)), (r.prototype.constructor = r), (r.__proto__ = n);
-        var r,
-            n,
-            f = e.prototype;
+        (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
+        var r = e.prototype;
         return (
-            (f.shouldComponentUpdate = function (t) {
+            (r.shouldComponentUpdate = function (t) {
                 var e = this.props.editorState,
                     r = t.editorState;
                 if (e.getDirectionMap() !== r.getDirectionMap() || e.getSelection().getHasFocus() !== r.getSelection().getHasFocus()) return !0;
@@ -39,9 +37,9 @@ var o = r(542038),
                     c = r.getDecorator();
                 return i !== o || a !== u || s !== c || r.mustForceSelection();
             }),
-            (f.render = function () {
-                for (var t = this.props, e = t.blockRenderMap, r = t.blockRendererFn, n = t.blockStyleFn, f = t.customStyleMap, p = t.customStyleFn, h = t.editorState, d = t.editorKey, g = t.preventScroll, y = t.textDirectionality, v = h.getCurrentContent(), m = h.getSelection(), _ = h.mustForceSelection(), b = h.getDecorator(), S = l(h.getDirectionMap()), w = v.getBlocksAsArray(), k = [], x = null, C = null, E = 0; E < w.length; E++) {
-                    var D = w[E],
+            (r.render = function () {
+                for (var t = this.props, e = t.blockRenderMap, r = t.blockRendererFn, n = t.blockStyleFn, f = t.customStyleMap, p = t.customStyleFn, h = t.editorState, d = t.editorKey, g = t.preventScroll, y = t.textDirectionality, v = h.getCurrentContent(), m = h.getSelection(), _ = h.mustForceSelection(), b = h.getDecorator(), S = l(h.getDirectionMap()), w = v.getBlocksAsArray(), x = [], k = null, E = null, C = 0; C < w.length; C++) {
+                    var D = w[C],
                         O = D.getKey(),
                         K = D.getType(),
                         T = r(D),
@@ -66,34 +64,29 @@ var o = r(542038),
                             selection: m,
                             tree: h.getBlockTree(O)
                         },
-                        N = e.get(K) || e.get('unstyled'),
-                        F = N.wrapper,
-                        z = N.element || e.get('unstyled').element,
-                        P = D.getDepth(),
+                        F = e.get(K) || e.get('unstyled'),
+                        N = F.wrapper,
+                        P = F.element || e.get('unstyled').element,
+                        z = D.getDepth(),
                         j = '';
-                    if ((n && (j = n(D)), 'li' === z)) {
-                        var U,
-                            q,
-                            H,
-                            W = C !== F || null === x || P > x;
+                    if ((n && (j = n(D)), 'li' === P))
                         j = c(
                             j,
                             s({
-                                'public/DraftStyleDefault/unorderedListItem': 'unordered-list-item' === (U = K),
-                                'public/DraftStyleDefault/orderedListItem': 'ordered-list-item' === U,
-                                'public/DraftStyleDefault/reset': W,
-                                'public/DraftStyleDefault/depth0': 0 === (q = P),
-                                'public/DraftStyleDefault/depth1': 1 === q,
-                                'public/DraftStyleDefault/depth2': 2 === q,
-                                'public/DraftStyleDefault/depth3': 3 === q,
-                                'public/DraftStyleDefault/depth4': q >= 4,
-                                'public/DraftStyleDefault/listLTR': 'LTR' === (H = B),
-                                'public/DraftStyleDefault/listRTL': 'RTL' === H
+                                'public/DraftStyleDefault/unorderedListItem': 'unordered-list-item' === K,
+                                'public/DraftStyleDefault/orderedListItem': 'ordered-list-item' === K,
+                                'public/DraftStyleDefault/reset': E !== N || null === k || z > k,
+                                'public/DraftStyleDefault/depth0': 0 === z,
+                                'public/DraftStyleDefault/depth1': 1 === z,
+                                'public/DraftStyleDefault/depth2': 2 === z,
+                                'public/DraftStyleDefault/depth3': 3 === z,
+                                'public/DraftStyleDefault/depth4': z >= 4,
+                                'public/DraftStyleDefault/listLTR': 'LTR' === B,
+                                'public/DraftStyleDefault/listRTL': 'RTL' === B
                             })
                         );
-                    }
-                    var V = M || o,
-                        G = {
+                    var U = M || o,
+                        q = {
                             className: j,
                             'data-block': !0,
                             'data-editor': d,
@@ -101,7 +94,7 @@ var o = r(542038),
                             key: O
                         };
                     void 0 !== I &&
-                        (G = (function (t) {
+                        (q = (function (t) {
                             for (var e = 1; e < arguments.length; e++) {
                                 var r = null != arguments[e] ? arguments[e] : {},
                                     n = Object.keys(r);
@@ -112,51 +105,53 @@ var o = r(542038),
                                         })
                                     )),
                                     n.forEach(function (e) {
-                                        (function (t, e, r) {
-                                            e in t
-                                                ? Object.defineProperty(t, e, {
-                                                      value: r,
+                                        var n, i, o;
+                                        (n = t),
+                                            (i = e),
+                                            (o = r[e]),
+                                            i in n
+                                                ? Object.defineProperty(n, i, {
+                                                      value: o,
                                                       enumerable: !0,
                                                       configurable: !0,
                                                       writable: !0
                                                   })
-                                                : (t[e] = r);
-                                        })(t, e, r[e]);
+                                                : (n[i] = o);
                                     });
                             }
                             return t;
-                        })({}, G, {
+                        })({}, q, {
                             contentEditable: I,
                             suppressContentEditableWarning: !0
                         }));
-                    var J = u.createElement(z, G, u.createElement(V, i({}, R, { key: O })));
-                    k.push({
-                        block: J,
-                        wrapperTemplate: F,
+                    var H = u.createElement(P, q, u.createElement(U, i({}, R, { key: O })));
+                    x.push({
+                        block: H,
+                        wrapperTemplate: N,
                         key: O,
                         offsetKey: L
                     }),
-                        (x = F ? D.getDepth() : null),
-                        (C = F);
+                        (k = N ? D.getDepth() : null),
+                        (E = N);
                 }
-                for (var $ = [], X = 0; X < k.length; ) {
-                    var Y = k[X];
-                    if (Y.wrapperTemplate) {
-                        var Z = [];
-                        do Z.push(k[X].block), X++;
-                        while (X < k.length && k[X].wrapperTemplate === Y.wrapperTemplate);
-                        var Q = u.cloneElement(
-                            Y.wrapperTemplate,
+                for (var W = [], V = 0; V < x.length; ) {
+                    var G = x[V];
+                    if (G.wrapperTemplate) {
+                        var J = [];
+                        do J.push(x[V].block), V++;
+                        while (V < x.length && x[V].wrapperTemplate === G.wrapperTemplate);
+                        var $ = u.cloneElement(
+                            G.wrapperTemplate,
                             {
-                                key: Y.key + '-wrap',
-                                'data-offset-key': Y.offsetKey
+                                key: G.key + '-wrap',
+                                'data-offset-key': G.offsetKey
                             },
-                            Z
+                            J
                         );
-                        $.push(Q);
-                    } else $.push(Y.block), X++;
+                        W.push($);
+                    } else W.push(G.block), V++;
                 }
-                return u.createElement('div', { 'data-contents': 'true' }, $);
+                return u.createElement('div', { 'data-contents': 'true' }, W);
             }),
             e
         );

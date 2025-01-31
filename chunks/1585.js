@@ -1,36 +1,32 @@
-r.d(n, {
-    ps: function () {
-        return c;
-    },
-    y9: function () {
-        return u;
-    }
+n.d(t, {
+    ps: () => u,
+    y9: () => l
 });
-var i = r(200651);
-r(192379);
-var a = r(481060),
-    o = r(703656);
-r(956664);
-var s = r(419061),
-    l = r(981631);
-function u(e) {
-    return 'number' != typeof e ? (0, a.getAvatarSize)(e) * s.hs : e * s.hs;
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(703656);
+n(956664);
+var s = n(419061),
+    o = n(981631);
+function l(e) {
+    return 'number' != typeof e ? (0, r.pxk)(e) * s.hs : e * s.hs;
 }
-let c = (e) => {
-    let { analyticsLocations: n, initialSelectedDecoration: s, initialSelectedDecorationId: u, isTryItOutFlow: c, guild: d, onClose: f } = e;
-    (0, a.openModalLazy)(async () => {
-        (0, o.s1)().location.pathname === l.Z5c.COLLECTIBLES_SHOP_FULLSCREEN && (0, o.uL)(l.Z5c.APP);
-        let { default: e } = await Promise.resolve().then(r.bind(r, 235400));
-        return (r) =>
+let u = (e) => {
+    let { analyticsLocations: t, initialSelectedDecoration: s, initialSelectedDecorationId: l, isTryItOutFlow: u, guild: c, onClose: d } = e;
+    (0, r.ZDy)(async () => {
+        (0, a.s1)().location.pathname === o.Z5c.COLLECTIBLES_SHOP_FULLSCREEN && (0, a.uL)(o.Z5c.APP);
+        let { default: e } = await Promise.resolve().then(n.bind(n, 235400));
+        return (n) =>
             (0, i.jsx)(e, {
-                ...r,
-                onCloseModal: r.onClose,
-                onClose: f,
-                analyticsLocations: n,
+                ...n,
+                onCloseModal: n.onClose,
+                onClose: d,
+                analyticsLocations: t,
                 initialSelectedDecoration: s,
-                initialSelectedDecorationId: u,
-                isTryItOutFlow: c,
-                guild: d
+                initialSelectedDecorationId: l,
+                isTryItOutFlow: u,
+                guild: c
             });
     }, {});
 };

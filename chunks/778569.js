@@ -1,36 +1,31 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-}),
-    n(47120);
-var r = n(192379),
-    i = n(81063);
-let l = ['embedded_cover', 'embedded_background'];
-function a(e) {
-    let { applicationId: t, size: n, names: a = l } = e,
-        [u, o] = r.useState(null),
-        [s, c] = r.useState(!0),
-        d = (0, i.getAssetImage)(t, u, n),
-        f = r.useRef(a);
+t.d(e, { Z: () => i }), t(47120);
+var o = t(192379),
+    a = t(81063);
+let r = ['embedded_cover', 'embedded_background'];
+function i(n) {
+    let { applicationId: e, size: t, names: i = r } = n,
+        [c, _] = o.useState(null),
+        [d, l] = o.useState(!0),
+        s = (0, a.getAssetImage)(e, c, t),
+        p = o.useRef(i);
     return (
-        r.useEffect(() => {
-            f.current = a;
+        o.useEffect(() => {
+            p.current = i;
         }),
-        r.useEffect(() => {
-            let { current: e } = f;
-            null != t &&
-                (0, i.getAssets)(t).then((t) => {
-                    for (let [n, r] of (c(!1), Object.entries(t)))
-                        if (null != r && '' !== r.id && e.includes(r.name)) {
-                            o(r.id);
+        o.useEffect(() => {
+            let { current: n } = p;
+            null != e &&
+                (0, a.getAssets)(e).then((e) => {
+                    for (let [t, o] of (l(!1), Object.entries(e)))
+                        if (null != o && '' !== o.id && n.includes(o.name)) {
+                            _(o.id);
                             return;
                         }
                 });
-        }, [t]),
+        }, [e]),
         {
-            url: d,
-            state: s ? 'loading' : null != d ? 'fetched' : 'not-found'
+            url: s,
+            state: d ? 'loading' : null != s ? 'fetched' : 'not-found'
         }
     );
 }

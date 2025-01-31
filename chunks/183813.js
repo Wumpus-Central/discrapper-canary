@@ -1,10 +1,6 @@
-n.d(t, {
-    S: function () {
-        return E;
-    }
-});
-var i = n(200651),
-    l = n(192379),
+n.d(t, { S: () => g });
+var l = n(200651),
+    i = n(192379),
     s = n(512722),
     r = n.n(s),
     a = n(442837),
@@ -21,52 +17,52 @@ var i = n(200651),
     j = n(614277),
     m = n(981631),
     L = n(388032),
-    S = n(732721);
-function E(e) {
+    E = n(732721);
+function g(e) {
     let { handleStepChange: t, handleClose: n } = e,
-        { selectedPlan: s, selectedSkuId: E, step: g } = (0, _.usePaymentContext)(),
-        { setSelectedGiftingPromotionReward: I, selectedGiftingPromotionReward: M, claimableRewards: v } = (0, h.wD)(),
-        T = (0, a.e7)([p.default], () => p.default.getCurrentUser());
-    l.useEffect(() => {
-        let e = null != v && v.length > 0;
-        null == M && e && I(v[0]);
-    }, [v, M, I]);
-    let y = (e) => {
+        { selectedPlan: s, selectedSkuId: g, step: S } = (0, _.JL)(),
+        { setSelectedGiftingPromotionReward: I, selectedGiftingPromotionReward: N, claimableRewards: T } = (0, h.wD)(),
+        M = (0, a.e7)([p.default], () => p.default.getCurrentUser());
+    i.useEffect(() => {
+        let e = null != T && T.length > 0;
+        null == N && e && I(T[0]);
+    }, [T, N, I]);
+    let v = (e) => {
             let t = e.skuId;
-            return (0, i.jsx)(
+            return (0, l.jsx)(
                 d.Z,
                 {
                     skuId: t,
                     price: L.intl.string(L.t.QQsaCQ),
-                    isSelected: t === (null == M ? void 0 : M.skuId),
+                    isSelected: t === (null == N ? void 0 : N.skuId),
                     onSelect: () => I(e),
-                    className: S.giftSelectItem
+                    className: E.giftSelectItem
                 },
                 t
             );
         },
-        N = (0, u.Q3)('PremiumPaymentFreeSKUSelectStep');
-    r()(null != s, 'Expected plan to selected'), r()(null != E, 'Expected selectedSkuId'), r()(null != g, 'Step should be set');
-    let P = null == v ? void 0 : v.map((e) => y(e)),
-        Z =
-            null != M && null != T
-                ? (0, i.jsx)(C.Z, {
-                      avatarDecorationOverride: { asset: M.assetId },
-                      user: T,
+        y = (0, u.Q3)('PremiumPaymentFreeSKUSelectStep');
+    r()(null != s, 'Expected plan to selected'), r()(null != g, 'Expected selectedSkuId'), r()(null != S, 'Step should be set');
+    let Z = null == T ? void 0 : T.map((e) => v(e)),
+        P =
+            null != N && null != M
+                ? (0, l.jsx)(C.Z, {
+                      avatarDecorationOverride: { asset: N.assetId },
+                      user: M,
                       guildId: null,
-                      avatarSize: o.AvatarSizes.SIZE_152
+                      avatarSize: o.EFr.SIZE_152
                   })
                 : null,
-        A = (0, i.jsx)(j.O3, {
-            children: (0, i.jsx)(o.ModalFooter, {
-                className: S.modalFooter,
-                children: (0, i.jsx)(c.y, {
+        k = (0, l.jsx)(j.O3, {
+            children: (0, l.jsx)(o.mzw, {
+                className: E.modalFooter,
+                children: (0, l.jsx)(c.y, {
                     onStepChange: (e) => {
-                        null != T &&
-                            null != M &&
+                        null != M &&
+                            null != N &&
                             x.default.track(m.rMx.GIFT_PROMOTION_REWARD_SELECTED, {
-                                user_id: T.id,
-                                reward_sku_id: M.skuId
+                                user_id: M.id,
+                                reward_sku_id: N.skuId
                             }),
                             t(e);
                     },
@@ -78,64 +74,64 @@ function E(e) {
                 })
             })
         }),
-        U = (0, i.jsx)(o.Heading, {
+        U = (0, l.jsx)(o.X6q, {
             variant: 'heading-lg/bold',
             color: 'header-primary',
             children: L.intl.string(L.t['Rp0+ZG'])
         });
-    return N
-        ? (0, i.jsxs)('div', {
-              className: S.container,
+    return y
+        ? (0, l.jsxs)('div', {
+              className: E.container,
               children: [
-                  (0, i.jsx)(o.ModalHeader, {
-                      children: (0, i.jsxs)(o.Stack, {
+                  (0, l.jsx)(o.xBx, {
+                      children: (0, l.jsxs)(o.Kqy, {
                           direction: 'horizontal',
                           justify: 'space-between',
                           align: 'center',
-                          children: [U, (0, i.jsx)(o.ModalCloseButton, { onClick: n })]
+                          children: [U, (0, l.jsx)(o.olH, { onClick: n })]
                       })
                   }),
-                  (0, i.jsx)(o.ModalContent, {
-                      children: (0, i.jsxs)(o.Stack, {
+                  (0, l.jsx)(o.hzk, {
+                      children: (0, l.jsxs)(o.Kqy, {
                           gap: 24,
                           align: 'center',
                           padding: { top: 24 },
                           children: [
-                              Z,
-                              (0, i.jsx)(o.Stack, {
+                              P,
+                              (0, l.jsx)(o.Kqy, {
                                   gap: 8,
                                   padding: { top: 12 },
-                                  children: P
+                                  children: Z
                               })
                           ]
                       })
                   }),
-                  A
+                  k
               ]
           })
-        : (0, i.jsx)(i.Fragment, {
-              children: (0, i.jsxs)('div', {
-                  className: S.stepBodySkuSelect,
+        : (0, l.jsx)(l.Fragment, {
+              children: (0, l.jsxs)('div', {
+                  className: E.stepBodySkuSelect,
                   children: [
-                      (0, i.jsxs)('div', {
-                          className: S.bodyColumnLeft,
+                      (0, l.jsxs)('div', {
+                          className: E.bodyColumnLeft,
                           children: [
-                              (0, i.jsx)('div', {
-                                  className: S.header,
+                              (0, l.jsx)('div', {
+                                  className: E.header,
                                   children: U
                               }),
-                              P
+                              Z
                           ]
                       }),
-                      (0, i.jsx)(o.ModalCloseButton, {
+                      (0, l.jsx)(o.olH, {
                           onClick: n,
-                          className: S.closeButton
+                          className: E.closeButton
                       }),
-                      (0, i.jsx)('div', {
-                          className: S.bodyColumnRight,
-                          children: Z
+                      (0, l.jsx)('div', {
+                          className: E.bodyColumnRight,
+                          children: P
                       }),
-                      A
+                      k
                   ]
               })
           });

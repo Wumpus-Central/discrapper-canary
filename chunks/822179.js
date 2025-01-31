@@ -1,95 +1,94 @@
+n.d(t, { Z: () => T }), n(653041);
 var i,
-    a = r(653041);
-var o = r(392711),
-    s = r.n(o),
-    l = r(442837),
-    u = r(570140),
-    c = r(704907),
-    d = r(581883),
-    f = r(70956),
-    p = r(926491),
-    h = r(526761);
-function _(e, n, r) {
+    r = n(392711),
+    a = n.n(r),
+    s = n(442837),
+    o = n(570140),
+    l = n(704907),
+    u = n(581883),
+    c = n(70956),
+    d = n(926491),
+    f = n(526761);
+function _(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let m = { pendingUsages: [] };
-f.Z.Millis.DAY;
-let g = 20,
-    E = new c.ZP({
+let p = { pendingUsages: [] };
+c.Z.Millis.DAY;
+let h = 20,
+    m = new l.ZP({
         computeBonus: () => 100,
         computeWeight: (e) => {
-            let n = 1;
-            return e <= 3 ? (n = 100) : e <= 15 ? (n = 70) : e <= 30 ? (n = 50) : e <= 45 ? (n = 30) : e <= 80 && (n = 10), n;
+            let t = 1;
+            return e <= 3 ? (t = 100) : e <= 15 ? (t = 70) : e <= 30 ? (t = 50) : e <= 45 ? (t = 30) : e <= 80 && (t = 10), t;
         },
-        lookupKey: (e) => p.Z.getStickerById(e),
+        lookupKey: (e) => d.Z.getStickerById(e),
         afterCompute: () => {},
-        numFrequentlyItems: g
+        numFrequentlyItems: h
     }),
-    v = () => {
-        p.Z.isLoaded && E.compute();
+    g = () => {
+        d.Z.isLoaded && m.compute();
     },
-    y = (e) => {
-        let { stickerIds: n } = e;
-        null == n ||
-            n.forEach((e) => {
-                E.track(e),
-                    m.pendingUsages.push({
+    E = (e) => {
+        let { stickerIds: t } = e;
+        null == t ||
+            t.forEach((e) => {
+                m.track(e),
+                    p.pendingUsages.push({
                         key: e,
                         timestamp: Date.now()
                     });
             }),
-            v();
+            g();
     },
-    b = () => {
-        v();
+    v = () => {
+        g();
     };
-function I() {
+function y() {
     var e;
-    let n = null === (e = d.Z.frecencyWithoutFetchingLatest.stickerFrecency) || void 0 === e ? void 0 : e.stickers;
-    if (null == n) return !1;
-    E.overwriteHistory(
-        s().mapValues(n, (e) => ({
+    let t = null === (e = u.Z.frecencyWithoutFetchingLatest.stickerFrecency) || void 0 === e ? void 0 : e.stickers;
+    if (null == t) return !1;
+    m.overwriteHistory(
+        a().mapValues(t, (e) => ({
             ...e,
             recentUses: e.recentUses.map(Number).filter((e) => e > 0)
         })),
-        m.pendingUsages
+        p.pendingUsages
     );
 }
-function T(e) {
+function I(e) {
     let {
-        settings: { type: n },
-        wasSaved: r
+        settings: { type: t },
+        wasSaved: n
     } = e;
-    if (n !== h.yP.FRECENCY_AND_FAVORITES_SETTINGS || !r) return !1;
-    m.pendingUsages = [];
+    if (t !== f.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
+    p.pendingUsages = [];
 }
-class S extends (i = l.ZP.PersistedStore) {
+class b extends (i = s.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(p.Z), null != e && (m = e), this.syncWith([p.Z], b), this.syncWith([d.Z], I);
+        this.waitFor(d.Z), null != e && (p = e), this.syncWith([d.Z], v), this.syncWith([u.Z], y);
     }
     getState() {
-        return m;
+        return p;
     }
     hasPendingUsage() {
-        return m.pendingUsages.length > 0;
+        return p.pendingUsages.length > 0;
     }
     get stickerFrecencyWithoutFetchingLatest() {
-        return E;
+        return m;
     }
 }
-_(S, 'displayName', 'StickersPersistedStore'),
-    _(S, 'persistKey', 'StickersPersistedStoreV2'),
-    (n.Z = new S(u.Z, {
-        STICKER_TRACK_USAGE: y,
-        USER_SETTINGS_PROTO_UPDATE: T
-    }));
+_(b, 'displayName', 'StickersPersistedStore'), _(b, 'persistKey', 'StickersPersistedStoreV2');
+let T = new b(o.Z, {
+    STICKER_TRACK_USAGE: E,
+    USER_SETTINGS_PROTO_UPDATE: I
+});

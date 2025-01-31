@@ -1,18 +1,19 @@
-e.exports = {
-    badge: 'badge_e17ac7',
-    badgeVerifiedIcon: 'badgeVerifiedIcon_e17ac7',
-    roleName: 'roleName_e17ac7',
-    popout: 'popout_e17ac7',
-    popoutChecks: 'popoutChecks_e17ac7',
-    popoutChecksGroup: 'popoutChecksGroup_e17ac7',
-    popoutCheckGroupName: 'popoutCheckGroupName_e17ac7',
-    popoutCheckGroupPlatformIcon: 'popoutCheckGroupPlatformIcon_e17ac7',
-    popoutCheck: 'popoutCheck_e17ac7',
-    popoutCheckIcon: 'popoutCheckIcon_e17ac7',
-    popoutHeaderContainer: 'popoutHeaderContainer_e17ac7',
-    popoutHeaderText: 'popoutHeaderText_e17ac7',
-    buttonContainer: 'buttonContainer_e17ac7',
-    getRolesButton: 'getRolesButton_e17ac7',
-    viewConnectionsButton: 'viewConnectionsButton_e17ac7',
-    botTag: 'botTag_e17ac7'
+var i = {
+    badge: 'badge__86331',
+    badgeVerifiedIcon: 'badgeVerifiedIcon__86331',
+    roleName: 'roleName__86331',
+    popout: 'popout__86331',
+    popoutChecks: 'popoutChecks__86331',
+    popoutChecksGroup: 'popoutChecksGroup__86331',
+    popoutCheckGroupName: 'popoutCheckGroupName__86331',
+    popoutCheckGroupPlatformIcon: 'popoutCheckGroupPlatformIcon__86331',
+    popoutCheck: 'popoutCheck__86331',
+    popoutCheckIcon: 'popoutCheckIcon__86331',
+    popoutHeaderContainer: 'popoutHeaderContainer__86331',
+    popoutHeaderText: 'popoutHeaderText__86331',
+    buttonContainer: 'buttonContainer__86331',
+    getRolesButton: 'getRolesButton__86331',
+    viewConnectionsButton: 'viewConnectionsButton__86331',
+    botTag: 'botTag__86331'
 };
+e.exports = i;

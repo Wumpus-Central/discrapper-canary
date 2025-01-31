@@ -1,18 +1,14 @@
-r.d(n, {
-    K: function () {
-        return o;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(481060);
-function o(e) {
-    (0, a.openModalLazy)(async () => {
-        let { default: n } = await Promise.all([r.e('62729'), r.e('51343'), r.e('61366')]).then(r.bind(r, 598576));
-        return (r) =>
-            (0, i.jsx)(n, {
+n.d(t, { K: () => a });
+var i = n(200651);
+n(192379);
+var r = n(481060);
+function a(e) {
+    (0, r.ZDy)(async () => {
+        let { default: t } = await Promise.all([n.e('62729'), n.e('51343'), n.e('61366')]).then(n.bind(n, 598576));
+        return (n) =>
+            (0, i.jsx)(t, {
                 analyticsLocation: e,
-                ...r
+                ...n
             });
     });
 }

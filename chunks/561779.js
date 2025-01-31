@@ -1,102 +1,91 @@
-r.d(n, {
-    i: function () {
-        return N;
-    }
-});
+n.d(t, { i: () => b }), n(724458), n(411104), n(47120);
 var i,
-    a,
-    o = r(724458);
-var s = r(411104);
-var l = r(47120);
-var u = r(200651),
-    c = r(192379),
-    d = r(120356),
-    f = r.n(d),
-    p = r(392711),
-    h = r.n(p),
-    _ = r(642128),
-    m = r(513431),
-    g = r(143450),
-    E = r(84735),
-    v = r(981729),
-    y = r(607070),
-    b = r(540059),
-    I = r(587987);
-function T(e, n, r) {
+    r = n(200651),
+    a = n(192379),
+    s = n(120356),
+    o = n.n(s),
+    l = n(392711),
+    u = n.n(l),
+    c = n(642128),
+    d = n(374470),
+    f = n(143450),
+    _ = n(84735),
+    p = n(981729),
+    h = n(607070),
+    m = n(540059),
+    g = n(587987);
+function E(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-function S(e, n) {
-    let r = 0;
-    for (let i = 0; i < n.length; i++) {
-        let a = n[i];
-        if (e === a) return i;
-        if (e < a) {
-            if (0 === r || a - e < r) return i;
+function v(e, t) {
+    let n = 0;
+    for (let i = 0; i < t.length; i++) {
+        let r = t[i];
+        if (e === r) return i;
+        if (e < r) {
+            if (0 === n || r - e < n) return i;
             return i - 1;
         }
-        r = e - a;
+        n = e - r;
     }
     return null;
 }
-function A(e) {
-    let { markers: n, initialValue: r, minValue: i, maxValue: a, equidistant: o } = e,
+function y(e) {
+    let { markers: t, initialValue: n, minValue: i, maxValue: r, equidistant: a } = e,
         s = [],
-        l = [];
-    if (null == n)
+        o = [];
+    if (null == t)
         return {
             min: i,
-            max: a,
-            range: a - i,
+            max: r,
+            range: r - i,
             sortedMarkers: s,
-            markerPositions: l
+            markerPositions: o
         };
-    let u = S(r, (s = n.sort((e, n) => e - n))),
-        c = s[0],
-        d = s[s.length - 1],
-        f = d - c;
-    if (o) {
+    let l = v(n, (s = t.sort((e, t) => e - t))),
+        u = s[0],
+        c = s[s.length - 1],
+        d = c - u;
+    if (a) {
         let e = 100 / (s.length - 1);
-        l = s.map((n, r) => r * e);
+        o = s.map((t, n) => n * e);
     } else {
-        let e = (e) => (100 * (e - c)) / f;
-        l = s.map((n) => e(n));
+        let e = (e) => (100 * (e - u)) / d;
+        o = s.map((t) => e(t));
     }
     return {
-        min: c,
-        max: d,
-        range: f,
+        min: u,
+        max: c,
+        range: d,
         sortedMarkers: s,
-        markerPositions: l,
-        closestMarkerIndex: u
+        markerPositions: o,
+        closestMarkerIndex: l
     };
 }
-function C(e) {
+function I(e) {
     return {
         value: Math.min(Math.max(e.initialValue, e.minValue), e.maxValue),
         initialValueProp: e.initialValue,
         newClosestIndex: null,
-        ...A(e)
+        ...y(e)
     };
 }
-!(function (e) {
-    (e[(e.ABOVE = 0)] = 'ABOVE'), (e[(e.BELOW = 1)] = 'BELOW');
-})(i || (i = {}));
-class N extends (a = c.PureComponent) {
-    static getDerivedStateFromProps(e, n) {
-        return e.initialValue !== n.initialValueProp
+class b extends (i = a.PureComponent) {
+    static getDerivedStateFromProps(e, t) {
+        return e.initialValue !== t.initialValueProp
             ? {
-                  ...C(e),
-                  active: n.active
+                  ...I(e),
+                  active: t.active
               }
             : null;
     }
@@ -104,75 +93,75 @@ class N extends (a = c.PureComponent) {
         this.reset();
     }
     renderMark(e) {
-        let { onMarkerRender: n } = this.props;
-        return null != n ? n(e) : e;
+        let { onMarkerRender: t } = this.props;
+        return null != t ? t(e) : e;
     }
     render() {
         var e;
-        let { value: n, active: r, focused: i, sortedMarkers: a, markerPositions: o, closestMarkerIndex: s, newClosestIndex: l, min: c, max: d } = this.state,
-            { disabled: p, stickToMarkers: h, className: m, children: g, barStyles: b, fillStyles: T, mini: S, hideBubble: A, defaultValue: C, orientation: N, onValueRender: O, renderMarker: D, getAriaValueText: L, barClassName: x, grabberClassName: w, grabberStyles: P = {}, markerPosition: M = 0, 'aria-hidden': k, 'aria-label': U, 'aria-labelledby': B, 'aria-describedby': G } = this.props,
-            Z = 0;
-        h ? null != o && (null != l ? (Z = o[l]) : null != s && (Z = o[s])) : (Z = this.scaleValue(n));
-        let F = ''.concat(Z, '%'),
-            V =
-                null != o && null != a
-                    ? o.map((e, n) => {
-                          let r = a[n],
-                              i = null != C && C === r,
-                              o = this.renderMark(r);
-                          return (0, u.jsx)(
+        let { value: t, active: n, focused: i, sortedMarkers: a, markerPositions: s, closestMarkerIndex: l, newClosestIndex: u, min: d, max: f } = this.state,
+            { disabled: m, stickToMarkers: E, className: v, children: y, barStyles: I, fillStyles: b, mini: S, hideBubble: A, defaultValue: N, orientation: C, onValueRender: R, renderMarker: O, getAriaValueText: D, barClassName: x, grabberClassName: L, grabberStyles: P = {}, markerPosition: w = 0, 'aria-hidden': M, 'aria-label': k, 'aria-labelledby': U, 'aria-describedby': G } = this.props,
+            B = 0;
+        E ? null != s && (null != u ? (B = s[u]) : null != l && (B = s[l])) : (B = this.scaleValue(t));
+        let Z = ''.concat(B, '%'),
+            F =
+                null != s && null != a
+                    ? s.map((e, t) => {
+                          let n = a[t],
+                              i = null != N && N === n,
+                              s = this.renderMark(n);
+                          return (0, r.jsx)(
                               'div',
                               {
-                                  className: f()(I.mark, {
-                                      [I.defaultValue]: i,
-                                      [I.markAbove]: 0 === M,
-                                      [I.markBelow]: 1 === M
+                                  className: o()(g.mark, {
+                                      [g.defaultValue]: i,
+                                      [g.markAbove]: 0 === w,
+                                      [g.markBelow]: 1 === w
                                   }),
                                   style: { left: ''.concat(e, '%') },
                                   children:
-                                      null != D
-                                          ? D(r)
-                                          : (0, u.jsxs)(u.Fragment, {
+                                      null != O
+                                          ? O(n)
+                                          : (0, r.jsxs)(r.Fragment, {
                                                 children: [
-                                                    (0, u.jsx)('div', {
-                                                        className: I.markValue,
-                                                        children: o
+                                                    (0, r.jsx)('div', {
+                                                        className: g.markValue,
+                                                        children: s
                                                     }),
-                                                    (0, u.jsx)('div', { className: I['markDash'.concat(null == o ? 'simple' : '')] })
+                                                    (0, r.jsx)('div', { className: g['markDash'.concat(null == s ? 'simple' : '')] })
                                                 ]
                                             })
                               },
-                              n
+                              t
                           );
                       })
                     : null,
-            j = null != O ? O(n) : ''.concat(Z.toFixed(0), '%'),
-            H = null !== (e = null == L ? void 0 : L(n)) && void 0 !== e ? e : void 0;
-        return (0, u.jsx)(R, {
-            active: r,
-            keyboardFocused: i && y.Z.keyboardModeEnabled,
+            V = null != R ? R(t) : ''.concat(B.toFixed(0), '%'),
+            j = null !== (e = null == D ? void 0 : D(t)) && void 0 !== e ? e : void 0;
+        return (0, r.jsx)(T, {
+            active: n,
+            keyboardFocused: i && h.Z.keyboardModeEnabled,
             children: (e) => {
                 var a;
-                return (0, u.jsx)(E.t, {
+                return (0, r.jsx)(_.t, {
                     focusTarget: this.containerRef,
                     ringTarget: this.grabberRef,
-                    children: (0, u.jsxs)(_.animated.div, {
-                        className: f()(I.slider, m, {
-                            [I.hasMarks]: (null !== (a = null == V ? void 0 : V.length) && void 0 !== a ? a : 0) > 0,
-                            [I.disabled]: p,
-                            [I.mini]: S
+                    children: (0, r.jsxs)(c.animated.div, {
+                        className: o()(g.slider, v, {
+                            [g.hasMarks]: (null !== (a = null == F ? void 0 : F.length) && void 0 !== a ? a : 0) > 0,
+                            [g.disabled]: m,
+                            [g.mini]: S
                         }),
                         style: null == e ? void 0 : e.sliderStyles,
-                        'aria-valuemin': c,
-                        'aria-valuemax': d,
-                        'aria-valuenow': n,
-                        'aria-disabled': p,
-                        'aria-orientation': N,
-                        'aria-hidden': k,
-                        'aria-label': U,
-                        'aria-labelledby': B,
+                        'aria-valuemin': d,
+                        'aria-valuemax': f,
+                        'aria-valuenow': t,
+                        'aria-disabled': m,
+                        'aria-orientation': C,
+                        'aria-hidden': M,
+                        'aria-label': k,
+                        'aria-labelledby': U,
                         'aria-describedby': G,
-                        'aria-valuetext': H,
+                        'aria-valuetext': j,
                         role: 'slider',
                         tabIndex: 0,
                         onKeyDown: this.handleKeyDown,
@@ -187,36 +176,36 @@ class N extends (a = c.PureComponent) {
                         onMouseLeave: () => (null == e ? void 0 : e.setHovered(!1)),
                         ref: this.containerRef,
                         children: [
-                            (0, u.jsx)('div', {
-                                className: I.track,
-                                children: V
+                            (0, r.jsx)('div', {
+                                className: g.track,
+                                children: F
                             }),
-                            (0, u.jsx)('div', {
-                                className: f()(I.bar, x),
-                                style: b,
-                                children: (0, u.jsx)('div', {
-                                    className: I.barFill,
+                            (0, r.jsx)('div', {
+                                className: o()(g.bar, x),
+                                style: I,
+                                children: (0, r.jsx)('div', {
+                                    className: g.barFill,
                                     style: {
-                                        ...T,
-                                        width: F
+                                        ...b,
+                                        width: Z
                                     }
                                 })
                             }),
-                            g,
-                            (0, u.jsx)('div', {
-                                className: I.track,
-                                children: (0, u.jsx)(v.u, {
-                                    color: v.u.Colors.GREY,
+                            y,
+                            (0, r.jsx)('div', {
+                                className: g.track,
+                                children: (0, r.jsx)(p.u, {
+                                    color: p.u.Colors.GREY,
                                     hideOnClick: !1,
-                                    text: A || h ? null : j,
-                                    forceOpen: r || (i && y.Z.keyboardModeEnabled),
+                                    text: A || E ? null : V,
+                                    forceOpen: n || (i && h.Z.keyboardModeEnabled),
                                     children: (e) =>
-                                        (0, u.jsx)('div', {
+                                        (0, r.jsx)('div', {
                                             ...e,
-                                            className: f()(I.grabber, w),
+                                            className: o()(g.grabber, L),
                                             style: {
                                                 ...P,
-                                                left: F
+                                                left: Z
                                             },
                                             onMouseDown: this.handleMouseDown,
                                             ref: this.grabberRef
@@ -230,8 +219,8 @@ class N extends (a = c.PureComponent) {
         });
     }
     reset() {
-        var e, n, r, i;
-        null === (n = this.containerRef.current) || void 0 === n || null === (e = n.ownerDocument) || void 0 === e || e.removeEventListener('mousemove', this.handleMouseMove, !0), null === (i = this.containerRef.current) || void 0 === i || null === (r = i.ownerDocument) || void 0 === r || r.removeEventListener('mouseup', this.handleMouseUp, !0);
+        var e, t, n, i;
+        null === (t = this.containerRef.current) || void 0 === t || null === (e = t.ownerDocument) || void 0 === e || e.removeEventListener('mousemove', this.handleMouseMove, !0), null === (i = this.containerRef.current) || void 0 === i || null === (n = i.ownerDocument) || void 0 === n || n.removeEventListener('mouseup', this.handleMouseUp, !0);
     }
     scaleValue(e) {
         return (100 * (e - this.state.min)) / this.state.range;
@@ -248,52 +237,52 @@ class N extends (a = c.PureComponent) {
         null === (e = this.containerRef.current) || void 0 === e || e.blur();
     }
     moveStaggered(e) {
-        let n;
-        let { boundingRect: r, x: i = 0, closestMarkerIndex: a, markerPositions: o, sortedMarkers: s } = this.state,
-            { asValueChanges: l } = this.props;
-        if (null == r) return;
-        let { left: u, right: c } = r;
-        if (e.clientX <= u || e.clientX >= c) return;
-        let d = c - u,
-            f = (e.clientX - i) / d,
-            p = o[a] + 100 * f;
-        null != (n = this.props.equidistant ? S(p, o) : S(this.unscaleValue(p), s)) && (null == l || l(s[n])), this.setState({ newClosestIndex: n });
+        let t;
+        let { boundingRect: n, x: i = 0, closestMarkerIndex: r, markerPositions: a, sortedMarkers: s } = this.state,
+            { asValueChanges: o } = this.props;
+        if (null == n) return;
+        let { left: l, right: u } = n;
+        if (e.clientX <= l || e.clientX >= u) return;
+        let c = u - l,
+            d = (e.clientX - i) / c,
+            f = a[r] + 100 * d;
+        null != (t = this.props.equidistant ? v(f, a) : v(this.unscaleValue(f), s)) && (null == o || o(s[t])), this.setState({ newClosestIndex: t });
     }
     constructor(e) {
         super(e),
-            T(this, 'containerRef', c.createRef()),
-            T(this, 'grabberRef', c.createRef()),
-            T(this, 'moveGrabber', (e) => {
-                let { sortedMarkers: n, value: r, min: i, max: a } = this.state,
-                    { asValueChanges: o, onValueChange: s, stickToMarkers: l } = this.props,
-                    u = {};
-                if (l) {
-                    let i = n.indexOf(r);
+            E(this, 'containerRef', a.createRef()),
+            E(this, 'grabberRef', a.createRef()),
+            E(this, 'moveGrabber', (e) => {
+                let { sortedMarkers: t, value: n, min: i, max: r } = this.state,
+                    { asValueChanges: a, onValueChange: s, stickToMarkers: o } = this.props,
+                    l = {};
+                if (o) {
+                    let i = t.indexOf(n);
                     if (i < 0) return;
-                    let a = i + e,
-                        o = n[a];
-                    if (null == o) return;
-                    (u.value = o), (u.closestMarkerIndex = a), (u.newClosestIndex = a);
-                } else u.value = h().clamp(r + e, i, a);
-                this.setState(u), u.value !== this.state.value && (null == o || o(u.value), null == s || s(u.value));
+                    let r = i + e,
+                        a = t[r];
+                    if (null == a) return;
+                    (l.value = a), (l.closestMarkerIndex = r), (l.newClosestIndex = r);
+                } else l.value = u().clamp(n + e, i, r);
+                this.setState(l), l.value !== this.state.value && (null == a || a(l.value), null == s || s(l.value));
             }),
-            T(this, 'handleContainerMouseDown', (e) => {
-                let n;
-                let { disabled: r, maxValue: i, minValue: a, asValueChanges: o, onValueChange: s, stickToMarkers: l } = this.props,
-                    { sortedMarkers: u, markerPositions: c } = this.state;
-                if (r) return;
-                let { clientX: d, currentTarget: f } = e;
-                if (!(0, m.k)(f)) return;
-                let { left: p, width: h } = f.getBoundingClientRect(),
-                    _ = (d - p) / h;
-                if (l) {
-                    let { nextClosestMarkerIndex: e } = c.reduce(
-                        (e, n, r) => {
-                            let i = Math.abs(n / 100 - _);
+            E(this, 'handleContainerMouseDown', (e) => {
+                let t;
+                let { disabled: n, maxValue: i, minValue: r, asValueChanges: a, onValueChange: s, stickToMarkers: o } = this.props,
+                    { sortedMarkers: l, markerPositions: u } = this.state;
+                if (n) return;
+                let { clientX: c, currentTarget: f } = e;
+                if (!(0, d.k)(f)) return;
+                let { left: _, width: p } = f.getBoundingClientRect(),
+                    h = (c - _) / p;
+                if (o) {
+                    let { nextClosestMarkerIndex: e } = u.reduce(
+                        (e, t, n) => {
+                            let i = Math.abs(t / 100 - h);
                             return i <= e.smallestDelta
                                 ? {
                                       smallestDelta: i,
-                                      nextClosestMarkerIndex: r
+                                      nextClosestMarkerIndex: n
                                   }
                                 : e;
                         },
@@ -303,37 +292,37 @@ class N extends (a = c.PureComponent) {
                         }
                     );
                     if (-1 === e) return;
-                    this.setState({ closestMarkerIndex: e }), (n = u[e]);
+                    this.setState({ closestMarkerIndex: e }), (t = l[e]);
                 } else {
-                    let r = i - a;
-                    (n = a + r * _), this.setState({ value: n }), this.handleMouseDown(e);
+                    let n = i - r;
+                    (t = r + n * h), this.setState({ value: t }), this.handleMouseDown(e);
                 }
-                null != s && s(n), null != o && o(n);
+                null != s && s(t), null != a && a(t);
             }),
-            T(this, 'handleKeyDown', (e) => {
-                let { disabled: n, orientation: r, keyboardStep: i = 1 } = this.props;
-                if (n) return;
-                let { key: a } = e,
-                    o = [],
+            E(this, 'handleKeyDown', (e) => {
+                let { disabled: t, orientation: n, keyboardStep: i = 1 } = this.props;
+                if (t) return;
+                let { key: r } = e,
+                    a = [],
                     s = [];
-                switch (r) {
+                switch (n) {
                     case 'horizontal':
-                        (o = ['ArrowRight']), (s = ['ArrowLeft']);
+                        (a = ['ArrowRight']), (s = ['ArrowLeft']);
                         break;
                     case 'vertical':
-                        (o = ['ArrowUp']), (s = ['ArrowDown']);
+                        (a = ['ArrowUp']), (s = ['ArrowDown']);
                         break;
                     default:
-                        (o = ['ArrowRight', 'ArrowUp']), (s = ['ArrowLeft', 'ArrowDown']);
+                        (a = ['ArrowRight', 'ArrowUp']), (s = ['ArrowLeft', 'ArrowDown']);
                 }
-                s.includes(a) ? (e.preventDefault(), e.stopPropagation(), this.moveGrabber(-i)) : o.includes(a) && (e.preventDefault(), e.stopPropagation(), this.moveGrabber(i));
+                s.includes(r) ? (e.preventDefault(), e.stopPropagation(), this.moveGrabber(-i)) : a.includes(r) && (e.preventDefault(), e.stopPropagation(), this.moveGrabber(i));
             }),
-            T(this, 'handleMouseDown', (e) => {
-                var n, r;
+            E(this, 'handleMouseDown', (e) => {
+                var t, n;
                 if (this.props.disabled) return;
                 e.stopPropagation();
                 let { current: i } = this.containerRef;
-                if ((null == i || null === (n = i.ownerDocument) || void 0 === n || n.addEventListener('mousemove', this.handleMouseMove, !0), null == i || null === (r = i.ownerDocument) || void 0 === r || r.addEventListener('mouseup', this.handleMouseUp, !0), !(0, m.k)(i))) throw Error('[UIKit]Slider.handleMouseDown(): assert failed: domNode nodeType !== Element');
+                if ((null == i || null === (t = i.ownerDocument) || void 0 === t || t.addEventListener('mousemove', this.handleMouseMove, !0), null == i || null === (n = i.ownerDocument) || void 0 === n || n.addEventListener('mouseup', this.handleMouseUp, !0), !(0, d.k)(i))) throw Error('[UIKit]Slider.handleMouseDown(): assert failed: domNode nodeType !== Element');
                 this.setState({
                     x: e.clientX,
                     active: !0,
@@ -341,65 +330,65 @@ class N extends (a = c.PureComponent) {
                     newClosestIndex: this.state.closestMarkerIndex
                 });
             }),
-            T(this, 'handleMouseUp', (e) => {
+            E(this, 'handleMouseUp', (e) => {
                 e.stopPropagation(), this.reset();
-                let { onValueChange: n, stickToMarkers: r } = this.props,
+                let { onValueChange: t, stickToMarkers: n } = this.props,
                     { newClosestIndex: i } = this.state;
-                r && null != i
-                    ? (null == n || n(this.state.sortedMarkers[i]),
+                n && null != i
+                    ? (null == t || t(this.state.sortedMarkers[i]),
                       this.setState({
                           newClosestIndex: null,
                           closestMarkerIndex: i
                       }))
-                    : null == n || n(this.state.value),
+                    : null == t || t(this.state.value),
                     this.setState({ active: !1 });
             }),
-            T(this, 'handleMouseMove', (e) => {
+            E(this, 'handleMouseMove', (e) => {
                 e.preventDefault(), this.props.stickToMarkers ? this.moveStaggered(e) : this.moveSmoothly(e);
             }),
-            T(this, 'onFocus', () => {
+            E(this, 'onFocus', () => {
                 this.setState({ focused: !0 });
             }),
-            T(this, 'onBlur', () => {
+            E(this, 'onBlur', () => {
                 this.setState({ focused: !1 });
             }),
-            T(this, 'moveSmoothly', (e) => {
-                let { minValue: n, maxValue: r, asValueChanges: i } = this.props,
-                    { boundingRect: a } = this.state;
-                if (null == a) return;
-                let { left: o, right: s } = a,
-                    l = r - n,
-                    u = s - o,
-                    c = Math.min(Math.max(n + ((e.clientX - o) / u) * l, n), r);
-                null == i || i(c), this.setState({ value: c });
+            E(this, 'moveSmoothly', (e) => {
+                let { minValue: t, maxValue: n, asValueChanges: i } = this.props,
+                    { boundingRect: r } = this.state;
+                if (null == r) return;
+                let { left: a, right: s } = r,
+                    o = n - t,
+                    l = s - a,
+                    u = Math.min(Math.max(t + ((e.clientX - a) / l) * o, t), n);
+                null == i || i(u), this.setState({ value: u });
             }),
             (this.state = {
                 active: !1,
                 focused: !1,
-                ...C(e)
+                ...I(e)
             });
     }
 }
-function R(e) {
-    let { active: n, keyboardFocused: r, children: i } = e,
-        a = (0, b.Q3)('Slider'),
-        [o, s] = c.useState(!1),
-        l = (0, g.q)({
-            '--grabber-size': r || n || o ? '20px' : '16px',
-            '--bar-size': r || n || o ? '6px' : '4px',
+function T(e) {
+    let { active: t, keyboardFocused: n, children: i } = e,
+        r = (0, m.Q3)('Slider'),
+        [s, o] = a.useState(!1),
+        l = (0, f.q)({
+            '--grabber-size': n || t || s ? '20px' : '16px',
+            '--bar-size': n || t || s ? '6px' : '4px',
             config: {
-                ..._.config.stiff,
+                ...c.config.stiff,
                 duration: 100
             }
         });
-    return a
+    return r
         ? i({
               sliderStyles: l,
-              setHovered: s
+              setHovered: o
           })
         : i();
 }
-T(N, 'defaultProps', {
+E(b, 'defaultProps', {
     initialValue: 10,
     minValue: 0,
     maxValue: 100,

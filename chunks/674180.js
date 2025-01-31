@@ -1,62 +1,55 @@
-r.d(n, {
-    eC: function () {
-        return _;
-    },
-    gX: function () {
-        return h;
-    },
-    uP: function () {
-        return p;
-    }
+n.d(t, {
+    eC: () => p,
+    gX: () => _,
+    uP: () => f
 });
-var i = r(192379),
-    a = r(442837),
-    o = r(81897),
-    s = r(423117),
-    l = r(289393),
-    u = r(430824),
-    c = r(738774),
-    d = r(981631);
-let f = (e) => {
-        let n = (0, o.Z)();
+var i = n(192379),
+    r = n(442837),
+    a = n(81897),
+    s = n(423117),
+    o = n(289393),
+    l = n(430824),
+    u = n(738774),
+    c = n(981631);
+let d = (e) => {
+        let t = (0, a.Z)();
         i.useEffect(() => {
-            if (null != e && !!e.hasFeature(d.oNc.CREATOR_MONETIZABLE_RESTRICTED) && l.Z.getMonetizationRestrictionsFetchState(e.id) === l.M.NOT_FETCHED) s.Xj(e.id, { signal: n });
-        }, [e, n]);
-        let r = null == e ? void 0 : e.id,
-            u = (0, a.Wu)([l.Z], () => {
+            null != e && e.hasFeature(c.oNc.CREATOR_MONETIZABLE_RESTRICTED) && o.Z.getMonetizationRestrictionsFetchState(e.id) === o.M.NOT_FETCHED && s.Xj(e.id, { signal: t });
+        }, [e, t]);
+        let n = null == e ? void 0 : e.id;
+        return {
+            restrictions: (0, r.Wu)([o.Z], () => {
                 var e;
-                return null !== (e = l.Z.getMonetizationRestrictions(null != r ? r : d.lds)) && void 0 !== e ? e : [];
-            });
-        return {
-            restrictions: u,
-            restrictionsLoading: (0, a.e7)([l.Z], () => l.Z.getMonetizationRestrictionsFetchState(null != r ? r : d.lds) === l.M.FETCHING)
+                return null !== (e = o.Z.getMonetizationRestrictions(null != n ? n : c.lds)) && void 0 !== e ? e : [];
+            }),
+            restrictionsLoading: (0, r.e7)([o.Z], () => o.Z.getMonetizationRestrictionsFetchState(null != n ? n : c.lds) === o.M.FETCHING)
         };
     },
-    p = (e) => {
-        var n;
-        let r = (0, a.e7)([u.Z], () => u.Z.getGuild(e), [e]),
-            { restrictions: i, restrictionsLoading: o } = f(r);
+    f = (e) => {
+        var t;
+        let n = (0, r.e7)([l.Z], () => l.Z.getGuild(e), [e]),
+            { restrictions: i, restrictionsLoading: a } = d(n);
         return {
-            shouldHideGuildPurchaseEntryPoints: !((null == r ? void 0 : r.hasFeature(d.oNc.CREATOR_MONETIZABLE)) || (null == r ? void 0 : r.hasFeature(d.oNc.CREATOR_MONETIZABLE_PROVISIONAL))) || (o ? null === (n = null == r ? void 0 : r.hasFeature(d.oNc.CREATOR_MONETIZABLE_RESTRICTED)) || void 0 === n || n : (0, c.uq)(i)),
-            restrictionsLoading: o
-        };
-    },
-    h = (e) => {
-        var n;
-        let r = (0, a.e7)([u.Z], () => u.Z.getGuild(e), [e]),
-            { restrictions: i, restrictionsLoading: o } = f(r),
-            s = o ? null === (n = null == r ? void 0 : r.hasFeature(d.oNc.CREATOR_MONETIZABLE_RESTRICTED)) || void 0 === n || n : (0, c.Q6)(i),
-            l = !!(null == r ? void 0 : r.hasFeature(d.oNc.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING));
-        return {
-            shouldRestrictUpdatingCreatorMonetizationSettings: s || l,
-            allowSelfRemoveMonetization: !s,
-            restrictionsLoading: o
+            shouldHideGuildPurchaseEntryPoints: !((null == n ? void 0 : n.hasFeature(c.oNc.CREATOR_MONETIZABLE)) || (null == n ? void 0 : n.hasFeature(c.oNc.CREATOR_MONETIZABLE_PROVISIONAL))) || (a ? null === (t = null == n ? void 0 : n.hasFeature(c.oNc.CREATOR_MONETIZABLE_RESTRICTED)) || void 0 === t || t : (0, u.uq)(i)),
+            restrictionsLoading: a
         };
     },
     _ = (e) => {
-        let { restrictions: n, restrictionsLoading: r } = f((0, a.e7)([u.Z], () => u.Z.getGuild(e), [e]));
+        var t;
+        let n = (0, r.e7)([l.Z], () => l.Z.getGuild(e), [e]),
+            { restrictions: i, restrictionsLoading: a } = d(n),
+            s = a ? null === (t = null == n ? void 0 : n.hasFeature(c.oNc.CREATOR_MONETIZABLE_RESTRICTED)) || void 0 === t || t : (0, u.Q6)(i),
+            o = !!(null == n ? void 0 : n.hasFeature(c.oNc.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING));
         return {
-            isMonetizationReapplicationDisabled: (0, c.m8)(n),
-            restrictionsLoading: r
+            shouldRestrictUpdatingCreatorMonetizationSettings: s || o,
+            allowSelfRemoveMonetization: !s,
+            restrictionsLoading: a
+        };
+    },
+    p = (e) => {
+        let { restrictions: t, restrictionsLoading: n } = d((0, r.e7)([l.Z], () => l.Z.getGuild(e), [e]));
+        return {
+            isMonetizationReapplicationDisabled: (0, u.m8)(t),
+            restrictionsLoading: n
         };
     };

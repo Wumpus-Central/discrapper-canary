@@ -1,57 +1,52 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return h;
-        }
-    });
-var a = n(200651),
-    r = n(192379),
-    s = n(481060),
-    o = n(313201),
-    c = n(626135),
-    i = n(981631),
-    d = n(388032),
-    l = n(882506),
-    u = n(963705);
+a.d(t, { default: () => h });
+var n = a(200651),
+    s = a(192379),
+    c = a(481060),
+    r = a(313201),
+    i = a(626135),
+    o = a(981631),
+    l = a(388032),
+    d = a(882506),
+    b = a(963705);
 function h(e) {
-    let { source: t, onClose: n, transitionState: h } = e;
-    r.useEffect(() => {
-        c.default.track(i.rMx.OPEN_MODAL, {
-            type: i.jXE.CONTACT_SYNC_NC_MODAL,
+    let { source: t, onClose: a, transitionState: h } = e;
+    s.useEffect(() => {
+        i.default.track(o.rMx.OPEN_MODAL, {
+            type: o.jXE.CONTACT_SYNC_NC_MODAL,
             source: { location: t }
         });
     }, [t]);
-    let x = (0, o.Dt)();
-    return (0, a.jsxs)(s.ModalRoot, {
-        className: l.contactSync,
+    let u = (0, r.Dt)();
+    return (0, n.jsxs)(c.Y0X, {
+        className: d.contactSync,
         transitionState: h,
-        'aria-labelledby': x,
+        'aria-labelledby': u,
         children: [
-            (0, a.jsx)(s.ModalCloseButton, {
-                onClick: n,
-                className: l.modalCloseButton
+            (0, n.jsx)(c.olH, {
+                onClick: a,
+                className: d.modalCloseButton
             }),
-            (0, a.jsxs)('div', {
-                className: l.inner,
+            (0, n.jsxs)('div', {
+                className: d.inner,
                 children: [
-                    (0, a.jsx)(s.Heading, {
+                    (0, n.jsx)(c.X6q, {
                         variant: 'heading-xl/extrabold',
                         color: 'header-primary',
-                        className: l.header,
-                        children: d.intl.string(d.t.fdR8HR)
+                        className: d.header,
+                        children: l.intl.string(l.t.fdR8HR)
                     }),
-                    (0, a.jsx)(s.Text, {
+                    (0, n.jsx)(c.Text, {
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: d.intl.string(d.t.JXyNq6)
+                        children: l.intl.string(l.t.JXyNq6)
                     })
                 ]
             }),
-            (0, a.jsx)('div', {
-                className: l.container,
-                children: (0, a.jsx)('img', {
+            (0, n.jsx)('div', {
+                className: d.container,
+                children: (0, n.jsx)('img', {
                     alt: '',
-                    src: u
+                    src: b
                 })
             })
         ]

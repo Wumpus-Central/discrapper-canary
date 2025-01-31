@@ -1,5 +1,6 @@
-e.exports = {
-    wrapper: 'wrapper_e78f9e',
-    sadImage: 'sadImage_e78f9e',
-    forceLightTheme: 'forceLightTheme_e78f9e'
+var i = {
+    wrapper: 'wrapper__29ebd',
+    sadImage: 'sadImage__29ebd',
+    forceLightTheme: 'forceLightTheme__29ebd'
 };
+e.exports = i;

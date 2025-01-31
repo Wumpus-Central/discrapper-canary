@@ -1,12 +1,8 @@
-r.d(n, {
-    J: function () {
-        return a;
-    }
-});
-var i = r(314897);
-function a(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.default,
-        r = n.getId(),
-        a = n.getSessionId();
-    return e.userId === r && (null == e.sessionId || void 0 === e.sessionId || e.sessionId === a || !1);
+n.d(t, { J: () => r });
+var i = n(314897);
+function r(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.default,
+        n = t.getId(),
+        r = t.getSessionId();
+    return e.userId === n && (null == e.sessionId || void 0 === e.sessionId || e.sessionId === r);
 }

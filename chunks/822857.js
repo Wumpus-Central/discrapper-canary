@@ -1,7 +1,3 @@
-n.d(t, {
-    W: function () {
-        return i;
-    }
-});
-var r = n(907584);
-let i = (e) => ({ enabled: r.Z.getCurrentConfig(e).enabled });
+n.d(t, { W: () => l });
+var i = n(907584);
+let l = (e) => ({ enabled: i.Z.getCurrentConfig(e).enabled });

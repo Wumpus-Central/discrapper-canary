@@ -1,8 +1,4 @@
-n.d(e, {
-    A: function () {
-        return E;
-    }
-});
+n.d(e, { A: () => E });
 let i = (0, n(818083).B)({
     kind: 'user',
     id: '2024-02_safety_hub_guild_violation_in_app_appeals',

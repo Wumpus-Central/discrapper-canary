@@ -1,4 +1,5 @@
-var t = {
+t.d(n, { Z: () => r });
+var o = {
     lessThanXSeconds: {
         one: {
             regular: 'méně než sekunda',
@@ -263,12 +264,12 @@ var t = {
         }
     }
 };
-n.Z = function (e, n, o) {
+let r = function (e, n, t) {
     var r,
         a,
-        u = t[e];
+        u = o[e];
     r = 'other' === u.type ? u.other : 1 === n ? u.one : n > 1 && n < 5 ? u.few : u.many;
-    var i = (null == o ? void 0 : o.addSuffix) === !0,
-        d = null == o ? void 0 : o.comparison;
-    return (a = i && -1 === d ? r.past : i && 1 === d ? r.future : r.regular).replace('{{count}}', String(n));
+    var i = (null == t ? void 0 : t.addSuffix) === !0,
+        d = null == t ? void 0 : t.comparison;
+    return (i && -1 === d ? r.past : i && 1 === d ? r.future : r.regular).replace('{{count}}', String(n));
 };

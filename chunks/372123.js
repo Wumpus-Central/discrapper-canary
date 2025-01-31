@@ -1,60 +1,54 @@
-e.d(n, {
-    Z: function () {
-        return c;
-    }
-}),
-    e(411104);
-var i = e(570140),
-    l = e(710845),
-    o = e(209492),
-    r = e(981631);
-let a = new l.Z('CloudSync');
-class s {
+n.d(e, { Z: () => c }), n(411104);
+var i = n(570140),
+    l = n(710845),
+    a = n(209492),
+    s = n(981631);
+let o = new l.Z('CloudSync');
+class r {
     constructor(t) {
-        var n, e, i;
-        (n = this),
-            (i = void 0),
-            (e = 'message') in n
-                ? Object.defineProperty(n, e, {
-                      value: i,
+        var e, n;
+        (n = void 0),
+            (e = 'message') in this
+                ? Object.defineProperty(this, e, {
+                      value: n,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (n[e] = i),
+                : (this[e] = n),
             (this.message = t);
     }
 }
-async function c(t, n) {
-    let e,
+async function c(t, e) {
+    let n,
         l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
     i.Z.dispatch({
         type: 'GAME_CLOUD_SYNC_START',
         applicationId: t,
-        branchId: n
+        branchId: e
     });
     try {
-        if ((e = await o.j(t, n, l)).type === r.QCD.CONFLICT)
+        if ((n = await a.j(t, e, l)).type === s.QCD.CONFLICT)
             throw (
                 (i.Z.dispatch({
                     type: 'GAME_CLOUD_SYNC_CONFLICT',
                     applicationId: t,
-                    branchId: n,
-                    next: e.next,
-                    remote: e.remote
+                    branchId: e,
+                    next: n.next,
+                    remote: n.remote
                 }),
-                new s('Conflict in cloud sync.'))
+                new r('Conflict in cloud sync.'))
             );
-        (e.type === r.QCD.PULL || e.type === r.QCD.PUSH) && a.info('Sync complete', e);
-    } catch (e) {
-        if (e instanceof s) throw e;
+        (n.type === s.QCD.PULL || n.type === s.QCD.PUSH) && o.info('Sync complete', n);
+    } catch (n) {
+        if (n instanceof r) throw n;
         throw (
             (i.Z.dispatch({
                 type: 'GAME_CLOUD_SYNC_ERROR',
                 applicationId: t,
-                branchId: n
+                branchId: e
             }),
-            a.error('Failed to cloud sync:', e),
+            o.error('Failed to cloud sync:', n),
             Error('Failed to cloud sync.'))
         );
     }
@@ -62,8 +56,8 @@ async function c(t, n) {
         i.Z.dispatch({
             type: 'GAME_CLOUD_SYNC_COMPLETE',
             applicationId: t,
-            branchId: n
+            branchId: e
         }),
-        e
+        n
     );
 }

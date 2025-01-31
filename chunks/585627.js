@@ -1,69 +1,63 @@
-r.d(n, {
-    JJ: function () {
-        return l;
-    },
-    KG: function () {
-        return o;
-    },
-    jo: function () {
-        return s;
-    }
-});
-var i = r(47120);
-var a = r(260866);
-function o(e, n) {
-    return new Promise((r) => {
-        let i = new IntersectionObserver(
+n.d(t, {
+    JJ: () => s,
+    KG: () => r,
+    jo: () => a
+}),
+    n(47120);
+var i = n(260866);
+function r(e, t) {
+    return new Promise((n) => {
+        let r = new IntersectionObserver(
             (e) => {
-                let n = 0,
-                    o = null;
-                for (let { isIntersecting: s, intersectionRatio: l, target: u } of e) {
-                    if (s && 1 === l) {
-                        i.disconnect();
-                        let e = u.getAttribute(a.ie);
-                        if (null != e) return r(e);
+                let t = 0,
+                    a = null;
+                for (let { isIntersecting: s, intersectionRatio: o, target: l } of e) {
+                    if (s && 1 === o) {
+                        r.disconnect();
+                        let e = l.getAttribute(i.ie);
+                        if (null != e) return n(e);
                     }
-                    l > n && ((n = l), (o = u.getAttribute(a.ie)));
+                    o > t && ((t = o), (a = l.getAttribute(i.ie)));
                 }
-                i.disconnect(), r(o);
+                r.disconnect(), n(a);
             },
             { root: e }
         );
-        for (let e of n) i.observe(e);
+        for (let e of t) r.observe(e);
     });
 }
-function s(e, n) {
-    return new Promise((r) => {
-        let i = new IntersectionObserver(
+function a(e, t) {
+    return new Promise((n) => {
+        let r = new IntersectionObserver(
             (e) => {
-                let n = 0,
-                    o = null;
+                let t = 0,
+                    a = null;
                 for (let s = e.length - 1; s >= 0; s--) {
-                    let { isIntersecting: l, intersectionRatio: u, target: c } = e[s];
-                    if (l && 1 === u) {
-                        i.disconnect();
-                        let e = c.getAttribute(a.ie);
-                        if (null != e) return r(e);
+                    let { isIntersecting: o, intersectionRatio: l, target: u } = e[s];
+                    if (o && 1 === l) {
+                        r.disconnect();
+                        let e = u.getAttribute(i.ie);
+                        if (null != e) return n(e);
                     }
-                    u > n && ((n = u), (o = c.getAttribute(a.ie)));
+                    l > t && ((t = l), (a = u.getAttribute(i.ie)));
                 }
-                i.disconnect(), r(o);
+                r.disconnect(), n(a);
             },
             { root: e }
         );
-        for (let e of n) i.observe(e);
+        for (let e of t) r.observe(e);
     });
 }
-function l(e, n) {
-    let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0.5;
+function s(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0.5;
     return new Promise((i) => {
-        let a = new IntersectionObserver(
+        let r = new IntersectionObserver(
             (e) => {
-                let n = e[0];
-                a.disconnect(), i(n.intersectionRatio >= r);
+                let t = e[0];
+                r.disconnect(), i(t.intersectionRatio >= n);
             },
             { root: e }
         );
-        a.observe(n);
+        r.observe(t);
     });
 }

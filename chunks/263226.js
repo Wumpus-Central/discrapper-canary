@@ -1,16 +1,12 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-});
-var o = n(626135),
-    l = n(981631);
-function a(e, t, n, a) {
-    o.default.track(l.rMx.USER_REPORT_SUBMITTED, {
+n.d(t, { Z: () => o });
+var l = n(626135),
+    a = n(981631);
+function o(e, t, n, o) {
+    l.default.track(a.rMx.USER_REPORT_SUBMITTED, {
         report_name: 'Guild Leave',
         guild_id: e,
         reason: t,
         feedback: n,
-        skipped: a
+        skipped: o
     });
 }

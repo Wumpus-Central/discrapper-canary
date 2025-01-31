@@ -1,7 +1,8 @@
 e.exports = {
-    wrapper: 'wrapper_ebd0fc',
-    svg: 'svg_ebd0fc',
-    background: 'background_ebd0fc path_ebd0fc',
-    foreground: 'foreground_ebd0fc path_ebd0fc',
-    usageInfo: 'usageInfo_ebd0fc'
+    wrapper: 'wrapper__27106',
+    svg: 'svg__27106',
+    path: 'path__27106',
+    background: 'background__27106 path__27106',
+    foreground: 'foreground__27106 path__27106',
+    usageInfo: 'usageInfo__27106'
 };

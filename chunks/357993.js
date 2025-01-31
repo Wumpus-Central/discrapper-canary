@@ -1,5 +1,5 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
     return e.defineLocale('ml', {
         months: 'ജനുവരി_ഫെബ്രുവരി_മാർച്ച്_ഏപ്രിൽ_മേയ്_ജൂൺ_ജൂലൈ_ഓഗസ്റ്റ്_സെപ്റ്റംബർ_ഒക്ടോബർ_നവംബർ_ഡിസംബർ'.split('_'),
@@ -41,15 +41,11 @@
             yy: '%d വർഷം'
         },
         meridiemParse: /രാത്രി|രാവിലെ|ഉച്ച കഴിഞ്ഞ്|വൈകുന്നേരം|രാത്രി/i,
-        meridiemHour: function (e, n) {
-            return (12 === e && (e = 0), ('രാത്രി' === n && e >= 4) || 'ഉച്ച കഴിഞ്ഞ്' === n || 'വൈകുന്നേരം' === n) ? e + 12 : e;
+        meridiemHour: function (e, t) {
+            return (12 === e && (e = 0), ('രാത്രി' === t && e >= 4) || 'ഉച്ച കഴിഞ്ഞ്' === t || 'വൈകുന്നേരം' === t) ? e + 12 : e;
         },
-        meridiem: function (e, n, r) {
-            if (e < 4) return 'രാത്രി';
-            if (e < 12) return 'രാവിലെ';
-            if (e < 17) return 'ഉച്ച കഴിഞ്ഞ്';
-            else if (e < 20) return 'വൈകുന്നേരം';
-            else return 'രാത്രി';
+        meridiem: function (e, t, n) {
+            return e < 4 ? 'രാത്രി' : e < 12 ? 'രാവിലെ' : e < 17 ? 'ഉച്ച കഴിഞ്ഞ്' : e < 20 ? 'വൈകുന്നേരം' : 'രാത്രി';
         }
     });
 });

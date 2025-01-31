@@ -1,139 +1,138 @@
+n.d(t, { Z: () => I }), n(47120), n(653041);
 var i,
-    a = r(47120);
-var o = r(653041);
-var s = r(442837),
-    l = r(570140),
-    u = r(881052),
-    c = r(128449);
-function d(e, n, r) {
+    r = n(442837),
+    a = n(570140),
+    s = n(881052),
+    o = n(128449);
+function l(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let f = new Map(),
-    p = new Map();
-function h(e) {
-    return [c.BP, e.query, c.t0, e.categoryId, c.KL, e.languageCode].join('-');
+let u = new Map(),
+    c = new Map();
+function d(e) {
+    return [o.BP, e.query, o.t0, e.categoryId, o.KL, e.languageCode].join('-');
 }
-class _ {
+class f {
     handleSearchStart() {
         (this.error = null), (this.isFetching = !0);
     }
     handleSearchFailure(e) {
-        (this.isFetching = !1), (this.isInitialFetchComplete = !0), (this.error = new u.Hx(e));
+        (this.isFetching = !1), (this.isInitialFetchComplete = !0), (this.error = new s.Hx(e));
     }
     handleSearchSuccess(e) {
-        let { total: n, guilds: r } = e;
-        (this.error = null), (this.isFetching = !1), (this.isInitialFetchComplete = !0), (this.lastFetchTimestamp = Date.now()), null != n && (this.total = n);
+        let { total: t, guilds: n } = e;
+        (this.error = null), (this.isFetching = !1), (this.isInitialFetchComplete = !0), (this.lastFetchTimestamp = Date.now()), null != t && (this.total = t);
         let i = [...this.guildIds];
-        r.forEach((e) => i.push(e.id)), (this.guildIds = i), (this.offset = i.length);
+        n.forEach((e) => i.push(e.id)), (this.guildIds = i), (this.offset = i.length);
     }
     constructor({ query: e }) {
-        d(this, 'guildIds', []), d(this, 'error', null), d(this, 'offset', null), d(this, 'total', null), d(this, 'isFetching', !1), d(this, 'isInitialFetchComplete', !1), d(this, 'lastFetchTimestamp', null), d(this, 'query', void 0), (this.query = e);
+        l(this, 'guildIds', []), l(this, 'error', null), l(this, 'offset', null), l(this, 'total', null), l(this, 'isFetching', !1), l(this, 'isInitialFetchComplete', !1), l(this, 'lastFetchTimestamp', null), l(this, 'query', void 0), (this.query = e);
     }
 }
+function _(e) {
+    var t;
+    let n = d(e),
+        i = null !== (t = u.get(n)) && void 0 !== t ? t : new f({ query: e.query });
+    return u.set(n, i), i;
+}
+function p(e, t) {
+    let n = d(e),
+        i = u.get(n);
+    return null != i ? t(i) : null;
+}
+function h() {
+    u.clear(), c.clear();
+}
 function m(e) {
-    var n;
-    let r = h(e),
-        i = null !== (n = f.get(r)) && void 0 !== n ? n : new _({ query: e.query });
-    return f.set(r, i), i;
-}
-function g(e, n) {
-    let r = h(e),
-        i = f.get(r);
-    return null != i ? n(i) : null;
-}
-function E() {
-    f.clear(), p.clear();
-}
-function v(e) {
-    let { query: n, categoryId: r, languageCode: i, reset: a } = e,
-        o = h({
-            query: n,
-            categoryId: r,
+    let { query: t, categoryId: n, languageCode: i, reset: r } = e,
+        a = d({
+            query: t,
+            categoryId: n,
             languageCode: i
         });
-    a && f.delete(o),
-        m({
-            query: n,
-            categoryId: r,
+    r && u.delete(a),
+        _({
+            query: t,
+            categoryId: n,
             languageCode: i
         }).handleSearchStart();
 }
-function y(e) {
-    let { query: n, categoryId: r, languageCode: i, total: a, guilds: o } = e;
-    m({
-        query: n,
-        categoryId: r,
+function g(e) {
+    let { query: t, categoryId: n, languageCode: i, total: r, guilds: a } = e;
+    _({
+        query: t,
+        categoryId: n,
         languageCode: i
     }).handleSearchSuccess({
-        total: a,
-        guilds: o
+        total: r,
+        guilds: a
     }),
-        o.forEach((e) => {
-            p.set(e.id, e);
+        a.forEach((e) => {
+            c.set(e.id, e);
         });
 }
-function b(e) {
-    let { query: n, categoryId: r, languageCode: i, error: a } = e;
-    m({
-        query: n,
-        categoryId: r,
+function E(e) {
+    let { query: t, categoryId: n, languageCode: i, error: r } = e;
+    _({
+        query: t,
+        categoryId: n,
         languageCode: i
-    }).handleSearchFailure(a);
+    }).handleSearchFailure(r);
 }
-function I(e) {
-    let { ignoreQueries: n } = e,
-        r = new Set(n);
-    f.forEach((e, n) => {
-        if (null != e.query) !r.has(e.query) && f.delete(n);
+function v(e) {
+    let { ignoreQueries: t } = e,
+        n = new Set(t);
+    u.forEach((e, t) => {
+        null != e.query && (n.has(e.query) || u.delete(t));
     });
 }
-class T extends (i = s.ZP.Store) {
+class y extends (i = r.ZP.Store) {
     getGuild(e) {
-        return p.get(e);
+        return c.get(e);
     }
     getGuildIds(e) {
-        return g(e, (e) => e.guildIds);
+        return p(e, (e) => e.guildIds);
     }
     getIsFetching(e) {
-        return g(e, (e) => e.isFetching);
+        return p(e, (e) => e.isFetching);
     }
     getIsInitialFetchComplete(e) {
-        return g(e, (e) => e.isInitialFetchComplete);
+        return p(e, (e) => e.isInitialFetchComplete);
     }
     getOffset(e) {
-        return g(e, (e) => e.offset);
+        return p(e, (e) => e.offset);
     }
     getTotal(e) {
-        return g(e, (e) => e.total);
+        return p(e, (e) => e.total);
     }
     getLastFetchTimestamp(e) {
-        return g(e, (e) => e.lastFetchTimestamp);
+        return p(e, (e) => e.lastFetchTimestamp);
     }
     getError(e) {
-        return g(e, (e) => e.error);
+        return p(e, (e) => e.error);
     }
     getErrorMessage(e) {
-        return g(e, (e) => {
-            var n;
-            return null === (n = e.error) || void 0 === n ? void 0 : n.getAnyErrorMessage();
+        return p(e, (e) => {
+            var t;
+            return null === (t = e.error) || void 0 === t ? void 0 : t.getAnyErrorMessage();
         });
     }
 }
-d(T, 'displayName', 'GlobalDiscoveryServersSearchResultsStore'),
-    (n.Z = new T(l.Z, {
-        CONNECTION_OPEN: E,
-        GLOBAL_DISCOVERY_SERVERS_SEARCH_START: v,
-        GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS: y,
-        GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE: b,
-        GLOBAL_DISCOVERY_SERVERS_SEARCH_CLEAR: I
-    }));
+l(y, 'displayName', 'GlobalDiscoveryServersSearchResultsStore');
+let I = new y(a.Z, {
+    CONNECTION_OPEN: h,
+    GLOBAL_DISCOVERY_SERVERS_SEARCH_START: m,
+    GLOBAL_DISCOVERY_SERVERS_SEARCH_SUCCESS: g,
+    GLOBAL_DISCOVERY_SERVERS_SEARCH_FAILURE: E,
+    GLOBAL_DISCOVERY_SERVERS_SEARCH_CLEAR: v
+});

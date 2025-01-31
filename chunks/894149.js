@@ -1,17 +1,13 @@
-r.d(n, {
-    Z: function () {
-        return s;
-    }
-});
-var i = r(528734),
-    a = r(951516),
-    o = r(217224);
-function s(e, n) {
-    (0, a.Z)(2, arguments);
-    var r = (0, o.Z)(n);
-    r % 7 == 0 && (r -= 7);
+n.d(t, { Z: () => s });
+var i = n(528734),
+    r = n(951516),
+    a = n(217224);
+function s(e, t) {
+    (0, r.Z)(2, arguments);
+    var n = (0, a.Z)(t);
+    n % 7 == 0 && (n -= 7);
     var s = 1,
-        l = (0, i.default)(e),
-        u = (((r % 7) + 7) % 7 < s ? 7 : 0) + r - l.getUTCDay();
-    return l.setUTCDate(l.getUTCDate() + u), l;
+        o = (0, i.default)(e),
+        l = (((n % 7) + 7) % 7 < s ? 7 : 0) + n - o.getUTCDay();
+    return o.setUTCDate(o.getUTCDate() + l), o;
 }

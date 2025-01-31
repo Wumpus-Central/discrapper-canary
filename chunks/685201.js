@@ -1,11 +1,7 @@
-n.d(t, {
-    Z: function () {
-        return l;
-    }
-});
+n.d(t, { Z: () => l });
 var i = n(200651);
 n(192379);
-var r = n(331595);
+var r = n(325767);
 function l(e) {
     let { width: t = 24, height: n = 24, color: l = 'currentColor', foreground: s, ...a } = e;
     return (0, i.jsx)('svg', {

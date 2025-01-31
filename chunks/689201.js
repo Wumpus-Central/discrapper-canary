@@ -1,7 +1,8 @@
-e.exports = {
-    headerWave: 'headerWave_a586c4',
-    bodyWave: 'bodyWave_a586c4',
-    bodyWaveGradientStop1: 'bodyWaveGradientStop1_a586c4',
-    bodyWaveGradientStop2: 'bodyWaveGradientStop2_a586c4',
-    bodyWaveGradientStop3: 'bodyWaveGradientStop3_a586c4'
+var i = {
+    headerWave: 'headerWave__1dfae',
+    bodyWave: 'bodyWave__1dfae',
+    bodyWaveGradientStop1: 'bodyWaveGradientStop1__1dfae',
+    bodyWaveGradientStop2: 'bodyWaveGradientStop2__1dfae',
+    bodyWaveGradientStop3: 'bodyWaveGradientStop3__1dfae'
 };
+e.exports = i;

@@ -1,23 +1,18 @@
-a.d(t, {
-    D: function () {
-        return k;
-    }
-}),
-    a(47120);
+a.d(t, { D: () => k }), a(47120);
 var n = a(200651),
     s = a(192379),
-    i = a(557533),
-    r = a.n(i),
-    l = a(39383),
-    o = a.n(l),
+    l = a(557533),
+    i = a.n(l),
+    r = a(39383),
+    o = a.n(r),
     c = a(608863),
     d = a(66037),
     u = a(643103),
-    N = a(34211),
-    h = a(231338),
-    m = a(431138),
-    p = a(521667);
-function I(e, t, a) {
+    _ = a(34211),
+    N = a(231338),
+    h = a(431138),
+    m = a(521667);
+function p(e, t, a) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,7 +25,7 @@ function I(e, t, a) {
         e
     );
 }
-let _ = h.j_.MAIN_NAVIGATION_MENU;
+let I = N.j_.MAIN_NAVIGATION_MENU;
 class k extends s.PureComponent {
     componentDidMount() {
         window.addEventListener('keydown', this.handleKeyDown);
@@ -39,26 +34,26 @@ class k extends s.PureComponent {
         window.removeEventListener('keydown', this.handleKeyDown);
     }
     render() {
-        let { className: e, TrackClick: t, onChangeLocale: a, avoidRouter: s, openNavAriaLabel: i, hideNavAriaLabel: l } = this.props,
+        let { className: e, TrackClick: t, onChangeLocale: a, avoidRouter: s, openNavAriaLabel: l, hideNavAriaLabel: r } = this.props,
             { menuOpen: o } = this.state;
         return (0, n.jsx)('header', {
-            className: r()(p.header, e),
+            className: i()(m.header, e),
             children: (0, n.jsxs)('nav', {
-                className: p.headerInner,
+                className: m.headerInner,
                 children: [
                     (0, n.jsx)(t, {
                         tag: 'div',
-                        eventName: _,
-                        className: p.headerLogo,
+                        eventName: I,
+                        className: m.headerLogo,
                         data: { linkClicked: 'logo' },
                         children: (0, n.jsx)(d.Z, {
                             avoidRouter: s,
-                            className: p.logoWrapper,
-                            to: h.am.INDEX,
-                            from: h.j_.MAIN_NAVIGATION_MENU,
+                            className: m.logoWrapper,
+                            to: N.am.INDEX,
+                            from: N.j_.MAIN_NAVIGATION_MENU,
                             children: (0, n.jsx)('img', {
-                                className: p.logo,
-                                src: m.r.ASSET_LOGO_DISCORD_SVG,
+                                className: m.logo,
+                                src: h.r.ASSET_LOGO_DISCORD_SVG,
                                 alt: 'Discord',
                                 itemProp: 'logo'
                             })
@@ -66,25 +61,25 @@ class k extends s.PureComponent {
                     }),
                     (0, n.jsx)(t, {
                         tag: 'div',
-                        className: p.hamburgerButton,
-                        eventName: _,
+                        className: m.hamburgerButton,
+                        eventName: I,
                         data: { linkClicked: 'mobile-menu' },
                         children: (0, n.jsx)(c.r, {
                             open: o,
                             'aria-haspopup': 'true',
-                            'aria-label': o ? l : i,
+                            'aria-label': o ? r : l,
                             'aria-expanded': o,
                             'aria-controls': this._mainNavId,
                             onClick: this.toggleMenu
                         })
                     }),
                     (0, n.jsxs)('ul', {
-                        className: o ? p.headerNavOpen : p.headerNav,
+                        className: o ? m.headerNavOpen : m.headerNav,
                         children: [
-                            (0, n.jsx)(N.o, {
+                            (0, n.jsx)(_.o, {
                                 avoidRouter: s,
                                 TrackClick: t,
-                                styles: p,
+                                styles: m,
                                 isMobile: !0,
                                 isVisible: o
                             }),
@@ -97,12 +92,12 @@ class k extends s.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            I(this, '_mainNavId', o()('mainNav')),
-            I(this, 'state', { menuOpen: !1 }),
-            I(this, 'toggleMenu', () => {
+            p(this, '_mainNavId', o()('mainNav')),
+            p(this, 'state', { menuOpen: !1 }),
+            p(this, 'toggleMenu', () => {
                 this.setState({ menuOpen: !this.state.menuOpen });
             }),
-            I(this, 'handleKeyDown', (e) => {
+            p(this, 'handleKeyDown', (e) => {
                 let { menuOpen: t } = this.state;
                 ('Escape' === e.key || 'Esc' === e.key) && (e.preventDefault(), t && this.toggleMenu());
             });

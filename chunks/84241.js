@@ -1,6 +1,1 @@
-r.d(n, {
-    z: function () {
-        return i.z;
-    }
-});
-var i = r(627472);
+n(627472);

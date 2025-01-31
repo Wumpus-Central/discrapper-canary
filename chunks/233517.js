@@ -1,142 +1,108 @@
-r.d(t, {
-    Qy: function () {
-        return h;
-    },
-    TM: function () {
-        return S;
-    },
-    Tb: function () {
-        return s;
-    },
-    YA: function () {
-        return N;
-    },
-    av: function () {
-        return d;
-    },
-    cg: function () {
-        return P;
-    },
-    dk: function () {
-        return p;
-    },
-    eN: function () {
-        return I;
-    },
-    eW: function () {
-        return f;
-    },
-    mG: function () {
-        return T;
-    },
-    rJ: function () {
-        return R;
-    },
-    sU: function () {
-        return A;
-    },
-    uT: function () {
-        return l;
-    },
-    v: function () {
-        return u;
-    },
-    xv: function () {
-        return L;
-    },
-    yj: function () {
-        return D;
-    },
-    yl: function () {
-        return O;
-    }
+a.d(e, {
+    Qy: () => O,
+    TM: () => g,
+    Tb: () => E,
+    YA: () => f,
+    av: () => p,
+    cg: () => y,
+    dk: () => h,
+    eN: () => u,
+    eW: () => T,
+    mG: () => A,
+    rJ: () => R,
+    sU: () => d,
+    uT: () => l,
+    v: () => I,
+    xv: () => L,
+    yj: () => D,
+    yl: () => N
 });
-var a = r(622916),
-    n = r(899517),
-    _ = r(559508),
-    o = r(263449),
-    E = r(255768),
-    i = r(112797),
-    c = r(822578);
-function s(e, t) {
-    return (0, o.nZ)().captureException(e, (0, c.U0)(t));
+var r = a(622916),
+    n = a(899517),
+    o = a(559508),
+    _ = a(263449),
+    i = a(255768),
+    c = a(112797),
+    s = a(822578);
+function E(t, e) {
+    return (0, _.nZ)().captureException(t, (0, s.U0)(e));
 }
-function l(e, t) {
-    let r = 'string' == typeof t ? t : void 0,
-        a = 'string' != typeof t ? { captureContext: t } : void 0;
-    return (0, o.nZ)().captureMessage(e, r, a);
+function l(t, e) {
+    let a = 'string' == typeof e ? e : void 0,
+        r = 'string' != typeof e ? { captureContext: e } : void 0;
+    return (0, _.nZ)().captureMessage(t, a, r);
 }
-function I(e, t) {
-    return (0, o.nZ)().captureEvent(e, t);
+function u(t, e) {
+    return (0, _.nZ)().captureEvent(t, e);
 }
-function u(e, t) {
-    (0, o.aF)().setContext(e, t);
+function I(t, e) {
+    (0, _.aF)().setContext(t, e);
 }
-function R(e) {
-    (0, o.aF)().setExtras(e);
+function R(t) {
+    (0, _.aF)().setExtras(t);
 }
-function A(e, t) {
-    (0, o.aF)().setExtra(e, t);
+function d(t, e) {
+    (0, _.aF)().setExtra(t, e);
 }
-function T(e) {
-    (0, o.aF)().setTags(e);
+function A(t) {
+    (0, _.aF)().setTags(t);
 }
-function N(e, t) {
-    (0, o.aF)().setTag(e, t);
+function f(t, e) {
+    (0, _.aF)().setTag(t, e);
 }
-function d(e) {
-    (0, o.aF)().setUser(e);
+function p(t) {
+    (0, _.aF)().setUser(t);
 }
-function f() {
-    return (0, o.aF)().lastEventId();
+function T() {
+    return (0, _.aF)().lastEventId();
 }
-async function O(e) {
-    let t = (0, o.s3)();
-    return t ? t.flush(e) : (E.X && a.kg.warn('Cannot flush events. No client defined.'), Promise.resolve(!1));
+async function N(t) {
+    let e = (0, _.s3)();
+    return e ? e.flush(t) : (i.X && r.kg.warn('Cannot flush events. No client defined.'), Promise.resolve(!1));
 }
-async function L(e) {
-    let t = (0, o.s3)();
-    return t ? t.close(e) : (E.X && a.kg.warn('Cannot flush events and disable SDK. No client defined.'), Promise.resolve(!1));
+async function L(t) {
+    let e = (0, _.s3)();
+    return e ? e.close(t) : (i.X && r.kg.warn('Cannot flush events and disable SDK. No client defined.'), Promise.resolve(!1));
 }
-function p() {
-    return !!(0, o.s3)();
+function h() {
+    return !!(0, _.s3)();
 }
-function h(e) {
-    (0, o.aF)().addEventProcessor(e);
+function O(t) {
+    (0, _.aF)().addEventProcessor(t);
 }
-function D(e) {
-    let t = (0, o.s3)(),
-        r = (0, o.aF)(),
-        a = (0, o.nZ)(),
-        { release: E, environment: c = _.J } = (t && t.getOptions()) || {},
-        { userAgent: s } = n.n.navigator || {},
-        l = (0, i.Hv)({
-            release: E,
-            environment: c,
-            user: a.getUser() || r.getUser(),
-            ...(s && { userAgent: s }),
-            ...e
+function D(t) {
+    let e = (0, _.s3)(),
+        a = (0, _.aF)(),
+        r = (0, _.nZ)(),
+        { release: i, environment: s = o.J } = (e && e.getOptions()) || {},
+        { userAgent: E } = n.n.navigator || {},
+        l = (0, c.Hv)({
+            release: i,
+            environment: s,
+            user: r.getUser() || a.getUser(),
+            ...(E && { userAgent: E }),
+            ...t
         }),
-        I = r.getSession();
-    return I && 'ok' === I.status && (0, i.CT)(I, { status: 'exited' }), S(), r.setSession(l), a.setSession(l), l;
+        u = a.getSession();
+    return u && 'ok' === u.status && (0, c.CT)(u, { status: 'exited' }), g(), a.setSession(l), r.setSession(l), l;
 }
-function S() {
-    let e = (0, o.aF)(),
-        t = (0, o.nZ)(),
-        r = t.getSession() || e.getSession();
-    r && (0, i.RJ)(r), C(), e.setSession(), t.setSession();
+function g() {
+    let t = (0, _.aF)(),
+        e = (0, _.nZ)(),
+        a = e.getSession() || t.getSession();
+    a && (0, c.RJ)(a), m(), t.setSession(), e.setSession();
 }
-function C() {
-    let e = (0, o.aF)(),
-        t = (0, o.nZ)(),
-        r = (0, o.s3)(),
-        a = t.getSession() || e.getSession();
-    a && r && r.captureSession(a);
+function m() {
+    let t = (0, _.aF)(),
+        e = (0, _.nZ)(),
+        a = (0, _.s3)(),
+        r = e.getSession() || t.getSession();
+    r && a && a.captureSession(r);
 }
-function P(e = !1) {
-    if (e) {
-        S();
+function y(t = !1) {
+    if (t) {
+        g();
         return;
     }
-    C();
+    m();
 }

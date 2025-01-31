@@ -1,32 +1,27 @@
-r.d(n, {
-    Z: function () {
-        return l;
+n.d(t, { Z: () => s }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(981729);
+function s(e) {
+    let { mouseLeaveDelay: t = 100, ...n } = e,
+        { children: s, className: o, ...l } = n,
+        u = r.useRef(0),
+        [c, d] = r.useState(!1);
+    function f() {
+        clearTimeout(u.current), d(!0);
     }
-});
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(981729);
-function l(e) {
-    let { mouseLeaveDelay: n = 100, ...r } = e,
-        { children: i, className: l, ...u } = r,
-        c = o.useRef(0),
-        [d, f] = o.useState(!1);
-    function p() {
-        clearTimeout(c.current), f(!0);
+    function _() {
+        clearTimeout(u.current), (u.current = setTimeout(() => d(!1), t));
     }
-    function h() {
-        clearTimeout(c.current), (c.current = setTimeout(() => f(!1), n));
-    }
-    return (0, a.jsx)('div', {
-        className: l,
-        onMouseEnter: 0 !== n ? p : () => {},
-        onMouseLeave: 0 !== n ? h : () => {},
-        children: (0, a.jsx)(s.u, {
-            forceOpen: d,
+    return (0, i.jsx)('div', {
+        className: o,
+        onMouseEnter: 0 !== t ? f : () => {},
+        onMouseLeave: 0 !== t ? _ : () => {},
+        children: (0, i.jsx)(a.u, {
+            forceOpen: c,
             disableTooltipPointerEvents: !1,
-            ...u,
-            children: i
+            ...l,
+            children: s
         })
     });
 }

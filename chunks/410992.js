@@ -1,15 +1,11 @@
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-});
+n.d(t, { Z: () => a });
 var i = n(200651);
 n(192379);
-var l = n(331595);
-function r(e) {
-    let { width: t = 45, height: n = 46, ...r } = e;
+var l = n(325767);
+function a(e) {
+    let { width: t = 45, height: n = 46, ...a } = e;
     return (0, i.jsxs)('svg', {
-        ...(0, l.Z)(r),
+        ...(0, l.Z)(a),
         width: t,
         height: n,
         viewBox: '0 0 49 50',

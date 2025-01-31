@@ -1,42 +1,38 @@
-t.d(n, {
-    Z: function () {
-        return g;
-    }
-});
-var i = t(200651),
-    l = t(192379),
-    r = t(481060),
-    a = t(980463),
-    o = t(328908),
-    s = t(135793),
-    u = t(111810),
-    d = t(84040),
-    c = t(388032);
-function g(e, n) {
-    let t = (0, d.Z)(n, e),
+n.d(t, { Z: () => g });
+var i = n(200651),
+    l = n(192379),
+    a = n(481060),
+    s = n(980463),
+    r = n(328908),
+    o = n(135793),
+    d = n(111810),
+    c = n(84040),
+    u = n(388032);
+function g(e, t) {
+    let n = (0, c.Z)(t, e),
         g = e.hasPotions(),
-        f = (0, u.V1)('Message Context Menu'),
+        f = (0, d.V1)('Message Context Menu'),
         m = l.useCallback(
-            (t) => {
+            (n) => {
                 try {
-                    (0, a.qc)(n.id, e.id, t);
+                    (0, s.qc)(t.id, e.id, n);
                 } catch {
-                    (0, r.showToast)((0, r.createToast)(c.intl.string(c.t.xsfC2d), r.ToastType.FAILURE));
+                    (0, a.showToast)((0, a.createToast)(u.intl.string(u.t.xsfC2d), a.ToastType.FAILURE));
                 }
             },
-            [n.id, e.id]
+            [t.id, e.id]
         );
-    return t && !g && f
-        ? (0, i.jsx)(r.MenuItem, {
+    return n && !g && f
+        ? (0, i.jsx)(a.sNh, {
               id: 'add-confetti-potion',
-              label: c.intl.string(c.t.icaJW1),
-              icon: r.ExperimentalConfettiIcon,
+              label: u.intl.string(u.t.icaJW1),
+              icon: a.l22,
               action: () =>
-                  (0, s.openMessageConfettiModal)({
-                      channelId: n.id,
+                  (0, o.s)({
+                      channelId: t.id,
                       message: e,
                       onRedeem: m,
-                      onClose: o.Qy
+                      onClose: r.Qy
                   })
           })
         : null;

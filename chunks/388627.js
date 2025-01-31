@@ -1,125 +1,104 @@
-r.d(n, {
-    E6: function () {
-        return A;
-    },
-    HP: function () {
-        return S;
-    },
-    II: function () {
-        return N;
-    },
-    fK: function () {
-        return b;
-    },
-    pL: function () {
-        return C;
-    }
-});
-var i = r(47120);
-var a = r(200651);
-r(192379);
-var o = r(442837),
-    s = r(902704),
-    l = r(765250),
-    u = r(615287),
-    c = r(214629),
-    d = r(317381),
-    f = r(812206);
-r(358221);
-var p = r(594190);
-r(569545), r(522474);
-var h = r(788983);
-r(199902), r(314897);
-var _ = r(355863),
-    m = r(293273);
-r(944486), r(808506);
-var g = r(145597),
-    E = r(32300),
-    v = r(371651);
-r(340101);
-var y = r(501787);
-async function b() {
+n.d(t, {
+    E6: () => b,
+    HP: () => I,
+    II: () => S,
+    fK: () => v,
+    pL: () => T
+}),
+    n(47120);
+var i = n(200651);
+n(192379);
+var r = n(442837),
+    a = n(902704),
+    s = n(765250),
+    o = n(615287),
+    l = n(214629),
+    u = n(317381),
+    c = n(812206);
+n(358221);
+var d = n(594190);
+n(569545), n(522474);
+var f = n(788983);
+n(199902), n(314897);
+var _ = n(355863),
+    p = n(293273);
+n(944486), n(808506);
+var h = n(145597),
+    m = n(32300),
+    g = n(371651);
+n(340101);
+var E = n(501787);
+async function v() {
     let e = { outOfProcessOverlay: !0 },
-        n = (0, E.Rb)('openOverlayPopout'),
-        i = v.Z.getForcedRenderMode(),
-        o = (0, E.b4)('openOverlayPopout');
-    if (!(n || o) && i === u.R5.UNSET) return;
-    let s = (e) => null;
-    if (o || i === u.R5.OUT_OF_PROCESS_V2) {
-        let { default: e } = await Promise.all([r.e('50506'), r.e('96211'), r.e('48835'), r.e('99152'), r.e('35535'), r.e('51269'), r.e('22878'), r.e('90508'), r.e('13351'), r.e('66711'), r.e('21628'), r.e('6380'), r.e('46097'), r.e('8739'), r.e('58059'), r.e('86282'), r.e('18543'), r.e('18895'), r.e('19652'), r.e('99393'), r.e('99008'), r.e('95393'), r.e('80284'), r.e('81463'), r.e('58191'), r.e('31135'), r.e('69174'), r.e('25343'), r.e('33862'), r.e('38902'), r.e('7590'), r.e('70205'), r.e('78447'), r.e('93375'), r.e('64679'), r.e('86778'), r.e('69057'), r.e('77564'), r.e('92421'), r.e('12205'), r.e('90225'), r.e('84804'), r.e('37220'), r.e('61447'), r.e('82158'), r.e('91315'), r.e('64222'), r.e('92982'), r.e('84656'), r.e('19582'), r.e('21429'), r.e('7892')]).then(r.bind(r, 969383));
-        (s = (n) =>
-            (0, a.jsx)(e, {
+        t = (0, m.Rb)('openOverlayPopout'),
+        r = g.Z.getForcedRenderMode(),
+        a = (0, m.b4)('openOverlayPopout');
+    if (!(t || a) && r === o.R5.UNSET) return;
+    let l = (e) => null;
+    if (a || r === o.R5.OUT_OF_PROCESS_V2) {
+        let { default: e } = await Promise.all([n.e('50506'), n.e('68880'), n.e('48835'), n.e('99152'), n.e('35535'), n.e('51269'), n.e('22878'), n.e('90508'), n.e('13351'), n.e('66711'), n.e('53937'), n.e('6380'), n.e('46097'), n.e('8739'), n.e('58059'), n.e('86282'), n.e('18543'), n.e('18895'), n.e('30243'), n.e('99393'), n.e('68241'), n.e('80284'), n.e('18533'), n.e('73448'), n.e('33862'), n.e('60691'), n.e('38902'), n.e('70298'), n.e('84466'), n.e('86133'), n.e('7590'), n.e('70205'), n.e('78447'), n.e('93375'), n.e('64679'), n.e('86778'), n.e('69057'), n.e('77564'), n.e('93597'), n.e('86715'), n.e('23919'), n.e('84804'), n.e('29452'), n.e('37220'), n.e('82158'), n.e('91315'), n.e('46283'), n.e('92982'), n.e('82755'), n.e('33914'), n.e('19582'), n.e('70151'), n.e('74976'), n.e('45585'), n.e('63421')]).then(n.bind(n, 969383));
+        (l = (t) =>
+            (0, i.jsx)(e, {
                 withTitleBar: !1,
-                windowKey: n
+                windowKey: t
             })),
-            (0, l.te)(g.qU, _.Z.getDefaultLayout(g.qU, 0), 0);
+            (0, s.te)(h.qU, _.Z.getDefaultLayout(h.qU, 0), 0);
     } else {
-        if (!n && i !== u.R5.OUT_OF_PROCESS_V3) return;
-        let { default: e } = await Promise.all([r.e('50506'), r.e('35535'), r.e('90508'), r.e('13351'), r.e('93382'), r.e('70205'), r.e('78447'), r.e('86778'), r.e('92421'), r.e('92982'), r.e('19582'), r.e('92922'), r.e('88359'), r.e('97315')]).then(r.bind(r, 989373));
-        (s = (n) =>
-            (0, a.jsx)(e, {
+        if (!t && r !== o.R5.OUT_OF_PROCESS_V3) return;
+        let { default: e } = await Promise.all([n.e('50506'), n.e('35535'), n.e('90508'), n.e('13351'), n.e('93382'), n.e('70205'), n.e('78447'), n.e('86778'), n.e('93597'), n.e('92982'), n.e('19582'), n.e('70151'), n.e('92922'), n.e('70336'), n.e('35116')]).then(n.bind(n, 989373));
+        (l = (t) =>
+            (0, i.jsx)(e, {
                 withTitleBar: !1,
-                windowKey: n
+                windowKey: t
             })),
-            (0, l.te)(y.OVERLAY_V3_LAYOUT_ID, _.Z.getDefaultLayout(y.OVERLAY_V3_LAYOUT_ID, 1), 1);
+            (0, s.te)(E.OVERLAY_V3_LAYOUT_ID, _.Z.getDefaultLayout(E.OVERLAY_V3_LAYOUT_ID, 1), 1);
     }
-    await h.bA(y.OVERLAY_V3_KEY, s, e);
+    await f.bA(E.$J, l, e);
 }
-function I() {
+function y() {
     let [e = PopoutWindowStore] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [PopoutWindowStore];
     return e.getWindowVisible(OVERLAY_V3_KEY);
 }
+function I(e, t) {
+    if (e === t) return !0;
+    if (e.length !== t.length) return !1;
+    for (let n = 0; n < e.length; n++) if (e[n].widget !== t[n].widget) return !1;
+    return !0;
+}
+function b(e, t) {
+    if (e === t) return !0;
+    if (e.length !== t.length) return !1;
+    for (let n = 0; n < e.length; n++) if (e[n].index !== t[n].index || e[n].notification !== t[n].notification || e[n].locked !== t[n].locked) return !1;
+    return !0;
+}
 function T() {
-    let [e = PopoutWindowStore, n = SelectedChannelStore, r = ApplicationStreamingStore, i = ChannelRTCStore, a = AuthenticationStore, o = LayoutStore, s = OverlayBridgeStore] = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [PopoutWindowStore, SelectedChannelStore, ApplicationStreamingStore, ChannelRTCStore, AuthenticationStore, LayoutStore, OverlayBridgeStore];
-    if (!I([e]) || !(null != s.getFocusedPID())) return !1;
-    let l = n.getVoiceChannelId();
-    if (null == l) return !1;
-    let u = o.getWidgetsForLayout(OVERLAY_V3_LAYOUT_ID).find((e) => isGoLiveWidget(e));
-    if (null == u || !u.pinned) return !1;
-    let c = a.getId(),
-        d = new Set(r.getAllActiveStreamsForChannel(l).map((e) => encodeStreamKey(e)));
-    return i.getStreamParticipants(l).filter((e) => e.user.id !== c && d.has(encodeStreamKey(e.stream))).length > 0;
-}
-function S(e, n) {
-    if (e === n) return !0;
-    if (e.length !== n.length) return !1;
-    for (let r = 0; r < e.length; r++) if (e[r].widget !== n[r].widget) return !1;
-    return !0;
-}
-function A(e, n) {
-    if (e === n) return !0;
-    if (e.length !== n.length) return !1;
-    for (let r = 0; r < e.length; r++) if (e[r].index !== n[r].index || e[r].notification !== n[r].notification || e[r].locked !== n[r].locked) return !1;
-    return !0;
-}
-function C() {
-    var e, n;
-    let r = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : p.ZP,
-        i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : m.Z,
-        a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : d.ZP,
-        o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : f.Z,
-        s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : (0, c.e1)(),
-        l = a.getCurrentEmbeddedActivity(),
-        u = null == l ? void 0 : l.applicationId,
-        h = null == u ? void 0 : o.getApplication(u);
-    if (null != l && null != h && s)
+    var e, t;
+    let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d.ZP,
+        i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : p.Z,
+        r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.ZP,
+        a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : c.Z,
+        s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : (0, l.e1)(),
+        o = r.getCurrentEmbeddedActivity(),
+        f = null == o ? void 0 : o.applicationId,
+        _ = null == f ? void 0 : a.getApplication(f);
+    if (null != o && null != _ && s)
         return {
-            id: l.applicationId,
+            id: o.applicationId,
             altId: void 0,
-            name: h.name
+            name: _.name
         };
-    let _ = (0, g.QF)(),
-        E = r.getGameForPID(_),
-        v = i.getActivityForPID(_);
-    return (null == E || null == E.id || null == E.name) && (null == v || null == v.application_id)
+    let m = (0, h.QF)(),
+        g = n.getGameForPID(m),
+        E = i.getActivityForPID(m);
+    return (null == g || null == g.id || null == g.name) && (null == E || null == E.application_id)
         ? void 0
         : {
-              id: null !== (e = null == E ? void 0 : E.id) && void 0 !== e ? e : null == v ? void 0 : v.application_id,
-              altId: null == v ? void 0 : v.application_id,
-              name: null !== (n = null == E ? void 0 : E.name) && void 0 !== n ? n : null == v ? void 0 : v.name
+              id: null !== (e = null == g ? void 0 : g.id) && void 0 !== e ? e : null == E ? void 0 : E.application_id,
+              altId: null == E ? void 0 : E.application_id,
+              name: null !== (t = null == g ? void 0 : g.name) && void 0 !== t ? t : null == E ? void 0 : E.name
           };
 }
-function N() {
-    let e = (0, c.PR)();
-    return (0, o.e7)([p.ZP, m.Z, d.ZP, f.Z], () => C(p.ZP, m.Z, d.ZP, f.Z, e), [e], s.Z);
+function S() {
+    let e = (0, l.PR)();
+    return (0, r.e7)([d.ZP, p.Z, u.ZP, c.Z], () => T(d.ZP, p.Z, u.ZP, c.Z, e), [e], a.Z);
 }

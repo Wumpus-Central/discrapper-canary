@@ -1,58 +1,54 @@
-r.d(n, {
-    Z: function () {
-        return v;
-    }
-});
-var i = r(200651),
-    a = r(192379),
-    o = r(120356),
-    s = r.n(o),
-    l = r(442837),
-    u = r(481060),
-    c = r(100527),
-    d = r(906732),
-    f = r(28546),
-    p = r(675478),
-    h = r(208049),
-    _ = r(522811),
-    m = r(763296),
-    g = r(526617),
-    E = r(620492);
-function v(e) {
-    let { guildId: n, channel: r, containerWidth: o, onClose: v, onSelect: y, analyticsSource: b, suppressPlaySound: I, shouldValidateSelectedSound: T, shouldShowUpsell: S = !0, gridNotice: A, inExpressionPicker: C, soundButtonOverlay: N, listPadding: R, renderHeader: O, defaultSoundsOnly: D } = e,
-        L = (0, l.e7)([m.Z], () => m.Z.isFetchingSounds() || m.Z.isFetchingDefaultSounds()),
-        { analyticsLocations: x } = (0, d.ZP)(c.Z.SOUNDBOARD_POPOUT);
-    a.useEffect(() => {
-        h.w(), p.DZ.loadIfNecessary(), !C && (0, f.ql)('');
-    }, [C]);
-    let { refreshEnabled: w } = (0, _.Z)({ location: 'SoundboardSoundPicker' });
-    return (0, i.jsx)(d.Gt, {
+n.d(t, { Z: () => E });
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(442837),
+    l = n(481060),
+    u = n(100527),
+    c = n(906732),
+    d = n(28546),
+    f = n(675478),
+    _ = n(208049),
+    p = n(522811),
+    h = n(763296),
+    m = n(526617),
+    g = n(620492);
+function E(e) {
+    let { guildId: t, channel: n, containerWidth: a, onClose: E, onSelect: v, analyticsSource: y, suppressPlaySound: I, shouldValidateSelectedSound: b, shouldShowUpsell: T = !0, gridNotice: S, inExpressionPicker: A, soundButtonOverlay: N, listPadding: C, renderHeader: R, defaultSoundsOnly: O } = e,
+        D = (0, o.e7)([h.Z], () => h.Z.isFetchingSounds() || h.Z.isFetchingDefaultSounds()),
+        { analyticsLocations: x } = (0, c.ZP)(u.Z.SOUNDBOARD_POPOUT);
+    r.useEffect(() => {
+        _.w(), f.DZ.loadIfNecessary(), A || (0, d.ql)('');
+    }, [A]);
+    let { refreshEnabled: L } = (0, p.Z)({ location: 'SoundboardSoundPicker' });
+    return (0, i.jsx)(c.Gt, {
         value: x,
-        children: (0, i.jsx)(u.Dialog, {
-            className: s()(E.picker, {
-                [E.fetching]: L,
-                [E.inExpressionPicker]: C,
-                [E.refresh]: w
+        children: (0, i.jsx)(l.VqE, {
+            className: s()(g.picker, {
+                [g.fetching]: D,
+                [g.inExpressionPicker]: A,
+                [g.refresh]: L
             }),
-            children: L
-                ? (0, i.jsx)(u.Spinner, {})
-                : (0, i.jsx)(g.Z, {
-                      guildId: n,
-                      channel: r,
-                      onClose: v,
-                      onSelect: y,
-                      shouldValidateSelectedSound: T,
-                      containerWidth: o,
+            children: D
+                ? (0, i.jsx)(l.$jN, {})
+                : (0, i.jsx)(m.Z, {
+                      guildId: t,
+                      channel: n,
+                      onClose: E,
+                      onSelect: v,
+                      shouldValidateSelectedSound: b,
+                      containerWidth: a,
                       suppressPlaySound: I,
-                      shouldShowUpsell: S,
-                      gridNotice: A,
+                      shouldShowUpsell: T,
+                      gridNotice: S,
                       soundButtonOverlay: N,
-                      listPadding: R,
-                      renderHeader: O,
-                      defaultSoundsOnly: D,
-                      inExpressionPicker: C,
-                      refreshEnabled: w,
-                      analyticsSource: b
+                      listPadding: C,
+                      renderHeader: R,
+                      defaultSoundsOnly: O,
+                      inExpressionPicker: A,
+                      refreshEnabled: L,
+                      analyticsSource: y
                   })
         })
     });

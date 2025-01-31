@@ -1,4 +1,5 @@
-e.exports = {
-    mask: 'mask_c7d26b',
-    status: 'status_c7d26b'
+var i = {
+    mask: 'mask_a423bd',
+    status: 'status_a423bd'
 };
+e.exports = i;

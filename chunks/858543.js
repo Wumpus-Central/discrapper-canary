@@ -1,17 +1,13 @@
 n.d(t, {
-    DM: function () {
-        return f;
-    },
-    ZP: function () {
-        return g;
-    }
+    DM: () => g,
+    ZP: () => f
 });
 var i = n(200651);
 n(192379);
-var o = n(120356),
-    a = n.n(o),
-    l = n(692547),
-    s = n(481060),
+var a = n(120356),
+    o = n.n(a),
+    s = n(692547),
+    l = n(481060),
     r = n(109434),
     c = n(456269),
     d = n(479099),
@@ -19,54 +15,54 @@ var o = n(120356),
     h = n(388032),
     m = n(994973),
     p = n(783626);
-function f(e) {
+function g(e) {
     let { channel: t, isNew: n } = e,
         i = (0, c.eV)(t),
-        o = i.slice(void 0, 3),
-        a = i.slice(3),
-        l = i.length > 3 ? i.length - 3 : 0,
-        s = t.hasFlag(u.zZ.PINNED),
-        r = o.length > 0 || s || n;
+        a = i.slice(void 0, 3),
+        o = i.slice(3),
+        s = i.length > 3 ? i.length - 3 : 0,
+        l = t.hasFlag(u.zZ.PINNED),
+        r = a.length > 0 || l || n;
     return {
-        shownTags: o,
-        remainingTags: a,
-        moreTagsCount: l,
-        isPinned: s,
+        shownTags: a,
+        remainingTags: o,
+        moreTagsCount: s,
+        isPinned: l,
         shouldRenderTagsRow: r,
         forumPostContainsTags: i.length > 0
     };
 }
-function g(e) {
-    let { channel: t, isNew: n, tagsClassName: o, className: c } = e,
+function f(e) {
+    let { channel: t, isNew: n, tagsClassName: a, className: c } = e,
         {
             shownTags: u,
-            remainingTags: g,
+            remainingTags: f,
             moreTagsCount: v,
-            isPinned: b,
-            shouldRenderTagsRow: T
-        } = f({
+            isPinned: T,
+            shouldRenderTagsRow: x
+        } = g({
             channel: t,
             isNew: n
         }),
-        { tagFilter: x } = (0, r.H)(t.id);
-    return T
+        { tagFilter: _ } = (0, r.H)(t.id);
+    return x
         ? (0, i.jsxs)('div', {
-              className: a()(p.tags, c),
+              className: o()(p.tags, c),
               children: [
                   n
-                      ? (0, i.jsx)(s.TextBadge, {
-                            className: a()(m.newBadge, m.inTagsRow),
-                            color: l.Z.unsafe_rawColors.BRAND_260.css,
+                      ? (0, i.jsx)(l.IGR, {
+                            className: o()(m.newBadge, m.inTagsRow),
+                            color: s.Z.unsafe_rawColors.BRAND_260.css,
                             text: h.intl.string(h.t.y2b7CA)
                         })
                       : null,
-                  b &&
+                  T &&
                       (0, i.jsx)('div', {
                           className: p.pinIcon,
-                          children: (0, i.jsx)(s.Tooltip, {
+                          children: (0, i.jsx)(l.ua7, {
                               text: h.intl.string(h.t['1QLRYW']),
                               children: (e) =>
-                                  (0, i.jsx)(s.PinIcon, {
+                                  (0, i.jsx)(l.qQX, {
                                       size: 'custom',
                                       ...e,
                                       width: 16,
@@ -81,14 +77,14 @@ function g(e) {
                           {
                               tag: e,
                               size: d.Z.Sizes.SMALL,
-                              className: a()(o, { [p.tagFiltered]: x.has(e.id) })
+                              className: o()(a, { [p.tagFiltered]: _.has(e.id) })
                           },
                           e.id
                       )
                   ),
                   v > 0
                       ? (0, i.jsx)(d.f, {
-                            tags: g,
+                            tags: f,
                             count: v,
                             size: d.Z.Sizes.SMALL
                         })

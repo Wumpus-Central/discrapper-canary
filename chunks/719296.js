@@ -1,8 +1,4 @@
-function i(e, n) {
-    return 'activityembed:'.concat(e, ':').concat(n);
+function i(e, t) {
+    return 'activityembed:'.concat(e, ':').concat(t);
 }
-r.d(n, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });

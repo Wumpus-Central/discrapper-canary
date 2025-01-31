@@ -1,67 +1,62 @@
-n.d(t, {
-    Z: function () {
-        return g;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => f }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(913527),
-    a = n.n(l),
-    o = n(442837),
-    s = n(481060),
+    l = n(192379),
+    a = n(913527),
+    r = n.n(a),
+    s = n(442837),
+    o = n(481060),
     c = n(727637),
-    u = n(782568),
-    d = n(317632),
+    d = n(782568),
+    u = n(317632),
     m = n(174767),
     h = n(594174),
-    f = n(55935),
+    _ = n(55935),
     p = n(388032),
-    _ = n(905180);
-function g(e) {
+    g = n(905180);
+function f(e) {
     let { invite: t, expired: n } = e,
-        l = (0, o.e7)([h.default], () => {
+        a = (0, s.e7)([h.default], () => {
             var e, n;
             return null !== (n = null === (e = h.default.getUser(t.inviter_id)) || void 0 === e ? void 0 : e.username) && void 0 !== n ? n : '';
         }),
-        u = (0, f.vc)(a()(t.created_at), 'LT'),
-        d = r.useRef(null),
-        g = (0, c.Z)(d);
+        d = (0, _.vc)(r()(t.created_at), 'LT'),
+        u = l.useRef(null),
+        f = (0, c.Z)(u);
     return (
-        r.useEffect(() => {
-            !n && (0, m.Br)(t);
+        l.useEffect(() => {
+            n || (0, m.Br)(t);
         }, [t, n]),
         (0, i.jsxs)('div', {
-            className: _.container,
-            ref: d,
+            className: g.container,
+            ref: u,
             children: [
                 (0, i.jsxs)('div', {
-                    className: _.primaryRow,
+                    className: g.primaryRow,
                     children: [
                         (0, i.jsx)('img', {
-                            className: _.inviteImage,
+                            className: g.inviteImage,
                             src: t.application_asset,
                             alt: 'Game Invite'
                         }),
-                        (0, i.jsx)(s.Text, {
-                            className: _.title,
+                        (0, i.jsx)(o.Text, {
+                            className: g.title,
                             variant: 'text-md/semibold',
                             color: 'interactive-active',
-                            children: p.intl.format(p.t.vtUO3d, { username: l })
+                            children: p.intl.format(p.t.vtUO3d, { username: a })
                         }),
                         (0, i.jsxs)('div', {
-                            className: _.buttonContainer,
+                            className: g.buttonContainer,
                             children: [
-                                (0, i.jsx)(E, {
+                                (0, i.jsx)(x, {
                                     expired: n,
                                     invite: t,
-                                    isHoveringInvite: g
+                                    isHoveringInvite: f
                                 }),
-                                (0, i.jsx)(s.CircleIconButton, {
-                                    className: _.deleteButton,
+                                (0, i.jsx)(o.M0o, {
+                                    className: g.deleteButton,
                                     tooltip: p.intl.string(p.t.oyYWHB),
-                                    color: s.CircleIconButtonColors.SECONDARY,
-                                    icon: (0, i.jsx)(s.TrashIcon, { size: 'xs' }),
+                                    color: o.YX$.SECONDARY,
+                                    icon: (0, i.jsx)(o.XHJ, { size: 'xs' }),
                                     onClick: () => {
                                         (0, m.UF)(t);
                                     }
@@ -70,22 +65,22 @@ function g(e) {
                         })
                     ]
                 }),
-                (0, i.jsx)('div', { className: _.divider }),
+                (0, i.jsx)('div', { className: g.divider }),
                 (0, i.jsxs)('div', {
-                    className: _.secondaryRow,
+                    className: g.secondaryRow,
                     children: [
-                        (0, i.jsxs)(s.Text, {
+                        (0, i.jsxs)(o.Text, {
                             variant: 'text-xs/medium',
-                            className: _.subtitle,
+                            className: g.subtitle,
                             color: 'text-muted',
-                            children: [t.application_name, ' \xB7 ', u]
+                            children: [t.application_name, ' \xB7 ', d]
                         }),
                         n &&
                             (0, i.jsx)('div', {
-                                className: _.metaContainer,
-                                children: (0, i.jsx)(s.Text, {
+                                className: g.metaContainer,
+                                children: (0, i.jsx)(o.Text, {
                                     variant: 'text-xxs/semibold',
-                                    className: _.__invalid_metaText,
+                                    className: g.__invalid_metaText,
                                     color: 'text-muted',
                                     children: p.intl.string(p.t['//8Uqa'])
                                 })
@@ -96,79 +91,79 @@ function g(e) {
         })
     );
 }
-function E(e) {
-    let { expired: t, invite: n, isHoveringInvite: l } = e,
-        a = (0, o.e7)([d.Z], () => d.Z.isInviteGameInstalled(n)),
-        c = (0, o.e7)([d.Z], () => d.Z.isInviteJoinable(n)),
-        [h, f] = r.useState(!1),
-        g = r.useCallback(async () => {
-            f(!0);
+function x(e) {
+    let { expired: t, invite: n, isHoveringInvite: a } = e,
+        r = (0, s.e7)([u.Z], () => u.Z.isInviteGameInstalled(n)),
+        c = (0, s.e7)([u.Z], () => u.Z.isInviteJoinable(n)),
+        [h, _] = l.useState(!1),
+        f = l.useCallback(async () => {
+            _(!0);
             try {
                 await (0, m.MH)(n);
             } catch {}
-            f(!1);
+            _(!1);
         }, [n]),
-        E = r.useCallback(async () => {
-            f(!0);
+        x = l.useCallback(async () => {
+            _(!0);
             try {
                 await (0, m.Ol)(n);
             } catch {}
-            f(!1);
+            _(!1);
         }, [n]);
-    if (t)
-        return a && l
-            ? (0, i.jsx)(s.Button, {
-                  className: _.primaryButton,
-                  color: s.ButtonColors.TRANSPARENT,
+    return t
+        ? r && a
+            ? (0, i.jsx)(o.zxk, {
+                  className: g.primaryButton,
+                  color: o.Ttl.TRANSPARENT,
                   disabled: h,
-                  size: s.ButtonSizes.SMALL,
-                  onClick: g,
+                  size: o.PhG.SMALL,
+                  onClick: f,
                   children: p.intl.string(p.t['s+J8Dg'])
               })
-            : null;
-    return a && c
-        ? (0, i.jsx)(s.Button, {
-              className: _.primaryButton,
-              color: s.ButtonColors.GREEN,
-              disabled: h,
-              size: s.ButtonSizes.SMALL,
-              onClick: E,
-              children: p.intl.string(p.t['/loN9/'])
-          })
-        : null != n.fallback_url
-          ? (0, i.jsx)(s.Button, {
-                className: _.primaryButton,
+            : null
+        : r && c
+          ? (0, i.jsx)(o.zxk, {
+                className: g.primaryButton,
+                color: o.Ttl.GREEN,
                 disabled: h,
-                size: s.ButtonSizes.SMALL,
-                color: s.ButtonColors.TRANSPARENT,
-                onClick: () => (0, u.Z)(n.fallback_url),
-                children: p.intl.string(p.t['27y8KC'])
+                size: o.PhG.SMALL,
+                onClick: x,
+                children: p.intl.string(p.t['/loN9/'])
             })
-          : (0, i.jsx)(s.Tooltip, {
-                text: p.intl.formatToPlainString(p.t.issFLC, { gameTitle: n.application_name }),
-                children: (e) =>
-                    (0, i.jsx)(s.Button, {
-                        ...e,
-                        className: _.primaryButton,
-                        disabled: !0,
-                        size: s.ButtonSizes.SMALL,
-                        color: s.ButtonColors.TRANSPARENT,
-                        onClick: () => (0, u.Z)(n.fallback_url),
-                        children: (0, i.jsxs)('div', {
-                            className: _.launchToJoinContainer,
-                            children: [
-                                (0, i.jsx)(s.Text, {
-                                    variant: 'text-xxs/medium',
-                                    className: _.launchToJoinText,
-                                    color: 'text-muted',
-                                    children: p.intl.string(p.t.dai1Oz)
-                                }),
-                                (0, i.jsx)(s.CircleInformationIcon, {
-                                    size: 'xxs',
-                                    color: s.tokens.colors.TEXT_MUTED.css
-                                })
-                            ]
-                        })
-                    })
-            });
+          : null != n.fallback_url
+            ? (0, i.jsx)(o.zxk, {
+                  className: g.primaryButton,
+                  disabled: h,
+                  size: o.PhG.SMALL,
+                  color: o.Ttl.TRANSPARENT,
+                  onClick: () => (0, d.Z)(n.fallback_url),
+                  children: p.intl.string(p.t['27y8KC'])
+              })
+            : (0, i.jsx)(o.ua7, {
+                  text: p.intl.formatToPlainString(p.t.issFLC, { gameTitle: n.application_name }),
+                  children: (e) =>
+                      (0, i.jsx)(o.zxk, {
+                          ...e,
+                          className: g.primaryButton,
+                          disabled: !0,
+                          size: o.PhG.SMALL,
+                          color: o.Ttl.TRANSPARENT,
+                          onClick: () => (0, d.Z)(n.fallback_url),
+                          children: (0, i.jsxs)('div', {
+                              className: g.launchToJoinContainer,
+                              children: [
+                                  (0, i.jsx)(o.Text, {
+                                      variant: 'text-xxs/medium',
+                                      className: g.launchToJoinText,
+                                      color: 'text-muted',
+                                      children: p.intl.string(p.t.dai1Oz)
+                                  }),
+                                  (0, i.jsx)(o.d3s, {
+                                      size: 'xxs',
+                                      color: o.TVs.colors.TEXT_MUTED.css
+                                  })
+                              ]
+                          })
+                      })
+              });
 }

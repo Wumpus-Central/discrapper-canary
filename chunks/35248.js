@@ -1,56 +1,53 @@
-r.d(n, {
-    M: function () {
-        return w;
-    },
-    a: function () {
-        return P;
-    }
-});
-var i = r(315314);
-var a = r(610138);
-var o = r(216116);
-var s = r(78328);
-var l = r(815648);
-var u = r(47120);
-var c = r(200651),
-    d = r(192379),
-    f = r(772848),
-    p = r(544891),
-    h = r(481060),
-    _ = r(355467),
-    m = r(821849),
-    g = r(600164),
-    E = r(311821),
-    v = r(591759),
-    y = r(987209),
-    b = r(563132),
-    I = r(409813),
-    T = r(620824),
-    S = r(737143),
-    A = r(926841),
-    C = r(362755),
-    N = r(981631),
-    R = r(474936),
-    O = r(388032),
-    D = r(13926);
-let L = 1000;
-function x(e, n, r, i, a) {
-    let o = N.ANM.BILLING_STANDALONE_CHECKOUT_PAGE(e, n, r, a),
-        s = new URL(v.Z.makeUrl(N.Z5c.BILLING_LOGIN_HANDOFF)),
-        l = (0, f.Z)();
+n.d(t, {
+    M: () => N,
+    a: () => C
+}),
+    n(315314),
+    n(309749),
+    n(610138),
+    n(216116),
+    n(78328),
+    n(815648),
+    n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(772848),
+    s = n(544891),
+    o = n(481060),
+    l = n(355467),
+    u = n(821849),
+    c = n(600164),
+    d = n(311821),
+    f = n(591759),
+    _ = n(987209),
+    p = n(563132),
+    h = n(409813),
+    m = n(620824),
+    g = n(737143),
+    E = n(926841),
+    v = n(362755),
+    y = n(981631),
+    I = n(474936),
+    b = n(388032),
+    T = n(13926);
+let S = 1000;
+function A(e, t, n, i, r) {
+    let o = y.ANM.BILLING_STANDALONE_CHECKOUT_PAGE(e, t, n, r),
+        l = new URL(f.Z.makeUrl(y.Z5c.BILLING_LOGIN_HANDOFF)),
+        u = (0, a.Z)();
     return (
-        s.searchParams.append('handoff_key', l),
-        s.searchParams.append('redirect_to', o),
-        p.tn
+        l.searchParams.append('handoff_key', u),
+        l.searchParams.append('redirect_to', o),
+        s.tn
             .post({
-                url: N.ANM.HANDOFF,
-                body: { key: l },
+                url: y.ANM.HANDOFF,
+                body: { key: u },
                 oldFormErrors: !0,
                 rejectWithError: !1
             })
             .then(
                 (e) => {
-                    s.searchParams.append('handoff_token', e.body.handoff_token), window.open(s.href);
+                    l.searchParams.append('handoff_token', e.body.handoff_token), window.open(l.href);
                 },
                 () => {
                     i();
@@ -58,65 +55,65 @@ function x(e, n, r, i, a) {
             )
     );
 }
-let w = (e) => {
-        let n,
-            r,
-            { step: i, onPurchaseComplete: a, onHandoffFailure: o } = e,
-            { selectedPlan: s, setSelectedPlanId: l, setSelectedSkuId: u, browserCheckoutState: f, browserCheckoutStateLoadId: p, browserCheckoutStateSkuId: g, browserCheckoutStatePlanId: E, contextMetadata: v } = (0, b.usePaymentContext)(),
-            { isGift: w } = (0, y.wD)(),
-            [P, M] = d.useState(!1);
-        switch (i) {
-            case I.h8.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY:
-                (n = N.i$l.GOOGLE_PAY), (r = (0, A.a)());
+let N = (e) => {
+        let t,
+            n,
+            { step: a, onPurchaseComplete: s, onHandoffFailure: c } = e,
+            { selectedPlan: d, setSelectedPlanId: f, setSelectedSkuId: N, browserCheckoutState: C, browserCheckoutStateLoadId: R, browserCheckoutStateSkuId: O, browserCheckoutStatePlanId: D, contextMetadata: x } = (0, p.JL)(),
+            { isGift: L } = (0, _.wD)(),
+            [P, w] = r.useState(!1);
+        switch (a) {
+            case h.h8.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY:
+                (t = y.i$l.GOOGLE_PAY), (n = (0, E.a)());
                 break;
-            case I.h8.AWAITING_BROWSER_CHECKOUT_APPLE_PAY:
-                (n = N.i$l.APPLE_PAY), (r = (0, T.b)());
+            case h.h8.AWAITING_BROWSER_CHECKOUT_APPLE_PAY:
+                (t = y.i$l.APPLE_PAY), (n = (0, m.b)());
                 break;
             default:
-                r = (0, S.q1)();
+                n = (0, g.q1)();
         }
         return (
-            d.useEffect(() => {
+            r.useEffect(() => {
                 let e = setTimeout(
                     () => {
                         var e;
-                        if (!P) M(!0), (0, _.r5)(v.loadId), x(null !== (e = null == s ? void 0 : s.id) && void 0 !== e ? e : R.Xh.PREMIUM_MONTH_TIER_2, w, v.loadId, o, n);
+                        !P && (w(!0), (0, l.r5)(x.loadId), A(null !== (e = null == d ? void 0 : d.id) && void 0 !== e ? e : I.Xh.PREMIUM_MONTH_TIER_2, L, x.loadId, c, t));
                     },
-                    r.delay ? L : 0
+                    n.delay ? S : 0
                 );
                 return () => clearTimeout(e);
-            }, [s, w, v, o, M, P, n, r.delay]),
-            d.useEffect(() => {
-                null !== g && (R.YQ.includes(g) && ((0, m.GZ)(g), (0, _.jg)()), u(g)), null !== E && l(E), p === v.loadId && f === C.Y.DONE && a();
-            }, [u, l, f, p, g, E, v, a]),
-            (0, c.jsxs)('div', {
-                className: D.body,
+            }, [d, L, x, c, w, P, t, n.delay]),
+            r.useEffect(() => {
+                null !== O && (I.YQ.includes(O) && ((0, u.GZ)(O), (0, l.jg)()), N(O)), null !== D && f(D), R === x.loadId && C === v.Y.DONE && s();
+            }, [N, f, C, R, O, D, x, s]),
+            (0, i.jsxs)('div', {
+                className: T.body,
                 children: [
-                    (0, c.jsx)(h.Heading, {
+                    (0, i.jsx)(o.X6q, {
                         variant: 'heading-xl/bold',
-                        children: O.intl.string(O.t.C4HYf3)
+                        children: b.intl.string(b.t.C4HYf3)
                     }),
-                    (0, c.jsx)(h.Text, {
+                    (0, i.jsx)(o.Text, {
                         variant: 'text-md/normal',
-                        className: D.description,
-                        children: O.intl.string(O.t.xfG7Ji)
+                        className: T.description,
+                        children: b.intl.string(b.t.xfG7Ji)
                     })
                 ]
             })
         );
     },
-    P = (e) => {
-        let { onPrimaryClick: n, onBackClick: r } = e;
-        return (0, c.jsx)('div', {
-            children: (0, c.jsxs)(h.ModalFooter, {
-                justify: g.Z.Justify.BETWEEN,
-                align: g.Z.Align.CENTER,
+    C = (e) => {
+        let { onPrimaryClick: t, onBackClick: n } = e;
+        return (0, i.jsx)('div', {
+            children: (0, i.jsxs)(o.mzw, {
+                justify: c.Z.Justify.BETWEEN,
+                align: c.Z.Align.CENTER,
                 children: [
-                    (0, c.jsx)(E.y, {
-                        onClick: n,
-                        children: O.intl.string(O.t['4Qvmmp'])
+                    (0, i.jsx)(d.y, {
+                        onClick: t,
+                        children: b.intl.string(b.t['4Qvmmp'])
                     }),
-                    (0, c.jsx)(E.Z, { onClick: r })
+                    (0, i.jsx)(d.Z, { onClick: n })
                 ]
             })
         });

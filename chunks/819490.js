@@ -1,8 +1,4 @@
-n.d(t, {
-    B: function () {
-        return i;
-    }
-});
+n.d(t, { B: () => l });
 let r = (0, n(818083).B)({
         kind: 'user',
         id: '2024-10_shop_tile_impression_logging',
@@ -16,4 +12,4 @@ let r = (0, n(818083).B)({
             }
         ]
     }),
-    i = (e) => r.useExperiment({ location: e }).enabled;
+    l = (e) => r.useExperiment({ location: e }).enabled;

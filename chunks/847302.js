@@ -1,133 +1,127 @@
-r.d(n, {
-    Gg: function () {
-        return S;
-    },
-    KH: function () {
-        return b;
-    },
-    ZP: function () {
-        return y;
-    }
-});
-var i = r(47120);
-var a = r(653041);
-var o = r(512722),
-    s = r.n(o),
-    l = r(911969),
-    u = r(998698),
-    c = r(465343),
-    d = r(53529),
-    f = r(341702),
-    p = r(925994),
-    h = r(436660),
-    _ = r(887490);
-let m = /(@[^@#]+(?:#0|#\d{4}))|(@[^\s\t@#:]+)(?=[\s\t@:])|(:[a-zA-Z0-9_~]+:)|(#"(?:\ |\\\\|\\"|(?!")\w)+")|(#[^\s\t@#:]+(?=[\s\t@#:]))/g,
-    g = new Set(['emoji', 'customEmoji', 'textMention', 'userMention', 'roleMention', 'channelMention', 'staticRouteLink', 'soundboard', 'timestamp']),
-    E = new Set(['line', 'blockQuote']),
-    v = new Set(['applicationCommandOption']);
-function y(e, n, r) {
-    let { isInline: i, isVoid: a, onChange: o } = e;
-    (e.isVoid = (e) => !!g.has(e.type) || a(e)), (e.isInline = (e) => !!g.has(e.type) || i(e));
+n.d(t, {
+    Gg: () => I,
+    KH: () => E,
+    ZP: () => g
+}),
+    n(47120),
+    n(653041);
+var i = n(512722),
+    r = n.n(i),
+    a = n(911969),
+    s = n(998698),
+    o = n(465343),
+    l = n(53529),
+    u = n(341702),
+    c = n(925994),
+    d = n(436660),
+    f = n(887490);
+let _ = /(@[^@#]+(?:#0|#\d{4}))|(@[^\s\t@#:]+)(?=[\s\t@:])|(:[a-zA-Z0-9_~]+:)|(#"(?:\ |\\\\|\\"|(?!")\w)+")|(#[^\s\t@#:]+(?=[\s\t@#:]))/g,
+    p = new Set(['emoji', 'customEmoji', 'textMention', 'userMention', 'roleMention', 'channelMention', 'staticRouteLink', 'soundboard', 'timestamp']),
+    h = new Set(['line', 'blockQuote']),
+    m = new Set(['applicationCommandOption']);
+function g(e, t, n) {
+    let { isInline: i, isVoid: r, onChange: a } = e;
+    (e.isVoid = (e) => !!p.has(e.type) || r(e)), (e.isInline = (e) => !!p.has(e.type) || i(e));
     let s = null,
-        l = !0;
+        o = !0;
     return (
         (e.onChange = () => {
-            let i = _.bN.richValue(e);
-            (i !== s || e.previewMarkdown !== l) &&
-                (d.T.withMergedEntry(e, () => {
-                    _.bN.withoutNormalizing(e, () => b(e, n, r));
+            let i = f.bN.richValue(e);
+            (i !== s || e.previewMarkdown !== o) &&
+                (l.T.withMergedEntry(e, () => {
+                    f.bN.withoutNormalizing(e, () => E(e, t, n));
                 }),
                 (s = i),
-                (l = e.previewMarkdown)),
-                o();
+                (o = e.previewMarkdown)),
+                a();
         }),
         e
     );
 }
-function b(e, n, r) {
-    let i = _.bN.areStylesDisabled(e);
-    for (let a of _.bN.blocks(e))
-        if (E.has(a[0].type)) i ? T(e, a, !0, null) : I(e, a, n, r);
+function E(e, t, n) {
+    let i = f.bN.areStylesDisabled(e);
+    for (let r of f.bN.blocks(e))
+        if (h.has(r[0].type)) i ? y(e, r, !0, null) : v(e, r, t, n);
         else {
-            let [o, s] = a;
-            for (let a = o.children.length - 1; a >= 0; a--) {
-                let l = o.children[a];
-                if (v.has(l.type)) {
-                    let o = [l, _.C0.child(s, a)];
-                    i ? T(e, o, !0, null) : I(e, o, n, r);
+            let [a, s] = r;
+            for (let r = a.children.length - 1; r >= 0; r--) {
+                let o = a.children[r];
+                if (m.has(o.type)) {
+                    let a = [o, f.C0.child(s, r)];
+                    i ? y(e, a, !0, null) : v(e, a, t, n);
                 }
             }
         }
 }
-function I(e, n, r, i) {
-    var a;
-    let o = 'line' === n[0].type && (null === (a = n[0].codeBlockState) || void 0 === a ? void 0 : a.isInCodeBlock) === !0,
-        s = _.q.markdown(n[0], r);
-    T(e, n, o, s) && ((n = _.q.updateElement(e, n)), (s = _.q.markdown(n[0], r))), !o && (S(e, n, i, s) && ((n = _.q.updateElement(e, n)), (s = _.q.markdown(n[0], r))), A(e, n, r, i, s));
+function v(e, t, n, i) {
+    var r;
+    let a = 'line' === t[0].type && (null === (r = t[0].codeBlockState) || void 0 === r ? void 0 : r.isInCodeBlock) === !0,
+        s = f.q.markdown(t[0], n);
+    y(e, t, a, s) && ((t = f.q.updateElement(e, t)), (s = f.q.markdown(t[0], n))), a || (I(e, t, i, s) && ((t = f.q.updateElement(e, t)), (s = f.q.markdown(t[0], n))), b(e, t, n, i, s));
 }
-function T(e, n, r, i) {
-    let [a, o] = n,
+function y(e, t, n, i) {
+    let [r, a] = t,
         s = !1;
-    for (let n = a.children.length - 1; n >= 0; n--) {
-        let l = a.children[n],
-            u = n < a.children.length - 1 ? a.children[n + 1] : null;
-        if (_.LC.isText(l) && !r) {
-            if (null == u || !e.isVoid(u)) continue;
-            let r = !1,
+    for (let t = r.children.length - 1; t >= 0; t--) {
+        let o = r.children[t],
+            l = t < r.children.length - 1 ? r.children[t + 1] : null;
+        if (f.LC.isText(o) && !n) {
+            if (null == l || !e.isVoid(l)) continue;
+            let n = !1,
                 i = 0;
             for (;;) {
-                let e = l.text.indexOf('\\', i);
+                let e = o.text.indexOf('\\', i);
                 if (-1 === e) break;
-                if (e === l.text.length - 1) {
-                    r = !0;
+                if (e === o.text.length - 1) {
+                    n = !0;
                     break;
                 }
                 i = e + 2;
             }
-            if (r) {
-                let r = _.C0.child(o, n + 1);
-                h.Q.voidToText(
+            if (n) {
+                let n = f.C0.child(a, t + 1);
+                d.Q.voidToText(
                     e,
-                    (0, p.sg)(u, {
+                    (0, c.sg)(l, {
+                        mode: 'plain',
+                        preventEmojiSurrogates: !0
+                    }),
+                    n
+                ),
+                    (s = !0);
+            }
+        } else if (e.isVoid(o)) {
+            let r = f.C0.child(a, t),
+                l = {
+                    path: f.C0.child(r, 0),
+                    offset: 0
+                };
+            (n || (null != i && S(e, a, l, i))) &&
+                (d.Q.voidToText(
+                    e,
+                    (0, c.sg)(o, {
                         mode: 'plain',
                         preventEmojiSurrogates: !0
                     }),
                     r
-                ),
-                    (s = !0);
-            }
-        } else if (e.isVoid(l)) {
-            let a = _.C0.child(o, n),
-                u = {
-                    path: _.C0.child(a, 0),
-                    offset: 0
-                };
-            (r || (null != i && N(e, o, u, i))) &&
-                (h.Q.voidToText(
-                    e,
-                    (0, p.sg)(l, {
-                        mode: 'plain',
-                        preventEmojiSurrogates: !0
-                    }),
-                    a
                 ),
                 (s = !0));
         }
     }
     return s;
 }
-function S(e, n, r, i) {
-    let a = n[1],
-        o = !1,
+function I(e, t, n, i) {
+    let r = t[1],
+        a = !1,
         s = [...i.entries].reverse();
-    for (let l = 0; l < s.length; l++) {
-        let u;
-        let c = s[l],
-            d = s[l + 1];
-        if (null != d && d.text.endsWith('\\') && c.start === d.start + d.text.length) continue;
+    for (let o = 0; o < s.length; o++) {
+        let l;
+        let c = s[o],
+            f = s[o + 1];
+        if (null != f && f.text.endsWith('\\') && c.start === f.start + f.text.length) continue;
         switch (c.attributes[0]) {
             case 'emoji':
-                u = {
+                l = {
                     type: 'emoji',
                     emoji: {
                         name: c.data.name,
@@ -139,7 +133,7 @@ function S(e, n, r, i) {
                 };
                 break;
             case 'customEmoji':
-                u = {
+                l = {
                     type: 'customEmoji',
                     emoji: {
                         emojiId: c.data.emojiId,
@@ -151,35 +145,35 @@ function S(e, n, r, i) {
                 };
                 break;
             case 'textMention':
-                u = {
+                l = {
                     type: 'textMention',
                     name: c.data.text,
                     children: [{ text: '' }]
                 };
                 break;
             case 'mention':
-                u = {
+                l = {
                     type: 'userMention',
                     userId: c.data.id,
                     children: [{ text: '' }]
                 };
                 break;
             case 'roleMention':
-                u = {
+                l = {
                     type: 'roleMention',
                     roleId: c.data.id,
                     children: [{ text: '' }]
                 };
                 break;
             case 'channelMention':
-                u = {
+                l = {
                     type: 'channelMention',
                     channelId: c.data.id,
                     children: [{ text: '' }]
                 };
                 break;
             case 'staticRouteLink':
-                u = {
+                l = {
                     type: 'staticRouteLink',
                     id: c.data.id,
                     itemId: c.data.itemId,
@@ -187,7 +181,7 @@ function S(e, n, r, i) {
                 };
                 break;
             case 'soundboard':
-                u = {
+                l = {
                     type: 'soundboard',
                     guildId: c.data.guildId,
                     soundId: c.data.soundId,
@@ -195,7 +189,7 @@ function S(e, n, r, i) {
                 };
                 break;
             case 'timestamp':
-                u = {
+                l = {
                     type: 'timestamp',
                     parsed: c.data,
                     children: [{ text: '' }]
@@ -204,105 +198,105 @@ function S(e, n, r, i) {
             default:
                 continue;
         }
-        if (!R(r, n[0], u)) continue;
-        let p = (0, f.t)(e, a, i.serializedChildren, c.start),
-            _ = (0, f.t)(e, a, i.serializedChildren, c.start + c.text.length);
-        h.Q.textToVoid(e, u, {
-            anchor: p,
-            focus: _
+        if (!A(n, t[0], l)) continue;
+        let _ = (0, u.t)(e, r, i.serializedChildren, c.start),
+            p = (0, u.t)(e, r, i.serializedChildren, c.start + c.text.length);
+        d.Q.textToVoid(e, l, {
+            anchor: _,
+            focus: p
         }),
-            (o = !0);
+            (a = !0);
     }
-    return o;
+    return a;
 }
-function A(e, n, r, i, a) {
-    let [o, s] = n,
+function b(e, t, n, i, r) {
+    let [a, s] = t,
         l = !1;
-    for (let u = o.children.length - 1; u >= 0; u--) {
-        let d;
-        let f = o.children[u];
-        if (!_.LC.isText(f)) continue;
-        let p = _.C0.child(s, u),
+    for (let u = a.children.length - 1; u >= 0; u--) {
+        let c;
+        let d = a.children[u];
+        if (!f.LC.isText(d)) continue;
+        let p = f.C0.child(s, u),
             h = [];
-        for (m.lastIndex = 0; null != (d = m.exec(f.text)); ) {
-            if (0 !== d.index && null == f.text.charAt(d.index - 1).match(/(\t|\s)/)) {
-                m.lastIndex = d.index + 1;
+        for (_.lastIndex = 0; null != (c = _.exec(d.text)); ) {
+            if (0 !== c.index && null == d.text.charAt(c.index - 1).match(/(\t|\s)/)) {
+                _.lastIndex = c.index + 1;
                 continue;
             }
             if (
-                N(
+                S(
                     e,
                     s,
                     {
                         path: p,
-                        offset: d.index
+                        offset: c.index
                     },
-                    a
+                    r
                 )
             )
                 continue;
-            let o = (0, c.i)(d[0], r, i);
-            null != o && R(i, n[0], o)
+            let a = (0, o.i)(c[0], n, i);
+            null != a && A(i, t[0], a)
                 ? h.push({
-                      index: d.index,
-                      length: d[0].length,
-                      node: o
+                      index: c.index,
+                      length: c[0].length,
+                      node: a
                   })
-                : (m.lastIndex = d.index + 1);
+                : (_.lastIndex = c.index + 1);
         }
-        for (let n of h.reverse()) C(e, [f, _.C0.child(s, u)], n.index, n.length, n.node), (l = !0);
+        for (let t of h.reverse()) T(e, [d, f.C0.child(s, u)], t.index, t.length, t.node), (l = !0);
     }
     return l;
 }
-function C(e, n, r, i, a) {
-    let [o, l] = n,
-        u = {
-            path: l,
-            offset: r
+function T(e, t, n, i, a) {
+    let [s, o] = t,
+        l = {
+            path: o,
+            offset: n
         },
-        c = {
-            path: l,
-            offset: r + i
+        u = {
+            path: o,
+            offset: n + i
         };
-    s()(u.offset >= 0 && u.offset <= o.text.length, 'Failed to find valid start position for raw mention replace'),
-        s()(c.offset >= 0 && c.offset <= o.text.length, 'Failed to find valid end position for raw mention replace'),
-        h.Q.textToVoid(e, a, {
-            anchor: u,
-            focus: c
+    r()(l.offset >= 0 && l.offset <= s.text.length, 'Failed to find valid start position for raw mention replace'),
+        r()(u.offset >= 0 && u.offset <= s.text.length, 'Failed to find valid end position for raw mention replace'),
+        d.Q.textToVoid(e, a, {
+            anchor: l,
+            focus: u
         });
 }
-function N(e, n, r, i) {
-    let a = 0;
-    for (let [i, o] of _.bN.nodes(e, {
+function S(e, t, n, i) {
+    let r = 0;
+    for (let [i, a] of f.bN.nodes(e, {
         at: {
-            anchor: _.bN.start(e, n),
-            focus: r
+            anchor: f.bN.start(e, t),
+            focus: n
         },
         mode: 'lowest'
     }))
-        _.LC.isText(i) ? (_.C0.equals(o, r.path) ? (a += r.offset) : (a += i.text.length)) : (a += 1);
+        f.LC.isText(i) ? (f.C0.equals(a, n.path) ? (r += n.offset) : (r += i.text.length)) : (r += 1);
     for (let e of i.entries) {
         if (!e.attributes.includes('codeBlockText') && !e.attributes.includes('inlineCode')) continue;
-        let n = e.start,
-            r = e.start + e.text.length;
-        if (n <= a && r >= a) return !0;
+        let t = e.start,
+            n = e.start + e.text.length;
+        if (t <= r && n >= r) return !0;
     }
     return !1;
 }
-function R(e, n, r) {
-    if ('applicationCommandOption' !== n.type) return !0;
-    switch (n.optionType) {
-        case l.jw.CHANNEL:
-            return 'channelMention' === r.type;
-        case l.jw.ROLE:
-            return 'roleMention' === r.type || ('textMention' === r.type && '@everyone' === r.name);
-        case l.jw.USER:
-            return 'userMention' === r.type;
-        case l.jw.MENTIONABLE:
-            return 'roleMention' === r.type || 'userMention' === r.type || ('textMention' === r.type && '@everyone' === r.name);
-        case l.jw.STRING: {
-            let r = null != e ? u.Z.getOption(e, n.optionName) : null;
-            return (null == r ? void 0 : r.choices) == null && (null == r ? void 0 : r.autocomplete) !== !0;
+function A(e, t, n) {
+    if ('applicationCommandOption' !== t.type) return !0;
+    switch (t.optionType) {
+        case a.jw.CHANNEL:
+            return 'channelMention' === n.type;
+        case a.jw.ROLE:
+            return 'roleMention' === n.type || ('textMention' === n.type && '@everyone' === n.name);
+        case a.jw.USER:
+            return 'userMention' === n.type;
+        case a.jw.MENTIONABLE:
+            return 'roleMention' === n.type || 'userMention' === n.type || ('textMention' === n.type && '@everyone' === n.name);
+        case a.jw.STRING: {
+            let n = null != e ? s.Z.getOption(e, t.optionName) : null;
+            return (null == n ? void 0 : n.choices) == null && (null == n ? void 0 : n.autocomplete) !== !0;
         }
         default:
             return !1;

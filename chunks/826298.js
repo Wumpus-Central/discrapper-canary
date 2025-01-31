@@ -1,38 +1,32 @@
-r.d(n, {
-    Q1: function () {
-        return u;
-    },
-    hV: function () {
-        return c;
-    },
-    ky: function () {
-        return l;
-    }
+n.d(t, {
+    Q1: () => l,
+    hV: () => u,
+    ky: () => o
 });
-var i = r(895924),
-    a = r(809090),
-    o = r(944877),
-    s = r(689079);
-let l = (e) => (e.type === i.Qi.BUILT_IN ? o.Z : a.Z);
-function u(e) {
+var i = n(895924),
+    r = n(809090),
+    a = n(944877),
+    s = n(689079);
+let o = (e) => (e.type === i.Qi.BUILT_IN ? a.Z : r.Z);
+function l(e) {
     return ''.concat(e / 16, 'rem');
 }
-function c(e, n) {
-    let r = n,
+function u(e, t) {
+    let n = t,
         i = !1,
-        a = n.indexOf(':');
-    if (a >= 0) {
-        let e = n.lastIndexOf(' ', a);
-        e >= 0 ? ((n = n.substring(0, e)), (i = !0)) : (n = n.substring(0, a));
-    } else n = n.substring(0, n.length);
-    let o = n.split(' ', s.Vd + 1);
+        r = t.indexOf(':');
+    if (r >= 0) {
+        let e = t.lastIndexOf(' ', r);
+        e >= 0 ? ((t = t.substring(0, e)), (i = !0)) : (t = t.substring(0, r));
+    } else t = t.substring(0, t.length);
+    let a = t.split(' ', s.Vd + 1);
     return (
-        o.length > s.Vd && ((i = !0), o.pop()),
-        (n = o.join(' ')),
-        (r.length > n.length || n.endsWith(' ')) && ((i = !0), (n = n.trimEnd())),
+        a.length > s.Vd && ((i = !0), a.pop()),
+        (t = a.join(' ')),
+        (n.length > t.length || t.endsWith(' ')) && ((i = !0), (t = t.trimEnd())),
         {
-            text: n,
-            parts: o,
+            text: t,
+            parts: a,
             hasSpaceTerminator: i
         }
     );

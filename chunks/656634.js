@@ -1,5 +1,6 @@
-e.exports = {
-    buttonHighlighted: 'buttonHighlighted_f8c432',
-    pausedButton: 'pausedButton_f8c432',
-    lockIcon: 'lockIcon_f8c432'
+var i = {
+    buttonHighlighted: 'buttonHighlighted__5d39a',
+    pausedButton: 'pausedButton__5d39a',
+    lockIcon: 'lockIcon__5d39a'
 };
+e.exports = i;

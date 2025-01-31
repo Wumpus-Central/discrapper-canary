@@ -1,6 +1,7 @@
+n.d(t, { Z: () => r });
 var i = n(200651);
 n(192379);
-t.Z = (e) => {
+let r = (e) => {
     let { width: t = 24, height: n = 24, color: r = 'currentColor', className: l } = e;
     return (0, i.jsx)('svg', {
         className: l,

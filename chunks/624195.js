@@ -1,25 +1,21 @@
-t.d(l, {
-    Z: function () {
-        return u;
-    }
-});
+t.d(l, { Z: () => u });
 var n = t(200651);
 t(192379);
 var i = t(120356),
     r = t.n(i),
-    a = t(729594),
-    o = t(340702);
-let s = RegExp('^music\\.amazon\\.(?:com|co\\.uk|de|co\\.jp|es|fr|it|com\\.au|in|ca|com\\.mx|com\\.br)');
+    s = t(729594),
+    a = t(340702);
+let o = RegExp('^music\\.amazon\\.(?:com|co\\.uk|de|co\\.jp|es|fr|it|com\\.au|in|ca|com\\.mx|com\\.br)');
 function d(e) {
     let l = null,
         t = null,
         n = null;
     try {
-        (l = (n = a.parse(e, !0)).host), (t = n.pathname);
+        (l = (n = s.parse(e, !0)).host), (t = n.pathname);
     } catch (e) {
         return null;
     }
-    return null != n && s.test(null != l ? l : '') && null != t ? n : null;
+    return null != n && o.test(null != l ? l : '') && null != t ? n : null;
 }
 function u(e) {
     let {
@@ -27,20 +23,20 @@ function u(e) {
         embed: { url: t, thumbnail: i }
     } = e;
     if (null == t || null == i) return null;
-    let a = d(t);
-    if (null == a) return null;
-    let s = a.query.iframe_url;
-    if (null == s || Array.isArray(s) || null == d(s)) return null;
-    let { width: u, height: m } = i,
-        h = u,
-        c = m;
+    let s = d(t);
+    if (null == s) return null;
+    let o = s.query.iframe_url;
+    if (null == o || Array.isArray(o) || null == d(o)) return null;
+    let { width: u, height: h } = i,
+        m = u,
+        c = h;
     return (
-        (u > 500 || m > 400) && (u > m ? ((h = 500), (c = (500 * m) / u)) : ((h = (400 * u) / m), (c = 400))),
+        (u > 500 || h > 400) && (u > h ? ((m = 500), (c = (500 * h) / u)) : ((m = (400 * u) / h), (c = 400))),
         (0, n.jsx)('iframe', {
-            className: r()(o.embedAmazonMusic, l),
-            src: s,
+            className: r()(a.embedAmazonMusic, l),
+            src: o,
             style: {
-                width: h,
+                width: m,
                 height: c
             },
             frameBorder: 0,

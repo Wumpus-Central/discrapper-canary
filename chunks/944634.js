@@ -1,6 +1,7 @@
-e.exports = {
-    container: 'container_ba3c0b',
-    image: 'image_ba3c0b',
-    buttonContainer: 'buttonContainer_ba3c0b',
-    previewButtonContainer: 'previewButtonContainer_ba3c0b'
+var i = {
+    container: 'container__10adc',
+    image: 'image__10adc',
+    buttonContainer: 'buttonContainer__10adc',
+    previewButtonContainer: 'previewButtonContainer__10adc'
 };
+e.exports = i;

@@ -1,13 +1,9 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
-var a = n(200651);
+n.d(t, { Z: () => u });
+var i = n(200651);
 n(192379);
-var i = n(313361),
+var l = n(313361),
     r = n(683860),
-    l = n(481060),
+    a = n(481060),
     s = n(109434),
     o = n(228392),
     c = n(388032),
@@ -35,26 +31,26 @@ function u(e) {
                 h.getState().setLayoutType(t.id, e),
                 n();
         };
-    return (0, a.jsx)('div', {
+    return (0, i.jsx)('div', {
         className: d.container,
-        children: (0, a.jsxs)(l.Menu, {
+        children: (0, i.jsxs)(a.v2r, {
             navId: 'sort-and-view',
             'aria-label': g ? c.intl.string(c.t['kQN/bm']) : c.intl.string(c.t.DJzbkJ),
             hideScroller: !0,
             onClose: n,
             onSelect: n,
             children: [
-                (0, a.jsxs)(l.MenuGroup, {
+                (0, i.jsxs)(a.kSQ, {
                     label: c.intl.string(c.t.f8wNDg),
                     children: [
-                        (0, a.jsx)(l.MenuRadioItem, {
+                        (0, i.jsx)(a.k5B, {
                             id: 'sort-by-recent-activity',
                             group: 'sort-by',
                             label: c.intl.string(c.t.jOPmcH),
                             action: () => x(r.z.LATEST_ACTIVITY),
                             checked: u === r.z.LATEST_ACTIVITY
                         }),
-                        (0, a.jsx)(l.MenuRadioItem, {
+                        (0, i.jsx)(a.k5B, {
                             id: 'sort-by-date-posted',
                             group: 'sort-by',
                             label: c.intl.string(c.t.UIltXV),
@@ -64,30 +60,30 @@ function u(e) {
                     ]
                 }),
                 !t.isMediaChannel() &&
-                    (0, a.jsxs)(l.MenuGroup, {
+                    (0, i.jsxs)(a.kSQ, {
                         label: c.intl.string(c.t.mFMDSk),
                         children: [
-                            (0, a.jsx)(l.MenuRadioItem, {
+                            (0, i.jsx)(a.k5B, {
                                 id: 'view-as-list',
                                 group: 'view-as',
                                 label: c.intl.string(c.t['NJFr+v']),
-                                action: () => f(i.X.LIST),
-                                checked: m === i.X.LIST
+                                action: () => f(l.X.LIST),
+                                checked: m === l.X.LIST
                             }),
-                            (0, a.jsx)(l.MenuRadioItem, {
+                            (0, i.jsx)(a.k5B, {
                                 id: 'view-as-grid',
                                 group: 'view-as',
                                 label: c.intl.string(c.t.wKeggY),
-                                action: () => f(i.X.GRID),
-                                checked: m === i.X.GRID
+                                action: () => f(l.X.GRID),
+                                checked: m === l.X.GRID
                             })
                         ]
                     }),
-                (0, a.jsx)(l.MenuGroup, {
-                    children: (0, a.jsx)(l.MenuItem, {
+                (0, i.jsx)(a.kSQ, {
+                    children: (0, i.jsx)(a.sNh, {
                         id: 'reset-all',
                         className: d.clearText,
-                        label: (0, a.jsx)(l.Text, {
+                        label: (0, i.jsx)(a.Text, {
                             variant: 'text-sm/medium',
                             color: 'none',
                             children: c.intl.string(c.t['3b//lJ'])

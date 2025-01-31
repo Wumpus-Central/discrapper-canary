@@ -1,26 +1,21 @@
-r.d(n, {
-    I5: function () {
-        return o;
-    },
-    M5: function () {
-        return s;
-    },
-    yd: function () {
-        return a;
-    }
+n.d(t, {
+    I5: () => a,
+    M5: () => s,
+    ZP: () => o,
+    yd: () => r
 });
-var i = r(474936);
-function a(e, n) {
-    return null == n || (null != e && i.$e[e] >= i.$e[n]);
+var i = n(474936);
+function r(e, t) {
+    return null == t || (null != e && i.$e[e] >= i.$e[t]);
 }
-function o(e, n) {
-    return null != e && null != e.premiumType && a(e.premiumType, n);
+function a(e, t) {
+    return null != e && null != e.premiumType && r(e.premiumType, t);
 }
-function s(e, n) {
-    return null != e && e.premiumType === n;
+function s(e, t) {
+    return null != e && e.premiumType === t;
 }
-n.ZP = {
-    isPremiumAtLeast: a,
-    isPremium: o,
+let o = {
+    isPremiumAtLeast: r,
+    isPremium: a,
     isPremiumExactly: s
 };

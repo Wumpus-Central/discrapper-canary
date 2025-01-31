@@ -1,13 +1,14 @@
 e.exports = {
-    wrapper: 'wrapper_a15d41',
-    zoomedMediaFitWrapper: 'zoomedMediaFitWrapper_a15d41',
-    optionsContainer: 'optionsContainer_a15d41',
-    navPrev: 'navPrev_a15d41 nav_a15d41',
-    navNext: 'navNext_a15d41 nav_a15d41',
-    downloadLink: 'downloadLink_a15d41',
-    forward: 'forward_a15d41',
-    obscureContainer: 'obscureContainer_a15d41',
-    obscureWrapper: 'obscureWrapper_a15d41',
-    obscure: 'obscure_a15d41',
-    controlsOffset: 'controlsOffset_a15d41'
+    wrapper: 'wrapper__1bcc7',
+    zoomedMediaFitWrapper: 'zoomedMediaFitWrapper__1bcc7',
+    optionsContainer: 'optionsContainer__1bcc7',
+    nav: 'nav__1bcc7',
+    navPrev: 'navPrev__1bcc7 nav__1bcc7',
+    navNext: 'navNext__1bcc7 nav__1bcc7',
+    downloadLink: 'downloadLink__1bcc7',
+    forward: 'forward__1bcc7',
+    obscureContainer: 'obscureContainer__1bcc7',
+    obscureWrapper: 'obscureWrapper__1bcc7',
+    obscure: 'obscure__1bcc7',
+    controlsOffset: 'controlsOffset__1bcc7'
 };

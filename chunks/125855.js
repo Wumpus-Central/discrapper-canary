@@ -1,12 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
+n.d(t, { Z: () => u });
 var i = n(200651);
 n(192379);
-var r = n(6025),
-    l = n(433355),
+var l = n(6025),
+    r = n(433355),
     a = n(626135),
     s = n(585483),
     o = n(545724),
@@ -22,9 +18,9 @@ function u(e) {
         user: h,
         onClick: (e) => {
             e.stopPropagation(),
-                r.Z.openPrivateChannelAsSidebar({
+                l.Z.openPrivateChannelAsSidebar({
                     channelId: u.id,
-                    baseChannelId: l.uZ,
+                    baseChannelId: r.uZ,
                     hasSingleMessageRequest: m
                 }),
                 a.default.track(d.rMx.MESSAGE_REQUEST_PREVIEW_VIEWED, {

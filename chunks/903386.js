@@ -1,15 +1,11 @@
-n.d(t, {
-    Z: function () {
-        return l;
-    }
-});
+n.d(t, { Z: () => l });
 var i = n(200651);
 function l(e) {
-    let { width: t = 18, height: n = 18, color: l = 'currentColor', foreground: s, background: r, className: a } = e;
+    let { width: t = 18, height: n = 18, color: l = 'currentColor', foreground: s, background: a, className: r } = e;
     return (0, i.jsx)('svg', {
         width: t,
         height: n,
-        className: a,
+        className: r,
         viewBox: '0 0 18 18',
         children: (0, i.jsxs)('g', {
             stroke: 'none',
@@ -23,7 +19,7 @@ function l(e) {
                     fillOpacity: '0.3',
                     fill: l,
                     fillRule: 'nonzero',
-                    className: r
+                    className: a
                 }),
                 (0, i.jsx)('path', {
                     d: 'M8.25,12.75 L8.25,11.25 L9.75,11.25 L9.75,12.75 L8.25,12.75 Z M8.25,9.75 L8.25,5.25 L9.75,5.25 L9.75,9.75 L8.25,9.75 Z',

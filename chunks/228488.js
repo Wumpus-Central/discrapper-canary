@@ -1,43 +1,31 @@
-r.d(n, {
-    Dj: function () {
-        return s;
-    },
-    NO: function () {
-        return c;
-    },
-    Pr: function () {
-        return l;
-    },
-    fn: function () {
-        return a;
-    },
-    rB: function () {
-        return u;
-    },
-    uF: function () {
-        return d;
-    }
+n.d(t, {
+    Dj: () => s,
+    NO: () => u,
+    Pr: () => o,
+    fn: () => r,
+    rB: () => l,
+    uF: () => c
 });
-var i = r(710845);
-function a() {
-    for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
-    return n.find((e) => null != e && o(e));
+var i = n(710845);
+function r() {
+    for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
+    return t.find((e) => null != e && a(e));
 }
-function o(e) {
+function a(e) {
     return null != e.requestFullscreen || null != e.webkitRequestFullscreen || e.webkitSupportsFullscreen || null != e.mozRequestFullScreen || null != e.msRequestFullscreen;
 }
 function s(e) {
     'function' == typeof e.requestFullscreen ? e.requestFullscreen() : 'function' == typeof e.webkitRequestFullscreen ? e.webkitRequestFullscreen() : 'function' == typeof e.webkitEnterFullscreen ? e.webkitEnterFullscreen() : 'function' == typeof e.mozRequestFullScreen ? e.mozRequestFullScreen() : 'function' == typeof e.msRequestFullscreen ? e.msRequestFullscreen() : new i.Z('FullScreenUtils').warn('Fullscreen API is not supported.');
 }
-function l(e, n) {
-    let r = null != n ? n : document;
-    u(null, r) && ('function' == typeof r.exitFullscreen ? r.exitFullscreen() : 'function' == typeof r.webkitExitFullscreen ? r.webkitExitFullscreen() : 'function' == typeof e.webkitExitFullscreen ? e.webkitExitFullscreen() : 'function' == typeof r.mozCancelFullScreen ? r.mozCancelFullScreen() : 'function' == typeof r.msExitFullscreen ? r.msExitFullscreen() : new i.Z('FullScreenUtils').warn('Fullscreen API is not supported.'));
+function o(e, t) {
+    let n = null != t ? t : document;
+    l(null, n) && ('function' == typeof n.exitFullscreen ? n.exitFullscreen() : 'function' == typeof n.webkitExitFullscreen ? n.webkitExitFullscreen() : 'function' == typeof e.webkitExitFullscreen ? e.webkitExitFullscreen() : 'function' == typeof n.mozCancelFullScreen ? n.mozCancelFullScreen() : 'function' == typeof n.msExitFullscreen ? n.msExitFullscreen() : new i.Z('FullScreenUtils').warn('Fullscreen API is not supported.'));
 }
-function u(e, n) {
-    let r = null != n ? n : document;
-    return !!(null != r.fullscreenElement || null != r.mozFullScreenElement || null != r.webkitFullscreenElement || null != r.msFullscreenElement || (null != e && e.webkitDisplayingFullscreen));
+function l(e, t) {
+    let n = null != t ? t : document;
+    return !!(null != n.fullscreenElement || null != n.mozFullScreenElement || null != n.webkitFullscreenElement || null != n.msFullscreenElement || (null != e && e.webkitDisplayingFullscreen));
 }
-let c = (() => {
+let u = (() => {
     if ('undefined' != typeof document) {
         let e = document.createElement('video');
         if ('function' == typeof e.requestFullscreen);
@@ -48,12 +36,12 @@ let c = (() => {
     } else console.warn('FullScreenUtils has been imported in a non-web environment');
     return 'fullscreenchange';
 })();
-function d(e, n) {
+function c(e, t) {
     return (
-        e.addEventListener(c, n),
-        e.addEventListener('webkitfullscreenchange', n),
+        e.addEventListener(u, t),
+        e.addEventListener('webkitfullscreenchange', t),
         () => {
-            e.removeEventListener(c, n), e.removeEventListener('webkitfullscreenchange', n);
+            e.removeEventListener(u, t), e.removeEventListener('webkitfullscreenchange', t);
         }
     );
 }

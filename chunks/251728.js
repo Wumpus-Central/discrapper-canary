@@ -1,40 +1,36 @@
-r.d(n, {
-    Y: function () {
-        return c;
-    }
-});
-var i = r(685816),
-    a = r(549616),
-    o = r(794934),
-    s = r(885577),
-    l = r(198647);
-function u(e, n, r) {
+n.d(t, { Y: () => u });
+var i = n(685816),
+    r = n(549616),
+    a = n(794934),
+    s = n(885577),
+    o = n(198647);
+function l(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class c {
+class u {
     static fromServer(e) {
-        return new c(e);
+        return new u(e);
     }
     constructor(e) {
-        u(this, 'shopBlocks', void 0),
-            u(this, 'categories', void 0),
+        l(this, 'shopBlocks', void 0),
+            l(this, 'categories', void 0),
             (this.shopBlocks = e.shop_blocks
                 .map((e) => {
                     switch (e.type) {
                         case i.z.HERO:
-                            return l.s.fromServer(e);
+                            return o.s.fromServer(e);
                         case i.z.FEATURED:
-                            return o.I.fromServer(e);
+                            return a.I.fromServer(e);
                         case i.z.FEED:
                             return s.K.fromServer(e);
                         default:
@@ -42,6 +38,6 @@ class c {
                     }
                 })
                 .filter((e) => void 0 !== e)),
-            (this.categories = e.categories.map((e) => a.Z.fromServer(e)));
+            (this.categories = e.categories.map((e) => r.Z.fromServer(e)));
     }
 }

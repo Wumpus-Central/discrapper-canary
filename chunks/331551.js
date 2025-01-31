@@ -1,22 +1,18 @@
-r.d(n, {
-    b: function () {
-        return o;
-    }
-});
-var i = r(815790),
-    a = r(588215);
-function o(e, n) {
-    let r = (0, i.Dw)(e.joinedAt);
-    switch (n) {
-        case a.d$.ORDER_BY_GUILD_JOINED_AT_ASC:
-            return r;
-        case a.d$.ORDER_BY_GUILD_JOINED_AT_DESC:
-            return -r;
-        case a.d$.ORDER_BY_USER_ID_ASC:
+n.d(t, { b: () => a });
+var i = n(815790),
+    r = n(588215);
+function a(e, t) {
+    let n = (0, i.Dw)(e.joinedAt);
+    switch (t) {
+        case r.d$.ORDER_BY_GUILD_JOINED_AT_ASC:
+            return n;
+        case r.d$.ORDER_BY_GUILD_JOINED_AT_DESC:
+            return -n;
+        case r.d$.ORDER_BY_USER_ID_ASC:
             return parseInt(e.userId);
-        case a.d$.ORDER_BY_USER_ID_DESC:
+        case r.d$.ORDER_BY_USER_ID_DESC:
             return -parseInt(e.userId);
         default:
-            return -r;
+            return -n;
     }
 }

@@ -1,8 +1,4 @@
-n.d(t, {
-    P: function () {
-        return s;
-    }
-});
+n.d(t, { P: () => s });
 let i = (0, n(818083).B)({
         kind: 'user',
         label: 'Pomelo Suggestions',

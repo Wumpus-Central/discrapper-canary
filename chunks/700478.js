@@ -1,13 +1,8 @@
-r.r(n),
-    r.d(n, {
-        default: function () {
-            return s;
-        }
-    });
-var i = r(528734),
-    a = r(951516);
-function o(e) {
-    return (o =
+n.r(t), n.d(t, { default: () => s });
+var i = n(528734),
+    r = n(951516);
+function a(e) {
+    return (a =
         'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
             ? function (e) {
                   return typeof e;
@@ -17,17 +12,17 @@ function o(e) {
               })(e);
 }
 function s(e) {
-    var n, r;
-    if (((0, a.Z)(1, arguments), e && 'function' == typeof e.forEach)) n = e;
+    var t, n;
+    if (((0, r.Z)(1, arguments), e && 'function' == typeof e.forEach)) t = e;
     else {
-        if ('object' !== o(e) || null === e) return new Date(NaN);
-        n = Array.prototype.slice.call(e);
+        if ('object' !== a(e) || null === e) return new Date(NaN);
+        t = Array.prototype.slice.call(e);
     }
     return (
-        n.forEach(function (e) {
-            var n = (0, i.default)(e);
-            (void 0 === r || r > n || isNaN(n.getDate())) && (r = n);
+        t.forEach(function (e) {
+            var t = (0, i.default)(e);
+            (void 0 === n || n > t || isNaN(t.getDate())) && (n = t);
         }),
-        r || new Date(NaN)
+        n || new Date(NaN)
     );
 }

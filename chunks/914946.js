@@ -1,55 +1,21 @@
 n.d(t, {
-    FJ: function () {
-        return $;
-    },
-    RE: function () {
-        return k;
-    },
-    S5: function () {
-        return Y;
-    },
-    T5: function () {
-        return G;
-    },
-    Xb: function () {
-        return B;
-    },
-    YK: function () {
-        return Q;
-    },
-    _f: function () {
-        return et;
-    },
-    aE: function () {
-        return V;
-    },
-    bu: function () {
-        return ee;
-    },
-    cD: function () {
-        return H;
-    },
-    fy: function () {
-        return q;
-    },
-    s9: function () {
-        return F;
-    },
-    t9: function () {
-        return K;
-    },
-    tr: function () {
-        return J;
-    },
-    vv: function () {
-        return X;
-    },
-    zM: function () {
-        return z;
-    },
-    zy: function () {
-        return W;
-    }
+    FJ: () => $,
+    RE: () => k,
+    S5: () => Y,
+    T5: () => G,
+    Xb: () => B,
+    YK: () => Q,
+    _f: () => et,
+    aE: () => V,
+    bu: () => ee,
+    cD: () => H,
+    fy: () => q,
+    s9: () => F,
+    t9: () => K,
+    tr: () => J,
+    vv: () => X,
+    zM: () => z,
+    zy: () => W
 }),
     n(47120),
     n(653041),
@@ -57,8 +23,8 @@ n.d(t, {
     n(757143),
     n(392711);
 var i,
-    r,
-    l = n(729594),
+    l,
+    r = n(729594),
     a = n(243814),
     s = n(544891),
     o = n(63023),
@@ -69,8 +35,8 @@ var i,
     m = n(739566),
     p = n(695346),
     g = n(131704),
-    f = n(598077),
-    _ = n(592125),
+    _ = n(598077),
+    f = n(592125),
     E = n(430824),
     I = n(131951),
     C = n(375954),
@@ -78,14 +44,14 @@ var i,
     N = n(594174),
     T = n(979651),
     S = n(70956),
-    b = n(5192),
-    A = n(226951),
-    Z = n(591759),
-    x = n(996106),
+    Z = n(5192),
+    x = n(226951),
+    A = n(591759),
+    b = n(996106),
     L = n(863141),
     y = n(186901),
     P = n(981631);
-let O = null !== (r = null === (i = Z.Z.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT)) || void 0 === i ? void 0 : i.host) && void 0 !== r ? r : 'localhost',
+let O = null !== (l = null === (i = A.Z.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT)) || void 0 === i ? void 0 : i.host) && void 0 !== l ? l : 'localhost',
     R = (function () {
         let e = O.split(':')[0];
         if (!e.includes('.')) return e;
@@ -93,11 +59,11 @@ let O = null !== (r = null === (i = Z.Z.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT
             n = t[t.length - 1];
         return /^\d+$/.test(n) ? e : t.slice(-2).join('.');
     })(),
-    j = new RegExp('^'.concat(A.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(A.Z.escape(R), '|discordapp.com|discord.com)$')),
+    j = new RegExp('^'.concat(x.Z.escape('https://'), '(?:[a-z]+\\.)?(').concat(x.Z.escape(R), '|discordapp.com|discord.com)$')),
     D = 1 * S.Z.Millis.MINUTE,
-    M = {};
-function w(e) {
-    return 'customEmoji' === e.type && (e.type = 'emoji'), 'emoji' === e.type && e.src && (e.src = k(e.src)), Array.isArray(e.content) && (e.content = e.content.map(w)), e;
+    w = {};
+function M(e) {
+    return 'customEmoji' === e.type && (e.type = 'emoji'), 'emoji' === e.type && e.src && (e.src = k(e.src)), Array.isArray(e.content) && (e.content = e.content.map(M)), e;
 }
 function k(e) {
     return /^http/.test(e)
@@ -116,7 +82,7 @@ function G(e, t) {
     let n = [],
         i = e.getGuildId();
     return (
-        ![P.d4z.GUILD_CATEGORY, ...g.tx].includes(e.type) &&
+        [P.d4z.GUILD_CATEGORY, ...g.tx].includes(e.type) ||
             n.push(
                 new Promise((t) => {
                     C.Z.whenReady(e.id, () => t()),
@@ -128,8 +94,8 @@ function G(e, t) {
             ),
         Promise.all(n).then(() => {
             var n;
-            let r = (!e.isNSFW() || (null === (n = N.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? C.Z.getMessages(e.id).toArray().map(B) : [],
-                l = Object.values(T.Z.getVoiceStatesForChannel(e.id)).map((t) => V(i, e.id, t));
+            let l = (!e.isNSFW() || (null === (n = N.default.getCurrentUser()) || void 0 === n ? void 0 : n.nsfwAllowed) === !0) && t ? C.Z.getMessages(e.id).toArray().map(B) : [],
+                r = Object.values(T.Z.getVoiceStatesForChannel(e.id)).map((t) => V(i, e.id, t));
             return {
                 id: e.id,
                 name: e.name,
@@ -139,25 +105,25 @@ function G(e, t) {
                 user_limit: e.userLimit,
                 guild_id: i,
                 position: e.position,
-                messages: r,
-                voice_states: l
+                messages: l,
+                voice_states: r
             };
         })
     );
 }
 function B(e) {
-    let t = h.Z.parseToAST(e.content, !0, { channelId: e.channel_id }).map(w),
-        n = _.Z.getChannel(e.channel_id),
-        i = null != e.author ? new f.Z(e.author) : void 0,
-        r = null != e.author ? (0, m.ij)(i, n) : void 0;
+    let t = h.Z.parseToAST(e.content, !0, { channelId: e.channel_id }).map(M),
+        n = f.Z.getChannel(e.channel_id),
+        i = null != e.author ? new _.Z(e.author) : void 0,
+        l = null != e.author ? (0, m.ij)(i, n) : void 0;
     return {
         id: e.id,
         blocked: e.blocked,
         bot: e.bot,
         content: e.content,
         content_parsed: t.length ? t : void 0,
-        nick: null == r ? void 0 : r.nick,
-        author_color: null == r ? void 0 : r.colorString,
+        nick: null == l ? void 0 : l.nick,
+        author_color: null == l ? void 0 : l.colorString,
         edited_timestamp: e.edited_timestamp || e.editedTimestamp,
         timestamp: e.timestamp,
         tts: e.tts,
@@ -172,18 +138,18 @@ function B(e) {
     };
 }
 function V(e, t, n) {
-    let { mute: i, deaf: r, selfMute: l, selfDeaf: a, suppress: s, userId: o } = n,
+    let { mute: i, deaf: l, selfMute: r, selfDeaf: a, suppress: s, userId: o } = n,
         c = N.default.getUser(o);
     if (null == c) throw Error('Invalid user id: '.concat(o));
     return {
-        nick: b.ZP.getName(e, t, c),
+        nick: Z.ZP.getName(e, t, c),
         mute: I.Z.isLocalMute(c.id),
         volume: I.Z.getLocalVolume(c.id),
         pan: I.Z.getLocalPan(c.id),
         voice_state: {
             mute: i,
-            deaf: r,
-            self_mute: l,
+            deaf: l,
+            self_mute: r,
             self_deaf: a,
             suppress: s
         },
@@ -191,17 +157,17 @@ function V(e, t, n) {
     };
 }
 function H(e, t, n) {
-    let { isSpamRequest: i, applicationId: r, userIgnored: l, originApplicationId: a } = null != n ? n : {},
+    let { isSpamRequest: i, applicationId: l, userIgnored: r, originApplicationId: a } = null != n ? n : {},
         s = N.default.getUser(t);
     return {
         type: e,
         user: null != s ? (0, L.Z)(s) : null,
         presence: {
             status: v.Z.getStatus(t),
-            activity: null != r ? v.Z.getApplicationActivity(t, r) : v.Z.getPrimaryActivity(t)
+            activity: null != l ? v.Z.getApplicationActivity(t, l) : v.Z.getPrimaryActivity(t)
         },
         isSpamRequest: i,
-        userIgnored: l,
+        userIgnored: r,
         originApplicationId: a
     };
 }
@@ -211,11 +177,11 @@ function F(e) {
     let n = window.location.origin;
     if (e === n) return !0;
     try {
-        t = l.parse(e).hostname;
+        t = r.parse(e).hostname;
     } catch (e) {
         return !1;
     }
-    return (window.location.hostname === t && 'localhost' === t) || (null == e.match('staging') && (!!(j.test(e) && j.test(n)) || !1));
+    return (window.location.hostname === t && 'localhost' === t) || (null == e.match('staging') && !!(j.test(e) && j.test(n)));
 }
 function z(e, t, n) {
     let i = E.Z.getGuild(e.getGuildId());
@@ -233,16 +199,15 @@ function W(e) {
 }
 function Y(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        { instance: n, secrets: i, party: r } = e,
-        l = 0;
-    n && (l |= P.xjy.INSTANCE), (null == i ? void 0 : i.join) != null && (l |= P.xjy.JOIN);
+        { instance: n, secrets: i, party: l } = e,
+        r = 0;
+    n && (r |= P.xjy.INSTANCE), (null == i ? void 0 : i.join) != null && (r |= P.xjy.JOIN);
     let a = p.cP.getSetting(),
         s = p.Ou.getSetting();
-    return t ? ((l |= P.xjy.EMBEDDED), a && (l |= P.xjy.PARTY_PRIVACY_FRIENDS), s && (l |= P.xjy.PARTY_PRIVACY_VOICE_CHANNEL), l) : (((null == r ? void 0 : r.privacy) === P.RYY.PUBLIC || c.K.get('ACTIVITIES_FORCE_PUBLIC')) && (a && (l |= P.xjy.PARTY_PRIVACY_FRIENDS), s && (l |= P.xjy.PARTY_PRIVACY_VOICE_CHANNEL)), l);
+    return t ? ((r |= P.xjy.EMBEDDED), a && (r |= P.xjy.PARTY_PRIVACY_FRIENDS), s && (r |= P.xjy.PARTY_PRIVACY_VOICE_CHANNEL)) : ((null == l ? void 0 : l.privacy) === P.RYY.PUBLIC || c.K.get('ACTIVITIES_FORCE_PUBLIC')) && (a && (r |= P.xjy.PARTY_PRIVACY_FRIENDS), s && (r |= P.xjy.PARTY_PRIVACY_VOICE_CHANNEL)), r;
 }
 function K(e, t, n) {
-    if (e === P.mFx.JOIN) return null != t && null != t.id && null != n.join;
-    return !1;
+    return e === P.mFx.JOIN && null != t && null != t.id && null != n.join;
 }
 function q(e, t, n) {
     return s.tn
@@ -255,16 +220,16 @@ function q(e, t, n) {
         .then(
             (i) => {
                 let {
-                    body: { rpc_origins: r, id: l, name: a, icon: s, cover_image: o, flags: c }
+                    body: { rpc_origins: l, id: r, name: a, icon: s, cover_image: o, flags: c }
                 } = i;
                 if ('string' == typeof n) {
                     if (e.transport === y.He.POST_MESSAGE) {
                         let e = (0, u.Z)(t);
-                        if (null == e || !U(n, [e])) throw new x.Z({ closeCode: P.$VG.INVALID_ORIGIN }, 'Invalid Origin');
-                    } else if (!U(n, r)) throw new x.Z({ closeCode: P.$VG.INVALID_ORIGIN }, 'Invalid Origin');
+                        if (null == e || !U(n, [e])) throw new b.Z({ closeCode: P.$VG.INVALID_ORIGIN }, 'Invalid Origin');
+                    } else if (!U(n, l)) throw new b.Z({ closeCode: P.$VG.INVALID_ORIGIN }, 'Invalid Origin');
                 }
                 e.application = {
-                    id: l,
+                    id: r,
                     name: a,
                     icon: s,
                     coverImage: o,
@@ -272,13 +237,13 @@ function q(e, t, n) {
                 };
             },
             () => {
-                throw new x.Z({ closeCode: P.$VG.INVALID_CLIENTID }, 'Invalid Client ID');
+                throw new b.Z({ closeCode: P.$VG.INVALID_CLIENTID }, 'Invalid Client ID');
             }
         );
 }
 async function X(e, t) {
-    let n = M[e];
-    null == n && ((n = new o.Z(t ? 2 : 60, D)), (M[e] = n)), await n.process();
+    let n = w[e];
+    null == n && ((n = new o.Z(t ? 2 : 60, D)), (w[e] = n)), await n.process();
 }
 function Q(e, t) {
     null == t && (e.authorization.scopes = [y.lH]);
@@ -335,9 +300,9 @@ function $(e, t) {
     };
 }
 function ee(e) {
-    if (e !== y.He.POST_MESSAGE) throw new x.Z({ errorCode: P.lTL.INVALID_COMMAND }, 'command not available from "'.concat(e, ' transport'));
+    if (e !== y.He.POST_MESSAGE) throw new b.Z({ errorCode: P.lTL.INVALID_COMMAND }, 'command not available from "'.concat(e, ' transport'));
 }
 function et(e) {
-    if (null == e.id) throw new x.Z({ errorCode: P.lTL.INVALID_COMMAND }, 'Invalid application');
+    if (null == e.id) throw new b.Z({ errorCode: P.lTL.INVALID_COMMAND }, 'Invalid application');
     return e.id;
 }

@@ -1,81 +1,57 @@
 let i;
-r.d(n, {
-    FW: function () {
-        return p;
-    },
-    Gr: function () {
-        return f;
-    },
-    Ht: function () {
-        return y;
-    },
-    Js: function () {
-        return _;
-    },
-    QF: function () {
-        return E;
-    },
-    R2: function () {
-        return m;
-    },
-    Te: function () {
-        return b;
-    },
-    Tq: function () {
-        return d;
-    },
-    VS: function () {
-        return T;
-    },
-    qU: function () {
-        return h;
-    },
-    tB: function () {
-        return v;
-    },
-    vR: function () {
-        return I;
-    }
-});
-var a = r(610138);
-var o = r(216116);
-var s = r(78328);
-var l = r(815648);
-var u = r(47120);
-r(490029);
-var c = r(358085);
-r(981631);
-let d = 2,
-    f = {
+n.d(t, {
+    FW: () => o,
+    Gr: () => s,
+    Ht: () => p,
+    Js: () => u,
+    QF: () => f,
+    R2: () => c,
+    Te: () => h,
+    Tq: () => a,
+    VS: () => g,
+    qU: () => l,
+    tB: () => _,
+    vR: () => m
+}),
+    n(610138),
+    n(216116),
+    n(78328),
+    n(815648),
+    n(47120),
+    n(490029);
+var r = n(358085);
+n(981631);
+let a = 2,
+    s = {
         width: 3840,
         height: 2160
     },
-    p = {
+    o = {
         width: 768,
         height: 432
     },
-    h = 'overlay_default',
-    _ = -2,
-    m = -1,
-    g = !1;
-function E() {
+    l = 'overlay_default',
+    u = -2,
+    c = -1,
+    d = !1;
+function f() {
     var e;
-    if (void 0 !== i && i !== m) return i;
-    let n = parseInt(null !== (e = new URLSearchParams(window.location.search).get('pid')) && void 0 !== e ? e : '', 10);
-    return isNaN(n) && (n = m), (i = n);
+    if (void 0 !== i && i !== c) return i;
+    let t = parseInt(null !== (e = new URLSearchParams(window.location.search).get('pid')) && void 0 !== e ? e : '', 10);
+    return isNaN(t) && (t = c), (i = t);
 }
-function v(e) {
+function _(e) {
     i = e;
 }
-function y() {
+function p() {
     return new URLSearchParams(window.location.search).get('rpc_auth_token');
 }
-function b(e) {
-    return !c.isPlatformEmbedded || (e.width >= p.width && e.height >= p.height);
+function h(e) {
+    return !r.isPlatformEmbedded || (e.width >= o.width && e.height >= o.height);
 }
-function I(e) {
-    g = e;
+function m(e) {
+    d = e;
 }
-function T() {
-    return g;
+function g() {
+    return d;
 }

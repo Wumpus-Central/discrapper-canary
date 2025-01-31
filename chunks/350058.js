@@ -47,25 +47,19 @@ t.exports = {
                 return c(e, s, n, s, n);
             })(e.nativeEvent, l);
         if ((e.preventDefault(), (t._dragCount = 0), t.exitCurrentMode(), null != g)) {
-            var y = r.getFiles();
-            if (y.length > 0) {
-                if (t.props.handleDroppedFiles && f(t.props.handleDroppedFiles(g, y))) return;
-                s(y, function (e) {
+            var y,
+                v,
+                m,
+                _ = r.getFiles();
+            if (_.length > 0) {
+                if (t.props.handleDroppedFiles && f(t.props.handleDroppedFiles(g, _))) return;
+                s(_, function (e) {
                     e && t.update(d(l, g, e));
                 });
                 return;
             }
-            var v = t._internalDrag ? 'internal' : 'external';
-            (t.props.handleDrop && f(t.props.handleDrop(g, r, v))) ||
-                (t._internalDrag
-                    ? t.update(
-                          (function (t, e) {
-                              var r = i.moveText(t.getCurrentContent(), t.getSelection(), e);
-                              return o.push(t, r, 'insert-fragment');
-                          })(l, g)
-                      )
-                    : t.update(d(l, g, r.getText()))),
-                h(t);
+            var b = t._internalDrag ? 'internal' : 'external';
+            (t.props.handleDrop && f(t.props.handleDrop(g, r, b))) || (t._internalDrag ? t.update(((y = l), (v = g), (m = i.moveText(y.getCurrentContent(), y.getSelection(), v)), o.push(y, m, 'insert-fragment'))) : t.update(d(l, g, r.getText()))), h(t);
         }
     }
 };

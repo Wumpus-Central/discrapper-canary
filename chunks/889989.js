@@ -1,24 +1,20 @@
-r.d(n, {
-    n: function () {
-        return l;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(187753),
-    o = r(596454),
-    s = r(73346);
-function l(e, n) {
-    if (null != n)
-        switch (n.type) {
-            case a.T.STORE_ASSET:
-                let r = (0, s._W)(e, n.store_asset_id);
+n.d(t, { n: () => o });
+var i = n(200651);
+n(192379);
+var r = n(187753),
+    a = n(596454),
+    s = n(73346);
+function o(e, t) {
+    if (null != t)
+        switch (t.type) {
+            case r.T.STORE_ASSET:
+                let n = (0, s._W)(e, t.store_asset_id);
                 return (0, i.jsx)('img', {
-                    src: r,
+                    src: n,
                     alt: '',
                     className: 'emoji'
                 });
-            case a.T.EMOJI:
-                return (0, i.jsx)(o.Z, { emojiName: n.emoji });
+            case r.T.EMOJI:
+                return (0, i.jsx)(a.Z, { emojiName: t.emoji });
         }
 }

@@ -1,30 +1,26 @@
-t.d(n, {
-    Z: function () {
-        return o;
-    }
-});
+t.d(n, { Z: () => r });
 var i = t(200651);
 t(192379);
-var l = t(481060),
-    a = t(259580),
-    s = t(847273);
-function o(e) {
-    let { url: n, text: t, onClick: o } = e;
-    return (0, i.jsx)(l.Anchor, {
+var s = t(481060),
+    l = t(259580),
+    a = t(847273);
+function r(e) {
+    let { url: n, text: t, onClick: r } = e;
+    return (0, i.jsx)(s.eee, {
         href: n,
-        onClick: o,
-        className: s.externalLinkWrapper,
-        children: (0, i.jsxs)(l.Clickable, {
-            className: s.childButton,
+        onClick: r,
+        className: a.externalLinkWrapper,
+        children: (0, i.jsxs)(s.P3F, {
+            className: a.childButton,
             children: [
-                (0, i.jsx)(l.Text, {
-                    className: s.childText,
+                (0, i.jsx)(s.Text, {
+                    className: a.childText,
                     variant: 'text-md/semibold',
                     children: t
                 }),
-                (0, i.jsx)(a.Z, {
-                    className: s.childIcon,
-                    direction: a.Z.Directions.RIGHT
+                (0, i.jsx)(l.Z, {
+                    className: a.childIcon,
+                    direction: l.Z.Directions.RIGHT
                 })
             ]
         })

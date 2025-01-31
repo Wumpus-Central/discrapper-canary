@@ -1,194 +1,170 @@
-r.d(n, {
-    J: function () {
-        return M;
-    },
-    Ou: function () {
-        return G;
-    },
-    R2: function () {
-        return w;
-    },
-    T$: function () {
-        return L;
-    },
-    Uu: function () {
-        return k;
-    },
-    ZC: function () {
-        return V;
-    },
-    Zm: function () {
-        return x;
-    },
-    bK: function () {
-        return U;
-    },
-    mx: function () {
-        return B;
-    },
-    t6: function () {
-        return P;
-    },
-    tv: function () {
-        return Z;
-    },
-    vY: function () {
-        return F;
-    }
-});
-var i = r(47120);
-var a = r(192379),
-    o = r(525654),
-    s = r.n(o),
-    l = r(259443),
-    u = r(442837),
-    c = r(846027),
-    d = r(607070),
-    f = r(578976),
-    p = r(569545),
-    h = r(199902),
-    _ = r(430824),
-    m = r(131951),
-    g = r(158776),
-    E = r(959457),
-    v = r(594174),
-    y = r(451478),
-    b = r(626135),
-    I = r(980463),
-    T = r(823961),
-    S = r(896835),
-    A = r(477931),
-    C = r(981631),
-    N = r(37113);
-let R = 3500000,
-    O = 10000,
-    D = new l.Yd('HDStreamingConsumableModal'),
-    L = (e) => {
-        let n = (0, u.e7)([_.Z], () => _.Z.getGuild(null == e ? void 0 : e.guild_id)),
-            r = (0, u.e7)([v.default], () => {
+n.d(t, {
+    J: () => P,
+    Ou: () => U,
+    R2: () => x,
+    T$: () => O,
+    Uu: () => w,
+    ZC: () => Z,
+    Zm: () => D,
+    bK: () => M,
+    mx: () => k,
+    t6: () => L,
+    tv: () => G,
+    vY: () => B
+}),
+    n(47120);
+var i = n(192379),
+    r = n(525654),
+    a = n.n(r),
+    s = n(259443),
+    o = n(442837),
+    l = n(846027),
+    u = n(607070),
+    c = n(578976),
+    d = n(569545),
+    f = n(199902),
+    _ = n(430824),
+    p = n(131951),
+    h = n(158776),
+    m = n(959457),
+    g = n(594174),
+    E = n(451478),
+    v = n(626135),
+    y = n(980463),
+    I = n(823961),
+    b = n(896835),
+    T = n(477931),
+    S = n(981631),
+    A = n(37113);
+let N = 3500000,
+    C = 10000,
+    R = new s.Yd('HDStreamingConsumableModal'),
+    O = (e) => {
+        let t = (0, o.e7)([_.Z], () => _.Z.getGuild(null == e ? void 0 : e.guild_id)),
+            n = (0, o.e7)([g.default], () => {
                 var e;
-                return null === (e = v.default.getCurrentUser()) || void 0 === e ? void 0 : e.id;
+                return null === (e = g.default.getCurrentUser()) || void 0 === e ? void 0 : e.id;
             }),
-            i = (0, u.Wu)([h.Z], () => (null == e ? [] : h.Z.getAllActiveStreamsForChannel(e.id).filter((e) => e.ownerId !== r))),
-            o = i.some((e) => {
-                let n = v.default.getUser(e.ownerId);
-                return null != n && g.Z.isMobileOnline(n.id);
+            r = (0, o.Wu)([f.Z], () => (null == e ? [] : f.Z.getAllActiveStreamsForChannel(e.id).filter((e) => e.ownerId !== n))),
+            a = r.some((e) => {
+                let t = g.default.getUser(e.ownerId);
+                return null != t && h.Z.isMobileOnline(t.id);
             }),
-            [s, l] = (0, a.useState)(null),
-            [c, d] = (0, a.useState)([]);
-        (0, u.e7)(
-            [E.Z],
+            [s, l] = (0, i.useState)(null),
+            [u, c] = (0, i.useState)([]);
+        (0, o.e7)(
+            [m.Z],
             () => {
-                if (null == s || Date.now() - s > O) {
-                    let e = i.map((e) => {
-                        var n;
-                        let r = (0, p.V9)(e),
-                            i = E.Z.getRTCConnection(r);
-                        return null == i ? void 0 : null === (n = i.getVideoStats()) || void 0 === n ? void 0 : n.inbound_bitrate_estimate_percentile99;
+                if (null == s || Date.now() - s > C) {
+                    let e = r.map((e) => {
+                        var t;
+                        let n = (0, d.V9)(e),
+                            i = m.Z.getRTCConnection(n);
+                        return null == i ? void 0 : null === (t = i.getVideoStats()) || void 0 === t ? void 0 : t.inbound_bitrate_estimate_percentile99;
                     });
-                    D.info('Setting bitrates', e), d(e), l(Date.now());
+                    R.info('Setting bitrates', e), c(e), l(Date.now());
                 }
             },
-            [s, i]
+            [s, r]
         );
-        let f = (0, a.useMemo)(() => 0 === c.length || (!c.some((e) => null == e || e < R) && !0), [c]);
-        return ((null == n ? void 0 : n.premiumTier) === C.Eu4.NONE || (null == n ? void 0 : n.premiumTier) === C.Eu4.TIER_1) && f && !o;
+        let p = (0, i.useMemo)(() => 0 === u.length || !u.some((e) => null == e || e < N), [u]);
+        return ((null == t ? void 0 : t.premiumTier) === S.Eu4.NONE || (null == t ? void 0 : t.premiumTier) === S.Eu4.TIER_1) && p && !a;
     },
-    x = (e, n) => {
-        let r = (0, u.e7)([v.default], () => {
+    D = (e, t) => {
+        let n = (0, o.e7)([g.default], () => {
                 var e;
-                return null === (e = v.default.getCurrentUser()) || void 0 === e ? void 0 : e.id;
+                return null === (e = g.default.getCurrentUser()) || void 0 === e ? void 0 : e.id;
             }),
-            i = (0, u.Wu)([h.Z], () => (null == e ? [] : h.Z.getAllActiveStreamsForChannel(e.id).filter((e) => e.ownerId !== r))),
-            a = (0, S.j)(n),
-            o = L(e);
-        return a && o && i.length > 0;
+            i = (0, o.Wu)([f.Z], () => (null == e ? [] : f.Z.getAllActiveStreamsForChannel(e.id).filter((e) => e.ownerId !== n))),
+            r = (0, b.j)(t),
+            a = O(e);
+        return r && a && i.length > 0;
     };
-function w(e) {
-    let [n, r, i] = (0, u.Wu)([T.Z], () => [T.Z.isFetchingPrice(e), T.Z.getPrice(e), T.Z.getErrored(e)]);
+function x(e) {
+    let [t, n, r] = (0, o.Wu)([I.Z], () => [I.Z.isFetchingPrice(e), I.Z.getPrice(e), I.Z.getErrored(e)]);
     return (
-        (0, a.useEffect)(() => {
-            !n && null == r && !i && (0, I.Gq)(e);
-        }, [n, r, i, e]),
+        (0, i.useEffect)(() => {
+            t || null != n || r || (0, y.Gq)(e);
+        }, [t, n, r, e]),
         {
-            price: r,
-            fetchingPrice: n,
-            error: i
+            price: n,
+            fetchingPrice: t,
+            error: r
         }
     );
 }
-function P(e) {
-    let [n, r, i, o, s] = (0, u.Wu)([T.Z], () => [T.Z.isEntitlementFetched(e), T.Z.fetchPotionCount(e), T.Z.isEntitlementFetching(e), T.Z.getEntitlement(e), T.Z.getErrored(e)]);
+function L(e) {
+    let [t, n, r, a, s] = (0, o.Wu)([I.Z], () => [I.Z.isEntitlementFetched(e), I.Z.fetchPotionCount(e), I.Z.isEntitlementFetching(e), I.Z.getEntitlement(e), I.Z.getErrored(e)]);
     return (
-        (0, a.useEffect)(() => {
-            !n && !i && (0, I.gA)(e);
-        }, [n, i, e]),
+        (0, i.useEffect)(() => {
+            t || r || (0, y.gA)(e);
+        }, [t, r, e]),
         {
-            entitlement: o,
-            numPotions: r,
-            fetchedEntitlement: n,
+            entitlement: a,
+            numPotions: n,
+            fetchedEntitlement: t,
             error: s
         }
     );
 }
-function M(e, n) {
-    let r = (0, a.useRef)(!0),
-        i = null == e ? void 0 : e.hdStreamingUntil,
-        o = (0, a.useRef)(n);
-    (0, a.useEffect)(() => {
-        o.current = n;
+function P(e, t) {
+    let n = (0, i.useRef)(!0),
+        r = null == e ? void 0 : e.hdStreamingUntil,
+        a = (0, i.useRef)(t);
+    (0, i.useEffect)(() => {
+        a.current = t;
     }),
-        (0, a.useEffect)(() => {
-            if (r.current) {
-                r.current = !1;
+        (0, i.useEffect)(() => {
+            if (n.current) {
+                n.current = !1;
                 return;
             }
-            if (null != i && new Date(i) > new Date()) return o.current();
-        }, [i]);
+            if (null != r && new Date(r) > new Date()) return a.current();
+        }, [r]);
 }
-function k(e) {
-    M(e, () => {
-        let n = h.Z.getCurrentUserActiveStream();
-        if (null != n && n.channelId === e.id) {
-            let e = m.Z.getState().goLiveSource;
-            (0, I.x8)(null == e ? void 0 : e.quality);
-            let n = (0, f.s)(N.LY.RESOLUTION_1440, N.ws.FPS_60, e);
-            c.Z.setGoLiveSource(n);
+function w(e) {
+    P(e, () => {
+        let t = f.Z.getCurrentUserActiveStream();
+        if (null != t && t.channelId === e.id) {
+            let e = p.Z.getState().goLiveSource;
+            (0, y.x8)(null == e ? void 0 : e.quality);
+            let t = (0, c.s)(A.LY.RESOLUTION_1440, A.ws.FPS_60, e);
+            l.Z.setGoLiveSource(t);
         }
     });
 }
-function U() {
+function M() {
     var e;
-    let n = (null !== (e = s().name) && void 0 !== e ? e : 'unknown').toLowerCase(),
-        r = (0, u.e7)([y.Z], () => y.Z.isFocused()),
-        i = (0, u.e7)([d.Z], () => d.Z.useReducedMotion);
-    return 'safari' === n || !r || i;
+    let t = (null !== (e = a().name) && void 0 !== e ? e : 'unknown').toLowerCase(),
+        n = (0, o.e7)([E.Z], () => E.Z.isFocused()),
+        i = (0, o.e7)([u.Z], () => u.Z.useReducedMotion);
+    return 'safari' === t || !n || i;
+}
+function k(e) {
+    v.default.track(S.rMx.CONSUMABLE_HD_STREAMING_ENTRYPOINT, { location: e });
+}
+function U(e) {
+    let t = (0, o.e7)([_.Z], () => _.Z.getGuild(null == e ? void 0 : e.guild_id)),
+        n = (0, b.j)('VoiceEffectsActionBar');
+    return ((null == t ? void 0 : t.premiumTier) === S.Eu4.NONE || (null == t ? void 0 : t.premiumTier) === S.Eu4.TIER_1) && (null == e ? void 0 : e.type) === S.d4z.GUILD_VOICE && !(null == e ? void 0 : e.isHDStreamSplashed) && n;
+}
+function G(e, t, n, i) {
+    return !t && null == n && ('' !== e || (null != i && i.length > 0));
 }
 function B(e) {
-    b.default.track(C.rMx.CONSUMABLE_HD_STREAMING_ENTRYPOINT, { location: e });
-}
-function G(e) {
-    let n = (0, u.e7)([_.Z], () => _.Z.getGuild(null == e ? void 0 : e.guild_id)),
-        r = (0, S.j)('VoiceEffectsActionBar');
-    return ((null == n ? void 0 : n.premiumTier) === C.Eu4.NONE || (null == n ? void 0 : n.premiumTier) === C.Eu4.TIER_1) && (null == e ? void 0 : e.type) === C.d4z.GUILD_VOICE && !(null == e ? void 0 : e.isHDStreamSplashed) && r;
-}
-function Z(e, n, r, i) {
-    return !n && null == r && ('' !== e || (null != i && i.length > 0));
-}
-function F(e) {
     if (null != e)
         return {
             message_emoji: {
                 id: e.emoji.id,
-                name: (0, I.zI)(e.emoji)
+                name: (0, y.zI)(e.emoji)
             }
         };
 }
-function V(e) {
+function Z(e) {
     if (null == e || null == e.potions || 0 === e.potions.length) return null;
     for (let i of e.potions) {
-        var n, r;
-        if (i.type === A.B.CONFETTI && i.used_by === (null === (n = v.default.getCurrentUser()) || void 0 === n ? void 0 : n.id) && (null === (r = i.emoji) || void 0 === r ? void 0 : r.length) > 0) return i.emoji[0];
+        var t, n;
+        if (i.type === T.B.CONFETTI && i.used_by === (null === (t = g.default.getCurrentUser()) || void 0 === t ? void 0 : t.id) && (null === (n = i.emoji) || void 0 === n ? void 0 : n.length) > 0) return i.emoji[0];
     }
     return null;
 }

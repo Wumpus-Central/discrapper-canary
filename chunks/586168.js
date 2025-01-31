@@ -1,8 +1,4 @@
-function i(e, n) {
-    return e.classList ? !!n && e.classList.contains(n) : -1 !== (' ' + (e.className.baseVal || e.className) + ' ').indexOf(' ' + n + ' ');
+function i(e, t) {
+    return e.classList ? !!t && e.classList.contains(t) : -1 !== (' ' + (e.className.baseVal || e.className) + ' ').indexOf(' ' + t + ' ');
 }
-r.d(n, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });

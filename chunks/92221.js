@@ -1,6 +1,7 @@
-e.exports = {
-    flex: 'flex_ac6bd4',
-    flexChild: 'flexChild_ac6bd4',
-    flexGutterSmall: 'flexGutterSmall_ac6bd4',
-    flexGutterLarge: 'flexGutterLarge_ac6bd4'
+var i = {
+    flex: 'flex__48a9c',
+    flexChild: 'flexChild__48a9c',
+    flexGutterSmall: 'flexGutterSmall__48a9c',
+    flexGutterLarge: 'flexGutterLarge__48a9c'
 };
+e.exports = i;

@@ -1,44 +1,40 @@
-r.d(n, {
-    Z: function () {
-        return l;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(481060),
-    o = r(429551),
-    s = r(563081);
-function l(e) {
-    let { start: n, end: r } = e,
+n.d(t, { Z: () => o });
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(429551),
+    s = n(563081);
+function o(e) {
+    let { start: t, end: n } = e,
         {
-            elapsed: l,
-            duration: u,
-            percentage: c
-        } = (0, o.Z)({
-            start: n,
-            end: r
+            elapsed: o,
+            duration: l,
+            percentage: u
+        } = (0, a.Z)({
+            start: t,
+            end: n
         });
     return (0, i.jsxs)('div', {
         className: s.container,
         children: [
-            (0, i.jsx)(a.Text, {
+            (0, i.jsx)(r.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-normal',
                 className: s.text,
-                children: (0, o.m)(l)
+                children: (0, a.m)(o)
             }),
             (0, i.jsx)('div', {
                 className: s.bar,
                 children: (0, i.jsx)('div', {
                     className: s.progress,
-                    style: { width: ''.concat(100 * c, '%') }
+                    style: { width: ''.concat(100 * u, '%') }
                 })
             }),
-            (0, i.jsx)(a.Text, {
+            (0, i.jsx)(r.Text, {
                 variant: 'text-xs/normal',
                 color: 'text-normal',
                 className: s.text,
-                children: (0, o.m)(u)
+                children: (0, a.m)(l)
             })
         ]
     });

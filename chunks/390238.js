@@ -1,147 +1,141 @@
-a.r(n),
-    a.d(n, {
-        default: function () {
-            return S;
-        }
-    }),
-    a(47120);
-var r = a(200651),
-    o = a(192379),
-    t = a(120356),
-    i = a.n(t),
-    s = a(119617),
-    d = a(442837),
-    l = a(481060),
-    c = a(607070),
-    u = a(530618),
-    h = a(70097),
-    C = a(272008),
-    m = a(497505),
-    f = a(918701),
-    g = a(475595),
-    x = a(566078),
-    p = a(644646),
-    v = a(114732),
-    _ = a(46140),
-    j = a(675654),
-    b = a(388032),
-    w = a(934919);
-function N(e) {
-    var n;
-    let { transitionState: a, onClose: t, quest: h, location: f, reward: p } = e,
-        _ = o.useRef(null),
-        [b, N] = o.useState(null),
-        S = o.useRef(new s.qA()),
-        M = (0, d.e7)([c.Z], () => c.Z.useReducedMotion),
-        k = o.useMemo(() => (0, g.fh)(h, g.eC.HERO), [h]),
-        y = (null === (n = h.userStatus) || void 0 === n ? void 0 : n.claimedAt) != null,
-        [A, B] = o.useState(y ? 'claimed' : 'loading');
-    o.useEffect(() => {
-        if (!y) {
+n.d(a, { default: () => S }), n(47120);
+var r = n(200651),
+    t = n(192379),
+    o = n(120356),
+    d = n.n(o),
+    i = n(119617),
+    s = n(442837),
+    l = n(481060),
+    c = n(607070),
+    u = n(530618),
+    h = n(70097),
+    C = n(272008),
+    m = n(497505),
+    g = n(918701),
+    f = n(475595),
+    x = n(566078),
+    j = n(644646),
+    v = n(114732),
+    N = n(46140),
+    _ = n(675654),
+    w = n(388032),
+    p = n(934919);
+function R(e) {
+    var a;
+    let { transitionState: n, onClose: o, quest: h, location: g, reward: j } = e,
+        N = t.useRef(null),
+        [w, R] = t.useState(null),
+        S = t.useRef(new i.qA()),
+        y = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
+        A = t.useMemo(() => (0, f.fh)(h, f.eC.HERO), [h]),
+        M = (null === (a = h.userStatus) || void 0 === a ? void 0 : a.claimedAt) != null,
+        [T, q] = t.useState(M ? 'claimed' : 'loading');
+    t.useEffect(() => {
+        if (!M) {
             let e = x.r.build(h.config),
-                n = e.rewardPlatforms.length > 0 ? e.rewardPlatforms[0] : m.y$.CROSS_PLATFORM;
-            (0, C.QB)(h.id, n, f)
-                .then(() => B('claimed'))
-                .catch(() => B('error'));
+                a = e.rewardPlatforms.length > 0 ? e.rewardPlatforms[0] : m.y$.CROSS_PLATFORM;
+            (0, C.QB)(h.id, a, g)
+                .then(() => q('claimed'))
+                .catch(() => q('error'));
         }
-    }, [h, f, y]);
-    let T = 'loading' === A;
+    }, [h, g, M]);
+    let B = 'loading' === T;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(s.O_, {
-                ref: N,
-                className: w.confettiCanvas,
+            (0, r.jsx)(i.O_, {
+                ref: R,
+                className: p.confettiCanvas,
                 environment: S.current
             }),
             (0, r.jsx)('div', {
-                ref: _,
-                children: (0, r.jsx)(l.ModalRoot, {
-                    transitionState: a,
-                    size: l.ModalSize.DYNAMIC,
-                    className: i()(w.rootContainer, { [w.rootContainerLoading]: T }),
+                ref: N,
+                children: (0, r.jsx)(l.Y0X, {
+                    transitionState: n,
+                    size: l.CgR.DYNAMIC,
+                    className: d()(p.rootContainer, { [p.rootContainerLoading]: B }),
                     hideShadow: !0,
-                    children: T
-                        ? (0, r.jsx)(l.Spinner, { type: l.Spinner.Type.SPINNING_CIRCLE })
-                        : 'error' === A
-                          ? (0, r.jsx)(v.Z, { onClose: t })
-                          : (0, r.jsx)(R, {
+                    children: B
+                        ? (0, r.jsx)(l.$jN, { type: l.$jN.Type.SPINNING_CIRCLE })
+                        : 'error' === T
+                          ? (0, r.jsx)(v.Z, { onClose: o })
+                          : (0, r.jsx)(k, {
                                 quest: h,
-                                rewardName: p.messages.name,
-                                backgroundUrl: k.url,
-                                location: f,
-                                onClose: t
+                                rewardName: j.messages.name,
+                                backgroundUrl: A.url,
+                                location: g,
+                                onClose: o
                             })
                 })
             }),
-            !M &&
-                !y &&
-                'claimed' === A &&
+            !y &&
+                !M &&
+                'claimed' === T &&
                 (0, r.jsx)(u.Z, {
-                    confettiTarget: _.current,
-                    confettiCanvas: b,
-                    sprites: j.CA,
-                    colors: j.Br
+                    confettiTarget: N.current,
+                    confettiCanvas: w,
+                    sprites: _.CA,
+                    colors: _.Br
                 })
         ]
     });
 }
-function R(e) {
-    let { quest: n, rewardName: a, backgroundUrl: o, location: t, onClose: s } = e;
+function k(e) {
+    let { quest: a, rewardName: n, backgroundUrl: t, location: o, onClose: i } = e;
     return (0, r.jsxs)('div', {
-        className: w.claimedRootContainer,
+        className: p.claimedRootContainer,
         children: [
             (0, r.jsxs)('div', {
-                className: w.headerContainer,
+                className: p.headerContainer,
                 children: [
                     (0, r.jsx)(h.Z, {
-                        className: w.headerBackground,
+                        className: p.headerBackground,
                         autoPlay: !1,
                         loop: !1,
                         muted: !0,
                         playsInline: !0,
                         controls: !1,
-                        poster: o
+                        poster: t
                     }),
                     (0, r.jsxs)('div', {
-                        className: w.headerForeground,
+                        className: p.headerForeground,
                         children: [
                             (0, r.jsx)('div', {
-                                className: w.previewContainer,
-                                children: (0, r.jsx)(p.Z, {
+                                className: p.previewContainer,
+                                children: (0, r.jsx)(j.Z, {
                                     autoplay: !0,
-                                    className: i()(w.rewardTile),
+                                    className: d()(p.rewardTile),
                                     learnMoreStyle: null,
-                                    quest: n,
-                                    questContent: t,
-                                    location: _.dr.INGAME_REWARD_MODAL
+                                    quest: a,
+                                    questContent: o,
+                                    location: N.dr.INGAME_REWARD_MODAL
                                 })
                             }),
-                            (0, r.jsx)(l.ModalCloseButton, {
-                                className: w.close,
+                            (0, r.jsx)(l.olH, {
+                                className: p.close,
                                 withCircleBackground: !0,
-                                onClick: s
+                                onClick: i
                             })
                         ]
                     })
                 ]
             }),
-            (0, r.jsx)(l.ModalFooter, {
-                className: w.footerContainer,
+            (0, r.jsx)(l.mzw, {
+                className: p.footerContainer,
                 separator: !1,
                 children: (0, r.jsxs)('div', {
-                    className: w.gradient,
+                    className: p.gradient,
                     children: [
-                        (0, r.jsx)(l.Heading, {
+                        (0, r.jsx)(l.X6q, {
                             variant: 'heading-lg/bold',
                             color: 'always-white',
-                            className: w.heading,
-                            children: b.intl.string(b.t['0/Yz+f'])
+                            className: p.heading,
+                            children: w.intl.string(w.t['0/Yz+f'])
                         }),
                         (0, r.jsx)(l.Text, {
                             variant: 'text-sm/normal',
                             color: 'always-white',
-                            className: w.text,
-                            children: b.intl.format(b.t['v1u/zs'], { rewardName: a })
+                            className: p.text,
+                            children: w.intl.format(w.t['v1u/zs'], { rewardName: n })
                         })
                     ]
                 })
@@ -150,15 +144,15 @@ function R(e) {
     });
 }
 function S(e) {
-    let { quest: n, location: a, onClose: t, transitionState: i } = e,
-        s = o.useMemo(() => (0, f.K)(n.config), [n]);
-    return null == s
+    let { quest: a, location: n, onClose: o, transitionState: d } = e,
+        i = t.useMemo(() => (0, g.K)(a.config), [a]);
+    return null == i
         ? null
-        : (0, r.jsx)(N, {
-              onClose: t,
-              transitionState: i,
-              quest: n,
-              location: a,
-              reward: s
+        : (0, r.jsx)(R, {
+              onClose: o,
+              transitionState: d,
+              quest: a,
+              location: n,
+              reward: i
           });
 }

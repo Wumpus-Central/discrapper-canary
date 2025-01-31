@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return m;
-    }
-});
+n.d(t, { Z: () => m });
 var i = n(200651);
 n(192379);
 var r = n(481060),
@@ -53,12 +49,12 @@ function m() {
     ];
     return (0, i.jsxs)('div', {
         children: [
-            (0, i.jsx)(r.Heading, {
+            (0, i.jsx)(r.X6q, {
                 variant: 'heading-lg/semibold',
                 color: 'header-primary',
                 children: s.intl.string(s.t.R9rNIi)
             }),
-            (0, i.jsx)(r.Spacer, { size: 24 }),
+            (0, i.jsx)(r.LZC, { size: 24 }),
             (0, i.jsx)('div', {
                 className: a.howItWorksContainer,
                 children: e.map((e) =>
@@ -72,7 +68,7 @@ function m() {
                     )
                 )
             }),
-            (0, i.jsx)(r.Spacer, { size: 24 }),
+            (0, i.jsx)(r.LZC, { size: 24 }),
             (0, i.jsx)(r.Text, {
                 variant: 'text-sm/normal',
                 color: 'header-secondary',

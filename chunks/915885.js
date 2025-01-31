@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return x;
-    }
-});
+n.d(t, { Z: () => x });
 var i = n(200651),
     l = n(192379),
     r = n(442837),
@@ -10,32 +6,32 @@ var i = n(200651),
     o = n(481060),
     s = n(566840),
     c = n(693546),
-    u = n(826581),
-    d = n(63568),
+    d = n(826581),
+    u = n(63568),
     h = n(246364),
     p = n(98493),
     m = n(434479),
-    f = n(496675),
-    g = n(527379),
-    v = n(981631),
-    C = n(388032);
+    g = n(496675),
+    f = n(527379),
+    _ = n(981631),
+    v = n(388032);
 function x(e) {
     let { guild: t, selected: n } = e,
-        x = (0, d.jS)(t.id, 'Guild Sidebar'),
-        I = (0, r.e7)([f.Z], () => f.Z.can(v.Plq.KICK_MEMBERS, t)),
-        _ = (0, r.e7)([u.Z], () => u.Z.getSubmittedGuildJoinRequestTotal(t.id)),
-        Z = x && I && null != _ ? _ : 0;
+        x = (0, u.jS)(t.id, 'Guild Sidebar'),
+        C = (0, r.e7)([g.Z], () => g.Z.can(_.Plq.KICK_MEMBERS, t)),
+        Z = (0, r.e7)([d.Z], () => d.Z.getSubmittedGuildJoinRequestTotal(t.id)),
+        I = x && C && null != Z ? Z : 0;
     l.useEffect(() => {
-        I &&
+        C &&
             x &&
             c.Z.fetchGuildJoinRequests({
                 guildId: t.id,
                 status: h.wB.SUBMITTED,
                 limit: p.p
             });
-    }, [I, t.id, x]);
+    }, [C, t.id, x]);
     let b = l.useCallback(() => {
-            (0, g._X)(t.id);
+            (0, f._X)(t.id);
         }, [t.id]),
         S = (0, s.XL)(t.id, a.z.MEMBERS_LAUNCH_UPSELL);
     return (0, i.jsx)('div', {
@@ -43,15 +39,15 @@ function x(e) {
         children: (0, i.jsx)(m.m, {
             id: 'members-'.concat(t.id),
             renderIcon: (e) =>
-                (0, i.jsx)(o.GroupIcon, {
+                (0, i.jsx)(o.BFJ, {
                     size: 'md',
                     color: 'currentColor',
                     className: e
                 }),
-            text: C.intl.string(C.t.oclz3d),
+            text: v.intl.string(v.t.oclz3d),
             selected: n,
             onClick: b,
-            trailing: Z > 0 ? (0, i.jsx)(o.NumberBadge, { count: Z }) : null
+            trailing: I > 0 ? (0, i.jsx)(o.mAB, { count: I }) : null
         })
     });
 }

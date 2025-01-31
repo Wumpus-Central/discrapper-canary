@@ -1,101 +1,96 @@
-var i,
-    a = r(47120);
-var o = r(653041);
-var s = r(404097),
-    l = r(544891),
-    u = r(358085),
-    c = r(747268),
-    d = r(20186),
-    f = r(981631);
-function p(e, n, r) {
+n.d(t, { Z: () => m }), n(47120), n(653041);
+var i = n(404097),
+    r = n(544891),
+    a = n(358085),
+    s = n(747268),
+    o = n(20186),
+    l = n(981631);
+function u(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let h = new Set(['darwin', 'linux', 'win32', 'ios', 'android']);
-function _() {
-    if ((0, u.isWeb)()) return 'web';
+let c = new Set(['darwin', 'linux', 'win32', 'ios', 'android']);
+function d() {
+    if ((0, a.isWeb)()) return 'web';
     {
-        let e = (0, u.getPlatformName)();
-        return h.has(e) ? e : null;
+        let e = (0, a.getPlatformName)();
+        return c.has(e) ? e : null;
     }
 }
-function m() {
-    let e = c.Z;
-    return null != e && s.e.ALL.has(e) ? e : null;
+function f() {
+    let e = s.Z;
+    return null != e && i.e.ALL.has(e) ? e : null;
 }
-!(function (e) {
-    (e.COUNT = 'count'), (e.DISTRIBUTION = 'distribution');
-})(i || (i = {}));
-let g = 120000,
-    E = 100;
-class v {
-    _getMetricWithDefaults(e, n) {
-        let { name: r, tags: i } = e,
-            a = {
-                name: r,
-                type: n,
-                tags: (0, d.d)()
+let _ = 120000,
+    p = 100;
+class h {
+    _getMetricWithDefaults(e, t) {
+        let { name: n, tags: i } = e,
+            r = {
+                name: n,
+                type: t,
+                tags: (0, o.d)()
             };
         null != i &&
             i.forEach((e) => {
-                a.tags.push(e);
+                r.tags.push(e);
             });
-        let o = _();
-        null != o && a.tags.push('platform:'.concat(o));
-        let s = m();
-        return null != s && a.tags.push('release_channel:'.concat(s)), a;
+        let a = d();
+        null != a && r.tags.push('platform:'.concat(a));
+        let s = f();
+        return null != s && r.tags.push('release_channel:'.concat(s)), r;
     }
     increment(e) {
-        let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            r = this._getMetricWithDefaults(e, 'count');
-        this._metrics.push(r), (n || this._metrics.length >= E) && this._flush();
+        let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            n = this._getMetricWithDefaults(e, 'count');
+        this._metrics.push(n), (t || this._metrics.length >= p) && this._flush();
     }
-    distribution(e, n) {
-        let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+    distribution(e, t) {
+        let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             i = {
                 ...this._getMetricWithDefaults(e, 'distribution'),
-                value: n
+                value: t
             };
-        this._metrics.push(i), (r || this._metrics.length >= E) && this._flush();
+        this._metrics.push(i), (n || this._metrics.length >= p) && this._flush();
     }
     _flush() {
         if (this._metrics.length > 0) {
             let e = [...this._metrics];
-            l.tn
+            r.tn
                 .post({
-                    url: f.ANM.METRICS_V2,
+                    url: l.ANM.METRICS_V2,
                     body: {
                         metrics: e,
                         client_info: {
-                            built_at: '1738085496215',
-                            build_number: '363046'
+                            built_at: '1738365548434',
+                            build_number: '364525'
                         }
                     },
                     retries: 1,
                     rejectWithError: !0
                 })
-                .catch((n) => {
-                    this._metrics.length + e.length < E && (this._metrics = [...this._metrics, ...e]);
+                .catch((t) => {
+                    this._metrics.length + e.length < p && (this._metrics = [...this._metrics, ...e]);
                 });
         }
         this._metrics = [];
     }
     constructor() {
-        p(this, '_metrics', void 0),
-            p(this, '_intervalId', void 0),
+        u(this, '_metrics', void 0),
+            u(this, '_intervalId', void 0),
             (this._metrics = []),
             (this._intervalId = setInterval(() => {
                 this._flush();
-            }, g));
+            }, _));
     }
 }
-n.Z = new v();
+let m = new h();

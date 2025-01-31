@@ -1,18 +1,8 @@
-r.d(n, {
-    qk: function () {
-        return s;
-    },
-    vh: function () {
-        return o;
-    },
-    yJ: function () {
-        return a;
-    }
+n.d(t, {
+    qk: () => a,
+    vh: () => r,
+    yJ: () => i
 });
-var i = 365.2425,
-    a = 60000,
-    o = 3600000,
-    s = 1000,
-    l = 3600,
-    u = 24 * l,
-    c = u * i;
+var i = 60000,
+    r = 3600000,
+    a = 1000;

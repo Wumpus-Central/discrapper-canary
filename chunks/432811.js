@@ -1,12 +1,11 @@
-r.r(
-    (e.exports = {
-        art: 'art_e5cc00',
-        small: 'small_e5cc00',
-        medium: 'medium_e5cc00',
-        large: 'large_e5cc00',
-        header: 'header_e5cc00',
-        description: 'description_e5cc00',
-        outerButton: 'outerButton_e5cc00',
-        button: 'button_e5cc00'
-    })
-);
+var i = {
+    art: 'art_c6e099',
+    small: 'small_c6e099',
+    medium: 'medium_c6e099',
+    large: 'large_c6e099',
+    header: 'header_c6e099',
+    description: 'description_c6e099',
+    outerButton: 'outerButton_c6e099',
+    button: 'button_c6e099'
+};
+n.r((e.exports = i));

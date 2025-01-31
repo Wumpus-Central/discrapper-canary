@@ -1,26 +1,21 @@
-r.d(n, {
-    D: function () {
-        return f;
-    },
-    j: function () {
-        return d;
-    }
-});
-var i = r(47120);
-var a = r(192379),
-    o = r(399606),
-    s = r(430824),
-    l = r(709054),
-    u = r(763296);
-function c(e, n) {
-    return l.default.keys(e).filter((e) => null == n.get(e));
+n.d(t, {
+    D: () => c,
+    j: () => u
+}),
+    n(47120);
+var i = n(192379),
+    r = n(399606),
+    a = n(430824),
+    s = n(709054),
+    o = n(763296);
+function l(e, t) {
+    return s.default.keys(e).filter((e) => null == t.get(e));
 }
-function d() {
-    let e = (0, o.e7)([s.Z], () => s.Z.getGuilds()),
-        n = (0, o.e7)([u.Z], () => u.Z.getSounds());
-    return (0, a.useMemo)(() => c(e, n), [e, n]);
+function u() {
+    let e = (0, r.e7)([a.Z], () => a.Z.getGuilds()),
+        t = (0, r.e7)([o.Z], () => o.Z.getSounds());
+    return (0, i.useMemo)(() => l(e, t), [e, t]);
 }
-function f() {
-    let e = s.Z.getGuilds();
-    return c(e, u.Z.getSounds());
+function c() {
+    return l(a.Z.getGuilds(), o.Z.getSounds());
 }

@@ -1,16 +1,8 @@
 n.d(t, {
-    EH: function () {
-        return m;
-    },
-    Mf: function () {
-        return d;
-    },
-    lL: function () {
-        return h;
-    },
-    t4: function () {
-        return u;
-    }
+    EH: () => m,
+    Mf: () => d,
+    lL: () => h,
+    t4: () => u
 });
 var i = n(442837),
     r = n(592125),

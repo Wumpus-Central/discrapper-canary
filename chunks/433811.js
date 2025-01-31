@@ -1,9 +1,5 @@
-n.d(t, {
-    X: function () {
-        return a;
-    }
-});
+n.d(t, { X: () => l });
 var i = n(91641),
-    r = n(609105),
-    s = n(987338);
-let a = new i.E([r.NR, r.ZI, r.Ob, r.uc, r.m1], s.$P.OPEN_NITRO, { location: 'open nitro tab/settings' });
+    s = n(609105),
+    r = n(987338);
+let l = new i.E([s.NR, s.ZI, s.Ob, s.uc, s.m1], r.$P.OPEN_NITRO, { location: 'open nitro tab/settings' });

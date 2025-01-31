@@ -1,4 +1,4 @@
-function n(t, e, i) {
+function r(t, e, i) {
     return (
         e in t
             ? Object.defineProperty(t, e, {
@@ -11,53 +11,47 @@ function n(t, e, i) {
         t
     );
 }
-i.d(e, {
-    Z: function () {
-        return r;
-    }
-}),
-    i(47120),
-    i(411104);
-class r {
-    drawInto(t, e, i, n) {
+i.d(e, { Z: () => n }), i(47120), i(411104);
+class n {
+    drawInto(t, e, i, r) {
         (e %= this.frameCount), this.requireFrame(e);
-        let [r, s, h, o] = a(e, this.frameWidth, this.frameHeight, this.cells);
-        t.drawImage(this.canvas, r, s, h, o, 0, 0, i, n);
+        let [n, s, o, u] = a(e, this.frameWidth, this.frameHeight, this.cells);
+        t.drawImage(this.canvas, n, s, o, u, 0, 0, i, r);
     }
     drop() {
         var t;
         null === (t = this.native) || void 0 === t || t.drop(), (this.native = null);
     }
     requireFrame(t) {
-        if (null != this.native) !this.renderedFrames.has(t) && (this.paint(t), this.renderedFrames.add(t)), this.renderedFrames.size === this.frameCount && this.drop();
+        null != this.native && (this.renderedFrames.has(t) || (this.paint(t), this.renderedFrames.add(t)), this.renderedFrames.size === this.frameCount && this.drop());
     }
     paint(t) {
         if (null != this.native) {
             var e;
             let i = new ImageData(this.native.get_bgra(t, this.frameWidth, this.frameHeight), this.frameWidth, this.frameHeight),
-                [n, r, s, h] = a(t, this.frameWidth, this.frameHeight, this.cells);
-            null === (e = this.context) || void 0 === e || e.putImageData(i, n, r, 0, 0, s, h);
+                [r, n, s, o] = a(t, this.frameWidth, this.frameHeight, this.cells);
+            null === (e = this.context) || void 0 === e || e.putImageData(i, r, n, 0, 0, s, o);
         }
     }
-    constructor(t, e, i, r) {
-        n(this, 'key', void 0), n(this, 'canvas', void 0), n(this, 'context', void 0), n(this, 'cells', void 0), n(this, 'native', void 0), n(this, 'renderedFrames', void 0), n(this, 'frameWidth', void 0), n(this, 'frameHeight', void 0), n(this, 'frameRate', void 0), n(this, 'frameCount', void 0);
-        let [a, s, h] = (function (t, e, i) {
-            let n = Math.ceil(Math.sqrt(i));
-            return [n, n * t, n * e];
-        })(i, r, t.frames);
+    constructor(t, e, i, n) {
+        r(this, 'key', void 0), r(this, 'canvas', void 0), r(this, 'context', void 0), r(this, 'cells', void 0), r(this, 'native', void 0), r(this, 'renderedFrames', void 0), r(this, 'frameWidth', void 0), r(this, 'frameHeight', void 0), r(this, 'frameRate', void 0), r(this, 'frameCount', void 0);
+        let [a, s, o] = (function (t, e, i) {
+            let r = Math.ceil(Math.sqrt(i));
+            return [r, r * t, r * e];
+        })(i, n, t.frames);
         if (
             ((this.key = e),
             (this.canvas = (function (t, e) {
                 if ('function' == typeof OffscreenCanvas) return new OffscreenCanvas(t, e);
                 let i = document.createElement('canvas');
                 return (i.width = t), (i.height = e), i;
-            })(s, h)),
+            })(s, o)),
             (this.context = this.canvas.getContext('2d')),
             (this.cells = a),
             (this.native = t),
             (this.renderedFrames = new Set()),
             (this.frameWidth = i),
-            (this.frameHeight = r),
+            (this.frameHeight = n),
             (this.frameRate = t.fps),
             (this.frameCount = t.frames),
             null == this.context)
@@ -65,7 +59,6 @@ class r {
             throw Error("couldn't create 2d canvas context.");
     }
 }
-function a(t, e, i, n) {
-    let r = Math.floor(t / n) * e;
-    return [r, (t % n) * i, e, i];
+function a(t, e, i, r) {
+    return [Math.floor(t / r) * e, (t % r) * i, e, i];
 }

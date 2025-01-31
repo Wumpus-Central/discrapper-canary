@@ -1,6 +1,7 @@
-e.exports = {
-    title: 'title_b70be6 ' + n('456963').modalContent,
-    scrollerInner: 'scrollerInner_b70be6',
-    bottomSeparator: 'bottomSeparator_b70be6',
-    scrollWrapper: 'scrollWrapper_b70be6'
+var r = {
+    title: 'title__1964c ' + t(456963).modalContent,
+    scrollerInner: 'scrollerInner__1964c',
+    bottomSeparator: 'bottomSeparator__1964c',
+    scrollWrapper: 'scrollWrapper__1964c'
 };
+e.exports = r;

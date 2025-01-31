@@ -1,17 +1,13 @@
-n.d(t, {
-    j: function () {
-        return l;
-    }
-});
+n.d(t, { j: () => a });
 var i = n(406432),
-    r = n(981631);
-function l(e, t) {
-    let { targetKind: n, embedIndex: l } = t;
+    l = n(981631);
+function a(e, t) {
+    let { targetKind: n, embedIndex: a } = t;
     if ('media' === n) {
-        var a, o;
+        var r, s;
         let t = e;
         return (
-            (null === (a = e.messageReference) || void 0 === a ? void 0 : a.type) === r.Uvt.FORWARD && (t = null === (o = e.messageSnapshots[0]) || void 0 === o ? void 0 : o.message),
+            (null === (r = e.messageReference) || void 0 === r ? void 0 : r.type) === l.Uvt.FORWARD && (t = null === (s = e.messageSnapshots[0]) || void 0 === s ? void 0 : s.message),
             {
                 onlyAttachmentIds:
                     null == t
@@ -25,6 +21,5 @@ function l(e, t) {
             }
         );
     }
-    if ('embed' === n && null != l) return { onlyEmbedIndices: [l] };
-    if ('shortcut' === n) return {};
+    return 'embed' === n && null != a ? { onlyEmbedIndices: [a] } : 'shortcut' === n ? {} : void 0;
 }

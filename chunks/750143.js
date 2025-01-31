@@ -1,10 +1,6 @@
-r.d(n, {
-    X: function () {
-        return a;
-    },
-    i: function () {
-        return i;
-    }
+n.d(t, {
+    X: () => r,
+    i: () => i
 });
 let i = '(max-width: 485px)',
-    a = '(max-height: 450px)';
+    r = '(max-height: 450px)';

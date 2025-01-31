@@ -1,13 +1,8 @@
-r.d(n, {
-    Z: function () {
-        return a;
-    }
-});
-var i = r(757143);
-function a(e) {
+function i(e) {
     return e
         .replace(/[\s-~]+/g, '-')
         .replace(/^-+/, '')
         .replace(/[\\'!"#$%&()*+,./:;<=>?@[\]^`{|}~]/g, '')
         .toLowerCase();
 }
+n.d(t, { Z: () => i }), n(757143);

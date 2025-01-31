@@ -1,74 +1,57 @@
-r.r(n),
-    r.d(n, {
-        DISCORD_EPOCH: function () {
-            return o.cj;
-        },
-        SnowflakeSequence: function () {
-            return o.Tk;
-        }
+n.r(t),
+    n.d(t, {
+        DISCORD_EPOCH: () => a.cj,
+        SnowflakeSequence: () => a.Tk,
+        default: () => o
     });
-var i = r(392711),
-    a = r.n(i),
-    o = r(67423);
+var i = n(392711),
+    r = n.n(i),
+    a = n(67423);
 function s(e) {
-    return Object.keys(e);
-}
-function l(e) {
-    return Object.entries(e);
-}
-function u(e, n) {
-    for (let r in e) n(r);
-}
-function c(e, n) {
-    a().forEach(e, (e, r) => n(e, r));
-}
-function d(e) {
-    return o.Ol(e);
-}
-function f(e, n) {
-    return o.P4(e, n);
-}
-function p(e) {
-    return o.cO(e);
-}
-function h(e) {
-    return o.B_(e);
-}
-function _(e) {
-    return o.Lm(e);
-}
-function m(e, n) {
-    return o.qu(e, n);
-}
-function g(e) {
-    return o.qi(e);
-}
-function E(e) {
     return e;
 }
-function v(e) {
-    return E(e);
-}
-function y(e) {
-    return E(e);
-}
-function b(e) {
-    return E(e);
-}
-n.default = {
-    age: h,
-    extractTimestamp: _,
-    compare: m,
-    atPreviousMillisecond: p,
-    fromTimestamp: d,
-    fromTimestampWithSequence: f,
-    keys: s,
-    forEach: c,
-    forEachKey: u,
-    entries: l,
-    isProbablyAValidSnowflake: g,
-    castChannelIdAsMessageId: v,
-    castMessageIdAsChannelId: y,
-    castGuildIdAsEveryoneGuildRoleId: b,
-    cast: E
+let o = {
+    age: function (e) {
+        return a.B_(e);
+    },
+    extractTimestamp: function (e) {
+        return a.Lm(e);
+    },
+    compare: function (e, t) {
+        return a.qu(e, t);
+    },
+    atPreviousMillisecond: function (e) {
+        return a.cO(e);
+    },
+    fromTimestamp: function (e) {
+        return a.Ol(e);
+    },
+    fromTimestampWithSequence: function (e, t) {
+        return a.P4(e, t);
+    },
+    keys: function (e) {
+        return Object.keys(e);
+    },
+    forEach: function (e, t) {
+        r().forEach(e, (e, n) => t(e, n));
+    },
+    forEachKey: function (e, t) {
+        for (let n in e) t(n);
+    },
+    entries: function (e) {
+        return Object.entries(e);
+    },
+    isProbablyAValidSnowflake: function (e) {
+        return a.qi(e);
+    },
+    castChannelIdAsMessageId: function (e) {
+        return s(e);
+    },
+    castMessageIdAsChannelId: function (e) {
+        return s(e);
+    },
+    castGuildIdAsEveryoneGuildRoleId: function (e) {
+        return s(e);
+    },
+    cast: s
 };

@@ -1,31 +1,27 @@
-r.d(n, {
-    Z: function () {
-        return c;
-    }
-});
-var i = r(812206),
-    a = r(307643),
-    o = r(973616),
-    s = r(592125),
-    l = r(566620),
-    u = r(969345);
-async function c(e, n) {
-    var r;
-    let c = i.Z.getApplication(e);
-    if (d(c)) return c;
-    let f = null === (r = s.Z.getChannel(n)) || void 0 === r ? void 0 : r.guild_id,
-        { activityConfigs: p, applications: h } = await (0, l.w1)({ guildId: f }),
-        _ = (0, u.Z)({
+n.d(t, { Z: () => u });
+var i = n(812206),
+    r = n(307643),
+    a = n(973616),
+    s = n(592125),
+    o = n(566620),
+    l = n(969345);
+async function u(e, t) {
+    var n;
+    let u = i.Z.getApplication(e);
+    if (c(u)) return u;
+    let d = null === (n = s.Z.getChannel(t)) || void 0 === n ? void 0 : n.guild_id,
+        { activityConfigs: f, applications: _ } = await (0, o.w1)({ guildId: d }),
+        p = (0, l.Z)({
             applicationId: e,
-            activityConfigs: p,
-            applications: h
+            activityConfigs: f,
+            applications: _
         });
-    if (d(null == _ ? void 0 : _.application)) return null == _ ? void 0 : _.application;
+    if (c(null == p ? void 0 : p.application)) return null == p ? void 0 : p.application;
     {
-        let n = await (0, a.UM)(e);
-        return o.ZP.createFromServer(n);
+        let t = await (0, r.UM)(e);
+        return a.ZP.createFromServer(t);
     }
 }
-function d(e) {
-    return null != e && null != e.embeddedActivityConfig && !0;
+function c(e) {
+    return null != e && null != e.embeddedActivityConfig;
 }

@@ -1,71 +1,69 @@
-r.d(n, {
-    I: function () {
-        return i;
-    }
+n.d(t, {
+    I: () => u,
+    Z: () => g
 });
 var i,
-    a,
-    o = r(442837),
-    s = r(570140),
-    l = r(128069),
-    u = r(38618);
-function c(e, n, r) {
+    r = n(442837),
+    a = n(570140),
+    s = n(128069),
+    o = n(38618);
+function l(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-!(function (e) {
-    (e[(e.UNKNOWN = 0)] = 'UNKNOWN'), (e[(e.PENDING = 1)] = 'PENDING'), (e[(e.SUCCESS = 2)] = 'SUCCESS'), (e[(e.ERROR = 3)] = 'ERROR');
-})(i || (i = {}));
-let d = 0,
-    f = null,
-    p = null;
-function h(e) {
-    let { error: n } = e,
-        r = n instanceof l.ZP ? n : new l.ZP(n);
-    u.Z.isConnected() && r.code === l.ZP.ErrorCodes.PURCHASE_TOKEN_AUTHORIZATION_REQUIRED && (d = 1);
-}
+var u = (function (e) {
+    return (e[(e.UNKNOWN = 0)] = 'UNKNOWN'), (e[(e.PENDING = 1)] = 'PENDING'), (e[(e.SUCCESS = 2)] = 'SUCCESS'), (e[(e.ERROR = 3)] = 'ERROR'), e;
+})({});
+let c = 0,
+    d = null,
+    f = null;
 function _(e) {
-    (d = 2), (f = e.purchaseTokenHash), (p = e.expiresAt);
+    let { error: t } = e,
+        n = t instanceof s.ZP ? t : new s.ZP(t);
+    o.Z.isConnected() && n.code === s.ZP.ErrorCodes.PURCHASE_TOKEN_AUTHORIZATION_REQUIRED && (c = 1);
 }
-function m() {
-    (d = 0), (f = null), (p = null);
+function p(e) {
+    (c = 2), (d = e.purchaseTokenHash), (f = e.expiresAt);
 }
-class g extends (a = o.ZP.Store) {
+function h() {
+    (c = 0), (d = null), (f = null);
+}
+class m extends (i = r.ZP.Store) {
     get purchaseTokenAuthState() {
-        return d;
+        return c;
     }
     get purchaseTokenHash() {
-        return f;
+        return d;
     }
     get expiresAt() {
-        return p;
+        return f;
     }
 }
-c(g, 'displayName', 'PurchaseTokenAuthStore'),
-    (n.Z = new g(s.Z, {
-        SKU_PURCHASE_FAIL: h,
-        PREMIUM_PAYMENT_SUBSCRIBE_FAIL: h,
-        USER_PAYMENT_CLIENT_ADD: _,
-        BILLING_PURCHASE_TOKEN_AUTH_CLEAR_STATE: m,
-        BILLING_SUBSCRIPTION_UPDATE_START: m,
-        PAYMENT_AUTHENTICATION_CLEAR_ERROR: m,
-        PREMIUM_PAYMENT_ERROR_CLEAR: m,
-        PREMIUM_PAYMENT_MODAL_CLOSE: m,
-        PREMIUM_PAYMENT_MODAL_OPEN: m,
-        PREMIUM_PAYMENT_SUBSCRIBE_START: m,
-        PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: m,
-        PREMIUM_PAYMENT_UPDATE_SUCCESS: m,
-        SKU_PURCHASE_MODAL_CLOSE: m,
-        SKU_PURCHASE_MODAL_OPEN: m,
-        SKU_PURCHASE_START: m,
-        SKU_PURCHASE_SUCCESS: m
-    }));
+l(m, 'displayName', 'PurchaseTokenAuthStore');
+let g = new m(a.Z, {
+    SKU_PURCHASE_FAIL: _,
+    PREMIUM_PAYMENT_SUBSCRIBE_FAIL: _,
+    USER_PAYMENT_CLIENT_ADD: p,
+    BILLING_PURCHASE_TOKEN_AUTH_CLEAR_STATE: h,
+    BILLING_SUBSCRIPTION_UPDATE_START: h,
+    PAYMENT_AUTHENTICATION_CLEAR_ERROR: h,
+    PREMIUM_PAYMENT_ERROR_CLEAR: h,
+    PREMIUM_PAYMENT_MODAL_CLOSE: h,
+    PREMIUM_PAYMENT_MODAL_OPEN: h,
+    PREMIUM_PAYMENT_SUBSCRIBE_START: h,
+    PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: h,
+    PREMIUM_PAYMENT_UPDATE_SUCCESS: h,
+    SKU_PURCHASE_MODAL_CLOSE: h,
+    SKU_PURCHASE_MODAL_OPEN: h,
+    SKU_PURCHASE_START: h,
+    SKU_PURCHASE_SUCCESS: h
+});

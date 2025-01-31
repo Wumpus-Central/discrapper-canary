@@ -1,17 +1,13 @@
 function i(e) {
     if ('custom' === e) return null;
-    let n = a[e];
+    let t = r[e];
     return {
-        width: n,
-        height: n
+        width: t,
+        height: t
     };
 }
-r.d(n, {
-    m: function () {
-        return i;
-    }
-});
-let a = {
+n.d(t, { m: () => i });
+let r = {
     xxs: 12,
     xs: 16,
     sm: 18,

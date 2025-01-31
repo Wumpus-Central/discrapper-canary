@@ -1,314 +1,314 @@
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(120356),
-    l = r.n(s),
-    u = r(780384),
-    c = r(481060),
-    d = r(410030),
-    f = r(981631),
-    p = r(474936),
-    h = r(388032),
-    _ = r(711458);
-let m = 1048576,
-    g = [
+n.d(t, { Z: () => y }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(780384),
+    l = n(481060),
+    u = n(410030),
+    c = n(981631),
+    d = n(474936),
+    f = n(388032),
+    _ = n(711458);
+let p = 1048576,
+    h = [
         {
-            getPerkHeading: () => h.intl.string(h.t.tIiwur),
-            getPerkPreviewLightTheme: () => r(414102),
-            getPerkPreviewDarkTheme: () => r(614600),
-            getTier0Value: () => p.HO[f.Eu4.NONE].limits.emoji,
-            getTier1Value: () => p.HO[f.Eu4.TIER_1].limits.emoji,
-            getTier2Value: () => p.HO[f.Eu4.TIER_2].limits.emoji,
-            getTier3Value: () => p.HO[f.Eu4.TIER_3].limits.emoji
+            getPerkHeading: () => f.intl.string(f.t.tIiwur),
+            getPerkPreviewLightTheme: () => n(414102),
+            getPerkPreviewDarkTheme: () => n(614600),
+            getTier0Value: () => d.HO[c.Eu4.NONE].limits.emoji,
+            getTier1Value: () => d.HO[c.Eu4.TIER_1].limits.emoji,
+            getTier2Value: () => d.HO[c.Eu4.TIER_2].limits.emoji,
+            getTier3Value: () => d.HO[c.Eu4.TIER_3].limits.emoji
         },
         {
-            getPerkHeading: () => h.intl.string(h.t['3iccen']),
-            getPerkPreviewLightTheme: () => r(73541),
-            getPerkPreviewDarkTheme: () => r(43735),
-            getTier0Value: () => p.HO[f.Eu4.NONE].limits.stickers,
-            getTier1Value: () => p.HO[f.Eu4.TIER_1].limits.stickers,
-            getTier2Value: () => p.HO[f.Eu4.TIER_2].limits.stickers,
-            getTier3Value: () => p.HO[f.Eu4.TIER_3].limits.stickers
+            getPerkHeading: () => f.intl.string(f.t['3iccen']),
+            getPerkPreviewLightTheme: () => n(73541),
+            getPerkPreviewDarkTheme: () => n(43735),
+            getTier0Value: () => d.HO[c.Eu4.NONE].limits.stickers,
+            getTier1Value: () => d.HO[c.Eu4.TIER_1].limits.stickers,
+            getTier2Value: () => d.HO[c.Eu4.TIER_2].limits.stickers,
+            getTier3Value: () => d.HO[c.Eu4.TIER_3].limits.stickers
         },
         {
-            getPerkHeading: () => h.intl.string(h.t['+smCv7']),
-            getPerkPreviewLightTheme: () => r(69098),
-            getPerkPreviewDarkTheme: () => r(881755),
-            getTier0Value: () => p.HO[f.Eu4.NONE].limits.soundboardSounds,
-            getTier1Value: () => p.HO[f.Eu4.TIER_1].limits.soundboardSounds,
-            getTier2Value: () => p.HO[f.Eu4.TIER_2].limits.soundboardSounds,
-            getTier3Value: () => p.HO[f.Eu4.TIER_3].limits.soundboardSounds
+            getPerkHeading: () => f.intl.string(f.t['+smCv7']),
+            getPerkPreviewLightTheme: () => n(69098),
+            getPerkPreviewDarkTheme: () => n(881755),
+            getTier0Value: () => d.HO[c.Eu4.NONE].limits.soundboardSounds,
+            getTier1Value: () => d.HO[c.Eu4.TIER_1].limits.soundboardSounds,
+            getTier2Value: () => d.HO[c.Eu4.TIER_2].limits.soundboardSounds,
+            getTier3Value: () => d.HO[c.Eu4.TIER_3].limits.soundboardSounds
         },
         {
-            getPerkHeading: () => h.intl.string(h.t.SMYauL),
-            getPerkPreviewLightTheme: () => r(989015),
-            getPerkPreviewDarkTheme: () => r(904257),
+            getPerkHeading: () => f.intl.string(f.t.SMYauL),
+            getPerkPreviewLightTheme: () => n(989015),
+            getPerkPreviewDarkTheme: () => n(904257),
             getTier0Value: () =>
-                h.intl.formatToPlainString(h.t.zZ6Rdn, {
-                    resolution: p.HO[f.Eu4.NONE].limits.screenShareQualityResolution,
-                    framerate: p.HO[f.Eu4.NONE].limits.screenShareQualityFramerate
+                f.intl.formatToPlainString(f.t.zZ6Rdn, {
+                    resolution: d.HO[c.Eu4.NONE].limits.screenShareQualityResolution,
+                    framerate: d.HO[c.Eu4.NONE].limits.screenShareQualityFramerate
                 }),
             getTier1Value: () =>
-                h.intl.formatToPlainString(h.t.zZ6Rdn, {
-                    resolution: p.HO[f.Eu4.TIER_1].limits.screenShareQualityResolution,
-                    framerate: p.HO[f.Eu4.TIER_1].limits.screenShareQualityFramerate
+                f.intl.formatToPlainString(f.t.zZ6Rdn, {
+                    resolution: d.HO[c.Eu4.TIER_1].limits.screenShareQualityResolution,
+                    framerate: d.HO[c.Eu4.TIER_1].limits.screenShareQualityFramerate
                 }),
             getTier2Value: () =>
-                h.intl.formatToPlainString(h.t.zZ6Rdn, {
-                    resolution: p.HO[f.Eu4.TIER_2].limits.screenShareQualityResolution,
-                    framerate: p.HO[f.Eu4.TIER_2].limits.screenShareQualityFramerate
+                f.intl.formatToPlainString(f.t.zZ6Rdn, {
+                    resolution: d.HO[c.Eu4.TIER_2].limits.screenShareQualityResolution,
+                    framerate: d.HO[c.Eu4.TIER_2].limits.screenShareQualityFramerate
                 }),
             getTier3Value: () =>
-                h.intl.formatToPlainString(h.t.zZ6Rdn, {
-                    resolution: p.HO[f.Eu4.TIER_3].limits.screenShareQualityResolution,
-                    framerate: p.HO[f.Eu4.TIER_3].limits.screenShareQualityFramerate
+                f.intl.formatToPlainString(f.t.zZ6Rdn, {
+                    resolution: d.HO[c.Eu4.TIER_3].limits.screenShareQualityResolution,
+                    framerate: d.HO[c.Eu4.TIER_3].limits.screenShareQualityFramerate
                 })
         },
         {
-            getPerkHeading: () => h.intl.string(h.t['/79IDg']),
-            getPerkPreviewLightTheme: () => r(222185),
-            getPerkPreviewDarkTheme: () => r(415480),
-            getTier0Value: () => h.intl.formatToPlainString(h.t.w1gmLi, { bitrate: p.HO[f.Eu4.NONE].limits.bitrate / 1000 }),
-            getTier1Value: () => h.intl.formatToPlainString(h.t.w1gmLi, { bitrate: p.HO[f.Eu4.TIER_1].limits.bitrate / 1000 }),
-            getTier2Value: () => h.intl.formatToPlainString(h.t.w1gmLi, { bitrate: p.HO[f.Eu4.TIER_2].limits.bitrate / 1000 }),
-            getTier3Value: () => h.intl.formatToPlainString(h.t.w1gmLi, { bitrate: p.HO[f.Eu4.TIER_3].limits.bitrate / 1000 })
+            getPerkHeading: () => f.intl.string(f.t['/79IDg']),
+            getPerkPreviewLightTheme: () => n(222185),
+            getPerkPreviewDarkTheme: () => n(415480),
+            getTier0Value: () => f.intl.formatToPlainString(f.t.w1gmLi, { bitrate: d.HO[c.Eu4.NONE].limits.bitrate / 1000 }),
+            getTier1Value: () => f.intl.formatToPlainString(f.t.w1gmLi, { bitrate: d.HO[c.Eu4.TIER_1].limits.bitrate / 1000 }),
+            getTier2Value: () => f.intl.formatToPlainString(f.t.w1gmLi, { bitrate: d.HO[c.Eu4.TIER_2].limits.bitrate / 1000 }),
+            getTier3Value: () => f.intl.formatToPlainString(f.t.w1gmLi, { bitrate: d.HO[c.Eu4.TIER_3].limits.bitrate / 1000 })
         },
         {
-            getPerkHeading: () => h.intl.string(h.t.R1U2xM),
-            getPerkPreviewLightTheme: () => r(825588),
-            getPerkPreviewDarkTheme: () => r(954499),
-            getTier0Value: () => h.intl.formatToPlainString(h.t.pIn7AQ, { size: p.HO[f.Eu4.NONE].limits.fileSize / m }),
-            getTier1Value: () => h.intl.formatToPlainString(h.t.pIn7AQ, { size: p.HO[f.Eu4.TIER_1].limits.fileSize / m }),
-            getTier2Value: () => h.intl.formatToPlainString(h.t.pIn7AQ, { size: p.HO[f.Eu4.TIER_2].limits.fileSize / m }),
-            getTier3Value: () => h.intl.formatToPlainString(h.t.pIn7AQ, { size: p.HO[f.Eu4.TIER_3].limits.fileSize / m })
+            getPerkHeading: () => f.intl.string(f.t.R1U2xM),
+            getPerkPreviewLightTheme: () => n(825588),
+            getPerkPreviewDarkTheme: () => n(954499),
+            getTier0Value: () => f.intl.formatToPlainString(f.t.pIn7AQ, { size: d.HO[c.Eu4.NONE].limits.fileSize / p }),
+            getTier1Value: () => f.intl.formatToPlainString(f.t.pIn7AQ, { size: d.HO[c.Eu4.TIER_1].limits.fileSize / p }),
+            getTier2Value: () => f.intl.formatToPlainString(f.t.pIn7AQ, { size: d.HO[c.Eu4.TIER_2].limits.fileSize / p }),
+            getTier3Value: () => f.intl.formatToPlainString(f.t.pIn7AQ, { size: d.HO[c.Eu4.TIER_3].limits.fileSize / p })
         },
         {
-            getPerkHeading: () => h.intl.string(h.t.f6vfsr),
-            getPerkPreviewLightTheme: () => r(241190),
-            getPerkPreviewDarkTheme: () => r(879846),
-            getTier0Value: () => p.HO[f.Eu4.NONE].limits.stageVideoUsers,
-            getTier1Value: () => p.HO[f.Eu4.TIER_1].limits.stageVideoUsers,
-            getTier2Value: () => p.HO[f.Eu4.TIER_2].limits.stageVideoUsers,
-            getTier3Value: () => p.HO[f.Eu4.TIER_3].limits.stageVideoUsers
+            getPerkHeading: () => f.intl.string(f.t.f6vfsr),
+            getPerkPreviewLightTheme: () => n(241190),
+            getPerkPreviewDarkTheme: () => n(879846),
+            getTier0Value: () => d.HO[c.Eu4.NONE].limits.stageVideoUsers,
+            getTier1Value: () => d.HO[c.Eu4.TIER_1].limits.stageVideoUsers,
+            getTier2Value: () => d.HO[c.Eu4.TIER_2].limits.stageVideoUsers,
+            getTier3Value: () => d.HO[c.Eu4.TIER_3].limits.stageVideoUsers
         },
         {
-            getPerkHeading: () => h.intl.string(h.t.qDqUMD),
-            getPerkPreviewLightTheme: () => r(499059),
-            getPerkPreviewDarkTheme: () => r(488349),
+            getPerkHeading: () => f.intl.string(f.t.qDqUMD),
+            getPerkPreviewLightTheme: () => n(499059),
+            getPerkPreviewDarkTheme: () => n(488349),
             getTier0Value: () => !1,
             getTier1Value: () => !0,
             getTier2Value: () => !0,
             getTier3Value: () => !0
         },
         {
-            getPerkHeading: () => h.intl.string(h.t.uwqgbm),
-            getPerkPreviewLightTheme: () => r(136631),
-            getPerkPreviewDarkTheme: () => r(692079),
+            getPerkHeading: () => f.intl.string(f.t.uwqgbm),
+            getPerkPreviewLightTheme: () => n(136631),
+            getPerkPreviewDarkTheme: () => n(692079),
             getTier0Value: () => !1,
             getTier1Value: () => !0,
             getTier2Value: () => !0,
             getTier3Value: () => !0
         },
         {
-            getPerkHeading: () => h.intl.string(h.t.zxsDxc),
-            getPerkPreviewLightTheme: () => r(277822),
-            getPerkPreviewDarkTheme: () => r(866919),
+            getPerkHeading: () => f.intl.string(f.t.zxsDxc),
+            getPerkPreviewLightTheme: () => n(277822),
+            getPerkPreviewDarkTheme: () => n(866919),
             getTier0Value: () => !1,
             getTier1Value: () => !1,
-            getTier2Value: () => h.intl.string(h.t['2TNS3t']),
-            getTier3Value: () => h.intl.string(h.t['l+S46e'])
+            getTier2Value: () => f.intl.string(f.t['2TNS3t']),
+            getTier3Value: () => f.intl.string(f.t['l+S46e'])
         },
         {
-            getPerkHeading: () => h.intl.string(h.t['bHa+ER']),
-            getPerkPreviewLightTheme: () => r(872259),
-            getPerkPreviewDarkTheme: () => r(876049),
+            getPerkHeading: () => f.intl.string(f.t['bHa+ER']),
+            getPerkPreviewLightTheme: () => n(872259),
+            getPerkPreviewDarkTheme: () => n(876049),
             getTier0Value: () => !1,
             getTier1Value: () => !1,
             getTier2Value: () => !0,
             getTier3Value: () => !0
         },
         {
-            getPerkHeading: () => h.intl.string(h.t.QV6MZW),
-            getPerkPreviewLightTheme: () => r(710717),
-            getPerkPreviewDarkTheme: () => r(945198),
+            getPerkHeading: () => f.intl.string(f.t.QV6MZW),
+            getPerkPreviewLightTheme: () => n(710717),
+            getPerkPreviewDarkTheme: () => n(945198),
             getTier0Value: () => !1,
             getTier1Value: () => !1,
             getTier2Value: () => !1,
             getTier3Value: () => !0
         }
     ];
-function E(e) {
-    let { children: n, className: r, tier: i } = e,
-        o = i === f.Eu4.NONE ? 'text-muted' : 'header-primary',
-        s = i === f.Eu4.NONE || null == i ? 'heading-xl/normal' : 'heading-xl/bold';
-    return (0, a.jsxs)('th', {
-        className: l()(_.columnHeading, r),
+function m(e) {
+    let { children: t, className: n, tier: r } = e,
+        a = r === c.Eu4.NONE ? 'text-muted' : 'header-primary',
+        o = r === c.Eu4.NONE || null == r ? 'heading-xl/normal' : 'heading-xl/bold';
+    return (0, i.jsxs)('th', {
+        className: s()(_.columnHeading, n),
         scope: 'col',
         children: [
-            (0, a.jsx)(c.Heading, {
-                color: o,
-                variant: s,
-                children: n
+            (0, i.jsx)(l.X6q, {
+                color: a,
+                variant: o,
+                children: t
             }),
-            null != i &&
-                (0, a.jsx)(c.Text, {
-                    color: o,
+            null != r &&
+                (0, i.jsx)(l.Text, {
+                    color: a,
                     variant: 'text-md/normal',
-                    children: h.intl.format(h.t['pob/cH'], { subscriptions: f.oCV[i] })
+                    children: f.intl.format(f.t['pob/cH'], { subscriptions: c.oCV[r] })
                 })
         ]
     });
 }
-function v(e) {
-    let n;
-    let { className: r, textVariant: i = 'text-md/bold', value: o } = e;
-    if ('boolean' == typeof o) {
-        let e = l()(_.booleanValueIcon, { [_.booleanValueTrue]: o });
-        n = o
-            ? (0, a.jsx)(c.CheckmarkLargeIcon, {
+function g(e) {
+    let t;
+    let { className: n, textVariant: r = 'text-md/bold', value: a } = e;
+    if ('boolean' == typeof a) {
+        let e = s()(_.booleanValueIcon, { [_.booleanValueTrue]: a });
+        t = a
+            ? (0, i.jsx)(l.dz2, {
                   size: 'md',
                   color: 'currentColor',
                   className: e
               })
-            : (0, a.jsx)(c.XSmallIcon, {
+            : (0, i.jsx)(l.Dio, {
                   size: 'md',
                   color: 'currentColor',
                   className: e
               });
     } else
-        n = (0, a.jsx)(c.Text, {
+        t = (0, i.jsx)(l.Text, {
             color: 'interactive-active',
-            variant: i,
-            children: o
+            variant: r,
+            children: a
         });
-    return (0, a.jsx)('td', {
-        className: l()(_.tableCell, r),
-        children: n
+    return (0, i.jsx)('td', {
+        className: s()(_.tableCell, n),
+        children: t
     });
 }
-function y(e) {
+function E(e) {
     switch (e) {
-        case f.Eu4.NONE:
-        case f.Eu4.TIER_1:
-            return f.Eu4.TIER_2;
-        case f.Eu4.TIER_2:
-        case f.Eu4.TIER_3:
-            return f.Eu4.TIER_3;
+        case c.Eu4.NONE:
+        case c.Eu4.TIER_1:
+            return c.Eu4.TIER_2;
+        case c.Eu4.TIER_2:
+        case c.Eu4.TIER_3:
+            return c.Eu4.TIER_3;
         default:
             return null;
     }
 }
-function b(e) {
-    let { currentTier: n } = e,
-        r = y(n);
-    return null == r
+function v(e) {
+    let { currentTier: t } = e,
+        n = E(t);
+    return null == n
         ? null
-        : (0, a.jsx)('div', {
-              className: l()(_.recommendedTierHighlight, {
-                  [_.recommendedTierHighlightTier2]: r === f.Eu4.TIER_2,
-                  [_.recommendedTierHighlightTier3]: r === f.Eu4.TIER_3
+        : (0, i.jsx)('div', {
+              className: s()(_.recommendedTierHighlight, {
+                  [_.recommendedTierHighlightTier2]: n === c.Eu4.TIER_2,
+                  [_.recommendedTierHighlightTier3]: n === c.Eu4.TIER_3
               }),
-              children: (0, a.jsx)(c.Text, {
+              children: (0, i.jsx)(l.Text, {
                   className: _.recommendedTierHighlightTag,
                   color: 'always-white',
                   variant: 'text-xs/bold',
-                  children: n === f.Eu4.TIER_3 ? h.intl.string(h.t.d849Ul) : h.intl.string(h.t.dZeX19)
+                  children: t === c.Eu4.TIER_3 ? f.intl.string(f.t.d849Ul) : f.intl.string(f.t.dZeX19)
               })
           });
 }
-function I(e) {
-    let n = (0, d.ZP)(),
-        [r, i] = o.useState(null),
-        { className: s, guild: p, hideHeading: m, hideTier0: y } = e;
+let y = function (e) {
+    let t = (0, u.ZP)(),
+        [n, a] = r.useState(null),
+        { className: d, guild: p, hideHeading: E, hideTier0: y } = e;
     function I(e) {
-        i(e);
+        a(e);
     }
-    function T() {
-        i(null);
+    function b() {
+        a(null);
     }
-    return (0, a.jsxs)('div', {
-        className: s,
+    return (0, i.jsxs)('div', {
+        className: d,
         children: [
-            !m &&
-                (0, a.jsx)(c.Heading, {
+            !E &&
+                (0, i.jsx)(l.X6q, {
                     className: _.heading,
                     variant: 'heading-xxl/extrabold',
-                    children: h.intl.string(h.t['9GGb9v'])
+                    children: f.intl.string(f.t['9GGb9v'])
                 }),
-            (0, a.jsxs)('div', {
+            (0, i.jsxs)('div', {
                 className: _.tableWrapper,
                 children: [
-                    null != p && (0, a.jsx)(b, { currentTier: p.premiumTier }),
-                    (0, a.jsxs)('table', {
+                    null != p && (0, i.jsx)(v, { currentTier: p.premiumTier }),
+                    (0, i.jsxs)('table', {
                         className: _.table,
                         cellPadding: 0,
                         cellSpacing: 0,
                         children: [
-                            (0, a.jsx)('thead', {
-                                children: (0, a.jsxs)('tr', {
+                            (0, i.jsx)('thead', {
+                                children: (0, i.jsxs)('tr', {
                                     className: _.__invalid_tableRow,
                                     children: [
-                                        (0, a.jsx)(E, {
+                                        (0, i.jsx)(m, {
                                             className: _.tableRowHeading,
-                                            children: h.intl.string(h.t.F5MY0t)
+                                            children: f.intl.string(f.t.F5MY0t)
                                         }),
                                         !y &&
-                                            (0, a.jsx)(E, {
-                                                tier: f.Eu4.NONE,
-                                                children: h.intl.string(h.t.mx8j2t)
+                                            (0, i.jsx)(m, {
+                                                tier: c.Eu4.NONE,
+                                                children: f.intl.string(f.t.mx8j2t)
                                             }),
-                                        (0, a.jsx)(E, {
-                                            tier: f.Eu4.TIER_1,
-                                            children: h.intl.string(h.t.nzXtaW)
+                                        (0, i.jsx)(m, {
+                                            tier: c.Eu4.TIER_1,
+                                            children: f.intl.string(f.t.nzXtaW)
                                         }),
-                                        (0, a.jsx)(E, {
-                                            tier: f.Eu4.TIER_2,
-                                            children: h.intl.string(h.t['h33/ub'])
+                                        (0, i.jsx)(m, {
+                                            tier: c.Eu4.TIER_2,
+                                            children: f.intl.string(f.t['h33/ub'])
                                         }),
-                                        (0, a.jsx)(E, {
-                                            tier: f.Eu4.TIER_3,
-                                            children: h.intl.string(h.t.BfF6EB)
+                                        (0, i.jsx)(m, {
+                                            tier: c.Eu4.TIER_3,
+                                            children: f.intl.string(f.t.BfF6EB)
                                         })
                                     ]
                                 })
                             }),
-                            (0, a.jsx)('tbody', {
+                            (0, i.jsx)('tbody', {
                                 className: _.__invalid_tableBody,
-                                children: g.map((e, i) => {
-                                    let o = r === i;
-                                    function s() {
-                                        I(i);
+                                children: h.map((e, r) => {
+                                    let a = n === r;
+                                    function u() {
+                                        I(r);
                                     }
                                     return void 0 === e.predicate
-                                        ? (0, a.jsxs)(
+                                        ? (0, i.jsxs)(
                                               'tr',
                                               {
                                                   className: _.__invalid_tableRow,
                                                   children: [
-                                                      (0, a.jsx)('th', {
-                                                          className: l()(_.tableCell, _.tableCellWrapper),
+                                                      (0, i.jsx)('th', {
+                                                          className: s()(_.tableCell, _.tableCellWrapper),
                                                           scope: 'row',
-                                                          children: (0, a.jsx)(c.Clickable, {
-                                                              className: l()(_.tableRowHeading, _.tableCell, _.tableCellInner),
-                                                              onFocus: s,
-                                                              onBlur: T,
-                                                              onMouseEnter: s,
-                                                              onMouseLeave: T,
-                                                              children: (0, a.jsx)(c.Popout, {
+                                                          children: (0, i.jsx)(l.P3F, {
+                                                              className: s()(_.tableRowHeading, _.tableCell, _.tableCellInner),
+                                                              onFocus: u,
+                                                              onBlur: b,
+                                                              onMouseEnter: u,
+                                                              onMouseLeave: b,
+                                                              children: (0, i.jsx)(l.yRy, {
                                                                   align: 'center',
                                                                   disablePointerEvents: !0,
                                                                   nudgeAlignIntoViewport: !0,
                                                                   position: 'bottom',
                                                                   renderPopout: () =>
-                                                                      (0, a.jsx)('img', {
+                                                                      (0, i.jsx)('img', {
                                                                           className: _.perkPreviewImage,
-                                                                          src: (0, u.wj)(n) ? e.getPerkPreviewDarkTheme() : e.getPerkPreviewLightTheme(),
+                                                                          src: (0, o.wj)(t) ? e.getPerkPreviewDarkTheme() : e.getPerkPreviewLightTheme(),
                                                                           alt: ''
                                                                       }),
-                                                                  shouldShow: o,
+                                                                  shouldShow: a,
                                                                   spacing: 16,
                                                                   children: () =>
-                                                                      (0, a.jsx)(c.Text, {
+                                                                      (0, i.jsx)(l.Text, {
                                                                           variant: 'text-md/normal',
                                                                           children: e.getPerkHeading()
                                                                       })
@@ -316,16 +316,16 @@ function I(e) {
                                                           })
                                                       }),
                                                       !y &&
-                                                          (0, a.jsx)(v, {
+                                                          (0, i.jsx)(g, {
                                                               textVariant: 'text-md/normal',
                                                               value: e.getTier0Value()
                                                           }),
-                                                      (0, a.jsx)(v, { value: e.getTier1Value() }),
-                                                      (0, a.jsx)(v, { value: e.getTier2Value() }),
-                                                      (0, a.jsx)(v, { value: e.getTier3Value() })
+                                                      (0, i.jsx)(g, { value: e.getTier1Value() }),
+                                                      (0, i.jsx)(g, { value: e.getTier2Value() }),
+                                                      (0, i.jsx)(g, { value: e.getTier3Value() })
                                                   ]
                                               },
-                                              i
+                                              r
                                           )
                                         : null;
                                 })
@@ -336,5 +336,4 @@ function I(e) {
             })
         ]
     });
-}
-n.Z = I;
+};

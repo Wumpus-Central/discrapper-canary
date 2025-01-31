@@ -1,47 +1,42 @@
-n.r(e),
-    n.d(e, {
-        default: function () {
-            return r;
-        }
-    });
-var o = n(200651);
-n(192379);
-var a = n(481060),
-    s = n(388032),
-    i = n(422690);
+s.d(e, { default: () => r });
+var a = s(200651);
+s(192379);
+var n = s(481060),
+    i = s(388032),
+    o = s(422690);
 function r(t) {
     let { transitionState: e, onClose: r } = t;
-    return (0, o.jsxs)(a.ModalRoot, {
-        className: i.modal,
+    return (0, a.jsxs)(n.Y0X, {
+        className: o.modal,
         transitionState: e,
-        size: a.ModalSize.SMALL,
+        size: n.CgR.SMALL,
         children: [
-            (0, o.jsx)('img', {
+            (0, a.jsx)('img', {
                 'aria-hidden': !0,
                 alt: '',
-                src: n(762528),
-                className: i.image
+                src: s(762528),
+                className: o.image
             }),
-            (0, o.jsxs)(a.ModalContent, {
-                className: i.content,
+            (0, a.jsxs)(n.hzk, {
+                className: o.content,
                 children: [
-                    (0, o.jsx)(a.Heading, {
+                    (0, a.jsx)(n.X6q, {
                         variant: 'heading-xl/bold',
                         color: 'header-primary',
-                        className: i.text,
-                        children: s.intl.string(s.t.pAzfrq)
+                        className: o.text,
+                        children: i.intl.string(i.t.pAzfrq)
                     }),
-                    (0, o.jsx)(a.Text, {
+                    (0, a.jsx)(n.Text, {
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        className: i.text,
-                        children: s.intl.string(s.t.oxowND)
+                        className: o.text,
+                        children: i.intl.string(i.t.oxowND)
                     }),
-                    (0, o.jsx)(a.Button, {
+                    (0, a.jsx)(n.zxk, {
                         onClick: r,
-                        color: a.Button.Colors.BRAND,
-                        look: a.Button.Looks.FILLED,
-                        children: s.intl.string(s.t.o3ZlOD)
+                        color: n.zxk.Colors.BRAND,
+                        look: n.zxk.Looks.FILLED,
+                        children: i.intl.string(i.t.o3ZlOD)
                     })
                 ]
             })

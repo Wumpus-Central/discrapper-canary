@@ -1,376 +1,370 @@
-r.d(n, {
-    Z: function () {
-        return I;
-    }
-});
-var i = r(47120);
-var a = r(411104);
-var o = r(264344),
-    s = r.n(o),
-    l = r(259443),
-    u = r(47770),
-    c = r(46973),
-    d = r(734298),
-    f = r(997545),
-    p = r(501950),
-    h = r(992774),
-    _ = r(656795),
-    m = r(650886),
-    g = r(65154),
-    E = r(149396);
-function v(e, n, r) {
+n.d(t, { Z: () => v }), n(47120), n(411104);
+var i = n(264344),
+    r = n.n(i),
+    a = n(259443),
+    s = n(47770),
+    o = n(46973),
+    l = n(734298),
+    u = n(997545),
+    c = n(501950),
+    d = n(992774),
+    f = n(656795),
+    _ = n(650886),
+    p = n(65154),
+    h = n(149396);
+function m(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-function y(e) {
-    return (null != e ? e : E.Qx) / E.Qx;
+function g(e) {
+    return (null != e ? e : h.Qx) / h.Qx;
 }
-function b(e, n, r) {
-    return n + ((r - n) * e) / 100;
+function E(e, t, n) {
+    return t + ((n - t) * e) / 100;
 }
-class I extends u.Z {
+class v extends s.Z {
     destroy() {
-        this.eachConnection((e) => e.destroy()), this.emit(c.aB.Destroy), this.removeAllListeners();
+        this.eachConnection((e) => e.destroy()), this.emit(o.aB.Destroy), this.removeAllListeners();
     }
     interact() {}
     static supported() {
-        return (0, h.Zh)();
+        return (0, d.Zh)();
     }
     supported() {
         return !0;
     }
     supports(e) {
-        var n, r;
+        var t, n;
         switch (e) {
-            case E.AN.LEGACY_AUDIO_SUBSYSTEM:
-                return (0, h.eJ)(E.eR.VOICE_LEGACY_SUBSYSTEM);
-            case E.AN.EXPERIMENTAL_AUDIO_SUBSYSTEM:
-                return (0, h.eJ)(E.eR.VOICE_EXPERIMENTAL_SUBSYSTEM);
-            case E.AN.AUTOMATIC_AUDIO_SUBSYSTEM:
-                return (0, h.eJ)(E.eR.VOICE_AUTOMATIC_SUBSYSTEM);
-            case E.AN.AUDIO_SUBSYSTEM_DEFERRED_SWITCH:
-                return (0, h.eJ)(E.eR.VOICE_SUBSYSTEM_DEFERRED_SWITCH);
-            case E.AN.DEBUG_LOGGING:
-                return (0, h.eJ)(E.eR.DEBUG_LOGGING);
-            case E.AN.SOUNDSHARE:
-                return (0, h.eJ)(E.eR.SOUNDSHARE);
-            case E.AN.SCREEN_SOUNDSHARE:
-                return (0, h.eJ)(E.eR.SCREEN_SOUNDSHARE);
-            case E.AN.ELEVATED_HOOK:
-                return (0, h.eJ)(E.eR.ELEVATED_HOOK);
-            case E.AN.LOOPBACK:
-                return (0, h.eJ)(E.eR.LOOPBACK);
-            case E.AN.WUMPUS_VIDEO:
-                return (0, h.eJ)(E.eR.WUMPUS_VIDEO);
-            case E.AN.HYBRID_VIDEO:
-                return (0, h.eJ)(E.eR.HYBRID_VIDEO);
-            case E.AN.ATTENUATION:
-            case E.AN.VIDEO_HOOK:
-                return (null === s() || void 0 === s() ? void 0 : null === (n = s().os) || void 0 === n ? void 0 : n.family) != null && /^win/i.test(s().os.family);
-            case E.AN.EXPERIMENTAL_SOUNDSHARE:
-                return (0, h.eJ)(E.eR.SOUNDSHARE_LOOPBACK);
-            case E.AN.OPEN_H264:
-                return (null === s() || void 0 === s() ? void 0 : null === (r = s().os) || void 0 === r ? void 0 : r.family) != null && /^win|linux|OS X/i.test(s().os.family);
-            case E.AN.EXPERIMENTAL_ENCODERS:
-                return (0, h.eJ)(E.eR.EXPERIMENTAL_ENCODERS);
-            case E.AN.REMOTE_LOCUS_NETWORK_CONTROL:
-                return (0, h.eJ)(E.eR.REMOTE_LOCUS_NETWORK_CONTROL);
-            case E.AN.SCREEN_PREVIEWS:
-                return (0, h.eJ)(E.eR.SCREEN_PREVIEWS);
-            case E.AN.CLIPS:
-                return (0, h.eJ)(E.eR.CLIPS);
-            case E.AN.WINDOW_PREVIEWS:
-                return (0, h.eJ)(E.eR.WINDOW_PREVIEWS);
-            case E.AN.AUDIO_DEBUG_STATE:
-                return (0, h.eJ)(E.eR.AUDIO_DEBUG_STATE);
-            case E.AN.CONNECTION_REPLAY:
-                return (0, h.eJ)(E.eR.CONNECTION_REPLAY);
-            case E.AN.SIMULCAST:
-                return (0, h.eJ)(E.eR.SIMULCAST) && (0, h.eJ)(E.eR.SIMULCAST_BUGFIX);
-            case E.AN.RTC_REGION_RANKING:
-                return (0, h.eJ)(E.eR.RTC_REGION_RANKING);
-            case E.AN.DIRECT_VIDEO:
-                return (0, h.eJ)(E.eR.DIRECT_VIDEO) && null != window.createDiscordStream;
-            case E.AN.ELECTRON_VIDEO:
-                return (0, h.eJ)(E.eR.ELECTRON_VIDEO);
-            case E.AN.MEDIAPIPE:
-                return (0, h.eJ)(E.eR.MEDIAPIPE);
-            case E.AN.FIXED_KEYFRAME_INTERVAL:
-                return (0, h.eJ)(E.eR.FIXED_KEYFRAME_INTERVAL);
-            case E.AN.FIRST_FRAME_CALLBACK:
-                return (0, h.eJ)(E.eR.FIRST_FRAME_CALLBACK);
-            case E.AN.REMOTE_USER_MULTI_STREAM:
-                return (0, h.eJ)(E.eR.REMOTE_USER_MULTI_STREAM);
-            case E.AN.IMAGE_QUALITY_MEASUREMENT:
-                return (0, h.eJ)(E.eR.IMAGE_QUALITY_MEASUREMENT);
-            case E.AN.AMD_EXPERIMENTAL_RATE_CONTROL:
-                return (0, h.eJ)(E.eR.AMD_EXPERIMENTAL_RATE_CONTROL);
-            case E.AN.GO_LIVE_HARDWARE:
-                return (0, h.eJ)(E.eR.GO_LIVE_HARDWARE);
-            case E.AN.SCREEN_CAPTURE_KIT:
-                return (0, h.eJ)(E.eR.SCREEN_CAPTURE_KIT);
-            case E.AN.CAPTURE_TIMEOUT_EXPERIMENTS:
-                return (0, h.eJ)(E.eR.CAPTURE_TIMEOUT_EXPERIMENTS);
-            case E.AN.NATIVE_SCREENSHARE_PICKER:
-                return (0, h.eJ)(E.eR.NATIVE_SCREENSHARE_PICKER);
-            case E.AN.MLS_PAIRWISE_FINGERPRINTS:
-                return (0, h.eJ)(E.eR.MLS_PAIRWISE_FINGERPRINTS);
-            case E.AN.DIAGNOSTICS:
-            case E.AN.NATIVE_PING:
-            case E.AN.AUTOMATIC_VAD:
-            case E.AN.AUDIO_INPUT_DEVICE:
-            case E.AN.AUDIO_OUTPUT_DEVICE:
-            case E.AN.QOS:
-            case E.AN.VOICE_PROCESSING:
-            case E.AN.AUTO_ENABLE:
-            case E.AN.VIDEO:
-            case E.AN.DESKTOP_CAPTURE:
-            case E.AN.DESKTOP_CAPTURE_FORMAT:
-            case E.AN.DESKTOP_CAPTURE_APPLICATIONS:
-            case E.AN.VOICE_PANNING:
-            case E.AN.AEC_DUMP:
-            case E.AN.DISABLE_VIDEO:
-            case E.AN.SAMPLE_PLAYBACK:
-            case E.AN.NOISE_SUPPRESSION:
-            case E.AN.AUTOMATIC_GAIN_CONTROL:
+            case h.AN.LEGACY_AUDIO_SUBSYSTEM:
+                return (0, d.eJ)(h.eR.VOICE_LEGACY_SUBSYSTEM);
+            case h.AN.EXPERIMENTAL_AUDIO_SUBSYSTEM:
+                return (0, d.eJ)(h.eR.VOICE_EXPERIMENTAL_SUBSYSTEM);
+            case h.AN.AUTOMATIC_AUDIO_SUBSYSTEM:
+                return (0, d.eJ)(h.eR.VOICE_AUTOMATIC_SUBSYSTEM);
+            case h.AN.AUDIO_SUBSYSTEM_DEFERRED_SWITCH:
+                return (0, d.eJ)(h.eR.VOICE_SUBSYSTEM_DEFERRED_SWITCH);
+            case h.AN.DEBUG_LOGGING:
+                return (0, d.eJ)(h.eR.DEBUG_LOGGING);
+            case h.AN.SOUNDSHARE:
+                return (0, d.eJ)(h.eR.SOUNDSHARE);
+            case h.AN.SCREEN_SOUNDSHARE:
+                return (0, d.eJ)(h.eR.SCREEN_SOUNDSHARE);
+            case h.AN.ELEVATED_HOOK:
+                return (0, d.eJ)(h.eR.ELEVATED_HOOK);
+            case h.AN.LOOPBACK:
+                return (0, d.eJ)(h.eR.LOOPBACK);
+            case h.AN.WUMPUS_VIDEO:
+                return (0, d.eJ)(h.eR.WUMPUS_VIDEO);
+            case h.AN.HYBRID_VIDEO:
+                return (0, d.eJ)(h.eR.HYBRID_VIDEO);
+            case h.AN.ATTENUATION:
+            case h.AN.VIDEO_HOOK:
+                return (null === r() || void 0 === r() ? void 0 : null === (t = r().os) || void 0 === t ? void 0 : t.family) != null && /^win/i.test(r().os.family);
+            case h.AN.EXPERIMENTAL_SOUNDSHARE:
+                return (0, d.eJ)(h.eR.SOUNDSHARE_LOOPBACK);
+            case h.AN.OPEN_H264:
+                return (null === r() || void 0 === r() ? void 0 : null === (n = r().os) || void 0 === n ? void 0 : n.family) != null && /^win|linux|OS X/i.test(r().os.family);
+            case h.AN.EXPERIMENTAL_ENCODERS:
+                return (0, d.eJ)(h.eR.EXPERIMENTAL_ENCODERS);
+            case h.AN.REMOTE_LOCUS_NETWORK_CONTROL:
+                return (0, d.eJ)(h.eR.REMOTE_LOCUS_NETWORK_CONTROL);
+            case h.AN.SCREEN_PREVIEWS:
+                return (0, d.eJ)(h.eR.SCREEN_PREVIEWS);
+            case h.AN.CLIPS:
+                return (0, d.eJ)(h.eR.CLIPS);
+            case h.AN.WINDOW_PREVIEWS:
+                return (0, d.eJ)(h.eR.WINDOW_PREVIEWS);
+            case h.AN.AUDIO_DEBUG_STATE:
+                return (0, d.eJ)(h.eR.AUDIO_DEBUG_STATE);
+            case h.AN.CONNECTION_REPLAY:
+                return (0, d.eJ)(h.eR.CONNECTION_REPLAY);
+            case h.AN.SIMULCAST:
+                return (0, d.eJ)(h.eR.SIMULCAST) && (0, d.eJ)(h.eR.SIMULCAST_BUGFIX);
+            case h.AN.RTC_REGION_RANKING:
+                return (0, d.eJ)(h.eR.RTC_REGION_RANKING);
+            case h.AN.DIRECT_VIDEO:
+                return (0, d.eJ)(h.eR.DIRECT_VIDEO) && null != window.createDiscordStream;
+            case h.AN.ELECTRON_VIDEO:
+                return (0, d.eJ)(h.eR.ELECTRON_VIDEO);
+            case h.AN.MEDIAPIPE:
+                return (0, d.eJ)(h.eR.MEDIAPIPE);
+            case h.AN.FIXED_KEYFRAME_INTERVAL:
+                return (0, d.eJ)(h.eR.FIXED_KEYFRAME_INTERVAL);
+            case h.AN.FIRST_FRAME_CALLBACK:
+                return (0, d.eJ)(h.eR.FIRST_FRAME_CALLBACK);
+            case h.AN.REMOTE_USER_MULTI_STREAM:
+                return (0, d.eJ)(h.eR.REMOTE_USER_MULTI_STREAM);
+            case h.AN.IMAGE_QUALITY_MEASUREMENT:
+                return (0, d.eJ)(h.eR.IMAGE_QUALITY_MEASUREMENT);
+            case h.AN.AMD_EXPERIMENTAL_RATE_CONTROL:
+                return (0, d.eJ)(h.eR.AMD_EXPERIMENTAL_RATE_CONTROL);
+            case h.AN.GO_LIVE_HARDWARE:
+                return (0, d.eJ)(h.eR.GO_LIVE_HARDWARE);
+            case h.AN.SCREEN_CAPTURE_KIT:
+                return (0, d.eJ)(h.eR.SCREEN_CAPTURE_KIT);
+            case h.AN.CAPTURE_TIMEOUT_EXPERIMENTS:
+                return (0, d.eJ)(h.eR.CAPTURE_TIMEOUT_EXPERIMENTS);
+            case h.AN.NATIVE_SCREENSHARE_PICKER:
+                return (0, d.eJ)(h.eR.NATIVE_SCREENSHARE_PICKER);
+            case h.AN.MLS_PAIRWISE_FINGERPRINTS:
+                return (0, d.eJ)(h.eR.MLS_PAIRWISE_FINGERPRINTS);
+            case h.AN.DIAGNOSTICS:
+            case h.AN.NATIVE_PING:
+            case h.AN.AUTOMATIC_VAD:
+            case h.AN.AUDIO_INPUT_DEVICE:
+            case h.AN.AUDIO_OUTPUT_DEVICE:
+            case h.AN.QOS:
+            case h.AN.VOICE_PROCESSING:
+            case h.AN.AUTO_ENABLE:
+            case h.AN.VIDEO:
+            case h.AN.DESKTOP_CAPTURE:
+            case h.AN.DESKTOP_CAPTURE_FORMAT:
+            case h.AN.DESKTOP_CAPTURE_APPLICATIONS:
+            case h.AN.VOICE_PANNING:
+            case h.AN.AEC_DUMP:
+            case h.AN.DISABLE_VIDEO:
+            case h.AN.SAMPLE_PLAYBACK:
+            case h.AN.NOISE_SUPPRESSION:
+            case h.AN.AUTOMATIC_GAIN_CONTROL:
                 return !0;
             default:
                 return !1;
         }
     }
-    connect(e, n, r) {
-        !(0, h.eJ)(E.eR.EXPERIMENT_CONFIG) && (r.experiments = void 0);
-        let i = f.Z.create(e, n, r);
+    connect(e, t, n) {
+        (0, d.eJ)(h.eR.EXPERIMENT_CONFIG) || (n.experiments = void 0);
+        let i = u.Z.create(e, t, n);
         return (
-            i.on(c.Sh.Destroy, (e) => {
-                this.connections.delete(e), this.connectionsEmpty() && (0, h.p8)(E.uJ.NORMAL);
+            i.on(o.Sh.Destroy, (e) => {
+                this.connections.delete(e), this.connectionsEmpty() && (0, d.p8)(h.uJ.NORMAL);
             }),
-            i.on(c.Sh.Connected, () => {
+            i.on(o.Sh.Connected, () => {
                 i.setVideoBroadcast(this.shouldConnectionBroadcastVideo(i));
             }),
-            i.on(c.Sh.Silence, (e) => {
-                this.emit(c.aB.Silence, e);
+            i.on(o.Sh.Silence, (e) => {
+                this.emit(o.aB.Silence, e);
             }),
             this.connections.add(i),
-            (0, h.p8)(E.uJ.HIGH),
-            this.emit(c.aB.Connection, i),
+            (0, d.p8)(h.uJ.HIGH),
+            this.emit(o.aB.Connection, i),
             i
         );
     }
     shouldConnectionBroadcastVideo(e) {
-        return (e.context === E.Yn.DEFAULT && this.videoInputDeviceId !== E.Av) || e.hasDesktopSource();
+        return (e.context === h.Yn.DEFAULT && this.videoInputDeviceId !== h.Av) || e.hasDesktopSource();
     }
-    eachConnection(e, n) {
-        this.connections.forEach((r) => {
-            (null == n || r.context === n) && e(r);
+    eachConnection(e, t) {
+        this.connections.forEach((n) => {
+            (null == t || n.context === t) && e(n);
         });
     }
     enable() {
         return Promise.resolve();
     }
     setInputVolume(e) {
-        (0, h.zS)().setInputVolume(y(e));
+        (0, d.zS)().setInputVolume(g(e));
     }
     setOutputVolume(e) {
-        (0, h.zS)().setOutputVolume(y(e));
+        (0, d.zS)().setOutputVolume(g(e));
     }
     getAudioInputDevices() {
-        return (0, p.Hg)();
+        return (0, c.Hg)();
     }
     setAudioInputDevice(e) {
-        (0, h.eJ)(E.eR.SET_AUDIO_DEVICE_BY_ID)
-            ? (0, h.zS)().setInputDevice(e)
-            : (0, p.Hg)().then((n) => {
-                  var r;
-                  let i = null !== (r = n.find((n) => n.id === e)) && void 0 !== r ? r : n[0];
-                  null != i && (0, h.zS)().setInputDevice(i.index);
+        (0, d.eJ)(h.eR.SET_AUDIO_DEVICE_BY_ID)
+            ? (0, d.zS)().setInputDevice(e)
+            : (0, c.Hg)().then((t) => {
+                  var n;
+                  let i = null !== (n = t.find((t) => t.id === e)) && void 0 !== n ? n : t[0];
+                  null != i && (0, d.zS)().setInputDevice(i.index);
               });
     }
     getAudioOutputDevices() {
-        return (0, p.HS)();
+        return (0, c.HS)();
     }
     setAudioOutputDevice(e) {
-        (0, h.eJ)(E.eR.SET_AUDIO_DEVICE_BY_ID)
-            ? (0, h.zS)().setOutputDevice(e)
-            : (0, p.HS)().then((n) => {
-                  var r;
-                  let i = null !== (r = n.find((n) => n.id === e)) && void 0 !== r ? r : n[0];
-                  null != i && (0, h.zS)().setOutputDevice(i.index);
+        (0, d.eJ)(h.eR.SET_AUDIO_DEVICE_BY_ID)
+            ? (0, d.zS)().setOutputDevice(e)
+            : (0, c.HS)().then((t) => {
+                  var n;
+                  let i = null !== (n = t.find((t) => t.id === e)) && void 0 !== n ? n : t[0];
+                  null != i && (0, d.zS)().setOutputDevice(i.index);
               });
     }
     getVideoInputDevices() {
-        return (0, p.l0)();
+        return (0, c.l0)();
     }
     async setVideoInputDevice(e) {
-        let n = (await this.getVideoInputDevices()).find((n) => n.id === e),
-            r = null != n ? n.id : E.Av;
-        if (r !== this.videoInputDeviceId) {
-            if (((this.videoInputDeviceId = r), (0, h.eJ)(E.eR.SET_VIDEO_DEVICE_BY_ID))) {
-                let e = null != n ? (null != n.originalId && '' !== n.originalId ? n.originalId : n.id) : E.Av;
-                (0, h.zS)().setVideoInputDevice(e);
-            } else (0, h.zS)().setVideoInputDevice(null != n ? n.index : -1);
+        let t = (await this.getVideoInputDevices()).find((t) => t.id === e),
+            n = null != t ? t.id : h.Av;
+        if (n !== this.videoInputDeviceId) {
+            if (((this.videoInputDeviceId = n), (0, d.eJ)(h.eR.SET_VIDEO_DEVICE_BY_ID))) {
+                let e = null != t ? (null != t.originalId && '' !== t.originalId ? t.originalId : t.id) : h.Av;
+                (0, d.zS)().setVideoInputDevice(e);
+            } else (0, d.zS)().setVideoInputDevice(null != t ? t.index : -1);
             this.connections.forEach((e) => e.setVideoBroadcast(this.shouldConnectionBroadcastVideo(e)));
         }
     }
     getSupportedVideoCodecs(e) {
-        (0, h.zS)().getSupportedVideoCodecs(e);
+        (0, d.zS)().getSupportedVideoCodecs(e);
     }
     getCodecCapabilities(e) {
-        (0, h.zS)().getCodecCapabilities(e);
+        (0, d.zS)().getCodecCapabilities(e);
     }
-    setGoLiveSource(e, n) {
+    setGoLiveSource(e, t) {
         if (null == e) {
             this.eachConnection((e) => {
                 e.clearDesktopSource(), e.clearGoLiveDevices(), e.setSoundshareSource(0, !1), e.setVideoBroadcast(this.shouldConnectionBroadcastVideo(e));
-            }, n);
+            }, t);
             return;
         }
-        this.eachConnection((r) => {
-            if (n !== E.Yn.STREAM || r.streamUserId === r.userId) r.setGoLiveSource(e), r.setVideoBroadcast(this.shouldConnectionBroadcastVideo(r));
-        }, n);
+        this.eachConnection((n) => {
+            (t !== h.Yn.STREAM || n.streamUserId === n.userId) && (n.setGoLiveSource(e), n.setVideoBroadcast(this.shouldConnectionBroadcastVideo(n)));
+        }, t);
     }
     setClipsSource(e) {
-        var n;
-        let r = (0, h.zS)();
-        if (null == r.setClipsSource || null == r.setOnClipsRecordingEvent || null == r.applyClipsSettings) return;
+        var t;
+        let n = (0, d.zS)();
+        if (null == n.setClipsSource || null == n.setOnClipsRecordingEvent || null == n.applyClipsSettings) return;
         if (null == e) {
-            r.setClipsSource({
+            n.setClipsSource({
                 id: '',
                 soundshareId: 0
             });
             return;
         }
-        let { frameRate: i, resolution: a } = e.quality,
-            o = a <= 480 ? (a / 3) * 4 : (a / 9) * 16,
-            s = a,
-            { id: l, soundshareId: u, useLoopback: d, useVideoHook: f, useGraphicsCapture: p, useQuartzCapturer: _, allowScreenCaptureKit: m, hdrCaptureMode: g } = e.desktopDescription;
-        r.setOnClipsRecordingEvent((n) => {
-            this.logger.info('Clips recording event: '.concat(E.Pf[n], ' received for stream ').concat(l, ' and sound ').concat(u, '.')), n === E.Pf.GoLiveEnded ? this.emit(c.aB.ClipsRecordingRestartNeeded) : n === E.Pf.Error ? this.emit(c.aB.ClipsInitFailure, 'Failed to set clips source in media engine', e.applicationName) : (n === E.Pf.Ended || n === E.Pf.StoppedByGoLive) && this.emit(c.aB.ClipsRecordingEnded, l, u);
+        let { frameRate: i, resolution: r } = e.quality,
+            a = r <= 480 ? (r / 3) * 4 : (r / 9) * 16,
+            s = r,
+            { id: l, soundshareId: u, useLoopback: c, useVideoHook: f, useGraphicsCapture: _, useQuartzCapturer: p, allowScreenCaptureKit: m, hdrCaptureMode: g } = e.desktopDescription;
+        n.setOnClipsRecordingEvent((t) => {
+            this.logger.info('Clips recording event: '.concat(h.Pf[t], ' received for stream ').concat(l, ' and sound ').concat(u, '.')), t === h.Pf.GoLiveEnded ? this.emit(o.aB.ClipsRecordingRestartNeeded) : t === h.Pf.Error ? this.emit(o.aB.ClipsInitFailure, 'Failed to set clips source in media engine', e.applicationName) : (t === h.Pf.Ended || t === h.Pf.StoppedByGoLive) && this.emit(o.aB.ClipsRecordingEnded, l, u);
         }),
-            null === (n = r.applyClipsSettings) ||
-                void 0 === n ||
-                n.call(r, {
+            null === (t = n.applyClipsSettings) ||
+                void 0 === t ||
+                t.call(n, {
                     useVideoHook: f,
-                    useGraphicsCapture: p,
-                    useQuartzCapturer: _,
+                    useGraphicsCapture: _,
+                    useQuartzCapturer: p,
                     allowScreenCaptureKit: m,
                     hdrCaptureMode: g,
-                    soundshareLoopback: d,
+                    soundshareLoopback: c,
                     frameRate: i,
-                    width: o,
+                    width: a,
                     height: s
                 });
-        let [v, y] = null != l ? l.split(':') : ['', ''];
-        r.setClipsSource({
-            id: y,
+        let [E, v] = null != l ? l.split(':') : ['', ''];
+        n.setClipsSource({
+            id: v,
             soundshareId: null != u ? u : 0
         });
     }
-    setClipsQualitySettings(e, n, r) {
-        let i = (0, h.zS)();
-        return null != i.applyClipsQualitySettings && (i.applyClipsQualitySettings(e, n, r), !0);
+    setClipsQualitySettings(e, t, n) {
+        let i = (0, d.zS)();
+        return null != i.applyClipsQualitySettings && (i.applyClipsQualitySettings(e, t, n), !0);
     }
-    setSoundshareSource(e, n, r) {
+    setSoundshareSource(e, t, n) {
         this.eachConnection((i) => {
-            if (r !== E.Yn.STREAM || i.streamUserId === i.userId) i.setSoundshareSource(e, n);
-        }, r);
+            (n !== h.Yn.STREAM || i.streamUserId === i.userId) && i.setSoundshareSource(e, t);
+        }, n);
     }
     getDesktopSource() {
         return Promise.reject(Error('NO_STREAM'));
     }
-    getScreenPreviews(e, n) {
-        return new Promise((r) => {
-            null != (0, h.zS)().getScreenPreviews
-                ? (0, h.zS)().getScreenPreviews(e, n, (e) => {
-                      r(
-                          e.map((e, n) => ({
+    getScreenPreviews(e, t) {
+        return new Promise((n) => {
+            null != (0, d.zS)().getScreenPreviews
+                ? (0, d.zS)().getScreenPreviews(e, t, (e) => {
+                      n(
+                          e.map((e, t) => ({
                               ...e,
-                              name: 'Screen ' + (n + 1)
+                              name: 'Screen ' + (t + 1)
                           }))
                       );
                   })
-                : r([]);
+                : n([]);
         });
     }
     setClipBufferLength(e) {
-        var n, r;
-        null === (n = (r = (0, h.zS)()).setClipBufferLength) || void 0 === n || n.call(r, e);
+        var t, n;
+        null === (t = (n = (0, d.zS)()).setClipBufferLength) || void 0 === t || t.call(n, e);
     }
-    saveClip(e, n) {
-        let r = (0, h.zS)();
-        return null == r.setClipBufferLength || null == r.saveClip
+    saveClip(e, t) {
+        let n = (0, d.zS)();
+        return null == n.setClipBufferLength || null == n.saveClip
             ? Promise.reject('unsupported')
-            : new Promise((i, a) => {
-                  r.saveClip(
+            : new Promise((i, r) => {
+                  n.saveClip(
                       e,
-                      n,
-                      (e, n, r) =>
+                      t,
+                      (e, t, n) =>
                           i({
                               duration: e,
-                              clipStats: JSON.parse(r)
+                              clipStats: JSON.parse(n)
+                          }),
+                      (e) => r(JSON.parse(e))
+                  );
+              });
+    }
+    saveClipForUser(e, t, n) {
+        let i = (0, d.zS)();
+        return null == i.saveClipForUser
+            ? Promise.reject('unsupported')
+            : new Promise((r, a) => {
+                  i.saveClipForUser(
+                      e,
+                      t,
+                      n,
+                      (e, t, n) =>
+                          r({
+                              duration: e,
+                              clipStats: JSON.parse(n)
                           }),
                       (e) => a(JSON.parse(e))
                   );
               });
     }
-    saveClipForUser(e, n, r) {
-        let i = (0, h.zS)();
-        return null == i.saveClipForUser
+    updateClipMetadata(e, t) {
+        let n = (0, d.zS)();
+        return null == n.updateClipMetadata
             ? Promise.reject('unsupported')
-            : new Promise((a, o) => {
-                  i.saveClipForUser(
-                      e,
-                      n,
-                      r,
-                      (e, n, r) =>
-                          a({
-                              duration: e,
-                              clipStats: JSON.parse(r)
-                          }),
-                      (e) => o(JSON.parse(e))
-                  );
+            : new Promise((i, r) => {
+                  n.updateClipMetadata(e, t, i, r);
               });
     }
-    updateClipMetadata(e, n) {
-        let r = (0, h.zS)();
-        return null == r.updateClipMetadata
+    exportClip(e, t) {
+        let n = (0, d.zS)();
+        return null == n.exportClip
             ? Promise.reject('unsupported')
-            : new Promise((i, a) => {
-                  r.updateClipMetadata(e, n, i, a);
+            : new Promise((i, r) => {
+                  n.exportClip(e, t, (e) => i(new Blob([e])), r);
               });
     }
-    exportClip(e, n) {
-        let r = (0, h.zS)();
-        return null == r.exportClip
-            ? Promise.reject('unsupported')
-            : new Promise((i, a) => {
-                  r.exportClip(e, n, (e) => i(new Blob([e])), a);
-              });
-    }
-    getWindowPreviews(e, n) {
-        return new Promise((r) => {
-            null != (0, h.zS)().getWindowPreviews
-                ? (0, h.zS)().getWindowPreviews(e, n, (e) => {
-                      r(e);
+    getWindowPreviews(e, t) {
+        return new Promise((n) => {
+            null != (0, d.zS)().getWindowPreviews
+                ? (0, d.zS)().getWindowPreviews(e, t, (e) => {
+                      n(e);
                   })
-                : r([]);
+                : n([]);
         });
     }
     setAudioSubsystem(e) {
-        null != (0, h.zS)().setAudioSubsystem ? (0, h.zS)().setAudioSubsystem(e) : (0, h.zS)().setUseLegacyAudioDevice(e === E.iA.LEGACY);
+        null != (0, d.zS)().setAudioSubsystem ? (0, d.zS)().setAudioSubsystem(e) : (0, d.zS)().setUseLegacyAudioDevice(e === h.iA.LEGACY);
     }
     queueAudioSubsystem(e) {
-        let n = (0, h.zS)();
-        null != n.queueAudioSubsystem ? n.queueAudioSubsystem(e) : this.setAudioSubsystem(e);
+        let t = (0, d.zS)();
+        null != t.queueAudioSubsystem ? t.queueAudioSubsystem(e) : this.setAudioSubsystem(e);
     }
     getAudioSubsystem() {
         return this.audioSubsystem;
@@ -379,278 +373,278 @@ class I extends u.Z {
         return this.audioLayer;
     }
     getDebugLogging() {
-        return !!this.supports(E.AN.DEBUG_LOGGING) && (0, h.zS)().getDebugLogging();
+        return !!this.supports(h.AN.DEBUG_LOGGING) && (0, d.zS)().getDebugLogging();
     }
     setDebugLogging(e) {
-        this.supports(E.AN.DEBUG_LOGGING) && (0, h.zS)().setDebugLogging(e);
+        this.supports(h.AN.DEBUG_LOGGING) && (0, d.zS)().setDebugLogging(e);
     }
     setExperimentalAdm(e) {
-        let { setExperimentalAdm: n, getAudioSubsystem: r } = (0, h.zS)();
-        null == n || n(e),
-            null == r ||
-                r((e) => {
+        let { setExperimentalAdm: t, getAudioSubsystem: n } = (0, d.zS)();
+        null == t || t(e),
+            null == n ||
+                n((e) => {
                     this.audioSubsystem = e;
                 });
     }
-    setLoopback(e, n) {
-        null != (0, h.zS)().setLoopback &&
-            (0, h.zS)().setLoopback(e, {
-                echoCancellation: n.echoCancellation,
-                noiseSuppression: n.noiseSuppression,
-                automaticGainControl: n.automaticGainControl,
-                noiseCancellation: n.noiseCancellation
+    setLoopback(e, t) {
+        null != (0, d.zS)().setLoopback &&
+            (0, d.zS)().setLoopback(e, {
+                echoCancellation: t.echoCancellation,
+                noiseSuppression: t.noiseSuppression,
+                automaticGainControl: t.automaticGainControl,
+                noiseCancellation: t.noiseCancellation
             }),
-            null != (0, h.zS)().setEmitVADLevel2
-                ? (0, h.zS)().setEmitVADLevel2(e || this.listenerCount(c.aB.VoiceActivity) > 0)
-                : (0, h.zS)().setEmitVADLevel(e || this.listenerCount(c.aB.VoiceActivity) > 0, e, {
-                      echoCancellation: n.echoCancellation,
-                      noiseSuppression: n.noiseSuppression,
-                      automaticGainControl: n.automaticGainControl,
-                      noiseCancellation: n.noiseCancellation
+            null != (0, d.zS)().setEmitVADLevel2
+                ? (0, d.zS)().setEmitVADLevel2(e || this.listenerCount(o.aB.VoiceActivity) > 0)
+                : (0, d.zS)().setEmitVADLevel(e || this.listenerCount(o.aB.VoiceActivity) > 0, e, {
+                      echoCancellation: t.echoCancellation,
+                      noiseSuppression: t.noiseSuppression,
+                      automaticGainControl: t.automaticGainControl,
+                      noiseCancellation: t.noiseCancellation
                   });
     }
     getLoopback() {
         return !1;
     }
     setH264Enabled(e) {
-        (0, h.zS)().setTransportOptions({ h264Enabled: e });
+        (0, d.zS)().setTransportOptions({ h264Enabled: e });
     }
     setAv1Enabled(e) {
-        (0, h.zS)().setTransportOptions({ av1Enabled: e });
+        (0, d.zS)().setTransportOptions({ av1Enabled: e });
     }
     setH265Enabled(e) {
-        (0, h.zS)().setTransportOptions({ h265Enabled: e });
+        (0, d.zS)().setTransportOptions({ h265Enabled: e });
     }
     getCodecSurvey() {
         return null != this.codecSurvey
             ? Promise.resolve(this.codecSurvey)
-            : new Promise((e, n) => {
-                  let r = (0, h.zS)();
-                  null != r.getCodecSurvey
-                      ? r.getCodecSurvey((n) => {
-                            (this.codecSurvey = n), e(n);
+            : new Promise((e, t) => {
+                  let n = (0, d.zS)();
+                  null != n.getCodecSurvey
+                      ? n.getCodecSurvey((t) => {
+                            (this.codecSurvey = t), e(t);
                         })
-                      : n(Error('getCodecSurvey is not implemented.'));
+                      : t(Error('getCodecSurvey is not implemented.'));
               });
     }
     writeAudioDebugState() {
-        return new Promise((e, n) => {
-            let { writeAudioDebugState: r } = (0, h.zS)();
-            null != r ? (r(), e()) : n(Error('Audio debug state is not supported.'));
+        return new Promise((e, t) => {
+            let { writeAudioDebugState: n } = (0, d.zS)();
+            null != n ? (n(), e()) : t(Error('Audio debug state is not supported.'));
         });
     }
     startAecDump() {}
     stopAecDump() {}
     setAecDump(e) {
-        var n, r;
-        null === (n = (r = (0, h.zS)()).setAecDump) || void 0 === n || n.call(r, e);
+        var t, n;
+        null === (t = (n = (0, d.zS)()).setAecDump) || void 0 === t || t.call(n, e);
     }
     rankRtcRegions(e) {
-        return new Promise((n, r) => {
-            let { rankRtcRegions: i } = (0, h.zS)();
-            null != i ? i(e, (e) => n(e)) : r(Error('RTC region latency test is not supported.'));
+        return new Promise((t, n) => {
+            let { rankRtcRegions: i } = (0, d.zS)();
+            null != i ? i(e, (e) => t(e)) : n(Error('RTC region latency test is not supported.'));
         });
     }
-    createReplayConnection(e, n) {
-        let r = f.Z.createReplay(e, n);
-        return null == r
+    createReplayConnection(e, t) {
+        let n = u.Z.createReplay(e, t);
+        return null == n
             ? null
-            : (r.on(c.Sh.Destroy, (e) => {
-                  this.connections.delete(e), this.connectionsEmpty() && (0, h.p8)(E.uJ.NORMAL);
+            : (n.on(o.Sh.Destroy, (e) => {
+                  this.connections.delete(e), this.connectionsEmpty() && (0, d.p8)(h.uJ.NORMAL);
               }),
-              this.connections.add(r),
-              (0, h.p8)(E.uJ.HIGH),
-              this.emit(c.aB.Connection, r),
-              r);
+              this.connections.add(n),
+              (0, d.p8)(h.uJ.HIGH),
+              this.emit(o.aB.Connection, n),
+              n);
     }
     setUseDirectVideo(e) {
-        m.Z.useDirectVideo = e;
+        _.Z.useDirectVideo = e;
     }
     setOnVideoContainerResized(e) {
-        m.Z.onContainerResized = e;
+        _.Z.onContainerResized = e;
     }
     setMaxSyncDelayOverride(e) {
-        let { setMaxSyncDelayOverride: n } = (0, h.zS)();
-        null != n && n(e);
+        let { setMaxSyncDelayOverride: t } = (0, d.zS)();
+        null != t && t(e);
     }
     applyMediaFilterSettings(e) {
-        let { applyMediaFilterSettings: n, applyMediaFilterSettingsWithCallback: r } = (0, h.zS)();
-        return null != r
-            ? new Promise((n, i) => {
-                  r(e, n);
+        let { applyMediaFilterSettings: t, applyMediaFilterSettingsWithCallback: n } = (0, d.zS)();
+        return null != n
+            ? new Promise((t, i) => {
+                  n(e, t);
               })
-            : (null != n && n(e), Promise.resolve());
+            : (null != t && t(e), Promise.resolve());
     }
     startLocalAudioRecording(e) {
-        return new Promise((n, r) => {
-            let { startLocalAudioRecording: i } = (0, h.zS)();
+        return new Promise((t, n) => {
+            let { startLocalAudioRecording: i } = (0, d.zS)();
             null != i
                 ? i(e, (e) => {
-                      e ? n() : r(Error('Failed to start local audio recording.'));
+                      e ? t() : n(Error('Failed to start local audio recording.'));
                   })
-                : r(Error('startLocalAudioRecording is not supported.'));
+                : n(Error('startLocalAudioRecording is not supported.'));
         });
     }
     stopLocalAudioRecording(e) {
-        var n, r;
-        null === (n = (r = (0, h.zS)()).stopLocalAudioRecording) ||
-            void 0 === n ||
-            n.call(r, (n, r) => {
-                e(n, r);
+        var t, n;
+        null === (t = (n = (0, d.zS)()).stopLocalAudioRecording) ||
+            void 0 === t ||
+            t.call(n, (t, n) => {
+                e(t, n);
             }),
-            this.listenerCount(c.aB.VoiceActivity) > 0 && null != (0, h.zS)().setEmitVADLevel2 && (0, h.zS)().setEmitVADLevel2(!0);
+            this.listenerCount(o.aB.VoiceActivity) > 0 && null != (0, d.zS)().setEmitVADLevel2 && (0, d.zS)().setEmitVADLevel2(!0);
     }
     setHasFullbandPerformance(e) {
-        var n, r;
-        null === (n = (r = (0, h.zS)()).setHasFullbandPerformance) || void 0 === n || n.call(r, e);
+        var t, n;
+        null === (t = (n = (0, d.zS)()).setHasFullbandPerformance) || void 0 === t || t.call(n, e);
     }
     getSupportedSecureFramesProtocolVersion() {
         var e;
-        return null !== (e = (0, h.zS)().SupportedSecureFramesProtocolVersion) && void 0 !== e ? e : 0;
+        return null !== (e = (0, d.zS)().SupportedSecureFramesProtocolVersion) && void 0 !== e ? e : 0;
     }
     getSupportedBandwidthEstimationExperiments(e) {
-        var n, r;
-        null === (n = (r = (0, h.zS)()).getSupportedBandwidthEstimationExperiments) || void 0 === n || n.call(r, e);
+        var t, n;
+        null === (t = (n = (0, d.zS)()).getSupportedBandwidthEstimationExperiments) || void 0 === t || t.call(n, e);
     }
-    getMLSSigningKey(e, n) {
-        return new Promise((r, i) => {
-            let a = (0, h.zS)();
-            null != a.getMLSSigningKey
-                ? a.getMLSSigningKey(e, n, (e, n) =>
-                      r({
+    getMLSSigningKey(e, t) {
+        return new Promise((n, i) => {
+            let r = (0, d.zS)();
+            null != r.getMLSSigningKey
+                ? r.getMLSSigningKey(e, t, (e, t) =>
+                      n({
                           key: e,
-                          signature: n
+                          signature: t
                       })
                   )
                 : i(Error('NOT_IMPLEMENTED'));
         });
     }
     setSidechainCompression(e) {
-        var n, r;
-        null === (n = (r = (0, h.zS)()).setSidechainCompression) || void 0 === n || n.call(r, e);
+        var t, n;
+        null === (t = (n = (0, d.zS)()).setSidechainCompression) || void 0 === t || t.call(n, e);
     }
     setSidechainCompressionStrength(e) {
-        var n, r;
+        var t, n;
         let i = 100 - e,
-            a = b(i, g.Zq, g.WA),
-            o = b(i, g.QO, g.JA);
-        null === (n = (r = (0, h.zS)()).applySidechainCompressionSettings) ||
-            void 0 === n ||
-            n.call(r, {
-                threshold: a,
-                ratio: o
+            r = E(i, p.Zq, p.WA),
+            a = E(i, p.QO, p.JA);
+        null === (t = (n = (0, d.zS)()).applySidechainCompressionSettings) ||
+            void 0 === t ||
+            t.call(n, {
+                threshold: r,
+                ratio: a
             });
     }
     setNativeDesktopVideoSourcePickerActive(e) {
-        var n, r;
-        null === (n = (r = (0, h.zS)()).setNativeDesktopVideoSourcePickerActive) || void 0 === n || n.call(r, e);
+        var t, n;
+        null === (t = (n = (0, d.zS)()).setNativeDesktopVideoSourcePickerActive) || void 0 === t || t.call(n, e);
     }
     presentNativeScreenSharePicker(e) {
-        var n, r;
-        null === (n = (r = (0, h.zS)()).presentNativeScreenSharePicker) || void 0 === n || n.call(r, null != e ? e : '');
+        var t, n;
+        null === (t = (n = (0, d.zS)()).presentNativeScreenSharePicker) || void 0 === t || t.call(n, null != e ? e : '');
     }
     releaseNativeDesktopVideoSourcePickerStream() {
-        var e, n;
-        null === (e = (n = (0, h.zS)()).releaseNativeDesktopVideoSourcePickerStream) || void 0 === e || e.call(n);
+        var e, t;
+        null === (e = (t = (0, d.zS)()).releaseNativeDesktopVideoSourcePickerStream) || void 0 === e || e.call(t);
     }
     watchdogTick() {
         let e = !1;
-        (0, h.zS)().pingVoiceThread(() => {
+        (0, d.zS)().pingVoiceThread(() => {
             (e = !0), (this.consecutiveWatchdogFailures = 0);
         }),
             setTimeout(() => {
-                !e && ++this.consecutiveWatchdogFailures > 1 ? this.emit(c.aB.WatchdogTimeout) : this.watchdogTick();
-            }, E.H0);
+                !e && ++this.consecutiveWatchdogFailures > 1 ? this.emit(o.aB.WatchdogTimeout) : this.watchdogTick();
+            }, h.H0);
     }
     connectionsEmpty() {
         return 0 === this.connections.size;
     }
     constructor() {
-        var e, n, r, i, a;
+        var e, t, n, i, r;
         super(),
             (e = this),
-            v(this, 'Video', m.Z),
-            v(this, 'Camera', _.Z),
-            v(this, 'videoInputDeviceId', E.Av),
-            v(this, 'connections', new Set()),
-            v(this, 'lastVoiceActivity', -1),
-            v(this, 'audioSubsystem', 'standard'),
-            v(this, 'audioLayer', ''),
-            v(this, 'deviceChangeGeneration', 0),
-            v(this, 'consecutiveWatchdogFailures', 0),
-            v(this, 'codecSurvey', null),
-            v(this, 'logger', new l.Yd('MediaEngineNative')),
-            v(this, 'handleDeviceChange', function () {
-                let n = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
-                    r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
+            m(this, 'Video', _.Z),
+            m(this, 'Camera', f.Z),
+            m(this, 'videoInputDeviceId', h.Av),
+            m(this, 'connections', new Set()),
+            m(this, 'lastVoiceActivity', -1),
+            m(this, 'audioSubsystem', 'standard'),
+            m(this, 'audioLayer', ''),
+            m(this, 'deviceChangeGeneration', 0),
+            m(this, 'consecutiveWatchdogFailures', 0),
+            m(this, 'codecSurvey', null),
+            m(this, 'logger', new a.Yd('MediaEngineNative')),
+            m(this, 'handleDeviceChange', function () {
+                let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
+                    n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
                     i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-                e.deviceChangeGeneration++, e.emit(c.aB.DeviceChange, (0, p.C1)(E.h7.AUDIO_INPUT, n), (0, p.C1)(E.h7.AUDIO_OUTPUT, r), (0, p.C1)(E.h7.VIDEO_INPUT, i));
+                e.deviceChangeGeneration++, e.emit(o.aB.DeviceChange, (0, c.C1)(h.h7.AUDIO_INPUT, t), (0, c.C1)(h.h7.AUDIO_OUTPUT, n), (0, c.C1)(h.h7.VIDEO_INPUT, i));
             }),
-            v(this, 'handleVolumeChange', (e, n) => {
-                this.emit(c.aB.VolumeChange, e * E.Qx, n * E.Qx);
+            m(this, 'handleVolumeChange', (e, t) => {
+                this.emit(o.aB.VolumeChange, e * h.Qx, t * h.Qx);
             }),
-            v(this, 'handleVoiceActivity', (e, n) => {
-                let r = Date.now();
-                this.listenerCount(c.aB.VoiceActivity) > 0 && (-1 === this.lastVoiceActivity || Date.now() - this.lastVoiceActivity > 20) && ((this.lastVoiceActivity = r), this.emit(c.aB.VoiceActivity, e, n));
+            m(this, 'handleVoiceActivity', (e, t) => {
+                let n = Date.now();
+                this.listenerCount(o.aB.VoiceActivity) > 0 && (-1 === this.lastVoiceActivity || Date.now() - this.lastVoiceActivity > 20) && ((this.lastVoiceActivity = n), this.emit(o.aB.VoiceActivity, e, t));
             }),
-            v(this, 'handleActiveSinksChange', (e, n) => {
-                this.connections.forEach((r) => r.setHasActiveVideoOutputSink(e, n, 'MediaEngineNative.handleActiveSinksChange'));
+            m(this, 'handleActiveSinksChange', (e, t) => {
+                this.connections.forEach((n) => n.setHasActiveVideoOutputSink(e, t, 'MediaEngineNative.handleActiveSinksChange'));
             }),
-            v(this, 'handleNewListener', (e) => {
+            m(this, 'handleNewListener', (e) => {
                 switch (e) {
-                    case c.aB.VoiceActivity:
-                        null != (0, h.zS)().setEmitVADLevel2 ? (0, h.zS)().setEmitVADLevel2(!0) : (0, h.zS)().setEmitVADLevel(!0, !1, {});
+                    case o.aB.VoiceActivity:
+                        null != (0, d.zS)().setEmitVADLevel2 ? (0, d.zS)().setEmitVADLevel2(!0) : (0, d.zS)().setEmitVADLevel(!0, !1, {});
                         break;
-                    case c.aB.DeviceChange:
-                        let n = this.deviceChangeGeneration;
+                    case o.aB.DeviceChange:
+                        let t = this.deviceChangeGeneration;
                         Promise.all([this.getAudioInputDevices(), this.getAudioOutputDevices(), this.getVideoInputDevices()]).then((e) => {
-                            let [r, i, a] = e;
-                            n === this.deviceChangeGeneration && this.emit(c.aB.DeviceChange, r, i, a);
+                            let [n, i, r] = e;
+                            t === this.deviceChangeGeneration && this.emit(o.aB.DeviceChange, n, i, r);
                         });
                 }
             }),
-            v(this, 'handleRemoveListener', (e) => {
-                e === c.aB.VoiceActivity && (null != (0, h.zS)().setEmitVADLevel2 ? (0, h.zS)().setEmitVADLevel2(this.listenerCount(c.aB.VoiceActivity) > 0) : (0, h.zS)().setEmitVADLevel(this.listenerCount(c.aB.VoiceActivity) > 0, !1, {}));
+            m(this, 'handleRemoveListener', (e) => {
+                e === o.aB.VoiceActivity && (null != (0, d.zS)().setEmitVADLevel2 ? (0, d.zS)().setEmitVADLevel2(this.listenerCount(o.aB.VoiceActivity) > 0) : (0, d.zS)().setEmitVADLevel(this.listenerCount(o.aB.VoiceActivity) > 0, !1, {}));
             }),
-            v(this, 'handleVideoInputInitialization', (e) => {
-                this.emit(c.aB.VideoInputInitialized, e);
+            m(this, 'handleVideoInputInitialization', (e) => {
+                this.emit(o.aB.VideoInputInitialized, e);
             }),
-            v(this, 'handleAudioInputInitialization', (e) => {
-                this.emit(c.aB.AudioInputInitialized, e);
+            m(this, 'handleAudioInputInitialization', (e) => {
+                this.emit(o.aB.AudioInputInitialized, e);
             }),
-            v(this, 'handleNativeScreenSharePickerUpdate', (e) => {
-                this.emit(c.aB.NativeScreenSharePickerUpdate, e);
+            m(this, 'handleNativeScreenSharePickerUpdate', (e) => {
+                this.emit(o.aB.NativeScreenSharePickerUpdate, e);
             }),
-            v(this, 'handleNativeScreenSharePickerCancel', (e) => {
-                this.emit(c.aB.NativeScreenSharePickerCancel, e);
+            m(this, 'handleNativeScreenSharePickerCancel', (e) => {
+                this.emit(o.aB.NativeScreenSharePickerCancel, e);
             }),
-            v(this, 'handleNativeScreenSharePickerError', (e) => {
-                this.emit(c.aB.NativeScreenSharePickerError, e);
+            m(this, 'handleNativeScreenSharePickerError', (e) => {
+                this.emit(o.aB.NativeScreenSharePickerError, e);
             }),
-            v(this, 'handleAudioDeviceModuleErrorCallback', (e, n) => {
-                -100 !== e && this.emit(c.aB.AudioDeviceModuleError, 'RustAudioDeviceModule', e, n);
+            m(this, 'handleAudioDeviceModuleErrorCallback', (e, t) => {
+                -100 !== e && this.emit(o.aB.AudioDeviceModuleError, 'RustAudioDeviceModule', e, t);
             });
-        let o = (0, h.zS)();
-        o.setDeviceChangeCallback(this.handleDeviceChange),
-            o.setVolumeChangeCallback(this.handleVolumeChange),
-            o.setOnVoiceCallback(this.handleVoiceActivity),
-            null === (n = o.setVideoInputInitializationCallback) || void 0 === n || n.call(o, this.handleVideoInputInitialization),
-            null === (r = o.setAudioInputInitializationCallback) || void 0 === r || r.call(o, this.handleAudioInputInitialization),
-            o.setTransportOptions({
+        let s = (0, d.zS)();
+        s.setDeviceChangeCallback(this.handleDeviceChange),
+            s.setVolumeChangeCallback(this.handleVolumeChange),
+            s.setOnVoiceCallback(this.handleVoiceActivity),
+            null === (t = s.setVideoInputInitializationCallback) || void 0 === t || t.call(s, this.handleVideoInputInitialization),
+            null === (n = s.setAudioInputInitializationCallback) || void 0 === n || n.call(s, this.handleAudioInputInitialization),
+            s.setTransportOptions({
                 idleJitterBufferFlush: !0,
                 ducking: !1
             }),
-            null === (i = o.setNativeScreenSharePickerCallbacks) || void 0 === i || i.call(o, this.handleNativeScreenSharePickerUpdate, this.handleNativeScreenSharePickerCancel, this.handleNativeScreenSharePickerError),
-            null === (a = o.setAudioDeviceModuleErrorCallback) || void 0 === a || a.call(o, this.handleAudioDeviceModuleErrorCallback),
+            null === (i = s.setNativeScreenSharePickerCallbacks) || void 0 === i || i.call(s, this.handleNativeScreenSharePickerUpdate, this.handleNativeScreenSharePickerCancel, this.handleNativeScreenSharePickerError),
+            null === (r = s.setAudioDeviceModuleErrorCallback) || void 0 === r || r.call(s, this.handleAudioDeviceModuleErrorCallback),
             this.on('removeListener', this.handleRemoveListener),
             this.on('newListener', this.handleNewListener),
-            null != (0, h.zS)().getAudioSubsystem
-                ? (0, h.zS)().getAudioSubsystem((e, n) => {
-                      (this.audioSubsystem = e), (this.audioLayer = n);
+            null != (0, d.zS)().getAudioSubsystem
+                ? (0, d.zS)().getAudioSubsystem((e, t) => {
+                      (this.audioSubsystem = e), (this.audioLayer = t);
                   })
-                : null != (0, h.zS)().getUseLegacyAudioDevice && (this.audioSubsystem = (0, h.zS)().getUseLegacyAudioDevice() ? E.iA.LEGACY : E.iA.STANDARD),
-            null != o.pingVoiceThread && 'undefined' != typeof window && 'canary' === window.GLOBAL_ENV.RELEASE_CHANNEL && this.watchdogTick(),
-            null != o.setActiveSinksChangeCallback && o.setActiveSinksChangeCallback(this.handleActiveSinksChange),
-            (0, d.Z)(this);
+                : null != (0, d.zS)().getUseLegacyAudioDevice && (this.audioSubsystem = (0, d.zS)().getUseLegacyAudioDevice() ? h.iA.LEGACY : h.iA.STANDARD),
+            null != s.pingVoiceThread && 'undefined' != typeof window && 'canary' === window.GLOBAL_ENV.RELEASE_CHANNEL && this.watchdogTick(),
+            null != s.setActiveSinksChangeCallback && s.setActiveSinksChangeCallback(this.handleActiveSinksChange),
+            (0, l.Z)(this);
     }
 }

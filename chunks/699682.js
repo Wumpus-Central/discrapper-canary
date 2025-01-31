@@ -1,11 +1,7 @@
-r.d(n, {
-    Z: function () {
-        return a;
-    }
-});
-var i = r(192379);
-function a(e) {
-    let n = (0, i.useRef)(null),
-        r = (0, i.useRef)(null);
-    return !Object.is(e, r.current) && ((n.current = r.current), (r.current = e)), n.current;
+n.d(t, { Z: () => r });
+var i = n(192379);
+function r(e) {
+    let t = (0, i.useRef)(null),
+        n = (0, i.useRef)(null);
+    return Object.is(e, n.current) || ((t.current = n.current), (n.current = e)), t.current;
 }

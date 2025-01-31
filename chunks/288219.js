@@ -1,2 +1,2 @@
-let r = { hide_icymi_tab: { description: 'Hide ICYMI tab' } };
-n.Z = r;
+n.d(t, { Z: () => i });
+let i = { hide_icymi_tab: { description: 'Hide ICYMI tab' } };

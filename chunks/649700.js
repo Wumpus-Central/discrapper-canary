@@ -1,26 +1,22 @@
-r.d(n, {
-    Z: function () {
-        return l;
-    }
-});
-var i = r(442837),
-    a = r(353647),
-    o = r(146282),
-    s = r(206583);
-function l(e) {
-    let { activity: n, user: r } = e,
-        l = (0, i.e7)([o.Z], () =>
-            o.Z.getMatchingInboxEntry({
-                activity: n,
-                userId: r.id,
+n.d(t, { Z: () => o });
+var i = n(442837),
+    r = n(353647),
+    a = n(146282),
+    s = n(206583);
+function o(e) {
+    let { activity: t, user: n } = e,
+        o = (0, i.e7)([a.Z], () =>
+            a.Z.getMatchingInboxEntry({
+                activity: t,
+                userId: n.id,
                 feedId: s.YN.GLOBAL_FEED
             })
         ),
-        u = (0, i.e7)([a.Z], () =>
-            a.Z.getMatchingOutboxEntry({
-                activity: n,
-                userId: r.id
+        l = (0, i.e7)([r.Z], () =>
+            r.Z.getMatchingOutboxEntry({
+                activity: t,
+                userId: n.id
             })
         );
-    return null != l ? l : u;
+    return null != o ? o : l;
 }

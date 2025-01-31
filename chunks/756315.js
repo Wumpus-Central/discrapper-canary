@@ -1,42 +1,38 @@
-r.d(n, {
-    Z: function () {
-        return d;
-    }
-});
-var i = r(379649),
-    a = r(846519),
-    o = r(361291),
-    s = r(981631);
-function l(e, n, r) {
+n.d(t, { Z: () => c });
+var i = n(379649),
+    r = n(846519),
+    a = n(361291),
+    s = n(981631);
+function o(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let u = 1000;
-function c(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-    return null != e ? Math.round(e) : n;
+let l = 1000;
+function u(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+    return null != e ? Math.round(e) : t;
 }
-class d {
+class c {
     start() {
-        let { resolution: e, fps: n } = o.Z.getState();
-        (this._targetResolution = e), (this._targetFPS = n), this._statInterval.start(u, this._sampleStats), (this._lastLayoutChanged = (0, i.zO)());
+        let { resolution: e, fps: t } = a.Z.getState();
+        (this._targetResolution = e), (this._targetFPS = t), this._statInterval.start(l, this._sampleStats), (this._lastLayoutChanged = (0, i.zO)());
     }
     stop() {
         this._statInterval.stop(), (this._streamEnd = (0, i.zO)()), this._incrementLayout(this._lastLayout, (this._streamEnd - this._lastLayoutChanged) / 1000);
     }
     layoutChange(e) {
         if (e === this._lastLayout || null != this._streamEnd) return;
-        let n = (0, i.zO)();
-        this._incrementLayout(this._lastLayout, (n - this._lastLayoutChanged) / 1000), this._layoutChanges++, (this._lastLayout = e), (this._lastLayoutChanged = n);
+        let t = (0, i.zO)();
+        this._incrementLayout(this._lastLayout, (t - this._lastLayoutChanged) / 1000), this._layoutChanges++, (this._lastLayout = e), (this._lastLayoutChanged = t);
     }
     getLayout() {
         return this._lastLayout;
@@ -44,13 +40,13 @@ class d {
     getStats() {
         let e = {
             num_layout_changes: this._layoutChanges,
-            duration_layout_fullscreen: c(this._layoutBuckets[s.hVg.FULL_SCREEN]),
-            duration_layout_theatre: c(this._layoutBuckets[s.hVg.THEATRE]),
-            duration_layout_pip: c(this._layoutBuckets[s.hVg.PIP]),
-            duration_layout_popout: c(this._layoutBuckets[s.hVg.POPOUT]),
-            duration_layout_portrait: c(this._layoutBuckets[s.hVg.PORTRAIT]),
-            duration_layout_landscape: c(this._layoutBuckets[s.hVg.LANDSCAPE]),
-            duration_layout_minimized: c(this._layoutBuckets[s.hVg.MINIMIZED])
+            duration_layout_fullscreen: u(this._layoutBuckets[s.hVg.FULL_SCREEN]),
+            duration_layout_theatre: u(this._layoutBuckets[s.hVg.THEATRE]),
+            duration_layout_pip: u(this._layoutBuckets[s.hVg.PIP]),
+            duration_layout_popout: u(this._layoutBuckets[s.hVg.POPOUT]),
+            duration_layout_portrait: u(this._layoutBuckets[s.hVg.PORTRAIT]),
+            duration_layout_landscape: u(this._layoutBuckets[s.hVg.LANDSCAPE]),
+            duration_layout_minimized: u(this._layoutBuckets[s.hVg.MINIMIZED])
         };
         return this._isSender
             ? {
@@ -61,26 +57,26 @@ class d {
               }
             : e;
     }
-    constructor(e, n) {
-        l(this, '_statInterval', void 0),
-            l(this, '_isSender', void 0),
-            l(this, '_streamEnd', void 0),
-            l(this, '_targetResolution', 0),
-            l(this, '_targetFPS', 0),
-            l(this, '_streamSettingsChanged', !1),
-            l(this, '_lastLayout', void 0),
-            l(this, '_lastLayoutChanged', 0),
-            l(this, '_layoutChanges', 0),
-            l(this, '_layoutBuckets', void 0),
-            l(this, '_incrementLayout', (e, n) => {
-                null == this._layoutBuckets[e] && (this._layoutBuckets[e] = 0), (this._layoutBuckets[e] += n);
+    constructor(e, t) {
+        o(this, '_statInterval', void 0),
+            o(this, '_isSender', void 0),
+            o(this, '_streamEnd', void 0),
+            o(this, '_targetResolution', 0),
+            o(this, '_targetFPS', 0),
+            o(this, '_streamSettingsChanged', !1),
+            o(this, '_lastLayout', void 0),
+            o(this, '_lastLayoutChanged', 0),
+            o(this, '_layoutChanges', 0),
+            o(this, '_layoutBuckets', void 0),
+            o(this, '_incrementLayout', (e, t) => {
+                null == this._layoutBuckets[e] && (this._layoutBuckets[e] = 0), (this._layoutBuckets[e] += t);
             }),
-            l(this, '_sampleStats', () => {
-                let { resolution: e, fps: n } = o.Z.getState();
-                this._streamSettingsChanged = e !== this._targetResolution || n !== this._targetFPS;
+            o(this, '_sampleStats', () => {
+                let { resolution: e, fps: t } = a.Z.getState();
+                this._streamSettingsChanged = e !== this._targetResolution || t !== this._targetFPS;
             }),
-            (this._isSender = n),
-            (this._statInterval = new a.Xp()),
+            (this._isSender = t),
+            (this._statInterval = new r.Xp()),
             (this._lastLayout = e),
             (this._layoutBuckets = {});
     }

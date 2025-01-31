@@ -1,13 +1,9 @@
-n.d(t, {
-    Z: function () {
-        return h;
-    }
-});
+n.d(t, { Z: () => h });
 var i = n(200651);
 n(192379);
 var l = n(481060),
-    r = n(434404),
-    a = n(962086),
+    a = n(434404),
+    r = n(962086),
     s = n(303737),
     o = n(981631),
     c = n(388032),
@@ -27,7 +23,7 @@ function h(e) {
                 (0, i.jsxs)('div', {
                     className: d.upsellContent,
                     children: [
-                        (0, i.jsx)(l.Heading, {
+                        (0, i.jsx)(l.X6q, {
                             variant: 'heading-xl/semibold',
                             children: c.intl.string(c.t['8gJGPj'])
                         }),
@@ -36,10 +32,10 @@ function h(e) {
                             className: d.bodyText,
                             children: c.intl.string(c.t.GpOWIi)
                         }),
-                        (0, i.jsx)(l.Button, {
-                            size: l.Button.Sizes.MEDIUM,
+                        (0, i.jsx)(l.zxk, {
+                            size: l.zxk.Sizes.MEDIUM,
                             onClick: () => {
-                                (0, a.mL)(t), r.Z.open(t, o.pNK.ROLE_SUBSCRIPTIONS, void 0, o.KsC.ROLE_SUBSCRIPTION_TIERS), (0, s.GN)(t);
+                                (0, r.mL)(t), a.Z.open(t, o.pNK.ROLE_SUBSCRIPTIONS, void 0, o.KsC.ROLE_SUBSCRIPTION_TIERS), (0, s.GN)(t);
                             },
                             className: d.__invalid_button,
                             children: c.intl.string(c.t['I/XhUl'])

@@ -1,68 +1,60 @@
-r.d(n, {
-    Qi: function () {
-        return p;
-    },
-    R9: function () {
-        return _;
-    },
-    l_: function () {
-        return f;
-    },
-    t: function () {
-        return h;
-    }
+n.d(t, {
+    Qi: () => f,
+    R9: () => p,
+    l_: () => d,
+    t: () => _
 });
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(780384),
-    l = r(410030),
-    u = r(331595),
-    c = r(474936),
-    d = r(756232);
-let f = 'premium_new_tier_2_gradient',
-    p = 'premium_old_tier_2_gradient';
-function h(e) {
-    let { tier: n = c.p9.TIER_2 } = e,
-        r = (0, l.ZP)(),
-        a = (0, s.ap)(r);
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(780384),
+    o = n(410030),
+    l = n(325767),
+    u = n(474936),
+    c = n(756232);
+let d = 'premium_new_tier_2_gradient',
+    f = 'premium_old_tier_2_gradient';
+function _(e) {
+    let { tier: t = u.p9.TIER_2 } = e,
+        n = (0, o.ZP)(),
+        r = (0, s.ap)(n);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            !a &&
+            !r &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)('div', {
-                            className: o()(d.rimGlowVertical, {
-                                [d.rimGlowVerticalTier0]: n === c.p9.TIER_0,
-                                [d.rimGlowVerticalTier2]: n === c.p9.TIER_2
+                            className: a()(c.rimGlowVertical, {
+                                [c.rimGlowVerticalTier0]: t === u.p9.TIER_0,
+                                [c.rimGlowVerticalTier2]: t === u.p9.TIER_2
                             })
                         }),
-                        (0, i.jsx)(_, { foreground: d.buttonSparkleStar1 })
+                        (0, i.jsx)(p, { foreground: c.buttonSparkleStar1 })
                     ]
                 }),
-            (0, i.jsx)(_, { foreground: d.buttonSparkleStar2 }),
-            (0, i.jsx)(_, { foreground: d.buttonSparkleStar3 }),
-            (0, i.jsx)(_, { foreground: d.buttonSparkleStar4 }),
-            (0, i.jsx)(_, { foreground: d.buttonSparkleStar5 })
+            (0, i.jsx)(p, { foreground: c.buttonSparkleStar2 }),
+            (0, i.jsx)(p, { foreground: c.buttonSparkleStar3 }),
+            (0, i.jsx)(p, { foreground: c.buttonSparkleStar4 }),
+            (0, i.jsx)(p, { foreground: c.buttonSparkleStar5 })
         ]
     });
 }
-function _(e) {
-    let { width: n = 14, height: r = 13, color: a = 'white', foreground: o, ...s } = e;
+function p(e) {
+    let { width: t = 14, height: n = 13, color: r = 'white', foreground: a, ...s } = e;
     return (0, i.jsxs)('svg', {
-        ...(0, u.Z)({ ...s }),
+        ...(0, l.Z)({ ...s }),
         preserveAspectRatio: 'none',
-        width: n,
-        height: r,
+        width: t,
+        height: n,
         viewBox: '0 0 14 13',
-        className: o,
+        className: a,
         xmlns: 'http://www.w3.org/2000/svg',
         children: [
             (0, i.jsxs)('defs', {
                 children: [
                     (0, i.jsxs)('linearGradient', {
-                        id: f,
+                        id: d,
                         x1: '0%',
                         y1: '0%',
                         x2: '100%',
@@ -83,7 +75,7 @@ function _(e) {
                         ]
                     }),
                     (0, i.jsxs)('linearGradient', {
-                        id: p,
+                        id: f,
                         x1: '0%',
                         y1: '0%',
                         x2: '100%',
@@ -103,7 +95,7 @@ function _(e) {
             }),
             (0, i.jsx)('path', {
                 d: 'M9.30705 8.36284L13.5731 6.46363C13.5889 6.45487 13.6022 6.44203 13.6114 6.42644C13.6206 6.41086 13.6255 6.39309 13.6255 6.375C13.6255 6.35691 13.6206 6.33914 13.6114 6.32356C13.6022 6.30797 13.5889 6.29513 13.5731 6.28637L9.30705 4.38716C9.29358 4.38716 9.28066 4.38183 9.27114 4.37233C9.26162 4.36283 9.25627 4.34995 9.25627 4.33652L7.3518 0.0569762C7.30102 -0.0189921 7.19944 -0.0189921 7.17405 0.0569762L5.26958 4.33652C5.24419 4.36184 5.24419 4.38716 5.2188 4.38716L0.927401 6.28637C0.911525 6.29513 0.898291 6.30797 0.889077 6.32356C0.879862 6.33914 0.875 6.35691 0.875 6.375C0.875 6.39309 0.879862 6.41086 0.889077 6.42644C0.898291 6.44203 0.911525 6.45487 0.927401 6.46363L5.2188 8.36284C5.24419 8.36284 5.24419 8.38816 5.26958 8.41348L7.17405 12.693C7.19944 12.769 7.30102 12.769 7.3518 12.693L9.25627 8.41348C9.25627 8.40005 9.26162 8.38717 9.27114 8.37767C9.28066 8.36817 9.29358 8.36284 9.30705 8.36284Z',
-                fill: a
+                fill: r
             })
         ]
     });

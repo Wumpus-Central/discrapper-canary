@@ -1,49 +1,45 @@
-r.d(n, {
-    X: function () {
-        return s;
-    }
-});
-var i = r(829105),
-    a = r(150076),
-    o = r(695170);
-function s(e, n, r, s, l, u) {
-    var c = {},
-        d = e.accept;
-    function f(e, n) {
-        r.forEach(function (r) {
-            r.between(e, n, !0).forEach(function (e) {
-                c[Number(e)] = !0;
+n.d(t, { X: () => s });
+var i = n(829105),
+    r = n(150076),
+    a = n(695170);
+function s(e, t, n, s, o, l) {
+    var u = {},
+        c = e.accept;
+    function d(e, t) {
+        n.forEach(function (n) {
+            n.between(e, t, !0).forEach(function (e) {
+                u[Number(e)] = !0;
             });
         });
     }
-    l.forEach(function (e) {
-        c[Number(new i.M(e, u).rezonedDate())] = !0;
+    o.forEach(function (e) {
+        u[Number(new i.M(e, l).rezonedDate())] = !0;
     }),
         (e.accept = function (e) {
-            var n = Number(e);
-            return isNaN(n) ? d.call(this, e) : !!c[n] || (f(new Date(n - 1), new Date(n + 1)), !!c[n]) || ((c[n] = !0), d.call(this, e));
+            var t = Number(e);
+            return isNaN(t) ? c.call(this, e) : !!u[t] || (d(new Date(t - 1), new Date(t + 1)), !!u[t]) || ((u[t] = !0), c.call(this, e));
         }),
         'between' === e.method &&
-            (f(e.args.after, e.args.before),
+            (d(e.args.after, e.args.before),
             (e.accept = function (e) {
-                var n = Number(e);
-                return !!c[n] || ((c[n] = !0), d.call(this, e));
+                var t = Number(e);
+                return !!u[t] || ((u[t] = !0), c.call(this, e));
             }));
-    for (var p = 0; p < s.length; p++) {
-        var h = new i.M(s[p], u).rezonedDate();
-        if (!e.accept(new Date(h.getTime()))) break;
+    for (var f = 0; f < s.length; f++) {
+        var _ = new i.M(s[f], l).rezonedDate();
+        if (!e.accept(new Date(_.getTime()))) break;
     }
-    n.forEach(function (n) {
-        (0, a.h)(e, n.options);
+    t.forEach(function (t) {
+        (0, r.h)(e, t.options);
     });
-    var _ = e._result;
-    switch (((0, o.DY)(_), e.method)) {
+    var p = e._result;
+    switch (((0, a.DY)(p), e.method)) {
         case 'all':
         case 'between':
-            return _;
+            return p;
         case 'before':
-            return (_.length && _[_.length - 1]) || null;
+            return (p.length && p[p.length - 1]) || null;
         default:
-            return (_.length && _[0]) || null;
+            return (p.length && p[0]) || null;
     }
 }

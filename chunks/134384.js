@@ -1,5 +1,6 @@
-e.exports = {
-    icon: 'icon_e10dab',
-    small: 'small_e10dab',
-    medium: 'medium_e10dab'
+var i = {
+    icon: 'icon__9f2f4',
+    small: 'small__9f2f4',
+    medium: 'medium__9f2f4'
 };
+e.exports = i;

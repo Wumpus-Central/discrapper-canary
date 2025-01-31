@@ -1,35 +1,31 @@
 n.d(t, {
-    Z: function () {
-        return l;
-    },
-    d: function () {
-        return o;
-    }
+    Z: () => a,
+    d: () => o
 });
 var i = n(544891),
-    r = n(570140),
-    s = n(881052),
-    a = n(981631);
-async function l() {
-    r.Z.wait(() => {
-        r.Z.dispatch({ type: 'VIRTUAL_CURRENCY_BALANCE_FETCH' });
+    s = n(570140),
+    r = n(881052),
+    l = n(981631);
+async function a() {
+    s.Z.wait(() => {
+        s.Z.dispatch({ type: 'VIRTUAL_CURRENCY_BALANCE_FETCH' });
     });
     try {
         let e = await i.tn.get({
-                url: a.ANM.VIRTUAL_CURRENCY_USER_BALANCE,
+                url: l.ANM.VIRTUAL_CURRENCY_USER_BALANCE,
                 rejectWithError: !1
             }),
             t = e.body.balance;
         return (
-            r.Z.dispatch({
+            s.Z.dispatch({
                 type: 'VIRTUAL_CURRENCY_BALANCE_FETCH_SUCCESS',
                 balance: t
             }),
             e.body
         );
     } catch (t) {
-        let e = t instanceof s.HF ? t : new s.HF(t);
-        r.Z.dispatch({
+        let e = t instanceof r.HF ? t : new r.HF(t);
+        s.Z.dispatch({
             type: 'VIRTUAL_CURRENCY_BALANCE_FETCH_FAIL',
             error: e
         });
@@ -37,8 +33,8 @@ async function l() {
 }
 async function o(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    r.Z.wait(() => {
-        r.Z.dispatch({
+    s.Z.wait(() => {
+        s.Z.dispatch({
             type: 'VIRTUAL_CURRENCY_REDEEM_START',
             skuId: e
         });
@@ -46,26 +42,26 @@ async function o(e) {
     try {
         let n = (
             await i.tn.post({
-                url: a.ANM.VIRTUAL_CURRENCY_SKU_REDEEM(e),
+                url: l.ANM.VIRTUAL_CURRENCY_SKU_REDEEM(e),
                 rejectWithError: !1
             })
         ).body;
         return (
-            r.Z.dispatch({
+            s.Z.dispatch({
                 type: 'VIRTUAL_CURRENCY_REDEEM_SUCCESS',
                 skuId: e,
                 entitlements: n
             }),
-            t && l(),
+            t && a(),
             n
         );
     } catch (i) {
-        let n = i instanceof s.HF ? i : new s.HF(i);
-        r.Z.dispatch({
+        let n = i instanceof r.HF ? i : new r.HF(i);
+        s.Z.dispatch({
             type: 'VIRTUAL_CURRENCY_REDEEM_FAIL',
             skuId: e,
             error: n
         }),
-            t && l();
+            t && a();
     }
 }

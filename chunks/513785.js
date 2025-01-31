@@ -1,83 +1,80 @@
-r.d(n, {
-    M: function () {
-        return i;
-    }
+n.d(t, {
+    M: () => o,
+    Z: () => m
 });
 var i,
-    a,
-    o = r(442837),
-    s = r(570140);
-function l(e, n, r) {
+    r = n(442837),
+    a = n(570140);
+function s(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-!(function (e) {
-    (e[(e.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (e[(e.FETCHING = 1)] = 'FETCHING'), (e[(e.FETCHED = 2)] = 'FETCHED');
-})(i || (i = {}));
-let u = {
+var o = (function (e) {
+    return (e[(e.NOT_FETCHED = 0)] = 'NOT_FETCHED'), (e[(e.FETCHING = 1)] = 'FETCHING'), (e[(e.FETCHED = 2)] = 'FETCHED'), e;
+})({});
+let l = {
         userTenureRewardStatusByRewardId: {},
         lastFetchTimeMs: null,
         fetchState: 0
     },
-    c = u;
-function d() {
-    c.fetchState = 1;
+    u = l;
+function c() {
+    u.fetchState = 1;
 }
-function f(e) {
-    let { userTenureRewardStatus: n } = e;
-    if (null != n) {
+function d(e) {
+    let { userTenureRewardStatus: t } = e;
+    if (null != t) {
         let e = {};
-        n.forEach((n) => {
-            null != n.next_tenure_reward_id && (e[n.next_tenure_reward_id] = n);
+        t.forEach((t) => {
+            null != t.next_tenure_reward_id && (e[t.next_tenure_reward_id] = t);
         }),
-            (c.userTenureRewardStatusByRewardId = e);
-    } else c.userTenureRewardStatusByRewardId = u.userTenureRewardStatusByRewardId;
-    (c.lastFetchTimeMs = Date.now()), (c.fetchState = 2);
+            (u.userTenureRewardStatusByRewardId = e);
+    } else u.userTenureRewardStatusByRewardId = l.userTenureRewardStatusByRewardId;
+    (u.lastFetchTimeMs = Date.now()), (u.fetchState = 2);
 }
-function p() {
-    c.userTenureRewardStatusByRewardId = u.userTenureRewardStatusByRewardId;
+function f() {
+    u.userTenureRewardStatusByRewardId = l.userTenureRewardStatusByRewardId;
 }
-function h(e) {
-    let { tenureRewardIds: n } = e;
-    n.forEach((e) => {
-        delete c.userTenureRewardStatusByRewardId[e];
+function _(e) {
+    let { tenureRewardIds: t } = e;
+    t.forEach((e) => {
+        delete u.userTenureRewardStatusByRewardId[e];
     });
 }
-function _() {
-    c = u;
+function p() {
+    u = l;
 }
-class m extends (a = o.ZP.PersistedStore) {
+class h extends (i = r.ZP.PersistedStore) {
     initialize(e) {
-        c = {
-            ...c,
+        u = {
+            ...u,
             ...(null != e ? e : {})
         };
     }
     getState() {
-        return c;
+        return u;
     }
     getFetchState() {
-        return c.fetchState;
+        return u.fetchState;
     }
     getTenureRewardStatusForRewardId(e) {
-        return c.userTenureRewardStatusByRewardId[e];
+        return u.userTenureRewardStatusByRewardId[e];
     }
 }
-l(m, 'displayName', 'TenureRewardStore'),
-    l(m, 'persistKey', 'TenureRewardStore'),
-    (n.Z = new m(s.Z, {
-        USER_TENURE_REWARD_SYNC_START: d,
-        USER_TENURE_REWARD_SYNC_SUCCESS: f,
-        USER_TENURE_REWARD_STATUS_RESET: p,
-        USER_TENURE_REWARD_STATUS_DELETE: h,
-        LOGOUT: _
-    }));
+s(h, 'displayName', 'TenureRewardStore'), s(h, 'persistKey', 'TenureRewardStore');
+let m = new h(a.Z, {
+    USER_TENURE_REWARD_SYNC_START: c,
+    USER_TENURE_REWARD_SYNC_SUCCESS: d,
+    USER_TENURE_REWARD_STATUS_RESET: f,
+    USER_TENURE_REWARD_STATUS_DELETE: _,
+    LOGOUT: p
+});

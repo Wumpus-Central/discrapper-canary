@@ -1,24 +1,20 @@
-r.d(n, {
-    Z: function () {
-        return u;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(819758),
-    l = r(308513);
-function u(e) {
-    let { className: n, children: r, forceUseColor: a = !1, hideStars: u } = e;
+n.d(t, { Z: () => l });
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(819758),
+    o = n(308513);
+function l(e) {
+    let { className: t, children: n, forceUseColor: r = !1, hideStars: l } = e;
     return (0, i.jsxs)('span', {
-        className: o()(l.container, n, { [l.containerColored]: a }),
+        className: a()(o.container, t, { [o.containerColored]: r }),
         children: [
-            r,
-            u
+            n,
+            l
                 ? null
                 : (0, i.jsxs)(i.Fragment, {
-                      children: [(0, i.jsx)(s.Z, { foreground: l.sparkleStarTopRight }), (0, i.jsx)(s.Z, { foreground: l.sparkleStarRight }), (0, i.jsx)(s.Z, { foreground: l.sparkleStarBottomLeft })]
+                      children: [(0, i.jsx)(s.Z, { foreground: o.sparkleStarTopRight }), (0, i.jsx)(s.Z, { foreground: o.sparkleStarRight }), (0, i.jsx)(s.Z, { foreground: o.sparkleStarBottomLeft })]
                   })
         ]
     });

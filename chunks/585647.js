@@ -1,11 +1,11 @@
-n(47120);
+n.d(t, { Z: () => o }), n(47120);
 var r = n(485589),
-    i = n(14160),
-    a = n(247123),
-    o = n(207662);
-t.Z = {
+    a = n(14160),
+    i = n(247123),
+    l = n(207662);
+let o = {
     id: 'aria-attribute-valid-value',
-    selector: o.J8,
+    selector: l.J8,
     tags: [],
     metadata: {
         description: 'ARIA attributes must use valid values',
@@ -13,39 +13,32 @@ t.Z = {
     },
     check: function (e) {
         let t = (function (e) {
-            for (let t of o.cg)
-                if (e.hasAttribute(t)) {
-                    let n = e.getAttribute(t),
-                        i = r.aria.get(t);
-                    switch (i.type) {
+            for (let h of l.cg)
+                if (e.hasAttribute(h)) {
+                    var t, n, a, o, u, c, s, d, f;
+                    let l = e.getAttribute(h),
+                        b = r.aria.get(h);
+                    switch (b.type) {
                         case 'string':
-                            return a.w;
+                            return i.w;
                         case 'id':
-                            return (function (e, t) {
-                                return null == document.getElementById(t) ? ''.concat(e, ' references #').concat(t, ' which does not exist') : a.w;
-                            })(t, n);
+                            return (t = h), (n = l), null == document.getElementById(n) ? ''.concat(t, ' references #').concat(n, ' which does not exist') : i.w;
                         case 'idlist':
                             return (function (e, t, n) {
-                                if (('aria-controls' === e && ('false' === n.getAttribute('aria-expanded') || 'false' === n.getAttribute('aria-selected'))) || ('aria-owns' === e && 'false' === n.getAttribute('aria-expanded'))) return a.w;
+                                if (('aria-controls' === e && ('false' === n.getAttribute('aria-expanded') || 'false' === n.getAttribute('aria-selected'))) || ('aria-owns' === e && 'false' === n.getAttribute('aria-expanded'))) return i.w;
                                 for (let n of t.split(' ')) if (null == document.getElementById(n)) return ''.concat(e, ' references #').concat(t, ' which does not exist');
-                                return a.w;
-                            })(t, n, e);
+                                return i.w;
+                            })(h, l, e);
                         case 'integer':
-                            return (function (e, t) {
-                                return String(parseInt(t, 10)) !== t ? ''.concat(e, ' requires an integer but got ').concat(t) : a.w;
-                            })(t, n);
+                            return (a = h), String(parseInt((o = l), 10)) !== o ? ''.concat(a, ' requires an integer but got ').concat(o) : i.w;
                         case 'number':
-                            return (function (e, t) {
-                                return isFinite(t) ? a.w : ''.concat(e, ' requires a numeric value but got ').concat(t);
-                            })(t, n);
+                            return (u = h), isFinite((c = l)) ? i.w : ''.concat(u, ' requires a numeric value but got ').concat(c);
                         case 'boolean':
-                            return (function (e, t, n) {
-                                return 'true' === t || 'false' === t || ('' === t && !0 === n.allowundefined) ? a.w : ''.concat(e, ' must be either "true" or "false"');
-                            })(t, n, i);
+                            return (s = h), (d = l), (f = b), 'true' === d || 'false' === d || ('' === d && !0 === f.allowundefined) ? i.w : ''.concat(s, ' must be either "true" or "false"');
                         case 'token':
                             return (function (e, t, n) {
-                                var r, i;
-                                let o = (function (e) {
+                                var r, a;
+                                let l = (function (e) {
                                     switch (e) {
                                         case 'true':
                                             return !0;
@@ -55,40 +48,40 @@ t.Z = {
                                             return e;
                                     }
                                 })(t);
-                                return (null === (r = n.values) || void 0 === r ? void 0 : r.includes(o))
-                                    ? a.w
+                                return (null === (r = n.values) || void 0 === r ? void 0 : r.includes(l))
+                                    ? i.w
                                     : ''
                                           .concat(e, ' was ')
                                           .concat(t, ' but must be: ')
-                                          .concat(null === (i = n.values) || void 0 === i ? void 0 : i.join(', '));
-                            })(t, n, i);
+                                          .concat(null === (a = n.values) || void 0 === a ? void 0 : a.join(', '));
+                            })(h, l, b);
                         case 'tokenlist':
                             return (function (e, t, n) {
-                                for (let a of t.split(' ')) {
-                                    var r, i;
-                                    if (null === (r = n.values) || void 0 === r ? !void 0 : !r.includes(a))
+                                for (let i of t.split(' ')) {
+                                    var r, a;
+                                    if (null === (r = n.values) || void 0 === r || !r.includes(i))
                                         return ''
                                             .concat(e, ' included ')
                                             .concat(t, ' but is restricted to: ')
-                                            .concat(null === (i = n.values) || void 0 === i ? void 0 : i.join(', '));
+                                            .concat(null === (a = n.values) || void 0 === a ? void 0 : a.join(', '));
                                 }
-                                return a.w;
-                            })(t, n, i);
+                                return i.w;
+                            })(h, l, b);
                         case 'tristate':
                             return (function (e, t) {
                                 switch (t) {
                                     case 'true':
                                     case 'false':
                                     case 'mixed':
-                                        return a.w;
+                                        return i.w;
                                     default:
                                         return ''.concat(e, ' must be "true", "false", or "mixed" not ').concat(t);
                                 }
-                            })(t, n);
+                            })(h, l);
                     }
                 }
-            return a.w;
+            return i.w;
         })(e);
-        return t !== a.w && ((0, o.Uu)(e) || !(0, i.p)(e)) ? a.w : t;
+        return t !== i.w && ((0, l.Uu)(e) || !(0, a.p)(e)) ? i.w : t;
     }
 };

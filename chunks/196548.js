@@ -1,8 +1,4 @@
-r.d(n, {
-    V: function () {
-        return i;
-    }
-});
+n.d(t, { V: () => i });
 let i = {
     Layout: {
         SPACE_0: 0,

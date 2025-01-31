@@ -1,75 +1,69 @@
 n.d(t, {
-    ZP: function () {
-        return f;
-    },
-    fO: function () {
-        return h;
-    },
-    sF: function () {
-        return m;
-    }
+    ZP: () => _,
+    fO: () => h,
+    sF: () => m
 });
 var i = n(200651),
-    r = n(120356),
-    l = n.n(r),
-    a = n(481060),
-    o = n(377171),
-    s = n(951394),
+    l = n(120356),
+    a = n.n(l),
+    r = n(481060),
+    s = n(377171),
+    o = n(951394),
     c = n(407477),
-    u = n(388032),
-    d = n(604643);
+    d = n(388032),
+    u = n(604643);
 function m(e) {
-    let { label: t, ariaLabel: n, tooltipText: r, tooltipColor: m, icon: h, iconProps: f, onClick: p, onTooltipShow: _, onTooltipHide: g, disabled: E, dangerous: C, separator: I, sparkle: x, showNewBadge: N, buttonClassName: v, children: T, ...S } = e,
-        { canShowReactionsOnMessageHover: A } = c.ZP.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 });
+    let { label: t, ariaLabel: n, tooltipText: l, tooltipColor: m, icon: h, iconProps: _, onClick: p, onTooltipShow: g, onTooltipHide: f, disabled: x, dangerous: E, separator: C, sparkle: v, showNewBadge: I, buttonClassName: N, children: S, ...T } = e,
+        { canShowReactionsOnMessageHover: b } = c.ZP.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 });
     return (
         c.Xb.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 }),
-        (0, i.jsx)(a.Tooltip, {
-            text: null != r ? r : t,
-            color: null != m ? m : a.TooltipColors.PRIMARY,
+        (0, i.jsx)(r.ua7, {
+            text: null != l ? l : t,
+            color: null != m ? m : r.FGA.PRIMARY,
             'aria-label': t,
-            onTooltipShow: _,
-            onTooltipHide: g,
+            onTooltipShow: g,
+            onTooltipHide: f,
             hideOnClick: !0,
-            tooltipClassName: d.tooltip,
+            tooltipClassName: u.tooltip,
             children: (e) => {
-                let { onMouseEnter: r, onMouseLeave: c, onClick: m } = e;
+                let { onMouseEnter: l, onMouseLeave: c, onClick: m } = e;
                 return (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsxs)(s.zx, {
-                            className: l()(v, { [d.hoverBarButton]: A }),
-                            onMouseEnter: r,
+                        (0, i.jsxs)(o.zx, {
+                            className: a()(N, { [u.hoverBarButton]: b }),
+                            onMouseEnter: l,
                             onMouseLeave: c,
                             onClick: (e) => {
                                 null == m || m(), p(e);
                             },
                             'aria-label': null != n ? n : t,
-                            disabled: E,
-                            dangerous: C,
-                            ...S,
+                            disabled: x,
+                            dangerous: E,
+                            ...T,
                             children: [
                                 null != h
                                     ? (0, i.jsx)(h, {
-                                          className: d.icon,
+                                          className: u.icon,
                                           color: 'currentColor',
-                                          ...f
+                                          ..._
                                       })
                                     : null,
-                                null != T
+                                null != S
                                     ? (0, i.jsx)('div', {
-                                          className: l()(d.icon, d.buttonContent),
-                                          children: T
+                                          className: a()(u.icon, u.buttonContent),
+                                          children: S
                                       })
                                     : null,
-                                x && (0, i.jsx)(a.LottieSparkle, {}),
-                                N &&
-                                    (0, i.jsx)(a.TextBadge, {
-                                        text: u.intl.string(u.t.y2b7CA),
-                                        color: o.Z.BG_BRAND,
-                                        className: d.newBadge
+                                v && (0, i.jsx)(r.K1N, {}),
+                                I &&
+                                    (0, i.jsx)(r.IGR, {
+                                        text: d.intl.string(d.t.y2b7CA),
+                                        color: s.Z.BG_BRAND,
+                                        className: u.newBadge
                                     })
                             ]
                         }),
-                        I && (0, i.jsx)(s.Z0, {})
+                        C && (0, i.jsx)(o.Z0, {})
                     ]
                 });
             }
@@ -78,15 +72,15 @@ function m(e) {
 }
 function h(e) {
     let { className: t } = e;
-    return (0, i.jsx)('div', { className: l()(d.separator, t) });
+    return (0, i.jsx)('div', { className: a()(u.separator, t) });
 }
-function f(e) {
+function _(e) {
     let { children: t, ...n } = e,
-        { canShowReactionsOnMessageHover: r } = c.ZP.useExperiment({ location: 'HoverBar' }, { autoTrackExposure: !0 });
+        { canShowReactionsOnMessageHover: l } = c.ZP.useExperiment({ location: 'HoverBar' }, { autoTrackExposure: !0 });
     return (
         c.Xb.useExperiment({ location: 'HoverBar' }, { autoTrackExposure: !0 }),
-        (0, i.jsx)(s.ZP, {
-            className: l()(n.className, d.popover, { [d.popoverReactionHoverBar]: r }),
+        (0, i.jsx)(o.ZP, {
+            className: a()(n.className, u.popover, { [u.popoverReactionHoverBar]: l }),
             children: t
         })
     );

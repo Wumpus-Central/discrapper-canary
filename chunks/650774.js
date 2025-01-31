@@ -1,75 +1,76 @@
+n.d(t, { Z: () => g });
 var i,
-    a = r(442837),
-    o = r(570140);
-function s(e, n, r) {
+    r = n(442837),
+    a = n(570140);
+function s(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let l = {},
-    u = {};
-function c(e) {
-    let { guilds: n } = e;
-    (l = {}),
-        n.forEach((e) => {
-            l[e.id] = e.member_count;
+let o = {},
+    l = {};
+function u(e) {
+    let { guilds: t } = e;
+    (o = {}),
+        t.forEach((e) => {
+            o[e.id] = e.member_count;
         });
 }
+function c(e) {
+    o = { ...e.guildMemberCounts };
+}
 function d(e) {
-    l = { ...e.guildMemberCounts };
+    let { guild: t } = e;
+    o[t.id] = t.member_count;
 }
 function f(e) {
-    let { guild: n } = e;
-    l[n.id] = n.member_count;
-}
-function p(e) {
-    let { guild: n } = e;
-    if (null == l[n.id] && null == u[n.id]) return !1;
-    delete l[n.id], delete u[n.id];
-}
-function h(e) {
-    let { guildId: n, memberCount: r, onlineCount: i } = e,
-        a = !1;
-    return l[n] !== r && ((l[n] = r), (a = !0)), u[n] !== i && ((u[n] = i), (a = !0)), a;
+    let { guild: t } = e;
+    if (null == o[t.id] && null == l[t.id]) return !1;
+    delete o[t.id], delete l[t.id];
 }
 function _(e) {
-    let { invite: n } = e,
-        { guild: r, approximate_presence_count: i } = n;
-    if ((null == r ? void 0 : r.id) == null || null == i) return !1;
-    u[r.id] = i;
+    let { guildId: t, memberCount: n, onlineCount: i } = e,
+        r = !1;
+    return o[t] !== n && ((o[t] = n), (r = !0)), l[t] !== i && ((l[t] = i), (r = !0)), r;
 }
-function m(e) {
-    let { guildId: n, count: r } = e;
-    if (null == n || null == r) return !1;
-    u[n] = r;
+function p(e) {
+    let { invite: t } = e,
+        { guild: n, approximate_presence_count: i } = t;
+    if ((null == n ? void 0 : n.id) == null || null == i) return !1;
+    l[n.id] = i;
 }
-class g extends (i = a.ZP.Store) {
+function h(e) {
+    let { guildId: t, count: n } = e;
+    if (null == t || null == n) return !1;
+    l[t] = n;
+}
+class m extends (i = r.ZP.Store) {
     getMemberCounts() {
-        return l;
+        return o;
     }
     getMemberCount(e) {
-        return null != e ? l[e] : null;
+        return null != e ? o[e] : null;
     }
     getOnlineCount(e) {
-        return null != e ? u[e] : null;
+        return null != e ? l[e] : null;
     }
 }
-s(g, 'displayName', 'GuildMemberCountStore'),
-    (n.Z = new g(o.Z, {
-        CONNECTION_OPEN: c,
-        OVERLAY_INITIALIZE: d,
-        GUILD_CREATE: f,
-        GUILD_DELETE: p,
-        GUILD_MEMBER_LIST_UPDATE: h,
-        INVITE_ACCEPT_SUCCESS: _,
-        INVITE_RESOLVE_SUCCESS: _,
-        ONLINE_GUILD_MEMBER_COUNT_UPDATE: m
-    }));
+s(m, 'displayName', 'GuildMemberCountStore');
+let g = new m(a.Z, {
+    CONNECTION_OPEN: u,
+    OVERLAY_INITIALIZE: c,
+    GUILD_CREATE: d,
+    GUILD_DELETE: f,
+    GUILD_MEMBER_LIST_UPDATE: _,
+    INVITE_ACCEPT_SUCCESS: p,
+    INVITE_RESOLVE_SUCCESS: p,
+    ONLINE_GUILD_MEMBER_COUNT_UPDATE: h
+});

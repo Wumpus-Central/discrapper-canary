@@ -1,138 +1,137 @@
-var i = r(757143);
-var a = r(911969),
-    o = r(10718),
-    s = r(367790),
-    l = r(895924),
-    u = r(826298),
-    c = r(588468),
-    d = r(695346),
-    f = r(594174),
-    p = r(5192),
-    h = r(417574),
-    _ = r(877565),
-    m = r(590921),
-    g = r(126226),
-    E = r(388032);
-function v(e) {
-    let n = h.X.exec(e);
-    if (null != n) {
-        let r = n[1],
-            i = f.default.getUser(r);
+n.d(t, { Z: () => E }), n(757143);
+var i = n(911969),
+    r = n(10718),
+    a = n(367790),
+    s = n(895924),
+    o = n(826298),
+    l = n(588468),
+    u = n(695346),
+    c = n(594174),
+    d = n(5192),
+    f = n(417574),
+    _ = n(877565),
+    p = n(590921),
+    h = n(126226),
+    m = n(388032);
+function g(e) {
+    let t = f.X.exec(e);
+    if (null != t) {
+        let n = t[1],
+            i = c.default.getUser(n);
         return null == i || !i.bot || i.isClyde()
             ? null
             : {
                   type: 'mention',
-                  cleanedQuery: e.substring(n[0].length).trim(),
+                  cleanedQuery: e.substring(t[0].length).trim(),
                   user: i
               };
     }
     return null;
 }
-let y = {
-    ...g.Z,
+let E = {
+    ...h.Z,
     sentinel: void 0,
-    focusMode: m.QZ.MANUAL,
-    matches(e, n, r, i, a) {
-        if (a.commands === m.L8.DISABLED || a.commands === m.L8.OLD_BUILT_INS || r.length < 2 || !d.Xk.getSetting()) return !1;
-        let o = v(r);
-        return null != o && o.cleanedQuery.length > 0;
+    focusMode: p.QZ.MANUAL,
+    matches(e, t, n, i, r) {
+        if (r.commands === p.L8.DISABLED || r.commands === p.L8.OLD_BUILT_INS || n.length < 2 || !u.Xk.getSetting()) return !1;
+        let a = g(n);
+        return null != a && a.cleanedQuery.length > 0;
     },
-    queryResults(e, n, r, i, l) {
-        if (!d.Xk.getSetting()) return g.K;
-        let c = v(r);
-        if (null == c) return g.K;
-        let f = (0, u.hV)(e, c.cleanedQuery),
-            { commands: p, sections: h } = o.JT(
+    queryResults(e, t, n, s, l) {
+        if (!u.Xk.getSetting()) return h.K;
+        let c = g(n);
+        if (null == c) return h.K;
+        let d = (0, o.hV)(e, c.cleanedQuery),
+            { commands: f, sections: _ } = r.JT(
                 {
                     channel: e,
                     type: 'channel'
                 },
                 {
-                    commandTypes: [a.yU.CHAT],
-                    text: f.text
+                    commandTypes: [i.yU.CHAT],
+                    text: d.text
                 },
                 {
-                    limit: m.AQ,
-                    placeholderCount: m.YP,
-                    scoreMethod: s.p.COMMAND_OR_APPLICATION,
+                    limit: p.AQ,
+                    placeholderCount: p.YP,
+                    scoreMethod: a.p.COMMAND_OR_APPLICATION,
                     allowFetch: l
                 }
             );
-        if (null == p) return g.K;
-        let _ = p.filter((e) => e.section.botId === c.user.id);
-        if (f.hasSpaceTerminator) {
-            let e = f.text.trim(),
-                n = e + ' ';
-            _ = _.filter((r) => r.untranslatedName === e || r.untranslatedName.startsWith(n));
+        if (null == f) return h.K;
+        let m = f.filter((e) => e.section.botId === c.user.id);
+        if (d.hasSpaceTerminator) {
+            let e = d.text.trim(),
+                t = e + ' ';
+            m = m.filter((n) => n.untranslatedName === e || n.untranslatedName.startsWith(t));
         }
-        return 0 === _.length
-            ? g.K
+        return 0 === m.length
+            ? h.K
             : {
                   results: {
-                      entries: _.slice(0, m.AQ).map((e) => ({
+                      entries: m.slice(0, p.AQ).map((e) => ({
                           command: e,
-                          section: null == h ? void 0 : h.find((n) => n.id === e.applicationId)
+                          section: null == _ ? void 0 : _.find((t) => t.id === e.applicationId)
                       }))
                   }
               };
     },
     renderResults(e) {
         let {
-            results: { entries: n },
-            selectedIndex: r,
+            results: { entries: t },
+            selectedIndex: n,
             guild: i,
-            channel: a,
-            query: o,
+            channel: r,
+            query: a,
             options: s,
-            onHover: l,
+            onHover: o,
             onClick: u
         } = e;
         return (0, _.HI)({
-            query: o,
-            selectedIndex: r,
-            autocompletes: n,
-            onHover: l,
+            query: a,
+            selectedIndex: n,
+            autocompletes: t,
+            onHover: o,
             onClick: u,
-            titleWithQuery: E.t.HFRoZW,
-            titleWithoutQuery: E.intl.string(E.t['0hKkS0']),
-            Component: s.commands === m.L8.OLD_BUILT_INS ? c.ZP.Command : c.ZP.NewCommand,
+            titleWithQuery: m.t.HFRoZW,
+            titleWithoutQuery: m.intl.string(m.t['0hKkS0']),
+            Component: s.commands === p.L8.OLD_BUILT_INS ? l.ZP.Command : l.ZP.NewCommand,
             getProps: (e) => {
-                let { command: n, section: r } = e;
+                let { command: t, section: n } = e;
                 return {
-                    key: n.id,
-                    command: n,
-                    channel: a,
-                    guildId: a.guild_id,
+                    key: t.id,
+                    command: t,
+                    channel: r,
+                    guildId: r.guild_id,
                     showImage: !0,
-                    section: r
+                    section: n
                 };
             },
             getQuery: (e) => {
-                let n = v(e);
-                if ('mention' !== n.type) return e;
-                let r = p.ZP.getName(null == i ? void 0 : i.id, a.id, n.user);
-                return e.replace(h.X, '@'.concat(r));
+                let t = g(e);
+                if ('mention' !== t.type) return e;
+                let n = d.ZP.getName(null == i ? void 0 : i.id, r.id, t.user);
+                return e.replace(f.X, '@'.concat(n));
             },
             key: 'commands'
         });
     },
     onSelect(e) {
-        let { results: n, index: r, type: i, options: a, channel: o, guild: s } = e,
-            u = g.Z.onSelect({
-                results: n,
-                index: r,
+        let { results: t, index: n, type: i, options: r, channel: a, guild: o } = e,
+            l = h.Z.onSelect({
+                results: t,
+                index: n,
                 type: i,
-                options: a,
-                channel: o,
-                guild: s,
-                location: l.Vh.SUGGESTION
+                options: r,
+                channel: a,
+                guild: o,
+                location: s.Vh.SUGGESTION
             });
-        return null == u
+        return null == l
             ? null
             : {
-                  ...u,
-                  type: m.z2.COMMAND_SUGGESTION
+                  ...l,
+                  type: p.z2.COMMAND_SUGGESTION
               };
     }
 };
-n.Z = y;

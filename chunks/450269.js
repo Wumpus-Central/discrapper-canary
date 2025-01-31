@@ -1,57 +1,52 @@
-n.d(t, {
-    V: function () {
-        return o;
-    }
-}),
-    n(47120);
-var i = n(192379),
-    a = n(259674),
-    l = n(981631),
-    s = n(388032);
-function o(e) {
-    let [t, n] = i.useState(!1),
-        [o, c] = i.useState(!1),
-        [r, d] = i.useState(!1);
+i.d(t, { V: () => a }), i(47120);
+var n = i(192379),
+    c = i(259674),
+    s = i(981631),
+    l = i(388032);
+function a(e) {
+    let [t, i] = n.useState(!1),
+        [a, r] = n.useState(!1),
+        [d, o] = n.useState(!1);
     return {
-        rules: i.useMemo(() => {
-            let i = s.intl.format(s.t.S2lVJS, {
+        rules: n.useMemo(() => {
+            let n = l.intl.format(l.t.S2lVJS, {
                 onCommunityGuidelinesClick: () =>
-                    (0, a.lW)({
-                        articleId: l.BhN.PUBLIC_GUILD_GUILDLINES,
+                    (0, c.lW)({
+                        articleId: s.BhN.PUBLIC_GUILD_GUILDLINES,
                         guildId: e,
-                        modalStep: a.tK.AGREE_TO_RULES
+                        modalStep: c.tK.AGREE_TO_RULES
                     }),
                 onDiscoveryGuidelinesClick: () =>
-                    (0, a.lW)({
-                        articleId: l.BhN.SERVER_DISCOVERY_GUIDELINES,
+                    (0, c.lW)({
+                        articleId: s.BhN.SERVER_DISCOVERY_GUIDELINES,
                         guildId: e,
-                        modalStep: a.tK.AGREE_TO_RULES
+                        modalStep: c.tK.AGREE_TO_RULES
                     })
             });
             return [
                 {
                     key: 'healthy',
-                    title: s.intl.string(s.t.jIi9go),
-                    body: s.intl.string(s.t['4uUAXl']),
-                    onCheck: () => n(!t),
+                    title: l.intl.string(l.t.jIi9go),
+                    body: l.intl.string(l.t['4uUAXl']),
+                    onCheck: () => i(!t),
                     checked: t
                 },
                 {
                     key: 'nonNSFW',
-                    title: s.intl.string(s.t.iwnCh4),
-                    body: s.intl.string(s.t.UKFzER),
-                    onCheck: () => c(!o),
-                    checked: o
+                    title: l.intl.string(l.t.iwnCh4),
+                    body: l.intl.string(l.t.UKFzER),
+                    onCheck: () => r(!a),
+                    checked: a
                 },
                 {
                     key: 'guidelines',
-                    title: i,
-                    body: s.intl.string(s.t.u0Go2t),
-                    onCheck: () => d(!r),
-                    checked: r
+                    title: n,
+                    body: l.intl.string(l.t.u0Go2t),
+                    onCheck: () => o(!d),
+                    checked: d
                 }
             ];
-        }, [r, e, t, o]),
-        rulesAccepted: t && o && r
+        }, [d, e, t, a]),
+        rulesAccepted: t && a && d
     };
 }

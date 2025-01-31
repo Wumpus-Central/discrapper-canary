@@ -1,7 +1,8 @@
+n.d(t, { Z: () => E });
 var i = n(200651),
     l = n(192379),
-    r = n(704215),
-    a = n(481060),
+    a = n(704215),
+    r = n(481060),
     s = n(475179),
     o = n(561472),
     c = n(287746),
@@ -12,26 +13,26 @@ var i = n(200651),
     m = n(703558),
     f = n(585483),
     g = n(909820),
-    C = n(981631),
-    x = n(921944),
-    v = n(388032),
-    _ = n(31224);
-t.Z = function (e) {
-    let { channel: t, guild: n, maxWidth: I } = e;
+    _ = n(981631),
+    C = n(921944),
+    x = n(388032),
+    v = n(31224);
+let E = function (e) {
+    let { channel: t, guild: n, maxWidth: E } = e;
     l.useEffect(() => {
-        (0, h.EW)(r.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, { dismissAction: x.L.AUTO });
+        (0, h.EW)(a.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, { dismissAction: C.L.AUTO });
     }, []);
-    let E = l.useCallback(() => {
-            s.Z.updateChatOpen(t.id, !1), f.S.safeDispatch(C.CkL.FOCUS_CHAT_BUTTON);
+    let I = l.useCallback(() => {
+            s.Z.updateChatOpen(t.id, !1), f.S.safeDispatch(_.CkL.FOCUS_CHAT_BUTTON);
         }, [t.id]),
         b = (0, i.jsx)(p.ZP.Icon, {
-            icon: a.XSmallIcon,
-            tooltip: v.intl.string(v.t.cpT0Cg),
-            onClick: E
+            icon: r.Dio,
+            tooltip: x.intl.string(x.t.cpT0Cg),
+            onClick: I
         });
     return (0, i.jsxs)(d.Z, {
         sidebarType: d.y.CallChatSidebar,
-        maxWidth: I,
+        maxWidth: E,
         floatingLayer: g.ZP,
         children: [
             (0, i.jsx)(o.Z, {
@@ -40,18 +41,18 @@ t.Z = function (e) {
             }),
             (0, i.jsxs)(p.ZP, {
                 toolbar: b,
-                'aria-label': v.intl.string(v.t.BIYAqa),
+                'aria-label': x.intl.string(x.t.BIYAqa),
                 children: [
                     (0, i.jsx)(p.ZP.Icon, {
-                        icon: a.ChatIcon,
+                        icon: r.kBi,
                         disabled: !0,
-                        'aria-label': v.intl.string(v.t.Kx5kCA)
+                        'aria-label': x.intl.string(x.t.Kx5kCA)
                     }),
                     (0, i.jsx)(p.ZP.Title, { children: t.name })
                 ]
             }),
             (0, i.jsx)('div', {
-                className: _.chat,
+                className: v.chat,
                 children: (0, i.jsx)(
                     c.Z,
                     {

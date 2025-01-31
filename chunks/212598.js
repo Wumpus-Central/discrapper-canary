@@ -1,122 +1,117 @@
-n.d(t, {
-    t: function () {
-        return f;
-    }
-}),
-    n(411104);
-var a = n(200651),
-    r = n(192379),
-    l = n(512722),
-    o = n.n(l),
-    s = n(478677),
-    c = n(481060),
-    i = n(570140),
-    d = n(275759),
-    u = n(202120),
-    x = n(600164),
-    h = n(710845),
-    N = n(424071),
-    m = n(388032),
-    C = n(38920);
+a.d(t, { t: () => k }), a(411104);
+var r = a(200651),
+    l = a(192379),
+    s = a(512722),
+    n = a.n(s),
+    o = a(478677),
+    c = a(481060),
+    i = a(570140),
+    d = a(275759),
+    x = a(202120),
+    u = a(600164),
+    h = a(710845),
+    m = a(424071),
+    N = a(388032),
+    C = a(38920);
 let j = new h.Z('TwoWayLink');
-function f(e) {
-    let { platformType: t, isWaitingForConnection: n, onWaitingForConnection: l, expectedCallbackState: h, onAuthToken: f, onError: v, onClose: p, img: b, title: E, body: g, redirectDestination: k } = e,
-        T = r.useCallback(async () => {
+function k(e) {
+    let { platformType: t, isWaitingForConnection: a, onWaitingForConnection: s, expectedCallbackState: h, onAuthToken: k, onError: v, onClose: p, img: f, title: b, body: E, redirectDestination: T } = e,
+        g = l.useCallback(async () => {
             let e;
             try {
-                if (((e = await (0, u.H)(t, { twoWayLinkType: s.g.DESKTOP })), null == e)) throw Error('missing authorizeURL');
+                if (((e = await (0, x.H)(t, { twoWayLinkType: o.g.DESKTOP })), null == e)) throw Error('missing authorizeURL');
             } catch (e) {
                 j.error('Error opening provider authorize page', e), v();
                 return;
             }
-            let { state: n } = (0, d.xp)(e);
-            o()(null != n, 'Authorize URL state query parameter must be present'), null == l || l(n);
-        }, [t, v, l]),
-        B = r.useCallback(
+            let { state: a } = (0, d.xp)(e);
+            n()(null != a, 'Authorize URL state query parameter must be present'), null == s || s(a);
+        }, [t, v, s]),
+        O = l.useCallback(
             (e) => {
-                let { callbackCode: n, callbackState: a } = e;
-                if (a !== h) {
+                let { callbackCode: a, callbackState: r } = e;
+                if (r !== h) {
                     j.warn(''.concat(t, ' link: received mismatching callback state!'));
                     return;
                 }
-                f({
-                    callbackCode: n,
-                    callbackState: a
+                k({
+                    callbackCode: a,
+                    callbackState: r
                 });
             },
-            [t, h, f]
+            [t, h, k]
         );
     return (
-        r.useEffect(
+        l.useEffect(
             () => (
-                i.Z.subscribe('USER_CONNECTIONS_LINK_CALLBACK', B),
+                i.Z.subscribe('USER_CONNECTIONS_LINK_CALLBACK', O),
                 () => {
-                    i.Z.unsubscribe('USER_CONNECTIONS_LINK_CALLBACK', B);
+                    i.Z.unsubscribe('USER_CONNECTIONS_LINK_CALLBACK', O);
                 }
             ),
-            [B]
+            [O]
         ),
-        (0, a.jsxs)(N.Z, {
+        (0, r.jsxs)(m.Z, {
             children: [
-                (0, a.jsxs)(c.ModalHeader, {
-                    direction: x.Z.Direction.VERTICAL,
+                (0, r.jsxs)(c.xBx, {
+                    direction: u.Z.Direction.VERTICAL,
                     className: C.header,
                     separator: !1,
                     children: [
-                        (0, a.jsx)(c.Text, {
+                        (0, r.jsx)(c.Text, {
                             className: C.stepHeader,
                             variant: 'text-xs/bold',
                             color: 'header-secondary',
-                            children: m.intl.format(m.t.fHz6eX, {
+                            children: N.intl.format(N.t.fHz6eX, {
                                 number: 1,
                                 total: 2
                             })
                         }),
-                        (0, a.jsxs)('div', {
+                        (0, r.jsxs)('div', {
                             className: C.illustration,
-                            children: [b, ' ']
+                            children: [f, ' ']
                         }),
-                        (0, a.jsx)(c.Heading, {
+                        (0, r.jsx)(c.X6q, {
                             className: C.title,
                             variant: 'heading-xl/extrabold',
-                            children: E
+                            children: b
                         }),
                         null != p &&
-                            (0, a.jsx)(c.ModalCloseButton, {
+                            (0, r.jsx)(c.olH, {
                                 className: C.closeButton,
                                 onClick: p
                             })
                     ]
                 }),
-                (0, a.jsxs)(c.ModalContent, {
+                (0, r.jsxs)(c.hzk, {
                     className: C.body,
                     paddingFix: !1,
                     children: [
-                        (0, a.jsx)(c.Text, {
+                        (0, r.jsx)(c.Text, {
                             tag: 'p',
                             variant: 'text-md/normal',
                             color: 'header-secondary',
-                            children: g
+                            children: E
                         }),
-                        !n &&
-                            null != k &&
-                            (0, a.jsx)(c.Text, {
+                        !a &&
+                            null != T &&
+                            (0, r.jsx)(c.Text, {
                                 tag: 'p',
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
-                                children: m.intl.format(m.t.XhlYYm, { redirectUrl: k })
+                                children: N.intl.format(N.t.XhlYYm, { redirectUrl: T })
                             })
                     ]
                 }),
-                (0, a.jsx)(c.ModalFooter, {
+                (0, r.jsx)(c.mzw, {
                     className: C.footer,
-                    children: (0, a.jsxs)(c.Button, {
+                    children: (0, r.jsxs)(c.zxk, {
                         className: C.footerButton,
-                        color: n ? c.Button.Colors.PRIMARY : c.Button.Colors.BRAND,
-                        onClick: T,
+                        color: a ? c.zxk.Colors.PRIMARY : c.zxk.Colors.BRAND,
+                        onClick: g,
                         children: [
-                            n ? m.intl.string(m.t['5911LS']) : m.intl.string(m.t['3PatS0']),
-                            (0, a.jsx)(c.WindowLaunchIcon, {
+                            a ? N.intl.string(N.t['5911LS']) : N.intl.string(N.t['3PatS0']),
+                            (0, r.jsx)(c.rgF, {
                                 color: 'currentColor',
                                 className: C.launchIcon,
                                 size: 'xs'

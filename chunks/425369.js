@@ -1,6 +1,7 @@
+n.d(t, { Z: () => _ });
 var i = n(200651),
-    r = n(192379),
-    l = n(512969),
+    l = n(192379),
+    r = n(512969),
     a = n(410575),
     s = n(765717),
     o = n(252618),
@@ -11,7 +12,7 @@ var i = n(200651),
     m = n(388032),
     p = n(833863);
 function g() {
-    return (0, i.jsxs)(l.rs, {
+    return (0, i.jsxs)(r.rs, {
         children: [
             (0, i.jsx)(s.Z, {
                 path: h.Z5c.APPLICATION_LIBRARY_SETTINGS,
@@ -33,9 +34,9 @@ function g() {
         ]
     });
 }
-t.Z = r.memo(function () {
+let _ = l.memo(function () {
     return (
-        r.useEffect(() => {
+        l.useEffect(() => {
             (0, c.e)('application_library');
         }, []),
         (0, i.jsxs)('div', {

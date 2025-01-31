@@ -1,29 +1,25 @@
-n.d(t, {
-    Z: function () {
-        return l;
-    }
-});
+n.d(t, { Z: () => a });
 var i = n(200651),
     s = n(192379),
-    r = n(120356),
-    o = n.n(r),
-    a = n(131478);
-function l(e) {
-    let { keybind: t, separator: n = '+', className: r } = e;
+    l = n(120356),
+    r = n.n(l),
+    o = n(131478);
+function a(e) {
+    let { keybind: t, separator: n = '+', className: l } = e;
     return (0, i.jsx)(i.Fragment, {
-        children: t.map((e, l) =>
+        children: t.map((e, a) =>
             (0, i.jsxs)(
                 s.Fragment,
                 {
                     children: [
                         (0, i.jsx)('span', {
-                            className: o()(a.key, r),
+                            className: r()(o.key, l),
                             children: e
                         }),
-                        l === t.length - 1 ? void 0 : n
+                        a === t.length - 1 ? void 0 : n
                     ]
                 },
-                l
+                a
             )
         )
     });

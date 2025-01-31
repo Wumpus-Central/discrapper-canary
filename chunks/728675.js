@@ -1,62 +1,57 @@
-r.d(n, {
-    Z: function () {
-        return a;
-    }
-});
-var i = r(47120);
-function a(e, n) {
-    let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        { onBeforeBatch: i } = r,
-        a = new Set();
-    function o(e) {
-        null != e.channel_id && a.has(e.channel_id) && n(e);
+function i(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        { onBeforeBatch: i } = n,
+        r = new Set();
+    function a(e) {
+        null != e.channel_id && r.has(e.channel_id) && t(e);
     }
     function s() {
-        a.clear();
+        r.clear();
+    }
+    function o(e) {
+        let { channelId: t } = e;
+        null != t && r.add(t);
     }
     function l(e) {
-        let { channelId: n } = e;
-        null != n && a.add(n);
+        let { message: t } = e;
+        null != t.channel_id && r.has(t.channel_id) && (null == i || i(), a(t));
     }
     function u(e) {
-        let { message: n } = e;
-        if (null != n.channel_id && !!a.has(n.channel_id)) null == i || i(), o(n);
+        let { channelId: t, messages: n } = e;
+        r.add(t), null == i || i(), n.forEach((e) => a(e));
     }
     function c(e) {
-        let { channelId: n, messages: r } = e;
-        a.add(n), null == i || i(), r.forEach((e) => o(e));
+        let { messages: n } = e;
+        null == i || i(), n.forEach((e) => t(e));
     }
     function d(e) {
-        let { messages: r } = e;
-        null == i || i(), r.forEach((e) => n(e));
+        let { messages: n } = e;
+        null == i || i(), n.forEach((e) => t(e));
     }
     function f(e) {
-        let { messages: r } = e;
-        null == i || i(), r.forEach((e) => n(e));
-    }
-    function p(e) {
         null == i || i(),
             e.messages.forEach((e) => {
-                e.forEach((e) => n(e));
+                e.forEach((e) => t(e));
             });
     }
     e.actions = {
         ...e.actions,
         POST_CONNECTION_OPEN: s,
         MESSAGE_CREATE: {
-            callback: u,
+            callback: l,
             autoSubscribe: !1
         },
-        MESSAGE_UPDATE: u,
-        LOAD_MESSAGES_SUCCESS: c,
-        LOAD_MESSAGES_AROUND_SUCCESS: c,
-        LOAD_RECENT_MENTIONS_SUCCESS: d,
-        LOAD_PINNED_MESSAGES_SUCCESS: f,
-        SEARCH_FINISH: p,
-        MOD_VIEW_SEARCH_FINISH: p,
+        MESSAGE_UPDATE: l,
+        LOAD_MESSAGES_SUCCESS: u,
+        LOAD_MESSAGES_AROUND_SUCCESS: u,
+        LOAD_RECENT_MENTIONS_SUCCESS: c,
+        LOAD_PINNED_MESSAGES_SUCCESS: d,
+        SEARCH_FINISH: f,
+        MOD_VIEW_SEARCH_FINISH: f,
         CHANNEL_SELECT: {
-            callback: l,
+            callback: o,
             autoSubscribe: !1
         }
     };
 }
+n.d(t, { Z: () => i }), n(47120);

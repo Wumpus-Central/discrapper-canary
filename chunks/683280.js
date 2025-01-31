@@ -1,9 +1,10 @@
-e.exports = {
-    container: 'container_ff24eb ' + n('227040').recentMentionsPopout,
-    headerText: 'headerText_ff24eb',
-    reminderActions: 'reminderActions_ff24eb',
-    clock: 'clock_ff24eb',
-    delete: 'delete_ff24eb',
-    notes: 'notes_ff24eb',
-    unloadedMessage: 'unloadedMessage_ff24eb'
+var i = {
+    container: 'container__2410d ' + n(227040).recentMentionsPopout,
+    headerText: 'headerText__2410d',
+    reminderActions: 'reminderActions__2410d',
+    clock: 'clock__2410d',
+    delete: 'delete__2410d',
+    notes: 'notes__2410d',
+    unloadedMessage: 'unloadedMessage__2410d'
 };
+e.exports = i;

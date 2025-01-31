@@ -1,280 +1,276 @@
-n.d(t, {
-    Z: function () {
-        return _;
-    }
-});
+n.d(t, { Z: () => C });
 var i = n(200651);
 n(192379);
-var r = n(120356),
-    s = n.n(r),
-    a = n(481060),
-    l = n(100527),
+var s = n(120356),
+    r = n.n(s),
+    l = n(481060),
+    a = n(100527),
     o = n(906732),
     c = n(278754),
     d = n(454585),
     u = n(125900),
     m = n(921801),
-    g = n(626135),
-    h = n(695346),
-    p = n(726985),
+    h = n(626135),
+    g = n(695346),
+    _ = n(726985),
     x = n(981631),
-    f = n(388032),
+    p = n(388032),
     E = n(232186);
-function _() {
+function C() {
     let e = (0, c.pR)(),
         t = (0, c.Ju)(),
-        n = h.fq.useSetting(),
-        r = h.eR.useSetting(),
-        _ = (0, u.V2)({ location: 'UserSettingsTextImages' }),
-        C = h.R$.useSetting(),
-        T = h.cC.useSetting(),
-        S = h.vF.useSetting(),
-        b = h.H1.useSetting(),
-        I = h.ev.useSetting(),
-        N = h.x4.useSetting(),
-        v = h.RS.useSetting(),
-        A = h.NA.useSetting(),
-        j = h.nc.useSetting(),
-        { analyticsLocations: O } = (0, o.ZP)(l.Z.TEXT_AND_IMAGES);
-    return (0, i.jsxs)(a.FormSection, {
-        tag: a.FormTitleTags.H1,
-        title: f.intl.string(f.t['/VQax8']),
+        n = g.fq.useSetting(),
+        s = g.eR.useSetting(),
+        C = (0, u.V2)({ location: 'UserSettingsTextImages' }),
+        f = g.R$.useSetting(),
+        T = g.cC.useSetting(),
+        N = g.vF.useSetting(),
+        I = g.H1.useSetting(),
+        S = g.ev.useSetting(),
+        b = g.x4.useSetting(),
+        v = g.RS.useSetting(),
+        j = g.NA.useSetting(),
+        A = g.nc.useSetting(),
+        { analyticsLocations: O } = (0, o.ZP)(a.Z.TEXT_AND_IMAGES);
+    return (0, i.jsxs)(l.hjN, {
+        tag: l.RB0.H1,
+        title: p.intl.string(p.t['/VQax8']),
         children: [
             (0, i.jsxs)(m.F, {
-                setting: p.s6.CHAT_INLINE_MEDIA,
+                setting: _.s6.CHAT_INLINE_MEDIA,
                 children: [
-                    (0, i.jsx)(a.FormTitle, {
+                    (0, i.jsx)(l.vwX, {
                         className: E.marginBottom8,
-                        children: f.intl.string(f.t.U68Dgo)
+                        children: p.intl.string(p.t.U68Dgo)
                     }),
                     (0, i.jsx)(m.F, {
-                        setting: p.s6.CHAT_INLINE_MEDIA_LINKS,
-                        children: (0, i.jsx)(a.FormSwitch, {
-                            className: s()(E.marginTop8, E.marginBottom20),
+                        setting: _.s6.CHAT_INLINE_MEDIA_LINKS,
+                        children: (0, i.jsx)(l.j7V, {
+                            className: r()(E.marginTop8, E.marginBottom20),
                             value: v,
-                            onChange: h.RS.updateSetting,
-                            children: f.intl.string(f.t.U47N1t)
+                            onChange: g.RS.updateSetting,
+                            children: p.intl.string(p.t.U47N1t)
                         })
                     }),
                     (0, i.jsx)(m.F, {
-                        setting: p.s6.CHAT_INLINE_MEDIA_UPLOADS,
-                        children: (0, i.jsx)(a.FormSwitch, {
-                            className: s()(E.marginTop8, E.marginBottom20),
-                            value: N,
-                            note: f.intl.formatToPlainString(f.t.qjjvqK, { maxSize: 10 }),
-                            onChange: h.x4.updateSetting,
-                            children: f.intl.string(f.t.VP11Nj)
-                        })
-                    }),
-                    (0, i.jsx)(m.F, {
-                        setting: p.s6.CHAT_INLINE_MEDIA_IMAGE_DESCRIPTIONS,
-                        children: (0, i.jsx)(a.FormSwitch, {
-                            className: s()(E.marginTop8, E.marginBottom40),
+                        setting: _.s6.CHAT_INLINE_MEDIA_UPLOADS,
+                        children: (0, i.jsx)(l.j7V, {
+                            className: r()(E.marginTop8, E.marginBottom20),
                             value: b,
-                            note: f.intl.string(f.t.T0rbtL),
-                            onChange: h.H1.updateSetting,
-                            children: f.intl.string(f.t['w8j+yc'])
-                        })
-                    })
-                ]
-            }),
-            (0, i.jsxs)(m.F, {
-                setting: p.s6.CHAT_EMBEDS,
-                children: [
-                    (0, i.jsx)(a.FormTitle, {
-                        className: E.marginBottom8,
-                        children: f.intl.string(f.t.PWZOn5)
-                    }),
-                    (0, i.jsx)(m.F, {
-                        setting: p.s6.CHAT_EMBEDS_LINK_PREVIEWS,
-                        children: (0, i.jsx)(a.FormSwitch, {
-                            className: s()(E.marginTop8, E.marginBottom40),
-                            value: A,
-                            onChange: h.NA.updateSetting,
-                            children: f.intl.string(f.t.xX0ZTE)
-                        })
-                    })
-                ]
-            }),
-            (0, i.jsxs)(m.F, {
-                setting: p.s6.CHAT_EMOJI,
-                children: [
-                    (0, i.jsx)(a.FormTitle, {
-                        className: E.marginBottom8,
-                        children: f.intl.string(f.t.sMOuub)
-                    }),
-                    (0, i.jsx)(m.F, {
-                        setting: p.s6.CHAT_EMOJI_REACTIONS,
-                        children: (0, i.jsx)(a.FormSwitch, {
-                            className: s()(E.marginTop8, E.marginBottom20),
-                            value: j,
-                            onChange: h.nc.updateSetting,
-                            children: f.intl.string(f.t.Iv24sr)
+                            note: p.intl.formatToPlainString(p.t.qjjvqK, { maxSize: 10 }),
+                            onChange: g.x4.updateSetting,
+                            children: p.intl.string(p.t.VP11Nj)
                         })
                     }),
                     (0, i.jsx)(m.F, {
-                        setting: p.s6.CHAT_EMOJI_EMOTICONS,
-                        children: (0, i.jsx)(a.FormSwitch, {
-                            className: E.marginBottom40,
+                        setting: _.s6.CHAT_INLINE_MEDIA_IMAGE_DESCRIPTIONS,
+                        children: (0, i.jsx)(l.j7V, {
+                            className: r()(E.marginTop8, E.marginBottom40),
                             value: I,
-                            note: d.Z.parse(f.intl.string(f.t['20dvub'])),
-                            onChange: h.ev.updateSetting,
-                            children: f.intl.string(f.t['79qal5'])
+                            note: p.intl.string(p.t.T0rbtL),
+                            onChange: g.H1.updateSetting,
+                            children: p.intl.string(p.t['w8j+yc'])
+                        })
+                    })
+                ]
+            }),
+            (0, i.jsxs)(m.F, {
+                setting: _.s6.CHAT_EMBEDS,
+                children: [
+                    (0, i.jsx)(l.vwX, {
+                        className: E.marginBottom8,
+                        children: p.intl.string(p.t.PWZOn5)
+                    }),
+                    (0, i.jsx)(m.F, {
+                        setting: _.s6.CHAT_EMBEDS_LINK_PREVIEWS,
+                        children: (0, i.jsx)(l.j7V, {
+                            className: r()(E.marginTop8, E.marginBottom40),
+                            value: j,
+                            onChange: g.NA.updateSetting,
+                            children: p.intl.string(p.t.xX0ZTE)
+                        })
+                    })
+                ]
+            }),
+            (0, i.jsxs)(m.F, {
+                setting: _.s6.CHAT_EMOJI,
+                children: [
+                    (0, i.jsx)(l.vwX, {
+                        className: E.marginBottom8,
+                        children: p.intl.string(p.t.sMOuub)
+                    }),
+                    (0, i.jsx)(m.F, {
+                        setting: _.s6.CHAT_EMOJI_REACTIONS,
+                        children: (0, i.jsx)(l.j7V, {
+                            className: r()(E.marginTop8, E.marginBottom20),
+                            value: A,
+                            onChange: g.nc.updateSetting,
+                            children: p.intl.string(p.t.Iv24sr)
+                        })
+                    }),
+                    (0, i.jsx)(m.F, {
+                        setting: _.s6.CHAT_EMOJI_EMOTICONS,
+                        children: (0, i.jsx)(l.j7V, {
+                            className: E.marginBottom40,
+                            value: S,
+                            note: d.Z.parse(p.intl.string(p.t['20dvub'])),
+                            onChange: g.ev.updateSetting,
+                            children: p.intl.string(p.t['79qal5'])
                         })
                     })
                 ]
             }),
             (0, i.jsx)(m.F, {
-                setting: p.s6.CHAT_STICKERS,
-                children: (0, i.jsxs)(a.FormSection, {
+                setting: _.s6.CHAT_STICKERS,
+                children: (0, i.jsxs)(l.hjN, {
                     className: E.marginBottom8,
                     children: [
-                        (0, i.jsx)(a.FormTitle, {
+                        (0, i.jsx)(l.vwX, {
                             className: E.marginBottom8,
-                            children: f.intl.string(f.t['6NtAuL'])
+                            children: p.intl.string(p.t['6NtAuL'])
                         }),
                         t
                             ? null
                             : (0, i.jsx)(m.F, {
-                                  setting: p.s6.CHAT_STICKERS_SUGGESTIONS,
-                                  children: (0, i.jsx)(a.FormSwitch, {
-                                      className: s()(E.marginTop8, E.marginBottom20),
+                                  setting: _.s6.CHAT_STICKERS_SUGGESTIONS,
+                                  children: (0, i.jsx)(l.j7V, {
+                                      className: r()(E.marginTop8, E.marginBottom20),
                                       value: e,
-                                      note: f.intl.string(f.t.r3uQUV),
+                                      note: p.intl.string(p.t.r3uQUV),
                                       onChange: (t) => {
-                                          g.default.track(x.rMx.STICKER_SUGGESTIONS_ENABLED_TOGGLED, {
+                                          h.default.track(x.rMx.STICKER_SUGGESTIONS_ENABLED_TOGGLED, {
                                               enabled: !e,
                                               location: { section: x.jXE.SETTINGS_TEXT_AND_IMAGES },
                                               location_stack: O
                                           }),
                                               (0, c.AW)(!e);
                                       },
-                                      children: f.intl.string(f.t['479+PT'])
+                                      children: p.intl.string(p.t['479+PT'])
                                   })
                               }),
                         (0, i.jsx)(m.F, {
-                            setting: p.s6.CHAT_STICKERS_AUTOCOMPLETE,
-                            children: (0, i.jsx)(a.FormSwitch, {
+                            setting: _.s6.CHAT_STICKERS_AUTOCOMPLETE,
+                            children: (0, i.jsx)(l.j7V, {
                                 className: E.marginBottom40,
                                 value: n,
-                                note: f.intl.string(f.t['/eVrj4']),
+                                note: p.intl.string(p.t['/eVrj4']),
                                 onChange: (e) => {
-                                    g.default.track(x.rMx.STICKERS_IN_AUTOCOMPLETE_TOGGLED, {
+                                    h.default.track(x.rMx.STICKERS_IN_AUTOCOMPLETE_TOGGLED, {
                                         enabled: e,
                                         location: { section: x.jXE.SETTINGS_TEXT_AND_IMAGES },
                                         location_stack: O
                                     }),
-                                        h.fq.updateSetting(e);
+                                        g.fq.updateSetting(e);
                                 },
-                                children: f.intl.string(f.t['29xPVV'])
+                                children: p.intl.string(p.t['29xPVV'])
                             })
                         })
                     ]
                 })
             }),
-            _ &&
+            C &&
                 (0, i.jsx)(m.F, {
-                    setting: p.s6.CHAT_SOUNDMOJI,
-                    children: (0, i.jsxs)(a.FormSection, {
+                    setting: _.s6.CHAT_SOUNDMOJI,
+                    children: (0, i.jsxs)(l.hjN, {
                         className: E.marginBottom8,
                         children: [
-                            (0, i.jsx)(a.FormTitle, {
+                            (0, i.jsx)(l.vwX, {
                                 className: E.marginBottom8,
-                                children: f.intl.string(f.t.EHlAMT)
+                                children: p.intl.string(p.t.EHlAMT)
                             }),
                             (0, i.jsx)(m.F, {
-                                setting: p.s6.CHAT_SOUNDMOJI_AUTOCOMPLETE,
-                                children: (0, i.jsx)(a.FormSwitch, {
+                                setting: _.s6.CHAT_SOUNDMOJI_AUTOCOMPLETE,
+                                children: (0, i.jsx)(l.j7V, {
                                     className: E.marginBottom40,
-                                    value: r,
-                                    note: f.intl.string(f.t.hrSIhI),
+                                    value: s,
+                                    note: p.intl.string(p.t.hrSIhI),
                                     onChange: (e) => {
-                                        g.default.track(x.rMx.SOUNDMOJI_IN_AUTOCOMPLETE_TOGGLED, {
+                                        h.default.track(x.rMx.SOUNDMOJI_IN_AUTOCOMPLETE_TOGGLED, {
                                             checked: e,
                                             location: { section: x.jXE.SETTINGS_TEXT_AND_IMAGES }
                                         }),
-                                            h.eR.updateSetting(e);
+                                            g.eR.updateSetting(e);
                                     },
-                                    children: f.intl.string(f.t['CtYr+f'])
+                                    children: p.intl.string(p.t['CtYr+f'])
                                 })
                             })
                         ]
                     })
                 }),
             (0, i.jsx)(m.F, {
-                setting: p.s6.CHAT_TEXT_BOX,
-                children: (0, i.jsxs)(a.FormSection, {
+                setting: _.s6.CHAT_TEXT_BOX,
+                children: (0, i.jsxs)(l.hjN, {
                     className: E.marginBottom8,
                     children: [
-                        (0, i.jsx)(a.FormTitle, {
+                        (0, i.jsx)(l.vwX, {
                             className: E.marginBottom8,
-                            children: f.intl.string(f.t.afR0pK)
+                            children: p.intl.string(p.t.afR0pK)
                         }),
                         (0, i.jsx)(m.F, {
-                            setting: p.s6.CHAT_TEXT_BOX_PREVIEW,
-                            children: (0, i.jsx)(a.FormSwitch, {
-                                className: s()(E.marginTop8, E.marginBottom40),
-                                value: C,
+                            setting: _.s6.CHAT_TEXT_BOX_PREVIEW,
+                            children: (0, i.jsx)(l.j7V, {
+                                className: r()(E.marginTop8, E.marginBottom40),
+                                value: f,
                                 onChange: (e) => {
-                                    g.default.track(x.rMx.PREVIEW_MARKDOWN_TOGGLED, {
+                                    h.default.track(x.rMx.PREVIEW_MARKDOWN_TOGGLED, {
                                         enabled: e,
                                         location: { section: x.jXE.SETTINGS_TEXT_AND_IMAGES }
                                     }),
-                                        h.R$.updateSetting(e);
+                                        g.R$.updateSetting(e);
                                 },
-                                children: f.intl.string(f.t.AqGrEB)
+                                children: p.intl.string(p.t.AqGrEB)
                             })
                         })
                     ]
                 })
             }),
             (0, i.jsx)(m.F, {
-                setting: p.s6.CHAT_THREADS,
-                children: (0, i.jsxs)(a.FormSection, {
+                setting: _.s6.CHAT_THREADS,
+                children: (0, i.jsxs)(l.hjN, {
                     className: E.marginBottom40,
                     children: [
-                        (0, i.jsx)(a.FormTitle, {
+                        (0, i.jsx)(l.vwX, {
                             className: E.marginBottom8,
-                            children: f.intl.string(f.t.B2panJ)
+                            children: p.intl.string(p.t.B2panJ)
                         }),
                         (0, i.jsx)(m.F, {
-                            setting: p.s6.CHAT_THREADS_SPLIT_VIEW,
-                            children: (0, i.jsx)(a.FormSwitch, {
+                            setting: _.s6.CHAT_THREADS_SPLIT_VIEW,
+                            children: (0, i.jsx)(l.j7V, {
                                 className: E.marginTop8,
-                                value: S,
-                                onChange: h.vF.updateSetting,
-                                children: f.intl.string(f.t.AInv5u)
+                                value: N,
+                                onChange: g.vF.updateSetting,
+                                children: p.intl.string(p.t.AInv5u)
                             })
                         })
                     ]
                 })
             }),
             (0, i.jsx)(m.F, {
-                setting: p.s6.CHAT_SPOILERS,
-                children: (0, i.jsxs)(a.FormItem, {
-                    title: f.intl.string(f.t.QgwmV1),
+                setting: _.s6.CHAT_SPOILERS,
+                children: (0, i.jsxs)(l.xJW, {
+                    title: p.intl.string(p.t.QgwmV1),
                     children: [
-                        (0, i.jsx)(a.FormText, {
-                            type: a.FormText.Types.DESCRIPTION,
+                        (0, i.jsx)(l.R94, {
+                            type: l.R94.Types.DESCRIPTION,
                             className: E.marginBottom8,
-                            children: f.intl.string(f.t.TYnRkZ)
+                            children: p.intl.string(p.t.TYnRkZ)
                         }),
-                        (0, i.jsx)(a.RadioGroup, {
+                        (0, i.jsx)(l.FXm, {
                             options: [
                                 {
-                                    name: f.intl.string(f.t['KFH/mZ']),
+                                    name: p.intl.string(p.t['KFH/mZ']),
                                     value: x.A2N.ON_CLICK
                                 },
                                 {
-                                    name: f.intl.string(f.t.K5VTBA),
+                                    name: p.intl.string(p.t.K5VTBA),
                                     value: x.A2N.IF_MODERATOR
                                 },
                                 {
-                                    name: f.intl.string(f.t.Pe1RbG),
+                                    name: p.intl.string(p.t.Pe1RbG),
                                     value: x.A2N.ALWAYS
                                 }
                             ],
-                            onChange: (e) => h.cC.updateSetting(e.value),
+                            onChange: (e) => g.cC.updateSetting(e.value),
                             value: T
                         })
                     ]

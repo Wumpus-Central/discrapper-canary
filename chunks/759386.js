@@ -1,10 +1,4 @@
-t.r(e),
-    t.d(e, {
-        getApplicationPaymentSteps: function () {
-            return m;
-        }
-    }),
-    t(47120);
+t.d(e, { getApplicationPaymentSteps: () => m }), t(47120);
 var i = t(200651);
 t(192379);
 var l = t(409813),

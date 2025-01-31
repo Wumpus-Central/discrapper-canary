@@ -1,103 +1,95 @@
-let i, a, o;
+let i, r, a;
+n.d(t, { Z: () => eU }), n(47120), n(653041), n(724458), n(757143), n(789020);
 var s,
-    l,
-    u = r(47120);
-var c = r(653041);
-var d = r(724458);
-var f = r(757143);
-var p = r(789020);
-var h = r(392711),
-    _ = r.n(h),
-    m = r(261470),
-    g = r(442837),
-    E = r(902704),
-    v = r(846519),
-    y = r(570140),
-    b = r(586902),
-    I = r(726542),
-    T = r(524331),
-    S = r(710845),
-    A = r(594190),
-    C = r(314897),
-    N = r(553795),
-    R = r(517100),
-    O = r(158776),
-    D = r(606304),
-    L = r(979651),
-    x = r(626135),
-    w = r(81063),
-    P = r(70956),
-    M = r(823379),
-    k = r(781518),
-    U = r(616922),
-    B = r(981631);
-function G(e, n, r) {
+    o = n(392711),
+    l = n.n(o),
+    u = n(261470),
+    c = n(442837),
+    d = n(902704),
+    f = n(846519),
+    _ = n(570140),
+    p = n(586902),
+    h = n(726542),
+    m = n(524331),
+    g = n(710845),
+    E = n(594190),
+    v = n(314897),
+    y = n(553795),
+    I = n(517100),
+    b = n(158776),
+    T = n(606304),
+    S = n(979651),
+    A = n(626135),
+    N = n(81063),
+    C = n(70956),
+    R = n(823379),
+    O = n(781518),
+    D = n(616922),
+    x = n(981631);
+function L(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let Z = I.Z.get(B.ABu.SPOTIFY),
-    F = 'wss://dealer.spotify.com/?access_token=',
-    V = 'hm://pusher/v1/connections/',
-    j = 30 * P.Z.Millis.SECOND,
-    H = 30 * P.Z.Millis.SECOND,
-    Y = 100,
-    W = 5 * P.Z.Millis.MINUTE,
-    K = 5 * P.Z.Millis.SECOND,
-    z = 1.5 * P.Z.Millis.SECOND,
-    q = 'Computer',
-    Q = 5,
-    X = 1 * P.Z.Millis.MINUTE,
-    J = 3 * P.Z.Millis.SECOND,
-    $ = 128;
-!(function (e) {
-    (e.PLAYER_STATE_CHANGED = 'PLAYER_STATE_CHANGED'), (e.DEVICE_STATE_CHANGED = 'DEVICE_STATE_CHANGED');
-})(s || (s = {}));
-let ee = {
+let P = h.Z.get(x.ABu.SPOTIFY),
+    w = 'wss://dealer.spotify.com/?access_token=',
+    M = 'hm://pusher/v1/connections/',
+    k = 30 * C.Z.Millis.SECOND,
+    U = 30 * C.Z.Millis.SECOND,
+    G = 100,
+    B = 5 * C.Z.Millis.MINUTE,
+    Z = 5 * C.Z.Millis.SECOND,
+    F = 1.5 * C.Z.Millis.SECOND,
+    V = 'Computer',
+    j = 5,
+    H = 1 * C.Z.Millis.MINUTE,
+    Y = 3 * C.Z.Millis.SECOND,
+    W = 128,
+    K = {
         MESSAGE: 'message',
         PING: 'ping',
         PONG: 'pong'
     },
-    et = 'single',
-    en = new S.Z('Spotify'),
-    er = new v.V7(),
-    ei = new v.V7(),
-    ea = new v.V7(),
-    eo = new v.V7(),
-    es = new v.V7(),
-    el = {},
-    eu = {},
-    ec = {},
-    ed = !1,
-    ef = null;
-function ep() {
-    for (let e in el) {
-        let n = el[e];
-        if (!n.connected || null == eu[e]) continue;
-        let r = eu[e].find((e) => e.is_active);
-        if (null != r)
+    z = 'single',
+    q = new g.Z('Spotify'),
+    Q = new f.V7(),
+    X = new f.V7(),
+    J = new f.V7(),
+    $ = new f.V7(),
+    ee = new f.V7(),
+    et = {},
+    en = {},
+    ei = {},
+    er = !1,
+    ea = null;
+function es() {
+    for (let e in et) {
+        let t = et[e];
+        if (!t.connected || null == en[e]) continue;
+        let n = en[e].find((e) => e.is_active);
+        if (null != n)
             return {
-                socket: n,
-                device: r
+                socket: t,
+                device: n
             };
     }
 }
-function eh(e, n) {
-    let r = Date.now(),
+function eo(e, t) {
+    let n = Date.now(),
         i = null != e ? e.startTime : 0,
-        a = r - n;
-    return Math.abs(a - i) > z ? a : i;
+        r = n - t;
+    return Math.abs(r - i) > F ? r : i;
 }
-function e_(e) {
-    y.Z.dispatch({
+function el(e) {
+    _.Z.dispatch({
         type: 'SPOTIFY_PLAYER_STATE',
         accountId: e,
         track: null,
@@ -108,26 +100,26 @@ function e_(e) {
         context: null
     });
 }
-function em(e) {
-    return O.Z.findActivity(e, (e) => null != e.party && null != e.party.id && (0, U.Ps)(e.party.id));
+function eu(e) {
+    return b.Z.findActivity(e, (e) => null != e.party && null != e.party.id && (0, D.Ps)(e.party.id));
 }
-let eg = new Set([WebSocket.CONNECTING, WebSocket.OPEN]);
-class eE {
+let ec = new Set([WebSocket.CONNECTING, WebSocket.OPEN]);
+class ed {
     get connected() {
-        return null != this.socket && eg.has(this.socket.readyState);
+        return null != this.socket && ec.has(this.socket.readyState);
     }
     connect() {
-        !this.connected &&
-            !this._requestedConnect &&
-            (en.info('WS Connecting'),
+        this.connected ||
+            this._requestedConnect ||
+            (q.info('WS Connecting'),
             (this._requestedDisconnect = !1),
             (this._requestedConnect = !0),
-            eF(this.accountId, this.accessToken)
+            ew(this.accountId, this.accessToken)
                 .then(() => {
-                    (this._requestedConnect = !1), (this.socket = new WebSocket(''.concat(F).concat(this.accessToken))), (this.socket.onopen = this.handleOpen.bind(this)), (this.socket.onmessage = this.handleMessage.bind(this)), (this.socket.onclose = this.socket.onerror = this.handleClose.bind(this));
+                    (this._requestedConnect = !1), (this.socket = new WebSocket(''.concat(w).concat(this.accessToken))), (this.socket.onopen = this.handleOpen.bind(this)), (this.socket.onmessage = this.handleMessage.bind(this)), (this.socket.onclose = this.socket.onerror = this.handleClose.bind(this));
                 })
                 .catch((e) => {
-                    en.error(e), (this._requestedConnect = !1), this.handleClose();
+                    q.error(e), (this._requestedConnect = !1), this.handleClose();
                 }));
     }
     disconnect() {
@@ -139,212 +131,209 @@ class eE {
     }
     ping() {
         var e;
-        this.connected && (null === (e = this.socket) || void 0 === e || e.send(JSON.stringify({ type: ee.PING })));
+        this.connected && (null === (e = this.socket) || void 0 === e || e.send(JSON.stringify({ type: K.PING })));
     }
     handleOpen() {
-        en.info('WS Connected'), this.backoff.succeed(), this.pingInterval.start(j, () => this.ping()), (0, k.Ai)(this.accountId, this.accessToken), (0, k.PW)(this.accountId, this.accessToken);
+        q.info('WS Connected'), this.backoff.succeed(), this.pingInterval.start(k, () => this.ping()), (0, O.Ai)(this.accountId, this.accessToken), (0, O.PW)(this.accountId, this.accessToken);
     }
     handleMessage(e) {
-        let { data: n } = e;
-        if ('string' != typeof n) return;
-        let { type: r, uri: i, payloads: a } = JSON.parse(n);
-        switch (r) {
-            case ee.MESSAGE:
-                if ('string' == typeof i && i.startsWith(V)) (this.connectionId = decodeURIComponent(i.split(V)[1])), (0, k.am)(this.accountId, this.accessToken, this.connectionId);
-                else if (Array.isArray(a)) {
-                    for (let { events: e } of a) if (null != e) for (let n of e) this.handleEvent(n);
+        let { data: t } = e;
+        if ('string' != typeof t) return;
+        let { type: n, uri: i, payloads: r } = JSON.parse(t);
+        switch (n) {
+            case K.MESSAGE:
+                if ('string' == typeof i && i.startsWith(M)) (this.connectionId = decodeURIComponent(i.split(M)[1])), (0, O.am)(this.accountId, this.accessToken, this.connectionId);
+                else if (Array.isArray(r)) {
+                    for (let { events: e } of r) if (null != e) for (let t of e) this.handleEvent(t);
                 }
-            case ee.PONG:
+            case K.PONG:
         }
     }
     handleClose() {
         if ((this.pingInterval.stop(), !this._requestedDisconnect))
             try {
                 let e = this.backoff.fail(() => {
-                    !this._requestedDisconnect && this.connect();
+                    this._requestedDisconnect || this.connect();
                 });
-                en.info('WS Disconnected. Next retry in '.concat(Math.round(e), 'ms'));
+                q.info('WS Disconnected. Next retry in '.concat(Math.round(e), 'ms'));
             } catch (e) {}
     }
     handleEvent(e) {
-        let { type: n, event: r } = e;
-        switch (n) {
+        let { type: t, event: n } = e;
+        switch (t) {
             case 'PLAYER_STATE_CHANGED':
-                null != r && null != r.state && eZ(this.accountId, this.accessToken, r.state);
+                null != n && null != n.state && eP(this.accountId, this.accessToken, n.state);
                 break;
             case 'DEVICE_STATE_CHANGED':
                 this.handleDeviceStateChange();
         }
     }
-    constructor(e, n) {
-        G(this, 'accessToken', void 0),
-            G(this, 'accountId', void 0),
-            G(this, 'connectionId', void 0),
-            G(this, 'isPremium', void 0),
-            G(this, 'pingInterval', void 0),
-            G(this, 'backoff', void 0),
-            G(this, 'socket', void 0),
-            G(this, '_requestedDisconnect', !1),
-            G(this, '_requestedConnect', !1),
-            G(
+    constructor(e, t) {
+        L(this, 'accessToken', void 0),
+            L(this, 'accountId', void 0),
+            L(this, 'connectionId', void 0),
+            L(this, 'isPremium', void 0),
+            L(this, 'pingInterval', void 0),
+            L(this, 'backoff', void 0),
+            L(this, 'socket', void 0),
+            L(this, '_requestedDisconnect', !1),
+            L(this, '_requestedConnect', !1),
+            L(
                 this,
                 'handleDeviceStateChange',
-                _().throttle(() => {
-                    (0, k.PW)(this.accountId, this.accessToken), eF(this.accountId, this.accessToken);
-                }, J)
+                l().throttle(() => {
+                    (0, O.PW)(this.accountId, this.accessToken), ew(this.accountId, this.accessToken);
+                }, Y)
             ),
             (this.accountId = e),
-            (this.accessToken = n),
-            (this.pingInterval = new v.Xp()),
-            (this.backoff = new m.Z(void 0, X)),
+            (this.accessToken = t),
+            (this.pingInterval = new f.Xp()),
+            (this.backoff = new u.Z(void 0, H)),
             this.connect();
     }
 }
-function ev(e, n) {
-    e in el ? ((el[e].accessToken = n), en.info('Updated account access token: '.concat(e))) : ((el[e] = new eE(e, n)), en.info('Added account: '.concat(e)));
+function ef(e, t) {
+    e in et ? ((et[e].accessToken = t), q.info('Updated account access token: '.concat(e))) : ((et[e] = new ed(e, t)), q.info('Added account: '.concat(e)));
 }
-function ey(e) {
-    if (!(e in el)) return;
-    el[e].disconnect(), delete el[e];
-    let n = ec[e];
-    null != n && null != i && n.track.id === i.track.id && (i = null), delete ec[e], en.info('Removed account: '.concat(e));
+function e_(e) {
+    if (!(e in et)) return;
+    et[e].disconnect(), delete et[e];
+    let t = ei[e];
+    null != t && null != i && t.track.id === i.track.id && (i = null), delete ei[e], q.info('Removed account: '.concat(e));
 }
-function eb(e, n) {
-    for (let r of eu[e]) r.is_active = r.id === n;
+function ep(e, t) {
+    for (let n of en[e]) n.is_active = n.id === t;
 }
-function eI(e, n, r) {
-    var i, o;
-    let s = ep();
+function eh(e, t, n) {
+    var i, a;
+    let s = es();
     if (null == s) return !1;
-    let { socket: l, device: u } = s,
-        { sync_id: c, party: d, timestamps: f } = n;
-    if (null == c || null == d || null == d.id || !(0, U.Ps)(d.id)) return !1;
-    let p = null != f && null != f.start ? f.start : Date.now(),
-        h = Math.max(0, Date.now() - p),
-        _ = !1,
-        m = ec[l.accountId];
-    null != m && !1 === m.repeat && (_ = null);
-    let g = (0, U.c8)(null !== (o = null === (i = n.metadata) || void 0 === i ? void 0 : i.type) && void 0 !== o ? o : U.Hw.TRACK);
-    if (null == g) return;
-    (0, k.hY)(l.accountId, l.accessToken, c, g, {
-        position: +h,
-        deviceId: u.id,
-        repeat: _
+    let { socket: o, device: l } = s,
+        { sync_id: u, party: c, timestamps: d } = t;
+    if (null == u || null == c || null == c.id || !(0, D.Ps)(c.id)) return !1;
+    let f = null != d && null != d.start ? d.start : Date.now(),
+        _ = Math.max(0, Date.now() - f),
+        p = !1,
+        h = ei[o.accountId];
+    null != h && !1 === h.repeat && (p = null);
+    let m = (0, D.c8)(null !== (a = null === (i = t.metadata) || void 0 === i ? void 0 : i.type) && void 0 !== a ? a : D.Hw.TRACK);
+    if (null == m) return;
+    (0, O.hY)(o.accountId, o.accessToken, u, m, {
+        position: +_,
+        deviceId: l.id,
+        repeat: p
     }),
-        (a = {
+        (r = {
             userId: e,
-            partyId: d.id,
-            trackId: c,
-            startTime: p
+            partyId: c.id,
+            trackId: u,
+            startTime: f
         });
-    let E = 'presence change';
-    r &&
-        ((E = 'started'),
-        x.default.track(B.rMx.SPOTIFY_LISTEN_ALONG_STARTED, {
-            party_id: d.id,
+    let g = 'presence change';
+    n &&
+        ((g = 'started'),
+        A.default.track(x.rMx.SPOTIFY_LISTEN_ALONG_STARTED, {
+            party_id: c.id,
             other_user_id: e
         })),
-        en.info('Listen along '.concat(E, ': ').concat(l.accountId, ' to ').concat(e, ' playing ').concat(c, ' on ').concat(u.name));
+        q.info('Listen along '.concat(g, ': ').concat(o.accountId, ' to ').concat(e, ' playing ').concat(u, ' on ').concat(l.name));
 }
-function eT() {
-    x.default.track(B.rMx.SPOTIFY_LISTEN_ALONG_ENDED, {
-        party_id: null != a ? a.partyId : null,
-        other_user_id: null != a ? a.userId : null
+function em() {
+    A.default.track(x.rMx.SPOTIFY_LISTEN_ALONG_ENDED, {
+        party_id: null != r ? r.partyId : null,
+        other_user_id: null != r ? r.userId : null
     });
-    let e = null != a ? a.trackId : null;
-    (a = null), en.info('Listen along stopped');
-    let n = ep();
-    if (null == n) return;
-    let { socket: r } = n,
-        i = ec[r.accountId];
-    if (null != i && i.track.id === e) (0, k.wO)(r.accountId, r.accessToken);
+    let e = null != r ? r.trackId : null;
+    (r = null), q.info('Listen along stopped');
+    let t = es();
+    if (null == t) return;
+    let { socket: n } = t,
+        i = ei[n.accountId];
+    null != i && i.track.id === e && (0, O.wO)(n.accountId, n.accessToken);
 }
-function eS() {
-    let e = Object.keys(el),
-        n = N.Z.getAccounts().filter((e) => {
-            let { type: n } = e;
-            return n === B.ABu.SPOTIFY;
+function eg() {
+    let e = Object.keys(et),
+        t = y.Z.getAccounts().filter((e) => {
+            let { type: t } = e;
+            return t === x.ABu.SPOTIFY;
         });
-    if (null == n) return !1;
-    let r = n.map((e) => {
-        let { id: n } = e;
-        return n;
+    if (null == t) return !1;
+    let n = t.map((e) => {
+        let { id: t } = e;
+        return t;
     });
-    for (let n of e) {
-        if (!r.includes(n)) ey(n);
-    }
-    let a = !1;
-    for (let r of n) {
-        if ((null != i && i.account.id === r.id && ((i.account = r), (a = !0)), !e.includes(r.id))) {
-            if (null != r.accessToken) {
-                ev(r.id, r.accessToken);
+    for (let t of e) !n.includes(t) && e_(t);
+    let r = !1;
+    for (let n of t)
+        if ((null != i && i.account.id === n.id && ((i.account = n), (r = !0)), !e.includes(n.id))) {
+            if (null != n.accessToken) {
+                ef(n.id, n.accessToken);
                 continue;
             }
-            (0, k.hP)(r.id);
+            (0, O.hP)(n.id);
         }
-    }
-    return a;
+    return r;
 }
-function eA(e) {
-    let { accountId: n, accessToken: r } = e;
-    return ev(n, r), !1;
+function eE(e) {
+    let { accountId: t, accessToken: n } = e;
+    return ef(t, n), !1;
 }
-function eC(e) {
-    let { accountId: n } = e;
-    ey(n);
+function ev(e) {
+    let { accountId: t } = e;
+    e_(t);
 }
-function eN(e) {
-    let { accountId: n, isPlaying: r, repeat: o, track: s, position: l, device: u, context: c } = e,
-        d = !1;
+function ey(e) {
+    let { accountId: t, isPlaying: n, repeat: a, track: s, position: o, device: u, context: c } = e,
+        f = !1;
     if (null != u) {
-        if (null != eu[n]) {
-            let e = eu[n].find((e) => {
-                let { id: n } = e;
-                return n === u.id;
+        if (null != en[t]) {
+            let e = en[t].find((e) => {
+                let { id: t } = e;
+                return t === u.id;
             });
-            null == e ? (eu[n].push(u), (d = !0)) : !(0, E.Z)(e, u) && (Object.assign(e, u), (d = !0)), eb(n, u.id);
-        } else (eu[n] = [u]), (d = !0);
+            null == e ? (en[t].push(u), (f = !0)) : (0, d.Z)(e, u) || (Object.assign(e, u), (f = !0)), ep(t, u.id);
+        } else (en[t] = [u]), (f = !0);
     }
-    r ? null == ef || ef.start(H, eP) : ((s = null), null == ef || ef.stop());
-    let f = N.Z.getAccount(n, B.ABu.SPOTIFY);
-    if (null == f) return d;
-    let p = ec[n],
-        h =
+    n ? null == ea || ea.start(U, eC) : ((s = null), null == ea || ea.stop());
+    let p = y.Z.getAccount(t, x.ABu.SPOTIFY);
+    if (null == p) return f;
+    let h = ei[t],
+        g =
             null != s
                 ? {
-                      account: f,
+                      account: p,
                       track: s,
-                      startTime: eh(p, l),
+                      startTime: eo(h, o),
                       context: c,
-                      repeat: o
+                      repeat: a
                   }
                 : null,
-        m = null != u && null != a && 0 === l && !r;
-    !m && (ec[n] = h);
-    let g = i;
+        E = null != u && null != r && 0 === o && !n;
+    E || (ei[t] = g);
+    let I = i;
     if (
-        ((i = _()
-            .values(ec)
+        ((i = l()
+            .values(ei)
             .find((e) => null != e)),
-        eM(C.default.getId()),
-        null == s || m ? eo.stop() : eo.start(s.duration - l + K, () => e_(f.id)),
-        null != a && ((!r && l > 0) || null == u || (null != h && a.trackId !== h.track.id))
-            ? (en.info('Listen along active but playback stopped or track changed. Stopping listen along in '.concat(K, 'ms')),
-              es.start(K, () => {
-                  en.info('Stopping listening along'), (0, T.Z)(), e_(f.id);
+        eR(v.default.getId()),
+        null == s || E ? $.stop() : $.start(s.duration - o + Z, () => el(p.id)),
+        null != r && ((!n && o > 0) || null == u || (null != g && r.trackId !== g.track.id))
+            ? (q.info('Listen along active but playback stopped or track changed. Stopping listen along in '.concat(Z, 'ms')),
+              ee.start(Z, () => {
+                  q.info('Stopping listening along'), (0, m.Z)(), el(p.id);
               }))
-            : es.isStarted() && (en.info('Listen along stop cancelled as playback of track resumed'), es.stop()),
-        g === i || (null == p && null == h) || (null != p && null != h && p.track.id === h.track.id && p.startTime === h.startTime))
+            : ee.isStarted() && (q.info('Listen along stop cancelled as playback of track resumed'), ee.stop()),
+        I === i || (null == h && null == g) || (null != h && null != g && h.track.id === g.track.id && h.startTime === g.startTime))
     )
-        return d;
+        return f;
     null != s &&
-        (y.Z.dispatch({
+        (_.Z.dispatch({
             type: 'SPOTIFY_NEW_TRACK',
             track: s,
-            connectionId: n
+            connectionId: t
         }),
-        x.default.track(B.rMx.ACTIVITY_UPDATED, {
-            party_platform: B.ABu.SPOTIFY,
+        A.default.track(x.rMx.ACTIVITY_UPDATED, {
+            party_platform: x.ABu.SPOTIFY,
             track_id: s.id,
             has_images: !0,
             details: s.album.name,
@@ -354,300 +343,302 @@ function eN(e) {
             author_names: s.artists.map((e) => e.name)
         }));
 }
-function eR(e) {
-    let { id: n } = e;
-    o = n;
+function eI(e) {
+    let { id: t } = e;
+    a = t;
 }
-function eO(e) {
-    let { accountId: n, devices: r } = e;
-    (eu[n] = r), en.info('Devices updated for '.concat(n, ':'), r);
+function eb(e) {
+    let { accountId: t, devices: n } = e;
+    (en[t] = n), q.info('Devices updated for '.concat(t, ':'), n);
 }
-function eD(e) {
-    let { accountId: n, deviceId: r } = e;
-    eb(n, r);
+function eT(e) {
+    let { accountId: t, deviceId: n } = e;
+    ep(t, n);
 }
-function eL(e) {
-    var n;
-    let r,
-        { activity: i, metadata: o } = e,
-        s = ep();
+function eS(e) {
+    var t;
+    let n,
+        { activity: i, metadata: a } = e,
+        s = es();
     if (null == s) return !1;
-    let { socket: l, device: u } = s,
-        { sync_id: c, party: d } = i;
+    let { socket: o, device: l } = s,
+        { sync_id: u, party: c } = i;
     return (
-        !!(null != c && null != d && null != d.id && (0, U.Ps)(d.id)) &&
-        (null != o && (r = o.context_uri),
-        null != a && eT(),
-        null != o &&
-            void ((0, k.hY)(l.accountId, l.accessToken, c, null !== (n = o.type) && void 0 !== n ? n : U.Hw.TRACK, {
-                contextUri: r,
-                deviceId: u.id
+        !!(null != u && null != c && null != c.id && (0, D.Ps)(c.id)) &&
+        (null != a && (n = a.context_uri),
+        null != r && em(),
+        null != a &&
+            void ((0, O.hY)(o.accountId, o.accessToken, u, null !== (t = a.type) && void 0 !== t ? t : D.Hw.TRACK, {
+                contextUri: n,
+                deviceId: l.id
             }),
-            en.info('Play started: '.concat(l.accountId, ' playing ').concat(c, ' on ').concat(u.name))))
+            q.info('Play started: '.concat(o.accountId, ' playing ').concat(u, ' on ').concat(l.name))))
     );
 }
-function ex(e) {
-    let { activity: n, userId: r } = e;
-    return eI(r, n, !0);
+function eA(e) {
+    let { activity: t, userId: n } = e;
+    return eh(n, t, !0);
 }
-function ew() {
-    if (null == a || null == ep()) return !1;
-    let { userId: e } = a,
-        n = em(e);
-    if (null == n)
+function eN() {
+    if (null == r || null == es()) return !1;
+    let { userId: e } = r,
+        t = eu(e);
+    if (null == t)
         return (
-            ea.start(W, () => {
-                if (null != a && a.userId === e) (0, T.Z)();
+            J.start(B, () => {
+                null != r && r.userId === e && (0, m.Z)();
             }),
             !1
         );
-    ea.stop();
-    let { sync_id: r, timestamps: i, party: o } = n,
-        s = null != r && a.trackId !== r,
-        l = null != i && a.startTime !== i.start;
-    return s || l ? eI(e, n, !1) : null != o && o.id !== a.partyId && ((a.partyId = o.id), !0);
+    J.stop();
+    let { sync_id: n, timestamps: i, party: a } = t,
+        s = null != n && r.trackId !== n,
+        o = null != i && r.startTime !== i.start;
+    return s || o ? eh(e, t, !1) : null != a && a.id !== r.partyId && ((r.partyId = a.id), !0);
 }
-function eP() {
+function eC() {
     if (null == i) return;
-    let e = ep();
+    let e = es();
     if (null == e) return;
-    let { socket: n } = e;
-    (ed = !0), (0, k.wO)(n.accountId, n.accessToken), x.default.track(B.rMx.SPOTIFY_AUTO_PAUSED), en.info('Playback auto paused');
+    let { socket: t } = e;
+    (er = !0), (0, O.wO)(t.accountId, t.accessToken), A.default.track(x.rMx.SPOTIFY_AUTO_PAUSED), q.info('Playback auto paused');
 }
-function eM(e) {
-    if (e === C.default.getId()) {
-        let n = L.Z.isCurrentClientInVoiceChannel(),
-            r = (0, b.O)({
+function eR(e) {
+    if (e === v.default.getId()) {
+        let t = S.Z.isCurrentClientInVoiceChannel(),
+            n = (0, p.O)({
                 userId: e,
                 checkSoundSharing: !0,
                 checkSoundboardSounds: !1
             });
-        n && r && null != i ? (er.start(H, eP, !1), ei.stop()) : ei.start(Y, () => er.stop(), !1);
+        t && n && null != i ? (Q.start(U, eC, !1), X.stop()) : X.start(G, () => Q.stop(), !1);
     }
     return !1;
 }
-function ek(e) {
-    let { userId: n } = e;
-    return eM(n);
+function eO(e) {
+    let { userId: t } = e;
+    return eR(t);
 }
-function eU(e) {
-    let { voiceStates: n } = e;
-    return n.reduce((e, n) => {
-        let { userId: r } = n;
-        return eM(r) || e;
+function eD(e) {
+    let { voiceStates: t } = e;
+    return t.reduce((e, t) => {
+        let { userId: n } = t;
+        return eR(n) || e;
     }, !1);
 }
-function eB(e) {
-    let { accountId: n, isPremium: r } = e,
-        i = el[n];
+function ex(e) {
+    let { accountId: t, isPremium: n } = e,
+        i = et[t];
     if (null == i) return !1;
-    (i.isPremium = r), en.info('Profile updated for '.concat(n, ': isPremium = ').concat(r));
+    (i.isPremium = n), q.info('Profile updated for '.concat(t, ': isPremium = ').concat(n));
 }
-function eG(e) {
-    let { settings: n } = e;
-    if ((null == n ? void 0 : n.desktopSettings) != null) {
-        null == ef || ef.stop();
-        let { sourceId: e, sound: r } = null == n ? void 0 : n.desktopSettings;
-        null != e && A.ZP.getObservedAppNameForWindow(e) === Z.name && r ? (ef = new v.Xp()).start(H, eP) : (null == ef || ef.stop(), (ef = null));
-    } else null == n && (null == ef || ef.stop(), (ef = null));
+function eL(e) {
+    let { settings: t } = e;
+    if ((null == t ? void 0 : t.desktopSettings) != null) {
+        null == ea || ea.stop();
+        let { sourceId: e, sound: n } = null == t ? void 0 : t.desktopSettings;
+        null != e && E.ZP.getObservedAppNameForWindow(e) === P.name && n ? (ea = new f.Xp()).start(U, eC) : (null == ea || ea.stop(), (ea = null));
+    } else null == t && (null == ea || ea.stop(), (ea = null));
 }
-function eZ(e, n, r) {
-    var i, a, o, s, l, u, c, d, f, p, h, _, m, g;
+function eP(e, t, n) {
+    var i, r, a, s, o, l, u, c, d, f, p, h, m, g;
     let E,
         v,
-        { device: b, progress_ms: I, is_playing: T, repeat_state: S, item: A, context: C } = r;
-    if (null != A && A.type === U.Hw.TRACK) {
-        let e = A.id;
-        null != A.linked_from && null != A.linked_from.id && (e = A.linked_from.id),
+        { device: y, progress_ms: I, is_playing: b, repeat_state: T, item: S, context: A } = n;
+    if (null != S && S.type === D.Hw.TRACK) {
+        let e = S.id;
+        null != S.linked_from && null != S.linked_from.id && (e = S.linked_from.id),
             (E = {
                 id: e,
-                name: A.name,
-                duration: A.duration_ms,
-                type: U.Hw.TRACK,
+                name: S.name,
+                duration: S.duration_ms,
+                type: D.Hw.TRACK,
                 album: {
-                    id: null !== (l = null === (i = A.album) || void 0 === i ? void 0 : i.id) && void 0 !== l ? l : '',
-                    name: null !== (u = null === (a = A.album) || void 0 === a ? void 0 : a.name) && void 0 !== u ? u : '',
-                    image: null === (o = A.album) || void 0 === o ? void 0 : o.images[0],
-                    type: null !== (c = null === (s = A.album) || void 0 === s ? void 0 : s.type) && void 0 !== c ? c : U.Hw.ALBUM
+                    id: null !== (o = null === (i = S.album) || void 0 === i ? void 0 : i.id) && void 0 !== o ? o : '',
+                    name: null !== (l = null === (r = S.album) || void 0 === r ? void 0 : r.name) && void 0 !== l ? l : '',
+                    image: null === (a = S.album) || void 0 === a ? void 0 : a.images[0],
+                    type: null !== (u = null === (s = S.album) || void 0 === s ? void 0 : s.type) && void 0 !== u ? u : D.Hw.ALBUM
                 },
-                artists: Array.isArray(A.artists) ? A.artists.filter((e) => (0, M.lm)(e.id) && (0, M.lm)(e.name)) : [],
-                isLocal: A.is_local || !1
+                artists: Array.isArray(S.artists) ? S.artists.filter((e) => (0, R.lm)(e.id) && (0, R.lm)(e.name)) : [],
+                isLocal: S.is_local || !1
             });
     } else
-        null != A &&
-            A.type === U.Hw.EPISODE &&
+        null != S &&
+            S.type === D.Hw.EPISODE &&
             (E = {
-                id: A.id,
-                name: A.name,
-                duration: A.duration_ms,
-                type: U.Hw.EPISODE,
+                id: S.id,
+                name: S.name,
+                duration: S.duration_ms,
+                type: D.Hw.EPISODE,
                 album: {
-                    id: null !== (_ = null === (d = A.show) || void 0 === d ? void 0 : d.id) && void 0 !== _ ? _ : '',
-                    name: null !== (m = null === (f = A.show) || void 0 === f ? void 0 : f.name) && void 0 !== m ? m : '',
-                    image: null === (p = A.show) || void 0 === p ? void 0 : p.images[0],
-                    type: null !== (g = null === (h = A.album) || void 0 === h ? void 0 : h.type) && void 0 !== g ? g : U.Hw.SHOW
+                    id: null !== (h = null === (c = S.show) || void 0 === c ? void 0 : c.id) && void 0 !== h ? h : '',
+                    name: null !== (m = null === (d = S.show) || void 0 === d ? void 0 : d.name) && void 0 !== m ? m : '',
+                    image: null === (f = S.show) || void 0 === f ? void 0 : f.images[0],
+                    type: null !== (g = null === (p = S.album) || void 0 === p ? void 0 : p.type) && void 0 !== g ? g : D.Hw.SHOW
                 },
                 artists: [],
                 isLocal: !1
             });
     if (
-        (null != b &&
-            !0 !== b.is_active &&
-            (b = {
-                ...b,
+        (null != y &&
+            !0 !== y.is_active &&
+            (y = {
+                ...y,
                 is_active: !0
             }),
-        null != C && [U.Hw.PLAYLIST, U.Hw.ALBUM].includes(C.type))
+        null != A && [D.Hw.PLAYLIST, D.Hw.ALBUM].includes(A.type))
     ) {
-        let r = ej.getPlayerState(e);
+        let n = ek.getPlayerState(e);
         v =
-            null != r && null != r.context && r.context.uri === C.uri
-                ? Promise.resolve(r.context)
-                : C.type === U.Hw.ALBUM
-                  ? Promise.resolve(C)
-                  : k.rC
-                        .get(e, n, { url: C.href })
+            null != n && null != n.context && n.context.uri === A.uri
+                ? Promise.resolve(n.context)
+                : A.type === D.Hw.ALBUM
+                  ? Promise.resolve(A)
+                  : O.rC
+                        .get(e, t, { url: A.href })
                         .then((e) => {
-                            let { body: n } = e;
-                            return n;
+                            let { body: t } = e;
+                            return t;
                         })
                         .catch((e) => {
                             if (e && 404 === e.status) return null;
                             throw e;
                         });
     } else v = Promise.resolve(void 0);
-    return v.then((n) => {
-        null != n && n.type === U.Hw.PLAYLIST && !n.public && (n = null),
-            y.Z.dispatch({
+    return v.then((t) => {
+        null == t || t.type !== D.Hw.PLAYLIST || t.public || (t = null),
+            _.Z.dispatch({
                 type: 'SPOTIFY_PLAYER_STATE',
                 accountId: e,
                 track: E,
-                volumePercent: null != b ? b.volume_percent : 0,
-                isPlaying: T,
-                repeat: 'off' !== S,
+                volumePercent: null != y ? y.volume_percent : 0,
+                isPlaying: b,
+                repeat: 'off' !== T,
                 position: I,
-                context: n,
-                device: b
+                context: t,
+                device: y
             });
     });
 }
-function eF(e, n) {
-    return k.rC
-        .get(e, n, {
-            url: U.C7.PLAYER,
-            query: { additional_types: ''.concat(U.Hw.TRACK, ',').concat(U.Hw.EPISODE) },
+function ew(e, t) {
+    return O.rC
+        .get(e, t, {
+            url: D.C7.PLAYER,
+            query: { additional_types: ''.concat(D.Hw.TRACK, ',').concat(D.Hw.EPISODE) },
             onlyRetryOnAuthorizationErrors: !0
         })
-        .then((r) => {
-            let i = r.body;
-            null != i ? eZ(e, n, i).then(() => r) : e_(e);
+        .then((n) => {
+            let i = n.body;
+            null != i ? eP(e, t, i).then(() => n) : el(e);
         })
-        .catch(() => e_(e));
+        .catch(() => el(e));
 }
-class eV extends (l = g.ZP.Store) {
+class eM extends (s = c.ZP.Store) {
     initialize() {
-        this.waitFor(N.Z, D.Z), this.syncWith([O.Z], () => ew()), (0, k.k1)();
+        this.waitFor(y.Z, T.Z), this.syncWith([b.Z], () => eN()), (0, O.k1)();
     }
     hasConnectedAccount() {
-        return Object.keys(el).length > 0;
+        return Object.keys(et).length > 0;
     }
     getActiveSocketAndDevice() {
-        return ep();
+        return es();
     }
     getPlayableComputerDevices() {
         let e = [];
-        for (let n in el) {
-            let r = el[n];
-            if (!r.connected || null == eu[n]) continue;
-            let i = eu[n].find((e) => !e.is_restricted && e.type === q);
+        for (let t in et) {
+            let n = et[t];
+            if (!n.connected || null == en[t]) continue;
+            let i = en[t].find((e) => !e.is_restricted && e.type === V);
             null != i &&
                 e.push({
-                    socket: r,
+                    socket: n,
                     device: i
                 });
         }
         return e;
     }
     canPlay(e) {
-        let { sync_id: n, party: r } = e;
-        return null != ep() && null != n && null != r && null != r.id && (0, U.Ps)(r.id);
+        let { sync_id: t, party: n } = e;
+        return null != es() && null != t && null != n && null != n.id && (0, D.Ps)(n.id);
     }
     getSyncingWith() {
-        return a;
+        return r;
     }
     wasAutoPaused() {
-        return ed;
+        return er;
     }
     getLastPlayedTrackId() {
-        return o;
+        return a;
     }
     getTrack() {
         return null != i ? i.track : null;
     }
     getPlayerState(e) {
-        return ec[e];
+        return ei[e];
     }
     shouldShowActivity() {
-        return null != i && i.account.showActivity && !R.Z.isIdle();
+        return null != i && i.account.showActivity && !I.Z.isIdle();
     }
     getActivity() {
-        let e, n, r;
-        if (null == i) return null != a ? em(a.userId) : null;
+        let e, t, n;
+        if (null == i) return null != r ? eu(r.userId) : null;
         let {
-                track: { artists: o, album: s, name: l, id: u, duration: c, isLocal: d, type: f },
-                startTime: p,
-                context: h
+                track: { artists: a, album: s, name: o, id: l, duration: u, isLocal: c, type: d },
+                startTime: f,
+                context: _
             } = i,
-            _ = o.slice(0, Q);
-        o.length > 0 &&
-            (e = _.map((e) => {
-                let { name: n } = e;
-                return n.replace(/;/g, '');
-            }).join('; '));
-        let m = {},
-            g = null != s.image ? (0, w.getAssetFromImageURL)(B.ABu.SPOTIFY, s.image.url) : null;
-        null != s.image && null != g && (m.large_image = g), s.type !== et && (m.large_text = s.name), null != h && (n = h.uri), (r = null != a && null != a.partyId ? a.partyId : ''.concat(U.lS).concat(C.default.getId()));
-        let E = l.length > $ ? l.substring(0, $ - 3) + '...' : l,
-            v = {
-                context_uri: n,
+            p = a.slice(0, j);
+        a.length > 0 &&
+            (e = p
+                .map((e) => {
+                    let { name: t } = e;
+                    return t.replace(/;/g, '');
+                })
+                .join('; '));
+        let h = {},
+            m = null != s.image ? (0, N.getAssetFromImageURL)(x.ABu.SPOTIFY, s.image.url) : null;
+        null != s.image && null != m && (h.large_image = m), s.type !== z && (h.large_text = s.name), null != _ && (t = _.uri), (n = null != r && null != r.partyId ? r.partyId : ''.concat(D.lS).concat(v.default.getId()));
+        let g = o.length > W ? o.substring(0, W - 3) + '...' : o,
+            E = {
+                context_uri: t,
                 album_id: s.id,
-                artist_ids: _.map((e) => {
-                    let { id: n } = e;
-                    return n;
+                artist_ids: p.map((e) => {
+                    let { id: t } = e;
+                    return t;
                 }),
-                type: f,
+                type: d,
                 button_urls: []
             },
             y = {
-                name: Z.name,
-                assets: m,
-                details: E,
+                name: P.name,
+                assets: h,
+                details: g,
                 state: e,
                 timestamps: {
-                    start: p,
-                    end: p + c
+                    start: f,
+                    end: f + u
                 },
-                party: { id: r }
+                party: { id: n }
             };
-        return !d && ((y.sync_id = u), (y.flags = B.xjy.PLAY | B.xjy.SYNC), (y.metadata = v)), y;
+        return c || ((y.sync_id = l), (y.flags = x.xjy.PLAY | x.xjy.SYNC), (y.metadata = E)), y;
     }
 }
-G(eV, 'displayName', 'SpotifyStore');
-let ej = new eV(y.Z, {
-    USER_CONNECTIONS_UPDATE: eS,
-    CONNECTION_OPEN: eS,
-    SPOTIFY_ACCOUNT_ACCESS_TOKEN: eA,
-    SPOTIFY_ACCOUNT_ACCESS_TOKEN_REVOKE: eC,
-    SPOTIFY_PROFILE_UPDATE: eB,
-    SPOTIFY_PLAYER_STATE: eN,
-    SPOTIFY_PLAYER_PLAY: eR,
-    ACTIVITY_PLAY: eL,
-    ACTIVITY_SYNC: ex,
-    ACTIVITY_SYNC_STOP: eT,
-    SPOTIFY_SET_DEVICES: eO,
-    SPOTIFY_SET_ACTIVE_DEVICE: eD,
-    SPEAKING: ek,
-    VOICE_STATE_UPDATES: eU,
-    MEDIA_ENGINE_SET_GO_LIVE_SOURCE: eG
-});
-n.Z = ej;
+L(eM, 'displayName', 'SpotifyStore');
+let ek = new eM(_.Z, {
+        USER_CONNECTIONS_UPDATE: eg,
+        CONNECTION_OPEN: eg,
+        SPOTIFY_ACCOUNT_ACCESS_TOKEN: eE,
+        SPOTIFY_ACCOUNT_ACCESS_TOKEN_REVOKE: ev,
+        SPOTIFY_PROFILE_UPDATE: ex,
+        SPOTIFY_PLAYER_STATE: ey,
+        SPOTIFY_PLAYER_PLAY: eI,
+        ACTIVITY_PLAY: eS,
+        ACTIVITY_SYNC: eA,
+        ACTIVITY_SYNC_STOP: em,
+        SPOTIFY_SET_DEVICES: eb,
+        SPOTIFY_SET_ACTIVE_DEVICE: eT,
+        SPEAKING: eO,
+        VOICE_STATE_UPDATES: eD,
+        MEDIA_ENGINE_SET_GO_LIVE_SOURCE: eL
+    }),
+    eU = ek;

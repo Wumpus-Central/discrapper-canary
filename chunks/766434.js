@@ -1,13 +1,7 @@
 n.d(t, {
-    Br: function () {
-        return l;
-    },
-    Uj: function () {
-        return s;
-    },
-    j0: function () {
-        return r;
-    }
+    Br: () => l,
+    Uj: () => s,
+    j0: () => r
 }),
     n(47120);
 var i = n(198139);
@@ -15,12 +9,11 @@ let r = (e) => {
     var t, n;
     let i = Object.values(null !== (n = null == e ? void 0 : e.ppgs) && void 0 !== n ? n : {})[0],
         r = null == i ? void 0 : i.status,
-        l = null == i ? void 0 : null === (t = i.payout) || void 0 === t ? void 0 : t.status,
-        s = null == i ? void 0 : i.deferral_reasons;
+        l = null == i ? void 0 : null === (t = i.payout) || void 0 === t ? void 0 : t.status;
     return {
         ppgStatus: r,
         payoutStatus: l,
-        ppgDeferralReasons: s,
+        ppgDeferralReasons: null == i ? void 0 : i.deferral_reasons,
         periodEndDate: null == i ? void 0 : i.period_ending_at
     };
 };

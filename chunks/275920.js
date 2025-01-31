@@ -1,25 +1,21 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(626135),
-    a = r(981631);
-function o(e) {
-    let { type: n, source: r, userId: o, guildId: s, channelId: l, channelType: u, applicationId: c, partyId: d, messageId: f, locationObject: p, analyticsLocations: h, referrerId: _, inviterUserId: m } = e;
-    i.default.track(a.rMx.APPLICATION_OPENED, {
-        type: n,
-        source: r,
+n.d(t, { Z: () => a });
+var i = n(626135),
+    r = n(981631);
+function a(e) {
+    let { type: t, source: n, userId: a, guildId: s, channelId: o, channelType: l, applicationId: u, partyId: c, messageId: d, locationObject: f, analyticsLocations: _, referrerId: p, inviterUserId: h } = e;
+    i.default.track(r.rMx.APPLICATION_OPENED, {
+        type: t,
+        source: n,
         guild_id: s,
-        channel_id: l,
-        channel_type: u,
-        application_id: c,
-        party_id: null != d ? d : void 0,
-        other_user_id: o,
-        message_id: f,
-        location: p,
-        location_stack: h,
-        referrer_id: _,
-        invite_inviter_id: m
+        channel_id: o,
+        channel_type: l,
+        application_id: u,
+        party_id: null != c ? c : void 0,
+        other_user_id: a,
+        message_id: d,
+        location: f,
+        location_stack: _,
+        referrer_id: p,
+        invite_inviter_id: h
     });
 }

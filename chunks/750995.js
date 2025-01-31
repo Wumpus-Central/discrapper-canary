@@ -1,7 +1,8 @@
+n.d(t, { Z: () => f });
 var i = n(200651);
 n(192379);
-var r = n(704215),
-    l = n(481060),
+var l = n(704215),
+    r = n(481060),
     a = n(570140),
     s = n(317770),
     o = n(605236),
@@ -15,12 +16,12 @@ let g = (e) => {
     var t;
     let n = d.Z.getGuild(e),
         i = !!(null == n ? void 0 : n.hasFeature(m.oNc.COMMUNITY)),
-        l = u.Z.can(m.Plq.MANAGE_CHANNELS, n),
-        a = (0, o.un)(r.z.FORUM_CHANNEL_UPSELL_MODAL),
+        r = u.Z.can(m.Plq.MANAGE_CHANNELS, n),
+        a = (0, o.un)(l.z.FORUM_CHANNEL_UPSELL_MODAL),
         s = null !== (t = c.Z.getMemberCount(e)) && void 0 !== t ? t : 0;
-    return i && l && !a && s >= 200;
+    return i && r && !a && s >= 200;
 };
-class f extends s.Z {
+class _ extends s.Z {
     _initialize() {
         a.Z.subscribe('CHANNEL_SELECT', this.handleChannelSelect);
     }
@@ -30,12 +31,12 @@ class f extends s.Z {
     handleChannelSelect(e) {
         let { guildId: t } = e;
         if (null == t || !g(t)) return;
-        (0, h.qz)(), (0, o.kk)(r.z.FORUM_CHANNEL_UPSELL_MODAL);
+        (0, h.qz)(), (0, o.kk)(l.z.FORUM_CHANNEL_UPSELL_MODAL);
         let a = function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : p.L.DISMISS;
-            (0, o.EW)(r.z.FORUM_CHANNEL_UPSELL_MODAL, { dismissAction: e });
+            (0, o.EW)(l.z.FORUM_CHANNEL_UPSELL_MODAL, { dismissAction: e });
         };
-        (0, l.openModalLazy)(
+        (0, r.ZDy)(
             async () => {
                 let { default: e } = await n.e('18417').then(n.bind(n, 740696));
                 return (n) =>
@@ -49,10 +50,10 @@ class f extends s.Z {
                     });
             },
             {
-                onCloseCallback: () => (0, o.EW)(r.z.FORUM_CHANNEL_UPSELL_MODAL, { dismissAction: p.L.DISMISS }),
+                onCloseCallback: () => (0, o.EW)(l.z.FORUM_CHANNEL_UPSELL_MODAL, { dismissAction: p.L.DISMISS }),
                 onCloseRequest: m.VqG
             }
         );
     }
 }
-t.Z = new f();
+let f = new _();

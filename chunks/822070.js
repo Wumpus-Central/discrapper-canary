@@ -1,8 +1,4 @@
-n.d(t, {
-    $: function () {
-        return i;
-    }
-});
+n.d(t, { $: () => i });
 let i = (0, n(818083).B)({
     kind: 'user',
     id: '2024-07_referral_program_sender_incentive',

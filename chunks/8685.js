@@ -1,63 +1,62 @@
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(442837),
-    l = r(481060),
-    u = r(923928),
-    c = r(468026),
-    d = r(503856),
-    f = r(209590),
-    p = r(388032);
-let h = () => {
-        u.Z.clearSuppressWarning();
+n.d(t, { Z: () => p }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(442837),
+    s = n(481060),
+    o = n(923928),
+    l = n(468026),
+    u = n(503856),
+    c = n(209590),
+    d = n(388032);
+let f = () => {
+        o.Z.clearSuppressWarning();
     },
     _ = () => {
-        u.Z.clearSuppressWarning(!0);
+        o.Z.clearSuppressWarning(!0);
     },
-    m = () => {
-        let e = o.useRef(null);
-        function n() {
-            null !== e.current && ((0, l.closeModal)(e.current), (e.current = null));
+    p = () => {
+        let e = r.useRef(null);
+        function t() {
+            null !== e.current && ((0, s.Mr3)(e.current), (e.current = null));
         }
-        let [i, u] = (0, s.Wu)([f.Z], () => [f.Z.shouldShowWarning(), f.Z.isAFKChannel()], []),
-            m = o.useCallback(() => {
-                let n, r;
-                u ? ((n = p.intl.string(p.t.Y40JkZ)), (r = p.intl.string(p.t['5J4yGR']))) : ((n = p.intl.string(p.t.FJSZVF)), (r = p.intl.string(p.t.etJjgY))),
-                    (e.current = (0, l.openModal)((e) =>
-                        (0, a.jsx)(c.default, {
-                            title: n,
-                            body: r,
-                            onConfirm: h,
-                            confirmText: p.intl.string(p.t.BddRzc),
-                            secondaryConfirmText: p.intl.string(p.t['5E9SBw']),
+        let [o, p] = (0, a.Wu)([c.Z], () => [c.Z.shouldShowWarning(), c.Z.isAFKChannel()], []),
+            h = r.useCallback(() => {
+                let t, n;
+                p ? ((t = d.intl.string(d.t.Y40JkZ)), (n = d.intl.string(d.t['5J4yGR']))) : ((t = d.intl.string(d.t.FJSZVF)), (n = d.intl.string(d.t.etJjgY))),
+                    (e.current = (0, s.h7j)((e) =>
+                        (0, i.jsx)(l.default, {
+                            title: t,
+                            body: n,
+                            onConfirm: f,
+                            confirmText: d.intl.string(d.t.BddRzc),
+                            secondaryConfirmText: d.intl.string(d.t['5E9SBw']),
                             onConfirmSecondary: _,
                             ...e
                         })
                     ));
-            }, [u]),
-            g = o.useCallback(() => {
-                (0, l.openModalLazy)(async () => {
-                    let { default: e } = await r.e('41281').then(r.bind(r, 669732));
-                    return (n) =>
-                        (0, a.jsx)(e, {
-                            ...n,
+            }, [p]),
+            m = r.useCallback(() => {
+                (0, s.ZDy)(async () => {
+                    let { default: e } = await n.e('41281').then(n.bind(n, 669732));
+                    return (t) =>
+                        (0, i.jsx)(e, {
+                            ...t,
                             showHideSuppressWarning: !0
                         });
-                }).then((n) => {
-                    null != n && (e.current = n);
+                }).then((t) => {
+                    null != t && (e.current = t);
                 });
             }, []);
         return (
-            o.useEffect(
+            r.useEffect(
                 () => (
-                    i && (0, d.p)() ? g() : i ? m() : n(),
+                    o && (0, u.p)() ? m() : o ? h() : t(),
                     () => {
-                        n();
+                        t();
                     }
                 ),
-                [i, m, g]
+                [o, h, m]
             ),
             null
         );
     };
-n.Z = m;

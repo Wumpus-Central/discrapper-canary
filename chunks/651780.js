@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return S;
-    }
-});
+n.d(t, { Z: () => S });
 var i = n(200651),
     r = n(192379),
     l = n(442837),
@@ -17,14 +13,14 @@ var i = n(200651),
     g = n(386937),
     x = n(316350),
     p = n(899667),
-    f = n(626135),
+    _ = n(626135),
     C = n(267642),
-    v = n(63063),
-    I = n(999382),
+    f = n(63063),
+    v = n(999382),
     N = n(981631),
-    _ = n(388032),
-    T = n(981004);
-function j(e) {
+    j = n(388032),
+    I = n(981004);
+function E(e) {
     let { endsAt: t, appliedGuildBoostsToMaintain: n, tierName: r } = e,
         { days: l, hours: s } = (0, d.Z)(t);
     return n <= 0
@@ -32,11 +28,11 @@ function j(e) {
         : (0, i.jsx)(i.Fragment, {
               children:
                   0 === l && 0 === s
-                      ? _.intl.format(_.t.kF0HER, {
+                      ? j.intl.format(j.t.kF0HER, {
                             tierName: r,
                             numPremiumSubscriptions: n
                         })
-                      : _.intl.format(_.t.neDJho, {
+                      : j.intl.format(j.t.neDJho, {
                             days: l,
                             hours: s,
                             tierName: r,
@@ -50,14 +46,14 @@ function b(e) {
         l = (0, C.nW)((0, C.rF)(t.length, n));
     if (null == r || null == l) return null;
     let a = (0, C._k)(t, n);
-    return (0, i.jsxs)(s.HelpMessage, {
-        messageType: s.HelpMessageTypes.WARNING,
+    return (0, i.jsxs)(s.Wn, {
+        messageType: s.QYI.WARNING,
         children: [
             (0, i.jsx)('div', {
-                className: T.guildBoostingGracePeriodTitle,
-                children: _.intl.format(_.t.LG7vvr, {})
+                className: I.guildBoostingGracePeriodTitle,
+                children: j.intl.format(j.t.LG7vvr, {})
             }),
-            (0, i.jsx)(j, {
+            (0, i.jsx)(E, {
                 endsAt: r,
                 appliedGuildBoostsToMaintain: a,
                 tierName: l
@@ -65,7 +61,7 @@ function b(e) {
         ]
     });
 }
-let E = (e) => {
+let T = (e) => {
     let { isAnimatedTo: t, onSetRef: n, subscriptionCount: r, tier: l, tiers: s, tierIndex: a, guildId: o } = e;
     return (0, i.jsx)(
         x.Z,
@@ -86,16 +82,16 @@ function S() {
             (0, o.tZ)(), (0, c.Y2)();
         });
     }, []);
-    let e = (0, l.e7)([I.Z], () => I.Z.getGuild()),
+    let e = (0, l.e7)([v.Z], () => v.Z.getGuild()),
         t = (0, l.e7)([p.Z], () => (null != e ? p.Z.getAppliedGuildBoostsForGuild(e.id) : null)),
         n = (0, u.V)();
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(r.Fragment, {
                 children: [
-                    (0, i.jsx)(s.FormTitle, {
-                        tag: s.FormTitleTags.H1,
-                        children: _.intl.string(_.t.nLovSU)
+                    (0, i.jsx)(s.vwX, {
+                        tag: s.RB0.H1,
+                        children: j.intl.string(j.t.nLovSU)
                     }),
                     null != t && null != e
                         ? (0, i.jsx)(b, {
@@ -103,23 +99,23 @@ function S() {
                               guildId: e.id
                           })
                         : null,
-                    (0, i.jsx)(s.FormText, {
-                        type: s.FormText.Types.DESCRIPTION,
-                        className: T.titleBlurb,
-                        children: _.intl.format(_.t.hLOkp6, { helpdeskArticle: v.Z.getArticleURL(N.BhN.GUILD_SUBSCRIPTIONS) })
+                    (0, i.jsx)(s.R94, {
+                        type: s.R94.Types.DESCRIPTION,
+                        className: I.titleBlurb,
+                        children: j.intl.format(j.t.hLOkp6, { helpdeskArticle: f.Z.getArticleURL(N.BhN.GUILD_SUBSCRIPTIONS) })
                     })
                 ]
             }),
             (0, i.jsx)(g.Z, {
                 tiers: (0, C.cP)(null != e && e.hasFeature(N.oNc.COMMUNITY) && e.maxStageVideoChannelUsers >= N.B9o),
-                renderTier: E
+                renderTier: T
             }),
-            (0, i.jsx)('div', { className: T.divider }),
+            (0, i.jsx)('div', { className: I.divider }),
             n ? (0, i.jsx)(h.Z, {}) : null,
             n
                 ? (0, i.jsx)(m.Z, {
                       onOpenPremiumClick: () =>
-                          void f.default.track(N.rMx.PREMIUM_PROMOTION_OPENED, {
+                          void _.default.track(N.rMx.PREMIUM_PROMOTION_OPENED, {
                               location: {
                                   page: N.ZY5.GUILD_SETTINGS,
                                   section: N.jXE.NITRO_CROSS_PROMO_FROM_BOOSTING,

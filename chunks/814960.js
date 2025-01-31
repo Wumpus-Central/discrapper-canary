@@ -1,39 +1,33 @@
 t.d(n, {
-    Gi: function () {
-        return a;
-    },
-    YJ: function () {
-        return c;
-    },
-    zY: function () {
-        return d;
-    }
+    Gi: () => c,
+    YJ: () => d,
+    zY: () => u
 });
-var i = t(200651);
+var o = t(200651);
 t(192379);
 var r = t(481060),
-    l = t(476770),
-    s = t(592286),
-    o = t(388032),
-    u = t(484979);
-function a(e) {
-    let { value: n, placeholder: t, onChange: l, disabled: o, autofocus: u, className: a } = e;
-    return (0, i.jsx)(r.TextInput, {
-        inputClassName: a,
-        maxLength: s.tL,
+    i = t(476770),
+    a = t(592286),
+    l = t(388032),
+    s = t(484979);
+function c(e) {
+    let { value: n, placeholder: t, onChange: i, disabled: l, autofocus: s, className: c } = e;
+    return (0, o.jsx)(r.oil, {
+        inputClassName: c,
+        maxLength: a.tL,
         value: null != n ? n : '',
         placeholder: t,
-        onChange: l,
-        disabled: o,
-        autoFocus: u
+        onChange: i,
+        disabled: l,
+        autoFocus: s
     });
 }
-function c(e) {
+function d(e) {
     let { formField: n } = e;
-    return (0, i.jsx)(l.CA, {
+    return (0, o.jsx)(i.CA, {
         title: n.label,
-        children: (0, i.jsx)(r.TextArea, {
-            className: u.disabledFieldBackground,
+        children: (0, o.jsx)(r.Kx8, {
+            className: s.disabledFieldBackground,
             value: n.response,
             disabled: !0,
             autoFocus: !0,
@@ -41,15 +35,15 @@ function c(e) {
         })
     });
 }
-function d(e) {
+function u(e) {
     let { formField: n, autofocus: t, onChange: r } = e;
-    return (0, i.jsx)(l.hK, {
+    return (0, o.jsx)(i.hK, {
         title: n.label,
-        children: (0, i.jsx)(a, {
+        children: (0, o.jsx)(c, {
             onChange: r,
             value: n.response,
             autofocus: t,
-            placeholder: o.intl.string(o.t['Sqn+Wl'])
+            placeholder: l.intl.string(l.t['Sqn+Wl'])
         })
     });
 }

@@ -1,22 +1,10 @@
 n.d(t, {
-    FW: function () {
-        return g;
-    },
-    Pk: function () {
-        return a;
-    },
-    Rq: function () {
-        return m;
-    },
-    W_: function () {
-        return l;
-    },
-    dK: function () {
-        return o;
-    },
-    qd: function () {
-        return f;
-    }
+    FW: () => _,
+    Pk: () => s,
+    Rq: () => p,
+    W_: () => a,
+    dK: () => o,
+    qd: () => g
 }),
     n(518263),
     n(970173),
@@ -35,8 +23,8 @@ n.d(t, {
     n(411104);
 var i = n(512722),
     r = n.n(i),
-    s = n(598077);
-function l() {
+    l = n(598077);
+function a() {
     return window.crypto.subtle.generateKey(
         {
             name: 'RSA-OAEP',
@@ -51,7 +39,7 @@ function l() {
 async function o(e) {
     return r()(null != e.publicKey, 'public key cannot be null'), btoa(String.fromCharCode(...new Uint8Array(await window.crypto.subtle.exportKey('spki', e.publicKey))));
 }
-async function a(e) {
+async function s(e) {
     return r()(null != e.publicKey, 'public key cannot be null'), u(await window.crypto.subtle.exportKey('spki', e.publicKey));
 }
 function c(e) {
@@ -79,23 +67,22 @@ function h(e, t) {
         )
     );
 }
-async function g(e, t) {
+async function _(e, t) {
     let n = new TextDecoder(),
         i = await h(e, d(t));
     return n.decode(i);
 }
-async function f(e, t) {
+async function g(e, t) {
     return c(await h(e, d(t)));
 }
-async function m(e, t) {
-    t = await g(e, t);
-    let n = t.match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
+async function p(e, t) {
+    let n = (t = await _(e, t)).match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
     if (null == n) throw Error('Invalid encoded user record.');
-    let [, i, r, l, o] = n;
-    return new s.Z({
+    let [, i, r, a, o] = n;
+    return new l.Z({
         id: i,
         discriminator: r,
-        avatar: '0' === l ? null : l,
+        avatar: '0' === a ? null : a,
         username: o
     });
 }

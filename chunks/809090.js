@@ -1,69 +1,64 @@
-r.d(n, {
-    Z: function () {
-        return h;
-    }
-});
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(120356),
-    l = r.n(s),
-    u = r(686546),
-    c = r(768581),
-    d = r(895924),
-    f = r(131754),
-    p = r(970952);
-function h(e) {
-    let { section: n, isSelected: r, width: i, height: s, className: h, selectable: _ = !1, isSquircle: m, onFocus: g, onBlur: E, onMouseOver: v, onMouseLeave: y, ...b } = e,
-        [I, T] = o.useState(!1),
-        S = o.useCallback(() => {
-            T(!0), null == g || g();
+n.d(t, { Z: () => f }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(686546),
+    l = n(768581),
+    u = n(895924),
+    c = n(131754),
+    d = n(970952);
+function f(e) {
+    let { section: t, isSelected: n, width: a, height: f, className: _, selectable: p = !1, isSquircle: h, onFocus: m, onBlur: g, onMouseOver: E, onMouseLeave: v, ...y } = e,
+        [I, b] = r.useState(!1),
+        T = r.useCallback(() => {
+            b(!0), null == m || m();
+        }, [m]),
+        S = r.useCallback(() => {
+            b(!1), null == g || g();
         }, [g]),
-        A = o.useCallback(() => {
-            T(!1), null == E || E();
+        A = r.useCallback(() => {
+            b(!0), null == E || E();
         }, [E]),
-        C = o.useCallback(() => {
-            T(!0), null == v || v();
+        N = r.useCallback(() => {
+            b(!1), null == v || v();
         }, [v]),
-        N = o.useCallback(() => {
-            T(!1), null == y || y();
-        }, [y]),
-        R = o.useMemo(() => {
-            if (n.type === d.Qi.APPLICATION) {
+        C = r.useMemo(() => {
+            if (t.type === u.Qi.APPLICATION) {
                 var e;
-                return c.ZP.getApplicationIconURL({
-                    id: n.id,
-                    icon: n.icon,
-                    bot: null === (e = n.application) || void 0 === e ? void 0 : e.bot,
+                return l.ZP.getApplicationIconURL({
+                    id: t.id,
+                    icon: t.icon,
+                    bot: null === (e = t.application) || void 0 === e ? void 0 : e.bot,
                     botIconFirst: !0,
-                    size: i
+                    size: a
                 });
             }
-            return p;
-        }, [n, i]);
-    return (0, a.jsx)('div', {
-        ...b,
-        className: l()(f.wrapper, h, {
-            [f.selectable]: _,
-            [f.selected]: _ && r
+            return d;
+        }, [t, a]);
+    return (0, i.jsx)('div', {
+        ...y,
+        className: s()(c.wrapper, _, {
+            [c.selectable]: p,
+            [c.selected]: p && n
         }),
-        onFocus: S,
-        onBlur: A,
-        onMouseOver: C,
+        onFocus: T,
+        onBlur: S,
+        onMouseOver: A,
         onMouseLeave: N,
-        children: (0, a.jsx)(u.ZP, {
-            className: f.mask,
-            mask: m || (_ && (r || I)) ? u.QS.SQUIRCLE : u.QS.AVATAR_DEFAULT,
-            width: i,
-            height: s,
-            children: (0, a.jsx)('img', {
+        children: (0, i.jsx)(o.ZP, {
+            className: c.mask,
+            mask: h || (p && (n || I)) ? o.QS.SQUIRCLE : o.QS.AVATAR_DEFAULT,
+            width: a,
+            height: f,
+            children: (0, i.jsx)('img', {
                 alt: '',
-                className: f.icon,
+                className: c.icon,
                 style: {
-                    width: i,
-                    height: s
+                    width: a,
+                    height: f
                 },
-                src: R
+                src: C
             })
         })
     });

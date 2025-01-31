@@ -1,65 +1,62 @@
-n.r(e),
-    n.d(e, {
-        SafetyToolsSlides: function () {
-            return i;
-        }
-    }),
+n.d(e, {
+    O: () => x,
+    default: () => b
+}),
     n(47120);
 var i,
-    s,
-    o = n(200651),
+    s = n(200651),
     l = n(192379),
     r = n(481060),
-    a = n(600164),
-    c = n(367408),
-    d = n(473092),
-    u = n(419672),
-    T = n(858597),
-    S = n(486213),
+    o = n(600164),
+    a = n(367408),
+    c = n(473092),
+    d = n(419672),
+    u = n(858597),
+    T = n(486213),
     _ = n(388032),
-    x = n(744948);
-((s = i || (i = {})).ACTIONS = 'ACTIONS'), (s.SAFETY_TIPS = 'SAFETY_TIPS'), (s.ABOUT_SAFETY_ALERTS = 'ABOUT_SAFETY_ALERTS');
-e.default = (t) => {
-    let { onClose: e, channelId: n, warningId: i, warningType: s, otherUserId: b, transitionState: p } = t,
-        A = null != (0, c.M)(n),
-        [h, C] = l.useState('ACTIONS'),
-        E = l.useCallback(
+    S = n(744948),
+    x = (((i = {}).ACTIONS = 'ACTIONS'), (i.SAFETY_TIPS = 'SAFETY_TIPS'), (i.ABOUT_SAFETY_ALERTS = 'ABOUT_SAFETY_ALERTS'), i);
+let b = (t) => {
+    let { onClose: e, channelId: n, warningId: i, warningType: x, otherUserId: b, transitionState: p } = t,
+        A = null != (0, a.M)(n),
+        [h, E] = l.useState('ACTIONS'),
+        N = l.useCallback(
             (t) => {
-                (0, d.qc)({
+                (0, c.qc)({
                     channelId: n,
                     warningId: i,
-                    warningType: s,
+                    warningType: x,
                     senderId: b,
                     cta: t,
                     isNudgeWarning: A
                 });
             },
-            [n, i, s, b, A]
+            [n, i, x, b, A]
         ),
         R = l.useCallback((t) => {
             let { text: e, onClick: n } = t;
-            return (0, o.jsx)(r.Button, {
-                look: r.Button.Looks.LINK,
-                size: r.Button.Sizes.MIN,
+            return (0, s.jsx)(r.zxk, {
+                look: r.zxk.Looks.LINK,
+                size: r.zxk.Sizes.MIN,
                 onClick: n,
-                color: r.Button.Colors.CUSTOM,
-                className: x.footerLink,
+                color: r.zxk.Colors.CUSTOM,
+                className: S.footerLink,
                 children: e
             });
         }, []),
-        N = l.useCallback(() => {
+        C = l.useCallback(() => {
             switch (h) {
                 case 'SAFETY_TIPS':
                 case 'ABOUT_SAFETY_ALERTS':
-                    return (0, o.jsx)(R, {
+                    return (0, s.jsx)(R, {
                         text: _.intl.string(_.t['13/7kZ']),
-                        onClick: () => C('ACTIONS')
+                        onClick: () => E('ACTIONS')
                     });
                 default:
                     return null;
             }
         }, [h, R]),
-        L = l.useCallback(() => {
+        O = l.useCallback(() => {
             switch (h) {
                 case 'SAFETY_TIPS':
                     return _.intl.string(_.t.EtNxi4);
@@ -69,67 +66,67 @@ e.default = (t) => {
                     return _.intl.string(_.t.MAhAp6);
             }
         }, [h]),
-        g = l.useCallback(
+        L = l.useCallback(
             (t) => {
-                C(t);
+                E(t);
             },
-            [C]
+            [E]
         );
-    return (0, o.jsxs)(r.ModalRoot, {
+    return (0, s.jsxs)(r.Y0X, {
         transitionState: p,
         'aria-label': _.intl.string(_.t.eXlt09),
-        size: r.ModalSize.SMALL,
+        size: r.CgR.SMALL,
         children: [
-            (0, o.jsx)(r.ModalHeader, {
+            (0, s.jsx)(r.xBx, {
                 separator: !1,
-                className: x.modalHeader,
-                justify: a.Z.Justify.CENTER,
-                children: (0, o.jsx)(r.Heading, {
+                className: S.modalHeader,
+                justify: o.Z.Justify.CENTER,
+                children: (0, s.jsx)(r.X6q, {
                     variant: 'heading-xl/semibold',
-                    children: L()
+                    children: O()
                 })
             }),
-            (0, o.jsx)(r.Scroller, {
-                children: (0, o.jsxs)(r.Slides, {
+            (0, s.jsx)(r.Ttm, {
+                children: (0, s.jsxs)(r.MyZ, {
                     activeSlide: h,
                     width: 440,
                     children: [
-                        (0, o.jsx)(r.Slide, {
+                        (0, s.jsx)(r.Mi4, {
                             id: 'ACTIONS',
-                            children: (0, o.jsx)(T.Z, {
+                            children: (0, s.jsx)(u.Z, {
                                 otherUserId: b,
                                 channelId: n,
                                 warningId: i,
-                                warningType: s,
-                                transitionToSlide: g
+                                warningType: x,
+                                transitionToSlide: L
                             })
                         }),
-                        (0, o.jsx)(r.Slide, {
+                        (0, s.jsx)(r.Mi4, {
                             id: 'ABOUT_SAFETY_ALERTS',
-                            children: (0, o.jsx)(u.Z, {
+                            children: (0, s.jsx)(d.Z, {
                                 channelId: n,
                                 onClose: () => {
-                                    e(), E(d.NM.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS_DISMISS);
+                                    e(), N(c.NM.USER_SAFETY_TOOLS_ABOUT_SAFETY_ALERTS_DISMISS);
                                 }
                             })
                         }),
-                        (0, o.jsx)(r.Slide, {
+                        (0, s.jsx)(r.Mi4, {
                             id: 'SAFETY_TIPS',
-                            children: (0, o.jsx)(S.Z, {})
+                            children: (0, s.jsx)(T.Z, {})
                         })
                     ]
                 })
             }),
-            (0, o.jsxs)(r.ModalFooter, {
-                justify: a.Z.Justify.BETWEEN,
+            (0, s.jsxs)(r.mzw, {
+                justify: o.Z.Justify.BETWEEN,
                 children: [
-                    (0, o.jsx)(R, {
+                    (0, s.jsx)(R, {
                         text: _.intl.string(_.t.cpT0Cg),
                         onClick: () => {
-                            e(), E(d.NM.USER_SAFETY_TOOLS_DISMISS);
+                            e(), N(c.NM.USER_SAFETY_TOOLS_DISMISS);
                         }
                     }),
-                    N()
+                    C()
                 ]
             })
         ]

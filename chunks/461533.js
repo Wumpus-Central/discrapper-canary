@@ -1,69 +1,63 @@
-e.r(t),
-    e.d(t, {
-        default: function () {
-            return S;
-        }
-    }),
-    e(47120);
-var o = e(200651),
-    r = e(192379),
-    c = e(481060),
-    i = e(369994),
-    s = e(781208),
-    l = e(388032),
-    a = e(912969);
-function S(n) {
-    let { guildId: t, transitionState: e, onClose: S } = n,
-        [u, d] = r.useState([]),
-        M = r.useCallback(() => {
-            (0, i.KK)(t, u), (0, i.C4)(t), S();
-        }, [t, S, u]),
-        h = r.useCallback(
+t.d(e, { default: () => d }), t(47120);
+var r = t(200651),
+    i = t(192379),
+    s = t(481060),
+    c = t(369994),
+    o = t(781208),
+    l = t(388032),
+    a = t(912969);
+function d(n) {
+    let { guildId: e, transitionState: t, onClose: d } = n,
+        [x, h] = i.useState([]),
+        k = i.useCallback(() => {
+            (0, c.KK)(e, x), (0, c.C4)(e), d();
+        }, [e, d, x]),
+        u = i.useCallback(
             (n) => () => {
-                d((t) => (t.includes(n) ? t.filter((t) => t !== n) : [...t, n]));
+                h((e) => (e.includes(n) ? e.filter((e) => e !== n) : [...e, n]));
             },
             []
         ),
-        C = r.useCallback(() => {
-            open(s.RI);
+        S = i.useCallback(() => {
+            open(o.RI);
         }, []);
-    return (0, o.jsxs)(c.ModalRoot, {
-        transitionState: e,
-        size: c.ModalSize.SMALL,
+    return (0, r.jsxs)(s.Y0X, {
+        transitionState: t,
+        size: s.CgR.SMALL,
         children: [
-            (0, o.jsx)(c.ModalHeader, {
+            (0, r.jsx)(s.xBx, {
                 separator: !1,
-                children: (0, o.jsx)(c.Heading, {
+                children: (0, r.jsx)(s.X6q, {
                     color: 'header-primary',
                     variant: 'heading-md/semibold',
                     children: l.intl.string(l.t.uYPGsb)
                 })
             }),
-            (0, o.jsxs)(c.ModalContent, {
+            (0, r.jsxs)(s.hzk, {
                 children: [
-                    (0, o.jsx)(c.Text, {
+                    (0, r.jsx)(s.Text, {
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        children: l.intl.format(l.t.Hg8Ee3, { onClick: C })
+                        children: l.intl.format(l.t.Hg8Ee3, { onClick: S })
                     }),
-                    (0, o.jsx)('div', {
+                    (0, r.jsx)('div', {
                         className: a.mainCheckboxContainer,
-                        children: s.Ud.map((n) =>
-                            (0, o.jsxs)(
-                                c.Clickable,
+                        children: o.Ud.map((n) =>
+                            (0, r.jsxs)(
+                                s.P3F,
                                 {
                                     className: a.checkboxContainer,
-                                    onClick: h(n),
+                                    onClick: u(n),
                                     children: [
-                                        (0, o.jsx)(c.Checkbox, {
-                                            type: c.Checkbox.Types.INVERTED,
+                                        (0, r.jsx)(s.XZJ, {
+                                            type: s.XZJ.Types.INVERTED,
                                             className: a.checkbox,
-                                            value: u.includes(n),
+                                            value: x.includes(n),
                                             displayOnly: !0
                                         }),
-                                        (0, o.jsx)(c.Text, {
+                                        (0, r.jsx)(s.Text, {
                                             variant: 'text-sm/normal',
-                                            children: (0, s.$l)(n)
+                                            children: (0, o.$l)(n)
                                         })
                                     ]
                                 },
@@ -73,18 +67,18 @@ function S(n) {
                     })
                 ]
             }),
-            (0, o.jsxs)(c.ModalFooter, {
+            (0, r.jsxs)(s.mzw, {
                 children: [
-                    (0, o.jsx)(c.Button, {
-                        onClick: M,
-                        color: c.Button.Colors.BRAND,
-                        look: c.Button.Looks.FILLED,
+                    (0, r.jsx)(s.zxk, {
+                        onClick: k,
+                        color: s.zxk.Colors.BRAND,
+                        look: s.zxk.Looks.FILLED,
                         children: l.intl.string(l.t.geKm7u)
                     }),
-                    (0, o.jsx)(c.Button, {
-                        onClick: S,
-                        color: c.Button.Colors.PRIMARY,
-                        look: c.Button.Looks.LINK,
+                    (0, r.jsx)(s.zxk, {
+                        onClick: d,
+                        color: s.zxk.Colors.PRIMARY,
+                        look: s.zxk.Looks.LINK,
                         children: l.intl.string(l.t['ETE/oK'])
                     })
                 ]

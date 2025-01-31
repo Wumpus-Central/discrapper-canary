@@ -1,28 +1,23 @@
-t.r(e),
-    t.d(e, {
-        default: function () {
-            return s;
-        }
-    });
-var u = t(200651);
-t(192379);
-var l = t(355467),
-    o = t(106976),
-    d = t(703656),
-    i = t(914010),
-    a = t(563132),
-    r = t(791785),
-    c = t(981631);
-function s(n) {
-    let { onClose: e, onComplete: t, forcesTransitionToGuild: s, ...p } = n,
-        { subscriptionMetadataRequest: C } = (0, a.usePaymentContext)();
-    return (0, u.jsx)(r.PaymentModal, {
+n.r(e), n.d(e, { default: () => s });
+var u = n(200651);
+n(192379);
+var t = n(355467),
+    d = n(106976),
+    i = n(703656),
+    o = n(914010),
+    a = n(563132),
+    c = n(791785),
+    r = n(981631);
+function s(l) {
+    let { onClose: e, onComplete: n, forcesTransitionToGuild: s, ...p } = l,
+        { subscriptionMetadataRequest: h } = (0, a.JL)();
+    return (0, u.jsx)(c.PaymentModal, {
         ...p,
-        onComplete: t,
-        onClose: (n) => {
-            e(n);
-            let u = null == C ? void 0 : C.guild_id;
-            n && null != u && (l.jg(), (0, o.i1)(u), null == t || t(), null != u && (s || i.Z.getGuildId() !== u) && (0, d.uL)(c.Z5c.CHANNEL(u)));
+        onComplete: n,
+        onClose: (l) => {
+            e(l);
+            let u = null == h ? void 0 : h.guild_id;
+            l && null != u && (t.jg(), (0, d.i1)(u), null == n || n(), null != u && (s || o.Z.getGuildId() !== u) && (0, i.uL)(r.Z5c.CHANNEL(u)));
         },
         forceNewPaymentModal: !0
     });

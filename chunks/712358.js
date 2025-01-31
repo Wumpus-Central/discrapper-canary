@@ -1,8 +1,4 @@
-n.d(t, {
-    U: function () {
-        return r;
-    }
-});
+n.d(t, { U: () => s });
 let i = (0, n(818083).B)({
     id: '2021-08_user_initiated_refunds',
     label: 'User Initiated Refunds',
@@ -21,7 +17,7 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function r() {
+function s() {
     let { enabled: e } = i.getCurrentConfig({ location: '70b634_1' }, { autoTrackExposure: !1 });
     return i.trackExposure({ location: '70b634_2' }), e;
 }

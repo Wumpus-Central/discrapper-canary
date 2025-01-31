@@ -1,25 +1,21 @@
-r.d(n, {
-    Z: function () {
-        return s;
-    }
-});
-var i = r(192379),
-    a = r(995295);
-let o = Object.freeze({ box: 'border-box' });
+n.d(t, { Z: () => s });
+var i = n(192379),
+    r = n(995295);
+let a = Object.freeze({ box: 'border-box' });
 function s(e) {
-    let { ref: n, onUpdate: r, resizeObserver: s, listenerMap: l, key: u } = e;
+    let { ref: t, onUpdate: n, resizeObserver: s, listenerMap: o, key: l } = e;
     (0, i.useLayoutEffect)(() => {
         let e = (e) => {
-                (0, a.flushSync)(() => {
-                    r(e, u);
+                (0, r.flushSync)(() => {
+                    n(e, l);
                 });
             },
-            { current: i } = n;
+            { current: i } = t;
         return (
-            null != i && (l.set(i, e), s.observe(i, o)),
+            null != i && (o.set(i, e), s.observe(i, a)),
             () => {
-                null != i && (s.unobserve(i), l.delete(i));
+                null != i && (s.unobserve(i), o.delete(i));
             }
         );
-    }, [r, s, n, l, u]);
+    }, [n, s, t, o, l]);
 }

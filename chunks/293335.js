@@ -1,23 +1,20 @@
-var i = r(47120);
-var a = r(724458);
-var o = r(653041);
-var s = r(192379);
-let l = (e, n) => {
-    let [r, i] = s.useState(-1),
-        a = s.useRef(-1);
+n.d(t, { Z: () => r }), n(47120), n(724458), n(653041);
+var i = n(192379);
+let r = (e, t) => {
+    let [n, r] = i.useState(-1),
+        a = i.useRef(-1);
     return (
-        s.useEffect(() => {
-            let n = e.reduce((e, n) => (!e.includes(n.src) && e.push(n.src), e), []);
-            i(n.length), (a.current = n.length);
-        }, [e, a, i]),
-        s.useEffect(() => {
-            0 === r && n();
-        }, [r, n]),
+        i.useEffect(() => {
+            let t = e.reduce((e, t) => (e.includes(t.src) || e.push(t.src), e), []);
+            r(t.length), (a.current = t.length);
+        }, [e, a, r]),
+        i.useEffect(() => {
+            0 === n && t();
+        }, [n, t]),
         {
-            pending: r,
+            pending: n,
             pendingRef: a,
-            setPending: i
+            setPending: r
         }
     );
 };
-n.Z = l;

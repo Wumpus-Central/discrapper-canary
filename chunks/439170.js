@@ -1,15 +1,11 @@
-r.d(n, {
-    G: function () {
-        return l;
-    }
-});
-var i = r(960048),
-    a = r(981631);
-let o = [a.evJ.UNAUTHORIZED, a.evJ.EMAIL_VERIFICATION_REQUIRED, a.evJ.USER_BANNED],
+n.d(t, { G: () => o });
+var i = n(960048),
+    r = n(981631);
+let a = [r.evJ.UNAUTHORIZED, r.evJ.EMAIL_VERIFICATION_REQUIRED, r.evJ.USER_BANNED],
     s = (e) => {
-        var n;
-        return null != e && (!!(('status' in e && 'number' == typeof e.status && 0 === e.status) || ('code' in e && 'number' == typeof e.code && o.includes(e.code)) || ('body' in e && null != e.body && 'object' == typeof e.body && 'code' in e.body && 'number' == typeof (null === (n = e.body) || void 0 === n ? void 0 : n.code) && o.includes(e.body.code))) || !1);
+        var t;
+        return null != e && !!(('status' in e && 'number' == typeof e.status && 0 === e.status) || ('code' in e && 'number' == typeof e.code && a.includes(e.code)) || ('body' in e && null != e.body && 'object' == typeof e.body && 'code' in e.body && 'number' == typeof (null === (t = e.body) || void 0 === t ? void 0 : t.code) && a.includes(e.body.code)));
     },
-    l = (e) => {
-        null != e && !s(e) && i.Z.captureException(e);
+    o = (e) => {
+        null == e || s(e) || i.Z.captureException(e);
     };

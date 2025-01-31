@@ -1,14 +1,15 @@
-e.exports = {
-    imageSelectionContainer: 'imageSelectionContainer_f07970',
-    uploadButton: 'uploadButton_f07970 clickableItem_f07970',
-    customImageActionContainer: 'customImageActionContainer_f07970',
-    radioGroup: 'radioGroup_f07970',
-    radioOption: 'radioOption_f07970 clickableItem_f07970',
-    customImageAction: 'customImageAction_f07970',
-    editIcon: 'editIcon_f07970',
-    deleteIcon: 'deleteIcon_f07970',
-    radioOptionImage: 'radioOptionImage_f07970',
-    selected: 'selected_f07970',
-    disabled: 'disabled_f07970',
-    hidden: 'hidden_f07970'
+A.exports = {
+    imageSelectionContainer: 'imageSelectionContainer_da21bd',
+    clickableItem: 'clickableItem_da21bd',
+    uploadButton: 'uploadButton_da21bd clickableItem_da21bd',
+    customImageActionContainer: 'customImageActionContainer_da21bd',
+    radioGroup: 'radioGroup_da21bd',
+    radioOption: 'radioOption_da21bd clickableItem_da21bd',
+    customImageAction: 'customImageAction_da21bd',
+    editIcon: 'editIcon_da21bd',
+    deleteIcon: 'deleteIcon_da21bd',
+    radioOptionImage: 'radioOptionImage_da21bd',
+    selected: 'selected_da21bd',
+    disabled: 'disabled_da21bd',
+    hidden: 'hidden_da21bd'
 };

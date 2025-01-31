@@ -1,43 +1,36 @@
-r.d(n, {
-    Q: function () {
-        return d;
-    }
-});
-var i = r(47120);
-var a = r(544891),
-    o = r(570140),
-    s = r(430824),
-    l = r(356264),
-    u = r(981631);
-let c = new Set();
-async function d(e) {
-    if (null == s.Z.getGuild(e) && null == l.Z.getGuildOrStatus(e)) {
-        if (!c.has(e)) {
-            o.Z.dispatch({
-                type: 'BASIC_GUILD_FETCH',
+n.d(t, { Q: () => u }), n(47120);
+var i = n(544891),
+    r = n(570140),
+    a = n(430824),
+    s = n(356264),
+    o = n(981631);
+let l = new Set();
+async function u(e) {
+    if (null == a.Z.getGuild(e) && null == s.Z.getGuildOrStatus(e) && !l.has(e)) {
+        r.Z.dispatch({
+            type: 'BASIC_GUILD_FETCH',
+            guildId: e
+        }),
+            l.add(e);
+        try {
+            let t = (
+                await i.tn.get({
+                    url: o.ANM.GUILD_BASIC(e),
+                    rejectWithError: !0
+                })
+            ).body;
+            r.Z.dispatch({
+                type: 'BASIC_GUILD_FETCH_SUCCESS',
+                guildId: e,
+                guildInfo: t
+            });
+        } catch (t) {
+            r.Z.dispatch({
+                type: 'BASIC_GUILD_FETCH_FAILURE',
                 guildId: e
-            }),
-                c.add(e);
-            try {
-                let n = (
-                    await a.tn.get({
-                        url: u.ANM.GUILD_BASIC(e),
-                        rejectWithError: !0
-                    })
-                ).body;
-                o.Z.dispatch({
-                    type: 'BASIC_GUILD_FETCH_SUCCESS',
-                    guildId: e,
-                    guildInfo: n
-                });
-            } catch (n) {
-                o.Z.dispatch({
-                    type: 'BASIC_GUILD_FETCH_FAILURE',
-                    guildId: e
-                });
-            } finally {
-                c.delete(e);
-            }
+            });
+        } finally {
+            l.delete(e);
         }
     }
 }

@@ -1,158 +1,159 @@
-let i = r(689118),
-    a = r(814033),
-    o = r(873994).DecoderBuffer,
-    s = r(206424),
-    l = r(375990);
-function u(e) {
-    (this.enc = 'der'), (this.name = e.name), (this.entity = e), (this.tree = new c()), this.tree._init(e.body);
+let i = n(689118),
+    r = n(814033),
+    a = n(873994).DecoderBuffer,
+    s = n(206424),
+    o = n(375990);
+function l(e) {
+    (this.enc = 'der'), (this.name = e.name), (this.entity = e), (this.tree = new u()), this.tree._init(e.body);
 }
-function c(e) {
+function u(e) {
     s.call(this, 'der', e);
 }
-function d(e, n) {
-    let r = e.readUInt8(n);
-    if (e.isError(r)) return r;
-    let i = l.tagClass[r >> 6],
-        a = (32 & r) == 0;
-    if ((31 & r) == 31) {
-        let i = r;
-        for (r = 0; (128 & i) == 128; ) {
-            if (((i = e.readUInt8(n)), e.isError(i))) return i;
-            (r <<= 7), (r |= 127 & i);
+function c(e, t) {
+    let n = e.readUInt8(t);
+    if (e.isError(n)) return n;
+    let i = o.tagClass[n >> 6],
+        r = (32 & n) == 0;
+    if ((31 & n) == 31) {
+        let i = n;
+        for (n = 0; (128 & i) == 128; ) {
+            if (((i = e.readUInt8(t)), e.isError(i))) return i;
+            (n <<= 7), (n |= 127 & i);
         }
-    } else r &= 31;
-    let o = l.tag[r];
+    } else n &= 31;
+    let a = o.tag[n];
     return {
         cls: i,
-        primitive: a,
-        tag: r,
-        tagStr: o
+        primitive: r,
+        tag: n,
+        tagStr: a
     };
 }
-function f(e, n, r) {
-    let i = e.readUInt8(r);
+function d(e, t, n) {
+    let i = e.readUInt8(n);
     if (e.isError(i)) return i;
-    if (!n && 128 === i) return null;
+    if (!t && 128 === i) return null;
     if ((128 & i) == 0) return i;
-    let a = 127 & i;
-    if (a > 4) return e.error('length octect is too long');
+    let r = 127 & i;
+    if (r > 4) return e.error('length octect is too long');
     i = 0;
-    for (let n = 0; n < a; n++) {
+    for (let t = 0; t < r; t++) {
         i <<= 8;
-        let n = e.readUInt8(r);
-        if (e.isError(n)) return n;
-        i |= n;
+        let t = e.readUInt8(n);
+        if (e.isError(t)) return t;
+        i |= t;
     }
     return i;
 }
-(e.exports = u),
-    (u.prototype.decode = function (e, n) {
-        return !o.isDecoderBuffer(e) && (e = new o(e, n)), this.tree._decode(e, n);
+(e.exports = l),
+    (l.prototype.decode = function (e, t) {
+        return a.isDecoderBuffer(e) || (e = new a(e, t)), this.tree._decode(e, t);
     }),
-    i(c, s),
-    (c.prototype._peekTag = function (e, n, r) {
+    i(u, s),
+    (u.prototype._peekTag = function (e, t, n) {
         if (e.isEmpty()) return !1;
         let i = e.save(),
-            a = d(e, 'Failed to peek tag: "' + n + '"');
-        return e.isError(a) ? a : (e.restore(i), a.tag === n || a.tagStr === n || a.tagStr + 'of' === n || r);
+            r = c(e, 'Failed to peek tag: "' + t + '"');
+        return e.isError(r) ? r : (e.restore(i), r.tag === t || r.tagStr === t || r.tagStr + 'of' === t || n);
     }),
-    (c.prototype._decodeTag = function (e, n, r) {
-        let i = d(e, 'Failed to decode tag of "' + n + '"');
+    (u.prototype._decodeTag = function (e, t, n) {
+        let i = c(e, 'Failed to decode tag of "' + t + '"');
         if (e.isError(i)) return i;
-        let a = f(e, i.primitive, 'Failed to get length of "' + n + '"');
-        if (e.isError(a)) return a;
-        if (!r && i.tag !== n && i.tagStr !== n && i.tagStr + 'of' !== n) return e.error('Failed to match tag: "' + n + '"');
-        if (i.primitive || null !== a) return e.skip(a, 'Failed to match body of: "' + n + '"');
-        let o = e.save(),
+        let r = d(e, i.primitive, 'Failed to get length of "' + t + '"');
+        if (e.isError(r)) return r;
+        if (!n && i.tag !== t && i.tagStr !== t && i.tagStr + 'of' !== t) return e.error('Failed to match tag: "' + t + '"');
+        if (i.primitive || null !== r) return e.skip(r, 'Failed to match body of: "' + t + '"');
+        let a = e.save(),
             s = this._skipUntilEnd(e, 'Failed to skip indefinite length body: "' + this.tag + '"');
-        return e.isError(s) ? s : ((a = e.offset - o.offset), e.restore(o), e.skip(a, 'Failed to match body of: "' + n + '"'));
+        return e.isError(s) ? s : ((r = e.offset - a.offset), e.restore(a), e.skip(r, 'Failed to match body of: "' + t + '"'));
     }),
-    (c.prototype._skipUntilEnd = function (e, n) {
+    (u.prototype._skipUntilEnd = function (e, t) {
         for (;;) {
-            let r;
-            let i = d(e, n);
+            let n;
+            let i = c(e, t);
             if (e.isError(i)) return i;
-            let a = f(e, i.primitive, n);
-            if (e.isError(a)) return a;
-            if (((r = i.primitive || null !== a ? e.skip(a) : this._skipUntilEnd(e, n)), e.isError(r))) return r;
+            let r = d(e, i.primitive, t);
+            if (e.isError(r)) return r;
+            if (((n = i.primitive || null !== r ? e.skip(r) : this._skipUntilEnd(e, t)), e.isError(n))) return n;
             if ('end' === i.tagStr) break;
         }
     }),
-    (c.prototype._decodeList = function (e, n, r, i) {
-        let a = [];
+    (u.prototype._decodeList = function (e, t, n, i) {
+        let r = [];
         for (; !e.isEmpty(); ) {
-            let n = this._peekTag(e, 'end');
-            if (e.isError(n)) return n;
-            let o = r.decode(e, 'der', i);
-            if (e.isError(o) && n) break;
-            a.push(o);
+            let t = this._peekTag(e, 'end');
+            if (e.isError(t)) return t;
+            let a = n.decode(e, 'der', i);
+            if (e.isError(a) && t) break;
+            r.push(a);
         }
-        return a;
+        return r;
     }),
-    (c.prototype._decodeStr = function (e, n) {
-        if ('bitstr' === n) {
-            let n = e.readUInt8();
-            return e.isError(n)
-                ? n
+    (u.prototype._decodeStr = function (e, t) {
+        if ('bitstr' === t) {
+            let t = e.readUInt8();
+            return e.isError(t)
+                ? t
                 : {
-                      unused: n,
+                      unused: t,
                       data: e.raw()
                   };
         }
-        if ('bmpstr' === n) {
-            let n = e.raw();
-            if (n.length % 2 == 1) return e.error('Decoding of string type: bmpstr length mismatch');
-            let r = '';
-            for (let e = 0; e < n.length / 2; e++) r += String.fromCharCode(n.readUInt16BE(2 * e));
-            return r;
+        if ('bmpstr' === t) {
+            let t = e.raw();
+            if (t.length % 2 == 1) return e.error('Decoding of string type: bmpstr length mismatch');
+            let n = '';
+            for (let e = 0; e < t.length / 2; e++) n += String.fromCharCode(t.readUInt16BE(2 * e));
+            return n;
         }
-        if ('numstr' === n) {
-            let n = e.raw().toString('ascii');
-            return this._isNumstr(n) ? n : e.error('Decoding of string type: numstr unsupported characters');
-        } else if ('octstr' === n) return e.raw();
-        else if ('objDesc' === n) return e.raw();
-        else if ('printstr' === n) {
-            let n = e.raw().toString('ascii');
-            return this._isPrintstr(n) ? n : e.error('Decoding of string type: printstr unsupported characters');
-        } else if (/str$/.test(n)) return e.raw().toString();
-        else return e.error('Decoding of string type: ' + n + ' unsupported');
+        if ('numstr' === t) {
+            let t = e.raw().toString('ascii');
+            return this._isNumstr(t) ? t : e.error('Decoding of string type: numstr unsupported characters');
+        }
+        if ('octstr' === t) return e.raw();
+        if ('objDesc' === t) return e.raw();
+        else if ('printstr' === t) {
+            let t = e.raw().toString('ascii');
+            return this._isPrintstr(t) ? t : e.error('Decoding of string type: printstr unsupported characters');
+        } else if (/str$/.test(t)) return e.raw().toString();
+        else return e.error('Decoding of string type: ' + t + ' unsupported');
     }),
-    (c.prototype._decodeObjid = function (e, n, r) {
+    (u.prototype._decodeObjid = function (e, t, n) {
         let i;
-        let a = [],
-            o = 0,
+        let r = [],
+            a = 0,
             s = 0;
-        for (; !e.isEmpty(); ) (s = e.readUInt8()), (o <<= 7), (o |= 127 & s), (128 & s) == 0 && (a.push(o), (o = 0));
-        128 & s && a.push(o);
-        let l = (a[0] / 40) | 0,
-            u = a[0] % 40;
-        if (((i = r ? a : [l, u].concat(a.slice(1))), n)) {
-            let e = n[i.join(' ')];
-            void 0 === e && (e = n[i.join('.')]), void 0 !== e && (i = e);
+        for (; !e.isEmpty(); ) (s = e.readUInt8()), (a <<= 7), (a |= 127 & s), (128 & s) == 0 && (r.push(a), (a = 0));
+        128 & s && r.push(a);
+        let o = (r[0] / 40) | 0,
+            l = r[0] % 40;
+        if (((i = n ? r : [o, l].concat(r.slice(1))), t)) {
+            let e = t[i.join(' ')];
+            void 0 === e && (e = t[i.join('.')]), void 0 !== e && (i = e);
         }
         return i;
     }),
-    (c.prototype._decodeTime = function (e, n) {
-        let r, i, a, o, s, l;
-        let u = e.raw().toString();
-        if ('gentime' === n) (r = 0 | u.slice(0, 4)), (i = 0 | u.slice(4, 6)), (a = 0 | u.slice(6, 8)), (o = 0 | u.slice(8, 10)), (s = 0 | u.slice(10, 12)), (l = 0 | u.slice(12, 14));
+    (u.prototype._decodeTime = function (e, t) {
+        let n, i, r, a, s, o;
+        let l = e.raw().toString();
+        if ('gentime' === t) (n = 0 | l.slice(0, 4)), (i = 0 | l.slice(4, 6)), (r = 0 | l.slice(6, 8)), (a = 0 | l.slice(8, 10)), (s = 0 | l.slice(10, 12)), (o = 0 | l.slice(12, 14));
         else {
-            if ('utctime' !== n) return e.error('Decoding ' + n + ' time is not supported yet');
-            (r = 0 | u.slice(0, 2)), (i = 0 | u.slice(2, 4)), (a = 0 | u.slice(4, 6)), (o = 0 | u.slice(6, 8)), (s = 0 | u.slice(8, 10)), (l = 0 | u.slice(10, 12)), (r = r < 70 ? 2000 + r : 1900 + r);
+            if ('utctime' !== t) return e.error('Decoding ' + t + ' time is not supported yet');
+            (n = 0 | l.slice(0, 2)), (i = 0 | l.slice(2, 4)), (r = 0 | l.slice(4, 6)), (a = 0 | l.slice(6, 8)), (s = 0 | l.slice(8, 10)), (o = 0 | l.slice(10, 12)), (n = n < 70 ? 2000 + n : 1900 + n);
         }
-        return Date.UTC(r, i - 1, a, o, s, l, 0);
+        return Date.UTC(n, i - 1, r, a, s, o, 0);
     }),
-    (c.prototype._decodeNull = function () {
+    (u.prototype._decodeNull = function () {
         return null;
     }),
-    (c.prototype._decodeBool = function (e) {
-        let n = e.readUInt8();
-        return e.isError(n) ? n : 0 !== n;
+    (u.prototype._decodeBool = function (e) {
+        let t = e.readUInt8();
+        return e.isError(t) ? t : 0 !== t;
     }),
-    (c.prototype._decodeInt = function (e, n) {
-        let r = new a(e.raw());
-        return n && (r = n[r.toString(10)] || r), r;
+    (u.prototype._decodeInt = function (e, t) {
+        let n = new r(e.raw());
+        return t && (n = t[n.toString(10)] || n), n;
     }),
-    (c.prototype._use = function (e, n) {
-        return 'function' == typeof e && (e = e(n)), e._getDecoder('der').tree;
+    (u.prototype._use = function (e, t) {
+        return 'function' == typeof e && (e = e(t)), e._getDecoder('der').tree;
     });

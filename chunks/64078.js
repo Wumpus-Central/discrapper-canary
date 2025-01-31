@@ -1,40 +1,32 @@
-r.d(n, {
-    AI: function () {
-        return u;
-    },
-    EL: function () {
-        return f;
-    },
-    SE: function () {
-        return c;
-    },
-    ew: function () {
-        return d;
-    }
+n.d(t, {
+    AI: () => l,
+    EL: () => d,
+    SE: () => u,
+    ew: () => c
 });
-var i = r(570140),
-    a = r(314897),
-    o = r(351780),
-    s = r(843693),
-    l = r(112606);
-function u(e) {
+var i = n(570140),
+    r = n(314897),
+    a = n(351780),
+    s = n(843693),
+    o = n(112606);
+function l(e) {
     i.Z.dispatch({
         type: 'POGGERMODE_SETTINGS_UPDATE',
         settings: e
     });
-    let n = {
-        ...o.Z.getState(),
+    let t = {
+        ...a.Z.getState(),
         ...e
     };
-    (0, l.Z)(n);
+    (0, o.Z)(t);
 }
-function c(e) {
+function u(e) {
     i.Z.dispatch({
         type: 'POGGERMODE_UPDATE_COMBO',
         ...e
     });
 }
-function d(e) {
+function c(e) {
     i.Z.dispatch({
         type: 'POGGERMODE_UPDATE_MESSAGE_COMBO',
         comboMessage: {
@@ -43,26 +35,26 @@ function d(e) {
         }
     });
 }
-function f(e, n) {
-    var r;
-    let o = a.default.getId(),
-        l = s.ZP.getUserCombo(o, e);
-    null != l &&
+function d(e, t) {
+    var n;
+    let a = r.default.getId(),
+        o = s.ZP.getUserCombo(a, e);
+    null != o &&
         i.Z.dispatch({
             type: 'POGGERMODE_UPDATE_MESSAGE_COMBO',
             comboMessage: {
-                combo: l,
+                combo: o,
                 channelId: e,
-                messageId: n,
+                messageId: t,
                 displayed: !1
             }
         });
-    let u = null != l && (null == l ? void 0 : l.value) > 0 ? (null !== (r = null == l ? void 0 : l.multiplier) && void 0 !== r ? r : 0) + 1 : 1;
+    let l = null != o && (null == o ? void 0 : o.value) > 0 ? (null !== (n = null == o ? void 0 : o.multiplier) && void 0 !== n ? n : 0) + 1 : 1;
     i.Z.dispatch({
         type: 'POGGERMODE_UPDATE_COMBO',
         channelId: e,
-        userId: o,
-        multiplier: u,
+        userId: a,
+        multiplier: l,
         value: 0
     });
 }

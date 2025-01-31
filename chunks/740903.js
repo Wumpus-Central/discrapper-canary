@@ -1,11 +1,3 @@
-var i, r;
-n.d(t, {
-    u: function () {
-        return i;
-    }
-}),
-    ((r = i || (i = {}))[(r.OVERVIEW = 0)] = 'OVERVIEW'),
-    (r[(r.CAPTCHA_AND_RAID_PROTECTION = 1)] = 'CAPTCHA_AND_RAID_PROTECTION'),
-    (r[(r.DM_AND_SPAM_PROTECTION = 2)] = 'DM_AND_SPAM_PROTECTION'),
-    (r[(r.AUTOMOD = 3)] = 'AUTOMOD'),
-    (r[(r.PERMISSIONS = 4)] = 'PERMISSIONS');
+n.d(t, { u: () => r });
+var i,
+    r = (((i = {})[(i.OVERVIEW = 0)] = 'OVERVIEW'), (i[(i.CAPTCHA_AND_RAID_PROTECTION = 1)] = 'CAPTCHA_AND_RAID_PROTECTION'), (i[(i.DM_AND_SPAM_PROTECTION = 2)] = 'DM_AND_SPAM_PROTECTION'), (i[(i.AUTOMOD = 3)] = 'AUTOMOD'), (i[(i.PERMISSIONS = 4)] = 'PERMISSIONS'), i);

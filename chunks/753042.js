@@ -1,12 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return x;
-    }
-});
+n.d(t, { Z: () => C });
 var i = n(200651),
     l = n(192379),
-    r = n(399606),
-    a = n(481060),
+    a = n(399606),
+    r = n(481060),
     s = n(388905),
     o = n(527379),
     c = n(376923),
@@ -17,92 +13,92 @@ var i = n(200651),
     m = n(776767),
     f = n(981631),
     g = n(388032),
-    C = n(758570);
-function x(e) {
+    _ = n(758570);
+function C(e) {
     let { member: t } = e,
-        n = (0, r.e7)([u.Z], () => u.Z.getGuild(t.guildId), [t.guildId]),
-        x = (0, c.mh)(t.userId, t.guildId),
-        v = (0, c.mV)(t.userId, t.guildId),
-        _ = (0, c.LD)(t.userId),
-        I = (0, c.wi)(t.userId, t.guildId);
+        n = (0, a.e7)([u.Z], () => u.Z.getGuild(t.guildId), [t.guildId]),
+        C = (0, c.mh)(t.userId, t.guildId),
+        x = (0, c.mV)(t.userId, t.guildId),
+        v = (0, c.LD)(t.userId),
+        E = (0, c.wi)(t.userId, t.guildId);
     return (l.useEffect(() => {
         (0, o.zO)(t.guildId);
     }, [t.guildId]),
     null == n)
         ? null
-        : (0, i.jsx)(a.FormItem, {
+        : (0, i.jsx)(r.xJW, {
               title: g.intl.string(g.t['ldCE/v']),
-              titleClassName: C.infoTitle,
+              titleClassName: _.infoTitle,
               children: (0, i.jsxs)(m.WM, {
                   children: [
                       (0, i.jsx)(m._2, {
-                          icon: (0, i.jsx)(a.ShieldUserIcon, {
+                          icon: (0, i.jsx)(r.lZ8, {
                               size: 'custom',
                               width: m.Mn,
                               height: m.Mn
                           }),
-                          name: (0, i.jsx)(a.Text, {
+                          name: (0, i.jsx)(r.Text, {
                               variant: 'text-sm/medium',
                               color: 'text-normal',
                               children: g.intl.string(g.t.nzGai4)
                           }),
-                          description: x
-                              ? (0, i.jsx)(a.CheckmarkLargeBoldIcon, {
+                          description: C
+                              ? (0, i.jsx)(r.sV5, {
                                     size: 'custom',
                                     width: m.Mn,
                                     height: m.Mn,
-                                    color: a.tokens.colors.INFO_POSITIVE_FOREGROUND
+                                    color: r.TVs.colors.INFO_POSITIVE_FOREGROUND
                                 })
-                              : (0, i.jsx)(a.XLargeBoldIcon, {
+                              : (0, i.jsx)(r.CTb, {
                                     size: 'custom',
                                     width: m.Mn,
                                     height: m.Mn,
-                                    color: a.tokens.colors.INFO_DANGER_FOREGROUND
+                                    color: r.TVs.colors.INFO_DANGER_FOREGROUND
                                 })
                       }),
-                      v !== c.qc.NO_GATE &&
+                      x !== c.qc.NO_GATE &&
                           (0, i.jsx)(m._2, {
-                              icon: (0, i.jsx)(a.BookCheckIcon, {
+                              icon: (0, i.jsx)(r.snC, {
                                   size: 'custom',
                                   width: m.Mn,
                                   height: m.Mn
                               }),
-                              name: (0, i.jsx)(a.Text, {
+                              name: (0, i.jsx)(r.Text, {
                                   variant: 'text-sm/medium',
                                   color: 'text-normal',
                                   children: g.intl.string(g.t['93hqlp'])
                               }),
                               description:
-                                  v === c.qc.AGREED
-                                      ? (0, i.jsx)(a.CheckmarkLargeBoldIcon, {
+                                  x === c.qc.AGREED
+                                      ? (0, i.jsx)(r.sV5, {
                                             size: 'custom',
                                             width: m.Mn,
                                             height: m.Mn,
-                                            color: a.tokens.colors.INFO_POSITIVE_FOREGROUND
+                                            color: r.TVs.colors.INFO_POSITIVE_FOREGROUND
                                         })
-                                      : (0, i.jsx)(a.XLargeBoldIcon, {
+                                      : (0, i.jsx)(r.CTb, {
                                             size: 'custom',
                                             width: m.Mn,
                                             height: m.Mn,
-                                            color: a.tokens.colors.INFO_DANGER_FOREGROUND
+                                            color: r.TVs.colors.INFO_DANGER_FOREGROUND
                                         })
                           }),
                       (0, i.jsx)(m._2, {
-                          icon: (0, i.jsx)(a.ClydeIcon, {
+                          icon: (0, i.jsx)(r.gw7, {
                               size: 'custom',
                               color: 'currentColor',
                               width: m.Mn,
                               height: m.Mn
                           }),
-                          name: (0, i.jsx)(a.Text, {
+                          name: (0, i.jsx)(r.Text, {
                               variant: 'text-sm/medium',
                               color: 'text-normal',
                               children: g.intl.string(g.t.SaDIpK)
                           }),
-                          description: (0, i.jsx)(a.Text, {
+                          description: (0, i.jsx)(r.Text, {
                               variant: 'text-sm/medium',
                               color: 'text-normal',
-                              children: _
+                              children: v
                           })
                       }),
                       (0, i.jsx)(m._2, {
@@ -110,31 +106,31 @@ function x(e) {
                               guild: n,
                               size: s.Vj.Sizes.SMOL,
                               animate: !1,
-                              className: C.guildIcon
+                              className: _.guildIcon
                           }),
-                          name: (0, i.jsx)(a.Text, {
+                          name: (0, i.jsx)(r.Text, {
                               variant: 'text-sm/medium',
                               color: 'text-normal',
                               children: g.intl.string(g.t['NQJ+WF'])
                           }),
-                          description: (0, i.jsx)(a.Text, {
+                          description: (0, i.jsx)(r.Text, {
                               variant: 'text-sm/medium',
                               color: 'text-normal',
-                              children: I
+                              children: E
                           })
                       }),
                       (0, i.jsx)(m._2, {
-                          icon: (0, i.jsx)(a.GroupPlusIcon, {
+                          icon: (0, i.jsx)(r.ejJ, {
                               size: 'custom',
                               width: m.Mn,
                               height: m.Mn
                           }),
-                          name: (0, i.jsx)(a.Text, {
+                          name: (0, i.jsx)(r.Text, {
                               variant: 'text-sm/medium',
                               color: 'text-normal',
                               children: g.intl.string(g.t['eJOq+f'])
                           }),
-                          description: (0, i.jsx)(a.Text, {
+                          description: (0, i.jsx)(r.Text, {
                               variant: 'text-sm/medium',
                               color: 'text-normal',
                               children: (0, i.jsx)(d.ZP, {

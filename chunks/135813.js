@@ -1,11 +1,7 @@
-r.d(t, {
-    R: function () {
-        return a;
-    }
-});
-let a = (e) => {
-    let t = !1;
-    return (r) => {
-        !t && (e(r), (t = !0));
+a.d(e, { R: () => r });
+let r = (t) => {
+    let e = !1;
+    return (a) => {
+        e || (t(a), (e = !0));
     };
 };

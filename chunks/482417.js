@@ -1,40 +1,35 @@
-t.d(n, {
-    Z: function () {
-        return s;
-    }
-}),
-    t(47120);
-var l = t(423875),
-    i = t(740605),
-    r = t(206583),
-    a = t(616922),
-    o = t(388032);
-function s(e) {
+l.d(n, { Z: () => o }), l(47120);
+var t = l(423875),
+    i = l(740605),
+    r = l(206583),
+    a = l(616922),
+    s = l(388032);
+function o(e) {
     let n,
-        { entry: t, baseEntryData: s } = e,
-        c = t.extra.entries[0].media,
-        u = c.artists[0],
-        { title: d, provider: m, image_url: f } = c,
-        p = u.name,
-        h = {
-            onClick: () => (0, i.o)(a.Hw.TRACK, c.external_id),
-            ariaDescription: o.intl.formatToPlainString(o.t.xTsar6, { itemName: d })
-        },
+        { entry: l, baseEntryData: o } = e,
+        u = l.extra.entries[0].media,
+        c = u.artists[0],
+        { title: d, provider: m, image_url: h } = u,
+        p = c.name,
         x = {
-            onClick: () => (0, i.o)(a.Hw.ARTIST, u.external_id),
-            ariaDescription: o.intl.formatToPlainString(o.t.xTsar6, { itemName: p })
+            onClick: () => (0, i.o)(a.Hw.TRACK, u.external_id),
+            ariaDescription: s.intl.formatToPlainString(s.t.xTsar6, { itemName: d })
+        },
+        v = {
+            onClick: () => (0, i.o)(a.Hw.ARTIST, c.external_id),
+            ariaDescription: s.intl.formatToPlainString(s.t.xTsar6, { itemName: p })
         };
     return (
-        m === l.p.SPOTIFY && (n = { type: r.kG.SPOTIFY }),
+        m === t.p.SPOTIFY && (n = { type: r.kG.SPOTIFY }),
         {
-            ...s,
+            ...o,
             title: d,
             subtitle: p,
-            thumbnailUrl: f,
-            titleClickable: h,
-            subtitleClickable: x,
-            thumbnailClickable: h,
-            userDescription: o.t.CcVI1d,
+            thumbnailUrl: h,
+            titleClickable: x,
+            subtitleClickable: v,
+            thumbnailClickable: x,
+            userDescription: s.t.CcVI1d,
             providerIconProps: n
         }
     );

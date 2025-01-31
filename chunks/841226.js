@@ -31,9 +31,7 @@ var h = {
             h = t.value,
             g = (function (t, e) {
                 var r = {};
-                for (var o in t) {
-                    if (!(e.indexOf(o) >= 0)) Object.prototype.hasOwnProperty.call(t, o) && (r[o] = t[o]);
-                }
+                for (var o in t) !(e.indexOf(o) >= 0) && Object.prototype.hasOwnProperty.call(t, o) && (r[o] = t[o]);
                 return r;
             })(t, ['bgColor', 'fgColor', 'level', 'size', 'value']),
             c = new n.default(-1, i.default[u]);

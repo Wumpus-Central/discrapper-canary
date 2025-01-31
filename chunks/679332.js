@@ -1,53 +1,49 @@
-r.d(n, {
-    Z: function () {
-        return f;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(481060),
-    o = r(100527),
-    s = r(906732),
-    l = r(299206),
-    u = r(785717),
-    c = r(475413),
-    d = r(388032);
-function f(e) {
-    let { user: n, viewProfileItem: r } = e,
-        { trackUserProfileAction: f } = (0, u.KZ)(),
-        { analyticsLocations: p } = (0, s.ZP)(o.Z.USER_PROFILE_OVERFLOW_MENU),
-        h = [
-            [r],
+n.d(t, { Z: () => d });
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(100527),
+    s = n(906732),
+    o = n(299206),
+    l = n(785717),
+    u = n(475413),
+    c = n(388032);
+function d(e) {
+    let { user: t, viewProfileItem: n } = e,
+        { trackUserProfileAction: d } = (0, l.KZ)(),
+        { analyticsLocations: f } = (0, s.ZP)(a.Z.USER_PROFILE_OVERFLOW_MENU),
+        _ = [
+            [n],
             [
-                (0, l.Z)({
-                    id: n.id,
-                    label: d.intl.string(d.t['/AXYnJ']),
+                (0, o.Z)({
+                    id: t.id,
+                    label: c.intl.string(c.t['/AXYnJ']),
                     onSuccess: () =>
-                        f({
+                        d({
                             action: 'COPY_USER_ID',
-                            analyticsLocations: p
+                            analyticsLocations: f
                         })
                 })
             ]
         ];
-    return h.every((e) => e.every((e) => null == e))
+    return _.every((e) => e.every((e) => null == e))
         ? null
-        : (0, i.jsx)(a.Popout, {
+        : (0, i.jsx)(r.yRy, {
               renderPopout: (e) => {
-                  let { closePopout: n } = e;
-                  return (0, i.jsx)(a.Menu, {
+                  let { closePopout: t } = e;
+                  return (0, i.jsx)(r.v2r, {
                       navId: 'non-user-bot-profile-overflow-menu',
                       onSelect: void 0,
-                      onClose: n,
-                      'aria-label': d.intl.string(d.t.AXIHpa),
-                      children: h.map((e, n) => (0, i.jsx)(a.MenuGroup, { children: e.map((e) => e) }, n))
+                      onClose: t,
+                      'aria-label': c.intl.string(c.t.AXIHpa),
+                      children: _.map((e, t) => (0, i.jsx)(r.kSQ, { children: e.map((e) => e) }, t))
                   });
               },
               children: (e) =>
-                  (0, i.jsx)(c.oY, {
+                  (0, i.jsx)(u.oY, {
                       action: 'PRESS_OPTIONS',
-                      icon: a.MoreHorizontalIcon,
-                      tooltipText: d.intl.string(d.t.UKOtz8),
+                      icon: r.xhG,
+                      tooltipText: c.intl.string(c.t.UKOtz8),
                       ...e
                   })
           });

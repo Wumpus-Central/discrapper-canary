@@ -1,9 +1,10 @@
-e.exports = {
-    container: 'container_bc01cf',
-    title: 'title_bc01cf',
-    textContainer: 'textContainer_bc01cf',
-    username: 'username_bc01cf',
-    statsText: 'statsText_bc01cf',
-    heroArtContainer: 'heroArtContainer_bc01cf',
-    heroArt: 'heroArt_bc01cf'
+var i = {
+    container: 'container_cfd26e',
+    title: 'title_cfd26e',
+    textContainer: 'textContainer_cfd26e',
+    username: 'username_cfd26e',
+    statsText: 'statsText_cfd26e',
+    heroArtContainer: 'heroArtContainer_cfd26e',
+    heroArt: 'heroArt_cfd26e'
 };
+e.exports = i;

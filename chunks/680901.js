@@ -1,10 +1,11 @@
 e.exports = {
-    container: 'container_ce6af6',
-    content: 'content_ce6af6',
-    noClipsText: 'noClipsText_ce6af6 commonText_ce6af6',
-    noSearchResultsText: 'noSearchResultsText_ce6af6 commonText_ce6af6',
-    noSearchResultsImage: 'noSearchResultsImage_ce6af6',
-    noClipsImage: 'noClipsImage_ce6af6',
-    keybindHintKeys: 'keybindHintKeys_ce6af6',
-    keybindShortcut: 'keybindShortcut_ce6af6'
+    container: 'container_ea79f0',
+    content: 'content_ea79f0',
+    commonText: 'commonText_ea79f0',
+    noClipsText: 'noClipsText_ea79f0 commonText_ea79f0',
+    noSearchResultsText: 'noSearchResultsText_ea79f0 commonText_ea79f0',
+    noSearchResultsImage: 'noSearchResultsImage_ea79f0',
+    noClipsImage: 'noClipsImage_ea79f0',
+    keybindHintKeys: 'keybindHintKeys_ea79f0',
+    keybindShortcut: 'keybindShortcut_ea79f0'
 };

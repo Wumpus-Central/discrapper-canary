@@ -1,1 +1,1 @@
-e.exports = { cursorPointer: 'cursorPointer_aaab09' };
+e.exports = { cursorPointer: 'cursorPointer_c8743f' };

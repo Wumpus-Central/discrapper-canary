@@ -1,95 +1,91 @@
-e.d(n, {
-    Z: function () {
-        return k;
-    }
-});
-var l = e(200651);
-e(192379);
-var i = e(120356),
-    o = e.n(i),
-    s = e(442837),
-    r = e(481060),
-    u = e(239091),
-    c = e(592125),
-    a = e(430824),
-    d = e(924301),
-    h = e(894017),
-    m = e(854698),
-    C = e(390966),
-    g = e(765305),
-    x = e(388032),
-    v = e(37232);
-function k(t) {
-    let { recurrenceId: n, originalScheduledStartTime: i, guildEventId: k, onClick: p, isActive: B } = t,
-        N = (0, s.e7)([d.ZP], () => d.ZP.getGuildScheduledEvent(k)),
-        j = (0, h.Z)(n, null == N ? void 0 : N.id),
-        f = (0, s.e7)([a.Z], () => a.Z.getGuild(null == N ? void 0 : N.guild_id)),
-        L = (0, s.e7)([c.Z], () => c.Z.getChannel(null == N ? void 0 : N.channel_id));
+l.d(n, { Z: () => C });
+var e = l(200651);
+l(192379);
+var i = l(120356),
+    s = l.n(i),
+    r = l(442837),
+    o = l(481060),
+    a = l(239091),
+    u = l(592125),
+    c = l(430824),
+    d = l(924301),
+    x = l(894017),
+    k = l(854698),
+    h = l(390966),
+    m = l(765305),
+    z = l(388032),
+    g = l(37232);
+function C(t) {
+    let { recurrenceId: n, originalScheduledStartTime: i, guildEventId: C, onClick: v, isActive: j } = t,
+        N = (0, r.e7)([d.ZP], () => d.ZP.getGuildScheduledEvent(C)),
+        p = (0, x.Z)(n, null == N ? void 0 : N.id),
+        L = (0, r.e7)([c.Z], () => c.Z.getGuild(null == N ? void 0 : N.guild_id)),
+        _ = (0, r.e7)([u.Z], () => u.Z.getChannel(null == N ? void 0 : N.channel_id));
     if (null == N) return null;
-    let { is_canceled: _ = !1 } = null != j ? j : {},
-        S = (null == j ? void 0 : j.scheduled_start_time) != null ? new Date(null == j ? void 0 : j.scheduled_start_time) : i,
-        E = (0, m.DK)(N),
-        z = _ ? g.p1.CANCELED : g.p1.SCHEDULED;
-    E === n && (z = N.status);
-    let I = (null == N ? void 0 : N.scheduled_start_time) != null ? (0, m.lh)(j, S, new Date(null == N ? void 0 : N.scheduled_start_time)) : null,
-        b = (t) => {
+    let { is_canceled: E = !1 } = null != p ? p : {},
+        S = (null == p ? void 0 : p.scheduled_start_time) != null ? new Date(null == p ? void 0 : p.scheduled_start_time) : i,
+        f = (0, k.DK)(N),
+        b = E ? m.p1.CANCELED : m.p1.SCHEDULED;
+    f === n && (b = N.status);
+    let Z = (null == N ? void 0 : N.scheduled_start_time) != null ? (0, k.lh)(p, S, new Date(null == N ? void 0 : N.scheduled_start_time)) : null,
+        I = (t) => {
             t.stopPropagation(),
-                null != f &&
-                    (0, u.jW)(t, async () => {
-                        let { default: t } = await Promise.all([e.e('15450'), e.e('37133'), e.e('62318')]).then(e.bind(e, 215269));
-                        return (e) =>
-                            (0, l.jsx)(t, {
+                null != L &&
+                    (0, a.jW)(t, async () => {
+                        let { default: t } = await Promise.all([l.e('99272'), l.e('10472'), l.e('62318')]).then(l.bind(l, 215269));
+                        return (l) =>
+                            (0, e.jsx)(t, {
                                 guildEventId: N.id,
                                 recurrenceId: n,
-                                channel: L,
-                                guild: f,
+                                channel: _,
+                                guild: L,
                                 isRecurrenceItem: !0,
-                                ...e
+                                ...l
                             });
                     });
         };
-    return (0, l.jsxs)(r.ClickableContainer, {
-        className: o()(v.container, {
-            [v.canceled]: _,
-            [v.clickable]: null != p,
-            [v.active]: B
+    return (0, e.jsxs)(o.kL8, {
+        className: s()(g.container, {
+            [g.canceled]: E,
+            [g.clickable]: null != v,
+            [g.active]: j
         }),
         onClick: (t) => {
-            t.stopPropagation(), !_ && (null == p || p(n));
+            t.stopPropagation(), E || null == v || v(n);
         },
-        onContextMenu: b,
+        onContextMenu: I,
         'aria-label': '',
         children: [
-            (0, l.jsx)(C.z, {
+            (0, e.jsx)(h.z, {
                 startTime: S.toISOString(),
-                status: null != I ? I : z,
+                status: null != Z ? Z : b,
                 eventType: N.entity_type,
                 guildEventId: N.id,
                 recurrenceId: n,
-                className: v.timeStatus
+                className: g.timeStatus
             }),
-            _ &&
-                (0, l.jsx)(r.Text, {
+            E &&
+                (0, e.jsx)(o.Text, {
                     variant: 'text-sm/semibold',
                     color: 'text-danger',
-                    className: v.canceledStatus,
-                    children: x.intl.string(x.t.fyBVRk)
+                    className: g.canceledStatus,
+                    children: z.intl.string(z.t.fyBVRk)
                 }),
-            (0, l.jsx)(r.Tooltip, {
-                text: x.intl.string(x.t.UKOtz8),
+            (0, e.jsx)(o.ua7, {
+                text: z.intl.string(z.t.UKOtz8),
                 position: 'top',
-                'aria-label': x.intl.string(x.t.bt75u7),
+                'aria-label': z.intl.string(z.t.bt75u7),
                 children: (t) =>
-                    (0, l.jsx)(r.Clickable, {
+                    (0, e.jsx)(o.P3F, {
                         ...t,
-                        onClick: b,
-                        className: v.iconButton,
-                        children: (0, l.jsx)(r.MoreHorizontalIcon, {
+                        onClick: I,
+                        className: g.iconButton,
+                        children: (0, e.jsx)(o.xhG, {
                             size: 'custom',
                             color: 'currentColor',
                             width: 20,
                             height: 20,
-                            className: v.icon
+                            className: g.icon
                         })
                     })
             })

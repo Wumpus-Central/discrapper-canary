@@ -1,6 +1,7 @@
-e.exports = {
-    wrapper: 'wrapper_cdbcb1',
-    icon: 'icon_cdbcb1',
-    title: 'title_cdbcb1',
-    subtitle: 'subtitle_cdbcb1'
+var i = {
+    wrapper: 'wrapper_c99fc3',
+    icon: 'icon_c99fc3',
+    title: 'title_c99fc3',
+    subtitle: 'subtitle_c99fc3'
 };
+e.exports = i;

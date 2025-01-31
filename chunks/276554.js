@@ -1,9 +1,5 @@
-r.d(n, {
-    R: function () {
-        return a;
-    }
-});
-let i = (0, r(818083).B)({
+n.d(t, { R: () => r });
+let i = (0, n(818083).B)({
     kind: 'user',
     id: '2023-10_social_proofing_message_nitro_badge',
     label: 'Social Proofing Message Nitro Badge',
@@ -30,7 +26,7 @@ let i = (0, r(818083).B)({
         }
     ]
 });
-function a(e, n) {
-    let r = i.getCurrentConfig({ location: n }, { autoTrackExposure: !0 });
-    return r.enabled && (!r.hideNitroBadgeWhenRoleBadgePresent || (r.hideNitroBadgeWhenRoleBadgePresent && !e));
+function r(e, t) {
+    let n = i.getCurrentConfig({ location: t }, { autoTrackExposure: !0 });
+    return n.enabled && (!n.hideNitroBadgeWhenRoleBadgePresent || (n.hideNitroBadgeWhenRoleBadgePresent && !e));
 }

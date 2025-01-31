@@ -1,27 +1,17 @@
 n.d(t, {
-    B2: function () {
-        return g;
-    },
-    Ov: function () {
-        return f;
-    },
-    Qn: function () {
-        return p;
-    },
-    _o: function () {
-        return m;
-    },
-    pd: function () {
-        return h;
-    }
+    B2: () => g,
+    Ov: () => f,
+    Qn: () => p,
+    _o: () => m,
+    pd: () => h
 }),
     n(47120),
     n(411104),
     n(653041);
 var i = n(149765),
     l = n(399606),
-    r = n(271383),
-    a = n(430824),
+    a = n(271383),
+    r = n(430824),
     s = n(594174),
     o = n(700785),
     c = n(981631),
@@ -38,25 +28,25 @@ function f(e, t) {
     return e === t;
 }
 function g(e, t, n) {
-    let d = (0, l.e7)([a.Z], () => a.Z.getGuild(t), [t]);
+    let d = (0, l.e7)([r.Z], () => r.Z.getGuild(t), [t]);
     return (0, l.e7)(
-        [r.ZP, s.default, a.Z],
+        [a.ZP, s.default, r.Z],
         () => {
             let l = {},
-                u = r.ZP.getMember(t, e),
+                u = a.ZP.getMember(t, e),
                 h = s.default.getUser(e);
             if (null == d || null == u || null == h) return l;
-            let p = a.Z.getRole(d.id, d.getEveryoneRoleId()),
+            let p = r.Z.getRole(d.id, d.getEveryoneRoleId()),
                 m = o.uB({
                     user: h,
                     context: d
                 });
             for (let e of n) {
                 let t = c.Plq[e];
-                if (!!i.e$(m, t)) {
+                if (i.e$(m, t)) {
                     for (let n of ((l[e] = []), u.roles)) {
-                        let r = a.Z.getRole(d.id, n);
-                        if (null != r) (i.e$(r.permissions, c.Plq.ADMINISTRATOR) || i.Db(r.permissions, t)) && l[e].push(r.id);
+                        let a = r.Z.getRole(d.id, n);
+                        null != a && (i.e$(a.permissions, c.Plq.ADMINISTRATOR) || i.Db(a.permissions, t)) && l[e].push(a.id);
                     }
                     null != p && (i.e$(p.permissions, c.Plq.ADMINISTRATOR) || i.Db(p.permissions, t)) && l[e].push(p.id), d.isOwner(h) && l[e].push(h.id);
                 }

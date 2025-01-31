@@ -1,8 +1,4 @@
-n.d(e, {
-    q: function () {
-        return l;
-    }
-});
+n.d(e, { q: () => l });
 let a = (0, n(818083).B)({
     kind: 'user',
     id: '2025-01_user_profile_custom_status_default_duration',

@@ -1,10 +1,11 @@
-e.exports = {
-    modalHeader: 'modalHeader_c5e09c',
-    closeBtn: 'closeBtn_c5e09c',
-    asset: 'asset_c5e09c',
-    modalContent: 'modalContent_c5e09c',
-    completedModalContent: 'completedModalContent_c5e09c',
-    choiceContainer: 'choiceContainer_c5e09c',
-    closeButtonContainer: 'closeButtonContainer_c5e09c',
-    progressOverlay: 'progressOverlay_c5e09c'
+var i = {
+    modalHeader: 'modalHeader_c28af8',
+    closeBtn: 'closeBtn_c28af8',
+    asset: 'asset_c28af8',
+    modalContent: 'modalContent_c28af8',
+    completedModalContent: 'completedModalContent_c28af8',
+    choiceContainer: 'choiceContainer_c28af8',
+    closeButtonContainer: 'closeButtonContainer_c28af8',
+    progressOverlay: 'progressOverlay_c28af8'
 };
+e.exports = i;

@@ -1,10 +1,6 @@
 n.d(t, {
-    v: function () {
-        return l;
-    },
-    z: function () {
-        return r;
-    }
+    v: () => l,
+    z: () => a
 });
 var i = n(570140);
 function l(e) {
@@ -13,7 +9,7 @@ function l(e) {
         muted: e
     });
 }
-function r(e) {
+function a(e) {
     i.Z.dispatch({
         type: 'STAGE_MUSIC_PLAY',
         play: e

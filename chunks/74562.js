@@ -1,52 +1,48 @@
-t.d(e, {
-    Z: function () {
-        return v;
-    }
-});
-var i = t(200651);
-t(192379);
-var l = t(442837),
-    r = t(481060),
-    a = t(434404),
-    o = t(147754),
-    c = t(939863),
-    s = t(430824),
-    u = t(496675),
-    d = t(981631),
-    g = t(388032),
-    h = t(198394);
-function v(n) {
-    let { guildId: e, onClose: t } = n,
+i.d(n, { Z: () => v });
+var t = i(200651);
+i(192379);
+var l = i(442837),
+    a = i(481060),
+    r = i(434404),
+    o = i(147754),
+    s = i(939863),
+    c = i(430824),
+    d = i(496675),
+    u = i(981631),
+    g = i(388032),
+    h = i(198394);
+function v(e) {
+    let { guildId: n, onClose: i } = e,
         { showHubEventsList: v } = o.Z.useExperiment(
             {
-                guildId: e,
+                guildId: n,
                 location: '6597ca_1'
             },
             { autoTrackExposure: !1 }
         ),
-        m = (0, l.e7)(
-            [s.Z, u.Z],
-            () => {
-                let n = s.Z.getGuild(e);
-                return u.Z.can(d.Plq.MANAGE_ROLES, n);
-            },
-            [e]
-        ),
         x = (0, l.e7)(
-            [s.Z],
+            [c.Z, d.Z],
             () => {
-                let n = s.Z.getGuild(e);
-                return v && (null == n ? void 0 : n.hasFeature(d.oNc.HUB));
+                let e = c.Z.getGuild(n);
+                return d.Z.can(u.Plq.MANAGE_ROLES, e);
             },
-            [e, v]
+            [n]
+        ),
+        Z = (0, l.e7)(
+            [c.Z],
+            () => {
+                let e = c.Z.getGuild(n);
+                return v && (null == e ? void 0 : e.hasFeature(u.oNc.HUB));
+            },
+            [n, v]
         );
-    return (0, i.jsxs)('div', {
+    return (0, t.jsxs)('div', {
         className: h.container,
         children: [
-            (0, i.jsx)(c.Z, {
-                children: (0, i.jsx)('div', {
+            (0, t.jsx)(s.Z, {
+                children: (0, t.jsx)('div', {
                     className: h.circle,
-                    children: (0, i.jsx)(r.CalendarIcon, {
+                    children: (0, t.jsx)(a.Que, {
                         size: 'custom',
                         color: 'currentColor',
                         height: 40,
@@ -55,26 +51,26 @@ function v(n) {
                     })
                 })
             }),
-            (0, i.jsx)(r.Heading, {
+            (0, t.jsx)(a.X6q, {
                 color: 'header-primary',
                 variant: 'heading-xl/semibold',
                 className: h.title,
-                children: x ? g.intl.string(g.t.RhXVpa) : g.intl.string(g.t['WgZ+3N'])
+                children: Z ? g.intl.string(g.t.RhXVpa) : g.intl.string(g.t['WgZ+3N'])
             }),
-            (0, i.jsx)(r.Text, {
+            (0, t.jsx)(a.Text, {
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
                 className: h.subtitle,
-                children: x ? g.intl.string(g.t['6hktHB']) : g.intl.string(g.t['v/S/PD'])
+                children: Z ? g.intl.string(g.t['6hktHB']) : g.intl.string(g.t['v/S/PD'])
             }),
-            m &&
-                (0, i.jsx)(r.Text, {
+            x &&
+                (0, t.jsx)(a.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
                     className: h.roleTip,
                     children: g.intl.format(g.t['K+DH2t'], {
                         onClick: () => {
-                            a.Z.open(e, d.pNK.ROLES), t();
+                            r.Z.open(n, u.pNK.ROLES), i();
                         }
                     })
                 })

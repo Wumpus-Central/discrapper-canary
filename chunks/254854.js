@@ -1,14 +1,15 @@
-var i = r(570140);
-n.Z = {
-    show(e, n, r, a, o) {
+n.d(t, { Z: () => r });
+var i = n(570140);
+let r = {
+    show(e, t, n, r, a) {
         i.Z.dispatch({
             type: 'NOTICE_SHOW',
             notice: {
-                id: o,
+                id: a,
                 type: e,
-                message: n,
-                buttonText: r,
-                callback: a
+                message: t,
+                buttonText: n,
+                callback: r
             }
         });
     },

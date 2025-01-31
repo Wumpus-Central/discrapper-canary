@@ -1,41 +1,37 @@
-r.d(n, {
-    Z: function () {
-        return _;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(512722),
-    o = r.n(a),
-    s = r(442837),
-    l = r(481060),
-    u = r(410575),
-    c = r(594174),
-    d = r(907285),
-    f = r(737013),
-    p = r(981631),
-    h = r(388032);
-function _(e) {
-    let { onClose: n, onSelect: r } = e,
-        a = (0, s.e7)([c.default], () => {
-            let e = c.default.getCurrentUser();
-            return o()(null != e, 'VideoDeviceMenu: currentUser cannot be undefined'), e;
+n.d(t, { Z: () => p });
+var i = n(200651);
+n(192379);
+var r = n(512722),
+    a = n.n(r),
+    s = n(442837),
+    o = n(481060),
+    l = n(410575),
+    u = n(594174),
+    c = n(907285),
+    d = n(737013),
+    f = n(981631),
+    _ = n(388032);
+function p(e) {
+    let { onClose: t, onSelect: n } = e,
+        r = (0, s.e7)([u.default], () => {
+            let e = u.default.getCurrentUser();
+            return a()(null != e, 'VideoDeviceMenu: currentUser cannot be undefined'), e;
         }),
-        _ = (0, d.Z)(),
-        m = (0, f.Z)(a.id);
-    return (0, i.jsx)(u.Z, {
-        object: p.qAy.CONTEXT_MENU,
-        children: (0, i.jsxs)(l.Menu, {
-            onClose: n,
+        p = (0, c.Z)(),
+        h = (0, d.Z)(r.id);
+    return (0, i.jsx)(l.Z, {
+        object: f.qAy.CONTEXT_MENU,
+        children: (0, i.jsxs)(o.v2r, {
+            onClose: t,
             navId: 'video-device-context',
-            'aria-label': h.intl.string(h.t.F122Gx),
-            onSelect: r,
+            'aria-label': _.intl.string(_.t.F122Gx),
+            onSelect: n,
             children: [
-                (0, i.jsx)(l.MenuGroup, {
-                    label: h.intl.string(h.t.F122Gx),
-                    children: _
+                (0, i.jsx)(o.kSQ, {
+                    label: _.intl.string(_.t.F122Gx),
+                    children: p
                 }),
-                (0, i.jsx)(l.MenuGroup, { children: m })
+                (0, i.jsx)(o.kSQ, { children: h })
             ]
         })
     });

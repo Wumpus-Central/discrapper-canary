@@ -1,32 +1,28 @@
-A.d(t, {
-    B: function () {
-        return l;
-    }
-});
-var n = A(200651);
-A(192379);
-var r = A(481060),
-    a = A(120651),
-    i = A(388032);
-function l(e, t, A) {
-    let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-    (0, a.Z)({
-        title: e,
+t.d(e, { B: () => i });
+var n = t(200651);
+t(192379);
+var a = t(481060),
+    l = t(120651),
+    r = t(388032);
+function i(A, e, t) {
+    let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    (0, l.Z)({
+        title: A,
         body:
-            'string' == typeof t
-                ? t
-                : i.intl.format(t, {
-                      highlightHook: (e) =>
-                          (0, n.jsx)(r.Text, {
+            'string' == typeof e
+                ? e
+                : r.intl.format(e, {
+                      highlightHook: (A) =>
+                          (0, n.jsx)(a.Text, {
                               variant: 'text-md/normal',
                               color: 'text-normal',
                               style: { display: 'inline' },
-                              children: e
+                              children: A
                           }),
-                      ...l
+                      ...i
                   }),
-        cta: i.intl.string(i.t['NX+WJC']),
+        cta: r.intl.string(r.t['NX+WJC']),
         onConfirm: () => {},
-        iconVariant: A
+        iconVariant: t
     });
 }

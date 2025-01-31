@@ -1,69 +1,70 @@
+n.d(t, { Z: () => g });
 var i,
-    a = r(442837),
-    o = r(846519),
-    s = r(570140),
-    l = r(981631);
-function u(e, n, r) {
+    r = n(442837),
+    a = n(846519),
+    s = n(570140),
+    o = n(981631);
+function l(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let c = {},
-    d = {},
-    f = 120000;
-function p(e) {
-    let { applicationId: n, activityType: r } = e,
-        i = c[n];
-    if (null == i || i[r] !== l.OcF.FAILED) return !1;
-    delete i[r];
+let u = {},
+    c = {},
+    d = 120000;
+function f(e) {
+    let { applicationId: t, activityType: n } = e,
+        i = u[t];
+    if (null == i || i[n] !== o.OcF.FAILED) return !1;
+    delete i[n];
 }
-function h(e, n, r) {
+function _(e, t, n) {
     var i;
-    let { applicationId: a } = r,
-        u = null !== (i = c[a]) && void 0 !== i ? i : {};
-    if (((u[n] = e), (c[a] = u), !__OVERLAY__ && e === l.OcF.FAILED)) {
-        null != d[a] && d[a].stop();
-        let e = new o.V7();
-        e.start(f, () =>
+    let { applicationId: r } = n,
+        l = null !== (i = u[r]) && void 0 !== i ? i : {};
+    if (((l[t] = e), (u[r] = l), !__OVERLAY__ && e === o.OcF.FAILED)) {
+        null != c[r] && c[r].stop();
+        let e = new a.V7();
+        e.start(d, () =>
             s.Z.dispatch({
                 type: 'ACTIVITY_LAUNCH_FAIL',
-                applicationId: a,
-                activityType: n
+                applicationId: r,
+                activityType: t
             })
         ),
-            (d[a] = e);
+            (c[r] = e);
     }
 }
-function _(e) {
-    let { activityLauncherStates: n } = e;
-    c = { ...n };
+function p(e) {
+    let { activityLauncherStates: t } = e;
+    u = { ...t };
 }
-function m(e) {
-    return h(l.OcF.COMPLETE, l.mFx.JOIN, e);
+function h(e) {
+    return _(o.OcF.COMPLETE, o.mFx.JOIN, e);
 }
-class g extends (i = a.ZP.Store) {
-    getState(e, n) {
-        let r = c[e];
-        return null == r ? void 0 : r[n];
+class m extends (i = r.ZP.Store) {
+    getState(e, t) {
+        let n = u[e];
+        return null == n ? void 0 : n[t];
     }
     getStates() {
-        return c;
+        return u;
     }
 }
-u(g, 'displayName', 'ActivityLauncherStore'),
-    (n.Z = new g(s.Z, {
-        OVERLAY_INITIALIZE: _,
-        ACTIVITY_JOIN_LOADING: (e) => h(l.OcF.LOADING, l.mFx.JOIN, e),
-        ACTIVITY_JOIN_FAILED: (e) => h(l.OcF.FAILED, l.mFx.JOIN, e),
-        ACTIVITY_JOIN: m,
-        EMBEDDED_ACTIVITY_CLOSE: m,
-        ACTIVITY_LAUNCH_FAIL: p
-    }));
+l(m, 'displayName', 'ActivityLauncherStore');
+let g = new m(s.Z, {
+    OVERLAY_INITIALIZE: p,
+    ACTIVITY_JOIN_LOADING: (e) => _(o.OcF.LOADING, o.mFx.JOIN, e),
+    ACTIVITY_JOIN_FAILED: (e) => _(o.OcF.FAILED, o.mFx.JOIN, e),
+    ACTIVITY_JOIN: h,
+    EMBEDDED_ACTIVITY_CLOSE: h,
+    ACTIVITY_LAUNCH_FAIL: f
+});

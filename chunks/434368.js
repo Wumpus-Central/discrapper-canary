@@ -1,66 +1,62 @@
-n.d(t, {
-    Z: function () {
-        return b;
-    }
-});
-var l = n(200651),
-    o = n(192379),
-    i = n(498607),
-    a = n.n(i),
-    r = n(399606),
-    s = n(481060),
-    c = n(203893),
-    C = n(910693),
-    d = n(893966),
-    u = n(527379),
-    m = n(981631),
-    h = n(388032),
-    x = n(389173);
-function b(e) {
-    let { guildId: t, onClose: n } = e,
-        i = (0, r.e7)([d.Z], () => d.Z.getSearchStateByGuildId(t), [t], a()),
-        b = (0, C.dW)(t),
-        f = o.useCallback(() => {
-            !i.requireUnusualDmActivity && b(C.aY.UNUSUAL_DM_ACTIVITY),
+l.d(t, { Z: () => g });
+var n = l(200651),
+    a = l(192379),
+    i = l(498607),
+    o = l.n(i),
+    s = l(399606),
+    r = l(481060),
+    c = l(203893),
+    C = l(910693),
+    d = l(893966),
+    u = l(527379),
+    m = l(981631),
+    h = l(388032),
+    x = l(389173);
+function g(e) {
+    let { guildId: t, onClose: l } = e,
+        i = (0, s.e7)([d.Z], () => d.Z.getSearchStateByGuildId(t), [t], o()),
+        g = (0, C.dW)(t),
+        H = a.useCallback(() => {
+            i.requireUnusualDmActivity || g(C.aY.UNUSUAL_DM_ACTIVITY),
                 (0, u.Dr)(t, {
                     ...i,
                     requireUnusualDmActivity: !i.requireUnusualDmActivity
                 });
-        }, [t, i, b]),
-        g = o.useCallback(() => {
-            !i.requireCommunicationDisabled && b(C.aY.COMMUNICATION_DISABLED),
+        }, [t, i, g]),
+        b = a.useCallback(() => {
+            i.requireCommunicationDisabled || g(C.aY.COMMUNICATION_DISABLED),
                 (0, u.Dr)(t, {
                     ...i,
                     requireCommunicationDisabled: !i.requireCommunicationDisabled
                 });
-        }, [t, i, b]),
-        p = o.useCallback(() => {
-            !i.requireUnusualAccountActivity && b(C.aY.UNUSUAL_ACCOUNT_ACTIVITY),
+        }, [t, i, g]),
+        p = a.useCallback(() => {
+            i.requireUnusualAccountActivity || g(C.aY.UNUSUAL_ACCOUNT_ACTIVITY),
                 (0, u.Dr)(t, {
                     ...i,
                     requireUnusualAccountActivity: !i.requireUnusualAccountActivity
                 });
-        }, [t, i, b]),
-        H = o.useCallback(() => {
-            !i.requireUsernameQuarantined && b(C.aY.USERNAME_QUARANTINED),
+        }, [t, i, g]),
+        _ = a.useCallback(() => {
+            i.requireUsernameQuarantined || g(C.aY.USERNAME_QUARANTINED),
                 (0, u.Dr)(t, {
                     ...i,
                     requireUsernameQuarantined: !i.requireUsernameQuarantined
                 });
-        }, [t, i, b]);
-    return (0, l.jsx)(s.Menu, {
+        }, [t, i, g]);
+    return (0, n.jsx)(r.v2r, {
         navId: 'member-safety-flags',
-        onClose: n,
+        onClose: l,
         'aria-label': h.intl.string(h.t.k9m8Rk),
         onSelect: m.dG4,
-        children: (0, l.jsxs)(s.MenuGroup, {
+        children: (0, n.jsxs)(r.kSQ, {
             children: [
-                (0, l.jsx)(s.MenuCheckboxItem, {
+                (0, n.jsx)(r.S89, {
                     id: 'toggle-require-unusual-dm-activity',
-                    label: (0, l.jsxs)('div', {
+                    label: (0, n.jsxs)('div', {
                         className: x.checkboxLabel,
                         children: [
-                            (0, l.jsx)(s.ChatWarningIcon, {
+                            (0, n.jsx)(r.b6m, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 16,
@@ -70,15 +66,15 @@ function b(e) {
                             h.intl.string(h.t.ZRnONz)
                         ]
                     }),
-                    action: f,
+                    action: H,
                     checked: i.requireUnusualDmActivity
                 }),
-                (0, l.jsx)(s.MenuCheckboxItem, {
+                (0, n.jsx)(r.S89, {
                     id: 'toggle-require-communication-disabled',
-                    label: (0, l.jsxs)('div', {
+                    label: (0, n.jsxs)('div', {
                         className: x.checkboxLabel,
                         children: [
-                            (0, l.jsx)(s.ClockWarningIcon, {
+                            (0, n.jsx)(r.YlB, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 16,
@@ -88,17 +84,17 @@ function b(e) {
                             h.intl.string(h.t.z3wbj4)
                         ]
                     }),
-                    action: g,
+                    action: b,
                     checked: i.requireCommunicationDisabled
                 }),
-                (0, l.jsxs)(l.Fragment, {
+                (0, n.jsxs)(n.Fragment, {
                     children: [
-                        (0, l.jsx)(s.MenuCheckboxItem, {
+                        (0, n.jsx)(r.S89, {
                             id: 'toggle-require-unusual-account-activity',
-                            label: (0, l.jsxs)('div', {
+                            label: (0, n.jsxs)('div', {
                                 className: x.checkboxLabel,
                                 children: [
-                                    (0, l.jsx)(c.Z, {
+                                    (0, n.jsx)(c.Z, {
                                         width: 16,
                                         height: 16,
                                         className: x.unusualAccountActivityLabelIcon
@@ -109,12 +105,12 @@ function b(e) {
                             action: p,
                             checked: i.requireUnusualAccountActivity
                         }),
-                        (0, l.jsx)(s.MenuCheckboxItem, {
+                        (0, n.jsx)(r.S89, {
                             id: 'toggle-require-username-quarantined',
-                            label: (0, l.jsxs)('div', {
+                            label: (0, n.jsxs)('div', {
                                 className: x.checkboxLabel,
                                 children: [
-                                    (0, l.jsx)(s.ChatXIcon, {
+                                    (0, n.jsx)(r.ics, {
                                         size: 'custom',
                                         color: 'currentColor',
                                         width: 16,
@@ -124,7 +120,7 @@ function b(e) {
                                     h.intl.string(h.t.Jloklp)
                                 ]
                             }),
-                            action: H,
+                            action: _,
                             checked: i.requireUsernameQuarantined
                         })
                     ]

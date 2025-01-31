@@ -1,51 +1,45 @@
-r.d(n, {
-    ZP: function () {
-        return h;
-    },
-    cs: function () {
-        return _;
-    },
-    pe: function () {
-        return p;
-    }
-});
-var i = r(789020);
-var a = r(653041);
-var o = r(512722),
-    s = r.n(o),
-    l = r(869765),
-    u = r(598077),
-    c = r(594174),
-    d = r(48854),
-    f = r(981631);
-function p(e) {
-    let { id: n, username: r, avatar: i, discriminator: a, bot: o, globalName: s } = e;
+n.d(t, {
+    ZP: () => d,
+    cs: () => f,
+    pe: () => c
+}),
+    n(789020),
+    n(653041);
+var i = n(512722),
+    r = n.n(i),
+    a = n(869765),
+    s = n(598077),
+    o = n(594174),
+    l = n(48854),
+    u = n(981631);
+function c(e) {
+    let { id: t, username: n, avatar: i, discriminator: r, bot: a, globalName: s } = e;
     return {
-        id: n,
-        username: r,
+        id: t,
+        username: n,
         avatar: i,
-        discriminator: a,
-        bot: o,
+        discriminator: r,
+        bot: a,
         global_name: s
     };
 }
-function h(e) {
-    let { channelId: n, content: r, tts: i = !1, type: a = f.uaV.DEFAULT, messageReference: o, allowedMentions: h, author: _, flags: m, nonce: g, poll: E, changelogId: v, giftingPrompt: y, state: b } = e,
+function d(e) {
+    let { channelId: t, content: n, tts: i = !1, type: d = u.uaV.DEFAULT, messageReference: f, allowedMentions: _, author: p, flags: h, nonce: m, poll: g, changelogId: E, giftingPrompt: v, state: y } = e,
         I = [];
-    if (a === f.uaV.REPLY && (s()(null != o, 'Replies must have a message reference'), null == h || h.replied_user)) {
-        let e = l.Z.getMessageByReference(o);
-        (null == e ? void 0 : e.state) === l.Y.LOADED && I.push(p(e.message.author));
+    if (d === u.uaV.REPLY && (r()(null != f, 'Replies must have a message reference'), null == _ || _.replied_user)) {
+        let e = a.Z.getMessageByReference(f);
+        (null == e ? void 0 : e.state) === a.Y.LOADED && I.push(c(e.message.author));
     }
     return (
-        null == _ && (_ = c.default.getCurrentUser()),
-        _ instanceof u.Z && (_ = p(_)),
-        s()(null != _, 'createMessage: author cannot be undefined'),
+        null == p && (p = o.default.getCurrentUser()),
+        p instanceof s.Z && (p = c(p)),
+        r()(null != p, 'createMessage: author cannot be undefined'),
         {
-            id: null != g ? g : (0, d.r)(),
-            type: a,
-            content: r,
-            channel_id: n,
-            author: _,
+            id: null != m ? m : (0, l.r)(),
+            type: d,
+            content: n,
+            channel_id: t,
+            author: p,
             attachments: [],
             embeds: [],
             pinned: !1,
@@ -54,43 +48,43 @@ function h(e) {
             mention_roles: [],
             mention_everyone: !1,
             timestamp: new Date().toISOString(),
-            state: b || f.yb.SENDING,
+            state: y || u.yb.SENDING,
             tts: i,
-            message_reference: o,
+            message_reference: f,
             message_snapshots: [],
-            flags: m,
-            nonce: g,
-            poll: E,
-            changelog_id: v,
-            gifting_prompt: y
+            flags: h,
+            nonce: m,
+            poll: g,
+            changelog_id: E,
+            gifting_prompt: v
         }
     );
 }
-function _(e) {
-    let { messageId: n, channelId: r, content: i, embeds: a, loggingName: o } = e;
+function f(e) {
+    let { messageId: t, channelId: n, content: i, embeds: r, loggingName: a } = e;
     return {
-        id: null != n ? n : (0, d.r)(),
-        type: f.uaV.DEFAULT,
-        flags: f.iLy.EPHEMERAL,
+        id: null != t ? t : (0, l.r)(),
+        type: u.uaV.DEFAULT,
+        flags: u.iLy.EPHEMERAL,
         content: i,
-        channel_id: r,
+        channel_id: n,
         author: {
-            id: f.LAt,
+            id: u.LAt,
             username: 'Clyde',
-            discriminator: f.fo$,
+            discriminator: u.fo$,
             avatar: 'clyde',
             bot: !0
         },
         attachments: [],
-        embeds: null != a ? a : [],
+        embeds: null != r ? r : [],
         pinned: !1,
         mentions: [],
         mention_channels: [],
         mention_roles: [],
         mention_everyone: !1,
         timestamp: new Date().toISOString(),
-        state: f.yb.SENT,
+        state: u.yb.SENT,
         tts: !1,
-        loggingName: o
+        loggingName: a
     };
 }

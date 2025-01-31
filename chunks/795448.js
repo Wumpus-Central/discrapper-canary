@@ -1,22 +1,14 @@
-r.d(n, {
-    Gk: function () {
-        return l;
-    },
-    Ni: function () {
-        return s;
-    },
-    PV: function () {
-        return o;
-    },
-    d$: function () {
-        return a;
-    }
+n.d(t, {
+    Gk: () => o,
+    Ni: () => s,
+    PV: () => a,
+    d$: () => r
 });
-var i = r(570140);
-function a() {
+var i = n(570140);
+function r() {
     i.Z.dispatch({ type: 'FRIENDS_LIST_GIFT_INTENTS_SHOWN' });
 }
-function o(e) {
+function a(e) {
     i.Z.dispatch({
         type: 'MESSAGE_GIFT_INTENT_SHOWN',
         recipientUserId: e
@@ -28,6 +20,6 @@ function s(e) {
         recipientUserId: e
     });
 }
-function l() {
+function o() {
     i.Z.dispatch({ type: 'FRIENDS_TAB_BADGE_DISMISS' });
 }

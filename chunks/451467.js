@@ -1,12 +1,7 @@
-r.d(n, {
-    Z: function () {
-        return s;
-    }
-});
-var i = r(47120);
-var a = r(280098),
-    o = r(37113);
-function s(e, n, r, i, s, l) {
-    for (let u of o.ND) if ((null == u.preset || e === u.preset) && n === u.resolution && r === u.fps && (0, a.Z)(u, i, s, l)) return !0;
+n.d(t, { Z: () => a }), n(47120);
+var i = n(280098),
+    r = n(37113);
+function a(e, t, n, a, s, o) {
+    for (let l of r.ND) if ((null == l.preset || e === l.preset) && t === l.resolution && n === l.fps && (0, i.Z)(l, a, s, o)) return !0;
     return !1;
 }

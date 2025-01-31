@@ -1,13 +1,9 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-});
+n.d(t, { Z: () => f });
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    r = n.n(l),
-    a = n(91192),
+    a = n.n(l),
+    r = n(91192),
     s = n(442837),
     o = n(481060),
     c = n(129861),
@@ -17,30 +13,30 @@ var l = n(120356),
     p = n(51144),
     m = n(22078);
 function f(e) {
-    let { user: t, row: n, hideDiscriminator: l, comparator: f, selected: g, checked: C, onClick: x, onMouseEnter: v, 'aria-setsize': _, 'aria-posinset': I } = e,
-        E = (0, s.e7)([h.Z], () => h.Z.getStatus(t.id)),
-        b = (0, a.JA)(String(t.id));
-    return (0, i.jsx)(o.Clickable, {
+    let { user: t, row: n, hideDiscriminator: l, comparator: f, selected: g, checked: _, onClick: C, onMouseEnter: x, 'aria-setsize': v, 'aria-posinset': E } = e,
+        I = (0, s.e7)([h.Z], () => h.Z.getStatus(t.id)),
+        b = (0, r.JA)(String(t.id));
+    return (0, i.jsx)(o.P3F, {
         id: 'user-row-'.concat(n),
         className: m.friendWrapper,
         onClick: () => {
-            null != x && x(t.id);
+            null != C && C(t.id);
         },
         onMouseEnter: () => {
-            null != v && v(n);
+            null != x && x(n);
         },
         ...b,
         role: 'option',
-        'aria-selected': C,
-        'aria-setsize': _,
-        'aria-posinset': I,
+        'aria-selected': _,
+        'aria-setsize': v,
+        'aria-posinset': E,
         children: (0, i.jsxs)(u.Z, {
             align: u.Z.Align.CENTER,
-            className: r()(m.friend, { [m.friendSelected]: g }),
+            className: a()(m.friend, { [m.friendSelected]: g }),
             children: [
                 (0, i.jsx)(d.Z, {
                     user: t,
-                    status: E,
+                    status: I,
                     className: m.avatar
                 }),
                 (0, i.jsxs)(u.Z, {
@@ -64,10 +60,10 @@ function f(e) {
                         })
                     ]
                 }),
-                (0, i.jsx)(o.Checkbox, {
+                (0, i.jsx)(o.XZJ, {
                     displayOnly: !0,
                     size: 22,
-                    value: C,
+                    value: _,
                     className: m.checkbox
                 })
             ]

@@ -1,20 +1,16 @@
-r.d(n, {
-    N: function () {
-        return s;
-    }
-});
-var i = r(503461),
-    a = r(190313);
-function o(e, n, r) {
+n.d(t, { N: () => s });
+var i = n(503461),
+    r = n(190313);
+function a(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
@@ -31,8 +27,8 @@ class s {
     getMany(e) {
         return this.table.getMany([], e);
     }
-    getRange(e, n, r) {
-        return this.table.getRange([e], [n], r);
+    getRange(e, t, n) {
+        return this.table.getRange([e], [t], n);
     }
     getKvEntries() {
         return this.table.getKvEntries();
@@ -46,25 +42,25 @@ class s {
     getParentId(e) {
         return this.table.getParentId([null, e]);
     }
-    put(e, n) {
-        let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : i.Sn.Replace;
+    put(e, t) {
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : i.Sn.Replace;
         return this.table.put(
             {
                 key: [e],
-                data: n,
+                data: t,
                 generation: null
             },
-            r
+            n
         );
     }
     delete(e) {
         return 0 == arguments.length ? this.table.delete() : this.table.delete([e]);
     }
-    transaction(e, n) {
-        return this.table.transaction((n) => e(new l(n)), n);
+    transaction(e, t) {
+        return this.table.transaction((t) => e(new o(t)), t);
     }
     upgradeTransaction(e) {
-        return new l(this.table.upgradeTransaction(e));
+        return new o(this.table.upgradeTransaction(e));
     }
     getManySyncUnsafe(e) {
         return this.table.getManySyncUnsafe([], e);
@@ -72,29 +68,29 @@ class s {
     getMapEntriesSyncUnsafe() {
         return this.table.getMapEntriesSyncUnsafe();
     }
-    constructor(e, n, r, i = !0) {
-        o(this, 'originalPrefix', void 0), o(this, 'table', void 0), (this.originalPrefix = e), (this.table = new a.i([e], n, r, i));
+    constructor(e, t, n, i = !0) {
+        a(this, 'originalPrefix', void 0), a(this, 'table', void 0), (this.originalPrefix = e), (this.table = new r.i([e], t, n, i));
     }
 }
-class l {
-    static fromDatabaseTransaction(e, n, r) {
-        return new l(new a.E(e, n, r));
+class o {
+    static fromDatabaseTransaction(e, t, n) {
+        return new o(new r.E(e, t, n));
     }
-    put(e, n) {
-        let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : i.Sn.Replace;
+    put(e, t) {
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : i.Sn.Replace;
         this.transaction.put(
             {
                 key: [e],
-                data: n,
+                data: t,
                 generation: null
             },
-            r
+            n
         );
     }
     delete(e) {
         return 0 == arguments.length ? this.transaction.delete() : this.transaction.delete([e]);
     }
     constructor(e) {
-        o(this, 'transaction', void 0), (this.transaction = e);
+        a(this, 'transaction', void 0), (this.transaction = e);
     }
 }

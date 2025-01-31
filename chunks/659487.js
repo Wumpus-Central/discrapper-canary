@@ -1,20 +1,14 @@
-r.d(n, {
-    w: function () {
-        return c;
-    }
-});
-var i = r(47120);
-var a = r(724458);
-var o = r(356659);
-let s = [
+n.d(t, { w: () => o }), n(47120), n(724458);
+var i = n(356659);
+let r = [
         (e) => {
-            let n = {
+            let t = {
                 ...e,
                 version: 1,
                 applicationName: e.gameName,
                 applicationId: void 0
             };
-            return delete n.gameName, n;
+            return delete t.gameName, t;
         },
         (e) => ({
             ...e,
@@ -27,14 +21,14 @@ let s = [
             name: '' === e.name ? void 0 : e.name
         })
     ],
-    l = null;
-function u(e) {
-    return null != l
-        ? l
-        : (l = e
+    a = null;
+function s(e) {
+    return null != a
+        ? a
+        : (a = e
               .object({
                   id: e.string().required(),
-                  version: e.number().positive().integer().min(0).max(o.Bg).optional(),
+                  version: e.number().positive().integer().min(0).max(i.Bg).optional(),
                   name: e.string().when('version', {
                       is: e.number().less(3),
                       then: e.string().allow('')
@@ -64,13 +58,13 @@ function u(e) {
               })
               .required());
 }
-async function c(e) {
-    let n = (await r.e('56268').then(r.t.bind(r, 826753, 23))).default,
-        i = u(n);
+async function o(e) {
+    let t = (await n.e('85441').then(n.t.bind(n, 826753, 23))).default,
+        i = s(t);
     try {
-        n.assert(e, i);
-        let r = e;
-        return null == r.version && (r.version = 0), s.slice(r.version).reduce((e, n) => n(e), r);
+        t.assert(e, i);
+        let n = e;
+        return null == n.version && (n.version = 0), r.slice(n.version).reduce((e, t) => t(e), n);
     } catch (e) {
         return null;
     }

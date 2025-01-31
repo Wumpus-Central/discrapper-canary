@@ -1,34 +1,35 @@
-var i = r(710845),
-    a = r(287328),
-    o = r(870078);
-function s(e, n, r) {
+n.d(t, { Z: () => u });
+var i = n(710845),
+    r = n(287328),
+    a = n(870078);
+function s(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let l = new i.Z('KvCacheVersion');
-class u {
+let o = new i.Z('KvCacheVersion');
+class l {
     async okAsync(e) {
-        let n = await a.Z.cache(e).get(o.aQ);
-        return null == n ? null : n === o.Wj;
+        let t = await r.Z.cache(e).get(a.aQ);
+        return null == t ? null : t === a.Wj;
     }
     canUseGuildVersions() {
         return this.hasSuccessfullyConnected ? Promise.resolve(!0) : this.doesDatabaseVersionMatchJsConstants();
     }
     async doesDatabaseVersionMatchJsConstants() {
-        let e = a.Z.forceResyncVersion();
+        let e = r.Z.forceResyncVersion();
         if (null == e) return !1;
-        let n = await e.get(o.LH),
-            r = null == n ? void 0 : n.version;
-        return r === o.pL || (l.info('KVStore version mismatch: '.concat(r, ' vs ').concat(o.pL)), !1);
+        let t = await e.get(a.LH),
+            n = null == t ? void 0 : t.version;
+        return n === a.pL || (o.info('KVStore version mismatch: '.concat(n, ' vs ').concat(a.pL)), !1);
     }
     handleClear() {
         this.hasSuccessfullyConnected = !1;
@@ -37,7 +38,7 @@ class u {
         this.hasSuccessfullyConnected = !0;
     }
     handleWrite(e) {
-        (this.hasSuccessfullyConnected = !0), a.Z.cacheTransaction(e).put(o.DQ, '\uD83D\uDC4B'), a.Z.cacheTransaction(e).put(o.aQ, o.Wj), a.Z.forceResyncVersionTransaction(e).put(o.LH, { version: o.pL });
+        (this.hasSuccessfullyConnected = !0), r.Z.cacheTransaction(e).put(a.DQ, '\uD83D\uDC4B'), r.Z.cacheTransaction(e).put(a.aQ, a.Wj), r.Z.forceResyncVersionTransaction(e).put(a.LH, { version: a.pL });
     }
     resetInMemoryState() {
         this.hasSuccessfullyConnected = !1;
@@ -45,10 +46,10 @@ class u {
     constructor() {
         s(this, 'hasSuccessfullyConnected', !1),
             s(this, 'actions', {
-                BACKGROUND_SYNC: (e, n) => this.handleWrite(n),
+                BACKGROUND_SYNC: (e, t) => this.handleWrite(t),
                 CONNECTION_OPEN: () => this.handleConnectionOpen(),
-                WRITE_CACHES: (e, n) => this.handleWrite(n)
+                WRITE_CACHES: (e, t) => this.handleWrite(t)
             });
     }
 }
-n.Z = new u();
+let u = new l();

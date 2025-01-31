@@ -1,25 +1,19 @@
-r.d(n, {
-    K4: function () {
-        return s;
-    },
-    MD: function () {
-        return u;
-    },
-    ZJ: function () {
-        return l;
-    }
+n.d(t, {
+    K4: () => s,
+    MD: () => l,
+    ZJ: () => o
 });
-var i = r(15729),
-    a = r(731965);
-let o = (0, i.U)(() => ({
+var i = n(15729),
+    r = n(731965);
+let a = (0, i.U)(() => ({
         required: !1,
         checked: !1,
         preChecked: !1
     })),
     s = (e) => {
-        (0, a.j)(() => o.setState(e));
+        (0, r.j)(() => a.setState(e));
     },
-    l = (e) => {
-        (0, a.j)(() => o.setState({ checked: e }));
+    o = (e) => {
+        (0, r.j)(() => a.setState({ checked: e }));
     },
-    u = o;
+    l = a;

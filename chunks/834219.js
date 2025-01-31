@@ -1,15 +1,17 @@
-e.exports = {
-    row: 'row_a708c4',
-    sticker: 'sticker_a708c4',
-    showPulse: 'showPulse_a708c4',
-    createSticker: 'createSticker_a708c4',
-    createInspected: 'createInspected_a708c4',
-    iconWrapper: 'iconWrapper_a708c4',
-    icon: 'icon_a708c4',
-    inspectedIndicator: 'inspectedIndicator_a708c4',
-    stickerInspected: 'stickerInspected_a708c4',
-    stickerNode: 'stickerNode_a708c4',
-    stickerNodeDimmed: 'stickerNodeDimmed_a708c4',
-    stickerNodeHidden: 'stickerNodeHidden_a708c4',
-    stickerUnsendable: 'stickerUnsendable_a708c4'
+var i = {
+    ripple: 'ripple_c6367b',
+    row: 'row_c6367b',
+    sticker: 'sticker_c6367b',
+    showPulse: 'showPulse_c6367b',
+    createSticker: 'createSticker_c6367b',
+    createInspected: 'createInspected_c6367b',
+    iconWrapper: 'iconWrapper_c6367b',
+    icon: 'icon_c6367b',
+    inspectedIndicator: 'inspectedIndicator_c6367b',
+    stickerInspected: 'stickerInspected_c6367b',
+    stickerNode: 'stickerNode_c6367b',
+    stickerNodeDimmed: 'stickerNodeDimmed_c6367b',
+    stickerNodeHidden: 'stickerNodeHidden_c6367b',
+    stickerUnsendable: 'stickerUnsendable_c6367b'
 };
+e.exports = i;

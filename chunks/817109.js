@@ -1,27 +1,21 @@
-r.d(n, {
-    H: function () {
-        return s;
-    }
-});
-var i = r(411104);
-function a(e, n, r) {
+function i(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-function o(e, n) {
+function r(e, t) {
     if ('string' == typeof e)
         return {
             message: e,
-            code: n
+            code: t
         };
     if (null != e.body) {
         if (null != e.body.message && !Array.isArray(e.body.message) && (null == e.body.code || !Array.isArray(e.body.code)))
@@ -32,24 +26,25 @@ function o(e, n) {
                 status: e.status
             };
         {
-            let n = e.body,
-                r = null != n ? Object.values(n)[0] : null;
+            let t = e.body,
+                n = null != t ? Object.values(t)[0] : null;
             return {
-                message: null != r ? r[0] : void 0,
-                fields: n,
+                message: null != n ? n[0] : void 0,
+                fields: t,
                 status: e.status
             };
         }
     }
     return {};
 }
-class s {
+n.d(t, { H: () => a }), n(411104);
+class a {
     getFieldMessage(e) {
         return null != this.fields[e] ? this.fields[e][0] : null;
     }
-    constructor(e, n, r = 'An unexpected error occurred.') {
-        a(this, 'message', void 0), a(this, 'code', void 0), a(this, 'retryAfter', void 0), a(this, 'fields', void 0), a(this, 'error', void 0), a(this, 'status', void 0);
-        let { message: i, code: s, retryAfter: l, fields: u, status: c } = o(e, n);
-        (this.message = i || r), (this.retryAfter = l), (this.code = s || -1), (this.fields = u || {}), (this.status = c), (this.error = Error(i));
+    constructor(e, t, n = 'An unexpected error occurred.') {
+        i(this, 'message', void 0), i(this, 'code', void 0), i(this, 'retryAfter', void 0), i(this, 'fields', void 0), i(this, 'error', void 0), i(this, 'status', void 0);
+        let { message: a, code: s, retryAfter: o, fields: l, status: u } = r(e, t);
+        (this.message = a || n), (this.retryAfter = o), (this.code = s || -1), (this.fields = l || {}), (this.status = u), (this.error = Error(a));
     }
 }

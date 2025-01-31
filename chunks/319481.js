@@ -1,23 +1,18 @@
-r.r(n),
-    r.d(n, {
-        default: function () {
-            return c;
-        }
-    });
-var i = r(200651);
-r(192379);
-var o = r(481060),
-    e = r(388032);
-function c(t) {
-    let { onConfirm: n, ...r } = t;
-    return (0, i.jsx)(o.ConfirmModal, {
+i.d(n, { default: () => l });
+var r = i(200651);
+i(192379);
+var o = i(481060),
+    e = i(388032);
+function l(t) {
+    let { onConfirm: n, ...i } = t;
+    return (0, r.jsx)(o.ConfirmModal, {
         header: e.intl.string(e.t['5yTUub']),
         confirmText: e.intl.string(e.t.TyCVIi),
         cancelText: e.intl.string(e.t['ETE/oK']),
-        confirmButtonColor: o.Button.Colors.BRAND,
+        confirmButtonColor: o.zxk.Colors.BRAND,
         onConfirm: n,
-        ...r,
-        children: (0, i.jsx)(o.Text, {
+        ...i,
+        children: (0, r.jsx)(o.Text, {
             variant: 'text-md/normal',
             children: e.intl.string(e.t.dRhrXl)
         })

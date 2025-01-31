@@ -1,10 +1,6 @@
 e.d(n, {
-    OL: function () {
-        return y;
-    },
-    rU: function () {
-        return h;
-    }
+    OL: () => y,
+    rU: () => h
 });
 var r = e(332009);
 e(190031);
@@ -13,40 +9,38 @@ var i = e(192379),
 e(476400);
 var a = e(910974),
     c = e(312089),
-    u = e(431803);
-i.Component;
-i.Component;
-var s = function (t, n) {
+    s = e(431803);
+i.Component, i.Component;
+var u = function (t, n) {
         return 'function' == typeof t ? t(n) : t;
     },
     l = function (t, n) {
         return 'string' == typeof t ? (0, o.ob)(t, null, null, n) : t;
     },
-    f = function (t) {
+    p = function (t) {
         return t;
     },
-    p = i.forwardRef;
-void 0 === p && (p = f);
-var v = p(function (t, n) {
+    f = i.forwardRef;
+void 0 === f && (f = p);
+var v = f(function (t, n) {
         var e = t.innerRef,
             r = t.navigate,
             o = t.onClick,
-            u = (0, c.Z)(t, ['innerRef', 'navigate', 'onClick']),
-            s = u.target,
-            l = (0, a.Z)({}, u, {
+            s = (0, c.Z)(t, ['innerRef', 'navigate', 'onClick']),
+            u = s.target,
+            l = (0, a.Z)({}, s, {
                 onClick: function (t) {
-                    var n;
                     try {
                         o && o(t);
                     } catch (n) {
                         throw (t.preventDefault(), n);
                     }
-                    if (!t.defaultPrevented && 0 === t.button && (!s || '_self' === s) && !((n = t).metaKey || n.altKey || n.ctrlKey || n.shiftKey)) t.preventDefault(), r();
+                    !t.defaultPrevented && 0 === t.button && (!u || '_self' === u) && !(t.metaKey || t.altKey || t.ctrlKey || t.shiftKey) && (t.preventDefault(), r());
                 }
             });
-        return f !== p ? (l.ref = n || e) : (l.ref = e), i.createElement('a', l);
+        return p !== f ? (l.ref = n || e) : (l.ref = e), i.createElement('a', l);
     }),
-    h = p(function (t, n) {
+    h = f(function (t, n) {
         var e = t.component,
             h = void 0 === e ? v : e,
             m = t.replace,
@@ -54,19 +48,19 @@ var v = p(function (t, n) {
             y = t.innerRef,
             C = (0, c.Z)(t, ['component', 'replace', 'to', 'innerRef']);
         return i.createElement(r.s6.Consumer, null, function (t) {
-            t || (0, u.Z)(!1);
+            t || (0, s.Z)(!1);
             var e = t.history,
-                r = l(s(d, t.location), t.location),
+                r = l(u(d, t.location), t.location),
                 c = r ? e.createHref(r) : '',
                 v = (0, a.Z)({}, C, {
                     href: c,
                     navigate: function () {
-                        var n = s(d, t.location),
+                        var n = u(d, t.location),
                             r = (0, o.Ep)(t.location) === (0, o.Ep)(l(n));
                         (m || r ? e.replace : e.push)(n);
                     }
                 });
-            return f !== p ? (v.ref = n || y) : (v.innerRef = y), i.createElement(h, v);
+            return p !== f ? (v.ref = n || y) : (v.innerRef = y), i.createElement(h, v);
         });
     }),
     m = function (t) {
@@ -77,8 +71,8 @@ void 0 === d && (d = m);
 var y = d(function (t, n) {
     var e = t['aria-current'],
         o = void 0 === e ? 'page' : e,
-        f = t.activeClassName,
-        p = void 0 === f ? 'active' : f,
+        p = t.activeClassName,
+        f = void 0 === p ? 'active' : p,
         v = t.activeStyle,
         y = t.className,
         C = t.exact,
@@ -91,11 +85,11 @@ var y = d(function (t, n) {
         k = t.innerRef,
         w = (0, c.Z)(t, ['aria-current', 'activeClassName', 'activeStyle', 'className', 'exact', 'isActive', 'location', 'sensitive', 'strict', 'style', 'to', 'innerRef']);
     return i.createElement(r.s6.Consumer, null, function (t) {
-        t || (0, u.Z)(!1);
+        t || (0, s.Z)(!1);
         var e = g || t.location,
-            c = l(s(_, e), e),
-            f = c.pathname,
-            N = f && f.replace(/([.+*?=^!:${}()[\]|/\\])/g, '\\$1'),
+            c = l(u(_, e), e),
+            p = c.pathname,
+            N = p && p.replace(/([.+*?=^!:${}()[\]|/\\])/g, '\\$1'),
             L = N
                 ? (0, r.LX)(e.pathname, {
                       path: N,
@@ -115,7 +109,7 @@ var y = d(function (t, n) {
                         return t;
                     })
                     .join(' ');
-            })(A, p)),
+            })(A, f)),
             (b = (0, a.Z)({}, b, v)));
         var K = (0, a.Z)(
             {

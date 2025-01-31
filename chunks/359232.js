@@ -1,40 +1,35 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => d }), n(47120);
 var l = n(512722),
     i = n.n(l),
     u = n(911969),
-    r = n(388032);
-let a = (e, t) => {
+    a = n(388032);
+let r = (e, t) => {
         let { minValues: n, maxValues: l } = e;
-        if (null == t) return 0 === n ? null : r.intl.formatToPlainString(r.t.Jmwzd3, { count: n });
+        if (null == t) return 0 === n ? null : a.intl.formatToPlainString(a.t.Jmwzd3, { count: n });
         if (t.type === u.re.STRING_SELECT) {
-            if (t.values.length < n) return r.intl.formatToPlainString(r.t.Jmwzd3, { count: n });
-            if (t.values.length > l) return r.intl.formatToPlainString(r.t.LDvfRE, { count: l });
+            if (t.values.length < n) return a.intl.formatToPlainString(a.t.Jmwzd3, { count: n });
+            if (t.values.length > l) return a.intl.formatToPlainString(a.t.LDvfRE, { count: l });
         } else {
-            if (t.selectedOptions.length < n) return r.intl.formatToPlainString(r.t.Jmwzd3, { count: n });
-            if (t.selectedOptions.length > l) return r.intl.formatToPlainString(r.t.LDvfRE, { count: l });
+            if (t.selectedOptions.length < n) return a.intl.formatToPlainString(a.t.Jmwzd3, { count: n });
+            if (t.selectedOptions.length > l) return a.intl.formatToPlainString(a.t.LDvfRE, { count: l });
         }
         return null;
     },
     o = (e, t) => {
         let { minLength: n, maxLength: l, required: i } = e;
-        if (null == t || 0 === t.value.length)
-            return i
-                ? r.intl.formatToPlainString(r.t.ONSqYW, {
+        return null == t || 0 === t.value.length
+            ? i
+                ? a.intl.formatToPlainString(a.t.ONSqYW, {
                       min: n,
                       max: l
                   })
-                : null;
-        return t.value.length < n || t.value.length > l
-            ? r.intl.formatToPlainString(r.t.ONSqYW, {
-                  min: n,
-                  max: l
-              })
-            : null;
+                : null
+            : t.value.length < n || t.value.length > l
+              ? a.intl.formatToPlainString(a.t.ONSqYW, {
+                    min: n,
+                    max: l
+                })
+              : null;
     };
 function d(e, t) {
     switch ((null != t && i()(t.type === e.type, 'component type matches state'), e.type)) {
@@ -45,7 +40,7 @@ function d(e, t) {
         case u.re.ROLE_SELECT:
         case u.re.MENTIONABLE_SELECT:
         case u.re.CHANNEL_SELECT:
-            return a(e, t);
+            return r(e, t);
         case u.re.TEXT_INPUT:
             return o(e, t);
         default:

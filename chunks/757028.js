@@ -1,7 +1,8 @@
+r.d(t, { Z: () => s });
 var a = r(760919),
     n = r(629990);
 n.mh.ACES = [0.32168 / 0.33767, 1, 1.0088251843515859];
-t.Z = new a.Z({
+let s = new a.Z({
     id: 'acescg',
     cssId: '--acescg',
     name: 'ACEScg',

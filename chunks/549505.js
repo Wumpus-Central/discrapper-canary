@@ -1,35 +1,30 @@
-a.r(t),
-    a.d(t, {
-        default: function () {
-            return h;
-        }
-    });
+a.d(t, { default: () => _ });
 var s = a(200651);
 a(192379);
 var n = a(481060),
-    o = a(688465),
-    d = a(547972),
-    r = a(63063),
-    i = a(981631),
-    l = a(332325),
-    c = a(388032),
+    i = a(688465),
+    r = a(547972),
+    o = a(63063),
+    l = a(981631),
+    c = a(332325),
+    d = a(388032),
     m = a(642695),
     x = a(83173);
-function h(e) {
+function _(e) {
     let { transitionState: t, onClose: a } = e;
-    return (0, s.jsxs)(n.ModalRoot, {
+    return (0, s.jsxs)(n.Y0X, {
         transitionState: t,
-        size: n.ModalSize.DYNAMIC,
+        size: n.CgR.DYNAMIC,
         className: m.modalRoot,
         children: [
-            (0, s.jsxs)(n.ModalHeader, {
+            (0, s.jsxs)(n.xBx, {
                 separator: !1,
                 className: m.modalHeader,
                 children: [
                     (0, s.jsx)('div', {
                         className: m.imageFrame,
                         children: (0, s.jsx)('img', {
-                            alt: c.intl.string(c.t.AWkQTk),
+                            alt: d.intl.string(d.t.AWkQTk),
                             src: x,
                             className: m.heroImage
                         })
@@ -37,16 +32,16 @@ function h(e) {
                     (0, s.jsxs)('div', {
                         className: m.headerWrapper,
                         children: [
-                            (0, s.jsx)(n.Heading, {
+                            (0, s.jsx)(n.X6q, {
                                 variant: 'heading-xl/bold',
-                                children: c.intl.string(c.t.gb37Ky)
+                                children: d.intl.string(d.t.gb37Ky)
                             }),
-                            (0, s.jsx)(o.Z, { className: m.betaTag })
+                            (0, s.jsx)(i.Z, { className: m.betaTag })
                         ]
                     })
                 ]
             }),
-            (0, s.jsxs)(n.ModalContent, {
+            (0, s.jsxs)(n.hzk, {
                 className: m.modalContent,
                 children: [
                     (0, s.jsxs)('div', {
@@ -55,27 +50,27 @@ function h(e) {
                             (0, s.jsx)(n.Text, {
                                 variant: 'text-md/medium',
                                 color: 'header-secondary',
-                                children: c.intl.string(c.t.WKxo8v)
+                                children: d.intl.string(d.t.WKxo8v)
                             }),
-                            (0, s.jsx)(g, {})
+                            (0, s.jsx)(b, {})
                         ]
                     }),
                     (0, s.jsxs)('div', {
                         className: m.modalFooter,
                         children: [
-                            (0, s.jsx)(n.Button, {
+                            (0, s.jsx)(n.zxk, {
                                 onClick: a,
                                 className: m.button,
-                                children: c.intl.string(c.t['x/26d3'])
+                                children: d.intl.string(d.t['x/26d3'])
                             }),
                             (0, s.jsx)(n.Text, {
                                 variant: 'text-xs/normal',
                                 color: 'text-muted',
                                 className: m.disclosureText,
-                                children: c.intl.format(c.t['5Ey5Dw'], {
-                                    recentActivityURL: r.Z.getArticleURL(i.BhN.MEMBER_LIST_ACTIVITY_FEED),
+                                children: d.intl.format(d.t['5Ey5Dw'], {
+                                    recentActivityURL: o.Z.getArticleURL(l.BhN.MEMBER_LIST_ACTIVITY_FEED),
                                     handleActivityPrivacyClick: () => {
-                                        a(), (0, d.Z)(l.Z.ACTIVITY_PRIVACY);
+                                        a(), (0, r.Z)(c.Z.ACTIVITY_PRIVACY);
                                     }
                                 })
                             })
@@ -86,29 +81,29 @@ function h(e) {
         ]
     });
 }
-let g = () => {
+let b = () => {
     let e = [
         {
-            icon: (0, s.jsx)(n.FriendsIcon, { className: m.icon }),
-            text: c.intl.string(c.t.vXBrdn)
+            icon: (0, s.jsx)(n.iFz, { className: m.icon }),
+            text: d.intl.string(d.t.vXBrdn)
         },
         {
-            icon: (0, s.jsx)(n.GameControllerIcon, { className: m.icon }),
-            text: c.intl.string(c.t.aExjOz)
+            icon: (0, s.jsx)(n.iWm, { className: m.icon }),
+            text: d.intl.string(d.t.aExjOz)
         },
         {
-            icon: (0, s.jsx)(n.ChatIcon, { className: m.icon }),
-            text: c.intl.string(c.t['i7/QHB'])
+            icon: (0, s.jsx)(n.kBi, { className: m.icon }),
+            text: d.intl.string(d.t['i7/QHB'])
         },
         {
-            icon: (0, s.jsx)(n.UserCircleIcon, { className: m.icon }),
-            text: c.intl.string(c.t.ZmBfKC)
+            icon: (0, s.jsx)(n.lMe, { className: m.icon }),
+            text: d.intl.string(d.t.ZmBfKC)
         }
     ];
     return (0, s.jsx)('div', {
         className: m.notes,
         children: e.map((e, t) => {
-            let { icon: a, text: o } = e;
+            let { icon: a, text: i } = e;
             return (0, s.jsxs)(
                 'div',
                 {
@@ -120,7 +115,7 @@ let g = () => {
                         }),
                         (0, s.jsx)(n.Text, {
                             variant: 'text-sm/medium',
-                            children: o
+                            children: i
                         })
                     ]
                 },

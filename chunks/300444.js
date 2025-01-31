@@ -1,1 +1,1 @@
-e.exports = { friendRequestsButton: 'friendRequestsButton_c0c071' };
+e.exports = { friendRequestsButton: 'friendRequestsButton__523aa' };

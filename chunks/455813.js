@@ -1,42 +1,38 @@
-r.d(n, {
-    Z: function () {
-        return f;
-    }
-});
-var i = r(200651),
-    a = r(192379),
-    o = r(120356),
-    s = r.n(o),
-    l = r(481060),
-    u = r(249458),
-    c = r(388032),
-    d = r(267954);
-function f(e) {
-    let { onPlay: n, className: r, inactive: o } = e,
-        f = a.useRef(null),
-        p = (0, i.jsx)('div', {
-            className: d.iconWrapper,
-            ref: f,
-            children: (0, i.jsx)(l.PlayIcon, {
+n.d(t, { Z: () => d });
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(481060),
+    l = n(249458),
+    u = n(388032),
+    c = n(267954);
+function d(e) {
+    let { onPlay: t, className: n, inactive: a } = e,
+        d = r.useRef(null),
+        f = (0, i.jsx)('div', {
+            className: c.iconWrapper,
+            ref: d,
+            children: (0, i.jsx)(o.o1U, {
                 size: 'xs',
                 color: 'currentColor',
-                className: s()(d.icon)
+                className: s()(c.icon)
             })
         });
-    return (0, i.jsx)(u.G.Consumer, {
+    return (0, i.jsx)(l.G.Consumer, {
         children: (e) =>
-            o || null == n
+            a || null == t
                 ? (0, i.jsx)('div', {
-                      className: d.cover,
-                      children: p
+                      className: c.cover,
+                      children: f
                   })
-                : (0, i.jsx)(l.Clickable, {
-                      className: s()(r, d.cover, { [d.active]: !e.disableInteractions }),
-                      onClick: n,
+                : (0, i.jsx)(o.P3F, {
+                      className: s()(n, c.cover, { [c.active]: !e.disableInteractions }),
+                      onClick: t,
                       tabIndex: 0,
-                      'aria-label': c.intl.string(c.t.RscU7O),
-                      focusProps: { ringTarget: f },
-                      children: p
+                      'aria-label': u.intl.string(u.t.RscU7O),
+                      focusProps: { ringTarget: d },
+                      children: f
                   })
     });
 }

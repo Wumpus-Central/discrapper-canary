@@ -1,232 +1,225 @@
-a.r(t),
-    a.d(t, {
-        default: function () {
-            return H;
-        }
-    }),
-    a(47120),
-    a(653041);
+a.d(t, { default: () => q }), a(47120), a(653041);
 var i = a(200651),
     n = a(192379),
     l = a(120356),
     s = a.n(l),
     r = a(218887),
     o = a.n(r),
-    c = a(990547),
-    d = a(442837),
+    d = a(990547),
+    c = a(442837),
     u = a(481060),
     m = a(493683),
-    h = a(247272),
-    f = a(166459),
-    g = a(966390),
-    p = a(476326),
-    I = a(213609),
-    S = a(835473),
-    b = a(43267),
-    C = a(933557),
-    _ = a(957730),
+    _ = a(247272),
+    h = a(166459),
+    f = a(966390),
+    g = a(476326),
+    p = a(213609),
+    I = a(835473),
+    S = a(43267),
+    b = a(933557),
+    w = a(957730),
     N = a(592125),
-    w = a(703558),
-    T = a(430824),
-    x = a(751771),
-    v = a(496675),
-    E = a(699516),
-    y = a(117530),
+    E = a(703558),
+    x = a(430824),
+    C = a(751771),
+    T = a(496675),
+    y = a(699516),
+    v = a(117530),
     Z = a(594174),
-    A = a(626135),
-    j = a(768581),
-    M = a(971130),
-    D = a(358085),
-    R = a(624138),
-    P = a(591759),
-    U = a(51144),
-    k = a(998502),
+    j = a(626135),
+    A = a(768581),
+    D = a(971130),
+    M = a(358085),
+    P = a(624138),
+    R = a(591759),
+    k = a(51144),
+    U = a(998502),
     L = a(317381),
     O = a(981631),
-    B = a(245335),
-    F = a(388032),
-    G = a(613897);
-async function z(e) {
-    return e.type === M.bm.DM || e.type === M.bm.FRIEND ? await m.Z.ensurePrivateChannel(e.item.id) : e.item.id;
+    F = a(245335),
+    B = a(388032),
+    z = a(613897);
+async function G(e) {
+    return e.type === D.bm.DM || e.type === D.bm.FRIEND ? await m.Z.ensurePrivateChannel(e.item.id) : e.item.id;
 }
-function H(e) {
+function q(e) {
     let { applicationId: t, mediaUrl: a, channelId: l, onClose: s, transitionState: r, ...m } = e,
-        b = (0, d.e7)([L.ZP], () => L.ZP.getSelfEmbeddedActivityForChannel(l));
-    (0, I.Z)({
-        type: c.ImpressionTypes.MODAL,
-        name: c.ImpressionNames.ACTIVITY_SHARE_MOMENT_MODAL,
+        S = (0, c.e7)([L.ZP], () => L.ZP.getSelfEmbeddedActivityForChannel(l));
+    (0, p.Z)({
+        type: d.ImpressionTypes.MODAL,
+        name: d.ImpressionNames.ACTIVITY_SHARE_MOMENT_MODAL,
         properties: {
             application_id: t,
-            activity_session_id: null == b ? void 0 : b.compositeInstanceId
+            activity_session_id: null == S ? void 0 : S.compositeInstanceId
         }
     });
-    let [C] = (0, S.Z)([t]),
-        T = (0, d.e7)([Z.default], () => Z.default.getCurrentUser()),
-        [E, j] = n.useState(''),
-        [D, R] = n.useState([]),
-        [U, k] = n.useState(null),
-        [H, K] = n.useState(null);
+    let [b] = (0, I.Z)([t]),
+        x = (0, c.e7)([Z.default], () => Z.default.getCurrentUser()),
+        [y, A] = n.useState(''),
+        [M, P] = n.useState([]),
+        [k, U] = n.useState(null),
+        [q, V] = n.useState(null);
     n.useEffect(() => {
         (async () => {
-            let e = P.Z.toURLSafe(a);
+            let e = R.Z.toURLSafe(a);
             if (null == e) return;
             let t = o().basename(e.pathname),
                 i = await fetch(a),
                 n = new File([await i.arrayBuffer()], t);
-            k(n);
+            U(n);
             let l = new FileReader();
             (l.onload = () => {
                 var e;
-                return K(null == l ? void 0 : null === (e = l.result) || void 0 === e ? void 0 : e.toString());
+                return V(null == l ? void 0 : null === (e = l.result) || void 0 === e ? void 0 : e.toString());
             }),
                 l.readAsDataURL(n);
         })();
-    }, [a, k]);
-    let Q = (0, d.Wu)([x.Z, v.Z], () => x.Z.getInviteSuggestionRows().filter((e) => e.type === M.bm.FRIEND || e.type === M.bm.DM || v.Z.can(O.Plq.ATTACH_FILES, e.item)));
+    }, [a, U]);
+    let X = (0, c.Wu)([C.Z, T.Z], () => C.Z.getInviteSuggestionRows().filter((e) => e.type === D.bm.FRIEND || e.type === D.bm.DM || T.Z.can(O.Plq.ATTACH_FILES, e.item)));
     n.useEffect(() => {
-        (0, h.x)({
+        (0, _.x)({
             omitUserIds: new Set(),
             applicationId: t,
-            inviteTargetType: B.Iq.EMBEDDED_APPLICATION
+            inviteTargetType: F.Iq.EMBEDDED_APPLICATION
         });
     }, [t]),
-        n.useEffect(() => (0, h.C)(E), [E]);
-    let W = n.useCallback(async () => {
+        n.useEffect(() => (0, _.C)(y), [y]);
+    let Q = n.useCallback(async () => {
         await Promise.all(
-            D.map(async (e) => {
-                let t = Q.find((t) => t.item.id === e);
+            M.map(async (e) => {
+                let t = X.find((t) => t.item.id === e);
                 if (null != t) {
-                    let e = await z(t);
-                    f.Z.clearAll(e, w.d.ChannelMessage);
+                    let e = await G(t);
+                    h.Z.clearAll(e, E.d.ChannelMessage);
                 }
             })
         );
-    }, [D, Q]);
+    }, [M, X]);
     n.useEffect(() => {
-        r === u.ModalTransitionState.EXITING && W();
-    }, [W, r]);
-    let Y = n.useCallback(async () => {
-            await W(), s();
-        }, [s, W]),
-        X = n.useCallback(async () => {
+        r === u.Dvm.EXITING && Q();
+    }, [Q, r]);
+    let W = n.useCallback(async () => {
+            await Q(), s();
+        }, [s, Q]),
+        Y = n.useCallback(async () => {
             let e = 0,
                 a = 0,
                 i = 0;
             async function n(n) {
                 switch (n.type) {
-                    case M.bm.DM:
-                    case M.bm.FRIEND:
+                    case D.bm.DM:
+                    case D.bm.FRIEND:
                         e++;
                         break;
-                    case M.bm.GROUP_DM:
+                    case D.bm.GROUP_DM:
                         a++;
                         break;
-                    case M.bm.CHANNEL:
+                    case D.bm.CHANNEL:
                         i++;
                 }
-                let l = await z(n),
-                    s = y.Z.getUploads(l, w.d.ChannelMessage),
+                let l = await G(n),
+                    s = v.Z.getUploads(l, E.d.ChannelMessage),
                     r = N.Z.getChannel(l);
-                g.Z.uploadFiles({
+                f.Z.uploadFiles({
                     channelId: l,
                     uploads: s,
-                    parsedMessage: null != C ? _.ZP.parse(r, F.intl.formatToPlainString(F.t.jQULqK, { applicationName: '**'.concat(C.name, '**') })) : void 0,
-                    draftType: w.d.ChannelMessage,
+                    parsedMessage: null != b ? w.ZP.parse(r, B.intl.formatToPlainString(B.t.jQULqK, { applicationName: '**'.concat(b.name, '**') })) : void 0,
+                    draftType: E.d.ChannelMessage,
                     options: { applicationId: t }
                 }),
-                    f.Z.clearAll(l, w.d.ChannelMessage);
+                    h.Z.clearAll(l, E.d.ChannelMessage);
             }
-            let l = x.Z.getInviteSuggestionRows()
-                .filter((e) => D.includes(e.item.id))
+            let l = C.Z.getInviteSuggestionRows()
+                .filter((e) => M.includes(e.item.id))
                 .map((e) => n(e));
-            A.default.track(O.rMx.ACTIVITY_SHARE_MOMENT_SEND, {
-                user_id: null == T ? void 0 : T.id,
+            j.default.track(O.rMx.ACTIVITY_SHARE_MOMENT_SEND, {
+                user_id: null == x ? void 0 : x.id,
                 application_id: t,
-                activity_session_id: null == b ? void 0 : b.compositeInstanceId,
+                activity_session_id: null == S ? void 0 : S.compositeInstanceId,
                 n_users: e,
                 n_gdms: a,
                 n_channels: i
             });
             try {
-                await Promise.all(l), null != C && (0, u.showToast)((0, u.createToast)(F.intl.formatToPlainString(F.t.jQULqK, { applicationName: C.name }), u.ToastType.SUCCESS));
+                await Promise.all(l), null != b && (0, u.showToast)((0, u.createToast)(B.intl.formatToPlainString(B.t.jQULqK, { applicationName: b.name }), u.ToastType.SUCCESS));
             } catch (e) {
-                throw ((0, u.showToast)((0, u.createToast)(F.intl.string(F.t.PanA4O), u.ToastType.FAILURE)), e);
+                throw ((0, u.showToast)((0, u.createToast)(B.intl.string(B.t.PanA4O), u.ToastType.FAILURE)), e);
             }
-            Y();
-        }, [b, C, t, D, Y, T]),
+            W();
+        }, [S, b, t, M, W, x]),
         J = (e) => {
             let t = async () => {
-                let t = await z(e),
-                    a = [...D];
-                if (a.includes(e.item.id)) f.Z.clearAll(t, w.d.ChannelMessage), (a = a.filter((t) => t !== e.item.id));
+                let t = await G(e),
+                    a = [...M];
+                if (a.includes(e.item.id)) h.Z.clearAll(t, E.d.ChannelMessage), (a = a.filter((t) => t !== e.item.id));
                 else {
                     if (a.length >= 10) return;
-                    null != U &&
-                        (f.Z.addFile({
+                    null != k &&
+                        (h.Z.addFile({
                             file: {
-                                file: U,
-                                platform: p.ow.WEB
+                                file: k,
+                                platform: g.ow.WEB
                             },
                             channelId: t,
-                            draftType: w.d.ChannelMessage
+                            draftType: E.d.ChannelMessage
                         }),
                         a.push(e.item.id));
                 }
-                R(a);
+                P(a);
             };
             return () => t();
         };
-    return null == H
-        ? (0, i.jsx)(u.Spinner, {})
-        : (0, i.jsxs)(u.ModalRoot, {
+    return null == q
+        ? (0, i.jsx)(u.$jN, {})
+        : (0, i.jsxs)(u.Y0X, {
               transitionState: r,
               ...m,
-              className: G.modalRoot,
+              className: z.modalRoot,
               children: [
-                  (0, i.jsxs)(u.ModalHeader, {
-                      className: G.header,
+                  (0, i.jsxs)(u.xBx, {
+                      className: z.header,
                       children: [
                           (0, i.jsxs)('div', {
-                              className: G.headerTitle,
+                              className: z.headerTitle,
                               children: [
-                                  (0, i.jsx)(u.Heading, {
+                                  (0, i.jsx)(u.X6q, {
                                       variant: 'heading-md/semibold',
-                                      children: F.intl.string(F.t.r9qKo6)
+                                      children: B.intl.string(B.t.r9qKo6)
                                   }),
-                                  (0, i.jsx)(u.ModalCloseButton, { onClick: Y })
+                                  (0, i.jsx)(u.olH, { onClick: W })
                               ]
                           }),
                           (0, i.jsx)('div', {
                               children: (0, i.jsx)('img', {
                                   alt: a,
-                                  className: G.img,
-                                  src: H
+                                  className: z.img,
+                                  src: q
                               })
                           })
                       ]
                   }),
-                  (0, i.jsxs)(u.ModalContent, {
-                      className: G.modalContent,
+                  (0, i.jsxs)(u.hzk, {
+                      className: z.modalContent,
                       children: [
-                          (0, i.jsx)(u.SearchBox, {
-                              className: G.searchBar,
-                              placeholder: F.intl.string(F.t['5h0QOD']),
-                              label: F.intl.string(F.t['5h0QOD']),
-                              searchTerm: E,
-                              onChange: (e) => j(e),
-                              onClear: () => j('')
+                          (0, i.jsx)(u.Rj2, {
+                              className: z.searchBar,
+                              placeholder: B.intl.string(B.t['5h0QOD']),
+                              label: B.intl.string(B.t['5h0QOD']),
+                              searchTerm: y,
+                              onChange: (e) => A(e),
+                              onClear: () => A('')
                           }),
-                          Q.map((e, t) =>
+                          X.map((e, t) =>
                               (0, i.jsxs)(
                                   n.Fragment,
                                   {
                                       children: [
-                                          0 === t ? null : (0, i.jsx)('div', { className: G.rowDivider }),
-                                          (0, i.jsx)(q, {
+                                          0 === t ? null : (0, i.jsx)('div', { className: z.rowDivider }),
+                                          (0, i.jsx)(H, {
                                               row: e,
                                               onClick: J(e),
-                                              checked: D.includes(e.item.id),
-                                              disabled: !D.includes(e.item.id) && D.length >= 10
+                                              checked: M.includes(e.item.id),
+                                              disabled: !M.includes(e.item.id) && M.length >= 10
                                           })
                                       ]
                                   },
@@ -235,26 +228,26 @@ function H(e) {
                           )
                       ]
                   }),
-                  (0, i.jsx)(u.ModalFooter, {
-                      className: G.footer,
+                  (0, i.jsx)(u.mzw, {
+                      className: z.footer,
                       children: (0, i.jsxs)('div', {
-                          className: G.copySendBar,
+                          className: z.copySendBar,
                           children: [
-                              (0, i.jsx)(V, {
+                              (0, i.jsx)(K, {
                                   applicationId: t,
-                                  activitySessionId: null == b ? void 0 : b.compositeInstanceId,
+                                  activitySessionId: null == S ? void 0 : S.compositeInstanceId,
                                   mediaUrl: a
                               }),
-                              D.length >= 10
+                              M.length >= 10
                                   ? (0, i.jsx)(u.Text, {
                                         variant: 'text-xs/normal',
-                                        children: F.intl.format(F.t.mdE9iI, { maxShares: 10 })
+                                        children: B.intl.format(B.t.mdE9iI, { maxShares: 10 })
                                     })
                                   : null,
-                              (0, i.jsx)(u.Button, {
-                                  onClick: X,
-                                  disabled: D.length <= 0,
-                                  children: F.intl.string(F.t.TXNS7e)
+                              (0, i.jsx)(u.zxk, {
+                                  onClick: Y,
+                                  disabled: M.length <= 0,
+                                  children: B.intl.string(B.t.TXNS7e)
                               })
                           ]
                       })
@@ -262,52 +255,52 @@ function H(e) {
               ]
           });
 }
-function q(e) {
+function H(e) {
     let { row: t, onClick: a, checked: n, disabled: l } = e,
         r = null,
         o = null,
-        c = null;
+        d = null;
     switch (t.type) {
-        case M.bm.DM:
-        case M.bm.FRIEND:
-            (r = (0, i.jsx)(u.Avatar, {
-                size: u.AvatarSizes.SIZE_40,
+        case D.bm.DM:
+        case D.bm.FRIEND:
+            (r = (0, i.jsx)(u.qEK, {
+                size: u.EFr.SIZE_40,
                 src: t.item.getAvatarURL(null, 128, !1),
                 'aria-label': t.item.username
             })),
-                (o = U.ZP.getName(t.item)),
-                (c = U.ZP.getUserTag(t.item));
+                (o = k.ZP.getName(t.item)),
+                (d = k.ZP.getUserTag(t.item));
             break;
-        case M.bm.GROUP_DM: {
-            let e = (0, b.x)(t.item),
-                a = (0, C.F6)(t.item, Z.default, E.Z);
-            (r = (0, i.jsx)(u.Avatar, {
+        case D.bm.GROUP_DM: {
+            let e = (0, S.x)(t.item),
+                a = (0, b.F6)(t.item, Z.default, y.Z);
+            (r = (0, i.jsx)(u.qEK, {
                 src: e,
                 'aria-label': a,
-                size: u.AvatarSizes.SIZE_40
+                size: u.EFr.SIZE_40
             })),
-                (o = (0, C.F6)(t.item, Z.default, E.Z));
+                (o = (0, b.F6)(t.item, Z.default, y.Z));
             break;
         }
-        case M.bm.CHANNEL: {
+        case D.bm.CHANNEL: {
             let e = t.item,
-                a = T.Z.getGuild(e.guild_id);
+                a = x.Z.getGuild(e.guild_id);
             if (null == a) return null;
-            if (((o = '#'.concat((0, C.F6)(e, Z.default, E.Z))), (c = a.name), null != a.icon)) {
-                let t = j.ZP.getGuildIconURL({
+            if (((o = '#'.concat((0, b.F6)(e, Z.default, y.Z))), (d = a.name), null != a.icon)) {
+                let t = A.ZP.getGuildIconURL({
                     id: e.guild_id,
                     icon: a.icon,
                     size: 40
                 });
-                r = (0, i.jsx)(u.Avatar, {
+                r = (0, i.jsx)(u.qEK, {
                     src: t,
                     'aria-label': o,
-                    size: u.AvatarSizes.SIZE_40
+                    size: u.EFr.SIZE_40
                 });
             } else {
-                let e = (0, R.Zg)(a.name);
+                let e = (0, P.Zg)(a.name);
                 r = (0, i.jsx)('div', {
-                    className: G.acronym,
+                    className: z.acronym,
                     'aria-hidden': !0,
                     children: (0, i.jsx)(u.Text, {
                         variant: 'text-md/semibold',
@@ -317,55 +310,55 @@ function q(e) {
             }
         }
     }
-    return (0, i.jsxs)(u.Clickable, {
+    return (0, i.jsxs)(u.P3F, {
         onClick: a,
-        className: s()(G.rowContainer, { [G.disabled]: l }),
+        className: s()(z.rowContainer, { [z.disabled]: l }),
         children: [
             (0, i.jsxs)('div', {
-                className: G.rowLeft,
+                className: z.rowLeft,
                 children: [
                     (0, i.jsx)('div', {
-                        className: G.rowAvatar,
+                        className: z.rowAvatar,
                         children: r
                     }),
                     (0, i.jsxs)('div', {
-                        className: G.rowNameContainer,
+                        className: z.rowNameContainer,
                         children: [
                             (0, i.jsx)(u.Text, {
                                 variant: 'text-md/semibold',
-                                className: s()(G.rowName, { [G.disabled]: l }),
+                                className: s()(z.rowName, { [z.disabled]: l }),
                                 children: o
                             }),
                             (0, i.jsx)(u.Text, {
                                 variant: 'text-xs/medium',
-                                className: s()(G.rowSubName, { [G.disabled]: l }),
-                                children: c
+                                className: s()(z.rowSubName, { [z.disabled]: l }),
+                                children: d
                             })
                         ]
                     })
                 ]
             }),
-            (0, i.jsx)(u.Checkbox, {
+            (0, i.jsx)(u.XZJ, {
                 disabled: l,
                 value: n,
-                type: u.Checkbox.Types.INVERTED,
+                type: u.XZJ.Types.INVERTED,
                 displayOnly: !0,
-                className: G.rowRight
+                className: z.rowRight
             })
         ]
     });
 }
-function V(e) {
+function K(e) {
     let { applicationId: t, mediaUrl: a, activitySessionId: l } = e,
         [s, r] = n.useState(!1),
-        o = (0, d.e7)([Z.default], () => Z.default.getCurrentUser());
-    async function c() {
-        A.default.track(O.rMx.ACTIVITY_SHARE_MOMENT_COPY, {
+        o = (0, c.e7)([Z.default], () => Z.default.getCurrentUser());
+    async function d() {
+        j.default.track(O.rMx.ACTIVITY_SHARE_MOMENT_COPY, {
             user_id: null == o ? void 0 : o.id,
             application_id: t,
             activity_session_id: l
         }),
-            await k.ZP.copyImage(a),
+            await U.ZP.copyImage(a),
             r(!0);
     }
     return (n.useEffect(() => {
@@ -380,23 +373,23 @@ function V(e) {
             }
         );
     }, [s]),
-    D.isPlatformEmbedded && k.ZP.canCopyImage(a))
-        ? (0, i.jsxs)(u.Button, {
-              look: u.Button.Looks.LINK,
-              color: u.Button.Colors.LINK,
-              onClick: c,
-              innerClassName: G.copyButton,
+    M.isPlatformEmbedded && U.ZP.canCopyImage(a))
+        ? (0, i.jsxs)(u.zxk, {
+              look: u.zxk.Looks.LINK,
+              color: u.zxk.Colors.LINK,
+              onClick: d,
+              innerClassName: z.copyButton,
               children: [
                   s
-                      ? (0, i.jsx)(u.CircleCheckIcon, {
+                      ? (0, i.jsx)(u.owK, {
                             size: 'md',
                             color: 'currentColor'
                         })
-                      : (0, i.jsx)(u.CopyIcon, {
+                      : (0, i.jsx)(u.TIy, {
                             size: 'xs',
                             color: 'currentColor'
                         }),
-                  s ? F.intl.string(F.t['t5VZ8/']) : F.intl.string(F.t.tvUqWl)
+                  s ? B.intl.string(B.t['t5VZ8/']) : B.intl.string(B.t.tvUqWl)
               ]
           })
         : (0, i.jsx)('div', {});

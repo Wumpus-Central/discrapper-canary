@@ -1,15 +1,11 @@
-n.d(e, {
-    c: function () {
-        return s;
-    },
-    q: function () {
-        return o;
-    }
+s.d(e, {
+    c: () => r,
+    q: () => o
 });
-var r = n(899517),
-    i = n(452896);
-function s() {
-    return o(r.n), r.n;
+var n = s(899517),
+    i = s(452896);
+function r() {
+    return o(n.n), n.n;
 }
 function o(t) {
     let e = (t.__SENTRY__ = t.__SENTRY__ || {});

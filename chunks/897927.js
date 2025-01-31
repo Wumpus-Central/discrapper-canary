@@ -1,8 +1,9 @@
 e.exports = {
-    button: 'button_c85cdc elevated_c85cdc',
-    buttonTitle: 'buttonTitle_c85cdc',
-    card: 'card_c85cdc elevated_c85cdc',
-    cardContents: 'cardContents_c85cdc',
-    cardAccentLeft: 'cardAccentLeft_c85cdc',
-    cardAccentRight: 'cardAccentRight_c85cdc'
+    elevated: 'elevated__3f12a',
+    button: 'button__3f12a elevated__3f12a',
+    buttonTitle: 'buttonTitle__3f12a',
+    card: 'card__3f12a elevated__3f12a',
+    cardContents: 'cardContents__3f12a',
+    cardAccentLeft: 'cardAccentLeft__3f12a',
+    cardAccentRight: 'cardAccentRight__3f12a'
 };

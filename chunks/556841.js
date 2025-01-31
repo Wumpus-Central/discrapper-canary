@@ -19,10 +19,6 @@ function i(e, t, n) {
     ];
 }
 n.d(t, {
-    n: function () {
-        return r;
-    },
-    w: function () {
-        return i;
-    }
+    n: () => r,
+    w: () => i
 });

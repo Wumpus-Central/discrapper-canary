@@ -1,28 +1,22 @@
-n.d(t, {
-    Z: function () {
-        return x;
-    }
-}),
-    n(47120),
-    n(724458);
+n.d(t, { Z: () => x }), n(47120), n(724458);
 var i = n(200651),
     a = n(192379),
     r = n(120356),
     l = n.n(r),
-    o = n(21260),
-    s = n(780384),
+    s = n(21260),
+    o = n(780384),
     c = n(481060),
     d = n(410030),
     u = n(540059),
     m = n(889711),
-    p = n(79707),
-    h = n(388032),
+    h = n(79707),
+    p = n(388032),
     g = n(333078);
-function C(e) {
+function _(e) {
     let { onTabSelect: t, tabs: n, selectedTab: r } = e,
-        o = (0, d.ZP)(),
-        m = (0, s.wj)(o),
-        C = (0, u.Q3)('GlobalDiscoveryHeaderMoreTab'),
+        s = (0, d.ZP)(),
+        m = (0, o.wj)(s),
+        _ = (0, u.Q3)('GlobalDiscoveryHeaderMoreTab'),
         x = a.useMemo(
             () =>
                 null !=
@@ -32,33 +26,31 @@ function C(e) {
                 }),
             [r, n]
         ),
-        [v, _] = a.useState(!1),
+        [C, v] = a.useState(!1),
         f = (function (e) {
             let { selected: t, isVisualRefreshEnabled: n, isDarkTheme: i, isHovered: a } = e;
-            if (n) return a ? 'text-primary' : t ? 'text-brand' : 'text-normal';
-            return !t && a ? 'interactive-hover' : t ? 'header-primary' : i ? 'interactive-normal' : 'header-primary';
+            return n ? (a ? 'text-primary' : t ? 'text-brand' : 'text-normal') : !t && a ? 'interactive-hover' : t ? 'header-primary' : i ? 'interactive-normal' : 'header-primary';
         })({
             selected: x,
-            isVisualRefreshEnabled: C,
+            isVisualRefreshEnabled: _,
             isDarkTheme: m,
-            isHovered: v
+            isHovered: C
         }),
-        b = (function (e) {
+        I = (function (e) {
             let { selected: t, isVisualRefreshEnabled: n, isDarkTheme: i, isHovered: a } = e;
-            if (n) return a ? c.tokens.colors.TEXT_PRIMARY : t ? c.tokens.colors.TEXT_BRAND : c.tokens.colors.INTERACTIVE_NORMAL;
-            return !t && a ? c.tokens.colors.INTERACTIVE_HOVER : t ? c.tokens.colors.HEADER_PRIMARY : i ? c.tokens.colors.TEXT_MUTED : c.tokens.colors.HEADER_PRIMARY;
+            return n ? (a ? c.TVs.colors.TEXT_PRIMARY : t ? c.TVs.colors.TEXT_BRAND : c.TVs.colors.INTERACTIVE_NORMAL) : !t && a ? c.TVs.colors.INTERACTIVE_HOVER : t ? c.TVs.colors.HEADER_PRIMARY : i ? c.TVs.colors.TEXT_MUTED : c.TVs.colors.HEADER_PRIMARY;
         })({
             selected: x,
-            isVisualRefreshEnabled: C,
+            isVisualRefreshEnabled: _,
             isDarkTheme: m,
-            isHovered: v
+            isHovered: C
         }),
-        I = a.useCallback(() => _(!0), []),
-        S = a.useCallback(() => _(!1), []);
-    return (0, i.jsx)(c.Popout, {
+        b = a.useCallback(() => v(!0), []),
+        j = a.useCallback(() => v(!1), []);
+    return (0, i.jsx)(c.yRy, {
         renderPopout: (e) => {
             let { closePopout: a } = e;
-            return (0, i.jsx)(p.Z, {
+            return (0, i.jsx)(h.Z, {
                 selectedTab: r,
                 onClose: a,
                 tabs: n,
@@ -69,31 +61,31 @@ function C(e) {
         align: 'left',
         children: (e, t) => {
             let { isShown: n } = t;
-            return (0, i.jsx)(c.TabBar.Item, {
+            return (0, i.jsx)(c.njP.Item, {
                 ...e,
                 id: 'more',
                 look: 'brand',
-                selectedItem: C && x ? 'more' : void 0,
-                className: l()(g.tab, { [g.selected]: !C && x }),
-                'aria-label': h.intl.string(h.t.UKOtz8),
+                selectedItem: _ && x ? 'more' : void 0,
+                className: l()(g.tab, { [g.selected]: !_ && x }),
+                'aria-label': p.intl.string(p.t.UKOtz8),
                 children: (0, i.jsxs)('div', {
                     className: g.more,
-                    onMouseEnter: I,
-                    onMouseLeave: S,
+                    onMouseEnter: b,
+                    onMouseLeave: j,
                     children: [
                         (0, i.jsx)(c.Text, {
-                            variant: C ? 'text-sm/semibold' : 'text-md/medium',
+                            variant: _ ? 'text-sm/semibold' : 'text-md/medium',
                             color: f,
-                            children: h.intl.string(h.t.UKOtz8)
+                            children: p.intl.string(p.t.UKOtz8)
                         }),
                         n
-                            ? (0, i.jsx)(c.ChevronSmallUpIcon, {
+                            ? (0, i.jsx)(c.u04, {
                                   size: 'xs',
-                                  color: b
+                                  color: I
                               })
-                            : (0, i.jsx)(c.ChevronSmallDownIcon, {
+                            : (0, i.jsx)(c.CJ0, {
                                   size: 'xs',
-                                  color: b
+                                  color: I
                               })
                     ]
                 })
@@ -102,52 +94,52 @@ function C(e) {
     });
 }
 function x(e) {
-    let { className: t, selectedTab: n, tabs: r, onTabSelect: s, onAvailableWidthChange: d } = e,
-        [p, h] = a.useState(0),
-        x = a.useRef(p),
+    let { className: t, selectedTab: n, tabs: r, onTabSelect: o, onAvailableWidthChange: d } = e,
+        [h, p] = a.useState(0),
+        x = a.useRef(h),
         {
-            lastVisibleIndex: v,
-            onItemLayout: _,
+            lastVisibleIndex: C,
+            onItemLayout: v,
             overflowItemsRef: f,
-            itemWidthsRef: b
-        } = (0, o.zP)({
+            itemWidthsRef: I
+        } = (0, s.zP)({
             items: r,
             itemGapPx: 20,
             maxLines: 1,
-            containerWidth: p
+            containerWidth: h
         }),
-        I = a.useMemo(() => r.slice(0, v + 1), [v, r]),
-        S = a.useMemo(() => r.slice(v + 1), [v, r]),
-        j = a.useRef(null),
+        b = a.useMemo(() => r.slice(0, C + 1), [C, r]),
+        j = a.useMemo(() => r.slice(C + 1), [C, r]),
+        S = a.useRef(null),
         N = a.useCallback(() => {
             var e;
-            let t = null === (e = j.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
+            let t = null === (e = S.current) || void 0 === e ? void 0 : e.getBoundingClientRect();
             if (null == t || x.current === t.width) return;
-            h(t.width), (x.current = t.width);
-            let n = b.current.reduce((e, t, n) => e + t + (0 === n ? 0 : 20)),
+            p(t.width), (x.current = t.width);
+            let n = I.current.reduce((e, t, n) => e + t + (0 === n ? 0 : 20)),
                 i = t.width - n;
             null == d || d(i);
-        }, [b, d]);
+        }, [I, d]);
     a.useEffect(() => {
         let e = (0, m.pP)(N);
         return (0, m.YP)(e, document.body), () => (0, m.UC)(e, document.body);
     }, [N]);
-    let E = 0 !== p,
+    let E = 0 !== h,
         y = (0, u.Q3)('GlobalDiscoveryHeaderTabs');
     return (0, i.jsxs)('div', {
         className: l()(g.container, t),
-        ref: j,
+        ref: S,
         children: [
             (0, i.jsxs)('div', {
                 className: g.measurements,
                 children: [
                     r.map((e, t) =>
                         (0, i.jsx)(
-                            o.AJ,
+                            s.AJ,
                             {
                                 index: t,
-                                onItemLayout: _,
-                                children: (0, i.jsx)(c.TabBar.Item, {
+                                onItemLayout: v,
+                                children: (0, i.jsx)(c.njP.Item, {
                                     id: e.id,
                                     'aria-label': e.label,
                                     className: g.tab,
@@ -162,25 +154,25 @@ function x(e) {
                     ),
                     (0, i.jsx)('div', {
                         ref: f,
-                        children: (0, i.jsx)(C, {
-                            tabs: S,
-                            onTabSelect: s,
+                        children: (0, i.jsx)(_, {
+                            tabs: j,
+                            onTabSelect: o,
                             selectedTab: n
                         })
                     })
                 ]
             }),
             E &&
-                (0, i.jsxs)(c.TabBar, {
+                (0, i.jsxs)(c.njP, {
                     type: 'top',
                     look: 'brand',
                     selectedItem: n,
-                    onItemSelect: s,
+                    onItemSelect: o,
                     className: g.tabs,
                     children: [
-                        I.map((e) =>
+                        b.map((e) =>
                             (0, i.jsx)(
-                                c.TabBar.Item,
+                                c.njP.Item,
                                 {
                                     id: e.id,
                                     look: 'brand',
@@ -191,10 +183,10 @@ function x(e) {
                                 e.id
                             )
                         ),
-                        0 !== S.length
-                            ? (0, i.jsx)(C, {
-                                  tabs: S,
-                                  onTabSelect: s,
+                        0 !== j.length
+                            ? (0, i.jsx)(_, {
+                                  tabs: j,
+                                  onTabSelect: o,
                                   selectedTab: n
                               })
                             : null

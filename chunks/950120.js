@@ -1,33 +1,28 @@
-t.r(n),
-    t.d(n, {
-        default: function () {
-            return E;
-        }
-    });
+t.r(n), t.d(n, { default: () => E });
 var a = t(200651),
-    r = t(192379),
-    i = t(120356),
-    l = t.n(i),
+    i = t(192379),
+    r = t(120356),
+    l = t.n(r),
     o = t(873546),
     s = t(481060),
-    u = t(425493),
-    c = t(376641),
+    c = t(425493),
+    u = t(376641),
     d = t(714338),
-    f = t(585483),
-    _ = t(288229),
-    h = t(981631),
+    _ = t(585483),
+    h = t(288229),
+    f = t(981631),
     p = t(388032),
-    m = t(230569);
-function C(e) {
+    C = t(230569);
+function m(e) {
     let { onClose: n } = e,
-        t = r.useRef(null);
+        t = i.useRef(null);
     return (0, a.jsx)('div', {
-        className: m.mobileCloseWrapper,
+        className: C.mobileCloseWrapper,
         ref: t,
-        children: (0, a.jsx)(s.FocusRingScope, {
+        children: (0, a.jsx)(s.JcV, {
             containerRef: t,
             children: (0, a.jsx)('div', {
-                children: (0, a.jsx)(u.Z, {
+                children: (0, a.jsx)(c.Z, {
                     closeAction: n,
                     keybind: 'ESC'
                 })
@@ -36,42 +31,42 @@ function C(e) {
     });
 }
 function E(e) {
-    let { onClose: n, items: t, startingIndex: i, fit: u, shouldRedactExplicitContent: E, shouldHideMediaOptions: S, shouldAnimateCarousel: g, className: L, transitionState: O, ...x } = e,
-        A = o.tq && null != n;
+    let { onClose: n, items: t, startingIndex: r, fit: c, shouldRedactExplicitContent: E, shouldHideMediaOptions: S, shouldAnimateCarousel: g, className: L, transitionState: x, ...O } = e,
+        v = o.tq && null != n;
     return (
-        r.useEffect(() => {
+        i.useEffect(() => {
             if (null != n)
                 return (
-                    f.S.subscribe(h.CkL.MEDIA_MODAL_CLOSE, n),
+                    _.S.subscribe(f.CkL.MEDIA_MODAL_CLOSE, n),
                     () => {
-                        f.S.unsubscribe(h.CkL.MEDIA_MODAL_CLOSE, n);
+                        _.S.unsubscribe(f.CkL.MEDIA_MODAL_CLOSE, n);
                     }
                 );
         }, [n]),
-        r.useEffect(
+        i.useEffect(
             () => (
-                O === s.ModalTransitionState.ENTERED && (d.Z.disable(), d.Z.enableTemp(c.P)),
-                O === s.ModalTransitionState.HIDDEN && (d.Z.disable(), d.Z.enableTemp(c.v)),
+                x === s.Dvm.ENTERED && (d.Z.disable(), d.Z.enableTemp(u.P)),
+                x === s.Dvm.HIDDEN && (d.Z.disable(), d.Z.enableTemp(u.v)),
                 () => {
                     d.Z.disableTemp();
                 }
             ),
-            [O]
+            [x]
         ),
-        (0, a.jsxs)(s.ModalRoot, {
+        (0, a.jsxs)(s.Y0X, {
             hideShadow: !0,
-            className: l()(m.carouselModal, L),
-            transitionState: O,
-            ...x,
-            size: s.ModalSize.DYNAMIC,
+            className: l()(C.carouselModal, L),
+            transitionState: x,
+            ...O,
+            size: s.CgR.DYNAMIC,
             'aria-label': p.intl.string(p.t.AMTX3t),
             onClick: n,
             children: [
-                A ? (0, a.jsx)(C, { onClose: n }) : null,
-                (0, a.jsx)(_.Z, {
+                v ? (0, a.jsx)(m, { onClose: n }) : null,
+                (0, a.jsx)(h.Z, {
                     items: t,
-                    startIndex: i,
-                    fit: u,
+                    startIndex: r,
+                    fit: c,
                     shouldRedactExplicitContent: E,
                     shouldHideMediaOptions: S,
                     shouldAnimateCarousel: g

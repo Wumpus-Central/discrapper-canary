@@ -1,21 +1,13 @@
 x.d(i, {
-    B0: function () {
-        return v;
-    },
-    ZP: function () {
-        return P;
-    },
-    _I: function () {
-        return T;
-    },
-    xm: function () {
-        return S;
-    }
+    B0: () => v,
+    ZP: () => P,
+    _I: () => T,
+    xm: () => S
 });
-var r = x(200651),
-    k = x(192379),
-    t = x(120356),
-    s = x.n(t),
+var k = x(200651),
+    r = x(192379),
+    s = x(120356),
+    t = x.n(s),
     o = x(500923),
     n = x.n(o),
     m = x(442837),
@@ -38,13 +30,13 @@ var r = x(200651),
     F = x(490266);
 function g(a) {
     let i = (0, m.e7)([l.Z], () => l.Z.useReducedMotion),
-        x = k.useRef(null);
+        x = r.useRef(null);
     return (
-        k.useEffect(() => {
-            let r;
+        r.useEffect(() => {
+            let k;
             return (
                 null != x.current &&
-                    (r = n().loadAnimation({
+                    (k = n().loadAnimation({
                         container: x.current,
                         renderer: 'svg',
                         loop: !0,
@@ -52,7 +44,7 @@ function g(a) {
                         animationData: JSON.parse(JSON.stringify(a))
                     })),
                 () => {
-                    null == r || r.destroy();
+                    null == k || k.destroy();
                 }
             );
         }, [x, i, a]),
@@ -61,9 +53,9 @@ function g(a) {
 }
 function S() {
     let a = g(D);
-    return (0, r.jsx)('div', {
-        className: s()(F.leftArt, F.altFloat),
-        children: (0, r.jsx)('div', {
+    return (0, k.jsx)('div', {
+        className: t()(F.leftArt, F.altFloat),
+        children: (0, k.jsx)('div', {
             ref: a,
             className: F.grillingIsland
         })
@@ -71,18 +63,18 @@ function S() {
 }
 function v() {
     let a = g(B);
-    return (0, r.jsx)('div', {
-        className: s()(F.rightArt, F.altFloat),
-        children: (0, r.jsx)('div', {
+    return (0, k.jsx)('div', {
+        className: t()(F.rightArt, F.altFloat),
+        children: (0, k.jsx)('div', {
             ref: a,
             className: F.waffleIsland
         })
     });
 }
 function T(a) {
-    let { guild: i, mainIslandClassName: x, balloonDogClassName: t } = a,
+    let { guild: i, mainIslandClassName: x, balloonDogClassName: s } = a,
         o = (0, m.e7)([l.Z], () => l.Z.useReducedMotion),
-        e = k.useRef(null),
+        e = r.useRef(null),
         p = g(A),
         h = c.ZP.getGuildIconURL({
             id: i.id,
@@ -90,7 +82,7 @@ function T(a) {
             size: 96
         });
     return (
-        k.useEffect(() => {
+        r.useEffect(() => {
             let a;
             return (
                 null != e.current && null != h
@@ -117,15 +109,15 @@ function T(a) {
                 }
             );
         }, [h, e, o]),
-        (0, r.jsxs)('div', {
-            className: s()(F.centerArt, F.float),
+        (0, k.jsxs)('div', {
+            className: t()(F.centerArt, F.float),
             children: [
-                (0, r.jsx)('div', {
-                    className: s()(F.balloonDog, t),
+                (0, k.jsx)('div', {
+                    className: t()(F.balloonDog, s),
                     ref: p
                 }),
-                (0, r.jsx)('div', {
-                    className: s()(F.mainIsland, x),
+                (0, k.jsx)('div', {
+                    className: t()(F.mainIsland, x),
                     ref: e
                 })
             ]
@@ -133,10 +125,10 @@ function T(a) {
     );
 }
 function P(a) {
-    let { guild: i, onStart: x, onboardingStatus: t, headerId: s, disableTracking: o } = a,
+    let { guild: i, onStart: x, onboardingStatus: s, headerId: t, disableTracking: o } = a,
         n = (0, m.e7)([f.Z], () => f.Z.isLoading()),
-        l = k.useRef(!1);
-    k.useEffect(() => {
+        l = r.useRef(!1);
+    r.useEffect(() => {
         if (!o)
             return (
                 d.default.track(V.rMx.GUILD_ONBOARDING_STEP_VIEWED, {
@@ -164,33 +156,33 @@ function P(a) {
                 c();
             }, 3000);
         }),
-        (0, r.jsx)(r.Fragment, {
-            children: (0, r.jsx)('div', {
+        (0, k.jsx)(k.Fragment, {
+            children: (0, k.jsx)('div', {
                 className: F.coverContainer,
-                children: (0, r.jsxs)('div', {
+                children: (0, k.jsxs)('div', {
                     className: F.centerContent,
                     children: [
-                        (0, r.jsx)(T, { guild: i }),
-                        (0, r.jsxs)('div', {
+                        (0, k.jsx)(T, { guild: i }),
+                        (0, k.jsxs)('div', {
                             className: F.coverContent,
                             children: [
-                                (0, r.jsx)(e.Text, {
+                                (0, k.jsx)(e.Text, {
                                     className: F.coverTitle,
                                     variant: 'text-md/medium',
                                     color: 'always-white',
-                                    id: s,
+                                    id: t,
                                     children: b.intl.format(b.t['j59F/f'], { guildName: null == i ? void 0 : i.name })
                                 }),
                                 n
-                                    ? (0, r.jsx)(e.Spinner, { className: F.__invalid_subtitle })
-                                    : t === u.uX.NOT_APPLICABLE
-                                      ? (0, r.jsx)(e.Heading, {
+                                    ? (0, k.jsx)(e.$jN, { className: F.__invalid_subtitle })
+                                    : s === u.uX.NOT_APPLICABLE
+                                      ? (0, k.jsx)(e.X6q, {
                                             className: F.__invalid_subtitle,
                                             variant: 'heading-xl/semibold',
                                             color: 'always-white',
                                             children: b.intl.string(b.t.Q5ibtb)
                                         })
-                                      : (0, r.jsx)(e.Heading, {
+                                      : (0, k.jsx)(e.X6q, {
                                             className: F.__invalid_subtitle,
                                             variant: 'heading-xl/semibold',
                                             color: 'always-white',

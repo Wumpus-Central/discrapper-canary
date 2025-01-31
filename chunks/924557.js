@@ -1,31 +1,19 @@
-r.d(n, {
-    Go: function () {
-        return h;
-    },
-    NV: function () {
-        return d;
-    },
-    Zq: function () {
-        return _;
-    },
-    ln: function () {
-        return p;
-    },
-    nM: function () {
-        return m;
-    },
-    xt: function () {
-        return g;
-    }
+n.d(t, {
+    Go: () => _,
+    NV: () => c,
+    Zq: () => p,
+    ln: () => f,
+    nM: () => h,
+    xt: () => m
 });
-var i = r(818083),
-    a = r(441167),
-    o = r(131951),
-    s = r(74538),
-    l = r(435064),
-    u = r(779618),
-    c = r(474936);
-let d = (0, i.B)({
+var i = n(818083),
+    r = n(441167),
+    a = n(131951),
+    s = n(74538),
+    o = n(435064),
+    l = n(779618),
+    u = n(474936);
+let c = (0, i.B)({
         kind: 'user',
         id: '2022-11_clips_experiment',
         label: 'Clips Experiment',
@@ -64,7 +52,7 @@ let d = (0, i.B)({
             }
         ]
     }),
-    f = (0, i.B)({
+    d = (0, i.B)({
         kind: 'user',
         id: '2023-09_clips_nitro_early_access',
         label: 'Clips (Nitro EA)',
@@ -94,34 +82,34 @@ let d = (0, i.B)({
             }
         ]
     });
-function p() {
-    if (!(0, u.Z)(o.Z)) return !1;
-    let { enableClips: e } = f.getCurrentConfig({ location: 'areClipsEnabled' }, { autoTrackExposure: !1 }),
-        { enableClips: n } = d.getCurrentConfig({ location: 'areClipsEnabled' }, { autoTrackExposure: !1 }),
-        r = l.Z.isDecoupledGameClippingEnabled(),
-        { enableViewerClipping: i } = a.Z.getCurrentConfig({ location: 'areClipsEnabled' }, { autoTrackExposure: !1 });
-    return e || n || r || i;
+function f() {
+    if (!(0, l.Z)(a.Z)) return !1;
+    let { enableClips: e } = d.getCurrentConfig({ location: 'areClipsEnabled' }, { autoTrackExposure: !1 }),
+        { enableClips: t } = c.getCurrentConfig({ location: 'areClipsEnabled' }, { autoTrackExposure: !1 }),
+        n = o.Z.isDecoupledGameClippingEnabled(),
+        { enableViewerClipping: i } = r.Z.getCurrentConfig({ location: 'areClipsEnabled' }, { autoTrackExposure: !1 });
+    return e || t || n || i;
 }
-function h() {
-    let e = (0, u.Z)(o.Z),
-        { enableClips: n } = f.useExperiment({ location: 'useEnableClips' }, { autoTrackExposure: !1 }),
-        { enableClips: r } = d.useExperiment({ location: 'useEnableClips' }, { autoTrackExposure: !1 }),
-        i = l.Z.isDecoupledGameClippingEnabled(),
-        { enableViewerClipping: s } = a.Z.useExperiment({ location: 'useEnableClips' }, { autoTrackExposure: !1 });
-    return (r || n || i || s) && e;
+function _() {
+    let e = (0, l.Z)(a.Z),
+        { enableClips: t } = d.useExperiment({ location: 'useEnableClips' }, { autoTrackExposure: !1 }),
+        { enableClips: n } = c.useExperiment({ location: 'useEnableClips' }, { autoTrackExposure: !1 }),
+        i = o.Z.isDecoupledGameClippingEnabled(),
+        { enableViewerClipping: s } = r.Z.useExperiment({ location: 'useEnableClips' }, { autoTrackExposure: !1 });
+    return (n || t || i || s) && e;
 }
-let _ = (e) => {
-        let { autoTrackExposure: n } = e,
-            r = (0, u.Z)(o.Z),
-            { enablePremiumEarlyAccessGoLiveRoadblock: i } = f.useExperiment({ location: 'useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock' }, { autoTrackExposure: n && r });
-        return !!r && i;
+let p = (e) => {
+        let { autoTrackExposure: t } = e,
+            n = (0, l.Z)(a.Z),
+            { enablePremiumEarlyAccessGoLiveRoadblock: i } = d.useExperiment({ location: 'useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock' }, { autoTrackExposure: t && n });
+        return !!n && i;
     },
-    m = (e) => {
-        let { autoTrackExposure: n } = e,
-            r = (0, u.Z)(o.Z),
-            { enablePremiumEarlyAccessAnnouncementCoachmark: i } = f.useExperiment({ location: 'useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock' }, { autoTrackExposure: n && r });
-        return !!r && i;
+    h = (e) => {
+        let { autoTrackExposure: t } = e,
+            n = (0, l.Z)(a.Z),
+            { enablePremiumEarlyAccessAnnouncementCoachmark: i } = d.useExperiment({ location: 'useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock' }, { autoTrackExposure: t && n });
+        return !!n && i;
     };
-function g(e) {
-    return s.ZP.isPremiumAtLeast(e.premiumType, c.p9.TIER_2);
+function m(e) {
+    return s.ZP.isPremiumAtLeast(e.premiumType, u.p9.TIER_2);
 }

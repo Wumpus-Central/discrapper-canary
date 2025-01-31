@@ -1,91 +1,85 @@
-t.r(n),
-    t.d(n, {
-        default: function () {
-            return x;
-        }
-    }),
-    t(47120);
-var r = t(200651);
-t(192379);
-var s = t(481060),
-    o = t(313201),
-    c = t(930180),
-    l = t(46920),
-    i = t(388032),
-    a = t(48);
+n.d(t, { default: () => m }), n(47120);
+var s = n(200651);
+n(192379);
+var r = n(481060),
+    l = n(313201),
+    i = n(930180),
+    o = n(46920),
+    c = n(388032),
+    a = n(48);
 function d(e) {
-    let { blockedUsersCount: n, ignoredUsersCount: t } = e;
-    return n > 0 && t > 0 ? i.intl.format(i.t.Uzdyho, { number: n + t }) : t > 0 ? i.intl.format(i.t.wvygk5, { number: t }) : i.intl.format(i.t.HviVAw, { number: n });
-}
-function u(e) {
-    let { blockedUsersCount: n, ignoredUsersCount: t } = e;
-    return n > 0 && t > 0 ? i.intl.string(i.t['P/KFX1']) : t > 0 ? i.intl.format(i.t.Ri3o39, { number: t }) : i.intl.format(i.t['28qZMT'], { number: n });
+    let { blockedUsersCount: t, ignoredUsersCount: n } = e;
+    return t > 0 && n > 0 ? c.intl.format(c.t.Uzdyho, { number: t + n }) : n > 0 ? c.intl.format(c.t.wvygk5, { number: n }) : c.intl.format(c.t.HviVAw, { number: t });
 }
 function x(e) {
-    let { channel: n, onAccept: t, transitionState: x, onClose: m, ...h } = e,
-        j = (0, o.Dt)(),
-        b = (0, c.z)(n.id),
-        k = (0, c.bA)(n.id);
-    return (0, r.jsxs)(s.ModalRoot, {
-        transitionState: x,
-        'aria-labelledby': j,
+    let { blockedUsersCount: t, ignoredUsersCount: n } = e;
+    return t > 0 && n > 0 ? c.intl.string(c.t['P/KFX1']) : n > 0 ? c.intl.format(c.t.Ri3o39, { number: n }) : c.intl.format(c.t['28qZMT'], { number: t });
+}
+function m(e) {
+    let { channel: t, onAccept: n, transitionState: m, onClose: u, ...h } = e,
+        b = (0, l.Dt)(),
+        j = (0, i.z)(t.id),
+        k = (0, i.bA)(t.id);
+    return (0, s.jsxs)(r.Y0X, {
+        transitionState: m,
+        'aria-labelledby': b,
         ...h,
-        size: s.ModalSize.SMALL,
+        size: r.CgR.SMALL,
         children: [
-            (0, r.jsxs)(s.ModalHeader, {
+            (0, s.jsxs)(r.xBx, {
                 className: a.header,
                 children: [
-                    (0, r.jsx)(s.Heading, {
+                    (0, s.jsx)(r.X6q, {
                         variant: 'heading-xl/semibold',
-                        children: (0, r.jsx)(d, {
-                            blockedUsersCount: b.length,
+                        children: (0, s.jsx)(d, {
+                            blockedUsersCount: j.length,
                             ignoredUsersCount: k.length
                         })
                     }),
-                    (0, r.jsx)(s.Text, {
+                    (0, s.jsx)(r.Text, {
                         color: 'header-secondary',
                         className: a.description,
                         variant: 'text-sm/normal',
-                        children: (0, r.jsx)(u, {
-                            blockedUsersCount: b.length,
+                        children: (0, s.jsx)(x, {
+                            blockedUsersCount: j.length,
                             ignoredUsersCount: k.length
                         })
                     })
                 ]
             }),
-            (0, r.jsx)(s.ModalContent, {
+            (0, s.jsx)(r.hzk, {
                 className: a.content,
-                children: [...b, ...k].map((e) => {
-                    let { user: t, id: s, speaker: o } = e;
-                    return (0, r.jsx)(
-                        l.Ie,
+                children: [...j, ...k].map((e) => {
+                    let { user: n, id: r, speaker: l } = e;
+                    return (0, s.jsx)(
+                        o.Ie,
                         {
-                            user: t,
-                            speaker: o,
+                            user: n,
+                            speaker: l,
                             showStatus: !0,
-                            channelId: n.id
+                            channelId: t.id
                         },
-                        s
+                        r
                     );
                 })
             }),
-            (0, r.jsxs)(s.ModalFooter, {
+            (0, s.jsxs)(r.mzw, {
                 className: a.footer,
                 children: [
-                    (0, r.jsx)(s.Button, {
+                    (0, s.jsx)(r.zxk, {
                         onClick: () => {
-                            t(n), m();
+                            n(t), u();
                         },
-                        color: s.Button.Colors.BRAND,
-                        children: i.intl.string(i.t.mbD50N)
+                        color: r.zxk.Colors.BRAND,
+                        children: c.intl.string(c.t.mbD50N)
                     }),
-                    (0, r.jsx)(s.Button, {
+                    (0, s.jsx)(r.zxk, {
                         onClick: () => {
-                            m();
+                            u();
                         },
-                        color: s.Button.Colors.PRIMARY,
-                        look: s.Button.Looks.LINK,
-                        children: i.intl.string(i.t.CZGqeX)
+                        color: r.zxk.Colors.PRIMARY,
+                        look: r.zxk.Looks.LINK,
+                        children: c.intl.string(c.t.CZGqeX)
                     })
                 ]
             })

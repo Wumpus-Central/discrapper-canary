@@ -1,12 +1,8 @@
-n.d(t, {
-    B: function () {
-        return u;
-    }
-});
-var a = n(913527),
-    r = n.n(a),
-    i = n(388032);
-let u = [
+a.d(t, { B: () => d });
+var n = a(913527),
+    r = a.n(n),
+    i = a(388032);
+let d = [
     {
         getDueAt: () => r()().add(30, 'minutes').toDate(),
         getLabel: () => i.intl.string(i.t['OV8l/P'])

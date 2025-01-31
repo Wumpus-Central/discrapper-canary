@@ -1,10 +1,6 @@
 n.d(t, {
-    u: function () {
-        return i;
-    },
-    y: function () {
-        return o;
-    }
+    u: () => i,
+    y: () => o
 });
 var r = n(192379);
 function i(e) {

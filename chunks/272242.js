@@ -1,11 +1,3 @@
-var a, n;
-r.d(t, {
-    c: function () {
-        return a;
-    }
-}),
-    ((n = a || (a = {})).GENERAL = 'general'),
-    (n.IMAGES = 'images'),
-    (n.PREMIUM_DEPRECATED = 'premium'),
-    (n.STORE = 'store'),
-    (n.PRIVACY = 'privacy');
+a.d(e, { c: () => n });
+var r,
+    n = (((r = {}).GENERAL = 'general'), (r.IMAGES = 'images'), (r.PREMIUM_DEPRECATED = 'premium'), (r.STORE = 'store'), (r.PRIVACY = 'privacy'), r);

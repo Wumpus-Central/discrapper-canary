@@ -1,3 +1,2 @@
-r.r(n);
+n.r(t), n.d(t, { default: () => i });
 let i = 'https://cdn.discordapp.com/assets/content/0429cad926e909454d99f3286b091a143780b87f67f867b54ab4ee152bdbec99.jpg';
-n.default = i;

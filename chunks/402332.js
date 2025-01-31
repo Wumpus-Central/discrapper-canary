@@ -1,6 +1,7 @@
+r.d(t, { Z: () => s });
 var a = r(760919),
     n = r(365938);
-t.Z = new a.Z({
+let s = new a.Z({
     id: 'rec2020',
     name: 'REC.2020',
     base: n.Z,

@@ -1,47 +1,41 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return h;
-        }
-    }),
-    n(47120);
+n.d(t, { default: () => h }), n(47120);
 var l = n(200651),
     i = n(192379),
     r = n(481060),
-    d = n(981888),
-    a = n(157689),
-    s = n(894017),
-    o = n(854698),
-    u = n(440371),
-    c = n(388032),
+    s = n(981888),
+    d = n(157689),
+    a = n(894017),
+    c = n(854698),
+    o = n(440371),
+    u = n(388032),
     x = n(345939);
 function h(e) {
-    let { guildEvent: t, recurrenceId: n, transitionState: h, onClose: m } = e,
-        g = (0, s.Z)(n, t.id),
-        j = (0, o.iA)(n, t),
-        _ = (0, o.x6)(j, g),
-        [v, I] = i.useState(_),
-        [f, { loading: D, error: p }] = (0, d.Z)(() => {
-            let e = (0, a.Z)(t, n, v, g);
-            return null == p && m(), e;
+    let { guildEvent: t, recurrenceId: n, transitionState: h, onClose: g } = e,
+        m = (0, a.Z)(n, t.id),
+        _ = (0, c.iA)(n, t),
+        j = (0, c.x6)(_, m),
+        [v, f] = i.useState(j),
+        [k, { loading: D, error: p }] = (0, s.Z)(() => {
+            let e = (0, d.Z)(t, n, v, m);
+            return null == p && g(), e;
         });
-    return (0, l.jsxs)(r.ModalRoot, {
+    return (0, l.jsxs)(r.Y0X, {
         transitionState: h,
         children: [
-            (0, l.jsx)(r.ModalHeader, {
-                children: (0, l.jsx)(r.Heading, {
+            (0, l.jsx)(r.xBx, {
+                children: (0, l.jsx)(r.X6q, {
                     variant: 'heading-lg/semibold',
-                    children: c.intl.string(c.t.wmVmXF)
+                    children: u.intl.string(u.t.wmVmXF)
                 })
             }),
-            (0, l.jsxs)(r.ModalContent, {
+            (0, l.jsxs)(r.hzk, {
                 className: x.content,
                 children: [
-                    (0, l.jsx)(u.Z, {
+                    (0, l.jsx)(o.Z, {
                         onScheduleChange: (e) => {
                             let { startDate: t, endDate: n } = e;
                             null != t && null != n && n.isBefore(t) && (n = t.clone().add(1, 'hour')),
-                                I({
+                                f({
                                     startDate: t,
                                     endDate: n
                                 });
@@ -62,21 +56,21 @@ function h(e) {
                         : null
                 ]
             }),
-            (0, l.jsxs)(r.ModalFooter, {
+            (0, l.jsxs)(r.mzw, {
                 className: x.footer,
                 children: [
-                    (0, l.jsx)(r.Button, {
-                        color: r.Button.Colors.BRAND,
-                        onClick: f,
+                    (0, l.jsx)(r.zxk, {
+                        color: r.zxk.Colors.BRAND,
+                        onClick: k,
                         className: x.button,
                         submitting: D,
-                        disabled: (0, o.Y4)(v, _),
-                        children: c.intl.string(c.t.e5VEcH)
+                        disabled: (0, c.Y4)(v, j),
+                        children: u.intl.string(u.t.e5VEcH)
                     }),
-                    (0, l.jsx)(r.Button, {
-                        color: r.Button.Colors.PRIMARY,
-                        onClick: m,
-                        children: c.intl.string(c.t['ETE/oK'])
+                    (0, l.jsx)(r.zxk, {
+                        color: r.zxk.Colors.PRIMARY,
+                        onClick: g,
+                        children: u.intl.string(u.t['ETE/oK'])
                     })
                 ]
             })

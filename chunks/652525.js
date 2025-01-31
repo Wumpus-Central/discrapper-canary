@@ -1,8 +1,4 @@
-t.d(r, {
-    Z: function () {
-        return i;
-    }
-});
+t.d(r, { Z: () => i });
 var a = t(147693),
     o = {
         article: 'article',
@@ -63,15 +59,10 @@ var a = t(147693),
         superscript: new Set(['aria-label', 'aria-labelledby'])
     };
 function l(e, r) {
-    var t, a;
-    return (
-        (t = e),
-        (a = r),
-        ['aria-atomic', 'aria-busy', 'aria-controls', 'aria-current', 'aria-describedby', 'aria-details', 'aria-dropeffect', 'aria-flowto', 'aria-grabbed', 'aria-hidden', 'aria-keyshortcuts', 'aria-label', 'aria-labelledby', 'aria-live', 'aria-owns', 'aria-relevant', 'aria-roledescription'].some(function (e) {
-            var r;
-            return t.hasAttribute(e) && !(null !== (r = n[a]) && void 0 !== r && r.has(e));
-        })
-    );
+    return ['aria-atomic', 'aria-busy', 'aria-controls', 'aria-current', 'aria-describedby', 'aria-details', 'aria-dropeffect', 'aria-flowto', 'aria-grabbed', 'aria-hidden', 'aria-keyshortcuts', 'aria-label', 'aria-labelledby', 'aria-live', 'aria-owns', 'aria-relevant', 'aria-roledescription'].some(function (t) {
+        var a;
+        return e.hasAttribute(t) && !(null !== (a = n[r]) && void 0 !== a && a.has(t));
+    });
 }
 function i(e) {
     var r = (function (e) {

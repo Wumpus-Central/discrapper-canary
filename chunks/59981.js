@@ -1,8 +1,8 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    function n(e, n, r, i) {
-        var a = {
+    function t(e, t, n, i) {
+        var r = {
             s: ['thodde secondanim', 'thodde second'],
             ss: [e + ' secondanim', e + ' second'],
             m: ['eka mintan', 'ek minute'],
@@ -16,7 +16,7 @@
             y: ['eka vorsan', 'ek voros'],
             yy: [e + ' vorsanim', e + ' vorsam']
         };
-        return n ? a[r][0] : a[r][1];
+        return t ? r[n][0] : r[n][1];
     }
     return e.defineLocale('gom-latn', {
         months: 'Janer_Febrer_Mars_Abril_Mai_Jun_Julai_Agost_Setembr_Otubr_Novembr_Dezembr'.split('_'),
@@ -46,41 +46,33 @@
         relativeTime: {
             future: '%s',
             past: '%s adim',
-            s: n,
-            ss: n,
-            m: n,
-            mm: n,
-            h: n,
-            hh: n,
-            d: n,
-            dd: n,
-            M: n,
-            MM: n,
-            y: n,
-            yy: n
+            s: t,
+            ss: t,
+            m: t,
+            mm: t,
+            h: t,
+            hh: t,
+            d: t,
+            dd: t,
+            M: t,
+            MM: t,
+            y: t,
+            yy: t
         },
         dayOfMonthOrdinalParse: /\d{1,2}(er)/,
-        ordinal: function (e, n) {
-            if ('D' === n) return e + 'er';
-            return e;
+        ordinal: function (e, t) {
+            return 'D' === t ? e + 'er' : e;
         },
         week: {
             dow: 1,
             doy: 4
         },
         meridiemParse: /rati|sokalli|donparam|sanje/,
-        meridiemHour: function (e, n) {
-            if ((12 === e && (e = 0), 'rati' === n)) return e < 4 ? e : e + 12;
-            if ('sokalli' === n) return e;
-            if ('donparam' === n) return e > 12 ? e : e + 12;
-            else if ('sanje' === n) return e + 12;
+        meridiemHour: function (e, t) {
+            return (12 === e && (e = 0), 'rati' === t) ? (e < 4 ? e : e + 12) : 'sokalli' === t ? e : 'donparam' === t ? (e > 12 ? e : e + 12) : 'sanje' === t ? e + 12 : void 0;
         },
-        meridiem: function (e, n, r) {
-            if (e < 4) return 'rati';
-            if (e < 12) return 'sokalli';
-            if (e < 16) return 'donparam';
-            else if (e < 20) return 'sanje';
-            else return 'rati';
+        meridiem: function (e, t, n) {
+            return e < 4 ? 'rati' : e < 12 ? 'sokalli' : e < 16 ? 'donparam' : e < 20 ? 'sanje' : 'rati';
         }
     });
 });

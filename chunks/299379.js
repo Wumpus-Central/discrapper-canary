@@ -1,10 +1,6 @@
-r.d(n, {
-    Z: function () {
-        return a;
-    }
-});
-var i = r(388032);
-function a(e) {
-    let n = i.intl.currentLocale.toLowerCase();
-    return n in e ? e[n] : e.default;
+n.d(t, { Z: () => r });
+var i = n(388032);
+function r(e) {
+    let t = i.intl.currentLocale.toLowerCase();
+    return t in e ? e[t] : e.default;
 }

@@ -1,45 +1,41 @@
-r.d(n, {
-    Z: function () {
-        return p;
-    }
-});
-var i = r(192379),
-    a = r(399606),
-    o = r(311395),
-    s = r(778825),
-    l = r(150039),
-    u = r(271383),
-    c = r(25990),
-    d = r(594174),
-    f = r(350327);
-function p(e) {
-    let { isTryItOut: n, analyticsLocations: r, guildId: p } = e,
-        h = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
-        _ = (0, a.e7)([u.ZP], () => (null != p && null != h ? u.ZP.getMember(p, h.id) : null)),
-        m = null != _ ? _.avatarDecoration : null == h ? void 0 : h.avatarDecoration,
-        g = (0, o.Z)(r),
+n.d(t, { Z: () => f });
+var i = n(192379),
+    r = n(399606),
+    a = n(311395),
+    s = n(778825),
+    o = n(150039),
+    l = n(271383),
+    u = n(25990),
+    c = n(594174),
+    d = n(350327);
+function f(e) {
+    let { isTryItOut: t, analyticsLocations: n, guildId: f } = e,
+        _ = (0, r.e7)([c.default], () => c.default.getCurrentUser()),
+        p = (0, r.e7)([l.ZP], () => (null != f && null != _ ? l.ZP.getMember(f, _.id) : null)),
+        h = null != p ? p.avatarDecoration : null == _ ? void 0 : _.avatarDecoration,
+        m = (0, a.Z)(n),
         {
-            pendingAvatar: E,
-            pendingAvatarDecoration: v,
-            pendingErrors: y
-        } = (0, a.cj)([c.Z, s.Z], () => ({
-            pendingAvatar: n ? c.Z.getTryItOutAvatar() : null != p ? s.Z.getPendingAvatar() : c.Z.getPendingAvatar(),
-            pendingAvatarDecoration: n ? c.Z.getTryItOutAvatarDecoration() : null != p ? s.Z.getPendingAvatarDecoration() : c.Z.getPendingAvatarDecoration(),
-            pendingErrors: null != p ? s.Z.getErrors().avatarDecoration : c.Z.getErrors().avatarDecoration
+            pendingAvatar: g,
+            pendingAvatarDecoration: E,
+            pendingErrors: v
+        } = (0, r.cj)([u.Z, s.Z], () => ({
+            pendingAvatar: t ? u.Z.getTryItOutAvatar() : null != f ? s.Z.getPendingAvatar() : u.Z.getPendingAvatar(),
+            pendingAvatarDecoration: t ? u.Z.getTryItOutAvatarDecoration() : null != f ? s.Z.getPendingAvatarDecoration() : u.Z.getPendingAvatarDecoration(),
+            pendingErrors: null != f ? s.Z.getErrors().avatarDecoration : u.Z.getErrors().avatarDecoration
         })),
-        b = (0, i.useCallback)((e) => (0, l.Jw)(e, null == h ? void 0 : h.avatar), [null == h ? void 0 : h.avatar]),
+        y = (0, i.useCallback)((e) => (0, o.Jw)(e, null == _ ? void 0 : _.avatar), [null == _ ? void 0 : _.avatar]),
         I = (0, i.useCallback)(
             (e) => {
-                (0, l.PO)(p, e), null != e && g(e);
+                (0, o.PO)(f, e), null != e && m(e);
             },
-            [g, p]
+            [m, f]
         );
     return {
-        pendingAvatar: E,
-        pendingAvatarDecoration: v,
-        setPendingAvatar: n ? f.c_ : b,
-        setPendingAvatarDecoration: n ? f.Xz : I,
-        savedAvatarDecoration: m,
-        pendingErrors: y
+        pendingAvatar: g,
+        pendingAvatarDecoration: E,
+        setPendingAvatar: t ? d.c_ : y,
+        setPendingAvatarDecoration: t ? d.Xz : I,
+        savedAvatarDecoration: h,
+        pendingErrors: v
     };
 }

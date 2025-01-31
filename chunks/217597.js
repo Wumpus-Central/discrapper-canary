@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return s;
-    }
-});
+n.d(t, { Z: () => s });
 var i = n(200651);
 n(192379);
 var r = n(481060),
@@ -24,10 +20,10 @@ function s(e) {
                         children: t
                     }),
                     null != o &&
-                        (0, i.jsx)(r.Tooltip, {
+                        (0, i.jsx)(r.ua7, {
                             text: o,
                             children: (e) =>
-                                (0, i.jsx)(r.CircleInformationIcon, {
+                                (0, i.jsx)(r.d3s, {
                                     size: 'xs',
                                     color: 'currentColor',
                                     className: l.__invalid_labelTooltipIcon,

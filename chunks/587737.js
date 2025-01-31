@@ -1,29 +1,25 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-});
+n.d(t, { Z: () => s });
 var i = n(200651);
 n(192379);
-var r = n(739566),
-    l = n(834129),
-    a = n(388032);
-function o(e) {
-    let { message: t, channel: o, targetUser: s, actorUsernameHook: c, targetUsernameHook: u, compact: d } = e,
-        m = (0, r.ZP)(t),
-        h = (0, r.Sw)(s, o),
-        f = c(m),
-        p = u(null != h ? h : void 0),
-        _ = a.intl.format(a.t.tusv2t, {
+var l = n(739566),
+    a = n(834129),
+    r = n(388032);
+function s(e) {
+    let { message: t, channel: s, targetUser: o, actorUsernameHook: c, targetUsernameHook: d, compact: u } = e,
+        m = (0, l.ZP)(t),
+        h = (0, l.Sw)(o, s),
+        _ = c(m),
+        p = d(null != h ? h : void 0),
+        g = r.intl.format(r.t.tusv2t, {
             actorName: m.nick,
-            actorHook: f,
+            actorHook: _,
             targetName: null == h ? void 0 : h.nick,
             targetHook: p
         });
-    return (0, i.jsx)(l.Z, {
+    return (0, i.jsx)(a.Z, {
         icon: n(570111),
         timestamp: t.timestamp,
-        compact: d,
-        children: _
+        compact: u,
+        children: g
     });
 }

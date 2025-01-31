@@ -1,25 +1,21 @@
-function a() {
-    let e = 'function' == typeof WeakSet,
-        t = e ? new WeakSet() : [];
+function r() {
+    let t = 'function' == typeof WeakSet,
+        e = t ? new WeakSet() : [];
     return [
-        function (r) {
-            if (e) return !!t.has(r) || (t.add(r), !1);
-            for (let e = 0; e < t.length; e++) if (t[e] === r) return !0;
-            return t.push(r), !1;
+        function (a) {
+            if (t) return !!e.has(a) || (e.add(a), !1);
+            for (let t = 0; t < e.length; t++) if (e[t] === a) return !0;
+            return e.push(a), !1;
         },
-        function (r) {
-            if (e) t.delete(r);
+        function (a) {
+            if (t) e.delete(a);
             else
-                for (let e = 0; e < t.length; e++)
-                    if (t[e] === r) {
-                        t.splice(e, 1);
+                for (let t = 0; t < e.length; t++)
+                    if (e[t] === a) {
+                        e.splice(t, 1);
                         break;
                     }
         }
     ];
 }
-r.d(t, {
-    i: function () {
-        return a;
-    }
-});
+a.d(e, { i: () => r });

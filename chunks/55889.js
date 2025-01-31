@@ -1,3 +1,4 @@
+n.d(t, { Z: () => d });
 var i = n(200651),
     r = n(192379),
     l = n(481060),
@@ -5,7 +6,7 @@ var i = n(200651),
     a = n(563115),
     o = n(388032),
     c = n(317193);
-t.Z = r.memo(function (e) {
+let d = r.memo(function (e) {
     let { rule: t, onlyRoles: n = !1, onChangeRule: r } = e,
         d = (0, i.jsx)(s.Z, {
             guildId: t.guildId,
@@ -33,7 +34,7 @@ t.Z = r.memo(function (e) {
                 placeholder: o.intl.string(o.t.aFO1Iy),
                 disableEveryoneRole: !0
             })),
-        (0, i.jsxs)(l.FormItem, {
+        (0, i.jsxs)(l.xJW, {
             children: [
                 d,
                 (0, i.jsx)(l.Text, {

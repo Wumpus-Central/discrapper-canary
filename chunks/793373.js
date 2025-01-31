@@ -1,98 +1,88 @@
-r.d(t, {
-    OP: function () {
-        return n;
-    },
-    Q0: function () {
-        return E;
-    },
-    ix: function () {
-        return o;
-    },
-    jt: function () {
-        return _;
-    },
-    pq: function () {
-        return a;
-    }
+a.d(e, {
+    OP: () => n,
+    Q0: () => i,
+    ix: () => _,
+    jt: () => o,
+    pq: () => r
 });
-let a = 0,
+let r = 0,
     n = 1,
-    _ = 2;
-function o(e) {
-    if (e < 400 && e >= 100) return { code: n };
-    if (e >= 400 && e < 500)
-        switch (e) {
+    o = 2;
+function _(t) {
+    if (t < 400 && t >= 100) return { code: n };
+    if (t >= 400 && t < 500)
+        switch (t) {
             case 401:
                 return {
-                    code: _,
+                    code: o,
                     message: 'unauthenticated'
                 };
             case 403:
                 return {
-                    code: _,
+                    code: o,
                     message: 'permission_denied'
                 };
             case 404:
                 return {
-                    code: _,
+                    code: o,
                     message: 'not_found'
                 };
             case 409:
                 return {
-                    code: _,
+                    code: o,
                     message: 'already_exists'
                 };
             case 413:
                 return {
-                    code: _,
+                    code: o,
                     message: 'failed_precondition'
                 };
             case 429:
                 return {
-                    code: _,
+                    code: o,
                     message: 'resource_exhausted'
                 };
             case 499:
                 return {
-                    code: _,
+                    code: o,
                     message: 'cancelled'
                 };
             default:
                 return {
-                    code: _,
+                    code: o,
                     message: 'invalid_argument'
                 };
         }
-    if (e >= 500 && e < 600)
-        switch (e) {
+    if (t >= 500 && t < 600)
+        switch (t) {
             case 501:
                 return {
-                    code: _,
+                    code: o,
                     message: 'unimplemented'
                 };
             case 503:
                 return {
-                    code: _,
+                    code: o,
                     message: 'unavailable'
                 };
             case 504:
                 return {
-                    code: _,
+                    code: o,
                     message: 'deadline_exceeded'
                 };
             default:
                 return {
-                    code: _,
+                    code: o,
                     message: 'internal_error'
                 };
         }
     return {
-        code: _,
+        code: o,
         message: 'unknown_error'
     };
 }
-function E(e, t) {
-    e.setAttribute('http.response.status_code', t);
-    let r = o(t);
-    'unknown_error' !== r.message && e.setStatus(r);
+function i(t, e) {
+    t.setAttribute('http.response.status_code', e);
+    let a = _(e);
+    'unknown_error' !== a.message && t.setStatus(a);
 }

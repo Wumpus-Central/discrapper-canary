@@ -1,13 +1,9 @@
-n.d(t, {
-    h: function () {
-        return f;
-    }
-});
+n.d(t, { h: () => f });
 var i = n(200651);
 n(192379);
 var l = n(120356),
-    r = n.n(l),
-    a = n(990547),
+    a = n.n(l),
+    r = n(990547),
     s = n(481060),
     o = n(213609),
     c = n(626135),
@@ -20,29 +16,29 @@ function m(e) {
     return (
         (0, o.Z)(
             {
-                type: a.ImpressionTypes.VIEW,
-                name: a.ImpressionNames.HD_STREAMING_POPOUT
+                type: r.ImpressionTypes.VIEW,
+                name: r.ImpressionNames.HD_STREAMING_POPOUT
             },
             { disableTrack: t },
             [t]
         ),
         (0, i.jsxs)('div', {
-            className: r()(p.popoutContainer, { [p.hidden]: t }),
+            className: a()(p.popoutContainer, { [p.hidden]: t }),
             children: [
                 (0, i.jsx)('img', {
                     className: p.image,
                     src: 'https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png',
                     alt: 'HD Streaming Nitro Perk'
                 }),
-                (0, i.jsx)(s.Button, {
+                (0, i.jsx)(s.zxk, {
                     className: p.closeButton,
                     'aria-label': h.intl.string(h.t.cpT0Cg),
-                    look: s.Button.Looks.BLANK,
-                    size: s.Button.Sizes.NONE,
+                    look: s.zxk.Looks.BLANK,
+                    size: s.zxk.Sizes.NONE,
                     onClick: () => {
                         n(), c.default.track(u.rMx.HD_STREAMING_POPOUT_DISMISSED);
                     },
-                    children: (0, i.jsx)(s.XSmallIcon, {
+                    children: (0, i.jsx)(s.Dio, {
                         size: 'xs',
                         className: p.closeIcon,
                         color: 'white'
@@ -61,7 +57,7 @@ function m(e) {
                             (0, i.jsxs)('div', {
                                 className: p.poweredByNitroContainer,
                                 children: [
-                                    (0, i.jsx)(s.NitroWheelIcon, { size: 'xs' }),
+                                    (0, i.jsx)(s.SrA, { size: 'xs' }),
                                     (0, i.jsx)(s.Text, {
                                         className: p.infoText,
                                         variant: 'text-sm/medium',

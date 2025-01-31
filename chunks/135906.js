@@ -1,10 +1,6 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(871465);
-let a = {
+n.d(t, { Z: () => a });
+var i = n(871465);
+let r = {
     [i.YC.CLASSIC]: {
         discodo: 'discodo',
         message1: 'message1',
@@ -59,6 +55,6 @@ let a = {
         user_leave: 'winter_user_leave'
     }
 };
-function o(e) {
-    return a[e];
+function a(e) {
+    return r[e];
 }

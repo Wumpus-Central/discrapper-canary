@@ -1,78 +1,73 @@
-r.d(n, {
-    E: function () {
-        return v;
-    }
-});
+n.d(t, { E: () => g }), n(47120);
 var i,
-    a = r(47120);
-var o = r(200651),
-    s = r(192379),
-    l = r(120356),
-    u = r.n(l),
-    c = r(1561),
-    d = r(84735),
-    f = r(922770),
-    p = r(481060),
-    h = r(388032),
-    _ = r(352086);
-function m(e, n, r) {
+    r = n(200651),
+    a = n(192379),
+    s = n(120356),
+    o = n.n(s),
+    l = n(1561),
+    u = n(84735),
+    c = n(922770),
+    d = n(481060),
+    f = n(388032),
+    _ = n(352086);
+function p(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let g = Object.freeze({
+let h = Object.freeze({
         SMALL: _.small,
         MEDIUM: _.medium,
         LARGE: _.large
     }),
-    E = (e) => {
-        let { hasContent: n, onClear: r, className: i, isLoading: a, size: l = g.SMALL } = e;
-        return (0, o.jsx)(c.P, {
-            className: u()(i, _.iconLayout, l, { [_.pointer]: n }),
+    m = (e) => {
+        let { hasContent: t, onClear: n, className: i, isLoading: s, size: u = h.SMALL } = e;
+        return (0, r.jsx)(l.P, {
+            className: o()(i, _.iconLayout, u, { [_.pointer]: t }),
             onClick: (e) => {
-                e.stopPropagation(), null != r && r(e);
+                e.stopPropagation(), null != n && n(e);
             },
-            tabIndex: n ? 0 : -1,
-            'aria-hidden': !n,
+            tabIndex: t ? 0 : -1,
+            'aria-hidden': !t,
             onMouseDown: (e) => {
                 e.preventDefault(), e.stopPropagation();
             },
-            children: (0, o.jsx)('div', {
+            children: (0, r.jsx)('div', {
                 className: _.iconContainer,
-                children: a
-                    ? (0, o.jsx)(f.$, {
-                          type: f.$.Type.SPINNING_CIRCLE,
-                          className: u()(_.icon, _.visible)
+                children: s
+                    ? (0, r.jsx)(c.$, {
+                          type: c.$.Type.SPINNING_CIRCLE,
+                          className: o()(_.icon, _.visible)
                       })
-                    : (0, o.jsxs)(s.Fragment, {
+                    : (0, r.jsxs)(a.Fragment, {
                           children: [
-                              (0, o.jsx)(p.MagnifyingGlassIcon, {
+                              (0, r.jsx)(d._Ve, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: u()(_.icon, { [_.visible]: !n }),
-                                  'aria-label': h.intl.string(h.t['5h0QOD'])
+                                  className: o()(_.icon, { [_.visible]: !t }),
+                                  'aria-label': f.intl.string(f.t['5h0QOD'])
                               }),
-                              (0, o.jsx)(p.XSmallIcon, {
+                              (0, r.jsx)(d.Dio, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: u()(_.clear, { [_.visible]: n }),
-                                  'aria-label': h.intl.string(h.t.VkKicX)
+                                  className: o()(_.clear, { [_.visible]: t }),
+                                  'aria-label': f.intl.string(f.t.VkKicX)
                               })
                           ]
                       })
             })
         });
     };
-E.Sizes = g;
-class v extends (i = s.PureComponent) {
+m.Sizes = h;
+class g extends (i = a.PureComponent) {
     focus() {
         let { current: e } = this.inputRef;
         null == e || e.focus();
@@ -82,39 +77,39 @@ class v extends (i = s.PureComponent) {
         null == e || e.blur();
     }
     render() {
-        let { query: e, autoFocus: n, onClear: r, className: i, placeholder: a = h.intl.string(h.t['5h0QOD']), iconClassName: s, onKeyDown: l, onKeyUp: c, onKeyPress: f, isLoading: p, size: m, disabled: g, onChange: v, onBlur: y, onFocus: b, autoComplete: I, inputProps: T, hideSearchIcon: S, 'aria-label': A = h.intl.string(h.t['5h0QOD']), ...C } = this.props;
-        return (0, o.jsx)(d.t, {
+        let { query: e, autoFocus: t, onClear: n, className: i, placeholder: a = f.intl.string(f.t['5h0QOD']), iconClassName: s, onKeyDown: l, onKeyUp: c, onKeyPress: d, isLoading: p, size: h, disabled: g, onChange: E, onBlur: v, onFocus: y, autoComplete: I, inputProps: b, hideSearchIcon: T, 'aria-label': S = f.intl.string(f.t['5h0QOD']), ...A } = this.props;
+        return (0, r.jsx)(u.t, {
             focusTarget: this.inputRef,
             ringTarget: this.containerRef,
-            children: (0, o.jsx)('div', {
-                className: u()(i, _.container, m, { [_.disabled]: g }),
+            children: (0, r.jsx)('div', {
+                className: o()(i, _.container, h, { [_.disabled]: g }),
                 ref: this.containerRef,
-                ...C,
-                children: (0, o.jsxs)('div', {
+                ...A,
+                children: (0, r.jsxs)('div', {
                     className: _.inner,
                     children: [
-                        (0, o.jsx)('input', {
-                            ...T,
-                            onFocus: b,
-                            onBlur: y,
+                        (0, r.jsx)('input', {
+                            ...b,
+                            onFocus: y,
+                            onBlur: v,
                             className: _.input,
                             value: e,
                             onChange: this.handleOnChange,
                             onKeyDown: l,
                             onKeyUp: c,
-                            onKeyPress: f,
+                            onKeyPress: d,
                             placeholder: a,
                             disabled: g,
-                            autoFocus: n,
+                            autoFocus: t,
                             autoComplete: I,
-                            'aria-label': A,
+                            'aria-label': S,
                             ref: this.inputRef
                         }),
-                        !S &&
-                            (0, o.jsx)(E, {
-                                size: m,
+                        !T &&
+                            (0, r.jsx)(m, {
+                                size: h,
                                 hasContent: e.length > 0,
-                                onClear: r,
+                                onClear: n,
                                 className: s,
                                 isLoading: p
                             })
@@ -125,17 +120,17 @@ class v extends (i = s.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            m(this, 'inputRef', s.createRef()),
-            m(this, 'containerRef', s.createRef()),
-            m(this, 'handleOnChange', (e) => {
-                let { onChange: n } = this.props;
-                null == n || n(e.currentTarget.value);
+            p(this, 'inputRef', a.createRef()),
+            p(this, 'containerRef', a.createRef()),
+            p(this, 'handleOnChange', (e) => {
+                let { onChange: t } = this.props;
+                null == t || t(e.currentTarget.value);
             });
     }
 }
-m(v, 'Sizes', g),
-    m(v, 'defaultProps', {
-        size: g.SMALL,
+p(g, 'Sizes', h),
+    p(g, 'defaultProps', {
+        size: h.SMALL,
         isLoading: !1,
         disabled: !1
     });

@@ -1,2 +1,2 @@
-var e = n(626544);
-t.exports = /MSIE|Trident/.test(e);
+var i = n(626544);
+e.exports = /MSIE|Trident/.test(i);

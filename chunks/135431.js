@@ -1,95 +1,88 @@
-r.d(n, {
-    Eb: function () {
-        return m;
-    },
-    Er: function () {
-        return E;
-    },
-    LO: function () {
-        return g;
-    },
-    TK: function () {
-        return v;
-    }
-});
-var i = r(315314);
-var a = r(610138);
-var o = r(216116);
-var s = r(78328);
-var l = r(815648);
-var u = r(47120);
-var c = r(873546),
-    d = r(149765),
-    f = r(69580),
-    p = r(626135),
-    h = r(49012),
-    _ = r(981631);
-function m(e) {
-    let { customInstallUrl: n, installParams: r, integrationTypesConfig: i } = e;
-    return null != n || null != r || (null != i && Object.values(i).some((e) => (null == e ? void 0 : e.oauth2_install_params) != null || (null == e ? void 0 : e.oauth2InstallParams) != null));
+n.d(t, {
+    Eb: () => u,
+    Er: () => d,
+    LO: () => c,
+    TK: () => f
+}),
+    n(315314),
+    n(309749),
+    n(610138),
+    n(216116),
+    n(78328),
+    n(815648),
+    n(47120);
+var i = n(873546),
+    r = n(149765),
+    a = n(69580),
+    s = n(626135),
+    o = n(49012),
+    l = n(981631);
+function u(e) {
+    let { customInstallUrl: t, installParams: n, integrationTypesConfig: i } = e;
+    return null != t || null != n || (null != i && Object.values(i).some((e) => (null == e ? void 0 : e.oauth2_install_params) != null || (null == e ? void 0 : e.oauth2InstallParams) != null));
 }
-function g(e) {
-    let { applicationId: n, customInstallUrl: r, installParams: i, integrationTypesConfig: a, guildId: o, channelId: s, disableGuildSelect: l, source: u, oauth2Callback: m } = e;
-    if (null != r) {
-        p.default.track(_.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
-            application_id: n,
-            guild_id: o,
+function c(e) {
+    let { applicationId: t, customInstallUrl: n, installParams: u, integrationTypesConfig: c, guildId: d, channelId: f, disableGuildSelect: _, source: p, oauth2Callback: h } = e;
+    if (null != n) {
+        s.default.track(l.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
+            application_id: t,
+            guild_id: d,
             auth_type: 'custom_url',
-            source: u,
-            device_platform: c.tq ? 'mobile_web' : 'desktop_web'
+            source: p,
+            device_platform: i.tq ? 'mobile_web' : 'desktop_web'
         }),
-            (0, h.q)({ href: r });
+            (0, o.q)({ href: n });
         return;
     }
-    if (null != a && Object.values(a).some((e) => (null == e ? void 0 : e.oauth2_install_params) != null || (null == e ? void 0 : e.oauth2InstallParams) != null)) {
-        p.default.track(_.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
-            application_id: n,
-            guild_id: o,
+    if (null != c && Object.values(c).some((e) => (null == e ? void 0 : e.oauth2_install_params) != null || (null == e ? void 0 : e.oauth2InstallParams) != null)) {
+        s.default.track(l.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
+            application_id: t,
+            guild_id: d,
             auth_type: 'in_app',
-            source: u,
-            device_platform: c.tq ? 'mobile_web' : 'desktop_web'
+            source: p,
+            device_platform: i.tq ? 'mobile_web' : 'desktop_web'
         }),
-            (0, f.openOAuth2Modal)({
-                clientId: n,
-                guildId: o,
-                channelId: s,
-                disableGuildSelect: l,
-                callback: m
+            (0, a.openOAuth2Modal)({
+                clientId: t,
+                guildId: d,
+                channelId: f,
+                disableGuildSelect: _,
+                callback: h
             });
         return;
     }
-    null != i &&
-        (p.default.track(_.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
-            application_id: n,
-            guild_id: o,
+    null != u &&
+        (s.default.track(l.rMx.APPLICATION_ADD_TO_SERVER_CLICKED, {
+            application_id: t,
+            guild_id: d,
             auth_type: 'in_app',
-            source: u,
-            device_platform: c.tq ? 'mobile_web' : 'desktop_web'
+            source: p,
+            device_platform: i.tq ? 'mobile_web' : 'desktop_web'
         }),
-        (0, f.openOAuth2Modal)({
-            clientId: n,
-            guildId: o,
-            channelId: s,
-            disableGuildSelect: l,
-            scopes: i.scopes,
-            permissions: null != i.permissions ? d.vB(i.permissions) : void 0,
-            callback: m
+        (0, a.openOAuth2Modal)({
+            clientId: t,
+            guildId: d,
+            channelId: f,
+            disableGuildSelect: _,
+            scopes: u.scopes,
+            permissions: null != u.permissions ? r.vB(u.permissions) : void 0,
+            callback: h
         }));
 }
-function E(e) {
-    let { applicationId: n, customInstallUrl: r, installParams: i, integrationTypesConfig: a } = e;
-    if (null != r) return null;
-    if (null != a && Object.values(a).some((e) => (null == e ? void 0 : e.oauth2_install_params) != null || (null == e ? void 0 : e.oauth2InstallParams) != null)) {
-        let e = new URL(_.Z5c.OAUTH2_AUTHORIZE, window.location.origin);
-        return e.searchParams.set('client_id', n), e.toString();
+function d(e) {
+    let { applicationId: t, customInstallUrl: n, installParams: i, integrationTypesConfig: r } = e;
+    if (null != n) return null;
+    if (null != r && Object.values(r).some((e) => (null == e ? void 0 : e.oauth2_install_params) != null || (null == e ? void 0 : e.oauth2InstallParams) != null)) {
+        let e = new URL(l.Z5c.OAUTH2_AUTHORIZE, window.location.origin);
+        return e.searchParams.set('client_id', t), e.toString();
     }
     if (null != i) {
-        let e = new URL(_.Z5c.OAUTH2_AUTHORIZE, window.location.origin);
-        return e.searchParams.set('client_id', n), e.searchParams.set('scope', i.scopes.join(' ')), null != i.permissions && e.searchParams.set('permissions', i.permissions), e.toString();
+        let e = new URL(l.Z5c.OAUTH2_AUTHORIZE, window.location.origin);
+        return e.searchParams.set('client_id', t), e.searchParams.set('scope', i.scopes.join(' ')), null != i.permissions && e.searchParams.set('permissions', i.permissions), e.toString();
     }
 }
-function v(e, n) {
-    var r;
-    let i = null === (r = n.result) || void 0 === r ? void 0 : r.sections;
+function f(e, t) {
+    var n;
+    let i = null === (n = t.result) || void 0 === n ? void 0 : n.sections;
     return null != i && e in i;
 }

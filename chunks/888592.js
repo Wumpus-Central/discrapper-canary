@@ -1,18 +1,7 @@
-var i, a;
 n.d(t, {
-    fQ: function () {
-        return l;
-    },
-    tF: function () {
-        return i;
-    }
-}),
-    ((a = i || (i = {})).STUDENT_PROMPT = 'STUDENT_PROMPT'),
-    (a.VERIFY_EMAIL = 'VERIFY_EMAIL'),
-    (a.VERIFY_PIN = 'VERIFY_PIN'),
-    (a.SELECT_SCHOOL = 'SELECT_SCHOOL'),
-    (a.SELECT_SCHOOL_SEARCH = 'SELECT_SCHOOL_SEARCH'),
-    (a.SUBMIT_SCHOOL = 'SUBMIT_SCHOOL'),
-    (a.EMAIL_CONFIRMATION = 'EMAIL_CONFIRMATION'),
-    (a.EMAIL_WAITLIST = 'EMAIL_WAITLIST');
-let l = '884924873015689226';
+    fQ: () => a,
+    tF: () => i
+});
+var l,
+    i = (((l = {}).STUDENT_PROMPT = 'STUDENT_PROMPT'), (l.VERIFY_EMAIL = 'VERIFY_EMAIL'), (l.VERIFY_PIN = 'VERIFY_PIN'), (l.SELECT_SCHOOL = 'SELECT_SCHOOL'), (l.SELECT_SCHOOL_SEARCH = 'SELECT_SCHOOL_SEARCH'), (l.SUBMIT_SCHOOL = 'SUBMIT_SCHOOL'), (l.EMAIL_CONFIRMATION = 'EMAIL_CONFIRMATION'), (l.EMAIL_WAITLIST = 'EMAIL_WAITLIST'), l);
+let a = '884924873015689226';

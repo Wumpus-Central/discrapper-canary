@@ -1,17 +1,13 @@
-r.d(n, {
-    Z: function () {
-        return l;
-    }
-});
-var i = r(192379),
-    a = r(442837),
-    o = r(355467),
-    s = r(78839);
-function l() {
-    let e = (0, a.e7)([s.ZP], () => s.ZP.hasFetchedSubscriptions());
+n.d(t, { Z: () => o });
+var i = n(192379),
+    r = n(442837),
+    a = n(355467),
+    s = n(78839);
+function o() {
+    let e = (0, r.e7)([s.ZP], () => s.ZP.hasFetchedSubscriptions());
     return (
         i.useEffect(() => {
-            !e && (0, o.jg)();
+            e || (0, a.jg)();
         }, [e]),
         e
     );

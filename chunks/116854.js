@@ -1,19 +1,15 @@
-r.d(n, {
-    Z: function () {
-        return s;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(481060),
-    o = r(272277);
+n.d(t, { Z: () => s });
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(272277);
 function s(e) {
-    let { user: n, nickname: r } = e,
-        s = null != r;
-    return (0, i.jsx)(a.Avatar, {
-        src: n.getAvatarURL(void 0, s ? 16 : 24),
-        size: s ? a.AvatarSizes.SIZE_16 : a.AvatarSizes.SIZE_24,
-        className: s ? o.miniAvatar : o.largeAvatar,
+    let { user: t, nickname: n } = e,
+        s = null != n;
+    return (0, i.jsx)(r.qEK, {
+        src: t.getAvatarURL(void 0, s ? 16 : 24),
+        size: s ? r.EFr.SIZE_16 : r.EFr.SIZE_24,
+        className: s ? a.miniAvatar : a.largeAvatar,
         'aria-hidden': !0
     });
 }

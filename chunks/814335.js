@@ -1,4 +1,5 @@
-e.exports = {
-    header: 'header_eb95a6',
-    closeButton: 'closeButton_eb95a6'
+var i = {
+    header: 'header__693f1',
+    closeButton: 'closeButton__693f1'
 };
+e.exports = i;

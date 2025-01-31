@@ -1,12 +1,8 @@
-r.d(t, {
-    u: function () {
-        return n;
-    }
-});
-var a = r(395848);
-let n = (e) => {
-    let t = (t) => {
-        ('pagehide' === t.type || (a.m.document && 'hidden' === a.m.document.visibilityState)) && e(t);
+a.d(e, { u: () => n });
+var r = a(395848);
+let n = (t) => {
+    let e = (e) => {
+        ('pagehide' === e.type || (r.m.document && 'hidden' === r.m.document.visibilityState)) && t(e);
     };
-    a.m.document && (addEventListener('visibilitychange', t, !0), addEventListener('pagehide', t, !0));
+    r.m.document && (addEventListener('visibilitychange', e, !0), addEventListener('pagehide', e, !0));
 };

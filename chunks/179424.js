@@ -1,22 +1,18 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-});
+n.d(t, { Z: () => o });
 var i = n(200651);
 n(192379);
 var l = n(481060),
-    r = n(475179),
-    a = n(871499),
+    a = n(475179),
+    r = n(871499),
     s = n(388032);
 function o(e) {
     let { channelId: t, ...n } = e;
-    return (0, i.jsx)(a.Z, {
+    return (0, i.jsx)(r.Z, {
         onClick: function () {
-            r.Z.selectParticipant(t, null);
+            a.Z.selectParticipant(t, null);
         },
         label: s.intl.string(s.t['tyhU+P']),
-        iconComponent: l.GridSquareIcon,
+        iconComponent: l.rqr,
         tooltipPosition: 'bottom',
         ...n
     });

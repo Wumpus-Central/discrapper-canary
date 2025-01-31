@@ -1,1 +1,2 @@
-e.exports = { contentImage: 'contentImage_dc67b6' };
+var i = { contentImage: 'contentImage__42bf5' };
+e.exports = i;

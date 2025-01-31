@@ -1,31 +1,27 @@
-r.d(n, {
-    Z: function () {
-        return u;
-    }
-});
-var i = r(200651),
-    a = r(120356),
-    o = r.n(a),
-    s = r(481060),
-    l = r(574804);
-function u(e) {
-    let { countdownText: n, className: r, showInfoIcon: a } = e,
-        u = a
-            ? (0, i.jsx)(s.CircleInformationIcon, {
+n.d(t, { Z: () => l });
+var i = n(200651),
+    r = n(120356),
+    a = n.n(r),
+    s = n(481060),
+    o = n(574804);
+function l(e) {
+    let { countdownText: t, className: n, showInfoIcon: r } = e,
+        l = r
+            ? (0, i.jsx)(s.d3s, {
                   size: 'xs',
                   color: 'var(--custom-premium-colors-banner-yellow)',
-                  className: l.largePillIcon
+                  className: o.largePillIcon
               })
             : null;
     return (0, i.jsxs)('div', {
-        className: o()(l.largeCountdownPill, r),
+        className: a()(o.largeCountdownPill, n),
         children: [
             (0, i.jsx)(s.Text, {
                 variant: 'text-xs/bold',
-                className: o()(l.largeCountdownPillText),
-                children: n.toUpperCase()
+                className: a()(o.largeCountdownPillText),
+                children: t.toUpperCase()
             }),
-            u
+            l
         ]
     });
 }

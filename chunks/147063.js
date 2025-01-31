@@ -1,17 +1,13 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(570140),
-    a = r(65154);
-function o(e, n) {
+n.d(t, { Z: () => a });
+var i = n(570140),
+    r = n(65154);
+function a(e, t) {
     i.Z.wait(() => {
         i.Z.dispatch({
             type: 'AUDIO_SET_LOCAL_VIDEO_DISABLED',
-            context: a.Yn.DEFAULT,
+            context: r.Yn.DEFAULT,
             userId: e,
-            videoToggleState: n,
+            videoToggleState: t,
             persist: !1,
             isAutomatic: !0
         });

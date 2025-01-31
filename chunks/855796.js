@@ -1,77 +1,75 @@
-var i = r(544891),
-    a = r(780384),
-    o = r(668781),
-    s = r(881052),
-    l = r(981631),
-    u = r(388032);
-async function c(e) {
-    let { userId: n, applicationId: r, onSuccess: a, type: c } = e;
+n.d(t, { Z: () => d });
+var i = n(544891),
+    r = n(780384),
+    a = n(668781),
+    s = n(881052),
+    o = n(981631),
+    l = n(388032);
+async function u(e) {
+    let { userId: t, applicationId: n, onSuccess: r, type: u } = e;
     try {
         await i.tn.put({
-            url: l.ANM.USER_GAME_RELATIONSHIP(n, r),
-            body: { type: c },
+            url: o.ANM.USER_GAME_RELATIONSHIP(t, n),
+            body: { type: u },
             oldFormErrors: !0,
             rejectWithError: !1
         }),
-            a();
-    } catch (n) {
-        let e = new s.Hx(n);
-        o.Z.show({
-            title: u.intl.string(u.t['328j/P']),
+            r();
+    } catch (t) {
+        let e = new s.Hx(t);
+        a.Z.show({
+            title: l.intl.string(l.t['328j/P']),
             body: e.getAnyErrorMessage()
         });
     }
 }
-async function d(e) {
-    let { userId: n, applicationId: r, onSuccess: a } = e;
+async function c(e) {
+    let { userId: t, applicationId: n, onSuccess: r } = e;
     try {
         await i.tn.del({
-            url: l.ANM.USER_GAME_RELATIONSHIP(n, r),
+            url: o.ANM.USER_GAME_RELATIONSHIP(t, n),
             oldFormErrors: !0,
             rejectWithError: !1
         }),
-            a();
-    } catch (n) {
-        let e = new s.Hx(n);
-        o.Z.show({
-            title: u.intl.string(u.t['328j/P']),
+            r();
+    } catch (t) {
+        let e = new s.Hx(t);
+        a.Z.show({
+            title: l.intl.string(l.t['328j/P']),
             body: e.getAnyErrorMessage()
         });
     }
 }
-async function f(e) {
-    let { userId: n, applicationId: r } = e;
-    await c({
-        userId: n,
-        applicationId: r,
-        type: l.OGo.FRIEND,
-        onSuccess: () => {
-            a.uv.announce(u.intl.string(u.t.taJiub));
-        }
-    });
-}
-async function p(e) {
-    let { userId: n, applicationId: r } = e;
-    await d({
-        userId: n,
-        applicationId: r,
-        onSuccess: () => {
-            a.uv.announce(u.intl.string(u.t.zRf8cH));
-        }
-    });
-}
-async function h(e) {
-    let { userId: n, applicationId: r } = e;
-    await d({
-        userId: n,
-        applicationId: r,
-        onSuccess: () => {
-            a.uv.announce(u.intl.string(u.t.XMf21t));
-        }
-    });
-}
-n.Z = {
-    removeGameFriend: p,
-    acceptGameFriendRequest: f,
-    cancelGameFriendRequest: h
+let d = {
+    removeGameFriend: async function (e) {
+        let { userId: t, applicationId: n } = e;
+        await c({
+            userId: t,
+            applicationId: n,
+            onSuccess: () => {
+                r.uv.announce(l.intl.string(l.t.zRf8cH));
+            }
+        });
+    },
+    acceptGameFriendRequest: async function (e) {
+        let { userId: t, applicationId: n } = e;
+        await u({
+            userId: t,
+            applicationId: n,
+            type: o.OGo.FRIEND,
+            onSuccess: () => {
+                r.uv.announce(l.intl.string(l.t.taJiub));
+            }
+        });
+    },
+    cancelGameFriendRequest: async function (e) {
+        let { userId: t, applicationId: n } = e;
+        await c({
+            userId: t,
+            applicationId: n,
+            onSuccess: () => {
+                r.uv.announce(l.intl.string(l.t.XMf21t));
+            }
+        });
+    }
 };

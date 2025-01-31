@@ -1,23 +1,19 @@
-r.d(n, {
-    U: function () {
-        return s;
-    }
-});
-var i = r(818083),
-    a = r(987338);
-let o = (0, i.B)({
+n.d(t, { U: () => s });
+var i = n(818083),
+    r = n(987338);
+let a = (0, i.B)({
     kind: 'user',
     id: '2024-12_quests_nitro_permadecos',
     label: 'Quests Nitro Permadecos',
     defaultConfig: { enabled: !1 },
     treatments: [
         {
-            id: a.NZ.TREATMENT_1,
+            id: r.NZ.TREATMENT_1,
             label: 'Enabled',
             config: { enabled: !0 }
         }
     ]
 });
 function s() {
-    return o.getCurrentConfig({ location: 'quest_nitro_permadecos' }, { autoTrackExposure: !1 }).enabled;
+    return a.getCurrentConfig({ location: 'quest_nitro_permadecos' }, { autoTrackExposure: !1 }).enabled;
 }

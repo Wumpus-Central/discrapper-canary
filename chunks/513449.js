@@ -1,30 +1,27 @@
-r.d(n, {
-    Ku: function () {
-        return p;
-    },
-    MV: function () {
-        return h;
-    }
+n.d(t, {
+    Ku: () => _,
+    MV: () => p,
+    ZP: () => f
 });
-var i = r(192379),
-    a = r(15729),
-    o = r(731965),
-    s = r(442837),
-    l = r(496675),
-    u = r(944486),
-    c = r(146085),
-    d = r(643632);
-let f = (0, a.U)((e) => ({ isOnStartStageScreen: !0 }));
+var i = n(192379),
+    r = n(15729),
+    a = n(731965),
+    s = n(442837),
+    o = n(496675),
+    l = n(944486),
+    u = n(146085),
+    c = n(643632);
+let d = (0, r.U)((e) => ({ isOnStartStageScreen: !0 })),
+    f = d;
+function _(e) {
+    (0, a.j)(() => d.setState({ isOnStartStageScreen: e }));
+}
 function p(e) {
-    (0, o.j)(() => f.setState({ isOnStartStageScreen: e }));
-}
-function h(e) {
-    let n = (0, s.e7)([u.Z], () => u.Z.getVoiceChannelId() === e.id),
-        r = (0, s.e7)([l.Z], () => l.Z.can(c.yP, e), [e]),
-        a = (0, d.Z)(e.id),
-        o = r && !a;
+    let t = (0, s.e7)([l.Z], () => l.Z.getVoiceChannelId() === e.id),
+        n = (0, s.e7)([o.Z], () => o.Z.can(u.yP, e), [e]),
+        r = (0, c.Z)(e.id),
+        a = n && !r;
     i.useEffect(() => {
-        n ? !o && p(!1) : p(o);
-    }, [n, o]);
+        t ? a || _(!1) : _(a);
+    }, [t, a]);
 }
-n.ZP = f;

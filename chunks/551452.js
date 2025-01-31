@@ -1,85 +1,81 @@
-r.d(n, {
-    Z: function () {
-        return y;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(481060),
-    o = r(239091),
-    s = r(287734),
-    l = r(364640),
-    u = r(754688),
-    c = r(336197),
-    d = r(124072),
-    f = r(692629),
-    p = r(131704),
-    h = r(592125),
-    _ = r(430824),
-    m = r(900849),
-    g = r(746878),
-    E = r(981631);
-async function v(e, n, r) {
-    if (null == n) return;
+n.d(t, { Z: () => v });
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(239091),
+    s = n(287734),
+    o = n(364640),
+    l = n(754688),
+    u = n(336197),
+    c = n(124072),
+    d = n(692629),
+    f = n(131704),
+    _ = n(592125),
+    p = n(430824),
+    h = n(900849),
+    m = n(746878),
+    g = n(981631);
+async function E(e, t, n) {
+    if (null == t) return;
     if (
-        (l.Z.trackDiscordLinkClicked({
+        (o.Z.trackDiscordLinkClicked({
             guildId: e,
-            channelId: n,
-            messageId: r
+            channelId: t,
+            messageId: n
         }),
         null != e)
     ) {
-        let r = _.Z.getGuild(e);
-        if ((null == r ? void 0 : r.joinedAt) == null)
+        let n = p.Z.getGuild(e);
+        if ((null == n ? void 0 : n.joinedAt) == null)
             try {
-                await m.Ub(e, {}, { channelId: n });
+                await h.Ub(e, {}, { channelId: t });
                 return;
             } catch {}
     }
-    let i = h.Z.getChannel(n);
-    if (null != i && null == r && (0, p.bw)(i.type) && (0, u.YO)(i)) {
+    let i = _.Z.getChannel(t);
+    if (null != i && null == n && (0, f.bw)(i.type) && (0, l.YO)(i)) {
         s.default.selectVoiceChannel(i.id);
         return;
     }
-    (0, c.Z)(E.Z5c.CHANNEL(e, n, r));
+    (0, u.Z)(g.Z5c.CHANNEL(e, t, n));
 }
-function y(e) {
+function v(e) {
     return {
-        react(n, s, l) {
-            let u = h.Z.getChannel(n.channelId),
-                c = l.noStyleAndInteraction
+        react(t, s, o) {
+            let l = _.Z.getChannel(t.channelId),
+                u = o.noStyleAndInteraction
                     ? void 0
-                    : (r) => {
-                          e.shouldStopPropagation && (null == r || r.stopPropagation()), v(n.guildId, n.channelId, n.messageId), e.shouldCloseDefaultModals && (0, a.closeAllModals)();
+                    : (n) => {
+                          e.shouldStopPropagation && (null == n || n.stopPropagation()), E(t.guildId, t.channelId, t.messageId), e.shouldCloseDefaultModals && (0, r.pTH)();
                       },
-                p =
-                    l.noStyleAndInteraction || null == n.channelId || (null == u && null == n.originalLink)
-                        ? E.dG4
+                f =
+                    o.noStyleAndInteraction || null == t.channelId || (null == l && null == t.originalLink)
+                        ? g.dG4
                         : (e) => {
-                              (0, o.jW)(e, async () => {
-                                  let { default: e } = await r.e('9573').then(r.bind(r, 546649));
-                                  return (r) => {
-                                      var a;
+                              (0, a.jW)(e, async () => {
+                                  let { default: e } = await n.e('9573').then(n.bind(n, 546649));
+                                  return (n) => {
+                                      var r;
                                       return (0, i.jsx)(e, {
-                                          ...r,
-                                          channel: u,
-                                          channelId: null !== (a = null == u ? void 0 : u.id) && void 0 !== a ? a : n.channelId,
-                                          originalLink: n.originalLink,
-                                          messageId: n.messageId
+                                          ...n,
+                                          channel: l,
+                                          channelId: null !== (r = null == l ? void 0 : l.id) && void 0 !== r ? r : t.channelId,
+                                          originalLink: t.originalLink,
+                                          messageId: t.messageId
                                       });
                                   };
                               });
                           };
             return (0, i.jsxs)(
-                d.Z,
+                c.Z,
                 {
                     role: 'link',
-                    onClick: c,
-                    onContextMenu: p,
+                    onClick: u,
+                    onContextMenu: f,
                     className: 'channelMention',
-                    children: [null != n.inContent ? s(n.inContent, l) : null, null != n.inContent ? (0, i.jsx)(f.Z, {}) : null, (0, g.S)(n, s, l)]
+                    children: [null != t.inContent ? s(t.inContent, o) : null, null != t.inContent ? (0, i.jsx)(d.Z, {}) : null, (0, m.S)(t, s, o)]
                 },
-                l.key
+                o.key
             );
         }
     };

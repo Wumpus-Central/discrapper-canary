@@ -1,26 +1,20 @@
-e.d(t, {
-    Mn: function () {
-        return v;
-    },
-    OD: function () {
-        return _;
-    },
-    W9: function () {
-        return E;
-    }
+n.d(e, {
+    Mn: () => v,
+    OD: () => _,
+    W9: () => E
 }),
-    e(47120),
-    e(789020);
-var i = e(442837),
-    a = e(798140),
-    r = e(9156),
-    l = e(630388),
-    u = e(709054),
-    o = e(312400),
-    c = e(981631),
-    d = e(969943),
-    s = e(526761),
-    f = e(388032);
+    n(47120),
+    n(789020);
+var i = n(442837),
+    a = n(798140),
+    l = n(9156),
+    r = n(630388),
+    u = n(709054),
+    o = n(312400),
+    s = n(981631),
+    d = n(969943),
+    c = n(526761),
+    f = n(388032);
 function E() {
     return [
         {
@@ -54,16 +48,16 @@ let g = {
     ignoreUnreadSetting: !0,
     ignoreNotificationSetting: !1
 };
-function _(n) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : g;
-    return u.default.keys(n).filter((e) => {
-        var i, r;
-        let u = n[e].message_notifications !== c.bL.NULL,
-            o = l.yE(null !== (i = n[e].flags) && void 0 !== i ? i : 0, s.ic.UNREADS_ALL_MESSAGES) || l.yE(null !== (r = n[e].flags) && void 0 !== r ? r : 0, s.ic.UNREADS_ONLY_MENTIONS);
-        return (!t.ignoreUnreadSetting && o) || (!t.ignoreNotificationSetting && u) || (!t.ignoreMute && (0, a.m$)(n[e]));
+function _(t) {
+    let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : g;
+    return u.default.keys(t).filter((n) => {
+        var i, l;
+        let u = t[n].message_notifications !== s.bL.NULL,
+            o = r.yE(null !== (i = t[n].flags) && void 0 !== i ? i : 0, c.ic.UNREADS_ALL_MESSAGES) || r.yE(null !== (l = t[n].flags) && void 0 !== l ? l : 0, c.ic.UNREADS_ONLY_MENTIONS);
+        return (!e.ignoreUnreadSetting && o) || (!e.ignoreNotificationSetting && u) || (!e.ignoreMute && (0, a.m$)(t[n]));
     });
 }
-function v(n) {
-    let t = (0, i.e7)([r.ZP], () => r.ZP.useNewNotifications);
-    return o.xT.useExperiment({ location: n }, { autoTrackExposure: !1 }).enabled && t;
+function v(t) {
+    let e = (0, i.e7)([l.ZP], () => l.ZP.useNewNotifications);
+    return o.xT.useExperiment({ location: t }, { autoTrackExposure: !1 }).enabled && e;
 }

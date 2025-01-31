@@ -1,8 +1,4 @@
-t.d(r, {
-    o: function () {
-        return d;
-    }
-});
+t.d(r, { o: () => d });
 var a = t(64989),
     o = t(875380),
     n = t(147693);
@@ -40,28 +36,27 @@ function d(e) {
         v = void 0 === b ? d.getComputedStyle.bind(d) : b;
     function h(e, r) {
         var t,
-            o,
-            l = '';
+            o = '';
         if ((0, n.kK)(e) && f) {
-            var i = s(v(e, '::before'));
-            l = ''.concat(i, ' ').concat(l);
+            var l = s(v(e, '::before'));
+            o = ''.concat(l, ' ').concat(o);
         }
         if (
-            (((0, n.rO)(e) ? (0 === (o = (t = e).assignedNodes()).length ? (0, a.Z)(t.childNodes) : o) : (0, a.Z)(e.childNodes).concat((0, n.SS)(e, 'aria-owns'))).forEach(function (e) {
+            (((0, n.rO)(e) ? (0 === (t = e.assignedNodes()).length ? (0, a.Z)(e.childNodes) : t) : (0, a.Z)(e.childNodes).concat((0, n.SS)(e, 'aria-owns'))).forEach(function (e) {
                 var t = C(e, {
                         isEmbeddedInLabel: r.isEmbeddedInLabel,
                         isReferenced: !1,
                         recursion: !0
                     }),
                     a = 'inline' !== ((0, n.kK)(e) ? v(e).getPropertyValue('display') : 'inline') ? ' ' : '';
-                l += ''.concat(a).concat(t).concat(a);
+                o += ''.concat(a).concat(t).concat(a);
             }),
             (0, n.kK)(e) && f)
         ) {
-            var u = s(v(e, '::after'));
-            l = ''.concat(l, ' ').concat(u);
+            var i = s(v(e, '::after'));
+            o = ''.concat(o, ' ').concat(i);
         }
-        return l;
+        return o;
     }
     function C(e, r) {
         if (t.has(e)) return '';
@@ -76,13 +71,9 @@ function d(e) {
                 !r.isReferenced)
         )
             return t.add(e), '';
-        var o,
-            s,
-            d,
-            c,
-            m = (0, n.SS)(e, 'aria-labelledby');
-        if ('name' === p && !r.isReferenced && m.length > 0)
-            return m
+        var o = (0, n.SS)(e, 'aria-labelledby');
+        if ('name' === p && !r.isReferenced && o.length > 0)
+            return o
                 .map(function (e) {
                     return C(e, {
                         isEmbeddedInLabel: r.isEmbeddedInLabel,
@@ -91,14 +82,12 @@ function d(e) {
                     });
                 })
                 .join(' ');
-        var f = r.recursion && ((b = e), (0, n.xO)(b, ['button', 'combobox', 'listbox', 'textbox']) || l(b, 'range')) && 'name' === p;
-        if (!f) {
-            var b,
-                q,
-                x = (((0, n.kK)(e) && e.getAttribute('aria-label')) || '').trim();
-            if ('' !== x && 'name' === p) return t.add(e), x;
-            if (((q = e), !(0, n.xO)(q, ['none', 'presentation']))) {
-                var P = (function (e) {
+        var s = r.recursion && ((0, n.xO)(e, ['button', 'combobox', 'listbox', 'textbox']) || l(e, 'range')) && 'name' === p;
+        if (!s) {
+            var d = (((0, n.kK)(e) && e.getAttribute('aria-label')) || '').trim();
+            if ('' !== d && 'name' === p) return t.add(e), d;
+            if (!(0, n.xO)(e, ['none', 'presentation'])) {
+                var c = (function (e) {
                     if (!(0, n.kK)(e)) return null;
                     function r(e, r) {
                         var a = e.getAttributeNode(r);
@@ -200,20 +189,18 @@ function d(e) {
                     }
                     return r(e, 'title');
                 })(e);
-                if (null !== P) return t.add(e), P;
+                if (null !== c) return t.add(e), c;
             }
         }
-        if (f || r.isEmbeddedInLabel || r.isReferenced) {
+        if (s || r.isEmbeddedInLabel || r.isReferenced) {
             if ((0, n.xO)(e, ['combobox', 'listbox'])) {
                 t.add(e);
-                var y,
-                    R,
-                    g = ((R = e), (0, n.RV)(R) ? R.selectedOptions || i(R, '[selected]') : i(R, '[aria-selected="true"]'));
-                return 0 === g.length
+                var m = (0, n.RV)(e) ? e.selectedOptions || i(e, '[selected]') : i(e, '[aria-selected="true"]');
+                return 0 === m.length
                     ? (0, n.LL)(e)
                         ? e.value
                         : ''
-                    : (0, a.Z)(g)
+                    : (0, a.Z)(m)
                           .map(function (e) {
                               return C(e, {
                                   isEmbeddedInLabel: r.isEmbeddedInLabel,
@@ -224,29 +211,23 @@ function d(e) {
                           .join(' ');
             }
             if (l(e, 'range')) return (t.add(e), e.hasAttribute('aria-valuetext')) ? e.getAttribute('aria-valuetext') : e.hasAttribute('aria-valuenow') ? e.getAttribute('aria-valuenow') : e.getAttribute('value') || '';
-            if ((0, n.xO)(e, ['textbox'])) {
-                return t.add(e), (y = e), (0, n.LL)(y) || (0, n.ZH)(y) ? y.value : y.textContent || '';
-            }
+            if ((0, n.xO)(e, ['textbox'])) return t.add(e), (0, n.LL)(e) || (0, n.ZH)(e) ? e.value : e.textContent || '';
         }
-        if (((o = e), (0, n.xO)(o, ['button', 'cell', 'checkbox', 'columnheader', 'gridcell', 'heading', 'label', 'legend', 'link', 'menuitem', 'menuitemcheckbox', 'menuitemradio', 'option', 'radio', 'row', 'rowheader', 'switch', 'tab', 'tooltip', 'treeitem']) || ((0, n.kK)(e) && r.isReferenced) || ((s = e), (0, n.GD)(s)) || ((d = 0), 0)))
-            return (
-                t.add(e),
-                h(e, {
-                    isEmbeddedInLabel: r.isEmbeddedInLabel,
-                    isReferenced: !1
-                })
-            );
-        if (e.nodeType === e.TEXT_NODE) return t.add(e), e.textContent || '';
-        if (r.recursion)
-            return (
-                t.add(e),
-                h(e, {
-                    isEmbeddedInLabel: r.isEmbeddedInLabel,
-                    isReferenced: !1
-                })
-            );
-        var w = ((c = 0), null);
-        return null !== w ? (t.add(e), w) : (t.add(e), '');
+        return (0, n.xO)(e, ['button', 'cell', 'checkbox', 'columnheader', 'gridcell', 'heading', 'label', 'legend', 'link', 'menuitem', 'menuitemcheckbox', 'menuitemradio', 'option', 'radio', 'row', 'rowheader', 'switch', 'tab', 'tooltip', 'treeitem']) || ((0, n.kK)(e) && r.isReferenced) || (0, n.GD)(e)
+            ? (t.add(e),
+              h(e, {
+                  isEmbeddedInLabel: r.isEmbeddedInLabel,
+                  isReferenced: !1
+              }))
+            : e.nodeType === e.TEXT_NODE
+              ? (t.add(e), e.textContent || '')
+              : r.recursion
+                ? (t.add(e),
+                  h(e, {
+                      isEmbeddedInLabel: r.isEmbeddedInLabel,
+                      isReferenced: !1
+                  }))
+                : (t.add(e), '');
     }
     return C(e, {
         isEmbeddedInLabel: !1,

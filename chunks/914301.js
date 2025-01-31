@@ -1,10 +1,11 @@
-e.exports = {
-    container: 'container_bf3873',
-    appContainer: 'appContainer_bf3873',
-    header: 'header_bf3873',
-    appInfo: 'appInfo_bf3873',
-    appIconMask: 'appIconMask_bf3873',
-    appIcon: 'appIcon_bf3873',
-    textContainer: 'textContainer_bf3873',
-    guildStack: 'guildStack_bf3873'
+var i = {
+    container: 'container_f37514',
+    appContainer: 'appContainer_f37514',
+    header: 'header_f37514',
+    appInfo: 'appInfo_f37514',
+    appIconMask: 'appIconMask_f37514',
+    appIcon: 'appIcon_f37514',
+    textContainer: 'textContainer_f37514',
+    guildStack: 'guildStack_f37514'
 };
+e.exports = i;

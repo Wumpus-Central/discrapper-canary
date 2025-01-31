@@ -1,20 +1,17 @@
 t.d(n, {
-    Pz: function () {
-        return p;
-    },
-    am: function () {
-        return h;
-    }
+    Pz: () => p,
+    ZP: () => C,
+    am: () => f
 }),
     t(47120);
 var a,
-    r = t(200651),
-    i = t(192379),
+    i = t(200651),
+    r = t(192379),
     l = t(120356),
     o = t.n(l),
     s = t(481060),
-    u = t(768762),
-    c = t(723478);
+    c = t(768762),
+    u = t(723478);
 function d(e, n, t) {
     return (
         n in e
@@ -28,24 +25,24 @@ function d(e, n, t) {
         e
     );
 }
-let f = {
-    CENTER: c.alignCenter,
-    LEFT: c.alignLeft
+let _ = {
+    CENTER: u.alignCenter,
+    LEFT: u.alignLeft
 };
-class _ extends (a = i.PureComponent) {
+class h extends (a = r.PureComponent) {
     componentDidUpdate(e) {
         let { selectedIndex: n } = this.props;
         e.selectedIndex !== n && this.handleSelectedIndexChange(n);
     }
     render() {
         let { renderItem: e, items: n, vertical: t, paginationContainerClass: a, align: l } = this.props,
-            u = t ? c.verticalPaginationItemContainer : c.horizontalPaginationItemContainer;
-        return (0, r.jsx)(s.AdvancedScrollerAuto, {
+            c = t ? u.verticalPaginationItemContainer : u.horizontalPaginationItemContainer;
+        return (0, i.jsx)(s.yWw, {
             orientation: t ? 'vertical' : 'horizontal',
-            className: o()(u, a, l),
+            className: o()(c, a, l),
             ref: this.handleSetScrollerRef,
             children: n.map((n, t) =>
-                i.cloneElement(e(n, t), {
+                r.cloneElement(e(n, t), {
                     onClick: () => this.handlePageClick(t),
                     key: t,
                     ref: (e) => {
@@ -66,7 +63,7 @@ class _ extends (a = i.PureComponent) {
                 let n = this._scrollerRef;
                 if (null == n) return;
                 let t = this._paginationItemRefs[e];
-                if (null != t)
+                null != t &&
                     n.scrollIntoViewNode({
                         node: t,
                         animate: !0,
@@ -79,27 +76,27 @@ class _ extends (a = i.PureComponent) {
             });
     }
 }
-d(_, 'Align', f),
-    d(_, 'defaultProps', {
+d(h, 'Align', _),
+    d(h, 'defaultProps', {
         scrollToPadding: {
             top: 0,
             left: 0,
             bottom: 0,
             right: 0
         },
-        align: f.CENTER
+        align: _.CENTER
     });
-class h extends i.PureComponent {
+class f extends r.PureComponent {
     render() {
         let { className: e } = this.props;
-        return (0, r.jsx)(s.Button, {
-            look: s.Button.Looks.BLANK,
-            size: s.Button.Sizes.NONE,
-            className: o()(c.prevButtonContainer, e),
+        return (0, i.jsx)(s.zxk, {
+            look: s.zxk.Looks.BLANK,
+            size: s.zxk.Sizes.NONE,
+            className: o()(u.prevButtonContainer, e),
             onClick: this.handlePrevClick,
-            children: (0, r.jsx)(u.Z, {
-                className: c.arrow,
-                direction: u.Z.Directions.LEFT
+            children: (0, i.jsx)(c.Z, {
+                className: u.arrow,
+                direction: c.Z.Directions.LEFT
             })
         });
     }
@@ -112,17 +109,17 @@ class h extends i.PureComponent {
             });
     }
 }
-class p extends i.PureComponent {
+class p extends r.PureComponent {
     render() {
         let { className: e } = this.props;
-        return (0, r.jsx)(s.Button, {
-            look: s.Button.Looks.BLANK,
-            size: s.Button.Sizes.NONE,
-            className: o()(c.nextButtonContainer, e),
+        return (0, i.jsx)(s.zxk, {
+            look: s.zxk.Looks.BLANK,
+            size: s.zxk.Sizes.NONE,
+            className: o()(u.nextButtonContainer, e),
             onClick: this.handleNextClick,
-            children: (0, r.jsx)(u.Z, {
-                className: c.arrow,
-                direction: u.Z.Directions.RIGHT
+            children: (0, i.jsx)(c.Z, {
+                className: u.arrow,
+                direction: c.Z.Directions.RIGHT
             })
         });
     }
@@ -135,4 +132,4 @@ class p extends i.PureComponent {
             });
     }
 }
-n.ZP = 12633 == t.j ? _ : null;
+let C = 12633 == t.j ? h : null;

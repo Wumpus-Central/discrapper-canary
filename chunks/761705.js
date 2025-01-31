@@ -1,27 +1,21 @@
-n.d(t, {
-    Z: function () {
-        return S;
-    }
-}),
-    n(47120),
-    n(653041);
+n.d(t, { Z: () => b }), n(47120), n(653041);
 var i,
     a = n(200651),
     r = n(192379),
     l = n(120356),
-    o = n.n(l),
-    s = n(299608),
-    c = n.n(s),
+    s = n.n(l),
+    o = n(299608),
+    c = n.n(o),
     d = n(748780),
     u = n(215569),
     m = n(376641),
-    p = n(714338),
-    h = n(134432),
+    h = n(714338),
+    p = n(134432),
     g = n(44488),
-    C = n(585483),
+    _ = n(585483),
     x = n(981631),
-    v = n(707337);
-function _(e, t, n) {
+    C = n(707337);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,9 +32,6 @@ let f = {
     friction: 10,
     tension: 100
 };
-function b(e, t) {
-    return ((e % t) + t) % t;
-}
 class I extends r.Component {
     componentWillEnter(e) {
         let { directionHistory: t } = this.props,
@@ -95,35 +86,35 @@ class I extends r.Component {
         return (0, a.jsx)(d.Z.img, {
             src: e.src,
             alt: '',
-            className: o()(v.slide, t),
+            className: s()(C.slide, t),
             style: this.getStyle()
         });
     }
     constructor(...e) {
         super(...e),
-            _(this, 'state', {
+            v(this, 'state', {
                 translate: new d.Z.Value(0),
                 opacity: new d.Z.Value(1)
             });
     }
 }
-class S extends (i = r.Component) {
+class b extends (i = r.Component) {
     componentDidMount() {
-        this.preloadNextImages(), p.Z.disable(), p.Z.enableTemp(m.P), C.S.subscribe(x.CkL.MODAL_CAROUSEL_NEXT, this.gotoNextThrottled), C.S.subscribe(x.CkL.MODAL_CAROUSEL_PREV, this.gotoPrevThrottled);
+        this.preloadNextImages(), h.Z.disable(), h.Z.enableTemp(m.P), _.S.subscribe(x.CkL.MODAL_CAROUSEL_NEXT, this.gotoNextThrottled), _.S.subscribe(x.CkL.MODAL_CAROUSEL_PREV, this.gotoPrevThrottled);
     }
     componentWillUnmount() {
-        p.Z.disableTemp(), C.S.unsubscribe(x.CkL.MODAL_CAROUSEL_NEXT, this.gotoNextThrottled), C.S.unsubscribe(x.CkL.MODAL_CAROUSEL_PREV, this.gotoPrevThrottled);
+        h.Z.disableTemp(), _.S.unsubscribe(x.CkL.MODAL_CAROUSEL_NEXT, this.gotoNextThrottled), _.S.unsubscribe(x.CkL.MODAL_CAROUSEL_PREV, this.gotoPrevThrottled);
     }
     preloadNextImages() {
         var e, t;
         let { currentIndex: n } = this.state,
-            { items: i } = this.props;
-        let a = (((n + 1) % (e = i.length)) + e) % e;
-        let r = (((n - 1) % (t = i.length)) + t) % t;
+            { items: i } = this.props,
+            a = (((n + 1) % (e = i.length)) + e) % e,
+            r = (((n - 1) % (t = i.length)) + t) % t;
         this.preloadImage(i[a]), this.preloadImage(i[r]);
     }
     preloadImage(e) {
-        (0, h.po)(e.src);
+        (0, p.po)(e.src);
     }
     componentDidUpdate(e, t) {
         let { currentIndex: n } = this.state;
@@ -146,14 +137,14 @@ class S extends (i = r.Component) {
             { currentIndex: n, directionHistory: i } = this.state,
             { modalCarouselItemClassName: r } = this.props,
             l = this.props.items[n],
-            s = this.props.items;
+            o = this.props.items;
         return (0, a.jsxs)(u.W, {
             component: 'div',
-            className: o()(v.wrapper, t),
+            className: s()(C.wrapper, t),
             children: [
-                s.length > 1
+                o.length > 1
                     ? (0, a.jsx)(g.am, {
-                          className: v.navPrev,
+                          className: C.navPrev,
                           onClick: this.gotoPrev
                       })
                     : null,
@@ -168,9 +159,9 @@ class S extends (i = r.Component) {
                           },
                           l.src
                       ),
-                s.length > 1
+                o.length > 1
                     ? (0, a.jsx)(g.Pz, {
-                          className: v.navNext,
+                          className: C.navNext,
                           onClick: this.gotoNext
                       })
                     : null
@@ -179,20 +170,20 @@ class S extends (i = r.Component) {
     }
     constructor(e) {
         super(e),
-            _(this, 'gotoNext', () => {
+            v(this, 'gotoNext', () => {
                 let { currentIndex: e } = this.state;
                 this.navigateTo(e + 1);
             }),
-            _(this, 'gotoPrev', () => {
+            v(this, 'gotoPrev', () => {
                 let { currentIndex: e } = this.state;
                 this.navigateTo(e - 1);
             }),
-            _(this, 'gotoNextThrottled', c()(this.gotoNext, 300)),
-            _(this, 'gotoPrevThrottled', c()(this.gotoPrev, 300)),
+            v(this, 'gotoNextThrottled', c()(this.gotoNext, 300)),
+            v(this, 'gotoPrevThrottled', c()(this.gotoPrev, 300)),
             (this.state = {
                 currentIndex: e.startWith,
                 directionHistory: []
             });
     }
 }
-_(S, 'defaultProps', { startWith: 0 });
+v(b, 'defaultProps', { startWith: 0 });

@@ -1,42 +1,37 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-}),
-    n(47120);
-var i = n(200651),
-    r = n(192379),
-    a = n(442837),
-    o = n(481060),
-    l = n(287734),
-    c = n(592125),
-    s = n(693546),
+n.d(t, { Z: () => u }), n(47120);
+var a = n(200651),
+    i = n(192379),
+    r = n(442837),
+    l = n(481060),
+    o = n(287734),
+    s = n(592125),
+    c = n(693546),
     d = n(388032);
 function u(e) {
     let { joinRequest: t } = e,
-        [n, u] = r.useState(!1),
-        m = (0, a.e7)([c.Z], () => c.Z.getChannel(t.interviewChannelId)),
-        f = r.useCallback(() => {
-            (0, o.showToast)((0, o.createToast)(d.intl.string(d.t.R0RpRU), o.ToastType.FAILURE));
+        [n, u] = i.useState(!1),
+        m = (0, r.e7)([s.Z], () => s.Z.getChannel(t.interviewChannelId)),
+        _ = i.useCallback(() => {
+            (0, l.showToast)((0, l.createToast)(d.intl.string(d.t.R0RpRU), l.ToastType.FAILURE));
         }, []),
-        x = r.useCallback(async () => {
+        x = i.useCallback(async () => {
             if (null != m) {
-                l.default.selectPrivateChannel(m.id);
+                o.default.selectPrivateChannel(m.id);
                 return;
             }
             if (!n) {
                 u(!0);
                 try {
-                    await s.Z.createOrEnterJoinRequestInterview(t.joinRequestId);
+                    await c.Z.createOrEnterJoinRequestInterview(t.joinRequestId);
                 } catch {
-                    f();
+                    _();
                 } finally {
                     u(!1);
                 }
             }
-        }, [m, t.joinRequestId, f, n]);
-    return (0, i.jsx)(o.Button, {
-        color: o.Button.Colors.BRAND,
+        }, [m, t.joinRequestId, _, n]);
+    return (0, a.jsx)(l.zxk, {
+        color: l.zxk.Colors.BRAND,
         submitting: n,
         onClick: x,
         children: d.intl.string(d.t.aqiUAA)

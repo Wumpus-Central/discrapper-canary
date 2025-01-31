@@ -1,27 +1,23 @@
-t.d(n, {
-    B: function () {
-        return f;
-    },
-    b: function () {
-        return d;
-    }
+n.d(t, {
+    B: () => m,
+    b: () => d
 }),
-    t(47120);
-var i = t(200651),
-    r = t(192379),
-    l = t(481060),
-    s = t(893776),
-    o = t(489813),
-    u = t(388032),
-    a = t(119866);
+    n(47120);
+var i = n(200651),
+    l = n(192379),
+    r = n(481060),
+    s = n(893776),
+    o = n(489813),
+    a = n(388032),
+    u = n(119866);
 function c() {
-    let [e, n] = r.useState(!1),
-        [t, o] = r.useState(!1),
-        [c, d] = r.useState(!1);
-    r.useEffect(() => {
+    let [e, t] = l.useState(!1),
+        [n, o] = l.useState(!1),
+        [c, d] = l.useState(!1);
+    l.useEffect(() => {
         let e;
         return (
-            t &&
+            n &&
                 (e = setTimeout(() => {
                     o(!1);
                 }, 2000)),
@@ -29,58 +25,58 @@ function c() {
                 null != e && clearTimeout(e);
             }
         );
-    }, [t]);
-    let f = async () => {
+    }, [n]);
+    let m = async () => {
         if (!e) {
-            n(!0);
+            t(!0);
             try {
                 await s.Z.verifyResend(), o(!0), d(!0);
             } catch (e) {
             } finally {
-                n(!1);
+                t(!1);
             }
         }
     };
-    return t
-        ? (0, i.jsx)(l.Text, {
-              className: a.verifyConfirmText,
+    return n
+        ? (0, i.jsx)(r.Text, {
+              className: u.verifyConfirmText,
               variant: 'text-sm/normal',
               color: 'text-positive',
-              children: u.intl.string(u.t.H3Q7U1)
+              children: a.intl.string(a.t.H3Q7U1)
           })
-        : (0, i.jsx)(l.Button, {
-              size: l.Button.Sizes.SMALL,
+        : (0, i.jsx)(r.zxk, {
+              size: r.zxk.Sizes.SMALL,
               submitting: e,
-              onClick: f,
-              children: c ? u.intl.string(u.t.WnX4Jy) : u.intl.string(u.t['13ofGh'])
+              onClick: m,
+              children: c ? a.intl.string(a.t.WnX4Jy) : a.intl.string(a.t['13ofGh'])
           });
 }
 function d() {
     return (0, i.jsx)(o.PU, {
-        icon: l.EnvelopeIcon,
-        text: u.intl.string(u.t.c6EUJC),
-        footnote: u.intl.string(u.t['jMh+TU']),
+        icon: r._XJ,
+        text: a.intl.string(a.t.c6EUJC),
+        footnote: a.intl.string(a.t['jMh+TU']),
         meetsRequirement: !1,
-        children: (0, i.jsx)(l.Tooltip, {
-            text: u.intl.string(u.t.mGlP39),
+        children: (0, i.jsx)(r.ua7, {
+            text: a.intl.string(a.t.mGlP39),
             children: (e) =>
-                (0, i.jsx)(l.Button, {
+                (0, i.jsx)(r.zxk, {
                     ...e,
-                    size: l.Button.Sizes.SMALL,
+                    size: r.zxk.Sizes.SMALL,
                     disabled: !0,
-                    children: u.intl.string(u.t['13ofGh'])
+                    children: a.intl.string(a.t['13ofGh'])
                 })
         })
     });
 }
-function f(e) {
-    let { isUserVerified: n } = e,
-        t = n ? u.intl.string(u.t.qY1jHB) : u.intl.string(u.t.c6EUJC);
+function m(e) {
+    let { isUserVerified: t } = e,
+        n = t ? a.intl.string(a.t.qY1jHB) : a.intl.string(a.t.c6EUJC);
     return (0, i.jsx)(o.PU, {
-        icon: l.EnvelopeIcon,
-        text: t,
-        footnote: u.intl.string(u.t['jMh+TU']),
-        meetsRequirement: n,
+        icon: r._XJ,
+        text: n,
+        footnote: a.intl.string(a.t['jMh+TU']),
+        meetsRequirement: t,
         children: (0, i.jsx)(c, {})
     });
 }

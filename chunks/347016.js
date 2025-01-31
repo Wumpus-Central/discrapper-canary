@@ -1,15 +1,11 @@
-r.d(n, {
-    d: function () {
-        return o;
-    }
-});
-var i = r(489948),
-    a = r(607070);
-r(312270);
-let o = {
+n.d(t, { d: () => a });
+var i = n(489948),
+    r = n(607070);
+n(312270), n(322401);
+let a = {
     init() {
-        a.Z.addChangeListener(() => {
-            a.Z.keyboardModeEnabled ? (i.dx.setRingsEnabled(!0), i.dx.enableAnimationTracking()) : (i.dx.setRingsEnabled(!1), i.dx.disableAnimationTracking());
+        r.Z.addChangeListener(() => {
+            r.Z.keyboardModeEnabled ? (i.dx.setRingsEnabled(!0), i.dx.enableAnimationTracking()) : (i.dx.setRingsEnabled(!1), i.dx.disableAnimationTracking());
         });
     }
 };

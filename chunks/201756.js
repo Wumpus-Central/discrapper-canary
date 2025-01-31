@@ -1,57 +1,52 @@
-n.d(t, {
-    Z: function () {
-        return R;
-    }
-}),
-    n(47120);
-var l = n(200651),
-    o = n(192379),
-    i = n(120356),
-    a = n.n(i),
-    r = n(498607),
-    s = n.n(r),
-    c = n(399606),
-    C = n(433517),
-    d = n(481060),
-    u = n(430824),
-    m = n(496675),
-    h = n(588215),
-    x = n(241559),
-    b = n(893966),
-    f = n(256003),
-    g = n(170323),
-    p = n(434368),
-    H = n(42170),
-    j = n(123846),
-    v = n(42551),
-    N = n(981631),
-    L = n(388032),
-    I = n(338648),
-    _ = n(216412);
-function M(e) {
-    let { label: t, onFilter: n, isFiltered: o, isSorted: i, className: r, ...s } = e,
-        c = o ? 'header-primary' : 'header-secondary';
+l.d(t, { Z: () => I }), l(47120);
+var n = l(200651),
+    a = l(192379),
+    i = l(120356),
+    o = l.n(i),
+    s = l(498607),
+    r = l.n(s),
+    c = l(399606),
+    C = l(433517),
+    d = l(481060),
+    u = l(430824),
+    m = l(496675),
+    h = l(588215),
+    x = l(241559),
+    g = l(893966),
+    H = l(256003),
+    b = l(170323),
+    p = l(434368),
+    _ = l(42170),
+    j = l(123846),
+    f = l(42551),
+    v = l(981631),
+    N = l(388032),
+    Z = l(338648),
+    L = l(216412);
+function R(e) {
+    let { label: t, onFilter: l, isFiltered: a, isSorted: i, className: s, ...r } = e,
+        c = a ? 'header-primary' : 'header-secondary';
     return (
         i && (c = 'text-brand'),
-        (0, l.jsx)('th', {
-            className: a()(I.tableHeaderCellContainer, r),
-            children: (0, l.jsxs)(d.Clickable, {
-                ...s,
-                onClick: n,
-                className: a()(I.tableHeaderCell, { [I.tableHeaderCellWithFilter]: null != n }),
+        (0, n.jsx)('th', {
+            className: o()(Z.tableHeaderCellContainer, s),
+            children: (0, n.jsxs)(d.P3F, {
+                ...r,
+                onClick: l,
+                className: o()(Z.tableHeaderCell, { [Z.tableHeaderCellWithFilter]: null != l }),
                 children: [
-                    (0, l.jsx)(d.Text, {
+                    (0, n.jsx)(d.Text, {
                         variant: 'eyebrow',
                         color: c,
                         children: t
                     }),
-                    null != n &&
-                        (0, l.jsx)('div', {
-                            className: I.filterIconButton,
-                            children: (0, l.jsx)(d.FiltersHorizontalIcon, {
+                    null != l &&
+                        (0, n.jsx)('div', {
+                            className: Z.filterIconButton,
+                            children: (0, n.jsx)(d.gXV, {
                                 size: 'custom',
-                                className: I.filterIcon,
-                                color: o ? d.tokens.colors.CONTROL_BRAND_FOREGROUND.css : d.tokens.colors.TEXT_MUTED.css,
+                                className: Z.filterIcon,
+                                color: a ? d.TVs.colors.CONTROL_BRAND_FOREGROUND.css : d.TVs.colors.TEXT_MUTED.css,
                                 width: 16,
                                 height: 16
                             })
@@ -61,200 +56,200 @@ function M(e) {
         })
     );
 }
-let Z = 'member-safety-force-show-signals-tooltip';
-function R(e) {
-    let { guildId: t, currentPagedMembers: n } = e,
-        i = (0, c.e7)([b.Z], () => b.Z.getSearchStateByGuildId(t), [t], s()),
-        r = (0, c.e7)([m.Z, u.Z], () => m.Z.can(N.Plq.MANAGE_GUILD, u.Z.getGuild(t)), [t]),
-        { selectedUserIds: R, addUsers: D, clearSelection: S } = (0, f.Z)(t),
-        V = i.requireUnusualDmActivity || i.requireCommunicationDisabled || i.requireUnusualAccountActivity || i.requireUsernameQuarantined,
+let M = 'member-safety-force-show-signals-tooltip';
+function I(e) {
+    let { guildId: t, currentPagedMembers: l } = e,
+        i = (0, c.e7)([g.Z], () => g.Z.getSearchStateByGuildId(t), [t], r()),
+        s = (0, c.e7)([m.Z, u.Z], () => m.Z.can(v.Plq.MANAGE_GUILD, u.Z.getGuild(t)), [t]),
+        { selectedUserIds: I, addUsers: V, clearSelection: D } = (0, H.Z)(t),
+        S = i.requireUnusualDmActivity || i.requireCommunicationDisabled || i.requireUnusualAccountActivity || i.requireUsernameQuarantined,
         T = i.selectedRoleIds.size > 0,
         E = null != i.selectedJoinDateOption.afterDate,
         w = i.selectedSort === h.d$.ORDER_BY_GUILD_JOINED_AT_ASC,
-        A = null != i.selectedAccountAgeOption.afterDate,
-        k = i.selectedSort === h.d$.ORDER_BY_USER_ID_ASC || i.selectedSort === h.d$.ORDER_BY_USER_ID_DESC,
-        y = null != i.selectedSourceInviteCode && '' !== i.selectedSourceInviteCode,
+        k = null != i.selectedAccountAgeOption.afterDate,
+        y = i.selectedSort === h.d$.ORDER_BY_USER_ID_ASC || i.selectedSort === h.d$.ORDER_BY_USER_ID_DESC,
+        A = null != i.selectedSourceInviteCode && '' !== i.selectedSourceInviteCode,
         B = null != i.selectedJoinSourceType,
-        O = y || B,
-        [U, P] = o.useState(null == C.K.get(Z, null)),
-        F = o.useCallback(() => {
-            C.K.set(Z, Date.now()), P(!1);
+        O = A || B,
+        [U, F] = a.useState(null == C.K.get(M, null)),
+        P = a.useCallback(() => {
+            C.K.set(M, Date.now()), F(!1);
         }, []),
-        G = (0, x.xC)(t),
-        z = o.useMemo(() => n.filter((e) => (0, x.rX)(t, G, e)), [G, n, t]),
-        q = z.length > 0,
-        Y = 0 === z.filter((e) => !R.has(e)).length,
-        W = o.useCallback(() => {
-            q && (Y ? S() : D(z));
-        }, [q, Y, S, D, z]);
-    return (0, l.jsx)('thead', {
-        children: (0, l.jsxs)('tr', {
-            className: I.tableHeaderRow,
+        z = (0, x.xC)(t),
+        G = a.useMemo(() => l.filter((e) => (0, x.rX)(t, z, e)), [z, l, t]),
+        q = G.length > 0,
+        Y = 0 === G.filter((e) => !I.has(e)).length,
+        W = a.useCallback(() => {
+            q && (Y ? D() : V(G));
+        }, [q, Y, D, V, G]);
+    return (0, n.jsx)('thead', {
+        children: (0, n.jsxs)('tr', {
+            className: Z.tableHeaderRow,
             children: [
-                G &&
-                    (0, l.jsx)('th', {
-                        className: a()(I.tableHeaderCellContainer, _.xsmallCol),
-                        children: (0, l.jsx)(d.Tooltip, {
+                z &&
+                    (0, n.jsx)('th', {
+                        className: o()(Z.tableHeaderCellContainer, L.xsmallCol),
+                        children: (0, n.jsx)(d.ua7, {
                             shouldShow: !q,
-                            text: L.intl.string(L.t.tJEY0N),
+                            text: N.intl.string(N.t.tJEY0N),
                             children: (e) =>
-                                (0, l.jsx)(d.Clickable, {
+                                (0, n.jsx)(d.P3F, {
                                     ...e,
                                     onClick: W,
-                                    className: I.tableHeaderCell,
-                                    children: (0, l.jsx)(d.Checkbox, {
-                                        type: d.Checkbox.Types.INVERTED,
+                                    className: Z.tableHeaderCell,
+                                    children: (0, n.jsx)(d.XZJ, {
+                                        type: d.XZJ.Types.INVERTED,
                                         value: Y,
                                         disabled: !q
                                     })
                                 })
                         })
                     }),
-                (0, l.jsx)(M, { label: L.intl.string(L.t.Es7n9f) }),
-                r
-                    ? (0, l.jsxs)(l.Fragment, {
+                (0, n.jsx)(R, { label: N.intl.string(N.t.Es7n9f) }),
+                s
+                    ? (0, n.jsxs)(n.Fragment, {
                           children: [
-                              (0, l.jsx)(d.Popout, {
-                                  animation: d.Popout.Animation.FADE,
+                              (0, n.jsx)(d.yRy, {
+                                  animation: d.yRy.Animation.FADE,
                                   position: 'bottom',
                                   spacing: 4,
                                   align: 'left',
                                   renderPopout: () =>
-                                      (0, l.jsx)(H.Z, {
+                                      (0, n.jsx)(_.Z, {
                                           guildId: t,
-                                          onClose: N.dG4
+                                          onClose: v.dG4
                                       }),
                                   children: (e) => {
-                                      let { onClick: t, ...n } = e;
-                                      return (0, l.jsx)(M, {
-                                          label: L.intl.string(L.t.xcKP1N),
+                                      let { onClick: t, ...l } = e;
+                                      return (0, n.jsx)(R, {
+                                          label: N.intl.string(N.t.xcKP1N),
                                           onFilter: t,
                                           isFiltered: E,
                                           isSorted: w,
-                                          className: _.smallCol,
-                                          ...n
+                                          className: L.smallCol,
+                                          ...l
                                       });
                                   }
                               }),
-                              (0, l.jsx)(d.Popout, {
-                                  animation: d.Popout.Animation.FADE,
+                              (0, n.jsx)(d.yRy, {
+                                  animation: d.yRy.Animation.FADE,
                                   position: 'bottom',
                                   spacing: 4,
                                   align: 'left',
                                   renderPopout: () =>
-                                      (0, l.jsx)(g.Z, {
+                                      (0, n.jsx)(b.Z, {
                                           guildId: t,
-                                          onClose: N.dG4
+                                          onClose: v.dG4
                                       }),
                                   children: (e) => {
-                                      let { onClick: t, ...n } = e;
-                                      return (0, l.jsx)(M, {
-                                          label: L.intl.string(L.t.sPph4O),
+                                      let { onClick: t, ...l } = e;
+                                      return (0, n.jsx)(R, {
+                                          label: N.intl.string(N.t.sPph4O),
                                           onFilter: t,
-                                          isFiltered: A,
-                                          isSorted: k,
-                                          className: _.smallCol,
-                                          ...n
+                                          isFiltered: k,
+                                          isSorted: y,
+                                          className: L.smallCol,
+                                          ...l
                                       });
                                   }
                               })
                           ]
                       })
-                    : (0, l.jsxs)(l.Fragment, {
+                    : (0, n.jsxs)(n.Fragment, {
                           children: [
-                              (0, l.jsx)(M, {
-                                  label: L.intl.string(L.t.xcKP1N),
-                                  className: _.smallCol
+                              (0, n.jsx)(R, {
+                                  label: N.intl.string(N.t.xcKP1N),
+                                  className: L.smallCol
                               }),
-                              (0, l.jsx)(M, {
-                                  label: L.intl.string(L.t.sPph4O),
-                                  className: _.smallCol
+                              (0, n.jsx)(R, {
+                                  label: N.intl.string(N.t.sPph4O),
+                                  className: L.smallCol
                               })
                           ]
                       }),
-                r
-                    ? (0, l.jsx)(d.Popout, {
-                          animation: d.Popout.Animation.FADE,
+                s
+                    ? (0, n.jsx)(d.yRy, {
+                          animation: d.yRy.Animation.FADE,
                           position: 'bottom',
                           spacing: 4,
                           align: 'left',
                           renderPopout: () =>
-                              (0, l.jsx)(j.Z, {
+                              (0, n.jsx)(j.Z, {
                                   guildId: t,
-                                  onClose: N.dG4
+                                  onClose: v.dG4
                               }),
                           children: (e) => {
-                              let { onClick: t, ...n } = e;
-                              return (0, l.jsx)(M, {
-                                  label: L.intl.string(L.t.yn0w19),
+                              let { onClick: t, ...l } = e;
+                              return (0, n.jsx)(R, {
+                                  label: N.intl.string(N.t.yn0w19),
                                   onFilter: t,
                                   isFiltered: O,
-                                  className: _.smallCol,
-                                  ...n
+                                  className: L.smallCol,
+                                  ...l
                               });
                           }
                       })
-                    : r &&
-                      (0, l.jsx)(M, {
-                          label: L.intl.string(L.t.yn0w19),
-                          className: _.smallCol
+                    : s &&
+                      (0, n.jsx)(R, {
+                          label: N.intl.string(N.t.yn0w19),
+                          className: L.smallCol
                       }),
-                (0, l.jsx)(d.Popout, {
-                    animation: d.Popout.Animation.FADE,
+                (0, n.jsx)(d.yRy, {
+                    animation: d.yRy.Animation.FADE,
                     position: 'bottom',
                     spacing: 4,
                     align: 'left',
                     renderPopout: (e) => {
-                        let { closePopout: n } = e;
-                        return (0, l.jsx)(v.Z, {
+                        let { closePopout: l } = e;
+                        return (0, n.jsx)(f.Z, {
                             guildId: t,
-                            onClose: n
+                            onClose: l
                         });
                     },
                     children: (e) => {
-                        let { onClick: t, ...n } = e;
-                        return (0, l.jsx)(M, {
-                            label: L.intl.string(L.t['2SZsWV']),
+                        let { onClick: t, ...l } = e;
+                        return (0, n.jsx)(R, {
+                            label: N.intl.string(N.t['2SZsWV']),
                             onFilter: t,
                             isFiltered: T,
-                            className: a()(_.mediumCol),
-                            ...n
+                            className: o()(L.mediumCol),
+                            ...l
                         });
                     }
                 }),
-                (0, l.jsx)(d.Tooltip, {
-                    text: L.intl.string(L.t['2cRO3d']),
+                (0, n.jsx)(d.ua7, {
+                    text: N.intl.string(N.t['2cRO3d']),
                     position: 'top',
                     align: 'left',
                     forceOpen: U,
                     shouldShow: !0,
-                    color: d.Tooltip.Colors.BRAND,
+                    color: d.ua7.Colors.BRAND,
                     children: (e) =>
-                        (0, l.jsx)(d.Popout, {
-                            animation: d.Popout.Animation.FADE,
+                        (0, n.jsx)(d.yRy, {
+                            animation: d.yRy.Animation.FADE,
                             position: 'bottom',
                             spacing: 4,
                             align: 'left',
                             renderPopout: (e) => {
-                                let { closePopout: n } = e;
-                                return (0, l.jsx)(p.Z, {
+                                let { closePopout: l } = e;
+                                return (0, n.jsx)(p.Z, {
                                     guildId: t,
-                                    onClose: n
+                                    onClose: l
                                 });
                             },
                             children: (t) =>
-                                (0, l.jsx)(M, {
-                                    label: L.intl.string(L.t['7V375+']),
-                                    'aria-label': L.intl.string(L.t['2cRO3d']),
-                                    onFilter: (n) => {
-                                        var l, o;
-                                        F(), null === (l = t.onClick) || void 0 === l || l.call(t, n), null === (o = e.onClick) || void 0 === o || o.call(e);
+                                (0, n.jsx)(R, {
+                                    label: N.intl.string(N.t['7V375+']),
+                                    'aria-label': N.intl.string(N.t['2cRO3d']),
+                                    onFilter: (l) => {
+                                        var n, a;
+                                        P(), null === (n = t.onClick) || void 0 === n || n.call(t, l), null === (a = e.onClick) || void 0 === a || a.call(e);
                                     },
-                                    isFiltered: V,
-                                    className: a()(_.smallCol),
+                                    isFiltered: S,
+                                    className: o()(L.smallCol),
                                     onMouseEnter: () => {
-                                        var n, l;
-                                        F(), null === (n = e.onMouseEnter) || void 0 === n || n.call(e), null === (l = t.onMouseEnter) || void 0 === l || l.call(t);
+                                        var l, n;
+                                        P(), null === (l = e.onMouseEnter) || void 0 === l || l.call(e), null === (n = t.onMouseEnter) || void 0 === n || n.call(t);
                                     },
                                     onMouseDown: t.onMouseDown,
                                     onMouseLeave: e.onMouseLeave,
@@ -266,9 +261,9 @@ function R(e) {
                                 })
                         })
                 }),
-                (0, l.jsx)(M, {
-                    label: L.intl.string(L.t['5Q9xGh']),
-                    className: _.smallCol
+                (0, n.jsx)(R, {
+                    label: N.intl.string(N.t['5Q9xGh']),
+                    className: L.smallCol
                 })
             ]
         })

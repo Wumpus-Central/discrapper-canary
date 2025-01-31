@@ -1,20 +1,20 @@
-!(function (e, n) {
-    n(r(913527));
+!(function (e, t) {
+    t(n(913527));
 })(0, function (e) {
-    function n(e, n) {
-        var r = e.split('_');
-        return n % 10 == 1 && n % 100 != 11 ? r[0] : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? r[1] : r[2];
+    function t(e, t) {
+        var n = e.split('_');
+        return t % 10 == 1 && t % 100 != 11 ? n[0] : t % 10 >= 2 && t % 10 <= 4 && (t % 100 < 10 || t % 100 >= 20) ? n[1] : n[2];
     }
-    function r(e, r, i) {
-        var a = {
-            ss: r ? 'секунда_секунды_секунд' : 'секунду_секунды_секунд',
-            mm: r ? 'минута_минуты_минут' : 'минуту_минуты_минут',
+    function n(e, n, i) {
+        var r = {
+            ss: n ? 'секунда_секунды_секунд' : 'секунду_секунды_секунд',
+            mm: n ? 'минута_минуты_минут' : 'минуту_минуты_минут',
             hh: 'час_часа_часов',
             dd: 'день_дня_дней',
             MM: 'месяц_месяца_месяцев',
             yy: 'год_года_лет'
         };
-        return 'm' === i ? (r ? 'минута' : 'минуту') : e + ' ' + n(a[i], +e);
+        return 'm' === i ? (n ? 'минута' : 'минуту') : e + ' ' + t(r[i], +e);
     }
     var i = [/^янв/i, /^фев/i, /^мар/i, /^апр/i, /^ма[йя]/i, /^июн/i, /^июл/i, /^авг/i, /^сен/i, /^окт/i, /^ноя/i, /^дек/i];
     return e.defineLocale('ru', {
@@ -53,36 +53,34 @@
             nextDay: '[Завтра, в] LT',
             lastDay: '[Вчера, в] LT',
             nextWeek: function (e) {
-                if (e.week() !== this.week())
-                    switch (this.day()) {
-                        case 0:
-                            return '[В следующее] dddd, [в] LT';
-                        case 1:
-                        case 2:
-                        case 4:
-                            return '[В следующий] dddd, [в] LT';
-                        case 3:
-                        case 5:
-                        case 6:
-                            return '[В следующую] dddd, [в] LT';
-                    }
-                else return 2 === this.day() ? '[Во] dddd, [в] LT' : '[В] dddd, [в] LT';
+                if (e.week() === this.week()) return 2 === this.day() ? '[Во] dddd, [в] LT' : '[В] dddd, [в] LT';
+                switch (this.day()) {
+                    case 0:
+                        return '[В следующее] dddd, [в] LT';
+                    case 1:
+                    case 2:
+                    case 4:
+                        return '[В следующий] dddd, [в] LT';
+                    case 3:
+                    case 5:
+                    case 6:
+                        return '[В следующую] dddd, [в] LT';
+                }
             },
             lastWeek: function (e) {
-                if (e.week() !== this.week())
-                    switch (this.day()) {
-                        case 0:
-                            return '[В прошлое] dddd, [в] LT';
-                        case 1:
-                        case 2:
-                        case 4:
-                            return '[В прошлый] dddd, [в] LT';
-                        case 3:
-                        case 5:
-                        case 6:
-                            return '[В прошлую] dddd, [в] LT';
-                    }
-                else return 2 === this.day() ? '[Во] dddd, [в] LT' : '[В] dddd, [в] LT';
+                if (e.week() === this.week()) return 2 === this.day() ? '[Во] dddd, [в] LT' : '[В] dddd, [в] LT';
+                switch (this.day()) {
+                    case 0:
+                        return '[В прошлое] dddd, [в] LT';
+                    case 1:
+                    case 2:
+                    case 4:
+                        return '[В прошлый] dddd, [в] LT';
+                    case 3:
+                    case 5:
+                    case 6:
+                        return '[В прошлую] dddd, [в] LT';
+                }
             },
             sameElse: 'L'
         },
@@ -90,31 +88,28 @@
             future: 'через %s',
             past: '%s назад',
             s: 'несколько секунд',
-            ss: r,
-            m: r,
-            mm: r,
+            ss: n,
+            m: n,
+            mm: n,
             h: 'час',
-            hh: r,
+            hh: n,
             d: 'день',
-            dd: r,
+            dd: n,
             M: 'месяц',
-            MM: r,
+            MM: n,
             y: 'год',
-            yy: r
+            yy: n
         },
         meridiemParse: /ночи|утра|дня|вечера/i,
         isPM: function (e) {
             return /^(дня|вечера)$/.test(e);
         },
-        meridiem: function (e, n, r) {
-            if (e < 4) return 'ночи';
-            if (e < 12) return 'утра';
-            if (e < 17) return 'дня';
-            else return 'вечера';
+        meridiem: function (e, t, n) {
+            return e < 4 ? 'ночи' : e < 12 ? 'утра' : e < 17 ? 'дня' : 'вечера';
         },
         dayOfMonthOrdinalParse: /\d{1,2}-(й|го|я)/,
-        ordinal: function (e, n) {
-            switch (n) {
+        ordinal: function (e, t) {
+            switch (t) {
                 case 'M':
                 case 'd':
                 case 'DDD':

@@ -1,9 +1,5 @@
 function i(e) {
-    var n = new Date(Date.UTC(e.getFullYear(), e.getMonth(), e.getDate(), e.getHours(), e.getMinutes(), e.getSeconds(), e.getMilliseconds()));
-    return n.setUTCFullYear(e.getFullYear()), e.getTime() - n.getTime();
+    var t = new Date(Date.UTC(e.getFullYear(), e.getMonth(), e.getDate(), e.getHours(), e.getMinutes(), e.getSeconds(), e.getMilliseconds()));
+    return t.setUTCFullYear(e.getFullYear()), e.getTime() - t.getTime();
 }
-r.d(n, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });

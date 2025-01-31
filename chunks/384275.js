@@ -1,23 +1,24 @@
-var i = r(544891),
-    a = r(570140),
-    o = r(981631);
-n.Z = {
+n.d(t, { Z: () => s });
+var i = n(544891),
+    r = n(570140),
+    a = n(981631);
+let s = {
     fetch() {
-        a.Z.dispatch({ type: 'USER_AUTHORIZED_APPS_REQUEST' }),
+        r.Z.dispatch({ type: 'USER_AUTHORIZED_APPS_REQUEST' }),
             i.tn
                 .get({
-                    url: o.ANM.OAUTH2_TOKENS,
+                    url: a.ANM.OAUTH2_TOKENS,
                     oldFormErrors: !0,
                     rejectWithError: !0
                 })
                 .then(
                     (e) =>
-                        a.Z.dispatch({
+                        r.Z.dispatch({
                             type: 'USER_AUTHORIZED_APPS_UPDATE',
                             apps: e.body
                         }),
                     () =>
-                        a.Z.dispatch({
+                        r.Z.dispatch({
                             type: 'USER_AUTHORIZED_APPS_UPDATE',
                             apps: []
                         })
@@ -26,7 +27,7 @@ n.Z = {
     delete(e) {
         i.tn
             .del({
-                url: o.ANM.OAUTH2_TOKEN(e),
+                url: a.ANM.OAUTH2_TOKEN(e),
                 oldFormErrors: !0,
                 rejectWithError: !0
             })

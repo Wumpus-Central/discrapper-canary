@@ -1,74 +1,70 @@
-n.d(t, {
-    Z: function () {
-        return m;
-    }
-});
-var i = n(200651);
-n(192379);
-var l = n(512722),
-    s = n.n(l),
-    a = n(481060),
-    o = n(600164),
-    r = n(565138),
-    c = n(703656),
-    d = n(388032),
-    u = n(941007);
+i.d(t, { Z: () => m });
+var n = i(200651);
+i(192379);
+var s = i(512722),
+    l = i.n(s),
+    a = i(481060),
+    r = i(600164),
+    o = i(565138),
+    c = i(703656),
+    d = i(388032),
+    u = i(941007);
 function m(e) {
-    let { directoryGuildName: t, guildToAdd: n, isExistingGuildFlow: l, onClose: m } = e;
+    let { directoryGuildName: t, guildToAdd: i, isExistingGuildFlow: s, onClose: m } = e;
     return (
-        s()(null != n, 'Missing guild in Hub add guild confirmation'),
-        (0, i.jsxs)(i.Fragment, {
+        l()(null != i, 'Missing guild in Hub add guild confirmation'),
+        (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, i.jsxs)(a.ModalHeader, {
-                    direction: o.Z.Direction.VERTICAL,
+                (0, n.jsxs)(a.xBx, {
+                    direction: r.Z.Direction.VERTICAL,
                     className: u.header,
                     separator: !1,
                     children: [
                         null != m &&
-                            (0, i.jsx)(a.ModalCloseButton, {
+                            (0, n.jsx)(a.olH, {
                                 className: u.closeButton,
                                 onClick: m
                             }),
-                        (0, i.jsx)(r.Z, {
-                            guild: n,
-                            size: r.Z.Sizes.XLARGE,
+                        (0, n.jsx)(o.Z, {
+                            guild: i,
+                            size: o.Z.Sizes.XLARGE,
                             active: !0
                         }),
-                        (0, i.jsx)(a.Heading, {
+                        (0, n.jsx)(a.X6q, {
                             className: u.title,
                             variant: 'heading-xl/semibold',
                             children: d.intl.string(d.t.CueiPT)
                         }),
-                        (0, i.jsx)(a.Text, {
+                        (0, n.jsx)(a.Text, {
                             className: u.__invalid_subtitle,
                             color: 'header-secondary',
                             variant: 'text-md/normal',
-                            children: l ? d.intl.formatToPlainString(d.t.R7Pqn5, { guildName: t }) : d.intl.formatToPlainString(d.t.eIxPSk, { guildName: t })
+                            children: s ? d.intl.formatToPlainString(d.t.R7Pqn5, { guildName: t }) : d.intl.formatToPlainString(d.t.eIxPSk, { guildName: t })
                         })
                     ]
                 }),
-                (0, i.jsx)(a.ModalFooter, {
+                (0, n.jsx)(a.mzw, {
                     className: u.buttonRow,
-                    children: l
-                        ? (0, i.jsx)(a.Button, {
+                    children: s
+                        ? (0, n.jsx)(a.zxk, {
                               className: u.addConfirmButton,
-                              color: a.Button.Colors.BRAND,
+                              color: a.zxk.Colors.BRAND,
                               onClick: m,
                               children: d.intl.string(d.t['X0WK+/'])
                           })
-                        : (0, i.jsxs)(i.Fragment, {
+                        : (0, n.jsxs)(n.Fragment, {
                               children: [
-                                  (0, i.jsx)(a.Button, {
+                                  (0, n.jsx)(a.zxk, {
                                       className: u.createSecondaryButton,
-                                      color: a.Button.Colors.PRIMARY,
+                                      color: a.zxk.Colors.PRIMARY,
                                       onClick: m,
                                       children: d.intl.string(d.t['X/VABg'])
                                   }),
-                                  (0, i.jsx)(a.Button, {
+                                  (0, n.jsx)(a.zxk, {
                                       className: u.createConfirmButton,
-                                      color: a.Button.Colors.BRAND,
+                                      color: a.zxk.Colors.BRAND,
                                       onClick: () => {
-                                          (0, c.XU)(n.id), null == m || m();
+                                          (0, c.XU)(i.id), null == m || m();
                                       },
                                       children: d.intl.string(d.t.DymAQk)
                                   })

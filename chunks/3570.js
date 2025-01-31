@@ -1,31 +1,27 @@
-n.d(e, {
-    T: function () {
-        return a;
-    },
-    s: function () {
-        return c;
-    }
+n.d(t, {
+    T: () => s,
+    s: () => c
 });
-var r = n(536285),
-    i = n(703656),
+var i = n(536285),
+    r = n(703656),
     l = n(314897),
-    u = n(358085),
+    a = n(358085),
     o = n(981631);
-let a = u.isPlatformEmbedded
+let s = a.isPlatformEmbedded
         ? o.dG4
-        : (t, e) => {
-              if (!(0, i.DB)())
-                  return r.default.request(o.Etm.DEEP_LINK, {
-                      type: t,
-                      params: e
+        : (e, t) => {
+              if (!(0, r.DB)())
+                  return i.default.request(o.Etm.DEEP_LINK, {
+                      type: e,
+                      params: t
                   });
           },
-    c = u.isPlatformEmbedded
+    c = a.isPlatformEmbedded
         ? o.dG4
-        : (t, e) => {
+        : (e, t) => {
               if (!l.default.isAuthenticated())
-                  return a(t, {
-                      ...(e || {}),
+                  return s(e, {
+                      ...(t || {}),
                       fingerprint: l.default.getFingerprint()
                   });
           };

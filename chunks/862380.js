@@ -1,10 +1,12 @@
-e.exports = {
-    placeholder: 'placeholder_dac468',
-    multiplePlaceholder: 'multiplePlaceholder_dac468',
-    placeholderUsername: 'placeholderUsername_dac468',
-    mulitplePlaceholderUsername: 'mulitplePlaceholderUsername_dac468',
-    avatarSmall: 'avatarSmall_dac468',
-    avatarLarge: 'avatarLarge_dac468',
-    placeholderAvatar: 'placeholderAvatar_dac468',
-    avatarMasked: 'avatarMasked_dac468'
+var i = {
+    placeholderPulse: 'placeholderPulse__27cc6',
+    multiplePlaceholder: 'multiplePlaceholder__27cc6',
+    placeholder: 'placeholder__27cc6',
+    mulitplePlaceholderUsername: 'mulitplePlaceholderUsername__27cc6',
+    placeholderUsername: 'placeholderUsername__27cc6',
+    avatarSmall: 'avatarSmall__27cc6',
+    avatarLarge: 'avatarLarge__27cc6',
+    placeholderAvatar: 'placeholderAvatar__27cc6',
+    avatarMasked: 'avatarMasked__27cc6'
 };
+e.exports = i;

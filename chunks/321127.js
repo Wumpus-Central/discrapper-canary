@@ -1,22 +1,18 @@
-r.d(n, {
-    Z: function () {
-        return l;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(223979);
-function l(e) {
-    let { attributes: n, children: r, leaf: a, text: l } = e;
-    if (a.commandName) {
-        let e = o()(s.commandName, { [s.emptyText]: '' === l.text });
+n.d(t, { Z: () => o });
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(223979);
+function o(e) {
+    let { attributes: t, children: n, leaf: r, text: o } = e;
+    if (r.commandName) {
+        let e = a()(s.commandName, { [s.emptyText]: '' === o.text });
         return (0, i.jsx)('span', {
-            ...n,
+            ...t,
             className: e,
             spellCheck: !1,
-            children: r
+            children: n
         });
     }
     return null;

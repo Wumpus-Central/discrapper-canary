@@ -1,131 +1,113 @@
 n.d(t, {
-    I6: function () {
-        return E;
-    },
-    V9: function () {
-        return S;
-    },
-    Z6: function () {
-        return _;
-    },
-    jp: function () {
-        return R;
-    },
-    r5: function () {
-        return g;
-    },
-    vT: function () {
-        return r;
-    },
-    vh: function () {
-        return i;
-    },
-    yU: function () {
-        return A;
-    }
+    I6: () => c,
+    V9: () => S,
+    Z6: () => _,
+    jp: () => R,
+    r5: () => g,
+    vT: () => E,
+    vh: () => d,
+    yU: () => A
 }),
     n(47120),
     n(789020),
     n(411104),
     n(724458);
 var r,
-    i,
     l,
-    u,
-    a = n(192379),
-    o = n(467319),
-    c = n(676317),
-    s = n(273504),
-    f = n(388032);
-((l = r || (r = {})).NEW = 'new'), (l.RECOMMENDED = 'recommended'), (l.BETA = 'beta'), (l.ALPHA = 'alpha');
-let E = {
-    [s.fX.SPAM_LINK]: {
-        getDefaultRuleName: () => f.intl.string(f.t.ffR2cH),
-        type: s.fX.SPAM_LINK,
-        eventType: s.q4.MESSAGE_SEND,
+    i = n(192379),
+    a = n(467319),
+    u = n(676317),
+    o = n(273504),
+    s = n(388032),
+    E = (((r = {}).NEW = 'new'), (r.RECOMMENDED = 'recommended'), (r.BETA = 'beta'), (r.ALPHA = 'alpha'), r);
+let c = {
+    [o.fX.SPAM_LINK]: {
+        getDefaultRuleName: () => s.intl.string(s.t.ffR2cH),
+        type: o.fX.SPAM_LINK,
+        eventType: o.q4.MESSAGE_SEND,
         perGuildMaxCount: 0,
         availableActionTypes: new Set(),
         flags: new Set(),
         defaultActionTypes: new Set()
     },
-    [s.fX.KEYWORD]: {
-        getDefaultRuleName: () => f.intl.string(f.t.ffR2cH),
-        type: s.fX.KEYWORD,
-        eventType: s.q4.MESSAGE_SEND,
+    [o.fX.KEYWORD]: {
+        getDefaultRuleName: () => s.intl.string(s.t.ffR2cH),
+        type: o.fX.KEYWORD,
+        eventType: o.q4.MESSAGE_SEND,
         perGuildMaxCount: 6,
-        availableActionTypes: new Set([s.jj.BLOCK_MESSAGE, s.jj.FLAG_TO_CHANNEL, s.jj.USER_COMMUNICATION_DISABLED]),
+        availableActionTypes: new Set([o.jj.BLOCK_MESSAGE, o.jj.FLAG_TO_CHANNEL, o.jj.USER_COMMUNICATION_DISABLED]),
         flags: new Set(),
-        defaultActionTypes: new Set([s.jj.BLOCK_MESSAGE])
+        defaultActionTypes: new Set([o.jj.BLOCK_MESSAGE])
     },
-    [s.fX.ML_SPAM]: {
-        getDefaultRuleName: () => f.intl.string(f.t['puF/Oj']),
-        type: s.fX.ML_SPAM,
-        eventType: s.q4.MESSAGE_SEND,
+    [o.fX.ML_SPAM]: {
+        getDefaultRuleName: () => s.intl.string(s.t['puF/Oj']),
+        type: o.fX.ML_SPAM,
+        eventType: o.q4.MESSAGE_SEND,
         perGuildMaxCount: 1,
-        availableActionTypes: new Set([s.jj.BLOCK_MESSAGE, s.jj.FLAG_TO_CHANNEL]),
+        availableActionTypes: new Set([o.jj.BLOCK_MESSAGE, o.jj.FLAG_TO_CHANNEL]),
         flags: new Set([]),
-        defaultActionTypes: new Set([s.jj.BLOCK_MESSAGE])
+        defaultActionTypes: new Set([o.jj.BLOCK_MESSAGE])
     },
-    [s.fX.DEFAULT_KEYWORD_LIST]: {
-        getDefaultRuleName: () => f.intl.string(f.t.LnGhZm),
-        type: s.fX.DEFAULT_KEYWORD_LIST,
-        eventType: s.q4.MESSAGE_SEND,
+    [o.fX.DEFAULT_KEYWORD_LIST]: {
+        getDefaultRuleName: () => s.intl.string(s.t.LnGhZm),
+        type: o.fX.DEFAULT_KEYWORD_LIST,
+        eventType: o.q4.MESSAGE_SEND,
         perGuildMaxCount: 1,
-        availableActionTypes: new Set([s.jj.BLOCK_MESSAGE, s.jj.FLAG_TO_CHANNEL]),
+        availableActionTypes: new Set([o.jj.BLOCK_MESSAGE, o.jj.FLAG_TO_CHANNEL]),
         flags: new Set([]),
-        defaultActionTypes: new Set([s.jj.BLOCK_MESSAGE])
+        defaultActionTypes: new Set([o.jj.BLOCK_MESSAGE])
     },
-    [s.fX.MENTION_SPAM]: {
-        getDefaultRuleName: () => f.intl.string(f.t.pX7i6u),
-        type: s.fX.MENTION_SPAM,
-        eventType: s.q4.MESSAGE_SEND,
+    [o.fX.MENTION_SPAM]: {
+        getDefaultRuleName: () => s.intl.string(s.t.pX7i6u),
+        type: o.fX.MENTION_SPAM,
+        eventType: o.q4.MESSAGE_SEND,
         perGuildMaxCount: 1,
-        availableActionTypes: new Set([s.jj.BLOCK_MESSAGE, s.jj.FLAG_TO_CHANNEL, s.jj.USER_COMMUNICATION_DISABLED]),
+        availableActionTypes: new Set([o.jj.BLOCK_MESSAGE, o.jj.FLAG_TO_CHANNEL, o.jj.USER_COMMUNICATION_DISABLED]),
         flags: new Set([]),
-        defaultActionTypes: new Set([s.jj.BLOCK_MESSAGE])
+        defaultActionTypes: new Set([o.jj.BLOCK_MESSAGE])
     },
-    [s.fX.USER_PROFILE]: {
-        getDefaultRuleName: () => f.intl.string(f.t.q1L2v7),
-        type: s.fX.USER_PROFILE,
-        eventType: s.q4.GUILD_MEMBER_JOIN_OR_UPDATE,
+    [o.fX.USER_PROFILE]: {
+        getDefaultRuleName: () => s.intl.string(s.t.q1L2v7),
+        type: o.fX.USER_PROFILE,
+        eventType: o.q4.GUILD_MEMBER_JOIN_OR_UPDATE,
         perGuildMaxCount: 1,
-        availableActionTypes: new Set([s.jj.QUARANTINE_USER, s.jj.FLAG_TO_CHANNEL]),
+        availableActionTypes: new Set([o.jj.QUARANTINE_USER, o.jj.FLAG_TO_CHANNEL]),
         flags: new Set([]),
-        defaultActionTypes: new Set([s.jj.QUARANTINE_USER])
+        defaultActionTypes: new Set([o.jj.QUARANTINE_USER])
     },
-    [s.fX.SERVER_POLICY]: {
-        getDefaultRuleName: () => f.intl.string(f.t.ZQr92N),
-        type: s.fX.SERVER_POLICY,
-        eventType: s.q4.MESSAGE_SEND,
+    [o.fX.SERVER_POLICY]: {
+        getDefaultRuleName: () => s.intl.string(s.t.ZQr92N),
+        type: o.fX.SERVER_POLICY,
+        eventType: o.q4.MESSAGE_SEND,
         perGuildMaxCount: 1,
-        availableActionTypes: new Set([s.jj.FLAG_TO_CHANNEL]),
+        availableActionTypes: new Set([o.jj.FLAG_TO_CHANNEL]),
         flags: new Set(['alpha']),
         defaultActionTypes: new Set()
     }
 };
-((u = i || (i = {})).MEMBERS = 'members'), (u.CONTENT = 'content');
-let d = {
-        members: [E[s.fX.USER_PROFILE]],
-        content: [E[s.fX.SERVER_POLICY], E[s.fX.MENTION_SPAM], E[s.fX.ML_SPAM], E[s.fX.DEFAULT_KEYWORD_LIST], E[s.fX.KEYWORD]]
+var d = (((l = {}).MEMBERS = 'members'), (l.CONTENT = 'content'), l);
+let f = {
+        members: [c[o.fX.USER_PROFILE]],
+        content: [c[o.fX.SERVER_POLICY], c[o.fX.MENTION_SPAM], c[o.fX.ML_SPAM], c[o.fX.DEFAULT_KEYWORD_LIST], c[o.fX.KEYWORD]]
     },
-    g = (e, t) => E[e].flags.has(t);
+    g = (e, t) => c[e].flags.has(t);
 function S(e) {
-    return Array.from(E[e].availableActionTypes);
+    return Array.from(c[e].availableActionTypes);
 }
 function A(e, t) {
-    let { id: n, eventType: r, triggerType: i, actions: l } = e,
-        u = E[i];
-    if (t.filter((e) => n !== e.id && e.triggerType === i).length > u.perGuildMaxCount) throw Error('You have exceeded the maximum number of rules of type '.concat(i));
-    if (l.some((e) => !u.availableActionTypes.has(e.type))) throw Error('You have provided an action that is not available for this trigger type');
-    if (r !== u.eventType) throw Error('You have provided an event type that is not available for this trigger type');
+    let { id: n, eventType: r, triggerType: l, actions: i } = e,
+        a = c[l];
+    if (t.filter((e) => n !== e.id && e.triggerType === l).length > a.perGuildMaxCount) throw Error('You have exceeded the maximum number of rules of type '.concat(l));
+    if (i.some((e) => !a.availableActionTypes.has(e.type))) throw Error('You have provided an action that is not available for this trigger type');
+    if (r !== a.eventType) throw Error('You have provided an event type that is not available for this trigger type');
 }
 function _(e) {
-    let t = (0, c.oA)(e);
-    return a.useMemo(
+    let t = (0, u.oA)(e);
+    return i.useMemo(
         () =>
-            Object.keys(d).reduce(
+            Object.keys(f).reduce(
                 (e, n) => {
-                    let r = d[n].filter((e) => e.type !== s.fX.SERVER_POLICY && (e.type !== s.fX.USER_PROFILE || !!t) && e.perGuildMaxCount > 0).map((e) => e.type);
+                    let r = f[n].filter((e) => e.type !== o.fX.SERVER_POLICY && (e.type !== o.fX.USER_PROFILE || !!t) && e.perGuildMaxCount > 0).map((e) => e.type);
                     return (e[n] = r), e;
                 },
                 {
@@ -137,27 +119,27 @@ function _(e) {
     );
 }
 function R(e, t) {
-    let n = (0, o.H)(t);
+    let n = (0, a.H)(t);
     switch (e) {
-        case s.fX.DEFAULT_KEYWORD_LIST:
+        case o.fX.DEFAULT_KEYWORD_LIST:
             return {
                 allowList: [],
                 presets: []
             };
-        case s.fX.USER_PROFILE:
-        case s.fX.KEYWORD:
+        case o.fX.USER_PROFILE:
+        case o.fX.KEYWORD:
             return {
                 keywordFilter: [],
                 regexPatterns: [],
                 allowList: []
             };
-        case s.fX.MENTION_SPAM:
+        case o.fX.MENTION_SPAM:
             return {
-                mentionTotalLimit: s.Ic,
+                mentionTotalLimit: o.Ic,
                 mentionRaidProtectionEnabled: n
             };
-        case s.fX.ML_SPAM:
-        case s.fX.SERVER_POLICY:
+        case o.fX.ML_SPAM:
+        case o.fX.SERVER_POLICY:
         default:
             return;
     }

@@ -1,9 +1,4 @@
-var i;
-r.d(n, {
-    B: function () {
-        return i;
-    }
-}),
-    !(function (e) {
-        (e[(e.UNICODE = 0)] = 'UNICODE'), (e[(e.GUILD = 1)] = 'GUILD');
-    })(i || (i = {}));
+n.d(t, { B: () => i });
+var i = (function (e) {
+    return (e[(e.UNICODE = 0)] = 'UNICODE'), (e[(e.GUILD = 1)] = 'GUILD'), e;
+})({});

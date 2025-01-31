@@ -1,48 +1,43 @@
-r.d(n, {
-    Z: function () {
-        return h;
-    }
-});
-var i = r(789020);
-var a = r(200651),
-    o = r(117447),
-    s = r(481060),
-    l = r(783097),
-    u = r(594174),
-    c = r(572004),
-    d = r(630388),
-    f = r(311819),
-    p = r(981631);
-function h(e) {
-    let { application: n, label: r, onSuccess: i, showIconFirst: h, focusedClassName: _ } = e;
-    if (__OVERLAY__ || !c.wS || null == n) return null;
-    let m = u.default.getCurrentUser(),
-        g = (0, l.Ow)(n);
-    function E() {
+n.d(t, { Z: () => f }), n(789020);
+var i = n(200651),
+    r = n(117447),
+    a = n(481060),
+    s = n(783097),
+    o = n(594174),
+    l = n(572004),
+    u = n(630388),
+    c = n(311819),
+    d = n(981631);
+function f(e) {
+    let { application: t, label: n, onSuccess: f, showIconFirst: _, focusedClassName: p } = e;
+    if (__OVERLAY__ || !l.wS || null == t) return null;
+    let h = o.default.getCurrentUser(),
+        m = (0, s.Ow)(t);
+    function g() {
         var e;
-        if (null == n) return;
-        let r = (0, d.yE)(null !== (e = n.flags) && void 0 !== e ? e : 0, p.udG.EMBEDDED)
-            ? (0, f.H)({
-                  applicationId: n.id,
-                  referrerId: null == m ? void 0 : m.id
+        if (null == t) return;
+        let n = (0, u.yE)(null !== (e = t.flags) && void 0 !== e ? e : 0, d.udG.EMBEDDED)
+            ? (0, c.H)({
+                  applicationId: t.id,
+                  referrerId: null == h ? void 0 : h.id
               })
-            : (0, f.J)({
-                  id: n.id,
-                  ...g
+            : (0, c.J)({
+                  id: t.id,
+                  ...m
               });
-        if (null != r) (0, c.JG)(r), null == i || i();
+        null != n && ((0, l.JG)(n), null == f || f());
     }
-    let v = 'copy-app-link-'.concat(n.id);
-    return (0, a.jsx)(
-        s.MenuItem,
+    let E = 'copy-app-link-'.concat(t.id);
+    return (0, i.jsx)(
+        a.sNh,
         {
-            id: v,
-            label: r,
-            action: E,
-            icon: h ? void 0 : o.x,
-            iconLeft: h ? o.x : void 0,
-            focusedClassName: _
+            id: E,
+            label: n,
+            action: g,
+            icon: _ ? void 0 : r.x,
+            iconLeft: _ ? r.x : void 0,
+            focusedClassName: p
         },
-        v
+        E
     );
 }

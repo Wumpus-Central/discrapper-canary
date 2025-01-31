@@ -1,3 +1,4 @@
+n.d(t, { Z: () => v });
 var o = n(230371),
     r = n(400361),
     i = n(473452),
@@ -79,7 +80,7 @@ var m = (function () {
         e
     );
 })();
-t.Z = function (e, t) {
+let v = function (e, t) {
     if (void 0 !== e.__SECRET_EMOTION__) return e.__SECRET_EMOTION__;
     void 0 === t && (t = {});
     var n,
@@ -108,16 +109,13 @@ t.Z = function (e, t) {
             case 'boolean':
                 return '';
             case 'function':
-                if (void 0 !== e.__emotion_styles) {
-                    var n = e.toString();
-                    return n;
-                }
+                if (void 0 !== e.__emotion_styles) return e.toString();
                 return y.call(this, void 0 === this ? e() : e(this.mergedProps, this.context), t);
             case 'object':
                 return O.call(this, e);
             default:
-                var o = v.registered[e];
-                return !1 === t && void 0 !== o ? o : e;
+                var n = v.registered[e];
+                return !1 === t && void 0 !== n ? n : e;
         }
     }
     var C = new WeakMap();

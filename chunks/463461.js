@@ -1,25 +1,19 @@
-r.d(t, {
-    r: function () {
-        return _;
-    }
-});
-var a = r(967752),
-    n = r(617726);
-function _(e, { metadata: t, tunnel: r, dsn: _ }) {
-    let o = {
-            event_id: e.event_id,
+a.d(e, { r: () => o });
+var r = a(967752),
+    n = a(617726);
+function o(t, { metadata: e, tunnel: a, dsn: o }) {
+    let _ = {
+            event_id: t.event_id,
             sent_at: new Date().toISOString(),
-            ...(t &&
-                t.sdk && {
+            ...(e &&
+                e.sdk && {
                     sdk: {
-                        name: t.sdk.name,
-                        version: t.sdk.version
+                        name: e.sdk.name,
+                        version: e.sdk.version
                     }
                 }),
-            ...(!!r && !!_ && { dsn: (0, a.RA)(_) })
+            ...(!!a && !!o && { dsn: (0, r.RA)(o) })
         },
-        E = (function (e) {
-            return [{ type: 'user_report' }, e];
-        })(e);
-    return (0, n.Jd)(o, [E]);
+        i = [{ type: 'user_report' }, t];
+    return (0, n.Jd)(_, [i]);
 }

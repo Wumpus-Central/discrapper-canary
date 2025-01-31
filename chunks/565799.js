@@ -1,225 +1,223 @@
+n.d(t, { Z: () => en }), n(47120), n(724458), n(653041);
 var i,
-    a = r(47120);
-var o = r(724458);
-var s = r(653041);
-var l = r(348327),
-    u = r.n(l),
-    c = r(392711),
-    d = r.n(c),
-    f = r(442837),
-    p = r(759174),
-    h = r(570140),
-    _ = r(569545),
-    m = r(199902),
-    g = r(314897),
-    E = r(592125),
-    v = r(430824),
-    y = r(496675),
-    b = r(699516),
-    I = r(606304),
-    T = r(594174),
-    S = r(979651),
-    A = r(938475),
-    C = r(501655),
-    N = r(88751),
-    R = r(427679);
-function O(e, n, r) {
+    r = n(348327),
+    a = n.n(r),
+    s = n(392711),
+    o = n.n(s),
+    l = n(442837),
+    u = n(759174),
+    c = n(570140),
+    d = n(569545),
+    f = n(199902),
+    _ = n(314897),
+    p = n(592125),
+    h = n(430824),
+    m = n(496675),
+    g = n(699516),
+    E = n(606304),
+    v = n(594174),
+    y = n(979651),
+    I = n(938475),
+    b = n(501655),
+    T = n(88751),
+    S = n(427679);
+function A(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let D = 'NO_GUILD',
-    L = new p.h(
-        (e) => [P(e)],
+let N = 'NO_GUILD',
+    C = new u.h(
+        (e) => [D(e)],
         (e) => e.id
     ),
-    x = new Set(),
-    w = {};
-function P(e) {
-    var n;
-    return null !== (n = e.getGuildId()) && void 0 !== n ? n : D;
+    R = new Set(),
+    O = {};
+function D(e) {
+    var t;
+    return null !== (t = e.getGuildId()) && void 0 !== t ? t : N;
 }
-function M(e) {
-    return L.values(null != e ? e : void 0, !0).map((e) => {
-        let { id: n } = e;
-        return n;
+function x(e) {
+    return C.values(null != e ? e : void 0, !0).map((e) => {
+        let { id: t } = e;
+        return t;
     });
 }
-function k(e) {
-    !x.has(e) &&
-        (x.add(e),
-        d()(E.Z.getMutableGuildChannelsForGuild(e))
+function L(e) {
+    R.has(e) ||
+        (R.add(e),
+        o()(p.Z.getMutableGuildChannelsForGuild(e))
             .values()
             .forEach((e) => {
-                G(e) && L.set(e.id, e);
+                M(e) && C.set(e.id, e);
             }));
 }
-function U(e) {
-    let n = w[e];
-    if (null != n) return n;
-    let r = E.Z.getChannel(e);
-    return null != r && r.isGuildStageVoice() ? ((k(r.guild_id), G(r)) ? B(e) : null) : null;
+function P(e) {
+    let t = O[e];
+    if (null != t) return t;
+    let n = p.Z.getChannel(e);
+    return null != n && n.isGuildStageVoice() && (L(n.guild_id), M(n)) ? w(e) : null;
 }
-function B(e) {
-    let n = w[e];
-    return null == n && ((n = new C.ZP(e)), (w[e] = n), n.rebuild()), n;
+function w(e) {
+    let t = O[e];
+    return null == t && ((t = new b.ZP(e)), (O[e] = t), t.rebuild()), t;
+}
+function M(e) {
+    return null != e && e.isGuildStageVoice() && I.ZP.countVoiceStatesForChannel(e.id) > 0;
+}
+function k(e, t) {
+    let n = p.Z.getChannel(e);
+    return null != n && n.isGuildStageVoice() ? (0 === t.size() ? Z(n.id) : null == C.get(n.id) && C.set(n.id, n)) : Z(e);
+}
+function U(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : x();
+    return t.reduce((t, n) => {
+        let i = w(n);
+        return e(i) ? (k(n, i), !0) : t;
+    }, !1);
 }
 function G(e) {
-    return null != e && e.isGuildStageVoice() && A.ZP.countVoiceStatesForChannel(e.id) > 0;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : x();
+    return U((t) => t.updateParticipant(e), t);
 }
-function Z(e, n) {
-    let r = E.Z.getChannel(e);
-    return null != r && r.isGuildStageVoice() ? (0 === n.size() ? H(r.id) : null == L.get(r.id) && L.set(r.id, r)) : H(e);
+function B(e) {
+    for (let t of C.values(e)) C.delete(t.id), delete O[t.id];
+    R.delete(e);
 }
-function F(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : M();
-    return n.reduce((n, r) => {
-        let i = B(r);
-        return e(i) ? (Z(r, i), !0) : n;
-    }, !1);
+function Z(e) {
+    return null != e && (delete O[e], C.delete(e), !0);
 }
-function V(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : M();
-    return F((n) => n.updateParticipant(e), n);
+function F() {
+    R.clear(), C.clear(), (O = {});
+}
+function V(e, t, n) {
+    if (null == n || e.has(n)) return;
+    let i = p.Z.getChannel(n);
+    (null == i ? void 0 : i.isGuildStageVoice()) && (t.add(n), e.add(n));
 }
 function j(e) {
-    for (let n of L.values(e)) L.delete(n.id), delete w[n.id];
-    x.delete(e);
-}
-function H(e) {
-    return null != e && (delete w[e], L.delete(e), !0);
-}
-function Y() {
-    x.clear(), L.clear(), (w = {});
-}
-function W(e, n, r) {
-    if (null == r || e.has(r)) return;
-    let i = E.Z.getChannel(r);
-    if (!!(null == i ? void 0 : i.isGuildStageVoice())) n.add(r), e.add(r);
-}
-function K(e) {
-    let { voiceStates: n } = e,
-        r = new Set();
-    return n.reduce((e, n) => {
-        if (null == n.guildId || !x.has(n.guildId)) return e;
+    let { voiceStates: t } = e,
+        n = new Set();
+    return t.reduce((e, t) => {
+        if (null == t.guildId || !R.has(t.guildId)) return e;
         let i = new Set();
-        return (W(r, i, n.oldChannelId), W(r, i, n.channelId), 0 === i.size) ? e : V(n.userId, Array.from(i)) || e;
+        return (V(n, i, t.oldChannelId), V(n, i, t.channelId), 0 === i.size) ? e : G(t.userId, Array.from(i)) || e;
     }, !1);
 }
-function z(e) {
-    let { chunks: n } = e,
-        r = !1;
-    for (let e of n) for (let n of e.members) r = V(n.user.id) || r;
-    return r;
-}
-function q(e) {
-    let n = !1;
-    for (let r of M(e.guildId)) n = B(r).rebuild() || n;
+function H(e) {
+    let { chunks: t } = e,
+        n = !1;
+    for (let e of t) for (let t of e.members) n = G(t.user.id) || n;
     return n;
 }
+function Y(e) {
+    let t = !1;
+    for (let n of x(e.guildId)) t = w(n).rebuild() || t;
+    return t;
+}
+function W(e) {
+    let { user: t } = e;
+    return G(t.id);
+}
+function K(e) {
+    let { relationship: t } = e;
+    return G(t.id);
+}
+function z(e) {
+    let { guild: t } = e;
+    B(t.id);
+}
+function q(e) {
+    let { channelId: t, guildId: n, userId: i } = e;
+    return !!(null != n && R.has(n)) && G(i, [t]);
+}
 function Q(e) {
-    let { user: n } = e;
-    return V(n.id);
+    let { streamKey: t } = e,
+        { channelId: n, guildId: i, ownerId: r } = (0, d.my)(t);
+    return !!(null != i && R.has(i)) && G(r, [n]);
 }
 function X(e) {
-    let { relationship: n } = e;
-    return V(n.id);
+    let {
+        channel: { id: t }
+    } = e;
+    return Z(t);
 }
 function J(e) {
-    let { guild: n } = e;
-    j(n.id);
+    let { channels: t } = e,
+        n = t.reduce((e, t) => {
+            if (!t.isGuildStageVoice() || !R.has(t.guild_id)) return e;
+            let n = C.get(t.id);
+            return null == n || a()(t.permissionOverwrites, n.permissionOverwrites) || (e.push(t.id), C.set(t.id, t)), e;
+        }, []);
+    return U((e) => e.rebuild(), n), n.length > 0;
 }
 function $(e) {
-    let { channelId: n, guildId: r, userId: i } = e;
-    return !!(null != r && x.has(r)) && V(i, [n]);
+    let { guildId: t } = e;
+    if (R.has(t)) return U((e) => e.rebuild(), x(t));
 }
-function ee(e) {
-    let { streamKey: n } = e,
-        { channelId: r, guildId: i, ownerId: a } = (0, _.my)(n);
-    return !!(null != i && x.has(i)) && V(a, [r]);
-}
-function et(e) {
-    let {
-        channel: { id: n }
-    } = e;
-    return H(n);
-}
-function en(e) {
-    let { channels: n } = e,
-        r = n.reduce((e, n) => {
-            if (!n.isGuildStageVoice() || !x.has(n.guild_id)) return e;
-            let r = L.get(n.id);
-            return null == r || u()(n.permissionOverwrites, r.permissionOverwrites) ? e : (e.push(n.id), L.set(n.id, n), e);
-        }, []);
-    return F((e) => e.rebuild(), r), r.length > 0;
-}
-function er(e) {
-    let { guildId: n } = e;
-    if (x.has(n)) return F((e) => e.rebuild(), M(n));
-}
-let ei = [];
-class ea extends (i = f.ZP.Store) {
+let ee = [];
+class et extends (i = l.ZP.Store) {
     initialize() {
-        this.waitFor(g.default, T.default, E.Z, I.Z, S.Z, y.Z, A.ZP, v.Z, N.ZP, b.Z, R.Z, m.Z);
+        this.waitFor(_.default, v.default, p.Z, E.Z, y.Z, m.Z, I.ZP, h.Z, T.ZP, g.Z, S.Z, f.Z);
     }
     getParticipantsVersion(e) {
-        var n, r;
-        return null == e ? -1 : null !== (r = null === (n = U(e)) || void 0 === n ? void 0 : n.version) && void 0 !== r ? r : -1;
+        var t, n;
+        return null == e ? -1 : null !== (n = null === (t = P(e)) || void 0 === t ? void 0 : t.version) && void 0 !== n ? n : -1;
     }
-    getMutableParticipants(e, n) {
-        var r, i;
-        return null == e ? ei : null !== (i = null === (r = U(e)) || void 0 === r ? void 0 : r.toArray(n)) && void 0 !== i ? i : ei;
+    getMutableParticipants(e, t) {
+        var n, i;
+        return null == e ? ee : null !== (i = null === (n = P(e)) || void 0 === n ? void 0 : n.toArray(t)) && void 0 !== i ? i : ee;
     }
     getMutableRequestToSpeakParticipants(e) {
-        var n, r;
-        return null !== (r = null === (n = U(e)) || void 0 === n ? void 0 : n.getRequestToSpeakParticipants()) && void 0 !== r ? r : ei;
+        var t, n;
+        return null !== (n = null === (t = P(e)) || void 0 === t ? void 0 : t.getRequestToSpeakParticipants()) && void 0 !== n ? n : ee;
     }
     getRequestToSpeakParticipantsVersion(e) {
-        var n, r;
-        return null !== (r = null === (n = U(e)) || void 0 === n ? void 0 : n.requestToSpeakVersion) && void 0 !== r ? r : -1;
+        var t, n;
+        return null !== (n = null === (t = P(e)) || void 0 === t ? void 0 : t.requestToSpeakVersion) && void 0 !== n ? n : -1;
     }
-    getParticipantCount(e, n) {
-        var r, i;
-        return null !== (i = null === (r = U(e)) || void 0 === r ? void 0 : r.size(n)) && void 0 !== i ? i : 0;
+    getParticipantCount(e, t) {
+        var n, i;
+        return null !== (i = null === (n = P(e)) || void 0 === n ? void 0 : n.size(t)) && void 0 !== i ? i : 0;
     }
     getChannels(e) {
-        return k(null != e ? e : D), L.values(null != e ? e : D);
+        return L(null != e ? e : N), C.values(null != e ? e : N);
     }
     getChannelsVersion() {
-        return L.version;
+        return C.version;
     }
-    getParticipant(e, n) {
-        var r, i;
-        return null !== (i = null === (r = U(e)) || void 0 === r ? void 0 : r.getParticipant(n)) && void 0 !== i ? i : null;
+    getParticipant(e, t) {
+        var n, i;
+        return null !== (i = null === (n = P(e)) || void 0 === n ? void 0 : n.getParticipant(t)) && void 0 !== i ? i : null;
     }
 }
-O(ea, 'displayName', 'StageChannelParticipantStore'),
-    (n.Z = new ea(h.Z, {
-        CONNECTION_OPEN: Y,
-        OVERLAY_INITIALIZE: Y,
-        VOICE_STATE_UPDATES: K,
-        CHANNEL_DELETE: et,
-        GUILD_MEMBERS_CHUNK_BATCH: z,
-        USER_UPDATE: Q,
-        GUILD_MEMBER_REMOVE: Q,
-        GUILD_MEMBER_UPDATE: Q,
-        CHANNEL_UPDATES: en,
-        GUILD_ROLE_UPDATE: er,
-        RTC_CONNECTION_VIDEO: $,
-        STREAM_CLOSE: ee,
-        STREAM_DELETE: ee,
-        RELATIONSHIP_ADD: X,
-        RELATIONSHIP_REMOVE: X,
-        RELATIONSHIP_UPDATE: X,
-        GUILD_CREATE: J,
-        GUILD_DELETE: J,
-        PASSIVE_UPDATE_V2: q
-    }));
+A(et, 'displayName', 'StageChannelParticipantStore');
+let en = new et(c.Z, {
+    CONNECTION_OPEN: F,
+    OVERLAY_INITIALIZE: F,
+    VOICE_STATE_UPDATES: j,
+    CHANNEL_DELETE: X,
+    GUILD_MEMBERS_CHUNK_BATCH: H,
+    USER_UPDATE: W,
+    GUILD_MEMBER_REMOVE: W,
+    GUILD_MEMBER_UPDATE: W,
+    CHANNEL_UPDATES: J,
+    GUILD_ROLE_UPDATE: $,
+    RTC_CONNECTION_VIDEO: q,
+    STREAM_CLOSE: Q,
+    STREAM_DELETE: Q,
+    RELATIONSHIP_ADD: K,
+    RELATIONSHIP_REMOVE: K,
+    RELATIONSHIP_UPDATE: K,
+    GUILD_CREATE: z,
+    GUILD_DELETE: z,
+    PASSIVE_UPDATE_V2: Y
+});

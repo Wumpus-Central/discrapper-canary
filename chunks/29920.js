@@ -1,16 +1,12 @@
-n.d(t, {
-    H: function () {
-        return a;
-    }
-});
+n.d(t, { H: () => a });
 var i = n(544891),
-    r = n(960048),
-    l = n(981631);
+    l = n(960048),
+    r = n(981631);
 async function a(e) {
     let { userTrialOffer: t, userDiscount: n, userDiscountOffer: a } = e;
     try {
         let e = await i.tn.post({
-            url: l.ANM.PREMIUM_MARKETING,
+            url: r.ANM.PREMIUM_MARKETING,
             body: {
                 user_trial_offer: t,
                 user_discount: n,
@@ -19,7 +15,7 @@ async function a(e) {
             rejectWithError: !0
         });
         if (e.ok) return e.body;
-        return r.Z.captureMessage('fetchPremiumMarketingContentWithUserOffer failed'), [];
+        return l.Z.captureMessage('fetchPremiumMarketingContentWithUserOffer failed'), [];
     } catch (e) {
         return [];
     }

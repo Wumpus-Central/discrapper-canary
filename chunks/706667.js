@@ -1,52 +1,47 @@
-r.d(n, {
-    Z: function () {
-        return h;
-    }
-});
+n.d(t, { Z: () => f }), n(47120);
 var i,
-    a = r(47120);
-var o = r(192379),
-    s = r(442837),
-    l = r(695346),
-    u = r(135869),
-    c = r(763296),
-    d = r(242291),
-    f = r(22382),
-    p = r(747071);
-function h(e, n) {
-    let r =
+    r = n(192379),
+    a = n(442837),
+    s = n(695346),
+    o = n(135869),
+    l = n(763296),
+    u = n(242291),
+    c = n(22382),
+    d = n(747071);
+function f(e, t) {
+    let n =
             arguments.length > 2 && void 0 !== arguments[2]
                 ? arguments[2]
                 : (() => {
                       var e;
-                      return null !== (i = null === (e = l.kU.getSetting()) || void 0 === e ? void 0 : e.volume) && void 0 !== i ? i : 100;
+                      return null !== (i = null === (e = s.kU.getSetting()) || void 0 === e ? void 0 : e.volume) && void 0 !== i ? i : 100;
                   })(),
-        { currentPreviewRef: a } = o.useContext(u.Z),
-        [h, _] = o.useState(!1),
-        m = (0, s.e7)([c.Z], () => c.Z.isPlayingSound(e.soundId), [e]),
-        g = o.useCallback(
-            (r) => {
-                null != a.current && a.current.pause(), null != n && (0, d.GN)(e, n, r);
+        { currentPreviewRef: f } = r.useContext(o.Z),
+        [_, p] = r.useState(!1),
+        h = (0, a.e7)([l.Z], () => l.Z.isPlayingSound(e.soundId), [e]),
+        m = r.useCallback(
+            (n) => {
+                null != f.current && f.current.pause(), null != t && (0, u.GN)(e, t, n);
             },
-            [e, a, n]
+            [e, f, t]
         ),
-        E = o.useCallback(() => {
-            let n = new Audio((0, f.Z)(e.soundId));
-            null != a.current && a.current.pause(), (a.current = n), (n.currentTime = 0), (n.volume = (0, p.Z)(e.volume, r)), n.play(), _(!0), n.addEventListener('pause', () => _(!1), { once: !0 });
-        }, [e, r, a]);
+        g = r.useCallback(() => {
+            let t = new Audio((0, c.Z)(e.soundId));
+            null != f.current && f.current.pause(), (f.current = t), (t.currentTime = 0), (t.volume = (0, d.Z)(e.volume, n)), t.play(), p(!0), t.addEventListener('pause', () => p(!1), { once: !0 });
+        }, [e, n, f]);
     return (
-        o.useCallback(
+        r.useCallback(
             () => () => {
                 var e;
-                return null === (e = a.current) || void 0 === e ? void 0 : e.pause();
+                return null === (e = f.current) || void 0 === e ? void 0 : e.pause();
             },
-            [a]
+            [f]
         ),
         {
-            playSoundboardSound: g,
-            isPlayingSound: m,
-            previewSound: E,
-            isPreviewingSound: h
+            playSoundboardSound: m,
+            isPlayingSound: h,
+            previewSound: g,
+            isPreviewingSound: _
         }
     );
 }

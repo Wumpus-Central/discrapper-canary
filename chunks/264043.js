@@ -1,100 +1,98 @@
-r.d(n, {
-    M: function () {
-        return i;
-    }
-});
+n.d(t, {
+    M: () => l,
+    Z: () => g
+}),
+    n(47120);
 var i,
-    a,
-    o = r(47120);
-var s = r(442837),
-    l = r(570140),
-    u = r(973616);
-function c(e, n, r) {
+    r = n(442837),
+    a = n(570140),
+    s = n(973616);
+function o(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-!(function (e) {
-    (e[(e.FETCHING = 0)] = 'FETCHING'), (e[(e.FETCHED = 1)] = 'FETCHED'), (e[(e.ERROR = 2)] = 'ERROR');
-})(i || (i = {}));
-let d = {},
-    f = {},
-    p = new Set(),
-    h = {};
+var l = (function (e) {
+    return (e[(e.FETCHING = 0)] = 'FETCHING'), (e[(e.FETCHED = 1)] = 'FETCHED'), (e[(e.ERROR = 2)] = 'ERROR'), e;
+})({});
+let u = {},
+    c = {},
+    d = new Set(),
+    f = {};
 function _(e) {
-    let { applicationId: n } = e;
-    f = {
-        ...f,
-        [n]: 0
+    let { applicationId: t } = e;
+    c = {
+        ...c,
+        [t]: 0
     };
 }
-function m(e) {
-    let { application: n } = e;
-    (d = {
-        ...d,
-        [n.id]: n
+function p(e) {
+    let { application: t } = e;
+    (u = {
+        ...u,
+        [t.id]: t
     }),
-        (f = {
-            ...f,
-            [n.id]: 1
+        (c = {
+            ...c,
+            [t.id]: 1
         });
-    let r = Date.now();
-    (h = {
-        ...h,
-        [n.id]: r
-    }),
-        p.has(n.id) && (p.delete(n.id), (p = new Set(p)));
-}
-function g(e) {
-    let { applicationId: n, isInvalidApplication: r } = e;
+    let n = Date.now();
     (f = {
         ...f,
-        [n]: 2
+        [t.id]: n
     }),
-        r && (p.add(n), (p = new Set(p)));
+        d.has(t.id) && (d.delete(t.id), (d = new Set(d)));
 }
-class E extends (a = s.ZP.Store) {
+function h(e) {
+    let { applicationId: t, isInvalidApplication: n } = e;
+    (c = {
+        ...c,
+        [t]: 2
+    }),
+        n && (d.add(t), (d = new Set(d)));
+}
+class m extends (i = r.ZP.Store) {
     getApplication(e) {
-        if (null != e) return d[e];
+        if (null != e) return u[e];
     }
     getApplicationRecord(e) {
         if (null == e) return;
-        let n = d[e];
-        if (null != n) return u.ZP.createFromServer(n);
+        let t = u[e];
+        if (null != t) return s.ZP.createFromServer(t);
     }
     getApplications() {
-        return d;
+        return u;
     }
     getApplicationFetchState(e) {
-        if (null != e) return f[e];
+        if (null != e) return c[e];
     }
     getApplicationFetchStates() {
-        return f;
+        return c;
     }
     isInvalidApplication(e) {
-        return null != e && p.has(e);
+        return null != e && d.has(e);
     }
     getInvalidApplicationIds() {
-        return p;
+        return d;
     }
     isFetching(e) {
         return 0 === this.getApplicationFetchState(e);
     }
     getApplicationLastFetchTime(e) {
-        if (null != e) return h[e];
+        if (null != e) return f[e];
     }
 }
-c(E, 'displayName', 'ApplicationDirectoryApplicationsStore'),
-    (n.Z = new E(l.Z, {
-        APPLICATION_DIRECTORY_FETCH_APPLICATION: _,
-        APPLICATION_DIRECTORY_FETCH_APPLICATION_SUCCESS: m,
-        APPLICATION_DIRECTORY_FETCH_APPLICATION_FAILURE: g
-    }));
+o(m, 'displayName', 'ApplicationDirectoryApplicationsStore');
+let g = new m(a.Z, {
+    APPLICATION_DIRECTORY_FETCH_APPLICATION: _,
+    APPLICATION_DIRECTORY_FETCH_APPLICATION_SUCCESS: p,
+    APPLICATION_DIRECTORY_FETCH_APPLICATION_FAILURE: h
+});

@@ -1,25 +1,20 @@
-r.d(n, {
-    Z: function () {
-        return l;
-    }
-});
-var i = r(47120);
-var a = r(348327),
-    o = r.n(a);
-function s(e, n, r) {
+n.d(t, { Z: () => s }), n(47120);
+var i = n(348327),
+    r = n.n(i);
+function a(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class l {
+class s {
     shouldCommit() {
         return !0;
     }
@@ -37,20 +32,20 @@ class l {
     }
     update() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-            n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            r = this.getNextState({
+            t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            n = this.getNextState({
                 ...this.state,
                 ...e
             });
-        if (n) this.dirty = !o()(r, this.getInitialState());
-        else for (let e of Object.keys(r)) this.dirty = this.dirty || !o()(this.state[e], r[e]);
+        if (t) this.dirty = !r()(n, this.getInitialState());
+        else for (let e of Object.keys(n)) this.dirty = this.dirty || !r()(this.state[e], n[e]);
         let i = this.dirty && this.shouldCommit();
-        return (i || this.alwaysUpdateState) && (this.state = r), !!i && ((this.dirty = !1), this.didCommit(this.state), !0);
+        return (i || this.alwaysUpdateState) && (this.state = n), !!i && ((this.dirty = !1), this.didCommit(this.state), !0);
     }
     forceUpdate() {
         (this.dirty = !1), this.didCommit(this.state);
     }
     constructor(e = !0) {
-        s(this, 'alwaysUpdateState', void 0), s(this, 'dirty', void 0), s(this, 'state', void 0), (this.alwaysUpdateState = e), (this.dirty = !1), (this.state = this.getInitialState());
+        a(this, 'alwaysUpdateState', void 0), a(this, 'dirty', void 0), a(this, 'state', void 0), (this.alwaysUpdateState = e), (this.dirty = !1), (this.state = this.getInitialState());
     }
 }

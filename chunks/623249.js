@@ -1,17 +1,12 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return S;
-        },
-        openConsoleConnectionErrorsModal: function () {
-            return N;
-        }
-    }),
+n.d(t, {
+    default: () => E,
+    y: () => N
+}),
     n(47120);
-var o = n(200651),
+var s = n(200651),
     r = n(192379),
-    s = n(120356),
-    a = n.n(s),
+    a = n(120356),
+    o = n.n(a),
     i = n(442837),
     l = n(780384),
     c = n(481060),
@@ -20,147 +15,147 @@ var o = n(200651),
     p = n(210887),
     m = n(617136),
     x = n(915750),
-    g = n(113434),
-    h = n(497505),
+    h = n(113434),
+    g = n(497505),
     f = n(918701),
     v = n(475595),
-    C = n(667105),
-    j = n(981631),
-    _ = n(388032),
-    T = n(839434),
-    E = n(708901);
-function S(e) {
+    _ = n(667105),
+    C = n(981631),
+    j = n(388032),
+    b = n(839434),
+    T = n(708901);
+function E(e) {
     var t;
-    let { questId: n, errorHints: s, transitionState: S, onClose: N } = e,
-        B = (0, g.B4)(n);
-    null == B && N();
-    let [y, A] = (0, r.useState)(s),
-        w = (0, g.KX)(),
+    let { questId: n, errorHints: a, transitionState: E, onClose: N } = e,
+        y = (0, h.B4)(n);
+    null == y && N();
+    let [w, A] = (0, r.useState)(a),
+        B = (0, h.KX)(),
         R = (0, m.O5)(),
-        I = null === (t = (0, x.WD)()) || void 0 === t ? void 0 : t.getId(),
-        P = (0, i.e7)([d.Z], () => d.Z.useReducedMotion),
-        k = (0, C.g2)({
-            useReducedMotion: P,
-            className: T.colorTransition
+        P = null === (t = (0, x.WD)()) || void 0 === t ? void 0 : t.getId(),
+        k = (0, i.e7)([d.Z], () => d.Z.useReducedMotion),
+        q = (0, _.g2)({
+            useReducedMotion: k,
+            className: b.colorTransition
         }),
-        O = y.filter((e) => ['xbox', 'playstation'].includes(e.connected_account_type)),
-        q = (0, f.Bz)(B),
+        I = w.filter((e) => ['xbox', 'playstation'].includes(e.connected_account_type)),
+        O = (0, f.Bz)(y),
         M = (0, i.e7)([p.Z], () => p.Z.getState().theme),
-        L = (0, l.wj)(M) ? j.BRd.DARK : j.BRd.LIGHT,
-        { startConsoleQuest: D, startingConsoleQuest: Z } = (0, g.GI)({
-            questId: B.id,
+        D = (0, l.wj)(M) ? C.BRd.DARK : C.BRd.LIGHT,
+        { startConsoleQuest: L, startingConsoleQuest: Z } = (0, h.GI)({
+            questId: y.id,
             beforeRequest: () => {
-                k.startAnimation(),
+                q.startAnimation(),
                     R({
-                        questId: B.id,
-                        questContent: h.jn.CONNECTIONS_MODAL,
+                        questId: y.id,
+                        questContent: g.jn.CONNECTIONS_MODAL,
                         questContentCTA: m.jZ.DEFIBRILLATOR
                     });
             },
             afterRequest: (e) => {
-                k.stopAnimation(), A(e);
+                q.stopAnimation(), A(e);
             }
         });
-    return (0, o.jsxs)(c.ModalRoot, {
-        transitionState: S,
-        size: c.ModalSize.DYNAMIC,
-        className: T.modalRoot,
+    return (0, s.jsxs)(c.Y0X, {
+        transitionState: E,
+        size: c.CgR.DYNAMIC,
+        className: b.modalRoot,
         children: [
-            (0, o.jsxs)(c.ModalHeader, {
+            (0, s.jsxs)(c.xBx, {
                 direction: u.Z.Direction.VERTICAL,
                 separator: !1,
-                className: T.modalHeader,
+                className: b.modalHeader,
                 children: [
-                    (0, o.jsxs)('div', {
-                        className: T.modalTop,
+                    (0, s.jsxs)('div', {
+                        className: b.modalTop,
                         children: [
-                            (0, o.jsx)('div', {
-                                className: T.iconFrame,
-                                children: (0, o.jsx)('img', {
-                                    className: T.icon,
+                            (0, s.jsx)('div', {
+                                className: b.iconFrame,
+                                children: (0, s.jsx)('img', {
+                                    className: b.icon,
                                     alt: '',
-                                    src: E
+                                    src: T
                                 })
                             }),
-                            (0, o.jsx)(c.ModalCloseButton, {
-                                className: T.closeBtn,
+                            (0, s.jsx)(c.olH, {
+                                className: b.closeBtn,
                                 onClick: N
                             })
                         ]
                     }),
-                    (0, o.jsx)(c.Heading, {
+                    (0, s.jsx)(c.X6q, {
                         variant: 'heading-xl/bold',
-                        children: _.intl.string(_.t.W5lmKi)
+                        children: j.intl.string(j.t.W5lmKi)
                     }),
-                    (0, o.jsx)(c.Text, {
+                    (0, s.jsx)(c.Text, {
                         variant: 'text-sm/medium',
                         color: 'header-secondary',
-                        className: T.upperBodyText,
-                        children: w.message
+                        className: b.upperBodyText,
+                        children: B.message
                     })
                 ]
             }),
-            (0, o.jsxs)(c.ModalContent, {
-                className: T.modalContent,
+            (0, s.jsxs)(c.hzk, {
+                className: b.modalContent,
                 children: [
-                    (0, o.jsxs)('div', {
-                        className: T.contentHeader,
+                    (0, s.jsxs)('div', {
+                        className: b.contentHeader,
                         children: [
-                            (0, o.jsx)(c.Text, {
+                            (0, s.jsx)(c.Text, {
                                 variant: 'eyebrow',
                                 color: 'header-secondary',
-                                children: _.intl.string(_.t['+/hZMz'])
+                                children: j.intl.string(j.t['+/hZMz'])
                             }),
-                            (0, o.jsxs)(c.Clickable, {
-                                className: a()(T.refreshWrapper, { [T.disabled]: Z }),
-                                onClick: D,
+                            (0, s.jsxs)(c.P3F, {
+                                className: o()(b.refreshWrapper, { [b.disabled]: Z }),
+                                onClick: L,
                                 children: [
-                                    k.render(),
-                                    (0, o.jsx)(c.Text, {
+                                    q.render(),
+                                    (0, s.jsx)(c.Text, {
                                         variant: 'text-sm/medium',
                                         color: 'currentColor',
-                                        className: T.colorTransition,
-                                        children: _.intl.string(_.t.wzzjk5)
+                                        className: b.colorTransition,
+                                        children: j.intl.string(j.t.wzzjk5)
                                     })
                                 ]
                             })
                         ]
                     }),
-                    (0, o.jsxs)('div', {
-                        className: T.accountsWrapper,
+                    (0, s.jsxs)('div', {
+                        className: b.accountsWrapper,
                         children: [
-                            (0, o.jsx)(b, {
-                                icon: (0, o.jsx)(c.ScreenIcon, { size: 'sm' }),
-                                text: _.intl.string(_.t.br3uIi)
+                            (0, s.jsx)(S, {
+                                icon: (0, s.jsx)(c.pzj, { size: 'sm' }),
+                                text: j.intl.string(j.t.br3uIi)
                             }),
-                            (0, o.jsx)(b, {
-                                icon: (0, o.jsx)(c.GameControllerIcon, { size: 'sm' }),
-                                text: _.intl.string(_.t.XF4wuL),
-                                errors: q ? void 0 : O.map((e) => e.message),
-                                gameTile: q
-                                    ? (0, o.jsx)(c.Tooltip, {
-                                          'aria-label': B.config.messages.gameTitle,
+                            (0, s.jsx)(S, {
+                                icon: (0, s.jsx)(c.iWm, { size: 'sm' }),
+                                text: j.intl.string(j.t.XF4wuL),
+                                errors: O ? void 0 : I.map((e) => e.message),
+                                gameTile: O
+                                    ? (0, s.jsx)(c.ua7, {
+                                          'aria-label': y.config.messages.gameTitle,
                                           text: () =>
-                                              (0, o.jsxs)('div', {
-                                                  className: T.tooltip,
+                                              (0, s.jsxs)('div', {
+                                                  className: b.tooltip,
                                                   children: [
-                                                      (0, o.jsx)(c.Text, {
+                                                      (0, s.jsx)(c.Text, {
                                                           variant: 'text-sm/medium',
-                                                          children: B.config.messages.gameTitle
+                                                          children: y.config.messages.gameTitle
                                                       }),
-                                                      (0, o.jsx)(c.Text, {
+                                                      (0, s.jsx)(c.Text, {
                                                           variant: 'text-xs/normal',
                                                           color: 'text-muted',
-                                                          children: _.intl.string(_.t.STpNEB)
+                                                          children: j.intl.string(j.t.STpNEB)
                                                       })
                                                   ]
                                               }),
                                           children: (e) =>
-                                              (0, o.jsx)('img', {
+                                              (0, s.jsx)('img', {
                                                   ...e,
-                                                  className: T.gameTile,
-                                                  alt: B.config.messages.gameTitle,
-                                                  src: (0, v.fh)(B, v.eC.GAME_TILE, L).url
+                                                  className: b.gameTile,
+                                                  alt: y.config.messages.gameTitle,
+                                                  src: (0, v.fh)(y, v.eC.GAME_TILE, D).url
                                               })
                                       })
                                     : null
@@ -169,87 +164,87 @@ function S(e) {
                     })
                 ]
             }),
-            (0, o.jsxs)(c.ModalFooter, {
-                className: T.footer,
+            (0, s.jsxs)(c.mzw, {
+                className: b.footer,
                 children: [
-                    (0, o.jsx)(c.Button, {
-                        size: c.ButtonSizes.MIN,
+                    (0, s.jsx)(c.zxk, {
+                        size: c.PhG.MIN,
                         onClick: N,
-                        className: T.footerCloseButton,
-                        children: _.intl.string(_.t.cpT0Cg)
+                        className: b.footerCloseButton,
+                        children: j.intl.string(j.t.cpT0Cg)
                     }),
-                    (0, o.jsx)(c.Button, {
-                        look: c.ButtonLooks.LINK,
-                        color: c.ButtonColors.PRIMARY,
+                    (0, s.jsx)(c.zxk, {
+                        look: c.iLD.LINK,
+                        color: c.Ttl.PRIMARY,
                         onClick: () => {
                             N(),
                                 (0, f.V$)(
-                                    { quest: B },
+                                    { quest: y },
                                     {
-                                        content: h.jn.CONNECTIONS_MODAL,
+                                        content: g.jn.CONNECTIONS_MODAL,
                                         ctaContent: m.jZ.VIEW_CONSOLE_CONNECTIONS_LINK,
-                                        impressionId: I
+                                        impressionId: P
                                     }
                                 );
                         },
-                        children: _.intl.string(_.t['qiS+xs'])
+                        children: j.intl.string(j.t['qiS+xs'])
                     })
                 ]
             })
         ]
     });
 }
-function b(e) {
-    let { icon: t, text: n, errors: r = [], gameTile: s } = e,
+function S(e) {
+    let { icon: t, text: n, errors: r = [], gameTile: a } = e,
         i = r.length > 0,
-        l = i ? c.ConnectionUnknownIcon : c.ConnectionFineIcon;
-    return (0, o.jsxs)('div', {
-        className: T.connectionRow,
+        l = i ? c._3e : c.B_b;
+    return (0, s.jsxs)('div', {
+        className: b.connectionRow,
         children: [
-            (0, o.jsxs)('div', {
-                className: a()(T.connectionRowHeader, { [T.connectionRowHeaderError]: i }),
+            (0, s.jsxs)('div', {
+                className: o()(b.connectionRowHeader, { [b.connectionRowHeaderError]: i }),
                 children: [
-                    (0, o.jsxs)('div', {
-                        className: T.connectionRowHeaderContent,
+                    (0, s.jsxs)('div', {
+                        className: b.connectionRowHeaderContent,
                         children: [
                             t,
-                            (0, o.jsx)(c.Text, {
+                            (0, s.jsx)(c.Text, {
                                 variant: 'text-sm/medium',
                                 color: 'text-normal',
                                 children: n
                             })
                         ]
                     }),
-                    (0, o.jsxs)('div', {
-                        className: T.connectionRowHeaderContent,
+                    (0, s.jsxs)('div', {
+                        className: b.connectionRowHeaderContent,
                         children: [
-                            s,
-                            (0, o.jsx)(l, {
+                            a,
+                            (0, s.jsx)(l, {
                                 color: 'currentColor',
                                 size: 'sm',
-                                className: a()({
-                                    [T.success]: !i,
-                                    [T.error]: i
+                                className: o()({
+                                    [b.success]: !i,
+                                    [b.error]: i
                                 })
                             })
                         ]
                     })
                 ]
             }),
-            (0, o.jsx)('div', {
-                className: T.errorsContainer,
+            (0, s.jsx)('div', {
+                className: b.errorsContainer,
                 children: r.map((e) =>
-                    (0, o.jsxs)(
+                    (0, s.jsxs)(
                         'div',
                         {
-                            className: T.errorRow,
+                            className: b.errorRow,
                             children: [
-                                (0, o.jsx)(c.WarningIcon, {
+                                (0, s.jsx)(c.aNP, {
                                     size: 'sm',
                                     color: 'currentColor',
-                                    className: T.error
+                                    className: b.error
                                 }),
-                                (0, o.jsx)(c.Text, {
+                                (0, s.jsx)(c.Text, {
                                     variant: 'text-xs/medium',
                                     color: 'text-muted',
                                     children: e
@@ -264,10 +259,10 @@ function b(e) {
     });
 }
 function N(e) {
-    (0, c.openModalLazy)(async () => {
+    (0, c.ZDy)(async () => {
         let { default: t } = await Promise.resolve().then(n.bind(n, 623249));
         return (n) =>
-            (0, o.jsx)(t, {
+            (0, s.jsx)(t, {
                 ...n,
                 ...e
             });

@@ -1,46 +1,38 @@
-r.d(n, {
-    _b: function () {
-        return g;
-    },
-    o: function () {
-        return h;
-    },
-    zt: function () {
-        return m;
-    },
-    zy: function () {
-        return p;
-    }
-});
-var i = r(757143);
-var a = r(633302),
-    o = r(134432),
-    s = r(768581),
-    l = r(358085),
-    u = r(981631);
-let c = ''.concat(location.protocol, '//').concat(window.GLOBAL_ENV.CDN_HOST, '/role-icons'),
-    d = ''.concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT),
-    f = (0, l.isAndroid)(),
-    p = (e, n) => {
+n.d(t, {
+    _b: () => h,
+    o: () => f,
+    zt: () => p,
+    zy: () => d
+}),
+    n(757143);
+var i = n(633302),
+    r = n(134432),
+    a = n(768581),
+    s = n(358085),
+    o = n(981631);
+let l = ''.concat(location.protocol, '//').concat(window.GLOBAL_ENV.CDN_HOST, '/role-icons'),
+    u = ''.concat(location.protocol).concat(window.GLOBAL_ENV.API_ENDPOINT),
+    c = (0, s.isAndroid)(),
+    d = (e, t) => {
         if (null == e) return null;
-        let r = null != e.unicodeEmoji ? a.ZP.getByName(a.ZP.convertSurrogateToName(e.unicodeEmoji, !1)) : void 0;
+        let n = null != e.unicodeEmoji ? i.ZP.getByName(i.ZP.convertSurrogateToName(e.unicodeEmoji, !1)) : void 0;
         return {
-            customIconSrc: _(e, n),
-            unicodeEmoji: null != r ? r : void 0
+            customIconSrc: _(e, t),
+            unicodeEmoji: null != n ? n : void 0
         };
     },
-    h = (e, n) => e.replace(/size=[0-9]+/g, 'size='.concat((0, o.oO)(n * (0, o.x_)()))),
-    _ = (e, n) => {
-        let { id: r, icon: i } = e;
+    f = (e, t) => e.replace(/size=[0-9]+/g, 'size='.concat((0, r.oO)(t * (0, r.x_)()))),
+    _ = (e, t) => {
+        let { id: n, icon: i } = e;
         if (null == i) return;
         if (i.startsWith('data:')) return i;
-        let a = s.$k ? 'webp' : 'png',
-            l = '',
-            p = 'quality=lossless';
-        return (null != n && ((l = 'size=' + (0, o.oO)(n * (0, o.x_)())), (p = f ? '' : '&' + p)), null != window.GLOBAL_ENV.CDN_HOST) ? ''.concat(c, '/').concat(r, '/').concat(i, '.').concat(a, '?').concat(l).concat(p) : ''.concat(d).concat(u.ANM.ROLE_ICON(r, i), '?').concat(l);
+        let s = a.$k ? 'webp' : 'png',
+            d = '',
+            f = 'quality=lossless';
+        return (null != t && ((d = 'size=' + (0, r.oO)(t * (0, r.x_)())), (f = c ? '' : '&' + f)), null != window.GLOBAL_ENV.CDN_HOST) ? ''.concat(l, '/').concat(n, '/').concat(i, '.').concat(s, '?').concat(d).concat(f) : ''.concat(u).concat(o.ANM.ROLE_ICON(n, i), '?').concat(d);
     },
-    m = (e) => e.startsWith(c) || (e.startsWith(''.concat(d, '/roles')) && e.includes('/icons/')),
-    g = (e, n) => {
-        var r;
-        return (null == n ? void 0 : null === (r = n.tags) || void 0 === r ? void 0 : r.subscription_listing_id) != null || e.features.has(u.oNc.ROLE_ICONS);
+    p = (e) => e.startsWith(l) || (e.startsWith(''.concat(u, '/roles')) && e.includes('/icons/')),
+    h = (e, t) => {
+        var n;
+        return (null == t ? void 0 : null === (n = t.tags) || void 0 === n ? void 0 : n.subscription_listing_id) != null || e.features.has(o.oNc.ROLE_ICONS);
     };

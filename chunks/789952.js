@@ -1,113 +1,109 @@
-r.r(n),
-    r.d(n, {
-        hasDomParent: function () {
-            return l;
-        },
-        normalizeDOMPoint: function () {
-            return u;
-        }
-    });
-var i = r(411104);
-var a = r(47120);
-var o = r(270445);
-let s = !1;
+n.r(t),
+    n.d(t, {
+        hasDomParent: () => a,
+        normalizeDOMPoint: () => s
+    }),
+    n(411104),
+    n(47120);
+var i = n(270445);
+let r = !1;
 {
-    o.F3.toSlateRange = (e, n, r) => {
-        let i,
+    i.F3.toSlateRange = (e, t, n) => {
+        let r,
             a,
             s,
+            o,
             l,
-            u,
-            { exactMatch: c, suppressThrow: d } = r;
-        if ((p(n) ? ((i = n.anchorNode), (a = n.anchorOffset), (s = n.focusNode), (l = n.focusOffset), (u = n.isCollapsed)) : ((i = n.startContainer), (a = n.startOffset), (s = n.endContainer), (l = n.endOffset), (u = n.collapsed)), null == i || null == s || null == a || null == l)) {
+            { exactMatch: u, suppressThrow: d } = n;
+        if ((c(t) ? ((r = t.anchorNode), (a = t.anchorOffset), (s = t.focusNode), (o = t.focusOffset), (l = t.isCollapsed)) : ((r = t.startContainer), (a = t.startOffset), (s = t.endContainer), (o = t.endOffset), (l = t.collapsed)), null == r || null == s || null == a || null == o)) {
             if (d) return null;
             throw Error('Cannot resolve a Slate range from DOM range');
         }
-        let f = o.F3.toSlatePoint(e, [i, a], {
-                exactMatch: c,
+        let f = i.F3.toSlatePoint(e, [r, a], {
+                exactMatch: u,
                 suppressThrow: d
             }),
-            h = u
+            _ = l
                 ? f
-                : o.F3.toSlatePoint(e, [s, l], {
-                      exactMatch: c,
+                : i.F3.toSlatePoint(e, [s, o], {
+                      exactMatch: u,
                       suppressThrow: d
                   });
-        return null != f && null != h
+        return null != f && null != _
             ? {
                   anchor: f,
-                  focus: h
+                  focus: _
               }
             : null;
     };
-    let e = o.F3.toSlatePoint;
-    (o.F3.toSlatePoint = (n, r, i) => {
-        let { exactMatch: a, suppressThrow: o, direction: s = 'forward' } = i;
-        !a && (r = u(r, s));
+    let e = i.F3.toSlatePoint;
+    (i.F3.toSlatePoint = (t, n, i) => {
+        let { exactMatch: r, suppressThrow: a, direction: o = 'forward' } = i;
+        r || (n = s(n, o));
         try {
-            return e(n, r, {
+            return e(t, n, {
                 exactMatch: !0,
-                suppressThrow: o
+                suppressThrow: a
             });
         } catch (e) {
-            if (o) return null;
+            if (a) return null;
             throw e;
         }
     }),
-        (s = !0);
+        (r = !0);
 }
-function l(e, n) {
-    if (null == n) return !1;
+function a(e, t) {
+    if (null == t) return !1;
     for (; null != e; ) {
-        if (e === n) return !0;
+        if (e === t) return !0;
         e = e.parentNode;
     }
     return !1;
 }
-function u(e, n) {
-    let r,
-        [i, a] = e;
-    if (!f(i) || 0 === i.childNodes.length) return e;
-    for ('forward' === n && a === i.childNodes.length && (n = 'backward'), 'backward' === n && a--, [i, r] = c(i, a, n), 'forward' === n && r < a ? (n = 'backward') : 'backward' === n && r > a && (n = 'forward'), a = r; f(i) && i.childNodes.length > 0; ) {
-        let e = 'backward' === n ? i.childNodes.length - 1 : 0;
-        i = c(i, e, n)[0];
+function s(e, t) {
+    let n,
+        [i, r] = e;
+    if (!u(i) || 0 === i.childNodes.length) return e;
+    for ('forward' === t && r === i.childNodes.length && (t = 'backward'), 'backward' === t && r--, [i, n] = o(i, r, t), 'forward' === t && n < r ? (t = 'backward') : 'backward' === t && n > r && (t = 'forward'), r = n; u(i) && i.childNodes.length > 0; ) {
+        let e = 'backward' === t ? i.childNodes.length - 1 : 0;
+        i = o(i, e, t)[0];
     }
-    let o = 'backward' === n && null != i.textContent ? i.textContent.length : 0;
-    return [i, o];
+    let a = 'backward' === t && null != i.textContent ? i.textContent.length : 0;
+    return [i, a];
 }
-function c(e, n, r) {
+function o(e, t, n) {
     let { childNodes: i } = e,
-        a = i[n],
-        o = n,
+        r = i[t],
+        a = t,
         s = !1,
-        l = !1;
-    for (; (d(a) || (f(a) && 0 === a.childNodes.length) || (f(a) && 'false' === a.getAttribute('contenteditable'))) && (!s || !l); ) {
-        if (o >= i.length) {
-            (s = !0), (o = n - 1), (r = 'backward');
+        o = !1;
+    for (; (l(r) || (u(r) && 0 === r.childNodes.length) || (u(r) && 'false' === r.getAttribute('contenteditable'))) && (!s || !o); ) {
+        if (a >= i.length) {
+            (s = !0), (a = t - 1), (n = 'backward');
             continue;
         }
-        if (o < 0) {
-            (l = !0), (o = n + 1), (r = 'forward');
+        if (a < 0) {
+            (o = !0), (a = t + 1), (n = 'forward');
             continue;
         }
-        (a = i[o]), (n = o), (o += 'forward' === r ? 1 : -1);
+        (r = i[a]), (t = a), (a += 'forward' === n ? 1 : -1);
     }
-    return [a, n];
+    return [r, t];
+}
+function l(e) {
+    return d(e) && 8 === e.nodeType;
+}
+function u(e) {
+    return d(e) && 1 === e.nodeType;
+}
+function c(e) {
+    let t = e && e.anchorNode && f(e.anchorNode);
+    return null != t && e instanceof t.Selection;
 }
 function d(e) {
-    return h(e) && 8 === e.nodeType;
+    let t = f(e);
+    return null != t && e instanceof t.Node;
 }
 function f(e) {
-    return h(e) && 1 === e.nodeType;
-}
-function p(e) {
-    let n = e && e.anchorNode && _(e.anchorNode);
-    return null != n && e instanceof n.Selection;
-}
-function h(e) {
-    let n = _(e);
-    return null != n && e instanceof n.Node;
-}
-function _(e) {
     return (e && e.ownerDocument && e.ownerDocument.defaultView) || null;
 }

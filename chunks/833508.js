@@ -1,8 +1,4 @@
-function i(e, n) {
-    return new WebSocket(e, n);
+function i(e, t) {
+    return new WebSocket(e, t);
 }
-r.d(n, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });

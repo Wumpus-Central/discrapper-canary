@@ -13,14 +13,13 @@ var n = r(557958),
     g = null,
     y = {
         onCompositionStart: function (t) {
-            var e;
-            (d = !0), (e = t), g || (g = new n(c(e))).start();
+            (d = !0), g || (g = new n(c(t))).start();
         },
         onCompositionEnd: function (t) {
             (h = !1),
                 (d = !1),
                 setTimeout(function () {
-                    !h && y.resolveComposition(t);
+                    h || y.resolveComposition(t);
                 }, 20);
         },
         onSelect: s,

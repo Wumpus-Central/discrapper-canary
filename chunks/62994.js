@@ -528,7 +528,7 @@
         return A[I](B, B.exports, C), B.exports;
     }
     var Q = {};
-    (() => {
+    for (var B in ((() => {
         Object.defineProperty(Q, '__esModule', { value: !0 });
         let A = C(75),
             I = C(24),
@@ -599,7 +599,8 @@
             }
         }
         Q.default = i;
-    })();
-    for (var B in Q) I[B] = Q[B];
+    })(),
+    Q))
+        I[B] = Q[B];
     Q.__esModule && Object.defineProperty(I, '__esModule', { value: !0 });
 })();

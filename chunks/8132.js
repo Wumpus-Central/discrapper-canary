@@ -1,9 +1,9 @@
-function n(e) {
-    let n = e.regex,
-        r = /^[a-zA-Z][a-zA-Z0-9-]*/,
+function t(e) {
+    let t = e.regex,
+        n = /^[a-zA-Z][a-zA-Z0-9-]*/,
         i = ['ALPHA', 'BIT', 'CHAR', 'CR', 'CRLF', 'CTL', 'DIGIT', 'DQUOTE', 'HEXDIG', 'HTAB', 'LF', 'LWSP', 'OCTET', 'SP', 'VCHAR', 'WSP'],
-        a = e.COMMENT(/;/, /$/),
-        o = {
+        r = e.COMMENT(/;/, /$/),
+        a = {
             scope: 'symbol',
             match: /%b[0-1]+(-[0-1]+|(\.[0-1]+)+)?/
         },
@@ -11,17 +11,13 @@ function n(e) {
             scope: 'symbol',
             match: /%d[0-9]+(-[0-9]+|(\.[0-9]+)+)?/
         },
-        l = {
+        o = {
             scope: 'symbol',
             match: /%x[0-9A-F]+(-[0-9A-F]+|(\.[0-9A-F]+)+)?/
         },
-        u = {
+        l = {
             scope: 'symbol',
             match: /%[si](?=".*")/
-        },
-        c = {
-            scope: 'attribute',
-            match: n.concat(r, /(?=\s*=)/)
         };
     return {
         name: 'Augmented Backus-Naur Form',
@@ -32,15 +28,18 @@ function n(e) {
                 scope: 'operator',
                 match: /=\/?/
             },
-            c,
+            {
+                scope: 'attribute',
+                match: t.concat(n, /(?=\s*=)/)
+            },
+            r,
             a,
-            o,
             s,
+            o,
             l,
-            u,
             e.QUOTE_STRING_MODE,
             e.NUMBER_MODE
         ]
     };
 }
-e.exports = n;
+e.exports = t;

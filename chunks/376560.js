@@ -1,29 +1,25 @@
-r.d(n, {
-    L: function () {
-        return l;
-    }
-});
-var i = r(304329),
-    a = r(899497),
-    o = r(977584),
-    s = r(229579),
-    l = function () {
+n.d(t, { L: () => o });
+var i = n(304329),
+    r = n(899497),
+    a = n(977584),
+    s = n(229579),
+    o = function () {
         var e = 1 / 0,
-            n = [];
-        i.C.forEach(function (r) {
-            if (0 !== r.activeTargets.length) {
+            t = [];
+        i.C.forEach(function (n) {
+            if (0 !== n.activeTargets.length) {
                 var i = [];
-                r.activeTargets.forEach(function (n) {
-                    var r = new a.A(n.target),
-                        l = (0, o.D)(n.target);
-                    i.push(r), (n.lastReportedSize = (0, s.Y)(n.target, n.observedBox)), l < e && (e = l);
+                n.activeTargets.forEach(function (t) {
+                    var n = new r.A(t.target),
+                        o = (0, a.D)(t.target);
+                    i.push(n), (t.lastReportedSize = (0, s.Y)(t.target, t.observedBox)), o < e && (e = o);
                 }),
-                    n.push(function () {
-                        r.callback.call(r.observer, i, r.observer);
+                    t.push(function () {
+                        n.callback.call(n.observer, i, n.observer);
                     }),
-                    r.activeTargets.splice(0, r.activeTargets.length);
+                    n.activeTargets.splice(0, n.activeTargets.length);
             }
         });
-        for (var r = 0, l = n; r < l.length; r++) (0, l[r])();
+        for (var n = 0, o = t; n < o.length; n++) (0, o[n])();
         return e;
     };

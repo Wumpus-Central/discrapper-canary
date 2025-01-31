@@ -1,67 +1,65 @@
-var i = r(47120);
-var a = r(789020);
-var o = r(147913),
-    s = r(703656),
-    l = r(271383),
-    u = r(430824),
-    c = r(914010),
-    d = r(70956),
-    f = r(630388),
-    p = r(745752),
-    h = r(45966),
-    _ = r(17181),
-    m = r(981631),
-    g = r(176505),
-    E = r(372897);
-function v(e, n, r) {
+n.d(t, { Z: () => y }), n(47120), n(789020);
+var i = n(147913),
+    r = n(703656),
+    a = n(271383),
+    s = n(430824),
+    o = n(914010),
+    l = n(70956),
+    u = n(630388),
+    c = n(745752),
+    d = n(45966),
+    f = n(17181),
+    _ = n(981631),
+    p = n(176505),
+    h = n(372897);
+function m(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let y = null,
-    b = null;
-class I extends o.Z {
+let g = null,
+    E = null;
+class v extends i.Z {
     constructor(...e) {
         super(...e),
-            v(this, 'actions', {
+            m(this, 'actions', {
                 GUILD_DELETE: (e) => this.handleGuildDelete(e),
                 CHANNEL_SELECT: (e) => this.handleChannelSelect(e),
                 POST_CONNECTION_OPEN: (e) => this.handleConnectionOpen(e)
             }),
-            v(this, 'handleConnectionOpen', (e) => {
-                var n;
-                null != (y = null !== (n = null != y ? y : c.Z.getGuildId()) && void 0 !== n ? n : null) && this._openOnboardingIfIncomplete(y);
+            m(this, 'handleConnectionOpen', (e) => {
+                var t;
+                null != (g = null !== (t = null != g ? g : o.Z.getGuildId()) && void 0 !== t ? t : null) && this._openOnboardingIfIncomplete(g);
             }),
-            v(this, 'handleChannelSelect', (e) => {
-                let { guildId: n, channelId: r } = e;
-                if (y === n && b === r) return;
-                if (((y = null != n ? n : null), (b = null != r ? r : null), null == y || null == b)) return;
-                let i = u.Z.getGuild(n);
-                null != i && i.hasFeature(m.oNc.COMMUNITY) && h.Z.shouldFetchPrompts(y, 8 * d.Z.Millis.HOUR) && (0, p.rj)(y), this._openOnboardingIfIncomplete(y, r);
+            m(this, 'handleChannelSelect', (e) => {
+                let { guildId: t, channelId: n } = e;
+                if ((g === t && E === n) || ((g = null != t ? t : null), (E = null != n ? n : null), null == g || null == E)) return;
+                let i = s.Z.getGuild(t);
+                null != i && i.hasFeature(_.oNc.COMMUNITY) && d.Z.shouldFetchPrompts(g, 8 * l.Z.Millis.HOUR) && (0, c.rj)(g), this._openOnboardingIfIncomplete(g, n);
             }),
-            v(this, 'handleGuildDelete', (e) => {
-                let { guild: n } = e;
-                (0, _.discardOnboardingPromise)(n.id);
+            m(this, 'handleGuildDelete', (e) => {
+                let { guild: t } = e;
+                (0, f.EI)(t.id);
             }),
-            v(this, '_openOnboardingIfIncomplete', async (e, n) => {
-                var r, i;
-                if ((0, _.isOnboardingActiveForGuild)(e)) {
-                    (0, s.uL)(m.Z5c.CHANNEL(e, g.oC.GUILD_ONBOARDING));
+            m(this, '_openOnboardingIfIncomplete', async (e, t) => {
+                var n, i;
+                if ((0, f.hz)(e)) {
+                    (0, r.uL)(_.Z5c.CHANNEL(e, p.oC.GUILD_ONBOARDING));
                     return;
                 }
-                let a = u.Z.getGuild(e);
-                if (null == a || !a.hasFeature(m.oNc.GUILD_ONBOARDING)) return;
-                let o = l.ZP.getSelfMember(e);
-                if (!(null == o || (0, f.yE)(null !== (r = o.flags) && void 0 !== r ? r : 0, E.q.COMPLETED_ONBOARDING)) && !!(0, f.yE)(null !== (i = o.flags) && void 0 !== i ? i : 0, E.q.STARTED_ONBOARDING)) await (0, _.default)({ guildId: e }), (0, s.uL)(m.Z5c.CHANNEL(e, n));
+                let o = s.Z.getGuild(e);
+                if (null == o || !o.hasFeature(_.oNc.GUILD_ONBOARDING)) return;
+                let l = a.ZP.getSelfMember(e);
+                !(null == l || (0, u.yE)(null !== (n = l.flags) && void 0 !== n ? n : 0, h.q.COMPLETED_ONBOARDING)) && (0, u.yE)(null !== (i = l.flags) && void 0 !== i ? i : 0, h.q.STARTED_ONBOARDING) && (await (0, f.default)({ guildId: e }), (0, r.uL)(_.Z5c.CHANNEL(e, t)));
             });
     }
 }
-n.Z = new I();
+let y = new v();

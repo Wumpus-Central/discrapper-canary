@@ -1,48 +1,42 @@
-n.r(e),
-    n.d(e, {
-        default: function () {
-            return m;
-        }
-    }),
-    n(47120);
+n.d(e, { default: () => g }), n(47120);
 var a = n(200651),
     i = n(192379),
-    r = n(481060),
-    s = n(749210),
+    s = n(481060),
+    r = n(749210),
     c = n(910693),
     l = n(51144),
     o = n(981631),
-    u = n(388032),
-    d = n(861347);
-function m(t) {
-    let { guildId: e, user: n, location: m, ...g } = t,
-        [p, f] = i.useState(''),
+    d = n(388032),
+    u = n(861347);
+function g(t) {
+    let { guildId: e, user: n, location: g, ...m } = t,
+        [p, x] = i.useState(''),
         h = (0, c.sE)(e, {
-            location: m,
+            location: g,
             targetUserId: n.id
         }),
-        x = i.useCallback(() => {
-            s.Z.kickUser(e, n.id, p), h(c.jQ.KICK);
+        f = i.useCallback(() => {
+            r.Z.kickUser(e, n.id, p), h(c.jQ.KICK);
         }, [e, n.id, p, h]),
         k = i.useCallback((t) => {
-            f(t);
+            x(t);
         }, []);
-    return (0, a.jsxs)(r.ConfirmModal, {
-        header: u.intl.formatToPlainString(u.t['1Ie87u'], { user: n.username }),
-        confirmText: u.intl.string(u.t['3glT6e']),
-        cancelText: u.intl.string(u.t['ETE/oK']),
-        onConfirm: x,
-        ...g,
+    return (0, a.jsxs)(s.ConfirmModal, {
+        header: d.intl.formatToPlainString(d.t['1Ie87u'], { user: n.username }),
+        confirmText: d.intl.string(d.t['3glT6e']),
+        cancelText: d.intl.string(d.t['ETE/oK']),
+        onConfirm: f,
+        ...m,
         children: [
-            (0, a.jsx)(r.Text, {
+            (0, a.jsx)(s.Text, {
                 variant: 'text-md/normal',
-                className: d.spacing,
-                children: u.intl.format(u.t['/yH0UV'], { user: '@'.concat(l.ZP.getName(n)) })
+                className: u.spacing,
+                children: d.intl.format(d.t['/yH0UV'], { user: '@'.concat(l.ZP.getName(n)) })
             }),
-            (0, a.jsx)(r.FormItem, {
-                title: u.intl.string(u.t['+2QEPj']),
-                className: d.spacing,
-                children: (0, a.jsx)(r.TextArea, {
+            (0, a.jsx)(s.xJW, {
+                title: d.intl.string(d.t['+2QEPj']),
+                className: u.spacing,
+                children: (0, a.jsx)(s.Kx8, {
                     maxLength: o.GNZ,
                     onChange: k,
                     value: p,

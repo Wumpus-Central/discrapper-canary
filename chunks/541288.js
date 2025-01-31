@@ -1,5 +1,6 @@
-n.Z = {
+n.d(t, { Z: () => i });
+let i = {
     init() {},
-    donateSentMessage(e, n) {},
+    donateSentMessage(e, t) {},
     deleteAllInteractions() {}
 };

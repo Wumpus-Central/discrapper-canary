@@ -1,4 +1,5 @@
-e.exports = {
-    section: 'section_ba4d80',
-    headings: 'headings_ba4d80'
+var i = {
+    section: 'section_bf424d',
+    headings: 'headings_bf424d'
 };
+e.exports = i;

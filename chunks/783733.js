@@ -1,8 +1,9 @@
-e.exports = {
-    svg: 'svg_a26d7b',
-    background: 'background_a26d7b',
-    dotBorderColor: 'dotBorderColor_a26d7b ' + r('864435').desaturateUserColors,
-    dot: 'dot_a26d7b ' + r('864435').desaturateUserColors,
-    roleCircle: 'roleCircle_a26d7b ' + r('864435').desaturateUserColors,
-    dotBorderBase: 'dotBorderBase_a26d7b'
+var i = {
+    svg: 'svg__4f569',
+    background: 'background__4f569',
+    dot: 'dot__4f569 ' + n(864435).desaturateUserColors,
+    dotBorderColor: 'dotBorderColor__4f569 ' + n(864435).desaturateUserColors,
+    roleCircle: 'roleCircle__4f569 ' + n(864435).desaturateUserColors,
+    dotBorderBase: 'dotBorderBase__4f569'
 };
+e.exports = i;

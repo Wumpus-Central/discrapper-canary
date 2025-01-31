@@ -1,16 +1,11 @@
-r.d(n, {
-    Z: function () {
-        return a;
-    }
-});
-var i = r(653041);
-function a(e, n) {
+function i(e, t) {
     if (e.length < 2) return [];
-    let r = [],
+    let n = [],
         i = e[0];
-    for (let a = 1; a < e.length; a++) {
-        let o = e[a];
-        r.push(n(i, o)), (i = o);
+    for (let r = 1; r < e.length; r++) {
+        let a = e[r];
+        n.push(t(i, a)), (i = a);
     }
-    return r;
+    return n;
 }
+n.d(t, { Z: () => i }), n(653041);

@@ -1,8 +1,4 @@
-n.d(t, {
-    G: function () {
-        return r;
-    }
-});
+n.d(t, { G: () => l });
 let i = (0, n(818083).B)({
     kind: 'user',
     id: '2025-01_message_request_new_location',
@@ -16,7 +12,7 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function r(e) {
+function l(e) {
     let { location: t, autoTrackExposure: n } = e;
     return i.getCurrentConfig({ location: t }, { autoTrackExposure: n }).enabled;
 }

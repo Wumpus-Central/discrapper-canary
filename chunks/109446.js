@@ -1,9 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return b;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => b }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(392711),
@@ -11,32 +6,32 @@ var i = n(200651),
     o = n(442837),
     s = n(481060),
     c = n(99690),
-    u = n(359110),
-    d = n(601070),
+    d = n(359110),
+    u = n(601070),
     h = n(91159),
     p = n(488131),
     m = n(496675),
-    f = n(306680),
-    g = n(594174),
-    v = n(768581),
-    C = n(709054),
+    g = n(306680),
+    f = n(594174),
+    _ = n(768581),
+    v = n(709054),
     x = n(981631),
-    I = n(124368),
-    _ = n(388032),
-    Z = n(247472);
+    C = n(124368),
+    Z = n(388032),
+    I = n(247472);
 function b(e) {
     let { channel: t } = e,
-        r = (0, o.Wu)([d.Z, f.ZP, m.Z], () => {
-            let e = d.Z.getActiveJoinedRelevantThreadsForParent(t.guild_id, t.id);
-            return a()(d.Z.getActiveJoinedThreadsForParent(t.guild_id, t.id))
+        r = (0, o.Wu)([u.Z, g.ZP, m.Z], () => {
+            let e = u.Z.getActiveJoinedRelevantThreadsForParent(t.guild_id, t.id);
+            return a()(u.Z.getActiveJoinedThreadsForParent(t.guild_id, t.id))
                 .values()
                 .map((e) => e.channel)
-                .concat(a().values(d.Z.getActiveUnjoinedThreadsForParent(t.guild_id, t.id)))
+                .concat(a().values(u.Z.getActiveUnjoinedThreadsForParent(t.guild_id, t.id)))
                 .filter((t) => !(t.id in e) && m.Z.can(x.Plq.VIEW_CHANNEL, t))
                 .sort((e, t) => {
-                    let n = f.ZP.lastMessageId(e.id),
-                        i = f.ZP.lastMessageId(t.id);
-                    return C.default.compare(n, i);
+                    let n = g.ZP.lastMessageId(e.id),
+                        i = g.ZP.lastMessageId(t.id);
+                    return v.default.compare(n, i);
                 })
                 .reverse()
                 .value();
@@ -47,25 +42,25 @@ function b(e) {
             (0, h.q)();
         }, []),
         (0, i.jsxs)('div', {
-            className: Z.popout,
+            className: I.popout,
             children: [
                 (0, i.jsx)(s.Text, {
-                    className: Z.title,
+                    className: I.title,
                     variant: 'text-xs/bold',
                     color: 'header-secondary',
-                    children: t.isForumLikeChannel() ? _.intl.string(_.t.ioVdOz) : _.intl.string(_.t.VNYs2t)
+                    children: t.isForumLikeChannel() ? Z.intl.string(Z.t.ioVdOz) : Z.intl.string(Z.t.VNYs2t)
                 }),
                 r
                     .slice(0, t.isForumLikeChannel() ? r.length : c)
                     .map((e) => (0, i.jsx)(S, { thread: e }, e.id))
                     .filter((e) => l.isValidElement(e))
                     .slice(0, c),
-                (0, i.jsx)(s.Clickable, {
-                    className: Z.more,
+                (0, i.jsx)(s.P3F, {
+                    className: I.more,
                     onClick: () => {
                         t.isForumLikeChannel()
-                            ? (0, u.Kh)(t.id)
-                            : (0, s.openModalLazy)(async () => {
+                            ? (0, d.Kh)(t.id)
+                            : (0, s.ZDy)(async () => {
                                   let { default: e } = await n.e('36970').then(n.bind(n, 223901));
                                   return (n) =>
                                       (0, i.jsx)(e, {
@@ -77,7 +72,7 @@ function b(e) {
                     children: (0, i.jsx)(s.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: _.intl.string(_.t['4qdZ9/'])
+                        children: Z.intl.string(Z.t['4qdZ9/'])
                     })
                 })
             ]
@@ -86,38 +81,38 @@ function b(e) {
 }
 function S(e) {
     let { thread: t } = e,
-        n = (0, o.e7)([g.default], () => g.default.getUser(t.ownerId)),
+        n = (0, o.e7)([f.default], () => f.default.getUser(t.ownerId)),
         l = (0, h.Ok)(t);
-    return (0, i.jsxs)(s.Clickable, {
-        className: Z.row,
+    return (0, i.jsxs)(s.P3F, {
+        className: I.row,
         onClick: (e) => {
-            (0, p.ok)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, I.on.POPOUT);
+            (0, p.ok)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, C.on.POPOUT);
         },
         children: [
             null == n
                 ? (0, i.jsx)('img', {
-                      className: Z.avatar,
-                      src: v.ZP.getDefaultAvatarURL(void 0, void 0),
+                      className: I.avatar,
+                      src: _.ZP.getDefaultAvatarURL(void 0, void 0),
                       alt: ''
                   })
                 : (0, i.jsx)(c.Z, {
-                      className: Z.avatar,
+                      className: I.avatar,
                       user: n,
-                      size: s.AvatarSizes.SIZE_16
+                      size: s.EFr.SIZE_16
                   }),
             (0, i.jsx)(s.Text, {
-                className: Z.name,
+                className: I.name,
                 variant: 'text-sm/normal',
                 color: 'none',
                 children: t.name
             }),
             (0, i.jsxs)(s.Text, {
-                className: Z.timestamp,
+                className: I.timestamp,
                 variant: 'text-sm/normal',
                 color: 'none',
                 children: [
                     (0, i.jsx)('span', {
-                        className: Z.bullet,
+                        className: I.bullet,
                         children: '\u2022'
                     }),
                     (0, h.Ye)(l)

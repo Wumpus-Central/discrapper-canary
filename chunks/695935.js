@@ -1,1 +1,2 @@
-e.exports = { banner: 'banner_da16fe' };
+var i = { banner: 'banner__9ed41' };
+e.exports = i;

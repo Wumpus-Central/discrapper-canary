@@ -1,22 +1,16 @@
-r.d(n, {
-    Z: function () {
-        return u;
-    }
-});
-var i = r(47120);
-var a = r(442837),
-    o = r(317381),
-    s = r(835473),
-    l = r(719247);
-function u(e) {
-    let n = (0, a.e7)([l.Z], () => l.Z.getMatchingActivity(e)),
-        [r, i] = (0, s.Z)([null == n ? void 0 : n.application_id, 'application_id' in e.extra ? e.extra.application_id : void 0]),
-        u = (0, a.e7)([o.ZP], () => o.ZP.getEmbeddedActivityForUserId(e.author_id, null == r ? void 0 : r.id));
+n.d(t, { Z: () => o }), n(47120);
+var i = n(442837),
+    r = n(317381),
+    a = n(835473),
+    s = n(719247);
+function o(e) {
+    let t = (0, i.e7)([s.Z], () => s.Z.getMatchingActivity(e)),
+        [n, o] = (0, a.Z)([null == t ? void 0 : t.application_id, 'application_id' in e.extra ? e.extra.application_id : void 0]);
     return {
-        activity: n,
-        embeddedActivity: u,
-        anyMatchingApplication: null != r ? r : i,
-        activityApplication: r,
-        fallbackApplication: i
+        activity: t,
+        embeddedActivity: (0, i.e7)([r.ZP], () => r.ZP.getEmbeddedActivityForUserId(e.author_id, null == n ? void 0 : n.id)),
+        anyMatchingApplication: null != n ? n : o,
+        activityApplication: n,
+        fallbackApplication: o
     };
 }

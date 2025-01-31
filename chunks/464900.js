@@ -1,14 +1,10 @@
-r.d(n, {
-    L: function () {
-        return o;
-    }
-});
-var i = r(818083),
-    a = r(987338);
-let o = (0, i.B)({
+n.d(t, { L: () => a });
+var i = n(818083),
+    r = n(987338);
+let a = (0, i.B)({
     kind: 'user',
     id: '2024-12_uplift_trial_nux',
-    commonTriggerPoint: a.$P.CONNECTION_OPEN,
+    commonTriggerPoint: r.$P.CONNECTION_OPEN,
     label: 'Uplift Trial NUX',
     defaultConfig: { enabled: !1 },
     treatments: [

@@ -1,244 +1,239 @@
-r.d(n, {
-    Z: function () {
-        return V;
-    }
-});
-var i = r(789020);
-var a = r(200651),
-    o = r(192379),
-    s = r(512722),
-    l = r.n(s),
-    u = r(742280),
-    c = r(399606),
-    d = r(481060),
-    f = r(16084),
-    p = r(224550),
-    h = r(609194),
-    _ = r(275850),
-    m = r(672971),
-    g = r(115130),
-    E = r(228624),
-    v = r(925329),
-    y = r(215148),
-    b = r(653798),
-    I = r(314182),
-    T = r(251660),
-    S = r(246946),
-    A = r(351402),
-    C = r(853872),
-    N = r(855775),
-    R = r(695103),
-    O = r(4912),
-    D = r(630388),
-    L = r(669079),
-    x = r(937615),
-    w = r(987209),
-    P = r(563132),
-    M = r(45572),
-    k = r(119226),
-    U = r(981631),
-    B = r(388032),
-    G = r(215409);
-function Z(e) {
-    let { sku: n, skuPricePreview: r } = e;
-    l()(null != r.amount, 'SKU must have a price set.');
-    let i = r.amount - r.tax,
-        o = (0, E.ed)('SKUInvoice'),
-        s = n.productLine === U.POd.COLLECTIBLES && o;
-    return !r.tax_inclusive && r.tax > 0
-        ? (0, a.jsxs)(b.PO, {
-              className: G.invoice,
+n.d(t, { Z: () => Z }), n(789020);
+var i = n(200651),
+    r = n(192379),
+    a = n(512722),
+    s = n.n(a),
+    o = n(742280),
+    l = n(399606),
+    u = n(481060),
+    c = n(16084),
+    d = n(224550),
+    f = n(609194),
+    _ = n(275850),
+    p = n(672971),
+    h = n(115130),
+    m = n(228624),
+    g = n(925329),
+    E = n(215148),
+    v = n(653798),
+    y = n(314182),
+    I = n(251660),
+    b = n(246946),
+    T = n(351402),
+    S = n(853872),
+    A = n(855775),
+    N = n(695103),
+    C = n(4912),
+    R = n(630388),
+    O = n(669079),
+    D = n(937615),
+    x = n(987209),
+    L = n(563132),
+    P = n(45572),
+    w = n(119226),
+    M = n(981631),
+    k = n(388032),
+    U = n(215409);
+function G(e) {
+    let { sku: t, skuPricePreview: n } = e;
+    s()(null != n.amount, 'SKU must have a price set.');
+    let r = n.amount - n.tax,
+        a = (0, m.ed)('SKUInvoice'),
+        o = t.productLine === M.POd.COLLECTIBLES && a;
+    return !n.tax_inclusive && n.tax > 0
+        ? (0, i.jsxs)(v.PO, {
+              className: U.invoice,
               children: [
-                  s
-                      ? (0, a.jsx)(y.C, {
-                            sku: n,
-                            value: (0, x.T4)(i, r.currency),
-                            className: G.subscriptionCostRow
+                  o
+                      ? (0, i.jsx)(E.C, {
+                            sku: t,
+                            value: (0, D.T4)(r, n.currency),
+                            className: U.subscriptionCostRow
                         })
-                      : (0, a.jsx)(b.R$, {
-                            label: n.name,
-                            value: (0, x.T4)(i, r.currency),
-                            className: G.subscriptionCostRow
+                      : (0, i.jsx)(v.R$, {
+                            label: t.name,
+                            value: (0, D.T4)(r, n.currency),
+                            className: U.subscriptionCostRow
                         }),
-                  (0, a.jsx)(b.R$, {
-                      label: B.intl.string(B.t['/I8zmJ']),
-                      value: (0, x.T4)(r.tax, r.currency),
-                      className: G.subscriptionCostRow
+                  (0, i.jsx)(v.R$, {
+                      label: k.intl.string(k.t['/I8zmJ']),
+                      value: (0, D.T4)(n.tax, n.currency),
+                      className: U.subscriptionCostRow
                   }),
-                  (0, a.jsx)(b.KU, {}),
-                  (0, a.jsx)(b.Ji, {
-                      label: B.intl.format(B.t['+B5KfH'], {}),
-                      value: (0, x.T4)(r.amount, r.currency),
-                      className: G.subscriptionCostRow
+                  (0, i.jsx)(v.KU, {}),
+                  (0, i.jsx)(v.Ji, {
+                      label: k.intl.format(k.t['+B5KfH'], {}),
+                      value: (0, D.T4)(n.amount, n.currency),
+                      className: U.subscriptionCostRow
                   })
               ]
           })
-        : (0, a.jsx)(b.PO, {
-              className: G.invoice,
-              children: s
-                  ? (0, a.jsx)(y.C, {
-                        sku: n,
-                        value: (0, x.T4)(r.amount, r.currency),
-                        className: G.subscriptionCostRow
+        : (0, i.jsx)(v.PO, {
+              className: U.invoice,
+              children: o
+                  ? (0, i.jsx)(E.C, {
+                        sku: t,
+                        value: (0, D.T4)(n.amount, n.currency),
+                        className: U.subscriptionCostRow
                     })
-                  : (0, a.jsx)(b.R$, {
-                        label: n.name,
-                        value: (0, x.T4)(r.amount, r.currency),
-                        className: G.subscriptionCostRow
+                  : (0, i.jsx)(v.R$, {
+                        label: t.name,
+                        value: (0, D.T4)(n.amount, n.currency),
+                        className: U.subscriptionCostRow
                     })
           });
 }
-function F(e) {
-    let { application: n, sku: r, isEmbeddedIAP: i } = e;
-    return !0 !== i
+function B(e) {
+    let { application: t, sku: n, isEmbeddedIAP: r } = e;
+    return !0 !== r
         ? null
-        : (0, a.jsxs)('div', {
-              className: G.skuHeading,
+        : (0, i.jsxs)('div', {
+              className: U.skuHeading,
               children: [
-                  (0, a.jsx)(v.Z, { game: n }),
-                  (0, a.jsx)(d.Heading, {
+                  (0, i.jsx)(g.Z, { game: t }),
+                  (0, i.jsx)(u.X6q, {
                       variant: 'heading-lg/bold',
-                      className: G.skuHeadingText,
-                      children: r.name
+                      className: U.skuHeadingText,
+                      children: n.name
                   })
               ]
           });
 }
-function V(e) {
-    let { hasLegalTermsFlash: n, legalTermsNodeRef: r, onPaymentSourceChange: i, handlePaymentSourceAdd: s } = e,
-        { application: v, purchaseState: x, paymentSources: V, paymentSourceId: j, setHasAcceptedTerms: H, skusById: Y, skuPricePreviewsById: W, selectedSkuId: K, isEmbeddedIAP: z, purchaseType: q, purchasePreviewError: Q, devShelfFetchState: X, setPurchasePreviewError: J } = (0, P.usePaymentContext)(),
-        { isGift: $, giftRecipient: ee } = (0, w.wD)(),
-        et = $ && (0, L.pO)(ee),
-        { defaultPaymentSourceId: en, hasFetchedPaymentSources: er } = (0, c.cj)([C.Z], () => ({
-            defaultPaymentSourceId: C.Z.defaultPaymentSourceId,
-            hasFetchedPaymentSources: C.Z.hasFetchedPaymentSources
+function Z(e) {
+    let { hasLegalTermsFlash: t, legalTermsNodeRef: n, onPaymentSourceChange: a, handlePaymentSourceAdd: g } = e,
+        { application: D, purchaseState: Z, paymentSources: F, paymentSourceId: V, setHasAcceptedTerms: j, skusById: H, skuPricePreviewsById: Y, selectedSkuId: W, isEmbeddedIAP: K, purchaseType: z, purchasePreviewError: q, devShelfFetchState: Q, setPurchasePreviewError: X } = (0, L.JL)(),
+        { isGift: J, giftRecipient: $ } = (0, x.wD)(),
+        ee = J && (0, O.pO)($),
+        { defaultPaymentSourceId: et, hasFetchedPaymentSources: en } = (0, l.cj)([S.Z], () => ({
+            defaultPaymentSourceId: S.Z.defaultPaymentSourceId,
+            hasFetchedPaymentSources: S.Z.hasFetchedPaymentSources
         }));
-    l()(null != K, 'Expected selectedSkuId');
-    let ei = Y[K],
-        ea = W[K],
-        eo = null != j ? j : N.c,
-        es = null != ea ? ea[eo] : null;
-    l()(null != ei, 'SKU must exist and be fetched.'), l()(null != v, 'Application must exist.');
-    let el = (0, c.e7)([g.Z, R.Z], () => R.Z.inTestModeForApplication(v.id) || g.Z.inDevModeForApplication(v.id), [v.id]),
-        eu = (0, c.e7)([S.Z], () => S.Z.enabled),
-        ec = u.M.EEA_COUNTRIES.has(A.Z.ipCountryCodeWithFallback),
-        ed = x === M.A.PURCHASING || x === M.A.COMPLETED,
-        ef = null != j ? V[j].type : null,
-        ep = (0, E.ed)('SKUInvoice'),
-        eh = ei.productLine === U.POd.COLLECTIBLES && ep;
+    s()(null != W, 'Expected selectedSkuId');
+    let ei = H[W],
+        er = Y[W],
+        ea = null != V ? V : A.c,
+        es = null != er ? er[ea] : null;
+    s()(null != ei, 'SKU must exist and be fetched.'), s()(null != D, 'Application must exist.');
+    let eo = (0, l.e7)([h.Z, N.Z], () => N.Z.inTestModeForApplication(D.id) || h.Z.inDevModeForApplication(D.id), [D.id]),
+        el = (0, l.e7)([b.Z], () => b.Z.enabled),
+        eu = o.M.EEA_COUNTRIES.has(T.Z.ipCountryCodeWithFallback),
+        ec = Z === P.A.PURCHASING || Z === P.A.COMPLETED,
+        ed = null != V ? F[V].type : null,
+        ef = (0, m.ed)('SKUInvoice'),
+        e_ = ei.productLine === M.POd.COLLECTIBLES && ef;
     return (
-        o.useEffect(() => {
-            er &&
-                j === en &&
-                en !== N.c &&
+        r.useEffect(() => {
+            en &&
+                V === et &&
+                et !== A.c &&
                 null == es &&
-                (0, f.x2)(ei.applicationId, ei.id, en, { isGift: $ })
+                (0, c.x2)(ei.applicationId, ei.id, et, { isGift: J })
                     .then(() => {
-                        J(null);
+                        X(null);
                     })
                     .catch((e) => {
-                        J(e);
+                        X(e);
                     });
-        }, [en, er, j, ei.applicationId, ei.id, es, J, $]),
-        (0, a.jsxs)('div', {
-            className: G.stepBody,
+        }, [et, en, V, ei.applicationId, ei.id, es, X, J]),
+        (0, i.jsxs)('div', {
+            className: U.stepBody,
             children: [
-                el
-                    ? (0, a.jsx)(
-                          h.Z,
+                eo
+                    ? (0, i.jsx)(
+                          f.Z,
                           {
-                              icon: (0, d.makeIconCompat)(O.Z),
-                              iconSize: h.Z.Sizes.SMALL,
-                              color: h.Z.Colors.WARNING,
-                              className: G.errorBlock,
-                              children: B.intl.string(B.t.OvMyMT)
+                              icon: (0, u.GSL)(C.Z),
+                              iconSize: f.Z.Sizes.SMALL,
+                              color: f.Z.Colors.WARNING,
+                              className: U.errorBlock,
+                              children: k.intl.string(k.t.OvMyMT)
                           },
                           'TEST_MODE'
                       )
                     : null,
-                (0, D.yE)(v.flags, U.udG.EMBEDDED) && X === g.O.ERROR
-                    ? (0, a.jsx)(
-                          h.Z,
+                (0, R.yE)(D.flags, M.udG.EMBEDDED) && Q === h.O.ERROR
+                    ? (0, i.jsx)(
+                          f.Z,
                           {
-                              icon: (0, d.makeIconCompat)(O.Z),
-                              iconSize: h.Z.Sizes.SMALL,
-                              color: h.Z.Colors.ERROR,
-                              className: G.errorBlock,
-                              children: B.intl.string(B.t.tAmECg)
+                              icon: (0, u.GSL)(C.Z),
+                              iconSize: f.Z.Sizes.SMALL,
+                              color: f.Z.Colors.ERROR,
+                              className: U.errorBlock,
+                              children: k.intl.string(k.t.tAmECg)
                           },
                           'DEV_SHELF_ERROR'
                       )
                     : null,
-                (0, a.jsx)(F, {
-                    application: v,
+                (0, i.jsx)(B, {
+                    application: D,
                     sku: ei,
-                    isEmbeddedIAP: z
+                    isEmbeddedIAP: K
                 }),
-                et && (0, a.jsx)(k.Z, { sku: ei }),
-                null != ee ? (0, a.jsx)(T.s, { giftRecipient: ee }) : null,
-                (0, a.jsx)(d.FormTitle, {
-                    tag: d.FormTitleTags.H5,
-                    children: $ ? B.intl.string(B.t.PEjaCw) : B.intl.string(B.t.sail9P)
+                ee && (0, i.jsx)(w.Z, { sku: ei }),
+                null != $ ? (0, i.jsx)(I.s, { giftRecipient: $ }) : null,
+                (0, i.jsx)(u.vwX, {
+                    tag: u.RB0.H5,
+                    children: J ? k.intl.string(k.t.PEjaCw) : k.intl.string(k.t.sail9P)
                 }),
                 null != es
-                    ? (0, a.jsx)(Z, {
+                    ? (0, i.jsx)(G, {
                           sku: ei,
                           skuPricePreview: es
                       })
-                    : null == Q
-                      ? (0, a.jsx)(d.Spinner, {
-                            type: d.Spinner.Type.WANDERING_CUBES,
-                            className: G.invoiceSpinner
+                    : null == q
+                      ? (0, i.jsx)(u.$jN, {
+                            type: u.$jN.Type.WANDERING_CUBES,
+                            className: U.invoiceSpinner
                         })
-                      : (0, a.jsx)(b.PO, {
-                            className: G.invoice,
-                            children: eh
-                                ? (0, a.jsx)(y.C, {
+                      : (0, i.jsx)(v.PO, {
+                            className: U.invoice,
+                            children: e_
+                                ? (0, i.jsx)(E.C, {
                                       sku: ei,
                                       value: null,
-                                      className: G.subscriptionCostRow
+                                      className: U.subscriptionCostRow
                                   })
-                                : (0, a.jsx)(b.R$, {
+                                : (0, i.jsx)(v.R$, {
                                       label: ei.name,
                                       value: null,
-                                      className: G.subscriptionCostRow
+                                      className: U.subscriptionCostRow
                                   })
                         }),
-                (0, a.jsxs)('div', {
-                    className: G.paymentSourceWrapper,
+                (0, i.jsxs)('div', {
+                    className: U.paymentSourceWrapper,
                     children: [
-                        (0, a.jsx)(d.FormTitle, {
-                            tag: d.FormTitleTags.H5,
-                            children: B.intl.string(B.t.mmDvV1)
+                        (0, i.jsx)(u.vwX, {
+                            tag: u.RB0.H5,
+                            children: k.intl.string(k.t.mmDvV1)
                         }),
-                        (0, a.jsx)(_.Z, {
-                            paymentSources: Object.values(V),
-                            selectedPaymentSourceId: j,
-                            onChange: i,
-                            onPaymentSourceAdd: s,
-                            hidePersonalInformation: eu
+                        (0, i.jsx)(_.Z, {
+                            paymentSources: Object.values(F),
+                            selectedPaymentSourceId: V,
+                            onChange: a,
+                            onPaymentSourceAdd: g,
+                            hidePersonalInformation: el
                         })
                     ]
                 }),
-                (0, a.jsx)(I.Z, {
-                    isActive: n,
-                    ref: r,
-                    children: (0, a.jsx)(m.Z, {
-                        onChange: H,
+                (0, i.jsx)(y.Z, {
+                    isActive: t,
+                    ref: n,
+                    children: (0, i.jsx)(p.Z, {
+                        onChange: j,
                         forceShow: !0,
-                        showWithdrawalWaiver: ec,
-                        disabled: ed,
+                        showWithdrawalWaiver: eu,
+                        disabled: ec,
                         subscriptionPlan: null,
-                        finePrintClassname: G.fineprint,
-                        purchaseType: q,
-                        isGift: $,
-                        checkboxLabel: ei.productLine === U.POd.COLLECTIBLES ? B.intl.format(B.t['1EdAlZ'], { paidURL: U.EYA.PAID_TERMS }) : void 0,
-                        finePrint: (0, a.jsx)(p.Z, {
-                            paymentSourceType: ef,
-                            isEmbeddedIAP: z,
-                            purchaseType: q,
+                        finePrintClassname: U.fineprint,
+                        purchaseType: z,
+                        isGift: J,
+                        checkboxLabel: ei.productLine === M.POd.COLLECTIBLES ? k.intl.format(k.t['1EdAlZ'], { paidURL: M.EYA.PAID_TERMS }) : void 0,
+                        finePrint: (0, i.jsx)(d.Z, {
+                            paymentSourceType: ed,
+                            isEmbeddedIAP: K,
+                            purchaseType: z,
                             productLine: ei.productLine,
-                            isGift: $
+                            isGift: J
                         })
                     })
                 })

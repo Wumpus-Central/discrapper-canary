@@ -1,67 +1,62 @@
-r.d(t, {
-    Wz: function () {
-        return s;
-    },
-    m9: function () {
-        return i;
-    },
-    re: function () {
-        return function e(t, r = {}, _) {
-            if ('function' != typeof t) return t;
+a.d(e, {
+    Wz: () => E,
+    m9: () => c,
+    re: () =>
+        function t(e, a = {}, o) {
+            if ('function' != typeof e) return e;
             try {
-                let e = t.__sentry_wrapped__;
-                if (e) return e;
-                if ((0, o.HK)(t)) return t;
-            } catch (e) {
-                return t;
+                let t = e.__sentry_wrapped__;
+                if (t) return t;
+                if ((0, _.HK)(e)) return e;
+            } catch (t) {
+                return e;
             }
-            let i = function () {
-                let o = Array.prototype.slice.call(arguments);
+            let c = function () {
+                let _ = Array.prototype.slice.call(arguments);
                 try {
-                    _ && 'function' == typeof _ && _.apply(this, arguments);
-                    let a = o.map((t) => e(t, r));
-                    return t.apply(this, a);
-                } catch (e) {
+                    o && 'function' == typeof o && o.apply(this, arguments);
+                    let r = _.map((e) => t(e, a));
+                    return e.apply(this, r);
+                } catch (t) {
                     throw (
-                        (c++,
+                        (s++,
                         setTimeout(() => {
-                            c--;
+                            s--;
                         }),
-                        (0, a.$e)((t) => {
-                            t.addEventProcessor(
-                                (e) => (
-                                    r.mechanism && ((0, E.Db)(e, void 0, void 0), (0, E.EG)(e, r.mechanism)),
-                                    (e.extra = {
-                                        ...e.extra,
-                                        arguments: o
+                        (0, r.$e)((e) => {
+                            e.addEventProcessor(
+                                (t) => (
+                                    a.mechanism && ((0, i.Db)(t, void 0, void 0), (0, i.EG)(t, a.mechanism)),
+                                    (t.extra = {
+                                        ...t.extra,
+                                        arguments: _
                                     }),
-                                    e
+                                    t
                                 )
                             ),
-                                (0, n.Tb)(e);
+                                (0, n.Tb)(t);
                         }),
-                        e)
+                        t)
                     );
                 }
             };
             try {
-                for (let e in t) Object.prototype.hasOwnProperty.call(t, e) && (i[e] = t[e]);
-            } catch (e) {}
-            (0, o.$Q)(i, t), (0, o.xp)(t, '__sentry_wrapped__', i);
+                for (let t in e) Object.prototype.hasOwnProperty.call(e, t) && (c[t] = e[t]);
+            } catch (t) {}
+            (0, _.$Q)(c, e), (0, _.xp)(e, '__sentry_wrapped__', c);
             try {
-                Object.getOwnPropertyDescriptor(i, 'name').configurable && Object.defineProperty(i, 'name', { get: () => t.name });
-            } catch (e) {}
-            return i;
-        };
-    }
+                Object.getOwnPropertyDescriptor(c, 'name').configurable && Object.defineProperty(c, 'name', { get: () => e.name });
+            } catch (t) {}
+            return c;
+        }
 });
-var a = r(263449),
-    n = r(233517),
-    _ = r(899517),
-    o = r(370336),
-    E = r(394798);
-let i = _.n,
-    c = 0;
-function s() {
-    return c > 0;
+var r = a(263449),
+    n = a(233517),
+    o = a(899517),
+    _ = a(370336),
+    i = a(394798);
+let c = o.n,
+    s = 0;
+function E() {
+    return s > 0;
 }

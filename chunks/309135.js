@@ -1,71 +1,72 @@
-t.r(n);
+t.r(n), t.d(n, { default: () => x });
 var r = t(200651),
-    o = t(192379),
-    i = t(442837),
+    i = t(192379),
     a = t(215569),
-    s = t(481060),
+    o = t(481060),
     l = t(852860),
-    d = t(313201),
-    c = t(944163),
-    u = t(266395),
-    m = t(577809),
-    _ = t(592286),
-    b = t(388032),
+    s = t(313201),
+    d = t(944163),
+    c = t(266395),
+    u = t(187565),
+    _ = t(577809),
+    m = t(592286),
+    f = t(388032),
     h = t(145638);
 let p = () =>
-    (0, r.jsx)(l.Z, {
-        submitting: !1,
-        message: b.intl.string(b.t['8g514e']),
-        onReset: () => {
-            (0, u.PE)(!1);
-        },
-        onResetText: b.intl.string(b.t['ETE/oK']),
-        onSave: () => {
-            (0, u.PE)(!1), (0, s.closeModal)(_.Pn);
-        },
-        onSaveText: b.intl.string(b.t['Xt+UaW']),
-        onSaveButtonColor: s.ButtonColors.RED
-    });
-n.default = (e) => {
-    let { transitionState: n, guildId: t, onClose: l, onComplete: _, isPreview: b = !1 } = e,
-        f = (0, u.rb)((e) => e.shouldShowWarning),
-        x = (0, i.e7)([c.Z], () => c.Z.get(t)),
-        g = (0, d.Dt)();
-    return (o.useEffect(() => {
-        x === c.t && l();
-    }, [l, x]),
-    x === c.t)
-        ? null
-        : (0, r.jsxs)(r.Fragment, {
-              children: [
-                  (0, r.jsxs)(s.ModalRoot, {
-                      transitionState: n,
-                      'aria-labelledby': g,
-                      size: s.ModalSize.DYNAMIC,
-                      className: h.container,
-                      hideShadow: !0,
-                      children: [
-                          (0, r.jsx)(s.ModalCloseButton, {
-                              onClick: () => l(!1),
-                              className: h.closeButton
-                          }),
-                          (0, r.jsx)(m.Z, {
-                              headerId: g,
-                              guildId: t,
-                              onClose: l,
-                              onComplete: _,
-                              isPreview: b
-                          })
-                      ]
-                  }),
-                  (0, r.jsx)(a.W, {
-                      children:
-                          !0 === f &&
-                          (0, r.jsx)(s.SlideIn, {
-                              className: h.notice,
-                              children: (0, r.jsx)(p, {})
-                          })
-                  })
-              ]
-          });
-};
+        (0, r.jsx)(l.Z, {
+            submitting: !1,
+            message: f.intl.string(f.t['8g514e']),
+            onReset: () => {
+                (0, c.PE)(!1);
+            },
+            onResetText: f.intl.string(f.t['ETE/oK']),
+            onSave: () => {
+                (0, c.PE)(!1), (0, o.Mr3)(m.Pn);
+            },
+            onSaveText: f.intl.string(f.t['Xt+UaW']),
+            onSaveButtonColor: o.Ttl.RED
+        }),
+    x = (e) => {
+        let { transitionState: n, guildId: t, onClose: l, onComplete: m, isPreview: f = !1 } = e,
+            x = (0, c.rb)((e) => e.shouldShowWarning),
+            v = (0, u.ng)(t, void 0, f),
+            C = (0, s.Dt)();
+        return (i.useEffect(() => {
+            v === d.t && l();
+        }, [l, v]),
+        v === d.t)
+            ? null
+            : (0, r.jsxs)(r.Fragment, {
+                  children: [
+                      (0, r.jsxs)(o.Y0X, {
+                          transitionState: n,
+                          'aria-labelledby': C,
+                          size: o.CgR.DYNAMIC,
+                          className: h.container,
+                          hideShadow: !0,
+                          children: [
+                              (0, r.jsx)('div', {
+                                  className: h.closeButton,
+                                  children: (0, r.jsx)(o.olH, { onClick: () => l(!1) })
+                              }),
+                              (0, r.jsx)(_.Z, {
+                                  verificationForm: v,
+                                  headerId: C,
+                                  guildId: t,
+                                  onClose: l,
+                                  onComplete: m,
+                                  isPreview: f
+                              })
+                          ]
+                      }),
+                      (0, r.jsx)(a.W, {
+                          children:
+                              !0 === x &&
+                              (0, r.jsx)(o.oXn, {
+                                  className: h.notice,
+                                  children: (0, r.jsx)(p, {})
+                              })
+                      })
+                  ]
+              });
+    };

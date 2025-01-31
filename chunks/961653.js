@@ -1,14 +1,18 @@
-e.exports = {
-    footer: 'footer_c5a065',
-    authorize: 'authorize_c5a065',
-    spinner: 'spinner_c5a065',
-    action: 'action_c5a065',
-    tooltip: 'tooltip_c5a065',
-    content: 'content_c5a065',
-    minimalPadding: 'minimalPadding_c5a065',
-    contentBackground: 'contentBackground_c5a065',
-    intObserver: 'intObserver_c5a065',
-    emoji: 'emoji_c5a065',
-    buttonWithEmoji: 'buttonWithEmoji_c5a065',
-    deepLinkContainer: 'deepLinkContainer_c5a065'
+var i = {
+    footer: 'footer__3d3b0',
+    authorize: 'authorize__3d3b0',
+    spinner: 'spinner__3d3b0',
+    action: 'action__3d3b0',
+    tooltip: 'tooltip__3d3b0',
+    errorHeader: 'errorHeader__3d3b0',
+    content: 'content__3d3b0',
+    minimalPadding: 'minimalPadding__3d3b0',
+    extraWide: 'extraWide__3d3b0',
+    contentBackground: 'contentBackground__3d3b0',
+    intObserver: 'intObserver__3d3b0',
+    emoji: 'emoji__3d3b0',
+    moveUpDown: 'moveUpDown__3d3b0',
+    buttonWithEmoji: 'buttonWithEmoji__3d3b0',
+    deepLinkContainer: 'deepLinkContainer__3d3b0'
 };
+e.exports = i;

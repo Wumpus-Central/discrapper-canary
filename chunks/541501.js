@@ -1,61 +1,56 @@
-n.r(a),
-    n.d(a, {
-        default: function () {
-            return s;
-        }
-    });
-var t = n(200651),
-    r = n(192379),
-    o = n(232713),
-    i = n(481060),
-    u = n(239091),
-    l = n(667142),
-    c = n(388032);
+t.d(a, { default: () => s });
+var n = t(200651),
+    i = t(192379),
+    r = t(232713),
+    l = t(481060),
+    u = t(239091),
+    o = t(667142),
+    c = t(388032);
 function s(e) {
-    let { onSelect: a, onClose: n } = e,
+    let { onSelect: a, onClose: t } = e,
         s = (function () {
-            let e = l.ZP.useState((e) => e.timeToLiveMs, o.X);
-            return (0, t.jsx)(i.MenuControlItem, {
+            let e = o.ZP.useState((e) => e.timeToLiveMs, r.X);
+            return (0, n.jsx)(l.II_, {
                 id: 'opacity',
                 'aria-haspopup': !0,
                 label: 'Time To Live',
-                control: (a, n) =>
-                    (0, t.jsx)(i.MenuSliderControl, {
+                control: (a, t) =>
+                    (0, n.jsx)(l._wy, {
                         ...a,
-                        ref: n,
+                        ref: t,
                         value: e,
-                        maxValue: l.VX,
-                        minValue: l.ih,
+                        maxValue: o.VX,
+                        minValue: o.ih,
                         renderValue: (e) => ''.concat(e, 'ms'),
-                        onChange: (e) => (0, l.S_)(e),
+                        onChange: (e) => (0, o.S_)(e),
                         'aria-label': 'Time To Live'
                     })
             });
         })(),
         p = (function () {
-            let e = l.ZP.useState((e) => e.reappearTimeMs, o.X);
-            return (0, t.jsx)(i.MenuControlItem, {
+            let e = o.ZP.useState((e) => e.reappearTimeMs, r.X);
+            return (0, n.jsx)(l.II_, {
                 id: 'opacity',
                 'aria-haspopup': !0,
                 label: 'Time To Reappear',
-                control: (a, n) =>
-                    (0, t.jsx)(i.MenuSliderControl, {
+                control: (a, t) =>
+                    (0, n.jsx)(l._wy, {
                         ...a,
-                        ref: n,
+                        ref: t,
                         value: e,
-                        maxValue: l.V5,
-                        minValue: l.xc,
+                        maxValue: o.V5,
+                        minValue: o.xc,
                         renderValue: (e) => ''.concat(e, 'ms'),
-                        onChange: (e) => (0, l.Df)(e),
+                        onChange: (e) => (0, o.Df)(e),
                         'aria-label': 'Time To Reappear'
                     })
             });
         })(),
-        d = r.useRef(n);
+        d = i.useRef(t);
     return (
-        r.useEffect(() => void (d.current = n)),
-        r.useEffect(() => () => d.current(), []),
-        (0, t.jsxs)(i.Menu, {
+        i.useEffect(() => void (d.current = t)),
+        i.useEffect(() => () => d.current(), []),
+        (0, n.jsxs)(l.v2r, {
             navId: 'overlay-click-zone-debug-context-menu',
             onClose: u.Zy,
             'aria-label': c.intl.string(c.t.tPfVWl),

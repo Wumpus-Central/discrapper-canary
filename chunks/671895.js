@@ -1,19 +1,20 @@
+t.d(n, { Z: () => c });
 var l = t(200651),
     a = t(192379),
     i = t(481060),
-    r = t(87686),
-    s = t(586826),
+    s = t(87686),
+    r = t(586826),
     o = t(507419),
     u = t(388032),
-    c = t(663588);
-n.Z = a.memo(function (e) {
-    let { sound: n, volume: t, disabled: a = !1, onChange: d } = e,
-        { file: f } = (0, s.p)();
-    return (0, l.jsx)(i.FormSection, {
-        className: c.section,
+    d = t(663588);
+let c = a.memo(function (e) {
+    let { sound: n, volume: t, disabled: a = !1, onChange: c } = e,
+        { file: f } = (0, r.p)();
+    return (0, l.jsx)(i.hjN, {
+        className: d.section,
         title: u.intl.string(u.t.CCRKNz),
         children: (0, l.jsxs)('div', {
-            className: c.fakeInput,
+            className: d.fakeInput,
             children: [
                 null != n &&
                     (0, l.jsx)(o.Z, {
@@ -23,11 +24,11 @@ n.Z = a.memo(function (e) {
                     }),
                 null == n &&
                     null != f &&
-                    (0, l.jsx)(r.Z, {
-                        className: c.audioTrimmer,
+                    (0, l.jsx)(s.Z, {
+                        className: d.audioTrimmer,
                         volume: t,
                         disabled: a,
-                        onChange: d
+                        onChange: c
                     })
             ]
         })

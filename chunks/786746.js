@@ -1,34 +1,28 @@
-i.r(t),
-    i.d(t, {
-        default: function () {
-            return c;
-        }
-    }),
-    i(653041);
+i.d(t, { default: () => o }), i(653041);
 var l = i(200651);
 i(192379);
 var e = i(481060),
     s = i(239091),
-    r = i(299206),
-    u = i(867108),
-    a = i(981631),
-    o = i(388032);
-function c(n) {
-    let { role: t, guild: i, onSelect: c } = n,
-        d = [],
-        p = (0, u.Z)(i, t, a.pNK.INTEGRATIONS);
-    null != p && d.push(p);
-    let h = (0, r.Z)({
+    a = i(299206),
+    r = i(867108),
+    u = i(981631),
+    d = i(388032);
+function o(n) {
+    let { role: t, guild: i, onSelect: o } = n,
+        p = [],
+        c = (0, r.Z)(i, t, u.pNK.INTEGRATIONS);
+    null != c && p.push(c);
+    let h = (0, a.Z)({
         id: t.id,
-        label: o.intl.string(o.t.sMsaLi)
+        label: d.intl.string(d.t.sMsaLi)
     });
-    return (null != h && d.push(h), 0 === d.length)
+    return (null != h && p.push(h), 0 === p.length)
         ? null
-        : (0, l.jsx)(e.Menu, {
+        : (0, l.jsx)(e.v2r, {
               navId: 'guild-integrations-permission-role-context',
-              'aria-label': o.intl.string(o.t['337Ja2']),
+              'aria-label': d.intl.string(d.t['337Ja2']),
               onClose: s.Zy,
-              onSelect: c,
-              children: d
+              onSelect: o,
+              children: p
           });
 }

@@ -1,30 +1,27 @@
-n.d(t, {
-    C: function () {
-        return l;
-    },
-    x: function () {
-        return a;
-    }
+i.d(t, {
+    C: () => r,
+    x: () => a
 }),
-    n(47120);
-var i = n(570140),
-    r = n(93127);
+    i(47120);
+var n = i(570140),
+    l = i(93127);
 function a(e) {
-    let { omitUserIds: t, guild: n, channel: a, applicationId: l, inviteTargetType: s } = e;
-    return (0, r.W)().then(() => {
-        i.Z.dispatch({
+    let { omitUserIds: t, guild: i, channel: a, applicationId: r, inviteTargetType: s } = e;
+    return (0, l.W)().then(() => {
+        n.Z.dispatch({
             type: 'LOAD_INVITE_SUGGESTIONS',
             omitUserIds: null != t ? t : new Set(),
-            guild: n,
+            guild: i,
             channel: a,
-            applicationId: l,
+            applicationId: r,
             inviteTargetType: s
         });
     });
 }
-function l(e) {
-    i.Z.dispatch({
+function r(e) {
+    n.Z.dispatch({
         type: 'INVITE_SUGGESTIONS_SEARCH',
         query: e
     });
 }
+i(751771);

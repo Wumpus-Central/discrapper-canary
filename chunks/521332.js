@@ -1,88 +1,83 @@
-r.d(n, {
-    Z: function () {
-        return y;
-    }
-});
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(442837),
-    l = r(481060),
-    u = r(230711),
-    c = r(493773),
-    d = r(367907),
-    f = r(138201),
-    p = r(592125),
-    h = r(155647),
-    _ = r(185625),
-    m = r(981631),
-    g = r(388032),
-    E = r(442031);
-function v(e) {
-    let { title: n, description: r, onButtonClick: i, trackSettingsUpsellsAction: s } = e,
-        [l, u] = o.useState(!1);
+n.d(t, { Z: () => E }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(442837),
+    s = n(481060),
+    o = n(230711),
+    l = n(493773),
+    u = n(367907),
+    c = n(138201),
+    d = n(592125),
+    f = n(155647),
+    _ = n(185625),
+    p = n(981631),
+    h = n(388032),
+    m = n(442031);
+function g(e) {
+    let { title: t, description: n, onButtonClick: a, trackSettingsUpsellsAction: s } = e,
+        [o, u] = r.useState(!1);
     return (
-        (0, c.Z)(() => {
+        (0, l.Z)(() => {
             s(_.M4.SETTINGS_UPSELLS_VIEWED);
         }),
-        (0, a.jsx)(f.ZP, {
-            title: n,
-            description: r,
-            buttonText: l ? g.intl.string(g.t['h+WsPT']) : g.intl.string(g.t.A8t4NT),
-            buttonDisabled: l,
+        (0, i.jsx)(c.ZP, {
+            title: t,
+            description: n,
+            buttonText: o ? h.intl.string(h.t['h+WsPT']) : h.intl.string(h.t.A8t4NT),
+            buttonDisabled: o,
             onButtonPress: () => {
-                i(), u(!0), s(_.M4.SETTINGS_UPSELLS_APPLY_CLICKED);
+                a(), u(!0), s(_.M4.SETTINGS_UPSELLS_APPLY_CLICKED);
             }
         })
     );
 }
-function y(e) {
-    let { settingsUpsells: n, channelId: r, onModalClose: i, reportId: o, reportType: c, reportSubType: f } = e,
-        y = (0, s.e7)([p.Z], () => p.Z.getChannel(r)),
-        b = (0, h.jc)(n, null == y ? void 0 : y.type),
-        I = (0, _.i_)(c, f, o);
-    return 0 === b.length
+function E(e) {
+    let { settingsUpsells: t, channelId: n, onModalClose: r, reportId: l, reportType: c, reportSubType: E } = e,
+        v = (0, a.e7)([d.Z], () => d.Z.getChannel(n)),
+        y = (0, f.jc)(t, null == v ? void 0 : v.type),
+        I = (0, _.i_)(c, E, l);
+    return 0 === y.length
         ? null
-        : (0, a.jsxs)('div', {
-              className: E.container,
+        : (0, i.jsxs)('div', {
+              className: m.container,
               children: [
-                  (0, a.jsx)(l.Heading, {
+                  (0, i.jsx)(s.X6q, {
                       variant: 'text-sm/semibold',
-                      className: E.header,
-                      children: g.intl.string(g.t['1yxTIC'])
+                      className: m.header,
+                      children: h.intl.string(h.t['1yxTIC'])
                   }),
-                  (0, a.jsx)('div', {
-                      className: E.upsellsContainer,
-                      children: b.map((e, r) => {
-                          let { getTitle: i, getDescription: o, onApply: s } = e;
-                          return (0, a.jsx)(
-                              v,
+                  (0, i.jsx)('div', {
+                      className: m.upsellsContainer,
+                      children: y.map((e, n) => {
+                          let { getTitle: r, getDescription: a, onApply: s } = e;
+                          return (0, i.jsx)(
+                              g,
                               {
-                                  title: i(),
-                                  description: o(),
+                                  title: r(),
+                                  description: a(),
                                   onButtonClick: s,
-                                  trackSettingsUpsellsAction: I(n[r])
+                                  trackSettingsUpsellsAction: I(t[n])
                               },
-                              r
+                              n
                           );
                       })
                   }),
-                  (0, a.jsx)(l.Button, {
-                      className: E.navLinkButton,
+                  (0, i.jsx)(s.zxk, {
+                      className: m.navLinkButton,
                       onClick: () => {
-                          u.Z.open(m.oAB.CONTENT_AND_SOCIAL),
-                              i(),
-                              d.ZP.trackWithMetadata(m.rMx.IAR_SETTINGS_UPSELLS_ACTION, {
-                                  report_id: o,
+                          o.Z.open(p.oAB.CONTENT_AND_SOCIAL),
+                              r(),
+                              u.ZP.trackWithMetadata(p.rMx.IAR_SETTINGS_UPSELLS_ACTION, {
+                                  report_id: l,
                                   report_type: c.name,
-                                  report_subtype: f,
+                                  report_subtype: E,
                                   action: _.M4.SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED
                               });
                       },
-                      look: l.Button.Looks.LINK,
-                      color: l.Button.Colors.LINK,
-                      size: l.Button.Sizes.NONE,
-                      children: g.intl.string(g.t.olebGx)
+                      look: s.zxk.Looks.LINK,
+                      color: s.zxk.Colors.LINK,
+                      size: s.zxk.Sizes.NONE,
+                      children: h.intl.string(h.t.olebGx)
                   })
               ]
           });

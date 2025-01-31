@@ -1,17 +1,13 @@
 n.d(t, {
-    Z: function () {
-        return D;
-    },
-    i: function () {
-        return O;
-    }
+    Z: () => D,
+    i: () => O
 }),
     n(47120),
     n(653041);
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(748780),
     o = n(442837),
     c = n(704215),
@@ -22,39 +18,39 @@ var i = n(200651),
     m = n(540059),
     f = n(644914),
     g = n(434404),
-    C = n(330010),
-    x = n(314897),
-    v = n(430824),
-    _ = n(594174),
-    I = n(259580),
-    E = n(585483),
+    _ = n(330010),
+    C = n(314897),
+    x = n(430824),
+    v = n(594174),
+    E = n(259580),
+    I = n(585483),
     b = n(63063),
     Z = n(358085),
     N = n(709054),
-    S = n(967128),
-    T = n(981631),
+    T = n(967128),
+    S = n(981631),
     j = n(231873),
     A = n(388032),
     y = n(567522),
     P = n(881454),
-    M = n(435921),
-    R = n(538548),
+    R = n(435921),
+    M = n(538548),
     L = n(753033),
     k = n(15717);
 function O(e) {
-    let { className: t, iconUrl: n, icon: r, header: s, completed: o, onClick: c } = e,
+    let { className: t, iconUrl: n, icon: a, header: s, completed: o, onClick: c } = e,
         [u, p] = l.useState(!1),
         m = (0, h.Z)(o);
     return (
         l.useEffect(() => {
             null != m && o !== m && (p(!0), setTimeout(() => p(!1), 1000));
         }, [o, m]),
-        (0, i.jsxs)(d.Clickable, {
-            className: a()(t, y.card, { [y.completed]: o }),
+        (0, i.jsxs)(d.P3F, {
+            className: r()(t, y.card, { [y.completed]: o }),
             onClick: c,
             children: [
-                null != r
-                    ? r
+                null != a
+                    ? a
                     : (0, i.jsx)('img', {
                           className: y.icon,
                           src: n,
@@ -62,19 +58,19 @@ function O(e) {
                       }),
                 (0, i.jsx)(d.Text, {
                     color: 'header-primary',
-                    className: a()(y.cardTextContainer, y.cardHeader),
+                    className: r()(y.cardTextContainer, y.cardHeader),
                     variant: 'text-sm/normal',
                     children: s
                 }),
                 o
-                    ? (0, i.jsx)(d.CheckmarkLargeIcon, {
+                    ? (0, i.jsx)(d.dz2, {
                           size: 'md',
                           color: 'currentColor',
-                          className: a()(y.checkmark, { [y.animate]: u })
+                          className: r()(y.checkmark, { [y.animate]: u })
                       })
-                    : (0, i.jsx)(I.Z, {
+                    : (0, i.jsx)(E.Z, {
                           className: y.arrow,
-                          direction: I.Z.Directions.RIGHT
+                          direction: E.Z.Directions.RIGHT
                       })
             ]
         })
@@ -82,82 +78,81 @@ function O(e) {
 }
 function D(e) {
     let { channel: t } = e,
-        r = (0, o.e7)([v.Z], () => (null != t ? v.Z.getGuild(t.getGuildId()) : null), [t]),
-        h = null != r && N.default.extractTimestamp(r.id) < Date.now() - T._8R,
-        I = (0, o.e7)([x.default], () => (null == r ? void 0 : r.ownerId) === x.default.getId(), [r]),
-        { canInvite: D, canManageGuild: w, canMessage: B } = (0, f.TE)(t, r),
-        U = (0, o.e7)([_.default], () => {
+        a = (0, o.e7)([x.Z], () => (null != t ? x.Z.getGuild(t.getGuildId()) : null), [t]),
+        h = null != a && N.default.extractTimestamp(a.id) < Date.now() - S._8R,
+        E = (0, o.e7)([C.default], () => (null == a ? void 0 : a.ownerId) === C.default.getId(), [a]),
+        { canInvite: D, canManageGuild: w, canMessage: U } = (0, f.TE)(t, a),
+        B = (0, o.e7)([v.default], () => {
             var e, t;
-            return (null === (e = _.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = _.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0;
+            return (null === (e = v.default.getCurrentUser()) || void 0 === e ? void 0 : e.desktop) === !0 || (null === (t = v.default.getCurrentUser()) || void 0 === t ? void 0 : t.mobile) === !0;
         }),
-        { guildPopulated: H, guildMessaged: G, guildPersonalized: F } = (0, f.h_)(r),
+        { guildPopulated: F, guildMessaged: H, guildPersonalized: G } = (0, f.h_)(a),
         {
             handleInvite: V,
             handleMessage: z,
             handlePersonalize: W,
-            handleDownload: K,
-            handleAddApplication: Y
+            handleDownload: Y,
+            handleAddApplication: q
         } = (function (e) {
             let t = l.useCallback(() => {
-                    p.ZP.trackWithMetadata(T.rMx.SERVER_SETUP_CTA_CLICKED, {
+                    p.ZP.trackWithMetadata(S.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: j.Ft.CHANNEL_WELCOME,
                         action: j.j7.INVITE
                     }),
                         null != e &&
-                            (0, d.openModalLazy)(async () => {
+                            (0, d.ZDy)(async () => {
                                 let { default: t } = await Promise.all([n.e('7654'), n.e('86004')]).then(n.bind(n, 560114));
                                 return (n) =>
                                     (0, i.jsx)(t, {
                                         ...n,
                                         guild: e,
-                                        source: T.t4x.CHANNEL_WELCOME,
-                                        analyticsLocation: { section: T.jXE.CHANNEL_WELCOME_CTA }
+                                        source: S.t4x.CHANNEL_WELCOME,
+                                        analyticsLocation: { section: S.jXE.CHANNEL_WELCOME_CTA }
                                     });
                             });
                 }, [e]),
-                r = l.useCallback(() => {
-                    p.ZP.trackWithMetadata(T.rMx.SERVER_SETUP_CTA_CLICKED, {
+                a = l.useCallback(() => {
+                    p.ZP.trackWithMetadata(S.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: j.Ft.CHANNEL_WELCOME,
                         action: j.j7.SEND_MESSAGE
                     }),
-                        E.S.dispatch(T.CkL.TEXTAREA_FOCUS, {
+                        I.S.dispatch(S.CkL.TEXTAREA_FOCUS, {
                             highlight: !0,
-                            channelId: T.lds
+                            channelId: S.lds
                         });
                 }, []),
-                a = l.useCallback(() => {
-                    p.ZP.trackWithMetadata(T.rMx.SERVER_SETUP_CTA_CLICKED, {
+                r = l.useCallback(() => {
+                    p.ZP.trackWithMetadata(S.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: j.Ft.CHANNEL_WELCOME,
                         action: j.j7.PERSONALIZE_SERVER
                     }),
-                        null != e && g.Z.open(e.id, T.pNK.OVERVIEW, { section: T.jXE.CHANNEL_WELCOME_CTA });
-                }, [e]),
-                s = l.useCallback(() => {
-                    p.ZP.trackWithMetadata(T.rMx.SERVER_SETUP_CTA_CLICKED, {
+                        null != e && g.Z.open(e.id, S.pNK.OVERVIEW, { section: S.jXE.CHANNEL_WELCOME_CTA });
+                }, [e]);
+            return {
+                handleInvite: t,
+                handleMessage: a,
+                handlePersonalize: r,
+                handleDownload: l.useCallback(() => {
+                    p.ZP.trackWithMetadata(S.rMx.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: j.Ft.CHANNEL_WELCOME,
                         action: j.j7.DOWNLOAD
                     }),
-                        (0, d.openModalLazy)(async () => {
+                        (0, d.ZDy)(async () => {
                             let { default: e } = await Promise.resolve().then(n.bind(n, 431583));
                             return (t) =>
                                 (0, i.jsx)(e, {
-                                    source: T.jXE.CHANNEL_WELCOME_CTA,
+                                    source: S.jXE.CHANNEL_WELCOME_CTA,
                                     ...t
                                 });
                         });
-                }, []);
-            return {
-                handleInvite: t,
-                handleMessage: r,
-                handlePersonalize: a,
-                handleDownload: s,
+                }, []),
                 handleAddApplication: l.useCallback(() => {
                     null != e &&
-                        (p.ZP.trackWithMetadata(T.rMx.SERVER_SETUP_CTA_CLICKED, {
+                        (p.ZP.trackWithMetadata(S.rMx.SERVER_SETUP_CTA_CLICKED, {
                             setup_type: j.Ft.CHANNEL_WELCOME,
                             action: j.j7.ADD_APP
                         }),
-                        (0, d.openModalLazy)(async () => {
+                        (0, d.ZDy)(async () => {
                             let { default: t } = await n.e('77875').then(n.bind(n, 657300));
                             return (n) => {
                                 var l;
@@ -170,8 +165,8 @@ function D(e) {
                         }));
                 }, [e])
             };
-        })(r),
-        q = !(U || H || G || F),
+        })(a),
+        K = !(B || F || H || G),
         { titleAnimatedStyle: X, opacities: J } = (function (e) {
             let t = (0, u.Z)(() => new s.Z.Value(0)),
                 n = (0, u.Z)(() => new s.Z.Value(0)),
@@ -226,7 +221,7 @@ function D(e) {
                     opacities: i
                 }
             );
-        })(q),
+        })(K),
         [Q, $] = l.useState([]),
         ee = Q.length > 0,
         et = (0, m.Q3)('WelcomeArea');
@@ -235,27 +230,27 @@ function D(e) {
             (async () => {
                 try {
                     var e;
-                    let t = await (0, C.i)(null !== (e = null == r ? void 0 : r.id) && void 0 !== e ? e : T.lds);
+                    let t = await (0, _.i)(null !== (e = null == a ? void 0 : a.id) && void 0 !== e ? e : S.lds);
                     $(t.map((e) => e.id));
                 } catch {}
             })();
-        }, [null == r ? void 0 : r.id]),
-        null == r)
+        }, [null == a ? void 0 : a.id]),
+        null == a)
     )
         return null;
     let en = [];
-    !h &&
+    h ||
         (D &&
             en.push(
                 (0, i.jsx)(
                     s.Z.div,
                     {
                         className: y.cardWrapper,
-                        style: q ? { opacity: J[en.length] } : {},
+                        style: K ? { opacity: J[en.length] } : {},
                         children: (0, i.jsx)(O, {
-                            iconUrl: et ? d.MailboxIllocon : R,
+                            iconUrl: et ? d.YvY : M,
                             header: A.intl.string(A.t.q9n0TU),
-                            completed: H,
+                            completed: F,
                             onClick: V
                         })
                     },
@@ -268,28 +263,28 @@ function D(e) {
                     s.Z.div,
                     {
                         className: y.cardWrapper,
-                        style: q ? { opacity: J[en.length] } : {},
+                        style: K ? { opacity: J[en.length] } : {},
                         children: (0, i.jsx)(O, {
-                            iconUrl: et ? d.PaintbrushIllocon : L,
+                            iconUrl: et ? d.$_T : L,
                             header: A.intl.string(A.t.c5kxPj),
-                            completed: F,
+                            completed: G,
                             onClick: W
                         })
                     },
                     'customize'
                 )
             ),
-        B &&
+        U &&
             en.push(
                 (0, i.jsx)(
                     s.Z.div,
                     {
                         className: y.cardWrapper,
-                        style: q ? { opacity: J[en.length] } : {},
+                        style: K ? { opacity: J[en.length] } : {},
                         children: (0, i.jsx)(O, {
-                            iconUrl: et ? d.PaperAirplaneIllocon : k,
+                            iconUrl: et ? d.qMX : k,
                             header: A.intl.string(A.t['SoP7+v']),
-                            completed: G,
+                            completed: H,
                             onClick: z
                         })
                     },
@@ -302,12 +297,12 @@ function D(e) {
                     s.Z.div,
                     {
                         className: y.cardWrapper,
-                        style: q ? { opacity: J[en.length] } : {},
+                        style: K ? { opacity: J[en.length] } : {},
                         children: (0, i.jsx)(O, {
-                            iconUrl: et ? d.DownloadArrowIllocon : M,
+                            iconUrl: et ? d.yIb : R,
                             header: A.intl.string(A.t.pGVNIy),
-                            completed: U,
-                            onClick: K
+                            completed: B,
+                            onClick: Y
                         })
                     },
                     'download'
@@ -318,21 +313,21 @@ function D(e) {
                 s.Z.div,
                 {
                     className: y.cardWrapper,
-                    style: q ? { opacity: J[en.length] } : {},
+                    style: K ? { opacity: J[en.length] } : {},
                     children: (0, i.jsx)(O, {
-                        iconUrl: et ? d.ActivitiesIllocon : P,
+                        iconUrl: et ? d.vdZ : P,
                         header: A.intl.string(A.t.IhHDEB),
                         completed: ee,
-                        onClick: Y
+                        onClick: q
                     })
                 },
                 'addapp'
             )
         ));
-    let ei = I ? A.intl.string(A.t['1ach9P']) : A.intl.string(A.t['ezm+/v']);
+    let ei = E ? A.intl.string(A.t['1ach9P']) : A.intl.string(A.t['ezm+/v']);
     h && (ei = A.intl.string(A.t['gwyU/P']));
-    let el = ''.concat(b.Z.getArticleURL(T.BhN.GUILD_GETTING_STARTED), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm');
-    return (0, i.jsx)(S.ZP, {
+    let el = ''.concat(b.Z.getArticleURL(S.BhN.GUILD_GETTING_STARTED), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm');
+    return (0, i.jsx)(T.ZP, {
         channelId: t.id,
         children: (0, i.jsx)('div', {
             className: y.container,
@@ -342,14 +337,14 @@ function D(e) {
                     (0, i.jsxs)(s.Z.div, {
                         style: X,
                         children: [
-                            (0, i.jsx)(d.Heading, {
+                            (0, i.jsx)(d.X6q, {
                                 className: y.titleName,
                                 variant: 'heading-xxl/semibold',
-                                children: A.intl.format(A.t.rkHVKS, { guildName: r.name })
+                                children: A.intl.format(A.t.rkHVKS, { guildName: a.name })
                             }),
                             (0, i.jsxs)(d.Text, {
                                 color: 'header-secondary',
-                                className: a()({
+                                className: r()({
                                     [y.subtitle]: !0,
                                     [y.noChildren]: 0 === en.length
                                 }),

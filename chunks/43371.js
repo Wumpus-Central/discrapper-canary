@@ -1,12 +1,13 @@
-e.exports = {
-    title: 'title_b3a5c2',
-    disabled: 'disabled_b3a5c2',
-    customizationSection: 'customizationSection_b3a5c2',
-    hideDivider: 'hideDivider_b3a5c2',
-    withDivider: 'withDivider_b3a5c2',
-    showBorder: 'showBorder_b3a5c2',
-    customizationSectionBackground: 'customizationSectionBackground_b3a5c2',
-    sectionDescription: 'sectionDescription_b3a5c2',
-    errorMessage: 'errorMessage_b3a5c2',
-    customizationSectionBorder: 'customizationSectionBorder_b3a5c2'
+var i = {
+    title: 'title_ace4f5',
+    disabled: 'disabled_ace4f5',
+    customizationSection: 'customizationSection_ace4f5',
+    hideDivider: 'hideDivider_ace4f5',
+    withDivider: 'withDivider_ace4f5',
+    showBorder: 'showBorder_ace4f5',
+    customizationSectionBackground: 'customizationSectionBackground_ace4f5',
+    sectionDescription: 'sectionDescription_ace4f5',
+    errorMessage: 'errorMessage_ace4f5',
+    customizationSectionBorder: 'customizationSectionBorder_ace4f5'
 };
+e.exports = i;

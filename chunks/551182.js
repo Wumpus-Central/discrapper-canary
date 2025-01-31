@@ -1,9 +1,10 @@
-e.exports = {
-    scopes: 'scopes_cf14a8',
-    scope: 'scope_cf14a8',
-    scopeInner: 'scopeInner_cf14a8',
-    sectionLabel: 'sectionLabel_cf14a8',
-    scopeIcon: 'scopeIcon_cf14a8',
-    fakeScopeIcon: 'fakeScopeIcon_cf14a8',
-    icon: 'icon_cf14a8'
+var i = {
+    scopes: 'scopes__29337',
+    scope: 'scope__29337',
+    scopeInner: 'scopeInner__29337',
+    sectionLabel: 'sectionLabel__29337',
+    fakeScopeIcon: 'fakeScopeIcon__29337',
+    scopeIcon: 'scopeIcon__29337',
+    icon: 'icon__29337'
 };
+e.exports = i;

@@ -1,45 +1,40 @@
-r.d(n, {
-    A: function () {
-        return h;
-    }
-});
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(442837),
-    l = r(434650),
-    u = r(110924),
-    c = r(451478),
-    d = r(915750);
-let f = (e) => {
-        let [n, r] = o.useState(!1),
-            i = null != e ? e : n,
-            a = i !== (0, u.Z)(i);
+n.d(t, { A: () => f }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(442837),
+    s = n(434650),
+    o = n(110924),
+    l = n(451478),
+    u = n(915750);
+let c = (e) => {
+        let [t, n] = r.useState(!1),
+            i = null != e ? e : t,
+            a = i !== (0, o.Z)(i);
         return {
             visible: i,
             visibleChanged: a,
-            reference: (0, l.O)((e) => r(e), d.PI)
+            reference: (0, s.O)((e) => n(e), u.PI)
         };
     },
-    p = () => {
-        let e = (0, s.e7)([c.Z], () => c.Z.isFocused()),
-            n = e !== (0, u.Z)(e);
+    d = () => {
+        let e = (0, a.e7)([l.Z], () => l.Z.isFocused()),
+            t = e !== (0, o.Z)(e);
         return {
             focused: e,
-            focusedChanged: n
+            focusedChanged: t
         };
     };
-function h(e) {
-    let { focused: n, focusedChanged: r } = p(),
-        { visible: i, visibleChanged: s, reference: l } = f(e.overrideVisibility),
-        u = {
+function f(e) {
+    let { focused: t, focusedChanged: n } = d(),
+        { visible: a, visibleChanged: s, reference: o } = c(e.overrideVisibility),
+        l = {
             ...e,
-            focused: n,
-            focusedChanged: r,
-            visible: i,
+            focused: t,
+            focusedChanged: n,
+            visible: a,
             visibleChanged: s,
-            reference: l,
-            impression: o.useRef(null)
+            reference: o,
+            impression: r.useRef(null)
         };
-    return (0, a.jsx)(d.ui, { ...u }, (0, d.B5)(e.questOrQuests, e.questContent));
+    return (0, i.jsx)(u.ui, { ...l }, (0, u.B5)(e.questOrQuests, e.questContent));
 }

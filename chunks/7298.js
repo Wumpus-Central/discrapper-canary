@@ -25,44 +25,42 @@ var n = r(310958),
         function e(e) {
             return t.call(this, h(e)) || this;
         }
-        (r = e), (n = t), (r.prototype = Object.create(n.prototype)), (r.prototype.constructor = r), (r.__proto__ = n);
-        var r,
-            n,
-            o = e.prototype;
+        (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), (e.__proto__ = t);
+        var r = e.prototype;
         return (
-            (o.getKey = function () {
+            (r.getKey = function () {
                 return this.get('key');
             }),
-            (o.getType = function () {
+            (r.getType = function () {
                 return this.get('type');
             }),
-            (o.getText = function () {
+            (r.getText = function () {
                 return this.get('text');
             }),
-            (o.getCharacterList = function () {
+            (r.getCharacterList = function () {
                 return this.get('characterList');
             }),
-            (o.getLength = function () {
+            (r.getLength = function () {
                 return this.getText().length;
             }),
-            (o.getDepth = function () {
+            (r.getDepth = function () {
                 return this.get('depth');
             }),
-            (o.getData = function () {
+            (r.getData = function () {
                 return this.get('data');
             }),
-            (o.getInlineStyleAt = function (t) {
+            (r.getInlineStyleAt = function (t) {
                 var e = this.getCharacterList().get(t);
                 return e ? e.getStyle() : f;
             }),
-            (o.getEntityAt = function (t) {
+            (r.getEntityAt = function (t) {
                 var e = this.getCharacterList().get(t);
                 return e ? e.getEntity() : null;
             }),
-            (o.findStyleRanges = function (t, e) {
+            (r.findStyleRanges = function (t, e) {
                 i(this.getCharacterList(), g, t, e);
             }),
-            (o.findEntityRanges = function (t, e) {
+            (r.findEntityRanges = function (t, e) {
                 i(this.getCharacterList(), y, t, e);
             }),
             e

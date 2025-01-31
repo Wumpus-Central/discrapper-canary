@@ -1,15 +1,11 @@
-r.d(n, {
-    Z: function () {
-        return a;
-    }
-});
-var i = r(727785);
-function a(e, n, r, o) {
-    let { length: s } = r,
-        l = o,
-        u = n;
+n.d(t, { Z: () => r });
+var i = n(727785);
+function r(e, t, n, a) {
+    let { length: s } = n,
+        o = a,
+        l = t;
     if (0 === s) return 0;
-    if (null == l) l = u;
-    else if (l === u) return u;
-    return (u += e === i.a8.UP ? -1 : 1) < 0 || u >= s ? a(e, u < 0 ? s : -1, r, l) : r[u].type === i.h8.HEADER ? a(e, u, r, l) : u;
+    if (null == o) o = l;
+    else if (o === l) return l;
+    return (l += e === i.a8.UP ? -1 : 1) < 0 || l >= s ? r(e, l < 0 ? s : -1, n, o) : n[l].type === i.h8.HEADER ? r(e, l, n, o) : l;
 }

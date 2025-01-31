@@ -1,48 +1,42 @@
-r.r(n),
-    r.d(n, {
-        Anchor: function () {
-            return _;
-        }
-    });
-var i = r(411104);
-var a = r(200651),
-    o = r(192379),
-    s = r(120356),
-    l = r.n(s),
-    u = r(532712),
-    c = r(1561),
-    d = r(84735),
-    f = r(335854),
-    p = r(645499),
-    h = r(287330);
+n.r(t), n.d(t, { Anchor: () => _ }), n(411104);
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(532712),
+    l = n(1561),
+    u = n(84735),
+    c = n(335854),
+    d = n(645499),
+    f = n(287330);
 function _(e) {
-    let { href: n, onClick: r, className: i, children: s, rel: _, target: m, useDefaultUnderlineStyles: g = !0, title: E, style: v, focusProps: y, ...b } = e;
-    null != n && null == r && (r = f.X.getDefaultLinkInterceptor(n));
-    let I = o.useContext(u.g),
-        T = {
-            className: l()(h.anchor, { [h.anchorUnderlineOnHover]: g }, i),
-            href: n,
-            onClick: r,
-            rel: null != _ ? _ : void 0,
-            target: null != m ? m : void 0,
-            title: null != E ? E : void 0,
-            style: null != v ? v : void 0
+    let { href: t, onClick: n, className: a, children: _, rel: p, target: h, useDefaultUnderlineStyles: m = !0, title: g, style: E, focusProps: v, ...y } = e;
+    null != t && null == n && (n = c.X.getDefaultLinkInterceptor(t));
+    let I = r.useContext(o.g),
+        b = {
+            className: s()(f.anchor, { [f.anchorUnderlineOnHover]: m }, a),
+            href: t,
+            onClick: n,
+            rel: null != p ? p : void 0,
+            target: null != h ? h : void 0,
+            title: null != g ? g : void 0,
+            style: null != E ? E : void 0
         };
-    return (null != n && !(0, p.B)(n) && ((T.rel = 'noreferrer noopener'), (T.target = '_blank')), I && delete T.href, null != r)
-        ? (0, a.jsx)(c.P, {
+    return (null == t || (0, d.B)(t) || ((b.rel = 'noreferrer noopener'), (b.target = '_blank')), I && delete b.href, null != n)
+        ? (0, i.jsx)(l.P, {
               tag: 'a',
-              ...b,
-              ...T,
-              onClick: r,
-              focusProps: y,
-              children: s
-          })
-        : (0, a.jsx)(d.t, {
               ...y,
-              children: (0, a.jsx)('a', {
+              ...b,
+              onClick: n,
+              focusProps: v,
+              children: _
+          })
+        : (0, i.jsx)(u.t, {
+              ...v,
+              children: (0, i.jsx)('a', {
+                  ...y,
                   ...b,
-                  ...T,
-                  children: s
+                  children: _
               })
           });
 }

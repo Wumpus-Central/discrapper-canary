@@ -1,52 +1,51 @@
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(481060),
-    l = r(367907),
-    u = r(434404),
-    c = r(138201),
-    d = r(430824),
-    f = r(981631),
-    p = r(388032);
-let h = (e) => {
-    let { guildId: n, reportId: r } = e,
-        [i, h] = o.useState(!1),
-        _ = d.Z.getGuild(n),
-        m = null != _;
-    o.useEffect(() => {
-        h(!m);
-    }, [m]);
-    let g = o.useCallback(() => {
-        h(!0),
-            l.ZP.trackWithMetadata(f.rMx.IAR_LEAVE_GUILD_BUTTON_CLICKED, {
-                guild_id: n,
-                report_id: r
+n.d(t, { Z: () => f }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(481060),
+    s = n(367907),
+    o = n(434404),
+    l = n(138201),
+    u = n(430824),
+    c = n(981631),
+    d = n(388032);
+let f = (e) => {
+    let { guildId: t, reportId: n } = e,
+        [f, _] = r.useState(!1),
+        p = u.Z.getGuild(t),
+        h = null != p;
+    r.useEffect(() => {
+        _(!h);
+    }, [h]);
+    let m = r.useCallback(() => {
+        _(!0),
+            s.ZP.trackWithMetadata(c.rMx.IAR_LEAVE_GUILD_BUTTON_CLICKED, {
+                guild_id: t,
+                report_id: n
             }),
-            u.Z.leaveGuild(n);
-    }, [n, r]);
-    if (null == _) return null;
-    let E = () => {
-        (0, s.openModal)((e) =>
-            (0, a.jsx)(s.ConfirmModal, {
-                header: p.intl.formatToPlainString(p.t['1GX6Pz'], { name: _.name }),
-                confirmText: p.intl.string(p.t.J2TBi4),
-                cancelText: p.intl.string(p.t['ETE/oK']),
-                onConfirm: g,
+            o.Z.leaveGuild(t);
+    }, [t, n]);
+    if (null == p) return null;
+    let g = () => {
+        (0, a.h7j)((e) =>
+            (0, i.jsx)(a.ConfirmModal, {
+                header: d.intl.formatToPlainString(d.t['1GX6Pz'], { name: p.name }),
+                confirmText: d.intl.string(d.t.J2TBi4),
+                cancelText: d.intl.string(d.t['ETE/oK']),
+                onConfirm: m,
                 ...e,
-                children: (0, a.jsx)(s.Text, {
+                children: (0, i.jsx)(a.Text, {
                     variant: 'text-md/normal',
-                    children: p.intl.format(p.t.ZEXC0t, { name: _.name })
+                    children: d.intl.format(d.t.ZEXC0t, { name: p.name })
                 })
             })
         );
     };
-    return (0, a.jsx)(c.ZP, {
-        title: p.intl.string(p.t.cU96io),
-        description: p.intl.formatToPlainString(p.t['26mR6+'], { guildName: null == _ ? void 0 : _.name }),
-        buttonText: i ? p.intl.string(p.t['9Ak99v']) : p.intl.string(p.t.F3qExs),
-        buttonDisabled: i,
-        buttonColor: s.Button.Colors.RED,
-        onButtonPress: E
+    return (0, i.jsx)(l.ZP, {
+        title: d.intl.string(d.t.cU96io),
+        description: d.intl.formatToPlainString(d.t['26mR6+'], { guildName: null == p ? void 0 : p.name }),
+        buttonText: f ? d.intl.string(d.t['9Ak99v']) : d.intl.string(d.t.F3qExs),
+        buttonDisabled: f,
+        buttonColor: a.zxk.Colors.RED,
+        onButtonPress: g
     });
 };
-n.Z = h;

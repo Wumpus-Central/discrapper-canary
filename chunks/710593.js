@@ -1,24 +1,20 @@
-r.d(n, {
-    M: function () {
-        return d;
-    },
-    c: function () {
-        return c;
-    }
+n.d(t, {
+    M: () => c,
+    c: () => u
 });
-var i = r(200651);
-r(192379);
-var a = r(120356),
-    o = r.n(a),
-    s = r(714338),
-    l = r(37591);
-function u(e) {
-    let { direction: n = 'up' } = e;
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(714338),
+    o = n(37591);
+function l(e) {
+    let { direction: t = 'up' } = e;
     return (0, i.jsx)('svg', {
         width: '10',
         height: '10',
         xmlns: 'http://www.w3.org/2000/svg',
-        className: o()(l.bindArrow, l[n]),
+        className: a()(o.bindArrow, o[t]),
         children: (0, i.jsx)('g', {
             fill: '#FFFFFF',
             children: (0, i.jsx)('polygon', {
@@ -28,34 +24,34 @@ function u(e) {
         })
     });
 }
-let c = {
+let u = {
     mod: () => s.Z.modKey,
     alt: () => s.Z.altKey,
-    up: () => (0, i.jsx)(u, { direction: 'up' }),
-    down: () => (0, i.jsx)(u, { direction: 'down' }),
-    left: () => (0, i.jsx)(u, { direction: 'left' }),
-    right: () => (0, i.jsx)(u, { direction: 'right' }),
+    up: () => (0, i.jsx)(l, { direction: 'up' }),
+    down: () => (0, i.jsx)(l, { direction: 'down' }),
+    left: () => (0, i.jsx)(l, { direction: 'left' }),
+    right: () => (0, i.jsx)(l, { direction: 'right' }),
     pageup: () => 'page up',
     pagedown: () => 'page down',
     'any-character': () => 'any key',
     plus: () => '+',
     return: () => s.Z.returnKey
 };
-function d(e) {
-    let { shortcut: n, dim: r = !1, className: a, keyClassName: s } = e,
-        u = Array.isArray(n) ? n : n.split('+');
+function c(e) {
+    let { shortcut: t, dim: n = !1, className: r, keyClassName: s } = e,
+        l = Array.isArray(t) ? t : t.split('+');
     return (0, i.jsx)('div', {
-        className: o()(l.combo, a, { [l.dim]: r }),
-        children: u
-            .map((e) => (null != c[e] ? c[e]() : e))
-            .map((e, n) =>
+        className: a()(o.combo, r, { [o.dim]: n }),
+        children: l
+            .map((e) => (null != u[e] ? u[e]() : e))
+            .map((e, t) =>
                 (0, i.jsx)(
                     'span',
                     {
-                        className: o()(l.key, s),
+                        className: a()(o.key, s),
                         children: e
                     },
-                    n
+                    t
                 )
             )
     });

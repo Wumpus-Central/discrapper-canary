@@ -1,42 +1,36 @@
-r.d(n, {
-    HI: function () {
-        return c;
-    },
-    gG: function () {
-        return u;
-    },
-    hb: function () {
-        return d;
-    }
+n.d(t, {
+    HI: () => u,
+    gG: () => l,
+    hb: () => c
 });
-var i = r(192379),
-    a = r(392711),
-    o = r.n(a),
-    s = r(516373);
-let l = {};
-function u() {
-    var e, n;
-    return null !== (n = null === (e = (0, s.D)().favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== n ? n : l;
+var i = n(192379),
+    r = n(392711),
+    a = n.n(r),
+    s = n(516373);
+let o = {};
+function l() {
+    var e, t;
+    return null !== (t = null === (e = (0, s.D)().favoriteGifs) || void 0 === e ? void 0 : e.gifs) && void 0 !== t ? t : o;
 }
-function c(e) {
-    let n = u();
+function u(e) {
+    let t = l();
     return i.useMemo(
         () =>
-            o()(n)
-                .map((n, r) => {
+            a()(t)
+                .map((t, n) => {
                     var i;
                     return {
-                        ...n,
-                        url: r,
-                        src: null !== (i = null == e ? void 0 : e(n.src, r)) && void 0 !== i ? i : n.src
+                        ...t,
+                        url: n,
+                        src: null !== (i = null == e ? void 0 : e(t.src, n)) && void 0 !== i ? i : t.src
                     };
                 })
                 .sortBy('order')
                 .reverse()
                 .value(),
-        [n, e]
+        [t, e]
     );
 }
-function d(e) {
-    return null != u()[e];
+function c(e) {
+    return null != l()[e];
 }

@@ -1,6 +1,7 @@
-var r;
-!(function (e) {
-    (e.POPOUT_WINDOW = 'popout window'),
+n.d(t, { Z: () => r });
+var i = (function (e) {
+    return (
+        (e.POPOUT_WINDOW = 'popout window'),
         (e.OVERLAY = 'overlay'),
         (e.NOTICE = 'notice'),
         (e.PREMIUM_UPSELL_TOOLTIP = 'premium upsell tooltip'),
@@ -316,6 +317,7 @@ var r;
         (e.GUILD_SETTINGS_MEMBERS_PAGE = 'guild settings members page'),
         (e.GUILD_MEMBER_MOD_VIEW = 'guild member mod view'),
         (e.GUILD_MEMBER_APPLICATION_REVIEW = 'guild member application review'),
+        (e.VOICE_FILTER_POPOUT = 'voice filter popout'),
         (e.FOR_LATER_HELPERS = 'for later helpers'),
         (e.FOR_LATER_POPOUT = 'for later popout'),
         (e.GUILD_PRODUCT_EMBED_CARD = 'guild product embed card'),
@@ -375,6 +377,10 @@ var r;
         (e.USER_SETTINGS_COACHMARK = 'user settings coachmark'),
         (e.CONNECTED_ACCOUNT_RELINK_BUTTON = 'connected account relink button'),
         (e.APP_MESSAGE_EMBED = 'app message embed'),
-        (e.USER_SETTINGS_SESSIONS = 'user settings sessions');
-})(r || (r = {})),
-    (n.Z = r);
+        (e.USER_SETTINGS_SESSIONS = 'user settings sessions'),
+        (e.SHARING_CONTROLS_COACHMARK = 'sharing controls coachmark'),
+        (e.NOT_SHARING_LINK = 'not sharing link'),
+        e
+    );
+})(i || {});
+let r = i;

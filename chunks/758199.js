@@ -1,108 +1,154 @@
 n.d(t, {
-    W: function () {
-        return c;
-    }
-});
-var i = n(200651);
-n(192379);
-var r = n(481060),
-    l = n(206295),
-    a = n(572004),
-    o = n(388032),
-    s = n(210550);
-function c(e) {
-    let { title: t, header: n, info: c, bannerSrc: u, iconSrc: d, embedUrl: m, actions: h = [] } = e,
-        { primaryColor: f, secondaryColor: p } = (0, l.Z)(null != d ? d : u),
-        _ = 'linear-gradient(45deg, '.concat(f, ', ').concat(p, ')'),
-        g =
-            a.wS && null != m
-                ? (0, i.jsx)(r.Button, {
-                      look: r.Button.Looks.BLANK,
-                      size: r.Button.Sizes.ICON,
-                      'aria-label': o.intl.string(o.t.WqhZsr),
-                      className: s.linkIcon,
+    W: () => x,
+    u: () => f
+}),
+    n(315314),
+    n(309749),
+    n(610138),
+    n(216116),
+    n(78328),
+    n(815648),
+    n(47120);
+var i,
+    l = n(200651),
+    a = n(192379),
+    r = n(120356),
+    s = n.n(r),
+    o = n(442837),
+    c = n(481060),
+    d = n(607070),
+    u = n(206295),
+    m = n(70097),
+    h = n(572004),
+    _ = n(217702),
+    p = n(388032),
+    g = n(210550),
+    f = (((i = {})[(i.BOT = 0)] = 'BOT'), (i[(i.ACTIVITY = 1)] = 'ACTIVITY'), i);
+function x(e) {
+    let { title: t, header: n, info: i, staticBannerSrc: r, videoBannerSrc: f, bannerAspectRatio: x = 0, iconSrc: E, embedUrl: C, actions: v = [] } = e,
+        { primaryColor: I, secondaryColor: N } = (0, u.Z)(null != E ? E : r),
+        S = 'linear-gradient(45deg, '.concat(I, ', ').concat(N, ')'),
+        T = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
+        b =
+            h.wS && null != C
+                ? (0, l.jsx)(c.zxk, {
+                      look: c.zxk.Looks.BLANK,
+                      size: c.zxk.Sizes.ICON,
+                      'aria-label': p.intl.string(p.t.WqhZsr),
+                      className: g.linkIcon,
                       onClick: () => {
-                          (0, a.JG)(m), (0, r.showToast)((0, r.createToast)(o.intl.string(o.t['L/PwZW']), r.ToastType.SUCCESS));
+                          (0, h.JG)(C), (0, c.showToast)((0, c.createToast)(p.intl.string(p.t['L/PwZW']), c.ToastType.SUCCESS));
                       },
-                      children: (0, i.jsx)(r.LinkIcon, {
+                      children: (0, l.jsx)(c.xPt, {
                           size: 'xs',
                           color: 'currentColor'
                       })
                   })
-                : null;
-    return (0, i.jsxs)('div', {
-        className: s.embed,
+                : null,
+        A = null != r,
+        j = null != f && !1 === T,
+        y = A || j,
+        Z = 0 === x ? g.bannerAspectRatioBot : g.bannerAspectRatioActivity,
+        R = a.useRef(null),
+        L = a.useCallback(() => {
+            let e = R.current;
+            null != e && ('hidden' === getComputedStyle(e).visibility ? e.pause() : e.play());
+        }, []),
+        P = a.useMemo(() => !!j && new URL(f).pathname.endsWith('.gif'), [j, f]);
+    return (0, l.jsxs)('div', {
+        className: s()(g.embed, { [g.showVideoOnFocus]: j }),
         children: [
-            null != u &&
-                (0, i.jsx)('div', {
-                    className: s.banner,
-                    style: { backgroundImage: 'url('.concat(u, ')') }
+            y &&
+                (0, l.jsxs)('div', {
+                    className: s()(g.bannerWrapper, Z),
+                    children: [
+                        j &&
+                            (P
+                                ? (0, l.jsx)('div', {
+                                      className: g.videoBanner,
+                                      style: { backgroundImage: 'url('.concat(f, ')') }
+                                  })
+                                : (0, l.jsx)(m.Z, {
+                                      ref: R,
+                                      src: f,
+                                      mediaLayoutType: _.hV.MOSAIC,
+                                      loop: !0,
+                                      muted: !0,
+                                      className: g.videoBanner
+                                  })),
+                        A &&
+                            (0, l.jsx)('div', {
+                                className: g.staticBanner,
+                                style: { backgroundImage: 'url('.concat(r, ')') },
+                                onTransitionEnd: L
+                            })
+                    ]
                 }),
-            (0, i.jsxs)('div', {
-                className: s.contentContainer,
-                style: { background: _ },
+            (0, l.jsxs)('div', {
+                className: g.contentContainer,
+                style: { background: S },
                 children: [
                     null != n &&
-                        (0, i.jsxs)('div', {
-                            className: s.header,
+                        (0, l.jsxs)('div', {
+                            className: g.header,
                             children: [
-                                (0, i.jsx)(r.Text, {
+                                (0, l.jsx)(c.Text, {
                                     variant: 'eyebrow',
                                     color: 'none',
                                     children: n
                                 }),
-                                g
+                                b
                             ]
                         }),
-                    (0, i.jsxs)('div', {
-                        className: s.contentWrapper,
+                    (0, l.jsxs)('div', {
+                        className: g.contentWrapper,
                         children: [
-                            null != d &&
-                                (0, i.jsx)('div', {
-                                    className: s.img,
-                                    style: { backgroundImage: 'url('.concat(d, ')') }
+                            null != E &&
+                                (0, l.jsx)('div', {
+                                    className: g.img,
+                                    style: { backgroundImage: 'url('.concat(E, ')') }
                                 }),
-                            (0, i.jsxs)('div', {
-                                className: s.content,
+                            (0, l.jsxs)('div', {
+                                className: g.content,
                                 children: [
-                                    (0, i.jsx)(r.Text, {
+                                    (0, l.jsx)(c.Text, {
                                         variant: 'text-md/semibold',
                                         color: 'none',
                                         lineClamp: 1,
                                         children: t
                                     }),
-                                    (0, i.jsx)('div', {
-                                        className: s.contentInfo,
-                                        children: c
+                                    (0, l.jsx)('div', {
+                                        className: g.contentInfo,
+                                        children: i
                                     })
                                 ]
                             }),
-                            null == n && g
+                            null == n && b
                         ]
                     }),
-                    h.length > 0 &&
-                        (0, i.jsx)('div', {
-                            className: s.actionWrapper,
-                            children: h.map((e, t) => {
-                                let { label: n, onClick: l, disabledReason: a, submitting: o } = e,
-                                    c = null != a,
-                                    u = 0 === t,
+                    v.length > 0 &&
+                        (0, l.jsx)('div', {
+                            className: g.actionWrapper,
+                            children: v.map((e, t) => {
+                                let { label: n, onClick: i, disabledReason: a, submitting: r } = e,
+                                    s = null != a,
+                                    o = 0 === t,
                                     d = {
-                                        color: u ? r.Button.Colors.WHITE : r.Button.Colors.TRANSPARENT,
-                                        className: u ? void 0 : s.alwaysWhiteText,
-                                        onClick: l,
-                                        disabled: c,
-                                        submitting: o,
+                                        color: o ? c.zxk.Colors.WHITE : c.zxk.Colors.TRANSPARENT,
+                                        className: o ? g.primaryButton : g.alwaysWhiteText,
+                                        onClick: i,
+                                        disabled: s,
+                                        submitting: r,
                                         children: n
                                     };
-                                return c
-                                    ? (0, i.jsx)(
-                                          r.Tooltip,
+                                return s
+                                    ? (0, l.jsx)(
+                                          c.ua7,
                                           {
                                               text: a,
                                               children: (e) => {
                                                   let { ...t } = e;
-                                                  return (0, i.jsx)(r.Button, {
+                                                  return (0, l.jsx)(c.zxk, {
                                                       ...d,
                                                       ...t
                                                   });
@@ -110,7 +156,7 @@ function c(e) {
                                           },
                                           n
                                       )
-                                    : (0, i.jsx)(r.Button, { ...d }, n);
+                                    : (0, l.jsx)(c.zxk, { ...d }, n);
                             })
                         })
                 ]

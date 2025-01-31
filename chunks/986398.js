@@ -1,19 +1,15 @@
-r.d(n, {
-    Z: function () {
-        return s;
-    }
-});
-var i = r(200651),
-    a = r(81063),
-    o = r(388032);
+n.d(t, { Z: () => s });
+var i = n(200651),
+    r = n(81063),
+    a = n(388032);
 function s(e) {
-    let { leaderboard: n, className: r } = e,
-        s = (0, a.getAssetImage)(n.settings.application_id, n.settings.winner_asset_id);
+    let { leaderboard: t, className: n } = e,
+        s = (0, r.getAssetImage)(t.settings.application_id, t.settings.winner_asset_id);
     return null == s
         ? null
         : (0, i.jsx)('img', {
-              className: r,
+              className: n,
               src: s,
-              alt: o.intl.string(o.t.QyRmzc)
+              alt: a.intl.string(a.t.QyRmzc)
           });
 }

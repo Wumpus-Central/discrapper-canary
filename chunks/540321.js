@@ -1,39 +1,35 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(740078);
-function a(e) {
-    var n = new Map(),
-        r = new Set(),
+n.d(t, { Z: () => a });
+var i = n(740078);
+function r(e) {
+    var t = new Map(),
+        n = new Set(),
         i = [];
-    function a(e) {
-        r.add(e.name),
+    function r(e) {
+        n.add(e.name),
             [].concat(e.requires || [], e.requiresIfExists || []).forEach(function (e) {
-                if (!r.has(e)) {
-                    var i = n.get(e);
-                    i && a(i);
+                if (!n.has(e)) {
+                    var i = t.get(e);
+                    i && r(i);
                 }
             }),
             i.push(e);
     }
     return (
         e.forEach(function (e) {
-            n.set(e.name, e);
+            t.set(e.name, e);
         }),
         e.forEach(function (e) {
-            !r.has(e.name) && a(e);
+            n.has(e.name) || r(e);
         }),
         i
     );
 }
-function o(e) {
-    var n = a(e);
-    return i.xs.reduce(function (e, r) {
+function a(e) {
+    var t = r(e);
+    return i.xs.reduce(function (e, n) {
         return e.concat(
-            n.filter(function (e) {
-                return e.phase === r;
+            t.filter(function (e) {
+                return e.phase === n;
             })
         );
     }, []);

@@ -1,10 +1,6 @@
 n.d(t, {
-    C: function () {
-        return C;
-    },
-    Z: function () {
-        return v;
-    }
+    C: () => C,
+    Z: () => f
 });
 var i = n(200651);
 n(192379);
@@ -21,13 +17,13 @@ var r = n(990547),
     g = n(662379),
     x = n(60533),
     p = n(581050),
-    f = n(753937);
+    _ = n(753937);
 function C(e) {
     let { onboardingMarketing: t, onboardingMarketingError: n } = e,
         r = (e) => {
             let { children: t } = e;
             return (0, i.jsxs)(i.Fragment, {
-                children: [(0, i.jsx)(l.FormDivider, { className: f.sectionDivider }), t]
+                children: [(0, i.jsx)(l.$i$, { className: _.sectionDivider }), t]
             });
         },
         s = (0, i.jsx)(r, { children: (0, i.jsx)(g.Z, {}) }, p.q.HOW_IT_WORKS),
@@ -49,12 +45,12 @@ function C(e) {
               })
           });
 }
-function v(e) {
+function f(e) {
     let { guild: t } = e,
         n = (0, c.Z)(t),
         { eligibilityLoading: m, eligibilityError: h, eligibility: g } = n,
         p = (0, a.j)(g),
-        { isLoading: v, error: I, creatorMonetizationOnboardingMarketing: N } = (0, o.Z)(t.id);
+        { isLoading: f, error: v, creatorMonetizationOnboardingMarketing: N } = (0, o.Z)(t.id);
     return ((0, s.Z)(
         {
             type: r.ImpressionTypes.PANE,
@@ -68,14 +64,14 @@ function v(e) {
         },
         { disableTrack: null == t.id || null == g }
     ),
-    m || null == g || v)
-        ? (0, i.jsx)(l.Spinner, {})
+    m || null == g || f)
+        ? (0, i.jsx)(l.$jN, {})
         : g.actionRequired
           ? (0, i.jsx)(x.Z, { guild: t })
           : null != h
             ? (0, i.jsx)(d.Z, { children: h.message })
             : (0, i.jsxs)('div', {
-                  className: f.container,
+                  className: _.container,
                   children: [
                       (0, i.jsx)(u.Z, {
                           guild: t,
@@ -83,7 +79,7 @@ function v(e) {
                       }),
                       (0, i.jsx)(C, {
                           onboardingMarketing: N,
-                          onboardingMarketingError: I
+                          onboardingMarketingError: v
                       })
                   ]
               });

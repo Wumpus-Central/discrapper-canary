@@ -1,40 +1,36 @@
-n.d(t, {
-    o: function () {
-        return a;
-    }
-});
-var i = n(192379),
-    l = n(442837),
-    r = n(115130),
-    o = n(701488);
-let a = () => {
-    let { isEnabled: e, lastUsedObject: t } = (0, l.cj)(
-            [r.Z],
+i.d(t, { o: () => d });
+var l = i(192379),
+    n = i(442837),
+    a = i(115130),
+    r = i(701488);
+let d = () => {
+    let { isEnabled: e, lastUsedObject: t } = (0, n.cj)(
+            [a.Z],
             () => ({
-                isEnabled: r.Z.getIsEnabled(),
-                lastUsedObject: r.Z.getLastUsedObject()
+                isEnabled: a.Z.getIsEnabled(),
+                lastUsedObject: a.Z.getLastUsedObject()
             }),
             []
         ),
-        n = (0, l.Wu)([r.Z], () => r.Z.getDeveloperShelfItems(), []);
-    return i.useMemo(
+        i = (0, n.Wu)([a.Z], () => a.Z.getDeveloperShelfItems(), []);
+    return l.useMemo(
         () =>
             e
-                ? n
+                ? i
                       .map((e) => ({
                           application: e,
                           activity: {
-                              ...o.wT,
+                              ...r.wT,
                               ...e.embeddedActivityConfig,
                               application_id: e.id
                           }
                       }))
-                      .sort((e, n) => {
-                          let i = t[e.application.id],
-                              l = t[n.application.id];
-                          return null == i ? 1 : null == l ? -1 : l - i;
+                      .sort((e, i) => {
+                          let l = t[e.application.id],
+                              n = t[i.application.id];
+                          return null == l ? 1 : null == n ? -1 : n - l;
                       })
                 : [],
-        [n, e, t]
+        [i, e, t]
     );
 };

@@ -1,12 +1,13 @@
 e.exports = {
-    card: 'card_adb740',
-    pulse: 'pulse_adb740',
-    header: 'header_adb740',
-    body: 'body_adb740',
-    avatarWrapper: 'avatarWrapper_adb740',
-    avatarUploaderInner: 'avatarUploaderInner_adb740',
-    topDivider: 'topDivider_adb740',
-    bottomDivider: 'bottomDivider_adb740',
-    copyButton: 'copyButton_adb740',
-    expandIcon: 'expandIcon_adb740'
+    card: 'card_eafb9c',
+    pulse: 'pulse_eafb9c',
+    pulseBorder: 'pulseBorder_eafb9c',
+    header: 'header_eafb9c',
+    body: 'body_eafb9c',
+    avatarWrapper: 'avatarWrapper_eafb9c',
+    avatarUploaderInner: 'avatarUploaderInner_eafb9c',
+    topDivider: 'topDivider_eafb9c',
+    bottomDivider: 'bottomDivider_eafb9c',
+    copyButton: 'copyButton_eafb9c',
+    expandIcon: 'expandIcon_eafb9c'
 };

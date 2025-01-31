@@ -1,10 +1,6 @@
-r.d(n, {
-    Z: function () {
-        return a;
-    }
-});
-var i = r(871074);
-function a() {
+n.d(t, { Z: () => r });
+var i = n(871074);
+function r() {
     if ('undefined' == typeof Reflect || !i || i.sham) return !1;
     if ('function' == typeof Proxy) return !0;
     try {

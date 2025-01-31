@@ -1,64 +1,52 @@
-r.d(n, {
-    Ez: function () {
-        return _;
-    },
-    Ps: function () {
-        return c;
-    },
-    Xo: function () {
-        return p;
-    },
-    dT: function () {
-        return f;
-    },
-    dw: function () {
-        return d;
-    },
-    k$: function () {
-        return h;
-    }
-});
-var i = r(47120);
-var a = r(65400),
-    o = r(990547),
-    s = r(731965);
-let l = Object.freeze({
+n.d(t, {
+    Ez: () => _,
+    Ps: () => l,
+    Xo: () => d,
+    dT: () => c,
+    dw: () => u,
+    k$: () => f
+}),
+    n(47120);
+var i = n(65400),
+    r = n(990547),
+    a = n(731965);
+let s = Object.freeze({
         debugTrackedData: null,
         impressions: []
     }),
-    u = (0, a.F)((e) => l),
-    c = (e) => {
-        (0, s.j)(() => {
-            u.setState((n) => ({
-                impressions: [...n.impressions, e]
+    o = (0, i.F)((e) => s),
+    l = (e) => {
+        (0, a.j)(() => {
+            o.setState((t) => ({
+                impressions: [...t.impressions, e]
             }));
         });
     },
-    d = (e) => {
-        (0, s.j)(() => {
-            u.setState((n) => ({ impressions: n.impressions.filter((n) => n.sequenceId !== e.sequenceId) }));
+    u = (e) => {
+        (0, a.j)(() => {
+            o.setState((t) => ({ impressions: t.impressions.filter((t) => t.sequenceId !== e.sequenceId) }));
         });
     },
-    f = (e, n) => {
-        (0, s.j)(() => {
-            u.setState(() => ({
+    c = (e, t) => {
+        (0, a.j)(() => {
+            o.setState(() => ({
                 debugTrackedData: {
                     name: e,
-                    ...n
+                    ...t
                 }
             }));
         });
     },
-    p = u;
-function h() {
+    d = o;
+function f() {
     let e = {};
     return (
-        u.getState().impressions.forEach((n) => {
-            n.type === o.ImpressionTypes.PAGE ? (e.page = n.name) : (e.section = n.name);
+        o.getState().impressions.forEach((t) => {
+            t.type === r.ImpressionTypes.PAGE ? (e.page = t.name) : (e.section = t.name);
         }),
         e
     );
 }
 function _() {
-    return u.getState().impressions;
+    return o.getState().impressions;
 }

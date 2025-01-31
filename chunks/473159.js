@@ -1,42 +1,37 @@
-r.d(n, {
-    O: function () {
-        return u;
+n.d(t, { O: () => o }), n(47120);
+var i = n(284737),
+    r = n(228488),
+    a = n(830917),
+    s = n(919570);
+function o(e) {
+    let t = e.document,
+        n = (0, a.Ig)(e);
+    function o() {
+        (0, i.dx)(e);
     }
-});
-var i = r(47120);
-var a = r(284737),
-    o = r(228488),
-    s = r(830917),
-    l = r(919570);
-function u(e) {
-    let n = e.document,
-        r = (0, s.Ig)(e);
-    function i() {
-        (0, a.dx)(e);
+    function l() {
+        (0, i.T_)(e, !0);
     }
     function u() {
-        (0, a.T_)(e, !0);
+        e.document.hasFocus() || (0, i.T_)(e, !1);
     }
     function c() {
-        !e.document.hasFocus() && (0, a.T_)(e, !1);
+        (0, i.gH)(e);
     }
     function d() {
-        (0, a.gH)(e);
+        (0, i.Rz)(e);
     }
     function f() {
-        (0, a.Rz)(e);
-    }
-    function p() {
-        (0, l.gK)(r);
-    }
-    function h() {
-        setTimeout(() => {
-            (0, l.HQ)(r);
-        }, 0);
+        (0, s.gK)(n);
     }
     function _() {
-        (0, a.CO)(e);
+        setTimeout(() => {
+            (0, s.HQ)(n);
+        }, 0);
     }
-    for (let r of (e.addEventListener('resize', i), e.addEventListener('focus', u), e.addEventListener('blur', c), e.addEventListener('unload', f), e.addEventListener('visibilitychange', _), l.wu)) n.addEventListener(r, p, !0), n.addEventListener(r, h, !1);
-    (0, o.uF)(n, d), (0, a.S1)(e);
+    function p() {
+        (0, i.CO)(e);
+    }
+    for (let n of (e.addEventListener('resize', o), e.addEventListener('focus', l), e.addEventListener('blur', u), e.addEventListener('unload', d), e.addEventListener('visibilitychange', p), s.wu)) t.addEventListener(n, f, !0), t.addEventListener(n, _, !1);
+    (0, r.uF)(t, c), (0, i.S1)(e);
 }

@@ -1,12 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return p;
-    }
-});
+n.d(t, { Z: () => p });
 var i = n(192379),
     l = n(442837),
-    r = n(661111),
-    a = n(706454),
+    a = n(661111),
+    r = n(706454),
     s = n(306680),
     o = n(626135),
     c = n(802098),
@@ -15,27 +11,27 @@ var i = n(192379),
     h = n(981631);
 function p(e) {
     let t = (0, d.Z)(e),
-        n = (0, l.e7)([a.default], () => a.default.locale),
+        n = (0, l.e7)([r.default], () => r.default.locale),
         p = (0, l.e7)([c.Z], () => c.Z.getChangelog(null != t ? t : '', n), [t, n]),
         m = (0, u.Z)(e),
         f = i.useRef(m ? Date.now() : null),
         g = (0, l.e7)([s.ZP], () => s.ZP.getUnreadCount(e), [e]),
-        C = i.useRef(g);
+        _ = i.useRef(g);
     i.useEffect(() => {
-        C.current = g;
+        _.current = g;
     }),
         i.useEffect(() => {
             f.current = Date.now();
         }, [m]),
         i.useEffect(() => {
-            m && null != t && r.Z.fetchChangelog(t, n, !0);
+            m && null != t && a.Z.fetchChangelog(t, n, !0);
         }, [t, n, m]),
         i.useEffect(() => {
             m &&
                 null != p &&
                 o.default.track(h.rMx.CHANGE_LOG_OPENED, {
                     change_log_id: ''.concat(p.date, ':').concat(p.revision),
-                    unread_count: C.current
+                    unread_count: _.current
                 });
         }, [m, p]),
         i.useEffect(() => {
@@ -47,7 +43,7 @@ function p(e) {
                     (o.default.track(h.rMx.CHANGE_LOG_CLOSED, {
                         seconds_open: Math.round((Date.now() - e) / 1000),
                         change_log_id: ''.concat(p.date, ':').concat(p.revision),
-                        unread_count: C.current
+                        unread_count: _.current
                     }),
                     (f.current = 0));
             };

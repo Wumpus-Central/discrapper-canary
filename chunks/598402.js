@@ -1,57 +1,52 @@
-e.r(n),
-    e.d(n, {
-        default: function () {
-            return l;
-        }
-    });
-var s = e(200651);
-e(192379);
-var a = e(481060),
-    o = e(388032),
-    c = e(380731),
-    i = e(134519);
-function l(t) {
-    let { transitionState: n, onClose: e } = t;
-    return (0, s.jsxs)(a.ModalRoot, {
-        transitionState: n,
-        className: c.root,
+a.d(e, { default: () => c });
+var n = a(200651);
+a(192379);
+var s = a(481060),
+    i = a(388032),
+    o = a(380731),
+    l = a(134519);
+function c(t) {
+    let { transitionState: e, onClose: a } = t;
+    return (0, n.jsxs)(s.Y0X, {
+        transitionState: e,
+        className: o.root,
         children: [
-            (0, s.jsxs)(a.ModalHeader, {
+            (0, n.jsxs)(s.xBx, {
                 separator: !1,
-                className: c.noScroll,
+                className: o.noScroll,
                 children: [
-                    (0, s.jsx)(a.ModalCloseButton, {
-                        className: c.closeButton,
-                        onClick: e
+                    (0, n.jsx)(s.olH, {
+                        className: o.closeButton,
+                        onClick: a
                     }),
-                    (0, s.jsx)('div', {
-                        className: c.imageContainer,
-                        children: (0, s.jsx)('img', {
-                            src: i,
-                            className: c.image,
+                    (0, n.jsx)('div', {
+                        className: o.imageContainer,
+                        children: (0, n.jsx)('img', {
+                            src: l,
+                            className: o.image,
                             alt: ''
                         })
                     })
                 ]
             }),
-            (0, s.jsx)(a.ModalContent, {
-                children: (0, s.jsxs)('div', {
-                    className: c.content,
+            (0, n.jsx)(s.hzk, {
+                children: (0, n.jsxs)('div', {
+                    className: o.content,
                     children: [
-                        (0, s.jsx)(a.Heading, {
+                        (0, n.jsx)(s.X6q, {
                             variant: 'heading-xl/semibold',
-                            className: c.title,
-                            children: o.intl.string(o.t.xSV3nZ)
+                            className: o.title,
+                            children: i.intl.string(i.t.xSV3nZ)
                         }),
-                        (0, s.jsx)(a.Text, {
+                        (0, n.jsx)(s.Text, {
                             variant: 'text-md/normal',
-                            className: c.text,
-                            children: o.intl.string(o.t.jPMGbG)
+                            className: o.text,
+                            children: i.intl.string(i.t.jPMGbG)
                         }),
-                        (0, s.jsx)(a.Button, {
-                            className: c.button,
-                            onClick: e,
-                            children: o.intl.string(o.t['NX+WJC'])
+                        (0, n.jsx)(s.zxk, {
+                            className: o.button,
+                            onClick: a,
+                            children: i.intl.string(i.t['NX+WJC'])
                         })
                     ]
                 })

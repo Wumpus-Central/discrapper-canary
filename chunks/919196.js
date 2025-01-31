@@ -1,80 +1,74 @@
-n.d(t, {
-    Z: function () {
-        return T;
-    }
-}),
-    n(47120),
-    n(653041);
+n.d(t, { Z: () => I }), n(47120), n(653041);
 var i = n(200651),
     l = n(192379),
-    r = n(442837),
-    a = n(481060),
-    o = n(668781),
-    s = n(600164),
+    a = n(442837),
+    r = n(481060),
+    s = n(668781),
+    o = n(600164),
     d = n(434404),
     c = n(590157),
     u = n(280885),
     m = n(496675),
     h = n(768581),
-    p = n(709054),
-    g = n(51144),
-    x = n(486199),
+    x = n(709054),
+    p = n(51144),
+    g = n(486199),
     f = n(366598),
-    v = n(125657),
-    b = n(725875),
-    C = n(981631),
-    I = n(388032),
+    b = n(125657),
+    v = n(725875),
+    _ = n(981631),
+    j = n(388032),
     N = n(380813);
-function j(e) {
-    let { application: t, guild: n, integration: l, ...r } = e;
-    return (0, i.jsx)(a.ConfirmModal, {
-        ...r,
-        header: I.intl.formatToPlainString(I.t['rL9d//'], { applicationName: t.name }),
-        confirmText: I.intl.string(I.t.ebGf4u),
-        cancelText: I.intl.string(I.t['ETE/oK']),
+function C(e) {
+    let { application: t, guild: n, integration: l, ...a } = e;
+    return (0, i.jsx)(r.ConfirmModal, {
+        ...a,
+        header: j.intl.formatToPlainString(j.t['rL9d//'], { applicationName: t.name }),
+        confirmText: j.intl.string(j.t.ebGf4u),
+        cancelText: j.intl.string(j.t['ETE/oK']),
         onConfirm: () => {
             d.Z.disableIntegration(n.id, l.id).catch(() => {
-                o.Z.show({
-                    title: I.intl.string(I.t.wYqMmJ),
-                    body: I.intl.string(I.t.A4Mnsr)
+                s.Z.show({
+                    title: j.intl.string(j.t.wYqMmJ),
+                    body: j.intl.string(j.t.A4Mnsr)
                 });
             });
         },
-        children: (0, i.jsx)(a.Text, {
+        children: (0, i.jsx)(r.Text, {
             variant: 'text-md/normal',
-            children: I.intl.format(I.t.FGE8yc, { applicationName: t.name })
+            children: j.intl.format(j.t.FGE8yc, { applicationName: t.name })
         })
     });
 }
-function T(e) {
+function I(e) {
     var t;
-    let { guild: n, applicationIntegration: o, selectableWebhookChannels: d, editedWebhook: T, errors: _, canNavigate: Z } = e,
-        { application: E, integration: S, webhooks: y } = o,
-        [A, L] = (0, r.Wu)([m.Z], () => [m.Z.can(C.Plq.MANAGE_ROLES, n), null == E.bot || m.Z.canManageUser(C.Plq.MANAGE_GUILD, E.bot.id, n)], [E.bot, n]),
-        R = (0, r.e7)([m.Z], () => m.Z.can(C.Plq.MANAGE_WEBHOOKS, n), [n]),
-        k = l.useCallback(() => {
-            Z() &&
-                (0, a.openModal)((e) =>
-                    (0, i.jsx)(j, {
+    let { guild: n, applicationIntegration: s, selectableWebhookChannels: d, editedWebhook: I, errors: Z, canNavigate: T } = e,
+        { application: E, integration: S, webhooks: y } = s,
+        [A, k] = (0, a.Wu)([m.Z], () => [m.Z.can(_.Plq.MANAGE_ROLES, n), null == E.bot || m.Z.canManageUser(_.Plq.MANAGE_GUILD, E.bot.id, n)], [E.bot, n]),
+        R = (0, a.e7)([m.Z], () => m.Z.can(_.Plq.MANAGE_WEBHOOKS, n), [n]),
+        L = l.useCallback(() => {
+            T() &&
+                (0, r.h7j)((e) =>
+                    (0, i.jsx)(C, {
                         guild: n,
                         application: E,
                         integration: S,
                         ...e
                     })
                 );
-        }, [E, Z, n, S]),
+        }, [E, T, n, S]),
         O = l.useMemo(() => {
             let e = [
                 {
-                    icon: a.ClockIcon,
-                    text: I.intl.formatToPlainString(I.t.gcdJ8P, { timestamp: p.default.extractTimestamp(S.id) })
+                    icon: r.T39,
+                    text: j.intl.formatToPlainString(j.t.gcdJ8P, { timestamp: x.default.extractTimestamp(S.id) })
                 }
             ];
             return (
                 null != S.user &&
                     e.push({
-                        icon: a.UserIcon,
-                        text: I.intl.formatToPlainString(I.t.qE7oqq, { user: g.ZP.getUserTag(S.user) })
+                        icon: r.tBG,
+                        text: j.intl.formatToPlainString(j.t.qE7oqq, { user: p.ZP.getUserTag(S.user) })
                     }),
                 e
             );
@@ -82,24 +76,24 @@ function T(e) {
         w = l.useMemo(
             () =>
                 null != E.bot
-                    ? (0, i.jsx)(v.Z, {
+                    ? (0, i.jsx)(b.Z, {
                           guild: n,
-                          applicationIntegration: o
+                          applicationIntegration: s
                       })
-                    : (0, i.jsx)(a.Card, {
+                    : (0, i.jsx)(r.Zbd, {
                           className: N.emptyCard,
                           editable: !0,
-                          children: (0, i.jsx)(a.Text, {
+                          children: (0, i.jsx)(r.Text, {
                               color: 'text-muted',
                               variant: 'text-sm/normal',
-                              children: I.intl.string(I.t.pfLnzc)
+                              children: j.intl.string(j.t.pfLnzc)
                           })
                       }),
-            [E.bot, o, n]
+            [E.bot, s, n]
         );
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(x.Z, {
+            (0, i.jsx)(g.Z, {
                 name: E.name,
                 imageSrc: null !== (t = E.getIconURL(32)) && void 0 !== t ? t : h.pK['0'],
                 details: O,
@@ -114,21 +108,21 @@ function T(e) {
             A
                 ? (0, i.jsx)(c.Z, {
                       application: E,
-                      canNavigate: Z,
+                      canNavigate: T,
                       guildId: n.id
                   })
                 : null,
-            (0, i.jsx)(a.FormDivider, { className: N.headerDivider }),
+            (0, i.jsx)(r.$i$, { className: N.headerDivider }),
             null != E.bot
                 ? (0, i.jsxs)('div', {
                       className: N.section,
                       children: [
                           (0, i.jsx)(f.Z, {
-                              icon: (0, i.jsx)(a.RobotIcon, {
+                              icon: (0, i.jsx)(r.wGt, {
                                   size: 'xs',
                                   color: 'currentColor'
                               }),
-                              title: I.intl.string(I.t.AOdOYm)
+                              title: j.intl.string(j.t.AOdOYm)
                           }),
                           w
                       ]
@@ -138,52 +132,52 @@ function T(e) {
                 className: N.section,
                 children: [
                     (0, i.jsx)(f.Z, {
-                        icon: (0, i.jsx)(a.WebhookIcon, {
+                        icon: (0, i.jsx)(r.tYf, {
                             size: 'md',
                             color: 'currentColor'
                         }),
-                        title: I.intl.string(I.t['t9ZX/P'])
+                        title: j.intl.string(j.t['t9ZX/P'])
                     }),
                     y.length > 0
-                        ? (0, i.jsx)(b.Z, {
+                        ? (0, i.jsx)(v.Z, {
                               webhooks: y,
-                              editedWebhook: T,
+                              editedWebhook: I,
                               selectableWebhookChannels: d,
-                              errors: _,
-                              canNavigate: Z
+                              errors: Z,
+                              canNavigate: T
                           })
-                        : (0, i.jsx)(a.Card, {
+                        : (0, i.jsx)(r.Zbd, {
                               className: N.emptyCard,
                               editable: !0,
-                              children: (0, i.jsx)(a.Text, {
+                              children: (0, i.jsx)(r.Text, {
                                   color: 'text-muted',
                                   variant: 'text-sm/normal',
-                                  children: R ? I.intl.string(I.t.ahPd2d) : I.intl.string(I.t.axqYMj)
+                                  children: R ? j.intl.string(j.t.ahPd2d) : j.intl.string(j.t.axqYMj)
                               })
                           })
                 ]
             }),
-            (0, i.jsx)(a.FormDivider, { className: N.headerDivider }),
-            (0, i.jsxs)(s.Z, {
+            (0, i.jsx)(r.$i$, { className: N.headerDivider }),
+            (0, i.jsxs)(o.Z, {
                 className: N.section,
-                justify: s.Z.Justify.BETWEEN,
-                align: s.Z.Align.CENTER,
+                justify: o.Z.Justify.BETWEEN,
+                align: o.Z.Align.CENTER,
                 children: [
-                    (0, i.jsx)(a.Text, {
+                    (0, i.jsx)(r.Text, {
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: L ? I.intl.string(I.t.hdneLy) : I.intl.string(I.t.xRCMq6)
+                        children: k ? j.intl.string(j.t.hdneLy) : j.intl.string(j.t.xRCMq6)
                     }),
-                    (0, i.jsx)(s.Z.Child, {
+                    (0, i.jsx)(o.Z.Child, {
                         grow: 0,
                         shrink: 0,
-                        children: (0, i.jsx)(a.Button, {
-                            size: a.Button.Sizes.SMALL,
-                            color: a.Button.Colors.RED,
-                            look: a.Button.Looks.FILLED,
-                            disabled: !L,
-                            onClick: k,
-                            children: I.intl.string(I.t.ebGf4u)
+                        children: (0, i.jsx)(r.zxk, {
+                            size: r.zxk.Sizes.SMALL,
+                            color: r.zxk.Colors.RED,
+                            look: r.zxk.Looks.FILLED,
+                            disabled: !k,
+                            onClick: L,
+                            children: j.intl.string(j.t.ebGf4u)
                         })
                     })
                 ]

@@ -1,29 +1,24 @@
-e.d(t, {
-    Z: function () {
-        return u;
-    }
-});
+e.d(t, { Z: () => d });
 var i = e(200651);
 e(192379);
-var r = e(481060),
-    a = e(346479),
-    l = e(665906),
+var a = e(481060),
+    l = e(346479),
+    r = e(665906),
     o = e(388032);
-function u(n) {
+function d(n) {
     var t;
-    let e = (0, l.C7)(n),
-        u = (0, l.tc)(n),
-        d = n.isArchivedThread();
-    if (d ? u : e)
+    let e = (0, r.C7)(n),
+        d = (0, r.tc)(n);
+    if (n.isArchivedThread() ? d : e)
         return (null === (t = n.threadMetadata) || void 0 === t ? void 0 : t.archived)
-            ? (0, i.jsx)(r.MenuItem, {
+            ? (0, i.jsx)(a.sNh, {
                   id: 'unarchive-thread',
                   label: n.isForumPost() ? o.intl.string(o.t.cnRubW) : o.intl.string(o.t.S9E4Gx),
-                  action: () => a.Z.unarchiveThread(n, !1)
+                  action: () => l.Z.unarchiveThread(n, !1)
               })
-            : (0, i.jsx)(r.MenuItem, {
+            : (0, i.jsx)(a.sNh, {
                   id: 'archive-thread',
                   label: n.isForumPost() ? o.intl.string(o.t.BTs4KS) : o.intl.string(o.t.wiIevb),
-                  action: () => a.Z.archiveThread(n, !1)
+                  action: () => l.Z.archiveThread(n, !1)
               });
 }

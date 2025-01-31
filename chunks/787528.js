@@ -1,42 +1,37 @@
-r.d(n, {
-    J: function () {
-        return I;
-    }
-}),
-    r(848572);
-var i = r(474936),
-    a = r(137692),
-    o = r(749472),
-    s = r(403707),
-    l = r(860691),
-    u = r(447204),
-    c = r(110149),
-    d = r(557995),
-    f = r(39754),
-    p = r(64649),
-    h = r(783308),
-    _ = r(253141),
-    m = r(79914),
-    g = r(2563),
-    E = r(634071),
-    v = r(175185),
-    y = r(557821);
-let b = {
-        [i.JN.PREMIUM_TENURE_1_MONTH]: o,
-        [i.JN.PREMIUM_TENURE_3_MONTH]: y,
-        [i.JN.PREMIUM_TENURE_6_MONTH]: p,
-        [i.JN.PREMIUM_TENURE_12_MONTH]: m,
-        [i.JN.PREMIUM_TENURE_24_MONTH]: l,
-        [i.JN.PREMIUM_TENURE_36_MONTH]: c,
-        [i.JN.PREMIUM_TENURE_60_MONTH]: E,
-        [i.JN.PREMIUM_TENURE_72_MONTH]: d,
-        [i.w7.PREMIUM_TENURE_1_MONTH]: a,
-        [i.w7.PREMIUM_TENURE_3_MONTH]: v,
-        [i.w7.PREMIUM_TENURE_6_MONTH]: f,
-        [i.w7.PREMIUM_TENURE_12_MONTH]: _,
+n.d(t, { J: () => I }), n(848572);
+var i = n(474936),
+    r = n(137692),
+    a = n(749472),
+    s = n(403707),
+    o = n(860691),
+    l = n(447204),
+    u = n(110149),
+    c = n(557995),
+    d = n(39754),
+    f = n(64649),
+    _ = n(783308),
+    p = n(253141),
+    h = n(79914),
+    m = n(2563),
+    g = n(634071),
+    E = n(175185),
+    v = n(557821);
+let y = {
+        [i.JN.PREMIUM_TENURE_1_MONTH]: a,
+        [i.JN.PREMIUM_TENURE_3_MONTH]: v,
+        [i.JN.PREMIUM_TENURE_6_MONTH]: f,
+        [i.JN.PREMIUM_TENURE_12_MONTH]: h,
+        [i.JN.PREMIUM_TENURE_24_MONTH]: o,
+        [i.JN.PREMIUM_TENURE_36_MONTH]: u,
+        [i.JN.PREMIUM_TENURE_60_MONTH]: g,
+        [i.JN.PREMIUM_TENURE_72_MONTH]: c,
+        [i.w7.PREMIUM_TENURE_1_MONTH]: r,
+        [i.w7.PREMIUM_TENURE_3_MONTH]: E,
+        [i.w7.PREMIUM_TENURE_6_MONTH]: d,
+        [i.w7.PREMIUM_TENURE_12_MONTH]: p,
         [i.w7.PREMIUM_TENURE_24_MONTH]: s,
-        [i.w7.PREMIUM_TENURE_36_MONTH]: u,
-        [i.w7.PREMIUM_TENURE_60_MONTH]: g,
-        [i.w7.PREMIUM_TENURE_72_MONTH]: h
+        [i.w7.PREMIUM_TENURE_36_MONTH]: l,
+        [i.w7.PREMIUM_TENURE_60_MONTH]: m,
+        [i.w7.PREMIUM_TENURE_72_MONTH]: _
     },
-    I = (e) => b[e];
+    I = (e) => y[e];

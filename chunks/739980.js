@@ -1,18 +1,14 @@
-n.d(t, {
-    z: function () {
-        return c;
-    }
-});
+n.d(t, { z: () => c });
 var l = n(200651),
-    r = n(192379),
+    s = n(192379),
     i = n(954654),
-    s = n(937889),
-    a = n(930282),
+    a = n(937889),
+    r = n(930282),
     o = n(524444),
     u = n(315971);
 function c(e) {
     let { previewMessage: t } = e,
-        { content: n } = (0, s.ZP)(t, {
+        { content: n } = (0, a.ZP)(t, {
             allowHeading: !0,
             allowLinks: !0
         }),
@@ -27,7 +23,7 @@ function c(e) {
                 maxWidth: 225,
                 analyticsSource: 'ApplicationCommandSharePreview'
             });
-            return (0, l.jsx)(r.Fragment, { children: n }, t);
+            return (0, l.jsx)(s.Fragment, { children: n }, t);
         });
     return (0, l.jsxs)('div', {
         className: u.previewContainer,
@@ -36,7 +32,7 @@ function c(e) {
             (0, l.jsxs)('div', {
                 className: u.content,
                 children: [
-                    (0, l.jsx)(a.ZP, {
+                    (0, l.jsx)(r.ZP, {
                         message: t,
                         content: n
                     }),

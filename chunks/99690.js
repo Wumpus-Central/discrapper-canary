@@ -1,18 +1,19 @@
-var i = r(200651),
-    a = r(192379),
-    o = r(481060),
-    s = r(372900);
-function l(e, n, r, i) {
-    return e.getAvatarURL(i, n, r);
+n.d(t, { Z: () => l });
+var i = n(200651),
+    r = n(192379),
+    a = n(481060),
+    s = n(372900);
+function o(e, t, n, i) {
+    return e.getAvatarURL(i, t, n);
 }
-n.Z = a.memo(function (e) {
-    let { user: n, size: r = o.AvatarSizes.SIZE_32, animate: u = !1, 'aria-hidden': c = !1, ...d } = e,
-        f = a.useContext(s.Z);
-    return (0, i.jsx)(o.Avatar, {
-        src: l(n, (0, o.getAvatarSize)(r), u, f),
-        size: r,
-        'aria-label': c ? void 0 : n.username,
-        'aria-hidden': c,
-        ...d
+let l = r.memo(function (e) {
+    let { user: t, size: n = a.EFr.SIZE_32, animate: l = !1, 'aria-hidden': u = !1, ...c } = e,
+        d = r.useContext(s.Z);
+    return (0, i.jsx)(a.qEK, {
+        src: o(t, (0, a.pxk)(n), l, d),
+        size: n,
+        'aria-label': u ? void 0 : t.username,
+        'aria-hidden': u,
+        ...c
     });
 });

@@ -1,13 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return v;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => v }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    l = n(192379),
+    r = n(120356),
+    a = n.n(r),
     s = n(442837),
     o = n(481060),
     c = n(570140),
@@ -17,8 +12,8 @@ var i = n(200651),
     m = n(799777),
     p = n(5967),
     g = n(346329),
-    f = n(981631),
-    _ = n(388032),
+    _ = n(981631),
+    f = n(388032),
     E = n(860536);
 function I(e, t, n) {
     return (
@@ -33,7 +28,7 @@ function I(e, t, n) {
         e
     );
 }
-class C extends r.Component {
+class C extends l.Component {
     componentDidMount() {
         document.addEventListener('keydown', this.handleKeyDown);
     }
@@ -50,10 +45,10 @@ class C extends r.Component {
     updateActiveRow(e) {
         let { applicationViewItems: t, activeRowKey: n } = this.props,
             i = t.findIndex((e) => e.key === n),
-            r = 0;
-        i >= 0 && (r = (i + e) % t.length) < 0 && (r = t.length - 1);
-        let l = t[r];
-        d.wX(null != l ? l.key : null, !0);
+            l = 0;
+        i >= 0 && (l = (i + e) % t.length) < 0 && (l = t.length - 1);
+        let r = t[l];
+        d.wX(null != r ? r.key : null, !0);
     }
     render() {
         let { filterQuery: e } = this.props,
@@ -63,7 +58,7 @@ class C extends r.Component {
                 [E.libraryFilter]: !0,
                 [E.focused]: t
             }),
-            children: (0, i.jsx)(o.SearchBar, {
+            children: (0, i.jsx)(o.E1j, {
                 className: E.searchBar,
                 ref: this.setRef,
                 onChange: d.JZ,
@@ -75,7 +70,7 @@ class C extends r.Component {
                 },
                 maxLength: 100,
                 query: e,
-                placeholder: _.intl.string(_.t.aSxWSk)
+                placeholder: f.intl.string(f.t.aSxWSk)
             })
         });
     }
@@ -88,46 +83,46 @@ class C extends r.Component {
             }),
             I(this, 'handleKeyDown', (e) => {
                 var t;
-                let { activeRowKey: n, hasModalOpen: i, applicationViewItems: r } = this.props,
-                    { searchBarRef: l } = this;
-                if (i || e.ctrlKey || e.altKey || e.metaKey || null == l) return;
+                let { activeRowKey: n, hasModalOpen: i, applicationViewItems: l } = this.props,
+                    { searchBarRef: r } = this;
+                if (i || e.ctrlKey || e.altKey || e.metaKey || null == r) return;
                 let a = null === (t = (0, p.uB)(e)) || void 0 === t ? void 0 : t.activeElement;
-                if (!(a !== l.inputRef.current && (0, p.VG)(a)))
+                if (!(a !== r.inputRef.current && (0, p.VG)(a)))
                     switch (e.which) {
-                        case f.yXg.ESCAPE:
-                            e.target !== l.inputRef.current ? this.reset() : null != l.inputRef.current && l.blur();
+                        case _.yXg.ESCAPE:
+                            e.target !== r.inputRef.current ? this.reset() : null != r.inputRef.current && r.blur();
                             break;
-                        case f.yXg.ENTER:
+                        case _.yXg.ENTER:
                             if (null != n) {
                                 e.preventDefault();
-                                let t = r.find((e) => e.key === n);
+                                let t = l.find((e) => e.key === n);
                                 if (null == t) return;
                                 let i = t.libraryApplication;
                                 g.performDefaultLibraryApplicationAction(i, {
                                     analyticsParams: {
-                                        source: f.Sbl.APPLICATION_LIBRARY,
+                                        source: _.Sbl.APPLICATION_LIBRARY,
                                         location: {
-                                            page: f.ZY5.LIBRARY,
-                                            section: f.jXE.LIBRARY_APPLICATION_LIST,
-                                            object: f.qAy.BUTTON_CTA
+                                            page: _.ZY5.LIBRARY,
+                                            section: _.jXE.LIBRARY_APPLICATION_LIST,
+                                            object: _.qAy.BUTTON_CTA
                                         }
                                     }
                                 });
                             }
                             break;
-                        case f.yXg.ARROW_DOWN:
-                        case f.yXg.ARROW_UP:
-                            e.preventDefault(), e.stopPropagation(), this.updateActiveRow(e.which === f.yXg.ARROW_DOWN ? 1 : -1);
+                        case _.yXg.ARROW_DOWN:
+                        case _.yXg.ARROW_UP:
+                            e.preventDefault(), e.stopPropagation(), this.updateActiveRow(e.which === _.yXg.ARROW_DOWN ? 1 : -1);
                             break;
                         default:
-                            null != l.inputRef.current && e.target !== l.inputRef.current && l.focus();
+                            null != r.inputRef.current && e.target !== r.inputRef.current && r.focus();
                     }
             });
     }
 }
 function v() {
     let e = (0, s.e7)([u.Z], () => u.Z.hasLayers()),
-        t = (0, o.useModalsStore)(o.hasAnyModalOpenSelector);
+        t = (0, o.s9z)(o.JQI);
     return (0, i.jsx)(C, {
         activeRowKey: (0, s.e7)([m.Z], () => m.Z.activeRowKey),
         hasModalOpen: t || e,

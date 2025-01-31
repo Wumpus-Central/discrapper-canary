@@ -1,125 +1,120 @@
-n.r(t),
-    n.d(t, {
-        default: function () {
-            return x;
-        }
-    });
-var a = n(200651),
-    l = n(192379),
-    i = n(286379),
-    r = n(442837),
-    o = n(481060),
-    s = n(565138),
-    u = n(797614),
-    d = n(769654),
-    c = n(695346),
-    f = n(430824),
-    m = n(88658),
-    g = n(401416),
-    S = n(920133),
-    h = n(388032),
-    D = n(215084),
-    _ = n(444812);
-function x(e) {
-    let { transitionState: t, guildId: x, onClose: I } = e,
-        b = (0, r.e7)([f.Z], () => f.Z.getGuild(x));
-    return (l.useEffect(() => {
-        (0, g.Y)(x), (0, S.L)(S.Q.MODAL_VIEWED, x), u.Z.increment({ name: i.V.DM_SETTINGS_UPSELL_VIEW });
-    }, [x]),
-    null == b)
+l.d(t, { default: () => _ });
+var n = l(200651),
+    a = l(192379),
+    i = l(286379),
+    r = l(442837),
+    s = l(481060),
+    o = l(565138),
+    d = l(797614),
+    c = l(769654),
+    u = l(695346),
+    m = l(430824),
+    g = l(88658),
+    b = l(401416),
+    S = l(920133),
+    f = l(388032),
+    h = l(215084),
+    x = l(444812);
+function _(e) {
+    let { transitionState: t, guildId: _, onClose: D } = e,
+        I = (0, r.e7)([m.Z], () => m.Z.getGuild(_));
+    return (a.useEffect(() => {
+        (0, b.Y)(_), (0, S.L)(S.Q.MODAL_VIEWED, _), d.Z.increment({ name: i.V.DM_SETTINGS_UPSELL_VIEW });
+    }, [_]),
+    null == I)
         ? null
-        : (0, a.jsx)(o.ModalRoot, {
+        : (0, n.jsx)(s.Y0X, {
               transitionState: t,
-              className: D.modal,
-              children: (0, a.jsxs)('form', {
+              className: h.modal,
+              children: (0, n.jsxs)('form', {
                   onSubmit: (e) => {
                       e.preventDefault();
-                      let t = (0, m.YK)();
-                      t.add(x), c.h2.updateSetting(Array.from(t)).then(() => (0, o.showToast)((0, o.createToast)(h.intl.string(h.t.rlYD1d), o.ToastType.SUCCESS))), I(), (0, S.L)(S.Q.MODAL_DISABLED_DMS, x);
+                      let t = (0, g.YK)();
+                      t.add(_), u.h2.updateSetting(Array.from(t)).then(() => (0, s.showToast)((0, s.createToast)(f.intl.string(f.t.rlYD1d), s.ToastType.SUCCESS))), D(), (0, S.L)(S.Q.MODAL_DISABLED_DMS, _);
                   },
                   children: [
-                      (0, a.jsx)('img', {
+                      (0, n.jsx)('img', {
                           alt: '',
-                          className: D.headerImage,
-                          src: _
+                          className: h.headerImage,
+                          src: x
                       }),
-                      (0, a.jsxs)(o.ModalHeader, {
+                      (0, n.jsxs)(s.xBx, {
                           separator: !1,
-                          className: D.header,
+                          className: h.header,
                           children: [
-                              (0, a.jsx)(o.Heading, {
+                              (0, n.jsx)(s.X6q, {
                                   variant: 'heading-lg/bold',
-                                  className: D.title,
-                                  children: h.intl.string(h.t.w2BvnJ)
+                                  className: h.title,
+                                  children: f.intl.string(f.t.w2BvnJ)
                               }),
-                              (0, a.jsx)(o.Text, {
+                              (0, n.jsx)(s.Text, {
                                   variant: 'text-md/normal',
                                   color: 'header-secondary',
-                                  className: D.body,
-                                  children: h.intl.format(h.t.Depjkp, { guild_name: b.name })
+                                  className: h.body,
+                                  children: f.intl.format(f.t.Depjkp, { guild_name: I.name })
                               })
                           ]
                       }),
-                      (0, a.jsxs)(o.ModalContent, {
+                      (0, n.jsxs)(s.hzk, {
                           children: [
-                              (0, a.jsx)(o.Text, {
+                              (0, n.jsx)(s.Text, {
                                   variant: 'eyebrow',
                                   color: 'header-secondary',
-                                  className: D.subtitle,
-                                  children: h.intl.string(h.t.KPB2i4)
+                                  className: h.subtitle,
+                                  children: f.intl.string(f.t.KPB2i4)
                               }),
-                              (0, a.jsx)('div', {
-                                  className: D.guildContainer,
-                                  children: (0, a.jsxs)('div', {
-                                      className: D.guildInfo,
+                              (0, n.jsx)('div', {
+                                  className: h.guildContainer,
+                                  children: (0, n.jsxs)('div', {
+                                      className: h.guildInfo,
                                       children: [
-                                          (0, a.jsx)(s.Z, {
-                                              guild: b,
-                                              size: s.Z.Sizes.SMALL
+                                          (0, n.jsx)(o.Z, {
+                                              guild: I,
+                                              size: o.Z.Sizes.SMALL
                                           }),
-                                          (0, a.jsx)(o.Text, {
-                                              className: D.guildName,
+                                          (0, n.jsx)(s.Text, {
+                                              className: h.guildName,
                                               variant: 'text-md/semibold',
-                                              children: b.name
+                                              children: I.name
                                           })
                                       ]
                                   })
                               }),
-                              (0, a.jsxs)('div', {
-                                  className: D.content,
+                              (0, n.jsxs)('div', {
+                                  className: h.content,
                                   children: [
-                                      (0, a.jsx)(o.Button, {
-                                          className: D.button,
+                                      (0, n.jsx)(s.zxk, {
+                                          className: h.button,
                                           type: 'submit',
-                                          color: o.Button.Colors.BRAND,
-                                          size: o.Button.Sizes.MEDIUM,
-                                          children: h.intl.string(h.t.TD7iU1)
+                                          color: s.zxk.Colors.BRAND,
+                                          size: s.zxk.Sizes.MEDIUM,
+                                          children: f.intl.string(f.t.TD7iU1)
                                       }),
-                                      (0, a.jsx)(o.Button, {
-                                          className: D.button,
-                                          color: o.Button.Colors.PRIMARY,
+                                      (0, n.jsx)(s.zxk, {
+                                          className: h.button,
+                                          color: s.zxk.Colors.PRIMARY,
                                           onClick: () => {
-                                              I(), (0, S.L)(S.Q.MODAL_DISMISSED, x);
+                                              D(), (0, S.L)(S.Q.MODAL_DISMISSED, _);
                                           },
-                                          children: h.intl.string(h.t.PsWbcn)
+                                          children: f.intl.string(f.t.PsWbcn)
                                       }),
-                                      (0, a.jsx)(o.Text, {
+                                      (0, n.jsx)(s.Text, {
                                           variant: 'text-xs/normal',
                                           color: 'header-secondary',
-                                          className: D.footer,
-                                          children: h.intl.format(h.t.IzZxXV, {
+                                          className: h.footer,
+                                          children: f.intl.format(f.t.IzZxXV, {
                                               onClick: () => {
-                                                  I(),
-                                                      (0, d.X)(x),
-                                                      (0, o.openModalLazy)(async () => {
-                                                          let { default: e } = await Promise.all([n.e('50506'), n.e('96211'), n.e('23217'), n.e('84605'), n.e('8016'), n.e('51269'), n.e('22878'), n.e('90508'), n.e('13351'), n.e('66711'), n.e('17938'), n.e('21628'), n.e('6380'), n.e('46097'), n.e('76540'), n.e('8739'), n.e('58059'), n.e('86282'), n.e('18543'), n.e('18895'), n.e('68445'), n.e('19652'), n.e('99393'), n.e('99008'), n.e('37229'), n.e('22646'), n.e('95393'), n.e('3940'), n.e('25183'), n.e('80284'), n.e('81463'), n.e('58191'), n.e('31135'), n.e('48923'), n.e('30419'), n.e('69174'), n.e('18824'), n.e('30203'), n.e('25343'), n.e('71490')]).then(n.bind(n, 241420));
+                                                  D(),
+                                                      (0, c.X)(_),
+                                                      (0, s.ZDy)(async () => {
+                                                          let { default: e } = await Promise.all([l.e('50506'), l.e('68880'), l.e('23217'), l.e('84605'), l.e('51269'), l.e('8016'), l.e('22878'), l.e('90508'), l.e('13351'), l.e('66711'), l.e('17938'), l.e('53937'), l.e('6380'), l.e('46097'), l.e('76540'), l.e('8739'), l.e('58059'), l.e('86282'), l.e('18543'), l.e('18895'), l.e('68445'), l.e('30243'), l.e('99393'), l.e('68241'), l.e('49508'), l.e('22646'), l.e('3940'), l.e('25183'), l.e('80284'), l.e('18533'), l.e('73448'), l.e('48923'), l.e('30419'), l.e('18824'), l.e('60691'), l.e('3655'), l.e('70298'), l.e('84466'), l.e('86133'), l.e('4228'), l.e('86919')]).then(l.bind(l, 241420));
                                                           return (t) =>
-                                                              (0, a.jsx)(e, {
+                                                              (0, n.jsx)(e, {
                                                                   ...t,
-                                                                  guild: b
+                                                                  guild: I
                                                               });
                                                       }),
-                                                      (0, S.L)(S.Q.MODAL_GUILD_SETTINGS_CLICKED, x);
+                                                      (0, S.L)(S.Q.MODAL_GUILD_SETTINGS_CLICKED, _);
                                               }
                                           })
                                       })

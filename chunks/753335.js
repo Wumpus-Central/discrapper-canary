@@ -1,10 +1,11 @@
+n.d(t, { Z: () => c });
 var i = n(570140),
-    r = n(703656),
-    l = n(998502),
+    l = n(703656),
+    r = n(998502),
     a = n(852926),
     s = n(186901),
     o = n(981631);
-t.Z = {
+let c = {
     [o.Etm.OPEN_MESSAGE]: {
         scope: s.lH,
         handler(e) {
@@ -20,7 +21,7 @@ t.Z = {
                 });
                 return;
             }
-            (0, r.dL)({ pathname: o.Z5c.CHANNEL(t, n, s) }), l.ZP.focus();
+            (0, l.dL)({ pathname: o.Z5c.CHANNEL(t, n, s) }), r.ZP.focus();
         }
     }
 };

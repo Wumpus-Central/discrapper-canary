@@ -1,42 +1,38 @@
-r.d(n, {
-    Z: function () {
-        return c;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(481060),
-    o = r(784712),
-    s = r(531578),
-    l = r(388032);
-function u(e, n, r) {
-    let { rating: i, problem: s, feedback: u } = r;
-    (0, o.Z)({
+n.d(t, { Z: () => u });
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(784712),
+    s = n(531578),
+    o = n(388032);
+function l(e, t, n) {
+    let { rating: i, problem: s, feedback: l } = n;
+    (0, a.Z)({
         problem: s,
         summary: e,
-        feedback: u,
-        guildId: n.guild_id,
-        channelId: n.id,
+        feedback: l,
+        guildId: t.guild_id,
+        channelId: t.id,
         location: 'Summary divider',
         rating: i
     }),
-        (0, a.showToast)((0, a.createToast)(l.intl.string(l.t['d9+vQ0']), a.ToastType.SUCCESS));
+        (0, r.showToast)((0, r.createToast)(o.intl.string(o.t['d9+vQ0']), r.ToastType.SUCCESS));
 }
-function c(e) {
-    let { summary: n, channel: o, rating: l } = e;
-    null != n &&
-        (l === s.aZ.BAD
-            ? (0, a.openModalLazy)(async () => {
-                  let { default: e } = await r.e('62104').then(r.bind(r, 580584));
-                  return (r) =>
+function u(e) {
+    let { summary: t, channel: a, rating: o } = e;
+    null != t &&
+        (o === s.aZ.BAD
+            ? (0, r.ZDy)(async () => {
+                  let { default: e } = await n.e('62104').then(n.bind(n, 580584));
+                  return (n) =>
                       (0, i.jsx)(e, {
-                          ...r,
-                          onSubmit: (e) => u(n, o, e),
-                          startRating: l
+                          ...n,
+                          onSubmit: (e) => l(t, a, e),
+                          startRating: o
                       });
               })
-            : u(n, o, {
-                  rating: l,
+            : l(t, a, {
+                  rating: o,
                   problem: null,
                   feedback: '',
                   dontShowAgain: !1

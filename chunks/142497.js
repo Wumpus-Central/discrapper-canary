@@ -1,19 +1,13 @@
-r.d(n, {
-    Kw: function () {
-        return s;
-    },
-    Po: function () {
-        return u;
-    },
-    hv: function () {
-        return l;
-    }
+n.d(t, {
+    Kw: () => s,
+    Po: () => l,
+    hv: () => o
 });
-var i = r(570140),
-    a = r(626135),
-    o = r(981631);
+var i = n(570140),
+    r = n(626135),
+    a = n(981631);
 function s(e) {
-    a.default.track(o.rMx.HOTSPOT_HIDDEN, { hotspot_location: e }),
+    r.default.track(a.rMx.HOTSPOT_HIDDEN, { hotspot_location: e }),
         i.Z.wait(() => {
             i.Z.dispatch({
                 type: 'HOTSPOT_HIDE',
@@ -21,14 +15,14 @@ function s(e) {
             });
         });
 }
-function l(e, n) {
+function o(e, t) {
     i.Z.dispatch({
         type: 'HOTSPOT_OVERRIDE_SET',
         location: e,
-        enabled: n
+        enabled: t
     });
 }
-function u(e) {
+function l(e) {
     i.Z.dispatch({
         type: 'HOTSPOT_OVERRIDE_CLEAR',
         location: e

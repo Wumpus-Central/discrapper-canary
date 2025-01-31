@@ -1,80 +1,76 @@
-n.d(t, {
-    Z: function () {
-        return E;
-    }
-});
+n.d(t, { Z: () => E });
 var i = n(200651),
-    r = n(192379),
-    s = n(120356),
-    a = n.n(s),
-    l = n(442837),
+    s = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    a = n(442837),
     o = n(481060),
     c = n(846027),
     d = n(921801),
     u = n(131951),
     m = n(996073),
-    g = n(526761),
-    h = n(726985),
-    p = n(388032),
+    h = n(526761),
+    g = n(726985),
+    _ = n(388032),
     x = n(232186);
-function f(e) {
+function p(e) {
     let { refreshStyles: t = !1 } = e,
-        n = (0, l.e7)([u.Z], () => u.Z.getExperimentalEncoders());
+        n = (0, a.e7)([u.Z], () => u.Z.getExperimentalEncoders());
     return (0, i.jsx)(d.F, {
-        setting: h.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_EXPERIMENTAL_ENCODERS,
-        children: (0, i.jsx)(o.FormSwitch, {
-            className: a()(x.marginTop8, x.marginBottom20),
+        setting: g.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_EXPERIMENTAL_ENCODERS,
+        children: (0, i.jsx)(o.j7V, {
+            className: l()(x.marginTop8, x.marginBottom20),
             value: n,
             onChange: c.Z.setExperimentalEncoders,
             hideBorder: t,
-            children: p.intl.string(p.t.AxnPm5)
+            children: _.intl.string(_.t.AxnPm5)
         })
     });
 }
 function E(e) {
     let { refreshStyles: t = !1 } = e,
-        { openH264: n, hardwareEncoding: s } = (0, l.cj)([u.Z], () => ({
+        { openH264: n, hardwareEncoding: r } = (0, a.cj)([u.Z], () => ({
             openH264: u.Z.getOpenH264(),
             hardwareEncoding: u.Z.getHardwareEncoding()
         })),
-        E = r.useRef(null);
-    (0, m.Z)(E, g.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION);
-    let _ = (0, i.jsxs)(i.Fragment, {
+        E = s.useRef(null);
+    (0, m.Z)(E, h.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION);
+    let C = (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(d.F, {
-                setting: h.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_OPENH264,
-                children: (0, i.jsx)(o.FormSwitch, {
-                    className: t ? null : a()(x.marginTop8, x.marginBottom20),
+                setting: g.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_OPENH264,
+                children: (0, i.jsx)(o.j7V, {
+                    className: t ? null : l()(x.marginTop8, x.marginBottom20),
                     value: n,
                     onChange: c.Z.setOpenH264,
                     hideBorder: t,
-                    children: p.intl.string(p.t['71Ve19'])
+                    children: _.intl.string(_.t['71Ve19'])
                 })
             }),
             (0, i.jsx)(d.F, {
-                setting: h.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_HARDWARE_ACCELERATION,
-                children: (0, i.jsx)(o.FormSwitch, {
+                setting: g.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO_HARDWARE_ACCELERATION,
+                children: (0, i.jsx)(o.j7V, {
                     style: { scrollMarginTop: '48px' },
                     containerRef: E,
-                    className: t ? null : a()(x.marginTop8, x.marginBottom20),
-                    value: s,
+                    className: t ? null : l()(x.marginTop8, x.marginBottom20),
+                    value: r,
                     onChange: c.Z.setHardwareEncoding,
-                    note: p.intl.string(p.t.P1UKqq),
+                    note: _.intl.string(_.t.P1UKqq),
                     hideBorder: t,
-                    children: p.intl.string(p.t.Sln58f)
+                    children: _.intl.string(_.t.Sln58f)
                 })
             }),
-            (0, i.jsx)(f, { refreshStyles: t })
+            (0, i.jsx)(p, { refreshStyles: t })
         ]
     });
     return (0, i.jsx)(d.F, {
-        setting: h.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO,
+        setting: g.s6.VOICE_AND_VIDEO_ADVANCED_CODECS_VIDEO,
         children: t
-            ? _
-            : (0, i.jsx)(o.FormSection, {
+            ? C
+            : (0, i.jsx)(o.hjN, {
                   className: x.marginBottom20,
-                  title: p.intl.string(p.t.Tceiq6),
-                  children: _
+                  title: _.intl.string(_.t.Tceiq6),
+                  children: C
               })
     });
 }

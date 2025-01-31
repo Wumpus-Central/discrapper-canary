@@ -1,55 +1,53 @@
-r.d(n, {
-    Y: function () {
-        return i;
-    }
+n.d(t, {
+    Y: () => o,
+    Z: () => h
 });
 var i,
-    a,
-    o = r(442837),
-    s = r(570140);
-function l(e, n, r) {
+    r = n(442837),
+    a = n(570140);
+function s(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-!(function (e) {
-    (e[(e.UNKNOWN = 0)] = 'UNKNOWN'), (e[(e.PENDING = 1)] = 'PENDING'), (e[(e.DONE = 2)] = 'DONE');
-})(i || (i = {}));
-let u = 0,
+var o = (function (e) {
+    return (e[(e.UNKNOWN = 0)] = 'UNKNOWN'), (e[(e.PENDING = 1)] = 'PENDING'), (e[(e.DONE = 2)] = 'DONE'), e;
+})({});
+let l = 0,
+    u = null,
     c = null,
-    d = null,
-    f = null;
-function p(e) {
-    (u = 1), (c = e.loadId);
+    d = null;
+function f(e) {
+    (l = 1), (u = e.loadId);
 }
-function h(e) {
-    var n, r;
-    if (c === e.loadId) (d = null !== (n = e.skuId) && void 0 !== n ? n : null), (f = null !== (r = e.skuSubscriptionPlanId) && void 0 !== r ? r : null), (u = 2);
+function _(e) {
+    var t, n;
+    u === e.loadId && ((c = null !== (t = e.skuId) && void 0 !== t ? t : null), (d = null !== (n = e.skuSubscriptionPlanId) && void 0 !== n ? n : null), (l = 2));
 }
-class _ extends (a = o.ZP.Store) {
+class p extends (i = r.ZP.Store) {
     get browserCheckoutState() {
-        return u;
+        return l;
     }
     get loadId() {
-        return c;
+        return u;
     }
     get skuId() {
-        return d;
+        return c;
     }
     get planId() {
-        return f;
+        return d;
     }
 }
-l(_, 'displayName', 'BrowserCheckoutStateStore'),
-    (n.Z = new _(s.Z, {
-        USER_PAYMENT_BROWSER_CHECKOUT_STARTED: p,
-        USER_PAYMENT_BROWSER_CHECKOUT_DONE: h
-    }));
+s(p, 'displayName', 'BrowserCheckoutStateStore');
+let h = new p(a.Z, {
+    USER_PAYMENT_BROWSER_CHECKOUT_STARTED: f,
+    USER_PAYMENT_BROWSER_CHECKOUT_DONE: _
+});

@@ -1,122 +1,114 @@
-e.r(t),
-    e.d(t, {
-        default: function () {
-            return p;
-        }
-    }),
-    e(47120);
-var i = e(200651),
-    l = e(192379),
-    a = e(512722),
-    s = e.n(a),
-    o = e(481060),
-    r = e(935369),
-    c = e(728345),
-    d = e(313201),
-    u = e(577275),
-    g = e(829857),
-    m = e(388032),
-    x = e(129224);
-function p(n) {
-    var t, e;
-    let { transitionState: a, application: p, onClose: h } = n,
-        j = (0, d.Dt)(),
-        [v, _] = l.useState(null == p ? void 0 : null === (t = p.team) || void 0 === t ? void 0 : t.id),
-        { teams: b } = (0, u.Z)(),
-        f = l.useMemo(
+t.d(i, { default: () => h }), t(47120);
+var l = t(200651),
+    e = t(192379),
+    s = t(512722),
+    a = t.n(s),
+    r = t(481060),
+    o = t(935369),
+    c = t(728345),
+    d = t(313201),
+    u = t(577275),
+    x = t(829857),
+    g = t(388032),
+    m = t(129224);
+function h(n) {
+    var i, t;
+    let { transitionState: s, application: h, onClose: _ } = n,
+        p = (0, d.Dt)(),
+        [j, v] = e.useState(null == h ? void 0 : null === (i = h.team) || void 0 === i ? void 0 : i.id),
+        { teams: C } = (0, u.Z)(),
+        b = e.useMemo(
             () =>
-                b
-                    .filter((n) => n.payout_account_status === g.C.ACTIVE)
-                    .map((n) => ({
-                        label: n.name,
-                        value: n.id
-                    })),
-            [b]
+                C.filter((n) => n.payout_account_status === x.C.ACTIVE).map((n) => ({
+                    label: n.name,
+                    value: n.id
+                })),
+            [C]
         ),
-        C = (null == p ? void 0 : null === (e = p.team) || void 0 === e ? void 0 : e.id) !== v,
-        [B, { loading: H, error: N }] = (0, r.Z)(c.ZP.transferApplication),
-        w = async () => {
-            s()(null != p, 'no application'),
-                s()(null != v, 'no team selected'),
+        f = (null == h ? void 0 : null === (t = h.team) || void 0 === t ? void 0 : t.id) !== j,
+        [k, { loading: N, error: w }] = (0, o.Z)(c.ZP.transferApplication),
+        z = async () => {
+            a()(null != h, 'no application'),
+                a()(null != j, 'no team selected'),
                 null !=
-                    (await B({
-                        applicationId: p.id,
-                        teamId: v
-                    })) && h();
+                    (await k({
+                        applicationId: h.id,
+                        teamId: j
+                    })) && _();
         },
-        S = (null == p ? void 0 : p.team) != null;
-    return (0, i.jsxs)(o.ModalRoot, {
-        transitionState: a,
-        'aria-labelledby': j,
+        R = (null == h ? void 0 : h.team) != null;
+    return (0, l.jsxs)(r.Y0X, {
+        transitionState: s,
+        'aria-labelledby': p,
         children: [
-            (0, i.jsxs)(o.ModalHeader, {
+            (0, l.jsxs)(r.xBx, {
                 children: [
-                    (0, i.jsx)(o.Heading, {
-                        id: j,
+                    (0, l.jsx)(r.X6q, {
+                        id: p,
                         variant: 'heading-md/semibold',
-                        children: S ? m.intl.string(m.t['4TveVl']) : m.intl.string(m.t.feBUAQ)
+                        children: R ? g.intl.string(g.t['4TveVl']) : g.intl.string(g.t.feBUAQ)
                     }),
-                    (0, i.jsx)(o.ModalCloseButton, {
-                        className: x.closeButton,
-                        onClick: h
+                    (0, l.jsx)(r.olH, {
+                        className: m.closeButton,
+                        onClick: _
                     })
                 ]
             }),
-            (0, i.jsxs)(o.ModalContent, {
-                className: x.content,
+            (0, l.jsxs)(r.hzk, {
+                className: m.content,
                 children: [
-                    S
-                        ? (0, i.jsxs)(i.Fragment, {
+                    R
+                        ? (0, l.jsxs)(l.Fragment, {
                               children: [
-                                  (0, i.jsx)(o.FormText, { children: m.intl.string(m.t.c7HS0t) }),
-                                  (0, i.jsx)(o.Spacer, { size: 8 }),
-                                  (0, i.jsxs)(o.Heading, {
-                                      className: x.warningHeading,
+                                  (0, l.jsx)(r.R94, { children: g.intl.string(g.t.c7HS0t) }),
+                                  (0, l.jsx)(r.LZC, { size: 8 }),
+                                  (0, l.jsxs)(r.X6q, {
+                                      className: m.warningHeading,
                                       variant: 'text-sm/semibold',
                                       color: 'text-danger',
                                       children: [
-                                          (0, i.jsx)(o.CircleWarningIcon, {
+                                          (0, l.jsx)(r.P4T, {
                                               size: 'xs',
                                               color: 'currentColor',
-                                              className: x.warningIcon
+                                              className: m.warningIcon
                                           }),
-                                          m.intl.string(m.t.Caz8nJ)
+                                          g.intl.string(g.t.Caz8nJ)
                                       ]
                                   }),
-                                  (0, i.jsx)(o.Spacer, { size: 4 }),
-                                  (0, i.jsx)(o.FormText, {
-                                      type: o.FormText.Types.ERROR,
-                                      children: m.intl.string(m.t.u4ddHR)
+                                  (0, l.jsx)(r.LZC, { size: 4 }),
+                                  (0, l.jsx)(r.R94, {
+                                      type: r.R94.Types.ERROR,
+                                      children: g.intl.string(g.t.u4ddHR)
                                   })
                               ]
                           })
-                        : (0, i.jsx)(o.FormText, { children: m.intl.string(m.t.atZ50N) }),
-                    null != N ? (0, i.jsx)(o.FormErrorBlock, { children: N.message }) : null,
-                    (0, i.jsx)(o.Spacer, { size: 16 }),
-                    (0, i.jsx)(o.FormItem, {
-                        title: S ? m.intl.string(m.t.xZ6ZLy) : m.intl.string(m.t.bfmKdH),
+                        : (0, l.jsx)(r.R94, { children: g.intl.string(g.t.atZ50N) }),
+                    null != w ? (0, l.jsx)(r.kzN, { children: w.message }) : null,
+                    (0, l.jsx)(r.LZC, { size: 16 }),
+                    (0, l.jsx)(r.xJW, {
+                        title: R ? g.intl.string(g.t.xZ6ZLy) : g.intl.string(g.t.bfmKdH),
                         required: !0,
-                        children: (0, i.jsx)(o.SingleSelect, {
-                            className: x.__invalid_teamSelect,
-                            options: f,
-                            placeholder: m.intl.string(m.t.QXf93N),
-                            value: v,
-                            isDisabled: 0 === f.length,
-                            onChange: (n) => _(n),
-                            'aria-label': m.intl.string(m.t.QXf93N)
+                        children: (0, l.jsx)(r.q4e, {
+                            className: m.__invalid_teamSelect,
+                            options: b,
+                            placeholder: g.intl.string(g.t.QXf93N),
+                            value: j,
+                            isDisabled: 0 === b.length,
+                            onChange: (n) => v(n),
+                            'aria-label': g.intl.string(g.t.QXf93N)
                         })
                     })
                 ]
             }),
-            (0, i.jsx)(o.ModalFooter, {
-                className: x.__invalid_footer,
-                children: (0, i.jsx)(o.Button, {
-                    color: o.Button.Colors.RED,
-                    className: x.__invalid_goBackButton,
-                    submitting: H,
-                    disabled: !C,
-                    onClick: w,
-                    children: m.intl.string(m.t.R3BPHx)
+            (0, l.jsx)(r.mzw, {
+                className: m.__invalid_footer,
+                children: (0, l.jsx)(r.zxk, {
+                    color: r.zxk.Colors.RED,
+                    className: m.__invalid_goBackButton,
+                    submitting: N,
+                    disabled: !f,
+                    onClick: z,
+                    children: g.intl.string(g.t.R3BPHx)
                 })
             })
         ]

@@ -1,9 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return d;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => u }), n(47120);
 var i = n(200651),
     l = n(192379),
     r = n(481060),
@@ -11,30 +6,30 @@ var i = n(200651),
     o = n(768581),
     s = n(682662),
     c = n(662146),
-    u = n(285280);
-function d(e) {
-    let [t, d] = l.useState(!1);
+    d = n(285280);
+function u(e) {
+    let [t, u] = l.useState(!1);
     return (0, i.jsx)(s.H, {
         children: (0, i.jsx)(c.Z, {
             text: e.name,
-            children: (0, i.jsx)(r.BlobMask, {
-                className: u.circleIconButton,
+            children: (0, i.jsx)(r.aRk, {
+                className: d.circleIconButton,
                 selected: t,
-                lowerBadge: (0, i.jsx)(r.IconBadge, {
-                    icon: (0, r.makeIconCompat)(a.Z),
+                lowerBadge: (0, i.jsx)(r.G2e, {
+                    icon: (0, r.GSL)(a.Z),
                     disableColor: !0,
-                    className: u.geoRestrictedBadge
+                    className: d.geoRestrictedBadge
                 }),
-                children: (0, i.jsx)(r.NavItem, {
+                children: (0, i.jsx)(r.LYs, {
                     name: e.name,
                     onMouseEnter: () => {
-                        d(!0);
+                        u(!0);
                     },
                     onMouseLeave: () => {
-                        d(!1);
+                        u(!1);
                     },
                     onClick: () => {
-                        (0, r.openModalLazy)(async () => {
+                        (0, r.ZDy)(async () => {
                             let { default: t } = await n.e('42358').then(n.bind(n, 210995));
                             return (n) =>
                                 (0, i.jsx)(t, {

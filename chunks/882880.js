@@ -1,7 +1,9 @@
-e.exports = {
-    premiumFeatureBorder: 'premiumFeatureBorder_c6d722 featureBorder_c6d722',
-    limitedFeatureBorder: 'limitedFeatureBorder_c6d722 featureBorder_c6d722',
-    background: 'background_c6d722',
-    premiumBackground: 'premiumBackground_c6d722 background_c6d722',
-    limitedBackground: 'limitedBackground_c6d722 background_c6d722'
+var i = {
+    featureBorder: 'featureBorder__65c15',
+    premiumFeatureBorder: 'premiumFeatureBorder__65c15 featureBorder__65c15',
+    limitedFeatureBorder: 'limitedFeatureBorder__65c15 featureBorder__65c15',
+    background: 'background__65c15',
+    premiumBackground: 'premiumBackground__65c15 background__65c15',
+    limitedBackground: 'limitedBackground__65c15 background__65c15'
 };
+e.exports = i;

@@ -1,22 +1,18 @@
-r.d(n, {
-    j: function () {
-        return o;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(481060);
-function o(e) {
-    let { application: n, onConfirm: o, onCancel: s } = e;
+n.d(t, { j: () => a });
+var i = n(200651);
+n(192379);
+var r = n(481060);
+function a(e) {
+    let { application: t, onConfirm: a, onCancel: s } = e;
     return (
-        (0, a.openModalLazy)(async () => {
-            let { default: e } = await r.e('18367').then(r.bind(r, 557751));
-            return (r) =>
+        (0, r.ZDy)(async () => {
+            let { default: e } = await n.e('18367').then(n.bind(n, 557751));
+            return (n) =>
                 (0, i.jsx)(e, {
-                    application: n,
-                    onConfirm: o,
+                    application: t,
+                    onConfirm: a,
                     onCancel: s,
-                    ...r
+                    ...n
                 });
         }),
         Promise.resolve()

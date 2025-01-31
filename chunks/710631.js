@@ -1,100 +1,94 @@
-r.d(n, {
-    Z: function () {
-        return N;
-    }
-});
-var i = r(653041);
-var a = r(47120);
-var o = r(200651),
-    s = r(192379),
-    l = r(442837),
-    u = r(481060),
-    c = r(493683),
-    d = r(447543),
-    f = r(904245),
-    p = r(159300),
-    h = r(592125),
-    _ = r(984933),
-    m = r(430824),
-    g = r(496675),
-    E = r(699516),
-    v = r(771845),
-    y = r(594174),
-    b = r(981631),
-    I = r(388032);
-let T = 'max_uses',
-    S = 'User Invite Context Menu',
-    A = 'context_menu';
-function C(e, n) {
-    c.Z.ensurePrivateChannel(e).then((e) => {
-        null != h.Z.getChannel(e) && f.Z.sendInvite(e, n, A, null);
+n.d(t, { Z: () => S }), n(653041), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(442837),
+    s = n(481060),
+    o = n(493683),
+    l = n(447543),
+    u = n(904245),
+    c = n(159300),
+    d = n(592125),
+    f = n(984933),
+    _ = n(430824),
+    p = n(496675),
+    h = n(699516),
+    m = n(771845),
+    g = n(594174),
+    E = n(981631),
+    v = n(388032);
+let y = 'max_uses',
+    I = 'User Invite Context Menu',
+    b = 'context_menu';
+function T(e, t) {
+    o.Z.ensurePrivateChannel(e).then((e) => {
+        null != d.Z.getChannel(e) && u.Z.sendInvite(e, t, b, null);
     });
 }
-function N(e) {
-    let { user: n, guildId: r, onAction: i } = e,
-        a = (0, l.e7)([y.default], () => y.default.getCurrentUser(), []),
-        c = (0, l.Wu)(
-            [v.ZP, m.Z, g.Z],
+function S(e) {
+    let { user: t, guildId: n, onAction: o } = e,
+        u = (0, a.e7)([g.default], () => g.default.getCurrentUser(), []),
+        d = (0, a.Wu)(
+            [m.ZP, _.Z, p.Z],
             () => {
-                let e = v.ZP.getFlattenedGuildIds(),
-                    n = [];
+                let e = m.ZP.getFlattenedGuildIds(),
+                    t = [];
                 return (
                     e.forEach((e) => {
-                        let i = m.Z.getGuild(e);
-                        null != i && (0, p.b)(g.Z, i) && i.id !== r && n.push(i);
+                        let i = _.Z.getGuild(e);
+                        null != i && (0, c.b)(p.Z, i) && i.id !== n && t.push(i);
                     }),
-                    n
+                    t
                 );
             },
-            [r]
+            [n]
         ),
-        [f, h] = s.useState({});
-    function A(e, n) {
-        let r = _.ZP.getDefaultChannel(e.id, !0, b.Plq.CREATE_INSTANT_INVITE);
-        if (null != r) {
+        [b, S] = r.useState({});
+    function A(e, t) {
+        let n = f.ZP.getDefaultChannel(e.id, !0, E.Plq.CREATE_INSTANT_INVITE);
+        if (null != n) {
             if (
-                (h({
-                    ...f,
+                (S({
+                    ...b,
                     [e.id]: !0
                 }),
-                !g.Z.can(b.Plq.CREATE_INSTANT_INVITE, e) && null != e.vanityURLCode)
+                !p.Z.can(E.Plq.CREATE_INSTANT_INVITE, e) && null != e.vanityURLCode)
             ) {
-                C(n, e.vanityURLCode);
+                T(t, e.vanityURLCode);
                 return;
             }
-            d.Z.createInvite(
-                r.id,
+            l.Z.createInvite(
+                n.id,
                 {
-                    [T]: 1,
+                    [y]: 1,
                     unique: !0
                 },
-                S
-            ).then((e) => C(n, e.code));
+                I
+            ).then((e) => T(t, e.code));
         }
     }
-    return (null == a ? void 0 : a.id) === n.id || n.bot || 0 === c.length || E.Z.isBlockedOrIgnored(n.id)
+    return (null == u ? void 0 : u.id) === t.id || t.bot || 0 === d.length || h.Z.isBlockedOrIgnored(t.id)
         ? null
-        : (0, o.jsx)(u.MenuItem, {
+        : (0, i.jsx)(s.sNh, {
               id: 'invite-to-server',
-              label: I.intl.string(I.t.Sd8Ix8),
-              children: c.map((e) =>
-                  f[e.id]
-                      ? (0, o.jsx)(
-                            u.MenuItem,
+              label: v.intl.string(v.t.Sd8Ix8),
+              children: d.map((e) =>
+                  b[e.id]
+                      ? (0, i.jsx)(
+                            s.sNh,
                             {
                                 id: e.id,
                                 disabled: !0,
-                                label: I.intl.string(I.t.PuLLzM)
+                                label: v.intl.string(v.t.PuLLzM)
                             },
                             e.id
                         )
-                      : (0, o.jsx)(
-                            u.MenuItem,
+                      : (0, i.jsx)(
+                            s.sNh,
                             {
                                 id: e.id,
                                 label: e.name,
                                 action: () => {
-                                    null == i || i(), A(e, n.id);
+                                    null == o || o(), A(e, t.id);
                                 }
                             },
                             e.id

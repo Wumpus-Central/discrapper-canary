@@ -1,16 +1,17 @@
+n.d(t, { Z: () => h });
 var i = n(200651);
 n(192379);
-var r = n(399606),
-    l = n(607070),
+var l = n(399606),
+    r = n(607070),
     a = n(70097),
     s = n(970731),
     o = n(19199),
     c = n(921944),
     d = n(388032),
     u = n(183387);
-t.Z = (e) => {
+let h = (e) => {
     let { markAsDismissed: t } = e,
-        n = (0, r.e7)([l.Z], () => l.Z.useReducedMotion);
+        n = (0, l.e7)([r.Z], () => r.Z.useReducedMotion);
     return (0, o.D)()
         ? (0, i.jsx)(s.ZP, {
               asset: (0, i.jsx)(a.Z, {

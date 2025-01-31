@@ -1,48 +1,42 @@
-r.d(n, {
-    y: function () {
-        return p;
-    }
-});
-var i,
-    a = r(47120);
-var o = r(200651);
-r(192379);
-var s = r(120356),
-    l = r.n(s),
-    u = r(392711),
-    c = r.n(u),
-    d = r(692547),
-    f = r(718217);
-function p(e) {
-    let { className: n, percents: r, size: i = 'small', foregroundColors: a = [d.Z.unsafe_rawColors.BRAND_500.css], backgroundColor: s = 'var(--background-modifier-active)', animate: u = !0 } = e,
-        p = c()
-            .zip(r, a)
-            .map((e, n) => {
-                let r,
-                    [a, s] = e;
+n.d(t, { y: () => d }), n(47120);
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(392711),
+    o = n.n(s),
+    l = n(692547),
+    u = n(718217),
+    c = (function (e) {
+        return (e.XSMALL = 'xsmall'), (e.SMALL = 'small'), (e.LARGE = 'large'), e;
+    })(c || {});
+function d(e) {
+    let { className: t, percents: n, size: r = 'small', foregroundColors: s = [l.Z.unsafe_rawColors.BRAND_500.css], backgroundColor: c = 'var(--background-modifier-active)', animate: d = !0 } = e,
+        f = o()
+            .zip(n, s)
+            .map((e, t) => {
+                let n,
+                    [s, o] = e;
                 return (
-                    (r = Array.isArray(s) ? { background: 'linear-gradient(to right, '.concat(s[0], ', ').concat(s[1], ')') } : { backgroundColor: s }),
-                    (0, o.jsx)(
+                    (n = Array.isArray(o) ? { background: 'linear-gradient(to right, '.concat(o[0], ', ').concat(o[1], ')') } : { backgroundColor: o }),
+                    (0, i.jsx)(
                         'div',
                         {
-                            className: l()(f.progressBar, f[i], { [f.animating]: u }),
+                            className: a()(u.progressBar, u[r], { [u.animating]: d }),
                             style: {
-                                transform: 'translate3d('.concat(Math.min(Math.max(0, a), 100) - 100, '%, 0, 0)'),
-                                ...r
+                                transform: 'translate3d('.concat(Math.min(Math.max(0, s), 100) - 100, '%, 0, 0)'),
+                                ...n
                             }
                         },
-                        n
+                        t
                     )
                 );
             })
             .reverse();
-    return (0, o.jsx)('div', {
-        className: l()(n, f.progress, f[i]),
-        style: { backgroundColor: s },
-        children: p
+    return (0, i.jsx)('div', {
+        className: a()(t, u.progress, u[r]),
+        style: { backgroundColor: c },
+        children: f
     });
 }
-!(function (e) {
-    (e.XSMALL = 'xsmall'), (e.SMALL = 'small'), (e.LARGE = 'large');
-})(i || (i = {})),
-    (p.Sizes = i);
+d.Sizes = c;

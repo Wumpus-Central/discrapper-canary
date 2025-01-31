@@ -1,13 +1,9 @@
-s.d(t, {
-    M: function () {
-        return i;
-    }
-});
-var n = s(570140);
-function i(e) {
-    n.Z.dispatch({
+n.d(t, { M: () => l });
+var i = n(570140);
+function l(e) {
+    i.Z.dispatch({
         type: 'PREMIUM_REQUIRED_MODAL_CLOSE',
         shouldContinue: e
     });
 }
-s(78839), s(355467);
+n(78839), n(355467);

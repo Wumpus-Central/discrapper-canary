@@ -1,37 +1,33 @@
-n.d(t, {
-    V: function () {
-        return m;
-    }
-});
+n.d(t, { V: () => m });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(594174),
-    a = n(78839),
-    o = n(585483),
-    s = n(74538),
+var l = n(481060),
+    a = n(594174),
+    r = n(78839),
+    s = n(585483),
+    o = n(74538),
     c = n(138464),
-    u = n(474936),
-    d = n(981631);
+    d = n(474936),
+    u = n(981631);
 function m(e) {
-    let { processedCode: t, channelContext: m, customGiftMessage: h, giftInfo: f } = e,
+    let { processedCode: t, channelContext: m, customGiftMessage: h, giftInfo: _ } = e,
         p = !1,
-        _ = null,
-        g = l.default.getCurrentUser(),
-        E = (0, s.yd)(null == g ? void 0 : g.premiumType, u.p9.TIER_0);
-    (0, r.openModalLazy)(
+        g = null,
+        f = a.default.getCurrentUser(),
+        x = (0, o.yd)(null == f ? void 0 : f.premiumType, d.p9.TIER_0);
+    (0, l.ZDy)(
         async () => {
             let { default: e } = await Promise.all([n.e('92446'), n.e('65624')]).then(n.bind(n, 409858));
             return (n) => {
-                var r, l;
+                var l, a;
                 return (0, i.jsx)(e, {
                     code: t,
                     channelContext: m,
                     customGiftMessage: h,
-                    emojiName: null == f ? void 0 : null === (r = f.emoji) || void 0 === r ? void 0 : r.name,
-                    soundId: null == f ? void 0 : null === (l = f.sound) || void 0 === l ? void 0 : l.id,
+                    emojiName: null == _ ? void 0 : null === (l = _.emoji) || void 0 === l ? void 0 : l.name,
+                    soundId: null == _ ? void 0 : null === (a = _.sound) || void 0 === a ? void 0 : a.id,
                     onComplete: (e, t) => {
-                        (_ = e), t && ((p = t), e.isSubscription && null == a.ZP.getPremiumSubscription(!1) && (0, c.H)(!0));
+                        (g = e), t && ((p = t), e.isSubscription && null == r.ZP.getPremiumSubscription(!1) && (0, c.H)(!0));
                     },
                     ...n
                 });
@@ -40,7 +36,7 @@ function m(e) {
         {
             onCloseCallback: () => {
                 var e;
-                p && null != _ && !E && _.isSubscription && (null == _ ? void 0 : null === (e = _.subscriptionPlan) || void 0 === e ? void 0 : e.premiumSubscriptionType) === u.p9.TIER_2 && o.S.dispatch(d.CkL.PREMIUM_SUBSCRIPTION_CREATED);
+                p && null != g && !x && g.isSubscription && (null == g ? void 0 : null === (e = g.subscriptionPlan) || void 0 === e ? void 0 : e.premiumSubscriptionType) === d.p9.TIER_2 && s.S.dispatch(u.CkL.PREMIUM_SUBSCRIPTION_CREATED);
             }
         }
     );

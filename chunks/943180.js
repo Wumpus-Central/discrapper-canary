@@ -1,14 +1,10 @@
-r.d(n, {
-    D: function () {
-        return a;
-    }
-});
-var i = r(471309);
-function a() {
+n.d(t, { D: () => r });
+var i = n(471309);
+function r() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        { enabled: n, version: r } = i.Z.useExperiment({ location: 'experiment_hook' }, { autoTrackExposure: e });
+        { enabled: t, version: n } = i.Z.useExperiment({ location: 'experiment_hook' }, { autoTrackExposure: e });
     return {
-        enabled: n,
-        version: r
+        enabled: t,
+        version: n
     };
 }

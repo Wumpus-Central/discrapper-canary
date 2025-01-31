@@ -1,13 +1,14 @@
-e.exports = {
-    inspector: 'inspector_c3120f',
-    graphicPrimary: 'graphicPrimary_c3120f',
-    graphicSecondary: 'graphicSecondary_c3120f',
-    textWrapper: 'textWrapper_c3120f',
-    titlePrimary: 'titlePrimary_c3120f',
-    titleSecondary: 'titleSecondary_c3120f',
-    favorite: 'favorite_c3120f',
-    badgeLabel: 'badgeLabel_c3120f',
-    topGuildEmojiBadge: 'topGuildEmojiBadge_c3120f',
-    newlyAddedBadge: 'newlyAddedBadge_c3120f',
-    newlyAddedBadgeIcon: 'newlyAddedBadgeIcon_c3120f'
+var i = {
+    inspector: 'inspector_aeaaeb',
+    graphicPrimary: 'graphicPrimary_aeaaeb',
+    graphicSecondary: 'graphicSecondary_aeaaeb',
+    textWrapper: 'textWrapper_aeaaeb',
+    titlePrimary: 'titlePrimary_aeaaeb',
+    titleSecondary: 'titleSecondary_aeaaeb',
+    favorite: 'favorite_aeaaeb',
+    badgeLabel: 'badgeLabel_aeaaeb',
+    topGuildEmojiBadge: 'topGuildEmojiBadge_aeaaeb',
+    newlyAddedBadge: 'newlyAddedBadge_aeaaeb',
+    newlyAddedBadgeIcon: 'newlyAddedBadgeIcon_aeaaeb'
 };
+e.exports = i;

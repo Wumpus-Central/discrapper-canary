@@ -1,130 +1,120 @@
-s.r(t),
-    s.d(t, {
-        default: function () {
-            return A;
-        }
-    }),
-    s(47120);
-var n,
-    r,
-    o = s(200651),
-    i = s(192379),
-    a = s(990547),
-    l = s(442837),
-    d = s(481060),
-    c = s(570140),
-    u = s(213609),
-    h = s(594174),
-    f = s(726745),
-    p = s(475062),
-    m = s(760213),
-    g = s(71509),
-    x = s(981631),
-    C = s(388032),
+s.d(t, { default: () => x }), s(47120);
+var n = s(200651),
+    r = s(192379),
+    i = s(990547),
+    o = s(442837),
+    a = s(481060),
+    l = s(213609),
+    d = s(594174),
+    c = s(726745),
+    h = s(475062),
+    u = s(760213),
+    m = s(71509),
+    f = s(981631),
+    p = s(388032),
     _ = s(279647);
-((r = n || (n = {}))[(r.MANAGE_ACCOUNTS = 0)] = 'MANAGE_ACCOUNTS'), (r[(r.LOGIN = 1)] = 'LOGIN');
-let b = {
-    0: d.ModalSize.SMALL,
-    1: d.ModalSize.DYNAMIC
+let g = {
+    0: a.CgR.SMALL,
+    1: a.CgR.DYNAMIC
 };
-function A(e) {
+function x(e) {
     let { transitionState: t, onClose: s } = e,
-        [n, r] = i.useState(0),
-        { currentUser: A, multiAccountUsers: N } = (0, l.cj)([h.default, f.Z], () => ({
-            currentUser: h.default.getCurrentUser(),
-            multiAccountUsers: f.Z.getUsers()
+        [x, C] = r.useState(0),
+        { currentUser: b, multiAccountUsers: k } = (0, o.cj)([d.default, c.Z], () => ({
+            currentUser: d.default.getCurrentUser(),
+            multiAccountUsers: c.Z.getUsers()
         })),
-        [R, T] = i.useState(!1),
-        [v, w] = i.useState(x.lds),
-        [E, I] = i.useState(null);
-    i.useEffect(() => {
+        [R, N] = r.useState(!1),
+        [w, A] = r.useState(f.lds),
+        [v, T] = r.useState(null);
+    r.useEffect(() => {
         if (R)
-            I(
-                (0, o.jsx)(d.HelpMessage, {
-                    messageType: d.HelpMessageTypes.ERROR,
+            T(
+                (0, n.jsx)(a.Wn, {
+                    messageType: a.QYI.ERROR,
                     className: _.infoMessage,
-                    children: C.intl.format(C.t.HAuRSE, { maxNumAccounts: g.$H })
+                    children: p.intl.format(p.t.HAuRSE, { maxNumAccounts: m.$H })
                 })
             ),
-                w(x.lds);
-        else if (null != v) {
-            let e = h.default.getUser(v);
+                A(f.lds);
+        else if (null != w) {
+            let e = d.default.getUser(w);
             null != e &&
-                I(
-                    (0, o.jsx)(d.HelpMessage, {
-                        messageType: d.HelpMessageTypes.POSITIVE,
+                T(
+                    (0, n.jsx)(a.Wn, {
+                        messageType: a.QYI.POSITIVE,
                         className: _.infoMessage,
-                        children: C.intl.format(C.t['09qidX'], { username: e.username })
+                        children: p.intl.format(p.t['09qidX'], { username: e.username })
                     })
                 ),
-                T(!1);
+                N(!1);
         }
-    }, [v, R]),
-        i.useEffect(() => {
-            N.length < g.$H && T(!1);
-        }, [N]),
-        (0, u.Z)({
-            type: a.ImpressionTypes.MODAL,
-            name: 0 === n ? a.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING : a.ImpressionNames.USER_LOGIN
+    }, [w, R]),
+        r.useEffect(() => {
+            k.length < m.$H && N(!1);
+        }, [k]),
+        (0, l.Z)({
+            type: i.ImpressionTypes.MODAL,
+            name: 0 === x ? i.ImpressionNames.MULTI_ACCOUNT_SWITCH_LANDING : i.ImpressionNames.USER_LOGIN
         });
     let j = null;
     return (
-        0 === n
-            ? (j = (0, o.jsxs)(o.Fragment, {
+        0 === x
+            ? (j = (0, n.jsxs)(n.Fragment, {
                   children: [
-                      (0, o.jsx)(d.ModalHeader, {
+                      (0, n.jsx)(a.xBx, {
                           separator: !1,
-                          children: (0, o.jsxs)('div', {
+                          children: (0, n.jsxs)('div', {
                               className: _.header,
                               children: [
-                                  (0, o.jsx)(d.Heading, {
+                                  (0, n.jsx)(a.X6q, {
                                       variant: 'heading-xl/semibold',
                                       color: 'header-primary',
-                                      children: C.intl.string(C.t.WbFpq6)
+                                      children: p.intl.string(p.t.WbFpq6)
                                   }),
-                                  (0, o.jsx)(d.Text, {
+                                  (0, n.jsx)(a.Text, {
                                       className: _.subheaderText,
                                       color: 'header-secondary',
                                       variant: 'text-md/normal',
-                                      children: C.intl.string(C.t['+1Uk3d'])
+                                      children: p.intl.string(p.t['+1Uk3d'])
                                   })
                               ]
                           })
                       }),
-                      (0, o.jsxs)(d.ModalContent, {
+                      (0, n.jsxs)(a.hzk, {
                           children: [
-                              E,
-                              (0, o.jsx)(m.Z, {
-                                  actionText: C.intl.string(C.t.Wf421N),
+                              v,
+                              (0, n.jsx)(u.Z, {
+                                  actionText: p.intl.string(p.t.Wf421N),
                                   onAction: (e, t) => {
                                       switch (e) {
-                                          case m.W.LOGIN_REQUIRED:
-                                              r(1);
+                                          case u.W.LOGIN_REQUIRED:
+                                              C(1);
                                               break;
-                                          case m.W.SWITCHED:
+                                          case u.W.SWITCHED:
                                               s();
                                               break;
-                                          case m.W.REMOVED:
-                                              t === (null == A ? void 0 : A.id) && s(), w(t);
+                                          case u.W.REMOVED:
+                                              t === (null == b ? void 0 : b.id) && s(), A(t);
                                       }
                                   }
                               }),
-                              (0, o.jsx)('div', {
+                              (0, n.jsx)('div', {
                                   className: _.actions,
-                                  children: (0, o.jsx)(d.Button, {
-                                      look: d.Button.Looks.LINK,
-                                      color: d.Button.Colors.PRIMARY,
+                                  children: (0, n.jsx)(a.zxk, {
+                                      look: a.zxk.Looks.LINK,
+                                      color: a.zxk.Colors.PRIMARY,
                                       onClick: () => {
-                                          if (N.length >= g.$H) {
-                                              T(!0);
+                                          if (k.length >= m.$H) {
+                                              N(!0);
                                               return;
                                           }
-                                          r(1);
+                                          C(1);
                                       },
-                                      size: d.Button.Sizes.MEDIUM,
-                                      children: (0, o.jsx)(d.Text, {
+                                      size: a.zxk.Sizes.MEDIUM,
+                                      children: (0, n.jsx)(a.Text, {
                                           variant: 'text-sm/semibold',
-                                          children: C.intl.string(C.t['9g2mqa'])
+                                          children: p.intl.string(p.t['9g2mqa'])
                                       })
                                   })
                               })
@@ -132,19 +122,19 @@ function A(e) {
                       })
                   ]
               }))
-            : 1 === n &&
-              (j = (0, o.jsx)(p.Z, {
+            : 1 === x &&
+              (j = (0, n.jsx)(h.Z, {
                   onClose: () => {
-                      c.Z.dispatch({ type: 'CLEAR_AUTHENTICATION_ERRORS' }), r(0);
+                      C(0);
                   }
               })),
-        (0, o.jsx)(d.ModalRoot, {
+        (0, n.jsx)(a.Y0X, {
             className: _.modal,
             transitionState: t,
-            size: b[n],
-            'aria-label': C.intl.string(C.t.WbFpq6),
-            children: (0, o.jsx)(d.Sequencer, {
-                step: n,
+            size: g[x],
+            'aria-label': p.intl.string(p.t.WbFpq6),
+            children: (0, n.jsx)(a.qBt, {
+                step: x,
                 steps: [0, 1],
                 children: j
             })

@@ -1,10 +1,6 @@
 r.d(t, {
-    V: function () {
-        return F;
-    },
-    a: function () {
-        return v;
-    }
+    V: () => E,
+    a: () => v
 }),
     r(653041),
     r(47120);
@@ -15,15 +11,15 @@ var a = r(120356),
     l = r(481060),
     s = r(304680),
     o = r(763520),
-    c = r(600164),
-    d = r(352978),
+    d = r(600164),
+    c = r(352978),
     u = r(131951),
     m = r(226961),
     p = r(513547),
     h = r(65154),
-    g = r(378481),
-    f = r(232186);
-let y = {
+    y = r(378481),
+    g = r(232186);
+let f = {
     [h.Z.NO_OVERRIDE]: 'None',
     [h.Z.LOW]: 'Low Quality Stream',
     [h.Z.HIGH]: 'High Quality Stream'
@@ -35,7 +31,7 @@ function v(e) {
         e.length % 2 != 0 &&
         e.push(
             (0, n.jsx)(
-                c.Z,
+                d.Z,
                 {
                     basis: '50%',
                     grow: 0
@@ -48,7 +44,7 @@ function v(e) {
     )
         t.push(
             (0, n.jsx)(
-                c.Z,
+                d.Z,
                 {
                     basis: '50%',
                     grow: 0,
@@ -63,19 +59,18 @@ let D = {
     ssrc: 1,
     codec: 2
 };
-function F(e, t, r, a, F) {
-    return e.map((S, E) => {
-        var C, Z;
-        let R = [];
-        for (let e of Object.keys(S).sort((e, t) => {
+function E(e, t, r, a, E) {
+    return e.map((C, Z) => {
+        let N = [];
+        for (let e of Object.keys(C).sort((e, t) => {
             let r = D[e],
                 n = D[t];
-            if (r !== n) return void 0 === r ? 1 : void 0 === n ? -1 : r - n;
-            return m.Pz[e] !== m.Pz[t] ? (m.Pz[e] ? 1 : -1) : e > t ? 1 : -1;
+            return r !== n ? (void 0 === r ? 1 : void 0 === n ? -1 : r - n) : m.Pz[e] !== m.Pz[t] ? (m.Pz[e] ? 1 : -1) : e > t ? 1 : -1;
         })) {
-            let t = S[e];
-            if (!p.al[e] && void 0 !== t)
-                R.push(
+            let t = C[e];
+            !p.al[e] &&
+                void 0 !== t &&
+                N.push(
                     (0, n.jsx)(
                         p.ck,
                         {
@@ -88,22 +83,22 @@ function F(e, t, r, a, F) {
                 );
         }
         return (0, n.jsxs)(
-            l.FormSection,
+            l.hjN,
             {
-                className: f.marginBottom40,
-                title: S.type,
-                titleClassName: g.sectionHeader,
+                className: g.marginBottom40,
+                title: C.type,
+                titleClassName: y.sectionHeader,
                 children: [
-                    'video' === S.type &&
+                    'video' === C.type &&
                         null != r &&
                         null != a &&
-                        null != F &&
+                        null != E &&
                         (function (e, t, r, a) {
                             let l = a.get(t, r, e.ssrc);
                             return null != l
                                 ? (0, n.jsx)('div', {
-                                      className: i()(g.videoWrapper, f.marginBottom40),
-                                      children: (0, n.jsx)(d.Z, {
+                                      className: i()(y.videoWrapper, g.marginBottom40),
+                                      children: (0, n.jsx)(c.Z, {
                                           streamId: l,
                                           videoComponent: u.Z.getMediaEngine().Video,
                                           paused: !1,
@@ -112,41 +107,39 @@ function F(e, t, r, a, F) {
                                       })
                                   })
                                 : null;
-                        })(S, r, a, F),
-                    v(R),
-                    'video' === S.type &&
-                        E === e.length - 1 &&
+                        })(C, r, a, E),
+                    v(N),
+                    'video' === C.type &&
+                        Z === e.length - 1 &&
                         null != r &&
                         null != a &&
-                        null != F &&
-                        ((C = a),
-                        (Z = t),
-                        (0, n.jsx)(c.Z, {
-                            className: f.marginBottom20,
-                            children: (0, n.jsxs)(c.Z.Child, {
+                        null != E &&
+                        (0, n.jsx)(d.Z, {
+                            className: g.marginBottom20,
+                            children: (0, n.jsxs)(d.Z.Child, {
                                 basis: '100%',
                                 children: [
-                                    (0, n.jsx)(l.FormTitle, {
-                                        tag: l.FormTitleTags.H5,
-                                        className: f.marginBottom8,
+                                    (0, n.jsx)(l.vwX, {
+                                        tag: l.RB0.H5,
+                                        className: g.marginBottom8,
                                         children: 'Simulcast Override'
                                     }),
-                                    (0, n.jsx)(l.SingleSelect, {
-                                        value: m.ZP.getSimulcastDebugOverride(C, Z),
+                                    (0, n.jsx)(l.q4e, {
+                                        value: m.ZP.getSimulcastDebugOverride(a, t),
                                         onChange: (e) => {
-                                            s.MS(C, Z, e);
+                                            s.MS(a, t, e);
                                         },
                                         options: Object.values(h.Z).map((e) => ({
                                             value: e,
-                                            label: y[e]
+                                            label: f[e]
                                         }))
                                     })
                                 ]
                             })
-                        }))
+                        })
                 ]
             },
-            ''.concat(S.type, ' + ').concat(S.ssrc)
+            ''.concat(C.type, ' + ').concat(C.ssrc)
         );
     });
 }

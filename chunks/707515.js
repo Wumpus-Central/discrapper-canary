@@ -1,13 +1,9 @@
-n.d(t, {
-    _: function () {
-        return r;
-    }
-});
+n.d(t, { _: () => a });
 var i = n(425128),
-    a = n(434382);
-let r = async (e) => {
+    s = n(434382);
+let a = async (e) => {
     await i._b(e),
-        await a.Z.fetchLeaderboard({
+        await s.Z.fetchLeaderboard({
             guildId: e.guildId,
             leaderboardId: e.leaderboardId,
             force: !0

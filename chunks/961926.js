@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return g;
-    }
-});
+n.d(t, { Z: () => g });
 var i = n(200651),
     r = n(192379),
     l = n(536982),
@@ -17,7 +13,7 @@ var i = n(200651),
 function g(e) {
     var t, n, g;
     let { rule: x, onChangeRule: p } = e,
-        f = r.useCallback(
+        _ = r.useCallback(
             (e) => {
                 p({
                     ...x,
@@ -42,7 +38,7 @@ function g(e) {
                             onChangeRule: p
                         }),
                         (0, i.jsx)(l.Z, {
-                            onChange: f,
+                            onChange: _,
                             initialValue: null === (t = x.triggerMetadata) || void 0 === t ? void 0 : t.allowList,
                             maxWordCount: u.I3,
                             collapsed: (null === (n = x.triggerMetadata) || void 0 === n ? void 0 : n.allowList) == null || (null === (g = x.triggerMetadata) || void 0 === g ? void 0 : g.allowList.length) === 0

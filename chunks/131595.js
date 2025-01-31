@@ -1,13 +1,9 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(481060),
-    a = r(570140);
-function o(e, n) {
-    null != n && (0, i.closeModal)(n),
-        a.Z.dispatch({
+n.d(t, { Z: () => a });
+var i = n(481060),
+    r = n(570140);
+function a(e, t) {
+    null != t && (0, i.Mr3)(t),
+        r.Z.dispatch({
             type: 'INTERACTION_IFRAME_MODAL_CLOSE',
             applicationId: e
         });

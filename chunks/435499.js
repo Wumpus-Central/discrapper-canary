@@ -1,9 +1,11 @@
-e.exports = {
-    wrapper: 'wrapper_ab4920',
-    iconWrapper: 'iconWrapper_ab4920',
-    disableInteractions: 'disableInteractions_ab4920',
-    iconWrapperActive: 'iconWrapperActive_ab4920 iconWrapper_ab4920',
-    iconPlay: 'iconPlay_ab4920 icon_ab4920',
-    iconExternalMargins: 'iconExternalMargins_ab4920 icon_ab4920',
-    iconExternal: 'iconExternal_ab4920 icon_ab4920'
+var i = {
+    wrapper: 'wrapper__926d7',
+    iconWrapper: 'iconWrapper__926d7',
+    disableInteractions: 'disableInteractions__926d7',
+    iconWrapperActive: 'iconWrapperActive__926d7 iconWrapper__926d7',
+    icon: 'icon__926d7',
+    iconPlay: 'iconPlay__926d7 icon__926d7',
+    iconExternal: 'iconExternal__926d7 icon__926d7',
+    iconExternalMargins: 'iconExternalMargins__926d7 icon__926d7'
 };
+e.exports = i;

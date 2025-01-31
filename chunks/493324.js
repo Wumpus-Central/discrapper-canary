@@ -1,8 +1,4 @@
-n.d(t, {
-    $: function () {
-        return l;
-    }
-});
+n.d(t, { $: () => l });
 let i = (0, n(818083).B)({
     kind: 'user',
     id: '2024-02_hide_member_list_activities',

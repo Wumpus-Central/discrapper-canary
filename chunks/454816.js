@@ -1,6 +1,7 @@
-e.exports = {
-    characterCount: 'characterCount_b82429',
-    premiumFlair: 'premiumFlair_b82429',
-    flairContainer: 'flairContainer_b82429',
-    upsell: 'upsell_b82429'
+var i = {
+    characterCount: 'characterCount__795fb',
+    premiumFlair: 'premiumFlair__795fb',
+    flairContainer: 'flairContainer__795fb',
+    upsell: 'upsell__795fb'
 };
+e.exports = i;

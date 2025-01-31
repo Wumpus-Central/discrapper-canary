@@ -1,11 +1,6 @@
-n.d(t, {
-    Z: function () {
-        return p;
-    }
-}),
-    n(47120);
-var r = n(200651),
-    i = n(192379),
+n.d(t, { Z: () => p }), n(47120);
+var i = n(200651),
+    r = n(192379),
     a = n(120356),
     l = n.n(a),
     o = n(793030),
@@ -17,31 +12,31 @@ var r = n(200651),
 function p(e) {
     let { entries: t, viewId: n, officialGuildId: a, onClose: p } = e,
         g = t.length > 7,
-        [f, h] = i.useState(!1),
-        x = i.useMemo(() => t.slice(0, g && !f ? 6 : void 0), [t, g, f]);
-    return (0, r.jsxs)('div', {
+        [h, _] = r.useState(!1),
+        f = r.useMemo(() => t.slice(0, g && !h ? 6 : void 0), [t, g, h]);
+    return (0, i.jsxs)('div', {
         children: [
-            (0, r.jsx)(o.X6, {
+            (0, i.jsx)(o.X6, {
                 className: u.sectionHeader,
                 variant: 'text-md/semibold',
                 color: 'header-primary',
                 children: d.intl.string(d.t.ak8OHh)
             }),
             0 === t.length
-                ? (0, r.jsx)(o.xv, {
+                ? (0, i.jsx)(o.xv, {
                       variant: 'text-xs/semibold',
                       color: 'text-primary',
                       className: m.emptyState,
                       children: d.intl.string(d.t.R5fYVF)
                   })
-                : (0, r.jsxs)(r.Fragment, {
+                : (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, r.jsx)('div', {
-                              className: l()(m.friends, { [m.fadedEntries]: g && !f }),
-                              children: (0, r.jsx)('div', {
+                          (0, i.jsx)('div', {
+                              className: l()(m.friends, { [m.fadedEntries]: g && !h }),
+                              children: (0, i.jsx)('div', {
                                   className: u.column,
-                                  children: x.map((e) =>
-                                      (0, r.jsx)(
+                                  children: f.map((e) =>
+                                      (0, i.jsx)(
                                           c.Z,
                                           {
                                               entry: e,
@@ -55,17 +50,17 @@ function p(e) {
                               })
                           }),
                           g &&
-                              !f &&
-                              (0, r.jsxs)(s.Clickable, {
+                              !h &&
+                              (0, i.jsxs)(s.P3F, {
                                   className: m.expandEntriesButton,
-                                  onClick: () => h(!0),
+                                  onClick: () => _(!0),
                                   children: [
-                                      (0, r.jsx)(o.xv, {
+                                      (0, i.jsx)(o.xv, {
                                           variant: 'text-xs/semibold',
                                           color: 'interactive-normal',
                                           children: d.intl.string(d.t.yohc6O)
                                       }),
-                                      (0, r.jsx)(s.ChevronSmallDownIcon, { size: 'xs' })
+                                      (0, i.jsx)(s.CJ0, { size: 'xs' })
                                   ]
                               })
                       ]

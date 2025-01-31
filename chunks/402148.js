@@ -1,10 +1,6 @@
 n.d(t, {
-    F: function () {
-        return s;
-    },
-    i: function () {
-        return a;
-    }
+    F: () => s,
+    i: () => a
 }),
     n(653041),
     n(47120);

@@ -1,11 +1,7 @@
-n.d(t, {
-    m: function () {
-        return d;
-    }
-});
-var i = n(200651);
+n.d(t, { m: () => d });
+var a = n(200651);
 n(192379);
-var a = n(468194),
+var i = n(468194),
     l = n(399606),
     s = n(481060),
     c = n(430824),
@@ -22,25 +18,25 @@ function d(e) {
             icon: n.icon,
             size: 40
         });
-        d = (0, i.jsx)(s.Avatar, {
+        d = (0, a.jsx)(s.qEK, {
             src: e,
             'aria-label': n.name,
-            size: s.AvatarSizes.SIZE_24
+            size: s.EFr.SIZE_24
         });
     } else {
-        let e = (0, a.Zg)(n.name).slice(0, 2);
-        d = (0, i.jsx)(s.Text, {
+        let e = (0, i.Zg)(n.name).slice(0, 2);
+        d = (0, a.jsx)(s.Text, {
             variant: 'text-xs/semibold',
             className: r.acronym,
             'aria-hidden': !0,
             children: e
         });
     }
-    return (0, i.jsxs)('div', {
+    return (0, a.jsxs)('div', {
         className: r.container,
         children: [
             d,
-            (0, i.jsx)(s.Text, {
+            (0, a.jsx)(s.Text, {
                 variant: 'text-md/semibold',
                 className: r.text,
                 children: n.name

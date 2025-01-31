@@ -1,84 +1,83 @@
-n.d(t, {
-    Z: function () {
-        return j;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => j }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(120356),
-    a = n.n(l),
-    o = n(913527),
-    s = n.n(o),
+    l = n(192379),
+    a = n(120356),
+    r = n.n(a),
+    s = n(913527),
+    o = n.n(s),
     c = n(873546),
-    u = n(442837),
-    d = n(481060),
+    d = n(442837),
+    u = n(481060),
     m = n(568836),
     h = n(100527),
-    f = n(906732),
+    _ = n(906732),
     p = n(963249),
-    _ = n(594174),
-    g = n(78839),
-    E = n(55935),
-    C = n(63063),
-    I = n(74538),
-    x = n(276444),
-    N = n(786397),
-    v = n(474936),
-    T = n(981631),
-    S = n(388032),
-    A = n(806320);
-class b extends r.Component {
+    g = n(594174),
+    f = n(78839),
+    x = n(55935),
+    E = n(63063),
+    C = n(74538),
+    v = n(276444),
+    I = n(786397),
+    N = n(474936),
+    S = n(981631),
+    T = n(388032),
+    b = n(806320);
+class A extends l.Component {
     renderTitle(e, t, n) {
         let { trialOffer: i } = this.props,
-            r = _.default.getUser(i.user_id),
-            l = null != r ? r.username : '???',
-            a = _.default.getUser(i.referrer_id),
-            o = null != a ? a.username : '???';
-        if (e && void 0 === i.redeemed_at) return S.intl.formatToPlainString(S.t.Mptau7, { username: l });
-        if (t) return n ? S.intl.string(S.t['9SNdf3']) : S.intl.formatToPlainString(S.t['H0+MxM'], { userName: o });
-        return S.intl.formatToPlainString(S.t.IiWKws, {
-            senderUserName: o,
-            recipientUserName: l
-        });
+            l = g.default.getUser(i.user_id),
+            a = null != l ? l.username : '???',
+            r = g.default.getUser(i.referrer_id),
+            s = null != r ? r.username : '???';
+        return e && void 0 === i.redeemed_at
+            ? T.intl.formatToPlainString(T.t.Mptau7, { username: a })
+            : t
+              ? n
+                  ? T.intl.string(T.t['9SNdf3'])
+                  : T.intl.formatToPlainString(T.t['H0+MxM'], { userName: s })
+              : T.intl.formatToPlainString(T.t.IiWKws, {
+                    senderUserName: s,
+                    recipientUserName: a
+                });
     }
     renderBody(e, t, n) {
         let { trialOffer: i } = this.props;
-        return e && !n && void 0 === i.redeemed_at ? S.intl.format(S.t.LwCwT0, { helpdeskArticle: C.Z.getArticleURL(T.BhN.REFERRAL_PROGRAM) }) : t ? null : S.intl.string(S.t.lQLlOT);
+        return e && !n && void 0 === i.redeemed_at ? T.intl.format(T.t.LwCwT0, { helpdeskArticle: E.Z.getArticleURL(S.BhN.REFERRAL_PROGRAM) }) : t ? null : T.intl.string(T.t.lQLlOT);
     }
     renderActions(e, t, n) {
-        let { trialOffer: r, currentUser: l, analyticsLocations: a } = this.props,
-            o = {
+        let { trialOffer: l, currentUser: a, analyticsLocations: r } = this.props,
+            s = {
                 onClick: () => {
-                    this.handleStartTrial(r, a);
+                    this.handleStartTrial(l, r);
                 },
-                color: d.Button.Colors.BRAND
+                color: u.zxk.Colors.BRAND
             },
-            s = l.id !== r.user_id || (0, I.I5)(l) || !l.verified || (0, N.B)(r),
+            o = a.id !== l.user_id || (0, C.I5)(a) || !a.verified || (0, I.B)(l),
             c = this.renderExpirationDate(e, t, n);
         return (
-            (o.disabled = s),
+            (s.disabled = o),
             (0, i.jsxs)('div', {
-                className: A.buttonContainer,
+                className: b.buttonContainer,
                 children: [
                     (0, i.jsx)('div', {
-                        children: (0, i.jsx)(d.Button, {
-                            ...o,
-                            size: d.Button.Sizes.SMALL,
+                        children: (0, i.jsx)(u.zxk, {
+                            ...s,
+                            size: u.zxk.Sizes.SMALL,
                             onClick: () => {
                                 (0, p.Z)({
                                     initialPlanId: null,
-                                    subscriptionTier: v.Si.TIER_2,
-                                    analyticsLocations: a,
-                                    trialId: r.trial_id,
-                                    referralTrialOfferId: r.id
+                                    subscriptionTier: N.Si.TIER_2,
+                                    analyticsLocations: r,
+                                    trialId: l.trial_id,
+                                    referralTrialOfferId: l.id
                                 });
                             },
-                            children: S.intl.string(S.t.O0etsL)
+                            children: T.intl.string(T.t.O0etsL)
                         })
                     }),
                     (0, i.jsx)('div', {
-                        className: A.metadata,
+                        className: b.metadata,
                         children: c
                     })
                 ]
@@ -86,48 +85,48 @@ class b extends r.Component {
         );
     }
     renderExpirationDate(e, t, n) {
-        let { trialOffer: i, trialEndsAt: r } = this.props;
-        if (void 0 !== i.redeemed_at && !n && null !== r) return S.intl.formatToPlainString(S.t.nP0ivb, { date: (0, E.vc)(s()(r), 'LL') });
+        let { trialOffer: i, trialEndsAt: l } = this.props;
+        if (void 0 !== i.redeemed_at && !n && null !== l) return T.intl.formatToPlainString(T.t.nP0ivb, { date: (0, x.vc)(o()(l), 'LL') });
         if (e || void 0 === i.expires_at) return null;
-        let l = s()(i.expires_at);
-        if (t) return S.intl.formatToPlainString(S.t.PuSHfX, { date: (0, E.vc)(s()(l), 'LL') });
-        let a = l.diff(s()(), 'h');
-        if (a > 48) {
-            let e = l.diff(s()(), 'd');
-            return S.intl.formatToPlainString(S.t['g9s+dH'], { numDays: e });
+        let a = o()(i.expires_at);
+        if (t) return T.intl.formatToPlainString(T.t.PuSHfX, { date: (0, x.vc)(o()(a), 'LL') });
+        let r = a.diff(o()(), 'h');
+        if (r > 48) {
+            let e = a.diff(o()(), 'd');
+            return T.intl.formatToPlainString(T.t['g9s+dH'], { numDays: e });
         }
-        if (a > 1) return S.intl.formatToPlainString(S.t.k9v339, { numHours: a });
-        let o = l.diff(s()(), 'minutes');
-        return S.intl.formatToPlainString(S.t['/d0GmZ'], { numMinutes: o });
+        if (r > 1) return T.intl.formatToPlainString(T.t.k9v339, { numHours: r });
+        let s = a.diff(o()(), 'minutes');
+        return T.intl.formatToPlainString(T.t['/d0GmZ'], { numMinutes: s });
     }
     renderMedia() {
-        return (0, i.jsx)('div', { className: A.referral });
+        return (0, i.jsx)('div', { className: b.referral });
     }
     render() {
         let { trialOffer: e, currentUser: t, recipientHasNitro: n } = this.props,
-            r = (0, N.B)(e),
-            l = t.id === e.referrer_id;
+            l = (0, I.B)(e),
+            a = t.id === e.referrer_id;
         return (0, i.jsxs)('div', {
-            className: a()(A.tile, A.container),
+            className: r()(b.tile, b.container),
             children: [
                 (0, i.jsx)('div', {
-                    className: A.media,
+                    className: b.media,
                     children: this.renderMedia()
                 }),
                 (0, i.jsxs)('div', {
-                    className: A.description,
+                    className: b.description,
                     children: [
-                        (0, i.jsx)(d.H, {
-                            className: A.title,
-                            children: this.renderTitle(n, r, l)
+                        (0, i.jsx)(u.H, {
+                            className: b.title,
+                            children: this.renderTitle(n, l, a)
                         }),
                         (0, i.jsx)('div', {
-                            className: A.tagline,
-                            children: this.renderBody(n, r, l)
+                            className: b.tagline,
+                            children: this.renderBody(n, l, a)
                         }),
                         (0, i.jsx)('div', {
-                            className: A.actions,
-                            children: this.renderActions(n, r, l)
+                            className: b.actions,
+                            children: this.renderActions(n, l, a)
                         })
                     ]
                 })
@@ -135,58 +134,57 @@ class b extends r.Component {
         });
     }
     constructor(...e) {
-        var t, n, i;
+        var t, n;
         super(...e),
-            (t = this),
-            (n = 'handleStartTrial'),
-            (i = (e, t) => {
+            (t = 'handleStartTrial'),
+            (n = (e, t) => {
                 (0, p.Z)({
                     initialPlanId: null,
-                    subscriptionTier: v.Si.TIER_2,
+                    subscriptionTier: N.Si.TIER_2,
                     analyticsLocations: t,
                     trialId: e.trial_id
                 });
             }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: i,
+            t in this
+                ? Object.defineProperty(this, t, {
+                      value: n,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (t[n] = i);
+                : (this[t] = n);
     }
 }
 function j(e) {
     let { userTrialOfferId: t, canRenderReferralEmbed: n } = e,
-        { trialOffer: r, isResolving: l } = (0, u.cj)(
-            [x.Z],
+        { trialOffer: l, isResolving: a } = (0, d.cj)(
+            [v.Z],
             () => ({
-                trialOffer: n ? x.Z.getRelevantUserTrialOffer(t) : null,
-                isResolving: !!n && x.Z.isResolving(t)
+                trialOffer: n ? v.Z.getRelevantUserTrialOffer(t) : null,
+                isResolving: !!n && v.Z.isResolving(t)
             }),
             [n, t]
         ),
-        a = _.default.getCurrentUser(),
-        o = (0, u.e7)([_.default], () => null != r && (0, I.I5)(void 0 !== a && r.user_id === a.id ? a : _.default.getUser(r.user_id))),
-        s = (0, u.e7)([g.ZP], () => {
+        r = g.default.getCurrentUser(),
+        s = (0, d.e7)([g.default], () => null != l && (0, C.I5)(void 0 !== r && l.user_id === r.id ? r : g.default.getUser(l.user_id))),
+        o = (0, d.e7)([f.ZP], () => {
             var e;
-            return o ? (null === (e = g.ZP.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialEndsAt) : null;
+            return s ? (null === (e = f.ZP.getPremiumTypeSubscription()) || void 0 === e ? void 0 : e.trialEndsAt) : null;
         }),
-        { analyticsLocations: d } = (0, f.ZP)(h.Z.SHARE_NITRO_EMBED);
-    return l
+        { analyticsLocations: u } = (0, _.ZP)(h.Z.SHARE_NITRO_EMBED);
+    return a
         ? (0, i.jsx)(m.OR, { isHorizontal: !c.tq })
-        : n && null != r && void 0 !== a
-          ? (0, i.jsx)(b, {
-                trialOffer: r,
-                currentUser: a,
-                recipientHasNitro: o,
-                trialEndsAt: s,
-                analyticsLocations: d,
+        : n && null != l && void 0 !== r
+          ? (0, i.jsx)(A, {
+                trialOffer: l,
+                currentUser: r,
+                recipientHasNitro: s,
+                trialEndsAt: o,
+                analyticsLocations: u,
                 ...e
             })
           : (0, i.jsx)('div', {
-                className: A.invalidWrapper,
-                children: (0, i.jsx)('div', { className: A.invalid })
+                className: b.invalidWrapper,
+                children: (0, i.jsx)('div', { className: b.invalid })
             });
 }

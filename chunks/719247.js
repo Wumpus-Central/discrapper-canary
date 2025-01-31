@@ -1,93 +1,92 @@
-r.d(n, {
-    T: function () {
-        return b;
-    }
-});
+n.d(t, {
+    T: () => v,
+    Z: () => N
+}),
+    n(47120);
 var i,
-    a = r(47120);
-var o = r(392711),
-    s = r.n(o),
-    l = r(661869),
-    u = r(876215),
-    c = r(442837),
-    d = r(570140),
-    f = r(158776),
-    p = r(146282),
-    h = r(26033),
-    _ = r(180335),
-    m = r(561308),
-    g = r(981631);
-function E(e, n, r) {
+    r = n(392711),
+    a = n.n(r),
+    s = n(661869),
+    o = n(876215),
+    l = n(442837),
+    u = n(570140),
+    c = n(158776),
+    d = n(146282),
+    f = n(26033),
+    _ = n(180335),
+    p = n(561308),
+    h = n(981631);
+function m(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let v = new Set([u.s.LISTENED_SESSION]),
-    y = new Map();
-function b(e) {
+let g = new Set([o.s.LISTENED_SESSION]),
+    E = new Map();
+function v(e) {
     return ''.concat(e.author_id, ':').concat(e.id);
 }
-function I(e) {
-    return (0, m.n2)(e) ? null : (0, m.kr)(e) && e.author_type === l.i.USER ? f.Z.getActivities(e.author_id).find((n) => (n.type === g.IIU.PLAYING && (0, h.m9)(e) ? (0, _.cN)(e, n) : !!(n.type === g.IIU.LISTENING && (0, h.dU)(e)) && (0, _.pB)(e, n))) : void 0;
+function y(e) {
+    return (0, p.n2)(e) ? null : (0, p.kr)(e) && e.author_type === s.i.USER ? c.Z.getActivities(e.author_id).find((t) => (t.type === h.IIU.PLAYING && (0, f.m9)(e) ? (0, _.cN)(e, t) : !!(t.type === h.IIU.LISTENING && (0, f.dU)(e)) && (0, _.pB)(e, t))) : void 0;
 }
-function T(e) {
-    let n = new Set(),
-        r = new Set();
+function I(e) {
+    let t = new Set(),
+        n = new Set();
     for (let i of e) {
-        let e = I(i.content);
+        let e = y(i.content);
         if (void 0 !== e) {
-            let a = b(i.content);
-            r.add(a), e !== y.get(a) && (n.add(a), y.set(a, e));
+            let r = v(i.content);
+            n.add(r), e !== E.get(r) && (t.add(r), E.set(r, e));
         }
     }
     return {
-        updatedKeys: n,
-        matchedKeys: r
+        updatedKeys: t,
+        matchedKeys: n
     };
 }
-function S(e) {
-    let { feed: n } = e,
-        { updatedKeys: r } = T(n.entries);
-    return r.size > 0;
+function b(e) {
+    let { feed: t } = e,
+        { updatedKeys: n } = I(t.entries);
+    return n.size > 0;
 }
-function A() {
-    y.clear();
+function T() {
+    E.clear();
 }
-function C() {
+function S() {
     let e = !1,
-        n = Array.from(y.keys()),
-        r = new Set(),
+        t = Array.from(E.keys()),
+        n = new Set(),
         i = new Set();
-    for (let n of p.Z.getFeeds().values()) {
-        let { updatedKeys: a, matchedKeys: o } = T(r.size > 0 ? n.entries.filter((e) => !r.has(b(e.content))) : n.entries);
-        for (let e of a) r.add(e);
-        for (let e of o) i.add(e);
-        e = e || a.size > 0;
+    for (let t of d.Z.getFeeds().values()) {
+        let { updatedKeys: r, matchedKeys: a } = I(n.size > 0 ? t.entries.filter((e) => !n.has(v(e.content))) : t.entries);
+        for (let e of r) n.add(e);
+        for (let e of a) i.add(e);
+        e = e || r.size > 0;
     }
-    for (let r of s().difference(n, [...i])) y.delete(r), (e = !0);
+    for (let n of a().difference(t, [...i])) E.delete(n), (e = !0);
     return e;
 }
-class N extends (i = c.ZP.Store) {
+class A extends (i = l.ZP.Store) {
     initialize() {
-        this.waitFor(p.Z, f.Z), this.syncWith([f.Z], C);
+        this.waitFor(d.Z, c.Z), this.syncWith([c.Z], S);
     }
     getMatchingActivity(e) {
-        return (0, m.n2)(e) ? null : y.get(b(e));
+        return (0, p.n2)(e) ? null : E.get(v(e));
     }
     constructor(...e) {
-        super(...e), E(this, 'canRenderContent', (e) => !(0, m.n2)(e) && (!v.has(e.content_type) || null != this.getMatchingActivity(e)));
+        super(...e), m(this, 'canRenderContent', (e) => !(0, p.n2)(e) && (!g.has(e.content_type) || null != this.getMatchingActivity(e)));
     }
 }
-E(N, 'displayName', 'ContentInventoryActivityStore'),
-    (n.Z = new N(d.Z, {
-        CONNECTION_OPEN: A,
-        CONTENT_INVENTORY_SET_FEED: S
-    }));
+m(A, 'displayName', 'ContentInventoryActivityStore');
+let N = new A(u.Z, {
+    CONNECTION_OPEN: T,
+    CONTENT_INVENTORY_SET_FEED: b
+});

@@ -1,33 +1,29 @@
-n.d(t, {
-    Z: function () {
-        return _;
-    }
-});
+n.d(t, { Z: () => g });
 var i = n(200651);
 n(192379);
-var r = n(120356),
-    l = n.n(r),
-    a = n(481060),
-    o = n(385499),
-    s = n(739566),
+var l = n(120356),
+    a = n.n(l),
+    r = n(481060),
+    s = n(385499),
+    o = n(739566),
     c = n(464891),
-    u = n(83561),
-    d = n(834129),
+    d = n(83561),
+    u = n(834129),
     m = n(981631),
     h = n(674563),
-    f = n(388032),
+    _ = n(388032),
     p = n(403498);
-function _(e) {
-    let { message: t, compact: n, usernameHook: r } = e,
-        _ = (0, s.ZP)(t),
-        g = r(_),
+function g(e) {
+    let { message: t, compact: n, usernameHook: l } = e,
+        g = (0, o.ZP)(t),
+        f = l(g),
         {
-            avatarSrc: E,
-            eventHandlers: { onMouseEnter: C, onMouseLeave: I }
-        } = (0, u.m)(!0),
-        x =
+            avatarSrc: x,
+            eventHandlers: { onMouseEnter: E, onMouseLeave: C }
+        } = (0, d.m)(!0),
+        v =
             '' !== t.content
-                ? new Date(t.content).toLocaleString(f.intl.currentLocale, {
+                ? new Date(t.content).toLocaleString(_.intl.currentLocale, {
                       hour: 'numeric',
                       minute: '2-digit',
                       month: '2-digit',
@@ -36,31 +32,31 @@ function _(e) {
                   })
                 : '';
     return (0, i.jsx)('div', {
-        onMouseEnter: C,
-        onMouseLeave: I,
-        children: (0, i.jsx)(d.Z, {
-            className: l()(p.mainContainer, { [p.compact]: n }),
-            iconNode: n ? null : (0, i.jsx)(u.S, { src: E }),
+        onMouseEnter: E,
+        onMouseLeave: C,
+        children: (0, i.jsx)(u.Z, {
+            className: a()(p.mainContainer, { [p.compact]: n }),
+            iconNode: n ? null : (0, i.jsx)(d.S, { src: x }),
             iconContainerClassName: p.iconContainer,
             compact: n,
             children: (0, i.jsxs)('div', {
-                className: l()(p.content, { [p.compact]: n }),
+                className: a()(p.content, { [p.compact]: n }),
                 children: [
                     (0, i.jsx)(c.nD, {
                         message: t,
                         messageClassname: p.spanCorrection,
-                        className: l()(p.usernameContainer, p.spanCorrection, { [p.compact]: n }),
+                        className: a()(p.usernameContainer, p.spanCorrection, { [p.compact]: n }),
                         username: (0, i.jsxs)('div', {
                             className: p.spanCorrection,
                             children: [
-                                (0, i.jsx)(a.Text, {
+                                (0, i.jsx)(r.Text, {
                                     variant: 'text-md/normal',
                                     color: 'text-brand',
                                     tag: 'span',
                                     className: p.username,
-                                    children: f.intl.string(f.t.hG1StL)
+                                    children: _.intl.string(_.t.hG1StL)
                                 }),
-                                (0, i.jsx)(o.Z, {
+                                (0, i.jsx)(s.Z, {
                                     type: h.Hb.SYSTEM_DM,
                                     className: p.systemTag
                                 })
@@ -70,17 +66,17 @@ function _(e) {
                         showTimestamp: !0
                     }),
                     (0, i.jsx)('div', {
-                        className: l()(p.__invalid_messageContent, { [p.compact]: n }),
+                        className: a()(p.__invalid_messageContent, { [p.compact]: n }),
                         children:
                             t.type === m.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED
-                                ? f.intl.format(f.t['+m8eDw'], {
-                                      username: _.nick,
-                                      usernameHook: g,
-                                      time: x
+                                ? _.intl.format(_.t['+m8eDw'], {
+                                      username: g.nick,
+                                      usernameHook: f,
+                                      time: v
                                   })
-                                : f.intl.format(f.t.BHeke3, {
-                                      username: _.nick,
-                                      usernameHook: g
+                                : _.intl.format(_.t.BHeke3, {
+                                      username: g.nick,
+                                      usernameHook: f
                                   })
                     })
                 ]

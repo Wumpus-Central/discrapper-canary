@@ -1,12 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return C;
-    }
-});
+n.d(t, { Z: () => _ });
 var i = n(200651),
     l = n(192379),
-    r = n(120356),
-    a = n.n(r),
+    a = n(120356),
+    r = n.n(a),
     s = n(481060),
     o = n(239091),
     c = n(586902),
@@ -17,20 +13,20 @@ var i = n(200651),
     m = n(768581),
     f = n(22105);
 function g(e) {
-    let { channel: t, speaker: r, className: p } = e,
+    let { channel: t, speaker: a, className: p } = e,
         g = (0, d.bp)(),
-        { reducedMotion: C } = l.useContext(s.AccessibilityPreferencesContext),
-        x = (0, c.Z)({ userId: r.id }),
-        v = null != r.member ? (0, m.CA)(r.member) : null,
-        _ = (e) => {
+        { reducedMotion: _ } = l.useContext(s.Sfi),
+        C = (0, c.Z)({ userId: a.id }),
+        x = null != a.member ? (0, m.CA)(a.member) : null,
+        v = (e) => {
             (0, o.jW)(
                 e,
                 async () => {
-                    let { default: e } = await Promise.all([n.e('79695'), n.e('31996'), n.e('13125'), n.e('64899')]).then(n.bind(n, 757387));
+                    let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('13125'), n.e('64899')]).then(n.bind(n, 757387));
                     return (n) =>
                         (0, i.jsx)(e, {
                             ...n,
-                            user: r.user,
+                            user: a.user,
                             guildId: t.guild_id,
                             channel: t,
                             showMediaItems: !0,
@@ -41,9 +37,9 @@ function g(e) {
                 { context: g }
             );
         };
-    return (0, i.jsx)(s.Popout, {
+    return (0, i.jsx)(s.yRy, {
         preload: () =>
-            (0, u.Z)(r.user, {
+            (0, u.Z)(a.user, {
                 guildId: t.guild_id,
                 channelId: t.id
             }),
@@ -52,34 +48,34 @@ function g(e) {
                 ...e,
                 guildId: t.guild_id,
                 channelId: t.id,
-                userId: r.id
+                userId: a.id
             }),
         position: 'right',
         spacing: 8,
         children: (e) =>
-            (0, i.jsx)(s.Tooltip, {
-                text: r.userNick,
+            (0, i.jsx)(s.ua7, {
+                text: a.userNick,
                 position: 'bottom',
                 children: (n) =>
-                    (0, i.jsx)(s.Clickable, {
+                    (0, i.jsx)(s.P3F, {
                         ...n,
                         ...e,
                         onClick: (t) => {
                             t.stopPropagation(), e.onClick(t);
                         },
-                        onContextMenu: _,
-                        children: (0, i.jsx)(s.Avatar, {
-                            src: null != v ? v : r.user.getAvatarURL(t.guild_id, 24),
-                            size: s.AvatarSizes.SIZE_24,
-                            className: a()(f.avatar, p),
-                            'aria-label': r.userNick,
-                            isSpeaking: x && !C.enabled
+                        onContextMenu: v,
+                        children: (0, i.jsx)(s.qEK, {
+                            src: null != x ? x : a.user.getAvatarURL(t.guild_id, 24),
+                            size: s.EFr.SIZE_24,
+                            className: r()(f.avatar, p),
+                            'aria-label': a.userNick,
+                            isSpeaking: C && !_.enabled
                         })
                     })
             })
     });
 }
-function C(e) {
+function _(e) {
     let { speakers: t, channel: n } = e;
     return (0, i.jsx)(p.Z, {
         className: f.summary,
@@ -100,7 +96,7 @@ function C(e) {
             (0, i.jsx)(
                 'div',
                 {
-                    className: a()(f.speakers, t),
+                    className: r()(f.speakers, t),
                     children: e
                 },
                 n

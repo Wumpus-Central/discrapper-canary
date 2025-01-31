@@ -1,41 +1,37 @@
-t.d(e, {
-    Z: function () {
-        return s;
-    }
-});
-var i = t(200651),
-    l = t(192379),
-    a = t(481060),
-    r = t(493683),
-    u = t(699516),
-    o = t(594174),
-    d = t(933557),
-    c = t(388032);
-function s(n, e) {
-    let s = l.useCallback(() => {
-        let l = (0, d.F6)(n, o.default, u.Z),
-            s = c.intl.formatToPlainString(c.t.hJ5Ap6, { name: l }),
-            f = c.intl.format(c.t.SSIVOj, { name: l });
-        n.isManaged() && ((s = c.intl.formatToPlainString(c.t.hVGjER, { name: l })), (f = c.intl.format(c.t.IK1Qvr, { name: l })));
-        let h = function (t) {
+e.d(t, { Z: () => c });
+var i = e(200651),
+    l = e(192379),
+    a = e(481060),
+    r = e(493683),
+    d = e(699516),
+    o = e(594174),
+    s = e(933557),
+    u = e(388032);
+function c(n, t) {
+    let c = l.useCallback(() => {
+        let l = (0, s.F6)(n, o.default, d.Z),
+            c = u.intl.formatToPlainString(u.t.hJ5Ap6, { name: l }),
+            h = u.intl.format(u.t.SSIVOj, { name: l });
+        n.isManaged() && ((c = u.intl.formatToPlainString(u.t.hVGjER, { name: l })), (h = u.intl.format(u.t.IK1Qvr, { name: l })));
+        let f = function (e) {
             let i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            r.Z.closePrivateChannel(n.id, e, i);
+            r.Z.closePrivateChannel(n.id, t, i);
         };
-        (0, a.openModalLazy)(async () => {
-            let { default: n } = await t.e('14604').then(t.bind(t, 960670));
-            return (e) =>
+        (0, a.ZDy)(async () => {
+            let { default: n } = await e.e('14604').then(e.bind(e, 960670));
+            return (t) =>
                 (0, i.jsx)(n, {
-                    header: s,
-                    body: f,
-                    onSubmit: h,
-                    ...e
+                    header: c,
+                    body: h,
+                    onSubmit: f,
+                    ...t
                 });
         });
-    }, [n, e]);
-    return (0, i.jsx)(a.MenuItem, {
+    }, [n, t]);
+    return (0, i.jsx)(a.sNh, {
         id: 'leave-channel',
-        label: c.intl.string(c.t['26C4oq']),
-        action: s,
+        label: u.intl.string(u.t['26C4oq']),
+        action: c,
         color: 'danger'
     });
 }

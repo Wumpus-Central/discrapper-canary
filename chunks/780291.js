@@ -1,41 +1,37 @@
-r.d(n, {
-    Z: function () {
-        return g;
-    }
-});
-var i = r(200651),
-    a = r(192379),
-    o = r(442837),
-    s = r(606992),
-    l = r(314897),
-    u = r(843693),
-    c = r(576125),
-    d = r(112843),
-    f = r(524484),
-    p = r(675654);
-let h = 16,
-    _ = 0.05;
-function m(e) {
-    var n, r;
-    let { editorHeight: i, textValue: c, channelId: f } = e,
-        m = a.useRef(c),
-        g = (0, s.Z)({ editorHeight: i }),
-        E = (0, d.Z)(),
-        v = (0, o.e7)([u.ZP, l.default], () => u.ZP.isComboing(l.default.getId(), f)),
-        y = null !== (n = null == g ? void 0 : g.left) && void 0 !== n ? n : 0,
-        b = (null !== (r = null == g ? void 0 : g.top) && void 0 !== r ? r : 0) - h,
-        I = 0 === c.length,
-        T = a.useMemo(() => Math.random() < _, [I]);
+n.d(t, { Z: () => m });
+var i = n(200651),
+    r = n(192379),
+    a = n(442837),
+    s = n(606992),
+    o = n(314897),
+    l = n(843693),
+    u = n(576125),
+    c = n(112843),
+    d = n(524484),
+    f = n(675654);
+let _ = 16,
+    p = 0.05;
+function h(e) {
+    var t, n;
+    let { editorHeight: i, textValue: u, channelId: d } = e,
+        h = r.useRef(u),
+        m = (0, s.Z)({ editorHeight: i }),
+        g = (0, c.Z)(),
+        E = (0, a.e7)([l.ZP, o.default], () => l.ZP.isComboing(o.default.getId(), d)),
+        v = null !== (t = null == m ? void 0 : m.left) && void 0 !== t ? t : 0,
+        y = (null !== (n = null == m ? void 0 : m.top) && void 0 !== n ? n : 0) - _,
+        I = 0 === u.length,
+        b = r.useMemo(() => Math.random() < p, [I]);
     return (
-        a.useEffect(() => {
-            0 !== c.length && c !== m.current && v && (E.fire(y, b, T ? { sprite: p.vv } : null), (m.current = c));
-        }, [c, v, y, b, T, E]),
+        r.useEffect(() => {
+            0 !== u.length && u !== h.current && E && (g.fire(v, y, b ? { sprite: f.vv } : null), (h.current = u));
+        }, [u, E, v, y, b, g]),
         null
     );
 }
-function g(e) {
-    return (0, i.jsx)(c.Z, {
-        confettiLocation: f.Hn.CHAT_INPUT,
-        children: (0, i.jsx)(m, { ...e })
+function m(e) {
+    return (0, i.jsx)(u.Z, {
+        confettiLocation: d.Hn.CHAT_INPUT,
+        children: (0, i.jsx)(h, { ...e })
     });
 }

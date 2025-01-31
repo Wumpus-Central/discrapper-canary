@@ -1,68 +1,62 @@
-r.d(n, {
-    GR: function () {
-        return c;
-    },
-    b8: function () {
-        return u;
-    },
-    ul: function () {
-        return d;
-    }
+n.d(t, {
+    GR: () => u,
+    b8: () => l,
+    ul: () => c
 });
-var i = r(544891),
-    a = r(570140),
-    o = r(85521),
-    s = r(73346),
-    l = r(981631);
-async function u() {
+var i = n(544891),
+    r = n(570140),
+    a = n(85521),
+    s = n(73346),
+    o = n(981631);
+async function l() {
     try {
         let e = await (0, s.Kb)(
             {
-                url: l.ANM.LIBRARY,
+                url: o.ANM.LIBRARY,
                 oldFormErrors: !0,
                 rejectWithError: !1
             },
             !1
         );
-        a.Z.dispatch({
+        r.Z.dispatch({
             type: 'LIBRARY_FETCH_SUCCESS',
             libraryApplications: e.body
         });
     } catch (e) {
-        a.Z.dispatch({
+        r.Z.dispatch({
             type: 'LIBRARY_FETCH_FAIL',
             error: e
         });
     }
 }
-async function c(e) {
-    let n = e.primarySkuId;
-    if (null == n) return;
-    let r = (
+async function u(e) {
+    let t = e.primarySkuId;
+    if (null == t) return;
+    let n = (
         await i.tn
             .get({
-                url: l.ANM.APPLICATION_BRANCH_LIST(e.id),
+                url: o.ANM.APPLICATION_BRANCH_LIST(e.id),
                 oldFormErrors: !0,
                 rejectWithError: !1
             })
             .then((e) => e.body)
-    ).map((r) =>
-        o.Z.createForTestMode({
+    ).map((n) =>
+        a.Z.createForTestMode({
             id: e.id,
-            skuId: n,
-            branch: r
+            skuId: t,
+            branch: n
         })
     );
-    a.Z.dispatch({
+    r.Z.dispatch({
         type: 'LIBRARY_APPLICATIONS_TEST_MODE_ENABLED',
-        libraryApplications: r
+        libraryApplications: n
     });
 }
-function d(e, n, r) {
-    a.Z.dispatch({
+function c(e, t, n) {
+    r.Z.dispatch({
         type: 'LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE',
         applicationId: e,
-        branchId: n,
-        launchOptionId: r
+        branchId: t,
+        launchOptionId: n
     });
 }

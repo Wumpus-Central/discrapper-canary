@@ -1,12 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return h;
-    }
-});
+n.d(t, { Z: () => h });
 var i = n(200651),
     l = n(192379),
-    r = n(512722),
-    a = n.n(r),
+    a = n(512722),
+    r = n.n(a),
     s = n(399606),
     o = n(618158),
     c = n(594174),
@@ -15,20 +11,20 @@ var i = n(200651),
     m = n(610947),
     f = n(848212);
 function p(e) {
-    let { focused: t, channelId: n, streamerId: r, stream: u } = e,
+    let { focused: t, channelId: n, streamerId: a, stream: u } = e,
         p = l.useRef(null),
         h = (0, s.e7)([c.default], () => c.default.getCurrentUser());
-    a()(null != h, 'user cannot be null'), (0, m.Z)(p, h, r, n);
+    r()(null != h, 'user cannot be null'), (0, m.Z)(p, h, a, n);
     let {
         handleClick: g,
         handleMouseDown: v,
-        handleMouseEnter: S,
-        handleMouseMove: I,
-        handleMouseUp: x
+        handleMouseEnter: _,
+        handleMouseMove: S,
+        handleMouseUp: I
     } = (0, d.Z)({
         user: h,
         channelId: n,
-        streamerId: r,
+        streamerId: a,
         stream: u,
         focused: t,
         canvas: p.current
@@ -38,9 +34,9 @@ function p(e) {
             ref: p,
             onClick: g,
             onMouseDown: v,
-            onMouseEnter: S,
-            onMouseMove: I,
-            onMouseUp: x,
+            onMouseEnter: _,
+            onMouseMove: S,
+            onMouseUp: I,
             className: f.sharedCanvas
         })
     });

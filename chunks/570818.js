@@ -1,8 +1,4 @@
-n.d(t, {
-    J: function () {
-        return i;
-    }
-});
+n.d(t, { J: () => i });
 var r = n(100204);
 function i(e, t, n) {
     return (0, r.U)(

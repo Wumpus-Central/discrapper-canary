@@ -1,14 +1,8 @@
-r.r(n),
-    r.d(n, {
-        parseDateTimeSkeleton: function () {
-            return i.T;
-        },
-        parseNumberSkeleton: function () {
-            return a.I;
-        },
-        parseNumberSkeletonFromString: function () {
-            return a.O;
-        }
+n.r(t),
+    n.d(t, {
+        parseDateTimeSkeleton: () => i.T,
+        parseNumberSkeleton: () => r.I,
+        parseNumberSkeletonFromString: () => r.O
     });
-var i = r(99925),
-    a = r(356228);
+var i = n(99925),
+    r = n(356228);

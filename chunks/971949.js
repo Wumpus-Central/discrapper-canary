@@ -1,74 +1,66 @@
-a.r(t),
-    a.d(t, {
-        default: function () {
-            return L;
-        }
-    });
-var e = a(200651);
+a.d(t, { default: () => m });
+var o = a(200651);
 a(192379);
-var o = a(692547),
+var e = a(692547),
     r = a(481060),
-    c = a(906732),
+    s = a(906732),
     i = a(98278),
-    s = a(790527),
-    l = a(474936),
-    d = a(981631),
-    u = a(388032),
-    f = a(478811),
+    c = a(790527),
+    d = a(474936),
+    l = a(981631),
+    f = a(388032),
+    u = a(478811),
     p = a(913197),
-    k = a(860324);
-function C(n, t) {
-    return (0, e.jsx)(
-        r.TextBadge,
+    L = a(860324);
+function k(n, t) {
+    return (0, o.jsx)(
+        r.IGR,
         {
             text: n,
             className: p.newBadge,
-            color: o.Z.unsafe_rawColors.BRAND_500.css
+            color: e.Z.unsafe_rawColors.BRAND_500.css
         },
         t
     );
 }
-function L(n) {
-    var t;
-    let { guildCount: a, onClose: o, analyticsLocations: p, ...L } = n;
-    let m =
-            ((t = o),
-            function (n, a) {
-                return (0, e.jsx)(
-                    r.Clickable,
-                    {
-                        className: f.learnMoreLink,
-                        tag: 'span',
-                        onClick: () => {
-                            t(), (0, i.z)();
-                        },
-                        children: n
+function m(n) {
+    let { guildCount: t, onClose: a, analyticsLocations: e, ...p } = n,
+        m = function (n, t) {
+            return (0, o.jsx)(
+                r.P3F,
+                {
+                    className: u.learnMoreLink,
+                    tag: 'span',
+                    onClick: () => {
+                        a(), (0, i.z)();
                     },
-                    a
-                );
-            }),
-        { analyticsLocations: x } = (0, c.ZP)(p);
-    return (0, e.jsx)(c.Gt, {
-        value: x,
-        children: (0, e.jsx)(s.Z, {
-            artURL: k.Z,
-            onClose: o,
-            type: l.cd.GUILD_CAP_MODAL_UPSELL,
-            title: u.intl.string(u.t.CoNXBw),
+                    children: n
+                },
+                t
+            );
+        },
+        { analyticsLocations: C } = (0, s.ZP)(e);
+    return (0, o.jsx)(s.Gt, {
+        value: C,
+        children: (0, o.jsx)(c.Z, {
+            artURL: L.Z,
+            onClose: a,
+            type: d.cd.GUILD_CAP_MODAL_UPSELL,
+            title: f.intl.string(f.t.CoNXBw),
             body:
-                a < d.DZw
-                    ? u.intl.format(u.t['5qLH7O'], {
-                          guildCount: a,
+                t < l.DZw
+                    ? f.intl.format(f.t['5qLH7O'], {
+                          guildCount: t,
                           onAndMore: m,
-                          newBadgeHook: C
+                          newBadgeHook: k
                       })
-                    : u.intl.format(u.t.mk9CS0, {
+                    : f.intl.format(f.t.mk9CS0, {
                           onAndMore: m,
-                          newBadgeHook: C
+                          newBadgeHook: k
                       }),
-            context: a < d.DZw ? u.intl.formatToPlainString(u.t['C+Hqzs'], { guildCount: a }) : u.intl.string(u.t.m0xavb),
-            glowUp: u.intl.format(u.t['6Dl5X1'], { onAndMore: m }),
-            ...L
+            context: t < l.DZw ? f.intl.formatToPlainString(f.t['C+Hqzs'], { guildCount: t }) : f.intl.string(f.t.m0xavb),
+            glowUp: f.intl.format(f.t['6Dl5X1'], { onAndMore: m }),
+            ...p
         })
     });
 }

@@ -1,11 +1,12 @@
 e.exports = {
-    subscription: 'subscription_cf84f3',
-    subscriptionInfo: 'subscriptionInfo_cf84f3',
-    tierInfo: 'tierInfo_cf84f3',
-    tierPill: 'tierPill_cf84f3',
-    tierPillStar: 'tierPillStar_cf84f3',
-    guildName: 'guildName_cf84f3',
-    levelDownIcon: 'levelDownIcon_cf84f3 levelIcon_cf84f3',
-    levelUpIcon: 'levelUpIcon_cf84f3 levelIcon_cf84f3',
-    tierPillGem: 'tierPillGem_cf84f3'
+    subscription: 'subscription_d970da',
+    subscriptionInfo: 'subscriptionInfo_d970da',
+    tierInfo: 'tierInfo_d970da',
+    tierPill: 'tierPill_d970da',
+    tierPillStar: 'tierPillStar_d970da',
+    guildName: 'guildName_d970da',
+    levelIcon: 'levelIcon_d970da',
+    levelDownIcon: 'levelDownIcon_d970da levelIcon_d970da',
+    levelUpIcon: 'levelUpIcon_d970da levelIcon_d970da',
+    tierPillGem: 'tierPillGem_d970da'
 };

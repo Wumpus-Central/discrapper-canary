@@ -1,10 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-}),
-    n(47120),
-    n(390547);
+n.d(t, { Z: () => r }), n(47120), n(390547);
 var i = n(944537);
 function r(e) {
     let t = (0, i.n)((t) => t.editStateIdsForGroup[e]),

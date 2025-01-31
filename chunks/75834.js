@@ -1,55 +1,51 @@
-r.d(n, {
-    e: function () {
-        return o;
-    },
-    s: function () {
-        return c;
-    }
-});
-var i = r(47120);
-var a = r(823379);
-function o(e, n) {
-    let r = e.find((e) => e.processId === n);
-    return null == r ? null : c(e, r);
+n.d(t, {
+    e: () => r,
+    s: () => l
+}),
+    n(47120);
+var i = n(823379);
+function r(e, t) {
+    let n = e.find((e) => e.processId === t);
+    return null == n ? null : l(e, n);
 }
-let s = '356869127241072640',
-    l = 'league of legends.exe';
-function u(e, n) {
-    let r = n.processPath.length > 1 ? n.processPath[n.processPath.length - 2] : 0,
-        i = e.filter((e) => e.applicationId === s && e.processPath.includes(r)),
-        a = i.find((e) => e.executableName === l);
-    return void 0 !== a ? a : i.length > 0 ? i[0] : null;
+let a = '356869127241072640',
+    s = 'league of legends.exe';
+function o(e, t) {
+    let n = t.processPath.length > 1 ? t.processPath[t.processPath.length - 2] : 0,
+        i = e.filter((e) => e.applicationId === a && e.processPath.includes(n)),
+        r = i.find((e) => e.executableName === s);
+    return void 0 !== r ? r : i.length > 0 ? i[0] : null;
 }
-function c(e, n) {
-    var r;
-    if (null == n) return null;
-    if (n.applicationId === s) return u(e, n);
-    let i = new Map(e.map((e) => [e.processId, e])),
-        o = n.processPath.map((e) => i.get(e)).find((e) => null != e);
-    if (null == o) return null;
+function l(e, t) {
+    var n;
+    if (null == t) return null;
+    if (t.applicationId === a) return o(e, t);
+    let r = new Map(e.map((e) => [e.processId, e])),
+        s = t.processPath.map((e) => r.get(e)).find((e) => null != e);
+    if (null == s) return null;
     let l = e
         .map((e) => {
-            let n = e.processPath.findIndex((e) => i.has(e));
-            return -1 === n
+            let t = e.processPath.findIndex((e) => r.has(e));
+            return -1 === t
                 ? null
                 : {
                       application: e,
-                      rootedPath: e.processPath.slice(n)
+                      rootedPath: e.processPath.slice(t)
                   };
         })
-        .filter(a.lm)
-        .filter((e) => e.rootedPath[0] === o.processId);
-    l.sort((e, n) => {
-        let r = e.rootedPath.map((e) => i.get(e)).filter((e) => null != e && null != e.windowHandle),
-            a = d(
-                n.rootedPath.map((e) => i.get(e)).filter((e) => null != e && null != e.windowHandle),
-                r
+        .filter(i.lm)
+        .filter((e) => e.rootedPath[0] === s.processId);
+    l.sort((e, t) => {
+        let n = e.rootedPath.map((e) => r.get(e)).filter((e) => null != e && null != e.windowHandle),
+            i = u(
+                t.rootedPath.map((e) => r.get(e)).filter((e) => null != e && null != e.windowHandle),
+                n
             );
-        return 0 !== a ? a : d(n.rootedPath, e.rootedPath);
+        return 0 !== i ? i : u(t.rootedPath, e.rootedPath);
     });
-    let c = null !== (r = l.find((e) => null != e.application.windowHandle)) && void 0 !== r ? r : l[0];
+    let c = null !== (n = l.find((e) => null != e.application.windowHandle)) && void 0 !== n ? n : l[0];
     return null == c ? null : c.application;
 }
-function d(e, n) {
-    return e.length - n.length;
+function u(e, t) {
+    return e.length - t.length;
 }

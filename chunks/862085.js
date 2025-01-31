@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-});
+n.d(t, { Z: () => o });
 var i = n(200651);
 n(192379);
 var r = n(481060),
@@ -29,7 +25,7 @@ function o(e) {
             (0, i.jsxs)('div', {
                 className: a.actionTextContainer,
                 children: [
-                    (0, i.jsx)(r.Heading, {
+                    (0, i.jsx)(r.X6q, {
                         variant: 'heading-sm/semibold',
                         children: m
                     }),
@@ -44,7 +40,7 @@ function o(e) {
                               variant: 'text-xs/medium',
                               children: [
                                   s.intl.string(s.t.Oa9oWF),
-                                  (0, i.jsx)(r.Clickable, {
+                                  (0, i.jsx)(r.P3F, {
                                       onClick: d(!0),
                                       className: a.editChannel,
                                       tag: 'span',
@@ -57,8 +53,8 @@ function o(e) {
                 ]
             }),
             (0, i.jsx)('div', {
-                children: (0, i.jsx)(r.Checkbox, {
-                    type: r.Checkbox.Types.INVERTED,
+                children: (0, i.jsx)(r.XZJ, {
+                    type: r.XZJ.Types.INVERTED,
                     value: o,
                     onChange: d(!1),
                     className: a.__invalid_actionCheckbox

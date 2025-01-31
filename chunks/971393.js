@@ -1,9 +1,5 @@
-r.d(n, {
-    sS: function () {
-        return a;
-    }
-});
-let i = (0, r(818083).B)({
+n.d(t, { sS: () => r });
+let i = (0, n(818083).B)({
     kind: 'user',
     id: '2024-08_user_profile_blocker_skeleton',
     label: 'User Profile Blocker Skeleton',
@@ -16,8 +12,8 @@ let i = (0, r(818083).B)({
         }
     ]
 });
-function a(e) {
-    let { location: n, autoTrackExposure: r = !0 } = e,
-        { enabled: a } = i.useExperiment({ location: n }, { autoTrackExposure: r });
-    return a;
+function r(e) {
+    let { location: t, autoTrackExposure: n = !0 } = e,
+        { enabled: r } = i.useExperiment({ location: t }, { autoTrackExposure: n });
+    return r;
 }

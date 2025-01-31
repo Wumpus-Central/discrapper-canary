@@ -1,15 +1,11 @@
-r.d(n, {
-    g: function () {
-        return o;
-    }
-});
-var i = r(818083),
-    a = r(987338);
-let o = (0, i.B)({
+n.d(t, { g: () => a });
+var i = n(818083),
+    r = n(987338);
+let a = (0, i.B)({
     kind: 'user',
     id: '2024-06_outbound_promo_desktop_upsell',
     label: 'Upsell Outbound Promos',
-    commonTriggerPoint: a.$P.CONNECTION_OPEN,
+    commonTriggerPoint: r.$P.CONNECTION_OPEN,
     defaultConfig: {
         enabled: !1,
         getNitroCTA: !1

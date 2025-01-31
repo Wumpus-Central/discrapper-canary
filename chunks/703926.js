@@ -1,52 +1,48 @@
-r.d(n, {
-    m: function () {
-        return v;
-    }
-});
-var i = r(200651),
-    a = r(192379),
-    o = r(481060),
-    s = r(474936),
-    l = r(803731),
-    u = r(426831),
-    c = r(257510),
-    d = r(74838),
-    f = r(720834),
-    p = r(385925),
-    h = r(704253),
-    _ = r(718720),
-    m = r(721513),
-    g = r(959191);
-let E = {
-        [s.Cj.STANDARD_BOX]: p,
-        [s.Cj.CAKE]: h,
-        [s.Cj.CHEST]: _,
-        [s.Cj.COFFEE]: m,
+n.d(t, { m: () => E });
+var i = n(200651),
+    r = n(192379),
+    a = n(481060),
+    s = n(474936),
+    o = n(803731),
+    l = n(426831),
+    u = n(257510),
+    c = n(74838),
+    d = n(720834),
+    f = n(385925),
+    _ = n(704253),
+    p = n(718720),
+    h = n(721513),
+    m = n(959191);
+let g = {
+        [s.Cj.STANDARD_BOX]: f,
+        [s.Cj.CAKE]: _,
+        [s.Cj.CHEST]: p,
+        [s.Cj.COFFEE]: h,
         [s.Cj.SNOWGLOBE]: '',
         [s.Cj.BOX]: '',
         [s.Cj.CUP]: '',
-        [s.Cj.SEASONAL_CAKE]: c,
-        [s.Cj.SEASONAL_CHEST]: d,
-        [s.Cj.SEASONAL_COFFEE]: f,
-        [s.Cj.SEASONAL_STANDARD_BOX]: u,
-        [s.Cj.NITROWEEN_STANDARD]: g.Z
+        [s.Cj.SEASONAL_CAKE]: u,
+        [s.Cj.SEASONAL_CHEST]: c,
+        [s.Cj.SEASONAL_COFFEE]: d,
+        [s.Cj.SEASONAL_STANDARD_BOX]: l,
+        [s.Cj.NITROWEEN_STANDARD]: m.Z
     },
-    v = a.forwardRef(function (e, n) {
-        let { isSelected: r, giftStyle: a, setSelectedGiftStyle: s, onFocus: u, onBlur: c } = e;
-        return (0, i.jsx)(o.Clickable, {
-            className: l.button,
-            innerRef: n,
-            onClick: () => s(a),
-            onFocus: u,
-            onBlur: c,
+    E = r.forwardRef(function (e, t) {
+        let { isSelected: n, giftStyle: r, setSelectedGiftStyle: s, onFocus: l, onBlur: u } = e;
+        return (0, i.jsx)(a.P3F, {
+            className: o.button,
+            innerRef: t,
+            onClick: () => s(r),
+            onFocus: l,
+            onBlur: u,
             children: (0, i.jsx)('img', {
                 style: {
                     width: '100%',
                     height: '100%'
                 },
                 alt: '',
-                src: E[a],
-                className: r ? l.customGiftBoxHighlighted : l.customGiftBox
+                src: g[r],
+                className: n ? o.customGiftBoxHighlighted : o.customGiftBox
             })
         });
     });

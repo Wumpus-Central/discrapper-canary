@@ -1,17 +1,12 @@
-r.d(n, {
-    l: function () {
-        return l;
-    }
-});
-var i = r(47120);
-var a = r(399606),
-    o = r(597688),
-    s = r(267097);
-function l(e) {
-    (0, s.Z)();
-    let [n, r] = (0, a.Wu)([o.Z], () => [o.Z.isFetchingCategories, o.Z.getCategoryForProduct(e)]);
+n.d(t, { l: () => s }), n(47120);
+var i = n(399606),
+    r = n(597688),
+    a = n(267097);
+function s(e) {
+    (0, a.Z)();
+    let [t, n] = (0, i.Wu)([r.Z], () => [r.Z.isFetchingCategories, r.Z.getCategoryForProduct(e)]);
     return {
-        isFetching: n,
-        category: r
+        isFetching: t,
+        category: n
     };
 }

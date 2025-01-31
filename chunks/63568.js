@@ -1,15 +1,9 @@
-r.d(n, {
-    K2: function () {
-        return o;
-    },
-    jS: function () {
-        return a;
-    },
-    tW: function () {
-        return i;
-    }
+n.d(t, {
+    K2: () => a,
+    jS: () => r,
+    tW: () => i
 });
-let i = (0, r(818083).B)({
+let i = (0, n(818083).B)({
     kind: 'guild',
     id: '2024-11_member_verification_rollout',
     label: 'Member verification rollout',
@@ -22,20 +16,20 @@ let i = (0, r(818083).B)({
         }
     ]
 });
-function a(e, n) {
+function r(e, t) {
     return i.useExperiment(
         {
             guildId: e,
-            location: n
+            location: t
         },
         { autoTrackExposure: !0 }
     ).enabled;
 }
-function o(e, n) {
+function a(e, t) {
     return i.getCurrentConfig(
         {
             guildId: e,
-            location: n
+            location: t
         },
         { autoTrackExposure: !0 }
     ).enabled;

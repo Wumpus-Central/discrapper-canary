@@ -1,9 +1,4 @@
 let i;
-r.d(n, {
-    hk: function () {
-        return a;
-    }
-});
-i = r(66511).Z;
-let a = i.openMemberVerificationModal;
+n.d(t, { hk: () => r });
+let r = (i = n(66511).Z).openMemberVerificationModal;
 i.closeMemberVerificationModal;

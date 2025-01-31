@@ -1,17 +1,18 @@
-e.exports = {
-    rootContainer: 'rootContainer_b3552d',
-    rootContainerLoading: 'rootContainerLoading_b3552d',
-    claimedRootContainer: 'claimedRootContainer_b3552d',
-    headerContainer: 'headerContainer_b3552d',
-    headerBackground: 'headerBackground_b3552d',
-    headerForeground: 'headerForeground_b3552d',
-    previewContainer: 'previewContainer_b3552d',
-    close: 'close_b3552d',
-    footerBody: 'footerBody_b3552d',
-    heading: 'heading_b3552d',
-    text: 'text_b3552d',
-    confettiCanvas: 'confettiCanvas_b3552d',
-    additionalRedemptionInstructions: 'additionalRedemptionInstructions_b3552d',
-    sponsorLogo: 'sponsorLogo_b3552d',
-    loadingIndicatorWrapper: 'loadingIndicatorWrapper_b3552d'
+var i = {
+    rootContainer: 'rootContainer_b0ba57',
+    rootContainerLoading: 'rootContainerLoading_b0ba57',
+    claimedRootContainer: 'claimedRootContainer_b0ba57',
+    headerContainer: 'headerContainer_b0ba57',
+    headerBackground: 'headerBackground_b0ba57',
+    headerForeground: 'headerForeground_b0ba57',
+    previewContainer: 'previewContainer_b0ba57',
+    close: 'close_b0ba57',
+    footerBody: 'footerBody_b0ba57',
+    heading: 'heading_b0ba57',
+    text: 'text_b0ba57',
+    confettiCanvas: 'confettiCanvas_b0ba57',
+    additionalRedemptionInstructions: 'additionalRedemptionInstructions_b0ba57',
+    sponsorLogo: 'sponsorLogo_b0ba57',
+    loadingIndicatorWrapper: 'loadingIndicatorWrapper_b0ba57'
 };
+e.exports = i;

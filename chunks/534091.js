@@ -1,10 +1,6 @@
 n.d(t, {
-    W: function () {
-        return i;
-    },
-    p: function () {
-        return l;
-    }
+    W: () => i,
+    p: () => l
 });
 let i = 'chat-messages';
 function l(e, t) {

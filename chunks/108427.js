@@ -1,15 +1,10 @@
-n.d(t, {
-    e: function () {
-        return u;
-    }
-}),
-    n(47120);
+n.d(t, { e: () => d }), n(47120);
 var i = n(772848),
-    r = n(579806),
-    l = n(626135),
-    a = n(998502),
-    o = n(981631);
-function s(e, t, n) {
+    l = n(579806),
+    a = n(626135),
+    r = n(998502),
+    s = n(981631);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,15 +17,15 @@ function s(e, t, n) {
         e
     );
 }
-let c = new (class e {
+let c = new (class {
     trackEvent(e, t) {
         let n = Date.now();
         requestIdleCallback(() => {
-            l.default.track(e, {
+            a.default.track(e, {
                 ...(function () {
                     var e, t, n;
                     let i = '--campaign-id=';
-                    for (let l of null !== (n = null === r.Z || void 0 === r.Z ? void 0 : null === (t = r.Z.processUtils) || void 0 === t ? void 0 : null === (e = t.getMainArgvSync) || void 0 === e ? void 0 : e.call(t)) && void 0 !== n ? n : []) if (l.startsWith(i)) return { referrer: l.substr(i.length) };
+                    for (let a of null !== (n = null === l.Z || void 0 === l.Z ? void 0 : null === (t = l.Z.processUtils) || void 0 === t ? void 0 : null === (e = t.getMainArgvSync) || void 0 === e ? void 0 : e.call(t)) && void 0 !== n ? n : []) if (a.startsWith(i)) return { referrer: a.substr(i.length) };
                     return {};
                 })(),
                 ...(function () {
@@ -51,9 +46,9 @@ let c = new (class e {
                             null != window.performance.getEntries &&
                             window.performance.getEntries().forEach((n) => {
                                 let i = null != n.encodedBodySize ? n.encodedBodySize : n.decodedBodySize,
-                                    r = null != n.decodedBodySize ? n.decodedBodySize : n.encodedBodySize,
-                                    l = n.transferSize;
-                                null != r && null != i && ((e = !0), (t.total_compressed_byte_size += i), (t.total_uncompressed_byte_size += r), null != l && (t.total_uncompressed_byte_size += l), 'resource' === n.entryType && ('script' === n.initiatorType && null != n.name && null != n.name.match(/\.js/) && ((t.js_compressed_byte_size += i), (t.js_uncompressed_byte_size += r), null != l && (t.js_uncompressed_byte_size += l)), 'link' === n.initiatorType && null != n.name && null != n.name.match(/\.css/) && ((t.css_compressed_byte_size += i), (t.css_uncompressed_byte_size += r), null != l && (t.css_uncompressed_byte_size += l))));
+                                    l = null != n.decodedBodySize ? n.decodedBodySize : n.encodedBodySize,
+                                    a = n.transferSize;
+                                null != l && null != i && ((e = !0), (t.total_compressed_byte_size += i), (t.total_uncompressed_byte_size += l), null != a && (t.total_uncompressed_byte_size += a), 'resource' === n.entryType && ('script' === n.initiatorType && null != n.name && null != n.name.match(/\.js/) && ((t.js_compressed_byte_size += i), (t.js_uncompressed_byte_size += l), null != a && (t.js_uncompressed_byte_size += a)), 'link' === n.initiatorType && null != n.name && null != n.name.match(/\.css/) && ((t.css_compressed_byte_size += i), (t.css_uncompressed_byte_size += l), null != a && (t.css_uncompressed_byte_size += a))));
                             }),
                         e ? t : {}
                     );
@@ -66,17 +61,17 @@ let c = new (class e {
     }
     trackAppUIViewed(e) {
         if (!this.appUIViewed) {
-            this.trackEvent(o.rMx.APP_UI_VIEWED, e);
+            this.trackEvent(s.rMx.APP_UI_VIEWED, e);
             try {
-                a.ZP.appViewed();
+                r.ZP.appViewed();
             } catch (e) {}
             this.appUIViewed = !0;
         }
     }
     constructor() {
-        s(this, 'loadId', (0, i.Z)()), s(this, 'appUIViewed', !1);
+        o(this, 'loadId', (0, i.Z)()), o(this, 'appUIViewed', !1);
     }
 })();
-function u(e) {
+function d(e) {
     c.trackAppUIViewed(e);
 }

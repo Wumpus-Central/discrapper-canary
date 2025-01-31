@@ -1,7 +1,3 @@
-var a, r;
-n.d(t, {
-    A: function () {
-        return a;
-    }
-}),
-    ((r = a || (a = {}))[(r.USER_CODE_LENGTH = 8)] = 'USER_CODE_LENGTH');
+n.d(t, { A: () => r });
+var a,
+    r = (((a = {})[(a.USER_CODE_LENGTH = 8)] = 'USER_CODE_LENGTH'), a);

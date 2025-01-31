@@ -1,14 +1,9 @@
-a.d(t, {
-    o: function () {
-        return m;
-    }
-}),
-    a(47120);
+a.d(t, { o: () => h }), a(47120);
 var n,
     s = a(200651),
-    i = a(192379),
-    r = a(948789),
-    l = a(66037),
+    l = a(192379),
+    i = a(948789),
+    r = a(66037),
     o = a(248108),
     c = a(231338),
     d = a(330711);
@@ -25,8 +20,8 @@ function u(e, t, a) {
         e
     );
 }
-let N = c.j_.MAIN_NAVIGATION_MENU,
-    h = (e) => [
+let _ = c.j_.MAIN_NAVIGATION_MENU,
+    N = (e) => [
         {
             route: c.am.DOWNLOAD,
             linkClicked: 'download',
@@ -124,69 +119,69 @@ let N = c.j_.MAIN_NAVIGATION_MENU,
             ]
         }
     ];
-class m extends (n = i.PureComponent) {
+class h extends (n = l.PureComponent) {
     render() {
-        let e = (0, r.fQ)(this.context.router),
-            { isMobile: t, isVisible: a, styles: n, TrackClick: i, avoidRouter: u } = this.props,
-            { sectionShown: m } = this.state;
-        return h(null != d.Z ? d.Z.getLocale().toLowerCase() : '').map((r) => {
-            if (null != r.links)
-                return (0, s.jsx)(
-                    o.Z,
-                    {
-                        title: r.title,
-                        links: r.links,
-                        isOpen: m === r.title,
-                        isMobile: t,
-                        avoidRouter: u,
-                        TrackClick: i,
-                        onClose: this.closeSubNav,
-                        onOpen: this.openSubNav
-                    },
-                    r.title
-                );
-            if (r.external && null != r.route)
-                return (0, s.jsx)(
-                    'li',
-                    {
-                        className: n.listItemInactive,
-                        role: 'none',
-                        children: (0, s.jsx)(i, {
-                            className: n.mainNavLink,
-                            eventName: N,
-                            data: r.linkClicked ? { linkClicked: r.linkClicked } : {},
-                            href: r.route,
-                            rel: 'me',
-                            children: r.title
-                        })
-                    },
-                    'external_link_'.concat(r.route)
-                );
-            if (null != r.route)
-                return (0, s.jsx)(
-                    'li',
-                    {
-                        className: e(r.route) ? n.listItemActive : n.listItemInactive,
-                        role: 'none',
-                        children: (0, s.jsx)(l.Z, {
-                            avoidRouter: u,
-                            to: r.route,
-                            from: c.j_.MAIN_NAVIGATION_MENU,
-                            tabIndex: a ? 0 : -1,
-                            role: 'menuitem',
-                            children: (0, s.jsx)(i, {
-                                tag: 'span',
+        let e = (0, i.fQ)(this.context.router),
+            { isMobile: t, isVisible: a, styles: n, TrackClick: l, avoidRouter: u } = this.props,
+            { sectionShown: h } = this.state;
+        return N(null != d.Z ? d.Z.getLocale().toLowerCase() : '').map((i) =>
+            null != i.links
+                ? (0, s.jsx)(
+                      o.Z,
+                      {
+                          title: i.title,
+                          links: i.links,
+                          isOpen: h === i.title,
+                          isMobile: t,
+                          avoidRouter: u,
+                          TrackClick: l,
+                          onClose: this.closeSubNav,
+                          onOpen: this.openSubNav
+                      },
+                      i.title
+                  )
+                : i.external && null != i.route
+                  ? (0, s.jsx)(
+                        'li',
+                        {
+                            className: n.listItemInactive,
+                            role: 'none',
+                            children: (0, s.jsx)(l, {
                                 className: n.mainNavLink,
-                                eventName: N,
-                                data: { linkClicked: r.linkClicked },
-                                children: r.title
+                                eventName: _,
+                                data: i.linkClicked ? { linkClicked: i.linkClicked } : {},
+                                href: i.route,
+                                rel: 'me',
+                                children: i.title
                             })
-                        })
-                    },
-                    'link_'.concat(r.route)
-                );
-            return [];
-        });
+                        },
+                        'external_link_'.concat(i.route)
+                    )
+                  : null != i.route
+                    ? (0, s.jsx)(
+                          'li',
+                          {
+                              className: e(i.route) ? n.listItemActive : n.listItemInactive,
+                              role: 'none',
+                              children: (0, s.jsx)(r.Z, {
+                                  avoidRouter: u,
+                                  to: i.route,
+                                  from: c.j_.MAIN_NAVIGATION_MENU,
+                                  tabIndex: a ? 0 : -1,
+                                  role: 'menuitem',
+                                  children: (0, s.jsx)(l, {
+                                      tag: 'span',
+                                      className: n.mainNavLink,
+                                      eventName: _,
+                                      data: { linkClicked: i.linkClicked },
+                                      children: i.title
+                                  })
+                              })
+                          },
+                          'link_'.concat(i.route)
+                      )
+                    : []
+        );
     }
     constructor(...e) {
         super(...e),
@@ -201,7 +196,7 @@ class m extends (n = i.PureComponent) {
             });
     }
 }
-u(m, 'defaultProps', {
+u(h, 'defaultProps', {
     isMobile: !1,
     isVisible: !0
 });

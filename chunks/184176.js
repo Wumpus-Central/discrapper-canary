@@ -1,48 +1,49 @@
+n.d(t, { Z: () => x });
 var i = n(200651);
 n(192379);
-var r = n(442837),
-    s = n(481060),
-    a = n(100527),
-    l = n(906732),
+var s = n(442837),
+    r = n(481060),
+    l = n(100527),
+    a = n(906732),
     o = n(963249),
     c = n(78839),
     d = n(74538),
     u = n(823188),
     m = n(474936),
-    g = n(981631),
-    h = n(388032),
-    p = n(536720);
-t.Z = () => {
-    let e = (0, r.e7)([c.ZP], () => c.ZP.getPremiumTypeSubscription()),
+    h = n(981631),
+    g = n(388032),
+    _ = n(536720);
+let x = () => {
+    let e = (0, s.e7)([c.ZP], () => c.ZP.getPremiumTypeSubscription()),
         t = (0, d.u0)(null == e ? void 0 : e.trialId),
-        n = (0, l.ZP)([a.Z.PREMIUM_MARKETING_REVERSE_TRIAL_BANNER]);
+        n = (0, a.ZP)([l.Z.PREMIUM_MARKETING_REVERSE_TRIAL_BANNER]);
     return (0, i.jsxs)('div', {
-        className: p.banner,
+        className: _.banner,
         children: [
             (0, i.jsx)(u.Cy, {
-                text: h.intl.string(h.t.qYKftb),
-                className: p.trialPill,
+                text: g.intl.string(g.t.qYKftb),
+                className: _.trialPill,
                 colorOptions: u.VE.PREMIUM_TIER_2_WHITE_FILL
             }),
             (0, i.jsx)('div', {
-                className: p.body,
-                children: (0, i.jsx)(s.Text, {
+                className: _.body,
+                children: (0, i.jsx)(r.Text, {
                     color: 'always-white',
                     variant: 'text-md/medium',
-                    children: h.intl.format(h.t.uu1WAQ, { weeks: t })
+                    children: g.intl.format(g.t.uu1WAQ, { weeks: t })
                 })
             }),
-            (0, i.jsx)(s.Button, {
+            (0, i.jsx)(r.zxk, {
                 onClick: () => {
                     (0, o.Z)({
                         initialPlanId: m.Xh.PREMIUM_MONTH_TIER_2,
                         analyticsLocations: n.analyticsLocations,
-                        analyticsObject: { object: g.qAy.BUTTON_CTA }
+                        analyticsObject: { object: h.qAy.BUTTON_CTA }
                     });
                 },
-                look: s.ButtonLooks.OUTLINED,
-                color: s.ButtonColors.WHITE,
-                children: h.intl.string(h.t['vSfq9/'])
+                look: r.iLD.OUTLINED,
+                color: r.Ttl.WHITE,
+                children: g.intl.string(g.t['vSfq9/'])
             })
         ]
     });

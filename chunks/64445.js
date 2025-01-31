@@ -1,16 +1,17 @@
 (t.__esModule = !0),
     (t.default = void 0),
     (function (e) {
-        if (e && e.__esModule) return;
-        var t = {};
-        if (null != e) {
-            for (var n in e)
-                if (Object.prototype.hasOwnProperty.call(e, n)) {
-                    var o = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(e, n) : {};
-                    o.get || o.set ? Object.defineProperty(t, n, o) : (t[n] = e[n]);
-                }
+        if (!e || !e.__esModule) {
+            var t = {};
+            if (null != e) {
+                for (var n in e)
+                    if (Object.prototype.hasOwnProperty.call(e, n)) {
+                        var o = Object.defineProperty && Object.getOwnPropertyDescriptor ? Object.getOwnPropertyDescriptor(e, n) : {};
+                        o.get || o.set ? Object.defineProperty(t, n, o) : (t[n] = e[n]);
+                    }
+            }
+            t.default = e;
         }
-        t.default = e;
     })(n(476400));
 var o = u(n(121116)),
     r = u(n(938398)),
@@ -19,7 +20,6 @@ var o = u(n(121116)),
 function u(e) {
     return e && e.__esModule ? e : { default: e };
 }
-n(950295);
 function s() {
     return (s =
         Object.assign ||
@@ -31,6 +31,7 @@ function s() {
             return e;
         }).apply(this, arguments);
 }
+n(950295);
 var l = function (e, t) {
         return (
             e &&
@@ -94,22 +95,20 @@ var l = function (e, t) {
                 t
             );
         }
-        (n = t), (o = e), (n.prototype = Object.create(o.prototype)), (n.prototype.constructor = n), (n.__proto__ = o);
-        var n,
-            o,
-            r = t.prototype;
+        (t.prototype = Object.create(e.prototype)), (t.prototype.constructor = t), (t.__proto__ = e);
+        var n = t.prototype;
         return (
-            (r.removeClasses = function (e, t) {
+            (n.removeClasses = function (e, t) {
                 var n = this.getClassNames(t),
                     o = n.className,
                     r = n.activeClassName,
                     i = n.doneClassName;
                 o && c(e, o), r && c(e, r), i && c(e, i);
             }),
-            (r.reflowAndAddClass = function (e, t) {
+            (n.reflowAndAddClass = function (e, t) {
                 t && (e && e.scrollTop, l(e, t));
             }),
-            (r.render = function () {
+            (n.render = function () {
                 var e = s({}, this.props);
                 return (
                     delete e.classNames,
@@ -129,5 +128,4 @@ var l = function (e, t) {
             t
         );
     })(i.default.Component);
-(p.defaultProps = { classNames: '' }), (p.propTypes = {});
-(t.default = p), (e.exports = t.default);
+(p.defaultProps = { classNames: '' }), (p.propTypes = {}), (t.default = p), (e.exports = t.default);

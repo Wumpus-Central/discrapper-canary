@@ -1,12 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-});
+n.d(t, { Z: () => _ });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(493773),
+var l = n(481060),
+    r = n(493773),
     a = n(626135),
     s = n(144145),
     o = n(555927),
@@ -17,16 +13,16 @@ var r = n(481060),
     m = n(981631),
     p = n(674563),
     g = n(388032);
-function f(e) {
-    let { party: t, close: n, onSelect: f } = e,
-        _ = (0, c.Z)(t),
+function _(e) {
+    let { party: t, close: n, onSelect: _ } = e,
+        f = (0, c.Z)(t),
         E = (0, h.Z)(t),
         I = (0, u.Z)(t),
         C = (0, d.Z)(t),
         v = (0, s.Z)(t),
         N = (0, o.Z)(t);
     return (
-        (0, l.Z)(() => {
+        (0, r.Z)(() => {
             let e = t.currentActivities
                 .filter((e) => {
                     var t, n;
@@ -38,18 +34,18 @@ function f(e) {
                 games_detected: e
             });
         }),
-        (0, i.jsxs)(r.Menu, {
+        (0, i.jsxs)(l.v2r, {
             navId: 'now-playing-menu',
             onClose: n,
             'aria-label': g.intl.string(g.t.ogxXGh),
-            onSelect: f,
+            onSelect: _,
             children: [
-                _,
-                (0, i.jsxs)(r.MenuGroup, {
+                f,
+                (0, i.jsxs)(l.kSQ, {
                     children: [E, I]
                 }),
-                (0, i.jsx)(r.MenuGroup, { children: C }),
-                (0, i.jsx)(r.MenuGroup, { children: v }),
+                (0, i.jsx)(l.kSQ, { children: C }),
+                (0, i.jsx)(l.kSQ, { children: v }),
                 N
             ]
         })

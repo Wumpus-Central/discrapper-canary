@@ -1,81 +1,80 @@
-n(47120);
+n.d(t, { Z: () => C }), n(47120);
 var i,
     l,
     r,
-    a,
-    o = n(442837),
-    s = n(570140),
-    c = n(131704),
-    u = n(251625),
+    a = n(442837),
+    o = n(570140),
+    s = n(131704),
+    c = n(251625),
     d = n(592125),
-    h = n(306680),
-    p = n(944486),
-    m = n(55589);
-let f = [];
-function g() {
-    let e = m.Z.getPrivateChannelIds().filter((e) => h.ZP.getMentionCount(e) > 0);
-    return e.length > 20 && (e.length = 20), !(0, u.EF)(e, f) && ((f = e), !0);
+    u = n(306680),
+    h = n(944486),
+    p = n(55589);
+let m = [],
+    g = new Set();
+function f() {
+    let e = p.Z.getPrivateChannelIds().filter((e) => u.ZP.getMentionCount(e) > 0);
+    return e.length > 20 && (e.length = 20), !(0, c.EF)(e, m) && ((m = e), (g = new Set(e)), !0);
 }
-function v() {
-    return g();
+function _() {
+    return f();
 }
-function C(e) {
+function v(e) {
     let { channelId: t } = e,
         n = d.Z.getChannel(t);
-    return !!(null != n && (0, c.hv)(n.type)) && g();
+    return !!(null != n && (0, s.hv)(n.type)) && f();
 }
-class x extends (i = o.ZP.Store) {
+class x extends (i = a.ZP.Store) {
     initialize() {
-        this.waitFor(m.Z, d.Z, p.Z, h.ZP);
+        this.waitFor(p.Z, d.Z, h.Z, u.ZP);
     }
     getUnreadPrivateChannelIds() {
-        return f;
+        return m;
     }
 }
-(a = 'PrivateChannelReadStateStore'),
-    (r = 'displayName') in (l = x)
-        ? Object.defineProperty(l, r, {
-              value: a,
+(r = 'PrivateChannelReadStateStore'),
+    (l = 'displayName') in x
+        ? Object.defineProperty(x, l, {
+              value: r,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (l[r] = a),
-    (t.Z = new x(s.Z, {
-        CONNECTION_OPEN: v,
-        OVERLAY_INITIALIZE: v,
-        MESSAGE_CREATE: C,
-        MESSAGE_ACK: C,
-        CHANNEL_SELECT: function (e) {
-            let { channelId: t } = e,
-                n = d.Z.getChannel(t);
-            return !!(null != n && (0, c.hv)(n.type)) && g();
-        },
-        CHANNEL_DELETE: function (e) {
-            let {
-                    channel: { id: t }
-                } = e,
-                n = d.Z.getChannel(t);
-            return !!(null != n && (0, c.hv)(n.type)) && g();
-        },
-        WINDOW_FOCUS: function () {
-            let e = d.Z.getChannel(p.Z.getChannelId());
-            return !!(null != e && (0, c.hv)(e.type)) && g();
-        },
-        CHANNEL_CREATE: function (e) {
-            let {
-                    channel: { id: t }
-                } = e,
-                n = d.Z.getChannel(t);
-            return !!(null != n && (0, c.hv)(n.type)) && g();
-        },
-        CHANNEL_UPDATES: function (e) {
-            let { channels: t } = e,
-                n = !1;
-            for (let { id: e } of t) {
-                let t = d.Z.getChannel(e);
-                null != t && (0, c.hv)(t.type) && (n = !0);
-            }
-            return !!n && g();
+        : (x[l] = r);
+let C = new x(o.Z, {
+    CONNECTION_OPEN: _,
+    OVERLAY_INITIALIZE: _,
+    MESSAGE_CREATE: v,
+    MESSAGE_ACK: v,
+    CHANNEL_SELECT: function (e) {
+        let { channelId: t } = e,
+            n = d.Z.getChannel(t);
+        return !!(null != n && (0, s.hv)(n.type)) && f();
+    },
+    CHANNEL_DELETE: function (e) {
+        let {
+            channel: { id: t }
+        } = e;
+        return !!g.has(t) && f();
+    },
+    WINDOW_FOCUS: function () {
+        let e = d.Z.getChannel(h.Z.getChannelId());
+        return !!(null != e && (0, s.hv)(e.type)) && f();
+    },
+    CHANNEL_CREATE: function (e) {
+        let {
+                channel: { id: t }
+            } = e,
+            n = d.Z.getChannel(t);
+        return !!(null != n && (0, s.hv)(n.type)) && f();
+    },
+    CHANNEL_UPDATES: function (e) {
+        let { channels: t } = e,
+            n = !1;
+        for (let { id: e } of t) {
+            let t = d.Z.getChannel(e);
+            null != t && (0, s.hv)(t.type) && (n = !0);
         }
-    }));
+        return !!n && f();
+    }
+});

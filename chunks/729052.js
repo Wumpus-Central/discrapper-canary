@@ -1,14 +1,10 @@
-r.d(n, {
-    p2: function () {
-        return l;
-    },
-    vS: function () {
-        return u;
-    }
+n.d(t, {
+    p2: () => o,
+    vS: () => l
 });
-var i = r(818083),
-    a = r(981631);
-let o = (0, i.B)({
+var i = n(818083),
+    r = n(981631);
+let a = (0, i.B)({
         kind: 'user',
         id: '2023-11_voice_activity_notification_user',
         label: 'Voice Activity Notifications for User',
@@ -39,32 +35,32 @@ let o = (0, i.B)({
             }
         ]
     });
-function l(e) {
-    var n;
-    let { voiceChannelActivityNotifsEnabled: r } = s.useExperiment(
+function o(e) {
+    var t;
+    let { voiceChannelActivityNotifsEnabled: n } = s.useExperiment(
             {
                 location: 'useVoiceActivityNotificationSettingsExperiment',
-                guildId: null !== (n = null == e ? void 0 : e.getGuildId()) && void 0 !== n ? n : a.lds
+                guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : r.lds
             },
             {
-                disable: (null == e ? void 0 : e.type) !== a.d4z.GUILD_VOICE,
+                disable: (null == e ? void 0 : e.type) !== r.d4z.GUILD_VOICE,
                 autoTrackExposure: !1
             }
         ),
-        { enabled: i } = o.useExperiment(
+        { enabled: i } = a.useExperiment(
             { location: 'useVoiceActivityNotificationSettingsExperiment' },
             {
-                disable: (null == e ? void 0 : e.type) !== a.d4z.GUILD_VOICE || !r,
+                disable: (null == e ? void 0 : e.type) !== r.d4z.GUILD_VOICE || !n,
                 autoTrackExposure: !0
             }
         );
-    return (null == e ? void 0 : e.type) === a.d4z.GUILD_VOICE && r && i;
+    return (null == e ? void 0 : e.type) === r.d4z.GUILD_VOICE && n && i;
 }
-function u(e) {
-    var n;
-    let { voiceChannelActivityNotifsEnabled: r } = s.getCurrentConfig({
-        guildId: null !== (n = null == e ? void 0 : e.getGuildId()) && void 0 !== n ? n : a.lds,
+function l(e) {
+    var t;
+    let { voiceChannelActivityNotifsEnabled: n } = s.getCurrentConfig({
+        guildId: null !== (t = null == e ? void 0 : e.getGuildId()) && void 0 !== t ? t : r.lds,
         location: 'hasVoiceChannelActivityNotifsEnabled'
     });
-    return r;
+    return n;
 }

@@ -1,83 +1,77 @@
-r.d(n, {
-    BC: function () {
-        return E;
-    },
-    LR: function () {
-        return m;
-    },
-    ku: function () {
-        return _;
-    }
-});
-var i = r(789020);
-var a = r(830121),
-    o = r(754688),
-    s = r(430824),
-    l = r(768581),
-    u = r(5192),
-    c = r(154135),
-    d = r(981631),
-    f = r(959517),
-    p = r(388032);
-let h = 40;
+n.d(t, {
+    BC: () => m,
+    LR: () => p,
+    ku: () => _
+}),
+    n(789020);
+var i = n(830121),
+    r = n(754688),
+    a = n(430824),
+    s = n(768581),
+    o = n(5192),
+    l = n(154135),
+    u = n(981631),
+    c = n(959517),
+    d = n(388032);
+let f = 40;
 function _(e) {
-    var n, r, i, a, o;
-    let { mediaPostEmbedData: s, guild: d, parentChannel: _, postThread: m, user: E, selectedGuildId: v, canAccess: y = !1 } = e;
-    if (null == s) return null;
-    let b = (0, c.EY)(s.thumbnail),
-        I = !y && s.has_media_attachment,
-        T = y ? p.intl.string(p.t.UsZEBA) : p.intl.string(p.t.ReFzYW),
-        S = null != E ? u.ZP.getName(s.guild_id, s.channel_id, E) : void 0,
-        A = null == E ? void 0 : E.getAvatarURL(null == d ? void 0 : d.id, h);
-    (null == A || v !== s.guild_id) &&
-        (A = l.ZP.getGuildIconURL({
-            id: s.guild_id,
-            icon: s.guild_icon,
-            size: h,
+    var t, n, i, r, a;
+    let { mediaPostEmbedData: u, guild: _, parentChannel: p, postThread: m, user: g, selectedGuildId: E, canAccess: v = !1 } = e;
+    if (null == u) return null;
+    let y = (0, l.EY)(u.thumbnail),
+        I = !v && u.has_media_attachment,
+        b = v ? d.intl.string(d.t.UsZEBA) : d.intl.string(d.t.ReFzYW),
+        T = null != g ? o.ZP.getName(u.guild_id, u.channel_id, g) : void 0,
+        S = null == g ? void 0 : g.getAvatarURL(null == _ ? void 0 : _.id, f);
+    (null == S || E !== u.guild_id) &&
+        (S = s.ZP.getGuildIconURL({
+            id: u.guild_id,
+            icon: u.guild_icon,
+            size: f,
             canAnimate: !1
         }));
-    let C = g(s.thumbnail) && !I,
-        N = (null === (n = s.thumbnail) || void 0 === n ? void 0 : n.filename) != null && (null === (i = s.thumbnail) || void 0 === i ? void 0 : null === (r = i.filename) || void 0 === r ? void 0 : r.startsWith(f._j));
+    let A = h(u.thumbnail) && !I,
+        N = (null === (t = u.thumbnail) || void 0 === t ? void 0 : t.filename) != null && (null === (i = u.thumbnail) || void 0 === i ? void 0 : null === (n = i.filename) || void 0 === n ? void 0 : n.startsWith(c._j));
     return {
-        title: null !== (a = s.title) && void 0 !== a ? a : '',
-        subtitle: s.description,
-        ctaText: T,
-        coverImage: b,
-        coverImageOverlayText: I ? p.intl.string(p.t.YonliY) : void 0,
-        parentChannelId: s.parent_channel_id,
-        threadId: s.channel_id,
+        title: null !== (r = u.title) && void 0 !== r ? r : '',
+        subtitle: u.description,
+        ctaText: b,
+        coverImage: y,
+        coverImageOverlayText: I ? d.intl.string(d.t.YonliY) : void 0,
+        parentChannelId: u.parent_channel_id,
+        threadId: u.channel_id,
         postThread: m,
-        messageId: s.message_id,
-        canAccess: y,
-        guildId: s.guild_id,
-        guildName: null !== (o = null == d ? void 0 : d.name) && void 0 !== o ? o : s.guild_name,
-        authorId: null == s ? void 0 : s.author_id,
-        authorName: S,
-        channelName: null == _ ? void 0 : _.name,
-        avatarUrl: A,
+        messageId: u.message_id,
+        canAccess: v,
+        guildId: u.guild_id,
+        guildName: null !== (a = null == _ ? void 0 : _.name) && void 0 !== a ? a : u.guild_name,
+        authorId: null == u ? void 0 : u.author_id,
+        authorName: T,
+        channelName: null == p ? void 0 : p.name,
+        avatarUrl: S,
         shouldShowBlurredThumbnailImage: I,
-        shouldContainMediaWithBackground: C,
+        shouldContainMediaWithBackground: A,
         shouldSpoiler: N,
         obscureAwaitingScan: !1,
-        flags: s.flags,
-        contentScanVersion: s.content_scan_version
+        flags: u.flags,
+        contentScanVersion: u.content_scan_version
     };
 }
-function m(e) {
+function p(e) {
     if (null == e) return;
-    let n = (0, a.FO)(e);
-    if (null == n) return;
-    let r = (0, a.Sq)(n);
-    if (null != r) return (0, o.Qj)(r);
+    let t = (0, i.FO)(e);
+    if (null == t) return;
+    let n = (0, i.Sq)(t);
+    if (null != n) return (0, r.Qj)(n);
 }
-function g(e) {
+function h(e) {
     if (null == e) return !1;
-    let { height: n, width: r } = e;
-    return null != n && null != r && n >= r;
+    let { height: t, width: n } = e;
+    return null != t && null != n && t >= n;
 }
-function E(e, n) {
-    let r = s.Z.getGuild(e);
-    if (null == r || null == n) return !1;
-    let i = r.hasFeature(d.oNc.CREATOR_MONETIZABLE) || r.hasFeature(d.oNc.CREATOR_MONETIZABLE_PROVISIONAL);
-    return !0 === n.isMediaChannel() && i;
+function m(e, t) {
+    let n = a.Z.getGuild(e);
+    if (null == n || null == t) return !1;
+    let i = n.hasFeature(u.oNc.CREATOR_MONETIZABLE) || n.hasFeature(u.oNc.CREATOR_MONETIZABLE_PROVISIONAL);
+    return !0 === t.isMediaChannel() && i;
 }

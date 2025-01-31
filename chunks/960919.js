@@ -1,17 +1,13 @@
-n.d(t, {
-    M: function () {
-        return a;
-    }
-});
+n.d(t, { M: () => l });
 var i = n(200651),
-    r = n(432332);
-let s = n(800637),
-    a = () =>
+    s = n(432332);
+let r = n(800637),
+    l = () =>
         (0, i.jsx)('div', {
             role: 'img',
-            className: r.orbIconContainer,
+            className: s.orbIconContainer,
             children: (0, i.jsx)('img', {
-                src: s,
+                src: r,
                 alt: 'Orb Icon'
             })
         });

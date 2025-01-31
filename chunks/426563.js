@@ -1,55 +1,49 @@
-r.d(n, {
-    j: function () {
-        return k;
-    }
+n.d(t, {
+    Z: () => x,
+    j: () => D
 });
-var i = r(526167),
-    a = r(621554),
-    o = r(328756),
-    s = r(639525),
-    l = r(131812),
-    u = r(265174),
-    c = r(926425),
-    d = r(844049),
-    f = r(712386),
-    p = r(602722),
-    h = r(534109),
-    _ = r(859500),
-    m = r(484542),
-    g = r(881500),
-    E = r(910826),
-    v = r(307244),
-    y = r(669730),
-    b = r(666828),
-    I = r(131999),
-    T = r(649272),
-    S = r(241372),
-    A = r(538387),
-    C = r(213921),
-    N = r(34721),
-    R = r(410693),
-    O = r(185672),
-    D = r(235731);
-let L = [o, s, l, u, c, d],
-    x = [f, p, h, _, m, g, E, v],
-    w = [T, S, A, C, N, R],
-    P = {
-        clyde: O,
-        nitro: b,
-        nitro_wumpus: I
-    };
-function M() {
-    return i.og();
-}
-function k() {
+var i = n(526167),
+    r = n(621554),
+    a = n(328756),
+    s = n(639525),
+    o = n(131812),
+    l = n(265174),
+    u = n(926425),
+    c = n(844049),
+    d = n(712386),
+    f = n(602722),
+    _ = n(534109),
+    p = n(859500),
+    h = n(484542),
+    m = n(881500),
+    g = n(910826),
+    E = n(307244),
+    v = n(669730),
+    y = n(666828),
+    I = n(131999),
+    b = n(649272),
+    T = n(241372),
+    S = n(538387),
+    A = n(213921),
+    N = n(34721),
+    C = n(410693),
+    R = n(185672),
+    O = n(235731);
+function D() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    return e ? D : a;
+    return e ? O : r;
 }
-n.Z = {
-    DEFAULT_AVATARS: L,
-    DEFAULT_PROVISIONAL_AVATARS: w,
-    DEFAULT_GROUP_DM_AVATARS: x,
-    BOT_AVATARS: P,
-    DEFAULT_CHANNEL_ICON: y,
-    canUseWebp: M
+let x = {
+    DEFAULT_AVATARS: [a, s, o, l, u, c],
+    DEFAULT_PROVISIONAL_AVATARS: [b, T, S, A, N, C],
+    DEFAULT_GROUP_DM_AVATARS: [d, f, _, p, h, m, g, E],
+    BOT_AVATARS: {
+        clyde: R,
+        nitro: y,
+        nitro_wumpus: I
+    },
+    DEFAULT_CHANNEL_ICON: v,
+    canUseWebp: function () {
+        return i.og();
+    }
 };

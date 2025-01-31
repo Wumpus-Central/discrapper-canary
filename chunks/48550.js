@@ -1,8 +1,4 @@
-n.d(t, {
-    P: function () {
-        return i;
-    }
-});
+n.d(t, { P: () => i });
 var l = n(388032);
 let i = {
     get webauthn() {

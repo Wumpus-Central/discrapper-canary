@@ -1,42 +1,38 @@
-i.d(e, {
-    T: function () {
-        return h;
-    },
-    o: function () {
-        return d;
-    }
+i.d(n, {
+    T: () => h,
+    o: () => u
 });
 var l = i(512722),
     t = i.n(l),
     a = i(287734),
-    r = i(471253),
-    s = i(922482),
+    s = i(471253),
+    r = i(922482),
     c = i(592125),
     o = i(19780),
-    u = i(765305);
-async function d(n, e) {
-    let { entity_type: i } = n;
+    d = i(765305);
+async function u(e, n) {
+    let { entity_type: i } = e;
     switch (i) {
-        case u.WX.STAGE_INSTANCE: {
-            let e = o.Z.getChannelId(),
-                i = c.Z.getChannel(n.channel_id);
-            t()(null != i, 'could not find channel'), e !== i.id && (await s.TM(i, !0), await s.R5(i, null, !1)), await (0, r.RK)(i, !1, !0);
+        case d.WX.STAGE_INSTANCE: {
+            let n = o.Z.getChannelId(),
+                i = c.Z.getChannel(e.channel_id);
+            t()(null != i, 'could not find channel'), n !== i.id && (await r.TM(i, !0), await r.R5(i, null, !1)), await (0, s.RK)(i, !1, !0);
             break;
         }
-        case u.WX.VOICE: {
-            let e = o.Z.getChannelId(),
-                i = c.Z.getChannel(n.channel_id);
-            t()(null != i, 'could not find channel'), e !== i.id && a.default.selectVoiceChannel(i.id);
+        case d.WX.VOICE: {
+            let n = o.Z.getChannelId(),
+                i = c.Z.getChannel(e.channel_id);
+            t()(null != i, 'could not find channel'), n !== i.id && a.default.selectVoiceChannel(i.id);
         }
     }
 }
-function h(n, e) {
-    let { entity_type: i } = n;
+function h(e, n) {
+    let { entity_type: i } = e;
     switch (i) {
-        case u.WX.STAGE_INSTANCE:
-        case u.WX.VOICE:
-        case u.WX.EXTERNAL:
-            null == e || e();
+        case d.WX.STAGE_INSTANCE:
+        case d.WX.VOICE:
+        case d.WX.EXTERNAL:
+            null == n || n();
     }
     return Promise.resolve();
 }

@@ -1,187 +1,180 @@
-r.d(n, {
-    ZP: function () {
-        return N;
-    },
-    wz: function () {
-        return C;
-    }
+n.d(t, {
+    ZP: () => N,
+    wz: () => A
 });
-var i = r(200651),
-    a = r(192379),
-    o = r(442837),
-    s = r(481060),
-    l = r(555573),
-    u = r(10718),
-    c = r(895924),
-    d = r(124072),
-    f = r(665906),
-    p = r(695346),
-    h = r(592125),
-    _ = r(703558),
-    m = r(496675),
-    g = r(944486),
-    E = r(585483),
-    v = r(981631),
-    y = r(689079),
-    b = r(665692),
-    I = r(388032),
-    T = r(170686);
-function S(e, n, r, a, o) {
+var i = n(200651),
+    r = n(192379),
+    a = n(442837),
+    s = n(481060),
+    o = n(555573),
+    l = n(10718),
+    u = n(895924),
+    c = n(124072),
+    d = n(665906),
+    f = n(695346),
+    _ = n(592125),
+    p = n(703558),
+    h = n(496675),
+    m = n(944486),
+    g = n(585483),
+    E = n(981631),
+    v = n(689079),
+    y = n(665692),
+    I = n(388032),
+    b = n(170686);
+function T(e, t, n, r, a) {
     if (null == e) return;
-    let d = () => {
-        let i = h.Z.getChannel(e);
+    let c = () => {
+        let i = _.Z.getChannel(e);
         if (null == i) return;
-        let { command: s, application: d } = u.Xq(
+        let { command: s, application: c } = l.Xq(
             {
                 channel: i,
                 type: 'channel'
             },
-            r,
-            o
+            n,
+            a
         );
-        if (null != s && s.untranslatedName === n) {
-            var f, p;
-            E.S.dispatch(v.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
-            let n =
-                null != d
+        if (null != s && s.untranslatedName === t) {
+            var d, f;
+            g.S.dispatch(E.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
+            let t =
+                null != c
                     ? {
-                          type: c.Qi.APPLICATION,
-                          id: d.id,
-                          icon: d.icon,
-                          name: null !== (p = null == d ? void 0 : null === (f = d.bot) || void 0 === f ? void 0 : f.username) && void 0 !== p ? p : d.name,
-                          application: d
+                          type: u.Qi.APPLICATION,
+                          id: c.id,
+                          icon: c.icon,
+                          name: null !== (f = null == c ? void 0 : null === (d = c.bot) || void 0 === d ? void 0 : d.username) && void 0 !== f ? f : c.name,
+                          application: c
                       }
                     : null;
-            l.Po({
+            o.Po({
                 channelId: e,
                 command: null,
                 section: null
             }),
-                l.Po({
+                o.Po({
                     channelId: e,
                     command: s,
-                    section: n,
-                    location: a
+                    section: t,
+                    location: r
                 });
         }
     };
-    '' !== _.Z.getDraft(e, _.d.ChannelMessage)
-        ? (0, s.openModal)((n) =>
+    '' !== p.Z.getDraft(e, p.d.ChannelMessage)
+        ? (0, s.h7j)((t) =>
               (0, i.jsx)(s.ConfirmModal, {
                   header: I.intl.string(I.t.pe26Cg),
                   confirmText: I.intl.string(I.t.VkKicX),
                   cancelText: I.intl.string(I.t['ETE/oK']),
-                  onConfirm: () => d(),
-                  confirmButtonColor: s.Button.Colors.BRAND,
+                  onConfirm: () => c(),
+                  confirmButtonColor: s.zxk.Colors.BRAND,
                   onCloseCallback: () => {
-                      E.S.dispatch(v.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
+                      g.S.dispatch(E.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
                   },
-                  ...n,
+                  ...t,
                   children: (0, i.jsx)(s.Text, {
                       variant: 'text-md/normal',
                       children: I.intl.string(I.t['+awCIy'])
                   })
               })
           )
-        : d();
+        : c();
 }
-function A(e) {
-    var n;
-    let { node: r, output: l, state: _ } = e,
-        E = (0, o.e7)(
-            [h.Z, g.Z],
+function S(e) {
+    var t;
+    let { node: n, output: o, state: p } = e,
+        g = (0, a.e7)(
+            [_.Z, m.Z],
             () => {
                 var e;
-                return h.Z.getChannel(null !== (e = r.channelId) && void 0 !== e ? e : g.Z.getChannelId());
+                return _.Z.getChannel(null !== (e = n.channelId) && void 0 !== e ? e : m.Z.getChannelId());
             },
-            [r.channelId]
+            [n.channelId]
         ),
-        { hasSendMessagePerm: I, hasUseAppCommandsPerm: T } = (0, o.cj)([m.Z], () => {
-            let e = m.Z.can(v.Plq.SEND_MESSAGES, E);
-            return {
-                hasSendMessagePerm: e,
-                hasUseAppCommandsPerm: m.Z.can(v.Plq.USE_APPLICATION_COMMANDS, E)
-            };
-        }),
-        A =
-            void 0 !== E
+        { hasSendMessagePerm: I, hasUseAppCommandsPerm: b } = (0, a.cj)([h.Z], () => ({
+            hasSendMessagePerm: h.Z.can(E.Plq.SEND_MESSAGES, g),
+            hasUseAppCommandsPerm: h.Z.can(E.Plq.USE_APPLICATION_COMMANDS, g)
+        })),
+        S =
+            void 0 !== g
                 ? {
                       type: 'channel',
-                      channel: E
+                      channel: g
                   }
                 : { type: 'contextless' },
-        { command: C } = u.YZ(A, null !== (n = r.commandKey) && void 0 !== n ? n : ''),
-        N = p.dN.useSetting(),
-        R = a.useMemo(() => {
-            if (null == C || null == E || C.untranslatedName !== r.commandName || N) return !1;
-            let e = E.isPrivate();
-            if ((0, f.xl)(E) || (!e && !I)) return !1;
-            let n = (null == C ? void 0 : C.applicationId) === y.bi.BUILT_IN;
-            return !!e || !!n || !!T || !1;
-        }, [E, C, I, T, r.commandName, N]),
-        O = a.useCallback(
+        { command: A } = l.YZ(S, null !== (t = n.commandKey) && void 0 !== t ? t : ''),
+        N = f.dN.useSetting(),
+        C = r.useMemo(() => {
+            if (null == A || null == g || A.untranslatedName !== n.commandName || N) return !1;
+            let e = g.isPrivate();
+            if ((0, d.xl)(g) || (!e && !I)) return !1;
+            let t = (null == A ? void 0 : A.applicationId) === v.bi.BUILT_IN;
+            return !!e || !!t || !!b;
+        }, [g, A, I, b, n.commandName, N]),
+        R = r.useCallback(
             (e) => {
-                null == e || e.stopPropagation(), null != E && null != r.commandName && null != r.commandKey && S(E.id, r.commandName, r.commandKey, c.Vh.MENTION);
+                null == e || e.stopPropagation(), null != g && null != n.commandName && null != n.commandKey && T(g.id, n.commandName, n.commandKey, u.Vh.MENTION);
             },
-            [E, r.commandKey, r.commandName]
+            [g, n.commandKey, n.commandName]
         );
-    return R
+    return C
         ? (0, i.jsx)(
-              s.Tooltip,
+              s.ua7,
               {
-                  text: r.output,
+                  text: n.output,
                   position: 'top',
                   children: (e) => {
-                      let { onMouseEnter: n, onMouseLeave: a } = e;
+                      let { onMouseEnter: t, onMouseLeave: r } = e;
                       return (0, i.jsxs)(
-                          d.Z,
+                          c.Z,
                           {
                               role: 'link',
-                              onClick: O,
-                              onMouseEnter: n,
-                              onMouseLeave: a,
-                              children: [b.GI, l(r.content, _)]
+                              onClick: R,
+                              onMouseEnter: t,
+                              onMouseLeave: r,
+                              children: [y.GI, o(n.content, p)]
                           },
-                          _.key
+                          p.key
                       );
                   }
               },
-              _.key
+              p.key
           )
         : (0, i.jsxs)('span', {
-              children: [b.GI, l(r.content, _)]
+              children: [y.GI, o(n.content, p)]
           });
 }
-function C(e) {
-    let { commandId: n, commandName: r, commandDescription: a, applicationId: l, onClick: u } = e,
-        d = (0, o.e7)([g.Z], () => g.Z.getChannelId()),
-        f = (e) => {
-            null == e || e.stopPropagation(), S(d, r, n, c.Vh.POPULAR_COMMANDS, l), null == u || u(n);
+function A(e) {
+    let { commandId: t, commandName: n, commandDescription: r, applicationId: o, onClick: l } = e,
+        c = (0, a.e7)([m.Z], () => m.Z.getChannelId()),
+        d = (e) => {
+            null == e || e.stopPropagation(), T(c, n, t, u.Vh.POPULAR_COMMANDS, o), null == l || l(t);
         };
-    return (0, i.jsx)(s.Tooltip, {
-        text: a,
+    return (0, i.jsx)(s.ua7, {
+        text: r,
         position: 'top',
-        tooltipContentClassName: T.tooltip,
+        tooltipContentClassName: b.tooltip,
         children: (e) => {
-            let { onMouseEnter: n, onMouseLeave: a } = e;
-            return (0, i.jsxs)(s.Button, {
-                color: s.ButtonColors.PRIMARY,
-                size: s.ButtonSizes.ICON,
-                onClick: f,
-                onMouseEnter: n,
-                onMouseLeave: a,
-                children: ['/', r]
+            let { onMouseEnter: t, onMouseLeave: r } = e;
+            return (0, i.jsxs)(s.zxk, {
+                color: s.Ttl.PRIMARY,
+                size: s.PhG.ICON,
+                onClick: d,
+                onMouseEnter: t,
+                onMouseLeave: r,
+                children: ['/', n]
             });
         }
     });
 }
 function N(e) {
     return {
-        react: (e, n, r) =>
-            (0, i.jsx)(A, {
+        react: (e, t, n) =>
+            (0, i.jsx)(S, {
                 node: e,
-                output: n,
-                state: r
+                output: t,
+                state: n
             })
     };
 }

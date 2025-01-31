@@ -1,4 +1,6 @@
 e.exports = {
-    tryItOutButtons: 'tryItOutButtons_bde965',
-    selectionGroup: 'selectionGroup_bde965'
+    tryItOutButtons: 'tryItOutButtons__6b52d',
+    selectionGroup: 'selectionGroup__6b52d',
+    divider: 'divider__6b52d',
+    tryItOutButton: 'tryItOutButton__6b52d'
 };

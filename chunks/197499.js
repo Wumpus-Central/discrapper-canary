@@ -1,52 +1,50 @@
 i = { value: !0 };
 var i,
-    a =
+    r =
         Object.assign ||
         function (e) {
-            for (var n = 1; n < arguments.length; n++) {
-                var r = arguments[n];
-                for (var i in r) Object.prototype.hasOwnProperty.call(r, i) && (e[i] = r[i]);
+            for (var t = 1; t < arguments.length; t++) {
+                var n = arguments[t];
+                for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
             }
             return e;
         },
-    o = s(r(192379));
+    a = s(n(192379));
 function s(e) {
     return e && e.__esModule ? e : { default: e };
 }
-function l(e, n) {
-    var r = {};
-    for (var i in e) {
-        if (!(n.indexOf(i) >= 0)) Object.prototype.hasOwnProperty.call(e, i) && (r[i] = e[i]);
-    }
-    return r;
+function o(e, t) {
+    var n = {};
+    for (var i in e) !(t.indexOf(i) >= 0) && Object.prototype.hasOwnProperty.call(e, i) && (n[i] = e[i]);
+    return n;
 }
-var u = 24;
-n.default = function (e) {
-    var n = e.fill,
-        r = void 0 === n ? 'currentColor' : n,
+var l = 24;
+t.default = function (e) {
+    var t = e.fill,
+        n = void 0 === t ? 'currentColor' : t,
         i = e.width,
-        s = void 0 === i ? u : i,
-        c = e.height,
-        d = void 0 === c ? u : c,
-        f = e.style,
-        p = void 0 === f ? {} : f,
-        h = l(e, ['fill', 'width', 'height', 'style']);
-    return o.default.createElement(
+        s = void 0 === i ? l : i,
+        u = e.height,
+        c = void 0 === u ? l : u,
+        d = e.style,
+        f = void 0 === d ? {} : d,
+        _ = o(e, ['fill', 'width', 'height', 'style']);
+    return a.default.createElement(
         'svg',
-        a(
+        r(
             {
-                viewBox: '0 0 ' + u + ' ' + u,
-                style: a(
+                viewBox: '0 0 ' + l + ' ' + l,
+                style: r(
                     {
-                        fill: r,
+                        fill: n,
                         width: s,
-                        height: d
+                        height: c
                     },
-                    p
+                    f
                 )
             },
-            h
+            _
         ),
-        o.default.createElement('path', { d: 'M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z' })
+        a.default.createElement('path', { d: 'M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z' })
     );
 };

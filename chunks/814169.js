@@ -1,1 +1,2 @@
-e.exports = { potionBadge: 'potionBadge_ff6471' };
+var i = { potionBadge: 'potionBadge__18061' };
+e.exports = i;

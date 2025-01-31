@@ -1,9 +1,4 @@
-var i;
-r.d(n, {
-    z: function () {
-        return i;
-    }
-}),
-    !(function (e) {
-        (e.BLOCK_PROFILE_UPDATE = 'block_profile_update'), (e.QUARANTINE_USER = 'quarantine_user'), (e.BLOCK_GUEST_JOIN = 'block_guest_join');
-    })(i || (i = {}));
+n.d(t, { z: () => i });
+var i = (function (e) {
+    return (e.BLOCK_PROFILE_UPDATE = 'block_profile_update'), (e.QUARANTINE_USER = 'quarantine_user'), (e.BLOCK_GUEST_JOIN = 'block_guest_join'), e;
+})({});

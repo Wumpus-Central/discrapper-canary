@@ -1,39 +1,27 @@
-n.d(t, {
-    Db: function () {
-        return d;
-    }
-}),
-    n(610138),
-    n(216116),
-    n(78328),
-    n(815648),
-    n(47120);
-var r,
-    i,
-    l = n(192379),
-    a = n(512969),
-    s = n(37234),
-    o = n(703656),
-    c = n(981631);
-function d() {
-    let { search: e } = (0, a.TH)(),
-        t = (0, a.UO)(),
-        n = l.useMemo(() => new URLSearchParams(e), [e]).get('source'),
-        r = null != n ? parseInt(n, 10) : null;
+n.d(t, { Db: () => o }), n(610138), n(216116), n(78328), n(815648), n(47120);
+var r = n(192379),
+    l = n(512969),
+    i = n(37234),
+    s = n(703656),
+    a = n(981631);
+function o() {
+    let { search: e } = (0, l.TH)(),
+        t = (0, l.UO)(),
+        n = r.useMemo(() => new URLSearchParams(e), [e]).get('source'),
+        o = null != n ? parseInt(n, 10) : null;
     return {
-        onClose: l.useCallback(() => {
-            if (0 === r) {
-                (0, o.op)(), (0, s.jN)(c.S9g.USER_SETTINGS);
+        onClose: r.useCallback(() => {
+            if (0 === o) {
+                (0, s.op)(), (0, i.jN)(a.S9g.USER_SETTINGS);
                 return;
             }
-            if ((0, o.uv)()) {
-                (0, o.op)();
+            if ((0, s.uv)()) {
+                (0, s.op)();
                 return;
             }
-            (0, o.uL)(c.Z5c.APP);
-        }, [r]),
-        source: r,
+            (0, s.uL)(a.Z5c.APP);
+        }, [o]),
+        source: o,
         ...t
     };
 }
-((i = r || (r = {}))[(i.SETTINGS = 0)] = 'SETTINGS'), (i[(i.CHANGELOG = 1)] = 'CHANGELOG'), (i[(i.DM_LIST = 2)] = 'DM_LIST');

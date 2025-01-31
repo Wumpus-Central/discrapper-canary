@@ -1,6 +1,7 @@
-e.exports = {
-    container: 'container_ea7ad5',
-    volumeButton: 'volumeButton_ea7ad5',
-    volumeButtonSlider: 'volumeButtonSlider_ea7ad5',
-    sliderVisible: 'sliderVisible_ea7ad5'
+var i = {
+    container: 'container__2d263',
+    volumeButton: 'volumeButton__2d263',
+    volumeButtonSlider: 'volumeButtonSlider__2d263',
+    sliderVisible: 'sliderVisible__2d263'
 };
+e.exports = i;

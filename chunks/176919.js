@@ -1,39 +1,32 @@
-r.d(n, {
-    D6: function () {
-        return _;
-    },
-    bp: function () {
-        return p;
-    },
-    wr: function () {
-        return i;
-    }
+n.d(t, {
+    D6: () => p,
+    bp: () => f,
+    wr: () => d
 });
-var i,
-    a = r(192379),
-    o = r(442837),
-    s = r(846519),
-    l = r(355467),
-    u = r(38618),
-    c = r(409813),
-    d = r(45572),
-    f = r(505649);
-function p(e, n, r, i) {
-    let o = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+var i = n(192379),
+    r = n(442837),
+    a = n(846519),
+    s = n(355467),
+    o = n(38618),
+    l = n(409813),
+    u = n(45572),
+    c = n(505649),
+    d = (function (e) {
+        return (e[(e.PENDING = 1)] = 'PENDING'), (e[(e.ERROR = 2)] = 'ERROR'), (e[(e.NONE = 3)] = 'NONE'), e;
+    })({});
+function f(e, t, n, r) {
+    let a = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
         s = arguments.length > 5 ? arguments[5] : void 0;
-    a.useEffect(() => {
-        if (null != e) 1 === n && e !== c.h8.AWAITING_AUTHENTICATION ? r(c.h8.AWAITING_AUTHENTICATION) : e === c.h8.AWAITING_AUTHENTICATION && (2 === n ? r(c.h8.REVIEW) : 3 === n && (o ? (null != s ? s() : r(c.h8.REVIEW)) : (i(d.A.COMPLETED), r(c.h8.CONFIRM))));
-    }, [e, n, r, i, o, s]);
+    i.useEffect(() => {
+        null != e && (1 === t && e !== l.h8.AWAITING_AUTHENTICATION ? n(l.h8.AWAITING_AUTHENTICATION) : e === l.h8.AWAITING_AUTHENTICATION && (2 === t ? n(l.h8.REVIEW) : 3 === t && (a ? (null != s ? s() : n(l.h8.REVIEW)) : (r(u.A.COMPLETED), n(l.h8.CONFIRM)))));
+    }, [e, t, n, r, a, s]);
 }
-!(function (e) {
-    (e[(e.PENDING = 1)] = 'PENDING'), (e[(e.ERROR = 2)] = 'ERROR'), (e[(e.NONE = 3)] = 'NONE');
-})(i || (i = {}));
-let h = 5000;
-function _(e) {
-    let n = (0, o.e7)([f.Z], () => f.Z.awaitingPaymentId),
-        r = (0, o.e7)([u.Z], () => u.Z.isConnected()),
-        i = a.useRef(new s.Xp());
-    a.useEffect(() => {
-        r || null == n || 1 !== e ? i.current.stop() : i.current.start(h, () => (0, l.O1)(n));
-    }, [n, e, r]);
+let _ = 5000;
+function p(e) {
+    let t = (0, r.e7)([c.Z], () => c.Z.awaitingPaymentId),
+        n = (0, r.e7)([o.Z], () => o.Z.isConnected()),
+        l = i.useRef(new a.Xp());
+    i.useEffect(() => {
+        n || null == t || 1 !== e ? l.current.stop() : l.current.start(_, () => (0, s.O1)(t));
+    }, [t, e, n]);
 }

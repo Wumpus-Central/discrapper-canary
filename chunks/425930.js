@@ -1,27 +1,23 @@
-r.d(t, {
-    N: function () {
-        return _;
-    }
-});
-var a = r(370336),
-    n = r(263449);
-function _(e, t = {}, r = (0, n.nZ)()) {
-    let { message: _, name: o, email: E, url: i, source: c, associatedEventId: s, tags: l } = e,
+a.d(e, { N: () => o });
+var r = a(370336),
+    n = a(263449);
+function o(t, e = {}, a = (0, n.nZ)()) {
+    let { message: _, name: i, email: c, url: s, source: E, associatedEventId: l, tags: u } = t,
         I = {
             contexts: {
-                feedback: (0, a.Jr)({
-                    contact_email: E,
-                    name: o,
+                feedback: (0, r.Jr)({
+                    contact_email: c,
+                    name: i,
                     message: _,
-                    url: i,
-                    source: c,
-                    associated_event_id: s
+                    url: s,
+                    source: E,
+                    associated_event_id: l
                 })
             },
             type: 'feedback',
             level: 'info',
-            tags: l
+            tags: u
         },
-        u = (r && r.getClient()) || (0, n.s3)();
-    return u && u.emit('beforeSendFeedback', I, t), r.captureEvent(I, t);
+        R = (a && a.getClient()) || (0, n.s3)();
+    return R && R.emit('beforeSendFeedback', I, e), a.captureEvent(I, e);
 }

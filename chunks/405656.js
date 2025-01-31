@@ -1,239 +1,213 @@
-r.d(n, {
-    $G: function () {
-        return v;
-    },
-    BU: function () {
-        return T;
-    },
-    Fr: function () {
-        return O;
-    },
-    Fz: function () {
-        return R;
-    },
-    Ko: function () {
-        return _;
-    },
-    Pe: function () {
-        return D;
-    },
-    WU: function () {
-        return N;
-    },
-    cl: function () {
-        return S;
-    },
-    g9: function () {
-        return y;
-    },
-    jW: function () {
-        return E;
-    },
-    kG: function () {
-        return C;
-    },
-    qc: function () {
-        return b;
-    },
-    zV: function () {
-        return I;
-    }
-});
-var i = r(47120);
-var a = r(724458);
-var o = r(392711),
-    s = r.n(o),
-    l = r(349033),
-    u = r(999650),
-    c = r(731290),
-    d = r(594174),
-    f = r(709054),
-    p = r(981631),
-    h = r(388032);
-function _(e) {
+n.d(t, {
+    $G: () => m,
+    BU: () => y,
+    Fr: () => N,
+    Fz: () => A,
+    Ko: () => f,
+    Pe: () => C,
+    WU: () => S,
+    cl: () => I,
+    g9: () => g,
+    jW: () => h,
+    kG: () => T,
+    qc: () => E,
+    zV: () => v
+}),
+    n(47120),
+    n(724458);
+var i = n(392711),
+    r = n.n(i),
+    a = n(349033),
+    s = n(999650),
+    o = n(731290),
+    l = n(594174),
+    u = n(709054),
+    c = n(981631),
+    d = n(388032);
+function f(e) {
     switch (e) {
-        case p.dCx.FILTER_FROM:
-            return h.intl.string(h.t.E466pK);
-        case p.dCx.FILTER_MENTIONS:
-            return h.intl.string(h.t.BYvFWl);
-        case p.dCx.FILTER_HAS:
-            return h.intl.string(h.t.bhSYbW);
-        case p.dCx.FILTER_BEFORE:
-        case p.dCx.FILTER_ON:
-        case p.dCx.FILTER_AFTER:
-            return h.intl.string(h.t.Zbbc1N);
-        case p.dCx.FILTER_IN:
-            return h.intl.string(h.t['GpM+//']);
-        case p.dCx.FILTER_FILE_TYPE:
-            return h.intl.string(h.t.FXcAFR);
-        case p.dCx.FILTER_FILE_NAME:
-            return h.intl.string(h.t.uAbFDA);
-        case p.dCx.FILTER_PINNED:
-            return h.intl.string(h.t.UJxL3d);
+        case c.dCx.FILTER_FROM:
+            return d.intl.string(d.t.E466pK);
+        case c.dCx.FILTER_MENTIONS:
+            return d.intl.string(d.t.BYvFWl);
+        case c.dCx.FILTER_HAS:
+            return d.intl.string(d.t.bhSYbW);
+        case c.dCx.FILTER_BEFORE:
+        case c.dCx.FILTER_ON:
+        case c.dCx.FILTER_AFTER:
+            return d.intl.string(d.t.Zbbc1N);
+        case c.dCx.FILTER_IN:
+            return d.intl.string(d.t['GpM+//']);
+        case c.dCx.FILTER_FILE_TYPE:
+            return d.intl.string(d.t.FXcAFR);
+        case c.dCx.FILTER_FILE_NAME:
+            return d.intl.string(d.t.uAbFDA);
+        case c.dCx.FILTER_PINNED:
+            return d.intl.string(d.t.UJxL3d);
     }
 }
-let m = {
-    [p.dCx.FILTER_BEFORE]: !0,
-    [p.dCx.FILTER_AFTER]: !0,
-    [p.dCx.FILTER_ON]: !0
+let _ = {
+    [c.dCx.FILTER_BEFORE]: !0,
+    [c.dCx.FILTER_AFTER]: !0,
+    [c.dCx.FILTER_ON]: !0
 };
-function g(e) {
-    let n = u.ZP[e],
-        r = null != n ? n.queryKey : null;
-    return null == r && (r = 'content'), r;
+function p(e) {
+    let t = s.ZP[e],
+        n = null != t ? t.queryKey : null;
+    return null == n && (n = 'content'), n;
 }
-function E(e, n) {
-    if (c.Z.didAgree(n)) {
-        let n = d.default.getCurrentUser();
-        null != n && (e.include_nsfw = null == n.nsfwAllowed || n.nsfwAllowed);
+function h(e, t) {
+    if (o.Z.didAgree(t)) {
+        let t = l.default.getCurrentUser();
+        null != t && (e.include_nsfw = null == t.nsfwAllowed || t.nsfwAllowed);
     }
 }
-function v(e) {
-    let n = {};
-    for (let [r, i] of (e.forEach((e) => {
-        let { type: r } = e;
-        if (p.TNx.test(r)) return;
-        switch (r) {
-            case p.dCx.ANSWER_BEFORE:
-            case p.dCx.ANSWER_ON:
-            case p.dCx.ANSWER_AFTER:
+function m(e) {
+    let t = {};
+    for (let [n, i] of (e.forEach((e) => {
+        let { type: n } = e;
+        if (c.TNx.test(n)) return;
+        switch (n) {
+            case c.dCx.ANSWER_BEFORE:
+            case c.dCx.ANSWER_ON:
+            case c.dCx.ANSWER_AFTER:
                 let i = e.getData('start'),
-                    a = e.getData('end');
-                i && (n.min_id = f.default.fromTimestamp(i)), a && (n.max_id = f.default.fromTimestamp(a));
+                    r = e.getData('end');
+                i && (t.min_id = u.default.fromTimestamp(i)), r && (t.max_id = u.default.fromTimestamp(r));
                 return;
         }
-        let o = g(r);
-        null == n[o] && (n[o] = new Set());
-        let s = n[o];
-        switch (r) {
-            case p.dCx.ANSWER_USERNAME_FROM:
-            case p.dCx.ANSWER_USERNAME_MENTIONS:
+        let a = p(n);
+        null == t[a] && (t[a] = new Set());
+        let s = t[a];
+        switch (n) {
+            case c.dCx.ANSWER_USERNAME_FROM:
+            case c.dCx.ANSWER_USERNAME_MENTIONS:
                 s.add(e.getData('userId'));
                 break;
-            case p.dCx.ANSWER_FILE_TYPE:
-            case p.dCx.ANSWER_FILE_NAME:
+            case c.dCx.ANSWER_FILE_TYPE:
+            case c.dCx.ANSWER_FILE_NAME:
                 s.add(e.getMatch(1));
                 break;
-            case p.dCx.ANSWER_IN:
+            case c.dCx.ANSWER_IN:
                 s.add(e.getData('channel').id);
                 break;
-            case p.dCx.ANSWER_HAS:
+            case c.dCx.ANSWER_HAS:
                 s.add(e.getData('has'));
                 break;
-            case p.dCx.ANSWER_PINNED:
+            case c.dCx.ANSWER_PINNED:
                 s.add(e.getData('pinned'));
                 break;
             default:
                 s.add(e.getFullMatch().trim());
         }
     }),
-    Object.entries(n)))
-        i instanceof Set && (n[r] = Array.from(i));
-    return n.content && ((n.content = n.content.join(' ').trim()), !n.content && delete n.content), n;
+    Object.entries(t)))
+        i instanceof Set && (t[n] = Array.from(i));
+    return t.content && ((t.content = t.content.join(' ').trim()), t.content || delete t.content), t;
 }
-function y(e, n, r) {
-    let i, a;
-    let o = e.find((o, s) => (n >= o.start && n <= o.end && r >= o.start && r <= o.end ? (null != e[s + 1] && (a = e[s + 1]), !0) : ((i = o), !1)));
-    return null == o
+function g(e, t, n) {
+    let i, r;
+    let a = e.find((a, s) => (t >= a.start && t <= a.end && n >= a.start && n <= a.end ? (null != e[s + 1] && (r = e[s + 1]), !0) : ((i = a), !1)));
+    return null == a
         ? null
         : {
               previousToken: i,
-              currentToken: o,
-              nextToken: a,
-              focusOffset: n,
-              anchorOffset: r
+              currentToken: a,
+              nextToken: r,
+              focusOffset: t,
+              anchorOffset: n
           };
 }
-function b(e, n) {
-    let r;
-    let { currentToken: i, nextToken: a, previousToken: o } = (e = null != e ? e : {});
-    if (0 === n.length)
+function E(e, t) {
+    let n;
+    let { currentToken: i, nextToken: r, previousToken: s } = (e = null != e ? e : {});
+    if (0 === t.length)
         return {
-            type: p.Sap.EMPTY,
+            type: c.Sap.EMPTY,
             filter: null,
             token: null
         };
     if (null == i)
         return {
-            type: p.Sap.FILTER_ALL,
+            type: c.Sap.FILTER_ALL,
             filter: null,
             token: null
         };
-    if (p.TNx.test(i.type)) {
-        if (null == a || a.type === l.ZP.NON_TOKEN_TYPE)
+    if (c.TNx.test(i.type)) {
+        if (null == r || r.type === a.ZP.NON_TOKEN_TYPE)
             return {
-                type: p.Sap.FILTER,
+                type: c.Sap.FILTER,
                 filter: i.type,
-                token: a
+                token: r
             };
-        if (null != a && !p.KA4.test(a.type))
+        if (null != r && !c.KA4.test(r.type))
             return {
-                type: p.Sap.FILTER,
+                type: c.Sap.FILTER,
                 filter: i.type,
                 token: null
             };
     }
-    return i.type === l.ZP.NON_TOKEN_TYPE && null != o && p.TNx.test(o.type)
+    return i.type === a.ZP.NON_TOKEN_TYPE && null != s && c.TNx.test(s.type)
         ? {
-              type: p.Sap.FILTER,
-              filter: o.type,
+              type: c.Sap.FILTER,
+              filter: s.type,
               token: i
           }
-        : (i.type === l.ZP.NON_TOKEN_TYPE && (r = i),
+        : (i.type === a.ZP.NON_TOKEN_TYPE && (n = i),
           {
-              type: p.Sap.FILTER_ALL,
+              type: c.Sap.FILTER_ALL,
               filter: null,
-              token: r
+              token: n
           });
 }
-function I(e, n) {
-    let r = [];
+function v(e, t) {
+    let n = [];
     return (
-        s()(e).forEach((e) => {
+        r()(e).forEach((e) => {
             if (null == e || 0 === e.results.length) return;
             let i = e.group;
-            r = r.concat(
+            n = n.concat(
                 e.results.map((e) => {
-                    let r = e.text;
-                    if (n === p.Sap.FILTER_ALL) {
-                        var a;
-                        i = null !== (a = e.group) && void 0 !== a ? a : i;
-                        let n = u.ZP[i];
-                        (null == n ? void 0 : n.key) != null && (null == n ? void 0 : n.key) !== '' && (r = ''.concat(n.key, ' ').concat(r));
+                    let n = e.text;
+                    if (t === c.Sap.FILTER_ALL) {
+                        var r;
+                        i = null !== (r = e.group) && void 0 !== r ? r : i;
+                        let t = s.ZP[i];
+                        (null == t ? void 0 : t.key) != null && (null == t ? void 0 : t.key) !== '' && (n = ''.concat(t.key, ' ').concat(n));
                     }
-                    return r;
+                    return n;
                 })
             );
         }),
-        r.filter((e) => e)
+        n.filter((e) => e)
     );
 }
-function T(e) {
-    return e.reduce((e, n) => (null == n ? e : n.results.length + e), 0);
+function y(e) {
+    return e.reduce((e, t) => (null == t ? e : t.results.length + e), 0);
 }
-function S(e) {
+function I(e) {
     return null == e ? '' : e.map((e) => e.getFullMatch()).join('');
 }
-let A = new l.ZP();
-function C(e) {
-    return A.tokenize(e);
+let b = new a.ZP();
+function T(e) {
+    return b.tokenize(e);
 }
-function N() {
-    return A.clearCache();
+function S() {
+    return b.clearCache();
 }
-function R(e) {
-    return null != e ? m[e] : null;
+function A(e) {
+    return null != e ? _[e] : null;
 }
-function O(e, n) {
-    let r = p.TNx.test(e.type);
-    return (null != n || !r) && (null == n || !r || !!p.KA4.test(n.type)) && !0;
+function N(e, t) {
+    let n = c.TNx.test(e.type);
+    return (null != t || !n) && (null == t || !n || !!c.KA4.test(t.type));
 }
-function D() {
-    (0, u.Pe)(),
-        A.reset(),
-        s()(u.ZP).forOwn((e, n) =>
-            A.addRule({
-                type: n,
+function C() {
+    (0, s.Pe)(),
+        b.reset(),
+        r()(s.ZP).forOwn((e, t) =>
+            b.addRule({
+                type: t,
                 ...e
             })
         );

@@ -1,29 +1,19 @@
-r.d(n, {
-    o: function () {
-        return p;
-    }
-});
-var i = r(315314);
-var a = r(610138);
-var o = r(216116);
-var s = r(78328);
-var l = r(815648);
-var u = r(47120);
-var c = r(593473),
-    d = r(591759);
-let f = (e) => {
+n.d(t, { o: () => s }), n(315314), n(309749), n(610138), n(216116), n(78328), n(815648), n(47120);
+var i = n(593473),
+    r = n(591759);
+let a = (e) => {
         if (null == e || '' === e) return null;
         try {
-            let n = new URL(e);
-            return d.Z.isDiscordHostname(n.hostname) || window.location.host === n.host ? n : null;
+            let t = new URL(e);
+            return r.Z.isDiscordHostname(t.hostname) || window.location.host === t.host ? t : null;
         } catch (e) {
             return null;
         }
     },
-    p = (e) => {
-        let n = (0, c.parse)(e);
+    s = (e) => {
+        let t = (0, i.parse)(e);
         return {
-            desktop: f(n.desktop_link),
-            mobile: f(n.mobile_link)
+            desktop: a(t.desktop_link),
+            mobile: a(t.mobile_link)
         };
     };

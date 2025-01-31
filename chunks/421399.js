@@ -1,165 +1,160 @@
-r.d(n, {
-    Z: function () {
-        return A;
-    },
-    a: function () {
-        return i;
-    }
+n.d(t, {
+    Z: () => S,
+    a: () => b
 });
-var i,
-    a = r(200651),
-    o = r(192379),
-    s = r(120356),
-    l = r.n(s),
-    u = r(873546),
-    c = r(442837),
-    d = r(481060),
-    f = r(607070),
-    p = r(100527),
-    h = r(906732),
-    _ = r(385499),
-    m = r(979264),
-    g = r(372900),
-    E = r(477734),
-    v = r(184301),
-    y = r(768581),
-    b = r(463396),
-    I = r(981631),
-    T = r(507304);
-function S(e) {
-    let { compact: n } = e;
-    return (0, a.jsx)(_.Z, {
-        className: n ? T.botTagCompact : T.botTagCozy,
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(873546),
+    l = n(442837),
+    u = n(481060),
+    c = n(607070),
+    d = n(100527),
+    f = n(906732),
+    _ = n(385499),
+    p = n(979264),
+    h = n(372900),
+    m = n(477734),
+    g = n(184301),
+    E = n(768581),
+    v = n(463396),
+    y = n(981631),
+    I = n(507304),
+    b = (function (e) {
+        return (e[(e.SYSTEM_TAG = 0)] = 'SYSTEM_TAG'), (e[(e.BADGES = 1)] = 'BADGES'), e;
+    })({});
+function T(e) {
+    let { compact: t } = e;
+    return (0, i.jsx)(_.Z, {
+        className: t ? I.botTagCompact : I.botTagCozy,
         type: _.Z.Types.REMIX,
         useRemSizes: !0
     });
 }
-function A(e) {
-    var n;
-    let r,
-        { author: i, message: s, channel: _, userOverride: A, compact: C = !1, withMentionPrefix: N = !1, showPopout: R = !1, className: O, onClick: D, onContextMenu: L, onPopoutRequestClose: x, renderPopout: w, renderRemixTag: P = !1, decorations: M } = e,
-        k = o.useContext(g.Z),
-        U = null !== (n = null == _ ? void 0 : _.guild_id) && void 0 !== n ? n : k,
-        { analyticsLocations: B } = (0, h.ZP)(p.Z.USERNAME),
+function S(e) {
+    var t;
+    let n,
+        { author: a, message: _, channel: b, userOverride: S, compact: A = !1, withMentionPrefix: N = !1, showPopout: C = !1, className: R, onClick: O, onContextMenu: D, onPopoutRequestClose: x, renderPopout: L, renderRemixTag: P = !1, decorations: w } = e,
+        M = r.useContext(h.Z),
+        k = null !== (t = null == b ? void 0 : b.guild_id) && void 0 !== t ? t : M,
+        { analyticsLocations: U } = (0, f.ZP)(d.Z.USERNAME),
         G = N ? '@' : '',
-        { nick: Z, colorString: F, colorRoleName: V } = i,
-        j = null != s.messageReference && null != s.webhookId && s.hasFlag(I.iLy.IS_CROSSPOST),
-        H = (0, c.e7)([f.Z], () => f.Z.roleStyle),
-        Y = 'username' === H,
-        W = 'dot' === H,
-        K = (0, E.X$)(),
-        z = o.useMemo(
+        { nick: B, colorString: Z, colorRoleName: F } = a,
+        V = null != _.messageReference && null != _.webhookId && _.hasFlag(y.iLy.IS_CROSSPOST),
+        j = (0, l.e7)([c.Z], () => c.Z.roleStyle),
+        H = 'username' === j,
+        Y = 'dot' === j,
+        W = (0, m.X$)(),
+        K = r.useMemo(
             () => ({
-                source: I.jXE.CHANNEL,
-                messageId: s.id,
-                tagUserId: s.author.id
+                source: y.jXE.CHANNEL,
+                messageId: _.id,
+                tagUserId: _.author.id
             }),
-            [s.id, s.author.id]
+            [_.id, _.author.id]
         ),
-        q = {
-            className: T.username,
-            style: Y && null != F ? { color: F } : void 0,
-            onClick: D,
-            onContextMenu: L,
-            children: (0, a.jsx)(a.Fragment, { children: G + Z })
+        z = {
+            className: I.username,
+            style: H && null != Z ? { color: Z } : void 0,
+            onClick: O,
+            onContextMenu: D,
+            children: (0, i.jsx)(i.Fragment, { children: G + B })
         };
-    function Q() {
-        let e = null != A ? A : s.author;
-        return (0, v.Z)(
+    function q() {
+        let e = null != S ? S : _.author;
+        return (0, g.Z)(
             e.id,
-            null != i.guildMemberAvatar && null != U
-                ? (0, y.JM)({
-                      guildId: U,
+            null != a.guildMemberAvatar && null != k
+                ? (0, E.JM)({
+                      guildId: k,
                       userId: e.id,
-                      avatar: i.guildMemberAvatar,
+                      avatar: a.guildMemberAvatar,
                       size: 80
                   })
-                : e.getAvatarURL(U, 80),
+                : e.getAvatarURL(k, 80),
             {
-                guildId: U,
-                channelId: s.channel_id
+                guildId: k,
+                channelId: _.channel_id
             }
         );
     }
-    let X = o.useMemo(
+    let Q = r.useMemo(
         () =>
-            C
-                ? (0, a.jsx)(m.ZP, {
-                      primaryGuild: i.primaryGuild,
-                      userId: s.author.id,
-                      contextGuildId: U,
-                      className: T.clanTagChiplet,
-                      profileViewedAnalytics: z
+            A
+                ? (0, i.jsx)(p.ZP, {
+                      primaryGuild: a.primaryGuild,
+                      userId: _.author.id,
+                      contextGuildId: k,
+                      className: I.clanTagChiplet,
+                      profileViewedAnalytics: K
                   })
                 : null,
-        [C, z, i.primaryGuild, U, s.author.id]
+        [A, K, a.primaryGuild, k, _.author.id]
     );
-    r =
-        null != w && null != R
-            ? (0, a.jsx)(d.Popout, {
-                  preload: j ? void 0 : Q,
-                  renderPopout: w,
-                  shouldShow: R,
-                  position: u.tq ? 'window_center' : 'right',
+    n =
+        null != L && null != C
+            ? (0, i.jsx)(u.yRy, {
+                  preload: V ? void 0 : q,
+                  renderPopout: L,
+                  shouldShow: C,
+                  position: o.tq ? 'window_center' : 'right',
                   onRequestClose: x,
                   children: (e) => {
-                      let { onClick: n, ...r } = e;
-                      return (0, a.jsxs)(a.Fragment, {
+                      let { onClick: t, ...n } = e;
+                      return (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, a.jsx)(d.Clickable, {
+                              (0, i.jsx)(u.P3F, {
                                   tag: 'span',
-                                  ...r,
-                                  ...q,
-                                  className: l()(q.className, T.clickable, O)
+                                  ...n,
+                                  ...z,
+                                  className: s()(z.className, I.clickable, R)
                               }),
-                              X
+                              Q
                           ]
                       });
                   }
               })
-            : (0, a.jsxs)(a.Fragment, {
+            : (0, i.jsxs)(i.Fragment, {
                   children: [
-                      (0, a.jsx)(d.Clickable, {
-                          ...q,
-                          className: l()(q.className, O)
+                      (0, i.jsx)(u.P3F, {
+                          ...z,
+                          className: s()(z.className, R)
                       }),
-                      X
+                      Q
                   ]
               });
-    let J = null != M ? M[0] : null,
-        $ = null != M ? M[1] : null;
-    return (0, a.jsxs)(h.Gt, {
-        value: B,
+    let X = null != w ? w[0] : null,
+        J = null != w ? w[1] : null;
+    return (0, i.jsxs)(f.Gt, {
+        value: U,
         children: [
-            null != J && C
-                ? (0, a.jsxs)(a.Fragment, {
-                      children: [' ', J, ' ']
+            null != X && A
+                ? (0, i.jsxs)(i.Fragment, {
+                      children: [' ', X, ' ']
                   })
                 : null,
-            W
-                ? (0, a.jsx)(d.RoleDot, {
-                      color: F,
-                      name: V,
-                      className: T.roleDot
+            Y
+                ? (0, i.jsx)(u.FhE, {
+                      color: Z,
+                      name: F,
+                      className: I.roleDot
                   })
                 : null,
-            r,
-            !C &&
-                (0, a.jsx)(a.Fragment, {
-                    children: (0, a.jsx)(m.ZP, {
-                        primaryGuild: i.primaryGuild,
-                        userId: s.author.id,
-                        contextGuildId: U,
-                        className: T.clanTagChiplet,
-                        profileViewedAnalytics: z
+            n,
+            !A &&
+                (0, i.jsx)(i.Fragment, {
+                    children: (0, i.jsx)(p.ZP, {
+                        primaryGuild: a.primaryGuild,
+                        userId: _.author.id,
+                        contextGuildId: k,
+                        className: I.clanTagChiplet,
+                        profileViewedAnalytics: K
                     })
                 }),
-            null != $ ? (0, a.jsx)(a.Fragment, { children: $ }) : null,
-            null == J || C ? null : J,
-            null != s && (0, b.f)(s) && K && P ? (0, a.jsx)(S, {}) : null
+            null != J ? (0, i.jsx)(i.Fragment, { children: J }) : null,
+            null == X || A ? null : X,
+            null != _ && (0, v.f)(_) && W && P ? (0, i.jsx)(T, {}) : null
         ]
     });
 }
-!(function (e) {
-    (e[(e.SYSTEM_TAG = 0)] = 'SYSTEM_TAG'), (e[(e.BADGES = 1)] = 'BADGES');
-})(i || (i = {}));

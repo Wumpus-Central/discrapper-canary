@@ -1,14 +1,9 @@
-r.r(n),
-    r.d(n, {
-        default: function () {
-            return o;
-        }
-    });
-var i = r(767629),
-    a = r(951516);
-function o(e, n) {
-    (0, a.Z)(2, arguments);
-    var r = (0, i.default)(e),
-        o = (0, i.default)(n);
-    return r.getTime() === o.getTime();
+n.r(t), n.d(t, { default: () => a });
+var i = n(767629),
+    r = n(951516);
+function a(e, t) {
+    (0, r.Z)(2, arguments);
+    var n = (0, i.default)(e),
+        a = (0, i.default)(t);
+    return n.getTime() === a.getTime();
 }

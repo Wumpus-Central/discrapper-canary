@@ -1,62 +1,54 @@
-n.d(t, {
-    k: function () {
-        return b;
-    }
-}),
-    n(47120);
+n.d(t, { k: () => A }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(274312),
-    a = n(442837),
-    o = n(524437),
-    s = n(481060),
+    l = n(192379),
+    a = n(274312),
+    r = n(442837),
+    s = n(524437),
+    o = n(481060),
     c = n(100527),
-    u = n(906732),
-    d = n(602478),
+    d = n(906732),
+    u = n(602478),
     m = n(2818),
     h = n(768943),
-    f = n(742989),
+    _ = n(742989),
     p = n(675478),
-    _ = n(581883),
-    g = n(585483),
-    E = n(400445),
-    C = n(153209),
-    I = n(956961),
-    x = n(903672),
-    N = n(711165),
-    v = n(946443),
-    T = n(264233),
-    S = n(981631),
-    A = n(388032);
-function b(e) {
-    let { onOpen: t, onClose: n, children: b, badgeState: j, popoutPosition: R, popoutAlign: Z } = e,
-        { analyticsLocations: P } = (0, u.ZP)(c.Z.NOTIFICATION_CENTER),
-        [L, y] = r.useState(!1),
-        [O, M] = (function () {
-            let e = (0, a.e7)([_.Z], () => {
+    g = n(581883),
+    f = n(585483),
+    x = n(400445),
+    E = n(153209),
+    C = n(956961),
+    v = n(903672),
+    I = n(711165),
+    N = n(946443),
+    S = n(264233),
+    T = n(981631),
+    b = n(388032);
+function A(e) {
+    let { onOpen: t, onClose: n, children: A, badgeState: j, popoutPosition: y, popoutAlign: Z } = e,
+        { analyticsLocations: R } = (0, d.ZP)(c.Z.NOTIFICATION_CENTER),
+        [L, P] = l.useState(!1),
+        [k, M] = [
+            (0, r.e7)([g.Z], () => {
                 var e, t;
-                return null !== (t = null === (e = _.Z.settings.inbox) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : o.X.UNREADS;
-            });
-            return [
-                e,
-                r.useCallback((e) => {
-                    p.hW.updateAsync(
-                        'inbox',
-                        (t) => {
-                            if (t.currentTab === e) return !1;
-                            t.currentTab = e;
-                        },
-                        p.fy.FREQUENT_USER_ACTION
-                    );
-                }, [])
-            ];
-        })(),
-        { showTutorial: D, setSeenTutorial: k } = (function (e) {
-            let t = (0, a.e7)([_.Z], () => {
+                return null !== (t = null === (e = g.Z.settings.inbox) || void 0 === e ? void 0 : e.currentTab) && void 0 !== t ? t : s.X.UNREADS;
+            }),
+            l.useCallback((e) => {
+                p.hW.updateAsync(
+                    'inbox',
+                    (t) => {
+                        if (t.currentTab === e) return !1;
+                        t.currentTab = e;
+                    },
+                    p.fy.FREQUENT_USER_ACTION
+                );
+            }, [])
+        ],
+        { showTutorial: O, setSeenTutorial: D } = (function (e) {
+            let t = (0, r.e7)([g.Z], () => {
                     var e, t;
-                    return null !== (t = null === (e = _.Z.settings.inbox) || void 0 === e ? void 0 : e.viewedTutorial) && void 0 !== t && t;
+                    return null !== (t = null === (e = g.Z.settings.inbox) || void 0 === e ? void 0 : e.viewedTutorial) && void 0 !== t && t;
                 }),
-                n = r.useCallback(() => {
+                n = l.useCallback(() => {
                     p.hW.updateAsync(
                         'inbox',
                         (e) => {
@@ -66,91 +58,91 @@ function b(e) {
                     );
                 }, []);
             return {
-                showTutorial: !t && e === o.X.UNREADS,
+                showTutorial: !t && e === s.X.UNREADS,
                 setSeenTutorial: n
             };
-        })(O),
-        U = r.useCallback(() => {
-            y(!1), L && (null == n || n());
+        })(k),
+        w = l.useCallback(() => {
+            P(!1), L && (null == n || n());
         }, [n, L]),
-        B = r.useCallback(() => {
-            y(!L), L ? null == n || n() : null == t || t();
+        F = l.useCallback(() => {
+            P(!L), L ? null == n || n() : null == t || t();
         }, [n, t, L]);
-    r.useEffect(() => (g.S.subscribe(S.CkL.TOGGLE_INBOX, B), () => void g.S.unsubscribe(S.CkL.TOGGLE_INBOX, B)), [B]);
-    let { showReminders: w } = f.Z.useExperiment({ location: 'RecentsPopout' }),
-        { enabled: F, inInbox: G } = m.Z.useExperiment({ location: 'RecentsPopout' }),
-        V = (0, a.e7)([h.Z], () => h.Z.hasOverdueReminder(), []) && F && G,
-        { enabled: H } = d.Z.useExperiment({ location: 'RecentsPopout' });
-    r.useEffect(() => {
-        (((!w || (F && G)) && O === o.X.TODOS) || (O === o.X.BOOKMARKS && !(F || G))) && M(o.X.MENTIONS);
+    l.useEffect(() => (f.S.subscribe(T.CkL.TOGGLE_INBOX, F), () => void f.S.unsubscribe(T.CkL.TOGGLE_INBOX, F)), [F]);
+    let { showReminders: U } = _.Z.useExperiment({ location: 'RecentsPopout' }),
+        { enabled: B, inInbox: G } = m.Z.useExperiment({ location: 'RecentsPopout' }),
+        H = (0, r.e7)([h.Z], () => h.Z.hasOverdueReminder(), []) && B && G,
+        { enabled: V } = u.Z.useExperiment({ location: 'RecentsPopout' });
+    l.useEffect(() => {
+        (((!U || (B && G)) && k === s.X.TODOS) || (k === s.X.BOOKMARKS && !(B || G))) && M(s.X.MENTIONS);
     });
-    let z = r.useCallback(
+    let z = l.useCallback(
         (e) => {
-            !e.shiftKey && U();
+            e.shiftKey || w();
         },
-        [U]
+        [w]
     );
-    return (0, i.jsx)(u.Gt, {
-        value: P,
-        children: (0, i.jsx)(s.Popout, {
-            animation: s.Popout.Animation.NONE,
-            position: R,
+    return (0, i.jsx)(d.Gt, {
+        value: R,
+        children: (0, i.jsx)(o.yRy, {
+            animation: o.yRy.Animation.NONE,
+            position: y,
             align: Z,
             autoInvert: !1,
             shouldShow: L,
-            onRequestClose: U,
+            onRequestClose: w,
             renderPopout: function () {
-                return (0, i.jsx)(s.Dialog, {
-                    'aria-label': A.intl.string(A.t.GSmTKC),
+                return (0, i.jsx)(o.VqE, {
+                    'aria-label': b.intl.string(b.t.GSmTKC),
                     children:
-                        O === o.X.FOR_YOU
-                            ? (0, i.jsx)(C.Z, {
+                        k === s.X.FOR_YOU
+                            ? (0, i.jsx)(E.Z, {
                                   setTab: M,
                                   badgeState: j,
-                                  closePopout: U
+                                  closePopout: w
                               })
-                            : O === o.X.MENTIONS
-                              ? (0, i.jsx)(x.Z, {
+                            : k === s.X.MENTIONS
+                              ? (0, i.jsx)(v.Z, {
                                     setTab: M,
                                     onJump: z,
                                     badgeState: j,
-                                    closePopout: U
+                                    closePopout: w
                                 })
-                              : H && O === o.X.GAME_INVITES
-                                ? (0, i.jsx)(T.Z, {
+                              : V && k === s.X.GAME_INVITES
+                                ? (0, i.jsx)(S.Z, {
                                       setTab: M,
                                       badgeState: j,
-                                      closePopout: U
+                                      closePopout: w
                                   })
-                                : w && O === o.X.TODOS
-                                  ? (0, i.jsx)(I.Z, {
+                                : U && k === s.X.TODOS
+                                  ? (0, i.jsx)(C.Z, {
                                         setTab: M,
                                         onJump: z,
-                                        closePopout: U
+                                        closePopout: w
                                     })
-                                  : F && G && O === o.X.BOOKMARKS
-                                    ? (0, i.jsx)(E.Z, {
+                                  : B && G && k === s.X.BOOKMARKS
+                                    ? (0, i.jsx)(x.Z, {
                                           setTab: M,
                                           badgeState: j,
-                                          closePopout: U
+                                          closePopout: w
                                       })
-                                    : O === o.X.SCHEDULED
-                                      ? (0, i.jsx)(N._, {
+                                    : k === s.X.SCHEDULED
+                                      ? (0, i.jsx)(I._, {
                                             setTab: M,
-                                            closePopout: U
+                                            closePopout: w
                                         })
-                                      : (0, i.jsx)(l.SV, {
-                                            fallback: (0, i.jsx)(v.h, {
+                                      : (0, i.jsx)(a.SV, {
+                                            fallback: (0, i.jsx)(N.h, {
                                                 setTab: M,
-                                                closePopout: U,
+                                                closePopout: w,
                                                 badgeState: j
                                             }),
-                                            children: (0, i.jsx)(v.Z, {
+                                            children: (0, i.jsx)(N.Z, {
                                                 setTab: M,
                                                 onJump: z,
-                                                showTutorial: D,
-                                                setSeenTutorial: k,
-                                                closePopout: U,
+                                                showTutorial: O,
+                                                setSeenTutorial: D,
+                                                closePopout: w,
                                                 badgeState: j
                                             })
                                         })
@@ -160,7 +152,7 @@ function b(e) {
             clickTrap: !0,
             children: (e, t) => {
                 let { isShown: n } = t;
-                return b(B, n, e, V);
+                return A(F, n, e, H);
             }
         })
     });

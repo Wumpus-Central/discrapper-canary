@@ -7,8 +7,4 @@ function i() {
         .concat(n)
         .concat('/'.concat(e));
 }
-n.d(t, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });

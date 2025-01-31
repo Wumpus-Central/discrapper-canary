@@ -1,36 +1,32 @@
-r.d(n, {
-    X: function () {
-        return c;
-    },
-    z: function () {
-        return d;
-    }
+n.d(t, {
+    X: () => u,
+    z: () => c
 });
 var i,
-    a = r(200651),
-    o = r(192379),
-    s = r(541049),
-    l = r(231338);
-let u = o.createContext({
+    r = n(200651),
+    a = n(192379),
+    s = n(541049),
+    o = n(231338);
+let l = a.createContext({
     profileType: null,
-    theme: null !== (i = (0, s.Z)()) && void 0 !== i ? i : l.BR.DARK,
+    theme: null !== (i = (0, s.Z)()) && void 0 !== i ? i : o.BR.DARK,
     primaryColor: null,
     secondaryColor: null
 });
-function c(e) {
-    let { profileType: n, theme: r, primaryColor: i, secondaryColor: s, children: l } = e,
-        c = o.useMemo(
+function u(e) {
+    let { profileType: t, theme: n, primaryColor: i, secondaryColor: s, children: o } = e,
+        u = a.useMemo(
             () => ({
-                profileType: n,
-                theme: r,
+                profileType: t,
+                theme: n,
                 primaryColor: i,
                 secondaryColor: s
             }),
-            [n, r, i, s]
+            [t, n, i, s]
         );
-    return (0, a.jsx)(u.Provider, {
-        value: c,
-        children: l
+    return (0, r.jsx)(l.Provider, {
+        value: u,
+        children: o
     });
 }
-let d = () => o.useContext(u);
+let c = () => a.useContext(l);

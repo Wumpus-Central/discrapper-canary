@@ -1,22 +1,18 @@
-i.d(t, {
-    Z: function () {
-        return l;
-    }
-});
-var r = i(200651);
-i(192379);
-var e = i(481060),
-    u = i(434404),
-    o = i(144507),
-    s = i(981631),
-    c = i(388032);
-function l(n) {
-    return (0, o.$D)(n)
-        ? (0, r.jsx)(e.MenuItem, {
+t.d(i, { Z: () => a });
+var r = t(200651);
+t(192379);
+var s = t(481060),
+    o = t(434404),
+    e = t(144507),
+    c = t(981631),
+    l = t(388032);
+function a(n) {
+    return (0, e.$D)(n)
+        ? (0, r.jsx)(s.sNh, {
               id: 'role-subscription-settings',
-              label: c.intl.string(c.t.jMN5ZG),
+              label: l.intl.string(l.t.jMN5ZG),
               action: () => {
-                  u.Z.open(n.id, s.pNK.ROLE_SUBSCRIPTIONS);
+                  o.Z.open(n.id, c.pNK.ROLE_SUBSCRIPTIONS);
               }
           })
         : null;

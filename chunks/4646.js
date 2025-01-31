@@ -12,9 +12,8 @@ function s(t, e, i) {
     );
 }
 i.d(e, {
-    k2: function () {
-        return a;
-    }
+    ZP: () => o,
+    k2: () => a
 }),
     i(47120);
 let n = new (i(259443).Yd)('AssetMap');
@@ -44,4 +43,4 @@ class r {
         s(this, 'assets', {}), s(this, 'fontManager', void 0);
     }
 }
-e.ZP = r;
+let o = r;

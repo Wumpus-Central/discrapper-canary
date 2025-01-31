@@ -1,51 +1,47 @@
-r.d(n, {
-    K: function () {
-        return f;
-    }
-});
-var i = r(200651),
-    a = r(481060),
-    o = r(982330),
-    s = r(592125),
-    l = r(626135),
-    u = r(254109),
-    c = r(981631),
-    d = r(701865);
-function f(e) {
-    var n, f, p;
-    let { location: h, contextKey: _, ...m } = e,
-        g = (0, o.Kc)(h),
-        E = null === (f = m.items[null !== (p = m.startingIndex) && void 0 !== p ? p : 0]) || void 0 === f ? void 0 : null === (n = f.sourceMetadata) || void 0 === n ? void 0 : n.message,
-        v = s.Z.getChannel(null == E ? void 0 : E.channel_id);
-    (0, u.fS)({
-        guildId: null == v ? void 0 : v.guild_id,
-        channelId: null == v ? void 0 : v.id,
-        channelType: null == v ? void 0 : v.type,
-        numMediaItems: m.items.length,
-        source: h,
-        hasMediaOptions: !m.shouldHideMediaOptions
+n.d(t, { K: () => d });
+var i = n(200651),
+    r = n(481060),
+    a = n(982330),
+    s = n(592125),
+    o = n(626135),
+    l = n(254109),
+    u = n(981631),
+    c = n(701865);
+function d(e) {
+    var t, d, f;
+    let { location: _, contextKey: p, ...h } = e,
+        m = (0, a.Kc)(_),
+        g = null === (d = h.items[null !== (f = h.startingIndex) && void 0 !== f ? f : 0]) || void 0 === d ? void 0 : null === (t = d.sourceMetadata) || void 0 === t ? void 0 : t.message,
+        E = s.Z.getChannel(null == g ? void 0 : g.channel_id);
+    (0, l.fS)({
+        guildId: null == E ? void 0 : E.guild_id,
+        channelId: null == E ? void 0 : E.id,
+        channelType: null == E ? void 0 : E.type,
+        numMediaItems: h.items.length,
+        source: _,
+        hasMediaOptions: !h.shouldHideMediaOptions
     }),
-        l.default.track(c.rMx.OPEN_MODAL, {
-            type: c.jXE.MEDIA_VIEWER,
-            source: h,
-            guild_id: null == v ? void 0 : v.guild_id,
-            channel_id: null == v ? void 0 : v.id,
-            channel_type: null == v ? void 0 : v.type
+        o.default.track(u.rMx.OPEN_MODAL, {
+            type: u.jXE.MEDIA_VIEWER,
+            source: _,
+            guild_id: null == E ? void 0 : E.guild_id,
+            channel_id: null == E ? void 0 : E.id,
+            channel_type: null == E ? void 0 : E.type
         }),
-        (0, a.openModalLazy)(
+        (0, r.ZDy)(
             async () => {
-                let { default: e } = g ? await r.e('39476').then(r.bind(r, 97594)) : await r.e('87267').then(r.bind(r, 950120));
-                return (n) =>
+                let { default: e } = m ? await n.e('39476').then(n.bind(n, 97594)) : await n.e('87267').then(n.bind(n, 950120));
+                return (t) =>
                     (0, i.jsx)(e, {
-                        ...n,
-                        ...m
+                        ...t,
+                        ...h
                     });
             },
             {
-                modalKey: d.U,
-                contextKey: _,
-                onCloseCallback: u.VO,
-                backdropStyle: a.BackdropStyles.IMMERSIVE
+                modalKey: c.U,
+                contextKey: p,
+                onCloseCallback: l.VO,
+                backdropStyle: r.fCB.IMMERSIVE
             }
         );
 }

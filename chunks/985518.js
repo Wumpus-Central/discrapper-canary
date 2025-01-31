@@ -1,87 +1,78 @@
-r.d(n, {
-    Ct: function () {
-        return p;
-    },
-    UP: function () {
-        return d;
-    },
-    ZP: function () {
-        return _;
-    },
-    rj: function () {
-        return f;
-    }
-});
-var i = r(653041);
-var a = r(47120);
-var o = r(929991),
-    s = r(480739),
-    l = r(228392),
-    u = r(6496);
-function c(e, n, r) {
+n.d(t, {
+    Ct: () => c,
+    UP: () => l,
+    ZP: () => f,
+    rj: () => u
+}),
+    n(653041),
+    n(47120);
+var i = n(929991),
+    r = n(480739),
+    a = n(228392),
+    s = n(6496);
+function o(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
+function l(e) {
+    return ''.concat(r.AT.FORUM_CHANNEL, '_').concat(e);
+}
+function u(e, t, n) {
+    (0, i.a8)(l(e), t, n);
+}
+function c(e, t, n) {
+    (0, i.FL)(l(e), t, n);
+}
 function d(e) {
-    return ''.concat(s.AT.FORUM_CHANNEL, '_').concat(e);
-}
-function f(e, n, r) {
-    (0, o.a8)(d(e), n, r);
-}
-function p(e, n, r) {
-    (0, o.FL)(d(e), n, r);
-}
-function h(e) {
-    let { guildId: n, channelId: r, sessionId: i, trackedFeedItems: a, isForcedFlush: o } = e,
-        s = [],
-        u = [];
-    for (let e of Object.keys(a)) {
-        let n = a[e].computeSeenTimeDestructive(o);
-        n > 0 && (s.push(e), u.push(n));
+    let { guildId: t, channelId: n, sessionId: i, trackedFeedItems: r, isForcedFlush: s } = e,
+        o = [],
+        l = [];
+    for (let e of Object.keys(r)) {
+        let t = r[e].computeSeenTimeDestructive(s);
+        t > 0 && (o.push(e), l.push(t));
     }
-    0 !== s.length &&
-        (0, l.qs)({
-            guildId: n,
-            channelId: r,
+    0 !== o.length &&
+        (0, a.qs)({
+            guildId: t,
+            channelId: n,
             sessionId: i,
-            postIds: s,
-            additionalTimes: u
+            postIds: o,
+            additionalTimes: l
         });
 }
-class _ extends s.zQ {
-    constructor({ guildId: e, channelId: n, windowId: r, isPaused: i }) {
+class f extends r.zQ {
+    constructor({ guildId: e, channelId: t, windowId: n, isPaused: i }) {
         super({
-            windowId: r,
+            windowId: n,
             isPaused: i,
-            id: d(n)
+            id: l(t)
         }),
-            c(this, 'guildId', void 0),
-            c(this, 'channelId', void 0),
-            c(this, 'sessionId', void 0),
-            c(this, 'createFlushSeenItemsFunction', (e) => {
-                let n = this.trackedFeedItems,
-                    r = this.channelId,
-                    i = this.guildId,
-                    a = {
-                        guildId: i,
-                        channelId: r,
+            o(this, 'guildId', void 0),
+            o(this, 'channelId', void 0),
+            o(this, 'sessionId', void 0),
+            o(this, 'createFlushSeenItemsFunction', (e) => {
+                let t = this.trackedFeedItems,
+                    n = this.channelId,
+                    i = {
+                        guildId: this.guildId,
+                        channelId: n,
                         sessionId: this.sessionId,
-                        trackedFeedItems: n,
+                        trackedFeedItems: t,
                         isForcedFlush: null != e
                     };
-                return () => h(a);
+                return () => d(i);
             }),
             (this.guildId = e),
-            (this.channelId = n),
-            (this.sessionId = (0, u.WW)(n));
+            (this.channelId = t),
+            (this.sessionId = (0, s.WW)(t));
     }
 }

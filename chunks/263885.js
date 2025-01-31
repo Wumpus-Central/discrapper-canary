@@ -1,6 +1,2 @@
-r.d(t, {
-    p: function () {
-        return s;
-    }
-});
-let s = 10;
+r.d(t, { p: () => a });
+let a = 10;

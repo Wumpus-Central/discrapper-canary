@@ -1,53 +1,47 @@
-e.r(n),
-    e.d(n, {
-        default: function () {
-            return f;
-        }
-    });
+e.d(n, { default: () => f });
 var a = e(200651);
 e(192379);
 var i = e(703558),
     o = e(585483),
-    c = e(403182),
-    s = e(127654),
-    r = e(98278),
-    l = e(790527),
-    d = e(474936),
+    s = e(403182),
+    c = e(127654),
+    l = e(98278),
+    d = e(790527),
+    r = e(474936),
     u = e(981631),
     L = e(388032),
     p = e(330226);
 function f(t) {
-    var n;
-    let { channel: e, onClose: f, content: g, ...E } = t;
-    function b() {
-        f(), (0, r.z)(!0);
+    let { channel: n, onClose: e, content: f, ...g } = t;
+    function E() {
+        e(), (0, l.z)(!0);
     }
-    return (0, a.jsx)(l.Z, {
+    return (0, a.jsx)(d.Z, {
         artURL: p.Z,
-        type: d.cd.MESSAGE_LENGTH_UPSELL,
+        type: r.cd.MESSAGE_LENGTH_UPSELL,
         title: L.intl.string(L.t.TZT3sL),
         body: L.intl.format(L.t.QhcEAA, {
             maxLength: u.J6R,
-            onLearnMore: b
+            onLearnMore: E
         }),
         context: L.intl.formatToPlainString(L.t.Fc1uVV, { maxLength: u.J6R }),
-        glowUp: L.intl.format(L.t.Mi8kt7, { onLearnMore: b }),
-        analyticsSource: { page: (null == (n = e) ? void 0 : n.getGuildId()) != null ? u.ZY5.GUILD_CHANNEL : (null == n ? void 0 : n.isGroupDM()) || (null == n ? void 0 : n.isPrivate()) ? u.ZY5.DM_CHANNEL : null },
+        glowUp: L.intl.format(L.t.Mi8kt7, { onLearnMore: E }),
+        analyticsSource: { page: (null == n ? void 0 : n.getGuildId()) != null ? u.ZY5.GUILD_CHANNEL : (null == n ? void 0 : n.isGroupDM()) || (null == n ? void 0 : n.isPrivate()) ? u.ZY5.DM_CHANNEL : null },
         analyticsLocation: {
             section: u.jXE.MESSAGE_LENGTH_UPSELL_MODAL,
             object: u.qAy.BUTTON_CTA
         },
-        onClose: f,
+        onClose: e,
         secondaryCTA: L.intl.string(L.t.Fnsb1t),
         onSecondaryClick: function () {
-            f();
-            let t = new Blob([g], { type: 'text/plain' });
-            (0, s.d)([(0, c.dp)(t, 'message.txt')], e, i.d.ChannelMessage, {
+            e();
+            let t = new Blob([f], { type: 'text/plain' });
+            (0, c.d)([(0, s.dp)(t, 'message.txt')], n, i.d.ChannelMessage, {
                 requireConfirm: !0,
                 showLargeMessageDialog: !0
             }),
                 o.S.dispatchToLastSubscribed(u.CkL.CLEAR_TEXT);
         },
-        ...E
+        ...g
     });
 }

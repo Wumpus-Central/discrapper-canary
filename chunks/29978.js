@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return s;
-    }
-});
+n.d(t, { Z: () => s });
 var r = n(192379);
 function o(e, t) {
     return (o =
@@ -34,12 +30,10 @@ var i = function (e) {
                     return !!(null == (e = window.grecaptcha) ? void 0 : e.ready);
                 }),
                 (t._inject = function () {
-                    var e;
                     t.props.inject &&
-                        ((e = a),
-                        !Array.from(document.scripts).reduce(function (t, n) {
-                            return t || e.test(n.src);
-                        }, !1)) &&
+                        !Array.from(document.scripts).reduce(function (e, t) {
+                            return e || a.test(t.src);
+                        }, !1) &&
                         i('https://recaptcha.net/recaptcha/api.js?render=explicit' + (t.props.hl ? '&hl=' + t.props.hl : ''));
                 }),
                 (t._prepare = function () {

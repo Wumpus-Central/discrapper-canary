@@ -1,16 +1,12 @@
-n.d(t, {
-    b: function () {
-        return l;
-    }
-});
+n.d(t, { b: () => a });
 var i = n(442837),
-    r = n(276444),
-    s = n(912244),
-    a = n(232076);
-let l = function (e) {
+    s = n(276444),
+    r = n(912244),
+    l = n(232076);
+let a = function (e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        { enabled: n, eligibleToFetch: l } = (0, s.N)(e);
-    (0, a.B)(e, !l || t);
-    let o = (0, i.e7)([r.Z], () => r.Z.getIsEligibleToSendReferrals());
+        { enabled: n, eligibleToFetch: a } = (0, r.N)(e);
+    (0, l.B)(e, !a || t);
+    let o = (0, i.e7)([s.Z], () => s.Z.getIsEligibleToSendReferrals());
     return n && o;
 };

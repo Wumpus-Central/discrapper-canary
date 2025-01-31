@@ -1,21 +1,16 @@
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => s }), n(47120);
 var l = n(192379),
     i = n(211266),
     a = n(212819);
-function r(e) {
+function s(e) {
     let { searchOptions: t } = e,
-        [n, r] = l.useState({
+        [n, s] = l.useState({
             results: [],
             query: ''
         }),
-        s = (0, i.Z)(() => {
+        r = (0, i.Z)(() => {
             let e = new a.ZP((e, t) => {
-                r({
+                s({
                     results: e,
                     query: t
                 });
@@ -23,19 +18,18 @@ function r(e) {
             return e.setLimit(20), e.search(''), e;
         });
     return (
-        l.useEffect(() => () => s.destroy(), [s]),
+        l.useEffect(() => () => r.destroy(), [r]),
         l.useEffect(() => {
-            null != t && t !== s.options && s.setOptions(t);
-        }, [s, t]),
+            null != t && t !== r.options && r.setOptions(t);
+        }, [r, t]),
         {
             search: l.useCallback(
                 (e) => {
-                    var t, n;
-                    let { query: l, resultTypes: i } = e;
-                    if (null == s.resultTypes || ((t = i), (n = s.resultTypes), !(t.length === n.size && t.every((e) => n.has(e))))) s.setResultTypes(i), s.setLimit(1 === i.length ? 50 : 20);
-                    s.search('' === l.trim() ? '' : l);
+                    var t;
+                    let { query: n, resultTypes: l } = e;
+                    (null == r.resultTypes || ((t = r.resultTypes), !(l.length === t.size && l.every((e) => t.has(e))))) && (r.setResultTypes(l), r.setLimit(1 === l.length ? 50 : 20)), r.search('' === n.trim() ? '' : n);
                 },
-                [s]
+                [r]
             ),
             ...n
         }

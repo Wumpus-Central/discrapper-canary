@@ -9,16 +9,18 @@ function n(t) {
                 })
             )),
             n.forEach(function (e) {
-                (function (t, e, r) {
-                    e in t
-                        ? Object.defineProperty(t, e, {
-                              value: r,
+                var n, i, o;
+                (n = t),
+                    (i = e),
+                    (o = r[e]),
+                    i in n
+                        ? Object.defineProperty(n, i, {
+                              value: o,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (t[e] = r);
-                })(t, e, r[e]);
+                        : (n[i] = o);
             });
     }
     return t;
@@ -51,7 +53,7 @@ t.exports = {
         return (Array.isArray(e) || o(!1), Array.isArray(e) && e.length)
             ? (a(e, function (t) {
                   var e = n({}, t);
-                  if (!u(t) || ((e.depth = e.depth || 0), s(t), null == t.children || !(t.children.length > 0))) delete e.children, r.push(e);
+                  (!u(t) || ((e.depth = e.depth || 0), s(t), null == t.children || !(t.children.length > 0))) && (delete e.children, r.push(e));
               }),
               (t.blocks = r),
               n({}, t, { blocks: r }))

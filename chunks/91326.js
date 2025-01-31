@@ -1,14 +1,15 @@
+n.d(t, { Z: () => d });
 var i = n(200651);
 n(192379);
-var r = n(442837),
-    l = n(471445),
+var l = n(442837),
+    r = n(471445),
     a = n(862099),
     s = n(938475),
     o = n(388032),
     c = n(865840);
-t.Z = function (e) {
+let d = function (e) {
     let { name: t, channel: n } = e,
-        d = (0, r.Wu)(
+        d = (0, l.Wu)(
             [s.ZP],
             () =>
                 s.ZP.getVoiceStatesForChannel(n).map((e) => {
@@ -17,7 +18,7 @@ t.Z = function (e) {
                 }),
             [n]
         ),
-        u = (0, l.KS)(n);
+        u = (0, r.KS)(n);
     return (0, i.jsx)(a.gt, {
         heading: o.intl.string(o.t['X2K3//']),
         topic: t,

@@ -1,170 +1,169 @@
-n(47120);
+n.d(t, { Z: () => el }), n(47120);
 var i,
-    r,
     l = n(200651),
-    a = n(192379),
-    s = n(120356),
-    o = n.n(s),
-    c = n(442837),
-    d = n(692547),
-    u = n(481060),
-    h = n(287734),
-    m = n(438139),
-    p = n(2052),
-    g = n(726542),
-    f = n(638880),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(442837),
+    c = n(692547),
+    d = n(481060),
+    u = n(287734),
+    h = n(438139),
+    m = n(2052),
+    p = n(726542),
+    g = n(638880),
     _ = n(655922),
-    E = n(122810),
-    I = n(833664),
-    C = n(503438),
-    v = n(420660),
-    N = n(74433),
-    T = n(906732),
-    S = n(812206),
-    b = n(933557),
-    A = n(194082),
-    Z = n(264165),
-    x = n(548816),
-    L = n(925329),
-    y = n(102172),
-    P = n(871118),
-    O = n(707409),
-    R = n(359110),
-    j = n(769654),
-    D = n(849171),
-    M = n(314897),
+    f = n(122810),
+    E = n(833664),
+    I = n(503438),
+    C = n(420660),
+    v = n(74433),
+    N = n(906732),
+    T = n(812206),
+    S = n(933557),
+    Z = n(194082),
+    x = n(264165),
+    A = n(548816),
+    b = n(925329),
+    L = n(102172),
+    y = n(871118),
+    P = n(707409),
+    O = n(359110),
+    R = n(769654),
+    j = n(849171),
+    D = n(314897),
     w = n(592125),
-    k = n(594174),
-    U = n(395361),
-    G = n(639351),
-    B = n(81063),
-    V = n(823379),
-    H = n(51144),
-    F = n(599706),
-    z = n(981631),
-    W = n(388032),
-    Y = n(303790);
-let K = {
+    M = n(594174),
+    k = n(395361),
+    U = n(639351),
+    G = n(81063),
+    B = n(823379),
+    V = n(51144),
+    H = n(599706),
+    F = n(981631),
+    z = n(388032),
+    W = n(303790);
+let Y = {
         SMALL: 64,
         LARGE: 160
     },
-    q = [14, 14, 12, 12, 10, 8, 6],
-    X = function (e) {
+    K = [14, 14, 12, 12, 10, 8, 6],
+    q = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        return (0, l.jsx)(u.Text, {
-            className: o()(Y.textContent, t),
+        return (0, l.jsx)(d.Text, {
+            className: s()(W.textContent, t),
             variant: 'text-sm/semibold',
             children: e
         });
     },
-    Q = function (e) {
+    X = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        return (0, l.jsx)(u.Text, {
-            className: o()(Y.textContent, t),
+        return (0, l.jsx)(d.Text, {
+            className: s()(W.textContent, t),
             variant: 'text-xs/normal',
             children: e
         });
     },
-    J = (0, m.Z)((e) => {
+    Q = (0, h.Z)((e) => {
         let { message: t } = e;
         return (0, l.jsx)('div', {
-            className: Y.__invalid_timestamp,
+            className: W.__invalid_timestamp,
             children: t
         });
     }),
-    $ = (e) => {
+    J = (e) => {
         let { children: t } = e;
         return (0, l.jsx)('section', {
-            className: Y.section,
+            className: W.section,
             children: t
         });
     };
-class ee extends a.Component {
+class $ extends r.Component {
     renderTimePlayed() {
         let e;
         let { activity: t } = this.props,
             { timestamps: n } = t;
-        return null == n || !(0, I.Z)(t) || (0, C.Z)(t)
+        return null == n || !(0, E.Z)(t) || (0, I.Z)(t)
             ? null
-            : Q(
-                  (e = (0, E.Z)(t)
-                      ? (0, l.jsx)(J, { timestamps: n })
-                      : (0, l.jsx)(O.ZP, {
+            : X(
+                  (0, f.Z)(t)
+                      ? (0, l.jsx)(Q, { timestamps: n })
+                      : (0, l.jsx)(P.ZP, {
                             start: n.start,
                             end: n.end,
-                            location: O.ZP.Locations.USER_ACTIVITY,
-                            className: Y.__invalid_playTime
-                        }))
+                            location: P.ZP.Locations.USER_ACTIVITY,
+                            className: W.__invalid_playTime
+                        })
               );
     }
     render() {
         var e, t;
         let {
-            activity: { assets: i, details: r, state: a, application_id: s },
+            activity: { assets: i, details: r, state: a, application_id: o },
             getAssetImage: c
         } = this.props;
-        return (0, l.jsx)($, {
+        return (0, l.jsx)(J, {
             children: (0, l.jsxs)('div', {
-                className: Y.activitySection,
+                className: W.activitySection,
                 children: [
                     null != i && 0 !== Object.keys(i).length
                         ? (0, l.jsxs)('div', {
-                              className: Y.activitySectionAssets,
+                              className: W.activitySectionAssets,
                               children: [
                                   (0, l.jsx)('img', {
                                       alt: null !== (e = i.large_text) && void 0 !== e ? e : '',
-                                      src: c(s, i.large_image, [K.LARGE, K.LARGE]),
-                                      className: o()(Y.largeImage, { [Y.largeImageMask]: null != i.small_image })
+                                      src: c(o, i.large_image, [Y.LARGE, Y.LARGE]),
+                                      className: s()(W.largeImage, { [W.largeImageMask]: null != i.small_image })
                                   }),
                                   null != i.small_image
                                       ? (0, l.jsx)('img', {
                                             alt: null !== (t = i.small_text) && void 0 !== t ? t : '',
-                                            src: c(s, i.small_image, [K.SMALL, K.SMALL]),
-                                            className: Y.smallImage
+                                            src: c(o, i.small_image, [Y.SMALL, Y.SMALL]),
+                                            className: W.smallImage
                                         })
                                       : null
                               ]
                           })
                         : (0, l.jsx)('div', {
-                              className: Y.activitySectionAssets,
+                              className: W.activitySectionAssets,
                               children: (0, l.jsx)('img', {
                                   alt: '',
                                   src: n(211827),
-                                  className: Y.largeImage
+                                  className: W.largeImage
                               })
                           }),
                     (0, l.jsxs)('div', {
-                        children: [X(null != r && '' !== r ? r : W.intl.string(W.t['2TbM/P'])), null != a ? Q(a) : null, this.renderTimePlayed()]
+                        children: [q(null != r && '' !== r ? r : z.intl.string(z.t['2TbM/P'])), null != a ? X(a) : null, this.renderTimePlayed()]
                     })
                 ]
             })
         });
     }
 }
-((r = i || (i = {})).XBOX = 'XBOX'), (r.SPOTIFY = 'SPOTIFY'), (r.MULTIPLE = 'MULTIPLE');
+var ee = (((i = ee || {}).XBOX = 'XBOX'), (i.SPOTIFY = 'SPOTIFY'), (i.MULTIPLE = 'MULTIPLE'), i);
 let et = (e) => {
     let t,
         { src: n, onClick: i, onContextMenu: r } = e;
     switch (n) {
         case 'XBOX':
-            t = (0, l.jsx)(G.Z, {
-                className: Y.headerIcon,
-                color: d.Z.unsafe_rawColors.PRIMARY_300.css
+            t = (0, l.jsx)(U.Z, {
+                className: W.headerIcon,
+                color: c.Z.unsafe_rawColors.PRIMARY_300.css
             });
             break;
         case 'SPOTIFY':
-            t = (0, l.jsx)(U.Z, {
-                className: Y.headerIcon,
-                color: d.Z.unsafe_rawColors.SPOTIFY.css
+            t = (0, l.jsx)(k.Z, {
+                className: W.headerIcon,
+                color: c.Z.unsafe_rawColors.SPOTIFY.css
             });
             break;
         case 'MULTIPLE':
             t = (0, l.jsx)('div', {
-                className: Y.multipleIconWrapper,
-                children: (0, l.jsx)(u.GameControllerIcon, {
+                className: W.multipleIconWrapper,
+                children: (0, l.jsx)(d.iWm, {
                     size: 'md',
-                    className: o()(Y.headerIcon, Y.multipleIcon),
-                    color: d.Z.unsafe_rawColors.PRIMARY_300.css
+                    className: s()(W.headerIcon, W.multipleIcon),
+                    color: c.Z.unsafe_rawColors.PRIMARY_300.css
                 })
             });
             break;
@@ -172,59 +171,59 @@ let et = (e) => {
             t = (0, l.jsx)('img', {
                 src: null != n ? n : void 0,
                 alt: '',
-                className: Y.headerIcon
+                className: W.headerIcon
             });
     }
     return null != i || null != r
-        ? (0, l.jsx)(u.Clickable, {
+        ? (0, l.jsx)(d.P3F, {
               onClick: i,
-              className: o()(null != i ? Y.clickable : ''),
+              className: s()(null != i ? W.clickable : ''),
               onContextMenu: r,
               children: t
           })
         : t;
 };
-et.Src = i;
+et.Src = ee;
 let en = (e) => {
-    let { priorityUser: t, title: n, subtitle: i, icon: r, onSubtitleClick: a, onIconClick: s, onContextMenu: c, guildId: d } = e,
-        h = (0, l.jsx)(u.Text, {
+    let { priorityUser: t, title: n, subtitle: i, icon: r, onSubtitleClick: a, onIconClick: o, onContextMenu: c, guildId: u } = e,
+        h = (0, l.jsx)(d.Text, {
             color: 'header-secondary',
-            className: Y.textContent,
+            className: W.textContent,
             variant: 'text-sm/normal',
             children: i
         });
     return (0, l.jsxs)('header', {
-        className: null != r ? Y.headerFull : Y.headerSimple,
+        className: null != r ? W.headerFull : W.headerSimple,
         children: [
-            (0, l.jsx)(u.Avatar, {
-                src: t.user.getAvatarURL(d, 32),
+            (0, l.jsx)(d.qEK, {
+                src: t.user.getAvatarURL(u, 32),
                 'aria-label': t.user.username,
-                size: u.AvatarSizes.SIZE_32,
-                className: Y.headerAvatar,
+                size: d.EFr.SIZE_32,
+                className: W.headerAvatar,
                 status: t.status,
                 onContextMenu: c
             }),
             (0, l.jsxs)('div', {
-                className: Y.__invalid_headerDetails,
+                className: W.__invalid_headerDetails,
                 children: [
-                    (0, l.jsx)(u.Text, {
-                        className: o()(Y.textContent),
+                    (0, l.jsx)(d.Text, {
+                        className: s()(W.textContent),
                         variant: 'text-md/semibold',
                         children: n
                     }),
                     null != a
-                        ? (0, l.jsx)(u.Clickable, {
-                              className: Y.clickable,
+                        ? (0, l.jsx)(d.P3F, {
+                              className: W.clickable,
                               onClick: a,
                               children: h
                           })
                         : h
                 ]
             }),
-            null != r && null != s
-                ? (0, l.jsx)(u.Clickable, {
-                      className: Y.clickable,
-                      onClick: s,
+            null != r && null != o
+                ? (0, l.jsx)(d.P3F, {
+                      className: W.clickable,
+                      onClick: o,
                       children: r
                   })
                 : r
@@ -234,9 +233,9 @@ let en = (e) => {
 en.Icon = et;
 let ei = (e) => {
     let { children: t, className: n, ...i } = e;
-    return (0, l.jsx)(u.FocusRing, {
-        children: (0, l.jsx)(x.Z, {
-            className: o()(n, Y.wrapper),
+    return (0, l.jsx)(d.tEY, {
+        children: (0, l.jsx)(A.Z, {
+            className: s()(n, W.wrapper),
             padded: !0,
             ...i,
             children: t
@@ -246,72 +245,72 @@ let ei = (e) => {
 (ei.Header = en),
     (ei.Body = (e) => {
         let { children: t } = e;
-        return (0, l.jsx)(x.Z, {
+        return (0, l.jsx)(A.Z, {
             inset: !0,
             padded: !1,
-            className: Y.body,
+            className: W.body,
             children: t
         });
     }),
     (ei.Separator = (e) => {
         let { inset: t, className: n } = e;
-        return (0, l.jsx)('div', { className: o()(Y.separator, { [Y.inset]: t }, n) });
+        return (0, l.jsx)('div', { className: s()(W.separator, { [W.inset]: t }, n) });
     }),
     (ei.VoiceSection = (e) => {
         var t, n;
-        let { guild: i, channel: r, partySize: s, members: c, onChannelContextMenu: d } = e,
-            m = a.useRef(null),
-            p = (0, b.ZP)(r, !0);
-        return (0, l.jsx)($, {
+        let { guild: i, channel: a, partySize: o, members: c, onChannelContextMenu: h } = e,
+            m = r.useRef(null),
+            p = (0, S.ZP)(a, !0);
+        return (0, l.jsx)(J, {
             children: (0, l.jsxs)('div', {
-                className: Y.voiceSection,
+                className: W.voiceSection,
                 ref: m,
-                onContextMenu: (e) => d(e, r),
+                onContextMenu: (e) => h(e, a),
                 children: [
-                    (0, l.jsx)(u.Clickable, {
-                        onClick: () => (0, j.X)(i.id),
+                    (0, l.jsx)(d.P3F, {
+                        onClick: () => (0, R.X)(i.id),
                         'aria-hidden': !0,
                         tabIndex: -1,
                         children: (0, l.jsxs)('div', {
-                            className: Y.voiceSectionAssets,
+                            className: W.voiceSectionAssets,
                             children: [
                                 null != i.getIconURL(32)
                                     ? (0, l.jsx)('img', {
                                           alt: '',
                                           src: null !== (t = i.getIconURL(32)) && void 0 !== t ? t : void 0,
-                                          className: o()(Y.voiceSectionGuildImage, Y.largeImageMask)
+                                          className: s()(W.voiceSectionGuildImage, W.largeImageMask)
                                       })
                                     : (0, l.jsx)('div', {
-                                          className: Y.voiceSectionNoGuildImageWrapper,
+                                          className: W.voiceSectionNoGuildImageWrapper,
                                           children: (0, l.jsx)('div', {
-                                              className: Y.voiceSectionNoGuildImage,
-                                              style: { fontSize: null !== (n = q[i.acronym.length]) && void 0 !== n ? n : q[q.length - 1] },
+                                              className: W.voiceSectionNoGuildImage,
+                                              style: { fontSize: null !== (n = K[i.acronym.length]) && void 0 !== n ? n : K[K.length - 1] },
                                               children: i.acronym
                                           })
                                       }),
                                 (0, l.jsx)('div', {
-                                    className: Y.voiceSectionIconWrapper,
-                                    children: (0, l.jsx)(u.VoiceNormalIcon, {
+                                    className: W.voiceSectionIconWrapper,
+                                    children: (0, l.jsx)(d.gj8, {
                                         size: 'md',
                                         color: 'currentColor',
-                                        className: Y.voiceSectionIcon
+                                        className: W.voiceSectionIcon
                                     })
                                 })
                             ]
                         })
                     }),
-                    (0, l.jsx)(u.Clickable, {
+                    (0, l.jsx)(d.P3F, {
                         onClick: () => {
-                            h.default.selectVoiceChannel(r.id), (0, R.Kh)(r.id);
+                            u.default.selectVoiceChannel(a.id), (0, O.Kh)(a.id);
                         },
                         focusProps: { ringTarget: m },
                         children: (0, l.jsxs)('div', {
-                            className: Y.voiceSectionDetails,
-                            children: [X(i.toString(), Y.voiceSectionText), Q(p, Y.voiceSectionText)]
+                            className: W.voiceSectionDetails,
+                            children: [q(i.toString(), W.voiceSectionText), X(p, W.voiceSectionText)]
                         })
                     }),
-                    (0, l.jsx)(F.Z, {
-                        partySize: s,
+                    (0, l.jsx)(H.Z, {
+                        partySize: o,
                         members: c,
                         guildId: i.id
                     })
@@ -321,21 +320,21 @@ let ei = (e) => {
     }),
     (ei.GameSection = (e) => {
         let { icon: t, name: n, partySize: i, members: r } = e;
-        return (0, l.jsx)($, {
+        return (0, l.jsx)(J, {
             children: (0, l.jsxs)('div', {
-                className: Y.gameSection,
+                className: W.gameSection,
                 children: [
                     null != t
                         ? (0, l.jsx)('img', {
                               alt: '',
                               src: t,
-                              className: Y.gameSectionIcon
+                              className: W.gameSectionIcon
                           })
                         : null,
                     (0, l.jsxs)('div', {
-                        children: [X(n), Q(W.intl.formatToPlainString(W.t.C4WXvb, { memberCount: i.totalSize }))]
+                        children: [q(n), X(z.intl.formatToPlainString(z.t.C4WXvb, { memberCount: i.totalSize }))]
                     }),
-                    (0, l.jsx)(F.Z, {
+                    (0, l.jsx)(H.Z, {
                         partySize: i,
                         members: r
                     })
@@ -343,17 +342,17 @@ let ei = (e) => {
             })
         });
     }),
-    (ei.RichPresenceSection = ee),
+    (ei.RichPresenceSection = $),
     (ei.XboxSection = (e) => {
         let { title: t } = e;
-        return (0, l.jsx)($, {
+        return (0, l.jsx)(J, {
             children: (0, l.jsxs)('div', {
-                className: Y.xboxSection,
+                className: W.xboxSection,
                 children: [
-                    (0, l.jsx)(G.Z, { className: Y.xboxSectionIcon }),
+                    (0, l.jsx)(U.Z, { className: W.xboxSectionIcon }),
                     (0, l.jsxs)('div', {
-                        className: Y.__invalid_xboxSectionDetails,
-                        children: [X(t), Q(W.intl.string(W.t['JG9r+/']))]
+                        className: W.__invalid_xboxSectionDetails,
+                        children: [q(t), X(z.intl.string(z.t['JG9r+/']))]
                     })
                 ]
             })
@@ -363,40 +362,40 @@ let ei = (e) => {
         var t;
         let {
             activity: { assets: n, details: i, state: r, application_id: a },
-            partySize: s,
-            members: c,
+            partySize: o,
+            members: d,
             isSolo: u,
             getAssetImage: h
         } = e;
-        return (0, l.jsx)($, {
+        return (0, l.jsx)(J, {
             children: (0, l.jsxs)('div', {
-                className: Y.spotifySection,
+                className: W.spotifySection,
                 children: [
                     null != n
                         ? (0, l.jsxs)('div', {
-                              className: Y.activitySectionAssets,
+                              className: W.activitySectionAssets,
                               children: [
                                   (0, l.jsx)('img', {
                                       alt: null !== (t = n.large_text) && void 0 !== t ? t : '',
-                                      src: h(a, n.large_image, [K.LARGE, K.LARGE]),
-                                      className: o()(Y.largeImage, Y.borderRadius0, { [Y.largeImageMask]: null != n.small_image })
+                                      src: h(a, n.large_image, [Y.LARGE, Y.LARGE]),
+                                      className: s()(W.largeImage, W.borderRadius0, { [W.largeImageMask]: null != n.small_image })
                                   }),
                                   u
                                       ? null
-                                      : (0, l.jsx)(U.Z, {
-                                            className: Y.smallImage,
-                                            color: d.Z.unsafe_rawColors.SPOTIFY.css
+                                      : (0, l.jsx)(k.Z, {
+                                            className: W.smallImage,
+                                            color: c.Z.unsafe_rawColors.SPOTIFY.css
                                         })
                               ]
                           })
                         : (0, l.jsx)('div', {}),
                     (0, l.jsxs)('div', {
-                        children: [null != i ? X(i) : null, null != r ? Q(r) : null]
+                        children: [null != i ? q(i) : null, null != r ? X(r) : null]
                     }),
-                    (0, l.jsx)(F.Z, {
+                    (0, l.jsx)(H.Z, {
                         minAvatarsShown: u ? 2 : 1,
-                        partySize: s,
-                        members: c
+                        partySize: o,
+                        members: d
                     })
                 ]
             })
@@ -404,54 +403,54 @@ let ei = (e) => {
     }),
     (ei.TwitchSection = (e) => {
         let t,
-            { activity: i, user: r, getAssetImage: a, guildId: s } = e,
-            { name: c, details: d, assets: h, application_id: m } = i;
-        if (null != h && (0, v.Z)(i)) {
-            var p;
-            t = (0, l.jsx)(Z.Z, {
-                className: Y.twitchSectionPreviewWrapper,
+            { activity: i, user: r, getAssetImage: a, guildId: o } = e,
+            { name: c, details: u, assets: h, application_id: m } = i;
+        if (null != h && (0, C.Z)(i)) {
+            var g;
+            t = (0, l.jsx)(x.Z, {
+                className: W.twitchSectionPreviewWrapper,
                 aspectRatio: 16 / 9,
-                children: (0, l.jsxs)(u.Clickable, {
+                children: (0, l.jsxs)(d.P3F, {
                     href: (0, _.Z)(i),
                     tag: 'a',
                     target: '_blank',
                     children: [
                         (0, l.jsx)('img', {
-                            alt: null !== (p = h.large_text) && void 0 !== p ? p : '',
+                            alt: null !== (g = h.large_text) && void 0 !== g ? g : '',
                             src: a(m, h.large_image, [900, 500]),
-                            className: Y.twitchSectionPreview
+                            className: W.twitchSectionPreview
                         }),
                         (0, l.jsx)('img', {
                             src: n(497726),
-                            className: Y.twitchSectionPlayButton,
+                            className: W.twitchSectionPlayButton,
                             alt: ''
                         })
                     ]
                 })
             });
         }
-        return (0, l.jsxs)($, {
+        return (0, l.jsxs)(J, {
             children: [
                 (0, l.jsxs)('div', {
-                    className: o()({
-                        [Y.twitchSectionSimple]: null == r,
-                        [Y.twitchSectionFull]: null != r
+                    className: s()({
+                        [W.twitchSectionSimple]: null == r,
+                        [W.twitchSectionFull]: null != r
                     }),
                     children: [
                         (0, l.jsx)('img', {
                             alt: '',
-                            src: g.Z.get(z.ABu.TWITCH).icon.lightSVG,
-                            className: Y.twitchSectionIcon
+                            src: p.Z.get(F.ABu.TWITCH).icon.lightSVG,
+                            className: W.twitchSectionIcon
                         }),
                         (0, l.jsxs)('div', {
-                            children: [X(c), null != d ? Q(d) : null]
+                            children: [q(c), null != u ? X(u) : null]
                         }),
                         null != r
-                            ? (0, l.jsx)(u.Avatar, {
-                                  src: r.getAvatarURL(s, 24),
+                            ? (0, l.jsx)(d.qEK, {
+                                  src: r.getAvatarURL(o, 24),
                                   'aria-label': r.username,
-                                  className: Y.twitchSectionAvatar,
-                                  size: u.AvatarSizes.SIZE_24
+                                  className: W.twitchSectionAvatar,
+                                  size: d.EFr.SIZE_24
                               })
                             : null
                     ]
@@ -462,41 +461,41 @@ let ei = (e) => {
     }),
     (ei.ApplicationStreamingSection = (e) => {
         var t, n;
-        let { activity: i, user: r, applicationStream: a, onPreviewClick: s, guildId: o } = e,
-            d = (0, c.e7)([w.Z], () => w.Z.getChannel(a.channelId)),
-            [h, m] = (0, y.wq)(d),
-            p = (0, l.jsxs)(u.Clickable, {
+        let { activity: i, user: r, applicationStream: a, onPreviewClick: s, guildId: c } = e,
+            u = (0, o.e7)([w.Z], () => w.Z.getChannel(a.channelId)),
+            [h, m] = (0, L.wq)(u),
+            p = (0, l.jsxs)(d.P3F, {
                 onClick: h ? s : void 0,
-                className: Y.applicationStreamingPreviewWrapper,
+                className: W.applicationStreamingPreviewWrapper,
                 children: [
-                    (0, l.jsx)(P.Z, {
+                    (0, l.jsx)(y.Z, {
                         stream: a,
-                        className: Y.applicationStreamingPreviewSize
+                        className: W.applicationStreamingPreviewSize
                     }),
-                    (0, l.jsx)(u.Text, {
-                        className: Y.applicationStreamingHoverText,
+                    (0, l.jsx)(d.Text, {
+                        className: W.applicationStreamingHoverText,
                         variant: 'text-sm/medium',
                         color: 'always-white',
-                        children: (0, y.P9)(m)
+                        children: (0, L.P9)(m)
                     })
                 ]
             }),
-            g = null !== (n = null === (t = (0, N.Z)(i, a)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : W.intl.string(W.t.eXan7O);
-        return (0, l.jsxs)($, {
+            g = null !== (n = null === (t = (0, v.Z)(i, a)) || void 0 === t ? void 0 : t.activityText) && void 0 !== n ? n : z.intl.string(z.t.eXan7O);
+        return (0, l.jsxs)(J, {
             children: [
                 (0, l.jsxs)('div', {
-                    className: Y.applicationStreamingSection,
+                    className: W.applicationStreamingSection,
                     children: [
-                        (0, l.jsx)(u.Avatar, {
-                            size: u.AvatarSizes.SIZE_32,
-                            src: r.getAvatarURL(o, 32),
+                        (0, l.jsx)(d.qEK, {
+                            size: d.EFr.SIZE_32,
+                            src: r.getAvatarURL(c, 32),
                             'aria-label': r.username,
-                            className: Y.applicationStreamingAvatar
+                            className: W.applicationStreamingAvatar
                         }),
                         (0, l.jsxs)('div', {
-                            children: [X(H.ZP.getName(r)), Q(g)]
+                            children: [q(V.ZP.getName(r)), X(g)]
                         }),
-                        (0, l.jsx)(A.ZP, { size: A.ZP.Sizes.SMALL })
+                        (0, l.jsx)(Z.ZP, { size: Z.ZP.Sizes.SMALL })
                     ]
                 }),
                 p
@@ -504,89 +503,89 @@ let ei = (e) => {
         });
     }),
     (ei.EmbeddedActivitySection = (e) => {
-        let { activity: t, channel: n, guildId: i, participants: r } = e,
-            [s, o] = a.useState(null),
-            d = t.application_id;
-        a.useEffect(() => {
-            if (null != d)
-                (0, B.fetchAssetIds)(d, ['embedded_background']).then((e) => {
+        let { activity: t, channel: n, guildId: i, participants: a } = e,
+            [s, c] = r.useState(null),
+            u = t.application_id;
+        r.useEffect(() => {
+            null != u &&
+                (0, G.fetchAssetIds)(u, ['embedded_background']).then((e) => {
                     let [t] = e;
-                    return o(t);
+                    return c(t);
                 });
-        }, [d]);
-        let h = (0, c.Wu)([k.default, M.default], () =>
-                Array.from(r)
-                    .map((e) => (M.default.getId() === e ? null : k.default.getUser(e)))
-                    .filter(V.lm)
+        }, [u]);
+        let h = (0, o.Wu)([M.default, D.default], () =>
+                Array.from(a)
+                    .map((e) => (D.default.getId() === e ? null : M.default.getUser(e)))
+                    .filter(B.lm)
             ),
-            m = (0, p.O)(),
-            { analyticsLocations: g } = (0, T.ZP)();
-        if (null == d) return null;
-        let _ = S.Z.getApplication(d);
-        if (null == _) return null;
+            p = (0, m.O)(),
+            { analyticsLocations: _ } = (0, N.ZP)();
+        if (null == u) return null;
+        let f = T.Z.getApplication(u);
+        if (null == f) return null;
         let E = null != t.created_at && t.created_at > 0 ? { start: t.created_at } : void 0,
-            I = (0, B.getAssetImage)(_.id, s, 300);
-        return (0, l.jsxs)($, {
+            I = (0, G.getAssetImage)(f.id, s, 300);
+        return (0, l.jsxs)(J, {
             children: [
                 (0, l.jsxs)('div', {
-                    className: Y.embeddedActivityTopRow,
+                    className: W.embeddedActivityTopRow,
                     children: [
-                        (0, l.jsx)(L.Z, {
-                            game: _,
-                            size: L.Z.Sizes.XSMALL,
-                            className: Y.embeddedActivityIcon
+                        (0, l.jsx)(b.Z, {
+                            game: f,
+                            size: b.Z.Sizes.XSMALL,
+                            className: W.embeddedActivityIcon
                         }),
                         (0, l.jsx)('div', {
-                            className: Y.embeddedActivityName,
-                            children: (0, l.jsx)(u.Text, {
+                            className: W.embeddedActivityName,
+                            children: (0, l.jsx)(d.Text, {
                                 variant: 'text-sm/semibold',
-                                children: _.name
+                                children: f.name
                             })
                         }),
                         null != E
                             ? (0, l.jsx)('div', {
-                                  className: Y.embeddedActivityTimeElapsed,
-                                  children: (0, l.jsx)(u.Text, {
+                                  className: W.embeddedActivityTimeElapsed,
+                                  children: (0, l.jsx)(d.Text, {
                                       color: 'text-muted',
                                       variant: 'text-sm/normal',
-                                      children: (0, l.jsx)(J, { timestamps: E })
+                                      children: (0, l.jsx)(Q, { timestamps: E })
                                   })
                               })
                             : null
                     ]
                 }),
                 (0, l.jsxs)('div', {
-                    className: Y.embeddedActivityPlayerContainer,
+                    className: W.embeddedActivityPlayerContainer,
                     children: [
                         null != I
                             ? (0, l.jsx)('img', {
                                   src: I,
-                                  alt: _.name,
-                                  className: Y.embeddedActivityImage
+                                  alt: f.name,
+                                  className: W.embeddedActivityImage
                               })
                             : null,
                         (0, l.jsxs)('div', {
-                            className: Y.embeddedActivityImageOverlay,
+                            className: W.embeddedActivityImageOverlay,
                             children: [
-                                (0, l.jsx)(D.OV, {
+                                (0, l.jsx)(j.OV, {
                                     users: h,
                                     guildId: i,
                                     channelId: n.id
                                 }),
                                 (0, l.jsx)('div', {
-                                    className: Y.embeddedActivityJoinWrapper,
-                                    children: (0, l.jsx)(u.Button, {
-                                        size: u.Button.Sizes.SMALL,
+                                    className: W.embeddedActivityJoinWrapper,
+                                    children: (0, l.jsx)(d.zxk, {
+                                        size: d.zxk.Sizes.SMALL,
                                         onClick: (e) => {
                                             e.stopPropagation(),
-                                                (0, f.Z)({
-                                                    applicationId: d,
+                                                (0, g.Z)({
+                                                    applicationId: u,
                                                     activityChannelId: n.id,
-                                                    locationObject: m.location,
-                                                    analyticsLocations: g
+                                                    locationObject: p.location,
+                                                    analyticsLocations: _
                                                 });
                                         },
-                                        children: W.intl.string(W.t.VJlc0d)
+                                        children: z.intl.string(z.t.VJlc0d)
                                     })
                                 })
                             ]
@@ -595,5 +594,5 @@ let ei = (e) => {
                 })
             ]
         });
-    }),
-    (t.Z = ei);
+    });
+let el = ei;

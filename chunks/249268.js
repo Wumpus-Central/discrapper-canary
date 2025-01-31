@@ -1,64 +1,60 @@
-r.d(n, {
-    Z: function () {
-        return _;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(442837),
-    o = r(481060),
-    s = r(594174),
-    l = r(5192),
-    u = r(371583),
-    c = r(864138),
-    d = r(986398),
-    f = r(69589),
-    p = r(388032),
-    h = r(352682);
-function _(e) {
-    let { userId: n, leaderboard: r } = e,
-        _ = (0, a.e7)([s.default], () => s.default.getUser(n));
-    if (null == _) return null;
-    let m = (0, u.r)(r),
-        g = l.ZP.getName(r.guild_id, void 0, _);
-    return (0, i.jsx)(c.z, {
-        imageUrl: m,
+n.d(t, { Z: () => p });
+var i = n(200651);
+n(192379);
+var r = n(442837),
+    a = n(481060),
+    s = n(594174),
+    o = n(5192),
+    l = n(371583),
+    u = n(864138),
+    c = n(986398),
+    d = n(69589),
+    f = n(388032),
+    _ = n(352682);
+function p(e) {
+    let { userId: t, leaderboard: n } = e,
+        p = (0, r.e7)([s.default], () => s.default.getUser(t));
+    if (null == p) return null;
+    let h = (0, l.r)(n),
+        m = o.ZP.getName(n.guild_id, void 0, p);
+    return (0, i.jsx)(u.z, {
+        imageUrl: h,
         children: (0, i.jsxs)('div', {
-            className: h.userContainer,
+            className: _.userContainer,
             children: [
-                (0, i.jsx)(f.Z, {
-                    user: _,
+                (0, i.jsx)(d.Z, {
+                    user: p,
                     rank: 1,
                     rankBadgeVisibility: 'hidden'
                 }),
-                (0, i.jsx)(o.Spacer, {
+                (0, i.jsx)(a.LZC, {
                     size: 8,
                     horizontal: !0
                 }),
                 (0, i.jsxs)('div', {
                     children: [
                         (0, i.jsxs)('div', {
-                            className: h.userNameContainer,
+                            className: _.userNameContainer,
                             children: [
-                                (0, i.jsx)(o.Text, {
+                                (0, i.jsx)(a.Text, {
                                     variant: 'text-sm/semibold',
-                                    className: h.userName,
-                                    children: g
+                                    className: _.userName,
+                                    children: m
                                 }),
-                                (0, i.jsx)(o.Spacer, {
+                                (0, i.jsx)(a.LZC, {
                                     size: 4,
                                     horizontal: !0
                                 }),
-                                (0, i.jsx)(d.Z, {
-                                    className: h.winnerImage,
-                                    leaderboard: r
+                                (0, i.jsx)(c.Z, {
+                                    className: _.winnerImage,
+                                    leaderboard: n
                                 })
                             ]
                         }),
-                        (0, i.jsx)(o.Text, {
+                        (0, i.jsx)(a.Text, {
                             variant: 'text-xs/normal',
-                            className: h.userSubtitle,
-                            children: p.intl.string(p.t['0ScUkZ'])
+                            className: _.userSubtitle,
+                            children: f.intl.string(f.t['0ScUkZ'])
                         })
                     ]
                 })

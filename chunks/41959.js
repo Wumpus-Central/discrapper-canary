@@ -1,40 +1,37 @@
-r.d(n, {
-    H: function () {
-        return i;
-    }
+n.d(t, {
+    H: () => u,
+    Z: () => d
 });
-var i,
-    a = r(200651);
-r(192379);
-var o = r(120356),
-    s = r.n(o),
-    l = r(768581),
-    u = r(73346),
-    c = r(134384);
-!(function (e) {
-    (e[(e.SMALL = 40)] = 'SMALL'), (e[(e.MEDIUM = 66)] = 'MEDIUM');
-})(i || (i = {}));
-let d = {
-        40: c.small,
-        66: c.medium
+var i = n(200651);
+n(192379);
+var r = n(120356),
+    a = n.n(r),
+    s = n(768581),
+    o = n(73346),
+    l = n(134384),
+    u = (function (e) {
+        return (e[(e.SMALL = 40)] = 'SMALL'), (e[(e.MEDIUM = 66)] = 'MEDIUM'), e;
+    })({});
+let c = {
+        40: l.small,
+        66: l.medium
     },
-    f = (e) => {
-        let n,
-            { application: r, size: i, asset: o, className: f } = e;
+    d = (e) => {
+        let t,
+            { application: n, size: r, asset: u, className: d } = e;
         return (
-            (n =
-                null != o
-                    ? (0, u._W)(r.id, o, i)
-                    : l.ZP.getApplicationIconURL({
-                          id: r.id,
-                          icon: r.icon,
-                          size: i
+            (t =
+                null != u
+                    ? (0, o._W)(n.id, u, r)
+                    : s.ZP.getApplicationIconURL({
+                          id: n.id,
+                          icon: n.icon,
+                          size: r
                       })),
-            (0, a.jsx)('img', {
+            (0, i.jsx)('img', {
                 alt: '',
-                src: n,
-                className: s()(c.icon, d[i], f)
+                src: t,
+                className: a()(l.icon, c[r], d)
             })
         );
     };
-n.Z = f;

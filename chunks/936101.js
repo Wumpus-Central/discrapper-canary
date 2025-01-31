@@ -1,43 +1,39 @@
-r.d(n, {
-    L: function () {
-        return I;
-    },
-    d: function () {
-        return b;
-    }
-});
-var i = r(518263);
-var a = r(970173);
-var o = r(520712);
-var s = r(268111);
-var l = r(941497);
-var u = r(32026);
-var c = r(480839);
-var d = r(744285);
-var f = r(492257);
-var p = r(873817);
-var h = r(642549);
-var _ = r(47120);
-var m = r(772848),
-    g = r(433517),
-    E = r(70956);
-let v = 'purchase_token',
-    y = 60 * E.Z.Millis.DAY;
-function b() {
-    let e = g.K.get(v);
+n.d(t, {
+    L: () => u,
+    d: () => l
+}),
+    n(518263),
+    n(970173),
+    n(520712),
+    n(268111),
+    n(941497),
+    n(32026),
+    n(480839),
+    n(744285),
+    n(492257),
+    n(873817),
+    n(642549),
+    n(47120);
+var i = n(772848),
+    r = n(433517),
+    a = n(70956);
+let s = 'purchase_token',
+    o = 60 * a.Z.Millis.DAY;
+function l() {
+    let e = r.K.get(s);
     if (null != e && e.expires >= Date.now()) return e.purchaseToken;
-    let n = (0, m.Z)();
+    let t = (0, i.Z)();
     return (
-        g.K.set(v, {
-            purchaseToken: n,
-            expires: Date.now() + y
+        r.K.set(s, {
+            purchaseToken: t,
+            expires: Date.now() + o
         }),
-        n
+        t
     );
 }
-async function I() {
+async function u() {
     let e = new Uint8Array(
-        b()
+        l()
             .split('')
             .map((e) => e.charCodeAt(0))
     );

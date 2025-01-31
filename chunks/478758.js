@@ -1,86 +1,85 @@
-var i = r(653041);
-var a = r(200651);
-r(192379);
-var o = r(392711),
-    s = r.n(o),
-    l = r(481060),
-    u = r(730749),
-    c = r(823379),
-    d = r(126539);
-let f = 99,
-    p = (e) => {
-        let { member: n, empty: r, guildId: i } = e;
-        return r || null == n
-            ? (0, a.jsx)('div', { className: d.partyMember })
-            : (0, a.jsx)('div', {
-                  className: d.partyMember,
-                  children: (0, a.jsx)(l.Avatar, {
-                      src: n.getAvatarURL(i, 16),
-                      'aria-label': n.username,
-                      size: l.AvatarSizes.SIZE_16,
-                      className: d.partyMember
+n.d(t, { Z: () => _ }), n(653041);
+var i = n(200651);
+n(192379);
+var r = n(392711),
+    a = n.n(r),
+    s = n(481060),
+    o = n(730749),
+    l = n(823379),
+    u = n(126539);
+let c = 99,
+    d = (e) => {
+        let { member: t, empty: n, guildId: r } = e;
+        return n || null == t
+            ? (0, i.jsx)('div', { className: u.partyMember })
+            : (0, i.jsx)('div', {
+                  className: u.partyMember,
+                  children: (0, i.jsx)(s.qEK, {
+                      src: t.getAvatarURL(r, 16),
+                      'aria-label': t.username,
+                      size: s.EFr.SIZE_16,
+                      className: u.partyMember
                   })
               });
     },
-    h = (0, u.Z)(p),
+    f = (0, o.Z)(d),
     _ = (e) => {
-        let { partySize: n, members: r, minAvatarsShown: i = 1, maxAvatarsShown: o = 2, guildId: l } = e,
-            { totalSize: u, knownSize: p } = n;
-        if (u < i) return null;
-        let _ = s()(r)
-                .filter(c.lm)
-                .take(o)
+        let { partySize: t, members: n, minAvatarsShown: r = 1, maxAvatarsShown: s = 2, guildId: o } = e,
+            { totalSize: d, knownSize: _ } = t;
+        if (d < r) return null;
+        let p = a()(n)
+                .filter(l.lm)
+                .take(s)
                 .map((e) =>
-                    (0, a.jsx)(
-                        h,
+                    (0, i.jsx)(
+                        f,
                         {
                             member: e,
-                            guildId: l
+                            guildId: o
                         },
                         e.id
                     )
                 )
                 .value(),
-            m = u - p;
-        for (let e = 0; e < m && _.length < o; e++)
-            _.push(
-                (0, a.jsx)(
-                    h,
+            h = d - _;
+        for (let e = 0; e < h && p.length < s; e++)
+            p.push(
+                (0, i.jsx)(
+                    f,
                     {
                         empty: !0,
-                        guildId: l
+                        guildId: o
                     },
                     'empty-member-'.concat(e)
                 )
             );
-        let g = Math.max(Math.min(u - _.length, f), 0);
-        if (1 === g) {
-            let e = r[o];
-            _.push(
-                (0, a.jsx)(
-                    h,
+        let m = Math.max(Math.min(d - p.length, c), 0);
+        if (1 === m) {
+            let e = n[s];
+            p.push(
+                (0, i.jsx)(
+                    f,
                     {
                         member: e,
-                        guildId: l
+                        guildId: o
                     },
                     e.id
                 )
             );
         }
-        return (0, a.jsx)('div', {
-            className: d.wrapper,
-            children: (0, a.jsxs)('div', {
-                className: d.partyMembers,
+        return (0, i.jsx)('div', {
+            className: u.wrapper,
+            children: (0, i.jsxs)('div', {
+                className: u.partyMembers,
                 children: [
-                    _,
-                    g > 1
-                        ? (0, a.jsxs)('div', {
-                              className: d.partyMemberOverflow,
-                              children: ['+', g]
+                    p,
+                    m > 1
+                        ? (0, i.jsxs)('div', {
+                              className: u.partyMemberOverflow,
+                              children: ['+', m]
                           })
                         : null
                 ]
             })
         });
     };
-n.Z = _;

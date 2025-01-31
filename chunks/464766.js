@@ -1,70 +1,65 @@
-t.d(n, {
-    Z: function () {
-        return u;
-    }
-}),
-    t(653041);
+t.d(n, { Z: () => u }), t(653041);
 var i = t(200651),
-    a = t(192379),
-    l = t(120356),
-    r = t.n(l),
+    l = t(192379),
+    a = t(120356),
+    r = t.n(a),
     d = t(481060),
-    o = t(765305),
-    c = t(388032),
-    s = t(571933);
+    s = t(765305),
+    o = t(388032),
+    c = t(571933);
 function u(e) {
-    let { onClose: n, selectedTab: t, onTabSelected: l, userCount: u, hasBanner: _, isHub: g = !1 } = e,
-        p = a.useRef(null);
-    a.useEffect(() => {
+    let { onClose: n, selectedTab: t, onTabSelected: a, userCount: u, hasBanner: _, isHub: m = !1 } = e,
+        g = l.useRef(null);
+    l.useEffect(() => {
         var e, n, t;
-        return null === (t = p.current) || void 0 === t ? void 0 : null === (n = t.ref) || void 0 === n ? void 0 : null === (e = n.blur) || void 0 === e ? void 0 : e.call(n);
+        return null === (t = g.current) || void 0 === t ? void 0 : null === (n = t.ref) || void 0 === n ? void 0 : null === (e = n.blur) || void 0 === e ? void 0 : e.call(n);
     }, []);
-    let m = c.intl.formatToPlainString(c.t['ZrTT/P'], { userCount: u }),
-        I = [
+    let p = o.intl.formatToPlainString(o.t['ZrTT/P'], { userCount: u }),
+        v = [
             (0, i.jsx)(
-                d.TabBar.Item,
+                d.njP.Item,
                 {
-                    className: s.tabBarItem,
-                    id: o.fL.EVENT_INFO,
-                    children: c.intl.string(c.t.iW6Xur)
+                    className: c.tabBarItem,
+                    id: s.fL.EVENT_INFO,
+                    children: o.intl.string(o.t.iW6Xur)
                 },
                 'event-details'
             )
         ];
     return (
-        !g &&
-            I.push(
+        m ||
+            v.push(
                 (0, i.jsx)(
-                    d.TabBar.Item,
+                    d.njP.Item,
                     {
-                        className: s.tabBarItem,
-                        id: o.fL.RSVP_LIST,
-                        children: m
+                        className: c.tabBarItem,
+                        id: s.fL.RSVP_LIST,
+                        children: p
                     },
                     'is-hub'
                 )
             ),
         (0, i.jsxs)('div', {
-            className: s.container,
+            className: c.container,
             children: [
-                (0, i.jsx)(d.Clickable, {
-                    ref: p,
+                (0, i.jsx)(d.P3F, {
+                    ref: g,
                     onClick: n,
-                    className: s.closeButton,
-                    'aria-label': c.intl.string(c.t.cpT0Cg),
-                    children: (0, i.jsx)(d.XSmallIcon, {
+                    className: c.closeButton,
+                    'aria-label': o.intl.string(o.t.cpT0Cg),
+                    children: (0, i.jsx)(d.Dio, {
                         size: 'md',
                         color: 'currentColor',
-                        className: r()(s.closeIcon, _ && s.closeIconBanner)
+                        className: r()(c.closeIcon, _ && c.closeIconBanner)
                     })
                 }),
-                (0, i.jsx)(d.TabBar, {
-                    className: s.tabBar,
-                    'aria-label': c.intl.string(c.t['+1H47u']),
+                (0, i.jsx)(d.njP, {
+                    className: c.tabBar,
+                    'aria-label': o.intl.string(o.t['+1H47u']),
                     selectedItem: t,
                     type: 'top',
-                    onItemSelect: l,
-                    children: I
+                    onItemSelect: a,
+                    children: v
                 })
             ]
         })

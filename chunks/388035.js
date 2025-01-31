@@ -1,55 +1,50 @@
-n.d(t, {
-    U: function () {
-        return _;
-    }
-}),
-    n(47120);
+n.d(t, { U: () => g }), n(47120);
 var i = n(200651),
-    r = n(704215),
-    l = n(481060),
-    a = n(243778),
-    o = n(970731),
-    s = n(2818),
+    l = n(704215),
+    a = n(481060),
+    r = n(243778),
+    s = n(970731),
+    o = n(2818),
     c = n(921944),
-    u = n(388032),
-    d = n(295646),
+    d = n(388032),
+    u = n(295646),
     m = n(235810);
-let h = r.z.FOR_LATER_POPOUT_COACHMARK,
-    f = () =>
+let h = l.z.FOR_LATER_POPOUT_COACHMARK,
+    _ = () =>
         (0, i.jsx)('div', {
-            className: d.imageContainer,
+            className: u.imageContainer,
             children: (0, i.jsx)('img', {
-                className: d.image,
+                className: u.image,
                 src: m,
                 alt: ''
             })
         }),
     p = (e) =>
-        (0, i.jsx)(o.ZP, {
-            className: d.container,
-            asset: (0, i.jsx)(f, {}),
-            header: u.intl.string(u.t.qPbFKy),
-            content: u.intl.string(u.t.URrJq6),
-            buttonCTA: u.intl.string(u.t['NX+WJC']),
+        (0, i.jsx)(s.ZP, {
+            className: u.container,
+            asset: (0, i.jsx)(_, {}),
+            header: d.intl.string(d.t.qPbFKy),
+            content: d.intl.string(d.t.URrJq6),
+            buttonCTA: d.intl.string(d.t['NX+WJC']),
             buttonProps: {
-                color: l.ButtonColors.WHITE,
-                innerClassName: d.primaryButton
+                color: a.Ttl.WHITE,
+                innerClassName: u.primaryButton
             },
             onClick: () => e(c.L.USER_DISMISS),
             markAsDismissed: e,
-            caretPosition: o.DF.TOP_RIGHT
+            caretPosition: s.DF.TOP_RIGHT
         });
-function _(e) {
+function g(e) {
     let { location: t, children: n } = e,
-        { enabled: r, inInbox: o } = s.Z.useExperiment({ location: 'ForLaterCoachmarkWeb' }, { autoTrackExposure: !1 }),
-        [c, u] = (0, a.US)(r && t === (o ? 'inbox-button' : 'bookmarks-button') ? [h] : [], void 0);
+        { enabled: l, inInbox: s } = o.Z.useExperiment({ location: 'ForLaterCoachmarkWeb' }, { autoTrackExposure: !1 }),
+        [c, d] = (0, r.US)(l && t === (s ? 'inbox-button' : 'bookmarks-button') ? [h] : [], void 0);
     return c !== h
         ? (0, i.jsx)(i.Fragment, { children: n })
-        : (0, i.jsx)(l.Popout, {
-              renderPopout: () => p(u),
+        : (0, i.jsx)(a.yRy, {
+              renderPopout: () => p(d),
               position: 'bottom',
               align: 'right',
-              animation: l.Popout.Animation.TRANSLATE,
+              animation: a.yRy.Animation.TRANSLATE,
               shouldShow: !0,
               children: () => n
           });

@@ -1,12 +1,8 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-});
+n.d(t, { Z: () => f });
 var i = n(200651),
     l = n(192379),
-    r = n(691324),
-    a = n(331650),
+    a = n(691324),
+    r = n(331650),
     s = n(278724),
     o = n(652844),
     c = n(40851),
@@ -16,27 +12,27 @@ var i = n(200651),
     p = n(871499),
     m = n(981631);
 function f(e) {
-    let { selfMute: t, serverMute: n, suppress: f, centerButton: g = !1, awaitingRemote: C, onMouseEnter: x, onMouseLeave: v, ..._ } = e,
-        { mode: I } = (0, h.ZP)({ location: 'MicButton' }),
-        E = t || n || f,
+    let { selfMute: t, serverMute: n, suppress: f, centerButton: g = !1, awaitingRemote: _, onMouseEnter: C, onMouseLeave: x, ...v } = e,
+        { mode: E } = (0, h.ZP)({ location: 'MicButton' }),
+        I = t || n || f,
         b = g ? p.d : p.Z,
-        Z = (0, d.Z)(t, n, f, C, I === h.BK.GroupedButtonsRedMic),
-        { Component: N, play: S, events: T } = (0, o.O)(E ? 'unmute' : 'mute');
-    l.useEffect(() => () => S(), [S, E]);
-    let j = (0, c.bp)() === m.IlC.POPOUT ? (E ? s.n : a.S) : N,
-        A = I === h.BK.GroupedButtonsRedMic && E ? (0, u.Lq)(r.I.RED_400) : void 0,
-        y = I !== h.BK.GroupedButtonsRedMic;
+        Z = (0, d.Z)(t, n, f, _, E === h.BK.GroupedButtonsRedMic),
+        { Component: N, play: T, events: S } = (0, o.O)(I ? 'unmute' : 'mute');
+    l.useEffect(() => () => T(), [T, I]);
+    let j = (0, c.bp)() === m.IlC.POPOUT ? (I ? s.n : r.S) : N,
+        A = E === h.BK.GroupedButtonsRedMic && I ? (0, u.Lq)(a.I.RED_400) : void 0,
+        y = E !== h.BK.GroupedButtonsRedMic;
     return (0, i.jsx)(b, {
-        isActive: !!y && !E,
+        isActive: !!y && !I,
         iconComponent: j,
         iconColor: A,
         label: Z,
         onMouseEnter: (e) => {
-            null == x || x(e), T.onMouseEnter();
+            null == C || C(e), S.onMouseEnter();
         },
         onMouseLeave: (e) => {
-            null == v || v(e), T.onMouseLeave();
+            null == x || x(e), S.onMouseLeave();
         },
-        ..._
+        ...v
     });
 }

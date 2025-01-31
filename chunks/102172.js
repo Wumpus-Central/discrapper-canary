@@ -1,73 +1,59 @@
-r.d(n, {
-    JL: function () {
-        return E;
-    },
-    P9: function () {
-        return v;
-    },
-    h_: function () {
-        return I;
-    },
-    p9: function () {
-        return y;
-    },
-    wq: function () {
-        return b;
-    }
-});
-var i,
-    a = r(653041);
-var o = r(47120);
-var s = r(442837),
-    l = r(387343),
-    u = r(258609),
-    c = r(131704),
-    d = r(984933),
-    f = r(430824),
-    p = r(496675),
-    h = r(979651),
-    _ = r(934415),
-    m = r(981631),
-    g = r(388032);
-function E(e, n, r) {
+n.d(t, {
+    JL: () => p,
+    P9: () => h,
+    h_: () => E,
+    p9: () => m,
+    wq: () => g
+}),
+    n(653041),
+    n(47120);
+var i = n(442837),
+    r = n(387343),
+    a = n(258609),
+    s = n(131704),
+    o = n(984933),
+    l = n(430824),
+    u = n(496675),
+    c = n(979651),
+    d = n(934415),
+    f = n(981631),
+    _ = n(388032);
+function p(e, t, n) {
     var i;
     let a = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
     if (e.isPrivate()) return !0;
-    let o = n.getGuild(e.getGuildId()),
-        s = null !== (i = null == o ? void 0 : o.maxStageVideoChannelUsers) && void 0 !== i ? i : 0;
-    return (!e.isGuildStageVoice() || !(s <= 0)) && (!a || !!(0, l.Z)(e, r)) && !!r.can(m.Plq.STREAM, e) && null != o && o.afkChannelId !== e.id && !0;
+    let s = t.getGuild(e.getGuildId()),
+        o = null !== (i = null == s ? void 0 : s.maxStageVideoChannelUsers) && void 0 !== i ? i : 0;
+    return (!e.isGuildStageVoice() || !(o <= 0)) && (!a || !!(0, r.Z)(e, n)) && !!n.can(f.Plq.STREAM, e) && null != s && s.afkChannelId !== e.id;
 }
-function v(e) {
+function h(e) {
     switch (e) {
         case 0:
-            return g.intl.string(g.t['1i3tSU']);
+            return _.intl.string(_.t['1i3tSU']);
         case 1:
-            return g.intl.string(g.t.elyVbm);
+            return _.intl.string(_.t.elyVbm);
         case 2:
-            return g.intl.string(g.t.pgUTZG);
+            return _.intl.string(_.t.pgUTZG);
         default:
-            return g.intl.string(g.t['7Xq/nZ']);
+            return _.intl.string(_.t['7Xq/nZ']);
     }
 }
-function y(e, n, r, i, a) {
+function m(e, t, n, i, a) {
     let o;
     if (null == e) return [!1, 2];
-    let s = n.isInChannel(e.id),
-        u = e instanceof c.Sf && (0, _.rY)(e, n, r),
-        d = (0, l.Z)(e, i),
+    let l = t.isInChannel(e.id),
+        u = e instanceof s.Sf && (0, d.rY)(e, t, n),
+        c = (0, r.Z)(e, i),
         f = null != a.getAwaitingRemoteSessionInfo() || null != a.getRemoteSessionId();
-    f ? (o = 0) : d || s ? u && !s && (o = 1) : (o = 2);
-    let p = d && !u;
-    return [!__OVERLAY__ && !f && (s || p), o];
+    f ? (o = 0) : c || l ? u && !l && (o = 1) : (o = 2);
+    let _ = c && !u;
+    return [!__OVERLAY__ && !f && (l || _), o];
 }
-function b(e) {
-    return (0, s.Wu)([h.Z, f.Z, p.Z, u.Z], () => y(e, h.Z, f.Z, p.Z, u.Z));
+function g(e) {
+    return (0, i.Wu)([c.Z, l.Z, u.Z, a.Z], () => m(e, c.Z, l.Z, u.Z, a.Z));
 }
-function I(e, n, r) {
+function E(e, t, n) {
     let i = [];
-    for (let { channel: a } of e[d.Zb]) E(a, n, r) && i.push(a);
+    for (let { channel: r } of e[o.Zb]) p(r, t, n) && i.push(r);
     return i;
 }
-!(function (e) {
-    (e[(e.REMOTE_MODE = 0)] = 'REMOTE_MODE'), (e[(e.CHANNEL_FULL = 1)] = 'CHANNEL_FULL'), (e[(e.NO_PERMISSION = 2)] = 'NO_PERMISSION');
-})(i || (i = {}));

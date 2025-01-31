@@ -1,9 +1,5 @@
-r.d(n, {
-    J: function () {
-        return i.Jc;
-    },
-    t: function () {
-        return i.tE;
-    }
+n.d(t, {
+    J: () => i.Jc,
+    t: () => i.tE
 });
-var i = r(489948);
+var i = n(489948);

@@ -1,13 +1,7 @@
 r.d(t, {
-    JT: function () {
-        return c;
-    },
-    M$: function () {
-        return d;
-    },
-    Xz: function () {
-        return u;
-    }
+    JT: () => c,
+    M$: () => d,
+    Xz: () => u
 });
 var n = r(670543);
 function o(e, t) {
@@ -46,7 +40,7 @@ var c = (function () {
                 {
                     key: 'dispose',
                     value: function () {
-                        !this.isDisposed && (this.action(), (this.isDisposed = !0));
+                        this.isDisposed || (this.action(), (this.isDisposed = !0));
                     }
                 }
             ],

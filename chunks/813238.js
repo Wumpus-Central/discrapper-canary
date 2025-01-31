@@ -1,7 +1,8 @@
-e.exports = {
-    viewFullBio: 'viewFullBio_abaf7d',
-    viewFullBioColor: 'viewFullBioColor_abaf7d',
-    viewFullBioDisabled: 'viewFullBioDisabled_abaf7d',
-    descriptionClamp: 'descriptionClamp_abaf7d',
-    maxBioHeight: 'maxBioHeight_abaf7d'
+var i = {
+    viewFullBio: 'viewFullBio_f5f93a',
+    viewFullBioColor: 'viewFullBioColor_f5f93a',
+    viewFullBioDisabled: 'viewFullBioDisabled_f5f93a',
+    descriptionClamp: 'descriptionClamp_f5f93a',
+    maxBioHeight: 'maxBioHeight_f5f93a'
 };
+e.exports = i;

@@ -1,123 +1,122 @@
-var i = r(47120);
-var a = r(653041);
-var o = r(200651),
-    s = r(192379),
-    l = r(120356),
-    u = r.n(l),
-    c = r(442837),
-    d = r(704215),
-    f = r(996146),
-    p = r(481060),
-    h = r(100527),
-    _ = r(906732),
-    m = r(605236),
-    g = r(243778),
-    E = r(963249),
-    v = r(599659),
-    y = r(282925),
-    b = r(819640),
-    I = r(594174),
-    T = r(70956),
-    S = r(709054),
-    A = r(51144),
-    C = r(443603),
-    N = r(981631),
-    R = r(921944),
-    O = r(388032),
-    D = r(145695),
-    L = r(553796);
-let x = T.Z.Millis.DAYS_30;
-function w(e) {
-    let { animatedIconComponent: n, hovered: i, isCoachmarkDismissed: a } = e,
-        s = !a || i;
-    return (0, o.jsxs)('div', {
-        className: D.iconContainer,
+n.d(t, { Z: () => L }), n(47120), n(653041);
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(442837),
+    l = n(704215),
+    u = n(996146),
+    c = n(481060),
+    d = n(100527),
+    f = n(906732),
+    _ = n(605236),
+    p = n(243778),
+    h = n(963249),
+    m = n(599659),
+    g = n(282925),
+    E = n(819640),
+    v = n(594174),
+    y = n(70956),
+    I = n(709054),
+    b = n(51144),
+    T = n(443603),
+    S = n(981631),
+    A = n(921944),
+    N = n(388032),
+    C = n(145695),
+    R = n(553796);
+let O = y.Z.Millis.DAYS_30;
+function D(e) {
+    let { animatedIconComponent: t, hovered: r, isCoachmarkDismissed: a } = e,
+        o = !a || r;
+    return (0, i.jsxs)('div', {
+        className: C.iconContainer,
         children: [
-            (0, o.jsx)('div', {
-                className: u()(D.decorativeLayer, { [D.decorativeLayerActive]: s }),
+            (0, i.jsx)('div', {
+                className: s()(C.decorativeLayer, { [C.decorativeLayerActive]: o }),
                 style: { zIndex: 3 },
-                children: (0, o.jsx)(p.LottieAnimation, {
-                    shouldAnimate: s,
-                    importData: () => r.e('39298').then(r.t.bind(r, 324952, 19))
+                children: (0, i.jsx)(c.Fmz, {
+                    shouldAnimate: o,
+                    importData: () => n.e('39298').then(n.t.bind(n, 324952, 19))
                 })
             }),
-            (0, o.jsx)('div', {
-                className: u()(D.giftIconButton, { [D.giftIconButtonActive]: s }),
+            (0, i.jsx)('div', {
+                className: s()(C.giftIconButton, { [C.giftIconButtonActive]: o }),
                 style: { zIndex: 2 },
-                children: (0, o.jsx)(n, { color: 'currentColor' })
+                children: (0, i.jsx)(t, { color: 'currentColor' })
             }),
-            (0, o.jsx)('div', {
-                className: u()(D.decorativeLayer, { [D.decorativeLayerActive]: s }),
+            (0, i.jsx)('div', {
+                className: s()(C.decorativeLayer, { [C.decorativeLayerActive]: o }),
                 style: { zIndex: 1 },
-                children: (0, o.jsx)(p.LottieAnimation, {
-                    shouldAnimate: s,
-                    importData: () => r.e('58889').then(r.t.bind(r, 593162, 19))
+                children: (0, i.jsx)(c.Fmz, {
+                    shouldAnimate: o,
+                    importData: () => n.e('58889').then(n.t.bind(n, 593162, 19))
                 })
             })
         ]
     });
 }
-function P(e) {
-    let { disabled: n, channel: r } = e,
-        { analyticsLocations: i } = (0, _.ZP)(h.Z.GIFT_BUTTON),
-        [a, l] = s.useState(!1),
-        u = (0, c.e7)([b.Z], () => !(null === b.Z || void 0 === b.Z ? void 0 : b.Z.hasLayers())),
-        p = (0, c.e7)([I.default], () => I.default.getCurrentUser()),
-        T = null != p ? S.default.age(p.id) : 0,
-        P = !n && u && T >= x,
-        { enabled: M } = v.O.useExperiment({ location: 'gift-button' }),
-        k = [];
-    M && P && k.push(d.z.NITROWEEN_COACHMARKS);
-    let [U, B] = (0, g.US)(k),
-        G = null != U,
-        Z = (0, A.Ft)(r),
-        { Component: F, events: V, play: j } = (0, f.$)();
-    if (n) return null;
-    let H = () => {
-        (0, E.Z)({
+function x(e) {
+    let { disabled: t, channel: n } = e,
+        { analyticsLocations: a } = (0, f.ZP)(d.Z.GIFT_BUTTON),
+        [s, c] = r.useState(!1),
+        y = (0, o.e7)([E.Z], () => !(null === E.Z || void 0 === E.Z ? void 0 : E.Z.hasLayers())),
+        x = (0, o.e7)([v.default], () => v.default.getCurrentUser()),
+        L = null != x ? I.default.age(x.id) : 0,
+        P = !t && y && L >= O,
+        { enabled: w } = m.O.useExperiment({ location: 'gift-button' }),
+        M = [];
+    w && P && M.push(l.z.NITROWEEN_COACHMARKS);
+    let [k, U] = (0, p.US)(M),
+        G = null != k,
+        B = (0, b.Ft)(n),
+        { Component: Z, events: F, play: V } = (0, u.$)();
+    if (t) return null;
+    let j = () => {
+        (0, h.Z)({
             isGift: !0,
-            giftRecipient: null == Z ? void 0 : Z,
-            giftMessage: O.intl.string(O.t['rX/m/f']),
+            giftRecipient: null == B ? void 0 : B,
+            giftMessage: N.intl.string(N.t['rX/m/f']),
             initialPlanId: null,
-            analyticsLocations: i,
+            analyticsLocations: a,
             analyticsObject: {
-                page: r.isPrivate() ? N.ZY5.DM_CHANNEL : N.ZY5.GUILD_CHANNEL,
-                section: N.jXE.CHANNEL_TEXT_AREA,
-                object: N.qAy.NITROWEEN_BUTTON_ICON,
-                objectType: N.Qqv.GIFT
+                page: n.isPrivate() ? S.ZY5.DM_CHANNEL : S.ZY5.GUILD_CHANNEL,
+                section: S.jXE.CHANNEL_TEXT_AREA,
+                object: S.qAy.NITROWEEN_BUTTON_ICON,
+                objectType: S.Qqv.GIFT
             }
         });
     };
-    return (0, o.jsxs)('div', {
-        className: D.container,
+    return (0, i.jsxs)('div', {
+        className: C.container,
         onMouseEnter: () => {
-            !a && l(!0);
+            s || c(!0);
         },
         onMouseLeave: () => {
-            l(!1);
+            c(!1);
         },
         children: [
             G &&
-                (0, o.jsx)(y.Z, {
-                    onComplete: () => l(!1),
-                    onCheckItOutClick: H,
-                    markAsDismissed: B
+                (0, i.jsx)(g.Z, {
+                    onComplete: () => c(!1),
+                    onCheckItOutClick: j,
+                    markAsDismissed: U
                 }),
-            (0, o.jsx)(C.Z, {
-                innerClassName: L.button,
-                'aria-label': O.intl.string(O.t.Z1RnTk),
+            (0, i.jsx)(T.Z, {
+                innerClassName: R.button,
+                'aria-label': N.intl.string(N.t.Z1RnTk),
                 isActive: !1,
                 onClick: () => {
-                    j(), l(!1), (0, m.EW)(d.z.NITROWEEN_ANIMATED_GIFTING_ICON, { dismissAction: R.L.TAKE_ACTION }), H();
+                    V(), c(!1), (0, _.EW)(l.z.NITROWEEN_ANIMATED_GIFTING_ICON, { dismissAction: A.L.TAKE_ACTION }), j();
                 },
-                ...V,
-                children: (0, o.jsx)(w, {
-                    animatedIconComponent: F,
-                    hovered: a,
+                ...F,
+                children: (0, i.jsx)(D, {
+                    animatedIconComponent: Z,
+                    hovered: s,
                     isCoachmarkDismissed: !G
                 })
             })
         ]
     });
 }
-n.Z = s.memo(P);
+let L = r.memo(x);

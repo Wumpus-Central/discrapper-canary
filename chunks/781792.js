@@ -1,31 +1,26 @@
-r.d(n, {
-    e: function () {
-        return c;
-    }
-});
-var i = r(789020);
-var a = r(544891),
-    o = r(570140),
-    s = r(962086),
-    l = r(160404),
-    u = r(981631);
-function c(e, n) {
-    let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    if (l.Z.isFullServerPreview(e)) {
-        (0, s.aq)(e, { memberOptions: n });
+n.d(t, { e: () => l }), n(789020);
+var i = n(544891),
+    r = n(570140),
+    a = n(962086),
+    s = n(160404),
+    o = n(981631);
+function l(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+    if (s.Z.isFullServerPreview(e)) {
+        (0, a.aq)(e, { memberOptions: t });
         return;
     }
     return (
-        o.Z.dispatch({
+        r.Z.dispatch({
             type: 'GUILD_MEMBER_UPDATE_LOCAL',
             guildId: e,
-            roles: n.roles,
-            flags: n.flags
+            roles: t.roles,
+            flags: t.flags
         }),
-        a.tn.patch({
-            url: u.ANM.SET_GUILD_MEMBER(e),
-            body: n,
-            oldFormErrors: !!r || void 0,
+        i.tn.patch({
+            url: o.ANM.SET_GUILD_MEMBER(e),
+            body: t,
+            oldFormErrors: !!n || void 0,
             rejectWithError: !1
         })
     );

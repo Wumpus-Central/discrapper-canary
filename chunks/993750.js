@@ -1,13 +1,14 @@
+n.d(e, { Z: () => a });
 var i = n(200651);
 n(192379);
 var s = n(120356),
-    o = n.n(s),
-    l = n(481060),
-    r = n(935902);
-e.Z = function (t) {
+    l = n.n(s),
+    r = n(481060),
+    o = n(935902);
+let a = function (t) {
     let { children: e, style: n } = t;
-    return (0, i.jsx)(l.ModalContent, {
-        className: o()(r.modalContent, n),
+    return (0, i.jsx)(r.hzk, {
+        className: l()(o.modalContent, n),
         children: e
     });
 };

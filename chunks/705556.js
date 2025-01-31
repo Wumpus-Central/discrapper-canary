@@ -1,75 +1,71 @@
-r.d(n, {
-    Z: function () {
-        return h;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(442837),
-    o = r(481060),
-    s = r(300284),
-    l = r(314897),
-    u = r(430824),
-    c = r(785717),
-    d = r(475413),
-    f = r(388032),
-    p = r(283946);
-function h(e) {
-    let { user: n, guildId: r, fullWidth: h, onClose: _ } = e,
-        m = (0, a.e7)([l.default], () => l.default.getId() === n.id),
-        g = (0, a.e7)([u.Z], () => (null != r ? u.Z.getGuild(r) : null)),
-        E = (0, s.Z)({ guild: g }),
-        v = (0, s.Z)(),
-        { trackUserProfileAction: y } = (0, c.KZ)();
-    return m
-        ? null == g
-            ? (0, i.jsx)(d.tG, {
+n.d(t, { Z: () => _ });
+var i = n(200651);
+n(192379);
+var r = n(442837),
+    a = n(481060),
+    s = n(300284),
+    o = n(314897),
+    l = n(430824),
+    u = n(785717),
+    c = n(475413),
+    d = n(388032),
+    f = n(283946);
+function _(e) {
+    let { user: t, guildId: n, fullWidth: _, onClose: p } = e,
+        h = (0, r.e7)([o.default], () => o.default.getId() === t.id),
+        m = (0, r.e7)([l.Z], () => (null != n ? l.Z.getGuild(n) : null)),
+        g = (0, s.Z)({ guild: m }),
+        E = (0, s.Z)(),
+        { trackUserProfileAction: v } = (0, u.KZ)();
+    return h
+        ? null == m
+            ? (0, i.jsx)(c.tG, {
                   action: 'EDIT_PROFILE',
-                  text: f.intl.string(f.t.s5vZlZ),
-                  icon: o.PencilIcon,
+                  text: d.intl.string(d.t.s5vZlZ),
+                  icon: a.vdY,
                   autoFocus: !0,
-                  fullWidth: h,
+                  fullWidth: _,
                   onClick: () => {
-                      null == _ || _(), v();
+                      null == p || p(), E();
                   }
               })
-            : (0, i.jsx)(o.Popout, {
+            : (0, i.jsx)(a.yRy, {
                   renderPopout: (e) => {
-                      let { closePopout: n } = e;
-                      return (0, i.jsxs)(o.Menu, {
-                          className: p.popoutMenu,
+                      let { closePopout: t } = e;
+                      return (0, i.jsxs)(a.v2r, {
+                          className: f.popoutMenu,
                           onSelect: void 0,
                           navId: 'edit-profile-popout',
                           onClose: () => {
-                              n(), null == _ || _();
+                              t(), null == p || p();
                           },
-                          'aria-label': f.intl.string(f.t.AXIHpa),
+                          'aria-label': d.intl.string(d.t.AXIHpa),
                           children: [
-                              (0, i.jsx)(o.MenuItem, {
+                              (0, i.jsx)(a.sNh, {
                                   id: 'edit-server-profile',
-                                  label: f.intl.string(f.t['PKQB/P']),
-                                  subtext: f.intl.string(f.t.VYHWKC),
+                                  label: d.intl.string(d.t['PKQB/P']),
+                                  subtext: d.intl.string(d.t.VYHWKC),
                                   action: () => {
-                                      y({ action: 'EDIT_GUILD_PROFILE' }), E();
+                                      v({ action: 'EDIT_GUILD_PROFILE' }), g();
                                   }
                               }),
-                              (0, i.jsx)(o.MenuItem, {
+                              (0, i.jsx)(a.sNh, {
                                   id: 'edit-main-profile',
-                                  label: f.intl.string(f.t.HmFaFB),
-                                  subtext: f.intl.string(f.t['+EERMj']),
+                                  label: d.intl.string(d.t.HmFaFB),
+                                  subtext: d.intl.string(d.t['+EERMj']),
                                   action: () => {
-                                      y({ action: 'EDIT_PROFILE' }), v();
+                                      v({ action: 'EDIT_PROFILE' }), E();
                                   }
                               })
                           ]
                       });
                   },
                   children: (e) =>
-                      (0, i.jsx)(d.tG, {
-                          text: f.intl.string(f.t.s5vZlZ),
-                          icon: o.PencilIcon,
+                      (0, i.jsx)(c.tG, {
+                          text: d.intl.string(d.t.s5vZlZ),
+                          icon: a.vdY,
                           autoFocus: !0,
-                          fullWidth: h,
+                          fullWidth: _,
                           ...e
                       })
               })

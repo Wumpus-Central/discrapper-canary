@@ -1,54 +1,46 @@
-r.r(n),
-    r.d(n, {
-        useCallback: function () {
-            return u;
-        },
-        useCallbackOne: function () {
-            return s;
-        },
-        useMemo: function () {
-            return l;
-        },
-        useMemoOne: function () {
-            return o;
-        }
+n.r(t),
+    n.d(t, {
+        useCallback: () => l,
+        useCallbackOne: () => s,
+        useMemo: () => o,
+        useMemoOne: () => a
     });
-var i = r(192379);
-function a(e, n) {
-    if (e.length !== n.length) return !1;
-    for (var r = 0; r < e.length; r++) if (e[r] !== n[r]) return !1;
+var i = n(192379);
+function r(e, t) {
+    if (e.length !== t.length) return !1;
+    for (var n = 0; n < e.length; n++) if (e[n] !== t[n]) return !1;
     return !0;
 }
-function o(e, n) {
-    var r = (0, i.useState)(function () {
+function a(e, t) {
+    var n = (0, i.useState)(function () {
             return {
-                inputs: n,
+                inputs: t,
                 result: e()
             };
         })[0],
-        o = (0, i.useRef)(!0),
-        s = (0, i.useRef)(r),
-        l =
-            o.current || (n && s.current.inputs && a(n, s.current.inputs))
+        a = (0, i.useRef)(!0),
+        s = (0, i.useRef)(n),
+        o =
+            a.current || (t && s.current.inputs && r(t, s.current.inputs))
                 ? s.current
                 : {
-                      inputs: n,
+                      inputs: t,
                       result: e()
                   };
     return (
         (0, i.useEffect)(
             function () {
-                (o.current = !1), (s.current = l);
+                (a.current = !1), (s.current = o);
             },
-            [l]
+            [o]
         ),
-        l.result
+        o.result
     );
 }
-function s(e, n) {
-    return o(function () {
+function s(e, t) {
+    return a(function () {
         return e;
-    }, n);
+    }, t);
 }
-var l = o,
-    u = s;
+var o = a,
+    l = s;

@@ -1,60 +1,55 @@
-o.r(n),
-    o.d(n, {
-        default: function () {
-            return r;
-        }
-    });
-var i = o(200651);
-o(192379);
-var a = o(481060),
-    e = o(174767),
-    l = o(388032),
-    s = o(694231);
-function r(t) {
-    let { transitionState: n, onClose: o, onDelete: r } = t;
+t.d(i, { default: () => r });
+var l = t(200651);
+t(192379);
+var s = t(481060),
+    a = t(174767),
+    o = t(388032),
+    e = t(694231);
+function r(n) {
+    let { transitionState: i, onClose: t, onDelete: r } = n;
     async function d() {
-        await (0, e.TG)(), r();
+        await (0, a.TG)(), r();
     }
-    return (0, i.jsxs)(a.ModalRoot, {
-        size: a.ModalSize.SMALL,
-        transitionState: n,
-        className: s.__invalid_modal,
+    return (0, l.jsxs)(s.Y0X, {
+        size: s.CgR.SMALL,
+        transitionState: i,
+        className: e.__invalid_modal,
         children: [
-            (0, i.jsxs)(a.ModalContent, {
-                className: s.modalContent,
+            (0, l.jsxs)(s.hzk, {
+                className: e.modalContent,
                 children: [
-                    (0, i.jsxs)('div', {
-                        className: s.header,
+                    (0, l.jsxs)('div', {
+                        className: e.header,
                         children: [
-                            (0, i.jsx)(a.Heading, {
-                                className: s.__invalid_title,
+                            (0, l.jsx)(s.X6q, {
+                                className: e.__invalid_title,
                                 variant: 'heading-lg/semibold',
                                 color: 'header-primary',
-                                children: l.intl.string(l.t.P8nDIC)
+                                children: o.intl.string(o.t.P8nDIC)
                             }),
-                            (0, i.jsx)(a.ModalCloseButton, { onClick: o })
+                            (0, l.jsx)(s.olH, { onClick: t })
                         ]
                     }),
-                    (0, i.jsx)(a.Text, {
+                    (0, l.jsx)(s.Text, {
                         variant: 'text-md/normal',
                         color: 'text-normal',
-                        className: s.__invalid_body,
-                        children: l.intl.string(l.t.fwFcj4)
+                        className: e.__invalid_body,
+                        children: o.intl.string(o.t.fwFcj4)
                     })
                 ]
             }),
-            (0, i.jsxs)(a.ModalFooter, {
+            (0, l.jsxs)(s.mzw, {
                 children: [
-                    (0, i.jsx)(a.Button, {
-                        color: a.Button.Colors.RED,
+                    (0, l.jsx)(s.zxk, {
+                        color: s.zxk.Colors.RED,
                         onClick: d,
-                        children: l.intl.string(l.t['5I4fSk'])
+                        children: o.intl.string(o.t['5I4fSk'])
                     }),
-                    (0, i.jsx)(a.Button, {
-                        look: a.Button.Looks.LINK,
-                        color: a.Button.Colors.PRIMARY,
-                        onClick: o,
-                        children: l.intl.string(l.t['ETE/oK'])
+                    (0, l.jsx)(s.zxk, {
+                        look: s.zxk.Looks.LINK,
+                        color: s.zxk.Colors.PRIMARY,
+                        onClick: t,
+                        children: o.intl.string(o.t['ETE/oK'])
                     })
                 ]
             })

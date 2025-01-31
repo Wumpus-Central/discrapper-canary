@@ -1,21 +1,22 @@
+n.d(t, { Z: () => _ });
 var i = n(200651),
-    r = n(192379),
-    s = n(481060),
-    a = n(906732),
-    l = n(975298),
+    s = n(192379),
+    r = n(481060),
+    l = n(906732),
+    a = n(975298),
     o = n(125529),
     c = n(879892),
     d = n(709586),
     u = n(267642),
     m = n(981631),
-    g = n(388032),
-    h = n(567710);
-t.Z = function () {
-    let e = r.useRef(null),
-        { analyticsLocations: t } = (0, a.ZP)(),
-        { fractionalState: p } = (0, l.Z)();
+    h = n(388032),
+    g = n(567710);
+let _ = function () {
+    let e = s.useRef(null),
+        { analyticsLocations: t } = (0, l.ZP)(),
+        { fractionalState: _ } = (0, a.Z)();
     function x(n) {
-        null != e.current && (0, s.closeModal)(e.current),
+        null != e.current && (0, r.Mr3)(e.current),
             (0, c.u)({
                 analyticsLocation: {
                     page: m.ZY5.GUILD_BOOSTING_USER_SETTINGS,
@@ -27,8 +28,8 @@ t.Z = function () {
                 guild: n
             });
     }
-    async function f() {
-        e.current = await (0, s.openModalLazy)(
+    async function p() {
+        e.current = await (0, r.ZDy)(
             async () => {
                 let { default: e } = await Promise.resolve().then(n.bind(n, 719228));
                 return (t) =>
@@ -39,35 +40,35 @@ t.Z = function () {
             },
             {
                 onCloseRequest: () => {
-                    null != e.current && (0, s.closeModal)(e.current);
+                    null != e.current && (0, r.Mr3)(e.current);
                 }
             }
         );
     }
-    let E = (0, u.aq)({ fractionalState: p });
+    let E = (0, u.aq)({ fractionalState: _ });
     return (0, i.jsxs)('div', {
-        className: h.wrapper,
+        className: g.wrapper,
         children: [
             (0, i.jsx)(d.Z, {
-                className: h.boostIcon,
+                className: g.boostIcon,
                 width: 16,
                 height: 16
             }),
-            (0, i.jsx)(s.Text, {
-                className: h.copy,
+            (0, i.jsx)(r.Text, {
+                className: g.copy,
                 color: 'header-secondary',
                 variant: 'text-sm/medium',
-                children: g.intl.format(g.t.kqC5vr, {
+                children: h.intl.format(h.t.kqC5vr, {
                     boostAnyGuildHook: (e, t) => {
                         let n = null != E,
-                            r = (0, i.jsx)(
-                                s.Button,
+                            s = (0, i.jsx)(
+                                r.zxk,
                                 {
-                                    className: h.cta,
+                                    className: g.cta,
                                     disabled: n,
-                                    color: s.Button.Colors.LINK,
-                                    look: s.Button.Looks.LINK,
-                                    onClick: n ? void 0 : f,
+                                    color: r.zxk.Colors.LINK,
+                                    look: r.zxk.Looks.LINK,
+                                    onClick: n ? void 0 : p,
                                     children: e
                                 },
                                 t
@@ -81,12 +82,12 @@ t.Z = function () {
                                       children: (e) =>
                                           (0, i.jsx)('span', {
                                               ...e,
-                                              children: r
+                                              children: s
                                           })
                                   },
                                   t
                               )
-                            : r;
+                            : s;
                     }
                 })
             })

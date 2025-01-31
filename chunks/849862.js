@@ -1,26 +1,22 @@
 n.d(t, {
-    If: function () {
-        return c;
-    },
-    m$: function () {
-        return s;
-    }
+    If: () => c,
+    m$: () => o
 }),
     n(47120);
 var i = n(442837),
-    r = n(372460),
-    l = n(91896),
-    a = n(699516);
-function o(e, t) {
+    l = n(372460),
+    a = n(91896),
+    r = n(699516);
+function s(e, t) {
     let [n, i] = t,
-        r = n.getPendingCount(),
-        l = i.getPendingIncomingCount();
-    return e ? r + l : r;
+        l = n.getPendingCount(),
+        a = i.getPendingIncomingCount();
+    return e ? l + a : l;
 }
-function s(e) {
-    return o((0, r.r8)({ location: 'getIncomingFriendRequestCount' }), e);
+function o(e) {
+    return s((0, l.r8)({ location: 'getIncomingFriendRequestCount' }), e);
 }
 function c() {
-    let e = (0, r.wn)({ location: 'useIncomingFriendRequestCount' });
-    return (0, i.e7)([a.Z, l.Z], () => o(e, [a.Z, l.Z]));
+    let e = (0, l.wn)({ location: 'useIncomingFriendRequestCount' });
+    return (0, i.e7)([r.Z, a.Z], () => s(e, [r.Z, a.Z]));
 }

@@ -1,12 +1,7 @@
-n.d(t, {
-    Z: function () {
-        return v;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => v }), n(47120);
 var i = n(200651),
-    r = n(192379),
-    l = n(442837),
+    l = n(192379),
+    r = n(442837),
     a = n(481060),
     s = n(58642),
     o = n(600164),
@@ -17,13 +12,13 @@ var i = n(200651),
     m = n(804739),
     p = n(957657),
     g = n(34305),
-    f = n(981631),
-    _ = n(388032),
+    _ = n(981631),
+    f = n(388032),
     E = n(330580);
 function I(e) {
     let { applicationViewItems: t, restoreApplication: n } = e;
     if (0 === t.length) return null;
-    let r = t.map((e) => {
+    let l = t.map((e) => {
         let t = e.libraryApplication.getDistributor();
         return (0, i.jsxs)(
             'div',
@@ -41,15 +36,15 @@ function I(e) {
                             null != t
                                 ? (0, i.jsx)('div', {
                                       className: E.applicationSubText,
-                                      children: f.EOG[t]
+                                      children: _.EOG[t]
                                   })
                                 : null
                         ]
                     }),
-                    (0, i.jsx)(a.Clickable, {
+                    (0, i.jsx)(a.P3F, {
                         className: E.restoreButton,
                         onClick: () => n(e.libraryApplication),
-                        children: (0, i.jsx)(a.XSmallIcon, {
+                        children: (0, i.jsx)(a.Dio, {
                             size: 'md',
                             color: 'currentColor',
                             className: E.restoreIcon
@@ -60,18 +55,18 @@ function I(e) {
             e.key
         );
     });
-    return (0, i.jsxs)(a.FormSection, {
+    return (0, i.jsxs)(a.hjN, {
         className: E.hiddenLibraryApplications,
         children: [
-            (0, i.jsx)(a.FormTitle, {
+            (0, i.jsx)(a.vwX, {
                 className: E.hiddenLibraryApplicationsTitle,
-                children: _.intl.string(_.t['5PJtrK'])
+                children: f.intl.string(f.t['5PJtrK'])
             }),
-            r
+            l
         ]
     });
 }
-class C extends r.PureComponent {
+class C extends l.PureComponent {
     handleToggleShortcutDesktop(e) {
         c.Xc.updateSetting(e);
     }
@@ -79,7 +74,7 @@ class C extends r.PureComponent {
         c.Pe.updateSetting(e);
     }
     trackRestoreApplication(e, t) {
-        u.default.track(f.rMx.APPLICATION_SETTINGS_UPDATED, {
+        u.default.track(_.rMx.APPLICATION_SETTINGS_UPDATED, {
             hidden_enabled: t,
             ...e.getAnalyticsData()
         });
@@ -90,19 +85,19 @@ class C extends r.PureComponent {
             className: E.body,
             children: [
                 (0, m.Q)()
-                    ? (0, i.jsxs)(r.Fragment, {
+                    ? (0, i.jsxs)(l.Fragment, {
                           children: [
-                              (0, i.jsx)(a.FormSwitch, {
+                              (0, i.jsx)(a.j7V, {
                                   value: t,
                                   onChange: this.handleToggleShortcutDesktop,
-                                  note: _.intl.string(_.t.vT61Nz),
-                                  children: _.intl.string(_.t['9ID+Ki'])
+                                  note: f.intl.string(f.t.vT61Nz),
+                                  children: f.intl.string(f.t['9ID+Ki'])
                               }),
-                              (0, i.jsx)(a.FormSwitch, {
+                              (0, i.jsx)(a.j7V, {
                                   value: n,
                                   onChange: this.handleToggleShortcutStartMenu,
-                                  note: _.intl.string(_.t.cpYp0N),
-                                  children: _.intl.string(_.t.vNpUMz)
+                                  note: f.intl.string(f.t.cpYp0N),
+                                  children: f.intl.string(f.t.vNpUMz)
                               }),
                               (0, i.jsx)(g.Z, {})
                           ]
@@ -118,8 +113,8 @@ class C extends r.PureComponent {
     render() {
         return (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(p.Z, { currentRoute: f.Z5c.APPLICATION_LIBRARY_SETTINGS }),
-                (0, i.jsx)(a.ScrollerAuto, {
+                (0, i.jsx)(p.Z, { currentRoute: _.Z5c.APPLICATION_LIBRARY_SETTINGS }),
+                (0, i.jsx)(a.w0Z, {
                     className: E.scroller,
                     children: this.renderBody()
                 })
@@ -127,29 +122,28 @@ class C extends r.PureComponent {
         });
     }
     constructor(...e) {
-        var t, n, i;
+        var t, n;
         super(...e),
-            (t = this),
-            (n = 'handleRestoreHiddenLibraryApplication'),
-            (i = (e) => {
-                let t = h.x9(e.getFlags(), f.eHb.HIDDEN);
-                s.h(e.id, e.branchId, t), this.trackRestoreApplication(e, h.yE(t, f.eHb.HIDDEN));
+            (t = 'handleRestoreHiddenLibraryApplication'),
+            (n = (e) => {
+                let t = h.x9(e.getFlags(), _.eHb.HIDDEN);
+                s.h(e.id, e.branchId, t), this.trackRestoreApplication(e, h.yE(t, _.eHb.HIDDEN));
             }),
-            n in t
-                ? Object.defineProperty(t, n, {
-                      value: i,
+            t in this
+                ? Object.defineProperty(this, t, {
+                      value: n,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (t[n] = i);
+                : (this[t] = n);
     }
 }
 function v() {
     let e = {
         installShortcutDesktop: c.Xc.useSetting(),
         installShortcutStartMenu: c.Pe.useSetting(),
-        hiddenLibraryApplicationViewItems: (0, l.e7)([d.Z], () => d.Z.hiddenLibraryApplicationViewItems)
+        hiddenLibraryApplicationViewItems: (0, r.e7)([d.Z], () => d.Z.hiddenLibraryApplicationViewItems)
     };
     return (0, i.jsx)(C, { ...e });
 }

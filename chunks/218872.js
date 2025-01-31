@@ -1,15 +1,9 @@
-n.d(t, {
-    M: function () {
-        return r;
-    }
-}),
-    n(757143),
-    n(653041);
+n.d(t, { M: () => s }), n(757143), n(653041);
 let i = /[^0-9/]/g;
-function r(e) {
+function s(e) {
     let t = e.replace(i, '').split('/'),
         n = t[0],
-        r = t[1],
-        s = [];
-    return parseInt(n, 10) > 12 && (n = n.substring(0, 1)), s.push(n), (parseInt(n, 10) > 1 || 2 === n.length || (null != r && '' !== r)) && s.push('/'), null != r && '' !== r && parseInt(r, 10) > 99 && (r = (r + '').substring(0, 2)), s.push(r), s.join('');
+        s = t[1],
+        r = [];
+    return parseInt(n, 10) > 12 && (n = n.substring(0, 1)), r.push(n), (parseInt(n, 10) > 1 || 2 === n.length || (null != s && '' !== s)) && r.push('/'), null != s && '' !== s && parseInt(s, 10) > 99 && (s = (s + '').substring(0, 2)), r.push(s), r.join('');
 }

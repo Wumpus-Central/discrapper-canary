@@ -1,20 +1,16 @@
 function i(e) {
-    return function (n) {
-        var r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            i = n.match(e.matchPattern);
+    return function (t) {
+        var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            i = t.match(e.matchPattern);
         if (!i) return null;
-        var a = i[0],
-            o = n.match(e.parsePattern);
-        if (!o) return null;
-        var s = e.valueCallback ? e.valueCallback(o[0]) : o[0];
+        var r = i[0],
+            a = t.match(e.parsePattern);
+        if (!a) return null;
+        var s = e.valueCallback ? e.valueCallback(a[0]) : a[0];
         return {
-            value: (s = r.valueCallback ? r.valueCallback(s) : s),
-            rest: n.slice(a.length)
+            value: (s = n.valueCallback ? n.valueCallback(s) : s),
+            rest: t.slice(r.length)
         };
     };
 }
-r.d(n, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });

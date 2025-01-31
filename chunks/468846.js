@@ -1,19 +1,14 @@
 t.d(l, {
-    ZP: function () {
-        return c;
-    },
-    pn: function () {
-        return i;
-    }
+    ZP: () => c,
+    pn: () => m
 });
 var n,
-    i,
-    r = t(200651),
-    a = t(192379),
-    o = t(591759),
-    s = t(340702);
-function d(e, l) {
-    let t = o.Z.toURLSafe(null != e ? e : '');
+    i = t(200651),
+    r = t(192379),
+    s = t(591759),
+    a = t(340702);
+function o(e, l) {
+    let t = s.Z.toURLSafe(null != e ? e : '');
     if (null === t) return '';
     if (null == l) return t.toString();
     for (let e in l) {
@@ -22,66 +17,64 @@ function d(e, l) {
     }
     return t.toString();
 }
-function u(e) {
+function d(e) {
     let { src: l, autoMute: t, ...n } = e,
-        i = a.useRef(null),
-        o = a.useCallback(
+        s = r.useRef(null),
+        a = r.useCallback(
             (e) => {
-                if (!!e.data['x-tiktok-player'] && 'https://www.tiktok.com' === e.origin) {
-                    if ('onPlayerReady' === e.data.type) {
-                        var l, n, r, a;
-                        t &&
-                            (null === (a = i.current) ||
-                                void 0 === a ||
-                                null === (r = a.contentWindow) ||
-                                void 0 === r ||
-                                r.postMessage(
-                                    {
-                                        type: 'mute',
-                                        'x-tiktok-player': !0
-                                    },
-                                    e.origin
-                                )),
-                            null === (n = i.current) ||
-                                void 0 === n ||
-                                null === (l = n.contentWindow) ||
-                                void 0 === l ||
-                                l.postMessage(
-                                    {
-                                        type: 'play',
-                                        'x-tiktok-player': !0
-                                    },
-                                    e.origin
-                                );
-                    }
+                if (e.data['x-tiktok-player'] && 'https://www.tiktok.com' === e.origin && 'onPlayerReady' === e.data.type) {
+                    var l, n, i, r;
+                    t &&
+                        (null === (r = s.current) ||
+                            void 0 === r ||
+                            null === (i = r.contentWindow) ||
+                            void 0 === i ||
+                            i.postMessage(
+                                {
+                                    type: 'mute',
+                                    'x-tiktok-player': !0
+                                },
+                                e.origin
+                            )),
+                        null === (n = s.current) ||
+                            void 0 === n ||
+                            null === (l = n.contentWindow) ||
+                            void 0 === l ||
+                            l.postMessage(
+                                {
+                                    type: 'play',
+                                    'x-tiktok-player': !0
+                                },
+                                e.origin
+                            );
                 }
             },
             [t]
         );
-    a.useEffect(() => (window.addEventListener('message', o), () => window.removeEventListener('message', o)), [o]);
-    let s = d(l, { utm_source: 'discord.gg' });
-    return (0, r.jsx)(h, {
-        src: s,
-        ref: i,
+    r.useEffect(() => (window.addEventListener('message', a), () => window.removeEventListener('message', a)), [a]);
+    let d = o(l, { utm_source: 'discord.gg' });
+    return (0, i.jsx)(h, {
+        src: d,
+        ref: s,
         ...n
     });
 }
-function m(e) {
+function u(e) {
     let { src: l, autoMute: t, ...n } = e,
-        i = d(l, {
+        r = o(l, {
             autoplay: '1',
             auto_play: '1',
             mute: t ? '1' : void 0
         });
-    return (0, r.jsx)(h, {
-        src: i,
+    return (0, i.jsx)(h, {
+        src: r,
         ...n
     });
 }
-let h = a.forwardRef(function (e, l) {
-    return (0, r.jsx)('iframe', {
+let h = r.forwardRef(function (e, l) {
+    return (0, i.jsx)('iframe', {
         ref: l,
-        className: s.embedIframe,
+        className: a.embedIframe,
         allow: 'autoplay',
         frameBorder: 0,
         scrolling: 'no',
@@ -89,14 +82,14 @@ let h = a.forwardRef(function (e, l) {
         ...e
     });
 });
+var m = (((n = {}).YOUTUBE = 'YouTube'), (n.TIKTOK = 'TikTok'), n);
 function c(e) {
     switch (e.provider) {
         case 'YouTube':
-            return (0, r.jsx)(m, { ...e });
+            return (0, i.jsx)(u, { ...e });
         case 'TikTok':
-            return (0, r.jsx)(u, { ...e });
+            return (0, i.jsx)(d, { ...e });
         default:
-            return (0, r.jsx)(h, { ...e });
+            return (0, i.jsx)(h, { ...e });
     }
 }
-((n = i || (i = {})).YOUTUBE = 'YouTube'), (n.TIKTOK = 'TikTok');

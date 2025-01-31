@@ -1,16 +1,12 @@
-t.d(e, {
-    Z: function () {
-        return r;
-    }
-});
+t.d(e, { Z: () => a });
 var l = t(200651);
 t(192379);
 var i = t(906732);
-function r(n, e) {
+function a(n, e) {
     return function (t) {
-        let { analyticsLocations: r } = (0, i.ZP)(e);
+        let { analyticsLocations: a } = (0, i.ZP)(e);
         return (0, l.jsx)(i.Gt, {
-            value: r,
+            value: a,
             children: (0, l.jsx)(n, { ...t })
         });
     };

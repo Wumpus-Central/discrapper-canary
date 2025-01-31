@@ -1,54 +1,50 @@
 n.d(t, {
-    Z: function () {
-        return h;
-    },
-    e: function () {
-        return l;
-    }
+    Z: () => h,
+    e: () => d
 });
 var i,
-    l,
-    r = n(200651);
+    l = n(200651);
 n(192379);
 var a = n(120356),
-    s = n.n(a),
-    o = n(600164),
-    c = n(507675),
-    d = n(576976);
+    r = n.n(a),
+    s = n(600164),
+    o = n(507675),
+    c = n(576976),
+    d = (((i = {})[(i.TOP = 0)] = 'TOP'), (i[(i.BOTTOM = 1)] = 'BOTTOM'), i);
 function u(e) {
-    let { disableGradients: t = !1, renderHeader: n, renderBottomLeft: i, renderBottomCenter: l, renderBottomRight: a, renderCenter: s } = e;
-    return (0, r.jsxs)('div', {
-        className: d.videoControls,
+    let { disableGradients: t = !1, renderHeader: n, renderBottomLeft: i, renderBottomCenter: a, renderBottomRight: r, renderCenter: o } = e;
+    return (0, l.jsxs)('div', {
+        className: c.videoControls,
         children: [
-            !(0 === t || !0 === t) && (0, r.jsx)('div', { className: d.gradientTop }),
-            !(1 === t || !0 === t) && (0, r.jsx)('div', { className: d.gradientBottom }),
-            (0, r.jsx)('div', {
-                className: d.topControls,
+            !(0 === t || !0 === t) && (0, l.jsx)('div', { className: c.gradientTop }),
+            !(1 === t || !0 === t) && (0, l.jsx)('div', { className: c.gradientBottom }),
+            (0, l.jsx)('div', {
+                className: c.topControls,
                 children: null == n ? void 0 : n()
             }),
-            null == s ? void 0 : s(),
-            (0, r.jsxs)('div', {
-                className: d.bottomControls,
+            null == o ? void 0 : o(),
+            (0, l.jsxs)('div', {
+                className: c.bottomControls,
                 children: [
-                    (0, r.jsx)(o.Z, {
+                    (0, l.jsx)(s.Z, {
                         grow: 1,
-                        align: o.Z.Align.CENTER,
-                        className: d.edgeControls,
+                        align: s.Z.Align.CENTER,
+                        className: c.edgeControls,
                         children: null == i ? void 0 : i()
                     }),
-                    (0, r.jsx)(o.Z, {
+                    (0, l.jsx)(s.Z, {
                         grow: 1,
-                        justify: o.Z.Justify.CENTER,
-                        align: o.Z.Align.CENTER,
-                        children: null == l ? void 0 : l()
+                        justify: s.Z.Justify.CENTER,
+                        align: s.Z.Align.CENTER,
+                        children: null == a ? void 0 : a()
                     }),
                     ' ',
-                    (0, r.jsx)(o.Z, {
+                    (0, l.jsx)(s.Z, {
                         grow: 1,
-                        justify: o.Z.Justify.END,
-                        align: o.Z.Align.CENTER,
-                        className: d.edgeControls,
-                        children: null == a ? void 0 : a()
+                        justify: s.Z.Justify.END,
+                        align: s.Z.Align.CENTER,
+                        className: c.edgeControls,
+                        children: null == r ? void 0 : r()
                     })
                 ]
             })
@@ -56,26 +52,25 @@ function u(e) {
     });
 }
 function h(e) {
-    let { screenMessage: t, onDoubleClick: n, onActive: i, onForceIdle: l, idle: a, children: o, renderChatToasts: h, renderVoiceChannelEffects: p, style: m, ...f } = e;
-    return (0, r.jsxs)('div', {
-        className: s()(d.root, { [d.idle]: a }),
+    let { screenMessage: t, onDoubleClick: n, onActive: i, onForceIdle: a, idle: s, children: d, renderChatToasts: h, renderVoiceChannelEffects: p, style: m, ...f } = e;
+    return (0, l.jsxs)('div', {
+        className: r()(c.root, { [c.idle]: s }),
         style: m,
         onMouseMove: i,
         onMouseDown: i,
-        onMouseLeave: l,
+        onMouseLeave: a,
         onDoubleClick: n,
         children: [
-            o,
+            d,
             null != t
-                ? (0, r.jsx)(c.Z, {
+                ? (0, l.jsx)(o.Z, {
                       size: 'large',
                       ...t
                   })
                 : null,
-            (0, r.jsx)(u, { ...f }),
+            (0, l.jsx)(u, { ...f }),
             null == h ? void 0 : h(),
             null == p ? void 0 : p()
         ]
     });
 }
-((i = l || (l = {}))[(i.TOP = 0)] = 'TOP'), (i[(i.BOTTOM = 1)] = 'BOTTOM');

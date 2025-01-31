@@ -1,185 +1,155 @@
-r.d(n, {
-    B0: function () {
-        return L;
-    },
-    Hc: function () {
-        return M;
-    },
-    J8: function () {
-        return k;
-    },
-    Q6: function () {
-        return O;
-    },
-    V9: function () {
-        return G;
-    },
-    WD: function () {
-        return P;
-    },
-    X_: function () {
-        return x;
-    },
-    Zt: function () {
-        return A;
-    },
-    Zv: function () {
-        return N;
-    },
-    _V: function () {
-        return R;
-    },
-    cv: function () {
-        return B;
-    },
-    gM: function () {
-        return V;
-    },
-    jl: function () {
-        return U;
-    },
-    sM: function () {
-        return D;
-    },
-    z: function () {
-        return w;
-    }
-});
-var i = r(411104);
-var a = r(606301),
-    o = r(134432),
-    s = r(581883),
-    l = r(430824),
-    u = r(117530),
-    c = r(768581),
-    d = r(358085),
-    f = r(913663),
-    p = r(373228),
-    h = r(611480),
-    _ = r(981631);
-let { API_ENDPOINT: m, MEDIA_PROXY_ENDPOINT: g, PROJECT_ENV: E, ASSET_ENDPOINT: v, CDN_HOST: y } = window.GLOBAL_ENV,
-    b = Object.values(p.og),
-    I = decodeURIComponent(_.ANM.STICKER_ASSET('[\\d]+', '('.concat(b.join('|'), ')'))),
-    T = RegExp('('.concat(location.protocol).concat(v, '|').concat(location.protocol).concat(g, ')(').concat(I, ')'), 'ig'),
-    S = RegExp(''.concat(location.protocol).concat(m, '(').concat(I, ')'), 'ig'),
-    A = (e) => {
+n.d(t, {
+    B0: () => O,
+    Hc: () => P,
+    J8: () => w,
+    Q6: () => C,
+    V9: () => U,
+    WD: () => L,
+    X_: () => D,
+    Zt: () => T,
+    Zv: () => A,
+    _V: () => N,
+    cv: () => k,
+    gM: () => Z,
+    jl: () => M,
+    sM: () => R,
+    z: () => x
+}),
+    n(411104);
+var i = n(606301),
+    r = n(134432),
+    a = n(581883),
+    s = n(430824),
+    o = n(117530),
+    l = n(768581),
+    u = n(358085),
+    c = n(913663),
+    d = n(373228),
+    f = n(611480),
+    _ = n(981631);
+let { API_ENDPOINT: p, MEDIA_PROXY_ENDPOINT: h, PROJECT_ENV: m, ASSET_ENDPOINT: g, CDN_HOST: E } = window.GLOBAL_ENV,
+    v = Object.values(d.og),
+    y = decodeURIComponent(_.ANM.STICKER_ASSET('[\\d]+', '('.concat(v.join('|'), ')'))),
+    I = RegExp('('.concat(location.protocol).concat(g, '|').concat(location.protocol).concat(h, ')(').concat(y, ')'), 'ig'),
+    b = RegExp(''.concat(location.protocol).concat(p, '(').concat(y, ')'), 'ig'),
+    T = (e) => {
         if (null != e.cover_sticker_id) {
-            let n = e.stickers.find((n) => n.id === e.cover_sticker_id);
-            if (null != n) return n;
+            let t = e.stickers.find((t) => t.id === e.cover_sticker_id);
+            if (null != t) return t;
         }
         return e.stickers[0];
     },
-    C = (e) => {
+    S = (e) => {
         switch (e) {
-            case p.u3.PNG:
-                return c.$k ? p.og.WEBP : p.og.PNG;
-            case p.u3.APNG:
-                return p.og.APNG;
-            case p.u3.LOTTIE:
-                return p.og.LOTTIE;
-            case p.u3.GIF:
-                return p.og.GIF;
+            case d.u3.PNG:
+                return l.$k ? d.og.WEBP : d.og.PNG;
+            case d.u3.APNG:
+                return d.og.APNG;
+            case d.u3.LOTTIE:
+                return d.og.LOTTIE;
+            case d.u3.GIF:
+                return d.og.GIF;
             default:
                 throw Error('Unexpected format type: '.concat(e));
         }
     },
-    N = (e) => {
+    A = (e) => {
         switch (e) {
             case 'application/json':
-                return p.u3.LOTTIE;
+                return d.u3.LOTTIE;
             case 'image/apng':
-                return p.u3.APNG;
+                return d.u3.APNG;
             case 'image/png':
             case 'image/webp':
-                return p.u3.PNG;
+                return d.u3.PNG;
             case 'image/gif':
-                return p.u3.GIF;
+                return d.u3.GIF;
             default:
                 throw Error('Unexpected file type: '.concat(e));
         }
     },
-    R = (e) => (null == e ? null : ''.concat(e.name, '.').concat(C(e.format_type))),
-    O = function (e) {
-        let { isPreview: n = !1, size: r = h.lE } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    N = (e) => (null == e ? null : ''.concat(e.name, '.').concat(S(e.format_type))),
+    C = function (e) {
+        let { isPreview: t = !1, size: n = f.lE } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         if (null == e.format_type) return null;
         let i = e.format_type;
-        e.format_type === p.u3.GIF && n && (i = p.u3.PNG);
-        let a = C(i),
+        e.format_type === d.u3.GIF && t && (i = d.u3.PNG);
+        let a = S(i),
             s = _.ANM.STICKER_ASSET(e.id, a),
-            l = a === p.og.WEBP ? '&quality=lossless' : '';
-        if ('development' !== E) {
-            if (e.format_type === p.u3.LOTTIE) return ''.concat(location.protocol).concat(v).concat(s);
-            let i = e.format_type === p.u3.APNG && n && !(0, d.isAndroid)() ? '&passthrough=false' : '',
-                a = Math.min(2, (0, o.x_)());
+            o = a === d.og.WEBP ? '&quality=lossless' : '';
+        if ('development' !== m) {
+            if (e.format_type === d.u3.LOTTIE) return ''.concat(location.protocol).concat(g).concat(s);
+            let i = e.format_type === d.u3.APNG && t && !(0, u.isAndroid)() ? '&passthrough=false' : '',
+                a = Math.min(2, (0, r.x_)());
             return ''
                 .concat(location.protocol)
-                .concat(g)
+                .concat(h)
                 .concat(s, '?size=')
-                .concat((0, o.oO)(r * a))
+                .concat((0, r.oO)(n * a))
                 .concat(i)
-                .concat(l);
+                .concat(o);
         }
-        return ''.concat(location.protocol).concat(m).concat(s);
+        return ''.concat(location.protocol).concat(p).concat(s);
     },
-    D = (e, n) => {
-        let r;
+    R = (e, t) => {
+        let n;
         let i = e.banner_asset_id;
         if (null == i) return null;
-        let a = c.$k ? 'webp' : 'png';
+        let a = l.$k ? 'webp' : 'png';
         return (
-            (r =
-                null != y
-                    ? ''.concat(location.protocol, '//').concat(y, '/app-assets/').concat(h.Ks, '/store/').concat(i, '.').concat(a)
+            (n =
+                null != E
+                    ? ''.concat(location.protocol, '//').concat(E, '/app-assets/').concat(f.Ks, '/store/').concat(i, '.').concat(a)
                     : ''
                           .concat(location.protocol)
-                          .concat(m)
-                          .concat(_.ANM.STORE_ASSET(h.Ks, i, a))),
-            null != n && (r += '?size='.concat((0, o.oO)(n))),
-            r
+                          .concat(p)
+                          .concat(_.ANM.STORE_ASSET(f.Ks, i, a))),
+            null != t && (n += '?size='.concat((0, r.oO)(t))),
+            n
         );
     },
-    L = (e) => null != e.match('development' !== E ? T : S),
-    x = (e) =>
+    O = (e) => null != e.match('development' !== m ? I : b),
+    D = (e) =>
         e.stickers.some((e) => {
-            let { format_type: n } = e;
-            return n === p.u3.APNG || n === p.u3.LOTTIE || n === p.u3.GIF;
+            let { format_type: t } = e;
+            return t === d.u3.APNG || t === d.u3.LOTTIE || t === d.u3.GIF;
         }),
-    w = (e) => ({
-        type: p.Ih.PACK,
+    x = (e) => ({
+        type: d.Ih.PACK,
         id: e.id,
         name: e.name,
         stickers: e.stickers,
-        previewSticker: A(e)
+        previewSticker: T(e)
     }),
-    P = (e, n) => (e === h.yr.ANIMATE_ON_INTERACTION ? n : e !== h.yr.NEVER_ANIMATE),
-    M = (e, n, r, i) => {
-        if (u.Z.getUploadCount(r, i) > 0) return !0;
-        let o = f.Z.getStickerPreview(r, i);
-        if (null != o && o.length > 0) return !0;
+    L = (e, t) => (e === f.yr.ANIMATE_ON_INTERACTION ? t : e !== f.yr.NEVER_ANIMATE),
+    P = (e, t, n, r) => {
+        if (o.Z.getUploadCount(n, r) > 0) return !0;
+        let a = c.Z.getStickerPreview(n, r);
+        if (null != a && a.length > 0) return !0;
         switch (e) {
-            case p.V0.STICKER_PICKER:
-                return '' !== n.trim();
-            case p.V0.AUTOCOMPLETE:
-            case p.V0.EXPRESSION_SUGGESTIONS:
-                return (0, a.wN)(n).length > 1;
-            case p.V0.BUILT_IN_INTEGRATION:
+            case d.V0.STICKER_PICKER:
+                return '' !== t.trim();
+            case d.V0.AUTOCOMPLETE:
+            case d.V0.EXPRESSION_SUGGESTIONS:
+                return (0, i.wN)(t).length > 1;
+            case d.V0.BUILT_IN_INTEGRATION:
             default:
                 return !1;
         }
     },
-    k = (e) => e.type === p.n0.GUILD,
-    U = (e) => e.type === p.n0.STANDARD,
-    B = (e) => (e.stickerItems.length > 0 ? e.stickerItems : e.stickers.length > 0 ? e.stickers : []),
-    G = (e) => {
+    w = (e) => e.type === d.n0.GUILD,
+    M = (e) => e.type === d.n0.STANDARD,
+    k = (e) => (e.stickerItems.length > 0 ? e.stickerItems : e.stickers.length > 0 ? e.stickers : []),
+    U = (e) => {
         if (null === e) return !1;
-        let n = e.guild_id;
-        return void 0 !== l.Z.getGuild(n);
+        let t = e.guild_id;
+        return void 0 !== s.Z.getGuild(t);
     },
-    Z = [];
-function F() {
-    var e, n;
-    return null !== (n = null === (e = s.Z.frecencyWithoutFetchingLatest.favoriteStickers) || void 0 === e ? void 0 : e.stickerIds) && void 0 !== n ? n : Z;
+    G = [];
+function B() {
+    var e, t;
+    return null !== (t = null === (e = a.Z.frecencyWithoutFetchingLatest.favoriteStickers) || void 0 === e ? void 0 : e.stickerIds) && void 0 !== t ? t : G;
 }
-function V(e) {
-    return F().includes(e);
+function Z(e) {
+    return B().includes(e);
 }

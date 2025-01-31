@@ -1,1 +1,1 @@
-e.exports = { lineClamp: 'lineClamp_c79643' };
+e.exports = { lineClamp: 'lineClamp__0b48b' };

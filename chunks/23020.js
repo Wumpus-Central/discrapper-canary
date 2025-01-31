@@ -1,6 +1,7 @@
 e.exports = {
-    container: 'container_d00e26',
-    banner: 'banner_d00e26 max-width_d00e26',
-    featureCards: 'featureCards_d00e26 max-width_d00e26',
-    chatCheckIcon: 'chatCheckIcon_d00e26'
+    container: 'container__8e680',
+    'max-width': 'max-width__8e680',
+    banner: 'banner__8e680 max-width__8e680',
+    featureCards: 'featureCards__8e680 max-width__8e680',
+    chatCheckIcon: 'chatCheckIcon__8e680'
 };

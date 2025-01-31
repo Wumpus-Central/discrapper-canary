@@ -1,66 +1,62 @@
-r.d(n, {
-    I: function () {
-        return h;
-    }
-});
-var i = r(200651),
-    a = r(192379),
-    o = r(642128),
-    s = r(481060),
-    l = r(345332),
-    u = r(417153),
-    c = r(561466),
-    d = r(224228);
-let f = {
+n.d(t, { I: () => _ });
+var i = n(200651),
+    r = n(192379),
+    a = n(642128),
+    s = n(481060),
+    o = n(345332),
+    l = n(417153),
+    u = n(561466),
+    c = n(224228);
+let d = {
         duration: 300,
         friction: 24,
         tension: 280
     },
-    p = {
-        [c.az.TOP]: {
-            styles: d.containerTop,
+    f = {
+        [u.az.TOP]: {
+            styles: c.containerTop,
             transition: {
                 trail: 400,
                 from: {
                     transform: 'translate3d(0, -100%, 0)',
                     opacity: 0,
-                    config: f
+                    config: d
                 },
                 enter: {
                     transform: 'translate3d(0, -0px, 0)',
                     opacity: 1,
-                    config: f
+                    config: d
                 },
                 leave: {
                     transform: 'translate3d(0, -100%, 0)',
                     opacity: 0,
                     config: {
-                        ...f,
+                        ...d,
                         friction: 40,
                         clamp: !0
                     }
                 }
             }
         },
-        [c.az.BOTTOM]: {
-            styles: d.containerBottom,
+        [u.az.BOTTOM]: {
+            styles: c.containerBottom,
             transition: {
                 trail: 400,
                 from: {
                     transform: 'translate3d(0, 100%, 0)',
                     opacity: 0,
-                    config: f
+                    config: d
                 },
                 enter: {
                     transform: 'translate3d(0, 0px, 0)',
                     opacity: 1,
-                    config: f
+                    config: d
                 },
                 leave: {
                     transform: 'translate3d(0, 100%, 0)',
                     opacity: 0,
                     config: {
-                        ...f,
+                        ...d,
                         friction: 40,
                         clamp: !0
                     }
@@ -68,47 +64,47 @@ let f = {
             }
         }
     };
-function h() {
-    var e, n, r, d;
-    let f = (0, u.Es)((e) => e.currentToast),
-        h = a.useRef(null !== (r = null == f ? void 0 : null === (e = f.options) || void 0 === e ? void 0 : e.position) && void 0 !== r ? r : c.si.position),
-        _ = a.useRef(null !== (d = null == f ? void 0 : null === (n = f.options) || void 0 === n ? void 0 : n.duration) && void 0 !== d ? d : c.si.duration);
-    a.useEffect(() => {
-        if (null != f) {
-            var e, n, r, i;
-            (h.current = null !== (r = null === (e = f.options) || void 0 === e ? void 0 : e.position) && void 0 !== r ? r : c.si.position), (_.current = null !== (i = null === (n = f.options) || void 0 === n ? void 0 : n.duration) && void 0 !== i ? i : c.si.duration);
+function _() {
+    var e, t, n, c;
+    let d = (0, l.Es)((e) => e.currentToast),
+        _ = r.useRef(null !== (n = null == d ? void 0 : null === (e = d.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : u.si.position),
+        p = r.useRef(null !== (c = null == d ? void 0 : null === (t = d.options) || void 0 === t ? void 0 : t.duration) && void 0 !== c ? c : u.si.duration);
+    r.useEffect(() => {
+        if (null != d) {
+            var e, t, n, i;
+            (_.current = null !== (n = null === (e = d.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : u.si.position), (p.current = null !== (i = null === (t = d.options) || void 0 === t ? void 0 : t.duration) && void 0 !== i ? i : u.si.duration);
         }
-    }, [f]);
-    let m = a.useMemo(() => {
-            var e, n;
-            return p[null !== (n = null == f ? void 0 : null === (e = f.options) || void 0 === e ? void 0 : e.position) && void 0 !== n ? n : h.current];
-        }, [f]),
-        g = (0, s.useTransition)(f, {
+    }, [d]);
+    let h = r.useMemo(() => {
+            var e, t;
+            return f[null !== (t = null == d ? void 0 : null === (e = d.options) || void 0 === e ? void 0 : e.position) && void 0 !== t ? t : _.current];
+        }, [d]),
+        m = (0, s.Yzy)(d, {
             keys: (e) => {
-                var n;
-                return null !== (n = null == e ? void 0 : e.id) && void 0 !== n ? n : '';
+                var t;
+                return null !== (t = null == e ? void 0 : e.id) && void 0 !== t ? t : '';
             },
-            ...m.transition
+            ...h.transition
         });
     return (
-        a.useEffect(() => {
-            null != f &&
+        r.useEffect(() => {
+            null != d &&
                 setTimeout(() => {
-                    (0, u.z5)();
-                }, _.current);
-        }, [f]),
+                    (0, l.z5)();
+                }, p.current);
+        }, [d]),
         (0, i.jsx)('div', {
-            className: m.styles,
-            children: g((e, n) =>
-                null === n
+            className: h.styles,
+            children: m((e, t) =>
+                null === t
                     ? null
                     : (0, i.jsx)(
-                          o.animated.div,
+                          a.animated.div,
                           {
                               style: e,
-                              children: (0, i.jsx)(l.F, { ...n })
+                              children: (0, i.jsx)(o.F, { ...t })
                           },
-                          n.id
+                          t.id
                       )
             )
         })

@@ -1,7 +1,8 @@
-e.exports = {
-    header: 'header_ccf237',
-    linkButton: 'linkButton_ccf237',
-    linkTextContainer: 'linkTextContainer_ccf237',
-    linkIcon: 'linkIcon_ccf237',
-    linksContainer: 'linksContainer_ccf237'
+var i = {
+    header: 'header_b1585f',
+    linkButton: 'linkButton_b1585f',
+    linkTextContainer: 'linkTextContainer_b1585f',
+    linkIcon: 'linkIcon_b1585f',
+    linksContainer: 'linksContainer_b1585f'
 };
+e.exports = i;

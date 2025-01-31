@@ -1,15 +1,10 @@
-n.d(t, {
-    Z: function () {
-        return l;
-    }
-}),
-    n(47120);
-var s = n(200651),
-    r = n(192379),
-    i = n(748780),
-    o = n(481060),
-    a = n(632154);
-class l extends r.Component {
+s.d(t, { Z: () => a }), s(47120);
+var n = s(200651),
+    r = s(192379),
+    i = s(748780),
+    o = s(481060),
+    l = s(632154);
+class a extends r.Component {
     componentWillEnter(e) {
         let { offset: t } = this.state;
         t.setValue(1),
@@ -30,8 +25,8 @@ class l extends r.Component {
     }
     render() {
         let { isExiting: e, offset: t } = this.state;
-        return (0, s.jsx)(i.Z.div, {
-            className: a.wrapper,
+        return (0, n.jsx)(i.Z.div, {
+            className: l.wrapper,
             style: {
                 left: 0,
                 position: e ? 'absolute' : 'relative',
@@ -45,29 +40,28 @@ class l extends r.Component {
                     }
                 ]
             },
-            children: (0, s.jsx)(o.ModalContent, {
-                className: a.contentWrapper,
+            children: (0, n.jsx)(o.hzk, {
+                className: l.contentWrapper,
                 children: this.props.children
             })
         });
     }
     constructor(...e) {
-        var t, n, s;
+        var t, s;
         super(...e),
-            (t = this),
-            (n = 'state'),
+            (t = 'state'),
             (s = {
                 isExiting: !1,
                 offset: new i.Z.Value(0),
                 selectedValue: null
             }),
-            n in t
-                ? Object.defineProperty(t, n, {
+            t in this
+                ? Object.defineProperty(this, t, {
                       value: s,
                       enumerable: !0,
                       configurable: !0,
                       writable: !0
                   })
-                : (t[n] = s);
+                : (this[t] = s);
     }
 }

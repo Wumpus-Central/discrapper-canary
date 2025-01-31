@@ -1,4 +1,5 @@
 e.exports = {
-    clyde: 'clyde_ca7c46 logo_ca7c46',
-    type: 'type_ca7c46 logo_ca7c46'
+    logo: 'logo__675f9',
+    clyde: 'clyde__675f9 logo__675f9',
+    type: 'type__675f9 logo__675f9'
 };

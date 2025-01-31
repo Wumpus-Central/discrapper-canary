@@ -1,38 +1,30 @@
-r.d(n, {
-    FC: function () {
-        return o;
-    },
-    Zj: function () {
-        return u;
-    },
-    jA: function () {
-        return s;
-    },
-    rs: function () {
-        return l;
-    }
+n.d(t, {
+    FC: () => a,
+    Zj: () => l,
+    jA: () => s,
+    rs: () => o
 });
-var i = r(433517);
-let a = 'MediaPlayerVolume';
-function o() {
+var i = n(433517);
+let r = 'MediaPlayerVolume';
+function a() {
     var e;
-    let { volume: n } = null !== (e = i.K.get(a)) && void 0 !== e ? e : {};
-    return 'number' != typeof n && (n = 1), (n = Math.min(1, Math.max(0, n)));
+    let { volume: t } = null !== (e = i.K.get(r)) && void 0 !== e ? e : {};
+    return 'number' != typeof t && (t = 1), (t = Math.min(1, Math.max(0, t)));
 }
 function s(e) {
-    i.K.set(a, {
+    i.K.set(r, {
         volume: e,
-        muted: l()
+        muted: o()
     });
 }
-function l() {
+function o() {
     var e;
-    let { muted: n } = null !== (e = i.K.get(a)) && void 0 !== e ? e : {};
-    return 'boolean' != typeof n && (n = !1), n;
+    let { muted: t } = null !== (e = i.K.get(r)) && void 0 !== e ? e : {};
+    return 'boolean' != typeof t && (t = !1), t;
 }
-function u(e) {
-    i.K.set(a, {
-        volume: o(),
+function l(e) {
+    i.K.set(r, {
+        volume: a(),
         muted: e
     });
 }

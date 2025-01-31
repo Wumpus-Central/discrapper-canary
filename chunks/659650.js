@@ -1,21 +1,20 @@
-r.r(
-    (e.exports = {
-        emojiButton: 'emojiButton_d91a75',
-        emojiButtonNormal: 'emojiButtonNormal_d91a75 emojiButton_d91a75',
-        emojiButtonHovered: 'emojiButtonHovered_d91a75 emojiButton_d91a75',
-        spriteContainer: 'spriteContainer_d91a75',
-        sprite: 'sprite_d91a75',
-        spriteColored: 'spriteColored_d91a75',
-        spriteGreyscale: 'spriteGreyscale_d91a75',
-        spritePremiumColored: 'spritePremiumColored_d91a75',
-        reducedMotion: 'reducedMotion_d91a75',
-        spritePremiumPulsing: 'spritePremiumPulsing_d91a75',
-        inactive: 'inactive_d91a75',
-        active: 'active_d91a75',
-        premiumTooltip: 'premiumTooltip_d91a75',
-        premiumTooltipContainer: 'premiumTooltipContainer_d91a75',
-        premiumUnlockAnimation: 'premiumUnlockAnimation_d91a75',
-        shrink: 'shrink_d91a75',
-        premiumTooltipText: 'premiumTooltipText_d91a75'
-    })
-);
+var i = {
+    emojiButton: 'emojiButton__04eed',
+    emojiButtonHovered: 'emojiButtonHovered__04eed emojiButton__04eed',
+    emojiButtonNormal: 'emojiButtonNormal__04eed emojiButton__04eed',
+    spriteContainer: 'spriteContainer__04eed',
+    sprite: 'sprite__04eed',
+    spriteColored: 'spriteColored__04eed',
+    spriteGreyscale: 'spriteGreyscale__04eed',
+    spritePremiumColored: 'spritePremiumColored__04eed',
+    reducedMotion: 'reducedMotion__04eed',
+    spritePremiumPulsing: 'spritePremiumPulsing__04eed',
+    inactive: 'inactive__04eed',
+    active: 'active__04eed',
+    premiumTooltip: 'premiumTooltip__04eed',
+    premiumTooltipContainer: 'premiumTooltipContainer__04eed',
+    premiumUnlockAnimation: 'premiumUnlockAnimation__04eed',
+    shrink: 'shrink__04eed',
+    premiumTooltipText: 'premiumTooltipText__04eed'
+};
+n.r((e.exports = i));

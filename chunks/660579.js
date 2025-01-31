@@ -1,38 +1,33 @@
-r.d(n, {
-    Z: function () {
-        return l;
-    }
-});
-var i = r(47120);
-var a = r(200651),
-    o = r(192379),
-    s = r(810097);
-function l(e) {
-    let { children: n, className: r, onShowToolbar: i, ...l } = e,
-        u = o.useRef(null),
-        [c, d] = o.useState(!1),
+n.d(t, { Z: () => s }), n(47120);
+var i = n(200651),
+    r = n(192379),
+    a = n(810097);
+function s(e) {
+    let { children: t, className: n, onShowToolbar: s, ...o } = e,
+        l = r.useRef(null),
+        [u, c] = r.useState(!1),
+        d = () => {
+            null == s || s(), c(!0);
+        },
         f = () => {
-            null == i || i(), d(!0);
-        },
-        p = () => {
-            d(!1);
+            c(!1);
         };
-    return (0, a.jsxs)('div', {
-        className: r,
-        onMouseEnter: f,
-        onMouseLeave: p,
-        onFocus: f,
+    return (0, i.jsxs)('div', {
+        className: n,
+        onMouseEnter: d,
+        onMouseLeave: f,
+        onFocus: d,
         onBlur: (e) => {
-            var n;
-            !(null === (n = u.current) || void 0 === n ? void 0 : n.contains(e.relatedTarget)) && p();
+            var t;
+            (null === (t = l.current) || void 0 === t ? void 0 : t.contains(e.relatedTarget)) || f();
         },
-        ref: u,
+        ref: l,
         children: [
-            n,
-            (0, a.jsx)(s.ZP, {
-                isVisible: c,
+            t,
+            (0, i.jsx)(a.ZP, {
+                isVisible: u,
                 isExpandable: !1,
-                ...l
+                ...o
             })
         ]
     });

@@ -1,12 +1,8 @@
-r.d(n, {
-    Z: function () {
-        return l;
-    }
-});
-var i = r(928518),
-    a = r(451478),
-    o = r(981631),
-    s = r(501787);
-function l() {
-    return a.Z.isVisible() || i.Z.getWindowVisible(o.KJ3.CHANNEL_CALL_POPOUT) || i.Z.getWindowVisible(o.KJ3.ACTIVITY_POPOUT) || i.Z.getWindowVisible(s.OVERLAY_V3_KEY);
+n.d(t, { Z: () => o });
+var i = n(928518),
+    r = n(451478),
+    a = n(981631),
+    s = n(501787);
+function o() {
+    return r.Z.isVisible() || i.Z.getWindowVisible(a.KJ3.CHANNEL_CALL_POPOUT) || i.Z.getWindowVisible(a.KJ3.ACTIVITY_POPOUT) || i.Z.getWindowVisible(s.$J);
 }

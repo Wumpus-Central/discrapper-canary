@@ -1,16 +1,10 @@
-n.d(t, {
-    Z: function () {
-        return I;
-    }
-}),
-    n(47120),
-    n(653041);
+n.d(t, { Z: () => v }), n(47120), n(653041);
 var l = n(200651),
     s = n(192379),
     r = n(990547),
-    i = n(442837),
-    o = n(100527),
-    a = n(906732),
+    a = n(442837),
+    i = n(100527),
+    o = n(906732),
     c = n(213609),
     u = n(675478),
     d = n(19780),
@@ -20,50 +14,50 @@ var l = n(200651),
     N = n(242291),
     C = n(174470),
     f = n(549771),
-    p = n(964398),
-    m = n(409673),
-    E = n(710111),
+    m = n(964398),
+    E = n(409673),
+    p = n(710111),
     T = n(6609);
-function I(e) {
-    let { guildId: t, channel: n, width: I, height: v, keepOpen: O, interactive: j = !0, analyticsSource: y, onClose: S } = e,
-        b = (function (e) {
-            let [t, n] = (0, i.Wu)([g.Z], () => [g.Z.getSounds(), g.Z.getFavorites()]);
+function v(e) {
+    let { guildId: t, channel: n, width: v, height: I, keepOpen: O, interactive: j = !0, analyticsSource: y, onClose: S } = e,
+        _ = (function (e) {
+            let [t, n] = (0, a.Wu)([g.Z], () => [g.Z.getSounds(), g.Z.getFavorites()]);
             return s.useMemo(() => {
                 let l = [],
-                    s = [...e, E.X8],
+                    s = [...e, p.X8],
                     r = (e, s) => {
-                        var r, i;
-                        for (let o of null !== (i = null === (r = t.get(e)) || void 0 === r ? void 0 : r.sort((e, t) => h.default.compare(e.soundId, t.soundId))) && void 0 !== i ? i : []) {
-                            let e = n.has(o.soundId);
-                            ((e && s) || (!e && !s)) && o.available && l.push(o);
+                        var r, a;
+                        for (let i of null !== (a = null === (r = t.get(e)) || void 0 === r ? void 0 : r.sort((e, t) => h.default.compare(e.soundId, t.soundId))) && void 0 !== a ? a : []) {
+                            let e = n.has(i.soundId);
+                            ((e && s) || (!e && !s)) && i.available && l.push(i);
                         }
                     };
                 return s.forEach((e) => r(e, !0)), s.forEach((e) => r(e, !1)), l;
             }, [t, n, e]);
         })((0, f.h)(n, !0)),
-        R = (0, C.j)(),
-        _ = s.useRef(null),
-        [A, Z] = s.useState(void 0),
-        P = (0, i.e7)([d.Z], () => d.Z.getMediaSessionId()),
-        { analyticsLocations: k } = (0, a.ZP)(o.Z.SOUNDBOARD_WHEEL),
-        B = s.useCallback(
+        b = (0, C.j)(),
+        R = s.useRef(null),
+        [P, Z] = s.useState(void 0),
+        A = (0, a.e7)([d.Z], () => d.Z.getMediaSessionId()),
+        { analyticsLocations: w } = (0, o.ZP)(i.Z.SOUNDBOARD_WHEEL),
+        D = s.useCallback(
             (e) => {
-                (0, N.GN)(e, n.id, k), S();
+                (0, N.GN)(e, n.id, w), S();
             },
-            [k, n.id, S]
+            [w, n.id, S]
         );
     s.useEffect(() => {
         x.w(), u.DZ.loadIfNecessary();
     }, []),
         s.useEffect(() => {
-            0 === b.length && 0 === R.length && S();
-        }, [b.length, R, S]),
+            0 === _.length && 0 === b.length && S();
+        }, [_.length, b, S]),
         s.useEffect(
             () => () => {
-                let e = _.current;
-                !O && null != e && B(e);
+                let e = R.current;
+                O || null == e || D(e);
             },
-            [O, B]
+            [O, D]
         ),
         (0, c.Z)(
             {
@@ -72,62 +66,62 @@ function I(e) {
                 properties: {
                     source: y,
                     guild_id: t,
-                    media_session_id: P
+                    media_session_id: A
                 }
             },
             { disableTrack: !j }
         );
-    let w = s.useCallback((e) => {
-            (_.current = e), Z(null == e ? void 0 : e.soundId);
+    let k = s.useCallback((e) => {
+            (R.current = e), Z(null == e ? void 0 : e.soundId);
         }, []),
-        D = s.useCallback(
+        B = s.useCallback(
             (e) => {
                 if (null == e) {
-                    w(null);
+                    k(null);
                     return;
                 }
-                let t = b[e];
-                if (null != t) w(t);
+                let t = _[e];
+                null != t && k(t);
             },
-            [w, b]
+            [k, _]
         ),
         M = s.useCallback(
             (e) => {
                 if (null == e) return;
-                let t = b[e];
-                if (null != t) B(t);
+                let t = _[e];
+                null != t && D(t);
             },
-            [b, B]
+            [_, D]
         ),
         L = s.useMemo(
             () =>
-                b.map((e) =>
+                _.map((e) =>
                     (0, l.jsx)(
-                        m.ZP,
+                        E.ZP,
                         {
                             interactive: j,
                             className: T.soundButton,
                             sound: e,
-                            focused: A === e.soundId,
+                            focused: P === e.soundId,
                             channel: n
                         },
                         e.soundId
                     )
                 ),
-            [A, n, j, b]
+            [P, n, j, _]
         );
-    return 0 === b.length
+    return 0 === _.length
         ? null
-        : (0, l.jsx)(a.Gt, {
-              value: k,
-              children: (0, l.jsx)(p.Z, {
-                  wheelWidth: I,
-                  wheelHeight: v,
+        : (0, l.jsx)(o.Gt, {
+              value: w,
+              children: (0, l.jsx)(m.Z, {
+                  wheelWidth: v,
+                  wheelHeight: I,
                   itemWidth: 96,
                   itemHeight: 52,
                   showDeadZoneIndicator: !O,
-                  activeItem: A,
-                  onItemSelect: D,
+                  activeItem: P,
+                  onItemSelect: B,
                   onItemAction: M,
                   interactive: j,
                   children: L

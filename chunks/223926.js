@@ -1,136 +1,133 @@
-n.r(t), n(47120);
-var a,
-    i,
-    l = n(200651),
-    o = n(192379),
-    s = n(442837),
-    r = n(481060),
-    u = n(313201),
-    d = n(496675),
-    c = n(5192),
-    h = n(693546),
-    p = n(863249),
-    m = n(246364),
+n.d(t, { default: () => g }), n(47120);
+var i = n(200651),
+    l = n(192379),
+    a = n(442837),
+    s = n(481060),
+    r = n(313201),
+    o = n(496675),
+    u = n(5192),
+    d = n(693546),
+    c = n(863249),
+    h = n(246364),
     x = n(981631),
-    g = n(388032),
-    v = n(6131);
-((i = a || (a = {})).SPAM = 'spam'), (i.ABUSIVE = 'abusive'), (i.HARM = 'harm'), (i.PII = 'pii'), (i.OTHER = 'other');
-t.default = function (e) {
-    let { guild: t, guildJoinRequest: a, user: i, transitionState: C, onClose: f } = e,
-        j = (0, u.Dt)(),
-        [E, b] = o.useState(null),
-        [k, R] = o.useState(''),
-        M = (0, s.e7)([d.Z], () => d.Z.canManageUser(x.Plq.BAN_MEMBERS, i, t)),
-        [I, S] = o.useState(!1),
-        B = o.useCallback(() => {
+    m = n(388032),
+    p = n(6131);
+let g = function (e) {
+    let { guild: t, guildJoinRequest: g, user: v, transitionState: j, onClose: k } = e,
+        f = (0, r.Dt)(),
+        [C, E] = l.useState(null),
+        [b, R] = l.useState(''),
+        q = (0, a.e7)([o.Z], () => o.Z.canManageUser(x.Plq.BAN_MEMBERS, v, t)),
+        [Z, w] = l.useState(!1),
+        D = l.useCallback(() => {
             var e;
-            p.ZP.reportApplication({
+            c.ZP.reportApplication({
                 guild: t,
-                guildJoinRequest: a,
-                guildJoinRequestUser: i,
-                reason: E,
-                reasonOther: k,
-                responses: JSON.stringify(null === (e = a.formResponses) || void 0 === e ? void 0 : e.map((e) => e.response))
+                guildJoinRequest: g,
+                guildJoinRequestUser: v,
+                reason: C,
+                reasonOther: b,
+                responses: JSON.stringify(null === (e = g.formResponses) || void 0 === e ? void 0 : e.map((e) => e.response))
             }),
-                M && I
-                    ? (h.Z.updateGuildJoinRequest(t.id, i.id, a.joinRequestId, m.wB.REJECTED, ''),
-                      f(),
-                      (0, r.openModalLazy)(async () => {
+                q && Z
+                    ? (d.Z.updateGuildJoinRequest(t.id, v.id, g.joinRequestId, h.wB.REJECTED, ''),
+                      k(),
+                      (0, s.ZDy)(async () => {
                           let { default: e } = await n.e('43350').then(n.bind(n, 98746));
                           return (n) =>
-                              (0, l.jsx)(e, {
+                              (0, i.jsx)(e, {
                                   ...n,
                                   guildId: t.id,
-                                  user: i
+                                  user: v
                               });
                       }))
-                    : f();
-        }, [t, a, i, E, k, M, I, f]),
-        P = o.useCallback(
+                    : k();
+        }, [t, g, v, C, b, q, Z, k]),
+        I = l.useCallback(
             (e) => {
-                b(e.value);
+                E(e.value);
             },
-            [b]
+            [E]
         ),
-        T = o.useMemo(
+        J = l.useMemo(
             () => [
                 {
                     value: 'spam',
-                    name: g.intl.string(g.t.iq4Iur)
+                    name: m.intl.string(m.t.iq4Iur)
                 },
                 {
                     value: 'abusive',
-                    name: g.intl.string(g.t['2EwC2d'])
+                    name: m.intl.string(m.t['2EwC2d'])
                 },
                 {
                     value: 'harm',
-                    name: g.intl.string(g.t.c2x8o6)
+                    name: m.intl.string(m.t.c2x8o6)
                 },
                 {
                     value: 'pii',
-                    name: g.intl.string(g.t.O2PDJC)
+                    name: m.intl.string(m.t.O2PDJC)
                 },
                 {
                     value: 'other',
-                    name: g.intl.string(g.t['NkfV+f'])
+                    name: m.intl.string(m.t['NkfV+f'])
                 }
             ],
             []
         ),
-        q = c.ZP.getName(null, null, i);
-    return (0, l.jsxs)(r.ModalRoot, {
-        transitionState: C,
-        'aria-labelledby': j,
+        N = u.ZP.getName(null, null, v);
+    return (0, i.jsxs)(s.Y0X, {
+        transitionState: j,
+        'aria-labelledby': f,
         children: [
-            (0, l.jsx)(r.ModalHeader, {
-                children: (0, l.jsx)(r.Heading, {
-                    id: j,
+            (0, i.jsx)(s.xBx, {
+                children: (0, i.jsx)(s.X6q, {
+                    id: f,
                     variant: 'heading-md/semibold',
-                    children: g.intl.string(g.t.aEqS3d)
+                    children: m.intl.string(m.t.aEqS3d)
                 })
             }),
-            (0, l.jsxs)(r.ModalContent, {
-                className: v.content,
+            (0, i.jsxs)(s.hzk, {
+                className: p.content,
                 children: [
-                    (0, l.jsx)(r.Text, {
+                    (0, i.jsx)(s.Text, {
                         variant: 'text-md/normal',
-                        children: g.intl.format(g.t.wrYOur, { username: q })
+                        children: m.intl.format(m.t.wrYOur, { username: N })
                     }),
-                    (0, l.jsx)(r.RadioGroup, {
-                        options: T,
-                        value: E,
-                        onChange: P
+                    (0, i.jsx)(s.FXm, {
+                        options: J,
+                        value: C,
+                        onChange: I
                     }),
-                    'other' === E &&
-                        (0, l.jsx)(r.TextArea, {
-                            value: k,
+                    'other' === C &&
+                        (0, i.jsx)(s.Kx8, {
+                            value: b,
                             onChange: R,
-                            placeholder: g.intl.string(g.t['+E7Irq']),
+                            placeholder: m.intl.string(m.t['+E7Irq']),
                             maxLength: 200
                         }),
-                    M &&
-                        (0, l.jsx)(r.Checkbox, {
-                            type: r.Checkbox.Types.INVERTED,
-                            value: I,
-                            onChange: (e, t) => S(t),
-                            children: (0, l.jsx)(r.Text, {
+                    q &&
+                        (0, i.jsx)(s.XZJ, {
+                            type: s.XZJ.Types.INVERTED,
+                            value: Z,
+                            onChange: (e, t) => w(t),
+                            children: (0, i.jsx)(s.Text, {
                                 variant: 'text-md/normal',
-                                children: g.intl.format(g.t.cD5hlp, { username: q })
+                                children: m.intl.format(m.t.cD5hlp, { username: N })
                             })
                         })
                 ]
             }),
-            (0, l.jsxs)(r.ModalFooter, {
+            (0, i.jsxs)(s.mzw, {
                 children: [
-                    (0, l.jsx)(r.Button, {
-                        onClick: B,
-                        children: g.intl.string(g.t['+78Pfn'])
+                    (0, i.jsx)(s.zxk, {
+                        onClick: D,
+                        children: m.intl.string(m.t['+78Pfn'])
                     }),
-                    (0, l.jsx)(r.Button, {
-                        look: r.ButtonLooks.LINK,
-                        color: r.ButtonColors.PRIMARY,
-                        onClick: f,
-                        children: g.intl.string(g.t['ETE/oK'])
+                    (0, i.jsx)(s.zxk, {
+                        look: s.iLD.LINK,
+                        color: s.Ttl.PRIMARY,
+                        onClick: k,
+                        children: m.intl.string(m.t['ETE/oK'])
                     })
                 ]
             })

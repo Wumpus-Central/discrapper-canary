@@ -1,14 +1,10 @@
 n.d(t, {
-    G: function () {
-        return l;
-    },
-    S: function () {
-        return r;
-    }
+    G: () => o,
+    S: () => r
 });
-var o,
-    l,
-    a = n(388032);
+var l,
+    a = n(388032),
+    o = (((l = {}).UNINTERESTED = 'UNINTERESTED'), (l.ACCIDENT = 'ACCIDENT'), (l.INACTIVE = 'INACTIVE'), (l.UNCOMFORTABLE = 'UNCOMFORTABLE'), (l.DISRUPTIVE = 'DISRUPTIVE'), (l.OVERACTIVE = 'OVERACTIVE'), (l.CONFUSING = 'CONFUSING'), (l.OTHER = 'OTHER'), l);
 function r() {
     return [
         {
@@ -45,4 +41,3 @@ function r() {
         }
     ];
 }
-((o = l || (l = {})).UNINTERESTED = 'UNINTERESTED'), (o.ACCIDENT = 'ACCIDENT'), (o.INACTIVE = 'INACTIVE'), (o.UNCOMFORTABLE = 'UNCOMFORTABLE'), (o.DISRUPTIVE = 'DISRUPTIVE'), (o.OVERACTIVE = 'OVERACTIVE'), (o.CONFUSING = 'CONFUSING'), (o.OTHER = 'OTHER');

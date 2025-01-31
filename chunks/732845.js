@@ -1,13 +1,9 @@
-r.d(n, {
-    a: function () {
-        return o;
-    },
-    x: function () {
-        return a;
-    }
+n.d(t, {
+    a: () => a,
+    x: () => r
 });
-var i = r(818083);
-let a = (0, i.B)({
+var i = n(818083);
+let r = (0, i.B)({
         kind: 'user',
         id: '2023-09_show_server_sub_in_server_shop',
         label: 'Show server sub in server shop',
@@ -20,7 +16,7 @@ let a = (0, i.B)({
             }
         ]
     }),
-    o = (0, i.B)({
+    a = (0, i.B)({
         kind: 'user',
         id: '2023-09_server_shop_phantom_preview',
         label: 'Server Shop Phantom Preview',

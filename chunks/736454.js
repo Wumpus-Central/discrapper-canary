@@ -1,40 +1,34 @@
-e.r(n),
-    e.d(n, {
-        default: function () {
-            return l;
-        }
-    }),
-    e(47120);
-var o = e(200651),
-    i = e(192379),
+e.d(n, { default: () => l }), e(47120);
+var i = e(200651),
+    o = e(192379),
     r = e(481060),
     s = e(153867),
-    c = e(388032),
-    a = e(710694);
+    a = e(388032),
+    c = e(710694);
 function l(t) {
     let { onSubmit: n, onClose: e, ...l } = t,
-        [d, h] = i.useState(!1);
-    return (0, o.jsxs)(r.ConfirmModal, {
-        header: c.intl.string(c.t.HlAPoq),
-        confirmButtonColor: r.Button.Colors.GREEN,
-        confirmText: c.intl.string(c.t.rimG2d),
-        cancelText: c.intl.string(c.t['ETE/oK']),
+        [d, x] = o.useState(!1);
+    return (0, i.jsxs)(r.ConfirmModal, {
+        header: a.intl.string(a.t.HlAPoq),
+        confirmButtonColor: r.zxk.Colors.GREEN,
+        confirmText: a.intl.string(a.t.rimG2d),
+        cancelText: a.intl.string(a.t['ETE/oK']),
         onConfirm: n,
         onClose: () => (d && s.ZP.updatedUnsyncedSettings({ disableCallUserConfirmationPrompt: !0 }), e()),
         ...l,
         children: [
-            (0, o.jsx)(r.Text, {
+            (0, i.jsx)(r.Text, {
                 variant: 'text-md/normal',
-                children: c.intl.string(c.t.Jz3oqK)
+                children: a.intl.string(a.t.Jz3oqK)
             }),
-            (0, o.jsx)(r.Checkbox, {
-                type: r.Checkbox.Types.INVERTED,
+            (0, i.jsx)(r.XZJ, {
+                type: r.XZJ.Types.INVERTED,
                 value: d,
-                onChange: (t, n) => h(n),
-                className: a.checkbox,
-                children: (0, o.jsx)(r.Text, {
+                onChange: (t, n) => x(n),
+                className: c.checkbox,
+                children: (0, i.jsx)(r.Text, {
                     variant: 'text-md/normal',
-                    children: c.intl.string(c.t['JdIQ/f'])
+                    children: a.intl.string(a.t['JdIQ/f'])
                 })
             })
         ]

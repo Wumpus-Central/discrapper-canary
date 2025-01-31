@@ -33,7 +33,6 @@ var i = {
     './halloween_unmute.mp3': '432915',
     './halloween_user_join.mp3': '43351',
     './halloween_user_leave.mp3': '928044',
-    './hang_status_select.mp3': '685673',
     './highfive_clap.mp3': '696730',
     './highfive_whistle.mp3': '656602',
     './human_man.mp3': '129538',
@@ -66,6 +65,11 @@ var i = {
     './user_leave.mp3': '351645',
     './user_moved.mp3': '426354',
     './vibing_wumpus.mp3': '778184',
+    './voice_filter_loopback_off.mp3': '697456',
+    './voice_filter_loopback_on.mp3': '541147',
+    './voice_filter_off.mp3': '212035',
+    './voice_filter_on.mp3': '645136',
+    './voice_filter_swap.mp3': '236957',
     './winter_call_calling.mp3': '848069',
     './winter_call_ringing.mp3': '870980',
     './winter_deafen.mp3': '525773',
@@ -76,19 +80,19 @@ var i = {
     './winter_user_join.mp3': '586680',
     './winter_user_leave.mp3': '597453'
 };
-function a(e) {
-    return r(o(e));
+function r(e) {
+    return n(a(e));
 }
-function o(e) {
-    if (!r.o(i, e)) {
-        var n = Error("Cannot find module '" + e + "'");
-        throw ((n.code = 'MODULE_NOT_FOUND'), n);
+function a(e) {
+    if (!n.o(i, e)) {
+        var t = Error("Cannot find module '" + e + "'");
+        throw ((t.code = 'MODULE_NOT_FOUND'), t);
     }
     return i[e];
 }
-(a.keys = function () {
+(r.keys = function () {
     return Object.keys(i);
 }),
-    (a.resolve = o),
-    (e.exports = a),
-    (a.id = '451343');
+    (r.resolve = a),
+    (e.exports = r),
+    (r.id = 451343);

@@ -1,30 +1,25 @@
-t.r(e),
-    t.d(e, {
-        default: function () {
-            return o;
-        }
-    });
-var i = t(200651);
-t(192379);
-var r = t(512722),
-    l = t.n(r),
-    u = t(399606),
-    a = t(372900),
-    c = t(238246),
-    d = t(592125),
-    h = t(504185);
+i.r(e), i.d(e, { default: () => o });
+var t = i(200651);
+i(192379);
+var l = i(512722),
+    a = i.n(l),
+    r = i(399606),
+    u = i(372900),
+    c = i(238246),
+    d = i(592125),
+    h = i(504185);
 function o(n) {
-    let { windowKey: e, channelId: t } = n,
-        r = (0, u.e7)([d.Z], () => d.Z.getChannel(t));
+    let { windowKey: e, channelId: i } = n,
+        l = (0, r.e7)([d.Z], () => d.Z.getChannel(i));
     return (
-        l()(null != r, 'channel cannot be null for popout'),
-        (0, i.jsx)(c.Z, {
+        a()(null != l, 'channel cannot be null for popout'),
+        (0, t.jsx)(c.Z, {
             withTitleBar: !0,
             windowKey: e,
-            title: r.name,
-            children: (0, i.jsx)(a.Z.Provider, {
-                value: r.guild_id,
-                children: (0, i.jsx)(h.Z, { channel: r })
+            title: l.name,
+            children: (0, t.jsx)(u.Z.Provider, {
+                value: l.guild_id,
+                children: (0, t.jsx)(h.Z, { channel: l })
             })
         })
     );

@@ -1,11 +1,3 @@
-var i, l;
-n.d(t, {
-    b: function () {
-        return i;
-    }
-}),
-    n(47120),
-    ((l = i || (i = {})).DISCORD = 'discord'),
-    (l.TWITCH = 'twitch'),
-    (l.YOUTUBE = 'youtube'),
-    (l.GUILD_SUBSCRIPTION = 'guild_subscription');
+n.d(t, { b: () => l }), n(47120);
+var i,
+    l = (((i = {}).DISCORD = 'discord'), (i.TWITCH = 'twitch'), (i.YOUTUBE = 'youtube'), (i.GUILD_SUBSCRIPTION = 'guild_subscription'), i);

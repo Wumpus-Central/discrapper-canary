@@ -1,9 +1,4 @@
-t.r(r),
-    t.d(r, {
-        default: function () {
-            return n;
-        }
-    });
+t.r(r), t.d(r, { default: () => n });
 var n = {
     payButton: 'Betal',
     'payButton.redirecting': 'Omdirigerer...',

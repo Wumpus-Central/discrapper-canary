@@ -1,101 +1,96 @@
-r.d(n, {
-    Z: function () {
-        return E;
-    }
-});
-var i = r(200651),
-    a = r(192379),
-    o = r(120356),
-    s = r.n(o),
-    l = r(481060),
-    u = r(806966),
-    c = r(254494),
-    d = r(895924),
-    f = r(826298),
-    p = r(613932);
-let h = [16, 8, 8, 8],
-    _ = 32,
-    m = 4,
-    g = 8;
-function E(e) {
-    let { className: n, channel: r, sections: o, activeCategoryIndex: E, filteredSectionId: v, onSectionClick: y, applicationCommandListRef: b } = e,
-        I = a.useRef(null),
-        T = a.useCallback(
-            (e, n) => {
-                var r;
-                let i = 2 * m;
-                return (null === (r = o[n + 1]) || void 0 === r ? void 0 : r.type) === d.Qi.BUILT_IN && (i += g), _ + i;
+n.d(t, { Z: () => g });
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(481060),
+    l = n(806966),
+    u = n(254494),
+    c = n(895924),
+    d = n(826298),
+    f = n(613932);
+let _ = [16, 8, 8, 8],
+    p = 32,
+    h = 4,
+    m = 8;
+function g(e) {
+    let { className: t, channel: n, sections: a, activeCategoryIndex: g, filteredSectionId: E, onSectionClick: v, applicationCommandListRef: y } = e,
+        I = r.useRef(null),
+        b = r.useCallback(
+            (e, t) => {
+                var n;
+                let i = 2 * h;
+                return (null === (n = a[t + 1]) || void 0 === n ? void 0 : n.type) === c.Qi.BUILT_IN && (i += m), p + i;
             },
-            [o]
+            [a]
         ),
-        S = a.useCallback(
-            (e, n) => {
-                var r;
-                if (!n) return 0 === e ? 0 : 2 * m;
-                return (null === (r = o[e + 1]) || void 0 === r ? void 0 : r.type) === d.Qi.BUILT_IN ? 0 : 2 * m;
+        T = r.useCallback(
+            (e, t) => {
+                var n;
+                return t ? ((null === (n = a[e + 1]) || void 0 === n ? void 0 : n.type) === c.Qi.BUILT_IN ? 0 : 2 * h) : 0 === e ? 0 : 2 * h;
             },
-            [o]
+            [a]
         ),
-        A = a.useCallback(
-            (e, n) => {
-                let a = o[n];
-                if (null == a) return;
-                let s = (0, f.ky)(a),
-                    u = a.type === d.Qi.BUILT_IN ? m : 0,
-                    c = _ - 2 * u,
-                    h = (0, i.jsx)(s, {
-                        channel: r,
-                        section: a,
-                        isSelected: null != v ? a.id === v : E === n,
-                        padding: u,
-                        width: c,
-                        height: c,
+        S = r.useCallback(
+            (e, t) => {
+                let r = a[t];
+                if (null == r) return;
+                let s = (0, d.ky)(r),
+                    l = r.type === c.Qi.BUILT_IN ? h : 0,
+                    u = p - 2 * l,
+                    _ = (0, i.jsx)(s, {
+                        channel: n,
+                        section: r,
+                        isSelected: null != E ? r.id === E : g === t,
+                        padding: l,
+                        width: u,
+                        height: u,
                         selectable: !0
                     }),
-                    g = a.type !== d.Qi.BUILT_IN && n < o.length - 1 && o[n + 1].type === d.Qi.BUILT_IN;
+                    m = r.type !== c.Qi.BUILT_IN && t < a.length - 1 && a[t + 1].type === c.Qi.BUILT_IN;
                 return (0, i.jsxs)(
                     'div',
                     {
-                        className: p.section,
+                        className: f.section,
                         children: [
-                            (0, i.jsx)(l.Tooltip, {
-                                text: a.name,
+                            (0, i.jsx)(o.ua7, {
+                                text: r.name,
                                 position: 'right',
                                 children: (e) => {
-                                    let { onClick: n, ...r } = e;
-                                    return (0, i.jsx)(l.Clickable, {
-                                        'aria-label': a.name,
+                                    let { onClick: t, ...n } = e;
+                                    return (0, i.jsx)(o.P3F, {
+                                        'aria-label': r.name,
                                         onClick: () => {
-                                            y(a), null == n || n();
+                                            v(r), null == t || t();
                                         },
-                                        ...r,
-                                        children: h
+                                        ...n,
+                                        children: _
                                     });
                                 }
                             }),
-                            g ? (0, i.jsx)('hr', { className: p.builtInSeparator }) : null
+                            m ? (0, i.jsx)('hr', { className: f.builtInSeparator }) : null
                         ]
                     },
-                    a.id
+                    r.id
                 );
             },
-            [E, r, y, o, v]
+            [g, n, v, a, E]
         );
-    return 0 === o.length
+    return 0 === a.length
         ? null
         : (0, i.jsx)('div', {
-              className: s()(n, p.wrapper),
-              children: (0, i.jsx)(c.Z, {
+              className: s()(t, f.wrapper),
+              children: (0, i.jsx)(u.Z, {
                   categoryListRef: I,
-                  expressionsListRef: b,
-                  store: u.Xn,
-                  categories: o,
-                  className: p.list,
-                  renderCategoryListItem: A,
-                  rowCount: o.length,
-                  categoryHeight: T,
-                  listPadding: h,
-                  getScrollOffsetForIndex: S
+                  expressionsListRef: y,
+                  store: l.Xn,
+                  categories: a,
+                  className: f.list,
+                  renderCategoryListItem: S,
+                  rowCount: a.length,
+                  categoryHeight: b,
+                  listPadding: _,
+                  getScrollOffsetForIndex: T
               })
           });
 }

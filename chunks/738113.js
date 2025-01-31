@@ -8,18 +8,8 @@ function r(e) {
                   return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
               })(e);
 }
-n.d(t, {
-    O: function () {
-        return u;
-    }
-});
-function i(e, t) {
-    for (var n = 0; n < t.length; n++) {
-        var r = t[n];
-        (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
-    }
-}
-function o(e, t, n) {
+n.d(t, { O: () => o });
+function i(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,22 +22,21 @@ function o(e, t, n) {
         e
     );
 }
-var u = (function () {
-    var e, t, n;
-    function u(e, t, n) {
+var o = (function () {
+    var e;
+    function t(e, n, r) {
         !(function (e, t) {
             if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
-        })(this, u),
-            o(this, 'spec', void 0),
-            o(this, 'monitor', void 0),
-            o(this, 'connector', void 0),
+        })(this, t),
+            i(this, 'spec', void 0),
+            i(this, 'monitor', void 0),
+            i(this, 'connector', void 0),
             (this.spec = e),
-            (this.monitor = t),
-            (this.connector = n);
+            (this.monitor = n),
+            (this.connector = r);
     }
     return (
-        (e = u),
-        (t = [
+        (e = [
             {
                 key: 'beginDrag',
                 value: function () {
@@ -55,7 +44,7 @@ var u = (function () {
                         t = this.spec,
                         n = this.monitor,
                         i = null;
-                    return null !== (e = i = 'object' === r(t.item) ? t.item : 'function' == typeof t.item ? t.item(n) : {}) && void 0 !== e ? e : null;
+                    return null !== (e = 'object' === r(t.item) ? t.item : 'function' == typeof t.item ? t.item(n) : {}) && void 0 !== e ? e : null;
                 }
             },
             {
@@ -86,7 +75,12 @@ var u = (function () {
                 }
             }
         ]),
-        i(e.prototype, t),
-        u
+        (function (e, t) {
+            for (var n = 0; n < t.length; n++) {
+                var r = t[n];
+                (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
+            }
+        })(t.prototype, e),
+        t
     );
 })();

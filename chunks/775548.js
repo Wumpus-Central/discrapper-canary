@@ -1,57 +1,53 @@
-var i = r(29513);
-function a() {
+var i = n(29513);
+function r() {
     var e = {},
+        t = 0,
         n = 0,
-        r = 0,
         i = 0;
     return {
-        add: function a(a, o) {
-            !o && ((o = a), (a = 0)), a > r ? (r = a) : a < i && (i = a), !e[a] && (e[a] = []), e[a].push(o), n++;
+        add: function (r, a) {
+            a || ((a = r), (r = 0)), r > n ? (n = r) : r < i && (i = r), e[r] || (e[r] = []), e[r].push(a), t++;
         },
-        process: function n() {
-            for (var n = i; n <= r; n++) {
-                for (var a = e[n], o = 0; o < a.length; o++) (0, a[o])();
-            }
+        process: function () {
+            for (var t = i; t <= n; t++) for (var r = e[t], a = 0; a < r.length; a++) (0, r[a])();
         },
-        size: function e() {
-            return n;
+        size: function () {
+            return t;
         }
     };
 }
 e.exports = function (e) {
-    var n,
-        r = (e = e || {}).reporter,
-        o = i.getOption(e, 'async', !0),
+    var t,
+        n = (e = e || {}).reporter,
+        a = i.getOption(e, 'async', !0),
         s = i.getOption(e, 'auto', !0);
-    s && !o && (r && r.warn('Invalid options combination. auto=true and async=false is invalid. Setting async=true.'), (o = !0));
-    var l = a(),
-        u = !1;
-    function c(e, n) {
-        !u && s && o && 0 === l.size() && p(), l.add(e, n);
-    }
-    function d() {
-        for (u = !0; l.size(); ) {
-            var e = l;
-            (l = a()), e.process();
+    s && !a && (n && n.warn('Invalid options combination. auto=true and async=false is invalid. Setting async=true.'), (a = !0));
+    var o = r(),
+        l = !1;
+    function u() {
+        for (l = !0; o.size(); ) {
+            var e = o;
+            (o = r()), e.process();
         }
-        u = !1;
+        l = !1;
     }
-    function f(e) {
-        if (!u) void 0 === e && (e = o), n && (h(n), (n = null)), e ? p() : d();
+    function c() {
+        t = f(u);
     }
-    function p() {
-        n = _(d);
-    }
-    function h(e) {
+    function d(e) {
         return clearTimeout(e);
     }
-    function _(e) {
+    function f(e) {
         return (function (e) {
             return setTimeout(e, 0);
         })(e);
     }
     return {
-        add: c,
-        force: f
+        add: function e(e, t) {
+            !l && s && a && 0 === o.size() && c(), o.add(e, t);
+        },
+        force: function e(e) {
+            !l && (void 0 === e && (e = a), t && (d(t), (t = null)), e ? c() : u());
+        }
     };
 };

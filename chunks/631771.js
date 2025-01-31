@@ -1,17 +1,11 @@
-r.d(n, {
-    Gi: function () {
-        return s;
-    },
-    Qs: function () {
-        return l;
-    },
-    YN: function () {
-        return u;
-    }
+n.d(t, {
+    Gi: () => s,
+    Qs: () => o,
+    YN: () => l
 });
-var i = r(818083),
-    a = r(311476),
-    o = r(474936);
+var i = n(818083),
+    r = n(311476),
+    a = n(474936);
 let s = (0, i.B)({
     id: '2024-06_premium_emoji_desktop_upsell',
     label: 'Premium Emoji Desktop Upsell',
@@ -66,7 +60,7 @@ let s = (0, i.B)({
         }
     ]
 });
-let l = (0, i.B)({
+let o = (0, i.B)({
     id: '2024-06_premium_soundboard_desktop_upsell',
     label: 'Premium Soundboard Desktop Upsell',
     kind: 'user',
@@ -105,16 +99,17 @@ let l = (0, i.B)({
         }
     ]
 });
-function u(e) {
+function l(e) {
     switch (e) {
-        case o.cd.CLIENT_THEMES_UPSELL:
-        case o.cd.APP_ICON_UPSELL:
-            return a.Z.getCurrentConfig({ location: 'shouldShowSocialProof' }, { autoTrackExposure: !1 }).addSocialProof;
-        case o.cd.ANIMATED_AVATAR_MODAL_UPSELL:
-        case o.cd.ANIMATED_BANNER_MODAL_UPSELL:
-        case o.cd.PROFILE_EFFECT_MODAL_UPSELL:
-        case o.cd.AVATAR_DECORATION_MODAL_UPSELL:
-        case o.cd.FOR_LATER_MODAL_UPSELL:
+        case a.cd.CLIENT_THEMES_UPSELL:
+        case a.cd.APP_ICON_UPSELL:
+            return r.Z.getCurrentConfig({ location: 'shouldShowSocialProof' }, { autoTrackExposure: !1 }).addSocialProof;
+        case a.cd.ANIMATED_AVATAR_MODAL_UPSELL:
+        case a.cd.ANIMATED_BANNER_MODAL_UPSELL:
+        case a.cd.PROFILE_EFFECT_MODAL_UPSELL:
+        case a.cd.AVATAR_DECORATION_MODAL_UPSELL:
+        case a.cd.FOR_LATER_MODAL_UPSELL:
+        case a.cd.VOICE_FILTERS_UPSELL:
             return !0;
         default:
             return !1;

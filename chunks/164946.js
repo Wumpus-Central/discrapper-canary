@@ -1,27 +1,21 @@
 function i(e) {
-    let n = {};
-    return void 0 !== e.pendingBanner && (n.banner = e.pendingBanner), null != e.pendingBio && (n.bio = e.pendingBio), null != e.pendingPronouns && (n.pronouns = e.pendingPronouns), void 0 !== e.pendingAccentColor && (n.accent_color = e.pendingAccentColor), void 0 !== e.pendingThemeColors && (n.theme_colors = e.pendingThemeColors), void 0 !== e.pendingProfileEffectId && (n.profile_effect_id = null != e.pendingProfileEffectId ? e.pendingProfileEffectId : null), n;
+    let t = {};
+    return void 0 !== e.pendingBanner && (t.banner = e.pendingBanner), null != e.pendingBio && (t.bio = e.pendingBio), null != e.pendingPronouns && (t.pronouns = e.pendingPronouns), void 0 !== e.pendingAccentColor && (t.accent_color = e.pendingAccentColor), void 0 !== e.pendingThemeColors && (t.theme_colors = e.pendingThemeColors), void 0 !== e.pendingProfileEffectId && (t.profile_effect_id = null != e.pendingProfileEffectId ? e.pendingProfileEffectId : null), t;
+}
+function r(e) {
+    let t = {};
+    return void 0 !== e.pendingGlobalName && (t.globalName = e.pendingGlobalName), void 0 !== e.pendingAvatar && (t.avatar = e.pendingAvatar), void 0 !== e.pendingAvatarDecoration && (t.avatarDecoration = e.pendingAvatarDecoration), t;
 }
 function a(e) {
-    let n = {};
-    return void 0 !== e.pendingGlobalName && (n.globalName = e.pendingGlobalName), void 0 !== e.pendingAvatar && (n.avatar = e.pendingAvatar), void 0 !== e.pendingAvatarDecoration && (n.avatarDecoration = e.pendingAvatarDecoration), n;
-}
-function o(e) {
-    let n = {};
-    if ((void 0 !== e.pendingAvatar && (n.avatar = e.pendingAvatar), void 0 !== e.pendingNickname)) {
-        var r;
-        n.nick = null !== (r = e.pendingNickname) && void 0 !== r ? r : '';
+    let t = {};
+    if ((void 0 !== e.pendingAvatar && (t.avatar = e.pendingAvatar), void 0 !== e.pendingNickname)) {
+        var n;
+        t.nick = null !== (n = e.pendingNickname) && void 0 !== n ? n : '';
     }
-    return void 0 !== e.pendingAvatarDecoration && (n.avatarDecoration = e.pendingAvatarDecoration), n;
+    return void 0 !== e.pendingAvatarDecoration && (t.avatarDecoration = e.pendingAvatarDecoration), t;
 }
-r.d(n, {
-    ED: function () {
-        return a;
-    },
-    Jo: function () {
-        return o;
-    },
-    g9: function () {
-        return i;
-    }
+n.d(t, {
+    ED: () => r,
+    Jo: () => a,
+    g9: () => i
 });

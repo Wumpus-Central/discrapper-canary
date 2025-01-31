@@ -1,46 +1,42 @@
-r.d(n, {
-    Z: function () {
-        return l;
-    }
-});
-var i = r(632471),
-    a = r(740078),
-    o = r(510104),
-    s = r(126387);
-function l(e, n) {
-    void 0 === n && (n = {});
-    var r = n,
-        l = r.placement,
-        u = r.boundary,
-        c = r.rootBoundary,
-        d = r.padding,
-        f = r.flipVariations,
-        p = r.allowedAutoPlacements,
-        h = void 0 === p ? a.Ct : p,
-        _ = (0, i.Z)(l),
-        m = _
-            ? f
-                ? a.bw
-                : a.bw.filter(function (e) {
-                      return (0, i.Z)(e) === _;
+n.d(t, { Z: () => o });
+var i = n(632471),
+    r = n(740078),
+    a = n(510104),
+    s = n(126387);
+function o(e, t) {
+    void 0 === t && (t = {});
+    var n = t,
+        o = n.placement,
+        l = n.boundary,
+        u = n.rootBoundary,
+        c = n.padding,
+        d = n.flipVariations,
+        f = n.allowedAutoPlacements,
+        _ = void 0 === f ? r.Ct : f,
+        p = (0, i.Z)(o),
+        h = p
+            ? d
+                ? r.bw
+                : r.bw.filter(function (e) {
+                      return (0, i.Z)(e) === p;
                   })
-            : a.mv,
-        g = m.filter(function (e) {
-            return h.indexOf(e) >= 0;
+            : r.mv,
+        m = h.filter(function (e) {
+            return _.indexOf(e) >= 0;
         });
-    0 === g.length && (g = m);
-    var E = g.reduce(function (n, r) {
+    0 === m.length && (m = h);
+    var g = m.reduce(function (t, n) {
         return (
-            (n[r] = (0, o.Z)(e, {
-                placement: r,
-                boundary: u,
-                rootBoundary: c,
-                padding: d
-            })[(0, s.Z)(r)]),
-            n
+            (t[n] = (0, a.Z)(e, {
+                placement: n,
+                boundary: l,
+                rootBoundary: u,
+                padding: c
+            })[(0, s.Z)(n)]),
+            t
         );
     }, {});
-    return Object.keys(E).sort(function (e, n) {
-        return E[e] - E[n];
+    return Object.keys(g).sort(function (e, t) {
+        return g[e] - g[t];
     });
 }

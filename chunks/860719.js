@@ -1,9 +1,4 @@
-n.d(t, {
-    w: function () {
-        return a;
-    }
-}),
-    n(789020);
+n.d(t, { w: () => a }), n(789020);
 var i = n(85025);
 function a(e) {
     let { flags: t } = e,

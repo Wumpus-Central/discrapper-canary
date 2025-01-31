@@ -1,106 +1,103 @@
-t.d(n, {
-    Z: function () {
-        return m;
-    }
-}),
-    t(47120),
-    t(653041);
-var l = t(200651),
-    i = t(192379),
-    r = t(442837),
-    a = t(481060),
-    u = t(835473),
-    o = t(925329),
-    d = t(372460),
-    s = t(594174),
-    c = t(960897);
-let Z = [];
-function f(e) {
-    let { application: n } = e;
-    return (0, l.jsxs)('div', {
-        className: c.subtext,
-        children: [
-            (0, l.jsx)(o.Z, {
-                game: n,
-                size: o.Z.Sizes.XXSMALL
+n.d(t, { Z: () => h }), n(47120), n(653041);
+var i = n(200651),
+    r = n(192379),
+    a = n(442837),
+    s = n(481060),
+    o = n(835473),
+    l = n(925329),
+    u = n(372460),
+    c = n(594174),
+    d = n(960897);
+let f = [];
+function _(e, t) {
+    let n = (0, o.Z)(e, t);
+    return r.useMemo(() => {
+        let e = new Map();
+        return (
+            n.forEach((t) => {
+                null != t && e.set(t.id, t);
             }),
-            (0, l.jsx)('span', { children: n.name })
+            e
+        );
+    }, [n]);
+}
+function p(e) {
+    let { application: t } = e;
+    return (0, i.jsxs)('div', {
+        className: d.subtext,
+        children: [
+            (0, i.jsx)(l.Z, {
+                game: t,
+                size: l.Z.Sizes.XXSMALL
+            }),
+            (0, i.jsx)('span', { children: t.name })
         ]
     });
 }
-function m(e) {
-    let { menuItemId: n, user: t, label: c, gameRelationships: m, onClick: g } = e,
-        { id: M, bot: x } = t,
-        h = (0, r.e7)([s.default], () => {
+function h(e) {
+    let { menuItemId: t, user: n, label: o, gameRelationships: d, onClick: h } = e,
+        { id: m, bot: g } = n,
+        E = (0, a.e7)([c.default], () => {
             var e;
-            return (null === (e = s.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === M;
+            return (null === (e = c.default.getCurrentUser()) || void 0 === e ? void 0 : e.id) === m;
         }),
-        v = (0, d.wn)({ location: 'useAcceptGameFriendRequest' }),
-        p = h || x || !v,
-        b = p ? Z : m,
-        [I, C] = i.useState(!1),
-        P = i.useCallback(() => C(!0), []),
-        E = i.useMemo(
-            () =>
-                b.map((e) => {
-                    let { applicationId: n } = e;
-                    return n;
-                }),
-            [b]
-        ),
-        j = (function (e, n) {
-            let t = (0, u.Z)(e, n);
-            return i.useMemo(() => {
-                let e = new Map();
-                return (
-                    t.forEach((n) => {
-                        null != n && e.set(n.id, n);
+        v = (0, u.wn)({ location: 'useAcceptGameFriendRequest' }),
+        y = E || g || !v,
+        I = y ? f : d,
+        [b, T] = r.useState(!1),
+        S = r.useCallback(() => T(!0), []),
+        A = _(
+            r.useMemo(
+                () =>
+                    I.map((e) => {
+                        let { applicationId: t } = e;
+                        return t;
                     }),
-                    e
-                );
-            }, [t]);
-        })(E, I || 1 === b.length);
-    if (p || 0 === b.length) return null;
-    if (1 === b.length) {
-        let { applicationId: e } = b[0],
-            t = j.get(e);
-        return null == t
+                [I]
+            ),
+            b || 1 === I.length
+        );
+    if (y || 0 === I.length) return null;
+    if (1 === I.length) {
+        let { applicationId: e } = I[0],
+            n = A.get(e);
+        return null == n
             ? null
-            : (0, l.jsx)(a.MenuItem, {
-                  id: n,
-                  label: c,
-                  subtext: (0, l.jsx)(f, { application: t }),
-                  onFocus: P,
-                  action: () => g(t)
+            : (0, i.jsx)(s.sNh, {
+                  id: t,
+                  label: o,
+                  subtext: (0, i.jsx)(p, { application: n }),
+                  onFocus: S,
+                  action: () => h(n)
               });
     }
-    let T = [];
-    return (b.forEach((e) => {
-        let { applicationId: n } = e,
-            t = j.get(n);
-        null != t &&
-            T.push(
-                (0, l.jsx)(
-                    a.MenuItem,
+    let N = [];
+    return (I.forEach((e) => {
+        let { applicationId: t } = e,
+            n = A.get(t);
+        null != n &&
+            N.push(
+                (0, i.jsx)(
+                    s.sNh,
                     {
-                        id: n,
-                        label: t.name,
-                        icon: (0, l.jsx)(o.Z, {
-                            game: t,
-                            size: o.Z.Sizes.XXSMALL
+                        id: t,
+                        label: n.name,
+                        icon: (0, i.jsx)(l.Z, {
+                            game: n,
+                            size: l.Z.Sizes.XXSMALL
                         }),
-                        action: () => g(t)
+                        action: () => h(n)
                     },
-                    n
+                    t
                 )
             );
     }),
-    0 === T.length)
+    0 === N.length)
         ? null
-        : (0, l.jsx)(a.MenuItem, {
-              id: n,
-              label: c,
-              onFocus: P,
-              children: T
+        : (0, i.jsx)(s.sNh, {
+              id: t,
+              label: o,
+              onFocus: S,
+              children: N
           });
 }

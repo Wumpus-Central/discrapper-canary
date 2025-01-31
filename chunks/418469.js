@@ -1,50 +1,46 @@
-r.d(n, {
-    Z: function () {
-        return f;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(442837),
-    o = r(481060),
-    s = r(569545),
-    l = r(687516),
-    u = r(314897),
-    c = r(959457),
-    d = r(388032);
-function f(e, n, f) {
-    var p;
-    let h = (0, l.Cf)(e),
-        _ = (0, a.e7)([u.default], () => u.default.getId()),
-        m = null != e ? (0, s.V9)(e) : c.Z.getActiveStreamKey(),
-        g = null !== (p = c.Z.getVideoStats(m)) && void 0 !== p ? p : {},
-        E = {
-            media_session_id: c.Z.getMediaSessionId(m),
-            rtc_connection_id: c.Z.getRtcConnectionId(m),
-            stream_region: c.Z.getRegion(m),
-            max_viewers: c.Z.getMaxViewers(m),
-            ...g
+n.d(t, { Z: () => d });
+var i = n(200651);
+n(192379);
+var r = n(442837),
+    a = n(481060),
+    s = n(569545),
+    o = n(687516),
+    l = n(314897),
+    u = n(959457),
+    c = n(388032);
+function d(e, t, d) {
+    var f;
+    let _ = (0, o.Cf)(e),
+        p = (0, r.e7)([l.default], () => l.default.getId()),
+        h = null != e ? (0, s.V9)(e) : u.Z.getActiveStreamKey(),
+        m = null !== (f = u.Z.getVideoStats(h)) && void 0 !== f ? f : {},
+        g = {
+            media_session_id: u.Z.getMediaSessionId(h),
+            rtc_connection_id: u.Z.getRtcConnectionId(h),
+            stream_region: u.Z.getRegion(h),
+            max_viewers: u.Z.getMaxViewers(h),
+            ...m
         },
-        v = () => {
-            null == f || f(),
+        E = () => {
+            null == d || d(),
                 null != e &&
-                    (0, o.openModalLazy)(async () => {
-                        let { default: n } = await r.e('18912').then(r.bind(r, 340140));
-                        return (r) =>
-                            (0, i.jsx)(n, {
+                    (0, a.ZDy)(async () => {
+                        let { default: t } = await n.e('18912').then(n.bind(n, 340140));
+                        return (n) =>
+                            (0, i.jsx)(t, {
                                 stream: e,
-                                streamApplication: h,
-                                isStreamer: _ === (null == e ? void 0 : e.ownerId),
-                                analyticsData: E,
-                                ...r
+                                streamApplication: _,
+                                isStreamer: p === (null == e ? void 0 : e.ownerId),
+                                analyticsData: g,
+                                ...n
                             });
                     });
         };
     return null == e
         ? null
-        : (0, i.jsx)(o.MenuItem, {
+        : (0, i.jsx)(a.sNh, {
               id: 'report-stream-problem',
-              label: d.intl.string(d.t.sdnCxc),
-              action: v
+              label: c.intl.string(c.t.sdnCxc),
+              action: E
           });
 }

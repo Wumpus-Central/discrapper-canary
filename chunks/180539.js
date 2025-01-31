@@ -1,13 +1,9 @@
-n.d(t, {
-    Z: function () {
-        return m;
-    }
-});
+n.d(t, { Z: () => m });
 var i = n(200651);
 n(192379);
 var l = n(442837),
-    r = n(481060),
-    a = n(816782),
+    a = n(481060),
+    r = n(816782),
     s = n(221292),
     o = n(687158),
     c = n(646915),
@@ -20,18 +16,18 @@ function m(e) {
         m = (0, l.e7)([d.ZP], () => d.ZP.getSection(t.id, null == t ? void 0 : t.isDM())),
         f = (0, o.ZP)(t.getRecipientId()),
         g = (0, c.Z)(),
-        C = m === h.ULH.PROFILE && !g;
+        _ = m === h.ULH.PROFILE && !g;
     return (0, i.jsx)(u.JO, {
         disabled: g || n,
-        tooltip: g || n ? p.intl.string(p.t.YneDgI) : C ? p.intl.string(p.t.niD64e) : p.intl.string(p.t['+FAsHh']),
-        icon: r.UserCircleStatusIcon,
+        tooltip: g || n ? p.intl.string(p.t.YneDgI) : _ ? p.intl.string(p.t.niD64e) : p.intl.string(p.t['+FAsHh']),
+        icon: a.z65,
         onClick: () => {
             (0, s.TY)({
                 displayProfile: f,
-                isProfileOpen: !C
+                isProfileOpen: !_
             }),
-                a.Z.toggleProfilePanelSection();
+                r.Z.toggleProfilePanelSection();
         },
-        selected: C && !g && !n
+        selected: _ && !g && !n
     });
 }

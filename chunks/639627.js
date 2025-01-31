@@ -1,34 +1,30 @@
-r.d(n, {
-    T: function () {
-        return l;
-    }
-});
-var i = r(200651),
-    a = r(192379),
-    o = r(952265),
-    s = r(813197);
-let l = a.forwardRef(function (e, n) {
-    let l = a.useRef(null);
-    function u(n, a) {
-        (0, o.ZD)(async () => {
-            let { default: o } = await Promise.all([r.e('70687'), r.e('48017'), r.e('89517')]).then(r.bind(r, 850085));
-            return (r) =>
-                (0, i.jsx)(o, {
-                    imgURI: n,
-                    file: a,
+n.d(t, { T: () => o });
+var i = n(200651),
+    r = n(192379),
+    a = n(952265),
+    s = n(813197);
+let o = r.forwardRef(function (e, t) {
+    let o = r.useRef(null);
+    function l(t, r) {
+        (0, a.ZD)(async () => {
+            let { default: a } = await Promise.all([n.e('70687'), n.e('48017'), n.e('89517')]).then(n.bind(n, 850085));
+            return (n) =>
+                (0, i.jsx)(a, {
+                    imgURI: t,
+                    file: r,
                     onCrop: e.onChange,
-                    ...r
+                    ...n
                 });
         });
     }
     return (
-        a.useImperativeHandle(
-            n,
+        r.useImperativeHandle(
+            t,
             () => ({
                 focus: () => null,
                 activate: () => {
                     var e;
-                    return null === (e = l.current) || void 0 === e || e.activateUploadDialogue(), !1;
+                    return null === (e = o.current) || void 0 === e || e.activateUploadDialogue(), !1;
                 }
             }),
             []
@@ -37,8 +33,8 @@ let l = a.forwardRef(function (e, n) {
             style: { position: 'relative' },
             children: (0, i.jsx)(s.ZP, {
                 ...e,
-                ref: l,
-                onChange: u
+                ref: o,
+                onChange: l
             })
         })
     );

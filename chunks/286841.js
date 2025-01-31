@@ -1,4 +1,5 @@
-e.exports = {
-    popoutRoleDot: 'popoutRoleDot_f50ea3',
-    popoutRoleCircle: 'popoutRoleCircle_f50ea3'
+var i = {
+    popoutRoleDot: 'popoutRoleDot_b77a0c',
+    popoutRoleCircle: 'popoutRoleCircle_b77a0c'
 };
+e.exports = i;

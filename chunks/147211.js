@@ -1,24 +1,20 @@
-r.d(n, {
-    N: function () {
-        return l;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(692547),
-    o = r(331595),
-    s = r(267843);
-let l = (e) => {
-    var n, r;
-    let { size: l = 'md', width: u, height: c, secondaryColor: d = a.Z.colors.STATUS_DANGER, secondaryColorClass: f = '', color: p = a.Z.colors.INTERACTIVE_NORMAL, colorClass: h = '', ..._ } = e,
-        m = (0, s.m)(l),
-        g = null !== (n = null == m ? void 0 : m.width) && void 0 !== n ? n : u,
-        E = null !== (r = null == m ? void 0 : m.height) && void 0 !== r ? r : c;
+n.d(t, { N: () => o });
+var i = n(200651);
+n(192379);
+var r = n(692547),
+    a = n(331595),
+    s = n(267843);
+let o = (e) => {
+    var t, n;
+    let { size: o = 'md', width: l, height: u, secondaryColor: c = r.Z.colors.STATUS_DANGER, secondaryColorClass: d = '', color: f = r.Z.colors.INTERACTIVE_NORMAL, colorClass: _ = '', ...p } = e,
+        h = (0, s.m)(o),
+        m = null !== (t = null == h ? void 0 : h.width) && void 0 !== t ? t : l,
+        g = null !== (n = null == h ? void 0 : h.height) && void 0 !== n ? n : u;
     return (0, i.jsxs)('svg', {
-        ...(0, o.Z)(_),
+        ...(0, a.Z)(p),
         xmlns: 'http://www.w3.org/2000/svg',
-        width: g,
-        height: E,
+        width: m,
+        height: g,
         fill: 'none',
         viewBox: '0 0 24 24',
         children: [
@@ -26,13 +22,13 @@ let l = (e) => {
                 cx: '19',
                 cy: '19',
                 r: '5',
-                fill: 'string' == typeof d ? d : d.css,
-                className: f
+                fill: 'string' == typeof c ? c : c.css,
+                className: d
             }),
             (0, i.jsx)('path', {
-                fill: 'string' == typeof p ? p : p.css,
+                fill: 'string' == typeof f ? f : f.css,
                 d: 'M9.92 2.08c-.07-.45.18-.93.64-.99a11.1 11.1 0 0 1 2.88 0c.46.06.7.54.64.99-.18 1.16.19 2.2.98 2.53.8.33 1.79-.14 2.49-1.1.27-.36.78-.52 1.14-.24.77.59 1.45 1.27 2.04 2.04.28.36.12.87-.24 1.14-.96.7-1.43 1.7-1.1 2.49.33.8 1.37 1.16 2.53.98.45-.07.93.18.99.64a11.1 11.1 0 0 1 .08 1.82c0 .38-.43.58-.77.4a6.97 6.97 0 0 0-5.63-.35c-.28.1-.59-.14-.59-.43a4 4 0 1 0-4 4c.3 0 .53.31.43.59a6.99 6.99 0 0 0 .35 5.63c.18.34-.02.76-.4.77a11.39 11.39 0 0 1-1.82-.08c-.46-.06-.7-.54-.64-.99.18-1.16-.19-2.2-.98-2.53-.8-.33-1.79.15-2.49 1.1-.27.36-.78.52-1.14.24a11.06 11.06 0 0 1-2.04-2.04c-.28-.36-.12-.87.24-1.14.96-.7 1.43-1.7 1.1-2.49-.33-.8-1.37-1.16-2.53-.98-.45.07-.93-.18-.99-.64a11.1 11.1 0 0 1 0-2.88c.06-.46.54-.7.99-.64 1.16.18 2.2-.19 2.53-.98.33-.8-.14-1.79-1.1-2.49-.36-.27-.52-.78-.24-1.14.59-.77 1.27-1.45 2.04-2.04.36-.28.87-.12 1.14.24.7.95 1.7 1.43 2.49 1.1.8-.33 1.16-1.37.98-2.53Z',
-                className: h
+                className: _
             })
         ]
     });

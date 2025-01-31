@@ -1,25 +1,17 @@
-r.d(n, {
-    GR: function () {
-        return o;
-    },
-    HQ: function () {
-        return l;
-    },
-    gK: function () {
-        return s;
-    },
-    wu: function () {
-        return i;
-    }
+n.d(t, {
+    GR: () => a,
+    HQ: () => o,
+    gK: () => s,
+    wu: () => i
 });
 let i = ['click', 'mousedown', 'mouseup', 'keydown', 'keyup', 'keypress', 'contextmenu'],
-    a = null;
-function o() {
-    return a;
+    r = null;
+function a() {
+    return r;
 }
 function s(e) {
-    a = e;
+    r = e;
 }
-function l(e) {
-    if (a === e) a = null;
+function o(e) {
+    r === e && (r = null);
 }

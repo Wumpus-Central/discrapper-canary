@@ -1,1 +1,1 @@
-e.exports = { categorySubGroup: 'categorySubGroup_ac24fe' };
+e.exports = { categorySubGroup: 'categorySubGroup__65726' };

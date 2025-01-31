@@ -1,66 +1,62 @@
-r.d(n, {
-    Z: function () {
-        return p;
-    }
-});
-var i = r(200651),
-    a = r(192379),
-    o = r(149765),
-    s = r(178940),
-    l = r(993365),
-    u = r(481060),
-    c = r(422559),
-    d = r(388032),
-    f = r(355662);
-function p(e) {
-    let { application: n, permissions: r, deniedPermissions: p, onPermissionsChange: h, guild: _ } = e,
-        m = a.useMemo(() => o.U_(_.permissions), [_.permissions]);
-    a.useEffect(() => {
-        h(!1, o.hX(r, m));
-    }, [m, h, r]);
-    let g = c.VY.filter((e) => o.e$(r, e)),
-        E = g
-            .filter((e) => !o.e$(m, e))
+n.d(t, { Z: () => f });
+var i = n(200651),
+    r = n(192379),
+    a = n(149765),
+    s = n(178940),
+    o = n(993365),
+    l = n(481060),
+    u = n(422559),
+    c = n(388032),
+    d = n(355662);
+function f(e) {
+    let { application: t, permissions: n, deniedPermissions: f, onPermissionsChange: _, guild: p } = e,
+        h = r.useMemo(() => a.U_(p.permissions), [p.permissions]);
+    r.useEffect(() => {
+        _(!1, a.hX(n, h));
+    }, [h, _, n]);
+    let m = u.VY.filter((e) => a.e$(n, e)),
+        g = m
+            .filter((e) => !a.e$(h, e))
             .map((e) => {
-                let n = (0, c.wt)(e),
-                    r = !o.e$(p, e);
+                let t = (0, u.wt)(e),
+                    n = !a.e$(f, e);
                 return (0, i.jsx)(
                     'li',
                     {
-                        className: f.permission,
+                        className: d.permission,
                         children: (0, i.jsx)(s.X, {
-                            value: r,
-                            onChange: (n, r) => h(r, e),
+                            value: n,
+                            onChange: (t, n) => _(n, e),
                             type: s.X.Types.INVERTED,
-                            children: (0, i.jsx)(l.x, {
+                            children: (0, i.jsx)(o.x, {
                                 variant: 'text-md/normal',
-                                children: n
+                                children: t
                             })
                         })
                     },
                     String(e)
                 );
             }),
-        v = g
-            .filter((e) => o.e$(m, e))
+        E = m
+            .filter((e) => a.e$(h, e))
             .map((e) => {
-                let n = (0, c.wt)(e);
+                let t = (0, u.wt)(e);
                 return (0, i.jsxs)(
                     'li',
                     {
-                        className: f.permission,
+                        className: d.permission,
                         children: [
                             (0, i.jsx)('div', {
-                                className: f.disabledPermissionIcon,
-                                children: (0, i.jsx)(u.XSmallIcon, {
+                                className: d.disabledPermissionIcon,
+                                children: (0, i.jsx)(l.Dio, {
                                     size: 'md',
                                     color: 'currentColor',
-                                    className: f.icon
+                                    className: d.icon
                                 })
                             }),
-                            (0, i.jsx)(l.x, {
+                            (0, i.jsx)(o.x, {
                                 variant: 'text-md/normal',
-                                children: n
+                                children: t
                             })
                         ]
                     },
@@ -68,37 +64,37 @@ function p(e) {
                 );
             });
     return (0, i.jsxs)('div', {
-        className: f.botPermissions,
+        className: d.botPermissions,
         children: [
-            E.length > 0
+            g.length > 0
                 ? (0, i.jsxs)('div', {
                       children: [
-                          (0, i.jsx)(l.x, {
+                          (0, i.jsx)(o.x, {
                               variant: 'text-sm/medium',
                               color: 'header-secondary',
-                              children: d.intl.format(d.t.sOaT2t, {
-                                  applicationName: n.name,
-                                  guildName: _.name
+                              children: c.intl.format(c.t.sOaT2t, {
+                                  applicationName: t.name,
+                                  guildName: p.name
                               })
                           }),
                           (0, i.jsx)('ul', {
-                              className: f.permissionsList,
-                              children: E
+                              className: d.permissionsList,
+                              children: g
                           })
                       ]
                   })
                 : null,
-            v.length > 0
+            E.length > 0
                 ? (0, i.jsxs)('div', {
                       children: [
-                          (0, i.jsx)(l.x, {
+                          (0, i.jsx)(o.x, {
                               variant: 'text-sm/medium',
                               color: 'header-secondary',
-                              children: d.intl.format(d.t.fsOkFx, { applicationName: n.name })
+                              children: c.intl.format(c.t.fsOkFx, { applicationName: t.name })
                           }),
                           (0, i.jsx)('ul', {
-                              className: f.permissionsList,
-                              children: v
+                              className: d.permissionsList,
+                              children: E
                           })
                       ]
                   })

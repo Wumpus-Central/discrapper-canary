@@ -1,1 +1,2 @@
-e.exports = { loader: 'loader_c363a8' };
+var i = { loader: 'loader__82471' };
+e.exports = i;

@@ -1,71 +1,67 @@
-r.d(n, {
-    Z: function () {
-        return _;
-    }
-});
-var i = r(200651),
-    a = r(192379),
-    o = r(665443),
-    s = r.n(o),
-    l = r(39383),
-    u = r.n(l),
-    c = r(992774),
-    d = r(672784),
-    f = r(369711),
-    p = r(649754);
-function h(e) {
-    var n, r, i, a;
-    let o = null === (a = window) || void 0 === a ? void 0 : null === (i = a.DiscordNative) || void 0 === i ? void 0 : null === (r = i.app) || void 0 === r ? void 0 : null === (n = r.getReleaseChannel) || void 0 === n ? void 0 : n.call(r);
-    return 'canary' === o || 'development' === o ? (0, f.m)(e) : (0, d.y)(e);
-}
+n.d(t, { Z: () => p });
+var i = n(200651),
+    r = n(192379),
+    a = n(665443),
+    s = n.n(a),
+    o = n(39383),
+    l = n.n(o),
+    u = n(992774),
+    c = n(672784),
+    d = n(369711),
+    f = n(649754);
 function _(e) {
-    let { streamId: n, paused: r, onReady: o, onResize: l, className: d, ...f } = e,
-        _ = a.useRef(null),
-        { current: m } = a.useRef(u()('media-engine-video-'));
+    var t, n, i, r;
+    let a = null === (r = window) || void 0 === r ? void 0 : null === (i = r.DiscordNative) || void 0 === i ? void 0 : null === (n = i.app) || void 0 === n ? void 0 : null === (t = n.getReleaseChannel) || void 0 === t ? void 0 : t.call(n);
+    return 'canary' === a || 'development' === a ? (0, d.m)(e) : (0, c.y)(e);
+}
+function p(e) {
+    let { streamId: t, paused: n, onReady: a, onResize: o, className: c, ...d } = e,
+        p = r.useRef(null),
+        { current: h } = r.useRef(l()('media-engine-video-'));
     return (
-        a.useEffect(() => {
-            let e = _.current;
-            if (!r && null != e) {
-                let r = !1,
-                    i = (n, i) => {
-                        !r && (null == o || o(), (r = !0)),
-                            (e.width !== n || e.height !== i) &&
-                                ((e.width = n),
+        r.useEffect(() => {
+            let e = p.current;
+            if (!n && null != e) {
+                let n = !1,
+                    i = (t, i) => {
+                        n || (null == a || a(), (n = !0)),
+                            (e.width !== t || e.height !== i) &&
+                                ((e.width = t),
                                 (e.height = i),
-                                null == l ||
-                                    l({
-                                        width: n,
+                                null == o ||
+                                    o({
+                                        width: t,
                                         height: i
                                     }));
                     },
-                    a = (0, c.zS)();
-                if (null != a.addVideoOutputSink)
+                    r = (0, u.zS)();
+                if (null != r.addVideoOutputSink)
                     return (
-                        a.addVideoOutputSink(m, n, i),
+                        r.addVideoOutputSink(h, t, i),
                         () => {
-                            a.removeVideoOutputSink(m, n);
+                            r.removeVideoOutputSink(h, t);
                         }
                     );
                 {
-                    let r = h(e);
-                    if (null == r) return;
+                    let n = _(e);
+                    if (null == n) return;
                     return (
-                        p.Z.addSink(n, _, (e) => {
-                            i(e.width, e.height), r.render(e);
+                        f.Z.addSink(t, p, (e) => {
+                            i(e.width, e.height), n.render(e);
                         }),
                         () => {
-                            p.Z.removeSink(n, _);
+                            f.Z.removeSink(t, p);
                         }
                     );
                 }
             }
-        }, [n, r, l, o, m]),
+        }, [t, n, o, a, h]),
         (0, i.jsx)('canvas', {
-            id: m,
-            className: s()('media-engine-video', d),
-            ref: _,
-            ...f
+            id: h,
+            className: s()('media-engine-video', c),
+            ref: p,
+            ...d
         })
     );
 }
-_.defaultProps = { paused: !1 };
+p.defaultProps = { paused: !1 };

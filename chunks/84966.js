@@ -1,26 +1,24 @@
-r.r(
-    (e.exports = {
-        icon: 'icon_a64689',
-        guildIconBadge: 'guildIconBadge_a64689',
-        iconInactive: 'iconInactive_a64689',
-        iconActiveSmol: 'iconActiveSmol_a64689',
-        iconActiveMini: 'iconActiveMini_a64689',
-        iconActiveSmaller: 'iconActiveSmaller_a64689',
-        iconActiveSmall: 'iconActiveSmall_a64689',
-        iconActiveMedium: 'iconActiveMedium_a64689',
-        iconActiveLarge: 'iconActiveLarge_a64689',
-        iconActiveLarger: 'iconActiveLarger_a64689',
-        iconActiveXLarge: 'iconActiveXLarge_a64689',
-        iconSizeSmol: 'iconSizeSmol_a64689',
-        iconSizeMini: 'iconSizeMini_a64689',
-        iconSizeSmaller: 'iconSizeSmaller_a64689',
-        iconSizeSmall: 'iconSizeSmall_a64689',
-        iconSizeMedium: 'iconSizeMedium_a64689',
-        iconSizeLarge: 'iconSizeLarge_a64689',
-        iconSizeLarger: 'iconSizeLarger_a64689',
-        iconSizeXLarge: 'iconSizeXLarge_a64689',
-        acronym: 'acronym_a64689',
-        noIcon: 'noIcon_a64689',
-        noAcronym: 'noAcronym_a64689'
-    })
-);
+var i = {
+    icon: 'icon_f34534',
+    guildIconBadge: 'guildIconBadge_f34534',
+    iconInactive: 'iconInactive_f34534',
+    iconActiveMini: 'iconActiveMini_f34534',
+    iconActiveSmaller: 'iconActiveSmaller_f34534',
+    iconActiveSmall: 'iconActiveSmall_f34534',
+    iconActiveMedium: 'iconActiveMedium_f34534',
+    iconActiveLarge: 'iconActiveLarge_f34534',
+    iconActiveLarger: 'iconActiveLarger_f34534',
+    iconActiveXLarge: 'iconActiveXLarge_f34534',
+    iconSizeSmol: 'iconSizeSmol_f34534',
+    iconSizeMini: 'iconSizeMini_f34534',
+    iconSizeSmaller: 'iconSizeSmaller_f34534',
+    iconSizeSmall: 'iconSizeSmall_f34534',
+    iconSizeMedium: 'iconSizeMedium_f34534',
+    iconSizeLarge: 'iconSizeLarge_f34534',
+    iconSizeLarger: 'iconSizeLarger_f34534',
+    iconSizeXLarge: 'iconSizeXLarge_f34534',
+    acronym: 'acronym_f34534',
+    noIcon: 'noIcon_f34534',
+    noAcronym: 'noAcronym_f34534'
+};
+n.r((e.exports = i));

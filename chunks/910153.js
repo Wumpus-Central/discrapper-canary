@@ -1,4 +1,5 @@
-e.exports = {
-    container: 'container_efeab2',
-    text: 'text_efeab2'
+var i = {
+    container: 'container__33718',
+    text: 'text__33718'
 };
+e.exports = i;

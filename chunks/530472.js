@@ -1,50 +1,46 @@
-n.d(t, {
-    Z: function () {
-        return c;
-    }
-});
+n.d(t, { Z: () => c });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(824203),
-    a = n(981631),
-    o = n(388032),
-    s = n(347436);
+var l = n(481060),
+    a = n(824203),
+    r = n(981631),
+    s = n(388032),
+    o = n(347436);
 function c(e) {
     var t;
     let n,
-        { message: c, onDeleteMessage: u, children: d } = e,
+        { message: c, onDeleteMessage: d, children: u } = e,
         m = null === (t = c.interactionMetadata) || void 0 === t ? void 0 : t.ephemerality_reason,
-        h = () => u(c, !0);
+        h = () => d(c, !0);
     if (null != m) {
-        let e = (0, l.i)(m);
+        let e = (0, a.i)(m);
         n = (0, i.jsx)('div', {
-            className: s.userAppsBetaContent,
-            children: o.intl.format(o.t.wx1tLS, {
+            className: o.userAppsBetaContent,
+            children: s.intl.format(s.t.wx1tLS, {
                 handleDelete: h,
                 reason: e
             })
         });
     } else
         n =
-            c.type === a.uaV.STAGE_RAISE_HAND
-                ? o.intl.format(o.t['qDAX+/'], { handleDelete: h })
-                : o.intl.format(o.t.uX3ecH, {
+            c.type === r.uaV.STAGE_RAISE_HAND
+                ? s.intl.format(s.t['qDAX+/'], { handleDelete: h })
+                : s.intl.format(s.t.uX3ecH, {
                       count: 1,
                       countMessages: 1,
                       handleDelete: h
                   });
     return (0, i.jsxs)('div', {
-        className: s.ephemeralMessage,
+        className: o.ephemeralMessage,
         onClick: (e) => e.stopPropagation(),
         children: [
-            (0, i.jsx)(r.EyeIcon, {
+            (0, i.jsx)(l.tEF, {
                 size: 'xs',
                 color: 'currentColor',
-                className: s.icon
+                className: o.icon
             }),
             n,
-            d
+            u
         ]
     });
 }

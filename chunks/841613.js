@@ -1,13 +1,7 @@
 n.d(t, {
-    Gl: function () {
-        return o;
-    },
-    hG: function () {
-        return a;
-    },
-    oI: function () {
-        return r;
-    }
+    Gl: () => l,
+    hG: () => a,
+    oI: () => s
 });
 var i = n(570140);
 function a(e, t, n) {
@@ -18,12 +12,12 @@ function a(e, t, n) {
         location: n
     });
 }
-function o(e) {
+function l(e) {
     i.Z.dispatch({
         type: 'CONNECTED_DEVICE_IGNORE',
         displayName: e
     });
 }
-function r() {
+function s() {
     i.Z.dispatch({ type: 'CONNECTED_DEVICE_NEVER_SHOW_MODAL' });
 }

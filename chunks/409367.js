@@ -1,10 +1,11 @@
 e.exports = {
-    recommendationReason: 'recommendationReason_bd2d4e',
-    icon: 'icon_bd2d4e',
-    iconCircle: 'iconCircle_bd2d4e circle_bd2d4e',
-    earlyAccess: 'earlyAccess_bd2d4e',
-    premiumCircle: 'premiumCircle_bd2d4e',
-    smallHeader: 'smallHeader_bd2d4e',
-    text: 'text_bd2d4e',
-    description: 'description_bd2d4e'
+    recommendationReason: 'recommendationReason__6efad',
+    circle: 'circle__6efad',
+    icon: 'icon__6efad',
+    iconCircle: 'iconCircle__6efad circle__6efad',
+    earlyAccess: 'earlyAccess__6efad',
+    premiumCircle: 'premiumCircle__6efad',
+    smallHeader: 'smallHeader__6efad',
+    text: 'text__6efad',
+    description: 'description__6efad'
 };

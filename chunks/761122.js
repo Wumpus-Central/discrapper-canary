@@ -1,10 +1,6 @@
-r.d(n, {
-    Z: function () {
-        return a;
-    }
-});
-var i = r(911969);
-function a(e) {
+n.d(t, { Z: () => r });
+var i = n(911969);
+function r(e) {
     switch (e) {
         case 'android':
             return i.C3.ANDROID;

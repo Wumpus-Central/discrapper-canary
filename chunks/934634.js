@@ -1,18 +1,14 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(725432),
-    a = r(646391);
-function o() {
+n.d(t, { Z: () => a });
+var i = n(725432),
+    r = n(646391);
+function a() {
     var e;
-    return (o = i
-        ? a((e = i)).call(e)
+    return (a = i
+        ? r((e = i)).call(e)
         : function (e) {
-              for (var n = 1; n < arguments.length; n++) {
-                  var r = arguments[n];
-                  for (var i in r) Object.prototype.hasOwnProperty.call(r, i) && (e[i] = r[i]);
+              for (var t = 1; t < arguments.length; t++) {
+                  var n = arguments[t];
+                  for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
               }
               return e;
           }).apply(this, arguments);

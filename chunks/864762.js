@@ -1,60 +1,55 @@
-n.d(t, {
-    k: function () {
-        return c;
-    }
-}),
-    n(47120);
-var a = n(192379),
-    r = n(110924),
-    l = n(626135),
-    o = n(798930),
-    s = n(981631);
+a.d(t, { k: () => c }), a(47120);
+var r = a(192379),
+    l = a(110924),
+    s = a(626135),
+    n = a(798930),
+    o = a(981631);
 function c(e, t) {
-    let [n, c] = a.useState(o.O.LANDING),
-        i = (0, r.Z)(n),
-        [d, u] = a.useState(null),
-        [x, h] = a.useState(null),
-        [N, m] = a.useState(void 0),
-        C = a.useCallback(() => {
-            switch (n) {
-                case o.O.LANDING:
-                    c(o.O.PRE_CONNECT);
+    let [a, c] = r.useState(n.O.LANDING),
+        i = (0, l.Z)(a),
+        [d, x] = r.useState(null),
+        [u, h] = r.useState(null),
+        [m, N] = r.useState(void 0),
+        C = r.useCallback(() => {
+            switch (a) {
+                case n.O.LANDING:
+                    c(n.O.PRE_CONNECT);
                     break;
-                case o.O.DISCORD_CONSENT:
-                    c(o.O.SUCCESS);
+                case n.O.DISCORD_CONSENT:
+                    c(n.O.SUCCESS);
                     break;
-                case o.O.ERROR:
-                    c(o.O.PRE_CONNECT);
+                case n.O.ERROR:
+                    c(n.O.PRE_CONNECT);
             }
-        }, [n]),
-        j = a.useCallback((e) => {
-            u(null), m(e), c(o.O.ERROR);
+        }, [a]),
+        j = r.useCallback((e) => {
+            x(null), N(e), c(n.O.ERROR);
         }, []),
-        f = a.useCallback((e) => {
-            u(e), c(o.O.PRE_CONNECT_WAITING);
+        k = r.useCallback((e) => {
+            x(e), c(n.O.PRE_CONNECT_WAITING);
         }, []),
-        v = a.useCallback((e) => {
-            u(null), h(e), c(o.O.DISCORD_CONSENT);
+        v = r.useCallback((e) => {
+            x(null), h(e), c(n.O.DISCORD_CONSENT);
         }, []);
     return (
-        a.useEffect(() => {
-            if (n !== i)
-                l.default.track(s.rMx.ACCOUNT_LINK_STEP, {
+        r.useEffect(() => {
+            a !== i &&
+                s.default.track(o.rMx.ACCOUNT_LINK_STEP, {
                     location_stack: e,
                     previous_step: i,
-                    current_step: n,
+                    current_step: a,
                     platform_type: t
                 });
-        }, [n, i, e, t]),
+        }, [a, i, e, t]),
         {
-            slide: n,
+            slide: a,
             gotoNext: C,
             gotoError: j,
-            handleWaitingForConnection: f,
+            handleWaitingForConnection: k,
             handleAuthToken: v,
             expectedCallbackState: d,
-            callbackData: x,
-            errorCode: N
+            callbackData: u,
+            errorCode: m
         }
     );
 }

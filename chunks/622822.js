@@ -1,20 +1,16 @@
 n.d(t, {
-    Y: function () {
-        return c;
-    },
-    b: function () {
-        return s;
-    }
+    Y: () => c,
+    b: () => o
 });
 var i = n(594174),
-    r = n(709054),
-    l = n(981631);
-let a = new Date('06/16/2020'),
-    o = [l.V_K.AGE_RESTRICTED, l.V_K.EXPLICIT];
-function s() {
+    l = n(709054),
+    a = n(981631);
+let r = new Date('06/16/2020'),
+    s = [a.V_K.AGE_RESTRICTED, a.V_K.EXPLICIT];
+function o() {
     let e = i.default.getCurrentUser();
-    return null != e && r.default.extractTimestamp(e.id) > a.getTime() && !e.isClaimed() && null == e.nsfwAllowed;
+    return null != e && l.default.extractTimestamp(e.id) > r.getTime() && !e.isClaimed() && null == e.nsfwAllowed;
 }
 function c(e) {
-    return o.includes(e.nsfwLevel);
+    return s.includes(e.nsfwLevel);
 }

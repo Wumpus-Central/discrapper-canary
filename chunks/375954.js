@@ -1,399 +1,395 @@
+n.d(t, { Z: () => em }), n(47120), n(789020), n(653041), n(177593);
 var i,
-    a = r(47120);
-var o = r(789020);
-var s = r(653041);
-var l = r(177593);
-var u = r(392711),
-    c = r.n(u),
-    d = r(442837),
-    f = r(570140),
-    p = r(911969),
-    h = r(89892),
-    _ = r(673750),
-    m = r(710845),
-    g = r(247206),
-    E = r(723352),
-    v = r(160404),
-    y = r(786761),
-    b = r(418476),
-    I = r(739566),
-    T = r(995774),
-    S = r(706454),
-    A = r(630388),
-    C = r(709054),
-    N = r(314897),
-    R = r(592125),
-    O = r(796974),
-    D = r(984933),
-    L = r(271383),
-    x = r(430824),
-    w = r(496675),
-    P = r(699516),
-    M = r(944486),
-    k = r(914010),
-    U = r(594174),
-    B = r(981631);
-function G(e, n, r) {
+    r = n(392711),
+    a = n.n(r),
+    s = n(442837),
+    o = n(570140),
+    l = n(911969),
+    u = n(89892),
+    c = n(673750),
+    d = n(710845),
+    f = n(247206),
+    _ = n(723352),
+    p = n(160404),
+    h = n(786761),
+    m = n(418476),
+    g = (n(739566), n(995774)),
+    E = n(706454),
+    v = n(630388),
+    y = n(709054),
+    I = n(314897),
+    b = n(592125),
+    T = n(796974),
+    S = n(984933),
+    A = n(271383),
+    N = n(430824),
+    C = n(496675),
+    R = n(699516),
+    O = n(944486),
+    D = n(914010),
+    x = n(594174),
+    L = n(981631);
+function P(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-let Z = new Set(),
-    F = new m.Z('MessageStore'),
-    V = !1;
-function j() {
-    h.Z.forEach((e) => {
-        h.Z.commit(
+let w = new Set(),
+    M = new d.Z('MessageStore'),
+    k = !1;
+function U() {
+    u.Z.forEach((e) => {
+        u.Z.commit(
             e.mutate({
                 ready: !1,
                 loadingMore: !1
             })
         );
     }),
-        Z.clear();
+        w.clear();
 }
-function H(e) {
-    let { changesByChannelId: n } = e;
-    for (let e in n) {
-        let r = h.Z.get(e);
-        if (null == r) continue;
+function G(e) {
+    let { changesByChannelId: t } = e;
+    for (let e in t) {
+        let n = u.Z.get(e);
+        if (null == n) continue;
         let i = !1;
-        if (!(r.cached || !i)) {
-            F.log('Skipping background message sync for '.concat(e, ' cached:').concat(r.cached, ' ') + 'ready:'.concat(r.ready, ' hasMoreAfter:').concat(r.hasMoreAfter, ' ') + 'isConnected:'.concat(i));
+        if (!(n.cached || !i)) {
+            M.log('Skipping background message sync for '.concat(e, ' cached:').concat(n.cached, ' ') + 'ready:'.concat(n.ready, ' hasMoreAfter:').concat(n.hasMoreAfter, ' ') + 'isConnected:'.concat(i));
             continue;
         }
-        r.mergeDelta(n[e].new_messages, n[e].modified_messages, n[e].deleted_message_ids);
+        n.mergeDelta(t[e].new_messages, t[e].modified_messages, t[e].deleted_message_ids);
     }
 }
-function Y() {
+function B() {
     return !0;
 }
-function W(e) {
-    let { channelId: n, truncateBottom: r, truncateTop: i } = e;
-    F.log('Truncating messages for '.concat(n, ' bottom:').concat(r, ' top:').concat(i));
-    let a = h.Z.getOrCreate(n);
-    (a = a.truncate(r, i)), h.Z.commit(a);
+function Z(e) {
+    let { channelId: t, truncateBottom: n, truncateTop: i } = e;
+    M.log('Truncating messages for '.concat(t, ' bottom:').concat(n, ' top:').concat(i));
+    let r = u.Z.getOrCreate(t);
+    (r = r.truncate(n, i)), u.Z.commit(r);
 }
-function K(e) {
-    let { channelId: n } = e;
-    F.log('Clearing messages for '.concat(n)), h.Z.clear(n), Z.clear();
+function F(e) {
+    let { channelId: t } = e;
+    M.log('Clearing messages for '.concat(t)), u.Z.clear(t), w.clear();
 }
-function z(e) {
-    let { channelId: n, jump: r, focus: i, before: a, after: o, limit: s, truncate: l } = e,
-        u = h.Z.getOrCreate(n);
-    (null == r ? void 0 : r.present) ? (u = u.jumpToPresent(s)) : (null == i ? void 0 : i.messageId) != null ? (u = u.focusOnMessage(i.messageId)) : (null == r ? void 0 : r.messageId) != null ? (u = u.jumpToMessage(r.messageId, r.flash, r.offset, r.returnMessageId, r.jumpType)) : (null != a || null != o) && (u = u.loadFromCache(null != a, s)), null != l && (null != a || null != o) && (null == a || null == o) && (u = u.truncate(null != a, null != o)), h.Z.commit(u);
+function V(e) {
+    let { channelId: t, jump: n, focus: i, before: r, after: a, limit: s, truncate: o } = e,
+        l = u.Z.getOrCreate(t);
+    (null == n ? void 0 : n.present) ? (l = l.jumpToPresent(s)) : (null == i ? void 0 : i.messageId) != null ? (l = l.focusOnMessage(i.messageId)) : (null == n ? void 0 : n.messageId) != null ? (l = l.jumpToMessage(n.messageId, n.flash, n.offset, n.returnMessageId, n.jumpType)) : (null != r || null != a) && (l = l.loadFromCache(null != r, s)), null != o && (null != r || null != a) && (null == r || null == a) && (l = l.truncate(null != r, null != a)), u.Z.commit(l);
 }
-function q(e) {
-    let { channelId: n, isBefore: r, isAfter: i, jump: a, hasMoreBefore: o, hasMoreAfter: s, messages: l, isStale: u, truncate: c } = e,
-        d = h.Z.getOrCreate(n);
+function j(e) {
+    let { channelId: t, isBefore: n, isAfter: i, jump: r, hasMoreBefore: a, hasMoreAfter: s, messages: o, isStale: l, truncate: c } = e,
+        d = u.Z.getOrCreate(t);
     (d = d.loadComplete({
-        newMessages: l,
-        isBefore: r,
+        newMessages: o,
+        isBefore: n,
         isAfter: i,
-        jump: a,
-        hasMoreBefore: o,
+        jump: r,
+        hasMoreBefore: a,
         hasMoreAfter: s,
-        cached: u,
+        cached: l,
         hasFetched: !0
     })),
-        null != c && (r || i) && (!r || !i) && (d = d.truncate(r, i)),
-        h.Z.commit(d);
+        null != c && (n || i) && (!n || !i) && (d = d.truncate(n, i)),
+        u.Z.commit(d);
 }
-function Q(e) {
-    let { channelId: n } = e,
-        r = h.Z.getOrCreate(n);
-    h.Z.commit(
-        r.mutate({
+function H(e) {
+    let { channelId: t } = e,
+        n = u.Z.getOrCreate(t);
+    u.Z.commit(
+        n.mutate({
             loadingMore: !1,
             error: !0
         })
     );
 }
-function X(e) {
-    let { message: n } = e;
-    null != n.nonce && Z.add(n.nonce);
+function Y(e) {
+    let { message: t } = e;
+    null != t.nonce && w.add(t.nonce);
 }
-function J(e) {
-    let { channelId: n, messageRecord: r } = e,
-        i = null == r ? void 0 : r.nonce;
-    if (null != i && Z.has(i)) {
-        let e = h.Z.getOrCreate(n),
-            r = e.get(i);
-        if (null == r) return;
-        (e = (e = e.remove(i)).merge([r])), Z.delete(i), h.Z.commit(e);
+function W(e) {
+    let { channelId: t, messageRecord: n } = e,
+        i = null == n ? void 0 : n.nonce;
+    if (null != i && w.has(i)) {
+        let e = u.Z.getOrCreate(t),
+            n = e.get(i);
+        if (null == n) return;
+        (e = (e = e.remove(i)).merge([n])), w.delete(i), u.Z.commit(e);
     }
 }
-function $(e) {
-    let { channelId: n, message: r, isPushNotification: i } = e,
-        a = h.Z.getOrCreate(n);
+function K(e) {
+    let { channelId: t, message: n, isPushNotification: i } = e,
+        r = u.Z.getOrCreate(t);
     if (i) {
-        F.log('Inserting message tapped on from a push notification', r.id, r.channel_id), h.Z.commit(a.receivePushNotification(r));
+        M.log('Inserting message tapped on from a push notification', n.id, n.channel_id), u.Z.commit(r.receivePushNotification(n));
         return;
     }
-    if (!a.ready) return !1;
-    null != r.nonce && r.state !== B.yb.SENDING && Z.has(r.nonce) && ((a = a.remove(r.nonce)), Z.delete(r.nonce)), (a = a.receiveMessage(r, !0 === O.Z.isAtBottom(n))), h.Z.commit(a);
+    if (!r.ready) return !1;
+    null != n.nonce && n.state !== L.yb.SENDING && w.has(n.nonce) && ((r = r.remove(n.nonce)), w.delete(n.nonce)), (r = r.receiveMessage(n, !0 === T.Z.isAtBottom(t))), u.Z.commit(r);
 }
-function ee(e) {
-    let { channelId: n, messageId: r, reason: i } = e,
-        a = h.Z.getOrCreate(n);
-    if (null == a || !a.has(r)) return !1;
-    let o = a.get(r, !0);
-    (a = (null == o ? void 0 : o.isPoll()) === !0 ? a.remove(r) : a.update(r, (e) => ((e = e.set('state', B.yb.SEND_FAILED)).isCommandType() ? (e = (e = e.set('interactionError', null != i ? i : '')).set('flags', (0, A.pj)(e.flags, B.iLy.EPHEMERAL))) : null != i && (e = e.set('interactionError', null != i ? i : '')), e))), h.Z.commit(a);
+function z(e) {
+    let { channelId: t, messageId: n, reason: i } = e,
+        r = u.Z.getOrCreate(t);
+    if (null == r || !r.has(n)) return !1;
+    let a = r.get(n, !0);
+    (r = (null == a ? void 0 : a.isPoll()) === !0 ? r.remove(n) : r.update(n, (e) => ((e = e.set('state', L.yb.SEND_FAILED)).isCommandType() ? (e = (e = e.set('interactionError', null != i ? i : '')).set('flags', (0, v.pj)(e.flags, L.iLy.EPHEMERAL))) : null != i && (e = e.set('interactionError', null != i ? i : '')), e))), u.Z.commit(r);
 }
-function et(e) {
-    let { id: n, channelId: r } = e,
-        i = h.Z.getOrCreate(r);
-    if (null == i || !i.has(n)) return !1;
-    if (i.revealedMessageId === n) {
-        let e = i.getAfter(n);
+function q(e) {
+    let { id: t, channelId: n } = e,
+        i = u.Z.getOrCreate(n);
+    if (null == i || !i.has(t)) return !1;
+    if (i.revealedMessageId === t) {
+        let e = i.getAfter(t);
         i = null != e && e.blocked ? i.mutate({ revealedMessageId: e.id }) : i.mutate({ revealedMessageId: null });
     }
-    (i = i.remove(n)), h.Z.commit(i), Z.delete(n);
+    (i = i.remove(t)), u.Z.commit(i), w.delete(t);
 }
-function en(e) {
-    let { ids: n, channelId: r } = e,
-        i = h.Z.getOrCreate(r);
+function Q(e) {
+    let { ids: t, channelId: n } = e,
+        i = u.Z.getOrCreate(n);
     if (null == i) return !1;
-    let a = i.removeMany(n);
-    if (i === a) return !1;
-    if (null != a.revealedMessageId && c().some(n, (e) => a.revealedMessageId === e)) {
-        let e = a.getAfter(a.revealedMessageId);
-        a = null != e && e.blocked ? a.mutate({ revealedMessageId: e.id }) : a.mutate({ revealedMessageId: null });
+    let r = i.removeMany(t);
+    if (i === r) return !1;
+    if (null != r.revealedMessageId && a().some(t, (e) => r.revealedMessageId === e)) {
+        let e = r.getAfter(r.revealedMessageId);
+        r = null != e && e.blocked ? r.mutate({ revealedMessageId: e.id }) : r.mutate({ revealedMessageId: null });
     }
-    h.Z.commit(a),
-        n.forEach((e) => {
-            Z.delete(e);
+    u.Z.commit(r),
+        t.forEach((e) => {
+            w.delete(e);
         });
 }
-function er(e) {
-    let n = e.message.id,
-        r = e.message.channel_id,
-        i = h.Z.getOrCreate(r);
-    if (null == i || !i.has(n)) return !1;
-    (i = i.update(n, (n) => (0, y.wi)(n, e.message))), h.Z.commit(i);
+function X(e) {
+    let t = e.message.id,
+        n = e.message.channel_id,
+        i = u.Z.getOrCreate(n);
+    if (null == i || !i.has(t)) return !1;
+    (i = i.update(t, (t) => (0, h.wi)(t, e.message))), u.Z.commit(i);
 }
-function ei(e) {
-    let { messageId: n, channelId: r } = e,
-        i = h.Z.get(r);
-    if (null == i || !i.has(n)) return !1;
-    (i = i.update(n, g.Cm)), h.Z.commit(i);
+function J(e) {
+    let { messageId: t, channelId: n } = e,
+        i = u.Z.get(n);
+    if (null == i || !i.has(t)) return !1;
+    (i = i.update(t, f.Cm)), u.Z.commit(i);
 }
-function ea(e) {
-    let n = e.messageId,
-        r = e.channelId,
-        i = h.Z.get(r);
-    if (null == i || !i.has(n)) return !1;
-    (i = i.update(n, (n) => n.set('interactionData', e.interactionData))), h.Z.commit(i);
+function $(e) {
+    let t = e.messageId,
+        n = e.channelId,
+        i = u.Z.get(n);
+    if (null == i || !i.has(t)) return !1;
+    (i = i.update(t, (t) => t.set('interactionData', e.interactionData))), u.Z.commit(i);
 }
-function eo(e) {
-    let { channelId: n } = e,
-        r = h.Z.getOrCreate(n);
-    (r = r.loadComplete({
+function ee(e) {
+    let { channelId: t } = e,
+        n = u.Z.getOrCreate(t);
+    (n = n.loadComplete({
         newMessages: [],
         hasMoreAfter: !1,
         hasMoreBefore: !1
     })),
-        h.Z.commit(r);
+        u.Z.commit(n);
 }
-function es() {
-    h.Z.forEach((e) => {
-        let { channelId: n } = e;
-        null == R.Z.getChannel(n) && h.Z.clear(n);
+function et() {
+    u.Z.forEach((e) => {
+        let { channelId: t } = e;
+        null == b.Z.getChannel(t) && u.Z.clear(t);
     });
 }
-function el() {
-    h.Z.forEach((e) => {
-        h.Z.commit(e.reset(e.map((e) => e.set('blocked', P.Z.isBlockedForMessage(e)).set('ignored', P.Z.isIgnoredForMessage(e)))));
+function en() {
+    u.Z.forEach((e) => {
+        u.Z.commit(e.reset(e.map((e) => e.set('blocked', R.Z.isBlockedForMessage(e)).set('ignored', R.Z.isIgnoredForMessage(e)))));
     });
+}
+function ei(e) {
+    let { channelId: t, messageId: n } = e,
+        i = u.Z.getOrCreate(t);
+    u.Z.commit(i.mutate({ revealedMessageId: n }));
+}
+function er(e) {}
+function ea(e) {}
+function es(e) {
+    let { type: t, channelId: n, messageId: i, userId: r, emoji: a, reactionType: s } = e,
+        o = u.Z.get(n);
+    if (null == o || !(0, g.sm)(e)) return !1;
+    let l = I.default.getId() === r;
+    (o = o.update(i, (n) => ('MESSAGE_REACTION_ADD' === t ? n.addReaction(a, l, e.colors, s) : n.removeReaction(a, l, s)))), u.Z.commit(o);
+}
+function eo(e) {
+    let { channelId: t, messageId: n, reactions: i } = e,
+        r = u.Z.get(t);
+    if (null == r) return !1;
+    (r = r.update(n, (e) => {
+        var t;
+        return e.addReactionBatch(i, null === (t = x.default.getCurrentUser()) || void 0 === t ? void 0 : t.id);
+    })),
+        u.Z.commit(r);
+}
+function el(e) {
+    let { type: t, messageData: n } = e,
+        { message: i } = n,
+        r = (0, c.hc)(n),
+        a = i.channelId,
+        s = u.Z.getOrCreate(a);
+    if (!s.has(r)) return !1;
+    (s = s.update(r, (e) => {
+        var n;
+        return (null === (n = e.embeds) || void 0 === n ? void 0 : n.filter(_.K).length) > 0 && (e = e.set('embeds', [])), 'MESSAGE_SEND_FAILED_AUTOMOD' === t && (e = e.set('flags', (0, v.pj)(e.flags, L.iLy.EPHEMERAL))), e;
+    })),
+        u.Z.commit(s);
 }
 function eu(e) {
-    let { channelId: n, messageId: r } = e,
-        i = h.Z.getOrCreate(n);
-    h.Z.commit(i.mutate({ revealedMessageId: r }));
+    let { channelId: t, messageId: n } = e,
+        i = u.Z.get(t);
+    if (null == i) return !1;
+    (i = i.update(n, (e) => e.set('reactions', []))), u.Z.commit(i);
 }
-function ec(e) {}
-function ed(e) {}
+function ec(e) {
+    let { channelId: t, messageId: n, emoji: i } = e,
+        r = u.Z.get(t);
+    if (null == r) return !1;
+    (r = r.update(n, (e) => e.removeReactionsForEmoji(i))), u.Z.commit(r);
+}
+function ed() {
+    u.Z.forEach((e) => {
+        u.Z.clear(e.channelId);
+    }),
+        w.clear();
+}
 function ef(e) {
-    let { type: n, channelId: r, messageId: i, userId: a, emoji: o, reactionType: s } = e,
-        l = h.Z.get(r);
-    if (null == l || !(0, T.sm)(e)) return !1;
-    let u = N.default.getId() === a;
-    (l = l.update(i, (r) => ('MESSAGE_REACTION_ADD' === n ? r.addReaction(o, u, e.colors, s) : r.removeReaction(o, u, s)))), h.Z.commit(l);
-}
-function ep(e) {
-    let { channelId: n, messageId: r, reactions: i } = e,
-        a = h.Z.get(n);
-    if (null == a) return !1;
-    (a = a.update(r, (e) => {
-        var n;
-        return e.addReactionBatch(i, null === (n = U.default.getCurrentUser()) || void 0 === n ? void 0 : n.id);
-    })),
-        h.Z.commit(a);
-}
-function eh(e) {
-    let { type: n, messageData: r } = e,
-        { message: i } = r,
-        a = (0, _.hc)(r),
-        o = i.channelId,
-        s = h.Z.getOrCreate(o);
-    if (!s.has(a)) return !1;
-    (s = s.update(a, (e) => {
-        var r;
-        return (null === (r = e.embeds) || void 0 === r ? void 0 : r.filter(E.K).length) > 0 && (e = e.set('embeds', [])), 'MESSAGE_SEND_FAILED_AUTOMOD' === n && (e = e.set('flags', (0, A.pj)(e.flags, B.iLy.EPHEMERAL))), e;
-    })),
-        h.Z.commit(s);
+    for (let [t, n] of y.default.entries(e.messages)) {
+        let e = u.Z.getOrCreate(t).addCachedMessages(n, !0);
+        u.Z.commit(e);
+    }
 }
 function e_(e) {
-    let { channelId: n, messageId: r } = e,
-        i = h.Z.get(n);
-    if (null == i) return !1;
-    (i = i.update(r, (e) => e.set('reactions', []))), h.Z.commit(i);
+    let t = u.Z.getOrCreate(e.channelId);
+    (t.cached || !t.ready) && u.Z.commit(t.addCachedMessages(e.messages, e.stale));
 }
-function em(e) {
-    let { channelId: n, messageId: r, emoji: i } = e,
-        a = h.Z.get(n);
-    if (null == a) return !1;
-    (a = a.update(r, (e) => e.removeReactionsForEmoji(i))), h.Z.commit(a);
+function ep(e) {
+    let { message: t } = e,
+        n = x.default.getCurrentUser();
+    null != t && null != t.author && null != n && t.author.id === n.id && (k = !0);
 }
-function eg() {
-    h.Z.forEach((e) => {
-        h.Z.clear(e.channelId);
-    }),
-        Z.clear();
-}
-function eE(e) {
-    for (let [n, r] of C.default.entries(e.messages)) {
-        let e = h.Z.getOrCreate(n).addCachedMessages(r, !0);
-        h.Z.commit(e);
-    }
-}
-function ev(e) {
-    let n = h.Z.getOrCreate(e.channelId);
-    (n.cached || !n.ready) && h.Z.commit(n.addCachedMessages(e.messages, e.stale));
-}
-function ey(e) {
-    let { message: n } = e,
-        r = U.default.getCurrentUser();
-    null != n && null != n.author && null != r && n.author.id === r.id && (V = !0);
-}
-class eb extends (i = d.ZP.Store) {
+class eh extends (i = s.ZP.Store) {
     initialize() {
-        this.waitFor(U.default, R.Z, O.Z, L.ZP, S.default, M.Z, k.Z, x.Z, P.Z, D.ZP), this.syncWith([v.Z], () => {});
+        this.waitFor(x.default, b.Z, T.Z, A.ZP, E.default, O.Z, D.Z, N.Z, R.Z, S.ZP), this.syncWith([p.Z], () => {});
     }
     getMessages(e) {
-        if (v.Z.hasViewingRoles()) {
-            let n = R.Z.getChannel(e),
-                r = null == n ? void 0 : n.getGuildId();
-            if (v.Z.isViewingRoles(r) && !w.Z.can(B.Plq.VIEW_CHANNEL, n)) return new h.Z(e);
+        if (p.Z.hasViewingRoles()) {
+            let t = b.Z.getChannel(e),
+                n = null == t ? void 0 : t.getGuildId();
+            if (p.Z.isViewingRoles(n) && !C.Z.can(L.Plq.VIEW_CHANNEL, t)) return new u.Z(e);
         }
-        return h.Z.getOrCreate(e);
+        return u.Z.getOrCreate(e);
     }
-    getMessage(e, n) {
-        return h.Z.getOrCreate(e).get(n);
+    getMessage(e, t) {
+        return u.Z.getOrCreate(e).get(t);
     }
     getLastEditableMessage(e) {
-        let n = U.default.getCurrentUser();
-        return c()(this.getMessages(e).toArray())
+        let t = x.default.getCurrentUser();
+        return a()(this.getMessages(e).toArray())
             .reverse()
-            .find((e) => (0, b.Z)(e, null == n ? void 0 : n.id));
+            .find((e) => (0, m.Z)(e, null == t ? void 0 : t.id));
     }
     getLastChatCommandMessage(e) {
-        let n = U.default.getCurrentUser();
+        let t = x.default.getCurrentUser();
         return this.getMessages(e)
             .toArray()
             .reverse()
             .find((e) => {
-                var r, i;
-                return (null === (r = e.interaction) || void 0 === r ? void 0 : r.type) === p.B8.APPLICATION_COMMAND && (null === (i = e.interactionData) || void 0 === i ? void 0 : i.type) === p.yU.CHAT && e.interaction.user.id === (null == n ? void 0 : n.id);
+                var n, i;
+                return (null === (n = e.interaction) || void 0 === n ? void 0 : n.type) === l.B8.APPLICATION_COMMAND && (null === (i = e.interactionData) || void 0 === i ? void 0 : i.type) === l.yU.CHAT && e.interaction.user.id === (null == t ? void 0 : t.id);
             });
     }
     getLastMessage(e) {
-        return c()(this.getMessages(e).toArray()).reverse().get(0);
+        return a()(this.getMessages(e).toArray()).reverse().get(0);
     }
     getLastNonCurrentUserMessage(e) {
-        let n = U.default.getCurrentUser();
-        return c()(this.getMessages(e).toArray())
+        let t = x.default.getCurrentUser();
+        return a()(this.getMessages(e).toArray())
             .reverse()
-            .find((e) => e.author.id !== (null == n ? void 0 : n.id));
+            .find((e) => e.author.id !== (null == t ? void 0 : t.id));
     }
     jumpedMessageId(e) {
-        let n = h.Z.get(e);
-        return null == n ? void 0 : n.jumpTargetId;
+        let t = u.Z.get(e);
+        return null == t ? void 0 : t.jumpTargetId;
     }
     focusedMessageId(e) {
-        let n = h.Z.get(e);
-        return null == n ? void 0 : n.focusTargetId;
+        let t = u.Z.get(e);
+        return null == t ? void 0 : t.focusTargetId;
     }
     hasPresent(e) {
-        let n = h.Z.get(e);
-        return null != n && n.ready && n.hasPresent();
+        let t = u.Z.get(e);
+        return null != t && t.ready && t.hasPresent();
     }
     isReady(e) {
-        return h.Z.getOrCreate(e).ready;
+        return u.Z.getOrCreate(e).ready;
     }
-    whenReady(e, n) {
+    whenReady(e, t) {
         this.addConditionalChangeListener(() => {
-            if (this.isReady(e)) return setImmediate(n), !1;
+            if (this.isReady(e)) return setImmediate(t), !1;
         });
     }
     isLoadingMessages(e) {
-        return h.Z.getOrCreate(e).loadingMore;
+        return u.Z.getOrCreate(e).loadingMore;
     }
     hasCurrentUserSentMessage(e) {
-        let n = U.default.getCurrentUser();
-        return null != this.getMessages(e).findNewest((e) => e.author.id === (null == n ? void 0 : n.id));
+        let t = x.default.getCurrentUser();
+        return null != this.getMessages(e).findNewest((e) => e.author.id === (null == t ? void 0 : t.id));
     }
     hasCurrentUserSentMessageSinceAppStart() {
-        return V;
+        return k;
     }
 }
-G(eb, 'displayName', 'MessageStore'),
-    (n.Z = new eb(f.Z, {
-        BACKGROUND_SYNC_CHANNEL_MESSAGES: H,
-        CONNECTION_OPEN: j,
-        OVERLAY_INITIALIZE: j,
-        CACHE_LOADED: eE,
-        LOAD_MESSAGES: Y,
-        LOAD_MESSAGES_SUCCESS: q,
-        LOAD_MESSAGES_FAILURE: Q,
-        LOAD_MESSAGES_SUCCESS_CACHED: z,
-        LOCAL_MESSAGES_LOADED: ev,
-        LOAD_MESSAGE_INTERACTION_DATA_SUCCESS: ea,
-        TRUNCATE_MESSAGES: W,
-        CLEAR_MESSAGES: K,
-        MESSAGE_CREATE: $,
-        MESSAGE_SEND_FAILED: ee,
-        MESSAGE_SEND_FAILED_AUTOMOD: eh,
-        MESSAGE_EDIT_FAILED_AUTOMOD: eh,
-        MESSAGE_UPDATE: er,
-        MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: ei,
-        MESSAGE_DELETE: et,
-        MESSAGE_DELETE_BULK: en,
-        MESSAGE_REVEAL: eu,
-        THREAD_CREATE_LOCAL: eo,
-        CHANNEL_DELETE: es,
-        THREAD_DELETE: es,
-        GUILD_DELETE: es,
-        RELATIONSHIP_ADD: el,
-        RELATIONSHIP_UPDATE: el,
-        RELATIONSHIP_REMOVE: el,
-        GUILD_MEMBERS_CHUNK_BATCH: ec,
-        THREAD_MEMBER_LIST_UPDATE: ed,
-        MESSAGE_REACTION_ADD: ef,
-        MESSAGE_REACTION_ADD_MANY: ep,
-        MESSAGE_REACTION_REMOVE: ef,
-        MESSAGE_REACTION_REMOVE_ALL: e_,
-        MESSAGE_REACTION_REMOVE_EMOJI: em,
-        LOGOUT: eg,
-        UPLOAD_START: X,
-        UPLOAD_FAIL: J,
-        LOCAL_MESSAGE_CREATE: ey
-    }));
+P(eh, 'displayName', 'MessageStore');
+let em = new eh(o.Z, {
+    BACKGROUND_SYNC_CHANNEL_MESSAGES: G,
+    CONNECTION_OPEN: U,
+    OVERLAY_INITIALIZE: U,
+    CACHE_LOADED: ef,
+    LOAD_MESSAGES: B,
+    LOAD_MESSAGES_SUCCESS: j,
+    LOAD_MESSAGES_FAILURE: H,
+    LOAD_MESSAGES_SUCCESS_CACHED: V,
+    LOCAL_MESSAGES_LOADED: e_,
+    LOAD_MESSAGE_INTERACTION_DATA_SUCCESS: $,
+    TRUNCATE_MESSAGES: Z,
+    CLEAR_MESSAGES: F,
+    MESSAGE_CREATE: K,
+    MESSAGE_SEND_FAILED: z,
+    MESSAGE_SEND_FAILED_AUTOMOD: el,
+    MESSAGE_EDIT_FAILED_AUTOMOD: el,
+    MESSAGE_UPDATE: X,
+    MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: J,
+    MESSAGE_DELETE: q,
+    MESSAGE_DELETE_BULK: Q,
+    MESSAGE_REVEAL: ei,
+    THREAD_CREATE_LOCAL: ee,
+    CHANNEL_DELETE: et,
+    THREAD_DELETE: et,
+    GUILD_DELETE: et,
+    RELATIONSHIP_ADD: en,
+    RELATIONSHIP_UPDATE: en,
+    RELATIONSHIP_REMOVE: en,
+    GUILD_MEMBERS_CHUNK_BATCH: er,
+    THREAD_MEMBER_LIST_UPDATE: ea,
+    MESSAGE_REACTION_ADD: es,
+    MESSAGE_REACTION_ADD_MANY: eo,
+    MESSAGE_REACTION_REMOVE: es,
+    MESSAGE_REACTION_REMOVE_ALL: eu,
+    MESSAGE_REACTION_REMOVE_EMOJI: ec,
+    LOGOUT: ed,
+    UPLOAD_START: Y,
+    UPLOAD_FAIL: W,
+    LOCAL_MESSAGE_CREATE: ep
+});

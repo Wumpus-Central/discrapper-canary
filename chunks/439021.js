@@ -1,37 +1,33 @@
-r.d(n, {
-    t: function () {
-        return u;
-    }
-});
-var i = r(200651),
-    a = r(481060),
-    o = r(502109),
-    s = r(388032),
-    l = r(245590);
-function u(e) {
-    let n,
-        { onChooseType: r, onStripePaymentMethodReceived: u, onPaymentRequestFailure: c, onValidPaymentRequest: d, paymentRequestRef: f, paymentRequestWallet: p } = e,
-        h = {
+n.d(t, { t: () => l });
+var i = n(200651),
+    r = n(481060),
+    a = n(502109),
+    s = n(388032),
+    o = n(245590);
+function l(e) {
+    let t,
+        { onChooseType: n, onStripePaymentMethodReceived: l, onPaymentRequestFailure: u, onValidPaymentRequest: c, paymentRequestRef: d, paymentRequestWallet: f } = e,
+        _ = {
             paymentLabel: s.intl.string(s.t.ZURqX1),
-            paymentRequestRef: f,
+            paymentRequestRef: d,
             renderConnectorView: !0,
-            onStripePaymentMethodReceived: u,
-            onPaymentRequestFailure: c,
-            onValidPaymentRequest: d,
-            onChooseType: r,
-            loadingComponent: (0, i.jsx)(a.Button, {
-                color: a.Button.Colors.TRANSPARENT,
+            onStripePaymentMethodReceived: l,
+            onPaymentRequestFailure: u,
+            onValidPaymentRequest: c,
+            onChooseType: n,
+            loadingComponent: (0, i.jsx)(r.zxk, {
+                color: r.zxk.Colors.TRANSPARENT,
                 submitting: !0,
-                look: a.Button.Looks.LINK
+                look: r.zxk.Looks.LINK
             })
         };
     return (
-        (n = 'applePay' === p ? (0, i.jsx)(o.Ch, { ...h }) : (0, i.jsx)(o.Tr, { ...h })),
+        (t = 'applePay' === f ? (0, i.jsx)(a.Ch, { ..._ }) : (0, i.jsx)(a.Tr, { ..._ })),
         (0, i.jsx)('div', {
-            className: l.body,
-            children: (0, i.jsx)(a.FormSection, {
+            className: o.body,
+            children: (0, i.jsx)(r.hjN, {
                 title: s.intl.string(s.t.eQ2bLi),
-                children: n
+                children: t
             })
         })
     );

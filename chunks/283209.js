@@ -1,28 +1,24 @@
-r.d(n, {
-    D: function () {
-        return d;
-    }
-});
-var i = r(192379),
-    a = r(995295),
-    o = r(978008),
-    s = r(427753),
-    l = r.n(s),
-    u = r(632590),
-    c = [],
-    d = function (e, n, r) {
-        void 0 === r && (r = {});
+n.d(t, { D: () => c });
+var i = n(192379),
+    r = n(995295),
+    a = n(978008),
+    s = n(427753),
+    o = n.n(s),
+    l = n(632590),
+    u = [],
+    c = function (e, t, n) {
+        void 0 === n && (n = {});
         var s = i.useRef(null),
-            d = {
-                onFirstUpdate: r.onFirstUpdate,
-                placement: r.placement || 'bottom',
-                strategy: r.strategy || 'absolute',
-                modifiers: r.modifiers || c
+            c = {
+                onFirstUpdate: n.onFirstUpdate,
+                placement: n.placement || 'bottom',
+                strategy: n.strategy || 'absolute',
+                modifiers: n.modifiers || u
             },
-            f = i.useState({
+            d = i.useState({
                 styles: {
                     popper: {
-                        position: d.strategy,
+                        position: c.strategy,
                         left: '0',
                         top: '0'
                     },
@@ -30,26 +26,26 @@ var i = r(192379),
                 },
                 attributes: {}
             }),
-            p = f[0],
-            h = f[1],
-            _ = i.useMemo(function () {
+            f = d[0],
+            _ = d[1],
+            p = i.useMemo(function () {
                 return {
                     name: 'updateState',
                     enabled: !0,
                     phase: 'write',
                     fn: function (e) {
-                        var n = e.state,
-                            r = Object.keys(n.elements);
-                        a.flushSync(function () {
-                            h({
-                                styles: (0, u.sq)(
-                                    r.map(function (e) {
-                                        return [e, n.styles[e] || {}];
+                        var t = e.state,
+                            n = Object.keys(t.elements);
+                        r.flushSync(function () {
+                            _({
+                                styles: (0, l.sq)(
+                                    n.map(function (e) {
+                                        return [e, t.styles[e] || {}];
                                     })
                                 ),
-                                attributes: (0, u.sq)(
-                                    r.map(function (e) {
-                                        return [e, n.attributes[e]];
+                                attributes: (0, l.sq)(
+                                    n.map(function (e) {
+                                        return [e, t.attributes[e]];
                                     })
                                 )
                             });
@@ -58,52 +54,52 @@ var i = r(192379),
                     requires: ['computeStyles']
                 };
             }, []),
-            m = i.useMemo(
+            h = i.useMemo(
                 function () {
                     var e = {
-                        onFirstUpdate: d.onFirstUpdate,
-                        placement: d.placement,
-                        strategy: d.strategy,
-                        modifiers: [].concat(d.modifiers, [
-                            _,
+                        onFirstUpdate: c.onFirstUpdate,
+                        placement: c.placement,
+                        strategy: c.strategy,
+                        modifiers: [].concat(c.modifiers, [
+                            p,
                             {
                                 name: 'applyStyles',
                                 enabled: !1
                             }
                         ])
                     };
-                    return l()(s.current, e) ? s.current || e : ((s.current = e), e);
+                    return o()(s.current, e) ? s.current || e : ((s.current = e), e);
                 },
-                [d.onFirstUpdate, d.placement, d.strategy, d.modifiers, _]
+                [c.onFirstUpdate, c.placement, c.strategy, c.modifiers, p]
             ),
-            g = i.useRef();
+            m = i.useRef();
         return (
-            (0, u.LI)(
+            (0, l.LI)(
                 function () {
-                    g.current && g.current.setOptions(m);
+                    m.current && m.current.setOptions(h);
                 },
-                [m]
+                [h]
             ),
-            (0, u.LI)(
+            (0, l.LI)(
                 function () {
-                    if (null != e && null != n) {
-                        var i = (r.createPopper || o.fi)(e, n, m);
+                    if (null != e && null != t) {
+                        var i = (n.createPopper || a.fi)(e, t, h);
                         return (
-                            (g.current = i),
+                            (m.current = i),
                             function () {
-                                i.destroy(), (g.current = null);
+                                i.destroy(), (m.current = null);
                             }
                         );
                     }
                 },
-                [e, n, r.createPopper]
+                [e, t, n.createPopper]
             ),
             {
-                state: g.current ? g.current.state : null,
-                styles: p.styles,
-                attributes: p.attributes,
-                update: g.current ? g.current.update : null,
-                forceUpdate: g.current ? g.current.forceUpdate : null
+                state: m.current ? m.current.state : null,
+                styles: f.styles,
+                attributes: f.attributes,
+                update: m.current ? m.current.update : null,
+                forceUpdate: m.current ? m.current.forceUpdate : null
             }
         );
     };

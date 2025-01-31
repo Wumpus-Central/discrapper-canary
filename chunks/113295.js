@@ -1,39 +1,37 @@
-let i = r(40231),
-    a = r(721919),
-    { ANY: o } = a,
-    s = r(889658),
-    l = r(839525),
-    u = r(393808),
-    c = r(690217),
-    d = r(689478),
-    f = r(725616),
-    p = (e, n, r, p) => {
-        let h, _, m, g, E;
-        switch (((e = new i(e, p)), (n = new s(n, p)), r)) {
+let i = n(40231),
+    r = n(721919),
+    { ANY: a } = r,
+    s = n(889658),
+    o = n(839525),
+    l = n(393808),
+    u = n(690217),
+    c = n(689478),
+    d = n(725616),
+    f = (e, t, n, f) => {
+        let _, p, h, m, g;
+        switch (((e = new i(e, f)), (t = new s(t, f)), n)) {
             case '>':
-                (h = u), (_ = d), (m = c), (g = '>'), (E = '>=');
+                (_ = l), (p = c), (h = u), (m = '>'), (g = '>=');
                 break;
             case '<':
-                (h = c), (_ = f), (m = u), (g = '<'), (E = '<=');
+                (_ = u), (p = d), (h = l), (m = '<'), (g = '<=');
                 break;
             default:
                 throw TypeError('Must provide a hilo val of "<" or ">"');
         }
-        if (l(e, n, p)) return !1;
-        for (let r = 0; r < n.set.length; ++r) {
-            let i = n.set[r],
+        if (o(e, t, f)) return !1;
+        for (let n = 0; n < t.set.length; ++n) {
+            let i = t.set[n],
                 s = null,
-                l = null;
+                o = null;
             if (
                 (i.forEach((e) => {
-                    e.semver === o && (e = new a('>=0.0.0')), (s = s || e), (l = l || e), h(e.semver, s.semver, p) ? (s = e) : m(e.semver, l.semver, p) && (l = e);
+                    e.semver === a && (e = new r('>=0.0.0')), (s = s || e), (o = o || e), _(e.semver, s.semver, f) ? (s = e) : h(e.semver, o.semver, f) && (o = e);
                 }),
-                s.operator === g || s.operator === E)
+                s.operator === m || s.operator === g || ((!o.operator || o.operator === m) && p(e, o.semver)) || (o.operator === g && h(e, o.semver)))
             )
                 return !1;
-            if ((!l.operator || l.operator === g) && _(e, l.semver)) return !1;
-            if (l.operator === E && m(e, l.semver)) return !1;
         }
         return !0;
     };
-e.exports = p;
+e.exports = f;

@@ -1,9 +1,5 @@
-n.d(t, {
-    n: function () {
-        return s;
-    }
-});
-let i = (0, n(818083).B)({
+n.d(t, { n: () => i });
+let s = (0, n(818083).B)({
         id: '2024-07_quest_interactable_expired_crendentials',
         kind: 'user',
         label: 'Quest interactable expired crendentials errors',
@@ -21,4 +17,4 @@ let i = (0, n(818083).B)({
             }
         ]
     }),
-    s = () => i.useExperiment({ location: 'never' }, { autoTrackExposure: !1 }).enabled;
+    i = () => s.useExperiment({ location: 'never' }, { autoTrackExposure: !1 }).enabled;

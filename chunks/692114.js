@@ -1,11 +1,6 @@
-n.d(t, {
-    Z: function () {
-        return a;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => i }), n(47120);
 var r = n(298444);
-function i(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +13,7 @@ function i(e, t, n) {
         e
     );
 }
-class a {
+class i {
     _load() {
         let e = r.x.get(this._key);
         null != e && (this._set = new Set(e));
@@ -37,6 +32,6 @@ class a {
         return this._set.has(e);
     }
     constructor(e) {
-        i(this, '_key', void 0), i(this, '_set', void 0), (this._key = '$persisted-set-'.concat(e)), (this._set = new Set()), this._load();
+        a(this, '_key', void 0), a(this, '_set', void 0), (this._key = '$persisted-set-'.concat(e)), (this._set = new Set()), this._load();
     }
 }

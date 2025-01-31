@@ -1,30 +1,25 @@
-n.d(t, {
-    Z: function () {
-        return g;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => g }), n(47120);
 var i = n(200651);
 n(192379);
-var r = n(120356),
-    l = n.n(r),
+var l = n(120356),
+    r = n.n(l),
     a = n(704215),
     s = n(927359),
     o = n(706140),
-    c = n(331595),
+    c = n(325767),
     d = n(823188),
     u = n(664358);
 let h = 'premium_tier_gradient',
     m = 'smaller_sparkle_gradient';
 function p(e) {
-    let { width: t = 14, height: n = 15, color: r = 'white', foreground: l, ...a } = e;
+    let { width: t = 14, height: n = 15, color: l = 'white', foreground: r, ...a } = e;
     return (0, i.jsxs)('svg', {
         ...(0, c.Z)({ ...a }),
         preserveAspectRatio: 'none',
         width: t,
         height: n,
         viewBox: '0 0 14 15',
-        className: l,
+        className: r,
         xmlns: 'http://www.w3.org/2000/svg',
         children: [
             (0, i.jsx)('defs', {
@@ -71,24 +66,24 @@ function p(e) {
             }),
             (0, i.jsx)('path', {
                 d: 'M8.59403 1.52779C8.04647 0.0480288 5.95353 0.0480288 5.40597 1.52779L4.56476 3.8011C4.36219 4.34854 3.93057 4.78016 3.38313 4.98273L1.10982 5.82394C-0.36994 6.3715 -0.36994 8.46444 1.10982 9.012L3.38313 9.8532C3.93057 10.0558 4.36219 10.4874 4.56476 11.0348L5.40597 13.3081C5.95353 14.7879 8.04647 14.7879 8.59403 13.3081L9.43524 11.0348C9.63781 10.4874 10.0694 10.0558 10.6169 9.8532L12.8902 9.012C14.3699 8.46444 14.3699 6.3715 12.8902 5.82394L10.6169 4.98273C10.0694 4.78016 9.63781 4.34854 9.43524 3.8011L8.59403 1.52779Z',
-                fill: r
+                fill: l
             })
         ]
     });
 }
 function g(e) {
-    let { className: t, startsAt: n, endsAt: r, messageStyle: c, upperCase: g, showSparkles: f } = e,
-        [_] = (0, o.Tt)(a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL, {
+    let { className: t, startsAt: n, endsAt: l, messageStyle: c, upperCase: g, showSparkles: _ } = e,
+        [f] = (0, o.Tt)(a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL, {
             showAfterTimestamp: n.valueOf(),
             cooldownDurationMs: 0
         }),
-        E = (0, s.Z)(r, c);
+        E = (0, s.Z)(l, c);
     return (
         g && (E = E.toUpperCase()),
         (0, i.jsxs)('div', {
-            className: l()(t, u.countDown),
+            className: r()(t, u.countDown),
             children: [
-                f
+                _
                     ? (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)(p, {
@@ -104,7 +99,7 @@ function g(e) {
                     : null,
                 (0, i.jsx)(d.mn, {
                     text: E,
-                    colorOptions: _ === a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL ? d.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL : d.VE.PREMIUM_TIER_2_GREY_FILL
+                    colorOptions: f === a.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL ? d.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL : d.VE.PREMIUM_TIER_2_GREY_FILL
                 })
             ]
         })

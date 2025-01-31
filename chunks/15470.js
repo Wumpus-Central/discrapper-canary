@@ -1,21 +1,20 @@
 n.d(t, {
-    i: function () {
-        return x;
-    }
+    Z: () => I,
+    i: () => x
 }),
     n(47120);
 var i = n(200651),
     a = n(192379),
     r = n(120356),
     l = n.n(r),
-    o = n(477660),
-    s = n.n(o),
+    s = n(477660),
+    o = n.n(s),
     c = n(481060),
     d = n(770146),
     u = n(241209),
     m = n(73346),
-    p = n(388032),
-    h = n(797844);
+    h = n(388032),
+    p = n(797844);
 function g(e, t, n) {
     return (
         t in e
@@ -29,7 +28,7 @@ function g(e, t, n) {
         e
     );
 }
-let C = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
+let _ = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
     x = {
         ...u.Z.rules,
         heading: {
@@ -49,7 +48,7 @@ let C = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
         assetImage: {
             order: 5,
             match(e, t) {
-                let n = e.match(C);
+                let n = e.match(_);
                 if (null != n) {
                     let e = n[2],
                         i = t.assets.find((t) => t.id === e);
@@ -66,19 +65,19 @@ let C = /^!\[([^\]]*)\]\(asset:\/\/(\d+)\)/,
                 (0, i.jsx)(
                     'div',
                     {
-                        className: h.assetWrapper,
+                        className: p.assetWrapper,
                         children: (0, i.jsx)('img', {
                             alt: e.alt,
                             src: (0, m._W)(e.applicationId, e.asset, 800),
-                            className: h.asset
+                            className: p.asset
                         })
                     },
                     n.key
                 )
         }
     },
-    v = s().parserFor(x),
-    _ = s().reactFor(s().ruleOutput(x, 'react'));
+    C = o().parserFor(x),
+    v = o().reactFor(o().ruleOutput(x, 'react'));
 class f extends a.PureComponent {
     componentDidMount() {
         if (null != this._container) {
@@ -88,23 +87,23 @@ class f extends a.PureComponent {
     }
     render() {
         let { applicationId: e, description: t, blurb: n, className: a, assets: r } = this.props,
-            { collapsed: o, collapsable: s } = this.state;
+            { collapsed: s, collapsable: o } = this.state;
         return (0, i.jsxs)('div', {
             className: a,
             children: [
                 (0, i.jsx)('div', {
-                    className: l()({ [h.collapsed]: s && o }),
+                    className: l()({ [p.collapsed]: o && s }),
                     children: (0, i.jsxs)('div', {
                         ref: this.setContentContainerRef,
                         children: [
                             (0, i.jsx)('div', {
-                                className: h.blurb,
+                                className: p.blurb,
                                 children: n
                             }),
                             (0, i.jsx)(u.Z, {
-                                className: h.description,
-                                parser: v,
-                                output: _,
+                                className: p.description,
+                                parser: C,
+                                output: v,
                                 state: {
                                     assets: r,
                                     applicationId: e
@@ -114,12 +113,12 @@ class f extends a.PureComponent {
                         ]
                     })
                 }),
-                s
-                    ? (0, i.jsx)(c.Button, {
-                          className: h.toggleCollapseButton,
+                o
+                    ? (0, i.jsx)(c.zxk, {
+                          className: p.toggleCollapseButton,
                           onClick: this.handleToggleCollapse,
-                          color: c.Button.Colors.PRIMARY,
-                          children: o ? p.intl.string(p.t.DxcOXF) : p.intl.string(p.t.rD6EaG)
+                          color: c.zxk.Colors.PRIMARY,
+                          children: s ? h.intl.string(h.t.DxcOXF) : h.intl.string(h.t.rD6EaG)
                       })
                     : null
             ]
@@ -140,4 +139,4 @@ class f extends a.PureComponent {
             });
     }
 }
-t.Z = f;
+let I = f;

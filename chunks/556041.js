@@ -1,53 +1,54 @@
+n.d(t, { Z: () => c });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(600164),
-    a = n(245315),
-    o = n(388032),
-    s = n(296134);
-t.Z = () =>
-    (0, i.jsxs)(l.Z, {
-        align: l.Z.Align.CENTER,
-        justify: l.Z.Justify.CENTER,
-        direction: l.Z.Direction.VERTICAL,
-        className: s.popout,
+var l = n(481060),
+    a = n(600164),
+    r = n(245315),
+    s = n(388032),
+    o = n(296134);
+let c = () =>
+    (0, i.jsxs)(a.Z, {
+        align: a.Z.Align.CENTER,
+        justify: a.Z.Justify.CENTER,
+        direction: a.Z.Direction.VERTICAL,
+        className: o.popout,
         children: [
             (0, i.jsx)('img', {
                 alt: '',
-                src: (0, a.QA)(),
-                className: s.avatar
+                src: (0, r.QA)(),
+                className: o.avatar
             }),
-            (0, i.jsxs)(l.Z, {
-                align: l.Z.Align.CENTER,
-                justify: l.Z.Justify.CENTER,
-                className: s.nameWrapper,
+            (0, i.jsxs)(a.Z, {
+                align: a.Z.Align.CENTER,
+                justify: a.Z.Justify.CENTER,
+                className: o.nameWrapper,
                 children: [
-                    (0, i.jsx)(r.Tooltip, {
-                        text: o.intl.string(o.t.oMx98P),
+                    (0, i.jsx)(l.ua7, {
+                        text: s.intl.string(s.t.oMx98P),
                         children: (e) =>
                             (0, i.jsx)('div', {
                                 ...e,
-                                className: s.staffBadge
+                                className: o.staffBadge
                             })
                     }),
-                    (0, i.jsx)(r.Heading, {
-                        className: s.header,
+                    (0, i.jsx)(l.X6q, {
+                        className: o.header,
                         variant: 'heading-md/semibold',
-                        children: o.intl.string(o.t.xfAlNz)
+                        children: s.intl.string(s.t.xfAlNz)
                     })
                 ]
             }),
-            (0, i.jsx)(r.Text, {
-                className: s.description,
+            (0, i.jsx)(l.Text, {
+                className: o.description,
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
-                children: o.intl.string(o.t.BUZ0sr)
+                children: s.intl.string(s.t.BUZ0sr)
             }),
-            (0, i.jsx)(r.Text, {
-                className: s.description,
+            (0, i.jsx)(l.Text, {
+                className: o.description,
                 color: 'header-secondary',
                 variant: 'text-sm/normal',
-                children: o.intl.string(o.t.w5beJC)
+                children: s.intl.string(s.t.w5beJC)
             })
         ]
     });

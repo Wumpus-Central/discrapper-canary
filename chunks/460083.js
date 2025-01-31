@@ -1,8 +1,4 @@
-n.d(t, {
-    d: function () {
-        return r;
-    }
-});
+n.d(t, { d: () => r });
 let r = (0, n(818083).B)({
     kind: 'guild',
     id: '2022-12_mention_raid_limit',

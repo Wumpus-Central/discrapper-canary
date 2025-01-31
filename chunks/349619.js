@@ -1,33 +1,29 @@
-r.d(n, {
-    Z: function () {
-        return c;
-    }
-});
-var i = r(200651);
-r(192379);
-var a = r(481060),
-    o = r(153867),
-    s = r(468026),
-    l = r(740492),
-    u = r(388032);
-function c(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => {},
-        r = () => {
-            o.ZP.updatedUnsyncedSettings({ disableEmbeddedActivityPopOutAlert: !0 }), e();
+n.d(t, { Z: () => u });
+var i = n(200651);
+n(192379);
+var r = n(481060),
+    a = n(153867),
+    s = n(468026),
+    o = n(740492),
+    l = n(388032);
+function u(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => {},
+        n = () => {
+            a.ZP.updatedUnsyncedSettings({ disableEmbeddedActivityPopOutAlert: !0 }), e();
         };
-    l.ZP.disableEmbeddedActivityPopOutAlert
+    o.ZP.disableEmbeddedActivityPopOutAlert
         ? e()
-        : (0, a.openModal)((a) =>
+        : (0, r.h7j)((r) =>
               (0, i.jsx)(s.default, {
-                  confirmText: u.intl.string(u.t.efSOLC),
-                  secondaryConfirmText: u.intl.string(u.t['JdIQ/f']),
-                  title: u.intl.string(u.t.pVr7Cg),
-                  cancelText: u.intl.string(u.t.EwoEOT),
+                  confirmText: l.intl.string(l.t.efSOLC),
+                  secondaryConfirmText: l.intl.string(l.t['JdIQ/f']),
+                  title: l.intl.string(l.t.pVr7Cg),
+                  cancelText: l.intl.string(l.t.EwoEOT),
                   onConfirm: e,
-                  onConfirmSecondary: r,
-                  onCancel: n,
-                  body: u.intl.string(u.t.Tfj539),
-                  ...a
+                  onConfirmSecondary: n,
+                  onCancel: t,
+                  body: l.intl.string(l.t.Tfj539),
+                  ...r
               })
           );
 }

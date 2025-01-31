@@ -1,1 +1,2 @@
-e.exports = { successImg: 'successImg_d875d7' };
+var i = { successImg: 'successImg_f05c94' };
+e.exports = i;

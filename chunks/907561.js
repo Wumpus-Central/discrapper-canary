@@ -1,13 +1,7 @@
 n.d(t, {
-    Km: function () {
-        return l;
-    },
-    bC: function () {
-        return a;
-    },
-    md: function () {
-        return s;
-    }
+    Km: () => l,
+    bC: () => a,
+    md: () => s
 });
 var i = n(192379),
     r = n(772848);

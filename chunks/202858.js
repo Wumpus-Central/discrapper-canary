@@ -1,42 +1,39 @@
-n.d(t, {
-    Yn: function () {
-        return g;
-    }
+i.d(t, {
+    Yn: () => E,
+    ZP: () => h
 }),
-    n(411104),
-    n(47120);
-var i = n(200651),
-    r = n(192379),
-    s = n(283693),
-    a = n(481060),
-    l = n(816814),
-    o = n(200483),
-    c = n(981631),
-    d = n(388032);
-function u(e) {
-    let { onError: t, onSuccess: n, PasswordConfirm: a, ...o } = e,
-        [u, m] = r.useState('');
-    return (0, i.jsx)(a, {
-        ...o,
-        handleSubmit: (e) => l.Z.enableMFAStart(e),
+    i(411104),
+    i(47120);
+var n = i(200651),
+    r = i(192379),
+    l = i(283693),
+    o = i(481060),
+    a = i(816814),
+    s = i(200483),
+    c = i(981631),
+    d = i(388032);
+function _(e) {
+    let { onError: t, onSuccess: i, PasswordConfirm: o, ...s } = e,
+        [_, u] = r.useState('');
+    return (0, n.jsx)(o, {
+        ...s,
+        handleSubmit: (e) => a.Z.enableMFAStart(e),
         onError: (e) => {
-            var i;
-            if (('object' == typeof (i = e) && null != i && (0, s.nr)(i, 'code') && 'number' == typeof i.code ? i.code : 0) === c.evJ.MFA_INVALID_SECRET) n(u), o.onClose();
-            else t(e);
+            ('object' == typeof e && null != e && (0, l.nr)(e, 'code') && 'number' == typeof e.code ? e.code : 0) === c.evJ.MFA_INVALID_SECRET ? (i(_), s.onClose()) : t(e);
         },
-        onPasswordChange: m,
+        onPasswordChange: u,
         title: d.intl.string(d.t.cDgKtb),
         actionText: d.intl.string(d.t['3PatS0']),
         skipErrorMsgAbortCode: c.evJ.MFA_INVALID_SECRET
     });
 }
-function m(e, t) {
+function u(e, t) {
     return new Promise((r) => {
-        (0, a.openModalLazy)(async () => {
-            let { default: s } = await Promise.all([n.e('62729'), n.e('23746')]).then(n.bind(n, 837651));
-            return (n) =>
-                (0, i.jsx)(s, {
-                    ...n,
+        (0, o.ZDy)(async () => {
+            let { default: l } = await Promise.all([i.e('62729'), i.e('23746')]).then(i.bind(i, 837651));
+            return (i) =>
+                (0, n.jsx)(l, {
+                    ...i,
                     password: e,
                     emailToken: t,
                     handleEnableMFASuccess: r
@@ -44,15 +41,15 @@ function m(e, t) {
         });
     });
 }
-function g() {
+function E() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     return new Promise((t) => {
-        (0, a.openModalLazy)(
+        (0, o.ZDy)(
             async () => {
-                let { default: t } = await Promise.all([n.e('76540'), n.e('30463')]).then(n.bind(n, 628908));
-                return (n) =>
-                    (0, i.jsx)(t, {
-                        ...n,
+                let { default: t } = await Promise.all([i.e('76540'), i.e('30463')]).then(i.bind(i, 628908));
+                return (i) =>
+                    (0, n.jsx)(t, {
+                        ...i,
                         isTotp: e
                     });
             },
@@ -63,40 +60,39 @@ function g() {
         );
     });
 }
-async function h() {
-    let e = await new Promise((e, t) => {
-        (0, a.openModalLazy)(async () => {
-            let { default: r } = await n.e('24642').then(n.bind(n, 279837));
-            return (n) =>
-                (0, i.jsx)(u, {
-                    ...n,
-                    onSuccess: e,
-                    onError: t,
-                    PasswordConfirm: r
-                });
-        });
-    });
-    if ((0, o.j)()) {
-        var t;
-        let r = await ((t = e),
-        new Promise((e) => {
-            (0, a.openModalLazy)(async () => {
-                let { default: r } = await n.e('94566').then(n.bind(n, 965072));
-                return (n) =>
-                    (0, i.jsx)(r, {
-                        ...n,
-                        onFormSubmit: async (e) => await l.Z.verifyEmailCode(e),
-                        onResend: async () => {
-                            await l.Z.resendEmailCode(t);
-                        },
+let h = {
+    enableMFA: async function () {
+        let e = await new Promise((e, t) => {
+            (0, o.ZDy)(async () => {
+                let { default: r } = await i.e('24642').then(i.bind(i, 279837));
+                return (i) =>
+                    (0, n.jsx)(_, {
+                        ...i,
                         onSuccess: e,
-                        headerText: d.intl.string(d.t.jMGc4O),
-                        confirmButtonText: d.intl.string(d.t.PDTjLC)
+                        onError: t,
+                        PasswordConfirm: r
                     });
             });
-        }));
-        await m(e, null == r ? void 0 : r.token);
-    } else await m(e);
-    await g();
-}
-t.ZP = { enableMFA: h };
+        });
+        if ((0, s.j)()) {
+            let t = await new Promise((t) => {
+                (0, o.ZDy)(async () => {
+                    let { default: r } = await i.e('94566').then(i.bind(i, 965072));
+                    return (i) =>
+                        (0, n.jsx)(r, {
+                            ...i,
+                            onFormSubmit: async (e) => await a.Z.verifyEmailCode(e),
+                            onResend: async () => {
+                                await a.Z.resendEmailCode(e);
+                            },
+                            onSuccess: t,
+                            headerText: d.intl.string(d.t.jMGc4O),
+                            confirmButtonText: d.intl.string(d.t.PDTjLC)
+                        });
+                });
+            });
+            await u(e, null == t ? void 0 : t.token);
+        } else await u(e);
+        await E();
+    }
+};

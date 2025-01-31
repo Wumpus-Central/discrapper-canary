@@ -1,158 +1,154 @@
-r.d(n, {
-    k: function () {
-        return l;
-    }
-});
-var i = r(581282),
-    a = r(69122),
-    o = r(36056),
-    s = r(17146);
-class l {
+n.d(t, { k: () => o });
+var i = n(581282),
+    r = n(69122),
+    a = n(36056),
+    s = n(17146);
+class o {
     constructor(e) {
-        var n;
-        this.fields = null !== (n = e.fields) && void 0 !== n ? n : [];
+        var t;
+        this.fields = null !== (t = e.fields) && void 0 !== t ? t : [];
     }
-    write(e, n) {
-        let r = {},
+    write(e, t) {
+        let n = {},
             i = e;
         for (let e of this.fields) {
             if (!e.oneof) {
-                let a = this.field(e, i[e.localName], n);
-                void 0 !== a && (r[n.useProtoFieldName ? e.name : e.jsonName] = a);
+                let r = this.field(e, i[e.localName], t);
+                void 0 !== r && (n[t.useProtoFieldName ? e.name : e.jsonName] = r);
                 continue;
             }
-            let a = i[e.oneof];
-            if (a.oneofKind !== e.localName) continue;
-            let o = 'scalar' == e.kind || 'enum' == e.kind ? Object.assign(Object.assign({}, n), { emitDefaultValues: !0 }) : n,
-                l = this.field(e, a[e.localName], o);
-            (0, s.hu)(void 0 !== l), (r[n.useProtoFieldName ? e.name : e.jsonName] = l);
+            let r = i[e.oneof];
+            if (r.oneofKind !== e.localName) continue;
+            let a = 'scalar' == e.kind || 'enum' == e.kind ? Object.assign(Object.assign({}, t), { emitDefaultValues: !0 }) : t,
+                o = this.field(e, r[e.localName], a);
+            (0, s.hu)(void 0 !== o), (n[t.useProtoFieldName ? e.name : e.jsonName] = o);
         }
-        return r;
+        return n;
     }
-    field(e, n, r) {
+    field(e, t, n) {
         let i;
         if ('map' == e.kind) {
-            (0, s.hu)('object' == typeof n && null !== n);
-            let a = {};
+            (0, s.hu)('object' == typeof t && null !== t);
+            let r = {};
             switch (e.V.kind) {
                 case 'scalar':
-                    for (let [r, i] of Object.entries(n)) {
-                        let n = this.scalar(e.V.T, i, e.name, !1, !0);
-                        (0, s.hu)(void 0 !== n), (a[r.toString()] = n);
+                    for (let [n, i] of Object.entries(t)) {
+                        let t = this.scalar(e.V.T, i, e.name, !1, !0);
+                        (0, s.hu)(void 0 !== t), (r[n.toString()] = t);
                     }
                     break;
                 case 'message':
-                    let o = e.V.T();
-                    for (let [i, l] of Object.entries(n)) {
-                        let n = this.message(o, l, e.name, r);
-                        (0, s.hu)(void 0 !== n), (a[i.toString()] = n);
+                    let a = e.V.T();
+                    for (let [i, o] of Object.entries(t)) {
+                        let t = this.message(a, o, e.name, n);
+                        (0, s.hu)(void 0 !== t), (r[i.toString()] = t);
                     }
                     break;
                 case 'enum':
-                    let l = e.V.T();
-                    for (let [i, o] of Object.entries(n)) {
-                        (0, s.hu)(void 0 === o || 'number' == typeof o);
-                        let n = this.enum(l, o, e.name, !1, !0, r.enumAsInteger);
-                        (0, s.hu)(void 0 !== n), (a[i.toString()] = n);
+                    let o = e.V.T();
+                    for (let [i, a] of Object.entries(t)) {
+                        (0, s.hu)(void 0 === a || 'number' == typeof a);
+                        let t = this.enum(o, a, e.name, !1, !0, n.enumAsInteger);
+                        (0, s.hu)(void 0 !== t), (r[i.toString()] = t);
                     }
             }
-            (r.emitDefaultValues || Object.keys(a).length > 0) && (i = a);
+            (n.emitDefaultValues || Object.keys(r).length > 0) && (i = r);
         } else if (e.repeat) {
-            (0, s.hu)(Array.isArray(n));
-            let a = [];
+            (0, s.hu)(Array.isArray(t));
+            let r = [];
             switch (e.kind) {
                 case 'scalar':
-                    for (let r = 0; r < n.length; r++) {
-                        let i = this.scalar(e.T, n[r], e.name, e.opt, !0);
-                        (0, s.hu)(void 0 !== i), a.push(i);
+                    for (let n = 0; n < t.length; n++) {
+                        let i = this.scalar(e.T, t[n], e.name, e.opt, !0);
+                        (0, s.hu)(void 0 !== i), r.push(i);
                     }
                     break;
                 case 'enum':
-                    let o = e.T();
-                    for (let i = 0; i < n.length; i++) {
-                        (0, s.hu)(void 0 === n[i] || 'number' == typeof n[i]);
-                        let l = this.enum(o, n[i], e.name, e.opt, !0, r.enumAsInteger);
-                        (0, s.hu)(void 0 !== l), a.push(l);
+                    let a = e.T();
+                    for (let i = 0; i < t.length; i++) {
+                        (0, s.hu)(void 0 === t[i] || 'number' == typeof t[i]);
+                        let o = this.enum(a, t[i], e.name, e.opt, !0, n.enumAsInteger);
+                        (0, s.hu)(void 0 !== o), r.push(o);
                     }
                     break;
                 case 'message':
-                    let l = e.T();
-                    for (let i = 0; i < n.length; i++) {
-                        let o = this.message(l, n[i], e.name, r);
-                        (0, s.hu)(void 0 !== o), a.push(o);
+                    let o = e.T();
+                    for (let i = 0; i < t.length; i++) {
+                        let a = this.message(o, t[i], e.name, n);
+                        (0, s.hu)(void 0 !== a), r.push(a);
                     }
             }
-            (r.emitDefaultValues || a.length > 0 || r.emitDefaultValues) && (i = a);
+            (n.emitDefaultValues || r.length > 0 || n.emitDefaultValues) && (i = r);
         } else
             switch (e.kind) {
                 case 'scalar':
-                    i = this.scalar(e.T, n, e.name, e.opt, r.emitDefaultValues);
+                    i = this.scalar(e.T, t, e.name, e.opt, n.emitDefaultValues);
                     break;
                 case 'enum':
-                    i = this.enum(e.T(), n, e.name, e.opt, r.emitDefaultValues, r.enumAsInteger);
+                    i = this.enum(e.T(), t, e.name, e.opt, n.emitDefaultValues, n.enumAsInteger);
                     break;
                 case 'message':
-                    i = this.message(e.T(), n, e.name, r);
+                    i = this.message(e.T(), t, e.name, n);
             }
         return i;
     }
-    enum(e, n, r, i, a, o) {
+    enum(e, t, n, i, r, a) {
         if ('google.protobuf.NullValue' == e[0]) return null;
-        if (void 0 === n) {
+        if (void 0 === t) {
             (0, s.hu)(i);
             return;
         }
-        if (0 !== n || a || i) return ((0, s.hu)('number' == typeof n), (0, s.hu)(Number.isInteger(n)), o || !e[1].hasOwnProperty(n)) ? n : e[2] ? e[2] + e[1][n] : e[1][n];
+        if (0 !== t || r || i) return ((0, s.hu)('number' == typeof t), (0, s.hu)(Number.isInteger(t)), a || !e[1].hasOwnProperty(t)) ? t : e[2] ? e[2] + e[1][t] : e[1][t];
     }
-    message(e, n, r, i) {
-        return void 0 === n ? (i.emitDefaultValues ? null : void 0) : e.internalJsonWrite(n, i);
+    message(e, t, n, i) {
+        return void 0 === t ? (i.emitDefaultValues ? null : void 0) : e.internalJsonWrite(t, i);
     }
-    scalar(e, n, r, l, u) {
-        if (void 0 === n) {
-            (0, s.hu)(l);
+    scalar(e, t, n, o, l) {
+        if (void 0 === t) {
+            (0, s.hu)(o);
             return;
         }
-        let c = u || l;
+        let u = l || o;
         switch (e) {
-            case o.wx.INT32:
-            case o.wx.SFIXED32:
-            case o.wx.SINT32:
-                if (0 === n) return c ? 0 : void 0;
-                return (0, s.ug)(n), n;
-            case o.wx.FIXED32:
-            case o.wx.UINT32:
-                if (0 === n) return c ? 0 : void 0;
-                return (0, s.fp)(n), n;
-            case o.wx.FLOAT:
-                (0, s.E_)(n);
-            case o.wx.DOUBLE:
-                if (0 === n) return c ? 0 : void 0;
-                if (((0, s.hu)('number' == typeof n), Number.isNaN(n))) return 'NaN';
-                if (n === Number.POSITIVE_INFINITY) return 'Infinity';
-                if (n === Number.NEGATIVE_INFINITY) return '-Infinity';
-                return n;
-            case o.wx.STRING:
-                if ('' === n) return c ? '' : void 0;
-                return (0, s.hu)('string' == typeof n), n;
-            case o.wx.BOOL:
-                if (!1 === n) return !c && void 0;
-                return (0, s.hu)('boolean' == typeof n), n;
-            case o.wx.UINT64:
-            case o.wx.FIXED64:
-                (0, s.hu)('number' == typeof n || 'string' == typeof n || 'bigint' == typeof n);
-                let d = a.p.from(n);
-                if (d.isZero() && !c) return;
+            case a.wx.INT32:
+            case a.wx.SFIXED32:
+            case a.wx.SINT32:
+                if (0 === t) return u ? 0 : void 0;
+                return (0, s.ug)(t), t;
+            case a.wx.FIXED32:
+            case a.wx.UINT32:
+                if (0 === t) return u ? 0 : void 0;
+                return (0, s.fp)(t), t;
+            case a.wx.FLOAT:
+                (0, s.E_)(t);
+            case a.wx.DOUBLE:
+                if (0 === t) return u ? 0 : void 0;
+                if (((0, s.hu)('number' == typeof t), Number.isNaN(t))) return 'NaN';
+                if (t === Number.POSITIVE_INFINITY) return 'Infinity';
+                if (t === Number.NEGATIVE_INFINITY) return '-Infinity';
+                return t;
+            case a.wx.STRING:
+                if ('' === t) return u ? '' : void 0;
+                return (0, s.hu)('string' == typeof t), t;
+            case a.wx.BOOL:
+                if (!1 === t) return !u && void 0;
+                return (0, s.hu)('boolean' == typeof t), t;
+            case a.wx.UINT64:
+            case a.wx.FIXED64:
+                (0, s.hu)('number' == typeof t || 'string' == typeof t || 'bigint' == typeof t);
+                let c = r.p.from(t);
+                if (c.isZero() && !u) return;
+                return c.toString();
+            case a.wx.INT64:
+            case a.wx.SFIXED64:
+            case a.wx.SINT64:
+                (0, s.hu)('number' == typeof t || 'string' == typeof t || 'bigint' == typeof t);
+                let d = r.M.from(t);
+                if (d.isZero() && !u) return;
                 return d.toString();
-            case o.wx.INT64:
-            case o.wx.SFIXED64:
-            case o.wx.SINT64:
-                (0, s.hu)('number' == typeof n || 'string' == typeof n || 'bigint' == typeof n);
-                let f = a.M.from(n);
-                if (f.isZero() && !c) return;
-                return f.toString();
-            case o.wx.BYTES:
-                if (((0, s.hu)(n instanceof Uint8Array), !n.byteLength)) return c ? '' : void 0;
-                return (0, i.m)(n);
+            case a.wx.BYTES:
+                if (((0, s.hu)(t instanceof Uint8Array), !t.byteLength)) return u ? '' : void 0;
+                return (0, i.m)(t);
         }
     }
 }

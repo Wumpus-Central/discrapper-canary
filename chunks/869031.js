@@ -1,8 +1,4 @@
-n.d(t, {
-    nZ: function () {
-        return a;
-    }
-});
+n.d(t, { nZ: () => a });
 let l = (0, n(818083).B)({
     kind: 'user',
     id: '2024-10_block_user_feedback',

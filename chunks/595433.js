@@ -1,17 +1,12 @@
-n.d(t, {
-    H: function () {
-        return r;
-    }
-}),
-    n(47120);
-var a = n(192379),
-    i = n(481060);
+n.d(t, { H: () => r }), n(47120);
+var i = n(192379),
+    l = n(481060);
 function r() {
-    let [e, t] = a.useState(!0);
+    let [e, t] = i.useState(!0);
     return {
-        transitions: (0, i.useTransition)(e, {
+        transitions: (0, l.Yzy)(e, {
             keys: (e) => (e ? 'shown' : 'hidden'),
-            config: l,
+            config: a,
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
@@ -20,7 +15,7 @@ function r() {
         setVisible: t
     };
 }
-let l = {
+let a = {
     mass: 1,
     tension: 250,
     friction: 18,

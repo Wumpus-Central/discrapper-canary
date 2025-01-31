@@ -1,26 +1,21 @@
-n.d(t, {
-    Z: function () {
-        return f;
-    }
-}),
-    n(47120);
+n.d(t, { Z: () => S }), n(47120);
 var i = n(200651),
     s = n(192379),
-    r = n(642128),
-    a = n(481060),
-    l = n(230711),
+    a = n(642128),
+    l = n(481060),
+    r = n(230711),
     o = n(687158),
     u = n(63063),
-    c = n(51144),
-    d = n(544508),
+    d = n(51144),
+    c = n(544508),
     m = n(801461),
     g = n(981631),
     E = n(388032),
     h = n(579532);
-function f(e) {
-    let { userRef: t, usernameSuggestionLoading: n = !1, oneClickFlow: f = !1, ...S } = e,
-        { user: N, editState: T, onClose: x } = S,
-        _ = (0, o.ZP)(N.id),
+function S(e) {
+    let { userRef: t, usernameSuggestionLoading: n = !1, oneClickFlow: S = !1, ...f } = e,
+        { user: x, editState: N, onClose: T } = f,
+        _ = (0, o.ZP)(x.id),
         I = (function (e, t, n) {
             switch (e) {
                 case m.Wq.EDIT_USERNAME:
@@ -38,7 +33,7 @@ function f(e) {
                         header: E.intl.formatToPlainString(E.t.XDHrcn, { displayName: t }),
                         subtitle: E.intl.format(E.t.bWE0ZG, {
                             onClick: () => {
-                                n(), l.Z.open(g.oAB.ACCOUNT);
+                                n(), r.Z.open(g.oAB.ACCOUNT);
                             }
                         })
                     };
@@ -54,8 +49,8 @@ function f(e) {
                         subtitle: E.intl.string(E.t.gGz0sb)
                     };
             }
-        })(T, c.ZP.getName(N), x),
-        [C, v] = (0, a.useSpring)(() => ({
+        })(N, d.ZP.getName(x), T),
+        [C, v] = (0, l.q_F)(() => ({
             opacity: 0,
             y: 10
         }));
@@ -69,17 +64,17 @@ function f(e) {
                     opacity: 0
                 }
             });
-        }, [v, T]),
+        }, [v, N]),
         (0, i.jsxs)('div', {
             className: h.displayNameContainer,
             children: [
-                (0, i.jsxs)(r.animated.div, {
+                (0, i.jsxs)(a.animated.div, {
                     style: {
                         opacity: C.opacity,
                         y: C.y
                     },
                     children: [
-                        (0, i.jsx)(a.Heading, {
+                        (0, i.jsx)(l.X6q, {
                             className: h.title,
                             color: 'header-primary',
                             variant: 'heading-xl/extrabold',
@@ -88,13 +83,13 @@ function f(e) {
                         (0, i.jsxs)('div', {
                             className: h.subtitle,
                             children: [
-                                (0, i.jsx)(a.Heading, {
+                                (0, i.jsx)(l.X6q, {
                                     color: 'header-secondary',
                                     variant: 'heading-sm/medium',
                                     children: I.subtitle
                                 }),
                                 null != I.link &&
-                                    (0, i.jsx)(a.Text, {
+                                    (0, i.jsx)(l.Text, {
                                         className: h.link,
                                         color: 'header-secondary',
                                         variant: 'text-sm/medium',
@@ -104,12 +99,12 @@ function f(e) {
                         })
                     ]
                 }),
-                (0, i.jsx)(d.Z, {
-                    ...S,
+                (0, i.jsx)(c.Z, {
+                    ...f,
                     displayProfile: _,
                     ref: t,
                     usernameSuggestionLoading: n,
-                    oneClickFlow: f
+                    oneClickFlow: S
                 })
             ]
         })

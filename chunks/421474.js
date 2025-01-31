@@ -1,21 +1,17 @@
-r.d(n, {
-    Q: function () {
-        return o;
-    },
-    l: function () {
-        return a;
-    }
-});
-var i = r(47120);
-function a(e, n) {
-    return ''.concat(e, ':').concat(n);
+function i(e, t) {
+    return ''.concat(e, ':').concat(t);
 }
-function o(e) {
-    let n = e.split(':');
-    if (2 !== n.length) return null;
-    let [r, i] = n;
+function r(e) {
+    let t = e.split(':');
+    if (2 !== t.length) return null;
+    let [n, i] = t;
     return {
-        applicationId: r,
+        applicationId: n,
         skuId: i
     };
 }
+n.d(t, {
+    Q: () => r,
+    l: () => i
+}),
+    n(47120);

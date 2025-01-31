@@ -1,23 +1,19 @@
-r.d(n, {
-    V: function () {
-        return s;
-    }
-});
-var i = r(544891),
-    a = r(570140),
-    o = r(981631);
+n.d(t, { V: () => s });
+var i = n(544891),
+    r = n(570140),
+    a = n(981631);
 async function s() {
-    a.Z.dispatch({ type: 'USER_TENURE_REWARD_SYNC_START' });
+    r.Z.dispatch({ type: 'USER_TENURE_REWARD_SYNC_START' });
     try {
         let e = await i.tn.post({
-            url: o.ANM.TENURE_REWARD_SYNC,
+            url: a.ANM.TENURE_REWARD_SYNC,
             rejectWithError: !0
         });
-        a.Z.dispatch({
+        r.Z.dispatch({
             type: 'USER_TENURE_REWARD_SYNC_SUCCESS',
             userTenureRewardStatus: e.body.tenure_reward_status
         });
     } catch (e) {
-        a.Z.dispatch({ type: 'USER_TENURE_REWARD_SYNC_SUCCESS' });
+        r.Z.dispatch({ type: 'USER_TENURE_REWARD_SYNC_SUCCESS' });
     }
 }

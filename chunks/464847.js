@@ -1,8 +1,8 @@
 function i(e) {
-    var n;
-    null === (n = window.DiscordSentry) ||
-        void 0 === n ||
-        n.addBreadcrumb({
+    var t;
+    null === (t = window.DiscordSentry) ||
+        void 0 === t ||
+        t.addBreadcrumb({
             type: 'default',
             level: 'info',
             category: e.category,
@@ -11,8 +11,4 @@ function i(e) {
             timestamp: Date.now()
         });
 }
-r.d(n, {
-    Z: function () {
-        return i;
-    }
-});
+n.d(t, { Z: () => i });

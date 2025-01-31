@@ -1,23 +1,19 @@
-t.d(n, {
-    Z: function () {
-        return u;
-    }
-});
-var i = t(200651);
-t(192379);
-var l = t(442837),
-    r = t(481060),
-    a = t(196051),
-    o = t(441729),
-    s = t(388032);
-function u(e, n) {
-    let t = (0, l.e7)([o.Z], () => o.Z.isSpeakingMessage(n.id, e.id), [n, e]);
+n.d(t, { Z: () => d });
+var i = n(200651);
+n(192379);
+var l = n(442837),
+    a = n(481060),
+    s = n(196051),
+    r = n(441729),
+    o = n(388032);
+function d(e, t) {
+    let n = (0, l.e7)([r.Z], () => r.Z.isSpeakingMessage(t.id, e.id), [t, e]);
     return '' === e.content
         ? null
-        : (0, i.jsx)(r.MenuItem, {
+        : (0, i.jsx)(a.sNh, {
               id: 'tts',
-              label: t ? s.intl.string(s.t.CJ30BA) : s.intl.string(s.t.yGLjXF),
-              icon: r.ChatSpeakIcon,
-              action: () => (t ? (0, a.NB)() : (0, a.LA)(n, e))
+              label: n ? o.intl.string(o.t.CJ30BA) : o.intl.string(o.t.yGLjXF),
+              icon: a.J2R,
+              action: () => (n ? (0, s.NB)() : (0, s.LA)(t, e))
           });
 }

@@ -1,9 +1,10 @@
-var i = r(47120);
-function a(e) {
-    let n = new Map();
-    return (r) => {
-        let i = n.get(r);
-        return void 0 === i && ((i = e(r)), n.set(r, i)), i;
-    };
-}
-n.Z = { makeMemoizer: a };
+n.d(t, { Z: () => i }), n(47120);
+let i = {
+    makeMemoizer: function (e) {
+        let t = new Map();
+        return (n) => {
+            let i = t.get(n);
+            return void 0 === i && ((i = e(n)), t.set(n, i)), i;
+        };
+    }
+};

@@ -1,14 +1,10 @@
-r.d(n, {
-    g: function () {
-        return a;
-    }
-});
-var i = r(890465);
-class a {
+n.d(t, { g: () => r });
+var i = n(890465);
+class r {
     create(e) {
-        let n = this.freeTasks,
-            r = n.length ? n.pop() : new i.V(this.onError, (e) => (n[n.length] = e));
-        return (r.task = e), r;
+        let t = this.freeTasks,
+            n = t.length ? t.pop() : new i.V(this.onError, (e) => (t[t.length] = e));
+        return (n.task = e), n;
     }
     constructor(e) {
         (this.onError = e), (this.freeTasks = []);

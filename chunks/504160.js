@@ -1,16 +1,10 @@
 n.d(t, {
-    L_: function () {
-        return l;
-    },
-    _6: function () {
-        return a;
-    },
-    ji: function () {
-        return r;
-    }
+    L_: () => r,
+    _6: () => a,
+    ji: () => l
 });
 var i = n(570140);
-function r(e) {
+function l(e) {
     let { eventId: t, stageId: n } = e;
     (null != t || null != n) &&
         i.Z.dispatch({
@@ -19,7 +13,7 @@ function r(e) {
             stageId: n
         });
 }
-function l(e) {
+function r(e) {
     i.Z.dispatch({
         type: 'UPCOMING_GUILD_EVENT_NOTICE_HIDE',
         eventId: e

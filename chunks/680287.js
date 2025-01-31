@@ -1,63 +1,86 @@
-n.d(t, {
-    Z: function () {
-        return s;
-    }
-}),
-    n(653041);
-var r = n(544891),
-    i = n(881052),
-    l = n(687294),
+n.d(t, { Z: () => u }), n(653041), n(789020);
+var i = n(544891),
+    l = n(881052),
+    r = n(687294),
     a = n(476326),
-    u = n(861990),
-    o = n(388032);
-class s extends l.Z {
+    s = n(45251),
+    o = n(861990),
+    c = n(388032);
+class u extends r.Z {
     async uploadFiles(e, t) {
         let { addFilesTo: n } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        super.upload({ name: o.intl.string(o.t.jfKTen) }, t, e);
-        let r = new AbortController();
+        super.upload({ name: c.intl.string(c.t.jfKTen) }, t, e);
+        let i = new AbortController();
         try {
-            if (((this.files = e), this._aborted)) return;
-            if ((this._handleStart(() => r.abort()), !(await this.compressAndCheckFileSize()))) return;
-            this.setUploadingTextForUI(), await (0, l.$)(this.files, !0, this._recomputeProgress.bind(this));
+            if (((this.files = e), this._aborted || (this._handleStart(() => i.abort()), !(await this.compressAndCheckFileSize())))) return;
+            this.setUploadingTextForUI(), await (0, r.$)(this.files, !0, this._recomputeProgress.bind(this));
         } catch (e) {
             this._handleException(e);
         }
         try {
-            return await this._createMessage(r.signal, t, n);
+            return await this._createMessage(i.signal, t, n);
         } catch (e) {
             if (this._raiseEndpointErrors) throw e;
             this._handleException(e);
         }
     }
     async _createMessage(e, t, n) {
-        let l;
-        let o = [];
-        this.files.forEach((e, t) => {
-            let n = (0, u.B)(e, t);
-            e.item.platform === a.ow.WEB && o.push({ ...n });
-        }),
-            (l =
-                null != n && null != t
-                    ? this._addAttachmentsToPayload(t, n, o)
-                    : {
-                          ...t,
-                          attachments: o
-                      });
-        let s = {
+        var r, c;
+        let u;
+        let E = [];
+        if (
+            (this.files.forEach((e, t) => {
+                let n = (0, o.B)(e, t);
+                e.item.platform === a.ow.WEB && E.push({ ...n });
+            }),
+            null !=
+                (u =
+                    null != n && null != t
+                        ? this._addAttachmentsToPayload(t, n, E)
+                        : {
+                              ...t,
+                              attachments: E
+                          }).scheduled_timestamp)
+        ) {
+            try {
+                let e = await (0, s.PV)({
+                    channelId: u.channel_id,
+                    scheduledTimestamp: u.scheduled_timestamp,
+                    messageSendData: {
+                        channelId: u.channel_id,
+                        content: u.content,
+                        flags: u.flags,
+                        nonce: u.nonce,
+                        message_reference: u.message_reference,
+                        allowed_mentions: u.allowed_mentions,
+                        tts: !1
+                    },
+                    attachments: E
+                });
+                return this._handleComplete(e.body), e.body;
+            } catch (e) {
+                if (this._raiseEndpointErrors) throw new l.Hx(e);
+                this._handleError({
+                    code: null == e ? void 0 : null === (r = e.body) || void 0 === r ? void 0 : r.code,
+                    body: null == e ? void 0 : e.body
+                });
+            }
+            return;
+        }
+        let d = {
                 url: this._url,
-                body: l,
+                body: u,
                 signal: e,
                 rejectWithError: !1
             },
-            c = 'POST' === this._method ? r.tn.post : r.tn.patch;
+            _ = 'POST' === this._method ? i.tn.post : i.tn.patch;
         try {
-            let e = await c(s);
+            let e = await _(d);
             return this._handleComplete(e.body), e.body;
         } catch (e) {
-            var d;
-            if (this._raiseEndpointErrors) throw new i.Hx(e);
+            if (this._raiseEndpointErrors) throw new l.Hx(e);
             this._handleError({
-                code: null == e ? void 0 : null === (d = e.body) || void 0 === d ? void 0 : d.code,
+                code: null == e ? void 0 : null === (c = e.body) || void 0 === c ? void 0 : c.code,
                 body: null == e ? void 0 : e.body
             });
         }

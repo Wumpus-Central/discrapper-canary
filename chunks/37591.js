@@ -1,13 +1,12 @@
-r.r(
-    (e.exports = {
-        combo: 'combo_c90023',
-        key: 'key_c90023',
-        bindArrow: 'bindArrow_c90023',
-        up: 'up_c90023',
-        left: 'left_c90023',
-        right: 'right_c90023',
-        dim: 'dim_c90023',
-        keybindShortcutSearchPopout: 'keybindShortcutSearchPopout_c90023',
-        keyboardShortcuts: 'keyboardShortcuts_c90023'
-    })
-);
+var i = {
+    combo: 'combo_fcddc1',
+    key: 'key_fcddc1',
+    bindArrow: 'bindArrow_fcddc1',
+    up: 'up_fcddc1',
+    left: 'left_fcddc1',
+    right: 'right_fcddc1',
+    dim: 'dim_fcddc1',
+    keybindShortcutSearchPopout: 'keybindShortcutSearchPopout_fcddc1',
+    keyboardShortcuts: 'keyboardShortcuts_fcddc1'
+};
+n.r((e.exports = i));

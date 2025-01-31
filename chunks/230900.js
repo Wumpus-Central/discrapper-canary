@@ -1,40 +1,32 @@
-r.d(n, {
-    cS: function () {
-        return l;
-    },
-    nE: function () {
-        return o;
-    },
-    xC: function () {
-        return c;
-    },
-    xV: function () {
-        return u;
-    }
+n.d(t, {
+    cS: () => o,
+    nE: () => a,
+    xC: () => u,
+    xV: () => l
 });
-var i = r(592125),
-    a = r(765305);
-function o(e) {
-    let n;
-    let { entity_type: r, channel_id: o } = e;
-    if (r in a.nz && null != o) {
+var i = n(592125),
+    r = n(765305);
+function a(e) {
+    let t;
+    let { entity_type: n, channel_id: a } = e;
+    if (n in r.nz && null != a) {
         var s;
-        n = null !== (s = i.Z.getChannel(e.channel_id)) && void 0 !== s ? s : void 0;
+        t = null !== (s = i.Z.getChannel(e.channel_id)) && void 0 !== s ? s : void 0;
     }
-    return n;
+    return t;
 }
-function s(e, n) {
-    let r = null;
-    return e === a.WX.EXTERNAL && null != n && 'location' in n && (r = n.location), r;
+function s(e, t) {
+    let n = null;
+    return e === r.WX.EXTERNAL && null != t && 'location' in t && (n = t.location), n;
+}
+function o(e) {
+    let { entity_type: t, entity_metadata: n } = e;
+    return s(t, n);
 }
 function l(e) {
-    let { entity_type: n, entity_metadata: r } = e;
-    return s(n, r);
+    let { entityType: t, entityMetadata: n } = e;
+    return s(t, n);
 }
 function u(e) {
-    let { entityType: n, entityMetadata: r } = e;
-    return s(n, r);
-}
-function c(e) {
-    return e === a.WX.VOICE || e === a.WX.STAGE_INSTANCE ? a.nz[e] : void 0;
+    return e === r.WX.VOICE || e === r.WX.STAGE_INSTANCE ? r.nz[e] : void 0;
 }

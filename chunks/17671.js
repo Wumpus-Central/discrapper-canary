@@ -1,158 +1,149 @@
-t.r(e),
-    t.d(e, {
-        __import__useLazyAPIPromise: function () {
-            return L;
-        },
-        default: function () {
-            return S;
-        }
-    });
-var i = t(200651),
-    l = t(192379),
-    r = t(392711),
-    a = t.n(r),
-    o = t(442837),
-    c = t(481060),
-    s = t(45114),
-    u = t(493773),
-    d = t(313201),
-    g = t(597),
-    h = t(147754),
-    v = t(984933),
-    m = t(720202),
-    x = t(430824),
-    Z = t(306680),
-    f = t(626135),
-    C = t(823379),
-    p = t(981888),
-    N = t(709054),
-    j = t(897285),
-    E = t(518756),
-    k = t(554747),
-    I = t(710679),
-    _ = t(74562),
-    P = t(576749),
-    T = t(765305),
-    y = t(981631),
-    b = t(490897),
-    G = t(388032),
-    M = t(984226);
-let L = p.Z;
-function S(n) {
-    let { transitionState: e, onClose: r, guildId: p } = n,
-        L = (0, d.Dt)(),
-        S = (0, o.e7)([x.Z], () => x.Z.getGuild(p)),
-        A = (0, E.Z)(null == S ? void 0 : S.id),
-        R = (0, k.ZP)(p),
-        w = l.useRef(Z.ZP.ackMessageId(p, b.W.GUILD_EVENT)),
-        D = (0, P.Z)();
+i.d(n, { default: () => S });
+var t = i(200651),
+    l = i(192379),
+    a = i(392711),
+    r = i.n(a),
+    o = i(442837),
+    s = i(481060),
+    c = i(45114),
+    d = i(493773),
+    u = i(313201),
+    g = i(597),
+    h = i(147754),
+    v = i(984933),
+    x = i(720202),
+    Z = i(430824),
+    m = i(306680),
+    C = i(626135),
+    f = i(823379);
+i(981888);
+var p = i(709054),
+    N = i(897285),
+    j = i(518756),
+    E = i(554747),
+    k = i(710679),
+    I = i(74562),
+    P = i(576749),
+    T = i(765305),
+    _ = i(981631),
+    y = i(490897),
+    G = i(388032),
+    b = i(984226);
+function S(e) {
+    let { transitionState: n, onClose: a, guildId: S } = e,
+        L = (0, u.Dt)(),
+        D = (0, o.e7)([Z.Z], () => Z.Z.getGuild(S)),
+        R = (0, j.Z)(null == D ? void 0 : D.id),
+        w = (0, E.ZP)(S),
+        M = l.useRef(m.ZP.ackMessageId(S, y.W.GUILD_EVENT)),
+        U = (0, P.Z)();
     return (
         l.useEffect(() => {
-            R.forEach((n) => j.Z.getGuildEventUserCounts(p, n.id, [])), j.Z.getGuildEventsForCurrentUser(p);
-        }, [R, p]),
+            w.forEach((e) => N.Z.getGuildEventUserCounts(S, e.id, [])), N.Z.getGuildEventsForCurrentUser(S);
+        }, [w, S]),
         l.useEffect(() => {
-            let n = x.Z.getGuild(p);
-            if (!(null == n ? void 0 : n.hasFeature(y.oNc.HUB))) return;
-            let { showHubEventsList: e } = h.Z.getCurrentConfig({
-                guildId: p,
+            let e = Z.Z.getGuild(S);
+            if (!(null == e ? void 0 : e.hasFeature(_.oNc.HUB))) return;
+            let { showHubEventsList: n } = h.Z.getCurrentConfig({
+                guildId: S,
                 location: 'd3755f_1'
             });
-            if (!e) return;
-            let t = v.ZP.getDefaultChannel(p);
-            null != t && g.c(t.id);
-        }, [p]),
-        (0, u.Z)(() => {
-            f.default.track(y.rMx.OPEN_MODAL, {
+            if (!n) return;
+            let i = v.ZP.getDefaultChannel(S);
+            null != i && g.c(i.id);
+        }, [S]),
+        (0, d.Z)(() => {
+            C.default.track(_.rMx.OPEN_MODAL, {
                 type: T.zw,
-                guild_id: p,
-                guild_events_count: R.length
+                guild_id: S,
+                guild_events_count: w.length
             });
         }),
         l.useEffect(() => {
-            a()(R)
-                .map((n) => n.creator_id)
-                .filter(C.lm)
+            r()(w)
+                .map((e) => e.creator_id)
+                .filter(f.lm)
                 .uniq()
-                .forEach((n) => {
-                    m.Z.requestMember(p, n);
+                .forEach((e) => {
+                    x.Z.requestMember(S, e);
                 });
-        }, [p, R]),
+        }, [S, w]),
         l.useEffect(() => {
-            null != p && (0, s.Ju)(p, b.W.GUILD_EVENT);
-        }, [p]),
-        (0, i.jsxs)(c.ModalRoot, {
-            size: c.ModalSize.MEDIUM,
-            transitionState: e,
+            null != S && (0, c.Ju)(S, y.W.GUILD_EVENT);
+        }, [S]),
+        (0, t.jsxs)(s.Y0X, {
+            size: s.CgR.MEDIUM,
+            transitionState: n,
             'aria-labelledby': L,
             children: [
-                (0, i.jsxs)(c.ModalHeader, {
-                    className: M.header,
+                (0, t.jsxs)(s.xBx, {
+                    className: b.header,
                     children: [
-                        (0, i.jsx)(c.CalendarIcon, {
+                        (0, t.jsx)(s.Que, {
                             size: 'md',
                             color: 'currentColor',
-                            className: M.icon
+                            className: b.icon
                         }),
-                        (0, i.jsx)(c.Heading, {
+                        (0, t.jsx)(s.X6q, {
                             id: L,
                             variant: 'heading-md/semibold',
-                            children: R.length > 0 ? G.intl.formatToPlainString(G.t.IBdqSk, { number: R.length }) : G.intl.string(G.t.tlopTE)
+                            children: w.length > 0 ? G.intl.formatToPlainString(G.t.IBdqSk, { number: w.length }) : G.intl.string(G.t.tlopTE)
                         }),
-                        A &&
-                            (0, i.jsxs)(i.Fragment, {
+                        R &&
+                            (0, t.jsxs)(t.Fragment, {
                                 children: [
-                                    (0, i.jsx)('div', {
-                                        className: M.divider,
+                                    (0, t.jsx)('div', {
+                                        className: b.divider,
                                         children: '|'
                                     }),
-                                    (0, i.jsx)(c.Button, {
-                                        size: c.Button.Sizes.MIN,
+                                    (0, t.jsx)(s.zxk, {
+                                        size: s.zxk.Sizes.MIN,
                                         onClick: () => {
-                                            (0, c.openModalLazy)(async () => {
-                                                let { default: n } = await Promise.all([t.e('58023'), t.e('54444')]).then(t.bind(t, 779250));
-                                                return (e) =>
-                                                    (0, i.jsx)(n, {
-                                                        ...e,
-                                                        guildId: p
+                                            (0, s.ZDy)(async () => {
+                                                let { default: e } = await Promise.all([i.e('58023'), i.e('54444')]).then(i.bind(i, 779250));
+                                                return (n) =>
+                                                    (0, t.jsx)(e, {
+                                                        ...n,
+                                                        guildId: S
                                                     });
-                                            }, D);
+                                            }, U);
                                         },
-                                        innerClassName: M.button,
+                                        innerClassName: b.button,
                                         children: G.intl.string(G.t['60lJ0N'])
                                     })
                                 ]
                             }),
-                        (0, i.jsx)(c.Clickable, {
-                            onClick: r,
-                            className: M.iconButton,
+                        (0, t.jsx)(s.P3F, {
+                            onClick: a,
+                            className: b.iconButton,
                             'aria-label': G.intl.string(G.t.cpT0Cg),
-                            children: (0, i.jsx)(c.XSmallIcon, {
+                            children: (0, t.jsx)(s.Dio, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: M.icon
+                                className: b.icon
                             })
                         })
                     ]
                 }),
-                (0, i.jsx)(c.ModalContent, {
-                    className: M.content,
+                (0, t.jsx)(s.hzk, {
+                    className: b.content,
                     children:
-                        R.length > 0
-                            ? R.map((n) =>
-                                  (0, i.jsx)(
-                                      I.Z,
+                        w.length > 0
+                            ? w.map((e) =>
+                                  (0, t.jsx)(
+                                      k.Z,
                                       {
-                                          guildEvent: n,
-                                          guildId: p,
-                                          onActionTaken: r,
-                                          isNew: null != w.current && N.default.compare(n.id, w.current) > 0
+                                          guildEvent: e,
+                                          guildId: S,
+                                          onActionTaken: a,
+                                          isNew: null != M.current && p.default.compare(e.id, M.current) > 0
                                       },
-                                      n.id
+                                      e.id
                                   )
                               )
-                            : (0, i.jsx)(_.Z, {
-                                  guildId: p,
-                                  onClose: r
+                            : (0, t.jsx)(I.Z, {
+                                  guildId: S,
+                                  onClose: a
                               })
                 })
             ]

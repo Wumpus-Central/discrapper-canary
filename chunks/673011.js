@@ -1,23 +1,18 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(47120);
-function a(e, n, r) {
+function i(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-class o {
+n.d(t, { Z: () => r }), n(47120);
+class r {
     has(e) {
         return this.listeners.has(e);
     }
@@ -29,18 +24,18 @@ class o {
     }
     constructor() {
         var e = this;
-        a(this, 'listeners', new Set()),
-            a(this, 'add', (e) => {
+        i(this, 'listeners', new Set()),
+            i(this, 'add', (e) => {
                 this.listeners.add(e);
             }),
-            a(this, 'remove', (e) => {
+            i(this, 'remove', (e) => {
                 this.listeners.delete(e);
             }),
-            a(this, 'addConditional', function (n) {
-                let r = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-                if (r && !1 === n()) return;
+            i(this, 'addConditional', function (t) {
+                let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+                if (n && !1 === t()) return;
                 let i = () => {
-                    !1 === n() && e.remove(i);
+                    !1 === t() && e.remove(i);
                 };
                 e.add(i);
             });

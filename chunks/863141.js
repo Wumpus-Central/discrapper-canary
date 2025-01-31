@@ -1,21 +1,16 @@
-r.d(n, {
-    Z: function () {
-        return o;
-    }
-});
-var i = r(789020);
-var a = r(864106);
-function o(e) {
-    let { id: n, username: r, discriminator: i, globalName: o, avatar: s, avatarDecoration: l, bot: u, flags: c, premiumType: d } = e;
+n.d(t, { Z: () => r }), n(789020);
+var i = n(864106);
+function r(e) {
+    let { id: t, username: n, discriminator: r, globalName: a, avatar: s, avatarDecoration: o, bot: l, flags: u, premiumType: c } = e;
     return {
-        id: n,
-        username: r,
-        discriminator: i,
-        global_name: o,
+        id: t,
+        username: n,
+        discriminator: r,
+        global_name: a,
         avatar: s,
-        avatar_decoration_data: (0, a.FG)(l),
-        bot: u,
-        flags: c,
-        premium_type: null != d ? d : 0
+        avatar_decoration_data: (0, i.FG)(o),
+        bot: l,
+        flags: u,
+        premium_type: null != c ? c : 0
     };
 }

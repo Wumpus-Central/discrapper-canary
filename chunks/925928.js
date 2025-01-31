@@ -1,46 +1,40 @@
-r.d(n, {
-    ZP: function () {
-        return _;
-    },
-    Zk: function () {
-        return p;
-    },
-    d0: function () {
-        return f;
-    }
+n.d(t, {
+    ZP: () => p,
+    Zk: () => f,
+    d0: () => d
 });
-var i = r(913527),
-    a = r.n(i),
-    o = r(388032);
+var i = n(913527),
+    r = n.n(i),
+    a = n(388032);
 let s = 60,
-    l = 3600,
-    u = 86400,
-    c = 2592000,
-    d = 31104000,
-    f = () => ({
-        minutes: o.t['XIGt+f'],
-        hours: o.t.rhY1Rk,
-        days: o.t.GBLpQ0,
-        months: o.t.XzBNbW,
-        years: o.t.I1E8p6
+    o = 3600,
+    l = 86400,
+    u = 2592000,
+    c = 31104000,
+    d = () => ({
+        minutes: a.t['XIGt+f'],
+        hours: a.t.rhY1Rk,
+        days: a.t.GBLpQ0,
+        months: a.t.XzBNbW,
+        years: a.t.I1E8p6
     }),
-    p = () => ({
-        minutes: o.t['GqQ/Y2'],
-        hours: o.t.c5zfWV,
-        days: o.t.amjnaG,
-        months: o.t.SoON3d,
-        years: o.t['12B3RU']
+    f = () => ({
+        minutes: a.t['GqQ/Y2'],
+        hours: a.t.c5zfWV,
+        days: a.t.amjnaG,
+        months: a.t.SoON3d,
+        years: a.t['12B3RU']
     });
-function h(e) {
-    let { seconds: n, getFormatter: r } = e,
-        i = r(),
-        a = '';
-    return (a = n < s ? o.intl.formatToPlainString(i.minutes, { minutes: 1 }) : n < l ? o.intl.formatToPlainString(i.minutes, { minutes: Math.floor(n / s) }) : n < u ? o.intl.formatToPlainString(i.hours, { hours: Math.floor(n / l) }) : n < c ? o.intl.formatToPlainString(i.days, { days: Math.floor(n / u) }) : n < d ? o.intl.formatToPlainString(i.months, { months: Math.floor(n / c) }) : o.intl.formatToPlainString(i.years, { years: Math.floor(n / d) }));
-}
 function _(e) {
-    let { since: n, getFormatter: r } = e;
-    return h({
-        seconds: a()().diff(a()(n), 's'),
-        getFormatter: r
+    let { seconds: t, getFormatter: n } = e,
+        i = n(),
+        r = '';
+    return t < s ? a.intl.formatToPlainString(i.minutes, { minutes: 1 }) : t < o ? a.intl.formatToPlainString(i.minutes, { minutes: Math.floor(t / s) }) : t < l ? a.intl.formatToPlainString(i.hours, { hours: Math.floor(t / o) }) : t < u ? a.intl.formatToPlainString(i.days, { days: Math.floor(t / l) }) : t < c ? a.intl.formatToPlainString(i.months, { months: Math.floor(t / u) }) : a.intl.formatToPlainString(i.years, { years: Math.floor(t / c) });
+}
+function p(e) {
+    let { since: t, getFormatter: n } = e;
+    return _({
+        seconds: r()().diff(r()(t), 's'),
+        getFormatter: n
     });
 }

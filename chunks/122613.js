@@ -1,46 +1,42 @@
-r.d(n, {
-    Z: function () {
-        return p;
-    }
-});
-var i = r(592125),
-    a = r(594174),
-    o = r(585483),
-    s = r(636449),
-    l = r(337682),
-    u = r(566620),
-    c = r(224189),
-    d = r(574952),
-    f = r(981631);
-function p(e) {
-    return (0, s.C)(() => h(e));
+n.d(t, { Z: () => f });
+var i = n(592125),
+    r = n(594174),
+    a = n(585483),
+    s = n(636449),
+    o = n(337682),
+    l = n(566620),
+    u = n(224189),
+    c = n(574952),
+    d = n(981631);
+function f(e) {
+    return (0, s.C)(() => _(e));
 }
-async function h(e) {
-    let { targetApplicationId: n, locationObject: r, channelId: s, analyticsLocations: p, componentId: h, commandOrigin: _, sectionName: m, source: g, onExecutedCallback: E, referrerId: v, customId: y, inviterUserId: b } = e,
-        I = (0, d.Z)(),
-        T = a.default.getCurrentUser();
-    if (null == n) return !1;
-    let S = await (0, c.Z)(n, s);
+async function _(e) {
+    let { targetApplicationId: t, locationObject: n, channelId: s, analyticsLocations: f, componentId: _, commandOrigin: p, sectionName: h, source: m, onExecutedCallback: g, referrerId: E, customId: v, inviterUserId: y } = e,
+        I = (0, c.Z)(),
+        b = r.default.getCurrentUser();
+    if (null == t) return !1;
+    let T = await (0, u.Z)(t, s);
     return null == s
-        ? (o.S.dispatch(f.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: n }), !1)
+        ? (a.S.dispatch(d.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: t }), !1)
         : null != i.Z.getChannel(s) &&
+              null != b &&
               null != T &&
-              null != S &&
-              (l.tZ(S.id),
-              await (0, u.af)({
+              (o.tZ(T.id),
+              await (0, l.af)({
                   channelId: s,
-                  applicationId: S.id,
+                  applicationId: T.id,
                   isStart: !0,
                   embeddedActivitiesManager: I,
-                  componentId: h,
-                  commandOrigin: _,
-                  sectionName: m,
-                  locationObject: r,
-                  analyticsLocations: p,
-                  source: g,
-                  onExecutedCallback: E,
-                  referrerId: v,
-                  customId: y,
-                  inviterUserId: b
+                  componentId: _,
+                  commandOrigin: p,
+                  sectionName: h,
+                  locationObject: n,
+                  analyticsLocations: f,
+                  source: m,
+                  onExecutedCallback: g,
+                  referrerId: E,
+                  customId: v,
+                  inviterUserId: y
               }));
 }

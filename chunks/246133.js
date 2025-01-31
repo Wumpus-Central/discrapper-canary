@@ -1,33 +1,29 @@
-r.d(n, {
-    Z: function () {
-        return c;
-    }
-});
-var i = r(381499),
-    a = r(601992),
-    o = r(675478),
-    s = r(885110),
-    l = r(626135),
-    u = r(981631);
-async function c(e, n, r, c) {
-    null == n && (n = s.Z.getStatus()),
-        await o.hW.updateAsync(
+n.d(t, { Z: () => u });
+var i = n(381499),
+    r = n(601992),
+    a = n(675478),
+    s = n(885110),
+    o = n(626135),
+    l = n(981631);
+async function u(e, t, n, u) {
+    null == t && (t = s.Z.getStatus()),
+        await a.hW.updateAsync(
             'status',
-            (n) => {
-                (n.status = i.Gm.create({ value: e })), (n.statusExpiresAtMs = null != c ? ''.concat(Date.now() + c) : '0');
+            (t) => {
+                (t.status = i.Gm.create({ value: e })), (t.statusExpiresAtMs = null != u ? ''.concat(Date.now() + u) : '0');
             },
-            o.fy.INFREQUENT_USER_ACTION
+            a.fy.INFREQUENT_USER_ACTION
         );
-    let d = {
+    let c = {
         next_status: e,
-        prev_status: n,
-        ...a.Z.getGlobalStats()
+        prev_status: t,
+        ...r.Z.getGlobalStats()
     };
-    null != r &&
-        (d = {
-            ...d,
-            ...r,
-            expire_duration_minutes: null != c ? c / 1000 : null
+    null != n &&
+        (c = {
+            ...c,
+            ...n,
+            expire_duration_minutes: null != u ? u / 1000 : null
         }),
-        l.default.track(u.rMx.USER_STATUS_UPDATED, d);
+        o.default.track(l.rMx.USER_STATUS_UPDATED, c);
 }

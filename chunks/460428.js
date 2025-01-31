@@ -54,8 +54,7 @@ function r(e, t) {
             o.Children.map(e, function (e) {
                 return e;
             }).forEach(function (e) {
-                var r;
-                n[e.key] = ((r = e), t && (0, o.isValidElement)(r) ? t(r) : r);
+                n[e.key] = t && (0, o.isValidElement)(e) ? t(e) : e;
             }),
         n
     );

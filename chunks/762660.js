@@ -1,125 +1,121 @@
 n.d(t, {
-    C: function () {
-        return C;
-    },
-    h: function () {
-        return _;
-    }
+    C: () => b,
+    h: () => g
 }),
     n(47120),
     n(411104);
-var i = n(200651),
-    r = n(192379),
-    a = n(120356),
-    o = n.n(a),
-    l = n(913527),
-    c = n.n(l),
-    s = n(481060),
+var a = n(200651),
+    i = n(192379),
+    r = n(120356),
+    l = n.n(r),
+    o = n(913527),
+    s = n.n(o),
+    c = n(481060),
     d = n(239091),
     u = n(598077),
     m = n(768581),
-    f = n(693546),
+    _ = n(693546),
     x = n(246364),
-    b = n(388032),
+    f = n(388032),
     h = n(372819);
 function p(e) {
-    let { icon: t, onClick: n, submitting: r, disabled: a } = e;
-    return (0, i.jsx)(s.Clickable, {
-        className: o()(h.actionIconContainer, { [h.disabled]: a || r }),
+    let { icon: t, onClick: n, submitting: i, disabled: r } = e;
+    return (0, a.jsx)(c.P3F, {
+        className: l()(h.actionIconContainer, { [h.disabled]: r || i }),
         onClick: n,
-        children: r
-            ? (0, i.jsx)(s.Dots, {
+        children: i
+            ? (0, a.jsx)(c.bbz, {
                   className: h.icon,
                   dotRadius: 2,
                   themed: !0
               })
-            : (0, i.jsx)(t, {
+            : (0, a.jsx)(t, {
                   className: h.icon,
                   size: 'xxs',
                   color: 'currentColor'
               })
     });
 }
-function C(e) {
-    let { applicationStatus: t, guild: a, guildJoinRequest: l, className: C, onClick: _, atMaxMemberCapacity: g } = e,
-        [v, j] = r.useState(null),
-        { user: I, createdAt: T } = l;
+function b(e) {
+    let { applicationStatus: t, guild: r, guildJoinRequest: o, className: b, onClick: g, atMaxMemberCapacity: C } = e,
+        [v, j] = i.useState(null),
+        { user: I, createdAt: T } = o;
     if (null == I) throw Error('Missing user on this guild join request!');
-    let R = r.useMemo(() => new u.Z(I), [I]),
+    let R = i.useMemo(() => new u.Z(I), [I]),
         E = m.ZP.getUserAvatarURL(R),
-        S = t === x.wB.SUBMITTED,
-        A = r.useCallback(
+        P = t === x.wB.SUBMITTED,
+        w = i.useCallback(
             async (e, t) => {
-                let { guildId: n, userId: i } = e;
+                let { guildId: n, userId: a } = e;
                 if (null == v) {
                     j(t);
                     try {
-                        await f.Z.updateGuildJoinRequest(n, i, l.joinRequestId, t);
+                        await _.Z.updateGuildJoinRequest(n, a, o.joinRequestId, t);
                     } catch (e) {
-                        (0, s.showToast)((0, s.createToast)(b.intl.string(b.t.R0RpRU), s.ToastType.FAILURE)), j(null);
+                        (0, c.showToast)((0, c.createToast)(f.intl.string(f.t.R0RpRU), c.ToastType.FAILURE)), j(null);
                     }
                 }
             },
-            [v, l.joinRequestId]
+            [v, o.joinRequestId]
         ),
-        w = async () => {
-            await A(l, x.wB.APPROVED);
-        },
         N = async () => {
-            await A(l, x.wB.REJECTED);
+            await w(o, x.wB.APPROVED);
+        },
+        S = async () => {
+            await w(o, x.wB.REJECTED);
         };
-    return (0, i.jsxs)(s.Clickable, {
-        className: o()(h.container, C),
-        onClick: _,
+    return (0, a.jsxs)(c.P3F, {
+        className: l()(h.container, b),
+        onClick: g,
         children: [
-            (0, i.jsx)(s.Avatar, {
+            (0, a.jsx)(c.qEK, {
                 src: E,
-                size: s.AvatarSizes.SIZE_40,
+                size: c.EFr.SIZE_40,
                 'aria-label': I.username,
                 className: h.__invalid_spacer
             }),
-            (0, i.jsxs)('div', {
+            (0, a.jsxs)('div', {
                 className: h.userDetails,
                 children: [
-                    (0, i.jsx)(s.Text, {
+                    (0, a.jsx)(c.Text, {
                         variant: 'text-md/semibold',
                         color: 'header-primary',
                         children: I.username
                     }),
-                    (0, i.jsx)(s.Text, {
+                    (0, a.jsx)(c.Text, {
                         className: h.createdAt,
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        children: c()(T).format('lll')
+                        children: s()(T).format('lll')
                     })
                 ]
             }),
-            S &&
-                !g &&
-                (0, i.jsx)(p, {
-                    icon: s.CheckmarkLargeIcon,
-                    onClick: w,
+            P &&
+                !C &&
+                (0, a.jsx)(p, {
+                    icon: c.dz2,
+                    onClick: N,
                     submitting: v === x.wB.APPROVED,
                     disabled: null != v && v !== x.wB.APPROVED
                 }),
-            S &&
-                (0, i.jsx)(p, {
-                    icon: s.XSmallIcon,
-                    onClick: N,
+            P &&
+                (0, a.jsx)(p, {
+                    icon: c.Dio,
+                    onClick: S,
                     submitting: v === x.wB.REJECTED,
                     disabled: null != v && v !== x.wB.REJECTED
                 }),
-            (0, i.jsx)(s.Clickable, {
-                className: o()(h.overflowMenuContainer, { [h.disabled]: null != v }),
+            (0, a.jsx)(c.P3F, {
+                className: l()(h.overflowMenuContainer, { [h.disabled]: null != v }),
                 onClick: (e) => {
                     (0, d.jW)(
                         e,
                         async () => {
                             let { default: e } = await n.e('84259').then(n.bind(n, 597409));
                             return (t) =>
-                                (0, i.jsx)(e, {
+                                (0, a.jsx)(e, {
                                     ...t,
-                                    guild: a,
+                                    guild: r,
                                     user: R
                                 });
                         },
@@ -129,7 +125,7 @@ function C(e) {
                         }
                     );
                 },
-                children: (0, i.jsx)(s.MoreHorizontalIcon, {
+                children: (0, a.jsx)(c.xhG, {
                     size: 'custom',
                     color: 'currentColor',
                     className: h.icon,
@@ -139,21 +135,21 @@ function C(e) {
         ]
     });
 }
-function _() {
+function g() {
     let e = ''.concat(Math.floor(50 * Math.random()) + 100, 'px'),
         t = ''.concat(Math.floor(25 * Math.random()) + 50, 'px');
-    return (0, i.jsxs)('div', {
+    return (0, a.jsxs)('div', {
         className: h.placeholder,
         children: [
-            (0, i.jsx)('div', { className: o()(h.placeholderAvatar) }),
-            (0, i.jsxs)('div', {
+            (0, a.jsx)('div', { className: l()(h.placeholderAvatar) }),
+            (0, a.jsxs)('div', {
                 className: h.userDetails,
                 children: [
-                    (0, i.jsx)('div', {
+                    (0, a.jsx)('div', {
                         className: h.placeholderUsername,
                         style: { maxWidth: e }
                     }),
-                    (0, i.jsx)('div', {
+                    (0, a.jsx)('div', {
                         className: h.placeholderCreatedAt,
                         style: { maxWidth: t }
                     })

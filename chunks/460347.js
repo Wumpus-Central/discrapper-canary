@@ -1,29 +1,25 @@
-r.d(n, {
-    Z: function () {
-        return p;
-    },
-    m: function () {
-        return f;
-    }
-});
-var i = r(789020);
-var a = r(442837),
-    o = r(160404),
-    s = r(271383),
-    l = r(70956),
-    u = r(630388),
-    c = r(372897);
-function d(e, n, r) {
+n.d(t, {
+    Z: () => d,
+    m: () => c
+}),
+    n(789020);
+var i = n(442837),
+    r = n(160404),
+    a = n(271383),
+    s = n(70956),
+    o = n(630388),
+    l = n(372897);
+function u(e, t, n) {
     var i;
-    if (r.isFullServerPreview(e)) return !0;
-    let a = n.getSelfMember(e);
-    if (null == a) return !1;
-    let o = n.getSelfMemberJoinedAt(e);
-    return !(null == o || (0, u.yE)(null !== (i = a.flags) && void 0 !== i ? i : 0, c.q.COMPLETED_HOME_ACTIONS)) && Date.now() - o.getTime() < l.Z.Millis.WEEK;
+    if (n.isFullServerPreview(e)) return !0;
+    let r = t.getSelfMember(e);
+    if (null == r) return !1;
+    let a = t.getSelfMemberJoinedAt(e);
+    return !(null == a || (0, o.yE)(null !== (i = r.flags) && void 0 !== i ? i : 0, l.q.COMPLETED_HOME_ACTIONS)) && Date.now() - a.getTime() < s.Z.Millis.WEEK;
 }
-function f(e) {
-    return d(e, s.ZP, o.Z);
+function c(e) {
+    return u(e, a.ZP, r.Z);
 }
-function p(e) {
-    return (0, a.e7)([s.ZP, o.Z], () => d(e, s.ZP, o.Z));
+function d(e) {
+    return (0, i.e7)([a.ZP, r.Z], () => u(e, a.ZP, r.Z));
 }

@@ -1,16 +1,12 @@
-r.d(n, {
-    U: function () {
-        return o;
-    },
-    Z: function () {
-        return s;
-    }
+n.d(t, {
+    U: () => a,
+    Z: () => s
 });
-var i = r(709054),
-    a = r(356659);
-function o(e) {
+var i = n(709054),
+    r = n(356659);
+function a(e) {
     return new Date(i.default.extractTimestamp(e)).toISOString();
 }
 function s(e) {
-    return e.slice(0, a.JO);
+    return e.slice(0, r.JO);
 }

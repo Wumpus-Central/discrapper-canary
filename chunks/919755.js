@@ -1,10 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-}),
-    n(47120),
-    n(724458);
+n.d(t, { Z: () => d }), n(47120), n(724458);
 var i = n(442837),
     l = n(592125),
     r = n(496675),
@@ -12,10 +6,9 @@ var i = n(442837),
     o = n(9156),
     s = n(709054),
     c = n(231338);
-function u(e) {
-    return (0, i.cj)([l.Z, a.ZP, o.ZP, r.Z], () => {
-        let t = s.default.keys(e);
-        return t.reduce(
+function d(e) {
+    return (0, i.cj)([l.Z, a.ZP, o.ZP, r.Z], () =>
+        s.default.keys(e).reduce(
             (e, t) => {
                 let n = l.Z.getChannel(t),
                     i = null == n ? void 0 : n.isGuildVocal();
@@ -25,6 +18,6 @@ function u(e) {
                 badge: 0,
                 unread: !1
             }
-        );
-    });
+        )
+    );
 }

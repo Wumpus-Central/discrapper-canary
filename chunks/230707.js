@@ -1,7 +1,8 @@
 e.exports = {
-    similarGames: 'similarGames_bd82e2',
-    similarGameImageClickable: 'similarGameImageClickable_bd82e2 similarGameImageWrapper_bd82e2',
-    similarGameImage: 'similarGameImage_bd82e2',
-    loadingArtwork: 'loadingArtwork_bd82e2 fallbackImage similarGameImageWrapper_bd82e2',
-    loadingHeading: 'loadingHeading_bd82e2'
+    similarGames: 'similarGames_a02225',
+    similarGameImageWrapper: 'similarGameImageWrapper_a02225',
+    similarGameImageClickable: 'similarGameImageClickable_a02225 similarGameImageWrapper_a02225',
+    similarGameImage: 'similarGameImage_a02225',
+    loadingArtwork: 'loadingArtwork_a02225 fallbackImage similarGameImageWrapper_a02225',
+    loadingHeading: 'loadingHeading_a02225'
 };

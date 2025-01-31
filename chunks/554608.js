@@ -1,46 +1,44 @@
-r.d(n, {
-    P: function () {
-        return i;
-    }
+n.d(t, {
+    P: () => o,
+    Z: () => _
 });
 var i,
-    a,
-    o = r(442837),
-    s = r(570140);
-function l(e, n, r) {
+    r = n(442837),
+    a = n(570140);
+function s(e, t, n) {
     return (
-        n in e
-            ? Object.defineProperty(e, n, {
-                  value: r,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (e[n] = r),
+            : (e[t] = n),
         e
     );
 }
-!(function (e) {
-    (e[(e.NOT_STARTED = 0)] = 'NOT_STARTED'), (e[(e.IN_PROGRESS = 1)] = 'IN_PROGRESS'), (e[(e.FAILED = 2)] = 'FAILED'), (e[(e.SKIPPED = 3)] = 'SKIPPED');
-})(i || (i = {}));
-let u = 0;
+var o = (function (e) {
+    return (e[(e.NOT_STARTED = 0)] = 'NOT_STARTED'), (e[(e.IN_PROGRESS = 1)] = 'IN_PROGRESS'), (e[(e.FAILED = 2)] = 'FAILED'), (e[(e.SKIPPED = 3)] = 'SKIPPED'), e;
+})({});
+let l = 0;
+function u() {
+    l = 1;
+}
 function c() {
-    u = 1;
+    l = 2;
 }
 function d() {
-    u = 2;
+    l = 3;
 }
-function f() {
-    u = 3;
-}
-class p extends (a = o.ZP.Store) {
+class f extends (i = r.ZP.Store) {
     getMigrationStatus() {
-        return u;
+        return l;
     }
 }
-l(p, 'displayName', 'DomainMigrationStore'),
-    (n.Z = new p(s.Z, {
-        DOMAIN_MIGRATION_START: c,
-        DOMAIN_MIGRATION_FAILURE: d,
-        DOMAIN_MIGRATION_SKIP: f
-    }));
+s(f, 'displayName', 'DomainMigrationStore');
+let _ = new f(a.Z, {
+    DOMAIN_MIGRATION_START: u,
+    DOMAIN_MIGRATION_FAILURE: c,
+    DOMAIN_MIGRATION_SKIP: d
+});

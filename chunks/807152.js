@@ -1,6 +1,2 @@
-n.d(t, {
-    v: function () {
-        return i;
-    }
-});
+n.d(t, { v: () => i });
 let i = 'guild-role-subscription-overview-notice';

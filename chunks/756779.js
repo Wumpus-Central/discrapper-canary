@@ -1,114 +1,109 @@
-r.r(s),
-    r.d(s, {
-        default: function () {
-            return C;
-        }
-    });
-var o = r(200651);
+r.d(s, { default: () => L });
+var i = r(200651);
 r(192379);
-var a = r(512722),
-    n = r.n(a),
-    t = r(990547),
-    i = r(442837),
+var o = r(512722),
+    n = r.n(o),
+    a = r(990547),
+    t = r(442837),
     d = r(481060),
     l = r(782568),
     c = r(213609),
     p = r(357352),
-    u = r(313201),
-    m = r(70097),
-    f = r(434404),
-    _ = r(690221),
-    h = r(695346),
+    m = r(313201),
+    u = r(70097),
+    _ = r(434404),
+    h = r(690221),
+    b = r(695346),
     g = r(430824),
-    S = r(63063),
+    x = r(63063),
     N = r(981631),
-    x = r(921944),
+    S = r(921944),
     R = r(20281),
-    v = r(382556);
-let j = [N.oNc.CREATOR_MONETIZABLE, N.oNc.CREATOR_MONETIZABLE_PROVISIONAL];
-function C(e) {
-    let { transitionState: s, onClose: r, guildId: a, markAsDismissed: C } = e,
-        I = (0, u.Dt)(),
-        L = (0, i.e7)([g.Z], () => g.Z.getGuild(a));
-    n()(null != L, 'Guild must be defined'),
+    C = r(382556);
+let v = [N.oNc.CREATOR_MONETIZABLE, N.oNc.CREATOR_MONETIZABLE_PROVISIONAL];
+function L(e) {
+    let { transitionState: s, onClose: r, guildId: o, markAsDismissed: L } = e,
+        j = (0, m.Dt)(),
+        I = (0, t.e7)([g.Z], () => g.Z.getGuild(o));
+    n()(null != I, 'Guild must be defined'),
         (0, c.Z)({
             type: R.n.MODAL,
-            name: t.ImpressionNames.GUILD_SHOP_UPSELL,
-            properties: { passed_in_guild_id: a }
+            name: a.ImpressionNames.GUILD_SHOP_UPSELL,
+            properties: { passed_in_guild_id: o }
         });
-    let O = h.QK.useSetting();
-    return (0, o.jsxs)(d.ModalRoot, {
-        size: d.ModalSize.LARGE,
-        className: v.__invalid_root,
+    let O = b.QK.useSetting();
+    return (0, i.jsxs)(d.Y0X, {
+        size: d.CgR.LARGE,
+        className: C.__invalid_root,
         transitionState: s,
-        'aria-labelledby': I,
+        'aria-labelledby': j,
         children: [
-            (0, o.jsxs)(d.ModalHeader, {
+            (0, i.jsxs)(d.xBx, {
                 separator: !1,
-                className: v.header,
+                className: C.header,
                 children: [
-                    (0, o.jsx)(d.ModalCloseButton, {
-                        className: v.closeButton,
+                    (0, i.jsx)(d.olH, {
+                        className: C.closeButton,
                         onClick: r
                     }),
-                    (0, o.jsx)(d.Heading, {
+                    (0, i.jsx)(d.X6q, {
                         variant: 'heading-xl/medium',
                         color: 'header-primary',
-                        id: I,
+                        id: j,
                         children: 'Server Shop is now open for business!'
                     }),
-                    (0, o.jsx)(d.Spacer, { size: 6 }),
-                    (0, o.jsx)(d.Text, {
+                    (0, i.jsx)(d.LZC, { size: 6 }),
+                    (0, i.jsx)(d.Text, {
                         variant: 'text-md/normal',
-                        className: v.description,
+                        className: C.description,
                         color: 'header-secondary',
                         children: 'Introducing a single place to sell downloadable products, monthly Server Subscriptions, and Premium Roles right inside Discord. From PDF guides and digital stickers to gated channels and premium roles, Server Shop gives you two new ways to engage your community\u2014and earn from your expertise.'
                     }),
-                    (0, o.jsx)(d.Spacer, { size: 8 }),
-                    (0, o.jsx)(_.Z, {
+                    (0, i.jsx)(d.LZC, { size: 8 }),
+                    (0, i.jsx)(h.Z, {
                         onClick: () => {
-                            C(x.L.SECONDARY);
-                            let e = ''.concat(S.Z.getCreatorSupportArticleURL(N.BhN.SERVER_SUBSCRIPTION_AND_PRODUCTS), '#docs-internal-guid-918e991a-7fff-03d5-8326-5d065e5edeb1');
+                            L(S.L.SECONDARY);
+                            let e = ''.concat(x.Z.getCreatorSupportArticleURL(N.BhN.SERVER_SUBSCRIPTION_AND_PRODUCTS), '#docs-internal-guid-918e991a-7fff-03d5-8326-5d065e5edeb1');
                             (0, l.Z)(e, !0);
                         },
                         children: 'Learn more'
                     })
                 ]
             }),
-            (0, o.jsx)('div', { className: v.divider }),
-            (0, o.jsxs)(d.ModalContent, {
-                className: v.content,
+            (0, i.jsx)('div', { className: C.divider }),
+            (0, i.jsxs)(d.hzk, {
+                className: C.content,
                 children: [
                     O
-                        ? (0, o.jsx)('img', {
+                        ? (0, i.jsx)('img', {
                               src: (0, p.b)('server_products/upsell/demo2.png'),
                               alt: '',
-                              className: v.demo
+                              className: C.demo
                           })
-                        : (0, o.jsx)(m.Z, {
+                        : (0, i.jsx)(u.Z, {
                               autoPlay: !0,
                               loop: !0,
-                              className: v.demo,
+                              className: C.demo,
                               width: 400,
                               poster: (0, p.b)('server_products/upsell/demo2.png'),
                               src: (0, p.b)('server_products/upsell/demo.mp4')
                           }),
-                    (0, o.jsx)('img', {
+                    (0, i.jsx)('img', {
                         src: (0, p.b)('server_products/upsell/new_sales.png'),
                         alt: '',
-                        className: v.earningsImage
+                        className: C.earningsImage
                     })
                 ]
             }),
-            (0, o.jsxs)(d.ModalFooter, {
+            (0, i.jsxs)(d.mzw, {
                 children: [
-                    (0, o.jsx)(d.Button, {
+                    (0, i.jsx)(d.zxk, {
                         onClick: () => {
-                            j.some((e) => L.hasFeature(e)) ? f.Z.open(a, N.pNK.GUILD_PRODUCTS) : f.Z.open(a, N.pNK.ROLE_SUBSCRIPTIONS), C(x.L.PRIMARY), r();
+                            v.some((e) => I.hasFeature(e)) ? _.Z.open(o, N.pNK.GUILD_PRODUCTS) : _.Z.open(o, N.pNK.ROLE_SUBSCRIPTIONS), L(S.L.PRIMARY), r();
                         },
                         children: 'Check it out'
                     }),
-                    (0, o.jsx)(d.Spacer, {
+                    (0, i.jsx)(d.LZC, {
                         size: 12,
                         horizontal: !0
                     })

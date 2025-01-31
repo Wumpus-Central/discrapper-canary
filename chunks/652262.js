@@ -1,9 +1,5 @@
-n.d(t, {
-    M: function () {
-        return s;
-    }
-});
+n.d(t, { M: () => r });
 var i = n(399606);
 n(594174);
-var r = n(914788);
-let s = () => (0, i.e7)([r.Z], () => r.Z.getSelectedTeenId());
+var s = n(914788);
+let r = () => (0, i.e7)([s.Z], () => s.Z.getSelectedTeenId());

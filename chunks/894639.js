@@ -1,1 +1,2 @@
-e.exports = { noBoxShadowMargin: 'noBoxShadowMargin_a7ae01' };
+var i = { noBoxShadowMargin: 'noBoxShadowMargin_d0aeea' };
+e.exports = i;

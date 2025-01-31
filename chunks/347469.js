@@ -1,73 +1,66 @@
-r.d(n, {
-    y: function () {
-        return i;
-    }
-});
-var i,
-    a,
-    o = r(47120);
-var s = r(192379),
-    l = r(392711);
-let u = 300;
-function c(e) {
+n.d(t, {
+    Z: () => l,
+    y: () => s
+}),
+    n(47120);
+var i = n(192379),
+    r = n(392711);
+let a = 300;
+var s = (function (e) {
+    return (e[(e.VERTICAL_TOP = 0)] = 'VERTICAL_TOP'), (e[(e.VERTICAL_BOTTOM = 1)] = 'VERTICAL_BOTTOM'), (e[(e.HORIZONTAL_LEFT = 2)] = 'HORIZONTAL_LEFT'), (e[(e.HORIZONTAL_RIGHT = 3)] = 'HORIZONTAL_RIGHT'), e;
+})({});
+function o(e) {
     return 2 === e || 3 === e ? 1 : 0;
 }
-!(function (e) {
-    (e[(e.VERTICAL_TOP = 0)] = 'VERTICAL_TOP'), (e[(e.VERTICAL_BOTTOM = 1)] = 'VERTICAL_BOTTOM'), (e[(e.HORIZONTAL_LEFT = 2)] = 'HORIZONTAL_LEFT'), (e[(e.HORIZONTAL_RIGHT = 3)] = 'HORIZONTAL_RIGHT');
-})(i || (i = {})),
-    !(function (e) {
-        (e[(e.VERTICAL = 0)] = 'VERTICAL'), (e[(e.HORIZONTAL = 1)] = 'HORIZONTAL');
-    })(a || (a = {}));
-let d = (e) => {
-    let { initialElementDimension: n, resizableDomNodeRef: r, maxDimension: i, minDimension: a, onElementResize: o, onElementResizeStart: d, onElementResizeEnd: f, throttleDuration: p = u, orientation: h, usePointerEvents: _ = !1, getClampedValue: m = l.clamp } = e,
-        [g, E] = s.useState(!1),
-        v = s.useRef(0),
-        y = s.useRef(!1),
-        b = s.useRef(null == n ? 0 : n);
+let l = (e) => {
+    let { initialElementDimension: t, resizableDomNodeRef: n, maxDimension: s, minDimension: l, onElementResize: u, onElementResizeStart: c, onElementResizeEnd: d, throttleDuration: f = a, orientation: _, usePointerEvents: p = !1, getClampedValue: h = r.clamp } = e,
+        [m, g] = i.useState(!1),
+        E = i.useRef(0),
+        v = i.useRef(!1),
+        y = i.useRef(null == t ? 0 : t);
     return (
-        s.useLayoutEffect(() => {
-            if (!g || null == r.current) return;
+        i.useLayoutEffect(() => {
+            if (!m || null == n.current) return;
             function e(e) {
-                let n = 1 === c(h) ? e.screenX : e.screenY,
-                    r = 0 === h || 2 === h,
-                    i = (n - v.current) * (r ? -1 : 1);
-                return b.current + i;
+                let t = 1 === o(_) ? e.screenX : e.screenY,
+                    n = 0 === _ || 2 === _,
+                    i = (t - E.current) * (n ? -1 : 1);
+                return y.current + i;
             }
-            function n(e) {
-                return m(e, null != a ? a : 0, null != i ? i : e);
+            function t(e) {
+                return h(e, null != l ? l : 0, null != s ? s : e);
             }
-            let s = (0, l.throttle)(o, p),
-                u = (i) => {
-                    if (null == r.current) return null;
-                    let a = e(i),
-                        o = n(a),
-                        l = 1 === c(h) ? 'width' : 'height';
-                    (r.current.style[l] = ''.concat(o, 'px')), !y.current && ((y.current = !0), null == d || d(o)), s(o, a);
+            let i = (0, r.throttle)(u, f),
+                a = (r) => {
+                    if (null == n.current) return null;
+                    let a = e(r),
+                        s = t(a),
+                        l = 1 === o(_) ? 'width' : 'height';
+                    (n.current.style[l] = ''.concat(s, 'px')), v.current || ((v.current = !0), null == c || c(s)), i(s, a);
                 },
-                I = (r) => {
-                    E(!1);
-                    let i = e(r),
-                        a = n(i);
-                    o(a, i), null == f || f(a), (y.current = !1);
+                I = (n) => {
+                    g(!1);
+                    let i = e(n),
+                        r = t(i);
+                    u(r, i), null == d || d(r), (v.current = !1);
                 },
-                T = _ ? 'pointerup' : 'mouseup',
-                S = _ ? 'pointermove' : 'mousemove',
-                A = r.current.ownerDocument;
+                b = p ? 'pointerup' : 'mouseup',
+                T = p ? 'pointermove' : 'mousemove',
+                S = n.current.ownerDocument;
             return (
-                A.addEventListener(T, I),
-                A.addEventListener(S, u),
+                S.addEventListener(b, I),
+                S.addEventListener(T, a),
                 () => {
-                    A.removeEventListener(T, I), A.removeEventListener(S, u), s.cancel();
+                    S.removeEventListener(b, I), S.removeEventListener(T, a), i.cancel();
                 }
             );
-        }, [g, o, a, i, h, r, p, f, _, m, d]),
-        s.useCallback(
+        }, [m, u, l, s, _, n, f, d, p, h, c]),
+        i.useCallback(
             (e) => {
-                let n = 1 === c(h);
-                null != r.current && (b.current = n ? r.current.offsetWidth : r.current.offsetHeight), (v.current = n ? e.screenX : e.screenY), E(!0);
+                let t = 1 === o(_);
+                null != n.current && (y.current = t ? n.current.offsetWidth : n.current.offsetHeight), (E.current = t ? e.screenX : e.screenY), g(!0);
             },
-            [h, r]
+            [_, n]
         )
     );
 };
-n.Z = d;

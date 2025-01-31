@@ -1,43 +1,39 @@
-r.d(n, {
-    K: function () {
-        return f;
-    },
-    i: function () {
-        return d;
-    }
+n.d(t, {
+    K: () => d,
+    i: () => c
 });
-var i = r(200651),
-    a = r(15729),
-    o = r(442837),
-    s = r(857192),
-    l = r(743013);
-let u = 4,
-    c = 64,
-    d = (0, a.U)((e) => ({
-        horizontalSpacing: u,
-        verticalSpacing: u,
-        maxHorizontalSpacing: c,
-        maxVerticalSpacing: c,
-        setHorizontalSpacing: (n) => {
-            e({ horizontalSpacing: Math.round(Math.min(Math.max(n, 0), c)) });
+var i = n(200651),
+    r = n(15729),
+    a = n(442837),
+    s = n(857192),
+    o = n(743013);
+let l = 4,
+    u = 64,
+    c = (0, r.U)((e) => ({
+        horizontalSpacing: l,
+        verticalSpacing: l,
+        maxHorizontalSpacing: u,
+        maxVerticalSpacing: u,
+        setHorizontalSpacing: (t) => {
+            e({ horizontalSpacing: Math.round(Math.min(Math.max(t, 0), u)) });
         },
-        setVerticalSpacing: (n) => {
-            e({ verticalSpacing: Math.round(Math.min(Math.max(n, 0), c)) });
+        setVerticalSpacing: (t) => {
+            e({ verticalSpacing: Math.round(Math.min(Math.max(t, 0), u)) });
         }
     }));
-function f() {
-    let e = (0, o.e7)([s.default], () => s.default.layoutDebuggingEnabled),
-        { horizontalSpacing: n, verticalSpacing: r } = d();
+function d() {
+    let e = (0, a.e7)([s.default], () => s.default.layoutDebuggingEnabled),
+        { horizontalSpacing: t, verticalSpacing: n } = c();
     return e
         ? (0, i.jsx)('div', {
-              className: l.container,
+              className: o.container,
               children: (0, i.jsx)('div', {
-                  className: l.gridOverlay,
-                  'data-horizontal': n > 0,
-                  'data-vertical': r > 0,
+                  className: o.gridOverlay,
+                  'data-horizontal': t > 0,
+                  'data-vertical': n > 0,
                   style: {
-                      '--custom-grid-horizontal-spacing': ''.concat(n, 'px'),
-                      '--custom-grid-vertical-spacing': ''.concat(r, 'px')
+                      '--custom-grid-horizontal-spacing': ''.concat(t, 'px'),
+                      '--custom-grid-vertical-spacing': ''.concat(n, 'px')
                   }
               })
           })

@@ -1,9 +1,10 @@
-e.exports = {
-    stickerPreviews: 'stickerPreviews_ef287f',
-    stickerPreviewContainer: 'stickerPreviewContainer_ef287f',
-    stickerPreview: 'stickerPreview_ef287f',
-    stickerPreviewDivider: 'stickerPreviewDivider_ef287f',
-    closeButton: 'closeButton_ef287f',
-    closeIconContainer: 'closeIconContainer_ef287f',
-    closeIcon: 'closeIcon_ef287f'
+var i = {
+    stickerPreviews: 'stickerPreviews_a4cf0b',
+    stickerPreviewContainer: 'stickerPreviewContainer_a4cf0b',
+    stickerPreview: 'stickerPreview_a4cf0b',
+    stickerPreviewDivider: 'stickerPreviewDivider_a4cf0b',
+    closeButton: 'closeButton_a4cf0b',
+    closeIconContainer: 'closeIconContainer_a4cf0b',
+    closeIcon: 'closeIcon_a4cf0b'
 };
+e.exports = i;

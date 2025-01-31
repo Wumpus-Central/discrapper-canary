@@ -1,29 +1,25 @@
-n.d(t, {
-    Z: function () {
-        return o;
-    }
-});
+n.d(t, { Z: () => s });
 var i = n(200651);
 n(192379);
-var r = n(481060),
-    l = n(207126),
-    a = n(725414);
-function o(e) {
+var l = n(481060),
+    a = n(207126),
+    r = n(725414);
+function s(e) {
     let { channel: t } = e;
     return (0, i.jsxs)('div', {
-        className: a.channel,
+        className: r.channel,
         children: [
             (0, i.jsxs)('div', {
-                className: a.channelLeft,
+                className: r.channelLeft,
                 children: [
-                    (0, i.jsx)(r.VoiceNormalIcon, {}),
-                    (0, i.jsx)(r.Text, {
+                    (0, i.jsx)(l.gj8, {}),
+                    (0, i.jsx)(l.Text, {
                         variant: 'text-md/normal',
                         children: t.name
                     })
                 ]
             }),
-            (0, i.jsx)(l.Z, { channel: t })
+            (0, i.jsx)(a.Z, { channel: t })
         ]
     });
 }

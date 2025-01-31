@@ -1,8 +1,4 @@
-n.d(t, {
-    Z: function () {
-        return u;
-    }
-});
+n.d(t, { Z: () => u });
 var i = n(200651);
 n(192379);
 var r = n(120356),
@@ -22,10 +18,10 @@ function u(e) {
                 height: r,
                 width: r
             }),
-            (0, i.jsx)(a.Shine, {
+            (0, i.jsx)(a.ZX5, {
                 className: d.shine,
                 shinePaused: u || !n,
-                shineSize: a.ShinyButton.ShineSizes.SMALL
+                shineSize: a.gtL.ShineSizes.SMALL
             })
         ]
     });

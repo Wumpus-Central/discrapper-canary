@@ -1,122 +1,120 @@
-r.d(n, {
-    Z: function () {
-        return A;
-    },
-    p: function () {
-        return i;
-    }
+n.d(t, {
+    Z: () => S,
+    p: () => T
 });
-var i,
-    a = r(200651),
-    o = r(192379),
-    s = r(120356),
-    l = r.n(s),
-    u = r(442837),
-    c = r(481060),
-    d = r(355467),
-    f = r(37234),
-    p = r(174609),
-    h = r(703656),
-    _ = r(626135),
-    m = r(74538),
-    g = r(357355),
-    E = r(639119),
-    v = r(197115),
-    y = r(302945),
-    b = r(474936),
-    I = r(981631),
-    T = r(388032),
-    S = r(638916);
-function A(e) {
-    let { containerContext: n, image: r, title: i, description: s, enableSocialProof: A, analyticsLocationSection: C, upsellViewedTrackingData: N, onClose: R, onDisplay: O, onLearnMore: D } = e,
-        L = (0, u.e7)([g.Z], () => g.Z.affinities),
-        x = (0, u.e7)([g.Z], () => g.Z.hasFetched);
-    o.useEffect(() => {
-        !x && A && d.MH();
-    }, [x, A]),
-        o.useEffect(() => {
-            _.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, N), null == O || O();
-        }, [O, N]);
-    let w = L.length > 1 && A,
-        P = () => (2 === n ? S.hasTabParentContainer : 1 === n ? S.hasParentContainer : S.noParentContainer),
-        M = () => {
-            _.default.track(I.rMx.PREMIUM_PROMOTION_OPENED, {
-                location_section: C,
-                location_object: I.qAy.NAVIGATION_LINK
+var i = n(200651),
+    r = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    o = n(442837),
+    l = n(481060),
+    u = n(355467),
+    c = n(37234),
+    d = n(174609),
+    f = n(703656),
+    _ = n(626135),
+    p = n(74538),
+    h = n(357355),
+    m = n(639119),
+    g = n(197115),
+    E = n(302945),
+    v = n(474936),
+    y = n(981631),
+    I = n(388032),
+    b = n(638916),
+    T = (function (e) {
+        return (e[(e.NONE = 0)] = 'NONE'), (e[(e.PARENT_CONTAINER = 1)] = 'PARENT_CONTAINER'), (e[(e.TAB_PARENT_CONTAINER = 2)] = 'TAB_PARENT_CONTAINER'), e;
+    })({});
+function S(e) {
+    let { containerContext: t, image: n, title: a, description: T, enableSocialProof: S, analyticsLocationSection: A, upsellViewedTrackingData: N, onClose: C, onDisplay: R, onLearnMore: O } = e,
+        D = (0, o.e7)([h.Z], () => h.Z.affinities),
+        x = (0, o.e7)([h.Z], () => h.Z.hasFetched);
+    r.useEffect(() => {
+        !x && S && u.MH();
+    }, [x, S]),
+        r.useEffect(() => {
+            _.default.track(y.rMx.PREMIUM_UPSELL_VIEWED, N), null == R || R();
+        }, [R, N]);
+    let L = D.length > 1 && S,
+        P = () => (2 === t ? b.hasTabParentContainer : 1 === t ? b.hasParentContainer : b.noParentContainer),
+        w = () => {
+            _.default.track(y.rMx.PREMIUM_PROMOTION_OPENED, {
+                location_section: A,
+                location_object: y.qAy.NAVIGATION_LINK
             }),
-                null == D || D(),
-                (0, p.Z)(),
-                R(),
-                (0, f.xf)(),
-                (0, h.uL)(I.Z5c.APPLICATION_STORE);
+                null == O || O(),
+                (0, d.Z)(),
+                C(),
+                (0, c.xf)(),
+                (0, f.uL)(y.Z5c.APPLICATION_STORE);
         },
-        k = (0, E.N)(),
-        U = o.useCallback(() => {
+        M = (0, m.N)(),
+        k = r.useCallback(() => {
             var e;
-            return null !== (e = (0, m.fr)(k)) && void 0 !== e ? e : T.intl.string(T.t.pj0XBA);
-        }, [k]);
-    return (0, a.jsxs)(a.Fragment, {
+            return null !== (e = (0, p.fr)(M)) && void 0 !== e ? e : I.intl.string(I.t.pj0XBA);
+        }, [M]);
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, a.jsx)(c.Backdrop, {
-                backdropStyle: c.BackdropStyles.DARK,
-                onClose: R,
-                'aria-label': T.intl.string(T.t.cpT0Cg),
+            (0, i.jsx)(l.YMn, {
+                backdropStyle: l.fCB.DARK,
+                onClose: C,
+                'aria-label': I.intl.string(I.t.cpT0Cg),
                 isVisible: !0
             }),
-            (0, a.jsxs)('div', {
-                className: l()(S.container, P()),
+            (0, i.jsxs)('div', {
+                className: s()(b.container, P()),
                 children: [
-                    (0, a.jsx)(c.ModalCloseButton, {
-                        onClick: R,
-                        className: S.closeButton
+                    (0, i.jsx)(l.olH, {
+                        onClick: C,
+                        className: b.closeButton
                     }),
-                    (0, a.jsxs)('div', {
-                        className: S.contentContainer,
+                    (0, i.jsxs)('div', {
+                        className: b.contentContainer,
                         children: [
-                            (0, a.jsx)('img', {
-                                className: S.image,
-                                width: r.width,
-                                height: r.height,
-                                src: r.url,
+                            (0, i.jsx)('img', {
+                                className: b.image,
+                                width: n.width,
+                                height: n.height,
+                                src: n.url,
                                 alt: 'Nitro Perk'
                             }),
-                            (0, a.jsx)(c.Heading, {
-                                className: l()(S.title, { [S.titleNoSocialProof]: !w }),
+                            (0, i.jsx)(l.X6q, {
+                                className: s()(b.title, { [b.titleNoSocialProof]: !L }),
                                 variant: 'heading-xl/bold',
-                                children: i
+                                children: a
                             }),
-                            w && (0, a.jsx)(y.Z, { affinities: L }),
-                            (0, a.jsx)(c.Text, {
+                            L && (0, i.jsx)(E.Z, { affinities: D }),
+                            (0, i.jsx)(l.Text, {
                                 variant: 'text-sm/medium',
-                                className: S.body,
-                                children: s
+                                className: b.body,
+                                children: T
                             })
                         ]
                     }),
-                    (0, a.jsxs)('div', {
-                        className: S.ctaContainer,
+                    (0, i.jsxs)('div', {
+                        className: b.ctaContainer,
                         children: [
-                            (0, a.jsx)(c.Button, {
-                                className: S.secondaryCTA,
-                                size: c.Button.Sizes.SMALL,
-                                color: c.Button.Colors.CUSTOM,
-                                look: c.Button.Looks.LINK,
-                                onClick: M,
-                                children: T.intl.string(T.t.ZnqyZ2)
+                            (0, i.jsx)(l.zxk, {
+                                className: b.secondaryCTA,
+                                size: l.zxk.Sizes.SMALL,
+                                color: l.zxk.Colors.CUSTOM,
+                                look: l.zxk.Looks.LINK,
+                                onClick: w,
+                                children: I.intl.string(I.t.ZnqyZ2)
                             }),
-                            (0, a.jsx)(v.Z, {
+                            (0, i.jsx)(g.Z, {
                                 showGradient: !0,
                                 premiumModalAnalyticsLocation: {
-                                    section: C,
-                                    object: I.qAy.BUTTON_CTA
+                                    section: A,
+                                    object: y.qAy.BUTTON_CTA
                                 },
-                                subscriptionTier: b.Si.TIER_2,
-                                size: c.Button.Sizes.SMALL,
-                                color: c.Button.Colors.CUSTOM,
+                                subscriptionTier: v.Si.TIER_2,
+                                size: l.zxk.Sizes.SMALL,
+                                color: l.zxk.Colors.CUSTOM,
                                 onClick: () => {
-                                    R();
+                                    C();
                                 },
-                                buttonText: U()
+                                buttonText: k()
                             })
                         ]
                     })
@@ -125,6 +123,3 @@ function A(e) {
         ]
     });
 }
-!(function (e) {
-    (e[(e.NONE = 0)] = 'NONE'), (e[(e.PARENT_CONTAINER = 1)] = 'PARENT_CONTAINER'), (e[(e.TAB_PARENT_CONTAINER = 2)] = 'TAB_PARENT_CONTAINER');
-})(i || (i = {}));

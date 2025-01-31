@@ -1,130 +1,125 @@
-r.d(n, {
-    Z: function () {
-        return E;
-    },
-    s: function () {
-        return i;
-    }
+n.d(t, {
+    Z: () => g,
+    s: () => r
 });
-var i,
-    a = r(536895);
-function o(e, n) {
-    return Number.isNaN(e) ? n : Number.isNaN(n) ? e : Math.max(e, n);
+var i = n(536895),
+    r = (function (e) {
+        return (e.UPDATE_COLUMN_COUNTS = 'UPDATE_COLUMN_COUNTS'), (e.SET_FOCUSED_POSITION = 'SET_FOCUSED_POSITION'), e;
+    })({});
+function a(e, t) {
+    return Number.isNaN(e) ? t : Number.isNaN(t) ? e : Math.max(e, t);
 }
-function s(e, n) {
-    return Number.isNaN(e) ? n : Number.isNaN(n) ? e : Math.min(e, n);
+function s(e, t) {
+    return Number.isNaN(e) ? t : Number.isNaN(t) ? e : Math.min(e, t);
 }
-function l(e, n) {
-    let { columnCounts: r } = n,
-        i = s(o(0, r.length - 1), e.focusedY);
+function o(e, t) {
+    let { columnCounts: n } = t,
+        i = s(a(0, n.length - 1), e.focusedY);
     return {
         ...e,
-        columnCounts: r,
-        focusedX: s(null == r[i] ? 0 : r[i] - 1, e.focusedX),
+        columnCounts: n,
+        focusedX: s(null == n[i] ? 0 : n[i] - 1, e.focusedX),
         focusedY: i
     };
 }
-function u(e, n) {
-    let { x: r, y: i } = n,
-        a = o(0, s(i, e.columnCounts.length - 1));
+function l(e, t) {
+    let { x: n, y: i } = t,
+        r = a(0, s(i, e.columnCounts.length - 1));
     return {
         ...e,
-        focusedX: o(0, s(r, e.columnCounts[a] - 1)),
-        focusedY: a
-    };
-}
-function c(e, n) {
-    let r = o(0, e.focusedY - 1);
-    return {
-        ...e,
-        focusedX: s(e.columnCounts[r] - 1, e.focusedX),
+        focusedX: a(0, s(n, e.columnCounts[r] - 1)),
         focusedY: r
     };
 }
-function d(e, n) {
-    let r = s(e.focusedY + 1, e.columnCounts.length - 1);
+function u(e, t) {
+    let n = a(0, e.focusedY - 1);
     return {
         ...e,
-        focusedX: s(e.columnCounts[r] - 1, e.focusedX),
-        focusedY: r
+        focusedX: s(e.columnCounts[n] - 1, e.focusedX),
+        focusedY: n
     };
 }
-function f(e, n) {
-    let r = e.focusedY !== e.columnCounts.length - 1 && e.focusedX + 1 === e.columnCounts[e.focusedY],
-        i = r ? 0 : s(e.focusedX + 1, e.columnCounts[e.focusedY] - 1),
-        a = r ? e.focusedY + 1 : e.focusedY;
+function c(e, t) {
+    let n = s(e.focusedY + 1, e.columnCounts.length - 1);
+    return {
+        ...e,
+        focusedX: s(e.columnCounts[n] - 1, e.focusedX),
+        focusedY: n
+    };
+}
+function d(e, t) {
+    let n = e.focusedY !== e.columnCounts.length - 1 && e.focusedX + 1 === e.columnCounts[e.focusedY],
+        i = n ? 0 : s(e.focusedX + 1, e.columnCounts[e.focusedY] - 1),
+        r = n ? e.focusedY + 1 : e.focusedY;
     return {
         ...e,
         focusedX: i,
-        focusedY: a
+        focusedY: r
     };
 }
-function p(e, n) {
-    let r = 0 !== e.focusedY && 0 === e.focusedX,
-        i = r ? e.focusedY - 1 : e.focusedY,
-        a = r ? e.columnCounts[i] - 1 : o(0, e.focusedX - 1);
+function f(e, t) {
+    let n = 0 !== e.focusedY && 0 === e.focusedX,
+        i = n ? e.focusedY - 1 : e.focusedY,
+        r = n ? e.columnCounts[i] - 1 : a(0, e.focusedX - 1);
     return {
         ...e,
-        focusedX: a,
+        focusedX: r,
         focusedY: i
     };
 }
-function h(e, n) {
+function _(e, t) {
     return {
         ...e,
         focusedX: 0
     };
 }
-function _(e, n) {
+function p(e, t) {
     return {
         ...e,
         focusedX: e.columnCounts[e.focusedY] - 1
     };
 }
-function m(e, n) {
+function h(e, t) {
     return {
         ...e,
         focusedX: 0,
         focusedY: 0
     };
 }
-function g(e, n) {
-    let r = e.columnCounts.length - 1;
+function m(e, t) {
+    let n = e.columnCounts.length - 1;
     return {
         ...e,
-        focusedX: e.columnCounts[r] - 1,
-        focusedY: r
+        focusedX: e.columnCounts[n] - 1,
+        focusedY: n
     };
 }
-function E(e, n) {
-    switch (n.type) {
-        case a.Us.NAVIGATE_UP:
-            return c(e, n);
-        case a.Us.NAVIGATE_DOWN:
-            return d(e, n);
-        case a.Us.NAVIGATE_RIGHT:
-            return f(e, n);
-        case a.Us.NAVIGATE_LEFT:
-            return p(e, n);
-        case a.Us.NAVIGATE_INLINE_START:
-            return h(e, n);
-        case a.Us.NAVIGATE_INLINE_END:
-            return _(e, n);
-        case a.Us.NAVIGATE_START:
-            return m(e, n);
-        case a.Us.NAVIGATE_END:
-            return g(e, n);
+function g(e, t) {
+    switch (t.type) {
+        case i.Us.NAVIGATE_UP:
+            return u(e, t);
+        case i.Us.NAVIGATE_DOWN:
+            return c(e, t);
+        case i.Us.NAVIGATE_RIGHT:
+            return d(e, t);
+        case i.Us.NAVIGATE_LEFT:
+            return f(e, t);
+        case i.Us.NAVIGATE_INLINE_START:
+            return _(e, t);
+        case i.Us.NAVIGATE_INLINE_END:
+            return p(e, t);
+        case i.Us.NAVIGATE_START:
+            return h(e, t);
+        case i.Us.NAVIGATE_END:
+            return m(e, t);
         case 'UPDATE_COLUMN_COUNTS':
-            return l(e, n);
+            return o(e, t);
         case 'SET_FOCUSED_POSITION':
-            return u(e, n);
-        case a.Us.SELECT_FOCUSED_ITEM:
+            return l(e, t);
+        case i.Us.SELECT_FOCUSED_ITEM:
             break;
         default:
-            console.warn('Grid navigator was given an unhandled action '.concat(n.type));
+            console.warn('Grid navigator was given an unhandled action '.concat(t.type));
     }
     return e;
 }
-!(function (e) {
-    (e.UPDATE_COLUMN_COUNTS = 'UPDATE_COLUMN_COUNTS'), (e.SET_FOCUSED_POSITION = 'SET_FOCUSED_POSITION');
-})(i || (i = {}));

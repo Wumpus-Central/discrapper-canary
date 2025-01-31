@@ -1,11 +1,7 @@
-n.d(t, {
-    Z: function () {
-        return h;
-    }
-});
-var i = n(200651);
+n.d(t, { Z: () => h });
+var l = n(200651);
 n(192379);
-var l = n(442837),
+var i = n(442837),
     s = n(481060),
     r = n(607070),
     a = n(906732),
@@ -18,28 +14,28 @@ var l = n(442837),
     x = n(648102);
 function h(e) {
     let { onClose: t, selectedPromotionalDecoPurchaseRecord: n, selectedGiftingPromotionReward: h } = e,
-        _ = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
-        f = (0, l.e7)([r.Z], () => r.Z.useReducedMotion),
+        _ = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
+        f = (0, i.e7)([r.Z], () => r.Z.useReducedMotion),
         { analyticsLocations: j } = (0, a.ZP)(),
-        m = s.AvatarSizes.SIZE_32,
+        m = s.EFr.SIZE_32,
         L = (0, o.Z)(null == h ? void 0 : h.assetId, m, !f),
-        S = (0, u.Z)(),
-        E = null == S ? void 0 : S.giftPurchaseConfirmation;
-    return null == n || null == E
+        E = (0, u.Z)(),
+        g = null == E ? void 0 : E.giftPurchaseConfirmation;
+    return null == n || null == g
         ? null
-        : (0, i.jsx)(p.O3, {
-              children: (0, i.jsx)(s.ModalFooter, {
+        : (0, l.jsx)(p.O3, {
+              children: (0, l.jsx)(s.mzw, {
                   align: d.Z.Align.CENTER,
-                  children: (0, i.jsxs)('div', {
+                  children: (0, l.jsxs)('div', {
                       className: x.promotionalFooter,
                       children: [
-                          (0, i.jsx)(s.AnimatedAvatar, {
+                          (0, l.jsx)(s.Xo$, {
                               'aria-label': null == _ ? void 0 : _.username,
                               size: m,
-                              src: null == _ ? void 0 : _.getAvatarURL(void 0, (0, s.getAvatarSize)(m), !f),
+                              src: null == _ ? void 0 : _.getAvatarURL(void 0, (0, s.pxk)(m), !f),
                               avatarDecoration: L
                           }),
-                          (0, i.jsx)(s.Button, {
+                          (0, l.jsx)(s.zxk, {
                               onClick: () => {
                                   t(),
                                       (0, C.Z)({
@@ -48,7 +44,7 @@ function h(e) {
                                           analyticsLocations: j
                                       });
                               },
-                              children: E.collectRewardButtonText()
+                              children: g.collectRewardButtonText()
                           })
                       ]
                   })

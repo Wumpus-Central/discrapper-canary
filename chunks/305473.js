@@ -1,22 +1,18 @@
-n.d(t, {
-    Z: function () {
-        return r;
-    }
-});
-var l = n(200651);
-n(192379);
-var o = n(528011),
-    i = n(533244),
-    a = n(596482);
-function r(e) {
+l.d(t, { Z: () => s });
+var n = l(200651);
+l(192379);
+var a = l(528011),
+    i = l(533244),
+    o = l(596482);
+function s(e) {
     let { guild: t } = e,
-        { shouldShowIncidentActions: n, incidentData: r, isUnderLockdown: s } = (0, o.mI)(t.id),
+        { shouldShowIncidentActions: l, incidentData: s, isUnderLockdown: r } = (0, a.mI)(t.id),
         c = !1;
-    return (null != r && (c = (0, i.i9)(r) && n), c || s)
-        ? (0, l.jsx)(a.Z, {
+    return (null != s && (c = (0, i.i9)(s) && l), c || r)
+        ? (0, n.jsx)(o.Z, {
               guild: t,
-              incidentData: r,
-              isUnderLockdown: s,
+              incidentData: s,
+              isUnderLockdown: r,
               isRaidDetected: c
           })
         : null;

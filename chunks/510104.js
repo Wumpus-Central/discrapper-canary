@@ -1,62 +1,58 @@
-r.d(n, {
-    Z: function () {
-        return p;
-    }
-});
-var i = r(685516),
-    a = r(285363),
-    o = r(175922),
-    s = r(406434),
-    l = r(6138),
-    u = r(740078),
-    c = r(882159),
-    d = r(544338),
-    f = r(581206);
-function p(e, n) {
-    void 0 === n && (n = {});
-    var r = n,
-        p = r.placement,
-        h = void 0 === p ? e.placement : p,
-        _ = r.strategy,
-        m = void 0 === _ ? e.strategy : _,
-        g = r.boundary,
-        E = void 0 === g ? u.zV : g,
-        v = r.rootBoundary,
-        y = void 0 === v ? u.Pj : v,
-        b = r.elementContext,
-        I = void 0 === b ? u.k5 : b,
-        T = r.altBoundary,
-        S = void 0 !== T && T,
-        A = r.padding,
-        C = void 0 === A ? 0 : A,
-        N = (0, d.Z)('number' != typeof C ? C : (0, f.Z)(C, u.mv)),
-        R = I === u.k5 ? u.YP : u.k5,
-        O = e.rects.popper,
-        D = e.elements[S ? R : I],
-        L = (0, i.Z)((0, c.kK)(D) ? D : D.contextElement || (0, a.Z)(e.elements.popper), E, y, m),
-        x = (0, o.Z)(e.elements.reference),
-        w = (0, s.Z)({
+n.d(t, { Z: () => f });
+var i = n(685516),
+    r = n(285363),
+    a = n(175922),
+    s = n(406434),
+    o = n(6138),
+    l = n(740078),
+    u = n(882159),
+    c = n(544338),
+    d = n(581206);
+function f(e, t) {
+    void 0 === t && (t = {});
+    var n = t,
+        f = n.placement,
+        _ = void 0 === f ? e.placement : f,
+        p = n.strategy,
+        h = void 0 === p ? e.strategy : p,
+        m = n.boundary,
+        g = void 0 === m ? l.zV : m,
+        E = n.rootBoundary,
+        v = void 0 === E ? l.Pj : E,
+        y = n.elementContext,
+        I = void 0 === y ? l.k5 : y,
+        b = n.altBoundary,
+        T = void 0 !== b && b,
+        S = n.padding,
+        A = void 0 === S ? 0 : S,
+        N = (0, c.Z)('number' != typeof A ? A : (0, d.Z)(A, l.mv)),
+        C = I === l.k5 ? l.YP : l.k5,
+        R = e.rects.popper,
+        O = e.elements[T ? C : I],
+        D = (0, i.Z)((0, u.kK)(O) ? O : O.contextElement || (0, r.Z)(e.elements.popper), g, v, h),
+        x = (0, a.Z)(e.elements.reference),
+        L = (0, s.Z)({
             reference: x,
-            element: O,
+            element: R,
             strategy: 'absolute',
-            placement: h
+            placement: _
         }),
-        P = (0, l.Z)(Object.assign({}, O, w)),
-        M = I === u.k5 ? P : x,
-        k = {
-            top: L.top - M.top + N.top,
-            bottom: M.bottom - L.bottom + N.bottom,
-            left: L.left - M.left + N.left,
-            right: M.right - L.right + N.right
+        P = (0, o.Z)(Object.assign({}, R, L)),
+        w = I === l.k5 ? P : x,
+        M = {
+            top: D.top - w.top + N.top,
+            bottom: w.bottom - D.bottom + N.bottom,
+            left: D.left - w.left + N.left,
+            right: w.right - D.right + N.right
         },
-        U = e.modifiersData.offset;
-    if (I === u.k5 && U) {
-        var B = U[h];
-        Object.keys(k).forEach(function (e) {
-            var n = [u.F2, u.I].indexOf(e) >= 0 ? 1 : -1,
-                r = [u.we, u.I].indexOf(e) >= 0 ? 'y' : 'x';
-            k[e] += B[r] * n;
+        k = e.modifiersData.offset;
+    if (I === l.k5 && k) {
+        var U = k[_];
+        Object.keys(M).forEach(function (e) {
+            var t = [l.F2, l.I].indexOf(e) >= 0 ? 1 : -1,
+                n = [l.we, l.I].indexOf(e) >= 0 ? 'y' : 'x';
+            M[e] += U[n] * t;
         });
     }
-    return k;
+    return M;
 }

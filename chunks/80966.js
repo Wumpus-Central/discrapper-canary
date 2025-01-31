@@ -1,64 +1,60 @@
-r.d(n, {
-    Z: function () {
-        return d;
-    }
-});
-var i = r(200651),
-    a = r(192379),
-    o = r(403182),
-    s = r(124347),
-    l = r(640108),
-    u = r(981631),
-    c = r(388032);
-class d extends a.Component {
+n.d(t, { Z: () => c });
+var i = n(200651),
+    r = n(192379),
+    a = n(403182),
+    s = n(124347),
+    o = n(640108),
+    l = n(981631),
+    u = n(388032);
+class c extends r.Component {
     render() {
-        let { src: e, fileSize: n, className: r, mediaPlayerClassName: a, poster: d, fileName: f, naturalWidth: p, naturalHeight: h, playable: _, downloadable: m = !0, volume: g, autoPlay: E, autoMute: v, responsive: y, mediaLayoutType: b, mimeType: I, renderOverlayContent: T, renderLinkComponent: S, onClick: A, onPlay: C, onPause: N, onEnded: R, onControlsShow: O, onControlsHide: D, onVolumeChange: L, onMute: x, alt: w = c.intl.string(c.t.FlNoSU), ...P } = this.props;
+        let { src: e, fileSize: t, className: n, mediaPlayerClassName: r, poster: c, fileName: d, naturalWidth: f, naturalHeight: _, playable: p, downloadable: h = !0, volume: m, autoPlay: g, autoMute: E, responsive: v, mediaLayoutType: y, mimeType: I, renderOverlayContent: b, renderLinkComponent: T, onClick: S, onPlay: A, onPause: N, onEnded: C, onControlsShow: R, onControlsHide: O, onVolumeChange: D, onMute: x, alt: L = u.intl.string(u.t.FlNoSU), ...P } = this.props;
         return (0, i.jsx)(s.ZP, {
-            alt: w,
-            className: r,
-            src: d,
+            alt: L,
+            className: n,
+            src: c,
             ...P,
-            minWidth: l.ZP.minWidth,
-            minHeight: l.ZP.minHeight,
+            minWidth: o.ZP.minWidth,
+            minHeight: o.ZP.minHeight,
             shouldLink: !1,
             shouldAnimate: !1,
-            mediaLayoutType: b,
-            responsive: y,
-            children: (r) => {
+            mediaLayoutType: y,
+            responsive: v,
+            children: (n) => {
                 let {
                         src: s,
-                        size: { width: c, height: d }
-                    } = r,
-                    w = !((p <= u.N_j && h <= u.XKF) || (p <= u.XKF && h <= u.N_j));
-                return (0, i.jsx)(l.ZP, {
-                    className: a,
-                    forceExternal: w,
+                        size: { width: u, height: c }
+                    } = n,
+                    L = !((f <= l.N_j && _ <= l.XKF) || (f <= l.XKF && _ <= l.N_j));
+                return (0, i.jsx)(o.ZP, {
+                    className: r,
+                    forceExternal: L,
                     src: e,
                     poster: s,
-                    width: c,
-                    height: d,
-                    responsive: y,
-                    volume: g,
-                    autoPlay: null != E && E,
-                    autoMute: null != v && v,
-                    type: l.ZP.Types.VIDEO,
-                    mediaLayoutType: b,
-                    fileName: f,
-                    fileSize: null == n ? void 0 : (0, o.Ng)(n),
-                    fileSizeBytes: null == n ? void 0 : n,
-                    playable: _,
-                    renderLinkComponent: S,
-                    renderOverlayContent: T,
-                    onClick: A,
-                    onPlay: C,
+                    width: u,
+                    height: c,
+                    responsive: v,
+                    volume: m,
+                    autoPlay: null != g && g,
+                    autoMute: null != E && E,
+                    type: o.ZP.Types.VIDEO,
+                    mediaLayoutType: y,
+                    fileName: d,
+                    fileSize: null == t ? void 0 : (0, a.Ng)(t),
+                    fileSizeBytes: null == t ? void 0 : t,
+                    playable: p,
+                    renderLinkComponent: T,
+                    renderOverlayContent: b,
+                    onClick: S,
+                    onPlay: A,
                     onPause: N,
-                    onEnded: R,
-                    onVolumeChange: L,
+                    onEnded: C,
+                    onVolumeChange: D,
                     onMute: x,
-                    onControlsShow: O,
-                    onControlsHide: D,
+                    onControlsShow: R,
+                    onControlsHide: O,
                     mimeType: I,
-                    downloadable: m
+                    downloadable: h
                 });
             }
         });

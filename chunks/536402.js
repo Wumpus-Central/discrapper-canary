@@ -1,11 +1,3 @@
-var r, l;
-n.d(t, {
-    w: function () {
-        return r;
-    }
-}),
-    n(47120),
-    ((l = r || (r = {})).MESSAGE = 'message'),
-    (l.FORUM_POST = 'forum_post'),
-    (l.MESSAGE_BUNDLE = 'message_bundle'),
-    (l.CONVERSATION = 'conversation');
+n.d(t, { w: () => l }), n(47120);
+var r,
+    l = (((r = {}).MESSAGE = 'message'), (r.FORUM_POST = 'forum_post'), (r.MESSAGE_BUNDLE = 'message_bundle'), (r.CONVERSATION = 'conversation'), r);

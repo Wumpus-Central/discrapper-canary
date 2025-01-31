@@ -1,136 +1,124 @@
-r.d(n, {
-    Iu: function () {
-        return Z;
-    },
-    Jw: function () {
-        return B;
-    },
-    _r: function () {
-        return F;
-    },
-    cX: function () {
-        return j;
-    },
-    lv: function () {
-        return G;
-    },
-    v: function () {
-        return M;
-    }
+n.d(t, {
+    Iu: () => B,
+    Jw: () => U,
+    _r: () => Z,
+    cX: () => V,
+    lv: () => G,
+    v: () => w
 });
-var i = r(392711),
-    a = r.n(i),
-    o = r(490757),
-    s = r(429827),
-    l = r(353928),
-    u = r(336892),
-    c = r(624833),
-    d = r(944314),
-    f = r(399358),
-    p = r(945835),
-    h = r(912931),
-    _ = r(966552),
-    m = r(561763),
-    g = r(529306),
-    E = r(90075),
-    v = r(862666),
-    y = r(252611),
-    b = r(136144),
-    I = r(316137),
-    T = r(654123),
-    S = r(660020),
-    A = r(980084),
-    C = r(24688),
-    N = r(200997),
-    R = r(633302),
-    O = r(134432),
-    D = r(594174),
-    L = r(768581),
-    x = r(176354),
-    w = r(353368),
-    P = r(388032);
-let M = {
+var i = n(392711),
+    r = n.n(i),
+    a = n(490757),
+    s = n(429827),
+    o = n(353928),
+    l = n(336892),
+    u = n(624833),
+    c = n(944314),
+    d = n(399358),
+    f = n(945835),
+    _ = n(912931),
+    p = n(966552),
+    h = n(561763),
+    m = n(529306),
+    g = n(90075),
+    E = n(862666),
+    v = n(252611),
+    y = n(136144),
+    I = n(316137),
+    b = n(654123),
+    T = n(660020),
+    S = n(980084),
+    A = n(24688),
+    N = n(200997),
+    C = n(633302),
+    R = n(134432),
+    O = n(594174),
+    D = n(768581),
+    x = n(176354),
+    L = n(353368),
+    P = n(388032);
+let w = {
         start: 10,
         end: 15
     },
-    k = [o],
-    U = [s, l, u, c, d, f, p, h, _, m, g, E, v, y, b, I, T, S, A, C, N],
-    B = {
-        [w.q.BASIC]: k,
-        [w.q.PREMIUM]: U
+    M = [a],
+    k = [s, o, l, u, c, d, f, _, p, h, m, g, E, v, y, I, b, T, S, A, N],
+    U = {
+        [L.q.BASIC]: M,
+        [L.q.PREMIUM]: k
     },
-    G = a().memoize(
+    G = r().memoize(
         (e) =>
-            new Promise((n) => {
-                let r = new Image();
-                (r.src = e),
-                    (r.crossOrigin = 'Anonymous'),
-                    (r.onload = () => {
-                        let i = w.v * (0, O.x_)();
-                        if (r.width === i && r.height === i) n(e);
+            new Promise((t) => {
+                let n = new Image();
+                (n.src = e),
+                    (n.crossOrigin = 'Anonymous'),
+                    (n.onload = () => {
+                        let i = L.v * (0, R.x_)();
+                        if (n.width === i && n.height === i) t(e);
                         else {
-                            var a;
+                            var r;
                             let e = document.createElement('canvas');
-                            (e.width = i), (e.height = i), null === (a = e.getContext('2d')) || void 0 === a || a.drawImage(r, 0, 0), n(e.toDataURL('image/png'));
+                            (e.width = i), (e.height = i), null === (r = e.getContext('2d')) || void 0 === r || r.drawImage(n, 0, 0), t(e.toDataURL('image/png'));
                         }
                     });
             })
     ),
-    Z = (e, n) => {
-        let r = B[e];
-        if (null != n && e === w.q.PREMIUM) {
-            let e = n.end + 1;
-            return Math.floor(Math.random() * (n.start - e) + e);
+    B = (e, t) => {
+        let n = U[e];
+        if (null != t && e === L.q.PREMIUM) {
+            let e = t.end + 1;
+            return Math.floor(Math.random() * (t.start - e) + e);
         }
-        return Math.floor(Math.random() * r.length);
+        return Math.floor(Math.random() * n.length);
     };
-function F(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : w.v;
+function Z(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : L.v;
     if (null != e.id) {
-        var r;
-        return L.ZP.getEmojiURL({
+        var n;
+        return D.ZP.getEmojiURL({
             id: e.id,
-            animated: null !== (r = e.animated) && void 0 !== r && r,
-            size: n
+            animated: null !== (n = e.animated) && void 0 !== n && n,
+            size: t
         });
     }
-    let i = R.ZP.convertSurrogateToName(e.name, !1),
-        a = R.ZP.getByName(i);
-    return null != a ? x.ZP.getURL(a.surrogates) : '';
+    let i = C.ZP.convertSurrogateToName(e.name, !1),
+        r = C.ZP.getByName(i);
+    return null != r ? x.ZP.getURL(r.surrogates) : '';
 }
-function V(e, n) {
-    return a()(e)
+function F(e, t) {
+    return r()(e)
         .map((e) => {
-            var r;
-            return null !== (r = e[n]) && void 0 !== r ? r : null;
+            var n;
+            return null !== (n = e[t]) && void 0 !== n ? n : null;
         })
         .filter((e) => null != e)
         .uniq()
         .value();
 }
-function j(e) {
-    var n, r, i, a, o, s;
+function V(e) {
+    var t, n, i, r, a, s;
     if (e.length < 1) return '';
-    let l = V(e, 'userId'),
-        u = V(e, 'emojiName'),
-        c = u.length < 2 ? (null !== (n = null == u ? void 0 : u[0]) && void 0 !== n ? n : '') : u.join(', ');
-    if (l.length < 1) return '';
-    if (1 === l.length)
-        return P.intl.formatToPlainString(P.t.yZYxzM, {
-            firstUsername: null === (r = D.default.getUser(l[0])) || void 0 === r ? void 0 : r.username,
-            emojiNames: c
-        });
-    if (2 === l.length)
-        return P.intl.formatToPlainString(P.t['8rmtbW'], {
-            firstUsername: null === (i = D.default.getUser(l[0])) || void 0 === i ? void 0 : i.username,
-            secondUsername: null === (a = D.default.getUser(l[1])) || void 0 === a ? void 0 : a.username,
-            emojiNames: c
-        });
-    else
-        return P.intl.formatToPlainString(P.t['/okjv7'], {
-            firstUsername: null === (o = D.default.getUser(l[0])) || void 0 === o ? void 0 : o.username,
-            secondUsername: null === (s = D.default.getUser(l[1])) || void 0 === s ? void 0 : s.username,
-            count: l.length - 2,
-            emojiNames: c
-        });
+    let o = F(e, 'userId'),
+        l = F(e, 'emojiName'),
+        u = l.length < 2 ? (null !== (t = null == l ? void 0 : l[0]) && void 0 !== t ? t : '') : l.join(', ');
+    return o.length < 1
+        ? ''
+        : 1 === o.length
+          ? P.intl.formatToPlainString(P.t.yZYxzM, {
+                firstUsername: null === (n = O.default.getUser(o[0])) || void 0 === n ? void 0 : n.username,
+                emojiNames: u
+            })
+          : 2 === o.length
+            ? P.intl.formatToPlainString(P.t['8rmtbW'], {
+                  firstUsername: null === (i = O.default.getUser(o[0])) || void 0 === i ? void 0 : i.username,
+                  secondUsername: null === (r = O.default.getUser(o[1])) || void 0 === r ? void 0 : r.username,
+                  emojiNames: u
+              })
+            : P.intl.formatToPlainString(P.t['/okjv7'], {
+                  firstUsername: null === (a = O.default.getUser(o[0])) || void 0 === a ? void 0 : a.username,
+                  secondUsername: null === (s = O.default.getUser(o[1])) || void 0 === s ? void 0 : s.username,
+                  count: o.length - 2,
+                  emojiNames: u
+              });
 }

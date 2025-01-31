@@ -1,11 +1,7 @@
-r.d(n, {
-    Z: function () {
-        return s;
-    }
-});
-var i = r(316138),
-    a = r(285363),
-    o = r(882159);
+n.d(t, { Z: () => s });
+var i = n(316138),
+    r = n(285363),
+    a = n(882159);
 function s(e) {
-    return 'html' === (0, i.Z)(e) ? e : e.assignedSlot || e.parentNode || ((0, o.Zq)(e) ? e.host : null) || (0, a.Z)(e);
+    return 'html' === (0, i.Z)(e) ? e : e.assignedSlot || e.parentNode || ((0, a.Zq)(e) ? e.host : null) || (0, r.Z)(e);
 }
