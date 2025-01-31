@@ -1,10 +1,11 @@
-n.d(t, { Z: () => c }), n(47120);
+n.d(t, { Z: () => f }), n(47120);
 var i = n(570140),
     r = n(147913),
     a = n(70956),
-    s = n(709706),
-    o = n(358820);
-function l(e, t, n) {
+    s = n(875527),
+    o = n(709706),
+    l = n(358820);
+function u(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,7 +18,11 @@ function l(e, t, n) {
         e
     );
 }
-class u extends r.Z {
+function c() {
+    let { enabled: e } = s.c.getCurrentConfig({ location: 'VoiceFiltersCatalogManager' }, { autoTrackExposure: !1 });
+    return e;
+}
+class d extends r.Z {
     _initialize() {}
     _terminate() {
         clearTimeout(this.rolloverTimeout), clearTimeout(this.refreshTimeout);
@@ -27,11 +32,11 @@ class u extends r.Z {
         this._scheduleNextRollover(), this._scheduleRefresh();
     }
     handleCurrentUserUpdate() {
-        (0, o.wV)();
+        c() && (0, l.wV)();
     }
     _scheduleNextRollover() {
         clearTimeout(this.rolloverTimeout);
-        let e = s.Z.getLimitedTimeVoices();
+        let e = o.Z.getLimitedTimeVoices();
         if (null == e) return;
         let t = new Date(e.current_set_end).getTime() - new Date().getTime(),
             n = new Date(e.next_set_end).getTime() - new Date().getTime();
@@ -47,19 +52,19 @@ class u extends r.Z {
     _scheduleRefresh() {
         clearTimeout(this.refreshTimeout),
             (this.refreshTimeout = setTimeout(() => {
-                (0, o.wV)();
+                (0, l.wV)();
             }, a.Z.Millis.DAY));
     }
     constructor(...e) {
         super(...e),
-            l(this, 'actions', {
+            u(this, 'actions', {
                 VOICE_FILTER_CATALOG_FETCH_SUCCESS: (e) => this.handleVoiceFilterCatalogUpdate(e),
                 VOICE_FILTER_DEV_TOOLS_SET_UPDATE_TIME: (e) => this.handleVoiceFilterCatalogUpdate(e),
                 CURRENT_USER_UPDATE: () => this.handleCurrentUserUpdate(),
                 LOGIN_SUCCESS: () => this.handleCurrentUserUpdate()
             }),
-            l(this, 'rolloverTimeout', null),
-            l(this, 'refreshTimeout', null);
+            u(this, 'rolloverTimeout', null),
+            u(this, 'refreshTimeout', null);
     }
 }
-let c = new u();
+let f = new d();
