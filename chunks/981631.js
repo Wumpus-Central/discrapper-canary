@@ -912,6 +912,7 @@ let A = Object.freeze({
         REPORT: '/report',
         REPORT_SECOND_LOOK: '/report-review',
         COLLECTIBLES_SHOP: '/shop',
+        COLLECTIBLES_SHOP_WITH_TAB: (t) => '/shop?tab='.concat(t),
         COLLECTIBLES_SHOP_FULLSCREEN: '/shop/fullscreen',
         COLLECTIBLES_SHOP_PRODUCT_DETAIL: (t) => '/shop/product/'.concat(t),
         NITRO_HOME: '/store',

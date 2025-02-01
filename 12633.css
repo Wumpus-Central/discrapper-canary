@@ -40416,6 +40416,62 @@ img.thumbnail__0f2e8 {
     }
 }
 
+.container_e928f4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-mod-subtle);
+    border-radius: var(--radius-xs);
+    border: 1px solid var(--border-subtle);
+    width: 60px;
+    height: 60px;
+    box-sizing: border-box;
+    flex-shrink: 0
+}
+
+.frame_e928f4 {
+    position: relative;
+    left: -36px;
+    top: -36px
+}
+
+.slot_e928f4 {
+    top: 50%;
+    left: 50%;
+    margin-top: 18px;
+    margin-left: 18px
+}
+
+.slot_e928f4,
+.wrapper_e928f4 {
+    position: absolute;
+    width: 36px;
+    height: 36px
+}
+
+.wrapper_e928f4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--card-secondary-bg);
+    border-radius: var(--radius-lg)
+}
+
+.avatar_e928f4,
+.overflowCount_e928f4 {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-radius: inherit
+}
+
+.overflowCount_e928f4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-surface-overlay)
+}
+
 .container__23ba6 {
     display: flex
 }

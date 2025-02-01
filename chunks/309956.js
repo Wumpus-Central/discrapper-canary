@@ -1,24 +1,27 @@
-n.d(t, { B: () => i }), n(47120);
+n.d(t, { B: () => o }), n(47120), n(653041);
 var r = n(192379),
-    l = n(215023);
-let i = (e, t) => {
-    let [n, i] = r.useState(l.f7.HIDDEN),
-        [s, a] = r.useState(l.f7.HIDDEN);
+    l = n(512969),
+    i = n(822857),
+    s = n(215023),
+    a = n(981631);
+let o = (e, t, n) => {
+    let { enabled: o } = (0, i.W)({ location: 'useShopViewTransition' }),
+        d = r.useMemo(() => (t !== s.AW.ORBS || o ? t : s.AW.HOME), [t, o]),
+        [c, u] = r.useState(d),
+        [C, h] = r.useState(s.f7.HIDDEN);
     r.useEffect(() => {
-        i(e ? l.f7.VISIBLE : l.f7.HIDDEN), a(e ? l.f7.HIDDEN : l.f7.VISIBLE);
-    }, [e]);
-    let o = (e) => new Promise((t) => setTimeout(t, e));
+        u(d), h(s.f7.VISIBLE);
+    }, [d]);
+    let p = (e) => new Promise((t) => setTimeout(t, e)),
+        m = (0, l.k6)();
     return {
-        feedState: n,
-        catalogState: s,
-        transitionToCatalog: r.useCallback(
-            async (e) => {
-                e && (i(l.f7.OUT), await o(1.1 * l.lb)), e && a(l.f7.IN), i(l.f7.HIDDEN), null != t.current && t.current.scrollTo({ to: 0 }), a(l.f7.VISIBLE);
+        selectedTab: c,
+        transitionState: C,
+        transitionToTab: r.useCallback(
+            async (t, r) => {
+                r ? (h(s.f7.OUT), await p(1.1 * s.lb), u(t), n || m.push(a.Z5c.COLLECTIBLES_SHOP_WITH_TAB(t), { shallow: !0 }), h(s.f7.IN)) : (u(t), n || m.push(a.Z5c.COLLECTIBLES_SHOP_WITH_TAB(t), { shallow: !0 })), null != e.current && e.current.scrollTo({ to: 0 }), h(s.f7.VISIBLE);
             },
-            [t]
-        ),
-        transitionToFeed: r.useCallback(() => {
-            null != t.current && t.current.scrollTo({ to: 0 }), a(l.f7.HIDDEN), i(l.f7.VISIBLE);
-        }, [t])
+            [m, n, e]
+        )
     };
 };
